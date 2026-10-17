@@ -1,0 +1,28 @@
+# Shared input/output types. When one item's output type matches another's input, the two items connect.
+# Version 1 (2026-10-17). Field-level schemas are added as items need them.
+brand_and_product:
+  brand_brain:   {desc: "The brand's facts, voice, products, offers (with effective dates), claims register, personas and look. Format: Creative Engine brand-brain folder, schema v2.", schema: "planned: brand-brain v2 (Zod), backward compatible with CE v1"}
+  product_data:  {desc: "One product's facts: price, variants, ingredients or materials, how it is used, photos by job."}
+  offer:         {desc: "A live offer with price, terms, effective_from/to and a current flag."}
+  persona:       {desc: "A buyer grounded in real review language: problem, trigger, wants, doubts, words they use."}
+research:
+  voc_reviews:    {desc: "Customer words from reviews, tickets, surveys or calls, with source and date."}
+  competitor_set: {desc: "Competitor profiles and the gaps worth owning."}
+  reference_set:  {desc: "Ads or pages chosen as references, by ID from the user's own connector, with each one's role."}
+  ad_breakdowns:  {desc: "Structured teardown of reference ads (hook, angle, format, offer, proof)."}
+  shortlist:      {desc: "A ranked short list chosen from a larger set, with reasons."}
+creative:
+  brief:         {desc: "A creative brief: goal, audience, angle, offer, mandatory claims (by ID), formats."}
+  hooks:         {desc: "Opening lines, each with the angle and persona it targets."}
+  ad_copy:       {desc: "Headline, primary text, description and CTA within platform limits."}
+  script:        {desc: "A video ad script, beat by beat, with on-screen text and shots."}
+  image_prompt:  {desc: "A render-ready image prompt plus the reference roles it uses."}
+  static_ads:    {desc: "Rendered static or carousel ads with the brief and QA notes."}
+  video_ads:     {desc: "Rendered video ads with the script and QA notes."}
+data_and_pages:
+  performance_sheet: {desc: "Ad or store performance export for a closed date window, with definitions."}
+  landing_page:      {desc: "A landing page or advertorial: sections, copy, layout notes."}
+  pdp_copy:          {desc: "Product page copy: title, benefits, details, FAQ, proof blocks."}
+  email_flow:        {desc: "An email/SMS flow: trigger, timing, messages, segments."}
+  audit_report:      {desc: "Findings with evidence, severity, missing inputs and next actions."}
+  plan:              {desc: "A dated plan: what to do, in what order, with a decision rule for each step."}

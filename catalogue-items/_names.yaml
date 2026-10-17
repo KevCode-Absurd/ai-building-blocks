@@ -1,0 +1,264 @@
+# Old name -> proposed catalogue name, for every own item in the inventory.
+# Seeded from docs/inventory/02_MASTER_INVENTORY.csv (proposed_name column), 2026-10-17.
+# Status stays 'proposed' until the item's section is worked on; then 'approved' or a corrected name.
+# 226 items.
+
+BRAIN:
+  - {id: CEA-006, old: "Brand set-up (brand brain builder in-app)", new: brand-brain-builder, level: workflow, status: proposed}
+  - {id: CEA-007, old: "Look scan (brand:look)", new: brand-visual-identity-scan, level: skill, status: proposed}
+  - {id: CEA-008, old: "Claim scan + figures that disagree", new: website-claims-extractor, level: skill, status: proposed}
+  - {id: CEA-009, old: "Creative kit", new: brand-creative-kit-builder, level: skill, status: proposed}
+  - {id: CEA-010, old: "Product photo inventory", new: product-photo-tagger, level: skill, status: proposed}
+  - {id: CEA-012, old: "Brain that keeps itself up to date", new: brand-brain-auto-learner, level: routine, status: proposed}
+  - {id: CEA-014, old: "Brand brain format (schema)", new: brand-brain-schema, level: asset, status: proposed}
+  - {id: CEA-019, old: "Founder voice capture", new: founder-interview-capture, level: skill, status: proposed}
+  - {id: CES-040, old: "founder-interview", new: founder-onboarding-questionnaire, level: skill, status: proposed}
+  - {id: CES-257, old: "voice-card.md", new: brand-voice-style-card, level: prompt, status: proposed}
+  - {id: EOS-072, old: "gehna brand brain/brand-brain", new: brand-brain-example-gehna, level: asset, status: proposed}
+
+M01:
+  - {id: CEA-074, old: "Handoff next steps + Kevin's rules", new: creative-house-rules, level: knowledge, status: proposed}
+  - {id: EOS-049, old: "Ecommerce_OS_Complete_Product_Blueprint.md", new: ecommerce-os-product-blueprint-v1, level: knowledge, status: proposed}
+  - {id: EOS-050, old: "ecommerce-os-what-good-looks-like (1).pdf", new: ecommerce-os-what-good-looks-like-stage-model, level: knowledge, status: proposed}
+  - {id: EOS-056, old: "Ecommerce_OS_Complete_Lifecycle_Blueprint.pdf", new: ecommerce-lifecycle-blueprint, level: knowledge, status: proposed}
+  - {id: EOS-058, old: "Ecommerce idea maps.pdf", new: ecommerce-opportunity-idea-map, level: knowledge, status: proposed}
+  - {id: EOS-059, old: "Ecommerce-OS-Deck-v2.pdf", new: ecommerce-os-pitch-deck-v2, level: knowledge, status: proposed}
+  - {id: EOS-060, old: "ecommerce-business-in-a-box-blueprint.pdf", new: ecommerce-business-in-a-box-blueprint-india, level: knowledge, status: proposed}
+  - {id: EOS-061, old: "ecommerce-business-in-a-box-blueprint (1).pdf", new: ecommerce-business-in-a-box-blueprint-us, level: knowledge, status: proposed}
+  - {id: EOS-062, old: "Ecommerce_OS_Business_in_a_Box_Blueprint.docx", new: ecommerce-os-operating-platform-blueprint, level: knowledge, status: proposed}
+  - {id: EOS-063, old: "blueprint.md", new: ecommerce-os-operating-platform-blueprint-md-source, level: knowledge, status: proposed}
+  - {id: EOS-064, old: "Ecommerce_OS_Business_in_a_Box_v2.pptx", new: ecommerce-os-business-in-a-box-strategy-deck, level: knowledge, status: proposed}
+  - {id: EOS-065, old: "ecommerce_deck (+ .chart-data-29eRGs, .chart-data-4pgyZk, .chart-data-Q7qAkj)", new: business-in-a-box-deck-build-intermediates, level: asset, status: proposed}
+  - {id: EOS-074, old: "brain.md", new: brand-brain-learnings-log, level: asset, status: proposed}
+  - {id: EOS-086, old: "simulate.py", new: audit-rule-simulator, level: skill, status: proposed}
+  - {id: SKO-230, old: "Creative Engine business and implementation plan (11 Oct 2026)", new: creative-engine-platform-plan, level: knowledge, status: proposed}
+  - {id: SKO-231, old: "Business plan: customer, pricing, market and agency launch (plan part 1)", new: agency-business-model, level: knowledge, status: proposed}
+  - {id: SKO-246, old: "Delivery roadmap, first 90 days, build tickets and acceptance criteria (roadmap ", new: platform-delivery-roadmap, level: knowledge, status: proposed}
+
+M05:
+  - {id: EOS-071, old: "Ecommerce_OS_US_Opportunity_Architecture_v1.0.pdf", new: us-opportunity-architecture-stack-ranked, level: knowledge, status: proposed}
+
+M06:
+  - {id: CEA-015, old: "Grüns sample research data", new: sample-voc-dataset, level: asset, status: proposed}
+  - {id: CEA-016, old: "Nourish Plus seed data", new: seed-demo-brand, level: asset, status: proposed}
+  - {id: CEA-017, old: "Research pipeline: sources to ranked themes", new: voc-mining-pipeline, level: workflow, status: proposed}
+  - {id: CEA-018, old: "Persona builder + doubts", new: persona-builder, level: skill, status: proposed}
+  - {id: CEA-070, old: "Creative Engine build handoff (spec)", new: voc-to-ad-engine-spec, level: knowledge, status: proposed}
+  - {id: CES-193, old: "builder-start.md", new: persona-and-angle-starter, level: prompt, status: proposed}
+  - {id: CES-197, old: "cluster.md", new: voc-theme-clustering, level: prompt, status: proposed}
+  - {id: CES-203, old: "extract.md", new: voc-insight-extractor, level: prompt, status: proposed}
+  - {id: CES-206, old: "guardrails.md", new: refund-reasons-to-ad-guardrails, level: prompt, status: proposed}
+  - {id: CES-217, old: "persona-build.md", new: persona-builder-from-data, level: prompt, status: proposed}
+  - {id: CES-218, old: "persona-doubts.md", new: buyer-objection-proof-pairs, level: prompt, status: proposed}
+  - {id: SKO-234, old: "Customer research sources and Research analyst (tech sec 7 'Customer research', ", new: customer-research-analyst, level: agent, status: proposed}
+
+M08:
+  - {id: CEA-020, old: "Offer builder, offer path and offer research", new: offer-designer, level: workflow, status: proposed}
+  - {id: CES-079, old: "offer-set", new: starter-offer-list, level: prompt, status: proposed}
+  - {id: CES-213, old: "offer-build.md", new: offer-designer, level: prompt, status: proposed}
+  - {id: CES-214, old: "offer-research.md", new: industry-offer-pattern-research, level: prompt, status: proposed}
+  - {id: CES-215, old: "offer-set.md", new: starter-offer-list, level: prompt, status: proposed}
+  - {id: EOS-084, old: "gehna-offer-playbook.html", new: offer-playbook-example-gehna, level: asset, status: proposed}
+
+M11:
+  - {id: CEA-038, old: "Native ads (long story copy)", new: native-ad-writer, level: skill, status: proposed}
+  - {id: CEA-043, old: "Product page images (12-frame PDP set)", new: pdp-image-set-generator, level: workflow, status: proposed}
+  - {id: CEA-062, old: "Landing page builder (from an ad)", new: ad-to-landing-page-builder, level: workflow, status: proposed}
+  - {id: CES-031, old: "ecommerce-page-design", new: d2c-page-design-system, level: skill, status: proposed}
+  - {id: CES-104, old: "script-format-advertorial", new: advertorial-ad-format-rules, level: skill, status: proposed}
+  - {id: CES-211, old: "lp-write.md", new: landing-page-copy-writer, level: prompt, status: proposed}
+
+M12:
+  - {id: CEA-044, old: "Photoshoot", new: ai-product-photoshoot, level: workflow, status: proposed}
+
+M14:
+  - {id: SKO-235, old: "Integrity and measurement trust; Integrity analyst (tech sec 9, sec 12)", new: data-integrity-agent, level: agent, status: proposed}
+
+M15:
+  - {id: CEA-002, old: "Landing pages module (CRO Studio)", new: dtc-landing-and-cro-studio, level: system, status: proposed}
+  - {id: CEA-063, old: "CRO audit (store or external page)", new: cro-page-auditor, level: workflow, status: proposed}
+  - {id: CEA-064, old: "CRO calculators + page speed + security scan", new: cro-test-calculator-and-site-scans, level: skill, status: proposed}
+  - {id: CES-029, old: "ecommerce-funnel-inspection", new: storefront-evidence-inspection, level: skill, status: proposed}
+  - {id: CES-050, old: "landing-pages", new: d2c-landing-page-method, level: workflow, status: proposed}
+  - {id: SKO-240, old: "Landing pages and CRO execution: PageManifest and ad-to-page continuity (tech se", new: landing-page-execution-workflow, level: workflow, status: proposed}
+
+M17:
+  - {id: CEA-001, old: "Creative Engine (Mercatura / Creative Studio)", new: dtc-creative-engine, level: system, status: proposed}
+  - {id: CEA-011, old: "Competitor profiles", new: competitor-profile-builder, level: skill, status: proposed}
+  - {id: CEA-022, old: "Concept builder + Suggest concepts", new: ad-concept-generator, level: skill, status: proposed}
+  - {id: CEA-023, old: "Plan my next ads (Brief V2)", new: creative-brief-planner, level: workflow, status: proposed}
+  - {id: CEA-025, old: "Creative portfolio", new: creative-variety-allocator, level: workflow, status: proposed}
+  - {id: CEA-026, old: "Creative quality (evidence & sources, production map)", new: creative-evidence-and-duplicate-checker, level: workflow, status: proposed}
+  - {id: CEA-027, old: "Production evidence review", new: typed-evidence-register, level: skill, status: proposed}
+  - {id: CEA-028, old: "Production lab (Creative Lab)", new: ad-production-planning-lab, level: workflow, status: proposed}
+  - {id: CEA-031, old: "Add reference + analyse", new: reference-ad-analyzer, level: skill, status: proposed}
+  - {id: CEA-032, old: "Library learning chooser", new: reference-example-chooser, level: skill, status: proposed}
+  - {id: CEA-033, old: "Make an ad from this reference", new: reference-to-ad-remixer, level: workflow, status: proposed}
+  - {id: CEA-039, old: "Hook bank + hook writer", new: hook-generator, level: skill, status: proposed}
+  - {id: CEA-040, old: "Copy builder", new: ad-copy-from-creative, level: workflow, status: proposed}
+  - {id: CEA-041, old: "Chat (do it by asking)", new: creative-chat-agent, level: agent, status: proposed}
+  - {id: CEA-042, old: "Image ad studio (ads from layouts)", new: static-ad-generator, level: workflow, status: proposed}
+  - {id: CEA-045, old: "50/100-ad sprint (Get 100 ads)", new: static-ad-sprint-planner, level: agent, status: proposed}
+  - {id: CEA-046, old: "Static or carousel from a script", new: script-to-static-carousel, level: workflow, status: proposed}
+  - {id: CEA-047, old: "Image QA, claims read and mend", new: static-ad-qa-checker, level: skill, status: proposed}
+  - {id: CEA-057, old: "Taste bar (11 levers -> context plan)", new: creative-taste-controls, level: skill, status: proposed}
+  - {id: CEA-087, old: "The creative judge (8 criteria)", new: creative-scoring-rubric, level: knowledge, status: proposed}
+  - {id: CES-002, old: "ad-principles", new: ad-writing-principles, level: knowledge, status: proposed}
+  - {id: CES-003, old: "ad-reference-exact", new: same-ad-new-format-remake, level: skill, status: proposed}
+  - {id: CES-014, old: "buyer-led-selling", new: buyer-led-selling-principles, level: skill, status: proposed}
+  - {id: CES-023, old: "copy-floor", new: plain-copy-priority-order, level: prompt, status: proposed}
+  - {id: CES-024, old: "copy-principles", new: ad-copy-sell-pass, level: skill, status: proposed}
+  - {id: CES-025, old: "creative-lessons", new: creative-mistakes-register, level: knowledge, status: proposed}
+  - {id: CES-044, old: "image-ad-copy", new: static-ad-copy-planner, level: skill, status: proposed}
+  - {id: CES-046, old: "image-prompt-craft", new: image-prompt-writer, level: skill, status: proposed}
+  - {id: CES-053, old: "native-ad-copy", new: native-story-ad-copy, level: skill, status: proposed}
+  - {id: CES-054, old: "native-ad-creative", new: native-ad-image-brief, level: skill, status: proposed}
+  - {id: CES-056, old: "abstract-curiosity", new: native-image-abstract-curiosity, level: prompt, status: proposed}
+  - {id: CES-058, old: "breaking-news", new: native-image-breaking-news, level: prompt, status: proposed}
+  - {id: CES-059, old: "candid-moment", new: native-image-candid-moment, level: prompt, status: proposed}
+  - {id: CES-061, old: "dont-buy-this", new: native-image-dont-buy-this, level: prompt, status: proposed}
+  - {id: CES-063, old: "handwritten-note", new: native-image-handwritten-note, level: prompt, status: proposed}
+  - {id: CES-068, old: "notes-app", new: native-image-notes-app, level: prompt, status: proposed}
+  - {id: CES-069, old: "one-star-review", new: native-image-one-star-review, level: prompt, status: proposed}
+  - {id: CES-070, old: "phone-reminder", new: native-image-phone-reminder, level: prompt, status: proposed}
+  - {id: CES-071, old: "sticky-note", new: native-image-sticky-note, level: prompt, status: proposed}
+  - {id: CES-073, old: "text-bubbles", new: native-image-text-bubbles, level: prompt, status: proposed}
+  - {id: CES-074, old: "whatsapp-chat", new: native-image-group-chat, level: prompt, status: proposed}
+  - {id: CES-075, old: "worn-object", new: native-image-worn-object, level: prompt, status: proposed}
+  - {id: CES-076, old: "native-ads", new: native-story-ad-principles, level: knowledge, status: proposed}
+  - {id: CES-131, old: "script-surfaces", new: script-format-fit-advisor, level: skill, status: proposed}
+  - {id: CES-142, old: "taste", new: creative-direction-lever-snippets, level: prompt, status: proposed}
+  - {id: CES-188, old: "ad-copy-flow.md", new: static-ad-one-call-writer, level: prompt, status: proposed}
+  - {id: CES-189, old: "ad-review.md", new: static-ad-pre-spend-review, level: prompt, status: proposed}
+  - {id: CES-194, old: "chat-copy.md", new: ad-copy-options-writer, level: prompt, status: proposed}
+  - {id: CES-198, old: "competitor-profile.md", new: competitor-site-profile, level: prompt, status: proposed}
+  - {id: CES-199, old: "concept-suggest.md", new: ad-concept-generator, level: prompt, status: proposed}
+  - {id: CES-200, old: "copy-pass.md", new: direct-response-copy-edit-pass, level: prompt, status: proposed}
+  - {id: CES-207, old: "hook-grade.md", new: video-hook-scorer, level: prompt, status: proposed}
+  - {id: CES-208, old: "image-plan.md", new: script-to-static-ad-plan, level: prompt, status: proposed}
+  - {id: CES-216, old: "offer-words.md", new: offer-naming-and-wording, level: prompt, status: proposed}
+  - {id: CES-220, old: "plan-repair.md", new: ad-plan-compliance-fix, level: prompt, status: proposed}
+  - {id: CES-221, old: "reference-hooks-check.md", new: new-hook-body-fit-check, level: prompt, status: proposed}
+  - {id: CES-222, old: "reference-hooks.md", new: winning-ad-hook-remixer, level: prompt, status: proposed}
+  - {id: CES-223, old: "reference-reading.md", new: reference-ad-teardown-reader, level: prompt, status: proposed}
+  - {id: CES-232, old: "script-image-prompts.md", new: script-to-image-prompts, level: prompt, status: proposed}
+  - {id: CES-241, old: "script-surfaces.md", new: script-to-ad-format-matcher, level: prompt, status: proposed}
+  - {id: CES-243, old: "sense-check.md", new: image-prompt-reality-check, level: prompt, status: proposed}
+  - {id: CES-247, old: "sprint-plan.md", new: static-ad-sprint-planner, level: prompt, status: proposed}
+  - {id: CES-248, old: "studio-feed-focused.md", new: long-primary-text-writer-focused, level: prompt, status: proposed}
+  - {id: CES-249, old: "studio-feed.md", new: long-story-primary-text-writer, level: prompt, status: proposed}
+  - {id: CES-250, old: "studio-plan.md", new: static-ad-planner-from-reference, level: prompt, status: proposed}
+  - {id: CES-251, old: "studio-prompt.md", new: static-ad-image-prompt-compiler, level: prompt, status: proposed}
+  - {id: CES-254, old: "studio-variants.md", new: static-ad-headline-variants, level: prompt, status: proposed}
+  - {id: CES-255, old: "studio-words.md", new: static-ad-words-writer, level: prompt, status: proposed}
+  - {id: CES-258, old: "voice-check.md", new: spoken-and-brand-voice-check, level: prompt, status: proposed}
+  - {id: CES-259, old: "words-fix.md", new: failed-line-rewriter, level: prompt, status: proposed}
+  - {id: CES-260, old: "words-read.md", new: stranger-read-copy-test, level: prompt, status: proposed}
+  - {id: SKO-238, old: "Brief planner and StrategicBrief contract (tech secs 12-13, 21)", new: strategic-brief-planner, level: agent, status: proposed}
+
+M18:
+  - {id: CEA-035, old: "Script engine (video ad scripts)", new: video-ad-script-writer, level: workflow, status: proposed}
+  - {id: CEA-036, old: "Script builder", new: script-batch-builder, level: workflow, status: proposed}
+  - {id: CEA-037, old: "Script Convert (transpose)", new: script-transposer, level: skill, status: proposed}
+  - {id: CEA-049, old: "Video production (script to clips)", new: ai-video-ad-producer, level: workflow, status: proposed}
+  - {id: CEA-050, old: "Seedance prompt pack (hand-off)", new: seedance-prompt-pack-writer, level: skill, status: proposed}
+  - {id: CEA-051, old: "Avatar library + avatar studio", new: fictional-ugc-avatar-studio, level: workflow, status: proposed}
+  - {id: CEA-052, old: "Creator Studio", new: ugc-creator-studio, level: workflow, status: proposed}
+  - {id: CEA-053, old: "Video editing", new: ad-video-editor, level: workflow, status: proposed}
+  - {id: CES-004, old: "ad-script-principles", new: dr-video-script-principles-library, level: knowledge, status: proposed}
+  - {id: CES-030, old: "ecommerce-motion-finishing", new: video-ad-text-overlay-planner, level: skill, status: proposed}
+  - {id: CES-032, old: "ecommerce-video-editing", new: ecommerce-ad-video-editor, level: skill, status: proposed}
+  - {id: CES-052, old: "motion-reel", new: code-rendered-product-offer-reel, level: workflow, status: proposed}
+  - {id: CES-106, old: "script-format-carousel", new: carousel-ad-format-rules, level: skill, status: proposed}
+  - {id: CES-107, old: "script-format-cinematic", new: cinematic-live-action-ad-format-rules, level: skill, status: proposed}
+  - {id: CES-110, old: "script-format-claymation", new: claymation-story-ad-format-rules, level: skill, status: proposed}
+  - {id: CES-112, old: "script-format-comic", new: comic-page-ad-format-rules, level: skill, status: proposed}
+  - {id: CES-113, old: "script-format-explainer", new: cgi-mechanism-explainer-ad-format-rules, level: skill, status: proposed}
+  - {id: CES-114, old: "script-format-founder", new: founder-to-camera-ad-format-rules, level: skill, status: proposed}
+  - {id: CES-115, old: "script-format-long-copy-static", new: long-copy-native-static-ad-format-rules, level: skill, status: proposed}
+  - {id: CES-118, old: "script-format-podcast", new: podcast-clip-ad-format-rules, level: skill, status: proposed}
+  - {id: CES-119, old: "script-format-satisfying", new: satisfying-product-hook-ad-format-rules, level: skill, status: proposed}
+  - {id: CES-122, old: "script-format-static", new: single-static-image-ad-format-rules, level: skill, status: proposed}
+  - {id: CES-123, old: "script-format-talking-object", new: talking-object-ad-format-rules, level: skill, status: proposed}
+  - {id: CES-124, old: "script-format-ugc", new: ugc-selfie-video-ad-format-rules, level: skill, status: proposed}
+  - {id: CES-125, old: "script-format-vsl", new: long-video-sales-letter-format-rules, level: skill, status: proposed}
+  - {id: CES-128, old: "script-from-research", new: video-ad-script-from-customer-research, level: skill, status: proposed}
+  - {id: CES-129, old: "script-reference-principles", new: script-from-reference-idea, level: skill, status: proposed}
+  - {id: CES-130, old: "script-reference-structure", new: competitor-ad-structure-rewrite, level: skill, status: proposed}
+  - {id: CES-132, old: "script-transpose", new: script-voice-variant-converter, level: skill, status: proposed}
+  - {id: CES-133, old: "script-types", new: video-script-type-library, level: asset, status: proposed}
+  - {id: CES-134, old: "script-voice-pass", new: read-aloud-script-polish, level: skill, status: proposed}
+  - {id: CES-147, old: "video-director", new: ad-video-shot-director, level: skill, status: proposed}
+  - {id: CES-191, old: "audit-judge.md", new: video-script-claims-audit, level: prompt, status: proposed}
+  - {id: CES-210, old: "line-repair.md", new: script-compliance-line-fix, level: prompt, status: proposed}
+  - {id: CES-212, old: "motion-plan.md", new: video-overlay-planner, level: prompt, status: proposed}
+  - {id: CES-224, old: "script-caption-check.md", new: caption-vs-script-consistency-check, level: prompt, status: proposed}
+  - {id: CES-225, old: "script-fact-check.md", new: ad-fact-checker, level: prompt, status: proposed}
+  - {id: CES-226, old: "script-flow.md", new: video-ad-script-writer, level: prompt, status: proposed}
+  - {id: CES-227, old: "script-hook-handoff.md", new: hook-handoff-check, level: prompt, status: proposed}
+  - {id: CES-228, old: "script-hook-texts.md", new: hook-version-caption-openers, level: prompt, status: proposed}
+  - {id: CES-231, old: "script-hooks.md", new: extra-hooks-for-finished-script, level: prompt, status: proposed}
+  - {id: CES-233, old: "script-patch.md", new: script-fault-patcher, level: prompt, status: proposed}
+  - {id: CES-234, old: "script-primary-text.md", new: video-ad-primary-text-writer, level: prompt, status: proposed}
+  - {id: CES-235, old: "script-readaloud.md", new: script-read-aloud-editor, level: prompt, status: proposed}
+  - {id: CES-236, old: "script-revise.md", new: script-revision-on-request, level: prompt, status: proposed}
+  - {id: CES-242, old: "script.md", new: beat-table-video-script-writer, level: prompt, status: proposed}
+  - {id: CES-244, old: "shot-plan.md", new: video-shot-planner, level: prompt, status: proposed}
+  - {id: CES-256, old: "transpose.md", new: script-person-tense-converter, level: prompt, status: proposed}
+
+M19:
+  - {id: CEA-021, old: "Volume planner", new: creative-volume-and-budget-planner, level: skill, status: proposed}
+  - {id: CEA-024, old: "Coverage (what the account misses)", new: ad-account-coverage-gap-finder, level: workflow, status: proposed}
+  - {id: CEA-055, old: "Compliance (Meta Advertising Standards read)", new: meta-ad-compliance-checker, level: workflow, status: proposed}
+  - {id: CES-001, old: "ad-compliance", new: meta-ad-policy-check, level: skill, status: proposed}
+  - {id: SKO-237, old: "Insight analysis, gap identification and Channel strategist (tech sec 11, sec 12", new: channel-strategist-agent, level: agent, status: proposed}
+  - {id: SKO-239, old: "First complete Meta loop: creative production, deployment identity and ad monito", new: meta-creative-landing-loop, level: workflow, status: proposed}
+  - {id: SKO-241, old: "Experiment register and Experiment evaluator (tech sec 15, sec 12)", new: experiment-register-and-evaluator, level: agent, status: proposed}
+
+M20:
+  - {id: SKO-244, old: "Google Ads module (tech secs 7, 9-11; roadmap phase 5)", new: google-ads-agent, level: agent, status: proposed}
+
+M22:
+  - {id: CEA-003, old: "SEO / AEO / GEO module", new: dtc-search-growth-studio, level: system, status: proposed}
+  - {id: CEA-059, old: "Organic founder content plan", new: founder-content-calendar, level: workflow, status: proposed}
+  - {id: CEA-065, old: "SEO live storefront audit", new: seo-aeo-geo-site-auditor, level: workflow, status: proposed}
+  - {id: CEA-066, old: "Blog studio + editorial quality", new: brand-led-seo-blog-writer, level: workflow, status: proposed}
+  - {id: CEA-067, old: "AI answer visibility (AEO/GEO runner)", new: ai-search-visibility-tracker, level: workflow, status: proposed}
+  - {id: CEA-068, old: "Citation outreach", new: geo-citation-outreach-planner, level: workflow, status: proposed}
+  - {id: CEA-069, old: "SEO growth workspace + agent shopping", new: organic-growth-workspace, level: workflow, status: proposed}
+  - {id: CES-093, old: "organic-video-editing", new: organic-brand-video-editor, level: skill, status: proposed}
+  - {id: SKO-245, old: "SEO module: Search Console, crawl evidence and query-to-page plans (tech secs 7,", new: seo-agent, level: agent, status: proposed}
+
+M25:
+  - {id: EOS-066, old: "Ecommerce-OS-Financial-Operating-Map.pdf", new: financial-operating-map-india-first, level: knowledge, status: proposed}
+  - {id: EOS-067, old: "Ecommerce_OS_Financial_Statement_Operating_System.pdf", new: financial-statement-operating-system, level: knowledge, status: proposed}
+  - {id: EOS-068, old: "Ecommerce_OS_US_Financial_Opportunity_Playbook.md", new: financial-opportunity-playbook-us, level: knowledge, status: proposed}
+  - {id: EOS-069, old: "Ecommerce_OS_Financial_Opportunity_Playbook.md", new: financial-opportunity-playbook-global, level: knowledge, status: proposed}
+  - {id: EOS-070, old: "backlog.json", new: financial-opportunity-backlog-300, level: asset, status: proposed}
+  - {id: SKO-236, old: "Metric registry and economic objective (tech sec 10)", new: metric-registry, level: system, status: proposed}
+
+M26:
+  - {id: CEA-054, old: "Brief for a human creator (PDF)", new: ugc-creator-brief, level: skill, status: proposed}
+  - {id: CEA-060, old: "Find creators (brand-led creator discovery)", new: creator-discovery-agent, level: agent, status: proposed}
+
+SY:
+  - {id: CEA-005, old: "Inspect + skill/prompt editor", new: prompt-and-skill-inspector, level: system, status: proposed}
+  - {id: CEA-029, old: "Production queue and campaign review", new: campaign-batch-orchestrator, level: agent, status: proposed}
+  - {id: CEA-048, old: "Creative delivery package", new: creative-delivery-zip, level: skill, status: proposed}
+  - {id: CEA-056, old: "Feedback to lessons loop", new: creative-feedback-learner, level: workflow, status: proposed}
+  - {id: CEA-058, old: "Creative judge, copy test and scorecard", new: creative-before-after-eval, level: workflow, status: proposed}
+  - {id: CEA-072, old: "Creative Studio pipeline map (3 Oct 2026)", new: creative-pipeline-map, level: knowledge, status: proposed}
+  - {id: CEA-073, old: "Decisions log (phases 1-47+)", new: build-decision-log, level: knowledge, status: proposed}
+  - {id: CEA-093, old: "User guide (20 chapters) + best-output handbook", new: creative-engine-operator-manual, level: knowledge, status: proposed}
+  - {id: EOS-051, old: "ecommerce-os-build-split (1).pdf", new: ecommerce-os-build-split-knowledge-and-engineering, level: knowledge, status: proposed}
+  - {id: EOS-052, old: "Ecommerce_OS_Backend_Architecture.pdf", new: ecommerce-os-backend-architecture-rev-c, level: knowledge, status: proposed}
+  - {id: EOS-053, old: "Ecommerce_OS_Data_and_Engineering_Handbook.md", new: ecommerce-os-data-and-engineering-handbook, level: knowledge, status: proposed}
+  - {id: EOS-054, old: "Ecommerce Operating System Blueprint.docx", new: ecommerce-os-implementation-blueprint-meta-first, level: knowledge, status: proposed}
+  - {id: EOS-055, old: "ecommerce-os-architecture.txt", new: ecommerce-os-knowledge-engine-architecture-rev-a, level: knowledge, status: proposed}
+  - {id: EOS-057, old: "Ecommerce_OS_Customer_Delight_Architecture.pdf", new: ecommerce-os-customer-delight-architecture, level: knowledge, status: proposed}
+  - {id: EOS-073, old: "CLAUDE.md", new: brand-brain-session-rules, level: prompt, status: proposed}
+  - {id: EOS-085, old: "tmp/pdfs build pipeline", new: doc-factory-pdf-pipeline, level: workflow, status: proposed}
+  - {id: SKO-232, old: "Hosted data foundation: tenancy, storage, durable workers, data model, security,", new: hosted-data-foundation, level: system, status: proposed}
+  - {id: SKO-233, old: "Connector interface, ingestion algorithm and refresh policy (tech secs 6-8)", new: connector-ingestion-routine, level: routine, status: proposed}
+  - {id: SKO-242, old: "Institutional learning: conditional lessons, retrieval and held-out evaluation (", new: conditional-lesson-memory, level: workflow, status: proposed}
+  - {id: SKO-243, old: "Agent responsibilities, authority levels, action lifecycle and cost controls (te", new: agent-authority-and-policy-executor, level: system, status: proposed}

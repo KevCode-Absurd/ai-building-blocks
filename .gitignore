@@ -1,0 +1,12 @@
+.env
+.env.*
+!.env.example
+node_modules/
+.next/
+dist/
+*.log
+.DS_Store
+Thumbs.db
+# run outputs and traces stay local unless promoted into reports/
+runs/
+traces/

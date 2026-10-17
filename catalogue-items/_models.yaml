@@ -1,0 +1,14 @@
+# Model classes -> candidate models. Item pages name CLASSES, so only this file changes when models change.
+# Prices are filled in during Phase 1 from the router's live price list, not guessed here.
+as_of: 2026-10-17
+classes:
+  C1_cheap:   {use: "reformat, extract, fill a template, write an image prompt", candidates: [deepseek-chat, gemini-flash, gpt-mini, claude-haiku-5-5], price_per_mtok: TBD}
+  C2_mid:     {use: "short rules-based writing: hooks, headlines, ad copy variants", candidates: [claude-sonnet-5-5, gpt-standard, gemini-pro], price_per_mtok: TBD}
+  C3_top:     {use: "long multi-input reasoning: scripts, strategy, audits", candidates: [claude-opus-5-5, gpt-top], price_per_mtok: TBD}
+  C4_routed:  {use: "workflows and agents: a top model plans, cheaper models run the repeated steps", candidates: per_step}
+media:
+  image_generation:     {candidates: ["named per item after testing (Creative Engine uses GPT Image and Nano Banana Pro)"]}
+  video_generation:     {candidates: ["named per item after testing (Creative Engine uses Seedance)"]}
+  video_understanding:  {candidates: ["Gemini family (ad breakdowns)"]}
+routers_ok: [openrouter, litellm, portkey]   # "Jev" pending clarification
+rule: "The model that judges is never the model that wrote."

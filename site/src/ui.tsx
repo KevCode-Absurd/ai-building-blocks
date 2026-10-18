@@ -3,12 +3,14 @@ import { type Block, kindInfo, pathOf, taskOf } from "./lib/data";
 import { Link } from "./lib/router";
 import { kits, useStore } from "./lib/store";
 
+/** The mark: a 3 by 3 grid of blocks, like bits. Solid on the corners and centre, faint between. */
 export function Logo() {
+  const on = [[2, 2], [16, 2], [9, 9], [2, 16], [16, 16]];
+  const dim = [[9, 2], [2, 9], [16, 9], [9, 16]];
   return (
-    <svg viewBox="0 0 24 24" aria-hidden="true">
-      <rect x="2" y="2" width="9" height="9" rx="2.2" fill="currentColor" />
-      <rect x="13" y="13" width="9" height="9" rx="2.2" fill="currentColor" opacity="0.5" />
-      <path d="M11 6.5h3.5a3 3 0 0 1 3 3V13" stroke="currentColor" strokeWidth="1.8" fill="none" />
+    <svg viewBox="0 0 24 24" aria-hidden="true" className="logo">
+      {on.map(([x, y]) => <rect key={`${x}${y}`} x={x} y={y} width="6" height="6" fill="currentColor" />)}
+      {dim.map(([x, y]) => <rect key={`${x}${y}`} x={x} y={y} width="6" height="6" fill="currentColor" opacity="0.32" />)}
     </svg>
   );
 }

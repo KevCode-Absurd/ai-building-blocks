@@ -21,7 +21,7 @@ test("hero is the headline, the mono subhead and two buttons, over the globe", a
   await page.goto("/");
   await expect(page.getByRole("heading", { level: 1 })).toHaveText("Making humanity AI native");
   await expect(page.locator(".hero .lede")).toContainText("Save hours every week");
-  expect(await page.locator(".hero .lede").evaluate((el) => getComputedStyle(el).fontFamily)).toContain("IBM Plex Mono");
+  expect(await page.locator(".hero .lede").evaluate((el) => getComputedStyle(el).fontFamily)).toContain("JetBrains Mono");
   await expect(page.locator(".hero").getByRole("link")).toHaveText(["Browse the blocks", "Build a workflow"]);
   await expect(page.locator(".hero-in > *")).toHaveCount(3);
   const globe = page.getByTestId("globe");

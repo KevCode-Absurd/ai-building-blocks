@@ -17,7 +17,7 @@ import { FlowEdge, type FlowEdgeT, GoalBox, NeedsDialog, STEP_S, StepList, StepP
 type NodeData = { slug: string; ecommerce?: boolean; step?: number; run?: number; delay?: number };
 type BlockNode = Node<NodeData, "block">;
 const CatalogueCtx = createContext<Catalogue | null>(null);
-const NodeActions = createContext<{ remove: (id: string) => void; toggleEcom: (id: string) => void }>({ remove: () => {}, toggleEcom: () => {} });
+const NodeActions = createContext<{ remove: (id: string) => void }>({ remove: () => {} });
 
 const BlockNodeView = memo(function BlockNodeView({ id, data }: NodeProps<BlockNode>) {
   const c = useContext(CatalogueCtx);
@@ -371,7 +371,6 @@ function Stage({ c, toast }: { c: Catalogue; toast: (m: string) => void }) {
   };
   const actions = useMemo(() => ({
     remove: (id: string) => { setNodes((ns) => ns.filter((n) => n.id !== id)); setEdges((es) => es.filter((e) => e.source !== id && e.target !== id)); },
-    toggleEcom: (id: string) => setNodes((ns) => ns.map((n) => (n.id === id ? { ...n, data: { ...n.data, ecommerce: !n.data.ecommerce } } : n))),
   }), [setNodes, setEdges]);
   const moveStep = (from: number, to: number) => {
     if (!order || to < 0 || to >= order.length) return;
@@ -473,7 +472,7 @@ function Stage({ c, toast }: { c: Catalogue; toast: (m: string) => void }) {
               {bottom}
             </>
           )}
-          {inspect && <StepPanel c={c} flow={flow} order={order} nodeId={inspect} onClose={() => setInspect(null)} onRemove={actions.remove} onToggleStore={actions.toggleEcom} />}
+          {inspect && <StepPanel c={c} flow={flow} order={order} nodeId={inspect} onClose={() => setInspect(null)} onRemove={actions.remove} />}
         </div>
       </div>
       {needsOpen && <NeedsDialog name={name} needs={needs} onDownload={exportPack} onClose={() => setNeedsOpen(false)} />}

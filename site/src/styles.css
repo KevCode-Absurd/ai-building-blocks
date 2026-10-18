@@ -137,6 +137,9 @@ code { font: 400 0.88em var(--mono); background: var(--raise); border-radius: 4p
 .card .peek { display: block; margin: 0 0 18px; padding: 12px 14px; border: 1px dashed var(--line-2); border-radius: 6px; background: var(--bg-2); font: 400 13.5px/1.6 var(--mono); color: var(--text-2); }
 .card .view { margin-top: auto; display: inline-flex; align-items: center; gap: 6px; font: 500 12.5px var(--mono); color: var(--text); }
 .card:hover .view { text-decoration: underline; text-underline-offset: 3px; }
+/* Line cards up across a row: titles take two lines' room, and the description box fills the rest of the card. */
+.card .peek { flex: 1 0 auto; }
+@media (min-width: 600px) { .card .nm { min-height: 2.6em; } }
 @media (prefers-reduced-motion: reduce) { .card:hover, .job:hover:not(:disabled), .btn:hover:not(:disabled), .btn:hover:not(:disabled) svg { transform: none; } }
 .more { display: flex; justify-content: center; margin-top: 28px; }
 .empty { padding: 56px 24px; text-align: center; color: var(--muted); border: 1px dashed var(--line-2); border-radius: 10px; }
@@ -419,8 +422,8 @@ body.globe-dragging, body.globe-dragging * { user-select: none !important; -webk
 /* Library: job functions first, then the jobs inside one */
 .fn-h { margin: 36px 0 12px; font: 500 13px/1.4 var(--mono); color: var(--muted); }
 .fns { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; }
-.fn { position: relative; display: grid; grid-template-columns: auto 1fr; grid-template-rows: auto auto; column-gap: 14px; row-gap: 2px; align-items: center; min-height: 86px; padding: 16px 18px; text-align: left; border: 1px solid var(--line-2); border-radius: 10px; background: var(--panel); color: var(--text); cursor: pointer; font: inherit; transition: transform 0.12s, box-shadow 0.12s, border-color 0.12s; }
-.fn-glyph { grid-row: 1 / 3; display: grid; place-items: center; width: 42px; height: 42px; border-radius: 8px; border: 1px solid var(--line-2); background: var(--panel-2); font: 600 15px/1 var(--mono); letter-spacing: -0.04em; }
+.fn { position: relative; display: grid; grid-template-columns: auto 1fr; grid-template-rows: auto auto; column-gap: 14px; row-gap: 4px; align-items: start; align-content: start; min-height: 86px; padding: 16px 18px; text-align: left; border: 1px solid var(--line-2); border-radius: 10px; background: var(--panel); color: var(--text); cursor: pointer; font: inherit; transition: transform 0.12s, box-shadow 0.12s, border-color 0.12s; }
+.fn-glyph { grid-row: 1 / 3; align-self: start; display: grid; place-items: center; width: 42px; height: 42px; border-radius: 8px; border: 1px solid var(--line-2); background: var(--panel-2); font: 600 15px/1 var(--mono); letter-spacing: -0.04em; }
 .fn-name { font: 600 17px/1.25 var(--display); letter-spacing: -0.015em; padding-right: 28px; }
 .fn-line { font-size: 13.5px; line-height: 1.4; color: var(--muted); }
 .fn .count { position: absolute; top: 14px; right: 14px; font: 500 12px var(--mono); color: var(--faint); }
@@ -553,7 +556,6 @@ body.globe-dragging, body.globe-dragging * { user-select: none !important; -webk
 .sp-list b { display: block; font-size: 13.5px; font-weight: 500; }
 .sp-list small { display: block; margin-top: 2px; font-size: 12.5px; color: var(--muted); line-height: 1.45; }
 .sp-list .opt { font: 400 11px var(--mono); color: var(--faint); }
-.sp-check { display: flex; gap: 8px; align-items: center; margin-top: 14px; font-size: 13.5px; cursor: pointer; }
 .sp-actions { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 16px; }
 .sp-job { margin: 12px 0 0; }
 

@@ -38,18 +38,19 @@ test("no brands, no jargon labels, no business split, no agents", async ({ page 
   await expect(page.locator("img")).toHaveCount(0);
 });
 
-test("light by default, even on a dark system; dark on request, and remembered", async ({ page }) => {
-  await page.emulateMedia({ colorScheme: "dark" });
+test("dark by default, even on a light system; light on request, and remembered", async ({ page }) => {
+  await page.emulateMedia({ colorScheme: "light" });
   await page.goto("/");
   const bg = () => page.evaluate(() => getComputedStyle(document.body).backgroundColor);
-  expect(await bg()).toBe("rgb(250, 250, 250)");
-  await page.getByTestId("theme-toggle").click();
   await expect(page.locator("html")).toHaveAttribute("data-theme", "dark");
   expect(await bg()).toBe("rgb(10, 10, 10)");
-  await page.reload();
-  await expect(page.locator("html")).toHaveAttribute("data-theme", "dark");
   await page.getByTestId("theme-toggle").click();
+  await expect(page.locator("html")).not.toHaveAttribute("data-theme", "dark");
   expect(await bg()).toBe("rgb(250, 250, 250)");
+  await page.reload();
+  await expect(page.locator("html")).not.toHaveAttribute("data-theme", "dark");
+  await page.getByTestId("theme-toggle").click();
+  expect(await bg()).toBe("rgb(10, 10, 10)");
 });
 
 test("header links jump to the library and the builder", async ({ page }) => {

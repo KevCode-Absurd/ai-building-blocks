@@ -33,8 +33,8 @@ export const FlowEdge = memo(function FlowEdge({ id, sourceX, sourceY, targetX, 
 });
 
 /** What one step needs and gives back, and where each comes from or goes. */
-export function StepPanel({ c, flow, order, nodeId, onClose, onRemove, onToggleStore }: {
-  c: Catalogue; flow: Flow; order: Ordered[] | null; nodeId: string; onClose: () => void; onRemove: (id: string) => void; onToggleStore: (id: string) => void;
+export function StepPanel({ c, flow, order, nodeId, onClose, onRemove }: {
+  c: Catalogue; flow: Flow; order: Ordered[] | null; nodeId: string; onClose: () => void; onRemove: (id: string) => void;
 }) {
   const node = flow.nodes.find((n) => n.id === nodeId);
   const b = node && c.bySlug[node.slug];
@@ -88,12 +88,6 @@ export function StepPanel({ c, flow, order, nodeId, onClose, onRemove, onToggleS
               );
             })}
           </ul>
-          {b.addon && (
-            <label className="sp-check">
-              <input type="checkbox" checked={!!node.ecommerce} onChange={() => onToggleStore(node.id)} />
-              <span>Add the steps for an online store</span>
-            </label>
-          )}
           <div className="sp-actions">
             <a className="btn btn-ghost btn-sm" href={pathOf(b)} target="_blank" rel="noreferrer">Open its page</a>
             <button className="btn btn-ghost btn-sm" onClick={() => { onRemove(node.id); onClose(); }}>Remove the step</button>

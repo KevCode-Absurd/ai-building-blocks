@@ -16,7 +16,7 @@ export function stepsOf(flow: Flow): Step[] {
 const key = (e: { from: string; to: string }) => `${e.from}>${e.to}`;
 const autoEdges = (c: Catalogue, steps: Step[]): FlowEdge[] =>
   wireSteps(c, steps.map((s) => s.slug)).map(([a, z]) => ({ id: uid(), from: steps[a].id, to: steps[z].id }));
-const grid = (i: number) => ({ x: 40 + (i % 3) * 300, y: 110 + Math.floor(i / 3) * 190 });
+const grid = (i: number) => ({ x: 40 + (i % 3) * 360, y: 110 + Math.floor(i / 3) * 190 });
 
 /** True when the connections are the ones we'd draw ourselves, so rewiring loses nothing. */
 export function isAutoWired(c: Catalogue, flow: Flow): boolean {
@@ -44,7 +44,7 @@ export function applySteps(c: Catalogue, base: Flow | null, name: string, steps:
   steps.forEach((s, i) => {
     if (old[s.id]) return;
     const prev = steps[i - 1] ? nodes.find((n) => n.id === steps[i - 1].id) : undefined;
-    const pos = prev ? { x: prev.x + 300, y: prev.y } : { x: 40, y: Math.max(110, ...nodes.map((n) => n.y + 190)) };
+    const pos = prev ? { x: prev.x + 360, y: prev.y } : { x: 40, y: Math.max(110, ...nodes.map((n) => n.y + 190)) };
     while (nodes.some((n) => Math.abs(n.x - pos.x) < 200 && Math.abs(n.y - pos.y) < 120)) pos.y += 190;
     nodes.push({ id: s.id, slug: s.slug, ...pos });
     if (!prev) return;

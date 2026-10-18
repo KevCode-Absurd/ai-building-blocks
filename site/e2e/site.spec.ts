@@ -65,7 +65,7 @@ test("header links jump to the library and the builder", async ({ page }) => {
 test("the library opens on job functions, and is sorted into prompts, skills and workflows", async ({ page }) => {
   await page.goto("/#library");
   await expect(page.locator(".fns .fn")).toHaveCount(8);
-  await expect(page.getByTestId("fn-media-buyer")).toContainText("Meta media buyer");
+  await expect(page.getByTestId("fn-media-buyer")).toContainText("Run Meta ads");
   await expect(page.locator(".fns .fn .px")).toHaveCount(8); // every function has its pixel icon
   await expect(page.getByRole("tab")).toHaveText([/^All/, /^Prompts/, /^Skills/, /^Workflows/]);
   for (const kind of ["prompt", "skill", "workflow"]) {
@@ -99,6 +99,7 @@ test("picking a function, a job and filters narrow the library; the choice is ke
   await expect(page).toHaveURL(/biz=store/);
   const stores = parseInt(await count.innerText());
   expect(stores).toBeLessThan(all);
+  await page.mouse.move(0, 0); // keep the pointer off the list, so only the keys pick
   await page.getByTestId("filter-level").focus();
   await page.keyboard.press("ArrowDown");
   await expect(page.getByRole("listbox")).toBeVisible();
@@ -350,4 +351,128 @@ test("each job has its own hover pattern on the cards", async ({ page }) => {
   expect(pats.length).toBeGreaterThan(3);
   const defined = await page.evaluate((ps) => ps.every((p) => getComputedStyle(document.documentElement).getPropertyValue(p.slice(4, -1)).startsWith("url(")), pats);
   expect(defined).toBe(true);
+});
+
+// ---- The builder: goal, labels, step panel, what you'll need, preview, undo, tidy, save, share ----
+
+const planGoal = async (page: Page, goal: string) => {
+  await page.goto("/#build");
+  const builder = page.getByTestId("builder");
+  const box = builder.locator(".stage-empty, .list-empty").getByTestId("goal");
+  await box.getByTestId("goal-input").fill(goal);
+  await box.getByTestId("goal-go").click();
+  return builder;
+};
+
+test("start from a goal: the steps are laid out, and each connection says what it carries", async ({ page }) => {
+  const builder = await planGoal(page, "a landing page for my best ad");
+  await expect(builder.getByTestId("flow-node")).toHaveCount(4);
+  await expect(page.locator(".flow-name")).toHaveValue("A landing page for my best ad");
+  await expect(builder.getByTestId("edge-label").first()).toHaveText("brand file");
+  // A goal with nothing behind it says so instead of guessing.
+  await builder.getByTestId("palette-next").click();
+  const side = builder.locator(".palette").getByTestId("goal");
+  await side.getByTestId("goal-input").fill("zzz qqq");
+  await side.getByTestId("goal-go").click();
+  await expect(side).toContainText("No steps for that yet");
+  await expect(builder.getByTestId("flow-node")).toHaveCount(4);
+});
+
+test("click a step to see what it needs and gives back; the download lists what to gather first", async ({ page }) => {
+  const builder = await planGoal(page, "write ad copy");
+  await expect(builder.getByTestId("flow-node")).toHaveCount(4);
+  await builder.getByTestId("flow-node").nth(1).click();
+  const panel = builder.getByTestId("step-panel");
+  await expect(panel).toContainText("It needs");
+  await expect(panel).toContainText("Comes from step 1");
+  await expect(panel).toContainText("It gives back");
+  await page.keyboard.press("Escape");
+  await expect(panel).toHaveCount(0);
+
+  await builder.getByTestId("download-handoff").click();
+  const needs = page.getByTestId("needs");
+  await expect(needs).toBeVisible();
+  await expect(needs.getByTestId("needs-required").locator("li").first()).toBeVisible();
+  const [dl] = await Promise.all([page.waitForEvent("download"), needs.getByTestId("needs-download").click()]);
+  expect(dl.suggestedFilename()).toBe("write-ad-copy-handoff.zip");
+});
+
+test("preview runs the steps in order; undo, redo and tidy work", async ({ page }) => {
+  const builder = await planGoal(page, "write ad copy");
+  await builder.getByTestId("preview").click();
+  await expect(page.getByTestId("flow-status")).toContainText("Step 1 of 4");
+  await expect(page.getByTestId("flow-status")).toContainText("Step 2 of 4");
+  await expect(builder.locator(".bits span").first()).toBeAttached();
+  await builder.getByTestId("preview").click(); // Stop
+  await expect(page.getByTestId("flow-status")).toContainText("runs in 4 steps");
+
+  // Remove a step, undo it with the keyboard, redo it with the button.
+  await builder.getByTestId("flow-node").last().click();
+  await page.keyboard.press("Delete");
+  await expect(builder.getByTestId("flow-node")).toHaveCount(3);
+  await page.keyboard.press("Control+z");
+  await expect(builder.getByTestId("flow-node")).toHaveCount(4);
+  await builder.getByTestId("view-redo").click();
+  await expect(builder.getByTestId("flow-node")).toHaveCount(3);
+  await page.keyboard.press("Control+Shift+z");
+  await expect(builder.getByTestId("flow-node")).toHaveCount(3);
+  await builder.getByTestId("view-undo").click();
+  await expect(builder.getByTestId("flow-node")).toHaveCount(4);
+
+  // Drag a step out of line, then tidy puts it back in its column.
+  const node = builder.locator(".react-flow__node").first();
+  const before = await node.boundingBox();
+  await node.hover();
+  await page.mouse.down();
+  await page.mouse.move(before!.x + 60, before!.y + 160, { steps: 6 });
+  await page.mouse.up();
+  await builder.getByTestId("view-tidy-layout").click();
+  await expect.poll(async () => (await node.getAttribute("style")) ?? "").toContain("translate(40px, 110px)");
+});
+
+test("save a workflow, open it again, and share it by link", async ({ page, context, browser }) => {
+  await context.grantPermissions(["clipboard-read", "clipboard-write"]);
+  const builder = await planGoal(page, "video ads from my reviews");
+  await expect(builder.getByTestId("flow-node")).toHaveCount(6);
+  await expect(page.getByTestId("flow-status")).toContainText("not saved yet");
+  await builder.getByTestId("save-flow").click();
+  await expect(builder.getByTestId("save-flow")).toHaveText("Saved");
+  await page.locator(".flow-name").fill("Sprout video ads");
+  await expect(builder.getByTestId("save-flow")).toHaveText("Save");
+  await expect(page.getByTestId("flow-status")).toContainText("changes not saved");
+  await builder.getByTestId("save-flow").click();
+  await builder.getByRole("button", { name: "New", exact: true }).click();
+  await expect(builder.getByTestId("flow-node")).toHaveCount(0);
+  await builder.getByTestId("saved-flows").selectOption({ label: "Sprout video ads" });
+  await expect(builder.getByTestId("flow-node")).toHaveCount(6);
+
+  await builder.getByTestId("share-flow").click();
+  const link = await page.evaluate(() => navigator.clipboard.readText());
+  expect(link).toMatch(/\/\?flow=[\w-]+#build$/);
+  // Someone else opens the link in their own browser.
+  const other = await browser.newContext();
+  const theirs = await other.newPage();
+  await theirs.goto(link.replace(/^https?:\/\/[^/]+/, "http://localhost:5180"));
+  await expect(theirs.getByTestId("builder").getByTestId("flow-node")).toHaveCount(6);
+  await expect(theirs.locator(".flow-name")).toHaveValue("Sprout video ads");
+  await expect(theirs.getByTestId("builder").locator(".react-flow__edge")).toHaveCount(await builder.locator(".react-flow__edge").count());
+  await expect(theirs).not.toHaveURL(/flow=/);
+  await other.close();
+});
+
+test("phone width: the workflow is a numbered list you reorder with arrows @mobile", async ({ page }) => {
+  const builder = await planGoal(page, "write ad copy");
+  const list = builder.getByTestId("step-list");
+  await expect(list.locator("li")).toHaveCount(4);
+  await expect(builder.locator(".react-flow")).toHaveCount(0);
+  const slugs = () => list.locator("li").evaluateAll((els) => els.map((e) => e.getAttribute("data-slug")));
+  const start = await slugs();
+  await list.locator("li").nth(2).getByTestId("step-down").click();
+  expect(await slugs()).toEqual([start[0], start[1], start[3], start[2]]);
+  await builder.getByTestId("view-undo").click();
+  await expect.poll(slugs).toEqual(start);
+  await list.locator("li").nth(1).getByTestId("step-open").click();
+  await expect(builder.getByTestId("step-panel")).toContainText("It needs");
+  const overflow = await page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth);
+  expect(overflow).toBeLessThanOrEqual(0);
 });

@@ -39,17 +39,11 @@ export function typeMismatches(c: Catalogue, flow: Flow) {
 
 const safeName = (s: string) => s.trim().toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "") || "workflow";
 
-export function handoffMarkdown(c: Catalogue, flow: Flow, order: Ordered[]): string {
-  const L: string[] = [];
+/** Something the person has to provide, because no earlier connected step makes it. */
+export type Need = { type: string; label: string; about: string | null; steps: number[]; required: boolean };
+
+export function needsOf(c: Catalogue, order: Ordered[]): Need[] {
   const blockOf = (o: Ordered) => c.bySlug[o.node.slug];
-  const last = order.filter((o) => !flow.edges.some((e) => e.from === o.node.id));
-  const finalOutputs = [...new Set(last.flatMap((o) => blockOf(o)?.outputs.map((p) => portLabel(p.type)) ?? []))];
-
-  L.push(`# Handoff: ${flow.name}`, "");
-  L.push(`This pack runs ${order.length} building block${order.length === 1 ? "" : "s"} in order${finalOutputs.length ? ` and ends with: ${finalOutputs.join(", ").toLowerCase()}` : ""}.`);
-  L.push("Each step names a skill in `skills/`. Read that skill's SKILL.md before you run the step, and follow it exactly.", "");
-
-  // What the person must provide: required inputs that no earlier connected step produces.
   const need = new Map<string, { steps: number[]; required: boolean }>();
   for (const o of order) {
     const b = blockOf(o);
@@ -62,8 +56,23 @@ export function handoffMarkdown(c: Catalogue, flow: Flow, order: Ordered[]): str
       need.set(p.type, n);
     }
   }
-  const prepare = [...need].sort((a, b) => Number(b[1].required) - Number(a[1].required) || a[1].steps[0] - b[1].steps[0]).map(([t, n]) =>
-    `- **${portLabel(t)}**${n.required ? "" : " (optional)"}, for step${n.steps.length > 1 ? "s" : ""} ${n.steps.join(", ")}${c.portTypes[t] ? `: ${c.portTypes[t]}` : ""}`);
+  return [...need]
+    .sort((a, b) => Number(b[1].required) - Number(a[1].required) || a[1].steps[0] - b[1].steps[0])
+    .map(([type, n]) => ({ type, label: portLabel(type), about: c.portTypes[type] ?? null, ...n }));
+}
+
+export function handoffMarkdown(c: Catalogue, flow: Flow, order: Ordered[]): string {
+  const L: string[] = [];
+  const blockOf = (o: Ordered) => c.bySlug[o.node.slug];
+  const last = order.filter((o) => !flow.edges.some((e) => e.from === o.node.id));
+  const finalOutputs = [...new Set(last.flatMap((o) => blockOf(o)?.outputs.map((p) => portLabel(p.type)) ?? []))];
+
+  L.push(`# Handoff: ${flow.name}`, "");
+  L.push(`This pack runs ${order.length} building block${order.length === 1 ? "" : "s"} in order${finalOutputs.length ? ` and ends with: ${finalOutputs.join(", ").toLowerCase()}` : ""}.`);
+  L.push("Each step names a skill in `skills/`. Read that skill's SKILL.md before you run the step, and follow it exactly.", "");
+
+  const prepare = needsOf(c, order).map((n) =>
+    `- **${n.label}**${n.required ? "" : " (optional)"}, for step${n.steps.length > 1 ? "s" : ""} ${n.steps.join(", ")}${n.about ? `: ${n.about}` : ""}`);
   L.push("## Before you start", "");
   L.push(prepare.length ? "Ask the person for these, or confirm where they are. Don't start a step whose required inputs are missing." : "Nothing needs preparing: every input comes from an earlier step.");
   if (prepare.length) L.push("", ...prepare);

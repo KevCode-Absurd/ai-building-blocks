@@ -141,17 +141,17 @@ export function loadPage(slug: string): Promise<Page | null> {
   return pageCache.get(slug)!;
 }
 
-/** Who you are, or whose work you want done: the first way into the library.
- *  A function groups the jobs that person does; a job can sit under more than one. */
+/** The kinds of work, named by what gets done: the first way into the library.
+ *  Each one groups a few jobs; a job can sit under more than one. */
 export const FUNCTIONS: { id: string; name: string; line: string; tasks: string[] }[] = [
-  { id: "copywriter", name: "Copywriter", line: "Ads, pages and offers that sell", tasks: ["write-ad-copy", "write-landing-page", "make-offer"] },
-  { id: "media-buyer", name: "Meta media buyer", line: "Plan tests, get ads approved, read results", tasks: ["plan-ad-tests", "check-ads", "read-ad-results", "study-competitors"] },
-  { id: "designer", name: "Graphic designer", line: "Image ads and product photos", tasks: ["make-image-ads", "product-photos"] },
-  { id: "video", name: "Video editor", line: "Scripts, shot lists and edits", tasks: ["make-video-ads"] },
-  { id: "cro", name: "CRO specialist", line: "Pages that turn visitors into buyers", tasks: ["audit-landing-page", "write-landing-page"] },
-  { id: "strategist", name: "Brand strategist", line: "Know your customers, brand and rivals", tasks: ["understand-customers", "brand-file", "study-competitors", "make-offer"] },
-  { id: "social", name: "Social media manager", line: "Posts that grow an audience", tasks: ["grow-social"] },
-  { id: "founder", name: "Founder", line: "A brand file and AI set up once, for every job", tasks: ["set-up-ai", "brand-file"] },
+  { id: "copywriter", name: "Write copy that sells", line: "Ads, landing pages and offers", tasks: ["write-ad-copy", "write-landing-page", "make-offer"] },
+  { id: "media-buyer", name: "Run Meta ads", line: "Plan tests, get ads approved, read the results", tasks: ["plan-ad-tests", "check-ads", "read-ad-results", "study-competitors"] },
+  { id: "designer", name: "Make images", line: "Image ads and product photos", tasks: ["make-image-ads", "product-photos"] },
+  { id: "video", name: "Make video ads", line: "Scripts, shot lists and edits", tasks: ["make-video-ads"] },
+  { id: "cro", name: "Turn visitors into buyers", line: "Check your landing pages and fix what loses sales", tasks: ["audit-landing-page", "write-landing-page"] },
+  { id: "strategist", name: "Know your market", line: "Your customers, your brand and your rivals", tasks: ["understand-customers", "brand-file", "study-competitors", "make-offer"] },
+  { id: "social", name: "Grow on social", line: "Posts that build an audience", tasks: ["grow-social"] },
+  { id: "founder", name: "Set up AI for your business", line: "Your brand file and AI, set up once for every job", tasks: ["set-up-ai", "brand-file"] },
 ];
 export const functionsOf = (b: Block) => FUNCTIONS.filter((f) => f.tasks.includes(b.task));
 
@@ -160,21 +160,3 @@ export const BUSINESSES: { id: string; name: string; test: (b: Block) => boolean
   { id: "any", name: "Works for any business", test: (b) => b.category !== "ecommerce" },
   { id: "store", name: "Online stores", test: (b) => b.category === "ecommerce" || b.addon },
 ];
-
-/** What you already have. Brand files are left out: nearly everything uses one. */
-export const STARTS: { id: string; name: string; types: string[] }[] = [
-  { id: "product", name: "A product page or details", types: ["product_data", "web_page"] },
-  { id: "reviews", name: "Customer reviews", types: ["voc_reviews"] },
-  { id: "customer", name: "A customer profile", types: ["persona"] },
-  { id: "brief", name: "A brief", types: ["brief"] },
-  { id: "copy", name: "Ad copy or a draft", types: ["ad_copy", "copy_draft"] },
-  { id: "script", name: "A video script", types: ["script"] },
-  { id: "photos", name: "Product photos", types: ["product_photos"] },
-  { id: "results", name: "Ad results", types: ["performance_sheet"] },
-  { id: "page", name: "A landing page", types: ["landing_page"] },
-  { id: "offer", name: "An offer", types: ["offer"] },
-  { id: "competitors", name: "Competitor ads", types: ["competitor_set", "ad_breakdowns"] },
-  { id: "examples", name: "Examples you like", types: ["reference_set"] },
-  { id: "footage", name: "Video footage", types: ["footage", "video_ads"] },
-];
-export const startsFrom = (b: Block, id: string) => { const s = STARTS.find((x) => x.id === id); return !s || b.inputs.some((p) => s.types.includes(p.type)); };

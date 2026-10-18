@@ -1,7 +1,7 @@
 import { Suspense, lazy, useCallback, useEffect, useMemo, useState } from "react";
 import { ArrowIcon, BlockCard, Drawer, Logo, PixelIcon, SearchIcon, Select, ThemeToggle, Toast } from "./ui";
 import Globe from "./Globe";
-import { type Block, type Catalogue, type Kind, BUSINESSES, FUNCTIONS, KINDS, LEVELS, STARTS, TASKS, cap, functionsOf, kindOf, pathOf, startsFrom, taskOf, useCatalogue } from "./lib/data";
+import { type Block, type Catalogue, type Kind, BUSINESSES, FUNCTIONS, KINDS, LEVELS, TASKS, cap, functionsOf, kindOf, pathOf, taskOf, useCatalogue } from "./lib/data";
 import { kits, queueForCanvas, useStore } from "./lib/store";
 import { Link, navigate, setSearch, useLocation } from "./lib/router";
 
@@ -38,8 +38,8 @@ function Header({ onKits }: { onKits: () => void }) {
   );
 }
 
-type Filters = { q: string; fn: string; task: string; kind: Kind | "all"; level: string; biz: string; from: string };
-const NONE: Filters = { q: "", fn: "", task: "", kind: "all", level: "", biz: "", from: "" };
+type Filters = { q: string; fn: string; task: string; kind: Kind | "all"; level: string; biz: string };
+const NONE: Filters = { q: "", fn: "", task: "", kind: "all", level: "", biz: "" };
 
 function Library({ c }: { c: Catalogue }) {
   const { search } = useLocation();
@@ -47,7 +47,7 @@ function Library({ c }: { c: Catalogue }) {
     const task = TASKS.some((t) => t.id === search.get("job")) ? search.get("job")! : "";
     const fn = FUNCTIONS.find((x) => x.id === search.get("fn"))?.id ?? (task ? FUNCTIONS.find((x) => x.tasks.includes(task))!.id : "");
     const kind = KINDS.some((k) => k.id === search.get("kind")) ? (search.get("kind") as Kind) : "all";
-    return { ...NONE, q: search.get("q") ?? "", fn, task, kind, level: search.get("level") ?? "", biz: search.get("biz") ?? "", from: search.get("from") ?? "" };
+    return { ...NONE, q: search.get("q") ?? "", fn, task, kind, level: search.get("level") ?? "", biz: search.get("biz") ?? "" };
   });
   const set = (patch: Partial<Filters>) => setF((x) => ({ ...x, ...patch }));
   const [limit, setLimit] = useState(PAGE);
@@ -63,7 +63,7 @@ function Library({ c }: { c: Catalogue }) {
     window.addEventListener("keydown", on);
     return () => window.removeEventListener("keydown", on);
   }, []);
-  useEffect(() => { setLimit(PAGE); setSearch({ q: f.q, fn: f.fn, job: f.task, kind: f.kind === "all" ? "" : f.kind, level: f.level, biz: f.biz, from: f.from }); }, [f]);
+  useEffect(() => { setLimit(PAGE); setSearch({ q: f.q, fn: f.fn, job: f.task, kind: f.kind === "all" ? "" : f.kind, level: f.level, biz: f.biz }); }, [f]);
 
   // Every count reflects all the other choices, so a zero is never a surprise.
   const words = f.q.toLowerCase().split(/\s+/).filter(Boolean);
@@ -75,7 +75,6 @@ function Library({ c }: { c: Catalogue }) {
     kind: (b, v) => v === "all" || kindOf(b) === v,
     level: (b, v) => !v || b.level === v,
     biz: (b, v) => !v || !!BUSINESSES.find((x) => x.id === v)?.test(b),
-    from: (b, v) => !v || startsFrom(b, v),
   };
   const keys = Object.keys(tests) as (keyof Filters)[];
   const count = (over: Partial<Filters>) => {
@@ -95,7 +94,7 @@ function Library({ c }: { c: Catalogue }) {
       <label className="search big"><SearchIcon /><span className="visually-hidden">Search</span><input value={f.q} onChange={(e) => set({ q: e.target.value })} placeholder="What do you want to get done? Try “ad copy” or “landing page”" data-testid="library-search" /><kbd className="kbd" aria-hidden="true">/</kbd></label>
 
       <h2 className="fn-h">Pick the work you do, or want done</h2>
-      <div className="fns" role="group" aria-label="Pick a job function">
+      <div className="fns" role="group" aria-label="Pick the work">
         {FUNCTIONS.map((x) => {
           const n = count({ fn: x.id, task: "" });
           return (
@@ -109,7 +108,7 @@ function Library({ c }: { c: Catalogue }) {
         })}
       </div>
       {fn && (
-        <div className="subjobs" role="group" aria-label={`Jobs a ${fn.name.toLowerCase()} does`} data-testid="subjobs">
+        <div className="subjobs" role="group" aria-label={`Jobs under ${fn.name}`} data-testid="subjobs">
           <button className="chip" aria-pressed={!f.task} onClick={() => set({ task: "" })}>Everything<span className="count">{count({ task: "" })}</span></button>
           {fn.tasks.map((id) => {
             const t = TASKS.find((x) => x.id === id)!;
@@ -129,14 +128,12 @@ function Library({ c }: { c: Catalogue }) {
         <div className="filters">
           <Select label="Business" value={f.biz} onChange={(v) => set({ biz: v })} testId="filter-biz"
             options={[{ value: "", label: "Any", count: count({ biz: "" }) }, ...BUSINESSES.map((x) => ({ value: x.id, label: x.name, count: count({ biz: x.id }) }))]} />
-          <Select label="You have" value={f.from} onChange={(v) => set({ from: v })} testId="filter-from"
-            options={[{ value: "", label: "Anything", count: count({ from: "" }) }, ...STARTS.map((x) => ({ value: x.id, label: x.name, count: count({ from: x.id }) }))]} />
           <Select label="Level" value={f.level} onChange={(v) => set({ level: v })} testId="filter-level"
             options={[{ value: "", label: "Any", count: count({ level: "" }) }, ...LEVELS.map((l) => ({ value: l, label: cap(l), count: count({ level: l }) }))]} />
         </div>
       </div>
       <div className="result-line">
-        <span data-testid="result-count">{results.length} result{results.length === 1 ? "" : "s"}{activeTask ? ` for “${activeTask.name}”` : fn ? ` for a ${fn.name.toLowerCase()}` : ""}{f.kind !== "all" ? `. ${KINDS.find((k) => k.id === f.kind)!.what}` : ""}</span>
+        <span data-testid="result-count">{results.length} result{results.length === 1 ? "" : "s"}{activeTask ? ` for “${activeTask.name}”` : fn ? ` for “${fn.name}”` : ""}{f.kind !== "all" ? `. ${KINDS.find((k) => k.id === f.kind)!.what}` : ""}</span>
         {filtered && <button className="link-btn" onClick={clear}>Clear all</button>}
       </div>
       {results.length ? (

@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState, type ReactNode } from "react";
-import { type Block, type Role, portLabel, roleName } from "./lib/data";
+import { type Block, KINDS, kindOf, portLabel, taskOf } from "./lib/data";
 import { kits, useStore } from "./lib/store";
 
 export function Logo() {
@@ -27,10 +27,9 @@ const MoonIcon = () => (
   <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M13.5 9.5A5.5 5.5 0 0 1 6.5 2.5a5.5 5.5 0 1 0 7 7Z" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" /></svg>
 );
 
-/** Dark or light. A saved choice wins; otherwise the system setting decides. */
+/** Light by default; dark when the person picks it, and the choice is remembered. */
 export function ThemeToggle() {
-  const sys = () => (window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark");
-  const [theme, setTheme] = useState<"dark" | "light">(() => (document.documentElement.dataset.theme as "dark" | "light") || sys());
+  const [theme, setTheme] = useState<"dark" | "light">(() => (document.documentElement.dataset.theme === "dark" ? "dark" : "light"));
   const next = theme === "dark" ? "light" : "dark";
   return (
     <button
@@ -46,24 +45,21 @@ export function ThemeToggle() {
   );
 }
 
-export function RoleMark({ role, children }: { role: Role; children?: ReactNode }) {
-  return <span className={`role-mark role-${role}`}><span className="dot" />{children ?? roleName(role)}</span>;
-}
-
 export function BlockCard({ b, onOpen }: { b: Block; onOpen: (slug: string) => void }) {
+  const kind = KINDS.find((k) => k.id === kindOf(b))!;
   return (
-    <button className="card" onClick={() => onOpen(b.slug)} data-testid="block-card" data-slug={b.slug}>
-      <span className="meta">
-        <RoleMark role={b.role} />
-        {b.category === "ecommerce" ? <span className="tag">Ecommerce</span> : b.addon ? <span className="tag">+ Ecommerce</span> : null}
-        <span className="type">{b.type}</span>
-      </span>
+    <button className="card" onClick={() => onOpen(b.slug)} data-testid="block-card" data-slug={b.slug} data-kind={kind.id}>
+      <span className="meta"><span className="kind">{kind.name}</span><span className="type">{taskOf(b).name}</span></span>
       <span className="nm">{b.name}</span>
       <span className="sm">{b.summary}</span>
       <span className="flow">
-        <span>{b.inputs.length ? b.inputs.filter((p) => p.required).map((p) => portLabel(p.type)).join(", ") || portLabel(b.inputs[0].type) : "Your request"}</span>
-        <ArrowIcon size={12} />
-        <span>{b.outputs.map((p) => portLabel(p.type)).join(", ") || "Output"}</span>
+        {b.category === "orchestrator" ? <span>{b.steps.length} steps</span> : (
+          <>
+            <span>{b.inputs.filter((p) => p.required).map((p) => portLabel(p.type)).join(", ") || (b.inputs[0] ? portLabel(b.inputs[0].type) : "Your request")}</span>
+            <ArrowIcon size={12} />
+            <span>{b.outputs.map((p) => portLabel(p.type)).join(", ") || "Output"}</span>
+          </>
+        )}
       </span>
     </button>
   );

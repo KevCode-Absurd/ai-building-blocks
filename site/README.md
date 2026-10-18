@@ -1,6 +1,6 @@
 # Site
 
-The AI Building Blocks website: one page, dark by default with a light mode. Header, "Making humanity AI native", then how it works, the library (blocks open in a side drawer, `?block=<slug>`), ready workflows, the builder (drag-and-drop canvas with the handoff download), testing and get started. See `docs/PRD.md`.
+The AI Building Blocks website: one page, light by default with a dark mode. Header, "Making humanity AI native" and two buttons, then the library (Prompts, Skills, Workflows, Agents; anything opens in a side drawer, `?block=<slug>`) and the builder (drag-and-drop canvas with the handoff download). See `docs/PRD.md`.
 
 Vite + React + TypeScript, built to static files. No server; what people save (kits, workflows) is kept in their browser by `src/lib/store.ts`, the one file to change when free accounts arrive.
 
@@ -18,6 +18,6 @@ npm run test:e2e   # Playwright end-to-end tests (uses the installed Chrome; PW_
 | `src/App.tsx` | The page and its sections |
 | `src/Builder.tsx` | The drag-and-drop canvas (React Flow), loaded after the page |
 | `src/BlockDrawer.tsx` | A block or workflow in the side drawer |
-| `e2e/site.spec.ts` | End-to-end tests: hero, no brands, theme, navigation, search, drawer, kits, builder, handoff zip, phone width |
+| `e2e/site.spec.ts` | End-to-end tests: hero, no brands or jargon, theme, navigation, type tabs, search and filters, drawer, kits, builder, handoff zip, phone width |
 
 The page shows no brand names or brand pictures (decided 18 Oct).

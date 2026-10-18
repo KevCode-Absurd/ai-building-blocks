@@ -16,10 +16,10 @@ A free library of AI building blocks for any business. Each block is a small, we
 
 ## 3 · What v0 includes
 
-1. **One page.** Header, hero, then the sections in §5.
-2. **Library.** Every block, with search, filters (category, job, type, role, level) and three shelves: **Most popular**, **Recently added**, **Start here**. Fast: one prebuilt JSON index, no server.
+1. **One page.** Header, hero, library, builder (§5).
+2. **Library.** Everything, by type (prompts, skills, workflows, agents), with search, plain task filters and level. Fast: one prebuilt JSON index, no server.
 3. **Block drawer.** Name, one-line summary, what it needs and gives, the skill itself, the ecommerce add-on where one exists, what it connects to, "Copy skill", "Download", "Save to kit", "Add to builder".
-4. **Two categories.** **General** (any business) and **Ecommerce** (online stores). A general block can carry an ecommerce add-on; the add-on never forks the block.
+4. **Two categories behind the scenes.** General and ecommerce stay in the catalogue files; the page doesn't split by business.
 5. **Kits.** Save blocks into named kits. Kits persist in the browser now and move to a free account later (accounts hold no business data; decided 18 Oct).
 6. **Canvas (workflow builder).** Drag blocks from a side panel onto a canvas, connect an output to an input, reorder, see when a connection's types don't match, save, and download the handoff pack. Persisted like kits.
 7. **Handoff pack export (deterministic).** A zip containing `HANDOFF.md`, `workflow.json` and `skills/<slug>/SKILL.md` for every block used. Rules in §6.
@@ -94,16 +94,14 @@ Orchestrators (`category: orchestrator`, `type: workflow`, `role: orchestrate`) 
 - **Rights.** Own material is tightened. Course-derived material is rebuilt from scratch in our own words with new names and new examples, never copied (RULES.md §2).
 - **Sources stay read-only.** We copy from Creative Engine; we never edit it.
 
-## 5 · Design (revised 18 Oct: one page, x.ai-like)
+## 5 · Design (revised 18 Oct: one simple page)
 
-One page: a header, the headline **"Making humanity AI native"**, a subhead on saving time and doing ten times more (become the 10x human), then the content: how it works, the library, ready workflows, the builder, how we test, get started. Blocks and workflows open in a side drawer, so nobody leaves the page.
+Anyone should land, understand it and start in under a minute. One page: a header (Library, Builder, My kits, light/dark), the headline **"Making humanity AI native"**, one subhead (save hours, do the work of ten, become the 10x human) and two buttons, **Browse the blocks** and **Build a workflow**. Then the library, then the builder. Nothing else.
 
-- **Look:** modelled on x.ai. Dark first (near-black #0a0a0a, panels #161616, soft grey text, white pill buttons) with a matching light mode; it follows the system until the person picks one.
-- **Type:** one neutral sans (Geist) with a mono (Geist Mono) for skill names and the terminal demo.
-- **Colour:** monochrome; small role colours only where they say what a block does.
-- **Hero visual:** a request and the handoff running step by step, as two terminal-style panels.
-- **No brands:** no brand names or brand pictures anywhere on the page.
-- **Easy to use:** section links in the header with the current section highlighted, plain labels, one clear primary action per section, keyboard and screen-reader friendly, phone width without sideways scroll.
+- **Library:** one big search box ("What do you want to get done?"), tabs in this order: **Prompts, Skills, Workflows, Agents** (with counts), and plain "what do you want to do?" filters (Make videos, Make images, Run ads, Write copy, Build landing pages, Know your brand and customers, Plan and read results, Post on social) plus a level. Anything opens in a side drawer.
+- **Not shown to people:** the internal roles (source, digest, make, render, check, orchestrate) and the general/ecommerce split. They stay in `item.yaml` for building and the handoff; the store-specific add-on appears only inside a block, as "For online stores".
+- **Look:** x.ai-inspired, **light by default** with a remembered dark mode. Inter Tight for headings, Geist for text, Geist Mono for skill names. Monochrome.
+- **No brands** anywhere on the page.
 
 ## 6 · The handoff pack (deterministic export)
 

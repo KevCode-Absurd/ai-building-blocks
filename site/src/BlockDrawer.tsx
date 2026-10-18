@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { Marked } from "marked";
-import { Drawer, KitMenu, RoleMark } from "./ui";
-import { type Catalogue, JOBS, cap, loadSkillText, neighbours, portLabel, wireSteps } from "./lib/data";
+import { Drawer, KitMenu } from "./ui";
+import { type Catalogue, KINDS, cap, kindOf, loadSkillText, neighbours, portLabel, taskOf, wireSteps } from "./lib/data";
 import { markViewed } from "./lib/store";
 import { buildHandoffZip, download } from "./lib/handoff";
 
@@ -40,7 +40,7 @@ export default function BlockDrawer({ c, slug, onOpen, onClose, toast, toBuilder
 
   return (
     <Drawer label={b.name} top={<span className="mono">{b.slug}</span>} onClose={onClose}>
-      <RoleMark role={b.role} />
+      <p className="kicker"><span className="kind">{KINDS.find((k) => k.id === kindOf(b))!.name}</span>{taskOf(b).name}</p>
       <h2 className="title">{b.name}</h2>
       <p className="lede" style={{ fontSize: 16 }}>{b.summary}</p>
 
@@ -61,18 +61,16 @@ export default function BlockDrawer({ c, slug, onOpen, onClose, toast, toBuilder
       </div>
 
       <dl className="facts">
-        <div><dt>Needs</dt><dd>{b.inputs.length ? b.inputs.map((p) => portLabel(p.type) + (p.required ? "" : " (optional)")).join(", ") : "Your request"}</dd></div>
-        <div><dt>Gives you</dt><dd>{b.outputs.map((p) => portLabel(p.type)).join(", ") || "See the skill"}</dd></div>
-        <div><dt>Job</dt><dd>{JOBS[b.job] ?? cap(b.job)}</dd></div>
+        <div><dt>You give it</dt><dd>{b.inputs.length ? b.inputs.map((p) => portLabel(p.type) + (p.required ? "" : " (optional)")).join(", ") : "Your request"}</dd></div>
+        <div><dt>You get</dt><dd>{b.outputs.map((p) => portLabel(p.type)).join(", ") || "See below"}</dd></div>
         <div><dt>Level</dt><dd>{cap(b.level)}</dd></div>
-        <div><dt>Works for</dt><dd>{b.category === "ecommerce" ? "Online stores" : b.addon ? "Any business, with an ecommerce add-on" : isFlow ? "Any business" : "Any business"}</dd></div>
         <div><dt>Tested</dt><dd>Not yet</dd></div>
       </dl>
 
       <div className="tabs" role="tablist">
         <button role="tab" aria-selected={tab === "skill"} onClick={() => setTab("skill")}>{isFlow ? "Steps" : "Skill"}</button>
-        {addon && <button role="tab" aria-selected={tab === "ecommerce"} onClick={() => setTab("ecommerce")}>Ecommerce add-on</button>}
-        {!isFlow && <button role="tab" aria-selected={tab === "connect"} onClick={() => setTab("connect")}>Connects to</button>}
+        {addon && <button role="tab" aria-selected={tab === "ecommerce"} onClick={() => setTab("ecommerce")}>For online stores</button>}
+        {!isFlow && <button role="tab" aria-selected={tab === "connect"} onClick={() => setTab("connect")}>Goes well with</button>}
       </div>
 
       {tab === "skill" && isFlow && (
@@ -98,14 +96,14 @@ export default function BlockDrawer({ c, slug, onOpen, onClose, toast, toBuilder
       {tab === "ecommerce" && addon && <div className="prose" dangerouslySetInnerHTML={{ __html: md.parse(addon) as string }} />}
       {tab === "connect" && near && (
         <div className="connect">
-          <h4>Feeds into this block</h4>
+          <h4>Use before this</h4>
           {near.before.length ? (
-            <ul>{near.before.slice(0, 10).map((x) => <li key={x.slug}><button onClick={() => onOpen(x.slug)}><RoleMark role={x.role}>{x.name}</RoleMark><small>{x.outputs.filter((p) => b.inputs.some((i) => i.type === p.type)).map((p) => portLabel(p.type)).join(", ")}</small></button></li>)}</ul>
-          ) : <p className="small" style={{ marginBottom: 24 }}>Nothing makes this block's inputs yet. You provide them.</p>}
-          <h4>Takes this block's output</h4>
+            <ul>{near.before.slice(0, 10).map((x) => <li key={x.slug}><button onClick={() => onOpen(x.slug)}><span>{x.name}</span><small>{x.outputs.filter((p) => b.inputs.some((i) => i.type === p.type)).map((p) => portLabel(p.type)).join(", ")}</small></button></li>)}</ul>
+          ) : <p className="small" style={{ marginBottom: 24 }}>You bring what it needs.</p>}
+          <h4>Use after this</h4>
           {near.after.length ? (
-            <ul>{near.after.slice(0, 10).map((x) => <li key={x.slug}><button onClick={() => onOpen(x.slug)}><RoleMark role={x.role}>{x.name}</RoleMark><small>{x.inputs.filter((p) => b.outputs.some((o) => o.type === p.type)).map((p) => portLabel(p.type)).join(", ")}</small></button></li>)}</ul>
-          ) : <p className="small">This block ends a chain. Its output is for you.</p>}
+            <ul>{near.after.slice(0, 10).map((x) => <li key={x.slug}><button onClick={() => onOpen(x.slug)}><span>{x.name}</span><small>{x.inputs.filter((p) => b.outputs.some((o) => o.type === p.type)).map((p) => portLabel(p.type)).join(", ")}</small></button></li>)}</ul>
+          ) : <p className="small">Its result is ready to use.</p>}
         </div>
       )}
     </Drawer>

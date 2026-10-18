@@ -4,8 +4,8 @@ import {
   type Connection, type Edge, type Node, type NodeProps,
 } from "@xyflow/react";
 import "@xyflow/react/dist/base.css";
-import { RoleMark, SearchIcon } from "./ui";
-import { type Block, type Catalogue, ROLES, portLabel, wireSteps } from "./lib/data";
+import { SearchIcon } from "./ui";
+import { type Block, type Catalogue, KINDS, TASKS, kindOf, portLabel, taskOf, wireSteps } from "./lib/data";
 import { type Flow, QUEUED, flows, takeQueued, uid, useStore } from "./lib/store";
 import { buildHandoffZip, download, orderFlow, typeMismatches } from "./lib/handoff";
 
@@ -21,7 +21,7 @@ const BlockNodeView = memo(function BlockNodeView({ id, data }: NodeProps<BlockN
   return (
     <div className="node" data-testid="flow-node">
       <Handle type="target" position={Position.Left} />
-      <div className="top">{b ? <RoleMark role={b.role} /> : <span className="small">Missing block</span>}<span className="step-n">{data.step ? `Step ${data.step}` : ""}</span></div>
+      <div className="top">{b ? <span className="kind">{KINDS.find((k) => k.id === kindOf(b))!.name}</span> : <span className="small">Missing block</span>}<span className="step-n">{data.step ? `Step ${data.step}` : ""}</span></div>
       <div className="nm">{b?.name ?? data.slug}</div>
       {b && (
         <div className="io">
@@ -29,7 +29,6 @@ const BlockNodeView = memo(function BlockNodeView({ id, data }: NodeProps<BlockN
           <div><b>Out</b> {b.outputs.map((p) => portLabel(p.type)).join(", ") || "see skill"}</div>
         </div>
       )}
-      {b?.addon && <label className="eco nodrag"><input type="checkbox" checked={!!data.ecommerce} onChange={() => act.toggleEcom(id)} />Use the ecommerce add-on</label>}
       <button className="x nodrag" aria-label="Remove block" onClick={() => act.remove(id)}>×</button>
       <Handle type="source" position={Position.Right} />
     </div>
@@ -54,13 +53,13 @@ function chain(c: Catalogue, slugs: string[], start = { x: 40, y: 110 }) {
 
 function Palette({ c, onAdd, onTemplate }: { c: Catalogue; onAdd: (slug: string) => void; onTemplate: (b: Block) => void }) {
   const [q, setQ] = useState("");
-  const [cat, setCat] = useState<"all" | "general" | "ecommerce" | "kits">("all");
+  const [cat, setCat] = useState<"all" | "kits">("all");
   const userKits = useStore((s) => s.kits);
   const list = useMemo(() => {
     const words = q.toLowerCase().split(/\s+/).filter(Boolean);
     const kitSlugs = new Set(userKits.flatMap((k) => k.slugs));
     return c.blocks.filter((b) => b.category !== "orchestrator" &&
-      (cat === "all" || (cat === "kits" ? kitSlugs.has(b.slug) : cat === "ecommerce" ? b.category === "ecommerce" || b.addon : b.category === cat)) &&
+      (cat === "all" || kitSlugs.has(b.slug)) &&
       words.every((w) => `${b.name} ${b.slug} ${b.summary}`.toLowerCase().includes(w)));
   }, [c, q, cat, userKits]);
   const templates = c.blocks.filter((b) => b.category === "orchestrator");
@@ -69,7 +68,7 @@ function Palette({ c, onAdd, onTemplate }: { c: Catalogue; onAdd: (slug: string)
       <div className="palette-top">
         <label className="search"><SearchIcon /><span className="visually-hidden">Find a block</span><input value={q} onChange={(e) => setQ(e.target.value)} placeholder="Find a block" data-testid="palette-search" /></label>
         <div className="seg" role="group" aria-label="Show">
-          {(["all", "general", "ecommerce", "kits"] as const).map((k) => <button key={k} aria-pressed={cat === k} onClick={() => setCat(k)}>{k === "all" ? "All" : k === "kits" ? "My kits" : k[0].toUpperCase() + k.slice(1)}</button>)}
+          {(["all", "kits"] as const).map((k) => <button key={k} aria-pressed={cat === k} onClick={() => setCat(k)}>{k === "all" ? "All" : "My kits"}</button>)}
         </div>
       </div>
       <div className="palette-list">
@@ -79,15 +78,14 @@ function Palette({ c, onAdd, onTemplate }: { c: Catalogue; onAdd: (slug: string)
             {templates.map((t) => <button key={t.slug} className="tpl" onClick={() => onTemplate(t)}>{t.name}<small>{t.steps.length} steps</small></button>)}
           </>
         )}
-        {ROLES.filter((r) => r.id !== "orchestrate").map((r) => {
-          const items = list.filter((b) => b.role === r.id);
+        {TASKS.map((t) => {
+          const items = list.filter((b) => taskOf(b).id === t.id);
           if (!items.length) return null;
           return (
-            <div key={r.id}>
-              <div className="pal-group">{r.name} · {items.length}</div>
+            <div key={t.id}>
+              <div className="pal-group">{t.name} · {items.length}</div>
               {items.map((b) => (
                 <div key={b.slug} className="pal-item" draggable onDragStart={(e) => { e.dataTransfer.setData("application/abb-block", b.slug); e.dataTransfer.effectAllowed = "move"; }} title="Drag onto the canvas">
-                  <span className={`dot role-${b.role}`} />
                   <div style={{ minWidth: 0 }}><b>{b.name}</b><small>{b.summary}</small></div>
                   <button className="add" aria-label={`Add ${b.name}`} onClick={() => onAdd(b.slug)}>+</button>
                 </div>
@@ -95,7 +93,7 @@ function Palette({ c, onAdd, onTemplate }: { c: Catalogue; onAdd: (slug: string)
             </div>
           );
         })}
-        {list.length === 0 && <p className="small" style={{ padding: "16px 8px" }}>{cat === "kits" ? "Your kits are empty. Open any block and press Save to kit." : "No blocks match. Try another word."}</p>}
+        {list.length === 0 && <p className="small" style={{ padding: "16px 8px" }}>{cat === "kits" ? "Nothing saved yet. Open anything in the library and press Save to kit." : "No blocks match. Try another word."}</p>}
       </div>
     </aside>
   );

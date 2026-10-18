@@ -15,57 +15,81 @@ test.afterEach(async ({ page }) => {
 
 const cards = (page: Page) => page.getByTestId("block-card");
 
-test("hero says what we do, in our words", async ({ page }) => {
+test("hero is just the headline, the subhead and two buttons", async ({ page }) => {
   await page.goto("/");
   await expect(page.getByRole("heading", { level: 1 })).toHaveText("Making humanity AI native");
   await expect(page.locator(".hero .lede")).toContainText("10x human");
-  await expect(page.locator(".hero .lede")).toContainText("Save hours every week");
-  await expect(page.locator(".hero").getByRole("link", { name: "Browse the blocks" })).toBeVisible();
+  await expect(page.locator(".hero").getByRole("link")).toHaveText(["Browse the blocks", "Build a workflow"]);
+  await expect(page.locator(".hero > *")).toHaveCount(3);
 });
 
-test("no brand names or brand pictures on the page", async ({ page }) => {
+test("no brands, no jargon labels, no business split on the page", async ({ page }) => {
   await page.goto("/");
   await expect(cards(page).first()).toBeVisible();
   const text = await page.locator("body").innerText();
-  for (const brand of ["Grüns", "Gruns", "AG1", "IM8", "Gehna", "Nourish"]) expect(text).not.toContain(brand);
+  for (const word of ["Grüns", "Gruns", "AG1", "IM8", "Gehna", "Nourish", "Digest", "Orchestrate", "Ecommerce", "Any business"]) expect(text).not.toContain(word);
+  // The old role filters were buttons named just "Source 5", "Make 74" and so on; none should be left.
+  await expect(page.getByRole("button", { name: /^(Source|Digest|Make|Render|Check)\s*\d*$/ })).toHaveCount(0);
+  await expect(page.locator(".role-mark")).toHaveCount(0);
   await expect(page.locator("img")).toHaveCount(0);
 });
 
-test("dark by default, light on request, and the choice is remembered", async ({ page }) => {
+test("light by default, even on a dark system; dark on request, and remembered", async ({ page }) => {
+  await page.emulateMedia({ colorScheme: "dark" });
   await page.goto("/");
   const bg = () => page.evaluate(() => getComputedStyle(document.body).backgroundColor);
-  expect(await bg()).toBe("rgb(10, 10, 10)");
+  expect(await bg()).toBe("rgb(250, 250, 250)");
   await page.getByTestId("theme-toggle").click();
-  await expect(page.locator("html")).toHaveAttribute("data-theme", "light");
+  await expect(page.locator("html")).toHaveAttribute("data-theme", "dark");
+  expect(await bg()).toBe("rgb(10, 10, 10)");
+  await page.reload();
+  await expect(page.locator("html")).toHaveAttribute("data-theme", "dark");
+  await page.getByTestId("theme-toggle").click();
   expect(await bg()).toBe("rgb(250, 250, 250)");
   await page.reload();
-  await expect(page.locator("html")).toHaveAttribute("data-theme", "light");
+  expect(await bg()).toBe("rgb(250, 250, 250)");
 });
 
-test("header links jump to each section", async ({ page }) => {
+test("header links jump to the library and the builder", async ({ page }) => {
   await page.goto("/");
-  for (const [label, id] of [["Library", "library"], ["Workflows", "workflows"], ["Builder", "build"], ["Testing", "testing"]]) {
+  for (const [label, id] of [["Library", "library"], ["Builder", "build"]]) {
     await page.locator(".nav").getByRole("link", { name: label }).click();
     await expect(page.locator(`#${id}`)).toBeInViewport();
   }
+  await page.locator(".hero").getByRole("link", { name: "Build a workflow" }).click();
+  await expect(page.getByTestId("builder")).toBeInViewport();
 });
 
-test("search and filters narrow the library, and clearing brings it back", async ({ page }) => {
+test("the library is sorted into prompts, skills, workflows and agents", async ({ page }) => {
+  await page.goto("/#library");
+  await expect(page.getByRole("tab")).toHaveText([/^All/, /^Prompts/, /^Skills/, /^Workflows/, /^Agents/]);
+  for (const kind of ["prompt", "skill", "workflow"]) {
+    await page.getByTestId(`tab-${kind}`).click();
+    await expect(cards(page).first()).toHaveAttribute("data-kind", kind);
+    const kinds = await cards(page).evaluateAll((els) => [...new Set(els.map((e) => e.getAttribute("data-kind")))]);
+    expect(kinds).toEqual([kind]);
+  }
+  await page.getByTestId("tab-agent").click();
+  await expect(page.getByText("Agents are coming next")).toBeVisible();
+});
+
+test("search and task filters narrow the library, and clearing brings it back", async ({ page }) => {
   await page.goto("/#library");
   const count = page.getByTestId("result-count");
   const all = parseInt(await count.innerText());
   expect(all).toBeGreaterThan(100);
   await page.getByTestId("library-search").fill("landing page");
-  await expect(count).not.toHaveText(`${all} blocks`);
+  await expect(count).not.toHaveText(new RegExp(`^${all} results`));
   const some = parseInt(await count.innerText());
   expect(some).toBeGreaterThan(0);
   expect(some).toBeLessThan(all);
-  await page.locator(".chips").getByRole("button", { name: /^Check/ }).click();
-  await expect(cards(page).first().locator(".role-mark")).toHaveText("Check");
-  await page.getByRole("button", { name: "Clear filters" }).click();
-  await expect(count).toHaveText(`${all} blocks`);
+  await page.getByRole("button", { name: "Clear all" }).click();
+  await page.locator(".chips").getByRole("button", { name: /^Make videos/ }).click();
+  await expect(cards(page).first().locator(".type")).toHaveText("Make videos");
+  await page.getByRole("button", { name: "Clear all" }).click();
+  await expect(count).toHaveText(new RegExp(`^${all} results`));
   await page.getByTestId("library-search").fill("zzzz nothing here");
-  await expect(page.getByText("No blocks match that yet")).toBeVisible();
+  await expect(page.getByText("Nothing matches that yet")).toBeVisible();
 });
 
 test("a block opens in a drawer with its skill, and the link can be shared", async ({ page }) => {
@@ -91,9 +115,7 @@ test("saving a block to a kit persists after a reload", async ({ page }) => {
   await page.getByLabel("New kit name").fill("Launch checks");
   await page.getByRole("button", { name: "Create" }).click();
   await expect(page.getByRole("status")).toContainText("Saved to Launch checks");
-  await page.keyboard.press("Escape");
-  await page.reload();
-  await page.keyboard.press("Escape");
+  await page.goto("/"); // a fresh visit, without the block's link
   await expect(page.getByTestId("open-kits")).toContainText("1");
   await page.getByTestId("open-kits").click();
   const kit = page.getByTestId("kit");
@@ -103,9 +125,9 @@ test("saving a block to a kit persists after a reload", async ({ page }) => {
 });
 
 test("a ready workflow opens in the builder as connected, numbered steps", async ({ page }) => {
-  await page.goto("/#workflows");
-  const card = page.getByTestId("workflow-card").filter({ hasText: "Brand Brain to Video Ad Script" });
-  await card.click();
+  await page.goto("/#library");
+  await page.getByTestId("tab-workflow").click();
+  await cards(page).filter({ hasText: "Brand Brain to Video Ad Script" }).click();
   await page.getByRole("button", { name: "Open in builder" }).click();
   const builder = page.getByTestId("builder");
   await expect(builder.getByTestId("flow-node")).toHaveCount(6);

@@ -92,3 +92,26 @@ export function wireSteps(c: Catalogue, slugs: string[]): [number, number][] {
   });
   return edges;
 }
+
+/** What a person sees: four kinds, in order of how much they do. */
+export type Kind = "prompt" | "skill" | "workflow" | "agent";
+export const KINDS: { id: Kind; name: string; plural: string; what: string }[] = [
+  { id: "prompt", name: "Prompt", plural: "Prompts", what: "Paste it into your AI and go." },
+  { id: "skill", name: "Skill", plural: "Skills", what: "A step-by-step method your AI follows, with checks." },
+  { id: "workflow", name: "Workflow", plural: "Workflows", what: "Several skills in order, each passing its work to the next." },
+  { id: "agent", name: "Agent", plural: "Agents", what: "Plans, checks with you, then does the work." },
+];
+export const kindOf = (b: Block): Kind => (b.category === "orchestrator" || b.type === "workflow" || b.type === "routine" ? "workflow" : b.type === "agent" ? "agent" : b.type === "prompt" ? "prompt" : "skill");
+
+/** "What do you want to do?" filters, in plain words, grouped from each block's job. */
+export const TASKS: { id: string; name: string; jobs: string[] }[] = [
+  { id: "video", name: "Make videos", jobs: ["video"] },
+  { id: "images", name: "Make images", jobs: ["image"] },
+  { id: "ads", name: "Run ads", jobs: ["ads"] },
+  { id: "copy", name: "Write copy", jobs: ["copy", "email"] },
+  { id: "pages", name: "Build landing pages", jobs: ["page"] },
+  { id: "brand", name: "Know your brand and customers", jobs: ["brand", "research", "offer"] },
+  { id: "results", name: "Plan and read results", jobs: ["analysis", "ops"] },
+  { id: "social", name: "Post on social", jobs: ["organic"] },
+];
+export const taskOf = (b: Block) => TASKS.find((t) => t.jobs.includes(b.job)) ?? TASKS[TASKS.length - 2];

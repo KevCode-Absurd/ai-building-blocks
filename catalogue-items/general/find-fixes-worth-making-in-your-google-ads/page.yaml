@@ -3,7 +3,7 @@ name: Find fixes worth making in your Google Ads
 summary: Fixes from one part of your Google Ads export, each backed by your rows and a check.
 job: read-ad-results
 
-headline: Know which Google Ads changes to make, each backed by your own rows and a check
+headline: "Find the Google Ads fixes worth making"
 subhead: Pick one part of your account, such as search terms or budgets, and paste that export with your target. It reads only that part and hands back findings, proposed changes and how to check each one. Paste the wrong file and it stops and says which to pull.
 
 explain: |

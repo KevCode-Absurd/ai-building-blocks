@@ -45,7 +45,7 @@ Each block is filed under the one job a visitor hires it for. Use the id.
 | `name` | The job it does, verb first, sentence case. See WRITING.md, "Names". | 6 words or fewer if you can, 8 max |
 | `summary` | The card line: what you get, plainly. | 18 words max |
 | `job` | One job id from the table above. | |
-| `headline` | The outcome the reader walks away with. Benefit first. | 8 to 16 words |
+| `headline` | Short and to the point: the problem it solves or the result you get, in words a stranger understands on one read. No "because" clauses; the subhead explains. | 4 to 10 words |
 | `subhead` | Explains the headline: what you give it, what it does, what you get. | 25 to 50 words |
 | `explain` | Two short paragraphs. The problem it solves, then how it works. Explain any term in the old name. | 80 to 150 words |
 | `when` | Three situations where you'd reach for it. | 3 bullets |

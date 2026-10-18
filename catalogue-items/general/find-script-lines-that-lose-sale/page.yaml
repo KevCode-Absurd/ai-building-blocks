@@ -3,7 +3,7 @@ name: Find the script lines that lose the sale
 summary: Your video ad script checked line by line against 13 sets of rules, with the rule broken and a fix for each.
 job: make-video-ads
 
-headline: Find which lines in your ad script lose the sale, and how to fix each one
+headline: "Find the script lines that lose the sale"
 subhead: Give it a script you're writing or one that isn't working. It checks every line against 13 short sets of rules (buyer research, offer, claims, opening, proof, voice, length and more), and returns each problem with the rule it breaks and a fix.
 
 explain: |

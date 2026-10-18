@@ -3,7 +3,7 @@ name: Get a sharper, bigger image with nothing changed
 summary: A larger copy of an approved image, same people, product and words, checked before you use it.
 job: make-image-ads
 
-headline: A bigger, sharper copy of your approved image, with nothing in it changed
+headline: "Make your image bigger and sharper, with nothing changed"
 subhead: Give it the approved image, the size you need and the tool you'll use. It writes an upscale prompt that forbids any change, then checks the returned file's real size and compares faces, hands, words and product with the original before you use it.
 
 explain: |

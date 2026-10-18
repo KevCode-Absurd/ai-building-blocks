@@ -3,7 +3,7 @@ name: Stop your copy from sounding like AI
 summary: Every line that reads as machine-written found, with a plain fix, from 18 patterns readers spot.
 job: check-ads
 
-headline: Copy that reads like a person wrote it, with every machine-sounding line found and fixed
+headline: "Stop your copy sounding like AI"
 subhead: Paste finished copy. It scans every line for 18 patterns readers have learned to spot, such as "no this, no that" lists, mirrored lines and questions it answers itself. You get each hit quoted, a plain replacement, a rhythm check and the full rewritten copy.
 
 explain: |

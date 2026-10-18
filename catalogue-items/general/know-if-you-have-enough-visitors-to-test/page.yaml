@@ -3,7 +3,7 @@ name: Know if you have enough visitors to test
 summary: Judge your page by revenue per visitor, and learn whether your traffic can support a fair test.
 job: audit-landing-page
 
-headline: Know if your page is working, and if it gets enough visitors to test
+headline: "Know if you have enough visitors to test"
 subhead: Paste your visits, orders or sign-ups and revenue for a set of dates. It works out revenue per visitor, shows what your traffic mix does to the numbers, and says how many visitors and days a fair test would need, or that you can't test yet.
 
 explain: |

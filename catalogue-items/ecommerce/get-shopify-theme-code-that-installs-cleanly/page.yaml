@@ -3,7 +3,7 @@ name: Get Shopify theme code that installs cleanly
 summary: Shopify sections, blocks and snippets that install without errors, with words you can edit in the theme editor.
 job: write-landing-page
 
-headline: Shopify theme code that installs cleanly, with words store owners can edit themselves
+headline: "Shopify theme code that installs cleanly"
 subhead: Describe the section, block or snippet you need, or paste the file to fix, and name your theme. It writes the code with a valid settings schema, keeps editable words out of the code, follows Shopify's current rules, and lists exactly what to upload.
 
 explain: |

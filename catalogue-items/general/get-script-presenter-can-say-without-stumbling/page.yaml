@@ -3,7 +3,7 @@ name: Get a script your presenter can say without stumbling
 summary: Fixes lines that trip when said aloud, without changing a single claim, number or price.
 job: make-video-ads
 
-headline: Hear your script sound like a person talking, with every claim and number left untouched
+headline: "A script your presenter can say without stumbling"
 subhead: Paste a finished script or ad text. It reads every line as it would be said, finds the ones that trip, run out of breath or sound like a slogan, and hands back each corrected line with the rule it broke.
 
 explain: |

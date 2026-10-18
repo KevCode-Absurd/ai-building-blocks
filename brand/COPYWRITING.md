@@ -91,6 +91,18 @@ For a line-by-line pass, run the copy editing skill after the draft.
 - **Use an analogy when it makes something abstract concrete.** "A brand file is the briefing you'd give a new hire, written once."
 - **A little humour, when it fits.** A dry line makes copy memorable. Never at the cost of clarity, and never on a page about a serious problem.
 
+## Headlines of blocks
+
+Every prompt, skill and workflow headline is short and sweet: 4 to 10 words that say the problem it solves or the result you get, in words a stranger understands on one read. Kevin, 18 Oct 2026.
+
+| Too long | Short and to the point |
+|---|---|
+| Ads people believe, because every line rests on a real fact about your product | Write ads people believe |
+| Know whether a story ad suits your product, and what to test, before writing a word | Know if a story ad suits your product |
+| Get a timed shot list that keeps something new on screen every two seconds | A shot list with something new every two seconds |
+
+The how and the proof go in the subhead, never in a "because" or "with" tail on the headline.
+
 ## Names of blocks
 
 A block's name is its card title, so it's the first promise people read. Same rule as headlines, shorter: the outcome, verb first, sentence case, about 4 to 9 words. "Keep Facebook from blocking your ads", "Turn reviews into image ads that sell", "Borrow a landing page layout you admire". No colons, no brand names, no internal jargon (see `docs/WRITING.md`).

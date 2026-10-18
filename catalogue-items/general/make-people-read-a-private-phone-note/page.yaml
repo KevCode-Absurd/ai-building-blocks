@@ -3,7 +3,7 @@ name: Make people read a private phone note
 summary: A plain notes-app screenshot with a few short lines your narrator typed to themselves about the problem.
 job: make-image-ads
 
-headline: A note-to-self screenshot that feels too private to scroll past
+headline: "A private phone note people can't scroll past"
 subhead: Give it your story ad. It takes the note your narrator keeps (a list, a count of days, a few lines typed to nobody), sets 12 to 30 words in a generic notes screen, and writes the image prompt.
 
 explain: |

@@ -3,7 +3,7 @@ name: Stop your buyer mid-scroll with an everyday snapshot
 summary: A phone-photo style picture of the moment your buyer's problem hits, with a ready-to-paste image prompt.
 job: make-image-ads
 
-headline: A picture of your buyer's own bad moment, so they stop before spotting the ad
+headline: "A snapshot of your buyer's worst moment"
 subhead: Give it your story ad. It finds the moment in the story where the problem hits, casts a made-up person to live it, and writes a prompt for a plain phone photo of that person in that moment, with no product, logo or words in shot.
 
 explain: |

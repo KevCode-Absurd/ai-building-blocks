@@ -3,7 +3,7 @@ name: Turn your talking-object script into shots AI can make
 summary: A fixed character, an opening image and one to three clip prompts that keep your talking object the same.
 job: make-video-ads
 
-headline: Get video prompts that keep your talking object's face, voice and room the same in every clip
+headline: "Turn your talking-object script into matching clips"
 subhead: Give it a 10 to 30 second talking object script and a front photo of your product. It confirms which object should talk, writes one fixed sentence describing it, and gives you the opening image prompt and one to three clip prompts with timed beats.
 
 explain: |

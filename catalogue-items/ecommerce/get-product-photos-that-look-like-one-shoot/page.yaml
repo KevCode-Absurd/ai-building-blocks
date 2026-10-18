@@ -3,7 +3,7 @@ name: Get product photos that look like one shoot
 summary: 8 to 12 photos of your product that share one colour, one light and one set of props.
 job: product-photos
 
-headline: Product photos that look like one shoot in your colour, not five different brands
+headline: "Product photos that look like one shoot"
 subhead: Give it your product photos and brand colours. It picks one colour scheme, one light and a small kit of real props, plans 8 to 12 different frames for you to approve, then writes a prompt for each. A short silent montage of the set is optional.
 
 explain: |

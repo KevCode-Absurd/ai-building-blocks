@@ -3,7 +3,7 @@ name: Fill an ad template with provable facts
 summary: Each spot in an ad template tested against your real facts, with only the misfits changed.
 job: make-image-ads
 
-headline: Know which parts of an ad template your real facts can fill before you make it
+headline: "Check your facts fit an ad template first"
 subhead: Give it the template you picked, your facts and reviews, and the buyer. It checks every spot in the layout against your evidence, marks each one fits, adapted or unsuitable, and writes a six-line plan and labelled copy for the image.
 
 explain: |

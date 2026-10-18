@@ -3,7 +3,7 @@ name: Pass work between AI steps without losing facts
 summary: What each AI step is sent and returns, planned so no claim loses its conditions on the way.
 job: set-up-ai
 
-headline: Each AI step gets exactly what it needs, and no claim loses its conditions
+headline: "Pass work between AI steps without losing facts"
 subhead: Give it the steps of your AI process, in order. For each step it lists what must go in, what's optional, what comes out and what can never be cut, plus rules for saving, retrying and picking up where a run stopped.
 
 explain: |

@@ -3,7 +3,7 @@ name: Get product snapshots that don't look like ads
 summary: Flash snapshots of people using your product on a real evening, for ads and posts that feel real.
 job: product-photos
 
-headline: Photos of your product that look like a friend took them, not like an ad
+headline: "Product photos that look like a friend took them"
 subhead: Give it your product photos, who buys it and when they use it. It plans a set of about eight flash snapshots with people doing real things with your product, shows you the shot list to approve, then writes one prompt per photo.
 
 explain: |

@@ -3,7 +3,7 @@ name: Get overhead portraits that still look human
 summary: An image prompt for a portrait shot from straight above, with the face and skin still real.
 job: make-image-ads
 
-headline: An eye-catching portrait from straight above, with a face that still looks human
+headline: "Top-down portraits where faces still look human"
 subhead: Give it a short brief and, if you have them, a photo of the person and your product. It writes one prompt for an adult looking up into an extra-wide lens held just above their face, keeping their identity, skin and your product's label true.
 
 explain: |

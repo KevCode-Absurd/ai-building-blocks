@@ -3,7 +3,7 @@ name: Get believed with a text someone else sent
 summary: A plain text-message screenshot of three to six short messages between your narrator and one other person.
 job: make-image-ads
 
-headline: A text conversation where someone else notices the problem, in plain chat bubbles
+headline: "A text-message ad where someone else spots the problem"
 subhead: Give it a story ad with a second person in it, a partner, a sister or a friend. It writes three to six short messages the way people text each other, ending on an open question, and a prompt for a generic message screenshot.
 
 explain: |

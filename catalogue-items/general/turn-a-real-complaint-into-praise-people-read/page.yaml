@@ -3,7 +3,7 @@ name: Turn a real complaint into praise people read
 summary: A plain review card built only from a real customer review whose complaint is secretly a compliment.
 job: make-image-ads
 
-headline: A real customer's complaint that is secretly praise, shown as a plain review card
+headline: "Turn a real complaint into praise people read"
 subhead: Give it your real reviews and your story ad. It looks for one review whose complaint only happens because the product works, copies it word for word with its real stars, and writes the prompt. If no review qualifies, it tells you and stops.
 
 explain: |

@@ -3,7 +3,7 @@ name: Make each carousel card earn the next swipe
 summary: A 2 to 6 card carousel where card 1 works alone and every swipe leads to the next.
 job: make-image-ads
 
-headline: A carousel ad where the first card works alone and every swipe pulls to the next
+headline: "A carousel where every card earns the next swipe"
 subhead: Give it your selling idea and your brand facts. It splits the argument into 2 to 6 cards, one point per card, ends each card on a question the next one answers, and writes the words, a picture note and the text above the ad.
 
 explain: |

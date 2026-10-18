@@ -3,7 +3,7 @@ name: Get your story ad read with the right picture
 summary: Reads your story ad, picks which of 20 post-like picture types fits honestly, and writes the prompt.
 job: make-image-ads
 
-headline: Get your story ad read with the right picture, picked from 20 post-like types
+headline: "Pick the right picture for your story ad"
 subhead: Give it your approved story ad. It finds the moments, objects and written words in the story, picks the picture type that fits (a snapshot, a sticky note, a text thread, a review card and 16 more), and writes the brief and a ready-to-paste image prompt.
 
 explain: |

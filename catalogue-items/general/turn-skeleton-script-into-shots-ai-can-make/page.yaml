@@ -3,7 +3,7 @@ name: Turn your skeleton script into shots AI can make
 summary: A shot map and paste-ready prompts that keep one cartoon skeleton the same in every shot.
 job: make-video-ads
 
-headline: Get paste-ready prompts that keep the same cartoon skeleton in every shot of your ad
+headline: "Turn your skeleton script into matching shots"
 subhead: Give it a skeleton ad script and a real photo of your product. It fixes one look for the skeleton and one place, maps every step to a shot, and writes the image prompts and video prompts in the order you make them.
 
 explain: |

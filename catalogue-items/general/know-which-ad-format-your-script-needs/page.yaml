@@ -3,7 +3,7 @@ name: Know which ad format your script needs
 summary: Reads a finished script and says which ad format can carry it, and at what length.
 job: make-video-ads
 
-headline: Stop paying to make a good script in the wrong format
+headline: "Pick the right format for your ad script"
 subhead: Paste a finished script. It finds the one part doing most of the persuading, says what that part needs (a face people believe, controlled order, sound, time), ranks the formats that can carry it, and checks whether the length fits.
 
 explain: |

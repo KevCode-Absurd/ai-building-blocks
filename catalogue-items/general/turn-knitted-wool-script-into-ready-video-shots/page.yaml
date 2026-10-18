@@ -3,7 +3,7 @@ name: Turn your knitted wool script into ready-to-make video shots
 summary: Fixed look wording, doll descriptions, still and clip prompts that keep every frame knitted.
 job: make-video-ads
 
-headline: Get clips that look like real knitted yarn in every frame, with your label spelled right
+headline: "Turn your knitted script into clips that stay knitted"
 subhead: Give it a narrated knitted-world script, your product photo and label text. It writes three fixed blocks of look wording and a description for each doll, then still prompts, clip prompts and yarn transitions to paste into your video tool.
 
 explain: |

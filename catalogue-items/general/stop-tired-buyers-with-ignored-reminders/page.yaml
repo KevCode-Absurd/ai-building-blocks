@@ -3,7 +3,7 @@ name: Stop tired buyers with the reminders they ignore
 summary: A generic lock screen showing the reminders your narrator keeps setting, and ignoring, because of the problem.
 job: make-image-ads
 
-headline: A screenshot of the reminders your buyer keeps ignoring, in their phone's own voice
+headline: "A screenshot of the reminders your buyer ignores"
 subhead: Give it your story ad. It writes one to four short reminders with times, each something the narrator does because of the problem, and a prompt for a plain lock screen where they've piled up.
 
 explain: |

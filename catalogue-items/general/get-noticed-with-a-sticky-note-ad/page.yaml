@@ -3,7 +3,7 @@ name: Get noticed with an ad that's a sticky note
 summary: A sticky note photo where the problem shows up, with a reminder that gives away the workaround.
 job: make-image-ads
 
-headline: A sticky note in the right spot that tells the whole workaround in one glance
+headline: "A sticky-note ad people read in one glance"
 subhead: Give it your story ad. It writes 3 to 10 words of reminder in the narrator's voice, picks the surface that says where we are (a fridge, a mirror, a desk), and writes a prompt for a plain phone photo of the note.
 
 explain: |

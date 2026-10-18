@@ -3,7 +3,7 @@ name: Turn your anime script into consistent clips
 summary: Still and clip prompts for an anime-style ad, with one fixed hero, drawing style and product.
 job: make-video-ads
 
-headline: Get anime-style ad clips where the hero, the drawing style and your product stay the same
+headline: "Turn your anime script into matching clips"
 subhead: Give it an approved script and a real photo of your product. It fixes one drawing style and one hero, maps where everything stands, and writes the still prompts and timed clip prompts, with each clip handing over to the next.
 
 explain: |

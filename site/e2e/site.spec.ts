@@ -120,7 +120,7 @@ test("a card opens the block's own page, with the outcome, a real example and th
   await card.click();
   await expect(page).toHaveURL(new RegExp(`/prompts/${MODEL}$`));
   const bp = page.getByTestId("block-page");
-  await expect(bp.getByRole("heading", { level: 1 })).toContainText("Ads people believe");
+  await expect(bp.getByRole("heading", { level: 1 })).toContainText("Write ads people believe");
   await expect(bp.locator(".bp-sub")).toContainText("product facts");
   await expect(bp.locator("#example .code")).toHaveCount(2);
   await expect(bp.locator("#example")).toContainText("Sprout");

@@ -3,7 +3,7 @@ name: Keep Facebook from blocking your ads
 summary: Your Facebook or Instagram ad read against Meta's published ad rules, with what to fix first.
 job: check-ads
 
-headline: Keep Facebook from blocking your ads, before you hit publish
+headline: "Keep Facebook from blocking your ads"
 subhead: Paste the ad's words, describe the image or video, and add the landing page if you have it. It checks each line against Meta's published ad rules and gives a verdict, the exact problem spots, the fix for each, and what it couldn't check.
 
 explain: |

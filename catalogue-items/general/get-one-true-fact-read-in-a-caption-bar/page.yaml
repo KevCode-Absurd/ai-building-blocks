@@ -3,7 +3,7 @@ name: Get one true fact read in a caption bar
 summary: A phone photo of the problem with a plain caption bar carrying one true, sourced fact.
 job: make-image-ads
 
-headline: One true, sourced fact in a news-style caption bar that makes people read the line
+headline: "One true fact in a news-style caption"
 subhead: Give it your story ad and one fact you can back, with its source. It writes a 5 to 10 word caption in the source's own wording, adds a small topic label, and briefs a phone photo of the problem behind it. A person checks it before it runs.
 
 explain: |

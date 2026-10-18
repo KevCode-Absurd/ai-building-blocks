@@ -18,6 +18,7 @@
 | `05_PRODUCTION_PRINCIPLES.md` | Engineering rules every item follows: workflow vs agent, memory, context order, tool calling, connectors, skills, multi-agent roles, gateway/routing, retrieval, living brand brain, caching and cost, evals, traces, red-teaming. Ends with a checklist per level. |
 | `06_BUILD_PLAN.md` | **How it gets built:** phases, the item factory tools, public test brands, Section 1 (brand brain) and Section 2 (M17) in full detail, the per-item pipeline, model testing, the site, risks and the decisions needed. |
 | `07_SOURCES_TO_SKILLS.md` | **How learning sources and playbooks become skills:** what we have (Creative Engine's 403 Learning guides, playbooks, Kevin's own docs, our own lessons), what rights allow, how sources are broken into pieces, and which gap modules they fill. |
+| `08_INTAKE_ENGINE.md` | **The intake engine (18 Oct):** paste any YouTube video, reel, article, post or GitHub skill library; it becomes idea cards, matched to our jobs, ladders and workflows, then prompts, skills, routines, workflows, mini tools and agents. Rights, safety, models, and the path from v0 to production. |
 | `sources/` | One report (`.md`) and item list (`.csv`) per source, plus `_SCHEMA.md`. Go here for detail and citations. |
 
 ## Sources covered

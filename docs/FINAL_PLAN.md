@@ -31,7 +31,7 @@ It's organised in three layers:
 
 Every listing is **tested, explained in plain words and shown with a real before and after**, so people who find GitHub overwhelming can still use it.
 
-We also bring in good skills from around the internet. For each one we:
+An **intake engine** turns any video, reel, article or skill library into new listings (Part 5). For each source we:
 - credit and link the original
 - check it for malware and prompt injection
 - tighten and improve it
@@ -60,7 +60,7 @@ It stays **simple by default**: every job is a ladder, and people only see their
    - the first tool guides
    - eight mini tools
    - the first skills brought in from the internet
-3. **February to March: bring in the best of the internet.** Imported skills arrive at scale, each one credited, safety-checked, improved and explained. The tools section grows.
+3. **February to March: bring in the best of the internet.** The intake engine runs every day: videos, articles and skills become credited, safety-checked, improved listings. The tools section grows.
 4. **From April: more boards.** /saas comes first, then more industries picked by demand, then job-role boards.
 5. **Money only once there's an audience.** Each revenue stream switches on when its own condition is met (Part 10). What's free at launch stays free.
 
@@ -72,7 +72,7 @@ It stays **simple by default**: every job is a ladder, and people only see their
 2. **Build the whole platform, not one product.** There are no launch jobs. We port everything we have and keep adding to it. It's prompts, skills, routines, workflows, apps, and people's own agents and bots. Each comes ready-made and with a plain setup guide. [Decided]
 3. **General first, then industry, then job roles.** [Decided]
 4. **Boards are communities.** Each board works like a subreddit: listings, downloads, comments and advice. [Decided]
-5. **Bring in the best of the internet, made safe and simple.** Every imported skill is credited, linked, safety-checked, improved and shown with a before and after. We only copy skills whose licence allows it. [Decided; licence rule Proposed]
+5. **One intake engine for the best of the internet.** Paste any video, reel, article or skill library and it becomes credited, safety-checked, improved listings: prompts, skills, workflows and mini tools. We only copy skills whose licence allows it. [Decided; licence rule Proposed]
 6. **Testing and before/after are the value, so we show them.** We show quality, cost per run, and cheap vs top model.
 7. **Simple by default: every job is a ladder.** [Decided]
 8. **Downloads first, hosted runs later.**
@@ -89,7 +89,7 @@ It stays **simple by default**: every job is a ladder, and people only see their
 | Agencies are the first buyer | No buyer to chase yet. The first wedge is the /ecommerce board. |
 | Find parts by job, function, industry pack and host | Three layers: **general library → industry boards → job-role boards**. Job, type, level and host stay as filters. |
 | Industry packs | **Industry boards**, each a community with its own listings, comments and advice |
-| Only parts from our own sources | Plus **skills from the internet**: credited, licence-checked, safety-checked, improved, with a before and after |
+| Only parts from our own sources | Plus an **intake engine**: any video, article or skill library becomes credited, safety-checked listings (Part 5) |
 | Gates based on payment | Gates based on **quality and use** |
 | Two extra public test cases to pick | Dropped as a project. General listings are still checked on more than one kind of business. |
 | Calculators stay inside Creative Engine | **Mini tools:** every calculator we built, free for any business, on the site, as a download, as a sheet, inside your AI or embedded (Part 6) |
@@ -240,18 +240,87 @@ Stages, sources and examples are as in version 3. Every stage is a part people c
 
 ---
 
-## 5 · Skills from the internet [Decided]
+## 5 · The intake engine [Decided; design Proposed]
 
-**Pipeline:**
-1. **Find:** GitHub, skill hubs, community lists, requests.
-2. **Licence:** may we copy and change it?
-3. **Scan:** scripts, links, hidden instructions.
-4. **Sandbox run:** with trick inputs.
-5. **Tighten:** remove risky parts, add guardrails.
-6. **Adapt:** a general version and board versions.
-7. **Improve:** test against the original.
-8. **Publish:** credit, link, before and after.
-9. **Watch:** re-check when the original changes.
+Paste in anything: a YouTube video or transcript, an Instagram reel, a Medium post, an article or a GitHub skill library. One engine reads it, breaks it into small pieces of know-how, finds where each piece fits in what we already have, and proposes what it should become. You tick what to build, and the library gets richer with every source. Full design: `docs/planning/08_INTAKE_ENGINE.md`.
+
+**The nine stages:**
+1. **Drop in:** a link, a file or text (`/intake <link or file>`).
+2. **Read:** a reader for each kind of source. Gemini watches video and listens to audio.
+3. **Safety:** content is data, never orders. Code goes through `scan-skill` in a sandbox.
+4. **Break up:** into **idea cards**. Each is one thing someone can do (a method, prompt, formula, checklist, rule, pitfall or tool tip), in our own words, pointing to the exact timestamp, line or file. A card that points to nothing is deleted.
+5. **Match:** to our areas of work, jobs, ladder steps, ready-made workflows and existing listings.
+6. **Decide:** what each card becomes (table below).
+7. **Report:** one page per source. You tick what to build.
+8. **Build:** the 12 steps (Part 12); mini tools through `build-mini-tool`.
+9. **Publish and share:** with credit; a board post, the newsletter and, where it fits, a short video.
+
+Our own sources go through first (Creative Engine's 403 learning guides, our playbooks). They carry no rights questions.
+
+**What you can drop in:**
+
+| Source | How we get it | What we may take |
+|---|---|---|
+| YouTube video or transcript | The link (Gemini reads public videos straight from the link), or the pasted transcript | Ideas only, in our words |
+| Instagram reel, TikTok | No scrapers or logins. The app's own Download button where the creator allows it, or your own file, plus the caption (decision 13) | Ideas only |
+| Article, blog, Medium, X or LinkedIn post | The link (readable text only) or pasted text; never round a paywall | Ideas only |
+| GitHub repo or skill library | Its own empty folder, one pinned version, sandbox only | The licence rule below |
+| Podcast, PDF, slides | A file or public link; Gemini for audio and scans | Ideas only, unless openly licensed |
+| Courses, purchased files | Private input | Reference only (decision 9) |
+| Client data | Never; the engine refuses it | None |
+
+**What each idea becomes** (the first match wins):
+
+| If the idea… | It becomes |
+|---|---|
+| adds a tip, step or check to something we have | an **improvement**, credited (the most common outcome) |
+| takes numbers in and gives a number out | a **mini tool** in all five ways (Part 6); anyone can download it and change the maths |
+| is a prompt you'd paste once | a **prompt** |
+| is a method with steps and a checklist you'd repeat | a **skill** |
+| should run on a timer or trigger | a **routine** |
+| chains several jobs | a **workflow**, or a stage in one of ours |
+| needs judgement over many steps, with tools | an **agent** (Expert; from May 2027) |
+| shows how to do a task in a tool | a **how-to guide** or a tool guide note |
+| we have it already, or it doesn't fit yet | **duplicate**, or **parked** with a gap label |
+
+The match also says where each card fits: the area, the job, the ladder step it covers and the steps still missing, the workflow stage and the board.
+
+**Rules:**
+- **Ideas, not words.** Every card is in our own words. We credit and link the source, and never publish the video, frames or transcript. Creators' claims are never repeated as fact. If a creator asks, we change or remove it within 48 hours. [Proposed]
+- **Content is data.** Hidden instructions are flagged and ignored. There are 10 trap sources on top of the 20 trap skills. Raw downloads and transcripts stay private and out of git.
+- **Four labs, one cap.**
+  - Gemini watches and listens.
+  - Claude writes the cards.
+  - DeepSeek or Gemini Flash matches them.
+  - GPT checks the cards against the source, blind.
+  - Each source costs cents, not dollars [Assumption], and runs are capped at $2.
+
+**From first version to production:**
+
+| Version | What it is | When |
+|---|---|---|
+| v0 · on your machine | `/intake` plus four tools (read, split, match, report). Each source gets a folder with its source pack, cards and report. Tested on 10 hand-marked sources. | Text W5–7; video W8–9 |
+| v1 · always on | A private inbox (paste or forward), a queue and a worker, reports in a review list. Each stage saves its output and restarts where it stopped. No source is read twice. Caps per source and per day, alerts, and a search index over the library. | Feb–Mar 2027 |
+| v2 · public | A "Suggest a source" button through the same engine and review queue, with credit to the person who suggested it | Apr 2027, with site v1 |
+
+**Production grade means:**
+- zero invented cards on the test set
+- at least 8 in 10 expected cards found
+- the founder agrees with the outcome at least 8 times in 10 [Assumption]
+- all traps caught
+- versions recorded
+- costs capped
+- a person ticks every build
+
+### Skills from GitHub: the safety check [Decided]
+
+Skills and code are the riskiest sources, so they get extra steps inside stage 3:
+- a licence check
+- the scan
+- a sandbox run with trick inputs
+- removing risky parts
+- testing against the original
+- re-checking when the original changes
 
 **The safety check looks for:**
 - **Code that does things:** installs, file changes, start-up scripts, hidden or scrambled code.
@@ -519,7 +588,7 @@ Selling individual skills doesn't make sense: free skills bring the audience, an
 |---|---|
 | Mon 19 Oct 2026 | Week 1: first tools, the listing format, the port order. Nothing is sold. |
 | Sun 1 Nov | **Gate 0:** one listing end to end; the template approved |
-| Fri 11 Dec | **Gate A:** brain and creative sections ported; site skeleton with boards and comments; 5+ imports through the safety check; first 4 mini tools working all five ways |
+| Fri 11 Dec | **Gate A:** brain and creative sections ported; site skeleton with boards and comments; 5+ imports through the safety check; 5 sources through intake; first 4 mini tools working all five ways |
 | Sun 10 Jan 2027 | **Gate B:** ready to open |
 | Tue 19 Jan 2027 | **Site public, free:** general library, /ecommerce board, tool guides, 8 mini tools, comments, newsletter |
 | Apr 2027 | Three-month review; money model rebuilt; **/saas board opens** |
@@ -531,7 +600,7 @@ Selling individual skills doesn't make sense: free skills bring the audience, an
 ## 12 · The build
 
 **Three things get built:**
-- **A · The item factory:** eight TypeScript tools. They import, check, build exports, model-test, blind-grade and graph listings; `scan-skill` is the safety check for imports; `build-mini-tool` makes all five ways of a mini tool from one formula file and checks each against the worked examples.
+- **A · The item factory:** nine TypeScript tools. They import, check, build exports, model-test, blind-grade and graph listings; `scan-skill` is the safety check for imports; `build-mini-tool` makes all five ways of a mini tool from one formula file and checks each against the worked examples; the **intake engine** takes any link or file and gives idea cards and a report.
 - **B · The listings:** our own skills in port order (general version, then /ecommerce), then imports in batches.
 - **C · The site:** library, boards, tool guides, mini tools, comments and the newsletter, all free.
 
@@ -590,22 +659,22 @@ Mini tools take a shorter path: steps 1, 3 and 4, then worked examples checked b
 | Week | Build | Plan and publish | Founder |
 |---|---|---|---|
 | **W1 · 19–25 Oct** | `import-item`, `check-item`; listing format v1 (type, level, step, boards, tools, credit, licence, safety badge, before/after); first port: website claims extractor (general) | Port order for all 263 own items; map Creative Engine and ecomOS workflows onto the ladder; board and comment rules | Approve decision 2; put the four model keys in this repo's `.env`; glance at the port order |
-| **W2 · 26 Oct–1 Nov** | `run-test`, `grade`, `build-exports`, `build-graph`; first listing tested ✓ with before/after; `scan-skill` and `build-mini-tool` specified | Listing and board page templates; site structure | Review the first listing page |
+| **W2 · 26 Oct–1 Nov** | `run-test`, `grade`, `build-exports`, `build-graph`; first listing tested ✓ with before/after; `scan-skill`, `build-mini-tool` and the intake engine specified | Listing and board page templates; site structure | Review the first listing page |
 | | **Gate 0:** one listing end to end; template approved | | |
 | **W3–4 · 2–15 Nov** | Brand brain v2 format; 11 brain listings, general and /ecommerce; `build-mini-tool` and the first 4 mini tools (discount, order margin, volume planner, AI run cost) | Brand brain workflow page; site build starts (listing and board pages, accounts) | Brain section review; decisions 3 and 12 |
 | | **Gate 1:** brain section passes on 3 kinds of business with zero invented claims or wrong prices | | |
-| **W5–7 · 16 Nov–6 Dec** | About 20 static ad listings; copy, scripts, avatars; `scan-skill` built; 20 trap skills; next 4 mini tools (deal comparer, repeat customer profit, page and test, hourly rate) | Static ad and copy workflow pages; comments and moderation on staging; record 3 videos | Creative review; decisions 4–5 |
-| **W8–9 · 7–20 Dec** | Page audit; Meta ladder 1–4; research and offers; first 5–10 imports | Tool guide template and first 10 guides; newsletter; launch waitlist | Gate A; brand name and domain |
-| | **Gate A (11 Dec):** brain and creative ported; skeleton with boards and comments; 5+ imports checked; all 20 traps caught; first 4 mini tools agree in all five ways | | |
+| **W5–7 · 16 Nov–6 Dec** | About 20 static ad listings; copy, scripts, avatars; `scan-skill` built; 20 trap skills; intake engine v0 (text, articles, repos), first on our own learning guides; next 4 mini tools (deal comparer, repeat customer profit, page and test, hourly rate) | Static ad and copy workflow pages; comments and moderation on staging; record 3 videos | Creative review; decisions 4–5 |
+| **W8–9 · 7–20 Dec** | Page audit; Meta ladder 1–4; research and offers; video and audio in the intake engine; first 10 public sources, including 5–10 GitHub skills | Tool guide template and first 10 guides; newsletter; launch waitlist | Gate A; brand name and domain; decision 13 |
+| | **Gate A (11 Dec):** brain and creative ported; skeleton with boards and comments; 5+ imports checked; 5 sources through intake; all 20 trap skills and 10 trap sources caught; first 4 mini tools agree in all five ways | | |
 | **W10–12 · 21 Dec–10 Jan** | Site v0 finished, with mini tools and embeds; downloads opened in Claude, ChatGPT, Codex and Gemini | Batch-record 6 videos; seed /ecommerce posts | Final page review |
-| | **Gate B:** 50+ general and 25+ /ecommerce listings with before/after; 10+ imports; 10 tool guides; 8 mini tools; downloads in 3+ tools; comments and moderation working; mobile check | | |
+| | **Gate B:** 50+ general and 25+ /ecommerce listings with before/after; 10+ imports; 20 sources through intake; 10 tool guides; 8 mini tools; downloads in 3+ tools; comments and moderation working; mobile check | | |
 
 | Month | Build | Publish and grow | Gate |
 |---|---|---|---|
 | Jan 2027 | Lifecycle (archive), analytics, AI operations | Public 19 Jan; weekly content; labelled affiliate links | All own items ported or retired |
-| Feb | Imports at scale (about 15 a week); 20 more tool guides; new mini tools from requests | Daily board posts and replies; weekly newsletter | Safety pipeline at about 2 h per skill |
+| Feb | Intake engine v1, always on: about 15 sources a week; 20 more tool guides; new mini tools from requests | Daily board posts and replies; weekly newsletter | Safety pipeline at about 2 h per skill |
 | Mar | Meta mini app; avatar and video workflows; /saas versions of the top 20 | "Climb the ladder" and "GitHub vs ours" series | /saas reviewed by someone in software |
-| Apr | **/saas opens**; first routines | Three-month review; money model rebuilt; membership waitlist | 10k visits/month; 1,000 subscribers |
+| Apr | **/saas opens**; first routines; public "Suggest a source" | Three-month review; money model rebuilt; membership waitlist | 10k visits/month; 1,000 subscribers |
 | May | First agents (bounded, red-teamed) | Site ads if traffic allows; YouTube partner check | Routines run 4 weeks without silent failure |
 | Jun | Profit ranker; creator upload design | Mid-year review; consulting page if people are asking | Agent passes red-team; cost cap holds |
 | Jul–Sep | Third board (by demand); creator uploads beta; /marketing scoped | Membership opens if the waitlist is there | 50k visits/month; 5,000 subscribers |
@@ -660,7 +729,7 @@ Mini tools take a shorter path: steps 1, 3 and 4, then worked examples checked b
 | By | We should have |
 |---|---|
 | 1 Nov 2026 | Gate 0: one listing end to end; the template approved |
-| 11 Dec 2026 | Gate A: brain and creative ported; skeleton with boards and comments; 5+ imports checked; all 20 traps caught; 4 mini tools |
+| 11 Dec 2026 | Gate A: brain and creative ported; skeleton with boards and comments; 5+ imports checked; 5 sources through intake; all traps caught; 4 mini tools |
 | 19 Jan 2027 | Site public and free: 50+ general and 25+ /ecommerce listings, 10+ imports, 10+ tool guides, 8 mini tools |
 | Apr 2027 | All own items ported; 100+ imports checked; 40+ tool guides; 15+ mini tools; /saas open; 10k visits/month; 1,000 subscribers; 500 weekly returning users |
 | Sep 2027 | 3 boards; 50k visits/month; 5,000 subscribers; 3,000 weekly returning users; first income streams on; membership decided |
@@ -683,13 +752,14 @@ Mini tools take a shorter path: steps 1, 3 and 4, then worked examples checked b
 | 10 | `copy-craft` clean-room rewrite | Yes | Before the creative section ends |
 | 11 | A contact link at launch | Yes: one "Need help building this?" link; no prices, offers or outreach | Before 19 Jan |
 | 12 | Mini tools: where they sit and how they're shared | Own shelf in Tools and on each board, typed as applications; all five ways; always free, no email; anyone may embed with a credit link | Mid Nov |
+| 13 | Video from Instagram and TikTok for the intake engine | No scrapers or logins: the app's own Download button where the creator allows it, or your own file, plus the caption | Early Dec |
 | | **Later** | | |
-| 13 | Membership price | Test $99 vs $199 on the waitlist; Pro $499 | Apr 2027 |
-| 14 | What stays free | Everything free at launch stays free; only new premium workflows can be paid | Before any paywall |
-| 15 | Ad and affiliate rules | One quiet slot; labelled links; rankings from tests only | Before ads go on |
-| 16 | Funding the build year; money model rebuild | Founder-funded and lean; rebuild in April | Apr 2027 |
-| 17 | Retention module | Revive the archive | Jan 2027 |
-| 18 | Archive `ecommerce-workflow-platform` | Yes, no deleting | Any time |
+| 14 | Membership price | Test $99 vs $199 on the waitlist; Pro $499 | Apr 2027 |
+| 15 | What stays free | Everything free at launch stays free; only new premium workflows can be paid | Before any paywall |
+| 16 | Ad and affiliate rules | One quiet slot; labelled links; rankings from tests only | Before ads go on |
+| 17 | Funding the build year; money model rebuild | Founder-funded and lean; rebuild in April | Apr 2027 |
+| 18 | Retention module | Revive the archive | Jan 2027 |
+| 19 | Archive `ecommerce-workflow-platform` | Yes, no deleting | Any time |
 
 The holiday sale sprint, the four launch jobs and the two extra test cases from version 3 are dropped, and so are the router and the "Jev" question.
 

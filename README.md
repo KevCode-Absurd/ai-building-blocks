@@ -18,7 +18,7 @@ A **free, evergreen library** of tested AI building blocks for any business. It 
 
 | Read | What it is |
 |---|---|
-| [docs/final-plan/Final-Plan.pdf](docs/final-plan/Final-Plan.pdf) | **Read this first.** The final plan (v4), covering what we build, how it's organised, skills from the internet, growth, money later, the build, and a week-by-week plan, in plain language. |
+| [docs/final-plan/Final-Plan.pdf](docs/final-plan/Final-Plan.pdf) | **Read this first.** The final plan (v4), covering what we build, how it's organised, the intake engine (any video, article or skill library in; building blocks out), growth, money later, the build, and a week-by-week plan, in plain language. |
 | [docs/FINAL_PLAN.md](docs/FINAL_PLAN.md) | The same plan as Markdown, for quick reference and for agents working in this repo. |
 | [DECISIONS.md](DECISIONS.md) | Every decision so far, dated, so later work doesn't undo it. |
 | [RULES.md](RULES.md) | Ground rules for anyone, person or AI agent, working in this repo. |
@@ -36,6 +36,8 @@ A **free, evergreen library** of tested AI building blocks for any business. It 
 | **Tools** | Plain guides to AI tools and how each is used in an industry, plus **mini tools**: free calculators that work on the site, as a download, in a sheet, inside your own AI, or embedded |
 
 Filters are job, type, level (Beginner to Expert), board and tool. A board version adds the industry's brain fields, examples, thresholds and wording. It never forks the general listing.
+
+New listings come in through the **intake engine**: paste a YouTube video, reel, article, post or GitHub skill library, and it becomes idea cards matched to our jobs and workflows, then credited, safety-checked listings ([design](docs/planning/08_INTAKE_ENGINE.md)).
 
 ## Folder map
 

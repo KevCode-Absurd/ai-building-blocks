@@ -4,6 +4,7 @@ Newest first. The founder's latest direct instruction wins. Record changes here 
 
 | Date | Decision | Source |
 |---|---|---|
+| 2026-10-18 | **Intake engine.** One engine takes any source (YouTube video or transcript, Instagram reel, TikTok, article, Medium post, X or LinkedIn post, GitHub skill library, podcast, PDF) through nine stages: drop in, read (Gemini for video and audio), safety, idea cards, match to our jobs/ladders/workflows, decide what each becomes (improvement, mini tool, prompt, skill, routine, workflow, agent, how-to guide), a one-page report the founder ticks, build through the 12 steps, publish with credit. Ideas only, in our own words; no scrapers or logins; raw files private. Replaces "skills from the internet" as a separate pipeline; the GitHub safety check and licence rule are unchanged. Design proposed in `docs/planning/08_INTAKE_ENGINE.md`; v0 Nov–Dec, v1 always on Feb–Mar 2027, v2 public "Suggest a source" Apr 2027. | Founder (design proposed) |
 | 2026-10-18 | **Mini tools.** Turn every calculator we built (discount, deal comparer, order margin and break-even, creative volume planner, CRO test, AI run cost and more) into free mini tools anyone can use: standalone, or ported into their own ChatGPT or Claude. The five ways to use them (site, download, sheet, in your AI, embed) are proposed in plan Part 6. | Founder |
 | 2026-10-18 | **Models: no router.** Test only on the four labs we already have accounts and keys for: Claude (Anthropic), GPT (OpenAI), Gemini (Google) and DeepSeek. That covers what most people use; anyone wanting other models can test them themselves. Supersedes OpenRouter and the "Jev" question. | Founder |
 | 2026-10-18 | **Free first; no selling at the start.** Build the whole platform and keep everything free: skills, workflows, guides, downloads. No paywall, no paid tests, no sale campaigns (the holiday sale sprint, the four launch jobs and the extra paid test cases are dropped). It's an evergreen resource. | Founder |
@@ -47,12 +48,13 @@ The numbered list matches the decisions table in the final plan v4, Part 16.
 10. OK to clean-room rewrite `copy-craft` (built from the purchased Copy Machine)?
 11. A "Need help building this?" contact link at launch (no prices, offers or outreach)?
 12. Mini tools: their own shelf in Tools and on each board, typed as applications; site, download, sheet, in your AI and embed; always free with no email; anyone may embed with a credit link? (Mid Nov)
-13. Membership price for the first tier: $99 or $199? (Later.)
-14. Everything free at launch stays free for good; only new premium workflows can be paid? (Later.)
-15. Ad and affiliate rules: one quiet slot, labelled links, rankings from tests only? (Later.)
-16. How the build year is funded, and the money model rebuild in April 2027. (Later.)
-17. Revive the archived retention module (`archive/retention-r1-r6`), or rebuild M21?
-18. Archive the old `ecommerce-workflow-platform` repo? (Recommended; nothing is deleted.)
+13. Intake engine, video from Instagram and TikTok: no scrapers or logins; the app's own Download button where the creator allows it, or the founder's own file, plus the caption? (Early Dec)
+14. Membership price for the first tier: $99 or $199? (Later.)
+15. Everything free at launch stays free for good; only new premium workflows can be paid? (Later.)
+16. Ad and affiliate rules: one quiet slot, labelled links, rankings from tests only? (Later.)
+17. How the build year is funded, and the money model rebuild in April 2027. (Later.)
+18. Revive the archived retention module (`archive/retention-r1-r6`), or rebuild M21?
+19. Archive the old `ecommerce-workflow-platform` repo? (Recommended; nothing is deleted.)
 
 ~~What is "Jev"?~~ Dropped 2026-10-18: no router needed.
 

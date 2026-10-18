@@ -10,3 +10,5 @@ Thumbs.db
 # run outputs and traces stay local unless promoted into reports/
 runs/
 traces/
+# intake engine: raw downloads and full transcripts stay private
+intake/*/raw/

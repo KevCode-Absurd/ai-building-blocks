@@ -4,6 +4,8 @@ Newest first. The founder's latest direct instruction wins. Record changes here 
 
 | Date | Decision | Source |
 |---|---|---|
+| 2026-10-18 | **Proposed: one library with filters, and skill families** (decision 20). No separate boards: one list with six types (prompts, skills, routines, workflows, agents, apps), filtered by scope, business type (ecommerce first; lead gen is a business type, not an industry), function › area (e.g. Advertising › Meta, Google), platform and level. Tags only from `taxonomy.yaml`. /ecommerce is a saved view. Each skill is a family: a shared core plus industry packs, built into standalone versions (general, ecommerce, later lead gen, SaaS); a version must change the advice and beat the general one on its test set. Votes and reports count per version. Deck v2, slides 23–24. | Founder asked; design proposed |
+| 2026-10-18 | **Model keys are in place:** the `.env` in the handoff folder, one level above the repo and outside git. The factory loads only the four lab keys, by name; the file's other entries are never used. | Founder |
 | 2026-10-18 | **Sources to start: links, GitHub, YouTube transcripts and articles.** No Instagram reels or TikToks to start; the founder sends sources. Old decision 13 (reels) dropped. | Founder |
 | 2026-10-18 | **No user data stored on the site.** No business data, files, brand brains, results or keys. Brand brains and mini tools run in the browser and download to the person's device; we help people store things themselves. Accounts hold only email, display name, comments, votes, stars, kits, follows and settings. | Founder |
 | 2026-10-18 | **Everything free; comments for anyone signed in.** We answer questions in the comments. Paid priority help and a paid community come later. | Founder |
@@ -60,6 +62,7 @@ The numbered list matches the decisions table in the final plan v4, Part 16.
 17. How the build year is funded, and the money model rebuild in April 2027. (Later.)
 18. Revive the archived retention module (`archive/retention-r1-r6`), or rebuild M21?
 19. Archive the old `ecommerce-workflow-platform` repo? (Recommended; nothing is deleted.)
+20. One library with filters and skill families (shared core + industry packs → versions), replacing separate boards? (By 2 Nov, before the site build.)
 
 ~~What is "Jev"?~~ Dropped 2026-10-18: no router needed.
 

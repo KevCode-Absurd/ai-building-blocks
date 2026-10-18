@@ -23,8 +23,9 @@ Owners, marketers and freelancers who are busy and not AI experts. They don't ca
 ## The promise
 
 - **Headline on the home page:** Making humanity AI native.
-- **Subhead:** Stop doing the work AI could do for you. Save hours every week, and spend them on the work only you can do.
+- **Subhead:** Stop doing the work AI could do for you. Get ad copy, landing page fixes and video scripts from ready-made skills you add to your AI once.
 - **Every block:** one clear outcome you can picture, a real example of the output, and steps simple enough to follow on your first try.
+- **Every skill:** added to your AI once (Claude, Claude Code, ChatGPT, Gemini or a text expander), then started by name. Copy and paste is the fallback.
 
 ## Personality
 

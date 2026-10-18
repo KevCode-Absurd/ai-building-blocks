@@ -29,7 +29,7 @@ you_get:
   - Anything in the footage that doesn't match the script
 
 how_to_use:
-  - Copy the skill and paste it into Claude, ChatGPT or Gemini.
+  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
   - Paste the approved script with how long each scene lasts.
   - Attach frames from the finished video (about one every 3 seconds), or describe what's in each.
   - Paste your allowed copy and say whether captions are already burned in.

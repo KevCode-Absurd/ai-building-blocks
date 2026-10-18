@@ -29,7 +29,7 @@ you_get:
   - A list of every claim, number and quote with its source
 
 how_to_use:
-  - Copy the skill and paste it into Claude, ChatGPT or Gemini.
+  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
   - Paste your product facts, approved claims and several real reviews underneath.
   - Say "video, 30 seconds, AI presenter" (or real creator, or still).
   - Name the doubt you want answered, in the buyer's words if you have them.

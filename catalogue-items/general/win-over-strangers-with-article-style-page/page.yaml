@@ -27,7 +27,7 @@ you_get:
   - A MISSING list of everything left out because you didn't supply the fact
 
 how_to_use:
-  - Copy the skill and paste it into Claude, ChatGPT or Gemini.
+  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
   - Paste your product facts and your claims list underneath, including what you must never say.
   - Paste the ad that will send people here, word for word, and say who it speaks to.
   - Write two or three sentences on why the usual fixes fail and why yours works. If you can't, stop here and work that out first, because the page is built on it.

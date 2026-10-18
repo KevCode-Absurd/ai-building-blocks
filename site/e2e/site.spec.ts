@@ -20,7 +20,7 @@ const WORKFLOW = "turn-your-reviews-into-image-ads-buyers-believe";
 test("hero is the headline, the mono subhead and two buttons, over the globe", async ({ page }) => {
   await page.goto("/");
   await expect(page.getByRole("heading", { level: 1 })).toHaveText("Making humanity AI native");
-  await expect(page.locator(".hero .lede")).toContainText("Save hours every week");
+  await expect(page.locator(".hero .lede")).toContainText("ready-made skills you add to your AI once");
   expect(await page.locator(".hero .lede").evaluate((el) => getComputedStyle(el).fontFamily)).toContain("JetBrains Mono");
   await expect(page.locator(".hero").getByRole("link")).toHaveText(["Browse the blocks", "Build a workflow"]);
   await expect(page.locator(".hero-in > *")).toHaveCount(3);
@@ -283,6 +283,30 @@ test("the workflow download is a complete, repeatable pack", async ({ page }, in
   expect(handoff).not.toContain("Role:");
   const wf = JSON.parse(strFromU8(files["workflow.json"]));
   expect(wf.steps.map((s: { skill: string }) => s.skill)[0]).toBe("turn-website-into-brand-file-for-ai");
+});
+
+test("a skill installs: the zip is a folder Claude can upload, and every AI has its steps", async ({ page }, info) => {
+  await page.goto("/skills/get-different-video-ads-from-same-research");
+  const bp = page.getByTestId("block-page");
+  await bp.getByTestId("add-to-ai").click();
+  const box = bp.getByTestId("install");
+  await expect(box).toBeInViewport();
+  await expect(box.getByRole("tab", { selected: true })).toHaveText("Claude");
+  const [dl] = await Promise.all([page.waitForEvent("download"), box.getByTestId("install-zip").click()]);
+  expect(dl.suggestedFilename()).toBe("get-different-video-ads-from-same-research.zip");
+  const path = info.outputPath(dl.suggestedFilename());
+  await dl.saveAs(path);
+  const files = unzipSync(new Uint8Array(fs.readFileSync(path)));
+  const skill = strFromU8(files["get-different-video-ads-from-same-research/SKILL.md"]);
+  expect(skill).toMatch(/^---\nname: get-different-video-ads-from-same-research\ndescription: /);
+  expect(Object.keys(files)).toContain("get-different-video-ads-from-same-research/references/types.md");
+  await box.getByTestId("install-code").click();
+  await expect(box).toContainText("/get-different-video-ads-from-same-research");
+  await box.getByTestId("install-chatgpt").click();
+  await expect(box).toContainText(/characters/);
+  // The choice is remembered on the next skill.
+  await page.goto(`/prompts/${MODEL}`);
+  await expect(page.getByTestId("install").getByRole("tab", { selected: true })).toHaveText("ChatGPT");
 });
 
 test("phone width: no sideways scroll on home or a block page @mobile", async ({ page }) => {

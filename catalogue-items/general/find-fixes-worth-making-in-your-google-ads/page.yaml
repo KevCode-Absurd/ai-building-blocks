@@ -28,7 +28,7 @@ you_get:
   - A MISSING list, with the exact export and columns to pull if yours won't do
 
 how_to_use:
-  - Copy the skill and paste it into Claude, ChatGPT or Gemini.
+  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
   - Write which part you want reviewed, for example "search terms" or "bids and budgets".
   - Paste the export for that part. Say where you pulled it from, when, the date range and the currency.
   - Add your target, for example "target cost per purchase $30". If you don't have one, write "exploratory".

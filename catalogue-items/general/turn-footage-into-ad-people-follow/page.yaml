@@ -29,7 +29,7 @@ you_get:
   - Export settings per shape, and a list of shots you still need
 
 how_to_use:
-  - Copy the skill and paste it into Claude, ChatGPT or Gemini.
+  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
   - List each clip with its file name, length and shape. Paste the transcript with times if you have one.
   - Paste the approved script, claims and offer. Say what shapes and length you need.
   - Hand the plan to your editor, or follow it yourself in any editing app.

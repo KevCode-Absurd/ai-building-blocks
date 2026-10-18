@@ -25,7 +25,7 @@ you_get:
   - A short list of what to upload, what the owner can edit, and what was assumed
 
 how_to_use:
-  - Copy the skill and paste it into Claude, ChatGPT or Gemini.
+  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
   - Describe what you want in a sentence or two, for example "a section with three icons and a short line under each, editable".
   - Name your theme and, if you're editing, paste the current file.
   - Upload the files to a duplicate of your theme, open the theme editor, and check the section on a phone-width preview.

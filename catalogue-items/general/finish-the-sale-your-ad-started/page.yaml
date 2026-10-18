@@ -27,7 +27,7 @@ you_get:
   - A list of every field left empty because a fact was missing
 
 how_to_use:
-  - Copy the skill and paste it into Claude, ChatGPT or Gemini.
+  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
   - Paste your product facts and current offers with their exact names and prices.
   - Paste the ad word for word, and say who it's for.
   - Add a few real customer quotes, and any questions buyers ask before buying.

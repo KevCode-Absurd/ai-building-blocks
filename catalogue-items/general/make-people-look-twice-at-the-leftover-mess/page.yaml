@@ -26,7 +26,7 @@ you_get:
   - A 60 to 120 word image prompt, ready to paste
 
 how_to_use:
-  - Copy the skill and paste it into Claude, ChatGPT or Gemini.
+  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
   - Paste your story ad underneath. The object should be named in the first lines.
   - Add how your buyers describe what they find, from reviews or messages, if you have it.
   - Paste the image prompt into your image tool. If it looks like a clean studio close-up, ask again with "phone flash, slightly blurry edges".

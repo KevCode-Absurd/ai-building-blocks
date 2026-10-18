@@ -139,3 +139,16 @@ export function download(blob: Blob, filename: string) {
   a.href = url; a.download = filename; a.click();
   setTimeout(() => URL.revokeObjectURL(url), 1000);
 }
+
+/** One skill as a folder Claude can install: <slug>/SKILL.md, plus its online-store steps and reference files. */
+export async function buildSkillZip(slug: string, skill: string, addon: boolean, files: string[]) {
+  const tree: Zippable = {};
+  const store = addon ? await loadSkillText(slug, "ecommerce.md") : null;
+  tree[`${slug}/SKILL.md`] = strToU8(store ? `${skill.trimEnd()}\n\n## For an online store\n\nIf the business sells products online, also follow \`ecommerce.md\` in this folder.\n` : skill);
+  if (store) tree[`${slug}/ecommerce.md`] = strToU8(store);
+  for (const f of files) {
+    const t = await loadSkillText(slug, f);
+    if (t) tree[`${slug}/${f}`] = strToU8(t);
+  }
+  return new Blob([zipSync(tree)], { type: "application/zip" });
+}

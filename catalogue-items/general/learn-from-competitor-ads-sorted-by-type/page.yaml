@@ -26,7 +26,7 @@ you_get:
   - A list of thin groups and ads it couldn't look at
 
 how_to_use:
-  - Copy the skill and paste it into Claude, ChatGPT or Gemini.
+  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
   - Collect ads by hand from a public ad library, such as Meta's, and paste them in with a link, the advertiser, the text, the format and what the image or video shows.
   - If you can, attach screenshots or key frames. Ads it can't see are left off the board rather than guessed.
   - Add a line on what you sell and who your competitors are.

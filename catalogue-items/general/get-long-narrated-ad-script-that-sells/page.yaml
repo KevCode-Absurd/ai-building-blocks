@@ -28,7 +28,7 @@ you_get:
   - Notes on the length chosen, what you counted and what's missing for longer
 
 how_to_use:
-  - Copy the skill and paste it into Claude, ChatGPT or Gemini.
+  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
   - Paste your customer research, product facts and claims underneath.
   - List your proof, one line each, with its source.
   - Say the length you want, for example "5 minutes".

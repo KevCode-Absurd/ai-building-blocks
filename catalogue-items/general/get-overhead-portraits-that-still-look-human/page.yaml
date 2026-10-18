@@ -29,7 +29,7 @@ you_get:
   - If your chat makes images, the picture with a pass or fail line for each check
 
 how_to_use:
-  - Copy the skill and paste it into Claude, ChatGPT or Gemini.
+  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
   - Write a two-line brief, for example "woman in her 50s, home kitchen, relaxed, 4:5, no words, holding our product".
   - Attach the photos you have and say what each one is (camera angle, the person, the product).
   - Paste the prompt into your image tool and check the face, eyes and hands at full size.

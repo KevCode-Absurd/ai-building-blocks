@@ -28,7 +28,7 @@ you_get:
   - Notes on inferred links and claims left out
 
 how_to_use:
-  - Copy the skill and paste it into Claude, ChatGPT or Gemini.
+  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
   - Paste how your product works, step by step, with the source of each step (label, study, test report).
   - Paste your approved and banned claims. This format lives or dies on them.
   - Say "video, 30 seconds" or "image".

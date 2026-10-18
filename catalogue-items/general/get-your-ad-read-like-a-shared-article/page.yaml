@@ -27,7 +27,7 @@ you_get:
   - A 60 to 120 word image prompt, ready to paste
 
 how_to_use:
-  - Copy the skill and paste it into Claude, ChatGPT or Gemini.
+  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
   - Paste your story ad with its hook options numbered.
   - Paste the headline of the page the ad links to. If there isn't one, say so.
   - Paste the image prompt into your image tool. Check every letter of the headline, since image tools misspell.

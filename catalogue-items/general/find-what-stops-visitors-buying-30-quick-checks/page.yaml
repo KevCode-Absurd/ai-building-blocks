@@ -28,7 +28,7 @@ you_get:
   - A list of what it couldn't judge and what would let it
 
 how_to_use:
-  - Copy the skill and paste it into Claude, ChatGPT or Gemini.
+  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
   - Paste the page text and attach a phone screenshot of the first screen.
   - Paste the ad word for word, or the continuity checks are marked "not judged".
   - Paste your approved and banned claims and your real prices, or the truth checks are marked "not judged".

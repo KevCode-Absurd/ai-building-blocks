@@ -27,7 +27,7 @@ you_get:
   - A list of shortfalls and trade-offs
 
 how_to_use:
-  - Copy the skill and paste it into Claude, ChatGPT or Gemini.
+  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
   - List your steps in order, one line each, with what each one should hand on.
   - If you know what each step is sent now, paste it or describe it, with any measured costs.
   - Read the never-trim list for each step and check your current setup keeps all of it.

@@ -7,6 +7,8 @@ Every headline, name, subhead, button and page passes this before it goes live. 
 - [ ] A stranger could picture the result after reading the headline once.
 - [ ] The subhead explains how they get it and what they need to bring.
 - [ ] Every number is true and checkable (a "30-point checklist" has 30 points).
+- [ ] No vague heading or subhead: each names the deliverable, the reader or a number (see "Headings and subheads are never vague" in `COPYWRITING.md`).
+- [ ] Logically true: whatever a heading promises, the content under it delivers.
 
 ## The words
 - [ ] No jargon an outsider wouldn't know (see `docs/WRITING.md` for our own internal terms).
@@ -16,6 +18,7 @@ Every headline, name, subhead, button and page passes this before it goes live. 
 - [ ] No "almost", "very", "really", "quite".
 - [ ] No exclamation marks.
 - [ ] No em dashes.
+- [ ] No AI tells: contrast reveals ("it's not X, it's Y"), negation lists, trailing pile-ons, self-answered questions, colon reveals, stock openers (full list in `COPYWRITING.md`).
 - [ ] Customer words, not company words.
 
 ## The page

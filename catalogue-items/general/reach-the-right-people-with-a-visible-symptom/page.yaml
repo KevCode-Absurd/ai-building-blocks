@@ -27,7 +27,7 @@ you_get:
   - A 60 to 120 word image prompt when the symptom can be shown
 
 how_to_use:
-  - Copy the skill and paste it into Claude, ChatGPT or Gemini.
+  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
   - Paste your story ad underneath.
   - Add your buyers' words for the symptom, taken from reviews or research, not your guess.
   - Add any limits your brand has on showing the body.

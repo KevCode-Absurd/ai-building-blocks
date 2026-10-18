@@ -29,7 +29,7 @@ you_get:
   - A list of every fact said, with its source
 
 how_to_use:
-  - Copy the skill and paste it into Claude, ChatGPT or Gemini.
+  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
   - Paste the doubt or belief you want to change, in your customers' own words.
   - Paste the facts a speaker may say, one per line, with sources.
   - Say "video, 30 seconds" or "still".

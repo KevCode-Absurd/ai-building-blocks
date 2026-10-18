@@ -29,7 +29,7 @@ you_get:
   - A list of every fact the object states, with its source
 
 how_to_use:
-  - Copy the skill and paste it into Claude, ChatGPT or Gemini.
+  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
   - Paste your product facts, approved claims and a few customer reviews underneath.
   - Describe where the problem happens, for example "at the kitchen sink, 7 am". Name any object your customers mention.
   - Say "video, 20 seconds" or "still", and how dry or silly your brand's humour can be.

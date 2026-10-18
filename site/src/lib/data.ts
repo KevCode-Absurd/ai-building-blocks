@@ -21,6 +21,8 @@ export type Block = {
   version: string;
   words: number;
   addon: boolean;
+  /** Extra files in the skill's folder, like references/types.md or LICENSE. */
+  files: string[];
   added: string;
   usedIn: number;
   task: string;
@@ -71,7 +73,7 @@ export function useCatalogue() {
   return c;
 }
 const textCache = new Map<string, Promise<string | null>>();
-export function loadSkillText(slug: string, file: "SKILL.md" | "ecommerce.md" = "SKILL.md"): Promise<string | null> {
+export function loadSkillText(slug: string, file = "SKILL.md"): Promise<string | null> {
   const key = `${slug}/${file}`;
   if (!textCache.has(key)) textCache.set(key, fetch(`/skills/${key}`).then((r) => (r.ok ? r.text() : null)).then((t) => (t && !t.trimStart().startsWith("<!doctype") ? t.replace(/\r\n?/g, "\n") : null)));
   return textCache.get(key)!;
@@ -106,8 +108,8 @@ export function wireSteps(c: Catalogue, slugs: string[]): [number, number][] {
 /** What a person sees: three kinds, in order of how much they do. */
 export type Kind = "prompt" | "skill" | "workflow";
 export const KINDS: { id: Kind; name: string; plural: string; path: string; what: string }[] = [
-  { id: "prompt", name: "Prompt", plural: "Prompts", path: "prompts", what: "Paste it into your AI and go." },
-  { id: "skill", name: "Skill", plural: "Skills", path: "skills", what: "Step-by-step instructions your AI follows, with checks at the end." },
+  { id: "prompt", name: "Prompt", plural: "Prompts", path: "prompts", what: "One message you paste into your AI for a quick result." },
+  { id: "skill", name: "Skill", plural: "Skills", path: "skills", what: "Instructions you add to your AI once. It follows them step by step and checks its own work." },
   { id: "workflow", name: "Workflow", plural: "Workflows", path: "workflows", what: "Several skills in order. Each one hands its work to the next." },
 ];
 export const kindOf = (b: Block): Kind => (b.category === "orchestrator" || b.type === "workflow" || b.type === "routine" ? "workflow" : b.type === "prompt" ? "prompt" : "skill");
@@ -150,7 +152,7 @@ export const FUNCTIONS: { id: string; name: string; line: string; tasks: string[
   { id: "cro", name: "CRO specialist", line: "Pages that turn visitors into buyers", tasks: ["audit-landing-page", "write-landing-page"] },
   { id: "strategist", name: "Brand strategist", line: "Know your customers, brand and rivals", tasks: ["understand-customers", "brand-file", "study-competitors", "make-offer"] },
   { id: "social", name: "Social media manager", line: "Posts that grow an audience", tasks: ["grow-social"] },
-  { id: "founder", name: "Founder", line: "Set AI up to work across the business", tasks: ["set-up-ai", "brand-file"] },
+  { id: "founder", name: "Founder", line: "A brand file and AI set up once, for every job", tasks: ["set-up-ai", "brand-file"] },
 ];
 export const functionsOf = (b: Block) => FUNCTIONS.filter((f) => f.tasks.includes(b.task));
 

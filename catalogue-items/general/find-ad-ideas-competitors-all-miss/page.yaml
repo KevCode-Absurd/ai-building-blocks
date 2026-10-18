@@ -27,7 +27,7 @@ you_get:
   - Notes on how you'd make your own version, and a list of what it couldn't see
 
 how_to_use:
-  - Copy the skill and paste it into Claude, ChatGPT or Gemini.
+  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
   - Say what the brief is for in one line, for example "new customers for our main product, US, video and image ads".
   - Paste the competitor ads, ideally 20 or more, with a link and how long each has run. Attach the videos or screenshots if your tool accepts them.
   - Paste your own facts, the claims you may and may not make, and your current best ads, so it doesn't suggest what you already run.

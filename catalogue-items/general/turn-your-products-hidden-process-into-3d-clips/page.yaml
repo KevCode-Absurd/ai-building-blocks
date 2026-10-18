@@ -29,7 +29,7 @@ you_get:
   - After you choose, the seven-beat script, still and clip prompts, captions and voice brief
 
 how_to_use:
-  - Copy the skill and paste it into Claude, ChatGPT or Gemini.
+  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
   - Paste your product facts, with the source for each claim, and your banned claims.
   - Read the chains and honesty notes first. If nothing survives, it will tell you to use another format.
   - Pick one story option and reply with its letter.

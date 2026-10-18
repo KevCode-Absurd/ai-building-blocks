@@ -28,7 +28,7 @@ you_get:
   - A four-line distance check against the reference
 
 how_to_use:
-  - Copy the skill and paste it into Claude, ChatGPT or Gemini.
+  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
   - Write one or two sentences on why the reference worked. Don't paste its script.
   - List anything not to borrow (its claims, people, shots).
   - Paste your customer research and product facts underneath.

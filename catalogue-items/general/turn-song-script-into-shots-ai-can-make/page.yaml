@@ -28,7 +28,7 @@ you_get:
   - A storyboard timed to the song, and image and video prompts with a guard line
 
 how_to_use:
-  - Copy the skill and paste it into Claude, ChatGPT or Gemini.
+  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
   - Paste your approved lyric and attach a product photo.
   - Paste the music brief into your music tool and make the whole song in one go.
   - Paste the real word timings back in. The skill re-times every shot to them.

@@ -26,7 +26,7 @@ you_get:
   - Up to three fixes, in order
 
 how_to_use:
-  - Copy the skill and paste it into Claude, ChatGPT or Gemini.
+  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
   - Paste the finished copy underneath.
   - Add one line on who it's for and how much they know.
   - Paste your approved claims and offer terms. Without them, three questions come back as "cannot verify".

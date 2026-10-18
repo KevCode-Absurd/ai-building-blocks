@@ -29,7 +29,7 @@ you_get:
   - Flags for quotes that need checking before they run as paid ads
 
 how_to_use:
-  - Copy the skill and paste it into Claude, ChatGPT or Gemini.
+  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
   - Paste the reviews you want to use, each with a number or name so the source is clear.
   - Say which reason to buy the set is about, and which phrase to build on. One reason per set, so the test tells you something.
   - Say how many ads, and which product photo the image tool should use.

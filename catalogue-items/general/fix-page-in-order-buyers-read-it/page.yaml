@@ -28,7 +28,7 @@ you_get:
   - A list of what the page can't tell you, such as missing proof or terms
 
 how_to_use:
-  - Copy the skill and paste it into Claude, ChatGPT or Gemini.
+  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
   - Paste the page's text and attach phone screenshots from top to bottom.
   - Paste the ad that sends people there, so the first screen can be checked against it.
   - Add your guarantee, delivery and returns terms if they're not on the page. Missing terms are findings in their own right.

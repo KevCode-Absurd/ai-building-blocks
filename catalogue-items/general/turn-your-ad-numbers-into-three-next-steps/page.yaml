@@ -27,7 +27,7 @@ you_get:
   - Two to four changes that matter, one unresolved worry, and three ranked actions
 
 how_to_use:
-  - Copy the skill and paste it into Claude, ChatGPT or Gemini.
+  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
   - Paste the totals for this period and the one before, in the same columns.
   - Say the dates, the currency and the attribution window if you know it.
   - Add your targets if you want each number judged against them.

@@ -3,7 +3,7 @@ name: Know if you have enough visitors to test
 summary: Judge your page by revenue per visitor, and learn whether your traffic can support a fair test.
 job: audit-landing-page
 
-headline: Know if your page is really working, and if you have enough visitors to test it
+headline: Know if your page is working, and if it gets enough visitors to test
 subhead: Paste your visits, orders or sign-ups and revenue for a set of dates. It works out revenue per visitor, shows what your traffic mix does to the numbers, and says how many visitors and days a fair test would need, or that you can't test yet.
 
 explain: |
@@ -28,7 +28,7 @@ you_get:
   - Three next actions, each tied to a number
 
 how_to_use:
-  - Copy the skill and paste it into Claude, ChatGPT or Gemini.
+  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
   - Paste your numbers for one closed date range (for example, all of last month), with the dates.
   - Add the split by traffic source if your analytics shows it.
   - Say what you're trying to decide, such as "did the new page work?" or "can we A/B test this?".

@@ -29,7 +29,7 @@ you_get:
   - A MISSING list for anything it needed and didn't have
 
 how_to_use:
-  - Copy the skill and paste it into Claude, ChatGPT or Gemini.
+  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
   - Paste one review that describes the problem, word for word, and say when it happens.
   - Paste your product facts and claims, and describe or attach your best product photo.
   - Give your two colours as hex codes and your typeface name.

@@ -3,7 +3,7 @@ name: Know if your new prompt writes better ads
 summary: A blind side-by-side of ads from your old and new prompt, with failures and cost per usable ad.
 job: set-up-ai
 
-headline: Find out if your new prompt really writes better ads, or just cheaper ones
+headline: Find out if your new prompt writes better ads, or only cheaper ones
 subhead: Give it the ads your old prompt made, the ads your new prompt made from the same briefs, and the facts each one had to follow. It pairs them up, scores both sides without knowing which is new, flags outright failures, and tells you whether to keep the change.
 
 explain: |
@@ -28,7 +28,7 @@ you_get:
   - A one-paragraph decision on whether to keep the change
 
 how_to_use:
-  - Copy the skill and paste it into Claude, ChatGPT or Gemini.
+  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
   - Before you change anything, save the outputs your current prompt makes. You can't do this fairly afterwards.
   - Run the new prompt on exactly the same briefs and paste both sets, labelled by brief.
   - Paste the approved facts and offer terms for each brief.

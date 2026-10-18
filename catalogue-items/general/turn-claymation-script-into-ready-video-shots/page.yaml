@@ -28,7 +28,7 @@ you_get:
   - One clip prompt per part of the script, plus a checklist for each clip
 
 how_to_use:
-  - Copy the skill and paste it into Claude, ChatGPT or Gemini.
+  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
   - Paste your script underneath, then attach or describe your product photo, how it's used and your approved claims.
   - Say which video tool you use and the clip lengths it allows, for example "8 to 10 second clips".
   - Make the character still first. Only move on when you like it.

@@ -45,6 +45,10 @@ for (const category of ["general", "ecommerce", "orchestrators"]) {
     fs.mkdirSync(path.join(OUT_SKILLS, slug), { recursive: true });
     fs.copyFileSync(skillPath, path.join(OUT_SKILLS, slug, "SKILL.md"));
     if (hasAddon) fs.copyFileSync(addon, path.join(OUT_SKILLS, slug, "ecommerce.md"));
+    // Reference files and a licence travel with the skill, so a download installs complete.
+    const refDir = path.join(folder, "references");
+    const files = [...(fs.existsSync(refDir) ? fs.readdirSync(refDir).filter((f) => f.endsWith(".md")).sort().map((f) => `references/${f}`) : []), ...(fs.existsSync(path.join(folder, "LICENSE")) ? ["LICENSE"] : [])];
+    for (const f of files) { fs.mkdirSync(path.dirname(path.join(OUT_SKILLS, slug, f)), { recursive: true }); fs.copyFileSync(path.join(folder, f), path.join(OUT_SKILLS, slug, f)); }
     const steps = (item.steps ?? []).map((s) => ({ uses: s.uses, note: s.note ?? "" }));
     const pagePath = [path.join(folder, "page.yaml"), path.join(WORKFLOW_PAGES, `${slug}.yaml`)].find((p) => fs.existsSync(p));
     let page = null;
@@ -74,6 +78,7 @@ for (const category of ["general", "ecommerce", "orchestrators"]) {
       version: String(item.version ?? "1.0.0"),
       words: skill.split(/\s+/).length,
       addon: hasAddon,
+      files,
       added: fs.statSync(yamlPath).mtime.toISOString().slice(0, 10),
     });
   }

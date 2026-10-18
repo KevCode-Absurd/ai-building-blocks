@@ -29,7 +29,7 @@ you_get:
   - A list of claims shown, each with its source
 
 how_to_use:
-  - Copy the skill and paste it into Claude, ChatGPT or Gemini.
+  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
   - Paste your product facts, label text and claims underneath.
   - Describe the buyer and their room in two or three sentences, including what they look like for the doll.
   - Say "video, 30 seconds" or "still".

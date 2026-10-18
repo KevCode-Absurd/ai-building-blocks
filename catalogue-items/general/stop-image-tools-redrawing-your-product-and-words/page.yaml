@@ -28,7 +28,7 @@ you_get:
   - A MISSING line for any fact it needed but didn't have
 
 how_to_use:
-  - Copy the skill and paste it into Claude, ChatGPT or Gemini.
+  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
   - Paste only the approved concept, the exact words and the product facts. Leave out the alternatives you rejected.
   - Attach your reference photos and say what each one is for.
   - Give the image shape (for example 4:5) and any length limit your tool has.

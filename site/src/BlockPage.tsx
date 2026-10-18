@@ -6,6 +6,7 @@ import { markViewed } from "./lib/store";
 import { buildHandoffZip, download } from "./lib/handoff";
 import { Link } from "./lib/router";
 import AddToFlow from "./AddToFlow";
+import Install from "./Install";
 import { useSeen, useTyped } from "./lib/typing";
 
 // Skill text renders as Markdown with raw HTML escaped: files are data, never markup we trust.
@@ -139,15 +140,16 @@ export default function BlockPage({ c, slug, toast, toBuilder }: Props) {
   const has = (x?: unknown[]) => !!x && x.length > 0;
   const toc: [string, string, boolean][] = [
     ["example", "See it work", !!p?.example],
+    ["install", "Add it to your AI", !isFlow],
     ["what", "What it does", !!p?.explain],
     ["io", "What you give it, what you get", true],
     ["steps", "The steps", isFlow],
     ["use", "How to use it", has(p?.how_to_use)],
-    ["most", "Get the most out of it", has(p?.tweaks)],
+    ["most", "What changes the result most", has(p?.tweaks)],
     ["test", "Test it", has(p?.judge) || has(p?.test)],
     ["improve", "Improve it for your business", has(p?.improve)],
     ["file", isFlow ? "The workflow file" : "The skill file", true],
-    ["with", "Use it with", !isFlow && !!near && (near.before.length > 0 || near.after.length > 0)],
+    ["with", "Run before and after", !isFlow && !!near && (near.before.length > 0 || near.after.length > 0)],
   ];
 
   return (
@@ -166,8 +168,8 @@ export default function BlockPage({ c, slug, toast, toBuilder }: Props) {
             </>
           ) : (
             <>
-              <button className="btn btn-primary" disabled={!skill} onClick={copySkill}>Copy the skill</button>
-              <button className="btn btn-dark" disabled={!skill} onClick={() => skill && download(new Blob([skill], { type: "text/markdown" }), `${b.slug}.SKILL.md`)}>Download</button>
+              <a href="#install" className="btn btn-primary" data-testid="add-to-ai">Add it to your AI</a>
+              <button className="btn btn-dark" disabled={!skill} onClick={copySkill}>Copy the skill</button>
               <KitMenu slug={b.slug} onChange={toast} />
               <button className="btn btn-dark" onClick={() => setAdding(true)} data-testid="add-to-workflow">Add to a workflow</button>
             </>
@@ -193,6 +195,12 @@ export default function BlockPage({ c, slug, toast, toBuilder }: Props) {
                 <p className="bp-note">This is what was pasted after the skill. Swap in your own details and you get the same kind of result for your business.</p>
                 <Code name="what-went-in.txt" text={p.example.input} toast={toast} />
               </details>
+            </Section>
+          )}
+
+          {!isFlow && (
+            <Section id="install" title="Add it to your AI once, then start it by name" lead="It takes about two minutes, once. Pick the AI you use.">
+              <Install b={b} skill={skill} toast={toast} />
             </Section>
           )}
 
@@ -251,7 +259,7 @@ export default function BlockPage({ c, slug, toast, toBuilder }: Props) {
           )}
 
           {has(p?.tweaks) && (
-            <Section id="most" title="Get the most out of it" lead="The parts of your input that change the result most.">
+            <Section id="most" title="What changes the result most" lead="Get these parts of your input right and every run gets better.">
               <dl className="tweaks">{p!.tweaks.map((t, i) => <div key={i}><dt>{t.what}</dt><dd>{t.how}</dd></div>)}</dl>
             </Section>
           )}
@@ -286,7 +294,7 @@ export default function BlockPage({ c, slug, toast, toBuilder }: Props) {
             </section>
           )}
 
-          <Section id="file" title={isFlow ? "The workflow file" : "The skill file"} lead={`This is what you paste into your AI. It's saved as ${b.slug}/SKILL.md, so a workflow can call it by name.`}>
+          <Section id="file" title={isFlow ? "The workflow file" : "The skill file"} lead={`This is what your AI follows. It's saved as ${b.slug}/SKILL.md, the name Claude, Claude Code and our workflows call it by.`}>
             <details className="skill-file" open={!p}>
               <summary>Read the full {isFlow ? "workflow" : "skill"}</summary>
               {skill ? <div className="prose" dangerouslySetInnerHTML={{ __html: md.parse(stripFront(skill)) as string }} /> : <p className="small">Loading…</p>}
@@ -300,7 +308,7 @@ export default function BlockPage({ c, slug, toast, toBuilder }: Props) {
           </Section>
 
           {!isFlow && near && (near.before.length > 0 || near.after.length > 0) && (
-            <Section id="with" title="Use it with" wide>
+            <Section id="with" title="Run before and after" wide>
               {near.before.length > 0 && <><h3 className="with-h">Run one of these first</h3><div className="grid">{near.before.slice(0, 3).map((x) => <BlockCard key={x.slug} b={x} />)}</div></>}
               {near.after.length > 0 && <><h3 className="with-h">Then pass the result to</h3><div className="grid">{near.after.slice(0, 3).map((x) => <BlockCard key={x.slug} b={x} />)}</div></>}
             </Section>

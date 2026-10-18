@@ -29,7 +29,7 @@ you_get:
   - An evidence and flags list, with every guess marked and every gap written as MISSING
 
 how_to_use:
-  - Copy the skill and paste it into Claude, ChatGPT or Gemini.
+  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
   - Paste your business facts, including your offer exactly as you state it.
   - Paste any customer quotes word for word, with who said them if you know.
   - Name the buyer, for example "people who think it costs too much and fear the price jumps after the first order".

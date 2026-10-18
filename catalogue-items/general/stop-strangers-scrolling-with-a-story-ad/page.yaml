@@ -29,7 +29,7 @@ you_get:
   - Flags on anything inferred or needing a check, plus a short test plan
 
 how_to_use:
-  - Copy the skill and paste it into Claude, ChatGPT or Gemini.
+  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
   - Paste five or so reviews that describe the problem, each with its number or source.
   - Paste your product facts and your approved and banned claims.
   - Say who may narrate and list only the facts on record about them. If nobody has agreed, leave it out and the story is told by the brand.

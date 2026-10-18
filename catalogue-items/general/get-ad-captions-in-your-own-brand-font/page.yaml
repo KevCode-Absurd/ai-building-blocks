@@ -28,7 +28,7 @@ you_get:
   - Clean and captioned exports plus a subtitle file, when run in an editing tool
 
 how_to_use:
-  - Copy the skill and paste it into Claude, ChatGPT or Gemini, or into an AI tool that can edit video files.
+  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in. An AI tool that can edit video files works best.
   - Paste the approved script or transcript, and the measured length of each clip.
   - Attach your font files (for example the .ttf or .otf for your headline and caption fonts) and your logo file.
   - Read the stopped steps first. Anything marked MISSING blocks that part until you supply it.

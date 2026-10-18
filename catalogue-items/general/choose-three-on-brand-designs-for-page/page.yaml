@@ -28,7 +28,7 @@ you_get:
   - If you sent screenshots, design and technical findings with a fix for each
 
 how_to_use:
-  - Copy the skill and paste it into Claude, ChatGPT or Gemini.
+  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
   - Paste your brand colours with hex codes and font names, and describe or attach your product photos.
   - Paste the finished page copy and the ad that sends people to it.
   - Say whether this is a refresh (keep what works) or a redesign (layout can change).

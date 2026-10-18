@@ -26,7 +26,7 @@ you_get:
   - The tests that need a real browser, and the next three steps
 
 how_to_use:
-  - Copy the skill and paste it into Claude, ChatGPT or Gemini.
+  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
   - Take screenshots of the page on your phone, top to bottom, and one set on a desktop. Note the date and the page address.
   - Paste or attach them, or paste the page text if you can't attach images.
   - Write the shopper's question in one line, such as "Can a phone shopper see the price and the guarantee before tapping buy?".

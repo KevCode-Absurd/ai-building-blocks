@@ -29,7 +29,7 @@ you_get:
   - If your chat can make images, the pictures ranked best first, with a reject list
 
 how_to_use:
-  - Copy the skill and paste it into Claude, ChatGPT or Gemini.
+  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
   - Attach your real product photos and say which variant they show.
   - Attach the photo whose look you want. Say what the new picture is for and where it will go, for example "email header, words added later".
   - Read the six-part reading. If a line is wrong (the light comes from the right, not the left), correct it before you use the prompt.

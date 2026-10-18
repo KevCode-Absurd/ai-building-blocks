@@ -28,7 +28,7 @@ you_get:
   - A list of placeholders and assumptions
 
 how_to_use:
-  - Copy the skill and paste it into Claude, ChatGPT or Gemini.
+  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
   - Paste the reference breakdown, one row per line or shot, with timings.
   - Paste your brand facts, proof and offer underneath.
   - Read the step map first. If a row was changed, check you agree with the reason.

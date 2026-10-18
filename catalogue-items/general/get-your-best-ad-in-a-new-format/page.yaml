@@ -28,7 +28,7 @@ you_get:
   - Notes on the beat that sells and its risk, timing changes, replacements and claim flags
 
 how_to_use:
-  - Copy the skill and paste it into Claude, ChatGPT or Gemini.
+  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
   - Paste the original ad. For a video, list each shot with its time, picture and words. For an image ad, give the words on the image, the post text and what the picture shows.
   - Say the new format and its length, for example "15-second video, 9:16".
   - Add the real product photos you have, so the product is rebuilt from them.

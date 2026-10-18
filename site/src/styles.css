@@ -495,3 +495,18 @@ body.globe-dragging, body.globe-dragging * { user-select: none !important; -webk
   .fn:hover:not(:disabled) .px .on, .fn:focus-visible .px .on { animation: none; }
   .fn::after, .card::after { transition: none; }
 }
+
+/* Add it to your AI */
+.install { border: 1px solid var(--text); border-radius: 8px; background: var(--panel); box-shadow: var(--hard); overflow: hidden; }
+.install-tabs { padding: 0 8px; border-bottom: 1px solid var(--text); background: repeating-linear-gradient(180deg, var(--panel) 0 2px, var(--line-2) 2px 3px); }
+.install-tabs button { height: 44px; font-size: 14px; }
+.install-tabs button[aria-selected="true"] { background: var(--panel); }
+.install-panel { padding: 6px 20px 18px; }
+.install-panel .num-list li:first-child { border-top: 0; }
+.install-panel .num-list .btn { display: flex; width: fit-content; margin-top: 10px; }
+.install-panel code { font: 500 0.88em var(--mono); padding: 1px 5px; border: 1px solid var(--line); border-radius: 4px; background: var(--bg-2); overflow-wrap: anywhere; }
+.cmd { display: flex; align-items: center; gap: 8px; margin: 8px 0 12px; padding: 8px 8px 8px 12px; border: 1px dashed var(--line-2); border-radius: 6px; background: var(--bg-2); }
+.cmd code { flex: 1; min-width: 0; padding: 0; border: 0; background: none; font-size: 12.5px; }
+.cmd .code-copy { flex: none; }
+.install-then { margin: 16px 0 0; padding: 14px 16px; border-radius: 6px; background: var(--bg-2); font-size: 15px; color: var(--text-2); }
+@media (max-width: 640px) { .install-panel { padding: 4px 14px 14px; } .install-panel .num-list li { grid-template-columns: 34px minmax(0, 1fr); gap: 10px; } }

@@ -26,7 +26,7 @@ you_get:
   - The top five fixes and a list of facts to collect before writing
 
 how_to_use:
-  - Copy the skill and paste it into Claude, ChatGPT or Gemini.
+  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
   - Paste your customer words with a source for each (review number, ticket ID, date).
   - Paste the full page text, including FAQ answers and what each gallery photo shows, or attach phone screenshots.
   - Add any policies, measurements or test results you have.

@@ -28,7 +28,7 @@ you_get:
   - Notes on every line it kept in the old voice, and why
 
 how_to_use:
-  - Copy the skill and paste it into Claude, ChatGPT or Gemini.
+  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
   - Paste your script underneath, one line per row, with any on-screen text and picture notes.
   - Write the new person and tense, for example "first person, past" or "third person, past, she".
   - Say who will say it. This matters, because an AI presenter can't claim a personal result.

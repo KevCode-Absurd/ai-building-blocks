@@ -27,7 +27,7 @@ you_get:
   - A list of what a person must check before anything runs, and rules for reading results
 
 how_to_use:
-  - Copy the skill and paste it into Claude, ChatGPT or Gemini.
+  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
   - Paste all your reviews, numbered, and say who your main buyer groups are.
   - List only the people who have agreed to be quoted. If none have, say so.
   - Read the fit verdict first. If it says your product doesn't suit a story ad, run a short direct ad instead.

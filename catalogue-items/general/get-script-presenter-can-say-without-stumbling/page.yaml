@@ -27,7 +27,7 @@ you_get:
   - Flags for any claim or number that looks wrong, left unchanged
 
 how_to_use:
-  - Copy the skill and paste it into Claude, ChatGPT or Gemini.
+  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
   - Paste your script or ad text underneath.
   - Say whether it will be spoken or read, and who it's for.
   - Paste two or three of your brand's own lines, so it keeps your phrases.

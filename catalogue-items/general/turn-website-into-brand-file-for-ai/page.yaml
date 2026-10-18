@@ -27,7 +27,7 @@ you_get:
   - A list of what is still blank and who can answer it
 
 how_to_use:
-  - Copy the skill and paste it into Claude, ChatGPT or Gemini. A tool that can read websites works best.
+  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in. A tool that can read websites works best.
   - Give it your website address. If it can't read the site, paste your about page and your price list instead.
   - Check the basics it shows you (name, category, main colour, description, number of offers) and reply "good" or correct them.
   - Answer the follow-up questions you can and skip the rest. Pasting real reviews makes the customer profiles much better.

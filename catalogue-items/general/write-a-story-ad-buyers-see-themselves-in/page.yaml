@@ -28,7 +28,7 @@ you_get:
   - Notes with the word count, every placeholder, everything inferred and which reviews each borrowed phrase came from
 
 how_to_use:
-  - Copy the skill and paste it into Claude, ChatGPT or Gemini.
+  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
   - Paste five or more real reviews with their numbers, plus your product facts and claims list.
   - Name the form, arc, narrator and length. Start with "personal history", "reluctant believer", composite and short if you're unsure.
   - Say where the click goes. Use a product page for people who already know the problem and have tried a fix.

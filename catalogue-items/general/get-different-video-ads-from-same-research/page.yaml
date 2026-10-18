@@ -28,7 +28,7 @@ you_get:
   - The scripts themselves, if you pair it with a writing skill
 
 how_to_use:
-  - Copy the skill and paste it into Claude, ChatGPT or Gemini. Add its reference file (types.md) too.
+  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in. Add its reference file (types.md) too.
   - Paste your buyer, the reason they buy, the offer and the length.
   - List what you can prove. Be honest about what you don't have; missing facts just skip types.
   - Read the skipped list. It shows which facts would open up more types.

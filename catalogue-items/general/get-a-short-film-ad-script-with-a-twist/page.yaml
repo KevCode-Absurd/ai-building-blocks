@@ -26,7 +26,7 @@ you_get:
   - Notes on inferred parts, clip joins and on-screen text
 
 how_to_use:
-  - Copy the skill and paste it into Claude, ChatGPT or Gemini.
+  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
   - Paste your selling idea and your brand file.
   - Give the total length and your tool's clip length, for example "20 seconds, 10-second clips".
   - Check the viewer's change line. If the product isn't part of the turn, ask for another version.

@@ -28,7 +28,7 @@ you_get:
   - A line listing anything assumed
 
 how_to_use:
-  - Copy the skill and paste it into Claude, ChatGPT or Gemini.
+  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
   - Paste a note on your buyer, including what they tried and their own words from reviews.
   - If you know why the problem keeps happening, and your facts support it, paste that as the cause.
   - Paste your product facts and offer, and give a length, for example "300 to 400 words".

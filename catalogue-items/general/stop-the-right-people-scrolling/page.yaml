@@ -27,7 +27,7 @@ you_get:
   - In grade mode, each hook's pass or fail on three ordered questions, a score from 1 to 5, and a one-line fix for any under 4
 
 how_to_use:
-  - Copy the skill and paste it into Claude, ChatGPT or Gemini.
+  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
   - Paste a note on your buyer and the proof you're allowed to use.
   - Write "Mode, write, 6 hooks, 20-second video", or "Mode, grade" with your hooks pasted below.
   - Paste the line that comes after the hook, so it can check the hook leads into it.

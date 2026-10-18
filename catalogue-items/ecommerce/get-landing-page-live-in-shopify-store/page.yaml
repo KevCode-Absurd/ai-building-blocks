@@ -27,7 +27,7 @@ you_get:
   - Six install steps, and a MISSING list of anything left empty
 
 how_to_use:
-  - Copy the skill and paste it into Claude, ChatGPT or Gemini.
+  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
   - Paste your finished page copy. Write it first with a landing page skill if you haven't.
   - Add your product's handle (the last part of its web address), the template name you want and your theme's name.
   - Say which apps handle reviews and subscriptions, so it uses their blocks instead of rebuilding them.

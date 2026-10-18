@@ -211,7 +211,7 @@ function Home({ c, toast }: { c: Catalogue | null; toast: (m: string) => void })
         <Globe />
         <div className="wrap hero-in">
           <h1 className="h1">Making humanity AI native</h1>
-          <Typewriter text="Stop doing the work AI could do for you. Save hours every week, and spend them on the work only you can do." />
+          <Typewriter text="Stop doing the work AI could do for you. Get ad copy, landing page fixes and video scripts from ready-made skills you add to your AI once." />
           <div className="hero-actions">
             <Link to="/#library" className="btn btn-primary">Browse the blocks <ArrowIcon /></Link>
             <Link to="/#build" className="btn btn-dark">Build a workflow</Link>
@@ -223,7 +223,7 @@ function Home({ c, toast }: { c: Catalogue | null; toast: (m: string) => void })
 
       <section className="section wrap" id="build" aria-labelledby="build-h">
         <div className="sec-head">
-          <h2 className="h2" id="build-h">Build a workflow</h2>
+          <h2 className="h2" id="build-h">Chain skills into one workflow Claude runs start to finish</h2>
           <p className="lede">Add skills in the order you want them to run, or start from a ready workflow. Then download one folder that Claude works through step by step.</p>
         </div>
         {c && <Suspense fallback={<div className="builder" />}><Builder c={c} toast={toast} /></Suspense>}

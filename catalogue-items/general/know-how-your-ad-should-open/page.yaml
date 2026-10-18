@@ -26,7 +26,7 @@ you_get:
   - One line saying which stage and style were chosen, and why
 
 how_to_use:
-  - Copy the skill and paste it into Claude, ChatGPT or Gemini.
+  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
   - Describe the ad idea and the buyer in two or three sentences.
   - Say how much the buyer knows, if you're sure. If not, let it choose and check its reason.
   - Paste the buyer's main doubt and your offer terms from your brand file.

@@ -4,7 +4,7 @@ summary: A phone-photo style picture of the moment your buyer's problem hits, wi
 job: make-image-ads
 
 headline: A picture of your buyer's own bad moment, so they stop before spotting the ad
-subhead: Give it your story ad. It finds the moment in the story where the problem hits, casts a made-up person to live it, and writes a prompt for a plain phone photo with no product, no logo and no words.
+subhead: Give it your story ad. It finds the moment in the story where the problem hits, casts a made-up person to live it, and writes a prompt for a plain phone photo of that person in that moment, with no product, logo or words in shot.
 
 explain: |
   Most image ads look like ads: a product on a clean background, a price, a button. People scroll past them on reflex. This skill makes the picture for a story ad (an ad whose text tells one person's story) look like a photo someone took of their own morning, so the right buyer recognises the moment before deciding it's an ad.
@@ -27,7 +27,7 @@ you_get:
   - Flags for anything it had to guess
 
 how_to_use:
-  - Copy the skill and paste it into Claude, ChatGPT or Gemini.
+  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
   - Paste your story ad underneath, exactly as it will run.
   - Add one line on who the buyer is and when the problem hits, if the story doesn't say.
   - Paste the image prompt into your image tool and make one square picture.

@@ -29,7 +29,7 @@ you_get:
   - A footer listing guesses and the questions to ask the founder
 
 how_to_use:
-  - Copy the skill and paste it into Claude, ChatGPT or Gemini.
+  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
   - Paste your brand file underneath, including the claims you may and may not make.
   - Paste your ad results, one row per ad. Add your target return if you have one, or the skill will flag it as missing.
   - Paste your reviews and your last brief if you have them.

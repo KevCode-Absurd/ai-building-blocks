@@ -27,7 +27,7 @@ you_get:
   - For a review, each failing line, the rule it breaks and a plain replacement
 
 how_to_use:
-  - Copy the skill and paste it into Claude, ChatGPT or Gemini.
+  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
   - Paste your brand file underneath, or at least the voice notes, facts and proof.
   - Describe the buyer and what stops them, using their own words from reviews.
   - Name the format and length, for example "one person talking to a phone camera, 30 to 40 seconds".

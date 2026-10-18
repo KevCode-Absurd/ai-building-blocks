@@ -28,7 +28,7 @@ you_get:
   - What passed, and what it couldn't check without more information
 
 how_to_use:
-  - Copy the skill and paste it into Claude, ChatGPT or Gemini.
+  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
   - Paste the ad's words exactly as they will run, field by field.
   - Describe the image, or paste the video script with timings.
   - Add the landing page text and offer, plus your target age and countries.

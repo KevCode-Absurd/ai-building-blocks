@@ -27,7 +27,7 @@ you_get:
   - One next action, either approve, change one named thing, or hold
 
 how_to_use:
-  - Copy the skill and paste it into Claude, ChatGPT or Gemini.
+  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
   - Attach the image at full size, or the video's key frames and its script with timings.
   - Paste the headline, main text and button exactly as they'll run, and name the platform.
   - Read "Worth a look" first, then open the ad on your own phone and go through "For a person".

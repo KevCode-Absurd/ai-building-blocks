@@ -28,7 +28,7 @@ you_get:
   - A verdict, either accepted or the original returned with the reason
 
 how_to_use:
-  - Copy the skill and paste it into Claude, ChatGPT or Gemini.
+  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
   - Attach the approved image and say the size you need, for example "double, for a print banner".
   - Name your tool and its size setting (for example "2x upscale button"). Set the size there, not in the prompt.
   - Paste the prompt into your tool, then attach the returned file to the same chat.

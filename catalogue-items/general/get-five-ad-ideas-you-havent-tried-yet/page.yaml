@@ -28,7 +28,7 @@ you_get:
   - A ranked list of the ten gaps that matter most
 
 how_to_use:
-  - Copy the skill and paste it into Claude, ChatGPT or Gemini.
+  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
   - Paste your past ads. An export with spend and purchases is best, but a list of what you ran works too.
   - Paste your brand file underneath, including your approved claims and current offers.
   - Add competitor ads if you have them. Without them it skips that section and says so.

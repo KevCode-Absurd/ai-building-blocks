@@ -29,7 +29,7 @@ you_get:
   - A checklist for before the image is made, and a flaw list after
 
 how_to_use:
-  - Copy the skill and paste it into Claude, ChatGPT or Gemini.
+  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
   - Attach the template image, or describe it in a few lines (columns, rows, where the headline and button sit).
   - Paste your facts, claims and reviews underneath, and name the buyer and their main worry.
   - If you're comparing against "the usual way", say what that is. It must be unbranded.

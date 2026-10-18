@@ -28,7 +28,7 @@ you_get:
   - A "check before use" list of risky quotes, with the reason each is flagged
 
 how_to_use:
-  - Copy the skill and paste it into Claude, ChatGPT or Gemini.
+  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
   - Paste or attach your reviews with an ID and date for each. A review export from your reviews app works, and so does a numbered list.
   - Add your product page text so it can tell which reasons you already use.
   - If you sell more than four products, run it once per product.

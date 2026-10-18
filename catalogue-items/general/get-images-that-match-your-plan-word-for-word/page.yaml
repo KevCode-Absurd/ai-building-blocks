@@ -27,7 +27,7 @@ you_get:
   - The checks to run on the image that comes back, and how to fix one fault at a time
 
 how_to_use:
-  - Copy the skill and paste it into Claude, ChatGPT or Gemini.
+  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
   - Paste your approved plan. Include every word that should appear on the image, exactly as written.
   - Attach your reference photos and say what each one is for, such as "the product as sold" or "the light I want".
   - Paste the prompt into your image tool. Set the size with the tool's own controls, not by writing "4K".

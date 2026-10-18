@@ -28,13 +28,14 @@ Each block is filed under the one job a visitor hires it for. Use the id.
 
 1. Headline (the outcome), subhead, actions
 2. **See it work**: the real output first, then what went in
-3. **What it does** (explain, when, step by step)
-4. **What you give it, what you get** (with the output shape)
-5. **How to use it**
-6. **Get the most out of it** (tweaks)
-7. **Test it** (judge, test)
-8. **Improve it for your business** (improve)
-9. Words on this page, the full skill file, use it with
+3. **Add it to your AI** (skills and prompts): tabs for Claude, Claude Code, ChatGPT, Gemini and any other AI. Installing is the default, because an installed skill is reused by name every time; copy and paste is the fallback. Built by the site, nothing to write in page.yaml.
+4. **What it does** (explain, when, step by step)
+5. **What you give it, what you get** (with the output shape)
+6. **How to use it**
+7. **What changes the result most** (tweaks)
+8. **Test it** (judge, test)
+9. **Improve it for your business** (improve)
+10. Words on this page, the full skill file, run before and after
 
 ## page.yaml fields
 
@@ -50,11 +51,11 @@ Each block is filed under the one job a visitor hires it for. Use the id.
 | `when` | Three situations where you'd reach for it. | 3 bullets |
 | `you_give` | What you give it, in plain words. Mark optional ones "(optional)". | 2 to 5 bullets |
 | `you_get` | What you get back. | 2 to 4 bullets |
-| `how_to_use` | Numbered steps a beginner follows, starting with "Copy the skill and paste it into Claude, ChatGPT or Gemini." Specific to this skill. | 3 to 6 steps |
+| `how_to_use` | Numbered steps a beginner follows, starting with "Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in." Specific to this skill. | 3 to 6 steps |
 | `how_it_works` | What the AI does, step by step, mirroring the SKILL.md steps. Each step: `title` (2 to 5 words) and `text` (one or two sentences). | 3 to 8 steps |
 | `output_shape` | The general layout of what it hands back, with `<placeholders>` for each part, so readers see what they'll get for any business. | 25 lines max |
 | `example` | A real run. `business` is `sprout`. `input` is what you'd paste after the skill (start with `[the skill]`). `output` is what the skill produced. | input 25 lines max, output 70 lines max |
-| `tweaks` | Shown as **Get the most out of it**: the inputs and settings that change the result most. Each: `what` and `how`. | 3 to 5 |
+| `tweaks` | Shown as **What changes the result most**: the inputs and settings that change the result most. Each: `what` and `how`. | 3 to 5 |
 | `judge` | Shown under **Test it** as "Is the output good?": things a beginner can check in a minute. | 4 to 6 bullets |
 | `test` | Shown under **Test it** as "Test it on your business": steps to try the skill on your own work before you rely on it (a case where you know the right answer, two runs to see if it's consistent, a side-by-side with your current best). Specific to this skill. | 3 to 5 steps |
 | `improve` | Shown as **Improve it for your business**: how to change the skill file itself for your use case (which lines or rules to edit, what examples or brand rules to add, what to save back to your brand file), and what to pair it with. | 3 to 5 bullets |

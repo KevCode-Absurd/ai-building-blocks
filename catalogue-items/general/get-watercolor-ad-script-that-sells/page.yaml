@@ -29,7 +29,7 @@ you_get:
   - A list of every claim or ingredient painted, with its source
 
 how_to_use:
-  - Copy the skill and paste it into Claude, ChatGPT or Gemini.
+  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
   - Paste your product facts, the full label text and your approved claims underneath.
   - Say the selling idea in a sentence ("a calm, caffeine-free wind-down") and the length.
   - Pick a look if you have a preference, or let it choose.

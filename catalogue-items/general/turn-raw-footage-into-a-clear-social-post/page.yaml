@@ -29,7 +29,7 @@ you_get:
   - Cover, caption, ending, and export settings with the checks to run
 
 how_to_use:
-  - Copy the skill and paste it into Claude, ChatGPT or Gemini.
+  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
   - List your clips with their length and what's in them, and paste the transcript if you have one.
   - Say the one thing the post should teach or show, for example "how to open the pack".
   - Check every flagged word against the recording before captions go on.

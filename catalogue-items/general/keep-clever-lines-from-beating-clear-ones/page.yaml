@@ -24,7 +24,7 @@ you_get:
   - If checking, each line that breaks a rule, the rule number, and a corrected full line
 
 how_to_use:
-  - Copy the skill and paste it into Claude, ChatGPT or Gemini.
+  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
   - To write, add your request underneath, for example "write three Instagram captions about our new flavour".
   - To check, paste your draft and write "check this".
   - Paste your voice notes and a few of your brand's own lines, if you have them.

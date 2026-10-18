@@ -29,7 +29,7 @@ you_get:
   - A one or two sentence summary, including whether the problem is the reason to buy rather than the wording
 
 how_to_use:
-  - Copy the skill and paste it into Claude, ChatGPT or Gemini.
+  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
   - Paste your draft underneath, with each part labelled.
   - Paste the facts it's allowed to use. It won't add anything beyond them.
   - If you only want one thing changed, say so, for example "make the headline answer the price doubt".

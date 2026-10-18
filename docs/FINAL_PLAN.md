@@ -286,7 +286,7 @@ Later, people can upload their own skills. These go through the same pipeline. I
 
 | Page | What's on it | Example |
 |---|---|---|
-| Tool guide (general) | What it does, cost, free tier, setup, strengths and weaknesses, which listings use it, our test results | Claude, ChatGPT, Codex, Google Sheets, OpenRouter, the Meta ads connector |
+| Tool guide (general) | What it does, cost, free tier, setup, strengths and weaknesses, which listings use it, our test results | Claude, ChatGPT, Codex, Gemini, DeepSeek, Google Sheets, the Meta ads connector |
 | Tool in an industry | The setup and listings that matter for that board, with a worked example | "Claude for an online store" |
 | Comparison | The same job in 2–3 tools, with quality, cost and time | "Static ads: three image models, same brief" |
 
@@ -490,7 +490,8 @@ Selling individual skills doesn't make sense: free skills bring the audience, an
 - Risky actions need a human.
 - Content is data, not orders.
 
-**Model classes:** C1 cheap, C2 mid, C3 top, C4 routed.
+**Model classes:** C1 cheap, C2 mid, C3 top, C4 mixed (a top model plans; cheap models repeat).
+- **Which models:** the four labs we already have accounts with: Claude (Anthropic), GPT (OpenAI), Gemini (Google) and DeepSeek, which is what most people use. No router. Anyone who wants another model can test it themselves. [Decided]
 - **Recommended:** the cheapest within 5 points of the best.
 - **Budget:** the cheapest at ≥ 80%.
 - **Caps:** $2 per run and $25 per round (decision 2).
@@ -519,7 +520,7 @@ Selling individual skills doesn't make sense: free skills bring the audience, an
 
 | Week | Build | Plan and publish | Founder |
 |---|---|---|---|
-| **W1 · 19–25 Oct** | `import-item`, `check-item`; listing format v1 (type, level, step, boards, tools, credit, licence, safety badge, before/after); first port: website claims extractor (general) | Port order for all 263 own items; map Creative Engine and ecomOS workflows onto the ladder; board and comment rules | Approve decisions 1–2; add the router key to `.env`; glance at the port order |
+| **W1 · 19–25 Oct** | `import-item`, `check-item`; listing format v1 (type, level, step, boards, tools, credit, licence, safety badge, before/after); first port: website claims extractor (general) | Port order for all 263 own items; map Creative Engine and ecomOS workflows onto the ladder; board and comment rules | Approve decision 2; put the four model keys in this repo's `.env`; glance at the port order |
 | **W2 · 26 Oct–1 Nov** | `run-test`, `grade`, `build-exports`, `build-graph`; first listing tested ✓ with before/after; `scan-skill` specified | Listing and board page templates; site structure | Review the first listing page |
 | | **Gate 0:** one listing end to end; template approved | | |
 | **W3–4 · 2–15 Nov** | Brand brain v2 format; 11 brain listings, general and /ecommerce | Brand brain workflow page; site build starts (listing and board pages, accounts) | Brain section review; decision 3 |
@@ -527,7 +528,7 @@ Selling individual skills doesn't make sense: free skills bring the audience, an
 | **W5–7 · 16 Nov–6 Dec** | About 20 static ad listings; copy, scripts, avatars; `scan-skill` built; 20 trap skills | Static ad and copy workflow pages; comments and moderation on staging; record 3 videos | Creative review; decisions 4–5 |
 | **W8–9 · 7–20 Dec** | Page audit; Meta ladder 1–4; research and offers; first 5–10 imports | Tool guide template and first 10 guides; newsletter; launch waitlist | Gate A; brand name and domain |
 | | **Gate A (11 Dec):** brain and creative ported; skeleton with boards and comments; 5+ imports checked; all 20 traps caught | | |
-| **W10–12 · 21 Dec–10 Jan** | Site v0 finished; downloads opened in Claude, ChatGPT, Codex and a router | Batch-record 6 videos; seed /ecommerce posts | Final page review |
+| **W10–12 · 21 Dec–10 Jan** | Site v0 finished; downloads opened in Claude, ChatGPT, Codex and Gemini | Batch-record 6 videos; seed /ecommerce posts | Final page review |
 | | **Gate B:** 50+ general and 25+ /ecommerce listings with before/after; 10+ imports; 10 tool guides; downloads in 3+ tools; comments and moderation working; mobile check | | |
 
 | Month | Build | Publish and grow | Gate |
@@ -600,7 +601,7 @@ Selling individual skills doesn't make sense: free skills bring the audience, an
 | # | Decision | Recommendation | By |
 |---|---|---|---|
 | | **Needed for Week 1** | | |
-| 1 | Router for model tests | OpenRouter; the founder adds the key | 21 Oct |
+| 1 | Which models we test on | **Decided:** direct accounts with Claude (Anthropic), GPT (OpenAI), Gemini (Google) and DeepSeek. No router. The founder puts the keys in `.env`. | Done, 18 Oct |
 | 2 | Spend cap for model tests | $2 per run, $25 per round | 21 Oct |
 | | **Needed before the site is built** | | |
 | 3 | Who can comment | Anyone with a free account. Members later get priority replies, not the right to comment. | Mid Nov |
@@ -619,8 +620,7 @@ Selling individual skills doesn't make sense: free skills bring the audience, an
 | 15 | Funding the build year; money model rebuild | Founder-funded and lean; rebuild in April | Apr 2027 |
 | 16 | Retention module | Revive the archive | Jan 2027 |
 | 17 | Archive `ecommerce-workflow-platform` | Yes, no deleting | Any time |
-| 18 | What "Jev" is | Only if it's a router to support | Any time |
 
-The holiday sale sprint, the four launch jobs and the two extra test cases from version 3 are dropped.
+The holiday sale sprint, the four launch jobs and the two extra test cases from version 3 are dropped, and so are the router and the "Jev" question.
 
-**Next step:** say yes to decisions 1 and 2, and Week 1 starts on Monday 19 October. That means the first tools, the listing format, and the port order for everything we own. Nothing gets sold.
+**Next step:** say yes to decision 2 (the spend cap) and put the four model keys in `.env`, and Week 1 starts on Monday 19 October. That means the first tools, the listing format, and the port order for everything we own. Nothing gets sold.

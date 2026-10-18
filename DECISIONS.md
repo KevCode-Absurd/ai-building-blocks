@@ -4,6 +4,7 @@ Newest first. The founder's latest direct instruction wins. Record changes here 
 
 | Date | Decision | Source |
 |---|---|---|
+| 2026-10-18 | **Models: no router.** Test only on the four labs we already have accounts and keys for: Claude (Anthropic), GPT (OpenAI), Gemini (Google) and DeepSeek. That covers what most people use; anyone wanting other models can test them themselves. Supersedes OpenRouter and the "Jev" question. | Founder |
 | 2026-10-18 | **Free first; no selling at the start.** Build the whole platform and keep everything free: skills, workflows, guides, downloads. No paywall, no paid tests, no sale campaigns (the holiday sale sprint, the four launch jobs and the extra paid test cases are dropped). It's an evergreen resource. | Founder |
 | 2026-10-18 | **Revenue comes later, one stream at a time:** affiliates, then advertising (site and YouTube), then consulting and implementation, then memberships (Member $99 or $199/mo for priority replies and implementation help; Pro $499/mo for in-depth help; custom implementation on top), premium workflows for very specific jobs, and a creator marketplace (70% creator / 30% us). Selling individual skills doesn't make sense. Supersedes the 2026-10-17 subscription revenue row. | Founder |
 | 2026-10-18 | **General first, then industry, then job roles.** Port every skill we own into general listings any business can use. Industry boards hold the focused, more valuable versions: /ecommerce first, /saas next, then more by demand. Job-role boards (marketing, finance, operations, product) come after a few industries. | Founder |
@@ -23,7 +24,7 @@ Newest first. The founder's latest direct instruction wins. Record changes here 
 | 2026-10-17 | The brand brain is item #1, then M17 creative & static ads. | Founder |
 | 2026-10-17 | ~~The first market is ecommerce.~~ **Superseded** the same day: see the market decision above. | — |
 | 2026-10-17 | Examples use public data from well-known brands (Grüns, AG1, IM8; one software and one service or course business proposed in the final plan). They're labelled, use no invented claims, and are shown with and without the brand brain. No made-up demo brand; no private client data. | Founder |
-| 2026-10-17 | Every item shows a recommended / budget / not-worth-it model from a simple model test. It also gives efficient-use guidance: caching order, reuse, how output degrades, lean mode, routing via OpenRouter or similar. | Founder |
+| 2026-10-17 | Every item shows a recommended / budget / not-worth-it model from a simple model test. It also gives efficient-use guidance: caching order, reuse, how output degrades, lean mode. (Routing via OpenRouter was dropped on 2026-10-18.) | Founder |
 | 2026-10-17 | ~~**Revenue:** subscription ($99 / $299 / $899), implementation ($5,000 bounded workflow), consulting ($1,500), affiliates, and advertising last. Creator marketplace later at 70/30. All prices are assumptions to test.~~ **Superseded** 2026-10-18: free first, revenue later (see above). | Business plan + founder |
 | 2026-10-17 | Not selling access to other brands' ads. References come through the user's own connectors. | Founder |
 | 2026-10-17 | Learning sources become pieces of know-how mapped into items. A piece stays in a prompt only if a with/without test shows it helps. | Session (docs/planning/07) |
@@ -33,7 +34,7 @@ Newest first. The founder's latest direct instruction wins. Record changes here 
 
 The numbered list matches the decisions table in the final plan v4, Part 16.
 
-1. Router for model tests: OpenRouter? The founder adds the key. (Week 1)
+1. ~~Router for model tests~~ Decided 2026-10-18: direct accounts with Anthropic, OpenAI, Google and DeepSeek; no router.
 2. Spend cap for model tests: $2 per run, $25 per round? (Week 1)
 3. Who can comment: anyone with a free account, with members later getting priority replies?
 4. Licence rule for imported skills: copy and adapt only open licences; otherwise a review page that links out?
@@ -50,6 +51,6 @@ The numbered list matches the decisions table in the final plan v4, Part 16.
 15. How the build year is funded, and the money model rebuild in April 2027. (Later.)
 16. Revive the archived retention module (`archive/retention-r1-r6`), or rebuild M21?
 17. Archive the old `ecommerce-workflow-platform` repo? (Recommended; nothing is deleted.)
-18. What is "Jev" (a router?)?
+18. ~~What is "Jev"?~~ Dropped 2026-10-18: no router needed.
 
 Dropped on 2026-10-18: the holiday sale sprint (old 6) and the two extra test cases (old 9).

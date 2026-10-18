@@ -10,8 +10,6 @@ const OUT_SKILLS = "public/skills";
 fs.rmSync(OUT_SKILLS, { recursive: true, force: true });
 fs.mkdirSync(OUT_DATA, { recursive: true });
 
-const examples = JSON.parse(fs.readFileSync("public/examples/examples.json", "utf8"));
-const formatIds = new Set(examples.formats.map((f) => f.id));
 const types = YAML.parse(fs.readFileSync(path.join(ROOT, "_types.yaml"), "utf8"));
 const typeDesc = {};
 for (const group of Object.values(types)) for (const [id, t] of Object.entries(group)) typeDesc[id] = t.desc;
@@ -53,7 +51,6 @@ for (const category of ["general", "ecommerce", "orchestrators"]) {
       outputs: asPorts(item.outputs),
       uses: item.uses ?? [],
       steps,
-      example: formatIds.has(item.example) ? item.example : null,
       origin: item.origin ?? "own",
       version: String(item.version ?? "1.0.0"),
       words: skill.split(/\s+/).length,

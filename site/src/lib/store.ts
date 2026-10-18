@@ -55,6 +55,7 @@ export const flows = {
   open(id: string | null) { set({ ...state, currentFlow: id }); },
   remove(id: string) { set({ ...state, flows: state.flows.filter((f) => f.id !== id), currentFlow: state.currentFlow === id ? null : state.currentFlow }); },
   get(id: string | null) { return state.flows.find((f) => f.id === id) ?? null; },
+  current() { return state.flows.find((f) => f.id === state.currentFlow) ?? null; },
 };
 
 export function markViewed(slug: string) {
@@ -62,11 +63,13 @@ export function markViewed(slug: string) {
   set({ ...state, recent: [slug, ...state.recent.filter((s) => s !== slug)].slice(0, 12) });
 }
 
-/** A block queued from a block page ("Add to canvas") for the canvas to pick up on open. */
+/** Blocks sent to the builder ("Add to builder", a workflow, a kit); the builder picks them up when told. */
 const PENDING = "abb:pending";
 export function queueForCanvas(slugs: string[], asNewFlow?: string) {
   try { sessionStorage.setItem(PENDING, JSON.stringify({ slugs, name: asNewFlow ?? null })); } catch { /* ignore */ }
+  window.dispatchEvent(new Event(QUEUED));
 }
+export const QUEUED = "abb:queued";
 export function takeQueued(): { slugs: string[]; name: string | null } {
   try {
     const v = JSON.parse(sessionStorage.getItem(PENDING) ?? "null");

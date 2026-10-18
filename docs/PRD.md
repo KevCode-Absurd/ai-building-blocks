@@ -16,14 +16,14 @@ A free library of AI building blocks for any business. Each block is a small, we
 
 ## 3 · What v0 includes
 
-1. **Homepage.** One hero, one clear "Get started", then sections that walk down the page: what a block is, the two categories, featured blocks, how the canvas works, examples, how we test, the course, footer.
+1. **One page.** Header, hero, then the sections in §5.
 2. **Library.** Every block, with search, filters (category, job, type, role, level) and three shelves: **Most popular**, **Recently added**, **Start here**. Fast: one prebuilt JSON index, no server.
-3. **Block page.** Name, one-line summary, what goes in and what comes out, the steps it follows, an example image where we have one, the ecommerce version where one exists, "Copy skill", "Download", "Add to kit", "Add to canvas".
+3. **Block drawer.** Name, one-line summary, what it needs and gives, the skill itself, the ecommerce add-on where one exists, what it connects to, "Copy skill", "Download", "Save to kit", "Add to builder".
 4. **Two categories.** **General** (any business) and **Ecommerce** (online stores). A general block can carry an ecommerce add-on; the add-on never forks the block.
 5. **Kits.** Save blocks into named kits. Kits persist in the browser now and move to a free account later (accounts hold no business data; decided 18 Oct).
 6. **Canvas (workflow builder).** Drag blocks from a side panel onto a canvas, connect an output to an input, reorder, see when a connection's types don't match, save, and download the handoff pack. Persisted like kits.
 7. **Handoff pack export (deterministic).** A zip containing `HANDOFF.md`, `workflow.json` and `skills/<slug>/SKILL.md` for every block used. Rules in §6.
-8. **Examples.** The 100 reviewed Grüns example ads and the per-format example pictures from Creative Engine, each labelled "Example made from public info, not affiliated".
+8. **No brand examples on the site** (decided 18 Oct). Brand examples stay in test sets, not on the page.
 
 **Not in v0:** comments, votes, boards as communities, accounts on a server, running models on the site, the intake engine UI, mini tools, the course pages beyond an outline. They follow the final plan's timeline.
 
@@ -94,16 +94,16 @@ Orchestrators (`category: orchestrator`, `type: workflow`, `role: orchestrate`) 
 - **Rights.** Own material is tightened. Course-derived material is rebuilt from scratch in our own words with new names and new examples, never copied (RULES.md §2).
 - **Sources stay read-only.** We copy from Creative Engine; we never edit it.
 
-## 5 · Design
+## 5 · Design (revised 18 Oct: one page, x.ai-like)
 
-Premium, quiet and human. It should feel like a well-made editorial product, not an AI tool.
+One page: a header, the headline **"Making humanity AI native"**, a subhead on saving time and doing ten times more (become the 10x human), then the content: how it works, the library, ready workflows, the builder, how we test, get started. Blocks and workflows open in a side drawer, so nobody leaves the page.
 
-- **Type:** a serif display face for headings and a clean sans for text (Creative Engine's Mercatura pairing, DM Serif Display and DM Sans), generous line height, short line lengths.
-- **Colour:** warm paper background, near-black ink, one blue action colour, quiet greys. No gradients-as-decoration, no glow, no purple, no sparkles, no robot imagery.
-- **Space:** large margins, a clear vertical rhythm, one idea per section, plenty of white space. The eye goes hero → Get started → the next section.
-- **Images do the talking:** real example ads and format pictures, framed simply.
-- **Motion:** small and functional only (hover, drag, a fade on scroll).
-- **Accessible:** contrast AA, keyboard reachable, focus visible, works at phone width.
+- **Look:** modelled on x.ai. Dark first (near-black #0a0a0a, panels #161616, soft grey text, white pill buttons) with a matching light mode; it follows the system until the person picks one.
+- **Type:** one neutral sans (Geist) with a mono (Geist Mono) for skill names and the terminal demo.
+- **Colour:** monochrome; small role colours only where they say what a block does.
+- **Hero visual:** a request and the handoff running step by step, as two terminal-style panels.
+- **No brands:** no brand names or brand pictures anywhere on the page.
+- **Easy to use:** section links in the header with the current section highlighted, plain labels, one clear primary action per section, keyboard and screen-reader friendly, phone width without sideways scroll.
 
 ## 6 · The handoff pack (deterministic export)
 
@@ -128,7 +128,7 @@ Order is a topological sort of the graph, ties broken by canvas position (top to
 
 - Every Creative Engine skill has a renamed, tightened block in `catalogue-items/`, in the right category, with `item.yaml`.
 - The site builds, loads the library from the index, and the canvas exports a handoff pack whose `HANDOFF.md` lists the steps in the right order.
-- The homepage reads clearly at desktop and phone width, checked in the browser.
+- The page reads clearly at desktop and phone width, in dark and light, checked in the browser and by the end-to-end tests (`site/e2e/`).
 - Everything is committed and pushed.
 
 ## 9 · Order of work

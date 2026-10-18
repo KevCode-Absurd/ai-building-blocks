@@ -3,3 +3,5 @@ dist
 public/data
 public/skills
 tsconfig.tsbuildinfo
+test-results
+playwright-report

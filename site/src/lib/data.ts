@@ -16,7 +16,6 @@ export type Block = {
   outputs: Port[];
   uses: string[];
   steps: { uses: string; note: string }[];
-  example: string | null;
   origin: "own" | "rebuilt";
   version: string;
   words: number;
@@ -25,8 +24,6 @@ export type Block = {
   usedIn: number;
 };
 export type Catalogue = { built: string; portTypes: Record<string, string | null>; blocks: Block[]; bySlug: Record<string, Block> };
-export type AdExample = { id: string; title: string; style: string; format: string; brand: string; w: number; h: number };
-export type Examples = { note: string; ads: AdExample[]; formats: { id: string; w: number; h: number }[] };
 
 export const ROLES: { id: Role; name: string; does: string }[] = [
   { id: "source", name: "Source", does: "Brings information in" },
@@ -58,32 +55,17 @@ export function loadCatalogue(): Promise<Catalogue> {
     .then((d) => ({ ...d, bySlug: Object.fromEntries(d.blocks.map((b: Block) => [b.slug, b])) }));
   return catalogue;
 }
-let examples: Promise<Examples> | null = null;
-export function loadExamples(): Promise<Examples> {
-  examples ??= fetch("/examples/examples.json").then((r) => r.json());
-  return examples;
-}
-
 export function useCatalogue() {
   const [c, setC] = useState<Catalogue | null>(null);
   useEffect(() => { loadCatalogue().then(setC); }, []);
   return c;
 }
-export function useExamples() {
-  const [e, setE] = useState<Examples | null>(null);
-  useEffect(() => { loadExamples().then(setE); }, []);
-  return e;
-}
-
 const textCache = new Map<string, Promise<string | null>>();
 export function loadSkillText(slug: string, file: "SKILL.md" | "ecommerce.md" = "SKILL.md"): Promise<string | null> {
   const key = `${slug}/${file}`;
-  if (!textCache.has(key)) textCache.set(key, fetch(`/skills/${key}`).then((r) => (r.ok ? r.text() : null)).then((t) => (t && !t.trimStart().startsWith("<!doctype") ? t : null)));
+  if (!textCache.has(key)) textCache.set(key, fetch(`/skills/${key}`).then((r) => (r.ok ? r.text() : null)).then((t) => (t && !t.trimStart().startsWith("<!doctype") ? t.replace(/\r\n?/g, "\n") : null)));
   return textCache.get(key)!;
 }
-
-export const formatImage = (id: string) => `/examples/formats/${id}.webp`;
-export const adImage = (id: string, thumb = true) => `/examples/ads/${id}${thumb ? "-thumb" : ""}.webp`;
 
 /** Blocks whose outputs feed this block's inputs, and blocks this one can feed. */
 export function neighbours(c: Catalogue, b: Block) {

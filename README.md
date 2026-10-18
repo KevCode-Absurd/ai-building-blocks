@@ -6,6 +6,8 @@ A global platform of **tested AI building blocks and expert implementation** for
 - downloads that run in Claude, ChatGPT, Codex or any AI
 - help when setup gets complex
 
+**Simple by default.** Every job is a ladder of steps. It starts by hand, then you ask an AI, connect a tool, save to a sheet, refresh it on a schedule, use a mini app, a full app, share it, and finally agents act on it. People see only their next step, at four levels: Beginner, Intermediate, Advanced and Expert. Creative Engine's workflows (brand brain, static ads, copy, avatars, the video board) become ready-made workflows people pick stages from.
+
 **Who it's for:** brands, dropshippers, agencies, software companies, creators and other digital businesses. We start with exact marketing jobs, where our tested methods are deepest, and then earn the right to cover sales, support and operations. Ecommerce is the **first industry pack**, not the product.
 
 > **Status (2026-10-17): planning and scaffolding only.** No catalogue items, tools or site have been built yet. "AI Building Blocks" is a working name. The final brand name is still open.
@@ -24,14 +26,14 @@ A global platform of **tested AI building blocks and expert implementation** for
 
 ## How the catalogue is organised
 
-Every part can be found in four ways:
+Every part can be found in four ways, and every job page shows its ladder with "where are you today?":
 
 | Find by | Examples |
 |---|---|
 | **Job** | "audit my Meta ads", "make 30 static ads for a sale", "audit this landing page" |
 | **Function** | business brain, research and strategy, creative and content, paid media, website and conversion, lifecycle and retention, analytics and profit, AI operations |
 | **Industry pack** | ecommerce and D2C first; then agencies, software and apps, creators and courses, service businesses |
-| **Host** | Claude Code, Claude Projects, ChatGPT, Codex, any AI via a router, or no AI (Starter checklists) |
+| **Host** | Claude Code, Claude Projects, ChatGPT, Codex, any AI via a router, or no AI (Beginner checklists) |
 
 Each job has one core part. An industry pack adds the brain fields, examples, thresholds and wording for that industry. Packs never fork the part.
 

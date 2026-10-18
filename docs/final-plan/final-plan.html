@@ -5,7 +5,7 @@
 <title>The Final Plan</title>
 <style>
   @page { size: A4; margin: 16mm 15mm 16mm 15mm;
-    @bottom-left { content: "THE FINAL PLAN  ·  17 OCTOBER 2026  ·  PRIVATE"; font: 600 7.5pt "Segoe UI", sans-serif; letter-spacing: .08em; color: #7a86a8; }
+    @bottom-left { content: "THE FINAL PLAN  ·  18 OCTOBER 2026  ·  PRIVATE"; font: 600 7.5pt "Segoe UI", sans-serif; letter-spacing: .08em; color: #7a86a8; }
     @bottom-right { content: counter(page); font: 600 8pt "Segoe UI", sans-serif; color: #7a86a8; } }
   @page cover { margin: 0; @bottom-left { content: none; } @bottom-right { content: none; } }
   :root { --navy:#0b1d4a; --navy2:#13306f; --blue:#2557d6; --sky:#e9effc; --paper:#f6f8fd; --ink:#1b2440; --mute:#5b6787; --line:#d9e0f0;
@@ -120,7 +120,57 @@
   .steps.tight > li { padding: 3px 0 3px 38px; }
   .steps.tight > li::before { top: 3px; }
   .keep { break-inside: avoid; }
+  .tocline { display:flex; flex-wrap: wrap; gap: 3px 14px; font-size: 8.8pt; border-top: 1px solid var(--line); padding-top: 6px; }
+  .tocline div { white-space: nowrap; }
+  .tocline span { color: var(--blue); font-weight: 700; margin-right: 4px; }
+  .mock.tight .mbody { padding: 9px 14px 10px; } .mock.tight .mhead b { font-size: 15pt; } .mock.tight .mcard { margin-top: 7px; padding: 8px 12px; } .mock.tight .mex { margin-top: 7px; } .mock.tight .mex span { width: 28px; height: 28px; }
+  .grid4.tight .card { padding: 8px 10px; }
+  .stair, .levels { break-inside: avoid; }
   .expand div.next { background: #dbe5fb; color: var(--navy); }
+  .stair { display:grid; grid-template-columns: repeat(9,1fr); gap: 5px; align-items: end; margin: 12px 0 8px; }
+  .stair div { border-radius: 8px 8px 3px 3px; padding: 6px 6px 7px; font: 700 8.6pt "Segoe UI", sans-serif; line-height: 1.2; }
+  .stair div b { display:block; font: 400 15pt Georgia, serif; margin-bottom: 2px; }
+  .stair div span { display:block; font-weight: 400; font-size: 7.3pt; opacity: .85; margin-top: 2px; }
+  .stair div:nth-child(1) { min-height: 70px; } .stair div:nth-child(2) { min-height: 80px; } .stair div:nth-child(3) { min-height: 90px; }
+  .stair div:nth-child(4) { min-height: 100px; } .stair div:nth-child(5) { min-height: 110px; } .stair div:nth-child(6) { min-height: 120px; }
+  .stair div:nth-child(7) { min-height: 130px; } .stair div:nth-child(8) { min-height: 140px; } .stair div:nth-child(9) { min-height: 150px; }
+  .s0 { background: #eceff5; color: #5b6787; }
+  .lb, .l-b { background: var(--greenbg); color: var(--green); }
+  .li, .l-i { background: var(--sky); color: var(--blue); }
+  .la, .l-a { background: var(--amberbg); color: var(--amber); }
+  .le, .l-e { background: var(--navy); color: #fff; }
+  .levels { display:grid; grid-template-columns: repeat(4,1fr); gap: 8px; font-size: 8.4pt; color: var(--mute); margin: 6px 0 8px; }
+  .wf { border: 1px solid var(--line); border-radius: 10px; padding: 8px 12px; margin: 7px 0; break-inside: avoid; }
+  .wf h4 { margin: 0 0 5px; font: 400 12pt Georgia, serif; color: var(--navy); }
+  .wf h4 .chip { margin-left: 6px; }
+  .wf p { margin: 5px 0 0; font-size: 8.5pt; color: var(--mute); }
+  .wf p b { color: var(--ink); }
+  .stg { display:flex; flex-wrap: wrap; gap: 4px 0; }
+  .stg span { background: var(--sky); color: var(--navy); font-size: 8pt; padding: 3px 8px 3px 14px; position: relative; clip-path: polygon(0 0, calc(100% - 7px) 0, 100% 50%, calc(100% - 7px) 100%, 0 100%, 7px 50%); margin-right: -3px; }
+  .stg span:first-child { padding-left: 9px; clip-path: polygon(0 0, calc(100% - 7px) 0, 100% 50%, calc(100% - 7px) 100%, 0 100%); }
+  .board { display:grid; grid-template-columns: repeat(7,1fr); gap: 4px; margin-top: 5px; }
+  .board span { border: 1px dashed #b8c4e0; border-radius: 6px; font-size: 7.4pt; text-align:center; padding: 3px 2px; color: var(--mute); }
+  .mock { border: 1px solid #e0ddd4; border-radius: 12px; overflow: hidden; margin: 10px 0 12px; background: #f6f5f1; break-inside: avoid; }
+  .mbar { background: #fff; border-bottom: 1px solid #e0ddd4; padding: 5px 12px; font-size: 8pt; color: #6f6a5e; }
+  .mbar span { color: #cfcbc0; margin-right: 8px; letter-spacing: 2px; }
+  .mbody { padding: 12px 16px 14px; color: #1b1a17; }
+  .mhead b { display:block; font: 400 17pt Georgia, serif; color: #1b1a17; }
+  .mhead span { font-size: 8.4pt; color: #6f6a5e; }
+  .mq { font: 700 8pt "Segoe UI", sans-serif; letter-spacing: .08em; text-transform: uppercase; color: #6f6a5e; margin: 10px 0 5px; }
+  .mchips { display:flex; flex-wrap: wrap; gap: 5px; }
+  .mchips span { border: 1px solid #e0ddd4; background: #fff; border-radius: 14px; padding: 2px 9px; font-size: 8pt; color: #6f6a5e; }
+  .mchips span.done { background: #e2e8fa; border-color: #e2e8fa; color: #1a47c9; }
+  .mchips span.next { background: #1a47c9; border-color: #1a47c9; color: #fff; font-weight: 700; }
+  .mcard { background: #fff; border: 1px solid #e0ddd4; border-radius: 10px; padding: 10px 13px; margin-top: 10px; box-shadow: 0 1px 3px rgba(0,0,0,.05); }
+  .mcard .mt { font-size: 8pt; color: #6f6a5e; margin-bottom: 3px; }
+  .mcard > b { font: 400 14pt Georgia, serif; color: #1b1a17; }
+  .m3 { display:grid; grid-template-columns: repeat(3,1fr); gap: 10px; margin: 7px 0 9px; font-size: 8.4pt; }
+  .m3 i { display:block; font-style: normal; font-weight: 700; font-size: 7.4pt; letter-spacing: .06em; text-transform: uppercase; color: #6f6a5e; }
+  .mbtn { display:inline-block; background: #1a47c9; color: #fff; border-radius: 7px; padding: 5px 14px; font-size: 8.8pt; font-weight: 700; }
+  .mlink { font-size: 8pt; color: #6f6a5e; margin-left: 12px; }
+  .mex { display:flex; gap: 6px; align-items:center; margin-top: 10px; }
+  .mex span { width: 36px; height: 36px; border-radius: 6px; background: linear-gradient(135deg,#e2e8fa,#cfd9f5); }
+  .mex em { font-size: 7.8pt; color: #6f6a5e; margin-left: 6px; }
 </style>
 </head>
 <body>
@@ -129,9 +179,9 @@
 <section class="cover">
   <div class="brand">▮▮▮&nbsp; AI BUILDING BLOCKS &nbsp;·&nbsp; WORKING NAME</div>
   <h1>The final plan.<br><em>From one prompt to a working system.</em></h1>
-  <p class="sub">What we're building, who it's for, how we take it to market, how every part gets made, and exactly what happens each week. This is my recommended plan, start to finish, in plain language.</p>
+  <p class="sub">What we're building, who it's for, how people climb from one prompt to a working system one step at a time, how we take it to market, how every part gets made, and exactly what happens each week. This is my recommended plan, start to finish, in plain language.</p>
   <div class="meta">
-    <div><b>17 October 2026</b>Version 2 · plan of record<br>Replaces the v1 ecommerce guide</div>
+    <div><b>18 October 2026</b>Version 3 · plan of record<br>Adds the step-by-step ladder</div>
     <div><b>Private</b>Contains rights-sensitive notes; don't forward as is</div>
     <div><b>Repo</b>KevCode-Absurd/ai-building-blocks</div>
   </div>
@@ -146,6 +196,7 @@
   <div class="dark">
     <div class="eyebrow">What we're building</div>
     <p style="font-size:11pt">A global platform of <b>tested AI building blocks and expert implementation</b> for digital businesses. It covers prompts, skills, routines, workflows, agents and complete systems. Each block does <b>one exact job</b> and shows a real, labelled example. It says which AI model to use and what it costs, and runs in the AI tools people already pay for. When setup gets hard, we do it for them.</p>
+    <p style="margin-top:7px">It is <b>simple by default</b>. Every job is a ladder, from what you do by hand today, to asking an AI, connecting your tools, a sheet that refreshes itself, a mini app, a shared app and finally agents. People see only their next step, from <b>Beginner</b> to <b>Expert</b>.</p>
   </div>
 
   <div class="grid3">
@@ -157,7 +208,7 @@
   <h2>The plan in five moves</h2>
   <ol class="steps tight">
     <li><b>Now to 11 December: prove people pay.</b> Sell done-with-you <b>holiday sale sprints</b> (Black Friday to New Year) to stores, software companies, creators and the agencies that serve them. Meanwhile, build the brand brain and static ad sections.</li>
-    <li><b>December: package what works.</b> Four launch jobs become tested parts, each tested on more than one kind of business: brand brain, static ad pack, landing-page audit and Starter Meta ad audit.</li>
+    <li><b>December: package what works.</b> Four launch jobs become tested parts, each tested on more than one kind of business: brand brain, static ad pack, landing-page audit and Meta ad audit.</li>
     <li><b>19 January 2027: open the free catalogue</b> (site v0). Start the weekly content engine and the founding-member pre-sale.</li>
     <li><b>16 February 2027: switch on paid plans.</b> Take the first implementation projects and start an agency partner pilot.</li>
     <li><b>Spring 2027 onward: go deeper, then wider.</b> First fill the marketing gaps (email, paid media, analytics). Then add the second industry pack (software and apps), routines and agents. The first non-marketing function opens once demand data picks it.</li>
@@ -166,19 +217,22 @@
   <div class="note"><b>How to read the labels:</b> &nbsp;<span class="chip c-dec">Decided</span> you've already decided it. &nbsp;<span class="chip c-pro">Proposed</span> my recommendation, needs your OK. &nbsp;<span class="chip c-ass">Assumption</span> a number or belief we still have to test. &nbsp;<span class="chip c-gap">Gap</span> we don't have it yet.</div>
 
   <h2>Contents</h2>
-  <div class="toc t3">
+  <div class="tocline">
     <div><span>0</span>My calls, and what changed from v1</div>
     <div><span>1</span>The idea</div>
     <div><span>2</span>How the catalogue is organised</div>
-    <div><span>3</span>What we already have</div>
-    <div><span>4</span>Go-to-market</div>
-    <div><span>5</span>Launch calendar</div>
-    <div><span>6</span>The build</div>
-    <div><span>7</span>Step-by-step execution</div>
-    <div><span>8</span>Team</div>
-    <div><span>9</span>Money</div>
-    <div><span>10</span>Risks</div>
-    <div><span>11</span>Scorecard and decisions</div>
+    <div><span>3</span>One step at a time: the ladder</div>
+    <div><span>4</span>Ready-made workflows</div>
+    <div><span>5</span>What people see</div>
+    <div><span>6</span>What we already have</div>
+    <div><span>7</span>Go-to-market</div>
+    <div><span>8</span>Launch calendar</div>
+    <div><span>9</span>The build</div>
+    <div><span>10</span>Step-by-step execution</div>
+    <div><span>11</span>Team</div>
+    <div><span>12</span>Money</div>
+    <div><span>13</span>Risks</div>
+    <div><span>14</span>Scorecard and decisions</div>
     <div><span>A</span>Glossary and where things live</div>
   </div>
 </section>
@@ -186,7 +240,7 @@
 <!-- PART 0 CALLS -->
 <section class="part">
   <div class="eyebrow">Part 0 · My calls</div>
-  <h1>Eight calls <em>that shape everything.</em></h1>
+  <h1>Nine calls <em>that shape everything.</em></h1>
   <p class="lead">You asked for my own plan. These are the choices I'd make, and the rest of this document follows from them.</p>
 
   <ol class="calls">
@@ -197,6 +251,7 @@
     <li><b>Testing is the moat, so we publish it.</b><span>Every part shows real model tests: quality, cost per run and speed, cheap model vs top model. "Which model for which job" becomes our most useful content, and it's hard to copy.</span></li>
     <li><b>Downloads first, hosted runs later.</b><span>Site v0 is a catalogue of parts that run in Claude, ChatGPT, Codex or any AI via a router. Running parts on our own servers comes only when customers ask for it, because it adds cost, security work and support.</span></li>
     <li><b>Agents and systems are sold as implementation before they're products.</b><span>We sell bounded workflows first, then routines (from May) and agents (from June), each with budgets, approvals and red-team tests. Complex systems stay paid services until we've built the same thing twice.</span></li>
+    <li><b>Simple by default: every job is a ladder.</b><span>People start where they are: by hand, then asking an AI, connecting a tool, saving to a sheet, a 9 am refresh, a mini app, a full app, sharing it, and agents acting on it. Pages show only the next step, at four levels from Beginner to Expert. The higher steps are where "Help me build this" earns services revenue. Your direction, 18 Oct. <span class="chip c-dec">Decided</span></span></li>
     <li><b>Small team, hiring on measured load.</b><span>You, Claude with helper agents, and specialist reviewers. The first hires (onboarding, delivery) come when tracked hours say so, not on a calendar.</span></li>
   </ol>
 
@@ -209,14 +264,17 @@
       <tr><td>Catalogue navigated by 28 ecommerce modules</td><td>Navigated by <b>job, function, industry pack and host</b>. The 28 modules become tags inside the ecommerce pack.</td></tr>
       <tr><td>BFCM static ad pack for stores</td><td><b>Static ad pack</b>, holiday sale edition first, sold to any business running a Black Friday or year-end offer</td></tr>
       <tr><td>Test brands: Grüns, AG1, IM8 (all supplements)</td><td>Grüns, AG1 and IM8, <b>plus one software company and one service or course business</b>, so every launch part is proven beyond one category <span class="chip c-pro">Proposed</span></td></tr>
+      <tr><td>Four depths per part: Starter, Standard, Advanced, Production</td><td>Every job is a <b>ladder of steps</b>, from by hand to agents, at four levels: <b>Beginner, Intermediate, Advanced, Expert</b>. Pages show only the next step. <span class="chip c-dec">Decided</span></td></tr>
+      <tr><td>Creative Engine used as a source of methods</td><td>Its finished workflows (brand brain, static ads, copy, avatars, the video board) become <b>ready-made workflows</b> people pick stages from, with the examples we already made</td></tr>
+      <tr><td>ecomOS: an unknown separate app</td><td>It's the Gehna dashboard. Its <b>patterns, not its data</b>, become the Meta ads ladder.</td></tr>
       <tr><td>Expansion = more ecommerce modules</td><td>Expansion = <b>deeper</b> (more marketing jobs), then <b>wider</b> (new industry packs), then <b>new functions</b> (sales, support, operations)</td></tr>
     </tbody>
   </table>
 </section>
 
 <!-- PART 1 IDEA -->
-<section class="part">
-  <div class="eyebrow">Part 1 · The idea</div>
+<section>
+  <div class="eyebrow" style="margin-top:22px">Part 1 · The idea</div>
   <h1>AI answers. <em>Teams still do the setup.</em></h1>
   <p class="lead">Anyone can ask an AI for an ad, an audit or a sales email. Getting a result you'd actually use means collecting your business's facts, choosing a method, picking the right model, checking the output and doing it again next week. That gap is the business.</p>
 
@@ -236,7 +294,7 @@
     <div><b>Agent</b><span>picks its next step, within limits</span></div>
     <div><b>System</b><span>app, data, logins, logs</span></div>
   </div>
-  <p>Customers can start at any level and stop there. Every part also comes in four depths: <b>Starter</b> (a checklist or one prompt), <b>Standard</b>, <b>Advanced</b> and <b>Production</b> (versioned, tested, monitored). <span class="chip c-dec">Decided</span></p>
+  <p>Customers can start at any level and stop there. Every job is laid out as a <b>ladder of steps</b> that uses these blocks in order, and each step has a level: <span class="chip l-b">Beginner</span> <span class="chip l-i">Intermediate</span> <span class="chip l-a">Advanced</span> <span class="chip l-e">Expert</span>. Part 3 shows how. <span class="chip c-dec">Decided</span></p>
 
   <h2>What every part comes with</h2>
   <table>
@@ -245,7 +303,8 @@
       <tr><td><b>A real example</b> made from a public business, labelled "not affiliated". It's shown without the brand brain, with it, and with it plus references, and on more than one kind of business.</td><td>They see the quality before paying, they see it works for a business like theirs, and they see why the brand brain matters</td></tr>
       <tr><td><b>Which model to use</b>: recommended, budget and "not worth it", from a real test with quality %, cost per run and speed</td><td>A cheap model writes an image prompt; a top model writes a full script. People stop overpaying.</td></tr>
       <tr><td><b>Run it efficiently</b>: caching order, what to reuse, when quality drops, a lean mode, and routing through OpenRouter or similar</td><td>Lower token bills and no silent drop in quality</td></tr>
-      <tr><td><b>How to run it</b> in Claude Code, Claude Projects, ChatGPT, Codex, any AI via a router, or with no AI at all (Starter)</td><td>It works in the tools they already pay for</td></tr>
+      <tr><td><b>How to run it</b> in Claude Code, Claude Projects, ChatGPT, Codex, any AI via a router, or with no AI at all (Beginner)</td><td>It works in the tools they already pay for</td></tr>
+      <tr><td><b>Where it sits on the ladder</b>: its step, its level (Beginner to Expert) and the next step up</td><td>People start where they are and always know what's next</td></tr>
       <tr><td><b>Industry notes</b>: what changes for stores, software, creators, agencies or services</td><td>One part fits their business without a separate product</td></tr>
       <tr><td><b>What it needs and what it feeds</b>: the parts before and after it, shown as a small chain</td><td>They can grow from one prompt to a full system without starting over</td></tr>
       <tr><td><b>Edit points, tiers and "Help me build this"</b></td><td>It fits their business, and complex setups become services revenue</td></tr>
@@ -255,8 +314,8 @@
 </section>
 
 <!-- PART 2 ORGANISATION -->
-<section class="part">
-  <div class="eyebrow">Part 2 · How the catalogue is organised</div>
+<section>
+  <div class="eyebrow" style="margin-top:22px">Part 2 · How the catalogue is organised</div>
   <h1>Find any part <em>four ways.</em></h1>
   <p class="lead">People don't shop for "an agent". They shop for a job they need done today. So the job comes first, and everything else is a filter.</p>
 
@@ -274,7 +333,7 @@
       <tr><td><b>Business brain</b></td><td>Brand brain builder, voice card, claims register, offer calendar</td><td><span class="chip c-ass">Partial</span> scans tested; builder never run end to end</td><td>Launch (free)</td></tr>
       <tr><td><b>Research and strategy</b></td><td>Customer research from reviews, angle finder, offer builder, competitor profile</td><td><span class="chip c-ass">Partial</span> the customer-research pipeline works; offer maths missing</td><td>Jan 2027</td></tr>
       <tr><td><b>Creative and content</b></td><td>Static ad pack, video scripts, image sets, creator briefs, SEO articles</td><td><span class="chip c-dec">Strong</span> 27+ tested static ad parts; scripts ready</td><td>Launch</td></tr>
-      <tr><td><b>Paid media</b></td><td>Meta ad audit, creative-fatigue review, weekly ad review, Google audit</td><td><span class="chip c-gap">Gap</span> high demand</td><td>Launch (Starter Meta)</td></tr>
+      <tr><td><b>Paid media</b></td><td>Meta ad audit, creative-fatigue review, weekly ad review, Google audit</td><td><span class="chip c-gap">Gap</span> high demand</td><td>Launch (Meta ads ladder)</td></tr>
       <tr><td><b>Website and conversion</b></td><td>Landing-page audit, page copy, test calculator, speed check</td><td><span class="chip c-ass">Partial</span> page auditor and checklist exist; no product-page copy part</td><td>Launch (page audit)</td></tr>
       <tr><td><b>Lifecycle and retention</b></td><td>Email flows, SMS, onboarding emails, win-back, support replies</td><td><span class="chip c-gap">Gap</span> an archived module could close it</td><td>Feb–Mar 2027</td></tr>
       <tr><td><b>Analytics and profit</b></td><td>Tracking health check, weekly report, profit-opportunity ranker</td><td><span class="chip c-gap">Gap</span></td><td>Apr–Jun 2027</td></tr>
@@ -306,9 +365,161 @@
   <div class="note"><b>The rule for opening anything new</b>, whether a pack or a function: at least 10 customers or qualified leads have asked for it, its first three jobs pass the same tests as everything else, and we have a public test case for it. <span class="chip c-pro">Proposed</span></div>
 </section>
 
-<!-- PART 3 WHAT WE HAVE -->
+<!-- PART 3 LADDER -->
 <section class="part">
-  <div class="eyebrow">Part 3 · Starting point</div>
+  <div class="eyebrow">Part 3 · Simple by default</div>
+  <h1>Start where you are. <em>One step at a time.</em></h1>
+  <p class="lead">Most people have never connected an AI to anything, and some already run their own apps. So every job in the catalogue is a ladder. It starts with what you do by hand today, and each step automates a little more. You only see the next step, and people who know more can jump ahead. <span class="chip c-dec">Decided</span></p>
+
+  <div class="stair">
+    <div class="s0"><b>0</b>By hand<span>what you do today</span></div>
+    <div class="lb"><b>1</b>Ask<span>paste your data in, get the analysis</span></div>
+    <div class="lb"><b>2</b>Connect<span>the AI fetches the data itself</span></div>
+    <div class="li"><b>3</b>Save<span>results land in a sheet you own</span></div>
+    <div class="li"><b>4</b>Schedule<span>refreshes itself, e.g. 9 am daily</span></div>
+    <div class="la"><b>5</b>Mini app<span>one page, a Refresh button, filters</span></div>
+    <div class="la"><b>6</b>Full app<span>APIs feed data in and on to other parts</span></div>
+    <div class="le"><b>7</b>Share<span>teammates and clients, with permissions</span></div>
+    <div class="le"><b>8</b>Act<span>agents act on the data, with approvals</span></div>
+  </div>
+  <div class="levels">
+    <div><span class="chip l-b">Beginner</span> Steps 1–2. Copy, paste and a one-click connector. No setup.</div>
+    <div><span class="chip l-i">Intermediate</span> Steps 3–4. Connect two tools and set a schedule.</div>
+    <div><span class="chip l-a">Advanced</span> Steps 5–6. A small app, built with the AI's help, with light code.</div>
+    <div><span class="chip l-e">Expert</span> Steps 7–8. Logins, hosting (e.g. Render), TypeScript, agents.</div>
+  </div>
+  <p class="small">These four levels replace the old depth names: Starter → Beginner, Standard → Intermediate, Advanced stays, Production → Expert. The steps map onto the six building blocks: step 1 is a <b>prompt</b>, steps 2–3 a <b>skill</b>, step 4 a <b>routine</b>, step 5 a <b>workflow</b> with a mini app, steps 6–7 a <b>system</b>, and step 8 an <b>agent</b>.</p>
+
+  <h2>Worked example: "Show me how my Meta ads are doing"</h2>
+  <table class="compact">
+    <thead><tr><th style="width:11%">Step</th><th style="width:30%">What you do</th><th style="width:25%">What you get</th><th style="width:12%">Level · block</th><th>Do we have it?</th></tr></thead>
+    <tbody>
+      <tr><td><b>0 · By hand</b></td><td>Open Ads Manager, export, work it out in a spreadsheet</td><td>An answer, an hour or two later</td><td class="small">today</td><td class="small">Baseline. We time it to show what each step saves.</td></tr>
+      <tr><td><b>1 · Ask</b></td><td>Upload the export to Claude or ChatGPT with our audit prompt</td><td>Data checks, totals, creative mix; "unavailable" where data is missing</td><td><span class="chip l-b">Beginner</span><br><span class="small">prompt</span></td><td class="small">Launch job ④</td></tr>
+      <tr><td><b>2 · Connect</b></td><td>Connect the Meta ads connector (MCP) once, then ask "how did last week go?"</td><td>The same analysis without exporting; copy it wherever you need it</td><td><span class="chip l-b">Beginner</span><br><span class="small">skill</span></td><td class="small"><span class="chip c-dec">Done</span> We already pull Meta data through Claude's connector for client work</td></tr>
+      <tr><td><b>3 · Save</b></td><td>Also connect Google Sheets. The skill writes a fixed layout, one tab each for account, campaign and ad.</td><td>A sheet your team can open, with charts and notes built on it</td><td><span class="chip l-i">Intermediate</span><br><span class="small">skill</span></td><td class="small"><span class="chip c-gap">Gap</span> Today the data goes to JSON files, not Sheets</td></tr>
+      <tr><td><b>4 · Schedule</b></td><td>Run it every day at 9 am (Claude scheduled tasks, ChatGPT tasks or a Sheets trigger)</td><td>Fresh numbers each morning; everything built on the sheet updates too</td><td><span class="chip l-i">Intermediate</span><br><span class="small">routine</span></td><td class="small"><span class="chip c-gap">Gap</span> No scheduled refresh exists yet</td></tr>
+      <tr><td><b>5 · Mini app</b></td><td>One page with a Refresh button, date presets, campaign and format filters, and a compare-to-last-period view</td><td>Any question answered in seconds, without wrangling a sheet</td><td><span class="chip l-a">Advanced</span><br><span class="small">workflow + app</span></td><td class="small"><span class="chip c-dec">Done</span> The ecomOS dashboard has all of this. It's a private client build, so we generalise it.</td></tr>
+      <tr><td><b>6 · Full app</b></td><td>The Meta API, website sales and analytics are pulled into one database automatically, and other parts (creative scoring, weekly report) read from it</td><td>One source of truth</td><td><span class="chip l-a">Advanced</span><br><span class="small">system</span></td><td class="small"><span class="chip c-ass">Partial</span> The dashboard reads the Meta and sales APIs on refresh</td></tr>
+      <tr><td><b>7 · Share</b></td><td>Invite teammates or clients, set owners and members, cap AI spend per person</td><td>Each agency client gets their own view</td><td><span class="chip l-e">Expert</span><br><span class="small">system</span></td><td class="small"><span class="chip c-dec">Done</span> A basic team mode exists: invite codes, owner roles and spend caps</td></tr>
+      <tr><td><b>8 · Act</b></td><td>Agents watch the data and propose moves, such as pausing a tired ad or briefing new creatives. A person approves, then the agent acts.</td><td>Work gets done, not just reported</td><td><span class="chip l-e">Expert</span><br><span class="small">agent</span></td><td class="small"><span class="chip c-gap">Gap</span> Proposal only today; Meta access is read-only by rule</td></tr>
+    </tbody>
+  </table>
+  <div class="note"><b>Who does each step.</b> Steps 1–4 are downloads anyone can run themselves. From step 5 there's a "Help me build this" button (consulting, $1,500). Steps 6–8 are implementation ($5,000 or quoted) until we've built them twice and can turn them into a product. The ladder doubles as our upgrade path.</div>
+
+  <div class="keep"><h2>The same ladder works for making things</h2>
+  <table class="compact">
+    <thead><tr><th style="width:12%">Job</th><th>1 · Ask</th><th>2–3 · Connect and save</th><th>4 · Schedule</th><th>5–6 · App or board</th><th>7 · Share</th><th>8 · Act</th></tr></thead>
+    <tbody>
+      <tr><td><b>Brand brain</b></td><td>Paste your site's text, get a brain document</td><td>A skill reads the site and saves the brain folder</td><td>A monthly refresh with a queue of proposed changes</td><td>A brain editor (Creative Engine's Brand screen)</td><td>A team brain with owners and approvals</td><td>An agent proposes updates when the site or offers change</td></tr>
+      <tr><td><b>Static ads</b></td><td>One ad from a prompt</td><td>A skill makes 3–4 sizes from your brain and photos and saves them to a folder</td><td>A fresh batch every week</td><td>The 100-ad sprint and the studio editor</td><td>Client approvals</td><td>An agent spots tired ads and briefs replacements</td></tr>
+      <tr><td><b>Video ads</b></td><td>A script from a prompt</td><td>Script and hooks, then avatar, storyboard and a clip prompt pack</td><td>A weekly script batch</td><td>The production board (Kanban)</td><td>A client review column</td><td>An agent queues new videos from the winning hooks</td></tr>
+    </tbody>
+  </table></div>
+
+  <div class="grid4">
+    <div class="card"><h4>Nothing is thrown away</h4><p>Each step reuses the one before: the same prompt, the same sheet layout, the same brain.</p></div>
+    <div class="card"><h4>Three facts per step</h4><p>What you get, what you need (accounts, time) and what it costs to run. Nothing more on first view.</p></div>
+    <div class="card"><h4>Only tested steps show</h4><p>Not every job needs all eight steps. A job page lists only the steps that have passed our tests.</p></div>
+    <div class="card"><h4>Jump in anywhere</h4><p>"I already have the sheet" takes you straight to step 4. Experts can go straight to the top.</p></div>
+  </div>
+</section>
+
+<!-- PART 4 WORKFLOWS -->
+<section class="part">
+  <div class="eyebrow">Part 4 · Ready-made workflows</div>
+  <h1>Everything we've built, <em>as workflows people can pick from.</em></h1>
+  <p class="lead">Creative Engine (the Mercatura app) and the ecomOS dashboard already run these workflows end to end. Each one becomes a workflow page: the stages in order, every stage a part you can take on its own, and real examples we've already made.</p>
+
+  <div class="wf"><h4>1 · Brand brain <span class="chip l-b">Beginner → Expert</span></h4>
+    <div class="stg"><span>Scan the site (up to 8 pages)</span><span>Founder answers or a voice note</span><span>9 brain documents</span><span>Readiness check</span><span>Look scan: fonts and colours</span></div>
+    <p><b>Built from:</b> Creative Engine's Brand screens and the brand-brain skill (7 phases, 2 approval gates). <b>Examples we have:</b> the full Grüns brain. The section headings from our client brains serve as the template, with none of the client's content. <b>Take:</b> the whole thing, or just the voice card or the look scan.</p></div>
+
+  <div class="wf"><h4>2 · Static ads <span class="chip l-b">Beginner → Advanced</span></h4>
+    <div class="stg"><span>Plan</span><span>Render</span><span>Check prices and claims</span><span>Fix and recheck</span><span>Text in brand fonts</span><span>Export sizes</span></div>
+    <p><b>Built from:</b> Creative Engine's studio, the 100-ad sprint and the static ad skills. <b>Examples we have:</b> about 900 Grüns images in 208 sets, 100 curated example ads, and 107 format examples ("100 ways to make an ad"). <b>Take:</b> one size, a 3–4 size set, or a whole sprint.</p></div>
+
+  <div class="wf"><h4>3 · Ad copy <span class="chip l-b">Beginner → Intermediate</span></h4>
+    <div class="stg"><span>Read the ad's image or video</span><span>Write 1–10 primary texts and headlines</span><span>Stranger-read</span><span>Check against Meta's ad standards</span></div>
+    <p><b>Built from:</b> the copy builder, the script engine (15 script kinds, graded hooks, a voice pass) and the compliance check. <b>Examples we have:</b> 169 Grüns scripts and before/after copy-test reports. <span class="chip c-gap">Gap</span> No saved copy decks yet; we make 3 in Section 2.</p></div>
+
+  <div class="wf"><h4>4 · Avatar to photoreal persona <span class="chip l-i">Intermediate → Advanced</span></h4>
+    <div class="stg"><span>Pick a portrait or make your own</span><span>Make it photoreal in a real scene (9:16)</span><span>Link it to a buyer persona</span><span>Settings pack (1–6 places)</span><span>6-view character sheet</span><span>Cast it in a video</span></div>
+    <p><b>Built from:</b> Creative Engine's avatar studio, avatar packs and character sheets. <b>Examples we have:</b> 375 fictional AI-made portraits, 50 photoreal results and 60 saved Grüns avatar sheets. <b>Take:</b> a single avatar, or the whole cast for a campaign.</p></div>
+
+  <div class="wf"><h4>5 · Video ad on a board <span class="chip l-a">Advanced</span></h4>
+    <div class="stg"><span>Avatar</span><span>Character review</span><span>Script</span><span>Format</span><span>Storyboard</span><span>Clips</span><span>Edit and audio</span><span>Deliver</span></div>
+    <div class="board"><span>Draft</span><span>Queued</span><span>Running</span><span>Waiting for approval</span><span>In review</span><span>Approved</span><span>Sent</span></div>
+    <p><b>Built from:</b> Creative Studio's guided flow and the production board. Every video is a card that moves across the columns. Paid steps wait for a click and show the cost first. <b>Examples we have:</b> one full Grüns 30-second UGC run, from character to final MP4, and 25 videos across UGC, claymation, podcast and talking-object formats. <b>Take:</b> just the script, the storyboard prompt pack, or the whole board.</p></div>
+
+  <div class="wf"><h4>6 · Meta ads dashboard <span class="chip l-b">Beginner → Expert</span></h4>
+    <div class="stg"><span>Ask</span><span>Connect</span><span>Save to a sheet</span><span>9 am refresh</span><span>Mini app</span><span>Full app</span><span>Share</span><span>Act</span></div>
+    <p><b>Built from:</b> the ecomOS dashboard, our private client build. It brings refresh and filters, the ad gallery, the buyer's daily desk, weekly health checks, next moves for each team, and a printable client report. <b>Examples:</b> <span class="chip c-gap">Gap</span> no public business publishes its ad results, so this needs sample numbers (decision 14). Client data never leaves.</p></div>
+
+  <p><b>Pick and choose, on every workflow page:</b> tick the stages you want, then choose "take the whole workflow" or "just this step". You can swap any stage for your own tool, such as your own video model. Each stage shows its model and its cost per run.</p>
+
+  <div class="keep"><h2>What we can show in public, and what we can't</h2>
+  <table class="compact">
+    <thead><tr><th style="width:30%">Asset</th><th>Rule</th></tr></thead>
+    <tbody>
+      <tr><td><b>Grüns brain, ads, scripts, videos</b></td><td>Yes, labelled "made from public info, not affiliated". But the Grüns brain also holds <b>simulated customer research</b>. Anything built on that is rebuilt from public reviews or labelled "simulated research".</td></tr>
+      <tr><td><b>375 avatar portraits and their photoreal versions</b></td><td>Yes, labelled "AI-generated, fictional person". Never made to resemble a real person.</td></tr>
+      <tr><td><b>Gehna: dashboard, brain, ads, copy tests</b></td><td>Never the content or the numbers. Only the patterns: screen layouts, pipeline steps and the brain's section headings.</td></tr>
+      <tr><td><b>Skool skills (AI CMO, AI Operator), Ecom Intelligence guides</b></td><td>Reference only. Rebuilt in our own words, with nothing substantially similar.</td></tr>
+      <tr><td><b>Nourish Plus (a made-up demo brand)</b></td><td>Not used for public examples, because you ruled out made-up brands.</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<!-- PART 5 LOOK AND FEEL -->
+<section class="part">
+  <div class="eyebrow">Part 5 · What people see</div>
+  <h1>Simple by default. <em>More only when you ask.</em></h1>
+  <p class="lead">It should feel like a friendly shop, not a control panel. We reuse the look Creative Engine already has (Mercatura) and the ecomOS dashboard's data layouts. We reuse the design, not the code.</p>
+
+  <div class="mock tight">
+    <div class="mbar"><span>● ● ●</span> Jobs › Paid media</div>
+    <div class="mbody">
+      <div class="mhead"><b>Show me how my Meta ads are doing</b><span>Any business · works in Claude, ChatGPT, Codex</span></div>
+      <div class="mq">Where are you today?</div>
+      <div class="mchips"><span class="done">By hand</span><span class="done">Ask</span><span class="next">Connect</span><span>Save</span><span>Schedule</span><span>Mini app</span><span>Full app</span><span>Share</span><span>Act</span></div>
+      <div class="mcard">
+        <div class="mt">Your next step · <span class="chip l-b">Beginner</span></div>
+        <b>Connect your Meta account</b>
+        <div class="m3"><div><i>You get</i>Last week's report without exporting anything</div><div><i>You need</i>Claude or ChatGPT, access to your ad account, 10 minutes</div><div><i>It costs</i>The cost per run from our model test</div></div>
+        <div class="mbtn">Show me how</div><span class="mlink">See all steps · Advanced view · Help me build this</span>
+      </div>
+      <div class="mex"><span></span><span></span><span></span><span></span><em>Example made from public info about Grüns. Not affiliated.</em></div>
+    </div>
+  </div>
+
+  <div class="grid4 tight">
+    <div class="card"><h4>One job per screen</h4><p>Each page answers: what will this do for me?</p></div>
+    <div class="card"><h4>Next step only</h4><p>Show "you are here" and "next"; the rest on request.</p></div>
+    <div class="card"><h4>Normal view first</h4><p>Models, settings and scores sit behind an Advanced switch.</p></div>
+    <div class="card"><h4>Plain words</h4><p>"Connect your Meta account", not "configure the MCP server".</p></div>
+    <div class="card"><h4>Three facts per step</h4><p>What you get, what you need, what it costs.</p></div>
+    <div class="card"><h4>Workflows are boards</h4><p>Stages are cards you tick, like the production board.</p></div>
+    <div class="card"><h4>One main button</h4><p>One blue action; everything else is a quiet link.</p></div>
+    <div class="card"><h4>Works on a phone</h4><p>The dock becomes a sheet; tables become cards.</p></div>
+  </div>
+
+  <h2>What we reuse from our own apps</h2>
+  <table class="compact">
+    <thead><tr><th style="width:18%">Piece</th><th>From</th></tr></thead>
+    <tbody>
+      <tr><td><b>Look</b></td><td>Creative Engine's "warm paper" theme (one blue action colour) and its "premium ink" dark theme; DM Serif Display and DM Sans</td></tr>
+      <tr><td><b>Components</b></td><td>Creative Engine's shadcn set, plus its status pills, run bar, "needs a brain" prompt and "what's next" empty states</td></tr>
+      <tr><td><b>Navigation</b></td><td>The bottom dock (Home · Jobs · Workflows · My brain · Learn) and the Normal/Advanced switch</td></tr>
+      <tr><td><b>Data steps</b></td><td>The ecomOS dashboard's overview cards, Refresh button and filter bar</td></tr>
+      <tr><td><b>Boards</b></td><td>Creative Engine's production Kanban: drag to run, with the cost shown before any paid step</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- PART 6 WHAT WE HAVE -->
+<section class="part">
+  <div class="eyebrow">Part 6 · Starting point</div>
   <h1>We're not <em>starting from zero.</em></h1>
   <p class="lead">We went through Creative Engine, the Ecommerce OS docs, every Skool course, Ecom Agent OS and GitHub, and put every item into one sheet.</p>
   <div class="grid4">
@@ -317,6 +528,7 @@
     <div class="card kpi"><div class="big">110</div><p>of those are already tested with examples</p></div>
     <div class="card kpi"><div class="big">403</div><p>learning guides in Creative Engine to mine for know-how</p></div>
   </div>
+  <p class="small"><b>Plus the two apps:</b> Creative Engine (the Mercatura app) has about 60 screens, 1,076 analysed reference ads, 375 avatar portraits, about 900 Grüns static ads, 169 scripts and 25 videos. The ecomOS dashboard has 17 data screens, a Refresh button and team logins. Part 4 turns both into workflows.</p>
   <p><b>In one line:</b> we're strong at <b>making</b> marketing (creative, scripts, pages, SEO) and weak at <b>analysing</b> it and <b>keeping customers</b> (paid media, email, analytics, profit). Most of what we have was written for stores. Turning it into parts means separating the <b>method</b>, which is general, from the <b>store details</b>, which go into the ecommerce pack.</p>
 
   <h2>The learning library fills exactly those gaps</h2>
@@ -345,12 +557,12 @@
   <p class="small">Checklists become audit parts. Thresholds become settings that each industry pack can change. Steps become workflow steps, and explanations become Learn pages. Your own documents (the 62-check store baseline, the stage model, the 300-opportunity profit backlog) convert directly. A piece of know-how stays in a prompt only if a with/without test shows it helps.</p>
 </section>
 
-<!-- PART 4 GTM -->
+<!-- PART 7 GTM -->
 <section class="part">
-  <div class="eyebrow">Part 4 · Go-to-market</div>
+  <div class="eyebrow">Part 7 · Go-to-market</div>
   <h1>Who we sell to, what we say, <em>and how they find us.</em></h1>
 
-  <h3>4.1 &nbsp;The message</h3>
+  <h3>7.1 &nbsp;The message</h3>
   <div class="dark">
     <div class="eyebrow">One line</div>
     <p style="font: 400 15pt Georgia, serif; color:#fff">Tested AI building blocks for your business, from one prompt to a working system, with real examples, the right model for every job, and help when you need it.</p>
@@ -362,7 +574,7 @@
   </div>
   <p class="small">Wording to test, not final. <span class="chip c-pro">Proposed</span> The final brand name is still open.</p>
 
-  <h3>4.2 &nbsp;Who we sell to first</h3>
+  <h3>7.2 &nbsp;Who we sell to first</h3>
   <table>
     <thead><tr><th style="width:19%">Segment</th><th style="width:22%">What hurts</th><th>First job they buy</th><th style="width:13%">Plan</th><th style="width:20%">How we reach them</th></tr></thead>
     <tbody>
@@ -370,36 +582,36 @@
       <tr><td><b>2 · Growing online brands</b> (stores, D2C)</td><td>Need many new ads every month; launches and sales; agency costs</td><td>Brand brain → static ad pack → landing-page audit</td><td>Team $299</td><td>YouTube task videos, search, founder networks</td></tr>
       <tr><td><b>3 · Software and app companies</b></td><td>Small marketing teams; paid ads and onboarding emails that don't convert</td><td>Landing-page audit, Meta ad audit, static ads for a trial or plan offer</td><td>Team $299</td><td>Search, founder communities, content</td></tr>
       <tr><td><b>4 · Freelancers, creators, media buyers</b></td><td>Selling hours; want leverage</td><td>Audit and creative parts to run for clients or their own launches</td><td>Individual $99</td><td>Content, communities, affiliate links</td></tr>
-      <tr><td><b>5 · New businesses and dropshippers</b></td><td>Don't know what good looks like; tight budget</td><td>Free brand brain, Starter checklists, baseline audit</td><td>Free → $99</td><td>Content and search (top of funnel)</td></tr>
+      <tr><td><b>5 · New businesses and dropshippers</b></td><td>Don't know what good looks like; tight budget</td><td>Free brand brain, Beginner checklists, baseline audit</td><td>Free → $99</td><td>Content and search (top of funnel)</td></tr>
     </tbody>
   </table>
-  <p class="small">Agencies come first because one sale covers many brands across industries, and partners resell us. Growing brands are the clearest story for content. Software companies test that the parts travel. <span class="chip c-ass">Assumption</span> We test which converts best (§4.10).</p>
+  <p class="small">Agencies come first because one sale covers many brands across industries, and partners resell us. Growing brands are the clearest story for content. Software companies test that the parts travel. <span class="chip c-ass">Assumption</span> We test which converts best (§7.10).</p>
 
-  <h3>4.3 &nbsp;What we launch with: four exact jobs, for any business</h3>
+  <h3>7.3 &nbsp;What we launch with: four exact jobs, for any business</h3>
   <p>Don't lead with a broad label. Lead with an exact job, its inputs, an example output, its price and where it runs. <span class="chip c-pro">Proposed</span></p>
   <div class="grid2">
     <div class="card"><h4>① Brand brain builder: free</h4><p>From a website address plus a few answers, build one file that teaches any AI what you sell (products, plans, services or courses), your offers with dates, your claims, your voice and your buyers. It's the entry point, and every other part works better with it.</p></div>
     <div class="card"><h4>② Static ad pack, holiday sale edition first</h4><p>Plan → copy → stranger-read check → image prompt → render → QA, with every price and offer checked against the current offer. Built from our strongest area. Works for a product sale, a plan discount or a course launch.</p></div>
     <div class="card"><h4>③ Landing-page audit</h4><p>Our page auditor and checklist: what's broken, why it matters and what to fix first, with industry notes for store, software and course pages. A strong lead-in to paid implementation.</p></div>
-    <div class="card"><h4>④ Starter Meta ad audit</h4><p>Upload an export and get data checks, efficiency totals, creative diversity and a new-vs-established spend split. When data is missing, it says "unavailable" rather than guessing. Every Meta advertiser has the problem, whatever they sell.</p></div>
+    <div class="card"><h4>④ Meta ad audit, as a ladder</h4><p>Upload an export and get data checks, efficiency totals, creative diversity and a new-vs-established spend split. When data is missing, it says "unavailable" rather than guessing. It ships as steps 1–4: ask, connect Meta, save to a sheet, refresh at 9 am. Every Meta advertiser has the problem, whatever they sell.</p></div>
   </div>
 
-  <h3>4.4 &nbsp;Offer and pricing</h3>
+  <h3>7.4 &nbsp;Offer and pricing</h3>
   <table>
     <thead><tr><th>Plan</th><th>Price</th><th>What's included</th><th>Who it's for</th></tr></thead>
     <tbody>
-      <tr><td><b>Free</b></td><td>$0</td><td>All prompts, every Starter tier, the brand brain builder, examples, how-to guides, downloads</td><td>Discovery, trust, search traffic</td></tr>
-      <tr><td><b>Individual</b></td><td>$99/mo</td><td>Skills and workflows above Starter, model-test data, lean modes, stacks, saved prompts and versions</td><td>Freelancers, solo founders, creators</td></tr>
+      <tr><td><b>Free</b></td><td>$0</td><td>All prompts, every Beginner step, the brand brain builder, examples, how-to guides, downloads</td><td>Discovery, trust, search traffic</td></tr>
+      <tr><td><b>Individual</b></td><td>$99/mo</td><td>Intermediate and Advanced steps (connect, save, schedule, mini apps), model-test data, lean modes, stacks, saved prompts and versions</td><td>Freelancers, solo founders, creators</td></tr>
       <tr><td><b>Team</b></td><td>$299/mo</td><td>Individual plus shared brand brains, team standards, more brands, supported retrieval, bounded help</td><td>Businesses with a marketing team</td></tr>
       <tr><td><b>Agency</b></td><td>$899/mo</td><td>Team plus many client brands kept separate, roles, approvals, white-label exports</td><td>Agencies</td></tr>
       <tr><td><b>Consulting</b></td><td>$1,500</td><td>A 6-hour package: diagnose, pick the parts, set them up with you</td><td>"Tell me what to use"</td></tr>
-      <tr><td><b>Implementation</b></td><td>$5,000</td><td>One bounded workflow, built, tested and handed over (about 60 hours)</td><td>"Build it for me"</td></tr>
+      <tr><td><b>Implementation</b></td><td>$5,000</td><td>One bounded workflow or ladder step 6–8, built, tested and handed over (about 60 hours)</td><td>"Build it for me"</td></tr>
       <tr><td><b>Full application</b></td><td>quoted</td><td>Custom interface, database, permissions, deployment</td><td>Larger businesses and agencies</td></tr>
     </tbody>
   </table>
   <p class="small">The model assumes a 60/30/10 plan mix, about $239 per paying organisation per month. <span class="chip c-ass">Assumption</span> Customers pay their own model bills; we never hide them inside a low subscription. Downloads keep working under the licence. People renew for maintained releases, fresh references, saved settings and support, not because of artificial lock-in. <span class="chip c-dec">Decided</span></p>
 
-  <h3>4.5 &nbsp;How customers find us</h3>
+  <h3>7.5 &nbsp;How customers find us</h3>
   <div class="grid3">
     <div class="card"><h4>Content + product</h4><p>Every tested part becomes a page, a YouTube video, a short and a newsletter section. Visitors try it on their own business.</p><p style="margin-top:6px"><b>1,200</b> new paid/year by Y5 from 60k qualified visits × 10% trial × 20% paid</p></div>
     <div class="card"><h4>Partners</h4><p>Agencies and tool experts who resell plans and deliver setups, trained to pass our quality checks.</p><p style="margin-top:6px"><b>1,500</b> new paid/year by Y5 from 150 productive partners × 10 each</p></div>
@@ -416,9 +628,9 @@
     <div><b>Newsletter</b>new parts + model results</div>
     <div><b>Trial</b>run it on your business</div>
   </div>
-  <p class="small">Formats that suit us: "without vs with brand brain"; "cheap model vs top model, same job" with the real cost; "same job, three industries" (a store, a software company and a course, side by side); public teardowns (labelled, no invented claims); and "from prompt to workflow" series. Cadence once site v0 is live: 1 long video, 2 shorts and 1 newsletter a week. <span class="chip c-pro">Proposed</span></p>
+  <p class="small">Formats that suit us: "without vs with brand brain"; "cheap model vs top model, same job" with the real cost; "same job, three industries" (a store, a software company and a course, side by side); public teardowns (labelled, no invented claims); and the <b>"climb the ladder"</b> series: one job, one step a week, from by hand to agent. Cadence once site v0 is live: 1 long video, 2 shorts and 1 newsletter a week. <span class="chip c-pro">Proposed</span></p>
 
-  <h3>4.6 &nbsp;The customer journey</h3>
+  <h3>7.6 &nbsp;The customer journey</h3>
   <table>
     <thead><tr><th>Stage</th><th>What they see or do</th><th>What we measure</th></tr></thead>
     <tbody>
@@ -427,11 +639,11 @@
       <tr><td><b>Set up</b></td><td>Save business facts, pick their tools and industry pack, set review rules; consulting if stuck</td><td>Setup completed; human minutes spent</td></tr>
       <tr><td><b>Adopt</b></td><td>Use one part every week in real work (e.g. the Monday ad review)</td><td>Weekly active orgs</td></tr>
       <tr><td><b>Repeat</b></td><td>Saved settings, fresh references, updated parts</td><td>Accepted outputs per org per month (north star)</td></tr>
-      <tr><td><b>Expand</b></td><td>Add the next part in the chain, a routine, or an implementation project</td><td>Plan upgrades; service revenue per org</td></tr>
+      <tr><td><b>Climb</b></td><td>Take the next step on the ladder, add the next part in the chain, or ask us to build the higher steps</td><td>Orgs that climb a step within 60 days; plan upgrades; service revenue per org</td></tr>
     </tbody>
   </table>
 
-  <h3>4.7 &nbsp;Selling and delivering services</h3>
+  <h3>7.7 &nbsp;Selling and delivering services</h3>
   <ol class="steps">
     <li><b>Readiness form.</b> Goal, business type, tools, data access, budget and deadline. Many requests turn into a standard plan with no custom work.</li>
     <li><b>Scoping call (30 min).</b> Agree one named outcome, the data boundary, the tools, the review rounds and the owner.</li>
@@ -441,7 +653,7 @@
     <li><b>Move to subscription.</b> We keep the parts updated and supported.</li>
   </ol>
 
-  <h3>4.8 &nbsp;Why people keep paying</h3>
+  <h3>7.8 &nbsp;Why people keep paying</h3>
   <div class="grid4">
     <div class="card"><h4>Their brain lives here</h4><p>Versioned, with dated offers and claims, kept current through a change queue they approve.</p></div>
     <div class="card"><h4>Parts keep improving</h4><p>Re-tested when new models ship, with release notes; the old version stays available.</p></div>
@@ -449,7 +661,7 @@
     <div class="card"><h4>Routines do repeat work</h4><p>The weekly ad check, the monthly creative plan and seasonal packs run on schedule.</p></div>
   </div>
 
-  <h3>4.9 &nbsp;The numbers we watch</h3>
+  <h3>7.9 &nbsp;The numbers we watch</h3>
   <table>
     <thead><tr><th>Metric</th><th>Why</th><th>First target <span class="chip c-ass">Assumption</span></th></tr></thead>
     <tbody>
@@ -457,13 +669,14 @@
       <tr><td>Activation rate</td><td>Do trials get a useful first result?</td><td>40% of sign-ups within 7 days</td></tr>
       <tr><td>Trial → paid</td><td>Willingness to pay</td><td>20% (the model's rate)</td></tr>
       <tr><td>Monthly paid retention</td><td>The model assumes 80% a year (about 98.1% a month)</td><td>≥ 97% a month in the first cohorts</td></tr>
+      <tr><td>Orgs that climb at least one step within 60 days</td><td>Proves the ladder works and isn't intimidating</td><td>25%</td></tr>
       <tr><td>Share of paying orgs outside ecommerce</td><td>Proves we're not an ecommerce tool</td><td>≥ 30% by month 6 after paid launch</td></tr>
       <tr><td>Human minutes per customer per month</td><td>Support cost; the model assumes 30</td><td>≤ 30</td></tr>
       <tr><td>Costliest-mistake rate (wrong price, invented claim)</td><td>Trust</td><td>Zero in every release</td></tr>
     </tbody>
   </table>
 
-  <h3>4.10 &nbsp;Six things we must prove, and the smallest test for each</h3>
+  <h3>7.10 &nbsp;Six things we must prove, and the smallest test for each</h3>
   <table>
     <thead><tr><th style="width:33%">Question</th><th>Smallest test</th><th style="width:26%">Pass looks like</th></tr></thead>
     <tbody>
@@ -477,11 +690,11 @@
   </table>
 </section>
 
-<!-- PART 5 CALENDAR -->
+<!-- PART 8 CALENDAR -->
 <section class="part">
-  <div class="eyebrow">Part 5 · Launch calendar</div>
+  <div class="eyebrow">Part 8 · Launch calendar</div>
   <h1>The next nine months <em>at a glance.</em></h1>
-  <p class="lead">Dates are targets. Each phase moves on only when its gate is passed (Part 7). <span class="chip c-pro">Proposed</span></p>
+  <p class="lead">Dates are targets. Each phase moves on only when its gate is passed (Part 10). <span class="chip c-pro">Proposed</span></p>
 
   <div class="gantt">
     <div class="head"><div></div><div class="months"><span>OCT</span><span>NOV</span><span>DEC</span><span>JAN 27</span><span>FEB</span><span>MAR</span><span>APR</span><span>MAY</span><span>JUN</span></div></div>
@@ -490,14 +703,15 @@
     <div class="row"><div class="lab">Holiday sale sprints</div><div class="track"><div class="bar a" style="left:6.5%;width:19.7%"></div></div></div>
     <div class="row"><div class="lab">§1 Brand brain</div><div class="track"><div class="bar" style="left:11.5%;width:5.2%"></div></div></div>
     <div class="row"><div class="lab">§2 Static ads</div><div class="track"><div class="bar" style="left:16.7%;width:7.6%"></div></div></div>
-    <div class="row"><div class="lab">Page audit, Meta Starter, scripts</div><div class="track"><div class="bar" style="left:24.5%;width:5.2%"></div></div></div>
+    <div class="row"><div class="lab">Page audit, Meta ads ladder 1–4, scripts</div><div class="track"><div class="bar" style="left:24.5%;width:5.2%"></div></div></div>
     <div class="row"><div class="lab">Site v0 build</div><div class="track"><div class="bar l" style="left:24.5%;width:15%"></div></div></div>
     <div class="row"><div class="lab">Site v0 public (free)</div><div class="track"><div class="bar g" style="left:39.3%;width:1.4%"></div></div></div>
     <div class="row"><div class="lab">Content engine weekly</div><div class="track"><div class="bar l" style="left:39.8%;width:60.2%"></div></div></div>
     <div class="row"><div class="lab">Paid plans v1</div><div class="track"><div class="bar g" style="left:49.8%;width:1.4%"></div></div></div>
     <div class="row"><div class="lab">Research and offers</div><div class="track"><div class="bar" style="left:33.4%;width:11%"></div></div></div>
     <div class="row"><div class="lab">Email and lifecycle</div><div class="track"><div class="bar" style="left:44.5%;width:22%"></div></div></div>
-    <div class="row"><div class="lab">Paid media (Meta Std + ops)</div><div class="track"><div class="bar" style="left:55.6%;width:22%"></div></div></div>
+    <div class="row"><div class="lab">Paid media (Meta ladder 5 + ops)</div><div class="track"><div class="bar" style="left:55.6%;width:22%"></div></div></div>
+    <div class="row"><div class="lab">Ready-made workflows (CE)</div><div class="track"><div class="bar" style="left:44.5%;width:22%"></div></div></div>
     <div class="row"><div class="lab">Agency partner pilot</div><div class="track"><div class="bar a" style="left:44.5%;width:33.2%"></div></div></div>
     <div class="row"><div class="lab">Software and apps pack</div><div class="track"><div class="bar" style="left:55.6%;width:22.2%"></div></div></div>
     <div class="row"><div class="lab">Routines (May), agents (Jun)</div><div class="track"><div class="bar" style="left:77.8%;width:22.2%"></div></div></div>
@@ -505,7 +719,7 @@
   <p class="small"><span style="color:#2557d6">■</span> build &nbsp; <span style="color:#9db7f2">■</span> site/content &nbsp; <span style="color:#e3a43a">■</span> sales/validation &nbsp; <span style="color:#2fa36b">■</span> launch moment</p>
 
   <h2>Key dates</h2>
-  <table>
+  <table class="compact">
     <thead><tr><th>Date</th><th>Moment</th><th>What it means for us</th></tr></thead>
     <tbody>
       <tr><td><b>Mon 19 Oct 2026</b></td><td>Week 1 starts</td><td>New repo live, first tools, holiday sprint offer goes out</td></tr>
@@ -521,15 +735,15 @@
   <div class="note warn"><b>Honest timing note:</b> Black Friday 2026 is six weeks away, so the catalogue site won't be ready for it. We use it to <b>prove demand and learn</b>, selling done-with-you sprints made with methods we already have. The full self-serve holiday stack is for 2027.</div>
 </section>
 
-<!-- PART 6 BUILD -->
+<!-- PART 9 BUILD -->
 <section class="part">
-  <div class="eyebrow">Part 6 · The build</div>
+  <div class="eyebrow">Part 9 · The build</div>
   <h1>How every part <em>gets made.</em></h1>
   <p class="lead">Three things get built, in order. First, small tools that make parts cheaply and test them the same way every time. Then the parts themselves, section by section. Then the website that shows them.</p>
 
   <div class="grid3">
     <div class="card"><h4>A · The item factory</h4><p>Six small tools: import a part, check it, build its downloads, run it on cheap, mid and top models, grade it blind, and map how parts connect. TypeScript, in this repo.</p></div>
-    <div class="card"><h4>B · The parts</h4><p>Section by section: brand brain → static ads → page audit, Meta Starter and scripts → research and offers → email and lifecycle → paid media → analytics.</p></div>
+    <div class="card"><h4>B · The parts</h4><p>Section by section: brand brain → static ads → page audit, the Meta ads ladder and scripts → research and offers → ready-made workflows → email and lifecycle → paid media → analytics. Every launch job gets its ladder steps.</p></div>
     <div class="card"><h4>C · The site</h4><p>Reads the part folders directly, so a fixed part is a fixed page. Free catalogue first, then accounts and payments.</p></div>
   </div>
 
@@ -567,12 +781,12 @@
   <h2>Section 1: the brand brain, for any business</h2>
   <p>15 existing items become <b>11 parts</b>, laid out as a ladder from a free template to a living, versioned brain. The schema is general. Each "what you sell" entry is a <b>product, plan, service or course</b>, with its price, offer, start date, end date and a "current" flag. Industry packs add their own fields, such as variants for stores, trial length for software and cohort dates for courses.</p>
   <table>
-    <thead><tr><th>Tier</th><th>What the user gets</th><th>Parts</th></tr></thead>
+    <thead><tr><th>Level</th><th>What the user gets</th><th>Parts</th></tr></thead>
     <tbody>
-      <tr><td><b>Starter</b></td><td>A template to fill in, a voice card prompt, a founder questionnaire</td><td class="small">brand-brain-template · brand-voice-style-card · founder-interview-capture</td></tr>
-      <tr><td><b>Standard</b></td><td>Build it from your website in Claude or ChatGPT, plus a short "brain card" every other part loads first</td><td class="small">brand-brain-from-website · brand-brain-builder · brand-brain-card · website-claims-extractor · product-photo-tagger</td></tr>
-      <tr><td><b>Advanced</b></td><td>A look scan (fonts, colours), a creative kit, and a claims register with sources</td><td class="small">brand-visual-identity-scan · brand-creative-kit-builder</td></tr>
-      <tr><td><b>Production</b></td><td>A living brain: versions, dated offers, owners, review dates and a weekly queue of proposed updates</td><td class="small">brand-brain-updater (routine)</td></tr>
+      <tr><td><span class="chip l-b">Beginner</span></td><td>A template to fill in, a voice card prompt, a founder questionnaire</td><td class="small">brand-brain-template · brand-voice-style-card · founder-interview-capture</td></tr>
+      <tr><td><span class="chip l-i">Intermediate</span></td><td>Build it from your website in Claude or ChatGPT, plus a short "brain card" every other part loads first</td><td class="small">brand-brain-from-website · brand-brain-builder · brand-brain-card · website-claims-extractor · product-photo-tagger</td></tr>
+      <tr><td><span class="chip l-a">Advanced</span></td><td>A look scan (fonts, colours), a creative kit, and a claims register with sources</td><td class="small">brand-visual-identity-scan · brand-creative-kit-builder</td></tr>
+      <tr><td><span class="chip l-e">Expert</span></td><td>A living brain: versions, dated offers, owners, review dates and a weekly queue of proposed updates</td><td class="small">brand-brain-updater (routine)</td></tr>
     </tbody>
   </table>
   <div class="note"><b>The fix that matters most:</b> every offer and price gets dates and a "current" flag. Creative Engine's first 100-ad plan leaked last month's prices because the brain had no versions. This closes that hole before launch, for every business type.</div>
@@ -590,6 +804,17 @@
   </ul>
   <p>Store-only wording and thresholds move into the ecommerce pack, and the software pack gets its own from the software test case. Old duplicates are retired.</p>
 
+  <h2>The ladders and the ready-made workflows</h2>
+  <table class="compact">
+    <thead><tr><th style="width:17%">When</th><th>What gets built</th></tr></thead>
+    <tbody>
+      <tr><td><b>Dec (W8–9)</b></td><td>Meta ads ladder steps 1–4: the audit prompt, the connector skill, the Sheets skill with a fixed layout, and a 9 am schedule guide for Claude, ChatGPT and Sheets</td></tr>
+      <tr><td><b>Feb–Mar 2027</b></td><td>Step 5 mini app, generalised from the ecomOS dashboard with no client data. Workflow pages for brand brain, static ads and copy.</td></tr>
+      <tr><td><b>Mar–Apr 2027</b></td><td>Avatar and video workflows (Advanced; customers bring their own image and video model keys)</td></tr>
+      <tr><td><b>From Feb 2027</b></td><td>Steps 6–8 as implementation; each becomes a product after we've built it twice. Agent steps follow the June red-team rule.</td></tr>
+    </tbody>
+  </table>
+
   <h2>Public test cases</h2>
   <table>
     <thead><tr><th>Test case</th><th>Business type</th><th>Role</th></tr></thead>
@@ -606,7 +831,7 @@
   <table>
     <thead><tr><th>Version</th><th>What's in it</th><th>Ships when</th></tr></thead>
     <tbody>
-      <tr><td><b>v0 · free catalogue</b></td><td>Home, job search, function and industry pages, part pages, stacks, model guide, how-to guides, downloads</td><td>About 25 parts tested, across 2+ business types</td></tr>
+      <tr><td><b>v0 · free catalogue</b></td><td>Home, job search, job pages with the ladder and the "where are you today?" picker, function and industry pages, part pages, stacks, model guide, how-to guides, downloads; Normal and Advanced views</td><td>About 25 parts tested, across 2+ business types</td></tr>
       <tr><td><b>v1 · paid</b></td><td>Accounts, workspace (saved brains, prompts, versions), paid tiers, "Help me build this"</td><td>Payments work; pre-sale gate passed</td></tr>
       <tr><td><b>v2 · run in browser</b></td><td>Run a part on your brain from the site, with the cost shown</td><td>When users ask for it</td></tr>
       <tr><td><b>Later · marketplace</b></td><td>Creators list parts; 70% to the creator, 30% to us; same quality gate</td><td>When there's traffic and a review process</td></tr>
@@ -614,16 +839,16 @@
   </table>
 </section>
 
-<!-- PART 7 EXECUTION -->
+<!-- PART 10 EXECUTION -->
 <section class="part">
-  <div class="eyebrow">Part 7 · Execution</div>
+  <div class="eyebrow">Part 10 · Execution</div>
   <h1>Step by step, <em>week by week.</em></h1>
   <p class="lead">For every week: what gets built, what gets sold or published, and what you need to do. A green bar is a gate: we don't move on until it's passed.</p>
 
   <div class="week"><div class="wh"><b>Week 1 · 19–25 Oct</b><span>Set up and start selling</span></div><div class="wb">
-    <div><h5>Build (Claude)</h5><ul><li>New repo done ✓ (today)</li><li><code>import-item</code> and <code>check-item</code> tools</li><li>First test part: website claims extractor (works on any website)</li></ul></div>
+    <div><h5>Build (Claude)</h5><ul><li>New repo done ✓ (today)</li><li><code>import-item</code> and <code>check-item</code> tools</li><li>First test part: website claims extractor (works on any website)</li><li>Map Creative Engine and ecomOS workflows onto the ladder</li></ul></div>
     <div><h5>Go-to-market</h5><ul><li>Holiday sprint offer page (one page, no site yet)</li><li>List 40 targets you can reach through permitted routes: agencies, stores, software and course businesses</li><li>Interview script</li></ul></div>
-    <div><h5>You</h5><ul><li>Approve decisions 1–5 (Part 11)</li><li>Add the router key to <code>.env</code> yourself</li><li>Send the first 20 messages</li></ul></div>
+    <div><h5>You</h5><ul><li>Approve decisions 1–5 (Part 14)</li><li>Add the router key to <code>.env</code> yourself</li><li>Send the first 20 messages</li></ul></div>
   </div></div>
 
   <div class="week"><div class="wh"><b>Week 2 · 26 Oct – 1 Nov</b><span>Tools working end to end</span></div><div class="wb">
@@ -645,7 +870,7 @@
   </div></div>
 
   <div class="week"><div class="wh"><b>Weeks 8–9 · 7–20 Dec</b><span>Package the launch set</span></div><div class="wb">
-    <div><h5>Build</h5><ul><li>Landing-page audit, with store, software and course notes</li><li>Starter Meta ad audit (sheet + skill, with "unavailable" states)</li><li>Video scripts section; site v0 build starts</li></ul></div>
+    <div><h5>Build</h5><ul><li>Landing-page audit, with store, software and course notes</li><li>Meta ads ladder steps 1–4 (prompt, connector, sheet, 9 am refresh), with "unavailable" states</li><li>Video scripts section; site v0 build starts</li></ul></div>
     <div><h5>Go-to-market</h5><ul><li>Sprint retro: hours, accepted %, redo %, willingness to pay</li><li>Founding-member offer drafted</li></ul></div>
     <div><h5>You</h5><ul><li>Gate A decision</li><li>Pick the brand name</li></ul></div>
   </div><div class="gate"><b>Gate A (Fri 11 Dec):</b> ≥ 5 paid sprints delivered (or ≥ 15 interviews showing clear pain), at least 1 outside ecommerce, ≥ 70% of ads accepted by clients, and hours measured. If not, we change the lead offer before January.</div></div>
@@ -654,18 +879,18 @@
     <div><h5>Build</h5><ul><li>Site v0: job search, part pages, function and industry pages, downloads, model guide</li><li>Every launch download opened in Claude Code, ChatGPT, Codex and a router</li></ul></div>
     <div><h5>Go-to-market</h5><ul><li>Batch-record 6 videos for January</li><li>Newsletter set up</li><li>Waitlist page</li></ul></div>
     <div><h5>You</h5><ul><li>Final review of launch pages</li><li>Light weeks: holidays</li></ul></div>
-  </div><div class="gate"><b>Gate B:</b> about 25 tested parts with examples on 2+ business types, every download works in at least 3 tools, and the site passes a mobile check.</div></div>
+  </div><div class="gate"><b>Gate B:</b> about 25 tested parts with examples on 2+ business types, every download works in at least 3 tools, every launch job shows its ladder with steps 1–3 tested, and the site passes a mobile check.</div></div>
 
   <h2>Then month by month</h2>
   <table>
     <thead><tr><th style="width:9%">Month</th><th style="width:34%">Build</th><th style="width:31%">Go-to-market</th><th>Gate to move on</th></tr></thead>
     <tbody>
       <tr><td><b>Jan 2027</b></td><td>Research and offers for any business (margin maths for stores, plan maths for software); product-page copy part (ecommerce pack)</td><td>Site v0 public on 19 Jan. Weekly content starts. Founding-member pre-sale. 10 agency interviews.</td><td>500 qualified visits/month; 100 activated users; 20 pre-orders</td></tr>
-      <tr><td><b>Feb</b></td><td>Accounts, payments, workspace (v1). Email and lifecycle starts (revive the archived module)</td><td>Paid plans live 16 Feb. First 2 implementation projects. Agency partner pilot (3–5 agencies).</td><td>20 paying orgs; payments and refunds work</td></tr>
-      <tr><td><b>Mar</b></td><td>Lifecycle Starter + Standard (store flows, software onboarding emails); Meta audit Standard; software pack research</td><td>Two "from prompt to workflow" series. Affiliate programmes applied for (clearly marked links).</td><td>Month-2 paid retention ≥ 95%; ≤ 30 support minutes per account</td></tr>
+      <tr><td><b>Feb</b></td><td>Accounts, payments, workspace (v1). Meta ads mini app (step 5). Email and lifecycle starts (revive the archived module)</td><td>Paid plans live 16 Feb. First 2 implementation projects. Agency partner pilot (3–5 agencies).</td><td>20 paying orgs; payments and refunds work</td></tr>
+      <tr><td><b>Mar</b></td><td>Lifecycle Beginner + Intermediate steps (store flows, software onboarding emails); brand brain, static ad and copy workflow pages; avatar and video workflows start; software pack research</td><td>Two "climb the ladder" series. Affiliate programmes applied for (clearly marked links).</td><td>Month-2 paid retention ≥ 95%; ≤ 30 support minutes per account</td></tr>
       <tr><td><b>Apr</b></td><td>Paid media operations (proposals only, no auto-pausing); tracking health check; <b>software and apps pack v1</b> (launch jobs adapted)</td><td>Partner training kit; consulting productised; software-focused content run</td><td>3 partners delivering setups that pass our checks; first paying software customers</td></tr>
       <tr><td><b>May</b></td><td>First routines (weekly ad check, monthly creative plan) with a durable runner, alerts and an owner; creators and courses pack scoped</td><td>Case studies (only with written permission)</td><td>Routines run 4 weeks without silent failure</td></tr>
-      <tr><td><b>Jun</b></td><td>First agents (Production tiers): bounded, with budgets, approvals and red-team tests. Profit-opportunity ranker</td><td>Mid-year review against the model; hiring decisions; <b>pick the first non-marketing function</b> from demand data</td><td>The agent passes red-team tests and its cost cap holds</td></tr>
+      <tr><td><b>Jun</b></td><td>First agents (Expert steps): bounded, with budgets, approvals and red-team tests. Profit-opportunity ranker</td><td>Mid-year review against the model; hiring decisions; <b>pick the first non-marketing function</b> from demand data</td><td>The agent passes red-team tests and its cost cap holds</td></tr>
       <tr><td><b>Jul–Sep</b></td><td>Holiday 2027 stack for every live pack; SEO, Google ads; creators pack v1; first jobs in the new function; marketplace design</td><td>Holiday 2027 campaign from August: content, partner bundles, early-bird implementation</td><td>Holiday stack tested end to end on 3 business types</td></tr>
     </tbody>
   </table>
@@ -687,9 +912,9 @@
   </ul>
 </section>
 
-<!-- PART 8 TEAM -->
+<!-- PART 11 TEAM -->
 <section>
-  <div class="eyebrow" style="margin-top:22px">Part 8 · Team</div>
+  <div class="eyebrow" style="margin-top:22px">Part 11 · Team</div>
   <h1>Who <em>does what.</em></h1>
   <table>
     <thead><tr><th>Role</th><th>Now (Oct 2026 – Feb 2027)</th><th>From paid launch</th></tr></thead>
@@ -705,9 +930,9 @@
   <p class="small">The financial model plans 4 product and leadership staff in Year 1, growing to 30 by Year 5, plus support, onboarding and service teams sized by measured hours. Hire on measured load, not on the calendar. <span class="chip c-ass">Assumption</span></p>
 </section>
 
-<!-- PART 9 MONEY -->
+<!-- PART 12 MONEY -->
 <section class="part">
-  <div class="eyebrow">Part 9 · Money</div>
+  <div class="eyebrow">Part 12 · Money</div>
   <h1>Five ways <em>to earn.</em></h1>
   <p class="lead">From the current five-stream business model. These are planning assumptions, not contracted revenue. Model Year 1 starts at paid launch.</p>
 
@@ -764,15 +989,17 @@
   </ol></div>
 </section>
 
-<!-- PART 10 RISKS -->
+<!-- PART 13 RISKS -->
 <section>
-  <div class="eyebrow" style="margin-top:22px">Part 10 · Risks</div>
+  <div class="eyebrow" style="margin-top:22px">Part 13 · Risks</div>
   <h1>What could go wrong, <em>and what we do.</em></h1>
   <table>
     <thead><tr><th style="width:34%">Risk</th><th>What we do about it</th></tr></thead>
     <tbody>
       <tr><td><b>Too broad, too soon</b>: "for every business" means nothing to anyone</td><td>Sell exact jobs, not breadth. Four launch jobs, agencies first, and one new pack at a time under the opening rule (Part 2).</td></tr>
       <tr><td><b>Parts secretly only work for stores</b></td><td>Golden sets cover 2+ business types; launch parts must pass on all three test cases; industry reviewers check each pack.</td></tr>
+      <tr><td><b>Too complicated for beginners</b></td><td>Simple by default: next step only, plain words, Normal view first. We watch where people drop off on each step and fix that step.</td></tr>
+      <tr><td>Simulated research in the Grüns brain appears in public as if it were real</td><td>Public examples use saved public pages only. Anything built on simulated research is rebuilt from public reviews or labelled "simulated".</td></tr>
       <tr><td>People won't pay when free prompts exist</td><td>Prove it with paid sprints and pre-sales before building the paid site. Lead with finished, checked work, not prompts.</td></tr>
       <tr><td>Parts look done but aren't</td><td>Measured gates: code checks, golden sets, blind judges, zero costly mistakes.</td></tr>
       <tr><td>Course material leaks into products</td><td>Every part records its origin; the importer refuses non-own rows; everything is rewritten in our own words; terms are checked.</td></tr>
@@ -781,15 +1008,15 @@
       <tr><td>Model churn makes advice stale</td><td>Pages name classes, not models; one model file; dated re-tests.</td></tr>
       <tr><td>Test costs run away</td><td>Hard caps per run and per round; image renders capped separately.</td></tr>
       <tr><td>Services swallow the product</td><td>Every project must reuse parts; anything built twice becomes a part; time-tracking reviewed monthly.</td></tr>
-      <tr><td>Overlap with the separate "ecomOS" app</td><td>Inventory it before Section 1 so nothing is built twice.</td></tr>
+      <tr><td>Client data from the ecomOS (Gehna) dashboard leaks into the product</td><td>We copy its patterns only. The importer refuses client folders, and the leakage check from the Mercatura starter runs on every build.</td></tr>
       <tr><td>Safety and prompt injection</td><td>Red-team tests, approvals for risky actions, read-only connectors by default. We reduce risk; we never promise zero risk.</td></tr>
     </tbody>
   </table>
 </section>
 
-<!-- PART 11 SCORECARD + DECISIONS -->
+<!-- PART 14 SCORECARD + DECISIONS -->
 <section class="part">
-  <div class="eyebrow">Part 11 · Scorecard and decisions</div>
+  <div class="eyebrow">Part 14 · Scorecard and decisions</div>
   <h1>How we'll know it's working, <em>and what I need from you.</em></h1>
 
   <h2>Scorecard</h2>
@@ -810,12 +1037,12 @@
   <table>
     <thead><tr><th>#</th><th style="width:38%">Decision</th><th>My recommendation</th><th style="width:12%">Needed by</th></tr></thead>
     <tbody>
-      <tr><td>1</td><td>The four launch jobs (brand brain, static ad pack, landing-page audit, Starter Meta audit)</td><td>Yes. All four work for any business that sells online.</td><td>19 Oct</td></tr>
+      <tr><td>1</td><td>The four launch jobs (brand brain, static ad pack, landing-page audit, Meta ad audit as a ladder)</td><td>Yes. All four work for any business that sells online.</td><td>19 Oct</td></tr>
       <tr><td>2</td><td>Run the holiday sale sprint, and at what price</td><td>Yes. Test $1,500 (the consulting unit); range $1,000–2,500.</td><td>19 Oct</td></tr>
       <tr><td>3</td><td>Router for model tests</td><td>OpenRouter; you add the key to <code>.env</code> yourself</td><td>21 Oct</td></tr>
       <tr><td>4</td><td>Test-spend cap</td><td>$2 per run, $25 per round to start</td><td>21 Oct</td></tr>
       <tr><td>5</td><td>Two extra test cases: one software company, one service or course business</td><td>Yes; I'll bring a shortlist in Week 2</td><td>30 Oct</td></tr>
-      <tr><td>6</td><td>Is <code>KevCode-Absurd/ecomOS</code> the separate "ecommerce OS" app?</td><td>If yes, inventory it in Week 1</td><td>23 Oct</td></tr>
+      <tr><td>6</td><td><code>ecomOS</code> turns out to be the Gehna dashboard plus a product app on sample data. Reuse it?</td><td>Yes, its patterns only (never its data), for the Meta ads ladder</td><td>23 Oct</td></tr>
       <tr><td>7</td><td>Archive the old <code>ecommerce-workflow-platform</code> repo</td><td>Yes, archive it (no deleting)</td><td>Any time</td></tr>
       <tr><td>8</td><td>Course terms (Ecom Intelligence, Blue Sense, Nu Reach)</td><td>Read the terms; until then, private input only</td><td>Before site v0</td></tr>
       <tr><td>9</td><td>Clean-room rewrite of <code>copy-craft</code></td><td>Yes, based on our own tests</td><td>Before Section 2 ends</td></tr>
@@ -823,6 +1050,8 @@
       <tr><td>11</td><td>Brand name</td><td>A shortlist of 5 by Gate A. Pick one that isn't tied to one industry before site v0.</td><td>11 Dec</td></tr>
       <tr><td>12</td><td>How Year 1 is funded</td><td>Services first</td><td>Gate A</td></tr>
       <tr><td>13</td><td>What "Jev" is</td><td>Only needed if it's a router we should support</td><td>Any time</td></tr>
+      <tr><td>14</td><td>Sample numbers for data examples (no public business publishes its ad results)</td><td>A synthetic ad account labelled "sample numbers, not a real business", or your own ad account with permission</td><td>Dec</td></tr>
+      <tr><td>15</td><td>What "Creative Intelligence" UI refers to</td><td>I've read it as the ecomOS dashboard; the look comes from Creative Engine (Mercatura)</td><td>Before site design (Dec)</td></tr>
     </tbody>
   </table>
 
@@ -835,7 +1064,7 @@
       <tr><td>Start with deep, exact marketing tasks, then adjacent functions</td><td>Marketing first; new functions only under the opening rule</td></tr>
       <tr><td>Lead with exact jobs: page audit, Meta audit, BFCM static ad</td><td>The same three, plus the free brand brain as the entry point</td></tr>
       <tr><td>Test brands such as Rune where approved, plus held-out cases</td><td>Public test cases across three business types; Rune only if you approve it</td></tr>
-      <tr><td>Prove in order: manual → download pack → host adapter → routines → agents</td><td>The same order: sprints → tested downloads → site → routines (May) → agents (Jun)</td></tr>
+      <tr><td>Prove in order: manual → download pack → host adapter → routines → agents</td><td>The same order: sprints → tested downloads → site → routines (May) → agents (Jun). Customers climb the same order on each job's ladder.</td></tr>
     </tbody>
   </table>
 </section>
@@ -852,7 +1081,10 @@
       <tr><td><b>Function</b></td><td>An area of work, such as creative and content or paid media</td></tr>
       <tr><td><b>Industry pack</b></td><td>The brain fields, examples, thresholds and wording that fit a part to one industry. It never copies the part.</td></tr>
       <tr><td><b>Brand brain</b></td><td>One file holding a business's facts, what it sells, its offers, claims, voice and buyers, which any AI can load</td></tr>
-      <tr><td><b>Tier</b></td><td>How deep a part goes: Starter, Standard, Advanced, Production</td></tr>
+      <tr><td><b>Ladder / step</b></td><td>The path for one job, from by hand (0) to agents (8). Each step automates a bit more and reuses the one before.</td></tr>
+      <tr><td><b>Level</b></td><td>How much setup a step needs: Beginner, Intermediate, Advanced, Expert</td></tr>
+      <tr><td><b>Connector (MCP)</b></td><td>A one-time link that lets an AI read a tool such as Meta Ads or Google Sheets for you</td></tr>
+      <tr><td><b>Mini app</b></td><td>A single page with a Refresh button and filters, built on your own data</td></tr>
       <tr><td><b>Stack</b></td><td>A ready-made chain of parts for a goal, e.g. "holiday sale stack"</td></tr>
       <tr><td><b>Golden set</b></td><td>A fixed set of test inputs with known good answers, used to grade every version</td></tr>
       <tr><td><b>Blind judge</b></td><td>A different AI model that grades outputs without knowing which version made them</td></tr>

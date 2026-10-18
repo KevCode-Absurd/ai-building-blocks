@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState, type CSSProperties, type KeyboardEvent as ReactKeyEvent, type ReactNode } from "react";
 import { B8, ICONS } from "./lib/pixel";
-import { useSeen, useTyped } from "./lib/typing";
+import { useScrollTyped, useSeen, useTyped } from "./lib/typing";
 import { type Block, kindInfo, pathOf, taskOf } from "./lib/data";
 import { Link } from "./lib/router";
 import { kits, useStore } from "./lib/store";
@@ -63,17 +63,20 @@ export function PixelIcon({ id }: { id: string }) {
   );
 }
 
-/** The card's peek at the output. Each time you point at the card it types itself out again. */
-/** The card's description, in a box. It types itself out the first time the card is on screen, and again on every hover. */
+/** The card's description, in a box. It types itself out the first time the card is on screen, and again on every hover.
+ *  On a phone it writes itself as you scroll the card up the screen. */
 function Peek({ text, round }: { text: string; round: number }) {
   const [ref, seen] = useSeen<HTMLSpanElement>(0.6);
-  const go = seen ? round + 1 : 0;
+  const [box, scrolled] = useScrollTyped<HTMLSpanElement>(text.length);
+  const go = seen && scrolled === null ? round + 1 : 0;
   const { n, done } = useTyped(text, go > 0, Math.min(1100, 300 + text.length * 6), go);
-  const k = go > 0 ? n : text.length;
+  const k = scrolled ?? (go > 0 ? n : text.length);
+  const typing = scrolled !== null ? k < text.length : go > 0 && !done;
+  const both = (el: HTMLSpanElement | null) => { (ref as { current: HTMLSpanElement | null }).current = el; (box as { current: HTMLSpanElement | null }).current = el; };
   return (
-    <span className="peek typed" ref={ref} data-done={String(done || go === 0)}>
+    <span className="peek typed" ref={both} data-done={String(!typing)}>
       <span className="visually-hidden">{text}</span>
-      <span aria-hidden="true">{text.slice(0, k)}{go > 0 && !done && <span className="cursor" />}<span className="ghost">{text.slice(k)}</span></span>
+      <span aria-hidden="true">{text.slice(0, k)}{typing && <span className="cursor" />}<span className="ghost">{text.slice(k)}</span></span>
     </span>
   );
 }
@@ -102,7 +105,8 @@ export function BlockCard({ b }: { b: Block }) {
   const wake = () => setRound((r) => r + 1);
   const view = b.category === "orchestrator" ? `View the ${b.steps.length} steps` : `View the ${kind.name.toLowerCase()}`;
   return (
-    <Link to={pathOf(b)} className="card" data-testid="block-card" data-slug={b.slug} data-kind={kind.id} onMouseEnter={wake} onFocus={wake}>
+    <Link to={pathOf(b)} className="card" data-testid="block-card" data-slug={b.slug} data-kind={kind.id} onMouseEnter={wake} onFocus={wake}
+      style={{ "--pat": `var(--pat-${taskOf(b).id})` } as CSSProperties}>
       <span className="meta"><span className="kind">{kind.name}</span><span className="type">{taskOf(b).name}</span></span>
       <span className="nm">{b.name}</span>
       <Peek text={b.summary} round={round} />

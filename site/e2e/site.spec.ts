@@ -329,3 +329,25 @@ test("phone width: no sideways scroll on home or a block page @mobile", async ({
     expect(overflow, url).toBeLessThanOrEqual(0);
   }
 });
+
+test("phone width: card descriptions write themselves as you scroll @mobile", async ({ page }) => {
+  await page.goto("/");
+  const peek = page.locator(".card .peek").first();
+  const shown = () => peek.evaluate((p) => { const t = p.querySelector("[aria-hidden]")!; return t.textContent!.length - t.querySelector(".ghost")!.textContent!.length; });
+  const total = (await peek.locator(".visually-hidden").textContent())!.length;
+  // Card just below the screen: nothing written yet.
+  await peek.evaluate((p) => scrollTo(0, p.getBoundingClientRect().top + scrollY - innerHeight));
+  await expect.poll(shown).toBe(0);
+  // Halfway up the screen: all of it.
+  await peek.evaluate((p) => scrollTo(0, p.getBoundingClientRect().top + scrollY - innerHeight / 2));
+  await expect.poll(shown).toBe(total);
+});
+
+test("each job has its own hover pattern on the cards", async ({ page }) => {
+  await page.goto("/");
+  await expect(cards(page).first()).toBeVisible();
+  const pats = await page.getByTestId("block-card").evaluateAll((els) => [...new Set(els.map((e) => (e as HTMLElement).style.getPropertyValue("--pat")))]);
+  expect(pats.length).toBeGreaterThan(3);
+  const defined = await page.evaluate((ps) => ps.every((p) => getComputedStyle(document.documentElement).getPropertyValue(p.slice(4, -1)).startsWith("url(")), pats);
+  expect(defined).toBe(true);
+});

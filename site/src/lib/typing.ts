@@ -27,6 +27,35 @@ export function useTyped(text: string, run: boolean, ms: number, restart = 0) {
   return { n, done: n >= text.length, replay, skip };
 }
 
+/** On touch screens there's no hover, so text writes itself as you scroll: none showing as the element
+ *  comes up from the bottom of the screen, all of it by the time it's a third of the way up. Returns null on other screens. */
+export function useScrollTyped<T extends Element>(len: number) {
+  const ref = useRef<T>(null);
+  const [touch] = useState(() => typeof matchMedia !== "undefined" && matchMedia("(hover: none)").matches && !still());
+  const [n, setN] = useState(len);
+  useEffect(() => {
+    const el = ref.current;
+    if (!touch || !el) return;
+    let raf = 0;
+    const measure = () => {
+      raf = 0;
+      const top = el.getBoundingClientRect().top, vh = innerHeight;
+      const p = Math.min(1, Math.max(0, (vh * 0.95 - top) / (vh * 0.3)));
+      setN(Math.round(len * p));
+    };
+    const onScroll = () => { if (!raf) raf = requestAnimationFrame(measure); };
+    // Only listen while the element is near the screen.
+    const io = new IntersectionObserver(([e]) => {
+      if (e.isIntersecting) { addEventListener("scroll", onScroll, { passive: true }); onScroll(); }
+      else removeEventListener("scroll", onScroll);
+    }, { rootMargin: "20% 0px" });
+    io.observe(el);
+    measure();
+    return () => { io.disconnect(); removeEventListener("scroll", onScroll); cancelAnimationFrame(raf); };
+  }, [touch, len]);
+  return [ref, touch ? n : null] as const;
+}
+
 /** True once the element has scrolled into view. */
 export function useSeen<T extends Element>(threshold = 0.2) {
   const ref = useRef<T>(null);

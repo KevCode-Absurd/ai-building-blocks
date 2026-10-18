@@ -485,9 +485,9 @@ body.globe-dragging, body.globe-dragging * { user-select: none !important; -webk
 .card { position: relative; overflow: hidden; }
 .card > span { position: relative; z-index: 1; }
 .card::after { content: ""; position: absolute; right: 0; bottom: 0; width: 160px; height: 160px; z-index: 0; pointer-events: none; background: var(--text);
-  -webkit-mask: var(--dither-corner) right bottom / 160px 160px no-repeat; mask: var(--dither-corner) right bottom / 160px 160px no-repeat;
+  -webkit-mask: var(--pat, var(--dither-corner)) right bottom / 160px 160px no-repeat; mask: var(--pat, var(--dither-corner)) right bottom / 160px 160px no-repeat;
   opacity: 0; transition: opacity 0.24s steps(4); }
-.card:hover::after, .card:focus-visible::after { opacity: 0.09; }
+.card:hover::after, .card:focus-visible::after { opacity: 0.13; }
 .card .peek .cursor { width: 0.55em; height: 1.1em; margin-left: 1px; }
 .decode { white-space: pre; }
 

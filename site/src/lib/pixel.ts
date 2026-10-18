@@ -32,7 +32,33 @@ export function installDither(root = document.documentElement) {
     const d = Math.hypot(40 - x, 40 - y) / 40;
     return B4[y % 4][x % 4] < Math.max(0, 1 - d) * 18;
   }));
+  // One pattern per job, fading out from the card's bottom-right corner the same way.
+  for (const [job, on] of Object.entries(PATTERNS)) {
+    root.style.setProperty(`--pat-${job}`, cells(40, 40, (x, y) => {
+      const d = Math.hypot(40 - x, 40 - y) / 40;
+      return on(x, y) && B4[y % 4][x % 4] < Math.max(0, 1 - d) * 34;
+    }));
+  }
 }
+
+/** A small repeating picture of each job, drawn in lit cells. */
+const PATTERNS: Record<string, (x: number, y: number) => boolean> = {
+  "write-ad-copy": (x, y) => y % 4 === 1 && (x + 7 * Math.floor(y / 4)) % 13 < 10, // lines of text
+  "make-image-ads": (x, y) => (Math.floor(x / 3) + Math.floor(y / 3)) % 2 === 0, // checks
+  "make-video-ads": (x, y) => x % 6 < 4 && !(x % 6 === 1 && y % 4 === 1), // film strip
+  "plan-ad-tests": (x, y) => (x % 8 === 3 && y % 8 > 0 && y % 8 < 7) || (y % 8 === 3 && x % 8 > 0 && x % 8 < 7), // plus signs
+  "check-ads": (x, y) => { const a = x % 10, b = y % 10; return (a <= 3 && b >= 4 + a - 1 && b <= 5 + a) || (a >= 3 && a <= 8 && b >= 8 - a + 3 - 1 && b <= 8 - a + 3 + 1 && b < 9); }, // ticks
+  "read-ad-results": (x, y) => x % 4 < 2 && 39 - y < 8 + ((x * 7) % 23) + Math.floor(x / 2), // bar chart
+  "audit-landing-page": (x, y) => x % 5 < 2 && y % 5 < 2, // dot grid
+  "write-landing-page": (x, y) => y % 5 !== 0 && (x + (Math.floor(y / 5) % 2) * 4) % 8 !== 0, // blocks of a page
+  "product-photos": (x, y) => Math.round(Math.hypot(40 - x, 40 - y)) % 4 === 0, // a lens
+  "understand-customers": (x, y) => { const a = (x + (Math.floor(y / 8) % 2) * 4) % 8, b = y % 8; return (b <= 1 && a >= 3 && a <= 4) || (b >= 3 && b <= 5 && a >= 2 && a <= 5); }, // a crowd
+  "brand-file": (x, y) => (x - y + 40) % 5 < 2, // stripes
+  "study-competitors": (x, y) => Math.abs(y % 6 - 2.5 - 2 * Math.sin(x / 2.5)) < 0.8, // waves
+  "make-offer": (x, y) => Math.abs((x % 8) - 3.5) + Math.abs((y % 8) - 3.5) < 3, // diamonds
+  "grow-social": (x, y) => { const a = x % 8, b = y % 8; return (b <= 3 && Math.abs(a - 3.5) <= b + 0.5) || (b > 3 && b < 7 && a >= 3 && a <= 4); }, // arrows going up
+  "set-up-ai": (x, y) => (((Math.sin(x * 12.9898 + y * 78.233) * 43758.5453) % 1) + 1) % 1 < 0.4, // bits
+};
 
 /** 8 by 8 icons for the job functions. # is a lit pixel. */
 export const ICONS: Record<string, string[]> = {

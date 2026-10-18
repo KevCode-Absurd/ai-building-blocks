@@ -31,19 +31,19 @@ export default function Install({ b, skill, toast }: { b: Block; skill: string |
   const zip = async () => {
     if (!skill) return;
     download(await buildSkillZip(b.slug, skill, b.addon, b.files ?? []), `${b.slug}.zip`);
-    toast(`Downloaded ${b.slug}.zip`);
+    toast("Skill downloaded");
   };
   const file = () => { if (skill) { download(new Blob([skill], { type: "text/markdown" }), "SKILL.md"); toast("Downloaded SKILL.md"); } };
   const copy = async () => { if (skill) { await navigator.clipboard.writeText(skill).catch(() => {}); toast("Skill copied"); } };
   const chars = skill?.length ?? 0;
   const n = chars.toLocaleString("en-US");
-  const zipBtn = <button className="btn btn-primary btn-sm" disabled={!skill} onClick={zip} data-testid="install-zip">Download {b.slug}.zip</button>;
+  const zipBtn = <button className="btn btn-primary btn-sm" disabled={!skill} onClick={zip} data-testid="install-zip">Download the skill</button>;
   const copyBtn = <button className="btn btn-primary btn-sm" disabled={!skill} onClick={copy}>Copy the skill</button>;
 
   const steps: Record<Tab, { do: ReactNode[]; then: ReactNode }> = {
     claude: {
       do: [
-        <>Download the skill as a folder Claude can read. {zipBtn}</>,
+        <>Get the skill as a folder Claude can read. {zipBtn}</>,
         <>In Claude, open <b>Settings</b>, then <b>Capabilities</b>, and make sure <b>Code execution and file creation</b> is on. Skills need it.</>,
         <>Under <b>Skills</b>, click <b>Upload skill</b> and pick the .zip. Leave it switched on.</>,
       ],
@@ -51,7 +51,7 @@ export default function Install({ b, skill, toast }: { b: Block; skill: string |
     },
     code: {
       do: [
-        <>Download the skill. {zipBtn}</>,
+        <>Get the skill as a .zip file. {zipBtn}</>,
         <>Unzip it into your skills folder, so the file ends up at <code>~/.claude/skills/{b.slug}/SKILL.md</code>. On a Mac or Linux:<Line text={`unzip ~/Downloads/${b.slug}.zip -d ~/.claude/skills/`} toast={toast} what="command" />On Windows, in PowerShell:<Line text={`Expand-Archive "$HOME\\Downloads\\${b.slug}.zip" "$HOME\\.claude\\skills"`} toast={toast} what="command" /></>,
         <>To share it with your team, unzip it into <code>.claude/skills/</code> inside the project and commit it.</>,
       ],

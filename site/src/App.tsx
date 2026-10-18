@@ -211,7 +211,7 @@ function Home({ c, toast }: { c: Catalogue | null; toast: (m: string) => void })
         <Globe />
         <div className="wrap hero-in">
           <h1 className="h1">Making humanity AI native</h1>
-          <Typewriter text="Stop doing the work AI could do for you. Get ad copy, landing page fixes and video scripts from ready-made skills you add to your AI once." />
+          <Typewriter text="Stop doing the work AI could do for you. Save hours every week, and spend them on the work only you can do." />
           <div className="hero-actions">
             <Link to="/#library" className="btn btn-primary">Browse the blocks <ArrowIcon /></Link>
             <Link to="/#build" className="btn btn-dark">Build a workflow</Link>

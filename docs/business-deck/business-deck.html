@@ -152,7 +152,7 @@
   <h1>The business and build deck.<br><em>A free library that makes AI useful for every business.</em></h1>
   <p class="sub">What the platform is, who it serves, how big the market is, why we start with ecommerce, how we grow into the markets next to it, how the site works, the architecture, and how we build it from scratch, week by week.</p>
   <div class="meta">
-    <div><b>18 October 2026</b>Version 2 · one library with filters and skill families</div>
+    <div><b>18 October 2026</b>Version 3 · library, filters, skill families, Make it yours</div>
     <div><b>Free first</b>Nothing is sold at the start</div>
     <div><b>Private</b>Contains rights-sensitive notes</div>
     <div><b>Repo</b>KevCode-Absurd/ai-building-blocks</div>
@@ -188,7 +188,7 @@
     <li><b>We don't store people's data.</b><span>No business data, files, brand brains, results or keys are kept on the site. Brand brains and mini tools run in the person's own browser and download to their device. We help people set up storage themselves (their own Drive, Notion or folder). Accounts hold only what the community needs: an email, comments, votes and saved lists. <span class="chip c-dec">Decided</span></span></li>
     <li><b>Everything is free. Comments are for anyone signed in.</b><span>A free account lets you comment, ask for help, vote and save. We answer questions in the comments. Paid priority help and a paid community come later, not now. <span class="chip c-dec">Decided</span></span></li>
     <li><b>Stars, votes and saved lists.</b><span>You asked whether to have stars, up and down votes and favourites that can feed workflows later. My recommendation is on slide 26: one "useful" vote and "it worked / it didn't" on listings, up and down votes on comments, and a private star that collects into <b>kits</b> you can turn into your own workflow. <span class="chip c-pro">Proposed</span> (decision 13)</span></li>
-    <li><b>The model budget is the credits we have.</b><span>About $200 of Anthropic credit (until 27 October), $60–70 Google, $20 DeepSeek and $10 OpenAI, topped up when needed. The per-run cap of $2 and per-round cap of $25 stay as a safety stop. The Anthropic credit goes first, in a credit sprint (slide 40). Decision 2 is closed. All four keys are now in your <code>.env</code> in the handoff folder, outside the repo. <span class="chip c-dec">Decided</span></span></li>
+    <li><b>The model budget is the credits we have.</b><span>About $200 of Anthropic credit (until 27 October), $60–70 Google, $20 DeepSeek and $10 OpenAI, topped up when needed. The per-run cap of $2 and per-round cap of $25 stay as a safety stop. The Anthropic credit goes first, in a credit sprint (slide 43). Decision 2 is closed. All four keys are now in your <code>.env</code> in the handoff folder, outside the repo. <span class="chip c-dec">Decided</span></span></li>
     <li><b>One library with filters, and skill families.</b><span>No separate boards. One list with six types (prompts, skills, routines, workflows, agents, apps), narrowed by business type, function and platform. Each skill is a family: a general version plus versions for ecommerce, lead gen and so on, built from one shared core. /ecommerce becomes a saved view of the library. Slides 23–24. <span class="chip c-pro">Proposed</span> (decision 20)</span></li>
   </ol>
 </section>
@@ -289,7 +289,7 @@
       <tr><td><b>Free</b></td><td class="c yes">yes</td><td class="c no">mostly paid</td><td class="c yes">yes</td><td class="c part">needs a plan</td><td class="c yes">yes, for good</td></tr>
     </tbody>
   </table>
-  <p class="small">"10×" here means one person goes from finding a promising idea to having it work in their own tool on their own business in minutes, with confidence, instead of an afternoon of trial and error. We measure it as <b>time to first working result</b> and <b>"it worked" reports</b> (slide 41).</p>
+  <p class="small">"10×" here means one person goes from finding a promising idea to having it work in their own tool on their own business in minutes, with confidence, instead of an afternoon of trial and error. We measure it as <b>time to first working result</b> and <b>"it worked" reports</b> (slide 44).</p>
 </section>
 
 <!-- 8 VALUE MECHANISMS -->
@@ -327,7 +327,7 @@
     <div class="card"><h4>3 · Supply is exploding, unchecked</h4><p>Anthropic's own skills repo has 180k+ GitHub stars, and one directory claims to index 3M+ skills. Volume isn't the problem any more. Nobody tests, explains or safety-checks it for non-developers. That's the job.</p></div>
   </div>
   <div class="note">Models change every few months. A library that <b>re-tests</b> its listings when they do, and shows the cost on each lab, stays useful in a way a static pack or video can't.</div>
-  <p class="src">Sources: slide 44. Reliability is marked there. Usage counts overlap between assistants, so they aren't added together.</p>
+  <p class="src">Sources: slide 47. Reliability is marked there. Usage counts overlap between assistants, so they aren't added together.</p>
 </section>
 
 <!-- 10 TAM SAM SOM PEOPLE -->
@@ -391,7 +391,7 @@
       <div class="note warn">The old plan's $348k Year 1 model is retired. Year 1 is a build year with little or no income, by design. The money model is rebuilt in April 2027 from three months of real traffic (decision 17).</div>
     </div>
   </div>
-  <p class="src">Sources and reliability: slide 44. Weak sources are labelled there and used only as ranges.</p>
+  <p class="src">Sources and reliability: slide 47. Weak sources are labelled there and used only as ranges.</p>
 </section>
 
 <!-- 12 BEACHHEAD -->
@@ -449,7 +449,7 @@
     </tbody>
   </table>
   <div class="dark"><p><b>Our position:</b> the free, neutral, tested library. Every listing is shown working, compared across four labs with its cost, explained in plain words, safety-checked, kept fresh and answered in public. We don't sell software or prompts, so we can recommend whatever works best.</p></div>
-  <p class="src">Scale figures are self-reported or third-party (slide 44).</p>
+  <p class="src">Scale figures are self-reported or third-party (slide 47).</p>
 </section>
 
 <!-- 15 BUSINESS MODEL -->
@@ -566,8 +566,8 @@
 <section class="slide div">
   <div class="eyebrow">Part B</div>
   <h1>The site: <em>what people see and do.</em></h1>
-  <p>The site map, the home and library pages, filters and skill families, the listing page, how voting, stars and kits work, what an account holds (and doesn't), and how comments and help work.</p>
-  <div class="list"><span>Site map</span><span>Home</span><span>Library and filters</span><span>Skill families</span><span>Listing page</span><span>Votes and stars</span><span>Kits → workflows</span><span>Accounts and data</span><span>Comments and help</span></div>
+  <p>The site map, the home and library pages, filters and skill families, the listing page, how voting, stars and kits work, how people learn to test, tighten and feed their own AI, what an account holds (and doesn't), and how comments and help work.</p>
+  <div class="list"><span>Site map</span><span>Home</span><span>Library and filters</span><span>Skill families</span><span>Listing page</span><span>Votes and stars</span><span>Kits → workflows</span><span>Make it yours</span><span>Accounts and data</span><span>Comments and help</span></div>
 </section>
 
 <!-- 19 SITE MAP -->
@@ -797,6 +797,107 @@
     <div class="card"><h4>Nesting ("recursive")</h4><p>A kit can include a workflow, and a published workflow can become one stage of a bigger kit. The input and output check runs at every level, so nested pieces still fit together.</p></div>
   </div>
   <div class="note"><b>Built in stages.</b> At launch: stars, kits, share and copy. Then "turn into a workflow" with the input and output check (March 2027, alongside the workflow pages). Running a kit on the site comes later, if people ask for it (site v3).</div>
+</section>
+
+<!-- MAKE IT YOURS -->
+<section class="slide">
+  <div class="eyebrow">Make it yours · decision 21 <span class="chip c-pro">Proposed</span></div>
+  <h1>Teach people to test, tighten and own their AI, <em>not just copy ours.</em></h1>
+  <p class="lead">Once a listing works, people ask: is it good, how do I make it better, how do I make it mine? A ten-step track answers that. It's built mostly from our own factory tools, and it all runs on the person's machine with their own key. We never see their data.</p>
+  <table class="tight">
+    <thead><tr><th>#</th><th style="width:17%">Step</th><th>What they learn</th><th style="width:30%">What we give them</th><th style="width:11%">When</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td><b>Check by eye</b></td><td>Judge an output against a written checklist, not a feeling</td><td>The checklist from every listing</td><td>Launch</td></tr>
+      <tr><td>2</td><td><b>Test set</b></td><td>10–20 fixed inputs (normal, hard, edge) so every change is judged on the same cases</td><td>Test set builder; each listing's own test set</td><td>Launch</td></tr>
+      <tr><td>3</td><td><b>Evals</b></td><td>Code checks first, then an AI judge from another lab with a scoring guide, then blind A vs B</td><td>Eval kit: a Google Sheet and a Python script, on their own key</td><td>Launch</td></tr>
+      <tr><td>4</td><td><b>Tighten</b></td><td>Change one thing, re-run, keep it only if the score goes up; re-run old cases so nothing breaks</td><td>Prompt tightener; before and after from our listings</td><td>Launch</td></tr>
+      <tr><td>5</td><td><b>Right context</b></td><td>What to give, in what order, in labelled blocks (slide 29)</td><td>Context pack builder and templates</td><td>Launch</td></tr>
+      <tr><td>6</td><td><b>Prepare your data</b></td><td>Pull, clean, protect, tag and digest reviews, call transcripts, tickets, surveys (slide 29)</td><td>Review miner, transcript tagger, digest builder; source guides</td><td>Reviews at launch; rest Feb–Apr</td></tr>
+      <tr><td>7</td><td><b>Your style and material</b></td><td>Use a book, past copy or playbooks the right way (slide 30)</td><td>Style guide extractor, example picker, look-it-up guides</td><td>Feb–Apr 2027</td></tr>
+      <tr><td>8</td><td><b>An interface</b></td><td>No code first (Custom GPT, Gem, Claude Project, Sheets); then a small web app with the key on the server</td><td>Interface guides; a starter app template with a spend cap</td><td>No-code at launch; app Feb–Apr</td></tr>
+      <tr><td>9</td><td><b>Cheaper and faster</b></td><td>Cheapest model that passes, prompt caching, batch runs, less context, cheap first and top only when needed</td><td>AI run cost tool; "fine-tune or prompt?" break-even calculator</td><td>Feb–Apr 2027</td></tr>
+      <tr><td>10</td><td><b>Train a model</b></td><td>When fine-tuning pays off, building input → output pairs, distilling a top model into a cheaper one, before-and-after evals</td><td>Advanced guides; training-pair builder</td><td>By demand, May 2027+</td></tr>
+    </tbody>
+  </table>
+  <div class="g3">
+    <div class="note"><b>Built from what we already make.</b> <code>run-test</code>, <code>grade</code>, the blind judge and the cost ledger become the public eval kit.</div>
+    <div class="note"><b>On every listing:</b> "Test it yourself" (its test set and checklist) and "Make your own version" (step 4).</div>
+    <div class="note"><b>Where it lives:</b> lessons in Learn, skills under the AI operations function, the eval kit and calculators under Apps.</div>
+  </div>
+</section>
+
+<!-- CONTEXT AND DATA -->
+<section class="slide">
+  <div class="eyebrow">Make it yours · context and data</div>
+  <h1>The right context, in the right order, <em>from well-prepared data.</em></h1>
+  <div class="g2">
+    <div>
+      <h2 style="margin-top:0">What goes in, in this order</h2>
+      <table class="tight">
+        <thead><tr><th>#</th><th style="width:22%">Part</th><th>What goes in</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td><b>Task</b></td><td>One sentence: what to make and what it's for</td></tr>
+          <tr><td>2</td><td><b>Who it's for</b></td><td>Audience, their problem, where they'll see it (cold, warm, returning)</td></tr>
+          <tr><td>3</td><td><b>Brand brain</b></td><td>Only the parts this task needs: voice, offer, usable proof, words to avoid</td></tr>
+          <tr><td>4</td><td><b>Rules</b></td><td>Musts and must-nots as a checklist, so the same list grades the output</td></tr>
+          <tr><td>5</td><td><b>Reference</b></td><td>The data digest and facts, near the top, each in its own labelled block (<code>&lt;reviews&gt;</code>, <code>&lt;product&gt;</code>), every quote with an ID</td></tr>
+          <tr><td>6</td><td><b>Examples</b></td><td>3–10 of your best outputs, and one bad one with why</td></tr>
+          <tr><td>7</td><td><b>The input</b></td><td>Today's brief, last, so the model reads the material first</td></tr>
+          <tr><td>8</td><td><b>Output format</b></td><td>The exact shape, and "cite the quote IDs you used"</td></tr>
+        </tbody>
+      </table>
+      <div class="note"><b>Less, but labelled.</b> Give the model the right tenth of your data, clearly marked, not all of it. Save the pack as a file or Project so it's the same every time.</div>
+    </div>
+    <div>
+      <h2 style="margin-top:0">A big data set in five stages</h2>
+      <p class="small" style="color:var(--ink)">Pasting 5,000 reviews or 40 call transcripts in raw gives generic output: the model skims, misses patterns and invents averages.</p>
+      <table class="tight">
+        <thead><tr><th style="width:18%">Stage</th><th>What happens</th><th style="width:30%">Reviews example</th></tr></thead>
+        <tbody>
+          <tr><td><b>1 Pull</b></td><td>Exports (Shopify, review apps, Klaviyo, Meta, support desk), call recorders (Gong, Fathom, Zoom), surveys, Sheets; later a connector or routine</td><td>5,000 reviews from the review app</td></tr>
+          <tr><td><b>2 Clean</b></td><td>Remove duplicates, spam and empty rows; one row per review or speaker turn, with date, product and an ID</td><td>4,870 rows</td></tr>
+          <tr><td><b>3 Protect</b></td><td>Strip names, emails, phones and order numbers before any model sees it; keep the raw file on your side</td><td>No personal details</td></tr>
+          <tr><td><b>4 Tag</b></td><td>A cheap model labels theme, product, objection, feeling and buying stage; check 20 by hand</td><td>Fit, smell, delivery, price…</td></tr>
+          <tr><td><b>5 Digest</b></td><td>Top themes with counts, 3–5 exact quotes each with IDs, what changed since last time</td><td>One page, into the reference block</td></tr>
+        </tbody>
+      </table>
+      <div class="note">Numbers (ad results, orders) go through a Sheet first. The model gets a small summary table, never the raw export.</div>
+    </div>
+  </div>
+</section>
+
+<!-- CHECKING A COPYWRITER -->
+<section class="slide">
+  <div class="eyebrow">Make it yours · checking the output</div>
+  <h1>How to know your copywriter agent is good, <em>and how to teach it from a book.</em></h1>
+  <div class="g64">
+    <div>
+      <table class="tight">
+        <thead><tr><th style="width:19%">Check</th><th>How</th><th style="width:33%">Catches</th></tr></thead>
+        <tbody>
+          <tr><td><b>Code checks</b></td><td>Length, required parts (hook, offer, call to action), banned words and claims, format</td><td>Broken or off-brief output, instantly and free</td></tr>
+          <tr><td><b>Grounded claims</b></td><td>Every claim cites a quote ID or brain fact; a script checks the IDs exist and match</td><td>Invented reviews, made-up numbers, claims you can't make</td></tr>
+          <tr><td><b>Copying check</b></td><td>Flags any run of 8+ words taken from the book, a competitor or a review</td><td>Plagiarism; reviews pasted as ad copy</td></tr>
+          <tr><td><b>Checklist judge</b></td><td>An AI judge from another lab scores each output against the rules and voice, with reasons</td><td>Wrong voice, weak hooks, missed rules</td></tr>
+          <tr><td><b>Blind A vs B</b></td><td>New version against the old one on the same briefs, order hidden</td><td>Whether a change really helped</td></tr>
+          <tr><td><b>Your eye</b></td><td>Read the top and bottom 5 each round; each finding becomes a new check</td><td>What the checks can't see yet</td></tr>
+          <tr><td><b>Real results</b></td><td>Run the winners; feed click-through and conversion back into the test set</td><td>The gap between "scores well" and "sells"</td></tr>
+        </tbody>
+      </table>
+      <p class="small"><b>The test set:</b> 15–20 fixed briefs: normal, hard (thin data, a strict claim rule) and edge cases (a product with no reviews). Every change to the prompt, context or model is judged on the same briefs.</p>
+    </div>
+    <div>
+      <h2 style="margin-top:0">Teaching it a book, in this order</h2>
+      <ol style="font-size:9pt">
+        <li><b>Pull out the principles</b> into your own style guide, in your own words, with page references. Most of the value is here.</li>
+        <li><b>Add examples:</b> 5–20 of your own best pieces, each with a note on why it works.</li>
+        <li><b>Let it look things up:</b> the full text kept privately in a Claude Project, Gem or file search.</li>
+        <li><b>Fine-tune only after that,</b> with hundreds of good pairs and a cost or speed reason. Most people never need it.</li>
+        <li><b>Test after every step</b> with the same evals, including the copying check.</li>
+      </ol>
+      <div class="note warn"><b>Rights:</b> use material you own or have a licence for, keep it private, and never publish its passages. The guides say this plainly; they aren't legal advice.</div>
+    </div>
+  </div>
 </section>
 
 <!-- 25 ACCOUNTS DATA -->
@@ -1058,7 +1159,7 @@
       <table class="tight">
         <thead><tr><th>Lab</th><th class="num">Credit now</th><th>What we use it for</th><th style="width:22%">Plan</th></tr></thead>
         <tbody>
-          <tr><td><b>Anthropic (Claude)</b></td><td class="num">~$200</td><td>Idea cards, drafting and fixing listings, top-model tests, intake decisions</td><td><b>Use by 27 Oct</b> in the credit sprint (slide 40)</td></tr>
+          <tr><td><b>Anthropic (Claude)</b></td><td class="num">~$200</td><td>Idea cards, drafting and fixing listings, top-model tests, intake decisions</td><td><b>Use by 27 Oct</b> in the credit sprint (slide 43)</td></tr>
           <tr><td><b>Google (Gemini)</b></td><td class="num">~$60–70</td><td>Gemini tests (Flash and Pro), reading long documents, YouTube links when there's no transcript</td><td>Steady, Nov–Jan</td></tr>
           <tr><td><b>DeepSeek</b></td><td class="num">~$20</td><td>Cheap-class tests, matching cards to listings, spam screening</td><td>Lasts months at cheap rates</td></tr>
           <tr><td><b>OpenAI (GPT)</b></td><td class="num">~$10</td><td>GPT tests and the blind judge (a judge never grades its own lab's work)</td><td>Top up about $30–50 by December <span class="chip c-ass">Assumption</span></td></tr>
@@ -1146,8 +1247,8 @@
   <div class="phase">
     <div class="now"><h4>0 · Foundations</h4><div class="when">19 Oct – 1 Nov</div><ul><li>Listing format v1, tag list and families</li><li>Factory tools: import, check, test, grade, exports</li><li>Credit sprint: idea cards from our 403 learning guides, golden test sets</li><li>Port order for all 263 own items</li></ul><div class="gate" style="background:#fff">Gate 0: one listing end to end; page template approved</div></div>
     <div><h4>1 · Content engine</h4><div class="when">2 Nov – 11 Dec</div><ul><li>Brain and creative sections ported: general cores + ecommerce versions</li><li>8 mini tools</li><li>scan-skill; 20 trap skills</li><li>Intake v0: transcripts, articles, GitHub</li><li>Site skeleton: library, filters, sign-in, comments</li></ul><div class="gate">Gate A (11 Dec): sections ported; 5+ imports safe; 5 sources through intake; 4 mini tools in all five ways</div></div>
-    <div><h4>2 · Site v0 and launch</h4><div class="when">12 Dec – 19 Jan</div><ul><li>Search, library with filters, /ecommerce view, guides, mini tools and embeds, Learn</li><li>Votes, stars, kits, follows</li><li>Moderation queue; mobile check</li><li>Seed posts, 6 videos</li></ul><div class="gate">Gate B: 50+ general, 25+ /ecommerce, 10+ imports, 20 sources, 10 guides, 8 mini tools; site public 19 Jan</div></div>
-    <div><h4>3 · Grow</h4><div class="when">Feb – Apr 2027</div><ul><li>Intake v1, always on: ~15 sources a week</li><li>20+ tool guides; new mini tools</li><li>Kits → workflows</li><li>SaaS pack and versions; <b>/saas view in April</b>; site v1</li></ul><div class="gate">Gate: 10k monthly visits; 1,000 subscribers; 500 weekly returning users</div></div>
+    <div><h4>2 · Site v0 and launch</h4><div class="when">12 Dec – 19 Jan</div><ul><li>Search, library with filters, /ecommerce view, guides, mini tools and embeds, Learn</li><li>Votes, stars, kits, follows</li><li>Make it yours steps 1–5, eval kit</li><li>Moderation queue; mobile check</li><li>Seed posts, 6 videos</li></ul><div class="gate">Gate B: 50+ general, 25+ /ecommerce, 10+ imports, 20 sources, 10 guides, 8 mini tools; site public 19 Jan</div></div>
+    <div><h4>3 · Grow</h4><div class="when">Feb – Apr 2027</div><ul><li>Intake v1, always on: ~15 sources a week</li><li>20+ tool guides; new mini tools</li><li>Kits → workflows; Make it yours steps 6–9</li><li>SaaS pack and versions; <b>/saas view in April</b>; site v1</li></ul><div class="gate">Gate: 10k monthly visits; 1,000 subscribers; 500 weekly returning users</div></div>
     <div><h4>4 · Deepen and earn</h4><div class="when">May – Sep 2027</div><ul><li>Routines, then agents with red-team tests</li><li>Meta ads mini app</li><li>Affiliates, then ads; membership waitlist → membership</li><li>Third business type by demand</li></ul><div class="gate">Gate: 50k monthly visits; 5,000 subscribers; first income on</div></div>
   </div>
   <div class="note" style="margin-top:12px"><b>After that (2028):</b> job-function views (/marketing first), creator uploads through the safety pipeline, the 70/30 marketplace, and running listings on the site, each only once people ask for it and the gate before it has passed.</div>
@@ -1164,7 +1265,7 @@
       <tr><td><b>W2 · 26 Oct–1 Nov</b></td><td><code>run-test</code>, <code>grade</code>, <code>build-exports</code>, <code>build-graph</code>; first listing tested ✓; intake, scan-skill and build-mini-tool specified; <b>sprint ends 27 Oct</b></td><td>Listing and library page templates; site structure</td><td>Approve the first listing page (Gate 0)</td></tr>
       <tr><td><b>W3–4 · 2–15 Nov</b></td><td>Brand brain v2 (built in the browser); 11 brain listings; ecommerce pack v1; build-variant; build-mini-tool and 4 mini tools</td><td>Brain workflow page; site build starts: listing pages, filters, sign-in</td><td>Brain review; decisions 3, 12, 13, 20</td></tr>
       <tr><td><b>W5–7 · 16 Nov–6 Dec</b></td><td>~20 static ad listings; copy, scripts, avatars; scan-skill + 20 traps; intake v0; 4 more mini tools</td><td>Comments, votes, stars and moderation on staging; record 3 videos</td><td>Creative review; decisions 4–5</td></tr>
-      <tr><td><b>W8–9 · 7–20 Dec</b></td><td>Page audit; Meta ladder steps 1–4; research and offers; first 10 public sources through intake, incl. 5–10 GitHub skills</td><td>First 10 tool guides; newsletter; launch waitlist</td><td>Gate A (11 Dec); brand name and domain</td></tr>
+      <tr><td><b>W8–9 · 7–20 Dec</b></td><td>Page audit; Meta ladder steps 1–4; research and offers; first 10 public sources through intake, incl. 5–10 GitHub skills</td><td>First 10 tool guides; Make it yours lessons 1–5; newsletter; launch waitlist</td><td>Gate A (11 Dec); brand name and domain</td></tr>
       <tr><td><b>W10–12 · 21 Dec–10 Jan</b></td><td>Site v0 finished: search, kits, follows, embeds, Learn; downloads opened in Claude, ChatGPT, Codex, Gemini; security check</td><td>Batch-record 6 videos; seed the /ecommerce thread</td><td>Final page review (holidays: light)</td></tr>
       <tr><td><b>W13 · 11–19 Jan</b></td><td>Fixes from the review; load and mobile checks</td><td><b>Open 19 Jan</b>: newsletter, YouTube, posts in communities we're part of</td><td>Gate B; launch day replies</td></tr>
     </tbody>
@@ -1258,15 +1359,16 @@
     <thead><tr><th>#</th><th style="width:34%">Decision</th><th>My recommendation</th><th style="width:13%">Needed by</th></tr></thead>
     <tbody>
       <tr><td>20</td><td>One library, filters and skill families</td><td>Six types in one list; filters for business type, function › area, platform and level; a general version plus versions per business type, from one shared core (slides 23–24)</td><td>2 Nov</td></tr>
+      <tr><td>21</td><td>Make it yours: test, tighten, context, data, train</td><td>A ten-step track; steps 1–5 and review data prep at launch, 6–9 Feb–Apr, training by demand (slides 28–30)</td><td>2 Nov</td></tr>
       <tr><td>3</td><td>Who can comment</td><td>Anyone with a free account; members later get priority replies, not the right to comment</td><td>Mid Nov</td></tr>
       <tr><td>12</td><td>Mini tools: where they sit and how they're shared</td><td>The Apps tab in the library, a shelf on Home and on /ecommerce; free, no email; embeds allowed with a credit link</td><td>Mid Nov</td></tr>
       <tr><td>13</td><td>Votes, stars and kits</td><td>▲ Useful and "it worked / didn't" on listings; ▲▼ on comments; private stars collected into kits that become workflows</td><td>Mid Nov</td></tr>
-      <tr><td>—</td><td>Tech stack (slide 35)</td><td>Next.js on Vercel, Supabase for the community, Pagefind search, Plausible analytics</td><td>W3 (2 Nov)</td></tr>
+      <tr><td>—</td><td>Tech stack (slide 38)</td><td>Next.js on Vercel, Supabase for the community, Pagefind search, Plausible analytics</td><td>W3 (2 Nov)</td></tr>
       <tr><td>4</td><td>Licence rule for imports</td><td>Copy only open licences; everything else gets a review page that links out</td><td>Early Dec</td></tr>
       <tr><td>5</td><td>Brand name and domain</td><td>A shortlist of 5, not tied to one industry</td><td>11 Dec</td></tr>
     </tbody>
   </table>
-  <p class="small">The full list is in the final plan, Part 16. Decision 2 (spend cap) and the old decision 13 (reels) were settled today. Decision 20 is new.</p>
+  <p class="small">The full list is in the final plan, Part 16. Decision 2 (spend cap) and the old decision 13 (reels) were settled today. Decisions 20 and 21 are new.</p>
 </section>
 
 <!-- SOURCES -->

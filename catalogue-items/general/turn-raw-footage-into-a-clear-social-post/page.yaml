@@ -1,6 +1,6 @@
 new_slug: turn-raw-footage-into-a-clear-social-post
-name: Turn raw footage into a clear social post
-summary: Your own raw footage turned into one social post, with every cut, caption, cover and export planned.
+name: "Turn raw footage into one clear social post"
+summary: "Give it your clips and the point to make. You get every cut, caption, cover and export setting planned."
 job: grow-social
 
 headline: "Turn raw footage into one clear social post"
@@ -29,7 +29,7 @@ you_get:
   - Cover, caption, ending, and export settings with the checks to run
 
 how_to_use:
-  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - List your clips with their length and what's in them, and paste the transcript if you have one.
   - Say the one thing the post should teach or show, for example "how to open the pack".
   - Check every flagged word against the recording before captions go on.

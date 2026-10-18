@@ -1,9 +1,9 @@
 new_slug: get-believed-with-a-text-someone-else-sent
-name: Get believed with a text someone else sent
-summary: A plain text-message screenshot of three to six short messages between your narrator and one other person.
+name: "A text-message picture where a friend spots the problem"
+summary: "Give it your ad's story. You get three to six realistic texts and a prompt for the screenshot image."
 job: make-image-ads
 
-headline: "A text-message ad where someone else spots the problem"
+headline: "A text-message picture where a friend spots the problem"
 subhead: Give it a story ad with a second person in it, a partner, a sister or a friend. It writes three to six short messages the way people text each other, ending on an open question, and a prompt for a generic message screenshot.
 
 explain: |
@@ -27,7 +27,7 @@ you_get:
   - A 60 to 120 word image prompt, ready to paste
 
 how_to_use:
-  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste your story ad underneath. If the story quotes the messages, they'll be used word for word.
   - Paste the image prompt into your image tool and make one square picture.
   - Check every message in the result, including who sent which.

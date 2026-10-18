@@ -1,6 +1,6 @@
 new_slug: know-what-each-product-page-photo-should-show
-name: Know what each product page photo should show
-summary: Up to 12 product page images planned, each answering one shopper question, with every word sourced.
+name: "Know what each product photo should show"
+summary: "Give it your product facts, reviews and photos. You get up to 12 images planned, each answering one shopper question."
 job: product-photos
 
 headline: "Know what each product photo should show"
@@ -28,7 +28,7 @@ you_get:
   - A gaps list of every missing fact and photo
 
 how_to_use:
-  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste your product facts, guarantee and a handful of real reviews, copied exactly.
   - List your photos and what each shows, or attach them.
   - Add the customer doubt you hear most, in their words, if you know it.

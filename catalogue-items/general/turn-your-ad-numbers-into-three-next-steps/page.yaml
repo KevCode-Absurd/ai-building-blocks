@@ -1,6 +1,6 @@
 new_slug: turn-your-ad-numbers-into-three-next-steps
-name: Turn your ad numbers into three next steps
-summary: A one-page report on your ads with what changed, one open worry and three ranked next steps.
+name: "Turn your ad numbers into three next steps"
+summary: "Paste this period's ad totals and the last one's. You get what changed, one open worry and three ranked actions."
 job: read-ad-results
 
 headline: "Turn your ad numbers into three next steps"
@@ -27,7 +27,7 @@ you_get:
   - Two to four changes that matter, one unresolved worry, and three ranked actions
 
 how_to_use:
-  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste the totals for this period and the one before, in the same columns.
   - Say the dates, the currency and the attribution window if you know it.
   - Add your targets if you want each number judged against them.

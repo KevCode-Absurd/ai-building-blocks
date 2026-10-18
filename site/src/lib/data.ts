@@ -27,7 +27,6 @@ export type Block = {
   usedIn: number;
   task: string;
   headline: string;
-  peek: string;
 };
 /** The full page for one block, loaded when its page opens. */
 export type Page = {

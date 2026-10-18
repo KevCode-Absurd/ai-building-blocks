@@ -1,6 +1,6 @@
 new_slug: write-ads-people-believe
-name: Write ads people believe
-summary: Ad copy built on the one true product fact that answers your buyer's biggest doubt.
+name: "Write ads people believe"
+summary: "Give it your product facts and buyer. You get an ad built on the fact that answers their biggest doubt."
 job: write-ad-copy
 
 headline: "Write ads people believe"
@@ -27,7 +27,7 @@ you_get:
   - A list of which fact backs each line, and what's missing
 
 how_to_use:
-  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste your product facts underneath. A facts panel, spec sheet or product page all work.
   - Say who the ad is for in one or two sentences, including what makes them hesitate.
   - Name the format and its limits, for example "Facebook image ad, main text under 125 characters, headline under 40".

@@ -1,6 +1,6 @@
 new_slug: borrow-structure-of-ad-you-admire
-name: Borrow the structure of an ad you admire
-summary: Keeps a reference ad's order and pace, and writes every line new from your own facts.
+name: "Reuse a great ad's structure with your own facts"
+summary: "Give it an ad you admire and your product facts. You get an ad in the same order and pace, written fresh."
 job: study-competitors
 
 headline: "Reuse a great ad's structure with your own facts"
@@ -28,7 +28,7 @@ you_get:
   - A list of placeholders and assumptions
 
 how_to_use:
-  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste the reference breakdown, one row per line or shot, with timings.
   - Paste your brand facts, proof and offer underneath.
   - Read the step map first. If a row was changed, check you agree with the reason.

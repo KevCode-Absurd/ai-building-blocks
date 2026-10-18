@@ -1,6 +1,6 @@
 new_slug: get-headlines-strangers-understand-at-a-glance
-name: Get headlines a stranger understands at a glance
-summary: Headlines and image words written as plain sentences, each aimed at one buyer with one benefit.
+name: "Headlines strangers understand at a glance"
+summary: "Tell it who your buyer is and what's true. You get plain headlines, each a different angle, with character counts."
 job: write-ad-copy
 
 headline: "Headlines strangers understand at a glance"
@@ -28,7 +28,7 @@ you_get:
   - A mark on the one to test first
 
 how_to_use:
-  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Describe the buyer and how much they know in two or three lines.
   - Paste the facts and proof it may use, and any real customer quotes.
   - Say how many lines and the limits, for example "5 headlines, under 40 characters, under a Facebook image".

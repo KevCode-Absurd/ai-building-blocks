@@ -1,9 +1,9 @@
 new_slug: turn-website-into-brand-file-for-ai
-name: Turn your website into a brand file for AI
-summary: Nine plain files with your facts, voice, offers, customers and competitors, built from your website.
+name: "Teach AI your brand, straight from your website"
+summary: "Give it your website address. You get nine plain files of your facts, voice, offers and customers, with sources."
 job: brand-file
 
-headline: "Turn your website into a brand file for AI"
+headline: "Teach AI your brand, straight from your website"
 subhead: Give it your website address, plus reviews and your best ads if you have them. It reads the site, checks the basics with you, asks only what the site can't answer, and writes nine files with every price, claim and quote traced to its source.
 
 explain: |
@@ -27,7 +27,7 @@ you_get:
   - A list of what is still blank and who can answer it
 
 how_to_use:
-  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in. A tool that can read websites works best.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in. A tool that can read websites works best.
   - Give it your website address. If it can't read the site, paste your about page and your price list instead.
   - Check the basics it shows you (name, category, main colour, description, number of offers) and reply "good" or correct them.
   - Answer the follow-up questions you can and skip the rest. Pasting real reviews makes the customer profiles much better.

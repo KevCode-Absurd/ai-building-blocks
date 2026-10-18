@@ -1,6 +1,6 @@
 new_slug: make-buyers-see-themselves-in-an-empty-room
-name: Make buyers see themselves in an empty room
-summary: An empty, real room whose leftover objects show how the problem changed someone's life, with nobody in frame.
+name: "An empty-room photo that tells your buyer's story"
+summary: "Give it your ad's story. You get the room, the objects and the light, and a prompt for the photo."
 job: make-image-ads
 
 headline: "An empty-room photo that tells your buyer's story"
@@ -27,7 +27,7 @@ you_get:
   - A 60 to 120 word image prompt, ready to paste
 
 how_to_use:
-  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste your story ad underneath. The room and its objects should be in the opening lines.
   - Add what customers say changed in their lives, if you have reviews or notes.
   - Paste the image prompt into your image tool. If the room looks like a hotel or a catalogue, ask again with more clutter.

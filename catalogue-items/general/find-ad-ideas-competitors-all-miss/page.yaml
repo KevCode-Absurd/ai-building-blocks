@@ -1,9 +1,9 @@
 new_slug: find-ad-ideas-competitors-all-miss
-name: Find the ad ideas your competitors all miss
-summary: What competitor ads keep repeating, the gaps nobody covers, and notes on making your own version.
+name: "Find the ad ideas your competitors all miss"
+summary: "Give it competitor ads you've saved. You get what they all repeat, what nobody says, and how you can stand out."
 job: study-competitors
 
-headline: "Find the ad angles your competitors all miss"
+headline: "Find the ad ideas your competitors all miss"
 subhead: Give it competitor ads you collected by hand, plus your own facts and rules. It breaks down a spread of them second by second, groups them by type, finds the openings and claims they repeat, spots the gaps nobody covers, and writes notes on how you'd make your own version.
 
 explain: |
@@ -27,7 +27,7 @@ you_get:
   - Notes on how you'd make your own version, and a list of what it couldn't see
 
 how_to_use:
-  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Say what the brief is for in one line, for example "new customers for our main product, US, video and image ads".
   - Paste the competitor ads, ideally 20 or more, with a link and how long each has run. Attach the videos or screenshots if your tool accepts them.
   - Paste your own facts, the claims you may and may not make, and your current best ads, so it doesn't suggest what you already run.

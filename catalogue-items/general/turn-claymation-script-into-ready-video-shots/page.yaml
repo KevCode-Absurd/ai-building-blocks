@@ -1,9 +1,9 @@
 new_slug: turn-claymation-script-into-ready-video-shots
-name: Turn your claymation script into ready-to-make video shots
-summary: Paste-ready prompts that keep your clay character, set and product the same in every clip.
+name: "Turn your clay ad script into video clips"
+summary: "Give it your clay script and product photo. You get image and clip prompts that keep every shot matching."
 job: make-video-ads
 
-headline: "Turn your clay script into clips that match"
+headline: "Turn your clay ad script into video clips"
 subhead: Give it a narrated claymation script and a photo of your product. It fixes one clay character, one tabletop set and one object that changes, then hands you still prompts to approve and a clip prompt for every part of the script.
 
 explain: |
@@ -28,7 +28,7 @@ you_get:
   - One clip prompt per part of the script, plus a checklist for each clip
 
 how_to_use:
-  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste your script underneath, then attach or describe your product photo, how it's used and your approved claims.
   - Say which video tool you use and the clip lengths it allows, for example "8 to 10 second clips".
   - Make the character still first. Only move on when you like it.

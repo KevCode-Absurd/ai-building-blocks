@@ -1,9 +1,9 @@
 new_slug: find-offers-hiding-in-what-you-already-sell
-name: Find offers hiding in what you already sell
-summary: Your running offers in your own words, plus new ones built only from what you already sell.
+name: "Find new offers in what you already sell"
+summary: "Give it your products, prices and guarantee. You get your current offers in plain words, plus new ones to try."
 job: make-offer
 
-headline: "Find offers hiding in what you already sell"
+headline: "Find new offers in what you already sell"
 subhead: Give it your brand file. It lists every offer you run today in your own wording, then suggests new ones made only from your existing products, prices, guarantee and delivery, each tied to a buyer, with plain terms and what you'd need to arrange.
 
 explain: |
@@ -26,7 +26,7 @@ you_get:
   - What you'd need to arrange before running each new one
 
 how_to_use:
-  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste your brand file, or at least your prices, guarantee, delivery terms, current deals and buyers.
   - Name one buyer if you want the list focused on them.
   - Read the running offers first. If two say different things about the same deal, fix that before writing new ads.

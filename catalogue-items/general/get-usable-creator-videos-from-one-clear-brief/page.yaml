@@ -1,9 +1,9 @@
 new_slug: get-usable-creator-videos-from-one-clear-brief
-name: Get usable creator videos from one clear brief
-summary: A filming brief a real creator, customer or founder can follow first time, in their own words.
+name: "Get the creator videos you asked for, first time"
+summary: "Give it your script and what you need. You get a clear filming brief a creator or customer can follow."
 job: make-video-ads
 
-headline: "Get creator videos right the first time"
+headline: "Get the creator videos you asked for, first time"
 subhead: Give it your approved script, what you need delivered and how the product is used. It writes a brief with the idea, the openings to film, the points to hit in their own words, extra shots, filming rules and how to send the files.
 
 explain: |
@@ -29,7 +29,7 @@ you_get:
   - An extra-shot checklist, filming do and don't rules, and file-sending instructions
 
 how_to_use:
-  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste your approved script underneath, then your delivery needs and how the product is used.
   - Add your never-say list. If you don't have one, write the claims you can't make.
   - Fix every [CONFIRM] at the top before you send the brief.

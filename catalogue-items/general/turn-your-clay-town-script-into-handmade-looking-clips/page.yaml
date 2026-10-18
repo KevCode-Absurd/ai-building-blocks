@@ -1,9 +1,9 @@
 new_slug: turn-your-clay-town-script-into-handmade-looking-clips
-name: Turn your clay town script into handmade-looking clips
-summary: Still and clip prompts for a narrated clay-world ad that looks handmade, with your label readable.
+name: "Turn your clay-world script into video clips"
+summary: "Give it your script and product photo. You get image and clip prompts that look handmade in every frame."
 job: make-video-ads
 
-headline: "Turn your clay-town script into handmade-looking clips"
+headline: "Turn your clay-world script into video clips"
 subhead: Give it a narrated clay-world script and your product photo with its label lines. It picks one of four clay looks, writes fixed wording for it, describes each character in full, and hands back still prompts, clip prompts and clay transitions for your AI tools.
 
 explain: |
@@ -29,7 +29,7 @@ you_get:
   - Transition prompts between scenes
 
 how_to_use:
-  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste the script, ideally from "Get a clay town ad script with a crowd".
   - Attach your product photo and type out every label line.
   - Make each character's picture and each scene's still first, and approve them before making clips.

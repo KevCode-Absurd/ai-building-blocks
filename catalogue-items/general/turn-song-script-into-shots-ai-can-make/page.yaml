@@ -1,9 +1,9 @@
 new_slug: turn-song-script-into-shots-ai-can-make
-name: Turn your song script into shots AI can make
-summary: A music-tool brief, a storyboard cut to the song's real timings, and prompts that keep one singer the same.
+name: "Turn your song ad script into video clips"
+summary: "Give it your lyrics and product photo. You get a music brief, a storyboard on the beat and clip prompts."
 job: make-video-ads
 
-headline: "Turn your song script into shots on the beat"
+headline: "Turn your song ad script into video clips"
 subhead: Give it your approved lyric and a product photo. It writes the brief for a music tool, then a storyboard cut to the finished song's real timings, plus image and video prompts for an animated lead who sings in some shots.
 
 explain: |
@@ -28,7 +28,7 @@ you_get:
   - A storyboard timed to the song, and image and video prompts with a guard line
 
 how_to_use:
-  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste your approved lyric and attach a product photo.
   - Paste the music brief into your music tool and make the whole song in one go.
   - Paste the real word timings back in. The skill re-times every shot to them.

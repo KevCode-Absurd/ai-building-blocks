@@ -1,9 +1,9 @@
 new_slug: write-a-story-ad-buyers-see-themselves-in
-name: Write a story ad buyers see themselves in
-summary: A long story ad that reads like a person's post, built from your reviews, with an honest narrator.
+name: "A story-style ad buyers see themselves in"
+summary: "Give it customer quotes and product facts. You get a story ad that takes readers from their problem to your page."
 job: write-ad-copy
 
-headline: "A story ad buyers see themselves in"
+headline: "A story-style ad buyers see themselves in"
 subhead: Give it your customer quotes, your product facts and the shape you want. It writes a story that carries a reader from their problem to your page, in their words, with a narrator who is honest about who they are.
 
 explain: |
@@ -28,7 +28,7 @@ you_get:
   - Notes with the word count, every placeholder, everything inferred and which reviews each borrowed phrase came from
 
 how_to_use:
-  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste five or more real reviews with their numbers, plus your product facts and claims list.
   - Name the form, arc, narrator and length. Start with "personal history", "reluctant believer", composite and short if you're unsure.
   - Say where the click goes. Use a product page for people who already know the problem and have tried a fix.

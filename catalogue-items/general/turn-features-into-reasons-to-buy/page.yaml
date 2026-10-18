@@ -1,6 +1,6 @@
 new_slug: turn-features-into-reasons-to-buy
-name: Turn features into reasons to buy
-summary: Your feature list turned into short points, each one benefit with a reason to believe it.
+name: "Turn features into reasons to buy"
+summary: "Paste your feature list and a note on your buyer. You get short selling points, each a benefit with proof."
 job: write-ad-copy
 
 headline: "Turn features into reasons to buy"
@@ -26,7 +26,7 @@ you_get:
   - A "Needs evidence" list of benefit steps your facts don't support yet
 
 how_to_use:
-  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste your facts with their source, such as "label", "lab report" or "product page".
   - Describe the buyer's main wants and doubts. Two to four-star reviews hold the real doubts.
   - Say where the points go and how many, for example "4 bullets under the price, one sentence each".

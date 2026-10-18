@@ -1,6 +1,6 @@
 new_slug: get-podcast-clip-ad-script-that-sells
-name: Get a podcast clip ad script that sells
-summary: A short two-person talk-show ad that changes one belief without sounding like an ad.
+name: "A podcast-style clip that changes one belief"
+summary: "Give it the belief to change and your facts. You get a 15 to 45 second script for a two-person chat."
 job: make-video-ads
 
 headline: "A podcast-style clip that changes one belief"
@@ -29,7 +29,7 @@ you_get:
   - A list of every fact said, with its source
 
 how_to_use:
-  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste the doubt or belief you want to change, in your customers' own words.
   - Paste the facts a speaker may say, one per line, with sources.
   - Say "video, 30 seconds" or "still".

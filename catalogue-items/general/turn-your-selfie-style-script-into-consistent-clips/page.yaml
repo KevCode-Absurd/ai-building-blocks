@@ -1,9 +1,9 @@
 new_slug: turn-your-selfie-style-script-into-consistent-clips
-name: Turn your selfie-style script into consistent clips
-summary: Prompts for a phone-style talking ad with a made-up presenter who stays the same in every clip.
+name: "Turn your selfie-style script into video clips"
+summary: "Give it your script and product photos. You get image and clip prompts with the same presenter and room throughout."
 job: make-video-ads
 
-headline: "Turn your selfie-style script into matching clips"
+headline: "Turn your selfie-style script into video clips"
 subhead: Give it your approved script and real product photos. It designs one made-up presenter and one ordinary room, splits the script into short clips with one action each, and writes the first still and every clip prompt for your video tool.
 
 explain: |
@@ -29,7 +29,7 @@ you_get:
   - A checklist to pass or fail each clip
 
 how_to_use:
-  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste your approved script and mark the line where the product is used.
   - Attach your product photos and say what each one shows (front, in hand, in use).
   - Make the presenter picture and the first still first, and only start clips once both look right.

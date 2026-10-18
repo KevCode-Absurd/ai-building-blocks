@@ -1,9 +1,9 @@
 new_slug: turn-your-animated-film-script-into-consistent-clips
-name: Turn your animated film script into consistent clips
-summary: Still and clip prompts for an animated-feature look, with fixed characters and your exact label.
+name: "Turn your animated-movie script into video clips"
+summary: "Give it your script and product photo. You get image and clip prompts with the same characters and look throughout."
 job: make-video-ads
 
-headline: "Turn your animated-film script into matching clips"
+headline: "Turn your animated-movie script into video clips"
 subhead: Give it an approved script and your product photo with its exact label words. It writes three fixed wording blocks for the look, one full description per character, then the still prompts, clip prompts and transitions for your AI image and video tool.
 
 explain: |
@@ -29,7 +29,7 @@ you_get:
   - Clip prompts and transition prompts
 
 how_to_use:
-  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste the approved script, ideally from "Get a warm animated film ad script".
   - Attach your product photo and type out every line of the label.
   - Make the solo character picture first, then the first frame of each scene, and approve each before any clip.

@@ -1,6 +1,6 @@
 new_slug: get-a-storyboard-where-your-character-never-changes
-name: Get a storyboard where your character never changes
-summary: A shot-by-shot ad plan where one character stays the same and every shot has a job.
+name: "A storyboard where your character never changes"
+summary: "Give it your character images, script and product photos. You get every shot planned, with framing and timing."
 job: make-video-ads
 
 headline: "A storyboard where your character never changes"
@@ -28,7 +28,7 @@ you_get:
   - Review results for the character, the product and the order of shots
 
 how_to_use:
-  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Attach your character's reference images in this order. Face, full body, profile or back, hands.
   - Paste the approved script and say who the buyer is and what you want them to do.
   - Attach product photos and name your font.

@@ -1,6 +1,6 @@
 new_slug: get-a-short-film-ad-script-with-a-twist
-name: Get a short film ad script with a twist
-summary: A shot-by-shot, live-action-style ad script where your product is the moment the story turns.
+name: "A short film ad where your product is the twist"
+summary: "Give it your selling idea. You get a shot-by-shot script for a short film where your product turns the story."
 job: make-video-ads
 
 headline: "A short film ad where your product is the twist"
@@ -26,7 +26,7 @@ you_get:
   - Notes on inferred parts, clip joins and on-screen text
 
 how_to_use:
-  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste your selling idea and your brand file.
   - Give the total length and your tool's clip length, for example "20 seconds, 10-second clips".
   - Check the viewer's change line. If the product isn't part of the turn, ask for another version.

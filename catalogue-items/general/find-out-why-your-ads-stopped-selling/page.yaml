@@ -1,6 +1,6 @@
 new_slug: find-out-why-your-ads-stopped-selling
-name: Find out why your ads stopped selling
-summary: Find out why your ad results dropped, with tracking checked first and what to check next.
+name: "Find out why your ads stopped selling"
+summary: "Paste your ad numbers. You get the likely reasons ranked, the evidence for each, and what to fix first."
 job: read-ad-results
 
 headline: "Find out why your ads stopped selling"
@@ -27,7 +27,7 @@ you_get:
   - A list of the data that was missing and what it would have told you
 
 how_to_use:
-  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Export your ad results as a spreadsheet or CSV and paste it underneath. Leave out customer names, emails and IDs.
   - Add the earlier period if you have it, and say what changed between the two (a new offer, a page change, a bigger budget).
   - Add your target cost per sale and your margin if you know them. Without them it will describe, not judge.

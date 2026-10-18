@@ -1,9 +1,9 @@
 new_slug: turn-skeleton-script-into-shots-ai-can-make
-name: Turn your skeleton script into shots AI can make
-summary: A shot map and paste-ready prompts that keep one cartoon skeleton the same in every shot.
+name: "Turn your skeleton ad script into video clips"
+summary: "Give it your script and product photo. You get image and clip prompts with the same skeleton in every shot."
 job: make-video-ads
 
-headline: "Turn your skeleton script into matching shots"
+headline: "Turn your skeleton ad script into video clips"
 subhead: Give it a skeleton ad script and a real photo of your product. It fixes one look for the skeleton and one place, maps every step to a shot, and writes the image prompts and video prompts in the order you make them.
 
 explain: |
@@ -29,7 +29,7 @@ you_get:
   - A list of the markers and captions to add in editing, with timings
 
 how_to_use:
-  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste your skeleton script underneath and attach the product photo.
   - Add your brand colors and say whether your brand uses music.
   - Make the character picture first and approve it before any other image.

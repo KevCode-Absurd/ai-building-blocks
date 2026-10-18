@@ -1,9 +1,9 @@
 new_slug: turn-knitted-wool-script-into-ready-video-shots
-name: Turn your knitted wool script into ready-to-make video shots
-summary: Fixed look wording, doll descriptions, still and clip prompts that keep every frame knitted.
+name: "Turn your knitted-wool script into video clips"
+summary: "Give it your script and product photo. You get image and clip prompts that keep every frame looking knitted."
 job: make-video-ads
 
-headline: "Turn your knitted script into clips that stay knitted"
+headline: "Turn your knitted-wool script into video clips"
 subhead: Give it a narrated knitted-world script, your product photo and label text. It writes three fixed blocks of look wording and a description for each doll, then still prompts, clip prompts and yarn transitions to paste into your video tool.
 
 explain: |
@@ -28,7 +28,7 @@ you_get:
   - Still prompts, clip prompts and yarn transition prompts
 
 how_to_use:
-  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste your script underneath, then your label lines and product photo.
   - Make each doll, room and the product as its own still first, and approve them.
   - Make each scene still with the approved pictures attached.

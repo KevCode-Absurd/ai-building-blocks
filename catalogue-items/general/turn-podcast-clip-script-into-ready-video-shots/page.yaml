@@ -1,9 +1,9 @@
 new_slug: turn-podcast-clip-script-into-ready-video-shots
-name: Turn your podcast clip script into ready-to-make video shots
-summary: Cast, room, still and clip prompts plus editing notes, so the right person speaks every line.
+name: "Turn your podcast-style script into video clips"
+summary: "Give it your script and product photo. You get image and clip prompts with the same two people and room throughout."
 job: make-video-ads
 
-headline: "Turn your podcast script into clips that stay consistent"
+headline: "Turn your podcast-style script into video clips"
 subhead: Give it a Host-and-Guest script and your product photo. It casts two people nobody could mix up, fixes one room and one camera, places your product on the table, and hands back still prompts, timed clip prompts and finishing notes.
 
 explain: |
@@ -28,7 +28,7 @@ you_get:
   - Finishing notes for captions, punch-ins, offer text and sound
 
 how_to_use:
-  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste your script underneath, then attach or describe your product photo.
   - Make the cast still first and check the two people look clearly different.
   - Make the opening frame from the cast still and product photo.

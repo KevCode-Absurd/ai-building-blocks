@@ -1,9 +1,9 @@
 new_slug: get-shot-list-that-keeps-ad-moving
-name: Get a shot list that keeps your ad moving
-summary: A few lines of your script turned into a timed shot list an AI video tool can follow.
+name: "A shot list that keeps your video ad moving"
+summary: "Give it a few lines of your script. You get 3 to 5 timed shots an AI video tool can follow."
 job: make-video-ads
 
-headline: "A shot list with something new every two seconds"
+headline: "A shot list that keeps your video ad moving"
 subhead: Give it the lines for one short clip and what you sell. It plans the place and cast first, then writes 3 to 5 timed shots, each with a size, camera position, one move and one action, with your voice-over running across the cuts.
 
 explain: |
@@ -29,7 +29,7 @@ you_get:
   - A continuity note so the next clip starts where this one ends
 
 how_to_use:
-  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste the lines for one scene, about one sentence or two.
   - Add what you sell, how it's used and the places your brand shoots in. Attach a product photo.
   - Say who is speaking (age, calm or fast) and whether it's live action or animated.

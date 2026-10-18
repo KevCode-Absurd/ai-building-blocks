@@ -1,9 +1,9 @@
 new_slug: stop-strangers-scrolling-with-a-story-ad
-name: Stop strangers scrolling with a story ad
-summary: A picture of your buyer's problem and a 150 to 400 word story ad that answers it.
+name: "A story-style ad strangers stop to read"
+summary: "Give it your customers' words about the problem. You get a picture idea and a 150 to 400 word story ad."
 job: write-ad-copy
 
-headline: "A story ad strangers stop to read"
+headline: "A story-style ad strangers stop to read"
 subhead: Give it your customers' own words about the problem and the claims you may make. It checks the problem is one people feel, picks a picture of that moment, writes a 150 to 400 word story that answers it, and says where the click should go.
 
 explain: |
@@ -29,7 +29,7 @@ you_get:
   - Flags on anything inferred or needing a check, plus a short test plan
 
 how_to_use:
-  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste five or so reviews that describe the problem, each with its number or source.
   - Paste your product facts and your approved and banned claims.
   - Say who may narrate and list only the facts on record about them. If nobody has agreed, leave it out and the story is told by the brand.

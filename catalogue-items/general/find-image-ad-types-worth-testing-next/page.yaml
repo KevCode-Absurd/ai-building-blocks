@@ -1,9 +1,9 @@
 new_slug: find-image-ad-types-worth-testing-next
-name: Find image ad types worth testing next
-summary: Your image ads sorted into seven families, the empty ones found, and the next two briefed.
+name: "Find the kinds of image ad you've never tried"
+summary: "Give it the image ads you run now. You get the kinds you're missing and briefs for the two to test next."
 job: plan-ad-tests
 
-headline: "Find the image ad types you've never tried"
+headline: "Find the kinds of image ad you've never tried"
 subhead: Give it the image ads you run now, your customer reviews and the claims you can back. It sorts each ad into one of seven families, counts the empty ones, picks two new formats from real gaps and writes a five-line brief for each.
 
 explain: |
@@ -28,7 +28,7 @@ you_get:
   - A log of claims that were cut, so they don't creep back in
 
 how_to_use:
-  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - List each image ad you run with its opening line or headline. Leave out videos.
   - Paste your claims list and offers, with dates for any sale.
   - Add your reviews and results if you have them. They turn a guess into a gap.

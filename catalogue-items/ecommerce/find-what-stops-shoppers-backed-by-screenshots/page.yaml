@@ -1,9 +1,9 @@
 new_slug: find-what-stops-shoppers-backed-by-screenshots
-name: Find what stops shoppers, backed by screenshots
-summary: What stops shoppers on your product page, with each point tied to a screenshot and guesses marked.
+name: "Find what stops shoppers on your product page"
+summary: "Give it screenshots of your product page. You get each problem, what it means for shoppers, and what to change."
 job: audit-landing-page
 
-headline: "Find what stops shoppers, with screenshots as proof"
+headline: "Find what stops shoppers on your product page"
 subhead: Give it screenshots or the text of a product page, plus the one thing a shopper must do there. It lists what it saw and where, what each problem might mean for a shopper, the change or test to try, and what it couldn't check.
 
 explain: |
@@ -26,7 +26,7 @@ you_get:
   - The tests that need a real browser, and the next three steps
 
 how_to_use:
-  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Take screenshots of the page on your phone, top to bottom, and one set on a desktop. Note the date and the page address.
   - Paste or attach them, or paste the page text if you can't attach images.
   - Write the shopper's question in one line, such as "Can a phone shopper see the price and the guarantee before tapping buy?".

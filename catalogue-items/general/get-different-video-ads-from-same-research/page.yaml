@@ -1,6 +1,6 @@
 new_slug: get-different-video-ads-from-same-research
-name: Get different video ads from the same research
-summary: Script types matched to your buyer and your proof, so one round of research gives four different ads.
+name: "Four different video ads from one round of research"
+summary: "Give it your buyer and what you can prove. You get four kinds of video ad that each persuade a different way."
 job: make-video-ads
 
 headline: "Four different video ads from one round of research"
@@ -28,7 +28,7 @@ you_get:
   - The scripts themselves, if you pair it with a writing skill
 
 how_to_use:
-  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in. Add its reference file (types.md) too.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in. Add its reference file (types.md) too.
   - Paste your buyer, the reason they buy, the offer and the length.
   - List what you can prove. Be honest about what you don't have; missing facts just skip types.
   - Read the skipped list. It shows which facts would open up more types.

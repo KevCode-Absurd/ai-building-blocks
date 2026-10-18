@@ -1,9 +1,9 @@
 new_slug: stop-tired-buyers-with-ignored-reminders
-name: Stop tired buyers with the reminders they ignore
-summary: A generic lock screen showing the reminders your narrator keeps setting, and ignoring, because of the problem.
+name: "A phone screen of the reminders your buyer ignores"
+summary: "Give it your ad's story. You get one to four reminders and a prompt for the lock-screen image."
 job: make-image-ads
 
-headline: "A screenshot of the reminders your buyer ignores"
+headline: "A phone screen of the reminders your buyer ignores"
 subhead: Give it your story ad. It writes one to four short reminders with times, each something the narrator does because of the problem, and a prompt for a plain lock screen where they've piled up.
 
 explain: |
@@ -27,7 +27,7 @@ you_get:
   - A 60 to 120 word image prompt, ready to paste
 
 how_to_use:
-  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste your story ad underneath. If it quotes the reminders, they'll be used word for word.
   - Paste the image prompt into your image tool and make one square picture.
   - Check each reminder's text and time in the result. Image tools mix up numbers.

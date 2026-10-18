@@ -1,9 +1,9 @@
 new_slug: catch-mistakes-in-your-ad-before-you-pay
-name: Catch mistakes in your ad before you pay
-summary: A last look at a finished ad, listing what's fine, worth a look or yours to check.
+name: "Catch mistakes in your ad before you pay"
+summary: "Give it your finished ad. You get a list of what's fine, what to look at again and what to fix."
 job: check-ads
 
-headline: "Catch ad mistakes before you pay to run them"
+headline: "Catch mistakes in your ad before you pay"
 subhead: Give it the finished video or image ad with its words and button. It runs the checks it can do from the file, points to anything worth a second look with the exact number or line, and lists what only you can judge on a phone.
 
 explain: |
@@ -27,7 +27,7 @@ you_get:
   - One next action, either approve, change one named thing, or hold
 
 how_to_use:
-  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Attach the image at full size, or the video's key frames and its script with timings.
   - Paste the headline, main text and button exactly as they'll run, and name the platform.
   - Read "Worth a look" first, then open the ad on your own phone and go through "For a person".

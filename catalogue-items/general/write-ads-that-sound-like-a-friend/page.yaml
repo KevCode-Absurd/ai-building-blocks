@@ -1,6 +1,6 @@
 new_slug: write-ads-that-sound-like-a-friend
-name: Write ads that sound like a friend talking
-summary: Any ad written or reviewed so it sounds like a person and claims only what you can prove.
+name: "Ads that sound like a friend talking"
+summary: "Give it who the ad is for and your brand details. You get an ad written the way people talk."
 job: write-ad-copy
 
 headline: "Ads that sound like a friend talking"
@@ -27,7 +27,7 @@ you_get:
   - For a review, each failing line, the rule it breaks and a plain replacement
 
 how_to_use:
-  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste your brand file underneath, or at least the voice notes, facts and proof.
   - Describe the buyer and what stops them, using their own words from reviews.
   - Name the format and length, for example "one person talking to a phone camera, 30 to 40 seconds".

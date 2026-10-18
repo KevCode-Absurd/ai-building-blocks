@@ -1,6 +1,6 @@
 new_slug: stop-your-copy-sounding-like-ai
-name: Stop your copy from sounding like AI
-summary: Every line that reads as machine-written found, with a plain fix, from 18 patterns readers spot.
+name: "Stop your copy sounding like AI"
+summary: "Paste your copy. You get every line that sounds machine-written, a plain fix for each, and the full rewrite."
 job: check-ads
 
 headline: "Stop your copy sounding like AI"
@@ -25,7 +25,7 @@ you_get:
   - The full copy rewritten with the fixes
 
 how_to_use:
-  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste the copy you want checked.
   - Paste your voice notes and a few lines your brand already uses, if you have them.
   - Read the hits list first, then the rewritten copy. Accept or reject each change.

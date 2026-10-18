@@ -1,6 +1,6 @@
 new_slug: sell-one-offer-three-ways-with-image-ads
-name: Sell one offer three ways with image ads
-summary: Image ads for one offer, argued as the deal, the proof and the product, priced in one line.
+name: "Sell one offer three ways with image ads"
+summary: "Give it your offer, photos and reviews. You get image ads for the deal, the proof and the product, in two sizes."
 job: make-image-ads
 
 headline: "Sell one offer three ways with image ads"
@@ -29,7 +29,7 @@ you_get:
   - A note on what to change when the offer changes
 
 how_to_use:
-  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste the offer exactly as your shop states it, with start and end dates. If there's no end date, say so.
   - List the photos you actually have, one line each. Don't describe photos you plan to take.
   - Paste your reviews and your product facts or approved claims.

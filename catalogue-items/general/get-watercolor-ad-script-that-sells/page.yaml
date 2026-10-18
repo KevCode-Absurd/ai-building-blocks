@@ -1,6 +1,6 @@
 new_slug: get-watercolor-ad-script-that-sells
-name: Get a watercolor ad script that sells
-summary: A calm narrated ad in hand-painted watercolor, built around one paint movement that shows your selling idea.
+name: "A calm watercolor ad that shows what cameras can't"
+summary: "Give it your selling idea and facts. You get a 20 to 45 second script for a hand-painted watercolor ad."
 job: make-video-ads
 
 headline: "A calm watercolor ad that shows what cameras can't"
@@ -29,7 +29,7 @@ you_get:
   - A list of every claim or ingredient painted, with its source
 
 how_to_use:
-  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste your product facts, the full label text and your approved claims underneath.
   - Say the selling idea in a sentence ("a calm, caffeine-free wind-down") and the length.
   - Pick a look if you have a preference, or let it choose.

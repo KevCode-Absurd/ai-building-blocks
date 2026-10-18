@@ -1,6 +1,6 @@
 new_slug: get-an-original-anime-ad-script
-name: Get an original anime ad script
-summary: An original anime-style ad script or image brief, with a made-up hero and your real product.
+name: "An anime-style ad where your product saves the day"
+summary: "Give it your selling idea. You get an original anime-style script with a made-up hero and your real product."
 job: make-video-ads
 
 headline: "An anime-style ad where your product saves the day"
@@ -26,7 +26,7 @@ you_get:
   - Or, for an image, the layout, exact words and an image prompt
 
 how_to_use:
-  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste your selling idea and brand file. Include, in your buyer's words, the old way your product replaces.
   - Say "video, 30 seconds" or "image", and your tool's clip length if you know it.
   - Check that the device it picked uses only steps and claims from your facts.

@@ -1,9 +1,9 @@
 new_slug: get-a-3d-how-it-works-ad-script
-name: Get a 3D how-it-works ad script
-summary: A narrated 3D mini-documentary script, or one cutaway image, about one hidden process your facts support.
+name: "Show how your product works inside, in a 3D ad"
+summary: "Give it your product facts and their sources. You get a 30 to 40 second narrated 3D ad script, every line backed."
 job: make-video-ads
 
-headline: "Show the part of your product a camera can't film"
+headline: "Show how your product works inside, in a 3D ad"
 subhead: Give it your product facts with their sources. It checks whether one hidden process is worth explaining, then writes a 30 to 40 second narrated 3D script in seven beats, or one cutaway image, where every line and picture rests on a sourced fact.
 
 explain: |
@@ -28,7 +28,7 @@ you_get:
   - Notes on inferred links and claims left out
 
 how_to_use:
-  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste how your product works, step by step, with the source of each step (label, study, test report).
   - Paste your approved and banned claims. This format lives or dies on them.
   - Say "video, 30 seconds" or "image".

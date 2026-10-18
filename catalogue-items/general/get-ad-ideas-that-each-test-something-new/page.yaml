@@ -1,6 +1,6 @@
 new_slug: get-ad-ideas-that-each-test-something-new
-name: Get ad ideas that each test something new
-summary: Ad ideas picked from the gaps your recent ads left, so every test teaches you something.
+name: "Ad ideas that each test something new"
+summary: "Give it your past ads and what you can prove. You get new ideas from the gaps, each with a short brief."
 job: plan-ad-tests
 
 headline: "Ad ideas that each test something new"
@@ -27,7 +27,7 @@ you_get:
   - A "guess" or "measured" label on every idea
 
 how_to_use:
-  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste your brand facts, claims and offer, and describe each buyer in a line or two.
   - List the ads you've run lately, one line each, with results if you have them.
   - Say how many ideas you want and the format, for example "3 ideas, Facebook image ads, 4:5".

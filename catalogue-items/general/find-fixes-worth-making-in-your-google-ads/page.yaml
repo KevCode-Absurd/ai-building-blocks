@@ -1,9 +1,9 @@
 new_slug: find-fixes-worth-making-in-your-google-ads
-name: Find fixes worth making in your Google Ads
-summary: Fixes from one part of your Google Ads export, each backed by your rows and a check.
+name: "Find the Google Ads changes worth making"
+summary: "Paste one export from your Google Ads account. You get the changes worth making and how to check each one worked."
 job: read-ad-results
 
-headline: "Find the Google Ads fixes worth making"
+headline: "Find the Google Ads changes worth making"
 subhead: Pick one part of your account, such as search terms or budgets, and paste that export with your target. It reads only that part and hands back findings, proposed changes and how to check each one. Paste the wrong file and it stops and says which to pull.
 
 explain: |
@@ -28,7 +28,7 @@ you_get:
   - A MISSING list, with the exact export and columns to pull if yours won't do
 
 how_to_use:
-  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Write which part you want reviewed, for example "search terms" or "bids and budgets".
   - Paste the export for that part. Say where you pulled it from, when, the date range and the currency.
   - Add your target, for example "target cost per purchase $30". If you don't have one, write "exploratory".

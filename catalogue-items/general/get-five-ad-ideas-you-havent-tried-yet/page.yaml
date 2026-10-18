@@ -1,6 +1,6 @@
 new_slug: get-five-ad-ideas-you-havent-tried-yet
-name: Get five ad ideas you haven't tried yet
-summary: A map of what your ads have and haven't tried, plus five new ideas for the biggest gaps.
+name: "Five ad ideas you haven't tried yet"
+summary: "Give it your past ads and brand details. You get a map of what you've tried and five ideas for the gaps."
 job: plan-ad-tests
 
 headline: "Five ad ideas you haven't tried yet"
@@ -28,7 +28,7 @@ you_get:
   - A ranked list of the ten gaps that matter most
 
 how_to_use:
-  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste your past ads. An export with spend and purchases is best, but a list of what you ran works too.
   - Paste your brand file underneath, including your approved claims and current offers.
   - Add competitor ads if you have them. Without them it skips that section and says so.

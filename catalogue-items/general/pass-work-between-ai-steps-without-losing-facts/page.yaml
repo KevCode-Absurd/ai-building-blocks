@@ -1,6 +1,6 @@
 new_slug: pass-work-between-ai-steps-without-losing-facts
-name: Pass work between AI steps without losing facts
-summary: What each AI step is sent and returns, planned so no claim loses its conditions on the way.
+name: "Pass work between AI steps without losing facts"
+summary: "Give it the steps of your AI process. You get what each step needs, returns and must never drop."
 job: set-up-ai
 
 headline: "Pass work between AI steps without losing facts"
@@ -27,7 +27,7 @@ you_get:
   - A list of shortfalls and trade-offs
 
 how_to_use:
-  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - List your steps in order, one line each, with what each one should hand on.
   - If you know what each step is sent now, paste it or describe it, with any measured costs.
   - Read the never-trim list for each step and check your current setup keeps all of it.

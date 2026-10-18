@@ -1,9 +1,9 @@
 new_slug: get-motion-graphics-ad-script-that-sells
-name: Get a motion graphics ad script that sells
-summary: A flat graphic ad script built around your product cutout, one message and one picture per shot.
+name: "Make your numbers and offer clear in a graphic ad"
+summary: "Give it your selling idea and brand colours. You get a shot-by-shot script for a clean animated graphic ad."
 job: make-video-ads
 
-headline: "Make your numbers easy to read in a graphic ad"
+headline: "Make your numbers and offer clear in a graphic ad"
 subhead: Give it your selling idea and brand facts. It fixes a small design system from your own colours and type, then writes one message and one picture per shot, with your exact words kept apart so nothing comes out misspelled.
 
 explain: |
@@ -29,7 +29,7 @@ you_get:
   - Notes on every figure and its source, and anything inferred
 
 how_to_use:
-  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste your colours, typefaces and product facts underneath.
   - Add any figures you want charted, each with where it comes from.
   - Say "video, 20 seconds" or "still", and who the ad is for.

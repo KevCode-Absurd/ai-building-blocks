@@ -1,6 +1,6 @@
 new_slug: get-wordless-openings-people-watch-to-end
-name: Get wordless openings people watch to the end
-summary: Two or three four-second wordless openings where your product does one satisfying motion, with the prompts to make them.
+name: "Wordless openings people watch to the end"
+summary: "Give it your product photos and ad. You get two or three four-second openings and the prompts to make them."
 job: make-video-ads
 
 headline: "Wordless openings people watch to the end"
@@ -29,7 +29,7 @@ you_get:
   - A suggested overlay of 1 to 4 words (or none) and a delivery list
 
 how_to_use:
-  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Attach your product photos and describe exactly how it opens and is used, in your brand's words.
   - Describe the first frame of the ad it goes in front of (the place, the light, what's in it).
   - Approve one row of the line-up before anything is made.

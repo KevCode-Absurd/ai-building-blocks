@@ -1,6 +1,6 @@
 new_slug: give-ai-tools-brand-facts-they-can-trust
-name: Give AI tools brand facts they can trust
-summary: Your brand material sorted into product facts, buyer evidence, voice and look, every line with its source.
+name: "Brand facts your team and AI tools can trust"
+summary: "Give it your website text, product sheet and reviews. You get your facts, voice and look sorted, each with its source."
 job: brand-file
 
 headline: "Brand facts your team and AI tools can trust"
@@ -26,7 +26,7 @@ you_get:
   - A short handoff for the next step, if you named one
 
 how_to_use:
-  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste your material underneath and give each piece a short label (product page, facts panel, reviews) so the sources make sense.
   - Say what comes next, for example "this goes to a copywriter", to get the handoff slice.
   - Read the GAPS list and the "brand assertion" labels first. Those are the lines nobody should use in an ad until you find proof.

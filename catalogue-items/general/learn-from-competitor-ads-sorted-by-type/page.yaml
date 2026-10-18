@@ -1,6 +1,6 @@
 new_slug: learn-from-competitor-ads-sorted-by-type
-name: Learn from competitor ads, sorted by type
-summary: Other brands' ads sorted into 11 groups, with the four or five most worth studying in each.
+name: "Learn from competitor ads, sorted by type"
+summary: "Give it ads you've saved from an ad library. You get them sorted into 11 types, with the best ones to study."
 job: study-competitors
 
 headline: "Learn from competitor ads, sorted by type"
@@ -26,7 +26,7 @@ you_get:
   - A list of thin groups and ads it couldn't look at
 
 how_to_use:
-  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Collect ads by hand from a public ad library, such as Meta's, and paste them in with a link, the advertiser, the text, the format and what the image or video shows.
   - If you can, attach screenshots or key frames. Ads it can't see are left off the board rather than guessed.
   - Add a line on what you sell and who your competitors are.

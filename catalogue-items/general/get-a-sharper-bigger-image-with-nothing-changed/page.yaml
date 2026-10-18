@@ -1,9 +1,9 @@
 new_slug: get-a-sharper-bigger-image-with-nothing-changed
-name: Get a sharper, bigger image with nothing changed
-summary: A larger copy of an approved image, same people, product and words, checked before you use it.
+name: "Make your image bigger and sharper without changing it"
+summary: "Give it your approved image and the size you need. You get the prompt, plus checks that nothing changed."
 job: make-image-ads
 
-headline: "Make your image bigger and sharper, with nothing changed"
+headline: "Make your image bigger and sharper without changing it"
 subhead: Give it the approved image, the size you need and the tool you'll use. It writes an upscale prompt that forbids any change, then checks the returned file's real size and compares faces, hands, words and product with the original before you use it.
 
 explain: |
@@ -28,7 +28,7 @@ you_get:
   - A verdict, either accepted or the original returned with the reason
 
 how_to_use:
-  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Attach the approved image and say the size you need, for example "double, for a print banner".
   - Name your tool and its size setting (for example "2x upscale button"). Set the size there, not in the prompt.
   - Paste the prompt into your tool, then attach the returned file to the same chat.

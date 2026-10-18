@@ -1,6 +1,6 @@
 new_slug: get-overhead-portraits-that-still-look-human
-name: Get overhead portraits that still look human
-summary: An image prompt for a portrait shot from straight above, with the face and skin still real.
+name: "Top-down portraits where faces still look human"
+summary: "Give it a short brief and a photo. You get one image prompt for a striking overhead portrait that looks real."
 job: make-image-ads
 
 headline: "Top-down portraits where faces still look human"
@@ -29,7 +29,7 @@ you_get:
   - If your chat makes images, the picture with a pass or fail line for each check
 
 how_to_use:
-  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Write a two-line brief, for example "woman in her 50s, home kitchen, relaxed, 4:5, no words, holding our product".
   - Attach the photos you have and say what each one is (camera angle, the person, the product).
   - Paste the prompt into your image tool and check the face, eyes and hands at full size.

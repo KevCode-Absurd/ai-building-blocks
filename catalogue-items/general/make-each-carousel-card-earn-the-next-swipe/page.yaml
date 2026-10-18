@@ -1,9 +1,9 @@
 new_slug: make-each-carousel-card-earn-the-next-swipe
-name: Make each carousel card earn the next swipe
-summary: A 2 to 6 card carousel where card 1 works alone and every swipe leads to the next.
+name: "A carousel where every card makes people swipe"
+summary: "Give it your selling idea. You get 2 to 6 cards, one point each, with the words and a picture note."
 job: make-image-ads
 
-headline: "A carousel where every card earns the next swipe"
+headline: "A carousel where every card makes people swipe"
 subhead: Give it your selling idea and your brand facts. It splits the argument into 2 to 6 cards, one point per card, ends each card on a question the next one answers, and writes the words, a picture note and the text above the ad.
 
 explain: |
@@ -26,7 +26,7 @@ you_get:
   - The headline under the ad
 
 how_to_use:
-  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste your selling idea in a sentence or two, or an existing script.
   - Paste your brand facts, especially real customer phrases and the doubt that stops people buying.
   - Say how many cards you want, or leave it at five.

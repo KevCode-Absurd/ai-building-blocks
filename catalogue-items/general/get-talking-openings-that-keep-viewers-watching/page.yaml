@@ -1,9 +1,9 @@
 new_slug: get-talking-openings-that-keep-viewers-watching
-name: Get talking openings that keep viewers watching
-summary: Two or three new 6-second spoken openings for an ad you already run, plus the prompts to make them.
+name: "New openings that keep people watching your ad"
+summary: "Give it an ad you run and your product photos. You get two or three new 6-second openings and their prompts."
 job: make-video-ads
 
-headline: "New openings that keep viewers watching your ad"
+headline: "New openings that keep people watching your ad"
 subhead: Give it the ad you already have, your product photos and your buyer. It writes 2 or 3 opening lines that each stop scrolling a different way, and the prompts to make them with a made-up AI presenter who lifts your product on a cue word.
 
 explain: |
@@ -29,7 +29,7 @@ you_get:
   - A checklist for the finished clips and what to deliver
 
 how_to_use:
-  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste the first line of your existing ad and describe its first frame. The full script is better.
   - Paste your brand facts, approved claims and a few real reviews. Attach product photos.
   - Approve one opening line before anything is made. Read it aloud with your ad's first line.

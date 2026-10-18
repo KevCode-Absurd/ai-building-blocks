@@ -1,9 +1,9 @@
 new_slug: turn-footage-into-ad-people-follow
-name: Turn your footage into an ad people follow
-summary: A timed cut list, caption windows, sound plan and export settings for the clips you already have.
+name: "Turn the footage you have into an ad"
+summary: "Give it your clips, script and offer. You get a timed cut list, captions, a sound plan and any missing shots."
 job: make-video-ads
 
-headline: "Turn footage you already have into an ad"
+headline: "Turn the footage you have into an ad"
 subhead: Give it your clips, your approved script and your offer. It maps each clip to a part of the argument, writes a timed cut list, caption windows and a sound plan, and lists the shots you're missing.
 
 explain: |
@@ -29,7 +29,7 @@ you_get:
   - Export settings per shape, and a list of shots you still need
 
 how_to_use:
-  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - List each clip with its file name, length and shape. Paste the transcript with times if you have one.
   - Paste the approved script, claims and offer. Say what shapes and length you need.
   - Hand the plan to your editor, or follow it yourself in any editing app.

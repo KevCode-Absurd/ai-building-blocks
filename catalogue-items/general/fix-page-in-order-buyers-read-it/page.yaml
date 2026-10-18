@@ -1,6 +1,6 @@
 new_slug: fix-page-in-order-buyers-read-it
-name: Fix your page in the order buyers read it
-summary: Ranked fixes for your page, found by reading it like a phone buyer. No sales data needed.
+name: "Know what to fix first on your page"
+summary: "Give it your page link or screenshots. You get a ranked list of fixes, quick wins first. No sales data needed."
 job: audit-landing-page
 
 headline: "Know what to fix first on your page"
@@ -28,7 +28,7 @@ you_get:
   - A list of what the page can't tell you, such as missing proof or terms
 
 how_to_use:
-  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste the page's text and attach phone screenshots from top to bottom.
   - Paste the ad that sends people there, so the first screen can be checked against it.
   - Add your guarantee, delivery and returns terms if they're not on the page. Missing terms are findings in their own right.

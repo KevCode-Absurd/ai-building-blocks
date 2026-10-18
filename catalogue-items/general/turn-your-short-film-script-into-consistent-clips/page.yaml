@@ -1,9 +1,9 @@
 new_slug: turn-your-short-film-script-into-consistent-clips
-name: Turn your short film script into consistent clips
-summary: Character, set and timed clip prompts for a photo-real, film-style ad with one or two made-up adults.
+name: "Turn your short-film script into video clips"
+summary: "Give it your script and product photo. You get image and clip prompts with the same faces, room and light throughout."
 job: make-video-ads
 
-headline: "Turn your short-film script into matching clips"
+headline: "Turn your short-film script into video clips"
 subhead: Give it an approved script with labelled speakers and a real product photo. It writes a character reference, a master picture of the set, matching angles, and timed clip prompts with dialogue, camera and light, plus a one-line fix for any shot that fails.
 
 explain: |
@@ -28,7 +28,7 @@ you_get:
   - A one-fault, one-instruction fix for any failed shot
 
 how_to_use:
-  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste the approved script, ideally from "Get a short film ad script with a twist".
   - Attach your product photo and say how it's held and used.
   - Make the character reference and the set master first, approve them, then the angle stills, then the clips.

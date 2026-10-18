@@ -1,6 +1,6 @@
 new_slug: find-script-lines-that-lose-sale
-name: Find the script lines that lose the sale
-summary: Your video ad script checked line by line against 13 sets of rules, with the rule broken and a fix for each.
+name: "Find the script lines that lose the sale"
+summary: "Give it your ad script. You get every weak line, why it loses people, and a better line to use."
 job: make-video-ads
 
 headline: "Find the script lines that lose the sale"
@@ -27,7 +27,7 @@ you_get:
   - Or, while writing, the sections that apply to your task
 
 how_to_use:
-  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste its reference file (principles.md) too, then your script, one line per row.
   - Add your product facts and approved claims, so every fix uses only true facts.
   - Say whether your product is used up and reordered, or bought once and kept.

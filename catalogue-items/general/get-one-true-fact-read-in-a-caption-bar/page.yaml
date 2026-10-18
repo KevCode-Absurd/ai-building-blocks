@@ -1,9 +1,9 @@
 new_slug: get-one-true-fact-read-in-a-caption-bar
-name: Get one true fact read in a caption bar
-summary: A phone photo of the problem with a plain caption bar carrying one true, sourced fact.
+name: "A photo with one true fact in a news-style caption"
+summary: "Give it your ad and one fact you can source. You get the caption and a prompt for the photo behind it."
 job: make-image-ads
 
-headline: "One true fact in a news-style caption"
+headline: "A photo with one true fact in a news-style caption"
 subhead: Give it your story ad and one fact you can back, with its source. It writes a 5 to 10 word caption in the source's own wording, adds a small topic label, and briefs a phone photo of the problem behind it. A person checks it before it runs.
 
 explain: |
@@ -27,7 +27,7 @@ you_get:
   - A 60 to 120 word image prompt, ready to paste
 
 how_to_use:
-  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste your story ad underneath.
   - Paste the one fact the story rests on, exactly as approved, with its source.
   - Paste the image prompt into your image tool and check the caption letter by letter.

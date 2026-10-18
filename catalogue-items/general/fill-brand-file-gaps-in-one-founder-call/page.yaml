@@ -1,6 +1,6 @@
 new_slug: fill-brand-file-gaps-in-one-founder-call
-name: Fill your brand file's gaps in one founder call
-summary: A founder interview that asks only what your data can't answer, and files each answer with its source.
+name: "Get the answers only your founder knows, in one call"
+summary: "Give it what you know about your brand. You get the questions to ask your founder, then their answers filed."
 job: brand-file
 
 headline: "Get the answers only your founder knows, in one call"
@@ -26,7 +26,7 @@ you_get:
   - A one-page readback of what you heard, what's still needed and what was decided
 
 how_to_use:
-  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste your brand file and ask for the questionnaire. Send it to the founder two days before the call, with the list of documents to bring.
   - On the call, ask only the core questions (marked with *). Leave the rest for written answers.
   - After the call, paste the notes or transcript back in and ask it to file the answers.

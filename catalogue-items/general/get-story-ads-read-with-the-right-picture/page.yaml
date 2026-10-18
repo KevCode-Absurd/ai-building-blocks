@@ -1,9 +1,9 @@
 new_slug: get-story-ads-read-with-the-right-picture
-name: Get your story ad read with the right picture
-summary: Reads your story ad, picks which of 20 post-like picture types fits honestly, and writes the prompt.
+name: "Pick the right picture for your story-style ad"
+summary: "Give it your finished ad text. You get the best fit of 20 picture types and a ready-to-paste image prompt."
 job: make-image-ads
 
-headline: "Pick the right picture for your story ad"
+headline: "Pick the right picture for your story-style ad"
 subhead: Give it your approved story ad. It finds the moments, objects and written words in the story, picks the picture type that fits (a snapshot, a sticky note, a text thread, a review card and 16 more), and writes the brief and a ready-to-paste image prompt.
 
 explain: |
@@ -28,7 +28,7 @@ you_get:
   - A 60 to 120 word image prompt, ready to paste
 
 how_to_use:
-  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste your approved story ad. The picture is chosen from the story, so don't skip this.
   - Add your brand file or a few lines on the buyer, your places and your claims.
   - Name a picture type if you want one. It will tell you if that type can't be made honestly.

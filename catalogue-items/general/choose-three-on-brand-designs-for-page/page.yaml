@@ -1,9 +1,9 @@
 new_slug: choose-three-on-brand-designs-for-page
-name: Choose from three on-brand designs for your page
-summary: Three distinct design plans for one page in your colours and fonts, plus a review once it's built.
+name: "Three designs for your page to choose from"
+summary: "Give it your page text, colours and fonts. You get three different on-brand designs for phone and desktop."
 job: write-landing-page
 
-headline: "Three on-brand designs for your page to pick from"
+headline: "Three designs for your page to choose from"
 subhead: Give it your finished page copy and your brand's colours, fonts and photos. It sets one design system, plans three directions that differ in layout and what the pictures do, maps every section for phone and desktop, and can review a built page for design and readability problems.
 
 explain: |
@@ -28,7 +28,7 @@ you_get:
   - If you sent screenshots, design and technical findings with a fix for each
 
 how_to_use:
-  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste your brand colours with hex codes and font names, and describe or attach your product photos.
   - Paste the finished page copy and the ad that sends people to it.
   - Say whether this is a refresh (keep what works) or a redesign (layout can change).

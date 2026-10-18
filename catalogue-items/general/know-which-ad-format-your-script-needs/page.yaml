@@ -1,6 +1,6 @@
 new_slug: know-which-ad-format-your-script-needs
-name: Know which ad format your script needs
-summary: Reads a finished script and says which ad format can carry it, and at what length.
+name: "Pick the right format for your ad script"
+summary: "Paste a finished script. You get the formats that suit it best, ranked, and whether the length fits."
 job: make-video-ads
 
 headline: "Pick the right format for your ad script"
@@ -28,7 +28,7 @@ you_get:
   - A length check, and where to add length for a longer test
 
 how_to_use:
-  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste your finished script underneath, with the parts labelled if you have them.
   - Add what the product is and any limits (no presenter, no budget for animation).
   - Read the "must" lines first. Each one should quote your script.

@@ -1,6 +1,6 @@
 new_slug: get-talking-object-ad-script-that-sells
-name: Get a talking object ad script that sells
-summary: A short, funny ad where an everyday object with a face tells your buyer's problem, with no claim you can't back.
+name: "A funny ad told by an everyday object"
+summary: "Give it your buyer's moment and product. You get a 10 to 30 second script spoken by an object with a face."
 job: make-video-ads
 
 headline: "A funny ad told by an everyday object"
@@ -29,7 +29,7 @@ you_get:
   - A list of every fact the object states, with its source
 
 how_to_use:
-  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste your product facts, approved claims and a few customer reviews underneath.
   - Describe where the problem happens, for example "at the kitchen sink, 7 am". Name any object your customers mention.
   - Say "video, 20 seconds" or "still", and how dry or silly your brand's humour can be.

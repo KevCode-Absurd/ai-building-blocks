@@ -1,6 +1,6 @@
 new_slug: get-video-ad-script-in-customers-words
-name: Get a video ad script in your customers' words
-summary: A video ad script built from what your customers said, that changes one belief in one buyer.
+name: "A video ad script in your customers' own words"
+summary: "Give it real customer quotes and your facts. You get a script where every line traces back to a source."
 job: make-video-ads
 
 headline: "A video ad script in your customers' own words"
@@ -29,7 +29,7 @@ you_get:
   - The beat that carries the ad, a test plan and a list of gaps
 
 how_to_use:
-  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste 10 or more real customer quotes with where each came from. Include a few 3-star reviews.
   - Paste your product facts, approved claims and the real offer terms.
   - Name one buyer and say how much they already know.

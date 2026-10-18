@@ -1,6 +1,6 @@
 new_slug: get-ai-ads-that-show-your-real-product
-name: Get AI ads that show your real product
-summary: A 15-point plan before any AI ad picture or clip, and an 8-line check after each one.
+name: "AI ad images that get your product right"
+summary: "Give it your brief and product photos. You get a checklist before you make anything and a check for each result."
 job: check-ads
 
 headline: "AI ad images that get your product right"
@@ -28,7 +28,7 @@ you_get:
   - MISSING lines for anything about the product it can't know
 
 how_to_use:
-  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste your brief and list your product photos, with what each one shows.
   - Paste your brand file, or at least how the product looks, opens and is used.
   - Make the first still only, and run the check on it before you ask for any clip.

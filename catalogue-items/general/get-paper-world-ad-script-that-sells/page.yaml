@@ -1,6 +1,6 @@
 new_slug: get-paper-world-ad-script-that-sells
-name: Get a paper world ad script that sells
-summary: A narrated ad told like a small paper storybook, in one of five paper looks.
+name: "Tell your buyer's problem like a paper storybook"
+summary: "Give it your brief and product facts. You get a narrated script for an ad made of real-looking paper."
 job: make-video-ads
 
 headline: "Tell your buyer's problem like a paper storybook"
@@ -28,7 +28,7 @@ you_get:
   - A list of claims used, each with its source
 
 how_to_use:
-  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste your product facts, label text and claims underneath.
   - Describe the buyer's moment in a sentence, and pick a look if you have one in mind.
   - Say "video, 20 seconds" or "still".

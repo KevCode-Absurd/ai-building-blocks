@@ -1,9 +1,9 @@
 new_slug: borrow-an-ad-layout-that-already-works
-name: Borrow an ad layout that already works
-summary: Image ad layouts that worked for other brands, rebuilt with your own product, words and checked claims.
+name: "Copy an ad layout that works, using your product"
+summary: "Give it an ad you admire and your product photos. You get your own version, in feed and story sizes."
 job: study-competitors
 
-headline: "Copy a proven ad layout with your own product"
+headline: "Copy an ad layout that works, using your product"
 subhead: Give it a reference ad from another brand, your brand file and your real photos. It studies why the layout works, writes a plan with your words and checked claims, builds 4:5 and 9:16 versions, and revises them with you until you approve.
 
 explain: |
@@ -28,7 +28,7 @@ you_get:
   - A record of every claim swap and every revision note
 
 how_to_use:
-  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste your brand file underneath and attach your logo file and product photos.
   - Attach the reference ad image. If you can only describe it, say so, and check the plan against the real image later.
   - Write one sentence of direction, such as "use this to show what's in one pack, for people who quit greens powders".

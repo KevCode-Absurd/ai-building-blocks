@@ -1,9 +1,9 @@
 new_slug: fix-whats-wrong-in-finished-ads-before-launch
-name: Fix what's wrong in finished ads before launch
-summary: Finished image ads or storyboards reviewed, with the smallest fix for each flaw and a verdict per ad.
+name: "Fix what's wrong in your ads before they go live"
+summary: "Give it your finished ads and what you can claim. You get pass, fix or remake for each, with the fix."
 job: check-ads
 
-headline: "Fix what's wrong in your ads before launch"
+headline: "Fix what's wrong in your ads before they go live"
 subhead: Give it your finished image ads or storyboards, their exact words, what you're allowed to claim and who each ad is for. It checks proof first, then whether the ad makes sense to that buyer, then the look, and says pass, fix or remake for each.
 
 explain: |
@@ -29,7 +29,7 @@ you_get:
   - A note on how much the batch varies
 
 how_to_use:
-  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Attach the finished images at full size, or paste the storyboard frames.
   - Paste every word that runs with each ad, including headline, main text and button.
   - Paste your claims list, offer terms and logo and font references, and say who each ad is for.

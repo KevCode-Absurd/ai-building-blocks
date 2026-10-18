@@ -1,6 +1,6 @@
 new_slug: get-script-presenter-can-say-without-stumbling
-name: Get a script your presenter can say without stumbling
-summary: Fixes lines that trip when said aloud, without changing a single claim, number or price.
+name: "A script your presenter can say without stumbling"
+summary: "Paste your script. You get every line that trips when spoken, fixed, with the facts and numbers unchanged."
 job: make-video-ads
 
 headline: "A script your presenter can say without stumbling"
@@ -27,7 +27,7 @@ you_get:
   - Flags for any claim or number that looks wrong, left unchanged
 
 how_to_use:
-  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste your script or ad text underneath.
   - Say whether it will be spoken or read, and who it's for.
   - Paste two or three of your brand's own lines, so it keeps your phrases.

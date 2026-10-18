@@ -1,9 +1,9 @@
 new_slug: turn-watercolor-script-into-shots-ai-can-make
-name: Turn your watercolor script into shots AI can make
-summary: Locked style lines, image prompts and gentle video prompts that keep every clip one real watercolor.
+name: "Turn your watercolor script into video clips"
+summary: "Give it your script and product photo. You get image and clip prompts that keep one painted look throughout."
 job: make-video-ads
 
-headline: "Turn your watercolor script into matching clips"
+headline: "Turn your watercolor script into video clips"
 subhead: Give it your watercolor script and a product photo. It names the one paint movement, locks the paper, pigment, colors and figure in fixed lines, and writes image prompts, gentle video prompts and transitions in the order you make them.
 
 explain: |
@@ -28,7 +28,7 @@ you_get:
   - Clip prompts with a movement lock, plus transition prompts
 
 how_to_use:
-  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste your watercolor script and attach the product photo. Type out every line on the label.
   - Make the painted product alone first and check the label before anything else.
   - Approve each image before you make its clip.

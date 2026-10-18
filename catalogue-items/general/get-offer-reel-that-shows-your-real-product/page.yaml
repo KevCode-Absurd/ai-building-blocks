@@ -1,9 +1,9 @@
 new_slug: get-offer-reel-that-shows-your-real-product
-name: Get an offer reel that shows your real product
-summary: A 10 to 20 second offer reel built in code from your real photos and approved words.
+name: "An offer video with your product and price exactly right"
+summary: "Give it your product photos, words and offer. You get a finished 10 to 20 second video in every size you need."
 job: make-video-ads
 
-headline: "An offer reel with your pack and price exactly right"
+headline: "An offer video with your product and price exactly right"
 subhead: Give it your real product photos, approved words, colours, fonts and offer. It plans a beat-timed shot list for you to approve, builds the reel in code, reviews the rendered frames at least three times, and hands you the finished video in each shape you need.
 
 explain: |
@@ -29,7 +29,7 @@ you_get:
   - Final videos in each shape, with loudness and review scores
 
 how_to_use:
-  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in. It needs a version that can run code on your computer, such as Claude Code.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in. It needs a version that can run code on your computer, such as Claude Code.
   - Give it your photos, approved words, colours, font files and logo.
   - Answer the one round of questions about anything blank.
   - Read the shot list carefully, then reply APPROVED or ask for changes.

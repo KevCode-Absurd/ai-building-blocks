@@ -1,9 +1,9 @@
 new_slug: get-new-ads-from-your-best-script
-name: Get new ads from your best script
-summary: Your winning script retold as I, you or they, with every fact, line and length kept the same.
+name: "New versions of your best script, with nothing broken"
+summary: "Give it a script that works. You get it retold in a new voice, with every fact and line length kept."
 job: make-video-ads
 
-headline: "New ads from your best script, without breaking it"
+headline: "New versions of your best script, with nothing broken"
 subhead: Give it a script you trust and say who should tell it (I, you or she) and when (past, present or future). It changes only the voice, keeps every fact, line and length, and flags any line it couldn't change honestly.
 
 explain: |
@@ -28,7 +28,7 @@ you_get:
   - Notes on every line it kept in the old voice, and why
 
 how_to_use:
-  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste your script underneath, one line per row, with any on-screen text and picture notes.
   - Write the new person and tense, for example "first person, past" or "third person, past, she".
   - Say who will say it. This matters, because an AI presenter can't claim a personal result.

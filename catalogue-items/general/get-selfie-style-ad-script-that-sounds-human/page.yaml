@@ -1,6 +1,6 @@
 new_slug: get-selfie-style-ad-script-that-sounds-human
-name: Get a selfie-style ad script that sounds human
-summary: A talking-to-phone ad script, or a posted-photo still, that reads as a person and stays honest.
+name: "A selfie-style ad that sounds like a real person"
+summary: "Give it your buyer's doubt and your claims. You get a 15 to 60 second talking-to-camera script that stays honest."
 job: make-video-ads
 
 headline: "A selfie-style ad that sounds like a real person"
@@ -29,7 +29,7 @@ you_get:
   - A list of every claim, number and quote with its source
 
 how_to_use:
-  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste your product facts, approved claims and several real reviews underneath.
   - Say "video, 30 seconds, AI presenter" (or real creator, or still).
   - Name the doubt you want answered, in the buyer's words if you have them.

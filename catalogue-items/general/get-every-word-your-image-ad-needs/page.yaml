@@ -1,9 +1,9 @@
 new_slug: get-every-word-your-image-ad-needs
-name: Get every word your image ad needs
-summary: The image headline, main text, headline, description and button, all finishing your picture's idea.
+name: "All the words your image ad needs"
+summary: "Describe your picture and buyer. You get the words on the image and every text field around it, ready to paste."
 job: write-ad-copy
 
-headline: "Every word your image ad needs, matched to the picture"
+headline: "All the words your image ad needs"
 subhead: Describe the picture you've chosen and who it's for, then paste your proof and offer terms. It writes the words on the image and every field around it, so they finish the picture's idea instead of repeating it, with one framing per version.
 
 explain: |
@@ -28,7 +28,7 @@ you_get:
   - A long story for the main text, if you asked for one
 
 how_to_use:
-  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Describe the picture in a sentence or two, and say who it's for.
   - Say how much the buyer knows, for example "knows the problem, not us".
   - Paste your proof and offer terms with every condition, plus the field limits.

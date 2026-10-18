@@ -1,6 +1,6 @@
 new_slug: get-founder-ad-script-people-believe
-name: Get a founder ad script people believe
-summary: A filming brief where your real founder explains one decision behind the product, nothing made up.
+name: "A founder video people believe"
+summary: "Give it your founder's own words. You get a filming brief built around one real decision behind your product."
 job: make-video-ads
 
 headline: "A founder video people believe"
@@ -29,7 +29,7 @@ you_get:
   - Notes on the proof behind each claim, and any claims softened
 
 how_to_use:
-  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste your founder's own words underneath. A voice note transcript or a few written answers works.
   - Add your product facts, claims and guarantee.
   - Say the length, for example "60 seconds".

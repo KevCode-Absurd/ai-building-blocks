@@ -1,6 +1,6 @@
 new_slug: get-product-snapshots-that-dont-look-like-ads
-name: Get product snapshots that don't look like ads
-summary: Flash snapshots of people using your product on a real evening, for ads and posts that feel real.
+name: "Product photos that look like a friend took them"
+summary: "Give it your product photos and who buys it. You get about eight casual flash-photo prompts of people using it."
 job: product-photos
 
 headline: "Product photos that look like a friend took them"
@@ -29,7 +29,7 @@ you_get:
   - Check notes for each photo, with what was remade and why
 
 how_to_use:
-  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Attach your product photos, including one of it in a hand or in use if you have it.
   - Say who buys it and their moment, for example "tired workers, 11 pm, kitchen, before bed".
   - Read the shot list and approve it, or cross out frames that don't fit your brand.

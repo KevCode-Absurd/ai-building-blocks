@@ -1,6 +1,6 @@
 new_slug: tell-the-problem-so-buyers-see-themselves
-name: Tell your buyer's problem so well they see themselves
-summary: A long story of one person's problem that explains the cause plainly and brings your product in late.
+name: "Tell the problem so buyers think \"that's me\""
+summary: "Give it your buyer, their problem and your product. You get a long story that ends with your product as the fix."
 job: write-ad-copy
 
 headline: "Tell the problem so buyers think \"that's me\""
@@ -28,7 +28,7 @@ you_get:
   - A line listing anything assumed
 
 how_to_use:
-  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste a note on your buyer, including what they tried and their own words from reviews.
   - If you know why the problem keeps happening, and your facts support it, paste that as the cause.
   - Paste your product facts and offer, and give a length, for example "300 to 400 words".

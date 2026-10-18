@@ -1,9 +1,9 @@
 new_slug: turn-comic-page-script-into-ready-video-shots
-name: Turn your comic page script into ready-to-make video shots
-summary: Desk, still and clip prompts for a filmed comic page, with empty caption boxes and your real product.
+name: "Turn your comic ad script into video clips"
+summary: "Give it your comic script and product photo. You get image and clip prompts for each page, with clean lettering."
 job: make-video-ads
 
-headline: "Turn your comic script into clean video shots"
+headline: "Turn your comic ad script into video clips"
 subhead: Give it a comic ad script and a photo of your product. It plans each page, fixes the look of the desk, the ink and the drawn person, then writes stills to approve and one clip per page, ending on your real product.
 
 explain: |
@@ -28,7 +28,7 @@ you_get:
   - Editing notes for captions, narration and music
 
 how_to_use:
-  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste your comic script underneath, then attach or describe your product photo.
   - Add how the product is used and the one claim the comic acts out.
   - Agree the page plan table before asking for prompts.

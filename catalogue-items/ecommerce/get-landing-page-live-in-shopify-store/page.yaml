@@ -1,6 +1,6 @@
 new_slug: get-landing-page-live-in-shopify-store
-name: Get your landing page live in your Shopify store
-summary: Shopify theme files that load your finished page copy, with live store prices and words you can edit.
+name: "Get your landing page live in Shopify"
+summary: "Give it your page text and theme. You get the files and six install steps, with prices pulled from your store."
 job: write-landing-page
 
 headline: "Get your landing page live in Shopify"
@@ -27,7 +27,7 @@ you_get:
   - Six install steps, and a MISSING list of anything left empty
 
 how_to_use:
-  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste your finished page copy. Write it first with a landing page skill if you haven't.
   - Add your product's handle (the last part of its web address), the template name you want and your theme's name.
   - Say which apps handle reviews and subscriptions, so it uses their blocks instead of rebuilding them.

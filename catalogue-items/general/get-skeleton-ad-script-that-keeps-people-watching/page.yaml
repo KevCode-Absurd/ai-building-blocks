@@ -1,6 +1,6 @@
 new_slug: get-skeleton-ad-script-that-keeps-people-watching
-name: Get a skeleton ad script that keeps people watching
-summary: A funny "what happens if" script where a cartoon skeleton shows where your buyer's old habit ends up.
+name: "A funny skeleton ad that keeps people watching"
+summary: "Give it your product and the habit it replaces. You get a funny \"what happens if\" script with a cartoon skeleton."
 job: make-video-ads
 
 headline: "A funny skeleton ad that keeps people watching"
@@ -29,7 +29,7 @@ you_get:
   - A list of every claim and marker, with where it came from
 
 how_to_use:
-  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste your product facts and approved claims underneath. Your brand file works.
   - Write the old habit your product replaces, in your customers' words if you have them.
   - Say "video, 30 seconds" or "still, one image" and who the ad is for.

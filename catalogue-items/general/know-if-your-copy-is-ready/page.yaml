@@ -1,9 +1,9 @@
 new_slug: know-if-your-copy-is-ready
-name: Know if your copy is ready, in 15 questions
-summary: A ship or rewrite verdict from 15 yes or no questions, each backed by a line.
+name: "Know if your copy is ready to publish"
+summary: "Paste a finished ad, page or email. You get a yes or no on 15 questions and up to three fixes."
 job: check-ads
 
-headline: "Know if your copy is ready to ship"
+headline: "Know if your copy is ready to publish"
 subhead: Paste a finished ad, page or email. It answers fifteen yes or no questions, quoting the line behind each answer, then says whether the piece ships or which part goes back, with up to three fixes in order.
 
 explain: |
@@ -26,7 +26,7 @@ you_get:
   - Up to three fixes, in order
 
 how_to_use:
-  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste the finished copy underneath.
   - Add one line on who it's for and how much they know.
   - Paste your approved claims and offer terms. Without them, three questions come back as "cannot verify".

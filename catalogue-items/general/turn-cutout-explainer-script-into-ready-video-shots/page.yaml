@@ -1,9 +1,9 @@
 new_slug: turn-cutout-explainer-script-into-ready-video-shots
-name: Turn your cutout explainer script into ready-to-make video shots
-summary: Paper collage stills and clip prompts that hold one look, with your real words added in editing.
+name: "Turn your paper-cutout script into video clips"
+summary: "Give it your script and product photo. You get image and clip prompts, plus the words to add when editing."
 job: make-video-ads
 
-headline: "Turn your cutout script into clean collage clips"
+headline: "Turn your paper-cutout script into video clips"
 subhead: Give it a one-point script and your product photo. It fixes one graphic style, plans a proof shot for every sentence, and writes prompts for wordless paper plates that move as flat layers. You also get an editing list of every word and figure to add.
 
 explain: |
@@ -28,7 +28,7 @@ you_get:
   - An editing list of every word and number, with its source
 
 how_to_use:
-  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste your script underneath, then attach or describe your product photo.
   - Add any figures you want charted, each with where it comes from.
   - Make the stills first and approve them.

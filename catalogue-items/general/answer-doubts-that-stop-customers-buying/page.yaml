@@ -1,6 +1,6 @@
 new_slug: answer-doubts-that-stop-customers-buying
-name: Answer the doubts that stop customers buying
-summary: Shows which real customer doubts your page answers, hides or misses, and where each answer should go.
+name: "Answer the doubts that stop people buying"
+summary: "Give it your reviews and your page. You get each customer doubt, where your page answers it, and what to add."
 job: audit-landing-page
 
 headline: "Answer the doubts that stop people buying"
@@ -26,7 +26,7 @@ you_get:
   - The top five fixes and a list of facts to collect before writing
 
 how_to_use:
-  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste your customer words with a source for each (review number, ticket ID, date).
   - Paste the full page text, including FAQ answers and what each gallery photo shows, or attach phone screenshots.
   - Add any policies, measurements or test results you have.

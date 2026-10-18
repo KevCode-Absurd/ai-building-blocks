@@ -1,9 +1,9 @@
 new_slug: stop-worried-buyers-with-what-they-dread
-name: Stop worried buyers with the thing they dread
-summary: One quiet, ordinary object from the future your buyer fears, photographed on a real table, with nothing graphic.
+name: "A quiet photo of what your buyer worries will happen"
+summary: "Give it your ad's story and your buyer's fear. You get one everyday object to show and a prompt for the photo."
 job: make-image-ads
 
-headline: "One quiet photo of the future your buyer dreads"
+headline: "A quiet photo of what your buyer worries will happen"
 subhead: Give it your story ad and the fear your buyers name themselves. It picks one plain object that stands for that feared next step, such as a card statement or a repair quote, and writes a prompt for a calm phone photo of it.
 
 explain: |
@@ -27,7 +27,7 @@ you_get:
   - A 60 to 120 word image prompt, ready to paste
 
 how_to_use:
-  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste your story ad underneath.
   - Add the feared next step exactly as your buyers say it, from reviews, calls or your brand file.
   - Paste the image prompt into your image tool and make one square picture.

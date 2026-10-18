@@ -1,9 +1,9 @@
 new_slug: make-people-look-with-one-red-circle
-name: Make people look with one red circle
-summary: A phone photo of one visible flaw with a single rough red circle, where your story starts.
+name: "A photo with one red circle that makes people look"
+summary: "Give it your ad and the flaw it describes. You get a prompt for a plain photo with one rough red circle."
 job: make-image-ads
 
-headline: "One red circle that makes people look"
+headline: "A photo with one red circle that makes people look"
 subhead: Give it your story ad and the flaw it describes. It briefs a clean candid photo of that flaw, then one rough red circle or arrow drawn as if with a finger, plus up to four handwritten words from your copy.
 
 explain: |
@@ -26,7 +26,7 @@ you_get:
   - A 60 to 120 word image prompt, ready to paste
 
 how_to_use:
-  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste your story ad underneath. Make sure it names the flaw and where it is.
   - Add your buyer's own phrase for the flaw if you have one, from reviews or messages.
   - Paste the image prompt into your image tool. If the circle comes out neat and perfect, ask again for "rough, drawn with a finger".

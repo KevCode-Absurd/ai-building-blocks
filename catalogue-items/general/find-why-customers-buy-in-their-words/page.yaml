@@ -1,6 +1,6 @@
 new_slug: find-why-customers-buy-in-their-words
-name: Find why customers buy, in their words
-summary: Your customers' reasons for buying, in their exact words, ranked by how many separate people said them.
+name: "Learn why customers buy, in their own words"
+summary: "Give it your reviews or support emails. You get the reasons people buy, ranked, each in a customer's exact words."
 job: understand-customers
 
 headline: "Learn why customers buy, in their own words"
@@ -28,7 +28,7 @@ you_get:
   - A "check before use" list of risky quotes, with the reason each is flagged
 
 how_to_use:
-  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste or attach your reviews with an ID and date for each. A review export from your reviews app works, and so does a numbered list.
   - Add your product page text so it can tell which reasons you already use.
   - If you sell more than four products, run it once per product.

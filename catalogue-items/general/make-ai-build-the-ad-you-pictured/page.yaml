@@ -1,6 +1,6 @@
 new_slug: make-ai-build-the-ad-you-pictured
-name: Make AI build the ad you pictured
-summary: Ready-made lines you paste into a brief so the AI follows your choices on look, product and selling.
+name: "Make AI build the ad you pictured"
+summary: "Pick your choices for size, look and tone. You get ready lines to paste into your brief so AI follows them."
 job: make-image-ads
 
 headline: "Make AI build the ad you pictured"
@@ -26,7 +26,7 @@ you_get:
   - A MISSING line for any material a choice needs and you didn't send
 
 how_to_use:
-  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste your brief underneath.
   - List your choices, one per setting, for example "Product in the picture, in the scene". Skip any setting you don't care about.
   - Attach only the material your choices name. If you chose "in the scene", send a real product photo.

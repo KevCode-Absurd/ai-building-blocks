@@ -1,9 +1,9 @@
 new_slug: make-people-read-a-private-phone-note
-name: Make people read a private phone note
-summary: A plain notes-app screenshot with a few short lines your narrator typed to themselves about the problem.
+name: "A phone-note picture people can't scroll past"
+summary: "Give it your ad's story. You get a short private note in the narrator's voice and a prompt for the screenshot."
 job: make-image-ads
 
-headline: "A private phone note people can't scroll past"
+headline: "A phone-note picture people can't scroll past"
 subhead: Give it your story ad. It takes the note your narrator keeps (a list, a count of days, a few lines typed to nobody), sets 12 to 30 words in a generic notes screen, and writes the image prompt.
 
 explain: |
@@ -27,7 +27,7 @@ you_get:
   - A 60 to 120 word image prompt, ready to paste
 
 how_to_use:
-  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste your story ad underneath. If the story quotes the note, it uses those words exactly.
   - Paste the image prompt into your image tool and make one square picture.
   - Check every word in the result. Typos you didn't ask for make it look fake.

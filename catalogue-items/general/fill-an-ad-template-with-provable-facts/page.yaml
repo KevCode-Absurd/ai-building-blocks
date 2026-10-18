@@ -1,6 +1,6 @@
 new_slug: fill-an-ad-template-with-provable-facts
-name: Fill an ad template with provable facts
-summary: Each spot in an ad template tested against your real facts, with only the misfits changed.
+name: "Check your facts fit an ad template first"
+summary: "Give it the template and your product facts. You get which parts fit, which to change, and the words to use."
 job: make-image-ads
 
 headline: "Check your facts fit an ad template first"
@@ -29,7 +29,7 @@ you_get:
   - A checklist for before the image is made, and a flaw list after
 
 how_to_use:
-  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Attach the template image, or describe it in a few lines (columns, rows, where the headline and button sit).
   - Paste your facts, claims and reviews underneath, and name the buyer and their main worry.
   - If you're comparing against "the usual way", say what that is. It must be unbranded.

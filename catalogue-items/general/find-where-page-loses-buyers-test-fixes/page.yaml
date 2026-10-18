@@ -1,6 +1,6 @@
 new_slug: find-where-page-loses-buyers-test-fixes
-name: Find where your page loses buyers, then test fixes
-summary: A full page audit that shows where buyers give up, sizes fixes from your numbers, and plans tests.
+name: "Find where your page loses buyers, and what to fix"
+summary: "Give it your page, ads and sales numbers. You get each fix, its evidence, and whether to make it or test it."
 job: audit-landing-page
 
 headline: "Find where your page loses buyers, and what to fix"
@@ -28,7 +28,7 @@ you_get:
   - Which fixes to ship now and which to test, what the page needs from you, and what already works
 
 how_to_use:
-  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste your page text and attach phone screenshots. Say the date you captured them.
   - Paste the ad that sends most people there, so it can check the page matches.
   - If you have them, paste visits, conversion rate, average order value and the phone and desktop split for the same date range. Without these you get a ranking, not money figures.

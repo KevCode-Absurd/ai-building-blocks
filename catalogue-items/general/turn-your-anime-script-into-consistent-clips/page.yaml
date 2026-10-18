@@ -1,9 +1,9 @@
 new_slug: turn-your-anime-script-into-consistent-clips
-name: Turn your anime script into consistent clips
-summary: Still and clip prompts for an anime-style ad, with one fixed hero, drawing style and product.
+name: "Turn your anime ad script into video clips"
+summary: "Give it your script and product photo. You get image and clip prompts with the same hero and style throughout."
 job: make-video-ads
 
-headline: "Turn your anime script into matching clips"
+headline: "Turn your anime ad script into video clips"
 subhead: Give it an approved script and a real photo of your product. It fixes one drawing style and one hero, maps where everything stands, and writes the still prompts and timed clip prompts, with each clip handing over to the next.
 
 explain: |
@@ -29,7 +29,7 @@ you_get:
   - A fix list for any shot that goes wrong
 
 how_to_use:
-  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste the approved script, ideally from "Get an original anime ad script".
   - Attach a real product photo and say how the product is used.
   - Make the still images first and approve them before making any clip.

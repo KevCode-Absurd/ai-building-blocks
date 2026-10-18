@@ -1,9 +1,9 @@
 new_slug: keep-clever-lines-from-beating-clear-ones
-name: Keep clever lines from beating clear ones
-summary: A five-rule card that puts plain speech first, then selling, story, brand words and style tricks.
+name: "Rules that keep your AI's writing clear before clever"
+summary: "Paste this card above any writing request. Your AI then puts plain, clear lines ahead of catchy ones."
 job: write-ad-copy
 
-headline: "Copy that's clear first and clever last"
+headline: "Rules that keep your AI's writing clear before clever"
 subhead: Paste this short card above any request for ads, pages, emails or scripts, or next to a draft you're checking. It ranks five rules in order, from plain speech to brand style tricks, so a catchy line never wins over one people understand.
 
 explain: |
@@ -24,7 +24,7 @@ you_get:
   - If checking, each line that breaks a rule, the rule number, and a corrected full line
 
 how_to_use:
-  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - To write, add your request underneath, for example "write three Instagram captions about our new flavour".
   - To check, paste your draft and write "check this".
   - Paste your voice notes and a few of your brand's own lines, if you have them.

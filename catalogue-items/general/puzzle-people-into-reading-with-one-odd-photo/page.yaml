@@ -1,6 +1,6 @@
 new_slug: puzzle-people-into-reading-with-one-odd-photo
-name: Puzzle people into reading with one odd photo
-summary: A plain photo of one puzzling detail from your story, so people read the ad to understand it.
+name: "One odd photo that makes people read your ad"
+summary: "Give it your ad's story. You get one strange everyday detail to shoot and a prompt for the photo."
 job: make-image-ads
 
 headline: "One odd photo that makes people read your ad"
@@ -27,7 +27,7 @@ you_get:
   - A 60 to 120 word image prompt, ready to paste
 
 how_to_use:
-  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste your story ad underneath. The odd detail should be in the first two or three lines.
   - Say whether you want words on the picture. If you're not sure, ask for both versions.
   - Paste the image prompt into your image tool and make one square picture.

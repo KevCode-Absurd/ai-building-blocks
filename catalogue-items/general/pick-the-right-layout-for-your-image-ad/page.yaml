@@ -1,6 +1,6 @@
 new_slug: pick-the-right-layout-for-your-image-ad
-name: Pick the right layout for your image ad
-summary: The one job your image ad can do with your proof, plus its reading order, zones and style.
+name: "Pick the right layout for your image ad"
+summary: "Give it your buyer, message and proof. You get the ad type, reading order, layout map and style."
 job: make-image-ads
 
 headline: "Pick the right layout for your image ad"
@@ -28,7 +28,7 @@ you_get:
   - What this ad changes compared with the rest of the batch
 
 how_to_use:
-  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Write a short brief underneath with the buyer, the argument, the product and the size, such as "4:5 feed".
   - Paste your evidence, and say plainly what you don't have (no founder photo, no sale).
   - Add your other ads in the batch if you want this one to differ from them.

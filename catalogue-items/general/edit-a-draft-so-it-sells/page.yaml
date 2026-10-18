@@ -1,9 +1,9 @@
 new_slug: edit-a-draft-so-it-sells
-name: Edit a draft so it reads clean and sells
-summary: Your draft back with its best true details kept and only the lines that cost you sales fixed.
+name: "Fix the lines in your draft that lose sales"
+summary: "Paste your draft and your facts. You get it back with the weak lines fixed and your best lines kept."
 job: write-ad-copy
 
-headline: "Fix only the lines in your draft that lose sales"
+headline: "Fix the lines in your draft that lose sales"
 subhead: Paste any customer-facing draft and the facts it's allowed to use. It marks the details worth keeping, checks each line against eleven common faults, makes the smallest fix that works, and keeps the old line whenever the new one isn't clearly better.
 
 explain: |
@@ -29,7 +29,7 @@ you_get:
   - A one or two sentence summary, including whether the problem is the reason to buy rather than the wording
 
 how_to_use:
-  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste your draft underneath, with each part labelled.
   - Paste the facts it's allowed to use. It won't add anything beyond them.
   - If you only want one thing changed, say so, for example "make the headline answer the price doubt".

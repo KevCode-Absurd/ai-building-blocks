@@ -1,9 +1,9 @@
 new_slug: know-how-your-ad-should-open
-name: Know how your ad should open and ask
-summary: A short brief that sets how your ad opens, when it names you and how firmly it asks.
+name: "Decide how your ad should open"
+summary: "Tell it who the ad is for and what they know. You get a brief on how the ad opens and asks."
 job: write-ad-copy
 
-headline: "Decide how your ad opens and how it asks"
+headline: "Decide how your ad should open"
 subhead: Tell it who the ad is for and how much they know about the problem and about you. It picks one of five buyer stages and one of five ways to argue, fills in the blanks from your facts, and gives you a block to paste into any ad brief.
 
 explain: |
@@ -26,7 +26,7 @@ you_get:
   - One line saying which stage and style were chosen, and why
 
 how_to_use:
-  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Describe the ad idea and the buyer in two or three sentences.
   - Say how much the buyer knows, if you're sure. If not, let it choose and check its reason.
   - Paste the buyer's main doubt and your offer terms from your brand file.

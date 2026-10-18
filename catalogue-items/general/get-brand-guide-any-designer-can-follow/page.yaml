@@ -1,6 +1,6 @@
 new_slug: get-brand-guide-any-designer-can-follow
-name: Get a brand guide any designer can follow
-summary: A printable guide and a one-page sheet of your colours, fonts and rules, made from your brand file.
+name: "A brand guide any designer can follow"
+summary: "Give it your brand details. You get a printable guide to your colours, fonts, voice and photos, plus a cheat sheet."
 job: brand-file
 
 headline: "A brand guide any designer can follow"
@@ -26,7 +26,7 @@ you_get:
   - A two-line note on what was left out and why
 
 how_to_use:
-  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in. A tool that can write files works best.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in. A tool that can write files works best.
   - Paste your brand file. Colours and fonts are the minimum; without both it stops and asks you to build the brand file first.
   - Add your logo rules and, for web work, your site's colour variables and button styles.
   - Open the HTML file in a browser and print to PDF with margins set to none.

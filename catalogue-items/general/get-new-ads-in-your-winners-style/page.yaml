@@ -1,6 +1,6 @@
 new_slug: get-new-ads-in-your-winners-style
-name: Get new ads in your winners' style
-summary: New image ads in the style your measured winners share, each testing one new thing.
+name: "New image ads in the style of your best ones"
+summary: "Give it three ads with results. You get what your winners share and new ads that each change one thing."
 job: make-image-ads
 
 headline: "New image ads in the style of your best ones"
@@ -29,7 +29,7 @@ you_get:
   - New ad plans, each saying what is kept and the one thing changed
 
 how_to_use:
-  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Attach the images of at least three measured ads, with spend, result and dates for each. A results file alone only gives the copy half of the profile.
   - Name the product you want new ads for, and paste its facts and a clean product photo.
   - Say how many new ads you want.

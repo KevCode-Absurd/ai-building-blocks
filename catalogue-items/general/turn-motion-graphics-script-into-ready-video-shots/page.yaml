@@ -1,9 +1,9 @@
 new_slug: turn-motion-graphics-script-into-ready-video-shots
-name: Turn your motion graphics script into ready-to-make video shots
-summary: A design card, storyboard, and wordless plate and clip prompts, plus every word to set in editing.
+name: "Turn your graphic ad script into video clips"
+summary: "Give it your script and product cutout. You get a storyboard, clip prompts and every word to add in editing."
 job: make-video-ads
 
-headline: "Turn your graphic script into clips with every word right"
+headline: "Turn your graphic ad script into video clips"
 subhead: Give it a motion graphics script and your product cutout. It fixes a design system in your colours and type, storyboards one move per shot, writes prompts for wordless plates, and lists every word and number for you to set in editing.
 
 explain: |
@@ -28,7 +28,7 @@ you_get:
   - A text layer list of every word and number, with time and source
 
 how_to_use:
-  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste your script underneath, then attach or describe your product cutout.
   - Add your colours, typefaces and any figures with sources.
   - Make the opening still first and check it has no text in it.

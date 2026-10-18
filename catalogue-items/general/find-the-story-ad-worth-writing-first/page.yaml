@@ -1,9 +1,9 @@
 new_slug: find-the-story-ad-worth-writing-first
-name: Find the story ad worth writing first
-summary: A one-page plan for a story ad, with the problem, narrator, pictures and a test of five.
+name: "Find out if a story-style ad suits your product"
+summary: "Give it your product and reviews. You get a yes or no, the problem to lead with, and five stories to test."
 job: plan-ad-tests
 
-headline: "Know if a story ad suits your product"
+headline: "Find out if a story-style ad suits your product"
 subhead: Give it your product, your buyers and your customer reviews. It decides if a story ad fits, picks the problem to lead with in buyers' own words, chooses an honest narrator and pictures, and plans five stories to test.
 
 explain: |
@@ -27,7 +27,7 @@ you_get:
   - A list of what a person must check before anything runs, and rules for reading results
 
 how_to_use:
-  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste all your reviews, numbered, and say who your main buyer groups are.
   - List only the people who have agreed to be quoted. If none have, say so.
   - Read the fit verdict first. If it says your product doesn't suit a story ad, run a short direct ad instead.

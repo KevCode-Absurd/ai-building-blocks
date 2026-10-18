@@ -1,6 +1,6 @@
 new_slug: get-phone-video-script-that-sounds-unscripted
-name: Get a phone video script that sounds unscripted
-summary: A talking-to-phone script that sounds said, not read, with delivery notes, a shot list and three openings.
+name: "A phone video script that sounds unscripted"
+summary: "Give it your buyer and product facts. You get a natural script, delivery notes, a shot list and three openings."
 job: make-video-ads
 
 headline: "A phone video script that sounds unscripted"
@@ -28,7 +28,7 @@ you_get:
   - Three other openings, a shorter cut if the idea survives one, and a list of blanks to fill
 
 how_to_use:
-  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste your product facts, approved claims and a handful of real reviews underneath.
   - Describe one buyer and their doubt in a sentence or two. Say who will film it.
   - Read the script aloud standing up, at speaking pace. Rewrite any line you stumble on.

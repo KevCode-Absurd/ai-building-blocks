@@ -1,6 +1,6 @@
 new_slug: reach-the-right-people-with-a-visible-symptom
-name: Reach the right people with a visible symptom
-summary: A plain, unflattering phone photo of a visible symptom in the routine where your buyer notices it.
+name: "Reach the right people with a photo of their symptom"
+summary: "Give it your ad's story. You get a prompt for a close, honest photo of the symptom your buyer checks."
 job: make-image-ads
 
 headline: "Reach the right people with a photo of their symptom"
@@ -27,7 +27,7 @@ you_get:
   - A 60 to 120 word image prompt when the symptom can be shown
 
 how_to_use:
-  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste your story ad underneath.
   - Add your buyers' words for the symptom, taken from reviews or research, not your guess.
   - Add any limits your brand has on showing the body.

@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState, type CSSProperties, type KeyboardEvent as ReactKeyEvent, type ReactNode } from "react";
 import { B8, ICONS } from "./lib/pixel";
-import { useTyped } from "./lib/typing";
+import { useSeen, useTyped } from "./lib/typing";
 import { type Block, kindInfo, pathOf, taskOf } from "./lib/data";
 import { Link } from "./lib/router";
 import { kits, useStore } from "./lib/store";
@@ -64,12 +64,16 @@ export function PixelIcon({ id }: { id: string }) {
 }
 
 /** The card's peek at the output. Each time you point at the card it types itself out again. */
+/** The card's description, in a box. It types itself out the first time the card is on screen, and again on every hover. */
 function Peek({ text, round }: { text: string; round: number }) {
-  const { n, done } = useTyped(text, round > 0, Math.min(900, 260 + text.length * 2), round);
-  const k = round > 0 ? n : text.length;
+  const [ref, seen] = useSeen<HTMLSpanElement>(0.6);
+  const go = seen ? round + 1 : 0;
+  const { n, done } = useTyped(text, go > 0, Math.min(1100, 300 + text.length * 6), go);
+  const k = go > 0 ? n : text.length;
   return (
-    <span className="peek typed" data-done={String(done || round === 0)} aria-hidden="true">
-      {text.slice(0, k)}{round > 0 && !done && <span className="cursor" />}<span className="ghost">{text.slice(k)}</span>
+    <span className="peek typed" ref={ref} data-done={String(done || go === 0)}>
+      <span className="visually-hidden">{text}</span>
+      <span aria-hidden="true">{text.slice(0, k)}{go > 0 && !done && <span className="cursor" />}<span className="ghost">{text.slice(k)}</span></span>
     </span>
   );
 }
@@ -101,8 +105,7 @@ export function BlockCard({ b }: { b: Block }) {
     <Link to={pathOf(b)} className="card" data-testid="block-card" data-slug={b.slug} data-kind={kind.id} onMouseEnter={wake} onFocus={wake}>
       <span className="meta"><span className="kind">{kind.name}</span><span className="type">{taskOf(b).name}</span></span>
       <span className="nm">{b.name}</span>
-      <span className="sm">{b.summary}</span>
-      {b.peek && <Peek text={b.peek} round={round} />}
+      <Peek text={b.summary} round={round} />
       <span className="view"><Decode text={view} round={round} /><ArrowIcon size={12} /></span>
     </Link>
   );

@@ -1,6 +1,6 @@
 new_slug: get-ad-captions-in-your-own-brand-font
-name: Get ad captions in your own brand font
-summary: Captions in your real brand font, timed to each clip and checked at phone size.
+name: "Captions in your brand font, readable on a phone"
+summary: "Give it your clips, script and font file. You get timed captions in your brand colours, checked at phone size."
 job: make-video-ads
 
 headline: "Captions in your brand font, readable on a phone"
@@ -28,7 +28,7 @@ you_get:
   - Clean and captioned exports plus a subtitle file, when run in an editing tool
 
 how_to_use:
-  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in. An AI tool that can edit video files works best.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in. An AI tool that can edit video files works best.
   - Paste the approved script or transcript, and the measured length of each clip.
   - Attach your font files (for example the .ttf or .otf for your headline and caption fonts) and your logo file.
   - Read the stopped steps first. Anything marked MISSING blocks that part until you supply it.

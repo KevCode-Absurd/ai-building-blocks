@@ -1,9 +1,9 @@
 new_slug: stop-the-scroll-with-a-handwritten-note
-name: Stop the scroll with a handwritten note
-summary: A photo of a few lines of ordinary handwriting in your narrator's voice, that people stop to read.
+name: "A handwritten-note photo people stop to read"
+summary: "Give it your ad's story. You get a short note in the narrator's words and a prompt for the photo."
 job: make-image-ads
 
-headline: "A handwritten note people stop to read"
+headline: "A handwritten-note photo people stop to read"
 subhead: Give it your story ad. It lifts 8 to 25 words the narrator wrote (a note, a list, a line on the back of an envelope), sets them in an ordinary adult hand on real paper, and writes the prompt.
 
 explain: |
@@ -27,7 +27,7 @@ you_get:
   - A 60 to 120 word image prompt, ready to paste
 
 how_to_use:
-  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste your story ad underneath. The note works best if the story quotes it.
   - Paste the image prompt into your image tool and make one square picture.
   - Read every handwritten word in the result. Image tools misspell, and one wrong letter gives the game away.

@@ -1,9 +1,9 @@
 new_slug: write-story-ads-that-read-like-real-posts
-name: Write story ads that read like real posts
-summary: A long story for your ad's main text, under a plain photo that looks like someone posted it.
+name: "Story ads that read like real social posts"
+summary: "Give it your selling idea and customer quotes. You get the ad text and a brief for a plain, real-looking photo."
 job: write-ad-copy
 
-headline: "Story ads that read like real posts"
+headline: "Story ads that read like real social posts"
 subhead: Give it your selling idea and your brand file with real customer quotes. It writes a story for the main text that earns the tap on its first line and each paragraph after, plus a brief for a plain photo that looks like someone posted it.
 
 explain: |
@@ -26,7 +26,7 @@ you_get:
   - Notes on whose story it is, what was inferred and which claims were left out
 
 how_to_use:
-  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste your brand file, including real customer quotes copied word for word with where they came from.
   - Write your selling idea in a sentence, such as "people who quit powders because they couldn't keep it up".
   - Give a length range if you have one.

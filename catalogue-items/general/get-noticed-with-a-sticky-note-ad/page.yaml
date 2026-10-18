@@ -1,9 +1,9 @@
 new_slug: get-noticed-with-a-sticky-note-ad
-name: Get noticed with an ad that's a sticky note
-summary: A sticky note photo where the problem shows up, with a reminder that gives away the workaround.
+name: "A sticky-note photo that tells your story at a glance"
+summary: "Give it your ad's story. You get a short note in the narrator's voice and a prompt for the photo."
 job: make-image-ads
 
-headline: "A sticky-note ad people read in one glance"
+headline: "A sticky-note photo that tells your story at a glance"
 subhead: Give it your story ad. It writes 3 to 10 words of reminder in the narrator's voice, picks the surface that says where we are (a fridge, a mirror, a desk), and writes a prompt for a plain phone photo of the note.
 
 explain: |
@@ -27,7 +27,7 @@ you_get:
   - A 60 to 120 word image prompt, ready to paste
 
 how_to_use:
-  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste your story ad underneath. If the story quotes the note, those exact words are used.
   - Paste the image prompt into your image tool and make one square picture.
   - Read the note in the result letter by letter. One wrong letter makes it look fake.

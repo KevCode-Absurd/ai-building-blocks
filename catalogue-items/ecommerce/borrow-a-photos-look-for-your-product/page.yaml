@@ -1,9 +1,9 @@
 new_slug: borrow-a-photos-look-for-your-product
-name: Borrow a photo's look for your product
-summary: More wordless photos of your real product, in the light and mood of a photo you like.
+name: "Your product in the style of a photo you love"
+summary: "Give it your product photos and one photo you like. You get a prompt for new photos in that light and mood."
 job: product-photos
 
-headline: "Borrow a photo's look for your product"
+headline: "Your product in the style of a photo you love"
 subhead: Give it your product photos and one photo whose look you like. It copies that photo's camera, light, setting and colour, never its product, and writes a prompt for pictures with no added words, ready for your ads and emails.
 
 explain: |
@@ -29,7 +29,7 @@ you_get:
   - If your chat can make images, the pictures ranked best first, with a reject list
 
 how_to_use:
-  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Attach your real product photos and say which variant they show.
   - Attach the photo whose look you want. Say what the new picture is for and where it will go, for example "email header, words added later".
   - Read the six-part reading. If a line is wrong (the light comes from the right, not the left), correct it before you use the prompt.

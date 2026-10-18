@@ -1,9 +1,9 @@
 new_slug: finish-the-sale-your-ad-started
-name: Finish the sale your ad started
-summary: Full copy for one landing page that carries on from your ad, for one buyer and one offer.
+name: "Write a landing page that matches your ad"
+summary: "Give it your ad and product details. You get the full page text, picking up exactly where the ad left off."
 job: write-landing-page
 
-headline: "A landing page that finishes what your ad started"
+headline: "Write a landing page that matches your ad"
 subhead: Give it the ad, your product facts and offer, and real customer words if you have them. It writes the whole page for one buyer and one offer, starting with a phone-sized first screen that repeats the ad's promise, then answers each question in the order a buyer asks it.
 
 explain: |
@@ -27,7 +27,7 @@ you_get:
   - A list of every field left empty because a fact was missing
 
 how_to_use:
-  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste your product facts and current offers with their exact names and prices.
   - Paste the ad word for word, and say who it's for.
   - Add a few real customer quotes, and any questions buyers ask before buying.

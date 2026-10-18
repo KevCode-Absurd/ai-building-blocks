@@ -1,6 +1,6 @@
 new_slug: write-a-carousel-ad-people-swipe-through
-name: Write a carousel ad people swipe through
-summary: A swipe ad written card by card, with a first card that earns the swipe.
+name: "A carousel ad people swipe to the end"
+summary: "Tell it how many cards and who it's for. You get each card's picture and words, ending on a clear action."
 job: write-ad-copy
 
 headline: "A carousel ad people swipe to the end"
@@ -28,7 +28,7 @@ you_get:
   - Flags for gaps, guesses and quotes to check
 
 how_to_use:
-  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Say how many cards you want. Five to seven is usual.
   - Describe the buyer in a sentence or two, including what they've already tried.
   - Paste your offer, guarantee, approved claims and any customer quotes with their sources.

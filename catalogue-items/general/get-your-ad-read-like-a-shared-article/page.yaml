@@ -1,9 +1,9 @@
 new_slug: get-your-ad-read-like-a-shared-article
-name: Get your ad read like a shared article
-summary: A plain photo of the problem with one article-style headline across it, matching the page your ad opens.
+name: "Make your ad look like a shared article"
+summary: "Give it your ad and your page headline. You get a short headline for the image and a prompt for the photo."
 job: make-image-ads
 
-headline: "An ad that reads like an article someone shared"
+headline: "Make your ad look like a shared article"
 subhead: Give it your story ad and the headline of the page it links to. It fits that headline to 12 words or fewer, briefs a candid phone photo of the problem with clear space for it, and writes the image prompt.
 
 explain: |
@@ -27,7 +27,7 @@ you_get:
   - A 60 to 120 word image prompt, ready to paste
 
 how_to_use:
-  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste your story ad with its hook options numbered.
   - Paste the headline of the page the ad links to. If there isn't one, say so.
   - Paste the image prompt into your image tool. Check every letter of the headline, since image tools misspell.

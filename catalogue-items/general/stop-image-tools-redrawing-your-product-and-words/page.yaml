@@ -1,9 +1,9 @@
 new_slug: stop-image-tools-redrawing-your-product-and-words
-name: Stop image tools redrawing your product and words
-summary: One short image prompt for an approved ad that keeps your real pack and your exact words.
+name: "Stop image tools changing your product and words"
+summary: "Give it your approved ad plan and photos. You get one short prompt that keeps your product and words exact."
 job: make-image-ads
 
-headline: "Stop image tools redrawing your product and words"
+headline: "Stop image tools changing your product and words"
 subhead: Give it the approved scene, layout and words for one ad, plus your product facts and reference photos. It cuts notes, rejected ideas and repeated warnings, keeps every product detail and rule that matters, and names each photo's job.
 
 explain: |
@@ -28,7 +28,7 @@ you_get:
   - A MISSING line for any fact it needed but didn't have
 
 how_to_use:
-  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste only the approved concept, the exact words and the product facts. Leave out the alternatives you rejected.
   - Attach your reference photos and say what each one is for.
   - Give the image shape (for example 4:5) and any length limit your tool has.

@@ -1,9 +1,9 @@
 new_slug: get-recognised-with-the-old-things-that-failed
-name: Get recognised with the old things that failed
-summary: A plain, slightly sad photo of the worn or half-used things your narrator tried and gave up on.
+name: "A photo of the things your buyers gave up on"
+summary: "Give it your ad's story. You get a prompt for a photo of worn, half-used products your buyers will recognise."
 job: make-image-ads
 
-headline: "Show the products your buyers already gave up on"
+headline: "A photo of the things your buyers gave up on"
 subhead: Give it your story ad and the things the narrator tried before. It photographs them where they live (a drawer, a cupboard, the hook by the door), worn and unbranded, with an optional six-word caption from your copy.
 
 explain: |
@@ -27,7 +27,7 @@ you_get:
   - A 60 to 120 word image prompt, ready to paste
 
 how_to_use:
-  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste your story ad underneath. Name the things the narrator tried in plain words ("greens powder", not a brand).
   - Paste the image prompt into your image tool and make one square picture.
   - Check that nothing has a readable label or a shape someone would recognise as a particular brand.

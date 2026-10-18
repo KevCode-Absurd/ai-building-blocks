@@ -1,6 +1,6 @@
 new_slug: get-a-second-look-with-a-test-result-photo
-name: Get a second look with a test result photo
-summary: A photographed test result with one red circle and nothing readable, built on facts you can back.
+name: "A test-result photo that makes people look twice"
+summary: "Give it your ad and the test it mentions. You get a prompt for a photo of the result, circled in red."
 job: make-image-ads
 
 headline: "A test-result photo that makes people look twice"
@@ -27,7 +27,7 @@ you_get:
   - A 60 to 120 word image prompt, ready to paste
 
 how_to_use:
-  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste your story ad underneath.
   - Paste the fact your brand can support about the test, with where it comes from.
   - Paste the image prompt into your image tool. If any number or name is readable, make it again.

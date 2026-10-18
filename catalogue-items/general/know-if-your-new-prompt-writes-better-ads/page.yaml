@@ -1,6 +1,6 @@
 new_slug: know-if-your-new-prompt-writes-better-ads
-name: Know if your new prompt writes better ads
-summary: A blind side-by-side of ads from your old and new prompt, with failures and cost per usable ad.
+name: "Find out if your new prompt writes better ads"
+summary: "Give it ads from your old and new prompt. You get a blind side-by-side score and whether to switch."
 job: set-up-ai
 
 headline: "Find out if your new prompt writes better ads"
@@ -28,7 +28,7 @@ you_get:
   - A one-paragraph decision on whether to keep the change
 
 how_to_use:
-  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Before you change anything, save the outputs your current prompt makes. You can't do this fairly afterwards.
   - Run the new prompt on exactly the same briefs and paste both sets, labelled by brief.
   - Paste the approved facts and offer terms for each brief.

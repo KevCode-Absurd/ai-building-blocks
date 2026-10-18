@@ -1,9 +1,9 @@
 new_slug: turn-talking-object-script-into-shots-ai-can-make
-name: Turn your talking-object script into shots AI can make
-summary: A fixed character, an opening image and one to three clip prompts that keep your talking object the same.
+name: "Turn your talking-object script into video clips"
+summary: "Give it your script and product photo. You get an opening image prompt and up to three clip prompts."
 job: make-video-ads
 
-headline: "Turn your talking-object script into matching clips"
+headline: "Turn your talking-object script into video clips"
 subhead: Give it a 10 to 30 second talking object script and a front photo of your product. It confirms which object should talk, writes one fixed sentence describing it, and gives you the opening image prompt and one to three clip prompts with timed beats.
 
 explain: |
@@ -28,7 +28,7 @@ you_get:
   - One to three clip prompts with timed beats, and edit notes for the offer
 
 how_to_use:
-  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste your script underneath and attach the product's front photo.
   - Make the character picture first and check it at thumbnail size before anything else.
   - Make the opening image with both pictures attached, then the clips in order.

@@ -1,9 +1,9 @@
 new_slug: turn-your-products-hidden-process-into-3d-clips
-name: Turn your product's hidden process into 3D clips
-summary: Finds one honest hidden process, offers story options, then writes the beats and prompts for a 3D lesson.
+name: "Turn your 3D ad idea into video clips"
+summary: "Give it your product facts and sources. You get story options, then the image and clip prompts and captions."
 job: make-video-ads
 
-headline: "Turn your product's hidden process into 3D clips"
+headline: "Turn your 3D ad idea into video clips"
 subhead: Give it your product facts with sources and your claims list. It tests which hidden process is honest and interesting, offers you story options to pick from, then writes the seven beats, the stills, the clip prompts, the captions and the voice brief.
 
 explain: |
@@ -29,7 +29,7 @@ you_get:
   - After you choose, the seven-beat script, still and clip prompts, captions and voice brief
 
 how_to_use:
-  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste your product facts, with the source for each claim, and your banned claims.
   - Read the chains and honesty notes first. If nothing survives, it will tell you to use another format.
   - Pick one story option and reply with its letter.

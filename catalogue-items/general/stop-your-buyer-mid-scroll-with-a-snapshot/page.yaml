@@ -1,9 +1,9 @@
 new_slug: stop-your-buyer-mid-scroll-with-a-snapshot
-name: Stop your buyer mid-scroll with an everyday snapshot
-summary: A phone-photo style picture of the moment your buyer's problem hits, with a ready-to-paste image prompt.
+name: "A snapshot of the moment your buyer's problem hits"
+summary: "Give it your ad's story. You get the moment to show and a prompt for a plain phone photo of it."
 job: make-image-ads
 
-headline: "A snapshot of your buyer's worst moment"
+headline: "A snapshot of the moment your buyer's problem hits"
 subhead: Give it your story ad. It finds the moment in the story where the problem hits, casts a made-up person to live it, and writes a prompt for a plain phone photo of that person in that moment, with no product, logo or words in shot.
 
 explain: |
@@ -27,7 +27,7 @@ you_get:
   - Flags for anything it had to guess
 
 how_to_use:
-  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste your story ad underneath, exactly as it will run.
   - Add one line on who the buyer is and when the problem hits, if the story doesn't say.
   - Paste the image prompt into your image tool and make one square picture.

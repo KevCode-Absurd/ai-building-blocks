@@ -1,6 +1,6 @@
 new_slug: keep-facebook-from-blocking-your-ads
-name: Keep Facebook from blocking your ads
-summary: Your Facebook or Instagram ad read against Meta's published ad rules, with what to fix first.
+name: "Keep Facebook from blocking your ads"
+summary: "Paste your ad and describe the image. You get what breaks Meta's ad rules, where, and how to fix it."
 job: check-ads
 
 headline: "Keep Facebook from blocking your ads"
@@ -28,7 +28,7 @@ you_get:
   - What passed, and what it couldn't check without more information
 
 how_to_use:
-  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste the ad's words exactly as they will run, field by field.
   - Describe the image, or paste the video script with timings.
   - Add the landing page text and offer, plus your target age and countries.

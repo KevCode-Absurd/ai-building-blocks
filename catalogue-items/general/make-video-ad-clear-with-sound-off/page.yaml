@@ -1,6 +1,6 @@
 new_slug: make-video-ad-clear-with-sound-off
-name: Make your video ad clear with the sound off
-summary: A few timed labels and badges so a finished video ad still makes sense on mute.
+name: "Make your video ad clear with the sound off"
+summary: "Give it your finished ad and script. You get a few timed words on screen so it makes sense on mute."
 job: make-video-ads
 
 headline: "Make your video ad clear with the sound off"
@@ -29,7 +29,7 @@ you_get:
   - Anything in the footage that doesn't match the script
 
 how_to_use:
-  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste the approved script with how long each scene lasts.
   - Attach frames from the finished video (about one every 3 seconds), or describe what's in each.
   - Paste your allowed copy and say whether captions are already burned in.

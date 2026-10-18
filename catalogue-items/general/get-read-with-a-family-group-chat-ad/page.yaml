@@ -1,9 +1,9 @@
 new_slug: get-read-with-a-family-group-chat-ad
-name: Get read with a family group chat ad
-summary: A generic family or friends group chat screenshot where the problem comes up, with four to seven messages.
+name: "A family group chat picture where the problem comes up"
+summary: "Give it your ad's story. You get four to seven realistic messages and a prompt for the screenshot."
 job: make-image-ads
 
-headline: "A family group chat ad where the problem comes out"
+headline: "A family group chat picture where the problem comes up"
 subhead: Give it a story ad with family or friends in it. It writes a short group name and four to seven messages from two or three people, the way they talk to each other, and a prompt for a plain, unbranded chat screenshot.
 
 explain: |
@@ -27,7 +27,7 @@ you_get:
   - A 60 to 120 word image prompt, ready to paste
 
 how_to_use:
-  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste your story ad underneath. If you already know what the chat says, put the messages in the story.
   - Add a line on who's in the group (sisters, old school friends, the family).
   - Read every message before you make the picture. You're putting words in made-up people's mouths.

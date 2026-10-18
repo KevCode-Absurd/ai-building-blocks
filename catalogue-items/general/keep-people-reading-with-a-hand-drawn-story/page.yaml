@@ -1,6 +1,6 @@
 new_slug: keep-people-reading-with-a-hand-drawn-story
-name: Keep people reading with a hand-drawn story
-summary: One to four hand-drawn panels that tell your buyer's problem in order, for problems a photo can't show.
+name: "Show a hard-to-photograph problem in simple drawings"
+summary: "Give it your ad's story. You get one to four drawn panels planned and a prompt to make them."
 job: make-image-ads
 
 headline: "Show a hard-to-photograph problem in simple drawings"
@@ -26,7 +26,7 @@ you_get:
   - A 60 to 120 word image prompt, ready to paste
 
 how_to_use:
-  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste your story ad underneath. It works best when the story has clear steps in order.
   - Say what your brand may never show of the body, if anything.
   - Paste the image prompt into your image tool. If any letters appear, make it again.

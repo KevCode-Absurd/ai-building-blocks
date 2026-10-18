@@ -1,6 +1,6 @@
 new_slug: stop-ai-pictures-getting-your-product-wrong
-name: Stop AI pictures getting your product wrong
-summary: A written record of your exact product that keeps AI pictures true, plus the photos still missing.
+name: "Stop AI pictures getting your product wrong"
+summary: "Give it your real product photos. You get a written record of your product and the photos you still need."
 job: product-photos
 
 headline: "Stop AI pictures getting your product wrong"
@@ -26,7 +26,7 @@ you_get:
   - A list of missing photos and the pictures that can't be made without them
 
 how_to_use:
-  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Attach your product photos at full size, not thumbnails. Say which variant they show, and say so if you're not sure.
   - Paste any facts you have underneath, such as how to use it and what's in the box.
   - Read the missing list first. It tells you which photo to take next and which pictures it makes possible.

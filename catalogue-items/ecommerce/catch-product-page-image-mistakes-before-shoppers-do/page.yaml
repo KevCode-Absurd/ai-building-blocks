@@ -1,9 +1,9 @@
 new_slug: catch-product-page-image-mistakes-before-shoppers-do
-name: Catch product page image mistakes before shoppers do
-summary: Catch wrong words, numbers and product details in your product page images before they go live.
+name: "Catch mistakes in your product images before shoppers do"
+summary: "Give it your product page images and facts. You get 11 checks on each image and the smallest fix for each fault."
 job: product-photos
 
-headline: "Catch product image mistakes before shoppers do"
+headline: "Catch mistakes in your product images before shoppers do"
 subhead: Give it your finished product page images, the plan they were made from, your real product photos and your facts. It runs 11 checks on each image, from spelling to size to phone readability, and gives a pass or fail with the smallest fix for each fault.
 
 explain: |
@@ -27,7 +27,7 @@ you_get:
   - A verdict for the whole set (reads as one gallery, no two alike, upload order right)
 
 how_to_use:
-  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Attach every image at full size, not as thumbnails or a screenshot of the page.
   - Paste the plan and your facts, and attach the real product photos.
   - Fix the failures it lists, one at a time, and run the check again on the remade images.

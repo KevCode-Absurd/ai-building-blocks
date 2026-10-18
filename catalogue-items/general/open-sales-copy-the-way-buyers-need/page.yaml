@@ -1,9 +1,9 @@
 new_slug: open-sales-copy-the-way-buyers-need
-name: Open your sales copy the way your buyer needs
-summary: The right way to open for how much your buyer knows, with two different openings to test.
+name: "Open your sales copy the way your buyer needs"
+summary: "Give it your buyer, offer and proof. You get the right opening for what they know, plus a second one to test."
 job: write-ad-copy
 
-headline: "Open your sales copy the way buyers need"
+headline: "Open your sales copy the way your buyer needs"
 subhead: Give it a note on your buyer, your offer and the proof you can use. It picks one of six ways to open (deal, benefit, problem, fact, statement or scene) for how much the buyer knows, writes that opening, then writes a second one using a different way in.
 
 explain: |
@@ -27,7 +27,7 @@ you_get:
   - One line on what the close must come back to
 
 how_to_use:
-  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste a note on your buyer, including how much they already know.
   - Paste your offer and the proof you're allowed to use.
   - Say where it will run, such as "Facebook main text, about 125 characters show".

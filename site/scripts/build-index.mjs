@@ -15,32 +15,6 @@ fs.mkdirSync(OUT_PAGES, { recursive: true });
 
 // Until a block has its page written, it is filed under the job closest to its old group.
 const TASK_FROM_JOB = { copy: "write-ad-copy", email: "write-ad-copy", ads: "make-image-ads", image: "make-image-ads", video: "make-video-ads", page: "write-landing-page", analysis: "read-ad-results", research: "understand-customers", brand: "brand-file", offer: "make-offer", organic: "grow-social", ops: "set-up-ai" };
-// The card preview: the first real findings from the example output. Section labels, notes about
-// what was missing and how the run was set up are left out, and wrapped lines are joined back up.
-const META = /^(\{|MISSING|NOTE|BASIS|COVERAGE|MODULE|PREFLIGHT|CHECK |STOPPED|SKIPPED|ASSUMED|WINDOW|STAGE \d|NOT LOOKED|\[|#|\d+ MODE AND|Where and when|Confirm \(|MODE|Mode:|Device:|File:|Rows |Captured|Working from|No reference|Image ads only|Results are practice|.*practice numbers)/;
-const LABEL = /^[A-Z][A-Z0-9 &/,:'-]{2,}(\s*\(.*\))?:?$/;
-const peekOf = (page) => {
-  if (page?.peek) return String(page.peek).trim();
-  const items = [];
-  // skip: inside a note to leave out; label: just passed a section label, so indented lines start new items.
-  let skip = false, label = false, indent = -1;
-  for (const raw of String(page?.example?.output ?? "").split(/\r?\n/)) {
-    const line = raw.trimEnd();
-    if (!line.trim()) { skip = false; label = false; indent = -1; continue; }
-    // A wrapped line carries on the one above it.
-    const cont = (/^\s+\S/.test(line) && !/^\s+(Quotes|Best|Backups|Terms|Said simply|Fix|Why|Where)\b/.test(line)) || /^[a-z(]/.test(line);
-    const ind = line.length - line.trimStart().length;
-    if (label && ind > 0 && (indent < 0 || ind <= indent)) { indent = ind; skip = false; items.push(line.trim().replace(/\s{2,}/g, " ")); continue; }
-    if (cont) { if (!skip && items.length) items[items.length - 1] += " " + line.trim(); continue; }
-    label = LABEL.test(line.trim());
-    skip = META.test(line.trim()) || label;
-    if (!skip) items.push(line.trim().replace(/\s{2,}/g, " "));
-  }
-  const cut = (t) => (t.length > 120 ? t.slice(0, t.lastIndexOf(" ", 118)).replace(/[,;:]$/, "") + "…" : t);
-  // Table header rows ("Row | Part | What it did") name columns, they don't show results.
-  const header = (t) => t.includes("|") && t.split("|").every((c) => /^[A-Z#][A-Za-z/ -]{0,28}$/.test(c.trim()));
-  return items.filter((t) => !/^[#|\s-]+$/.test(t) && !header(t)).slice(0, 3).map(cut).join("\n");
-};
 const PAGE_FIELDS = ["headline", "subhead", "explain", "when", "you_give", "you_get", "how_to_use", "how_it_works", "output_shape", "example", "tweaks", "judge", "test", "improve", "terms"];
 
 const types = YAML.parse(fs.readFileSync(path.join(ROOT, "_types.yaml"), "utf8"));
@@ -86,7 +60,6 @@ for (const category of ["general", "ecommerce", "orchestrators"]) {
       name: page?.name ?? item.name ?? slug,
       summary: page?.summary ?? item.summary ?? "",
       headline: page?.headline ?? "",
-      peek: peekOf(page),
       task: page?.job ?? TASK_FROM_JOB[item.job] ?? "set-up-ai",
       category: category === "orchestrators" ? "orchestrator" : category,
       boards: item.boards ?? [],

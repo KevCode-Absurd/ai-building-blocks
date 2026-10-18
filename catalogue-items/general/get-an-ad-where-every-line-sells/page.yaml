@@ -1,6 +1,6 @@
 new_slug: get-an-ad-where-every-line-sells
-name: Get an ad where every line sells
-summary: Your draft ad back with vague praise swapped for facts, the price and guarantee added, strong lines kept.
+name: "Make every line of your ad sell"
+summary: "Paste your ad and product facts. You get it back with vague lines swapped for facts and your strong lines kept."
 job: write-ad-copy
 
 headline: "Make every line of your ad sell"
@@ -27,7 +27,7 @@ you_get:
   - A short verdict on whether the ad has one clear promise, and whether the problem is the wording or the reason to buy
 
 how_to_use:
-  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste your draft underneath, with each part labelled (on image, main text, headline).
   - Paste the facts it's allowed to use. It will only use these, so include the guarantee and price.
   - Add one line on who the ad is for, if you know.

@@ -1,6 +1,6 @@
 new_slug: get-an-offer-that-answers-your-buyers-doubt
-name: Get an offer that answers your buyer's doubt
-summary: An offer built around what stops one buyer saying yes, with terms, wording and a profit check.
+name: "An offer that removes your buyer's biggest doubt"
+summary: "Give it your buyer's doubt, prices and costs. You get an offer, its wording and terms, and a profit check."
 job: make-offer
 
 headline: "An offer that removes your buyer's biggest doubt"
@@ -29,7 +29,7 @@ you_get:
   - What you must arrange first, which mistakes it avoids, and a test plan
 
 how_to_use:
-  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Name one buyer and their biggest doubt, using real customer words if you have them.
   - Paste your prices, unit costs, delivery costs and guarantee exactly as written.
   - Add recent order data if you have it. It's what lets the profit check give numbers instead of formulas.

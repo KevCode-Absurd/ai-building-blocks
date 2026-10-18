@@ -1,9 +1,9 @@
 new_slug: stop-the-scroll-with-your-buyers-problem
-name: Stop the scroll with your buyer's problem
-summary: One image ad whose picture makes the buyer's problem felt before they read a word.
+name: "An image ad that shows your buyer's problem"
+summary: "Give it the problem in a buyer's words and a product photo. You get the headline, layout and image prompt."
 job: make-image-ads
 
-headline: "An image ad your buyer feels in half a second"
+headline: "An image ad that shows your buyer's problem"
 subhead: Give it the problem in a buyer's words, your product facts, a product photo and your colours. It picks the headline, the attention-grabber, the picture idea and the style in that order, then writes the layout and an image prompt.
 
 explain: |
@@ -29,7 +29,7 @@ you_get:
   - A MISSING list for anything it needed and didn't have
 
 how_to_use:
-  - Start a chat with the skill: open it if you added it to your AI, or copy it and paste it in.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste one review that describes the problem, word for word, and say when it happens.
   - Paste your product facts and claims, and describe or attach your best product photo.
   - Give your two colours as hex codes and your typeface name.

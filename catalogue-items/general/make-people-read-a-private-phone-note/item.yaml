@@ -1,0 +1,21 @@
+slug: make-people-read-a-private-phone-note
+renamed_from: native-ad-image-phone-notes-screenshot
+name: "Make people read a private phone note"
+summary: "A plain notes-app screenshot with a few short lines your narrator typed to themselves about the problem."
+category: general
+boards: [ecommerce]
+type: skill
+role: render
+job: image
+level: beginner
+inputs:
+  - {type: ad_copy, required: true}
+  - {type: persona, required: false}
+outputs:
+  - {type: image_prompt}
+uses: [get-story-ads-read-with-the-right-picture]
+example: native
+origin: own
+source_ids: [CES-068]
+old_name: notes-app
+version: 1.0.0

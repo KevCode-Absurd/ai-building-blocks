@@ -1,0 +1,208 @@
+new_slug: find-the-story-ad-worth-writing-first
+name: Find the story ad worth writing first
+summary: A one-page plan for a story ad, with the problem, narrator, pictures and a test of five.
+job: plan-ad-tests
+
+headline: Know whether a story ad suits your product, and what to test, before writing a word
+subhead: Give it your product, your buyers and your customer reviews. It decides if a story ad fits, picks the problem to lead with in buyers' own words, chooses an honest narrator and pictures, and plans five stories to test.
+
+explain: |
+  A story ad is a plain picture with a long story under it, made to look like something a person posted. It sells by telling the reader's own experience back so exactly that they recognise themselves. That only works when buyers have a history with the problem, and when nobody in the story is faked. Writing first and checking later wastes the work.
+
+  This skill makes the decisions before any copy. It checks the fit, ranks the problems in your reviews by how often and how strongly buyers mention them, and picks who tells the story. Then it lists five stories that differ in mood, shape and picture, so you can tell what won. It ends with what a person must check and how to read the first days of results.
+
+when:
+  - You're thinking about story ads and aren't sure your product suits them.
+  - Your reviews mention several problems and you need to pick one to lead with.
+  - You want five story ads to test and need them different enough to learn from.
+
+you_give:
+  - Your product and who buys it
+  - Customer reviews, emails or call notes, with their sources
+  - What buyers have tried and how crowded your market is (optional)
+  - People you may quote, such as the founder or a customer who agreed (optional)
+you_get:
+  - A fit verdict, and the problem to lead with plus a second one, in buyers' words with sources
+  - The narrator, the picture types and a five-row test plan
+  - A list of what a person must check before anything runs, and rules for reading results
+
+how_to_use:
+  - Copy the skill and paste it into Claude, ChatGPT or Gemini.
+  - Paste all your reviews, numbered, and say who your main buyer groups are.
+  - List only the people who have agreed to be quoted. If none have, say so.
+  - Read the fit verdict first. If it says your product doesn't suit a story ad, run a short direct ad instead.
+  - Hand each row of the test plan to a skill that writes long story ads from customer research, one story per row.
+
+how_it_works:
+  - title: Tests the fit
+    text: Checks buyers have a history with the problem, things they tried and dropped. An impulse buy or novelty gets a direct ad instead.
+  - title: Ranks the problems
+    text: Counts how often each problem shows up in the reviews and how strongly it's said, then picks a lead and a second one.
+  - title: Chooses the aim
+    text: Decides whether to open on a moment anyone with the problem knows, or on one specific kind of person.
+  - title: Picks the narrator
+    text: Chooses a real customer who agreed, the founder, a real expert or a composite, before any copy is written.
+  - title: Shortlists pictures
+    text: Names two or three picture types for the lead story and one for each of the others.
+  - title: Plans five stories
+    text: Gives each story a different mood, shape and picture on the same problem, so a winner can be told apart.
+  - title: Writes the checks
+    text: Lists the honesty rules, what a person must review before launch, and how to read the first days of results.
+
+output_shape: |
+  FIT VERDICT  <suits or doesn't suit, with what buyers tried>
+
+  LEAD TENSION  <the problem> (<review numbers>)
+    Words:  "<buyer's exact words>" (<source>)
+    Tried:  <what they tried, and why it failed>
+    Scenes: <where it shows up>
+    Unsaid: <what they feel but don't say, or MISSING>
+  SECOND TENSION  <the problem> (<review numbers>)
+
+  AIM  <tension-led or avatar-led, and why>
+  NARRATOR  <who speaks, and the line the ad must carry>
+  IMAGE TYPES (lead story)  <two or three picture types>
+
+  TEST SET
+    # Arc            Form            Image type
+    1 <arc> (lead)   <form>          <picture type>
+    ... five rows, each different on all three ...
+
+  REVIEW BEFORE RUNNING
+  - <what a person must check>
+
+  HOW TO READ RESULTS
+  - <rules for the first days>
+
+example:
+  business: sprout
+  input: |
+    [the skill]
+
+    Product: Sprout, daily greens gummies. One pouch of 28 daily packs;
+    you tear a pack open and eat the gummies. $29.99 first box with the
+    text sign-up, then $49.99 every 4 weeks.
+    Buyers: the quitter who wants to stick (about 40%), the gut-fix
+    seeker (about 25%), the busy parent (about 25%), the price doubter.
+    Quitter doubts: "A gummy can't hold enough to replace my powder."
+    "They are expensive."
+
+    Customer research: all 20 reviews, numbered, pasted in full.
+    For example:
+    1. "I've tried a few green powders over the years. The issue has
+       never been nutritive content. It's always been an issue of
+       consistency like many things. [Sprout] has been the one thing
+       I've been able to stick to."
+    4. "I've been choking on [a big-name greens powder] for the last
+       few years"
+    6. "...not having to clean a shaker bottle or extra dishes for
+       greens stuff in powder form, is absolutely excellent!"
+
+    People we may quote: nobody. No founder story on file, and no
+    record of any customer agreeing to ad use.
+    Market notes: none.
+  output: |
+    FIT VERDICT  Suits. A used-up product, and buyers have a history
+    with the problem: "a few green powders over the years" (1), a
+    powder that was "gritty/chalky" (3), "choking on" a powder for
+    years (4), separate probiotic, B12 and multivitamin gummies (5).
+
+    LEAD TENSION  Quitting every supplement (reviews 1, 2, 3, 4, 5, 6)
+      Words:  "It's always been an issue of consistency like many
+              things." (1) / "I've been choking on [a big-name greens
+              powder] for the last few years" (4)
+      Tried:  greens powders (1, 3, 4, 6), dropped for taste, texture
+              and the cleaning; separate gummies (5), too many to manage
+      Scenes: washing the shaker bottle (6), the morning drink (3, 4)
+      Unsaid: MISSING: no survey or call notes say what they feel
+              and don't say aloud
+
+    SECOND TENSION  Gut trouble that won't settle (reviews 7, 8, 9, 10)
+      Words:  "My bowel movements are normal for the 1st time in 15
+              years!" (7) / "someone who suffers from chronic IBS" (8)
+      Tried:  fiber powders and probiotics (brand file, not a review)
+      Care:   strongest feelings, but medical language. One buyer's
+              story only, never a promise.
+
+    AIM  Tension-led. Anyone who quit a powder knows the moment, and
+    the biggest group (about 40%) lives it. No market notes given, so
+    I assume buyers have tried things.
+
+    NARRATOR  Composite customer in all five: no surname, no "verified
+    buyer" label, no photo offered as them. Every ad ends: "This story
+    is put together from what Sprout customers told us." Nobody else is
+    cleared to speak.
+
+    IMAGE TYPES (lead story)
+      make-people-look-twice-at-the-leftover-mess (a half-used powder tub, a
+      crusted scoop)
+      make-buyers-see-themselves-in-an-empty-room (the counter, no shaker on it)
+
+    TEST SET  one tension, one ad set, budget set at the campaign
+      # Arc                 Form                  Image type
+      1 Searcher (lead)     Personal history      problem-leftover
+      2 Exhausted surrender Forum post            candid-moment
+      3 Quietly angry       Rant                  phone-notes-screenshot
+      4 Self-blamer         Mistake I was making  room-that-changed
+      5 Reluctant believer  Please stop doing this two-person-text-thread
+      Narrator: composite in all five. Image types drop the
+      "native-ad-image-" prefix.
+
+    REVIEW BEFORE RUNNING
+    - The composite closing line is on every ad
+    - Every placeholder the stories add
+    - Review 4 names a rival in the original. Stories say "a greens
+      powder", never the brand.
+    - Text-thread and notes pictures: words written for the image, a
+      generic app look, invented first names only
+    - No review is marked verified, and no customer has agreed to ad
+      use, so no review is quoted under a name.
+
+    HOW TO READ RESULTS
+    - Days 1 to 3 show whether the tension has potential, not profit.
+    - If there are no add-to-carts or checkouts in 48 hours, replace
+      the tension.
+    - High cost per 1,000 views with good click rates means the message
+      is crowded. With poor click rates, the ad is weak.
+    - Build on a winner with more stories on its arc and picture, then
+      try the second tension or a new buyer (the busy parent).
+
+tweaks:
+  - what: The buyer group
+    how: Name a smaller group, such as busy parents buying for themselves, and ask for an avatar-led aim. The lead problem and scenes change to theirs, and the reach gets narrower.
+  - what: People you may quote
+    how: Add a customer who agreed in writing, with their own story, and one row of the test can use them instead of a composite.
+  - what: Market notes
+    how: Say how many rivals already tell the same story. In a crowded market it leans toward one specific kind of person instead of the shared moment.
+  - what: Size of the test
+    how: Five rows is the default. Ask for three if your budget is small, but keep each row different in mood, shape and picture.
+
+judge:
+  - The fit verdict names real things buyers tried, with review numbers.
+  - The lead problem is in a buyer's own words, quoted exactly. Check one against your reviews.
+  - The five rows differ in all three of mood, shape and picture.
+  - The narrator is decided, and a composite carries its closing line.
+  - Gaps such as unspoken feelings are marked MISSING, not filled in.
+
+test:
+  - Run it on a product you know story ads don't suit (a one-off gift, a novelty). It should say "doesn't suit" and suggest a short direct ad. If it plans five stories anyway, its fit test isn't working.
+  - Count the reviews behind the lead tension yourself. The numbers it lists should match, and the lead should be the problem your reviews mention most or most strongly.
+  - Run it twice on the same reviews. The lead tension and narrator should match. If the lead flips, ask it to show its ranking with counts.
+  - Check the five rows of the test set. If any two share an arc, form or picture type, you won't be able to tell what won; ask for a new row.
+
+improve:
+  - Write your cleared narrators (a founder story, customers who agreed) into "People you may quote" in the skill file, with the facts on record, so it stops falling back to a composite.
+  - Add your banned claims to step 7, the honesty rules, so a medical-sounding tension like the gut one is flagged the same way every time.
+  - If you only run story ads on one platform, add its rules for ads that look like posts to step 7.
+  - Paste your survey answers or call notes into the research, and save the "what they don't say aloud" line in your brand file once you have it.
+  - Pair it with a skill that writes each row as a long story ad, and with one that turns approved story copy into an image brief.
+
+terms:
+  - term: Tension
+    meaning: A specific problem the buyer feels, in their own words, such as "I quit every greens powder because of the shaker".
+  - term: Composite
+    meaning: A narrator built from several real customers' words, never passed off as one real person.
+  - term: Arc and form
+    meaning: The arc is how the narrator feels. The form is the shape of the story, such as a rant or a forum post.
+  - term: Tension-led and avatar-led
+    meaning: Tension-led opens on a moment anyone with the problem knows. Avatar-led opens on one specific kind of person.

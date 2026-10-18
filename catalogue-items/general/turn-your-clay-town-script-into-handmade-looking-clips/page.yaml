@@ -1,0 +1,177 @@
+new_slug: turn-your-clay-town-script-into-handmade-looking-clips
+name: Turn your clay town script into handmade-looking clips
+summary: Still and clip prompts for a narrated clay-world ad that looks handmade, with your label readable.
+job: make-video-ads
+
+headline: Get clay-world ad clips where every frame looks handmade and your label stays readable
+subhead: Give it a narrated clay-world script and your product photo with its label lines. It picks one of four clay looks, writes fixed wording for it, describes each character in full, and hands back still prompts, clip prompts and clay transitions for your AI tools.
+
+explain: |
+  AI tools can make convincing clay animation, but they slip out of it easily. A word like "glossy" turns the clay into smooth computer graphics, a wide shot makes faces stiff and doll-like, dusk light kills the handmade feel, and label text comes out reading "CLAY".
+
+  This skill keeps every frame looking like photographed clay. It writes one fixed look line, a cast template and a closing line, and pastes them unchanged into every prompt. Each character is described in full every time and made once as a picture to attach. The product is sculpted at its true shape under a real printed paper label with every word stated. Each clip carries a movement lock (stepped stop-motion, no motion blur) and one gesture, and scenes change with one named clay transition.
+
+when:
+  - You have a narrated clay-world script and need prompts for an AI image and video tool.
+  - Your clay clips keep sliding into a smooth computer-graphics look.
+  - Your clay product keeps getting the label wrong.
+
+you_give:
+  - The narrated script and list of scenes
+  - A real product photo and every line of its label
+  - How the product is used
+  - Your tone, colours and the buyer's moment from your brand file (optional)
+  - Your video tool's clip lengths (optional)
+you_get:
+  - A look pack with the fixed look line, cast template and closing line
+  - A cast sheet with one full description per character, and the product's size next to them
+  - Still prompts per scene and clip prompts with a movement lock
+  - Transition prompts between scenes
+
+how_to_use:
+  - Copy the skill and paste it into Claude, ChatGPT or Gemini.
+  - Paste the script, ideally from "Get a clay town ad script with a crowd".
+  - Attach your product photo and type out every label line.
+  - Make each character's picture and each scene's still first, and approve them before making clips.
+  - Paste the fixed lines exactly as given. Don't shorten them to "same style as before".
+
+how_it_works:
+  - title: Makes everything clay
+    text: Making marks, matte plasticine, clay imitations of glass and liquid, real shadows and stepped movement.
+  - title: Picks one look
+    text: Refined, playful, minimal or puppet, written as fixed lines pasted into every prompt.
+  - title: Writes each character in full
+    text: Age, build, hair, clothes and the look's face recipe, every time, never shortened.
+  - title: Writes each still
+    text: Look line, scene, closing line, with feelings written as what the face does and bright warm light.
+  - title: Sculpts the product
+    text: True shape and colours under a real printed paper label, every line stated.
+  - title: Locks the movement
+    text: Every clip prompt carries the stop-motion lock and one gesture, and scenes change with one clay transition.
+
+output_shape: |
+  LOOK PACK
+  Look:          <refined / playful / minimal / puppet>
+  Look line:     <fixed, pasted into every prompt>
+  Cast template: <fixed>
+  Closing line:  <fixed, refined look only>
+
+  CAST SHEET
+  <character>: <full description>   Product size: <next to them>
+
+  STILL <scene>   [Look line] <scene> [Closing line]
+                  Attach: <image> = <job>
+
+  CLIP <n>        [Movement lock] <one gesture>. <one camera move>.
+                  Narration: "<line>". End frame: <...>
+
+  TRANSITION      <scene> > <scene>: <one clay action> + movement lock
+
+example:
+  business: sprout
+  input: |
+    [the skill]
+
+    Script: the 9-line office-sink script from "Write a clay town
+    video ad script". Crafted look. Narrator only. Scenes: the sink
+    queue (lines 1 to 3), Dev's desk (lines 4 to 9). Line 4 is a
+    clay transition: the queue rolls into a ball and unfolds as the
+    desk.
+    Lead: Dev, a clay adult man, about 30, slim, warm brown clay
+    skin, short black clay hair with tool-line grooves, a mustard
+    knit jumper of real fabric, navy clay trousers.
+    Photos: [pouch front] [daily pack in a hand]
+    Pouch label: big yellow "Sprout" wordmark on deep green, yellow
+    bear face top right, "28 Daily Packs" at the bottom.
+    Daily pack label words: not captured.
+    Gummies: small opaque deep-green bears.
+    Tool: 10-second clips, one start image each.
+  output: |
+    LOOK PACK
+    Look: refined (the script's "crafted").
+    Look line: a handmade stop-motion clay miniature world, matte
+      plasticine with fine tool lines, dense set, warm earthy
+      palette with deep green accents, real cast shadows, macro lens
+      with a soft background, camera inside the world.
+    Cast template: a sculpted clay adult, <age>, <build>, <clay skin
+      colour>, <hair shape and colour with tool grooves>, <real
+      fabric clothes>, detailed sculpted eyes with clay lids.
+    Closing line: everything is clay and fabric, photographed on a
+      physical set.
+
+    CAST SHEET
+    Dev: a sculpted clay adult man, about 30, slim, warm brown clay
+      skin, short black clay hair with tool-line grooves, a mustard
+      knit jumper of real fabric, navy clay trousers, detailed
+      sculpted eyes with clay lids.
+    Queue: six office workers, each a distinct sculpted clay face,
+      adults, real fabric office clothes.
+    Product size: the pouch is about the height of Dev's forearm;
+      a daily pack fits in his palm.
+
+    STILL 1 (sink queue)  [Look line] A clay office kitchen in bright
+      warm morning light. A queue of six workers at a clay sink, each
+      a distinct sculpted clay face, each holding a clay shaker
+      bottle. A clay imitation of running water. Seen from clay-ankle
+      height. [Closing line]
+    STILL 3 (Dev, line 3)  [Look line] Tight medium on [Dev], fourth
+      in the queue, a clay shaker in his right hand. Inner brows
+      pushed up, mouth pulled flat. [Closing line]
+      Attach: Dev's picture = who he is.
+    STILL 6 (pouch, line 6)  [Look line] The clay pouch on Dev's clay
+      desk, sculpted from the attached photo, deep green, under a
+      real printed paper label reading "Sprout" with a yellow bear
+      face top right and "28 Daily Packs" at the bottom. [Closing line]
+      Attach: pouch front = shape, colours and label.
+
+    CLIP 3 (line 3)  Handmade stop-motion clay throughout, slightly
+      stuttery rhythm, no motion blur, not computer graphics, not a
+      cartoon, movement starts on the first frame. Dev's shoulders
+      sink once. The camera holds. Narration: "Dev is fourth in line.
+      Again." End frame: Dev still in the queue, shoulders low.
+
+    TRANSITION queue > desk (line 4)  The whole queue scene rolls into
+      a clay ball and unfolds as Dev's desk; Dev stays as the shared
+      anchor and the queue does not return. [Movement lock]
+
+    MISSING: the daily pack's label words. Show the pack side-on in
+    line 5 until they're supplied.
+    (cut for length: the full run also had stills and clips for
+    lines 1, 2, 5, 7, 8 and 9)
+
+tweaks:
+  - what: The look
+    how: Choose refined, playful, minimal or puppet. Each comes with its own fixed lines, palette and face recipe.
+  - what: The palette
+    how: Give your brand colours and it builds the set around them. Without them it proposes a palette and marks it "proposed".
+  - what: Transitions
+    how: Ask for a camera-led push or a clay move (melting, kneading, rolling into a ball). Each prompt names one action and nothing else.
+  - what: Shot types
+    how: Ask for crowd shots for an "everyone has this problem" opening, or clay-hands close-ups for the product moment.
+
+judge:
+  - The look line and closing line are word for word the same in every prompt.
+  - Every character's full description appears wherever they do.
+  - The label lines are written out exactly, and nothing else on the set has words.
+  - No prompt says "smooth", "polished" or "glossy" outside the fixed wording.
+  - Every clip prompt starts with the movement lock.
+
+test:
+  - Search the prompts for "smooth", "polished" and "glossy" outside the fixed wording. There should be none.
+  - Make two stills and look at the light. Dusk or long shadows mean you fix the still before making its clip.
+  - Check that every clip prompt starts with the movement lock.
+  - Compare the label in a still with your real pack, word by word.
+
+improve:
+  - Write the clay look you chose, with its fixed lines, into step 2 of the skill file and delete the other three.
+  - Add your brand colours to "What you need", so the set is built around them instead of a proposed palette.
+  - Save the cast sheet in your brand file, so the same figures can come back in the next ad.
+  - Pair it with a skill that writes a clay town ad script first, and one that adds captions in your brand font afterwards.
+
+terms:
+  - term: Movement lock
+    meaning: A fixed line in every clip prompt that keeps the movement stepped and handmade, with no motion blur.
+  - term: Look pack
+    meaning: The chosen clay look written as fixed lines (look, cast template, closing line) to paste into every prompt.
+  - term: Stop-motion
+    meaning: Animation made by moving figures a tiny bit between photos, which gives a slightly stepped movement.

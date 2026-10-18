@@ -1,0 +1,165 @@
+new_slug: borrow-structure-of-ad-you-admire
+name: Borrow the structure of an ad you admire
+summary: Keeps a reference ad's order and pace, and writes every line new from your own facts.
+job: study-competitors
+
+headline: Get the shape of an ad that works, rebuilt line by line from your own facts
+subhead: Give it a row-by-row breakdown of a reference ad and your brand facts. It keeps the same parts, order, opening device and pace, writes every line new from your facts, and leaves a placeholder wherever you have nothing true to say.
+
+explain: |
+  When an ad works, the useful part is usually its shape: a confession that opens it, a list of three, a short reveal, a proof line just before the offer. Copying it word for word is theft. Loosely "taking inspiration" tends to lose exactly the device that made it work.
+
+  This skill does the middle thing. It reads the reference row by row, names each row's job and device, and writes one new line per row in the same order, the same length and the same device, using only your facts. Where the reference rests on a fact you don't have (a price drop, a result), it finds the true fact that does the same job, or leaves a bracketed placeholder and lists it. It shares no phrase of six or more words with the reference, and takes none of its claims, numbers, stories, people or footage.
+
+when:
+  - You found an ad (yours or another brand's) whose structure you want to reuse.
+  - A teammate says "make one like this" and you need to know what "like this" means.
+  - You want to test whether a winning structure works for a different product or buyer.
+
+you_give:
+  - A row-by-row breakdown of the reference (line, shot, on-screen text, timing)
+  - Your brand facts, including buyers' words, proof and the offer
+  - Your approved and banned claims
+  - Your brand voice (optional)
+you_get:
+  - The reference's device, named in one sentence
+  - A step map of what each row did and what yours does
+  - Your new script, row by row, with on-screen text and visual notes
+  - A list of placeholders and assumptions
+
+how_to_use:
+  - Copy the skill and paste it into Claude, ChatGPT or Gemini.
+  - Paste the reference breakdown, one row per line or shot, with timings.
+  - Paste your brand facts, proof and offer underneath.
+  - Read the step map first. If a row was changed, check you agree with the reason.
+  - Fill or remove the placeholders before anything is filmed.
+
+how_it_works:
+  - title: Reads the breakdown
+    text: Names each row's job, its device and how long it takes to say, then the device of the whole ad.
+  - title: Matches the device to a fact
+    text: Finds your true fact that does the same job. If none exists, says so and writes the closest honest version.
+  - title: Writes one line per row
+    text: Same order, same device, about the same length, total words within about 10% of the reference.
+  - title: Rebuilds the pictures
+    text: The same framing and action with your real product, or the nearest shot that can actually be made.
+  - title: Checks what still applies
+    text: Promise before how it works, promise no bigger than the proof, the product arriving where it did.
+  - title: Checks the distance
+    text: No phrase of six or more words shared, and none of the reference's claims, numbers or stories.
+
+output_shape: |
+  Device: <one sentence>
+
+  STEP MAP
+  Row | Part | What it did | What yours does | Kept/changed/dropped
+  1 | ... | ... | ... | ...
+
+  Part | Spoken line | On-screen text | Visual note
+  ...
+
+  Placeholders: [<...>]
+  Assumed: <...>
+  Word count: reference <n>, yours <n>
+
+example:
+  business: sprout
+  input: |
+    [the skill]
+
+    Reference: a 25-second ad for a meal-planning app (described, not
+    the brand's own). Person to camera at a kitchen table.
+    1 Opening (0-3 s): "Every Sunday I spent two hours planning
+      dinners."
+    2 Problem (3-7 s): "The list. The shop. The meal nobody ate."
+      Three quick cuts.
+    3 Turn (7-10 s): "Then I stopped planning." Beat of silence.
+    4 How it works (10-16 s): "The app plans the week from what's
+      already in your fridge." Phone screen close.
+    5 Proof (16-21 s): "Four thousand reviews. Average 4.8." Text card.
+    6 Offer (21-25 s): "First week free. Cancel in the app." End card.
+
+    Brand facts: Sprout daily greens gummies. One pack a day, torn
+    straight across the top. Buyers quit powders: "gritty/chalky",
+    "not having to clean a shaker bottle". Survey of 3,000+ customers:
+    "80% taking daily" (of surveyed users). Offer: $29.99 first order
+    with text sign-up; 30-day money-back, first order only.
+  output: |
+    Device: a first-person confession with a list of three, turned by
+    a four-word reveal.
+
+    STEP MAP
+    Row | Part | What it did | What yours does | Kept/changed/dropped
+    1 | Opening | Confession with a habit and a time | Confession about
+        buying powder | Kept
+    2 | Problem | List of three, quick cuts | List of three powder
+        steps | Kept
+    3 | Turn | Four-word reveal, silence | Four-word reveal | Kept
+    4 | How it works | One line, the product doing the work | One
+        pack, tear and tip | Kept
+    5 | Proof | Review count and rating | A survey figure, with
+        "of surveyed users" | Changed: rating sources disagree
+    6 | Offer | Free first week, easy cancel | First-order price and
+        the first-order guarantee | Changed: Sprout has no free trial
+
+    Part | Spoken | On-screen | Visual note
+    Opening | "For years I bought greens powder I didn't drink." | - |
+      Person to camera at a kitchen table, a powder tub beside them
+    Problem | "The scoop. The shaker. The chalky glass." | - | Three
+      quick cuts: scoop, shaker, a glass with powder lumps
+    Turn | "Then I stopped mixing." | - | Back to camera; they set the
+      shaker aside. A beat of silence
+    How it works | "Now it's one small pack. Tear, tip, done." | Rip.
+      Tip. Enjoy. | Hands tear a daily pack across the top, gummies
+      tip into a palm
+    Proof | "80% of surveyed users take it daily." | 80% of surveyed
+      users take it daily (survey of 3,000+ customers) | Text card
+    Offer | "First order $29.99 with text sign-up, money back for 30
+      days." | $29.99 first order with text sign-up. 30-day
+      money-back on your first order | End card with the pouch
+
+    Placeholders: none.
+    Assumed: the speaker is a real customer who quit powders, filmed
+      with consent, and lines 1 and 3 are true for them. Without one,
+      the first person has to go, which breaks the reference's device.
+    Assumed: "cancel in the app" isn't matched. Cancelling is the
+      loudest complaint about Sprout, so no easy-cancel line is made.
+    Word count: reference 43, yours 46 (within 10%).
+    Longest shared phrase: "Then I stopped" (3 words).
+
+tweaks:
+  - what: The breakdown detail
+    how: Give timings and shot notes for every row. The closer the breakdown, the closer the pace and pictures match.
+  - what: When a fact is missing
+    how: Tell it to keep a placeholder rather than find a substitute, if you'd rather get the real fact (a review count, a test) first.
+  - what: Your voice
+    how: Paste a few of your brand's lines. The words become yours while the pace stays the reference's.
+  - what: A different kind of product
+    how: If the reference sells something bought differently (a subscription versus a one-off), it matches each row's job, not its content, and explains the swap.
+
+judge:
+  - The new script has the same number of rows as the reference, in the same order.
+  - You can't find any five-word run from the reference in your script.
+  - None of the reference's numbers, claims or offer terms appear.
+  - Every changed row in the step map says why.
+  - A first-person speaker is a real customer, or the notes flag that one is needed.
+
+test:
+  - Search the new script for any five-word run from the reference. There should be none.
+  - Check the step map. Same number of rows, same order, and every changed row says why.
+  - Use a reference that rests on a fact you don't have (a free trial, a price drop). It should change that row or leave a placeholder, never borrow the claim.
+  - Run it twice on the same breakdown. The device it names for the whole ad should be the same both times.
+
+improve:
+  - Add your real offer terms and proof to "What you need" in the skill file, so step 2 always has true facts to swap in.
+  - Add your brand's voice rules to step 6 ("Voice"). The words are yours and only the pace comes from the reference, so this is where your sound goes in.
+  - Keep the breakdowns of references you've used, with the device each one relies on, and save the ones that worked to your brand file.
+  - Pair it with the skill that keeps only the idea behind an ad, when you want a fresh order instead of the same structure.
+
+terms:
+  - term: Device
+    meaning: The trick that makes an ad work, like a confession, a list of three or a sudden reveal.
+  - term: Breakdown
+    meaning: A reference ad written out row by row (each line, shot, on-screen text and timing).
+  - term: Placeholder
+    meaning: A bracketed gap in the script, like [review count], left where a real fact is needed.

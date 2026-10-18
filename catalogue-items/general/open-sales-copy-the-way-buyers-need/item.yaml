@@ -1,0 +1,19 @@
+slug: open-sales-copy-the-way-buyers-need
+renamed_from: sales-opening-picker-six-leads
+name: "Open your sales copy the way your buyer needs"
+summary: "The right way to open for how much your buyer knows, with two different openings to test."
+category: general
+type: skill
+role: make
+job: copy
+level: intermediate
+inputs:
+  - {type: brief, required: true}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: hooks}
+uses: [know-who-youre-writing-for]
+origin: rebuilt
+source_ids: [CES-022]
+old_name: copy-craft
+version: 1.0.0

@@ -1,0 +1,171 @@
+new_slug: fill-brand-file-gaps-in-one-founder-call
+name: Fill your brand file's gaps in one founder call
+summary: A founder interview that asks only what your data can't answer, and files each answer with its source.
+job: brand-file
+
+headline: Get the answers only the founder knows, in one call, filed where writers will find them
+subhead: Give it your brand file and, after the call, the founder's answers. It turns what the file already says into quick yes-or-no confirmations, writes questions only for the real gaps, then files each answer in the right place, dated and marked as the founder's word.
+
+explain: |
+  Your website, reviews and ad results show what customers do and say. They can't show why the product is made the way it is, which claims you can prove, who is allowed to appear in an ad, or what the founder will never put their name to. Writers and AI tools guess those things, and the guesses end up in ads.
+
+  This skill prepares a founder interview around those gaps. It reads your brand file first, so nothing already answered gets asked again; those become "your site says this, is that exact?" checks. It sends a questionnaire ahead, keeps the call to the core questions, and asks for a scene or a sentence whenever the founder offers an adjective. Afterwards it files every answer with its source and date. A founder's statement is never treated as proof, so a claim stays "pending" until its document is on file.
+
+when:
+  - You've built a brand file from your website and reviews, and it's full of blanks and guesses.
+  - A writer or agency keeps asking the founder the same questions one at a time.
+  - You're about to make ads with people, claims or footage and need to know what's allowed.
+
+you_give:
+  - Your brand file, read first
+  - The founder's answers, as call notes, a transcript or written replies (after the call)
+  - Gaps you've already spotted, such as claims with no source or numbers that differ between pages (optional)
+you_get:
+  - A questionnaire made for this business, with core questions marked for the call
+  - The brand file updated, each answer tagged with source, date and question number
+  - A one-page readback of what you heard, what's still needed and what was decided
+
+how_to_use:
+  - Copy the skill and paste it into Claude, ChatGPT or Gemini.
+  - Paste your brand file and ask for the questionnaire. Send it to the founder two days before the call, with the list of documents to bring.
+  - On the call, ask only the core questions (marked with *). Leave the rest for written answers.
+  - After the call, paste the notes or transcript back in and ask it to file the answers.
+  - Send the one-page readback to the founder and chase the documents it lists.
+
+how_it_works:
+  - title: Strikes what's answered
+    text: Turns everything your brand file already shows into a quick "is this exact?" check, and adds one question per gap.
+  - title: Sends questions ahead
+    text: Prepares the questionnaire and asks for proof documents, writing samples and photos before the call.
+  - title: Runs a short call
+    text: Asks only the core questions, asks for scenes not summaries, and follows every claim with "how do you know?"
+  - title: Files each answer
+    text: Puts story, claims, offers, customers, competitors, voice and rights into the right part of the brand file, tagged with source and date.
+  - title: Keeps claims honest
+    text: Marks a claim as pending until its document is on file, and never turns a belief into a claim.
+  - title: Sends a readback
+    text: Writes one page with what was heard, what's still needed and the decisions made, then updates the brand diagnosis.
+
+output_shape: |
+  BEFORE THE CALL
+  Confirm (already in your brand file):
+    "Your site says <fact>. Is that exact?"
+  Core questions for the call (*):
+    <section> <n>* <question made for this business>
+  Written questions:
+    <section> <n> <question>
+  Please send before the call: <documents, samples, photos>
+
+  AFTER THE CALL
+  <brand file section>: <answer>  (source: founder, <date>, Q<n>)
+  Claims pending a document: <claim> needs <file>
+
+  READBACK
+  What we heard: <...>
+  Still needed: <documents, assets, rights, unanswered questions>
+  Decisions: <...>
+  Not answered: <Q numbers>
+
+example:
+  business: sprout
+  input: |
+    [the skill]
+
+    Brand file: sprout/brand.md (built from the website, reviews and ads).
+
+    Gaps we already spotted:
+    - The site gives four different star ratings
+    - "21" and "over 20" vitamins and minerals on different pages
+    - One ad's main text says "probiotics"; the ingredients list has none
+    - Grams of sugar per pack not captured
+
+    The call is next Tuesday. Prepare the questionnaire. No answers yet.
+  output: |
+    BEFORE THE CALL
+
+    Confirm (already in your brand file, yes or no)
+    - "Your site says 28 daily packs per pouch, about 20 g each. Exact?"
+    - "Your FAQ says the 30-day guarantee 'applies only to your initial
+      purchase'. Is that the rule you want buyers to read first?"
+    - "Orders ship within 24 hours and arrive in 3-5 days on average. Exact?"
+
+    Gap questions (core, for the call)
+    G1* Which star rating is right: 4.8 from 100,000, 4.75 from 109,639,
+        4.74 from 118,002? Where does each come from, and on what date?
+    G2* Is it 21 vitamins and minerals, or "over 20"? Which page is wrong?
+    G3* The ad text says "gut-supporting probiotics". Is there a probiotic
+        in the product, or should that ad come down?
+    G4* Grams of sugar per pack, Low Sugar and Sugar-Free?
+
+    Core questions for the call
+    1.1* What was happening the week you decided to make a gummy instead
+         of another powder? (the scene)
+    3.1* "1M+ customers" and "less than 1% use our guarantee": what's the
+         source and date for each? Can you send the file?
+    3.2* "Supports immunity + stress relief" and "revive whole body
+         vitality": what backs these? The study measured 2 vitamins.
+    4.1* Which discount is the real first-order offer? The site shows 52%,
+         55%, 49% and 58%, and ads say 61%.
+    4.2* The deepest discount you'll ever show, and the ones you never run.
+    5.1* Cancelling is the loudest complaint on review sites. What does a
+         customer actually do to cancel, step by step?
+    9.1* The pro athlete on the page is a paid spokesperson. Where and for
+         how long may we use him?
+    10.1* Tie-in flavours: what are we allowed to say and show about the
+         partner, if anything?
+
+    Written questions (answer before or after the call)
+    2.4  How long before a customer notices something, and how do you know?
+    4.4  How often is the first-order guarantee used? Source?
+    7.1  Three ads you wish were yours, three you never want to look like
+    11.1 Which photos and videos are cleared for paid ads?
+
+    Please send before the call
+    - The 2025 study report
+    - The survey of 3,000+ customers (questions and dates)
+    - The latest batch test report
+    - Logo files and the name of the display font
+    - Three things you wrote yourself (an email, a post, a voice note)
+
+    AFTER THE CALL
+    Paste your notes or transcript and I'll file each answer as
+    (source: founder, <date>, Q<n>), keep claims "pending" until their
+    file arrives, and send you a one-page readback.
+
+tweaks:
+  - what: The brand file you paste
+    how: The fuller it is, the shorter the interview. A file built from the website and reviews first turns most questions into quick confirmations.
+  - what: Gaps you've spotted
+    how: List them ("two pages give different customer counts", "the lab claim has no file") and each one becomes a direct question.
+  - what: Call or written only
+    how: Say "written only" if the founder can't do a call. It moves the core questions to the top of the questionnaire and asks for examples in place of follow-ups.
+  - what: Online store add-on
+    how: For physical products it adds questions on how the product looks, how it's used and which five photos you need, so images and videos get the product right.
+
+judge:
+  - Nothing your brand file already answers is asked as a fresh question.
+  - Every filed answer says source, date and question number.
+  - Beliefs are filed as story, not as claims. "We think it works because..." doesn't become a selling line.
+  - Rights are recorded with their limits (who, where, how long). No recorded right means no use.
+  - Where the founder and your data disagree about the customer, both are written down.
+
+test:
+  - Before the call, check the questionnaire against your brand file. Anything the file already answers with a source should be a yes-or-no confirmation, not a fresh question.
+  - Feed it one answer that's a belief ("we think it works because the fiber is gentle"). It should be filed as story, not as a claim you can use in ads.
+  - Give it an answer about who may appear in ads with no limits stated. It should record the right as incomplete and ask who, where and for how long.
+  - Read the one-page readback with the founder. If they'd correct a line, the filing is wrong, so fix it before writers use it.
+
+improve:
+  - Cut the questionnaire to fit you. Delete sections that don't apply (section 9 if nobody will appear on camera) and add questions your industry needs, such as licences or safety tests.
+  - Move the * marks to the questions your writers get stuck on most, so the live call covers what blocks them and the rest goes in writing.
+  - Edit the filing map in step 4 so answers go to the file names your brand file uses.
+  - Save the founder's own writing samples in the voice section of your brand file. Later skills learn the voice from those, not from adjectives.
+  - Pair it with a skill that builds a brand file from your website first, so the interview fills gaps instead of starting from zero.
+
+terms:
+  - term: Readback
+    meaning: A one-page note sent after the call that repeats what you heard, so the founder can correct it.
+  - term: Pending claim
+    meaning: Something the founder says is true but hasn't proven with a document yet. It stays out of ads until it's proven.
+  - term: Rights
+    meaning: Permission to use a person, photo, video or logo in ads, with limits on where and for how long.

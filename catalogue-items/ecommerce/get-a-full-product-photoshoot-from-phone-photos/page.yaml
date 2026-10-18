@@ -1,0 +1,183 @@
+new_slug: get-a-full-product-photoshoot-from-phone-photos
+name: Get a full product photoshoot from phone photos
+summary: 8 to 12 photos of your real product, each with one job, checked at full size.
+job: product-photos
+
+headline: A full product photoshoot from your phone photos, with every shot doing a job
+subhead: Give it your product photos, brand look and where the photos will be used. It picks 8 to 12 shots by job (main shot, size, in use, texture, what you get), finds a look for each, waits for your approval, then makes and checks every photo at full size.
+
+explain: |
+  When people make product photos with AI, they usually pick looks first and end up with twelve handsome pictures in the same soft light, and none that shows how big the product is or how it's used. Meanwhile the product quietly changes from photo to photo.
+
+  This workflow starts from jobs instead. Each photo has one job, such as showing size, the product in use, the texture up close or everything in the box. It picks the jobs by how people meet your product (worn, applied, eaten, used by hand or placed in a room), finds a reference photo for each job, and stops for your approval before anything is made. Then it makes one test photo, makes the rest in every size you asked for, and checks the product in each one at 3 to 7 times enlargement against your real photos.
+
+when:
+  - You need a full set of product photos for a product page, ads and email, and can't book a photoshoot.
+  - Your current AI product photos look nice but the product isn't quite right, or they all look the same.
+  - You want each photo to have a reason to exist, not just a mood.
+
+you_give:
+  - One product and variant, named as you name it
+  - Real photos of that exact variant, including one of it in use
+  - Your brand facts (colours, photo style, places and props, what you never show, who buys and when)
+  - Where the photos go and in which sizes (feed 4:5, product page 1:1, stories 9:16, email 3:2)
+  - Reference photos you like (optional)
+you_get:
+  - A truth sheet describing your product
+  - An approved shot list (job, look, direction, and what was rejected and why)
+  - A plan for each photo
+  - The photos in every size you asked for, named by job, with a pass or fail line each
+
+how_to_use:
+  - Copy the workflow and paste it into Claude, ChatGPT or Gemini. ChatGPT and Gemini can make the photos; with Claude, paste each prompt into your image tool.
+  - Name the product and variant, attach your real photos (including one in use), and paste your brand facts.
+  - Say where the photos go and which sizes you need. It only makes the sizes you name.
+  - Approve the shot list and the look for each shot. Nothing is made before you do.
+  - Approve the test photo, then let it make and check the rest.
+
+how_it_works:
+  - title: Names the product and sizes
+    text: One product, one variant, and only the sizes you ask for.
+  - title: Writes down the product
+    text: Writes down exactly how the product looks from its photos. No true photo of the variant means no run; no in-use photo means no in-use shots.
+  - title: Chooses shots by job
+    text: Main shot, size, in use, texture, how it's built, result, what you get, where it lives, routine, range. Picked by how people meet the product, with at least one very close, one wide and one harder-light shot.
+  - title: Finds a look per shot
+    text: Searches reference photos by kind of shot, not your category, with notes on what each does, what it becomes and what could go wrong. You approve.
+  - title: Plans each photo
+    text: What it takes from the reference (composition, camera, light), what it replaces (product, props, people, colours), who's in it and what each hand does.
+  - title: Tests one photo
+    text: Makes one, checks it against the truth sheet, and you approve it before the rest.
+  - title: Makes every size
+    text: Each size is composed on its own from the same scene, never cropped from another, with the product inside the safe area.
+  - title: Checks at full size
+    text: Every photo, every size, every round. Printed words one by one, closure, shape, colour, then people, props and shadows. Failures are logged as lessons.
+
+output_shape: |
+  1. TRUTH SHEET
+  <the product, line by line, with MISSING where a photo is needed>
+
+  2. SHOT LIST (for your approval)
+  F<nn> | <job> | <what it shows> | <used for> | <look chosen>
+  Rejected: <look, why>
+  Left out: <job, missing photo or brand rule>
+
+  3. PLAN, PER PHOTO
+  Job: <...>  From the reference: <composition, camera, light>
+  Replaced: <product, props, people, colours>  Who: <cast, hands>
+  Camera: <height, angle, focus>  Conflicts: <reference vs product,
+  and the decision>
+
+  4. PHOTOS
+  F<nn>_<job>_<size>  (marked as generated)
+
+  5. CHECKS
+  F<nn>_<size>: <pass/fail; what failed; asked vs came back>
+
+example:
+  business: sprout
+  input: |
+    [the skill]
+
+    Product: Sprout Original (Adults), Low Sugar, 28 daily packs.
+    Photos: pouch front on; gummies in an open hand. No photo of a daily
+    pack yet.
+
+    Brand facts: glossy deep green stand-up foil pouch, big yellow
+    wordmark, yellow bear face top right, "28 Daily Packs" at the
+    bottom. Gummies: small opaque deep-green bears, soft matte. Tear the
+    daily pack straight across the top and tip the gummies into a palm.
+    The pouch opens only at its resealable top, never shown torn.
+    Colours: forest green, cream, sunflower yellow. Photos bright,
+    sunny, candy-like; everyday adults at home or outdoors; never
+    clinical. Never show tie-in characters or partner marks.
+    Buyers: powder quitters, busy parents, people with gut troubles.
+
+    For: product page and Meta feed ads.
+    Sizes: 1:1 for the product page, 4:5 for the feed.
+    No reference photos yet.
+  output: |
+    1. TRUTH SHEET (short form)
+    Glossy deep green stand-up foil pouch, closed at its resealable top;
+    big yellow wordmark; yellow bear face top right; "28 Daily Packs" at
+    the bottom; no white burst (that's Sugar-Free). Gummies: small,
+    opaque, deep-green bears, soft matte. Kind: eaten.
+    MISSING: daily pack (whole and torn), pouch in a hand, pouch back.
+    Hard stop: no tear-and-pour shot until a daily pack photo arrives.
+
+    2. SHOT LIST (for your approval)
+    F01 | Main shot | pouch alone, whole, true colour, cream ground |
+        product page tile, catalogue ads
+    F02 | Texture | three gummies very close, soft matte surface |
+        product page, carousel card
+    F03 | Served | a small handful of gummies in an adult's open palm,
+        pouch soft behind | product page, feed ad
+    F04 | Mid-bite | an adult eating one gummy at a sunny kitchen
+        counter, pouch on the counter | feed ad
+    F05 | Where it lives | pouch small on a kitchen counter by keys and a
+        phone | feed ad
+    F06 | Routine | pouch in an open backpack beside a water bottle and
+        a laptop | feed ad
+    F07 | Range | three closed pouches together (the 84-pack) | product
+        page, 84-pack ad
+    F08 | Harder light | pouch in hard morning sun, a crisp shadow |
+        feed ad
+    Left out, and why:
+    - Size (in a hand): MISSING pouch in a hand photo
+    - In use (tear and pour) and what you get (28 packs laid out):
+      MISSING daily pack photo
+    - Result: the brand states no visible result
+    Distance and light: F02 very close, F05 wide, F08 harder light.
+
+    3. LOOKS (nothing is made until you approve)
+    No reference photos supplied. Search by kind of shot, not by
+    "supplements":
+    F01 a glossy foil pack alone on a soft gradient
+    F02 sweets or berries very close, matte, shallow focus
+    F04 a person eating a snack at a bright counter, candid
+    F08 a small shiny object in hard sun with one crisp shadow
+    F01 and F07 show the pouch large, so they need your sharpest pouch
+    photo. Glossy foil takes hard light badly; F08 will need the most
+    checking for glare on the wordmark.
+
+    STOP: approve the shot list and pick a reference for each shot.
+    Then: one test frame (F01), your approval, every frame in 1:1 and
+    4:5 named like F01_main_1x1, and a full-size check of each.
+
+tweaks:
+  - what: Where the photos go
+    how: A product page set leans on main shot, size, in use, texture and what you get. An ads set leans on in use, result and routine. Say which, and the shot list shifts.
+  - what: Your own references
+    how: Attach photos you like and give each a direction, such as "this light for the texture shot". Your direction beats the workflow's reading; your brand rules beat both.
+  - what: The sizes
+    how: Name only the sizes you'll use. Each one is made as its own picture, so every extra size is extra work and extra checking.
+  - what: The kind of product
+    how: Worn products get front, back and seam shots on a body; room objects get wide, close and in-use shots in their place; pet products show an ordinary adult animal.
+
+judge:
+  - Every photo has one job, and no two do the same job the same way.
+  - There's at least one shot that shows how big the product is.
+  - The product matches the real photo when you zoom in on the label and closure.
+  - No words, logos or borders were added to any photo.
+  - The test photo was approved before the rest were made.
+
+test:
+  - Approve the test photo only after you've zoomed into its label and closure beside your real photo. If it's off, the rest of the set will be too.
+  - Check the shot list has a shot that shows true size. If it doesn't, you didn't give it a photo of the product in a hand, and it should say so.
+  - Ask for the shot list twice for the same product and use. The jobs should stay the same even if the looks change. If the jobs change, say exactly where the photos will be used.
+  - Put the finished set side by side and cover the product in each. If two backgrounds could swap, one photo isn't doing its own job.
+
+improve:
+  - Edit the job list in step 3 of the skill file for your store. Strike jobs you never use and mark the ones you need in every set, such as "what you get".
+  - "Write your rules for showing the product into step 5 (for Sprout: the big pouch opens only at its resealable top and is never shown torn)."
+  - Fix the sizes you always need in step 1, so it stops asking.
+  - Add the looks you rejected to the avoid list, so the next shoot doesn't offer them again.
+  - Pair it with the skill that borrows one photo's look for a single quick picture, and the gallery workflow when the photos need words for a product page.
+
+terms:
+  - term: Shot list
+    meaning: The list of photos to make, each with its job and where it will be used.
+  - term: Truth sheet
+    meaning: A written record of exactly what your product looks like, used to check every photo.
+  - term: Safe area
+    meaning: The middle part of a tall image where an app's buttons and captions won't cover the product.

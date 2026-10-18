@@ -1,0 +1,23 @@
+slug: turn-your-idea-into-an-article-style-ad
+renamed_from: advertorial-static-ad-script-format-rules
+name: "Turn your idea into an article-style image ad"
+summary: "An image ad that reads like a short article, with a check that your page pays it off."
+category: general
+boards: [ecommerce]
+type: skill
+role: make
+job: copy
+level: intermediate
+inputs:
+  - {type: brief, required: true}
+  - {type: brand_brain, required: true}
+  - {type: landing_page, required: true}
+outputs:
+  - {type: ad_copy}
+  - {type: image_prompt}
+uses: []
+example: advertorial-static
+origin: own
+source_ids: [CES-104]
+old_name: script-format-advertorial
+version: 1.0.0

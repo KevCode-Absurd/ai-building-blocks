@@ -1,0 +1,178 @@
+new_slug: turn-real-photos-into-a-product-page-gallery
+name: Turn real photos into a product page gallery
+summary: Product page images that each answer one shopper question, planned from and checked against your real photos.
+job: product-photos
+
+headline: Product page images that answer a shopper's questions one by one, and show your real product
+subhead: Give it real photos of your product, your product facts and your brand file. It writes down exactly what the product looks like, plans up to 12 images that each answer one shopper question, makes them once you approve every word, and checks each one.
+
+explain: |
+  Many product page galleries are five versions of one packshot (the product alone on a plain background). They show what it is and nothing else, so shoppers scroll down hunting for size, ingredients and how to use it. AI images add a new risk: a pack that drifts in colour or shape, or a close-up of a part your product doesn't have.
+
+  This workflow first writes a product truth sheet from your photos: shape, colours, printed words, what's in the box and what it must never be drawn as. Then it plans the gallery in the order shoppers ask questions, such as what is it, why does it work, how do I use it and what if I don't like it, with every word and photo named before anything is made. You approve the plan, the images get made, and each image is checked against the plan and your real photos.
+
+when:
+  - Your product page gallery is mostly packshots and shoppers keep asking the same questions.
+  - You're launching a product and need a full set of gallery images.
+  - You've tried AI product images and the pack came out wrong.
+
+you_give:
+  - Real photos of the exact product, as many angles as you have, ideally one in use
+  - Your product facts, including amounts, size and what's in the box
+  - Your brand file, with your colours, fonts, claims and guarantee terms
+  - Customer reviews, to find the biggest doubt (optional)
+you_get:
+  - A product truth sheet, and the photos you still need
+  - A frame-by-frame gallery plan with every word and its source
+  - The images, named in upload order, each with alt text
+  - A pass or fail for every image, with the smallest fix for each fail
+
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md". It needs an image tool connected to make the images.
+  - Have your inputs ready. Your product photos (full size, the exact variant you sell), your product facts with amounts, your brand file and, if you can, your reviews.
+  - It works step by step and saves each result. Read the truth sheet's "Missing" list first. Each missing photo is a frame it can't make honestly.
+  - Approve the plan and every word on it when it asks. Nothing gets made before you do, and the words don't change after.
+
+how_it_works:
+  - title: Records the real product
+    text: Uses the product truth sheet skill to write down shape, colours, printed words, contents and lookalikes to avoid, from your photos only.
+  - title: Plans the gallery
+    text: Uses the 12-frame gallery plan skill to give each image one shopper question, one answer, one source photo and exact words with sources.
+  - title: Makes the images
+    text: Uses the gallery image set skill to find the biggest doubt, get your approval on every frame, then make each image in each shape.
+  - title: Checks every image
+    text: Uses the gallery image check skill to run 11 checks per image (words, figures, same product, same size, phone readability) and a three-second stranger test.
+
+output_shape: |
+  TRUTH SHEET: <product and variant>
+  Looks like: <shape, colour, finish, size against a hand>
+  Printed words: <front of pack, word for word>
+  Not this: <lookalikes to avoid> | Never show: <list>
+  Missing: <photo jobs not held, and the frames they block>
+
+  GALLERY PLAN
+  01 <question> | Answer: <one line> | Photo: <which> | Words: <lines, each with source>
+  02 ...
+  ...
+  GAPS: [<FACT OR PHOTO> NEEDED] ...
+
+  IMAGES (after you approve)
+  01-<question>_1x1.png, 01-<question>_4x5.png ... with alt text
+
+  CHECK
+  01 <PASS / FAIL: check no., where, fault, smallest fix>
+  ...
+  Set: <reads as one gallery? order right? two frames alike?>
+
+example:
+  business: sprout
+  input: |
+    [the handoff pack] Follow HANDOFF.md.
+
+    Product: Sprout Original (Adults), Low Sugar, 28 daily packs
+    Photos: pouch-front.jpg (the pouch on a soft gradient, gummies
+    scattered in front), gummies-in-hand.jpg (an adult pouring gummies
+    into a palm). Both described in the brand file's photo notes.
+    Product facts: the brand file's product table, price table and
+    "fine to repeat" claims, plus its "Show it right" rules.
+    Brand file: the Sprout brand file
+    Reviews: reviews.md (optional)
+  output: |
+    TRUTH SHEET: Sprout Original (Adults), Low Sugar, 28 daily packs
+    Told apart by: no white burst (Sugar-Free has one); green, not the
+    yellow Kids pouch.
+    Kind: eaten.
+    Looks like: a glossy deep green stand-up foil pouch. Gummies are small
+    opaque deep-green bears, soft matte, about thumbnail height.
+    Printed words: a big yellow wordmark; "28 Daily Packs" at the bottom.
+    The rest: MISSING (read it from a sharp front photo).
+    Looks real because: the yellow bear face top right, the foil's shine
+    against the matte bears.
+    In use: a small flat pack torn straight across its top edge, gummies
+    tipped into a palm.
+    How it's built: the big pouch opens only at its resealable top.
+    In the box: 1 pouch, 28 daily packs.
+    Not this: not a tub, bottle or powder; not shiny multicolour bears;
+    never a pack torn at the side, bottom or a corner; never a torn pouch.
+    Never show: cartoon tie-in characters or partner marks; a clinical or
+    muted look.
+    Missing photos: a single daily pack, front and torn; the 28 packs laid
+    out; the label panel at readable size; the pouch in a hand for size.
+
+    GALLERY PLAN (biggest doubt, frames 1 to 3: "A gummy can't hold
+    enough to replace my powder.")
+    01 What is it? | pouch-front.jpg | "Daily greens in one small pack" (product facts)
+    02 What do I get? | "60+ ingredients / 21 vitamins & minerals / 6g fiber /
+       Supports digestion and gut health" (fine-to-repeat claims)
+    03 Why does it work? | "Clinically tested for nutrient absorption."
+       "Blood vitamin C +40.1%, folate +20.5%. 2025 study, 120 adults,
+       12 weeks." (science page)
+    04 How do I use it? | gummies-in-hand.jpg | "Rip. Tip. Enjoy. 1 pack a day."
+       (brand line; directions)
+    05 Do people like me use it? | Three reviews word for word, such as
+       "[Sprout] literally tastes like fruit snacks I ate as a kid."
+       (review 12) [NAME AS PUBLISHED NEEDED]
+    06 What changes if I switch? | A shaker and tub against one pack |
+       "No water. No mixing. No shaker." (product facts)
+    07 Why this, not the usual? | Rows against a big-name greens powder:
+       about $2.63 a serving against $1.78 a day on subscription; mix with
+       water against tear and eat (brand file). The page's "$1.26 vs
+       $3.60" row is dated, so it is left out.
+    08 What exactly arrives? | "1 pouch, 28 daily packs" | [LAID-OUT PHOTO NEEDED]
+    09 What is it made of? | Vitamin C 93 mg, D3 20 mcg, B12 2.4 mcg,
+       folate 400 mcg DFE, iron 4.5 mg, zinc 2.75 mg, 6g fiber. Left for a
+       designer to set from the label. [LABEL PHOTO NEEDED]
+    10 Can I trust it? | Review 1 in full | "4.75 stars from 109,639
+       reviews" (site widget; the site shows four different ratings, so
+       name the source)
+    11 What if I don't like it? | "30-day money-back guarantee on your
+       first order." (FAQ: first order only, kept)
+    12 Is it for someone like me? | Four moments: at a desk, in a gym
+       bag, on the way out the door, by the kettle. Fictional adults.
+
+    GAPS: [NAME AS PUBLISHED NEEDED] for every review. [LAID-OUT PHOTO
+    NEEDED], [LABEL PHOTO NEEDED], [SINGLE PACK PHOTO NEEDED], [PHOTO IN
+    HAND FOR SIZE NEEDED]. Grams of sugar: MISSING.
+
+    IMAGES AND CHECK
+    Not made in this run. The workflow stops here for you to approve every
+    frame and every word, then makes each image and checks it.
+
+tweaks:
+  - what: Marketplace set
+    how: Say "this is for a marketplace" and image 1 becomes the product alone on plain white with no words. Check the marketplace's own image rules before you upload.
+  - what: Shapes
+    how: Ask for square only, or square and 4:5 portrait. Each shape is composed for itself, never cropped from the other.
+  - what: The biggest doubt
+    how: Tell it the question shoppers ask most ("will it fit?", "what does it taste like?"). That doubt gets answered in the first three images.
+  - what: Words set by a designer
+    how: Say "leave room for a designer" and dense panels like ingredient tables are left as clean space, not drawn by the image tool.
+
+judge:
+  - Each image answers one question you can name in three seconds, and no two answer the same one.
+  - Every number on an image matches your facts digit for digit.
+  - The pack looks the same in every image, at the same size.
+  - Every review is word for word with the name as published, and no rating is made up.
+  - Frames it couldn't fill honestly are swapped or left out, not faked.
+
+test:
+  - Mix one photo of a different variant in with your real photos. Step 1 should reject it. If it uses it, every image after will be wrong.
+  - Read the plan from step 2 before you approve it. Every number on a card should match your label digit for digit.
+  - Make one image and put it beside your real photo at full size. The pack should match in colour, words and size.
+  - Look at the final set as phone thumbnails, in order. Each image should answer a different question.
+
+improve:
+  - In the builder, drop step 1 if you have a recent truth sheet for this exact variant, and give it to step 2.
+  - Add a step before step 2 that turns your reviews into ranked buying reasons, so the first three images answer the doubt customers raise most.
+  - "Tune step 2's skill: rewrite its 12 shopper questions for your category, and add your biggest doubt as a fixed line."
+  - Swap step 3 for the full photoshoot workflow if you only want wordless photos, and drop step 2.
+  - Pair it with the landing page workflow, so the page and the gallery answer doubts in the same order.
+
+terms:
+  - term: Packshot
+    meaning: A photo of the product on its own, usually on a plain background.
+  - term: Truth sheet
+    meaning: A written record of exactly what your product looks like, used to hold every image to the real thing.
+  - term: Alt text
+    meaning: A short description of an image for screen readers and search engines.

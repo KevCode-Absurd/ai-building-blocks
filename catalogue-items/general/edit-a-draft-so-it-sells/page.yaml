@@ -1,0 +1,172 @@
+new_slug: edit-a-draft-so-it-sells
+name: Edit a draft so it reads clean and sells
+summary: Your draft back with its best true details kept and only the lines that cost you sales fixed.
+job: write-ad-copy
+
+headline: A sharper draft that keeps your best details and fixes only the lines that cost sales
+subhead: Paste any customer-facing draft and the facts it's allowed to use. It marks the details worth keeping, checks each line against eleven common faults, makes the smallest fix that works, and keeps the old line whenever the new one isn't clearly better.
+
+explain: |
+  Edits often make copy worse. An editor cuts the odd, true detail because it sounds informal, softens a clear line to sound safer, or rewrites everything so the piece loses the voice it had. The draft ends up smoother and says less.
+
+  This skill edits the way a careful editor does. It reads the draft once as if aloud, then marks the one to three keepers, the true details that make the piece interesting, and protects them. Each line is checked against eleven faults, such as a line nobody would say, a number that never says what changes for the buyer, an opening the body doesn't pay off, or an ask that names a button instead of what's behind it. Every fix is tested against the old line in place, and the old line wins a tie.
+
+when:
+  - You have a draft ad, page, email or script and want an editor's read before it goes out.
+  - A rewrite made your copy blander and you want to know which changes to undo.
+  - You need to change one thing in copy that already works, without breaking the rest.
+
+you_give:
+  - The draft, with each part labelled (headline, body, button)
+  - The facts it may use, approved claims, offer terms and product facts
+  - Who it's for and how much they know (optional)
+  - A specific change you want, if the copy already runs (optional)
+  - Your voice notes and claims you must never make (optional)
+you_get:
+  - The keepers, the details every fix must protect
+  - Up to about five changes, each with the failing phrase, what it costs you and the corrected text
+  - Which lines were left alone, and why
+  - A one or two sentence summary, including whether the problem is the reason to buy rather than the wording
+
+how_to_use:
+  - Copy the skill and paste it into Claude, ChatGPT or Gemini.
+  - Paste your draft underneath, with each part labelled.
+  - Paste the facts it's allowed to use. It won't add anything beyond them.
+  - If you only want one thing changed, say so, for example "make the headline answer the price doubt".
+  - Read the keepers first. If it marked the wrong details as keepers, tell it which ones matter and run it again.
+
+how_it_works:
+  - title: Reads it aloud
+    text: Reads the draft once through, noting where attention rises and falls and where belief slips.
+  - title: Marks the keepers
+    text: Finds the one to three true details that make the piece interesting, never a clever phrase, and protects them.
+  - title: Checks every line
+    text: Tests each part against eleven faults, from a line nobody would say to an ask that names the button instead of what's behind it.
+  - title: Makes the smallest fix
+    text: Finds the one thing stopping the reader from understanding, wanting, believing or acting, and removes only that.
+  - title: Tests the fix
+    text: Keeps a change only if it's clearer, easier to say, or adds a reason, attention or belief. The old line wins a tie.
+  - title: Rereads the joins
+    text: Reads the lines either side of each change, because a bigger promise or a tighter line can break what's around it.
+
+output_shape: |
+  KEEPERS
+  <one to three true details every fix protects>
+
+  CHANGES
+  <n>. <field>
+     Failing:   "<the exact phrase>"
+     Costs:     <clarity, attention, trust or the sale>
+     Corrected: <the full corrected text for that field>
+  (usually 0 to 5)
+
+  LEFT ALONE
+  <lines kept, and why>
+
+  SUMMARY
+  <one or two sentences, and whether the reason to buy is the problem>
+
+example:
+  business: sprout
+  input: |
+    [the skill]
+
+    Draft (product page, top section):
+    Under title: 60+ potent ingredients to revive whole body vitality
+    in great tasting gummies.
+    Bullets: Promotes mental clarity + energy / Supports immunity +
+    stress relief / Supports digestion and gut health / Clinically
+    tested for nutrient absorption
+    Plan box: Subscribe & Save. $29.99. $1.07/day. Pause Or Cancel Any
+    Time. 30-Day Money-Back Guarantee.
+    Button: Start Now
+    Under button: DISCOUNT AUTO-APPLIED. Renews at $49.99 each 4 weeks.
+    Cancel anytime.
+    Why Sprout: No more gagging on pills, sloshing chalky powders, or
+    cleaning messy counters.
+
+    Facts: 60+ ingredients, 21 vitamins & minerals, 6 g fiber per pack.
+    The $29.99 needs the text sign-up discount for new customers. The
+    guarantee covers the first order only.
+    Buyer: people who quit powders and think it costs too much.
+  output: |
+    KEEPERS
+    - "sloshing chalky powders, or cleaning messy counters" (the real
+      hassle buyers left behind)
+    - "Renews at $49.99 each 4 weeks." (an honest detail most pages hide)
+    - "Clinically tested for nutrient absorption" (answers "does a gummy
+      even work?")
+
+    CHANGES
+    1. Under title
+       Failing:   "60+ potent ingredients to revive whole body vitality"
+       Costs:     clarity. Nobody can picture "whole body vitality".
+       Corrected: 60+ ingredients, 21 vitamins and minerals, and 6 g of
+                  fiber, in one pack of great tasting gummies a day.
+
+    2. Plan box
+       Failing:   "30-Day Money-Back Guarantee."
+       Costs:     trust. The first-order limit is only in the last FAQ.
+       Corrected: 30-day money-back guarantee on your first order.
+
+    3. Under button
+       Failing:   "DISCOUNT AUTO-APPLIED."
+       Costs:     trust. The $29.99 needs the text sign-up, so it isn't
+                  automatic.
+       Corrected: $29.99 for your first box with the text sign-up
+                  discount for new customers.
+
+    4. Button
+       Failing:   "Start Now"
+       Costs:     the sale. It names the button, not what's behind it.
+       Corrected: Start my first box
+
+    LEFT ALONE
+    "Renews at $49.99 each 4 weeks. Cancel anytime." is plain and
+    honest. "Supports digestion and gut health" and "Clinically tested
+    for nutrient absorption" are plain. The "Why Sprout" line keeps its
+    true details. The first two bullets are bold claims, so they belong
+    to a claims check, not to this edit.
+
+    SUMMARY
+    The wording problems are a vague promise at the top and offer terms
+    that hide their conditions. The reason to buy (no more chalky
+    powders) is fine. Run bullets 1 and 2 through a claims check before
+    this page is finished.
+
+tweaks:
+  - what: A change request
+    how: If the copy already runs, name the one change you want. It first lists what must stay (the idea, the voice, the offer, the order) and only touches what the request needs.
+  - what: The facts
+    how: A fix that needs a fact you didn't give becomes MISSING. Give it the full facts list and it can turn vague trust words into something you can point to.
+  - what: Who it's for
+    how: Tell it the buyer and how much they know. A buyer who doesn't know an answer exists needs a story, and it will tell you when a line edit can't fix that.
+  - what: How many changes
+    how: Ask for "the top three" if you're short on time. It orders changes by how much each fault costs you.
+
+judge:
+  - The keepers are true details from your draft, not catchy phrases.
+  - Every change names what the fault costs you. If it can't, it shouldn't be a change.
+  - No claim, number, price, guarantee, name or quote changed.
+  - Most lines were left alone, with a reason given.
+  - Read each corrected line beside the old one. The new one should be plainer, not just shorter or safer.
+
+test:
+  - Run it on copy a good editor has already fixed. Compare its changes with theirs. It should find most of the same lines and keep the details your editor kept.
+  - Run it twice. The keepers should be the same both times. If they change, the draft has no clear standout detail, which is worth knowing.
+  - Plant a line nobody would say in a strong draft, such as "Nutrition, reimagined." It should fix that line and leave the rest.
+  - Read the cost on each change. If it can't name clarity, attention, trust or the sale, the change shouldn't be there.
+  - Read its version and your original aloud, side by side. The plainer one should win.
+
+improve:
+  - Paste the claims your brand must never make into "What you need" in the skill file, so no fix goes near them.
+  - If your copy always has the same parts, list them in step 1 (for example "headline, main text, button").
+  - Add faults you see often in your own drafts to the list in step 3, each with what it costs.
+  - Write the keepers it finds into your brand file. They're often the best material for your next ad.
+  - Run "Stop your copy from sounding like AI" first if an AI tool wrote the draft, and finish with "Know if your copy is ready, in 15 questions".
+
+terms:
+  - term: Keeper
+    meaning: A true, interesting detail in your draft, such as an odd fact about how it's made, that every edit must protect.
+  - term: The ask
+    meaning: The part that tells the reader what to do next.

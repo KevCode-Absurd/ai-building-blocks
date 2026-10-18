@@ -1,0 +1,159 @@
+new_slug: turn-competitor-ads-into-your-own-script
+name: Turn competitor ads into your own script
+summary: An original script that borrows one idea from long-running competitor ads, in your words, checked against ad rules.
+job: study-competitors
+
+headline: Learn from the ads competitors keep running, and come away with a script that is yours
+subhead: Give it the competitor ads you collected, your brand file and your reviews. It sorts the ads, works out why the long-running ones hold attention, borrows one idea, and writes an original script with your product and your customers' words, checked against ad rules.
+
+explain: |
+  Studying competitor ads is useful, but it's easy to end up with a copy. You rewrite a good ad's lines a little, and now yours sounds like theirs and borrows claims you can't back. The useful part of a good ad is the idea behind it, such as opening by admitting something, or letting one demonstration do the talking.
+
+  This workflow keeps the idea and drops the rest. It sorts the ads you collected by angle and format and keeps the few worth studying. It breaks those down (opening words, first three seconds, claims, proof, when the ask comes) and finds what nobody in your category is doing. Then it states one idea in a sentence, checks your brand has the facts to use it, and writes a new script from your own research. A distance check confirms the order, words and shots are yours, then the ad rules check runs.
+
+when:
+  - You've saved competitor ads you admire and want to know why they work.
+  - Your ads feel stuck and you want ideas from outside your own account.
+  - You want to borrow what works without copying anyone's words, people or footage.
+
+you_give:
+  - The ads you collected, each with a link or ID, the brand, the format, its words and how long it has run
+  - Your brand file, or your website so one can be built
+  - Your customer reviews, copied as written
+  - Your product facts and the claims you may and may not make
+  - The competitors that matter to you (optional)
+you_get:
+  - A study board of the ads worth learning from, sorted by angle and format
+  - A breakdown of why they hold attention, and the gaps nobody in your category fills
+  - An original video script, with the one idea it borrows and a distance check
+  - The script polished to read aloud, and an ad rules check
+
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Have your inputs ready. Collect the ads by hand from a public ad library (or export your own saved collection), with a link or ID, the brand, the format, the words and how long each has run. Add your brand file, reviews and product facts.
+  - It works step by step and saves each result. Check the study board first and remove any ad that isn't relevant.
+  - Read the distance check at the end of the script. If any line comes from a competitor ad, ask for a rewrite before you go further.
+
+how_it_works:
+  - title: Sorts the ads
+    text: Uses the swipe board skill to look at each ad, sort it into one of eleven angle and format groups, and keep four or five per group.
+  - title: Breaks down why they work
+    text: Uses the competitor teardown skill to record each ad's opening, claims, proof and timing, find patterns across brands and list what nobody is doing.
+  - title: Writes your own script
+    text: Uses the script-from-an-idea skill to state the one idea worth borrowing, check your brand can use it, and write a new script from your research.
+  - title: Fixes how it sounds
+    text: Uses the read-aloud skill to fix lines nobody would say out loud, without changing any claim or fact.
+  - title: Checks the ad rules
+    text: Uses the Facebook and Instagram ad rules skill to flag anything that could get the ad rejected and list what to set at launch.
+
+output_shape: |
+  WHAT THE ADS SHOW
+  <group>: <pattern> (<brands>, ran <days> days)
+  ...
+  Nobody is doing: <gap 1>, <gap 2>
+
+  IDEA BORROWED
+  <one sentence, with no competitor's subject in it>
+  Where it acts: <which lines>
+
+  SCRIPT (<length> seconds, spoken by <who>)
+  | Line | Spoken | On screen | What is seen | Backed by |
+  ...
+  Fixed when read aloud: <line> → <new wording>
+
+  DISTANCE CHECK
+  Order of ideas is ours: <yes/no> | No borrowed claim or number: <yes/no>
+  No borrowed story or person: <yes/no> | No borrowed shot: <yes/no>
+
+  AD RULES CHECK
+  Verdict: <ready / fix first / likely rejected>   Set at launch: <restrictions>
+
+example:
+  business: sprout
+  input: |
+    [the handoff pack] Follow HANDOFF.md.
+
+    Ads I collected: my notes on five competitors, from the brand file.
+    - A big-name greens powder: science-first, podcast-famous, 90-day
+      guarantee, about $79 a month
+    - A TikTok-famous women's wellness brand: greens gummies, bloat
+      relief angle, creator videos
+    - A celebrity-founded women's supplement line: sitewide sales up to
+      45% off
+    - A doctor-backed greens tablet and gummy brand, sold in grocery stores
+    - A vegan family liquid-vitamin brand: trust badges, gentle tone
+    Brand file, reviews and product facts: the Sprout files.
+  output: |
+    This run stopped at step 1, which is what the workflow should do here.
+    It shows what happens when the ads themselves are missing.
+
+    STEP 1, STUDY BOARD
+    Not inspected: all 5. These are notes about each brand, not ads. There
+    is no link or ad ID, no ad words and no image or video to look at.
+    Sorted into groups: none. The board only sorts ads it has seen, because
+    a note like "creator videos" can't show the opening, the proof or when
+    the ask comes.
+    MISSING: the ads themselves.
+
+    WHAT TO COLLECT (by hand, from the public Meta Ad Library)
+    For each ad: the link or ad ID, the brand, the format, the words on it
+    and above it, the start date, and a screenshot or the video.
+    - The TikTok-famous wellness brand: its creator videos on bloat relief.
+      They aim at the gut buyer, who has the strongest feelings about the
+      problem.
+    - The big-name greens powder: its longest-running ads. Sprout's
+      reviewers name it as the powder they quit, so its ads show the
+      story Sprout's buyers left.
+    - The celebrity-founded line: its sale ads, to see how it handles
+      discounts that Sprout's buyers already doubt.
+    - The doctor-backed brand and the family vitamin brand: two or three
+      ads each, for how they use trust badges and expert voices.
+    - Add three or four ads from brands that sell something else to the
+      same buyers, for ideas nobody in greens uses yet.
+    Aim for 20 or more ads, some still running and some that stopped.
+
+    WHAT HAPPENS NEXT
+    Once the ads are in, it sorts them, breaks down the ones worth
+    studying, picks one idea to borrow, and writes a script from Sprout's
+    own facts. The brand file already points at one gap to test against
+    what competitors run: the "I quit powders" and "I finally stuck with
+    it" stories barely appear in Sprout's own ads.
+
+tweaks:
+  - what: Which ads you collect
+    how: Include ads that have run a long time and ads that stopped quickly. The short-lived ones show what didn't hold attention.
+  - what: Neighbouring categories
+    how: Add a few ads from brands that sell something different to similar buyers. Their ideas are less likely to be ones your competitors already use.
+  - what: What not to borrow
+    how: List anything you want kept out, such as a competitor's offer style or a kind of claim. The distance check confirms none of it appears.
+  - what: Script length and speaker
+    how: Say "20 seconds, hands only, voice-over" or "30 seconds, founder to camera". The borrowed idea then works inside that shape.
+
+judge:
+  - Every ad on the board has a link or ID and how long it ran, and none is called a "winner".
+  - The borrowed idea is one sentence that doesn't mention the competitor's product.
+  - No line, claim, number or shot in your script comes from a competitor ad.
+  - Every claim in the script appears in your facts.
+  - The ad rules check points to exact lines, not general warnings.
+
+test:
+  - Check the board from step 1. Every ad should have a link or ID and how long it ran. If any is called a winner, ask why.
+  - Read the borrowed idea. It should be one sentence that doesn't mention the competitor's product.
+  - Put the script beside the competitor ads it learned from. No line, claim, number or shot should match.
+  - Check every claim in the script against your facts.
+
+improve:
+  - In the builder, drop step 1 if you've already picked the few ads worth studying, and give them to step 2.
+  - Add a step after the script that turns it into a shot list, so it's ready for a video tool.
+  - Add a step before step 3 that turns your reviews into ranked buying reasons, so the script speaks in your customers' words.
+  - "Tune step 2's skill: list what you never want borrowed, such as a competitor's offer style, so the distance check looks for it."
+  - Run it again every few months with fresh ads, and compare what changed.
+
+terms:
+  - term: Public ad library
+    meaning: A free website where you can see the ads any brand is running, such as Meta's Ad Library.
+  - term: Swipe board
+    meaning: A collection of other brands' ads saved for study, sorted by angle and format.
+  - term: Angle
+    meaning: The reason someone buys, in their words.

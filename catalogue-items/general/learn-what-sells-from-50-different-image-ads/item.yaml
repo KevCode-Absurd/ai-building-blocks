@@ -1,0 +1,24 @@
+slug: learn-what-sells-from-50-different-image-ads
+renamed_from: fifty-static-ad-test-sprint
+name: "Learn what sells from 50 different image ads"
+summary: "Fifty image ads planned to differ on purpose, briefed and made, with your approval between stages."
+category: general
+boards: [ecommerce]
+type: workflow
+role: orchestrate
+job: ads
+level: expert
+inputs:
+  - {type: brand_brain, required: true}
+  - {type: persona, required: true}
+  - {type: product_photos, required: false}
+  - {type: competitor_set, required: false}
+outputs:
+  - {type: plan}
+  - {type: static_ads}
+uses: [find-image-ad-types-worth-testing-next, pick-the-right-layout-for-your-image-ad, fix-whats-wrong-in-finished-ads-before-launch]
+example: sprint
+origin: rebuilt
+source_ids: [CES-041]
+old_name: generate-50
+version: 1.0.0

@@ -78,7 +78,7 @@ M15:
   - {id: CEA-002, old: "Landing pages module (CRO Studio)", new: dtc-landing-and-cro-studio, level: system, status: proposed}
   - {id: CEA-063, old: "CRO audit (store or external page)", new: cro-page-auditor, level: workflow, status: proposed}
   - {id: CEA-064, old: "CRO calculators + page speed + security scan", new: cro-test-calculator-and-site-scans, level: skill, status: proposed}
-  - {id: CES-029, old: "ecommerce-funnel-inspection", new: storefront-evidence-inspection, level: skill, status: proposed}
+  - {id: CES-029, old: "ecommerce-funnel-inspection", new: find-what-stops-shoppers-backed-by-screenshots, level: skill, status: proposed}
   - {id: CES-050, old: "landing-pages", new: d2c-landing-page-method, level: workflow, status: proposed}
   - {id: SKO-240, old: "Landing pages and CRO execution: PageManifest and ad-to-page continuity (tech se", new: landing-page-execution-workflow, level: workflow, status: proposed}
 
@@ -104,11 +104,11 @@ M17:
   - {id: CEA-057, old: "Taste bar (11 levers -> context plan)", new: creative-taste-controls, level: skill, status: proposed}
   - {id: CEA-087, old: "The creative judge (8 criteria)", new: creative-scoring-rubric, level: knowledge, status: proposed}
   - {id: CES-002, old: "ad-principles", new: ad-writing-principles, level: knowledge, status: proposed}
-  - {id: CES-003, old: "ad-reference-exact", new: same-ad-new-format-remake, level: skill, status: proposed}
+  - {id: CES-003, old: "ad-reference-exact", new: get-your-best-ad-in-a-new-format, level: skill, status: proposed}
   - {id: CES-014, old: "buyer-led-selling", new: buyer-led-selling-principles, level: skill, status: proposed}
-  - {id: CES-023, old: "copy-floor", new: plain-copy-priority-order, level: prompt, status: proposed}
-  - {id: CES-024, old: "copy-principles", new: ad-copy-sell-pass, level: skill, status: proposed}
-  - {id: CES-025, old: "creative-lessons", new: creative-mistakes-register, level: knowledge, status: proposed}
+  - {id: CES-023, old: "copy-floor", new: keep-clever-lines-from-beating-clear-ones, level: prompt, status: proposed}
+  - {id: CES-024, old: "copy-principles", new: get-an-ad-where-every-line-sells, level: skill, status: proposed}
+  - {id: CES-025, old: "creative-lessons", new: stop-paying-for-the-same-ai-mistake-twice, level: knowledge, status: proposed}
   - {id: CES-044, old: "image-ad-copy", new: static-ad-copy-planner, level: skill, status: proposed}
   - {id: CES-046, old: "image-prompt-craft", new: image-prompt-writer, level: skill, status: proposed}
   - {id: CES-053, old: "native-ad-copy", new: native-story-ad-copy, level: skill, status: proposed}
@@ -126,8 +126,8 @@ M17:
   - {id: CES-074, old: "whatsapp-chat", new: native-image-group-chat, level: prompt, status: proposed}
   - {id: CES-075, old: "worn-object", new: native-image-worn-object, level: prompt, status: proposed}
   - {id: CES-076, old: "native-ads", new: native-story-ad-principles, level: knowledge, status: proposed}
-  - {id: CES-131, old: "script-surfaces", new: script-format-fit-advisor, level: skill, status: proposed}
-  - {id: CES-142, old: "taste", new: creative-direction-lever-snippets, level: prompt, status: proposed}
+  - {id: CES-131, old: "script-surfaces", new: know-which-ad-format-your-script-needs, level: skill, status: proposed}
+  - {id: CES-142, old: "taste", new: make-ai-build-the-ad-you-pictured, level: prompt, status: proposed}
   - {id: CES-188, old: "ad-copy-flow.md", new: static-ad-one-call-writer, level: prompt, status: proposed}
   - {id: CES-189, old: "ad-review.md", new: static-ad-pre-spend-review, level: prompt, status: proposed}
   - {id: CES-194, old: "chat-copy.md", new: ad-copy-options-writer, level: prompt, status: proposed}
@@ -148,7 +148,7 @@ M17:
   - {id: CES-248, old: "studio-feed-focused.md", new: long-primary-text-writer-focused, level: prompt, status: proposed}
   - {id: CES-249, old: "studio-feed.md", new: long-story-primary-text-writer, level: prompt, status: proposed}
   - {id: CES-250, old: "studio-plan.md", new: static-ad-planner-from-reference, level: prompt, status: proposed}
-  - {id: CES-251, old: "studio-prompt.md", new: static-ad-image-prompt-compiler, level: prompt, status: proposed}
+  - {id: CES-251, old: "studio-prompt.md", new: stop-image-tools-redrawing-your-product-and-words, level: prompt, status: proposed}
   - {id: CES-254, old: "studio-variants.md", new: static-ad-headline-variants, level: prompt, status: proposed}
   - {id: CES-255, old: "studio-words.md", new: static-ad-words-writer, level: prompt, status: proposed}
   - {id: CES-258, old: "voice-check.md", new: spoken-and-brand-voice-check, level: prompt, status: proposed}
@@ -166,9 +166,9 @@ M18:
   - {id: CEA-052, old: "Creator Studio", new: ugc-creator-studio, level: workflow, status: proposed}
   - {id: CEA-053, old: "Video editing", new: ad-video-editor, level: workflow, status: proposed}
   - {id: CES-004, old: "ad-script-principles", new: dr-video-script-principles-library, level: knowledge, status: proposed}
-  - {id: CES-030, old: "ecommerce-motion-finishing", new: video-ad-text-overlay-planner, level: skill, status: proposed}
+  - {id: CES-030, old: "ecommerce-motion-finishing", new: make-video-ad-clear-with-sound-off, level: skill, status: proposed}
   - {id: CES-032, old: "ecommerce-video-editing", new: ecommerce-ad-video-editor, level: skill, status: proposed}
-  - {id: CES-052, old: "motion-reel", new: code-rendered-product-offer-reel, level: workflow, status: proposed}
+  - {id: CES-052, old: "motion-reel", new: get-offer-reel-that-shows-your-real-product, level: workflow, status: proposed}
   - {id: CES-106, old: "script-format-carousel", new: carousel-ad-format-rules, level: skill, status: proposed}
   - {id: CES-107, old: "script-format-cinematic", new: cinematic-live-action-ad-format-rules, level: skill, status: proposed}
   - {id: CES-110, old: "script-format-claymation", new: claymation-story-ad-format-rules, level: skill, status: proposed}
@@ -182,12 +182,12 @@ M18:
   - {id: CES-123, old: "script-format-talking-object", new: talking-object-ad-format-rules, level: skill, status: proposed}
   - {id: CES-124, old: "script-format-ugc", new: ugc-selfie-video-ad-format-rules, level: skill, status: proposed}
   - {id: CES-125, old: "script-format-vsl", new: long-video-sales-letter-format-rules, level: skill, status: proposed}
-  - {id: CES-128, old: "script-from-research", new: video-ad-script-from-customer-research, level: skill, status: proposed}
-  - {id: CES-129, old: "script-reference-principles", new: script-from-reference-idea, level: skill, status: proposed}
+  - {id: CES-128, old: "script-from-research", new: get-video-ad-script-in-customers-words, level: skill, status: proposed}
+  - {id: CES-129, old: "script-reference-principles", new: get-fresh-script-from-why-ad-worked, level: skill, status: proposed}
   - {id: CES-130, old: "script-reference-structure", new: competitor-ad-structure-rewrite, level: skill, status: proposed}
-  - {id: CES-132, old: "script-transpose", new: script-voice-variant-converter, level: skill, status: proposed}
-  - {id: CES-133, old: "script-types", new: video-script-type-library, level: asset, status: proposed}
-  - {id: CES-134, old: "script-voice-pass", new: read-aloud-script-polish, level: skill, status: proposed}
+  - {id: CES-132, old: "script-transpose", new: get-new-ads-from-your-best-script, level: skill, status: proposed}
+  - {id: CES-133, old: "script-types", new: get-different-video-ads-from-same-research, level: asset, status: proposed}
+  - {id: CES-134, old: "script-voice-pass", new: get-script-presenter-can-say-without-stumbling, level: skill, status: proposed}
   - {id: CES-147, old: "video-director", new: ad-video-shot-director, level: skill, status: proposed}
   - {id: CES-191, old: "audit-judge.md", new: video-script-claims-audit, level: prompt, status: proposed}
   - {id: CES-210, old: "line-repair.md", new: script-compliance-line-fix, level: prompt, status: proposed}
@@ -210,7 +210,7 @@ M19:
   - {id: CEA-021, old: "Volume planner", new: creative-volume-and-budget-planner, level: skill, status: proposed}
   - {id: CEA-024, old: "Coverage (what the account misses)", new: ad-account-coverage-gap-finder, level: workflow, status: proposed}
   - {id: CEA-055, old: "Compliance (Meta Advertising Standards read)", new: meta-ad-compliance-checker, level: workflow, status: proposed}
-  - {id: CES-001, old: "ad-compliance", new: meta-ad-policy-check, level: skill, status: proposed}
+  - {id: CES-001, old: "ad-compliance", new: keep-facebook-from-blocking-your-ads, level: skill, status: proposed}
   - {id: SKO-237, old: "Insight analysis, gap identification and Channel strategist (tech sec 11, sec 12", new: channel-strategist-agent, level: agent, status: proposed}
   - {id: SKO-239, old: "First complete Meta loop: creative production, deployment identity and ad monito", new: meta-creative-landing-loop, level: workflow, status: proposed}
   - {id: SKO-241, old: "Experiment register and Experiment evaluator (tech sec 15, sec 12)", new: experiment-register-and-evaluator, level: agent, status: proposed}

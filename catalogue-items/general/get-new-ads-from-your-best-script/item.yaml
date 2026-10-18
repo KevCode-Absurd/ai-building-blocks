@@ -1,0 +1,18 @@
+slug: get-new-ads-from-your-best-script
+renamed_from: script-voice-variant-converter
+name: "Get new ads from your best script"
+summary: "Your winning script retold as I, you or they, with every fact, line and length kept the same."
+category: general
+type: skill
+role: make
+job: video
+level: beginner
+inputs:
+  - {type: script, required: true}
+outputs:
+  - {type: script}
+uses: [get-script-presenter-can-say-without-stumbling]
+origin: own
+source_ids: [CES-132]
+old_name: script-transpose
+version: 1.0.0

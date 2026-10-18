@@ -1,0 +1,186 @@
+new_slug: get-talking-object-ad-script-that-sells
+name: Get a talking object ad script that sells
+summary: A short, funny ad where an everyday object with a face tells your buyer's problem, with no claim you can't back.
+job: make-video-ads
+
+headline: Get a funny, honest ad told by the shaker, lamp or pan that watched your buyer's problem
+subhead: Give it your buyer's moment, your product and your approved claims. It picks one object from the buyer's own home, gives it a face and one tone, and writes a 10 to 30 second monologue (or one image with a speech bubble) that ends on a line people repeat.
+
+explain: |
+  Buyers rarely say their problem out loud, and an ad that says it for them can sound preachy. An object that was in the room says it better. The bedside lamp has seen the 1 am scrolling. The crusty shaker bottle knows it's been replaced in all but name. Nobody mistakes a talking shaker for a fake testimonial, and it carries one feeling well.
+
+  This skill picks the object with five tests: it was really there, it's one simple shape, it has something to lose, it can stand beside the product at true size, and it isn't the product, a competitor's product or a body part. It picks one tone (rant, warning, confession, deadpan fact, or searching), writes the object's lines in the first person, and keeps it to what it could have seen. The product enters at the turn, with its real label and no face.
+
+when:
+  - Your buyer doesn't talk about the problem, but something in their home has seen it every day.
+  - Your product replaces an old thing people keep and feel a bit guilty about.
+  - You want a funny ad that still makes no claim your facts can't back.
+
+you_give:
+  - The problem, how much the buyer already knows, and the length
+  - Video or still image
+  - Your buyer's moment (the room, what's in reach), what almost stops them and what they tried before
+  - Your product's look and pack, what it replaces and whether the result can be seen
+  - Your voice, how far a joke can go, your approved claims and your offer
+you_get:
+  - The object chosen, with the five tests passed, and the tone
+  - The monologue, line by line, with picture notes and a clip plan
+  - Or, for a still, the expression, the speech bubble line and an image prompt
+  - A list of every fact the object states, with its source
+
+how_to_use:
+  - Copy the skill and paste it into Claude, ChatGPT or Gemini.
+  - Paste your product facts, approved claims and a few customer reviews underneath.
+  - Describe where the problem happens, for example "at the kitchen sink, 7 am". Name any object your customers mention.
+  - Say "video, 20 seconds" or "still", and how dry or silly your brand's humour can be.
+  - Check the last line. If a stranger couldn't repeat it, ask for three more endings.
+
+how_it_works:
+  - title: Checks the fit
+    text: A talking object carries the problem and one feeling. It's weak for explaining how something works or for proof, and it's not an offer ad.
+  - title: Picks the object
+    text: Chooses a witness in the room, the old thing your product replaces, or the problem itself (a stain, a puddle). Never the product.
+  - title: Runs five tests
+    text: It was there, it's one simple shape, it has something at stake, it can stand beside the product, and it's nobody's brand and nobody's body.
+  - title: Picks one tone
+    text: Rant, warning, confession, deadpan fact or searching. A brand that never jokes gets a confession or a deadpan fact.
+  - title: Writes the lines
+    text: First person always, never "you". One specific feeling, one detail only this object would know, and nothing it couldn't have seen.
+  - title: Brings in the product
+    text: The product enters at the turn, beside the object, with its real label and no face. The offer is on-screen text, never spoken.
+  - title: Lists the facts
+    text: Notes every fact the object states and where it came from.
+
+output_shape: |
+  OBJECT  <the object> (<witness, thing it replaces, or the problem>).
+  <why this kind of object>
+  1 It was there: <evidence from research>
+  2 One shape: <what it is, what it's made of>
+  3 At stake: <what it has lost or fears>
+  4 Beside the product: <where both would really be>
+  5 Generic: <no brand, no body part, no screen>
+  State: <the damage you can see>
+
+  TONE  <one tone, and why it suits the brand>
+
+  CLIP <n>
+  <n> "<first-person line>"
+    <picture note: framing, what the features do, one action>
+  (the turn clip brings in the product; offer as on-screen text)
+
+  CLIP PLAN  Clip <n>: lines <n-n>, <words>, about <seconds>
+
+  FACTS THE OBJECT STATES
+  "<words>"   <source>
+  Not stated: <what it couldn't have seen>
+
+example:
+  business: sprout
+  input: |
+    [the skill]
+
+    Media: video, about 20 seconds
+    Problem: has quit greens powders again and again; the routine
+    never sticks. Buyer has tried other fixes.
+    Buyer's moment: the kitchen sink in the morning, shaker in the
+    drying rack, half-used tub in the cupboard.
+    Their words: "Plus not having to clean a shaker bottle or extra
+    dishes for greens stuff in powder form, is absolutely excellent!"
+    (review 6). "the drink was definitely gritty/chalky" (review 3)
+    Product: Sprout. Glossy deep green pouch, yellow wordmark; 28 daily
+    packs, each torn straight across the top. Result can't be seen.
+    Replaces: greens powder and the shaker.
+    Approved claims: "60+ ingredients, 21 vitamins & minerals, and 6g
+    fiber" in 1 pack.
+    Voice: playful, cheeky. Jokes are fine; no guilt.
+    Offer: $29.99 first order with the text sign-up, renews at $49.99
+    every 4 weeks.
+  output: |
+    OBJECT  The shaker bottle (the thing it replaces). The buyer owns
+    the old way and has tried other fixes.
+    1 It was there: review 6 names "a shaker bottle" by itself.
+    2 One shape: a frosted plastic shaker with a flip lid. Reads in a
+      second.
+    3 At stake: replaced, left in the drying rack, and stained for good.
+    4 Beside the product: the same kitchen counter, true size.
+    5 Generic: no logo, no rival's shape or color, not a body part.
+    State: a dried green ring inside, green crust on the lid hinge.
+
+    TONE  Confession. A cheeky brand could rant, but the old thing
+    admitting its part is funnier and has no guilt aimed at the buyer.
+
+    CLIP 1
+    1 "I'm the shaker. He hasn't picked me up in weeks."
+      Face close. Brows tilted up, eyes droopy. Mouth moves with the
+      words.
+    2 "Green powder, shake, that face he made. Every morning."
+      The shaker whole in the drying rack. Eyes slide away, sheepish.
+    3 "This green ring? That's me. It doesn't scrub out."
+      Very close on the dried ring inside. Brows drop.
+    CLIP 2 (the turn)
+    4 "Then a green pouch moved onto the counter."
+      Opens with the Sprout pouch on the counter beside the rack, label
+      to camera, closed at its resealable top. The shaker's eyes slide
+      to it.
+    5 "He tears a little pack, tips, and goes."
+      A daily pack on the counter, torn straight across the top, empty.
+      Nobody in frame.
+    6 "Turns out he never hated greens. He hated me."
+      Face close. Eyes widen, then the mouth settles into a small,
+      wobbly smile. Hold.
+      On screen: First order $29.99 with SMS sign-up. Renews at $49.99
+      every 4 weeks.
+
+    CLIP PLAN
+    Clip 1: lines 1 to 3, 28 words, about 10 seconds
+    Clip 2: lines 4 to 6, 25 words, about 10 seconds
+    The shaker never says the offer, never says "you", and the man it
+    talks about is never seen.
+
+    FACTS THE SHAKER STATES
+    "the shaker"          review 6
+    "Green powder"        the old way it replaces, brand file
+    "a green pouch"       brand file, how the pouch looks
+    "tears a little pack, tips"  brand file, how it's used ("Rip. Tip.
+                          Enjoy.")
+    Not stated: anything about his health, gut or energy. The shaker
+    only reports what it saw: the powder, the face, the pouch.
+
+tweaks:
+  - what: Which object
+    how: For buyers who don't see the problem yet, ask for "a witness" (the bedside lamp, the coat hook). For a visible problem, ask for "the problem itself" (a limescale ring). Name an object from your reviews and it wins.
+  - what: The tone
+    how: Pick one of rant, warning, confession, deadpan fact or searching. Deadpan suits dry brands, confession suits a quiet one, rant needs a brand that's happy to be loud.
+  - what: Video or still
+    how: For a still, you get one expression, one speech bubble of 12 words or fewer and an image prompt. 20 words in all on the image.
+  - what: Length
+    how: 10 seconds is one clip and a complete ad. 30 seconds gives three clips and room for a longer build before the turn.
+
+judge:
+  - The object never says "you". It talks about "she", "he" or "they".
+  - It says nothing it couldn't have seen. No result inside a body, no how-it-works, no number from nowhere.
+  - The product has its real label and no face, and can't be confused with the object.
+  - There is one talking object and one tone, and it has something to lose.
+  - The last line is one a stranger could repeat.
+  - The offer appears as on-screen text only, never in the object's mouth.
+
+test:
+  - Give it a brief where the result can't be seen and no object is named. It should pick a witness or ask what's in the room, never invent your buyer's home.
+  - Run it three times, naming a different object each time. Each should pass the five tests or be swapped out with a reason.
+  - Search the object's lines for "you", a price and any body result. Finding one means a rule was skipped.
+  - Read only the last line to someone who hasn't seen the script. If they can't tell what the ad is about, ask for five new endings.
+
+improve:
+  - Add the objects your customers mention in reviews to "What you need" in the skill file, so it starts from their words.
+  - Write your humour limits into step 3 (which tones are allowed for your brand), so it never picks one you'd reject.
+  - Add your product-showing rules (how the pack opens, what is never shown) to the video rules, so picture notes get them right.
+  - Save the last lines that win to your brand file. They make good headlines elsewhere.
+  - Pair it with the skill that turns a talking object script into shots and prompts for your video tool.
+
+terms:
+  - term: Witness
+    meaning: An object that was in the room when the problem showed, and reports what it saw.
+  - term: The turn
+    meaning: The moment the product appears and the object's story changes.
+  - term: Monologue
+    meaning: One speaker talking the whole time. Here, the object.

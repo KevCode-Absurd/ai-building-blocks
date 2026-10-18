@@ -1,0 +1,20 @@
+slug: fix-whats-wrong-in-finished-ads-before-launch
+renamed_from: static-ad-and-storyboard-review
+name: "Fix what's wrong in finished ads before launch"
+summary: "Finished image ads or storyboards reviewed, with the smallest fix for each flaw and a verdict per ad."
+category: general
+boards: [ecommerce]
+type: skill
+role: check
+job: ads
+level: intermediate
+inputs:
+  - {type: static_ads, required: true}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: audit_report}
+uses: []
+origin: rebuilt
+source_ids: [CES-085]
+old_name: operator-creative/review
+version: 1.0.0

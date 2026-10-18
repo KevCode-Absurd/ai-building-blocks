@@ -1,0 +1,188 @@
+new_slug: get-shopify-theme-code-that-installs-cleanly
+name: Get Shopify theme code that installs cleanly
+summary: Shopify sections, blocks and snippets that install without errors, with words you can edit in the theme editor.
+job: write-landing-page
+
+headline: Shopify theme code that installs cleanly, with words store owners can edit themselves
+subhead: Describe the section, block or snippet you need, or paste the file to fix, and name your theme. It writes the code with a valid settings schema, keeps editable words out of the code, follows Shopify's current rules, and lists exactly what to upload.
+
+explain: |
+  Shopify theme code breaks in small, annoying ways. A schema with one bad comma won't save. An old image filter quietly stops working. A price typed into the code is wrong the day you change it. A headline written into the code can't be edited without a developer.
+
+  This skill is a working rule sheet for writing Shopify theme files (the .liquid files that make up a store's pages). It picks the right kind of file, writes Liquid that avoids the common traps, writes a settings schema the theme editor accepts, keeps styles scoped so they don't leak into other sections, and puts any words the owner should be able to change into settings. Before handing over, it checks every reference, translation key and image. Where this sheet and Shopify's own documentation disagree, the documentation wins.
+
+when:
+  - You need a new section, such as a guarantee strip or an FAQ block, for your Shopify store.
+  - A theme file you edited won't save, or shows an error in the theme editor.
+  - You want the words on a section editable in the theme editor instead of locked in code.
+
+you_give:
+  - What to build, in plain words, such as a section, block, snippet or edit
+  - The theme you use and whether it supports theme blocks (recommended)
+  - The existing files, if you're editing (optional)
+you_get:
+  - The files, each in a code block with its path
+  - A short list of what to upload, what the owner can edit, and what was assumed
+
+how_to_use:
+  - Copy the skill and paste it into Claude, ChatGPT or Gemini.
+  - Describe what you want in a sentence or two, for example "a section with three icons and a short line under each, editable".
+  - Name your theme and, if you're editing, paste the current file.
+  - Upload the files to a duplicate of your theme, open the theme editor, and check the section on a phone-width preview.
+  - If something errors, paste the error message back in and ask it to fix that file.
+
+how_it_works:
+  - title: Picks the file type
+    text: A section for a full-width module with settings, a block for a nestable piece, a snippet for a reusable fragment with no settings.
+  - title: Avoids Liquid traps
+    text: No brackets in conditions, no old include or img_url, render instead of include, and paginate for lists over 50 items.
+  - title: Writes a valid schema
+    text: A name, settings with the right types, blocks, a preset so it can be added in the editor, and conditions for settings that only show sometimes.
+  - title: Scopes styles and scripts
+    text: One stylesheet and one script per file, no Liquid inside them, and styles tied to the section so nothing leaks.
+  - title: Documents snippets
+    text: Adds a short header saying what the snippet does, what it takes and an example call.
+  - title: Keeps words editable
+    text: Fixed labels go through translation keys. Words the owner should change live in settings, not in the code.
+  - title: Checks before handing over
+    text: Every render target, translation key and schema checks out, every image has alt text, and no price is typed in.
+
+output_shape: |
+  sections/<name>.liquid        (or blocks/ or snippets/)
+    {% doc %} <what it does, @param, @example> {% enddoc %}  (snippets)
+    <markup using section.settings and block.settings>
+    {% stylesheet %} <scoped CSS, no Liquid> {% endstylesheet %}
+    {% schema %}
+    { "name": "<...>", "settings": [ <typed settings> ],
+      "blocks": [ <...> ], "presets": [ { "name": "<...>" } ] }
+    {% endschema %}
+
+  locales/en.default.json       <fixed strings, if any>
+
+  NOTES
+  Upload: <files>   Owner can edit: <settings>   Assumed: <theme facts>
+
+example:
+  business: sprout
+  input: |
+    [the skill]
+
+    Build: a small section to sit under the buy button on our product
+    page. It should show the renewal price of the subscription, our
+    guarantee line with its first-order limit, and the shipping line,
+    all editable. Right now the renewal price is tiny and the
+    first-order limit is only in the last FAQ.
+
+    Our wording (from the product page FAQ):
+    - "a simple 30-day guarantee on your first order ... This policy
+      applies only to your initial purchase."
+    - "Orders typically ship within 24 hours and on average arrive 3-5
+      days later."
+
+    Theme: don't know if it has theme blocks. We sell by subscription.
+  output: |
+    sections/plan-terms.liquid
+    {%- liquid
+      assign product = section.settings.product
+      assign variant = product.selected_or_first_available_variant
+      assign allocation = variant.selling_plan_allocations | first
+    -%}
+    {%- if product != blank -%}
+      <div class="plan-terms" id="PlanTerms-{{ section.id }}">
+        {%- if allocation -%}
+          {%- assign renew_price = allocation.price | money -%}
+          <p class="plan-terms__renew">
+            {{- 'sections.plan_terms.renews_at' | t: price: renew_price,
+                plan: allocation.selling_plan.name -}}
+          </p>
+        {%- endif -%}
+        <p>{{ section.settings.guarantee_text }}
+          <a href="{{ shop.refund_policy.url }}">
+            {{- 'sections.plan_terms.read_policy' | t -}}</a></p>
+        {%- if section.settings.show_shipping -%}
+          <p>{{ section.settings.shipping_text }}</p>
+        {%- endif -%}
+      </div>
+    {%- endif -%}
+
+    {% stylesheet %}
+      .plan-terms { font-size: 1rem; margin-top: 0.75rem; }
+      .plan-terms__renew { font-weight: 600; }
+    {% endstylesheet %}
+
+    {% schema %}
+    { "name": "t:sections.plan_terms.name",
+      "tag": "section",
+      "settings": [
+        { "type": "product", "id": "product",
+          "label": "t:sections.plan_terms.settings.product" },
+        { "type": "textarea", "id": "guarantee_text",
+          "label": "t:sections.plan_terms.settings.guarantee",
+          "default": "30-day money-back guarantee on your first order. This policy applies only to your initial purchase." },
+        { "type": "checkbox", "id": "show_shipping", "default": true,
+          "label": "t:sections.plan_terms.settings.show_shipping" },
+        { "type": "text", "id": "shipping_text",
+          "label": "t:sections.plan_terms.settings.shipping",
+          "visible_if": "{{ section.settings.show_shipping }}",
+          "default": "Orders typically ship within 24 hours and on average arrive 3-5 days later." } ],
+      "presets": [ { "name": "t:sections.plan_terms.name" } ] }
+    {% endschema %}
+
+    locales/en.default.json  (add)
+    "plan_terms": { "renews_at": "Renews at {{ price }}, {{ plan }}",
+                    "read_policy": "Read the full refund policy" }
+
+    locales/en.default.schema.json  (add)
+    "plan_terms": { "name": "Plan terms", "settings": { "product":
+      "Product", "guarantee": "Guarantee line", "show_shipping":
+      "Show shipping line", "shipping": "Shipping line" } }
+
+    NOTES
+    Upload: the section and both locale additions, to a duplicate theme.
+    Owner can edit: the product, the guarantee line, the shipping line.
+    Assumed: no theme blocks, so this is a section you add under the
+    product section. The renewal price comes from your subscription app's
+    selling plan; if the product has none, that line simply doesn't show.
+    No price is typed in. The first-order $29.99 isn't shown here: it
+    depends on the text sign-up discount, not a store price.
+
+tweaks:
+  - what: Your theme
+    how: Name it and say whether it supports theme blocks. With no theme info it assumes a recent theme with theme blocks off, uses sections and snippets only, and says so.
+  - what: What the owner edits
+    how: List the words and images the owner should be able to change. Each becomes a setting with sensible starting text.
+  - what: Editing an existing file
+    how: Paste the whole file, not a fragment. It changes only what you asked and keeps the rest of the schema working.
+  - what: A whole page
+    how: For a full landing page from finished copy, use the skill that turns finished page copy into a Shopify page, which uses these rules to build the section and template.
+
+judge:
+  - The schema is valid JSON with a name and a preset (or a rule for where it can be added).
+  - There's no include, img_url, ternary or brackets in conditions.
+  - No price or policy is typed in. They come from the store.
+  - Words the owner should change are settings, not hard-coded text.
+  - Every image has alt text and a set width.
+  - The notes say what it assumed about your theme.
+
+test:
+  - Ask for a small section you understand, such as a banner with a heading and a button. Upload it to a duplicate theme and add it in the theme editor.
+  - Paste an old file that uses include or img_url. It should replace both and say so.
+  - Paste the schema into any JSON checker. It should be valid.
+  - Change the heading in the theme editor. If the change doesn't show, the words are in the code, not in a setting.
+
+improve:
+  - Write your theme's name, and whether it supports theme blocks, into "The theme in use", so it stops assuming.
+  - Add your store's own rules to step 2, such as the class name prefix or screen widths your theme uses.
+  - When Shopify changes a rule, edit the matching line in steps 2 to 6, so the skill stays in step with Shopify's documentation.
+  - Keep sections that work in a folder of your own, and paste one in as an example when you ask for a new one.
+  - Pair it with a skill that turns finished page copy into a full Shopify page, using these rules.
+
+terms:
+  - term: Liquid
+    meaning: Shopify's template language, used in .liquid files to show store data like product names and prices.
+  - term: Schema
+    meaning: The settings list at the bottom of a section file that tells the theme editor what can be changed.
+  - term: Snippet
+    meaning: A small reusable piece of theme code, called from sections with render.
+  - term: Theme editor
+    meaning: The Shopify screen where store owners change words, images and settings without touching code.

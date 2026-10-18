@@ -1,0 +1,193 @@
+new_slug: find-where-page-loses-buyers-test-fixes
+name: Find where your page loses buyers, then test fixes
+summary: A full page audit that shows where buyers give up, sizes fixes from your numbers, and plans tests.
+job: audit-landing-page
+
+headline: Know where your page loses buyers, and which fixes to ship now or test first
+subhead: Give it your page text and phone screenshots, the ads that send people there, and sales numbers if you have them. It stops at the first buyer question the page fails, and writes every fix with evidence, the number it should move, and whether to ship or test it.
+
+explain: |
+  Most page reviews start with button colours and end with a list of 40 tips. A buyer doesn't read your page as a list. They have seven questions in order, and they leave at the first one the page fails to answer.
+
+  This skill walks your page from the top, on a phone, asking those questions in order, from "is this what the ad showed me?" to "what if it doesn't work?". The first failure is the first finding. Each fix is written as a test idea: change this, because of that, expected to move this number. With your real sales numbers it can estimate the money at stake, clearly labelled as a model. Without them it ranks fixes and gives no money figures at all.
+
+when:
+  - Your ads get clicks but few sales, and you need to know where on the page people give up.
+  - You're about to spend on a redesign and want to know which changes matter first.
+  - You have some traffic data and want fixes sized in money, not just a list.
+
+you_give:
+  - The page, as its text plus phone screenshots of the first screen, the full scroll and the buying area
+  - The ads or links that send people there, with their headline, offer and image (recommended)
+  - Your real numbers, such as visits, conversion rate, average order value and phone against desktop split (optional)
+  - Your facts, such as policies, the claims you may make and any rating you hold (optional)
+you_get:
+  - Which mode it ran in (with money estimates, or page only) and what it looked at
+  - Top three leaks and top three opportunities
+  - Findings with evidence, each written as a test idea
+  - Which fixes to ship now and which to test, what the page needs from you, and what already works
+
+how_to_use:
+  - Copy the skill and paste it into Claude, ChatGPT or Gemini.
+  - Paste your page text and attach phone screenshots. Say the date you captured them.
+  - Paste the ad that sends most people there, so it can check the page matches.
+  - If you have them, paste visits, conversion rate, average order value and the phone and desktop split for the same date range. Without these you get a ranking, not money figures.
+  - Ship the "ship now" fixes first, and only run tests your traffic can support.
+
+how_it_works:
+  - title: Picks a mode
+    text: Uses money estimates only if you gave visits, conversion rate, order value and a device split. Otherwise it ranks by impact, confidence and ease, with no money figures.
+  - title: Walks the page on a phone
+    text: Asks the buyer's seven questions top to bottom and stops at the first one the page fails. That becomes finding one.
+  - title: Fits how it's bought
+    text: For something bought again it checks taste, contents, pack life and guarantee. For something bought once it checks fit, materials, returns and warranty.
+  - title: Notes what a buyer notices
+    text: How long the first screen takes, pop-ups, whether price and button show without scrolling, and cramped layouts.
+  - title: Writes each finding
+    text: Evidence, the buyer question it breaks, the change, the number it should move, how sure it is, and what must stay.
+  - title: Applies the owner test
+    text: Cuts any advice the owner wouldn't act on next month, such as tests a small shop can't run.
+  - title: Ranks and splits
+    text: Sorts fixes into ship now or test, and says whether your traffic can support a test.
+  - title: Names the gaps and the good
+    text: Lists facts the page can't answer (returns, delivery, warranty) and the sections that already work.
+
+output_shape: |
+  AUDIT FINDINGS
+  1 MODE AND SOURCES
+  Mode: <with money estimates | page only>   Dates: <...>
+  Ads checked: <...>   Captured: <how, when>
+
+  2 WHERE MONEY LEAKS  (money mode only)
+  <step>: <your rate, phone against desktop>
+
+  3 TOP 3 LEAKS / TOP 3 OPPORTUNITIES
+  <leak or opportunity>  <ranking, or money in money mode>
+
+  4 FINDINGS
+  First question the page fails: <question 1 to 7>
+  Evidence: <quote or screenshot>   Breaks: <buyer question>
+  Test <name>: change <X> because <Y>, expected to move <number>
+  Confidence: <low | medium | high>   Keep: <what must stay>
+
+  5 SHIP NOW / TEST / CAN YOUR TRAFFIC SUPPORT A TEST?
+  6 WHAT THE PAGE NEEDS FROM YOU   MISSING: <fact>
+  7 ALREADY WORKING   <section and why>
+
+example:
+  business: sprout
+  input: |
+    [the skill]
+
+    The page: sprout.example/products/sprout, as text top to bottom, read
+    13 Oct 2026 with notes from 30 Sept (sprout/product-page.md). No
+    screenshots. Phone share, first screen and page speed not captured.
+
+    Traffic source: the ad "'Sprout is too expensive': here's 61% off to
+    prove otherwise" (15+ copies live). Image not captured.
+
+    Facts: sprout/brand.md (offers, guarantee, claims fine and risky).
+
+    Real numbers: none for this page.
+  output: |
+    AUDIT FINDINGS
+
+    1 MODE AND SOURCES
+    Mode: page only. No visits, conversion rate or order value, so no
+    money figures. Captured as text on 13 Oct 2026; no screenshots.
+    Ads checked: the "too expensive, 61% off" ad.
+
+    3 TOP 3 LEAKS (ranked by impact x confidence x ease)
+    1 The ad promises 61% off; the page says 52%, "up to 55%" and 55%
+    2 $29.99 needs a text sign-up, said only in the footer
+    3 The guarantee covers the first order only, said only in the last FAQ
+    TOP 3 OPPORTUNITIES
+    1 Move the powder-quitter reviews up next to the button
+    2 Put the renewal price in the plan box, not under the button
+    3 Lead with what's in a pack, not "revive whole body vitality"
+
+    4 FINDINGS
+    First question the page fails: 1, "is this what the ad showed me?"
+    Evidence: ad says "61% off". Bar says "Save 52%", badge "UP TO 55%
+      OFF", pop-up "Sign Up for 55% Off".
+    Test One number: change bar, badge and pop-up to the one real first-
+      order offer because the buyer arrives expecting 61%, expected to
+      move add-to-cart rate. Confidence: high. Keep: the plan box layout.
+
+    Question 5, "what do I get and what does it cost in full?"
+    Evidence: "$29.99. $1.07/day" in the plan box; "Renews at $49.99"
+      small under the button; "DISCOUNT AUTO-APPLIED" though it needs a
+      text sign-up (footer).
+    Test Full price up front: change the plan box to "$29.99 first box
+      with text sign-up, then $49.99 every 4 weeks" because the price
+      doubter fears a trap, expected to move checkout completion and
+      refund requests. Confidence: medium. Keep: the per-day price.
+
+    Question 7, "what if it doesn't work?"
+    Evidence: plan box says "30-Day Money-Back Guarantee"; FAQ says "This
+      policy applies only to your initial purchase."
+    Ship, don't test: add "on your first order" to the plan box line.
+
+    Question 4, "do I believe it?"
+    Evidence: four ratings (4.8 from 100,000 / 4.75 from 109,639 /
+      4.74 from 118,002 / 4.0 from 2,411); reviews at the very bottom.
+    Ship: show one rating with its source. Test reviews by the button.
+
+    5 SHIP NOW / TEST
+    Ship now: guarantee wording, one rating with source, remove "revive
+      whole body vitality" and "Supports immunity + stress relief" from
+      the first screen (the study measured 2 vitamins).
+    Test: one discount number; full price in the plan box; reviews by
+      the button. Whether traffic can support these tests: not known.
+
+    6 WHAT THE PAGE NEEDS FROM YOU
+    MISSING: which discount is the real one
+    MISSING: the Low Sugar vs Sugar-Free panel text (not captured)
+    MISSING: visits, conversion rate, order value, phone/desktop split
+    MISSING: phone screenshots of the first screen
+
+    7 ALREADY WORKING
+    FAQ gives a clear delivery promise ("ship within 24 hours ... 3-5
+    days later"). Testing section names what was tested and when. Survey
+    numbers say "of surveyed users". The paid athlete is disclosed.
+
+tweaks:
+  - what: Your numbers
+    how: Add visits, conversion rate, average order value and the phone and desktop split. The audit switches to money estimates and shows the assumption behind each one, such as "if phone checkout completion rose from 28% to 38%".
+  - what: The ad
+    how: Include it and the first question (does this match what the ad showed?) gets judged. Without it that question is marked "not judged".
+  - what: One page or the whole store
+    how: Ask for a whole-store audit and the store add-on covers home, menu, collection, product, cart and checkout pages, with one to three test ideas each.
+  - what: Mock-ups
+    how: Ask for before and after images. The before is always your real screenshot, and the after shows only your real prices and proof, with grey boxes where you hold none.
+
+judge:
+  - The first page says which mode it ran in, and a page-only audit has no money figures or predicted lifts.
+  - Finding one is the first buyer question the page fails, not a button colour.
+  - Every finding quotes the page or points to a screenshot.
+  - No fix adds a rating, review count, price or offer you don't hold.
+  - Each recommendation is something you'd realistically do next month.
+  - Sections that work are named as working.
+
+test:
+  - Run it page-only first, with no numbers. There should be no money figures or predicted lifts anywhere. Then add your numbers and see what changes.
+  - Give it a page where you already know the main problem. Finding one should be that problem, or something earlier in the buyer order.
+  - Check each finding's evidence against your screenshots. A finding that quotes text not on your page is a mistake.
+  - Read the ship-or-test list next to your monthly orders. If it suggests a test your traffic can't support, the owner test in step 6 needs your real order count.
+
+improve:
+  - Write your monthly visits and orders into step 6 (the owner test), so it never suggests tests your traffic can't support.
+  - Add a buyer need to the list in step 2 if your product raises one early, such as "will it fit my device" before price.
+  - Delete the step 3 branch for the kind of product you don't sell, so every finding fits how yours is bought.
+  - Save the "what the page needs from the owner" list in your brand file and fill it. Missing returns and delivery terms come back as findings every time.
+  - Pair it with a 30-point quick checklist for fast passes before launch, and a skill that matches customer doubts to your page when finding one is about trust.
+
+terms:
+  - term: Conversion rate
+    meaning: The share of visitors who buy. 2 buyers from 100 visits is a 2% conversion rate.
+  - term: Average order value
+    meaning: The average amount spent per order.
+  - term: Test idea
+    meaning: A change you show to half your visitors to see if it beats the current page, before switching everyone over.
+  - term: Owner test
+    meaning: Would the owner of this business, at its size, act on this advice in the next month? If not, it's cut.

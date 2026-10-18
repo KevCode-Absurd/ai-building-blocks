@@ -1,0 +1,164 @@
+new_slug: write-ads-that-sound-like-a-friend
+name: Write ads that sound like a friend talking
+summary: Any ad written or reviewed so it sounds like a person and claims only what you can prove.
+job: write-ad-copy
+
+headline: Ads that sound like a friend talking, and only claim what you can prove
+subhead: Give it the reason for the ad (who it's for, what they want, what stops them) and your brand file. It picks one story from the buyer's problem to life after, writes it the way people talk, and marks any missing figure instead of making one up.
+
+explain: |
+  Ads written by marketers, and by AI, tend to sound the same. Clipped fragments, a question the ad answers itself, a slogan at the end, three adjectives in a row. Readers spot it in a second and scroll on. Others drop in facts for no reason, or claim more than the proof shows.
+
+  This skill sets the rules for any ad: a video of one person talking to a phone camera, a founder video, an image ad, a long narrated video or an animated story. Before writing a line, it settles one thread, meaning who is speaking, about what moment, and where the product comes in. Then it tells that story in plain speech, brings each fact in only when the story needs it, uses customer words without reciting reviews, and keeps the length to what this buyer needs. Anything it can't prove becomes a [placeholder].
+
+when:
+  - You're writing a script or ad and want it to sound like a person, not a brand.
+  - A draft reads like AI wrote it and you want a review with plain replacements.
+  - You need one ad that works across formats, from a phone video to an image ad.
+
+you_give:
+  - The reason for the ad, who it's for, what they want, what they've tried, what stops them, and their own words
+  - The offer, the format and how much the buyer already knows
+  - Your brand file, with voice, never-say list, facts and proof
+  - A draft to review instead of write (optional)
+you_get:
+  - The ad in the format you asked for, with notes on what to show
+  - One line stating the thread the ad follows
+  - For a review, each failing line, the rule it breaks and a plain replacement
+
+how_to_use:
+  - Copy the skill and paste it into Claude, ChatGPT or Gemini.
+  - Paste your brand file underneath, or at least the voice notes, facts and proof.
+  - Describe the buyer and what stops them, using their own words from reviews.
+  - Name the format and length, for example "one person talking to a phone camera, 30 to 40 seconds".
+  - Read the thread line first. If it isn't one clear story, ask for another before you edit lines.
+
+how_it_works:
+  - title: Says it like a person
+    text: Reads every line aloud in its head. Anything a person wouldn't say to a friend gets said the plain way, with no stock phrases.
+  - title: Picks one thread
+    text: Decides in one sentence who is speaking, about what moment, and where the product comes in.
+  - title: Moves the story
+    text: Life with the problem, what they tried, the turn, the product as the way across, life after, then one next step.
+  - title: Sticks to the facts
+    text: Uses only the customers, quotes, numbers and offers you supplied. A missing figure becomes a [placeholder].
+  - title: Writes shot notes
+    text: Describes scenes a crew could film, with the product used the real way and no result shown without proof.
+  - title: Fits the voice
+    text: Keeps brand slogans out of a speaker's mouth and uses brand style only where a line takes it naturally.
+  - title: Sets the length
+    text: As long as this buyer needs. A buyer who doesn't know the problem gets the longest ad; a buyer who knows the product the shortest.
+
+output_shape: |
+  THREAD
+  <one sentence: who is speaking, about what moment, and where the
+  product comes in>
+
+  SCRIPT
+  <n>. <spoken line or on-image words>
+     Show: <what's on screen, with the product used the real way>
+  (lines in story order, ending on one next step)
+
+  NOTES
+  <placeholders used, facts held back, anything MISSING>
+
+example:
+  business: sprout
+  input: |
+    [the skill]
+
+    Reason for the ad: people who quit greens powders and pill stacks.
+    They want one habit that lasts. Doubt: "A gummy can't hold enough
+    to replace my powder." They don't know Sprout yet.
+    Their words: "It's always been an issue of consistency" / "the drink
+    was definitely gritty/chalky" / "It's wild I WANT to take [Sprout]
+    and don't forget."
+    Format: one person talking to a phone camera, AI-made presenter,
+    30 to 40 seconds.
+    Offer: 30-day money-back guarantee, first order only.
+
+    Brand file: playful, cheeky, a funny friend, never preachy.
+    Facts: 1 pack a day, torn open across the top, a small handful of
+    gummies. 60+ ingredients, 21 vitamins & minerals, 6 g fiber. No
+    water, no mixing, no shaker.
+    Show it right: tear the pack straight across the top edge; never
+    show partner characters.
+  output: |
+    THREAD
+    A woman with a half-full tub of greens powder at the back of her
+    cupboard tells a friend why she always quits, and about the gummy
+    pack she hasn't quit.
+
+    SCRIPT
+    1. "I've bought greens powder more than once, and every tub ends up
+       half full at the back of the cupboard."
+       Show: her kitchen at home. She opens a cupboard; a plain tub with
+       no label and a shaker sit at the back.
+
+    2. "It was never the vitamins. It's gritty, so I skip a day, and
+       then suddenly it's been a month."
+       Show: she wrinkles her nose at the shaker.
+
+    3. "So when I first saw Sprout I thought, a gummy can't hold enough
+       to replace my powder."
+       Show: she holds the deep green pouch up to the camera.
+
+    4. "It's one little pack a day. You tear it across the top and eat
+       the handful of gummies, no water and no shaker."
+       Show: she tears a daily pack straight across the top edge and
+       pours the green bears into her palm.
+       On screen: 60+ ingredients, 21 vitamins & minerals, 6 g fiber
+
+    5. "And the weird part is I actually want to take it, so I don't
+       forget."
+       Show: the torn pack on the counter next to her keys.
+
+    6. "If you've got a tub at the back of your cupboard too, try a box.
+       Your first order has a 30-day money-back guarantee."
+       Show: she pushes the old tub back and closes the cupboard.
+
+    NOTES
+    - The presenter is AI-made, so she speaks as someone like the
+      buyer, built from reviews about consistency, grit and wanting to
+      take it. She's never named as a customer.
+    - No figures are spoken. The numbers sit in on-screen text only.
+    - The study results are held back so the ad keeps one idea, the
+      habit. Save them for a buyer who doubts the nutrients.
+
+tweaks:
+  - what: The format
+    how: Each format has its own rules. A phone-camera video gets talk and half-finished thoughts; an image ad gets one picture claim plus main text; an animated story gets one character and one object that changes.
+  - what: How much the buyer knows
+    how: For a buyer who doesn't know the problem yet, it writes the long story of the problem. For a buyer who knows your product, it answers their one doubt and makes trying safe.
+  - what: Who speaks
+    how: A real founder can say "I" and "we". An AI-made presenter can tell a story as someone like the buyer, but never as a named customer, the founder or an expert, and never quotes a figure or review.
+  - what: A draft
+    how: Paste a draft and say "review". You get each failing line, the rule it breaks and a plain replacement instead of a new ad.
+
+judge:
+  - Read it aloud. Every line is a sentence a person would say.
+  - There's no slogan at the end, no question it answers itself, and no "no this, no that" list.
+  - Every customer, number and quote is one you supplied. Missing ones show as [placeholders].
+  - It has one idea and one next step.
+  - A crew could film every shot note, and none shows a result you can't prove.
+
+test:
+  - Give it the brief for an ad you've run that worked. Compare its thread sentence with what your ad was about. If they differ, read why. It may have found a different moment in the same research.
+  - Run it twice on one brief. The thread (who speaks, about what moment) should be the same. If it changes, your brief names more than one buyer or reason.
+  - Paste an ad you already run and write "review". Read each failing line aloud next to its replacement. The replacement should sound more like talk, not more clever.
+  - Find every number and quote in the result. Each one should be in your brand file, or show as a [placeholder].
+
+improve:
+  - Paste your voice notes and never-say list into step 6 of the skill file, so the voice rules travel with it.
+  - Delete the format notes you never use and keep yours, for example only "One image ad" and "One person talking to a phone camera".
+  - Add your buyers' own words for the problem to step 4, so it borrows them without you pasting reviews each time.
+  - Write your usual length for each kind of buyer into step 8, so it stops guessing.
+  - Pair it with "Know how your ad should open and ask" to set the length and the ask, and run "Stop your copy from sounding like AI" on the result.
+
+terms:
+  - term: Thread
+    meaning: The one story the ad tells, said in a sentence before any line is written.
+  - term: Placeholder
+    meaning: A gap in square brackets, such as [number of customers], for a figure you still need to supply.
+  - term: AI-made presenter
+    meaning: A person in a video made by an AI tool, not a real customer or employee.

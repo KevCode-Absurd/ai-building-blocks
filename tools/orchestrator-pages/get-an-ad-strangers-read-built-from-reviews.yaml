@@ -1,0 +1,176 @@
+new_slug: get-an-ad-strangers-read-built-from-reviews
+name: Get an ad strangers read, built from reviews
+summary: A story ad that reads like a normal post, with its picture plan and an ad rules check.
+job: write-ad-copy
+
+headline: An ad strangers actually read, because it tells their own problem back to them
+subhead: Give it your reviews and product facts. It picks the problem your customers describe most, writes a short story around it for people who have never heard of you, plans a picture that looks like a normal post, and checks both against ad rules.
+
+explain: |
+  People who don't know you aren't shopping. They scroll past anything that looks like an ad in a fraction of a second. A story ad is made to look like a normal post instead: an ordinary photo or a note, with a short story underneath that describes the reader's problem so exactly that they recognise themselves. Only near the end does it point to a way out.
+
+  This workflow builds one from your reviews. It first decides whether your product suits the format, which problem to lead with and who may tell the story (your founder, a real customer who agreed, or a clearly labelled mix of what customers say). Then it writes a 150 to 400 word story, plans a square picture with no product in it, and checks everything against Facebook and Instagram ad rules. Nothing is passed off as a real person or post that doesn't exist.
+
+when:
+  - Your ads do fine with people who already know you, but strangers ignore them.
+  - Your customers had the problem for years and tried other fixes first.
+  - You want to test a long, story-led ad but don't know how to write one honestly.
+
+you_give:
+  - Your customer reviews, support emails or survey answers, copied as written
+  - Your product facts and the claims you may and may not make
+  - Who the buyer is and when the problem bites (optional)
+  - The article-style page the ad will link to, if you have one (optional)
+you_get:
+  - A setup sheet saying whether the format fits, the problem to lead with and who narrates
+  - The story, 150 to 400 words, with the headline that sits under the picture
+  - A picture brief and an image prompt for a square, ordinary-looking photo or note
+  - An ad rules check, plus a five-story test plan
+
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Have your inputs ready. Your reviews (the more mixed and three-star ones the better), your product facts with allowed claims, and the names of anyone who has agreed to be quoted.
+  - It works step by step and saves each result. Read the setup sheet first. If it says the format doesn't fit, stop there and make a direct ad instead.
+  - Before it runs, make sure the click goes to an article-style page that explains the problem first, not straight to your product page. If you don't have one, the workflow says so.
+
+how_it_works:
+  - title: Decides if it fits
+    text: Uses the story ad setup skill to check your buyers have a history with the problem, rank the problems by how often customers describe them, and pick who narrates.
+  - title: Writes the story
+    text: Uses the story ad writer to write 150 to 400 words in your customers' own phrases, ending on one soft step towards your page with no price or discount.
+  - title: Plans the picture
+    text: Uses the story ad image skill to choose one of 20 ordinary-looking picture types, such as a candid moment or a handwritten note, and write its image prompt.
+  - title: Checks the ad rules
+    text: Uses the Facebook and Instagram ad rules skill to flag health claims, statements about the reader and anything that could look like a fake post.
+
+output_shape: |
+  SETUP
+  Fits: <yes or no, and why> | Lead problem: "<in the buyer's words>"
+  Narrator: <founder / customer who agreed / summary of what customers say>
+
+  PICTURE: <picture type>
+  Question it raises: <one question>
+  Headline under it: <one line>
+
+  STORY (<word count> words, opens with <opener type>)
+  <the story, 150 to 400 words>
+
+  IMAGE PROMPT
+  <60 to 120 words, square, phone-photo look, no product, no logo>
+
+  AD RULES CHECK
+  Verdict: <ready to run / fix first / likely rejected>
+  Problems: <area, where, fix>   Set at launch: <restrictions>
+  Click goes to: <article-style page> | MISSING: <what>
+  Test next: <four more stories on the same problem>
+
+example:
+  business: sprout
+  input: |
+    [the handoff pack] Follow HANDOFF.md.
+
+    Reviews: the 20 public reviews in reviews.md
+    Product facts: the brand file's product table and "fine to repeat"
+    claims. Never use the risky list.
+    Buyer (optional): people who have quit greens powders, pill stacks
+    and multivitamins, and want one habit that lasts.
+    People cleared to quote: none.
+    Article page: none yet.
+  output: |
+    SETUP
+    Fits: yes. These buyers have quit powders and pills before (reviews
+    1, 3, 4, 5).
+    Lead problem: "It's always been an issue of consistency" (review 1).
+    Second: the gritty, chalky powder (reviews 3, 4).
+    Aim: led by the problem, so anyone who has quit a supplement stops.
+    Narrator: the brand, summing up what customers say. Nobody is cleared
+    to be quoted, and no review is marked verified.
+
+    PICTURE: problem leftover
+    A tub of greens powder, about a third used, at the back of a cupboard.
+    Question it raises: why is that tub still nearly full?
+    Headline under it: Stop blaming willpower. Look at the shaker.
+
+    STORY (187 words, opens by continuing the picture)
+    That's a tub of greens powder, about a third used, pushed to the back
+    of a cupboard. We hear about this tub a lot.
+
+    Someone buys it with good intentions. They take it every morning for a
+    week or two. Then they miss a day, then three, and the tub moves behind
+    the cereal.
+
+    The usual explanation is willpower. You need more discipline, a better
+    morning routine, an app that reminds you.
+
+    People tell us they tried all of that. A big-name powder at $94 a month
+    that was still gritty. Other powders that still had to be shaken and
+    still left a green ring in the bottle. A row of separate gummies and
+    pills, which meant remembering three things instead of one.
+
+    When they explain why they stopped, many say the same thing. The powder
+    had plenty in it. They didn't want to take it, so they didn't. A daily
+    supplement only stays daily if you actually want it each morning.
+
+    So we wrote down what people told us about why they quit, and what was
+    different for the ones who kept going, on one page.
+
+    IMAGE PROMPT
+    Square phone photo inside a kitchen cupboard, door open, flat
+    overhead room light, slightly tilted. On a worn white shelf at the back,
+    behind a cereal box and a jar of peanut butter, sits a plain
+    unbranded white tub of green powder, lid on, a light film of dust on
+    top, a plastic scoop balanced on the lid. A clear shaker bottle lies on
+    its side next to it with a dried green ring near the bottom. Ordinary,
+    a little messy, not styled. No words, no logo, no label text, no price,
+    no person, no gummies or pouch in the picture.
+
+    AD RULES CHECK
+    Verdict: Fix first. Main reason: a supplement ad needs 18+ targeting.
+    Warning: the first draft headline said "your willpower". A reviewer
+    may read that as a statement about the viewer, so it was changed to
+    "willpower".
+    Passed: health claims (none made), fake posts (no real app or person
+    is copied), third-party marks (the tub and the cereal are unbranded).
+    MISSING: the article page. Build it before the ad runs. The click must
+    not go to the product page.
+    Test next: four more stories on the consistency problem, using a
+    handwritten note, a phone reminder, a candid moment and a group chat.
+
+tweaks:
+  - what: The problem to lead with
+    how: Name a different problem from the ranked list and you get a new story and a new picture. Test one problem at a time.
+  - what: Who tells it
+    how: Say who has agreed to be quoted. A real customer can tell their own story; without one, it uses your founder or a clearly labelled summary of what customers say.
+  - what: Picture type
+    how: Ask for a specific type (a note, a message thread, a candid photo). It checks the type can be made honestly from the story and switches if not, saying why.
+  - what: Length
+    how: Ask for the short end (about 150 words) for a first test, or the long end when your buyers have tried many fixes and have a lot to recognise.
+
+judge:
+  - The first line of the story picks up the question the picture raises.
+  - The story uses phrases your customers actually wrote, and no quote is made up.
+  - There's no price, discount or product page link in the story.
+  - The picture has no product, logo or price, and could pass for something a person posted.
+  - Nothing says "you have" a condition, and nothing presents a made-up person as a real customer.
+
+test:
+  - Check the problem step 1 picks against your reviews. It should be one many customers describe, in their words.
+  - Mark every phrase in the story that came from a review and find it in the review. None should be made up.
+  - Show the picture plan and the story's first line to someone outside the business. Ask if it looks like an ad. If they say yes, ask for a different picture type.
+  - Run step 2 twice with the same setup sheet. The problem and the teller should stay the same; only the story's wording should change.
+
+improve:
+  - In the builder, add a step before step 1 that turns your reviews into ranked buying reasons, so the setup starts from counted evidence.
+  - Add a step after the story that writes the article-style page the ad lands on. A story ad that lands on a product page wastes the click.
+  - Drop step 1 once you've settled the problem and who tells the story, and give step 2 your saved setup sheet.
+  - "Tune step 2's skill: add your banned claims to its file (for Sprout: never \"fix\", and no energy or immunity results), and the customer phrases you want it to reach for first."
+  - "Tune step 3's skill: list the picture types you can make honestly (a note, a message thread, a candid photo) and drop the ones you can't, so it never plans a picture you can't make."
+
+terms:
+  - term: Story ad
+    meaning: An ad made to look like a normal post, with an ordinary picture and a short story underneath.
+  - term: Article-style page
+    meaning: A page that reads like an article explaining the problem, and reaches your product near the end.
+  - term: Narrator
+    meaning: Who the story is told by. It must be a real person who agreed, or be clearly labelled as a summary.

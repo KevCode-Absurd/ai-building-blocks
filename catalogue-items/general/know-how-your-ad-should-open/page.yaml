@@ -1,0 +1,145 @@
+new_slug: know-how-your-ad-should-open
+name: Know how your ad should open and ask
+summary: A short brief that sets how your ad opens, when it names you and how firmly it asks.
+job: write-ad-copy
+
+headline: A brief that sets how your ad opens, when it names you, and how it asks
+subhead: Tell it who the ad is for and how much they know about the problem and about you. It picks one of five buyer stages and one of five ways to argue, fills in the blanks from your facts, and gives you a block to paste into any ad brief.
+
+explain: |
+  The same ad can't work for someone who has never thought about the problem and someone who is one click from buying. The first needs a story and no price. The second needs the offer, said plainly, and nothing else. Most ads land in between and suit neither.
+
+  This skill gives the writer a short stage brief. There are five stages, from "not aware" (they don't know the problem exists) to "ready" (they want it and need a reason to act today). Each stage brief says where the ad starts, what its job is, when the product shows up, how firmly it asks, and its most common mistake. It also picks one of five ways to argue, based on what your market still believes, from "say it plain" to "speak to who they are". You paste the block into your brief, unchanged.
+
+when:
+  - You're briefing a writer, or an AI, and want the ad to fit the buyer you're targeting.
+  - You're making ads for cold buyers and for past visitors and want them to differ properly.
+  - Your ads keep pitching too early, or keep explaining a product the buyer already knows.
+
+you_give:
+  - The ad idea, who it's for, the reason they'd buy and the format
+  - How much the buyer knows, one of the five stages (optional; it picks one if you don't)
+  - How to argue, one of the five styles (optional; it picks one from your facts)
+  - Your brand file, with what holds the buyer back, proof and offer terms (optional)
+you_get:
+  - A paste-ready block of under 220 words with the stage brief and argument style filled in
+  - One line saying which stage and style were chosen, and why
+
+how_to_use:
+  - Copy the skill and paste it into Claude, ChatGPT or Gemini.
+  - Describe the ad idea and the buyer in two or three sentences.
+  - Say how much the buyer knows, if you're sure. If not, let it choose and check its reason.
+  - Paste the buyer's main doubt and your offer terms from your brand file.
+  - Copy the block it returns into the brief for your writer, word for word.
+
+how_it_works:
+  - title: Picks one stage
+    text: Chooses from five stages by what the buyer knows today, not what you'd like them to know.
+  - title: Picks one style
+    text: Chooses one of five ways to argue, from your market notes, or the first one your facts can support.
+  - title: Pastes the brief
+    text: Copies the matching stage brief and argument line unchanged, so every writer gets the same rules.
+  - title: Fills the blanks
+    text: Adds the buyer's starting situation, their doubt and the one offer term, from your concept and facts.
+  - title: Says why
+    text: Adds one line naming the stage and style and the reason they were chosen.
+
+output_shape: |
+  STAGE <1 to 5>, <stage name> (<what the buyer knows>)
+  - Start: <where the ad opens, filled in for your buyer>
+  - Job: <what the ad must do>
+  - Product: <when it's named>
+  - Ask: <how firmly, and which offer term, if any>
+  - Length: <longer or shorter than the stage next door>
+  - Common mistake: <the one to avoid>
+
+  ARGUMENT STYLE <A to E>, <style name>
+  <one line, filled in from your facts>
+
+  WHY
+  <stage and style chosen, and the reason>
+
+example:
+  business: sprout
+  input: |
+    [the skill]
+
+    Ad idea: an image ad for people who know Sprout, maybe from a store
+    shelf, and think it costs too much. Reason to buy: the real price
+    per day. Format: Facebook image ad.
+    Their doubts: "Which discount is real?" / "Will the price jump after
+    the first order?" / "I hate subscriptions because I feel like they
+    are a trap."
+    Stage and style: you choose.
+
+    Brand file:
+    - First box $29.99 ($1.07/day), text sign-up discount needed
+    - Renews at $49.99 every 4 weeks ($1.78/day). One-time $66.65
+      ($2.38/day)
+    - "Pause Or Cancel Any Time" (the site's own words)
+    - 30-day money-back guarantee, first order only
+    - Ads say 61% off; the site shows 52%, 55%, 49% or 58%
+  output: |
+    STAGE 4, WEIGHING THIS ONE (they know Sprout and aren't sure yet)
+    - Start from the doubt: "Will the price jump after the first
+      order?"
+    - Job: settle that one doubt fully. Compare on price per day:
+      $1.07 a day for the first box, $1.78 a day after that, against
+      $2.38 a day bought once.
+    - Name Sprout from the first line. Don't explain what it is.
+    - Ask directly. Remove the risk the way the offer does: pause or
+      cancel any time, and a 30-day money-back guarantee on the first
+      order only.
+    - Keep it shorter than an ad for someone who's never heard of
+      Sprout.
+    - Common mistake: also answering "which discount is real?" and "is
+      it worth it?" in the same ad.
+
+    ARGUMENT STYLE A, SAY IT PLAIN
+    State both prices first and clearly: $29.99 for the first box with
+    the text sign-up discount, then $49.99 every 4 weeks.
+
+    WHY
+    Stage 4, because the buyer already knows Sprout and the doubt is
+    about this product's price. Style A by default. MISSING: a market
+    note on which claims these buyers have stopped believing.
+    Don't quote a percentage off. With 61% in the ads and 49% to 58% on
+    the site, any percentage feeds the "which discount is real?" doubt.
+
+tweaks:
+  - what: The stage
+    how: Name it yourself if you know it. An ad for people who visited your page but didn't buy is usually stage 4 or 5; an ad for strangers is usually stage 1 or 2.
+  - what: The argument style
+    how: If every competitor makes the same claim, ask for style C or D. If your market has stopped believing claims and explanations, ask for style E.
+  - what: The buyer's doubt
+    how: Stage 4 is built on one doubt. Give it the real one from your reviews. Without it, the skill assumes one and labels it.
+  - what: When to skip it
+    how: Don't use it when you're copying the structure of an ad you're remaking. It's for ads that choose their own shape.
+
+judge:
+  - Exactly one stage and one style are attached.
+  - An ad written from the block would open, name the product and ask differently from an ad for the stage next door.
+  - Style B uses only numbers your brand states.
+  - There's no offer at stage 1, and at most one offer term at stages 2 and 5.
+  - Any assumed doubt or term is labelled as assumed.
+
+test:
+  - Run it for an ad you know worked. The stage it picks should match who the ad was for. If it doesn't, check what you told it the buyer knows.
+  - Make briefs for two neighbouring stages and write an ad from each. The ads should open, name the product and ask differently. If they look alike, the stage was wrong.
+  - Run it twice with the same idea. It should pick the same stage and style. If it changes, your buyer fits two stages, so pick one yourself.
+  - Check any style B brief for numbers. Every number should be one your brand states.
+
+improve:
+  - Write your usual stage and argument style into "What you need" in the skill file, so it stops falling back to stage 2.
+  - Add a market note under the argument styles (what every competitor already claims), so the style is chosen from evidence.
+  - Delete the stages you never write for, such as stage 5 if you never show ads to past visitors, to keep the brief short.
+  - Save each stage brief that produced a winning ad to your brand file, with the buyer it was for.
+  - Pair it with "Know who you're writing for before you start" to place the buyer from evidence, then "Write ads that sound like a friend talking" to write the ad.
+
+terms:
+  - term: Stage
+    meaning: How much the buyer already knows, from not knowing the problem exists to ready to buy.
+  - term: Argument style
+    meaning: The way the ad tries to convince, chosen by what the market still believes.
+  - term: Offer term
+    meaning: One detail of the deal, such as the starting price, a free trial or a money-back guarantee.

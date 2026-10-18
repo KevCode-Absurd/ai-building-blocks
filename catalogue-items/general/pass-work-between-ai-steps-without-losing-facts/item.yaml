@@ -1,0 +1,18 @@
+slug: pass-work-between-ai-steps-without-losing-facts
+renamed_from: stage-context-packet-design
+name: "Pass work between AI steps without losing facts"
+summary: "What each AI step is sent and returns, planned so no claim loses its conditions on the way."
+category: general
+type: skill
+role: orchestrate
+job: ops
+level: expert
+inputs:
+  - {type: plan, required: true}
+outputs:
+  - {type: plan}
+uses: []
+origin: rebuilt
+source_ids: [CES-091]
+old_name: operator-systems
+version: 1.0.0

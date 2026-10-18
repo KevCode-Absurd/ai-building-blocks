@@ -1,0 +1,20 @@
+slug: stop-paying-for-the-same-ai-mistake-twice
+renamed_from: creative-mistakes-register
+name: "Stop paying for the same AI mistake twice"
+summary: "Every correction on an AI ad becomes a one-line rule, checked before your next job."
+category: general
+boards: [ecommerce]
+type: skill
+role: check
+job: image
+level: intermediate
+inputs:
+  - {type: feedback_notes, required: false}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: lessons_register}
+uses: []
+origin: own
+source_ids: [CES-025]
+old_name: creative-lessons
+version: 1.0.0

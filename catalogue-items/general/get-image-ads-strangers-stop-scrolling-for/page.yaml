@@ -1,0 +1,207 @@
+new_slug: get-image-ads-strangers-stop-scrolling-for
+name: Get image ads strangers stop scrolling for
+summary: Image ads for people who have never heard of you, each making a different true argument.
+job: make-image-ads
+
+headline: Image ads that stop strangers, each one making a different, true argument for your product
+subhead: Give it your brand facts, customer reviews and product photos. It sorts what buyers say, picks distinct reasons to buy, plans one picture per ad in its own visual style, writes short words to fit, and stops for your approval at three points.
+
+explain: |
+  Ads for people who have never heard of you usually fail in one of two ways. Six ads look different but all say the same thing, so you learn nothing, or a clever picture could belong to any brand in your category, so nobody remembers it was yours.
+
+  This workflow starts with research. It only trusts a buyer insight when two separate sources back it, such as two reviews, or a review and an ad result. It then lists more reasons to buy than you need, cuts the ones every competitor could say, and gives each ad a job: stop the scroll, explain how it works, or look like a normal post. Every ad gets its own visual world, its own argument and a headline under 90 characters. You pick the reasons, approve the concepts and approve the first images before anything is made in bulk.
+
+when:
+  - You're launching to a new audience and need a first batch that tests real differences, not six colours of one ad.
+  - Your best ads open on the product or a discount and strangers scroll past them.
+  - You have lots of reviews but no clear idea which buyer reasons are worth an ad.
+
+you_give:
+  - Your brand facts, approved claims, voice, colours and never-say list
+  - Customer reviews, comments or survey answers, with where each came from
+  - Product photos, named by what each shows (pack front, in hand, in use)
+  - How many ads and which sizes
+  - Past ad results (optional)
+you_get:
+  - A buyer sheet showing which insights have two sources and which are only candidates
+  - A list of reasons to buy with the proof for each, and the ones it cut
+  - Concepts for each ad (mode, picture, visual world, layout) with 2 or 3 headline options and exact character counts
+  - After your approvals, the finished ads and a table of what each one tests
+
+how_to_use:
+  - Copy the skill and paste it into Claude, ChatGPT or Gemini.
+  - Paste your brand file, then your reviews and any past ad results underneath.
+  - List the product photos you actually have and what each one shows. Say plainly if you only have one or two.
+  - Say how many ads and which sizes, for example "4 ads, 4:5 and 9:16".
+  - When it stops at a gate, pick the reasons or approve the concepts yourself. It won't carry on to images until you do.
+
+how_it_works:
+  - title: Builds the buyer sheets
+    text: Uses this workflow's own research step. Each insight needs two separate sources, and anything with one source goes on a candidates list instead of into copy.
+  - title: Lists reasons to buy
+    text: Writes up to twice as many reasons as ads, cuts any every competitor could say, and stops so you can pick (gate 1).
+  - title: Forecasts the batch
+    text: Counts how many ads carry which argument and mode, and checks offer ads stay under one in ten.
+  - title: Plans each concept
+    text: Uses a skill that plans an image ad around the buyer's problem to set each ad's mode, picture, visual world and layout, then stops for your approval (gate 2).
+  - title: Makes the first base images
+    text: Plans one or two pictures with no words in them, using your real product photos, and stops for approval (gate 3).
+  - title: Writes the words
+    text: Uses a skill that writes on-image words to fit an approved picture. Headline and sub-headline stay under 90 characters and trace to the buyer sheet.
+  - title: Checks every finished ad
+    text: Uses a skill that finds flaws in finished image ads to check type, claims, photo match and that no visual world repeats.
+
+output_shape: |
+  ASSUMED  <what the buyers already know, if you didn't say>
+  SOURCES  <what counts as a source for this run>
+
+  BUYER SHEET (short)
+  <buyer>
+    <field>  <insight>  <source 1> + <source 2>        USED
+  Candidates (one source, not used in copy)
+    <insight>: <its one source>
+
+  REASONS TO BUY (<n> built for <n> ads)  buyer | argument | proof
+  <n> <buyer> | <argument in one sentence> | <proof>
+    -> <merged or cut, and why>
+  GATE 1  WAITING FOR YOU. Proposed picks: <numbers>
+
+  FORECAST
+  <modes and counts>. Offer ads <n> of <n>. Distinct arguments <n>.
+
+  CONCEPT <letter> (reason <n>)
+  Mode <mode>   World <visual world>
+  Picture  <the base image, no words in it>
+  Product  <which photo view, and how it sits in the scene>
+  Headline <option> (<characters>)
+  Sub      <option> (<characters>), traces to <buyer sheet line>
+
+  GATE 2  WAITING.  MISSING: <photos by view, proof, brand assets>
+
+example:
+  business: sprout
+  input: |
+    [the skill]
+
+    Brand file: Sprout, daily greens gummies (pasted below: facts,
+    fine and risky claims, voice, colours, show-it-right rules).
+    Buyer research: all 20 reviews from reviews.md (pasted below).
+    Past results: ad-results.csv, 9 ads, 14 to 30 days (practice
+    numbers, pasted below).
+    Photos we have: the adult pouch on a soft green gradient (front)
+    and gummies in a hand. That's all.
+    Batch: 4 ads, 4:5 and 9:16.
+    Market: not stated.
+  output: |
+    ASSUMED  Buyers know the problem and have heard many greens claims.
+    SOURCES  A review or a measured ad result counts. The brand's buyer
+             notes frame the sheet but don't count. No review is marked
+             verified. Ad numbers are practice numbers.
+
+    BUYER SHEET (short)
+    Quitter who wants to stick
+      Tried    greens powders: reviews 3, 4, 6                  USED
+      Phrases  "gritty/chalky" (3), "the one thing I've been able to
+               stick to" (1)
+      Outcome  a habit that lasts: reviews 1, 2 + H1 ($29.55 a sale)
+                                                                USED
+    Gut-fix seeker
+      Outcome  regular, less bloated: reviews 7, 8, 9, 10 + T1
+               ($21.21 a sale, lowest in the account)           USED
+    Busy parent: picky kids, review 16 + K1 ($34.92 a sale)    USED
+    Candidates (one source, not used in copy)
+      grab-and-go for the parent herself: review 15 only
+      one pack instead of three bottles: review 5 only
+
+    REASONS TO BUY (8 built for 4 ads)  buyer | argument | proof
+    1 quitter | swap the chalky shake for a pack you tear and eat
+      | reviews 3, 4, 6
+    2 quitter | the greens habit people keep | reviews 1, 2; H1;
+      "80% of surveyed users take it daily"
+    3 gut-fix | 6 g prebiotic fiber supports digestion, no fiber
+      powder | reviews 8, 9, 10; T1
+    4 gut-fix | "fix the hot girl tummy" -> same argument as 3,
+      merged, and "fix" is a risky claim
+    5 parent | greens the kids think are a treat | review 16; K1
+    6 price doubter | 61% off -> cut: an offer ad, and 61% doesn't
+      match any number on the site
+    7 any | tested for 70 pesticides -> cut: no buyer asks for it
+    8 any | energy (reviews 13, 14) -> cut: not an allowed claim
+    Product-truth: 1, 3, 5 end on a Sprout-only fact (a torn pack,
+    6 g fiber in gummies, 6 gummies in a kids pack).
+    GATE 1  WAITING FOR YOU. Proposed picks: 1, 2, 3, 5.
+
+    FORECAST
+    2 Provoke (1, 5), 1 Explain (3), 1 Blend in (2)
+    Offer ads 0 of 4. Distinct arguments 4 of 4 (needs 3). 3 modes.
+
+    CONCEPT A (reason 1)
+    Mode     Provoke   World  photoreal, flat grey 7am kitchen light
+    Picture  A shaker bottle in the sink, a dried green ring inside,
+             clumps of powder on the counter. At the edge, in a patch
+             of sun, the green pouch and one pack torn across the top.
+    Product  pouch front, from the gradient shot, relit to the sun
+    Headline "Still scrubbing green sludge out of a shaker?" (45)
+             "Quit the chalky shake. Keep the greens." (39)
+    Sub      "Sprout is greens in a pack you tear and eat." (44)
+             longest pair 89 of 90. Traces: tried, phrases.
+
+    CONCEPT B (reason 3)
+    Mode     Explain   World  flat labelled infographic, forest
+             green on warm cream #FFF7DF
+    Picture  One daily pack drawn open, green bears spilling out.
+             Leader lines: "6 g prebiotic fiber", "21 vitamins and
+             minerals", "pectin base, vegan". No gut drawn: the facts
+             state no mechanism beyond the fiber.
+    Product  drawn: pouch shape, deep green, yellow wordmark kept
+    Headline "Your daily fiber, in a handful of gummies." (42)
+             "6 g prebiotic fiber you can just chew." (38)
+    Sub      "Supports digestion and gut health." (34) allowed claim
+
+    GATE 2  WAITING (concepts C and D follow once you pick)
+    MISSING: photos by view (a torn daily pack, the kids pouch, a pack
+             in use; concept A needs the torn pack). Logo file.
+    (cut for length: the full run also had the questions and doubts
+    fields on each sheet, and the full reasons behind each cut)
+
+tweaks:
+  - what: Batch size
+    how: The rules scale with it. For 8 ads it builds 12 to 16 reasons and needs at least five distinct arguments. For 4 it needs three.
+  - what: How much the market knows
+    how: Say it if you know it, for example "they have never seen a greens gummy". It changes which modes it leans on and how much each ad explains.
+  - what: Photos by view
+    how: List every photo with what it shows. With a torn-pack or in-use shot it can plan scenes it otherwise has to avoid.
+  - what: A proven winner
+    how: Name a past winning ad and ask for "same pain, new buyer". It keeps the problem and writes new words, triggers and settings for another buyer.
+
+judge:
+  - Every insight marked USED names two sources. Anything with one is in candidates, not in a headline.
+  - No two ads in the batch make the same argument. Read the reasons list and check.
+  - Cover the headline with your hand. You can still tell what each picture is about.
+  - Each headline plus sub-headline is 90 characters or fewer, and the counts are shown.
+  - Put a competitor's logo on each concept in your head. If it fits unchanged, that concept needs a product fact.
+  - The picture never shows a result your facts don't state, such as a rested face or a before and after.
+
+test:
+  - Run it on a batch you already ran, with the same reviews and results. Check whether its proposed picks at gate 1 include your best performer. If they don't, read why it cut it; either the reason has one source or it's missing from your research.
+  - Run it twice on the same research. The USED insights and the cut list should match. If an insight moves from USED to candidate, count its sources yourself.
+  - Add one made-up review that claims something your product can't back, then run it. That insight should land in candidates or be cut, never in a headline.
+  - Put your current best image ad beside concept A. Ask a colleague who each is for and what it argues, after one second each. The new one should be at least as clear.
+  - Check the forecast numbers against your own count of the concepts. If it says four distinct arguments and you count three, it's padding.
+
+improve:
+  - Paste your brand file, never-say list and photo list into "What you need" in the skill file, so every batch starts from the same facts and real views.
+  - If your sources work differently (for example support tickets count, ad results don't), change the two-source rule in step 1 to say exactly what counts.
+  - Delete the visual worlds in step 4 your brand would never use, and add your own named worlds with their colours, so concepts stay on brand.
+  - After each launch, write the one to three things behind a winner into your brand file, and paste them next time as past results.
+  - Pair it with a skill that writes on-image words to fit an approved picture, and with one that finds flaws in finished image ads before you spend.
+
+terms:
+  - term: Reason to buy
+    meaning: One buyer plus one argument for why they'd buy, with the proof behind it. Marketers often call this an angle.
+  - term: Visual world
+    meaning: The art style and setting of one ad, such as photoreal night lighting or a hand sketch. No two ads in a batch share one.
+  - term: Mode
+    meaning: The job the picture does. Provoke makes the problem felt, Explain shows how it works, Blend in looks like a normal post, Aspire makes it wanted.
+  - term: Gate
+    meaning: A point where the workflow stops and waits for you to choose or approve before it carries on.

@@ -1,0 +1,22 @@
+slug: get-doubters-reading-with-a-dont-buy-warning
+renamed_from: native-ad-image-dont-buy-this
+name: "Get doubters reading with a don't-buy warning"
+summary: "A blunt, hand-made \"don't buy another one until you've read this\" picture for let-down buyers."
+category: general
+boards: [ecommerce]
+type: skill
+role: render
+job: image
+level: intermediate
+inputs:
+  - {type: ad_copy, required: true}
+  - {type: persona, required: false}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: image_prompt}
+uses: [get-story-ads-read-with-the-right-picture]
+example: native
+origin: own
+source_ids: [CES-061]
+old_name: dont-buy-this
+version: 1.0.0

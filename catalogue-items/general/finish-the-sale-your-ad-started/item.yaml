@@ -1,0 +1,23 @@
+slug: finish-the-sale-your-ad-started
+renamed_from: landing-page-copy-from-ad-and-facts
+name: "Finish the sale your ad started"
+summary: "Full copy for one landing page that carries on from your ad, for one buyer and one offer."
+category: general
+boards: [ecommerce]
+type: skill
+role: make
+job: page
+level: intermediate
+inputs:
+  - {type: brand_brain, required: true}
+  - {type: offer, required: true}
+  - {type: ad_copy, required: false}
+  - {type: voc_reviews, required: false}
+  - {type: persona, required: false}
+outputs:
+  - {type: landing_page}
+uses: [answer-doubts-that-stop-customers-buying]
+origin: own
+source_ids: [CES-050]
+old_name: landing-pages
+version: 1.0.0

@@ -1,0 +1,166 @@
+new_slug: find-offers-hiding-in-what-you-already-sell
+name: Find offers hiding in what you already sell
+summary: Your running offers in your own words, plus new ones built only from what you already sell.
+job: make-offer
+
+headline: A short list of offers your ads can end on, each said in one breath
+subhead: Give it your brand file. It lists every offer you run today in your own wording, then suggests new ones made only from your existing products, prices, guarantee and delivery, each tied to a buyer, with plain terms and what you'd need to arrange.
+
+explain: |
+  Ask most brands for their offers and you get twelve versions of money off. An offer is more than a discount. It's what the buyer gets, what they pay, and why saying yes today is easy. A small way to try, the guarantee as the headline or a deal for two can all do that job.
+
+  This skill starts by listing what you already run, word for word, so nothing contradicts your site. Then it proposes new offers built only from things you have: your products, prices, guarantee, delivery and sizes. Each one is tied to a buyer and their main doubt, placed by how much that buyer already knows, and written three ways: a short name, one sentence a customer would tell a friend, and the exact terms. Any new gift, size or service is named plainly and listed as something you'd have to arrange.
+
+when:
+  - You're setting up your brand file and need a list of offers to work from.
+  - You're writing an ad and need an honest offer to end on.
+  - Your offers have piled up over time and you want to see them all in one place.
+
+you_give:
+  - Your brand file (products and prices, guarantee, delivery or cancellation terms, current promotions, buyers and their main doubts)
+  - One buyer to focus on (optional)
+you_get:
+  - A numbered list with the offers you run today first, in your wording
+  - New offers built from what you already have
+  - For each, the name, one plain sentence, the terms, who it suits and how much they need to know
+  - What you'd need to arrange before running each new one
+
+how_to_use:
+  - Copy the skill and paste it into Claude, ChatGPT or Gemini.
+  - Paste your brand file, or at least your prices, guarantee, delivery terms, current deals and buyers.
+  - Name one buyer if you want the list focused on them.
+  - Read the running offers first. If two say different things about the same deal, fix that before writing new ads.
+  - Pick one or two new offers and check the "must arrange" line before you promise them anywhere.
+
+how_it_works:
+  - title: Lists what runs today
+    text: Every deal on your site and in your ads, stated the way you state it, marked "running".
+  - title: Proposes from what you have
+    text: New offers built only from your products, prices, guarantee, delivery and sizes, each with what you'd need to arrange.
+  - title: Spreads the reasons
+    text: A cheaper first order, more for the same money, a gift, a small way to try, the guarantee first, a deal for two, a switcher's deal, a seasonal moment, something for past buyers.
+  - title: Covers five parts
+    text: Who it's for and why now, the price, what's added, what removes the risk, a real reason to act now. New offers fill the parts the running ones leave empty.
+  - title: Ties each to a buyer
+    text: Starts from a buyer's main doubt and asks what would make yes easy for that person.
+  - title: Places it by what they know
+    text: People who don't see the problem yet need trying to be safe or small; people comparing want risk gone; people who know you want the deal.
+  - title: Writes it three ways
+    text: A name of two to four words, one sentence a customer would tell a friend, and the exact terms.
+
+output_shape: |
+  <n>. <NAME, 2 to 4 words>  (running | proposed)
+     Said simply:  "<one sentence, the one number that matters>"
+     Terms:        <what they get and pay; a first-order price says
+                   what it becomes after>
+     For:          <buyers>   Stage: <how much they already know>
+     Parts stated: <who and why now | price | added | risk | reason now>
+     Must arrange: <proposals only>
+     Why:          <one line>
+
+  MISSING: <prices | guarantee | buyer doubts>
+
+example:
+  business: sprout
+  input: |
+    [the skill]
+
+    [brand file: sprout/brand.md, prices and offers section, plus
+    the buyers section]
+
+    Prices: Adults 28 packs $66.65 one-time; subscription $49.99
+    every 4 weeks; $29.99 first order with the text sign-up discount.
+    Big-box retailer 12-pack: $19.97 Adults.
+    Discounts live at once: 49%, 52%, "up to 55%", 55%, 58% (Kids
+    page); ads say 61%. "Buy 2 Save $5". 4 free gifts on a first
+    order in ads (which gifts changes). VIP: "Save up to $80, get
+    limited flavors, and VIP access". Subscription: "Pause Or Cancel
+    Any Time". Guarantee: 30-day money-back, first order only.
+    Buyers: the quitter, the gut-fix seeker, the busy parent, the
+    price doubter.
+  output: |
+    RUNNING
+    1. FIRST BOX $29.99  (running)
+       Said simply: "Your first box is $29.99 if you sign up by text."
+       Terms: $29.99 for the first 28 packs with the text sign-up
+              discount, then $49.99 every 4 weeks. Pause or cancel
+              any time.
+       For: price doubter, quitter. Stage: knows you, comparing.
+       Note: the same deal is shown as 49%, 52%, 55%, 58% and 61% off.
+             Using the lowest, 49%, until one figure is chosen.
+    2. BUY 2 SAVE $5  (running)
+       Said simply: "Order for two people and save $5."
+       Terms: "Buy 2 Save $5" when an order has more than one adult
+              or kid. For: busy parent. Stage: knows you.
+    3. FOUR FIRST-ORDER GIFTS  (running, in ads)
+       Note: the gifts aren't named and change. Name them and their
+             prices before using this in an ad.
+    4. VIP  (running)
+       Said simply: "Save up to $80 and get limited flavors."
+       For: past buyers. Stage: knows you.
+    5. MONEY BACK, FIRST BOX  (running)
+       Terms: 30-day money-back guarantee on your first order only.
+
+    PROPOSED
+    6. TRY 12 FIRST  (proposed)
+       Said simply: "Try a 12-pack for $19.97, no subscription."
+       Terms: 12 Adult daily packs for $19.97, one time.
+       For: price doubter ("I hate subscriptions"). Stage: comparing.
+       Parts stated: price, risk removed. Must arrange: selling the
+       12-pack on your own site (today it's in stores only).
+       Why: answers the subscription fear without money off.
+    7. THE GUARANTEE FIRST  (proposed)
+       Said simply: "Try your first box. If it's not for you, get
+       your money back within 30 days."
+       Terms: as offer 5, first order only, stated in full.
+       For: gut-fix seeker ("Will this upset my stomach?"), quitter.
+       Stage: feels the problem. Parts stated: risk removed.
+       Must arrange: nothing. It's the guarantee you already have.
+    8. FAMILY BOX  (proposed)
+       Said simply: "Adults and Kids in one box, $5 off."
+       Terms: one Adults and one Kids pouch per order with "Buy 2
+       Save $5". MISSING: the Kids subscription price.
+       For: busy parent ("Two subscriptions is too much money").
+       Must arrange: one combined box, and a clear Kids renewal price.
+
+    Parts no running offer states: a real reason to act now. None
+    proposed, because no real date or limit is on file.
+
+tweaks:
+  - what: One buyer
+    how: Name a buyer and the list narrows to offers for their doubt. The price doubter gets ways to try without a subscription; the busy parent gets household deals.
+  - what: Used up or bought once
+    how: For things that get used up, it suggests longer supplies, trial sizes and a reward on the second order. For things bought once, a pair, a set, a care kit or the warranty as the headline.
+  - what: No running offers
+    how: If you run none, it says so and proposes from your price list alone.
+  - what: A real date
+    how: Give a real end date, shipping cut-off or season and it can add an offer with a true reason to act now. Without one, it adds no urgency.
+
+judge:
+  - Running offers come first and use your exact wording.
+  - Every price is one of your own price points.
+  - Where your materials show two figures for the same deal, it uses the lower one and says so.
+  - The guarantee is quoted exactly, with its limits.
+  - Nothing says "limited time" or "exclusive" without a real end date, and there are no exclamation marks.
+  - Every proposed gift, size or service is listed under "must arrange".
+
+test:
+  - Compare its list of running offers with your site and ads. Every offer should be there in your own wording. One missing means a page wasn't pasted.
+  - Check every price against your price list.
+  - Run it twice. The running offers should match exactly; only the new ideas should change.
+  - Read each one-sentence version to a friend and ask them to say it back. If they can't, it isn't one breath yet.
+
+improve:
+  - Paste your price list and guarantee into "What you need" in the skill file, so every idea uses your real price points.
+  - "Add your buyers and their main doubts to step 5 (for Sprout: the price doubter who fears the subscription is a trap)."
+  - Add what you can't arrange to step 2, such as "no new sizes this year", so it stops proposing them.
+  - Fix contradictions in your running offers first, then run it again on the clean list.
+  - Pair it with the skill that builds one offer around a buyer's doubt, with a profit check, to work out the best one.
+
+terms:
+  - term: Running offer
+    meaning: A deal live on your site or in your ads today.
+  - term: First-order price
+    meaning: A lower price for someone's first purchase, which changes to the normal price after.
+  - term: Stage
+    meaning: How much the buyer already knows about the problem and about you.

@@ -1,0 +1,22 @@
+slug: get-watercolor-ad-script-that-sells
+renamed_from: watercolor-painted-ad-script-format-rules
+name: "Get a watercolor ad script that sells"
+summary: "A calm narrated ad in hand-painted watercolor, built around one paint movement that shows your selling idea."
+category: general
+boards: [ecommerce]
+type: skill
+role: make
+job: video
+level: intermediate
+inputs:
+  - {type: brief, required: true}
+  - {type: brand_brain, required: true}
+outputs:
+  - {type: script}
+  - {type: image_prompt}
+uses: []
+example: watercolor
+origin: rebuilt
+source_ids: [CES-126]
+old_name: script-format-watercolor
+version: 1.0.0

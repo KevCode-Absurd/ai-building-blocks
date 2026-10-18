@@ -1,0 +1,21 @@
+slug: learn-from-competitor-ads-sorted-by-type
+renamed_from: competitor-ad-swipe-board
+name: "Learn from competitor ads, sorted by type"
+summary: "Other brands' ads sorted into 11 groups, with the four or five most worth studying in each."
+category: general
+boards: [ecommerce]
+type: skill
+role: compress
+job: research
+level: intermediate
+inputs:
+  - {type: reference_set, required: true}
+  - {type: competitor_set, required: false}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: shortlist}
+uses: []
+origin: rebuilt
+source_ids: [CES-037]
+old_name: foreplay-ad-board
+version: 1.0.0

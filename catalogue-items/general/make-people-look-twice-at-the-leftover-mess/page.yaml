@@ -1,0 +1,164 @@
+new_slug: make-people-look-twice-at-the-leftover-mess
+name: Make people look twice at the leftover mess
+summary: A close, cheaply lit phone photo of the odd or slightly gross thing your buyer's problem leaves behind.
+job: make-image-ads
+
+headline: A close-up of the mess your buyer's problem leaves behind, odd enough to make them stop
+subhead: Give it your story ad. It names the one thing the problem leaves behind (hair in a brush, lint in a tray, green dust on a counter), frames it close with flash or flat room light, and writes the prompt. No product, no person.
+
+explain: |
+  Many problems leave something you can see or hold: shed hair, limescale, lint, a worn-out part, a heap of paper, powder spilled every morning. Photographed close, the way a friend would send it in disgust, it's hard to tell what it is for half a second, and the only way to find out is to read on. That half second is what stops the scroll.
+
+  The skill takes the object your story's opening names and where it was found, frames it close so it fills about a third of the picture, and lights it the cheap way: phone flash or flat room light, a slight tilt, soft edges. A hand may hold or point at it, but there's no face, no product and nothing drawn on top. It keeps the object and the amount true to what your research describes, and stays gross rather than graphic.
+
+when:
+  - Your buyer's problem leaves something behind they can see or hold.
+  - You're running to cold traffic (people who don't know you) and want a picture that makes them look twice.
+  - Your story opens by describing what the narrator keeps finding.
+
+you_give:
+  - Your approved story ad and the object its opening names
+  - How your buyer describes what they find, in their words (optional)
+you_get:
+  - The object, how much of it, and where it was found
+  - The surface it sits on and how it's lit
+  - The headline to run under the image
+  - A 60 to 120 word image prompt, ready to paste
+
+how_to_use:
+  - Copy the skill and paste it into Claude, ChatGPT or Gemini.
+  - Paste your story ad underneath. The object should be named in the first lines.
+  - Add how your buyers describe what they find, from reviews or messages, if you have it.
+  - Paste the image prompt into your image tool. If it looks like a clean studio close-up, ask again with "phone flash, slightly blurry edges".
+  - Compare the amount in the picture to your research. If it looks worse than real life, make it again.
+
+how_it_works:
+  - title: Sets the ground rules
+    text: Square, looks taken on a phone, no logo, price, button, brand colour or product, and no face.
+  - title: Names the object
+    text: Takes the one object from your story's opening and where it was found, like a dryer's lint tray or the bottom of a water jug.
+  - title: Frames it close
+    text: From above or tilted the way a hand holds a phone, filling about a third of the frame, on a real, slightly worn surface.
+  - title: Lights it cheaply
+    text: Phone flash or flat room light, a slight tilt and soft edges, with the imperfections named.
+  - title: Keeps people out
+    text: A hand may hold or point at it. No face.
+
+output_shape: |
+  SCENE
+  <one sentence: what someone scrolling would say they saw>
+
+  WHERE AND WHEN
+  <place, time of day, what is within reach>
+
+  THE OBJECT
+  <what it is, how much, where it was found>
+
+  THE SURFACE AND LIGHT
+  <what it sits on, how it's lit, the imperfections>
+
+  WORDS ON THE IMAGE
+  None.
+
+  HEADLINE UNDER THE IMAGE
+  <"Why your ... keeps coming back" or "Stop blaming ... Look at ...">
+
+  FLAGS
+  <none by default; note the amount and anything inferred>
+
+  IMAGE PROMPT
+  <60 to 120 words, ready to paste>
+
+example:
+  business: sprout
+  input: |
+    [the skill]
+
+    Story ad (approved, built on review 6 and the brand's line about
+    messy counters):
+    This is my counter at 7am. A dusting of green powder around the
+    scoop, every morning, and a wet cloth to wipe it up before work.
+    I liked what was in the powder. I didn't like the mess.
+    Sprout is a small handful of gummies in a daily pack. One
+    reviewer said not having to clean a shaker bottle or extra dishes
+    "is absolutely excellent!" 60+ ingredients, 21 vitamins and
+    minerals, 6 g prebiotic fiber.
+
+    Buyer: the quitter who wants to stick, 28 to 45.
+  output: |
+    SCENE
+    A close-up of green powder dusted across a dark kitchen counter
+    around a scoop.
+
+    WHERE AND WHEN
+    A kitchen counter, 7am, under the kitchen light. Within reach:
+    the base of a plain tub at the frame edge, a damp cloth.
+
+    THE OBJECT
+    A dusting of fine green powder scattered around a plain plastic
+    scoop, a few small clumps near its edge. One morning's spill, as
+    the story says, not a heap.
+
+    THE SURFACE AND LIGHT
+    A dark, slightly scratched counter. Harsh phone flash from
+    above, a slight tilt, soft blurry corners, the cloth half in
+    view.
+
+    WORDS ON THE IMAGE
+    None.
+
+    HEADLINE UNDER THE IMAGE
+    Why the green dust keeps coming back.
+
+    FLAGS
+    None. The amount (one morning's dusting) is what the story
+    describes. Don't make it a pile.
+    The scoop and tub are plain and unbranded, never a rival's.
+
+    IMAGE PROMPT
+    Square 1:1 close phone photo taken from above with harsh
+    on-camera flash. A dusting of fine green powder lies scattered
+    across a dark, slightly scratched kitchen counter around a plain
+    plastic scoop, with a few small clumps near the scoop's edge. The
+    powder and scoop fill about a third of the picture; the base of a
+    plain unlabelled tub sits at the edge of the frame. Slight tilt,
+    soft blurry corners, a damp cloth half in view. Ordinary and
+    unstyled, no retouching. No text, no arrows or circles, no logo,
+    no brand name, no product, no person, no children.
+
+tweaks:
+  - what: How close
+    how: Closer makes it harder to tell what it is, which is the point. Ask for "fill half the frame" if the first picture is too easy to read, or "show a little more counter" if nobody can tell at all.
+  - what: The light
+    how: Flash makes it look like evidence a friend sent. Flat room light is softer and suits problems people feel embarrassed about.
+  - what: A hand
+    how: Add "a hand wiping at it with a cloth" to show it happens daily, or keep it hands-free so the mess is all there is.
+  - what: The amount
+    how: Say the real amount, like "one morning's dusting" or "a palm-sized clump". Exaggeration reads as a trick and breaks trust.
+
+judge:
+  - It's one object, in the amount your research describes, not exaggerated.
+  - It's gross or odd, never graphic. No blood, wound or open skin.
+  - Nothing in the picture says your product removes it, and there's no before-and-after.
+  - There's no product, pack, logo, text, arrow or circle anywhere.
+  - It looks like a cheap phone photo, not a clean studio close-up.
+
+test:
+  - Show the picture to someone for one second and ask what it is. A pause, then the right answer, is what you want. No answer at all means it's too close.
+  - Compare the amount in the picture with how your buyers describe it. If it's worse, make it again with the real amount named.
+  - Run it on a story whose problem leaves nothing behind. It should send you to the everyday snapshot instead.
+  - Test it against a snapshot of the same story with a person in it, so the picture is the only change.
+
+improve:
+  - Add your buyers' words for what they keep finding to the brand file section. Their exact description makes the best story opening and the best picture.
+  - Add the amounts your research describes to "What you need", so the skill never has to guess how much.
+  - Add the surfaces of your buyers' homes (dark counters, tiled floors) to step 3, so the place looks like theirs.
+  - If you want to point at one spot, use the skill that adds one red circle to a photo instead. This picture has no marks.
+
+terms:
+  - term: Cold traffic
+    meaning: People who have never heard of your business before seeing the ad.
+  - term: Story ad
+    meaning: An ad whose main text tells one person's story in their own words, like a post from a friend.
+  - term: Image prompt
+    meaning: The text you paste into an image tool to make the picture.

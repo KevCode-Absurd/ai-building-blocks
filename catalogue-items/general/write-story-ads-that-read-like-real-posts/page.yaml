@@ -1,0 +1,186 @@
+new_slug: write-story-ads-that-read-like-real-posts
+name: Write story ads that read like real posts
+summary: A long story for your ad's main text, under a plain photo that looks like someone posted it.
+job: write-ad-copy
+
+headline: A long ad that reads like a person's post, from the first line to the offer
+subhead: Give it your selling idea and your brand file with real customer quotes. It writes a story for the main text that earns the tap on its first line and each paragraph after, plus a brief for a plain photo that looks like someone posted it.
+
+explain: |
+  Some of the ads people read longest don't look like ads. They're a plain photo with a long story above it. This kind of ad is made to look like a normal post. It suits buyers who don't know the product yet, because the story can take its time with their problem.
+
+  This skill writes that kind of ad. It decides whose story it is: a real customer's or the founder's own words if you have them on file, otherwise third person ("customers keep telling us...") marked as inferred, never a made-up testimony. It writes a first line of 125 characters or fewer that earns the tap, then a story with stakes, a problem that gets worse, what they tried, the product arriving late, proof from your files, and the real offer. The photo brief keeps out logos, headlines and designed layouts.
+
+when:
+  - You want an ad that reads like a post from a person, not a brand.
+  - Your buyers don't know the product yet and need the problem told as a story first.
+  - You have real customer reviews or a founder's story you can build from.
+
+you_give:
+  - Your selling idea
+  - Your brand file, with real customer quotes and sources, your voice, the founder's account if any, claims, proof, offers and guarantee
+  - The length you want and how much the buyer knows (optional; defaults to 150 to 500 words)
+you_get:
+  - The main text in short paragraphs, with the first line marked
+  - A photo brief with the scene, any caption and whether the product is in frame
+  - Notes on whose story it is, what was inferred and which claims were left out
+
+how_to_use:
+  - Copy the skill and paste it into Claude, ChatGPT or Gemini.
+  - Paste your brand file, including real customer quotes copied word for word with where they came from.
+  - Write your selling idea in a sentence, such as "people who quit powders because they couldn't keep it up".
+  - Give a length range if you have one.
+  - Check the notes. If it says the story is third person and inferred, that's because no first-person account was on file.
+
+how_it_works:
+  - title: Checks the fit
+    text: Confirms the idea is a problem best told as a story, for buyers who don't know the product or only know the problem.
+  - title: Briefs a plain photo
+    text: A scene that looks posted, with no logo, headline or design, and six words or fewer on it.
+  - title: Decides whose story
+    text: A real customer's or founder's words on file can be first person. Otherwise it's third person, marked as inferred.
+  - title: Writes the first line
+    text: 125 characters or fewer, a confession, a moment or an everyday detail, with no brand and no greeting.
+  - title: Tells one story
+    text: Stakes early, a problem that gets worse, what they tried, the product late, proof from your files, then the real offer.
+  - title: Sets voice and length
+    text: Short paragraphs, contractions and no marketing words. Each paragraph must earn the next, inside the length you gave.
+
+output_shape: |
+  MAIN TEXT
+  FIRST LINE (<n> characters): <the line that earns "See more">
+
+  <short paragraphs of 1 to 3 sentences, one story: stakes, problem,
+  what they tried, the product arriving, proof, offer and guarantee,
+  one closing line about who they are>
+
+  PHOTO BRIEF
+  Scene:      <an everyday place that looks posted, not designed>
+  Caption:    <0 to 6 words, or none>
+  Product:    <in frame or not, shown exactly as in its photos>
+
+  NOTES
+  Whose story: <real customer / founder / third person, inferred>
+  Inferred:    <anything not from a source>
+  Left out:    <claims without support>
+
+example:
+  business: sprout
+  input: |
+    [the skill]
+
+    Selling idea: people who quit greens powders because they couldn't
+    keep it up. They don't know Sprout yet. Length: 250 to 350 words.
+
+    Brand file:
+    - No founder account on file.
+    - Reviews (no names): "I've tried a few green powders over the
+    years. The issue has never been nutritive content. It's always been
+    an issue of consistency like many things." / "even with their
+    monthly subscription discount it was still $94 a month and the
+    drink was definitely gritty/chalky" / "I also stopped buying
+    separate probiotic gummies, b12 gummies, and multivitamin gummies.
+    I just take these now and it's easier for me to manage." / "It's
+    wild I WANT to take [Sprout] and don't forget."
+    - Facts: 1 pack a day, torn across the top, a small handful of
+    gummies. No water, no mixing, no shaker. 60+ ingredients, 21
+    vitamins & minerals, 6 g fiber. Third-party tested for 70
+    pesticides and 4 heavy metals. 80% of surveyed users (3,000+
+    customers) take it daily.
+    - Offer: 28 packs. First box $29.99 with the text sign-up discount,
+    then $49.99 every 4 weeks, pause or cancel any time. 30-day
+    money-back guarantee, first order only.
+    - Voice: playful, cheeky, a funny friend, never preachy.
+  output: |
+    MAIN TEXT
+    FIRST LINE (56 characters)
+    One customer told us the problem was never the vitamins.
+
+    They'd tried a few greens powders over the years. In their words,
+    "The issue has never been nutritive content. It's always been an
+    issue of consistency like many things."
+
+    Another was paying for a big-name powder every month. Even with the
+    subscription discount it came to $94 a month, and "the drink was
+    definitely gritty/chalky."
+
+    A lot of our reviews start this way. The tub sits at the front of
+    the cupboard for a week. Then you skip a morning because the shaker
+    is still in the sink, then a week goes by, and the money keeps
+    leaving every month for a tub you've stopped opening.
+
+    One customer had a different pile: separate probiotic, B12 and
+    multivitamin gummies. Now it's one pack, which they said is "easier
+    for me to manage."
+
+    What they'd all worked out is simple. You keep taking the thing you
+    don't dread.
+
+    That's why Sprout is a small pack of green gummy bears. You tear it
+    open across the top and eat the handful inside, with no water to add
+    and no shaker to wash.
+
+    Each pack has 60+ ingredients, 21 vitamins and minerals, and 6 g of
+    fiber, and it's third-party tested for 70 pesticides and 4 heavy
+    metals. 80% of surveyed users take it daily. As one of them put it,
+    "It's wild I WANT to take Sprout and don't forget."
+
+    Your first box of 28 packs is $29.99 with our text sign-up discount,
+    then $49.99 every 4 weeks, and you can pause or cancel any time.
+    Your first order has a 30-day money-back guarantee. Tap Shop Now to
+    start with one box.
+
+    Made for everyone with a half-used tub at the back of the cupboard.
+
+    PHOTO BRIEF
+    Scene:   an open kitchen cupboard, a half-used tub of greens powder
+             with no visible label and a shaker at the back
+    Caption: none
+    Product: yes. A Sprout daily pack on the counter below, torn
+             straight across the top, as in its photos
+
+    NOTES
+    Whose story: third person, the brand speaking, built from four
+                 reviews quoted word for word
+    Inferred:    the cupboard scene and the skipped mornings. Reviews say
+                 "consistency", not these details.
+    Left out:    the study numbers (one idea per ad) and any discount %
+
+tweaks:
+  - what: Whose story
+    how: Paste a founder's own account and it can write in first person as the founder. With only reviews, it writes in third person and quotes the reviews word for word.
+  - what: The length
+    how: Give a range. A buyer who doesn't know the problem can take 400 words; a buyer who knows your product needs less, and a padded story gets cut.
+  - what: The story shape
+    how: Ask for one of four shapes. A confession, a run of failed fixes, a discovery, or a change seen by someone else (a partner, a friend).
+  - what: The photo
+    how: Name the everyday place where the problem happens. The photo shows that place, not the product on a clean background.
+
+judge:
+  - The first line is 125 characters or fewer and doesn't name the brand. Count it.
+  - Something is at stake early, and the product appears partway through, not at the top.
+  - No first-person story is told for someone with no real account on file.
+  - Every proof point, price and term is in your brand file.
+  - The ending stays in the story's voice. There's no sales paragraph that suddenly sounds like an ad.
+
+test:
+  - Run it with a story you know, such as a customer review you've used before. Check that every detail in its story is in what you gave it.
+  - Run it twice with the same facts. The story shape and whose story it is should stay the same.
+  - Read only its first line to someone who'd buy, and ask if they'd tap "See more". Do the same with the first line of your current ad.
+  - Count the first line. It should be 125 characters or fewer, with no brand name.
+  - Check the notes. If the story is in first person, there should be a real account on file behind it.
+
+improve:
+  - Add your founder's own account, or customer stories you have permission to use, to "Brand facts" in the skill file. First-person stories need them.
+  - Set your usual length in "Settings" (for example 200 to 350 words) if you always run the same length.
+  - Write the everyday places where your buyers' problem shows up into step 2, so the photo brief starts there.
+  - If your brand's own long posts use emoji or lists, say so in step 6. Otherwise it leaves them out.
+  - Pair it with "Get openings to test that each try something different" to test several first lines on the same story.
+
+terms:
+  - term: Main text
+    meaning: The words above the image in a Facebook or Instagram ad. Long ones are cut off with "See more".
+  - term: Native ad
+    meaning: An ad made to look like a normal post, photo or message, not like an ad.
+  - term: Inferred
+    meaning: Written from what customers report in general, not from one real person's account.

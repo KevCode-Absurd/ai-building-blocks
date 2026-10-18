@@ -1,0 +1,170 @@
+new_slug: get-recognised-with-the-old-things-that-failed
+name: Get recognised with the old things that failed
+summary: A plain, slightly sad photo of the worn or half-used things your narrator tried and gave up on.
+job: make-image-ads
+
+headline: A photo of the old things that failed, so buyers who own them recognise themselves
+subhead: Give it your story ad and the things the narrator tried before. It photographs them where they live (a drawer, a cupboard, the hook by the door), worn and unbranded, with an optional six-word caption from your copy.
+
+explain: |
+  The fastest way to show someone you understand their problem is to show the things they've already tried. A half-used tub, a box with three tea bags left, a pan with a bare patch: odd enough to stop a thumb, and specific enough that the right person knows exactly what it means. This is the default picture when your story is about what was tried and failed.
+
+  The skill takes the object your copy names and shoots it from above or at arm's length, in the place it lives, with signs of use (dust, dents, a torn flap) and no readable label. It keeps every object generic, never a rival's recognisable product, pack or shape. The light is flat and natural, with a bit of clutter at the edges. You can add one handwritten-looking caption of six words or fewer, lifted from your story.
+
+when:
+  - Your story is about what the narrator tried before and why it failed.
+  - Your buyers have a drawer, cupboard or shelf of things that didn't work.
+  - You want a picture that names the competition without naming any competitor.
+
+you_give:
+  - Your approved story ad and the object or objects it names
+  - The things tried before, what they cost and why they failed (optional)
+  - Whether you want a short caption (optional)
+you_get:
+  - The object, how worn it is, and how many
+  - Where it lives and what's around it
+  - An optional caption of six words or fewer, lifted from your copy
+  - A 60 to 120 word image prompt, ready to paste
+
+how_to_use:
+  - Copy the skill and paste it into Claude, ChatGPT or Gemini.
+  - Paste your story ad underneath. Name the things the narrator tried in plain words ("greens powder", not a brand).
+  - Paste the image prompt into your image tool and make one square picture.
+  - Check that nothing has a readable label or a shape someone would recognise as a particular brand.
+  - If it looks like a product photo, ask again for "dusty, half-used, flat daylight".
+
+how_it_works:
+  - title: Sets the ground rules
+    text: Square, looks taken on a phone, no logo, price, button, brand colour or product, and no person.
+  - title: Chooses the object
+    text: Takes the object your copy names, the thing the narrator bought, used and gave up on.
+  - title: Puts it where it lives
+    text: From above or at arm's length, in the cupboard, drawer, hook or car boot where it sits day to day.
+  - title: Shows the wear
+    text: Dents, dust, a worn patch or torn flap, no readable label, flat natural light and a bit of clutter.
+  - title: Adds a caption, or none
+    text: One handwritten-looking caption of six words or fewer, taken from your copy, or nothing.
+
+output_shape: |
+  SCENE
+  <one sentence: what someone scrolling would say they saw>
+
+  WHERE AND WHEN
+  <place, time of day, what is within reach>
+
+  THE OBJECTS (<how many>, all plain and unlabelled)
+  <each object and how worn it is>
+
+  WHERE THEY LIVE
+  <the place and its surroundings>
+
+  WORDS ON THE IMAGE
+  <none, or a caption of 6 words or fewer lifted from your copy>
+  BLANK VERSION
+  <the same picture with no caption, if it has one>
+
+  HEADLINE UNDER THE IMAGE
+  If you own one of these, read this.
+
+  FLAGS
+  <none by default; anything that could look like a rival's>
+
+  IMAGE PROMPT
+  <60 to 120 words, ready to paste>
+
+example:
+  business: sprout
+  input: |
+    [the skill]
+
+    Story ad (approved, built on review 5):
+    The cupboard by the kettle: every supplement I've given up on.
+    A greens powder tub, a third full, the scoop stuck in dried
+    powder. Probiotic gummies. B12 gummies. Multivitamin gummies,
+    lid left loose.
+    I stopped buying the separate ones. Now it's one Sprout daily
+    pack: 60+ ingredients, 21 vitamins and minerals, 6 g prebiotic
+    fiber, in a small handful of gummies. Tear the top, eat them.
+
+    Caption: yes, if it helps.
+  output: |
+    SCENE
+    An open kitchen cupboard holding a third-full tub of green
+    powder and three bottles of gummies.
+
+    WHERE AND WHEN
+    A kitchen, morning, flat daylight. Within reach: the kettle, a
+    box of tea bags, a jar of honey.
+
+    THE OBJECTS (4, all plain and unlabelled)
+    A plastic tub of green powder, a third full, the scoop stuck in
+    dried powder, dust on the lid.
+    Three plastic bottles of gummies, one with its lid left loose.
+
+    WHERE THEY LIVE
+    The middle shelf of the cupboard beside the kettle, door open,
+    shot at arm's length.
+
+    WORDS ON THE IMAGE
+    "every supplement I've given up on" (6 words, lifted from the
+    story's first line), small handwritten-looking caption, top-left.
+
+    BLANK VERSION
+    The same cupboard with no caption.
+
+    HEADLINE UNDER THE IMAGE
+    If you own one of these, read this.
+
+    FLAGS
+    None. All four are generic, with no label and no shape or colour
+    of the big-name powder's tub or any gummy brand's bottle.
+    The pouch and daily packs stay out. They belong to the ending.
+
+    IMAGE PROMPT
+    Square 1:1 phone photo taken at arm's length into an open kitchen
+    cupboard beside a kettle, in flat morning daylight. On the
+    shelf, four plain, unlabelled things: a plastic tub of green
+    powder about a third full with a scoop stuck in dried powder and
+    dust on its lid, and three plastic bottles of gummies, one with
+    its lid left loose. Around them, ordinary cupboard clutter: a box
+    of tea bags, a jar of honey. Slight tilt, a little grain,
+    unstyled. Small handwritten-looking caption in the top-left
+    corner reading "every supplement I've given up on". No labels,
+    no logos, no brand names, no price, no person, no product.
+
+tweaks:
+  - what: One object or the pile
+    how: Ask for "just the tub" when the story is about one big letdown, or keep the pile when the story is about trying everything. The pile says "I've been through a lot".
+  - what: Where it lives
+    how: Move it to where your buyer would keep it, such as the bathroom cabinet or the desk drawer at work. The place makes it ring true.
+  - what: The caption
+    how: Turn it off for a quieter picture. Keep it to six words lifted from your story, never a new line written for the picture.
+  - what: How worn
+    how: Ask for more dust or a bigger dent if it looks new, but stop at familiar. Disgusting reads as a shock ad.
+
+judge:
+  - Every object is generic. No rival's product, pack, label or recognisable shape.
+  - The wear is the kind your story or research describes, and nothing suggests a danger or defect you can't back.
+  - It looks familiar, not disgusting.
+  - It's in a real place with real clutter, not a clean product shot.
+  - Any caption is six words or fewer, lifted from your copy.
+
+test:
+  - Show the picture to someone who fits your buyer and ask "do you own any of these?" If they name the kind of thing, it works. If they name a brand, an object looks too much like one.
+  - Run it on a story that names no object. It should send you to the everyday snapshot instead.
+  - Run it with and without the caption and test both. The caption should earn its place.
+  - Zoom into the finished picture and look for any letters on a label. If you find one, make it again.
+
+improve:
+  - Add what your buyers tried before, in their words, to the brand file section. Reviews often name it ("probiotic gummies, b12 gummies, and multivitamin gummies").
+  - Add your rivals' recognisable shapes and colours to the check list, so the old things never look like theirs.
+  - Add the places your buyers keep these things (the cupboard by the kettle, the bathroom cabinet) to step 3.
+  - If the story warns against one kind of product, try the don't-buy warning skill with the same object.
+
+terms:
+  - term: The old way
+    meaning: Whatever your buyer used before your product, shown as a generic, unbranded thing.
+  - term: Story ad
+    meaning: An ad whose main text tells one person's story in their own words, like a post from a friend.
+  - term: Headline under the image
+    meaning: The bold line under the picture in a Facebook or Instagram ad.

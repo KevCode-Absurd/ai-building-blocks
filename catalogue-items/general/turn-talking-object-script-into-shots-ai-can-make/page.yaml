@@ -1,0 +1,192 @@
+new_slug: turn-talking-object-script-into-shots-ai-can-make
+name: Turn your talking-object script into shots AI can make
+summary: A fixed character, an opening image and one to three clip prompts that keep your talking object the same.
+job: make-video-ads
+
+headline: Get video prompts that keep your talking object's face, voice and room the same in every clip
+subhead: Give it a 10 to 30 second talking object script and a front photo of your product. It confirms which object should talk, writes one fixed sentence describing it, and gives you the opening image prompt and one to three clip prompts with timed beats.
+
+explain: |
+  A talking object ad lives or dies on two choices: which object talks, and whether it stays the same object from clip to clip. Video tools drift. The face moves, an arm appears from nowhere, the mouth keeps moving after the line ends, and the product grows a face.
+
+  This skill checks the narrator first: a witness in the room, the thing your product replaces, or the problem itself, never the product. Then it writes the object as one fixed sentence (material, damage, where the face sits, eyes, brows, mouth, arms) and pastes it unchanged into every prompt. It places the product at the edge of the frame from the first second, with its real label and no face. Each clip prompt has timed beats, so the mouth moves only with the words. It does not write the script.
+
+when:
+  - You have a talking object script and want to make it with an AI image and video tool.
+  - Earlier tries gave you a face that changed position, extra limbs, or a product with a face.
+  - You want to test the same complaint told by three different objects and need a fixed setup for each.
+
+you_give:
+  - The script, 10 to 30 seconds
+  - Your product's name, a real front photo, its size, what it replaces and whether the result can be seen
+  - Your buyer's words, their moment and your humour limits (optional)
+  - The clip lengths your video tool allows (optional, 1 to 3 clips of about 10 seconds by default)
+you_get:
+  - The narrator choice with a reason and one runner-up
+  - A fixed character sentence, plus place, light and look lines
+  - Prompts for the character picture and the opening image
+  - One to three clip prompts with timed beats, and edit notes for the offer
+
+how_to_use:
+  - Copy the skill and paste it into Claude, ChatGPT or Gemini.
+  - Paste your script underneath and attach the product's front photo.
+  - Make the character picture first and check it at thumbnail size before anything else.
+  - Make the opening image with both pictures attached, then the clips in order.
+  - Add the offer as text over the last shot in your editor.
+
+how_it_works:
+  - title: Chooses who talks
+    text: Picks a witness, the thing it replaces or the problem itself, from your facts. Never the product, a competitor's product or a body part.
+  - title: Writes one fixed sentence
+    text: Describes the object in a set order (material, damage, face position, eyes, brows, mouth, arms) and never changes the wording.
+  - title: Sets the place
+    text: One spot where object and product would both really be, three or four other things at most, and light that carries the feeling.
+  - title: Places the product
+    text: At the edge of the frame from the first second, from its photo, true size, no face. The turn is the object's eyes going to it.
+  - title: Makes the images first
+    text: A character picture checked at thumbnail size, then an opening image with the face already showing line 1's feeling.
+  - title: Writes the clips
+    text: Each clip has references, place, the fixed sentence, timed beats, the end frame, the product line and the sound. The mouth closes when the line ends.
+
+output_shape: |
+  NARRATOR  <object> (<kind>). <why>. Runner-up: <object>.
+
+  CHARACTER (fixed, paste unchanged)
+  <material; damage; where the face sits; eyes; brows; mouth; arms>
+
+  PLACE  <one spot, the product at the edge, 3 or 4 other things>
+  LIGHT  <light that carries the feeling, same in every clip>
+  LOOK   <style line, camera at the object's eye level>
+
+  CHARACTER PICTURE  <the object alone, front on, plain background>
+  OPENING IMAGE  (attach: <what each reference is for>)
+  <place, light, look, character, line 1's feeling, mouth mid-word>
+
+  CLIP <n> (<seconds>, <starts on or extends>)
+  <0-3 s>: <what the features do>; "<line>". <mouth closes>
+  <3-7 s>, <7-10 s>: <beats>. End frame: <last picture>
+  Voice: <age, pace, two traits>. Sound: <voice, room, no music>
+
+  EDIT NOTES  <offer text over the last shot>
+  MISSING: <facts it needed and didn't get>
+
+example:
+  business: sprout
+  input: |
+    [the skill]
+
+    Script (from the talking object ad script skill):
+    Narrator: the shaker bottle. Tone: confession.
+    Clip 1: "I'm the shaker. He hasn't picked me up in weeks."
+    "Green powder, shake, that face he made. Every morning."
+    "This green ring? That's me. It doesn't scrub out."
+    Clip 2: "Then a green pouch moved onto the counter."
+    "He tears a little pack, tips, and goes."
+    "Turns out he never hated greens. He hated me."
+
+    Product: Sprout pouch, front photo attached, plus one daily pack.
+    Glossy deep green foil, big yellow wordmark, yellow bear face top
+    right. Result can't be seen.
+    Show it right: pack torn straight across its top edge; the pouch
+    opens only at its resealable top, never torn.
+    Brand photos: bright, sunny, candy-like. Never clinical.
+  output: |
+    NARRATOR  The shaker bottle (the thing it replaces). Customers name
+    it themselves (review 6) and it sits where the pouch now does.
+    Runner-up: the half-used powder tub at the back of the cupboard.
+    Make it as a separate ad if you test.
+
+    CHARACTER (fixed, paste unchanged)
+    A frosted white plastic shaker bottle with a grey flip-top lid,
+    no logo and no measuring marks; a dried green powder ring inside a
+    third of the way up and green crust on the lid hinge; the face
+    sits on the front of the bottle above the ring; two round eyes
+    molded into the plastic, droopy at rest; two short molded brow
+    ridges; a small molded mouth, turned down at rest; no arms, no
+    legs.
+
+    PLACE  A kitchen counter by the sink in the morning: the shaker in
+    a drying rack, the Sprout pouch at the right edge closed at its
+    resealable top, a kettle behind. Nothing else with words.
+    LIGHT  Flat, slightly cool window light on the rack; warm sun
+    falls on the pouch only. Same in both clips.
+    LOOK  Soft 3D animated look, rounded forms, expressive face,
+    shallow depth. Camera at the shaker's eye level, on a stand.
+
+    CHARACTER PICTURE
+    [CHARACTER]. The shaker alone, front on, plain light grey
+    background. Check: one face above the ring, crust visible, reads
+    at thumbnail size.
+
+    OPENING IMAGE  (attach: character picture = the shaker; pouch photo
+    = the product, printing unchanged)
+    [PLACE] [LIGHT] [LOOK] [CHARACTER]. Brows tilted up, eyes droopy,
+    mouth open mid-word. The pouch at the right edge, true size beside
+    the rack, label to camera, no face.
+
+    CLIP 1 (10 s, starts on the opening image)
+    0-3 s: brows stay tilted up; it says "I'm the shaker. He hasn't
+    picked me up in weeks." Mouth moves with the words, closes when
+    the line ends.
+    3-7 s: eyes slide away, sheepish; "Green powder, shake, that face
+    he made. Every morning." The bottle sags a little in the rack.
+    7-10 s: brows drop; "This green ring? That's me. It doesn't scrub
+    out." End frame: eyes down, mouth closed.
+    Voice: an earnest, slightly whiny man's voice in his thirties,
+    quick then trailing off, sheepish and fond. Same wording in every
+    clip. Sound: the voice, a kettle hum, a soft plastic creak when it
+    sags. No music.
+    CLIP 2 (10 s, extends clip 1, same face and voice)
+    0-3 s: eyes slide to the pouch; "Then a green pouch moved onto the
+    counter." 3-7 s: eyes drop to a daily pack lying beside the pouch,
+    torn straight across the top, empty; "He tears a little pack,
+    tips, and goes." 7-10 s: eyes widen, mouth settles into a small
+    wobbly smile; "Turns out he never hated greens. He hated me." End
+    frame: the pouch fully in view with clear space above it.
+
+    EDIT NOTES  Over the last 2 seconds of clip 2: "First order $29.99
+    with SMS sign-up. Renews at $49.99 every 4 weeks." The shaker never
+    says it.
+    Change from the script: the pouch is at the frame edge from frame
+    1, so the turn is the shaker's eyes moving to it.
+    MISSING: the buyer's accent. A plain US accent is assumed.
+    MISSING: whether Sprout uses music, so none is planned.
+
+tweaks:
+  - what: Which object talks
+    how: Ask for "the thing it replaces" when buyers own the old way, or "the problem itself" when the result can be watched going away. To test, run the same complaint through three or four objects as separate ads.
+  - what: Arms
+    how: By default the object has none. Ask for arms only if a line needs a gesture; you get two thin arms with mitten hands, and every extra limb is something that can drift between clips.
+  - what: The light
+    how: Cold, flat light reads as neglect; warm light from the side reads as a confession. Whatever you pick stays the same in every clip.
+  - what: The voice
+    how: Describe age, pace and two traits ("earnest, sheepish"). It keeps that wording identical in every clip so the voice doesn't change.
+
+judge:
+  - Pause the first frame, muted, at thumbnail size. You can see the face and its feeling.
+  - The face sits in the same place in every clip, with the same eyes, brows and mouth.
+  - The mouth moves only with the words and closes when each line ends.
+  - The product's printing matches its photo, it has no face, and it opens the way your brand shows it.
+  - No letters appear on the object, and no limb appears that the character sentence doesn't have.
+  - The object never states a price, a result it couldn't see, or a sales pitch.
+
+test:
+  - Make the character picture and look at it at thumbnail size on your phone. If you can't see the face and its mood in a second, rewrite where the face sits before going further.
+  - Run the same script twice. The character sentence should come back almost word for word; if the material or face position changes, paste your own sentence in and lock it.
+  - Make clip 1, then clip 2 from its end frame. Lay the two end frames side by side and check the eyes, brows and mouth sit in the same place.
+  - Check every frame for a second face, an extra limb or printing on the object. Any of these means the prompt needs the guard wording made stricter.
+
+improve:
+  - Save your approved character sentence and character picture in your brand file, so a second ad with the same object starts from them.
+  - Write your product-showing rules into step 4 of the skill file (how the pack opens, what is never torn), so the product line is right first time.
+  - Add your house voice description to step 6, so every object speaks in a voice your brand would use.
+  - Note whether your brand uses music in "What you need", so the sound line is settled.
+  - Pair it with the skill that writes a talking object script, if you don't have a script yet.
+
+terms:
+  - term: Character sentence
+    meaning: One fixed description of the object, pasted word for word into every prompt so it stays the same.
+  - term: End frame
+    meaning: The last picture of a clip. The next clip starts from it.
+  - term: Witness
+    meaning: An object that was in the room when the problem showed.

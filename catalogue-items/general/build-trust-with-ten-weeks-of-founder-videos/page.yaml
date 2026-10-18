@@ -1,0 +1,176 @@
+new_slug: build-trust-with-ten-weeks-of-founder-videos
+name: Build trust with ten weeks of founder videos
+summary: Ten weeks of short founder videos that build trust, each with its opening line and points.
+job: grow-social
+
+headline: Ten weeks of short founder videos that build trust, planned from your real story
+subhead: Give it your business facts and the real stories the founder has. It plans ten weeks of 45 to 60 second phone videos, each with an opening line, its purpose and three or four points, plus a filming guide and a way to turn one shoot into six posts.
+
+explain: |
+  A founder talking to a phone camera often earns more trust than a polished brand post, and it costs nothing to film. Most founders still don't do it, because they don't know what to say each week, and the videos they do make slip into selling. A video that ends on a discount reads as an ad, and people treat it like one.
+
+  This skill gives the founder ten kinds of video, from how it started and a costly mistake to a customer message they kept and a myth in their field. It fills each one with the business's own facts. Anything it doesn't know, such as a year, a sum or a story, becomes a question in square brackets for the founder to answer on camera, so nothing is made up. No video mentions a price, an offer or a countdown.
+
+when:
+  - You want the founder or owner to post regular videos as themselves, not as ads.
+  - You've tried founder videos but ran out of ideas after two or three.
+  - You need a simple filming routine a busy founder can stick to.
+
+you_give:
+  - What the business makes, who it's for, how it started, and the founder's name and role
+  - Real material the founder has, such as a mistake and what it cost, a customer message they may share, how the product is made, an opinion they hold (recommended)
+  - One goal, such as trust or launch support (optional; trust if you don't say)
+you_get:
+  - A ten-week plan (video, opening line, purpose, points, what has to be real, questions for the founder)
+  - A six-line filming guide
+  - A map for cutting the first shoot into six posts
+  - A MISSING list of facts only the founder can supply
+
+how_to_use:
+  - Copy the skill and paste it into Claude, ChatGPT or Gemini.
+  - Paste your business facts and how it started, in the founder's own words if you can.
+  - Add any real material you have, such as a mistake, a customer message you're allowed to share, or how it's made.
+  - Read the questions in square brackets. The founder answers them on camera, not in the script.
+  - Film week 1 using the guide, then use the cut-down map to get six posts from it.
+
+how_it_works:
+  - title: Fills ten slots
+    text: The first spark, why it exists, a costly mistake, inside the making, an ordinary day, a myth, a message kept, where I disagree, advice to my younger self, what we do differently.
+  - title: Turns gaps into questions
+    text: Any fact it doesn't have becomes a question in square brackets for the founder. It never writes a number for them.
+  - title: Writes each brief
+    text: One opening line, its purpose, three or four points with rough timings, and what must be real for the video to work.
+  - title: Adds a filming guide
+    text: Phone, window light, quiet room, three takes, look at the lens.
+  - title: Maps one shoot to six posts
+    text: The full video, a 15-second teaser, a text post, image posts of key lines, an email and a behind-the-scenes clip.
+  - title: Adds soft endings
+    text: A question with two answers, next week's topic, or "save this for later". Never a sales push.
+
+output_shape: |
+  PLAN
+  Wk | Video | Opening line | Purpose | Points (with seconds) |
+     | What must be real | [Questions for the founder]
+  1  | The first spark | "<adapted line>" | <...> | <...> | <...>
+  ... (to week 10; any week without real material is skipped, with
+  the reason)
+
+  FILMING GUIDE (6 lines)
+
+  CUT-DOWN MAP, WEEK 1
+  <full video | 15-second teaser | text post | image posts | email
+  | behind-the-scenes clip>
+
+  MISSING: <facts only the founder can supply>
+
+example:
+  business: sprout
+  input: |
+    [the skill]
+
+    Business: Sprout, daily greens gummies in single-serve packs. 28
+    daily packs per pouch; tear one open and eat the small handful of
+    gummy bears. Adult and kids lines. Sold online and in big-box
+    stores. The brand's idea: people quit supplements because they
+    are unpleasant (chalky powders, pills that make you gag, a shelf
+    of bottles), so make one people want to eat.
+
+    Facts we have: 60+ ingredients, 21 vitamins & minerals, 6g fiber
+    per pack. About 100% of daily value for vitamins, about 25% for
+    minerals. Third-party tested for 70 pesticides, 4 heavy metals,
+    16 contaminants, 9 microbial contaminants. Made in NSF, GMP and
+    FDA-registered facilities in the US and Canada.
+
+    Customer review we like: "[Sprout] has been the one thing I've
+    been able to stick to."
+
+    Founder: [not given]. Goal: trust.
+  output: |
+    PLAN (opening lines are patterns; adapt to your voice)
+    1  The first spark | "It started the day [the moment you gave up
+       on a powder or pills]." | awareness | problem you lived (8s),
+       why the options fell short (18s), the turn (28s), what you
+       made (40s), soft close (45s) | the true story
+       [When did you first quit a supplement? Why?]
+    2  Why this exists | "People ask why we made a gummy. Honestly,
+       it's because people quit supplements that feel like a chore."
+       | launch | 3 points | check this is your real reason
+    3  The costly mistake | SKIPPED. No real mistake on file. Add one
+       with its real cost and this week comes back
+    4  Inside the making | "Here's what happens before Sprout reaches
+       you." | justify the price | the testing: 70 pesticides, 4
+       heavy metals, 16 contaminants, 9 microbial | [Can you film at
+       the facility, or show a test report on camera?]
+    5  An ordinary day | "Come with me through a normal day running
+       Sprout." | connection | one thing told well | [a real day]
+    6  The myth | "You've probably heard a gummy can't hold enough.
+       Here's what's in one pack." | expertise | 21 vitamins &
+       minerals, about 100% of daily value for vitamins and about 25%
+       for minerals | say both numbers, not just the 100%
+    7  A message I kept | "A customer wrote this and I want to read
+       it out." | social proof | read review exactly as written |
+       [permission from the customer to read it]
+    8  Where I disagree | "Unpopular view: [your opinion about
+       supplements]." | discussion | no named competitors
+    9  Advice to my younger self | "If I could warn myself before day
+       one, I'd say this." | credibility | [the founder's answer]
+    10 What we do differently | "Here's the one thing we do that most
+       greens supplements don't: [a difference you can prove]."
+       | other brands sell greens gummies too, so "you eat it" is
+       not a difference | [a true difference]
+
+    No video mentions a price, a discount or a countdown.
+
+    FILMING GUIDE
+    Phone, facing a window, quiet room, plain background.
+    Talk to one person. Look at the lens.
+    Three takes, without watching them in between. Keep the best.
+    Film the opening line a few different ways.
+    Speak a little faster than feels natural.
+    Posted and imperfect beats perfect and never posted.
+
+    CUT-DOWN MAP, WEEK 1
+    Full video | first 15s as a teaser, if it stands alone | the
+    story as a text post | "the moment I gave up" line as an image
+    post | the transcript as an email | the filming as a
+    behind-the-scenes clip
+
+    MISSING: the founder's name and role; how it started; a real
+    mistake with its cost; where you can film the making; customer
+    permission for week 7; a difference you can prove for week 10.
+
+tweaks:
+  - what: The goal
+    how: Trust is the default. Say "launch support" and weeks 2 and 10 move earlier; say "awareness" and the first spark and the myth lead.
+  - what: A founding story series
+    how: Ask for "founding story as a series" and you get four weekly episodes of 45 to 60 seconds (why you started, the wall you kept hitting, the turn, what you're building toward), each ending on what comes next.
+  - what: An existing recording
+    how: Paste the transcript of a talk or interview. It picks complete passages with in and out times instead of planning new videos.
+  - what: Watch-time data
+    how: Give where viewers stop watching and it names one test, such as a clearer opening or less setup, without changing the real story.
+
+judge:
+  - Every number in the plan is in your facts or is a question in square brackets.
+  - No video mentions a price, an offer or a deadline.
+  - Week 7 uses a real message, read exactly as written, with permission noted.
+  - No competitor is named anywhere.
+  - Weeks without real material are skipped and say why, rather than filled with a made-up story.
+
+test:
+  - Find every number in the plan in your facts. Anything you can't find should be a question in square brackets.
+  - Ask the founder to answer three of the bracketed questions out loud. If they can't answer one, that week should be skipped, not filled in.
+  - Film week 1 and watch the first five seconds. If the opening line isn't a complete thought, rewrite it before you film the rest.
+  - Run it twice. The ten kinds of video should stay the same; only the openings and wording should change.
+
+improve:
+  - Keep a running list of the founder's mistakes, kept customer messages and opinions in the skill file under "What you need". Weeks 3, 7 and 8 are built from them.
+  - Edit the ten slots in step 1. Swap a slot your founder has nothing for with one they do.
+  - "Write the founder's voice into step 2 (for Sprout: short lines, says the gross thing plainly, no lab-coat tone)."
+  - Add your own soft endings to step 5, so every video ends in the founder's words.
+  - Pair it with the skill that turns raw footage into a social post to cut each shoot, and the creator gifting plan for posts from other people.
+
+terms:
+  - term: Soft ending
+    meaning: A close that invites a reply or a save, such as a question, instead of asking people to buy.
+  - term: Cut-down
+    meaning: A shorter post made from part of a longer video, such as a 15-second teaser.

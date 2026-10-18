@@ -1,0 +1,21 @@
+slug: answer-doubts-that-stop-customers-buying
+renamed_from: page-objection-answer-map
+name: "Answer the doubts that stop customers buying"
+summary: "Shows which real customer doubts your page answers, hides or misses, and where each answer should go."
+category: general
+boards: [ecommerce]
+type: skill
+role: compress
+job: page
+level: intermediate
+inputs:
+  - {type: voc_reviews, required: true}
+  - {type: landing_page, required: true}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: objection_map}
+uses: []
+origin: own
+source_ids: [CES-050]
+old_name: landing-pages
+version: 1.0.0

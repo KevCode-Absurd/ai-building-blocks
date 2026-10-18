@@ -1,0 +1,22 @@
+slug: get-satisfying-motion-ad-script-that-sells
+renamed_from: satisfying-motion-ad-script-format-rules
+name: "Get a satisfying motion ad script that sells"
+summary: "An ad that opens on one satisfying motion your product makes, then proves one fact."
+category: ecommerce
+type: skill
+role: make
+job: video
+level: intermediate
+inputs:
+  - {type: product_data, required: true}
+  - {type: brief, required: true}
+  - {type: brand_brain, required: true}
+outputs:
+  - {type: script}
+  - {type: image_prompt}
+uses: []
+example: satisfying
+origin: own
+source_ids: [CES-119]
+old_name: script-format-satisfying
+version: 1.0.0

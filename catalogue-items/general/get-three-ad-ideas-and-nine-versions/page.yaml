@@ -1,0 +1,213 @@
+new_slug: get-three-ad-ideas-and-nine-versions
+name: Get three ad ideas and nine versions
+summary: Three ad ideas, each with three truly different versions a designer can make straight away.
+job: plan-ad-tests
+
+headline: Get three ad ideas and nine truly different versions your designer can make without questions
+subhead: Give it your brand file and whatever ad results you have. It says how much those results prove, picks a plan to match, then writes three ideas aimed at the beliefs that stop your buyers, each with three versions spelled out line by line.
+
+explain: |
+  Most ad briefs list a few headlines and leave the rest to the designer. The versions end up as the same ad reworded, and the ad platforms treat near-copies as one ad and spend on just one of them. So you test less than you think.
+
+  This skill thinks before it writes. First it says what your evidence is worth: measured ad results, a founder's hunch or someone else's ads. Then it picks a plan to match, such as building on winners or trying new ideas. For each of three ideas it names what the buyer believes that stops the sale, what they should believe instead and the fact that backs it. Only then does it write three versions, each different on at least two counts: the person, the feeling, how much they already know and how the ad opens.
+
+when:
+  - You have a month of ad results and need the next round of ads planned, not guessed.
+  - Your test ads keep looking alike and one of them takes all the spend.
+  - You hand ads to a designer or freelancer and want them made without a round of questions.
+
+you_give:
+  - Your brand file (facts, offers, claims you may make, buyers, voice, competitors)
+  - Your ad results per ad for the last 1 to 4 weeks, or what the founder has seen (optional)
+  - Customer reviews or quotes (optional)
+  - Your last brief, so no idea repeats (optional)
+  - A request to push one offer (optional)
+you_get:
+  - A header that says what the brief rests on, the plan chosen and why
+  - Three ad ideas, each with a filled-in thinking block
+  - Nine versions with headline, layout, picture and which counts they differ on
+  - A footer listing guesses and the questions to ask the founder
+
+how_to_use:
+  - Copy the skill and paste it into Claude, ChatGPT or Gemini.
+  - Paste your brand file underneath, including the claims you may and may not make.
+  - Paste your ad results, one row per ad. Add your target return if you have one, or the skill will flag it as missing.
+  - Paste your reviews and your last brief if you have them.
+  - Read the header first. If it says "Not measured", treat every idea as a test, not a sure thing.
+  - Answer the founder questions in the footer, then run it again for a tighter brief.
+
+how_it_works:
+  - title: Rates the evidence
+    text: Says in the first line whether the brief rests on measured results, founder reports, research or other brands' ads, because that limits what it may claim.
+  - title: Reads in order
+    text: Checks what is live now first, then what has worked, buyer quotes, the product, voice, competitors and offers.
+  - title: Diagnoses in four questions
+    text: Who the ads speak to versus who buys, which stages have no ads, what belief blocks a new buyer, and whether the product is used up or bought once.
+  - title: Picks the plan
+    text: Chooses to try new ideas, build on winners, scale a winner, push an offer, or hold, from what the evidence shows.
+  - title: Thinks before headlines
+    text: For each idea it fills a thinking block with the stage, the belief in the way, the belief to install, the fact behind it and the moment.
+  - title: Writes three real versions
+    text: Makes each version differ from the others on at least two of person, feeling, how much they know and the opener, and spells out every field.
+  - title: Lists the gaps
+    text: Ends with lines it rewrote, every guess it marked, and questions for the founder.
+
+output_shape: |
+  CREATIVE BRIEF <date>, <brand>
+  RESTS ON   <measured, reported, research or ad library, and what's missing>
+  MISSING    <target, frequency or anything the mode depends on>
+  MODE       <mode chosen>, <why, and what would change it>
+  DIAGNOSIS  <who the ads speak to vs who buys, empty stages, the belief
+             blocking a new buyer, used up or bought once>
+
+  IDEA <n>  <name> (tier <n>)
+    Stage        <stage, how much they know>
+    In the way   <the belief that stops the sale, with its source>
+    To install   <what they should believe, and the fact behind it>
+    Kind         <outcome | identity | problem | solution | product | credibility>
+    Moment       <a scene>
+    Evidence     tier <n>, <basis>
+    Product      <product and real price>
+
+    A  <person>, <feeling>, <what they know>, <opener>
+       <layout>, <length>, <tone>
+       "<headline>"   Sub / points / quote: <exact words and source>
+       Seen: <one line>. Photo: <file or "to be made">
+       Differs from B on <counts>; from C on <counts>
+    B ... C ...
+
+  FOOTER  <lines rewritten, fields inferred, questions for the founder>
+
+example:
+  business: sprout
+  input: |
+    [the skill]
+
+    Brand file: Sprout (pasted: products, prices and offers, fine and
+    risky claims, who buys, voice, look, competitors, what seems to
+    work)
+
+    Reviews: all 20 (pasted)
+
+    Ad results: ad-results.csv, one row per ad, 14 to 30 days
+    (practice numbers, pasted)
+    Columns: ad_name, format, opening_line, days_live, spend_usd,
+    impressions, link_clicks, purchases, revenue_usd
+
+    Last brief: none
+    Mode request: none
+
+    Write the brief.
+  output: |
+    CREATIVE BRIEF 2026-10-18, Sprout
+    RESTS ON   Measured: ad-results.csv, 9 ads, 14 to 30 days. Practice
+               numbers. No hook, hold, frequency or on/off in the file.
+    MISSING    target return. Account's own: 24,668 / 21,500 = 1.15.
+    MODE       Build on winners, with a caveat. T1 (1.98), H1 (1.55)
+               and K1 (1.39) beat 1.15, but with no target I can't say
+               the account is on target. If the target is above 1.98,
+               switch to "Try new ideas". Scale is ruled out: no
+               frequency on file.
+    DIAGNOSIS  Ads speak mostly to price doubters (P1, P2, S1); the
+               quitter (about 40% of buyers) has one ad, H1. Evaluation
+               has no ad. A new buyer's block is "a gummy can't hold
+               enough". Used up: the work is the daily moment and a
+               safe first try. Stages here: Trigger 2, Exploration 1.
+
+    IDEA 1  T1's gut moment, taken further as an image (tier 2)
+      Stage        Trigger, problem-aware
+      In the way   "Will this upset my stomach more?" (brand file)
+      To install   A gentle daily fiber you'll keep taking. Held up by
+                   "Supports digestion and gut health", 6 g prebiotic
+                   fiber per pack, review 8.
+      Kind         solution (is this approach safe?)
+      Moment       3 pm at the desk, lunch sitting heavy, a fiber powder
+                   tub at home still half full (inferred)
+      Evidence     tier 2, measured: T1, 198 purchases, return 1.98
+      Product      Sprout Original, Low Sugar: $29.99 first box with
+                   text sign-up, then $49.99 every 4 weeks
+
+      A  Gentle-seeker (review 8), relief, problem-aware, customer's
+         words. A customer's words, short (5 words), understanding
+         "Your daily fiber, minus the drama."
+         Quote: "The prebiotics do their job, but not aggressively"
+         (review 8, brand site, not marked verified)
+         Seen: a torn pack by a laptop, bears in a palm. To be made.
+         Differs from B on person, feeling, opener; from C on all 4
+      B  Fiber-powder quitter (brand file, no quote), curiosity,
+         problem-aware, a number. Headline and sub-headline, medium
+         (7 words), direct
+         "6 g of fiber. Zero shakers to wash."
+         Sub: "Supports digestion and gut health." Quote needed.
+         Seen: a clean shaker on a drying rack, a pouch beside it.
+         To be made. Differs from C on all 4
+      C  Bottle collector (review 5), belonging, solution-aware,
+         instruction. Headline and 3 points, medium (6 words), teaching
+         "One pack instead of three bottles."
+         Points: 6 g fiber that supports digestion / 21 vitamins and
+         minerals in one / No water, no mixing
+         Quote: "I just take these now and it's easier for me to
+         manage." (review 5, brand site, not marked verified)
+         Seen: three unbranded bottles pushed aside by one pouch.
+
+    IDEA 2  New opening for H1's habit buyer, the quitter (tier 4)
+      Exploration. In the way: "A gummy can't hold enough to replace
+      my powder." To install: one pack holds 60+ ingredients, 21
+      vitamins and minerals, 6 g fiber. Kind: product.
+      A powder quitter (review 3), B the one-who-sticks (review 1),
+      C label reader, opens on the nutrition label (photo to be made)
+
+    IDEA 3  The busy parent, buying for herself (tier 5)
+      Trigger, problem-aware. In the way: "Is this just candy?"
+      (stated doubt). Kind: credibility. Held up by third-party tests
+      for 70 pesticides and 4 heavy metals. Moment: the school run,
+      keys in hand, review 15 (inferred scene).
+
+    FOOTER  Rewrote 1 line (B first said "gentle on your stomach",
+      past the allowed claim). Inferred: both moments.
+      Ask the founder: target return? frequency? hook and hold rates
+      for T1, H1? may we quote reviews 1, 3, 5, 8, 15?
+    (cut for length: the full run also had every field for ideas 2
+    and 3, with all six of their versions spelled out)
+
+tweaks:
+  - what: Your target return
+    how: Add one line such as "target return 1.5". The skill can then say for certain whether to build on winners or try new ideas, instead of choosing with a caveat.
+  - what: The mode request
+    how: Write "push an offer" to get three ideas about an offer you already run. Dates and limits stay as they are on file, and no fake urgency is added.
+  - what: The last brief
+    how: Paste it and the skill avoids repeating any idea or belief from it, so each round tests something new.
+  - what: Product type
+    how: For something bought once, like a suitcase or a mattress, it adds an idea for buyers comparing options (price against years of use, returns, warranty). For something used up, like a daily gummy, it focuses on the daily moment and a safe first try.
+
+judge:
+  - The header names what the brief rests on, and anything missing (like a target) is written as MISSING, not guessed.
+  - Every idea names a belief in the way and the fact that answers it. No fact, no idea.
+  - Within each idea, no two versions share both the same person and the same feeling.
+  - Every customer quote is word for word with its source, and unverified reviewers are flagged.
+  - No photo is named that you don't have. New pictures say "to be made".
+
+test:
+  - Run it on last month's results, then compare its mode with what you actually did next. If it says "Build on winners" and the ad it picks to take further is the one you'd pick too, that's a good sign. If not, read its diagnosis line.
+  - Run it twice on the same input. The mode and the three beliefs in the way should match. If the mode flips, it's missing a fact like your target return; add it.
+  - Hand version A of one idea to your designer with no other notes. Count the questions they ask. Every question is a field to fix in the brief or the skill.
+  - Check every quote against your reviews and every number against your results file. One wrong figure means the evidence tiers can't be trusted either.
+
+improve:
+  - Write your target return and your usual ad formats into "What you need" in the skill file, so it never has to choose a mode with a caveat.
+  - Add your banned claims to step 7, next to the headline rules, so versions can't drift past what you're allowed to say (as version B nearly did here).
+  - If you only make image ads, delete the video lines in step 5, so the brief stays shorter.
+  - Answer the footer questions and save the answers in your brand file, so the next brief has fewer guesses and fewer "inferred" fields.
+  - Pair it with a skill that maps which buyer and message you've already covered before choosing three ideas, and with one that checks each finished ad before you spend.
+
+terms:
+  - term: Brief
+    meaning: The written plan a designer or video maker works from, with every line, picture and choice already decided.
+  - term: Version
+    meaning: One finished ad within an idea. Here, each version must be a different ad, not the same ad reworded.
+  - term: Evidence tier
+    meaning: How much proof an idea rests on. Lower numbers come from your own measured ad results; higher numbers from research or other brands' ads.
+  - term: Stage
+    meaning: Where the buyer is. Trigger (living with the problem), Exploration (looking at kinds of fix), Evaluation (comparing), Purchase (ready, needs a push).
+  - term: Return
+    meaning: Revenue divided by ad spend. A return of 1.5 means $1.50 back for every $1 spent.

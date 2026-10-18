@@ -1,0 +1,21 @@
+slug: get-ai-ads-that-show-your-real-product
+renamed_from: ai-visual-production-checklist
+name: "Get AI ads that show your real product"
+summary: "A 15-point plan before any AI ad picture or clip, and an 8-line check after each one."
+category: general
+boards: [ecommerce]
+type: skill
+role: make
+job: image
+level: advanced
+inputs:
+  - {type: brief, required: true}
+  - {type: brand_brain, required: false}
+  - {type: lessons_register, required: false}
+outputs:
+  - {type: image_prompt}
+uses: [stop-paying-for-the-same-ai-mistake-twice]
+origin: rebuilt
+source_ids: [CES-099]
+old_name: production-principles
+version: 1.0.0

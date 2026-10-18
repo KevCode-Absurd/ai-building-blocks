@@ -1,0 +1,179 @@
+new_slug: get-your-ad-read-like-a-shared-article
+name: Get your ad read like a shared article
+summary: A plain photo of the problem with one article-style headline across it, matching the page your ad opens.
+job: make-image-ads
+
+headline: Get your ad read like an article someone shared, with the same headline as your page
+subhead: Give it your story ad and the headline of the page it links to. It fits that headline to 12 words or fewer, briefs a candid phone photo of the problem with clear space for it, and writes the image prompt.
+
+explain: |
+  Some problems need a few words before a photo makes sense. A kitchen sink with a shaker in it means nothing until a line says what's wrong. This picture type puts one headline over an unstyled photo, set the way an article's top image looks, so it reads like a story somebody shared.
+
+  The headline is your destination page's own headline, so the ad and the page say the same thing and nobody feels switched. If there's no page headline, it uses your story's first hook (the opening line that makes people stop), cut to 12 words or fewer in one of four tested shapes such as "Why I gave up [workaround]". It then plans a calm area in the photo for the words, picks plain news-style type, and writes a different second hook for the headline under the image.
+
+when:
+  - Your ad sends people to a long article or story page and you want the ad to match it.
+  - The problem needs a line of words before a photo of it makes sense.
+  - You're running to cold traffic (people who've never heard of you) and want the ad to read like content.
+
+you_give:
+  - Your approved story ad, with its hook options
+  - The headline of the page your ad opens (optional, but best)
+  - Where and when the problem happens, for the photo (optional)
+you_get:
+  - One headline of 12 words or fewer, placed and styled
+  - A description of the photo and its clear area for the words
+  - A second hook for the headline under the image
+  - A 60 to 120 word image prompt, ready to paste
+
+how_to_use:
+  - Copy the skill and paste it into Claude, ChatGPT or Gemini.
+  - Paste your story ad with its hook options numbered.
+  - Paste the headline of the page the ad links to. If there isn't one, say so.
+  - Paste the image prompt into your image tool. Check every letter of the headline, since image tools misspell.
+  - If the headline came from your hook instead of the page, change the page or the headline so they match.
+
+how_it_works:
+  - title: Sets the ground rules
+    text: Square, looks taken on a phone, no logo, price, button, brand colour or product, and any person is a made-up adult.
+  - title: Takes the page's headline
+    text: Uses your destination page's headline, or your first hook if there isn't one, and fits it to 12 words in a tested shape.
+  - title: Briefs a candid photo
+    text: A phone snapshot of the problem with a calm area, such as a wall or floor, kept clear for the words.
+  - title: Places the headline
+    text: Word for word, in the lower third or on a plain band, in heavy news-style type. Never your brand's display font.
+  - title: Writes a second hook
+    text: Picks a different hook for the headline under the image, so the two lines don't repeat.
+
+output_shape: |
+  SCENE
+  <one sentence: what someone scrolling would say they saw>
+
+  WHERE AND WHEN
+  <place, time of day, what is within reach>
+
+  THE PHOTO
+  <the problem moment, and the calm area kept clear for words>
+
+  THE HEADLINE
+  <position, band colour, type>
+
+  WORDS ON THE IMAGE
+  "<one headline, 12 words or fewer>" (<word count>)
+  BLANK VERSION
+  <the same photo with no band and no words>
+
+  HEADLINE UNDER THE IMAGE
+  <a second hook that doesn't repeat the first>
+
+  FLAGS
+  <whether the page's headline was used, and what to change>
+
+  IMAGE PROMPT
+  <60 to 120 words, ready to paste>
+
+example:
+  business: sprout
+  input: |
+    [the skill]
+
+    Story ad (approved, built on reviews 4 and 6):
+    Hook options:
+    1. Why I gave up my greens powder.
+    2. I'd been choking on greens powder for years.
+
+    I'd been choking on a greens powder for years. Every evening
+    ended the same way: the shaker in the sink, a green film that
+    wouldn't rinse out.
+    This year I gave it up. Sprout is one daily pack: tear the top,
+    eat the small handful of gummies inside. 60+ ingredients, 21
+    vitamins and minerals, 6 g prebiotic fiber. No water, no shaker,
+    no extra dishes. 30-day money-back guarantee on your first order.
+
+    Ad links to: the Sprout product page. Its title is "Sprout
+    Superfood Gummies".
+  output: |
+    SCENE
+    A kitchen sink at night with a shaker bottle soaking in it, and
+    a headline across the bottom.
+
+    WHERE AND WHEN
+    Kitchen sink, late evening, one overhead light. Within reach: the
+    shaker, its scoop, a dish brush, a wet cloth over the tap.
+
+    THE PHOTO
+    A plain shaker bottle, lid off, soaking in cloudy water with a
+    green film inside. A scoop and a dish brush with green-tinged
+    bristles beside it. The near edge of the counter is bare, kept
+    clear for the band.
+
+    THE HEADLINE
+    Lower third, on a dark band across the bare counter edge. White,
+    heavy, plain news-style type.
+
+    WORDS ON THE IMAGE
+    "Why I gave up my greens powder." (6 words)
+
+    BLANK VERSION
+    The same photo with no band and no words.
+
+    HEADLINE UNDER THE IMAGE
+    I'd been choking on greens powder for years.
+
+    FLAGS
+    The page's own headline is "Sprout Superfood Gummies". It's the
+    product name, and this picture carries no brand name, so it uses
+    hook 1 instead. Change the page or the hook so they match.
+    The page's first screen talks about "whole body vitality", not
+    powders. Its "Vs Powders" reviews sit near the bottom. Move the
+    powder story up, or send this ad to a page that opens with it.
+    The shaker and scoop are generic, never a powder brand's.
+
+    IMAGE PROMPT
+    Square 1:1 candid phone photo of a kitchen sink late in the
+    evening under a single overhead light. A plain plastic shaker
+    bottle, lid off, soaks in cloudy water with a green film inside
+    it, beside a scoop and a dish brush with green-tinged bristles. A
+    wet cloth hangs over the tap. Slightly tilted, ordinary light, a
+    little grain, unstyled. The near edge of the counter is bare.
+    Across the lower third, a solid dark band with heavy white plain
+    news-style type reading "Why I gave up my greens powder." spelled
+    exactly. No logo, no brand name, no price, no button, no person,
+    no children, no product, no second line of text.
+
+tweaks:
+  - what: The headline shape
+    how: Ask for a different shape, such as "Stop blaming [suspect]. Look at [cause]." for a story that reframes the problem, or "What I wish I'd checked before [action]" for a story about regret.
+  - what: The page headline
+    how: Paste your article or product page's real headline. It will use it word for word (shortened to 12 words), which keeps the ad and the page in step.
+  - what: Where the words sit
+    how: Say "on the wall above" or "on a band at the bottom". A band is easier to read on a busy photo; open space looks more like a real article image.
+  - what: The photo
+    how: Point it at the moment in your story, such as "the shaker in the sink at night", so the photo shows the problem and the words name it.
+
+judge:
+  - The headline matches the page the ad opens, or the flags tell you it doesn't yet.
+  - It's 12 words or fewer and every letter is spelled right in the finished picture.
+  - It says only what your copy supports. No "doctors hate", no invented number, no named expert.
+  - There's no masthead, "as seen in", writer's name or date line.
+  - The headline under the image is a different hook, not a repeat.
+
+test:
+  - Run it on an ad whose page headline you already know works. It should use that headline word for word, cut to 12 words if needed.
+  - Run it with no page headline. It should say so in the flags and use your first hook in one of its four shapes.
+  - Put the finished picture next to your page's first screen on a phone. If someone can't tell they're the same story, change one of them.
+  - Ask a colleague whether it reads as an article or an ad. If they say ad, look for a logo, brand colour or styled photo that slipped in.
+
+improve:
+  - Add your own headline shapes that have worked to step 2 of the skill file, next to the four it comes with.
+  - Add the words your brand never uses to the check list, so no headline breaks them.
+  - Write your page headlines into your brand file, one per landing page, so the skill can pick the right one by link.
+  - Pair it with a skill that writes the landing page, so the page headline is written first and the picture follows it.
+
+terms:
+  - term: Hook
+    meaning: The first line of an ad, written to make the right person stop scrolling.
+  - term: Cold traffic
+    meaning: People who have never heard of your business before seeing the ad.
+  - term: Destination page
+    meaning: The page someone lands on after clicking the ad.

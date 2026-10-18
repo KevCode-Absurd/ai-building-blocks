@@ -1,0 +1,18 @@
+slug: make-ai-build-the-ad-you-pictured
+renamed_from: creative-direction-lever-snippets
+name: "Make AI build the ad you pictured"
+summary: "Ready-made lines you paste into a brief so the AI follows your choices on look, product and selling."
+category: general
+type: prompt
+role: make
+job: ads
+level: intermediate
+inputs:
+  - {type: brief, required: true}
+outputs:
+  - {type: brief}
+uses: []
+origin: own
+source_ids: [CES-142]
+old_name: taste
+version: 1.0.0

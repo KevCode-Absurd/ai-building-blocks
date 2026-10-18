@@ -1,0 +1,18 @@
+slug: keep-clever-lines-from-beating-clear-ones
+renamed_from: plain-copy-priority-order
+name: "Keep clever lines from beating clear ones"
+summary: "A five-rule card that puts plain speech first, then selling, story, brand words and style tricks."
+category: general
+type: prompt
+role: make
+job: copy
+level: beginner
+inputs:
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: copy_draft}
+uses: []
+origin: own
+source_ids: [CES-023]
+old_name: copy-floor
+version: 1.0.0

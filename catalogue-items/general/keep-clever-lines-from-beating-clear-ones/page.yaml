@@ -1,0 +1,140 @@
+new_slug: keep-clever-lines-from-beating-clear-ones
+name: Keep clever lines from beating clear ones
+summary: A five-rule card that puts plain speech first, then selling, story, brand words and style tricks.
+job: write-ad-copy
+
+headline: Copy where every line makes sense first, sells second, and only then sounds clever
+subhead: Paste this short card above any request for ads, pages, emails or scripts, or next to a draft you're checking. It ranks five rules in order, from plain speech to brand style tricks, so a catchy line never wins over one people understand.
+
+explain: |
+  Brands with a strong voice often end up with copy nobody can follow. A line like "Your spine has opinions" sounds on-brand in a meeting, but a stranger has no idea what it means. Taglines in three beats and wordplay pile up until the ad says nothing.
+
+  This card fixes the order of priority. Rule 1, natural: a whole sentence a person would say, in words a 13-year-old knows. Rule 2, it sells: it moves the reader from what they have to what they want. Rule 3, it tells a story: something happens to someone. Rule 4, the brand's language. Rule 5, the brand's style tricks, last and optional. A lower rule never buys back a higher one. When writing, it follows the rules. When checking, it lists each line that breaks one, names the rule, and gives a corrected line.
+
+when:
+  - Your brand voice is playful or punchy, and your ads have started to make less sense.
+  - You want a short rule card to paste above every copy request to an AI tool.
+  - You're checking a draft and want a simple test for which clever lines to cut.
+
+you_give:
+  - What to write, or the draft to check
+  - Your voice notes and the lines your brand already uses (optional)
+you_get:
+  - If writing, the copy, following the five rules in order
+  - If checking, each line that breaks a rule, the rule number, and a corrected full line
+
+how_to_use:
+  - Copy the skill and paste it into Claude, ChatGPT or Gemini.
+  - To write, add your request underneath, for example "write three Instagram captions about our new flavour".
+  - To check, paste your draft and write "check this".
+  - Paste your voice notes and a few of your brand's own lines, if you have them.
+  - Keep the card at the top of any long chat, so later requests follow it too.
+
+how_it_works:
+  - title: Natural first
+    text: Each line must be a whole sentence a person would say, in words a 13-year-old knows, clear to a stranger.
+  - title: Then it sells
+    text: The line moves the reader from what they have to what they want. A number counts only once it says what changes for them.
+  - title: Then a story
+    text: Something happens to someone. For a reader who doesn't know an answer exists, the product comes late.
+  - title: Then brand language
+    text: Who the brand talks to, its words for things, its tone.
+  - title: Style tricks last
+    text: A rhythm or turn of phrase the brand sometimes uses, only on a line that takes it without bending.
+
+output_shape: |
+  When writing:
+  <the copy, following the five rules in order>
+
+  When checking:
+  <n>. "<the line as written>"
+     Breaks:    Rule <1 to 5>, <in a few words>
+     Corrected: <the full line, with no new fact>
+  (one entry per line that breaks a rule)
+
+  MISSING
+  <brand language, if none was given; rules 1 to 3 only>
+
+example:
+  business: sprout
+  input: |
+    [the skill]
+
+    Check this. Instagram caption:
+    1 Tastes like a treat, works like a supplement.
+    2 Rip. Tip. Enjoy.
+    3 Your gut called. It wants Sprout.
+    4 Nutrition, reimagined.
+    5 60+ ingredients, 21 vitamins and minerals, and 6 g fiber in 1
+      pack.
+    6 Start at $29.99 for your first box with our text sign-up discount.
+
+    Brand language: playful, cheeky, a funny friend who refuses to be
+    preachy. Short lines, 3-beat rhythms, numbers up front. Lines it
+    already uses: "Rip. Tip. Enjoy." / "Tastes like a treat, works like
+    a supplement."
+  output: |
+    1. "Tastes like a treat, works like a supplement."
+       Breaks:    Rule 1. A matched pair, not a sentence, and "works
+                  like a supplement" doesn't say what it does.
+       Corrected: It tastes like a treat, and it's still a supplement.
+
+    2. "Rip. Tip. Enjoy."
+       Breaks:    Rule 1. A stranger wouldn't know what to rip.
+       Corrected: Rip the pack open, tip the gummies into your hand, and
+                  enjoy. (The brand's rhythm stays, inside a sentence.)
+
+    3. "Your gut called. It wants Sprout."
+       Breaks:    Rule 1. A cute turn nobody says.
+       Corrected: Cut it. Line 5 already gives the fiber, and a gut
+                  benefit would need an approved claim, which a fix
+                  can't add.
+
+    4. "Nutrition, reimagined."
+       Breaks:    Rules 1 and 2. It says nothing and gives no reason.
+       Corrected: Your daily nutrition comes in one pack of gummies.
+
+    5. "60+ ingredients, 21 vitamins and minerals, and 6 g fiber in 1
+       pack."
+       Breaks:    Rule 1. A list, not a sentence.
+       Corrected: Each pack has 60+ ingredients, 21 vitamins and
+                  minerals, and 6 g of fiber.
+
+    LEFT ALONE
+    Line 6. A plain sentence, with the price kept as a figure.
+
+tweaks:
+  - what: Write or check
+    how: Add a request to get new copy that follows the rules. Paste a draft and write "check this" to get a list of lines that break a rule.
+  - what: Your brand's lines
+    how: Paste them. Rules 4 and 5 can only use brand language you've shown it; without it, the card uses rules 1 to 3 only.
+  - what: Numbers
+    how: In copy people read, prices, percentages and counts stay as figures ($24.99, 40%). Ask for spoken copy and it spells them out.
+  - what: Strictness on style
+    how: If your brand's trick fits a line naturally, it stays. Say "flag every style trick" if you want a stricter pass.
+
+judge:
+  - Every line makes sense to someone who has never heard of your brand.
+  - No fix adds a fact that wasn't in the draft.
+  - Corrected lines are whole sentences, not shorter slogans.
+  - Brand style tricks only appear on lines that still read plainly.
+  - Each flagged line names the rule it breaks.
+
+test:
+  - Check a draft you know well. The lines it flags under rule 1 should be the ones a stranger would stumble on.
+  - Run the check twice. The flagged lines and rule numbers should match.
+  - Give the same writing request with the card and without it. The version with the card should have fewer slogans and more whole sentences.
+  - Plant a clever line that bends the meaning, such as "Your spine has opinions." It should flag rule 1.
+
+improve:
+  - Replace the yes and no examples under each rule with lines from your own copy, so the card speaks your category.
+  - Add your brand's real words to rule 4, and its one or two style tricks to rule 5.
+  - If you write spoken scripts, change the note on numbers so it spells them out.
+  - Save the card at the top of your brand file, so every writing request starts with it.
+  - Pair it with "Stop your copy from sounding like AI" for a pattern-by-pattern scan, and "Make sure every ad sounds like your brand" if fixes start to sound off-voice.
+
+terms:
+  - term: Style trick
+    meaning: A habit of phrasing a brand uses, such as three short beats in a row ("Rip. Tip. Enjoy.").
+  - term: Brand language
+    meaning: The words and tone a brand uses, who it talks to and what it calls things.

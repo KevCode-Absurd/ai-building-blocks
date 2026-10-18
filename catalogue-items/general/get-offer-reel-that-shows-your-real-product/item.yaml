@@ -1,0 +1,22 @@
+slug: get-offer-reel-that-shows-your-real-product
+renamed_from: code-rendered-product-offer-reel
+name: "Get an offer reel that shows your real product"
+summary: "A 10 to 20 second offer reel built in code from your real photos and approved words."
+category: general
+boards: [ecommerce]
+type: workflow
+role: render
+job: video
+level: expert
+inputs:
+  - {type: product_data, required: true}
+  - {type: script, required: true}
+  - {type: offer, required: false}
+  - {type: brand_brain, required: true}
+outputs:
+  - {type: video_ads}
+uses: []
+origin: own
+source_ids: [CES-052]
+old_name: motion-reel
+version: 1.0.0

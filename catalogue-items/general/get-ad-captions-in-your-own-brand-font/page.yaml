@@ -1,0 +1,171 @@
+new_slug: get-ad-captions-in-your-own-brand-font
+name: Get ad captions in your own brand font
+summary: Captions in your real brand font, timed to each clip and checked at phone size.
+job: make-video-ads
+
+headline: Get captions in your own brand font, timed to every word and readable on a phone
+subhead: Give it your finished clips, the approved script and your font and logo files. It splits the words into short caption groups timed to each clip, places them in clear space in your brand colours, checks them at phone size, and lists any fault with the smallest fix.
+
+explain: |
+  Ads are often watched with the sound off, so captions carry a lot of the message. They're also where finished ads go wrong at the last step. The editor swaps in a default font, a word gets cut off at the edge, a caption drifts out of time when a clip is trimmed, or a solid box covers the product.
+
+  This skill finishes captions the careful way. It keeps each clip's captions timed relative to that clip, so trimming doesn't break them. It refuses to place any text until it has your real font file, and never swaps in Arial. Captions go in planned empty space in your brand colours with a light outline, never in a solid box. Every caption is checked against the transcript word for word and at phone size, and spoken words are never cut to hit a length.
+
+when:
+  - Your clips are made and approved, and you need captions before they go live.
+  - Your editor keeps defaulting to the wrong font or covering the product with caption boxes.
+  - You trimmed clips and the captions fell out of time.
+
+you_give:
+  - The finished clips, with their measured lengths
+  - The approved script or a word-for-word transcript
+  - Your font files for each role, and your logo file
+  - Your brand colours, and the product references if the product appears
+you_get:
+  - Caption groups, word for word, timed inside each clip
+  - A timing table with source length, final length and caption times
+  - A checklist for each caption and a fault list with the smallest fix
+  - Clean and captioned exports plus a subtitle file, when run in an editing tool
+
+how_to_use:
+  - Copy the skill and paste it into Claude, ChatGPT or Gemini, or into an AI tool that can edit video files.
+  - Paste the approved script or transcript, and the measured length of each clip.
+  - Attach your font files (for example the .ttf or .otf for your headline and caption fonts) and your logo file.
+  - Read the stopped steps first. Anything marked MISSING blocks that part until you supply it.
+  - Check every caption on a real phone before you export the final version.
+
+how_it_works:
+  - title: Keeps the argument
+    text: Checks the captions carry the buyer's reason to buy and a clear next step, in plain words.
+  - title: Times captions per clip
+    text: Keeps caption times relative to each clip and converts them to the final timeline once. Never changes speed or cuts a spoken word.
+  - title: Loads your real font
+    text: Measures and places text only with your font file. A missing font stops the step instead of using a substitute.
+  - title: Places text in clear space
+    text: Uses brand-coloured letters with a light outline in planned empty space. No solid boxes, no invented logos.
+  - title: Checks at phone size
+    text: Previews first and last frames, key cuts and every caption at phone size, and listens to the joins.
+  - title: Exports and reports
+    text: Exports clean and captioned versions and a subtitle file, then lists any fault and the smallest fix.
+
+output_shape: |
+  STOPPED STEPS
+  - MISSING: <font file / logo / transcript / clip length>, and what it blocks
+
+  CAPTION GROUPS (word for word)
+  Clip 1 (<length>)   "<group 1>" / "<group 2>" ...
+  <one line per clip>
+
+  STYLE
+  <letter colour, outline colour, where on screen, no box>
+
+  TIMING TABLE
+  Clip | source length | final length | caption start-end
+
+  CHECKLIST
+  Caption | fits | readable on a phone | right font | matches transcript
+
+  FAULTS
+  <where it fails> > <smallest fix>
+
+example:
+  business: sprout
+  input: |
+    [the skill]
+
+    Clips: the 7 clips from the selfie-style plan (see "Turn a
+    selfie-style script into video shots"). Planned lengths: 10, 5,
+    5, 5, 10, 5, 5 s. Not yet measured from the real files.
+    Transcript (approved; the writer cut the "three months" line):
+    1 If your greens powder is still half full in the cupboard,
+      this is for you.
+    2 This is one daily pack.
+    3 Tear the top,
+    4 tip it into your hand.
+    5 Sixty-plus ingredients, twenty-one vitamins and minerals, six
+      grams of prebiotic fiber.
+    6 No shaker. No chalky glass to rinse.
+    7 Rip. Tip. Enjoy.
+    Font (brand file): Work Sans Bold for captions. File not attached.
+    Colours: warm cream #FFF7DF, deep forest green #002C17.
+    Logo file: not attached.
+    The first still kept the top and bottom sixth of the frame clear.
+  output: |
+    STOPPED STEPS
+    - MISSING: typeface file (Work Sans Bold). Fitting and the font
+      check are stopped. The groups below are split by phrase only.
+      Nothing will be swapped for another font.
+    - MISSING: measured clip lengths. Planned lengths are shown;
+      measure the real files before timing anything.
+    - MISSING: logo file. No end card planned.
+
+    CAPTION GROUPS (word for word, inside each clip)
+    Clip 1 (10 s)  "If your greens powder" / "is still half full" /
+                   "in the cupboard," / "this is for you."
+    Clip 2 (5 s)   "This is one daily pack."
+    Clip 3 (5 s)   "Tear the top,"
+    Clip 4 (5 s)   "tip it into your hand."
+    Clip 5 (10 s)  "Sixty-plus ingredients," / "twenty-one vitamins" /
+                   "and minerals," / "six grams of prebiotic fiber."
+    Clip 6 (5 s)   "No shaker." / "No chalky glass to rinse."
+    Clip 7 (5 s)   "Rip. Tip. Enjoy."
+
+    STYLE
+    Warm cream #FFF7DF letters, thin deep forest green #002C17
+    outline, no box. Bottom sixth of the frame, the space the first
+    still kept clear, so nothing covers the pack or his hands.
+
+    TIMING TABLE
+    Clip  Source    Final     Caption times
+    1-7   MISSING   MISSING   set from each clip's audio once measured
+
+    CHECKLIST (all 13 groups)
+    Matches transcript    pass
+    Fits                  blocked (no font file)
+    Readable on a phone   blocked (no export yet)
+    Right font            blocked (no font file)
+
+    FAULTS
+    - Clips 3 and 4 split one sentence. Keep "Tear the top," in
+      clip 3 only, so trimming clip 4 can't move it.
+    - "Sixty-plus" and "twenty-one" are spoken as words; captions
+      match the speech. Showing "60+" and "21" instead would need
+      the transcript changed upstream, not here.
+
+tweaks:
+  - what: Font files
+    how: Attach the real font file for each role (headline, caption). It can then measure every line and check the fit. Without them it stops rather than guess.
+  - what: Caption length
+    how: Say "two to four words per caption" for fast phone ads, or "full sentences" for slower ones. It splits by phrase, never mid-word.
+  - what: Placement
+    how: Tell it where the clear space is (the top or bottom sixth of the frame). It keeps captions there so they never cover the product.
+  - what: Numbers on screen
+    how: If you want "60+" on screen while the voice says "sixty-plus", change the approved transcript first. It won't change the words on its own.
+
+judge:
+  - Read every caption against the script. They should match word for word.
+  - No caption sits on the product, a face or the hands doing the demonstration.
+  - The font on screen is your brand font, not a default like Arial.
+  - No spoken word is cut to make a clip shorter.
+  - Anything it couldn't check (font fit, phone size) is marked blocked, not passed.
+
+test:
+  - Read every caption against the script. They should match word for word.
+  - Trim one clip by a second and run it again. Only that clip's caption times should change.
+  - Run it without your font file. It should stop and say MISSING, not fall back to a default font.
+  - Watch the captioned export on your own phone with the sound off. Each caption should read in one glance.
+
+improve:
+  - Write your font names, caption colours, outline and size into "What you need" in the skill file, so they're fixed for every video.
+  - Add your words-per-caption rule to step 3, so every ad reads at the same pace.
+  - Add the areas each platform covers with buttons and usernames to step 4, so captions stay out of them.
+  - Keep your font files and logo in your brand file folder, so every run can load them.
+  - Pair it with a skill that turns your script into clips and leaves clear space for captions. Fix any wording in the script before you caption.
+
+terms:
+  - term: Subtitle file
+    meaning: A separate text file (often .srt) with the captions and their times, which platforms can show or hide.
+  - term: Clean export
+    meaning: The finished video with no captions burned in, kept so you can re-caption it later.
+  - term: Typeface file
+    meaning: The font file itself (.ttf or .otf). The skill needs the file, not just the font's name, to measure text.

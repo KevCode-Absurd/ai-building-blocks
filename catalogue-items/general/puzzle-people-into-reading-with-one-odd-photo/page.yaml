@@ -1,0 +1,170 @@
+new_slug: puzzle-people-into-reading-with-one-odd-photo
+name: Puzzle people into reading with one odd photo
+summary: A plain photo of one puzzling detail from your story, so people read the ad to understand it.
+job: make-image-ads
+
+headline: A picture so oddly specific that people read your ad to work out what it means
+subhead: Give it your story ad. It picks one strange but ordinary detail from the first lines, such as a shaker bottle full of pens, and writes a prompt for a plain phone photo of just that, with no product and no visible problem.
+
+explain: |
+  In a crowded market every ad shows the same pain: the same tired face, the same messy kitchen. Readers have learned to skip it. This skill takes a different route. It finds one small, concrete detail in your story that looks odd on its own, and makes the whole picture about that detail.
+
+  It shows the detail where it sits in real life, close enough to see and with plain surroundings, and nothing else. Then it checks that your story's first lines explain it, because a puzzle the story doesn't answer feels like a trick. You can add three to six words from your copy that deepen the puzzle, or leave the picture wordless. It works best as a second test, once you know which problem your buyers respond to.
+
+when:
+  - Every rival in your market shows the same problem photo, and yours blends in.
+  - A story ad already works and you want a fresh picture to test against it.
+  - Your story's opening has one strange, specific detail that makes people ask "why?"
+
+you_give:
+  - Your approved story ad, with its first lines
+  - Where and when the problem shows up for the buyer (optional)
+  - Whether you want a few words on the picture (optional)
+you_get:
+  - The one detail, where it sits and what surrounds it
+  - Up to six words for the picture, lifted from your copy, or none
+  - The headline to run under the image
+  - A 60 to 120 word image prompt, ready to paste
+
+how_to_use:
+  - Copy the skill and paste it into Claude, ChatGPT or Gemini.
+  - Paste your story ad underneath. The odd detail should be in the first two or three lines.
+  - Say whether you want words on the picture. If you're not sure, ask for both versions.
+  - Paste the image prompt into your image tool and make one square picture.
+  - Show it to someone who hasn't read the story. If they can't name what they see, the detail is too vague.
+
+how_it_works:
+  - title: Sets the ground rules
+    text: Square, looks taken on a phone, no logo, price, button, brand colour or product, and any person is a made-up adult.
+  - title: Picks one detail
+    text: Takes a single concrete detail from the story's opening or first experience. One only.
+  - title: Photographs just that
+    text: Places it where it is in real life, close enough to read, with plain surroundings.
+  - title: Checks the story explains it
+    text: If the first lines don't explain the detail, the click feels cheated, so it picks another.
+  - title: Decides the words
+    text: None, or three to six words lifted from your copy that deepen the puzzle.
+
+output_shape: |
+  SCENE
+  <one sentence: what someone scrolling would say they saw>
+
+  WHERE AND WHEN
+  <place, time of day, what is within reach>
+
+  THE DETAIL
+  <the one odd detail, where it sits in the frame, what surrounds it>
+
+  WORDS ON THE IMAGE
+  <none, or 3 to 6 words lifted from your copy>
+
+  BLANK VERSION
+  <the same picture without words, if it has any>
+
+  HEADLINE UNDER THE IMAGE
+  This is where I finally worked it out.
+
+  FLAGS
+  <words written for the image; whether the story explains the detail>
+
+  IMAGE PROMPT
+  <60 to 120 words, ready to paste>
+
+example:
+  business: sprout
+  input: |
+    [the skill]
+
+    Story ad (approved, built on reviews 1 and 3):
+    My old shaker bottle holds pens now.
+    There's still a green ring at the bottom.
+    I was paying $94 a month for a greens powder that was gritty and
+    chalky, and I rinsed that shaker every morning until I didn't.
+    The issue was never what was in the powder. It was sticking with
+    it.
+    Sprout is one daily pack: tear the top, eat the small handful of
+    gummies inside. 60+ ingredients, 21 vitamins and minerals, 6 g
+    prebiotic fiber. No water, no shaker.
+
+    Words on the image: yes, if they help.
+  output: |
+    SCENE
+    A plastic shaker bottle full of pens on a desk, with a faded
+    green ring at the bottom.
+
+    WHERE AND WHEN
+    A home desk, morning, window light. Within reach: only the desk
+    top and the edge of a closed notebook.
+
+    THE DETAIL
+    A clear plastic shaker bottle, lid off, stuffed with pens and one
+    pencil. A faded green ring of dried powder around the bottom,
+    inside. Centre of the frame, close enough to see the ring. Bare
+    desk and the notebook edge around it, nothing else.
+
+    WORDS ON THE IMAGE
+    "My shaker bottle holds pens now." (6 words, the story's first
+    line)
+
+    BLANK VERSION
+    The same shaker and pens with no words.
+
+    HEADLINE UNDER THE IMAGE
+    This is where I finally worked it out.
+
+    FLAGS
+    Words lifted from the copy, not written for the image.
+    The first three lines explain the detail, so the click pays off.
+    The shaker is plain and unbranded, never a powder brand's shaker.
+    No tub or scoop in frame, so it reads as a pen pot first.
+    No pack or gummies. They belong to the ending.
+
+    IMAGE PROMPT
+    Square 1:1 phone photo of a clear plastic shaker bottle with its
+    lid off, standing on a plain home desk in morning window light.
+    It is stuffed with pens and one pencil. Inside, around the
+    bottom, a faded green ring of dried powder. The shaker sits
+    centre frame, close enough to see the ring, with only the bare
+    desk and the edge of a closed notebook around it. Slight tilt, a
+    little grain, ordinary and unstyled. Small plain white caption in
+    the top-left corner, as if added in a phone's photo editor,
+    reading "My shaker bottle holds pens now." No logo, no brand
+    name, no price, no person, no children, no powder tub, no
+    product.
+
+tweaks:
+  - what: Which detail
+    how: Ask for "a detail from the first experience, not the opening" and you get a different puzzle from the same story. The best ones are things people own but use the wrong way.
+  - what: Words or no words
+    how: Without words the picture is a pure puzzle. Three to six words from your copy, such as "My shaker bottle holds pens now.", tell the reader there's a story behind it. Make both and test them.
+  - what: How close
+    how: Closer makes it stranger. Say "fill half the frame" if the first picture shows too much room around the detail.
+  - what: Too strange
+    how: If testers can't tell what the object is at all, ask for "a little more of the room in view". It needs to be odd, not unreadable.
+
+judge:
+  - There's exactly one detail in the picture, and nothing else competes with it.
+  - Your story's first lines name or explain that detail.
+  - It hints at nothing that didn't happen in the story, such as an accident or an emergency.
+  - There's no product and no shock value.
+  - Any words come from your copy and are six or fewer.
+
+test:
+  - Show the picture to two people who haven't read the story and ask what they see. If they can't name the object, it's too strange. If they shrug, it's too ordinary.
+  - Run it twice on the same story. It should pick the same detail. If it doesn't, your opening has two details competing, so cut one.
+  - Put it next to your current snapshot ad for the same story and ask which one makes people want to read the text. Don't say which is new.
+  - Give it a story whose first lines don't explain the detail. It should say so and pick another, not keep the puzzle.
+
+improve:
+  - Add a short list of odd details that worked for you to step 2 of the skill file, so it tries those first.
+  - Add anything your brand never shows (mess, food, bathrooms) to the ground rules in step 1.
+  - Replace the fixed headline under the image in "What you hand back" with a line in your brand's voice, and keep it the same across tests so only the picture changes.
+  - Pair it with the everyday snapshot skill. Run the snapshot first to learn which problem buyers stop for, then this as the fresh test.
+
+terms:
+  - term: Story ad
+    meaning: An ad whose main text tells one person's story in their own words, like a post from a friend.
+  - term: Image prompt
+    meaning: The text you paste into an image tool to make the picture.
+  - term: Headline under the image
+    meaning: The bold line under the picture in a Facebook or Instagram ad.

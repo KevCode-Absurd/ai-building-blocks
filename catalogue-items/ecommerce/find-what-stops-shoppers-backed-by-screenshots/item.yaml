@@ -1,0 +1,19 @@
+slug: find-what-stops-shoppers-backed-by-screenshots
+renamed_from: storefront-evidence-inspection
+name: "Find what stops shoppers, backed by screenshots"
+summary: "What stops shoppers on your product page, with each point tied to a screenshot and guesses marked."
+category: ecommerce
+type: skill
+role: source
+job: analysis
+level: advanced
+inputs:
+  - {type: store_capture, required: true}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: audit_report}
+uses: []
+origin: own
+source_ids: [CES-029]
+old_name: ecommerce-funnel-inspection
+version: 1.0.0

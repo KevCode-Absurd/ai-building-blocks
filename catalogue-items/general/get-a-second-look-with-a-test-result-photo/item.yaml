@@ -1,0 +1,22 @@
+slug: get-a-second-look-with-a-test-result-photo
+renamed_from: native-ad-image-test-result-photo
+name: "Get a second look with a test result photo"
+summary: "A photographed test result with one red circle and nothing readable, built on facts you can back."
+category: general
+boards: [ecommerce]
+type: skill
+role: render
+job: image
+level: advanced
+inputs:
+  - {type: ad_copy, required: true}
+  - {type: brand_brain, required: true}
+  - {type: persona, required: false}
+outputs:
+  - {type: image_prompt}
+uses: [get-story-ads-read-with-the-right-picture]
+example: native
+origin: rebuilt
+source_ids: [CES-066]
+old_name: medical-imaging
+version: 1.0.0

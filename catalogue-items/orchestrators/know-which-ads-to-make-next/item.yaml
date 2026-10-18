@@ -1,0 +1,22 @@
+slug: know-which-ads-to-make-next
+name: Know which ads to make next
+summary: "What to keep, cut and make next from your results, with a brief and graded opening lines."
+category: orchestrator
+boards: [ecommerce]
+type: workflow
+role: orchestrate
+job: analysis
+level: intermediate
+inputs:
+  - {type: performance_sheet, required: true}
+  - {type: brand_brain, required: true}
+outputs:
+  - {type: hooks}
+uses: [turn-your-ad-numbers-into-three-next-steps, get-five-ad-ideas-you-havent-tried-yet, get-three-ad-ideas-and-nine-versions, stop-the-right-people-scrolling]
+steps:
+  - {uses: turn-your-ad-numbers-into-three-next-steps, note: "Work out the numbers from your results export and decide what to keep, cut and test."}
+  - {uses: get-five-ad-ideas-you-havent-tried-yet, note: "List the buying reasons, buyers and formats your ads haven't covered yet."}
+  - {uses: get-three-ad-ideas-and-nine-versions, note: "Brief three new ideas for the gaps, each with three genuinely different versions."}
+  - {uses: stop-the-right-people-scrolling, note: "Write the opening lines for the new ads and grade each one."}
+origin: own
+version: 1.0.0

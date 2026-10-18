@@ -1,0 +1,160 @@
+new_slug: reach-the-right-people-with-a-visible-symptom
+name: Reach the right people with a visible symptom
+summary: A plain, unflattering phone photo of a visible symptom in the routine where your buyer notices it.
+job: make-image-ads
+
+headline: A plain photo of the symptom your buyer checks, so only the right people stop
+subhead: Give it your story ad. It names the symptom as your research describes it and the routine it shows up in, then briefs a close phone photo of a made-up adult's hand, foot, arm or neck, never a face. If it can't be shown honestly, it says so.
+
+explain: |
+  People photograph their own symptoms to ask a friend "is this normal?": the strap mark, the cracked knuckles, the sock line on a swollen ankle. A picture taken that way stops the people who have it, and everyone else scrolls on, which is what you want.
+
+  The skill names the symptom the way your research describes it and the routine where it shows (at the sink, after the commute, at a desk). It frames it close, with enough of the room to place it, on a made-up adult's hand, foot, arm or neck, never a face. Skin looks real: pores, fine hair, uneven tone, flat indoor light. It never names a disease, never makes a before-and-after, and never puts the product on the skin. If the symptom is on a face or a stomach, or can't be shown within those rules, it stops and hands you to a snapshot of the workaround.
+
+when:
+  - Your buyer's problem has a symptom a camera can see on a hand, foot, arm or neck.
+  - Your research describes that symptom in the buyer's own words.
+  - You want a picture that only the people with the problem will stop for.
+
+you_give:
+  - Your approved story ad and the symptom its opening describes
+  - Your buyers' own words for the symptom, and their age and skin where it matters (optional)
+  - What your brand may show of the body (optional)
+you_get:
+  - The symptom, how much of it and which body part
+  - The routine and the room around it
+  - Flags on anything near your body-image limits, or a clear stop and what to use instead
+  - A 60 to 120 word image prompt when the symptom can be shown
+
+how_to_use:
+  - Copy the skill and paste it into Claude, ChatGPT or Gemini.
+  - Paste your story ad underneath.
+  - Add your buyers' words for the symptom, taken from reviews or research, not your guess.
+  - Add any limits your brand has on showing the body.
+  - If it stops and points you to another picture, follow that. Don't push it to show a face or a stomach.
+
+how_it_works:
+  - title: Sets the ground rules
+    text: Square, looks taken on a phone, no logo, price, button, brand colour or product, and any person is a made-up adult.
+  - title: Names the symptom and routine
+    text: Takes the symptom as your research describes it and the routine it appears in, like cracked knuckles at the sink.
+  - title: Checks it can be shown
+    text: It must sit on a hand, foot, arm or neck, never a face, and nothing graphic. If not, it stops.
+  - title: Frames it in place
+    text: Close, but with enough of the room in view (the bath mat, the car door, the desk). Never a body part on a blank background.
+  - title: Keeps skin real
+    text: Pores, fine hair, uneven tone, a little shine, flat indoor light or phone flash, and an ordinary amount of the symptom.
+
+output_shape: |
+  When it can be shown:
+  SCENE
+  <one sentence: what someone scrolling would say they saw>
+  WHERE AND WHEN
+  <place, time of day, what is within reach>
+  THE SYMPTOM
+  <what, how much, which body part>
+  THE ROUTINE AND ROOM
+  <what is happening, what is in view>
+  WORDS ON THE IMAGE
+  None.
+  HEADLINE UNDER THE IMAGE
+  <"The reason you..." or "Why your ... keeps coming back.">
+  FLAGS
+  <anything near your body-image limits>
+  IMAGE PROMPT
+  <60 to 120 words, ready to paste>
+
+  When it can't:
+  SYMPTOM CHECK
+  <the symptom, the research behind it, and why it can't be shown>
+  RESULT
+  <what to use instead>
+  HAND THIS TO THE SNAPSHOT SKILL
+  <the moment of the workaround, and a headline idea>
+
+example:
+  business: sprout
+  input: |
+    [the skill]
+
+    Story ad (approved, built on reviews 8 and 10):
+    By 3pm, every day, my stomach was swollen and tight under my work
+    trousers.
+    So I started skipping lunch. Most days the lunchbox came home
+    full.
+    I'd tried fiber powders and probiotics. Sprout is a daily pack of
+    gummies with 6 g prebiotic fiber, and it supports digestion and
+    gut health. One reviewer wrote: "Feel lighter, less bloated and
+    overall good." Start with Low Sugar if your stomach is sensitive.
+
+    Buyer: the gut-fix seeker, 25 to 55, mostly women.
+    Brand limits: "supports", never "fix".
+  output: |
+    SYMPTOM CHECK
+    Symptom in the story: bloating, a swollen, tight stomach by 3pm.
+    Research behind it: yes. The brand file names bloating for this
+    buyer, and review 10 says "less bloated".
+
+    Can it be shown inside the rules? No.
+    - It's on the stomach. This picture uses a made-up adult's hand,
+      foot, arm or neck, never the body itself as the problem.
+    - A swollen stomach beside a fiber gummy reads as a "before"
+      picture, and Sprout can only say it supports digestion.
+
+    RESULT
+    Don't make this picture. Use the everyday snapshot of the
+    workaround instead.
+
+    HAND THIS TO THE SNAPSHOT SKILL
+    Moment: the story's second line, the lunchbox that comes home
+    full. An office desk at 1pm, a lunchbox with its lid still on
+    pushed to one side, a made-up adult's hands typing beside it. No
+    face, no stomach.
+    Headline idea: Read this if your lunchbox comes home full.
+
+    FLAGS
+    Keep the copy at "supports digestion and gut health". No "fix"
+    (the brand's own risky-claims list already flags its "Fix the Hot
+    Girl Tummy" ad), no "flat stomach", no promise the bloating
+    stops.
+    "Less bloated" is a customer's words. Keep it as a quote, never
+    as a brand claim.
+    Skipping lunch is the narrator's old workaround. Nothing in the
+    ad should suggest it, or Sprout, as a way to treat bloating.
+
+tweaks:
+  - what: Body part
+    how: Name the part where the symptom shows ("knuckles", "the back of the heel"). If the only honest place is the face or the stomach, it will stop rather than bend the rule.
+  - what: How much of the room
+    how: Ask for more of the routine in view (the sink, the bath mat) if the first picture feels too clinical. The room is what makes it a snapshot instead of a medical photo.
+  - what: The light
+    how: Flat bathroom light or phone flash keeps it honest. Ask for it by name if the result looks retouched or lit like a ring light.
+  - what: Skin and age
+    how: Give the buyer's age range and skin tone from your research, so the made-up person looks like your buyer.
+
+judge:
+  - The person is made up, shows no face, and nothing says they're a customer.
+  - It's never the "before" of a before-and-after, and no second picture shows the symptom gone.
+  - It names no disease, and your copy doesn't say the product treats, cures or reverses it.
+  - Nothing is graphic. No blood, open skin, circles or arrows.
+  - The skin looks real, with no retouching and no product on it.
+
+test:
+  - Run it on a story whose symptom is on the stomach or face, as in the example. It should stop and hand you a workaround moment, not bend the rule.
+  - Run it on a symptom on a hand or heel that your reviews describe. It should brief the photo with the room in view.
+  - Remove the buyer research from the input. It should mark the symptom MISSING instead of guessing what it looks like.
+  - Read your copy next to the picture. If the pair suggests the symptom goes away, change the copy before it runs.
+
+improve:
+  - Write your brand's body-image limits into "What you need" once, so every run checks against them.
+  - Add your buyers' words for the symptom to the brand file section. Without them, the picture will be flagged as a guess.
+  - Add your claim limits (here, "supports", never "fix") to the check list, so the flags catch risky copy every time.
+  - Pair it with the everyday snapshot skill. When this one stops, the snapshot makes the workaround picture it hands over.
+
+terms:
+  - term: Before-and-after
+    meaning: A pair of pictures showing a problem and then its fix. It counts as a result claim, so it needs real proof.
+  - term: Story ad
+    meaning: An ad whose main text tells one person's story in their own words, like a post from a friend.
+  - term: Workaround
+    meaning: What someone does to cope with a problem they haven't fixed.

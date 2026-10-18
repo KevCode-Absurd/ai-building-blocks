@@ -1,0 +1,160 @@
+new_slug: get-a-short-film-ad-script-with-a-twist
+name: Get a short film ad script with a twist
+summary: A shot-by-shot, live-action-style ad script where your product is the moment the story turns.
+job: make-video-ads
+
+headline: Get a short film-style ad where your product is the moment the story turns
+subhead: Give it your selling idea and your brand file. It writes what the viewer expects and discovers, casts one or two made-up adults, and hands back a shot-by-shot script with one event per shot, labelled speakers and a payoff built around your product.
+
+explain: |
+  Film-style ads (a photo-real scene with characters, like a short film) can carry a feeling or a small joke better than any list of features. They often go wrong in the writing. The product shows up as a logo card after the story ends, characters end up "reviewing" the product, or the shots are pretty but don't move anything on.
+
+  This skill starts with the viewer's change: what they expect, what they discover, and why the product belongs to that moment. It casts one or two made-up adults who can doubt, react or hand something over, but never claim a result. Each shot has one event, one camera move and a reason to exist. Speakers are labelled so approved words stay exact, and captions and offers are kept out of the scene for editing later.
+
+when:
+  - You want a story-led video ad with people, without filming real customers.
+  - You have a headline or idea with a small story in it (a misunderstanding, a kindness, a callback).
+  - Your current video ads end with the product tacked on after the story.
+
+you_give:
+  - Your selling idea, a headline or an existing script
+  - Your brand file, with the buyer's moment, how the product is used and your approved claims
+  - The total length, your video tool's clip length and your sound choices (optional)
+you_get:
+  - A one-line statement of what the viewer expects, discovers and understands
+  - A shot table with length, event, cast and camera, move, line and sound
+  - Notes on inferred parts, clip joins and on-screen text
+
+how_to_use:
+  - Copy the skill and paste it into Claude, ChatGPT or Gemini.
+  - Paste your selling idea and your brand file.
+  - Give the total length and your tool's clip length, for example "20 seconds, 10-second clips".
+  - Check the viewer's change line. If the product isn't part of the turn, ask for another version.
+  - Take the script to "Turn your short film script into consistent clips" for the prompts.
+
+how_it_works:
+  - title: Checks the fit
+    text: Confirms the idea is a feeling or small story, not proof that needs a real person.
+  - title: Writes the viewer's change
+    text: What they expect, what they discover, and why the product belongs to that turn.
+  - title: Puts the product in the payoff
+    text: The product is used the supported way at the turn. No character claims a result.
+  - title: Casts one or two adults
+    text: Each described once, with labelled lines and no talking over each other.
+  - title: Writes each shot
+    text: One event, one camera move, where people look, and feelings written as things you can see.
+  - title: Fixes the space and rhythm
+    text: One set with fixed light and layout, quiet moments where reveals land, and clips planned to your tool's real length.
+
+output_shape: |
+  VIEWER'S CHANGE
+  The viewer expects <...>, discovers <...>, and understands the
+  product's role because <...>.
+
+  CAST
+  Character A: <who, clothes, accessory>
+  Character B: <...>
+
+  Shot | length | event | cast and camera | move | line | sound
+  1    | <s> | <one event> | <who, size, angle> | <one move> |
+       Character A: "<line>" | <sound>
+  <one row per shot>
+
+  NOTES
+  - Inferred: <...>  Clip joins: <...>  On-screen text: <...>
+
+example:
+  business: sprout
+  input: |
+    [the skill]
+
+    Idea: the brand's live story headline "He Asked What Day It Was.
+    I Handed Him a Gummy." (sprout/ads.md)
+    Product: Sprout daily packs. Tear one straight across the top,
+    tip the small deep-green gummies into a palm, eat. Pouch: glossy
+    deep green, big yellow "Sprout" wordmark, "28 Daily Packs".
+    The old way (brand file): a half-used tub of powder and a shaker.
+    Brand line: "Rip. Tip. Enjoy."
+    Approved: "60+ ingredients, 21 vitamins & minerals, and 6g fiber".
+    Settings: 20 seconds, 10-second clips, voices and room sound,
+    no music.
+  output: |
+    VIEWER'S CHANGE
+    The viewer expects a sleepy couple's mix-up, discovers that the
+    one thing that's the same every day is the daily pack, and gets
+    the product's role because it's the easiest habit in the room.
+
+    CAST
+    Character A: a woman, about 40, short grey-streaked hair, navy
+      jumper, reading glasses pushed up on her head.
+    Character B: a man, about 40, rumpled dark hair, faded green
+      T-shirt, one sock on.
+
+    1  3 s   B shuffles into the kitchen, mid-yawn.
+             Wide, eye level, from the counter. A half-used tub of
+             powder sits at the back of the counter. No move.
+             Character B: "What day is it?"   Sound: fridge hum.
+    2  2 s   A doesn't look up from her mug.
+             Single on A, medium. Slow push in.
+             (no line)   Sound: a spoon against the mug.
+    3  3 s   A tears a daily pack straight across the top.
+             Close on her hands and the pack, label up.
+             No move.  Character A: "Pack day."   Sound: the tear.
+    4  2 s   B takes the pack from her hand.  Single on B, medium. No move.
+             B's eyes go from the pack to A. One eyebrow lifts.
+    ---- clip join (deliberate cut) ----
+    5  4 s   B tips the gummies into his palm and eats them.
+             Close on his hand, then hold.  No move.
+             Character B: "Same as yesterday?"   Sound: room tone.
+    6  3 s   A finally looks up.  Over B's shoulder onto A.
+             Character A: "Same as every day."
+    7  3 s   Both at the counter. The tub of powder pushed further
+             back. The pouch in front, label to camera.
+             Wide, slow pull back. Held.
+             Narrator: "One pack a day. Rip. Tip. Enjoy."
+
+    NOTES
+    - Inferred: the couple and kitchen come from the headline, not
+      from the buyer profiles.
+    - The tub in shot 1 is the callback that shot 7 answers.
+    - Nobody claims a result. B's eyebrow is curiosity, not proof.
+    - On-screen text, added in editing over shot 7: "60+ ingredients.
+      21 vitamins & minerals. 6 g fiber." Offer from current terms.
+    - Shots 1 to 4 fit clip 1 (10 s), shots 5 to 7 fit clip 2 (10 s).
+
+tweaks:
+  - what: The device
+    how: Ask for a different turn, such as a negotiation over something trivial, a quiet kindness or a visual misunderstanding. The viewer's change line changes first.
+  - what: One or two characters
+    how: One character with a narrator suits a quiet story. Two characters suit a joke or a hand-over.
+  - what: Sound
+    how: Say "no dialogue" and it tells the story with looks and actions, with a narrator only at the end.
+  - what: Length
+    how: Give your total and clip length. It plans shots to fit whole clips and marks every join as a deliberate cut.
+
+judge:
+  - The product is part of the turn in the story, not added after it.
+  - Every spoken line has a label (Character A, Character B, Narrator).
+  - No character says the product worked for them.
+  - Each shot has one event and at most one camera move.
+  - The shot lengths add up to the total you asked for.
+
+test:
+  - Skip the product shots and read the rest. If the story still ends the same way, the product isn't part of the turn.
+  - Add up the shot lengths. They should equal the total you asked for.
+  - Check that every spoken line has a speaker label.
+  - Run it twice on the same idea. The turn can change. The product's role and the claims should not.
+
+improve:
+  - Add your brand's own kinds of turn, such as a running joke, to the list in step 2 of the skill file.
+  - Write your video tool's clip length and reference limits into step 10, so shots are planned to fit.
+  - Add the objects from your buyer's old way to "What you need" (for Sprout, the powder tub and the shaker), so the script can plant one early.
+  - Pair it with a skill that turns a short film script into consistent clips, then one that adds captions in your brand font.
+
+terms:
+  - term: Payoff
+    meaning: The moment at the end where the story turns and the point lands.
+  - term: Callback
+    meaning: Something shown early that comes back at the end with a new meaning.
+  - term: Eyeline
+    meaning: Where a character is looking, kept consistent so cuts between shots make sense.

@@ -1,0 +1,189 @@
+new_slug: fill-an-ad-template-with-provable-facts
+name: Fill an ad template with provable facts
+summary: Each spot in an ad template tested against your real facts, with only the misfits changed.
+job: make-image-ads
+
+headline: Know which parts of an ad template your real facts can fill before you make it
+subhead: Give it the template you picked, your facts and reviews, and the buyer. It checks every spot in the layout against your evidence, marks each one fits, adapted or unsuitable, and writes a six-line plan and labelled copy for the image.
+
+explain: |
+  Ad templates are tempting because the layout already works. The trouble starts when the template asks for things you don't have, such as a comparison table with five rows when you can prove two, a customer photo you don't own or a discount you don't run. People fill the gaps with guesses, and the ad ends up claiming things nobody can back.
+
+  This skill tests each slot (one spot in the layout, such as a comparison row or the headline) against what you can actually show. Slots that fit stay. Slots that don't are changed or dropped, with the reason. It then writes a short contract to pass to whoever makes the image, labels every line as a real quote, a paraphrase or a line it wrote to test, and gives you a checklist for before and after the image is made.
+
+when:
+  - You saved a comparison, review or spec template and want to know if your facts can honestly fill it.
+  - You're briefing a designer or an image tool and want one short plan they can follow.
+  - An earlier ad from a template ended up with claims you couldn't back.
+
+you_give:
+  - The template, as an image or a short description of its layout
+  - Your product facts, claims, offer and customer quotes with their source
+  - Who the ad is for and how much they already know
+  - One worry or objection that buyer has
+  - Fixed choices such as size, or no text in the image (optional)
+you_get:
+  - A verdict for each slot (fits, adapted or unsuitable) with the reason
+  - A six-line slot contract to hand to whoever makes the image
+  - The words for each slot, labelled quotation, paraphrase or hypothesis
+  - A checklist for before the image is made, and a flaw list after
+
+how_to_use:
+  - Copy the skill and paste it into Claude, ChatGPT or Gemini.
+  - Attach the template image, or describe it in a few lines (columns, rows, where the headline and button sit).
+  - Paste your facts, claims and reviews underneath, and name the buyer and their main worry.
+  - If you're comparing against "the usual way", say what that is. It must be unbranded.
+  - Read the unsuitable slots first. Decide whether to find that fact or accept the smaller layout.
+
+how_it_works:
+  - title: Treats it as a fit
+    text: Looks at the template you chose as a question of whether your facts fit, not a promise it will sell. If there's no image, it says so.
+  - title: Tests each slot
+    text: Checks item count, product shape, room for text, the proof needed and your real offer, and marks each slot.
+  - title: Changes only what fails
+    text: Adapts or drops the slots your facts can't fill and keeps the rest of the layout and format as chosen.
+  - title: Writes the contract
+    text: Six lines covering origin, job, product zone, text zones, constraints and the change, with nothing borrowed from the original brand.
+  - title: Fills the slots
+    text: Picks one buyer worry backed by research and writes each line, labelled quotation, paraphrase or hypothesis.
+  - title: Checks before and after
+    text: Gives a checklist before the image is made, then checks it at phone size and scopes each flaw to the image, layout, product or brand.
+
+output_shape: |
+  NOTE  <whether there's a reference image, or only a description>
+
+  FIT, SLOT BY SLOT
+  <slot>   <what fills it on each side, with source>   <FITS | ADAPTED | UNSUITABLE>
+           MISSING: <the fact it would need>
+
+  SLOT CONTRACT
+  Origin       <where the template came from, its layout type>
+  Job          <what it has to persuade, and whom>
+  Product      <product zone and item count>
+  Text zones   <headline, rows, proof, action>
+  Constraints  <fixed choices kept>
+  Change       <what changed, and why>
+
+  SLOT COPY
+  <slot>  "<words>"   <quotation | paraphrase | hypothesis | fact>, <source>
+
+  BEFORE THE IMAGE IS MADE
+  [ ] <check>
+  STATE  <candidate | for inspection only | selected>
+
+example:
+  business: sprout
+  input: |
+    [the skill]
+
+    Template: a "this vs the usual way" ad I saved. No image, just
+    the layout: two columns, the usual way on the left, the product
+    on the right, five rows of ticks and crosses, headline on top,
+    a button at the bottom. 4:5.
+    Brand: Sprout (brand file pasted below: facts, claims, offers,
+    and competitors as described there).
+    Reviews: all 20 (pasted below).
+    Buyer: the quitter who wants to stick. They know the problem and
+    have tried a solution (greens powders).
+    Worry: "A gummy can't hold enough to replace my powder."
+    Usual way: an unbranded greens powder.
+  output: |
+    NOTE  No reference image. Working from your description only.
+
+    FIT, ROW BY ROW (against an unbranded greens powder)
+    How you take it  powder: mix and shake / Sprout: tear
+                     a pack and eat (product page)      FITS
+    Cost a serving   powder: about $2.63 (brand file,
+                     a big-name powder) / $1.78 a day   FITS, recheck
+    Guarantee        powder: 90 days / Sprout: 30 days,
+                     first order only. The usual way
+                     wins this row                      FITS
+    Fiber per day    powder: unknown                    UNSUITABLE
+                     MISSING: the powder's fiber fact
+    Lab tested       powder: unknown. An empty cell
+                     would imply they don't test        UNSUITABLE
+    Five rows        only three can be filled           ADAPTED, 5 to 3
+    Button           needs no offer, so none is added   FITS
+
+    SLOT CONTRACT
+    Origin       your description of a two-column "this vs the usual
+                 way" comparison, ticks and crosses, 4:5
+    Job          show a powder quitter what changes, and answer "a
+                 gummy can't hold enough"
+    Product      right column header: the green pouch, closed, from the
+                 gradient photo, one pouch only
+    Text zones   headline top; 3 rows; the counts line beside the
+                 table; proof quote under it; button at the bottom
+    Constraints  keep the two-column format; powder tub unbranded, no
+                 label or logo; type set over the image, not generated
+    Change       5 rows cut to 3, rows made larger; the guarantee row
+                 kept as the honest one where the powder wins
+
+    SLOT COPY
+    Headline  "Your greens, minus the shaker."             hypothesis
+    Row 1     How you take it: "Mix, shake, wash up" / "Tear a pack
+              and eat"                            fact, product page
+    Row 2     Cost a serving: "About $2.63" / "$1.78 a day after your
+              first box"                       fact, brand file, site
+    Row 3     Guarantee: "90 days" / "30 days, first order"     fact
+    Counts    "60+ ingredients, 21 vitamins & minerals, and 6g fiber"
+              in 1 pack. Fine-to-repeat claim, kept whole.
+    Proof     "I've tried a few green powders over the years. The
+              issue has never been nutritive content."
+              quotation, review 1, cut at a full stop (brand site, not
+              marked verified)
+    Feed      "Quit your powder over the shaker? One Sprout pack has
+              60+ ingredients, 21 vitamins and minerals and 6 g of
+              fiber. Tear it open and eat."
+              paraphrase of review 6, plus product facts
+    Button    "Shop now"
+
+    BEFORE THE IMAGE IS MADE
+    [ ] Only the three rows above, nothing else in the table
+    [ ] Powder tub has no brand, label or logo
+    [ ] Pouch matches its photo and stays closed. MISSING: a photo of
+        a daily pack, if you want one torn across the top
+    [ ] Recheck the powder's $2.63 before launch; the brand file says
+        "about"
+    [ ] Review 1 quoted word for word, never marked verified
+    [ ] You approve slots, words and assets. A draft is not approval
+        and is not cleared to publish.
+    STATE  candidate, not approved
+
+tweaks:
+  - what: The usual way
+    how: Name a different unbranded alternative, such as a shelf of separate gummy bottles. It retests every row, and drops any it can't fill with facts.
+  - what: The buyer and their worry
+    how: Change the buyer to busy parents worried the kids' gummies are just candy. It picks a different tension and may find a template doesn't suit them at all.
+  - what: Attach the image
+    how: With the real reference, it can judge room for text and product size instead of working from your description.
+  - what: Fixed choices
+    how: Say "no text in the image" or "keep the illustration style". It keeps those and adapts other slots around them.
+
+judge:
+  - Every row or slot marked FITS has a named source you can check.
+  - Nothing says a competitor lacks something unless a fact shows it. Unknown cells are cut, not left blank.
+  - Each line of copy carries a label, and quotes match the review word for word.
+  - The contract is six lines and borrows no words, logos or people from the original ad.
+  - The draft is marked candidate, not approved.
+
+test:
+  - Run it on a template you already used, with the facts you had then. If it marks a slot UNSUITABLE that your old ad filled, check what your old ad put there; it may have been a guess.
+  - Leave out one fact on purpose (for example a competitor's price) and run it again. That row should drop to UNSUITABLE or MISSING, never be filled.
+  - Run it twice on the same template. The verdicts for each slot should match exactly; only hypothesis lines may change wording.
+  - Hand the six-line contract to your designer with no other notes. If they need to ask what goes where, a line of the contract is too vague.
+
+improve:
+  - Paste your verified facts, live offer and customer quotes with their sources into "What you need" in the skill file, so the fit test always runs against the same evidence.
+  - Add the comparison facts you keep (competitor prices, guarantees) to your brand file with a date, so rows like "cost a serving" can be checked for age.
+  - If you always use the same few templates, write their slots into the skill, so you only paste the template's name.
+  - Save each approved contract in your brand file and reuse it when you remake the ad.
+  - Pair it with a skill that picks the right layout for an image ad when no template fits your facts, and with one that rebuilds proven ad layouts for your brand.
+
+terms:
+  - term: Slot
+    meaning: One spot in a layout that holds one thing, such as the headline, a comparison row, a quote or the product.
+  - term: Slot contract
+    meaning: A six-line plan saying what each slot holds and what changed, passed to whoever makes the image.
+  - term: Hypothesis
+    meaning: A line written to test, not taken from a customer. It can be tried, but it isn't proof.

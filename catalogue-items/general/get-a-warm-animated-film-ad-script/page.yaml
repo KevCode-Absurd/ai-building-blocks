@@ -1,0 +1,166 @@
+new_slug: get-a-warm-animated-film-ad-script
+name: Get a warm animated film ad script
+summary: A script or image brief in the look of a 3D animated feature film, with your real product.
+job: make-video-ads
+
+headline: Get an ad that feels like an animated feature film, with your real product in it
+subhead: Give it your selling idea and your brand file. It casts one made-up adult character, acts out their feeling shot by shot, brings your product into the scene with its real label, and hands back a timed script or a single image brief.
+
+explain: |
+  The look of a high-end animated film (stylised characters, real-looking light, every frame framed like a film still) can make an everyday problem feel warm and easy to watch. Done badly, it turns into a toy-like cartoon, the character's face goes blank, or the product floats alone like a catalogue photo.
+
+  This skill writes for that look and nothing else. It checks the idea suits it: a feeling, or a close view of how the product works. It casts one original adult and describes them the same way every time. Feelings are written as what the face does ("brows pinched, shoulders sinking"), because an adjective alone gets a blank face. The product enters the scene in a hand or in use, label readable. Nothing on screen goes beyond your approved claims. When the script is done, "Turn your animated film script into consistent clips" turns it into prompts.
+
+when:
+  - You want a story-led video ad without filming, and the problem is a feeling your buyer knows.
+  - You want one striking image ad with a character caught in the problem.
+  - You need to show how your product works in a close-up that a camera couldn't film.
+
+you_give:
+  - Your selling idea or an existing script
+  - Your brand file, with the buyer, the product's shape, colours and label words, and your approved claims
+  - Video or image, the length, and whether a narrator or the character speaks (optional)
+you_get:
+  - A character sheet with one fixed description
+  - A line-by-line script with speaker, words, shot and clip, or an image brief with exact words
+  - Notes on what was inferred and what's missing
+
+how_to_use:
+  - Copy the skill and paste it into Claude, ChatGPT or Gemini.
+  - Paste your selling idea and your brand file underneath.
+  - Say "video, 30 seconds, narrator" or "image", depending on what you need.
+  - Check every line the narrator says against your approved claims before you make anything.
+  - Take the finished script to "Turn your animated film script into consistent clips" to get the prompts.
+
+how_it_works:
+  - title: Checks the fit
+    text: Confirms the idea is a feeling or how something works, which suit this look, and says where proof will need to come from elsewhere.
+  - title: Fixes the look
+    text: Plainly animation, never a cartoon. Real light and materials on believable stylised adults.
+  - title: Casts one adult
+    text: One made-up adult, described once and repeated in the same words. Never a customer, founder or expert.
+  - title: Acts the feeling
+    text: Names the feeling, then writes the brows, mouth and shoulders.
+  - title: Keeps claims inside the facts
+    text: Shows only what your approved claims say. The product's shape, colours and label are exact.
+  - title: Writes the video or image
+    text: For video, timed lines with one speaker and one action per shot. For an image, one moment, a headline of 8 words or fewer and 20 words in all.
+
+output_shape: |
+  CHARACTER
+  <one fixed description: age range, build, hair, clothes, accessory>
+
+  Line | speaker | words | shot (subject, action, light, transition) | clip
+  1    | <Narrator or character> | "<words>" | <one subject, one action> | <clip 1, length>
+  <one row per line>
+
+  NOTES
+  - <what was inferred>
+  - MISSING: <anything the facts didn't give>
+
+  (For an image: layout, exact words in quotes, image prompt)
+
+example:
+  business: sprout
+  input: |
+    [the skill]
+
+    Idea: the busy parent has no time for a powder and a shaker in
+    the morning. One daily pack is the shortcut.
+    Buyer (brand file): the busy parent, 30 to 45, mostly mums.
+    Review: "So easy to grab and eat on my way to the billion things
+    I have to do as a mom."
+    Approved claim: "60+ ingredients, 21 vitamins & minerals, and 6g
+    fiber" in 1 pack.
+    Product: glossy deep-green pouch, big yellow wordmark, yellow
+    bear face top right, "28 Daily Packs" at the bottom. Daily pack
+    torn straight across the top. Gummies: small deep-green bears.
+    Offer: first order $29.99 with the text sign-up discount, renews
+    at $49.99 every 4 weeks.
+    Brand lines: "Rip. Tip. Enjoy."
+    Settings: video, 30 seconds, narrator.
+  output: |
+    FIT: a feeling (the rushed morning) in a room the buyer knows.
+    Proof that it works isn't carried here; the claim line stays
+    exactly as approved.
+
+    CHARACTER (repeat these words every time)
+    A stylised animated woman, about 38, slim build, dark brown hair
+    in a loose bun, mustard cardigan over a white tee, a canvas tote
+    on one shoulder.
+
+    LINE 1  Narrator: "Seven thirty. Shoes. Bags. Keys."
+      Shot: the woman in a sunlit hallway, keys in one hand, a school
+      bag strap in the other. Brows pinched together, mouth a flat
+      tired line, shoulders up near her ears.         Clip 1 (10 s)
+    LINE 2  Narrator: "Your greens powder? Still on the counter."
+      Shot: a plain unlabelled tub and an unwashed shaker on the
+      kitchen counter. Focus shifts from the shaker to the woman in
+      the doorway behind it (camera moves, subject holds). Clip 1
+
+    LINE 3  Narrator: "Here's the shortcut."
+      Shot: her hand takes one Sprout daily pack from a bowl by the
+      door, front to the viewer.                      Clip 2 (10 s)
+    LINE 4  Narrator: "Rip. Tip. Enjoy."
+      Shot: close on her hands. She tears the pack straight across
+      the top edge and tips small deep-green gummy bears into her
+      palm.                                           Clip 2
+
+    LINE 5  Narrator: "Sixty-plus ingredients, twenty-one vitamins
+      and minerals, and six grams of fiber. In one pack."
+      Shot: her face close as she eats the gummies. Shoulders drop,
+      brows smooth out, one corner of her mouth lifts. Clip 3 (10 s)
+
+    LINE 6  Narrator: "Your first box is $29.99 with text sign-up.
+      It renews at $49.99 every four weeks."
+      Shot: held. She stands at the open front door, the deep-green
+      pouch in her hand, label to the viewer: big yellow "Sprout"
+      wordmark, yellow bear face top right, "28 Daily Packs".
+                                                      Clip 4 (8 s)
+
+    NOTES
+    - Her smile in line 5 is about the easy morning, not a health
+      result. She says nothing.
+    - On-screen offer text is added in editing, not in the scene.
+    - MISSING: the daily pack's own label words. Keep its front
+      soft in line 3 until they're supplied.
+    - Inferred: the hallway and bowl by the door are not in the
+      brand file. They come from the buyer's "on my way" moment.
+
+tweaks:
+  - what: Video or image
+    how: Say "image" and you get one moment, a headline and an image prompt instead of a script. The rules for words change to 20 in all.
+  - what: Who speaks
+    how: A narrator suits a quiet story. One character speaking on camera feels more personal, but they still can't claim a result.
+  - what: Length
+    how: Under 15 seconds it cuts to one scene, the feeling, the product and the offer. 30 to 45 seconds lets the problem build.
+  - what: The buyer
+    how: Change the buyer and the character, the room and the feeling change with them.
+
+judge:
+  - The character is described in exactly the same words wherever they appear.
+  - Every feeling is written as face and body movement, not just "sad" or "happy".
+  - The character never says what the product did for them.
+  - The product appears in a hand or in use with its real label, never floating alone.
+  - Every claim in the narration is on your approved list.
+
+test:
+  - Read only the character lines. The description should be word for word the same everywhere.
+  - Check each feeling is written as face and body ("brows pinched, shoulders sinking"), not one word like "sad".
+  - Give it a buyer and idea you've already made an ad for. The scene should feel like that buyer's real moment, not a generic one.
+  - Run it twice. The character can change. The product, its label words and the claims must not.
+
+improve:
+  - Paste your exact label words, colours and how the product is held into "What you need" in the skill file, so the product is never guessed.
+  - Add your approved and banned claims to step 5 ("Keep claims inside the facts").
+  - Add two or three buyer moments from your reviews to step 1, so the scene starts in a room your buyers know.
+  - When you like a character, save their description in your brand file and reuse it, so a series of ads has one face.
+  - Pair it with a skill that turns an animated film script into still and clip prompts for your video tool.
+
+terms:
+  - term: Stylised character
+    meaning: A character drawn with simplified, slightly exaggerated features (bigger eyes, smoother shapes), not a realistic person.
+  - term: Voice-over
+    meaning: A narrator you hear but don't see.
+  - term: Hard cut
+    meaning: A straight jump from one shot to the next, with no fade.

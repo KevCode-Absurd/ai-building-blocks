@@ -1,0 +1,22 @@
+slug: get-phone-video-script-that-sounds-unscripted
+renamed_from: ugc-video-script-writer
+name: "Get a phone video script that sounds unscripted"
+summary: "A talking-to-phone script that sounds said, not read, with delivery notes, a shot list and three openings."
+category: general
+boards: [ecommerce]
+type: skill
+role: make
+job: video
+level: intermediate
+inputs:
+  - {type: persona, required: true}
+  - {type: product_data, required: true}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: script}
+uses: [get-selfie-style-ad-script-that-sounds-human, get-usable-creator-videos-from-one-clear-brief, get-script-presenter-can-say-without-stumbling]
+example: ugc
+origin: rebuilt
+source_ids: [CES-144]
+old_name: ugc-script
+version: 1.0.0

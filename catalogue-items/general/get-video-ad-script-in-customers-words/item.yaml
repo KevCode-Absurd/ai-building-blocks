@@ -1,0 +1,30 @@
+slug: get-video-ad-script-in-customers-words
+renamed_from: video-ad-script-from-customer-research
+name: "Get a video ad script in your customers' words"
+summary: "A video ad script built from what your customers said, that changes one belief in one buyer."
+category: general
+boards: [ecommerce]
+type: skill
+role: make
+job: video
+level: advanced
+inputs:
+  - type: voc_reviews
+    required: true
+  - type: persona
+    required: true
+  - type: product_data
+    required: true
+  - type: offer
+    required: false
+  - type: brand_brain
+    required: false
+  - type: angle_library
+    required: false
+outputs:
+  - {type: script}
+uses: [find-script-lines-that-lose-sale, get-different-video-ads-from-same-research, get-script-presenter-can-say-without-stumbling]
+origin: own
+source_ids: [CES-128]
+old_name: script-from-research
+version: 1.0.0

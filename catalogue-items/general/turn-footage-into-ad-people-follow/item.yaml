@@ -1,0 +1,22 @@
+slug: turn-footage-into-ad-people-follow
+renamed_from: video-ad-edit-plan-from-footage
+name: "Turn your footage into an ad people follow"
+summary: "A timed cut list, caption windows, sound plan and export settings for the clips you already have."
+category: general
+boards: [ecommerce]
+type: skill
+role: make
+job: video
+level: advanced
+inputs:
+  - {type: footage, required: true}
+  - {type: script, required: true}
+  - {type: offer, required: false}
+  - {type: product_data, required: false}
+outputs:
+  - {type: edit_plan}
+uses: [make-video-ad-clear-with-sound-off]
+origin: own
+source_ids: [CES-032]
+old_name: ecommerce-video-editing
+version: 1.0.0

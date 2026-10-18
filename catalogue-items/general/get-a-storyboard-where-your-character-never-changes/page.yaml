@@ -1,0 +1,171 @@
+new_slug: get-a-storyboard-where-your-character-never-changes
+name: Get a storyboard where your character never changes
+summary: A shot-by-shot ad plan where one character stays the same and every shot has a job.
+job: make-video-ads
+
+headline: Get a storyboard where your character never changes and every shot earns its place
+subhead: Give it your character's reference images, the approved script and your product photos. It gives each shot a job, writes the moment to draw, the framing and the timing, and checks the script fits what's on screen.
+
+explain: |
+  A storyboard is a shot-by-shot plan of an ad, drawn or described before anything is filmed or generated. Two problems usually creep in. The character slowly changes from frame to frame (a different hairstyle, a new jacket), and shots get added because they look nice, not because they move the argument on.
+
+  This skill uses your character's reference images as the only source for how they look, and keeps what's fixed (face, hair, outfit) apart from what can change (pose, light, framing). Every shot gets a job, such as the opening, a demonstration or the evidence, and a four-part check catches a missing reason to believe. Timing is checked against the script, voice-over is kept apart from on-camera lines, and on-screen text stays exact and in your real font.
+
+when:
+  - You have a chosen character and an approved script and need a storyboard before making the video.
+  - Your character keeps changing between frames and you want one fixed reference to work from.
+  - You want to check an ad has a clear opening, a reason to believe and a call to action before spending on it.
+
+you_give:
+  - Your character's reference images (face, full body, profile or back, hands)
+  - The approved script or narration, with the buyer's reason to buy and the call to action
+  - Product photos and your logo, if they appear
+  - Your brand voice and font
+  - How it's delivered, such as narrator or talking to camera (optional)
+you_get:
+  - A numbered shot table with job, moment, cast, action, framing, setting, script, on-screen text and timing
+  - A continuity note listing what stays fixed
+  - Review results for the character, the product and the order of shots
+
+how_to_use:
+  - Copy the skill and paste it into Claude, ChatGPT or Gemini.
+  - Attach your character's reference images in this order. Face, full body, profile or back, hands.
+  - Paste the approved script and say who the buyer is and what you want them to do.
+  - Attach product photos and name your font.
+  - Check the continuity note, then hand the storyboard to whoever makes the frames.
+
+how_it_works:
+  - title: Fixes the character
+    text: Uses the reference images only, and separates fixed features from what changes per scene.
+  - title: Gives every shot a job
+    text: Opening, setting the scene, demonstration, evidence, payoff or call to action, checked against the moment of need, feeling, reason to believe and expected change.
+  - title: Keeps the copy exact
+    text: Doesn't rewrite approved lines, keeps product printing real, and puts on-screen text in your real font.
+  - title: Writes each frame
+    text: The moment to draw, who's there, the action, framing, setting, props and timing, with layout and light kept the same between frames.
+  - title: Adds frames only when needed
+    text: A new frame only when the argument or scene changes.
+  - title: Checks timing and reviews
+    text: Checks the script fits each shot, keeps voice-over apart from on-camera lines, and reviews before anything is made.
+
+output_shape: |
+  Shot | job | moment to draw | cast | action | framing |
+       setting and props | voice-over or line | on-screen text | timing
+  1    | opening | <...> | <character> | <one action> | <close/wide> |
+       <...> | "<words>" | "<exact text>" | <0-3 s>
+  <one row per shot>
+
+  CONTINUITY (fixed in every shot)
+  <face, hair, outfit, room layout, light, product state>
+
+  REVIEW
+  Character: <...>  Product: <...>  Order of shots: <...>
+  MISSING: <anything not supplied>
+
+example:
+  business: sprout
+  input: |
+    [the skill]
+
+    Character: a made-up woman, about 38, shoulder-length dark brown
+    hair, brown eyes, light olive skin, a small mole on her left
+    cheek, mustard cardigan over a white tee, jeans.
+    [sheet: face close-up] [full body] [profile] [hands]
+    Delivery: narrator voice-over. She doesn't speak.
+    Buyer: the busy parent. Doubt: "Is this just candy?"
+    Call to action: start a first order.
+    Approved narration:
+    1 School run. Work bag. Breakfast for three.
+    2 Your own nutrition? A handful of gummies now.
+    3 One daily pack. Rip, tip, enjoy.
+    4 60+ ingredients, 21 vitamins and minerals, 6 grams of fiber.
+    5 Just grab and go.
+    On-screen end text: "First order $29.99 with text sign-up.
+    Renews at $49.99 every 4 weeks."
+    Product: [pouch front] [daily pack in a hand]. Tear the daily
+    pack straight across the top only.
+    Font: Work Sans Bold (headings), Work Sans Medium (body).
+  output: |
+    1  OPENING  0-3 s
+       Moment: she stands in a hallway, a school bag on one shoulder,
+       her work bag in the other hand.  Cast: her.  Action: turns
+       towards the door.  Framing: medium, eye level.
+       Setting: hallway, front door at right, window light from left.
+       VO: "School run. Work bag. Breakfast for three."
+    2  SETTING THE SCENE  3-7 s
+       Moment: she sets the work bag on a side table where a Sprout
+       pouch stands, label to camera.  Action: one hand reaches for
+       the pouch.  Framing: medium close.
+       VO: "Your own nutrition? A handful of gummies now."
+    3  DEMONSTRATION  7-11 s
+       Moment: her hands tear a daily pack straight across the top
+       edge and tip small deep-green gummies into her palm.
+       Framing: close on hands, matching the "in a hand" photo.
+       VO: "One daily pack. Rip, tip, enjoy."
+    4  EVIDENCE  11-16 s
+       Moment: the pouch on the side table, sharp, her open hand
+       with gummies soft beside it.  Framing: close on the pouch.
+       VO: "60+ ingredients, 21 vitamins and minerals, 6 grams of
+       fiber."  On screen: "60+ ingredients. 21 vitamins & minerals.
+       6 g fiber." (Work Sans Bold)
+    5  PAYOFF  16-18 s
+       Moment: she eats the gummies and opens the front door.
+       Framing: medium, from behind her shoulder.
+       VO: "Just grab and go."
+    6  CALL TO ACTION  18-22 s
+       Moment: held on the pouch on the side table, door open behind.
+       On screen: "First order $29.99 with text sign-up. Renews at
+       $49.99 every 4 weeks." (Work Sans Medium, in the empty space
+       above the pouch, no box)
+
+    CONTINUITY
+    Same face, mole, hair, mustard cardigan, white tee and jeans in
+    shots 1, 2, 3 (hands, cardigan cuffs) and 5. Front door at right,
+    window light from left throughout. The pouch stays on the side
+    table from shot 2 on, label to camera. The daily pack is torn
+    only in shot 3.
+
+    REVIEW
+    Four-part check: moment of need (1), feeling (1 and 2), reason
+    to believe (4, answers "just candy?"), expected change (5).
+    She never claims a result; the narrator speaks only approved lines.
+    Character sameness: check after the panels are drawn.
+    MISSING: the daily pack's own label words, so shot 3 frames it
+    from the side.
+
+tweaks:
+  - what: Delivery style
+    how: Switch from narrator to "talking to camera" and the shots change. Her lines get lip-sync timing and the framing tightens on her face.
+  - what: Length
+    how: Give a target ("15 seconds") and it merges shots while keeping one opening, one reason to believe and one call to action.
+  - what: The buyer's doubt
+    how: Name the doubt and the evidence shot is built to answer it. A different doubt moves which fact goes on screen.
+  - what: Reference views
+    how: Add a hands view if the product is handled. Without it, the demonstration shot is the most likely place for the character to drift.
+
+judge:
+  - The character's description (face, hair, outfit) is the same wherever it appears.
+  - Every shot has a job, and there's exactly one call to action.
+  - The voice-over in each shot fits its time when you read it aloud.
+  - The product is shown and handled the way your own photos show it.
+  - On-screen text matches your approved wording exactly, and the font is named.
+
+test:
+  - Read the character description in every shot. It should be identical.
+  - Read the voice-over aloud with a timer. Each shot's words should fit its time.
+  - Take the evidence line out of the script and run it again. The four-part check should flag the missing reason to believe.
+  - Show the board to someone who hasn't read the script. They should be able to tell the story from the shots.
+
+improve:
+  - Paste your character's fixed description and reference sheet views into "What you need" in the skill file, so every board starts from the same person.
+  - If your team names shots differently, change the list of shot jobs in step 2 to yours.
+  - Write your font names and on-screen text rules into step 3, so text is never left to the image tool.
+  - Pair it with a skill that writes ad copy from one true product fact for the narration, one that turns the board into clips, and one that adds captions in your brand font.
+
+terms:
+  - term: Storyboard
+    meaning: A shot-by-shot plan of an ad, drawn or described before anything is filmed or generated.
+  - term: Reference sheet
+    meaning: A set of images of the character from set angles (face, body, profile, hands), used to keep them the same.
+  - term: Continuity
+    meaning: Keeping things the same from one shot to the next, such as the outfit, the light and where objects sit.

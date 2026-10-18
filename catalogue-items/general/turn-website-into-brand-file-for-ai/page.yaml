@@ -1,0 +1,184 @@
+new_slug: turn-website-into-brand-file-for-ai
+name: Turn your website into a brand file for AI
+summary: Nine plain files with your facts, voice, offers, customers and competitors, built from your website.
+job: brand-file
+
+headline: Explain your brand to AI once, in one folder built from your website
+subhead: Give it your website address, plus reviews and your best ads if you have them. It reads the site, checks the basics with you, asks only what the site can't answer, and writes nine files with every price, claim and quote traced to its source.
+
+explain: |
+  Every time you ask an AI to write an ad or a page, it starts from nothing. You paste the same facts again, it guesses the rest, and the guesses creep into your copy as prices you don't charge and claims you can't make.
+
+  This skill builds your brand file once: one folder with your story and voice, your products and prices, your customers in their own words, your competitors, what has worked, and the rules any tool must follow. It reads your homepage, product, pricing, FAQ and policy pages, stops twice to check with you, and asks follow-up questions one at a time (each one you can skip). Anything it can't find is left blank and listed, never guessed. A customer profile with no real quotes behind it is labelled as a guess.
+
+when:
+  - You use AI for marketing and keep pasting the same background into every chat.
+  - You're starting work with a new writer, designer or agency and want them reading the same facts as you.
+  - Your website is the only place your brand facts are written down, and you want them in one tidy folder.
+
+you_give:
+  - Your website address
+  - Your about text and price list, if the site can't be read (optional)
+  - Customer reviews, survey answers or support emails (optional)
+  - Your best ads, best sellers or email results (optional)
+you_get:
+  - A folder of nine plain files, from brand guidelines to customer profiles to competitors
+  - A short diagnosis at the top of the main file, on where your biggest gap is
+  - A list of what is still blank and who can answer it
+
+how_to_use:
+  - Copy the skill and paste it into Claude, ChatGPT or Gemini. A tool that can read websites works best.
+  - Give it your website address. If it can't read the site, paste your about page and your price list instead.
+  - Check the basics it shows you (name, category, main colour, description, number of offers) and reply "good" or correct them.
+  - Answer the follow-up questions you can and skip the rest. Pasting real reviews makes the customer profiles much better.
+  - Save the folder, and load the "recent changes" and main files first whenever you start a new AI task.
+
+how_it_works:
+  - title: Reads the site
+    text: Goes through 5 to 10 key pages and notes your offers and prices, voice, selling points, customer phrases, proof and policies, with the page each came from.
+  - title: Checks the basics
+    text: Shows you the name, category, colour, description and offer count, and waits for your "good" before going on.
+  - title: Asks what the site can't say
+    text: One question at a time, each skippable, about best ads, top sellers, reviews and anything else you want it to know.
+  - title: Looks at competitors
+    text: Finds 3 to 5 businesses selling something similar to a similar buyer, checks the list with you, then notes their pitch, prices and the gap they leave.
+  - title: Writes nine files
+    text: Puts only what it found or you told it into the files. A blank field says what would fill it.
+  - title: Checks its own work
+    text: Makes sure prices and offers match across every file, and labels any customer profile without real quotes as a guess.
+  - title: Sums up
+    text: Writes a one or two sentence diagnosis and a list of what is still blank.
+
+output_shape: |
+  brand-file/
+    README.md                   <what each file holds, when to load it>
+    brand-guidelines.md         <story, voice, colours, type, photo style,
+                                 proof on file, never say>
+    products-and-positioning.md <each offer: price, what it is, how it
+                                 works, policies, buyer questions>
+    customer-avatars.md         <2 or 3 customer profiles, each with real
+                                 quotes or labelled as a guess>
+    competitors.md              <competitor, price range, strength, gap>
+    brain.md                    <diagnosis, decisions, what works,
+                                 open questions>
+    recent-changes.md           <dated log, newest first>
+    winning-ads.md              <each ad: hook, offer, result measured,
+                                 reported or not known>
+    session-instructions.md     <load order and rules for any AI>
+
+  SUMMARY
+  Files written: <9>   Profiles grounded: <n>   Labelled as guesses: <n>
+  Still blank: <field>, who can answer it: <person>
+
+example:
+  business: sprout
+  input: |
+    [the skill]
+
+    Website: sprout.example
+
+    (Follow-ups, answered one at a time)
+    Best ads: here are our 15 live headlines (sprout/ads.md). No results.
+    Top sellers: skip.
+    Reviews: here are 20 public reviews (sprout/reviews.md).
+    Email results: skip.
+    Competitors: your list of five is right, go ahead.
+    Extra material: done.
+  output: |
+    FIRST CHECK
+    Name: Sprout   Category: greens gummy supplement   Main colour:
+    forest green #00582D   Description: daily greens gummies in
+    single-serve packs   Offers: Adults, Kids, limited flavours, an
+    electrolyte pack, plus merch
+    > You: good
+
+    --- products-and-positioning.md (excerpt) ---
+    Sprout Original (Adults), Low Sugar, 28 packs
+      One-time $66.65 ($2.38/day) . Subscribe $49.99 every 4 weeks
+      First order "Starts at" $29.99. Only with the text sign-up discount
+      (footer small print). Source: product page, 13 Oct 2026
+      Discount stated six ways: 52%, 55%, up to 55%, 49%, 58%, and 61% in
+      ads. All recorded, flagged in Open Questions.
+    Guarantee, brand's words: "a simple 30-day guarantee on your first
+      order ... This policy applies only to your initial purchase."
+    What it replaces (brand's words): "No more gagging on pills, sloshing
+      chalky powders, or cleaning messy counters."
+
+    --- customer-avatars.md (excerpt) ---
+    1 The quitter who wants to stick (about 40%, estimated from reviews)
+      Grounded in:
+      "[Sprout] has been the one thing I've been able to stick to." (R1)
+      "I've been choking on [a big-name greens powder] for the last few
+      years" (R4)
+      Tried before: greens powders, pill stacks, multivitamins
+      Doubts: "A gummy can't hold enough." / "They are expensive" (retailer)
+    4 The price doubter (share unknown)
+      Grounded in: "They are expensive" (retailer) and
+      "I hate subscriptions because I feel like they are a trap" (R17)
+      Only two quotes. Open question: what do near-buyers say?
+    (profiles 2 and 3 cut for length)
+
+    --- brain.md (top) ---
+    Diagnosis: Buyers already know the problem and have tried powders and
+    pills. The gut-fix seeker feels it most. The biggest gap: most ads
+    talk to price doubters with "61% off", while the top review theme is
+    "I finally stuck with a supplement", which only 2 of the 40 newest
+    ads use.
+
+    --- winning-ads.md (excerpt) ---
+    "'Sprout is too expensive': here's 61% off to prove otherwise"
+      Offer-led, price doubter. 15+ copies live. Result: not known (the ad
+      library shows no spend or results).
+
+    --- competitors.md (excerpt) ---
+    A big-name greens powder | about $79 a month | science-first, 90-day
+      guarantee | gap: reviewers call it "gritty/chalky"
+
+    SUMMARY
+    Files written: 9
+    Profiles grounded: 4 of 4 (the price doubter only just)
+    Still blank:
+    - Grams of sugar per pack (founder)
+    - Which discount is the real one (founder)
+    - Source for "1M+ customers" and the 4.8 rating (founder)
+    - Ad results with real numbers (whoever runs the ad account)
+    - Email results (skipped)
+    Next: run the founder interview to fill these.
+
+tweaks:
+  - what: The follow-up answers
+    how: Each one you answer replaces a blank. Pasting 20 or more real reviews is the single biggest upgrade, because it turns guessed customer profiles into profiles built on real words.
+  - what: Pages it reads
+    how: Point it at specific pages if your site is big ("read the homepage, /pricing and these three product pages"). For an online store, the store add-on adds collections, policies and product photos.
+  - what: Competitors
+    how: Name the competitors you care about instead of letting it search. You'll get a sharper competitors file and fewer irrelevant names.
+  - what: Performance data
+    how: Paste an export of your best ads with real numbers. Without numbers, every ad in the winning-ads file is marked "result not known", which is honest but less useful.
+
+judge:
+  - Every price in the files matches your price list exactly.
+  - Every customer quote is something a real customer wrote, with where it came from.
+  - Profiles without real quotes say "Inferred, not yet grounded in customer words".
+  - Blank fields say "Not captured" and what would answer them, rather than a guess.
+  - The diagnosis at the top of the main file names one specific gap you recognise.
+
+test:
+  - Check the prices first. Compare three products line by line with your price list; any rounding or a missing offer means it read an old or wrong page.
+  - Run it on a site where you know two pages disagree, such as an old discount or a changed count. Both versions should be recorded and flagged, not quietly picked.
+  - Open the customer profiles. Each should carry quotes you can find in your reviews, with a source, or say it's inferred.
+  - Start a fresh chat, load only the folder, and ask for one ad. If it asks for something the folder should hold, fill that blank in the files.
+
+improve:
+  - Edit the page list in step 1 to name the pages that matter on your site (your pricing page, your FAQ), so it never skips them.
+  - Add your fixed rules to the session-instructions.md shape (claims you never make, words you never use), so every tool that loads the folder follows them.
+  - Change "2 or 3 customer profiles" in the customer-avatars.md row if you sell to more kinds of buyer than that.
+  - Keep recent-changes.md current. Add a dated line every time a price, offer or product changes, so later tools don't use old facts.
+  - Pair it with a skill that interviews the founder to fill the blanks only they can answer, and with one that turns the folder into a printable guide for designers.
+
+terms:
+  - term: Brand file
+    meaning: One folder with your facts, voice, offers and what you can claim, which any AI or person can read before working for you.
+  - term: Customer profile
+    meaning: A short description of one kind of buyer, what they want and what makes them hesitate, ideally built on their own words.
+  - term: Grounded
+    meaning: Backed by real customer quotes, not guessed.

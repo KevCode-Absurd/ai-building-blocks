@@ -1,0 +1,170 @@
+new_slug: turn-your-ad-numbers-into-three-next-steps
+name: Turn your ad numbers into three next steps
+summary: A one-page report on your ads with what changed, one open worry and three ranked next steps.
+job: read-ad-results
+
+headline: Get a one-page ad report that ends with three clear things to do next
+subhead: Paste this period's ad totals and the period before. It recalculates every number from the totals, writes the two to four changes that matter, names the one worry still open, and ends with three ranked actions someone can own.
+
+explain: |
+  Most ad reports are the export with a chart on top. Every number is there and nobody knows what to do. Some reports also average percentages across rows, which gives wrong answers, or credit the ads for a sales jump that came from a restock.
+
+  This skill writes only what someone needs in order to decide. It first recalculates each number from the raw totals: cost per sale, return on spend, click rate. Then it keeps three things apart: what changed, the explanation the data supports, and what to do about it. It never says an action was done unless you show a record of it, and it never invents wins to fill the page.
+
+when:
+  - You need a monthly or weekly ad report for a boss, client or co-founder, and it has to fit on one page.
+  - Your current report is a wall of numbers and nobody acts on it.
+  - You ran a diagnosis and want the findings turned into a short brief with owners.
+
+you_give:
+  - This period's totals (spend, impressions, clicks, purchases, revenue) with dates and currency
+  - The same totals for the period before
+  - Your targets for cost per sale or return (optional)
+  - Findings from a diagnosis, and a log of what was changed (optional)
+you_get:
+  - A coverage line saying what the report includes and what's missing
+  - A table of the main numbers, this period against last, with the change
+  - Two to four changes that matter, one unresolved worry, and three ranked actions
+
+how_to_use:
+  - Copy the skill and paste it into Claude, ChatGPT or Gemini.
+  - Paste the totals for this period and the one before, in the same columns.
+  - Say the dates, the currency and the attribution window if you know it.
+  - Add your targets if you want each number judged against them.
+  - Fill in the owner of each action before you send the report.
+
+how_it_works:
+  - title: Calculates before writing
+    text: Works out return, cost per sale, click rate, cost per click and cost per 1,000 impressions from the totals. A change from zero gets no percentage.
+  - title: Keeps sources apart
+    text: Uses your store's own revenue for overall efficiency and shows what the ad platform claims separately, because platforms can count the same sale twice.
+  - title: Separates three things
+    text: What changed, the explanation the data supports, and the action. Unsupported causes are labelled as guesses.
+  - title: Writes the brief
+    text: Coverage, the numbers table, the main changes, one open worry and three actions. No padding with numbers that changed nothing.
+
+output_shape: |
+  PERIOD AND COVERAGE
+  <dates, currency, attribution window, what's included>
+  MISSING: <anything not given>
+
+  NUMBERS
+  <table: metric | this period | last period | change | target>
+
+  MAIN CHANGES
+  - <two to four changes, each with its numbers>
+
+  ONE UNRESOLVED WORRY
+  <the one thing still unexplained, labelled as unconfirmed>
+
+  THREE NEXT ACTIONS
+  1. <action>. Owner: <who>. Done when: <how you check it>
+  2. <action> ...
+  3. <action> ...
+
+example:
+  business: sprout
+  input: |
+    [the skill]
+
+    Practice results, USD (sprout/ad-results.csv). 9 ads, P1 split
+    into two 21-day windows.
+    ad / days / spend / impressions / clicks / purchases / revenue
+    T1 Hot girl tummy        30  4200  300000  4950  198  8336
+    P1 Too expensive d1-21   21  3000  250000  3750  112  3830
+    P1 Too expensive d22-42  21  3000  193500  1780   39  1334
+    P2 Dont pay full price   30  2500  227300  5569   50  1555
+    H1 One step never skip   16  1300   96300  1300   44  2015
+    K1 Fiber kids            30  2200  169200  2030   63  3062
+    F1 Fiber question        30  1800  138500  1524   46  1858
+    S1 Trusted by 1M         30  1600  128000  1600   38  1254
+    W1 Muscle weight loss    14   900   64300   900   23  1024
+    R1 Runner                30  1000   76900   538   10   400
+
+    No earlier period for the whole account. No targets.
+    Brand rule: say "supports", never "fix". Ads say 61% off; the
+    product page shows 52% and 55%.
+  output: |
+    PERIOD AND COVERAGE
+    9 ads, 14 to 42 days each (exact dates MISSING), USD, practice
+    numbers. Revenue is what the ad platform reports. MISSING:
+    attribution window, store's own revenue, an earlier period for
+    the account, targets. Only P1 has a before and after.
+
+    NUMBERS (all ads)
+    Spend                         $21,500
+    Purchases                     623
+    Platform revenue              $24,668
+    Click rate (clicks / impr.)   1.46%
+    Cost per click                $0.90
+    Cost per 1,000 impressions    $13.08
+    Cost per sale                 $34.51
+    Return (revenue / spend)      1.15
+    Revenue per sale              $39.60
+    Earlier period: MISSING, so no change column.
+
+    MAIN CHANGES
+    - P1 got much worse in its second 21 days at the same spend.
+      Cost per sale went from $26.79 to $76.92, and click rate from
+      1.50% to 0.92%.
+    - T1 has the lowest cost per sale: $21.21, return 1.98.
+    - P2 has the top click rate (2.45%) but only 0.90% of clickers
+      buy. $50.00 a sale.
+    - R1: $100.00 a sale, but on 10 sales. Too few to call.
+
+    ONE UNRESOLVED WORRY
+    Why P1 dropped. The likely reasons (the same people seeing it too
+    often, or paying more to reach new people) need reach and
+    frequency, which aren't in the export.
+
+    THREE NEXT ACTIONS
+    1. Pull reach and frequency for P1's two windows. Owner: MISSING.
+       Done when: we know if frequency rose as click rate fell.
+    2. Before putting more money into T1, change its opening "Fix the
+       Hot Girl Tummy". "Fix" breaks the brand's "supports" rule.
+       Judge the new version on its own numbers. Owner: MISSING.
+    3. Make the ad's discount match the page (61% against 52% or 55%),
+       then re-read P2's 0.90% buy rate. A guess, not a proven cause.
+       Owner: MISSING.
+
+    Nothing above has been done. No action log was supplied.
+
+tweaks:
+  - what: The prior period
+    how: Add it and the report becomes a real change report. The "biggest differences" section turns into "what changed", with percentages.
+  - what: Targets
+    how: Add "target cost per sale $30" and each number gets judged against it. Without targets the report describes only.
+  - what: An action log
+    how: Paste what you changed last month and whether you checked it. The report will then say which actions were done and verified, and stop recommending them again.
+  - what: Length
+    how: Ask for "a longer version for the board" and it will expand, but only where the data supports more lines.
+
+judge:
+  - Check one number yourself. Cost per sale should be total spend divided by total purchases, not an average of each ad's figure.
+  - There are exactly three actions, ranked, and each one ties to a number in the report.
+  - No action is described as already done unless you gave it a record.
+  - Platform revenue and store revenue are never added together.
+  - Anything missing is named in the coverage line, not quietly left out.
+
+test:
+  - Run it on last month, where you already know what happened. The changes it lists should match what you saw. If it misses the big one, check that column was in your export.
+  - Work out total cost per sale yourself (all spend divided by all purchases) and compare it with the table.
+  - Run it twice on the same numbers. The three actions can be worded differently, but they should point at the same numbers. If they don't, add your targets.
+  - Hand it to the person who reads your reports and ask what they'd do first. If they can't say within a minute, ask it for a shorter version.
+
+improve:
+  - Put your targets (cost per sale or return) into "What you need" in the skill file, so every report judges against the same line.
+  - Name your reader in step 4 ("Write the brief"), for example "a co-founder who reads it on a phone". The length and the words follow from that.
+  - If you report to a client, add their names for campaigns and products to the skill, so the report uses their words, not the platform's.
+  - Keep each month's three actions in your brand file, and paste them in next month so the report can say which were done and checked.
+  - Pair it with a skill that finds out why your ads stopped selling. Run that first when something big moved, and paste its findings in here.
+
+terms:
+  - term: Return (ROAS)
+    meaning: Revenue divided by ad spend. 1.24 means $1.24 back in sales for every $1 spent, before costs.
+  - term: Click rate (CTR)
+    meaning: Clicks divided by impressions. The share of people who saw the ad and clicked.
+  - term: Attribution window
+    meaning: How long after someone clicks or sees an ad a sale still gets credited to it, for example 7 days.
+  - term: Platform-reported revenue
+    meaning: The sales the ad platform says its ads caused. Different platforms can claim the same sale.

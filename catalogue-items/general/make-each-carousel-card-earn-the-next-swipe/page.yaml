@@ -1,0 +1,160 @@
+new_slug: make-each-carousel-card-earn-the-next-swipe
+name: Make each carousel card earn the next swipe
+summary: A 2 to 6 card carousel where card 1 works alone and every swipe leads to the next.
+job: make-image-ads
+
+headline: A carousel ad where the first card works alone and every swipe pulls to the next
+subhead: Give it your selling idea and your brand facts. It splits the argument into 2 to 6 cards, one point per card, ends each card on a question the next one answers, and writes the words, a picture note and the text above the ad.
+
+explain: |
+  A carousel is the only image ad that has an order, and most of them waste it. Either every card shows the same product photo with a different adjective, or the whole argument is crammed onto card 1 and the rest is filler. Many people only ever see the first card, so it has to work alone, and the others have to earn each swipe.
+
+  This skill gives each card one job. For five cards, that's the hook and the problem, then the promise in the customer's words, then how it works, then the doubt answered or the best proof, then the offer and one action. Each card ends on an unfinished thought the next card completes, and the product arrives late. A test runs on the result: if two middle cards could swap places, it's a list, not an argument, and gets rewritten.
+
+when:
+  - You have one idea that needs a few steps to land, such as how something works or why the old way fails.
+  - Your carousels show the product on every card and nobody swipes.
+  - You want to break an offer or a set of reasons into parts people can follow.
+
+you_give:
+  - The selling idea, or an existing script to split into cards
+  - Your brand facts (customer words, what almost stops people buying, product features and use, claims you can make, proof, offer and guarantee)
+  - How many cards (2 to 6; 5 if you don't say) and how much the buyer already knows (optional)
+you_get:
+  - One block per card (its job, the words, a picture note and the bridge to the next card)
+  - The text above the ad, with the first sentence kept short
+  - The headline under the ad
+
+how_to_use:
+  - Copy the skill and paste it into Claude, ChatGPT or Gemini.
+  - Paste your selling idea in a sentence or two, or an existing script.
+  - Paste your brand facts, especially real customer phrases and the doubt that stops people buying.
+  - Say how many cards you want, or leave it at five.
+  - Read card 1 on its own. If it makes no sense without the others, ask for it to be rewritten.
+
+how_it_works:
+  - title: Checks the fit
+    text: Carousels suit how it works in steps, a list of failed fixes, a list of reasons, old way against new, or an offer in parts.
+  - title: Gives each card one job
+    text: Hook and problem, promise, how it works, doubt or proof, then offer and action. Fewer cards merge from the middle; six cards give proof its own card.
+  - title: Makes each swipe a bridge
+    text: Every card ends on an open question or unfinished thought. If a card could be removed or two could swap, it's rewritten.
+  - title: Writes each card
+    text: 12 words or fewer per card, 20 on the last. Card 1 has no brand name, the product appears from the how-it-works card, and it's named on the offer card.
+  - title: Keeps one look
+    text: Same type, colours, framing and product on every card.
+  - title: Writes the text above
+    text: Short, the same claim as card 1, carrying what the cards left out, with the first sentence 125 characters or fewer.
+
+output_shape: |
+  Card 1 | <job> | "<words, 12 or fewer>" | picture: <note> |
+           bridge: <what makes them swipe>
+  Card 2 | <job> | "<words>" | picture: <note> | bridge: <...>
+  ...
+  Card <n> | offer and action | "<words, 20 or fewer>" | picture: <...>
+
+  TEXT ABOVE THE AD
+  <first sentence, 125 characters or fewer> (<n> characters)
+  <what the cards left out: usually the guarantee and one proof>
+
+  HEADLINE UNDER THE AD: "<...>"
+  SOURCES / MISSING: <...>
+
+example:
+  business: sprout
+  input: |
+    [the skill]
+
+    Idea: the powder quitter. Greens powder is a chore, so people
+    quit. Sprout is greens you eat, so they stick with it.
+    Cards: 5. Buyer: knows the problem, has tried powders.
+
+    Brand facts:
+    - 28 daily packs per pouch. Tear one across the top, pour the
+      small handful of gummy bears into your palm. No water, no
+      mixing, no shaker.
+    - 60+ ingredients, 21 vitamins & minerals, 6g fiber per pack
+    - Survey: 95% of surveyed users take it at least 4-6x per week,
+      80% daily (brand survey, 3,000+ customers)
+    - Subscription $49.99 every 4 weeks, "Pause Or Cancel Any Time".
+      30-day money-back guarantee, first order only.
+    - Doubt: "A gummy can't hold enough to replace my powder."
+    - Customer words: "I've been choking on [a big-name greens
+      powder] for the last few years" / "It's wild I WANT to take
+      [Sprout] and don't forget."
+  output: |
+    Card 1 | hook + problem | "Still choking down your greens
+             powder?" (6) | picture: a half-used tub of unbranded
+             powder and a shaker with green residue in a sink |
+             bridge: the question is open
+    Card 2 | promise | "Imagine wanting to take your greens. And not
+             forgetting." (9) | picture: the same counter, the
+             shaker gone | bridge: how?
+    Card 3 | how it works | "No water. No shaker. One pack of
+             gummies a day." (10) | picture: a Sprout daily pack torn
+             straight across the top, green gummy bears pouring into
+             a palm | bridge: but is a gummy enough?
+    Card 4 | doubt answered | "60+ ingredients. 21 vitamins &
+             minerals. 6g fiber. In one pack." (11) | picture: one
+             pack beside the closed Sprout pouch | bridge: so what
+             does it cost?
+    Card 5 | offer + action | "Sprout. $49.99 every 4 weeks. Pause
+             or cancel any time. 30-day money-back, first order."
+             (14) | picture: the closed pouch, label to camera
+
+    TEXT ABOVE THE AD
+    Greens powder was never the problem. Taking it every day was.
+    (61 characters)
+    Sprout is greens you eat: rip open a pack, tip the gummies into
+    your hand, done. 95% of surveyed users take it at least 4-6x per
+    week, 80% daily. Try it with a 30-day money-back guarantee on
+    your first order.
+
+    HEADLINE UNDER THE AD: "Greens you'll actually want to take"
+
+    SOURCES
+    Card 1 "choking": review 4. Card 2: review 2. Cards 3 and 4:
+    product page and science page, per pack. Card 5 and guarantee:
+    plan box and FAQ (first order only). 95% / 80%: brand survey,
+    "of surveyed users".
+    Not used: any discount. The site shows 49% to 58% off and the
+    ads say 61%; pick one real figure with its terms before you add
+    it to card 5.
+
+tweaks:
+  - what: Number of cards
+    how: Ask for 3 and the promise and how-it-works cards merge, keeping the first and last whole. Ask for 6 and the proof gets its own card after the doubt.
+  - what: The structure
+    how: Name one. "Failed fixes" walks through what they tried; "how it works in steps" numbers each step; "reasons" gives three different reasons then the offer; "what to expect" moves through points in time your facts support.
+  - what: How much the buyer knows
+    how: For people who've never heard of you, card 1 stays on their problem and the product comes later. For people comparing options, the product can arrive on card 2.
+  - what: A quote card
+    how: Paste a real review and ask for a quote card. It's used word for word, with the name the source gives and no face beside it.
+
+judge:
+  - Card 1 makes sense with no other card.
+  - Count the words. Every card 12 or fewer, the last one 20 or fewer.
+  - Only the last card asks for an action.
+  - Try swapping cards 2 and 3 in your head. If it still reads fine, the argument is too loose.
+  - Every number, quote and price is in your brand facts.
+
+test:
+  - Show card 1 alone to someone. They should know who it's for and want to see card 2. If not, rewrite card 1 before anything else.
+  - Swap cards 2 and 3 and read it again. If it still makes sense, the argument is a list; ask for the bridges between cards to be rewritten.
+  - Run it twice on the same idea. The job of each card should stay the same even when the words change.
+  - Check every number, price and quote against your brand facts.
+
+improve:
+  - "Write your buyer's biggest doubt into step 2 of the skill file as the doubt card's job (for Sprout: \"Will the price jump after the first order?\", answered with the renewal price), so the card that decides the sale is always there."
+  - Set your usual number of cards and structure in step 2, so you don't have to ask each time.
+  - "Add your look to step 5: your type, your colours and the product photo every card uses."
+  - If your designer works to tighter word limits than 12 a card, change them in step 4.
+  - Pair it with the skill that turns an approved image plan into a prompt to make the card images, and the one-image ad skill when the idea fits one picture.
+
+terms:
+  - term: Carousel ad
+    meaning: An ad with several images people swipe through, side by side, in one post.
+  - term: Bridge
+    meaning: The unfinished thought at the end of a card that the next card completes.
+  - term: Text above the ad
+    meaning: The words that appear above the images in a Facebook or Instagram ad.

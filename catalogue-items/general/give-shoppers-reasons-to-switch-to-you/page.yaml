@@ -1,0 +1,186 @@
+new_slug: give-shoppers-reasons-to-switch-to-you
+name: Give shoppers reasons to switch to you
+summary: Up to five reasons to switch from what buyers use now, each backed by a fact.
+job: write-landing-page
+
+headline: Win over comparison shoppers with up to five reasons to switch, each backed by a fact
+subhead: Give it your facts and offer, plus the ad and real customer quotes if you have them. It names what your reader uses now, writes up to five distinct reasons to switch, each with its proof, then the offer, the questions and four headline options to choose from.
+
+explain: |
+  Some buyers already know what kind of product they want and are comparing options. A product page doesn't tell them why yours beats what they already use. A short "reasons to choose this" page sits between the ad and the product page and does that one job.
+
+  This skill writes that page. It starts by pinning who's reading and what they use now, because every reason has to be a reason to choose yours over that. Each reason argues one thing, with a title that reads as a claim on its own and a short body built on a fact. Real customer quotes sit next to the reason they prove. Five is the default, but if only three reasons are truly different and supported, you get three. The offer comes once, after the reasons, and the last reason is always about risk or the offer.
+
+when:
+  - Your buyers are comparing you with a cheaper or more familiar option, and your product page doesn't say why you're better for them.
+  - You want a short page between your ad and your product page for people who aren't ready to buy yet.
+  - You have several real differences but they're buried in a feature list.
+
+you_give:
+  - Your facts, such as what the product is, what sets it apart, prices and offers, guarantee, delivery and the claims you may make
+  - The ad that sends people there (strongly recommended)
+  - Real customer quotes and the doubts that stop people buying (recommended)
+  - How many reasons you want, if not five (optional)
+you_get:
+  - A page brief and four headline options with a recommendation
+  - Up to five reasons, each with a title, short body, proof and image note
+  - The offer block, 6 to 8 questions and a closing section
+  - A MISSING list of what it couldn't fill
+
+how_to_use:
+  - Copy the skill and paste it into Claude, ChatGPT or Gemini.
+  - Paste your facts and current offers, and say what your buyer uses or considers now.
+  - Paste the ad that will send people here, so the headline keeps its words.
+  - Add real customer quotes with their source. Reasons without proof get placed in the middle, where they hurt least.
+  - Pick a headline from the four options and check the reasons against your facts.
+
+how_it_works:
+  - title: Pins buyer and alternative
+    text: Who's reading and what they use now. Every reason is a reason to choose this over that.
+  - title: Writes headline options
+    text: Keeps the ad's words if there is an ad. Otherwise offers four shapes (switching, an occasion, a discovery, stepping up from a bland kind of product) and recommends one.
+  - title: Chooses the reasons
+    text: Each argues one thing, strongest first for this buyer, with the last about risk or the offer.
+  - title: Writes each reason
+    text: A 6 to 10 word title that reads as a claim, and a short body on what they do now, what changes and the fact that makes it true.
+  - title: Places the proof
+    text: Real quotes sit with the reason they prove. No quotes means no proof tiles.
+  - title: Adds offer and questions
+    text: The ad's offer once, after the reasons, with what's included, then 6 to 8 questions a hesitant buyer would ask.
+  - title: Keeps it honest
+    text: Bylined by the business or a real person, never a made-up author or a layout that looks like a magazine.
+
+output_shape: |
+  PAGE BRIEF
+  Buyer: <who>   Uses now: <alternative>   Ad hook: "<...>"   Offer: <...>
+
+  HEADLINE OPTIONS
+  Switch: <...>   Occasion: <...>   Discovery: <...>   Step up: <...>
+  Pick: <one> . <why>
+  Under it: <who is talking or why now>
+
+  <N> REASONS
+  1 <title, 6 to 10 words, reads as a claim>
+    <what they do now, what changes, the fact that makes it true>
+    Proof: "<real quote>" (<source>) | none
+    Image: <what it shows>
+  ...
+  <N> <reason about risk or the offer>
+
+  OFFER   <the ad's offer, what's included, guarantee and delivery lines>
+  QUESTIONS (6 to 8)   <doubt> / <answer>
+  CLOSING   <heading> . <one sentence> . Button: <same wording throughout>
+  MISSING   <each fact it couldn't fill>
+
+example:
+  business: sprout
+  input: |
+    [the skill]
+
+    Facts: sprout/brand.md (product, prices, guarantee, claims fine and
+    risky, competitors as kinds of product).
+
+    Buyer: has quit greens powders and pill stacks and wants one habit
+    that lasts. Uses now: a greens powder and a shaker.
+
+    No ad yet. Quotes: sprout/reviews.md (R1, R3, R6, R18).
+    Offer: Subscribe & Save, Low Sugar: $29.99 first box with the text
+    sign-up discount, then $49.99 every 4 weeks.
+    Count: five.
+  output: |
+    PAGE BRIEF
+    Buyer: powder quitter   Uses now: greens powder and a shaker
+    Ad hook: none   Offer: Subscribe & Save, $29.99 first box
+
+    HEADLINE OPTIONS
+    Switch:    Why powder people are swapping the shaker for a gummy pack
+    Occasion:  Your greens for the mornings you're already running late
+    Discovery: Quit greens powders before? Here's the one you'll keep taking
+    Step up:   Leave the chalky tub behind for greens you want to eat
+    Pick: Switch. This buyer's story is the swap itself.
+    Under it: From the Sprout team, for everyone with a half-used tub.
+
+    5 REASONS
+    1 The greens habit you'll still have in three months
+      You bought the powder. You stopped. Here, the whole step is: tear a
+      pack, eat it. 95% of surveyed users take it at least 4 to 6 times a
+      week.
+      Proof: "[Sprout] has been the one thing I've been able to stick to."
+      (R1)   Image: hand tearing a pack straight across the top
+    2 No scoop, no shaker, nothing to wash up
+      No water, no mixing. Just grab a pack and go.
+      Proof: "not having to clean a shaker bottle or extra dishes for
+      greens stuff in powder form, is absolutely excellent!" (R6)
+    3 A whole shelf of bottles in one small pack
+      60+ ingredients, 21 vitamins and minerals and 6 g prebiotic fiber.
+      Vitamins at about 100% of daily value, minerals about 25%.
+      Proof: none   Image: one pack beside the nutrition label
+    4 Tested for what you'd worry about
+      Third-party tested for 70 pesticides, 4 heavy metals, 16
+      contaminants and 9 microbial contaminants. Clinically tested for
+      nutrient absorption in our 2025 study: blood vitamin C up 40.1%,
+      folate up 20.5%.
+      Proof: none
+    5 Try it on us, the first time
+      30-day money-back guarantee on your first order. Pause or cancel any
+      time. Taste can take a moment: "after the third day they started
+      tasting better" (R18)
+
+    OFFER
+    Subscribe & Save, Low Sugar, 28 daily packs
+    $29.99 for your first box with our text sign-up discount
+    Then $49.99 every 4 weeks ($1.78 a day)
+    Includes: 28 single packs in one resealable pouch
+    30-day money-back guarantee, first order only. Ships within 24 hours.
+
+    QUESTIONS (cut to 3 of 7)
+    Can a gummy hold as much as my powder? See reason 3 for what's in it.
+    Will Sugar-Free upset my stomach? It uses sugar alcohols. Start with
+      Low Sugar if your stomach is sensitive.
+    Why is the guarantee first order only? That's our policy: "This policy
+      applies only to your initial purchase."
+
+    Button (everywhere): Start my first box
+
+    MISSING
+    - A star rating with one agreed source, so no rating line
+    - The 4 free gifts: which gifts, so none are listed
+
+tweaks:
+  - what: What the buyer uses now
+    how: This decides every reason. "Cheap supermarket version" gets reasons about what's in it and how long it lasts. "A pricier premium brand" gets reasons about value and what you don't pay for.
+  - what: The count
+    how: Ask for three, five or seven. If there aren't that many distinct, supported reasons, it gives fewer and tells you why, rather than padding.
+  - what: Layout notes
+    how: Ask for the "magazine style" or "conversion first" layout notes. Considered, story-led products suit the first; paid traffic and bundle offers suit the second.
+  - what: Bought again or bought once
+    how: Something bought again gets reasons about contents, keeping it up and cost per day (only if stated). Something bought once gets materials, how long it lasts, fit, returns and warranty.
+
+judge:
+  - Each reason argues something different. No two say the same thing in new words.
+  - Every title reads as a claim on its own. None is a label like "Benefits" or "Quality".
+  - Every reason rests on a fact you supplied.
+  - No rating, review count, press mention, badge or guarantee appears that you didn't supply.
+  - No competitor is named. The alternative is described as a kind of product.
+  - The byline is the business or a real person, and nothing looks like a magazine or review site.
+
+test:
+  - Read only the reason titles aloud. Each should make a different claim. If two sound alike, ask it to merge them.
+  - Give it facts that only support three reasons. It should deliver three and say why, not pad to five.
+  - Check every reason against your facts, and every proof tile against your reviews, word for word.
+  - Show the four headline options to someone who buys in your category and ask which they'd click. Compare their pick with the skill's.
+
+improve:
+  - Write the alternative your buyers use now into step 1 (the powder, the pills, the old tool), so every run argues against the right thing.
+  - Change the default count in "What you need" if your product has three strong reasons, not five.
+  - Choose your layout once in step 10 (magazine style or conversion first) and delete the other.
+  - Save the reasons that sell to your brand file, so your next page and your next ads start from them.
+  - Pair it with a skill that turns reviews into ranked buying reasons first, and one that builds the finished page in your Shopify store.
+
+terms:
+  - term: Reasons-to-buy page
+    meaning: A short page listing a few distinct reasons to choose your product over what the reader uses now.
+  - term: Byline
+    meaning: The line saying who wrote the page. Here it's your business or a real person who agreed.
+  - term: Proof tile
+    meaning: A small box with a real customer quote and its source, placed next to the reason it supports.

@@ -1,0 +1,18 @@
+slug: stop-your-copy-sounding-like-ai
+renamed_from: machine-sounding-copy-tells-check
+name: "Stop your copy from sounding like AI"
+summary: "Every line that reads as machine-written found, with a plain fix, from 18 patterns readers spot."
+category: general
+type: skill
+role: check
+job: copy
+level: beginner
+inputs:
+  - {type: copy_draft, required: true}
+outputs:
+  - {type: audit_report}
+uses: [get-script-presenter-can-say-without-stumbling]
+origin: rebuilt
+source_ids: [CES-022]
+old_name: copy-craft
+version: 1.0.0

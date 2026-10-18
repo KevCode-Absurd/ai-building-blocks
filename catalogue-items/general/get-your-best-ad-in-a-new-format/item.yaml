@@ -1,0 +1,22 @@
+slug: get-your-best-ad-in-a-new-format
+renamed_from: same-ad-new-format-remake
+name: "Get your best ad in a new format"
+summary: "An ad you already run, rebuilt as a video, carousel or still, with every word kept in order."
+category: general
+boards: [ecommerce]
+type: skill
+role: render
+job: ads
+level: advanced
+inputs:
+  - {type: script, required: true}
+  - {type: product_data, required: false}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: script}
+  - {type: image_prompt}
+uses: []
+origin: own
+source_ids: [CES-003]
+old_name: ad-reference-exact
+version: 1.0.0

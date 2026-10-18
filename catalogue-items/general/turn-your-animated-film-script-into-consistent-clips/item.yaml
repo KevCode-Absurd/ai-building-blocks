@@ -1,0 +1,23 @@
+slug: turn-your-animated-film-script-into-consistent-clips
+renamed_from: cinematic-3d-video-ad-director
+name: "Turn your animated film script into consistent clips"
+summary: "Still and clip prompts for an animated-feature look, with fixed characters and your exact label."
+category: general
+boards: [ecommerce]
+type: skill
+role: render
+job: video
+level: advanced
+inputs:
+  - {type: script, required: true}
+  - {type: product_data, required: true}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: image_prompt}
+  - {type: video_prompt}
+uses: [get-a-warm-animated-film-ad-script]
+example: cinematic-3d
+origin: rebuilt
+source_ids: [CES-016]
+old_name: cinematic-3d-animation
+version: 1.0.0

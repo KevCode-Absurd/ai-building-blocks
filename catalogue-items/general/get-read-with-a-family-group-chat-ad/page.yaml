@@ -1,0 +1,175 @@
+new_slug: get-read-with-a-family-group-chat-ad
+name: Get read with a family group chat ad
+summary: A generic family or friends group chat screenshot where the problem comes up, with four to seven messages.
+job: make-image-ads
+
+headline: A family group chat screenshot where the problem finally gets said out loud
+subhead: Give it a story ad with family or friends in it. It writes a short group name and four to seven messages from two or three people, the way they talk to each other, and a prompt for a plain, unbranded chat screenshot.
+
+explain: |
+  A group chat is where people admit things they'd never post: the joke about their knees, the shelf of things they bought and never use, the problem nobody fixes. A screenshot of one stops the thumb because it looks private, and the group name and the way people write show the reader exactly who the narrator is.
+
+  This skill writes the chat from your story: a group title of two to four words, and four to seven short messages from two or three senders, showing the problem or the joke about it. It uses invented first names, initials instead of contact photos, and a generic chat layout that copies no real app's colours, ticks or wallpaper. No message mentions or recommends your product. If your story doesn't quote the messages, it says so, so you read them before anything runs.
+
+when:
+  - Your story has family or friends in it who joke about the problem or notice it.
+  - You're writing for a specific kind of person and their group chat would show who they are.
+  - Chat apps are how your buyers talk to each other.
+
+you_give:
+  - Your approved story ad, with the family or friends in it
+  - How your buyer talks to family, and whether they use group chats (optional)
+  - Whether words on the image are on or off (optional, default on)
+you_get:
+  - A group title and four to seven messages, with senders and times
+  - A blank version of the chat screen
+  - The headline under the image and flags on any written messages
+  - A 60 to 120 word image prompt, ready to paste
+
+how_to_use:
+  - Copy the skill and paste it into Claude, ChatGPT or Gemini.
+  - Paste your story ad underneath. If you already know what the chat says, put the messages in the story.
+  - Add a line on who's in the group (sisters, old school friends, the family).
+  - Read every message before you make the picture. You're putting words in made-up people's mouths.
+  - Paste the image prompt into your image tool and check each message letter by letter.
+
+how_it_works:
+  - title: Sets the ground rules
+    text: Square, looks like a phone screenshot, no logo, price, button, product or real app look.
+  - title: Writes the chat
+    text: A two to four word group title and four to seven messages of 3 to 14 words from two or three senders, showing the problem as the story tells it.
+  - title: Briefs a generic screen
+    text: Group title, sender names in colour, times. Nothing that looks like a real chat app.
+  - title: Gives every word exactly
+    text: Each message with its sender. First names only, and initials where contact photos would be.
+  - title: Describes the blank version
+    text: The same chat with the message area empty, so you can rewrite the words later.
+
+output_shape: |
+  SCENE
+  <one sentence: what someone scrolling would say they saw>
+
+  WHERE AND WHEN
+  <the screen and time of day>
+
+  GROUP TITLE AND TIMES
+  "<2 to 4 word group title>", <initials circle>, <times>
+
+  MESSAGES
+  <sender>  <time>  <message, 3 to 14 words>
+  <4 to 7 messages from 2 or 3 senders, in order>
+
+  WORDS ON THE IMAGE
+  <the title and messages, exactly as written>
+  BLANK VERSION
+  <the chat with an empty message area>
+  HEADLINE UNDER THE IMAGE
+  Read this if your family chat sounds like this.
+
+  FLAGS
+  <whether the messages were written for the image>
+
+  IMAGE PROMPT
+  <60 to 120 words, ready to paste>
+
+example:
+  business: sprout
+  input: |
+    [the skill]
+
+    Story ad (approved, built on review 5):
+    At Sunday dinner my brother counted the supplement bottles in my
+    cupboard. Seven. Probiotic gummies, B12 gummies, multivitamin
+    gummies, a greens powder I'd stopped mixing.
+    That night my sister asked in the family chat which ones I
+    actually took. I didn't answer.
+    Now it's one Sprout daily pack: 60+ ingredients, 21 vitamins and
+    minerals and 6 g prebiotic fiber, in a small handful of gummies.
+    I stopped buying the others.
+
+    Buyer: the quitter who wants to stick, 28 to 45. Family chats
+    are how they talk (inferred).
+  output: |
+    SCENE
+    A family group chat called Sunday Dinner, teasing someone about
+    the supplement bottles in their cupboard.
+
+    WHERE AND WHEN
+    A phone screen, Sunday evening, messages from 19:02 to 19:10.
+
+    GROUP TITLE AND TIMES
+    "Sunday Dinner", grey initials circle, small times on each
+    message.
+
+    MESSAGES
+    Tom   19:02  how many supplement bottles are in your cupboard now
+    Ella  19:04  i counted seven last sunday
+    Me    19:06  they're not all open
+    Tom   19:07  that's worse somehow
+    Ella  19:10  which ones do you actually take
+
+    WORDS ON THE IMAGE
+    The title and the five messages above, exactly as written, from
+    three senders (the narrator's on the right).
+
+    BLANK VERSION
+    The chat with its title bar and an empty message area.
+
+    HEADLINE UNDER THE IMAGE
+    Read this if your family chat sounds like this.
+
+    FLAGS
+    Words written for the image: read before it runs. The story
+    describes the chat but doesn't quote it. The messages say only
+    what the story says (seven bottles, the sister's question). The
+    narrator's line and Tom's reply are banter and add no fact.
+    Tom and Ella are invented first names. No message names Sprout.
+    Inferred: that this buyer talks to family in a group chat.
+
+    IMAGE PROMPT
+    Square 1:1 cropped phone screenshot of a generic group chat,
+    plain light grey background, top bar reading "Sunday Dinner"
+    beside a grey initials circle. Five bubbles, sender names in
+    different colours, small times. Tom: "how many supplement bottles
+    are in your cupboard now" 19:02. Ella: "i counted seven last
+    sunday" 19:04. Right-side bubble: "they're not all open" 19:06.
+    Tom: "that's worse somehow" 19:07. Ella: "which ones do you
+    actually take" 19:10. Lower case, spelled exactly. No real app
+    design, no emoji, no photos, no logo, no product.
+
+tweaks:
+  - what: Who's in the group
+    how: Change the group to old school friends, the in-laws or a work chat, and the messages change tone. The group name tells the reader who the narrator is.
+  - what: Joke or admission
+    how: Ask for "the joke about it" for a light story, or "the moment someone says it seriously" for a story about deciding to act. Ella's question is the second kind.
+  - what: Number of messages
+    how: Four messages is easier to read on a phone. Seven feels more like a real chat but needs bigger text.
+  - what: Words off
+    how: If you switch words off, this picture can't exist. It will hand you to the snapshot skill instead.
+
+judge:
+  - Every name is an invented first name, never a real person's name, number or photo.
+  - The screen looks like no real chat app, with no logo, colours, wallpaper or tick marks.
+  - No message announces, recommends or names your product, or states a result.
+  - It reads like people talking, in lower case, with no walls of emoji.
+  - The flags tell you if the messages were written for the picture.
+
+test:
+  - Run it on a story that quotes the chat word for word. It should copy every message exactly and say so in the flags.
+  - Run it on a story that only describes the chat. It should write the messages and flag them as written for the image.
+  - Show the screenshot to someone who fits your buyer and ask who they think is in the group. If they can't say, change the group name.
+  - Read the messages aloud. If any sounds like a sales line, cut it and run it again.
+
+improve:
+  - Add how your buyers talk to each other (a few real customer phrases) to the brand file section, so written messages sound like them.
+  - Add your market's chat habits to "What you need". If your buyers don't use group chats, set the skill to send you to the two-person text thread instead.
+  - Write the real messages into your story when you have them. Then the picture quotes the story and nothing needs extra checking.
+  - Keep the blank version and test two different chats on the same screen.
+
+terms:
+  - term: Story ad
+    meaning: An ad whose main text tells one person's story in their own words, like a post from a friend.
+  - term: Blank version
+    meaning: The same picture with no words, so you can change the words later without starting again.
+  - term: Headline under the image
+    meaning: The bold line under the picture in a Facebook or Instagram ad.

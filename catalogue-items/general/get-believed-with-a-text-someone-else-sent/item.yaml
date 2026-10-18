@@ -1,0 +1,21 @@
+slug: get-believed-with-a-text-someone-else-sent
+renamed_from: native-ad-image-two-person-text-thread
+name: "Get believed with a text someone else sent"
+summary: "A plain text-message screenshot of three to six short messages between your narrator and one other person."
+category: general
+boards: [ecommerce]
+type: skill
+role: render
+job: image
+level: intermediate
+inputs:
+  - {type: ad_copy, required: true}
+  - {type: persona, required: false}
+outputs:
+  - {type: image_prompt}
+uses: [get-story-ads-read-with-the-right-picture]
+example: native
+origin: own
+source_ids: [CES-073]
+old_name: text-bubbles
+version: 1.0.0

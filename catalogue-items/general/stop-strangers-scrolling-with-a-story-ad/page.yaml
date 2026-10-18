@@ -1,0 +1,212 @@
+new_slug: stop-strangers-scrolling-with-a-story-ad
+name: Stop strangers scrolling with a story ad
+summary: A picture of your buyer's problem and a 150 to 400 word story ad that answers it.
+job: write-ad-copy
+
+headline: Get strangers who have never heard of you to stop and read your ad
+subhead: Give it your customers' own words about the problem and the claims you may make. It checks the problem is one people feel, picks a picture of that moment, writes a 150 to 400 word story that answers it, and says where the click should go.
+
+explain: |
+  People scrolling at night are not shopping. They spot a product photo as an ad in a fraction of a second and move on. A picture of a moment they live through, such as lying in bed at 11 pm with the phone, gets a second look a product never gets.
+
+  This skill writes that kind of ad, made to look like a normal post. First it checks the buyer feels a real problem; if not, it tells you to run a plain product ad instead. Then it picks a picture type from what a bystander would see, names the one question the picture raises, and writes a short story that answers it in the buyer's own phrases. The story ends with a soft pointer to an article-style page, never a price or a product page.
+
+when:
+  - You want to reach people who have never heard of you, and your product ads only reach people who already know you.
+  - Your reviews keep describing the same moment, and you want an ad built on it.
+  - You have an article-style page that teaches the problem, or you are about to build one.
+
+you_give:
+  - Customer words about the problem (reviews, emails, call notes), with where each came from
+  - Your product facts, the claims you may make and what you never say
+  - Who the buyer is and when the problem bites (optional)
+  - Who may tell the story, such as the founder or a customer who agreed (optional)
+  - The page the click will open (optional)
+you_get:
+  - A pass or fail on whether this problem can carry a story ad
+  - A picture plan, the one question it raises, and the story with its exact word count
+  - A headline for under the picture and where the click should go
+  - Flags on anything inferred or needing a check, plus a short test plan
+
+how_to_use:
+  - Copy the skill and paste it into Claude, ChatGPT or Gemini.
+  - Paste five or so reviews that describe the problem, each with its number or source.
+  - Paste your product facts and your approved and banned claims.
+  - Say who may narrate and list only the facts on record about them. If nobody has agreed, leave it out and the story is told by the brand.
+  - Say whether the article page exists. If the result says it is missing, build that page before you spend on the ad.
+
+how_it_works:
+  - title: Tests the problem
+    text: Checks the buyer already feels a problem they would name. If not, it stops and suggests a direct product ad.
+  - title: Picks the picture
+    text: Asks what a bystander would see of the problem and picks the matching picture type, such as a candid moment or a room that changed.
+  - title: Tests the picture
+    text: The buyer should think "that's me", and the picture must make sense with no product in it.
+  - title: Names the question
+    text: Writes down the one question the picture raises, which the picture itself never answers.
+  - title: Writes the story
+    text: Answers that question in five beats, from the moment the buyer knows to a better explanation the brand's claims support, then one soft next step.
+  - title: Writes the headline
+    text: Adds a second line under the picture that pulls readers in, never the product name or a line about their health.
+  - title: Sets where the click goes
+    text: Sends the click to an article-style page that teaches first and sells near the end, or says that page must be built.
+  - title: Plans the test
+    text: Suggests trying the same story with two or three pictures first, then different first lines, judged on sales, not clicks.
+
+output_shape: |
+  PAIN TEST   <pass or fail, with the buyer's own words>
+
+  PICTURE
+  Type:      <picture type>
+  Question:  <the one question the picture raises>
+  Scene:     <what's in the frame, no product, no words>
+
+  STORY  (opener: <type> / narrator: <who> / <word count> words)
+  <first line, answering the picture's question>
+  <recognition, in the buyer's words>
+  <the usual explanation, and why it falls short>
+  <what they tried, and why each fell short>
+  <the better explanation your claims support>
+  <one soft pointer to the page>
+
+  HEADLINE UNDER THE IMAGE
+  <one line, never the product name>
+  DESTINATION
+  <the article-style page, or MISSING and what its first screen promises>
+  FLAGS
+  - <quotes to get permission for, inferred lines, claims used>
+  TEST PLAN
+  1. <same story, two or three pictures>
+  2. <winning picture, new opener, judged on sales>
+
+example:
+  business: sprout
+  input: |
+    [the skill]
+
+    Buyer: the gut-fix seeker, 25 to 55, mostly women. Bloating and
+    irregularity, has tried fiber powders and probiotics. Wants to
+    feel normal.
+
+    Customer words:
+    7. "My bowel movements are normal for the 1st time in 15 years!"
+    8. "The prebiotics do their job, but not aggressively, and I feel
+       like my overall digestion has improved." (brand site)
+    9. "[Sprout] have been the solution to my problems with
+       regularity." (retailer)
+    10. "Feel lighter, less bloated and overall good." (retailer)
+
+    Product: Sprout, a daily pack of greens gummies, 6 g prebiotic
+    fiber. Low Sugar or Sugar-Free.
+    Allowed: "Supports digestion and gut health." Survey line, always
+    "of surveyed users": "67% ... experienced better, more regular
+    digestion."
+    Never: "fix", treats IBS, a result in a set time.
+    Narrator: nobody has agreed. No founder story on file.
+    Destination page: none yet.
+  output: |
+    PAIN TEST   Pass. Buyers name it: "problems with regularity" (9),
+                "less bloated" (10).
+
+    PICTURE
+    Type:      make-people-look-twice-at-the-leftover-mess
+    Question:  Why does one shelf hold three fixes for one stomach?
+    Scene:     A kitchen cupboard shelf, close up: an open tub of fiber
+               powder with a crusted scoop, a bottle of probiotic
+               capsules, a bag of prunes. No product, no words.
+
+    STORY  (opener: plain question / narrator: the brand, summing up
+    customers / 220 words)
+    Why does one shelf hold three different fixes for the same stomach?
+
+    Because the person who owns it has been trying for a long time. Our
+    customers describe it in reviews: the bloating, the problems with
+    regularity, the years of it.
+
+    Everyone tells you to eat more fiber. Fair. But a big bowl of
+    something fibrous every single day is a lot to keep up, and most
+    weeks it doesn't happen.
+
+    So you try things. A fiber powder you mix into water and force
+    down. Probiotic capsules in a separate bottle. None of that means
+    you did it wrong. Each fix asks for one more step, every day, and
+    the steps are the first thing to go when life gets busy.
+
+    What our customers keep telling us is simpler. The fiber that helps
+    is the fiber you actually take. One of them wrote that the
+    prebiotics "do their job, but not aggressively". Another said they
+    feel "lighter, less bloated and overall good". In our own survey,
+    67% of surveyed users experienced better, more regular digestion.
+
+    That's why we put 6 g of prebiotic fiber into a small pack of
+    gummies you can eat anywhere, with no water and no mixing.
+
+    We wrote down what we've learned about fiber people keep taking on
+    one page. It's below if you want it.
+
+    HEADLINE UNDER THE IMAGE
+    If your shelf holds three gut fixes, read this
+
+    DESTINATION
+    MISSING: an article-style page. Build it before this ad runs.
+    First screen should promise: why gut fixes don't stick, and what
+    makes one easy to keep. Product and offer near the end. Point
+    sensitive stomachs to Low Sugar, since Sugar-Free uses sugar
+    alcohols.
+
+    FLAGS
+    - Quoted words come from reviews 8 and 10. Neither is marked
+      verified. Get permission before quoting them in an ad.
+    - Inferred: "a big bowl ... every single day is a lot to keep up"
+      and the shelf's contents are common experience, not reviews.
+    - Claims used: the survey line, kept to "of surveyed users", and
+      6 g prebiotic fiber. No "fix", no IBS, no timing.
+    - Review 7 is the strongest line on file, but it reads as a
+      promise in a story for strangers. Left out.
+
+    TEST PLAN
+    1. Same story, two pictures: this shelf vs
+       keep-people-reading-with-a-hand-drawn-story (a private problem, drawn).
+    2. Winning picture, new opener: an admission ("I thought my
+       stomach was just like this."). Judge on page reads and
+       checkouts, and give strangers time.
+
+tweaks:
+  - what: The customer words you paste
+    how: The story borrows their phrases, so the reviews decide its voice. Paste reviews from powder quitters instead and you get a story about the shaker in the sink, with a different picture.
+  - what: Who narrates
+    how: A founder with real facts on record gives a first-person story. Leave the narrator out and the brand tells it by summing up what customers say. It never invents a customer or an expert.
+  - what: The picture type
+    how: If you already know which picture works for you, name it. The story's first line is then written to pick up that picture's question.
+  - what: The length
+    how: Ask for "about 150 words" for a quick read or "up to 400" when the better explanation needs room. It stays between 150 and 400 either way.
+
+judge:
+  - Cover the product name in your head. The picture and the first line should still make sense.
+  - The story's first line answers the question the picture raises.
+  - Every quoted phrase matches a review word for word. Check two against your reviews page.
+  - No price, discount or product page link appears anywhere in the story.
+  - Nothing says the product treats a condition or works in a set time.
+  - The word count it shows is between 150 and 400. Paste the story into a word counter to confirm.
+
+test:
+  - Run it on a problem you already know stops your buyers (the one your best ad or most reviews talk about). The pain test should pass and the picture should be something a buyer would recognise. If it isn't, paste more reviews about that moment.
+  - Run it with a product people buy only for its looks. It should fail the pain test and suggest a plain product ad. If it writes a story anyway, don't trust its pain test.
+  - Run it twice on the same reviews. The picture type and the question should match. The story's words can differ, but every quote must still match a review word for word.
+  - Show the story and your current best ad to someone who doesn't know your brand. Ask which one they'd keep reading. Don't say which is new.
+  - Read the flags. Every quoted review should be listed with its permission status, and every line not from a review marked as inferred.
+
+improve:
+  - Add your approved claims and never-say list to "What you need" in the skill file, so every story stays inside them without pasting.
+  - If you have a founder or customer who agreed to tell their story, write the facts on record about them into the skill under "Who may narrate", so it never has to fall back on the brand's voice.
+  - Delete the picture types in step 2 your business can't show (for example a test readout), so it picks only from ones you can shoot.
+  - When a picture and opener win, save them in your brand file and name them in your next run.
+  - Pair it with a skill that writes the article-style page the click goes to, and with one that plans the story ad before you write it.
+
+terms:
+  - term: Story ad
+    meaning: An ad made to look like a normal post, with a picture and a short first-person or brand story under it instead of a product pitch.
+  - term: Article-style page
+    meaning: A page that reads like an article. It explains the problem first and shows the product and offer near the end.
+  - term: Opener
+    meaning: The first line of the story, the one that makes someone keep reading.

@@ -1,0 +1,20 @@
+slug: turn-raw-footage-into-a-clear-social-post
+renamed_from: organic-video-edit-plan-from-footage
+name: "Turn raw footage into a clear social post"
+summary: "Your own raw footage turned into one social post, with every cut, caption, cover and export planned."
+category: general
+type: skill
+role: make
+job: organic
+level: advanced
+inputs:
+  - {type: footage, required: true}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: edit_plan}
+uses: []
+example: organic
+origin: own
+source_ids: [CES-093]
+old_name: organic-video-editing
+version: 1.0.0

@@ -1,0 +1,21 @@
+slug: get-noticed-with-a-sticky-note-ad
+renamed_from: native-ad-image-sticky-note-photo
+name: "Get noticed with an ad that's a sticky note"
+summary: "A sticky note photo where the problem shows up, with a reminder that gives away the workaround."
+category: general
+boards: [ecommerce]
+type: skill
+role: render
+job: image
+level: beginner
+inputs:
+  - {type: ad_copy, required: true}
+  - {type: persona, required: false}
+outputs:
+  - {type: image_prompt}
+uses: [get-story-ads-read-with-the-right-picture]
+example: native
+origin: own
+source_ids: [CES-071]
+old_name: sticky-note
+version: 1.0.0

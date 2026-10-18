@@ -1,0 +1,19 @@
+slug: stop-ai-pictures-getting-your-product-wrong
+renamed_from: product-truth-sheet-from-photos
+name: "Stop AI pictures getting your product wrong"
+summary: "A written record of your exact product that keeps AI pictures true, plus the photos still missing."
+category: ecommerce
+type: skill
+role: source
+job: image
+level: intermediate
+inputs:
+  - {type: product_photos, required: true}
+  - {type: product_data, required: false}
+outputs:
+  - {type: truth_sheet}
+uses: []
+origin: rebuilt
+source_ids: [CES-096, CES-049, CES-036, CES-009]
+old_name: photoshoot-factory/01-product-assets
+version: 1.0.0

@@ -1,0 +1,22 @@
+slug: write-story-ads-that-read-like-real-posts
+renamed_from: long-copy-ad-script-format-rules
+name: "Write story ads that read like real posts"
+summary: "A long story for your ad's main text, under a plain photo that looks like someone posted it."
+category: general
+boards: [ecommerce]
+type: skill
+role: make
+job: copy
+level: intermediate
+inputs:
+  - {type: brief, required: true}
+  - {type: brand_brain, required: true}
+outputs:
+  - {type: ad_copy}
+  - {type: image_prompt}
+uses: []
+example: long-copy
+origin: own
+source_ids: [CES-115]
+old_name: script-format-long-copy-static
+version: 1.0.0

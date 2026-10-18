@@ -1,0 +1,22 @@
+slug: get-one-true-fact-read-in-a-caption-bar
+renamed_from: native-ad-image-news-bulletin
+name: "Get one true fact read in a caption bar"
+summary: "A phone photo of the problem with a plain caption bar carrying one true, sourced fact."
+category: general
+boards: [ecommerce]
+type: skill
+role: render
+job: image
+level: advanced
+inputs:
+  - {type: ad_copy, required: true}
+  - {type: brand_brain, required: true}
+  - {type: persona, required: false}
+outputs:
+  - {type: image_prompt}
+uses: [get-story-ads-read-with-the-right-picture]
+example: native
+origin: own
+source_ids: [CES-058]
+old_name: breaking-news
+version: 1.0.0

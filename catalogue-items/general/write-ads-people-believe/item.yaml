@@ -1,0 +1,19 @@
+slug: write-ads-people-believe
+renamed_from: buyer-led-selling-fact-to-appeal
+name: "Write ads people believe"
+summary: "Ad copy built on the one true product fact that answers your buyer's biggest doubt."
+category: general
+type: prompt
+role: make
+job: copy
+level: intermediate
+inputs:
+  - {type: brief, required: true}
+  - {type: product_data, required: true}
+outputs:
+  - {type: ad_copy}
+uses: []
+origin: own
+source_ids: [CES-014]
+old_name: buyer-led-selling
+version: 1.0.0

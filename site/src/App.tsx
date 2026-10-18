@@ -1,14 +1,17 @@
 import { Suspense, lazy, useCallback, useEffect, useMemo, useState } from "react";
-import { ArrowIcon, BlockCard, Drawer, Logo, SearchIcon, ThemeToggle, Toast } from "./ui";
-import BlockDrawer from "./BlockDrawer";
-import { type Block, type Catalogue, type Kind, KINDS, LEVELS, TASKS, cap, kindOf, taskOf, useCatalogue } from "./lib/data";
+import { ArrowIcon, BlockCard, Drawer, Logo, SearchIcon, Select, ThemeToggle, Toast } from "./ui";
+import Globe from "./Globe";
+import { type Block, type Catalogue, type Kind, BUSINESSES, FUNCTIONS, KINDS, LEVELS, STARTS, TASKS, cap, functionsOf, kindOf, pathOf, startsFrom, taskOf, useCatalogue } from "./lib/data";
 import { kits, queueForCanvas, useStore } from "./lib/store";
+import { Link, navigate, setSearch, useLocation } from "./lib/router";
 
 const Builder = lazy(() => import("./Builder")); // the canvas loads after the page is up
+const BlockPage = lazy(() => import("./BlockPage"));
 
 // Shown first: things most people can use this week.
-const START_HERE = ["brand-knowledge-folder-from-website", "customer-language-to-angle-library", "ad-copy-brand-voice-check", "landing-page-copy-from-ad-and-facts", "video-ad-script-from-customer-research", "meta-ad-policy-check"];
+const START_HERE = ["write-ads-people-believe", "turn-website-into-brand-file-for-ai", "find-why-customers-buy-in-their-words", "make-every-ad-sound-like-your-brand", "find-what-stops-visitors-buying-30-quick-checks", "get-video-ad-script-in-customers-words", "keep-facebook-from-blocking-your-ads"];
 const PAGE = 12;
+const KIND_PATHS: Record<string, Kind> = Object.fromEntries(KINDS.map((k) => [k.path, k.id]));
 
 function Header({ onKits }: { onKits: () => void }) {
   const [scrolled, setScrolled] = useState(false);
@@ -21,10 +24,10 @@ function Header({ onKits }: { onKits: () => void }) {
   return (
     <header className={`header${scrolled ? " scrolled" : ""}`}>
       <div className="wrap header-in">
-        <a href="#top" className="brand" aria-label="AI Building Blocks, back to top"><Logo />AI Building Blocks</a>
+        <Link to="/" className="brand" aria-label="AI Building Blocks, home"><Logo />AI Building Blocks</Link>
         <nav className="nav" aria-label="Sections">
-          <a href="#library">Library</a>
-          <a href="#build">Builder</a>
+          <Link to="/#library">Library</Link>
+          <Link to="/#build">Builder</Link>
         </nav>
         <div className="header-end">
           <button className="btn btn-ghost btn-sm" onClick={onKits} data-testid="open-kits">My kits{kitCount > 0 && <span className="badge">{kitCount}</span>}</button>
@@ -35,61 +38,112 @@ function Header({ onKits }: { onKits: () => void }) {
   );
 }
 
-function Library({ c, onOpen }: { c: Catalogue; onOpen: (s: string) => void }) {
-  const [q, setQ] = useState("");
-  const [kind, setKind] = useState<Kind | "all">("all");
-  const [task, setTask] = useState("");
-  const [level, setLevel] = useState("");
-  const [limit, setLimit] = useState(PAGE);
-  useEffect(() => setLimit(PAGE), [q, kind, task, level]);
+type Filters = { q: string; fn: string; task: string; kind: Kind | "all"; level: string; biz: string; from: string };
+const NONE: Filters = { q: "", fn: "", task: "", kind: "all", level: "", biz: "", from: "" };
 
-  // Counts on each tab and filter reflect the other choices, so a zero is never a surprise.
-  const matching = useMemo(() => {
-    const words = q.toLowerCase().split(/\s+/).filter(Boolean);
-    const hay = (b: Block) => `${b.name} ${b.slug} ${b.summary} ${taskOf(b).name} ${b.inputs.map((p) => p.type).join(" ")} ${b.outputs.map((p) => p.type).join(" ")}`.toLowerCase().replace(/[_-]/g, " ");
-    return c.blocks.filter((b) => (!level || b.level === level) && words.every((w) => hay(b).includes(w)));
-  }, [c, q, level]);
-  const byKind = (k: Kind | "all") => matching.filter((b) => (k === "all" || kindOf(b) === k) && (!task || taskOf(b).id === task));
-  const order = (a: Block, b: Block) => Number(START_HERE.includes(b.slug)) - Number(START_HERE.includes(a.slug)) || KINDS.findIndex((k) => k.id === kindOf(a)) - KINDS.findIndex((k) => k.id === kindOf(b)) || a.name.localeCompare(b.name);
-  const results = byKind(kind).sort(order);
-  const forTasks = matching.filter((b) => kind === "all" || kindOf(b) === kind);
-  const filtered = !!(q || task || level || kind !== "all");
-  const clear = () => { setQ(""); setKind("all"); setTask(""); setLevel(""); };
-  const activeKind = KINDS.find((k) => k.id === kind);
+function Library({ c }: { c: Catalogue }) {
+  const { search } = useLocation();
+  const [f, setF] = useState<Filters>(() => {
+    const task = TASKS.some((t) => t.id === search.get("job")) ? search.get("job")! : "";
+    const fn = FUNCTIONS.find((x) => x.id === search.get("fn"))?.id ?? (task ? FUNCTIONS.find((x) => x.tasks.includes(task))!.id : "");
+    const kind = KINDS.some((k) => k.id === search.get("kind")) ? (search.get("kind") as Kind) : "all";
+    return { ...NONE, q: search.get("q") ?? "", fn, task, kind, level: search.get("level") ?? "", biz: search.get("biz") ?? "", from: search.get("from") ?? "" };
+  });
+  const set = (patch: Partial<Filters>) => setF((x) => ({ ...x, ...patch }));
+  const [limit, setLimit] = useState(PAGE);
+  // Press / anywhere to jump to the search box.
+  useEffect(() => {
+    const on = (e: KeyboardEvent) => {
+      const t = e.target as HTMLElement;
+      if (e.key !== "/" || e.metaKey || e.ctrlKey || /^(INPUT|TEXTAREA|SELECT)$/.test(t.tagName) || t.isContentEditable) return;
+      e.preventDefault();
+      const el = document.querySelector<HTMLInputElement>('[data-testid="library-search"]');
+      el?.focus(); el?.scrollIntoView({ block: "center", behavior: "smooth" });
+    };
+    window.addEventListener("keydown", on);
+    return () => window.removeEventListener("keydown", on);
+  }, []);
+  useEffect(() => { setLimit(PAGE); setSearch({ q: f.q, fn: f.fn, job: f.task, kind: f.kind === "all" ? "" : f.kind, level: f.level, biz: f.biz, from: f.from }); }, [f]);
+
+  // Every count reflects all the other choices, so a zero is never a surprise.
+  const words = f.q.toLowerCase().split(/\s+/).filter(Boolean);
+  const hay = (b: Block) => `${b.name} ${b.slug} ${b.summary} ${b.headline} ${taskOf(b).name} ${functionsOf(b).map((x) => x.name).join(" ")}`.toLowerCase().replace(/[_-]/g, " ");
+  const tests: Record<keyof Filters, (b: Block, v: string) => boolean> = {
+    q: (b) => words.every((w) => hay(b).includes(w)),
+    fn: (b, v) => !v || functionsOf(b).some((x) => x.id === v),
+    task: (b, v) => !v || b.task === v,
+    kind: (b, v) => v === "all" || kindOf(b) === v,
+    level: (b, v) => !v || b.level === v,
+    biz: (b, v) => !v || !!BUSINESSES.find((x) => x.id === v)?.test(b),
+    from: (b, v) => !v || startsFrom(b, v),
+  };
+  const keys = Object.keys(tests) as (keyof Filters)[];
+  const count = (over: Partial<Filters>) => {
+    const g = { ...f, ...over };
+    return c.blocks.filter((b) => keys.every((k) => tests[k](b, g[k] as string))).length;
+  };
+  const order = (a: Block, b: Block) => Number(START_HERE.includes(b.slug)) - Number(START_HERE.includes(a.slug)) || Number(!!b.headline) - Number(!!a.headline) || KINDS.findIndex((k) => k.id === kindOf(a)) - KINDS.findIndex((k) => k.id === kindOf(b)) || a.name.localeCompare(b.name);
+  const results = useMemo(() => c.blocks.filter((b) => keys.every((k) => tests[k](b, f[k] as string))).sort(order), [c, f]); // eslint-disable-line react-hooks/exhaustive-deps
+  const filtered = JSON.stringify(f) !== JSON.stringify(NONE);
+  const clear = () => setF(NONE);
+  const fn = FUNCTIONS.find((x) => x.id === f.fn);
+  const activeTask = TASKS.find((t) => t.id === f.task);
+  const pickFn = (id: string) => set({ fn: f.fn === id ? "" : id, task: "" });
 
   return (
     <section className="section wrap" id="library" aria-label="Library">
-      <label className="search big"><SearchIcon /><span className="visually-hidden">Search</span><input value={q} onChange={(e) => setQ(e.target.value)} placeholder="What do you want to get done? Try “video script” or “landing page”" data-testid="library-search" /></label>
-      <div className="kind-tabs" role="tablist" aria-label="Type">
-        <button role="tab" aria-selected={kind === "all"} onClick={() => setKind("all")}>All<span className="count">{byKind("all").length}</span></button>
-        {KINDS.map((k) => (
-          <button key={k.id} role="tab" aria-selected={kind === k.id} onClick={() => setKind(k.id)} data-testid={`tab-${k.id}`}>{k.plural}<span className="count">{byKind(k.id).length}</span></button>
-        ))}
+      <label className="search big"><SearchIcon /><span className="visually-hidden">Search</span><input value={f.q} onChange={(e) => set({ q: e.target.value })} placeholder="What do you want to get done? Try “ad copy” or “landing page”" data-testid="library-search" /><kbd className="kbd" aria-hidden="true">/</kbd></label>
+
+      <h2 className="fn-h">Pick the work you do, or want done</h2>
+      <div className="fns" role="group" aria-label="Pick a job function">
+        {FUNCTIONS.map((x) => {
+          const n = count({ fn: x.id, task: "" });
+          return (
+            <button key={x.id} className="fn" aria-pressed={f.fn === x.id} disabled={!n && f.fn !== x.id} onClick={() => pickFn(x.id)} data-testid={`fn-${x.id}`}>
+              <span className="fn-glyph" aria-hidden="true">{x.glyph}</span>
+              <span className="fn-name">{x.name}</span>
+              <span className="fn-line">{x.line}</span>
+              <span className="count">{String(n).padStart(2, "0")}</span>
+            </button>
+          );
+        })}
       </div>
-      <div className="filter-row">
-        <div className="chips" role="group" aria-label="What do you want to do?">
-          {TASKS.map((t) => {
-            const n = forTasks.filter((b) => taskOf(b).id === t.id).length;
-            if (!n && task !== t.id) return null;
-            return <button key={t.id} className="chip-btn" aria-pressed={task === t.id} onClick={() => setTask(task === t.id ? "" : t.id)}>{t.name}<span className="count">{n}</span></button>;
+      {fn && (
+        <div className="subjobs" role="group" aria-label={`Jobs a ${fn.name.toLowerCase()} does`} data-testid="subjobs">
+          <button className="chip" aria-pressed={!f.task} onClick={() => set({ task: "" })}>Everything<span className="count">{count({ task: "" })}</span></button>
+          {fn.tasks.map((id) => {
+            const t = TASKS.find((x) => x.id === id)!;
+            const n = count({ task: id });
+            return <button key={id} className="chip" aria-pressed={f.task === id} disabled={!n && f.task !== id} onClick={() => set({ task: f.task === id ? "" : id })} data-testid={`job-${id}`}>{t.name}<span className="count">{n}</span></button>;
           })}
         </div>
-        <select className="select" value={level} onChange={(e) => setLevel(e.target.value)} aria-label="Level">
-          <option value="">Any level</option>
-          {LEVELS.map((l) => <option key={l} value={l}>{cap(l)}</option>)}
-        </select>
+      )}
+
+      <div className="filter-row">
+        <div className="kind-tabs" role="tablist" aria-label="Type">
+          <button role="tab" aria-selected={f.kind === "all"} onClick={() => set({ kind: "all" })}>All<span className="count">{count({ kind: "all" })}</span></button>
+          {KINDS.map((k) => (
+            <button key={k.id} role="tab" aria-selected={f.kind === k.id} onClick={() => set({ kind: k.id })} data-testid={`tab-${k.id}`}>{k.plural}<span className="count">{count({ kind: k.id })}</span></button>
+          ))}
+        </div>
+        <div className="filters">
+          <Select label="Business" value={f.biz} onChange={(v) => set({ biz: v })} testId="filter-biz"
+            options={[{ value: "", label: "Any", count: count({ biz: "" }) }, ...BUSINESSES.map((x) => ({ value: x.id, label: x.name, count: count({ biz: x.id }) }))]} />
+          <Select label="You have" value={f.from} onChange={(v) => set({ from: v })} testId="filter-from"
+            options={[{ value: "", label: "Anything", count: count({ from: "" }) }, ...STARTS.map((x) => ({ value: x.id, label: x.name, count: count({ from: x.id }) }))]} />
+          <Select label="Level" value={f.level} onChange={(v) => set({ level: v })} testId="filter-level"
+            options={[{ value: "", label: "Any", count: count({ level: "" }) }, ...LEVELS.map((l) => ({ value: l, label: cap(l), count: count({ level: l }) }))]} />
+        </div>
       </div>
       <div className="result-line">
-        <span data-testid="result-count">{results.length} result{results.length === 1 ? "" : "s"}{activeKind ? ` · ${activeKind.what}` : ""}</span>
+        <span data-testid="result-count">{results.length} result{results.length === 1 ? "" : "s"}{activeTask ? ` for “${activeTask.name}”` : fn ? ` for a ${fn.name.toLowerCase()}` : ""}{f.kind !== "all" ? `. ${KINDS.find((k) => k.id === f.kind)!.what}` : ""}</span>
         {filtered && <button className="link-btn" onClick={clear}>Clear all</button>}
       </div>
       {results.length ? (
         <>
-          <div className="grid">{results.slice(0, limit).map((b) => <BlockCard key={b.slug} b={b} onOpen={onOpen} />)}</div>
+          <div className="grid">{results.slice(0, limit).map((b) => <BlockCard key={b.slug} b={b} />)}</div>
           {results.length > limit && <div className="more"><button className="btn btn-dark" onClick={() => setLimit(limit + 24)}>Show {Math.min(24, results.length - limit)} more</button></div>}
         </>
-      ) : kind === "agent" && !q && !task && !level ? (
-        <div className="empty"><h3 className="h3">Agents are coming next</h3><p>Until then, a <button className="link-btn" onClick={() => setKind("workflow")}>workflow</button> does the same job with you in charge of each step.</p></div>
       ) : (
         <div className="empty"><h3 className="h3">Nothing matches that yet</h3><p>Try fewer words, or <button className="link-btn" onClick={clear}>clear all</button>.</p></div>
       )}
@@ -97,28 +151,28 @@ function Library({ c, onOpen }: { c: Catalogue; onOpen: (s: string) => void }) {
   );
 }
 
-function KitsDrawer({ c, onClose, onOpen, toBuilder }: { c: Catalogue; onClose: () => void; onOpen: (s: string) => void; toBuilder: (s: string[], n?: string) => void }) {
+function KitsDrawer({ c, onClose, toBuilder }: { c: Catalogue; onClose: () => void; toBuilder: (s: string[], n?: string) => void }) {
   const all = useStore((s) => s.kits);
   const [name, setName] = useState("");
   return (
     <Drawer label="My kits" top={<span className="mono">saved in this browser</span>} onClose={onClose}>
       <h2 className="title" style={{ marginTop: 0 }}>My kits</h2>
-      <p className="small" style={{ marginBottom: 24 }}>Keep the things you use together. Open a kit in the builder to turn it into a workflow.</p>
+      <p className="small" style={{ marginBottom: 24 }}>Keep the skills you use together. Open a kit in the builder to turn it into a workflow.</p>
       <form className="kit-new" onSubmit={(e) => { e.preventDefault(); if (name.trim()) { kits.create(name); setName(""); } }}>
         <label className="search"><span className="visually-hidden">Kit name</span><input value={name} onChange={(e) => setName(e.target.value)} placeholder="Name a new kit" /></label>
         <button className="btn btn-primary btn-sm" style={{ height: 40 }} type="submit">Create</button>
       </form>
-      {all.length === 0 && <div className="empty"><h3 className="h3">No kits yet</h3><p>Open anything in the library and press Save to kit.</p></div>}
+      {all.length === 0 && <div className="empty"><h3 className="h3">No kits yet</h3><p>Open any skill and press Save to kit.</p></div>}
       {all.map((k) => (
         <div className="kit" key={k.id} data-testid="kit">
           <div className="kit-head">
             <input value={k.name} onChange={(e) => kits.rename(k.id, e.target.value)} aria-label="Kit name" />
-            <button className="btn btn-primary btn-sm" disabled={!k.slugs.length} onClick={() => toBuilder(k.slugs, k.name)}>Open in builder</button>
+            <button className="btn btn-primary btn-sm" disabled={!k.slugs.length} onClick={() => toBuilder(k.slugs, k.name)}>Open in the builder</button>
             <button className="btn btn-ghost btn-sm" onClick={() => { if (confirm(`Delete the kit "${k.name}"? Everything in it stays in the library.`)) kits.remove(k.id); }}>Delete</button>
           </div>
           <div className="kit-items">
             {k.slugs.length === 0 && <span className="small">Empty</span>}
-            {k.slugs.map((s) => <button key={s} onClick={() => onOpen(s)}>{c.bySlug[s]?.name ?? s}</button>)}
+            {k.slugs.map((s) => c.bySlug[s] ? <Link key={s} to={pathOf(c.bySlug[s])} onClick={onClose}>{c.bySlug[s].name}</Link> : <span key={s}>{s}</span>)}
           </div>
         </div>
       ))}
@@ -126,60 +180,100 @@ function KitsDrawer({ c, onClose, onOpen, toBuilder }: { c: Catalogue; onClose: 
   );
 }
 
+/** Types the subhead out like a terminal. The full sentence is there from the start for screen readers,
+ *  and the untyped part holds its space so nothing moves. Reduced motion shows it at once. */
+function Typewriter({ text }: { text: string }) {
+  const [n, setN] = useState(() => (matchMedia("(prefers-reduced-motion: reduce)").matches ? text.length : 0));
+  useEffect(() => {
+    if (n >= text.length) return;
+    const prev = text[n - 1];
+    const t = setTimeout(() => setN(n + 1), n === 0 ? 650 : prev === "." ? 420 : prev === "," ? 220 : 22 + Math.random() * 34);
+    return () => clearTimeout(t);
+  }, [n, text]);
+  return (
+    <p className="lede typed" data-done={n >= text.length}>
+      <span className="visually-hidden">{text}</span>
+      <span aria-hidden="true">{text.slice(0, n)}<span className="cursor" /><span className="ghost">{text.slice(n)}</span></span>
+    </p>
+  );
+}
+
+function Home({ c, toast }: { c: Catalogue | null; toast: (m: string) => void }) {
+  // A link like /#library opened fresh: jump there once the library has drawn.
+  useEffect(() => {
+    if (!c || !location.hash) return;
+    const id = location.hash.slice(1);
+    requestAnimationFrame(() => document.getElementById(id)?.scrollIntoView());
+  }, [c]);
+  return (
+    <main id="top">
+      <section className="hero">
+        <Globe />
+        <div className="wrap hero-in">
+          <h1 className="h1">Making humanity AI native</h1>
+          <Typewriter text="Stop doing the work AI could do for you. Save hours every week, and spend them on the work only you can do." />
+          <div className="hero-actions">
+            <Link to="/#library" className="btn btn-primary">Browse the blocks <ArrowIcon /></Link>
+            <Link to="/#build" className="btn btn-dark">Build a workflow</Link>
+          </div>
+        </div>
+      </section>
+
+      {c ? <Library c={c} /> : <section className="section wrap" id="library"><p className="small">Loading…</p></section>}
+
+      <section className="section wrap" id="build" aria-labelledby="build-h">
+        <div className="sec-head">
+          <h2 className="h2" id="build-h">Build a workflow</h2>
+          <p className="lede">Add skills in the order you want them to run, or start from a ready workflow. Then download one folder that Claude works through step by step.</p>
+        </div>
+        {c && <Suspense fallback={<div className="builder" />}><Builder c={c} toast={toast} /></Suspense>}
+      </section>
+    </main>
+  );
+}
+
 export default function App() {
   const c = useCatalogue();
-  const [open, setOpen] = useState<string | null>(() => new URLSearchParams(location.search).get("block"));
+  const { path, search } = useLocation();
   const [kitsOpen, setKitsOpen] = useState(false);
   const [toast, setToast] = useState<string | null>(null);
   const clearToast = useCallback(() => setToast(null), []);
-
-  // The open item lives in the URL (?block=slug) so it can be shared and survives a reload.
-  useEffect(() => {
-    const u = new URL(location.href);
-    if (open) u.searchParams.set("block", open); else u.searchParams.delete("block");
-    history.replaceState(null, "", u);
-  }, [open]);
-  const openBlock = useCallback((slug: string) => { setKitsOpen(false); setOpen(slug); }, []);
-  const close = useCallback(() => setOpen(null), []);
   const closeKits = useCallback(() => setKitsOpen(false), []);
+
+  // Old links (/?block=slug) and a page opened under the wrong type go to the right address.
+  const parts = path.split("/").filter(Boolean);
+  const pageSlug = parts.length === 2 && KIND_PATHS[parts[0]] ? parts[1] : null;
+  useEffect(() => {
+    if (!c) return;
+    // Blocks were renamed to say what they get you; their old names still lead to them.
+    const now = (s: string | null) => (s ? c.bySlug[s] ?? c.bySlug[c.renamed?.[s] ?? ""] : undefined);
+    const old = now(search.get("block"));
+    const here = now(pageSlug);
+    if (old) navigate(pathOf(old), { replace: true });
+    else if (here && pathOf(here) !== path) navigate(pathOf(here), { replace: true });
+  }, [c, search, pageSlug, path]);
+
   const toBuilder = useCallback((slugs: string[], asNew?: string) => {
     queueForCanvas(slugs, asNew);
-    setOpen(null); setKitsOpen(false);
-    setTimeout(() => document.getElementById("build")?.scrollIntoView({ behavior: "smooth" }), 50);
+    setKitsOpen(false);
+    navigate("/#build");
     setToast(asNew ? `${asNew} is open in the builder` : "Added to the builder");
   }, []);
 
   return (
     <>
       <Header onKits={() => setKitsOpen(true)} />
-      <main id="top">
-        <section className="hero wrap">
-          <h1 className="h1">Making humanity AI native</h1>
-          <p className="lede">Stop doing the work AI could do for you. Save hours every week, and spend them on the work only you can do.</p>
-          <div className="hero-actions">
-            <a href="#library" className="btn btn-primary">Browse the blocks <ArrowIcon /></a>
-            <a href="#build" className="btn btn-dark">Build a workflow</a>
-          </div>
-        </section>
-
-        {c ? <Library c={c} onOpen={openBlock} /> : <section className="section wrap" id="library"><p className="small">Loading…</p></section>}
-
-        <section className="section wrap" id="build" aria-labelledby="build-h">
-          <div className="sec-head">
-            <h2 className="h2" id="build-h">Build a workflow</h2>
-            <p className="lede">Add skills in the order you want, or start from a workflow. Then download one file your AI follows step by step.</p>
-          </div>
-          {c && <Suspense fallback={<div className="builder" />}><Builder c={c} toast={setToast} /></Suspense>}
-        </section>
-      </main>
+      {pageSlug ? (
+        c ? <Suspense fallback={<main className="wrap bp-hero"><p className="small">Loading…</p></main>}><BlockPage c={c} slug={pageSlug} toast={setToast} toBuilder={toBuilder} /></Suspense> : <main className="wrap bp-hero"><p className="small">Loading…</p></main>
+      ) : (
+        <Home c={c} toast={setToast} />
+      )}
       <footer className="footer">
         <div className="wrap footer-in">
-          <span>AI Building Blocks · free, and what you save stays in your browser.</span>
-          <nav aria-label="Footer"><a href="#library">Library</a><a href="#build">Builder</a><a href="https://github.com/KevCode-Absurd/ai-building-blocks">GitHub</a></nav>
+          <span>© 2026 AI Building Blocks</span>
         </div>
       </footer>
-      {c && open && <BlockDrawer c={c} slug={open} onOpen={openBlock} onClose={close} toast={setToast} toBuilder={toBuilder} />}
-      {c && kitsOpen && <KitsDrawer c={c} onClose={closeKits} onOpen={openBlock} toBuilder={toBuilder} />}
+      {c && kitsOpen && <KitsDrawer c={c} onClose={closeKits} toBuilder={toBuilder} />}
       <Toast message={toast} onDone={clearToast} />
     </>
   );

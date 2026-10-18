@@ -58,6 +58,19 @@ export const flows = {
   current() { return state.flows.find((f) => f.id === state.currentFlow) ?? null; },
 };
 
+/** Blocks get new names now and then; kits, workflows and history saved under an old name follow it. */
+export function migrateSlugs(renamed: Record<string, string>) {
+  const to = (s: string) => renamed[s] ?? s;
+  const moved = (xs: string[]) => xs.some((s) => renamed[s]);
+  if (!state.kits.some((k) => moved(k.slugs)) && !state.flows.some((f) => moved(f.nodes.map((n) => n.slug))) && !moved(state.recent)) return;
+  set({
+    ...state,
+    kits: state.kits.map((k) => ({ ...k, slugs: k.slugs.map(to) })),
+    flows: state.flows.map((f) => ({ ...f, nodes: f.nodes.map((n) => ({ ...n, slug: to(n.slug) })) })),
+    recent: state.recent.map(to),
+  });
+}
+
 export function markViewed(slug: string) {
   if (state.recent[0] === slug) return;
   set({ ...state, recent: [slug, ...state.recent.filter((s) => s !== slug)].slice(0, 12) });

@@ -1,0 +1,182 @@
+new_slug: make-ai-build-the-ad-you-pictured
+name: Make AI build the ad you pictured
+summary: Ready-made lines you paste into a brief so the AI follows your choices on look, product and selling.
+job: make-image-ads
+
+headline: Get the ad you pictured, because the AI follows your choices instead of guessing
+subhead: Pick one choice for each setting you care about, such as how big the product is, how polished the picture looks and how hard it sells. You paste only those ready-made lines into your brief, and the AI sticks to them.
+
+explain: |
+  When a brief says "make it feel natural" or "don't be too salesy", the AI guesses what you mean, and every run guesses differently. You get a glossy studio shot when you wanted a phone snapshot, or a price splashed on an ad meant to start a conversation.
+
+  This skill is a library of short do and do-not lines. Each setting, such as product in the picture, picture finish or how hard it sells, has a few choices, and each choice has one fixed snippet. You pick one choice per setting and paste those snippets, word for word, after five rules that always apply. Then it checks that your choices don't contradict each other and flags any material a choice needs that you haven't sent.
+
+when:
+  - Your image or video tool keeps giving you polished stock-looking shots when you wanted something real.
+  - You hand briefs to different people or AI tools and want them all to read your intent the same way.
+  - You're testing one change at a time, such as soft sell against direct, and need everything else held still.
+
+you_give:
+  - The brief for the ad, image or video you're making
+  - One choice for each setting you want to control
+  - Any material your choices need, such as product photos, brand images or a reference ad (optional)
+you_get:
+  - Your brief with the always-on rules and your chosen snippets added, each pasted whole
+  - A check that no two choices contradict each other
+  - A MISSING line for any material a choice needs and you didn't send
+
+how_to_use:
+  - Copy the skill and paste it into Claude, ChatGPT or Gemini.
+  - Paste your brief underneath.
+  - List your choices, one per setting, for example "Product in the picture, in the scene". Skip any setting you don't care about.
+  - Attach only the material your choices name. If you chose "in the scene", send a real product photo.
+  - Copy the finished brief into your image, video or writing tool. Don't reword the snippets.
+
+how_it_works:
+  - title: Takes your choices
+    text: Reads one choice per setting. A setting you skip adds nothing to the brief.
+  - title: Adds the fixed rules
+    text: Puts five always-on rules after the brief, such as "Invent no number, claim or quote" and "Use only what you were sent".
+  - title: Pastes your snippets
+    text: Adds the exact snippet for each choice, whole and unchanged, so every tool reads the same instruction.
+  - title: Checks for conflicts
+    text: Looks for two choices that fight, such as a phone-photo finish with a full brand look, and says which one wins.
+  - title: Flags missing material
+    text: Writes MISSING when a choice needs something you didn't send, such as a reference ad for "exactly like the reference".
+
+output_shape: |
+  BRIEF
+  <your brief, as sent>
+
+  ALWAYS ON
+  - <the five rules that apply to every brief>
+
+  <SETTING>: <CHOICE>
+  <the fixed snippet for that choice, pasted whole>
+  ... one block per choice you made ...
+
+  CONFLICT CHECK  <none, or which two choices fight and which one wins>
+  MISSING  <material a choice needs that you didn't send, or nothing>
+
+example:
+  business: sprout
+  input: |
+    [the skill]
+
+    Brief: one image ad for Sprout greens gummies, for busy parents
+    buying for themselves. The moment: the morning rush, keys in
+    hand. Buyer's words: "So easy to grab and eat on my way to the
+    billion things I have to do as a mom." (review 15)
+    Allowed claim: "60+ ingredients, 21 vitamins & minerals, and 6g
+    fiber" in 1 pack. Show it right: the daily pack is torn straight
+    across its top edge, gummies pour into a palm.
+    Offer: $29.99 first box with the text sign-up, then $49.99 every
+    4 weeks. 30-day money-back guarantee, first order only.
+
+    My choices:
+    - Product in the picture: clearly shown
+    - Picture finish: phone photo
+    - How hard it sells: direct
+    - Brand styling: colours and fonts only
+    - Words on the picture: headline only
+
+    Material: photo of gummies in a hand, photo of the pouch on a soft
+    gradient. Colours #00582D, #FFF7DF, #FFCC2E. Font: Work Sans.
+  output: |
+    BRIEF
+    One image ad for Sprout greens gummies, for busy parents buying
+    for themselves. The moment: the morning rush, keys in hand.
+
+    ALWAYS ON
+    - Every line is a whole sentence a person would say aloud to a
+      friend, in plain words. Only a price, an amount or a button is a
+      phrase.
+    - It makes sense alone to someone who has never heard of the brand.
+      Nothing needs decoding.
+    - It tells one story with one idea.
+    - Every fact is one that was supplied. Invent no number, claim or
+      quote.
+    - Use only what you were sent. What is not in front of you was left
+      out on purpose; do not guess at it.
+
+    PRODUCT IN THE PICTURE: CLEARLY SHOWN
+    Show the product inside the idea: in use, in a hand, or where the
+    scene happens, easy to read and exactly as photographed. Give a
+    person, hand or scene at least as much of the frame as the product.
+    Do not stand it alone on plain ground. Do not redraw the label,
+    change the shape or guess how it opens; if the facts do not say,
+    show it closed or at rest.
+
+    PICTURE FINISH: PHONE PHOTO
+    Describe a snapshot someone took, not a made image: a photo taken
+    on a phone and never meant as an ad. Name two or three
+    imperfections (room light or flash, a tilted frame, an off-centre
+    subject, grain). Real surfaces, clutter and skin; no retouching. No
+    studio light, golden glow, blurred background, matching props or
+    clean space for type. No logo, brand colours or set type that is
+    not in the scene. This wins over any line asking for finished art.
+
+    HOW HARD IT SELLS: DIRECT
+    State the offer plainly and early enough to be seen. Ask for the
+    order in clear words. Use the guarantee and deadline if sent; add
+    no term that was not sent (no made-up discount, deadline or
+    scarcity).
+
+    BRAND STYLING: COLOURS AND FONTS ONLY
+    Use them exactly as sent; choose the layout and kind of picture
+    freely; guess nothing else about the brand look.
+
+    WORDS ON THE PICTURE: HEADLINE ONLY
+    Plan one headline that carries the idea with the picture, short
+    enough to read at a glance. No sub-line, points, badge or button.
+
+    CONFLICT CHECK  Phone photo fights two choices. It bans brand
+    colours and set type that are not in the scene, so "colours and
+    fonts only" and "headline only" lose by its own rule. Pick one:
+    switch the finish to studio polished and keep the headline and
+    brand colours, or keep the phone photo and move the headline and
+    offer into the text around the ad. "Direct" then lives in that
+    text, since the picture can't carry the offer.
+    MISSING  Nothing for these choices. "Clearly shown" needs a real
+    product photo, and the in-hand photo was sent. No deadline was
+    sent, so "direct" uses none.
+    (cut for length: the full run repeats the whole brief word for word
+    under BRIEF, with the claim, show-it-right rule and offer)
+
+tweaks:
+  - what: Product in the picture
+    how: Move from "clearly shown" to "not shown" for a picture of the buyer's moment with no pack in it, or to "the hero" for a clean product shot on plain ground.
+  - what: Picture finish
+    how: The "phone photo" choice asks for two or three named flaws and no retouching. The "studio polished" choice gives controlled light and a clean background. Don't pair the phone photo with brand colours or a headline; the phone photo wins and the others are dropped.
+  - what: How hard it sells
+    how: The "soft" choice bans price, discount and deadlines. The "direct" choice states your offer early, but only with terms you send, so paste your real guarantee if you want it used.
+  - what: How close to stay to the brand
+    how: The "exactly like the reference" choice rebuilds a reference ad zone for zone with your product and words. It needs the reference itself, or you get a MISSING line.
+
+judge:
+  - Every snippet in the result matches the library word for word. Compare one.
+  - There is one choice per setting, never two for the same setting.
+  - The conflict check names any pair that fights and says which one wins.
+  - Each MISSING line names a specific piece of material, such as "a reference ad".
+  - Nothing in the snippets names your brand, product or a specific AI tool. Only your brief does.
+
+test:
+  - Pick choices you know fight (a phone photo with a full brand look) and run it. The conflict check must name the pair and say which one wins. If it says "none", don't trust its other checks.
+  - Choose "exactly like the reference" and don't send a reference. You should get a MISSING line, not a made-up description of one.
+  - Run the finished brief through your image tool twice, then run your old brief twice. The new pair should look more alike than the old pair. If not, a snippet was reworded on the way.
+  - Compare every pasted snippet with the library in the skill file. One changed word means the tool can read your intent differently.
+
+improve:
+  - Delete the settings you never use (for example video pace if you only make image ads), so the library in the skill file is shorter to choose from.
+  - Write your usual choices into the skill as a default set, for example "product clearly shown, studio polished, direct", and only list the ones that change.
+  - Add a fixed line under "Always on" with your brand's show-it-right rules (how the pack opens, what it never shows), so every brief carries them.
+  - When a set of choices wins a test, save it in your brand file with the ad it made.
+  - Pair it with a skill that turns the finished brief into a full image ad plan, and change one setting at a time between test ads.
+
+terms:
+  - term: Setting
+    meaning: One thing you can control in the ad, such as the picture finish or how hard it sells.
+  - term: Choice
+    meaning: One option for a setting, such as "phone photo" or "studio polished". Each choice has one fixed snippet.
+  - term: Snippet
+    meaning: A few do and do-not lines you paste into a brief, unchanged.

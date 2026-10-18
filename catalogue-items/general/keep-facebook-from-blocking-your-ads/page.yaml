@@ -1,0 +1,180 @@
+new_slug: keep-facebook-from-blocking-your-ads
+name: Keep Facebook from blocking your ads
+summary: Your Facebook or Instagram ad read against Meta's published ad rules, with what to fix first.
+job: check-ads
+
+headline: Keep Facebook from blocking your ads, before you hit publish
+subhead: Paste the ad's words, describe the image or video, and add the landing page if you have it. It checks each line against Meta's published ad rules and gives a verdict, the exact problem spots, the fix for each, and what it couldn't check.
+
+explain: |
+  Meta reviews every ad before it runs, and rejected ads cost you time, while borderline ones can get your account flagged. The rules are long, spread across many pages and change often, so it's easy to miss that a supplement ad needs 18+ targeting or that "Are you tired all the time?" breaks a rule about telling people what they are.
+
+  This skill reads your ad against a digest of Meta's Advertising Standards, written from the published pages as read in October 2026. It picks the rule areas that matter for your kind of product, quotes the exact line or spot that's a problem, and rates each finding as "would reject", "needs a restriction" (such as age targeting) or "warning". You get one of three verdicts and the fixes. It is a careful reading of the rules, never Meta's decision, so confirm anything important on Meta's live policy pages.
+
+when:
+  - You're about to launch ads for a supplement, food, cosmetic or anything health-related.
+  - An ad was rejected and you want to know which line caused it.
+  - You've written a strong claim and want to know if it crosses a line before you spend money on images.
+
+you_give:
+  - The ad's main text, headline, description and button
+  - The image described, or the video's key frames or script
+  - The landing page text and offer (optional, but some checks need it)
+  - What you sell, the countries and the age range you target (optional)
+you_get:
+  - A verdict (ready to run, fix first, or likely rejected) and the main reason
+  - A table of findings with the rule area, the exact spot, the problem and the fix
+  - Settings to change outside the ad, such as age targeting
+  - What passed, and what it couldn't check without more information
+
+how_to_use:
+  - Copy the skill and paste it into Claude, ChatGPT or Gemini.
+  - Paste the ad's words exactly as they will run, field by field.
+  - Describe the image, or paste the video script with timings.
+  - Add the landing page text and offer, plus your target age and countries.
+  - Fix the "would reject" lines first, then set any restrictions in Ads Manager, then decide on the warnings.
+
+how_it_works:
+  - title: Picks the rule areas
+    text: Starts with the areas that matter for your product. For supplements, food and cosmetics that usually means health claims, offer terms, personal attributes and body image.
+  - title: Judges only what it can see
+    text: Checks the words and pictures in the ad. Anything that depends on targeting, licences or the landing page is marked as such and never rated "would reject" on its own.
+  - title: Writes each finding
+    text: Names the rule area, quotes where it is, says what's wrong in plain words and gives the fix.
+  - title: Rates how serious it is
+    text: Uses "would reject" for a clear breach, "needs a restriction" for something fixed by a setting, and "warning" for a line a reviewer could read either way.
+  - title: Gives the verdict
+    text: Ready to run, fix first, or likely rejected, with the one main reason.
+  - title: Lists what passed
+    text: Shows the areas it checked and found nothing in, and what it could not check.
+
+output_shape: |
+  VERDICT  <ready to run | fix first | likely rejected>
+  Main reason: <one line>
+
+  FINDINGS
+  <n> <rule area> | <where: quote, spot or second> | <how serious>
+    <what's wrong, in plain words>
+    Fix: <the change>
+
+  RESTRICTIONS TO SET OUTSIDE THE AD
+  <age, countries, permissions, disclaimers>
+
+  PASSED
+  <areas checked and found fine>
+
+  COULD NOT CHECK
+  <what needs the page, the account or the targeting>
+
+  <note: a reading of Meta's published rules as of <date>, not Meta's
+  decision>
+
+example:
+  business: sprout
+  input: |
+    [the skill]
+
+    Format: Facebook image ad (words from a live Sprout ad)
+    Image: the pouch on a soft green gradient, gummies in front.
+      On-image text: "up to 61% OFF + 4 FREE gifts"
+    Main text: Feeling off in your gut lately? Sprout supports
+      digestion with 6g of fiber, prebiotics, and daily vitamins to
+      help keep your gut balanced without powders or prep.
+    Headline: Fix the Hot Girl Tummy
+    Button: Shop now
+    Product: Sprout, daily greens gummies (a supplement).
+    Landing page: the product page. Bar: "Save 52% + free shipping on
+      your first order". Badge: "GET UP TO 55% OFF". $29.99 first box,
+      footer: "Offer assumes customer has received and uses
+      promotional SMS discount". Under the button: "Renews at $49.99
+      each 4 weeks." No gifts shown.
+    Target age and countries: not set yet.
+  output: |
+    VERDICT  Fix first
+    Main reason: a supplement ad needs 18+ targeting, and the ad's
+    "61% OFF + 4 FREE gifts" isn't what the landing page offers.
+
+    FINDINGS
+    1 Health and wellness | whole ad | Needs a restriction
+      A supplement ad must run to people 18 and over.
+      Fix: set the age range to 18+.
+    2 Health and wellness | headline "Fix the Hot Girl Tummy" | Warning
+      "Fix" reads as a promise to treat bloating, with no qualifier.
+      "Hot Girl Tummy" can read as a comment on how a body looks.
+      Fix: drop "Fix" and the slang, and use your own allowed claim,
+      "Supports digestion and gut health".
+    3 Personal attributes | main text "Feeling off in your gut
+      lately?" | Warning
+      A question about the viewer's gut implies the ad knows their
+      health.
+      Fix: describe the product and who it's for, for example "For
+      people who want an easy daily fiber habit."
+    4 Deceptive commercial practices | on-image "up to 61% OFF" |
+      Warning
+      The page says 52% in the bar and "up to 55%" in the badge. The
+      ad and the page must offer the same thing.
+      Fix: use the number that's live at checkout, everywhere.
+      Depends on the page, so not rated "would reject".
+    5 Deceptive commercial practices | on-image "4 FREE gifts" |
+      Warning
+      No gifts are shown on the landing page.
+      Fix: show the gifts on the page, or drop them from the ad.
+    6 Deceptive commercial practices | landing page | Warning
+      The $29.99 needs a text sign-up and renews at $49.99. Both are
+      in small print. Hidden subscription terms are a named risk.
+      Fix: state the renewal price and the sign-up condition next to
+      the price. Depends on the page, so not rated "would reject".
+
+    RESTRICTIONS TO SET OUTSIDE THE AD
+    Age 18+. Countries: MISSING (not set yet).
+
+    PASSED
+    Drugs and medicines: presented as gummies, not a medicine.
+    Third-party IP: no tie-in characters or partner marks in the image.
+    Body image, adult content, profanity, violence: nothing found.
+
+    COULD NOT CHECK
+    The image itself (described only). Which discount is live at
+    checkout. Whether the 4 gifts exist. Target countries.
+
+    This reading is from Meta's published Advertising Standards as
+    read in October 2026. Confirm on the live policy pages before
+    relying on it. It is not Meta's decision.
+
+tweaks:
+  - what: The landing page
+    how: Paste it and the offer and relevance checks become complete. Without it, those findings are marked partial. In the example, every offer warning came from comparing the ad with the page.
+  - what: Targeting
+    how: Give the age range and countries. Then "needs a restriction" findings can be marked as already handled.
+  - what: A whole set of ads
+    how: Paste several ads at once and ask for one verdict per ad. Findings shared by all ads are listed once.
+  - what: Video ads
+    how: Paste the script with seconds marked ("0 to 3s ..."). Findings then point to the second, and it checks for flashing or strobing.
+
+judge:
+  - Every finding quotes the exact line or points to the exact spot.
+  - Nothing that depends on targeting or the landing page is rated "would reject".
+  - The fixes remove the problem. None of them hides a claim in code words, misspellings or symbols.
+  - Areas that don't apply to your ad aren't padded in.
+  - The note about the policy date and checking Meta's live pages is there.
+
+test:
+  - Run it on an ad Meta already rejected, with the rejection reason hidden. The finding it rates most serious should match Meta's reason. If it misses it, paste the rejected line on its own and see what it says.
+  - Run it on an ad that's been running for months without trouble. It should give "ready to run" or only warnings, not "likely rejected".
+  - Run the same ad twice. The verdict and the "would reject" findings should match. Warnings can vary a little; anything rated "would reject" must not.
+  - Check that nothing depending on your landing page or targeting is rated "would reject". If it is, the skill skipped its own rule.
+
+improve:
+  - Paste your allowed and banned claims into "What you need" in the skill file, so a line like "Fix the Hot Girl Tummy" is flagged against your own rules as well as Meta's.
+  - Write your product type, target countries and age range into the skill, so the restrictions section is filled in every time.
+  - Delete the rule areas from the table that can never apply to you (for example weapons or gambling), so findings stay short.
+  - Every time a line gets flagged, add it to the "never say" list in your brand file.
+  - Pair it with a skill that checks a finished ad for craft mistakes before you spend, since this one only reads the rules. Policies change, so open Meta's live page when a finding surprises you.
+
+terms:
+  - term: Personal attributes
+    meaning: Meta's rule against ads that say or imply who the viewer is, such as their health, money, age or identity.
+  - term: Restriction
+    meaning: A setting outside the ad that lets it run, such as 18+ age targeting or a country exclusion.
+  - term: Landing page
+    meaning: The page people reach when they tap the ad.

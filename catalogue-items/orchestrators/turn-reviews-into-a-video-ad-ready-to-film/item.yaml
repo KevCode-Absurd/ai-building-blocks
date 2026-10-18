@@ -1,0 +1,28 @@
+slug: turn-reviews-into-a-video-ad-ready-to-film
+name: Turn reviews into a video ad ready to film
+summary: "A video ad script and shot list in your customers' words, checked against ad rules before you film."
+category: orchestrator
+boards: [ecommerce]
+type: workflow
+role: orchestrate
+job: video
+level: advanced
+inputs:
+  - {type: web_page, required: true}
+  - {type: voc_reviews, required: true}
+  - {type: persona, required: true}
+  - {type: product_data, required: true}
+  - {type: performance_sheet, required: false}
+outputs:
+  - {type: shot_list}
+  - {type: audit_report}
+uses: [turn-website-into-brand-file-for-ai, find-why-customers-buy-in-their-words, get-video-ad-script-in-customers-words, get-script-presenter-can-say-without-stumbling, get-shot-list-that-keeps-ad-moving, keep-facebook-from-blocking-your-ads]
+steps:
+  - {uses: turn-website-into-brand-file-for-ai, note: "Build your brand file from your website: facts, voice, offers and the claims you can make."}
+  - {uses: find-why-customers-buy-in-their-words, note: "Pull the reasons people buy out of your reviews, in their own words, ranked by how many say it."}
+  - {uses: get-video-ad-script-in-customers-words, note: "Write the script around the top reason, using only facts from the brand file."}
+  - {uses: get-script-presenter-can-say-without-stumbling, note: "Read every line aloud and fix the ones nobody would say, without changing what they say."}
+  - {uses: get-shot-list-that-keeps-ad-moving, note: "Turn the script into timed shots a video tool can follow, one action per shot."}
+  - {uses: keep-facebook-from-blocking-your-ads, note: "Check the script and on-screen words against Facebook and Instagram ad rules before anything is filmed or made."}
+origin: own
+version: 1.0.0

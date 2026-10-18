@@ -1,0 +1,20 @@
+slug: get-fresh-script-from-why-ad-worked
+renamed_from: script-from-reference-idea
+name: "Get a fresh script from why an ad worked"
+summary: "Takes the one idea that made an ad work and builds a new script on your own research."
+category: general
+type: skill
+role: make
+job: video
+level: advanced
+inputs:
+  - {type: ad_breakdowns, required: true}
+  - {type: voc_reviews, required: true}
+  - {type: product_data, required: true}
+outputs:
+  - {type: script}
+uses: [get-video-ad-script-in-customers-words]
+origin: own
+source_ids: [CES-129]
+old_name: script-reference-principles
+version: 1.0.0

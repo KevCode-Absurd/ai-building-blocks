@@ -1,0 +1,180 @@
+new_slug: get-one-true-fact-read-in-a-caption-bar
+name: Get one true fact read in a caption bar
+summary: A phone photo of the problem with a plain caption bar carrying one true, sourced fact.
+job: make-image-ads
+
+headline: One true, sourced fact in a news-style caption bar that makes people read the line
+subhead: Give it your story ad and one fact you can back, with its source. It writes a 5 to 10 word caption in the source's own wording, adds a small topic label, and briefs a phone photo of the problem behind it. A person checks it before it runs.
+
+explain: |
+  A caption bar across the bottom of a photo looks like news, and people read news captions to find out what they say. That makes it good for one fact that changes how the reader sees the problem, the moment where they think "I didn't know that".
+
+  It only works with a true fact you already have on file with its source. The skill takes that single fact, writes it in 5 to 10 words the way the source says it, adds a one to three word label, and sets it on a plain bar over an everyday phone photo. It never borrows a real outlet's name, colours or studio look, never says "breaking" without a real dated event, and never invents a study or an expert. Because it borrows a news look, it always flags the picture for a person to check before it goes live.
+
+when:
+  - Your story turns on one fact that surprises the reader, such as a study result they didn't expect.
+  - You have that fact in your approved claims, with where it comes from.
+  - You want a picture that reads as information rather than as an ad.
+
+you_give:
+  - Your approved story ad, with the surprising fact marked
+  - The fact and its source, from your approved claims
+  - Where and when the problem happens, for the photo (optional)
+you_get:
+  - A 5 to 10 word caption and a 1 to 3 word label
+  - The fact and its source, for your records
+  - A flag for a person to check before it runs
+  - A 60 to 120 word image prompt, ready to paste
+
+how_to_use:
+  - Copy the skill and paste it into Claude, ChatGPT or Gemini.
+  - Paste your story ad underneath.
+  - Paste the one fact the story rests on, exactly as approved, with its source.
+  - Paste the image prompt into your image tool and check the caption letter by letter.
+  - Have a person look at it before it's published. It borrows a news look, so this check is not optional.
+
+how_it_works:
+  - title: Sets the ground rules
+    text: Square, looks taken on a phone, no logo, price, button, brand colour or product, and no real outlet's look.
+  - title: Takes one sourced fact
+    text: Uses the single fact your story's turn rests on. With no source on file, it stops.
+  - title: Writes the caption
+    text: Five to 10 words, one fact, said the way its source says it, plus a plain topic label.
+  - title: Briefs the photo behind it
+    text: An everyday phone photo of the problem, with the bar plainly a caption, not a TV graphic.
+  - title: Flags it for review
+    text: Always marks it for a person to check, and records the fact's source.
+
+output_shape: |
+  THE FACT AND ITS SOURCE (for your records, not printed)
+  "<the fact>" <source and date>
+  MISSING: <anything about the source not on file>
+
+  SCENE
+  <one sentence: what someone scrolling would say they saw>
+  WHERE AND WHEN
+  <place, time of day, what is within reach>
+  THE CAPTION BAR
+  <position, colour, type, label box>
+
+  WORDS ON THE IMAGE
+  Caption: "<5 to 10 words>"
+  Label: "<1 to 3 words>"
+  BLANK VERSION
+  <the same photo with an empty bar>
+  HEADLINE UNDER THE IMAGE
+  <the same statement, or "Read this before you buy another one.">
+
+  FLAGS
+  News-style format: a person must look at it before it is published.
+  <how far the fact can be pushed, and where it stops>
+
+  IMAGE PROMPT
+  <60 to 120 words, ready to paste>
+
+example:
+  business: sprout
+  input: |
+    [the skill]
+
+    Story ad (approved, built on the science page):
+    I figured gummy vitamins were candy with a label on.
+    Then I read Sprout's study. 12 weeks, 120 adults, randomized and
+    placebo-controlled. Blood vitamin C went up 40.1%, and folate up
+    20.5%, against placebo.
+    It measured absorption, nothing else. That was the part I'd
+    doubted.
+    One daily pack: 21 vitamins and minerals and 6 g prebiotic fiber,
+    in a small handful of gummies.
+
+    Sourced fact: "Blood vitamin C up 40.1% (2.7x placebo)."
+    Source: Sprout science page. 2025 study, 12 weeks, randomized,
+    double-blind, placebo-controlled, 120 healthy adults aged 23 to
+    59.
+  output: |
+    THE FACT AND ITS SOURCE (for your records, not printed)
+    "Blood vitamin C up 40.1% (2.7x placebo)." 2025 study, 12 weeks,
+    randomized, double-blind, placebo-controlled, 120 healthy adults
+    aged 23 to 59. Sprout science page.
+    MISSING: where the study is published, and who ran and paid for
+    it. The science page is the brand's own page.
+
+    SCENE
+    A kitchen counter in the morning with a jar of gummy vitamins,
+    and a plain caption bar across the bottom that reads "Blood
+    vitamin C up 40.1% in 12-week study".
+
+    WHERE AND WHEN
+    A home kitchen counter, morning, window light. Within reach: a
+    plain jar of multivitamin gummies with no label, a mug, a phone.
+
+    THE CAPTION BAR
+    Lower third, full width, solid dark grey, heavy plain white type.
+    A small label box on its left.
+
+    WORDS ON THE IMAGE
+    Caption: "Blood vitamin C up 40.1% in 12-week study" (8 words)
+    Label: "VITAMINS" (1 word)
+    No "BREAKING" or "LIVE". There's no real dated event.
+
+    BLANK VERSION
+    The same counter photo with an empty caption bar.
+
+    HEADLINE UNDER THE IMAGE
+    Read this before you buy another one.
+
+    FLAGS
+    News-style format: a person must look at it before it is
+    published.
+    Keep the word "blood". The study measured how well 2 vitamins were
+    absorbed. Don't stretch it to energy, immunity or "it works".
+    The study was in adults 23 to 59. Don't run it on Kids ads.
+    The jar is generic, never a named drugstore brand.
+
+    IMAGE PROMPT
+    Square 1:1 phone photo of a home kitchen counter in morning
+    window light. A plain plastic jar of multivitamin gummies with no
+    label sits beside a mug and a phone. Slight tilt, ordinary light,
+    a little grain, no retouching. Across the lower third, a plain
+    solid dark grey caption bar with heavy white sans-serif type
+    reading "Blood vitamin C up 40.1% in 12-week study", and a small
+    box on its left reading "VITAMINS", spelled exactly. A caption on
+    a phone photo, not a TV graphic. No outlet name, no logo, no
+    ticker, no clock, no studio, no person, no product, no children.
+
+tweaks:
+  - what: The fact
+    how: Swap in a different approved claim and the whole picture changes. Use the one your story's turn depends on, not the most impressive one.
+  - what: The label
+    how: Keep it to one to three plain topic words ("VITAMINS", "KITCHEN"). Never "BREAKING" or "LIVE" unless your files hold a real, dated event.
+  - what: The photo behind
+    how: Point it at the moment the fact speaks to, such as the counter where the old vitamins sit. The photo shows the problem; the caption reframes it.
+  - what: The headline under
+    how: Repeat the caption's statement, or use "Read this before you buy another one." The first is plainer; the second points at the old way.
+
+judge:
+  - The caption is one fact, worded the way your source says it, and you can show the source.
+  - Nothing says "study finds" or "experts warn" unless that study or expert is on file.
+  - There's no real outlet's name, logo, colours, set, ticker or channel number.
+  - It reports no event that didn't happen, and it scares nobody about their health.
+  - The flags say a person must check it, and someone actually has.
+
+test:
+  - Give it a fact with no source. It should stop and send you to another picture type, not write the caption anyway.
+  - Give it a fact and ask for "a stronger caption". It should keep the source's wording and refuse to add a result the source doesn't show.
+  - Show the finished picture to someone for three seconds and ask where it came from. If they name a real news outlet, remove whatever borrowed that look.
+  - Check the caption against your claims list word by word before it runs.
+
+improve:
+  - Add your approved claims with their sources and dates to "What you need", so the skill picks from them instead of from the story.
+  - Add the limits on each claim (who it was tested on, what it measured) next to it in your brand file, so the flags catch a stretch every time.
+  - Add the name of the person who signs off news-style pictures to the flag line, so the check goes to someone.
+  - If you have no sourced fact, use the don't-buy warning skill when your story warns against something, or the everyday snapshot skill otherwise.
+
+terms:
+  - term: Approved claims
+    meaning: The exact sentences your legal or compliance check says you may use about the product.
+  - term: Caption bar
+    meaning: A strip across the bottom of a picture with a short line of text, like a news caption.
+  - term: Story ad
+    meaning: An ad whose main text tells one person's story in their own words, like a post from a friend.

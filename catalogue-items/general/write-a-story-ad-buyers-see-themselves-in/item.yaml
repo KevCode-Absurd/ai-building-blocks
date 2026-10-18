@@ -1,0 +1,22 @@
+slug: write-a-story-ad-buyers-see-themselves-in
+renamed_from: native-story-ad-copy-long-form
+name: "Write a story ad buyers see themselves in"
+summary: "A long story ad that reads like a person's post, built from your reviews, with an honest narrator."
+category: general
+boards: [ecommerce]
+type: skill
+role: make
+job: ads
+level: advanced
+inputs:
+  - {type: voc_reviews, required: true}
+  - {type: brief, required: true}
+  - {type: product_data, required: true}
+outputs:
+  - {type: ad_copy}
+uses: [tell-the-problem-so-buyers-see-themselves, get-script-presenter-can-say-without-stumbling]
+example: native
+origin: own
+source_ids: [CES-053]
+old_name: native-ad-copy
+version: 1.0.0

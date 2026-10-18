@@ -1,0 +1,187 @@
+new_slug: stop-ai-pictures-getting-your-product-wrong
+name: Stop AI pictures getting your product wrong
+summary: A written record of your exact product that keeps AI pictures true, plus the photos still missing.
+job: product-photos
+
+headline: A plain written record of your product, so AI pictures stop getting it wrong
+subhead: Give it your real product photos and a few facts. It keeps only the photos of the exact variant, writes down the shape, colours, printed words and how it's used, and lists the photos you still need before any picture can be made truthfully.
+
+explain: |
+  Image models redraw products. They swap a matte tub for a glossy one, invent a lid, re-letter the label or show the wrong flavour. Usually that happens because nobody wrote down what the product really looks like, so the model filled the gaps with a typical product from your category.
+
+  This skill fixes that before any picture is made. It checks each photo you have and throws out the ones that show a different size, colour or flavour, or a mock-up. Then it fills in a short sheet: what the product looks like, what's printed on it, how it opens, how much one use is, and what it must never be confused with. Anything it can't see in a photo goes on a missing list, along with the pictures that can't be made until you supply that photo.
+
+when:
+  - You're about to make product photos or product page images with AI and want the product to stay right in every one.
+  - Your AI pictures keep showing a slightly wrong product (the wrong lid, a redrawn label, a lookalike).
+  - You want to know which product photos to take next, and why.
+
+you_give:
+  - The product and exact variant (size, colour, flavour or finish)
+  - Every real photo you have of that exact variant, ideally one of it in use
+  - Basic facts, such as how it's used and what you never show (optional)
+you_get:
+  - A one-page sheet describing the product line by line
+  - Which of your photos are usable, and what each one is for
+  - A list of missing photos and the pictures that can't be made without them
+
+how_to_use:
+  - Copy the skill and paste it into Claude, ChatGPT or Gemini.
+  - Attach your product photos at full size, not thumbnails. Say which variant they show, and say so if you're not sure.
+  - Paste any facts you have underneath, such as how to use it and what's in the box.
+  - Read the missing list first. It tells you which photo to take next and which pictures it makes possible.
+  - Keep the sheet and paste it in every time you make product pictures.
+
+how_it_works:
+  - title: Checks every photo
+    text: Keeps a photo only if it shows the exact variant, the label is readable, the colour is true and the product is whole. Renders, mock-ups and other sizes are thrown out.
+  - title: Crops, never paints over
+    text: A caption or sticker burned into a photo is cropped away, never blurred or painted out.
+  - title: Fills in the sheet
+    text: Writes down shape, colour, finish, pack, printed words in reading order, how it's built, how it's used and how much one use is.
+  - title: Names the lookalike
+    text: States what the product is not (for example "not a jar with a metal lid"), because that's what an image model will draw by default.
+  - title: Lists what's missing
+    text: Every line it can't fill from a photo or a fact is marked missing, with the pictures that can't be made until you supply it.
+  - title: Tells you where to look
+    text: Suggests where to find missing photos (your own files, your product page at full size, a sibling product) and then asks for one specific shot.
+
+output_shape: |
+  PHOTOS CHECKED
+  <file>           <kept or thrown out, and why>
+
+  TRUTH SHEET: <product, variant>
+  Told apart by:     <what separates it from its sibling variants>
+  Kind:              <worn | applied | eaten or drunk | used by hand |
+                     placed in a room>
+  Looks like:        <shape, colour, finish>
+  Size against hand: <compared with a hand, body or furniture>
+  Pack:              <container, material, closure, colours>
+  Printed words:     <"the exact words", in reading order, and where>
+  Looks real because: <two or three details>
+  In use:            <how it looks being used>
+  How it is built:   <how the parts meet>
+  How it is used:    <steps; how much one use is>
+  Visible result:    <what changes, or none>
+  In the box:        <every item and how many>
+  Not this:          <the lookalike an image model would draw>
+  Never show:        <...>
+  Photos:            <file, job, angle>
+  (any line it can't fill says MISSING)
+
+  LEFT OUT FOR NOW
+  <missing photo>    -> <pictures that can't be made yet>
+
+  NOTE
+  <how many usable photos and where from; the one photo to take next>
+
+example:
+  business: sprout
+  input: |
+    [the skill]
+
+    Product: Sprout Original (Adults), Low Sugar, pouch of 28 daily packs
+
+    Photos I have:
+    1. pouch-front.jpg: the pouch front on, soft gradient background
+       (from our product page gallery)
+    2. gummies-hand.jpg: gummies in an adult's open hand (gallery)
+    3. pouch-sf.jpg: a pouch with a white burst on the front
+
+    Facts:
+    - Glossy deep green stand-up foil pouch, big yellow wordmark, yellow
+      bear face top right, "28 Daily Packs" at the bottom. Sugar-Free
+      adds a white burst.
+    - Gummies: small opaque deep-green bears, soft matte, about
+      thumbnail height. One pack is about 20 g, "a small handful".
+    - Tear the daily pack straight across its top edge, never the side,
+      bottom or a corner. The big pouch opens only at its resealable
+      top and is never shown torn.
+    - Never show cartoon tie-in characters or partner brand marks.
+  output: |
+    PHOTOS CHECKED
+    pouch-front.jpg   Kept. Front on, label readable. Check it has no
+                      white burst, so it's Low Sugar.
+    gummies-hand.jpg  Kept for the gummies only. No pack in it.
+    pouch-sf.jpg      Thrown out. The white burst means Sugar-Free, a
+                      sibling variant, not this one.
+
+    TRUTH SHEET: Sprout Original (Adults), Low Sugar, 28 daily packs
+    Told apart by:     no white burst (Sugar-Free has one). How "Low
+                       Sugar" is printed: MISSING
+    Kind:              eaten
+    Looks like:        glossy deep green stand-up foil pouch
+    Size against hand: MISSING (no photo of the pouch in a hand)
+    Pack:              stand-up foil pouch, deep green, resealable top
+    Printed words:     the Sprout wordmark in big yellow letters; "28
+                       Daily Packs" at the bottom. Yellow bear face top
+                       right (a graphic). Every other word: MISSING, read
+                       it from pouch-front.jpg at full size
+    Looks real because: the foil's shine; the bear face top right
+    In use:            from gummies-hand.jpg: small, opaque, deep-green
+                       bears, soft matte, about thumbnail height, loose
+                       in an open palm. The daily pack: MISSING
+    How it is built:   resealable top on the pouch (from your rules, not
+                       seen in a photo). Daily pack tear line: MISSING
+    How it is used:    tear one daily pack straight across the top, tip
+                       the gummies into your palm, eat. One use = one
+                       pack, about 20 g, a small handful
+    Visible result:    none
+    In the box:        one pouch holding 28 daily packs
+    Not this:          not a tub, jar or bottle of pills; not a loose bag
+                       of gummies; gummies not glossy, clear or round
+    Never show:        the pouch torn; a daily pack torn at the side,
+                       bottom or a corner; tie-in characters or partner
+                       marks
+    Photos:            pouch-front.jpg, front, gradient; gummies-hand.jpg,
+                       in hand (gummies only)
+
+    LEFT OUT FOR NOW
+    No daily pack photo      -> no tear-and-pour shot, no "what you get"
+    No pouch in a hand       -> no scale shot
+    No back of the pouch     -> no label panel or turned shots
+    No pouch open at the top -> no open-pouch shot
+
+    NOTE
+    2 usable photos, both from your product page gallery. They cover the
+    front and the gummies in a hand.
+    Ask for next: one daily pack torn straight across the top, held over
+    an open palm, plain light background, the torn edge sharp.
+
+tweaks:
+  - what: The variant line
+    how: Be exact ("Original, Low Sugar, 28 daily packs", not "the pouch"). The sheet is only true for one variant, and a sibling flavour is treated as a near miss, not a match.
+  - what: An in-use photo
+    how: Add one photo of the product being used and the "In use" and "How it is built" lines fill in. Those two lines are what stop an image model inventing how your product opens.
+  - what: Brand facts
+    how: Paste your never-show list and how the product is used. Without them it can only write what the photos show, and more lines end up missing.
+  - what: Two kinds at once
+    how: If your product is, say, both worn and used by hand, say so. The sheet then covers how it sits on a body and how it's held.
+
+judge:
+  - Every line either comes from a photo or fact you gave, or says MISSING.
+  - The printed words are quoted exactly, not "brand name and logo".
+  - The "Not this" line names a real lookalike for your category.
+  - No AI-made picture is listed as a reference photo.
+  - The missing list says which pictures can't be made yet, not just which photos are absent.
+
+test:
+  - Slip one photo of a sibling variant in with your real photos (for Sprout, the yellow Kids pouch). The sheet should reject it as a near miss. If it uses it, your variant line is too loose.
+  - Run it twice on the same photos. The printed words should be quoted the same way, letter for letter. Any difference means one photo isn't sharp enough to read.
+  - "Check three lines against the product in your hand: one colour, one printed word and how it opens."
+  - Give the sheet and one prompt to your image tool. If the product still comes back wrong, find the line on the sheet that failed and take the photo it asks for.
+
+improve:
+  - Add your never-show list and how the product is used in real life to "What you need" in the skill file, so those lines are never MISSING.
+  - "Add your category's usual lookalike to the \"Not this\" line in step 3 (for Sprout: drugstore multivitamin gummies)."
+  - Write the way your store names variants into step 1, so the sheet always names the exact variant the same way.
+  - Save the sheet in your brand file with its date, and rerun it whenever the packaging changes.
+  - Pair it with the skills that borrow a photo's look for your product or make a full photoshoot. Both start by asking for this sheet.
+
+terms:
+  - term: Variant
+    meaning: One exact version of a product, such as one flavour, size or colour.
+  - term: Truth sheet
+    meaning: The written record this skill makes. Every later picture is checked against it.
+  - term: Render
+    meaning: An AI-made or 3D picture of a product, as opposed to a real photo.

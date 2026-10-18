@@ -1,0 +1,22 @@
+slug: get-founder-ad-script-people-believe
+renamed_from: founder-decision-ad-script-format-rules
+name: "Get a founder ad script people believe"
+summary: "A filming brief where your real founder explains one decision behind the product, nothing made up."
+category: general
+boards: [ecommerce]
+type: skill
+role: make
+job: video
+level: intermediate
+inputs:
+  - {type: brief, required: true}
+  - {type: brand_brain, required: true}
+outputs:
+  - {type: script}
+  - {type: image_prompt}
+uses: []
+example: founder-image
+origin: own
+source_ids: [CES-114]
+old_name: script-format-founder
+version: 1.0.0

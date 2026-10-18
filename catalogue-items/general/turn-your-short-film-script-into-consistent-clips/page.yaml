@@ -1,0 +1,182 @@
+new_slug: turn-your-short-film-script-into-consistent-clips
+name: Turn your short film script into consistent clips
+summary: Character, set and timed clip prompts for a photo-real, film-style ad with one or two made-up adults.
+job: make-video-ads
+
+headline: Get a photo-real film-style ad where faces, room and light stay the same in every shot
+subhead: Give it an approved script with labelled speakers and a real product photo. It writes a character reference, a master picture of the set, matching angles, and timed clip prompts with dialogue, camera and light, plus a one-line fix for any shot that fails.
+
+explain: |
+  AI video can now make photo-real people acting in a room. Across several shots it slips. Faces change, the lamp jumps to the other side of the room, a listener's mouth moves during someone else's line, or the background of the character sheet leaks into the film.
+
+  This skill gives each reference image one job. The character reference fixes faces and clothes only. The set master fixes the room, the light and where everything sits. The product photo fixes the pack. Every shot gets one event, one camera move, where people look and what's in focus, and dialogue stays word for word with only the speaker's mouth moving. When a shot fails, it names the one fault and changes the one instruction that controls it.
+
+when:
+  - You have an approved film-style script and need prompts for an AI image and video tool.
+  - Your generated shots keep changing faces, rooms or light between angles.
+  - One shot went wrong and you want to fix it without remaking the whole film.
+
+you_give:
+  - The approved script with speaker labels and scenes
+  - A real product photo and how the product is used
+  - The buyer's moment, places and voice from your brand file (optional)
+  - Your video tool's clip lengths and reference limits (optional)
+you_get:
+  - A change line and a five-line film plan
+  - Prompts for the character reference and the set master
+  - Still prompts for each camera angle, and timed clip prompts
+  - A one-fault, one-instruction fix for any failed shot
+
+how_to_use:
+  - Copy the skill and paste it into Claude, ChatGPT or Gemini.
+  - Paste the approved script, ideally from "Get a short film ad script with a twist".
+  - Attach your product photo and say how it's held and used.
+  - Make the character reference and the set master first, approve them, then the angle stills, then the clips.
+  - If a shot fails, paste what went wrong and ask for the one-line fix.
+
+how_it_works:
+  - title: States the viewer's change
+    text: What the viewer expects, discovers and understands about the product, with time for the payoff to land.
+  - title: Separates the references
+    text: A character reference for faces and clothes, a set master for the room and light, the product photo for the pack.
+  - title: Directs each shot
+    text: Where the camera stands, who's visible, one event, one move, where people look, light and focus.
+  - title: Keeps one set
+    text: New angles keep the same room, lights and objects. Only the camera and acting change.
+  - title: Times dialogue and sound
+    text: Exact lines with one speaker at a time, a fixed description for each voice, and sounds only on real contact.
+  - title: Checks and fixes one thing
+    text: Compares stills side by side, checks lips and eyes in the clips, and fixes one fault with one instruction.
+
+output_shape: |
+  CHANGE LINE
+  The viewer expects <...>, then discovers <...>, and understands
+  the product's role because <...>.
+
+  FILM PLAN (5 lines)
+
+  CHARACTER REFERENCE PROMPT  <both characters, even light>
+  SET MASTER PROMPT           <room, landmarks, lights, props, positions>
+  ANGLE STILL <n>             <set-up>. Attach: <image> = <job>
+
+  CLIP <n> (<length>)
+  References: <image> = <job>
+  Continuity: <cast, set, light, who holds what>
+  [0-3 s] <purpose>: <cast, size, height, angle, event, gaze, move, focus>
+  Dialogue: Character A: "<exact line>"
+  Voices: <accent, pitch, texture, pace>
+  Next cut: <what changes, what stays>
+
+  FIX  <one fault> > <one instruction>
+
+example:
+  business: sprout
+  input: |
+    [the skill]
+
+    Script: the 20-second script from "Write a short film-style ad
+    script". 7 shots in two 10-second clips.
+    Character A: a woman, about 40, short grey-streaked hair, navy
+    jumper, reading glasses pushed up on her head.
+    Character B: a man, about 40, rumpled dark hair, faded green
+    T-shirt, one sock on.
+    Lines: B "What day is it?" / A "Pack day." / B "Same as
+    yesterday?" / A "Same as every day." / Narrator "One pack a day.
+    Rip. Tip. Enjoy."
+    Set: a home kitchen in the morning. A half-used tub of powder at
+    the back of the counter.
+    Photos: [pouch front] [daily pack in a hand] [gummies in a palm]
+    Handling: tear the daily pack straight across the top only.
+    Tool: 10-second clips, 3 reference images, clean cuts.
+  output: |
+    CHANGE LINE
+    The viewer expects a sleepy couple's mix-up, then discovers the
+    one thing that's the same every day is the daily pack, and
+    understands its role because it's the easiest habit in the room.
+
+    FILM PLAN
+    1 B shuffles in and asks the day. The tub sits at the back.
+    2 A, unbothered, tears a pack and hands it over.
+    3 B takes it, eyebrow up, and eats.
+    4 A answers without fuss.
+    5 Wide: the tub pushed back, the pouch in front. Narrator.
+
+    CHARACTER REFERENCE PROMPT
+    Two made-up adults side by side, even soft light, plain grey
+    background. A: [Character A as given]. B: [Character B as given].
+    Natural skin texture. Front and three-quarter views of each.
+
+    SET MASTER PROMPT
+    A small home kitchen, morning, photo-real. Counter along the back
+    wall, window at left as the only light, soft daylight falling
+    right. Fridge at right. On the counter: a half-used unlabelled
+    tub of green powder at the back left, a mug at front centre, the
+    Sprout pouch at front right, label to camera. A stands at the
+    counter centre, B in the doorway at right. Warm, natural colour.
+    Attach: pouch front = the pouch's shape and print.
+
+    ANGLE STILL 2  Single on A, medium, camera across the counter at
+      her eye level. Same window light from her right side.
+      Attach: set master = room and light; character ref = A's face.
+    ANGLE STILL 3  Close on A's hands tearing the daily pack straight
+      across the top. Attach: daily pack in a hand = grip and pack.
+
+    CLIP 1 (10 s)
+    References: set master = room and light; character ref = faces;
+      daily pack in a hand = the pack.
+    Continuity: window light from left. A's mug on the counter by
+      her left hand. One daily pack on the counter by her right hand.
+    [0-3 s] open: B, wide, eye level from the counter, mid-yawn
+      in the doorway, looks at A. No move. Focus on B.
+    [3-5 s] A ignores it: single on A, medium, slow push in,
+      eyes on her mug. Focus on A.
+    [5-8 s] the pack: close on A's hands, tear across the top.
+    [8-10 s] reaction: single on B, he takes the pack, eyes go from
+      the pack to A, one eyebrow lifts.
+    Dialogue: Character B: "What day is it?" (0-2 s)
+      Character A: "Pack day." (6-7 s). Listener's mouth stays still.
+    Voices: B low, slow, a little hoarse. A dry, even, quick.
+      MISSING: accents. Proposed: neutral American, to confirm.
+    Next cut: B holds the torn pack; A's mug stays on the counter.
+
+    FIX (if needed)  Example: A's glasses vanish in shot 3 >
+      re-attach the character reference to that shot only.
+    (cut for length: the full run also had clip 2 and stills for
+    shots 5 to 7)
+
+tweaks:
+  - what: Clip limits
+    how: Say whether your tool can start a clip from the last frame of the previous one. If not, every join is planned as a clean cut.
+  - what: Camera style
+    how: Ask for handheld tension that turns into a steady reveal. It changes on purpose, while the room and light stay the same.
+  - what: Optional devices
+    how: Ask for a device, such as a trivial problem treated as a serious negotiation, or an object planted early and explained at the end.
+  - what: Voices
+    how: Give each voice's accent, pitch and pace. It writes them once and changes only the delivery line by line.
+
+judge:
+  - The character reference prompt has a plain background, and the set master holds the room. They never swap jobs.
+  - Every shot has one event and one camera move.
+  - The lamp, window and doorway stay in the same place on every angle.
+  - Dialogue matches the script word for word, and only the speaker's mouth moves.
+  - No character claims a result or plays a customer.
+
+test:
+  - Make the character reference, the set master and two angles. The lamp, window and doorway should stay in place.
+  - Watch one dialogue clip with the sound off. Only the speaker's mouth should move.
+  - Check the dialogue in the prompts against the script, word for word.
+  - When a shot fails, paste the fault back in. You should get a one-line fix for that shot only.
+
+improve:
+  - Save the approved character reference and set master in your brand file, and paste them into step 2 of the skill file as fixed text.
+  - Add each voice's accent, pitch and pace to "What you need", and a line to step 6 ("Sound") saying they stay fixed in every clip.
+  - Write your tool's limits into the skill (clip length, whether it can start from the last frame), so every join is planned right.
+  - Pair it with a skill that writes a short film ad script with labelled speakers, and one that adds captions in your brand font.
+
+terms:
+  - term: Set master
+    meaning: One picture of the scene that fixes the room, the light and where everything sits, used for every angle.
+  - term: Coverage
+    meaning: The different camera angles filmed of one scene, such as a wide shot, a close-up and a reaction.
+  - term: Line of action
+    meaning: An imaginary line between two characters. Keeping the camera on one side stops them seeming to swap places.

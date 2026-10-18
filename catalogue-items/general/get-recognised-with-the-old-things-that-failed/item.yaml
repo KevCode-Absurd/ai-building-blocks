@@ -1,0 +1,21 @@
+slug: get-recognised-with-the-old-things-that-failed
+renamed_from: native-ad-image-worn-object-photo
+name: "Get recognised with the old things that failed"
+summary: "A plain, slightly sad photo of the worn or half-used things your narrator tried and gave up on."
+category: general
+boards: [ecommerce]
+type: skill
+role: render
+job: image
+level: beginner
+inputs:
+  - {type: ad_copy, required: true}
+  - {type: persona, required: false}
+outputs:
+  - {type: image_prompt}
+uses: [get-story-ads-read-with-the-right-picture]
+example: native
+origin: own
+source_ids: [CES-075]
+old_name: worn-object
+version: 1.0.0

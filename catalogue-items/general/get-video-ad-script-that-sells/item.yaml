@@ -1,0 +1,21 @@
+slug: get-video-ad-script-that-sells
+renamed_from: video-ad-script-nine-beat-playbook
+name: "Get a video ad script that sells"
+summary: "A video ad script argued beat by beat, every line traced to a fact, or a fix for one that isn't working."
+category: general
+boards: [ecommerce]
+type: skill
+role: make
+job: video
+level: advanced
+inputs:
+  - {type: brand_brain, required: false}
+  - {type: voc_reviews, required: false}
+  - {type: product_data, required: true}
+outputs:
+  - {type: script}
+uses: [find-script-lines-that-lose-sale, get-script-presenter-can-say-without-stumbling, get-different-video-ads-from-same-research]
+origin: own
+source_ids: [CES-145, CES-146]
+old_name: video-ad-copywriter; video-ad-scripts
+version: 1.0.0

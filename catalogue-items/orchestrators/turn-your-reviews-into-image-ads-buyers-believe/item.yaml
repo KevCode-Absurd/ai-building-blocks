@@ -1,0 +1,27 @@
+slug: turn-your-reviews-into-image-ads-buyers-believe
+name: Turn your reviews into image ads buyers believe
+summary: "Image ads built on why your customers buy, with words, layout and image prompts, checked before launch."
+category: orchestrator
+boards: [ecommerce]
+type: workflow
+role: orchestrate
+job: image
+level: intermediate
+inputs:
+  - {type: web_page, required: true}
+  - {type: voc_reviews, required: true}
+  - {type: product_data, required: true}
+  - {type: brief, required: true}
+  - {type: performance_sheet, required: false}
+outputs:
+  - {type: image_prompt}
+  - {type: audit_report}
+uses: [turn-website-into-brand-file-for-ai, find-why-customers-buy-in-their-words, get-one-image-ad-ready-to-make, stop-image-tools-redrawing-your-product-and-words, catch-mistakes-in-your-ad-before-you-pay]
+steps:
+  - {uses: turn-website-into-brand-file-for-ai, note: "Build your brand file: facts, voice, current offers and the claims you can make."}
+  - {uses: find-why-customers-buy-in-their-words, note: "Find the reasons people buy, with your customers' exact words."}
+  - {uses: get-one-image-ad-ready-to-make, note: "Write the words and plan the picture and layout for each ad."}
+  - {uses: stop-image-tools-redrawing-your-product-and-words, note: "Turn each ad plan into an image prompt that keeps your real product and your exact words."}
+  - {uses: catch-mistakes-in-your-ad-before-you-pay, note: "Check every ad before it goes live, and list what a person still has to look at."}
+origin: own
+version: 1.0.0

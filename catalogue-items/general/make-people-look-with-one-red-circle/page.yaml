@@ -1,0 +1,174 @@
+new_slug: make-people-look-with-one-red-circle
+name: Make people look with one red circle
+summary: A phone photo of one visible flaw with a single rough red circle, where your story starts.
+job: make-image-ads
+
+headline: An ordinary photo with one red circle that puts the eye right where your story starts
+subhead: Give it your story ad and the flaw it describes. It briefs a clean candid photo of that flaw, then one rough red circle or arrow drawn as if with a finger, plus up to four handwritten words from your copy.
+
+explain: |
+  People mark up photos before sending them to a friend: a red circle round the crease, an arrow at the gap. A red mark says "look here" before the reader has decided to look, and it makes your picture feel shared rather than designed. This picture type copies that habit for one flaw a camera can see on a garment, an object or a room.
+
+  It briefs the photo first as a normal snapshot, with the flaw shown at its real size. Then, as a separate instruction, it adds one uneven red circle or one short arrow, and if you want, up to four words in the same red, lifted from your copy. One mark only, because two marks turn it into a diagram. It never circles a part of someone's body as the flaw, and never adds a second photo with the flaw gone.
+
+when:
+  - Your story is about one flaw a camera can see (a crease, a gap, a worn hinge, a box of pills nobody took).
+  - You're running to cold traffic (people who don't know you) and need the eye to land in the right place fast.
+  - Your plain snapshot ad gets seen but people don't know what to look at.
+
+you_give:
+  - Your approved story ad and the flaw it describes
+  - How your buyer describes the flaw, in their words (optional)
+you_get:
+  - The flaw and where it sits in the frame
+  - The mark (circle or arrow), its colour and position
+  - Up to four handwritten words, or none
+  - A 60 to 120 word image prompt, ready to paste
+
+how_to_use:
+  - Copy the skill and paste it into Claude, ChatGPT or Gemini.
+  - Paste your story ad underneath. Make sure it names the flaw and where it is.
+  - Add your buyer's own phrase for the flaw if you have one, from reviews or messages.
+  - Paste the image prompt into your image tool. If the circle comes out neat and perfect, ask again for "rough, drawn with a finger".
+  - Read the flags. The circle points at something, so check your story's first lines explain why.
+
+how_it_works:
+  - title: Sets the ground rules
+    text: Square, looks taken on a phone, no logo, price, button, brand colour or product, and no face.
+  - title: Names the flaw
+    text: Says what the flaw is and exactly where, such as a crease across the back of a shirt or six full days in a pill box.
+  - title: Briefs the photo first
+    text: Describes a clean candid shot with the flaw at its real size, before any mark is added.
+  - title: Adds one mark
+    text: One uneven red circle, slightly open, or one short arrow, as if drawn with a finger on a phone screen.
+  - title: Adds a short note, or none
+    text: Up to four words in the same red, in the buyer's words, quoted exactly from your copy.
+
+output_shape: |
+  SCENE
+  <one sentence: what someone scrolling would say they saw>
+
+  WHERE AND WHEN
+  <place, time of day, what is within reach>
+
+  THE FLAW
+  <what it is, its real size, where it sits in the frame>
+
+  THE MARK
+  <one rough red circle or arrow, and where>
+
+  WORDS ON THE IMAGE
+  <none, or up to 4 words lifted from your copy>
+  BLANK VERSION
+  <the same photo and mark with no words>
+
+  HEADLINE UNDER THE IMAGE
+  <"Why your ... keeps coming back" or "Stop blaming ... Look at ...">
+
+  FLAGS
+  <whether the note was lifted; what the first lines must explain>
+
+  IMAGE PROMPT
+  <60 to 120 words, ready to paste>
+
+example:
+  business: sprout
+  input: |
+    [the skill]
+
+    Story ad (approved, built on reviews 1 and 5):
+    Sunday night I opened my pill organiser to refill it. Six of the
+    seven days were still full.
+    Monday was empty. That was the only day I remembered.
+    I'd tried a few things over the years. The issue was never what
+    was in them. It was sticking with it.
+    Sprout is one daily pack you tear open and eat: a small handful
+    of gummies, 21 vitamins and minerals, 6 g prebiotic fiber.
+
+    Buyer: the quitter who wants to stick, 28 to 45.
+  output: |
+    SCENE
+    A weekly pill organiser on a counter, six days still full,
+    circled in red.
+
+    WHERE AND WHEN
+    A kitchen counter, Sunday evening, overhead kitchen light.
+    Within reach: a glass of water, a phone, the edge of a fruit
+    bowl.
+
+    THE FLAW
+    A plain seven-day plastic pill organiser. The first compartment
+    is open and empty; the other six are closed and full of tablets,
+    seen through clear lids. Shown at its real size, about a hand
+    long, across the middle of the frame.
+
+    THE MARK
+    One uneven red circle, slightly open, as if drawn with a finger
+    on the phone, around the six full compartments.
+
+    WORDS ON THE IMAGE
+    "still full" (2 words, lifted from the story's first line),
+    handwritten in the same red beside the circle.
+
+    BLANK VERSION
+    The same photo and circle with no words.
+
+    HEADLINE UNDER THE IMAGE
+    Stop blaming your willpower. Look at the routine.
+
+    FLAGS
+    Note lifted from the copy.
+    The organiser is plain and generic, with no readable day letters.
+    Watch the copy. Review 1 says it's "the one thing I've been able
+    to stick to" for one person. Don't promise every buyer will stick
+    with it. Survey numbers need "of surveyed users".
+
+    IMAGE PROMPT
+    Square 1:1 phone photo looking down at a plain seven-day plastic
+    pill organiser on a kitchen counter on a Sunday evening, under
+    the kitchen light. The first compartment is open and empty; the
+    other six are closed and full of tablets, seen through clear
+    lids. A glass of water and a phone sit at the edges. Slight tilt,
+    ordinary light, a little grain, no retouching. One rough, uneven
+    red circle, slightly open, as if drawn with a finger, around the
+    six full compartments, with the words "still full" handwritten
+    in the same red beside it, spelled exactly. No readable letters
+    on the lids, no logo, no brand name, no product, no person, no
+    second mark.
+
+tweaks:
+  - what: Circle or arrow
+    how: An arrow works for a thin flaw (a crack, a seam). A circle works for an area (a gap, six full days). Ask for the one that fits, never both.
+  - what: The note
+    how: Turn it off and keep the circle alone if your copy has no short phrase for the flaw. Four words is the limit before image tools start misspelling.
+  - what: How big the flaw looks
+    how: Say its real size, like "about a hand long". If the result exaggerates it, ask again with that size, since an exaggerated flaw reads as a trick.
+  - what: Where the photo is taken from
+    how: Ask for "looking down from standing" or "from the doorway". The viewpoint should be where your buyer would stand when they notice it.
+
+judge:
+  - There's exactly one mark. Two marks make a diagram.
+  - The flaw is shown at the size your story or research describes, not bigger.
+  - The mark is on a garment, object or room, never on a part of someone's body.
+  - The circle looks drawn by a finger, not a neat vector shape or a brand-coloured arrow.
+  - There's no second photo with the flaw fixed, and no product.
+
+test:
+  - Show the picture to someone for two seconds, then hide it. Ask what was circled. If they can't say, the flaw is too small or the photo too busy.
+  - Run it on a story where the flaw is on the body. It should stop and send you to another picture type, not circle the body.
+  - Run it twice on the same story. The flaw and the mark should match both times.
+  - Test the circle alone against the circle with words on the same photo. Keep whichever stops more of the right people.
+
+improve:
+  - Add your buyers' exact words for the flaw to the brand file section, so the note comes from them. Reviews are the best source.
+  - Add your brand's never-shown list (body parts, mess, rivals' shapes) to the ground rules in step 1.
+  - Set your preferred mark in step 4 (circle or arrow) if one works better for your product, so every run starts there.
+  - If the flaw is on the body itself, use the visible-symptom skill without a mark, or the everyday snapshot skill.
+
+terms:
+  - term: Cold traffic
+    meaning: People who have never heard of your business before seeing the ad.
+  - term: Story ad
+    meaning: An ad whose main text tells one person's story in their own words, like a post from a friend.
+  - term: Headline under the image
+    meaning: The bold line under the picture in a Facebook or Instagram ad.

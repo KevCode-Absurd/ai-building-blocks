@@ -1,0 +1,21 @@
+slug: stop-tired-buyers-with-ignored-reminders
+renamed_from: native-ad-image-phone-reminders-screenshot
+name: "Stop tired buyers with the reminders they ignore"
+summary: "A generic lock screen showing the reminders your narrator keeps setting, and ignoring, because of the problem."
+category: general
+boards: [ecommerce]
+type: skill
+role: render
+job: image
+level: beginner
+inputs:
+  - {type: ad_copy, required: true}
+  - {type: persona, required: false}
+outputs:
+  - {type: image_prompt}
+uses: [get-story-ads-read-with-the-right-picture]
+example: native
+origin: own
+source_ids: [CES-070]
+old_name: phone-reminder
+version: 1.0.0

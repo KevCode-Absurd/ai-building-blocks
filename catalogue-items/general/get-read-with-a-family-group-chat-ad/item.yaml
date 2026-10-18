@@ -1,0 +1,22 @@
+slug: get-read-with-a-family-group-chat-ad
+renamed_from: native-ad-image-group-chat-screenshot
+name: "Get read with a family group chat ad"
+summary: "A generic family or friends group chat screenshot where the problem comes up, with four to seven messages."
+category: general
+boards: [ecommerce]
+type: skill
+role: render
+job: image
+level: intermediate
+inputs:
+  - {type: ad_copy, required: true}
+  - {type: persona, required: false}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: image_prompt}
+uses: [get-story-ads-read-with-the-right-picture]
+example: native
+origin: own
+source_ids: [CES-074]
+old_name: whatsapp-chat
+version: 1.0.0

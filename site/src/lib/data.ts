@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { migrateSlugs } from "./store";
 
 export type Port = { type: string; required: boolean };
 export type Role = "source" | "compress" | "make" | "render" | "check" | "orchestrate";
@@ -22,8 +23,21 @@ export type Block = {
   addon: boolean;
   added: string;
   usedIn: number;
+  task: string;
+  headline: string;
+  peek: string;
 };
-export type Catalogue = { built: string; portTypes: Record<string, string | null>; blocks: Block[]; bySlug: Record<string, Block> };
+/** The full page for one block, loaded when its page opens. */
+export type Page = {
+  headline: string; subhead: string; explain: string; when: string[];
+  you_give: string[]; you_get: string[]; how_to_use: string[];
+  how_it_works: { title: string; text: string }[];
+  output_shape?: string;
+  example?: { business: string; input: string; output: string };
+  tweaks: { what: string; how: string }[]; judge: string[]; test?: string[]; improve: string[];
+  terms: { term: string; meaning: string }[];
+};
+export type Catalogue = { built: string; portTypes: Record<string, string | null>; renamed: Record<string, string>; blocks: Block[]; bySlug: Record<string, Block> };
 
 export const ROLES: { id: Role; name: string; does: string }[] = [
   { id: "source", name: "Source", does: "Brings information in" },
@@ -35,16 +49,12 @@ export const ROLES: { id: Role; name: string; does: string }[] = [
 ];
 export const roleName = (r: Role) => ROLES.find((x) => x.id === r)?.name ?? r;
 
-export const JOBS: Record<string, string> = {
-  brand: "Brand", research: "Customer research", offer: "Offers", copy: "Copywriting", image: "Images", video: "Video",
-  page: "Pages and CRO", ads: "Ads strategy", email: "Email", organic: "Organic", analysis: "Analysis", ops: "Operations",
-};
 export const LEVELS = ["beginner", "intermediate", "advanced", "expert"] as const;
 export const cap = (s: string) => s.charAt(0).toUpperCase() + s.slice(1);
 const PORT_NAMES: Record<string, string> = {
-  voc_reviews: "Customer reviews", pdp_copy: "Product page copy", ad_copy: "Ad copy", brand_brain: "Brand brain",
+  voc_reviews: "Customer reviews", pdp_copy: "Product page copy", ad_copy: "Ad copy", brand_brain: "Brand file",
   competitor_set: "Competitor set", reference_set: "Reference ads", ad_breakdowns: "Ad breakdowns", image_prompt: "Image prompt",
-  static_ads: "Static ads", video_ads: "Video ads", performance_sheet: "Performance data", audit_report: "Audit report",
+  static_ads: "Image ads", video_ads: "Video ads", performance_sheet: "Performance data", audit_report: "Audit report",
 };
 export const portLabel = (t: string) => PORT_NAMES[t] ?? cap(t.replace(/_/g, " ").replace(/\b(cta|ugc|vsl|cro|pdp|seo|ai)\b/g, (m) => m.toUpperCase()));
 
@@ -52,7 +62,7 @@ let catalogue: Promise<Catalogue> | null = null;
 export function loadCatalogue(): Promise<Catalogue> {
   catalogue ??= fetch("/data/blocks.json")
     .then((r) => r.json())
-    .then((d) => ({ ...d, bySlug: Object.fromEntries(d.blocks.map((b: Block) => [b.slug, b])) }));
+    .then((d) => { migrateSlugs(d.renamed ?? {}); return { ...d, bySlug: Object.fromEntries(d.blocks.map((b: Block) => [b.slug, b])) }; });
   return catalogue;
 }
 export function useCatalogue() {
@@ -93,25 +103,77 @@ export function wireSteps(c: Catalogue, slugs: string[]): [number, number][] {
   return edges;
 }
 
-/** What a person sees: four kinds, in order of how much they do. */
-export type Kind = "prompt" | "skill" | "workflow" | "agent";
-export const KINDS: { id: Kind; name: string; plural: string; what: string }[] = [
-  { id: "prompt", name: "Prompt", plural: "Prompts", what: "Paste it into your AI and go." },
-  { id: "skill", name: "Skill", plural: "Skills", what: "A step-by-step method your AI follows, with checks." },
-  { id: "workflow", name: "Workflow", plural: "Workflows", what: "Several skills in order, each passing its work to the next." },
-  { id: "agent", name: "Agent", plural: "Agents", what: "Plans, checks with you, then does the work." },
+/** What a person sees: three kinds, in order of how much they do. */
+export type Kind = "prompt" | "skill" | "workflow";
+export const KINDS: { id: Kind; name: string; plural: string; path: string; what: string }[] = [
+  { id: "prompt", name: "Prompt", plural: "Prompts", path: "prompts", what: "Paste it into your AI and go." },
+  { id: "skill", name: "Skill", plural: "Skills", path: "skills", what: "Step-by-step instructions your AI follows, with checks at the end." },
+  { id: "workflow", name: "Workflow", plural: "Workflows", path: "workflows", what: "Several skills in order. Each one hands its work to the next." },
 ];
-export const kindOf = (b: Block): Kind => (b.category === "orchestrator" || b.type === "workflow" || b.type === "routine" ? "workflow" : b.type === "agent" ? "agent" : b.type === "prompt" ? "prompt" : "skill");
+export const kindOf = (b: Block): Kind => (b.category === "orchestrator" || b.type === "workflow" || b.type === "routine" ? "workflow" : b.type === "prompt" ? "prompt" : "skill");
+export const kindInfo = (b: Block) => KINDS.find((k) => k.id === kindOf(b))!;
+export const pathOf = (b: Block) => `/${kindInfo(b).path}/${b.slug}`;
 
-/** "What do you want to do?" filters, in plain words, grouped from each block's job. */
-export const TASKS: { id: string; name: string; jobs: string[] }[] = [
-  { id: "video", name: "Make videos", jobs: ["video"] },
-  { id: "images", name: "Make images", jobs: ["image"] },
-  { id: "ads", name: "Run ads", jobs: ["ads"] },
-  { id: "copy", name: "Write copy", jobs: ["copy", "email"] },
-  { id: "pages", name: "Build landing pages", jobs: ["page"] },
-  { id: "brand", name: "Know your brand and customers", jobs: ["brand", "research", "offer"] },
-  { id: "results", name: "Plan and read results", jobs: ["analysis", "ops"] },
-  { id: "social", name: "Post on social", jobs: ["organic"] },
+/** The jobs people hire a block for. Every block is filed under one. */
+export const TASKS: { id: string; name: string }[] = [
+  { id: "write-ad-copy", name: "Write ad copy" },
+  { id: "make-image-ads", name: "Make image ads" },
+  { id: "make-video-ads", name: "Make video ads" },
+  { id: "plan-ad-tests", name: "Plan what ads to test" },
+  { id: "check-ads", name: "Check ads before they go live" },
+  { id: "read-ad-results", name: "Read your ad results" },
+  { id: "audit-landing-page", name: "Audit a landing page" },
+  { id: "write-landing-page", name: "Write and build a landing page" },
+  { id: "product-photos", name: "Make product photos" },
+  { id: "understand-customers", name: "Understand your customers" },
+  { id: "brand-file", name: "Set up your brand file" },
+  { id: "study-competitors", name: "Study competitor ads" },
+  { id: "make-offer", name: "Make an offer people want" },
+  { id: "grow-social", name: "Grow on social" },
+  { id: "set-up-ai", name: "Set up AI to work for you" },
 ];
-export const taskOf = (b: Block) => TASKS.find((t) => t.jobs.includes(b.job)) ?? TASKS[TASKS.length - 2];
+export const taskOf = (b: Block) => TASKS.find((t) => t.id === b.task) ?? TASKS[0];
+
+const pageCache = new Map<string, Promise<Page | null>>();
+export function loadPage(slug: string): Promise<Page | null> {
+  if (!pageCache.has(slug)) pageCache.set(slug, fetch(`/data/pages/${slug}.json`).then((r) => (r.ok ? r.json() : null)).catch(() => null));
+  return pageCache.get(slug)!;
+}
+
+/** Who you are, or whose work you want done: the first way into the library.
+ *  A function groups the jobs that person does; a job can sit under more than one. */
+export const FUNCTIONS: { id: string; name: string; line: string; glyph: string; tasks: string[] }[] = [
+  { id: "copywriter", name: "Copywriter", line: "Ads, pages and offers that sell", glyph: "Aa", tasks: ["write-ad-copy", "write-landing-page", "make-offer"] },
+  { id: "media-buyer", name: "Meta media buyer", line: "Plan tests, get ads approved, read results", glyph: "%", tasks: ["plan-ad-tests", "check-ads", "read-ad-results", "study-competitors"] },
+  { id: "designer", name: "Graphic designer", line: "Image ads and product photos", glyph: "[]", tasks: ["make-image-ads", "product-photos"] },
+  { id: "video", name: "Video editor", line: "Scripts, shot lists and edits", glyph: "|>", tasks: ["make-video-ads"] },
+  { id: "cro", name: "CRO specialist", line: "Pages that turn visitors into buyers", glyph: "↗", tasks: ["audit-landing-page", "write-landing-page"] },
+  { id: "strategist", name: "Brand strategist", line: "Know your customers, brand and rivals", glyph: "◎", tasks: ["understand-customers", "brand-file", "study-competitors", "make-offer"] },
+  { id: "social", name: "Social media manager", line: "Posts that grow an audience", glyph: "#", tasks: ["grow-social"] },
+  { id: "founder", name: "Founder", line: "Set AI up to work across the business", glyph: "01", tasks: ["set-up-ai", "brand-file"] },
+];
+export const functionsOf = (b: Block) => FUNCTIONS.filter((f) => f.tasks.includes(b.task));
+
+/** Which businesses a block suits. Most work for any business; some are only for shops selling physical products. */
+export const BUSINESSES: { id: string; name: string; test: (b: Block) => boolean }[] = [
+  { id: "any", name: "Works for any business", test: (b) => b.category !== "ecommerce" },
+  { id: "store", name: "Online stores", test: (b) => b.category === "ecommerce" || b.addon },
+];
+
+/** What you already have. Brand files are left out: nearly everything uses one. */
+export const STARTS: { id: string; name: string; types: string[] }[] = [
+  { id: "product", name: "A product page or details", types: ["product_data", "web_page"] },
+  { id: "reviews", name: "Customer reviews", types: ["voc_reviews"] },
+  { id: "customer", name: "A customer profile", types: ["persona"] },
+  { id: "brief", name: "A brief", types: ["brief"] },
+  { id: "copy", name: "Ad copy or a draft", types: ["ad_copy", "copy_draft"] },
+  { id: "script", name: "A video script", types: ["script"] },
+  { id: "photos", name: "Product photos", types: ["product_photos"] },
+  { id: "results", name: "Ad results", types: ["performance_sheet"] },
+  { id: "page", name: "A landing page", types: ["landing_page"] },
+  { id: "offer", name: "An offer", types: ["offer"] },
+  { id: "competitors", name: "Competitor ads", types: ["competitor_set", "ad_breakdowns"] },
+  { id: "examples", name: "Examples you like", types: ["reference_set"] },
+  { id: "footage", name: "Video footage", types: ["footage", "video_ads"] },
+];
+export const startsFrom = (b: Block, id: string) => { const s = STARTS.find((x) => x.id === id); return !s || b.inputs.some((p) => s.types.includes(p.type)); };

@@ -1,0 +1,173 @@
+new_slug: stop-worried-buyers-with-what-they-dread
+name: Stop worried buyers with the thing they dread
+summary: One quiet, ordinary object from the future your buyer fears, photographed on a real table, with nothing graphic.
+job: make-image-ads
+
+headline: One quiet object from the future your buyer dreads, sitting on a table like theirs
+subhead: Give it your story ad and the fear your buyers name themselves. It picks one plain object that stands for that feared next step, such as a card statement or a repair quote, and writes a prompt for a calm phone photo of it.
+
+explain: |
+  Many buyers act only when they picture where the problem is heading. They've usually imagined it already and pushed the thought away. This picture type shows that future as one calm, ordinary object, a bill, a statement or an appointment card, sitting where it would sit in real life. Seeing it as a plain photo on a table like theirs is harder to push away than any scary image.
+
+  The fear has to be one your buyers state themselves, in their own words. The skill turns it into a single object, places it among real clutter, and frames the minute before a decision, never the event itself. It rules out anything frightening (accidents, hospital beds, damaged bodies) because a shocking picture earns a hide, not a read, and it never suggests your product prevents the outcome.
+
+when:
+  - Your buyers name a feared next step in their own words (the price jump after the first order, the repair quote, the first tax bill).
+  - A picture of today's problem isn't moving people, and the worry about later is what makes them act.
+  - You want something quieter than a shock image that still makes the stakes clear.
+
+you_give:
+  - Your approved story ad and the worry in it
+  - What your buyers fear happens next, in their words
+  - Outcomes your brand may not suggest (optional)
+you_get:
+  - The one object, what it stands for and where it sits
+  - The headline to run under the image
+  - Flags on what the copy must not promise
+  - A 60 to 120 word image prompt, ready to paste
+
+how_to_use:
+  - Copy the skill and paste it into Claude, ChatGPT or Gemini.
+  - Paste your story ad underneath.
+  - Add the feared next step exactly as your buyers say it, from reviews, calls or your brand file.
+  - Paste the image prompt into your image tool and make one square picture.
+  - Read the flags. If your product can't stop the feared outcome, check your copy doesn't suggest it can.
+
+how_it_works:
+  - title: Sets the ground rules
+    text: Square, looks taken on a phone, no logo, price, button, brand colour or product, and nobody in frame beyond a hand.
+  - title: Picks the object
+    text: Turns the buyer's fear into one object, such as an appointment card, a quote letter or a printed statement.
+  - title: Places it truthfully
+    text: Puts it where it would be in real life, like the kitchen table beside the post or the passenger seat.
+  - title: Frames the minute before
+    text: A quiet, slightly tilted phone photo in room light, with real clutter. The moment before the decision, never the event.
+  - title: Keeps print soft
+    text: Any printed words on the object stay short and partly out of focus.
+
+output_shape: |
+  SCENE
+  <one sentence: what someone scrolling would say they saw>
+
+  WHERE AND WHEN
+  <place, time of day, what is within reach>
+
+  THE OBJECT
+  <what it is, and the buyer's fear it stands for>
+
+  WHERE IT SITS
+  <surface, clutter, light, a hand at the edge or none>
+
+  WORDS ON THE IMAGE
+  <none beyond the object's own print, short and out of focus>
+
+  HEADLINE UNDER THE IMAGE
+  What I wish I'd checked before <action>.
+
+  FLAGS
+  <medical fear or not; what the copy must not promise>
+
+  IMAGE PROMPT
+  <60 to 120 words, ready to paste>
+
+example:
+  business: sprout
+  input: |
+    [the skill]
+
+    Story ad (approved, built on review 17):
+    I hate subscriptions. I feel like they are a trap.
+    Every "first order" deal I'd signed up for, I waited for the full
+    price to land on my card.
+    So before I tried Sprout, I read the line under the button:
+    "Renews at $49.99 each 4 weeks. Cancel anytime." The $29.99 first
+    box needs the text sign-up discount. I knew both numbers before I
+    paid. 30-day money-back guarantee on the first order.
+
+    Buyer: the price doubter.
+    Feared next step, from the brand file: "Will the price jump after
+    the first order?"
+  output: |
+    SCENE
+    A printed card statement lying open on a kitchen table, set a
+    little apart from the rest of the post.
+
+    WHERE AND WHEN
+    Kitchen table, early evening, overhead light. Within reach: two
+    unopened envelopes, keys, a mug, a phone face down.
+
+    THE OBJECT
+    A folded-open card statement, the kind that shows a renewal
+    charge. It stands for the full price arriving after a first-order
+    deal, the thing this buyer says they're afraid of.
+
+    WHERE IT SITS
+    A wooden table with a coffee ring and a few crumbs. An adult's
+    hand rests at the right edge near the statement, not picking it
+    up.
+
+    WORDS ON THE IMAGE
+    None beyond the statement's own print, out of focus. No bank
+    name, no amount, no shop name.
+
+    HEADLINE UNDER THE IMAGE
+    What I wish I'd checked before every first-order deal.
+
+    FLAGS
+    Not a medical fear, so no extra review for that.
+    The copy must state the real renewal price ($49.99 every 4 weeks)
+    and that $29.99 needs the text sign-up. Nothing in the picture or
+    the copy should suggest the price never changes.
+    Cancelling is the loudest complaint on public review sites. Don't
+    promise an easy cancel beyond the site's own words.
+    The guarantee covers the first order only. Keep "first order" in
+    the copy.
+
+    IMAGE PROMPT
+    Square 1:1 quiet phone photo of a wooden kitchen table in the
+    early evening under an overhead light, slightly tilted. A
+    folded-open printed card statement lies a little apart from two
+    unopened envelopes, a set of keys, a mug with a coffee ring under
+    it and a phone face down. A few crumbs on the table. An adult's
+    hand rests at the right edge near the statement, not touching
+    it. All print on the statement is out of focus and unreadable.
+    Ordinary room light, a little grain, unstyled. No logo, no bank
+    name, no amount, no warning symbols, no product, no face, no
+    children.
+
+tweaks:
+  - what: The object
+    how: Ask for a different stand-in for the same fear, such as a bank notification on a phone instead of a paper statement. Pick the one your buyer would see first.
+  - what: The hand
+    how: Ask for "no hand" for a colder, emptier picture, or keep the hand at the edge to show someone is about to deal with it.
+  - what: Where it sits
+    how: Move it to where the dread happens for your buyer ("on the doormat", "on the passenger seat"). The place does half the work.
+  - what: How much print shows
+    how: Keep it blurred. If you need one word readable, keep it to a single plain word and check it isn't a claim or a real organisation's name.
+
+judge:
+  - The fear is one your buyers state themselves, not one you've imagined for them.
+  - The picture is calm. No accident, emergency, hospital bed or damaged body.
+  - No real clinic, bank, company or professional is named or shown.
+  - Nothing in the picture or the headline says your product prevents the outcome.
+  - There's no countdown, warning triangle or anything that reads as an ad.
+
+test:
+  - Run it on a fear you've heard from customers many times. The object should be the one they'd name first. If it isn't, add their exact words to the input.
+  - Give it a fear that is a medical outcome your brand can't speak about. It should stop and hand you to the empty-room picture.
+  - Read your copy with the picture beside it. If the pair suggests the outcome goes away, change the copy before it runs.
+  - Test it against a snapshot of today's problem. Some buyers respond to now, some to later.
+
+improve:
+  - Add your buyers' feared next steps, in their words, to "What you need". This picture is only as honest as that list.
+  - Add your brand's outcome limits (what you may never suggest) to the check list in the skill file.
+  - Add the surfaces and props of your buyers' homes to the brand file section, so the object sits somewhere they'd recognise.
+  - Pair it with a story that names the same fear in its first lines, so the object makes sense at once.
+
+terms:
+  - term: Feared next step
+    meaning: Where the buyer worries the problem is heading, in their own words.
+  - term: Story ad
+    meaning: An ad whose main text tells one person's story in their own words, like a post from a friend.
+  - term: Image prompt
+    meaning: The text you paste into an image tool to make the picture.

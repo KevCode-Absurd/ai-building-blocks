@@ -1,0 +1,183 @@
+new_slug: get-a-second-look-with-a-test-result-photo
+name: Get a second look with a test result photo
+summary: A photographed test result with one red circle and nothing readable, built on facts you can back.
+job: make-image-ads
+
+headline: A photographed test result with one red circle, built only on facts you can back
+subhead: Give it your story ad and what your brand can support about the test it names. It briefs a phone photo of the readout (a chart, a strip, a lab table), adds one rough red mark, keeps every name and number unreadable, and flags it for review.
+
+explain: |
+  A result with a red circle on it is a question people won't scroll past: what does that line say, and should I check mine? People photograph results like this to send to family. This picture type copies that, for problems and products that come with a test or readout.
+
+  It takes the test your story opens with and photographs it as a person would, tilted, with screen glare or room reflections and the edge of a desk. It marks the one place the eye should land with a rough red circle or arrow. Every name, date, institution and number stays out of focus, so nothing can be quoted or mistaken for a real patient's file. It only works when your brand's facts support what the test shows, and it always flags the picture for a person to check before it runs.
+
+when:
+  - Your story opens with a test, readout or report the buyer looked at.
+  - Your brand has facts on file that support what that test shows.
+  - You want a picture that makes people ask "should I check mine?"
+
+you_give:
+  - Your approved story ad and the test its opening names
+  - What your brand can support about the test, with its source
+  - What the buyer was told, in their words (optional)
+you_get:
+  - The readout, the surface it's on and where the one mark goes
+  - A flag for a person to check the claims behind it
+  - The headline to run under the image
+  - A 60 to 120 word image prompt, ready to paste
+
+how_to_use:
+  - Copy the skill and paste it into Claude, ChatGPT or Gemini.
+  - Paste your story ad underneath.
+  - Paste the fact your brand can support about the test, with where it comes from.
+  - Paste the image prompt into your image tool. If any number or name is readable, make it again.
+  - Have a person check the claims behind it before it runs. The flag is there every time.
+
+how_it_works:
+  - title: Sets the ground rules
+    text: Square, looks taken on a phone, no logo, price, button, brand colour or product, and no person beyond a hand.
+  - title: Names the readout
+    text: Takes the test from your story's opening, like a sleep-tracker chart, a water-test strip or a lab results table.
+  - title: Picks where the eye lands
+    text: One rough red circle or short arrow, as if drawn with a marker or a finger.
+  - title: Photographs it like a person
+    text: A tilted capture of a screen or sheet, with glare or reflections, showing an ordinary finding, not a dramatic one.
+  - title: Hides the details
+    text: Every name, date, institution and number stays unreadable.
+  - title: Flags it for review
+    text: Always marks it for a person to check the claims it rests on.
+
+output_shape: |
+  SCENE
+  <one sentence: what someone scrolling would say they saw>
+
+  WHERE AND WHEN
+  <place, time of day, what is within reach>
+
+  THE READOUT
+  <what it is, on what surface, all print unreadable>
+
+  THE MARK
+  <one rough red circle or arrow, and where>
+
+  WORDS ON THE IMAGE
+  None. Every number, name and date stays unreadable.
+  HEADLINE UNDER THE IMAGE
+  <"What I wish I'd checked before..." or "Stop blaming ... Look at ...">
+
+  FLAGS
+  Medical-look image: a person must check the claims basis before
+  it runs.
+  Claims basis: <the fact and its source>
+  <MISSING lines, and anything that doesn't add up>
+
+  IMAGE PROMPT
+  <60 to 120 words, ready to paste>
+
+example:
+  business: sprout
+  input: |
+    [the skill]
+
+    Story ad (approved, built on the product page):
+    I'm the one who reads labels. My last greens powder, I never
+    checked how it was tested.
+    This time I went looking first. Sprout's testing section says
+    third-party tested for 70 pesticides, 4 heavy metals, 16
+    contaminants and 9 microbial contaminants, by an outside lab, in
+    September 2026.
+    Then I bought one pouch. Each daily pack: 60+ ingredients, 21
+    vitamins and minerals, 6 g prebiotic fiber.
+
+    What we can support (product page): "Third-party tested for 70
+    pesticides, 4 heavy metals, 16 contaminants, 9 microbial
+    contaminants." The same page says: "Tested by [an outside lab]
+    in SEP 2026. 35 substances tested for quality."
+  output: |
+    SCENE
+    A laptop screen showing a plain table of test results,
+    photographed on a phone, with one row circled in red.
+
+    WHERE AND WHEN
+    A kitchen table in the evening, overhead light reflecting on the
+    screen. Within reach: the laptop edge, a mug, reading glasses.
+
+    THE READOUT
+    A plain results table on a laptop: four rows, a few columns,
+    every number and word too small and blurred to read. A generic
+    page with no company name, logo or brand colour.
+
+    THE MARK
+    One rough red circle, as if drawn with a finger on the photo,
+    around a single row.
+
+    WORDS ON THE IMAGE
+    None. Every number, name and date on the screen stays
+    unreadable.
+
+    HEADLINE UNDER THE IMAGE
+    What I wish I'd checked before buying my last greens powder.
+
+    FLAGS
+    Medical-look image: a person must check the claims basis before
+    it runs.
+    Claims basis: "Third-party tested for 70 pesticides, 4 heavy
+    metals, 16 contaminants, 9 microbial contaminants" (product
+    page).
+    The numbers don't agree. 70 + 4 + 16 + 9 is 99, but the same
+    page says "35 substances tested for quality". Settle which is
+    right before this runs.
+    MISSING: a real lab report to copy the layout from. The files
+    hold the claim, not the report, so the table must not invent
+    numbers someone could quote.
+    The circle marks a row, not a verdict. Don't add "passed" or
+    "clean".
+
+    IMAGE PROMPT
+    Square 1:1 phone photo of a laptop screen on a kitchen table in
+    the evening, taken at a slight tilt, with overhead light
+    reflecting on the screen and faint moire lines. The screen shows
+    a plain, generic results table with four rows and a few columns,
+    every number and word too small and blurred to read, no company
+    name, logo or brand colour. One rough red circle, as if drawn
+    with a finger, surrounds a single row. The laptop edge, a mug and
+    a pair of reading glasses sit at the edges of the frame.
+    Ordinary, unstyled, a little grain. No readable text or numbers,
+    no person, no product, no pouch, no children, no white coat.
+
+tweaks:
+  - what: Screen or paper
+    how: Ask for "a printed sheet on the table" instead of a screen. Paper feels more private; a screen feels more like something the reader could look up today.
+  - what: Where the circle goes
+    how: Point it at the one line your story talks about. One mark only, since two make it a diagram.
+  - what: How ordinary the finding is
+    how: Ask for "an ordinary result, nothing dramatic". A dramatic reading suggests a diagnosis and breaks the rules.
+  - what: A hand
+    how: Add "a hand at the edge holding the phone up to the screen" if you want it to feel more like someone checking their own result.
+
+judge:
+  - It shows a kind of result, not a real person's file. No readable name, date of birth, institution or doctor.
+  - No number in the picture can be read or quoted.
+  - There's exactly one mark.
+  - Nothing suggests the reader has a condition, or that the product treats, cures or reverses one.
+  - There's no before-and-after, no white coat, no hand holding a product, and the review flag is there.
+
+test:
+  - Give it a test claim with no source. It should stop, not plan the picture.
+  - Give it two claims that disagree, as the example's 99 and 35 do. It should flag the mismatch instead of picking one.
+  - Zoom into the finished picture on your phone. If any number or word can be read, make it again.
+  - Show it to the person who signs off your claims, with the claim beside it, before it runs.
+
+improve:
+  - Add your test claims with their sources and dates to "What you need", so the claims basis is filled in every time.
+  - Keep a real copy of your lab or lot report in your brand file. Then the layout can follow it without inventing numbers.
+  - Add the words your brand may never put near a result ("passed", "clean", "safe") to the check list in the skill file.
+  - If your problem has no test, or your facts don't support what it shows, use the empty-room skill instead.
+
+terms:
+  - term: Readout
+    meaning: Any test result you can look at, such as a chart, a strip, a printed log or a lab table.
+  - term: Claims basis
+    meaning: The facts and sources that back what your ad says or shows.
+  - term: Story ad
+    meaning: An ad whose main text tells one person's story in their own words, like a post from a friend.

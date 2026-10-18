@@ -1,0 +1,174 @@
+new_slug: keep-people-reading-with-a-hand-drawn-story
+name: Keep people reading with a hand-drawn story
+summary: One to four hand-drawn panels that tell your buyer's problem in order, for problems a photo can't show.
+job: make-image-ads
+
+headline: Show a private or hard-to-photograph problem as a few drawings people follow to the end
+subhead: Give it your story ad. It picks one to four moments in the order the story tells them (how it started, what they tried, where it left them), chooses one found-looking drawing style, and writes the prompt.
+
+explain: |
+  Some problems can't be photographed. Bloating, cramps, a racing mind or anything private either looks staged in a photo or gets the ad rejected. A drawing gets around that. This picture type tells the problem's history in one to four simple panels, in a style that looks found, like a page from someone's notebook, rather than designed.
+
+  It takes the moments from your story in its own order and leaves the last panel unresolved, so the reader has to go to the text for the ending. It keeps one drawing style throughout (pencil on squared paper, a two-colour print or a ballpoint doodle sheet) and one simple adult figure in the same clothes. There is no lettering anywhere, because words drawn by an image tool are the quickest giveaway.
+
+when:
+  - The problem is inside the body or the head (bloating, cramps, a racing mind) and a photo would look staged.
+  - The problem is private, or the kind platforms won't allow as a photo.
+  - Your story moves through clear stages (started, tried this, tried that, still stuck).
+
+you_give:
+  - Your approved story ad, with how it started, what they tried and where it left them
+  - What your brand may show of the body (optional)
+you_get:
+  - One to four panels described in order
+  - The one drawing style used throughout
+  - The headline to run under the image
+  - A 60 to 120 word image prompt, ready to paste
+
+how_to_use:
+  - Copy the skill and paste it into Claude, ChatGPT or Gemini.
+  - Paste your story ad underneath. It works best when the story has clear steps in order.
+  - Say what your brand may never show of the body, if anything.
+  - Paste the image prompt into your image tool. If any letters appear, make it again.
+  - Check the last panel. If it looks solved or happy, ask for it again unresolved.
+
+how_it_works:
+  - title: Sets the ground rules
+    text: Square, no logo, price, button, brand colour or product, and the figure is a made-up adult.
+  - title: Lists the moments
+    text: Picks one to four moments in your story's own order. The last panel stays unresolved.
+  - title: Chooses one style
+    text: Picks one found-looking style, such as pencil on squared notebook paper, and keeps it for every panel.
+  - title: Draws one simple figure
+    text: An adult with no likeness and no detailed face, in the same clothes in every panel.
+  - title: Adds a scanned feel
+    text: Paper grain, a fold line, uneven ink, so it looks found.
+
+output_shape: |
+  SCENE
+  <one sentence: what someone scrolling would say they saw>
+
+  WHERE AND WHEN
+  <place and time of day in the panels>
+
+  PANELS (in the story's order)
+  1 How it started: <what the panel shows>
+  2 What they tried: <what the panel shows>
+  3 What they tried next: <what the panel shows>
+  4 Where it left them: <what the panel shows>. Unresolved.
+
+  STYLE LINE
+  <the one style used throughout>
+  THE FIGURE
+  <one simple adult, no detailed face, same clothes>
+
+  WORDS ON THE IMAGE
+  None. The headline under the image carries the words.
+
+  HEADLINE UNDER THE IMAGE
+  <"The reason you..." or "Why your ... keeps coming back.">
+
+  IMAGE PROMPT
+  <60 to 120 words, ready to paste>
+
+example:
+  business: sprout
+  input: |
+    [the skill]
+
+    Story ad (approved, built on reviews 7, 8 and 10):
+    For years my stomach ran my day. By 2pm the top button of my
+    jeans was undone under the desk.
+    First I tried fiber powders. Then probiotics. Then cutting out
+    one food at a time, for months.
+    I didn't want a quick fix. I wanted to feel normal.
+    Sprout is a daily pack of gummies with 6 g prebiotic fiber. It
+    supports digestion and gut health. If your stomach is sensitive,
+    start with Low Sugar.
+
+    Brand limits: say "supports", never "fix".
+  output: |
+    SCENE
+    Four blue ballpoint drawings on a notebook page of one person's
+    long run of bad afternoons.
+
+    WHERE AND WHEN
+    An office desk after lunch in panel 1, a kitchen in panels 2 and
+    3, the kitchen at night in panel 4.
+
+    PANELS (in the story's order)
+    1 How it started: the figure leans back from a pushed-away plate
+      at a desk, the top button of their jeans undone.
+    2 What they tried: the figure at a kitchen counter, stirring a
+      glass of cloudy drink.
+    3 What they tried next: the figure holding up a plain capsule
+      bottle, looking at it.
+    4 Where it left them: the figure at an open fridge with nearly
+      empty shelves, holding one item. Unresolved.
+
+    STYLE LINE
+    Blue ballpoint doodles on a plain notebook page, the same in all
+    four panels.
+
+    THE FIGURE
+    One simple adult, no detailed face, striped jumper and jeans in
+    every panel.
+
+    WORDS ON THE IMAGE
+    None. The headline under the image carries the words.
+
+    HEADLINE UNDER THE IMAGE
+    The reason you undo your top button after lunch.
+
+    FLAGS
+    None. The glass and the capsule bottle are plain and unlabelled.
+    No panel shows a Sprout pack, a flat stomach or a smile.
+
+    IMAGE PROMPT
+    Square 1:1 scan of a plain notebook page with four simple blue
+    ballpoint drawings in a two-by-two grid, one style throughout.
+    The same simple adult figure with no detailed face, in a striped
+    jumper and jeans, in every panel. Panel 1: at a desk, leaning
+    back from a pushed-away plate, top button of the jeans undone.
+    Panel 2: at a kitchen counter, stirring a glass of cloudy drink.
+    Panel 3: holding up a plain unlabelled capsule bottle, looking at
+    it. Panel 4: at an open fridge with nearly empty shelves, holding
+    one item. Paper grain, a fold line, uneven ink. No letters,
+    words, speech bubbles, logo, product or children.
+
+tweaks:
+  - what: Number of panels
+    how: Ask for one panel if the story has a single strong moment, or two for "before I tried and after I tried". Four is the most the picture can hold at phone size.
+  - what: The drawing style
+    how: Try "two-colour print" for a bolder look in a busy feed, or "pencil on squared paper" for something quieter. Keep one style per picture.
+  - what: The last panel
+    how: It must stay unresolved. If your story ends happily, stop the panels at the low point and let the text do the rest.
+  - what: What stands for the problem
+    how: Name the object you want, like the undone button or the empty fridge. A concrete object reads faster than abstract scribbles.
+
+judge:
+  - There are no letters, words or speech bubbles anywhere in the drawing.
+  - The panels follow the order your story tells them.
+  - The last panel doesn't show the product, a cure or a smile.
+  - The figure has no detailed face and wears the same clothes in every panel.
+  - No panel looks like a medical diagram or shows a body before and after.
+
+test:
+  - Show the drawing without the text to someone who fits your buyer and ask them to tell the story back. If they get the order wrong, the panels need clearer objects.
+  - Run it twice on the same story. The panels should follow the same order and land on the same unresolved moment.
+  - Check the finished picture letter by letter for drawn words. If any appear, remove mentions of thoughts or speech from the panel descriptions and run it again.
+  - Test it against a snapshot of the same story. A drawing should win on problems people won't photograph.
+
+improve:
+  - Add your brand's limits on the body to "What you need" as fixed lines, so every run checks against them.
+  - Add the drawing styles that suit your brand to step 3, and remove the ones that don't.
+  - Write your stories in clear steps (started, tried, tried, stuck) and save the steps in your brand file. They become the panels.
+  - If the story won't fit in four panels, use the everyday snapshot skill instead. Never ask for a style after a living illustrator or a known comic.
+
+terms:
+  - term: Panel
+    meaning: One box of a comic-style sequence.
+  - term: Story ad
+    meaning: An ad whose main text tells one person's story in their own words, like a post from a friend.
+  - term: Headline under the image
+    meaning: The bold line under the picture in a Facebook or Instagram ad.

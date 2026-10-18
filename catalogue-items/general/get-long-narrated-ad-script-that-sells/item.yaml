@@ -1,0 +1,21 @@
+slug: get-long-narrated-ad-script-that-sells
+renamed_from: long-narrated-video-ad-script-format-rules
+name: "Get a long narrated ad script that sells"
+summary: "A 1 to 10 minute narrated video ad script, only as long as your real proof can fill."
+category: general
+boards: [ecommerce]
+type: skill
+role: make
+job: video
+level: advanced
+inputs:
+  - {type: brief, required: true}
+  - {type: persona, required: false}
+  - {type: brand_brain, required: true}
+outputs:
+  - {type: script}
+uses: []
+origin: own
+source_ids: [CES-125]
+old_name: script-format-vsl
+version: 1.0.0

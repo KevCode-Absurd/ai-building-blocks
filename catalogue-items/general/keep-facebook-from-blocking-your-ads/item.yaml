@@ -1,0 +1,22 @@
+slug: keep-facebook-from-blocking-your-ads
+renamed_from: meta-ad-policy-check
+name: "Keep Facebook from blocking your ads"
+summary: "Your Facebook or Instagram ad read against Meta's published ad rules, with what to fix first."
+category: general
+boards: [ecommerce]
+type: skill
+role: check
+job: ads
+level: intermediate
+inputs:
+  - {type: ad_copy, required: true}
+  - {type: script, required: false}
+  - {type: static_ads, required: false}
+  - {type: landing_page, required: false}
+outputs:
+  - {type: audit_report}
+uses: []
+origin: own
+source_ids: [CES-001]
+old_name: ad-compliance
+version: 1.0.0

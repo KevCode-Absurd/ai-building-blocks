@@ -1,0 +1,23 @@
+slug: turn-your-selfie-style-script-into-consistent-clips
+renamed_from: ai-ugc-video-ad-director
+name: "Turn your selfie-style script into consistent clips"
+summary: "Prompts for a phone-style talking ad with a made-up presenter who stays the same in every clip."
+category: general
+boards: [ecommerce]
+type: skill
+role: render
+job: video
+level: advanced
+inputs:
+  - {type: script, required: true}
+  - {type: product_data, required: true}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: image_prompt}
+  - {type: video_prompt}
+uses: [get-selfie-style-ad-script-that-sounds-human]
+example: ugc
+origin: rebuilt
+source_ids: [CES-100]
+old_name: realistic-ai-ugc
+version: 1.0.0

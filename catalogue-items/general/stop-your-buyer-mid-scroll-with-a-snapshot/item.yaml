@@ -1,0 +1,22 @@
+slug: stop-your-buyer-mid-scroll-with-a-snapshot
+renamed_from: native-ad-image-candid-moment
+name: "Stop your buyer mid-scroll with an everyday snapshot"
+summary: "A phone-photo style picture of the moment your buyer's problem hits, with a ready-to-paste image prompt."
+category: general
+boards: [ecommerce]
+type: skill
+role: render
+job: image
+level: beginner
+inputs:
+  - {type: ad_copy, required: true}
+  - {type: persona, required: false}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: image_prompt}
+uses: [get-story-ads-read-with-the-right-picture]
+example: native
+origin: own
+source_ids: [CES-059]
+old_name: candid-moment
+version: 1.0.0

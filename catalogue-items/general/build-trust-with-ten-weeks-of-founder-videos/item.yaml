@@ -1,0 +1,22 @@
+slug: build-trust-with-ten-weeks-of-founder-videos
+renamed_from: founder-video-series-plan
+name: "Build trust with ten weeks of founder videos"
+summary: "Ten weeks of short founder videos that build trust, each with its opening line and points."
+category: general
+boards: [ecommerce]
+type: skill
+role: make
+job: organic
+level: beginner
+inputs:
+  - {type: brand_brain, required: true}
+  - {type: persona, required: false}
+outputs:
+  - {type: plan}
+  - {type: brief}
+uses: []
+example: brief-founder
+origin: rebuilt
+source_ids: [CES-092]
+old_name: organic-content
+version: 1.0.0

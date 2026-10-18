@@ -1,0 +1,191 @@
+new_slug: get-video-ad-script-that-sells
+name: Get a video ad script that sells
+summary: A video ad script argued beat by beat, every line traced to a fact, or a fix for one that isn't working.
+job: make-video-ads
+
+headline: Get a video ad script that argues step by step, with every line traced to a fact
+subhead: Give it your product facts, and customer research if you have it. It works out what the buyer wants and doubts, writes the script in nine beats with a picture and source for every line, adds 5 to 10 openings, and suggests what to test first.
+
+explain: |
+  Most weak scripts were decided before the first line: no clear buyer, an offer nobody looked at, a promise bigger than the proof. Then the writer jumps to clever openings and staples them onto a body that doesn't follow. The ad gets attention and sells nobody.
+
+  This skill does the thinking first. It finds how the buyer copes with the problem now, what they tried, what nearly stopped them and their own words. It places the buyer by how much they know, checks what the offer really has, and finds the one specific claim rivals can't make. Then it writes nine beats (opening, problem, promise, how it works, doubt, proof, offer, guarantee, call to action), sized to the length, with spoken words, on-screen text, a picture and the evidence for each line. It can also review a script beat by beat, or rewrite one for a new length.
+
+when:
+  - You need a video ad script and want the reasoning behind every line, not just the lines.
+  - You have a script that isn't working and want to know which beat is broken.
+  - You need a 15-second or 3-minute version of a script that works at 60 seconds.
+
+you_give:
+  - Your product facts, how it works, price, offer, guarantee, approved claims and proof
+  - Customer research (reviews, tickets, survey answers) (optional)
+  - The buyer, the reason they buy and the offer (optional, it proposes one if missing)
+  - Length and speaker (optional, 60 seconds and a creator by default)
+  - An existing script and its results, to review it (optional)
+you_get:
+  - The script in nine beats with spoken line, on-screen text, picture and evidence
+  - 5 to 10 openings, each a different type, each graded
+  - A suggested format and a test plan
+  - Notes on placeholders, assumptions and anything risky to claim
+
+how_to_use:
+  - Copy the skill and paste it into Claude, ChatGPT or Gemini.
+  - Paste your brand file or product facts underneath, then any customer reviews or survey answers.
+  - Say what you want. "A 30-second script", "three scripts on three different reasons to buy", or "what's wrong with this script".
+  - Check the notes for MISSING and [ASSUMED]. Assumed insights are bets to test, not facts.
+  - Test 3 to 5 openings on one body first, before writing new bodies.
+
+how_it_works:
+  - title: Grounds it in research
+    text: Finds how buyers cope now, what failed, what nearly stopped them, their word for the problem and when they started looking. With no research it builds a marked, assumed model.
+  - title: Places the buyer
+    text: Sets how much they know (from unaware to ready to buy), which decides the opening, and how tired the market is of claims.
+  - title: Checks the offer
+    text: Uses only what exists (the thing, terms, guarantee, reason for now, effort) and frames the price one way with real numbers.
+  - title: Finds the specific claim
+    text: Deletes lines any competitor could say and looks for a measured number, a named third party or a physical detail.
+  - title: Writes nine beats
+    text: Opening, problem, promise, how it works, doubt, proof, offer, guarantee, call to action, each sized to the length.
+  - title: Writes 5 to 10 openings
+    text: Each a different type, each flowing into line 2, each with a first frame and overlay, graded on clarity, relevance, novelty, specificity and believability.
+  - title: Audits and recommends
+    text: Counts spoken words against the length, traces every number, picks a format from the beat that carries the ad, and plans the first test.
+
+output_shape: |
+  ## <Script title>
+  Concept: <buyer> x <reason to buy> x <offer> | Knows: <level> |
+  Market: <how tired of claims> | <length> | Spoken words: <exact>
+  <person, tense> | Register: <..> | Load-bearing beat: <..> |
+  Format: <suggested formats>
+
+  <BEAT>  "<spoken line>"  Screen: <on-screen text>
+          Picture: <what's on screen>  Evidence: <source or [ASSUMED]>
+  (nine beats, sized to the length; beats left out say why)
+
+  OPENINGS (clarity, relevance, novelty, specificity, belief)
+  <n> <type>: "<line>"  <five scores>  <keep or drop>
+
+  TEST PLAN  <what changes, what each result means, next if it wins>
+  NOTES      <placeholders, assumptions, risky claims, audit warnings>
+
+example:
+  business: sprout
+  input: |
+    [the skill]
+
+    Ask: a script, 30 seconds, AI presenter, second person.
+    Buyer: the price doubter. Knows Sprout, maybe from a store shelf,
+    and thinks it costs too much. Doubts: "Which discount is real?"
+    "Will the price jump after the first order?"
+    Product: Sprout greens gummies. 1 pack a day = 60+ ingredients,
+    21 vitamins and minerals, 6 g prebiotic fiber.
+    Price: $29.99 first order with the SMS sign-up, renews at $49.99
+    every 4 weeks ($1.78 a day). 30-day money back, first order only.
+    Discounts live: ads say 61% off; the site says 52%, 55%, 49%, 58%.
+    Customer words: "They are expensive" (retailer). "I hate
+    subscriptions because I feel like they are a trap so I canceled
+    it before the gummies even arrived. We quickly decided to
+    resubscribe because we love [Sprout] so much!" (review 17)
+    Results (practice numbers): P1 "'Sprout is too expensive': here's
+    61% off", days 1-21: 3,750 link clicks, 112 purchases. Days 22-42:
+    1,780 clicks, 39 purchases, same $3,000 spend.
+    Complaint: cancelling is the loudest complaint on review sites.
+    Voice: playful, cheeky, short lines, numbers up front.
+  output: |
+    ## The real number
+    Concept: price doubter x know the real price x first-order price
+    Knows: the product | Market: tired of discount claims, so lead
+    with plain numbers | 30 s | Spoken words: 100
+    "You", present | Register: cheeky, plain | Load-bearing beat: the
+    offer | Format: short phone video or an image ad
+
+    OPENING  "Seen three different discounts for the same gummies this
+          week?"  Screen: which discount is real?
+          Picture: presenter scrolling a phone, mid-thought.
+    PROBLEM  "So you close the tab, because a price that keeps changing
+          feels like a trap."  Picture: thumb hovers, then closes a tab.
+          Evidence: review 17 ("they are a trap"); buyer 4 doubts
+    PROMISE  "What you want is the real number, before you sign up for
+          anything."  Screen: the real number
+    HOW IT WORKS  "One pack a day. 21 vitamins and minerals and 6 grams
+          of fiber, in a handful of gummies."  Picture: a pack torn
+          straight across the top, gummies into a palm.
+          Evidence: product page
+    DOUBT  none (no room at 30 s; the offer beat answers "will the
+          price jump" by saying the renewal out loud)
+    PROOF  "One customer canceled before it even arrived, then wrote:
+          'We quickly decided to resubscribe.'"  Screen: the quote,
+          customer review. Evidence: review 17, word for word
+    OFFER  "It's Sprout. $29.99 for your first order with the text
+          sign-up, then $49.99 every 4 weeks, about $1.78 a day."
+          Screen: $29.99 first order (SMS sign-up). Then $49.99 every
+          4 weeks. Evidence: price page, footer
+    GUARANTEE  none below 60 s (first order only; keep it for the page)
+    CALL TO ACTION  "Sign up for the texts and start your first order."
+          Screen: $29.99 first order. Renews at $49.99 every 4 weeks.
+
+    OPENINGS (clarity, relevance, novelty, specificity, belief)
+    1 Doubt first: "Seen three different discounts for the same gummies
+      this week?"  4 5 4 4 4  keep
+    2 Blunt truth: "Here's what it costs after the first order, up
+      front."  5 5 3 4 4  keep
+    3 Customer word: "'They are expensive.' Fair. Here's the real
+      number."  4 5 3 4 4  keep
+    4 How they cope: "If you screenshot the price before you subscribe
+      to anything, this is for you."  4 5 4 3 4  keep [ASSUMED]
+    5 Open question: "What does a greens gummy cost a day?"  3 4 2 3 3
+      drop
+
+    TEST PLAN
+    P1's clicks fell by more than half in days 22 to 42 at the same
+    spend (practice numbers): that's fading, so new openings first.
+    Run this body with openings 1 to 3 as separate ads. If 2 wins,
+    plain renewal pricing is the hook; next, test it as an image ad.
+    If 3 wins, the buyer's own word works; write a 60-second version
+    with the guarantee beat.
+
+    NOTES
+    No percentage is used. The ads say 61% and the site four other
+    numbers, so the script quotes only prices a buyer will pay. The
+    SMS condition and the renewal are said aloud. Nothing promises an
+    easy cancel, the loudest complaint. [ASSUMED]: opening 4. 100
+    spoken words, 98% of what 30 seconds holds at 3.4 a second.
+
+tweaks:
+  - what: What you ask for
+    how: '"Openings only" runs research and openings. "Three scripts to test" gives three scripts on three different reasons to buy. "What''s wrong with this script" runs a review. "A 15-second version" re-plans the beats from scratch.'
+  - what: A reference ad
+    how: Paste an ad you like and say how to use it. Same words in a new format, step by step for your business, or only the principle behind it. It never shares a phrase of 6 or more words with the reference.
+  - what: Length
+    how: The opening and offer never grow. Longer scripts add problem, how it works, doubts and proof. At 15 seconds there's no doubt or guarantee beat; at 60 there's one of each.
+  - what: Results for review
+    how: Paste the ad's numbers. Low hook rate points at the first three seconds; good hook but early drop points at the bridge; clicks but few sales points at the landing page and price.
+
+judge:
+  - The opening flows straight into line 2 when read aloud.
+  - The problem is how one person copes, not a list of symptoms, and it isn't solved yet.
+  - The promise comes before how it works, and the proof is bigger than the promise.
+  - The product is named late, at the offer.
+  - Every number traces to your facts, and every assumption is marked.
+  - The spoken word count fits the length at the speaker's pace.
+
+test:
+  - Run it on an ad you already know won. If its load-bearing beat isn't the part you think sold it, read its reasons before you trust either.
+  - Give it no customer research. Every insight should come back marked [ASSUMED] in an "Assumed customer model"; if not, a rule was skipped.
+  - Paste a script that isn't working, with its numbers, and ask what's wrong. It should name one beat as the weakest and say which number points there.
+  - Count the spoken words yourself. They should match its count exactly and fit the length at the stated pace.
+
+improve:
+  - Paste your business facts, allowed claims and never-say list into "What you need" in the skill file, so every run starts from the same truth.
+  - Add your brand's voice rules to the voice pass (step 11), with two lines from your best ad as the model.
+  - Feed it return and cancel reasons. They point straight at the call to action and the guarantee.
+  - When a script wins, save its concept and load-bearing beat to your brand file, and change one thing per variant next time.
+  - Pair it with a skill that checks a script against video ad rules, or one that plans a batch of different script types for variety.
+
+terms:
+  - term: Beat
+    meaning: One part of the script with one job, like the problem or the proof. Several lines can make one beat.
+  - term: How much the buyer knows
+    meaning: From unaware of the problem, to knowing the problem, to knowing the fixes, to knowing you, to ready to buy. It decides how the ad opens.
+  - term: Load-bearing beat
+    meaning: The beat doing most of the selling. It decides the best format.

@@ -1,0 +1,20 @@
+slug: get-different-video-ads-from-same-research
+renamed_from: video-script-type-library
+name: "Get different video ads from the same research"
+summary: "Script types matched to your buyer and your proof, so one round of research gives four different ads."
+category: general
+boards: [ecommerce]
+type: skill
+role: make
+job: video
+level: intermediate
+inputs:
+  - {type: brief, required: true}
+  - {type: voc_reviews, required: false}
+outputs:
+  - {type: plan}
+uses: [get-video-ad-script-in-customers-words, get-video-ad-script-that-sells]
+origin: own
+source_ids: [CES-133]
+old_name: script-types
+version: 1.0.0

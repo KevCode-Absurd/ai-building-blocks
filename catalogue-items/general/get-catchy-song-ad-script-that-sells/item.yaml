@@ -1,0 +1,21 @@
+slug: get-catchy-song-ad-script-that-sells
+renamed_from: song-ad-script-format-rules
+name: "Get a catchy song ad script that sells"
+summary: "An original song ad with a chorus about what your customer gets, and every sung claim backed."
+category: general
+boards: [ecommerce]
+type: skill
+role: make
+job: video
+level: intermediate
+inputs:
+  - {type: brief, required: true}
+  - {type: brand_brain, required: true}
+outputs:
+  - {type: script}
+uses: []
+example: song
+origin: rebuilt
+source_ids: [CES-121]
+old_name: script-format-song
+version: 1.0.0

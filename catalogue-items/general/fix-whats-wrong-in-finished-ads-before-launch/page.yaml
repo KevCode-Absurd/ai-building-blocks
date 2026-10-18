@@ -1,0 +1,178 @@
+new_slug: fix-whats-wrong-in-finished-ads-before-launch
+name: Fix what's wrong in finished ads before launch
+summary: Finished image ads or storyboards reviewed, with the smallest fix for each flaw and a verdict per ad.
+job: check-ads
+
+headline: A list of what's wrong with each finished ad, and the smallest change that fixes it
+subhead: Give it your finished image ads or storyboards, their exact words, what you're allowed to claim and who each ad is for. It checks proof first, then whether the ad makes sense to that buyer, then the look, and says pass, fix or remake for each.
+
+explain: |
+  A good-looking ad can still be a bad ad. The product might be the wrong colour, the small print might be unreadable, the quote might not match the review, or the headline might argue something the picture doesn't. And a batch of ten can turn out to be one idea in ten colours.
+
+  This skill reviews what was actually made, not the plan. It reads each image together with its exact words, at the size a phone shows it. It checks proof first (claims, quotes, prices and dates against what you're allowed to say), then whether a buyer would understand and act, then looks and spelling. For each flaw it names the spot and gives the smallest fix, such as moving text into empty space instead of covering the art with a box. Any score it gives is an editor's opinion, never a forecast of clicks or sales.
+
+when:
+  - A designer or AI tool has sent you a batch of image ads and you need to approve them.
+  - You have storyboards for a video ad and want to check them before anything is filmed or generated.
+  - You suspect a batch of ads all say the same thing.
+
+you_give:
+  - The finished images or storyboard frames, and their exact words
+  - What each ad may claim, with real prices, terms and dates
+  - Your brand voice, logo and font references
+  - Who each ad is for and how much they already know
+  - The whole batch, to check variety (optional)
+you_get:
+  - A list of flaws, each with the spot, the problem, why it fails and the smallest fix
+  - Proof problems listed before looks
+  - A pass, fix or remake verdict for each ad
+  - A note on how much the batch varies
+
+how_to_use:
+  - Copy the skill and paste it into Claude, ChatGPT or Gemini.
+  - Attach the finished images at full size, or paste the storyboard frames.
+  - Paste every word that runs with each ad, including headline, main text and button.
+  - Paste your claims list, offer terms and logo and font references, and say who each ad is for.
+  - Fix the proof problems first. A wrong claim matters more than a wrong shade of blue.
+
+how_it_works:
+  - title: Reads image and words together
+    text: Looks at each ad at phone size, checking the main idea, reading order, product, contrast, crop and spelling.
+  - title: Checks the words
+    text: Reads every headline, line and button for brand voice, plain language and a clear next step.
+  - title: Checks logo and font
+    text: Confirms the real logo and font were used, not just a matching colour, and suggests fixes that keep the art.
+  - title: Checks the proof
+    text: Compares every claim, quote, price and date with what you're allowed to say. A made-up face or a before-and-after picture proves nothing.
+  - title: Finds the weak link
+    text: Reads each ad for the moment of need, how it feels, the reason to believe and the change promised, and names the one that's missing.
+  - title: Checks the batch
+    text: Asks whether buyer, argument, layout and scene differ across ads, or only the colours do.
+  - title: Checks storyboards
+    text: For video, checks that people, product and props stay the same across frames and that each shot has a job.
+
+output_shape: |
+  PROOF PROBLEMS
+  <ad> | <field or region> | evidence
+    <what's wrong, checked against your claims and offer>
+    Smallest fix: <the change>
+
+  MAKES SENSE TO THE BUYER?
+  <ad> | <field> | argument
+    <the weak link: moment, feeling, reason to believe or change>
+    Smallest fix: <the change>
+
+  LOOK AND BRAND
+  <ad> | <logo, font, picture, crop, spelling> | <flaw, or unreviewable>
+
+  VERDICTS
+  <ad> <pass | fix | remake> | ...
+
+  BATCH
+  <how much buyer, argument, layout and scene differ>
+  <no scores, or an editor's score marked as opinion>
+
+example:
+  business: sprout
+  input: |
+    [the skill]
+
+    Ads (images not attached; described with their words):
+    S1 "Trusted by 1M+". Words: "Trusted by 1M+: Take 61% OFF".
+      Picture: the pouch on a green gradient.
+      For: price doubters who know the brand.
+    W1 "Muscle weight loss". Words: "Support Muscle While You Lose
+      Weight". Picture: a woman in gym clothes holding the pouch.
+      For: people trying to lose weight, new to us.
+    R1 "Runner". Words: "The Daily Nutrition Every Runner Forgets".
+      Picture: a runner tying a shoe, the pouch on the bench.
+      For: runners, new to us.
+    Claims and offer: Sprout brand file (fine and risky claims, the
+      discount mess, the product page: "Save 52%", "up to 55%",
+      "1M+ Customers").
+    Logo and font: Work Sans bold on file. No logo file.
+  output: |
+    PROOF PROBLEMS
+    W1 | headline | evidence
+      "Support Muscle While You Lose Weight" is on your own risky
+      list: no evidence on file for weight loss or muscle. Every word
+      of the argument rests on it.
+      Smallest fix: none that keeps the argument. Remake for this
+      buyer from a fine-to-repeat claim, such as "60+ ingredients, 21
+      vitamins & minerals, and 6g fiber" in one pack.
+    W1 | picture | evidence
+      If the woman is generated, she proves nothing about real
+      customers. Next to a weight-loss line, a fit body reads as a
+      promised result.
+      Smallest fix: product and setting only, no body in focus.
+    S1 | "61% OFF" | evidence
+      The product page shows 52% in the bar and "up to 55%" in the
+      badge. The ad must match the page.
+      Smallest fix: use the number that's live at checkout.
+    S1 | "1M+" | evidence
+      Brand-reported ("1M+ Customers" on the product page). Fine to
+      run if you can show where the count comes from.
+      Smallest fix: keep it, and note the source in your claims list.
+
+    MAKES SENSE TO THE BUYER?
+    R1 | headline | argument
+      Names the buyer but gives no reason to believe. Nothing on file
+      is about runners: no runner reviews, no runner-specific fact.
+      "Every runner" also says more than you know. Weak link: the
+      reason to believe.
+      Smallest fix: keep the picture, add one true line under the
+      headline, such as "21 vitamins and minerals in one pack you can
+      eat on the bench."
+    S1 | headline | argument
+      Social proof and a discount, for someone who already knows you.
+      Clear next step. No weak link beyond the number above.
+
+    LOOK AND BRAND
+    All three | logo, font, picture | unreviewable on that point
+      MISSING: the images and a logo file. Check each uses Work Sans
+      bold and shows the pouch closed (it is never shown torn).
+
+    VERDICTS
+    S1 fix | W1 remake | R1 fix
+
+    BATCH
+    Three ads, three arguments (proof and offer, weight, identity),
+    three scenes. None speaks to the quitter or the gut-fix seeker,
+    the two strongest themes in your reviews.
+    No scores given. Nothing here predicts clicks or sales.
+
+tweaks:
+  - what: The images
+    how: Attach the real files at full size. Without them it can only review the words, and marks the look as unreviewable.
+  - what: Buyer per ad
+    how: Say who each ad is for. The same headline can pass for a returning customer and fail for someone who has never heard of you.
+  - what: Storyboards
+    how: Paste the frames in order with the script. It then checks that the person, product and props match from shot to shot.
+  - what: A score
+    how: Ask for one and it gives an editor's score per ad, clearly marked as opinion. It still won't tell you which ad will sell.
+
+judge:
+  - Every flaw names an exact spot, a line or a region of the image.
+  - Proof problems are listed before looks.
+  - Each fix is the smallest change, such as a swapped line, not "start again".
+  - No fix covers the art with a plain box to hold text.
+  - Anything it couldn't check is labelled, not passed.
+
+test:
+  - Run it on a batch where you already know one ad has a wrong claim or price. That flaw should appear first, under proof problems. If it's buried under notes on colour, don't rely on its order.
+  - Run it twice on the same batch. The verdicts should match. If an ad moves from "fix" to "pass", ask it to show the claim it checked against.
+  - Give it an ad you think is perfect. It should pass it, or name a specific spot. A vague "could be stronger" with no field named isn't a flaw.
+  - Check every smallest fix. If one says "start again" when a swapped line would do, or covers the art with a plain box, push back.
+
+improve:
+  - Paste your full claims list, including the risky ones, and your live offer into "What you need" in the skill file, so proof checks run against the same list every time.
+  - Add your brand's show-it-right rules (for example how the pack opens) to step 3, next to the logo and font check.
+  - If you never make storyboards, delete step 7 so reviews stay short.
+  - Save the flaws you see often in your brand file as a "before you brief" list, and add it to your next brief.
+  - Pair it with a skill that checks a finished ad on a phone before you spend, and with one that checks ads against Meta's ad rules.
+
+terms:
+  - term: Storyboard
+    meaning: A set of sketches or stills showing each shot of a video before it is made.
+  - term: Weak link
+    meaning: The one part of the ad's argument that's missing or thin, such as no reason to believe.

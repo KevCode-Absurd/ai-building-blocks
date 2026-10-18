@@ -1,0 +1,221 @@
+new_slug: win-over-strangers-with-article-style-page
+name: Win over strangers with an article-style page
+summary: A long, ad-labelled page that walks strangers from a problem they know to your product.
+job: write-landing-page
+
+headline: Win over strangers with a page that explains their problem before it asks for the sale
+subhead: Give it your product facts, your offer and the ad that sends people over. It writes the whole page in 13 parts, from the problem the reader knows, through why the usual fixes fail, to your product and offer. It's labelled as an ad, with nothing made up.
+
+explain: |
+  Someone who clicks an ad but has never heard of you isn't ready for a price and a button. Send them to a product page and most leave. They first need to see their own problem described, understand why what they tried didn't work, and only then meet your product.
+
+  This skill writes that kind of page, often called an advertorial (an ad written like an article). It carries on from the ad's words, explains the problem in the reader's terms, names the usual fixes and why they fall short, then brings in your product as the next step. The first button comes only after the product is explained. It puts an "Advertisement" label at the top and never invents a journalist, doctor, founder quote or review.
+
+when:
+  - You run ads to people who have the problem but don't know your product yet, and they bounce off your product page.
+  - Your ad reads like a story or article, and the page it sends people to jumps straight to "Add to cart".
+  - You have a real reason the usual fixes fail and want a page with room to explain it.
+
+you_give:
+  - Your product facts, price, offers, guarantee and the claims you're allowed to make
+  - The ad that sends people to the page (its first line, buyer and offer)
+  - The true reason the usual fix fails and why yours works
+  - Real customer quotes with where they came from (optional)
+you_get:
+  - The full page copy in 13 headed sections, in order
+  - A short page brief and a list of the images each section needs
+  - A MISSING list of everything left out because you didn't supply the fact
+
+how_to_use:
+  - Copy the skill and paste it into Claude, ChatGPT or Gemini.
+  - Paste your product facts and your claims list underneath, including what you must never say.
+  - Paste the ad that will send people here, word for word, and say who it speaks to.
+  - Write two or three sentences on why the usual fixes fail and why yours works. If you can't, stop here and work that out first, because the page is built on it.
+  - Read the MISSING list before anything else, then check the offer block against your real prices.
+
+how_it_works:
+  - title: Carries on from the ad
+    text: Keeps the ad's main words in the headline, starts answering the ad's question in the first two paragraphs, and leads with the offer the ad named.
+  - title: Picks who speaks
+    text: Writes as the business by default. A founder or customer speaks only through words you supplied.
+  - title: Labels it as an ad
+    text: Puts "Advertisement" in the first screen, with no fake newspaper name, byline or date.
+  - title: Tells the story in order
+    text: Problem, the usual fixes, the cause underneath, then the product, trust lines, offer, benefits, who it's for and not for, contents, reviews, questions and a close.
+  - title: Builds the offer block
+    text: Shows only offers you really run, savings in money, and your real guarantee and delivery lines.
+  - title: Fits how it's bought
+    text: For something bought again it covers what's in it and subscriptions. For something bought once it covers materials, returns and warranty.
+  - title: Lists what's missing
+    text: Drops any section it has no facts for and lists it as MISSING instead of filling the gap.
+
+output_shape: |
+  PAGE BRIEF
+  Ad hook: <the ad's first line>   Buyer: <who it's for>
+  Problem: <in their words>   Cause: <why the usual fix fails>
+  Offer: <the offer the ad named>
+
+  [Advertisement]  (beside the logo, first screen)
+
+  1 OPENING
+  Eyebrow: <3 to 6 words naming the reader>
+  Headline: <8 to 14 words, keeps the ad's words, no brand name>
+  2 THE PROBLEM
+  <3 or 4 short paragraphs in the reader's terms, ending on their question>
+  3 WHAT PEOPLE TRY FIRST
+  <3 to 6 kinds of fix, each with why it falls short>
+  4 THE CAUSE UNDERNEATH
+  <2 or 3 paragraphs that lead into the product>
+  5 THE PRODUCT
+  <what it is, and 3 or 4 things it does, each tied to the cause>
+  [Button: <what the buyer gets>]
+  6 TRUST
+  <three facts you hold>
+  7 OFFER
+  <real offers only, savings in money, guarantee and delivery lines>
+  8 to 13
+  <benefit cards, who it's for and not for, contents, real reviews,
+  6 to 8 questions, closing block>
+
+  IMAGE LIST
+  <slot>: <what it must show, which real product photo>
+
+  MISSING
+  - <each fact the page needed and didn't get>
+
+example:
+  business: sprout
+  input: |
+    [the skill]
+
+    Facts: Sprout greens gummies. Pouch of 28 daily packs. Tear one open,
+    eat the small handful of gummies. 60+ ingredients, 21 vitamins and
+    minerals, 6 g prebiotic fiber per pack. Vegan, pectin base. Low Sugar
+    or Sugar-Free (Sugar-Free uses sugar alcohols). Third-party tested for
+    70 pesticides, 4 heavy metals, 16 contaminants, 9 microbial contaminants.
+    Subscribe: $49.99 every 4 weeks. First order $29.99 only with the
+    text-message sign-up discount. One-time: $66.65. Guarantee: 30-day
+    money-back, first order only. Ships within 24 hours, arrives in 3-5 days
+    on average. Fine to say: "Supports digestion and gut health".
+    Never: "fix", weight loss, energy or immunity claims.
+
+    Ad: "Struggling to Get Enough Fiber?" Main text: "Feeling off in your gut
+    lately? [Sprout] supports digestion with 6g of fiber, prebiotics, and
+    daily vitamins to help keep your gut balanced without powders or prep."
+    No offer named. Buyer: the gut-fix seeker (bloating, irregularity).
+
+    Why the usual fix fails: people quit supplements because they're
+    unpleasant (chalky powders, pills that make you gag, a shelf of
+    bottles). Sprout is one you want to eat.
+
+    Quotes: reviews 8, 10 and 18 from reviews.md.
+  output: |
+    PAGE BRIEF
+    Ad hook: "Struggling to Get Enough Fiber?"   Buyer: gut-fix seeker
+    Problem: bloating and irregularity    Cause: the fixes are unpleasant,
+    so people stop taking them    Offer: subscribe, $29.99 first box
+
+    [Advertisement]  (beside the logo, first screen)
+
+    1 OPENING
+    Eyebrow: For anyone whose gut feels off
+    Headline: Struggling to get enough fiber? Why the usual fixes don't stick
+
+    2 THE PROBLEM
+    You know you need more fiber. You've read it, you've been told it.
+    But your gut still feels off most days. Bloated by the afternoon.
+    Not regular. You've bought the stuff. So why isn't it working?
+
+    3 WHAT PEOPLE TRY FIRST
+    Fiber powders. They work if you take them. Plenty of people quit,
+    because stirring a chalky drink every morning gets old fast.
+    Probiotic and vitamin pills. One bottle turns into a shelf of them,
+    and some are the kind you gag on.
+
+    4 THE CAUSE UNDERNEATH
+    None of these fail on what's inside. They fail on the taking. A fix
+    you don't want to take is a fix you'll quit.
+    So the question changes. What would you actually take every day?
+
+    5 THE PRODUCT
+    Sprout is a daily greens gummy. Tear open one pack, eat the handful
+    of gummies inside. No water, no shaker, no shelf.
+    - 6 g prebiotic fiber in every pack, to support digestion and gut health
+    - 21 vitamins and minerals in the same pack, so one habit replaces a few
+    - A pectin gummy you want to eat, so you keep eating it
+    [Button: Start my first box]
+
+    6 TRUST
+    Third-party tested for 70 pesticides and 4 heavy metals · Vegan,
+    pectin base · 30-day money-back guarantee on your first order
+
+    7 OFFER
+    Subscribe, Low Sugar, 28 packs: $29.99 for your first box with our
+    text sign-up discount, then $49.99 every 4 weeks.
+    One-time, 28 packs: $66.65.
+    Under the button: 30-day money-back guarantee, first order only.
+    Ships within 24 hours, arrives in 3-5 days on average.
+
+    11 REVIEWS (word for word)
+    "Feel lighter, less bloated and overall good." (retailer review)
+    "I thought the first pack I tried tasted terrible, but after the
+    third day they started tasting better" (retailer review)
+    Not used: review 8. It names IBS, a condition the brand can't claim
+    to help with.
+
+    IMAGE LIST
+    Hero: the product the ad showed (MISSING: the ad's image wasn't
+    captured). Pack torn straight across the top, per the brand's rule
+    Product: the green Original pouch beside a palm of gummies
+
+    MISSING
+    - Grams of sugar per pack, so no sugar line in the questions
+    - Sugar-Free stomach warning: not on the page. Questions point gut-
+      sensitive readers to Low Sugar instead
+    - Which offer the ad named (none), so the subscription leads
+
+    (cut for length: the full run also had parts 8 to 10, 12 and 13:
+    benefit cards, who it's for and not for, what's in a pack,
+    7 questions and the closing block)
+
+tweaks:
+  - what: The "why the usual fix fails" lines
+    how: This is the spine of the page. Make it more specific (what exactly goes wrong with the old fix) and parts 3 to 5 get sharper. If you leave it out, the skill stops and asks rather than inventing a cause.
+  - what: The ad you paste
+    how: Paste a different ad and the headline, opening paragraphs and first offer all change to match it. A page that doesn't echo its ad loses people in the first screen.
+  - what: Quotes
+    how: Paste reviews that talk about the page's problem. With none, the reviews section is dropped, never filled with made-up praise.
+  - what: Bought again or bought once
+    how: Say which it is if it isn't obvious. A pan or a jacket gets materials, returns and warranty in place of ingredients and subscription terms.
+
+judge:
+  - The word "Advertisement" is in the first screen, and nothing looks like a newspaper.
+  - The headline uses the ad's words and doesn't name your brand or product.
+  - No button appears before the product section.
+  - Every price, guarantee line and claim matches your facts word for word.
+  - No quote, doctor, founder line or rating appears that you didn't supply.
+  - The "what people try" list describes kinds of fixes, never named competitors.
+
+test:
+  - Run it from an ad that already brings you cold clicks. The headline should keep the ad's words, and the first two paragraphs should start answering its question.
+  - Leave out the reason the usual fix fails. It should stop and ask you for it, not write the page around a cause it made up.
+  - Give it facts with one gap on purpose, such as no delivery time. The page should leave delivery out and list it under MISSING.
+  - Read it on a phone next to your current long page. On the new one, no button should appear before the product section.
+  - Ask someone who doesn't know your product to read it, then tell you what it does and who it isn't for. If they can't, the product section needs more of your facts.
+
+improve:
+  - 'Write your voice into step 7 ("Write like a person"): three lines from your best copy and the words you never use, so every page sounds like you without pasting a brand file.'
+  - In step 6, delete the "bought once" or "bought again" branch that doesn't fit your product, and add your own pack sizes, pause rules or warranty terms.
+  - Add your allowed and banned claims under "What you need", so the page never goes beyond what you can prove.
+  - Save the cause you settle on (why the usual fix falls short) to your brand file. The skill won't write the page without it, and it rarely changes.
+  - Pair it with a skill that maps real customer doubts to your page, so the questions part answers what buyers ask, and run a quick landing page checklist before it goes live.
+
+terms:
+  - term: Advertorial
+    meaning: An ad written like an article. It must be clearly labelled as advertising.
+  - term: Cold reader
+    meaning: Someone who has never heard of your brand before seeing the ad.
+  - term: Landing page
+    meaning: The page someone lands on after clicking an ad.
+  - term: Offer block
+    meaning: The part of the page with the price, the buying options and the guarantee.

@@ -1,0 +1,19 @@
+slug: find-offers-hiding-in-what-you-already-sell
+renamed_from: starter-offer-list-from-brand-facts
+name: "Find offers hiding in what you already sell"
+summary: "Your running offers in your own words, plus new ones built only from what you already sell."
+category: general
+boards: [ecommerce]
+type: prompt
+role: make
+job: offer
+level: beginner
+inputs:
+  - {type: brand_brain, required: true}
+outputs:
+  - {type: offer}
+uses: [get-an-offer-that-answers-your-buyers-doubt]
+origin: own
+source_ids: [CES-079]
+old_name: offer-set
+version: 1.0.0

@@ -1,0 +1,191 @@
+new_slug: find-image-ad-types-worth-testing-next
+name: Find image ad types worth testing next
+summary: Your image ads sorted into seven families, the empty ones found, and the next two briefed.
+job: plan-ad-tests
+
+headline: See which kinds of image ad you've never tried, and the two worth testing next
+subhead: Give it the image ads you run now, your customer reviews and the claims you can back. It sorts each ad into one of seven families, counts the empty ones, picks two new formats from real gaps and writes a five-line brief for each.
+
+explain: |
+  Most ad accounts keep making the same two or three kinds of image ad, usually a product shot, a review card and a discount. When results flatten, the next batch is more of the same in new colours, or six new formats at once on a budget too thin to learn from.
+
+  This skill sorts what you run into seven families, named for what the ad pretends to be: a note or chat on a screen, someone else talking, a side-by-side sum, a numbered list, an ad that argues against itself, price as the picture, and something visibly handmade. It counts the empty families and matches them to a real gap, such as a complaint repeated in your reviews. It briefs two of them, from two different families, in five lines each. It also flags claims that have to go, such as a quote that isn't word for word.
+
+when:
+  - Your image ads all look like product shots or discount cards and you want something different to test.
+  - You've seen a format work for another brand and want to know if it fits a gap in yours.
+  - You're about to launch lots of new formats at once and want to narrow it to two.
+
+you_give:
+  - The image ads you run now, or a line describing each
+  - The claims you're allowed to make and the offers you run
+  - Customer reviews or support tickets showing what buyers doubt (optional)
+  - Your ad results (optional, but they show which gaps are real)
+you_get:
+  - A table of your ads by family, with the empty families shown
+  - Two formats to test next, from two different families, each traced to a gap
+  - A five-line brief for each one
+  - A log of claims that were cut, so they don't creep back in
+
+how_to_use:
+  - Copy the skill and paste it into Claude, ChatGPT or Gemini.
+  - List each image ad you run with its opening line or headline. Leave out videos.
+  - Paste your claims list and offers, with dates for any sale.
+  - Add your reviews and results if you have them. They turn a guess into a gap.
+  - Run the two briefs against what you already run, not against each other.
+
+how_it_works:
+  - title: Tags every ad
+    text: Puts each running ad in one of seven families, or "plain" for a product or lifestyle photo with no container.
+  - title: Counts the gaps
+    text: Shows how many ads sit in each family. The empty families are where the next test comes from.
+  - title: Matches gaps to evidence
+    text: Uses a table of signs, such as a repeated complaint in reviews or being the expensive option, to pick the family that answers it.
+  - title: Picks two formats
+    text: Chooses two from two different families, never six, so each test can teach you something.
+  - title: Writes five-line briefs
+    text: Format and family, what's staged, the one line, where it goes wrong and why it might work, traced to something real.
+  - title: Logs cut claims
+    text: Records any claim that had to go, so later rounds don't bring it back in other words.
+
+output_shape: |
+  FAMILY COUNT
+  <family>     <n>   <which ads>
+  Plain        <n>   <which ads>
+  <how many families are empty>
+
+  GAPS FROM REAL EVIDENCE
+  <n> <the gap, with the review, result or fact behind it>
+    -> <family that answers it>
+
+  BRIEF <n>
+  Format      <name>. Family: <family>
+  Staged      <what's in the frame, so a stranger could set it up>
+  One line    "<6 to 10 words>"
+  Goes wrong  <how this ad fails>
+  Might work  <the real reason, traced to your evidence>
+
+  FLAGS AND CUT CLAIMS
+  <ad>  <claim that has to go, and why>
+  <claims that stay cut from earlier rounds>
+
+example:
+  business: sprout
+  input: |
+    [the skill]
+
+    Image ads running now (ad-results.csv, practice numbers):
+    P1 image: "'Sprout is too expensive': here's 61% off to prove
+       otherwise" (two 21-day windows)
+    P2 image: "Don't Pay Full Price. You Literally Don't Have To.
+       (61% off inside)"
+    S1 image: "Trusted by 1M+: Take 61% OFF"
+    W1 image: "Support Muscle While You Lose Weight"
+    R1 image: "The Daily Nutrition Every Runner Forgets"
+    F1 carousel: "Struggling to Get Enough Fiber?"
+    Full results for all 10 rows pasted below (T1, H1, K1 are videos).
+    Buyer doubts: all 20 reviews (pasted below).
+    Claims and offers: Sprout brand file (pasted below).
+  output: |
+    Image ads only. T1, H1 and K1 are videos, left out.
+    Results are practice numbers, not benchmarks.
+
+    FAMILY COUNT
+    Borrowed screens       0
+    Borrowed voice         1   S1 (the crowd: "Trusted by 1M+")
+    Side-by-side sum       0
+    Counted list           0
+    Argue against itself   1   P1 (the objection, answered by a
+                               discount)
+    Price as picture       1   P2
+    Visible handwork       0
+    Plain                  3   W1, R1, F1 (no container; F1's cards
+                               weren't captured, so inferred)
+    Four of seven families are empty.
+
+    GAPS FROM REAL EVIDENCE
+    1 Half the image ads are plain photos with no argument in the
+      frame. Meanwhile a real difference goes unsummed: brand file,
+      a big-name powder at about $2.63 a serving; Sprout renews at
+      $1.78 a day. Review 3 paid "$94 a month" for powder.
+      -> Side-by-side sum
+    2 Past-visitor ads are tired and discounts cover it: P1's click
+      rate fell from 1.50% to 0.92% in its second 21 days, and three
+      of six image ads lead on 61% off.
+      -> Visible handwork
+
+    BRIEF 1
+    Format      Cost each time. Family: side-by-side sum
+    Staged      Two equal columns on warm cream. Left: an unbranded
+                powder tub and shaker, "$2.63 a serving". Right: the
+                green pouch and one pack torn across the top, "$1.78 a
+                day". Same light, same size, same type.
+    One line    "Your greens powder costs more per serving than this."
+                (9 words)
+    Goes wrong  if the columns aren't shown the same way, if the
+                powder is named, or if $2.63 is out of date
+    Might work  the price doubter's doubt, and review 3's own sum
+                MISSING: a current price for the powder; recheck it
+
+    BRIEF 2
+    Format      Hand-lettered bag. Family: visible handwork
+    Staged      A brown paper bag on a kitchen table, lettered by hand
+                in thick marker, the pouch and a torn pack beside it.
+                No set type except the logo on the pouch.
+    One line    "We made daily nutrition, like, ridiculously easy."
+                (7 words, the brand's own line)
+    Goes wrong  if the lettering is a font or too neat, it reads as
+                computer-made and loses the point
+    Might work  P1's fall (above), in an account where most image ads
+                look alike
+
+    FLAGS AND CUT CLAIMS
+    P1, P2, S1  "61%" isn't on the site, which shows 49, 52, 55 and
+                58%. MISSING: which number is live, with dates. The
+                price family also breaks here: it runs all the time.
+    W1  "Support Muscle While You Lose Weight": no evidence on file.
+        Cut.
+    R1  "Every Runner Forgets": nothing on file about runners. Cut
+        "every", or the ad.
+    S1  "1M+" is brand-reported. Keep only with its source.
+    Stay cut: "Fix", "clinically backed formula for energy,
+    immunity", "backed by 35,000+ studies", and the dated "$1.26 vs
+    $3.60" comparison.
+
+tweaks:
+  - what: Your results
+    how: Paste click and purchase numbers. Gaps backed by results get picked ahead of gaps it can only infer.
+  - what: A sale with dates
+    how: Add a real start and end date. Only then will it suggest the price family as a test.
+  - what: A format you've seen elsewhere
+    how: Describe another brand's ad and ask which family it belongs to. It takes the skeleton only and briefs it with a claim you can back.
+  - what: The count rules
+    how: Ask for a comparison or callout ad. It applies the rules, such as exactly 4 labels or 4 to 5 comparison rows with one honest concession.
+
+judge:
+  - Every ad you run has exactly one family, or "plain".
+  - The two formats come from two different families, not one.
+  - Each "might work" line points to a review number, a result or a brand fact, never "it's trending".
+  - Every quote is word for word, and any that aren't are flagged.
+  - The one line in each brief is a single line of 6 to 10 words.
+
+test:
+  - Tag your running ads into families yourself first, then run it. Where you disagree, read its reason; a mismatch usually means your one-line descriptions need the format, not just the headline.
+  - Run it twice on the same ads. The family count must match exactly. The two picked formats should too, unless you added new evidence.
+  - Check each "might work" line against your files. If one says "trending" or points to nothing you pasted, ask it to trace it or drop it.
+  - Run both briefs against your current best ad, not against each other, with enough spend for each to be wrong. Then run the skill again with the results.
+
+improve:
+  - Write your claims register and the claims you've cut into "What you need" in the skill file, so cut claims stay cut across every round.
+  - Add your own signs to the gap table in step 4 (for example "most complaints are about cancelling"), with the family that answers each.
+  - If a family can never work for you (no press means no "what the press said"), note it under step 8 so it isn't suggested.
+  - After each round, save the family count and the winner in your brand file, and paste the last count next time.
+  - Pair it with a skill that picks the right layout for each brief, and with one that plans a larger test batch once two formats win.
+
+terms:
+  - term: Format family
+    meaning: A group of image ads that pretend to be the same kind of thing, such as a note, a review or a price tag.
+  - term: Borrowed voice
+    meaning: An ad where someone other than the brand seems to talk, such as a customer or a lab. The words must be real and word for word.
+  - term: Click rate
+    meaning: Clicks divided by the number of times the ad was shown.

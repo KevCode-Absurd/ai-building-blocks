@@ -1,0 +1,178 @@
+new_slug: make-people-read-a-private-phone-note
+name: Make people read a private phone note
+summary: A plain notes-app screenshot with a few short lines your narrator typed to themselves about the problem.
+job: make-image-ads
+
+headline: A note-to-self screenshot that feels too private to scroll past
+subhead: Give it your story ad. It takes the note your narrator keeps (a list, a count of days, a few lines typed to nobody), sets 12 to 30 words in a generic notes screen, and writes the image prompt.
+
+explain: |
+  A note people type to themselves is private. Seeing one feels like reading something you weren't meant to, and the text gets read by reflex. That makes a notes-app screenshot a strong picture for stories about trying, failing and starting again, where the narrator keeps track of every attempt.
+
+  The skill writes a short title and three to six lines, typed the way people type to themselves: lower case, a date or a count, no polish. It takes the words from the note as your story quotes or describes it. The screen is a generic notes layout with a plain system-style font and the time in the status bar, copying no real app's look. The note never names your product or states a result. It's the narrator's own record of the problem, and nothing more.
+
+when:
+  - Your story is about trying things, failing and restarting.
+  - The narrator keeps track of something (attempts, days, money, what they tried).
+  - You want words on the picture that feel private, not written for an audience.
+
+you_give:
+  - Your approved story ad, with any note or list the narrator keeps
+  - How your buyer would type it (optional)
+  - Whether words on the image are on or off (optional, default on)
+you_get:
+  - A 2 to 4 word note title and 3 to 6 short lines, exactly as they'll appear
+  - A blank version with just the title
+  - The headline to run under the image
+  - A 60 to 120 word image prompt, ready to paste
+
+how_to_use:
+  - Copy the skill and paste it into Claude, ChatGPT or Gemini.
+  - Paste your story ad underneath. If the story quotes the note, it uses those words exactly.
+  - Paste the image prompt into your image tool and make one square picture.
+  - Check every word in the result. Typos you didn't ask for make it look fake.
+  - If the screen looks like a specific phone's notes app, ask again for "a generic notes screen".
+
+how_it_works:
+  - title: Sets the ground rules
+    text: Square, looks like a phone screenshot, no logo, price, button, product or real app look.
+  - title: Writes the note
+    text: Twelve to 30 words, a 2 to 4 word title and 3 to 6 short lines, typed as a person types, from the note in your story.
+  - title: Briefs a generic screen
+    text: A title line, a few short lines, a system-style font and the time in the status bar.
+  - title: Crops it like a shared screenshot
+    text: Slightly cropped, the way people share screenshots.
+  - title: Describes the blank version
+    text: The empty note with its title only, so you can change the lines later.
+
+output_shape: |
+  SCENE
+  <one sentence: what someone scrolling would say they saw>
+
+  WHERE AND WHEN
+  <the screen and the time shown>
+
+  THE SCREEN
+  <generic notes layout, font, crop>
+
+  TITLE AND LINES
+  <2 to 4 word title>
+  <3 to 6 short lines, exactly as typed>
+
+  WORDS ON THE IMAGE
+  <word count: the title and lines above, exactly as written>
+  BLANK VERSION
+  <the note screen with its title and nothing below>
+  HEADLINE UNDER THE IMAGE
+  Read this if your notes app looks like this.
+
+  FLAGS
+  <lifted or written for the image; anything inferred>
+
+  IMAGE PROMPT
+  <60 to 120 words, ready to paste>
+
+example:
+  business: sprout
+  input: |
+    [the skill]
+
+    Story ad (approved, built on reviews 1 and 2):
+    I found this in my notes app last week:
+      greens streak
+      day 1: done
+      day 2: done
+      day 3: forgot
+      day 4: back to day 1
+    I'd restarted that note more times than I can count.
+    I've tried a few green powders over the years. The issue was
+    never what was in them. It was consistency.
+    Sprout is one daily pack: tear the top, eat the small handful of
+    gummies inside. One reviewer put it this way: "It's wild I WANT
+    to take [Sprout] and don't forget."
+
+    Buyer: the quitter who wants to stick, 28 to 45, office jobs.
+  output: |
+    SCENE
+    A phone note titled "greens streak" that keeps going back to day
+    1.
+
+    WHERE AND WHEN
+    A phone screen, morning. Status bar time 07:48.
+
+    THE SCREEN
+    A generic notes layout: bold title line, plain lines below, a
+    system-style font, white background. Slightly cropped at the
+    bottom.
+
+    TITLE AND LINES
+    greens streak
+    day 1: done
+    day 2: done
+    day 3: forgot
+    day 4: back to day 1
+
+    WORDS ON THE IMAGE
+    16 words: the 2 word title and 4 lines above, exactly as written,
+    lower case as typed.
+
+    BLANK VERSION
+    The same note screen with the title "greens streak" and nothing
+    below it.
+
+    HEADLINE UNDER THE IMAGE
+    Read this if your notes app looks like this.
+
+    FLAGS
+    Words lifted from the copy, not written for the image.
+    "07:48" is not in the story. It was chosen to fit a morning
+    routine (inferred).
+    The note names no product and claims no result. The reviewer's
+    line stays in the ad's text, never on the picture.
+
+    IMAGE PROMPT
+    Square 1:1 cropped phone screenshot of a generic notes screen,
+    white background, plain system-style font, status bar showing
+    07:48. A bold title line reads "greens streak". Below it, four
+    plain lines exactly as written, lower case: "day 1: done" / "day
+    2: done" / "day 3: forgot" / "day 4: back to day 1". Plenty of
+    empty white space below, slightly cropped at the bottom edge like
+    a shared screenshot. No real app's icons or layout, no logo, no
+    brand name, no product, no photos, no emoji, no person.
+
+tweaks:
+  - what: What the note tracks
+    how: Change it to a count of days, a list of things tried with how each ended, or money spent. The format of the note tells the reader what kind of person wrote it.
+  - what: How it's typed
+    how: Ask for "all lower case, one typo" for someone tired, or "dates and ticks" for someone organised. Keep it to how your buyer would type.
+  - what: Length
+    how: Twelve words reads in a second; 30 is the most before it looks written for an audience. Cut lines, not words within lines.
+  - what: Words off
+    how: Switch words off and it hands you a snapshot of the narrator's hands on the phone, screen unreadable, instead.
+
+judge:
+  - The note agrees with your story and is the narrator's own.
+  - It names no product, states no result and makes no claim.
+  - It's 30 words or fewer and doesn't read as written for an audience.
+  - The screen looks like no real phone's notes app, with no icons or logo.
+  - Every word in the picture matches the note exactly.
+
+test:
+  - Run it on a story that quotes a note. The words on the image should match it exactly and the flags should say "lifted".
+  - Run it on a story that only describes a note. It should write the fewest words that say what the story says, and flag them.
+  - Show the screenshot to someone who fits your buyer. If they say "that's an ad", look for a line that sounds like a pitch and cut it.
+  - Count the words in the finished picture. More than 30 means a line slipped in that wasn't asked for.
+
+improve:
+  - Add how your buyers type to themselves (lower case, ticks, dates) to the brand file section, so written notes sound like them.
+  - Add a fixed status-bar time for your buyer's moment to step 3, so you don't have to check an inferred time each run.
+  - Write the note into your story word for word, with the last line as the one that stings, such as "back to day 1".
+  - Pair it with the skill that makes a screenshot of ignored phone reminders when the story is about a routine people can't keep.
+
+terms:
+  - term: Story ad
+    meaning: An ad whose main text tells one person's story in their own words, like a post from a friend.
+  - term: Status bar
+    meaning: The strip at the top of a phone screen showing the time and battery.
+  - term: Blank version
+    meaning: The same picture with no words, so you can change the words later without starting again.

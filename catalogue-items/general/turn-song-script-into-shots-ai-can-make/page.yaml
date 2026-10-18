@@ -1,0 +1,199 @@
+new_slug: turn-song-script-into-shots-ai-can-make
+name: Turn your song script into shots AI can make
+summary: A music-tool brief, a storyboard cut to the song's real timings, and prompts that keep one singer the same.
+job: make-video-ads
+
+headline: Get a song ad whose pictures land on the beat, with the same singer in every shot
+subhead: Give it your approved lyric and a product photo. It writes the brief for a music tool, then a storyboard cut to the finished song's real timings, plus image and video prompts for an animated lead who sings in some shots.
+
+explain: |
+  A song ad falls apart in making. The music tool adds a long intro, the video cuts land mid-word, the singer's face changes between shots, and mouths move in shots where nobody should be singing. Fixing one section of a song on its own usually makes it worse.
+
+  This skill treats the song as the clock. First it writes the music brief: a title, a short style line and the lyric in labeled sections. You make the song once, whole. Then it takes the real time of every word and cuts the storyboard to it. It fixes one animated lead and one product description, makes a character picture first, and writes each video prompt with a guard so mouths only move in shots marked SUNG. It turns a script into shot-by-shot instructions for a video tool; it does not make the music itself.
+
+when:
+  - You have an approved song lyric and need to make the music and the animated video.
+  - Earlier tries gave you cuts that missed the beat or a singer who looked different in every shot.
+  - You want a clear plan before spending credits on a music tool and a video tool.
+
+you_give:
+  - The approved lyric, with section tags
+  - A real product photo, how it's used, its main benefit and claims with sources
+  - Your buyer, voice, colors, and whether your brand uses music and animation (optional)
+  - The tools you'll use for music, images and video (optional)
+you_get:
+  - A music brief (title, style line, lyrics in sections) and a rule for redoing it
+  - A timing sheet to fill from the finished song
+  - Fixed descriptions of the lead, the look and the product
+  - A storyboard timed to the song, and image and video prompts with a guard line
+
+how_to_use:
+  - Copy the skill and paste it into Claude, ChatGPT or Gemini.
+  - Paste your approved lyric and attach a product photo.
+  - Paste the music brief into your music tool and make the whole song in one go.
+  - Paste the real word timings back in. The skill re-times every shot to them.
+  - Make the character picture, approve it, then make each shot and clip in order.
+
+how_it_works:
+  - title: Briefs the song
+    text: Writes a title, a style line under 25 words and the lyric in sections. Brand words are sung exactly. No instrumental intro.
+  - title: Takes the real timings
+    text: Uses the time of every word in the finished song as the clock. Before the song exists it plans at 2.5 words a second and marks every time as an estimate.
+  - title: Fixes the lead and the look
+    text: Describes one animated adult lead once (shape, hair, two clothing colors, one mark) and makes a character picture to attach to every shot.
+  - title: Decides where the lead sings
+    text: Usually the hook and the last chorus on camera, with silent pictures between.
+  - title: Storyboards to the song
+    text: One row per shot with time range, lyric, SUNG or silent, the picture and the framing. No words in any picture.
+  - title: Builds the clips
+    text: Writes video prompts in one of two ways, with a guard so no mouth moves outside SUNG shots and no sound is made in the clip.
+  - title: Joins over the song
+    text: Lays the whole song over the clips, then adds the offer and captions in editing.
+
+output_shape: |
+  MISSING: <anything to confirm before the song is made>
+
+  SONG BRIEF
+  Title: <the hook line>
+  Style: <under 25 words, no artist or band>
+  Lyrics: <sections in order, sung exactly>
+  Redo rule: <remake the whole song, never one section>
+
+  TIMING SHEET (<estimates, or real word times>)
+  <line> <start-end> | ... | total <seconds>
+
+  LEAD (paste unchanged)  <one fixed description of the animated adult>
+  LOOK     <one fixed style sentence>
+  PRODUCT  <from its photo, and how it is shown>
+  PLACE    <the one place and its props>
+
+  STORYBOARD
+  #  time  lyric (start)  sung?  picture, framing
+  <one row per shot>
+
+  CLIP <n> PROMPT
+  Shot <n> (<time>): <one action, camera, cut on the beat>
+  GUARD (every clip): <fixed guard line>
+
+example:
+  business: sprout
+  input: |
+    [the skill]
+
+    Lyric (approved, from the song ad script skill):
+    [Chorus] Rip, tip, enjoy, and out the door
+    [Verse 1] Lunch boxes packed and the keys are gone /
+    Shoes on the stairs and the kettle's on /
+    And the chalky green shake? Still there from before
+    [Chorus] Rip, tip, enjoy, and out the door /
+    A handful of gummies, no water, no mess
+    [Verse 2] Twenty-one vitamins and minerals, one small pack /
+    Six grams of fiber, and you don't look back
+    [Chorus] Rip, tip, enjoy, and out the door /
+    Tastes like a treat, works like a supplement
+    SUNG lines: 1, 9, 10
+    Product: Sprout pouch and one daily pack, photos attached. Pouch:
+    glossy deep green foil, big yellow wordmark, yellow bear face top
+    right. Gummies: small opaque deep-green bears.
+    Show it right: pack torn straight across its top edge; gummies pour
+    from the top into a palm; the pouch opens only at its resealable top.
+    Colors: forest green #00582D, warm cream #FFF7DF, sunflower yellow
+    #FFCC2E. Bright, sunny, candy-like. Song not made yet.
+  output: |
+    MISSING: whether Sprout uses music and animation in ads. Ask
+    before anyone makes the song.
+
+    SONG BRIEF
+    Title: Rip, Tip, Enjoy
+    Style: bright indie pop, warm female lead, 118 BPM, busy-morning
+    bounce, cheeky, polished, handclaps and jangly guitar.
+    Lyrics: [Chorus] [Verse 1] [Chorus] [Verse 2] [Chorus], as given,
+    every word sung exactly. Vocals start on beat 1. Tight ending.
+    Redo rule: if anything is wrong, remake the whole song. Never
+    remake one section on its own.
+
+    TIMING SHEET (estimates at 2.5 words a second; replace with the
+    real word times from the finished song)
+    1 0.0-2.8 | 2 2.8-6.0 | 3 6.0-9.2 | 4 9.2-12.8 | 5 12.8-15.6
+    6 15.6-18.8 | 7 18.8-21.6 | 8 21.6-25.2 | 9 25.2-28.0
+    10 28.0-30.8 | total 30.8 s
+
+    LEAD (paste unchanged)
+    An animated adult woman, tall rounded build, curly dark ponytail,
+    green jacket over a cream top, yellow scarf, large expressive
+    eyes, a mouth that can sing.
+    LOOK  3D animated-feature feel, simple rounded forms, bright soft
+    morning light, forest green, warm cream and sunflower yellow,
+    clean background, shallow depth.
+    PRODUCT  The Sprout pouch and daily pack from their photos, true
+    shape, printing unchanged. The pack tears straight across its top
+    edge only; the pouch opens only at its resealable top.
+    PLACE  One kitchen opening onto a front hall: counter, sink, stairs,
+    key hook, front door. No children in any shot.
+
+    STORYBOARD
+    #  time       lyric (start)          sung?   picture, framing
+    1  0.0-2.8    Rip, tip, enjoy        SUNG    sings by the door, medium
+    2  2.8-6.0    Lunch boxes packed     silent  boxes snap shut, close
+    3  6.0-9.2    Shoes on the stairs    silent  shoes, kettle steams, wide
+    4  9.2-12.8   And the chalky green   silent  shaker in the sink, close
+    5  12.8-15.6  Rip, tip, enjoy        silent  tears pack across the top,
+                                                 close
+    6  15.6-18.8  A handful of gummies   silent  gummies pour into palm,
+                                                 extreme close
+    7  18.8-21.6  Twenty-one vitamins    silent  pouch open at its top, pack
+                                                 beside it, medium
+    8  21.6-25.2  Six grams of fiber     silent  eats, grabs keys, wide
+    9  25.2-28.0  Rip, tip, enjoy        SUNG    sings in the doorway
+    10 28.0-30.8  Tastes like a treat    SUNG    sings, pulls door shut
+
+    CLIP 2 PROMPT (shots 4 to 6, from the last frame of clip 1)
+    Shot 4 (9.2-12.8 s): close on a shaker bottle of green sludge in
+    the sink, a dried ring inside. Camera: still. Cut on the beat.
+    Shot 5 (12.8-15.6 s): the lead tears one daily pack straight across
+    its top edge. Camera: slow push in. Cut on the beat to shot 6.
+    Shot 6 (15.6-18.8 s): green gummy bears pour from the torn top into
+    her open palm. Camera: still. Cut on the beat.
+    GUARD (every clip): no speech or music made in the clip. No mouth
+    forms words in a shot not marked SUNG. Same lead as the character
+    picture. Real speed. No text.
+    (cut for length: the full run also had the character picture
+    prompt, the opening frame and prompts for clips 1, 3 and 4)
+
+tweaks:
+  - what: How the clips are built
+    how: '"One place, clips that continue" chains clips of about 10 seconds and three lyric lines from one last frame to the next. "One image per shot" slices the song into pieces, each starting and ending on a beat, with SUNG shots matched mouth to words.'
+  - what: Where the lead sings
+    how: Two sung shots can bookend five silent ones. Ask for the lead to act out the story while singing, or to sing on a small stage between silent pictures.
+  - what: The lead
+    how: Give the lead's look in your own words (shape, hair, two clothing colors, one mark like glasses or a scarf). It keeps that wording fixed in every prompt.
+  - what: Real timings
+    how: Paste the word times from the finished song and ask it to re-time the storyboard. Only trim silence before the first word; instrumental stretches get pictures.
+
+judge:
+  - The song starts singing at once and the hook lands in the first 5 seconds.
+  - Every cut falls on a real word time from the finished song, not an estimate.
+  - The lead and the product look the same in every shot.
+  - Mouths move only in shots marked SUNG, and match the words there.
+  - No artist, band or tune is named or copied in the style line.
+  - Nothing in the lyric or pictures claims more than your approved claims.
+
+test:
+  - Make the song first and paste in its real word times. Every shot boundary in the new storyboard should sit on one of those times; any that doesn't was left as an estimate.
+  - Make the character picture and one SUNG shot and one silent shot. Check the lead matches in both and that the silent shot has a closed mouth.
+  - Run the same lyric twice. The lead description and place should come back almost word for word; if they drift, paste your own lead description into the input.
+  - Watch the finished clips with the sound off. Each silent shot should show what its lyric line says.
+
+improve:
+  - Write your brand's fixed look sentence and product-showing rules into step 3 of the skill file, so every song ad matches your other ads.
+  - Save your approved lead's description and character picture in your brand file, and paste them into every run so the singer becomes a familiar face.
+  - Add the clip length your video tool makes to "What you need", so clip plans fit without you saying it each time.
+  - Pair it with the skill that writes a song ad script, if you don't have an approved lyric yet.
+
+terms:
+  - term: Timing sheet
+    meaning: A list of when each word starts and ends in the finished song. It sets where every cut goes.
+  - term: Guard line
+    meaning: A fixed sentence added to every video prompt that stops common mistakes, like mouths moving or text appearing.
+  - term: BPM
+    meaning: Beats per minute, the speed of the song.

@@ -1,0 +1,166 @@
+new_slug: get-a-sharper-bigger-image-with-nothing-changed
+name: Get a sharper, bigger image with nothing changed
+summary: A larger copy of an approved image, same people, product and words, checked before you use it.
+job: make-image-ads
+
+headline: A bigger, sharper copy of your approved image, with nothing in it changed
+subhead: Give it the approved image, the size you need and the tool you'll use. It writes an upscale prompt that forbids any change, then checks the returned file's real size and compares faces, hands, words and product with the original before you use it.
+
+explain: |
+  Upscaling means making an image larger, with more pixels, so it stays sharp at a bigger size. AI upscalers don't just add pixels. They often quietly "improve" the picture: a smoother face, a different grip, re-lettered packaging, a crop that's slightly off. If nobody compares the result with the original, those changes go live.
+
+  This skill treats the approved image as the only authority. It checks the original first, then records its size and shape. It sets the size with the tool's own controls (writing "4K" in a prompt sets nothing) and uses a prompt that lists everything to keep exactly. When the file comes back, it reads the real pixel size, then compares source and result side by side and at full size: faces, hands, every printed letter, edges. A failed try is retried from the original, never from the drifted copy, up to two times.
+
+when:
+  - You need a larger version of an approved image for print, a big banner or a high-resolution export.
+  - You want a sharper first frame to start an AI video from.
+  - A past upscale changed a face, a hand or your label and you want to catch it next time.
+
+you_give:
+  - The approved image (the original file)
+  - The size you need and what it's for
+  - The upscaler or image tool you'll use, and which size settings it really has
+  - How many tries you'll allow (optional; 2 if you don't say)
+you_get:
+  - A record of the original's size and shape, and the target
+  - The upscale prompt, ready to paste
+  - A check of the returned file's real size, and a side-by-side review of faces, hands, words and product
+  - A verdict, either accepted or the original returned with the reason
+
+how_to_use:
+  - Copy the skill and paste it into Claude, ChatGPT or Gemini.
+  - Attach the approved image and say the size you need, for example "double, for a print banner".
+  - Name your tool and its size setting (for example "2x upscale button"). Set the size there, not in the prompt.
+  - Paste the prompt into your tool, then attach the returned file to the same chat.
+  - Use the result only if every row of the review passes. Keep the original untouched either way.
+
+how_it_works:
+  - title: Checks the original
+    text: If it has a wrong label, a broken hand or an unapproved face, it stops. That needs a fix, not an upscale.
+  - title: Records the facts
+    text: File name, width and height in pixels, shape, and the target size. The shape and orientation never change.
+  - title: Sets size the right way
+    text: Uses the tool's own size controls. If the tool can't reach the target it says so, and calls a plain resize a resize.
+  - title: Writes the prompt
+    text: Lists what to keep exactly (people, product, every printed word, camera, crop, light), what it may recover (real texture, clean edges), and what it must never do.
+  - title: Checks the real size
+    text: Reads the returned file's pixels and shape. A padded, cropped or stretched file fails.
+  - title: Compares side by side
+    text: Same size, then at full size, region by region. Small print is compared letter by letter, since upscalers can change small text.
+  - title: Retries from the original
+    text: Only from the untouched source, naming the drift it saw, up to the tries you allowed.
+
+output_shape: |
+  SOURCE:  <file>, <width> x <height> px, <shape>
+  TARGET:  <width> x <height> px, for <use>
+  TOOL:    <tool>, size set with <its control>
+
+  PROMPT
+  Image 1 is the approved photograph and the only authority. ...
+  KEEP EXACTLY: <the people, the product and every printed word,
+  the camera, crop and light>
+  ONLY RECOVER WHAT IS ALREADY THERE: <...>
+  NEVER: <...>
+
+  RESULT:  <file>, <width> x <height> px, shape kept: <yes/no>
+  REVIEW
+  Faces              <pass | fail | needs a person to check>, <drift>
+  Hands              <...>
+  Words and product  <...>
+  Edges and scene    <...>
+  Tries used: <n> of <n>   Verdict: <accepted | original returned, why>
+
+example:
+  business: sprout
+  input: |
+    [the skill]
+
+    Approved image attached: sprout-pour_4x5.png, 1080 x 1350 px.
+    It shows an adult's hand holding a Sprout daily pack torn across
+    the top, green gummy bears pouring into the other palm, and the
+    Sprout Original pouch behind (glossy deep green foil, big yellow
+    wordmark, yellow bear face top right, "28 Daily Packs" at the
+    bottom). Words on the image: "Rip. Tip. Enjoy."
+
+    Need: double the size for a large banner.
+    Tool: my image tool's upscale with a 2x setting.
+    Tries allowed: 2.
+  output: |
+    SOURCE:  sprout-pour_4x5.png, 1080 x 1350 px, 4:5, portrait
+    TARGET:  2160 x 2700 px, 4:5, for a large banner
+    TOOL:    your image tool, size set with its 2x setting
+             (not with words in the prompt)
+    Keep the original untouched. Save each try as its own file,
+    such as sprout-pour_4x5_up1.png.
+
+    PROMPT
+    Image 1 is the approved photograph and the only authority.
+    Make the same photograph larger and cleaner. Do not reframe or
+    redraw.
+    KEEP EXACTLY: both hands (finger count, shapes, joints, grip);
+    the torn daily pack and the tear along its top edge; every gummy
+    bear's shape and colour; the Sprout pouch (glossy deep green
+    foil, yellow wordmark, yellow bear face, "28 Daily Packs"); the
+    words "Rip. Tip. Enjoy."; the camera angle, crop, positions,
+    background, colour balance, exposure and light.
+    ONLY RECOVER WHAT IS ALREADY THERE: skin texture, the foil's
+    crinkles, gummy edges, clean object edges. Remove compression
+    blocks and softness with restrained sharpening. Keep natural
+    grain.
+    NEVER: add or remove objects, text, logos or graphics; change
+    any lettering; smooth skin; add gloss, halos or invented detail;
+    change the hands.
+
+    WHEN THE FILE COMES BACK
+    1. Size: must read 2160 x 2700 px. Anything padded, cropped or
+       stretched fails.
+    2. Compare at the same size, then at 100%:
+       Hands             count fingers on both hands, check the grip
+       Words and product "Rip. Tip. Enjoy." and "28 Daily Packs"
+                         letter by letter; wordmark and bear face
+                         unchanged; tear still on the top edge
+       Edges and scene   gummies, pack edges, background lines
+       Faces             none in this image
+    3. If anything drifted, retry once from the original file, naming
+       the drift. After 2 tries, keep the original and note why.
+
+    RESULT: not run yet. Attach the returned file and I'll fill in
+    the review. Until then it stays marked "not reviewed".
+
+tweaks:
+  - what: What it's for
+    how: Say "video start frame" and it also reminds you to check the video tool's input limits, since more pixels alone don't make a better start frame.
+  - what: The tool's real controls
+    how: Name the tool and its settings. If its largest size is below your target, the report says so rather than calling a smaller image the target.
+  - what: The list of what to keep
+    how: Describe what's in the picture. The KEEP EXACTLY line is rewritten to name your people, product and printed words, so the upscaler is told about each one.
+  - what: Number of tries
+    how: Allow more or fewer tries. Each one starts from the untouched original, never from a copy that already drifted.
+
+judge:
+  - The report gives the returned file's real pixel size, and it matches the target and the original's shape.
+  - Every printed word was compared letter by letter, and the report says so.
+  - Hands have the same number of fingers and the same grip as the original.
+  - Nothing is marked "pass" that wasn't actually compared. Unseen items say "needs a person to check".
+  - The original file is still there, unchanged.
+
+test:
+  - Upscale an image with small print on it and compare one printed word letter by letter. If any letter changed, the KEEP EXACTLY line needs to name that text.
+  - Check the real pixel size of the returned file in your computer's file info, not the tool's label. It should match the report.
+  - Run it twice from the same original and put both results beside it. Compare hands and faces. If the two results differ from each other, the upscaler is changing things.
+  - Ask for a size your tool can't reach. The report should say so, not call a smaller image the target.
+
+improve:
+  - Write your tool's real size controls and its largest size into step 3 of the skill file, so it never relies on words like "4K".
+  - "Add your product's printed words to the KEEP EXACTLY line in step 4 (for Sprout: the wordmark and \"28 Daily Packs\"), so they're named every time."
+  - Change the number of retries in step 7 to what your budget allows.
+  - Add your file naming rule to step 8, with the before and after sizes in the name, so nobody uses an unchecked copy.
+  - Use it as the last step after the skills that turn an image plan into a prompt or borrow a photo's look for your product.
+
+terms:
+  - term: Upscale
+    meaning: Making an image larger, with more pixels, so it stays sharp at a bigger size.
+  - term: Drift
+    meaning: Any change the upscaler made that you didn't ask for, such as a smoother face or a re-lettered label.
+  - term: Pixels
+    meaning: The tiny dots an image is made of. Width and height in pixels set how large it can be shown sharply.

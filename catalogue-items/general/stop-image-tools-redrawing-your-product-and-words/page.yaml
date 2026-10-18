@@ -1,0 +1,148 @@
+new_slug: stop-image-tools-redrawing-your-product-and-words
+name: Stop image tools redrawing your product and words
+summary: One short image prompt for an approved ad that keeps your real pack and your exact words.
+job: make-image-ads
+
+headline: One short image prompt that keeps your real pack and exact words, with the clutter cut
+subhead: Give it the approved scene, layout and words for one ad, plus your product facts and reference photos. It cuts notes, rejected ideas and repeated warnings, keeps every product detail and rule that matters, and names each photo's job.
+
+explain: |
+  By the time an ad is approved, the brief around it is long: research notes, rejected versions, three ways to say "bright", and a brand file the image tool doesn't need. Paste all of that into an image tool and it gets confused. It mixes in the rejected idea, ignores the rule buried in paragraph six, or swaps your pack for an easier one to draw.
+
+  This skill turns the approved creative into one tight prompt. It names every attached photo by its job (product, real logo, a person to keep, the scene, the layout). It keeps the real product exactly, including pack, colour, size and quantity, and never invents how it opens or is handled. It describes the scene, light, camera and size once each, keeps your approved words exactly with their placement, and removes history, alternatives and duplicate warnings.
+
+when:
+  - You have an approved ad concept and need the prompt for your image tool or an automated pipeline.
+  - Your prompts have grown long and messy and the images keep picking up old or rejected ideas.
+  - A tool or script has a length limit and you need the prompt to fit without losing anything important.
+
+you_give:
+  - The chosen scene and layout (not the whole brand file, not alternative ideas)
+  - The approved words for the image, with placement and order (optional)
+  - Reference photos, each with its job (product, real logo, a person, the scene, the layout)
+  - Product facts (the exact item, pack, colour, proportions, quantity, size)
+  - The image shape and any length limit
+you_get:
+  - One compact prompt, in the fields your tool expects
+  - A one-line list of the reference photos and their jobs
+  - A MISSING line for any fact it needed but didn't have
+
+how_to_use:
+  - Copy the skill and paste it into Claude, ChatGPT or Gemini.
+  - Paste only the approved concept, the exact words and the product facts. Leave out the alternatives you rejected.
+  - Attach your reference photos and say what each one is for.
+  - Give the image shape (for example 4:5) and any length limit your tool has.
+  - Paste the prompt into your image tool. For a fix, ask for "the named correction, keep everything else".
+
+how_it_works:
+  - title: Names each photo's job
+    text: Product, real logo, a person to keep, the scene, or the layout. It never guesses what a photo shows from its file name.
+  - title: Ignores placeholders
+    text: Placeholder words in a layout sketch are never treated as final copy.
+  - title: Keeps the product exact
+    text: The real item, pack, colour, proportions, quantity and size. It never swaps the pack to make the picture easier, and repeats the key visible details in the same words across a set.
+  - title: Describes each thing once
+    text: Subject and action, place, composition, light, style, shape and the brand rules that matter, turned into things you can see.
+  - title: Keeps your words exact
+    text: Approved text stays word for word with its placement. If words will be added later in a design tool, it asks for clean space instead.
+  - title: Cuts the clutter
+    text: Removes research notes, rejected versions, extra adjectives and duplicate warnings, but never a needed limit or condition.
+  - title: Returns only the fields
+    text: The prompt in your tool's fields. Model choice and cost tracking are left to the tool.
+
+output_shape: |
+  PROMPT
+  <shape>. <subject and action, with hands and contact>. <the exact
+  product, from Image <n>: pack, colour, proportions, quantity; keep
+  the label as printed>. <place>. <composition>. <light and style>.
+  <exact text in quotes, with placement; or "no text, leave room at
+  <where>">. <rules that matter: no other text, no faces, ...>
+
+  REFERENCES: Image 1 = <job>; Image 2 = <job>; ...
+  MISSING: <reference job | product fact | approved text>
+
+example:
+  business: sprout
+  input: |
+    [the skill]
+
+    Approved scene: kitchen counter in daylight. An adult hand tears
+    a daily pack across the top and pours the gummies into the other
+    palm. The Sprout Original pouch stands behind, label to camera.
+    Approved text: "Rip. Tip. Enjoy." top left, forest green #00582D.
+    Size: 4:5. Prompt field limit: 1,000 characters.
+
+    Images: 1 = adult pouch, front on. 2 = a daily pack, torn across
+    the top. 3 = layout sketch (headline box says "HEADLINE HERE").
+
+    Product facts: glossy deep green stand-up foil pouch, big yellow
+    wordmark, yellow bear face top right, "28 Daily Packs" at the
+    bottom. Gummies: small opaque deep-green bears, soft matte, about
+    thumbnail height. Adult serving: "a small handful".
+    Rules: the daily pack tears straight across its top edge only.
+    The big pouch opens only at its resealable top, never torn.
+    Photos bright, sunny, candy-like. Never clinical.
+
+    Notes: we rejected a version with a shaker bottle in it. Also
+    tried "Tear. Pour. Done." Make it pop, really bright, vibrant,
+    super bright and fun.
+  output: |
+    PROMPT
+    Photograph, 4:5. A kitchen counter in bright daylight. An adult's
+    left hand holds the daily pack from Image 2, torn straight across
+    its top edge; a small handful of small, opaque, deep-green gummy
+    bears, soft matte, about thumbnail height, pours from the torn
+    top into the right palm. Behind, the Sprout Original pouch from
+    Image 1 stands upright, closed, label to camera: a glossy deep
+    green stand-up foil pouch, big yellow wordmark, yellow bear face
+    top right, "28 Daily Packs" at the bottom. Keep both packs exactly
+    as in Images 1 and 2; do not redraw any label. Bright, sunny,
+    candy-like light, never clinical. Layout follows Image 3 for
+    structure only. Text, top left in clear space, bold sans-serif,
+    forest green #00582D: "Rip. Tip. Enjoy." This text appears once;
+    no other text except what is printed on the packs. No faces.
+
+    REFERENCES: Image 1 = product identity (pouch); Image 2 = product
+    identity (daily pack, torn); Image 3 = layout structure only.
+    MISSING: how many gummies are in an adult pack. Kept as "a small
+    handful", with no count.
+
+    (Prompt: 831 characters. Left out: the shaker version, the
+    alternative line, the placeholder "HEADLINE HERE", and the
+    stacked "pop, vibrant, super bright" adjectives.)
+
+tweaks:
+  - what: Words added later
+    how: Say the text will be added in a design tool. The prompt drops the quoted words and asks for clean empty space where they'll go.
+  - what: A length limit
+    how: Give your tool's limit. It cuts duplicated guidance first and never cuts a needed condition halfway; if it still won't fit, it says so.
+  - what: A set of ads
+    how: Run it for each ad in a set. The product's visible details are repeated in the same words every time, so the pack doesn't drift between images.
+  - what: A correction
+    how: Attach the approved image and name the one thing to fix. The prompt asks for that correction and keeps the person, scene and product as they are.
+
+judge:
+  - Every attached photo has one stated job.
+  - The product details match your facts, and the pack hasn't been swapped or simplified.
+  - Approved words appear once, in quotes, with their placement, or the prompt asks for empty space.
+  - No rejected idea, research note or placeholder made it into the prompt.
+  - Nothing contradicts itself (for example "bright daylight" and "moody night").
+
+test:
+  - Paste your full brief, rejected versions and all. Search the prompt for any word from a rejected version. If one is there, it leaked.
+  - Run it twice on the same approved ad. The product line should be the same, word for word, both times.
+  - Give it your tool's length limit and check what was cut. Product details and conditions should survive; repeated adjectives should go.
+  - "Make the image and compare the pack with your real photo at full size: colour, quantity and how it opens."
+
+improve:
+  - "Write your product's visible details once into step 3 of the skill file (for Sprout: glossy deep green stand-up pouch, big yellow wordmark, yellow bear face top right, \"28 Daily Packs\" at the bottom), so every prompt in a set uses the same words."
+  - Add how the product opens and is held to step 3 too (for Sprout, the daily pack tears straight across the top), so it's never guessed.
+  - Put your image tool's length limit and prompt fields into step 8, so it returns exactly what that tool takes.
+  - List your approved person and scene photos in step 7, so edits always start from them.
+  - Pair it with the more detailed image plan skill when you need layouts in zones and several sizes, and with the skill that finds flaws in finished image ads before launch.
+
+terms:
+  - term: Reference photo
+    meaning: A photo attached to the prompt so the image tool can copy one thing from it, such as the product or the layout.
+  - term: Placeholder
+    meaning: Stand-in text in a layout sketch, such as "HEADLINE HERE", that marks where real words will go.

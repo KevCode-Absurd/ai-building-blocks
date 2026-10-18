@@ -1,0 +1,199 @@
+new_slug: get-new-ads-in-your-winners-style
+name: Get new ads in your winners' style
+summary: New image ads in the style your measured winners share, each testing one new thing.
+job: make-image-ads
+
+headline: New image ads that look like your best ones and each test one new thing
+subhead: Give it three or more of your own ads with measured results, your brand file and the product to sell. It records what your winners share, separates what carries from what doesn't, and plans new ads that keep the style and change one thing.
+
+explain: |
+  When an ad wins, the usual move is to copy it: same words, same offer, a new colour. That teaches you nothing, and it can carry over things that were only true of that ad, like an old discount or a review about another product.
+
+  This skill reads your own measured winners on six counts: type, colour, layout, look, the shape of the copy, and repeated touches like badges or quote cards. It adds what the pictures can't show: the one argument each ad made, and what was measured. Where your records don't say why an ad won, it writes "not recorded" rather than guess. It then lists combinations you haven't tried, shows you the profile to correct, and only then plans new ads for the product you name. Each keeps the proven style and changes exactly one thing.
+
+when:
+  - You have a handful of ads that beat your account's usual and want more like them.
+  - Your new ads drift off-brand, or copy the winner so closely they test nothing.
+  - You're adding a new product or buyer and want to reuse a style that already works.
+
+you_give:
+  - Three or more of your own measured ads, each with the image, spend, result and dates
+  - Your account's usual result, so it can tell winners from the rest
+  - The product to sell, named every time, with its photos and facts
+  - Your brand file, for colours, type, claims and current offers
+  - How many new ads you want (3, 5 or 10)
+you_get:
+  - A style profile of what your winners share and what each one argued
+  - A do-not-carry list of words, numbers, people and offers that stay with the old ads
+  - The combinations you haven't tried, which become the new ads
+  - New ad plans, each saying what is kept and the one thing changed
+
+how_to_use:
+  - Copy the skill and paste it into Claude, ChatGPT or Gemini.
+  - Attach the images of at least three measured ads, with spend, result and dates for each. A results file alone only gives the copy half of the profile.
+  - Name the product you want new ads for, and paste its facts and a clean product photo.
+  - Say how many new ads you want.
+  - At the first stop, correct the profile. At the second, edit the plans before anything is made.
+
+how_it_works:
+  - title: Says what it's using
+    text: Repeats the product, winners and facts back in a few lines, so a stale fact is caught early.
+  - title: Reads each winner
+    text: Records type, colour, layout family, look, copy shape and repeated touches for each measured ad.
+  - title: Adds the argument
+    text: Notes what each ad argued and to whom, and what was measured. An unknown reason is written "not recorded".
+  - title: Separates what carries
+    text: Keeps type, colours, layout, light and copy shape. Leaves behind the winners' words, claims, numbers, reviews, offers and people.
+  - title: Finds untried combinations
+    text: Lists proven formats with a new product, new buyer or new argument, then stops to let you correct the profile.
+  - title: Plans the new ads
+    text: Writes each plan in the winner's copy shape, never its sentences, for your named product, with one thing changed.
+  - title: Stops before making
+    text: Shows all plans for your edits, then uses your clean product photo as the reference if images are made.
+
+output_shape: |
+  WORKING FROM
+    Product  <named product, price>
+    Winners  <file, how many ads, dates>
+    Facts    <brand file, and anything to ask about>
+
+  RETURN PER AD (<result measure>. Account usual: <n>)
+    <ad>   <result>   <above | below>
+    <how many winners, and whether that's a style>
+
+  STYLE PROFILE
+    <type, colour, layout family, look, repeated touches>
+    Copy shape: <how winners open, compared with losers>
+    Why each won: <from your records, or "not recorded">
+    Do not carry: <words, numbers, people, offers>
+    Flag: <claims in old ads that need fixing>
+
+  NOT YET TRIED
+    <n> Keep <ad>'s <shape>. Change <the one thing>.
+        Rests on <fact or quote, with source>
+
+  MISSING  <images, reasons, small print>
+  STOP 1   <what to correct before new ads are drafted>
+
+example:
+  business: sprout
+  input: |
+    [the skill]
+
+    Winners: ad-results.csv, one row per ad, 14 to 30 days (all 10
+    rows pasted; practice numbers). Columns: ad_name, format,
+    opening_line, days_live, spend_usd, impressions, link_clicks,
+    purchases, revenue_usd
+    Ad images: not attached
+    Product: Sprout Original (Adults)
+    Facts: Sprout brand file (pasted)
+    Reviews: all 20 (pasted)
+    How many new ads: 3
+  output: |
+    WORKING FROM
+      Product  Sprout Original (Adults): $29.99 first box with the
+               text sign-up, then $49.99 every 4 weeks
+      Winners  ad-results.csv, 9 ads in 10 rows, 14 to 30 days. These
+               are practice numbers, not real results.
+      Facts    Sprout brand file. Small print: the $29.99 needs the
+               text sign-up. Must every ad carry that? (asked at Stop 1)
+
+    RETURN PER AD (revenue / spend. Account usual: 24,668 / 21,500
+    = 1.15)
+      T1 Hot girl tummy (video)        1.98  above
+      H1 One step never skip (video)   1.55  above
+      K1 Fiber kids (video)            1.39  above
+      P1 Too expensive, days 1-21      1.28  above
+      W1 Muscle weight loss            1.14  below (14 days, $900)
+      F1 Fiber question                1.03  below
+      S1 Trusted by 1M                 0.78  below
+      P2 Dont pay full price           0.62  below
+      P1 Too expensive, days 22-42     0.44  below
+      R1 Runner                        0.40  below
+      Four winners, so this is a style, not one ad remixed.
+
+    STYLE PROFILE
+      Type, colour, layout families, look, devices: MISSING. No ad
+      images are on file, and three winners are videos.
+      Copy shape, from the opening lines:
+        Winners name the buyer's own problem, habit or doubt, in
+        their words: slang for a gut problem (T1), a first-person
+        habit (H1), a parent's outcome in four words (K1), the
+        price objection in quotes, then answered (P1).
+        Losers lead on a discount or a claim about the reader
+        (P2, S1, W1, R1).
+      Why each won: not recorded for all four. The brand file holds
+        hypotheses from the ad library (price objection then a
+        discount; gut pain in slang), not measured reasons.
+      Do not carry: any winner's words, the 61%, K1's children, T1's
+        creator.
+      Flag: T1's "Fix" is on the brand's risky list. Don't carry it.
+      Flag: P1 fell from 1.28 to 0.44 in its second 21 days.
+
+    NOT YET TRIED (these become the new ads after Stop 1)
+      1 Keep H1's shape: a short first-person habit line.
+        Change the buyer: the busy parent, buying for herself. No
+        winner speaks to her. Rests on review 15: "So easy to grab
+        and eat on my way to the billion things I have to do as a
+        mom."
+      2 Keep T1's shape: the buyer's own words for a gut problem.
+        Change the argument: from "fix" to the allowed "Supports
+        digestion and gut health", with 6 g prebiotic fiber.
+      3 Keep P1's shape: an objection in quotes, answered.
+        Change the objection: "A gummy can't hold enough to replace
+        my powder", answered with "60+ ingredients, 21 vitamins &
+        minerals, and 6g fiber". The doubt is from the brand file's
+        buyer notes, not a review, so it can't be shown as a
+        customer's quote. MISSING: a review that says it.
+      Each still needs a layout family from the images.
+
+    MISSING  images of the image ads (P1 at least), for the visual half
+    MISSING  why T1, H1, K1 and P1 won
+    MISSING  small print every ad must carry
+
+    Nothing is made. No image is planned until the profile has its
+    visual half.
+
+    STOP 1  Correct this profile and send the ad images. The three
+            new ads are drafted after your answer.
+
+tweaks:
+  - what: The product
+    how: Name a different product and the same style is re-proportioned to its shape, using only views its own photos show. A layout built for a tall pouch is redrawn for a small kids pack.
+  - what: How many new ads
+    how: Ask for 5 or 10 and it spreads them across more layout families and more untried combinations. No two share a layout unless you ask.
+  - what: Why ads won
+    how: Add a line per ad on why you think it won, from a test or a note. Those reasons replace "not recorded" and the plans can build on them.
+  - what: Results per ad
+    how: Add cost per purchase or click rate as well as return. It then judges winners on the result you actually care about.
+
+judge:
+  - Each winner is compared with your account's usual, and the numbers add up from your file.
+  - Any reason for a win comes from your records, or is written "not recorded".
+  - The do-not-carry list includes the winners' words, offers and people.
+  - Each new ad changes exactly one thing, and you can say what it is in a few words.
+  - Every quote is word for word with its source, and any reworded quote in an old ad is flagged.
+  - Nothing is planned for image-making without your product photo as the reference.
+
+test:
+  - Work out your account's usual and which ads beat it yourself, then compare with its table. The numbers must match your file exactly.
+  - Run it with fewer than three measured winners. It should say "one ad remixed", not call it a style.
+  - Run it twice on the same results. The winners, the do-not-carry list and the untried combinations should match. If the reasons for a win change, it's guessing; they should say "not recorded".
+  - When the new ads are made, put each one next to the winner it came from. You should be able to name the one thing that changed in a few words. If you can't, it changed too much.
+
+improve:
+  - Write your account's usual result and the measure you care about (return, cost per purchase) into "What you need" in the skill file, so winners are judged the same way every run.
+  - Add a "why it won" line to your brand file each time you stop a test, and paste those lines next time, so fewer reasons say "not recorded".
+  - List your products with their clean photos and must-carry small print in the skill, so you only name the product.
+  - Run it every month with your latest results, so the profile follows what's working now.
+  - Pair it with a skill that maps which buyer and message you've already covered, when you want ideas outside your current style.
+
+terms:
+  - term: Return
+    meaning: Revenue divided by ad spend. A return of 1.5 means $1.50 back for every $1 spent.
+  - term: Account's usual
+    meaning: Your whole account's result over the same period. An ad above it is a winner for you, whatever other brands get.
+  - term: Copy shape
+    meaning: How the words are built, such as their length, rhythm and where the turn comes, without the actual sentences.
+  - term: Layout family
+    meaning: A group of ads that put the product and words in the same places in the same reading order.

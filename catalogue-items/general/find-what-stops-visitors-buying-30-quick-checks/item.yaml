@@ -1,0 +1,24 @@
+slug: find-what-stops-visitors-buying-30-quick-checks
+renamed_from: landing-page-quick-checklist-review
+name: "Find what stops visitors buying, in 30 quick checks"
+summary: "Pass, warn or fail on 30 checks for your landing page, plus the five fixes to make first."
+category: general
+boards: [ecommerce]
+type: prompt
+role: check
+job: page
+level: beginner
+inputs:
+  - type: landing_page
+    required: true
+  - type: brand_brain
+    required: false
+  - type: design_direction
+    required: false
+outputs:
+  - {type: audit_report}
+uses: []
+origin: own
+source_ids: [CES-050]
+old_name: landing-pages
+version: 1.0.0

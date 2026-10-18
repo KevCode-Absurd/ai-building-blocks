@@ -1,0 +1,20 @@
+slug: write-a-carousel-ad-people-swipe-through
+renamed_from: carousel-ad-copy-card-by-card
+name: "Write a carousel ad people swipe through"
+summary: "A swipe ad written card by card, with a first card that earns the swipe."
+category: general
+boards: [ecommerce]
+type: skill
+role: make
+job: ads
+level: intermediate
+inputs:
+  - {type: brief, required: true}
+  - {type: product_data, required: true}
+outputs:
+  - {type: ad_copy}
+uses: [get-one-image-ad-ready-to-make, make-each-carousel-card-earn-the-next-swipe]
+origin: own
+source_ids: [CES-044, CES-045]
+old_name: image-ad-copy; image-ad-copywriter
+version: 1.0.0

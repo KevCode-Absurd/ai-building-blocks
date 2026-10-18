@@ -1,0 +1,179 @@
+new_slug: get-brand-guide-any-designer-can-follow
+name: Get a brand guide any designer can follow
+summary: A printable guide and a one-page sheet of your colours, fonts and rules, made from your brand file.
+job: brand-file
+
+headline: A brand guide a stranger can follow to make on-brand work on day one
+subhead: Give it your brand file, and your logo rules and site styles if you have them. It writes a printable guide, one page per section (colour, type, voice, pictures, a cheat sheet), set in your own colours and fonts, plus a copy-paste sheet with every value.
+
+explain: |
+  When a new designer, editor or freelancer starts, they need your colours, fonts, voice and photo rules. Usually they get a logo file and a vague "keep it clean". Then the work comes back in the wrong blue, with a stock photo and a tagline you'd never say.
+
+  This skill turns your brand file into two files. The first is a printable HTML guide, one A4 page per section, set in your own colours and fonts. Each page starts with the reason behind the rules, then the values, then do and don't examples taken from your real copy. The second is a single sheet of colours, fonts and rules to paste into a design or image tool. Pages with nothing to show are left out, and every blank is listed as "not yet captured" with the question that would fill it.
+
+when:
+  - A designer, freelancer or agency is starting work with you and needs your rules in one place.
+  - Your brand rules live across a few files and nobody can find the hex codes.
+  - You want a sheet you can paste into an AI image or design tool so it stays on brand.
+
+you_give:
+  - Your brand file, with colours (name, hex, job), fonts, voice, photo style and rules
+  - Your logo file and its rules, such as clear space and smallest size (optional)
+  - Your site's styles, such as colour variables, spacing, corner radius and buttons, for web work (optional)
+you_get:
+  - A printable HTML guide of up to seven A4 pages, in your own colours and fonts
+  - A one-page tokens sheet with every colour, font and rule, ready to copy
+  - A two-line note on what was left out and why
+
+how_to_use:
+  - Copy the skill and paste it into Claude, ChatGPT or Gemini. A tool that can write files works best.
+  - Paste your brand file. Colours and fonts are the minimum; without both it stops and asks you to build the brand file first.
+  - Add your logo rules and, for web work, your site's colour variables and button styles.
+  - Open the HTML file in a browser and print to PDF with margins set to none.
+  - Check the "not yet captured" list on the cheat sheet and fill those gaps in your brand file.
+
+how_it_works:
+  - title: Gathers by page
+    text: Takes colour and type from your brand file or site styles, and stops if both are missing. Any other page with nothing to show is left out.
+  - title: Writes the reasons first
+    text: One or two sentences per page from your brand file, such as what each colour's job is and which font is for headings, so the guide isn't a bare list of values.
+  - title: Builds the printable guide
+    text: One self-contained HTML file, A4 pages with page breaks, set in your colours and fonts, with a footer on every page after the cover.
+  - title: Fills the pages
+    text: Cover, colour swatches with name, hex and job, type samples in your own words, voice do and don'ts from real lines, picture rules, web components if needed, and a cheat sheet.
+  - title: Builds the tokens sheet
+    text: Every colour with hex and job, CSS variables, the font import and type sizes, then the voice rule and picture rule in words.
+  - title: Hands over
+    text: Saves both files in your brand folder and tells you how to print the guide cleanly.
+
+output_shape: |
+  brand-guide.html  (A4, one section per page)
+    1 Cover: <name>, Brand guide, <one line>, <date>
+    2 Colour: <why this palette> . <swatch: name, hex, job> ...
+    3 Type: <why these fonts> . <font> set in <your own words>, size scale
+    4 Voice: <3 or 4 principles> . Do "<real line>" / Don't "<...>"
+    5 Pictures: <style, people, mood, do and don't>
+    6 Components (web only): <buttons, corners, spacing, cards>
+    7 Cheat sheet: <colours, fonts, voice in 5 words, one copy rule,
+      one picture rule> . Not yet captured: <field>: <question>
+
+  brand-tokens.md
+    <colour name>  <hex>  <job>
+    :root { --<name>: <hex>; ... }
+    Fonts: <import line>   Sizes: <scale>
+    Voice rule: <...>   Picture rule: <...>
+
+  NOTE  Left out: <page>, because <missing what>
+
+example:
+  business: sprout
+  input: |
+    [the skill]
+
+    Brand file: sprout/brand.md (colours with hex and job, type, voice
+    and the lines the brand uses, look, photo rules, "show it right"
+    product rules, claims fine and risky).
+
+    No logo rules and no site code. This guide is for a freelance
+    designer making social posts.
+  output: |
+    brand-guide.html  (6 A4 pages; Components left out, not a web build)
+
+    1 COVER
+    Sprout . Brand guide . Daily nutrition, like, ridiculously easy . Oct 2026
+
+    2 COLOUR
+    Why: Sprout is green like the greens inside, warm like a snack, never
+    clinical. Cream carries the page; one green does the selling.
+    [swatch] Forest green   #00582D   pouch, accents
+    [swatch] Deep forest    #002C17   headings, dark sections
+    [swatch] Cream          #FFF7DF   hero and page background
+    [swatch] Kelly green    #007E40   buttons only
+    [swatch] Sunflower      #FFCC2E   stars and badges
+    [swatch] Plum           #581E5A   top banner
+    Backgrounds: cream, then a deep forest band, then cream again.
+
+    3 TYPE
+    Why: Work Sans bold speaks, Work Sans medium explains, DM Mono labels.
+    Sample (Work Sans bold): "Tastes like a treat, works like a supplement."
+    Sample (DM Mono, uppercase): 21 VITAMINS & MINERALS . 6G FIBER
+    Display font for big statement lines: MISSING (name not on file)
+
+    4 VOICE
+    Why: a funny friend who's into wellness and refuses to be preachy.
+    Do:    "Rip. Tip. Enjoy."
+    Do:    "Supports digestion and gut health"
+    Don't: "Fix the Hot Girl Tummy" ("fix" breaks the brand's own
+           "supports" rule)
+    Don't: "revive whole body vitality" (vague, no support on file)
+
+    5 PICTURES
+    Bright, sunny, candy-like. Pouch on a soft two-colour gradient,
+    gummies scattered in front, everyday adults pouring gummies into a hand.
+    Do: tear the daily pack straight across the top.
+    Don't: tear it at the side, bottom or corner; show the big pouch torn;
+    show tie-in cartoon characters or partner marks; go clinical or muted.
+
+    7 CHEAT SHEET
+    Colours: cream, deep forest, kelly green button . Fonts: Work Sans,
+    DM Mono . Voice: playful, cheeky, numbers first . Copy rule: say
+    "supports", never "fix" . Picture rule: torn across the top, bright.
+    Not yet captured:
+    - Logo: clear space, smallest size, banned uses? (ask the founder)
+    - Display font: what is it called, and where's the file?
+
+    brand-tokens.md
+    Forest green  #00582D  pouch, accents
+    Deep forest   #002C17  headings, dark sections
+    Cream         #FFF7DF  backgrounds
+    Kelly green   #007E40  buttons
+    Sunflower     #FFCC2E  stars, badges
+    Plum          #581E5A  top banner
+    :root { --forest:#00582D; --deep:#002C17; --cream:#FFF7DF;
+            --button:#007E40; --sun:#FFCC2E; --plum:#581E5A; }
+    Fonts: Work Sans (700 headings, 500 body), DM Mono (tags)
+    Voice rule: playful, short, numbers up front; "supports", never "fix".
+    Picture rule: bright and sunny; pack torn straight across the top.
+
+    NOTE
+    Left out: Components (not a web build). Logo rules and the display
+    font are listed under "Not yet captured".
+
+tweaks:
+  - what: Web build or not
+    how: Add your site's colour variables, spacing and button styles and you get a components page with real rendered buttons and cards. Leave them out for a print and social guide.
+  - what: Logo rules
+    how: Paste clear space, smallest size and banned uses. Without them, the logo rules are listed as not yet captured, never invented.
+  - what: Real lines for voice
+    how: Make sure your brand file has lines you really use. The voice page's do and don't examples come only from those.
+  - what: Online store add-on
+    how: For physical products it adds a page on how each product must look on camera and a page on your brand's settings, light and sound.
+
+judge:
+  - The guide uses your colours and fonts, not a generic grey and blue.
+  - Every page opens with a reason before the values.
+  - Each swatch shows a name, a hex code and a job.
+  - Voice examples are real lines from your copy, not invented ones.
+  - It prints one section per page with nothing cut off.
+  - Every blank in your brand file appears under "not yet captured".
+
+test:
+  - Give the guide to someone who has never worked with you and ask for one social post. Every question they ask you points to a page that needs a clearer reason.
+  - Print it to PDF with margins set to none. Each section should fill its own page, with nothing cut off.
+  - Compare every hex code with your site's styles. One wrong digit sends designers off brand.
+  - Search your site for two of the voice examples. They should be lines you've used.
+
+improve:
+  - Add your logo rules (clear space, smallest size, banned uses) to your brand file before you run it. They're the most common blank on the cheat sheet.
+  - Add a page to the list in step 3 if you need one, such as packaging or social post templates, and say what goes on it.
+  - Change the paper size in step 3 if you don't print on A4, for example to Letter in the US.
+  - Save brand-tokens.md in your brand file, and paste it at the top of every design or image request.
+  - Pair it with a skill that builds a brand file from your website, and one that interviews the founder to fill the blanks the cheat sheet lists.
+
+terms:
+  - term: Hex code
+    meaning: The six-character code for a colour on screens, such as #1A2B3C.
+  - term: Tokens
+    meaning: The named values a design uses (colours, font sizes, spacing), written so they can be copied straight into code or a design tool.
+  - term: CSS variables
+    meaning: Named colour and size settings in web code, so a whole site can change colour by editing one line.

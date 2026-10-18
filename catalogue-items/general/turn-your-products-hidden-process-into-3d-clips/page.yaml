@@ -1,0 +1,180 @@
+new_slug: turn-your-products-hidden-process-into-3d-clips
+name: Turn your product's hidden process into 3D clips
+summary: Finds one honest hidden process, offers story options, then writes the beats and prompts for a 3D lesson.
+job: make-video-ads
+
+headline: Get a 3D video lesson about your product that teaches first and sells last
+subhead: Give it your product facts with sources and your claims list. It tests which hidden process is honest and interesting, offers you story options to pick from, then writes the seven beats, the stills, the clip prompts, the captions and the voice brief.
+
+explain: |
+  A short 3D lesson about something nobody can see (what an ingredient does, how a fabric handles sweat) can hold attention like a documentary. Most attempts fail one of two ways. They bend a claim to fit a dramatic picture, or the "lesson" is only a pitch in disguise and viewers feel it.
+
+  This skill starts by hunting for the process. It writes each candidate as a three-link chain ("A meets B, B does C, so you get D"), marks every link as sourced, common knowledge or unsupported, and drops chains that fail its five questions. The sharpest asks whether it would be interesting if the product didn't exist. Then it offers story options and stops so you can choose. Only after that does it write the beats and prompts. The product stays hidden until about three quarters through and is the only photo-real thing on screen.
+
+when:
+  - Your product's benefit is invisible and you want to know if there's an honest story to tell about it.
+  - You want to compare two or three explainer story options before paying for any video.
+  - You've picked a story option and need the stills, clips, captions and voice brief.
+
+you_give:
+  - Your product, a clean pack photo and how it's used
+  - How it works, ideally two or three steps, each with a source
+  - Your approved and banned claims, and what buyers assume
+  - Your colours, font and a voice you have the right to use (optional at first)
+  - Your video tool's clip lengths (optional)
+you_get:
+  - The candidate chains with each link marked, and which survived
+  - Honesty notes, including anything a regulator might look at
+  - Story options to choose from, each a whole film in under 120 words
+  - After you choose, the seven-beat script, still and clip prompts, captions and voice brief
+
+how_to_use:
+  - Copy the skill and paste it into Claude, ChatGPT or Gemini.
+  - Paste your product facts, with the source for each claim, and your banned claims.
+  - Read the chains and honesty notes first. If nothing survives, it will tell you to use another format.
+  - Pick one story option and reply with its letter.
+  - If your product has claim rules (supplements, skincare), get the script checked before any picture is made.
+
+how_it_works:
+  - title: Runs the four tests
+    text: Invisible, one thing acting on another, supported, and news to the buyer.
+  - title: Hunts for the process
+    text: Writes candidate chains by product type, marks every link, and drops chains that fail two of five questions.
+  - title: Keeps it honest
+    text: 'Only "supports" or "helps". No body before and after, no invented readings, numbers only with sources.'
+  - title: Offers story options, then stops
+    text: Gives 3 to 5 whole-film story options in under 120 words each, flags risks, and waits for your choice.
+  - title: Writes seven beats
+    text: Scale opening, wrong cause, how it works, left alone, what gets in the way, the product, what the buyer can do.
+  - title: Sets the look and voice
+    text: Matte 3D, one forward-gliding camera, the product the only photo-real thing, and a voice you have the right to use.
+  - title: Stills, then clips
+    text: Approves the key stills first, then writes clip prompts that start from them, and checks the finished clips.
+
+output_shape: |
+  CHAINS
+  <name>: A <meets> B, B <does> C, so you get D
+    Links: <sourced / common knowledge / unsupported, each>
+    Five questions: <which it passes or fails>   Kept or dropped
+
+  HONESTY NOTES
+  - <verbs, numbers, pictures to avoid, regulator flags>
+
+  STORY OPTIONS (pick one)
+  A "<name>": <opening, process, what gets in the way, payoff,
+     who it's for, under 120 words>. Sources: <...>. Flags: <...>
+  B ...
+
+  STOPPED: waiting for your choice. After it: seven beats, look
+  lines, still and clip prompts, captions, voice brief.
+
+example:
+  business: sprout
+  input: |
+    [the skill]
+
+    Product: Sprout daily greens gummies. Pouch of 28 daily packs.
+    Tear a pack straight across the top, eat the gummies.
+    Facts and sources (sprout/brand.md):
+    - 1 pack: 60+ ingredients, 21 vitamins & minerals, 6 g prebiotic
+      fiber (a branded fiber blend, inulin listed). Label.
+    - Study 2025: 12 weeks, randomized, double-blind,
+      placebo-controlled, 120 healthy adults. Blood vitamin C +40.1%,
+      folate +20.5%. Science page.
+    - Methylfolate, not folic acid. Science page.
+    Approved: "Supports digestion and gut health". "Clinically tested
+    for nutrient absorption", with the study and its numbers.
+    Risky (brand file): "Gummies begin breaking down almost
+    immediately ... fast and efficient bioavailability" (no support).
+    "61% of Americans experience weekly digestive issues" (footnote
+    only says "Source").
+    Buyer assumptions: "A gummy can't hold enough to replace my
+    powder." "Will this upset my stomach more?"
+  output: |
+    CHAINS
+    1 Absorption: the pack's vitamin C meets the gut, passes into
+      the blood, so blood levels rise (+40.1% in the study).
+      Links: study (sourced); gut to blood (common knowledge).
+      Five questions: fails "interesting without the product".
+      Passes the rest for this buyer, who doubts a gummy holds
+      enough. KEPT.
+    2 Fiber as food: 6 g prebiotic fiber meets the bacteria already
+      in the gut, they feed on it, so it supports digestion.
+      Links: 6 g (label); bacteria feed on prebiotic fiber (common
+      knowledge, brand to confirm); "supports digestion" (approved).
+      Five questions: passes all. KEPT.
+      What gets in the way: the "61%" stat has no source, so not
+      used. Reviews 3 and 4 support a habit instead: people skip
+      gritty, chalky powders.
+    3 Fast breakdown: the brand's own line has no support. DROPPED.
+    4 Methylfolate: a fact, but no sourced chain of what it does.
+      A feature, not a process. DROPPED.
+    Only 2 chains survived, so 2 story options, not the 3 to 5 the method
+    asks for.
+
+    HONESTY NOTES
+    - Supplements have claim rules. The brand reads the script before
+      any picture is made.
+    - Say "supports digestion", never "fixes bloating".
+    - Say the study's size and length wherever 40.1% appears.
+    - The gut is drawn as a plain tube shape, not anatomy.
+    - Don't show energy or immunity. The study didn't test them.
+    - Gut-sensitive buyers: point to Low Sugar. The brand file notes
+      Sugar-Free's sugar alcohols upset some stomachs.
+
+    STORY OPTIONS (pick one)
+    A "The 40.1%". Opens on a flat number: "Blood vitamin C rose
+      40.1% in twelve weeks." Inside a vast red river as if 1 mm
+      tall. Wrong cause: you'd think a gummy is too small to count.
+      In the way: the powder you skip. Payoff: tearing a pack on
+      the way out. Strongest for the powder quitter. Sources: study.
+      Flag: no energy or immunity.
+    B "Feeding the crowd inside". Opens on a question: "What do the
+      bacteria in your gut eat?" A city of tiny stylised bacteria,
+      as if 1 mm tall. How it works: the fiber arrives and they feed.
+      In the way: the chalky powder you stopped drinking. Payoff:
+      one pack a day. Strongest for the gut buyer. Sources: label,
+      common knowledge. Flag: "supports" only; brand to confirm the
+      feeding link.
+
+    STOPPED: waiting for your choice of A or B. After it come the
+    seven beats, look lines, still and clip prompts, captions and
+    the voice brief.
+
+tweaks:
+  - what: Your sources
+    how: Add a source for each step of how it works. Links marked "common knowledge, brand to confirm" turn into sourced ones and more chains survive.
+  - what: Number of story options
+    how: Ask for "five story options" if you have several processes worth testing. It will still only offer chains that pass the tests.
+  - what: Your script
+    how: Paste an existing script and it checks it against the tests, then writes the prompts from it instead of writing a new one.
+  - what: Clip limits
+    how: Give your tool's real clip lengths and join types. It plans one continuous move only where it helps the story, and dissolves elsewhere.
+
+judge:
+  - Every link in a kept chain is marked sourced or common knowledge, never assumed.
+  - At least one chain was dropped, and the reason is clear.
+  - The honesty notes name the exact words and pictures to avoid for your product.
+  - It stops after the story options and waits for your choice.
+  - No story option shares an opening or a process with another.
+
+test:
+  - Look at the dropped chains. At least one should be dropped for a clear reason. If every chain survives, your facts may be too thin to test.
+  - Check each link in the kept chain against its source.
+  - Pick a story option and check the seven beats follow that option, not another one.
+  - Make the opening still, the cutaway and the product's arrival before any clip. The pack should match its photo in all three.
+
+improve:
+  - Add your sourced chains to "What you need" in the skill file, so step 2 starts from them instead of hunting from scratch.
+  - If your product type isn't in the list in step 2, add a line for it with the kind of hidden process to look for.
+  - Write the details of the voice you've recorded or licensed into step 7, so every video uses the same one.
+  - Save the chain and the story option you chose in your brand file.
+  - Pair it with a skill that writes only the 3D how-it-works script, when you need the words without the prompts.
+
+terms:
+  - term: Chain
+    meaning: How it works, written as three links. A meets B, B does C, so you get D.
+  - term: Common knowledge
+    meaning: Something a school textbook would say, so it doesn't need the brand's own source.
+  - term: Dissolve
+    meaning: A soft fade from one clip into the next, used so one bad clip doesn't spoil a joined pair.

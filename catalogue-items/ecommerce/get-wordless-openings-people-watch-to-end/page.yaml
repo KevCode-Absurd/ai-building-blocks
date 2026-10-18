@@ -1,0 +1,186 @@
+new_slug: get-wordless-openings-people-watch-to-end
+name: Get wordless openings people watch to the end
+summary: Two or three four-second wordless openings where your product does one satisfying motion, with the prompts to make them.
+job: make-video-ads
+
+headline: Get a four-second opening people watch to the end, because one satisfying motion finishes
+subhead: Give it your product photos, how it really moves and the ad it goes in front of. It picks 2 or 3 motions that end (fills, peels, clicks shut, settles), and writes the opening image prompt and the video prompt for each, with no words and no talking.
+
+explain: |
+  The first seconds of an ad decide whether anyone sees the rest. A motion that finishes holds the eye: a glass filling to the line, a seal peeling off in one piece, powder stirring smooth. People wait for the end. A product slowly turning on a stand doesn't do this, because nothing finishes.
+
+  This skill picks motions from the way your product really opens, pours or closes, never one made up. Each opening starts with the motion already under way, ends in the last third, holds still for the final half second, and lands in the same place and light where your ad begins, so the join doesn't jump. It writes "real speed" once, avoids slow-motion words that make tools play back slowly, names the sound, and keeps words and talking out of the picture. You approve a line-up of 2 or 3 before anything is made.
+
+when:
+  - Your ad holds people once they're in, but too many scroll past the first second.
+  - Your product has a satisfying moment (a pour, a scoop, a click, a peel) that you've never shown up front.
+  - You want to test new openings on an ad you already run, without filming a new ad.
+
+you_give:
+  - Your product photos by what they show (pack front, out of the pack, in hand, close-up of the surface)
+  - How it opens, pours or is used, its real motions and sounds, and what it's made of
+  - The ad it goes in front of (its first frame, first line, place and light)
+  - Your brand's places, light, on-screen text style and what never to show (optional)
+  - The shortest clip your tool makes (optional, 4 seconds by default)
+you_get:
+  - A line-up of 2 or 3 openings, each a different motion, with the reason someone would wait
+  - An opening image prompt for the first one
+  - A video prompt for each, with start state, end state, material behavior and sound
+  - A suggested overlay of 1 to 4 words (or none) and a delivery list
+
+how_to_use:
+  - Copy the skill and paste it into Claude, ChatGPT or Gemini.
+  - Attach your product photos and describe exactly how it opens and is used, in your brand's words.
+  - Describe the first frame of the ad it goes in front of (the place, the light, what's in it).
+  - Approve one row of the line-up before anything is made.
+  - Make the opening image, then one clip, check it, then the rest. Test each opening on the same ad as separate ads.
+
+how_it_works:
+  - title: Applies nine rules
+    text: One motion that ends; the product out of its pack, what it's made of, or what it replaces; real photos attached; motion already under way; a still last half second; real speed; named sound; no words or talking; 2 or 3 at a time.
+  - title: Shapes 4 seconds
+    text: The motion part-way at 0, the end in sight by 2.5, the end between 2.5 and 3.5, nothing moving from 3.5 to 4.
+  - title: Chooses each opening
+    text: The object in focus, the motion and what "done" looks like, the place (the same as the ad's), the camera, the sound and the last frame, plus one sentence on why the buyer would wait.
+  - title: Keeps real speed
+    text: Writes "real speed" once and never slow motion or time-lapse. Uses plain verbs and says how the material behaves (powder lands as a small cone, thin liquid levels at once).
+  - title: Matches the ad's look
+    text: Takes the light, closeness and focus from the ad, so a phone-filmed ad gets a phone-filmed opening.
+  - title: Images, then clips
+    text: An approved opening image from your photos, then one clip checked for its first and last frame, then the rest of the batch.
+
+output_shape: |
+  LINE-UP (approve one row before anything is made)
+  <n> Object: <what's in focus>
+    Motion: <the one motion>. Done = <what finished looks like>
+    Place: <the ad's place and light>. Camera: <..>
+    Sound: <the motion's sound, the room>
+    Last frame: <still, product in view, label uncovered>
+    Why they'd wait: <one sentence>
+  <which motions are inferred, and what to confirm>
+
+  OPENING IMAGE (row <n>)
+  Attach: <each photo and what it shows>. <the frame, motion part-way>
+
+  VIDEO PROMPT (row <n>)
+  <shape>, <seconds>, real speed. Camera: <..>. Start: <..>
+  <0 to 2.5 s>, <2.5 to 3.5 s>, <3.5 to 4 s still>. <how the material
+  behaves>. Sound: <..>. No words, no people speaking.
+
+  OVERLAY  <1 to 4 words, or none>
+  DELIVER  <raw clip, clip with overlay, last frame, one line>
+  MISSING: <facts it needed and didn't get>
+
+example:
+  business: sprout
+  input: |
+    [the skill]
+
+    Product: Sprout greens gummies. Photos attached: pouch front, one
+    daily pack, gummies in a palm, close-up of the gummies. Pouch:
+    glossy deep green foil, big yellow wordmark. Gummies: small opaque
+    deep-green bears, soft matte.
+    How it's used: tear one daily pack, tip the small handful of
+    gummies into your hand, eat. No water, no shaker.
+    Brand handling notes: "The daily pack is torn straight across its
+    top edge. Never the side, bottom or a corner." "Gummies pour out
+    of the torn top into a palm or bowl." "The big pouch opens only at
+    its resealable top. It is never shown torn."
+    Real motions and sounds: not written down yet.
+    Ad it goes before: "Powder tub". First frame: a man at a kitchen
+    counter, morning window light, holding a half-used powder tub.
+    Brand look: bright, sunny, real homes; never clinical.
+    Clip length: 4 seconds.
+  output: |
+    LINE-UP (approve one row before anything is made)
+    1 Object: the gummies, out of the pack
+      Motion: gummies pour from the torn top of a daily pack into an
+      open palm. Done = the last gummy lands, the pack empty.
+      Place: the kitchen counter from the ad, morning window light.
+      Camera: top-down, locked. Sound: a soft patter into the palm, a
+      faint foil crinkle, quiet kitchen.
+      Last frame: a palm of green bears, the empty pack above it, the
+      pouch at the edge, label up.
+      Why they'd wait: a tipped pack wants its last gummy to drop.
+    2 Object: the daily pack
+      Motion: the pack torn straight across its top edge in one pull.
+      Done = the strip comes free whole.
+      Camera: locked, close, at counter height. Sound: the foil tear.
+      Last frame: the torn pack held still, top open, gummies visible.
+      Why they'd wait: a tear half done wants finishing.
+    3 Object: the pouch
+      Motion: a thumb runs along the resealable top until it's sealed
+      end to end. Done = sealed the full length.
+      Camera: slow push in that stops as the seal closes.
+      Sound: the seal's own sound. Last frame: the closed pouch, label
+      to the lens.
+      Why they'd wait: an open seal, the eye wants it closed.
+    Motions are inferred from "tear, tip, eat" and the handling notes.
+    Confirm how the resealable top closes before making row 3.
+
+    OPENING IMAGE (row 1)
+    Attach: daily pack photo = the pack; close-up of the gummies = the
+    gummies; pouch-front photo = the pouch. Top-down on a kitchen
+    counter, morning window light from the left. A daily pack torn
+    straight across its top edge, already tipped over an open adult
+    palm, the first gummies falling; the pouch at the top edge, label
+    uncovered. Top and bottom sixth of the frame empty.
+
+    VIDEO PROMPT (row 1)
+    9:16, 4 seconds, real speed. Camera: top-down, locked. The daily
+    pack is torn straight across its top edge. Never the side, bottom
+    or a corner. Gummies pour out of the torn top into a palm. Start:
+    the pack already tipped, the first gummies falling. 0 to 2.5 s:
+    small green gummy bears tumble from the torn top into the palm and
+    stop. 2.5 to 3.5 s: the last gummy drops; the pack is empty. 3.5 to
+    4 s: nothing moves; the palm of gummies, the pack, the pouch and
+    its label in view. Small soft solids tumble and stop. Sound: a soft
+    patter, a faint foil crinkle, a quiet kitchen, no music, no voice.
+    No words, no people speaking.
+
+    OVERLAY  Suggest none, or "Wait for it" in the upper third, below
+    the app's top buttons. Never an offer or claim. Your call.
+    DELIVER  each opening as the raw clip, the clip with overlay, its
+    last frame as a picture, and one line on what it shows.
+    MISSING: how many gummies are in one adult pack, so the prompt
+    gives no count. MISSING: Sprout's real motions and sounds, written
+    down.
+
+tweaks:
+  - what: The motion
+    how: Choose from what comes out (pour, fill, scoop, dissolve), what opens or shuts (peel, click, twist, zip), how the material behaves (squeeze and spring back, wipe a clean stripe), or order from mess (sort, stack, old things swept aside).
+  - what: The object in focus
+    how: The product out of its pack, something it's made of, or the old things it replaces. A sealed pack turning on a stand is a pack shot, not an opening.
+  - what: The camera
+    how: Locked by default. Top-down suits fills, sorts and spreads. A slow push in must stop when the motion ends. A small arc needs a stated start and end side.
+  - what: Clip length
+    how: 4 seconds suits most motions; ask for 5 if the motion needs it. A glass full by second 1 wastes the rest, so the end is kept in doubt until late.
+
+judge:
+  - The first frame already shows the motion part-way, at thumbnail size.
+  - The motion ends in the last third, and nothing new happens after it.
+  - The last frame is still, with the product in view and the label uncovered.
+  - The place and light match the first frame of the ad it goes in front of.
+  - The prompt says "real speed" once, with no slow-motion, time-lapse or "explode" style words.
+  - No words in the picture and nobody talking.
+
+test:
+  - Give it a product with no out-of-pack photo. It should refuse any opening that shows the product out of its pack and say MISSING, not guess what's inside.
+  - Search each video prompt for "slow", "time-lapse", "explode" or a frame rate. Any of these will change how the tool plays it back.
+  - Make one clip and scrub to the last half second. Nothing should move; if it does, shorten the motion's timing in the prompt and remake it.
+  - Put the last frame next to your ad's first frame. If the place or light jumps, change the opening's place to match before making the batch.
+
+improve:
+  - Write your product's real motions and sounds into the "Product notes" section of the skill file once (how it opens, pours, seals), so every opening starts from them.
+  - Copy your brand's handling rules into the same section word for word, so every clip prompt carries them.
+  - Add the place and light of your main ads to "What you need", so openings always land where your ads begin.
+  - Save which motion won to your brand file, and test a new object in focus with the same motion next time.
+  - For a talking opening instead, pair it with the skill that makes talking openings with an AI presenter.
+
+terms:
+  - term: Opening (hook)
+    meaning: The first few seconds of an ad, whose only job is to keep the right person watching.
+  - term: Real speed
+    meaning: The motion plays at normal speed. Words like "slow pour" make video tools play it back slowly.
+  - term: Last frame
+    meaning: The final picture of the opening, which should sit naturally next to the first frame of the ad.

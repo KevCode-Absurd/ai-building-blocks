@@ -1,7 +1,7 @@
 // Builds the handoff pack from a saved workflow with plain code: same workflow in, same pack out.
 // PRD §6: HANDOFF.md, workflow.json, skills/<slug>/SKILL.md (+ boards/ecommerce.md), README.txt.
 import { strToU8, zipSync, type Zippable } from "fflate";
-import { type Catalogue, loadSkillText, portLabel, roleName } from "./data";
+import { type Catalogue, loadSkillText, portLabel, taskOf } from "./data";
 import type { Flow, FlowNode } from "./store";
 
 export type Ordered = { node: FlowNode; step: number; from: number[] };
@@ -76,7 +76,7 @@ export function handoffMarkdown(c: Catalogue, flow: Flow, order: Ordered[]): str
     L.push(`### Step ${o.step}: ${b.name}`, "");
     L.push(`- **Skill:** \`skills/${b.slug}/SKILL.md\`${o.node.ecommerce && b.addon ? ` plus the ecommerce add-on \`skills/${b.slug}/boards/ecommerce.md\`` : ""}`);
     L.push(`- **What it does:** ${b.summary}`);
-    L.push(`- **Role:** ${roleName(b.role)}`);
+    L.push(`- **Job:** ${taskOf(b).name}`);
     L.push(`- **Reads:** ${o.from.length ? o.from.map((s) => `the output of step ${s}`).join(", ") : "the inputs prepared above"}${b.inputs.length ? ` (${b.inputs.map((p) => portLabel(p.type).toLowerCase()).join(", ")})` : ""}`);
     L.push(`- **Produces:** ${b.outputs.length ? b.outputs.map((p) => portLabel(p.type).toLowerCase()).join(", ") : "what the skill's Output section describes"}`);
     L.push(`- **Before moving on:** run the skill's Checks. If one fails, fix it within this step or stop and report.`);

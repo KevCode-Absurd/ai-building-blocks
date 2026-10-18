@@ -1,0 +1,23 @@
+slug: get-image-ads-strangers-stop-scrolling-for
+renamed_from: cold-audience-concept-static-ads
+name: "Get image ads strangers stop scrolling for"
+summary: "Image ads for people who have never heard of you, each making a different true argument."
+category: general
+boards: [ecommerce]
+type: workflow
+role: orchestrate
+job: ads
+level: expert
+inputs:
+  - {type: brand_brain, required: true}
+  - {type: voc_reviews, required: true}
+  - {type: persona, required: false}
+  - {type: product_photos, required: false}
+outputs:
+  - {type: static_ads}
+uses: [stop-the-scroll-with-your-buyers-problem, get-every-word-your-image-ad-needs, fix-whats-wrong-in-finished-ads-before-launch]
+example: ad-concept
+origin: rebuilt
+source_ids: [CES-143]
+old_name: tof-statics
+version: 1.0.0

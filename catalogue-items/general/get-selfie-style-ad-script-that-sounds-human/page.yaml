@@ -1,0 +1,181 @@
+new_slug: get-selfie-style-ad-script-that-sounds-human
+name: Get a selfie-style ad script that sounds human
+summary: A talking-to-phone ad script, or a posted-photo still, that reads as a person and stays honest.
+job: make-video-ads
+
+headline: Get an ad that looks and sounds like one person talking to their phone, and stays honest
+subhead: Give it the reason someone buys, your buyer's doubt in their words and your claims. It writes a 15 to 60 second selfie-style script in five parts (or one still that looks like a posted phone photo), with one number and an ending that claims less than it could.
+
+explain: |
+  An ad that looks filmed by a customer on their phone gets watched like a friend's post, until one line sounds like a brand. "Obsessed", "life-changing", three numbers in a row, a pack held up beside a smiling face: any one of these and people scroll past. And when the person on screen is AI-generated, a line like "this worked for me" is simply untrue.
+
+  This skill writes in five parts: an opening mid-thought, the doubt said out loud, the product shown in use, an honest result that claims less than it could, and a soft close. It allows exactly one specific number from your facts. It sets who the person is first: a real creator speaks as themselves with blanks for their own details, while an AI presenter talks in "you", makes observations or quotes real customers word for word.
+
+when:
+  - You want an ad that reads as a person's post, with a real creator or an AI presenter.
+  - Your buyers have one clear doubt ("a gummy can't hold enough") that showing the product can answer.
+  - You need a still that looks like a phone photo someone posted, not a studio shot.
+
+you_give:
+  - The reason someone buys, how much the buyer already knows, and the length
+  - Video or still image, and real creator or AI presenter
+  - Your buyer's doubt, their moment and their own words, with real quotes and sources
+  - How the product is used and what a result may show
+  - Your one number, approved and banned claims, never-say list and offer
+you_get:
+  - A five-part script (spoken words, on-screen text and a picture note for each)
+  - The one number and where it came from, plus opening variants if you ask
+  - Or, for a still, the caption, the moment, how it was taken and an image prompt
+  - A list of every claim, number and quote with its source
+
+how_to_use:
+  - Copy the skill and paste it into Claude, ChatGPT or Gemini.
+  - Paste your product facts, approved claims and several real reviews underneath.
+  - Say "video, 30 seconds, AI presenter" (or real creator, or still).
+  - Name the doubt you want answered, in the buyer's words if you have them.
+  - Check the turn (part 4). It should claim less than your facts allow.
+
+how_it_works:
+  - title: Checks the fit
+    text: A person with a phone carries a shared problem or a demonstration in hand. It's the wrong format when the selling point is something a camera can't see.
+  - title: Sets the voice
+    text: Casual, plain words, contractions, the buyer's own nouns. Nothing that would also work as a polished advert's voice-over.
+  - title: Picks one number
+    text: Exactly one specific number or moment (a dose, a time, a count), from your facts. Price and offer terms don't count.
+  - title: Settles who the person is
+    text: A real creator speaks as themselves, with blanks for their details. An AI presenter gives no personal result and quotes customers word for word.
+  - title: Writes five parts
+    text: Opening, setup with the doubt said aloud, the product in use (the longest part), an honest turn, and a soft close.
+  - title: Writes the picture track
+    text: Selfie framing, real rooms and light, the product in hand before it's named, and a cut every few seconds so a talking head never sits alone.
+
+output_shape: |
+  <n> <OPENING, SETUP, DEMONSTRATION, TURN or CLOSE>
+    Says: "<spoken words>"
+    Screen: <on-screen text, or none>
+    Picture: <how it's filmed, the one action, the cut>
+  (five parts in order; for a real creator, [blanks] for their details)
+
+  ONE NUMBER  <the number or anchor>, from <source>
+  WORDS  <spoken words>, roughly <seconds>
+
+  CLAIMS, NUMBERS AND QUOTES
+  <claim, number or quote>   <source>
+  <what the presenter never says, and the AI disclosure>
+  MISSING: <facts it needed and didn't get>
+
+example:
+  business: sprout
+  input: |
+    [the skill]
+
+    Media: video, about 30 seconds
+    Presenter: AI-generated presenter
+    Reason to buy: daily greens you'll actually keep taking
+    Buyer: the quitter who wants to stick, 28 to 45. Has quit greens
+    powders. Knows the problem, not this fix.
+    Doubt: "A gummy can't hold enough to replace my powder."
+    Moment: the kitchen on a weekday morning, about to head out.
+    Quotes: "[Sprout] has been the one thing I've been able to stick
+    to." (review 1, brand site)
+    Product: Sprout. One daily pack, torn straight across the top, a
+    small handful of gummies tipped into a palm. No water, no mixing,
+    no shaker. Result can't be seen.
+    Approved claims: "60+ ingredients, 21 vitamins & minerals, and 6g
+    fiber" in 1 pack. About 25% of daily value for minerals.
+    Never say: fix, "everything you need", energy or immunity
+    results, weight loss.
+    Offer: $29.99 first order with the text sign-up, renews at $49.99
+    every 4 weeks.
+  output: |
+    1 OPENING
+      Says: "You know that tub of greens powder you swear you'll
+      finish this time?"
+      Screen: the tub you swear you'll finish
+      Picture: arm's-length selfie, kitchen in the morning, window on
+      the left. He's mid-sip of coffee as he starts.
+    2 SETUP
+      Says: "You've probably assumed a few gummies can't hold what a
+      scoop of powder does."
+      Screen: none
+      Picture: cut closer on "gummies". The green pouch is already in
+      his free hand, closed at its resealable top.
+    3 DEMONSTRATION
+      Says: "It's one little pack a day. Tear the top, tip them out.
+      Twenty-one vitamins and minerals in there. No water, no shaker."
+      Screen: 21 vitamins & minerals per pack
+      Picture: phone propped above the counter, looking down. Both
+      hands: one daily pack out of the pouch, torn straight across its
+      top edge, green gummy bears tipped into his palm. Then very close
+      on the gummies.
+    4 TURN
+      Says: "One customer wrote: 'Sprout has been the one thing I've
+      been able to stick to.'"
+      Screen: "Sprout has been the one thing I've been able to stick
+      to." Customer review, brand site
+      Picture: back to selfie, gummies in his hand, a small shrug.
+    5 CLOSE
+      Says: "If you want to try it, it's on their site. First order's
+      $29.99 with the text sign-up."
+      Screen: $29.99 first order with SMS sign-up. Renews at $49.99
+      every 4 weeks.
+      Picture: selfie again; he eats the gummies and picks up his keys.
+
+    ONE NUMBER  21 vitamins and minerals, from the product page. The
+    60+ ingredients and 6 g of fiber are left out, so one number
+    carries the ad.
+    WORDS  81 spoken, roughly 30 seconds.
+
+    CLAIMS, NUMBERS AND QUOTES
+    21 vitamins and minerals per pack      approved claim, product page
+    "No water, no shaker"                   how it's used, brand file
+    "Sprout has been the one thing I've
+    been able to stick to."                 review 1, brand site, word
+                                            for word
+    $29.99, $49.99, SMS condition           price page and footer
+    The doubt is answered by what's shown, not by saying it replaces
+    a powder. Minerals are about 25% of daily value, so nothing says
+    "everything you need".
+    He never says he uses it, feels better, or "it worked for me".
+    He is a made-up adult and never called a customer.
+    Disclose AI use wherever the platform requires it.
+    MISSING: nothing for this script.
+
+tweaks:
+  - what: Real creator or AI presenter
+    how: Switch to "real creator" and the parts become first person, with blanks like "[the week you noticed]" for their own true details. Only someone who has used the product can give a testimony.
+  - what: Video or still
+    how: A still is one moment caught mid-action (gummies tipping into a palm at the front door), taken as a selfie, mirror photo or a view down at the hands, with one caption of 12 words or fewer that looks typed by the person.
+  - what: The doubt
+    how: Name a different doubt ("is this just candy?") and the setup and demonstration change to answer it with what's shown.
+  - what: Length
+    how: A routine or discovery lands in 20 to 30 seconds. A doubt talked through, or a story, needs 45 or more. A shorter version is written fresh, never squeezed.
+
+judge:
+  - The opening has no brand name and no greeting, and starts mid-thought.
+  - There's exactly one specific number, and it's in your facts.
+  - The AI presenter never claims a personal result or story, and every quote has a source.
+  - The turn claims less than your facts allow.
+  - Something changes on screen every few seconds. It's never a talking head for long.
+  - Nothing sounds like stock ad language ("obsessed", "life-changing", "buy now").
+
+test:
+  - Count the numbers in the spoken words, leaving out price. There should be exactly one; two or more means the one-number rule was skipped.
+  - Run it once with "AI presenter" and once with "real creator". The creator version should have [blanks] for their own details; the AI version should have none and no "I" results.
+  - Give it no customer quote. The turn should become an observation, with nothing in quotation marks.
+  - Read it aloud to someone and ask if it sounds like an ad. Any line they point to is a line to cut or say plainer.
+
+improve:
+  - Paste your buyers' own nouns from reviews into "Buyer's words" in the skill file, so the setup sounds like them every time.
+  - Add your never-say list and hype words to step 2, so the voice check catches your brand's own pet phrases.
+  - Write your product's handling rules (how it opens, what never shows) into the picture track rules.
+  - Save the opening that wins to your brand file, then test new openings on the same body.
+  - Pair it with the skill that turns an approved script into a filming brief, when a real creator will film it.
+
+terms:
+  - term: Selfie-style ad
+    meaning: A video that looks filmed by a customer on their own phone, talking to the camera.
+  - term: Turn
+    meaning: The part where the honest result is given. This is where viewers decide whether to believe it.
+  - term: AI presenter
+    meaning: A made-up adult generated by a video tool. Not a customer, so they can't claim a personal result.

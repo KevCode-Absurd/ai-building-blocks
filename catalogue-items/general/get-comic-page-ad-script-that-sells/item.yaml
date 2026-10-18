@@ -1,0 +1,22 @@
+slug: get-comic-page-ad-script-that-sells
+renamed_from: comic-page-ad-script-format-rules
+name: "Get a comic page ad script that sells"
+summary: "A comic ad with one claim, five-word captions and your product as the turn, as image or video."
+category: general
+boards: [ecommerce]
+type: skill
+role: make
+job: video
+level: intermediate
+inputs:
+  - {type: brief, required: true}
+  - {type: brand_brain, required: true}
+outputs:
+  - {type: script}
+  - {type: image_prompt}
+uses: []
+example: comic
+origin: own
+source_ids: [CES-112]
+old_name: script-format-comic
+version: 1.0.0

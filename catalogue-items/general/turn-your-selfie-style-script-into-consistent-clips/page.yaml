@@ -1,0 +1,193 @@
+new_slug: turn-your-selfie-style-script-into-consistent-clips
+name: Turn your selfie-style script into consistent clips
+summary: Prompts for a phone-style talking ad with a made-up presenter who stays the same in every clip.
+job: make-video-ads
+
+headline: Get a phone-style talking ad where presenter, room and product stay the same
+subhead: Give it your approved script and real product photos. It designs one made-up presenter and one ordinary room, splits the script into short clips with one action each, and writes the first still and every clip prompt for your video tool.
+
+explain: |
+  Videos that look filmed by a customer on their phone often stop people scrolling, because they look like a normal post. Made with AI, they usually fall apart: the presenter's face changes between clips, the product grows or changes label, an extra phone appears in a hand, or the whole thing looks like a glossy film.
+
+  This skill locks everything that should stay the same. The presenter is described once in fixed words and approved as one picture. The room gets its own light and a short list of objects, because anything not listed gets invented. Every clip has one action, says which hand does it and where the product starts and ends. It bans film words like "cinematic" and "bokeh" that pull the look away from a phone. The presenter is always made up, and never says anything only a real customer could say.
+
+when:
+  - You have an approved script and want a phone-style video ad without filming anyone.
+  - Your AI video clips keep changing the presenter's face or the product between shots.
+  - You need a product demonstration that stays readable when the sound is off.
+
+you_give:
+  - The approved script, with the line where the product is used marked
+  - Real product photos, labelled front, in hand and in use
+  - How the product is opened and used
+  - Your buyer, voice and "never show" list from your brand file (optional)
+  - The clip lengths your video tool supports (optional)
+you_get:
+  - A clip-by-clip plan with words, action, hands, product position and sound
+  - Fixed wording for the presenter, the room and the voice
+  - A prompt for the first still, and one prompt per clip
+  - A checklist to pass or fail each clip
+
+how_to_use:
+  - Copy the skill and paste it into Claude, ChatGPT or Gemini.
+  - Paste your approved script and mark the line where the product is used.
+  - Attach your product photos and say what each one shows (front, in hand, in use).
+  - Make the presenter picture and the first still first, and only start clips once both look right.
+  - Make clip 1, check it against the checklist, then make the rest. Add captions afterwards in your own editor.
+
+how_it_works:
+  - title: Reads the script as a viewer
+    text: Marks the demonstration line and sends back any line a made-up person couldn't truthfully say.
+  - title: Sets the phone-video rules
+    text: One person, one real room, the room's own light, one action per shot, no music and no text from the video tool.
+  - title: Picks the set-up
+    text: Arm's length if one hand does everything, propped up if any clip needs two hands.
+  - title: Locks presenter and room
+    text: Describes the presenter and room once in fixed words, with a few ordinary objects that belong there.
+  - title: Plans each clip
+    text: Gives every clip its words, one action, what each hand holds and where the product starts and ends.
+  - title: Approves the first still
+    text: Builds the first frame from the presenter picture and product photos, and remakes it until it matches.
+  - title: Writes the prompts
+    text: Puts the action and words first, lists the room's objects once, and leaves out film words.
+  - title: Checks every clip
+    text: Same person and room, every word said, the demonstration clear with sound off, and a person has listened.
+
+output_shape: |
+  PLAN
+  Clip | words | action (which hand) | product start > end | sound
+  <one row per clip>
+
+  PRESENTER  <fixed description, used word for word in every prompt>
+  ROOM       <place, light, two or three objects and why they're there>
+  VOICE      <age, pace, traits, accent>
+
+  FIRST STILL PROMPT
+  <prompt>  Attach: <photo> as <its job>
+
+  CLIP 1 PROMPT
+  <action and hand> / "<spoken words>" / <product position> /
+  <face and eyes> / <light>. Sound: <voice, room sound, no music>
+  (one prompt per clip)
+
+  CHECKLIST
+  Clip | phone look | same person | words said | demo clear muted | pass/fail
+
+example:
+  business: sprout
+  input: |
+    [the skill]
+
+    Approved script (the demo line is marked *):
+    1. If your greens powder is still half full in the cupboard,
+       this is for you.
+    2. This is one daily pack.
+    3. * Tear the top, tip it into your hand.
+    4. Sixty-plus ingredients, twenty-one vitamins and minerals, six
+       grams of prebiotic fiber.
+    5. No shaker. No chalky glass to rinse.
+    6. I've stuck with it every day for three months.
+    7. Rip. Tip. Enjoy.
+
+    Photos: [daily pack, front] [daily pack in a hand]
+    [gummies poured into a palm]
+    Handling (brand file): tear the daily pack straight across the
+    top edge, never the side or a corner. Gummies pour from the torn
+    top into a palm. Gummies are small opaque deep-green bears.
+    Buyer: the powder quitter, 28 to 45, office job.
+    Clip lengths: 5 or 10 seconds.
+  output: |
+    SENT BACK TO THE WRITER
+    Line 6. A made-up presenter can't truthfully say they've used
+    it for three months. Cut it, or show a real review as on-screen
+    text with its source.
+
+    SET-UP: phone propped on the counter. Line 3 needs two hands.
+
+    PRESENTER  a man, about 35, short dark curly hair, brown eyes,
+               light brown skin, plain grey crew-neck sweatshirt with
+               the sleeves pushed up, a silver watch on the left
+               wrist, a small nick in his right eyebrow. Made up,
+               not a customer.
+    ROOM       a small home kitchen in the morning, window light from
+               the left. Only objects: a plain unlabelled tub of
+               green powder with a scoop in it (the old way), a
+               shaker bottle drying upside down (rinsed and left), a
+               coffee mug (morning), the Sprout daily pack.
+    VOICE      about 35, even pace, warm, a little dry.
+               MISSING: accent. Ask before making clips.
+
+    PLAN
+    Clip     Words          Action (hand)               Pack start > end
+    1 10 s   line 1         right hand slides the tub   counter > counter
+                            towards the camera
+    2 5 s    line 2         right hand lifts the pack,  counter > right hand
+                            front to camera
+    3 5 s *  "Tear the top," right hand tears straight  right hand > torn,
+                            across the top, left holds  both hands
+    4 5 s *  "tip it into   tips the gummies into the   torn > gummies in
+             your hand."    left palm                   left palm
+    5 10 s   line 4         left palm held towards      palm > palm
+                            the camera
+    6 5 s    line 5         right hand nudges the       palm > palm
+                            shaker aside
+    7 5 s    line 7         lifts palm, eats gummies    palm > eaten
+    Sound in all: his voice, a kitchen with a faint fridge hum,
+    the tear sound in clip 3 only, no music.
+
+    FIRST STILL PROMPT
+    A phone video still, propped on the kitchen counter, slightly
+    off-centre, everything in focus. [PRESENTER]. [ROOM]. The daily
+    pack lies on the counter in front of him, front up, matching the
+    attached photo. Top and bottom sixth of the frame left clear.
+    Attach: daily pack front = the product's look.
+
+    CLIP 3 PROMPT
+    His right hand tears the daily pack straight across its top edge
+    while his left hand holds it upright. He says: "Tear the top,"
+    The pack faces the camera, front as in the attached photo. He
+    looks down at the pack, then back at the camera. Window light
+    from the left. Sound: his voice, faint fridge hum, the paper
+    tear on the word "tear", no music, no on-screen text.
+    Attach: daily pack in a hand = how it's held.
+    (cut for length: the full run also had prompts for clips 1, 2
+    and 4 to 7, and the per-clip checklist)
+
+tweaks:
+  - what: The clip limits
+    how: Give your tool's real clip lengths ("5 or 10 seconds"). It splits the script at sentence ends to fit, instead of assuming one long clip.
+  - what: The product photos
+    how: An in-use photo lets the presenter open and use the product. With only a front photo, the product stays on a surface and the skill sends back any line that needs it used.
+  - what: The presenter
+    how: Say "three presenter options first" and pick one before it writes the rest. Change the buyer profile and the options change.
+  - what: The room
+    how: Name the buyer's real moment ("kitchen, late evening") and it builds the light and objects around it.
+
+judge:
+  - The presenter description is word for word the same in every clip prompt.
+  - No prompt contains "cinematic", "bokeh", "film" or "slow motion".
+  - Every scripted word appears in a clip, unchanged, and nothing extra is added.
+  - Each clip has one action, and says which hand does it.
+  - The presenter never says "I've used this" or reports a result.
+
+test:
+  - Make clip 1 and the hardest clip first. If the presenter or the product looks different between them, fix the presenter line before making the rest.
+  - Put the plan table next to your script and tick off every word. Nothing should be missing or added.
+  - Search the prompts for "cinematic", "bokeh" and "slow motion". None should appear.
+  - Add a line only a real customer could say ("I've used this for months") and run it again. The skill should send that line back.
+
+improve:
+  - Add your product's handling rules to "What you need" in the skill file (for Sprout, "the pack is torn straight across the top"), so every clip shows it used the right way.
+  - Write your video tool's real clip lengths and photo slots into step 5, so you never have to give them again.
+  - Once you approve a presenter and room, paste their fixed lines into step 4 and your brand file, so the next ad uses the same person.
+  - Pair it with a skill that writes the selfie-style script first, and one that adds captions in your brand font afterwards.
+
+terms:
+  - term: Selfie-style video (UGC)
+    meaning: A video that looks filmed by a customer on their phone, talking to camera.
+  - term: First still
+    meaning: The opening frame, made as a picture first, that the first clip starts from.
+  - term: Hard cut
+    meaning: A straight jump from one clip to the next, with no fade.
+  - term: Prompt
+    meaning: The written instruction you give an AI image or video tool.

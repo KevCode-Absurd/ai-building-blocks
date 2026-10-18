@@ -1,0 +1,22 @@
+slug: make-each-carousel-card-earn-the-next-swipe
+renamed_from: swipe-carousel-ad-script-format-rules
+name: "Make each carousel card earn the next swipe"
+summary: "A 2 to 6 card carousel where card 1 works alone and every swipe leads to the next."
+category: general
+boards: [ecommerce]
+type: skill
+role: make
+job: image
+level: intermediate
+inputs:
+  - {type: brief, required: true}
+  - {type: brand_brain, required: true}
+outputs:
+  - {type: ad_copy}
+  - {type: image_prompt}
+uses: []
+example: carousel
+origin: own
+source_ids: [CES-106]
+old_name: script-format-carousel
+version: 1.0.0

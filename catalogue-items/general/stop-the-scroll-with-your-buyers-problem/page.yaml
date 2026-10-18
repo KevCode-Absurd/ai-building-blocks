@@ -1,0 +1,192 @@
+new_slug: stop-the-scroll-with-your-buyers-problem
+name: Stop the scroll with your buyer's problem
+summary: One image ad whose picture makes the buyer's problem felt before they read a word.
+job: make-image-ads
+
+headline: An image ad your buyer feels in half a second, because the picture shows their problem
+subhead: Give it the problem in a buyer's words, your product facts, a product photo and your colours. It picks the headline, the attention-grabber, the picture idea and the style in that order, then writes the layout and an image prompt.
+
+explain: |
+  Ask an image tool for an ad and you get a centred product, a floating headline and a pretty picture of the benefit. People scroll straight past it, because nothing in it is about them.
+
+  This skill makes the decisions that stop the scroll, in a fixed order. It starts from a moment your buyer lives through, chooses how the ad attacks it, writes the headline, then picks one of five ways to grab attention and one of 14 picture ideas that make the problem felt. The picture comes last because it serves the words. The real product is always in the ad, small and true to its photo, and the picture never shows a result your facts can't back.
+
+when:
+  - Your image ads look like everyone's, with a product in the middle and a benefit headline.
+  - You have a review that describes a vivid moment and want a picture built on it.
+  - You need an image prompt with a clear layout, not just "make an ad for my product".
+
+you_give:
+  - The problem in a buyer's words and the moment it shows
+  - Your product facts, the line on how it works and what you never show
+  - A real product photo
+  - Your two brand colours and your typeface
+  - The approach you want and a live offer (optional)
+you_get:
+  - A concept card with the problem, approach, headline, sub-headline, attention-grabber, picture idea and style
+  - Layout notes for where the words, the product and the quiet areas sit
+  - How to draw the product from your photo, and an image prompt ready to paste
+  - A MISSING list for anything it needed and didn't have
+
+how_to_use:
+  - Copy the skill and paste it into Claude, ChatGPT or Gemini.
+  - Paste one review that describes the problem, word for word, and say when it happens.
+  - Paste your product facts and claims, and describe or attach your best product photo.
+  - Give your two colours as hex codes and your typeface name.
+  - Read the MISSING lines, then paste the image prompt into your image tool and add the headline in your design tool.
+
+how_it_works:
+  - title: Names the problem
+    text: Writes down the buyer's felt moment, annoyance or fear, not what the product does.
+  - title: Chooses the approach
+    text: Picks how the ad attacks it, such as stirring up the problem, correcting a wrong cause, showing the cost or making them laugh.
+  - title: Writes the headline
+    text: Uses one of eight headline formulas to name the moment or wrong belief, never the product or the offer.
+  - title: Picks the attention-grabber
+    text: Chooses one of five, such as "that is me" or a plain hand-drawn note, each with a test it must pass.
+  - title: Picks the picture idea
+    text: Chooses one of 14 scenes, such as the problem worn on the person or a cut-away of a hidden cause.
+  - title: Sets style and layout
+    text: Matches the style to the mood, then places the words, the product and the quiet areas in the frame.
+  - title: Writes the prompt
+    text: Puts the problem first in the prompt, states the scale against something ordinary, and builds the product from your photo.
+
+output_shape: |
+  PROBLEM   <the buyer's moment, with the quote and source, or "inferred">
+  APPROACH  <how the ad attacks it>
+  HEADLINE  <formula>, two-tone
+            Set-up:    <plain colour>
+            Punchline: <accent colour>
+  SUB-HEAD  <how it works or why, in your words>
+  GRABBER   <one of five>
+  PICTURE   <type and number>. <the scene in one line>
+  STYLE     <style, and why it suits the mood>
+
+  FRAME (<shape>)
+  Top band / Middle / Product / Bottom band / Quiet areas / Scale
+
+  PRODUCT TREATMENT
+  <which photo, how it's drawn, what's left out>
+
+  IMAGE PROMPT
+  <problem first, scale stated, product from the photo, no stray words>
+
+  MISSING:  <quote, photo or fact still needed>
+  Not used: <options dropped, and why>
+  Flag:     <generated people, claims to check>
+
+example:
+  business: sprout
+  input: |
+    [the skill]
+
+    Problem: review 6, "Plus not having to clean a shaker bottle or
+    extra dishes for greens stuff in powder form, is absolutely
+    excellent!" and review 3, "the drink was definitely
+    gritty/chalky."
+    Moment: a weekday morning at the sink, late, scrubbing the shaker.
+
+    Product: Sprout, daily greens gummies. Tear a pack, eat the
+    gummies. No water, no mixing. 6 g prebiotic fiber.
+    Brand line: "No more gagging on pills, sloshing chalky powders, or
+    cleaning messy counters."
+    Never: "fix", weight or energy results, before-and-after.
+
+    Photo: the adult pouch on a soft gradient (glossy deep green foil,
+    big yellow wordmark, yellow bear face top right, "28 Daily
+    Packs"). No photo of a single daily pack.
+    Look: deep forest green #002C17, sunflower yellow #FFCC2E. Work
+    Sans bold. Photos are bright and sunny, never clinical.
+    Approach: you choose. Offer: none.
+  output: |
+    PROBLEM   Scrubbing the powder shaker every morning (reviews 6 and
+              3, word for word; not marked as verified buyers)
+    APPROACH  Stir up a felt problem
+    HEADLINE  Moment question, two-tone
+              Set-up:    7am, already late,
+              Punchline: and scrubbing the shaker again?
+    SUB-HEAD  No more sloshing chalky powders or cleaning messy
+              counters. (the brand's own line, cut at a whole phrase)
+    GRABBER   That is me: the problem shown on the thing it happens to
+    PICTURE   Type 5, a problem inventory. One crusted shaker bottle in
+              a sink, its small faults labelled around it.
+    STYLE     Photographic composite with one exact detail: the dried
+              green ring inside the shaker. Bright morning light, as
+              the brand shoots. A person just looking annoyed would be
+              stock, so only her gloved hands are in frame.
+
+    FRAME (tall 4:5)
+    Top band     deep green, set-up in cream; punchline in a yellow pill
+                 with deep green words
+    Middle       the sink and shaker, about 70% of the frame, sink
+                 cropped at both edges
+    Labels       "green ring", "chalky clumps", "gritty last sip",
+                 "another dish" (each 3 words or fewer)
+    Product      the pouch standing on the counter, right third, above
+                 the bottom band, in the same sunlight
+    Bottom band  deep green, sub-head in cream
+    Quiet areas  the tiled wall above the tap
+    Scale        the shaker is the size of her two hands; a dish brush
+                 lies beside it
+
+    PRODUCT TREATMENT
+    From the pouch photo: glossy deep green foil, big yellow wordmark,
+    yellow bear face top right, "28 Daily Packs". The gradient is
+    removed and the pouch stands closed on the counter, resealable top
+    shut, about as tall as the shaker.
+
+    IMAGE PROMPT
+    Tall 4:5 photographic scene, bright morning kitchen light. Close on
+    a steel sink: a clear plastic shaker bottle with a dried green ring
+    inside and green clumps stuck in its lid, held under the tap by two
+    hands in yellow rubber gloves, a dish brush beside it. The sink is
+    cropped at both edges. On the counter at right, in the same
+    sunlight, a glossy deep green stand-up pouch with a big yellow
+    wordmark and a yellow bear face top right, closed, about as tall as
+    the shaker. Keep a plain band at the top and bottom for text. No
+    other words, no logo, no children, no faces.
+
+    MISSING:  a photo of one daily pack torn across the top. With it,
+              the product could be the pack instead of the pouch.
+    Not used: a wrong-cause headline. The facts support no new cause,
+              so it's a moment question instead.
+    Flag:     the hands are generated. Never present them as a customer.
+
+tweaks:
+  - what: The approach
+    how: Ask for "make them laugh" and it switches to the buyer's phrase drawn literally, a funny 3D or drawn style and a headline that sets a loser against a winner.
+  - what: The problem quote
+    how: A different review gives a different picture. A gut review ("Feel lighter, less bloated") points to a private subject, so it moves to a drawn style instead of a photo.
+  - what: The style
+    how: Name a style if you have a house look. A hand sketch reads as teaching and trust; dark cinematic light suits a real loss. The skill warns you when a style fights the approach.
+  - what: The frame size
+    how: Say "square 1:1" or "tall 9:16" and the layout notes move the bands, product and quiet areas to fit.
+
+judge:
+  - Cover the headline. Does the picture alone show the problem?
+  - The product is in the ad, small and matching your real photo, not floating in a corner.
+  - The picture shows the problem or its cause, never a result like a rested face or a before and after.
+  - The headline names a moment, not a condition the reader has.
+  - Every label in the picture is three words or fewer.
+  - The prompt mentions the problem before the product.
+
+test:
+  - Run it on a problem your best-selling ad already shows. Compare its picture idea with yours. If it picks a weaker scene, read its approach line; you may need to name the approach yourself.
+  - Make the image, cover the headline and show it to someone who has the problem. If they can't say what's wrong in a second, ask for a different picture type.
+  - Run it twice with the same quote. The approach and grabber should match. If they change, name the approach in the input.
+  - Compare the drawn product with your real photo. Shape, colours and large print must match; any invented small print means the prompt needs the "leave small print out" line.
+
+improve:
+  - Paste your two brand colours, typeface and product photo descriptions into "What you need" in the skill file, so every run builds the product the same way.
+  - Add your brand's show-it-right rules (how the pack opens, what's never shown) to the check list, so the prompt can't break them.
+  - If one approach never fits your business (for example "show the cost"), delete its row from the choosing table so it isn't picked.
+  - Save winning headline formulas and picture types in your brand file, and name them in your next run.
+  - Pair it with a skill that plans an image ad's layout from its job for more layout options, and with one that finds flaws in finished image ads before you spend.
+
+terms:
+  - term: Moment question
+    meaning: A headline that names the exact moment the problem happens, as a question, such as "7am, already late, and scrubbing the shaker again?"
+  - term: Two-tone headline
+    meaning: The first part in a plain colour and the punchline in the accent colour, so the punchline still makes sense read alone.
+  - term: Image prompt
+    meaning: The text you paste into an image tool to make the picture.

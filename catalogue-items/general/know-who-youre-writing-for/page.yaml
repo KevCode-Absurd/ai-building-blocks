@@ -1,0 +1,184 @@
+new_slug: know-who-youre-writing-for
+name: Know who you're writing for before you start
+summary: A half-page note, from your reviews, on who your copy is for and how to open.
+job: understand-customers
+
+headline: A half-page buyer note, from their own words, that aims your copy at one idea
+subhead: Paste your offer and real buyer evidence, such as reviews, support emails or survey answers. It works out how much the buyer knows, what they want most, what they've tried and what holds them back, then hands you one sentence to write from.
+
+explain: |
+  Most copy misses because the writer is aiming at a label ("busy mums 30 to 45") or at three wants at once. The result is copy that tries to say everything to everyone, and lands with no one.
+
+  This skill reads your buyer evidence and settles the questions before anyone writes a line. How much does the buyer already know about the problem and about you? How many times have they heard this promise before? What is the one want they live with today, in their own words? What did they try, and why did it fail? How big a change are you asking for? It fills each answer only from the evidence, names every gap as a gap, and ends with one aim sentence the writer works from. None of its wording goes into the copy itself.
+
+when:
+  - You're about to write an ad, a page, an email or a script and want to aim it first.
+  - You have a pile of reviews and want to know what they say about your buyer.
+  - A writer, or an AI, keeps giving you copy that tries to say everything.
+
+you_give:
+  - Your offer in a few lines, what you sell, the price and the terms
+  - Buyer evidence, such as reviews, support messages, survey answers, call notes or forum posts
+  - Where the copy will run (optional)
+  - Your brand file, with voice, offers, approved claims and buyer groups (optional)
+you_get:
+  - One aim sentence that says who it's for, what they want, what they tried and how to open
+  - How much the buyer knows, with the evidence that shows it
+  - The one want, a short sketch of the buyer, and the size of the change you're asking for
+  - A list of gaps the evidence couldn't fill
+
+how_to_use:
+  - Copy the skill and paste it into Claude, ChatGPT or Gemini.
+  - Paste your offer in three or four lines.
+  - Paste the buyer evidence as written. Include the unhappy reviews; they hold the real doubts.
+  - Say where the copy will run, if you know.
+  - Read the gaps list. Each one is a question worth asking your customers.
+
+how_it_works:
+  - title: Places the buyer
+    text: Picks one of five levels, from doesn't know the problem to knows this product and needs a reason, and quotes the evidence.
+  - title: Counts the promise
+    text: Judges whether the buyer has heard this promise rarely, often or from everyone, which decides how much proof the copy needs.
+  - title: Finds the one want
+    text: Takes it from what buyers say and do. If two wants compete, it picks the one they live with today.
+  - title: Sketches the buyer
+    text: What they live through, what they do about it, what they tried, the belief that holds them back. Each line from evidence, or marked as a gap.
+  - title: Sizes the change
+    text: Decides whether you're asking them to add one thing, swap one thing, or change their whole routine.
+  - title: Picks one idea
+    text: One argument, one feeling, one action, then the aim sentence that ties it together.
+
+output_shape: |
+  AIM
+  For <who buys>, who wants <what>, after trying <what>, the way in is
+  <how to open>.
+
+  HOW MUCH THEY KNOW
+  <one of five levels>, because <evidence>
+
+  HOW OFTEN THEY'VE HEARD THE PROMISE
+  <rarely / often / from everyone>, because <evidence>
+
+  THE ONE WANT
+  <the want>. In their words: "<phrase>" / "<phrase>"
+
+  BUYER SKETCH
+  Lives through:  <...>
+  Does now:       <...>
+  Tried:          <... and why it failed>
+  Feels:          <...>
+  Holding back:   <the belief, as they'd say it>
+  Under the want: <...>
+
+  CHANGE SIZE
+  <add one thing / swap one thing / change the whole routine>
+
+  THE ONE IDEA
+  <one argument, one feeling, one action>
+
+  GAPS
+  MISSING: <what the evidence didn't show>
+
+example:
+  business: sprout
+  input: |
+    [the skill]
+
+    Offer: Sprout greens gummies, 28 daily packs. First box $29.99 with
+    a text sign-up discount, then $49.99 every 4 weeks. One-time $66.65.
+
+    Buyer evidence (reviews):
+    1. "I've tried a few green powders over the years. The issue has
+    never been nutritive content. It's always been an issue of
+    consistency like many things. [Sprout] has been the one thing I've
+    been able to stick to."
+    2. "It's wild I WANT to take [Sprout] and don't forget."
+    3. "I was taking [a big-name greens powder] but even with their
+    monthly subscription discount it was still $94 a month and the
+    drink was definitely gritty/chalky."
+    4. "I've been choking on [a big-name greens powder] for the last
+    few years"
+    5. "I also stopped buying separate probiotic gummies, b12 gummies,
+    and multivitamin gummies. I just take these now and it's easier
+    for me to manage."
+    6. "not having to clean a shaker bottle or extra dishes for greens
+    stuff in powder form, is absolutely excellent!"
+    7. "They are expensive"
+
+    Where it runs: a Facebook ad
+  output: |
+    AIM
+    For people who've quit greens powders, who want one supplement they
+    keep taking, after trying gritty powders and a pile of separate
+    gummies, the way in is the habit they keep breaking.
+
+    HOW MUCH THEY KNOW
+    Knows the kind of product and is comparing (reviews 1, 3, 5).
+
+    HOW OFTEN THEY'VE HEARD THE PROMISE
+    Often. They've paid for greens before (reviews 1, 3, 4), so the
+    promise needs a how: why this one gets taken.
+
+    THE ONE WANT
+    To keep taking it. In their words: "the one thing I've been able to
+    stick to" / "I WANT to take [Sprout] and don't forget"
+
+    BUYER SKETCH
+    Lives through:  buying greens and not keeping it up ("an issue of
+                    consistency")
+    Does now:       MISSING (every review is from someone who already
+                    switched)
+    Tried:          greens powders ("gritty/chalky", "choking on") and
+                    separate gummies for each vitamin
+    Feels:          put off by the taste and the cleanup ("choking on",
+                    "clean a shaker bottle")
+    Holding back:   price ("They are expensive")
+    Under the want: one less thing to manage ("easier for me to manage")
+
+    CHANGE SIZE
+    Swap one thing: the powder for a pack.
+
+    THE ONE IDEA
+    Greens you keep taking, because there's nothing to mix or wash.
+
+    GAPS
+    MISSING: what they use right now, from people who haven't bought yet
+    MISSING: whether "can a gummy hold enough?" worries them. It's in
+             the brand file, but none of these reviews say it.
+    MISSING: whether price stops them at the first order or at renewal
+
+tweaks:
+  - what: The evidence you paste
+    how: Reviews tell you about people who bought. Support messages and cancellation reasons tell you about doubts. Paste both for a fuller sketch.
+  - what: Which buyer
+    how: If your evidence mixes different kinds of buyer, add "focus on buyers who mention X" to get one clear read instead of a blend.
+  - what: Where it runs
+    how: Name the channel. It doesn't change the read, but it helps the aim sentence suggest an opening that fits.
+  - what: No evidence at all
+    how: It will stop after placing the buyer, label it "assumed", and give you three questions to ask customers. Use those before writing.
+
+judge:
+  - The aim sentence is complete and uses words your buyers use.
+  - Every phrase in quotes appears in the evidence you pasted. Search for two of them.
+  - There's exactly one want and one idea.
+  - Gaps are listed as gaps, not filled with guesses.
+  - The sketch describes what the buyer lives through, not an age group or a job title.
+
+test:
+  - Run it on reviews from a buyer group you know well. If the aim sentence describes someone you don't recognise, check which reviews it leaned on.
+  - Run it twice on the same evidence. How much they know and the one want should match. If they don't, add "focus on buyers who mention X" to narrow it.
+  - Search your evidence for two of the phrases it quotes. Both should be there word for word.
+  - Give the aim sentence to a writer, and compare their draft with one written without it. The aimed draft should open on the buyer, not the product.
+
+improve:
+  - Add the buyer groups from your brand file to "What you need" in the skill file, so step 1 places each group the same way every run.
+  - If your market is crowded, write what every competitor promises into step 2, so it can tell how often buyers have heard the promise.
+  - Remove fields from the sketch in step 4 that never matter for you, and add one that does (for example "who else at home uses it").
+  - Save each aim sentence and sketch to your brand file, one per buyer group.
+  - Pair it with "Open your sales copy the way your buyer needs" or "Get headlines a stranger understands at a glance", which both start from this note.
+
+terms:
+  - term: Buyer evidence
+    meaning: Anything your buyers wrote or said in their own words, such as reviews, emails or survey answers.
+  - term: Aim sentence
+    meaning: One sentence that says who the copy is for, what they want, what they tried and how the copy should open.

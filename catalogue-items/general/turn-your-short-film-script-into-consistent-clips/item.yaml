@@ -1,0 +1,23 @@
+slug: turn-your-short-film-script-into-consistent-clips
+renamed_from: cinematic-photoreal-video-ad-director
+name: "Turn your short film script into consistent clips"
+summary: "Character, set and timed clip prompts for a photo-real, film-style ad with one or two made-up adults."
+category: general
+boards: [ecommerce]
+type: skill
+role: render
+job: video
+level: advanced
+inputs:
+  - {type: script, required: true}
+  - {type: product_data, required: true}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: image_prompt}
+  - {type: video_prompt}
+uses: [get-a-short-film-ad-script-with-a-twist, get-shot-list-that-keeps-ad-moving]
+example: cinematic
+origin: rebuilt
+source_ids: [CES-017]
+old_name: cinematic-ad-directing
+version: 1.0.0

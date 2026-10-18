@@ -1,0 +1,194 @@
+new_slug: get-story-ads-read-with-the-right-picture
+name: Get your story ad read with the right picture
+summary: Reads your story ad, picks which of 20 post-like picture types fits honestly, and writes the prompt.
+job: make-image-ads
+
+headline: Get your story ad read with the right picture, picked from 20 post-like types
+subhead: Give it your approved story ad. It finds the moments, objects and written words in the story, picks the picture type that fits (a snapshot, a sticky note, a text thread, a review card and 16 more), and writes the brief and a ready-to-paste image prompt.
+
+explain: |
+  A story ad (an ad whose text tells one person's story) needs a picture that looks like something a person posted, not like an ad. There are many ways to do that, from a candid photo to a message thread or a review card. Some can only be made honestly if you have the right facts, such as a real review or a sourced claim.
+
+  This skill reads your story first. It lists the moment the problem bites, any object the narrator gave up on, and any words they wrote or were sent. Then it matches that material to one of 20 picture types, checks the type can be made honestly from your facts, and switches to a safe fallback if not, telling you why. It applies each type's own rules, sets any words exactly as your story has them, and hands back the brief and the prompt.
+
+when:
+  - You have an approved story ad and don't know which kind of picture to put with it.
+  - You've been asked for a particular picture type and want to check you have the facts to make it honestly.
+  - You want one brief that covers the scene, the words, the headline and what must stay out of the picture.
+
+you_give:
+  - Your approved story ad, with its notes and hook options
+  - Who the buyer is and when the problem bites (optional)
+  - A picture type you'd like, if you have one (optional)
+  - Your brand's places, light, things never shown and claims (optional)
+you_get:
+  - The picture type chosen, and why it changed if you asked for another
+  - The scene, the person, any words and the headline under the image
+  - A list of what is not in the picture, and flags to review
+  - A 60 to 120 word image prompt, ready to paste
+
+how_to_use:
+  - Copy the skill and paste it into Claude, ChatGPT or Gemini.
+  - Paste your approved story ad. The picture is chosen from the story, so don't skip this.
+  - Add your brand file or a few lines on the buyer, your places and your claims.
+  - Name a picture type if you want one. It will tell you if that type can't be made honestly.
+  - Read the flags first, then paste the image prompt into your image tool.
+
+how_it_works:
+  - title: Finds the material
+    text: Lists the moment the problem bites, any object the narrator gave up on, and any words they wrote or were sent.
+  - title: Picks the type
+    text: Matches that material to one of 20 picture types. If you asked for one, it checks it can be made honestly and switches if not.
+  - title: Runs that type's rules
+    text: Uses the chosen type's own scene, words and honesty rules as part of the brief.
+  - title: Applies the shared rules
+    text: Square, looks taken on a phone, no logo, price, button or brand colour, no product unless asked, made-up adults only.
+  - title: Sets the words
+    text: Lifts any words exactly from your story, or writes the fewest needed and flags them for you to read.
+  - title: Writes the headline under
+    text: A "Read this if..." line in the buyer's words that never names a condition they have.
+  - title: Checks and hands back
+    text: Runs the checklist and returns the brief and the image prompt.
+
+output_shape: |
+  TYPE
+  <picture type chosen, and "changed from X because Y" if switched>
+  SCENE
+  <one sentence: what someone scrolling would say they saw>
+  WHERE AND WHEN
+  <place, time, what is within reach>
+  PHONE-PHOTO LOOK
+  <one plain line>
+  PERSON
+  <made-up adult, clothes, mid-action, which hand does what; or none>
+  WORDS ON THE IMAGE
+  <line by line with who wrote each; or none>
+  BLANK VERSION
+  <what the picture shows without its words>
+  HEADLINE UNDER THE IMAGE
+  Read this if <something they do, in their words>.
+  NOT IN THE PICTURE
+  <logo, price, product, children and anything else to leave out>
+  FLAGS
+  <type changes, written words, inferred details, what to review>
+  IMAGE PROMPT
+  <60 to 120 words, ready to paste>
+
+example:
+  business: sprout
+  input: |
+    [the skill]
+
+    Story ad (approved, built on reviews 8 and 10):
+    Every day at 3pm I'd push my chair back from my desk and wait
+    for my stomach to settle.
+    I'd tried fiber powders. I'd tried probiotics. Nothing stuck.
+    Sprout is a daily pack of gummies with 6 g prebiotic fiber. It
+    supports digestion and gut health. One reviewer with IBS wrote
+    that the prebiotics "do their job, but not aggressively."
+    If your stomach is sensitive, start with Low Sugar.
+    Hooks: 1. 3pm, chair pushed back, waiting.
+           2. I'd tried fiber powders. I'd tried probiotics.
+
+    Buyer: the gut-fix seeker, 25 to 55, mostly women. Doubt: "Will
+    this upset my stomach more?"
+    Picture type wanted: the news-style caption, with "61% of
+    Americans experience weekly digestive issues" (product page).
+    Brand rule: "supports", never "fix".
+  output: |
+    TYPE
+    stop-your-buyer-mid-scroll-with-a-snapshot (the everyday
+    snapshot). Changed from the news-style caption, because that type
+    needs one fact with its source on file. On the product page, the
+    61% line links only to the word "Source".
+
+    SCENE
+    A woman at an office desk mid-afternoon, chair pushed back, one
+    hand flat on the desk, waiting.
+
+    WHERE AND WHEN
+    An office desk, about 3pm, overhead light and a window. Within
+    reach: a laptop, a lunch box with its lid on, a mug, a lanyard.
+
+    PHONE-PHOTO LOOK
+    Taken from the next desk at sitting height, slightly tilted,
+    office light, a little grain.
+
+    PERSON
+    A made-up woman in her early 40s, loose cardigan over a work
+    top, hair tied back. Chair rolled back, right hand flat on the
+    desk edge, left hand in her lap, shoulders slightly forward, eyes
+    on the screen. No pained face.
+
+    WORDS ON THE IMAGE
+    None.
+
+    BLANK VERSION
+    The same picture (it has no words).
+
+    HEADLINE UNDER THE IMAGE
+    Read this if you push back from your desk at 3pm.
+
+    NOT IN THE PICTURE
+    Logo, brand name, price, button, badge, pouch, daily packs,
+    gummies, powder tubs, any readable screen, children, a hand on
+    the stomach.
+
+    FLAGS
+    Type changed, as above. MISSING: the source behind the 61% line.
+    Material found: (a) the 3pm moment (hook 1), (b) fiber powders
+    and probiotics, as kinds only, (c) no words written or sent.
+    Nothing shows her stomach, and nothing says she's a customer.
+    Copy check: "supports digestion and gut health" is fine. The IBS
+    line is a customer's words, not a brand claim.
+
+    IMAGE PROMPT
+    Square 1:1 phone photo taken from the next desk at sitting height
+    in an ordinary office at about 3pm, overhead light and window
+    light. A made-up woman in her early 40s, loose cardigan over a
+    work top, hair tied back, has rolled her chair back from the
+    desk. Right hand flat on the desk edge, left hand in her lap,
+    shoulders slightly forward, eyes on the laptop. A lunch box with
+    its lid on, a mug and a lanyard on the desk. Slightly tilted, a
+    little grain, unretouched, not posed. No text, no logo, no
+    readable screen, no supplements, no children, no product.
+
+tweaks:
+  - what: Name a type
+    how: Ask for a specific type, such as "a sticky note". It will make it if your story and facts allow, or switch and tell you why, as in the example.
+  - what: Words on or off
+    how: Switch words off and only photo types are possible. Word types such as notes and chats fall back to a snapshot.
+  - what: The blank version
+    how: It's on by default, so you can change the words on a note or chat later without a new picture. Turn it off if you'll never reuse the picture.
+  - what: The product
+    how: It stays out by default. Ask for it and send your product photos, and it comes back small and to one side, never held up.
+
+judge:
+  - The type fits something actually in your story, and any switch is explained.
+  - Your buyer would recognise the moment at a glance.
+  - It looks taken or typed by a person, not designed.
+  - The first lines of your story explain the picture.
+  - Any words are exactly the ones in your story, and anything written for the picture is flagged.
+  - There's no logo, price, button, real app look, child, or product unless you asked.
+
+test:
+  - Ask for a type you know you can't back, such as a review card with no real review on file. It should switch and say why, not make it anyway.
+  - Run the same story twice. The type and the moment should match both times. If they don't, your story has two openings competing.
+  - Give it a story that quotes a note or a text thread word for word. It should pick a word type and copy the words exactly.
+  - Put its picture next to the one you'd have chosen yourself and test both. Keep whichever the numbers pick, not the one you like.
+
+improve:
+  - Add the picture types your brand never uses to step 2, so they drop out of the table.
+  - Add your claims with sources and your reviews with permission to the brand rules in "What you need". Several types depend on them.
+  - Write your brand's places, light and never-shown list into the shared rules, so every type follows them.
+  - When you already know the type you want, use that type's own skill (the sticky note, the group chat, the snapshot) for more options on one picture.
+
+terms:
+  - term: Story ad
+    meaning: An ad whose main text tells one person's story in their own words, like a post from a friend.
+  - term: Picture type
+    meaning: One of the 20 ways to make an ad picture look like a normal post, such as a snapshot, a sticky note or a text thread.
+  - term: Fallback
+    meaning: The safer picture type it switches to when the one asked for can't be made honestly.
+  - term: Headline under the image
+    meaning: The bold line under the picture in a Facebook or Instagram ad.

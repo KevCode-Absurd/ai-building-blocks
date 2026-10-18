@@ -1,0 +1,19 @@
+slug: find-fixes-worth-making-in-your-google-ads
+renamed_from: google-ads-export-review-by-module
+name: "Find fixes worth making in your Google Ads"
+summary: "Fixes from one part of your Google Ads export, each backed by your rows and a check."
+category: general
+boards: [ecommerce]
+type: skill
+role: check
+job: ads
+level: advanced
+inputs:
+  - {type: performance_sheet, required: true}
+outputs:
+  - {type: audit_report}
+uses: []
+origin: rebuilt
+source_ids: [CES-090]
+old_name: operator-performance (google-diagnostics)
+version: 1.0.0

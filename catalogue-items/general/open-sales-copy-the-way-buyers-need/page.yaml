@@ -1,0 +1,137 @@
+new_slug: open-sales-copy-the-way-buyers-need
+name: Open your sales copy the way your buyer needs
+summary: The right way to open for how much your buyer knows, with two different openings to test.
+job: write-ad-copy
+
+headline: Two openings for your sales copy that try different ways in, so tests teach you something
+subhead: Give it a note on your buyer, your offer and the proof you can use. It picks one of six ways to open (deal, benefit, problem, fact, statement or scene) for how much the buyer knows, writes that opening, then writes a second one using a different way in.
+
+explain: |
+  The opening decides whether anyone reads the rest. Most writers open the same way every time, or test two versions that are the same opening reworded. When one wins, nobody learns anything.
+
+  This skill chooses from six ways to open, each suited to a different buyer. Deal first suits someone who knows the product and wants it. A headline benefit suits someone comparing. Problem to relief suits someone searching for a fix. An unknown fact suits someone who doubts the usual answers, but only with a real fact. A fresh statement or a scene suits someone who doesn't know the problem yet, or has heard every claim. It writes the opening that fits, then a second from the paired way in, and says what the close must come back to.
+
+when:
+  - You're writing an ad, page or email and aren't sure how to start it.
+  - You want to test two openings that differ in approach, not in wording.
+  - Your openings keep starting with the product for buyers who've never heard of you.
+
+you_give:
+  - A note on the buyer, who it's for, how much they know and the one thing they want
+  - Your offer, its terms and the proof you can use
+  - What shows before "see more" or before the thumb moves on (optional)
+  - Your voice notes, approved claims and current offers (optional)
+you_get:
+  - How much the buyer knows, and opening A with the reason it fits
+  - Opening B, using a different way in, with the reason it differs
+  - One line on what the close must come back to
+
+how_to_use:
+  - Copy the skill and paste it into Claude, ChatGPT or Gemini.
+  - Paste a note on your buyer, including how much they already know.
+  - Paste your offer and the proof you're allowed to use.
+  - Say where it will run, such as "Facebook main text, about 125 characters show".
+  - Run both openings on the same body copy, so only the opening changes.
+
+how_it_works:
+  - title: Matches the buyer
+    text: Uses a table of six ways to open to pick the one that fits how much the buyer knows.
+  - title: Writes opening A
+    text: Writes the part read before the reader decides to continue. A ready buyer gets a line; a cold buyer gets the first scene.
+  - title: Writes opening B
+    text: Uses the paired way in, not a rewording, so the two openings test different ideas.
+  - title: Sets the close
+    text: Says what the close must come back to, so the piece ends where it promised.
+
+output_shape: |
+  BUYER: <how much they know>
+
+  OPENING A: <way in>, <why it fits, one line>
+  <the opening>
+
+  OPENING B: <a different way in>, <why it differs, one line>
+  <the opening>
+
+  CLOSE MUST COME BACK TO
+  <one line>
+
+  MISSING
+  <buyer detail or proof the openings would need>
+
+example:
+  business: sprout
+  input: |
+    [the skill]
+
+    Buyer: knows Sprout, maybe from a store shelf, and thinks it costs
+    too much. Hasn't decided. Wants proof it's worth it, or a real deal.
+    Doubts: "Which discount is real?" / "Will the price jump after the
+    first order?"
+    Offer and proof:
+    - Per pack: 60+ ingredients, 21 vitamins & minerals, 6 g fiber
+    - First box $29.99 with the text sign-up discount for new
+      customers, then $49.99 every 4 weeks ($1.78/day). One-time $66.65.
+    - Price cut: "Same Sprout. New Lower Price. Subs Now Start at
+      $29.99." / "It's our birthday, and we're lowering prices. Not
+      just for a week but indefinitely."
+    - 30-day money-back guarantee, first order only
+    Channel: Facebook main text, about 125 characters show before
+    "see more"
+  output: |
+    BUYER: knows the product, hasn't decided, weighing it against the
+    price
+
+    OPENING A: headline benefit. Fits a buyer who knows Sprout but
+    hasn't decided.
+    Your greens, vitamins and fiber in one pack a day, for $1.78 a day
+    after your first box. Each pack has 60+ ingredients, 21 vitamins and
+    minerals, and 6 g of fiber.
+
+    OPENING B: deal first. A different way in: the deal leads and the
+    benefit waits.
+    Sprout subscriptions now start at $29.99 for your first box, with
+    the text sign-up discount for new customers. A box bought once is
+    $66.65. We lowered prices for our birthday, and not just for a week.
+    After the first box it's $49.99 every 4 weeks, and your first order
+    has a 30-day money-back guarantee.
+
+    CLOSE MUST COME BACK TO
+    The real price now and after the first box, so "too expensive" is
+    answered with numbers.
+
+tweaks:
+  - what: How much the buyer knows
+    how: This picks opening A. If your buyer and your market point different ways, the buyer wins. Being wrong here gives you an opening for the wrong person.
+  - what: Proof
+    how: The unknown-fact opening needs a real, surprising fact. Without one it won't use that way in, and picks a scene or problem opening instead.
+  - what: Where it runs
+    how: Tell it how much shows before "see more". It keeps the opening's key sentence inside that space.
+  - what: Length
+    how: For a ready buyer, the opening is a line. For a cold buyer, ask for "the first scene of a longer piece" and you get a paragraph or two.
+
+judge:
+  - The two openings use different ways in, not the same idea reworded.
+  - Neither uses a fact, number or quote you didn't supply.
+  - A cold buyer's opening doesn't start with the product.
+  - A named customer or founder moment appears only if it's on record.
+  - The close line tells you what the ending must deliver.
+
+test:
+  - Run it for a buyer and offer where you know which opening worked. Opening A should use that way in, or its line should say why not.
+  - Run it twice. Opening A's way in should be the same both times.
+  - Read the two openings back to back. If you can't name the different way in each one uses, they're the same opening reworded.
+  - Check every fact, number and quote against what you gave it.
+  - Test both with the same body and picture, changing only the opening.
+
+improve:
+  - Write your buyer note into "What you need" in the skill file, so the choice in step 1 is the same every run.
+  - Delete rows from the table you can't use, such as "Unknown fact" if you have no surprising fact on file.
+  - Add a pair you've seen test well to the pairs under the table.
+  - Save each winning opening to your brand file, with the buyer it worked for.
+  - Run "Know who you're writing for before you start" first, and pair it with "Finish your sales page with proof and one ask" to write the rest.
+
+terms:
+  - term: Way in
+    meaning: How the copy opens, such as with the deal, a problem, a fact or a scene.
+  - term: Cold buyer
+    meaning: Someone who doesn't know you, and may not know their problem has an answer.

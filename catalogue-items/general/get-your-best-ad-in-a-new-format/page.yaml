@@ -1,0 +1,186 @@
+new_slug: get-your-best-ad-in-a-new-format
+name: Get your best ad in a new format
+summary: An ad you already run, rebuilt as a video, carousel or still, with every word kept in order.
+job: make-video-ads
+
+headline: Get your best ad as a video, carousel or still, with every word kept in order
+subhead: Give it an ad you already run, broken into its shots or parts, and the format you want. It plans the new version shot by shot, keeps every word exactly as it was, and tells you if the new format weakens the part that sells.
+
+explain: |
+  When an ad works, you want it in more places: the image ad as a short video, the video as a carousel. Remaking it by hand usually means rewording it, and the rewording often drops the one line that was doing the selling.
+
+  This skill has no say over the words. It lays out the original in order, finds the beat that does the persuading (a face people believe, a reveal, a line heard out loud) and checks the new format can still carry it. Then it rebuilds each shot or card with the same setting, product and order, and moves any line that has no home into the post text. Lines that don't fit a slot are flagged, never trimmed. It ends with a list of every change and every claim worth checking.
+
+when:
+  - An image ad works and you want a short video of it for stories and reels.
+  - You want a video ad as a swipe carousel, or a live ad in an animated style.
+  - You're handing the remake to a designer or a video tool and need the words locked.
+
+you_give:
+  - The original ad, shot by shot or part by part, with every spoken word, on-screen line and the post text
+  - The format you want (another video style, carousel, still, or still to video)
+  - Limits of the new format, such as characters per headline or total length (optional)
+  - Real product photos and how the product is used (optional, but strongly advised)
+  - Your brand file's claims list, for flags only (optional)
+you_get:
+  - A shot table with the original words, the beat each part does, and the new picture or a prompt for a video tool
+  - A slots table for carousels and stills, with any slot that can't be filled flagged
+  - Notes on the beat that sells and its risk, timing changes, replacements and claim flags
+
+how_to_use:
+  - Copy the skill and paste it into Claude, ChatGPT or Gemini.
+  - Paste the original ad. For a video, list each shot with its time, picture and words. For an image ad, give the words on the image, the post text and what the picture shows.
+  - Say the new format and its length, for example "15-second video, 9:16".
+  - Add the real product photos you have, so the product is rebuilt from them.
+  - Read the notes before making anything. If the beat that sells is at risk, decide whether the remake is still worth it.
+
+how_it_works:
+  - title: Lays the ad out
+    text: Lists each shot or part in order with its time, picture and words, and labels what each one does.
+  - title: Finds what sells
+    text: Picks the beat that persuades and says up front if the new format can't carry it, such as an animation losing a believed face.
+  - title: Rebuilds each part
+    text: Keeps setting, framing, props and product placement, and follows set rules for each switch, like still to video or video to carousel.
+  - title: Fits the slots
+    text: Uses the ad's own line for each slot with a limit. If none fits, the slot stays empty and is flagged.
+  - title: Lists every change
+    text: Notes timing, anything it couldn't show, replacements, empty slots and lines that break a claim rule, which it flags but doesn't rewrite.
+
+output_shape: |
+  LAID OUT (the original, in order)
+    <E1>  <element>  "<words>"
+    <E2>  <element>  <picture>
+    Order assumed: <reading order, if it isn't stated>
+
+  THE BEAT THAT SELLS
+    <the beat, whether the new format helps or hurts it, and the risk>
+
+  SHOT TABLE (<length>, <shape>)
+    <n>  <time>  <beat>  <the original's words for this shot>
+       <the new picture>
+       Prompt: "<for the image or video tool, no text>"
+
+  SLOTS
+    <slot>   <limit>   <line used, or "empty: flagged">
+
+  NOTES
+    Word check: <n> of <n> words, in order, none changed.
+    Changed: <splits, moves, timing>
+    Product: <which photo it's rebuilt from>
+    Flag (left as is, you decide): <lines that break a claim rule>
+    MISSING: <files or facts not on hand>
+
+example:
+  business: sprout
+  input: |
+    [the skill]
+
+    Original ad: P1 Too expensive (image ad)
+    On-image line (from ads.md):
+      "'Sprout is too expensive': here's 61% off to prove otherwise"
+    Post text (a real Sprout main text from ads.md; which ad it ran
+    with wasn't captured, so it's paired with P1 here; its 4 emoji
+    are not shown):
+      Big news: your first order of [Sprout] just got a lot more
+      affordable. $29.99 for your first order, that's less than
+      $1.10/day for 60+ whole-food ingredients, 21 vitamins &
+      minerals, and gut-supporting probiotics in one daily gummy
+      pack. $20 off your first order +$5 off for every extra person
+      Third-party tested. Online-exclusive offer. Shop [Sprout].
+    Picture (the P1 image is not on file; described from the brand
+    file's Look section): the green pouch on a soft 2-colour
+    gradient, gummies scattered in front.
+
+    New format: 15-second video, 9:16
+    Product photo: the pouch on a soft gradient
+    Claims list: Sprout brand file (pasted)
+  output: |
+    LAID OUT (the still, in reading order)
+      E1  on-image line  "'Sprout is too expensive': here's 61% off
+                         to prove otherwise"
+      E2  picture        pouch on a green gradient, gummies in front
+      E3  post text      the main text above
+      Order assumed: image line first, then post text.
+
+    THE BEAT THAT SELLS
+      The turn in E1: the buyer's own objection, then the answer. The
+      still shows both at once; a video can give the answer its own
+      beat, so the format helps. Risk: the objection is in quotation
+      marks, so no face and no voice say it, or it would read as a
+      customer's testimony.
+
+    SHOT TABLE (15.0 s, 9:16; lines overlaid after generating)
+      1  0.0-4.0   objection  'Sprout is too expensive':
+         Wide: the pouch alone on the soft green gradient, gummies
+         scattered in front. Camera still.
+         Prompt: "glossy deep green stand-up pouch on a soft green
+         and cream gradient, small green gummy bears scattered in
+         front, bright even light, static shot, no people, no text"
+      2  4.0-8.5   turn       here's 61% off
+         Slow push in until the pouch fills the upper half.
+      3  8.5-15.0  close      to prove otherwise
+         Hold on the pouch and gummies. Camera still.
+
+    SLOTS
+      On-screen lines   all 10 words of E1, shots 1 to 3
+      Post text         E3 kept as the video's post text, 55 words,
+                        unchanged, emoji included
+      Headline          none in the original, left empty
+
+    NOTES
+      Word check: 10 of 10 on-screen words and 55 of 55 post text
+      words, in order, none changed.
+      Changed: E1 split at the colon and after "off" across shots 1
+      to 3. Timing: the still has none; spans follow reading time.
+      No action added: the still shows no hands and no torn pack, so
+      the only motion is the camera.
+      Product: rebuilt from the gradient photo. Pouch closed, as the
+      brand shows it: it is never shown torn.
+      Flag (left as is, you decide): "gut-supporting probiotics". The
+      ingredient list shows prebiotic fiber and no probiotics.
+      Flag: "61% off" doesn't match the product page (52%, up to 55%).
+      Flag: "less than $1.10/day" is the first box only; it renews at
+      $49.99.
+      MISSING: the P1 image file. Check its setting and framing
+      against shot 1 before making the video.
+
+tweaks:
+  - what: The new format
+    how: Ask for "carousel" instead and each beat becomes a card in order, with the answer "here's 61% off to prove otherwise" on its own card so it lands on a swipe.
+  - what: Voice
+    how: Ask for a voice-over and it keeps one narrator with no lip-sync, and flags any quoted or first-person line that would sound like a customer.
+  - what: Length limits
+    how: Give exact slot limits, like "headline 40 characters". It uses the ad's own line that fits, or leaves the slot empty and flags it. It never trims.
+  - what: Product photos
+    how: Add photos of the product open and in use. Without them it can only show the closed pouch from the one photo on file.
+
+judge:
+  - Read the shot table's lines one after another. They should match the original word for word, in order.
+  - The notes give a word count that matches the original.
+  - No new claim, number or offer appears anywhere, including in the picture descriptions and prompts.
+  - The product looks like your photos, with the same shape, colours and label.
+  - No real person, child or someone else's character is recreated, and a founder or customer appears only from their own footage.
+  - Any line that breaks a claim rule is flagged, not quietly changed.
+
+test:
+  - Run it on an ad you know well, then read only the lines in its shot table aloud. They must match the original word for word, in order. One changed word means it can't be trusted with your winners.
+  - Give it an ad with a line you know breaks one of your claim rules. It should flag the line and leave it, not quietly fix it.
+  - Run it twice into the same format. The shot splits can move a little, but the words, order and flags must be the same.
+  - Put the finished remake next to the original and ask someone who saw the original whether anything is missing. If they name a beat, check the "beat that sells" note.
+
+improve:
+  - Paste your product photo list and how the product opens into "What you need" in the skill file, so the product is always rebuilt the right way (in the example, the pouch is never shown torn).
+  - Add your claims list to the skill, so every remake flags lines like "probiotics" against your own facts, without pasting.
+  - If you always remake into one format (for example 9:16 video), write its length and slot limits into step 3 as fixed rules.
+  - Fix flagged lines in the original ad first, then remake it. A remake carries every word over, mistakes included.
+  - Pair it with a skill that checks a finished ad before you spend, once the video or carousel is made.
+
+terms:
+  - term: Beat
+    meaning: One step in the ad's argument, such as the problem, the turn, the proof or the close.
+  - term: Post text
+    meaning: The words above the image or video in a feed ad, also called primary text.
+  - term: Slot
+    meaning: A place for words in the new format, such as a headline or a carousel card, often with a length limit.
+  - term: Overlay
+    meaning: Text placed on top of the video after it is made, because video tools can't write words reliably.

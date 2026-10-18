@@ -1,0 +1,195 @@
+new_slug: turn-knitted-wool-script-into-ready-video-shots
+name: Turn your knitted wool script into ready-to-make video shots
+summary: Fixed look wording, doll descriptions, still and clip prompts that keep every frame knitted.
+job: make-video-ads
+
+headline: Get clips that look like real knitted yarn in every frame, with your label spelled right
+subhead: Give it a narrated knitted-world script, your product photo and label text. It writes three fixed blocks of look wording and a description for each doll, then still prompts, clip prompts and yarn transitions to paste into your video tool.
+
+explain: |
+  A knitted-world ad goes wrong in small ways that add up. A doll turns into a real person standing in a yarn room. A sofa comes out in leather because nobody called it knitted. Faces in close-up look strange. The label on your knitted pack reads "YARN". The dolls' hair changes colour between clips.
+
+  This skill writes prompts that stop each of those. It fixes three blocks of wording (the look, the dolls, the closing line) and has you paste them unchanged into every prompt. Every object gets the word knitted and a real colour. Each doll is made once, approved, and attached to every shot. Your label lines are written out exactly. Clips carry a movement lock so the motion stays stepped and handmade, and transitions use yarn itself, like a room unravelling into the next.
+
+when:
+  - You have a knitted-world script and need prompts for an AI image and video tool.
+  - Earlier attempts drifted into real people, real materials or misspelled labels.
+  - You need how-it-works close-ups in the same knitted style as the story scenes.
+
+you_give:
+  - The script, with narration and a scene list
+  - Your product photo and every label line with its colour
+  - How your product works, as you state it
+  - Your colours, tone and approved claims (optional)
+  - The clip lengths your video tool accepts (optional)
+you_get:
+  - Three fixed blocks of look wording to paste unchanged
+  - Doll descriptions, a room list and a product line with label text
+  - Still prompts, clip prompts and yarn transition prompts
+
+how_to_use:
+  - Copy the skill and paste it into Claude, ChatGPT or Gemini.
+  - Paste your script underneath, then your label lines and product photo.
+  - Make each doll, room and the product as its own still first, and approve them.
+  - Make each scene still with the approved pictures attached.
+  - Make one clip per approved still, using the clip prompts.
+  - Add the offer text in editing.
+
+how_it_works:
+  - title: Knits every noun
+    text: Puts the word knitted on every person and thing, with a real colour, so nothing renders in its real material.
+  - title: Frames a step back
+    text: Medium-wide from inside the world, so doll faces stay smooth. Close-ups only for hands, product and how it works.
+  - title: Writes three fixed blocks
+    text: The look, the dolls and the closing line, pasted word for word into every prompt.
+  - title: Describes each scene fresh
+    text: Who, what, where, the action and the feeling, with every doll described in full each time.
+  - title: Keeps the label exact
+    text: States each label line with its colour on the knitted pack.
+  - title: Plans how-it-works shots
+    text: A close view with no people, the ingredient as a small glowing knitted element, no further than your claim.
+  - title: Locks what repeats
+    text: Dolls, product and rooms are made once, approved and attached to every shot.
+  - title: Writes clips and transitions
+    text: A movement lock in every clip, one gesture and one camera move each, and yarn transitions between scenes.
+
+output_shape: |
+  FIXED BLOCKS (paste unchanged)
+  Look: <the knitted world, stitches, camera, light, colour>
+  Dolls: <adult proportions, doll faces, yarn hair, knitted clothes>
+  Closing: <eye level, everything knitted, no real humans>
+
+  DOLLS
+  <doll 1: age, build, hair, clothes, all knitted>
+  ROOMS
+  <room: every object knitted, with its colour>
+  PRODUCT
+  <knitted pack, true shape, label lines "<exact words>" in <colour>>
+
+  STILL <n> (attach: <picture> = <job>)
+  <look block> <doll block if people> <scene> <closing block>
+
+  CLIP <n>
+  <movement lock> <one gesture> <one camera move> Narration: "<line>" End frame: <...>
+
+  TRANSITION <n>
+  <the one yarn action, first and last frame, movement lock>
+  MISSING: <...>
+
+example:
+  business: sprout
+  input: |
+    [the skill]
+
+    Script (30 s, from "Get a knitted wool ad script that sells"):
+    1 "Some days her stomach just won't settle."  LIFE, sofa
+    2 "She tried the fiber powder."  LIFE, kitchen
+    3 "Then the probiotic bottle."  LIFE, kitchen
+    4 "Then something she'd actually eat."  YARN TRANSITION
+    5 "One small pack. Six grams of prebiotic fiber."  PRODUCT
+    6 "Rip. Tip. Enjoy."  LIFE, hands close
+    7 "Sprout supports digestion and gut health."  LIFE, front door
+    8-9 offer and close over the knitted pouch
+    Product: Sprout pouch, photo attached. Label lines: "Sprout" in
+    yellow, a yellow bear face top right, "28 Daily Packs" at the
+    bottom. Gummies: small opaque deep-green bears.
+    Use: tear one daily pack straight across the top.
+    Clips: 10 seconds, 9:16.
+  output: |
+    FIXED BLOCKS (paste unchanged)
+    Look: a miniature world entirely hand-knitted from yarn, rounded
+      crochet-like stitches with visible stitch rows on every surface,
+      medium knit, photographed like a still from a stop-motion film,
+      medium-wide from a step back with the subject sharp and the
+      background softly out of focus, bright natural daylight, a warm
+      natural palette with genuine colour in daylight, plants,
+      textiles and clothing, the scene filling the frame with the
+      camera inside the knitted world.
+    Dolls: knitted dolls with realistic adult proportions, smooth doll
+      faces with only a light knit texture, painted eyes with soft
+      lashes, painted lips, gentle blush, stitch rows across knitted
+      skin, styled yarn hair in fine strands, knitted clothing that fits.
+    Closing: camera at eye level inside the scene; everything is
+      knitted yarn, photographed, real cast shadows, warm cosy light;
+      no real humans, no photographic skin, no chunky cartoon toys or
+      oversized bobbleheads, no tiny stitching on faces.
+
+    DOLL
+    A knitted woman about 40, medium build, shoulder-length dark brown
+    yarn hair, mustard knitted jumper, grey knitted jeans.
+    ROOMS
+    Living room: teal knitted sofa, cream knitted cushion, green
+      knitted plant. Kitchen: oak-coloured knitted counter, white
+      knitted tub, grey knitted shaker, small brown knitted bottle.
+    PRODUCT
+    A glossy deep-green knitted stand-up pouch, label "Sprout" in
+    yellow, a yellow knitted bear face top right, "28 Daily Packs" at
+    the bottom, shoulder high to the doll when on the counter.
+
+    STILL 1, LIVING ROOM (attach: doll still = who she is)
+    [Look]. [Dolls]. [Doll line] sitting on the teal knitted sofa,
+    one hand on her stomach; brows pulled together, mouth pressed
+    flat, shoulders curled in. [Living room]. [Closing].
+
+    STILL 3, PRODUCT (attach: pouch photo = shape and label)
+    [Look]. [Product line] standing on the oak-coloured knitted
+    counter, front to camera, label lines exactly as stated. [Closing].
+    (No doll block: this shot has no people.)
+
+    CLIP 1 (10 s, from Still 1)
+    Movement lock: handmade stop-motion knitted-yarn animation
+    throughout, visible stitch rows and soft fibre on every surface,
+    slightly stuttery rhythm, no motion blur, not CGI, not cartoon,
+    animation starts on the first frame. Gesture: she presses her hand
+    flatter and sighs. Camera: a slow push in, stopping medium-wide.
+    Narration: "Some days her stomach just won't settle." End frame:
+    same pose, slightly closer.
+
+    TRANSITION (line 4, from the kitchen still to Still 3)
+    Anchor: the counter. Action: loose deep-green strands rise from
+    the counter and stitch themselves into the pouch; the tub, shaker
+    and bottle unravel and fall away as loose yarn. [Movement lock].
+
+    (cut for length: the full run also had Still 2 (kitchen), Still 4
+    (hands tearing the pack), Clips 2 to 4 and the door shot)
+
+    MISSING: colour of "28 Daily Packs" on the pouch, and a photo of a
+    single daily pack for the hands close-up.
+
+tweaks:
+  - what: The doll block
+    how: Change the doll features once (freckles, lashes, build) and paste the new block everywhere. Leave it out of product and how-it-works shots or dolls appear in them.
+  - what: Light
+    how: Daylight is the default. For a night scene, name the source and how dark it is, for example "lit only by a knitted bedside lamp, the rest of the room dim".
+  - what: Transitions
+    how: Pick camera-led (push into the knitted product) for a calm cut, or world-led (the room unravels into the next) for a showpiece moment.
+  - what: Clip length
+    how: Give your tool's limits. It plans one gesture and one camera move per clip whatever the length.
+
+judge:
+  - The three fixed blocks appear word for word in the prompts that need them.
+  - Every object in every scene is called knitted and given a colour.
+  - Doll descriptions are identical in every prompt they appear in.
+  - The label text is spelled out exactly, with its colour.
+  - No prompt asks for a close-up of a face.
+
+test:
+  - Put two prompts side by side. The three fixed blocks should appear word for word in both.
+  - Make the doll and product stills first. If a doll looks like a real person or the label reads wrong, fix the blocks before any clip.
+  - Run it twice on the same script. Within each run, the doll descriptions should be identical in every prompt.
+  - Make one transition clip. The first room should unravel into the next as yarn, with one shared object in both frames.
+
+improve:
+  - Write your approved look block into step 3 of the skill file, so you stop re-approving the look for every ad.
+  - Add every label line, with its colour, to your brand file. Step 5 copies them exactly.
+  - If your video tool makes shorter clips, set its limit in step 8.
+  - Save your approved doll, room and product stills and list them in "What you need", so each new ad attaches them.
+  - Pair it with the skill that writes the knitted wool script, so every visual note already names things as knitted.
+
+terms:
+  - term: Still
+    meaning: A single image made first, so you can approve the look before paying for video.
+  - term: Movement lock
+    meaning: A fixed paragraph in every clip prompt that tells the video tool how things may and may not move.
+  - term: Stop-motion
+    meaning: Animation made by moving real objects a little between each frame, so movement looks slightly stepped.

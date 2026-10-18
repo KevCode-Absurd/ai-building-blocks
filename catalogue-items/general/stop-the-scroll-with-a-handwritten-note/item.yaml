@@ -1,0 +1,21 @@
+slug: stop-the-scroll-with-a-handwritten-note
+renamed_from: native-ad-image-handwritten-note
+name: "Stop the scroll with a handwritten note"
+summary: "A photo of a few lines of ordinary handwriting in your narrator's voice, that people stop to read."
+category: general
+boards: [ecommerce]
+type: skill
+role: render
+job: image
+level: beginner
+inputs:
+  - {type: ad_copy, required: true}
+  - {type: persona, required: false}
+outputs:
+  - {type: image_prompt}
+uses: [get-story-ads-read-with-the-right-picture]
+example: native
+origin: own
+source_ids: [CES-063]
+old_name: handwritten-note
+version: 1.0.0

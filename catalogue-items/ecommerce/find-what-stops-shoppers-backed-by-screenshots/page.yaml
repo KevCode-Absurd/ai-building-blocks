@@ -1,0 +1,175 @@
+new_slug: find-what-stops-shoppers-backed-by-screenshots
+name: Find what stops shoppers, backed by screenshots
+summary: What stops shoppers on your product page, with each point tied to a screenshot and guesses marked.
+job: audit-landing-page
+
+headline: Find what stops shoppers buying on your store page, with a screenshot behind every point
+subhead: Give it screenshots or the text of a product page, plus the one thing a shopper must do there. It lists what it saw and where, what each problem might mean for a shopper, the change or test to try, and what it couldn't check.
+
+explain: |
+  Page reviews often mix three things: what's actually on the page, someone's opinion of it, and guesses about what's broken. "The add-to-cart button doesn't work" might really mean "it was grey in one screenshot", which can simply mean no flavour was picked yet. Fixes built on guesses waste time and can break what was working.
+
+  This skill keeps those apart. Every observation is tied to a capture (a screenshot or page text with a date and screen size). Its reading of what that means for a shopper is labelled as a guess to test, with a change to try and a number to watch. Anything a screenshot can't show, like whether checkout works, goes in a separate "untested" list. It's a check of the page's design and words, not a test purchase.
+
+when:
+  - Shoppers reach your product page but don't buy, and you want to know what's in their way.
+  - You're about to brief a page redesign and want a list of problems backed by screenshots.
+  - Someone reported "the page is broken" and you want to separate what's really wrong from what just looks odd.
+
+you_give:
+  - Screenshots on a phone and a desktop, or the page's visible text, each with its date and the page address
+  - The one thing a shopper must do or understand on the page (for example, see the total price or pick a size)
+  - Your brand facts, such as prices, policies and claims, to compare with the page (optional)
+you_get:
+  - A table of what was seen, where, what it might mean, the change to try and what's unknown
+  - A list of what the screenshots couldn't show
+  - The tests that need a real browser, and the next three steps
+
+how_to_use:
+  - Copy the skill and paste it into Claude, ChatGPT or Gemini.
+  - Take screenshots of the page on your phone, top to bottom, and one set on a desktop. Note the date and the page address.
+  - Paste or attach them, or paste the page text if you can't attach images.
+  - Write the shopper's question in one line, such as "Can a phone shopper see the price and the guarantee before tapping buy?".
+  - Add your prices and policies so it can spot where the page disagrees with them.
+
+how_it_works:
+  - title: Keeps the scope small
+    text: Looks only at the part of the page that answers the shopper's question before widening.
+  - title: Records what it sees
+    text: Ties every observation to a capture, address, date, screen size and section.
+  - title: Respects what screenshots can't show
+    text: A button's look isn't proof that buying works. Anything that needs clicking, choosing or paying is marked untested.
+  - title: Reads each point as a guess
+    text: Links each observation to what it means for a shopper, with a change to try, a number to watch and the evidence still needed.
+  - title: Compares like with like
+    text: Only compares captures of the same product, device and screen size.
+  - title: Lists what's left
+    text: Ends with the limits of the captures, the tests needed in a real browser, and three next steps.
+
+output_shape: |
+  SHOPPER'S QUESTION: <what the shopper must do or understand>
+
+  What was seen        | Where (capture, address, date, screen, section)
+                       | What it might mean for a shopper
+                       | Change or test to try
+                       | Still unknown
+  <one row per observation>
+
+  WHAT THE CAPTURES COULDN'T SHOW
+  - <anything needing a click, choice, form or purchase>
+
+  TESTS NEEDED IN A REAL BROWSER
+  - <test>
+
+  NEXT 3 STEPS
+  1. <step>  2. <step>  3. <step>
+
+example:
+  business: sprout
+  input: |
+    [the skill]
+
+    Capture C1: page text of sprout.example/products/sprout
+    (sprout/product-page.md), read 13 Oct 2026 with notes from
+    30 Sept. Parts marked "(inferred)" in it were not seen directly.
+
+    Shopper's question: arriving from a "61% off" ad, can a shopper
+    see what they pay today, what it renews at and what the
+    guarantee covers, before tapping Start Now?
+
+    Brand facts: $29.99 first order needs the text sign-up discount.
+    Renews at $49.99 every 4 weeks. Money-back guarantee covers the
+    first order only. Buyer doubt on file: "Will the price jump
+    after the first order?"
+  output: |
+    CAPTURE NOTE
+    C1 is page text only. Screen size: MISSING, so nothing below is
+    confirmed for the phone layout. The default plan and the gallery
+    are marked inferred in the capture itself.
+
+    1. Seen:    four discount numbers. Bar "Save 52%", badge "GET UP
+                TO 55% OFF", pop-up "Sign Up for 55% Off". The ad
+                that sent them says 61%.
+       Where:   C1, announcement bar, plan box, pop-up
+       Means:   the shopper may not know which is real, or think the
+                61% didn't carry over.
+       Try:     one number across ad, bar, badge and pop-up. Keep
+                $29.99 and $1.07/day. Watch: buy rate from ad clicks.
+       Unknown: which number is the current one.
+
+    2. Seen:    "$29.99" and "DISCOUNT AUTO-APPLIED". Only the footer
+                says the offer "assumes customer has received and
+                uses promotional SMS discount".
+       Where:   C1, plan box, under button, footer
+       Means:   a shopper may expect $29.99 without signing up.
+       Try:     "with text sign-up" next to $29.99.
+       Unknown: what checkout charges without the sign-up.
+
+    3. Seen:    "Renews at $49.99 each 4 weeks" under the button,
+                while $1.07/day sits in the plan box.
+       Where:   C1, under button
+       Means:   the shopper who asks "will the price jump?" may miss
+                the answer and feel tricked at renewal.
+       Try:     the renewal price beside $29.99. Watch: refund and
+                cancel requests.
+       Unknown: text sizes. Needs a screenshot.
+
+    4. Seen:    plan box "30-Day Money-Back Guarantee". Last FAQ:
+                "This policy applies only to your initial purchase."
+       Where:   C1, plan box, FAQ
+       Means:   a buyer may think every box is covered.
+       Try:     "30-day money-back guarantee on your first order".
+
+    WHAT THE CAPTURE COULDN'T SHOW
+    - What fills the first phone screen (inferred in C1, not seen).
+    - Which plan is selected on load (inferred in C1).
+    - Whether Start Now works, and the checkout total.
+    - The Low Sugar vs. Sugar-Free panel (not captured).
+
+    TESTS NEEDED IN A REAL BROWSER
+    - Open the page from the 61% ad link on a phone. Note which
+      discount shows and the checkout total with and without the
+      text sign-up. Stop before paying.
+    - Check which plan is selected when the page loads.
+
+    NEXT 3 STEPS
+    1. Take phone screenshots top to bottom, with date and screen size.
+    2. Run the two browser tests above.
+    3. Fix the wording in rows 2 to 4, re-capture on the same phone,
+       and compare like with like.
+
+tweaks:
+  - what: The shopper's question
+    how: A narrow question gets a sharp table. "Can a phone shopper pick a size and see delivery cost?" finds more than "review my page".
+  - what: Phone and desktop captures
+    how: Add both and it compares them screen for screen. Check your analytics for how many shoppers use phones, and give that capture the most attention.
+  - what: Your brand facts
+    how: Paste your prices, guarantee and approved claims. It will flag where the page says something different or leaves them out.
+  - what: Competitor pages
+    how: Add a competitor's page if you want ideas. It takes patterns to test only, never their claims, reviews or images.
+
+judge:
+  - Every row points to a capture and a section. If you can't find the thing it describes in your screenshot, cross it out.
+  - Nothing is called "broken" from a screenshot alone. Broken-looking things are in the tests list.
+  - No row promises more sales. Effects on sales are marked unknown.
+  - The "couldn't show" list is there and names real limits, such as checkout and option pickers.
+  - The proposed changes say what to keep as well as what to change.
+
+test:
+  - Run it on a page with a problem you already know about, such as a confusing price or a hidden guarantee. It should find it and point to the screenshot.
+  - Include a screenshot where the buy button is grey because no option is picked yet. It should go in the tests list, not be called broken.
+  - Pick three rows and find each one in your screenshots. Cross out any you can't find.
+  - Run it on a phone capture and a desktop capture of the same page. Every difference it reports should be one you can see.
+
+improve:
+  - Write your standing facts (prices, guarantee, shipping, approved claims) into "What you need" in the skill file, so every check flags where the page says something else.
+  - Add your page's section names (for example "plan box", "reviews block") to step 2, so each row uses the words your team uses.
+  - If you always check the same shopper task, write it into the skill as the default question.
+  - After you test a row in a real browser, save the result in your brand file, so the next check starts from what's known.
+  - Pair it with a skill that tells you if you have enough visitors to test, before you test any change it suggests.
+
+terms:
+  - term: Capture
+    meaning: A screenshot or a copy of the page's text, saved with its date, page address and screen size.
+  - term: Option picker
+    meaning: The buttons or drop-down where a shopper chooses a size, colour or flavour before adding to cart.

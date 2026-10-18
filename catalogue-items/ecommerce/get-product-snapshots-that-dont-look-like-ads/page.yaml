@@ -1,0 +1,197 @@
+new_slug: get-product-snapshots-that-dont-look-like-ads
+name: Get product snapshots that don't look like ads
+summary: Flash snapshots of people using your product on a real evening, for ads and posts that feel real.
+job: product-photos
+
+headline: Photos of your product that look like a friend took them, not like an ad
+subhead: Give it your product photos, who buys it and when they use it. It plans a set of about eight flash snapshots with people doing real things with your product, shows you the shot list to approve, then writes one prompt per photo.
+
+explain: |
+  Polished product photos look like ads, and people scroll past ads. A photo that looks like someone's party snapshot (direct flash, warm film colour, a hard shadow on the wall) reads as real life instead. The risk is that AI pictures in this style drift: the product changes shape, people stare into the camera, hands hold things no hand could.
+
+  This skill plans the set before anything is made. It describes the product in the same exact words in every prompt, casts fictional adults from your real buyers, and writes every action down to which hand holds what. It mixes people-alone, pairs, groups and product-only frames, and checks each picture against your real product photo. It's for feed ads and social posts, not for the first image on your product page.
+
+when:
+  - Your ads look too polished and you want photos that feel like real life.
+  - You need a "people like you" strip of photos for social or an email.
+  - You have a product people use at home in the evening, at a gathering, or with friends.
+
+you_give:
+  - Real photos of the product, including one of it in use or in a hand
+  - Who buys it, and where and when they use it
+  - Your brand's places, colours and what you never show
+  - Where the photos will be used (feed ad, social post, email)
+  - How many photos, and how many with people (optional; 8, with 5 showing people, is usual)
+you_get:
+  - A description of the scene world (who, where, what objects, what people do)
+  - A numbered shot list for you to approve before anything is made
+  - One prompt per photo, in a fixed order
+  - Check notes for each photo, with what was remade and why
+
+how_to_use:
+  - Copy the skill and paste it into Claude, ChatGPT or Gemini.
+  - Attach your product photos, including one of it in a hand or in use if you have it.
+  - Say who buys it and their moment, for example "tired workers, 11 pm, kitchen, before bed".
+  - Read the shot list and approve it, or cross out frames that don't fit your brand.
+  - Make one test photo first, check the product against your real photo, then make the rest.
+
+how_it_works:
+  - title: Writes down the product
+    text: Writes down exactly how your product looks and fixes one description it repeats word for word in every prompt, including what it is not.
+  - title: Builds the scene world
+    text: Who is in frame (fictional adults from your buyers), 6 to 10 real objects from where it's used, the walls and time of day, and the 3 to 6 real things people do with it.
+  - title: Spells out every action
+    text: Which hand holds what and where the other hand is. An action your product facts don't describe is not shown.
+  - title: Picks the frames
+    text: A mix of one person absorbed, the moment after, a pair sharing, a group, and product-only shots such as a flash glint or the product held up. Never all groups.
+  - title: Waits for your approval
+    text: Shows the shot list (frame, who, action, job, size) before making anything.
+  - title: Writes each prompt
+    text: One paragraph in a fixed order, ending with the flash shadow and "No added words". Everyone looks at the task or each other, never at the camera.
+  - title: Checks every photo
+    text: At full size beside your real photo. A failed part of the prompt is rewritten, never resent unchanged, and each failure is logged in one line.
+
+output_shape: |
+  BEFORE WE START
+  <missing photos or facts, and any question about fit with your brand>
+
+  PRODUCT, SAME WORDS EVERY TIME
+  "<exact description>; not <the lookalike>"
+
+  SHOT LIST (for your approval)
+  01 <frame type> | <who> | <action, hand by hand> | <job>
+  02 ...
+  (frames left out, and why)
+
+  TEST FRAME: <which frame, and why that one>
+
+  PROMPT, FRAME 01
+  Candid 35mm film photograph, direct on-camera flash, ... WHERE: <...>
+  WHO: <...> PRODUCT: <...> ACTION: <...> FEELING: <...> Eyes on the
+  task, never at the camera. THINGS IN THE ROOM: <...> Hard flash
+  shadow on the wall behind, warm and joyful. No added words.
+  (one prompt per frame)
+
+  CHECK LOG
+  <frame>: asked <...> / came back <...> / fix <...>
+
+example:
+  business: sprout
+  input: |
+    [the skill]
+
+    Product: Sprout Original (Adults), Low Sugar. Attached: the pouch
+    front on, and gummies in an open hand. Glossy deep green stand-up
+    foil pouch, big yellow wordmark, yellow bear face top right, "28
+    Daily Packs" at the bottom. One daily pack a day, torn straight
+    across the top, gummies tipped into a palm. The pouch opens only at
+    its resealable top.
+
+    Buyers: people who quit greens powders and pill stacks; busy
+    parents who grab one on the way out ("So easy to grab and eat on my
+    way to the billion things I have to do as a mom").
+
+    Brand world: bright, sunny, candy-like. Everyday adults in casual
+    clothes, at home or outdoors. Never clinical, never muted. There's
+    also a Kids line.
+
+    For: Instagram feed ads, 4:5. 8 photos.
+  output: |
+    BEFORE WE START
+    MISSING: a photo of a daily pack, whole and torn. Until it arrives,
+    no frame shows a pack being torn or gummies poured from one. Gummies
+    appear loose in a hand, as your photo shows them.
+    Your world is bright daytime, not evenings or parties. Flash will be
+    fill light in daylight rooms. Frames 04 and 05 need your OK.
+    Kids line: no child or part of one appears in any frame.
+
+    PRODUCT, SAME WORDS EVERY TIME
+    "the glossy deep green Sprout stand-up foil pouch with a big yellow
+    wordmark and a yellow bear face top right, closed at its resealable
+    top; not a tub, not a jar, not a bottle"
+
+    SHOT LIST (for your approval)
+    01 Alone, absorbed | woman, 30s, hoodie, kitchen counter, morning |
+       picks a gummy from the small handful in her left palm with her
+       right hand, pouch on the counter | feed ad
+    02 Alone, after | man, 30s, work clothes, by the front door | keys
+       in his right hand, a gummy in his left, pouch on the hall table |
+       payoff
+    03 Pair | two adults at a breakfast counter | one tips gummies from
+       her palm into the other's open palm, pouch between them | sharing
+    04 Group, NEEDS YOUR OK | three adults on a front step after a run,
+       one laughing at something off frame, gummies in hands | brand
+       world
+    05 Group, NEEDS YOUR OK | two adults at a busy breakfast counter,
+       packed lunchboxes, pouch in the middle, no child in frame | email
+    06 Flash glint | pouch alone on a kitchen counter, hard shadow on
+       the wall, glint on the foil edge | social main shot
+    07 Scattered | a small handful of gummies on the counter in front of
+       the closed pouch | feed ad
+    08 Stacked | three closed pouches on a pantry shelf (your 84-pack is
+       3 pouches) | 84-pack ad
+    (Held-up frame left out: it needs a photo of the pouch in a hand.)
+
+    TEST FRAME: 06, since it needs no hands. Watch the foil: the flash
+    must not burn out the wordmark.
+
+    PROMPT, FRAME 01
+    Candid 35mm film photograph, direct on-camera flash, warm amber
+    colour cast, the feel of a small camera at a party, gentle grain,
+    camera at chest height, slightly off level. WHERE: a real home
+    kitchen on a bright morning, cream wall, wooden counter, daylight
+    from a window with the flash as fill. WHO: one adult woman in her
+    thirties, hair in a loose bun, grey hoodie, a watch on her left
+    wrist. PRODUCT: the glossy deep green Sprout stand-up foil pouch
+    with a big yellow wordmark and a yellow bear face top right from
+    Image 1, closed at its resealable top, standing on the counter at
+    its true size, label sharp and readable, facing the camera, outside
+    the flash's bright spot; not a tub, not a jar, not a bottle. ACTION:
+    her left palm holds a small handful of small, opaque, deep-green
+    gummy bears (Image 2); her right thumb and finger pick one up.
+    FEELING: absorbed in the task. Eyes on the task, never at the
+    camera. THINGS IN THE ROOM: a kettle, a phone face down, car keys,
+    a fruit bowl. Hard flash shadow on the wall behind, warm and joyful.
+    No added words.
+
+    (cut for length: the full run also had prompts for frames 02 to 08
+    and an empty check log, filled in as photos come back)
+
+tweaks:
+  - what: The buyer and moment
+    how: This sets the whole cast and every room. "Busy parents on the school run" gives a bright morning kitchen with the flash as fill light; "friends at a dinner party" gives a full evening table.
+  - what: People or product only
+    how: Say "5 with people, 3 product only" or "product only". Product-only sets avoid casting problems and suit brands that never show faces.
+  - what: An in-use photo
+    how: Attach one photo of the product being opened or used. The frames that show it in a hand, held up or mid-pour then become possible.
+  - what: Video
+    how: Ask to turn one approved photo into a few seconds of video. It keeps one small action and one reaction at real speed, with a slight handheld shake and nobody turning to the camera.
+
+judge:
+  - Nobody in any photo looks at the camera.
+  - The label is sharp, faces the camera and sits outside the bright flash spot.
+  - A white or cream part of the pack reads warm white, not orange.
+  - Every hand could really hold what it holds, with five fingers.
+  - No children, no real person's face, no other brand's logo, no added words or date stamps.
+  - The set doesn't look staged or laid out like a catalogue.
+
+test:
+  - Make the test frame it picks and put it beside your real product photo at full size. If the label, shape or colour drifted, fix the product description line before you make any more.
+  - Ask for the shot list twice with the same buyer and moment. Both lists should mix people alone, pairs and product-only frames. If one comes back all groups, say how many frames should show people.
+  - Mix three finished photos with three of your usual ad photos and show them to someone outside the business. Ask which ones a friend took. If they can't pick the new ones, the flash and the cast aren't doing their job.
+  - Check the eyes. In every photo with people, nobody should look at the camera. Remake any frame that fails with that one line of its prompt rewritten.
+
+improve:
+  - "Write your real buyers into the step that builds the scene world, with ages and the clothes they'd wear (for Sprout: office workers aged 28 to 45, and busy parents), so every set casts from the same people."
+  - "Add your own places and objects to that step too (for Sprout: everyday adults at home or outdoors, never clinical), so it never invents a setting you'd never use."
+  - Change the frame mix in the step that picks frames. If your brand never shows faces, make it product-only and drop the casting rules.
+  - When the check log shows the same failure three times, add the fix as a fixed line in the prompt order, such as "label faces the camera, outside the flash spot".
+  - Pair it with the skill that writes down exactly how your product looks before you start, and the one that borrows a photo's look for the cleaner shots this set can't give you.
+
+terms:
+  - term: Direct flash
+    meaning: The camera's own flash pointed straight at the subject, giving bright faces and a hard shadow behind.
+  - term: Shot list
+    meaning: The numbered list of photos to make, each with who is in it, what they do and what the photo is for.
+  - term: Feed ad
+    meaning: An ad that appears between normal posts as people scroll Instagram or Facebook.

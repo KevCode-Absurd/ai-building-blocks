@@ -1,0 +1,22 @@
+slug: borrow-landing-page-layout-you-admire
+renamed_from: landing-page-layout-from-reference
+name: "Borrow a landing page layout you admire"
+summary: "A section-by-section plan from a page you like, filled with your own facts and copy."
+category: general
+boards: [ecommerce]
+type: skill
+role: make
+job: page
+level: advanced
+inputs:
+  - {type: reference_set, required: true}
+  - {type: brand_brain, required: true}
+  - {type: offer, required: false}
+outputs:
+  - {type: page_layout_spec}
+  - {type: landing_page}
+uses: [finish-the-sale-your-ad-started]
+origin: rebuilt
+source_ids: [CES-020]
+old_name: clone-from-screenshot
+version: 1.0.0

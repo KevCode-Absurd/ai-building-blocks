@@ -1,0 +1,28 @@
+slug: know-what-each-product-page-photo-should-show
+renamed_from: pdp-gallery-12-frame-plan
+name: "Know what each product page photo should show"
+summary: "Up to 12 product page images planned, each answering one shopper question, with every word sourced."
+category: ecommerce
+type: skill
+role: make
+job: image
+level: intermediate
+inputs:
+  - type: product_data
+    required: true
+  - type: product_photos
+    required: true
+  - type: brand_brain
+    required: false
+  - type: voc_reviews
+    required: false
+  - type: truth_sheet
+    required: false
+outputs:
+  - {type: gallery_plan}
+uses: [stop-ai-pictures-getting-your-product-wrong]
+example: pdp
+origin: rebuilt
+source_ids: [CES-098, CES-095]
+old_name: product-image-templates
+version: 1.0.0

@@ -1,0 +1,23 @@
+slug: stop-the-scroll-with-your-buyers-problem
+renamed_from: problem-first-static-ad-concept
+name: "Stop the scroll with your buyer's problem"
+summary: "One image ad whose picture makes the buyer's problem felt before they read a word."
+category: general
+boards: [ecommerce]
+type: skill
+role: make
+job: ads
+level: advanced
+inputs:
+  - {type: persona, required: false}
+  - {type: product_data, required: true}
+  - {type: voc_reviews, required: false}
+outputs:
+  - {type: image_prompt}
+  - {type: ad_copy}
+uses: [stop-image-tools-redrawing-your-product-and-words]
+example: ad-concept
+origin: rebuilt
+source_ids: [CES-135]
+old_name: scroll-stopper-static-ads
+version: 1.0.0

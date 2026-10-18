@@ -1,0 +1,21 @@
+slug: turn-a-real-complaint-into-praise-people-read
+renamed_from: native-ad-image-one-star-review-card
+name: "Turn a real complaint into praise people read"
+summary: "A plain review card built only from a real customer review whose complaint is secretly a compliment."
+category: general
+boards: [ecommerce]
+type: skill
+role: render
+job: image
+level: advanced
+inputs:
+  - {type: voc_reviews, required: true}
+  - {type: ad_copy, required: true}
+outputs:
+  - {type: image_prompt}
+uses: [get-story-ads-read-with-the-right-picture]
+example: native
+origin: own
+source_ids: [CES-069]
+old_name: one-star-review
+version: 1.0.0

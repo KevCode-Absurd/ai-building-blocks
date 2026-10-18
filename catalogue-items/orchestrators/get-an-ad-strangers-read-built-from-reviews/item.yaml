@@ -1,0 +1,25 @@
+slug: get-an-ad-strangers-read-built-from-reviews
+name: Get an ad strangers read, built from reviews
+summary: "A story ad that reads like a normal post, with its picture plan and an ad rules check."
+category: orchestrator
+boards: [ecommerce]
+type: workflow
+role: orchestrate
+job: ads
+level: advanced
+inputs:
+  - {type: voc_reviews, required: true}
+  - {type: product_data, required: true}
+  - {type: persona, required: false}
+  - {type: landing_page, required: false}
+outputs:
+  - {type: image_prompt}
+  - {type: audit_report}
+uses: [find-the-story-ad-worth-writing-first, stop-strangers-scrolling-with-a-story-ad, get-story-ads-read-with-the-right-picture, keep-facebook-from-blocking-your-ads]
+steps:
+  - {uses: find-the-story-ad-worth-writing-first, note: "Decide whether a story ad fits, which customer problem to lead with, and who tells the story."}
+  - {uses: stop-strangers-scrolling-with-a-story-ad, note: "Write the 150 to 400 word story for people who have never heard of you."}
+  - {uses: get-story-ads-read-with-the-right-picture, note: "Pick the kind of picture that fits the story and write its image prompt."}
+  - {uses: keep-facebook-from-blocking-your-ads, note: "Check the story and the picture plan against Facebook and Instagram ad rules."}
+origin: own
+version: 1.0.0

@@ -1,0 +1,178 @@
+new_slug: get-different-video-ads-from-same-research
+name: Get different video ads from the same research
+summary: Script types matched to your buyer and your proof, so one round of research gives four different ads.
+job: make-video-ads
+
+headline: Get four video ads that are truly different from each other, from the same customer research
+subhead: Give it your buyer, the reason they buy, the length and what you can actually prove. It picks script types from a library of 19, spreads them so each ad is carried by something different, sets the feeling for each, and lists the types it skipped and why.
+
+explain: |
+  Write four scripts from the same research with the same recipe and you get the same ad four times, with new words. Viewers and the ad platform treat them as one ad, so your test tells you nothing.
+
+  A script type is a different shape for the same truth: a different way in, a different order, a different thing doing the persuading. A confession, a list of three things, a customer who noticed the change and an offer up front can all sell the same product to the same buyer. This skill shortlists the types your facts can support (a type that needs a customer story or a test you don't have is skipped, never faked), spreads the batch across problem, how it works, proof and offer, and gives each script a starting feeling and an ending feeling. Pair it with a script-writing skill to write them.
+
+when:
+  - Your last batch of ads all looked like versions of one ad.
+  - You have good customer research and want several ads to test against each other.
+  - You're not sure which way into the problem will work, and want to test the options properly.
+
+you_give:
+  - The buyer, the reason they buy and the offer
+  - How much the buyer already knows, and the length
+  - What you can supply (how buyers cope now, what they tried, what nearly stopped them, process facts, a real customer account, time points, offer terms, a real shortcoming)
+  - How many scripts you want (optional, 4 by default)
+you_get:
+  - A batch of script types, each with what carries it, how it opens and its feeling
+  - The fact that meets each type's needs
+  - A list of skipped types, each with the reason
+  - The scripts themselves, if you pair it with a writing skill
+
+how_to_use:
+  - Copy the skill and paste it into Claude, ChatGPT or Gemini. Add its reference file (types.md) too.
+  - Paste your buyer, the reason they buy, the offer and the length.
+  - List what you can prove. Be honest about what you don't have; missing facts just skip types.
+  - Read the skipped list. It shows which facts would open up more types.
+  - Take each chosen type to a script-writing skill, such as the one that writes from customer quotes or the nine-beat one.
+
+how_it_works:
+  - title: Shortlists types
+    text: Checks all 19 types against your facts, how much the buyer knows and the length. A type that needs something you don't have is skipped.
+  - title: Spreads the batch
+    text: One type carried by the problem, one by how it works, one by proof, one by the offer or a doubt. Never two that open on the same fact.
+  - title: Loads each recipe
+    text: Takes the person, tense, beat order and where the product arrives for each type from the reference file.
+  - title: Sets the feeling
+    text: Gives each script a lead feeling and an ending feeling, each starting from something your research shows customers feel.
+  - title: Lists what it skipped
+    text: Names every type left out and the missing fact or rule behind it.
+
+output_shape: |
+  Batch: <n> scripts
+
+  <n>. <type> | carried by <beat> | opens <how it opens> |
+     feel: <lead feeling> -> <ending feeling>
+     | needs met: <the fact, and where it came from>
+  (one row per script)
+
+  Spread: <which beats carry the batch>. <check that no two open on
+  the same fact>
+
+  Skipped types and why
+  <type>   <reason, or MISSING: the fact it needs>
+
+example:
+  business: sprout
+  input: |
+    [the skill]
+
+    Buyer: the quitter who wants to stick, 28 to 45. Has quit greens
+    powders, pill stacks and multivitamins. Doubt: "A gummy can't
+    hold enough to replace my powder."
+    Reason to buy: one daily habit that lasts.
+    Offer: $29.99 first order with the text sign-up, renews at $49.99
+    every 4 weeks. 30-day money back, first order only.
+    Knows: the problem and the fixes, not Sprout. Length: 45 to 60 s.
+    Voice: playful, cheeky, no guilt.
+    What we can supply:
+    - 1 pack = 60+ ingredients, 21 vitamins and minerals, 6 g fiber;
+      tear, tip, eat; no water, no shaker
+    - reviews: "the drink was definitely gritty/chalky" (3); "I also
+      stopped buying separate probiotic gummies, b12 gummies, and
+      multivitamin gummies." (5); "So easy to grab and eat on my way
+      to the billion things I have to do as a mom." (15); "I thought
+      the first pack I tried tasted terrible, but after the third day
+      they started tasting better" (18)
+    - survey, of surveyed users: "95% ... take [Sprout] at least
+      4-6x per week with 80% taking daily"
+    - pectin base, vegan; third-party tested for 70 pesticides
+    Not on file: time points, a day count, a test against rivals.
+  output: |
+    Batch: 4 scripts
+
+    1. straight argument | carried by the problem | opens on how he
+       copes, said to "you" (the half-used tub at the back of the
+       cupboard) | feel: matter of fact -> relief
+       | needs met: quitting powders (buyer profile, review 3)
+    2. honest review | carried by the doubt | opens on what isn't
+       perfect: the first pack can taste odd | feel: matter of fact ->
+       joy | needs met: a real shortcoming (review 18, brand file note
+       that taste can take a few days)
+    3. three things | carried by how it works | opens on a count and an
+       open question (three things a habit needs, and the one powders
+       miss) | feel: matter of fact -> pride
+       | needs met: one pack a day (nothing to measure), no water or
+       shaker (nothing to wash), 21 vitamins and minerals and 6 g of
+       fiber (what's in it), each with what it means for him
+    4. daily routine | carried by proof | opens on a moment of an
+       ordinary morning, pack torn on the way out | feel: joy -> pride
+       | needs met: how and when customers use it (review 15) and the
+       survey, said as "of surveyed users"
+
+    Spread: problem, doubt, how it works, proof. No two open on the
+    same fact. No fear or guilt: the brand's voice rules them out, so
+    script 1 leads on matter of fact, not fear of loss.
+
+    Skipped types and why
+    failed solutions  needs met (reviews 3 and 5), but it opens on the
+                      same powder fact as script 1. Swap it in if you
+                      drop script 1.
+    objection first   needs met (the "can't hold enough" doubt). The
+                      batch is full; swap it for script 2 if you'd
+                      rather not raise taste.
+    confession        needs a real customer telling her own story with
+                      stakes; an AI presenter can't
+    unaware observation  wrong stage: this buyer knows the problem
+    discovery         MISSING: one true cause to teach. The study shows
+                      absorption only.
+    category call-out "gritty/chalky" is one customer's words, and it
+                      opens on the powder again
+    timeline, days in MISSING: time points and a day count Sprout holds
+    how it's made     real facts (pectin base, testing), but they
+                      answer "is it clean", a doubt this buyer doesn't
+                      have
+    witness           MISSING: a real account of someone else noticing
+    demonstration     no visible result; the tear and pour already sit
+                      inside scripts 3 and 4
+    side by side      MISSING: a real test against rivals
+    price of the problem  "$94 a month" is one reviewer's powder bill,
+                      not a cost the business states
+    offer first, identity led  wrong stage: these suit buyers who
+                      already know Sprout
+
+tweaks:
+  - what: How many scripts
+    how: Ask for 3, 4 or 6. Above 4 it still keeps no more than two scripts carried by the same beat, so bigger batches need more facts.
+  - what: What you can supply
+    how: Each fact you add can open a type. Two failed fixes from reviews open "failed solutions"; a real shortcoming opens "honest review"; a process decision opens "how it's made".
+  - what: Length
+    how: Stories need about 60 seconds and a timeline needs longer. At 30 seconds the shortlist leans to demonstration, three things and offer first.
+  - what: Feelings your brand avoids
+    how: Say if your voice rules out fear or guilt. It takes the nearest allowed feeling and says so.
+
+judge:
+  - Each script would be called a different ad from its neighbor.
+  - Each type's needs are met by a fact you supplied, named next to it.
+  - No more than two scripts are carried by the same beat.
+  - Two types never open on the same fact.
+  - Every skipped type has a reason, and missing facts are marked.
+
+test:
+  - Leave out any customer story. "Witness" and "confession" should land in the skipped list with a reason, never in the batch with a made-up account.
+  - Run it twice on the same input. The beats carrying the batch should stay spread the same way, even if the types differ.
+  - Read the four opening descriptions aloud to a colleague. If two sound like the same ad, ask for a swap from the skipped list.
+  - Add one new fact (a real shortcoming, say) and run it again. The type it unlocks should appear in the batch or move up the skipped list.
+
+improve:
+  - Keep a standing list of what your business can supply (failed fixes, shortcomings, process facts, time points) in "What you need" in the skill file, and add to it as you learn more.
+  - Write your brand's banned feelings (fear, guilt) into step 4, so the feeling plan always fits your voice.
+  - Add a note to the type library for types that have won for you, so the shortlist tries them first.
+  - Test the whole batch at once on the same audience, and save which type won to your brand file.
+  - Pair it with a skill that writes a video ad script from customer quotes, to write each chosen type.
+
+terms:
+  - term: Script type
+    meaning: A shape for a script, such as a confession or a demonstration, with its own opening, order and thing doing the persuading.
+  - term: Carried by
+    meaning: The part of the argument doing most of the selling (the problem, a doubt, how it works, proof or the offer).
+  - term: Lead and ending feeling
+    meaning: The feeling the script opens with and the one it ends on. The move between them is the script's shape.

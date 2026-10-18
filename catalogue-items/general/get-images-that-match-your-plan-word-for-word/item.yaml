@@ -1,0 +1,21 @@
+slug: get-images-that-match-your-plan-word-for-word
+renamed_from: image-prompt-from-approved-plan
+name: "Get images that match your plan, word for word"
+summary: "An image prompt that keeps your product, your exact words and your layout, so fewer tries go wrong."
+category: general
+boards: [ecommerce]
+type: skill
+role: render
+job: image
+level: advanced
+inputs:
+  - {type: image_plan, required: true}
+  - {type: product_data, required: false}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: image_prompt}
+uses: [get-a-sharper-bigger-image-with-nothing-changed]
+origin: own
+source_ids: [CES-046]
+old_name: image-prompt-craft
+version: 1.0.0

@@ -1,0 +1,172 @@
+new_slug: find-what-stops-visitors-buying-30-quick-checks
+name: Find what stops visitors buying, in 30 quick checks
+summary: Pass, warn or fail on 30 checks for your landing page, plus the five fixes to make first.
+job: audit-landing-page
+
+headline: Find what's stopping visitors from buying, in 30 checks, with the five fixes to make first
+subhead: Paste your page text, a phone screenshot of the first screen and, if you have them, the ad and your facts. It runs 30 checks in the order a buyer meets them (clarity, copy, offer, proof, friction, truth), quotes the evidence for each, and ranks the fixes.
+
+explain: |
+  Before a page goes live, or right after it flops, you need a quick, honest read of what's wrong. A gut feeling misses things, like the price being below the first screen on phones or a review nobody can trace.
+
+  This skill runs your page through 30 checks grouped the way a buyer meets the page. Clarity (does the headline say what I get?), copy (does it carry the ad's promise?), offer (is there a reason to buy now?), proof (are there real customer quotes?), friction (is the guarantee by the button?) and truth (is every number one you state?). Each check is pass, warn or fail, with a quote or location as evidence. The ten fail-level checks are the ones that most often cost sales or trust. Then it ranks the fixes by impact, confidence and ease, and names the first buyer need the page misses.
+
+when:
+  - A page is about to go live and you want a last check before spending on ads.
+  - A page just had a bad week and you want a quick idea of why before a deeper audit.
+  - You're reviewing someone else's page draft and want a structured way to give feedback.
+
+you_give:
+  - The page text, and a phone screenshot of the first screen if you can
+  - Whether it's a page you're building or one you captured from a link
+  - The ad that sends people there, for the continuity checks (optional)
+  - Your facts, such as approved claims, prices, banned claims, rating and guarantee, for the truth checks (optional)
+you_get:
+  - A two-line verdict naming the first buyer need the page fails
+  - A table of all 30 checks with result, evidence and fix
+  - The top five fixes, ranked by impact, confidence and ease
+  - A list of what it couldn't judge and what would let it
+
+how_to_use:
+  - Copy the skill and paste it into Claude, ChatGPT or Gemini.
+  - Paste the page text and attach a phone screenshot of the first screen.
+  - Paste the ad word for word, or the continuity checks are marked "not judged".
+  - Paste your approved and banned claims and your real prices, or the truth checks are marked "not judged".
+  - Fix the top five in order. Leave the warnings for a second pass.
+
+how_it_works:
+  - title: Checks clarity
+    text: Nine checks, such as whether the headline states the outcome and the price shows without scrolling on a product page.
+  - title: Checks the copy
+    text: Seven checks, such as whether the first screen carries the ad's promise and the headings say what the buyer gets.
+  - title: Checks the offer
+    text: Four checks, such as a real offer worth acting on and savings shown in money.
+  - title: Checks the proof
+    text: Three checks, such as at least three real, traceable customer quotes.
+  - title: Checks friction
+    text: Three checks, such as the guarantee or returns line sitting under the main button.
+  - title: Checks the truth
+    text: Four checks, such as every number being one you state, no banned claim and no made-up urgency.
+  - title: Ranks the fixes
+    text: Scores each fix on impact, confidence and ease out of 10 and ranks by multiplying the three.
+
+output_shape: |
+  VERDICT
+  <the first buyer need the page fails to meet, in 2 lines>
+
+  CHECKS
+  #  | Check | Result (pass / warn / fail / not judged) | Evidence | Fix
+  1  | Headline states the outcome | <...> | "<quote>" | <one line>
+  ...
+  30 | No long dashes | <...> | <...> | <...>
+
+  TOP 5 FIXES  (impact x confidence x ease)
+  1 <fix>  <I> x <C> x <E> = <score>
+
+  NOT JUDGED
+  <check>: <what you'd need to judge it>
+
+example:
+  business: sprout
+  input: |
+    [the skill]
+
+    The page: Sprout's main product page, captured from the live link as
+    text, top to bottom (sprout/product-page.md). No screenshot.
+
+    The ad: "'Sprout is too expensive': here's 61% off to prove otherwise"
+
+    Facts: sprout/brand.md, including the "risky or unsupported" claims
+    table and the real prices and guarantee terms.
+  output: |
+    VERDICT
+    The page fails the first thing a buyer checks: the ad promised 61%
+    off and the page says 52%, "up to 55%" and 55%.
+
+    CHECKS
+    #  Result      Evidence                                   Fix
+    1  fail        Headline "Sprout Superfood Gummies"         State the outcome
+    2  warn        "revive whole body vitality"                Say what's in a pack
+    3  warn        "$1.07/day" is the first box only           Real reason or none
+    4  warn        "4.8/5.0 (100,000)"; widget says 4.75       One rating, sourced
+    5  not judged  First screen not captured                   Phone screenshot
+    6  not judged  Price likely below first screen (inferred)  Phone screenshot
+    7  pass        Product page for buyers who know the brand
+    8  not judged  Gallery not captured
+    9  n/a         Product page
+    10 fail        Ad 61%, bar 52%, badge 55%                  One number everywhere
+    11 warn        Bullets: clarity, energy, immunity, stress,
+                   digestion, absorption                       One reason to buy
+    12 pass        "Snackable, Packable, Tested"
+    13 pass        Free shipping kept to bar and plan box
+    14 warn        FAQ has no taste, Sugar-Free or cancel Q    Add those three
+    15 warn        "Supports immunity" has no backing          Cut it
+    16 n/a         Not a long page
+    17 pass        Subscribe $29.99 against one-time $66.65
+    18 warn        "UP TO 55% OFF", over 30%                   Lead with value
+    19 pass        $66.65 crossed out, $29.99 shown
+    20 n/a
+    21 pass        Review cards and live widget
+    22 warn        Reviews at the very bottom                  Move 3 by the button
+    23 pass        Widget shows customers' own words
+    24 warn        Guarantee shown, "first order only" hidden  Add "first order"
+    25 not judged  Sticky button not captured
+    26 warn        "Sign Up for 55% Off" pop-up, timing unknown Delay it
+    27 fail        "21" and "over 20" vitamins; a stat with
+                   its number missing                          Fix or remove
+    28 fail        "Promotes mental clarity + energy" is on
+                   the brand's own risky list                  Remove
+    29 fail        "Limited Time Sale" beside a price cut
+                   "Not just for a week but indefinitely"      Drop "Limited Time"
+    30 pass        No long dashes seen
+
+    TOP 5 FIXES  (impact x confidence x ease)
+    1 Plan box says "$29.99 first box with text sign-up, then $49.99
+      every 4 weeks"                                  8 x 8 x 9 = 576
+    2 One discount number, matching the ad            9 x 9 x 7 = 567
+    3 "30-day money-back guarantee on your first order" 6 x 9 x 10 = 540
+    4 Remove "Limited Time Sale"                      6 x 8 x 10 = 480
+    5 Remove the three unbacked claims from the bullets 7 x 8 x 8 = 448
+
+    NOT JUDGED
+    Checks 5, 6, 8, 25: need a phone screenshot of the first screen and a
+    scroll past it. Check 26: needs the pop-up's timing.
+    MISSING: which discount is the real first-order offer
+
+tweaks:
+  - what: The ad
+    how: Add it and the continuity checks (the first screen carries the ad's promise, offer and product) get judged instead of skipped.
+  - what: Your facts
+    how: Add your claims list and real prices and the four truth checks can run. Without them it lists which numbers on the page need a source.
+  - what: Building or captured
+    how: Say "I'm building this page" and it can judge things like the image slots and button text you control. A captured page is judged only on what's visible.
+  - what: Product page add-on
+    how: For a product page in an online store, the store add-on adds checks for the variant picker, delivery and returns near the price, and subscription terms.
+
+judge:
+  - Every fail and warn quotes the page or says where on the page.
+  - The verdict names one buyer need, not a list.
+  - No fix adds a fact, rating or offer you didn't supply.
+  - Checks it couldn't see are marked "not judged", not passed.
+  - There's no overall score or percentage. The checks point to fixes, they don't predict sales.
+
+test:
+  - Run it on an old version of a page you've since fixed. The problems you fixed should come back as fails or warns.
+  - Leave out the ad. Check 10 and the other carry-on-from-the-ad checks should say "not judged", not pass.
+  - Run it twice on the same page. The fail results should match both times.
+  - Check every quote in the evidence column against your page. A quote that isn't on the page means it guessed.
+
+improve:
+  - Add checks your market needs (a size guide for clothing, a dosage line for supplements) and mark each one fail or warn. If you add or remove checks, change "30" in the skill's name and title.
+  - Change the discount limit in check 18 (under 30%) to match your own pricing rules.
+  - Paste your banned claims and real prices into the skill's "Facts" line once, so the truth checks run every time.
+  - Save each verdict and top five fixes, with the date, in your brand file, so you can see what you fixed last time.
+  - Pair it with a ranked page review when you want fixes in buyer order, and a full audit with your sales numbers when you need to know what each fix is worth.
+
+terms:
+  - term: Pass, warn, fail
+    meaning: Fail checks are the ones that most often cost sales or trust. Warn checks are worth fixing next.
+  - term: Risk reversal
+    meaning: Anything that takes the risk off the buyer, such as a money-back guarantee or free returns.
+  - term: Sticky button
+    meaning: A buy button that stays on screen on a phone as the visitor scrolls.

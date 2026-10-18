@@ -1,0 +1,186 @@
+new_slug: know-if-your-new-prompt-writes-better-ads
+name: Know if your new prompt writes better ads
+summary: A blind side-by-side of ads from your old and new prompt, with failures and cost per usable ad.
+job: set-up-ai
+
+headline: Find out if your new prompt really writes better ads, or just cheaper ones
+subhead: Give it the ads your old prompt made, the ads your new prompt made from the same briefs, and the facts each one had to follow. It pairs them up, scores both sides without knowing which is new, flags outright failures, and tells you whether to keep the change.
+
+explain: |
+  You edit a prompt, the next few ads look better, and you switch. But you compared a handful of outputs while knowing which one was new, so you saw what you hoped to see. Or you trimmed the prompt to save money and didn't notice it started inventing claims.
+
+  This skill runs a fair comparison. Each pair has the same product, buyer, facts and format, so the only difference is your change. The two sides are shuffled and scored 0 to 4 on seven criteria, such as whether the claims are accurate and whether the words and picture agree. An unsupported claim or a wrong product fails that side outright, whatever its score. Then it adds up wins, ties, losses and cost per usable ad.
+
+when:
+  - You rewrote a prompt or skill and want to know if the ads really improved.
+  - You cut down the information you give the AI to save money and want to check quality didn't drop.
+  - You're choosing between two versions of a prompt and want a fair test before rolling one out.
+
+you_give:
+  - The ads your old prompt made, saved before you changed anything
+  - The ads your new prompt made from the same briefs
+  - The briefs, with the approved facts and offer terms for each
+  - Token counts, spend and failures for both runs (optional)
+you_get:
+  - Scores for each pair on seven criteria, with the evidence and the smallest fix
+  - A list of outright failures on each side
+  - A summary of wins, ties, losses and cost per usable ad
+  - A one-paragraph decision on whether to keep the change
+
+how_to_use:
+  - Copy the skill and paste it into Claude, ChatGPT or Gemini.
+  - Before you change anything, save the outputs your current prompt makes. You can't do this fairly afterwards.
+  - Run the new prompt on exactly the same briefs and paste both sets, labelled by brief.
+  - Paste the approved facts and offer terms for each brief.
+  - For a fairer result, have a second person or a fresh chat do the scoring without knowing which side is new.
+
+how_it_works:
+  - title: Freezes the old outputs
+    text: Treats the saved outputs as the "before" set, including failures. A later re-run doesn't count.
+  - title: Builds matched pairs
+    text: Pairs each old output with the new one from the same brief, and notes anything else that differs.
+  - title: Runs basic checks
+    text: Confirms every output exists, files open, and exact text survived, before any judging.
+  - title: Judges blind
+    text: Shuffles A and B in each pair and hides dates, model and cost from the judge.
+  - title: Scores seven criteria
+    text: Scores 0 to 4 on buyer fit, claim accuracy, brand voice, words and image agreeing, readability, a distinct idea and product faithfulness.
+  - title: Fails what must fail
+    text: An unsupported claim, the wrong product or unreadable key text fails that side, whatever its score.
+  - title: Adds it up and decides
+    text: Reveals the labels, counts wins, ties and losses, works out cost per usable ad, and says whether to keep the change.
+
+output_shape: |
+  PAIR <id>   (A = <old or new, revealed after scoring>)
+  Criterion                 A    B
+  Buyer fit                 <0-4> <0-4>
+  Claims accurate           <0-4> <0-4>
+  Brand voice and look      <0-4> <0-4>
+  Words and image agree     <0-4> <0-4>
+  Easy to read              <0-4> <0-4>
+  Distinct idea             <0-4> <0-4>
+  Product faithful          <0-4 or not assessed>
+  Failures:  A <list or none>   B <list or none>
+  Choice:    <A / B / tie>   Reasons: <evidence and smallest fix>
+
+  SUMMARY
+  Wins <n>  Ties <n>  Losses <n>  Outright failures <old n / new n>
+  Cost per usable ad <old / new, or MISSING: usage records>
+
+  DECISION
+  <keep, reject or test more, and why. Judges ad quality only; says
+  nothing about sales>
+
+example:
+  business: sprout
+  input: |
+    [the skill]
+
+    BEFORE (live main texts, sprout/ads.md, emoji and ticks left out)
+    1: "Big news: your first order of [Sprout] just got a lot more
+    affordable. $29.99 for your first order, that's less than
+    $1.10/day for 60+ whole-food ingredients, 21 vitamins & minerals,
+    and gut-supporting probiotics in one daily gummy pack. $20 off
+    your first order, +$5 off for every extra person, Third-party
+    tested. Online-exclusive offer. Shop [Sprout]."
+    2: "Feeling off in your gut lately? [Sprout] supports digestion
+    with 6g of fiber, prebiotics, and daily vitamins to help keep
+    your gut balanced without powders or prep."
+
+    AFTER (new prompt: brand file + claims list, same two briefs)
+    1: "Sprout is too expensive? Your first 28 packs are $29.99 with
+    our text sign-up offer. 60+ ingredients, 21 vitamins & minerals
+    and 6 g prebiotic fiber a day. Renews at $49.99 every 4 weeks.
+    Third-party tested."
+    2: "Feeling off in your gut lately? One daily pack of Sprout has
+    6 g prebiotic fiber to support digestion. No powders, no shaker,
+    no prep. Rip. Tip. Enjoy."
+
+    Briefs: 1 = offer ad for the price doubter. 2 = gut buyer.
+    Facts: sprout/brand.md. No images. No usage records.
+  output: |
+    SET-UP
+    2 pairs. Order shuffled before scoring: pair 1 A=after, pair 2
+    A=before. The same person shuffled and scored, so this was not
+    fully blind. Use a second judge for a real decision.
+    Confound: the "before" texts are the brand's live ads, not saved
+    outputs of a recorded prompt. MISSING: the old prompt and
+    settings, usage records, images.
+
+    PAIR 1 (offer ad)            A    B
+    Buyer fit                    3    2
+    Claims accurate              4    0
+    Brand voice and look         2    3
+    Words and image agree        not assessed (no images)
+    Easy to read                 3    2
+    Distinct idea                2    2
+    Product faithful             not assessed (no images)
+    Failures: A none. B "gut-supporting probiotics": the ingredient
+              list shows prebiotic fiber and no probiotics.
+    Choice: A. B also leaves out the $49.99 renewal, which the price
+    doubter fears. A is plainer than the brand's cheeky voice.
+    Smallest fix for A: add one line in the brand's rhythm.
+
+    PAIR 2 (gut buyer)           A    B
+    Buyer fit                    3    3
+    Claims accurate              3    4
+    Brand voice and look         3    4
+    Words and image agree        not assessed (no images)
+    Easy to read                 4    3
+    Distinct idea                2    2
+    Product faithful             not assessed (no images)
+    Failures: none on either side.
+    Choice: tie. A's "keep your gut balanced" isn't on the approved
+    list; the fix is "supports digestion and gut health". B kept the
+    same first line, so both carry the same idea.
+
+    LABELS REVEALED
+    After wins 1, ties 1, loses 0.
+    Outright failures: before 1, after 0.
+    Cost per usable ad: MISSING (no usage records).
+
+    DECISION
+    Too few pairs to decide. The new prompt caught a real claim
+    error, which is worth keeping. Run 15 to 25 pairs with images,
+    a second judge and usage records before switching. This judges
+    ad quality only. It says nothing about clicks or sales.
+
+tweaks:
+  - what: The number of pairs
+    how: Two or three pairs show you how it works. For a real decision, use 15 to 25 pairs that cover your different products, buyers and formats.
+  - what: Who judges
+    how: Ask a colleague or a fresh chat to score with the labels hidden. If the same person shuffled and scored, the skill says the test wasn't fully blind.
+  - what: Usage records
+    how: Paste token counts and spend from both runs. The summary adds cost per usable ad, which is the number that tells you if a cheaper prompt is really cheaper.
+  - what: Storyboards
+    how: If you're comparing storyboards, paste the full sheets. It adds checks for the same person and product across panels and a clear order of shots.
+
+judge:
+  - Each pair has the same brief on both sides. If the briefs differ, the comparison isn't fair.
+  - An ad with an invented claim fails, even if it scored well on everything else.
+  - Anything the judge couldn't see (an image that wasn't supplied) is marked "not assessed", not guessed.
+  - The decision says what it rests on and how many pairs.
+  - It says nothing about clicks or sales.
+
+test:
+  - "Compare a prompt with itself: run the same prompt twice on the same briefs. You should get mostly ties. A clear winner means the scoring is noisy, so add more pairs."
+  - Slip in one ad with a claim your facts don't support. That side should fail outright, whatever its scores.
+  - Have a colleague or a fresh chat judge the same pairs and compare verdicts pair by pair.
+  - Check one pair by hand. Product, buyer, facts and format should be the same on both sides.
+
+improve:
+  - Change the seven criteria in step 5 of the skill file to the ones your team cares about, or add one such as "sounds like our brand". Keep the 0 to 4 scale.
+  - Add your own outright failures to step 6, such as a banned word or a claim your legal check refused.
+  - Write your decision rule into step 10, for example "keep it if it wins or ties most pairs, has no new failures and costs less".
+  - Keep one fixed set of 15 to 25 briefs and the old prompt's outputs in your brand file folder, so every change is tested on the same set.
+  - Pair it with a skill that writes ad copy from one true product fact, as the prompt you test your changes against.
+
+terms:
+  - term: Blind judging
+    meaning: Scoring two outputs without knowing which came from the old prompt and which from the new.
+  - term: Matched pair
+    meaning: An old and a new output made from exactly the same brief, facts and settings.
+  - term: Outright failure
+    meaning: A problem bad enough to reject an ad whatever its other scores, such as an invented claim or the wrong product.
+  - term: Tokens
+    meaning: The units AI tools count and charge by. More words in and out means more tokens.

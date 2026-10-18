@@ -1,0 +1,167 @@
+new_slug: get-paper-world-ad-script-that-sells
+name: Get a paper world ad script that sells
+summary: A narrated ad told like a small paper storybook, in one of five paper looks.
+job: make-video-ads
+
+headline: Tell your buyer's problem like a small storybook, in a world made of real paper
+subhead: Give it your brief, product facts and claims. It picks one of five paper looks, writes narration where each line is one paper picture, names the paper in every shot, and plans the one transition where the problem turns into your product.
+
+explain: |
+  A world made of real paper (cardstock layers, cutout puppets, torn edges) stops people in a feed and makes a small everyday problem feel like a story. Ask an AI tool for it carelessly and you get flat digital clip art, a craft model sitting on a table, or a coffee cup that comes out as a real cup because nobody said it was paper.
+
+  This skill holds the look together. You pick one of five looks (layered card, flat cutout puppets, torn and glued, collage, folded) and it stays the same in every shot. Every object in every visual note is named as paper. The camera sits inside the paper world, never looking at it from outside. A narrator tells the story; paper people never speak. And because a picture makes a claim as much as words do, it only builds what your approved claims say.
+
+when:
+  - Your product solves a small everyday problem you can tell as a short story.
+  - You want a warm, handmade-looking ad for people who don't know your brand yet.
+  - You want a gift or premium feel with your product as the hero of the scene.
+
+you_give:
+  - A brief with the reason someone buys, the buyer stage, the idea and the length
+  - Video or still, and which paper look (optional)
+  - Your product's shape, colours and every line of label text
+  - Your approved claims, banned claims, offer and guarantee
+you_get:
+  - A video table of narration, on-screen text and paper-named visual notes
+  - A clip plan with words per clip and the transition marked
+  - Or a still plan, a ready-to-paste image prompt and the exact label lines
+  - A list of claims used, each with its source
+
+how_to_use:
+  - Copy the skill and paste it into Claude, ChatGPT or Gemini.
+  - Paste your product facts, label text and claims underneath.
+  - Describe the buyer's moment in a sentence, and pick a look if you have one in mind.
+  - Say "video, 20 seconds" or "still".
+  - Check every visual note names its paper. A thing without "paper" or "card" will come out real.
+  - For a video, take the script to "Turn your paper world script into ready-to-make video shots".
+
+how_it_works:
+  - title: Checks paper fits
+    text: Suits people new to the problem or comparing fixes. It says so if your buyer just needs the offer.
+  - title: Picks one look
+    text: Layered card, flat cutout, torn and glued, collage or folded, kept the same for the whole ad.
+  - title: Keeps it real paper
+    text: Grain, thickness, real shadows, the camera inside the world, and paper that moves only as flat pieces.
+  - title: Limits the claims
+    text: Builds only what your claims and product facts state. No body before and after.
+  - title: Sets people and product
+    text: Paper people are fictional adults who never speak. The product is paper at its true shape, with exact label text.
+  - title: Writes the video
+    text: Two to four settings, one paper picture per line, one transition where the problem turns into the product.
+  - title: Or writes the still
+    text: One moment and viewpoint, a headline of eight words or fewer, and a full image prompt.
+
+output_shape: |
+  LOOK  <one of five, and why>
+
+  Line | Narration | On-screen text | Visual note (paper named, camera, one move)
+  1 | "<line>" | - | <paper setting and objects>, <camera>, <move>
+  ...
+  <n> | "<8 words or fewer>" | - | TRANSITION: <paper move>
+  ... | "<call to action>" | <offer text> | <paper product, held>
+
+  Clip plan: <clip> = <lines>, <words>
+
+  OR STILL
+  Moment: <...>  Viewpoint: <...>  Headline: "<8 words or fewer>"
+  Image prompt: <look wording> <scene> <closing line>
+  Label lines: "<exact text>"
+
+  CLAIMS USED
+  <claim> = <source>
+  MISSING: <...>
+
+example:
+  business: sprout
+  input: |
+    [the skill]
+
+    Brief: the busy parent with no time for herself in the morning.
+    Buyer stage: problem aware. Video, 20 seconds. Look: your pick.
+    Buyer's words: "So easy to grab and eat on my way to the billion
+    things I have to do as a mom."
+    Product: Sprout daily greens gummies. Pouch of 28 daily packs.
+    Tear one pack straight across the top, tip the small handful of
+    deep-green gummy bears into your palm.
+    Pouch: glossy deep green stand-up pouch, big yellow wordmark
+    "Sprout", yellow bear face top right, "28 Daily Packs" at the bottom.
+    Approved: "60+ ingredients, 21 vitamins & minerals, and 6g fiber"
+    in 1 pack.
+    Offer: $29.99 first order with text sign-up, renews at $49.99
+    every 4 weeks.
+    Brand line: "Rip. Tip. Enjoy."
+  output: |
+    LOOK  flat-cutout. Jointed paper puppets suit a light, comic
+    morning rush.
+
+    Line | Narration | On-screen | Visual note
+    1 | "Lunches packed. Keys lost. Shoes, somewhere." | - | A card
+        kitchen; a jointed paper mum in a blue card jumper reaches for
+        paper keys on a card hook while two paper lunchboxes slide
+        across the counter. Camera at her eye level. Move: the
+        lunchboxes slide.
+    2 | "Breakfast for you? Not today." | - | Same card kitchen, a
+        paper slice of toast left on a card plate. Camera low at the
+        counter. Move: the toast tips off the plate edge.
+    3 | "So grab one pack on the way out." | - | TRANSITION: the top
+        layer peels back to reveal a card car interior.
+    4 | "Rip. Tip. Enjoy." | - | Card car, parked: her jointed paper
+        hand tears a green card daily pack (inferred) straight across the top;
+        small dark-green paper bears tip into her palm. Camera close
+        on the hands. Move: one hinge of the wrist.
+    5 | "Sixty-plus ingredients, 21 vitamins and minerals, 6 grams of
+        fiber." | - | A deep-green card pouch on the card passenger
+        seat, label "Sprout" in yellow, a yellow paper bear face top
+        right, "28 Daily Packs" at the bottom. Camera at seat height.
+        Move: slow push in through the layers.
+    6 | "Start your first pack." | $29.99 first order with text
+        sign-up. Renews at $49.99 every 4 weeks | Same, held still.
+
+    Clip plan: 1 = lines 1-3 (17 words), 2 = lines 4-6 (19 words).
+    One transition. No children shown: the lunchboxes carry the
+    family without drawing a child.
+
+    CLAIMS USED
+    "60+ ingredients, 21 vitamins & minerals, and 6g fiber": label
+    claim. Tear straight across the top: brand's own rule.
+    Offer on screen only, not narrated (store rule).
+
+    MISSING: colour of "28 Daily Packs" on the pouch; what a single
+    daily pack looks like (line 4 assumes green, marked inferred).
+
+tweaks:
+  - what: The look
+    how: Name one. Layered card gives a premium, gift feel. Flat cutout suits comedy. Torn and glued feels warm and honest. Folded suits calm brands.
+  - what: Video or still
+    how: For a still, say the buyer stage. People new to the problem get the problem at its worst; people who know you get the product as the hero.
+  - what: Length
+    how: Under 20 seconds it drops the transition and uses one setting. Up to 45 seconds it can use four settings and two transitions.
+  - what: How it works
+    how: Paste how your product works, with a source, and it can build a paper picture of it. Without that, the ad tells the problem and the product only.
+
+judge:
+  - Every object in every visual note is named as paper or card.
+  - One look runs through the whole ad.
+  - No paper person speaks, and none is a child or claims a result.
+  - There are no more than two transitions, each with eight words or fewer over it.
+  - Label text on the paper pack matches your real label exactly.
+
+test:
+  - Search the visual notes for any object not named as paper or card. There should be none.
+  - Run it for a buyer who only needs the offer. It should tell you paper doesn't fit.
+  - Run it twice with the same look. Both versions should keep that look in every shot and use two transitions at most.
+  - Make one still in the chosen look before any video. It's the cheapest way to see if the look suits your brand.
+
+improve:
+  - If one look suits your brand, delete the other four from step 2 of the skill file, so it never picks a look you don't want.
+  - Write every label line, with its colour, into "What you need" or your brand file. The paper pack depends on it.
+  - Add your approved claims to step 4, so every paper picture is checked against them.
+  - Pair it with the skill that turns a paper world script into a look pack and still and clip prompts.
+
+terms:
+  - term: Flat cutout
+    meaning: A paper look made of flat card shapes and puppets with joints, like a shadow-puppet show in colour.
+  - term: Transition
+    meaning: The move from one scene to the next, done in paper here, like a page turning or a layer peeling back.
+  - term: Buyer stage
+    meaning: How much the buyer already knows about the problem and about you.

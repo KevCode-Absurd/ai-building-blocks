@@ -1,0 +1,20 @@
+slug: get-product-photos-that-look-like-one-shoot
+renamed_from: one-colour-world-product-photo-set
+name: "Get product photos that look like one shoot"
+summary: "8 to 12 photos of your product that share one colour, one light and one set of props."
+category: ecommerce
+type: skill
+role: render
+job: image
+level: advanced
+inputs:
+  - {type: product_photos, required: true}
+  - {type: brand_brain, required: true}
+outputs:
+  - {type: photo_set}
+uses: [stop-ai-pictures-getting-your-product-wrong]
+example: instant-photoshoot
+origin: rebuilt
+source_ids: [CES-049]
+old_name: instant-photoshoot
+version: 1.0.0

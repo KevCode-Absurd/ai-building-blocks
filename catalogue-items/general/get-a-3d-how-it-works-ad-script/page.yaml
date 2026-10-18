@@ -1,0 +1,173 @@
+new_slug: get-a-3d-how-it-works-ad-script
+name: Get a 3D how-it-works ad script
+summary: A narrated 3D mini-documentary script, or one cutaway image, about one hidden process your facts support.
+job: make-video-ads
+
+headline: Show buyers the part of your product a camera can't film, without overclaiming
+subhead: Give it your product facts with their sources. It checks whether one hidden process is worth explaining, then writes a 30 to 40 second narrated 3D script in seven beats, or one cutaway image, where every line and picture rests on a sourced fact.
+
+explain: |
+  Some products work in ways nobody can see: what an ingredient does once it's swallowed, what a coating does on hot steel, how a fibre handles sweat. A short 3D explainer can make that visible. It's also where ads overclaim most easily, because a picture of damage disappearing says more than any line of copy.
+
+  This skill only uses the format when four tests pass: a camera can't show it, it's one thing acting on another, every link has a source, and buyers don't already know it. The script follows seven beats, from a surprising fact to what the buyer does next. The brand isn't named until about three quarters through, so it plays as a lesson first. Verbs stay at "supports" or "helps", one technical word carries the whole story, and nothing on screen goes further than the words.
+
+when:
+  - Your product's main benefit happens out of sight, and buyers doubt it does anything.
+  - You have a sourced fact or study that's hard to show in a normal ad.
+  - You want a single cutaway image that explains how it works at a glance.
+
+you_give:
+  - Your selling idea
+  - How the product works, as two or three linked steps, each with a source
+  - Your approved and banned claims, and what buyers assume
+  - Video or image, and the length (optional)
+you_get:
+  - The four tests, passed or failed, with the reason
+  - A 9 to 13 line script with beat, narration, picture and on-screen text
+  - A one-sentence retell a stranger should be able to repeat
+  - Notes on inferred links and claims left out
+
+how_to_use:
+  - Copy the skill and paste it into Claude, ChatGPT or Gemini.
+  - Paste how your product works, step by step, with the source of each step (label, study, test report).
+  - Paste your approved and banned claims. This format lives or dies on them.
+  - Say "video, 30 seconds" or "image".
+  - Read the four tests first. If one fails, use a different format rather than stretch the claim.
+
+how_it_works:
+  - title: Runs the four tests
+    text: Invisible, one thing acting on another, every link sourced, and news to the buyer. If one fails it says so.
+  - title: Keeps it honest
+    text: Uses "supports" or "helps", shows no more than the words claim, and uses one technical word with one shape and colour.
+  - title: Uses scale
+    text: Puts the viewer inside something very large or very small. The product is the only real-looking thing.
+  - title: Writes seven beats
+    text: Surprising fact, reframe, how it works, left alone, what gets in the way, the product, and what the buyer can do.
+  - title: Keeps lines short
+    text: One picture per line, 6 to 9 words each, brand named only from beat 6.
+  - title: Or writes one image
+    text: Freezes the moment one thing meets the other, with a headline and 2 or 3 labels, 20 words in all.
+
+output_shape: |
+  FOUR TESTS
+  Camera can't show it:     <pass/fail, why>
+  One thing acting on another: <A meets B, B does C, so you get D>
+  Every link sourced:       <pass/fail, sources>
+  News to the buyer:        <pass/fail, why>
+
+  Line | beat | narration (6-9 words) | picture | on-screen text
+  1    | scale fact | "<line>" | <very large or very small> | <1-3 words>
+  <9 to 13 lines>
+
+  RETELL: <one sentence a stranger could repeat>
+
+  NOTES
+  - Inferred: <links from common knowledge, to confirm>
+  - Left out: <claims the facts don't support>
+
+example:
+  business: sprout
+  input: |
+    [the skill]
+
+    Idea: answer the doubt "A gummy can't hold enough to replace my
+    powder" (the powder quitter, brand file).
+    Facts (sprout/brand.md):
+    - 1 pack: 60+ ingredients, 21 vitamins & minerals, 6 g fiber.
+      Vitamin C 93 mg.
+    - Study, 2025: 12 weeks, randomized, double-blind,
+      placebo-controlled, 120 healthy adults aged 23 to 59. Blood
+      vitamin C up 40.1% (2.7x placebo), folate up 20.5%.
+    - Approved: "Clinically tested for nutrient absorption", with
+      the study named and its numbers.
+    - Not tested: energy, immunity. Don't claim them.
+    - Review 1: "The issue has never been nutritive content. It's
+      always been an issue of consistency".
+    - Use: tear a daily pack straight across the top, eat the
+      gummies. Brand line: "Tastes like a treat".
+    Settings: video, 30 seconds.
+  output: |
+    FOUR TESTS
+    Camera can't show it: pass. Vitamin C reaching the blood can't
+      be filmed.
+    One thing acting on another: pass. The pack's vitamin C meets
+      the gut, passes into the blood, so blood levels rise.
+    Every link sourced: pass. The rise is from the study; vitamin C
+      passing into the blood is school-level knowledge.
+    News to the buyer: pass. The buyer doubts a gummy holds enough.
+
+    TECHNICAL WORD: vitamin C. Always a small glowing orange sphere.
+
+    1 Scale fact  "Blood vitamin C rose 40.1% in twelve weeks."
+      Picture: inside a vast red river, as if 1 mm tall, orange
+      spheres the size of boulders drifting past.
+      On screen: 40.1%*
+    2 Reframe     "You'd think a gummy is too small to count."
+      Picture: one green gummy bear, huge, on a dark floor.
+    3 Reframe     "This study measured what actually reaches your blood."
+      Picture: wide, 120 stylised clothed adults seen from far above.
+      On screen: 120 adults
+    4 How it works "You chew, and vitamin C passes into your blood."
+      Picture: plain tube shape, orange spheres crossing into red.
+    5 Left alone  "Taken daily for twelve weeks, the levels rose."
+      Picture: the red river, more orange spheres in it.
+    6 In the way  "A skipped powder gives you no vitamin C."
+      Picture: a giant unopened tub of powder in grey light.
+    7 Product     "Sprout gives you vitamin C and twenty more daily."
+      Picture: the real Sprout pouch, exact print.
+      On screen: 21 vitamins & minerals
+    8 Buyer does  "Tear one open on your way out."
+      Picture: a stylised adult from behind at a front door, a daily
+      pack torn straight across the top.
+    9 Buyer does  "Back inside, vitamin C arrives with every pack."
+      Picture: the opening river again, now bright with orange.
+      On screen: Every pack
+
+    * 2025 randomized, placebo-controlled study, 120 healthy adults.
+
+    RETELL: Chewing a Sprout pack sends vitamin C into your blood,
+    and a study saw blood levels rise 40.1% in 12 weeks.
+
+    NOTES
+    - Left out: folate (a second technical word), energy and
+      immunity (not tested), "works" (over-broad).
+    - Line 6 rests on review 1 (consistency). It's an inference that
+      a skipped dose gives nothing, so keep it plain.
+    - Offer, if any, goes on screen over line 9 with the pouch.
+
+tweaks:
+  - what: Video or image
+    how: Say "image" and you get one cutaway or scale picture with a headline and 2 or 3 labels instead of a script.
+  - what: Length
+    how: 30 seconds merges beats 4 and 5 into one line each. 40 seconds gives the "left alone" beat room to show how it works when nothing's in the way.
+  - what: The opening
+    how: With a sourced number it opens on that number. Without one, ask for an open question or a cold open instead.
+  - what: The buyer
+    how: For buyers who've tried rivals, it opens on the hidden part or the fix that failed. Name the buyer and it picks.
+
+judge:
+  - You can say the retell sentence back after one read.
+  - Every number on screen has its source in a footnote or the notes.
+  - The brand's name doesn't appear before about three quarters through.
+  - No picture shows a body part, damage or result the facts don't name.
+  - It ends on something the buyer does, not a feeling.
+
+test:
+  - Give it a product whose result you can watch happen, such as a spray that lifts a stain. It should say this format doesn't fit.
+  - Check every number on screen against its source.
+  - Read the script to someone who doesn't know the product, then ask them to say it back in one sentence. It should match the retell sentence.
+  - Ask whoever checks your claims to mark any picture that shows more than the words say.
+
+improve:
+  - Write how your product works as a chain, with a source for each step, into "What you need" in the skill file, so step 1 starts from your facts.
+  - Add your approved verbs and banned words to step 2 ("Keep it honest"), for example "supports" yes, "repairs" no.
+  - Save the one technical word you settle on in your brand file, so every explainer uses the same one.
+  - Pair it with a skill that turns the chosen process into 3D still and clip prompts, and with one that writes ads from one true product fact when the four tests fail.
+
+terms:
+  - term: Cutaway
+    meaning: A picture that slices through something to show what's happening inside it.
+  - term: Beat
+    meaning: One step in the story, such as the opening fact or the moment the product appears.
+  - term: Placebo-controlled
+    meaning: A study where some people got a dummy version, so the real effect can be compared against it.

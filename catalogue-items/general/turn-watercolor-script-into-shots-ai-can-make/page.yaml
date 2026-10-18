@@ -1,0 +1,196 @@
+new_slug: turn-watercolor-script-into-shots-ai-can-make
+name: Turn your watercolor script into shots AI can make
+summary: Locked style lines, image prompts and gentle video prompts that keep every clip one real watercolor.
+job: make-video-ads
+
+headline: Get prompts that keep every clip looking like the same real watercolor painting
+subhead: Give it your watercolor script and a product photo. It names the one paint movement, locks the paper, pigment, colors and figure in fixed lines, and writes image prompts, gentle video prompts and transitions in the order you make them.
+
+explain: |
+  AI video tools turn watercolor into something else within a few seconds. Pigment swirls through every frame, the paper texture slides around, a face turns photographic, a bloom washes across the label, and the whole thing starts to look like a filter over footage. Each clip ends up a slightly different painting.
+
+  This skill builds a controlled painted world instead. It names the one paint movement and where it starts and stops. It writes a style lock, a world line, a figure line and a camera line, then pastes them unchanged into every prompt. Images come first (the painted product alone, the figure alone, then the opening frame), and each clip carries a movement lock: paper still, forms keep their shape, only one pigment edge moves. It turns a script into shot-by-shot instructions for a video tool; it does not write the script.
+
+when:
+  - You have a watercolor ad script and need it made with an AI image and video tool.
+  - Earlier tries looked like a filter, or the paint kept swirling everywhere.
+  - Your product's label keeps getting smudged or rewritten in painted shots.
+
+you_give:
+  - The script with narration and a scene list
+  - A real product photo, every line on the label, how it works and what it's made of
+  - Your brand colors, tone and the buyer's moment (optional)
+  - The clip lengths your video tool accepts (optional, one clip per approved image by default)
+you_get:
+  - The paint movement, with where it starts and stops, and the look
+  - Fixed world, style, figure and camera lines
+  - Image prompts with attachments named by what each is for
+  - Clip prompts with a movement lock, plus transition prompts
+
+how_to_use:
+  - Copy the skill and paste it into Claude, ChatGPT or Gemini.
+  - Paste your watercolor script and attach the product photo. Type out every line on the label.
+  - Make the painted product alone first and check the label before anything else.
+  - Approve each image before you make its clip.
+  - Make the clips in order, then lay the narration and offer text over them.
+
+how_it_works:
+  - title: Names the paint movement
+    text: Picks the one movement only paint can do (bloom, bleed, dissolve, brush reveal, wash change, pigment trail, painted transformation) that starts or ends at the product.
+  - title: Chooses one look
+    text: Storybook, botanical, editorial, ink and wash, or product illustration, kept for the whole ad.
+  - title: Locks the painted world
+    text: One line for paper, pigment layers, edges, colors, linework and how much bare paper, reused unchanged.
+  - title: Builds prompts in one order
+    text: Style lock, look line, world line, figure line, the scene, camera line, with "painted" on every noun.
+  - title: Makes images first
+    text: The painted product alone (label approved), the figure alone, then the opening frame with one wet edge already spreading.
+  - title: Animates gently
+    text: Every clip has a movement lock and one paint movement. Everything else is dry and still, and the last shot is held.
+  - title: Plans sound and transitions
+    text: One narrator, soft paper and water sounds, and transitions where either the view moves or the paint carries it.
+
+output_shape: |
+  PAINT MOVEMENT  <movement>. Starts <where>, stops <where>. <what
+  it never crosses>
+  LOOK  <storybook, botanical, editorial, ink and wash, product>
+
+  WORLD LINE   <paper, layers, blooms, edges, colors, linework, bare>
+  STYLE LOCK   <fixed paragraph, pasted unchanged>
+  FIGURE LINE  <only if a figure appears>
+  CAMERA LINE  <fixed paragraph, pasted unchanged>
+
+  IMAGES (approve each before the next)
+  <n> <what's painted>. Attach: <each reference and what it's for>
+
+  CLIP <n> PROMPT (<lines>)
+  [STYLE LOCK] Movement lock: <..> One movement: <..>
+  Narration over it: "<line>"  End frame: <..>
+
+  TRANSITIONS  <how each clip joins the next>
+  SOUND  <narrator, paper and water sounds, music only if used>
+  MISSING: <facts it needed and didn't get>
+
+example:
+  business: sprout
+  input: |
+    [the skill]
+
+    Script (from the watercolor ad script skill), specimen look:
+    1 "You know you should eat more greens." Plain painted powder tub.
+    2 "The powder is the part you can't face."
+    3 "So the greens come in one small daily pack." Pouch, torn pack.
+    4 "Tear the top. Here's what's inside." Brush reveal: a leaf
+      green stroke from the pack; kale, spinach, broccoli, wheatgrass
+      stand behind it.
+    5 "Sixty-plus ingredients, twenty-one vitamins and minerals, six
+      grams of fiber." Bowl of gummies in front.
+    6 "Sprout. First order, $29.99 with the text sign-up."
+    7 "For people who'd rather eat their greens than drink them."
+    Product: Sprout pouch and one daily pack, photos attached. Pouch:
+    glossy deep green foil, big yellow wordmark "Sprout", yellow bear
+    face top right, "28 Daily Packs" at the bottom. Rest of label not
+    on file. Pack torn straight across its top edge only.
+    Colors: forest green #00582D, warm cream #FFF7DF, sunflower yellow
+    #FFCC2E.
+  output: |
+    PAINT MOVEMENT  Brush reveal. Starts at the torn top of the painted
+    pack on line 4, travels right across bare paper, stops a hand's
+    width from the sheet's edge, settled before line 5. It never
+    crosses the pouch.
+    LOOK  Botanical (the script's "specimen": what it's made of)
+
+    WORLD LINE
+    Warm-cream cold-press paper with clear tooth; 2 or 3 see-through
+    layers, light granulation; small blooms in the background only,
+    never on the pouch or pack; soft wet edges behind, crisp dry edges
+    on the pouch, pack and greens; colors before the turn: grey-green,
+    warm grey, bare paper; after: leaf green, yellow-green and deep
+    forest green, with sunflower yellow only on the pouch; no
+    linework; at least a third of the sheet bare paper.
+    STYLE LOCK
+    Original watercolor animation on cold-press paper, see-through
+    layered pigment, visible paper tooth, controlled wet-on-wet
+    blooms, uneven painted edges, kept bare paper, natural
+    granulation, painterly motion only, no glossy 3D, no flat vector
+    gradients.
+    FIGURE LINE  none. No figure appears.
+    CAMERA LINE
+    The painting fills the frame, flat and square on; no desk,
+    brushes, hand, tape, frame or sheet edge; light is unpainted
+    paper; one color family; not a photo under a filter, not thick
+    paint.
+
+    IMAGES (approve each before the next)
+    1 The painted pouch alone on bare paper: glossy deep green, "Sprout"
+      in big yellow letters, a yellow bear face top right, "28 Daily
+      Packs" at the bottom, crispest edges on the sheet. Attach: pouch
+      photo = the product.
+    2 The painted daily pack alone, torn straight across its top edge.
+      Attach: pack photo = the product.
+    3 Opening frame: [STYLE LOCK] [LOOK] [WORLD] A painted plain tub
+      of powder with no label on bare paper, grey-green washes, one wet
+      edge still spreading at its base. [CAMERA]
+
+    CLIP 2 PROMPT (lines 3 and 4, the movement)
+    [STYLE LOCK] Movement lock: watercolor animation on paper
+    throughout; paper grain holds still; forms keep their shape; only
+    pigment edges move; slow even painterly motion, no motion blur,
+    no morphing; not CGI; motion starts at frame 1.
+    One movement: a wet leaf green stroke starts at the pack's torn top
+    and travels right across bare paper; painted kale, spinach,
+    broccoli and wheatgrass stand behind it. Everything else is dry and
+    still. The pouch and pack don't move and aren't repainted. View
+    flat and still.
+    Narration over it: "So the greens come in one small daily pack.
+    Tear the top. Here's what's inside."
+    End frame: the greens revealed, pigment settling, pouch label clear.
+
+    TRANSITIONS
+    Clip 1 to 2: hard cut to the pouch and pack, already painted.
+    Clip 2 to 3: no cut. Clip 3 starts on clip 2's end frame, a slow
+    pull back to the whole sheet, the bowl of gummies in front, ending
+    held and dry.
+    SOUND  One off-screen narrator, soft paper and water sounds.
+    MISSING: whether Sprout uses music, so none is planned.
+    MISSING: the rest of the pouch label and the pack's printing.
+    (cut for length: the full run also had prompts for clips 1 and 3)
+
+tweaks:
+  - what: The look
+    how: Storybook suits the buyer's moment at home. Botanical suits plant or ingredient stories. Editorial suits an idea or clothing. Ink and wash suits objects and how things work. Product illustration suits launches and buyers who know the product.
+  - what: The paint movement
+    how: A pigment trail from a painted ingredient to the pack shows what's in it, but only if that ingredient is on your list. A bloom shows something spreading. A dissolve shows something easing, only as your claims state it.
+  - what: How clips join
+    how: Either the view moves while the painting holds (a slow push in or pull back), or the paint carries it (a wash crosses and leaves the next picture, or a pigment trail leads the eye on).
+  - what: Clip lengths
+    how: By default you make one clip per approved image. Give your tool's limits and it groups lines to fit, still with one movement per clip.
+
+judge:
+  - With the sound off, a stranger could say what the paint showed and which product it belongs to.
+  - Every frame reads as watercolor on paper, never a photo with a filter.
+  - The colors and product match across clips, and any figure stays the same.
+  - The label is readable and no bloom or wash covers it.
+  - No desk, brush, hand or frame edge appears, and no painted words except the label.
+  - Only one thing moves in each clip; the rest is dry and still.
+
+test:
+  - Make image 1 (the painted product alone) and compare it with your real pack. Any label line that's wrong or invented is a reason to stop before the other images.
+  - Make clip 2 and watch the paper. If the grain slides or more than one thing moves, add your own words to the movement lock and remake it.
+  - Show the stills in order, with no sound, to someone who hasn't read the script. Ask what the paint revealed. If they can't say, the movement isn't reading.
+  - Run it twice on the same script. The style lock and world line should come back word for word; if they drift, paste your approved versions in.
+
+improve:
+  - Save your approved world line and style lock in your brand file and paste them into every watercolor run, so all your painted ads match.
+  - Add your full label text and product-showing rules to "What you need" in the skill file, so the painted pack is right first time.
+  - Write your brand's color families into step 3, so each shot picks from colors you already use.
+  - Note whether your brand uses music in "What you need", so the sound line is settled.
+  - Pair it with the skill that writes a watercolor ad script, if you don't have a script yet.
+
+terms:
+  - term: Style lock
+    meaning: A fixed paragraph describing the painting style, pasted word for word into every prompt.
+  - term: Movement lock
+    meaning: A fixed paragraph in every video prompt that keeps the paper still and lets only one paint edge move.
+  - term: Granulation
+    meaning: The speckled texture some watercolor pigments make as they settle into the paper.

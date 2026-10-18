@@ -1,0 +1,170 @@
+new_slug: turn-a-real-complaint-into-praise-people-read
+name: Turn a real complaint into praise people read
+summary: A plain review card built only from a real customer review whose complaint is secretly a compliment.
+job: make-image-ads
+
+headline: A real customer's complaint that is secretly praise, shown as a plain review card
+subhead: Give it your real reviews and your story ad. It looks for one review whose complaint only happens because the product works, copies it word for word with its real stars, and writes the prompt. If no review qualifies, it tells you and stops.
+
+explain: |
+  People read bad reviews first. A review card with a complaint on it stops the scroll because it breaks the pattern of brands praising themselves. The best complaint turns out to be a compliment, like "my partner keeps stealing it". The reader stops for the moan and finds the reason to buy inside it.
+
+  This only works with a real review. The skill searches your reviews for one where the complaint is a side effect of the product working, then copies the title and body word for word (shortened if needed, never reworded or merged), with the stars, name and date exactly as the original shows and the customer allows. It makes a plain card that looks like no real shop or review site. If no review qualifies, it says MISSING and points you to another picture type, because a made-up reviewer is a fake endorsement.
+
+when:
+  - You have real reviews where customers grumble about something that only happens because the product works.
+  - You have the customer's permission to use their review in an ad.
+  - Your story ad has an angry or sceptical tone and needs a picture that matches.
+
+you_give:
+  - Your real reviews, word for word, with stars, date and where they were posted
+  - How each customer may be named, and whether they agreed to ad use
+  - Your approved story ad
+you_get:
+  - The chosen review's title and body, word for word
+  - The stars, name and date exactly as the original
+  - A check of every review you gave it, and why each one did or didn't qualify
+  - A 60 to 120 word image prompt, or a clear MISSING and what to use instead
+
+how_to_use:
+  - Copy the skill and paste it into Claude, ChatGPT or Gemini.
+  - Paste your reviews exactly as posted, with stars, dates and where they came from.
+  - Say which customers agreed to ad use and how they may be named.
+  - Paste your story ad underneath.
+  - If it finds no qualifying review, believe it. Don't reword a review to make it fit.
+
+how_it_works:
+  - title: Sets the ground rules
+    text: Square, plain card, no logo, price, button, brand colour or real review-site look.
+  - title: Searches for the right review
+    text: Looks for one real review with a complaint that is secretly praise. If none qualifies, it stops.
+  - title: Copies it word for word
+    text: A 3 to 7 word title and 15 to 35 word body exactly as the customer wrote them. It may shorten, never reword or merge.
+  - title: Keeps the real stars
+    text: Shows the stars that customer gave. A five-star joke complaint keeps its five stars.
+  - title: Names them only as allowed
+    text: First name and initial if the customer agreed, or no name. The review's own date, or none.
+  - title: Briefs a plain card
+    text: A slightly cropped card with nothing that marks a real shop or site.
+
+output_shape: |
+  REVIEW CHECK
+  <each review checked, and why it does or doesn't qualify>
+
+  When one qualifies:
+  SCENE / WHERE AND WHEN
+  <the card and anything around it>
+  TITLE AND BODY
+  "<3 to 7 word title>" "<15 to 35 word body>", word for word
+  STARS, NAME, DATE
+  <as on the original and as the customer allows>
+  BLANK VERSION
+  <the card without its words>
+  HEADLINE UNDER THE IMAGE
+  Read this customer's only complaint.
+  FLAGS
+  <permission check, anything to review>
+  IMAGE PROMPT
+  <60 to 120 words, ready to paste>
+
+  When none qualifies:
+  RESULT, MISSING lines, USE INSTEAD, TRY AGAIN WHEN
+
+example:
+  business: sprout
+  input: |
+    [the skill]
+
+    Story ad (approved): opens "I was paying $94 a month for a greens
+    powder." and tells the switch to Sprout.
+
+    Reviews, as posted (stars not captured, no titles):
+    2  brand site: "It's wild I WANT to take [Sprout] and don't
+       forget."
+    16 brand site, Kids page: "I have tried all of the 'green'
+       options for the kids and this is the only one they love
+       eating. They think it's a treat."
+    17 brand site: "I hate subscriptions because I feel like they
+       are a trap so I canceled it before the gummies even arrived.
+       We quickly decided to resubscribe because we love [Sprout] so
+       much! A bonus is my kids love them too!"
+    18 retailer: "I thought the first pack I tried tasted terrible,
+       but after the third day they started tasting better"
+    19 brand site widget: "the taste is off."
+    20 review site: "I have tried multiple times to cancel my
+       subscription."
+    21 review site: "The sugar free [Sprout] worked too well."
+
+    Ad-use permission: not recorded for anyone.
+  output: |
+    REVIEW CHECK
+    Looking for one real review whose complaint only happens because
+    the gummies work. Checked all 7.
+
+    21  "worked too well"     Sounds like the joke complaint, but the
+                              brand file says it's about sugar
+                              alcohols upsetting the stomach. A real
+                              side effect, not praise. No.
+    17  subscriptions         The complaint is about subscriptions in
+                              general. The praise comes after it, but
+                              the complaint isn't caused by the
+                              gummies working. No.
+    18  taste, then better    A taste complaint that turns around.
+                              Not caused by them working. No.
+    2, 16                     Praise with no complaint. No.
+    19, 20                    Real complaints, no praise inside. No.
+
+    RESULT
+    Don't use this picture type for this story yet.
+    MISSING: a real review where the complaint comes from the gummies
+    working (running out early, someone else eating them).
+    MISSING: the star rating for each review. None were captured.
+    MISSING: ad-use permission, and how each customer may be named.
+    Don't reword 17 or 18 to fit, and don't join two reviews.
+
+    USE INSTEAD
+    The skill that photographs the old thing that failed. The story
+    opens on a $94 powder, so a half-used tub is the obvious object.
+    Or the everyday snapshot of the morning shaker.
+
+    TRY AGAIN WHEN
+    A review grumbles about something that only happens because
+    Sprout works. Record its stars, the customer's permission and how
+    they may be named, then run this again.
+
+tweaks:
+  - what: Five stars or one
+    how: It always shows the stars the customer gave. A joke complaint in a five-star review keeps five stars and uses its complaint as the title, such as "My only complaint".
+  - what: Shortening
+    how: Ask it to cut the review to fit (15 to 35 words). It will cut, never reword, and never join two reviews together.
+  - what: The name
+    how: Tell it how each customer may be named. With no permission recorded, it shows no name and flags the card for a check.
+  - what: Where to look
+    how: Paste reviews from every place you collect them (your site, emails, messages). Joke complaints often turn up in emails, not star ratings.
+
+judge:
+  - The review is real and you can point to where it was posted.
+  - Every word on the card matches the original. Nothing was reworded or merged.
+  - The stars, name and date match the original and what the customer allowed.
+  - There's no rating count, "verified" badge or helpful-votes line unless that review had one.
+  - The card looks like no real shop or review site, and the praise inside it stays within what you can claim.
+
+test:
+  - Give it a review that sounds like a joke complaint but describes a real problem (a side effect, a broken part). It should reject it, as it did review 21 here.
+  - Give it one review you know qualifies, with stars and permission. It should copy the words exactly and keep the real stars.
+  - Remove the permission from that same review and run it again. It should drop the name and flag the card.
+  - Compare the words on the finished card with the original, letter by letter, before it runs.
+
+improve:
+  - Add a permission field to the way you collect reviews, and paste reviews into the skill with it filled in. The skill can't work without it.
+  - Add your known side effects to "What you need" (such as sugar alcohols on sensitive stomachs), so complaints about them are never read as praise.
+  - Add the complaint shapes that work for your product ("I keep running out", "my partner steals them") to step 2, so it spots them faster.
+  - If no review qualifies, pair it with the skill that photographs the old thing that failed, and come back when a review arrives.
+
+terms:
+  - term: Ad-use permission
+    meaning: The customer's agreement, on record, that you may use their review in advertising.
+  - term: Story ad
+    meaning: An ad whose main text tells one person's story in their own words, like a post from a friend.
+  - term: Image prompt
+    meaning: The text you paste into an image tool to make the picture.

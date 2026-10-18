@@ -1,0 +1,178 @@
+new_slug: get-doubters-reading-with-a-dont-buy-warning
+name: Get doubters reading with a don't-buy warning
+summary: A blunt, hand-made "don't buy another one until you've read this" picture for let-down buyers.
+job: make-image-ads
+
+headline: A blunt warning not to buy, so the people who were let down before read on
+subhead: Give it your story ad and the kind of product that failed your buyers. It writes a 4 to 12 word warning in your story's own words, puts it on a marker card or over a photo of the old way, and writes the image prompt.
+
+explain: |
+  People who have tried three things that didn't work have stopped believing ads. An ad that tells them not to buy is the opposite of what they expect, so they read it. This picture type is that warning, made by hand: marker on a card, or one typed line over a plain photo of the thing that let them down.
+
+  The warning is always about a kind of product ("greens powder", "cheap pans"), never a named rival or a pack people would recognise. It takes the words from your story's own warning, and the reason behind it has to be one your brand can back. It also keeps the look personal, never official: no hazard signs, no striped tape, nothing that could pass for a recall notice, and no health scare.
+
+when:
+  - Your buyers have tried other products like yours and been let down.
+  - Your story already contains a line like "don't buy another one until you've read this".
+  - You're selling something people think about before buying (a pan, a mattress, a supplement they've tried before).
+
+you_give:
+  - Your approved story ad, with its warning line
+  - The kind of product that failed them, in their words (optional)
+  - The reason behind the warning and where it comes from (optional)
+you_get:
+  - A 4 to 12 word warning, word for word from your story
+  - Which form to use (marker card or line over a photo) and what's in the frame
+  - The headline under the image and any flags on the reason
+  - A 60 to 120 word image prompt, ready to paste
+
+how_to_use:
+  - Copy the skill and paste it into Claude, ChatGPT or Gemini.
+  - Paste your story ad underneath. Make sure its warning line is in there.
+  - Add the kind of product that failed, described, never named ("a big-name greens powder", not the brand).
+  - Add the claim that backs your reason, if you have one, with its source.
+  - Paste the image prompt into your image tool and check the warning is spelled exactly right.
+
+how_it_works:
+  - title: Sets the ground rules
+    text: Square, looks taken on a phone, no logo, price, button, brand colour or product, and any person is a made-up adult.
+  - title: Finds the warning
+    text: Takes it from your story, including which kind of product and until when.
+  - title: Writes the words
+    text: Four to 12 words in the story's own warning, such as "Don't buy another [kind of thing] until you read this."
+  - title: Picks a plain form
+    text: Marker on a card, or one typed line over a candid photo of the old way, generic and unbranded.
+  - title: Checks the reason
+    text: Confirms the reason is in the story and is one your brand can support, and flags it if not.
+
+output_shape: |
+  SCENE
+  <one sentence: what someone scrolling would say they saw>
+
+  WHERE AND WHEN
+  <place, time of day, what is within reach>
+
+  THE FORM
+  <marker card, or typed line over a photo>
+
+  THE OLD WAY IN FRAME
+  <the generic, unbranded object, if any>
+
+  WORDS ON THE IMAGE
+  "<4 to 12 words from the story's own warning>" (<word count>)
+  BLANK VERSION
+  <the same picture without its words>
+
+  HEADLINE UNDER THE IMAGE
+  Don't buy <the kind of product> until you've read this.
+
+  FLAGS
+  <the reason on file, or "read this first" only; what to keep out>
+
+  IMAGE PROMPT
+  <60 to 120 words, ready to paste>
+
+example:
+  business: sprout
+  input: |
+    [the skill]
+
+    Story ad (approved, built on reviews 1 and 3):
+    Don't buy another tub of greens powder until you've read this.
+    I paid $94 a month for one, even with the subscription discount,
+    and the drink was gritty and chalky.
+    The issue was never what was in it. It was sticking with it.
+    Sprout is one daily pack of gummies: 60+ ingredients, 21 vitamins
+    and minerals, 6 g prebiotic fiber. No water, no shaker. 30-day
+    money-back guarantee on your first order.
+
+    The kind that failed: greens powder (a big-name powder, don't
+    name it).
+    Reason: claim on file, "60+ ingredients, 21 vitamins & minerals,
+    and 6g fiber" in 1 pack.
+  output: |
+    SCENE
+    A handwritten warning card propped against a tub of green powder
+    on a kitchen counter.
+
+    WHERE AND WHEN
+    A kitchen counter, morning, window light. Within reach: the tub
+    with its scoop, a shaker with a green film inside, a coffee mug.
+
+    THE FORM
+    Black marker on a white index card, slightly crooked, leaning
+    against the tub.
+
+    THE OLD WAY IN FRAME
+    A plain, unlabelled plastic tub of green powder, lid off, a scoop
+    inside, about a third full. A plain shaker beside it.
+
+    WORDS ON THE IMAGE
+    "Don't buy another tub of greens powder until you've read this."
+    (11 words, the story's first line)
+
+    BLANK VERSION
+    The same blank card against the tub.
+
+    HEADLINE UNDER THE IMAGE
+    Don't buy greens powder until you've read this.
+
+    FLAGS
+    Reason on file: the pack claim above. Reviews 1 and 3 back the
+    taste and the habit problem in customers' own words.
+    The copy must not say Sprout "replaces" a powder. Minerals are
+    about 25% of daily value per pack.
+    Tub, scoop and shaker are generic. Never the big-name powder's
+    tub, colours or scoop.
+    Aim it at people who have bought powders before. Everyone else
+    won't know what it's warning about.
+    Keep it personal: no "dangerous", no warning triangle.
+
+    IMAGE PROMPT
+    Square 1:1 phone photo of a kitchen counter in morning window
+    light. A white index card leans slightly crooked against a plain,
+    unlabelled plastic tub of green powder with its lid off and a
+    scoop inside, about a third full. On the card, in uneven black
+    marker handwriting, spelled exactly: "Don't buy another tub of
+    greens powder until you've read this." A plain shaker bottle with
+    a green film inside and a coffee mug sit beside it. Slight tilt,
+    ordinary light, a little grain, unstyled. No logo, no brand name,
+    no price, no hazard symbol, no person, no children, no other
+    text.
+
+tweaks:
+  - what: Card or photo
+    how: Ask for "a typed line over a photo of the old way" instead of the card. The card feels more personal; the typed line works when the old product itself tells the story.
+  - what: The kind of product
+    how: Name it the way your buyers do ("the green powder", "the cheap pans"). Never a rival's name, pack or shape someone would recognise.
+  - what: The "until"
+    how: Change what the reader has to do first ("until you've checked the label", "until you've read this"). It must match what your story actually delivers.
+  - what: No reason on file
+    how: If you can't back the reason, say so. It will keep the picture to "read this first" and flag it, instead of inventing one.
+
+judge:
+  - The warning is about a kind of product, never a named rival or recognisable pack.
+  - It reads like one person's warning, not an official notice. No hazard triangle, tape or recall look.
+  - The words on the card are exactly the story's warning, spelled right.
+  - The reason behind it appears in your story and your brand can support it.
+  - Nothing in it scares people about health or safety.
+
+test:
+  - Run it on a story whose warning you already use in an ad. The card should carry that line word for word.
+  - Leave out the reason. It should flag that the picture carries only "read this first", not invent a reason.
+  - Ask a colleague whether the picture looks like a person's warning or an official notice. If they say notice, remove whatever made it look official.
+  - Show it to someone who has never bought the kind of product it warns about. If it still makes sense to them, your aim is too wide.
+
+improve:
+  - Add the kinds of product your buyers tried before, in their words, to "What you need", so the warning always names them the way buyers do.
+  - Add your approved claims list to the skill file, so the reason check runs against it every time.
+  - Add your rivals' recognisable shapes and colours to the "Avoid" list, so the old way never looks like one of them.
+  - Pair it with the skill that photographs the old thing that failed. The same object works with or without the warning.
+
+terms:
+  - term: Story ad
+    meaning: An ad whose main text tells one person's story in their own words, like a post from a friend.
+  - term: Approved claim
+    meaning: A sentence your legal or compliance check says you may use about the product.
+  - term: The old way
+    meaning: Whatever your buyer used before your product, shown as a generic, unbranded thing.

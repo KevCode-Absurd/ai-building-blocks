@@ -1,0 +1,21 @@
+slug: puzzle-people-into-reading-with-one-odd-photo
+renamed_from: native-ad-image-abstract-curiosity
+name: "Puzzle people into reading with one odd photo"
+summary: "A plain photo of one puzzling detail from your story, so people read the ad to understand it."
+category: general
+boards: [ecommerce]
+type: skill
+role: render
+job: image
+level: beginner
+inputs:
+  - {type: ad_copy, required: true}
+  - {type: persona, required: false}
+outputs:
+  - {type: image_prompt}
+uses: [get-story-ads-read-with-the-right-picture]
+example: native
+origin: own
+source_ids: [CES-056]
+old_name: abstract-curiosity
+version: 1.0.0

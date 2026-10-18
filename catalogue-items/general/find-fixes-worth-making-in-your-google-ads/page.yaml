@@ -1,0 +1,196 @@
+new_slug: find-fixes-worth-making-in-your-google-ads
+name: Find fixes worth making in your Google Ads
+summary: Fixes from one part of your Google Ads export, each backed by your rows and a check.
+job: read-ad-results
+
+headline: Know which Google Ads changes to make, each backed by your own rows and a check
+subhead: Pick one part of your account, such as search terms or budgets, and paste that export with your target. It reads only that part and hands back findings, proposed changes and how to check each one. Paste the wrong file and it stops and says which to pull.
+
+explain: |
+  A Google Ads account has many reports, and reading them all at once leads to vague advice like "tidy your keywords". Worse, a quick read can suggest excluding a search that quietly brings in sales, or treat a low Quality Score as the problem when it is only a clue.
+
+  This skill works on one part at a time: search terms, keywords, Quality Score, Performance Max assets, Display placements, video, or bids and budgets. For each part it knows which columns it needs, and it stops if they are missing. It records what it read, then lists each finding with the rows behind it, a proposed change and how to check the change worked. It never connects to your account or changes anything, and without a target it only describes.
+
+when:
+  - You downloaded a Google Ads report and don't know which numbers matter.
+  - You want to cut wasted searches without excluding ones that bring in sales.
+  - You want each change written down with its proof before anyone touches the account.
+
+you_give:
+  - Which part to review (search terms, keywords, Quality Score, Performance Max assets, Display, video, or bids and budgets)
+  - The export for that part, with where and when it was pulled, the date range and the currency
+  - Your target cost per sale or target return. Without one, it only describes
+  - Your brand terms and existing negative keywords (for search terms)
+you_get:
+  - A coverage note saying what it read and what was left out
+  - Findings, each with the rows behind it, a proposed change and how to check it
+  - A plain summary of the top three findings
+  - A MISSING list, with the exact export and columns to pull if yours won't do
+
+how_to_use:
+  - Copy the skill and paste it into Claude, ChatGPT or Gemini.
+  - Write which part you want reviewed, for example "search terms" or "bids and budgets".
+  - Paste the export for that part. Say where you pulled it from, when, the date range and the currency.
+  - Add your target, for example "target cost per purchase $30". If you don't have one, write "exploratory".
+  - If it stops at MISSING, pull exactly the export and columns it lists and run it again.
+  - Treat every proposed change as a suggestion. Make it by hand, then use the check it gives you.
+
+how_it_works:
+  - title: Picks one part
+    text: Takes the one area you named and checks the export has the columns that area needs. If not, it stops at MISSING.
+  - title: Records what it read
+    text: Notes the rows read, rows left out for privacy, the date range and the currency, so you know what the findings cover.
+  - title: Reviews that part
+    text: Works through the area's checks, citing the exact rows and IDs behind each finding.
+  - title: Avoids common traps
+    text: Checks match type before suggesting an exclusion, treats Quality Score as a clue, and never claims overlap or lift from totals.
+  - title: Keeps hand-offs small
+    text: If copy needs rewriting, it passes the writer only your approved facts and the exact issue, never the whole export.
+  - title: Writes the report
+    text: Gives a structured list of findings and missing items, plus a plain summary of the top three.
+
+output_shape: |
+  MODULE     <the one part reviewed>
+
+  COVERAGE   File: <name>. Rows read: <n> of <n>.
+             Rows left out for privacy: <n or not stated>
+             Date range: <dates>. Currency: <currency>.
+             Where and when it was pulled: <source, date>
+
+  CHECK      <does the file have the columns this part needs?>
+
+  FINDINGS (or STOPPED, and why)
+  <entity IDs> | <evidence rows> | <what it shows>
+    Proposed: <change to make by hand>. Check: <how to see it worked>
+
+  MISSING    <export, columns or target still needed>
+  WHAT TO PULL  <the exact export and columns>
+
+  REPORT
+  {module, coverage, findings: [...], missing: [...]}
+
+  SUMMARY  <the top three findings in plain words>
+
+example:
+  business: sprout
+  input: |
+    [the skill]
+
+    Module: search terms
+    Targets: none yet
+    Question: which searches are wasting money? What should I exclude?
+
+    Export (ad-results.csv, all 10 rows pasted; practice numbers).
+    Columns: ad_name, format, opening_line, days_live, spend_usd,
+    impressions, link_clicks, purchases, revenue_usd
+
+    First two rows:
+    T1 Hot girl tummy, video 28s UGC, "Fix the Hot Girl Tummy", 30,
+      4200, 300000, 4950, 198, 8336
+    P1 Too expensive days 1-21, image, "'Sprout is too expensive':
+      here's 61% off to prove otherwise", 21, 3000, 250000, 3750,
+      112, 3830
+  output: |
+    MODULE     Search terms
+
+    COVERAGE   File: ad-results.csv. Rows read: 10 of 10 (9 ads; P1
+               is split into two 21-day windows).
+               Rows left out for privacy: not stated.
+               Date range: not stated (days_live runs 14 to 30).
+               Currency: USD (from the column names).
+               Where and when it was pulled: not stated. The numbers
+               are practice numbers, not real results.
+
+    CHECK      Is this a search terms export? No.
+               - There is no search term column. Each row is an ad
+                 (T1, P1, P2, H1, K1, F1, S1, W1, R1), not a search
+                 someone typed.
+               - Rows have formats ("video 28s UGC", "image",
+                 "carousel"). A search terms report has none.
+               - The opening lines are ad headlines from Meta ads,
+                 not searches.
+               - No campaign or ad group IDs, no match types, no
+                 brand terms, no existing negative keywords.
+               Some columns would carry over (spend_usd as cost,
+               link_clicks as clicks, purchases as conversions,
+               revenue_usd as value), but not enough to judge one
+               search.
+
+    STOPPED    No findings. Reading ads as if they were searches
+               would make the answer up.
+
+    MISSING    a Google Ads search terms export
+    MISSING    target cost per purchase, or target return
+    MISSING    where and when the export was pulled, and the dates
+
+    WHAT TO PULL
+      1. The search terms report for your search campaigns, last 30
+         days, as CSV, with these columns:
+         search term, campaign ID, ad group ID, the keyword it
+         matched and its match type, cost, clicks, impressions,
+         conversions, conversion value, currency
+      2. Your negative keywords, each with its match type and where
+         it applies (campaign, ad group or shared list)
+      3. Your brand terms, at least "sprout", "sprout gummies" and
+         "sprout greens", plus common misspellings
+
+    WHAT TARGETS TO GIVE
+      A target cost per purchase or a target return (revenue divided
+      by spend). Or write "exploratory": I will then describe the
+      searches but not mark any to keep or exclude.
+
+    REPORT
+    {"module": "search_terms",
+     "coverage": {"rows_read": 10, "rows_omitted": "not stated",
+       "date_range": "not stated", "currency": "USD"},
+     "findings": [],
+     "missing": ["search terms export", "campaign and ad group IDs",
+       "match types", "brand terms", "existing negatives",
+       "target", "where and when pulled"]}
+
+    SUMMARY  No findings yet. This file shows results per Meta ad, so
+    it can't say which Google searches waste money. Pull the report
+    above, add a target, and run it again.
+
+tweaks:
+  - what: The module
+    how: Change "search terms" to "bids and budgets" or "video" and it asks for different columns. For video it wants watch data by quarter of the video; for budgets, impression share lost and a spending cap.
+  - what: The target
+    how: A target turns descriptions into calls. With "target return 1.5", a search below it can become a candidate to exclude, once match type and brand checks pass. Without one, it stays a description.
+  - what: Brand terms
+    how: List every way people search your name, including misspellings. It checks no exclusion would block a brand or profitable search.
+  - what: A previous run
+    how: For keyword tiers, paste last month's labelled run and it reports which keywords moved up or down, and checks the move is real.
+
+judge:
+  - The coverage note says how many rows it read and the date range. If those don't match your file, it read the wrong thing.
+  - Every finding names the exact rows or IDs behind it. You can find each one in your export.
+  - No exclusion is suggested without the match type and a check against brand and profitable searches.
+  - Nothing says a change has been made, or promises a result from fixing Quality Score.
+  - If the file was wrong for the module, it stopped and listed what to pull, instead of guessing.
+
+test:
+  - Paste a file that's wrong for the module on purpose, as in the example. It must stop and list what to pull. If it gives findings anyway, don't use it on your real exports.
+  - Run it on a search terms export where you already know a search that brings in sales. That search must never appear as one to exclude. If it does, check you listed it with your brand and profitable terms.
+  - Run the same export twice. The coverage note and the list of findings should match. If the findings change, ask it to cite the rows behind each one and compare.
+  - Pick two findings and find their rows in your export yourself. If the numbers don't match, the run is wrong.
+  - Make one proposed change by hand, then use the check it gave you after a week or two. That tells you whether to trust its next suggestions.
+
+improve:
+  - Write your target cost per purchase or target return into "What you need" in the skill file, so it never falls back to "describe only".
+  - Add your brand terms, misspellings and existing negative keyword lists to the skill, so every search terms run checks against them.
+  - If you only use some modules, delete the others from the table in step 5, so it can't drift into parts of the account you don't run.
+  - Save each run's structured report in your brand file or a shared folder, and paste last month's next time to see what moved.
+  - Pair it with a skill that reviews your landing page when the Quality Score module points there, and with one that writes ad copy from your approved facts.
+
+terms:
+  - term: Search terms
+    meaning: The exact words people typed into Google before your ad showed. Different from your keywords, which are what you bid on.
+  - term: Negative keyword
+    meaning: A word or phrase you tell Google not to show your ad for.
+  - term: Match type
+    meaning: How closely a search must match your keyword (broad, phrase or exact). It also changes what a negative keyword blocks.
+  - term: Quality Score
+    meaning: Google's 1 to 10 rating of your keyword, ad and landing page. A useful clue, not the goal.
+  - term: Performance Max
+    meaning: A Google campaign type that places ads across Search, YouTube, Display and more from one set of assets.

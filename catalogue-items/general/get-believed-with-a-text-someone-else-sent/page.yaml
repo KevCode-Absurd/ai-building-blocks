@@ -1,0 +1,177 @@
+new_slug: get-believed-with-a-text-someone-else-sent
+name: Get believed with a text someone else sent
+summary: A plain text-message screenshot of three to six short messages between your narrator and one other person.
+job: make-image-ads
+
+headline: A text conversation where someone else notices the problem, in plain chat bubbles
+subhead: Give it a story ad with a second person in it, a partner, a sister or a friend. It writes three to six short messages the way people text each other, ending on an open question, and a prompt for a generic message screenshot.
+
+explain: |
+  People read message threads without deciding to. A screenshot of two people texting also brings in a witness: someone other than the narrator noticing the problem, which makes it feel real. It suits stories where a partner, sister or friend points out what the narrator has been ignoring.
+
+  The skill writes three to six messages of 4 to 14 words, short and lower case, with one typo at most, and ends on a message that leaves a question open. The best version is the "before", where the other person notices the problem. A thread about the change is used only when the story has someone noticing it, it stays inside what customers report, and it names no product. The bubbles are generic, in two colours, with a first name or initial for the contact and no face photo.
+
+when:
+  - Your story has a second person who notices the problem or the workaround.
+  - You want the picture to feel like proof from someone other than the narrator.
+  - Your buyers text each other about this kind of thing (money, sleep, health, home).
+
+you_give:
+  - Your approved story ad, with the second person and what they say
+  - How your buyer texts (optional)
+  - Whether words on the image are on or off (optional, default on)
+you_get:
+  - Three to six messages with senders, in order, exactly as they'll appear
+  - The contact label and time
+  - A blank version and the headline under the image
+  - A 60 to 120 word image prompt, ready to paste
+
+how_to_use:
+  - Copy the skill and paste it into Claude, ChatGPT or Gemini.
+  - Paste your story ad underneath. If the story quotes the messages, they'll be used word for word.
+  - Paste the image prompt into your image tool and make one square picture.
+  - Check every message in the result, including who sent which.
+  - If the screen looks like a real messaging app, ask again for "generic bubbles, no app design".
+
+how_it_works:
+  - title: Sets the ground rules
+    text: Square, looks like a phone screenshot, no logo, price, button, product or real app look.
+  - title: Writes the thread
+    text: Three to six messages of 4 to 14 words. The last one leaves a question open.
+  - title: Prefers the "before"
+    text: The other person noticing the problem. A thread about the change only if the story has it and it stays inside what customers report.
+  - title: Briefs generic bubbles
+    text: Two colours, a first name or initial as the contact, and a time.
+  - title: Writes it like real texting
+    text: Every message exactly, in order, short, lower case, one typo at most.
+
+output_shape: |
+  SCENE
+  <one sentence: what someone scrolling would say they saw>
+
+  WHERE AND WHEN
+  <the screen and time of day>
+
+  CONTACT LABEL AND TIME
+  "<first name or initial>", <initials circle>, <time>
+
+  MESSAGES (in order)
+  <sender> (left or right):  <message, 4 to 14 words>
+  <3 to 6 messages, the last one an open question>
+
+  WORDS ON THE IMAGE
+  <the messages, exactly as written, with senders>
+  BLANK VERSION
+  <the thread with an empty message area>
+  HEADLINE UNDER THE IMAGE
+  Read this if someone's said this to you.
+
+  FLAGS
+  <lifted or written for the image; invented names>
+
+  IMAGE PROMPT
+  <60 to 120 words, ready to paste>
+
+example:
+  business: sprout
+  input: |
+    [the skill]
+
+    Story ad (approved, built on reviews 1 and 3):
+    In March my partner Sam texted me from the kitchen:
+      sam: is the green tub in the cupboard still yours
+      me: technically, yes. it's mine
+      sam: it's been open since january
+      me: i drank it twice. it was gritty
+      sam: so are you keeping it or what
+    I didn't answer. I'd tried a few green powders over the years.
+    The issue was never what was in them. It was sticking with it.
+    Sprout is one daily pack of gummies: tear the top, eat them. 60+
+    ingredients, 21 vitamins and minerals, 6 g prebiotic fiber. No
+    water, no shaker.
+
+    Buyer: the quitter who wants to stick, 28 to 45.
+  output: |
+    SCENE
+    A text thread where a partner asks about a green tub in the
+    cupboard and the narrator admits they drank it twice.
+
+    WHERE AND WHEN
+    A phone screen, an evening in March, messages at 19:36.
+
+    CONTACT LABEL AND TIME
+    "Sam" at the top with a grey "S" initials circle. Time 19:36.
+
+    MESSAGES (in order)
+    Sam (left):   is the green tub in the cupboard still yours
+    Me (right):   technically, yes. it's mine
+    Sam (left):   it's been open since january
+    Me (right):   i drank it twice. it was gritty
+    Sam (left):   so are you keeping it or what
+
+    WORDS ON THE IMAGE
+    The five messages above, exactly as written, with senders.
+
+    BLANK VERSION
+    The thread with the contact label and an empty message area.
+
+    HEADLINE UNDER THE IMAGE
+    Read this if someone's said this to you.
+
+    FLAGS
+    Thread lifted from the copy, word for word. It ends on Sam's
+    open question, and no message names Sprout.
+    Sam is an invented first name. Don't present this as a real
+    customer's screenshot.
+    "19:36" is not in the story (inferred).
+    "Gritty" is a customer's word for a powder, not a claim about
+    any named brand.
+
+    IMAGE PROMPT
+    Square 1:1 cropped phone screenshot of a generic text
+    conversation, white background. Top bar shows the contact name
+    "Sam" beside a plain grey "S" circle, and the time 19:36. Five
+    bubbles in two plain colours, grey on the left for Sam and blue
+    on the right for me, exactly as written in lower case: Sam "is
+    the green tub in the cupboard still yours", me "technically,
+    yes. it's mine", Sam "it's been open since january", me "i drank
+    it twice. it was gritty", Sam "so are you keeping it or what". No
+    real messaging app design, no tick marks, no face photo, no
+    emoji, no logo, no product.
+
+tweaks:
+  - what: Who the other person is
+    how: A partner sounds worried, a sister teases, a friend asks the blunt question. Change the second person and the tone of the thread changes with them.
+  - what: Before or after
+    how: The "before" (someone noticing the problem) is the safe default. Ask for "after" only if your story has someone noticing the change and customers report it too.
+  - what: The last message
+    how: Keep it an open question, like "so are you keeping it or what". A thread that ends on an answer gives the reader no reason to read the ad.
+  - what: Length
+    how: Three messages reads instantly. Six is the most a square picture can hold at a readable size.
+
+judge:
+  - The thread is the narrator's own, with an invented first name, and it isn't offered as a real customer's screenshot.
+  - No message recommends or names your product, or states a result beyond what customers report.
+  - The last message leaves a question open.
+  - The screen copies no real messaging app, and the contact has no face photo.
+  - It reads like two people texting, not a sales pitch in bubbles.
+
+test:
+  - Run it on a story that quotes the thread. Every message should match word for word, with the right sender.
+  - Run it on a story with no second person. It should send you to the phone note or the everyday snapshot instead.
+  - Ask for an "after" thread on a story where nobody notices the change. It should refuse and keep the "before".
+  - Read the thread aloud to someone. If it sounds like an ad, cut the line that sells.
+
+improve:
+  - Add how your buyers text (lower case, short, no emoji) to the brand file section, so written threads sound like them.
+  - Add the second people who appear in your customers' stories (partner, sister, flatmate) to "What you need", so it picks a witness they'd have.
+  - Write the messages into your story word for word, so the picture quotes the story and nothing needs extra checking.
+  - If three or more people are involved, use the family group chat skill instead.
+
+terms:
+  - term: Thread
+    meaning: A run of messages between the same people, shown in order.
+  - term: Story ad
+    meaning: An ad whose main text tells one person's story in their own words, like a post from a friend.
+  - term: Blank version
+    meaning: The same picture with no words, so you can change the words later without starting again.

@@ -1,0 +1,19 @@
+slug: find-image-ad-types-worth-testing-next
+renamed_from: static-ad-format-families
+name: "Find image ad types worth testing next"
+summary: "Your image ads sorted into seven families, the empty ones found, and the next two briefed."
+category: general
+type: skill
+role: make
+job: ads
+level: intermediate
+inputs:
+  - {type: static_ads, required: true}
+  - {type: voc_reviews, required: false}
+outputs:
+  - {type: brief}
+uses: []
+origin: rebuilt
+source_ids: [CES-039]
+old_name: format-library
+version: 1.0.0

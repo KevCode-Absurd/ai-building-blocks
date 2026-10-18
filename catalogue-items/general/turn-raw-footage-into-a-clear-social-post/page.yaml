@@ -1,0 +1,185 @@
+new_slug: turn-raw-footage-into-a-clear-social-post
+name: Turn raw footage into a clear social post
+summary: Your own raw footage turned into one social post, with every cut, caption, cover and export planned.
+job: grow-social
+
+headline: Your raw footage turned into one clear social post, with every cut and caption planned
+subhead: Give it your clips, any transcript, and the one idea the post should land. It picks the opening, lists every cut with in and out times, matches extra shots to the words, times the captions, and sets the cover, sound and export, keeping the speaker's real voice.
+
+explain: |
+  Most brands have hours of their own footage, such as a founder talking, a how-to, packing orders or a behind-the-scenes moment, and no time to turn it into posts. When they do, the result often copies ads: fast zooms, music over the words, a "shop now" at the end. An everyday post needs one clear idea, a strong first line and correct captions.
+
+  This skill reads the footage before cutting. It checks names, numbers and instructions in the transcript against the source, because automatic transcripts mishear. It chooses the strongest complete thought to open on, trims pauses without changing what the speaker meant, and uses your own extra footage (B-roll) only where it matches what's being said. Captions are timed to the kept speech. It never adds a testimonial, a milestone or an offer.
+
+when:
+  - You have your own founder, how-to, care or behind-the-scenes footage and want a post from it.
+  - You want to cut a long recording into several short posts.
+  - You need a clear edit brief to hand to an editor or an editing app.
+
+you_give:
+  - Your clips, with their length, orientation, speech and any words or music already in them
+  - A transcript, if you have one
+  - The one idea this post should land
+  - Your fonts, colours and product names as you write them (optional)
+  - The platform, shape, length and caption style (optional)
+you_get:
+  - The post's purpose and the chosen opening line
+  - A cut list (source, in and out times, order, what it shows, caption, sound)
+  - A list of extra shots and the line each covers
+  - Cover, caption, ending, and export settings with the checks to run
+
+how_to_use:
+  - Copy the skill and paste it into Claude, ChatGPT or Gemini.
+  - List your clips with their length and what's in them, and paste the transcript if you have one.
+  - Say the one thing the post should teach or show, for example "how to open the pack".
+  - Check every flagged word against the recording before captions go on.
+  - Hand the cut list to your editor or follow it in your editing app, then watch the export on a phone, with sound and muted.
+
+how_it_works:
+  - title: Reads the footage first
+    text: Lists clips, lengths, speech and baked-in words. Checks product names, numbers and instructions in the transcript against the recording.
+  - title: Picks the opening
+    text: The strongest complete thought, with enough context to follow. Pauses are trimmed, but laughs and pauses that carry personality stay.
+  - title: Checks edited clips
+    text: Any AI-edited or outside-edited clip is checked for mouth timing, exact words and unrelated changes. A broken take is replaced, not covered up.
+  - title: Matches picture to words
+    text: Your own extra footage shows what's being talked about, never a different product, a customer result or anything the footage can't support.
+  - title: Sets captions and sound
+    text: Captions timed to the kept speech, away from the mouth, hands and label. Voice first; music only if you own or have cleared it.
+  - title: Ends usefully
+    text: A real question, "save this", or the next part. No purchase push by default, and any gift or payment disclosure is kept.
+  - title: Plans the export
+    text: Keeps the shape, checks the first frame, every join and the end, and lists the master and a captioned copy.
+
+output_shape: |
+  PURPOSE: <one line>
+  OPENING LINE: "<...>"
+
+  CUT LIST
+  # | source | in-out (s) | shows | caption (window) | sound
+  1 | <clip> | <in>-<out> | <...> | "<words>" (<from>-<to>) | <voice>
+
+  EXTRA SHOTS (B-ROLL)
+  <clip> over "<line>" | from <source>
+
+  CHECK BEFORE CAPTIONING
+  <names, numbers or instructions to confirm against the recording>
+
+  COVER AND CAPTION: <real frame + promise> / "<post caption>"
+  ENDING: <...>   DISCLOSURE: <... or none needed>
+  EXPORT: <shape, size, length, files>; checks: <first frame, joins,
+  end, phone with sound and muted>
+  MISSING: <...>
+
+example:
+  business: sprout
+  input: |
+    [the skill]
+
+    Purpose: show how to open a pack the right way.
+    Clips (all vertical):
+    1. Talking at a kitchen counter, 0:42, speech. Transcript below.
+    2. Hands open the big pouch at its resealable top and take out
+       one daily pack, 0:12, no speech.
+    3. Close-up: one pack torn straight across the top, gummies
+       tipped into a palm, 0:08, no speech.
+    4. Same as 3, but the pack is torn at the corner, 0:07.
+
+    Auto transcript, clip 1:
+    [0:00] Okay so, um, people keep asking how to open these.
+    [0:05] So this is the big pouch, it opens at the top, it reseals.
+    [0:12] Inside are 28 daily packs.
+    [0:16] You tear one straight across the top. Not the side.
+    [0:22] Then you just tip the gummies into your hand. Rip, sip,
+    enjoy.
+    [0:29] That's a small handful, that's your one pack for the day.
+    [0:35] Over 20 vitamins and minerals, no water, no shaker.
+
+    Rules: the daily pack tears straight across its top edge, never
+    the side, bottom or a corner. The big pouch is never shown torn.
+  output: |
+    PURPOSE: teach how to open the pouch and one daily pack
+    OPENING LINE: "People keep asking how to open these."
+
+    CUT LIST
+    # | source  | in-out (s) | shows           | caption (on screen
+                                                 for the same seconds)
+    1 | clip 1  | 2-5        | speaker         | "People keep asking
+                                                 how to open these."
+    2 | clip 1  | 5-12 audio | clip 2 on screen| "This is the big pouch.
+                                                 It opens at the top,
+                                                 it reseals."
+    3 | clip 1  | 12-16      | speaker         | "Inside are 28 daily
+                                                 packs."
+    4 | clip 1  | 16-29 audio| clip 3 on screen| "Tear one straight across
+                                                 the top. Not the side."
+                                                 "Then you just tip the
+                                                 gummies into your hand."
+                                                 "Rip. Tip. Enjoy." (check)
+    5 | clip 1  | 29-35      | speaker         | "That's a small handful.
+                                                 That's your one pack
+                                                 for the day."
+    Sound: recorded voice only, all the way through. No music.
+    Cut: 0-2 ("Okay so, um"). Cut: 35-42. It moves to a second idea
+    (what's in it), and "over 20" doesn't match the "21 vitamins &
+    minerals" on the label. Keep it for another post, re-recorded.
+    Not used: clip 4. It shows the corner tear the brand never shows.
+
+    EXTRA SHOTS (B-ROLL)
+    Clip 2 over "it opens at the top, it reseals" (your footage)
+    Clip 3 over "tear one straight across the top" (your footage).
+    Hold the tear for at least 2 seconds so it can be seen.
+
+    CHECK BEFORE CAPTIONING
+    The transcript says "Rip, sip, enjoy". Your line is "Rip. Tip.
+    Enjoy." Listen to 0:26 to 0:29. Caption what was said; if it was
+    "sip", re-record that line.
+
+    COVER AND CAPTION
+    Cover: a real frame from clip 3, the torn top edge. Text: "How to
+    open your daily pack".
+    Post caption: "The right way to open Sprout: big pouch at the top,
+    daily pack straight across. Save this for your first box."
+    ENDING: "Save this for your first box." DISCLOSURE: none needed
+    (your own post).
+    EXPORT: 9:16, 1080 x 1920, about 33 seconds. A clean master and a
+    captioned copy. Check the first frame, each join and the end;
+    watch on a phone with sound, then muted.
+
+tweaks:
+  - what: The purpose
+    how: Change the one idea and the cut changes. "Show the making" leans on extra shots of your process; "answer a real question" opens on the question itself.
+  - what: A long recording
+    how: Paste a long transcript and ask for several posts. You get self-contained passages, each with source in and out times, its opening, what the viewer learns and a soft ending.
+  - what: The layout
+    how: Ask for full-frame, speaker plus extra shots, or a split screen. It picks the one that explains the idea best and keeps face and product visible.
+  - what: Music
+    how: Say you own or have licensed a track and it's added under the voice at a level where every word stays clear. Otherwise the post stays voice only.
+
+judge:
+  - The post lands one idea, and the opening line is a complete thought.
+  - Every name, number and instruction in the captions was checked against the recording.
+  - No extra shot suggests a different product, a result or a fact the footage doesn't show.
+  - Use and care instructions keep their conditions, and nothing shows the product used the wrong way.
+  - There's no invented testimonial, milestone or offer, and no "buy now" ending unless you asked for one.
+
+test:
+  - Check five names or numbers in the captions against the recording. Any mismatch means the transcript wasn't checked.
+  - Cut the first three seconds as planned and watch them. The opening should be a complete thought you could quote on its own.
+  - Run it twice on the same clips. It should pick the same opening. If it changes, state the one idea more plainly.
+  - Check every extra shot against the line it covers. If a shot shows a different product or a result the footage doesn't show, drop it.
+
+improve:
+  - 'Add your product names and numbers, written your way, to step 1 of the skill file, so captions are always checked against one source (for Sprout: "daily pack", "28 Daily Packs", "6 g prebiotic fiber").'
+  - "Write your caption style into step 5: where captions sit, how big they are and how many words go on a line."
+  - Set your export settings in step 7 for the places you post.
+  - Add your use and care rules to step 4, so no extra shot shows the product used the wrong way (for Sprout, the pack is torn straight across the top).
+  - Pair it with the founder video planner to decide what to film, and use a video ad edit plan instead when the post will run as a paid ad.
+
+terms:
+  - term: B-roll
+    meaning: Extra footage shown over someone talking, such as a close-up of the thing they're describing.
+  - term: Cut list
+    meaning: The list of every piece of footage used, in order, with its start and end times.
+  - term: Baked-in words
+    meaning: Text or captions already burned into a clip, which can't be removed in the edit.

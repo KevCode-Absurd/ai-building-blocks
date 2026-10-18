@@ -1,0 +1,21 @@
+slug: keep-people-reading-with-a-hand-drawn-story
+renamed_from: native-ad-image-drawn-panels
+name: "Keep people reading with a hand-drawn story"
+summary: "One to four hand-drawn panels that tell your buyer's problem in order, for problems a photo can't show."
+category: general
+boards: [ecommerce]
+type: skill
+role: render
+job: image
+level: advanced
+inputs:
+  - {type: ad_copy, required: true}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: image_prompt}
+uses: [get-story-ads-read-with-the-right-picture]
+example: native
+origin: rebuilt
+source_ids: [CES-065]
+old_name: illustration-chronicle
+version: 1.0.0

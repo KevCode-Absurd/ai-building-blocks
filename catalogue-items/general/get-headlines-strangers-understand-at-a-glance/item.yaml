@@ -1,0 +1,19 @@
+slug: get-headlines-strangers-understand-at-a-glance
+renamed_from: headline-and-image-words-writer
+name: "Get headlines a stranger understands at a glance"
+summary: "Headlines and image words written as plain sentences, each aimed at one buyer with one benefit."
+category: general
+type: skill
+role: make
+job: copy
+level: intermediate
+inputs:
+  - {type: brief, required: true}
+  - {type: product_data, required: true}
+outputs:
+  - {type: ad_copy}
+uses: [know-who-youre-writing-for]
+origin: rebuilt
+source_ids: [CES-022]
+old_name: copy-craft
+version: 1.0.0

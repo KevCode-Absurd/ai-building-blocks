@@ -1,0 +1,185 @@
+new_slug: get-catchy-song-ad-script-that-sells
+name: Get a catchy song ad script that sells
+summary: An original song ad with a chorus about what your customer gets, and every sung claim backed.
+job: make-video-ads
+
+headline: Get an original song ad people hear to the end, with every sung claim backed
+subhead: Give it your product, your buyer and your approved claims. It picks a music style that suits the buyer, writes a real song of 15, 30 or 60 seconds about what the customer gets, and pairs each lyric line with an animated shot.
+
+explain: |
+  A song carries a feeling and a line people remember, which spoken ads struggle to do. Most song ads fail by turning into a jingle that chants the brand name or sets a feature list to music. Others sneak in a claim set to a tune that nobody would let through in plain text.
+
+  This skill writes a real song: verses, a chorus, a rhyme, sung by one animated lead in some shots and laid over silent animated pictures in the others. The chorus is the customer's outcome, never the brand name. It sizes the lyric to the length at about 2.5 sung words a second, writes a short style line you paste into a music tool, and holds a sung line to the same rules as a spoken one. Numbers, times and health results come only from your claims.
+
+when:
+  - Your product sells on a feeling (ease, relief, fun) and a catchy line would help people remember it.
+  - Your spoken ads explain well but nobody remembers them a day later.
+  - You want a 15, 30 or 60 second ad for people who know the problem but haven't picked a fix.
+
+you_give:
+  - The reason someone buys, how much they know, and the length (15, 30 or 60 seconds)
+  - Who the buyer is (age, interests), so it can pick the music style
+  - Your main benefit, what a result looks like and how the product is used
+  - Your brand voice and whether your brand uses music in ads
+  - Your approved and banned claims, the offer and the guarantee
+you_get:
+  - The full lyric as a script, one line per row, with section tags
+  - A style line under 25 words to paste into a music tool
+  - A picture note for every line, marking where the lead sings on camera
+  - A clip plan and a note on why that music style was chosen
+
+how_to_use:
+  - Copy the skill and paste it into Claude, ChatGPT or Gemini.
+  - Paste your brand file or product facts and approved claims underneath.
+  - Say who the buyer is, the length, and whether your brand uses music. If you don't say, it will ask.
+  - Read the lyric aloud at an easy pace. Check every sung claim against your claims list.
+  - Take it to the skill that turns a song script into shots, to get the music brief and video prompts.
+
+how_it_works:
+  - title: Checks the fit
+    text: A song suits a feeling and a line that sticks. It's weak for explaining how something works, for proof and for offer terms.
+  - title: Picks the music style
+    text: Matches the style to the buyer from a table (for example indie pop for parents, hip-hop for sport), and says why.
+  - title: Sizes the song
+    text: About 40 words for 15 seconds, 75 for 30 seconds, 150 for 60 seconds, with a verse, chorus and bridge to suit.
+  - title: Writes the lyric
+    text: Lines of 6 to 9 sung words, the catchiest line in the first 12 words, no instrumental intro, and a chorus about what the customer gets.
+  - title: Marks the pictures
+    text: Tags each line SUNG where the lead sings to camera (at least the hook and the last chorus) or describes the silent picture.
+  - title: Writes the style line
+    text: Describes the genre, voice, tempo, mood and production in under 25 words, without naming any artist or band.
+  - title: Checks the claims
+    text: A sung line may claim no more than a spoken one. If a fact doesn't fit the rhythm, it changes the line, never the fact.
+
+output_shape: |
+  MISSING: <anything it needs before the song is made>
+
+  GENRE  <music style, and why it suits this buyer>
+
+  <n>  [<section>] "<sung words, 6 to 9>"
+       Style: <under 25 words, first line only>
+       <SUNG, or the silent picture>. <the shot>
+       On screen: <offer and call to action, last line only>
+  (one row per lyric line)
+
+  WORDS  <sung words> (target about <target>)
+  CLIP PLAN  Clip <n>: lines <n-n> | ...
+
+  CLAIMS IN THE LYRIC
+  Line <n>  <approved claim, brand line, or plain exaggeration>
+  Hook: <which line, which words>
+
+example:
+  business: sprout
+  input: |
+    [the skill]
+
+    Length: 30 seconds
+    Reason to buy: daily nutrition for herself she can keep up with on
+    busy mornings
+    Buyer: the busy parent, 30 to 45, mostly mums. Buys Adults for
+    herself. Has quit powders. Knows the problem, not this fix.
+    Their words: "So easy to grab and eat on my way to the billion
+    things I have to do as a mom." (review 15)
+    Product: Sprout greens gummies. One daily pack, torn across the
+    top, a small handful of gummies. No water, no mixing, no shaker.
+    Approved claims: "60+ ingredients, 21 vitamins & minerals, and 6g
+    fiber" in 1 pack. "Supports digestion and gut health."
+    Brand lines: "Rip. Tip. Enjoy." "Tastes like a treat, works like a
+    supplement." "No Mess, No Stress"
+    Never say: fix, energy or immunity results, weight loss.
+    Offer: $29.99 first order with the text sign-up, renews at $49.99
+    every 4 weeks.
+    Voice: playful, cheeky, short lines.
+  output: |
+    MISSING: whether Sprout uses music in ads. The brand file doesn't
+    say. Treat this as a draft until you confirm.
+
+    GENRE  bright indie pop. The table gives pop and indie pop for both
+    parents of young children and women in their 30s and 40s, and a
+    playful, cheeky voice wants bounce, not gentle acoustic.
+
+    1  [Chorus] "Rip, tip, enjoy, and out the door"
+       Style: bright indie pop, warm female lead, 118 BPM, busy-morning
+       bounce, cheeky, polished, handclaps and jangly guitar.
+       SUNG. The lead, an animated woman in a green jacket and yellow
+       scarf, sings to camera by the front door.
+    2  [Verse 1] "Lunch boxes packed and the keys are gone"
+       Two lunch boxes snap shut on the counter. The key hook is empty.
+    3  "Shoes on the stairs and the kettle's on"
+       Shoes scattered up the stairs, the kettle steaming.
+    4  "And the chalky green shake? Still there from before"
+       Close: a shaker bottle of green sludge in the sink, a dried ring
+       inside.
+    5  [Chorus] "Rip, tip, enjoy, and out the door"
+       She tears a daily pack straight across its top edge.
+    6  "A handful of gummies, no water, no mess"
+       Close: green gummy bears pour from the torn top into her palm.
+    7  [Verse 2] "Twenty-one vitamins and minerals, one small pack"
+       The green pouch on the counter, open at its resealable top, one
+       daily pack beside it.
+    8  "Six grams of fiber, and you don't look back"
+       She eats the gummies, grabs the keys, leaves the shaker behind.
+    9  [Chorus] "Rip, tip, enjoy, and out the door"
+       SUNG. She sings to camera from the doorway, bag on her shoulder.
+    10 "Tastes like a treat, works like a supplement"
+       SUNG. She sings, then pulls the door shut behind her.
+       On screen: First order $29.99 with SMS sign-up. Renews at
+       $49.99 every 4 weeks.
+
+    WORDS  77 sung words (target about 75)
+    CLIP PLAN  Clip 1: lines 1-3 | Clip 2: lines 4-6 |
+    Clip 3: lines 7-9 | Clip 4: line 10. No line crosses a clip.
+    The song is made once, whole, and its real timings set the cut.
+
+    CLAIMS IN THE LYRIC
+    Line 7  "21 vitamins & minerals" in 1 pack, approved, sung in words
+    Line 8  "6g fiber", approved. "Don't look back" is a figure of
+            speech, not a result.
+    Line 6  "no water" is how the product is used; "no mess" is the
+            brand's own words
+    Lines 1, 5, 9  "Rip. Tip. Enjoy." sung word for word
+    Line 10 brand line, sung exactly
+    Line 4  "chalky" names the old way, no competitor
+    Not sung: digestion, energy, survey numbers. No child appears in
+    any shot; the lunch boxes carry the parent's morning.
+    Hook: the catchiest line is line 1, words 1 to 7.
+
+tweaks:
+  - what: Length
+    how: 15 seconds gives you the hook and one chorus (about 40 words). 60 seconds gives a full song with a bridge (about 150 words). Each length is written fresh, never cut down from a longer one.
+  - what: Who the buyer is
+    how: The music style follows the buyer. Say "parents over 40" and you'll get country or soft pop; "young men under 25" and you'll get hip-hop or EDM. If the style feels wrong, name the buyer more exactly.
+  - what: Where the lead sings
+    how: By default the lead sings on camera for the hook and the last chorus only. Ask for "more sung shots" if your lead is strong, but never every line.
+  - what: Brand lines
+    how: Paste lines your brand already uses. The skill sings them exactly, so they're a good way to put your own words in the chorus.
+
+judge:
+  - Sing or hum it. It sounds like a song, not a jingle, and you'd hear it out.
+  - The chorus is about what the customer gets. The brand name isn't the hook or the chorus.
+  - Every number, time or health result in the lyric is in your approved claims.
+  - SUNG appears on the hook and the last chorus, not on every line.
+  - The style line names no artist or band.
+  - Only the last line has on-screen text.
+
+test:
+  - Count the sung words and time yourself singing it at an easy pace. A 30-second song should land between 27 and 33 seconds.
+  - Run it twice for the same buyer. The music style should stay in the same family; if it jumps from pop to hip-hop, describe the buyer more exactly.
+  - Circle every number in the lyric and find it in your claims list. One that isn't there means the claims step was skipped.
+  - Play a rough version to someone who hasn't seen the brief and ask what the product does for them. If they only remember the brand name, the chorus isn't about the customer.
+
+improve:
+  - Add your brand lines to "What you need" in the skill file, marked as sung exactly, so every song can use them in the chorus.
+  - If your buyers don't fit the style table, add a row for them with two or three styles you know they like.
+  - Write your answer to "does the brand use music in ads?" into the skill file, so it stops asking.
+  - Save the chorus that wins to your brand file, and test a new verse against it next time.
+  - Pair it with the skill that turns a song script into a music brief and video shots, then check music rights before you pay to run it.
+
+terms:
+  - term: Style line
+    meaning: A short description of how the song should sound (genre, voice, speed, mood), pasted into a music tool.
+  - term: BPM
+    meaning: Beats per minute, the speed of the song. Around 110 to 125 feels upbeat.
+  - term: SUNG
+    meaning: A tag on a shot where the animated lead faces the camera and sings that line.

@@ -1,0 +1,189 @@
+new_slug: turn-paper-world-script-into-ready-video-shots
+name: Turn your paper world script into ready-to-make video shots
+summary: Look wording, a character line, and still and clip prompts that keep every frame real paper.
+job: make-video-ads
+
+headline: Get clips that look like real photographed paper in every frame, never flat clip art
+subhead: Give it a narrated paper-world script and your product photo and label. It fixes one paper look and one paper character, then writes stills to approve, clip prompts with a movement lock, and a paper transition for each change of scene.
+
+explain: |
+  Paper-world ads break in familiar ways once an AI video tool gets them. The paper turns into flat digital art. The scene shows up as a craft model on a workbench instead of a world you're inside. "Stop motion" on its own drifts into clay. Paper bends and flows like rubber, and your label gets redrawn wrong.
+
+  This skill writes around those failures. It picks one of five looks and pastes the same look line into every prompt, with a closing line about grain, cut edges and real shadows. It fixes one paper character in a sentence and reuses it. The camera stays inside the paper world at a named angle. Clips move only as flat paper moves (slide, pivot, push through layers) with stepped handmade timing, and the product stays paper at its true shape with its exact label words.
+
+when:
+  - You have a paper-world script and need prompts for an AI image and video tool.
+  - Earlier attempts looked like clip art, clay, or a model on a table.
+  - Your story changes setting and you want the change itself to be a paper moment.
+
+you_give:
+  - The script, with narration and a scene list
+  - Your product photo and every line of label text
+  - How your product is used
+  - Your colours, tone and approved claims (optional)
+  - The clip lengths your video tool accepts (optional)
+you_get:
+  - A look pack with the look line and closing material line
+  - A character sentence and a world list (camera angles, palette)
+  - Still prompts, clip prompts and transition prompts
+
+how_to_use:
+  - Copy the skill and paste it into Claude, ChatGPT or Gemini.
+  - Paste your script underneath, then your label lines and product photo.
+  - Make the character still first, front on, and approve it.
+  - Make the first frame of each setting with the character and product attached.
+  - Make one clip per approved still, then the transitions between settings.
+  - Add captions and the offer in editing.
+
+how_it_works:
+  - title: Makes it read as paper
+    text: Grain, fibres, real shadows between layers, imperfect edges, flat motion and stepped timing in every look.
+  - title: Picks one look
+    text: Layered papercraft, flat cutout, handmade stop-motion, collage or origami, with its look line pasted unchanged everywhere.
+  - title: Fixes character and world
+    text: One sentence for the paper character, reused. The camera inside the world at a named angle.
+  - title: Keeps the product exact
+    text: The product made of paper at its true shape and colours, every label line stated, photo attached.
+  - title: Writes and approves stills
+    text: Look line, scene, closing material line. If one misses, the same prompt runs again first.
+  - title: Writes the clips
+    text: A movement lock and one paper move per clip, chosen from the moves that work reliably.
+  - title: Plans transitions
+    text: A paper move for each change of setting, like a page turn or a layer peeling back.
+
+output_shape: |
+  LOOK PACK
+  Look: <one of five>
+  Look line: <pasted unchanged into every prompt>
+  Closing line: <real photographed paper, grain, edges, shadows, light>
+
+  CHARACTER
+  <one sentence: paper adult, about 4 heads tall, material, hair, clothes, joints, dot eyes>
+
+  WORLD
+  <setting>: camera <angle>, palette <colours>
+  ...
+
+  STILL <n> (attach: <picture> = <job>)
+  <look line> <scene> <closing line>
+
+  CLIP <n>
+  <movement lock> <one move> Narration: "<line>" End frame: <...>
+
+  TRANSITION <setting A to B>
+  <paper move, how it's made>
+  MISSING: <...>
+
+example:
+  business: sprout
+  input: |
+    [the skill]
+
+    Script (20 s, flat cutout, from "Get a paper world ad script that
+    sells"):
+    1 "Lunches packed. Keys lost. Shoes, somewhere."  card kitchen
+    2 "Breakfast for you? Not today."  card kitchen, toast on a plate
+    3 "So grab one pack on the way out."  TRANSITION: top layer peels
+      back to a card car interior
+    4 "Rip. Tip. Enjoy."  hands tear a daily pack across the top
+    5 "Sixty-plus ingredients, 21 vitamins and minerals, 6 grams of
+      fiber."  paper pouch on the passenger seat
+    6 "Start your first pack."  held, offer added in editing
+    Product: Sprout pouch, photo attached. Label: "Sprout" in yellow,
+    yellow bear face top right, "28 Daily Packs" at the bottom.
+    Gummies: small deep-green bears. Tear only straight across the top.
+    Colours: forest green #00582D, cream #FFF7DF, sunflower #FFCC2E.
+  output: |
+    LOOK PACK
+    Look: flat cutout
+    Look line: a world of simple flat card shapes with snipped edges,
+      jointed paper puppets, soft drop shadows, bold flat colour, the
+      camera inside the paper world.
+    Closing line: everything is real photographed paper with visible
+      grain and fibres, thickness showing at every cut edge, real cast
+      shadows between layers, soft studio light, the paper filling
+      the whole frame.
+
+    CHARACTER
+    A paper adult woman about 4 heads tall, cut from matte card, dark
+    brown card hair in a short bob, a blue card jumper and grey card
+    trousers, jointed at shoulders and elbows, black dot eyes, a small
+    snipped mouth. She never talks.
+
+    WORLD
+    Kitchen: camera at her eye level; cream card walls, forest-green
+      card cupboards, a sunflower card window.
+    Car: camera at seat height; grey card seats, a blue card sky
+      through the window.
+    Palette named in every prompt: forest green, cream, sunflower
+    yellow, blue, grey.
+
+    STILL 1, CHARACTER
+    [Look line]. [Character sentence], standing front on against plain
+    cream card. [Closing line].
+
+    STILL 2, KITCHEN (attach: character still = who she is)
+    [Look line]. In a card kitchen with cream card walls and forest-
+    green card cupboards, [character sentence] reaches for a pair of
+    paper keys on a card hook; two paper lunchboxes sit on the card
+    counter. Camera at her eye level, the kitchen running past every
+    edge of the frame. [Closing line].
+
+    CLIP 1 (from Still 2)
+    Paper stop-motion, visible judder, slight jitter, no motion blur.
+    The paper lunchboxes slide across the card counter as flat pieces;
+    her jointed paper arm pivots at the elbow toward the keys.
+    Narration: "Lunches packed. Keys lost. Shoes, somewhere." End frame:
+    her paper hand on the keys.
+
+    TRANSITION, KITCHEN TO CAR
+    Its own clip between the last kitchen still and Still 4 (car), both
+    attached: the top paper layer of the kitchen peels back from the
+    right corner like a sticker, revealing the card car interior laid
+    beneath. Paper stop-motion, stepped timing, no blur. Narration:
+    "So grab one pack on the way out."
+
+    (cut for length: the full run also had Still 3 (toast), Still 4
+    (car with the paper pouch, label lines stated), Still 5 (hands
+    tearing the pack), and Clips 2 to 4)
+
+    MISSING: a photo of a single daily pack for the tearing close-up,
+    and the colour of "28 Daily Packs" on the pouch.
+
+tweaks:
+  - what: The look
+    how: Change the look and every prompt changes its look line. Collage is the only look where the product can stay a photo cutout, which keeps a busy label accurate.
+  - what: Camera angle
+    how: Name an angle per setting (eye level, looking up from the ground, straight down). It stays inside the world whichever you pick.
+  - what: How a transition is made
+    how: Ask for it as wording inside a clip, as its own clip between two stills, or with both stills attached. Its own clip is the most reliable.
+  - what: Motion strength
+    how: If clips judder too much in layered papercraft, ask for "subtle stepped motion". It keeps the handmade feel with less jitter.
+
+judge:
+  - The look line is word for word the same in every still and clip prompt.
+  - No prompt says "diorama", "tabletop", "shadow box" or "model".
+  - Every object in every scene is named as paper or card.
+  - Each clip has one paper move only.
+  - The label text on the paper pack is stated exactly.
+
+test:
+  - Search the prompts for "diorama", "tabletop", "shadow box" or "model". None should appear. Those words turn the world into a craft model on a table.
+  - Make the character still first. If it comes back as flat digital art, run the same prompt again before changing any words.
+  - Run it twice on the same script and compare the look line and character sentence. Each should match word for word in every prompt.
+  - Make one clip and watch the motion. Paper should slide, pivot or push through layers, never bend like rubber.
+
+improve:
+  - Write your chosen look line into step 2 of the skill file, so every ad in a series uses the same paper.
+  - Save the approved character sentence into step 3 and the character still in your brand file, and attach it to every scene the character is in.
+  - Add your label lines and colours to step 4, so the paper pack is right every time.
+  - Add pop-ins and lines that draw themselves to the Avoid list as editing jobs. Video tools do them badly.
+  - Pair it with the skill that writes the paper world script, so each line is already one paper picture.
+
+terms:
+  - term: Look line
+    meaning: One fixed sentence describing the paper style, pasted unchanged into every prompt so frames match.
+  - term: Movement lock
+    meaning: A fixed instruction in every clip prompt that tells the video tool how things may and may not move.
+  - term: Still
+    meaning: A single image made first, so you can approve the look before paying for video.

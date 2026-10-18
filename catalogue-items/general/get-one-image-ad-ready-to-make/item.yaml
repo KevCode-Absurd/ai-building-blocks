@@ -1,0 +1,28 @@
+slug: get-one-image-ad-ready-to-make
+renamed_from: static-ad-copy-and-layout-planner
+name: "Get one image ad ready to make"
+summary: "One image ad planned end to end, with the picture, its words and the feed copy, counted."
+category: general
+boards: [ecommerce]
+type: skill
+role: make
+job: ads
+level: advanced
+inputs:
+  - type: brand_brain
+    required: false
+  - type: voc_reviews
+    required: false
+  - type: product_data
+    required: true
+  - type: angle_library
+    required: false
+outputs:
+  - {type: ad_copy}
+  - {type: image_prompt}
+uses: [get-headlines-strangers-understand-at-a-glance, get-an-ad-where-every-line-sells]
+example: ad-layout
+origin: own
+source_ids: [CES-044, CES-045]
+old_name: image-ad-copy; image-ad-copywriter
+version: 1.0.0

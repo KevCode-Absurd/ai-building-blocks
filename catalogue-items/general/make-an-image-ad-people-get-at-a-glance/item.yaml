@@ -1,0 +1,22 @@
+slug: make-an-image-ad-people-get-at-a-glance
+renamed_from: single-static-image-ad-script-format-rules
+name: "Make an image ad people get at a glance"
+summary: "One clear point on the image, in reading order, with the rest moved to the text above."
+category: general
+boards: [ecommerce]
+type: skill
+role: make
+job: image
+level: intermediate
+inputs:
+  - {type: script, required: true}
+  - {type: brand_brain, required: true}
+outputs:
+  - {type: ad_copy}
+  - {type: image_prompt}
+uses: []
+example: static
+origin: own
+source_ids: [CES-122]
+old_name: script-format-static
+version: 1.0.0

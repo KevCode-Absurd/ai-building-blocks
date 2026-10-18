@@ -1,5 +1,6 @@
-import { useEffect, useRef, useState, type ReactNode } from "react";
-import { type Block, KINDS, kindOf, portLabel, taskOf } from "./lib/data";
+import { useEffect, useRef, useState, type KeyboardEvent as ReactKeyEvent, type ReactNode } from "react";
+import { type Block, kindInfo, pathOf, taskOf } from "./lib/data";
+import { Link } from "./lib/router";
 import { kits, useStore } from "./lib/store";
 
 export function Logo() {
@@ -45,23 +46,16 @@ export function ThemeToggle() {
   );
 }
 
-export function BlockCard({ b, onOpen }: { b: Block; onOpen: (slug: string) => void }) {
-  const kind = KINDS.find((k) => k.id === kindOf(b))!;
+export function BlockCard({ b }: { b: Block }) {
+  const kind = kindInfo(b);
   return (
-    <button className="card" onClick={() => onOpen(b.slug)} data-testid="block-card" data-slug={b.slug} data-kind={kind.id}>
+    <Link to={pathOf(b)} className="card" data-testid="block-card" data-slug={b.slug} data-kind={kind.id}>
       <span className="meta"><span className="kind">{kind.name}</span><span className="type">{taskOf(b).name}</span></span>
       <span className="nm">{b.name}</span>
       <span className="sm">{b.summary}</span>
-      <span className="flow">
-        {b.category === "orchestrator" ? <span>{b.steps.length} steps</span> : (
-          <>
-            <span>{b.inputs.filter((p) => p.required).map((p) => portLabel(p.type)).join(", ") || (b.inputs[0] ? portLabel(b.inputs[0].type) : "Your request")}</span>
-            <ArrowIcon size={12} />
-            <span>{b.outputs.map((p) => portLabel(p.type)).join(", ") || "Output"}</span>
-          </>
-        )}
-      </span>
-    </button>
+      {b.peek && <span className="peek" aria-hidden="true">{b.peek}</span>}
+      <span className="view">{b.category === "orchestrator" ? `View the ${b.steps.length} steps` : `View the ${kind.name.toLowerCase()}`}<ArrowIcon size={12} /></span>
+    </Link>
   );
 }
 
@@ -85,7 +79,7 @@ export function KitMenu({ slug, onChange }: { slug: string; onChange: (msg: stri
   const inAny = all.some((k) => k.slugs.includes(slug));
   return (
     <div className="pop" ref={ref}>
-      <button className="btn btn-dark btn-sm" aria-expanded={open} onClick={() => setOpen(!open)}>{inAny ? "In your kits" : "Save to kit"}</button>
+      <button className="btn btn-dark" aria-expanded={open} onClick={() => setOpen(!open)}>{inAny ? "In your kits" : "Save to kit"}</button>
       {open && (
         <div className="pop-panel">
           {all.length === 0 && <p className="small">A kit is a set of blocks you use together. Name your first one.</p>}
@@ -124,5 +118,59 @@ export function Drawer({ label, top, onClose, children }: { label: string; top: 
         <div className="drawer-body">{children}</div>
       </div>
     </>
+  );
+}
+
+export type Opt = { value: string; label: string; count?: number };
+/** A dropdown that matches the site: a pill that names the filter and its choice, and a list with counts.
+ *  Arrow keys move, Enter picks, Escape closes; options with nothing in them are greyed out. */
+export function Select({ label, value, options, onChange, testId }: { label: string; value: string; options: Opt[]; onChange: (v: string) => void; testId?: string }) {
+  const [open, setOpen] = useState(false);
+  const [active, setActive] = useState(0);
+  const ref = useRef<HTMLDivElement>(null);
+  const list = useRef<HTMLUListElement>(null);
+  const id = useRef(`sel-${Math.random().toString(36).slice(2, 8)}`).current;
+  const current = options.find((o) => o.value === value) ?? options[0];
+  useEffect(() => {
+    if (!open) return;
+    setActive(Math.max(0, options.findIndex((o) => o.value === value)));
+    list.current?.focus();
+    const close = (e: MouseEvent) => { if (!ref.current?.contains(e.target as Node)) setOpen(false); };
+    document.addEventListener("mousedown", close);
+    return () => document.removeEventListener("mousedown", close);
+  }, [open]); // eslint-disable-line react-hooks/exhaustive-deps
+  const pick = (o: Opt) => { if (o.count === 0 && o.value !== value) return; onChange(o.value); setOpen(false); ref.current?.querySelector("button")?.focus(); };
+  const onKey = (e: ReactKeyEvent) => {
+    if (e.key === "Escape") { e.preventDefault(); setOpen(false); ref.current?.querySelector("button")?.focus(); }
+    else if (e.key === "ArrowDown") { e.preventDefault(); setActive((a) => Math.min(options.length - 1, a + 1)); }
+    else if (e.key === "ArrowUp") { e.preventDefault(); setActive((a) => Math.max(0, a - 1)); }
+    else if (e.key === "Home") { e.preventDefault(); setActive(0); }
+    else if (e.key === "End") { e.preventDefault(); setActive(options.length - 1); }
+    else if (e.key === "Enter" || e.key === " ") { e.preventDefault(); pick(options[active]); }
+    else if (e.key === "Tab") setOpen(false);
+  };
+  useEffect(() => { if (open) list.current?.querySelector(`[data-i="${active}"]`)?.scrollIntoView({ block: "nearest" }); }, [active, open]);
+  const set = value !== options[0]?.value;
+  return (
+    <div className={`sel${open ? " open" : ""}${set ? " set" : ""}`} ref={ref}>
+      <button type="button" className="sel-btn" aria-haspopup="listbox" aria-expanded={open} aria-controls={id} onClick={() => setOpen(!open)} data-testid={testId}
+        onKeyDown={(e) => { if (e.key === "ArrowDown" || e.key === "ArrowUp") { e.preventDefault(); setOpen(true); } }}>
+        <span className="sel-label">{label}</span>
+        <span className="sel-value">{current?.label}</span>
+        <svg width="10" height="10" viewBox="0 0 10 10" aria-hidden="true"><path d="M2 4l3 3 3-3" stroke="currentColor" strokeWidth="1.5" fill="none" strokeLinecap="round" strokeLinejoin="round" /></svg>
+      </button>
+      {open && (
+        <ul className="sel-list" role="listbox" id={id} tabIndex={-1} ref={list} aria-label={label} aria-activedescendant={`${id}-${active}`} onKeyDown={onKey}>
+          {options.map((o, i) => (
+            <li key={o.value} id={`${id}-${i}`} data-i={i} role="option" aria-selected={o.value === value} aria-disabled={o.count === 0 && o.value !== value}
+              className={i === active ? "active" : undefined} onMouseEnter={() => setActive(i)} onClick={() => pick(o)}>
+              <span className="sel-check" aria-hidden="true">{o.value === value ? "●" : ""}</span>
+              <span className="sel-name">{o.label}</span>
+              {o.count !== undefined && <span className="sel-count">{o.count}</span>}
+            </li>
+          ))}
+        </ul>
+      )}
+    </div>
   );
 }

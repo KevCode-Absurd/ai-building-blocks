@@ -1,0 +1,172 @@
+new_slug: get-cutout-explainer-ad-script-that-sells
+name: Get a cutout explainer ad script that sells
+summary: A fast paper-cutout explainer that proves one point, with one picture for every sentence.
+job: make-video-ads
+
+headline: Prove one point fast, with a picture for every sentence and your real product cut out
+subhead: Give it your selling idea and product facts. It states your main point in one sentence, writes narration where each line has one proof picture and one arrow, and hands back a 20 to 40 second script or a single image.
+
+explain: |
+  Explainer ads often try to say everything. Five features, three charts, a paragraph of text, and a viewer who has scrolled away before the point lands. Others use charts with no real numbers behind them.
+
+  This skill keeps the ad to one point you can say in a sentence. Every line of narration gets exactly one picture that proves it: your product cut out from its real photo, a simple paper diagram, the old way slid aside, or a ring around the part that matters. One arrow or ring tells the eye where to look. Charts appear only when you have the figures. The look is a paper collage seen from above, in your own colours, so the whole ad reads with the sound off. It works as a 20 to 40 second video or a single image.
+
+when:
+  - You have one clear argument, such as why the usual product fails or what yours replaces.
+  - You want viewers to follow the point with the sound off.
+  - You have real figures to show, or want an ad that proves things with objects when you don't.
+
+you_give:
+  - The selling idea, or a script you already have
+  - Your product facts, how it works, and what it replaces
+  - Your figures with sources, approved claims and banned claims
+  - Your colours, typefaces, offer and guarantee
+  - Video or still, and the length (optional)
+you_get:
+  - The main point in one sentence and a graphic style card
+  - A table of narration, proof picture, pointer and move for every line
+  - Or, for a still, the layout, the exact words and an image prompt
+  - Notes on where each figure comes from, and anything MISSING
+
+how_to_use:
+  - Copy the skill and paste it into Claude, ChatGPT or Gemini.
+  - Paste your product facts, figures and claims underneath.
+  - Say what point you want to prove, or ask it to pick one from your facts.
+  - Say "video, 30 seconds" or "still".
+  - Read the main point first. If it isn't one sentence, ask for two separate ads.
+  - For a video, take the script to "Turn your cutout explainer script into ready-to-make video shots".
+
+how_it_works:
+  - title: Checks it fits
+    text: Suits an argument, a comparison or a surprising fact. It says so if your ad is about a feeling or is only an offer.
+  - title: States one point
+    text: Writes the main point in one sentence. If it needs two, it's two ads.
+  - title: Sets one style
+    text: One paper ground, two type sizes, one accent colour, one kind of arrow. Your product always in full colour from its photo.
+  - title: Proves each sentence
+    text: Gives every line one proof picture and one pointer, and cuts any sentence nothing can prove.
+  - title: Keeps proof honest
+    text: No chart without your figures, no named rival, no body before and after, no real people.
+  - title: Writes the video
+    text: Narration first, then one shot and one move per line, the product arriving as a cutout on the line that names it.
+  - title: Or writes the still
+    text: One claim, one proof, one pointer, a headline of eight words or fewer, 20 words in total.
+
+output_shape: |
+  MAIN POINT
+  <one sentence: the problem, how it works, old way vs new, or a surprising fact>
+
+  GRAPHIC STYLE
+  Paper: <ground>  Type: <two sizes>  Accent: <one colour>
+  Photos: <one treatment>  Pointers: <one arrow, label and chart family>
+
+  Line | Narration | Proof picture and pointer | Move | On-screen text | Clip
+  1 | "<sentence>" | <cutout, diagram, close view, highlight or old beside new> | <one move> | <5 words or fewer> | 1
+  ...
+  <last line: product cutout large and still, offer as on-screen text>
+
+  NOTES
+  - Figures: <each figure and its source, or "no chart">
+  - MISSING: <what the ad needed>
+
+example:
+  business: sprout
+  input: |
+    [the skill]
+
+    Idea: the powder routine has too many steps; a pack has one.
+    Buyer: has quit greens powders. Words: "gritty/chalky", "not having
+    to clean a shaker bottle". Old way: a half-used tub of powder and
+    a shaker.
+    Product: Sprout daily greens gummies. One daily pack, torn straight
+    across the top, gummies tipped into a palm. No water, no mixing.
+    Approved: "60+ ingredients, 21 vitamins & minerals, and 6g fiber"
+    in 1 pack. "Clinically tested for nutrient absorption" (2025 study,
+    12 weeks, 120 adults: vitamin C +40.1%, 2.7x placebo; folate +20.5%,
+    2.9x placebo).
+    Photos: gummies in a hand, pouch front. Old-way photos: none yet.
+    Colours: cream #FFF7DF, forest green #00582D, sunflower #FFCC2E.
+    Type: Work Sans bold and medium.
+    Offer: $29.99 first order with text sign-up, renews at $49.99.
+    Video, 20 seconds. Buyer stage: solution aware.
+  output: |
+    MAIN POINT (comparison with the old way)
+    A greens powder takes a scoop, water and a shaker; a Sprout pack
+    takes one tear.
+
+    GRAPHIC STYLE
+    Paper: warm cream card, the colour of #FFF7DF
+    Type: Work Sans bold (claim), Work Sans medium (label)
+    Accent: sunflower yellow #FFCC2E, for the pointer only
+    Photos: old-way photos in black and white with coarse dots; the
+      product always full colour
+    Pointers: hand-cut arrows with blunt heads, label strips with one
+      torn end
+
+    Line | Narration | Proof and pointer | Move | On-screen | Clip
+    1 | "Greens powder takes a scoop, water and a shaker." | Old way:
+        tub, scoop, glass, shaker cutouts in a row; arrow runs along
+        all four | slide in from left as one row | 4 STEPS | 1
+    2 | "Then the shaker needs washing." | Close view: the shaker
+        cutout, ring round its lid | scale up to the shaker | +1 TO
+        WASH | 1
+    3 | "A Sprout pack takes one tear." | The daily pack cutout; arrow
+        straight along its top edge | the old row slides off right |
+        1 STEP | 1
+    4 | "Inside: sixty-plus ingredients, 21 vitamins and minerals, 6
+        grams of fiber." | Gummies-in-a-hand photo cutout, two blank
+        strips with arrows to the gummies | wipe uncovers the hand |
+        60+ ingredients. 6g fiber | 2
+    5 | "One tear. That's the routine." | Pouch cutout large and still,
+        centre | hard cut, held | $29.99 first order with text sign-up.
+        Renews at $49.99 every 4 weeks | 2
+
+    Clip 1: lines 1-3, 10 s, 20 words. Clip 2: lines 4-5, 10 s,
+    18 words. Paper and the old-way row are in frame from shot one.
+
+    NOTES
+    - Figures: 60+ and 6g from the label claim. No chart: the
+      absorption study is a second argument. Make it its own ad; it
+      has real figures for a two-bar chart.
+    - Line 3 shows the tear straight across the top, the only way the
+      brand allows.
+    - Compared with "the old way", never a named powder brand.
+    - MISSING: black-and-white photos of a plain tub, scoop, glass and
+      shaker (no brand marks), and a photo of a single daily pack.
+
+tweaks:
+  - what: The kind of point
+    how: Ask for a specific kind, for example "a comparison with the old way" or "a surprising fact about the buyer's day". Each gives a different opening shot.
+  - what: Your figures
+    how: Paste test results, counts or measurements with their sources. With them you get a chart drawn to the real proportions. Without them, objects do the proving.
+  - what: The paper and photo style
+    how: Name the ground (kraft paper, squared paper) and how supporting photos look (black and white with dots, colour with a white border). It keeps to that choice all the way through.
+  - what: Still for each stage
+    how: Ask for three stills, one per buyer stage. Problem aware shows the old way failing, solution aware puts old beside new, unaware opens on one surprising object.
+
+judge:
+  - You can say the main point in one breath, and every line serves it.
+  - Each line has exactly one proof picture and one arrow or ring.
+  - Every number on screen has a source in the notes.
+  - No rival brand or pack is shown or named.
+  - With the sound off, the pictures alone still make the argument.
+
+test:
+  - Run it on the point your best ad already makes. If its one-sentence main point isn't the one you meant, your selling idea needs to be sharper.
+  - Read only the picture notes, as if the sound were off. They should still make the argument.
+  - Ask for a chart without giving the figures. It should leave the chart out or mark it MISSING, never invent bars.
+  - Run it twice and compare. Neither version should name a rival brand, and every on-screen number should have a source.
+
+improve:
+  - Write your paper ground, accent colour and arrow style into step 3 of the skill file, so every explainer in a series looks the same.
+  - Add your measured figures, with sources, to your brand file. Charts make the strongest proof pictures, and step 5 only allows them from real numbers.
+  - Describe the old way you sell against in "What you need" (for Sprout, a powder tub and a shaker), so comparison shots never show a real rival.
+  - Pair it with the skill that turns a cutout explainer script into still and clip prompts for a video tool.
+
+terms:
+  - term: Cutout
+    meaning: A photo of your product with the background removed, so it can sit on any layout.
+  - term: Pointer
+    meaning: The one arrow, ring or underline that shows the viewer where to look.
+  - term: Buyer stage
+    meaning: How much the buyer already knows about the problem and about you.

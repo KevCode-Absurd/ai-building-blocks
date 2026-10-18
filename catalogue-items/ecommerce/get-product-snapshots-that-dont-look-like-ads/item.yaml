@@ -1,0 +1,21 @@
+slug: get-product-snapshots-that-dont-look-like-ads
+renamed_from: candid-flash-lifestyle-photo-set
+name: "Get product snapshots that don't look like ads"
+summary: "Flash snapshots of people using your product on a real evening, for ads and posts that feel real."
+category: ecommerce
+type: skill
+role: render
+job: image
+level: advanced
+inputs:
+  - {type: product_photos, required: true}
+  - {type: brand_brain, required: true}
+  - {type: persona, required: false}
+outputs:
+  - {type: photo_set}
+uses: [stop-ai-pictures-getting-your-product-wrong]
+example: flash-photoshoot
+origin: rebuilt
+source_ids: [CES-036]
+old_name: flash-photography
+version: 1.0.0

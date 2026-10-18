@@ -1,0 +1,27 @@
+slug: get-a-checked-landing-page-for-your-best-ad
+name: Get a checked landing page for your best ad
+summary: "Page copy that carries on from your ad, a design plan and a 30-point review with ranked fixes."
+category: orchestrator
+boards: [ecommerce]
+type: workflow
+role: orchestrate
+job: page
+level: intermediate
+inputs:
+  - {type: web_page, required: true}
+  - {type: offer, required: true}
+  - {type: voc_reviews, required: false}
+  - {type: performance_sheet, required: false}
+  - {type: ad_copy, required: false}
+  - {type: persona, required: false}
+outputs:
+  - {type: design_direction}
+  - {type: audit_report}
+uses: [turn-website-into-brand-file-for-ai, finish-the-sale-your-ad-started, choose-three-on-brand-designs-for-page, find-what-stops-visitors-buying-30-quick-checks]
+steps:
+  - {uses: turn-website-into-brand-file-for-ai, note: "Build your brand file with your offer and the claims you can prove."}
+  - {uses: finish-the-sale-your-ad-started, note: "Write the page so its first screen picks up exactly where the ad left off."}
+  - {uses: choose-three-on-brand-designs-for-page, note: "Plan the page's look from your brand: type, colour and layout, phone first."}
+  - {uses: find-what-stops-visitors-buying-30-quick-checks, note: "Review the page against a 30-point checklist and rank the fixes."}
+origin: own
+version: 1.0.0

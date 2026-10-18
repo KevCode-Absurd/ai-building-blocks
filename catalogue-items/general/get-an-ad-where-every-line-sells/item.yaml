@@ -1,0 +1,20 @@
+slug: get-an-ad-where-every-line-sells
+renamed_from: ad-copy-sell-pass
+name: "Get an ad where every line sells"
+summary: "Your draft ad back with vague praise swapped for facts, the price and guarantee added, strong lines kept."
+category: general
+boards: [ecommerce]
+type: skill
+role: check
+job: copy
+level: intermediate
+inputs:
+  - {type: ad_copy, required: true}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: audit_report}
+uses: [keep-clever-lines-from-beating-clear-ones]
+origin: own
+source_ids: [CES-024]
+old_name: copy-principles
+version: 1.0.0

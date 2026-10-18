@@ -1,0 +1,179 @@
+new_slug: fix-page-in-order-buyers-read-it
+name: Fix your page in the order buyers read it
+summary: Ranked fixes for your page, found by reading it like a phone buyer. No sales data needed.
+job: audit-landing-page
+
+headline: Know what to fix first on your page, ranked in the order buyers notice it
+subhead: Give it your page's address or text and screenshots, plus the ad that leads there if you have it. It reads the page top down like a buyer on a phone, makes the first unanswered question finding one, and ranks every fix by impact and ease, with quick wins first.
+
+explain: |
+  You don't need analytics to see most of what's wrong with a page. You need to read it the way a buyer does, on a phone, in order, and notice the first moment they'd stop and think "but what is it?" or "how much?" or "what if it doesn't work?".
+
+  This skill does that from the page alone. It names the page's job first, then walks it top down against seven buyer questions and stops at the first one left unanswered. That becomes finding one. It then checks the page against plain principles: the headline says what's offered, proof is never more than a thumb-scroll away, the guarantee sits by the button, discounts are honest. Fixes are ranked by impact and ease, big ones before small ones like colours. It tells you what analytics would add, and gives no money figures without them.
+
+when:
+  - You want a page review today and don't have analytics, or don't trust them.
+  - You inherited a page and want a ranked list of what to change, not a redesign.
+  - You want a short list of quick wins for this week and a few bigger ideas to test later.
+
+you_give:
+  - The page, as its address or its full text and phone screenshots
+  - The ad or link that leads to it (optional, but best)
+  - Your brand file with buyer doubts, offer terms, real proof, guarantee and delivery terms (optional)
+  - Analytics, such as conversion by step and phone against desktop (optional)
+you_get:
+  - The page's job and a one-line verdict
+  - A ranked findings table tied to buyer questions and principles
+  - Up to five quick wins for this week and up to three bigger ideas to test
+  - A list of what the page can't tell you, such as missing proof or terms
+
+how_to_use:
+  - Copy the skill and paste it into Claude, ChatGPT or Gemini.
+  - Paste the page's text and attach phone screenshots from top to bottom.
+  - Paste the ad that sends people there, so the first screen can be checked against it.
+  - Add your guarantee, delivery and returns terms if they're not on the page. Missing terms are findings in their own right.
+  - Do the quick wins this week. Only test the bigger ideas if your traffic can support a test.
+
+how_it_works:
+  - title: Names the page's job
+    text: A first purchase, a lead, a bigger order or keeping a customer. The review is judged against that job.
+  - title: Walks it on a phone
+    text: Asks seven buyer questions top down, from "is this what the ad showed me?" to "what if it doesn't work, and when does it arrive?", and stops at the first one unanswered.
+  - title: Checks against the ad
+    text: The first screen should carry the ad's words, its buyer, its offer at the same price and the same picture.
+  - title: Applies plain principles
+    text: Clear headline, one main button, benefits over features, proof close by, guarantee by the button, honest discounts, real urgency only.
+  - title: Ranks by impact and ease
+    text: Big changes (offer, first screen, price structure, phone speed, guarantee, proof) before small ones. Colour comes last.
+  - title: Says what analytics would add
+    text: Which leak costs most, phone against desktop, which step loses people, and proof a change worked.
+  - title: Labels every figure
+    text: A number with a named source is that source's. Anything else is marked as a rule of thumb.
+
+output_shape: |
+  PAGE JOB: <first purchase | lead | bigger order | keep customers>
+  VERDICT: <one line>
+
+  FINDINGS
+  # | Buyer question missed (1 to 7) | What the page does now | Fix
+    | Principle | Impact (high/med/low) | Ease (high/med/low) | Needs analytics?
+  1 | <first unanswered question> | "<quote or place>" | <fix> | ...
+
+  QUICK WINS THIS WEEK (up to 5)
+  - <fix>
+
+  TEST, DON'T JUST SHIP (up to 3)
+  - <big change>: <one-line hypothesis>
+
+  WHAT THE PAGE CAN'T TELL US
+  MISSING: <proof, terms or data>
+
+example:
+  business: sprout
+  input: |
+    [the skill]
+
+    The page: sprout.example/products/sprout, as text top to bottom, with
+    the notes on what was and wasn't seen (sprout/product-page.md).
+
+    Brand file: sprout/brand.md (buyers and their doubts, offers, the
+    guarantee, claims that are fine and risky).
+
+    No ad and no analytics this time. Judge the page on its own.
+  output: |
+    PAGE JOB: first purchase (subscription) from new visitors
+    VERDICT: A buyer can't tell what Sprout does for them from the first
+    screen, and the real price and guarantee limits sit in small print.
+
+    FINDINGS
+    1 | Need 2: what is it, what does it do for me?
+      Now: "Sprout Superfood Gummies" / "60+ potent ingredients to revive
+      whole body vitality"
+      Fix: headline on the outcome, e.g. your greens in one pack you eat
+      Principle: headline says what's offered and for whom, under ~10 words
+      Impact high . Ease high . Analytics to size: yes
+    2 | Need 3: why this one?
+      Now: "Us vs. Them" uses $1.26 and $3.60, flagged as dated
+      Fix: recheck both prices or remove the table
+      Principle: compare only on facts you hold now
+      Impact med . Ease high . Analytics: no
+    3 | Need 4: do I believe it?
+      Now: four star ratings across the site; reviews at the very bottom
+      Fix: one rating with its source; three reviews near the button
+      Principle: proof never more than a thumb-scroll away
+      Impact high . Ease med . Analytics: yes
+    4 | Need 5: what do I get, what does it cost in full?
+      Now: "$29.99. $1.07/day"; "Renews at $49.99" small under the button;
+      text sign-up condition only in the footer
+      Fix: both prices and the condition together in the plan box
+      Principle: show discounts openly; no surprise at renewal
+      Impact high . Ease high . Analytics: yes
+    5 | Need 6: will it work for me?
+      Now: Low Sugar vs Sugar-Free panel not captured; no stomach note
+      Fix: say Sugar-Free uses sugar alcohols; point sensitive guts to
+      Low Sugar
+      Principle: answer the doubts before the buyer leaves
+      Impact med . Ease high . Analytics: no
+    6 | Need 7: what if it doesn't work?
+      Now: "30-Day Money-Back Guarantee" in the plan box; "applies only to
+      your initial purchase" in the last FAQ
+      Fix: "on your first order" beside the button
+      Principle: risk removal right beside the main button, stated fully
+      Impact med . Ease high . Analytics: no
+
+    QUICK WINS THIS WEEK
+    - "On your first order" next to the guarantee
+    - Renewal price in the plan box at body size
+    - Remove "Limited Time Sale" (the price cut is "indefinitely")
+    - Remove "Supports immunity + stress relief" and "Promotes mental
+      clarity + energy" (the study measured 2 vitamins)
+    - Fill in the missing number in "[number missing] of U.S. adults"
+
+    TEST, DON'T JUST SHIP
+    - One-time purchase shown fairly (no "No First Order Discount"
+      framing): fewer subscription-fearers leave at the plan box
+    - Habit-led first screen ("the one you'll stick to"): matches the top
+      review theme better than "vitality"
+
+    WHAT THE PAGE CAN'T TELL US
+    MISSING: the ad that sends most traffic (need 1 not judged)
+    MISSING: phone first screen and page speed
+    MISSING: steps to cancel, the loudest complaint on review sites
+
+tweaks:
+  - what: The page's job
+    how: Name it ("this page is for first orders from ad traffic"). A page meant to raise order size is judged on bundles and add-ons, not on explaining the product.
+  - what: The ad
+    how: Add it and question one gets judged properly. Without it, the review starts from "what is it and what does it do for me?".
+  - what: Analytics
+    how: Add conversion by step and the phone and desktop split. The "needs analytics?" column then turns into sized findings, and the test list gets realistic.
+  - what: Store pages
+    how: For an online store, the store add-on covers the home page, collection pages, cart, checkout and post-purchase offers in the same buyer order.
+
+judge:
+  - Finding one is the first buyer question the page leaves unanswered.
+  - Every finding names a principle and a specific place on the page.
+  - No money figure or predicted lift appears without analytics.
+  - No fix asks for proof, ratings, counts or urgency you don't have.
+  - The advice is about this page. "Improve your headline" with no specifics doesn't count.
+
+test:
+  - Give it a page with one problem you already know, such as no returns terms near the button. It should show up as a finding tied to need 7.
+  - Run it with the ad, then without. With the ad, it should check the first screen against the ad's words, offer and picture.
+  - Check that no finding has a money figure or predicted lift. Without analytics there should be none.
+  - Ship the quick wins, then run it on the new page. Finding one should be further down the buyer order than last time.
+
+improve:
+  - Set the page's job in step 1 to the one you always need (a first purchase from paid ads, for example), so you don't have to say it each time.
+  - Add your own rules to the principles in step 4, such as how you always show subscription prices.
+  - Write your delivery, returns and cancellation terms into your brand file, so they stop coming back as missing.
+  - Save the findings table with the date in your brand file, so the next review can see what was fixed.
+  - Pair it with a 30-point quick checklist for a fast pass first, and move up to a full audit with your sales numbers when you need fixes sized in money.
+
+terms:
+  - term: Above the fold
+    meaning: The part of the page visible before scrolling.
+  - term: Social proof
+    meaning: Evidence that other people bought and liked it, such as real reviews or a stated rating.
+  - term: Quick win
+    meaning: An obvious fix you can ship this week without testing.

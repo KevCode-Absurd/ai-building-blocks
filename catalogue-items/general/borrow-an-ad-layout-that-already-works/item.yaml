@@ -1,0 +1,22 @@
+slug: borrow-an-ad-layout-that-already-works
+renamed_from: static-ad-layout-adaptation-workflow
+name: "Borrow an ad layout that already works"
+summary: "Image ad layouts that worked for other brands, rebuilt with your own product, words and checked claims."
+category: general
+boards: [ecommerce]
+type: workflow
+role: orchestrate
+job: ads
+level: expert
+inputs:
+  - {type: brand_brain, required: true}
+  - {type: reference_set, required: true}
+  - {type: product_photos, required: false}
+outputs:
+  - {type: static_ads}
+uses: [fill-an-ad-template-with-provable-facts, find-image-ad-types-worth-testing-next, stop-image-tools-redrawing-your-product-and-words]
+example: ad-layout
+origin: rebuilt
+source_ids: [CES-139]
+old_name: Static Ad Factory
+version: 1.0.0

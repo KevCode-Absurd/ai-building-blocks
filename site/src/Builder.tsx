@@ -6,6 +6,7 @@ import {
 import "@xyflow/react/dist/base.css";
 import { SearchIcon } from "./ui";
 import { type Block, type Catalogue, KINDS, TASKS, kindOf, portLabel, taskOf, wireSteps } from "./lib/data";
+import { suggestNext } from "./lib/suggest";
 import { type Flow, QUEUED, flows, takeQueued, uid, useStore } from "./lib/store";
 import { buildHandoffZip, download, orderFlow, typeMismatches } from "./lib/handoff";
 
@@ -51,49 +52,58 @@ function chain(c: Catalogue, slugs: string[], start = { x: 40, y: 110 }) {
   return { nodes, edges };
 }
 
-function Palette({ c, onAdd, onTemplate }: { c: Catalogue; onAdd: (slug: string) => void; onTemplate: (b: Block) => void }) {
+function PalItem({ b, why, onAdd }: { b: Block; why?: string; onAdd: (slug: string) => void }) {
+  return (
+    <div className="pal-item" data-slug={b.slug} draggable onDragStart={(e) => { e.dataTransfer.setData("application/abb-block", b.slug); e.dataTransfer.effectAllowed = "move"; }} title="Drag onto the canvas">
+      <div style={{ minWidth: 0 }}><b>{b.name}</b><small>{why ?? b.summary}</small></div>
+      <button className="add" aria-label={`Add ${b.name}`} onClick={() => onAdd(b.slug)}>+</button>
+    </div>
+  );
+}
+
+function Palette({ c, anchor, inFlow, onAdd, onTemplate }: { c: Catalogue; anchor: string | null; inFlow: Set<string>; onAdd: (slug: string) => void; onTemplate: (b: Block) => void }) {
   const [q, setQ] = useState("");
-  const [cat, setCat] = useState<"all" | "kits">("all");
+  const [cat, setCat] = useState<"next" | "all" | "kits">("next");
   const userKits = useStore((s) => s.kits);
   const list = useMemo(() => {
     const words = q.toLowerCase().split(/\s+/).filter(Boolean);
     const kitSlugs = new Set(userKits.flatMap((k) => k.slugs));
     return c.blocks.filter((b) => b.category !== "orchestrator" &&
-      (cat === "all" || kitSlugs.has(b.slug)) &&
-      words.every((w) => `${b.name} ${b.slug} ${b.summary}`.toLowerCase().includes(w)));
+      (cat !== "kits" || kitSlugs.has(b.slug)) &&
+      words.every((w) => `${b.name} ${b.slug} ${b.summary} ${b.headline} ${taskOf(b).name}`.toLowerCase().includes(w)));
   }, [c, q, cat, userKits]);
+  const next = useMemo(() => suggestNext(c, anchor, inFlow), [c, anchor, inFlow]);
   const templates = c.blocks.filter((b) => b.category === "orchestrator");
+  const showNext = cat === "next" && !q;
   return (
     <aside className="palette" aria-label="Blocks to add">
       <div className="palette-top">
         <label className="search"><SearchIcon /><span className="visually-hidden">Find a block</span><input value={q} onChange={(e) => setQ(e.target.value)} placeholder="Find a block" data-testid="palette-search" /></label>
         <div className="seg" role="group" aria-label="Show">
-          {(["all", "kits"] as const).map((k) => <button key={k} aria-pressed={cat === k} onClick={() => setCat(k)}>{k === "all" ? "All" : "My kits"}</button>)}
+          {(["next", "all", "kits"] as const).map((k) => <button key={k} aria-pressed={cat === k} onClick={() => setCat(k)} data-testid={`palette-${k}`}>{k === "next" ? "Suggested" : k === "all" ? "All" : "My kits"}</button>)}
         </div>
       </div>
       <div className="palette-list">
-        {!q && cat === "all" && (
-          <>
-            <div className="pal-group">Start from a workflow</div>
+        {showNext && (
+          <div data-testid="suggestions">
+            <div className="pal-group">{anchor && c.bySlug[anchor] ? <>Next after <b>{c.bySlug[anchor].name}</b></> : "Start with one of these"}</div>
+            {next.map(({ b, why }) => <PalItem key={b.slug} b={b} why={why} onAdd={onAdd} />)}
+            {next.length === 0 && <p className="small" style={{ padding: "8px" }}>Nothing obvious comes next. Its result may be ready to use, or try All.</p>}
+            <div className="pal-group">Or start from a ready workflow</div>
             {templates.map((t) => <button key={t.slug} className="tpl" onClick={() => onTemplate(t)}>{t.name}<small>{t.steps.length} steps</small></button>)}
-          </>
+          </div>
         )}
-        {TASKS.map((t) => {
+        {!showNext && TASKS.map((t) => {
           const items = list.filter((b) => taskOf(b).id === t.id);
           if (!items.length) return null;
           return (
             <div key={t.id}>
               <div className="pal-group">{t.name} · {items.length}</div>
-              {items.map((b) => (
-                <div key={b.slug} className="pal-item" draggable onDragStart={(e) => { e.dataTransfer.setData("application/abb-block", b.slug); e.dataTransfer.effectAllowed = "move"; }} title="Drag onto the canvas">
-                  <div style={{ minWidth: 0 }}><b>{b.name}</b><small>{b.summary}</small></div>
-                  <button className="add" aria-label={`Add ${b.name}`} onClick={() => onAdd(b.slug)}>+</button>
-                </div>
-              ))}
+              {items.map((b) => <PalItem key={b.slug} b={b} onAdd={onAdd} />)}
             </div>
           );
         })}
-        {list.length === 0 && <p className="small" style={{ padding: "16px 8px" }}>{cat === "kits" ? "Nothing saved yet. Open anything in the library and press Save to kit." : "No blocks match. Try another word."}</p>}
+        {!showNext && list.length === 0 && <p className="small" style={{ padding: "16px 8px" }}>{cat === "kits" ? "Nothing saved yet. Open any skill and press Save to kit." : "No blocks match. Try another word."}</p>}
       </div>
     </aside>
   );
@@ -151,6 +161,9 @@ function Stage({ c, toast }: { c: Catalogue; toast: (m: string) => void }) {
     return () => { window.removeEventListener("pagehide", flush); flush(); };
   }, []);
 
+  const anchorNode = nodes.find((n) => n.selected) ?? nodes[nodes.length - 1];
+  const anchor = anchorNode?.data.slug ?? null;
+  const inFlow = useMemo(() => new Set(nodes.map((n) => n.data.slug)), [nodes]);
   const stepOf = useMemo(() => Object.fromEntries((order ?? []).map((o) => [o.node.id, o.step])), [order]);
   const viewNodes = useMemo(() => nodes.map((n) => (n.data.step === stepOf[n.id] ? n : { ...n, data: { ...n.data, step: stepOf[n.id] } })), [nodes, stepOf]);
   const viewEdges = useMemo(() => edges.map((e) => ({ ...e, className: mismatched.has(e.id) ? "mismatch" : undefined })), [edges, mismatched]);
@@ -160,9 +173,9 @@ function Stage({ c, toast }: { c: Catalogue; toast: (m: string) => void }) {
     setEdges((es) => (es.some((e) => e.source === conn.source && e.target === conn.target) ? es : addEdge({ ...conn, id: uid() }, es)));
   }, [setEdges]);
   const addNext = (slug: string) => {
-    const last = nodes[nodes.length - 1];
+    const last = anchorNode;
     const id = uid();
-    const pos = last ? { x: last.position.x + 300, y: last.position.y } : { x: 40, y: 110 };
+    const pos = last ? { x: last.position.x + 300, y: last.position.y + (nodes.some((n) => n.position.x === last.position.x + 300 && Math.abs(n.position.y - last.position.y) < 40) ? 190 : 0) } : { x: 40, y: 110 };
     setNodes((ns) => [...ns, { id, type: "block", position: pos, data: { slug } }]);
     if (last) setEdges((es) => [...es, { id: uid(), source: last.id, target: id }]);
     toast(`${c.bySlug[slug]?.name ?? slug} added${last ? " and connected" : ""}`);
@@ -187,7 +200,7 @@ function Stage({ c, toast }: { c: Catalogue; toast: (m: string) => void }) {
     const r = await buildHandoffZip(c, flow);
     if ("error" in r) { toast(r.error); return; }
     download(r.blob, r.filename);
-    toast("Handoff downloaded. Give the folder to your AI and say \"follow HANDOFF.md\".");
+    toast("Downloaded. Give the folder to Claude and say \"Follow HANDOFF.md\".");
   };
   const status = !nodes.length ? null
     : !order ? { warn: true, text: "This workflow loops back on itself. Remove one connection." }
@@ -197,7 +210,7 @@ function Stage({ c, toast }: { c: Catalogue; toast: (m: string) => void }) {
   return (
     <NodeActions.Provider value={actions}>
       <div className="builder" data-testid="builder">
-        <Palette c={c} onAdd={addNext} onTemplate={loadTemplate} />
+        <Palette c={c} anchor={anchor} inFlow={inFlow} onAdd={addNext} onTemplate={loadTemplate} />
         <div className="stage" onDragOver={(e) => { e.preventDefault(); e.dataTransfer.dropEffect = "move"; }} onDrop={onDrop}>
           <div className="stage-bar">
             <input className="flow-name" value={name} onChange={(e) => setName(e.target.value)} aria-label="Workflow name" />
@@ -210,7 +223,7 @@ function Stage({ c, toast }: { c: Catalogue; toast: (m: string) => void }) {
             <span className="spacer" />
             <button className="btn btn-ghost btn-sm" onClick={newFlow}>New</button>
             {saved.some((f) => f.id === flowId) && <button className="btn btn-ghost btn-sm" onClick={() => { if (confirm(`Delete "${name}"?`)) { flows.remove(flowId); newFlow(); } }}>Delete</button>}
-            <button className="btn btn-primary btn-sm" onClick={exportPack} disabled={!nodes.length} data-testid="download-handoff">Download handoff</button>
+            <button className="btn btn-primary btn-sm" onClick={exportPack} disabled={!nodes.length} data-testid="download-handoff">Download the workflow</button>
           </div>
           <ReactFlow
             nodes={viewNodes} edges={viewEdges} nodeTypes={nodeTypes}
@@ -225,7 +238,7 @@ function Stage({ c, toast }: { c: Catalogue; toast: (m: string) => void }) {
             <div className="stage-empty">
               <div>
                 <h3 className="h3">Drag a block here to start</h3>
-                <p className="small">Or press + next to any block, or pick a workflow on the left.<br />Connect a block's right edge to the next block's left edge.</p>
+                <p className="small">Or press + on a suggestion, or start from a ready workflow on the left.<br />After each block, the left side suggests what usually comes next.</p>
               </div>
             </div>
           )}

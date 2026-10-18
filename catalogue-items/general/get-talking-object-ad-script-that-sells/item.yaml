@@ -1,0 +1,23 @@
+slug: get-talking-object-ad-script-that-sells
+renamed_from: talking-object-ad-script-format-rules
+name: "Get a talking object ad script that sells"
+summary: "A short, funny ad where an everyday object with a face tells your buyer's problem, with no claim you can't back."
+category: general
+boards: [ecommerce]
+type: skill
+role: make
+job: video
+level: intermediate
+inputs:
+  - {type: brief, required: true}
+  - {type: voc_reviews, required: false}
+  - {type: brand_brain, required: true}
+outputs:
+  - {type: script}
+  - {type: image_prompt}
+uses: []
+example: talking-object
+origin: own
+source_ids: [CES-123]
+old_name: script-format-talking-object
+version: 1.0.0

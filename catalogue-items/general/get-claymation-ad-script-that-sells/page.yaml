@@ -1,0 +1,187 @@
+new_slug: get-claymation-ad-script-that-sells
+name: Get a claymation ad script that sells
+summary: A narrated clay ad script where one object changes on screen to show why your product matters.
+job: make-video-ads
+
+headline: Show what your product does, even the part a camera can't film, in clay
+subhead: Give it your selling idea and your product facts. It picks one clay object that stands for the problem, plans its three states (worst, changing, changed), and hands back the narration and shots, with one clay character and your real product.
+
+explain: |
+  Some products work in ways a camera can't film. Vitamins your body absorbs, a coating inside a pan, a habit that slowly gets easier. Ads for these end up as someone talking about it, and people scroll past.
+
+  Claymation (clay figures moved a little between frames, like a stop-motion film) can show what a camera can't. This skill builds the whole ad around one clay object on a small handmade set that goes from bad, to changing, to fixed. A tangle that loosens, a stack that shrinks. A narrator tells the story, the clay character acts it out without speaking, and your real product appears as a photo, never remade in clay. It only shows what your approved claims say, so the picture never promises more than the words.
+
+when:
+  - Your product's benefit is real but invisible, and talking-head ads about it fall flat.
+  - You want a gentle, eye-catching way to show a problem to people who haven't thought about it much yet.
+  - You need one image ad and a matching video from the same idea.
+
+you_give:
+  - The selling idea, or a script you already have
+  - Your product facts, approved claims and claims you must never make
+  - Who the buyer is and the moment the problem hits them
+  - Your offer and guarantee, in their real terms (optional)
+  - Video or still, and the length (optional)
+you_get:
+  - A narration script with a visual note and on-screen text for every line
+  - The changing object named, with its three states marked in the script
+  - Or, for a still, the layout, the exact words and an image prompt
+  - Notes on which claim backs each picture, and anything MISSING
+
+how_to_use:
+  - Copy the skill and paste it into Claude, ChatGPT or Gemini.
+  - Paste your product facts and your approved and banned claims underneath.
+  - Describe the buyer and the moment the problem bites, in one or two sentences.
+  - Say "video, 30 seconds" or "still", and paste your real offer terms if you want one.
+  - Check the changing object first. If a stranger couldn't tell what changed with the sound off, ask for a different object.
+  - Take the script to "Turn your claymation script into ready-to-make video shots" to get the prompts for your video tool.
+
+how_it_works:
+  - title: Checks clay fits
+    text: Clay suits a hidden cause or a problem told as a story. If your selling point needs a real person's face or is just a price offer, it says so.
+  - title: Names what changes
+    text: Picks one object on the set that stands for the problem and gives it three states before writing any lines.
+  - title: Casts one character
+    text: One clay adult who looks like your buyer, never a child or a real person, and who never gives a testimonial.
+  - title: Keeps the product real
+    text: Your product stays its real photo. Its label is never redrawn in clay letters.
+  - title: Writes the narration
+    text: One narrator, the problem first, then the product arriving inside the story as the thing the character found, then the offer.
+  - title: Writes makeable shots
+    text: Clips of about 10 seconds, one change per shot, eight words or fewer of narration while the change happens.
+  - title: Or writes the still
+    text: One state or a two-state split, one headline, 20 words in total.
+
+output_shape: |
+  FIT
+  <one or two lines: why clay suits this idea and this buyer, or what to use instead>
+
+  THE THING THAT CHANGES
+  <one object on the set>
+  Worst: <...>   Changing: <...>   Changed: <...>
+
+  CHARACTER
+  <one sentence: a clay adult who looks like your buyer, never speaks>
+
+  Line | Narration | Visual note | On-screen text
+  1 | "<narration>" | <what's on screen> [WORST] | <overlay or ->
+  2 | ...
+  <the product arrives inside the story, the change marked [CHANGING] and [CHANGED]>
+  <last line: offer and call to action, then a held pose>
+
+  Clips: <which lines go in which 10-second clip>, <word count>
+
+  NOTES
+  - Claims used: <each claim and where it comes from>
+  - <anything left out on purpose, and why>
+  - MISSING: <facts the script needed but didn't have>
+
+example:
+  business: sprout
+  input: |
+    [the skill]
+
+    Idea: people who quit greens powder. The tub, the shaker, the chalky
+    glass, then the tub sits half used.
+    Buyer: 28 to 45, office job, has quit powders and pill stacks.
+    Wants one habit that lasts. Doubt: "A gummy can't hold enough to
+    replace my powder."
+    Product: Sprout, daily greens gummies. Pouch of 28 daily packs. Tear
+    one pack straight across the top, tip the small handful of green
+    gummy bears into your palm. No water, no mixing, no shaker.
+    Pouch: glossy deep green, big yellow wordmark.
+    Approved: "60+ ingredients, 21 vitamins & minerals, and 6g fiber" in
+    1 pack. "Supports digestion and gut health."
+    Offer: $29.99 first order with the text sign-up discount, renews at
+    $49.99 every 4 weeks. 30-day money-back, first order only.
+    Brand lines: "Rip. Tip. Enjoy." "We made daily nutrition, like,
+    ridiculously easy."
+    Colours: forest green #00582D, cream #FFF7DF, sunflower #FFCC2E.
+    Video, 30 seconds. Buyer stage: solution aware.
+  output: |
+    FIT  Solution-aware buyer who has tried the old fix. The problem is
+         a routine, told as a story. Clay fits.
+
+    THE THING THAT CHANGES
+    A leaning grey clay tower on the kitchen counter: powder tub,
+    scoop, shaker.
+    Worst: it teeters.  Changing: the pieces sink flat one by one.
+    Changed: a clear counter in brand colours, the real pouch on it.
+    (Shows the routine getting simpler. It doesn't claim the pack
+    replaces any powder's nutrients: no claim on file for that.)
+
+    CHARACTER  A clay man, about 35, rust jumper, grey trousers, short
+    dark hair as one shape, bead eyes, a small clay watch. Never speaks.
+
+    Line | Narration | Visual note | On-screen text
+    1 | "You bought the powder. And the shaker." | Set wide: he stands
+        at the counter, the grey tower teetering [WORST] | -
+    2 | "Then it sat there. Half full." | Tub very close, a clay ring
+        of dust round its base, tower leans further [WORST] | -
+    3 | "Chalky glass. Another thing to wash." | Character close: nose
+        wrinkled, shaker held at arm's length | -
+    4 | "So, one small pack instead." | Hands at product: the real
+        pouch (photo) within reach; he takes one daily pack | -
+    5 | "Rip. Tip. Enjoy." | Hands: he tears the pack straight across
+        the top, real green gummy bears tip into his palm | -
+    6 | "No water. No mixing. No shaker." | Tower very close: pieces
+        sink flat one by one, cream and green spreading [CHANGING] | -
+    7 | "Sixty-plus ingredients, 21 vitamins and minerals, 6 grams of
+        fiber." | Counter clear [CHANGED], pouch front to camera | -
+    8 | "First order, $29.99 with text sign-up. Money back in 30
+        days." | Character beside the pouch, gummies in his palm |
+        $29.99 first order with text sign-up. Renews at $49.99
+        every 4 weeks. 30-day money-back on your first order.
+    9 | "For anyone with a half-used tub of powder." | Held pose: he
+        pockets his keys, pouch on the counter | -
+
+    Clips: 1 = lines 1-3, 2 = lines 4-6, 3 = lines 7-9. About 60 words.
+
+    NOTES
+    - Claims used: "60+ ingredients, 21 vitamins & minerals, and 6g
+      fiber" (label). No-water, no-shaker routine (product facts).
+    - Tearing follows the brand's rule: straight across the top only.
+    - The narration doesn't say the pack replaces a powder. The doubt
+      "can a gummy hold enough?" is left for another ad.
+    - The 30-day money-back is said with its limit on screen: first
+      order only.
+    - MISSING: what a single daily pack looks like (colour, printing).
+      Needed before the hands shots in lines 4 and 5 can be made.
+
+tweaks:
+  - what: The changing object
+    how: Ask for three options before the script. "Give me three objects that could change, then write the script for the clearest one." Pick the one a stranger would read on mute.
+  - what: The buyer
+    how: Swap in a different buyer, for example a busy parent instead of a powder quitter. The set, the moment and the object all change with them.
+  - what: Video or still
+    how: Say "still" to get one image ad showing the worst state, or a split set with the problem greyed on the left and the fixed state in your colours on the right.
+  - what: The length
+    how: Under 30 seconds it drops the story and gives you problem, how it works, offer. At 60 seconds the problem can run up to 20 seconds and build to one consequence.
+
+judge:
+  - You can say in one sentence what the object is and what changes it.
+  - The three states are marked in the script, and the change happens in front of the camera.
+  - The character never talks, never says the product worked for them, and isn't a child.
+  - Every picture matches an approved claim. Nothing shows a body getting better.
+  - The product arrives inside the story, not in a separate ad tacked on at the end.
+
+test:
+  - Run it on a product you know well. You should be able to say in one sentence what the changing object stands for and why it changes when your product arrives.
+  - Give it a plain price offer as the selling idea. It should tell you clay doesn't fit. If it writes the ad anyway, the fit check isn't working.
+  - Run it twice on the same input. The object can differ, but both versions should keep the character silent, keep the product as its real photo and stay inside your approved claims.
+  - Put each picture note next to your approved claims. Any picture that shows more than a claim says (a body getting better, a result) has to go.
+
+improve:
+  - Paste your approved and banned claims into "What you need" in the skill file, so every picture is checked against them without you pasting them each time.
+  - Add your product's never-show rules to step 4 ("Keep the real product real"). For Sprout, the pack is only ever torn straight across the top.
+  - If you always run one length, write it into step 6, for example three clips of about 10 seconds for a 30-second ad.
+  - When a changing object works, write it and its three states into your brand file, so the next ad in the series reuses it.
+  - Pair it with the skill that turns a claymation script into character, set, still and clip prompts for a video tool.
+
+terms:
+  - term: Claymation
+    meaning: Animation made with clay figures that are moved a little between each frame, so they look handmade.
+  - term: Buyer stage
+    meaning: How much the buyer already knows about the problem and about you. Problem aware means they know the problem but not your fix.
+  - term: Approved claims
+    meaning: The exact sentences your legal or compliance check says you may use about the product.

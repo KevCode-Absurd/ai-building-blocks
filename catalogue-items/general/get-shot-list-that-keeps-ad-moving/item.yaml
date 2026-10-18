@@ -1,0 +1,21 @@
+slug: get-shot-list-that-keeps-ad-moving
+renamed_from: video-ad-shot-list-director
+name: "Get a shot list that keeps your ad moving"
+summary: "A few lines of your script turned into a timed shot list an AI video tool can follow."
+category: general
+boards: [ecommerce]
+type: skill
+role: render
+job: video
+level: advanced
+inputs:
+  - {type: script, required: true}
+  - {type: product_data, required: true}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: shot_list}
+uses: []
+origin: own
+source_ids: [CES-147]
+old_name: video-director
+version: 1.0.0

@@ -1,0 +1,189 @@
+new_slug: know-what-each-product-page-photo-should-show
+name: Know what each product page photo should show
+summary: Up to 12 product page images planned, each answering one shopper question, with every word sourced.
+job: product-photos
+
+headline: A product page gallery that answers a shopper's questions, one image at a time
+subhead: Give it your product facts, reviews, guarantee and photos. It plans up to 12 gallery images in upload order, each answering one question a shopper has (what is it, how do I use it, what's in the box), with every word on the image and where that word came from.
+
+explain: |
+  Most product page galleries are five versions of the same pack shot. They answer "what is it" and nothing else, while the shopper is still wondering how big it is, how to use it, whether people like them use it, and what happens if they don't like it. Those unanswered questions are a common reason shoppers leave.
+
+  This skill plans the gallery as a list of questions, one per image, in the order shoppers ask them. Each image gets a card: the question, the one-line answer, which of your photos it's built from, the layout, and every word with its source. It bends the list to your kind of product (a supplement gets an ingredients image with amounts; clothing gets size and fit). Anything you can't prove, such as a rating or a review, becomes a gap to fill, never an invented line.
+
+when:
+  - Your product page gallery is mostly pack shots and you want it to answer shoppers' questions.
+  - You're launching a product and need to brief a designer or an AI image tool on every image.
+  - You keep getting the same questions from customers (how big, how do I use it) and want the images to answer them.
+
+you_give:
+  - Product facts (name, variant, price, how it's used, ingredients or materials with amounts, size, what's in the box)
+  - Claims with their sources, reviews word for word, rating counts and guarantee terms
+  - Your product photos, labelled by job (front, in hand, in use, close-up and so on)
+  - The doubt customers raise most, in their words (optional)
+  - Whether the gallery is for a marketplace such as Amazon (optional)
+you_get:
+  - One card per image in upload order (question, answer, photo, layout, words with sources)
+  - Notes on how each image was changed to fit your kind of product
+  - A gaps list of every missing fact and photo
+
+how_to_use:
+  - Copy the skill and paste it into Claude, ChatGPT or Gemini.
+  - Paste your product facts, guarantee and a handful of real reviews, copied exactly.
+  - List your photos and what each shows, or attach them.
+  - Add the customer doubt you hear most, in their words, if you know it.
+  - Read the gaps list first. Fill the gaps or accept the swapped images, then hand the cards to your designer or image tool.
+
+how_it_works:
+  - title: Names the kind of product
+    text: Eaten or taken, applied, colour cosmetic, worn, used by hand or placed in a room. Two kinds are allowed.
+  - title: Starts from 12 questions
+    text: From "what is this and what does it do for me?" to "is it for someone like me?". Each image must make sense alone on a phone in three seconds.
+  - title: Avoids repeats
+    text: Answers each question once before any is answered twice. If size or fit decides the sale, a size or specs image replaces the weakest one.
+  - title: Bends to your product
+    text: A supplement shows ingredients with amounts; clothing shows size, fit and fabric; a tool shows everything in the box, counted.
+  - title: Puts the biggest doubt first
+    text: The doubt customers raise most is answered in images 1 to 3, in their own words.
+  - title: Writes one card per image
+    text: Question, one-line answer, photo used, layout, every word with its source, and what to watch out for. Words are fixed now.
+  - title: Handles marketplaces
+    text: For a marketplace, image 1 becomes the product alone on plain white with no words, and you're told to check the current rules.
+
+output_shape: |
+  KIND OF PRODUCT: <one or two kinds>
+
+  CARD <nn>-<question-in-short>
+  question:   <the shopper's question>
+  answer:     <one line>
+  picture:    <which of your photos, which job>
+  layout:     <zones; where the product sits; where words sit>
+  words:      "<line>" (source: <where it came from>)
+  adaptation: <how this image was bent for your kind of product>
+  watch out:  <the likely mistake>
+
+  (one card per image, in upload order)
+
+  GAPS
+  [REAL REVIEW NEEDED] [RATING NEEDED] [GUARANTEE TERMS NEEDED] ...
+  Missing photos: <job> -> <which image can't be made>
+
+example:
+  business: sprout
+  input: |
+    [the skill]
+
+    Product: Sprout Original (Adults), Low Sugar, pouch of 28 daily
+    packs. One pack a day, about 20 g, "a small handful" of gummies.
+    Tear the pack across the top, tip the gummies into your palm.
+    Facts: "60+ ingredients, 21 vitamins & minerals, and 6g fiber" per
+    pack; vitamin C 93 mg, D3 20 mcg, B12 2.4 mcg, folate 400 mcg DFE
+    (as methylfolate), iron 4.5 mg, zinc 2.75 mg. Vegan, pectin base.
+    Study: 2025, 12 weeks, randomized, double-blind, placebo-controlled,
+    120 healthy adults aged 23 to 59. Blood vitamin C +40.1%, folate
+    +20.5%.
+    Ratings: 4.8 from 100,000 (header); 4.75 from 109,639 (widget).
+    Reviews (names removed): "[Sprout] has been the one thing I've
+    been able to stick to." / "not having to clean a shaker bottle"
+    Guarantee: 30-day money-back, "This policy applies only to your
+    initial purchase."
+    Photos: pouch front on; gummies in an open hand.
+    Biggest doubt: "A gummy can't hold enough to replace my powder."
+  output: |
+    KIND OF PRODUCT: eaten or taken
+
+    CARD 01-name-it
+    question:   What is this and what does it do for me?
+    answer:     Greens you eat, one small pack a day
+    picture:    pouch front on (front photo)
+    layout:     pouch large, centre; headline above
+    words:      "Your daily greens, in a gummy" (source: product page,
+                "daily greens gummies")
+    watch out:  biggest doubt goes in cards 1 to 3, so card 2 answers it
+
+    CARD 02-top-results
+    question:   What do I get?
+    answer:     A lot in one small pack
+    picture:    gummies in an open hand (in-hand photo)
+    words:      "60+ ingredients" / "21 vitamins & minerals" / "6g fiber"
+                (source: product page, per pack)
+    adaptation: answers the doubt "a gummy can't hold enough"
+    watch out:  per pack, never per gummy
+
+    CARD 03-reason
+    question:   Why does it work?
+    answer:     Tested in a study of how well it's absorbed
+    words:      "Clinically tested for nutrient absorption" / "Vitamin C
+                +40.1%" / "Folate +20.5%" / small print: "2025 study, 12
+                weeks, 120 healthy adults aged 23 to 59, blood levels vs
+                placebo" (source: science page)
+    watch out:  the study measured 2 vitamins in the blood. No energy,
+                immunity or "works" claims
+
+    CARD 09-parts-named
+    question:   What is it made of?
+    answer:     What's in one pack, with amounts
+    words:      "Vitamin C 93 mg" / "D3 20 mcg" / "B12 2.4 mcg" / "Folate
+                400 mcg DFE" (source: science page)
+    adaptation: eaten product, so ingredients with amounts; the full
+                panel is left blank for a designer to set from the label
+
+    CARD 11-promise
+    question:   What if I don't like it?
+    words:      "30-day money-back guarantee on your first order" (source:
+                FAQ, "applies only to your initial purchase")
+    watch out:  "first order" must stay on the image
+
+    Also planned: 04 use it (1 pack a day, tear, tip, eat), 05 many
+    voices, 06 old way vs new (powder and shaker vs one pack, no body),
+    07 this or the usual (unbranded greens powder), 08 in the box, 10
+    one full review, 12 who and when, 14 facts panel.
+
+    GAPS
+    [DAILY PACK PHOTO NEEDED] for 04 and 08 (whole, and torn at the top)
+    [RATING SOURCE NEEDED] header says 4.8 from 100,000, the widget says
+      4.75 from 109,639. Pick one and name its source
+    [NAME AS PUBLISHED NEEDED] for the review on 10
+    [CUSTOMER PHOTOS NEEDED] for 05, or swap it for 13 (size in a hand)
+    [COMPARISON SOURCE NEEDED] for 07, both sides; the $1.26 vs $3.60
+      cost per serving is dated
+    [POUCH IN A HAND PHOTO NEEDED] for a size frame
+
+tweaks:
+  - what: The biggest doubt
+    how: Give the doubt customers raise most, word for word. It moves into images 1 to 3, so the first thing a shopper sees answers it.
+  - what: Marketplace or your own store
+    how: Say "marketplace" and image 1 becomes a plain white packshot with no words, and the rest move down one place.
+  - what: The kind of product
+    how: If it guesses wrong, correct it. "Worn" turns the how-to image into size and fit; "applied" adds active ingredients with percentages.
+  - what: Fewer images
+    how: Ask for 6 or 8 and it keeps the questions that matter most for your product, still one question per image.
+
+judge:
+  - Each card names exactly one question, and no two cards answer the same question with the same facts.
+  - Every number on a card has its unit and a source; every rating has its count.
+  - Reviews are copied word for word with the name as published.
+  - Any comparison names no competitor brand and has a source for both sides.
+  - Headlines are 3 to 8 words, with no more than four short points per image.
+  - The gaps list is honest. A missing review is a bracketed slot, not a made-up quote.
+
+test:
+  - Run it on a product page you know well. Compare its questions with the ones customers actually email you. A big question it missed is a gap in what you gave it.
+  - Run it twice with the same facts. Images 1 to 3 should answer the same doubt both times. If they change, give it the doubt word for word from a review.
+  - Check every number and quote on the cards against your label and your reviews. Each should have a source, and nothing without one should be on an image.
+  - Read only the headlines, in order, to someone who doesn't know the product. They should be able to tell you what it is, how to use it and what's in the box.
+
+improve:
+  - Rewrite the 12 questions in step 2 of the skill file for your category. For a supplement, keep "what's in it, and how much", and drop questions you never get.
+  - "Add your biggest doubt, in a customer's words, to step 5 as a fixed line, so it always leads the gallery (for Sprout: \"A gummy can't hold enough to replace my powder\")."
+  - If you sell on a marketplace, add its image rules to step 7, such as image 1 on plain white with no words.
+  - Save the finished cards in your brand file. When you remake the gallery, only the cards with new facts need to change.
+  - Pair it with the skill that writes down exactly how your product looks before you start, and the one that checks the finished images against this plan.
+
+terms:
+  - term: Gallery
+    meaning: The row of images at the top of a product page that shoppers swipe through.
+  - term: Upload order
+    meaning: The order the images appear in, starting with the one shoppers see first.
+  - term: Callout
+    meaning: A short label on an image with a thin line pointing to the part it names.

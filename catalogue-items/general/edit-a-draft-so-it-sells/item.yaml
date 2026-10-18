@@ -1,0 +1,19 @@
+slug: edit-a-draft-so-it-sells
+renamed_from: copy-draft-edit-and-repair-pass
+name: "Edit a draft so it reads clean and sells"
+summary: "Your draft back with its best true details kept and only the lines that cost you sales fixed."
+category: general
+type: skill
+role: check
+job: copy
+level: advanced
+inputs:
+  - {type: copy_draft, required: true}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: audit_report}
+uses: [stop-your-copy-sounding-like-ai, know-if-your-copy-is-ready]
+origin: rebuilt
+source_ids: [CES-022]
+old_name: copy-craft
+version: 1.0.0

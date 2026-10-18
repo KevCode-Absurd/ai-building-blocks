@@ -1,0 +1,20 @@
+slug: tell-the-problem-so-buyers-see-themselves
+renamed_from: long-story-copy-for-cold-buyers
+name: "Tell your buyer's problem so well they see themselves"
+summary: "A long story of one person's problem that explains the cause plainly and brings your product in late."
+category: general
+type: skill
+role: make
+job: copy
+level: advanced
+inputs:
+  - {type: brief, required: true}
+  - {type: product_data, required: true}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: ad_copy}
+uses: [know-who-youre-writing-for]
+origin: rebuilt
+source_ids: [CES-022]
+old_name: copy-craft
+version: 1.0.0

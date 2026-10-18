@@ -7,8 +7,17 @@ import YAML from "yaml";
 const ROOT = path.resolve("../catalogue-items");
 const OUT_DATA = "public/data";
 const OUT_SKILLS = "public/skills";
+const OUT_PAGES = "public/data/pages";
+const WORKFLOW_PAGES = path.resolve("../tools/orchestrator-pages");
 fs.rmSync(OUT_SKILLS, { recursive: true, force: true });
-fs.mkdirSync(OUT_DATA, { recursive: true });
+fs.rmSync(OUT_PAGES, { recursive: true, force: true });
+fs.mkdirSync(OUT_PAGES, { recursive: true });
+
+// Until a block has its page written, it is filed under the job closest to its old group.
+const TASK_FROM_JOB = { copy: "write-ad-copy", email: "write-ad-copy", ads: "make-image-ads", image: "make-image-ads", video: "make-video-ads", page: "write-landing-page", analysis: "read-ad-results", research: "understand-customers", brand: "brand-file", offer: "make-offer", organic: "grow-social", ops: "set-up-ai" };
+// The first lines of the real example output, shown on the library card.
+const peekOf = (page) => String(page?.example?.output ?? "").split(/\r?\n/).map((l) => l.trimEnd()).filter((l) => l.trim()).slice(0, 4).map((l) => (l.length > 64 ? l.slice(0, 63) + "…" : l)).join("\n");
+const PAGE_FIELDS = ["headline", "subhead", "explain", "when", "you_give", "you_get", "how_to_use", "how_it_works", "output_shape", "example", "tweaks", "judge", "test", "improve", "terms"];
 
 const types = YAML.parse(fs.readFileSync(path.join(ROOT, "_types.yaml"), "utf8"));
 const typeDesc = {};
@@ -37,10 +46,20 @@ for (const category of ["general", "ecommerce", "orchestrators"]) {
     fs.copyFileSync(skillPath, path.join(OUT_SKILLS, slug, "SKILL.md"));
     if (hasAddon) fs.copyFileSync(addon, path.join(OUT_SKILLS, slug, "ecommerce.md"));
     const steps = (item.steps ?? []).map((s) => ({ uses: s.uses, note: s.note ?? "" }));
+    const pagePath = [path.join(folder, "page.yaml"), path.join(WORKFLOW_PAGES, `${slug}.yaml`)].find((p) => fs.existsSync(p));
+    let page = null;
+    if (pagePath) { try { page = YAML.parse(fs.readFileSync(pagePath, "utf8")); } catch (e) { problems.push(`${category}/${slug}: page: ${e.message.split(/\r?\n/)[0]}`); } }
+    if (page) {
+      const out = Object.fromEntries(PAGE_FIELDS.filter((f) => page[f] != null).map((f) => [f, page[f]]));
+      fs.writeFileSync(path.join(OUT_PAGES, `${slug}.json`), JSON.stringify(out));
+    }
     blocks.push({
       slug,
-      name: item.name ?? slug,
-      summary: item.summary ?? "",
+      name: page?.name ?? item.name ?? slug,
+      summary: page?.summary ?? item.summary ?? "",
+      headline: page?.headline ?? "",
+      peek: peekOf(page),
+      task: page?.job ?? TASK_FROM_JOB[item.job] ?? "set-up-ai",
       category: category === "orchestrators" ? "orchestrator" : category,
       boards: item.boards ?? [],
       type: item.type ?? "skill",
@@ -69,6 +88,10 @@ for (const b of blocks) for (const u of [...b.uses, ...b.steps.map((s) => s.uses
 const usedTypes = new Set(blocks.flatMap((b) => [...b.inputs, ...b.outputs].map((p) => p.type)));
 const portTypes = Object.fromEntries([...usedTypes].sort().map((t) => [t, typeDesc[t] ?? null]));
 
-fs.writeFileSync(path.join(OUT_DATA, "blocks.json"), JSON.stringify({ built: new Date().toISOString().slice(0, 10), portTypes, blocks }));
+// Old names still work: the site sends an old link to the block's new page.
+const renamedFile = path.join(ROOT, "renamed.json");
+const renamed = fs.existsSync(renamedFile) ? Object.fromEntries(Object.entries(JSON.parse(fs.readFileSync(renamedFile, "utf8"))).filter(([, to]) => blocks.some((b) => b.slug === to))) : {};
+fs.writeFileSync(path.join(OUT_DATA, "blocks.json"), JSON.stringify({ built: new Date().toISOString().slice(0, 10), portTypes, renamed, blocks }));
+console.log(`${blocks.filter((b) => b.headline).length} of ${blocks.length} have a page`);
 console.log(`${blocks.length} blocks (${blocks.filter((b) => b.category === "general").length} general, ${blocks.filter((b) => b.category === "ecommerce").length} ecommerce, ${blocks.filter((b) => b.category === "orchestrator").length} orchestrators)`);
 if (problems.length) console.log("Problems:\n  " + problems.join("\n  "));

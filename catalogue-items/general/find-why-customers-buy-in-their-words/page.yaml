@@ -1,0 +1,175 @@
+new_slug: find-why-customers-buy-in-their-words
+name: Find why customers buy, in their words
+summary: Your customers' reasons for buying, in their exact words, ranked by how many separate people said them.
+job: understand-customers
+
+headline: Turn your reviews into ranked reasons to buy, in words your buyers already believe
+subhead: Give it your reviews, support tickets, call notes or survey answers. It copies out every phrase that explains why someone bought, doubted or came back, groups the ones that say the same thing, and ranks them by how many separate customers said it, each with its source.
+
+explain: |
+  Your customers have already written your best ad lines. They're sitting in reviews and support emails, in words no copywriter would invent. But reading 200 reviews and remembering the one you liked is how teams end up building ads on a single person's opinion.
+
+  This skill reads customer words phrase by phrase and copies out the ones that matter, exactly as written, typos included. It tags each by the part of the buying story it tells, from "what life was like before" to "the doubt before buying" to "why I bought again". Then it groups phrases that make the same point and ranks each group by how many separate customers said it. It also lists every doubt and complaint, flags quotes that make health or results claims, and points out reasons customers give that your brand never mentions. One rule holds it together. No source, no line.
+
+when:
+  - You're about to write ads or a product page and want the words to come from customers, not from your team.
+  - You have hundreds of reviews and no idea which points come up most.
+  - Your ads all say the same three things and you suspect customers care about something else.
+
+you_give:
+  - Customer words such as reviews, tickets, call notes, survey answers or forum posts, each with an ID and date
+  - Flags like verified buyer, rating, product, or "got it free" (optional)
+  - Your own product page, to see what you already say (optional)
+  - Your brand file with product facts and customer profiles (optional)
+you_get:
+  - A ranked table of buying reasons, each with its best exact quote, backups and how many sources say it
+  - The reasons customers give that your brand never says
+  - A ranked list of doubts and complaints in customers' words
+  - A "check before use" list of risky quotes, with the reason each is flagged
+
+how_to_use:
+  - Copy the skill and paste it into Claude, ChatGPT or Gemini.
+  - Paste or attach your reviews with an ID and date for each. A review export from your reviews app works, and so does a numbered list.
+  - Add your product page text so it can tell which reasons you already use.
+  - If you sell more than four products, run it once per product.
+  - Read the "never said by the brand" list first. Those are the reasons worth testing next.
+
+how_it_works:
+  - title: Filters the sources
+    text: Removes names and contact details, drops entries too short to say anything, and keeps mixed and low ratings for their doubts and complaints.
+  - title: Copies phrases exactly
+    text: Pulls out every phrase that tells part of the buying story, word for word, and checks each one really appears in its source.
+  - title: Tags each phrase
+    text: Marks it as one of ten parts of the story, such as the trigger, what they tried before, the doubt, the turning point or why they bought again.
+  - title: Groups and ranks
+    text: Puts phrases that make the same point together and ranks each group by how many separate customers said it, not by which line sounds best.
+  - title: Finds what you never say
+    text: Flags any reason in about 1 in 20 sources that your brand doesn't mention. A person confirms it before it's called a gap.
+  - title: Lists doubts and complaints
+    text: Ranks every doubt and gripe, in customers' words, ready for your FAQ or follow-up emails.
+  - title: Flags risky quotes
+    text: Lists quotes that imply a health result, an unusual result, a competitor or a claim you can't support, so a person decides.
+
+output_shape: |
+  BUYING REASONS (ranked by number of sources)
+  # | Reason (one line) | Story part | Sources | Best quote [ID]
+    | Backups [IDs] | Lands on | Brand says it? | Status | Thin?
+  1 | <reason> | <part> | <n, share> | "<exact words>" [<ID>] | ...
+
+  NEVER SAID BY THE BRAND
+  <reason>: <n sources>
+
+  DOUBTS AND COMPLAINTS
+  1 "<exact words>" [<IDs>]  <n sources>
+
+  CHECK BEFORE USE
+  "<quote>" [<ID>]: <why it's flagged>
+
+  NOTES
+  Sources: <n>, <date range>. Filters: <...>. What this can't tell you: <...>
+
+example:
+  business: sprout
+  input: |
+    [the skill]
+
+    Customer sources: 20 public reviews, numbered R1 to R20, with where
+    each came from (brand site, brand site widget, retailer, review site),
+    plus two short fragments (sprout/reviews.md). Captured Sept to Oct
+    2026. No verified-buyer flags, no star ratings.
+
+    Our product page text is below, so you can see what we already say.
+    [sprout/product-page.md]
+  output: |
+    BUYING REASONS (11 sources kept, ranked by separate sources)
+    1 Easy enough to keep taking | What stayed | 4 of 11
+      Best: "[Sprout] has been the one thing I've been able to stick to." [R1]
+      Backups: "it's easier for me to manage" [R5] / "So easy to grab and
+      eat on my way to the billion things I have to do as a mom." [R15] /
+      "The convenience and taste are huge!" [R6]
+      Lands on: the quitter who wants to stick. Brand says it: partly
+      (closed accordion on the page). Status: 1 ad running. Not a pattern.
+    2 Replaced a powder or a shelf of pills | Past fixes | 4 of 11
+      Best: "not having to clean a shaker bottle or extra dishes for greens
+      stuff in powder form" [R6]
+      Backups: "the drink was definitely gritty/chalky" [R3] / "I also
+      stopped buying separate probiotic gummies, b12 gummies, and
+      multivitamin gummies." [R5] / "I've tried a few green powders over
+      the years." [R1]
+      Brand says it: yes (accordion, Us vs. Them). Status: not built in ads.
+    3 Digestion feels normal again | Turning point | 3 of 11
+      Best: "I feel like my overall digestion has improved" [R8]
+      Backups: R11, R14 (both on the check-before-use list)
+      Brand says it: yes ("Supports digestion and gut health").
+    4 Kids eat it like a treat | Pass it on | 2 of 11, thin
+      Best: "They think it's a treat." [R16]  Backup: R17
+    5 Tastes good | In their words | 2 of 11, thin
+      Best: "Like mixed berries!" [R6]  Backup: "They taste good!" [R14]
+    6 Taste grows on you | Rough patch | 1 of 11, thin
+      "after the third day they started tasting better" [R18]
+
+    Every best phrase is unverified (no verified-buyer flags), and 10 of
+    the 11 come from the brand's own site (8 hand-picked). Keep them out of paid ads until
+    you can confirm them.
+
+    NEVER SAID BY THE BRAND
+    None found. Reasons 1 and 2 are on the page, but only inside closed
+    sections, and barely in ads.
+
+    DOUBTS AND COMPLAINTS
+    1 "I hate subscriptions because I feel like they are a trap" [R17]
+    2 "I thought the first pack I tried tasted terrible" [R18]
+    The filter dropped R19, R20 and both fragments as too short. All four
+    are complaints (taste, cancelling, price, Sugar-Free). Read them by hand.
+
+    CHECK BEFORE USE
+    "This is huge for someone who suffers from chronic IBS!" [R8]: names
+      a condition
+    "I've been on a glp1 for about a year now and was always constipated
+      not anymore" [R11]: health claim tied to a medication
+    "I'm on Glp-1 and they definitely help with the vitamin loss" [R14]:
+      same, plus energy and sleep claims
+    "$94 a month" [R3]: a competitor's price, as one customer remembers it
+
+    NOTES
+    Sources: 20 reviews, Sept to Oct 2026. Kept 11 of about 20 words or
+    more. Under 150 sources, so nothing here is a pattern yet. This can't
+    tell you why people who didn't buy said no.
+
+tweaks:
+  - what: Which sources
+    how: Add support tickets and call notes, not just five-star reviews. Doubts and complaints live in mixed reviews and tickets, and those make the best FAQ and objection-answering ads.
+  - what: Verified-buyer flags
+    how: Include them if your export has them. Without them, every best quote is marked "unverified" and kept out of paid ads.
+  - what: Your product page
+    how: Paste it and the "brand says it?" column fills in, which is how the skill spots reasons customers give that you never mention.
+  - what: Rerunning it
+    how: Paste only new reviews and the existing table. It keeps your groups and marks what's new, what's fading and what contradicts your customer profiles.
+
+judge:
+  - Every quote appears word for word in its source, with spelling mistakes kept.
+  - Counts are separate customers, not mentions. One person saying it three times counts once.
+  - Nothing with fewer than three sources is called a pattern.
+  - The "check before use" list exists, even if it's empty.
+  - No quote has a name, initial or city that wasn't in the source.
+
+test:
+  - Pick three quotes from the table and search for them in your review export. Each should appear word for word, typos included.
+  - Paste one review twice under the same source ID. The count for its reason should go up by one, not two.
+  - "Compare the top reasons with what your support team hears most. If a reason you know is missing, check the filter notes: reviews under about 20 words are dropped."
+  - Look for health or result claims among the best phrases. Every one should also sit on the "check before use" list.
+
+improve:
+  - If your reviews are mostly one line, lower the 20-word filter in step 1, so short, strong quotes aren't lost. Note the change in the skill.
+  - "Add your product's risky topics to step 8 (for a supplement: digestion, weight, medication), so quotes about them always land on the check list."
+  - Rename the ten story parts if your buyers' story runs differently. A business tool might need "who signed off" in place of "pass it on".
+  - Save the finished table to the customer profiles in your brand file, with each reason's status, so you don't rebuild the same ideas next quarter.
+  - Pair it with a skill that checks whether your product page answers these doubts, and a writing skill that builds one ad per buying reason.
+
+terms:
+  - term: Buying reason
+    meaning: The reason someone buys, in their own words. Often called an angle.
+  - term: Source
+    meaning: One review, ticket, call or survey answer, with its own ID.
+  - term: Verified buyer
+    meaning: A review the store confirmed came from someone who actually bought the product.

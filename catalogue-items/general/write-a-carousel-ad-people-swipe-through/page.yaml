@@ -1,0 +1,188 @@
+new_slug: write-a-carousel-ad-people-swipe-through
+name: Write a carousel ad people swipe through
+summary: A swipe ad written card by card, with a first card that earns the swipe.
+job: write-ad-copy
+
+headline: Get a carousel ad people swipe to the end, with a clear last card
+subhead: Tell it how many cards, who the buyer is and what you can prove. It picks a story shape that fits how much the buyer already knows, then writes each card's picture and words, the text above the ad, and a short last card with the action.
+
+explain: |
+  A carousel is an ad people swipe through, card by card. Most carousels fail in one of two places. The first card doesn't make anyone want to swipe, or the last card is so crowded that the action gets lost. Many people only ever see card one, so it has to work alone.
+
+  This skill writes the carousel like a short script. It first picks one of eight shapes, such as "fixes you've tried and why they failed" or "questions before you buy", based on how much the buyer already knows. Then it writes one idea per card, keeps the same look across cards so it reads as one piece, and brings your product in late for people who don't know you yet. The last card names the action in 20 words or fewer, with only real offer terms and dates.
+
+when:
+  - You want to run a carousel but don't know what should go on each card.
+  - Your carousels get views on card one and nobody swipes.
+  - You have several real reasons or customer quotes and want to lay them out in order.
+
+you_give:
+  - How many cards (usually 5 to 7)
+  - Who the buyer is, what they doubt and how much they already know
+  - Your offer, guarantee and the claims you can back
+  - Your brand voice and banned claims (optional)
+you_get:
+  - A card-by-card table with the picture, the words on the card and the word count
+  - The main text above the ad, for people who never swipe
+  - Headline options with character counts, and a button
+  - Flags for gaps, guesses and quotes to check
+
+how_to_use:
+  - Copy the skill and paste it into Claude, ChatGPT or Gemini.
+  - Say how many cards you want. Five to seven is usual.
+  - Describe the buyer in a sentence or two, including what they've already tried.
+  - Paste your offer, guarantee, approved claims and any customer quotes with their sources.
+  - Read the flags at the end. Any MISSING line is something to find or drop before the ad runs.
+
+how_it_works:
+  - title: Picks the story shape
+    text: Chooses one of eight shapes to fit how much the buyer knows. A buyer who has tried other fixes gets "fixes that failed"; a buyer ready to buy gets "before you buy".
+  - title: Writes the first card
+    text: Makes card one work on its own and open a question that only swiping answers.
+  - title: One idea per card
+    text: Keeps each card to one or two plain sentences, each one making the next card necessary.
+  - title: Keeps one look
+    text: Uses the same layout, colours and framing on every card so the set reads as one ad.
+  - title: Brings the product in late
+    text: For people new to you, the product is seen on the "how it works" card and named on the offer card.
+  - title: Writes the last card
+    text: Names the action, the offer and the guarantee in 20 words or fewer, with a date only if it is real.
+  - title: Writes the text above
+    text: Writes main text that carries the first card's question and a short version of the argument, then checks each card for anything invented.
+
+output_shape: |
+  Shape: <story shape> | <what the buyer knows> | Cards: <n>
+
+  <n> <card job>
+    Picture: <what the card shows>
+    Card: <one or two sentences>                    (<word count>)
+  ... one block per card ...
+
+  Visual thread: <what stays the same on every card>
+
+  Main text: <the first card's question and a short argument>
+
+  Headline options:
+  <headline>                                        (<characters>)
+  Button: <button>
+
+  Flags
+  MISSING: <dates, proof or terms not on file>
+  <quotes to check, guesses, anything left out and why>
+
+example:
+  business: sprout
+  input: |
+    [the skill]
+
+    Cards: 6
+    Buyer: people who quit greens powders, pills or a shelf of
+    gummies. They know the kinds of fix, not us. Doubt: "A gummy
+    can't hold enough to replace my powder."
+    Facts: 1 daily pack = 60+ ingredients, 21 vitamins and minerals,
+    6 g prebiotic fiber, in a small handful of gummies. About 25% of
+    daily value for minerals. Allowed: "Supports digestion and gut
+    health." Brand line: "No more gagging on pills, sloshing chalky
+    powders, or cleaning messy counters."
+    Offer: $29.99 first box with the text sign-up, then $49.99 every
+    4 weeks. Guarantee: 30-day money-back, first order only.
+    Quotes: review 3 "the drink was definitely gritty/chalky".
+    Review 5 "I also stopped buying separate probiotic gummies, b12
+    gummies, and multivitamin gummies."
+  output: |
+    Shape: Fixes that failed | Knows the kinds of fix | Cards: 6
+
+    1 Hook
+      Picture: a kitchen counter in morning light. An unbranded powder
+      tub with a shaker, a row of pill bottles, a jar of gummies.
+      Card: You've probably tried one of these. Maybe all three.
+                                                           (9 words)
+    2 Fix one
+      Picture: the powder tub and a shaker with a green ring inside.
+      Card: Greens powder. One buyer quit because "the drink was
+      definitely gritty/chalky."                          (11 words)
+    3 Fix two
+      Picture: the pill bottles alone, same counter, same light.
+      Card: A row of pills. The kind some people gag on.  (10 words)
+    4 Fix three
+      Picture: five gummy jars lined up on a shelf.
+      Card: A shelf of separate gummies. One bottle for each thing,
+      and a lot to keep track of.                         (17 words)
+    5 What works and why
+      Picture: a daily pack torn straight across the top, green bears
+      pouring into a palm. The pouch behind, not named.
+      Card: One pack a day instead. 60+ ingredients, 21 vitamins and
+      minerals, 6 g prebiotic fiber, in a small handful of gummies.
+                                                          (21 words)
+    6 Offer
+      Picture: the deep green pouch and one torn pack, front on.
+      Card: Tap Shop now. Sprout, $29.99 first box with text sign-up,
+      then $49.99 every 4 weeks. Money-back on first order.
+                                                          (19 words)
+
+    Visual thread: the same counter and morning light on every card,
+    warm cream background, one object per card until card 5.
+
+    Main text: Quit a greens powder, a pill stack or a shelf of
+    gummies? Swipe through the fixes people try, and why each one got
+    left on the counter. Sprout is one daily pack of green gummy
+    bears, with 60+ ingredients, 21 vitamins and minerals and 6 g of
+    prebiotic fiber. No water, no shaker. First box $29.99 with the
+    text sign-up, then $49.99 every 4 weeks. 30-day money-back on
+    your first order.
+
+    Headline options:
+    Quit your powder? Keep the habit.        (33 characters)
+    No shaker. No pills. One pack a day.     (36 characters)
+    Button: Shop now
+
+    Flags
+    MISSING: real date. Orders "on average arrive 3-5 days later", which
+    is not a date, so card 6 has none.
+    Reviews 3 and 5 are from the brand site and not marked verified.
+    Confirm before paid use. Card 4 retells review 5 in plain words;
+    only card 2 quotes.
+    No percentage off anywhere. The site shows four different numbers,
+    so the cards use the dollar prices instead.
+    The doubt "a gummy can't hold enough" is answered by the counts on
+    card 5. Minerals are about 25% of daily value, so no card says
+    "everything you need" or "replaces your powder".
+
+tweaks:
+  - what: The buyer
+    how: Say how much they already know. A buyer who has never tried a fix gets a story shape; one who is comparing gets "fixes that failed" or "how it works"; one ready to buy gets "before you buy".
+  - what: Number of cards
+    how: Three cards gives you a hook, one reason and the offer. Ten gives room for a proof card per doubt. More cards only help if each one has a new idea.
+  - what: Customer quotes
+    how: Paste real quotes with their source. With none, the skill swaps proof cards for "how it works" cards and says MISSING proof.
+  - what: Delivery or offer dates
+    how: Give a real date and the last card can say "get it by Friday". Without one, it leaves dates out.
+
+judge:
+  - Cover every card but the first. Would card one alone make you want to swipe?
+  - The last card is 20 words or fewer and starts with the action.
+  - No two cards say the same thing in different words.
+  - Every quote matches a real review word for word, with its source.
+  - For people new to your brand, the product isn't named on card one.
+  - Nothing appears that isn't in your facts, such as a deadline, a count or a result.
+
+test:
+  - Run it on a carousel you already ran and know the result of. Compare its card 1 with yours; if it picks a different story shape, read why, then test its version against your old card 1.
+  - Run it twice with the same input. The shape and the job of each card should match both times, even if the words differ. If the shape changes, say more clearly what the buyer already knows.
+  - Cover every card but the first and show it to someone who doesn't know your product. Ask what they think card 2 will say. If they can't guess at all, card 1 isn't opening a question.
+  - Read the flags. A carousel with quotes and offer terms should have at least one check on a quote or a date. An empty flags list on thin facts means it filled gaps on its own.
+
+improve:
+  - Paste your offer, guarantee and its conditions into "What you need" in the skill file, so the last card always uses the same approved terms.
+  - Delete the story shapes in step 1 you can't support (no customer quotes means no proof stack), so it never picks one you'd have to fake.
+  - If you always run the same number of cards or the same look, write that into step 4 as a fixed rule, with your colours and background.
+  - When a carousel wins, save its card 1 and its shape in your brand file, and paste that next time so new carousels start from a proven opener.
+  - Pair it with a skill that checks a finished ad before you spend, once the cards are made.
+
+terms:
+  - term: Carousel
+    meaning: An ad made of several cards that people swipe through sideways.
+  - term: Hook
+    meaning: The first line or first card that makes someone stop scrolling.
+  - term: Main text
+    meaning: The words above the ad in a Facebook or Instagram feed.

@@ -1,0 +1,31 @@
+slug: get-a-product-page-gallery-that-answers-doubts
+renamed_from: pdp-gallery-image-set-workflow
+name: "Get a product page gallery that answers doubts"
+summary: "From your current gallery to a checked, numbered set of images ready to upload, with alt text."
+category: ecommerce
+type: workflow
+role: orchestrate
+job: image
+level: expert
+inputs:
+  - type: product_data
+    required: true
+  - type: brand_brain
+    required: true
+  - type: product_photos
+    required: true
+  - type: voc_reviews
+    required: false
+  - type: gallery_plan
+    required: false
+  - type: truth_sheet
+    required: false
+outputs:
+  - {type: pdp_images}
+  - {type: gallery_plan}
+uses: [stop-ai-pictures-getting-your-product-wrong, know-what-each-product-page-photo-should-show, catch-product-page-image-mistakes-before-shoppers-do]
+example: pdp
+origin: rebuilt
+source_ids: [CES-095, CES-098]
+old_name: PDP Image Factory
+version: 1.0.0

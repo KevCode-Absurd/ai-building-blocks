@@ -1,0 +1,170 @@
+new_slug: make-video-ad-clear-with-sound-off
+name: Make your video ad clear with the sound off
+summary: A few timed labels and badges so a finished video ad still makes sense on mute.
+job: make-video-ads
+
+headline: Make your finished ad clear with the sound off, with a few well-placed words and nothing more
+subhead: Give it your finished ad, its approved script and your allowed claims. It picks the few moments that earn on-screen text, takes the words from the script, times each one, and places it where it covers no product, face or hand.
+
+explain: |
+  Many people watch ads with the sound off, so a finished video needs to say three things on screen: what the product is, the one fact worth knowing, and what to do next. The usual fix overdoes it: text on every scene, badges repeating captions, numbers rounded up.
+
+  This skill adds as little as possible. It works through a fixed order (what the product is, the one number, a step a viewer could miss, the offer) and stops when the video has enough. Words come from the line spoken in that scene, so eye and ear agree, and numbers appear exactly as approved. It places each one in the emptiest part of the frame, away from the product, faces and hands, and away from the parts of a vertical video the app covers. It never changes the footage, sound or length.
+
+when:
+  - Your ad is finished and approved, and you want it to work for people scrolling with the sound off.
+  - An editor added text to every scene and the ad now feels like a slideshow.
+  - You want on-screen text that can't drift from your approved claims.
+
+you_give:
+  - The approved script with scene lengths (the only words allowed on screen)
+  - The finished video, or frames sampled from it
+  - Your allowed copy (offer, numbers, claims, customer words) exactly as written
+  - Your on-screen text habits, fonts and colors (optional)
+  - The style, such as a person talking, clay, cartoon or demonstration (optional)
+you_get:
+  - A short list of overlays, each with kind, exact words, start and end time, position and reason
+  - Which sampled frame each placement was judged on
+  - Moments between samples that a person needs to check
+  - Anything in the footage that doesn't match the script
+
+how_to_use:
+  - Copy the skill and paste it into Claude, ChatGPT or Gemini.
+  - Paste the approved script with how long each scene lasts.
+  - Attach frames from the finished video (about one every 3 seconds), or describe what's in each.
+  - Paste your allowed copy and say whether captions are already burned in.
+  - Add the overlays to a copy of the video. Keep the clean version.
+
+how_it_works:
+  - title: Decides what earns text
+    text: In order, what the product is, the one number, a step a viewer could miss, the offer. It stops when that's enough, and leaves empty time empty.
+  - title: Chooses the words
+    text: Usually 2 to 4 words, taken from the line spoken in that scene, with numbers and claims exactly as approved.
+  - title: Counts
+    text: About one every 6 to 8 seconds at most, and never two that make the same point.
+  - title: Places each one
+    text: In the emptiest part of the nearest sampled frame, away from the product, faces and hands, and clear of the app's buttons and captions.
+  - title: Styles it
+    text: Your font and colors with a light outline for contrast, checked at 4.5 to 1 or better, never covering the product's printing.
+  - title: Matches the format
+    text: Fewest and smallest for a person talking, paper-tag labels for clay or paper, bold badges for cartoons, precise callouts for demonstrations.
+  - title: Leaves the video alone
+    text: Never changes the footage, voice, sound or length. The overlay version is a separate file.
+
+output_shape: |
+  OVERLAYS
+  <n> <label, badge or underline> | "<exact text>" | <start-end s> |
+    <position>
+    Anchored to: <scene and line, or the object it sits under>
+    Reason: <one line>
+
+  LEFT OUT ON PURPOSE
+  <moment>: <why no overlay>
+  Count: <number> in <seconds>
+
+  STYLE  <format, font, colors, outline, contrast check>
+
+  NOTES
+  Placement judged on: <frames>
+  Between samples: <times a person must check by eye>
+  Times come from <scene lengths or measured speech>
+  <anything in the footage that doesn't match the script>
+  MISSING: <facts it needed and didn't get>
+
+example:
+  business: sprout
+  input: |
+    [the skill]
+
+    Finished ad: Sprout customer ad, version A, 22.9 s, 9:16.
+    Captions already burned in, lower part, on every spoken line.
+    Scenes: 1 her to camera 0.0-3.2 | 2 holds up a pack 3.2-4.6 |
+    3 tears the pack across the top 4.6-6.6 | 4 gummies into her palm
+    6.6-8.5 | 5 pouch held to the lens 8.5-12.5 ("21 vitamins and
+    minerals and 6 grams of fiber, in one pack.") | 6 her 12.5-13.6 |
+    7 her, price and terms 13.6-20.4 | 8 pouch, no speech 20.4-22.9
+    Frames (one every 2.5 s): f4 at 7.6 s, palm center, empty counter
+    top-left. f5 at 10.1 s, pouch center-right in her hand, plain
+    kitchen wall top-left. f9 at 22.4 s, pouch center on the counter,
+    empty wall upper-left.
+    Allowed copy: Sprout; the approved script; "First order is $29.99
+    with the text sign-up. It renews at $49.99 every 4 weeks."; the
+    site, sprout.example.
+    Brand: Work Sans bold; forest green #00582D, warm cream #FFF7DF,
+    sunflower yellow #FFCC2E for badges.
+  output: |
+    OVERLAYS
+    1 label | "Sprout" | 8.7-10.7 s | top-left, on the kitchen wall
+      Anchored to: scene 5, the pouch, the first time its name is
+      clearly seen.
+      Reason: the product's name is never spoken in this version.
+    2 badge | "sprout.example" | 20.6-22.6 s | upper-left, on the
+      empty wall
+      Anchored to: scene 8, the pouch held on the counter.
+      Reason: the ad says "first order" but never says where. Scene 8
+      has no caption, so the next step goes here.
+
+    LEFT OUT ON PURPOSE
+    21 vitamins and 6 g badge: the scene 5 caption already says it. A
+    badge would repeat it.
+    "Tear the top" label: the scenes 2 to 4 caption already says it,
+    and the tear itself is the picture doing the work.
+    Price badge: the scene 7 caption carries the price and the renewal
+    together. A shorter badge would split the renewal off the price.
+    First 1.5 seconds: clear, because the opening line has a caption.
+    Count: 2 in 23 seconds. The ceiling was 3.
+
+    STYLE
+    Format: clean (a person talking), so one small label and one
+    badge, nowhere near her mouth. Label in Work Sans bold, warm cream
+    with a thin forest green outline. Badge in sunflower yellow with
+    forest green type. Check contrast at 4.5 to 1 against the wall in
+    f5 and f9. The pouch's own printing stays uncovered.
+
+    NOTES
+    Placement judged on f5 (label) and f9 (badge).
+    Between samples: check 8.7 to 10.1 s by eye. The pouch comes up
+    into frame there; if her hand passes through the top-left, move the
+    label to middle-left.
+    Times come from scene lengths, not measured speech.
+    Footage matches the approved lines it uses. Keep the clean video;
+    the overlay version is a separate file.
+    MISSING: nothing for this plan.
+
+tweaks:
+  - what: The format style
+    how: Say clean (a person talking, a podcast clip), tactile (clay, paper, wool), graphic (cartoon, comic, talking object) or premium (demonstration, rendered explainer). Each changes how many overlays and what kind.
+  - what: Frames
+    how: More sampled frames mean fewer guesses. With about 9 frames, anything placed between samples is flagged for a person to check.
+  - what: Allowed copy
+    how: Paste your claims, offer, site address and customer quotes exactly as approved. Overlays use contiguous phrases from them only, never rounded or strengthened.
+  - what: Captions
+    how: Say whether captions are burned in. If they are, the skill won't repeat their words and keeps text out of the lower part of the frame.
+
+judge:
+  - Every word on screen is a phrase from your approved script or allowed copy, unchanged.
+  - Nothing covers the product, a face or a hand, and no overlay repeats a caption.
+  - There are few overlays, about one every 6 to 8 seconds at most, never two at once.
+  - Each one stays up long enough to read (about 2 seconds for 6 words).
+  - Watch it at phone size with the sound off. You know what it is and what to do next.
+
+test:
+  - Give it an ad with captions on every line. It should add very little, and say which moments it left out because a caption already covers them.
+  - Hold your phone at arm's length and play the ad muted with the overlays mocked up. If you can't say what the product is and where to get it, one is missing.
+  - Run it twice on the same frames. Positions should match; if they swap sides, send more frames so it isn't guessing.
+  - Check each overlay's words against your allowed copy, character by character. Any rounding or extra word is a fail.
+
+improve:
+  - Write your font, colors and badge style into step 5 of the skill file, so every ad's text looks like your brand.
+  - Add your site address and standard call to action to the allowed copy in "What you need", so the last scene always has a next step to show.
+  - Note your usual format (clean, tactile, graphic or premium) for each kind of ad you make, so it picks the right amount of text.
+  - If the plan says "better left as it is", believe it, and test the ad without overlays.
+  - Pair it with the skill that turns your footage into a timed cut list, so the edit and the text are planned together.
+
+terms:
+  - term: Overlay
+    meaning: Text or a shape laid over the finished video in editing, not part of the footage.
+  - term: Label, badge, underline
+    meaning: A label names something. A badge holds a number or offer. An underline is a short bar with no words under something still.
+  - term: Burned-in captions
+    meaning: Subtitles fixed into the video file so they show without the sound or a captions setting.

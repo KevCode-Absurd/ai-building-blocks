@@ -1,0 +1,23 @@
+slug: turn-watercolor-script-into-shots-ai-can-make
+renamed_from: watercolor-video-ad-director
+name: "Turn your watercolor script into shots AI can make"
+summary: "Locked style lines, image prompts and gentle video prompts that keep every clip one real watercolor."
+category: general
+boards: [ecommerce]
+type: skill
+role: render
+job: video
+level: advanced
+inputs:
+  - {type: script, required: true}
+  - {type: product_data, required: true}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: image_prompt}
+  - {type: video_prompt}
+uses: [get-watercolor-ad-script-that-sells]
+example: watercolor
+origin: rebuilt
+source_ids: [CES-148]
+old_name: watercolor-animation
+version: 1.0.0

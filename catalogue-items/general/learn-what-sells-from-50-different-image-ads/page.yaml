@@ -1,0 +1,195 @@
+new_slug: learn-what-sells-from-50-different-image-ads
+name: Learn what sells from 50 different image ads
+summary: Fifty image ads planned to differ on purpose, briefed and made, with your approval between stages.
+job: plan-ad-tests
+
+headline: Fifty image ads that each test something different, so you learn what to make more of
+subhead: Give it your brand file, buyer research and the photos you have. It splits 50 slots across ad formats by exact arithmetic, maps 9 or 10 reasons to buy, writes each slot's idea, and waits for your approval before briefs and again before images.
+
+explain: |
+  A first big batch of ads often turns into fifty versions of one idea, so when one wins you can't tell why. Or the batch fills with invented urgency, fake experts and stock faces that can't be used.
+
+  This workflow plans before it makes anything. It lists your photos and says which can lead an ad. It fixes the format mix by arithmetic (40% workhorse formats, 30% under-used, 20% tied to one reason to buy, 10% experimental), then maps up to ten reasons to buy, with no reason in more than six ads. Each slot gets a buyer, how much that buyer already knows, an opening line type and a one-sentence idea that names something true about your product. Formats you can't make honestly are dropped. You approve the plan, then the briefs, then it makes the images.
+
+when:
+  - You're about to make your first large batch of image ads and want each one to teach you something.
+  - Past batches looked varied but all made the same argument.
+  - You want a plan your team can split up and brief, with counts that prove the mix is balanced.
+
+you_give:
+  - Your brand file with voice, claims, live offers, guarantee and never-show list
+  - Buyer research such as reviews, buyer types and their own words
+  - A list of the product photos you have and what each one shows
+  - Competitor gaps or past winning ads (optional)
+you_get:
+  - A list of your assets saying which can lead an ad, with a photoshoot suggestion if there are too few
+  - The format mix worked out for 50, a map of 9 or 10 reasons to buy, and all 50 slots with their idea
+  - Counts by format, reason, opening line, buyer and level of knowledge, plus a list of what's missing
+  - After your approvals, 50 briefs and the finished images with their check results
+
+how_to_use:
+  - Copy the skill and paste it into Claude, ChatGPT or Gemini.
+  - Paste your brand file and buyer research underneath, including only offers that are live today.
+  - List every product photo you have and what it shows. Be honest if you only have one or two.
+  - Ask for stage 1 only. Read the plan and the MISSING lines before you approve anything.
+  - Reply "approved" to move on. If you ask for changes, it shows the plan again and waits.
+
+how_it_works:
+  - title: Lists your assets
+    text: Uses this workflow's own first step. Notes what each photo shows and whether it can lead an ad, and suggests a photoshoot if you have too few.
+  - title: Fixes the format mix
+    text: Uses a skill that finds the image ad types you're missing to split 50 slots across format groups by arithmetic, and drops any format you can't make honestly.
+  - title: Maps reasons to buy
+    text: Writes 9 or 10 one-sentence reasons, each about one buyer, with no more than 6 ads per reason.
+  - title: Fills every slot
+    text: Gives each slot a buyer, a level of knowledge, an opening line type and an idea, then stops for your approval of the plan.
+  - title: Writes the briefs
+    text: Uses a skill that plans an image ad's layout from its job for each slot's words, picture, layout and prompt, then stops for your approval again.
+  - title: Makes and checks
+    text: Makes each image with your real product photo, then uses a skill that finds flaws in finished image ads to check it. Failed images are shown, never hidden.
+
+output_shape: |
+  STAGE 1 PLAN. No briefs until you approve.
+
+  ASSETS
+  <photo>   <what it shows>   <can lead | supports only, and why>
+  <photoshoot suggestion if there are too few>
+
+  FORMAT MIX (<sale status>; a starting guess, not a benchmark)
+  Workhorse 40% = 20      <format and count, ...>
+  Under-used 30% = 15     <format and count, ...> (<dropped, and why>)
+  One reason 20% = 10     <format and count, ...>
+  Experimental 10% = 5    <format and count, ...>
+  Text-led: <n> of 50
+
+  REASONS TO BUY (max 6 ads each)                      ads
+   <n> <one buyer, one sentence> (<sources>)            <n>
+                                                 total  50
+
+  FIRST SLOTS
+  <nn> <format> | reason <n> | <buyer> | <what they know> | <opening>
+       <the idea: what it argues, what the picture shows>
+
+  COUNTS   <by opening line, level of knowledge, buyer>
+  MISSING: <photos, research, live offer, proof>
+  APPROVAL 1  WAITING FOR YOU.
+
+example:
+  business: sprout
+  input: |
+    [the skill]
+
+    Brand file: Sprout, daily greens gummies (pasted below: facts,
+    fine and risky claims, prices and the discount mess, voice, look,
+    show-it-right rules).
+    Buyers: the four buyer groups in the brand file, plus all 20
+    reviews (pasted below).
+    Past results: ad-results.csv, 9 ads (practice numbers, pasted).
+    Photos: the adult pouch on a soft gradient with gummies in front;
+    gummies poured into a hand; the cartoon-movie tie-in pouch.
+    Run stage 1 only and stop for my approval.
+  output: |
+    STAGE 1 PLAN. No briefs until you approve.
+
+    ASSETS
+    Pouch on gradient        pack front    can lead
+    Gummies in a hand        in use        can lead (real product)
+    Tie-in pouch             pack front    can't lead: licensed character
+    Three photos for 50 ads is too few. Suggested photoshoot: a daily
+    pack torn straight across the top, gummies into a palm in a real
+    kitchen, the kids pouch in an adult's hand. Bright, sunny light.
+
+    FORMAT MIX (sale status unclear: "Limited Time Sale" and a price
+    cut "indefinitely"; a starting guess, not a benchmark)
+    Workhorse 40% = 20     demonstration 4, testimonial 4, headline-led
+                           4, montage 3, listicle 3, offer-first 2
+    Under-used 30% = 15    unboxing 5, point of view 5, behind the
+                           scenes 5 (founder dropped: none on file)
+    One reason 20% = 10    us vs the usual way 4, problem agitation 3,
+                           before and after as objects 3
+    Experimental 10% = 5   statistic 2, looks like a post 2, collage 1
+                           (expert dropped: the athlete is a paid
+                           spokesperson, not an expert)
+    Text-led: 18 of 50 (36%, inside 30 to 40%)
+
+    REASONS TO BUY (max 6 ads each)                            ads
+     1 Quit a greens powder over the chalky shake (3, 4)          6
+     2 Has never stuck with a supplement before (1, 2)            6
+     3 Bloated and irregular, tried fiber powders (8, 9, 10)      6
+     4 Parent whose kids won't eat their greens (16)              6
+     5 Parent with no minute for herself in the morning (15)      5
+     6 Owns a shelf of separate gummy bottles (5)                 5
+     7 Thinks a gummy can't hold enough (brand file doubt)        5
+     8 Thinks it costs too much ("They are expensive")            5
+     9 Hates subscriptions, fears the trap (17)                   3
+    10 Reads labels: methylfolate, third-party tests (facts)      3
+                                                         total   50
+
+    FIRST SLOTS (6 of 50)
+    01 Headline-led | reason 1 | quitter | knows solutions | confession
+       Big type: "I quit my greens powder, not greens". Pouch small.
+    02 Testimonial | reason 2 | quitter | knows problem | confession
+       Review 1 word for word on a quote card, no face.
+    03 Us vs the usual way | reason 6 | quitter | knows solutions |
+       curiosity. Three unbranded gummy jars beside one pouch.
+    04 Demonstration | reason 7 | quitter | knows product | curiosity
+       The in-hand photo, with three labels: 60+ ingredients, 21
+       vitamins and minerals, 6 g fiber.
+    05 Before and after, objects | reason 3 | gut-fix | knows problem
+       | curiosity. The same shelf twice: fiber tub and probiotic
+       bottle, then one pouch. No body, no result shown.
+    06 Offer-first | reason 8 | price doubter | ready | price anchor
+       "$29.99 first box with text sign-up, then $49.99 every 4
+       weeks." No percentage: the site shows 49, 52, 55, 58 and 61.
+
+    COUNTS (whole plan)
+    Opening  confession 7, curiosity 8, price anchor 5, missing out 4
+             (a real new flavour every 4 to 8 weeks), urgency 3 (cost
+             of waiting; no honest deadline). 27 of 50
+    Knows    nothing 8, problem 14, solutions 12, product 10, ready 6
+    Buyers   quitter 22, parent 14, price doubter 8, gut-fix 6
+
+    MISSING: which discount is live, so no percentage is quoted
+    MISSING: photos of a torn pack, the kids pouch and the lab tests
+    No review is marked verified. Quotes run as "review", no names.
+    APPROVAL 1  WAITING FOR YOU. Asking for changes isn't approval.
+    (cut for length: the full run also had slots 07 to 50)
+
+tweaks:
+  - what: Your own mix
+    how: Replace the 40/30/20/10 split with what your results say. If testimonials have always won for you, give that group more slots and it recalculates the counts.
+  - what: Live offers
+    how: Only list offers running today, and say which number is the real one if your site shows several. With no offer it drops offer-first slots and gives them to the other workhorse formats.
+  - what: Number of ads
+    how: Ask for 20 instead of 50. The same rules apply, with fewer reasons to buy and the caps lowered to match.
+  - what: Competitor gaps
+    how: Add what competitors never say. It turns those gaps into reasons to buy, described without naming the competitor.
+
+judge:
+  - The format numbers add up to exactly 50, and each group matches its share.
+  - No reason to buy has more than 6 ads and no opening line type more than 8.
+  - Read two slot ideas aloud. Each names something true about your product that a rival couldn't copy unchanged.
+  - Every quote is word for word with its review number, and no slot shows a child, a made-up expert or a generated customer.
+  - It stopped at the approval and didn't start writing briefs.
+
+test:
+  - Run stage 1 with last year's winning ad in the past results. Its reason to buy should be on the map. If it's missing, your buyer research doesn't cover that buyer yet.
+  - Add the counts yourself for the format mix and the reasons. They must add to exactly 50, with no reason above 6 and no opening line type above 8. A wrong sum means the plan can't be trusted.
+  - Run stage 1 twice. The reasons to buy should mostly match. If half of them change, give it fewer, sharper buyer descriptions.
+  - Ask for changes and check it shows the plan again and waits. If it starts writing briefs, it skipped the approval.
+  - Pick any two slots and swap them in your head. If nobody would notice, the slot ideas aren't specific enough; tell it which ones.
+
+improve:
+  - Replace the 40/30/20/10 split in step 2 of the skill file with your own mix once you have results, and write the reason next to it.
+  - Add your live offer and the one discount number that's real to "What you need", so offer-first slots never quote a number the site states two ways.
+  - Delete formats from step 2 you'll never make (for example founder, if there's no founder to show), so their shares go where they're useful.
+  - After the sprint, save the three best reasons and formats in your brand file, and run a smaller sprint on just those.
+  - Pair it with a skill that finds the image ad types you've never tried before you start, and with one that finds flaws in finished image ads at the end.
+
+terms:
+  - term: Slot
+    meaning: One planned ad in the 50, with its format, buyer, reason to buy and idea fixed before anyone writes it.
+  - term: Text-led
+    meaning: An ad where the words carry the message and the product is only a small picture.
+  - term: Opening line type
+    meaning: The kind of first line that makes someone stop scrolling, such as a confession or a price comparison. Marketers call this the hook.

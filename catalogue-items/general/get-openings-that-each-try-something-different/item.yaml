@@ -1,0 +1,18 @@
+slug: get-openings-that-each-try-something-different
+renamed_from: ad-hook-opener-shape-bank
+name: "Get openings to test that each try something different"
+summary: "About ten first lines for one ad, each a different way in, built only from true things."
+category: general
+type: skill
+role: source
+job: copy
+level: beginner
+inputs:
+  - {type: brief, required: true}
+outputs:
+  - {type: hooks}
+uses: [stop-the-right-people-scrolling]
+origin: rebuilt
+source_ids: [CES-043]
+old_name: hook-bank
+version: 1.0.0

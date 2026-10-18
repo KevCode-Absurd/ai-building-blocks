@@ -1,0 +1,21 @@
+slug: get-a-short-film-ad-script-with-a-twist
+renamed_from: cinematic-film-ad-script-format-rules
+name: "Get a short film ad script with a twist"
+summary: "A shot-by-shot, live-action-style ad script where your product is the moment the story turns."
+category: general
+boards: [ecommerce]
+type: skill
+role: make
+job: video
+level: advanced
+inputs:
+  - {type: brief, required: true}
+  - {type: brand_brain, required: true}
+outputs:
+  - {type: script}
+uses: []
+example: cinematic
+origin: own
+source_ids: [CES-107]
+old_name: script-format-cinematic
+version: 1.0.0

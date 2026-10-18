@@ -1,0 +1,283 @@
+import { useEffect, useMemo, useState, type ReactNode } from "react";
+import { Marked } from "marked";
+import { ArrowIcon, BlockCard, KitMenu } from "./ui";
+import { type Catalogue, type Page, cap, kindInfo, kindOf, loadPage, loadSkillText, neighbours, pathOf, taskOf, wireSteps } from "./lib/data";
+import { markViewed } from "./lib/store";
+import { buildHandoffZip, download } from "./lib/handoff";
+import { Link } from "./lib/router";
+import AddToFlow from "./AddToFlow";
+
+// Skill text renders as Markdown with raw HTML escaped: files are data, never markup we trust.
+const md = new Marked({ gfm: true, renderer: { html: ({ text }) => text.replace(/&/g, "&amp;").replace(/</g, "&lt;") } });
+// A list item that YAML read as a small map ("Check: this") still shows as text.
+const txt = (x: unknown): string => (typeof x === "string" ? x : x && typeof x === "object" ? Object.entries(x as Record<string, unknown>).map(([k, v]) => (v == null ? k : `${k}: ${txt(v)}`)).join(" ") : String(x ?? ""));
+const stripFront = (t: string) => t.replace(/^---\n[\s\S]*?\n---\n?/, "");
+
+const BUSINESSES: Record<string, string> = {
+  sprout: "A real run on Sprout, a US greens-gummy brand with its name changed. Built from its public website, ads and reviews.",
+};
+
+type Props = { c: Catalogue; slug: string; toast: (m: string) => void; toBuilder: (slugs: string[], asNew?: string) => void };
+
+/** A code window with a file name, line numbers and a copy button. */
+function Code({ name, text, toast, tall }: { name: string; text: string; toast: (m: string) => void; tall?: boolean }) {
+  const lines = text.replace(/\n+$/, "").split("\n");
+  return (
+    <figure className={`code${tall ? " tall" : ""}`}>
+      <figcaption>
+        <span className="code-name">{name}</span>
+        <span className="code-meta">{lines.length} lines</span>
+        <button className="code-copy" onClick={async () => { await navigator.clipboard.writeText(text).catch(() => {}); toast(`Copied ${name}`); }}>Copy</button>
+      </figcaption>
+      <pre>{lines.map((l, i) => <span className="ln" key={i}>{l || " "}{"\n"}</span>)}</pre>
+    </figure>
+  );
+}
+
+function Section({ id, title, lead, children, wide }: { id: string; title: string; lead?: string; children: ReactNode; wide?: boolean }) {
+  return (
+    <section className={`bp-sec${wide ? " wide" : ""}`} id={id} aria-labelledby={`${id}-h`}>
+      <h2 className="bp-h2" id={`${id}-h`}>{title}</h2>
+      {lead && <p className="bp-note">{lead}</p>}
+      {children}
+    </section>
+  );
+}
+
+/** Paste your own details once; copy the skill and your details together, ready for your AI. Drafts stay in this browser. */
+function Composer({ slug, skill, give, toast }: { slug: string; skill: string | null; give: string[]; toast: (m: string) => void }) {
+  const key = `abb:draft:${slug}`;
+  const [text, setText] = useState(() => { try { return localStorage.getItem(key) ?? ""; } catch { return ""; } });
+  useEffect(() => { try { if (text) localStorage.setItem(key, text); else localStorage.removeItem(key); } catch { /* private mode */ } }, [key, text]);
+  const copy = async () => {
+    if (!skill) return;
+    await navigator.clipboard.writeText(`${skill.trim()}\n\n---\n\n${text.trim()}\n`).catch(() => {});
+    toast("Copied the skill with your details. Paste it into your AI.");
+  };
+  return (
+    <div className="composer" data-testid="composer">
+      <label htmlFor="composer-text">Your details</label>
+      <textarea id="composer-text" value={text} onChange={(e) => setText(e.target.value)} rows={7} spellCheck
+        placeholder={`Paste what it needs:\n${give.map((g) => `- ${g}`).join("\n")}`} />
+      <div className="composer-bar">
+        <span className="small">{text.trim() ? `${text.trim().split(/\s+/).length} words, saved in this browser` : "Nothing leaves your browser until you paste it into your AI."}</span>
+        <button className="btn btn-primary btn-sm" disabled={!skill || !text.trim()} onClick={copy}>Copy the skill with my details</button>
+      </div>
+    </div>
+  );
+}
+
+export default function BlockPage({ c, slug, toast, toBuilder }: Props) {
+  const b = c.bySlug[slug];
+  const [page, setPage] = useState<Page | null | undefined>(undefined);
+  const [skill, setSkill] = useState<string | null>(null);
+  const [addon, setAddon] = useState<string | null>(null);
+  const [adding, setAdding] = useState(false);
+  useEffect(() => {
+    setPage(undefined); setSkill(null); setAddon(null);
+    loadPage(slug).then(setPage);
+    loadSkillText(slug).then(setSkill);
+    loadSkillText(slug, "ecommerce.md").then(setAddon);
+    markViewed(slug);
+  }, [slug]);
+  useEffect(() => { document.title = `${b?.name ?? "Not found"} · AI Building Blocks`; return () => { document.title = "AI Building Blocks · Making humanity AI native"; }; }, [b]);
+  const near = useMemo(() => (b ? neighbours(c, b) : null), [c, b]);
+
+  if (!b) {
+    return (
+      <main className="wrap bp-missing">
+        <h1 className="bp-h1">That page has moved</h1>
+        <p className="bp-sub">There's nothing called “{slug}” any more. It may have a new name.</p>
+        <Link to="/#library" className="btn btn-primary">Go to the library</Link>
+      </main>
+    );
+  }
+
+  const kind = kindInfo(b);
+  const task = taskOf(b);
+  const isFlow = kindOf(b) === "workflow" && b.steps.length > 0;
+  const p = page ?? null;
+  const give = p?.you_give?.length ? p.you_give : b.inputs.map((x) => x.type.replace(/_/g, " "));
+  const get = p?.you_get?.length ? p.you_get : b.outputs.map((x) => x.type.replace(/_/g, " "));
+  const handoff = async () => {
+    const nodes = b.steps.map((s, i) => ({ id: `s${i + 1}`, slug: s.uses, x: i * 300, y: 0 }));
+    const edges = wireSteps(c, b.steps.map((s) => s.uses)).map(([a, z], i) => ({ id: `e${i}`, from: nodes[a].id, to: nodes[z].id }));
+    const r = await buildHandoffZip(c, { id: b.slug, name: b.name, updated: 0, nodes, edges });
+    if ("error" in r) toast(r.error); else { download(r.blob, r.filename); toast("Downloaded. Give the folder to Claude and say “Follow HANDOFF.md”."); }
+  };
+  const copySkill = async () => { if (skill) { await navigator.clipboard.writeText(skill).catch(() => {}); toast("Skill copied. Paste it into your AI."); } };
+
+  const has = (x?: unknown[]) => !!x && x.length > 0;
+  const toc: [string, string, boolean][] = [
+    ["example", "See it work", !!p?.example],
+    ["what", "What it does", !!p?.explain],
+    ["io", "What you give it, what you get", true],
+    ["steps", "The steps", isFlow],
+    ["use", "How to use it", has(p?.how_to_use)],
+    ["most", "Get the most out of it", has(p?.tweaks)],
+    ["test", "Test it", has(p?.judge) || has(p?.test)],
+    ["improve", "Improve it for your business", has(p?.improve)],
+    ["file", isFlow ? "The workflow file" : "The skill file", true],
+    ["with", "Use it with", !isFlow && !!near && (near.before.length > 0 || near.after.length > 0)],
+  ];
+
+  return (
+    <main className="bp" data-testid="block-page" data-slug={b.slug}>
+      {adding && <AddToFlow c={c} slug={b.slug} onClose={() => setAdding(false)} toast={toast} />}
+      <header className="wrap bp-hero">
+        <Link to="/#library" className="back"><span aria-hidden="true">←</span> Library</Link>
+        <p className="bp-kicker"><span className="kind">{kind.name}</span><Link to={`/?job=${task.id}#library`}>{task.name}</Link></p>
+        <h1 className="bp-h1">{p?.headline || b.name}</h1>
+        <p className="bp-sub">{p?.subhead || b.summary}</p>
+        <div className="bp-actions">
+          {isFlow ? (
+            <>
+              <button className="btn btn-primary" onClick={handoff} data-testid="download-handoff">Download the workflow</button>
+              <button className="btn btn-dark" onClick={() => toBuilder(b.steps.map((s) => s.uses), b.name)}>Open in the builder</button>
+            </>
+          ) : (
+            <>
+              <button className="btn btn-primary" disabled={!skill} onClick={copySkill}>Copy the skill</button>
+              <button className="btn btn-dark" disabled={!skill} onClick={() => skill && download(new Blob([skill], { type: "text/markdown" }), `${b.slug}.SKILL.md`)}>Download</button>
+              <KitMenu slug={b.slug} onChange={toast} />
+              <button className="btn btn-dark" onClick={() => setAdding(true)} data-testid="add-to-workflow">Add to a workflow</button>
+            </>
+          )}
+        </div>
+        <p className="bp-file"><span>{b.name}</span><code>{b.slug}</code><span>{cap(b.level)}</span></p>
+      </header>
+
+      <div className="wrap bp-body">
+        <nav className="bp-toc" aria-label="On this page">
+          <p>On this page</p>
+          {toc.filter(([, , show]) => show).map(([id, label]) => <a key={id} href={`#${id}`}>{label}</a>)}
+        </nav>
+
+        <div className="bp-main">
+          {page === undefined && <p className="small">Loading…</p>}
+
+          {p?.example && (
+            <Section id="example" title="See it work" lead={BUSINESSES[p.example.business] ?? "A real run of this skill."} wide>
+              <Code name="what-you-get.txt" text={p.example.output} toast={toast} tall />
+              <details className="went-in">
+                <summary>See what went in</summary>
+                <p className="bp-note">This is what was pasted after the skill. Swap in your own details and you get the same kind of result for your business.</p>
+                <Code name="what-went-in.txt" text={p.example.input} toast={toast} />
+              </details>
+            </Section>
+          )}
+
+          {p?.explain && (
+            <Section id="what" title="What it does">
+              <div className="prose big" dangerouslySetInnerHTML={{ __html: md.parse(p.explain) as string }} />
+              {has(p.when) && (
+                <div className="when-box">
+                  <h3>Reach for it when</h3>
+                  <ul>{p.when.map((w, i) => <li key={i}>{txt(w)}</li>)}</ul>
+                </div>
+              )}
+              {!isFlow && has(p.how_it_works) && (
+                <>
+                  <h3 className="sub-h">Step by step, here's what your AI does</h3>
+                  <ol className="how-list">{p.how_it_works.map((s, i) => <li key={i}><span className="n">{String(i + 1).padStart(2, "0")}</span><div><b>{s.title}</b><p>{s.text}</p></div></li>)}</ol>
+                </>
+              )}
+            </Section>
+          )}
+
+          <Section id="io" title="What you give it, what you get">
+            <div className="give-get">
+              <div><h3>You give it</h3><ul>{give.map((x, i) => <li key={i}>{txt(x)}</li>)}</ul></div>
+              <div><h3>You get</h3><ul>{get.map((x, i) => <li key={i}>{txt(x)}</li>)}</ul></div>
+            </div>
+            {p?.output_shape && <><p className="bp-note">Every run hands back the same parts, filled in for your business:</p><Code name="the-shape.txt" text={p.output_shape} toast={toast} /></>}
+          </Section>
+
+          {isFlow && (
+            <Section id="steps" title="The steps" lead="Each step is a skill. It saves its result, and the next step picks it up.">
+              <ol className="flow-steps">
+                {b.steps.map((s, i) => {
+                  const sb = c.bySlug[s.uses];
+                  const how = p?.how_it_works?.[i];
+                  return (
+                    <li key={i}>
+                      <span className="n">{String(i + 1).padStart(2, "0")}</span>
+                      <div>
+                        <b>{how?.title ?? sb?.name ?? s.uses}</b>
+                        <p>{how?.text ?? s.note}</p>
+                        {sb && <Link to={pathOf(sb)} className="step-link">{sb.name} <ArrowIcon size={12} /></Link>}
+                      </div>
+                    </li>
+                  );
+                })}
+              </ol>
+            </Section>
+          )}
+
+          {has(p?.how_to_use) && (
+            <Section id="use" title="How to use it">
+              <ol className="num-list">{p!.how_to_use.map((s, i) => <li key={i}><span className="n">{i + 1}</span><span>{txt(s)}</span></li>)}</ol>
+              {!isFlow && <Composer slug={b.slug} skill={skill} give={give} toast={toast} />}
+            </Section>
+          )}
+
+          {has(p?.tweaks) && (
+            <Section id="most" title="Get the most out of it" lead="The parts of your input that change the result most.">
+              <dl className="tweaks">{p!.tweaks.map((t, i) => <div key={i}><dt>{t.what}</dt><dd>{t.how}</dd></div>)}</dl>
+            </Section>
+          )}
+
+          {(has(p?.judge) || has(p?.test)) && (
+            <Section id="test" title="Test it">
+              {has(p?.judge) && (
+                <>
+                  <h3 className="sub-h">Is the output good? Check these first</h3>
+                  <ul className="checks">{p!.judge.map((j, i) => <li key={i}>{txt(j)}</li>)}</ul>
+                </>
+              )}
+              {has(p?.test) && (
+                <>
+                  <h3 className="sub-h">Try it on your business before you rely on it</h3>
+                  <ol className="num-list">{p!.test!.map((s, i) => <li key={i}><span className="n">{i + 1}</span><span>{txt(s)}</span></li>)}</ol>
+                </>
+              )}
+            </Section>
+          )}
+
+          {has(p?.improve) && (
+            <Section id="improve" title="Improve it for your business" lead="The skill is a plain text file. Change it once and every run after that fits you better.">
+              <ul className="plain-list">{p!.improve.map((j, i) => <li key={i}>{txt(j)}</li>)}</ul>
+            </Section>
+          )}
+
+          {has(p?.terms) && (
+            <section className="bp-sec terms" aria-label="Words on this page">
+              <h3>Words on this page</h3>
+              <dl>{p!.terms.map((t, i) => <div key={i}><dt>{t.term}</dt><dd>{t.meaning}</dd></div>)}</dl>
+            </section>
+          )}
+
+          <Section id="file" title={isFlow ? "The workflow file" : "The skill file"} lead={`This is what you paste into your AI. It's saved as ${b.slug}/SKILL.md, so a workflow can call it by name.`}>
+            <details className="skill-file" open={!p}>
+              <summary>Read the full {isFlow ? "workflow" : "skill"}</summary>
+              {skill ? <div className="prose" dangerouslySetInnerHTML={{ __html: md.parse(stripFront(skill)) as string }} /> : <p className="small">Loading…</p>}
+            </details>
+            {addon && (
+              <details className="skill-file">
+                <summary>Extra steps for online stores</summary>
+                <div className="prose" dangerouslySetInnerHTML={{ __html: md.parse(stripFront(addon)) as string }} />
+              </details>
+            )}
+          </Section>
+
+          {!isFlow && near && (near.before.length > 0 || near.after.length > 0) && (
+            <Section id="with" title="Use it with" wide>
+              {near.before.length > 0 && <><h3 className="with-h">Run one of these first</h3><div className="grid">{near.before.slice(0, 3).map((x) => <BlockCard key={x.slug} b={x} />)}</div></>}
+              {near.after.length > 0 && <><h3 className="with-h">Then pass the result to</h3><div className="grid">{near.after.slice(0, 3).map((x) => <BlockCard key={x.slug} b={x} />)}</div></>}
+            </Section>
+          )}
+        </div>
+      </div>
+    </main>
+  );
+}

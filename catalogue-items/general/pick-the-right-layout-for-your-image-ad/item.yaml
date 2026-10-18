@@ -1,0 +1,20 @@
+slug: pick-the-right-layout-for-your-image-ad
+renamed_from: static-ad-archetype-and-layout-planner
+name: "Pick the right layout for your image ad"
+summary: "The one job your image ad can do with your proof, plus its reading order, zones and style."
+category: general
+type: skill
+role: make
+job: ads
+level: intermediate
+inputs:
+  - {type: brief, required: true}
+  - {type: product_photos, required: false}
+outputs:
+  - {type: plan}
+uses: [find-image-ad-types-worth-testing-next]
+example: ad-layout
+origin: rebuilt
+source_ids: [CES-087]
+old_name: operator-creative/static-plan
+version: 1.0.0

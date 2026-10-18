@@ -1,0 +1,171 @@
+new_slug: get-noticed-with-a-sticky-note-ad
+name: Get noticed with an ad that's a sticky note
+summary: A sticky note photo where the problem shows up, with a reminder that gives away the workaround.
+job: make-image-ads
+
+headline: A sticky note in the right spot that tells the whole workaround in one glance
+subhead: Give it your story ad. It writes 3 to 10 words of reminder in the narrator's voice, picks the surface that says where we are (a fridge, a mirror, a desk), and writes a prompt for a plain phone photo of the note.
+
+explain: |
+  A sticky note is a tiny scene. Where it's stuck and the few words on it tell you the whole workaround at once: "CANCEL the powder before the 14th" on a monitor says more about someone's year of subscriptions than a paragraph could. People who have stuck up the same kind of note recognise themselves before they've read the ad.
+
+  The skill writes a reminder or instruction the narrator gave themselves, three to ten words, taken from your story or plainly implied by it. It picks the surface that places the scene (fridge door with magnets, bathroom mirror with a toothbrush in view, a monitor at a home desk), sets the words in slightly rushed marker or pen, and keeps it to one note, or two or three when repeated failed reminders are the point. No claim, no product name, no neat designer lettering.
+
+when:
+  - Your story has a workaround or house rule the narrator wrote down for themselves.
+  - Your buyer's problem shows up in one place at home or at their desk.
+  - You want a picture with words that still looks like an ordinary photo.
+
+you_give:
+  - Your approved story ad, with any workaround or house rule it mentions
+  - Your buyer's words, for the wording (optional)
+  - Whether words on the image are on or off (optional, default on)
+you_get:
+  - The note's 3 to 10 words, exactly as they'll appear
+  - The surface it's stuck to and what's nearby
+  - A blank version, and the headline under the image
+  - A 60 to 120 word image prompt, ready to paste
+
+how_to_use:
+  - Copy the skill and paste it into Claude, ChatGPT or Gemini.
+  - Paste your story ad underneath. If the story quotes the note, those exact words are used.
+  - Paste the image prompt into your image tool and make one square picture.
+  - Read the note in the result letter by letter. One wrong letter makes it look fake.
+  - If the handwriting looks too neat, ask again for "slightly rushed marker".
+
+how_it_works:
+  - title: Sets the ground rules
+    text: Square, looks taken on a phone, no logo, price, button, brand colour or product.
+  - title: Writes the note
+    text: Three to 10 words in marker or pen, a reminder or instruction to self that the story mentions or plainly implies.
+  - title: Picks the surface
+    text: One note on the surface that says where we are, or two or three when repeated failed reminders are the point.
+  - title: Sets the handwriting
+    text: The words exactly, in slightly rushed handwriting, close enough to read on a phone.
+  - title: Describes the blank version
+    text: The same scene with the note blank, so you can try other words later.
+
+output_shape: |
+  SCENE
+  <one sentence: what someone scrolling would say they saw>
+
+  WHERE AND WHEN
+  <place, time of day, what is within reach>
+
+  THE SURFACE
+  <where it's stuck, what's nearby>
+
+  THE NOTE
+  <how many notes, colour, pen>
+
+  WORDS ON THE IMAGE
+  "<3 to 10 words, exactly as written>" (<word count>)
+  BLANK VERSION
+  <the same scene with the note blank>
+
+  HEADLINE UNDER THE IMAGE
+  Read this if there's a note like this in your house.
+
+  FLAGS
+  <lifted or written for the image; what must stay generic>
+
+  IMAGE PROMPT
+  <60 to 120 words, ready to paste>
+
+example:
+  business: sprout
+  input: |
+    [the skill]
+
+    Story ad (approved, built on reviews 3 and 17):
+    For a year there was a sticky note on my monitor: "CANCEL the
+    powder before the 14th." I never did. Every month another $94
+    went on my card.
+    I hate subscriptions. I feel like they are a trap.
+    So with Sprout I read the line under the button first: "Renews
+    at $49.99 each 4 weeks. Cancel anytime." The $29.99 first box
+    needs the text sign-up discount. 30-day money-back guarantee on
+    the first order.
+
+    Buyer: the price doubter, who knows the brand and thinks it costs
+    too much.
+  output: |
+    SCENE
+    A yellow sticky note on a computer monitor that says to cancel
+    the powder before the 14th.
+
+    WHERE AND WHEN
+    A home desk, evening, one desk lamp on. Within reach: the
+    monitor, a bank card, a mug, a phone.
+
+    THE SURFACE
+    Stuck to the bottom edge of the monitor, slightly curled at one
+    corner, the spot you see every time you sit down.
+
+    THE NOTE
+    One square yellow sticky note. Black marker, slightly rushed,
+    "CANCEL" in capitals as in the story.
+
+    WORDS ON THE IMAGE
+    "CANCEL the powder before the 14th." (6 words)
+
+    BLANK VERSION
+    The same monitor and note, with the note blank.
+
+    HEADLINE UNDER THE IMAGE
+    Read this if there's a note like this in your house.
+
+    FLAGS
+    Words lifted from the copy, not written for the image.
+    The monitor must be generic. No logo on the frame.
+    Copy check: cancelling is the loudest complaint on public review
+    sites. Keep to the site's own words ("Cancel anytime") and don't
+    promise more. The renewal price stays in the copy.
+
+    IMAGE PROMPT
+    Square 1:1 phone photo of a home desk in the evening, lit by one
+    desk lamp. A square yellow sticky note is stuck to the bottom
+    edge of a plain, generic computer monitor, one corner slightly
+    curled. On it, in slightly rushed black marker handwriting,
+    spelled exactly: "CANCEL the powder before the 14th." A bank
+    card, a mug and a phone sit on the desk below. The screen is
+    dark. Slight tilt, ordinary light, a little grain, unstyled. No
+    logo on the monitor, no brand name, no price, no person, no
+    children, no other notes, no neat designer lettering.
+
+tweaks:
+  - what: Where it's stuck
+    how: Move it to where your buyer sees the problem. A fridge door says home life, a mirror says a morning routine, a monitor says work or bills. The surface does half the storytelling.
+  - what: One note or several
+    how: Ask for "three notes, the same reminder rewritten" when the story is about reminders that keep failing. Keep it to three, never a wall.
+  - what: The pen
+    how: Thick marker reads best on a phone. Ask for biro only if the words are short.
+  - what: Words off
+    how: Switch words off and it describes the same scene with a blank note, which still works as a puzzle.
+
+judge:
+  - The note is the narrator's reminder to themselves, with no claim and no product name.
+  - It's three to 10 words, readable on a phone without zooming.
+  - The handwriting looks rushed and real, not neat designer lettering.
+  - There's no wall of notes.
+  - The surface tells you where the problem happens.
+
+test:
+  - Run it on a story that quotes a note. The note should match it word for word, capitals included.
+  - Run it on a story with no workaround or habit. It should send you to the everyday snapshot instead.
+  - Look at the finished picture on your phone at arm's length. If you can't read the note, ask for thicker marker or fewer words.
+  - Ask customers whether they've stuck up a note like it. A "yes, mine says..." tells you the picture is right.
+
+improve:
+  - Add the notes and house rules your customers say they've stuck up to the brand file section. Their real notes make the strongest pictures.
+  - Add your buyers' usual surfaces (the fridge, the monitor, the bathroom mirror) to step 3, so it picks one they'd know.
+  - Put the note in your story word for word. Then the picture quotes the story and nothing needs extra checking.
+  - For longer handwritten lines, use the skill that photographs a handwritten note instead.
+
+terms:
+  - term: Workaround
+    meaning: What someone does to cope with a problem they haven't fixed.
+  - term: Story ad
+    meaning: An ad whose main text tells one person's story in their own words, like a post from a friend.
+  - term: Blank version
+    meaning: The same picture with no words, so you can change the words later without starting again.

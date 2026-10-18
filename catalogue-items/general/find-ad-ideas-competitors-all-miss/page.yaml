@@ -1,0 +1,186 @@
+new_slug: find-ad-ideas-competitors-all-miss
+name: Find the ad ideas your competitors all miss
+summary: What competitor ads keep repeating, the gaps nobody covers, and notes on making your own version.
+job: study-competitors
+
+headline: See what competitor ads keep repeating, what they all miss, and how you'd stand out
+subhead: Give it competitor ads you collected by hand, plus your own facts and rules. It breaks down a spread of them second by second, groups them by type, finds the openings and claims they repeat, spots the gaps nobody covers, and writes notes on how you'd make your own version.
+
+explain: |
+  Scrolling competitor ads gives you a feeling, not a plan. You notice the loud ones, miss the quiet ones that have run for months, and end up copying an ad's surface without knowing why it was built that way.
+
+  This skill reads competitor ads the way a strategist would. It keeps only ads that have run long enough to mean something, groups them by type, and studies a fair spread of each. For every ad it records the opening words, the first three seconds, the order of the parts, the main claim word for word, the doubt it answers and when it asks for the sale. Then it lists what repeats across advertisers and what nobody is doing. Run time is treated as a hint, never as proof an ad made money. Your version borrows the structure only, never their words, footage or people.
+
+when:
+  - You're planning a new batch of ads and want to know what your category already runs before you brief anyone.
+  - A competitor seems to be everywhere and you want to know what their ads have in common.
+  - You suspect there's a gap in your market, such as a doubt nobody answers, and want evidence for it.
+
+you_give:
+  - What the brief is for, such as your whole business, one product or a sale, plus who it targets and the country
+  - Competitor ads collected by hand, with link, advertiser, text, format, days running and the video or image itself
+  - Your business facts, voice, the claims you may make, and your own best ads
+  - Your competitor list, 5 to 15 names (recommended)
+you_get:
+  - A short summary and the top three ideas to try, each with a note on your version
+  - A breakdown of every ad studied, plus the patterns and gaps across them
+  - Notes on how you'd make your own version, and a list of what it couldn't see
+
+how_to_use:
+  - Copy the skill and paste it into Claude, ChatGPT or Gemini.
+  - Say what the brief is for in one line, for example "new customers for our main product, US, video and image ads".
+  - Paste the competitor ads, ideally 20 or more, with a link and how long each has run. Attach the videos or screenshots if your tool accepts them.
+  - Paste your own facts, the claims you may and may not make, and your current best ads, so it doesn't suggest what you already run.
+  - Read the gaps and the top three ideas first, then the breakdowns behind them.
+
+how_it_works:
+  - title: Confirms the competitors
+    text: Checks the competitor list with you, because a wrong list ruins everything after it.
+  - title: Keeps ads that mean something
+    text: Drops ads under about a week old, the wrong language or country, and videos over two minutes, and notes each skip.
+  - title: Tags run time as a hint
+    text: Labels each ad from early (1 to 2 weeks) to very long-running (over 6 months), and never calls one profitable.
+  - title: Groups ads by type
+    text: Sorts videos and images into groups such as person to camera, close-up of the product, before and after or comparison.
+  - title: Studies a fair spread
+    text: Takes some from every group plus the three longest-running, rather than just the top few.
+  - title: Breaks each ad down
+    text: Records the opening words, first three seconds, parts in order, main claim word for word, the doubt it answers, the proof and when it asks for the sale.
+  - title: Finds patterns and gaps
+    text: Lists what five or more ads repeat, what the short-lived ads got wrong, and what nobody is doing.
+  - title: Plans your version
+    text: Writes notes on how you'd open, what to show, what to avoid and how the offer comes in, all inside your own claims rules.
+
+output_shape: |
+  SUMMARY
+  <3 sentences>
+  Top 3 ideas: <idea> . <how you'd make your version>
+
+  COMPETITORS AND ADS STUDIED
+  <competitor> | <ads kept> | <ads skipped, and why>
+
+  GROUP MAP
+  <group> | <count> | <longest-running ad> | <one-line pattern>
+
+  AD BREAKDOWN  (one per ad studied)
+  <advertiser, link, days running, live or ended>
+  Opening words: "<...>"   First 3 seconds: <...>
+  Parts in order: <...>   Main claim: "<word for word>"
+  Doubt answered: <...>   Proof: <...>   Ask: <when, how hard>
+  Why it might hold attention: <a guess, labelled as one>
+
+  PATTERNS  <what repeats across advertisers>
+  GAPS      <what nobody does, with the evidence>
+  YOUR VERSION  <by group, by idea, by ad>
+  LIMITS    <what wasn't seen>
+
+example:
+  business: sprout
+  input: |
+    [the skill]
+
+    Today's job: plan our first ads for new customers, US, video and image.
+    About 5 to 8 ideas.
+
+    My business: a smaller greens gummy brand. Our facts and claims list
+    aren't written yet.
+
+    Competitors: start with the category leader, Sprout.
+
+    Ads: 15 live Sprout headlines plus 2 main texts from the public Meta Ad
+    Library, 30 Sept and 4 Oct 2026, with copies live and the mix of the
+    40 newest ads (sprout/ads.md). No videos or images, no days running.
+  output: |
+    SUMMARY
+    Sprout's ads lean hard on one discount, "61% off", aimed at people who
+    think it costs too much. Its strongest review theme, "I finally stuck
+    with a supplement", is almost absent from its ads. Text-only study of
+    one advertiser, so treat every line as a lead to check.
+    Top 3 ideas: the habit story, the powder-quitter story, gut comfort
+    said plainly (notes below)
+
+    COMPETITORS AND ADS STUDIED
+    Sprout | 15 headlines, 2 main texts | no creative seen, no days running
+    MISSING: the other 4 to 14 competitors
+
+    GROUP MAP (by what the words push, since formats weren't captured)
+    Offer or price | 5 | #1, 15+ copies live | the buyer's doubt, then a %
+    Gut and fiber  | 2 | #6, 5 copies       | pain named in slang or a question
+    Benefit or who | 3 | #8, 6 copies       | one benefit or one kind of buyer
+    Membership     | 1 | #11, 7 copies      | perks for people who know it
+    Habit or story | 2 | #12, 1 copy        | first person, no offer
+    Kids           | 2 | #14, #15           | picky eaters, ingredient hooks
+
+    AD BREAKDOWN (text only: first 3 seconds, pacing and ask not seen)
+    #1  Opening words: "'Sprout is too expensive': here's 61% off to prove
+        otherwise"   Doubt answered: price   Proof: none in the headline
+        Main claim: "61% off"   Copies live: 15+, the most in the account
+    #6  Opening words: "Fix the Hot Girl Tummy"   Doubt: does it work
+        Main claim: "Fix" (the brand's own rule is "supports")
+    Main text 1  Claims "gut-supporting probiotics". The product page
+        lists prebiotic fiber and no probiotics. A real error.
+    #12 Opening words: "One Step I Never Skip"   Doubt: will I stick to it
+        Proof: none   Copies live: 1
+    (cut for length: breakdowns of the other 12 headlines)
+
+    PATTERNS
+    - "61% off" appears in 4 headlines. The site shows 52%, 55%, 49% or 58%.
+    - 19 of the 40 newest ads are offer-led.
+    - Kids ads use ingredient hooks ("Methylfolate, Not Folic Acid") that
+      adult ads don't.
+
+    GAPS
+    1 The habit story. Top review theme, used in 2 of the 40 newest ads.
+    2 The powder-quitter story. Strong in reviews ("I've been choking on
+      [a big-name greens powder]"), missing from the ads.
+    3 Gut comfort without "fix". The only gut ad with volume uses a word
+      the brand's own rule avoids.
+
+    YOUR VERSION (structure only, until you add your facts)
+    Habit idea: open on the moment you used to skip your supplement, then
+      show the one step you now keep. Needs your own customer quote.
+    Price doubt: borrow the shape (quote the doubt, then answer it), but
+      answer with a fact, not a percentage you can't keep.
+    MISSING: your claims list, voice and customer quotes. Every note above
+      needs them before it becomes an ad.
+
+    LIMITS
+    No images or videos seen. No days running. One advertiser only.
+
+tweaks:
+  - what: What the brief is for
+    how: Saying "one product" narrows the search to competitors selling that kind of product. Saying "a sale" focuses on offer shapes such as percent off or a free gift. The patterns and your-version notes change to match.
+  - what: Who the ads target
+    how: Say "new customers" and it favours ads that stop the scroll. Say "people who know us" and it favours ads that answer doubts and compare.
+  - what: How many ideas
+    how: Ask for 5 to 8 ideas for a focused test, or 10 to 15 for a bigger planning session.
+  - what: The creative itself
+    how: Attach videos or screenshots. With text only, it says the breakdown is text-only and can't judge the first three seconds or the pacing.
+
+judge:
+  - Every ad studied has a link, an advertiser and days running (or "not shown").
+  - Claims are quoted word for word, and opening words come from the ad itself, not the caption.
+  - The words "winner" and "profitable" never describe a competitor's ad.
+  - Each gap points to at least one ad or observation that shows it.
+  - Your-version notes use your facts and claims only, with none of their words, people or footage.
+
+test:
+  - "Include one ad you already know well. Check its breakdown against what you know: the opening words, when the ask comes, the kind of proof."
+  - Read every gap. Each should point to at least one ad or observation. A gap with no evidence is a guess, so drop it.
+  - Search the your-version notes for any competitor's words, people or logos. There should be none, and every claim should be on your allowed list.
+  - Run it again a month later with fresh ads. Ideas that show up both times, across several advertisers, are the ones to test first.
+
+improve:
+  - Edit the group lists in step 5 for your market. Delete types that never show up (mascots, automatic shopping ads) and add the ones that do, so ads land in groups that mean something to you.
+  - Change the run-time tags in step 3 if ads in your market live longer or shorter. Keep the rule that a tag is a hint, not a result.
+  - Write your claims rules and your own best ads into "The business" once, so it never suggests a repeat or a claim you can't make.
+  - Save the top three ideas and their gaps to your brand file, so your next round of ads starts from them.
+  - Pair it with a skill that sorts competitor ads into a study board first, and a writing skill that turns one idea into ad copy from your own facts.
+
+terms:
+  - term: Hook
+    meaning: The first line or first two seconds that make someone stop scrolling.
+  - term: Gap
+    meaning: Something buyers care about that no competitor ad covers well, such as a doubt nobody answers.
+  - term: Run time
+    meaning: How long an ad has been live. A hint about what an advertiser keeps, not proof of results.

@@ -1,0 +1,23 @@
+slug: turn-talking-object-script-into-shots-ai-can-make
+renamed_from: talking-object-video-ad-director
+name: "Turn your talking-object script into shots AI can make"
+summary: "A fixed character, an opening image and one to three clip prompts that keep your talking object the same."
+category: general
+boards: [ecommerce]
+type: skill
+role: render
+job: video
+level: advanced
+inputs:
+  - {type: script, required: true}
+  - {type: product_data, required: true}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: image_prompt}
+  - {type: video_prompt}
+uses: [get-talking-object-ad-script-that-sells]
+example: talking-object
+origin: rebuilt
+source_ids: [CES-141]
+old_name: talking-object-ad
+version: 1.0.0

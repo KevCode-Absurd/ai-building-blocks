@@ -1,0 +1,181 @@
+new_slug: get-comic-page-ad-script-that-sells
+name: Get a comic page ad script that sells
+summary: A comic ad with one claim, five-word captions and your product as the turn, as image or video.
+job: make-video-ads
+
+headline: Tell your buyer's problem and fix in a few comic panels people read on a phone
+subhead: Give it your selling idea and product facts. It picks the one claim to act out, plans the panels from problem to changed, writes captions of five words or fewer, and hands back a single comic page or a page-by-page video script.
+
+explain: |
+  Comic ads catch the eye, but most fall apart. Too many tiny panels, captions nobody can read on a phone, a drawn "customer" saying the product changed their life. That last one is also a claim you can't back.
+
+  This skill keeps a comic ad simple and honest. It acts out one claim only. The first panels are black ink with two muted tones; your product arrives with one accent colour, so the change is visible before anyone reads a word. Captions stay at five words or fewer. Your real product appears as its photo beside the drawing, never redrawn with scribbled letters. You get either a single comic page for an image ad, or a script for a video of a printed comic page on an artist's desk, turned by hand, page by page.
+
+when:
+  - Your product solves an everyday problem you can tell as a two- or three-panel story.
+  - You want an image ad that stands out in the feed but still makes one clear point.
+  - You plan to make a desk-filmed comic video and need the pages and lines first.
+
+you_give:
+  - The selling idea, or a script you already have
+  - Your product facts, how it's used, and how it works
+  - Your approved claims, banned claims and current offer
+  - Still or video, the length, and your typefaces (optional)
+you_get:
+  - For a still, the panel grid, captions in quotes, the offer strip and an image prompt
+  - For a video, a page-by-page table of narration, captions and what moves
+  - Which panel the accent colour first appears in
+  - Notes on the claim used and anything MISSING
+
+how_to_use:
+  - Copy the skill and paste it into Claude, ChatGPT or Gemini.
+  - Paste your product facts, approved claims and offer underneath.
+  - Say who the buyer is and the moment the problem bites, in a sentence.
+  - Say "still page" or "video, 30 seconds".
+  - Check the captions out loud. If one runs past five words, ask it to cut.
+  - For a video, take the script to "Turn your comic page script into ready-to-make video shots".
+
+how_it_works:
+  - title: Checks a comic fits
+    text: Comics suit a short problem story or a drawable explanation. It says so if your ad needs a real face or a detailed offer.
+  - title: Picks one claim
+    text: Chooses the single claim the comic acts out. Every panel builds toward it.
+  - title: Sets the drawing rules
+    text: Flat ink, one drawn adult, captions of five words or fewer, and the accent colour held back until the product arrives.
+  - title: Limits the drawings
+    text: A diagram shows only what the brand says about how it works. The changed panel shows no more than the brand states.
+  - title: Writes the still page
+    text: One to four panels, the first the largest, the real pack photo at the foot, 20 words in total.
+  - title: Or writes the video
+    text: Three pages for 30 seconds (problem, how it works, the turn), each ending on a hand turning the page.
+
+output_shape: |
+  CLAIM
+  <the one claim the comic acts out, and its source>
+
+  STILL PAGE
+  Grid: <1 to 4 panels, reading order>
+  Panel 1: <who, where, one large thing> Caption: "<5 words or fewer>"
+  Panel 2: ...
+  Accent: <colour> first appears in panel <n>
+  Offer strip: "<offer in real terms>"
+  Image prompt: <ready to paste>
+
+  OR VIDEO
+  Page | Panel | Narration | On-screen text | Visual note
+  1 Problem | 1 | "<8 words or fewer>" | <caption> | <what moves>
+  2 How it works | ...
+  3 Turn | ...
+  Close: <real product on the desk, offer text>
+
+  NOTES
+  <claims used, lines marked inferred, MISSING items>
+
+example:
+  business: sprout
+  input: |
+    [the skill]
+
+    Idea: quitting greens powder because the routine is a chore.
+    Buyer: 28 to 45, office job, has quit powders. Their words: "I've
+    been choking on [a big-name greens powder] for the last few years",
+    "not having to clean a shaker bottle".
+    Product: Sprout daily greens gummies. One daily pack, torn straight
+    across the top, gummies tipped into a palm. No water, no mixing,
+    no shaker. Pouch: glossy deep green, yellow wordmark.
+    Approved: "60+ ingredients, 21 vitamins & minerals, and 6g fiber"
+    in 1 pack. Vegan, pectin base.
+    Visible result: none, it's a daily supplement.
+    Offer: $29.99 first order with text sign-up, renews at $49.99 every
+    4 weeks. 30-day money-back, first order only.
+    Brand line: "Rip. Tip. Enjoy."
+    Video, 30 seconds. Buyer stage: problem aware.
+  output: |
+    FIT  A routine problem told as a short story, with a drawable look
+         inside the pack. Comic fits. Nothing visible, so the turn
+         page shows a changed morning, not a result.
+
+    CLAIM  "60+ ingredients, 21 vitamins & minerals, and 6g fiber" in
+           1 pack (label). Every panel builds to it.
+
+    ACCENT  Forest green #00582D, the pouch colour. It first appears
+            on page 2, panel 2. Pages before it: black ink, grey-blue
+            and pale khaki.
+
+    Page | Panel | Narration | On-screen text | Visual note
+    1 Problem | 1 | "Every morning, the same chalky glass." |
+        CHOKING ON POWDER AGAIN | A woman in a work blazer at a
+        kitchen counter, shaker in hand, face screwed up. Moves: a
+        lump of powder slides down the glass. Panel 2: same kitchen,
+        worse.
+    1 Problem | 2 | "Then the shaker sits in the sink." |
+        THE SHAKER WINS AGAIN | Same woman, same angle, keys in hand,
+        the unwashed shaker in the sink, the tub pushed to the back
+        of the shelf. Moves: a drip from the tap.
+    2 How it works | 3 | "So the whole lot went in one pack." |
+        60+ INGREDIENTS / 6G FIBER | Cutaway of one daily pack,
+        construction lines, two empty label tags. Moves: a
+        line traces the pack's top edge. Panel 2: the pack arrives.
+    2 How it works | 4 | "One small handful a day." | RIP. TIP.
+        ENJOY. | Same woman tears the pack straight across the top,
+        bears tip into her palm. Green arrives on the pack shape.
+        Moves: the last bear drops.
+    3 Turn | 5 | "Same kitchen. Nothing to rinse." | NO SHAKER
+        TO WASH | Panel 1 again, changed: she eats from her palm,
+        counter clear. Moves: she pockets the empty pack.
+    3 Turn | 6 | - | - | Panel 2 again, changed: empty sink,
+        keys in hand, out the door. Moves: the door swings.
+    Close | - | - | $29.99 first order with text sign-up. Renews at
+        $49.99 every 4 weeks | The camera drifts to the real pouch on
+        the desk, front on.
+
+    About 30 spoken words. None over page turns.
+
+    NOTES
+    - Caption 1 uses the buyer's own word "choking" (review 4).
+    - Diagram labels come from the one claim, 4 words in total.
+      "21 vitamins & minerals" isn't a label: cutting it to fit
+      would change the fact. "Vegan" is left out so no second
+      claim hides in a label.
+    - No drawn person reports a result. The turn shows the routine
+      changing, nothing about her body.
+    - The guarantee isn't in the comic: it needs its "first order
+      only" limit and there's no room. Put it in the feed text.
+    - MISSING: what a single daily pack looks like, for the cutaway.
+
+tweaks:
+  - what: Still or video
+    how: Ask for "still page" to get an image ad. Ask for "video" and it plans pages of two panels each, with a page turn between them.
+  - what: The number of panels
+    how: For a still, ask for one panel (just the problem at its worst) when the feed copy carries the point, or three when you need the product in the middle.
+  - what: The accent colour
+    how: Name it. Your pack colour usually works best. If your pack is black, white or grey, give your main brand colour instead.
+  - what: The video length
+    how: 30 seconds gets three pages. 15 to 20 seconds gets two, with the diagram moved into the turn page.
+
+judge:
+  - Cover the captions. Can you still tell what was wrong and what changed?
+  - Only one claim appears anywhere, including the diagram labels.
+  - The accent colour is missing from every panel before the product arrives.
+  - No drawn person says the product worked for them, and none is an expert or a child.
+  - Every caption is five words or fewer, and the still has 20 words or fewer in total.
+
+test:
+  - Cover the captions and read only the panel drawings. You should still be able to tell what was wrong and what changed.
+  - Give it two claims at once. It should pick one and tell you the second is a second ad.
+  - Run it twice on the same input. Both versions should hold the accent colour back until the product arrives and keep every caption at five words or fewer.
+  - Show the still page to someone on a phone for three seconds and ask what the product does. If they can't say, the first panel is doing too much.
+
+improve:
+  - Paste a few buyer phrases from your reviews into "What you need" in the skill file, so the captions use their words instead of ad lines.
+  - Write your accent colour and drawing rules into step 3, so every comic in a series looks the same.
+  - Add how your product works, with a source, to your brand file. Without it, step 4 drops the diagram.
+  - Pair it with the skill that turns a comic page script into desk, still and clip prompts for a video tool.
+
+terms:
+  - term: Accent colour
+    meaning: The one bright colour on the page, saved for the product, so the eye goes there.
+  - term: Halftone
+    meaning: The pattern of small dots old printed comics use for shading.
+  - term: Buyer stage
+    meaning: How much the buyer already knows about the problem and about you.

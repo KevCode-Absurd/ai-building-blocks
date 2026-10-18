@@ -1,0 +1,25 @@
+slug: turn-real-photos-into-a-product-page-gallery
+name: Turn real photos into a product page gallery
+summary: "Product page images that each answer one shopper question, planned from and checked against your real photos."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: image
+level: advanced
+inputs:
+  - {type: product_photos, required: true}
+  - {type: product_data, required: true}
+  - {type: brand_brain, required: true}
+  - {type: voc_reviews, required: false}
+outputs:
+  - {type: pdp_images}
+  - {type: gallery_plan}
+  - {type: audit_report}
+uses: [stop-ai-pictures-getting-your-product-wrong, know-what-each-product-page-photo-should-show, get-a-product-page-gallery-that-answers-doubts, catch-product-page-image-mistakes-before-shoppers-do]
+steps:
+  - {uses: stop-ai-pictures-getting-your-product-wrong, note: "Write down what the product really looks like, so every image stays true to it."}
+  - {uses: know-what-each-product-page-photo-should-show, note: "Plan the gallery frame by frame, each frame answering one question a shopper asks."}
+  - {uses: get-a-product-page-gallery-that-answers-doubts, note: "Make the images from the plan, after you approve every frame and every word."}
+  - {uses: catch-product-page-image-mistakes-before-shoppers-do, note: "Check every image against the plan and the real photos before upload."}
+origin: own
+version: 1.0.0

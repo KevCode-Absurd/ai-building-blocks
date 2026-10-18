@@ -1,0 +1,22 @@
+slug: reach-the-right-people-with-a-visible-symptom
+renamed_from: native-ad-image-symptom-in-routine
+name: "Reach the right people with a visible symptom"
+summary: "A plain, unflattering phone photo of a visible symptom in the routine where your buyer notices it."
+category: general
+boards: [ecommerce]
+type: skill
+role: render
+job: image
+level: advanced
+inputs:
+  - {type: ad_copy, required: true}
+  - {type: persona, required: false}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: image_prompt}
+uses: [get-story-ads-read-with-the-right-picture]
+example: native
+origin: rebuilt
+source_ids: [CES-072]
+old_name: symptom-closeup
+version: 1.0.0

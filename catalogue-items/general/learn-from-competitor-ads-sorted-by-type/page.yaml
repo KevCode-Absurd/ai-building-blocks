@@ -1,0 +1,156 @@
+new_slug: learn-from-competitor-ads-sorted-by-type
+name: Learn from competitor ads, sorted by type
+summary: Other brands' ads sorted into 11 groups, with the four or five most worth studying in each.
+job: study-competitors
+
+headline: Learn how good ads are built, from a board of other brands' ads sorted by type
+subhead: Give it the ads you've collected from a public ad library, with a link and what you saw for each. It sorts every ad into one of 11 groups, such as deals or customer quotes, picks the best four or five per group, and says what to study.
+
+explain: |
+  Most people save competitor ads into one long folder and never look at it again. With no order, you can't see which kinds of ad a category runs, which ones last, or what an ad of a certain type needs to work.
+
+  This skill turns that pile into a study board, sometimes called a swipe board. It looks at each ad itself, not just its text, and sorts it into one group by what the ad actually does: a deal, a before and after, a customer quote, someone talking to camera, a side-by-side comparison and so on. Then it picks four or five per group, mixing formats and advertisers, and writes one line on what to study. How long an ad has run is treated as a hint, never as proof it worked. The board is for learning structure. Nothing from it is copied into your own ads.
+
+when:
+  - You've saved dozens of competitor ads and want them organised before planning your own.
+  - You want to see examples of one kind of ad (a deal ad, a customer quote ad) before you make one.
+  - You're new to a category and want a quick picture of what other brands run.
+
+you_give:
+  - The ads, each with a link or ID, the advertiser, its text, format, what you saw and days running if shown
+  - What you sell, who to, and which competitors matter (recommended)
+  - Which groups to fill, if not all 11 (optional)
+you_get:
+  - A board table with group, advertiser, link, format, days running and what to study
+  - A one-line pattern note for each group
+  - A list of thin groups and ads it couldn't look at
+
+how_to_use:
+  - Copy the skill and paste it into Claude, ChatGPT or Gemini.
+  - Collect ads by hand from a public ad library, such as Meta's, and paste them in with a link, the advertiser, the text, the format and what the image or video shows.
+  - If you can, attach screenshots or key frames. Ads it can't see are left off the board rather than guessed.
+  - Add a line on what you sell and who your competitors are.
+  - Read the "what to study" column, then open those ads and look at their structure, not their wording.
+
+how_it_works:
+  - title: Removes your own ads
+    text: The board is for learning from other advertisers, so anything of yours comes out first.
+  - title: Looks at each ad
+    text: Judges the image or video and its text, not the search that found it. An ad it can't see is marked "not looked at".
+  - title: Asks two questions
+    text: Is this ad worth studying at all? And which group does it really belong to, even if it turned up in a different search?
+  - title: Sorts into groups
+    text: Uses signals such as "percent off" for a deal or "after 8 weeks" for a before and after. A group about why people buy beats a group about format.
+  - title: Picks four or five per group
+    text: Longest running first, then a mix of formats and advertisers, with at most two from one advertiser and no ad in two groups.
+  - title: Fills or flags thin groups
+    text: Searches neighbouring categories once if a group is thin, and records an honest gap rather than padding it.
+
+output_shape: |
+  BOARD
+  Group      | Advertiser | Link or ID | Format | Days running | Live? | What to study
+  <group>    | <name>     | <link>     | <...>  | <n or blank> | <...> | <hook, structure,
+                                                                          proof or offer shape>
+
+  GROUP NOTES
+  <group>: <the pattern seen across its examples>
+
+  GAPS
+  <group>: <fewer than four, and why>
+
+  NOT LOOKED AT
+  <ad>: <why it couldn't be seen>
+
+example:
+  business: sprout
+  input: |
+    [the skill]
+
+    My business: a smaller greens gummy brand. I'm studying the category
+    leader's ads before we plan ours.
+
+    The ads: 15 live headlines from Sprout in the public Meta Ad Library,
+    pulled 30 Sept and 4 Oct 2026, with what each one pushes and how many
+    copies were live (sprout/ads.md). Formats and days running weren't
+    shown. I copied the headlines only; no screenshots.
+  output: |
+    BOARD
+    (empty)  None of the 15 ads can go on the board yet. I can't see any
+    of the images or videos, and the board only holds ads that were
+    looked at. A headline alone can put an ad in the wrong group.
+
+    NOT LOOKED AT (15), with the group each headline hints at
+    Text hints only. They move to the board once you add a screenshot.
+    Hint: deal
+      #1 "'Sprout is too expensive': here's 61% off to prove otherwise"
+      #2 "Don't Pay Full Price. You Literally Don't Have To. (61% off inside)"
+      #3 "Get up to 61% OFF + 4 FREE gifts: online exclusive"
+      #5 "We're Lowering Our Prices"
+    Hint: customer voice, or deal
+      #4 "Trusted by 1M+: Take 61% OFF"
+    Hint: pain to fix
+      #6 "Fix the Hot Girl Tummy"
+      #7 "Struggling to Get Enough Fiber?"
+      #14 "Fiber Kids Won't Fight"
+    Hint: single product
+      #8 "Nutrition for Healthy Hair"
+      #15 "Methylfolate, Not Folic Acid"
+    Hint: unclear without the creative
+      #9 "Support Muscle While You Lose Weight"
+      #10 "The Daily Nutrition Every Runner Forgets"
+      #11 "Perks That Really Pile Up"
+      #12 "One Step I Never Skip"
+      #13 "He Asked What Day It Was. I Handed Him a Gummy."
+
+    GAPS (expected, even after screenshots)
+    All 15 ads come from one advertiser, so each group can hold at most 2
+    of them. Every group will stay under four until you add other brands.
+    No hints at all for: before and after, set, loop, gift, designed
+    still, side by side.
+
+    GROUP NOTES
+    Not written. Patterns need ads that were looked at.
+
+    MISSING
+    - A screenshot or key frames for each ad
+    - Days running for each ad (the library shows a start date; copy it)
+    - Ads from at least three other advertisers in the category
+
+tweaks:
+  - what: Which groups
+    how: Ask for only the groups you need ("deal and customer voice only") to get a deeper pick in each instead of a thin board across all 11.
+  - what: What you saw
+    how: Describe or attach the creative for every ad. The more of each ad it can actually see, the fewer get left off as "not looked at".
+  - what: Your business line
+    how: Name your category and competitors. It then knows which ads come from neighbouring categories and says so on the board.
+  - what: Rerunning it
+    how: Paste the existing board's IDs and say "add only new ads", so the board grows without repeats.
+
+judge:
+  - None of your own ads are on the board.
+  - Every row has a link or ID you can open.
+  - No ad appears twice, and no group has more than two ads from one advertiser.
+  - Nothing is called a "winner". Days running is shown as a number, not a verdict.
+  - Every ad in the gift group names who the gift is for.
+  - The "what to study" line points at structure (how it opens, how it proves, how it offers), not wording to copy.
+
+test:
+  - Slip two of your own ads into the pile. Neither should appear on the board.
+  - Add an ad you've only seen as text, with no image or video. It should land on the "not looked at" list, not on the board.
+  - Add three near-identical ads from one advertiser. No group should hold more than two of them.
+  - Run it twice on the same pile. The groups should match. If an ad moves, read the tie-break rules in step 4 and add one of your own.
+
+improve:
+  - Edit the group table in step 4. Drop groups your market never uses (gift, loop) and add your own with its signals, so the board fits the ads you see.
+  - Change "four or five per group" in step 5 to two or three if you want a quick look rather than a full board.
+  - Write your main competitors and category into "Your business" in the skill, so you don't paste them every time.
+  - Save the group notes to the competitors page of your brand file each time you rebuild the board, with the date.
+  - Pair it with a skill that breaks down competitor ads to find the gaps nobody covers, then a writing skill that builds your own ad from your product facts.
+
+terms:
+  - term: Swipe board
+    meaning: A collection of other brands' ads saved for study, sorted so you can find examples fast.
+  - term: Ad library
+    meaning: A public site where a platform such as Meta shows every ad currently or recently running.
+  - term: Days running
+    meaning: How long an ad has been live. A long run hints the advertiser is happy with it, but it isn't proof of results.

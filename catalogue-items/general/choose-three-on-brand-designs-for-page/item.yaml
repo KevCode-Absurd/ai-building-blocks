@@ -1,0 +1,21 @@
+slug: choose-three-on-brand-designs-for-page
+renamed_from: landing-page-design-direction
+name: "Choose from three on-brand designs for your page"
+summary: "Three distinct design plans for one page in your colours and fonts, plus a review once it's built."
+category: general
+boards: [ecommerce]
+type: skill
+role: make
+job: page
+level: advanced
+inputs:
+  - {type: brand_brain, required: true}
+  - {type: landing_page, required: true}
+  - {type: voc_reviews, required: false}
+outputs:
+  - {type: design_direction}
+uses: [finish-the-sale-your-ad-started]
+origin: own
+source_ids: [CES-031]
+old_name: ecommerce-page-design
+version: 1.0.0

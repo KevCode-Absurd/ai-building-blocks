@@ -1,0 +1,171 @@
+new_slug: get-motion-graphics-ad-script-that-sells
+name: Get a motion graphics ad script that sells
+summary: A flat graphic ad script built around your product cutout, one message and one picture per shot.
+job: make-video-ads
+
+headline: Make your figures, contents and offer easy to read in a clean graphic ad
+subhead: Give it your selling idea and brand facts. It fixes a small design system from your own colours and type, then writes one message and one picture per shot, with your exact words kept apart so nothing comes out misspelled.
+
+explain: |
+  Graphic ads are good at things filmed ads struggle with: what's inside, how many, what it costs, three steps to use it. They go wrong in two ways. Some cram five icons, three charts and a paragraph into one frame. Others show charts with bars that don't match any real number, which is a claim you can't back.
+
+  This skill fixes a design system first (grid, three type sizes, your colours, one accent, one icon style, one way of moving), so every shot matches. Then each shot gets one message and one picture, and its movement has to show something: what matters most, what leads to what, this against that, or how it works. Charts are drawn only from figures you hold, in their real proportions. The video tool makes wordless background images; your exact words and numbers go on top in editing, so nothing comes out misspelled.
+
+when:
+  - Your buyers already know you and want the facts, the contents or the offer.
+  - You have real figures (a study, a count, a spec) and want them shown clearly.
+  - You need a matching video and image ad in your exact brand colours and type.
+
+you_give:
+  - The selling idea, or a script you already have
+  - Your colours and typefaces
+  - Your product facts, contents, how it's used and what it replaces
+  - Figures you can chart, each with its source
+  - Your claims, offer and guarantee
+you_get:
+  - A design system card (grid, type, palette, shapes, icons, cutout, transitions)
+  - A shot table of narration, wordless image notes and exact on-screen text
+  - Or a still with the layout, exact words and an image prompt
+  - Notes on every figure and its source, and anything inferred
+
+how_to_use:
+  - Copy the skill and paste it into Claude, ChatGPT or Gemini.
+  - Paste your colours, typefaces and product facts underneath.
+  - Add any figures you want charted, each with where it comes from.
+  - Say "video, 20 seconds" or "still", and who the ad is for.
+  - Check every on-screen line is six words or fewer with at most one number.
+  - For a video, take the script to "Turn your motion graphics script into ready-to-make video shots".
+
+how_it_works:
+  - title: Checks it fits
+    text: Graphics suit figures, contents and offers. It says so if your buyer first needs to feel the problem.
+  - title: Fixes the design system
+    text: Grid, three type sizes, your palette with one accent, one shape style, one icon style, one transition family.
+  - title: One message per shot
+    text: One picture and one focal point, with movement that shows what matters, what leads to what, a comparison or how it works.
+  - title: Keeps proof honest
+    text: Charts only from your figures, in their real proportions. No named rivals, no body before and after.
+  - title: Writes two layers
+    text: Wordless image notes for the video tool, and the exact words and numbers for editing, kept apart.
+  - title: Or writes the still
+    text: One message, one supporting picture, a headline of eight words or fewer, 30 words in total.
+
+output_shape: |
+  DESIGN SYSTEM
+  Grid: <columns, margins, copy zone, cutout zone>
+  Type: <headline, label, small print, in your typefaces>
+  Palette: <ground, brand colours, one accent>
+  Shapes: <square or rounded>  Icons: <line weight, radius>
+  Cutout: <how the product sits>  Transition: <one family>
+
+  Line | Narration | Image (picture, meaning, transition) | On-screen text | Clip
+  1 | "<line>" | <cutout or diagram or chart or icons>, <what it shows>, <transition> | <6 words or fewer> | 1
+  ...
+  <close: cutout centred, offer>
+
+  NOTES
+  Figures: <figure> = <source>
+  Inferred: <...>  MISSING: <...>
+
+example:
+  business: sprout
+  input: |
+    [the skill]
+
+    Idea: what's in one pack, and proof it's absorbed.
+    Buyer stage: product aware (knows Sprout, maybe from a store shelf).
+    Colours: cream #FFF7DF, forest green #00582D, deep forest #002C17,
+    kelly green #007E40, sunflower yellow #FFCC2E.
+    Type: Work Sans bold (headings), Work Sans medium (body), DM Mono
+    (small uppercase tags).
+    Product: Sprout pouch (glossy deep green, yellow wordmark).
+    Approved: "60+ ingredients, 21 vitamins & minerals, and 6g fiber"
+    in 1 pack. "Clinically tested for nutrient absorption": 2025 study,
+    12 weeks, 120 adults, vitamin C +40.1% (2.7x placebo), folate
+    +20.5% (2.9x placebo).
+    Offer: $29.99 first order with text sign-up. "Renews at $49.99
+    each 4 weeks. Cancel anytime."
+    Video, 20 seconds.
+  output: |
+    FIT  Product-aware buyer, figures and contents. Graphics fit.
+
+    DESIGN SYSTEM
+    Grid: 4 columns, 96 px margins at 1080 wide; copy in the top
+      third, cutout in the lower two-thirds, centred
+    Type: headline Work Sans bold 96 px, label Work Sans medium 48 px,
+      small print DM Mono 28 px uppercase
+    Palette: cream ground #FFF7DF; forest #00582D, deep forest #002C17,
+      kelly #007E40; accent sunflower #FFCC2E
+    Shapes: all rounded corners (matches the bear and pouch)
+    Icons: outlined, 6 px line, 12 px corner radius, deep forest
+    Cutout: front on, true colour, one soft shadow beneath
+    Transition: slide along the grid, every time
+
+    Line | Narration | Image | On-screen text | Clip
+    1 | "What's in one Sprout pack?" | Pouch cutout slides up into
+        place; meaning: what matters most | What's in one pack? | 1
+    2 | "Sixty-plus ingredients." | A leaf icon slides in left of
+        the cutout; meaning: what's in it | 60+ ingredients | 1
+    3 | "Twenty-one vitamins and minerals." | A second icon (a drop)
+        slides in beside the first | 21 vitamins & minerals | 1
+    4 | "And 6 grams of prebiotic fiber." | A third icon (a wheat
+        stalk) completes the row of three | 6g prebiotic fiber | 2
+    5 | "In a 12-week study, vitamin C in the blood rose 2.7 times
+        more than placebo." | Two bars on one baseline slide in;
+        the left bar 2.7 times the height of the right, left bar in
+        sunflower; meaning: this against that | Vitamin C: 2.7x
+        placebo | 2
+    6 | "First order, $29.99 with text sign-up." | Cutout centred
+        and still | $29.99 first order with text sign-up | 3
+    7 | "Then $49.99 every 4 weeks. Cancel anytime." | Same, held |
+        Then $49.99 every 4 weeks. Cancel anytime | 3
+
+    Clips: 1 = lines 1-3 (8 s), 2 = lines 4-5 (8 s), 3 = lines 6-7
+    (6 s). About 50 spoken words.
+
+    NOTES
+    Figures: 60+, 21, 6g = label claim. 2.7x = 2025 study (12 weeks,
+      120 adults); source line "2025 randomized placebo-controlled
+      study" as small print on shot 5.
+    The renewal price gets its own shot. Leaving it out would make
+      $29.99 look like the ongoing price.
+    No placebo percentage shown: the study gives "2.7x", not the
+      placebo figure, so the bars carry the ratio only.
+    Inferred: nothing. Icon choices are illustrations, not claims.
+
+tweaks:
+  - what: Video or still
+    how: Ask for a still to get one designed image with a single diagram, chart or icon row and up to 30 words.
+  - what: The supporting picture
+    how: Ask for a diagram (how it works), a chart (one real figure), or icons (contents or steps). One per shot, never two.
+  - what: Buyer stage
+    how: For buyers who know you, it leads with contents and figures. For buyers comparing options, it leads with how it works or the old way.
+  - what: Your figures
+    how: Paste them with sources. Without them it won't draw a chart; it uses a plain shape with no scale instead.
+
+judge:
+  - The design system card names your real colours and typefaces, with one accent only.
+  - Every shot has one picture and one on-screen line of six words or fewer.
+  - No image note asks for words, numbers or a logo.
+  - Each chart states its proportions and the source of its figure.
+  - The full price terms appear, not only the first-order price.
+
+test:
+  - Check the design system card against your brand file. Your real colours and typefaces, and one accent only.
+  - Ask for a chart without giving the figure. It should drop the chart or mark it MISSING.
+  - Run it twice on the same idea. Both versions should show the full price terms, not only the first-order price.
+  - Read only the on-screen lines. Each should be six words or fewer, and together they should make sense with the sound off.
+
+improve:
+  - Write your design system into step 2 of the skill file (grid, three type sizes, colour codes, one accent), so you don't rebuild it for every ad.
+  - Add your figures with sources to your brand file, so step 4 can draw charts.
+  - Write your full offer terms into "What you need", including what the price renews at.
+  - Pair it with the skill that turns a motion graphics script into wordless plate and clip prompts.
+
+terms:
+  - term: Motion graphics
+    meaning: Flat shapes, icons and text that move, with no filmed footage.
+  - term: Cutout
+    meaning: A photo of your product with the background removed.
+  - term: Design system
+    meaning: A short fixed set of rules (grid, type sizes, colours, icon style) that every shot follows.

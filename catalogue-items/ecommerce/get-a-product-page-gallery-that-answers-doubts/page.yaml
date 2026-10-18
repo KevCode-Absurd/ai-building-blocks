@@ -1,0 +1,183 @@
+new_slug: get-a-product-page-gallery-that-answers-doubts
+name: Get a product page gallery that answers doubts
+summary: From your current gallery to a checked, numbered set of images ready to upload, with alt text.
+job: product-photos
+
+headline: A product page gallery rebuilt around what shoppers doubt, checked and ready to upload
+subhead: Give it your product, facts, photos and current gallery. It reads the gallery the way a shopper does, finds the doubt that stops people buying, plans each image around one question, makes and checks them, and hands over named files with alt text. You approve at two set points.
+
+explain: |
+  A weak gallery is rarely fixed by better photos alone. The problem is usually that the images don't answer what shoppers want to know, and nobody has looked at which questions go unanswered. Starting again with an image tool and no plan just gives you new pictures with the same gaps.
+
+  This workflow runs the job in order and stops for your approval at the points that matter. It first audits the images you have now, one row each, and lists the shopper questions nobody answers. Then it reads your reviews, return reasons and support questions to find the biggest doubt, which goes in the first three images. It plans every image and every word, waits for your approval, locks one real photo per job, builds each shape, checks every image, and hands over a review pack and files named in upload order.
+
+when:
+  - Your product page isn't selling well and you suspect the images aren't doing their job.
+  - You're rebuilding a product page and want the gallery done properly from start to finish.
+  - You need images, words and alt text that a team can review in one place before upload.
+
+you_give:
+  - The exact product and variant
+  - Your brand facts (claims with sources, reviews, guarantee terms, offers, colours, typefaces, what you never show)
+  - Real product photos, labelled by job
+  - Your current gallery images in order, or the page link (optional)
+  - Customer doubts from reviews, return reasons or support questions (optional)
+you_get:
+  - An audit of your current gallery and a list of unanswered shopper questions
+  - The customer doubts, grouped, with real quotes and which image answers each
+  - The image-by-image plan and a gaps list
+  - Finished images in upload order, in each shape, with alt text and check results
+
+how_to_use:
+  - Copy the workflow and paste it into Claude, ChatGPT or Gemini. Each step can run in the same chat.
+  - Paste your facts and reviews, attach your product photos, and attach your current gallery images in the order they appear.
+  - At the first stop, read the biggest doubt and the gaps list. Fill gaps or accept them.
+  - At the second stop, approve every image and every word. Nothing gets made before this.
+  - Review the pack it gives you, clear every note, then upload the files in their numbered order.
+
+how_it_works:
+  - title: Gathers the facts
+    text: Collects product, photos by job, claims, reviews and guarantee, and writes down exactly how the product looks. Every blank becomes a question for you.
+  - title: Audits your gallery
+    text: Reads your current images in order, one row each with the question it answers and a verdict (keep, change, replace), then lists the questions nobody answers.
+  - title: Finds the biggest doubt
+    text: Groups doubts from bad reviews, return reasons and support questions, keeps three real quotes for each, and routes each to the kind of image that answers it. You approve.
+  - title: Plans the images
+    text: Plans every image around one shopper question, with every word and its source. Your own direction on an image outranks its reading; a direction that breaks a rule is refused with one line and a safe version offered. You approve every word.
+  - title: Locks the photos
+    text: One real photo per job. No usable photo of the exact variant means it stops and asks.
+  - title: Builds each shape
+    text: Square and tall versions composed separately, words short and readable on a phone, logos placed from your files, never typed.
+  - title: Checks every image
+    text: Checks every image, and the set as a whole, against the plan, your real product and your facts. Failures are remade, not waved through.
+  - title: Hands over
+    text: One review page with before and after, open questions, and a section per image; then files named in upload order with one line of alt text each.
+
+output_shape: |
+  1. GALLERY AUDIT
+  # | shows | question it answers | verdict (keep/change/replace)
+  Unanswered questions: <list, which becomes the work order>
+
+  2. CUSTOMER DOUBTS
+  <doubt in their words> | how often | kind | 3 quotes with source
+    -> answered by: <kind of image>
+  STOP 1: <biggest doubt and gaps, for your OK>
+
+  3. PLAN (one card per image) and GAPS
+  STOP 2: <every image and word, for your approval>
+
+  4. FILES
+  <nn>-<question>_<shape>  alt text: <what it shows and the answer>
+
+  5. CHECK RESULTS AND REVIEW PACK
+  <pass/fail per image; open notes; nothing handed over while notes
+  are open>
+
+example:
+  business: sprout
+  input: |
+    [the skill]
+
+    Product: Sprout Original (Adults), Low Sugar, 28 daily packs.
+    Brand facts: [sprout/brand.md]
+    Photos: pouch front on; gummies in an open hand.
+
+    Current gallery: we don't have the files to hand. The page shows
+    pack shots on a soft gradient and gummies in a hand, plus a "View
+    Nutrition Label" link.
+
+    Customer doubts (from reviews):
+    - "I hate subscriptions because I feel like they are a trap so I
+      canceled it before the gummies even arrived."
+    - "I have tried multiple times to cancel my subscription."
+    - "They are expensive"
+    - "I thought the first pack I tried tasted terrible, but after the
+      third day they started tasting better"
+    - "the taste is off." (tie-in flavour, Sugar-Free)
+    - "The sugar free [Sprout] worked too well."
+    From the brand file: "A gummy can't hold enough to replace my
+    powder." "Will the price jump after the first order?"
+  output: |
+    1. FACTS AND PHOTOS
+    Truth sheet run (see "Describe your product exactly from its
+    photos"). Usable: pouch front on; gummies in a hand. Missing: daily
+    pack (whole and torn), pouch in a hand, back of pouch.
+
+    GALLERY AUDIT: can't run yet
+    What you described can't be matched to the real gallery in order,
+    so it's set aside. Please send the gallery images in upload order.
+    From your description, the gallery answers "what is it" and "what do
+    the gummies look like" only.
+
+    2. CUSTOMER DOUBTS (grouped, largest first)
+    A. "Is the subscription a trap?" | 3 | trust
+       "I hate subscriptions because I feel like they are a trap so I
+       canceled it before the gummies even arrived." (review)
+       "I have tried multiple times to cancel my subscription." (review
+       site)
+       "Will the price jump after the first order?" (brand file)
+       -> answered by: the guarantee and terms image, with the renewal
+       price ($49.99 every 4 weeks) stated plainly
+    B. "Is it too expensive?" | 1 | value
+       "They are expensive" (retailer)
+       -> answered by: price per day ($1.78 on the $49.99 renewal)
+    C. "Does it taste good?" | 2 | quality
+       "I thought the first pack I tried tasted terrible, but after the
+       third day they started tasting better" (retailer)
+       "the taste is off." (brand site widget)
+       -> answered by: many voices, using taste reviews
+    D. "Will it upset my stomach?" | 1 | how to use
+       "The sugar free [Sprout] worked too well." (review site)
+       -> answered by: Low Sugar vs Sugar-Free, pointing gut-sensitive
+       buyers to Low Sugar
+    E. "Can a gummy hold enough?" | from the brand file | made of
+       -> answered by: ingredients with amounts, per pack
+
+    Group A is the largest, so images 1 to 3 answer it.
+
+    STOP 1: please check
+    - The biggest doubt: "Is the subscription a trap?"
+    - Gaps: your gallery images in order; a daily pack photo (whole and
+      torn); the pouch in a hand; which star rating to use and its
+      source (4.8 from 100,000 or 4.75 from 109,639); the text of the
+      Low Sugar vs Sugar-Free panel.
+    Next, once you've answered: step 4, the image-by-image plan, then
+    STOP 2 for your approval of every image and word.
+
+tweaks:
+  - what: Photos only
+    how: If you only want photos with no words, say so. It will tell you what that gives up (every question after "what is it") before going ahead.
+  - what: Your direction on one image
+    how: Write what you want for a specific image, such as "image 4 shows the steps on our real kitchen counter". It becomes that image's brief and outranks the workflow's own reading.
+  - what: Marketplace set
+    how: Say "marketplace" and the set opens with a plain white packshot with no words, as most marketplaces require.
+  - what: Where words are set
+    how: Short lines can be set by the image tool. Ask for dense panels and long comparisons to be left blank for your designer, or get both versions.
+
+judge:
+  - The audit of your current gallery exists before any plan, and the plan answers the top unanswered questions first.
+  - The biggest doubt shows up in images 1 to 3, in a customer's own words.
+  - Every word on every image is in the plan with a source.
+  - Files are numbered in upload order and every shape was composed, not cropped from another.
+  - Nothing was handed over while a note was still open.
+
+test:
+  - Run the audit of your current gallery on a page you know well. The unanswered questions should match what customers ask you. If it misses one you hear every week, add your support questions.
+  - Check the biggest doubt it found against your 1 to 3 star reviews. It should appear in the customers' words, not in yours.
+  - At the second stop, read every word in the plan against your facts before you approve. Anything without a source should be a gap, not a line.
+  - When the files come back, upload them to a draft page and look at the strip of thumbnails on your phone. Each image should answer a different question.
+
+improve:
+  - Add your return reasons and top support questions to step 3 of the skill file as a standing source, so every run finds the doubt from the same evidence.
+  - Change the approval stops to match who signs off. If a legal check must see every claim, add a stop after the plan in step 4.
+  - Fix the shapes in step 6 to the ones your store's theme uses (square only, or square and 4:5), so nothing extra gets made.
+  - 'Write your alt text rule into step 9, such as always naming the variant (for Sprout: "Original, Low Sugar, 28 daily packs").'
+  - Pair it with the skill that borrows a photo's look for your product when you need wordless photos for ads, and run this one again whenever the packaging changes.
+
+terms:
+  - term: Alt text
+    meaning: A short written description of an image, read out by screen readers and used by search engines.
+  - term: Return reasons
+    meaning: What customers say when they send a product back.
+  - term: Packshot
+    meaning: A plain photo of the product in its pack, usually on a white background.

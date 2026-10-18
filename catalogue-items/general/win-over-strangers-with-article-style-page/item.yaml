@@ -1,0 +1,23 @@
+slug: win-over-strangers-with-article-style-page
+renamed_from: advertorial-landing-page-copy
+name: "Win over strangers with an article-style page"
+summary: "A long, ad-labelled page that walks strangers from a problem they know to your product."
+category: general
+boards: [ecommerce]
+type: skill
+role: make
+job: page
+level: advanced
+inputs:
+  - {type: brand_brain, required: true}
+  - {type: offer, required: true}
+  - {type: ad_copy, required: false}
+  - {type: voc_reviews, required: false}
+  - {type: persona, required: false}
+outputs:
+  - {type: landing_page}
+uses: [finish-the-sale-your-ad-started, answer-doubts-that-stop-customers-buying]
+origin: rebuilt
+source_ids: [CES-005, CES-050]
+old_name: advertorial-v1
+version: 1.0.0

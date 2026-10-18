@@ -1,0 +1,23 @@
+slug: turn-paper-world-script-into-ready-video-shots
+renamed_from: paper-world-video-ad-director
+name: "Turn your paper world script into ready-to-make video shots"
+summary: "Look wording, a character line, and still and clip prompts that keep every frame real paper."
+category: general
+boards: [ecommerce]
+type: skill
+role: render
+job: video
+level: advanced
+inputs:
+  - {type: script, required: true}
+  - {type: product_data, required: true}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: image_prompt}
+  - {type: video_prompt}
+uses: [get-paper-world-ad-script-that-sells]
+example: paper
+origin: rebuilt
+source_ids: [CES-094]
+old_name: paper-animation
+version: 1.0.0

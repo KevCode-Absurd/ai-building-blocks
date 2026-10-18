@@ -1,0 +1,19 @@
+slug: write-ads-that-sound-like-a-friend
+renamed_from: ad-writing-principles-plain-spoken
+name: "Write ads that sound like a friend talking"
+summary: "Any ad written or reviewed so it sounds like a person and claims only what you can prove."
+category: general
+type: skill
+role: make
+job: copy
+level: intermediate
+inputs:
+  - {type: brief, required: true}
+  - {type: brand_brain, required: true}
+outputs:
+  - {type: script}
+uses: [know-how-your-ad-should-open]
+origin: own
+source_ids: [CES-002]
+old_name: ad-principles
+version: 1.0.0

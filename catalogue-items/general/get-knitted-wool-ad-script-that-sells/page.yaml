@@ -1,0 +1,179 @@
+new_slug: get-knitted-wool-ad-script-that-sells
+name: Get a knitted wool ad script that sells
+summary: A gentle narrated ad set in a tiny knitted world, where no picture promises more than your claims.
+job: make-video-ads
+
+headline: Make an awkward subject warm to watch, in a tiny world knitted from yarn
+subhead: Give it your brief, product facts and buyer. It writes a narrated script or one image plan set in a miniature world of yarn, names every object as knitted so nothing comes out real, and keeps each picture inside your approved claims.
+
+explain: |
+  Some subjects are awkward on camera. Sleep, digestion, pests, grime. Others just look like every other ad. A world knitted from yarn fixes both: it's warm, unexpected in a feed, and turns an uncomfortable problem into something kind to watch.
+
+  The look breaks easily, though. AI image tools render anything you don't call "knitted" in its real material, turn close-up doll faces strange, and print the word "yarn" on your label. This skill writes around those traps. Every noun gets the word knitted and a real colour. Dolls are adults, seen from a step back, and never speak. The narrator tells the story. The product is knitted at its true shape with its real label words. And because a picture makes a claim as much as a sentence does, it only knits what your approved claims say.
+
+when:
+  - Your product deals with a subject people find awkward to look at.
+  - You want a soft, unusual ad to reach people who don't know they have the problem yet.
+  - You can explain how your product works in a simple picture, like an ingredient arriving and acting.
+
+you_give:
+  - A brief with the reason someone buys, the buyer stage and the length
+  - Video or still
+  - Your product facts, including every line of label text
+  - The buyer, their room, their doubts and what they tried before
+  - Your approved claims, banned claims, offer and guarantee
+you_get:
+  - A video table of narration, visual notes and kind of shot, every noun knitted
+  - A clip plan with words per clip and the yarn transition marked
+  - Or a still plan with headline, layout and a ready-to-paste image prompt
+  - A list of claims shown, each with its source
+
+how_to_use:
+  - Copy the skill and paste it into Claude, ChatGPT or Gemini.
+  - Paste your product facts, label text and claims underneath.
+  - Describe the buyer and their room in two or three sentences, including what they look like for the doll.
+  - Say "video, 30 seconds" or "still".
+  - Check every visual note says "knitted" on every object. Anything missing it will come out real.
+  - For a video, take the script to "Turn your knitted wool script into ready-to-make video shots".
+
+how_it_works:
+  - title: Checks wool fits
+    text: Suits awkward subjects and simple how-it-works stories. It says so if your sale needs a real face or a true-to-life finish.
+  - title: Knits every noun
+    text: Writes each person and thing as knitted with its real colour, and keeps each scene to one room and a few objects.
+  - title: Uses dolls, not people
+    text: One or two adult dolls, described the same way every time, who never speak or give a testimonial.
+  - title: Frames from a step back
+    text: Eye level inside the world, medium-wide. Close-ups only for hands, the product and how it works.
+  - title: Limits what is knitted
+    text: Shows only what your claims state. How it works appears as a small glowing knitted element, never medical detail.
+  - title: Writes the video
+    text: Narration over life shots, product shots and how-it-works shots, with one yarn transition at the turn.
+  - title: Or writes the still
+    text: One moment, a headline of eight words or fewer, 20 words in total, and a full image prompt.
+
+output_shape: |
+  VIDEO
+  Line | Narration | On-screen text | Visual note (shot kind, every noun knitted)
+  1 | "<line>" | - | LIFE: <a knitted doll in a <colour> knitted ..., in a knitted ...>
+  ...
+  <n> | "<6 words or fewer>" | - | YARN TRANSITION: <...>
+  ... | "<offer and call to action>" | <offer text> | PRODUCT: <knitted pack, label "<exact words>">
+
+  Clip plan: <clip> = <lines>, <words>
+
+  OR STILL
+  Moment: <life scene, how-it-works view or product scene>
+  Headline: "<8 words or fewer>"  Small line: "<...>"
+  Layout: <...>
+  Image prompt: <ready to paste>
+
+  CLAIMS SHOWN
+  <claim or how-it-works picture> = <source>
+  MISSING: <...>
+
+example:
+  business: sprout
+  input: |
+    [the skill]
+
+    Brief: failed fixes. Buyer stage: problem aware. Video, 30 seconds.
+    Buyer: woman, 25 to 55, bloating and irregularity. Has tried fiber
+    powders and probiotics. Wants to feel normal. Doubts: "Will this
+    upset my stomach more?"
+    Product: Sprout daily greens gummies. Pouch of 28 daily packs;
+    tear one straight across the top, tip the small deep-green gummy
+    bears into your palm. 6 g prebiotic fiber per pack.
+    Pouch: glossy deep green, big yellow wordmark "Sprout", yellow bear
+    face top right, "28 Daily Packs" at the bottom.
+    Approved: "Supports digestion and gut health." "60+ ingredients,
+    21 vitamins & minerals, and 6g fiber."
+    Never: "Fix" the tummy, any result as a promise.
+    Brand note: Sugar-Free upsets some stomachs; point gut buyers to
+    Low Sugar.
+    Offer: $29.99 first order with text sign-up, renews at $49.99 every
+    4 weeks.
+  output: |
+    FIT  Digestion is awkward on camera; yarn tells it kindly.
+         Problem-aware buyer. Wool fits.
+    HOW-IT-WORKS SHOTS: none. The facts say the fiber "supports
+    digestion" but not how, so nothing is knitted acting inside.
+
+    Line | Narration | On-screen | Visual note
+    1 | "Some days her stomach just won't settle." | - | LIFE: a
+        knitted woman in a mustard knitted jumper on a teal knitted
+        sofa, one hand on her stomach; brows pulled together, mouth
+        pressed flat, shoulders curled in
+    2 | "She tried the fiber powder." | - | LIFE: a knitted kitchen,
+        a white knitted tub and a grey knitted shaker on an oak-coloured
+        knitted counter; she eyes the tub, one brow down
+    3 | "Then the probiotic bottle." | - | LIFE: same kitchen, a small
+        brown knitted bottle pushed behind the tub; she sighs, lids
+        half closed
+    4 | "Then something she'd actually eat." | - | YARN TRANSITION:
+        loose green strands stitch themselves into the pouch
+    5 | "One small pack. Six grams of prebiotic fiber." | - | PRODUCT:
+        a glossy deep-green knitted pouch on the knitted counter, label
+        "Sprout" in yellow, a yellow knitted bear face top right,
+        "28 Daily Packs" at the bottom
+    6 | "Rip. Tip. Enjoy." | - | LIFE (hands close): she tears a
+        knitted daily pack straight across the top; knitted deep-green
+        bears tip into her palm
+    7 | "Sprout supports digestion and gut health." | - | LIFE: she
+        heads for the knitted front door, keys in hand, small easy
+        smile, the pouch on the counter behind her
+    8 | "Try the Low Sugar one. First order, $29.99 with text
+        sign-up." | $29.99 first order with text sign-up. Renews at
+        $49.99 every 4 weeks | PRODUCT: knitted pouch, held pose
+    9 | "For anyone who's tried every powder and pill." | - | PRODUCT:
+        same, held
+
+    Clip plan: 1 = lines 1-3 (19 words), 2 = lines 4-6 (17 words),
+    3 = lines 7-9 (25 words). One yarn transition, in clip 2.
+
+    CLAIMS SHOWN
+    "Supports digestion and gut health": brand's approved claim, said
+      once, never pictured as a body change
+    6 g prebiotic fiber: product facts
+    Low Sugar named on purpose: brand note on Sugar-Free and stomachs
+    Line 7 shows her leaving the house, not a body getting better
+
+    MISSING: colour of the "28 Daily Packs" text and any other label
+    lines; what a single daily pack looks like.
+
+tweaks:
+  - what: The kind of story
+    how: Ask for "failed fixes" (the doll tries three things first), "a problem getting worse" or "a discovery". Each changes the first third of the ad.
+  - what: How-it-works shots
+    how: Paste how your product works, with its source. You get a close knitted shot of the ingredient acting. Without it, the ad tells the problem and the product only.
+  - what: Still kind
+    how: Ask for a life scene for people new to the problem, a how-it-works view for people comparing fixes, or a product scene for people who know you.
+  - what: Night scenes
+    how: If the story happens at night, say where the light comes from (a lamp, a phone, a torch). It writes the light source and how dark the room is into each note.
+
+judge:
+  - Every object in every visual note has the word knitted and a colour.
+  - There are no more than two dolls, and none talks or says the product worked for them.
+  - No shot is a close-up of a face.
+  - The label words match your real label exactly.
+  - Nothing knitted shows a body getting better or a result your claims don't state.
+
+test:
+  - Search the visual notes for any object without the word knitted. There should be none.
+  - Run it on a subject your buyers find awkward (for Sprout, digestion). No picture should show a body getting better or a result your claims don't state.
+  - Run it twice on the same brief. In each script the dolls should be described the same way every time, and neither should speak.
+  - Make one still from the image plan before paying for video. If the label comes back wrong, your label lines are missing from the input.
+
+improve:
+  - Write every label line and its colour into "What you need" in the skill file or into your brand file. Missing label text is the most common reason it stops to ask.
+  - Add your approved and banned claims to step 6 ("A picture claims as much as a sentence"), so every knitted picture is checked against them.
+  - If you run a series, write your doll descriptions into step 3, so the same dolls appear in every ad.
+  - Pair it with the skill that turns a knitted wool script into fixed look wording and clip prompts.
+
+terms:
+  - term: Stop-motion
+    meaning: Animation made by moving real objects a little between each frame, so movement looks slightly stepped.
+  - term: Yarn transition
+    meaning: The move from one scene to the next done in yarn, for example the room unravelling and knitting back up as the next room.
+  - term: Buyer stage
+    meaning: How much the buyer already knows about the problem and about you.

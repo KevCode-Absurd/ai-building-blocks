@@ -1,0 +1,21 @@
+slug: make-video-ad-clear-with-sound-off
+renamed_from: video-ad-text-overlay-planner
+name: "Make your video ad clear with the sound off"
+summary: "A few timed labels and badges so a finished video ad still makes sense on mute."
+category: general
+boards: [ecommerce]
+type: skill
+role: make
+job: video
+level: intermediate
+inputs:
+  - {type: script, required: true}
+  - {type: video_ads, required: true}
+  - {type: offer, required: false}
+outputs:
+  - {type: edit_plan}
+uses: []
+origin: own
+source_ids: [CES-030]
+old_name: ecommerce-motion-finishing
+version: 1.0.0

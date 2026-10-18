@@ -1,0 +1,22 @@
+slug: get-honest-videos-from-small-creators
+renamed_from: creator-product-seeding-plan
+name: "Get honest videos from small creators"
+summary: "Honest posts from small creators you gift, with the note to send and rules for which become ads."
+category: general
+boards: [ecommerce]
+type: skill
+role: make
+job: organic
+level: intermediate
+inputs:
+  - {type: brand_brain, required: true}
+  - {type: persona, required: false}
+outputs:
+  - {type: plan}
+  - {type: brief}
+uses: []
+example: brief-ugc
+origin: rebuilt
+source_ids: [CES-092]
+old_name: organic-content
+version: 1.0.0

@@ -1,0 +1,176 @@
+new_slug: stop-the-scroll-with-a-handwritten-note
+name: Stop the scroll with a handwritten note
+summary: A photo of a few lines of ordinary handwriting in your narrator's voice, that people stop to read.
+job: make-image-ads
+
+headline: A photo of a handwritten note in your buyer's own voice that people stop to read
+subhead: Give it your story ad. It lifts 8 to 25 words the narrator wrote (a note, a list, a line on the back of an envelope), sets them in an ordinary adult hand on real paper, and writes the prompt.
+
+explain: |
+  Handwriting is rare in a feed and feels personal, so people read it before they decide whether to. This picture type is a photo of a few handwritten lines on paper: a note left for someone, a notebook page, a list on the back of an envelope. It suits things people feel but don't say aloud, and stories where the narrator blames themselves.
+
+  It takes the words from a line the narrator writes in your story, or turns the story's opening into a note, and makes the first line the one that stops people. The handwriting is an ordinary adult hand, legible and slightly uneven, never calligraphy or a handwriting font. If the story doesn't contain words to quote, it writes the fewest that say what the story already says, and flags them for you to read.
+
+when:
+  - Your story has a line the narrator wrote down (a note, a list, a reminder to themselves).
+  - The problem is something people feel and don't say out loud.
+  - Your buyers are older, or your story is about blaming yourself or putting something off.
+
+you_give:
+  - Your approved story ad, with any note or list the narrator writes
+  - How your buyer would put it in their own words (optional)
+  - Whether words on the image are on or off (optional, default on)
+you_get:
+  - The note's words, line by line, exactly as they'll appear
+  - The paper, the surface and the style of handwriting
+  - A blank version, and the headline under the image
+  - A 60 to 120 word image prompt, ready to paste
+
+how_to_use:
+  - Copy the skill and paste it into Claude, ChatGPT or Gemini.
+  - Paste your story ad underneath. The note works best if the story quotes it.
+  - Paste the image prompt into your image tool and make one square picture.
+  - Read every handwritten word in the result. Image tools misspell, and one wrong letter gives the game away.
+  - If it looks like a font, ask for it again with "uneven, ordinary handwriting".
+
+how_it_works:
+  - title: Sets the ground rules
+    text: Square, looks taken on a phone, no logo, price, button, brand colour or product.
+  - title: Takes the words
+    text: Lifts 8 to 25 words from a line the narrator writes, or the story's opening said as a note. The first line is the hook.
+  - title: Picks the paper and place
+    text: Lined or plain paper on a real surface, such as a kitchen table or bedside table, with a pen nearby.
+  - title: Sets the handwriting
+    text: An ordinary adult hand, legible, slightly uneven, at most one crossing-out, with correct spelling.
+  - title: Describes the blank version
+    text: The same page with nothing written and the pen beside it, so you can change the words later.
+
+output_shape: |
+  SCENE
+  <one sentence: what someone scrolling would say they saw>
+
+  WHERE AND WHEN
+  <place, time of day, what is within reach>
+
+  THE PAPER AND SURFACE
+  <what kind of paper, where it lies>
+
+  THE HANDWRITING
+  <pen, tone, any crossing-out>
+
+  WORDS ON THE IMAGE (<word count>, line by line)
+  <8 to 25 words, exactly as written>
+  BLANK VERSION
+  <the same page with nothing written, pen beside it>
+
+  HEADLINE UNDER THE IMAGE
+  Read this if you've written something like this.
+
+  FLAGS
+  <whether the words were lifted or written for the image>
+
+  IMAGE PROMPT
+  <60 to 120 words, ready to paste>
+
+example:
+  business: sprout
+  input: |
+    [the skill]
+
+    Story ad (approved, built on reviews 1, 3 and 5):
+    Clearing out a drawer, I found the back of an envelope in my own
+    handwriting:
+      greens powder: gritty
+      pills: made me gag
+      multivitamin gummies: forgot
+      probiotics: stopped
+    Four tries. Four quits. The issue was never what was in them. It
+    was sticking with it.
+    Sprout is one daily pack: tear the top, eat the small handful of
+    gummies inside. 60+ ingredients, 21 vitamins and minerals, 6 g
+    prebiotic fiber.
+
+    Buyer: the quitter who wants to stick, 28 to 45.
+  output: |
+    SCENE
+    A handwritten list of quit supplements on the back of an
+    envelope, lying on a kitchen counter.
+
+    WHERE AND WHEN
+    A kitchen counter, late morning, window light from the left.
+    Within reach: a pen, an open drawer edge, a phone charger, keys.
+
+    THE PAPER AND SURFACE
+    The back of a white envelope, torn open along the top, slightly
+    creased, lying at a slant on a pale counter.
+
+    THE HANDWRITING
+    Black ballpoint, ordinary adult hand, legible, a little rushed on
+    the last line. No crossing-out (the story quotes it without one).
+
+    WORDS ON THE IMAGE (12 words, line by line)
+    greens powder: gritty
+    pills: made me gag
+    multivitamin gummies: forgot
+    probiotics: stopped
+
+    BLANK VERSION
+    The same envelope back with nothing written, pen beside it.
+
+    HEADLINE UNDER THE IMAGE
+    Read this if you've written something like this.
+
+    FLAGS
+    Words lifted from the copy, not written for the image.
+    Check "multivitamin" and "probiotics" letter by letter in the
+    result.
+    The list names kinds of products only, no brands.
+
+    IMAGE PROMPT
+    Square 1:1 phone photo of the back of a white envelope, torn open
+    along the top and slightly creased, lying at a slant on a pale
+    kitchen counter in late-morning window light from the left.
+    Written in black ballpoint in an ordinary, slightly uneven adult
+    hand, legible and spelled exactly, on four lines: "greens powder:
+    gritty / pills: made me gag / multivitamin gummies: forgot /
+    probiotics: stopped". A pen lies beside it, with keys, a phone
+    charger and the edge of an open drawer at the edges. Ordinary
+    light, a little grain, unstyled. No signature, no logo, no brand
+    name, no price, no person, no calligraphy or handwriting font.
+
+tweaks:
+  - what: The paper
+    how: Change it to a notebook page for a private thought, a note left on the fridge for someone else, or the back of an envelope for a list or a sum. The paper tells the reader who it was written for.
+  - what: Length
+    how: Eight words reads in a glance. Twenty-five is the most a phone screen can hold in handwriting. Ask for fewer if the first line isn't landing.
+  - what: A crossing-out
+    how: One crossed-out word can make it feel real ("forgot" crossed out, "stopped" written after). Only use one if your story's note has it.
+  - what: Words off
+    how: Switch words off and it describes the same page blank with the pen beside it.
+
+judge:
+  - The note is the narrator's own. It isn't a letter from a doctor, an authority, or a customer to your brand.
+  - There's no signature with a full name, and no claim about the product.
+  - Every word is spelled exactly as given.
+  - It looks like real handwriting, not calligraphy or a font.
+  - It's short enough to read on a phone without zooming.
+
+test:
+  - Run it on a story that quotes a note word for word. The words on the image should match it exactly, and the flags should say they were lifted.
+  - Run it on a story with no note. It should write the fewest words that say what the story says, and flag them for you to read.
+  - Make the picture and read every word aloud from the phone screen at arm's length. If you have to zoom, the note is too long.
+  - Put it next to a snapshot of the same story and ask which one people read first.
+
+improve:
+  - Add your buyers' own phrases to the brand file section, so any written note sounds like them.
+  - Add the paper and surfaces that fit your buyers (a work notebook, a fridge door, a car dashboard) to step 3.
+  - Put the note in your story word for word when you have one. Then the picture quotes the story and the flags stay empty.
+  - If your story gives the narrator no reason to write anything, use the everyday snapshot skill instead.
+
+terms:
+  - term: Story ad
+    meaning: An ad whose main text tells one person's story in their own words, like a post from a friend.
+  - term: Hook
+    meaning: The first line, written to make the right person stop scrolling.
+  - term: Blank version
+    meaning: The same picture with no words, so you can change the words later without starting again.

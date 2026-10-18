@@ -20,6 +20,7 @@ Labels used below:
 **What we're building.** A **free, evergreen library** of tested AI building blocks. It isn't only skills. It has:
 - simple prompts, skills, routines, workflows, applications, and people's own agents and bots
 - **plain how-to guides for setting each one up yourself**
+- **mini tools:** free calculators where you type in your numbers and get the answer
 
 A complete beginner gets something useful on day one, and an expert finds the next level up.
 
@@ -50,13 +51,14 @@ It stays **simple by default**: every job is a ladder, and people only see their
 **The plan in five moves**
 
 1. **Now to January: port everything we have.**
-   - Every skill we own is generalised so any business can use it, tested, and shown with a before and after.
+   - Every skill and calculator we own is generalised so any business can use it, tested, and shown with a before and after.
    - The ecommerce versions go on the /ecommerce board.
    - The site gets built at the same time.
 2. **19 January 2027: open the site, free.** It launches with:
    - the general library
    - the /ecommerce board, with comments
    - the first tool guides
+   - eight mini tools
    - the first skills brought in from the internet
 3. **February to March: bring in the best of the internet.** Imported skills arrive at scale, each one credited, safety-checked, improved and explained. The tools section grows.
 4. **From April: more boards.** /saas comes first, then more industries picked by demand, then job-role boards.
@@ -90,6 +92,7 @@ It stays **simple by default**: every job is a ladder, and people only see their
 | Only parts from our own sources | Plus **skills from the internet**: credited, licence-checked, safety-checked, improved, with a before and after |
 | Gates based on payment | Gates based on **quality and use** |
 | Two extra public test cases to pick | Dropped as a project. General listings are still checked on more than one kind of business. |
+| Calculators stay inside Creative Engine | **Mini tools:** every calculator we built, free for any business, on the site, as a download, as a sheet, inside your AI or embedded (Part 6) |
 | Five-stream money model ($348k in Year 1) | Superseded. Year 1 is a build year with little or no income by design. The model is rebuilt after three months of real traffic. |
 
 ---
@@ -118,7 +121,7 @@ That gap is the business. It has four parts:
 | Skill | Download it into Claude, ChatGPT or Codex | What a skill is; how to install one; how to turn your own process into a skill |
 | Routine | A ready schedule, e.g. a 9 am ad report | How to set up a scheduled task in Claude, ChatGPT or Google Sheets |
 | Workflow | A chain of stages you tick, e.g. brand brain → ads → copy | How to chain prompts and skills; when a workflow beats one big prompt |
-| Application | A mini app with a Refresh button and filters | How to build a one-page app with the AI's help; how to add logins and share it |
+| Application | A mini tool (type in numbers, get the answer) or a mini app with a Refresh button and filters | How to turn a spreadsheet sum into a mini tool; how to build a one-page app with the AI's help; how to add logins and share it |
 | Agents and bots | A bounded agent that proposes while you approve | How to set up your own agent or bot for a task: tools, limits, approvals, costs |
 
 The guides follow the same rules as the listings: plain words, a real before and after, tested in each tool, and the next step shown. People get value wherever they are on the chain.
@@ -150,7 +153,7 @@ The guides follow the same rules as the listings: plain words, a real before and
 | **1 · General library** | Every skill made general, for any business | From launch |
 | **2 · Industry boards** | /ecommerce first, /saas next, then more by demand. Focused versions plus comments and advice. | /ecommerce at launch · /saas Apr 2027 |
 | **3 · Job-role boards** | /marketing, /finance, /operations, /product and more | After 2–3 industries |
-| **Alongside · Tools** | Plain guides to AI tools, and how each is used in a given industry | From launch |
+| **Alongside · Tools** | Tool guides (AI tools, and how each is used in an industry) and mini tools (free calculators) | From launch |
 
 ### One listing, three layers
 
@@ -177,7 +180,7 @@ A fix to the general listing reaches every board.
 | Area | Our depth today |
 |---|---|
 | Business brain | Partial |
-| Research and strategy | Partial |
+| Research and strategy | Partial (offer maths built in Creative Engine; they become mini tools) |
 | Creative and content | Strong |
 | Paid media | [Gap] (the Meta ladder fills it) |
 | Website and conversion | Partial |
@@ -282,7 +285,13 @@ Later, people can upload their own skills. These go through the same pipeline. I
 
 ---
 
-## 6 · Tools
+## 6 · Tools: guides and mini tools
+
+The Tools section has two shelves:
+- **Tool guides** explain other companies' tools, such as Claude, ChatGPT and Google Sheets.
+- **Mini tools** are our own small calculators: you type in your numbers and get the answer straight away.
+
+### Tool guides
 
 | Page | What's on it | Example |
 |---|---|---|
@@ -294,6 +303,61 @@ Later, people can upload their own skills. These go through the same pipeline. I
 - Links are always labelled.
 - Ranking comes from our tests only, never from what a tool pays.
 - Sponsored deep dives say "sponsored" at the top.
+
+### Mini tools [Decided]
+
+We've already built calculators inside Creative Engine. Today they sit inside the app, behind a brand set-up. Each one becomes a **free mini tool** any business can use in seconds. A mini tool is the smallest kind of **application**: no AI is needed for the answer, there's no account or email, and what you type stays in the browser.
+
+**One mini tool, five ways to use it** [Proposed]:
+
+| Way | What you get | Best for |
+|---|---|---|
+| 1 · On our site | Type your numbers; the answer and each line of the working show at once | Anyone, in seconds |
+| 2 · Download | One file that opens in any browser and works offline | Keeping it; using it without our site |
+| 3 · Spreadsheet | A Google Sheets copy and an Excel file, every formula visible and editable | Spreadsheet people; changing the maths |
+| 4 · In your AI | A prompt and a skill for Claude, ChatGPT and Gemini, plus a guide to saving it as a Claude Project, custom GPT or Gem. The AI asks for the numbers, does the sums in code, shows each line and suggests the next step. | Follow-up questions; using it inside a bigger task |
+| 5 · Embed | A snippet for your own website or Notion page, with a credit link back to us | Bloggers, agencies, communities |
+
+AI models can get mental arithmetic wrong, so the AI version does the sums in code. It's tested on all four labs against the same worked examples as the web page. If one way gives a different answer, it doesn't ship.
+
+**The mini tools we already have:**
+
+| Mini tool | The question it answers | Built from | Shelf |
+|---|---|---|---|
+| Discount calculator | What does 10/20/30% off do to my profit per order, and how much more must I sell to come out even? | Creative Engine offers screen | General; /ecommerce adds shipping, fees, ad return |
+| Deal comparer | "Buy 2, get 1 free" vs 30% off; a gift vs a deeper cut; credit next time vs money off now | Creative Engine offers screen | /ecommerce |
+| Order margin and break-even | What's left from one order after goods, shipping and fees; break-even cost per customer and return on ad spend | Creative Engine offer maths | General; /ecommerce |
+| Repeat customer profit | A customer's worth over 3, 6 or 12 months of repeat orders; when ad spend pays back | Creative Engine offer maths | General; /ecommerce; /saas later with churn |
+| Creative volume planner | How many ads a month for my spend, the production budget, whether each format pays | Creative Engine volume planner | /ecommerce |
+| Page and test calculator | Revenue per visitor; visitors an A/B test needs; the effect of more cold traffic | Creative Engine CRO screen | General |
+| AI run cost | Cost per run on each of the four labs, and per month at my volume | Our model tests and cost ledger | General |
+| Hourly rate | What to charge per hour from costs, working hours and a savings goal | A standard formula, in our own words | General |
+
+Notes:
+- "Cost calculator" is read as two tools: order margin, and AI run cost.
+- Creative Engine's calculators are plain arithmetic with no AI call, and the volume planner already has unit tests, so porting is mostly packaging.
+- The Ecom Agent OS break-even sheet was purchased: we use our own maths and don't copy it.
+- From Gehna's offer playbook we take only the layout of the discount curve, never its numbers.
+
+**How each calculator becomes a mini tool:**
+1. **Find** every calculation in our sources.
+2. **Pull out the maths** into one formula file.
+3. **Make it general:** labelled example numbers, any currency, board presets.
+4. **Worked examples,** with answers checked by hand, including edge cases (0% and 100% off, a loss on every order).
+5. **Build all five ways** from that one file with `build-mini-tool`, each checked against the worked examples.
+6. **Explain:** every answer shows each line, what the number means and the next listing to use.
+7. **Publish** as a listing with comments, credit and a version number.
+8. **Watch:** a "this looks wrong" button; every fix adds a worked example.
+
+**Rules:**
+- One formula, five ways: they can't disagree.
+- Show the working.
+- Example numbers are labelled, every assumption can be changed, and a loss is stated plainly.
+- Nothing promises a result. No email is ever asked for.
+
+**Later mini tools** [Assumption], chosen from comments and searches:
+- for /saas: monthly revenue and churn, customer value against acquisition cost, payback months
+- for any business: a link-tracking (UTM) builder, a price-rise check, ad budget pacing
 
 ---
 
@@ -341,9 +405,10 @@ Porting splits each item into two parts. The **general method** goes in the libr
 | # | Port order | When |
 |---|---|---|
 | 1 | Business brain (15 items → 11 listings) | Nov |
-| 2 | Creative and content (78 static ad items → about 20 listings, plus copy, scripts, avatars, video) | Nov–Dec |
-| 3 | Website, paid media (Meta ladder steps 1–4), research | Dec |
-| 4 | Lifecycle (archived retention module), analytics, AI operations | Jan–Feb 2027 |
+| 2 | Mini tools: the 8 calculators we already have, each in all five ways | Nov–Dec |
+| 3 | Creative and content (78 static ad items → about 20 listings, plus copy, scripts, avatars, video) | Nov–Dec |
+| 4 | Website, paid media (Meta ladder steps 1–4), research | Dec |
+| 5 | Lifecycle (archived retention module), analytics, AI operations | Jan–Feb 2027 |
 
 **Rights catch** (unchanged):
 - Ecom Intelligence guides and the Blue Sense and Nu Reach playbooks are private input only until their terms are read.
@@ -366,7 +431,7 @@ Porting splits each item into two parts. The **general method** goes in the libr
 **One line (to test):** "Free, tested AI prompts, skills, workflows and agents, and how to set them up yourself: plain words, checked for safety, with real before-and-after examples. Start wherever you are."
 
 **How people find us:**
-- **Search:** every listing, tool guide and board page is a search page.
+- **Search:** every listing, tool guide and board page is a search page. Mini tools catch searches such as "discount calculator", and every embed links back to us.
 - **YouTube.**
 - **Newsletter:** the most valuable thing we own.
 - **Communities:** helpful answers within each group's rules.
@@ -402,6 +467,7 @@ Evergreen first: seasonal listings can exist, but we don't run campaigns around 
 | Comments a week; median reply time | 50 a week by Apr; reply within 2 working days |
 | Listings with a before and after | 100%, always |
 | Imported skills checked; fail rate | 100 by Apr; we publish the fail rate |
+| Mini tool uses a week; sites embedding one | 2,000 a week and 20 sites by Apr |
 | Safety incidents; costliest mistakes | Zero |
 
 ### Six things to prove
@@ -436,6 +502,7 @@ Selling individual skills doesn't make sense: free skills bring the audience, an
 **Trust rules:**
 - Ads never sit inside the steps.
 - Affiliate links are labelled and never change a ranking.
+- Mini tools never ask for an email.
 - People pay their own AI bills.
 - Downloads keep working.
 
@@ -452,9 +519,9 @@ Selling individual skills doesn't make sense: free skills bring the audience, an
 |---|---|
 | Mon 19 Oct 2026 | Week 1: first tools, the listing format, the port order. Nothing is sold. |
 | Sun 1 Nov | **Gate 0:** one listing end to end; the template approved |
-| Fri 11 Dec | **Gate A:** brain and creative sections ported; site skeleton with boards and comments; 5+ imports through the safety check |
+| Fri 11 Dec | **Gate A:** brain and creative sections ported; site skeleton with boards and comments; 5+ imports through the safety check; first 4 mini tools working all five ways |
 | Sun 10 Jan 2027 | **Gate B:** ready to open |
-| Tue 19 Jan 2027 | **Site public, free:** general library, /ecommerce board, tool guides, comments, newsletter |
+| Tue 19 Jan 2027 | **Site public, free:** general library, /ecommerce board, tool guides, 8 mini tools, comments, newsletter |
 | Apr 2027 | Three-month review; money model rebuilt; **/saas board opens** |
 | Jul 2027 | Membership and third-board decisions |
 | Late 2027 | First job-role board (/marketing is the likely first) |
@@ -464,9 +531,9 @@ Selling individual skills doesn't make sense: free skills bring the audience, an
 ## 12 · The build
 
 **Three things get built:**
-- **A · The item factory:** seven TypeScript tools. They import, check, build exports, model-test, blind-grade and graph listings, and `scan-skill` is the safety check for imports.
+- **A · The item factory:** eight TypeScript tools. They import, check, build exports, model-test, blind-grade and graph listings; `scan-skill` is the safety check for imports; `build-mini-tool` makes all five ways of a mini tool from one formula file and checks each against the worked examples.
 - **B · The listings:** our own skills in port order (general version, then /ecommerce), then imports in batches.
-- **C · The site:** library, boards, tool guides, comments and the newsletter, all free.
+- **C · The site:** library, boards, tool guides, mini tools, comments and the newsletter, all free.
 
 **12 steps per listing:**
 1. Import, recording origin and licence.
@@ -481,6 +548,8 @@ Selling individual skills doesn't make sense: free skills bring the audience, an
 10. Plain-words page.
 11. Downloads, opened in each tool.
 12. Tested ✓.
+
+Mini tools take a shorter path: steps 1, 3 and 4, then worked examples checked by hand in place of steps 5–8, then 9–12. Only the "in your AI" version gets a model test.
 
 **Rules that never bend:**
 - Zero wrong prices and zero invented claims.
@@ -509,7 +578,7 @@ Selling individual skills doesn't make sense: free skills bring the audience, an
 
 | Version | What it is | Ships |
 |---|---|---|
-| v0 | Free site: search, library, /ecommerce, listing pages with ladder and before/after, tool guides, Learn, free accounts for comments and saved brains, newsletter | Gate B, 19 Jan 2027 |
+| v0 | Free site: search, library, /ecommerce, listing pages with ladder and before/after, tool guides, mini tools with embeds, Learn, free accounts for comments and saved brains, newsletter | Gate B, 19 Jan 2027 |
 | v1 | /saas, board following, "Ask" threads, contributor profiles, membership waitlist | Apr 2027 |
 | v2 | Membership, priority replies, consulting and implementation requests, premium workflows | When each money condition is met |
 | v3 | Run listings from the site; creator uploads; the 70/30 marketplace | When people ask and the pipeline is ready |
@@ -521,20 +590,20 @@ Selling individual skills doesn't make sense: free skills bring the audience, an
 | Week | Build | Plan and publish | Founder |
 |---|---|---|---|
 | **W1 · 19–25 Oct** | `import-item`, `check-item`; listing format v1 (type, level, step, boards, tools, credit, licence, safety badge, before/after); first port: website claims extractor (general) | Port order for all 263 own items; map Creative Engine and ecomOS workflows onto the ladder; board and comment rules | Approve decision 2; put the four model keys in this repo's `.env`; glance at the port order |
-| **W2 · 26 Oct–1 Nov** | `run-test`, `grade`, `build-exports`, `build-graph`; first listing tested ✓ with before/after; `scan-skill` specified | Listing and board page templates; site structure | Review the first listing page |
+| **W2 · 26 Oct–1 Nov** | `run-test`, `grade`, `build-exports`, `build-graph`; first listing tested ✓ with before/after; `scan-skill` and `build-mini-tool` specified | Listing and board page templates; site structure | Review the first listing page |
 | | **Gate 0:** one listing end to end; template approved | | |
-| **W3–4 · 2–15 Nov** | Brand brain v2 format; 11 brain listings, general and /ecommerce | Brand brain workflow page; site build starts (listing and board pages, accounts) | Brain section review; decision 3 |
+| **W3–4 · 2–15 Nov** | Brand brain v2 format; 11 brain listings, general and /ecommerce; `build-mini-tool` and the first 4 mini tools (discount, order margin, volume planner, AI run cost) | Brand brain workflow page; site build starts (listing and board pages, accounts) | Brain section review; decisions 3 and 12 |
 | | **Gate 1:** brain section passes on 3 kinds of business with zero invented claims or wrong prices | | |
-| **W5–7 · 16 Nov–6 Dec** | About 20 static ad listings; copy, scripts, avatars; `scan-skill` built; 20 trap skills | Static ad and copy workflow pages; comments and moderation on staging; record 3 videos | Creative review; decisions 4–5 |
+| **W5–7 · 16 Nov–6 Dec** | About 20 static ad listings; copy, scripts, avatars; `scan-skill` built; 20 trap skills; next 4 mini tools (deal comparer, repeat customer profit, page and test, hourly rate) | Static ad and copy workflow pages; comments and moderation on staging; record 3 videos | Creative review; decisions 4–5 |
 | **W8–9 · 7–20 Dec** | Page audit; Meta ladder 1–4; research and offers; first 5–10 imports | Tool guide template and first 10 guides; newsletter; launch waitlist | Gate A; brand name and domain |
-| | **Gate A (11 Dec):** brain and creative ported; skeleton with boards and comments; 5+ imports checked; all 20 traps caught | | |
-| **W10–12 · 21 Dec–10 Jan** | Site v0 finished; downloads opened in Claude, ChatGPT, Codex and Gemini | Batch-record 6 videos; seed /ecommerce posts | Final page review |
-| | **Gate B:** 50+ general and 25+ /ecommerce listings with before/after; 10+ imports; 10 tool guides; downloads in 3+ tools; comments and moderation working; mobile check | | |
+| | **Gate A (11 Dec):** brain and creative ported; skeleton with boards and comments; 5+ imports checked; all 20 traps caught; first 4 mini tools agree in all five ways | | |
+| **W10–12 · 21 Dec–10 Jan** | Site v0 finished, with mini tools and embeds; downloads opened in Claude, ChatGPT, Codex and Gemini | Batch-record 6 videos; seed /ecommerce posts | Final page review |
+| | **Gate B:** 50+ general and 25+ /ecommerce listings with before/after; 10+ imports; 10 tool guides; 8 mini tools; downloads in 3+ tools; comments and moderation working; mobile check | | |
 
 | Month | Build | Publish and grow | Gate |
 |---|---|---|---|
 | Jan 2027 | Lifecycle (archive), analytics, AI operations | Public 19 Jan; weekly content; labelled affiliate links | All own items ported or retired |
-| Feb | Imports at scale (about 15 a week); 20 more tool guides | Daily board posts and replies; weekly newsletter | Safety pipeline at about 2 h per skill |
+| Feb | Imports at scale (about 15 a week); 20 more tool guides; new mini tools from requests | Daily board posts and replies; weekly newsletter | Safety pipeline at about 2 h per skill |
 | Mar | Meta mini app; avatar and video workflows; /saas versions of the top 20 | "Climb the ladder" and "GitHub vs ours" series | /saas reviewed by someone in software |
 | Apr | **/saas opens**; first routines | Three-month review; money model rebuilt; membership waitlist | 10k visits/month; 1,000 subscribers |
 | May | First agents (bounded, red-teamed) | Site ads if traffic allows; YouTube partner check | Routines run 4 weeks without silent failure |
@@ -591,9 +660,9 @@ Selling individual skills doesn't make sense: free skills bring the audience, an
 | By | We should have |
 |---|---|
 | 1 Nov 2026 | Gate 0: one listing end to end; the template approved |
-| 11 Dec 2026 | Gate A: brain and creative ported; skeleton with boards and comments; 5+ imports checked; all 20 traps caught |
-| 19 Jan 2027 | Site public and free: 50+ general and 25+ /ecommerce listings, 10+ imports, 10+ tool guides |
-| Apr 2027 | All own items ported; 100+ imports checked; 40+ tool guides; /saas open; 10k visits/month; 1,000 subscribers; 500 weekly returning users |
+| 11 Dec 2026 | Gate A: brain and creative ported; skeleton with boards and comments; 5+ imports checked; all 20 traps caught; 4 mini tools |
+| 19 Jan 2027 | Site public and free: 50+ general and 25+ /ecommerce listings, 10+ imports, 10+ tool guides, 8 mini tools |
+| Apr 2027 | All own items ported; 100+ imports checked; 40+ tool guides; 15+ mini tools; /saas open; 10k visits/month; 1,000 subscribers; 500 weekly returning users |
 | Sep 2027 | 3 boards; 50k visits/month; 5,000 subscribers; 3,000 weekly returning users; first income streams on; membership decided |
 
 **Decisions**
@@ -613,13 +682,14 @@ Selling individual skills doesn't make sense: free skills bring the audience, an
 | 9 | Course terms | Private input until read | Before 19 Jan |
 | 10 | `copy-craft` clean-room rewrite | Yes | Before the creative section ends |
 | 11 | A contact link at launch | Yes: one "Need help building this?" link; no prices, offers or outreach | Before 19 Jan |
+| 12 | Mini tools: where they sit and how they're shared | Own shelf in Tools and on each board, typed as applications; all five ways; always free, no email; anyone may embed with a credit link | Mid Nov |
 | | **Later** | | |
-| 12 | Membership price | Test $99 vs $199 on the waitlist; Pro $499 | Apr 2027 |
-| 13 | What stays free | Everything free at launch stays free; only new premium workflows can be paid | Before any paywall |
-| 14 | Ad and affiliate rules | One quiet slot; labelled links; rankings from tests only | Before ads go on |
-| 15 | Funding the build year; money model rebuild | Founder-funded and lean; rebuild in April | Apr 2027 |
-| 16 | Retention module | Revive the archive | Jan 2027 |
-| 17 | Archive `ecommerce-workflow-platform` | Yes, no deleting | Any time |
+| 13 | Membership price | Test $99 vs $199 on the waitlist; Pro $499 | Apr 2027 |
+| 14 | What stays free | Everything free at launch stays free; only new premium workflows can be paid | Before any paywall |
+| 15 | Ad and affiliate rules | One quiet slot; labelled links; rankings from tests only | Before ads go on |
+| 16 | Funding the build year; money model rebuild | Founder-funded and lean; rebuild in April | Apr 2027 |
+| 17 | Retention module | Revive the archive | Jan 2027 |
+| 18 | Archive `ecommerce-workflow-platform` | Yes, no deleting | Any time |
 
 The holiday sale sprint, the four launch jobs and the two extra test cases from version 3 are dropped, and so are the router and the "Jev" question.
 

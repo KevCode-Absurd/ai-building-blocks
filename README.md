@@ -33,7 +33,7 @@ A **free, evergreen library** of tested AI building blocks for any business. It 
 | **General library** | Listings any business can use, as prompts, skills, routines, workflows, applications and agents, each with a setup guide |
 | **Industry boards** | /ecommerce first, /saas next: focused versions, comments and advice |
 | **Job-role boards** (later) | /marketing, /finance, /operations, /product |
-| **Tools** | Plain guides to AI tools, and how each is used in an industry |
+| **Tools** | Plain guides to AI tools and how each is used in an industry, plus **mini tools**: free calculators that work on the site, as a download, in a sheet, inside your own AI, or embedded |
 
 Filters are job, type, level (Beginner to Expert), board and tool. A board version adds the industry's brain fields, examples, thresholds and wording. It never forks the general listing.
 

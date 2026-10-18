@@ -4,6 +4,7 @@ Newest first. The founder's latest direct instruction wins. Record changes here 
 
 | Date | Decision | Source |
 |---|---|---|
+| 2026-10-18 | **Mini tools.** Turn every calculator we built (discount, deal comparer, order margin and break-even, creative volume planner, CRO test, AI run cost and more) into free mini tools anyone can use: standalone, or ported into their own ChatGPT or Claude. The five ways to use them (site, download, sheet, in your AI, embed) are proposed in plan Part 6. | Founder |
 | 2026-10-18 | **Models: no router.** Test only on the four labs we already have accounts and keys for: Claude (Anthropic), GPT (OpenAI), Gemini (Google) and DeepSeek. That covers what most people use; anyone wanting other models can test them themselves. Supersedes OpenRouter and the "Jev" question. | Founder |
 | 2026-10-18 | **Free first; no selling at the start.** Build the whole platform and keep everything free: skills, workflows, guides, downloads. No paywall, no paid tests, no sale campaigns (the holiday sale sprint, the four launch jobs and the extra paid test cases are dropped). It's an evergreen resource. | Founder |
 | 2026-10-18 | **Revenue comes later, one stream at a time:** affiliates, then advertising (site and YouTube), then consulting and implementation, then memberships (Member $99 or $199/mo for priority replies and implementation help; Pro $499/mo for in-depth help; custom implementation on top), premium workflows for very specific jobs, and a creator marketplace (70% creator / 30% us). Selling individual skills doesn't make sense. Supersedes the 2026-10-17 subscription revenue row. | Founder |
@@ -45,12 +46,14 @@ The numbered list matches the decisions table in the final plan v4, Part 16.
 9. Course terms: can anything derived from Ecom Intelligence, Blue Sense Digital or Nu Reach be published?
 10. OK to clean-room rewrite `copy-craft` (built from the purchased Copy Machine)?
 11. A "Need help building this?" contact link at launch (no prices, offers or outreach)?
-12. Membership price for the first tier: $99 or $199? (Later.)
-13. Everything free at launch stays free for good; only new premium workflows can be paid? (Later.)
-14. Ad and affiliate rules: one quiet slot, labelled links, rankings from tests only? (Later.)
-15. How the build year is funded, and the money model rebuild in April 2027. (Later.)
-16. Revive the archived retention module (`archive/retention-r1-r6`), or rebuild M21?
-17. Archive the old `ecommerce-workflow-platform` repo? (Recommended; nothing is deleted.)
-18. ~~What is "Jev"?~~ Dropped 2026-10-18: no router needed.
+12. Mini tools: their own shelf in Tools and on each board, typed as applications; site, download, sheet, in your AI and embed; always free with no email; anyone may embed with a credit link? (Mid Nov)
+13. Membership price for the first tier: $99 or $199? (Later.)
+14. Everything free at launch stays free for good; only new premium workflows can be paid? (Later.)
+15. Ad and affiliate rules: one quiet slot, labelled links, rankings from tests only? (Later.)
+16. How the build year is funded, and the money model rebuild in April 2027. (Later.)
+17. Revive the archived retention module (`archive/retention-r1-r6`), or rebuild M21?
+18. Archive the old `ecommerce-workflow-platform` repo? (Recommended; nothing is deleted.)
+
+~~What is "Jev"?~~ Dropped 2026-10-18: no router needed.
 
 Dropped on 2026-10-18: the holiday sale sprint (old 6) and the two extra test cases (old 9).

@@ -223,8 +223,8 @@ function Home({ c, toast }: { c: Catalogue | null; toast: (m: string) => void })
 
       <section className="section wrap" id="build" aria-labelledby="build-h">
         <div className="sec-head">
-          <h2 className="h2" id="build-h">Chain skills into one workflow Claude runs start to finish</h2>
-          <p className="lede">Add skills in the order you want them to run, or start from a ready workflow. Then download one folder that Claude works through step by step.</p>
+          <h2 className="h2" id="build-h">Line up skills once, and your AI does the whole job</h2>
+          <p className="lede">Add skills in the order they should run, or start from a ready workflow. Download one folder, upload it to Claude, ChatGPT or any AI that reads files, and it works through every step for you.</p>
         </div>
         {c && <Suspense fallback={<div className="builder" />}><Builder c={c} toast={toast} /></Suspense>}
       </section>

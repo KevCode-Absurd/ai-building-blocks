@@ -286,8 +286,9 @@ code { font: 400 0.88em var(--mono); background: var(--raise); border-radius: 4p
 .stage-bar { position: absolute; z-index: 5; top: 12px; left: 12px; right: 12px; display: flex; gap: 8px; align-items: center; flex-wrap: wrap; pointer-events: none; }
 .stage-bar > * { pointer-events: auto; }
 .stage-bar .spacer { flex: 1; }
-.flow-name { height: 36px; padding: 0 12px; min-width: 140px; max-width: 280px; border-radius: 8px; border: 1px solid transparent; background: color-mix(in srgb, var(--bg) 70%, transparent); font-size: 15px; font-weight: 500; }
+.flow-name { height: 36px; padding: 0 12px; flex: 1 1 140px; min-width: 120px; max-width: 300px; text-overflow: ellipsis; border-radius: 8px; border: 1px solid transparent; background: color-mix(in srgb, var(--bg) 70%, transparent); font-size: 15px; font-weight: 500; }
 .flow-name:hover, .flow-name:focus { outline: none; border-color: var(--line-2); background: var(--panel); }
+.stage-bar .select { max-width: 190px; text-overflow: ellipsis; }
 .stage-empty { position: absolute; inset: 0; display: grid; place-items: center; text-align: center; color: var(--muted); padding: 24px; pointer-events: none; }
 .stage-empty h3 { color: var(--text); margin-bottom: 8px; }
 .stage-status { position: absolute; z-index: 5; left: 12px; bottom: 12px; font: 400 12px var(--mono); color: var(--muted); background: var(--panel); border: 1px solid var(--line); border-radius: 999px; padding: 6px 12px; max-width: calc(100% - 120px); }
@@ -306,9 +307,15 @@ code { font: 400 0.88em var(--mono); background: var(--raise); border-radius: 4p
 .react-flow__edge-path { stroke: var(--muted) !important; stroke-width: 1.5 !important; }
 .react-flow__edge.mismatch .react-flow__edge-path { stroke: var(--warn) !important; stroke-dasharray: 5 4; }
 .react-flow__edge.selected .react-flow__edge-path { stroke: var(--text) !important; stroke-width: 2 !important; }
-.react-flow__controls { box-shadow: none !important; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
-.react-flow__controls-button { background: var(--panel) !important; border-bottom: 1px solid var(--line) !important; color: var(--text) !important; }
-.react-flow__controls-button svg { fill: var(--text) !important; }
+.view-ctl { display: flex; flex-direction: column; margin: 0 14px 14px 0 !important; border: 1px solid var(--text); border-radius: 8px; background: var(--panel); box-shadow: var(--hard); overflow: hidden; }
+.view-ctl button { display: grid; place-items: center; width: 38px; height: 38px; border: 0; border-bottom: 1px solid var(--line); background: none; color: var(--text); cursor: pointer; transition: background 0.12s, color 0.12s; }
+.view-ctl button:last-child { border-bottom: 0; border-top: 1px solid var(--text); }
+.view-ctl button:hover { background: var(--text); color: var(--bg); }
+.view-ctl button:focus-visible { outline: 2px solid var(--text); outline-offset: -4px; }
+.builder.full, .builder:fullscreen { position: fixed; inset: 0; z-index: 100; width: 100vw; height: 100dvh; min-height: 0; max-height: none; border-radius: 0; border: 0; }
+.builder:fullscreen { position: static; }
+@media (max-width: 860px) { .builder.full, .builder:fullscreen { grid-template-rows: 38dvh minmax(0, 1fr); } }
+html.no-scroll, html.no-scroll body { overflow: hidden; }
 .react-flow__attribution { display: none; }
 .react-flow__background circle, .react-flow__background-pattern { fill: var(--grid) !important; }
 input[type="checkbox"] { accent-color: var(--text); width: 15px; height: 15px; }

@@ -133,7 +133,7 @@ export default function BlockPage({ c, slug, toast, toBuilder }: Props) {
     const nodes = b.steps.map((s, i) => ({ id: `s${i + 1}`, slug: s.uses, x: i * 300, y: 0 }));
     const edges = wireSteps(c, b.steps.map((s) => s.uses)).map(([a, z], i) => ({ id: `e${i}`, from: nodes[a].id, to: nodes[z].id }));
     const r = await buildHandoffZip(c, { id: b.slug, name: b.name, updated: 0, nodes, edges });
-    if ("error" in r) toast(r.error); else { download(r.blob, r.filename); toast("Downloaded. Give the folder to Claude and say “Follow HANDOFF.md”."); }
+    if ("error" in r) toast(r.error); else { download(r.blob, r.filename); toast("Downloaded. Upload the folder to your AI and say “Follow HANDOFF.md”."); }
   };
   const copySkill = async () => { if (skill) { await navigator.clipboard.writeText(skill).catch(() => {}); toast("Skill copied. Paste it into your AI."); } };
 

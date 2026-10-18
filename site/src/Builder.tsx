@@ -1,6 +1,6 @@
 import { createContext, memo, useCallback, useContext, useEffect, useMemo, useRef, useState, type DragEvent } from "react";
 import {
-  Background, BackgroundVariant, Controls, Handle, Position, ReactFlow, ReactFlowProvider, addEdge, useEdgesState, useNodesState, useReactFlow,
+  Background, BackgroundVariant, Handle, Panel, Position, ReactFlow, ReactFlowProvider, addEdge, useEdgesState, useNodesState, useReactFlow,
   type Connection, type Edge, type Node, type NodeProps,
 } from "@xyflow/react";
 import "@xyflow/react/dist/base.css";
@@ -36,6 +36,26 @@ const BlockNodeView = memo(function BlockNodeView({ id, data }: NodeProps<BlockN
   );
 });
 const nodeTypes = { block: BlockNodeView };
+
+const Ico = ({ d }: { d: string }) => <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="square" aria-hidden="true"><path d={d} /></svg>;
+
+/** Zoom, fit and full screen. Full screen uses the browser's own when it can, and fills the window when it can't (iPhone). */
+function ViewControls({ full, onFull }: { full: boolean; onFull: () => void }) {
+  const { zoomIn, zoomOut, fitView } = useReactFlow();
+  const items = [
+    { label: "Zoom in", d: "M8 3v10M3 8h10", on: () => zoomIn({ duration: 200 }) },
+    { label: "Zoom out", d: "M3 8h10", on: () => zoomOut({ duration: 200 }) },
+    { label: "Fit to screen", d: "M2 6V2h4M10 2h4v4M14 10v4h-4M6 14H2v-4", on: () => fitView({ padding: 0.2, duration: 300, maxZoom: 1 }) },
+    full
+      ? { label: "Exit full screen", d: "M6 2v4H2M10 2v4h4M14 10h-4v4M2 10h4v4", on: onFull }
+      : { label: "Full screen", d: "M2 6V2h4M2 2l4.5 4.5M10 2h4v4M14 2l-4.5 4.5M14 10v4h-4M14 14l-4.5-4.5M6 14H2v-4M2 14l4.5-4.5", on: onFull },
+  ];
+  return (
+    <Panel position="bottom-right" className="view-ctl" aria-label="View">
+      {items.map((x) => <button key={x.label} onClick={x.on} aria-label={x.label} title={x.label} data-testid={`view-${x.label.toLowerCase().replace(/\s+/g, "-")}`}><Ico d={x.d} /></button>)}
+    </Panel>
+  );
+}
 
 const toFlow = (id: string, name: string, nodes: BlockNode[], edges: Edge[]): Flow => ({
   id, name, updated: Date.now(),
@@ -122,6 +142,30 @@ function Stage({ c, toast }: { c: Catalogue; toast: (m: string) => void }) {
   nodesRef.current = nodes;
   const refit = () => setTimeout(() => fitView({ padding: 0.2, duration: 300, maxZoom: 1 }), 60);
 
+  // Full screen: the browser's own where it exists, otherwise the builder fills the window.
+  const box = useRef<HTMLDivElement>(null);
+  const [full, setFull] = useState(false);
+  useEffect(() => {
+    const sync = () => { setFull(document.fullscreenElement === box.current); refit(); };
+    document.addEventListener("fullscreenchange", sync);
+    return () => document.removeEventListener("fullscreenchange", sync);
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
+  useEffect(() => {
+    if (!full || document.fullscreenElement) return;
+    document.documentElement.classList.add("no-scroll");
+    const esc = (e: KeyboardEvent) => { if (e.key === "Escape") setFull(false); };
+    window.addEventListener("keydown", esc);
+    return () => { document.documentElement.classList.remove("no-scroll"); window.removeEventListener("keydown", esc); };
+  }, [full]);
+  const toggleFull = async () => {
+    const el = box.current;
+    if (!el) return;
+    if (document.fullscreenElement) { await document.exitFullscreen().catch(() => {}); return; }
+    if (full) { setFull(false); refit(); return; }
+    if (el.requestFullscreen) { try { await el.requestFullscreen(); return; } catch { /* fall back below */ } }
+    setFull(true); refit();
+  };
+
   // Blocks, workflows and kits sent here from anywhere on the page.
   useEffect(() => {
     const take = () => {
@@ -200,7 +244,7 @@ function Stage({ c, toast }: { c: Catalogue; toast: (m: string) => void }) {
     const r = await buildHandoffZip(c, flow);
     if ("error" in r) { toast(r.error); return; }
     download(r.blob, r.filename);
-    toast("Downloaded. Give the folder to Claude and say \"Follow HANDOFF.md\".");
+    toast("Downloaded. Upload the folder to your AI and say \"Follow HANDOFF.md\".");
   };
   const status = !nodes.length ? null
     : !order ? { warn: true, text: "This workflow loops back on itself. Remove one connection." }
@@ -209,7 +253,7 @@ function Stage({ c, toast }: { c: Catalogue; toast: (m: string) => void }) {
 
   return (
     <NodeActions.Provider value={actions}>
-      <div className="builder" data-testid="builder">
+      <div className={`builder${full ? " full" : ""}`} ref={box} data-testid="builder">
         <Palette c={c} anchor={anchor} inFlow={inFlow} onAdd={addNext} onTemplate={loadTemplate} />
         <div className="stage" onDragOver={(e) => { e.preventDefault(); e.dataTransfer.dropEffect = "move"; }} onDrop={onDrop}>
           <div className="stage-bar">
@@ -232,7 +276,7 @@ function Stage({ c, toast }: { c: Catalogue; toast: (m: string) => void }) {
             defaultEdgeOptions={{ type: "smoothstep" }} deleteKeyCode={["Backspace", "Delete"]} proOptions={{ hideAttribution: true }}
           >
             <Background variant={BackgroundVariant.Dots} gap={22} size={1.2} />
-            <Controls showInteractive={false} position="bottom-right" />
+            <ViewControls full={full} onFull={toggleFull} />
           </ReactFlow>
           {!nodes.length && (
             <div className="stage-empty">

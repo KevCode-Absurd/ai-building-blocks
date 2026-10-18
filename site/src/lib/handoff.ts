@@ -117,7 +117,7 @@ export async function buildHandoffZip(c: Catalogue, flow: Flow): Promise<{ blob:
   put("workflow.json", JSON.stringify(workflowJson(c, flow, order), null, 2) + "\n");
   put("README.txt", [
     `${flow.name}: a handoff pack from AI Building Blocks.`,
-    "1. Upload this whole folder to Claude (a Project, Claude Code or Cowork) or another AI agent.",
+    "1. Upload this whole folder to your AI: Claude (a Project, Claude Code or Cowork), ChatGPT, or any AI agent that can read files.",
     "2. Say: \"Follow HANDOFF.md step by step.\"",
     "3. Have the inputs listed under \"Before you start\" ready.", "",
   ].join("\n"));

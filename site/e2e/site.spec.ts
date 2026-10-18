@@ -193,6 +193,18 @@ test("blocks can be added from the palette and auto-connect", async ({ page }) =
   await expect(builder.locator(".react-flow__edge")).toHaveCount(1);
 });
 
+test("the builder goes full screen and back, with zoom controls", async ({ page }) => {
+  await page.goto("/#build");
+  const builder = page.getByTestId("builder");
+  for (const id of ["view-zoom-in", "view-zoom-out", "view-fit-to-screen", "view-full-screen"]) await expect(builder.getByTestId(id)).toBeVisible();
+  await builder.getByTestId("view-full-screen").click();
+  const vp = page.viewportSize()!;
+  await expect.poll(async () => Math.round((await builder.boundingBox())!.width)).toBe(vp.width);
+  await builder.getByTestId("view-exit-full-screen").click();
+  await expect(builder.getByTestId("view-full-screen")).toBeVisible();
+  await expect.poll(async () => Math.round((await builder.boundingBox())!.width)).toBeLessThan(vp.width);
+});
+
 test("the builder suggests where to start, then what comes next", async ({ page }) => {
   await page.goto("/#build");
   const builder = page.getByTestId("builder");

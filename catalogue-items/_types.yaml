@@ -1,7 +1,7 @@
 # Shared input/output types. When one item's output type matches another's input, the two items connect.
 # Version 1 (2026-10-17). Field-level schemas are added as items need them.
 brand_and_product:
-  brand_brain:   {desc: "The brand's facts, voice, products, offers (with effective dates), claims register, personas and look. Format: Creative Engine brand-brain folder, schema v2.", schema: "planned: brand-brain v2 (Zod), backward compatible with CE v1"}
+  brand_brain:   {desc: "The brand's facts, voice, products, offers (with effective dates), claims register, personas and look.", schema: "planned: brand-brain v2 (Zod), backward compatible with CE v1"}
   product_data:  {desc: "One product's facts: price, variants, ingredients or materials, how it is used, photos by job."}
   offer:         {desc: "A live offer with price, terms, effective_from/to and a current flag."}
   persona:       {desc: "A buyer grounded in real review language: problem, trigger, wants, doubts, words they use."}

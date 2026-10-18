@@ -7,7 +7,7 @@
 - **Reuse Creative Engine.** Build on its parts; brand brain comes first.
 - **Every item gets the same core content:** a plain explanation, an example output, how to run it with or without Claude Code, ChatGPT and Codex, the items above and below it, and the recommended model.
 - **Examples use public data** from known brands (Grüns, AG1, IM8). They are labelled as examples, carry no invented claims, and are shown with and without the brand brain.
-- **Users can tweak everything.** Depth tiers run from Starter to Production. Routing alternatives such as OpenRouter are allowed.
+- **Users can tweak everything.** Depth tiers run from Starter to Production. Users can run items anywhere; we test on the four labs only (no router, decided 2026-10-18).
 - **Marketplace later,** with a 70/30 split in the creator's favour.
 
 ---
@@ -38,7 +38,7 @@ Filters on every list: tier (Starter → Production), needs brand brain (yes/no)
 | **Item page** | One part (see §3) | The core page of the site |
 | **Stack / recipe page** | A best-practice chain for a goal, step by step | Shows which step needs what; one-click download of the whole bundle |
 | **Model guide** | Which model class suits which complexity, current price per class | Fed by the model tests (§6) |
-| **How-to-use guides** | Setup once per tool: Claude Code, ChatGPT (Projects, custom GPTs), Claude.ai Projects, Codex, OpenRouter / LiteLLM / Portkey | Each item page links into these instead of repeating them |
+| **How-to-use guides** | Setup once per tool: Claude Code, ChatGPT (Projects, custom GPTs), Claude.ai Projects, Codex, Gemini | Each item page links into these instead of repeating them |
 | **Help me build this** | Implementation and consulting request | A button on every agent and system page |
 | **Pricing** | Free vs subscription | See §9 |
 | **My workspace** (logged in) | My brand brains, saved prompts, my forks ("make my version"), run history | No real data is shown publicly |
@@ -73,7 +73,7 @@ Sections in order. Bold ones are new this week.
      - too many references: cap at K
      - several jobs in one run: one product per run
    - **Token budget:** tokens per run, plus a **lean mode** (fewer references, short brand brain card).
-   - **Routing:** works directly in Claude/ChatGPT/Codex or through OpenRouter, LiteLLM or Portkey. Skill files stay model-neutral.
+   - **Routing:** works directly in Claude, ChatGPT, Gemini or Codex. Skill files stay model-neutral; other routes are untested.
 8. **How to run it**, in tabs:
    - **Claude Code:** download the skill folder, put it in `.claude/skills/`, run `/name`.
    - **ChatGPT:** Project knowledge files plus the instructions block, or a custom GPT.
@@ -124,7 +124,7 @@ catalogue-items/
 | Contract | `inputs[]` (type, required/recommended/optional), `outputs[]` (type) |
 | Dependencies | `needs[]`, `improves_with[]`, `feeds_into[]` (mostly computed from types; manual overrides allowed) |
 | Models | `complexity` (C1–C4), `model.recommended`, `model.budget`, `model.not_worth_it`, `steps[]` (for workflows: per-step complexity and model) |
-| Efficiency | `cache_order[]`, `context_budget_tokens`, `lean_mode`, `degrades_when[]`, `reuse[]`, `routers_ok[]` |
+| Efficiency | `cache_order[]`, `context_budget_tokens`, `lean_mode`, `degrades_when[]`, `reuse[]` (see doc 10 appendix for the new fields) |
 | Run guides | `runs_in[]` (claude-code, chatgpt, claude-projects, codex, router, manual) |
 | Edits and upgrades | `edit_points[]`, `tiers` {starter, standard, advanced, production → item ids} |
 | Provenance | `examples[]` (brand, with/without brain, date), `learned_from[]` (internal only; course and purchased sources are never shown or bundled) |
@@ -186,7 +186,7 @@ These are the same names the inventory CSVs already use.
 | **ChatGPT / Claude Projects** | One combined `.md` for Project knowledge, an instructions block, and the order of use ("load brand brain first, then…") |
 | **Custom GPT** | Instructions text plus knowledge files, within GPT size limits (uses lean mode) |
 | **Codex** | `AGENTS.md` snippet plus the skill folder |
-| **Any AI / router** | `prompt.txt` with `{placeholders}` and the recommended model string for OpenRouter / LiteLLM |
+| **Any AI / router** | `prompt.txt` with `{placeholders}` and the recommended model class; untested outside the four labs |
 | **Stack bundle** | All parts of a stack plus a run order. Prompt on download: "Works much better with Brand Brain + Reference shortlist. Get the bundle?" |
 
 ---

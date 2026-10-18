@@ -1,5 +1,7 @@
 # 05 · Production principles for every item we build
 
+> **18 Oct 2026: `10_AI_ENGINEERING_FRAMEWORK.md` is now the master** (decision 22, proposed). It confirms most of this doc and sharpens or corrects parts of §§5, 10, 11, 13, 14, 16, 17, 21 and 22; its §17 lists each change. Where the two differ, doc 10 wins once approved.
+
 **What this is:** the engineering rules that every prompt, skill, routine, workflow, agent and system on the platform follows. The ideas come from a course on production AI systems that Kevin shared on 2026-10-17. This document restates them in our own words and applies them to *our* catalogue. It is not a copy of the course.
 
 **How to use it:**
@@ -181,7 +183,8 @@ Above the agents sits a **system map**: which agents exist, what each owns, how 
 When many items make model calls, put a single **gateway** in front of them. It checks who is calling, checks budgets, picks the model, falls back when a provider is down, can mask sensitive data, and keeps a receipt (tokens, cost, time) for every call. An AI gateway counts **tokens**, not just requests.
 
 **In our platform:**
-- This is how we deliver Kevin's routing requirement. Items are model-neutral. Users can run them directly in Claude, ChatGPT or Codex, or through a router such as **OpenRouter, LiteLLM or Portkey**.
+- Items are model-neutral. Users can run them directly in Claude, ChatGPT, Gemini or Codex. We test only on the four labs we have accounts with (decided 2026-10-18, no router); anyone who runs them through another service tests that themselves.
+- Our own calls go through one file of our own, `tools/lib/models.ts` (doc 10 §12.2): four direct lab adapters, caps, a ledger row per call. **It never falls back to another lab during a model test**, because a silent swap would make the results false. Routing is an internal cheap-first rule (doc 10 §12.3), not a router service.
 - `item.yaml` gives a model **class** per step, never a hard-coded model. `_models.yaml` maps classes to today's models.
 - For our own hosted runs (examples, model tests, later the hosted product), Creative Engine's AI call and cost ledger already does most of this: routing, caps, a guard for personal data, and a call log. Reuse it as the platform gateway.
 - **Budgets per run** (`limits.max_cost`) and per account. A runaway loop hits its cap and alerts; it doesn't run all weekend.

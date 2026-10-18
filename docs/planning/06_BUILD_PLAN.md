@@ -91,10 +91,7 @@ ecom-parts/
 - The site will be Next.js, so the same schema code serves both.
 - Kevin already runs this stack.
 
-Model calls go through **one router**:
-- **OpenRouter** is the default. One key reaches cheap, mid and top models from every vendor, which is exactly what the model test needs.
-- **LiteLLM** (self-hosted) is the alternative if Kevin wants direct vendor keys and caching control.
-- "Jev" is still unclear (open question 3). If it's another router, it slots in as a third option.
+Model calls go **directly to the four labs** (Anthropic, OpenAI, Google, DeepSeek; decided 2026-10-18, no router) through one small gateway file of our own, `tools/lib/models.ts`, with one adapter per lab, since caching, batch and schema modes differ per lab (doc 10 §12.2).
 
 ### 2.4 Shared files written in Phase 0
 
@@ -120,7 +117,7 @@ Six small command-line tools. Each one is built only as far as the brand brain s
 | `import-item` | Copies an own item from a source into `catalogue-items/`. Records provenance and applies the new name from `_names.yaml`. Writes a draft `item.yaml` pre-filled from the inventory row (level, module, inputs, outputs, complexity). | inventory id (e.g. `CEA-008`) → item folder in `draft` |
 | `check-item` | Validates `item.yaml` against the schema, and against the `05` §21 checklist **for that item's level**. Checks that every input/output type exists, that examples and tests are present, and runs the "won't adopt" scan (§5.6). | item folder → pass/fail list |
 | `build-exports` | Builds the downloads from the one model-neutral `SKILL.md`: Claude Code folder, ChatGPT/Claude Projects `.md`, custom GPT instruction block (size-checked), Codex `AGENTS.md` snippet, plain `prompt.txt` with placeholders, and the lean version. | item folder → `exports/` |
-| `run-test` | Runs an item on its golden inputs with chosen models, via the router. Builds the prompt in cache order (`05` §5). Logs tokens (including cached tokens), cost, time and the full trace under one run ID. Hard cost cap per run and per round. | item + models + inputs → outputs + `tests/model-runs.csv` + traces |
+| `run-test` | Runs an item on its golden inputs with chosen models, directly on the four labs' APIs (batch by default; doc 10 §11). Builds the prompt in cache order (`05` §5). Logs tokens (including cached tokens), cost, time and the full trace under one run ID. Hard cost cap per run and per round. | item + models + inputs → outputs + `tests/model-runs.csv` + traces |
 | `grade` | Code checks first (format, length, claim IDs exist, prices match the offer), then a blind judge model scores against `checklist.yaml`. **The judge is never the model that wrote the output.** Reports quality %, plus the costliest-mistake count separately. | outputs → scores |
 | `build-graph` | Computes "needs / improves with / feeds into" from the types and writes the dependency map that item pages and stacks use. Flags orphans and broken chains. | all items → `graph.json` |
 
@@ -471,7 +468,7 @@ Built only after sections 1 and 2 are tested, so there's real content to show.
 |---|---|---|
 | **v0: public catalogue (free)** | Home, brand brain hub, module pages, item pages (`04` §3), stacks, model guide, how-to guides, downloads. Read-only; no accounts. | Next.js static pages generated from `catalogue-items/`; search over item manifests; dependency diagrams from `graph.json` |
 | **v1: accounts and subscription** | Login, My workspace (saved brains, saved prompts, forks), paid tiers above Starter, "Help me build this" form | Auth and payments added. Stripe. Free vs paid gates per `04` §9. |
-| **v2: in-browser runs** (optional) | Run an item on your own brain, from the site, via the router, with cost shown | Uses the same runner as the tests, behind per-user budgets |
+| **v2: in-browser runs** (optional) | Run an item on your own brain, from the site, through our gateway, with cost shown | Uses the same runner as the tests, behind per-user budgets |
 | **Later: creator marketplace** | Submissions, review, listings, 70/30 payouts | Stripe Connect; the same `check-item` gate for creator items |
 
 **Design rule:** the site reads the item files, so a fixed item is a fixed page. No content is copied into the site's database.
@@ -500,12 +497,12 @@ Built only after sections 1 and 2 are tested, so there's real content to show.
 |---|---|---|
 | 1 | Where the catalogue lives | New repo `ecom-parts` (§2.1) |
 | 2 | Language for the tools | TypeScript, to match Creative Engine |
-| 3 | Router for model tests | OpenRouter (Kevin adds the key to `.env` himself) |
+| 3 | ~~Router for model tests~~ | Decided 2026-10-18: direct lab accounts; keys in the handoff `.env` |
 | 4 | Test-spend cap per round | $25 to start |
 | 5 | Test brands | Grüns, AG1, IM8, plus one non-supplement brand later |
 | 6 | Retention module | Decide by Section 6; reviving looks cheaper, as the tag has ~10k lines with tests |
 | 7 | The cloud ecommerce OS app repo | Point me to it before Section 1, to avoid building the brain builder twice |
-| 8 | What "Jev" is | Needed only if it's a router we should support |
+| 8 | ~~What "Jev" is~~ | Dropped 2026-10-18: no router needed |
 
 ---
 
@@ -513,7 +510,7 @@ Built only after sections 1 and 2 are tested, so there's real content to show.
 
 1. Create the repo and folders (Phase 0) and write `RULES.md`, `_types.yaml`, `_models.yaml` and `_names.yaml`.
 2. Build `import-item` and `check-item`. Import `website-claims-extractor`.
-3. Build `run-test` and `grade`. Kevin adds the router key, then we run the item on 3 models with a small cap.
+3. Build `run-test` and `grade`. The four lab keys are already in place; we run the item on 3 models with a small cap.
 4. Build `build-exports` and `build-graph`. Produce the item's Markdown page preview.
 5. Kevin reviews that one item page. Its format becomes the template for everything after.
 6. Start Phase 2: save Grüns' public sources and build the test brain.

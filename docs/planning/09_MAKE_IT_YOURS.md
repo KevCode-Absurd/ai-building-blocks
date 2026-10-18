@@ -1,5 +1,7 @@
 # 09 · Make it yours: test, tighten, teach, build on, speed up and train
 
+> **18 Oct 2026: `10_AI_ENGINEERING_FRAMEWORK.md` is now the master** (decision 22, proposed). These ten steps sit inside its course (§18). It replaces the context order in §3 with one prompt standard, makes the examples count a measured choice, adds a step 0 ("Should I use AI for this?"), and turns step 6 into seven stages; its §17 lists each change. Where the two differ, doc 10 wins once approved.
+
 **Date:** 2026-10-18
 **Status:** proposed design (decision 21). Nothing is built yet. The business deck (slides 28–30) carries the short version. Where they differ, the final plan wins.
 **Question (Kevin):** help people test and evaluate their outputs with evals, get their prompts right, tighten and change skills, and build an interface on top. Show them how to use their own data, for example a book they want their copywriting agent to learn from. Explain what context to give and how to structure it. Show how to prepare a big data set, such as reviews or call transcripts, so the model does its best work, and how to pull data from different sources. Show how to check the output of, say, a copywriter agent. Cover how to make inference cheaper and faster, and how modelling and training work.

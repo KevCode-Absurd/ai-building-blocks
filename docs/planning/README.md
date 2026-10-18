@@ -20,6 +20,7 @@
 | `07_SOURCES_TO_SKILLS.md` | **How learning sources and playbooks become skills:** what we have (Creative Engine's 403 Learning guides, playbooks, Kevin's own docs, our own lessons), what rights allow, how sources are broken into pieces, and which gap modules they fill. |
 | `08_INTAKE_ENGINE.md` | **The intake engine (18 Oct):** paste any YouTube video, reel, article, post or GitHub skill library; it becomes idea cards, matched to our jobs, ladders and workflows, then prompts, skills, routines, workflows, mini tools and agents. Rights, safety, models, and the path from v0 to production. |
 | `09_MAKE_IT_YOURS.md` | **Make it yours (18 Oct):** teaching people to test and evaluate outputs, tighten prompts and skills, give the right context, prepare big data sets (reviews, call transcripts), teach an agent from a book, build an interface, make inference cheaper, and train models. |
+| `10_AI_ENGINEERING_FRAMEWORK.md` | **The master engineering standard (18 Oct, proposed):** built on Chip Huyen's *AI Engineering*. How every prompt, skill, routine, workflow, agent and app is built, tested, fixed, shipped and watched, plus the course "from a prompt to a platform". Chapter mappings in `10-book-notes/`. Wins over 04–09 where they differ. |
 | `sources/` | One report (`.md`) and item list (`.csv`) per source, plus `_SCHEMA.md`. Go here for detail and citations. |
 
 ## Sources covered
@@ -60,7 +61,7 @@
   - how to run it in Claude Code, ChatGPT and Codex, or without them
   - the items above and below it (dependencies)
   - depth tiers (Starter → Production)
-  - the recommended model by complexity, plus efficient-use guidance (caching, reuse, avoiding degraded output, routing via OpenRouter or similar)
+  - the recommended model by complexity, plus efficient-use guidance (caching, reuse, avoiding degraded output, the four labs we test on)
 - **Examples use public data** from well-known brands (Grüns, AG1, IM8). They are labelled as examples, carry no invented claims, and are shown with and without the brand brain. No private client data.
 - **Revenue:** affiliates, subscription, implementation/consulting, advertising last. Creator marketplace later at 70/30.
 - **Not selling access to other brands' ads.** References come through the user's own connectors.
@@ -81,5 +82,5 @@ Start the **section-by-section** work with the **brand brain**, then **M17 Creat
 
 1. **Retention module:** revive the archived `archive/retention-r1-r6` module, or rebuild M21 from its two skills?
 2. **The ~80 cloud sessions** building a separate "ecommerce OS" app (28 screens, URL-to-brain onboarding, Bombas extractors, API field checks). Where is that repo? It overlaps heavily with this plan and isn't inventoried yet.
-3. **"Jev":** which router did you mean? OpenRouter, LiteLLM and Portkey are already listed.
+3. ~~**"Jev"**~~ Dropped 2026-10-18: no router.
 4. **Where should the catalogue items live?** A new repo, or a folder inside Creative Engine? This planning pack sits in the handoff folder for now.

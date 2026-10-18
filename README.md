@@ -1,22 +1,24 @@
 # AI Building Blocks (working name)
 
-A global platform of **tested AI building blocks and expert implementation** for digital businesses. There are six levels: **prompt → skill → routine → workflow → agent → system**. Each block does one exact job. It also comes with:
-- a real, labelled example
+A **free, evergreen library** of tested AI building blocks for any business. It isn't only skills: it has prompts, skills, routines, workflows, applications, and people's own agents and bots. Each comes ready-made and with a plain how-to guide for setting it up yourself. Every listing comes with:
+- a plain-words explanation and a real before and after
 - the right model for the job, with its cost
 - downloads that run in Claude, ChatGPT, Codex or any AI
-- help when setup gets complex
+- a safety badge, and credit to the original when it came from elsewhere
 
-**Simple by default.** Every job is a ladder of steps. It starts by hand, then you ask an AI, connect a tool, save to a sheet, refresh it on a schedule, use a mini app, a full app, share it, and finally agents act on it. People see only their next step, at four levels: Beginner, Intermediate, Advanced and Expert. Creative Engine's workflows (brand brain, static ads, copy, avatars, the video board) become ready-made workflows people pick stages from.
+**How it's organised:** general listings any business can use come first. **Industry boards** come next, and work like subreddits with listings, downloads, comments and advice: **/ecommerce** first, then **/saas**, then more by demand. Job-role boards (marketing, finance, operations, product) follow. We also bring in good skills from GitHub and elsewhere. We check them for malware and prompt injection, then credit, improve and explain them.
 
-**Who it's for:** brands, dropshippers, agencies, software companies, creators and other digital businesses. We start with exact marketing jobs, where our tested methods are deepest, and then earn the right to cover sales, support and operations. Ecommerce is the **first industry pack**, not the product.
+**Simple by default.** Every job is a ladder: by hand → ask → connect → save → schedule → mini app → full app → share → act. People see only their next step, from Beginner to Expert.
 
-> **Status (2026-10-17): planning and scaffolding only.** No catalogue items, tools or site have been built yet. "AI Building Blocks" is a working name. The final brand name is still open.
+**Free first.** There's no paywall and no selling at the start. Money comes later, one stream at a time: affiliates, advertising (site and YouTube), consulting and implementation, memberships, premium workflows, and a creator marketplace (70/30).
+
+> **Status (2026-10-18): planning and scaffolding only. The plan is version 4 (free platform).** No catalogue items, tools or site have been built yet. "AI Building Blocks" is a working name. The final brand name is still open.
 
 ## Start here
 
 | Read | What it is |
 |---|---|
-| [docs/final-plan/Final-Plan.pdf](docs/final-plan/Final-Plan.pdf) | **Read this first.** The final plan, covering what we build, who for, go-to-market, the build, and a week-by-week execution plan, in plain language. |
+| [docs/final-plan/Final-Plan.pdf](docs/final-plan/Final-Plan.pdf) | **Read this first.** The final plan (v4), covering what we build, how it's organised, skills from the internet, growth, money later, the build, and a week-by-week plan, in plain language. |
 | [docs/FINAL_PLAN.md](docs/FINAL_PLAN.md) | The same plan as Markdown, for quick reference and for agents working in this repo. |
 | [DECISIONS.md](DECISIONS.md) | Every decision so far, dated, so later work doesn't undo it. |
 | [RULES.md](RULES.md) | Ground rules for anyone, person or AI agent, working in this repo. |
@@ -24,18 +26,16 @@ A global platform of **tested AI building blocks and expert implementation** for
 | [docs/inventory/](docs/inventory/) | Every existing skill, prompt, workflow and course item we found (1,338 rows), with rights and proposed names. **Private.** |
 | [docs/business/](docs/business/) | The business plan, the five-stream financial model and the earlier handoff. |
 
-## How the catalogue is organised
+## How the library is organised
 
-Every part can be found in four ways, and every job page shows its ladder with "where are you today?":
-
-| Find by | Examples |
+| Layer | What's in it |
 |---|---|
-| **Job** | "audit my Meta ads", "make 30 static ads for a sale", "audit this landing page" |
-| **Function** | business brain, research and strategy, creative and content, paid media, website and conversion, lifecycle and retention, analytics and profit, AI operations |
-| **Industry pack** | ecommerce and D2C first; then agencies, software and apps, creators and courses, service businesses |
-| **Host** | Claude Code, Claude Projects, ChatGPT, Codex, any AI via a router, or no AI (Beginner checklists) |
+| **General library** | Listings any business can use, as prompts, skills, routines, workflows, applications and agents, each with a setup guide |
+| **Industry boards** | /ecommerce first, /saas next: focused versions, comments and advice |
+| **Job-role boards** (later) | /marketing, /finance, /operations, /product |
+| **Tools** | Plain guides to AI tools, and how each is used in an industry |
 
-Each job has one core part. An industry pack adds the brain fields, examples, thresholds and wording for that industry. Packs never fork the part.
+Filters are job, type, level (Beginner to Expert), board and tool. A board version adds the industry's brain fields, examples, thresholds and wording. It never forks the general listing.
 
 ## Folder map
 
@@ -44,7 +44,7 @@ catalogue-items/   the product: one folder per part, each with item.yaml (empty 
   _types.yaml      shared input/output types, so parts connect to each other
   _models.yaml     model classes (cheap / mid / top / routed) mapped to today's models
   _names.yaml      old name → proposed name for all 226 own items
-  stacks/          ready-made chains for a goal (e.g. holiday sale pack)
+  stacks/          ready-made chains for a goal (e.g. brand brain → ads → copy)
 test-brands/       public test cases across business types, built only from saved public pages
 tools/             the "item factory" command-line tools (planned, not built)
 knowledge/         source pieces used to build parts (planned)

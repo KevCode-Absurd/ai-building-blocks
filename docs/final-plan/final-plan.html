@@ -171,6 +171,31 @@
   .mex { display:flex; gap: 6px; align-items:center; margin-top: 10px; }
   .mex span { width: 36px; height: 36px; border-radius: 6px; background: linear-gradient(135deg,#e2e8fa,#cfd9f5); }
   .mex em { font-size: 7.8pt; color: #6f6a5e; margin-left: 6px; }
+  .gantt .months.m12 { grid-template-columns: repeat(12, 1fr); }
+  .layers { display:grid; gap: 6px; margin: 10px 0 12px; }
+  .layers > div { border-radius: 10px; padding: 9px 13px; display:grid; grid-template-columns: 44mm 1fr 30mm; gap: 10px; align-items: center; break-inside: avoid; }
+  .layers > div > div:first-child b { font: 400 13pt Georgia, serif; display:block; }
+  .layers span { font-size: 8.6pt; }
+  .layers i { font-style: normal; font: 700 7.4pt "Segoe UI", sans-serif; letter-spacing: .07em; text-transform: uppercase; text-align: right; }
+  .ly1 { background: var(--blue); color: #fff; } .ly1 b, .ly1 i { color: #fff; }
+  .calls > li span.chip { display:inline-block; }
+  .legend { font-size: 8.2pt; color: var(--mute); margin: -4px 0 8px; }
+  .ly2 { background: #dbe5fb; color: var(--navy); }
+  .ly3 { background: var(--sky); color: var(--mute); } .ly3 b { color: var(--navy); }
+  .ly4 { background: #eceff5; color: var(--mute); } .ly4 b { color: var(--navy); }
+  .brow { display:grid; grid-template-columns: 1fr auto; gap: 8px; align-items: center; background: #fff; border: 1px solid #e0ddd4; border-radius: 9px; padding: 7px 11px; margin-top: 6px; font-size: 8.4pt; color: #6f6a5e; }
+  .brow b { display:block; font: 400 11.5pt Georgia, serif; color: #1b1a17; }
+  .brow .meta { font-size: 7.8pt; text-align: right; white-space: nowrap; }
+  .mtabs { display:flex; gap: 14px; font-size: 8.2pt; color: #6f6a5e; border-bottom: 1px solid #e0ddd4; padding-bottom: 5px; margin-top: 8px; }
+  .mtabs span.on { color: #1a47c9; font-weight: 700; }
+  .tag { display:inline-block; font: 700 6.9pt "Segoe UI", sans-serif; letter-spacing: .06em; text-transform: uppercase; padding: 1px 6px; border-radius: 8px; background: #efece4; color: #6f6a5e; margin-right: 4px; vertical-align: 1px; }
+  .tag.ok { background: #e3f5ec; color: #127a4a; } .tag.bl { background: #e2e8fa; color: #1a47c9; }
+  .srcbox { background: #fff; border: 1px dashed #cfcbc0; border-radius: 9px; padding: 7px 11px; margin-top: 8px; font-size: 8.2pt; color: #6f6a5e; }
+  .ba { display:grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 8px; }
+  .ba div { background: #fff; border: 1px solid #e0ddd4; border-radius: 9px; padding: 7px 10px; font-size: 8.2pt; color: #6f6a5e; }
+  .ba div i { display:block; font-style: normal; font: 700 7.2pt "Segoe UI", sans-serif; letter-spacing: .07em; text-transform: uppercase; margin-bottom: 2px; }
+  .flow.f9 > div { font-size: 7.8pt; padding: 7px 5px; }
+  .flow.f9 > div b { font-size: 8.4pt; }
 </style>
 </head>
 <body>
@@ -178,10 +203,10 @@
 <!-- COVER -->
 <section class="cover">
   <div class="brand">▮▮▮&nbsp; AI BUILDING BLOCKS &nbsp;·&nbsp; WORKING NAME</div>
-  <h1>The final plan.<br><em>From one prompt to a working system.</em></h1>
-  <p class="sub">What we're building, who it's for, how people climb from one prompt to a working system one step at a time, how we take it to market, how every part gets made, and exactly what happens each week. This is my recommended plan, start to finish, in plain language.</p>
+  <h1>The final plan.<br><em>A free library of AI building blocks, for every business.</em></h1>
+  <p class="sub">What we're building, how it's organised, how we bring in the best skills from around the internet and make them safe and simple, how it grows from general skills to industry boards to job roles, and how it earns money later. Everything is free at the start. This is my recommended plan, in plain language.</p>
   <div class="meta">
-    <div><b>18 October 2026</b>Version 3 · plan of record<br>Adds the step-by-step ladder</div>
+    <div><b>18 October 2026</b>Version 4 · plan of record<br>Free first: no selling at the start</div>
     <div><b>Private</b>Contains rights-sensitive notes; don't forward as is</div>
     <div><b>Repo</b>KevCode-Absurd/ai-building-blocks</div>
   </div>
@@ -195,79 +220,84 @@
 
   <div class="dark">
     <div class="eyebrow">What we're building</div>
-    <p style="font-size:11pt">A global platform of <b>tested AI building blocks and expert implementation</b> for digital businesses. It covers prompts, skills, routines, workflows, agents and complete systems. Each block does <b>one exact job</b> and shows a real, labelled example. It says which AI model to use and what it costs, and runs in the AI tools people already pay for. When setup gets hard, we do it for them.</p>
-    <p style="margin-top:7px">It is <b>simple by default</b>. Every job is a ladder, from what you do by hand today, to asking an AI, connecting your tools, a sheet that refreshes itself, a mini app, a shared app and finally agents. People see only their next step, from <b>Beginner</b> to <b>Expert</b>.</p>
+    <p style="font-size:11pt">A <b>free, evergreen library</b> of tested AI building blocks. It isn't only skills. It has simple prompts, skills, routines, workflows, applications, and your own agents and bots, plus <b>plain how-to guides for setting each one up yourself</b>. A complete beginner gets something useful on day one, and an expert finds the next level up. It starts with <b>general skills any business can use</b>. On top of that sit <b>industry boards</b>, starting with <b>/ecommerce</b>, where the skills are more focused and more valuable, and people download, comment and get advice, a bit like Reddit communities. Later come boards for <b>job roles</b> such as marketing, finance, operations and product management.</p>
+    <p style="margin-top:7px">Every listing is <b>tested, explained in plain words and shown with a real before and after</b>, so people who find GitHub overwhelming can still use it. We bring in good skills from around the internet too: we credit and link the original, check it for malware and prompt injection, tighten and improve it, and show what it produces. It stays <b>simple by default</b>: every job is a ladder, and people only see their next step.</p>
   </div>
 
   <div class="grid3">
-    <div class="card"><h4>Who it's for</h4><p>Digital businesses that sell online: brands, dropshippers, agencies, software companies, creators and service businesses. <b>Agencies first</b>, because one agency covers many industries and many brands.</p></div>
-    <div class="card"><h4>Where we start</h4><p><b>Exact marketing jobs</b>, where our tested methods are deepest. We then earn the right to cover sales, support and operations. Ecommerce is our <b>first industry pack</b>, not the product.</p></div>
-    <div class="card"><h4>How we earn</h4><p>Subscriptions ($99 / $299 / $899 a month), implementation ($5,000), consulting ($1,500), affiliates, and advertising last. A creator marketplace (70/30) comes later.</p></div>
+    <div class="card"><h4>Who it's for</h4><p>Anyone who uses AI for work, in any business. The first deep board is <b>/ecommerce</b>, because that's where our own tested skills are strongest. <b>/saas</b> comes next.</p></div>
+    <div class="card"><h4>What it costs</h4><p><b>Nothing.</b> No paywall, no selling, no sale campaigns at the start. Every skill, workflow and guide is free. <span class="chip c-dec">Decided</span></p></div>
+    <div class="card"><h4>How it earns, later</h4><p>Affiliates and advertising (site and YouTube) once traffic is there. Then consulting and implementation, memberships ($99–199 and $499 a month), premium workflows and a creator marketplace (70/30).</p></div>
   </div>
 
   <h2>The plan in five moves</h2>
   <ol class="steps tight">
-    <li><b>Now to 11 December: prove people pay.</b> Sell done-with-you <b>holiday sale sprints</b> (Black Friday to New Year) to stores, software companies, creators and the agencies that serve them. Meanwhile, build the brand brain and static ad sections.</li>
-    <li><b>December: package what works.</b> Four launch jobs become tested parts, each tested on more than one kind of business: brand brain, static ad pack, landing-page audit and Meta ad audit.</li>
-    <li><b>19 January 2027: open the free catalogue</b> (site v0). Start the weekly content engine and the founding-member pre-sale.</li>
-    <li><b>16 February 2027: switch on paid plans.</b> Take the first implementation projects and start an agency partner pilot.</li>
-    <li><b>Spring 2027 onward: go deeper, then wider.</b> First fill the marketing gaps (email, paid media, analytics). Then add the second industry pack (software and apps), routines and agents. The first non-marketing function opens once demand data picks it.</li>
+    <li><b>Now to January: port everything we have.</b> Every skill we own is generalised so any business can use it, tested and shown with a before and after. The ecommerce versions go on the /ecommerce board. The site gets built at the same time.</li>
+    <li><b>19 January 2027: open the site, free.</b> The general library, the /ecommerce board with comments, the first tool guides and the first skills brought in from the internet.</li>
+    <li><b>February to March: bring in the best of the internet.</b> Imported skills at scale, each one credited, safety-checked, improved and explained. The tools section grows.</li>
+    <li><b>From April: more boards.</b> /saas first, then more industries picked by demand, then job-role boards (marketing, finance, operations, product).</li>
+    <li><b>Money only once there's an audience.</b> Each revenue stream switches on when its own condition is met (Part 10). What's free at launch stays free.</li>
   </ol>
 
-  <div class="note"><b>How to read the labels:</b> &nbsp;<span class="chip c-dec">Decided</span> you've already decided it. &nbsp;<span class="chip c-pro">Proposed</span> my recommendation, needs your OK. &nbsp;<span class="chip c-ass">Assumption</span> a number or belief we still have to test. &nbsp;<span class="chip c-gap">Gap</span> we don't have it yet.</div>
-
-  <h2>Contents</h2>
+  <h2 style="margin-top:8px">Contents</h2>
   <div class="tocline">
-    <div><span>0</span>My calls, and what changed from v1</div>
+    <div><span>0</span>My calls, and what changed</div>
     <div><span>1</span>The idea</div>
-    <div><span>2</span>How the catalogue is organised</div>
-    <div><span>3</span>One step at a time: the ladder</div>
+    <div><span>2</span>How it's organised</div>
+    <div><span>3</span>The ladder</div>
     <div><span>4</span>Ready-made workflows</div>
-    <div><span>5</span>What people see</div>
-    <div><span>6</span>What we already have</div>
-    <div><span>7</span>Go-to-market</div>
-    <div><span>8</span>Launch calendar</div>
-    <div><span>9</span>The build</div>
-    <div><span>10</span>Step-by-step execution</div>
-    <div><span>11</span>Team</div>
-    <div><span>12</span>Money</div>
-    <div><span>13</span>Risks</div>
-    <div><span>14</span>Scorecard and decisions</div>
-    <div><span>A</span>Glossary and where things live</div>
+    <div><span>5</span>Skills from the internet</div>
+    <div><span>6</span>Tools</div>
+    <div><span>7</span>What people see</div>
+    <div><span>8</span>What we already have</div>
+    <div><span>9</span>Growing the audience</div>
+    <div><span>10</span>Money, later</div>
+    <div><span>11</span>Calendar</div>
+    <div><span>12</span>The build</div>
+    <div><span>13</span>Week by week</div>
+    <div><span>14</span>Team</div>
+    <div><span>15</span>Risks</div>
+    <div><span>16</span>Scorecard and decisions</div>
+    <div><span>A</span>Glossary</div>
   </div>
+
 </section>
 
 <!-- PART 0 CALLS -->
 <section class="part">
   <div class="eyebrow">Part 0 · My calls</div>
-  <h1>Nine calls <em>that shape everything.</em></h1>
-  <p class="lead">You asked for my own plan. These are the choices I'd make, and the rest of this document follows from them.</p>
+  <h1>Ten calls <em>that shape everything.</em></h1>
+  <p class="lead">Most of these are now your decisions from 18 October. The rest of the document follows from them.</p>
+  <div class="legend"><b>Labels:</b> <span class="chip c-dec">Decided</span> you decided it · <span class="chip c-pro">Proposed</span> my recommendation, needs your OK · <span class="chip c-ass">Assumption</span> still to test · <span class="chip c-gap">Gap</span> we don't have it yet</div>
+
 
   <ol class="calls">
-    <li><b>One catalogue for every digital business, organised by job.</b><span>We don't build an "ecommerce platform" or one app per industry. Each job has one core part, and industry packs add the brain fields, examples and thresholds for that industry. This keeps one quality bar and one test system, so a fix reaches every industry at once.</span></li>
-    <li><b>Marketing first, because that's where our proof is.</b><span>Our 110 tested items are almost all marketing: creative, scripts, pages, research. A new function (sales, support, operations) opens only when its first three jobs pass testing and at least 10 customers have asked for it.</span></li>
-    <li><b>Agencies are the first buyer.</b><span>One agency sale covers many brands in many industries. Agencies feel the pain of repeat work most, prove the parts work outside one industry, and become partners who resell us.</span></li>
-    <li><b>Prove payment before we build the platform.</b><span>Paid holiday sprints and a founding-member pre-sale come before accounts and payments. If nobody pays by Gate A (11 Dec), we change the offer, not the code.</span></li>
-    <li><b>Testing is the moat, so we publish it.</b><span>Every part shows real model tests: quality, cost per run and speed, cheap model vs top model. "Which model for which job" becomes our most useful content, and it's hard to copy.</span></li>
-    <li><b>Downloads first, hosted runs later.</b><span>Site v0 is a catalogue of parts that run in Claude, ChatGPT, Codex or any AI via a router. Running parts on our own servers comes only when customers ask for it, because it adds cost, security work and support.</span></li>
-    <li><b>Agents and systems are sold as implementation before they're products.</b><span>We sell bounded workflows first, then routines (from May) and agents (from June), each with budgets, approvals and red-team tests. Complex systems stay paid services until we've built the same thing twice.</span></li>
-    <li><b>Simple by default: every job is a ladder.</b><span>People start where they are: by hand, then asking an AI, connecting a tool, saving to a sheet, a 9 am refresh, a mini app, a full app, sharing it, and agents acting on it. Pages show only the next step, at four levels from Beginner to Expert. The higher steps are where "Help me build this" earns services revenue. Your direction, 18 Oct. <span class="chip c-dec">Decided</span></span></li>
-    <li><b>Small team, hiring on measured load.</b><span>You, Claude with helper agents, and specialist reviewers. The first hires (onboarding, delivery) come when tracked hours say so, not on a calendar.</span></li>
+    <li><b>Free first. No paywall, no selling at the start.</b><span>Everything is free: skills, workflows, guides, downloads. No sale campaigns and no paid tests. It's an evergreen resource anyone can take and use. <span class="chip c-dec">Decided</span></span></li>
+    <li><b>Build the whole platform, not one product.</b><span>No "four launch jobs" to sell. We port everything we have, organise it and keep adding to it. It isn't only skills: it's prompts, skills, routines, workflows, apps, and your own agents and bots, each ready-made and with a plain guide to setting it up yourself, so anyone gets value immediately at their level. <span class="chip c-dec">Decided</span></span></li>
+    <li><b>General first, then industry, then job roles.</b><span>Every skill is first made general, so any business can use it. Industry boards (/ecommerce first, /saas next) carry the focused versions, which are worth more to the people in that industry. Job-role boards come after a few industries. <span class="chip c-dec">Decided</span></span></li>
+    <li><b>Boards are communities.</b><span>Each board works like a subreddit: listings, downloads, comments and advice from us. Talk on the boards is where the later membership value comes from. <span class="chip c-dec">Decided</span></span></li>
+    <li><b>Bring in the best of the internet, made safe and simple.</b><span>Skills from GitHub and elsewhere are credited and linked, checked for malware and prompt injection, tightened, improved, and shown with a before and after. Only skills whose licence allows it are copied; the rest get a review page that links out. <span class="chip c-dec">Decided</span> <span class="chip c-pro">licence rule proposed</span></span></li>
+    <li><b>Testing and before/after are the value, so we show them.</b><span>Every listing shows real model tests (quality, cost per run, cheap vs top model) and a real example. "Which model for which job" is our most useful content.</span></li>
+    <li><b>Simple by default: every job is a ladder.</b><span>By hand, then ask, connect, save, schedule, mini app, full app, share, act. Pages show only the next step, at four levels from Beginner to Expert. <span class="chip c-dec">Decided</span></span></li>
+    <li><b>Downloads first, hosted runs later.</b><span>Listings run in Claude, ChatGPT, Codex or any AI through a router. We run things on our own servers only when people ask for it, because that adds cost, security work and support.</span></li>
+    <li><b>Money comes after the audience, one stream at a time.</b><span>Affiliates and ads first, then YouTube, consulting and implementation, memberships, premium workflows and the creator marketplace. Each one switches on only when its condition is met. <span class="chip c-dec">Decided</span></span></li>
+    <li><b>Keep costs small until money comes in.</b><span>You, Claude with helper agents, and paid-per-review specialists. No hires until revenue or measured workload says so. <span class="chip c-pro">Proposed</span></span></li>
   </ol>
 
-  <h2>What changed from version 1</h2>
+  <h2>What changed from version 3</h2>
   <table class="compact">
-    <thead><tr><th style="width:30%">Version 1 said (ecommerce guide)</th><th>This plan says</th></tr></thead>
+    <thead><tr><th style="width:32%">Version 3 said</th><th>Version 4 says</th></tr></thead>
     <tbody>
-      <tr><td>An ecommerce workflow platform</td><td>A platform of AI building blocks for <b>all digital businesses</b>. Ecommerce is the first industry pack. <span class="chip c-dec">Decided</span></td></tr>
-      <tr><td>Repo <code>ecommerce-workflow-platform</code></td><td>New repo <code>ai-building-blocks</code> (a working name). The old repo is superseded and can be archived.</td></tr>
-      <tr><td>Catalogue navigated by 28 ecommerce modules</td><td>Navigated by <b>job, function, industry pack and host</b>. The 28 modules become tags inside the ecommerce pack.</td></tr>
-      <tr><td>BFCM static ad pack for stores</td><td><b>Static ad pack</b>, holiday sale edition first, sold to any business running a Black Friday or year-end offer</td></tr>
-      <tr><td>Test brands: Grüns, AG1, IM8 (all supplements)</td><td>Grüns, AG1 and IM8, <b>plus one software company and one service or course business</b>, so every launch part is proven beyond one category <span class="chip c-pro">Proposed</span></td></tr>
-      <tr><td>Four depths per part: Starter, Standard, Advanced, Production</td><td>Every job is a <b>ladder of steps</b>, from by hand to agents, at four levels: <b>Beginner, Intermediate, Advanced, Expert</b>. Pages show only the next step. <span class="chip c-dec">Decided</span></td></tr>
-      <tr><td>Creative Engine used as a source of methods</td><td>Its finished workflows (brand brain, static ads, copy, avatars, the video board) become <b>ready-made workflows</b> people pick stages from, with the examples we already made</td></tr>
-      <tr><td>ecomOS: an unknown separate app</td><td>It's the Gehna dashboard. Its <b>patterns, not its data</b>, become the Meta ads ladder.</td></tr>
-      <tr><td>Expansion = more ecommerce modules</td><td>Expansion = <b>deeper</b> (more marketing jobs), then <b>wider</b> (new industry packs), then <b>new functions</b> (sales, support, operations)</td></tr>
+      <tr><td>Prove people pay first: holiday sale sprints, then a pre-sale</td><td><b>No selling at the start.</b> Build the whole platform and keep everything free. No sale campaigns. <span class="chip c-dec">Decided</span></td></tr>
+      <tr><td>Four launch jobs to lead with</td><td><b>No launch jobs.</b> We port every skill we own into a general library, then the /ecommerce board.</td></tr>
+      <tr><td>Subscriptions ($99 / $299 / $899) as the main income</td><td><b>No paywall.</b> Income later, in order: affiliates, ads, YouTube, consulting and implementation, memberships ($99–199 and $499), premium workflows, marketplace (70/30).</td></tr>
+      <tr><td>Agencies are the first buyer</td><td>No buyer to chase yet. The first wedge is the <b>/ecommerce board</b>; agencies may get their own board later.</td></tr>
+      <tr><td>Find parts by job, function, industry pack and host</td><td>Three layers: <b>general library → industry boards → job-role boards</b>. Job, type, level and host stay as filters.</td></tr>
+      <tr><td>Industry packs</td><td><b>Industry boards</b>: each one a community with its own listings, comments and advice</td></tr>
+      <tr><td>Only parts built from our own sources</td><td>Plus <b>skills from the internet</b>: credited, licence-checked, safety-checked, improved, with a before and after</td></tr>
+      <tr><td>Gates based on payment (Gate A on 11 Dec)</td><td>Gates based on <b>quality and use</b>: listings tested, safety checks passed, people coming back</td></tr>
+      <tr><td>Two extra public test cases to pick</td><td>Dropped as a project. General listings are still checked on more than one kind of business before they're labelled "any business".</td></tr>
+      <tr><td>Five-stream money model ($348k in Year 1)</td><td>Superseded. Year 1 is a build year with little or no income by design. The model gets rebuilt after three months of real traffic.</td></tr>
     </tbody>
   </table>
 </section>
@@ -275,94 +305,109 @@
 <!-- PART 1 IDEA -->
 <section>
   <div class="eyebrow" style="margin-top:22px">Part 1 · The idea</div>
-  <h1>AI answers. <em>Teams still do the setup.</em></h1>
-  <p class="lead">Anyone can ask an AI for an ad, an audit or a sales email. Getting a result you'd actually use means collecting your business's facts, choosing a method, picking the right model, checking the output and doing it again next week. That gap is the business.</p>
+  <h1>Great AI skills exist. <em>Most people can't use them.</em></h1>
+  <p class="lead">There are thousands of prompts and skills on GitHub and in AI communities. Most people never use them. They can't tell which ones work, whether they're safe, how to install them, or what they'd get. That gap is the business.</p>
 
   <div class="grid4">
-    <div class="card"><h4>1 · The method is too broad</h4><p>"Write me an ad" has no exact checks, inputs or standard for what good looks like.</p></div>
-    <div class="card"><h4>2 · The context is scattered</h4><p>Products or plans, prices, offers, claims, voice and reviews live in different places. The AI gets none of them.</p></div>
-    <div class="card"><h4>3 · A draft isn't finished work</h4><p>Someone has to catch the wrong price, the made-up claim and the off-brand line before it ships.</p></div>
-    <div class="card"><h4>4 · One success is hard to repeat</h4><p>Models change, prompts drift and nobody owns it. What worked in March breaks in June.</p></div>
+    <div class="card"><h4>1 · Too much, untested</h4><p>Long lists with no proof of what the output looks like or which model to use.</p></div>
+    <div class="card"><h4>2 · Not safe to trust</h4><p>A skill can hide scripts, data grabs or instructions that hijack the AI. Nobody checks.</p></div>
+    <div class="card"><h4>3 · Made for developers</h4><p>GitHub, terminals and setup files scare off most business users.</p></div>
+    <div class="card"><h4>4 · Too general or too narrow</h4><p>Either it fits nobody well, or it only fits the one business it was written for.</p></div>
   </div>
 
-  <h2>What we sell: the same parts, from small to complete</h2>
+  <h2>What's in the library: six kinds of building block</h2>
   <div class="ladder">
     <div><b>Prompt</b><span>one task, one result</span></div>
     <div><b>Skill</b><span>reusable method + checks</span></div>
     <div><b>Routine</b><span>runs on a schedule</span></div>
     <div><b>Workflow</b><span>several steps in order</span></div>
-    <div><b>Agent</b><span>picks its next step, within limits</span></div>
-    <div><b>System</b><span>app, data, logins, logs</span></div>
+    <div><b>Application</b><span>an app with data and logins</span></div>
+    <div><b>Agent</b><span>acts on its own, within limits</span></div>
   </div>
-  <p>Customers can start at any level and stop there. Every job is laid out as a <b>ladder of steps</b> that uses these blocks in order, and each step has a level: <span class="chip l-b">Beginner</span> <span class="chip l-i">Intermediate</span> <span class="chip l-a">Advanced</span> <span class="chip l-e">Expert</span>. Part 3 shows how. <span class="chip c-dec">Decided</span></p>
+  <p>Every listing is one of these six types. Every job is laid out as a <b>ladder of steps</b> that uses them in order, and each step has a level: <span class="chip l-b">Beginner</span> <span class="chip l-i">Intermediate</span> <span class="chip l-a">Advanced</span> <span class="chip l-e">Expert</span> (Part 3). <span class="chip c-dec">Decided</span></p>
 
-  <h2>What every part comes with</h2>
-  <table>
-    <thead><tr><th style="width:52%">On every part's page</th><th>Why it matters to the buyer</th></tr></thead>
+  <h2>Every type comes two ways: ready-made, and "how to make your own"</h2>
+  <table class="compact">
+    <thead><tr><th style="width:15%">Type</th><th style="width:38%">Take a ready-made one</th><th>Learn to set one up yourself</th></tr></thead>
     <tbody>
-      <tr><td><b>A real example</b> made from a public business, labelled "not affiliated". It's shown without the brand brain, with it, and with it plus references, and on more than one kind of business.</td><td>They see the quality before paying, they see it works for a business like theirs, and they see why the brand brain matters</td></tr>
-      <tr><td><b>Which model to use</b>: recommended, budget and "not worth it", from a real test with quality %, cost per run and speed</td><td>A cheap model writes an image prompt; a top model writes a full script. People stop overpaying.</td></tr>
-      <tr><td><b>Run it efficiently</b>: caching order, what to reuse, when quality drops, a lean mode, and routing through OpenRouter or similar</td><td>Lower token bills and no silent drop in quality</td></tr>
-      <tr><td><b>How to run it</b> in Claude Code, Claude Projects, ChatGPT, Codex, any AI via a router, or with no AI at all (Beginner)</td><td>It works in the tools they already pay for</td></tr>
-      <tr><td><b>Where it sits on the ladder</b>: its step, its level (Beginner to Expert) and the next step up</td><td>People start where they are and always know what's next</td></tr>
-      <tr><td><b>Industry notes</b>: what changes for stores, software, creators, agencies or services</td><td>One part fits their business without a separate product</td></tr>
-      <tr><td><b>What it needs and what it feeds</b>: the parts before and after it, shown as a small chain</td><td>They can grow from one prompt to a full system without starting over</td></tr>
-      <tr><td><b>Edit points, tiers and "Help me build this"</b></td><td>It fits their business, and complex setups become services revenue</td></tr>
+      <tr><td><b>Prompt</b></td><td>Copy, paste, get a result in a minute</td><td>How to write a good prompt; how to save and reuse your prompts</td></tr>
+      <tr><td><b>Skill</b></td><td>Download it into Claude, ChatGPT or Codex</td><td>What a skill is; how to install one; how to turn your own process into a skill</td></tr>
+      <tr><td><b>Routine</b></td><td>A ready schedule, e.g. a 9 am ad report</td><td>How to set up a scheduled task in Claude, ChatGPT or Google Sheets</td></tr>
+      <tr><td><b>Workflow</b></td><td>A chain of stages you tick, e.g. brand brain → ads → copy</td><td>How to chain prompts and skills; when a workflow beats one big prompt</td></tr>
+      <tr><td><b>Application</b></td><td>A mini app with a Refresh button and filters</td><td>How to build a one-page app with the AI's help; how to add logins and share it</td></tr>
+      <tr><td><b>Agents and bots</b></td><td>A bounded agent that proposes, and you approve</td><td>How to set up your own agent or bot for a task: tools, limits, approvals, costs</td></tr>
     </tbody>
   </table>
-  <div class="note"><b>What we are not:</b> a generic "marketing agent", a directory of untested prompts, an ecommerce-only tool, or a way to buy access to other brands' ads. References come through the customer's own connectors. <span class="chip c-dec">Decided</span></div>
+  <p class="small">The guides follow the same rules as the listings: plain words, a real before and after, tested in each tool, with the next step shown. People get value wherever they are on the chain, from starting out to expert. <span class="chip c-dec">Decided</span></p>
+
+  <h2>What every listing comes with</h2>
+  <table>
+    <thead><tr><th style="width:52%">On every listing's page</th><th>Why it matters</th></tr></thead>
+    <tbody>
+      <tr><td><b>A plain-words explanation</b>: what it does, who it's for, what you need</td><td>No GitHub knowledge needed</td></tr>
+      <tr><td><b>A real before and after</b>, made from a public business and labelled "not affiliated". It shows the result without your brand brain, with it, and on more than one kind of business.</td><td>People see the quality before they spend any time</td></tr>
+      <tr><td><b>Which model to use</b>: recommended, budget and "not worth it", from a real test with quality, cost per run and speed</td><td>A cheap model writes an image prompt; a top model writes a full script. People stop overpaying.</td></tr>
+      <tr><td><b>How to run it</b> in Claude, ChatGPT, Codex, any AI via a router, or with no AI at all</td><td>It works in the tools people already pay for</td></tr>
+      <tr><td><b>Where it sits on the ladder</b>: its step, its level and the next step up</td><td>People start where they are and always know what's next</td></tr>
+      <tr><td><b>Where it came from</b>: ours, or adapted from a named original with a link, its licence and what we changed</td><td>Honest credit, and people can check the original</td></tr>
+      <tr><td><b>A safety badge</b>: what we checked and when</td><td>People can trust what they install</td></tr>
+      <tr><td><b>What it needs and what it feeds</b>, shown as a small chain, plus the board versions (e.g. "for ecommerce")</td><td>People can grow from one prompt to a full system</td></tr>
+      <tr><td><b>Comments</b> from people using it, and replies from us</td><td>Advice, fixes and ideas build up on the page</td></tr>
+    </tbody>
+  </table>
+  <div class="note"><b>What we are not:</b> a paywalled course, a dump of GitHub links, a generic "marketing agent", an ecommerce-only tool, or a way to buy access to other brands' ads. References come through people's own connectors. <span class="chip c-dec">Decided</span></div>
 </section>
 
 <!-- PART 2 ORGANISATION -->
-<section>
-  <div class="eyebrow" style="margin-top:22px">Part 2 · How the catalogue is organised</div>
-  <h1>Find any part <em>four ways.</em></h1>
-  <p class="lead">People don't shop for "an agent". They shop for a job they need done today. So the job comes first, and everything else is a filter.</p>
+<section class="part">
+  <div class="eyebrow">Part 2 · How it's organised</div>
+  <h1>General first, <em>then industry, then job roles.</em></h1>
+  <p class="lead">Everything starts as a general skill any business can use. Industry boards hold the focused versions, which are worth more to the people in that industry. Job-role boards come once a few industries are live. <span class="chip c-dec">Decided</span></p>
 
+  <div class="layers">
+    <div class="ly1"><div><b>1 · The general library</b></div><span>Every skill made general: works for a store, a software company, a coach or a local business. Anyone can use it.</span><i>From launch</i></div>
+    <div class="ly2"><div><b>2 · Industry boards</b></div><span><b>/ecommerce</b> first, <b>/saas</b> next, then more by demand. Focused versions with the industry's own examples, thresholds and wording, plus comments and advice.</span><i>/ecommerce at launch · /saas Apr 2027</i></div>
+    <div class="ly3"><div><b>3 · Job-role boards</b></div><span><b>/marketing, /finance, /operations, /product</b> and more, for anyone in that role in any industry.</span><i>After 2–3 industries</i></div>
+    <div class="ly4"><div><b>Alongside · Tools</b></div><span>Plain guides to AI tools (what each does, what it costs, how to set it up) and how each one is used in a given industry.</span><i>From launch</i></div>
+  </div>
+
+  <h2>One listing, three layers</h2>
+  <table class="compact">
+    <thead><tr><th style="width:22%">Layer</th><th>Example: "write ad copy"</th><th>Example: "audit a landing page"</th></tr></thead>
+    <tbody>
+      <tr><td><b>General library</b></td><td>Ad copy from your offer, voice and buyer, for any business</td><td>What's broken, why it matters, what to fix first, for any page</td></tr>
+      <tr><td><b>/ecommerce</b></td><td>Product and price ads, bundles, sale wording, checked against the live price</td><td>Product-page checks: photos, reviews, shipping, AOV boosters</td></tr>
+      <tr><td><b>/saas</b></td><td>Plan and trial ads, feature-to-benefit lines</td><td>Pricing-page and sign-up checks, trial-to-paid friction</td></tr>
+      <tr><td><b>/marketing</b> (later)</td><td>Collected in one place for marketing managers in any industry</td><td>The same, with a weekly review routine</td></tr>
+    </tbody>
+  </table>
+  <p class="small">A board version never copies the general listing. It adds the industry's <b>brain fields</b> (products, plans or courses), <b>examples</b>, <b>thresholds</b> (what a good click rate or trial rate looks like), <b>wording</b> and <b>metrics</b>. A fix to the general listing reaches every board at once.</p>
+
+  <h2>Ways to find anything</h2>
   <div class="finder">
-    <div><h4>Job</h4><p>"Audit my Meta ads", "make 30 static ads for our sale", "audit this landing page"</p></div>
-    <div><h4>Function</h4><p>The area of work: creative and content, paid media, website and conversion, and so on</p></div>
-    <div><h4>Industry pack</h4><p>Ecommerce and D2C, agencies, software and apps, creators and courses, services</p></div>
-    <div><h4>Host</h4><p>Claude Code, Claude Projects, ChatGPT, Codex, any AI via a router, or no AI</p></div>
+    <div><h4>Job</h4><p>"Audit my Meta ads", "write ad copy", "build my brand brain"</p></div>
+    <div><h4>Type and level</h4><p>Prompt to agent; Beginner to Expert</p></div>
+    <div><h4>Board</h4><p>/ecommerce, /saas, later /marketing, /finance…</p></div>
+    <div><h4>Tool</h4><p>Claude, ChatGPT, Codex, Sheets, Meta, any AI via a router</p></div>
   </div>
 
-  <h2>Functions: marketing first</h2>
-  <table>
-    <thead><tr><th style="width:20%">Function</th><th style="width:36%">Example exact jobs</th><th>Our depth today</th><th style="width:15%">First release</th></tr></thead>
+  <h2>The areas of work in the library</h2>
+  <table class="compact">
+    <thead><tr><th style="width:21%">Area</th><th style="width:40%">Example jobs</th><th>Our depth today</th></tr></thead>
     <tbody>
-      <tr><td><b>Business brain</b></td><td>Brand brain builder, voice card, claims register, offer calendar</td><td><span class="chip c-ass">Partial</span> scans tested; builder never run end to end</td><td>Launch (free)</td></tr>
-      <tr><td><b>Research and strategy</b></td><td>Customer research from reviews, angle finder, offer builder, competitor profile</td><td><span class="chip c-ass">Partial</span> the customer-research pipeline works; offer maths missing</td><td>Jan 2027</td></tr>
-      <tr><td><b>Creative and content</b></td><td>Static ad pack, video scripts, image sets, creator briefs, SEO articles</td><td><span class="chip c-dec">Strong</span> 27+ tested static ad parts; scripts ready</td><td>Launch</td></tr>
-      <tr><td><b>Paid media</b></td><td>Meta ad audit, creative-fatigue review, weekly ad review, Google audit</td><td><span class="chip c-gap">Gap</span> high demand</td><td>Launch (Meta ads ladder)</td></tr>
-      <tr><td><b>Website and conversion</b></td><td>Landing-page audit, page copy, test calculator, speed check</td><td><span class="chip c-ass">Partial</span> page auditor and checklist exist; no product-page copy part</td><td>Launch (page audit)</td></tr>
-      <tr><td><b>Lifecycle and retention</b></td><td>Email flows, SMS, onboarding emails, win-back, support replies</td><td><span class="chip c-gap">Gap</span> an archived module could close it</td><td>Feb–Mar 2027</td></tr>
-      <tr><td><b>Analytics and profit</b></td><td>Tracking health check, weekly report, profit-opportunity ranker</td><td><span class="chip c-gap">Gap</span></td><td>Apr–Jun 2027</td></tr>
-      <tr><td><b>AI operations</b></td><td>Model picker, cost ledger, blind judge, router setup</td><td><span class="chip c-ass">Partial</span> cost ledger, lessons log and judge exist</td><td>Inside every part; standalone Q2 2027</td></tr>
-      <tr><td class="small">Later</td><td class="small">Sales, customer support, operations, finance and admin</td><td class="small">Not started</td><td class="small">When the rule below is met</td></tr>
+      <tr><td><b>Business brain</b></td><td>Brand brain builder, voice card, claims register, offer calendar</td><td><span class="chip c-ass">Partial</span> scans tested; builder never run end to end</td></tr>
+      <tr><td><b>Research and strategy</b></td><td>Customer research from reviews, angle finder, offer builder, competitor profile</td><td><span class="chip c-ass">Partial</span> offer maths missing</td></tr>
+      <tr><td><b>Creative and content</b></td><td>Static ads, ad copy, video scripts, avatars, video ads, SEO articles</td><td><span class="chip c-dec">Strong</span> 27+ tested static ad parts</td></tr>
+      <tr><td><b>Paid media</b></td><td>Meta ad audit, creative-fatigue review, weekly ad review</td><td><span class="chip c-gap">Gap</span> high demand; the Meta ladder fills it</td></tr>
+      <tr><td><b>Website and conversion</b></td><td>Landing-page audit, page copy, test calculator</td><td><span class="chip c-ass">Partial</span> no product-page copy part</td></tr>
+      <tr><td><b>Lifecycle and retention</b></td><td>Email flows, onboarding emails, win-back, support replies</td><td><span class="chip c-gap">Gap</span> an archived module could close it</td></tr>
+      <tr><td><b>Analytics and profit</b></td><td>Tracking check, weekly report, profit-opportunity ranker</td><td><span class="chip c-gap">Gap</span></td></tr>
+      <tr><td><b>AI operations</b></td><td>Model picker, cost ledger, blind judge, router setup</td><td><span class="chip c-ass">Partial</span></td></tr>
+      <tr><td class="small">Later</td><td class="small">Finance, operations, product, sales and support, mostly through skills we bring in</td><td class="small">Not started</td></tr>
     </tbody>
   </table>
 
-  <h2>Industry packs: one part, many industries</h2>
-  <p>A pack never copies a part. It adds the <b>brain fields</b> (products, or plans, or courses), <b>examples</b>, <b>thresholds</b> (what a good click rate or trial rate looks like), <b>wording</b> and <b>metrics</b> for that industry. The static ad pack makes product-and-price ads for a store, plan-and-trial ads for a software company, and launch-date ads for a course.</p>
-  <table>
-    <thead><tr><th style="width:21%">Pack</th><th style="width:38%">What changes in it</th><th>Our depth</th><th style="width:15%">When</th></tr></thead>
-    <tbody>
-      <tr><td><b>Ecommerce and D2C</b> (incl. dropshipping)</td><td>Products, prices, bundles, AOV, ROAS, product pages, store stages S0–S5</td><td><span class="chip c-dec">Deep</span> the 28-module map and Creative Engine's methods</td><td>Launch</td></tr>
-      <tr><td><b>Agencies</b></td><td>Many client brains kept apart, approvals, white-label exports, client reports</td><td><span class="chip c-ass">Partial</span> uses every other pack</td><td>Launch as buyer; Feb pilot</td></tr>
-      <tr><td><b>Software and apps</b></td><td>Plans, trials, activation, onboarding, payback period</td><td><span class="chip c-ass">Light</span> test case from Week 2</td><td>Pack v1 Apr 2027</td></tr>
-      <tr><td><b>Creators and courses</b></td><td>Launches, webinars, email lists, community, cohort dates</td><td><span class="chip c-ass">Light</span></td><td>Scoped May; v1 Q3 2027</td></tr>
-      <tr><td><b>Service businesses</b></td><td>Leads, bookings, reviews, local search, quotes</td><td><span class="chip c-gap">None</span></td><td>When demand shows</td></tr>
-    </tbody>
-  </table>
-
-  <h2>How we grow: deeper, then wider, then new functions</h2>
-  <div class="expand">
-    <div class="now"><b>1 · Deeper</b>Four launch jobs, then the rest of marketing for the first pack</div>
-    <div class="next"><b>2 · Wider</b>Same jobs adapted for software, then creators, then services</div>
-    <div class="next"><b>3 · New functions</b>Sales, support or operations, picked from demand data</div>
-    <div><b>4 · Systems</b>Complete applications, sold as implementation first</div>
-  </div>
-  <div class="note"><b>The rule for opening anything new</b>, whether a pack or a function: at least 10 customers or qualified leads have asked for it, its first three jobs pass the same tests as everything else, and we have a public test case for it. <span class="chip c-pro">Proposed</span></div>
+  <div class="note"><b>The rule for opening a new board</b> <span class="chip c-pro">Proposed</span>: people are asking for it (searches, comments or requests); at least 20 listings have been adapted for it and tested; and someone who works in that industry or role has reviewed the wording and thresholds.</div>
 </section>
 
 <!-- PART 3 LADDER -->
@@ -395,7 +440,7 @@
     <thead><tr><th style="width:11%">Step</th><th style="width:30%">What you do</th><th style="width:25%">What you get</th><th style="width:12%">Level · block</th><th>Do we have it?</th></tr></thead>
     <tbody>
       <tr><td><b>0 · By hand</b></td><td>Open Ads Manager, export, work it out in a spreadsheet</td><td>An answer, an hour or two later</td><td class="small">today</td><td class="small">Baseline. We time it to show what each step saves.</td></tr>
-      <tr><td><b>1 · Ask</b></td><td>Upload the export to Claude or ChatGPT with our audit prompt</td><td>Data checks, totals, creative mix; "unavailable" where data is missing</td><td><span class="chip l-b">Beginner</span><br><span class="small">prompt</span></td><td class="small">Launch job ④</td></tr>
+      <tr><td><b>1 · Ask</b></td><td>Upload the export to Claude or ChatGPT with our audit prompt</td><td>Data checks, totals, creative mix; "unavailable" where data is missing</td><td><span class="chip l-b">Beginner</span><br><span class="small">prompt</span></td><td class="small">Ported from our audit method</td></tr>
       <tr><td><b>2 · Connect</b></td><td>Connect the Meta ads connector (MCP) once, then ask "how did last week go?"</td><td>The same analysis without exporting; copy it wherever you need it</td><td><span class="chip l-b">Beginner</span><br><span class="small">skill</span></td><td class="small"><span class="chip c-dec">Done</span> We already pull Meta data through Claude's connector for client work</td></tr>
       <tr><td><b>3 · Save</b></td><td>Also connect Google Sheets. The skill writes a fixed layout, one tab each for account, campaign and ad.</td><td>A sheet your team can open, with charts and notes built on it</td><td><span class="chip l-i">Intermediate</span><br><span class="small">skill</span></td><td class="small"><span class="chip c-gap">Gap</span> Today the data goes to JSON files, not Sheets</td></tr>
       <tr><td><b>4 · Schedule</b></td><td>Run it every day at 9 am (Claude scheduled tasks, ChatGPT tasks or a Sheets trigger)</td><td>Fresh numbers each morning; everything built on the sheet updates too</td><td><span class="chip l-i">Intermediate</span><br><span class="small">routine</span></td><td class="small"><span class="chip c-gap">Gap</span> No scheduled refresh exists yet</td></tr>
@@ -405,7 +450,7 @@
       <tr><td><b>8 · Act</b></td><td>Agents watch the data and propose moves, such as pausing a tired ad or briefing new creatives. A person approves, then the agent acts.</td><td>Work gets done, not just reported</td><td><span class="chip l-e">Expert</span><br><span class="small">agent</span></td><td class="small"><span class="chip c-gap">Gap</span> Proposal only today; Meta access is read-only by rule</td></tr>
     </tbody>
   </table>
-  <div class="note"><b>Who does each step.</b> Steps 1–4 are downloads anyone can run themselves. From step 5 there's a "Help me build this" button (consulting, $1,500). Steps 6–8 are implementation ($5,000 or quoted) until we've built them twice and can turn them into a product. The ladder doubles as our upgrade path.</div>
+  <div class="note"><b>Who does each step.</b> Every step has a free guide. Steps 1–4 anyone can do in an afternoon. Steps 5–8 have full guides too. Later, a "Help me build this" link connects people to consulting, implementation or members' help (Part 10), so the ladder doubles as the path to our paid help.</div>
 
   <div class="keep"><h2>The same ladder works for making things</h2>
   <table class="compact">
@@ -424,6 +469,7 @@
     <div class="card"><h4>Jump in anywhere</h4><p>"I already have the sheet" takes you straight to step 4. Experts can go straight to the top.</p></div>
   </div>
 </section>
+
 
 <!-- PART 4 WORKFLOWS -->
 <section class="part">
@@ -454,53 +500,123 @@
 
   <div class="wf"><h4>6 · Meta ads dashboard <span class="chip l-b">Beginner → Expert</span></h4>
     <div class="stg"><span>Ask</span><span>Connect</span><span>Save to a sheet</span><span>9 am refresh</span><span>Mini app</span><span>Full app</span><span>Share</span><span>Act</span></div>
-    <p><b>Built from:</b> the ecomOS dashboard, our private client build. It brings refresh and filters, the ad gallery, the buyer's daily desk, weekly health checks, next moves for each team, and a printable client report. <b>Examples:</b> <span class="chip c-gap">Gap</span> no public business publishes its ad results, so this needs sample numbers (decision 14). Client data never leaves.</p></div>
+    <p><b>Built from:</b> the ecomOS dashboard, our private client build. It brings refresh and filters, the ad gallery, the buyer's daily desk, weekly health checks, next moves for each team, and a printable client report. <b>Examples:</b> <span class="chip c-gap">Gap</span> no public business publishes its ad results, so this needs sample numbers (decision 7). Client data never leaves.</p></div>
 
   <p><b>Pick and choose, on every workflow page:</b> tick the stages you want, then choose "take the whole workflow" or "just this step". You can swap any stage for your own tool, such as your own video model. Each stage shows its model and its cost per run.</p>
 
-  <div class="keep"><h2>What we can show in public, and what we can't</h2>
-  <table class="compact">
-    <thead><tr><th style="width:30%">Asset</th><th>Rule</th></tr></thead>
-    <tbody>
-      <tr><td><b>Grüns brain, ads, scripts, videos</b></td><td>Yes, labelled "made from public info, not affiliated". But the Grüns brain also holds <b>simulated customer research</b>. Anything built on that is rebuilt from public reviews or labelled "simulated research".</td></tr>
-      <tr><td><b>375 avatar portraits and their photoreal versions</b></td><td>Yes, labelled "AI-generated, fictional person". Never made to resemble a real person.</td></tr>
-      <tr><td><b>Gehna: dashboard, brain, ads, copy tests</b></td><td>Never the content or the numbers. Only the patterns: screen layouts, pipeline steps and the brain's section headings.</td></tr>
-      <tr><td><b>Skool skills (AI CMO, AI Operator), Ecom Intelligence guides</b></td><td>Reference only. Rebuilt in our own words, with nothing substantially similar.</td></tr>
-      <tr><td><b>Nourish Plus (a made-up demo brand)</b></td><td>Not used for public examples, because you ruled out made-up brands.</td></tr>
-    </tbody>
-  </table></div>
 </section>
 
-<!-- PART 5 LOOK AND FEEL -->
-<section class="part">
-  <div class="eyebrow">Part 5 · What people see</div>
-  <h1>Simple by default. <em>More only when you ask.</em></h1>
-  <p class="lead">It should feel like a friendly shop, not a control panel. We reuse the look Creative Engine already has (Mercatura) and the ecomOS dashboard's data layouts. We reuse the design, not the code.</p>
+<!-- PART 5 IMPORTS -->
+<section>
+  <div class="eyebrow" style="margin-top:22px">Part 5 · Skills from the internet</div>
+  <h1>The best of GitHub, <em>made safe and simple.</em></h1>
+  <p class="lead">There are good skills all over the internet, but most people can't judge them, install them or trust them. We find them, check them, credit them, improve them and show exactly what they produce. This is a big job that grows over time. We start once our own skills are ported. <span class="chip c-dec">Decided</span></p>
 
-  <div class="mock tight">
-    <div class="mbar"><span>● ● ●</span> Jobs › Paid media</div>
+  <div class="flow f9">
+    <div><b>1 Find</b>GitHub, skill hubs, community lists, requests</div>
+    <div><b>2 Licence</b>may we copy and change it?</div>
+    <div><b>3 Scan</b>scripts, links, hidden instructions</div>
+    <div><b>4 Sandbox run</b>with trick inputs</div>
+    <div><b>5 Tighten</b>remove risky parts, add guardrails</div>
+    <div><b>6 Adapt</b>general + board versions</div>
+    <div><b>7 Improve</b>test against the original</div>
+    <div><b>8 Publish</b>credit, link, before/after</div>
+    <div><b>9 Watch</b>re-check when the original changes</div>
+  </div>
+
+  <h2>What the safety check looks for</h2>
+  <div class="grid3">
+    <div class="card"><h4>Code that does things</h4><p>Scripts or commands that install packages, delete or change files, run on start-up, or are hidden or scrambled.</p></div>
+    <div class="card"><h4>Data leaving</h4><p>Web addresses, uploads, or requests for passwords, keys or tokens. A skill should never need your secrets in plain text.</p></div>
+    <div class="card"><h4>Hijacking the AI</h4><p>Hidden instructions (prompt injection) such as "ignore your rules", "don't tell the user" or "send this file to…", including in invisible text or comments.</p></div>
+    <div class="card"><h4>Too much power</h4><p>Asking for more tool access than the job needs, or acting without a person approving.</p></div>
+    <div class="card"><h4>Trick inputs</h4><p>We run it on poisoned pages and files to see whether it follows instructions buried inside them. It must treat content as data, not orders.</p></div>
+    <div class="card"><h4>Pinned version</h4><p>We review one exact version. If the original changes, our copy doesn't change until it's checked again.</p></div>
+  </div>
+  <p class="small">The scan is done by a tool (<code>scan-skill</code>) and then read by a person. Anything with scripts is only ever run in a sandbox with no secrets and no network access unless the test needs it. We reduce risk; we never promise zero risk. Skills that fail are not listed. If the problem is serious, we tell the original author privately.</p>
+
+  <h2>The licence rule <span class="chip c-pro">Proposed</span></h2>
+  <table class="compact">
+    <thead><tr><th style="width:30%">The original's licence</th><th>What we do</th></tr></thead>
+    <tbody>
+      <tr><td><b>Open</b>: MIT, Apache 2.0, BSD, CC BY</td><td>Copy, adapt and improve it. Keep the original notice, credit the author, link the original and list what we changed.</td></tr>
+      <tr><td><b>Share-alike</b>: GPL, CC BY-SA</td><td>Our adapted version must carry the same licence. Fine for free listings; flagged before anything paid is built on it.</td></tr>
+      <tr><td><b>Non-commercial</b>: CC BY-NC</td><td>Review page only, because the site will carry ads. We describe it, test it and link out, but don't host a copy.</td></tr>
+      <tr><td><b>No licence</b> (all rights reserved)</td><td>Review page only, or we ask the author for permission. Credit alone doesn't give us the right to copy.</td></tr>
+    </tbody>
+  </table>
+
+  <h2>What an imported listing shows</h2>
+  <div class="grid2">
+    <div class="card"><h4>Credit and link</h4><p>"Adapted from <i>&lt;name&gt;</i> by <i>&lt;author&gt;</i> (licence), version of <i>&lt;date&gt;</i>. See the original." Plus a short list of what we changed and why.</p></div>
+    <div class="card"><h4>Before and after</h4><p>The original's output next to ours on the same input, with the blind-judge score, cost per run and any safety fixes.</p></div>
+    <div class="card"><h4>In plain words</h4><p>What it does, what you need and how to install it in each tool. No terminal unless you choose the Advanced view.</p></div>
+    <div class="card"><h4>Where it fits</h4><p>Its type, ladder step, level, the general and board versions, and the skills it works well with.</p></div>
+  </div>
+  <p class="small">Later, people can upload their own skills. They go through the same steps before they're listed. Creators who choose to charge get 70% and we keep 30% (Part 10).</p>
+</section>
+
+<!-- PART 6 TOOLS -->
+<section>
+  <div class="eyebrow" style="margin-top:22px">Part 6 · Tools</div>
+  <h1>Every AI tool, <em>explained for your industry.</em></h1>
+  <p class="lead">People don't just need skills; they need to know which tools to use and how to set them up. Each tool gets a plain guide built from its own documentation and our tests, then a page on how it's used in each industry.</p>
+
+  <table class="compact">
+    <thead><tr><th style="width:24%">Page</th><th>What's on it</th><th style="width:28%">Example</th></tr></thead>
+    <tbody>
+      <tr><td><b>Tool guide</b> (general)</td><td>What it does, what it costs, the free tier, how to set it up, what it's good and bad at, which listings use it, and our test results</td><td>Claude, ChatGPT, Codex, Google Sheets, OpenRouter, the Meta ads connector</td></tr>
+      <tr><td><b>Tool in an industry</b></td><td>The setup and listings that matter for that board, with a worked example</td><td>"Claude for an online store: brand brain, ad copy, weekly ad review"</td></tr>
+      <tr><td><b>Comparison</b></td><td>The same job done in two or three tools, with quality, cost and time</td><td>"Static ads: three image models, same brief"</td></tr>
+    </tbody>
+  </table>
+  <div class="note"><b>Affiliate rule</b> <span class="chip c-pro">Proposed</span>: affiliate links are always labelled, and a tool's ranking comes only from our tests, never from what it pays. Sponsored deep dives, if we ever do them, are labelled "sponsored" at the top.</div>
+</section>
+
+<!-- PART 7 LOOK AND FEEL -->
+<section class="part">
+  <div class="eyebrow">Part 7 · What people see</div>
+  <h1>Simple by default. <em>More only when you ask.</em></h1>
+  <p class="lead">It should feel like a friendly library with busy noticeboards, not a control panel or a code site. We reuse the look Creative Engine already has (Mercatura) and the ecomOS dashboard's data layouts. We reuse the design, not the code.</p>
+
+  <div class="grid2">
+  <div class="mock tight" style="margin:6px 0">
+    <div class="mbar"><span>● ● ●</span> Boards › /ecommerce</div>
+    <div class="mbody">
+      <div class="mhead"><b>/ecommerce</b><span>Skills and workflows for online stores · 48 listings · 1.2k members</span></div>
+      <div class="mtabs"><span class="on">Top</span><span>New</span><span>Workflows</span><span>Tools</span><span>Ask</span></div>
+      <div class="brow"><div><b>Product-page audit</b><span class="tag bl">Skill</span><span class="tag">Beginner</span><span class="tag ok">Safety checked</span></div><div class="meta">2.1k taken<br>34 comments</div></div>
+      <div class="brow"><div><b>Static ads for a sale</b><span class="tag bl">Workflow</span><span class="tag">Intermediate</span><span class="tag ok">Ours</span></div><div class="meta">1.4k taken<br>19 comments</div></div>
+      <div class="brow"><div><b>Shopify order notes cleaner</b><span class="tag bl">Skill</span><span class="tag">Beginner</span><span class="tag">Adapted · MIT</span></div><div class="meta">640 taken<br>8 comments</div></div>
+    </div>
+  </div>
+
+  <div class="mock tight" style="margin:6px 0">
+    <div class="mbar"><span>● ● ●</span> Library › Paid media</div>
     <div class="mbody">
       <div class="mhead"><b>Show me how my Meta ads are doing</b><span>Any business · works in Claude, ChatGPT, Codex</span></div>
       <div class="mq">Where are you today?</div>
-      <div class="mchips"><span class="done">By hand</span><span class="done">Ask</span><span class="next">Connect</span><span>Save</span><span>Schedule</span><span>Mini app</span><span>Full app</span><span>Share</span><span>Act</span></div>
+      <div class="mchips"><span class="done">By hand</span><span class="done">Ask</span><span class="next">Connect</span><span>Save</span><span>Schedule</span><span>Mini app</span><span>…</span></div>
       <div class="mcard">
         <div class="mt">Your next step · <span class="chip l-b">Beginner</span></div>
         <b>Connect your Meta account</b>
-        <div class="m3"><div><i>You get</i>Last week's report without exporting anything</div><div><i>You need</i>Claude or ChatGPT, access to your ad account, 10 minutes</div><div><i>It costs</i>The cost per run from our model test</div></div>
-        <div class="mbtn">Show me how</div><span class="mlink">See all steps · Advanced view · Help me build this</span>
+        <div class="m3"><div><i>You get</i>Last week's report, no exporting</div><div><i>You need</i>Claude or ChatGPT, 10 minutes</div><div><i>It costs</i>From our model test</div></div>
+        <div class="mbtn">Show me how</div><span class="mlink">All steps · /ecommerce version · Comments (12)</span>
       </div>
-      <div class="mex"><span></span><span></span><span></span><span></span><em>Example made from public info about Grüns. Not affiliated.</em></div>
+      <div class="ba"><div><i>Before</i>Raw export, an hour in a spreadsheet</div><div><i>After</i>Checked totals, creative mix, "unavailable" where data is missing</div></div>
     </div>
   </div>
+  </div>
+  <p class="small">Mock-ups. The listing names and numbers are placeholders.</p>
 
   <div class="grid4 tight">
     <div class="card"><h4>One job per screen</h4><p>Each page answers: what will this do for me?</p></div>
     <div class="card"><h4>Next step only</h4><p>Show "you are here" and "next"; the rest on request.</p></div>
-    <div class="card"><h4>Normal view first</h4><p>Models, settings and scores sit behind an Advanced switch.</p></div>
+    <div class="card"><h4>Normal view first</h4><p>Models, files and settings sit behind an Advanced switch.</p></div>
     <div class="card"><h4>Plain words</h4><p>"Connect your Meta account", not "configure the MCP server".</p></div>
-    <div class="card"><h4>Three facts per step</h4><p>What you get, what you need, what it costs.</p></div>
-    <div class="card"><h4>Workflows are boards</h4><p>Stages are cards you tick, like the production board.</p></div>
-    <div class="card"><h4>One main button</h4><p>One blue action; everything else is a quiet link.</p></div>
+    <div class="card"><h4>Before and after on top</h4><p>Show the result first, the instructions second.</p></div>
+    <div class="card"><h4>Boards feel like a forum</h4><p>Top, New, Ask; comments under every listing.</p></div>
+    <div class="card"><h4>Ads stay quiet</h4><p>When ads come, one quiet slot per page, never inside the steps.</p></div>
     <div class="card"><h4>Works on a phone</h4><p>The dock becomes a sheet; tables become cards.</p></div>
   </div>
 
@@ -510,264 +626,239 @@
     <tbody>
       <tr><td><b>Look</b></td><td>Creative Engine's "warm paper" theme (one blue action colour) and its "premium ink" dark theme; DM Serif Display and DM Sans</td></tr>
       <tr><td><b>Components</b></td><td>Creative Engine's shadcn set, plus its status pills, run bar, "needs a brain" prompt and "what's next" empty states</td></tr>
-      <tr><td><b>Navigation</b></td><td>The bottom dock (Home · Jobs · Workflows · My brain · Learn) and the Normal/Advanced switch</td></tr>
+      <tr><td><b>Navigation</b></td><td>The bottom dock, now <b>Home · Library · Boards · Tools · Learn</b>, and the Normal/Advanced switch</td></tr>
       <tr><td><b>Data steps</b></td><td>The ecomOS dashboard's overview cards, Refresh button and filter bar</td></tr>
-      <tr><td><b>Boards</b></td><td>Creative Engine's production Kanban: drag to run, with the cost shown before any paid step</td></tr>
+      <tr><td><b>Workflow boards</b></td><td>Creative Engine's production Kanban: drag to run, with the cost shown before any paid step</td></tr>
     </tbody>
   </table>
+  <p class="small">Comments need free accounts at launch (just email, no payment), a report button, spam filtering and a moderation queue. I found no screen called "Creative Intelligence", so I've read it as the ecomOS dashboard (decision 6).</p>
 </section>
 
-<!-- PART 6 WHAT WE HAVE -->
-<section class="part">
-  <div class="eyebrow">Part 6 · Starting point</div>
+<!-- PART 8 WHAT WE HAVE -->
+<section>
+  <div class="eyebrow" style="margin-top:22px">Part 8 · Starting point</div>
   <h1>We're not <em>starting from zero.</em></h1>
-  <p class="lead">We went through Creative Engine, the Ecommerce OS docs, every Skool course, Ecom Agent OS and GitHub, and put every item into one sheet.</p>
+  <p class="lead">We went through Creative Engine, the Ecommerce OS docs, every Skool course, Ecom Agent OS and GitHub, and put every item into one sheet. Porting our own items is the first job.</p>
   <div class="grid4">
     <div class="card kpi"><div class="big">1,338</div><p>items found across 7 sources</p></div>
-    <div class="card kpi"><div class="big">263</div><p>are your own work and can become products</p></div>
+    <div class="card kpi"><div class="big">263</div><p>are your own work: these get ported first</p></div>
     <div class="card kpi"><div class="big">110</div><p>of those are already tested with examples</p></div>
-    <div class="card kpi"><div class="big">403</div><p>learning guides in Creative Engine to mine for know-how</p></div>
+    <div class="card kpi"><div class="big">~75</div><p>general listings after merging duplicates <span class="chip c-ass">Assumption</span></p></div>
   </div>
   <p class="small"><b>Plus the two apps:</b> Creative Engine (the Mercatura app) has about 60 screens, 1,076 analysed reference ads, 375 avatar portraits, about 900 Grüns static ads, 169 scripts and 25 videos. The ecomOS dashboard has 17 data screens, a Refresh button and team logins. Part 4 turns both into workflows.</p>
-  <p><b>In one line:</b> we're strong at <b>making</b> marketing (creative, scripts, pages, SEO) and weak at <b>analysing</b> it and <b>keeping customers</b> (paid media, email, analytics, profit). Most of what we have was written for stores. Turning it into parts means separating the <b>method</b>, which is general, from the <b>store details</b>, which go into the ecommerce pack.</p>
+  <p><b>In one line:</b> we're strong at <b>making</b> marketing (creative, scripts, pages) and weak at <b>analysing</b> it and <b>keeping customers</b>. Almost all of it was written for stores. Porting means splitting each item into the <b>general method</b>, which goes in the library, and the <b>store details</b>, which go on the /ecommerce board.</p>
 
-  <h2>The learning library fills exactly those gaps</h2>
-  <table>
-    <thead><tr><th>Guides in Creative Engine's Learning section</th><th class="num">Count</th><th>Fills</th></tr></thead>
+  <h2>Port order</h2>
+  <table class="compact">
+    <thead><tr><th style="width:6%">#</th><th style="width:30%">Section</th><th>What's in it</th><th style="width:16%">When</th></tr></thead>
     <tbody>
-      <tr><td>Retention: flows, email copy, segments, SMS</td><td class="num">48</td><td>Lifecycle and retention <span class="chip c-gap">Gap</span></td></tr>
-      <tr><td>Customer experience: delivery, returns, first use</td><td class="num">27</td><td>Lifecycle (support replies) <span class="chip c-gap">Gap</span></td></tr>
-      <tr><td>Ad monitoring: Meta deployment and diagnosis</td><td class="num">25</td><td>Paid media <span class="chip c-gap">Gap</span></td></tr>
-      <tr><td>Data: attribution, tracking, cohort economics</td><td class="num">18</td><td>Analytics and profit <span class="chip c-gap">Gap</span></td></tr>
-      <tr><td>Landing pages, incl. 7 on product pages</td><td class="num">68</td><td>Website and conversion, incl. the missing product-page copy part</td></tr>
-      <tr><td>Creative, insights, experiments</td><td class="num">217</td><td>Strengthen creative, research and testing</td></tr>
+      <tr><td>1</td><td><b>Business brain</b></td><td>15 items become 11 listings: template, voice card, interview, brain from a website, brain card, claims extractor, look scan, updater</td><td>Nov</td></tr>
+      <tr><td>2</td><td><b>Creative and content</b></td><td>78 static ad items become about 20 listings, plus ad copy, scripts, avatars and video</td><td>Nov–Dec</td></tr>
+      <tr><td>3</td><td><b>Website, paid media, research</b></td><td>Page audit, the Meta ads ladder steps 1–4, customer research, angles and offers</td><td>Dec</td></tr>
+      <tr><td>4</td><td><b>Lifecycle, analytics, AI operations</b></td><td>The archived retention module, tracking check, weekly report, model picker, cost ledger</td><td>Jan–Feb 2027</td></tr>
     </tbody>
   </table>
-  <div class="note warn"><b>Rights catch:</b> the 403 guides are adapted from the Ecom Intelligence course. Until you confirm what its terms allow, we use them only as private input and rebuild every published part in our own words, backed by our own tests. The same goes for the Blue Sense and Nu Reach playbooks. <code>copy-craft</code> comes from the purchased Copy Machine, so it needs a clean rewrite before anything built on it is published.</div>
 
-  <h2>How a source becomes a part</h2>
-  <div class="flow">
-    <div><b>Register</b>source, owner, rights</div>
-    <div><b>Split</b>rules, steps, checks, thresholds, examples</div>
-    <div><b>Tag</b>function, job, pack, evidence</div>
-    <div><b>Group</b>merge duplicates, flag conflicts</div>
-    <div><b>Map</b>a part, a check, a Learn page, or drop</div>
-    <div><b>Test</b>with vs without</div>
-  </div>
-  <p class="small">Checklists become audit parts. Thresholds become settings that each industry pack can change. Steps become workflow steps, and explanations become Learn pages. Your own documents (the 62-check store baseline, the stage model, the 300-opportunity profit backlog) convert directly. A piece of know-how stays in a prompt only if a with/without test shows it helps.</p>
+  <div class="note warn"><b>Rights catch:</b> the 403 learning guides in Creative Engine are adapted from the Ecom Intelligence course. Until you confirm what its terms allow, we use them only as private input and rewrite every listing in our own words, backed by our own tests. The same goes for the Blue Sense and Nu Reach playbooks. <code>copy-craft</code> comes from the purchased Copy Machine, so it needs a clean rewrite before anything built on it is published.</div>
+
+  <div class="keep"><h2>What we can show in public</h2>
+  <table class="compact">
+    <thead><tr><th style="width:30%">Asset</th><th>Rule</th></tr></thead>
+    <tbody>
+      <tr><td><b>Grüns brain, ads, scripts, videos</b></td><td>Yes, labelled "made from public info, not affiliated". The Grüns brain also holds <b>simulated customer research</b>, so anything built on that is rebuilt from public reviews or labelled "simulated research".</td></tr>
+      <tr><td><b>375 avatar portraits and their photoreal versions</b></td><td>Yes, labelled "AI-generated, fictional person". Never made to resemble a real person.</td></tr>
+      <tr><td><b>Gehna: dashboard, brain, ads, copy tests</b></td><td>Never the content or the numbers. Only the patterns: screen layouts, pipeline steps and the brain's section headings.</td></tr>
+      <tr><td><b>Skool skills (AI CMO, AI Operator), Ecom Intelligence guides</b></td><td>Reference only. Rewritten in our own words, with nothing substantially similar.</td></tr>
+      <tr><td><b>Nourish Plus (a made-up demo brand)</b></td><td>Not used for public examples, because you ruled out made-up brands.</td></tr>
+    </tbody>
+  </table></div>
 </section>
 
-<!-- PART 7 GTM -->
-<section class="part">
-  <div class="eyebrow">Part 7 · Go-to-market</div>
-  <h1>Who we sell to, what we say, <em>and how they find us.</em></h1>
+<!-- PART 9 GROWTH -->
+<section>
+  <div class="eyebrow" style="margin-top:22px">Part 9 · Growing the audience</div>
+  <h1>No selling. <em>Be the place people come back to.</em></h1>
 
-  <h3>7.1 &nbsp;The message</h3>
   <div class="dark">
-    <div class="eyebrow">One line</div>
-    <p style="font: 400 15pt Georgia, serif; color:#fff">Tested AI building blocks for your business, from one prompt to a working system, with real examples, the right model for every job, and help when you need it.</p>
+    <div class="eyebrow">One line (wording to test)</div>
+    <p style="font: 400 15pt Georgia, serif; color:#fff">Free, tested AI prompts, skills, workflows and agents, and how to set them up yourself: plain words, checked for safety, with real before-and-after examples. Start wherever you are.</p>
   </div>
   <div class="grid3">
-    <div class="card"><h4>For</h4><p>Digital businesses and their agencies who already use ChatGPT or Claude but don't get finished, on-brand, accurate work from it.</p></div>
-    <div class="card"><h4>Unlike</h4><p>Free prompt lists (untested, generic), "AI agents" (black boxes) and agencies (slow, expensive, not reusable).</p></div>
-    <div class="card"><h4>Proof we show</h4><p>Side-by-side outputs on public businesses of different kinds, blind-judged scores and the real cost per run. No invented claims.</p></div>
-  </div>
-  <p class="small">Wording to test, not final. <span class="chip c-pro">Proposed</span> The final brand name is still open.</p>
-
-  <h3>7.2 &nbsp;Who we sell to first</h3>
-  <table>
-    <thead><tr><th style="width:19%">Segment</th><th style="width:22%">What hurts</th><th>First job they buy</th><th style="width:13%">Plan</th><th style="width:20%">How we reach them</th></tr></thead>
-    <tbody>
-      <tr><td><b>1 · Agencies</b> (performance, creative, growth)</td><td>Every client needs the same work done well; thin margins</td><td>Meta ad audit and static ad pack, reused across clients in any industry</td><td>Agency $899 + implementation</td><td>Partner pilot, direct outreach, communities</td></tr>
-      <tr><td><b>2 · Growing online brands</b> (stores, D2C)</td><td>Need many new ads every month; launches and sales; agency costs</td><td>Brand brain → static ad pack → landing-page audit</td><td>Team $299</td><td>YouTube task videos, search, founder networks</td></tr>
-      <tr><td><b>3 · Software and app companies</b></td><td>Small marketing teams; paid ads and onboarding emails that don't convert</td><td>Landing-page audit, Meta ad audit, static ads for a trial or plan offer</td><td>Team $299</td><td>Search, founder communities, content</td></tr>
-      <tr><td><b>4 · Freelancers, creators, media buyers</b></td><td>Selling hours; want leverage</td><td>Audit and creative parts to run for clients or their own launches</td><td>Individual $99</td><td>Content, communities, affiliate links</td></tr>
-      <tr><td><b>5 · New businesses and dropshippers</b></td><td>Don't know what good looks like; tight budget</td><td>Free brand brain, Beginner checklists, baseline audit</td><td>Free → $99</td><td>Content and search (top of funnel)</td></tr>
-    </tbody>
-  </table>
-  <p class="small">Agencies come first because one sale covers many brands across industries, and partners resell us. Growing brands are the clearest story for content. Software companies test that the parts travel. <span class="chip c-ass">Assumption</span> We test which converts best (§7.10).</p>
-
-  <h3>7.3 &nbsp;What we launch with: four exact jobs, for any business</h3>
-  <p>Don't lead with a broad label. Lead with an exact job, its inputs, an example output, its price and where it runs. <span class="chip c-pro">Proposed</span></p>
-  <div class="grid2">
-    <div class="card"><h4>① Brand brain builder: free</h4><p>From a website address plus a few answers, build one file that teaches any AI what you sell (products, plans, services or courses), your offers with dates, your claims, your voice and your buyers. It's the entry point, and every other part works better with it.</p></div>
-    <div class="card"><h4>② Static ad pack, holiday sale edition first</h4><p>Plan → copy → stranger-read check → image prompt → render → QA, with every price and offer checked against the current offer. Built from our strongest area. Works for a product sale, a plan discount or a course launch.</p></div>
-    <div class="card"><h4>③ Landing-page audit</h4><p>Our page auditor and checklist: what's broken, why it matters and what to fix first, with industry notes for store, software and course pages. A strong lead-in to paid implementation.</p></div>
-    <div class="card"><h4>④ Meta ad audit, as a ladder</h4><p>Upload an export and get data checks, efficiency totals, creative diversity and a new-vs-established spend split. When data is missing, it says "unavailable" rather than guessing. It ships as steps 1–4: ask, connect Meta, save to a sheet, refresh at 9 am. Every Meta advertiser has the problem, whatever they sell.</p></div>
+    <div class="card"><h4>For</h4><p>Anyone using AI for work who wants finished, accurate results without learning GitHub. The first board is for online stores.</p></div>
+    <div class="card"><h4>Unlike</h4><p>GitHub lists (untested, technical, unchecked), prompt dumps (generic) and paid courses (locked, go stale).</p></div>
+    <div class="card"><h4>Proof we show</h4><p>Before and after on public businesses, blind-judged scores, real cost per run, a safety badge and credit to the original.</p></div>
   </div>
 
-  <h3>7.4 &nbsp;Offer and pricing</h3>
-  <table>
-    <thead><tr><th>Plan</th><th>Price</th><th>What's included</th><th>Who it's for</th></tr></thead>
-    <tbody>
-      <tr><td><b>Free</b></td><td>$0</td><td>All prompts, every Beginner step, the brand brain builder, examples, how-to guides, downloads</td><td>Discovery, trust, search traffic</td></tr>
-      <tr><td><b>Individual</b></td><td>$99/mo</td><td>Intermediate and Advanced steps (connect, save, schedule, mini apps), model-test data, lean modes, stacks, saved prompts and versions</td><td>Freelancers, solo founders, creators</td></tr>
-      <tr><td><b>Team</b></td><td>$299/mo</td><td>Individual plus shared brand brains, team standards, more brands, supported retrieval, bounded help</td><td>Businesses with a marketing team</td></tr>
-      <tr><td><b>Agency</b></td><td>$899/mo</td><td>Team plus many client brands kept separate, roles, approvals, white-label exports</td><td>Agencies</td></tr>
-      <tr><td><b>Consulting</b></td><td>$1,500</td><td>A 6-hour package: diagnose, pick the parts, set them up with you</td><td>"Tell me what to use"</td></tr>
-      <tr><td><b>Implementation</b></td><td>$5,000</td><td>One bounded workflow or ladder step 6–8, built, tested and handed over (about 60 hours)</td><td>"Build it for me"</td></tr>
-      <tr><td><b>Full application</b></td><td>quoted</td><td>Custom interface, database, permissions, deployment</td><td>Larger businesses and agencies</td></tr>
-    </tbody>
-  </table>
-  <p class="small">The model assumes a 60/30/10 plan mix, about $239 per paying organisation per month. <span class="chip c-ass">Assumption</span> Customers pay their own model bills; we never hide them inside a low subscription. Downloads keep working under the licence. People renew for maintained releases, fresh references, saved settings and support, not because of artificial lock-in. <span class="chip c-dec">Decided</span></p>
-
-  <h3>7.5 &nbsp;How customers find us</h3>
-  <div class="grid3">
-    <div class="card"><h4>Content + product</h4><p>Every tested part becomes a page, a YouTube video, a short and a newsletter section. Visitors try it on their own business.</p><p style="margin-top:6px"><b>1,200</b> new paid/year by Y5 from 60k qualified visits × 10% trial × 20% paid</p></div>
-    <div class="card"><h4>Partners</h4><p>Agencies and tool experts who resell plans and deliver setups, trained to pass our quality checks.</p><p style="margin-top:6px"><b>1,500</b> new paid/year by Y5 from 150 productive partners × 10 each</p></div>
-    <div class="card"><h4>Targeted sales</h4><p>Permitted outreach to qualified businesses and agencies, with a demo built on their own public data.</p><p style="margin-top:6px"><b>300</b> new paid/year by Y5 from 75k approaches × 2% demos × 20% paid</p></div>
-  </div>
-  <p class="small">Year-5 targets from the business model; all funnel rates are <span class="chip c-ass">Assumptions</span>. Affiliates (clearly marked tool links) and labelled sponsorships add income but aren't acquisition channels.</p>
-
-  <h3>The content engine: one tested part makes five pieces of content</h3>
-  <div class="flow">
-    <div><b>Tested part</b>passes its checks</div>
-    <div><b>Part page</b>example, model, cost</div>
-    <div><b>YouTube</b>build it live on a public business</div>
-    <div><b>Short</b>"without vs with brand brain"</div>
-    <div><b>Newsletter</b>new parts + model results</div>
-    <div><b>Trial</b>run it on your business</div>
-  </div>
-  <p class="small">Formats that suit us: "without vs with brand brain"; "cheap model vs top model, same job" with the real cost; "same job, three industries" (a store, a software company and a course, side by side); public teardowns (labelled, no invented claims); and the <b>"climb the ladder"</b> series: one job, one step a week, from by hand to agent. Cadence once site v0 is live: 1 long video, 2 shorts and 1 newsletter a week. <span class="chip c-pro">Proposed</span></p>
-
-  <h3>7.6 &nbsp;The customer journey</h3>
-  <table>
-    <thead><tr><th>Stage</th><th>What they see or do</th><th>What we measure</th></tr></thead>
-    <tbody>
-      <tr><td><b>Discover</b></td><td>A video or search result for an exact job, with an honest sample from a business like theirs</td><td>Qualified visits to part pages</td></tr>
-      <tr><td><b>Try</b></td><td>Build the free brand brain, then run one part on their own inputs</td><td>Activation: a useful first output within 30 minutes</td></tr>
-      <tr><td><b>Set up</b></td><td>Save business facts, pick their tools and industry pack, set review rules; consulting if stuck</td><td>Setup completed; human minutes spent</td></tr>
-      <tr><td><b>Adopt</b></td><td>Use one part every week in real work (e.g. the Monday ad review)</td><td>Weekly active orgs</td></tr>
-      <tr><td><b>Repeat</b></td><td>Saved settings, fresh references, updated parts</td><td>Accepted outputs per org per month (north star)</td></tr>
-      <tr><td><b>Climb</b></td><td>Take the next step on the ladder, add the next part in the chain, or ask us to build the higher steps</td><td>Orgs that climb a step within 60 days; plan upgrades; service revenue per org</td></tr>
-    </tbody>
-  </table>
-
-  <h3>7.7 &nbsp;Selling and delivering services</h3>
-  <ol class="steps">
-    <li><b>Readiness form.</b> Goal, business type, tools, data access, budget and deadline. Many requests turn into a standard plan with no custom work.</li>
-    <li><b>Scoping call (30 min).</b> Agree one named outcome, the data boundary, the tools, the review rounds and the owner.</li>
-    <li><b>Fixed quote.</b> Consulting at $1,500 or implementation at $5,000. Anything new gets quoted before we do it.</li>
-    <li><b>Build with our own parts.</b> Services must reuse catalogue parts. Anything we build twice becomes a new part.</li>
-    <li><b>Handover.</b> A working setup and a short video walkthrough; the customer approves the result.</li>
-    <li><b>Move to subscription.</b> We keep the parts updated and supported.</li>
-  </ol>
-
-  <h3>7.8 &nbsp;Why people keep paying</h3>
+  <h2>How people find us</h2>
   <div class="grid4">
-    <div class="card"><h4>Their brain lives here</h4><p>Versioned, with dated offers and claims, kept current through a change queue they approve.</p></div>
-    <div class="card"><h4>Parts keep improving</h4><p>Re-tested when new models ship, with release notes; the old version stays available.</p></div>
-    <div class="card"><h4>Fresh references</h4><p>New examples and reference shortlists from their own connectors, every month.</p></div>
-    <div class="card"><h4>Routines do repeat work</h4><p>The weekly ad check, the monthly creative plan and seasonal packs run on schedule.</p></div>
+    <div class="card"><h4>Search</h4><p>Every listing, tool guide and board page is a search page. "Best AI prompt for…" and "how to use &lt;skill&gt;" searches land on our explained version.</p></div>
+    <div class="card"><h4>YouTube</h4><p>Build it live on a public business. Shorts of "before vs after". This later earns ad revenue too.</p></div>
+    <div class="card"><h4>Newsletter</h4><p>New listings, model results and the best board threads each week. The list is the most valuable thing we own.</p></div>
+    <div class="card"><h4>Communities</h4><p>Useful answers in places people already ask (subreddits, Discords, Slack groups), linking to the listing, within each group's rules.</p></div>
   </div>
 
-  <h3>7.9 &nbsp;The numbers we watch</h3>
-  <table>
-    <thead><tr><th>Metric</th><th>Why</th><th>First target <span class="chip c-ass">Assumption</span></th></tr></thead>
+  <h3>The content engine: one tested listing makes five pieces of content</h3>
+  <div class="flow">
+    <div><b>Tested listing</b>passes its checks</div>
+    <div><b>Listing page</b>before/after, model, cost</div>
+    <div><b>YouTube</b>build it live</div>
+    <div><b>Short</b>"before vs after"</div>
+    <div><b>Newsletter</b>new listings + results</div>
+    <div><b>Board post</b>start the discussion</div>
+  </div>
+  <p class="small">Formats that suit us: "GitHub skill vs our version"; "cheap model vs top model, same job" with the real cost; "same job, three industries"; "climb the ladder" (one job, one step a week, from by hand to agent); tool deep dives. Cadence from launch: 1 long video, 2 shorts and 1 newsletter a week. <span class="chip c-pro">Proposed</span> Evergreen first: seasonal listings (such as holiday sale ads) can exist, but we don't run campaigns around them.</p>
+
+  <h2>The journey</h2>
+  <table class="compact">
+    <thead><tr><th>Stage</th><th>What they do</th><th>What we measure</th></tr></thead>
     <tbody>
-      <tr><td><b>Accepted outputs per active org per month</b> (north star)</td><td>Shows real work finished, not downloads</td><td>8+ by month 3 after paid launch</td></tr>
-      <tr><td>Activation rate</td><td>Do trials get a useful first result?</td><td>40% of sign-ups within 7 days</td></tr>
-      <tr><td>Trial → paid</td><td>Willingness to pay</td><td>20% (the model's rate)</td></tr>
-      <tr><td>Monthly paid retention</td><td>The model assumes 80% a year (about 98.1% a month)</td><td>≥ 97% a month in the first cohorts</td></tr>
-      <tr><td>Orgs that climb at least one step within 60 days</td><td>Proves the ladder works and isn't intimidating</td><td>25%</td></tr>
-      <tr><td>Share of paying orgs outside ecommerce</td><td>Proves we're not an ecommerce tool</td><td>≥ 30% by month 6 after paid launch</td></tr>
-      <tr><td>Human minutes per customer per month</td><td>Support cost; the model assumes 30</td><td>≤ 30</td></tr>
-      <tr><td>Costliest-mistake rate (wrong price, invented claim)</td><td>Trust</td><td>Zero in every release</td></tr>
+      <tr><td><b>Discover</b></td><td>Find a listing, tool guide or video</td><td>Visits from search, YouTube and the newsletter</td></tr>
+      <tr><td><b>Take</b></td><td>Copy, download or run a listing, no account needed</td><td>Listings taken; a useful first result within 30 minutes</td></tr>
+      <tr><td><b>Return</b></td><td>Come back for the next step or another listing</td><td><b>Weekly returning users who take a listing</b> (north star)</td></tr>
+      <tr><td><b>Join</b></td><td>A free account to comment, save brains and follow boards</td><td>Accounts, newsletter subscribers</td></tr>
+      <tr><td><b>Climb</b></td><td>Take a higher step on the same job's ladder</td><td>Users who climb a step within 60 days</td></tr>
+      <tr><td><b>Contribute</b></td><td>Comment, share a result, suggest or (later) upload a skill</td><td>Comments per week per board; suggestions</td></tr>
     </tbody>
   </table>
 
-  <h3>7.10 &nbsp;Six things we must prove, and the smallest test for each</h3>
-  <table>
-    <thead><tr><th style="width:33%">Question</th><th>Smallest test</th><th style="width:26%">Pass looks like</th></tr></thead>
+  <h2>The numbers we watch</h2>
+  <table class="compact">
+    <thead><tr><th style="width:44%">Metric</th><th>First target <span class="chip c-ass">Assumption</span></th></tr></thead>
     <tbody>
-      <tr><td>Will people pay for tested parts and help, when free prompts exist?</td><td>Sell holiday sprints now; pre-sell founding-member plans in January</td><td>≥ 5 paid sprints; ≥ 20 pre-orders or deposits</td></tr>
-      <tr><td>Do the parts work outside ecommerce?</td><td>Run all four launch jobs on the software and service test cases; sell at least one sprint outside ecommerce</td><td>Same quality score (±5 points) on every business type</td></tr>
-      <tr><td>Which first job pulls best?</td><td>Four launch pages, same traffic sources; track trial → paid per page</td><td>A clear winner to lead content with</td></tr>
-      <tr><td>Do agencies need multi-client features from day one?</td><td>10 agency interviews + 2–3 agency pilots</td><td>≥ 2 agencies would pay $899</td></tr>
-      <tr><td>How much human help does each customer need?</td><td>Time-track every sprint, onboarding and ticket</td><td>Within 2 h onboarding and 30 min/month</td></tr>
-      <tr><td>Do the downloads really work in each tool?</td><td>Install every export in Claude Code, ChatGPT, Codex and a router</td><td>Every launch part runs in ≥ 3 tools</td></tr>
+      <tr><td><b>Weekly returning users who take a listing</b> (north star)</td><td>500 by April 2027; 3,000 by September 2027</td></tr>
+      <tr><td>Monthly visits</td><td>10k by April 2027; 50k by September 2027</td></tr>
+      <tr><td>Newsletter subscribers</td><td>1,000 by April 2027; 5,000 by September 2027</td></tr>
+      <tr><td>Comments per week, and our median reply time</td><td>50 a week by April; reply within 2 working days</td></tr>
+      <tr><td>Listings live, and the share with a before and after</td><td>100% have one, always</td></tr>
+      <tr><td>Imported skills checked, and the share that fail</td><td>100 by April 2027; we publish the fail rate</td></tr>
+      <tr><td>Safety incidents and costliest mistakes (wrong price, invented claim)</td><td>Zero</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Six things to prove</h2>
+  <table class="compact">
+    <thead><tr><th style="width:36%">Question</th><th>Smallest test</th><th style="width:28%">Pass looks like</th></tr></thead>
+    <tbody>
+      <tr><td>Is our version easier than GitHub for non-developers?</td><td>5 people each try one original skill and our version</td><td>Faster to a first result, and 4 of 5 prefer ours</td></tr>
+      <tr><td>Do general listings really work for any business?</td><td>Run each one on 3 kinds of public business</td><td>Same score (±5 points) on each</td></tr>
+      <tr><td>Does the safety check catch bad skills?</td><td>Seed 20 skills with hidden traps</td><td>All 20 caught</td></tr>
+      <tr><td>Do boards get real conversation?</td><td>Track comments on /ecommerce from launch</td><td>50 a week by April</td></tr>
+      <tr><td>Does search bring people in?</td><td>Search visits by month 3</td><td>At least a third of visits</td></tr>
+      <tr><td>Will people pay for help later?</td><td>Count comments asking for help; a membership waitlist</td><td>200 on the waitlist before membership opens</td></tr>
     </tbody>
   </table>
 </section>
 
-<!-- PART 8 CALENDAR -->
-<section class="part">
-  <div class="eyebrow">Part 8 · Launch calendar</div>
-  <h1>The next nine months <em>at a glance.</em></h1>
-  <p class="lead">Dates are targets. Each phase moves on only when its gate is passed (Part 10). <span class="chip c-pro">Proposed</span></p>
+<!-- PART 10 MONEY -->
+<section>
+  <div class="eyebrow" style="margin-top:22px">Part 10 · Money, later</div>
+  <h1>Free now. <em>Each stream switches on when it's ready.</em></h1>
+  <p class="lead">Nothing is sold at the start. Year 1 is a build year with little or no income by design. Each stream below has a condition, and it only switches on once that condition is met. <span class="chip c-dec">Decided</span> (the order and conditions are <span class="chip c-pro">Proposed</span>)</p>
 
-  <div class="gantt">
-    <div class="head"><div></div><div class="months"><span>OCT</span><span>NOV</span><span>DEC</span><span>JAN 27</span><span>FEB</span><span>MAR</span><span>APR</span><span>MAY</span><span>JUN</span></div></div>
-    <div class="row"><div class="lab">Repo + item factory</div><div class="track"><div class="bar" style="left:6%;width:6%"></div></div></div>
-    <div class="row"><div class="lab">Test cases (3 business types)</div><div class="track"><div class="bar" style="left:8%;width:8%"></div></div></div>
-    <div class="row"><div class="lab">Holiday sale sprints</div><div class="track"><div class="bar a" style="left:6.5%;width:19.7%"></div></div></div>
-    <div class="row"><div class="lab">§1 Brand brain</div><div class="track"><div class="bar" style="left:11.5%;width:5.2%"></div></div></div>
-    <div class="row"><div class="lab">§2 Static ads</div><div class="track"><div class="bar" style="left:16.7%;width:7.6%"></div></div></div>
-    <div class="row"><div class="lab">Page audit, Meta ads ladder 1–4, scripts</div><div class="track"><div class="bar" style="left:24.5%;width:5.2%"></div></div></div>
-    <div class="row"><div class="lab">Site v0 build</div><div class="track"><div class="bar l" style="left:24.5%;width:15%"></div></div></div>
-    <div class="row"><div class="lab">Site v0 public (free)</div><div class="track"><div class="bar g" style="left:39.3%;width:1.4%"></div></div></div>
-    <div class="row"><div class="lab">Content engine weekly</div><div class="track"><div class="bar l" style="left:39.8%;width:60.2%"></div></div></div>
-    <div class="row"><div class="lab">Paid plans v1</div><div class="track"><div class="bar g" style="left:49.8%;width:1.4%"></div></div></div>
-    <div class="row"><div class="lab">Research and offers</div><div class="track"><div class="bar" style="left:33.4%;width:11%"></div></div></div>
-    <div class="row"><div class="lab">Email and lifecycle</div><div class="track"><div class="bar" style="left:44.5%;width:22%"></div></div></div>
-    <div class="row"><div class="lab">Paid media (Meta ladder 5 + ops)</div><div class="track"><div class="bar" style="left:55.6%;width:22%"></div></div></div>
-    <div class="row"><div class="lab">Ready-made workflows (CE)</div><div class="track"><div class="bar" style="left:44.5%;width:22%"></div></div></div>
-    <div class="row"><div class="lab">Agency partner pilot</div><div class="track"><div class="bar a" style="left:44.5%;width:33.2%"></div></div></div>
-    <div class="row"><div class="lab">Software and apps pack</div><div class="track"><div class="bar" style="left:55.6%;width:22.2%"></div></div></div>
-    <div class="row"><div class="lab">Routines (May), agents (Jun)</div><div class="track"><div class="bar" style="left:77.8%;width:22.2%"></div></div></div>
+  <table>
+    <thead><tr><th style="width:4%">#</th><th style="width:24%">Stream</th><th>What it is</th><th style="width:30%">Switches on when</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td><b>Affiliates</b></td><td>Labelled links on tool guides and listings to the tools they use</td><td>From launch: passive, with no selling</td></tr>
+      <tr><td>2</td><td><b>Site advertising</b></td><td>One quiet ad slot per page; later, labelled sponsored tool deep dives</td><td>About 50k monthly visits <span class="chip c-ass">Assumption</span></td></tr>
+      <tr><td>3</td><td><b>YouTube advertising</b></td><td>Ad revenue on our videos</td><td>YouTube's partner bar: 1,000 subscribers and 4,000 watch hours in 12 months (or 10M Shorts views in 90 days)</td></tr>
+      <tr><td>4</td><td><b>Consulting and implementation</b></td><td>We set up or build the higher ladder steps for a business; custom applications are quoted</td><td>When people ask for it, at first through a simple contact link (decision 11)</td></tr>
+      <tr><td>5</td><td><b>Membership</b></td><td><b>Member, $99 or $199 a month:</b> priority replies to comments and help with implementation. <b>Pro, $499 a month:</b> in-depth help. Custom implementation on top.</td><td>When boards show demand for help: around 200 on the waitlist <span class="chip c-ass">Assumption</span></td></tr>
+      <tr><td>6</td><td><b>Premium workflows</b></td><td>New, very specific, high-value workflows</td><td>After membership; what's free at launch stays free (decision 13)</td></tr>
+      <tr><td>7</td><td><b>Creator marketplace</b></td><td>People upload skills; we test them; if they charge, the creator gets 70% and we keep 30%</td><td>When there's traffic and the safety pipeline handles outside uploads</td></tr>
+    </tbody>
+  </table>
+  <p class="small">Selling individual skills doesn't make sense: free skills bring the audience, and the audience pays for help, time and finished systems. <span class="chip c-dec">Decided</span></p>
+
+  <div class="grid3">
+    <div class="card"><h4>Trust rules</h4><p>Ads never sit inside the steps. Affiliate links are labelled and never change a ranking. Sponsored content says so at the top.</p></div>
+    <div class="card"><h4>People pay their own AI bills</h4><p>Every listing shows its cost per run. We don't hide model costs anywhere.</p></div>
+    <div class="card"><h4>Downloads keep working</h4><p>Anything someone downloaded stays theirs under its licence. No artificial lock-in.</p></div>
   </div>
-  <p class="small"><span style="color:#2557d6">■</span> build &nbsp; <span style="color:#9db7f2">■</span> site/content &nbsp; <span style="color:#e3a43a">■</span> sales/validation &nbsp; <span style="color:#2fa36b">■</span> launch moment</p>
+
+  <div class="keep"><h2>Money points to decide</h2>
+  <ol class="steps">
+    <li><b>How the build year is funded.</b> With no income in Year 1, costs must stay small: hosting, model tests within caps, a domain and paid-per-review specialists. My recommendation is founder-funded and lean, with no hires until a stream pays for them. <span class="chip c-pro">Proposed</span></li>
+    <li><b>Rebuild the money model.</b> The old five-stream model ($348k in Year 1, mostly subscriptions) no longer fits. Rebuild it after three months of real traffic (April 2027), using visits, returning users, newsletter size and the waitlist. It stays in <code>docs/business/financial/</code> for reference only.</li>
+    <li><b>The membership price.</b> $99 or $199 for the first tier; decide when the waitlist opens. A test on the waitlist page can settle it.</li>
+  </ol></div>
+</section>
+
+<!-- PART 11 CALENDAR -->
+<section>
+  <div class="eyebrow" style="margin-top:22px">Part 11 · Calendar</div>
+  <h1>The next twelve months <em>at a glance.</em></h1>
+  <p class="lead">Dates are targets. Each phase moves on only when its gate passes (Part 13). <span class="chip c-pro">Proposed</span></p>
+
+  <div class="gantt keep">
+    <div class="head"><div></div><div class="months m12"><span>OCT</span><span>NOV</span><span>DEC</span><span>JAN 27</span><span>FEB</span><span>MAR</span><span>APR</span><span>MAY</span><span>JUN</span><span>JUL</span><span>AUG</span><span>SEP</span></div></div>
+    <div class="row"><div class="lab">Item factory tools</div><div class="track"><div class="bar" style="left:4.8%;width:3.5%"></div></div></div>
+    <div class="row"><div class="lab">Port our skills → general library</div><div class="track"><div class="bar" style="left:6.7%;width:27.5%"></div></div></div>
+    <div class="row"><div class="lab">/ecommerce versions</div><div class="track"><div class="bar" style="left:8.6%;width:25.6%"></div></div></div>
+    <div class="row"><div class="lab">Ready-made workflows</div><div class="track"><div class="bar" style="left:12.5%;width:37.5%"></div></div></div>
+    <div class="row"><div class="lab">Site build: library, boards, comments</div><div class="track"><div class="bar l" style="left:14.4%;width:15.2%"></div></div></div>
+    <div class="row"><div class="lab">Site public, free</div><div class="track"><div class="bar g" style="left:29.4%;width:1.2%"></div></div></div>
+    <div class="row"><div class="lab">Skills from the internet</div><div class="track"><div class="bar" style="left:18.3%;width:81.7%"></div></div></div>
+    <div class="row"><div class="lab">Tool guides</div><div class="track"><div class="bar" style="left:20.2%;width:79.8%"></div></div></div>
+    <div class="row"><div class="lab">Content engine weekly</div><div class="track"><div class="bar l" style="left:29.8%;width:70.2%"></div></div></div>
+    <div class="row"><div class="lab">Meta ads ladder (1–4, then mini app)</div><div class="track"><div class="bar" style="left:18.3%;width:31.7%"></div></div></div>
+    <div class="row"><div class="lab">/saas board</div><div class="track"><div class="bar" style="left:41.7%;width:16.6%"></div></div></div>
+    <div class="row"><div class="lab">Routines (Apr), agents (May–Jun)</div><div class="track"><div class="bar" style="left:50%;width:25%"></div></div></div>
+    <div class="row"><div class="lab">Affiliates (labelled)</div><div class="track"><div class="bar a" style="left:29.8%;width:70.2%"></div></div></div>
+    <div class="row"><div class="lab">Ads: site and YouTube, when ready</div><div class="track"><div class="bar a" style="left:58.3%;width:41.7%"></div></div></div>
+    <div class="row"><div class="lab">Membership, when demand shows</div><div class="track"><div class="bar a" style="left:75%;width:25%"></div></div></div>
+    <div class="row"><div class="lab">Third board; creator uploads beta</div><div class="track"><div class="bar" style="left:75%;width:25%"></div></div></div>
+  </div>
+  <p class="small"><span style="color:#2557d6">■</span> build &nbsp; <span style="color:#9db7f2">■</span> site/content &nbsp; <span style="color:#e3a43a">■</span> revenue (only when its condition is met) &nbsp; <span style="color:#2fa36b">■</span> launch moment</p>
 
   <h2>Key dates</h2>
   <table class="compact">
-    <thead><tr><th>Date</th><th>Moment</th><th>What it means for us</th></tr></thead>
+    <thead><tr><th style="width:20%">Date</th><th>Moment</th><th>What it means</th></tr></thead>
     <tbody>
-      <tr><td><b>Mon 19 Oct 2026</b></td><td>Week 1 starts</td><td>New repo live, first tools, holiday sprint offer goes out</td></tr>
-      <tr><td><b>by Fri 6 Nov</b></td><td>Last call for Black Friday sprints</td><td>Businesses lock Black Friday creative early; after this, sell December, year-end and January sale sprints</td></tr>
-      <tr><td><b>Thu 26 – Mon 30 Nov</b></td><td>Thanksgiving, Black Friday (27th), Cyber Monday (30th)</td><td>Our sprint ads are live; we collect feedback, not performance claims</td></tr>
-      <tr><td><b>Fri 11 Dec</b></td><td><b>Gate A</b>: did people pay, was the work accepted, and did it work beyond ecommerce?</td><td>Decide the lead offer for January</td></tr>
-      <tr><td><b>Tue 19 Jan 2027</b></td><td><b>Site v0 public</b> (free catalogue)</td><td>Content engine starts; founding-member pre-sale opens</td></tr>
-      <tr><td><b>Tue 16 Feb 2027</b></td><td><b>Paid plans live</b></td><td>Model Year 1 starts counting here</td></tr>
-      <tr><td><b>Apr 2027</b></td><td>Software and apps pack v1</td><td>The first pack beyond ecommerce</td></tr>
-      <tr><td><b>Aug 2027</b></td><td>Holiday 2027 planning season</td><td>The holiday stack ships for every live pack; Black Friday 2027 is 26 Nov</td></tr>
+      <tr><td><b>Mon 19 Oct 2026</b></td><td>Week 1</td><td>First tools, the listing format and the port order. Nothing is sold.</td></tr>
+      <tr><td><b>Sun 1 Nov</b></td><td><b>Gate 0</b></td><td>One listing done end to end; the listing page template approved</td></tr>
+      <tr><td><b>Fri 11 Dec</b></td><td><b>Gate A</b></td><td>Brain and creative sections ported; site skeleton with boards and comments working; first 5 imported skills through the safety check</td></tr>
+      <tr><td><b>Sun 10 Jan 2027</b></td><td><b>Gate B</b></td><td>Ready to open (Part 13)</td></tr>
+      <tr><td><b>Tue 19 Jan 2027</b></td><td><b>Site public, free</b></td><td>General library, /ecommerce board, tool guides, comments, newsletter</td></tr>
+      <tr><td><b>Apr 2027</b></td><td>Three-month review; <b>/saas board opens</b></td><td>Rebuild the money model with real data; the second industry goes live</td></tr>
+      <tr><td><b>Jul 2027</b></td><td>Membership and third-board decisions</td><td>Open membership if the waitlist is there; pick the next board from demand</td></tr>
+      <tr><td><b>Late 2027</b></td><td>First job-role board</td><td>/marketing is the likely first, since it's our deepest area</td></tr>
     </tbody>
   </table>
-  <div class="note warn"><b>Honest timing note:</b> Black Friday 2026 is six weeks away, so the catalogue site won't be ready for it. We use it to <b>prove demand and learn</b>, selling done-with-you sprints made with methods we already have. The full self-serve holiday stack is for 2027.</div>
 </section>
 
-<!-- PART 9 BUILD -->
-<section class="part">
-  <div class="eyebrow">Part 9 · The build</div>
-  <h1>How every part <em>gets made.</em></h1>
-  <p class="lead">Three things get built, in order. First, small tools that make parts cheaply and test them the same way every time. Then the parts themselves, section by section. Then the website that shows them.</p>
+<!-- PART 12 BUILD -->
+<section>
+  <div class="eyebrow" style="margin-top:22px">Part 12 · The build</div>
+  <h1>How every listing <em>gets made.</em></h1>
+  <p class="lead">Three things get built. First, small tools that make listings cheaply and test them the same way every time. Then the listings, section by section. Then the website that shows them, with boards and comments.</p>
 
   <div class="grid3">
-    <div class="card"><h4>A · The item factory</h4><p>Six small tools: import a part, check it, build its downloads, run it on cheap, mid and top models, grade it blind, and map how parts connect. TypeScript, in this repo.</p></div>
-    <div class="card"><h4>B · The parts</h4><p>Section by section: brand brain → static ads → page audit, the Meta ads ladder and scripts → research and offers → ready-made workflows → email and lifecycle → paid media → analytics. Every launch job gets its ladder steps.</p></div>
-    <div class="card"><h4>C · The site</h4><p>Reads the part folders directly, so a fixed part is a fixed page. Free catalogue first, then accounts and payments.</p></div>
+    <div class="card"><h4>A · The item factory</h4><p>Seven small tools: import, check, build downloads, model-test, blind-grade, map how listings connect, and <b>scan-skill</b>, the safety check for anything brought in. TypeScript, in this repo.</p></div>
+    <div class="card"><h4>B · The listings</h4><p>Our own skills first, in port order (Part 8): general version, then /ecommerce version. Then skills from the internet, in batches.</p></div>
+    <div class="card"><h4>C · The site</h4><p>Reads the listing folders directly, so a fixed listing is a fixed page. Library, boards, tool guides, comments and the newsletter, all free.</p></div>
   </div>
 
-  <h2>The 12 steps every part goes through</h2>
+  <h2>The 12 steps every listing goes through</h2>
   <table>
     <tbody>
-      <tr><td><b>1 Import</b><br><span class="small">copy from source, record origin</span></td><td><b>2 Rename</b><br><span class="small">plain, no jargon</span></td><td><b>3 Generalise</b><br><span class="small">method stays in the part; industry details move to packs; model-neutral</span></td><td><b>4 Manifest</b><br><span class="small">item.yaml with jobs, function, packs, hosts</span></td></tr>
-      <tr><td><b>5 Checklist + test inputs</b><br><span class="small">golden set covers 2+ business types</span></td><td><b>6 Model test</b><br><span class="small">cheap · mid · top</span></td><td><b>7 Grade</b><br><span class="small">code checks, then a blind judge</span></td><td><b>8 Fix</b><br><span class="small">until the gate passes</span></td></tr>
-      <tr><td><b>9 Examples</b><br><span class="small">without brain / with brain / + references</span></td><td><b>10 Downloads</b><br><span class="small">opened once in each tool</span></td><td><b>11 Final check</b><br><span class="small">the checklist for its level</span></td><td><b>12 Tested ✓</b><br><span class="small">into the section report</span></td></tr>
+      <tr><td><b>1 Import</b><br><span class="small">from our source or the internet; record origin and licence</span></td><td><b>2 Safety check</b><br><span class="small">scan-skill and a person (imports and uploads)</span></td><td><b>3 Generalise</b><br><span class="small">general method in the library; industry details go to boards</span></td><td><b>4 Manifest</b><br><span class="small">type, level, ladder step, boards, tools, credit</span></td></tr>
+      <tr><td><b>5 Test inputs</b><br><span class="small">golden set covers 3 kinds of business</span></td><td><b>6 Model test</b><br><span class="small">cheap · mid · top</span></td><td><b>7 Grade</b><br><span class="small">code checks, then a blind judge</span></td><td><b>8 Fix and improve</b><br><span class="small">until it beats the original or the gate</span></td></tr>
+      <tr><td><b>9 Before and after</b><br><span class="small">no brain / with brain / original vs ours</span></td><td><b>10 Plain-words page</b><br><span class="small">what, who, need, how to install</span></td><td><b>11 Downloads</b><br><span class="small">opened once in each tool</span></td><td><b>12 Tested ✓</b><br><span class="small">into the section report</span></td></tr>
     </tbody>
   </table>
 
   <h2>Quality rules that never bend</h2>
   <div class="grid3">
     <div class="card"><h4>Zero wrong prices, zero invented claims</h4><p>Checked by code against the brain's current offer and claims register, before any judge.</p></div>
-    <div class="card"><h4>The judge never wrote the work</h4><p>A different model grades blind, against the same checklist the part's page shows.</p></div>
-    <div class="card"><h4>Proven on more than one business type</h4><p>A launch part passes on at least two kinds of business before it's marked tested.</p></div>
-    <div class="card"><h4>Knowledge must earn its place</h4><p>A rule stays in a prompt only if a with/without test shows it improves the output.</p></div>
+    <div class="card"><h4>The judge never wrote the work</h4><p>A different model grades blind, against the same checklist the listing's page shows.</p></div>
+    <div class="card"><h4>"Any business" must be earned</h4><p>A general listing passes on at least 3 kinds of business before it's labelled that way.</p></div>
+    <div class="card"><h4>Nothing unchecked goes live</h4><p>Every import and upload passes the safety check. Only open-licence skills are copied.</p></div>
     <div class="card"><h4>Risky actions need a human</h4><p>No automatic ad pausing or budget changes. Agents propose; people approve.</p></div>
-    <div class="card"><h4>Content is data, not orders</h4><p>Instructions hidden in reviews, pages or course files are ignored, and we test for them with red-team cases.</p></div>
+    <div class="card"><h4>Content is data, not orders</h4><p>Instructions hidden in skills, reviews, pages, comments or course files are ignored, and we test for them.</p></div>
   </div>
 
-  <h2>Picking the model for every part</h2>
-  <table>
+  <h2>Picking the model for every listing</h2>
+  <table class="compact">
     <thead><tr><th>Class</th><th>Good for</th><th>Typical models</th></tr></thead>
     <tbody>
       <tr><td><b>C1 · cheap</b></td><td>Reformat, extract, fill a template, write an image prompt</td><td>DeepSeek, Gemini Flash, GPT mini, Claude Haiku</td></tr>
@@ -776,345 +867,227 @@
       <tr><td><b>C4 · routed</b></td><td>Workflows and agents</td><td>A top model plans; cheap models run the repeated steps</td></tr>
     </tbody>
   </table>
-  <p class="small"><b>Recommended</b> = the cheapest model within 5 points of the best, with zero costly mistakes. <b>Budget</b> = the cheapest at ≥ 80% quality. Parts are re-tested when big models ship, and published parts monthly. Routing through OpenRouter, LiteLLM or Portkey is always allowed. Spend caps: $2 per run and $25 per round to start.</p>
-
-  <h2>Section 1: the brand brain, for any business</h2>
-  <p>15 existing items become <b>11 parts</b>, laid out as a ladder from a free template to a living, versioned brain. The schema is general. Each "what you sell" entry is a <b>product, plan, service or course</b>, with its price, offer, start date, end date and a "current" flag. Industry packs add their own fields, such as variants for stores, trial length for software and cohort dates for courses.</p>
-  <table>
-    <thead><tr><th>Level</th><th>What the user gets</th><th>Parts</th></tr></thead>
-    <tbody>
-      <tr><td><span class="chip l-b">Beginner</span></td><td>A template to fill in, a voice card prompt, a founder questionnaire</td><td class="small">brand-brain-template · brand-voice-style-card · founder-interview-capture</td></tr>
-      <tr><td><span class="chip l-i">Intermediate</span></td><td>Build it from your website in Claude or ChatGPT, plus a short "brain card" every other part loads first</td><td class="small">brand-brain-from-website · brand-brain-builder · brand-brain-card · website-claims-extractor · product-photo-tagger</td></tr>
-      <tr><td><span class="chip l-a">Advanced</span></td><td>A look scan (fonts, colours), a creative kit, and a claims register with sources</td><td class="small">brand-visual-identity-scan · brand-creative-kit-builder</td></tr>
-      <tr><td><span class="chip l-e">Expert</span></td><td>A living brain: versions, dated offers, owners, review dates and a weekly queue of proposed updates</td><td class="small">brand-brain-updater (routine)</td></tr>
-    </tbody>
-  </table>
-  <div class="note"><b>The fix that matters most:</b> every offer and price gets dates and a "current" flag. Creative Engine's first 100-ad plan leaked last month's prices because the brain had no versions. This closes that hole before launch, for every business type.</div>
-
-  <h2>Section 2: static ads</h2>
-  <p>78 existing items become <b>about 20 parts</b>. Most of the work is merging and packaging, not inventing. The core is the static ad workflow: plan → words → stranger-read → reality check → image prompt → render → QA → fix. Around it sit:</p>
-  <ul>
-    <li>the sprint planner (50 or 100 ads)</li>
-    <li>the concept and hook generators</li>
-    <li>the reference analyser and remixer</li>
-    <li>competitor profiles</li>
-    <li>one native-image pack with 20 variants</li>
-    <li>one merged copy checker</li>
-    <li>the holiday sale stack</li>
-  </ul>
-  <p>Store-only wording and thresholds move into the ecommerce pack, and the software pack gets its own from the software test case. Old duplicates are retired.</p>
+  <p class="small"><b>Recommended</b> = the cheapest model within 5 points of the best, with zero costly mistakes. <b>Budget</b> = the cheapest at ≥ 80% quality. Listings are re-tested when big models ship. Routing through OpenRouter, LiteLLM or Portkey is always allowed. Spend caps: $2 per run and $25 per round to start (decision 2).</p>
 
   <h2>The ladders and the ready-made workflows</h2>
   <table class="compact">
     <thead><tr><th style="width:17%">When</th><th>What gets built</th></tr></thead>
     <tbody>
-      <tr><td><b>Dec (W8–9)</b></td><td>Meta ads ladder steps 1–4: the audit prompt, the connector skill, the Sheets skill with a fixed layout, and a 9 am schedule guide for Claude, ChatGPT and Sheets</td></tr>
-      <tr><td><b>Feb–Mar 2027</b></td><td>Step 5 mini app, generalised from the ecomOS dashboard with no client data. Workflow pages for brand brain, static ads and copy.</td></tr>
-      <tr><td><b>Mar–Apr 2027</b></td><td>Avatar and video workflows (Advanced; customers bring their own image and video model keys)</td></tr>
-      <tr><td><b>From Feb 2027</b></td><td>Steps 6–8 as implementation; each becomes a product after we've built it twice. Agent steps follow the June red-team rule.</td></tr>
+      <tr><td><b>Nov–Dec</b></td><td>Workflow pages for brand brain, static ads and ad copy, with the examples we already have</td></tr>
+      <tr><td><b>Dec</b></td><td>Meta ads ladder steps 1–4: the audit prompt, the connector skill, the Sheets skill with a fixed layout, and a 9 am schedule guide</td></tr>
+      <tr><td><b>Feb–Mar 2027</b></td><td>Step 5 mini app, generalised from the ecomOS dashboard with no client data; avatar and video workflows (people bring their own image and video model keys)</td></tr>
+      <tr><td><b>Apr–Jun 2027</b></td><td>Routines (April) and agents (May–June) as full guides with red-team tests. Steps 6–8 stay guides plus "Help me build this" until consulting opens.</td></tr>
     </tbody>
   </table>
-
-  <h2>Public test cases</h2>
-  <table>
-    <thead><tr><th>Test case</th><th>Business type</th><th>Role</th></tr></thead>
-    <tbody>
-      <tr><td><b>Grüns</b></td><td>Ecommerce / D2C</td><td>Primary; Creative Engine's tests already use it</td></tr>
-      <tr><td><b>AG1</b>, <b>IM8</b></td><td>Ecommerce / D2C</td><td>Held-out checks</td></tr>
-      <tr><td><b>One software company</b></td><td>Software and apps</td><td>You pick from my shortlist in Week 2 <span class="chip c-pro">Proposed</span></td></tr>
-      <tr><td><b>One service or course business</b></td><td>Services / creators</td><td>You pick from my shortlist in Week 2 <span class="chip c-pro">Proposed</span></td></tr>
-    </tbody>
-  </table>
-  <p class="small">Each case is built only from <b>saved public pages</b>. The claims register uses exact quotes with sources, and there are no invented numbers. Where a part needs economics, it uses a separate box labelled "illustrative figures, not the business's". Every example says "Example made from public info about &lt;name&gt;, captured &lt;date&gt;. Not affiliated." No private client data, ever.</p>
 
   <h2>The website, in versions</h2>
-  <table>
-    <thead><tr><th>Version</th><th>What's in it</th><th>Ships when</th></tr></thead>
+  <table class="compact">
+    <thead><tr><th style="width:20%">Version</th><th>What's in it</th><th style="width:28%">Ships when</th></tr></thead>
     <tbody>
-      <tr><td><b>v0 · free catalogue</b></td><td>Home, job search, job pages with the ladder and the "where are you today?" picker, function and industry pages, part pages, stacks, model guide, how-to guides, downloads; Normal and Advanced views</td><td>About 25 parts tested, across 2+ business types</td></tr>
-      <tr><td><b>v1 · paid</b></td><td>Accounts, workspace (saved brains, prompts, versions), paid tiers, "Help me build this"</td><td>Payments work; pre-sale gate passed</td></tr>
-      <tr><td><b>v2 · run in browser</b></td><td>Run a part on your brain from the site, with the cost shown</td><td>When users ask for it</td></tr>
-      <tr><td><b>Later · marketplace</b></td><td>Creators list parts; 70% to the creator, 30% to us; same quality gate</td><td>When there's traffic and a review process</td></tr>
+      <tr><td><b>v0 · free site</b></td><td>Home, search, the general library, the /ecommerce board, listing pages with the ladder and the before and after, tool guides, Learn, free accounts for comments and saved brains, newsletter, Normal and Advanced views</td><td>Gate B (19 Jan 2027)</td></tr>
+      <tr><td><b>v1 · more boards</b></td><td>/saas, board following, "Ask" threads, contributor profiles, the membership waitlist</td><td>April 2027</td></tr>
+      <tr><td><b>v2 · help and premium</b></td><td>Membership, priority replies, consulting and implementation requests, premium workflows</td><td>When each money condition is met</td></tr>
+      <tr><td><b>v3 · run and upload</b></td><td>Run a listing from the site (cost shown); creator uploads through the safety pipeline; the 70/30 marketplace</td><td>When people ask for it and the pipeline is ready</td></tr>
     </tbody>
   </table>
 </section>
 
-<!-- PART 10 EXECUTION -->
-<section class="part">
-  <div class="eyebrow">Part 10 · Execution</div>
+<!-- PART 13 EXECUTION -->
+<section>
+  <div class="eyebrow" style="margin-top:22px">Part 13 · Execution</div>
   <h1>Step by step, <em>week by week.</em></h1>
-  <p class="lead">For every week: what gets built, what gets sold or published, and what you need to do. A green bar is a gate: we don't move on until it's passed.</p>
+  <p class="lead">For every week: what gets built, what gets published, and what you need to do. Nothing is sold. A green bar is a gate: we don't move on until it passes.</p>
 
-  <div class="week"><div class="wh"><b>Week 1 · 19–25 Oct</b><span>Set up and start selling</span></div><div class="wb">
-    <div><h5>Build (Claude)</h5><ul><li>New repo done ✓ (today)</li><li><code>import-item</code> and <code>check-item</code> tools</li><li>First test part: website claims extractor (works on any website)</li><li>Map Creative Engine and ecomOS workflows onto the ladder</li></ul></div>
-    <div><h5>Go-to-market</h5><ul><li>Holiday sprint offer page (one page, no site yet)</li><li>List 40 targets you can reach through permitted routes: agencies, stores, software and course businesses</li><li>Interview script</li></ul></div>
-    <div><h5>You</h5><ul><li>Approve decisions 1–5 (Part 14)</li><li>Add the router key to <code>.env</code> yourself</li><li>Send the first 20 messages</li></ul></div>
+  <div class="week"><div class="wh"><b>Week 1 · 19–25 Oct</b><span>Tools, format, port order</span></div><div class="wb">
+    <div><h5>Build (Claude)</h5><ul><li><code>import-item</code> and <code>check-item</code> tools</li><li>Listing format v1: type, level, ladder step, boards, tools, credit, licence, safety badge, before/after</li><li>First port: website claims extractor, general version</li></ul></div>
+    <div><h5>Plan and publish</h5><ul><li>Port order for all 263 own items: merge, port or retire</li><li>Map Creative Engine and ecomOS workflows onto the ladder</li><li>Board and comment rules drafted</li></ul></div>
+    <div><h5>You</h5><ul><li>Approve decisions 1–2</li><li>Add the router key to <code>.env</code> yourself</li><li>Glance at the port order</li></ul></div>
   </div></div>
 
   <div class="week"><div class="wh"><b>Week 2 · 26 Oct – 1 Nov</b><span>Tools working end to end</span></div><div class="wb">
-    <div><h5>Build</h5><ul><li><code>run-test</code>, <code>grade</code>, <code>build-exports</code>, <code>build-graph</code></li><li>First part all the way to "tested ✓"</li><li>Grüns pages saved; shortlist of software and service test cases</li></ul></div>
-    <div><h5>Go-to-market</h5><ul><li>5–8 calls with agencies and businesses</li><li>First sprint deals closed</li></ul></div>
-    <div><h5>You</h5><ul><li>Review the first part page: it becomes the template for everything</li><li>Pick the two extra test cases</li></ul></div>
-  </div><div class="gate"><b>Gate 0:</b> one part tested end to end through the tools, and the page template approved.</div></div>
+    <div><h5>Build</h5><ul><li><code>run-test</code>, <code>grade</code>, <code>build-exports</code>, <code>build-graph</code></li><li>First listing all the way to "tested ✓", with its before and after</li><li><code>scan-skill</code> specified</li></ul></div>
+    <div><h5>Plan and publish</h5><ul><li>Listing page template</li><li>Board page template</li><li>Site structure: library, boards, tools, Learn</li></ul></div>
+    <div><h5>You</h5><ul><li>Review the first listing page: it becomes the template for everything</li></ul></div>
+  </div><div class="gate"><b>Gate 0:</b> one listing tested end to end through the tools, and the page template approved.</div></div>
 
-  <div class="week"><div class="wh"><b>Weeks 3–4 · 2–15 Nov</b><span>Brand brain section + deliver sprints</span></div><div class="wb">
-    <div><h5>Build</h5><ul><li>Brand brain v2 schema (general "what you sell", dated offers, claims register)</li><li>All 11 brand brain parts through the pipeline</li><li>AG1, software and service test brains</li></ul></div>
-    <div><h5>Go-to-market</h5><ul><li>Deliver sprints (brand brain + 20–30 statics each)</li><li>Time-track everything</li><li>Last Black Friday sales by 6 Nov; then pitch year-end and January sprints</li></ul></div>
-    <div><h5>You</h5><ul><li>Client calls and approvals</li><li>Review the brand brain section report</li></ul></div>
-  </div><div class="gate"><b>Gate 1:</b> the brand brain section passes on all three business types, with zero invented claims or wrong prices on the golden set.</div></div>
+  <div class="week"><div class="wh"><b>Weeks 3–4 · 2–15 Nov</b><span>Business brain section</span></div><div class="wb">
+    <div><h5>Build</h5><ul><li>Brand brain v2 format: general "what you sell" (products, plans, services, courses) with dated offers and a claims register</li><li>All 11 brain listings, general and /ecommerce</li></ul></div>
+    <div><h5>Plan and publish</h5><ul><li>Workflow page for brand brain</li><li>Site build starts: listing pages, board pages, accounts for comments</li></ul></div>
+    <div><h5>You</h5><ul><li>Brain section review</li><li>Decision 3 (who can comment)</li></ul></div>
+  </div><div class="gate"><b>Gate 1:</b> the brain section passes on 3 kinds of business, with zero invented claims or wrong prices on the golden set.</div></div>
 
-  <div class="week"><div class="wh"><b>Weeks 5–7 · 16 Nov – 6 Dec</b><span>Static ads section + Black Friday week</span></div><div class="wb">
-    <div><h5>Build</h5><ul><li>Static ads: about 20 parts, merged and tested</li><li>Holiday sale stack</li><li>Sprint planner passes the old-price test on a store and a software offer</li></ul></div>
-    <div><h5>Go-to-market</h5><ul><li>Clients' ads live for Black Friday</li><li>Record 3 videos, including one "same job, three industries"</li><li>Collect quotes and feedback (not performance claims)</li></ul></div>
-    <div><h5>You</h5><ul><li>Video recording</li><li>Ask each client: "Would you pay monthly for this?"</li></ul></div>
+  <div class="week"><div class="wh"><b>Weeks 5–7 · 16 Nov – 6 Dec</b><span>Creative and content section</span></div><div class="wb">
+    <div><h5>Build</h5><ul><li>Static ads: about 20 listings, merged and tested</li><li>Ad copy, scripts, avatars: general and /ecommerce</li><li><code>scan-skill</code> built; red-team test set of 20 trap skills</li></ul></div>
+    <div><h5>Plan and publish</h5><ul><li>Workflow pages for static ads and copy</li><li>Comments, report button and moderation queue on staging</li><li>Record 3 videos for January</li></ul></div>
+    <div><h5>You</h5><ul><li>Creative section review</li><li>Decisions 4 (licence rule) and 5 (brand name)</li></ul></div>
   </div></div>
 
-  <div class="week"><div class="wh"><b>Weeks 8–9 · 7–20 Dec</b><span>Package the launch set</span></div><div class="wb">
-    <div><h5>Build</h5><ul><li>Landing-page audit, with store, software and course notes</li><li>Meta ads ladder steps 1–4 (prompt, connector, sheet, 9 am refresh), with "unavailable" states</li><li>Video scripts section; site v0 build starts</li></ul></div>
-    <div><h5>Go-to-market</h5><ul><li>Sprint retro: hours, accepted %, redo %, willingness to pay</li><li>Founding-member offer drafted</li></ul></div>
-    <div><h5>You</h5><ul><li>Gate A decision</li><li>Pick the brand name</li></ul></div>
-  </div><div class="gate"><b>Gate A (Fri 11 Dec):</b> ≥ 5 paid sprints delivered (or ≥ 15 interviews showing clear pain), at least 1 outside ecommerce, ≥ 70% of ads accepted by clients, and hours measured. If not, we change the lead offer before January.</div></div>
+  <div class="week"><div class="wh"><b>Weeks 8–9 · 7–20 Dec</b><span>Website, paid media, first imports</span></div><div class="wb">
+    <div><h5>Build</h5><ul><li>Landing-page audit; Meta ads ladder steps 1–4 with "unavailable" states; research and offers</li><li>First 5–10 skills from the internet through the full pipeline</li></ul></div>
+    <div><h5>Plan and publish</h5><ul><li>Tool guide template; the first 10 tool guides</li><li>Newsletter set up; waitlist for launch</li></ul></div>
+    <div><h5>You</h5><ul><li>Gate A review</li><li>Pick the brand name and domain</li></ul></div>
+  </div><div class="gate"><b>Gate A (Fri 11 Dec):</b> brain and creative sections ported; site skeleton with boards and comments working; at least 5 imported skills through the safety check; all 20 trap skills caught.</div></div>
 
   <div class="week"><div class="wh"><b>Weeks 10–12 · 21 Dec – 10 Jan</b><span>Quiet weeks: finish the site</span></div><div class="wb">
-    <div><h5>Build</h5><ul><li>Site v0: job search, part pages, function and industry pages, downloads, model guide</li><li>Every launch download opened in Claude Code, ChatGPT, Codex and a router</li></ul></div>
-    <div><h5>Go-to-market</h5><ul><li>Batch-record 6 videos for January</li><li>Newsletter set up</li><li>Waitlist page</li></ul></div>
+    <div><h5>Build</h5><ul><li>Site v0 finished: search, library, /ecommerce board, tool guides, Learn, comments, newsletter</li><li>Every download opened in Claude, ChatGPT, Codex and a router</li></ul></div>
+    <div><h5>Plan and publish</h5><ul><li>Batch-record 6 videos</li><li>First board posts drafted, so /ecommerce isn't empty on day one</li></ul></div>
     <div><h5>You</h5><ul><li>Final review of launch pages</li><li>Light weeks: holidays</li></ul></div>
-  </div><div class="gate"><b>Gate B:</b> about 25 tested parts with examples on 2+ business types, every download works in at least 3 tools, every launch job shows its ladder with steps 1–3 tested, and the site passes a mobile check.</div></div>
+  </div><div class="gate"><b>Gate B:</b> at least 50 general listings and 25 /ecommerce listings, each with a before and after; at least 10 imported skills; 10 tool guides; downloads working in 3+ tools; comments and moderation working; mobile check passed.</div></div>
 
   <h2>Then month by month</h2>
-  <table>
-    <thead><tr><th style="width:9%">Month</th><th style="width:34%">Build</th><th style="width:31%">Go-to-market</th><th>Gate to move on</th></tr></thead>
+  <table class="compact">
+    <thead><tr><th style="width:9%">Month</th><th style="width:36%">Build</th><th style="width:31%">Publish and grow</th><th>Gate to move on</th></tr></thead>
     <tbody>
-      <tr><td><b>Jan 2027</b></td><td>Research and offers for any business (margin maths for stores, plan maths for software); product-page copy part (ecommerce pack)</td><td>Site v0 public on 19 Jan. Weekly content starts. Founding-member pre-sale. 10 agency interviews.</td><td>500 qualified visits/month; 100 activated users; 20 pre-orders</td></tr>
-      <tr><td><b>Feb</b></td><td>Accounts, payments, workspace (v1). Meta ads mini app (step 5). Email and lifecycle starts (revive the archived module)</td><td>Paid plans live 16 Feb. First 2 implementation projects. Agency partner pilot (3–5 agencies).</td><td>20 paying orgs; payments and refunds work</td></tr>
-      <tr><td><b>Mar</b></td><td>Lifecycle Beginner + Intermediate steps (store flows, software onboarding emails); brand brain, static ad and copy workflow pages; avatar and video workflows start; software pack research</td><td>Two "climb the ladder" series. Affiliate programmes applied for (clearly marked links).</td><td>Month-2 paid retention ≥ 95%; ≤ 30 support minutes per account</td></tr>
-      <tr><td><b>Apr</b></td><td>Paid media operations (proposals only, no auto-pausing); tracking health check; <b>software and apps pack v1</b> (launch jobs adapted)</td><td>Partner training kit; consulting productised; software-focused content run</td><td>3 partners delivering setups that pass our checks; first paying software customers</td></tr>
-      <tr><td><b>May</b></td><td>First routines (weekly ad check, monthly creative plan) with a durable runner, alerts and an owner; creators and courses pack scoped</td><td>Case studies (only with written permission)</td><td>Routines run 4 weeks without silent failure</td></tr>
-      <tr><td><b>Jun</b></td><td>First agents (Expert steps): bounded, with budgets, approvals and red-team tests. Profit-opportunity ranker</td><td>Mid-year review against the model; hiring decisions; <b>pick the first non-marketing function</b> from demand data</td><td>The agent passes red-team tests and its cost cap holds</td></tr>
-      <tr><td><b>Jul–Sep</b></td><td>Holiday 2027 stack for every live pack; SEO, Google ads; creators pack v1; first jobs in the new function; marketplace design</td><td>Holiday 2027 campaign from August: content, partner bundles, early-bird implementation</td><td>Holiday stack tested end to end on 3 business types</td></tr>
+      <tr><td><b>Jan 2027</b></td><td>Lifecycle (revive the archived retention module); analytics; AI operations listings</td><td>Site public 19 Jan. Weekly content starts. Affiliate links (labelled) on tool guides.</td><td>All own items ported or retired</td></tr>
+      <tr><td><b>Feb</b></td><td>Skills from the internet at scale (about 15 a week); 20 more tool guides</td><td>Board posts and replies every day; newsletter weekly</td><td>Safety pipeline at about 2 hours per skill</td></tr>
+      <tr><td><b>Mar</b></td><td>Meta ads mini app (step 5); avatar and video workflows; /saas versions of the top 20 listings</td><td>"Climb the ladder" series; "GitHub vs ours" series</td><td>/saas reviewed by someone in software</td></tr>
+      <tr><td><b>Apr</b></td><td><b>/saas board opens</b>; first routines with a durable runner, alerts and an owner</td><td>Three-month review; money model rebuilt; membership waitlist opens</td><td>10k monthly visits; 1,000 subscribers</td></tr>
+      <tr><td><b>May</b></td><td>First agents (Expert steps): bounded, with budgets, approvals and red-team tests</td><td>Site ads switch on if traffic allows; YouTube partner check</td><td>Routines run 4 weeks without silent failure</td></tr>
+      <tr><td><b>Jun</b></td><td>Profit-opportunity ranker; creator upload design</td><td>Mid-year review; consulting and implementation page if people are asking</td><td>The agent passes red-team tests; its cost cap holds</td></tr>
+      <tr><td><b>Jul–Sep</b></td><td>Third board (chosen from demand); creator uploads beta; /marketing board scoped</td><td>Membership opens if the waitlist is there</td><td>50k monthly visits; 5,000 subscribers</td></tr>
     </tbody>
   </table>
-
-  <h2>The rhythm every week</h2>
-  <div class="grid4">
-    <div class="card"><h4>Monday</h4><p>Plan: pick the week's parts and the content tied to them.</p></div>
-    <div class="card"><h4>Tue–Thu</h4><p>Build and test parts; sales and client calls.</p></div>
-    <div class="card"><h4>Friday</h4><p>Section report, metrics check, record or publish content.</p></div>
-    <div class="card"><h4>Monthly</h4><p>Re-test published parts, compare the model with actuals, update the decision log.</p></div>
-  </div>
 
   <h2>How Claude works on this, safely</h2>
   <ul>
-    <li><b>One section at a time.</b> Parts inside a section are built in parallel batches of about 4 by helper agents, each writing only to its own part folder.</li>
+    <li><b>One section at a time.</b> Listings inside a section are built in parallel batches of about 4 by helper agents, each writing only to its own folder.</li>
     <li><b>Helpers draft; tools and reviews decide.</b> Model tests run through the tools, so costs and logs stay in one place, with hard spend caps.</li>
-    <li><b>Sources stay read-only.</b> No secrets are ever handled, no course code is run, and instructions found inside files are treated as data.</li>
-    <li><b>You review per section, not per part.</b> Every section report lists each part's scores, cost and changes.</li>
+    <li><b>Outside skills are untrusted.</b> They're downloaded into their own empty folder, never run outside a sandbox, and any instructions inside them are treated as data.</li>
+    <li><b>Sources stay read-only.</b> No secrets are ever handled, and Creative Engine is never edited from here.</li>
+    <li><b>You review per section, not per listing.</b> Every section report lists each listing's scores, cost and changes.</li>
   </ul>
 </section>
 
-<!-- PART 11 TEAM -->
+<!-- PART 14 TEAM -->
 <section>
-  <div class="eyebrow" style="margin-top:22px">Part 11 · Team</div>
+  <div class="eyebrow" style="margin-top:22px">Part 14 · Team</div>
   <h1>Who <em>does what.</em></h1>
-  <table>
-    <thead><tr><th>Role</th><th>Now (Oct 2026 – Feb 2027)</th><th>From paid launch</th></tr></thead>
+  <table class="compact">
+    <thead><tr><th>Role</th><th>Now (build year)</th><th>Once money comes in</th></tr></thead>
     <tbody>
-      <tr><td><b>You (founder)</b></td><td>Decisions, sales calls, client approvals, videos, section reviews</td><td>Partners, sales, content face, product direction</td></tr>
-      <tr><td><b>Claude + helper agents</b></td><td>Tools, parts, tests, examples, docs, the site build, under your review</td><td>More sections and packs, monthly re-tests, release notes</td></tr>
-      <tr><td><b>Onboarding / support (India)</b></td><td>-</td><td>First hire when services or support take more than ~20 hours a week of your time</td></tr>
-      <tr><td><b>Delivery engineer (India)</b></td><td>-</td><td>When there are ≥ 2 implementation projects a month</td></tr>
-      <tr><td><b>Industry reviewers</b></td><td>One practitioner per pack, paid per review, to check thresholds and wording</td><td>Same; they become partner trainers</td></tr>
-      <tr><td><b>Specialist reviewers</b></td><td>As needed: security, ad policy, legal on rights</td><td>Same, plus partner certification</td></tr>
+      <tr><td><b>You (founder)</b></td><td>Decisions, section reviews, videos, the face of the boards</td><td>Partnerships, content, direction, member calls</td></tr>
+      <tr><td><b>Claude + helper agents</b></td><td>Tools, listings, imports, tests, safety checks, the site, under your review</td><td>More boards, re-tests, release notes, moderation triage</td></tr>
+      <tr><td><b>Board moderator / community lead</b></td><td>You, plus AI triage of comments</td><td>First hire, when comments outgrow about 5 hours a week of your time</td></tr>
+      <tr><td><b>Delivery engineer (India)</b></td><td>-</td><td>When there are 2 or more implementation projects a month</td></tr>
+      <tr><td><b>Industry and role reviewers</b></td><td>One person per board, paid per review, to check wording and thresholds</td><td>Same; the best become board experts for members</td></tr>
+      <tr><td><b>Specialist reviewers</b></td><td>As needed: security (the safety pipeline), licences and rights</td><td>Same, plus creator-upload reviews</td></tr>
     </tbody>
   </table>
-  <p class="small">The financial model plans 4 product and leadership staff in Year 1, growing to 30 by Year 5, plus support, onboarding and service teams sized by measured hours. Hire on measured load, not on the calendar. <span class="chip c-ass">Assumption</span></p>
 </section>
 
-<!-- PART 12 MONEY -->
-<section class="part">
-  <div class="eyebrow">Part 12 · Money</div>
-  <h1>Five ways <em>to earn.</em></h1>
-  <p class="lead">From the current five-stream business model. These are planning assumptions, not contracted revenue. Model Year 1 starts at paid launch.</p>
-
-  <svg viewBox="0 0 680 210" width="100%" height="190" role="img" aria-label="Revenue, cost and profit by year">
-    <g font-size="10" fill="#5b6787">
-      <line x1="40" y1="180" x2="670" y2="180" stroke="#d9e0f0"/>
-      <line x1="40" y1="125" x2="670" y2="125" stroke="#eef1f8"/><text x="8" y="128">$5m</text>
-      <line x1="40" y1="70" x2="670" y2="70" stroke="#eef1f8"/><text x="4" y="73">$10m</text>
-      <line x1="40" y1="15" x2="670" y2="15" stroke="#eef1f8"/><text x="4" y="18">$15m</text>
-    </g>
-    <g>
-      <rect x="70" y="176.2" width="30" height="3.8" fill="#2557d6"/><rect x="104" y="173.2" width="30" height="6.8" fill="#9db7f2"/><rect x="138" y="180" width="30" height="3" fill="#a3262a"/>
-      <rect x="196" y="163.4" width="30" height="16.6" fill="#2557d6"/><rect x="230" y="165.4" width="30" height="14.6" fill="#9db7f2"/><rect x="264" y="178.1" width="30" height="1.9" fill="#0b1d4a"/>
-      <rect x="322" y="137" width="30" height="43" fill="#2557d6"/><rect x="356" y="151.5" width="30" height="28.5" fill="#9db7f2"/><rect x="390" y="165.5" width="30" height="14.5" fill="#0b1d4a"/>
-      <rect x="448" y="94.6" width="30" height="85.4" fill="#2557d6"/><rect x="482" y="130.1" width="30" height="49.9" fill="#9db7f2"/><rect x="516" y="144.5" width="30" height="35.5" fill="#0b1d4a"/>
-      <rect x="574" y="32.2" width="30" height="147.8" fill="#2557d6"/><rect x="608" y="98.5" width="30" height="81.5" fill="#9db7f2"/><rect x="642" y="113.7" width="26" height="66.3" fill="#0b1d4a"/>
-    </g>
-    <g font-size="10.5" fill="#1b2440" font-weight="700" text-anchor="middle">
-      <text x="119" y="198">Y1</text><text x="245" y="198">Y2</text><text x="371" y="198">Y3</text><text x="497" y="198">Y4</text><text x="621" y="198">Y5</text>
-    </g>
-    <g font-size="9.5"><rect x="430" y="2" width="9" height="9" fill="#2557d6"/><text x="443" y="10" fill="#5b6787">Revenue</text><rect x="500" y="2" width="9" height="9" fill="#9db7f2"/><text x="513" y="10" fill="#5b6787">Operating cost</text><rect x="592" y="2" width="9" height="9" fill="#0b1d4a"/><text x="605" y="10" fill="#5b6787">Profit*</text></g>
-  </svg>
-
-  <table>
-    <thead><tr><th>USD thousands</th><th class="num">Y1</th><th class="num">Y2</th><th class="num">Y3</th><th class="num">Y4</th><th class="num">Y5</th></tr></thead>
-    <tbody>
-      <tr><td>Subscription ($239/mo average)</td><td class="num">247</td><td class="num">1,212</td><td class="num">3,268</td><td class="num">6,594</td><td class="num">11,565</td></tr>
-      <tr><td>Implementation ($5,000 each)</td><td class="num">60</td><td class="num">180</td><td class="num">400</td><td class="num">750</td><td class="num">1,200</td></tr>
-      <tr><td>Consulting ($1,500 each)</td><td class="num">36</td><td class="num">90</td><td class="num">180</td><td class="num">300</td><td class="num">450</td></tr>
-      <tr><td>Affiliate ($100 per paid referral)</td><td class="num">5</td><td class="num">15</td><td class="num">40</td><td class="num">80</td><td class="num">150</td></tr>
-      <tr><td>Advertising ($1,500 per campaign)</td><td class="num">0</td><td class="num">9</td><td class="num">18</td><td class="num">36</td><td class="num">72</td></tr>
-      <tr><td><b>Total revenue</b></td><td class="num"><b>348</b></td><td class="num"><b>1,506</b></td><td class="num"><b>3,906</b></td><td class="num"><b>7,760</b></td><td class="num"><b>13,437</b></td></tr>
-      <tr><td>Operating costs</td><td class="num">619</td><td class="num">1,329</td><td class="num">2,589</td><td class="num">4,533</td><td class="num">7,409</td></tr>
-      <tr><td><b>Profit*</b></td><td class="num"><b>(270)</b></td><td class="num"><b>177</b></td><td class="num"><b>1,317</b></td><td class="num"><b>3,227</b></td><td class="num"><b>6,029</b></td></tr>
-      <tr><td>Active paying orgs at year end</td><td class="num">181</td><td class="num">688</td><td class="num">1,636</td><td class="num">3,027</td><td class="num">5,136</td></tr>
-    </tbody>
-  </table>
-  <p class="small">*Before interest, tax, depreciation and amortisation; not cash flow. Source: <code>docs/business/financial/</code>. The model isn't split by industry. Selling beyond ecommerce widens the market it draws from; it doesn't change these figures until we have real cohorts.</p>
-
-  <h2>What one paying customer is worth (model maths)</h2>
-  <div class="grid4">
-    <div class="card kpi"><div class="big">$239</div><p>average revenue per org per month</p></div>
-    <div class="card kpi"><div class="big">~$167</div><p>left after $62.27 direct cost and the $10 support minimum</p></div>
-    <div class="card kpi"><div class="big">~$318</div><p>acquisition cost per new paid org (Year 5)</p></div>
-    <div class="card kpi"><div class="big">~2 mo</div><p>to earn back acquisition cost</p></div>
-  </div>
-  <p class="small">All <span class="chip c-ass">Assumptions</span> until real cohorts exist.</p>
-
-  <div class="keep"><h2>Three money points to decide early</h2>
-  <ol class="steps">
-    <li><b>Year 1 runs at a loss of about $270k</b> in the model. Decide how it's funded: founder cash, services revenue or outside money. My recommendation is <b>services first</b>: holiday sprints, consulting and implementation pay for the build while subscriptions grow. <span class="chip c-pro">Proposed</span></li>
-    <li><b>Customers pay their own model bills.</b> The model's $30/month usage line covers our platform costs, not unlimited AI runs. Every part shows its cost per run, so there are no surprises.</li>
-    <li><b>Builder royalties are already in the cost line</b> ($19.12 per account per month). That makes room for the creator marketplace (70% to creators) when it opens.</li>
-  </ol></div>
-</section>
-
-<!-- PART 13 RISKS -->
+<!-- PART 15 RISKS -->
 <section>
-  <div class="eyebrow" style="margin-top:22px">Part 13 · Risks</div>
+  <div class="eyebrow" style="margin-top:22px">Part 15 · Risks</div>
   <h1>What could go wrong, <em>and what we do.</em></h1>
-  <table>
+  <table class="compact">
     <thead><tr><th style="width:34%">Risk</th><th>What we do about it</th></tr></thead>
     <tbody>
-      <tr><td><b>Too broad, too soon</b>: "for every business" means nothing to anyone</td><td>Sell exact jobs, not breadth. Four launch jobs, agencies first, and one new pack at a time under the opening rule (Part 2).</td></tr>
-      <tr><td><b>Parts secretly only work for stores</b></td><td>Golden sets cover 2+ business types; launch parts must pass on all three test cases; industry reviewers check each pack.</td></tr>
-      <tr><td><b>Too complicated for beginners</b></td><td>Simple by default: next step only, plain words, Normal view first. We watch where people drop off on each step and fix that step.</td></tr>
-      <tr><td>Simulated research in the Grüns brain appears in public as if it were real</td><td>Public examples use saved public pages only. Anything built on simulated research is rebuilt from public reviews or labelled "simulated".</td></tr>
-      <tr><td>People won't pay when free prompts exist</td><td>Prove it with paid sprints and pre-sales before building the paid site. Lead with finished, checked work, not prompts.</td></tr>
-      <tr><td>Parts look done but aren't</td><td>Measured gates: code checks, golden sets, blind judges, zero costly mistakes.</td></tr>
-      <tr><td>Course material leaks into products</td><td>Every part records its origin; the importer refuses non-own rows; everything is rewritten in our own words; terms are checked.</td></tr>
-      <tr><td>A public business objects to being an example</td><td>Only public quotes and clear "not affiliated" labels. Any test case can be swapped out without changing a part.</td></tr>
-      <tr><td>Old prices or offers in outputs</td><td>A versioned brain plus an automatic price check. The old-price case is in every sprint test.</td></tr>
-      <tr><td>Model churn makes advice stale</td><td>Pages name classes, not models; one model file; dated re-tests.</td></tr>
-      <tr><td>Test costs run away</td><td>Hard caps per run and per round; image renders capped separately.</td></tr>
-      <tr><td>Services swallow the product</td><td>Every project must reuse parts; anything built twice becomes a part; time-tracking reviewed monthly.</td></tr>
-      <tr><td>Client data from the ecomOS (Gehna) dashboard leaks into the product</td><td>We copy its patterns only. The importer refuses client folders, and the leakage check from the Mercatura starter runs on every build.</td></tr>
-      <tr><td>Safety and prompt injection</td><td>Red-team tests, approvals for risky actions, read-only connectors by default. We reduce risk; we never promise zero risk.</td></tr>
+      <tr><td><b>A long time with no income</b></td><td>Keep costs tiny, hire nothing early, switch on each stream as soon as its condition is met, and rebuild the money model with real data in April.</td></tr>
+      <tr><td><b>An imported skill harms someone</b> (malware, data leak, hijacked AI)</td><td>A tool scan plus a person, sandbox runs with trap inputs, pinned versions, re-checks on changes, and a 20-trap test the pipeline must always pass. We never promise zero risk.</td></tr>
+      <tr><td><b>Copying a skill we have no right to</b></td><td>The licence rule: copy only open licences, keep notices, credit and link; everything else gets a review page or the author's permission.</td></tr>
+      <tr><td><b>Boards fill with spam or go quiet</b></td><td>Free accounts, a report button, AI triage, a moderation queue, and our own posts and replies every day from launch.</td></tr>
+      <tr><td><b>Too big to find anything</b></td><td>Search, the ladder ("where are you today?"), boards and the next step only. Weak or duplicate listings get merged or retired.</td></tr>
+      <tr><td><b>General listings turn bland</b></td><td>The board versions carry the depth. "Any business" must be earned on 3 kinds of business.</td></tr>
+      <tr><td><b>Too complicated for beginners</b></td><td>Simple by default: plain words, the before and after on top, Normal view first. We watch drop-off on each step and fix that step.</td></tr>
+      <tr><td><b>Ads or affiliates erode trust</b></td><td>One quiet slot, labels everywhere, and rankings from tests only.</td></tr>
+      <tr><td>Course material leaks into listings</td><td>Every listing records its origin; the importer refuses non-own course rows; everything is rewritten in our own words.</td></tr>
+      <tr><td>Simulated research in the Grüns brain shown as real</td><td>Public examples use saved public pages only; anything built on simulated research is rebuilt or labelled.</td></tr>
+      <tr><td>Client data from the ecomOS (Gehna) dashboard leaks</td><td>We copy patterns only; the importer refuses client folders; the leakage check runs on every build.</td></tr>
+      <tr><td>Old prices or offers in outputs</td><td>A versioned brain plus an automatic price check.</td></tr>
+      <tr><td>Model churn makes advice stale</td><td>Pages name model classes, not models; dated re-tests.</td></tr>
+      <tr><td>Search traffic depends on one company</td><td>The newsletter and YouTube are owned channels; we grow them from day one.</td></tr>
     </tbody>
   </table>
 </section>
 
-<!-- PART 14 SCORECARD + DECISIONS -->
-<section class="part">
-  <div class="eyebrow">Part 14 · Scorecard and decisions</div>
+<!-- PART 16 SCORECARD + DECISIONS -->
+<section>
+  <div class="eyebrow" style="margin-top:22px">Part 16 · Scorecard and decisions</div>
   <h1>How we'll know it's working, <em>and what I need from you.</em></h1>
 
-  <h2>Scorecard</h2>
-  <table>
+  <h2>Scorecard <span class="chip c-ass">Assumption</span></h2>
+  <table class="compact">
     <thead><tr><th style="width:18%">By</th><th>We should have</th></tr></thead>
     <tbody>
-      <tr><td><b>15 Nov 2026</b> (30 days)</td><td>The item factory working; the brand brain section tested on 3 business types; first paid sprints delivered</td></tr>
-      <tr><td><b>11 Dec 2026</b> (Gate A)</td><td>≥ 5 paid sprints (1+ outside ecommerce), ≥ 70% of ads accepted, hours measured, lead offer chosen, brand name picked</td></tr>
-      <tr><td><b>19 Jan 2027</b></td><td>Site v0 live with about 25 tested parts; weekly content running; pre-sale open</td></tr>
-      <tr><td><b>Mar 2027</b></td><td>20+ paying orgs, 2 implementation projects, 3–5 agency pilots, month-2 retention ≥ 95%</td></tr>
-      <tr><td><b>Jun 2027</b></td><td>Software pack live; routines running; first agent passing red-team tests; ≥ 30% of paying orgs outside ecommerce</td></tr>
-      <tr><td><b>Feb 2028</b> (model Year 1 end)</td><td>About 181 active paying orgs and $348k revenue, the model's Year-1 line. We compare with actuals monthly.</td></tr>
+      <tr><td><b>1 Nov 2026</b></td><td>Gate 0: one listing end to end; the template approved</td></tr>
+      <tr><td><b>11 Dec 2026</b></td><td>Gate A: brain and creative sections ported; site skeleton with boards and comments; 5+ imported skills checked; all 20 traps caught</td></tr>
+      <tr><td><b>19 Jan 2027</b></td><td>Site public and free: 50+ general and 25+ /ecommerce listings, 10+ imports, 10+ tool guides</td></tr>
+      <tr><td><b>Apr 2027</b></td><td>All own items ported; 100+ imported skills checked; 40+ tool guides; /saas open; 10k monthly visits; 1,000 subscribers; 500 weekly returning users</td></tr>
+      <tr><td><b>Sep 2027</b></td><td>3 boards; 50k monthly visits; 5,000 subscribers; 3,000 weekly returning users; first income streams on; membership decided</td></tr>
     </tbody>
   </table>
 
-  <h2>Decisions, in order of urgency</h2>
-  <p class="small">The first five unblock Week 1.</p>
-  <table>
-    <thead><tr><th>#</th><th style="width:38%">Decision</th><th>My recommendation</th><th style="width:12%">Needed by</th></tr></thead>
+  <h2>Decisions</h2>
+  <table class="compact">
+    <thead><tr><th>#</th><th style="width:36%">Decision</th><th>My recommendation</th><th style="width:13%">Needed by</th></tr></thead>
     <tbody>
-      <tr><td>1</td><td>The four launch jobs (brand brain, static ad pack, landing-page audit, Meta ad audit as a ladder)</td><td>Yes. All four work for any business that sells online.</td><td>19 Oct</td></tr>
-      <tr><td>2</td><td>Run the holiday sale sprint, and at what price</td><td>Yes. Test $1,500 (the consulting unit); range $1,000–2,500.</td><td>19 Oct</td></tr>
-      <tr><td>3</td><td>Router for model tests</td><td>OpenRouter; you add the key to <code>.env</code> yourself</td><td>21 Oct</td></tr>
-      <tr><td>4</td><td>Test-spend cap</td><td>$2 per run, $25 per round to start</td><td>21 Oct</td></tr>
-      <tr><td>5</td><td>Two extra test cases: one software company, one service or course business</td><td>Yes; I'll bring a shortlist in Week 2</td><td>30 Oct</td></tr>
-      <tr><td>6</td><td><code>ecomOS</code> turns out to be the Gehna dashboard plus a product app on sample data. Reuse it?</td><td>Yes, its patterns only (never its data), for the Meta ads ladder</td><td>23 Oct</td></tr>
-      <tr><td>7</td><td>Archive the old <code>ecommerce-workflow-platform</code> repo</td><td>Yes, archive it (no deleting)</td><td>Any time</td></tr>
-      <tr><td>8</td><td>Course terms (Ecom Intelligence, Blue Sense, Nu Reach)</td><td>Read the terms; until then, private input only</td><td>Before site v0</td></tr>
-      <tr><td>9</td><td>Clean-room rewrite of <code>copy-craft</code></td><td>Yes, based on our own tests</td><td>Before Section 2 ends</td></tr>
-      <tr><td>10</td><td>Retention module: revive or rebuild</td><td>Revive. The archive has ~10k lines with tests.</td><td>Jan 2027</td></tr>
-      <tr><td>11</td><td>Brand name</td><td>A shortlist of 5 by Gate A. Pick one that isn't tied to one industry before site v0.</td><td>11 Dec</td></tr>
-      <tr><td>12</td><td>How Year 1 is funded</td><td>Services first</td><td>Gate A</td></tr>
-      <tr><td>13</td><td>What "Jev" is</td><td>Only needed if it's a router we should support</td><td>Any time</td></tr>
-      <tr><td>14</td><td>Sample numbers for data examples (no public business publishes its ad results)</td><td>A synthetic ad account labelled "sample numbers, not a real business", or your own ad account with permission</td><td>Dec</td></tr>
-      <tr><td>15</td><td>What "Creative Intelligence" UI refers to</td><td>I've read it as the ecomOS dashboard; the look comes from Creative Engine (Mercatura)</td><td>Before site design (Dec)</td></tr>
+      <tr><td colspan="4" class="small"><b>Needed for Week 1</b></td></tr>
+      <tr><td>1</td><td>Router for model tests</td><td>OpenRouter; you add the key to <code>.env</code> yourself</td><td>21 Oct</td></tr>
+      <tr><td>2</td><td>Spend cap for model tests</td><td>$2 per run, $25 per round to start</td><td>21 Oct</td></tr>
+      <tr><td colspan="4" class="small"><b>Needed before the site is built</b></td></tr>
+      <tr><td>3</td><td>Who can comment</td><td>Anyone with a free account. Members later get priority replies from us, not the right to comment.</td><td>Mid Nov</td></tr>
+      <tr><td>4</td><td>Licence rule for imported skills</td><td>Copy and adapt only open licences (MIT, Apache 2.0, BSD, CC BY, with share-alike carried over); everything else gets a review page that links out</td><td>Early Dec</td></tr>
+      <tr><td>5</td><td>Brand name and domain</td><td>Shortlist of 5 by early December; not tied to one industry; works with /ecommerce-style boards</td><td>11 Dec</td></tr>
+      <tr><td>6</td><td>What "Creative Intelligence" UI refers to</td><td>I've read it as the ecomOS dashboard; the look comes from Creative Engine (Mercatura)</td><td>Mid Nov</td></tr>
+      <tr><td>7</td><td>Sample numbers for data examples (no public business publishes its ad results)</td><td>A synthetic ad account labelled "sample numbers, not a real business", or your own account with permission</td><td>Dec</td></tr>
+      <tr><td>8</td><td>Reuse the ecomOS (Gehna) dashboard?</td><td>Yes, its patterns only, never its data, for the Meta ads ladder</td><td>Nov</td></tr>
+      <tr><td>9</td><td>Course terms (Ecom Intelligence, Blue Sense, Nu Reach)</td><td>Private input only until the terms are read</td><td>Before 19 Jan</td></tr>
+      <tr><td>10</td><td>Clean-room rewrite of <code>copy-craft</code></td><td>Yes, based on our own tests</td><td>Before the creative section ends</td></tr>
+      <tr><td>11</td><td>A contact link at launch for people who ask for help</td><td>Yes: one "Need help building this?" link. No prices, no offers, no outreach. Requests go on a list.</td><td>Before 19 Jan</td></tr>
+      <tr><td colspan="4" class="small"><b>Later</b></td></tr>
+      <tr><td>12</td><td>Membership price for the first tier</td><td>Test $99 against $199 on the waitlist page; Pro at $499</td><td>Apr 2027</td></tr>
+      <tr><td>13</td><td>What stays free</td><td>Everything free at launch stays free for good; only new premium workflows can be paid</td><td>Before any paywall</td></tr>
+      <tr><td>14</td><td>Ad and affiliate rules</td><td>One quiet slot per page, never inside the steps; labelled links; rankings from tests only</td><td>Before ads go on</td></tr>
+      <tr><td>15</td><td>How the build year is funded, and the money model rebuild</td><td>Founder-funded and lean; rebuild the model in April with three months of data</td><td>Apr 2027</td></tr>
+      <tr><td>16</td><td>Retention module: revive or rebuild</td><td>Revive. The archive has about 10k lines with tests.</td><td>Jan 2027</td></tr>
+      <tr><td>17</td><td>Archive the old <code>ecommerce-workflow-platform</code> repo</td><td>Yes, archive it (no deleting)</td><td>Any time</td></tr>
+      <tr><td>18</td><td>What "Jev" is</td><td>Only needed if it's a router we should support</td><td>Any time</td></tr>
     </tbody>
   </table>
-
-  <h2>How this plan fits the earlier handoff</h2>
-  <table>
-    <thead><tr><th style="width:40%">The handoff said</th><th>This plan does</th></tr></thead>
-    <tbody>
-      <tr><td>Independent product, fresh repo; don't turn Creative Engine into it</td><td>Agreed: a new repo; Creative Engine is a read-only source of tested methods</td></tr>
-      <tr><td>Global and broader than D2C; the ecommerce repo name is historical</td><td>Agreed: all digital businesses, a neutral repo name, and ecommerce as the first industry pack</td></tr>
-      <tr><td>Start with deep, exact marketing tasks, then adjacent functions</td><td>Marketing first; new functions only under the opening rule</td></tr>
-      <tr><td>Lead with exact jobs: page audit, Meta audit, BFCM static ad</td><td>The same three, plus the free brand brain as the entry point</td></tr>
-      <tr><td>Test brands such as Rune where approved, plus held-out cases</td><td>Public test cases across three business types; Rune only if you approve it</td></tr>
-      <tr><td>Prove in order: manual → download pack → host adapter → routines → agents</td><td>The same order: sprints → tested downloads → site → routines (May) → agents (Jun). Customers climb the same order on each job's ladder.</td></tr>
-    </tbody>
-  </table>
+  <p class="small">The holiday sale sprint, the four launch jobs and the two extra test cases from version 3 are dropped.</p>
 </section>
 
 <!-- APPENDIX -->
 <section>
   <div class="eyebrow" style="margin-top:22px">Appendix</div>
   <h1>Glossary <em>and where things live.</em></h1>
-  <table>
+  <table class="compact">
     <thead><tr><th style="width:22%">Word</th><th>Plain meaning</th></tr></thead>
     <tbody>
-      <tr><td><b>Part / item</b></td><td>One building block in the catalogue: a prompt, skill, routine, workflow, agent or system</td></tr>
-      <tr><td><b>Job</b></td><td>One exact task a customer wants done, such as "audit my Meta ads"</td></tr>
-      <tr><td><b>Function</b></td><td>An area of work, such as creative and content or paid media</td></tr>
-      <tr><td><b>Industry pack</b></td><td>The brain fields, examples, thresholds and wording that fit a part to one industry. It never copies the part.</td></tr>
-      <tr><td><b>Brand brain</b></td><td>One file holding a business's facts, what it sells, its offers, claims, voice and buyers, which any AI can load</td></tr>
-      <tr><td><b>Ladder / step</b></td><td>The path for one job, from by hand (0) to agents (8). Each step automates a bit more and reuses the one before.</td></tr>
-      <tr><td><b>Level</b></td><td>How much setup a step needs: Beginner, Intermediate, Advanced, Expert</td></tr>
+      <tr><td><b>Listing</b></td><td>One building block on the site: a prompt, skill, routine, workflow, application or agent</td></tr>
+      <tr><td><b>General library</b></td><td>The listings any business can use</td></tr>
+      <tr><td><b>Board</b></td><td>A community page for one industry (/ecommerce, /saas) or job role (/marketing): focused listings, comments and advice</td></tr>
+      <tr><td><b>Board version</b></td><td>A general listing fitted to one board: its brain fields, examples, thresholds and wording. It never copies the listing.</td></tr>
+      <tr><td><b>Imported skill</b></td><td>A skill from GitHub or elsewhere that we've credited, licence-checked, safety-checked and improved</td></tr>
+      <tr><td><b>Safety check</b></td><td>The scan for scripts, data leaks, hidden instructions and excess power, plus sandbox runs with trap inputs</td></tr>
+      <tr><td><b>Prompt injection</b></td><td>Hidden text that tries to make an AI ignore its rules or do something the user didn't ask for</td></tr>
+      <tr><td><b>Brand brain</b></td><td>One file with a business's facts (what it sells, offers, claims, voice, buyers) that any AI can load</td></tr>
+      <tr><td><b>Ladder / step / level</b></td><td>The path for one job, from by hand (0) to agents (8); each step's level is Beginner, Intermediate, Advanced or Expert</td></tr>
       <tr><td><b>Connector (MCP)</b></td><td>A one-time link that lets an AI read a tool such as Meta Ads or Google Sheets for you</td></tr>
-      <tr><td><b>Mini app</b></td><td>A single page with a Refresh button and filters, built on your own data</td></tr>
-      <tr><td><b>Stack</b></td><td>A ready-made chain of parts for a goal, e.g. "holiday sale stack"</td></tr>
-      <tr><td><b>Golden set</b></td><td>A fixed set of test inputs with known good answers, used to grade every version</td></tr>
+      <tr><td><b>Golden set</b></td><td>Fixed test inputs with known good answers, used to grade every version</td></tr>
       <tr><td><b>Blind judge</b></td><td>A different AI model that grades outputs without knowing which version made them</td></tr>
-      <tr><td><b>Costliest mistake</b></td><td>The error that would hurt most, e.g. a wrong price or an invented claim; it must be zero</td></tr>
-      <tr><td><b>Caching order</b></td><td>Putting the parts of a prompt that don't change first, so AI providers charge less for repeats</td></tr>
-      <tr><td><b>Lean mode</b></td><td>A shorter version of a part (short brain card, fewer references) to save tokens</td></tr>
       <tr><td><b>Router</b></td><td>A service such as OpenRouter that lets one setup reach many AI models</td></tr>
       <tr><td><b>Gate</b></td><td>A measured check that must pass before the next phase starts</td></tr>
     </tbody>
   </table>
 
   <h2>Where everything lives</h2>
-  <table>
+  <table class="compact">
     <thead><tr><th style="width:30%">In the repo</th><th>What's there</th></tr></thead>
     <tbody>
       <tr><td><code>docs/final-plan/</code></td><td>This plan (PDF + HTML source)</td></tr>
       <tr><td><code>docs/FINAL_PLAN.md</code></td><td>The same plan as Markdown, for quick reference and for agents</td></tr>
-      <tr><td><code>docs/planning/</code></td><td>The detailed planning pack: 01 business map (now the ecommerce pack map) · 03 gaps · 04 site architecture · 05 production principles · 06 build plan · 07 sources-to-skills</td></tr>
+      <tr><td><code>docs/planning/</code></td><td>The detailed planning pack (written ecommerce-first and sales-first; where it differs, this plan wins)</td></tr>
       <tr><td><code>docs/inventory/</code></td><td>All 1,338 items with rights and proposed names (private)</td></tr>
-      <tr><td><code>docs/business/</code></td><td>The business plan, financial model and earlier handoff</td></tr>
-      <tr><td><code>docs/archive/guide-v1/</code></td><td>The first, ecommerce-first guide (superseded)</td></tr>
-      <tr><td><code>catalogue-items/</code></td><td>The parts (empty until Section 1), plus shared types, models and the name map for 226 own items</td></tr>
-      <tr><td><code>test-brands/</code> · <code>tools/</code> · <code>knowledge/</code> · <code>reports/</code> · <code>site/</code></td><td>Ready for the build, each with a README</td></tr>
+      <tr><td><code>docs/business/</code></td><td>The earlier business plan, financial model and handoff (reference only)</td></tr>
+      <tr><td><code>catalogue-items/</code> · <code>test-brands/</code> · <code>tools/</code> · <code>knowledge/</code> · <code>reports/</code> · <code>site/</code></td><td>Ready for the build, each with a README</td></tr>
       <tr><td><code>DECISIONS.md</code> · <code>RULES.md</code></td><td>The decision log and the ground rules</td></tr>
     </tbody>
   </table>
 
   <div class="dark" style="margin-top:16px">
     <div class="eyebrow">The next step</div>
-    <p style="font-size:11pt">Say yes to decisions 1–5, and Week 1 starts on Monday 19 October. That means the first tools, the first test part (the website claims extractor) and the holiday sprint offer going out.</p>
+    <p style="font-size:11pt">Say yes to decisions 1 and 2 (router and spend cap), and Week 1 starts on Monday 19 October: the first tools, the listing format and the port order for everything we own. Nothing gets sold.</p>
   </div>
 </section>
 

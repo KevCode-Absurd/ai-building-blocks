@@ -1,8 +1,8 @@
 # The final plan
 
-**Version 3 · plan of record · 18 October 2026 · private**
+**Version 4 · plan of record · 18 October 2026 · private**
 
-This replaces the v1 ecommerce guide, which is kept in `docs/archive/guide-v1/`. The friendly, laid-out version is [final-plan/Final-Plan.pdf](final-plan/Final-Plan.pdf). This file has the same content for quick reference and for agents working in the repo.
+This replaces version 3 (sales-first, with launch jobs and a holiday sprint) and the v1 ecommerce guide, which is kept in `docs/archive/guide-v1/`. The laid-out version is [final-plan/Final-Plan.pdf](final-plan/Final-Plan.pdf). This file has the same content for quick reference and for agents working in the repo.
 
 Labels used below:
 
@@ -17,152 +17,183 @@ Labels used below:
 
 ## The plan on one page
 
-**What we're building.** A global platform of **tested AI building blocks and expert implementation** for digital businesses. It covers prompts, skills, routines, workflows, agents and complete systems. Each block does one exact job and shows a real, labelled example. It says which AI model to use and what it costs, and it runs in the AI tools people already pay for. When setup gets hard, we do it for them.
+**What we're building.** A **free, evergreen library** of tested AI building blocks. It isn't only skills. It has:
+- simple prompts, skills, routines, workflows, applications, and people's own agents and bots
+- **plain how-to guides for setting each one up yourself**
 
-**Simple by default.** Every job is a ladder, from what you do by hand today to asking an AI, connecting your tools, a sheet that refreshes itself, a mini app, a shared app and finally agents. People see only their next step, from Beginner to Expert (Part 3).
+A complete beginner gets something useful on day one, and an expert finds the next level up.
 
-- **Who it's for:** digital businesses that sell online: brands, dropshippers, agencies, software companies, creators and service businesses. **Agencies come first**, because one agency covers many industries and many brands.
-- **Where we start:** exact marketing jobs, where our tested methods are deepest. Then we earn the right to cover sales, support and operations. **Ecommerce is the first industry pack, not the product.**
-- **How we earn:**
-  - subscriptions ($99 / $299 / $899 a month)
-  - implementation ($5,000)
-  - consulting ($1,500)
-  - affiliates
-  - advertising, last
-  - a creator marketplace (70/30), later
+It's organised in three layers:
+1. **General skills** any business can use.
+2. **Industry boards** on top, starting with **/ecommerce**. Here the skills are more focused and more valuable, and people download, comment and get advice, a bit like Reddit communities.
+3. **Boards for job roles** later: marketing, finance, operations, product management.
+
+Every listing is **tested, explained in plain words and shown with a real before and after**, so people who find GitHub overwhelming can still use it.
+
+We also bring in good skills from around the internet. For each one we:
+- credit and link the original
+- check it for malware and prompt injection
+- tighten and improve it
+- show what it produces
+
+It stays **simple by default**: every job is a ladder, and people only see their next step.
+
+- **Who it's for:** anyone who uses AI for work, in any business. The first deep board is /ecommerce, because that's where our own tested skills are strongest. /saas comes next.
+- **What it costs:** nothing. No paywall, no selling and no sale campaigns at the start. [Decided]
+- **How it earns, later:**
+  - first, affiliates and advertising (site and YouTube), once traffic is there
+  - then consulting and implementation
+  - memberships ($99–199 and $499 a month)
+  - premium workflows
+  - a creator marketplace (70/30)
 
 **The plan in five moves**
 
-1. **Now to 11 Dec: prove people pay.** Sell done-with-you **holiday sale sprints** (Black Friday to New Year) to stores, software companies, creators and their agencies. Meanwhile, build the brand brain and static ad sections.
-2. **December: package what works.** The four launch jobs become tested parts, each tested on more than one kind of business:
-   - brand brain
-   - static ad pack
-   - landing-page audit
-   - Meta ad audit, as a ladder
-3. **19 Jan 2027: open the free catalogue** (site v0). Start the weekly content engine and the founding-member pre-sale.
-4. **16 Feb 2027: switch on paid plans.** Take the first implementation projects and start an agency partner pilot.
-5. **Spring 2027 onward: go deeper, then wider.**
-   - First, fill the marketing gaps: email, paid media and analytics.
-   - Then add the software and apps pack, routines and agents.
-   - The first non-marketing function opens once demand data picks it.
+1. **Now to January: port everything we have.**
+   - Every skill we own is generalised so any business can use it, tested, and shown with a before and after.
+   - The ecommerce versions go on the /ecommerce board.
+   - The site gets built at the same time.
+2. **19 January 2027: open the site, free.** It launches with:
+   - the general library
+   - the /ecommerce board, with comments
+   - the first tool guides
+   - the first skills brought in from the internet
+3. **February to March: bring in the best of the internet.** Imported skills arrive at scale, each one credited, safety-checked, improved and explained. The tools section grows.
+4. **From April: more boards.** /saas comes first, then more industries picked by demand, then job-role boards.
+5. **Money only once there's an audience.** Each revenue stream switches on when its own condition is met (Part 10). What's free at launch stays free.
 
 ---
 
 ## 0 · My calls
 
-1. **One catalogue for every digital business, organised by job.** Each job has one core part, and industry packs add brain fields, examples and thresholds. That means one quality bar and one test system, so a fix reaches every industry.
-2. **Marketing first, because that's where our proof is.** A new function opens only when two things are true: its first three jobs pass testing, and at least 10 customers have asked for it.
-3. **Agencies are the first buyer.** One sale covers many brands in many industries. It also proves the parts work outside one industry, and agencies can become resellers.
-4. **Prove payment before we build the platform.** Paid sprints and a pre-sale come before accounts and payments. If nobody pays by Gate A (11 Dec), we change the offer, not the code.
-5. **Testing is the moat, so we publish it.** Every part shows its quality, cost per run and speed, comparing cheap and top models. "Which model for which job" becomes our most useful content.
-6. **Downloads first, hosted runs later.** Site v0 is files that run in Claude, ChatGPT, Codex or any AI via a router. We host runs only when customers ask.
-7. **Agents and systems are sold as implementation before they're products.** Workflows come first, then routines (May) and agents (June). Each has budgets, approvals and red-team tests.
-8. **Simple by default: every job is a ladder.** People start where they are: by hand, then ask, connect, save, schedule, mini app, full app, share, act. Pages show only the next step, at four levels from Beginner to Expert. The higher steps are where "Help me build this" earns services revenue. [Decided, 18 Oct]
-9. **Small team, hiring on measured load.** Hires follow tracked hours, not the calendar.
+1. **Free first. No paywall, no selling at the start.** It's an evergreen resource anyone can take and use. [Decided]
+2. **Build the whole platform, not one product.** There are no launch jobs. We port everything we have and keep adding to it. It's prompts, skills, routines, workflows, apps, and people's own agents and bots. Each comes ready-made and with a plain setup guide. [Decided]
+3. **General first, then industry, then job roles.** [Decided]
+4. **Boards are communities.** Each board works like a subreddit: listings, downloads, comments and advice. [Decided]
+5. **Bring in the best of the internet, made safe and simple.** Every imported skill is credited, linked, safety-checked, improved and shown with a before and after. We only copy skills whose licence allows it. [Decided; licence rule Proposed]
+6. **Testing and before/after are the value, so we show them.** We show quality, cost per run, and cheap vs top model.
+7. **Simple by default: every job is a ladder.** [Decided]
+8. **Downloads first, hosted runs later.**
+9. **Money comes after the audience, one stream at a time.** [Decided]
+10. **Keep costs small until money comes in.** No hires until revenue or measured workload says so. [Proposed]
 
-### What changed from v1
+### What changed from version 3
 
-| v1 said (ecommerce guide) | This plan says |
+| Version 3 said | Version 4 says |
 |---|---|
-| An ecommerce workflow platform | A platform of AI building blocks for **all digital businesses**. Ecommerce is the first industry pack. [Decided] |
-| Repo `ecommerce-workflow-platform` | New repo `ai-building-blocks` (a working name). The old repo is superseded and can be archived. |
-| Catalogue navigated by 28 ecommerce modules | Navigated by **job, function, industry pack and host**. The modules become tags inside the ecommerce pack. |
-| BFCM static ad pack for stores | **Static ad pack**, holiday sale edition first, for any business running a Black Friday or year-end offer |
-| Test brands Grüns, AG1, IM8 (all supplements) | The same three, **plus one software company and one service or course business** [Proposed] |
-| Store stages S0–S5 as the growth model | A general ladder (explore → launch → grow → scale). S0–S5 stays in the ecommerce pack. |
-| Four depths: Starter, Standard, Advanced, Production | Every job is a **ladder of steps** (0–8) at four levels: **Beginner, Intermediate, Advanced, Expert**. Pages show only the next step. [Decided] |
-| Creative Engine used as a source of methods | Its finished workflows (brand brain, static ads, copy, avatars, video board) become **ready-made workflows** people pick stages from |
-| ecomOS: an unknown separate app | It is the Gehna dashboard. Its **patterns, not its data**, become the Meta ads ladder |
-| Expansion = more ecommerce modules | **Deeper** (more marketing jobs), then **wider** (new packs), then **new functions** |
+| Prove people pay first: holiday sale sprints, then a pre-sale | **No selling at the start.** Build the whole platform; everything free; no sale campaigns. [Decided] |
+| Four launch jobs to lead with | **No launch jobs.** We port every skill we own into a general library, then the /ecommerce board. |
+| Subscriptions ($99 / $299 / $899) as the main income | **No paywall.** Income comes later, in this order: affiliates, ads, YouTube, consulting and implementation, memberships, premium workflows, the marketplace. |
+| Agencies are the first buyer | No buyer to chase yet. The first wedge is the /ecommerce board. |
+| Find parts by job, function, industry pack and host | Three layers: **general library → industry boards → job-role boards**. Job, type, level and host stay as filters. |
+| Industry packs | **Industry boards**, each a community with its own listings, comments and advice |
+| Only parts from our own sources | Plus **skills from the internet**: credited, licence-checked, safety-checked, improved, with a before and after |
+| Gates based on payment | Gates based on **quality and use** |
+| Two extra public test cases to pick | Dropped as a project. General listings are still checked on more than one kind of business. |
+| Five-stream money model ($348k in Year 1) | Superseded. Year 1 is a build year with little or no income by design. The model is rebuilt after three months of real traffic. |
 
 ---
 
 ## 1 · The idea
 
-AI answers; teams still do the setup. A result someone would actually use needs:
-- the business's facts
-- a method
-- the right model
-- checks
-- doing it all again next week
+There are thousands of prompts and skills on GitHub and in AI communities, and most people never use them. They can't tell:
+- which ones work
+- whether they're safe
+- how to install them
+- what they'd get
 
-That gap is the business. Four problems sit inside it:
-- The method is too broad.
-- The context is scattered.
-- A draft isn't finished work.
-- One success is hard to repeat.
+That gap is the business. It has four parts:
+- **Too much, untested.**
+- **Not safe to trust.** A skill can hide scripts, data grabs or instructions that hijack the AI.
+- **Made for developers.**
+- **Too general or too narrow.**
 
-**Six levels:** prompt → skill → routine → workflow → agent → system. Every job is laid out as a **ladder of steps** using these blocks, and each step has a level: **Beginner, Intermediate, Advanced, Expert** (Part 3). [Decided]
+**Six kinds of building block:** prompt → skill → routine → workflow → application → agent. Every job is laid out as a ladder of steps that uses them in order. Each step has a level: Beginner, Intermediate, Advanced or Expert. [Decided]
 
-**Every part's page shows:**
-- **A real, labelled public example.** It's shown without the brain, with it, and with it plus references, on more than one kind of business.
-- **Which model to use:** recommended, budget, and not worth it.
-- **How to run it efficiently.**
-- **How to run it in each host.**
-- **Industry notes.**
-- **Where it sits on the ladder: its step, its level, and the next step up.**
-- **What it needs and what it feeds.**
-- **Edit points, tiers and "Help me build this".**
+### Every type comes two ways: ready-made, and "how to make your own" [Decided]
+
+| Type | Take a ready-made one | Learn to set one up yourself |
+|---|---|---|
+| Prompt | Copy, paste, get a result in a minute | How to write a good prompt; how to save and reuse prompts |
+| Skill | Download it into Claude, ChatGPT or Codex | What a skill is; how to install one; how to turn your own process into a skill |
+| Routine | A ready schedule, e.g. a 9 am ad report | How to set up a scheduled task in Claude, ChatGPT or Google Sheets |
+| Workflow | A chain of stages you tick, e.g. brand brain → ads → copy | How to chain prompts and skills; when a workflow beats one big prompt |
+| Application | A mini app with a Refresh button and filters | How to build a one-page app with the AI's help; how to add logins and share it |
+| Agents and bots | A bounded agent that proposes while you approve | How to set up your own agent or bot for a task: tools, limits, approvals, costs |
+
+The guides follow the same rules as the listings: plain words, a real before and after, tested in each tool, and the next step shown. People get value wherever they are on the chain.
+
+**Every listing's page shows:**
+- A plain-words explanation.
+- A real before and after, made from a public business and labelled "not affiliated". It shows the result without the brand brain, with it, and on more than one kind of business.
+- Which model to use (recommended, budget, not worth it), from a real test.
+- How to run it in each tool.
+- Where it sits on the ladder.
+- Where it came from: ours, or adapted from a named original, with its link, licence and what we changed.
+- A safety badge.
+- What it needs and what it feeds, plus the board versions.
+- Comments, with replies from us.
 
 **What we are not:**
+- a paywalled course
+- a dump of GitHub links
 - a generic "marketing agent"
-- a directory of untested prompts
 - an ecommerce-only tool
 - a way to buy access to other brands' ads [Decided]
 
 ---
 
-## 2 · How the catalogue is organised
+## 2 · How it's organised [Decided]
 
-Find any part four ways: **job** (first), **function**, **industry pack** and **host**.
+| Layer | What it is | When |
+|---|---|---|
+| **1 · General library** | Every skill made general, for any business | From launch |
+| **2 · Industry boards** | /ecommerce first, /saas next, then more by demand. Focused versions plus comments and advice. | /ecommerce at launch · /saas Apr 2027 |
+| **3 · Job-role boards** | /marketing, /finance, /operations, /product and more | After 2–3 industries |
+| **Alongside · Tools** | Plain guides to AI tools, and how each is used in a given industry | From launch |
 
-### Functions: marketing first
+### One listing, three layers
 
-| Function | Example jobs | Depth today | First release |
-|---|---|---|---|
-| Business brain | Brand brain builder, voice card, claims register, offer calendar | Partial | Launch (free) |
-| Research and strategy | Customer research from reviews, angle finder, offer builder, competitor profile | Partial (offer maths missing) | Jan 2027 |
-| Creative and content | Static ad pack, video scripts, image sets, creator briefs, SEO articles | Strong (27+ tested static parts) | Launch |
-| Paid media | Meta ad audit, creative-fatigue review, weekly ad review, Google audit | [Gap] | Launch (Meta ads ladder) |
-| Website and conversion | Landing-page audit, page copy, test calculator, speed check | Partial (no product-page copy part) | Launch (page audit) |
-| Lifecycle and retention | Email flows, SMS, onboarding emails, win-back, support replies | [Gap] (archived module could close it) | Feb–Mar 2027 |
-| Analytics and profit | Tracking health check, weekly report, profit-opportunity ranker | [Gap] | Apr–Jun 2027 |
-| AI operations | Model picker, cost ledger, blind judge, router setup | Partial | Inside every part; standalone Q2 2027 |
-| Later | Sales, support, operations, finance and admin | Not started | Under the opening rule |
+| Layer | "Write ad copy" | "Audit a landing page" |
+|---|---|---|
+| General library | Ad copy from your offer, voice and buyer | What's broken, why it matters, what to fix first |
+| /ecommerce | Product and price ads, bundles, sale wording, checked against the live price | Product-page checks: photos, reviews, shipping, ways to raise order value |
+| /saas | Plan and trial ads, feature-to-benefit lines | Pricing-page and sign-up checks, trial-to-paid friction |
+| /marketing (later) | Collected for marketing managers in any industry | The same, with a weekly review routine |
 
-### Industry packs: one part, many industries
-
-A pack never copies a part. It adds five things for its industry:
+A board version never copies the general listing. It adds the industry's own:
 - brain fields
 - examples
 - thresholds
 - wording
 - metrics
 
-| Pack | What changes | Depth | When |
-|---|---|---|---|
-| Ecommerce and D2C (incl. dropshipping) | Products, prices, bundles, AOV, ROAS, product pages, S0–S5 | Deep | Launch |
-| Agencies | Many client brains kept apart, approvals, white-label, client reports | Partial | Launch as buyer; Feb pilot |
-| Software and apps | Plans, trials, activation, onboarding, payback | Light | Pack v1 Apr 2027 |
-| Creators and courses | Launches, webinars, lists, community, cohort dates | Light | Scoped May; v1 Q3 2027 |
-| Service businesses | Leads, bookings, reviews, local search, quotes | None | When demand shows |
+A fix to the general listing reaches every board.
 
-**How we grow:**
-1. Deeper: more marketing jobs.
-2. Wider: new industry packs.
-3. New functions: sales, support or operations.
-4. Systems: sold as implementation first.
+**Ways to find anything:** job, type and level, board, tool.
 
-**Opening rule** (for any new pack or function) [Proposed]. All three must be true:
-- at least 10 customers or qualified leads have asked for it
-- its first three jobs pass the same tests as everything else
-- a public test case exists for it
+**Areas of work in the library:**
+
+| Area | Our depth today |
+|---|---|
+| Business brain | Partial |
+| Research and strategy | Partial |
+| Creative and content | Strong |
+| Paid media | [Gap] (the Meta ladder fills it) |
+| Website and conversion | Partial |
+| Lifecycle and retention | [Gap] |
+| Analytics and profit | [Gap] |
+| AI operations | Partial |
+| Later: finance, operations, product, sales, support | Not started; mostly filled by skills we bring in |
+
+**Rule for opening a new board** [Proposed]. All three must be true:
+- people are asking for it
+- 20+ listings have been adapted and tested
+- someone from that industry or role has reviewed the wording and thresholds
 
 ---
 
-## 3 · One step at a time: the ladder [Decided]
-
-Most people have never connected an AI to anything, and some already run their own apps. So every job in the catalogue is a ladder. It starts with what you do by hand today, and each step automates a little more. A page shows only the next step, and people who know more can jump ahead.
+## 3 · The ladder [Decided]
 
 | Step | Name | What it means |
 |---|---|---|
@@ -170,557 +201,426 @@ Most people have never connected an AI to anything, and some already run their o
 | 1 | Ask | Paste your data in and get the analysis |
 | 2 | Connect | The AI fetches the data itself, through a connector (MCP) |
 | 3 | Save | Results land in a sheet you own |
-| 4 | Schedule | It refreshes itself, e.g. at 9 am daily, and everything built on it updates |
+| 4 | Schedule | It refreshes itself, e.g. at 9 am daily |
 | 5 | Mini app | One page with a Refresh button and filters |
 | 6 | Full app | APIs feed data in and pass it on to other parts |
 | 7 | Share | Teammates and clients get access, with permissions |
 | 8 | Act | Agents act on the data, with approvals |
 
 **Levels:**
-- **Beginner (steps 1–2):** copy, paste and a one-click connector.
-- **Intermediate (3–4):** connect two tools and set a schedule.
-- **Advanced (5–6):** a small app built with the AI's help, with light code.
-- **Expert (7–8):** logins, hosting (e.g. Render), TypeScript and agents.
+- **Beginner:** steps 1–2.
+- **Intermediate:** steps 3–4.
+- **Advanced:** steps 5–6.
+- **Expert:** steps 7–8.
 
-These replace the old depth names: Starter becomes Beginner, Standard becomes Intermediate, Advanced stays, and Production becomes Expert.
-
-The steps map onto the building blocks: step 1 is a prompt, steps 2–3 a skill, step 4 a routine, step 5 a workflow with a mini app, steps 6–7 a system, and step 8 an agent.
-
-### Worked example: "Show me how my Meta ads are doing"
-
-| Step | What you do | What you get | Level · block | Do we have it? |
-|---|---|---|---|---|
-| 0 By hand | Export from Ads Manager and work it out in a spreadsheet | An answer, an hour or two later | today | Baseline; we time it |
-| 1 Ask | Upload the export to Claude or ChatGPT with our audit prompt | Data checks, totals, creative mix, and "unavailable" where data is missing | Beginner · prompt | Launch job ④ |
-| 2 Connect | Connect the Meta ads connector once, then ask "how did last week go?" | The same analysis without exporting | Beginner · skill | Done: we pull Meta data through Claude's connector for client work |
-| 3 Save | Also connect Google Sheets. The skill writes a fixed layout (account, campaign and ad tabs) | A sheet the team can open, with charts and notes | Intermediate · skill | [Gap] Data goes to JSON files today |
-| 4 Schedule | Run it at 9 am daily (Claude scheduled tasks, ChatGPT tasks or a Sheets trigger) | Fresh numbers every morning; everything built on the sheet updates | Intermediate · routine | [Gap] |
-| 5 Mini app | One page with Refresh, date presets, campaign and format filters, and compare-to-last-period | Answers in seconds | Advanced · workflow + app | Done in the ecomOS dashboard (private; generalise it) |
-| 6 Full app | Meta API, sales and analytics flow into one database that other parts read | One source of truth | Advanced · system | Partial: the dashboard reads the Meta and sales APIs on refresh |
-| 7 Share | Invite teammates or clients; owner and member roles; AI spend caps | Each agency client gets their own view | Expert · system | Done (basic): team mode with invite codes and owner roles |
-| 8 Act | Agents propose moves, such as pausing a tired ad or briefing new creative; a person approves; then the agent acts | Work done, not just reported | Expert · agent | [Gap] Proposal only; Meta access is read-only by rule |
+The worked Meta example and the "making things" ladders (brand brain, static ads, video ads) are the same as in version 3; see the PDF, Part 3.
 
 **Who does each step:**
-- Steps 1–4 are downloads anyone can run.
-- From step 5 there's a "Help me build this" button (consulting, $1,500).
-- Steps 6–8 are implementation ($5,000 or quoted) until we've built them twice.
-
-The ladder doubles as the upgrade path.
-
-### The same ladder works for making things
-
-| Job | 1 Ask | 2–3 Connect and save | 4 Schedule | 5–6 App or board | 7 Share | 8 Act |
-|---|---|---|---|---|---|---|
-| Brand brain | Paste the site's text and get a brain doc | A skill reads the site and saves the brain folder | Monthly refresh with a change queue | Brain editor (Creative Engine's Brand screen) | Team brain with owners and approvals | An agent proposes updates when the site or offers change |
-| Static ads | One ad from a prompt | 3–4 sizes from brain and photos, saved to a folder | A fresh batch weekly | 100-ad sprint and studio editor | Client approvals | An agent spots tired ads and briefs replacements |
-| Video ads | A script from a prompt | Script and hooks, then avatar, storyboard and a clip prompt pack | Weekly script batch | Production board (Kanban) | Client review column | An agent queues new videos from winning hooks |
-
-**Rules:**
-- Nothing is thrown away. Each step reuses the one before.
-- Each step states three facts only: what you get, what you need, and what it costs.
-- Only tested steps show on a job page.
-- You can jump in at any step.
+- Every step has a free guide.
+- Steps 1–4 anyone can do in an afternoon.
+- Steps 5–8 have full guides too.
+- Later, a "Help me build this" link connects people to consulting, implementation or members' help.
 
 ---
 
-## 4 · Ready-made workflows, from what we've built
+## 4 · Ready-made workflows
 
-Creative Engine (the Mercatura app) and the ecomOS dashboard already run these workflows end to end. Each one becomes a workflow page. It lists the stages in order. Every stage is a part you can take on its own, and each comes with examples we already made.
+These come from Creative Engine and the ecomOS dashboard:
+1. brand brain
+2. static ads
+3. ad copy
+4. avatar to photoreal persona
+5. video ad on a board
+6. Meta ads dashboard
 
-1. **Brand brain** (Beginner → Expert)
-   - **Stages:** scan the site (up to 8 pages) → founder answers or a voice note → 9 brain docs → readiness check → look scan (fonts and colours).
-   - **Built from:** Creative Engine's Brand screens and the brand-brain skill (7 phases, 2 approval gates).
-   - **Examples:** the full Grüns brain. The section headings from our client brains serve as the template; no client content is used.
-2. **Static ads** (Beginner → Advanced)
-   - **Stages:** plan → render → check prices and claims → fix and recheck → text in brand fonts → export sizes.
-   - **Built from:** the studio, the 100-ad sprint and the static ad skills.
-   - **Examples:** about 900 Grüns images in 208 sets, 100 curated example ads and 107 format examples.
-3. **Ad copy** (Beginner → Intermediate)
-   - **Stages:** read the ad's image or video → 1–10 primary texts and headlines → stranger-read → Meta ad-standards check.
-   - **Built from:** the copy builder, the script engine (15 kinds, graded hooks, a voice pass) and the compliance check.
-   - **Examples:** 169 Grüns scripts and copy-test reports.
-   - [Gap] No saved copy decks yet; we make 3 in Section 2.
-4. **Avatar to photoreal persona** (Intermediate → Advanced)
-   - **Stages:** pick a portrait or make your own → make it photoreal in a real scene (9:16) → link it to a buyer persona → settings pack (1–6 places) → 6-view character sheet → cast it in a video.
-   - **Examples:** 375 fictional AI-made portraits, 50 photoreal results and 60 saved Grüns avatar sheets.
-5. **Video ad on a board** (Advanced)
-   - **Stages:** avatar → character review → script → format → storyboard → clips → edit and audio → deliver.
-   - **Board columns:** Draft → Queued → Running → Waiting for approval → In review → Approved → Sent.
-   - Paid steps wait for a click and show the cost first.
-   - **Examples:** one full Grüns 30-second UGC run, from character to final MP4, and 25 videos across UGC, claymation, podcast and talking-object formats.
-6. **Meta ads dashboard** (Beginner → Expert)
-   - **Stages:** the Part 3 ladder.
-   - **Built from:** the ecomOS dashboard (private client build): refresh and filters, ad gallery, buyer's daily desk, weekly health checks, next moves per team, and a client report.
-   - **Examples:** [Gap] This needs sample numbers (decision 14). Client data never leaves.
+Stages, sources and examples are as in version 3. Every stage is a part people can take on its own. Sample numbers for the Meta dashboard are decision 7.
 
-**Pick and choose:**
-- Tick the stages you want, then choose "take the whole workflow" or "just this step".
-- Swap any stage for your own tool.
-- Each stage shows its model and its cost per run.
+---
 
-### What we can show in public
+## 5 · Skills from the internet [Decided]
 
-| Asset | Rule |
+**Pipeline:**
+1. **Find:** GitHub, skill hubs, community lists, requests.
+2. **Licence:** may we copy and change it?
+3. **Scan:** scripts, links, hidden instructions.
+4. **Sandbox run:** with trick inputs.
+5. **Tighten:** remove risky parts, add guardrails.
+6. **Adapt:** a general version and board versions.
+7. **Improve:** test against the original.
+8. **Publish:** credit, link, before and after.
+9. **Watch:** re-check when the original changes.
+
+**The safety check looks for:**
+- **Code that does things:** installs, file changes, start-up scripts, hidden or scrambled code.
+- **Data leaving:** web addresses, uploads, requests for passwords, keys or tokens.
+- **Hijacking the AI:** prompt injection, including in invisible text or comments.
+- **Too much power:** more tool access than the job needs, or acting without approval.
+- **Trick inputs:** we run it on poisoned pages to see whether it obeys instructions buried in content.
+- **Pinned version:** we review one exact version.
+
+**How the scan works:**
+- The scan is done by `scan-skill`, then read by a person.
+- Scripts only ever run in a sandbox with no secrets.
+- We reduce risk; we never promise zero risk.
+
+### The licence rule [Proposed]
+
+| Original's licence | What we do |
 |---|---|
-| Grüns brain, ads, scripts, videos | Yes, labelled "made from public info, not affiliated". The Grüns brain also holds **simulated customer research**: anything built on it is rebuilt from public reviews or labelled "simulated research". |
-| 375 avatar portraits and their photoreal versions | Yes, labelled "AI-generated, fictional person". Never made to resemble a real person. |
-| Gehna dashboard, brain, ads, copy tests | Never the content or the numbers. Only the patterns: layouts, pipeline steps and section headings. |
-| Skool skills (AI CMO, AI Operator), Ecom Intelligence guides | Reference only. Rebuilt in our own words, with nothing substantially similar. |
-| Nourish Plus (made-up demo brand) | Not used for public examples. |
+| Open: MIT, Apache 2.0, BSD, CC BY | Copy, adapt and improve; keep the notice, credit the author, link the original, list our changes |
+| Share-alike: GPL, CC BY-SA | Our version carries the same licence; flagged before anything paid is built on it |
+| Non-commercial: CC BY-NC | Review page only (the site will carry ads) |
+| No licence | Review page only, or ask the author. Credit alone doesn't give us the right to copy. |
+
+**An imported listing shows:**
+- **Credit:** "Adapted from <name> by <author> (licence), version of <date>", with a link and a list of what we changed.
+- **The original vs ours** on the same input, with scores and cost.
+- **Plain-words install steps.**
+- **Where it fits** on the ladder and in the boards.
+
+Later, people can upload their own skills. These go through the same pipeline. If the creator charges, they get 70% and we keep 30%.
 
 ---
 
-## 5 · What people see: simple by default
+## 6 · Tools
 
-The site should feel like a friendly shop, not a control panel. We reuse Creative Engine's look (Mercatura) and the ecomOS dashboard's data layouts. We reuse the design, not the code.
+| Page | What's on it | Example |
+|---|---|---|
+| Tool guide (general) | What it does, cost, free tier, setup, strengths and weaknesses, which listings use it, our test results | Claude, ChatGPT, Codex, Google Sheets, OpenRouter, the Meta ads connector |
+| Tool in an industry | The setup and listings that matter for that board, with a worked example | "Claude for an online store" |
+| Comparison | The same job in 2–3 tools, with quality, cost and time | "Static ads: three image models, same brief" |
 
-**A job page (Normal view):**
-- The job title.
-- "Where are you today?" chips for steps 0–8.
-- A card with the **next step only**: what you get, what you need, and what it costs.
-- One "Show me how" button.
-- Quiet links: See all steps · Advanced view · Help me build this.
-- A labelled example strip underneath.
+**Affiliate rule** [Proposed]:
+- Links are always labelled.
+- Ranking comes from our tests only, never from what a tool pays.
+- Sponsored deep dives say "sponsored" at the top.
+
+---
+
+## 7 · What people see
+
+It should feel like a friendly library with busy noticeboards. The look comes from Creative Engine's Mercatura design (warm paper, one blue action colour, DM Serif and DM Sans). The data layouts come from the ecomOS dashboard. We reuse the design, not the code.
+
+- **Board page:** /ecommerce with Top · New · Workflows · Tools · Ask. Each row shows type, level and source tags ("Ours", "Adapted · MIT", "Safety checked"), how many people took it, and comments.
+- **Listing page:**
+  - "Where are you today?" chips
+  - the next step only (what you get, need and pay)
+  - the before and after
+  - links to all steps, the /ecommerce version and comments
 
 **Rules:**
 - One job per screen.
 - Show the next step only.
-- Normal view first; models, settings and scores sit behind an Advanced switch.
-- Use plain words ("Connect your Meta account", not "configure the MCP server").
-- Show three facts per step.
-- Show workflows as boards of tickable stages.
-- Use one main button per screen.
+- Normal view first.
+- Use plain words.
+- Put the before and after on top.
+- Make boards feel like a forum.
+- Keep ads quiet: one slot, never inside the steps.
 - Make it work on a phone.
 
-| Piece | Reused from |
-|---|---|
-| Look | Creative Engine's "warm paper" theme (one blue action colour) and "premium ink" dark theme; DM Serif Display and DM Sans |
-| Components | Creative Engine's shadcn set, plus status pills, the run bar, the "needs a brain" prompt and "what's next" empty states |
-| Navigation | The bottom dock (Home · Jobs · Workflows · My brain · Learn) and the Normal/Advanced switch |
-| Data steps | The ecomOS dashboard's overview cards, Refresh button and filter bar |
-| Boards | Creative Engine's production Kanban: drag to run, with the cost shown before any paid step |
+**Navigation:** the dock is now Home · Library · Boards · Tools · Learn, with the Normal/Advanced switch.
 
-I found no screen called "Creative Intelligence", so I've read it as the ecomOS dashboard (decision 15).
+Comments need free accounts (email only, no payment), a report button, spam filtering and a moderation queue.
 
 ---
 
-## 6 · What we already have
+## 8 · What we already have
 
+**The inventory:**
 - **1,338** items across 7 sources.
-- **263** are our own work.
-- **110** of those are already tested with examples.
-- **403** learning guides sit in Creative Engine.
-
-We're strong at **making** marketing and weak at **analysing** it and **keeping customers**. Most of what we have was written for stores. So each conversion separates the general **method** from the **store details**, which move to the ecommerce pack.
-
-| Learning guides | Count | Fills |
-|---|---:|---|
-| Retention (flows, email, segments, SMS) | 48 | Lifecycle and retention |
-| Customer experience | 27 | Lifecycle (support replies) |
-| Ad monitoring (Meta) | 25 | Paid media |
-| Data (attribution, tracking, cohorts) | 18 | Analytics and profit |
-| Landing pages (7 on product pages) | 68 | Website and conversion |
-| Creative, insights, experiments | 217 | Creative, research, testing |
-
-**Rights catch:**
-- The 403 guides come from the Ecom Intelligence course. Until its terms are confirmed, they are private input only, and every published part is rebuilt in our own words.
-- The same applies to the Blue Sense and Nu Reach playbooks.
-- `copy-craft` was built from the purchased Copy Machine, so it needs a clean-room rewrite.
-
-**How a source becomes a part:**
-1. Register it.
-2. Split it into pieces.
-3. Tag each piece (function, job, pack, evidence).
-4. Group matching pieces.
-5. Map each group to a part, a check or a Learn page, or drop it.
-6. Test with and without it.
-
-Details are in `docs/planning/07_SOURCES_TO_SKILLS.md`.
+- **263** are our own work, and these get ported first.
+- **110** of those are tested.
+- They come to about **75** general listings after merging [Assumption].
 
 **Plus the two apps:**
-- **Creative Engine (the Mercatura app):** about 60 screens, 1,076 analysed reference ads, 375 avatar portraits, about 900 Grüns static ads, 169 scripts and 25 videos.
-- **The ecomOS dashboard:** 17 data screens, a Refresh button and team logins.
+- **Creative Engine:** about 60 screens, 1,076 analysed reference ads, 375 avatar portraits, about 900 Grüns static ads, 169 scripts and 25 videos.
+- **The ecomOS dashboard:** 17 data screens.
 
-Part 4 turns both into workflows.
+Porting splits each item into two parts. The **general method** goes in the library. The **store details** go on the /ecommerce board.
+
+| # | Port order | When |
+|---|---|---|
+| 1 | Business brain (15 items → 11 listings) | Nov |
+| 2 | Creative and content (78 static ad items → about 20 listings, plus copy, scripts, avatars, video) | Nov–Dec |
+| 3 | Website, paid media (Meta ladder steps 1–4), research | Dec |
+| 4 | Lifecycle (archived retention module), analytics, AI operations | Jan–Feb 2027 |
+
+**Rights catch** (unchanged):
+- Ecom Intelligence guides and the Blue Sense and Nu Reach playbooks are private input only until their terms are read.
+- `copy-craft` needs a clean-room rewrite.
+
+**What we can show in public** (unchanged):
+
+| Asset | Rule |
+|---|---|
+| Grüns | Yes, labelled "not affiliated". Its simulated research is rebuilt from public reviews or labelled. |
+| The 375 avatars | Yes, labelled "AI-generated, fictional person". |
+| Gehna | Patterns only, never content or numbers. |
+| Skool and course material | Reference only, rewritten. |
+| Nourish Plus | Not used. |
 
 ---
 
-## 7 · Go-to-market
+## 9 · Growing the audience
 
-**One line (wording to test):** "Tested AI building blocks for your business, from one prompt to a working system, with real examples, the right model for every job, and help when you need it."
+**One line (to test):** "Free, tested AI prompts, skills, workflows and agents, and how to set them up yourself: plain words, checked for safety, with real before-and-after examples. Start wherever you are."
 
-### Who we sell to first
+**How people find us:**
+- **Search:** every listing, tool guide and board page is a search page.
+- **YouTube.**
+- **Newsletter:** the most valuable thing we own.
+- **Communities:** helpful answers within each group's rules.
 
-| # | Segment | First job | Plan | Reach |
-|---|---|---|---|---|
-| 1 | Agencies (performance, creative, growth) | Meta audit + static ad pack across clients | Agency $899 + implementation | Partner pilot, outreach, communities |
-| 2 | Growing online brands | Brand brain → static ad pack → page audit | Team $299 | YouTube task videos, search, founder networks |
-| 3 | Software and app companies | Page audit, Meta audit, static ads for a trial or plan offer | Team $299 | Search, founder communities, content |
-| 4 | Freelancers, creators, media buyers | Audit and creative parts | Individual $99 | Content, communities, affiliates |
-| 5 | New businesses, dropshippers | Free brand brain, Beginner checklists, baseline audit | Free → $99 | Content and search |
+**Content engine:** one tested listing becomes a listing page, a YouTube video, a short, a newsletter section and a board post.
 
-### The four launch jobs [Proposed]
-
-1. **Brand brain builder (free).** Built from a website and a few answers. It covers:
-   - what you sell (products, plans, services or courses)
-   - dated offers
-   - claims
-   - voice
-   - buyers
-2. **Static ad pack, holiday sale edition first.** It runs plan → copy → stranger-read → image prompt → render → QA, with every price checked against the current offer.
-3. **Landing-page audit.** Covers what's broken, why it matters and what to fix first, with notes for store, software and course pages.
-4. **Meta ad audit, as a ladder.** It ships as steps 1–4: ask, connect Meta, save to a sheet, and refresh at 9 am. You upload an export (or connect) and get:
-   - data checks
-   - efficiency totals
-   - creative diversity
-   - the split between new and established spend
-
-   Missing data is shown as "unavailable".
-
-### Offer and pricing
-
-| Plan | Price | Included |
-|---|---|---|
-| Free | $0 | All prompts, every Beginner step, brand brain builder, examples, guides, downloads |
-| Individual | $99/mo | Intermediate and Advanced steps (connect, save, schedule, mini apps), model-test data, lean modes, stacks, saved versions |
-| Team | $299/mo | Shared brains, team standards, more brands, retrieval, bounded help |
-| Agency | $899/mo | Many client brands kept apart, roles, approvals, white-label |
-| Consulting | $1,500 | 6 hours: diagnose, pick parts, set up together |
-| Implementation | $5,000 | One bounded workflow or ladder steps 6–8, about 60 hours |
-| Full application | Quoted | Custom interface, database, permissions, deployment |
-
-- The plan mix is 60/30/10, about $239 per org per month. [Assumption]
-- Customers pay their own model bills. [Decided]
-- Downloads keep working under the licence; there's no artificial lock-in. [Decided]
-
-### Channels
-
-The Year-5 targets from the model [Assumption]:
-
-| Channel | New paid orgs a year | How it adds up |
-|---|---:|---|
-| Content and product | 1,200 | 60k qualified visits × 10% trial × 20% paid |
-| Partners | 1,500 | 150 partners × 10 each |
-| Targeted sales | 300 | 75k approaches × 2% demos × 20% paid |
-
-Affiliates and labelled sponsorships add income but don't bring in customers.
-
-**Content engine:** each tested part becomes:
-- a part page
-- a YouTube video
-- a short
-- a newsletter section
-- a trial
-
-Formats:
-- "without vs with brand brain"
+**Formats:**
+- "GitHub skill vs our version"
 - "cheap vs top model, same job"
-- **"same job, three industries"**
-- labelled public teardowns
-- the **"climb the ladder"** series: one job, one step a week, from by hand to agent
+- "same job, three industries"
+- "climb the ladder"
+- tool deep dives
 
-Cadence: 1 long video, 2 shorts and 1 newsletter a week from site v0. [Proposed]
+**Cadence:** 1 long video, 2 shorts and 1 newsletter a week from launch [Proposed].
 
-### Journey
+Evergreen first: seasonal listings can exist, but we don't run campaigns around them.
 
-| Stage | What happens | What we measure |
-|---|---|---|
-| Discover | They find a part | Qualified visits |
-| Try | Free brain plus one part | A useful first output within 30 minutes |
-| Set up | They configure it | Human minutes spent |
-| Adopt | Weekly use | Weekly active orgs |
-| Repeat | Ongoing use | Accepted outputs per org per month (**north star**) |
-| Climb | Next step on the ladder, upgrades, services | Orgs that climb a step within 60 days; plan upgrades; service revenue |
-
-### Services
-
-1. Readiness form.
-2. 30-minute scoping call.
-3. Fixed quote.
-4. Build with our own parts; anything built twice becomes a part.
-5. Handover.
-6. Move to subscription.
-
-### Why people keep paying
-
-- Their versioned brain lives here.
-- Parts get re-tested and improved.
-- They get fresh references every month.
-- Routines do the repeat work.
+**Journey:**
+1. **Discover:** find a listing, tool guide or video.
+2. **Take:** copy, download or run a listing, with no account needed.
+3. **Return:** come back for the next step or another listing (the north star).
+4. **Join:** a free account to comment, save brains and follow boards.
+5. **Climb:** take a higher step on the same job's ladder.
+6. **Contribute:** comment, share a result, suggest a skill, or upload one later.
 
 ### Numbers we watch [Assumption]
 
-| Metric | First target |
+| Metric | Target |
 |---|---|
-| Accepted outputs per active org per month | 8+ by month 3 after paid launch |
-| Activation | 40% of sign-ups within 7 days |
-| Trial → paid | 20% |
-| Monthly paid retention | ≥ 97% |
-| Orgs that climb at least one step within 60 days | 25% |
-| Share of paying orgs outside ecommerce | ≥ 30% by month 6 after paid launch |
-| Human minutes per customer per month | ≤ 30 |
-| Costliest-mistake rate | Zero in every release |
+| **Weekly returning users who take a listing** (north star) | 500 by Apr 2027; 3,000 by Sep 2027 |
+| Monthly visits | 10k by Apr; 50k by Sep |
+| Newsletter subscribers | 1,000 by Apr; 5,000 by Sep |
+| Comments a week; median reply time | 50 a week by Apr; reply within 2 working days |
+| Listings with a before and after | 100%, always |
+| Imported skills checked; fail rate | 100 by Apr; we publish the fail rate |
+| Safety incidents; costliest mistakes | Zero |
 
 ### Six things to prove
 
 | Question | Smallest test | Pass |
 |---|---|---|
-| Will people pay? | Holiday sprints now; pre-sale in January | ≥ 5 paid sprints; ≥ 20 pre-orders or deposits |
-| Do parts work outside ecommerce? | All four launch jobs on the software and service cases; 1+ sprint sold outside ecommerce | Same score (±5 points) on every business type |
-| Which job pulls best? | Four launch pages, same traffic | A clear winner |
-| Do agencies need multi-client features on day one? | 10 interviews + 2–3 pilots | ≥ 2 would pay $899 |
-| How much help does each customer need? | Time-track everything | ≤ 2 h onboarding, ≤ 30 min/month |
-| Do downloads work in each tool? | Install in Claude Code, ChatGPT, Codex and a router | ≥ 3 tools per launch part |
+| Easier than GitHub for non-developers? | 5 people try an original and our version | Faster to a first result; 4 of 5 prefer ours |
+| General listings work for any business? | Run each on 3 kinds of public business | Same score ±5 |
+| Safety check catches bad skills? | Seed 20 trap skills | All 20 caught |
+| Boards get real conversation? | Track /ecommerce comments | 50 a week by April |
+| Search brings people in? | Search visits by month 3 | At least a third of visits |
+| Will people pay for help later? | Help requests in comments; a waitlist | 200 on the waitlist before membership opens |
 
 ---
 
-## 8 · Launch calendar (targets; gates decide)
+## 10 · Money, later [Decided; order and conditions Proposed]
+
+Nothing is sold at the start. Year 1 is a build year with little or no income by design.
+
+| # | Stream | What it is | Switches on when |
+|---|---|---|---|
+| 1 | Affiliates | Labelled links on tool guides and listings | From launch: passive, with no selling |
+| 2 | Site advertising | One quiet slot per page; later, labelled sponsored deep dives | About 50k monthly visits [Assumption] |
+| 3 | YouTube advertising | Ad revenue on our videos | YouTube's partner bar: 1,000 subscribers and 4,000 watch hours in 12 months, or 10M Shorts views in 90 days |
+| 4 | Consulting and implementation | We set up or build the higher ladder steps; custom apps are quoted | When people ask, at first through a contact link (decision 11) |
+| 5 | Membership | **Member, $99 or $199/mo:** priority replies and implementation help. **Pro, $499/mo:** in-depth help. Custom implementation on top. | Around 200 on the waitlist [Assumption] |
+| 6 | Premium workflows | New, very specific, high-value workflows | After membership; what's free at launch stays free |
+| 7 | Creator marketplace | Uploads tested by us; 70% to the creator, 30% to us | When there's traffic and the pipeline handles outside uploads |
+
+Selling individual skills doesn't make sense: free skills bring the audience, and the audience pays for help, time and finished systems. [Decided]
+
+**Trust rules:**
+- Ads never sit inside the steps.
+- Affiliate links are labelled and never change a ranking.
+- People pay their own AI bills.
+- Downloads keep working.
+
+**Money points to decide:**
+1. **Funding the build year.** Founder-funded and lean, with no hires until a stream pays. [Proposed]
+2. **Rebuild the money model** in April 2027 from three months of traffic. The old model stays in `docs/business/financial/` for reference only.
+3. **Membership price:** $99 or $199, tested on the waitlist page.
+
+---
+
+## 11 · Calendar (targets; gates decide)
 
 | Date | Moment |
 |---|---|
-| Mon 19 Oct 2026 | Week 1: repo, first tools, holiday sprint offer goes out |
-| by Fri 6 Nov | Last call for Black Friday sprints; then sell year-end and January sprints |
-| 26–30 Nov | Thanksgiving, Black Friday (27th), Cyber Monday (30th). We collect feedback, not performance claims. |
-| Fri 11 Dec | **Gate A**: did people pay, was the work accepted, did it work beyond ecommerce? |
-| Tue 19 Jan 2027 | **Site v0 public** (free); content engine and pre-sale start |
-| Tue 16 Feb 2027 | **Paid plans live**; model Year 1 starts |
-| Apr 2027 | Software and apps pack v1 |
-| Aug 2027 | Holiday 2027 planning; Black Friday 2027 is 26 Nov |
-
-Black Friday 2026 is six weeks away, so this year's holiday sprints prove demand. The self-serve holiday stack is for 2027.
+| Mon 19 Oct 2026 | Week 1: first tools, the listing format, the port order. Nothing is sold. |
+| Sun 1 Nov | **Gate 0:** one listing end to end; the template approved |
+| Fri 11 Dec | **Gate A:** brain and creative sections ported; site skeleton with boards and comments; 5+ imports through the safety check |
+| Sun 10 Jan 2027 | **Gate B:** ready to open |
+| Tue 19 Jan 2027 | **Site public, free:** general library, /ecommerce board, tool guides, comments, newsletter |
+| Apr 2027 | Three-month review; money model rebuilt; **/saas board opens** |
+| Jul 2027 | Membership and third-board decisions |
+| Late 2027 | First job-role board (/marketing is the likely first) |
 
 ---
 
-## 9 · The build
+## 12 · The build
 
-There are three things to build, in order:
-- **A · The item factory:** six TypeScript tools that import, check, export, model-test, blind-grade and graph parts.
-- **B · The parts:** section by section.
-  1. brand brain
-  2. static ads
-  3. page audit, the Meta ads ladder and scripts
-  4. research and offers
-  5. ready-made workflows
-  6. lifecycle
-  7. paid media
-  8. analytics
-- **C · The site:** reads the part folders. The free catalogue comes first, then accounts and payments.
+**Three things get built:**
+- **A · The item factory:** seven TypeScript tools. They import, check, build exports, model-test, blind-grade and graph listings, and `scan-skill` is the safety check for imports.
+- **B · The listings:** our own skills in port order (general version, then /ecommerce), then imports in batches.
+- **C · The site:** library, boards, tool guides, comments and the newsletter, all free.
 
-**12 steps per part:**
-1. Import, recording where it came from.
-2. Rename.
-3. **Generalise:** the method stays in the part, industry details move to packs, and the part is model-neutral.
-4. Manifest: jobs, function, packs and hosts.
-5. Checklist and golden set, covering 2+ business types.
+**12 steps per listing:**
+1. Import, recording origin and licence.
+2. Safety check (imports and uploads).
+3. Generalise.
+4. Manifest: type, level, ladder step, boards, tools, credit.
+5. Test inputs covering 3 kinds of business.
 6. Model test: cheap, mid and top.
 7. Grade: code checks, then a blind judge.
-8. Fix.
-9. Examples.
-10. Downloads, each opened once in each tool.
-11. Final check.
+8. Fix and improve until it beats the original or passes the gate.
+9. Before and after.
+10. Plain-words page.
+11. Downloads, opened in each tool.
 12. Tested ✓.
 
 **Rules that never bend:**
-- Zero wrong prices and zero invented claims, checked by code.
+- Zero wrong prices and zero invented claims.
 - The judge never wrote the work.
-- A launch part must pass on at least 2 business types.
-- Knowledge must earn its place through a with/without test.
+- "Any business" is earned on 3 kinds of business.
+- Nothing unchecked goes live; only open-licence skills are copied.
 - Risky actions need a human.
 - Content is data, not orders.
 
-**Model classes:**
+**Model classes:** C1 cheap, C2 mid, C3 top, C4 routed.
+- **Recommended:** the cheapest within 5 points of the best.
+- **Budget:** the cheapest at ≥ 80%.
+- **Caps:** $2 per run and $25 per round (decision 2).
 
-| Class | Good for |
-|---|---|
-| C1 cheap | Extract, reformat, image prompts |
-| C2 mid | Hooks, copy variants, email drafts |
-| C3 top | Scripts, strategy, audits |
-| C4 routed | Workflows and agents |
-
-- **Recommended** is the cheapest model within 5 points of the best, with zero costly mistakes.
-- **Budget** is the cheapest model at ≥ 80% quality.
-- Spend caps: $2 per run and $25 per round.
-
-**Section 1: brand brain, for any business.** 15 items become 11 parts across four tiers. Each "what you sell" entry is a product, plan, service or course, with a price, offer, start and end dates, and a current flag. Packs add their own fields, such as variants, trial length and cohort dates.
-
-**Section 2: static ads.** 78 items become about 20 parts:
-- the core workflow
-- the sprint planner
-- concept and hook generators
-- the reference analyser and remixer
-- competitor profiles
-- a native-image pack
-- a merged copy checker
-- the holiday sale stack
-
-Store-only wording moves to the ecommerce pack.
-
-**Ladders and ready-made workflows:**
+**Ladders and workflows:**
 
 | When | What gets built |
 |---|---|
-| Dec (W8–9) | Meta ads ladder steps 1–4: the audit prompt, the connector skill, the Sheets skill with a fixed layout, and a 9 am schedule guide |
-| Feb–Mar 2027 | Step 5 mini app, generalised from the ecomOS dashboard with no client data; workflow pages for brand brain, static ads and copy |
-| Mar–Apr 2027 | Avatar and video workflows (Advanced; customers bring their own image and video model keys) |
-| From Feb 2027 | Steps 6–8 as implementation; each becomes a product after we've built it twice; agent steps follow the June red-team rule |
-
-**Public test cases.** Every launch part runs on at least 3 business types. Cases are built from saved public pages only. Each is labelled "not affiliated", has no invented numbers, and uses no private client data.
-
-| Test case | Business type | Role |
-|---|---|---|
-| Grüns | Ecommerce | Primary |
-| AG1, IM8 | Ecommerce | Held out |
-| One software company | Software and apps | Proposed; founder picks from a shortlist in Week 2 |
-| One service or course business | Services / creators | Proposed; founder picks from a shortlist in Week 2 |
+| Nov–Dec | Brand brain, static ads and copy workflow pages |
+| Dec | Meta ladder steps 1–4 |
+| Feb–Mar 2027 | Step 5 mini app (from ecomOS, no client data); avatar and video workflows |
+| Apr–Jun 2027 | Routines (April) and agents (May–June) as guides with red-team tests |
 
 **Site versions:**
 
-| Version | What it is | Ships when |
+| Version | What it is | Ships |
 |---|---|---|
-| v0 | Free catalogue: job pages with the ladder and the "where are you today?" picker, Normal and Advanced views | About 25 parts tested on 2+ business types |
-| v1 | Paid plans | Pre-sale gate passed |
-| v2 | Run parts in the browser | Customers ask for it |
-| Marketplace | Creator listings, 70/30 | Later |
+| v0 | Free site: search, library, /ecommerce, listing pages with ladder and before/after, tool guides, Learn, free accounts for comments and saved brains, newsletter | Gate B, 19 Jan 2027 |
+| v1 | /saas, board following, "Ask" threads, contributor profiles, membership waitlist | Apr 2027 |
+| v2 | Membership, priority replies, consulting and implementation requests, premium workflows | When each money condition is met |
+| v3 | Run listings from the site; creator uploads; the 70/30 marketplace | When people ask and the pipeline is ready |
 
 ---
 
-## 10 · Execution
+## 13 · Execution
 
-| Week | Build | Go-to-market | Founder |
+| Week | Build | Plan and publish | Founder |
 |---|---|---|---|
-| **W1 · 19–25 Oct** | Repo ✓; `import-item`, `check-item`; first part: website claims extractor; map Creative Engine and ecomOS workflows onto the ladder | Holiday sprint offer page; 40 targets across agencies, stores, software, courses; interview script | Approve decisions 1–5; add router key to `.env`; first 20 messages |
-| **W2 · 26 Oct–1 Nov** | `run-test`, `grade`, `build-exports`, `build-graph`; first part tested ✓; Grüns saved; test-case shortlist | 5–8 calls; first sprint deals | Approve page template; pick the two extra test cases |
-| | **Gate 0:** one part tested end to end; template approved | | |
-| **W3–4 · 2–15 Nov** | Brain v2 schema; 11 brain parts; AG1, software and service brains | Deliver sprints; time-track; last Black Friday sales by 6 Nov | Client approvals; section review |
-| | **Gate 1:** brain section passes on 3 business types with zero invented claims or wrong prices | | |
-| **W5–7 · 16 Nov–6 Dec** | Static ads (about 20 parts); holiday stack; old-price test on store and software offers | Ads live for Black Friday; 3 videos incl. "same job, three industries"; feedback | Videos; "would you pay monthly?" |
-| **W8–9 · 7–20 Dec** | Page audit (store, software, course notes); Meta ads ladder steps 1–4; scripts; site v0 starts | Sprint retro; founding-member offer | Gate A; brand name |
-| | **Gate A (11 Dec):** ≥ 5 paid sprints (or ≥ 15 interviews), 1+ outside ecommerce, ≥ 70% accepted, hours measured | | |
-| **W10–12 · 21 Dec–10 Jan** | Site v0; every download tested in Claude Code, ChatGPT, Codex and a router | 6 videos; newsletter; waitlist | Final page review |
-| | **Gate B:** about 25 tested parts on 2+ business types; downloads in 3+ tools; every launch job shows its ladder with steps 1–3 tested; mobile check | | |
+| **W1 · 19–25 Oct** | `import-item`, `check-item`; listing format v1 (type, level, step, boards, tools, credit, licence, safety badge, before/after); first port: website claims extractor (general) | Port order for all 263 own items; map Creative Engine and ecomOS workflows onto the ladder; board and comment rules | Approve decisions 1–2; add the router key to `.env`; glance at the port order |
+| **W2 · 26 Oct–1 Nov** | `run-test`, `grade`, `build-exports`, `build-graph`; first listing tested ✓ with before/after; `scan-skill` specified | Listing and board page templates; site structure | Review the first listing page |
+| | **Gate 0:** one listing end to end; template approved | | |
+| **W3–4 · 2–15 Nov** | Brand brain v2 format; 11 brain listings, general and /ecommerce | Brand brain workflow page; site build starts (listing and board pages, accounts) | Brain section review; decision 3 |
+| | **Gate 1:** brain section passes on 3 kinds of business with zero invented claims or wrong prices | | |
+| **W5–7 · 16 Nov–6 Dec** | About 20 static ad listings; copy, scripts, avatars; `scan-skill` built; 20 trap skills | Static ad and copy workflow pages; comments and moderation on staging; record 3 videos | Creative review; decisions 4–5 |
+| **W8–9 · 7–20 Dec** | Page audit; Meta ladder 1–4; research and offers; first 5–10 imports | Tool guide template and first 10 guides; newsletter; launch waitlist | Gate A; brand name and domain |
+| | **Gate A (11 Dec):** brain and creative ported; skeleton with boards and comments; 5+ imports checked; all 20 traps caught | | |
+| **W10–12 · 21 Dec–10 Jan** | Site v0 finished; downloads opened in Claude, ChatGPT, Codex and a router | Batch-record 6 videos; seed /ecommerce posts | Final page review |
+| | **Gate B:** 50+ general and 25+ /ecommerce listings with before/after; 10+ imports; 10 tool guides; downloads in 3+ tools; comments and moderation working; mobile check | | |
 
-| Month | Build | Go-to-market | Gate |
+| Month | Build | Publish and grow | Gate |
 |---|---|---|---|
-| Jan 2027 | Research and offers (margin maths for stores, plan maths for software); product-page copy (ecommerce pack) | Site v0 on 19 Jan; content; pre-sale; 10 agency interviews | 500 visits/month; 100 activated; 20 pre-orders |
-| Feb | Accounts, payments, workspace; Meta ads mini app (step 5); lifecycle starts (revive the archive) | Paid plans on 16 Feb; 2 implementations; agency pilot (3–5) | 20 paying orgs |
-| Mar | Lifecycle Beginner + Intermediate steps (store flows, software onboarding); brand brain, static ad and copy workflow pages; avatar and video workflows start; software pack research | Two "climb the ladder" series; affiliate programmes | Month-2 retention ≥ 95%; ≤ 30 support minutes |
-| Apr | Paid media ops (proposals only); tracking check; **software and apps pack v1** | Partner kit; consulting productised; software content | 3 partners passing checks; first paying software customers |
-| May | First routines; creators pack scoped | Case studies (with written permission) | Routines run 4 weeks without silent failure |
-| Jun | First agents (Expert steps); profit ranker | Mid-year review; hiring; **pick the first non-marketing function** | Red-team tests pass; cost cap holds |
-| Jul–Sep | Holiday 2027 stack per pack; SEO, Google; creators pack v1; first jobs in the new function; marketplace design | Holiday campaign from August | Holiday stack tested on 3 business types |
-
-**Weekly rhythm:**
-
-| When | What |
-|---|---|
-| Monday | Plan |
-| Tue–Thu | Build, test and sell |
-| Friday | Section report, metrics and content |
-| Monthly | Re-test, model vs actuals, decision log |
+| Jan 2027 | Lifecycle (archive), analytics, AI operations | Public 19 Jan; weekly content; labelled affiliate links | All own items ported or retired |
+| Feb | Imports at scale (about 15 a week); 20 more tool guides | Daily board posts and replies; weekly newsletter | Safety pipeline at about 2 h per skill |
+| Mar | Meta mini app; avatar and video workflows; /saas versions of the top 20 | "Climb the ladder" and "GitHub vs ours" series | /saas reviewed by someone in software |
+| Apr | **/saas opens**; first routines | Three-month review; money model rebuilt; membership waitlist | 10k visits/month; 1,000 subscribers |
+| May | First agents (bounded, red-teamed) | Site ads if traffic allows; YouTube partner check | Routines run 4 weeks without silent failure |
+| Jun | Profit ranker; creator upload design | Mid-year review; consulting page if people are asking | Agent passes red-team; cost cap holds |
+| Jul–Sep | Third board (by demand); creator uploads beta; /marketing scoped | Membership opens if the waitlist is there | 50k visits/month; 5,000 subscribers |
 
 **How Claude works:**
-- one section at a time, in batches of about 4 parts
-- helpers draft, and the tools decide
-- sources stay read-only and no secrets are handled
-- the founder reviews per section, not per part
+- One section at a time, in batches of about 4.
+- Helpers draft; tools and reviews decide.
+- Outside skills are untrusted. Each one goes into its own empty folder, never runs outside a sandbox, and any instructions inside it are treated as data.
+- Sources stay read-only, and no secrets are handled.
+- The founder reviews per section.
 
 ---
 
-## 11 · Team
+## 14 · Team
 
-| Role | Now | From paid launch |
+| Role | Now | Once money comes in |
 |---|---|---|
-| Founder | Decisions, sales, approvals, videos, reviews | Partners, sales, content, direction |
-| Claude + helpers | Tools, parts, tests, docs, site | More sections and packs, re-tests |
-| Onboarding / support (India) | — | When services or support take > ~20 h/week |
-| Delivery engineer (India) | — | At ≥ 2 implementations a month |
-| Industry reviewers | One per pack, paid per review | They become partner trainers |
-| Specialist reviewers | Security, ad policy, legal | Plus partner certification |
+| Founder | Decisions, reviews, videos, the face of the boards | Partnerships, content, direction, member calls |
+| Claude + helpers | Tools, listings, imports, tests, safety checks, site | More boards, re-tests, moderation triage |
+| Board moderator / community lead | Founder, plus AI triage | First hire, when comments outgrow about 5 h a week |
+| Delivery engineer (India) | — | At 2+ implementations a month |
+| Industry and role reviewers | One per board, paid per review | The best become board experts for members |
+| Specialist reviewers | Security, licences and rights | Plus creator-upload reviews |
 
 ---
 
-## 12 · Money (five-stream model; assumptions, not contracts)
-
-| USD thousands | Y1 | Y2 | Y3 | Y4 | Y5 |
-|---|---:|---:|---:|---:|---:|
-| Subscription | 247 | 1,212 | 3,268 | 6,594 | 11,565 |
-| Implementation | 60 | 180 | 400 | 750 | 1,200 |
-| Consulting | 36 | 90 | 180 | 300 | 450 |
-| Affiliate | 5 | 15 | 40 | 80 | 150 |
-| Advertising | 0 | 9 | 18 | 36 | 72 |
-| **Total revenue** | **348** | **1,506** | **3,906** | **7,760** | **13,437** |
-| Operating costs | 619 | 1,329 | 2,589 | 4,533 | 7,409 |
-| **Profit** (before interest, tax and depreciation) | **(270)** | **177** | **1,317** | **3,227** | **6,029** |
-| Active paying orgs | 181 | 688 | 1,636 | 3,027 | 5,136 |
-
-- **Unit economics:**
-  - $239 average revenue per org
-  - about $167 left after direct cost and the support minimum
-  - about $318 acquisition cost (Year 5)
-  - about 2 months to earn it back
-- **Funding Year 1:** fund the about $270k Year-1 loss **services first**. [Proposed]
-- **Model bills:** customers pay their own; every part shows its cost per run.
-- **Builder royalties:** already in the cost line, which makes room for the marketplace.
-- **Industry split:** the model isn't split by industry. Selling beyond ecommerce widens the market but doesn't change these figures until real cohorts exist.
-
----
-
-## 13 · Risks
+## 15 · Risks
 
 | Risk | Response |
 |---|---|
-| **Too broad, too soon** | Sell exact jobs; agencies first; one new pack at a time under the opening rule |
-| **Parts secretly only work for stores** | Golden sets cover 2+ business types; launch parts pass on all 3 test cases; industry reviewers check each pack |
-| **Too complicated for beginners** | Simple by default: next step only, plain words, Normal view first; watch drop-off per step |
-| Simulated research in the Grüns brain shown as real | Public examples use saved public pages only; simulated research is rebuilt from public reviews or labelled |
-| People won't pay when free prompts exist | Paid sprints and pre-sales before the paid site |
-| Parts look done but aren't | Measured gates |
-| Course material leaks | Provenance on every part; the importer refuses non-own rows; rewrites; terms checked |
-| A public business objects | Public quotes only; "not affiliated" labels; cases are swappable |
+| **A long time with no income** | Tiny costs, no early hires, each stream on as soon as its condition is met, model rebuilt in April |
+| **An imported skill harms someone** | Tool scan plus a person, sandbox with trap inputs, pinned versions, re-checks, and a 20-trap test that must always pass |
+| **Copying without the right to** | The licence rule; otherwise a review page or the author's permission |
+| **Boards fill with spam or go quiet** | Free accounts, report button, AI triage, moderation queue, our own daily posts and replies |
+| **Too big to find anything** | Search, the ladder, boards, next step only; merge or retire weak listings |
+| **General listings turn bland** | Board versions carry the depth; "any business" is earned |
+| **Too complicated for beginners** | Plain words, before/after on top, Normal view first; watch drop-off per step |
+| **Ads or affiliates erode trust** | One quiet slot, labels everywhere, rankings from tests only |
+| Course material leaks | Provenance on every listing; importer refuses non-own course rows; rewrites |
+| Grüns simulated research shown as real | Public pages only; rebuilt or labelled |
+| ecomOS (Gehna) client data leaks | Patterns only; importer refuses client folders; leakage check on every build |
 | Old prices in outputs | Versioned brain plus an automatic price check |
 | Model churn | Pages name classes, not models; dated re-tests |
-| Test costs run away | Hard caps |
-| Services swallow the product | Reuse parts; anything built twice becomes a part |
-| Client data from the ecomOS (Gehna) dashboard leaks into the product | Copy patterns only; the importer refuses client folders; the Mercatura starter leakage check runs on every build |
-| Safety and prompt injection | Red-team tests, approvals, read-only by default; we never promise zero risk |
+| Dependence on search traffic | Newsletter and YouTube are owned channels, grown from day one |
 
 ---
 
-## 14 · Scorecard and decisions
+## 16 · Scorecard and decisions
+
+**Scorecard** [Assumption]
 
 | By | We should have |
 |---|---|
-| 15 Nov 2026 | Item factory working; brain section tested on 3 business types; first paid sprints delivered |
-| 11 Dec 2026 (Gate A) | ≥ 5 paid sprints (1+ outside ecommerce); ≥ 70% accepted; hours measured; lead offer and brand name chosen |
-| 19 Jan 2027 | Site v0 with about 25 tested parts; weekly content; pre-sale |
-| Mar 2027 | 20+ paying orgs; 2 implementations; 3–5 agency pilots; month-2 retention ≥ 95% |
-| Jun 2027 | Software pack live; routines running; first agent passes red-team; ≥ 30% of paying orgs outside ecommerce |
-| Feb 2028 | About 181 paying orgs and $348k revenue (model Year 1), checked monthly against actuals |
+| 1 Nov 2026 | Gate 0: one listing end to end; the template approved |
+| 11 Dec 2026 | Gate A: brain and creative ported; skeleton with boards and comments; 5+ imports checked; all 20 traps caught |
+| 19 Jan 2027 | Site public and free: 50+ general and 25+ /ecommerce listings, 10+ imports, 10+ tool guides |
+| Apr 2027 | All own items ported; 100+ imports checked; 40+ tool guides; /saas open; 10k visits/month; 1,000 subscribers; 500 weekly returning users |
+| Sep 2027 | 3 boards; 50k visits/month; 5,000 subscribers; 3,000 weekly returning users; first income streams on; membership decided |
 
-**Decisions** (the first five unblock Week 1):
+**Decisions**
 
 | # | Decision | Recommendation | By |
 |---|---|---|---|
-| 1 | The four launch jobs (Meta ad audit as a ladder) | Yes; all four work for any business that sells online | 19 Oct |
-| 2 | Holiday sale sprint and price | Yes; $1,500 (range $1,000–2,500) | 19 Oct |
-| 3 | Router | OpenRouter; the founder adds the key | 21 Oct |
-| 4 | Test-spend cap | $2 per run, $25 per round | 21 Oct |
-| 5 | Two extra test cases (software; service or course) | Yes; shortlist in Week 2 | 30 Oct |
-| 6 | `ecomOS` is the Gehna dashboard plus a product app on sample data. Reuse it? | Yes, its patterns only (never its data), for the Meta ads ladder | 23 Oct |
-| 7 | Archive `ecommerce-workflow-platform` | Yes, archive (no deleting) | Any time |
-| 8 | Course terms | Private input until read | Before site v0 |
-| 9 | `copy-craft` clean-room rewrite | Yes | Before Section 2 ends |
-| 10 | Retention module | Revive the archive | Jan 2027 |
-| 11 | Brand name | Shortlist of 5 by Gate A; one not tied to an industry | 11 Dec |
-| 12 | Year-1 funding | Services first | Gate A |
-| 13 | What "Jev" is | Only if it's a router to support | Any time |
-| 14 | Sample numbers for data examples (no public business publishes its ad results) | A synthetic ad account labelled "sample numbers, not a real business", or your own account with permission | Dec |
-| 15 | What "Creative Intelligence" UI refers to | Read as the ecomOS dashboard; the look comes from Creative Engine (Mercatura) | Before site design (Dec) |
+| | **Needed for Week 1** | | |
+| 1 | Router for model tests | OpenRouter; the founder adds the key | 21 Oct |
+| 2 | Spend cap for model tests | $2 per run, $25 per round | 21 Oct |
+| | **Needed before the site is built** | | |
+| 3 | Who can comment | Anyone with a free account. Members later get priority replies, not the right to comment. | Mid Nov |
+| 4 | Licence rule for imports | Copy and adapt only open licences (share-alike carried over); otherwise a review page that links out | Early Dec |
+| 5 | Brand name and domain | Shortlist of 5; not tied to one industry; works with /ecommerce-style boards | 11 Dec |
+| 6 | What "Creative Intelligence" UI refers to | Read as the ecomOS dashboard; the look from Mercatura | Mid Nov |
+| 7 | Sample numbers for data examples | A synthetic account labelled "sample numbers", or the founder's own account with permission | Dec |
+| 8 | Reuse the ecomOS (Gehna) dashboard? | Patterns only, never data | Nov |
+| 9 | Course terms | Private input until read | Before 19 Jan |
+| 10 | `copy-craft` clean-room rewrite | Yes | Before the creative section ends |
+| 11 | A contact link at launch | Yes: one "Need help building this?" link; no prices, offers or outreach | Before 19 Jan |
+| | **Later** | | |
+| 12 | Membership price | Test $99 vs $199 on the waitlist; Pro $499 | Apr 2027 |
+| 13 | What stays free | Everything free at launch stays free; only new premium workflows can be paid | Before any paywall |
+| 14 | Ad and affiliate rules | One quiet slot; labelled links; rankings from tests only | Before ads go on |
+| 15 | Funding the build year; money model rebuild | Founder-funded and lean; rebuild in April | Apr 2027 |
+| 16 | Retention module | Revive the archive | Jan 2027 |
+| 17 | Archive `ecommerce-workflow-platform` | Yes, no deleting | Any time |
+| 18 | What "Jev" is | Only if it's a router to support | Any time |
 
-**How this fits the handoff:**
-- The handoff asked for an independent repo, a global market broader than D2C, and marketing first with adjacent functions later. This plan follows all three.
-- It leads with exact jobs, adding the free brand brain as the entry point.
-- Rune is used only if the founder approves it.
-- It keeps the proof order: manual → downloads → site → routines → agents. Customers climb the same order on each job's ladder.
+The holiday sale sprint, the four launch jobs and the two extra test cases from version 3 are dropped.
 
-**Next step:** say yes to decisions 1–5, and Week 1 starts on Monday 19 October.
+**Next step:** say yes to decisions 1 and 2, and Week 1 starts on Monday 19 October. That means the first tools, the listing format, and the port order for everything we own. Nothing gets sold.

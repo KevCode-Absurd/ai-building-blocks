@@ -18,7 +18,7 @@ const cards = (page: Page) => page.getByTestId("block-card");
 test("hero is just the headline, the subhead and two buttons", async ({ page }) => {
   await page.goto("/");
   await expect(page.getByRole("heading", { level: 1 })).toHaveText("Making humanity AI native");
-  await expect(page.locator(".hero .lede")).toContainText("10x human");
+  await expect(page.locator(".hero .lede")).toContainText("Save hours every week");
   await expect(page.locator(".hero").getByRole("link")).toHaveText(["Browse the blocks", "Build a workflow"]);
   await expect(page.locator(".hero > *")).toHaveCount(3);
 });

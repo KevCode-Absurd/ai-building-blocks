@@ -155,7 +155,7 @@ export default function App() {
       <main id="top">
         <section className="hero wrap">
           <h1 className="h1">Making humanity AI native</h1>
-          <p className="lede">Save hours every week with prompts, skills and workflows that work in any AI. Do the work of ten, and become the 10x human.</p>
+          <p className="lede">Stop doing the work AI could do for you. Save hours every week, and spend them on the work only you can do.</p>
           <div className="hero-actions">
             <a href="#library" className="btn btn-primary">Browse the blocks <ArrowIcon /></a>
             <a href="#build" className="btn btn-dark">Build a workflow</a>

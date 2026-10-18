@@ -456,3 +456,42 @@ body.globe-dragging, body.globe-dragging * { user-select: none !important; -webk
 .brand:hover .logo rect { opacity: 0.32; }
 .brand:hover .logo rect[opacity] { opacity: 1; }
 @media (prefers-reduced-motion: reduce) { .logo rect { transition: none; } }
+
+/* Pixel art and dithering. The masks (--dither-x, --dither-y, --dither-corner) are drawn in lib/pixel.ts
+   with an ordered dither, so shading is lit cells, not gradients. Each fades in with a few hard steps. */
+.px { width: 24px; height: 24px; display: block; }
+.px rect { fill: currentColor; }
+.px .off { opacity: 0.09; }
+.fn:hover:not(:disabled) .px .on, .fn:focus-visible .px .on { animation: px-in 60ms both; animation-delay: calc(var(--d) * 6ms); }
+@keyframes px-in { from { opacity: 0.09; } }
+.fn { overflow: hidden; }
+.fn > span:not(.count) { position: relative; z-index: 1; }
+.fn .count { z-index: 1; }
+.fn::after { content: ""; position: absolute; top: 0; right: 0; bottom: 0; width: 144px; z-index: 0; pointer-events: none; background: var(--text);
+  -webkit-mask: var(--dither-x) right top / 144px 12px repeat-y; mask: var(--dither-x) right top / 144px 12px repeat-y;
+  opacity: 0; transform: translateX(48px); transition: opacity 0.24s steps(4), transform 0.24s steps(4); }
+.fn:hover:not(:disabled)::after, .fn:focus-visible::after { opacity: 0.1; transform: none; }
+.fn[aria-pressed="true"]::after { background: var(--bg); opacity: 0.22; transform: none; }
+
+.card { position: relative; overflow: hidden; }
+.card > span { position: relative; z-index: 1; }
+.card::after { content: ""; position: absolute; right: 0; bottom: 0; width: 160px; height: 160px; z-index: 0; pointer-events: none; background: var(--text);
+  -webkit-mask: var(--dither-corner) right bottom / 160px 160px no-repeat; mask: var(--dither-corner) right bottom / 160px 160px no-repeat;
+  opacity: 0; transition: opacity 0.24s steps(4); }
+.card:hover::after, .card:focus-visible::after { opacity: 0.09; }
+.card .peek .cursor { width: 0.55em; height: 1.1em; margin-left: 1px; }
+.decode { white-space: pre; }
+
+/* A band of dither where the hero meets the library */
+.hero::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 64px; z-index: -1; pointer-events: none; background: var(--line-2);
+  -webkit-mask: var(--dither-y) left bottom / 8px 64px repeat-x; mask: var(--dither-y) left bottom / 8px 64px repeat-x; opacity: 0.7; }
+
+/* Outputs that write themselves */
+.code .cursor { width: 0.55em; height: 1.15em; margin-left: 1px; vertical-align: -0.22em; }
+.code pre.typed[data-done="false"] .cursor { animation: none; }
+.code-copy.next { margin-left: 0; }
+.code-replay { min-width: 64px; }
+@media (prefers-reduced-motion: reduce) {
+  .fn:hover:not(:disabled) .px .on, .fn:focus-visible .px .on { animation: none; }
+  .fn::after, .card::after { transition: none; }
+}

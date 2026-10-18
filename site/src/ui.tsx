@@ -1,4 +1,6 @@
-import { useEffect, useRef, useState, type KeyboardEvent as ReactKeyEvent, type ReactNode } from "react";
+import { useEffect, useRef, useState, type CSSProperties, type KeyboardEvent as ReactKeyEvent, type ReactNode } from "react";
+import { B8, ICONS } from "./lib/pixel";
+import { useTyped } from "./lib/typing";
 import { type Block, kindInfo, pathOf, taskOf } from "./lib/data";
 import { Link } from "./lib/router";
 import { kits, useStore } from "./lib/store";
@@ -48,15 +50,60 @@ export function ThemeToggle() {
   );
 }
 
+/** A job function's 8 by 8 pixel icon. Unlit pixels show faintly, like an LCD; on hover the icon redraws in dither order. */
+export function PixelIcon({ id }: { id: string }) {
+  const rows = ICONS[id];
+  if (!rows) return null;
+  return (
+    <svg viewBox="0 0 8 8" className="px" shapeRendering="crispEdges" aria-hidden="true">
+      {rows.flatMap((r, y) => [...r].map((ch, x) => (
+        <rect key={`${x}-${y}`} x={x} y={y} width="1" height="1" className={ch === "#" ? "on" : "off"} style={{ "--d": B8[y][x] } as CSSProperties} />
+      )))}
+    </svg>
+  );
+}
+
+/** The card's peek at the output. Each time you point at the card it types itself out again. */
+function Peek({ text, round }: { text: string; round: number }) {
+  const { n, done } = useTyped(text, round > 0, Math.min(900, 260 + text.length * 2), round);
+  const k = round > 0 ? n : text.length;
+  return (
+    <span className="peek typed" data-done={String(done || round === 0)} aria-hidden="true">
+      {text.slice(0, k)}{round > 0 && !done && <span className="cursor" />}<span className="ghost">{text.slice(k)}</span>
+    </span>
+  );
+}
+
+/** Text that flickers through 0s and 1s and settles, left to right. */
+function Decode({ text, round }: { text: string; round: number }) {
+  const [shown, setShown] = useState(text);
+  useEffect(() => {
+    if (!round || matchMedia("(prefers-reduced-motion: reduce)").matches) { setShown(text); return; }
+    let raf = 0;
+    const t0 = performance.now();
+    const step = (now: number) => {
+      const fixed = Math.floor(((now - t0) / 380) * text.length);
+      setShown([...text].map((ch, i) => (i < fixed || ch === " " ? ch : Math.random() < 0.5 ? "0" : "1")).join(""));
+      if (fixed < text.length) raf = requestAnimationFrame(step);
+    };
+    raf = requestAnimationFrame(step);
+    return () => cancelAnimationFrame(raf);
+  }, [text, round]);
+  return <span className="decode"><span className="visually-hidden">{text}</span><span aria-hidden="true">{shown}</span></span>;
+}
+
 export function BlockCard({ b }: { b: Block }) {
   const kind = kindInfo(b);
+  const [round, setRound] = useState(0);
+  const wake = () => setRound((r) => r + 1);
+  const view = b.category === "orchestrator" ? `View the ${b.steps.length} steps` : `View the ${kind.name.toLowerCase()}`;
   return (
-    <Link to={pathOf(b)} className="card" data-testid="block-card" data-slug={b.slug} data-kind={kind.id}>
+    <Link to={pathOf(b)} className="card" data-testid="block-card" data-slug={b.slug} data-kind={kind.id} onMouseEnter={wake} onFocus={wake}>
       <span className="meta"><span className="kind">{kind.name}</span><span className="type">{taskOf(b).name}</span></span>
       <span className="nm">{b.name}</span>
       <span className="sm">{b.summary}</span>
-      {b.peek && <span className="peek" aria-hidden="true">{b.peek}</span>}
-      <span className="view">{b.category === "orchestrator" ? `View the ${b.steps.length} steps` : `View the ${kind.name.toLowerCase()}`}<ArrowIcon size={12} /></span>
+      {b.peek && <Peek text={b.peek} round={round} />}
+      <span className="view"><Decode text={view} round={round} /><ArrowIcon size={12} /></span>
     </Link>
   );
 }

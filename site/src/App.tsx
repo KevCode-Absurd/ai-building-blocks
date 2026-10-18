@@ -1,5 +1,5 @@
 import { Suspense, lazy, useCallback, useEffect, useMemo, useState } from "react";
-import { ArrowIcon, BlockCard, Drawer, Logo, SearchIcon, Select, ThemeToggle, Toast } from "./ui";
+import { ArrowIcon, BlockCard, Drawer, Logo, PixelIcon, SearchIcon, Select, ThemeToggle, Toast } from "./ui";
 import Globe from "./Globe";
 import { type Block, type Catalogue, type Kind, BUSINESSES, FUNCTIONS, KINDS, LEVELS, STARTS, TASKS, cap, functionsOf, kindOf, pathOf, startsFrom, taskOf, useCatalogue } from "./lib/data";
 import { kits, queueForCanvas, useStore } from "./lib/store";
@@ -100,7 +100,7 @@ function Library({ c }: { c: Catalogue }) {
           const n = count({ fn: x.id, task: "" });
           return (
             <button key={x.id} className="fn" aria-pressed={f.fn === x.id} disabled={!n && f.fn !== x.id} onClick={() => pickFn(x.id)} data-testid={`fn-${x.id}`}>
-              <span className="fn-glyph" aria-hidden="true">{x.glyph}</span>
+              <span className="fn-glyph" aria-hidden="true"><PixelIcon id={x.id} /></span>
               <span className="fn-name">{x.name}</span>
               <span className="fn-line">{x.line}</span>
               <span className="count">{String(n).padStart(2, "0")}</span>

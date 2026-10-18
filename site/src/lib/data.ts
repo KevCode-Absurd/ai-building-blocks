@@ -142,15 +142,15 @@ export function loadPage(slug: string): Promise<Page | null> {
 
 /** Who you are, or whose work you want done: the first way into the library.
  *  A function groups the jobs that person does; a job can sit under more than one. */
-export const FUNCTIONS: { id: string; name: string; line: string; glyph: string; tasks: string[] }[] = [
-  { id: "copywriter", name: "Copywriter", line: "Ads, pages and offers that sell", glyph: "Aa", tasks: ["write-ad-copy", "write-landing-page", "make-offer"] },
-  { id: "media-buyer", name: "Meta media buyer", line: "Plan tests, get ads approved, read results", glyph: "%", tasks: ["plan-ad-tests", "check-ads", "read-ad-results", "study-competitors"] },
-  { id: "designer", name: "Graphic designer", line: "Image ads and product photos", glyph: "[]", tasks: ["make-image-ads", "product-photos"] },
-  { id: "video", name: "Video editor", line: "Scripts, shot lists and edits", glyph: "|>", tasks: ["make-video-ads"] },
-  { id: "cro", name: "CRO specialist", line: "Pages that turn visitors into buyers", glyph: "↗", tasks: ["audit-landing-page", "write-landing-page"] },
-  { id: "strategist", name: "Brand strategist", line: "Know your customers, brand and rivals", glyph: "◎", tasks: ["understand-customers", "brand-file", "study-competitors", "make-offer"] },
-  { id: "social", name: "Social media manager", line: "Posts that grow an audience", glyph: "#", tasks: ["grow-social"] },
-  { id: "founder", name: "Founder", line: "Set AI up to work across the business", glyph: "01", tasks: ["set-up-ai", "brand-file"] },
+export const FUNCTIONS: { id: string; name: string; line: string; tasks: string[] }[] = [
+  { id: "copywriter", name: "Copywriter", line: "Ads, pages and offers that sell", tasks: ["write-ad-copy", "write-landing-page", "make-offer"] },
+  { id: "media-buyer", name: "Meta media buyer", line: "Plan tests, get ads approved, read results", tasks: ["plan-ad-tests", "check-ads", "read-ad-results", "study-competitors"] },
+  { id: "designer", name: "Graphic designer", line: "Image ads and product photos", tasks: ["make-image-ads", "product-photos"] },
+  { id: "video", name: "Video editor", line: "Scripts, shot lists and edits", tasks: ["make-video-ads"] },
+  { id: "cro", name: "CRO specialist", line: "Pages that turn visitors into buyers", tasks: ["audit-landing-page", "write-landing-page"] },
+  { id: "strategist", name: "Brand strategist", line: "Know your customers, brand and rivals", tasks: ["understand-customers", "brand-file", "study-competitors", "make-offer"] },
+  { id: "social", name: "Social media manager", line: "Posts that grow an audience", tasks: ["grow-social"] },
+  { id: "founder", name: "Founder", line: "Set AI up to work across the business", tasks: ["set-up-ai", "brand-file"] },
 ];
 export const functionsOf = (b: Block) => FUNCTIONS.filter((f) => f.tasks.includes(b.task));
 

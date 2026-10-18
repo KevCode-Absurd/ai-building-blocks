@@ -66,6 +66,7 @@ test("the library opens on job functions, and is sorted into prompts, skills and
   await page.goto("/#library");
   await expect(page.locator(".fns .fn")).toHaveCount(8);
   await expect(page.getByTestId("fn-media-buyer")).toContainText("Meta media buyer");
+  await expect(page.locator(".fns .fn .px")).toHaveCount(8); // every function has its pixel icon
   await expect(page.getByRole("tab")).toHaveText([/^All/, /^Prompts/, /^Skills/, /^Workflows/]);
   for (const kind of ["prompt", "skill", "workflow"]) {
     await page.getByTestId(`tab-${kind}`).click();
@@ -123,6 +124,15 @@ test("a card opens the block's own page, with the outcome, a real example and th
   await expect(bp.locator(".bp-sub")).toContainText("product facts");
   await expect(bp.locator("#example .code")).toHaveCount(2);
   await expect(bp.locator("#example")).toContainText("Sprout");
+  // The sample output writes itself out once it is on screen, then can be replayed.
+  const out = bp.locator("#example .code").first();
+  await out.scrollIntoViewIfNeeded();
+  await expect(out.getByTestId("code-replay")).toHaveText("Replay", { timeout: 8000 });
+  await expect(out.locator(".ln.ghost")).toHaveCount(0);
+  await out.getByTestId("code-replay").click();
+  await expect(out.locator(".code-meta")).toContainText("writing");
+  await out.getByTestId("code-replay").click(); // Skip
+  await expect(out.locator(".ln.ghost")).toHaveCount(0);
   for (const id of ["what", "io", "use", "most", "test", "improve", "file"]) await expect(bp.locator(`#${id}`)).toBeVisible();
   await expect(bp.locator(".prose").first()).not.toContainText("name: ");
   await page.getByRole("link", { name: /Library/ }).first().click();

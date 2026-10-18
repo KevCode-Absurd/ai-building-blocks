@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState, type ReactNode } from "react";
+import { useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import { Marked } from "marked";
 import { ArrowIcon, BlockCard, KitMenu } from "./ui";
 import { type Catalogue, type Page, cap, kindInfo, kindOf, loadPage, loadSkillText, neighbours, pathOf, taskOf, wireSteps } from "./lib/data";
@@ -6,6 +6,7 @@ import { markViewed } from "./lib/store";
 import { buildHandoffZip, download } from "./lib/handoff";
 import { Link } from "./lib/router";
 import AddToFlow from "./AddToFlow";
+import { useSeen, useTyped } from "./lib/typing";
 
 // Skill text renders as Markdown with raw HTML escaped: files are data, never markup we trust.
 const md = new Marked({ gfm: true, renderer: { html: ({ text }) => text.replace(/&/g, "&amp;").replace(/</g, "&lt;") } });
@@ -19,17 +20,45 @@ const BUSINESSES: Record<string, string> = {
 
 type Props = { c: Catalogue; slug: string; toast: (m: string) => void; toBuilder: (slugs: string[], asNew?: string) => void };
 
-/** A code window with a file name, line numbers and a copy button. */
-function Code({ name, text, toast, tall }: { name: string; text: string; toast: (m: string) => void; tall?: boolean }) {
-  const lines = text.replace(/\n+$/, "").split("\n");
+/** A code window with a file name, line numbers and a copy button.
+ *  With `typed`, the text writes itself out when it scrolls into view, like your AI answering, and can be replayed. */
+function Code({ name, text, toast, tall, typed }: { name: string; text: string; toast: (m: string) => void; tall?: boolean; typed?: boolean }) {
+  const body = text.replace(/\n+$/, "");
+  const lines = body.split("\n");
+  const [ref, seen] = useSeen<HTMLElement>(0.25);
+  const pre = useRef<HTMLPreElement>(null);
+  const userScrolled = useRef(false);
+  const { n, done, replay, skip } = useTyped(body, !!typed && seen, Math.min(4800, Math.max(1400, body.length * 2.5)));
+  const showing = typed ? n : body.length;
+  let off = 0, at = lines.length - 1;
+  const rows = lines.map((l, i) => {
+    const s0 = off;
+    off += l.length + 1;
+    const k = showing - s0;
+    if (k >= l.length + (i < lines.length - 1 ? 1 : 0)) return <span className="ln" key={i}>{l || " "}{"\n"}</span>;
+    if (k < 0) return <span className="ln ghost" key={i}>{l || " "}{"\n"}</span>;
+    at = i;
+    return <span className="ln" key={i}>{l.slice(0, k)}<span className="cursor" /><span className="ghost">{l.slice(k) || " "}</span>{"\n"}</span>;
+  });
+  // Keep the cursor in view while it writes, unless you scroll the window yourself.
+  useEffect(() => {
+    const p = pre.current;
+    if (!typed || done || !p || userScrolled.current) return;
+    const cur = p.querySelector(".cursor");
+    if (!cur) return;
+    const gap = cur.getBoundingClientRect().bottom - p.getBoundingClientRect().bottom;
+    if (gap > -32) p.scrollTop += gap + 64;
+  }, [typed, done, n]);
+  const again = () => { userScrolled.current = false; if (pre.current) pre.current.scrollTop = 0; replay(); };
   return (
-    <figure className={`code${tall ? " tall" : ""}`}>
+    <figure className={`code${tall ? " tall" : ""}`} ref={ref}>
       <figcaption>
         <span className="code-name">{name}</span>
-        <span className="code-meta">{lines.length} lines</span>
-        <button className="code-copy" onClick={async () => { await navigator.clipboard.writeText(text).catch(() => {}); toast(`Copied ${name}`); }}>Copy</button>
+        <span className="code-meta">{typed && !done ? `writing ${Math.min(at + 1, lines.length)} of ${lines.length} lines` : `${lines.length} lines`}</span>
+        {typed && <button className="code-copy code-replay" onClick={done ? again : skip} data-testid="code-replay">{done ? "Replay" : "Skip"}</button>}
+        <button className={`code-copy${typed ? " next" : ""}`} onClick={async () => { await navigator.clipboard.writeText(text).catch(() => {}); toast(`Copied ${name}`); }}>Copy</button>
       </figcaption>
-      <pre>{lines.map((l, i) => <span className="ln" key={i}>{l || " "}{"\n"}</span>)}</pre>
+      <pre ref={pre} className={typed ? "typed" : undefined} data-done={String(done)} onWheel={() => { userScrolled.current = true; }} onTouchStart={() => { userScrolled.current = true; }}>{rows}</pre>
     </figure>
   );
 }
@@ -158,7 +187,7 @@ export default function BlockPage({ c, slug, toast, toBuilder }: Props) {
 
           {p?.example && (
             <Section id="example" title="See it work" lead={BUSINESSES[p.example.business] ?? "A real run of this skill."} wide>
-              <Code name="what-you-get.txt" text={p.example.output} toast={toast} tall />
+              <Code name="what-you-get.txt" text={p.example.output} toast={toast} tall typed />
               <details className="went-in">
                 <summary>See what went in</summary>
                 <p className="bp-note">This is what was pasted after the skill. Swap in your own details and you get the same kind of result for your business.</p>

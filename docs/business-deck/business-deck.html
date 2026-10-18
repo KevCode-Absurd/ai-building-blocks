@@ -1,0 +1,1282 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Business and Build Deck</title>
+<style>
+  @page { size: 13.333in 7.5in; margin: 0; }
+  :root { --navy:#0b1d4a; --navy2:#13306f; --blue:#2557d6; --sky:#e9effc; --paper:#f6f8fd; --ink:#1b2440; --mute:#5b6787; --line:#d9e0f0;
+          --green:#127a4a; --greenbg:#e3f5ec; --amber:#9a5b00; --amberbg:#fdf1dc; --red:#a3262a; --redbg:#fbe7e7; }
+  * { box-sizing: border-box; }
+  html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  body { margin:0; font: 10.2pt/1.42 "Segoe UI", "Helvetica Neue", Arial, sans-serif; color: var(--ink); background: #fff; counter-reset: sl; }
+  .slide { width: 13.333in; height: 7.5in; padding: .4in .55in .5in; position: relative; overflow: hidden; break-after: page; page-break-after: always; counter-increment: sl; }
+  .slide:last-child { break-after: auto; page-break-after: auto; }
+  .slide::after { content: counter(sl); position: absolute; right: .55in; bottom: .2in; font: 600 7.5pt "Segoe UI", sans-serif; color: #7a86a8; }
+  .slide::before { content: "BUSINESS AND BUILD DECK  ·  18 OCTOBER 2026  ·  PRIVATE"; position: absolute; left: .55in; bottom: .2in; font: 600 7pt "Segoe UI", sans-serif; letter-spacing: .08em; color: #9aa5c2; }
+  .slide.cover::before, .slide.cover::after, .slide.div::before { color: rgba(255,255,255,.5); }
+  h1,h2,h3 { font-family: Georgia, "Times New Roman", serif; font-weight: 400; color: var(--navy); margin: 0; }
+  h1 { font-size: 25pt; line-height: 1.1; letter-spacing: -.01em; margin-bottom: 4px; }
+  h1 em, h2 em { font-style: italic; color: var(--blue); }
+  h2 { font-size: 13.5pt; margin: 10px 0 5px; }
+  h3 { font-size: 11.5pt; margin: 8px 0 4px; }
+  p { margin: 0 0 6px; }
+  .eyebrow { font: 700 7.8pt "Segoe UI", sans-serif; letter-spacing: .14em; text-transform: uppercase; color: var(--blue); margin-bottom: 6px; }
+  .lead { font-size: 11.2pt; color: var(--mute); margin: 4px 0 12px; max-width: 10.5in; }
+  .g2 { display:grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .g3 { display:grid; grid-template-columns: repeat(3,1fr); gap: 10px; }
+  .g4 { display:grid; grid-template-columns: repeat(4,1fr); gap: 10px; }
+  .g5 { display:grid; grid-template-columns: repeat(5,1fr); gap: 9px; }
+  .g64 { display:grid; grid-template-columns: 1.5fr 1fr; gap: 16px; }
+  .g46 { display:grid; grid-template-columns: 1fr 1.5fr; gap: 16px; }
+  .card { background: var(--paper); border: 1px solid var(--line); border-radius: 10px; padding: 10px 12px; }
+  .card h4 { margin: 0 0 3px; font: 700 10pt "Segoe UI", sans-serif; color: var(--navy); }
+  .card p { margin: 0; color: var(--mute); font-size: 9pt; }
+  .card .big { font: 400 22pt Georgia, serif; color: var(--blue); line-height: 1.05; margin-bottom: 3px; }
+  .card.blue { background: var(--blue); border-color: var(--blue); } .card.blue h4, .card.blue p, .card.blue .big { color: #fff; }
+  .card.navy { background: var(--navy); border-color: var(--navy); } .card.navy h4, .card.navy .big { color: #fff; } .card.navy p { color: #c9d6ff; }
+  .dark { background: var(--navy); color: #fff; border-radius: 12px; padding: 12px 16px; margin: 10px 0; }
+  .dark p { color: #dfe7ff; margin: 0; } .dark b { color: #fff; } .dark .eyebrow { color: #8fb0ff; }
+  .note { border-left: 3px solid var(--blue); background: var(--sky); padding: 7px 12px; border-radius: 0 8px 8px 0; margin: 8px 0; font-size: 9pt; }
+  .warn { border-left-color: var(--amber); background: var(--amberbg); }
+  table { width: 100%; border-collapse: collapse; margin: 4px 0 8px; font-size: 8.8pt; }
+  th { text-align: left; font: 700 7.4pt "Segoe UI", sans-serif; letter-spacing: .06em; text-transform: uppercase; color: var(--mute); border-bottom: 1.5px solid var(--navy); padding: 5px 7px; }
+  td { padding: 4px 7px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  td b { color: var(--navy); }
+  .tight td { padding: 3px 7px; font-size: 8.5pt; }
+  .num { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .c { text-align: center; }
+  .yes { color: var(--green); font-weight: 700; } .no { color: #b3bbd0; } .part { color: var(--amber); font-weight: 700; }
+  .chip { display:inline-block; font: 700 6.8pt "Segoe UI", sans-serif; letter-spacing: .07em; text-transform: uppercase; padding: 2px 6px; border-radius: 10px; vertical-align: 1px; white-space: nowrap; }
+  .c-dec { background: var(--greenbg); color: var(--green); } .c-pro { background: var(--sky); color: var(--blue); }
+  .c-ass { background: var(--amberbg); color: var(--amber); } .c-gap { background: var(--redbg); color: var(--red); }
+  ul, ol { margin: 3px 0 8px; padding-left: 17px; } li { margin: 2px 0; }
+  .small { font-size: 8.2pt; color: var(--mute); }
+  .src { font-size: 7.4pt; color: #8a94b0; margin-top: 4px; }
+  .flow { display:flex; align-items: stretch; margin: 8px 0; }
+  .flow > div { flex: 1; background: var(--paper); border: 1px solid var(--line); padding: 7px 6px; font-size: 8.2pt; text-align: center; color: var(--mute); }
+  .flow > div:first-child { border-radius: 9px 0 0 9px; } .flow > div:last-child { border-radius: 0 9px 9px 0; }
+  .flow > div b { display:block; color: var(--navy); font-size: 9pt; margin-bottom: 2px; }
+  .flow > div.on { background: var(--blue); color: #dfe7ff; border-color: var(--blue); } .flow > div.on b { color: #fff; }
+  .cover { background: linear-gradient(140deg, #071433 0%, #0b1d4a 45%, #1d47b8 100%); color: #fff; padding: .7in .8in; }
+  .cover .brand { font: 700 9pt "Segoe UI", sans-serif; letter-spacing: .16em; color: #b9cbff; }
+  .cover h1 { color: #fff; font-size: 40pt; margin-top: 1.1in; }
+  .cover h1 em { color: #b9cbff; }
+  .cover .sub { font-size: 14pt; color: #dfe7ff; margin-top: .3in; max-width: 8.6in; line-height: 1.4; }
+  .cover .meta { position: absolute; bottom: .65in; left: .8in; right: .8in; display:grid; grid-template-columns: repeat(4,1fr); gap: 12px; border-top: 1px solid rgba(255,255,255,.25); padding-top: .2in; font-size: 9pt; color: #c9d6ff; }
+  .cover .meta b { display:block; color: #fff; font-size: 10.5pt; margin-bottom: 2px; }
+  .div { background: var(--navy); color: #fff; padding: 1.6in .8in; }
+  .div .eyebrow { color: #8fb0ff; font-size: 10pt; }
+  .div h1 { color: #fff; font-size: 38pt; }
+  .div h1 em { color: #b9cbff; }
+  .div p { color: #c9d6ff; font-size: 13pt; max-width: 8.5in; margin-top: 14px; }
+  .div .list { display:flex; gap: 10px; margin-top: .5in; flex-wrap: wrap; }
+  .div .list span { border: 1px solid rgba(255,255,255,.3); border-radius: 18px; padding: 5px 14px; font-size: 10pt; color: #dfe7ff; }
+  .kpis { display:grid; grid-template-columns: repeat(4,1fr); gap: 10px; margin: 8px 0; }
+  .kpis div { border-top: 3px solid var(--blue); padding-top: 6px; }
+  .kpis b { display:block; font: 400 21pt Georgia, serif; color: var(--navy); line-height: 1.05; }
+  .kpis span { font-size: 8.6pt; color: var(--mute); }
+  .calls { counter-reset: c; list-style: none; padding: 0; margin: 4px 0; }
+  .calls > li { counter-increment: c; position: relative; padding: 5px 0 5px 36px; border-bottom: 1px solid var(--line); }
+  .calls > li::before { content: counter(c); position: absolute; left: 0; top: 6px; width: 24px; height: 24px; border-radius: 50%; background: var(--navy); color: #fff; font: 400 11pt Georgia, serif; display:flex; align-items:center; justify-content:center; }
+  .calls > li b { color: var(--navy); }
+  .calls > li span { display:block; color: var(--mute); font-size: 8.8pt; }
+  .calls > li span.chip { display:inline-block; }
+  .tag { display:inline-block; font: 700 6.8pt "Segoe UI", sans-serif; letter-spacing: .06em; text-transform: uppercase; padding: 1px 6px; border-radius: 8px; background: #efece4; color: #6f6a5e; margin-right: 4px; vertical-align: 1px; }
+  .tag.ok { background: #e3f5ec; color: #127a4a; } .tag.bl { background: #e2e8fa; color: #1a47c9; }
+  .mock { border: 1px solid #e0ddd4; border-radius: 12px; overflow: hidden; background: #f6f5f1; }
+  .mbar { background: #fff; border-bottom: 1px solid #e0ddd4; padding: 5px 12px; font-size: 8pt; color: #6f6a5e; display:flex; justify-content: space-between; }
+  .mbar span.d { color: #cfcbc0; margin-right: 8px; letter-spacing: 2px; }
+  .mbody { padding: 10px 14px 12px; color: #1b1a17; font-size: 8.6pt; }
+  .mhead b { display:block; font: 400 16pt Georgia, serif; color: #1b1a17; }
+  .mhead span { font-size: 8.2pt; color: #6f6a5e; }
+  .mtabs { display:flex; gap: 14px; font-size: 8.2pt; color: #6f6a5e; border-bottom: 1px solid #e0ddd4; padding-bottom: 4px; margin-top: 6px; }
+  .mtabs span.on { color: #1a47c9; font-weight: 700; }
+  .mq { font: 700 7.6pt "Segoe UI", sans-serif; letter-spacing: .08em; text-transform: uppercase; color: #6f6a5e; margin: 8px 0 4px; }
+  .mchips { display:flex; flex-wrap: wrap; gap: 5px; }
+  .mchips span { border: 1px solid #e0ddd4; background: #fff; border-radius: 14px; padding: 2px 9px; font-size: 7.9pt; color: #6f6a5e; }
+  .mchips span.done { background: #e2e8fa; border-color: #e2e8fa; color: #1a47c9; }
+  .mchips span.next { background: #1a47c9; border-color: #1a47c9; color: #fff; font-weight: 700; }
+  .mcard { background: #fff; border: 1px solid #e0ddd4; border-radius: 10px; padding: 8px 12px; margin-top: 8px; }
+  .mcard .mt { font-size: 7.8pt; color: #6f6a5e; margin-bottom: 2px; }
+  .mcard > b { font: 400 13pt Georgia, serif; color: #1b1a17; }
+  .m3 { display:grid; grid-template-columns: repeat(3,1fr); gap: 8px; margin: 6px 0 7px; font-size: 8.2pt; }
+  .m3 i, .ba i { display:block; font-style: normal; font-weight: 700; font-size: 7.2pt; letter-spacing: .06em; text-transform: uppercase; color: #6f6a5e; }
+  .mbtn { display:inline-block; background: #1a47c9; color: #fff; border-radius: 7px; padding: 4px 12px; font-size: 8.4pt; font-weight: 700; }
+  .mbtn.o { background: #fff; color: #1a47c9; border: 1px solid #1a47c9; }
+  .mlink { font-size: 7.8pt; color: #6f6a5e; margin-left: 10px; }
+  .brow { display:grid; grid-template-columns: 30px 1fr auto; gap: 8px; align-items: center; background: #fff; border: 1px solid #e0ddd4; border-radius: 9px; padding: 6px 10px; margin-top: 5px; font-size: 8.2pt; color: #6f6a5e; }
+  .brow b { display:block; font: 400 11pt Georgia, serif; color: #1b1a17; }
+  .brow .meta { font-size: 7.6pt; text-align: right; white-space: nowrap; }
+  .vote { text-align: center; font-size: 7.8pt; color: #6f6a5e; line-height: 1.1; }
+  .vote b { font: 700 9pt "Segoe UI", sans-serif; color: #1a47c9; display:block; }
+  .ba { display:grid; grid-template-columns: 1fr 1fr; gap: 7px; margin-top: 7px; }
+  .ba div { background: #fff; border: 1px solid #e0ddd4; border-radius: 9px; padding: 6px 9px; font-size: 8pt; color: #6f6a5e; }
+  .cm { background: #fff; border: 1px solid #e0ddd4; border-radius: 9px; padding: 6px 10px; margin-top: 5px; font-size: 8.1pt; color: #3d3a33; }
+  .cm .who { font-size: 7.4pt; color: #6f6a5e; margin-bottom: 1px; }
+  .cm.reply { margin-left: 22px; border-color: #c9d6f5; background: #f4f7fe; }
+  .search { background: #fff; border: 1px solid #e0ddd4; border-radius: 20px; padding: 6px 14px; color: #8a8576; font-size: 9pt; margin: 6px 0; }
+  .tiles { display:grid; grid-template-columns: repeat(4,1fr); gap: 6px; margin-top: 6px; }
+  .tiles div { background: #fff; border: 1px solid #e0ddd4; border-radius: 8px; padding: 6px 8px; font-size: 7.8pt; color: #6f6a5e; }
+  .tiles div b { display:block; font: 400 10.5pt Georgia, serif; color: #1b1a17; }
+  .tree { font-size: 8.6pt; }
+  .tree .col { background: var(--paper); border: 1px solid var(--line); border-radius: 10px; padding: 8px 10px; }
+  .tree .col h4 { margin: 0 0 4px; font: 400 12pt Georgia, serif; color: var(--navy); }
+  .tree .col ul { margin: 0; padding-left: 14px; color: var(--mute); }
+  .tree .col.hl { background: var(--blue); border-color: var(--blue); } .tree .col.hl h4, .tree .col.hl ul { color: #fff; }
+  svg text { font-family: "Segoe UI", sans-serif; }
+  .phase { display:grid; grid-template-columns: repeat(5,1fr); gap: 8px; }
+  .phase > div { border-radius: 10px; padding: 9px 10px; background: var(--paper); border: 1px solid var(--line); font-size: 8.5pt; color: var(--mute); }
+  .phase > div h4 { margin: 0; font: 400 12.5pt Georgia, serif; color: var(--navy); }
+  .phase > div .when { font: 700 7.4pt "Segoe UI", sans-serif; letter-spacing: .07em; text-transform: uppercase; color: var(--blue); margin: 2px 0 5px; }
+  .phase > div ul { margin: 0; padding-left: 14px; }
+  .phase > div .gate { margin-top: 6px; background: var(--greenbg); color: var(--green); border-radius: 6px; padding: 4px 6px; font-size: 7.9pt; }
+  .phase > div.now { background: var(--blue); border-color: var(--blue); color: #dfe7ff; } .phase > div.now h4 { color: #fff; } .phase > div.now .when { color: #b9cbff; }
+  .bar { height: 9px; border-radius: 5px; background: var(--blue); display:inline-block; vertical-align: middle; }
+  .stack3 { display:grid; gap: 6px; }
+  .stack3 > div { border-radius: 10px; padding: 8px 12px; display:grid; grid-template-columns: 1.6in 1fr 1.3in; gap: 10px; align-items: center; }
+  .stack3 b { font: 400 13pt Georgia, serif; display:block; }
+  .stack3 i { font-style: normal; font: 700 7.4pt "Segoe UI", sans-serif; letter-spacing: .07em; text-transform: uppercase; text-align: right; }
+  .s1 { background: var(--blue); color: #dfe7ff; } .s1 b, .s1 i { color: #fff; }
+  .s2 { background: #dbe5fb; color: var(--navy); }
+  .s3 { background: var(--sky); color: var(--mute); } .s3 b { color: var(--navy); }
+  .s4 { background: #eceff5; color: var(--mute); } .s4 b { color: var(--navy); }
+</style>
+</head>
+<body>
+
+<!-- 1 COVER -->
+<section class="slide cover">
+  <div class="brand">▮▮▮&nbsp; AI BUILDING BLOCKS &nbsp;·&nbsp; WORKING NAME</div>
+  <h1>The business and build deck.<br><em>A free library that makes AI useful for every business.</em></h1>
+  <p class="sub">What the platform is, who it serves, how big the market is, why we start with ecommerce, how we grow into the markets next to it, how the site works, the architecture, and how we build it from scratch, week by week.</p>
+  <div class="meta">
+    <div><b>18 October 2026</b>Version 1 · goes with the final plan (v4)</div>
+    <div><b>Free first</b>Nothing is sold at the start</div>
+    <div><b>Private</b>Contains rights-sensitive notes</div>
+    <div><b>Repo</b>KevCode-Absurd/ai-building-blocks</div>
+  </div>
+</section>
+
+<!-- 2 SUMMARY -->
+<section class="slide">
+  <div class="eyebrow">The deck on one slide</div>
+  <h1>Tested AI building blocks, <em>free, in plain words, for any business.</em></h1>
+  <p class="lead">People don't lack AI tools. They lack the tested, explained, ready-to-use pieces that make those tools do real work. We build the library of those pieces, and the community around it.</p>
+  <div class="g3">
+    <div class="card"><h4>What it is</h4><p>A free library of prompts, skills, routines, workflows, mini tools and agents. Each one is tested on four AI labs, shown with a real before and after, and comes with a plain "set it up yourself" guide. It starts general, then goes deep in industry boards and, later, job-role boards.</p></div>
+    <div class="card"><h4>Who it's for</h4><p>Owners, operators, marketers, freelancers and agencies in digital businesses who already use ChatGPT, Claude or Gemini but get little real work out of them. The beachhead is <b>ecommerce</b>, where our own tested work is strongest. Then <b>SaaS</b>, agencies, and job roles.</p></div>
+    <div class="card"><h4>Why it wins</h4><p>Everything else is untested, technical or sold as packs. We test every listing, show the result first, give the next step only, keep it free, and answer questions in the comments. The <b>intake engine</b> turns every good video, article and GitHub library into better listings, so the library keeps getting richer.</p></div>
+  </div>
+  <div class="kpis" style="margin-top:14px">
+    <div><b>19 Jan 2027</b><span>The site opens, free: 50+ general and 25+ /ecommerce listings, 8 mini tools, 10 tool guides</span></div>
+    <div><b>Apr 2027</b><span>/saas board opens; 10k monthly visits; 1,000 newsletter subscribers</span></div>
+    <div><b>Sep 2027</b><span>3 boards; 50k monthly visits; 5,000 subscribers; first income streams switched on</span></div>
+    <div><b>~$300</b><span>Model credits in hand across the four labs. Hosting at launch is about $60–100 a month <span class="chip c-ass">Assumption</span></span></div>
+  </div>
+  <div class="dark"><p><b>How it earns, later:</b> labelled affiliate links and quiet ads once traffic is there. Then consulting and implementation, memberships ($99–199 and $499 a month for priority help), premium workflows and a 70/30 creator marketplace. Each stream switches on only when its condition is met. What's free at launch stays free.</p></div>
+</section>
+
+<!-- 3 YOUR CALLS TODAY -->
+<section class="slide">
+  <div class="eyebrow">Your calls, 18 October</div>
+  <h1>What you decided today, <em>and what it changes.</em></h1>
+  <p class="lead">This deck builds on the final plan (v4). These are today's decisions. The plan has been updated to match.</p>
+  <ol class="calls">
+    <li><b>Sources are links, GitHub, transcripts and articles.</b><span>No Instagram reels or TikToks to start. You send YouTube transcripts, GitHub links, articles and posts, and the intake engine turns them into listings. Video reading stays possible later. The old decision 13 (reels) is dropped. <span class="chip c-dec">Decided</span></span></li>
+    <li><b>We don't store people's data.</b><span>No business data, files, brand brains, results or keys are kept on the site. Brand brains and mini tools run in the person's own browser and download to their device. We help people set up storage themselves (their own Drive, Notion or folder). Accounts hold only what the community needs: an email, comments, votes and saved lists. <span class="chip c-dec">Decided</span></span></li>
+    <li><b>Everything is free. Comments are for anyone signed in.</b><span>A free account lets you comment, ask for help, vote and save. We answer questions in the comments. Paid priority help and a paid community come later, not now. <span class="chip c-dec">Decided</span></span></li>
+    <li><b>Stars, votes and saved lists.</b><span>You asked whether to have stars, up and down votes and favourites that can feed workflows later. My recommendation is on slide 25: one "useful" vote and "it worked / it didn't" on listings, up and down votes on comments, and a private star that collects into <b>kits</b> you can turn into your own workflow. <span class="chip c-pro">Proposed</span> (decision 13)</span></li>
+    <li><b>The model budget is the credits we have.</b><span>About $200 of Anthropic credit (until 27 October), $60–70 Google, $20 DeepSeek and $10 OpenAI, topped up when needed. The per-run cap of $2 and per-round cap of $25 stay as a safety stop. The Anthropic credit goes first, in a credit sprint (slide 39). Decision 2 is closed. <span class="chip c-dec">Decided</span></span></li>
+  </ol>
+</section>
+
+<!-- A DIVIDER -->
+<section class="slide div">
+  <div class="eyebrow">Part A</div>
+  <h1>The business: <em>the problem, the people, the market.</em></h1>
+  <p>What's broken today, who we serve, how much better we make it, how big the market is, why ecommerce first, where we go next, who else is out there, and how it earns, later.</p>
+  <div class="list"><span>Problem</span><span>Solution</span><span>Who it serves</span><span>10× value</span><span>Why now</span><span>TAM · SAM · SOM</span><span>Beachhead</span><span>Adjacent markets</span><span>Competitors</span><span>Money</span><span>Go to market</span></div>
+</section>
+
+<!-- 4 PROBLEM -->
+<section class="slide">
+  <div class="eyebrow">The problem</div>
+  <h1>Almost everyone has AI. <em>Few get real work out of it.</em></h1>
+  <p class="lead">The good material exists: skills on GitHub, workflows in YouTube videos, prompts in newsletters. But it's scattered, untested, written for developers, and out of date within months. A busy owner can't tell which piece works, how to set it up, or what to do next.</p>
+  <div class="g4">
+    <div class="card"><div class="big">1</div><h4>Can't find it</h4><p>Good skills sit in GitHub repos, long videos and threads. There's no single place that's organised by the job you're trying to do.</p></div>
+    <div class="card"><div class="big">2</div><h4>Can't trust it</h4><p>Nobody shows the output, the cost or which model it needs. Some downloads carry hidden instructions (prompt injection) or scripts that do things you didn't ask for.</p></div>
+    <div class="card"><div class="big">3</div><h4>Can't set it up</h4><p>Instructions assume a terminal, an API key and a developer's vocabulary. Non-developers give up at "clone the repo".</p></div>
+    <div class="card"><div class="big">4</div><h4>Can't keep up</h4><p>Models change every few months. Last spring's best prompt is worse than today's, and nobody re-tests it.</p></div>
+  </div>
+  <div class="kpis" style="margin-top:14px">
+    <div><b>52%</b><span>of US employees use AI at work at all (Gallup, May 2026)</span></div>
+    <div><b>15%</b><span>use it daily</span></div>
+    <div><b>7%</b><span>of organisations have fully scaled AI, though 88% use it (McKinsey, 2025)</span></div>
+    <div><b>~14%</b><span>of US retail firms use AI, against 19.8% of all businesses (Census, May 2026)</span></div>
+  </div>
+  <div class="dark"><p><b>The gap isn't access. It's know-how.</b> People have the tools. What they lack is the tested, explained, next-step piece that turns "I have ChatGPT" into "this job now takes 5 minutes".</p></div>
+</section>
+
+<!-- 5 SOLUTION -->
+<section class="slide">
+  <div class="eyebrow">The solution</div>
+  <h1>One library of tested building blocks, <em>from a single prompt to a working agent.</em></h1>
+  <div class="g64">
+    <div>
+      <table class="tight">
+        <thead><tr><th style="width:20%">Building block</th><th>What it is</th><th style="width:30%">Example</th></tr></thead>
+        <tbody>
+          <tr><td><b>Prompt</b></td><td>Copy, paste, get a result in a minute</td><td>"Write 10 hooks from these reviews"</td></tr>
+          <tr><td><b>Skill</b></td><td>A method with steps, inputs and a checklist that your AI follows every time</td><td>Product-page audit</td></tr>
+          <tr><td><b>Routine</b></td><td>A skill on a timer or a trigger</td><td>Monday ad report at 9 am</td></tr>
+          <tr><td><b>Workflow</b></td><td>Several skills chained, each stage usable on its own</td><td>Brand brain → angles → static ads</td></tr>
+          <tr><td><b>Mini tool</b></td><td>A free calculator: your numbers in, the answer and the working out</td><td>Discount calculator</td></tr>
+          <tr><td><b>Application</b></td><td>A small app you can run yourself</td><td>Meta ads dashboard</td></tr>
+          <tr><td><b>Agent</b></td><td>Works across many steps with tools, budgets and your approval</td><td>Ad account watcher that proposes changes</td></tr>
+        </tbody>
+      </table>
+      <p class="small">Each one comes <b>ready-made</b> and with a plain <b>"how to make your own"</b> guide. Each one is shown with a before and after and tested on Claude, GPT, Gemini and DeepSeek, with the cost per run.</p>
+    </div>
+    <div>
+      <div class="stack3">
+        <div class="s1"><div><b>General library</b></div><span>Listings any business can use, made general first</span><i>Launch</i></div>
+        <div class="s2"><div><b>Industry boards</b></div><span>/ecommerce, then /saas: focused versions, comments and advice, like a subreddit</span><i>Launch · Apr 2027</i></div>
+        <div class="s3"><div><b>Job-role boards</b></div><span>/marketing, /finance, /operations, /product</span><i>After 2–3 industries</i></div>
+        <div class="s4"><div><b>Tools</b></div><span>Plain guides to the tools people use, plus the mini tools shelf</span><i>Launch</i></div>
+      </div>
+      <div class="note" style="margin-top:10px"><b>Every job is a ladder.</b> By hand → ask → connect → save → schedule → mini app → full app → share → act. Pages show only your next step, at four levels from Beginner to Expert.</div>
+    </div>
+  </div>
+</section>
+
+<!-- 6 WHO -->
+<section class="slide">
+  <div class="eyebrow">Who it serves</div>
+  <h1>Four kinds of people, <em>one library at four levels.</em></h1>
+  <p class="lead">Most visitors are in small teams where one person does several jobs. They use ChatGPT, Claude or Gemini already. They want the result, not the theory.</p>
+  <div class="g4">
+    <div class="card"><h4>The owner who's starting <span class="chip l-b" style="background:var(--greenbg);color:var(--green)">Beginner</span></h4><p><b>Who:</b> runs a small store, SaaS or service; uses ChatGPT for emails.<br><b>Wants:</b> "Just tell me what to paste."<br><b>Gets:</b> prompts and mini tools that work in a minute, with the next step shown.</p></div>
+    <div class="card"><h4>The operator or marketer <span class="chip c-pro">Intermediate</span></h4><p><b>Who:</b> runs ads, email or the website for a brand of 2–50 people.<br><b>Wants:</b> repeatable weekly work done faster.<br><b>Gets:</b> skills and workflows with the brand brain plugged in, tested model picks and the cost per run.</p></div>
+    <div class="card"><h4>The freelancer or agency <span class="chip c-ass">Advanced</span></h4><p><b>Who:</b> serves several clients; sells hours.<br><b>Wants:</b> to deliver more for each client without hiring.<br><b>Gets:</b> workflows and routines they can run per client, board versions per industry, and help in the comments.</p></div>
+    <div class="card navy"><h4>The builder <span class="chip" style="background:#fff;color:var(--navy)">Expert</span></h4><p><b>Who:</b> technical founder, ops engineer, AI consultant.<br><b>Wants:</b> safe, tested parts to build agents and apps from.<br><b>Gets:</b> safety-checked skills, agents with red-team tests, the Advanced view, and later the marketplace.</p></div>
+  </div>
+  <h2>What they all have in common</h2>
+  <div class="g3">
+    <div class="note">They judge by the <b>result</b>. That's why the before and after sits at the top of every page.</div>
+    <div class="note">They're short of <b>time</b>, not tools. That's why we show only the next step.</div>
+    <div class="note">They learn from <b>people like them</b>. That's why boards have comments and answers.</div>
+  </div>
+</section>
+
+<!-- 7 10X -->
+<section class="slide">
+  <div class="eyebrow">10× value</div>
+  <h1>Why someone picks us <em>over everything else they could use.</em></h1>
+  <table class="tight">
+    <thead><tr><th style="width:24%">What the person needs</th><th class="c">GitHub and "awesome" lists</th><th class="c">Prompt packs and marketplaces</th><th class="c">YouTube tutorials</th><th class="c">GPT Store, skill directories</th><th class="c" style="color:var(--blue)">Us</th></tr></thead>
+    <tbody>
+      <tr><td><b>See the result before trying</b></td><td class="c no">rarely</td><td class="c part">sample</td><td class="c part">on screen</td><td class="c no">no</td><td class="c yes">before and after on every page</td></tr>
+      <tr><td><b>Know it works, and on which model</b></td><td class="c no">no</td><td class="c no">no</td><td class="c no">one model</td><td class="c no">no</td><td class="c yes">tested on 4 labs, with cost per run</td></tr>
+      <tr><td><b>Set it up without a terminal</b></td><td class="c no">no</td><td class="c yes">yes</td><td class="c part">follow along</td><td class="c yes">yes, one tool</td><td class="c yes">a guide for each tool you use</td></tr>
+      <tr><td><b>Fit it to my business</b></td><td class="c no">edit it yourself</td><td class="c no">no</td><td class="c no">no</td><td class="c no">no</td><td class="c yes">brand brain plugs into every listing</td></tr>
+      <tr><td><b>Safe to install</b></td><td class="c no">unknown</td><td class="c part">unknown</td><td class="c">n/a</td><td class="c part">platform review</td><td class="c yes">safety check, pinned version</td></tr>
+      <tr><td><b>Still good after the next model ships</b></td><td class="c no">if maintained</td><td class="c no">no</td><td class="c no">no</td><td class="c no">no</td><td class="c yes">re-tested when big models ship</td></tr>
+      <tr><td><b>Know what to do next</b></td><td class="c no">no</td><td class="c no">no</td><td class="c part">next video</td><td class="c no">no</td><td class="c yes">the ladder: your next step</td></tr>
+      <tr><td><b>Ask someone when stuck</b></td><td class="c part">issues</td><td class="c no">no</td><td class="c part">comments</td><td class="c no">no</td><td class="c yes">we answer in the comments</td></tr>
+      <tr><td><b>Free</b></td><td class="c yes">yes</td><td class="c no">mostly paid</td><td class="c yes">yes</td><td class="c part">needs a plan</td><td class="c yes">yes, for good</td></tr>
+    </tbody>
+  </table>
+  <p class="small">"10×" here means one person goes from finding a promising idea to having it work in their own tool on their own business in minutes, with confidence, instead of an afternoon of trial and error. We measure it as <b>time to first working result</b> and <b>"it worked" reports</b> (slide 40).</p>
+</section>
+
+<!-- 8 VALUE MECHANISMS -->
+<section class="slide">
+  <div class="eyebrow">How we deliver the value</div>
+  <h1>Ten things on the site <em>that do the work.</em></h1>
+  <div class="g5">
+    <div class="card"><div class="big">1</div><h4>Before and after</h4><p>The real output on top, with and without your brand brain, and the original next to ours for imports.</p></div>
+    <div class="card"><div class="big">2</div><h4>Model picker</h4><p>Recommended, budget and "not worth it" models from our tests, each with quality, cost per run and speed.</p></div>
+    <div class="card"><div class="big">3</div><h4>Set up in your tool</h4><p>One button per tool (Claude, ChatGPT, Gemini, Codex) with the right file and a two-minute guide.</p></div>
+    <div class="card"><div class="big">4</div><h4>Brand brain</h4><p>Fill in your business once, in your browser. It downloads to your device and plugs into every listing. We never see it.</p></div>
+    <div class="card"><div class="big">5</div><h4>The ladder</h4><p>"You are here, this is next." You never see 40 options at once.</p></div>
+    <div class="card"><div class="big">6</div><h4>Kits</h4><p>Star what you like. Group stars into a kit, then turn the kit into your own workflow and download it.</p></div>
+    <div class="card"><div class="big">7</div><h4>Mini tools</h4><p>Type in your numbers and get the answer and the working out. Download it, use it as a sheet, put it in your AI, or embed it.</p></div>
+    <div class="card"><div class="big">8</div><h4>Safety badge</h4><p>Every import is scanned for malware and hidden instructions, sandbox-tested and pinned to one version.</p></div>
+    <div class="card"><div class="big">9</div><h4>Always fresh</h4><p>Re-tested when big models ship. Follow a listing to hear when it improves. The changelog says what changed.</p></div>
+    <div class="card"><div class="big">10</div><h4>Answers</h4><p>Ask under any listing. We reply, and good answers become the listing's FAQ and its next version.</p></div>
+  </div>
+  <div class="dark"><p><b>The engine behind it:</b> every source you send (a GitHub repo, a transcript, an article) goes through the intake engine. It improves listings we have, adds new ones, and turns any formula into a mini tool. Questions in the comments tell it what to look for next. The library gets better every week without getting more complicated.</p></div>
+</section>
+
+<!-- 9 WHY NOW -->
+<section class="slide">
+  <div class="eyebrow">Why now</div>
+  <h1>AI is used by a billion people, <em>and the building blocks finally travel between tools.</em></h1>
+  <div class="kpis">
+    <div><b>900M</b><span>ChatGPT weekly users (OpenAI, Feb 2026)</span></div>
+    <div><b>1B+</b><span>Gemini app monthly users (Google, Aug 2026)</span></div>
+    <div><b>52% · 15%</b><span>US employees who use AI at work at all · who use it daily (Gallup, May 2026)</span></div>
+    <div><b>88% · 7%</b><span>Organisations using AI · those that have fully scaled it (McKinsey, 2025)</span></div>
+  </div>
+  <div class="g3" style="margin-top:12px">
+    <div class="card"><h4>1 · Use is wide but shallow</h4><p>Most people try AI; few use it daily, and only a few organisations get value at scale. The gap between "has ChatGPT" and "gets work done with it" is the market. In the US, 19.8% of businesses used AI in a two-week window in May 2026, and only about 14% in retail (Census).</p></div>
+    <div class="card"><h4>2 · Skills became portable</h4><p>The SKILL.md format behind Claude's skills became an open standard (agentskills.io, December 2025), adopted by dozens of tools. One well-made skill can now run in many AIs. That makes a cross-tool library possible for the first time.</p></div>
+    <div class="card"><h4>3 · Supply is exploding, unchecked</h4><p>Anthropic's own skills repo has 180k+ GitHub stars, and one directory claims to index 3M+ skills. Volume isn't the problem any more. Nobody tests, explains or safety-checks it for non-developers. That's the job.</p></div>
+  </div>
+  <div class="note">Models change every few months. A library that <b>re-tests</b> its listings when they do, and shows the cost on each lab, stays useful in a way a static pack or video can't.</div>
+  <p class="src">Sources: slide 43. Reliability is marked there. Usage counts overlap between assistants, so they aren't added together.</p>
+</section>
+
+<!-- 10 TAM SAM SOM PEOPLE -->
+<section class="slide">
+  <div class="eyebrow">Market size · people and businesses</div>
+  <h1>TAM, SAM, SOM: <em>counted in people first, because we're free.</em></h1>
+  <p class="lead">For a free platform, the market that matters is who could use it. Money comes later from a small share of them (next slide). Figures are sourced; the narrowing steps are my arithmetic.</p>
+  <div class="g64">
+    <svg viewBox="0 0 620 380" width="100%" height="3.9in" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="250" cy="195" r="182" fill="#e9effc"/>
+      <circle cx="250" cy="250" r="120" fill="#c9d8fb"/>
+      <circle cx="250" cy="300" r="62" fill="#2557d6"/>
+      <text x="250" y="48" text-anchor="middle" font-size="15" font-weight="700" fill="#0b1d4a">TAM</text>
+      <text x="250" y="70" text-anchor="middle" font-size="13" fill="#0b1d4a">1B+ people using AI assistants</text>
+      <text x="250" y="88" text-anchor="middle" font-size="12" fill="#5b6787">in 322M formal small firms worldwide</text>
+      <text x="250" y="160" text-anchor="middle" font-size="15" font-weight="700" fill="#0b1d4a">SAM (beachhead)</text>
+      <text x="250" y="181" text-anchor="middle" font-size="13" fill="#0b1d4a">~7.1M live Shopify + WooCommerce stores</text>
+      <text x="250" y="199" text-anchor="middle" font-size="12" fill="#13306f">core: 1.44M Shopify stores in the US + UK</text>
+      <text x="250" y="294" text-anchor="middle" font-size="15" font-weight="700" fill="#fff">SOM</text>
+      <text x="250" y="313" text-anchor="middle" font-size="12" fill="#fff">15k–30k stores</text>
+      <text x="250" y="328" text-anchor="middle" font-size="11" fill="#dfe7ff">by end of 2029</text>
+      <line x1="434" y1="70" x2="470" y2="70" stroke="#9aa5c2"/><text x="476" y="74" font-size="11.5" fill="#5b6787">Overlapping users;</text><text x="476" y="89" font-size="11.5" fill="#5b6787">not added together</text>
+      <line x1="372" y1="190" x2="470" y2="190" stroke="#9aa5c2"/><text x="476" y="186" font-size="11.5" fill="#5b6787">Upper bound: a store</text><text x="476" y="201" font-size="11.5" fill="#5b6787">may run both</text>
+      <line x1="314" y1="300" x2="470" y2="300" stroke="#9aa5c2"/><text x="476" y="296" font-size="11.5" fill="#5b6787">1–2% of US + UK</text><text x="476" y="311" font-size="11.5" fill="#5b6787">Shopify stores, free</text>
+    </svg>
+    <div>
+      <table class="tight">
+        <thead><tr><th>Layer</th><th>How we get there</th></tr></thead>
+        <tbody>
+          <tr><td><b>TAM</b></td><td>Over 1B people use a general AI assistant (Gemini app 1B+ monthly, ChatGPT 900M weekly). They work in roughly 322M formal small and medium firms worldwide, including 36.2M in the US and 5.7M in the UK.</td></tr>
+          <tr><td><b>SAM: ecommerce</b></td><td>3.14M live Shopify stores and 4.0M WooCommerce stores (Store Leads, Oct 2026). English-speaking core: 1.20M US + 0.23M UK Shopify stores = 1.44M.</td></tr>
+          <tr><td><b>Already using AI</b></td><td>14% (retail firms, Census) to 52% (employees, Gallup) of that core: about 0.2M–0.75M stores ready for us now</td></tr>
+          <tr><td><b>SAM: next</b></td><td>SaaS companies (~30k, weak source), agencies and freelancers (64–73M US freelancers), then knowledge workers by job role</td></tr>
+          <tr><td><b>SOM, 3 years</b></td><td>1–2% of US + UK Shopify stores as free users (15k–30k), plus other businesses, for 50k–150k free users in total <span class="chip c-ass">Assumption</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- 11 TAM SAM SOM MONEY -->
+<section class="slide">
+  <div class="eyebrow">Market size · money</div>
+  <h1>The money pools we can tap, <em>once there's an audience.</em></h1>
+  <div class="g2">
+    <div>
+      <table class="tight">
+        <thead><tr><th style="width:30%">Pool</th><th>Evidence people pay</th></tr></thead>
+        <tbody>
+          <tr><td><b>Tools for merchants</b></td><td>Shopify merchants paid app developers <b>$1.3B in 2025</b> (Shopify). Affiliate programs for AI tools commonly pay 20–30% recurring for 12 months.</td></tr>
+          <tr><td><b>Help and implementation</b></td><td>Independent AI implementation work runs at a median of about <b>$185 an hour</b>, with small-business retainers of $4–8k a month (vendor rate cards; weak source).</td></tr>
+          <tr><td><b>Paid communities</b></td><td>Skool communities charge members anything from $9 to $99+ a month. Prompt bundles sell for $47–199 (God of Prompt).</td></tr>
+          <tr><td><b>Audience media</b></td><td>The Rundown AI claims 2M+ newsletter readers; There's An AI For That claims 3M+ visits a month. Tech-content display ads earn about $20–45 per 1,000 pageviews (estimates).</td></tr>
+          <tr><td><b>Learning AI</b></td><td>Coursera reported 12 generative-AI enrolments a minute in 2025. The AI-in-education market is about $2.2B (2024), heading for $5.8B by 2030.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div>
+      <div class="card" style="margin-bottom:8px"><h4>SOM in money, three years out <span class="chip c-ass">Assumption</span></h4><p>50k–150k free users, of whom <b>1–2% become members</b>: 500–3,000 members at $99–199 a month = <b>$0.6M–7.2M a year</b>. Ads, affiliates, consulting, premium workflows and the marketplace come on top. This is my arithmetic, not a forecast.</p></div>
+      <div class="card" style="margin-bottom:8px"><h4>How the arithmetic works</h4><p>500 × $99 × 12 = $0.59M at the low end. 3,000 × $199 × 12 = $7.16M at the high end. The Pro tier ($499) isn't counted.</p></div>
+      <div class="note warn">The old plan's $348k Year 1 model is retired. Year 1 is a build year with little or no income, by design. The money model is rebuilt in April 2027 from three months of real traffic (decision 17).</div>
+    </div>
+  </div>
+  <p class="src">Sources and reliability: slide 43. Weak sources are labelled there and used only as ranges.</p>
+</section>
+
+<!-- 12 BEACHHEAD -->
+<section class="slide">
+  <div class="eyebrow">The beachhead</div>
+  <h1>Why ecommerce first: <em>our strongest work, in a market that measures everything.</em></h1>
+  <div class="g3">
+    <div class="card"><div class="big">263</div><h4>Own items, already built</h4><p>Creative Engine and the ecomOS dashboard hold our deepest tested work: brand brain, static ads, copy, offers maths, CRO, Meta ads review. The first board starts full, not empty.</p></div>
+    <div class="card"><div class="big">3.14M</div><h4>Live Shopify stores</h4><p>1.2M in the US and 235k in the UK (Store Leads, Oct 2026), plus 4.0M WooCommerce stores. Small teams doing many jobs: exactly who the ladder is for.</p></div>
+    <div class="card"><div class="big">~14%</div><h4>Of US retail firms use AI</h4><p>Below the 19.8% average for all businesses (Census, May 2026). Lots of room, and a clear need for "start here" help.</p></div>
+    <div class="card"><div class="big">$1.3B</div><h4>Paid to Shopify app developers in 2025</h4><p>Merchants already pay for tools that save them work. That's where affiliate income and, later, premium workflows come from.</p></div>
+    <div class="card"><div class="big">17.1%</div><h4>Of US retail is online</h4><p>$340B in Q2 2026, up 12% on a year earlier (Census). The market is still growing.</p></div>
+    <div class="card"><div class="big">$ in, $ out</div><h4>Results are measurable</h4><p>Margin, return on ad spend, order value, conversion. A before and after is easy to believe when it's in money, and our mini tools speak that language.</p></div>
+  </div>
+  <div class="dark"><p><b>The /ecommerce board at launch:</b> 25+ focused listings (brand brain for a store, static ads for a sale, product-page audit, offer maths, weekly Meta ads review, review mining), 8 mini tools, workflow pages for brand brain, static ads and ad copy, and seed posts so it isn't empty on day one.</p></div>
+</section>
+
+<!-- 13 ADJACENT -->
+<section class="slide">
+  <div class="eyebrow">Adjacent markets</div>
+  <h1>From one board to many, <em>reusing what we've already built.</em></h1>
+  <p class="lead">Every listing is general first, so most of the work carries over. A new board adds its industry's brain fields, examples, thresholds and wording. We open the next board only when the gate before it passes.</p>
+  <table class="tight">
+    <thead><tr><th style="width:16%">Market</th><th style="width:11%">When</th><th>What carries over</th><th>What's new</th><th style="width:21%">Gate to open it</th></tr></thead>
+    <tbody>
+      <tr><td><b>/ecommerce</b></td><td>Launch, Jan 2027</td><td>—</td><td>Store brain, offers maths, product pages, Meta ads</td><td>Gate B passed</td></tr>
+      <tr><td><b>/saas</b></td><td>Apr 2027</td><td>Brand brain, ads and copy, landing pages, email, analytics, AI operations: about two-thirds of listings</td><td>Trials, onboarding, churn, pricing pages, product-led growth; mini tools for revenue, churn and payback</td><td>Top 20 /saas versions reviewed by someone in software; 10k monthly visits</td></tr>
+      <tr><td><b>Agencies and freelancers</b></td><td>Served from day one; a board by demand</td><td>Everything, used for each client</td><td>Per-client brains, client reports, the hourly rate tool, proposal and scoping skills</td><td>Agency share of accounts and requests</td></tr>
+      <tr><td><b>Third industry</b> (creators and courses, local services, or B2B services)</td><td>Jul–Sep 2027</td><td>Most of the general library</td><td>Chosen by searches, requests and comments, not by guess</td><td>50k monthly visits; demand data</td></tr>
+      <tr><td><b>Job-role boards</b>: /marketing, then finance, operations, product</td><td>2028</td><td>Listings tagged by job across all industries</td><td>Role ladders (for example, a marketer's week), tool stacks by role</td><td>2–3 industry boards working</td></tr>
+    </tbody>
+  </table>
+  <div class="g4" style="margin-top:6px">
+    <div class="note"><b>Why SaaS next:</b> the same small teams, the same jobs (ads, pages, email), and plenty of AI-native founders.</div>
+    <div class="note"><b>Why agencies matter:</b> one agency user brings many businesses. Advanced and Expert listings serve them.</div>
+    <div class="note"><b>Why roles last:</b> roles cut across industries, so they need a large library underneath first.</div>
+    <div class="note"><b>One library underneath:</b> boards never copy listings. They add a board version on top.</div>
+  </div>
+</section>
+
+<!-- 14 COMPETITORS -->
+<section class="slide">
+  <div class="eyebrow">Who else is out there</div>
+  <h1>Lots of supply, <em>nobody testing, explaining and supporting it.</em></h1>
+  <table class="tight">
+    <thead><tr><th style="width:20%">Kind</th><th style="width:27%">Examples (scale)</th><th style="width:17%">How they earn</th><th>Where they leave a gap</th></tr></thead>
+    <tbody>
+      <tr><td><b>Skill repos and directories</b></td><td>Anthropic skills repo (180k+ stars); SkillsMP (claims 3M+ skills indexed); awesome-lists</td><td>Free; drives model use</td><td>Untested, no outputs shown, written for developers, no safety check, no help</td></tr>
+      <tr><td><b>Prompt marketplaces and packs</b></td><td>PromptBase (~425k users, sellers keep 80%); God of Prompt ($47–199 bundles)</td><td>Commission or one-off sales</td><td>Paid, untested across models, prompts only, no ladder</td></tr>
+      <tr><td><b>Tool template galleries</b></td><td>Zapier templates; n8n (13,490 workflow templates)</td><td>Their own subscriptions</td><td>Tied to one tool; assume you know it already</td></tr>
+      <tr><td><b>Assistant stores</b></td><td>GPT Store (3M+ GPTs created by Jan 2024); Gemini Gems; Claude skills</td><td>The assistant's subscription</td><td>One lab only, unknown quality, no comparison. <i>For us, a channel:</i> our listings download into them</td></tr>
+      <tr><td><b>Directories and newsletters</b></td><td>The Rundown AI (2M+ readers); There's An AI For That (3M+ visits a month); Ben's Bites (~150k)</td><td>Sponsorships, courses</td><td>News and tool lists, not working pieces. <i>Possible partners</i></td></tr>
+      <tr><td><b>Agent platforms</b></td><td>Relevance AI, Lindy ($50–200 a month)</td><td>SaaS subscriptions</td><td>Paid software for builders; we're complementary (guides, comparisons, affiliates)</td></tr>
+      <tr><td><b>Paid communities and courses</b></td><td>Skool groups ($9–99+ a month), YouTube creators' courses</td><td>Membership, courses</td><td>Gated and one creator's view. We're free, and credit the creators we learn from</td></tr>
+    </tbody>
+  </table>
+  <div class="dark"><p><b>Our position:</b> the free, neutral, tested library. Every listing is shown working, compared across four labs with its cost, explained in plain words, safety-checked, kept fresh and answered in public. We don't sell software or prompts, so we can recommend whatever works best.</p></div>
+  <p class="src">Scale figures are self-reported or third-party (slide 43).</p>
+</section>
+
+<!-- 15 BUSINESS MODEL -->
+<section class="slide">
+  <div class="eyebrow">Business model <span class="chip c-dec">Decided</span></div>
+  <h1>Free now. <em>Each stream switches on when its condition is met.</em></h1>
+  <table class="tight">
+    <thead><tr><th>#</th><th style="width:20%">Stream</th><th>What it is</th><th style="width:30%">Switches on when</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td><b>Affiliates</b></td><td>Labelled links on tool guides and listings to the tools they use. Rankings come from tests, never from payouts.</td><td>From launch: passive, with no selling</td></tr>
+      <tr><td>2</td><td><b>Site advertising</b></td><td>One quiet slot per page, never inside the steps; later, labelled sponsored deep dives</td><td>About 50k monthly visits <span class="chip c-ass">Assumption</span></td></tr>
+      <tr><td>3</td><td><b>YouTube advertising</b></td><td>Ad revenue on our videos</td><td>YouTube's partner bar (1,000 subscribers and 4,000 watch hours)</td></tr>
+      <tr><td>4</td><td><b>Consulting and implementation</b></td><td>We set up or build the higher ladder steps for a business; custom apps are quoted</td><td>When people ask, through the "Need help building this?" link</td></tr>
+      <tr><td>5</td><td><b>Membership</b></td><td>Member, $99 or $199 a month: priority replies and implementation help. Pro, $499: in-depth help.</td><td>When boards show demand for help: about 200 on the waitlist <span class="chip c-ass">Assumption</span></td></tr>
+      <tr><td>6</td><td><b>Premium workflows</b></td><td>New, very specific, high-value workflows</td><td>After membership. What's free at launch stays free.</td></tr>
+      <tr><td>7</td><td><b>Creator marketplace</b></td><td>People upload skills; we test them. If they charge, the creator gets 70% and we keep 30%.</td><td>When there's traffic and the safety pipeline handles uploads</td></tr>
+    </tbody>
+  </table>
+  <div class="g3">
+    <div class="note"><b>What never changes:</b> reading, downloading, mini tools, comments and help in the comments stay free.</div>
+    <div class="note"><b>What members buy is time:</b> priority answers and hands-on help, never a better version of a listing.</div>
+    <div class="note"><b>No data business:</b> we hold no business data, so we never sell or rent data.</div>
+  </div>
+</section>
+
+<!-- 16 SCENARIOS -->
+<section class="slide">
+  <div class="eyebrow">Revenue scenarios <span class="chip c-ass">Assumption</span></div>
+  <h1>What the streams could add up to <em>at three audience sizes.</em></h1>
+  <p class="lead">These are illustrations to show the shape, not a forecast. Each line has its own assumption, so you can change it. The real model is rebuilt in April 2027 from three months of traffic.</p>
+  <table class="tight">
+    <thead><tr><th style="width:24%">Monthly, once switched on</th><th class="num">A · 50k visits a month<br>(the Sep 2027 target)</th><th class="num">B · 200k visits a month</th><th class="num">C · 500k visits a month</th></tr></thead>
+    <tbody>
+      <tr><td><b>Pageviews</b> (2.5 per visit)</td><td class="num">125k</td><td class="num">500k</td><td class="num">1.25M</td></tr>
+      <tr><td><b>Site ads</b> at $20–45 per 1,000 pageviews</td><td class="num">$2.5k–5.6k</td><td class="num">$10k–22.5k</td><td class="num">$25k–56k</td></tr>
+      <tr><td><b>Members</b> = 0.1–0.2% of monthly visits</td><td class="num">50–100</td><td class="num">200–400</td><td class="num">500–1,000</td></tr>
+      <tr><td><b>Membership</b> at $99–199</td><td class="num">$5k–20k</td><td class="num">$20k–80k</td><td class="num">$50k–199k</td></tr>
+      <tr><td><b>Consulting</b> at $3–8k a project</td><td class="num">1–2 projects: $3k–16k</td><td class="num">3–5: $9k–40k</td><td class="num">5–10: $15k–80k</td></tr>
+      <tr><td><b>Total a month</b></td><td class="num"><b>$10k–40k</b></td><td class="num"><b>$40k–140k</b></td><td class="num"><b>$90k–335k</b></td></tr>
+      <tr><td><b>Total a year</b></td><td class="num"><b>$0.1M–0.5M</b></td><td class="num"><b>$0.5M–1.7M</b></td><td class="num"><b>$1.1M–4.0M</b></td></tr>
+    </tbody>
+  </table>
+  <div class="g3">
+    <div class="note"><b>Not counted:</b> affiliates, YouTube, premium workflows, the marketplace and the $499 Pro tier. That's all upside.</div>
+    <div class="note"><b>Biggest unknown:</b> how many people pay for priority help. The membership waitlist tests it before we build anything.</div>
+    <div class="note warn"><b>Consulting is capped by time.</b> Above about 5 projects a month it needs help: specialists paid per job, then a hire.</div>
+  </div>
+</section>
+
+<!-- 17 GTM -->
+<section class="slide">
+  <div class="eyebrow">Go to market</div>
+  <h1>Be the most useful answer, <em>wherever people look for one.</em></h1>
+  <table class="tight">
+    <thead><tr><th style="width:17%">Channel</th><th>What we do</th><th style="width:30%">First target</th></tr></thead>
+    <tbody>
+      <tr><td><b>Search</b></td><td>Every listing is a page for a job people search for ("write ad hooks from reviews", "Meta ads report in Google Sheets"), with plain words, the result on top, and FAQs from real questions</td><td>75+ listing pages, 10 tool guides and 8 mini tools indexed at launch</td></tr>
+      <tr><td><b>YouTube</b></td><td>Before and after, "GitHub vs ours", "climb the ladder", and "run the numbers" shorts with the mini tools</td><td>9 videos recorded by launch, then weekly</td></tr>
+      <tr><td><b>Newsletter</b></td><td>Weekly: new and re-tested listings, one workflow walk-through, the best answer of the week</td><td>Waitlist from December; 1,000 by April</td></tr>
+      <tr><td><b>Communities</b></td><td>Answer questions where store owners and builders already are (Shopify and ecommerce subreddits, Claude and ChatGPT communities, Facebook groups), linking a listing only when it truly answers the question</td><td>3 helpful answers a day, by you or drafted by Claude for your OK</td></tr>
+      <tr><td><b>Creators we credit</b></td><td>When a listing comes from someone's video, article or repo, we credit and link them, and tell them. Many will share it.</td><td>Every intake source gets a credit note</td></tr>
+      <tr><td><b>Mini tool embeds</b></td><td>Free embeds with a credit link, so blogs and agencies host our tools and link back</td><td>20 sites embedding by April</td></tr>
+      <tr><td><b>GitHub</b></td><td>A public repo mirroring the free skill files, so developers find us where they already look <span class="chip c-pro">Proposed</span></td><td>Opens with the site</td></tr>
+      <tr><td><b>Tool partners</b></td><td>Affiliate programs, and listing our guides in tools' own galleries and template stores</td><td>From launch, labelled</td></tr>
+    </tbody>
+  </table>
+  <p class="small"><b>Launch sequence:</b> waitlist page and newsletter in December; seed posts and videos in the quiet weeks; site public on 19 January; weekly rhythm after that. No paid ads, sale campaigns or cold outreach.</p>
+</section>
+
+<!-- 18 FLYWHEEL -->
+<section class="slide">
+  <div class="eyebrow">The growth loop</div>
+  <h1>Every source and every question <em>makes the library better.</em></h1>
+  <div class="g64">
+    <svg viewBox="0 0 640 420" width="100%" height="4.6in" xmlns="http://www.w3.org/2000/svg">
+      <defs><marker id="fa" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#2557d6"/></marker></defs>
+      <circle cx="320" cy="210" r="150" fill="none" stroke="#c9d8fb" stroke-width="22"/>
+      <circle cx="320" cy="210" r="78" fill="#0b1d4a"/>
+      <text x="320" y="200" text-anchor="middle" font-size="15" font-weight="700" fill="#fff">Free, tested,</text>
+      <text x="320" y="220" text-anchor="middle" font-size="15" font-weight="700" fill="#fff">explained</text>
+      <text x="320" y="240" text-anchor="middle" font-size="11" fill="#8fb0ff">the library</text>
+      <g font-size="12.5">
+        <rect x="235" y="18" width="170" height="52" rx="10" fill="#2557d6"/><text x="320" y="40" text-anchor="middle" fill="#fff" font-weight="700">1 Sources</text><text x="320" y="58" text-anchor="middle" fill="#dfe7ff" font-size="11">your links, GitHub, requests</text>
+        <rect x="455" y="95" width="175" height="52" rx="10" fill="#fff" stroke="#2557d6"/><text x="542" y="117" text-anchor="middle" fill="#0b1d4a" font-weight="700">2 Intake engine</text><text x="542" y="135" text-anchor="middle" fill="#5b6787" font-size="11">idea cards → you tick</text>
+        <rect x="455" y="265" width="175" height="52" rx="10" fill="#fff" stroke="#2557d6"/><text x="542" y="287" text-anchor="middle" fill="#0b1d4a" font-weight="700">3 Better listings</text><text x="542" y="305" text-anchor="middle" fill="#5b6787" font-size="11">tested on 4 labs</text>
+        <rect x="235" y="350" width="170" height="52" rx="10" fill="#fff" stroke="#2557d6"/><text x="320" y="372" text-anchor="middle" fill="#0b1d4a" font-weight="700">4 Found</text><text x="320" y="390" text-anchor="middle" fill="#5b6787" font-size="11">search, YouTube, embeds</text>
+        <rect x="10" y="265" width="175" height="52" rx="10" fill="#fff" stroke="#2557d6"/><text x="97" y="287" text-anchor="middle" fill="#0b1d4a" font-weight="700">5 People take them</text><text x="97" y="305" text-anchor="middle" fill="#5b6787" font-size="11">download, save, kits</text>
+        <rect x="10" y="95" width="175" height="52" rx="10" fill="#fff" stroke="#2557d6"/><text x="97" y="117" text-anchor="middle" fill="#0b1d4a" font-weight="700">6 They talk back</text><text x="97" y="135" text-anchor="middle" fill="#5b6787" font-size="11">comments, "didn't work"</text>
+      </g>
+      <path d="M 410 50 Q 470 60 500 92" fill="none" stroke="#2557d6" stroke-width="2.5" marker-end="url(#fa)"/>
+      <path d="M 545 150 L 545 260" fill="none" stroke="#2557d6" stroke-width="2.5" marker-end="url(#fa)"/>
+      <path d="M 500 320 Q 470 360 410 372" fill="none" stroke="#2557d6" stroke-width="2.5" marker-end="url(#fa)"/>
+      <path d="M 232 372 Q 170 360 140 322" fill="none" stroke="#2557d6" stroke-width="2.5" marker-end="url(#fa)"/>
+      <path d="M 95 262 L 95 152" fill="none" stroke="#2557d6" stroke-width="2.5" marker-end="url(#fa)"/>
+      <path d="M 140 92 Q 170 58 230 48" fill="none" stroke="#2557d6" stroke-width="2.5" marker-end="url(#fa)"/>
+    </svg>
+    <div>
+      <h2 style="margin-top:0">Why it compounds</h2>
+      <ul style="font-size:9.3pt">
+        <li><b>Questions become content.</b> Every answer becomes a FAQ entry, and every repeat problem becomes the next version of the listing.</li>
+        <li><b>Requests steer the intake.</b> What people ask for is what we look for next.</li>
+        <li><b>Credit brings creators.</b> Creators we credit share their listing with their audience.</li>
+        <li><b>Embeds bring links.</b> Mini tools on other sites send people and search ranking back to us.</li>
+        <li><b>Re-tests bring people back.</b> Following a listing means an email when it improves, which feeds the north star: people who come back.</li>
+        <li><b>More boards, same library.</b> Each new board reuses most listings, so growth costs less each time.</li>
+      </ul>
+      <div class="note">The loop runs without paid ads. Its speed depends on two things we control: how many good sources go through intake each week, and how fast we answer.</div>
+    </div>
+  </div>
+</section>
+
+
+<!-- B DIVIDER -->
+<section class="slide div">
+  <div class="eyebrow">Part B</div>
+  <h1>The site: <em>what people see and do.</em></h1>
+  <p>The site map, the home, listing and board pages, how voting, stars and kits work, what an account holds (and doesn't), and how comments and help work.</p>
+  <div class="list"><span>Site map</span><span>Home</span><span>Listing page</span><span>Board page</span><span>Votes and stars</span><span>Kits → workflows</span><span>Accounts and data</span><span>Comments and help</span></div>
+</section>
+
+<!-- 19 SITE MAP -->
+<section class="slide">
+  <div class="eyebrow">Site map</div>
+  <h1>Five doors, <em>one shared library behind them.</em></h1>
+  <p class="lead">The bottom dock from Creative Engine becomes <b>Home · Library · Boards · Tools · Learn</b>. Search sits on every page. Everything can be read and downloaded without an account.</p>
+  <div class="g5 tree">
+    <div class="col hl"><h4>Home</h4><ul><li>Search: "what do you want to get done?"</li><li>Start here: pick your business and level</li><li>New and re-tested this week</li><li>Popular kits</li><li>Newsletter sign-up</li></ul></div>
+    <div class="col"><h4>Library</h4><ul><li>Areas of work (brand, creative, ads, pages, email, research, operations, AI ops)</li><li>Each area: jobs → ladders</li><li>Filter: type, level, tool, model, cost</li><li><b>Listing page</b> (slide 23)</li><li>Workflow pages</li></ul></div>
+    <div class="col"><h4>Boards</h4><ul><li>/ecommerce at launch</li><li>/saas from April 2027</li><li>Tabs: Top · New · Workflows · Tools · Ask</li><li>Posts: question, show and tell, request</li><li>Weekly "what are you building?" thread</li></ul></div>
+    <div class="col"><h4>Tools</h4><ul><li>Tool guides (Claude, ChatGPT, Gemini, DeepSeek, Sheets, Meta…)</li><li>Tool in an industry</li><li>Comparisons</li><li><b>Mini tools</b> shelf, with embeds</li></ul></div>
+    <div class="col"><h4>Learn</h4><ul><li>Set up your AI (per tool)</li><li>Make your own prompt, skill, routine…</li><li>Brand brain builder (runs in your browser)</li><li>Glossary in plain words</li><li>Videos</li></ul></div>
+  </div>
+  <div class="g3" style="margin-top:10px">
+    <div class="card"><h4>Account (free)</h4><p>Your stars, kits, follows, comments and notification settings. Delete it in one click. Nothing else is stored.</p></div>
+    <div class="card"><h4>About and trust</h4><p>How we test, the safety check, the licence rule, credits to the original authors, take-down requests, what we store.</p></div>
+    <div class="card"><h4>Later pages</h4><p>Membership (v2), "Help me build this" requests (v2), run a listing on the site and creator uploads (v3).</p></div>
+  </div>
+</section>
+
+<!-- 20 HOME -->
+<section class="slide">
+  <div class="eyebrow">Home page</div>
+  <h1>Ask for the job. <em>Get the next step.</em></h1>
+  <div class="g64">
+    <div class="mock">
+      <div class="mbar"><span><span class="d">● ● ●</span> aibuildingblocks (working name)</span><span>Sign in</span></div>
+      <div class="mbody">
+        <div class="mhead"><b>What do you want AI to do for your business?</b><span>Tested prompts, skills and workflows. Free. Works in the AI you already use.</span></div>
+        <div class="search">e.g. "write ads from my reviews", "check my Meta ads", "price a bundle"</div>
+        <div class="mq">Start here</div>
+        <div class="mchips"><span class="next">Online store</span><span>SaaS</span><span>Agency or freelancer</span><span>Other business</span><span style="margin-left:12px">I'm new to AI</span><span>I use it daily</span><span>I build with it</span></div>
+        <div class="mq">New and re-tested this week</div>
+        <div class="tiles">
+          <div><b>Review-mining skill</b><span class="tag bl">Skill</span> re-tested on 4 labs</div>
+          <div><b>Discount calculator</b><span class="tag bl">Mini tool</span> 3.0k uses</div>
+          <div><b>Static ads for a sale</b><span class="tag bl">Workflow</span> /ecommerce</div>
+          <div><b>Landing-page audit</b><span class="tag ok">Safety checked</span> adapted · MIT</div>
+        </div>
+        <div class="mq">Popular kits</div>
+        <div class="tiles">
+          <div><b>Launch a product</b>7 listings · saved 410×</div>
+          <div><b>Weekly ad review</b>5 listings · saved 260×</div>
+          <div><b>Fix my product page</b>4 listings · saved 190×</div>
+          <div><b>Founder's first week with AI</b>6 listings</div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <h2 style="margin-top:0">What the home page must do</h2>
+      <ul>
+        <li><b>Search first.</b> People arrive with a job in mind ("check my ads"), not a category. Search matches jobs, not just titles.</li>
+        <li><b>Two taps to fit.</b> Business type and level set the defaults for the whole site. They're kept in your browser, not in an account.</li>
+        <li><b>Show that it's alive.</b> "New and re-tested this week" proves it's maintained.</li>
+        <li><b>Kits as on-ramps.</b> A kit is a ready path through several listings for one goal.</li>
+        <li><b>No wall.</b> No pop-up, no email gate. Sign-up is offered only when you want to comment or save.</li>
+      </ul>
+      <p class="small">Mock-up. Names and numbers are placeholders.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 21 LISTING -->
+<section class="slide">
+  <div class="eyebrow">Listing page</div>
+  <h1>The result first, <em>the instructions second.</em></h1>
+  <div class="g64">
+    <div class="mock">
+      <div class="mbar"><span><span class="d">● ● ●</span> Library › Creative › Hooks</span><span>☆ Save &nbsp; ▲ Useful 412</span></div>
+      <div class="mbody">
+        <div class="mhead"><b>Write ad hooks from your customer reviews</b><span><span class="tag bl">Skill</span><span class="tag">Beginner</span><span class="tag ok">Tested ✓ 4 labs</span><span class="tag">Ours</span> Any business · /ecommerce version</span></div>
+        <div class="ba"><div><i>Without your brand brain</i>"Feel the difference today!" Generic, one claim we can't check.</div><div><i>With your brand brain</i>10 hooks in your voice, each tied to a real review, no invented claims.</div></div>
+        <div class="m3"><div><i>Best model</i>Claude Sonnet · 94% · $0.02 a run</div><div><i>Budget pick</i>DeepSeek · 86% · $0.003</div><div><i>You need</i>Reviews (paste or export), 5 min</div></div>
+        <div class="mq">Where are you today?</div>
+        <div class="mchips"><span class="done">By hand</span><span class="next">Ask</span><span>Connect</span><span>Save</span><span>Schedule</span><span>…</span></div>
+        <div class="mcard"><div class="mt">Set it up in</div><span class="mbtn">Claude</span> <span class="mbtn o">ChatGPT</span> <span class="mbtn o">Gemini</span> <span class="mbtn o">Codex</span> <span class="mbtn o">Copy prompt</span><span class="mlink">Make your own version · Changelog</span></div>
+        <div class="mtabs"><span class="on">Comments 23</span><span>It worked 87 · didn't 4</span><span>FAQ</span><span>Works well with</span></div>
+      </div>
+    </div>
+    <div>
+      <h2 style="margin-top:0">On every listing, in this order</h2>
+      <ol class="small" style="font-size:8.8pt;color:var(--ink)">
+        <li><b>Name, promise, badges:</b> type, level, tested, safety, ours or adapted (with credit)</li>
+        <li><b>Before and after</b>, with notes on what each part means</li>
+        <li><b>Model picker:</b> quality, cost per run, speed</li>
+        <li><b>Your next step</b> on the ladder</li>
+        <li><b>Set up in your tool:</b> download the right file, copy the prompt, two-minute guide</li>
+        <li><b>Inputs</b> it needs, and what it <b>works well with</b> (what feeds it and what it feeds)</li>
+        <li><b>Quality checklist</b>: the same one that grades our tests</li>
+        <li><b>Community:</b> comments, "it worked / it didn't", FAQ</li>
+        <li><b>Changelog and credit:</b> version, last re-test, original author and licence</li>
+      </ol>
+      <p class="small">Normal view hides file details and model settings. The Advanced switch shows the raw skill file, token counts and the test log. Mock-up; numbers are placeholders.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 22 BOARD -->
+<section class="slide">
+  <div class="eyebrow">Board page</div>
+  <h1>Like a subreddit, <em>with tested listings on top.</em></h1>
+  <div class="g2">
+    <div class="mock">
+      <div class="mbar"><span><span class="d">● ● ●</span> Boards › /ecommerce</span><span>Follow</span></div>
+      <div class="mbody">
+        <div class="mhead"><b>/ecommerce</b><span>Skills and workflows for online stores · 48 listings · 1.2k members</span></div>
+        <div class="mtabs"><span class="on">Top</span><span>New</span><span>Workflows</span><span>Tools</span><span>Ask</span></div>
+        <div class="brow"><div class="vote"><b>▲</b>412</div><div><b>Product-page audit</b><span class="tag bl">Skill</span><span class="tag">Beginner</span><span class="tag ok">Safety checked</span></div><div class="meta">87 worked<br>34 comments</div></div>
+        <div class="brow"><div class="vote"><b>▲</b>301</div><div><b>Static ads for a sale</b><span class="tag bl">Workflow</span><span class="tag">Intermediate</span></div><div class="meta">52 worked<br>19 comments</div></div>
+        <div class="brow"><div class="vote"><b>▲</b>188</div><div><b>Ask: my ROAS dropped after iOS changes; which listing?</b><span class="tag">Question</span><span class="tag ok">Answered</span></div><div class="meta">6 replies</div></div>
+        <div class="brow"><div class="vote"><b>▲</b>96</div><div><b>Request: a returns-email skill for apparel</b><span class="tag">Request</span></div><div class="meta">22 +1s</div></div>
+      </div>
+    </div>
+    <div class="mock">
+      <div class="mbar"><span><span class="d">● ● ●</span> Product-page audit › Comments</span><span>Sort: Best</span></div>
+      <div class="mbody">
+        <div class="cm"><div class="who">▲ 14 ▼ · Question · store owner · 2 days ago</div>Does it work if my product page is in Shopify's default theme? Mine has no reviews yet.</div>
+        <div class="cm reply"><div class="who">▲ 21 ▼ · <b style="color:#1a47c9">Answered by the team</b> · 1 day ago</div>Yes. Skip step 3 (reviews) and use the "no reviews yet" checklist in the FAQ. We've added it to version 1.3.</div>
+        <div class="cm"><div class="who">▲ 9 ▼ · <span class="tag ok">It worked</span> · on Gemini 2.5 Flash</div>Found 6 issues on my page in 2 minutes. The shipping-info one alone was worth it.</div>
+        <div class="cm"><div class="who">▲ 3 ▼ · <span class="tag" style="background:#fbe7e7;color:#a3262a">Didn't work</span> · step 4 · on ChatGPT</div>It skipped the mobile check. → <i>sent to the fix queue</i></div>
+      </div>
+    </div>
+  </div>
+  <div class="g4" style="margin-top:10px">
+    <div class="note"><b>Post types:</b> listing, question, show and tell, request. Requests feed the intake engine's to-do list.</div>
+    <div class="note"><b>We answer:</b> every question gets a reply from us, aiming for 2 working days <span class="chip c-ass">Assumption</span>.</div>
+    <div class="note"><b>"Didn't work"</b> asks which step and which model, and goes straight to the fix queue.</div>
+    <div class="note"><b>No selling in threads.</b> Self-promotion only in a weekly thread. Links from new accounts wait for review.</div>
+  </div>
+</section>
+
+<!-- 23 VOTES STARS -->
+<section class="slide">
+  <div class="eyebrow">Votes, stars and kits · decision 13 <span class="chip c-pro">Proposed</span></div>
+  <h1>Votes for sorting, stars for keeping, <em>kits for building.</em></h1>
+  <p class="lead">You asked: stars, up and down votes, favourites? Each answers a different question, so we use each one only where it helps.</p>
+  <table class="tight">
+    <thead><tr><th style="width:15%">Action</th><th style="width:18%">Where</th><th>What it does</th><th style="width:28%">Why this way</th></tr></thead>
+    <tbody>
+      <tr><td><b>▲ Useful</b></td><td>Listings, board posts</td><td>One upvote. The count shows and feeds sorting on boards (Top, Hot).</td><td><b>No downvote on listings.</b> A downvote says nothing about what's wrong, punishes niche listings and invites pile-ons.</td></tr>
+      <tr><td><b>It worked / It didn't</b></td><td>Listings</td><td>A report with the model and tool used. "Didn't" asks which step, and goes to our fix queue.</td><td>This is the honest quality signal, and it tells us what to fix. It's worth more than any star rating.</td></tr>
+      <tr><td><b>▲▼ on comments</b></td><td>Comments, answers</td><td>Reddit-style up and down votes to sort answers. Very low scores collapse.</td><td>Sorting answers is where downvotes help: wrong advice sinks.</td></tr>
+      <tr><td><b>☆ Star (save)</b></td><td>Any listing, mini tool or kit</td><td>Private bookmark. Only the total ("saved 410×") is public.</td><td>People save far more than they vote. Saves show what's worth keeping.</td></tr>
+      <tr><td><b>Kit</b></td><td>Your account</td><td>A named group of starred items, private or public, shareable by link. Others can copy it.</td><td>Turns favourites into a plan, and public kits become on-ramps for others.</td></tr>
+      <tr><td><b>Turn into a workflow</b></td><td>Any kit</td><td>Put the kit's items in order. The site checks that each output feeds the next input, then builds a download: a workflow file for your tool (slide 26).</td><td>This is the "use favourites in workflows later" you asked for. Kits can hold other kits and workflows, so they nest.</td></tr>
+      <tr><td><b>Follow</b></td><td>Listings, boards, kits</td><td>Notifications when something is re-tested, improved or answered. A weekly email by default.</td><td>Brings people back, which is our north star.</td></tr>
+    </tbody>
+  </table>
+  <p class="small"><b>Ranking:</b> a listing's place in the library comes first from our test score, then from "it worked" reports, saves and upvotes. Votes alone never put an untested listing on top. Boards use a time-weighted "Hot" sort, like Reddit.</p>
+</section>
+
+<!-- 24 KITS TO WORKFLOWS -->
+<section class="slide">
+  <div class="eyebrow">Kits into workflows</div>
+  <h1>Star the pieces, <em>build your own workflow, take it with you.</em></h1>
+  <p class="lead">Every listing says what it takes in and what it gives out (for example "reviews" → "hooks" → "ad copy"). That lets the site join pieces safely, so a kit of favourites can become a workflow without any code.</p>
+  <div class="flow">
+    <div><b>1 Star</b>listings you like as you browse</div>
+    <div><b>2 Group</b>stars into a kit: "Launch ads"</div>
+    <div><b>3 Order</b>drag steps into order</div>
+    <div class="on"><b>4 Check</b>each output feeds the next input; gaps are flagged, with listings that fill them</div>
+    <div><b>5 Download</b>a workflow for Claude, ChatGPT, Gemini or Codex</div>
+    <div><b>6 Share</b>publish the kit; others copy and change it</div>
+  </div>
+  <div class="g3" style="margin-top:8px">
+    <div class="card"><h4>Example kit: "Launch a product"</h4><p>Brand brain → review mining → angles → hooks → static ads → ad copy → launch checklist. Seven listings, one download, one run order. The brain plugs into every step.</p></div>
+    <div class="card"><h4>What the download holds</h4><p>For Claude: a skill folder that runs the steps in order. For ChatGPT or Gemini: one Project or Gem file with the run order. Plus a plain checklist. Nothing is stored on our side: the kit is just a list of listing names.</p></div>
+    <div class="card"><h4>Nesting ("recursive")</h4><p>A kit can include a workflow, and a published workflow can become one stage of a bigger kit. The input and output check runs at every level, so nested pieces still fit together.</p></div>
+  </div>
+  <div class="note"><b>Built in stages.</b> At launch: stars, kits, share and copy. Then "turn into a workflow" with the input and output check (March 2027, alongside the workflow pages). Running a kit on the site comes later, if people ask for it (site v3).</div>
+</section>
+
+<!-- 25 ACCOUNTS DATA -->
+<section class="slide">
+  <div class="eyebrow">Accounts and data <span class="chip c-dec">Decided</span></div>
+  <h1>We keep the community, <em>not your business.</em></h1>
+  <p class="lead">You decided we don't store people's data. That keeps the site safe, cheap and simple: there's nothing worth stealing, and no data to protect beyond an email address and public posts.</p>
+  <div class="g2">
+    <div class="card" style="background:var(--greenbg);border-color:#bfe3cf"><h4 style="color:var(--green)">What an account holds</h4>
+      <ul style="margin:4px 0 0;font-size:9pt;color:var(--ink)">
+        <li>An email address for sign-in (a magic link, Google or GitHub; no passwords)</li>
+        <li>A display name you choose</li>
+        <li>Your comments, posts and votes (public, except votes)</li>
+        <li>Your stars, kits and follows: lists of listing names, plus kit titles and short notes</li>
+        <li>Notification settings and newsletter consent</li>
+        <li>Moderation records, if any</li>
+      </ul></div>
+    <div class="card" style="background:var(--redbg);border-color:#f0c9c9"><h4 style="color:var(--red)">What we never store</h4>
+      <ul style="margin:4px 0 0;font-size:9pt;color:var(--ink)">
+        <li>Business data, numbers or files</li>
+        <li>Brand brains: they're built in your browser and downloaded to your device</li>
+        <li>What you type into mini tools: the maths runs in your browser</li>
+        <li>Outputs from your AI, or anything you paste into a prompt</li>
+        <li>API keys, passwords or payment details (payments, when they come, go through Stripe's own page)</li>
+        <li>Advertising or tracking cookies (cookie-free analytics, so no cookie banner)</li>
+      </ul></div>
+  </div>
+  <div class="g3" style="margin-top:10px">
+    <div class="note"><b>Your data stays yours.</b> Guides show how to keep your brain and results in your own Google Drive, Notion or a folder, and connect them to your AI.</div>
+    <div class="note"><b>Your browser, your device.</b> Drafts (a half-filled brain, mini tool inputs, business type and level) are kept in your browser only. Clear it, and they're gone.</div>
+    <div class="note"><b>Leave any time.</b> Export your account as a file, or delete it in one click. Comments can stay anonymised or go with it.</div>
+  </div>
+</section>
+
+<!-- 26 COMMENTS HELP -->
+<section class="slide">
+  <div class="eyebrow">Comments, help and moderation</div>
+  <h1>Help in public, <em>so every answer helps the next person.</em></h1>
+  <div class="g64">
+    <div>
+      <table class="tight">
+        <thead><tr><th style="width:24%">Who</th><th>Can do</th></tr></thead>
+        <tbody>
+          <tr><td><b>Anyone</b></td><td>Read everything, download everything, use mini tools, build a brand brain in the browser</td></tr>
+          <tr><td><b>Free account</b></td><td>Comment, ask for help, report "it worked / didn't", vote, star, make kits, follow, post on boards</td></tr>
+          <tr><td><b>Trusted member</b> (earned)</td><td>Links without review, edit tags, mark answers helpful. Earned through helpful answers, not bought.</td></tr>
+          <tr><td><b>Team</b></td><td>"Answered by the team" badge, pin answers, move posts, moderate</td></tr>
+          <tr><td><b>Members</b> (later, paid)</td><td>Priority replies and implementation help. Paying never buys the right to comment or a better listing.</td></tr>
+        </tbody>
+      </table>
+      <h2>How we help someone who's stuck</h2>
+      <div class="flow">
+        <div><b>Ask</b>under the listing, with the step and the tool</div>
+        <div><b>We answer</b>in public, aiming for 2 working days</div>
+        <div><b>FAQ</b>good answers pinned to the listing</div>
+        <div class="on"><b>Fix</b>repeat problems become the next version</div>
+      </div>
+      <p class="small">A "Need help building this?" link on agent and app pages collects requests on a list (decision 11). No prices or offers until consulting opens.</p>
+    </div>
+    <div>
+      <h2 style="margin-top:0">Keeping it clean</h2>
+      <ul style="font-size:9pt">
+        <li><b>A bot check</b> at sign-up and on first posts (Cloudflare Turnstile), plus rate limits</li>
+        <li><b>New accounts:</b> links wait for review; first posts are screened</li>
+        <li><b>Automatic screening:</b> a cheap model flags spam, abuse and hidden instructions. A person decides.</li>
+        <li><b>Report button</b> on everything, and a moderation queue with a target time</li>
+        <li><b>Rules page</b> in plain words: be useful, no selling in threads, no client data, credit others</li>
+        <li><b>Content is data:</b> when comments feed the intake engine, instructions inside them are ignored</li>
+      </ul>
+      <div class="note warn"><b>Time cost:</b> answering and moderating is the main ongoing workload. Plan for about 30–60 minutes a day at launch, with Claude drafting replies for you to approve. <span class="chip c-ass">Assumption</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- C DIVIDER -->
+<section class="slide div">
+  <div class="eyebrow">Part C</div>
+  <h1>The architecture: <em>how it's built.</em></h1>
+  <p>A content repo is the single source of truth. A private factory makes and tests listings. The public site is mostly static pages on a CDN, with one small community service for accounts, comments and votes.</p>
+  <div class="list"><span>Overview</span><span>Content model</span><span>Factory and intake</span><span>Model tests and budget</span><span>Tech stack and costs</span><span>Security and privacy</span></div>
+</section>
+
+<!-- 27 ARCHITECTURE -->
+<section class="slide">
+  <div class="eyebrow">Architecture overview</div>
+  <h1>Files in, pages out, <em>and one small service for the community.</em></h1>
+  <svg viewBox="0 0 1200 470" width="100%" height="4.75in" xmlns="http://www.w3.org/2000/svg">
+    <defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#5b6787"/></marker></defs>
+    <rect x="0" y="0" width="560" height="470" rx="14" fill="#f6f8fd" stroke="#d9e0f0"/>
+    <text x="18" y="26" font-size="13" font-weight="700" fill="#2557d6" letter-spacing="2">PRIVATE · ON OUR SIDE</text>
+    <rect x="640" y="0" width="560" height="470" rx="14" fill="#fff" stroke="#d9e0f0"/>
+    <text x="658" y="26" font-size="13" font-weight="700" fill="#2557d6" letter-spacing="2">PUBLIC · WHAT PEOPLE USE</text>
+    <!-- sources -->
+    <rect x="18" y="44" width="160" height="150" rx="10" fill="#e9effc"/>
+    <text x="30" y="68" font-size="15" font-weight="700" fill="#0b1d4a">Sources</text>
+    <text x="30" y="92" font-size="12" fill="#5b6787">Our own apps (read-only)</text>
+    <text x="30" y="112" font-size="12" fill="#5b6787">GitHub links</text>
+    <text x="30" y="132" font-size="12" fill="#5b6787">Transcripts, articles</text>
+    <text x="30" y="152" font-size="12" fill="#5b6787">Board requests</text>
+    <text x="30" y="172" font-size="12" fill="#5b6787">"Didn't work" reports</text>
+    <text x="30" y="188" font-size="10.5" fill="#2557d6">(from the community service)</text>
+    <!-- factory -->
+    <rect x="210" y="44" width="330" height="150" rx="10" fill="#0b1d4a"/>
+    <text x="224" y="68" font-size="15" font-weight="700" fill="#fff">Factory (TypeScript tools)</text>
+    <text x="224" y="92" font-size="12" fill="#c9d6ff">intake engine · scan-skill (sandbox)</text>
+    <text x="224" y="112" font-size="12" fill="#c9d6ff">import · check · build-exports</text>
+    <text x="224" y="132" font-size="12" fill="#c9d6ff">run-test · grade (blind) · build-graph</text>
+    <text x="224" y="152" font-size="12" fill="#c9d6ff">build-mini-tool · cost ledger</text>
+    <text x="224" y="176" font-size="12" fill="#8fb0ff">Claude Code + helper agents, your review</text>
+    <!-- labs -->
+    <rect x="210" y="214" width="330" height="70" rx="10" fill="#fff" stroke="#d9e0f0"/>
+    <text x="224" y="238" font-size="14" font-weight="700" fill="#0b1d4a">Four model labs (keys in .env)</text>
+    <text x="224" y="262" font-size="12" fill="#5b6787">Anthropic · OpenAI · Google · DeepSeek · caps per run</text>
+    <!-- repo -->
+    <rect x="18" y="304" width="522" height="148" rx="10" fill="#2557d6"/>
+    <text x="34" y="330" font-size="15" font-weight="700" fill="#fff">Content repo (git): the single source of truth</text>
+    <text x="34" y="354" font-size="12" fill="#dfe7ff">catalogue-items/&lt;listing&gt;/ item.yaml · SKILL.md · examples · tests · exports</text>
+    <text x="34" y="376" font-size="12" fill="#dfe7ff">boards · kits (ours) · tool guides · mini tools (formula files)</text>
+    <text x="34" y="398" font-size="12" fill="#dfe7ff">CI on every change: check-item, tests, safety badge, build exports</text>
+    <text x="34" y="420" font-size="12" fill="#dfe7ff">A fixed listing = a fixed page, minutes later</text>
+    <text x="34" y="440" font-size="11" fill="#b9cbff">intake/*/raw and runs/ stay local and git-ignored</text>
+    <!-- site -->
+    <rect x="658" y="44" width="250" height="190" rx="10" fill="#e9effc"/>
+    <text x="672" y="68" font-size="15" font-weight="700" fill="#0b1d4a">Static site on a CDN</text>
+    <text x="672" y="92" font-size="12" fill="#5b6787">Next.js, pages built from the repo</text>
+    <text x="672" y="112" font-size="12" fill="#5b6787">Library · Boards · Tools · Learn</text>
+    <text x="672" y="132" font-size="12" fill="#5b6787">Search index in the page (Pagefind)</text>
+    <text x="672" y="152" font-size="12" fill="#5b6787">Mini tools + brand brain builder</text>
+    <text x="672" y="170" font-size="12" fill="#5b6787">run in the browser</text>
+    <text x="672" y="194" font-size="12" fill="#5b6787">Downloads: pre-built files</text>
+    <text x="672" y="214" font-size="12" fill="#5b6787">(object storage, CDN)</text>
+    <!-- community -->
+    <rect x="928" y="44" width="254" height="190" rx="10" fill="#0b1d4a"/>
+    <text x="942" y="68" font-size="15" font-weight="700" fill="#fff">Community service</text>
+    <text x="942" y="92" font-size="12" fill="#c9d6ff">Sign-in (magic link, Google,</text>
+    <text x="942" y="110" font-size="12" fill="#c9d6ff">GitHub) · Postgres</text>
+    <text x="942" y="132" font-size="12" fill="#c9d6ff">comments · votes · stars · kits</text>
+    <text x="942" y="152" font-size="12" fill="#c9d6ff">follows · reports · mod queue</text>
+    <text x="942" y="176" font-size="12" fill="#c9d6ff">row-level security</text>
+    <text x="942" y="200" font-size="12" fill="#8fb0ff">No business data, ever</text>
+    <!-- side services -->
+    <rect x="800" y="254" width="382" height="76" rx="10" fill="#fff" stroke="#d9e0f0"/>
+    <text x="814" y="276" font-size="14" font-weight="700" fill="#0b1d4a">Around it</text>
+    <text x="814" y="298" font-size="12" fill="#5b6787">Newsletter service · cookie-free analytics</text>
+    <text x="814" y="316" font-size="12" fill="#5b6787">bot check · error alerts · notification email</text>
+    <!-- user -->
+    <rect x="658" y="344" width="524" height="108" rx="10" fill="#e3f5ec"/>
+    <text x="672" y="370" font-size="15" font-weight="700" fill="#127a4a">The person, in their own tools</text>
+    <text x="672" y="394" font-size="12" fill="#1b2440">Downloads into Claude, ChatGPT, Gemini, Codex, Sheets</text>
+    <text x="672" y="414" font-size="12" fill="#1b2440">Brand brain and results kept on their device or their Drive/Notion</text>
+    <text x="672" y="434" font-size="12" fill="#1b2440">Their model keys and costs are theirs</text>
+    <!-- arrows -->
+    <line x1="178" y1="119" x2="206" y2="119" stroke="#5b6787" stroke-width="2" marker-end="url(#ar)"/>
+    <line x1="375" y1="194" x2="375" y2="211" stroke="#5b6787" stroke-width="2" marker-end="url(#ar)"/>
+    <line x1="375" y1="284" x2="375" y2="301" stroke="#5b6787" stroke-width="2" marker-end="url(#ar)"/>
+    <line x1="540" y1="378" x2="600" y2="378" stroke="#5b6787" stroke-width="2"/>
+    <line x1="600" y1="378" x2="600" y2="139" stroke="#5b6787" stroke-width="2"/>
+    <line x1="600" y1="139" x2="654" y2="139" stroke="#5b6787" stroke-width="2" marker-end="url(#ar)"/>
+    <text x="548" y="370" font-size="11" fill="#5b6787">build</text>
+    <line x1="908" y1="139" x2="924" y2="139" stroke="#5b6787" stroke-width="2" marker-end="url(#ar)"/>
+    <line x1="730" y1="234" x2="730" y2="340" stroke="#5b6787" stroke-width="2" marker-end="url(#ar)"/>
+    <text x="740" y="292" font-size="11" fill="#5b6787">downloads</text>
+  </svg>
+  <p class="small">The public site never talks to the model labs and never holds keys. The factory runs on our side, under your review, and publishes only by changing files in the repo.</p>
+</section>
+
+<!-- 28 CONTENT MODEL -->
+<section class="slide">
+  <div class="eyebrow">Content model</div>
+  <h1>Every listing is a folder. <em>Everything is built from it.</em></h1>
+  <div class="g2">
+    <div>
+      <div class="card" style="font: 8.6pt/1.45 Consolas, 'Courier New', monospace; color: var(--ink); white-space: pre; background:#fff">catalogue-items/
+  creative/hooks-from-reviews/
+    item.yaml        <span style="color:#5b6787"># the manifest (right)</span>
+    SKILL.md         <span style="color:#5b6787"># the skill, model-neutral</span>
+    prompt.md        <span style="color:#5b6787"># the simple prompt version</span>
+    guide.md         <span style="color:#5b6787"># "make your own" guide</span>
+    boards/ecommerce.yaml  <span style="color:#5b6787"># board version</span>
+    examples/        <span style="color:#5b6787"># before and after</span>
+    tests/           <span style="color:#5b6787"># golden set, checklist,</span>
+                     <span style="color:#5b6787"># model-runs.csv</span>
+    exports/         <span style="color:#5b6787"># built: claude/, chatgpt.md,</span>
+                     <span style="color:#5b6787"># gemini.md, codex/, prompt.txt</span>
+  mini-tools/discount/
+    formula.ts       <span style="color:#5b6787"># one formula, five ways</span>
+    worked-examples.csv
+  kits/launch-a-product.yaml</div>
+    </div>
+    <div>
+      <table class="tight">
+        <thead><tr><th style="width:26%">item.yaml</th><th>Fields</th></tr></thead>
+        <tbody>
+          <tr><td><b>Who and what</b></td><td>id, name, promise, type, level, ladder job and step, area, boards, version, status</td></tr>
+          <tr><td><b>In and out</b></td><td>inputs (type, required or recommended), outputs (type). Shared types such as <code>reviews</code>, <code>hooks</code>, <code>brand_brain</code></td></tr>
+          <tr><td><b>Connections</b></td><td>needs, works well with, feeds into. Mostly worked out from the types; this is what makes kits into workflows</td></tr>
+          <tr><td><b>Models</b></td><td>complexity class C1–C4; recommended, budget, not worth it; cost per run (from tests)</td></tr>
+          <tr><td><b>Runs in</b></td><td>Claude, ChatGPT, Gemini, Codex, Sheets, no AI</td></tr>
+          <tr><td><b>Credit and rights</b></td><td>origin (ours, adapted, idea from), author, link, licence, pinned version, what we changed</td></tr>
+          <tr><td><b>Safety</b></td><td>scan result, sandbox result, reviewer, date</td></tr>
+          <tr><td><b>Community</b></td><td>FAQ entries (from answered comments), changelog</td></tr>
+        </tbody>
+      </table>
+      <div class="note">The site, the downloads, the connection map, the model tests and the kit checker all read these same files. Votes and comments live in the community service, keyed by the listing id.</div>
+    </div>
+  </div>
+</section>
+
+<!-- 29 FACTORY + INTAKE -->
+<section class="slide">
+  <div class="eyebrow">The factory and the intake engine</div>
+  <h1>How a link you send <em>becomes a tested listing.</em></h1>
+  <div class="flow">
+    <div><b>1 Drop in</b>GitHub link, transcript, article</div>
+    <div><b>2 Read</b>clean text, pinned repo version</div>
+    <div><b>3 Safety</b>content is data; code is sandboxed</div>
+    <div><b>4 Idea cards</b>our words, pointing to the source</div>
+    <div><b>5 Match</b>jobs, ladders, workflows, listings</div>
+    <div><b>6 Decide</b>improve, mini tool, prompt, skill…</div>
+    <div class="on"><b>7 You tick</b>one-page report</div>
+    <div><b>8 Build</b>the 12 steps</div>
+    <div><b>9 Publish</b>with credit</div>
+  </div>
+  <div class="g2">
+    <div>
+      <h2>The 12 steps every listing goes through</h2>
+      <table class="tight">
+        <tbody>
+          <tr><td><b>1</b> Import, with origin and licence</td><td><b>7</b> Grade: code checks, then a blind judge</td></tr>
+          <tr><td><b>2</b> Safety check (imports)</td><td><b>8</b> Fix and improve until it passes</td></tr>
+          <tr><td><b>3</b> Make it general; board details apart</td><td><b>9</b> Before and after</td></tr>
+          <tr><td><b>4</b> Manifest (item.yaml)</td><td><b>10</b> Plain-words page</td></tr>
+          <tr><td><b>5</b> Test inputs on 3 kinds of business</td><td><b>11</b> Downloads, opened once in each tool</td></tr>
+          <tr><td><b>6</b> Model test: cheap, mid and top</td><td><b>12</b> Tested ✓, into the section report</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div>
+      <h2>Who does what</h2>
+      <ul style="font-size:9pt">
+        <li><b>You:</b> send sources, tick intake reports, review each section, answer what only you can</li>
+        <li><b>Claude Code:</b> writes the tools, runs the pipeline, drafts listings, in batches of about 4 helper agents, each writing only its own folder</li>
+        <li><b>The tools decide, not the drafts:</b> tests, grades and the cost ledger are the record</li>
+        <li><b>Specialists</b> (paid per review): a SaaS person before /saas, a lawyer once before uploads or anything paid</li>
+      </ul>
+      <div class="note">Intake v0 runs on your machine (Nov–Dec). v1 is a private inbox you paste or forward links into (Feb–Mar). v2 is a public "suggest a source" button (April). Full design: <code>docs/planning/08_INTAKE_ENGINE.md</code>.</div>
+    </div>
+  </div>
+</section>
+
+<!-- 30 MODELS BUDGET -->
+<section class="slide">
+  <div class="eyebrow">Model tests and the budget <span class="chip c-dec">Decided</span></div>
+  <h1>Four labs, the credits we have, <em>hard caps on every run.</em></h1>
+  <div class="g64">
+    <div>
+      <table class="tight">
+        <thead><tr><th>Lab</th><th class="num">Credit now</th><th>What we use it for</th><th style="width:22%">Plan</th></tr></thead>
+        <tbody>
+          <tr><td><b>Anthropic (Claude)</b></td><td class="num">~$200</td><td>Idea cards, drafting and fixing listings, top-model tests, intake decisions</td><td><b>Use by 27 Oct</b> in the credit sprint (slide 39)</td></tr>
+          <tr><td><b>Google (Gemini)</b></td><td class="num">~$60–70</td><td>Gemini tests (Flash and Pro), reading long documents, YouTube links when there's no transcript</td><td>Steady, Nov–Jan</td></tr>
+          <tr><td><b>DeepSeek</b></td><td class="num">~$20</td><td>Cheap-class tests, matching cards to listings, spam screening</td><td>Lasts months at cheap rates</td></tr>
+          <tr><td><b>OpenAI (GPT)</b></td><td class="num">~$10</td><td>GPT tests and the blind judge (a judge never grades its own lab's work)</td><td>Top up about $30–50 by December <span class="chip c-ass">Assumption</span></td></tr>
+        </tbody>
+      </table>
+      <h2>Safety stops</h2>
+      <ul style="font-size:9pt">
+        <li><b>$2 per run</b> and <b>$25 per test round</b>. A run that would go over stops and asks.</li>
+        <li>Every call is logged in the cost ledger: lab, model, tokens, dollars, listing, purpose.</li>
+        <li>A weekly spend line goes in the section report, against what's left on each lab.</li>
+        <li>Keys live only in this repo's <code>.env</code>, which you fill in. They're never read from anywhere else, and never sent to the site.</li>
+      </ul>
+    </div>
+    <div>
+      <h2 style="margin-top:0">Which model class for which job</h2>
+      <table class="tight">
+        <thead><tr><th>Class</th><th>Job</th></tr></thead>
+        <tbody>
+          <tr><td><b>C1 cheap</b></td><td>Reformat, extract, match, screen spam. DeepSeek, Gemini Flash, GPT mini, Claude Haiku</td></tr>
+          <tr><td><b>C2 mid</b></td><td>Hooks, copy, idea cards. Claude Sonnet, GPT, Gemini Pro</td></tr>
+          <tr><td><b>C3 top</b></td><td>Strategy, audits, hard fixes. Claude Opus, top GPT</td></tr>
+          <tr><td><b>C4 mixed</b></td><td>Workflows and agents: a top model plans; cheap models repeat</td></tr>
+        </tbody>
+      </table>
+      <div class="note"><b>Recommended</b> on a listing = the cheapest model within 5 points of the best, with zero costly mistakes. <b>Budget</b> = the cheapest at 80% or better. People who use other models test them themselves.</div>
+      <p class="small">Claude Code's own work (writing the tools and the site) runs on your Claude subscription, not these credits.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 31 STACK -->
+<section class="slide">
+  <div class="eyebrow">Tech stack and running costs <span class="chip c-pro">Proposed</span></div>
+  <h1>Boring, cheap, proven parts, <em>so the effort goes into the listings.</em></h1>
+  <table class="tight">
+    <thead><tr><th style="width:17%">Layer</th><th style="width:27%">Choice</th><th>Why</th><th class="num" style="width:13%">Monthly cost</th></tr></thead>
+    <tbody>
+      <tr><td><b>Content</b></td><td>This git repo: YAML and Markdown, GitHub Actions for checks</td><td>Every change is reviewed, versioned and testable. A fixed file is a fixed page.</td><td class="num">$0</td></tr>
+      <tr><td><b>Website</b></td><td>Next.js, mostly static pages, with Tailwind and shadcn</td><td>The same framework and components as Creative Engine, so the Mercatura look carries over. Static pages are fast, rank well in search and cost almost nothing.</td><td class="num">—</td></tr>
+      <tr><td><b>Hosting</b></td><td>Vercel Pro (or Cloudflare Pages)</td><td>Push to deploy, preview links for every change, global CDN</td><td class="num">~$20</td></tr>
+      <tr><td><b>Community service</b></td><td>Supabase: Postgres, sign-in, row-level security</td><td>Magic link, Google and GitHub sign-in built in. Rules in the database decide who can read or change each row.</td><td class="num">$0 → $25</td></tr>
+      <tr><td><b>Search</b></td><td>Pagefind (index built with the site)</td><td>Free and fast, with no server. Switch to Typesense or Algolia past ~5,000 listings.</td><td class="num">$0</td></tr>
+      <tr><td><b>Downloads</b></td><td>Pre-built files on Cloudflare R2</td><td>No fees for downloads (egress); files are built by CI</td><td class="num">~$0–5</td></tr>
+      <tr><td><b>Newsletter</b></td><td>Beehiiv or Kit (ConvertKit)</td><td>Free tier to start; a referral program and ads network later</td><td class="num">$0 → ~$40</td></tr>
+      <tr><td><b>Notification email</b></td><td>Resend</td><td>Sign-in links and follow emails</td><td class="num">$0 → $20</td></tr>
+      <tr><td><b>Analytics</b></td><td>Plausible</td><td>Cookie-free, so no cookie banner and no personal data</td><td class="num">~$9–19</td></tr>
+      <tr><td><b>Bot check, errors</b></td><td>Cloudflare Turnstile, Sentry</td><td>Free tiers cover launch</td><td class="num">$0</td></tr>
+      <tr><td><b>Factory</b></td><td>TypeScript tools in this repo; the four lab SDKs</td><td>Runs on your machine first, then a small private worker for intake v1</td><td class="num">model credits; ~$5 worker</td></tr>
+      <tr><td colspan="3"><b>Total at launch, before model spend</b></td><td class="num"><b>~$60–100</b></td></tr>
+    </tbody>
+  </table>
+  <p class="small">Prices are list prices as I know them and change often. <span class="chip c-ass">Assumption</span> We check each one when we sign up. Domain about $15 a year. No servers to run ourselves.</p>
+</section>
+
+<!-- 32 SECURITY -->
+<section class="slide">
+  <div class="eyebrow">Security and privacy</div>
+  <h1>Little to steal, <em>and the doors that remain are locked.</em></h1>
+  <div class="g3">
+    <div class="card"><h4>Hold almost nothing</h4><p>No business data, files, keys or payment details. Emails and public posts only. That's the biggest security decision, and you've made it.</p></div>
+    <div class="card"><h4>Sign-in without passwords</h4><p>Magic links, Google or GitHub, so there are no passwords to leak. Sessions expire. Admin actions need a second factor.</p></div>
+    <div class="card"><h4>Rules in the database</h4><p>Row-level security: you can change only your own comments, votes, stars and kits. Votes are private by rule, not just hidden in the page.</p></div>
+    <div class="card"><h4>Downloads are safe</h4><p>Every import passes the safety check before it's built into a download. Downloads are signed with a checksum and tied to a pinned version.</p></div>
+    <div class="card"><h4>Content is data</h4><p>Hidden instructions in skills, comments, pages or sources are flagged and ignored. We keep 20 trap skills and 10 trap sources in the tests.</p></div>
+    <div class="card"><h4>No keys on the site</h4><p>The public site never calls a model lab. The factory's keys stay in the repo's <code>.env</code>, which is git-ignored and filled in by you.</p></div>
+    <div class="card"><h4>Comments can't attack readers</h4><p>Comments are plain text with limited formatting. No raw HTML and no image uploads at launch. A strict content security policy is in place.</p></div>
+    <div class="card"><h4>Abuse and spam</h4><p>Bot check, rate limits, link review for new accounts, a report button and a moderation queue with a person deciding.</p></div>
+    <div class="card"><h4>Privacy law</h4><p>Cookie-free analytics, a plain privacy page, export and delete in one click, and a 48-hour take-down for creators. A lawyer reads it once before anything paid.</p></div>
+  </div>
+  <p class="small">We reduce risk; we never promise zero risk. A security check of the community service (an outside reviewer, paid per review) happens before launch and again before memberships.</p>
+</section>
+
+<!-- D DIVIDER -->
+<section class="slide div">
+  <div class="eyebrow">Part D</div>
+  <h1>The build: <em>from scratch to a growing platform.</em></h1>
+  <p>Five phases with a gate at the end of each, the first 13 weeks in detail, a credit sprint to use the Anthropic credit before it expires, the numbers we watch, the risks, and what I need from you.</p>
+  <div class="list"><span>Phases</span><span>First 13 weeks</span><span>Credit sprint</span><span>Metrics and gates</span><span>Risks</span><span>Decisions</span></div>
+</section>
+
+<!-- 33 PHASES -->
+<section class="slide">
+  <div class="eyebrow">Phases</div>
+  <h1>Five phases. <em>Each one ends with a gate.</em></h1>
+  <div class="phase">
+    <div class="now"><h4>0 · Foundations</h4><div class="when">19 Oct – 1 Nov</div><ul><li>Listing format v1</li><li>Factory tools: import, check, test, grade, exports</li><li>Credit sprint: idea cards from our 403 learning guides, golden test sets</li><li>Port order for all 263 own items</li></ul><div class="gate" style="background:#fff">Gate 0: one listing end to end; page template approved</div></div>
+    <div><h4>1 · Content engine</h4><div class="when">2 Nov – 11 Dec</div><ul><li>Brain and creative sections ported, general + /ecommerce</li><li>8 mini tools</li><li>scan-skill; 20 trap skills</li><li>Intake v0: transcripts, articles, GitHub</li><li>Site skeleton: pages, boards, sign-in, comments</li></ul><div class="gate">Gate A (11 Dec): sections ported; 5+ imports safe; 5 sources through intake; 4 mini tools in all five ways</div></div>
+    <div><h4>2 · Site v0 and launch</h4><div class="when">12 Dec – 19 Jan</div><ul><li>Search, library, /ecommerce, tool guides, mini tools and embeds, Learn</li><li>Votes, stars, kits, follows</li><li>Moderation queue; mobile check</li><li>Seed posts, 6 videos</li></ul><div class="gate">Gate B: 50+ general, 25+ /ecommerce, 10+ imports, 20 sources, 10 guides, 8 mini tools; site public 19 Jan</div></div>
+    <div><h4>3 · Grow</h4><div class="when">Feb – Apr 2027</div><ul><li>Intake v1, always on: ~15 sources a week</li><li>20+ tool guides; new mini tools</li><li>Kits → workflows</li><li>/saas versions; <b>/saas board in April</b>; site v1</li></ul><div class="gate">Gate: 10k monthly visits; 1,000 subscribers; 500 weekly returning users</div></div>
+    <div><h4>4 · Deepen and earn</h4><div class="when">May – Sep 2027</div><ul><li>Routines, then agents with red-team tests</li><li>Meta ads mini app</li><li>Affiliates, then ads; membership waitlist → membership</li><li>Third board by demand</li></ul><div class="gate">Gate: 50k monthly visits; 5,000 subscribers; first income on</div></div>
+  </div>
+  <div class="note" style="margin-top:12px"><b>After that (2028):</b> job-role boards (/marketing first), creator uploads through the safety pipeline, the 70/30 marketplace, and running listings on the site, each only once people ask for it and the gate before it has passed.</div>
+</section>
+
+<!-- 34 WEEKS -->
+<section class="slide">
+  <div class="eyebrow">The first 13 weeks</div>
+  <h1>Week by week <em>to the launch.</em></h1>
+  <table class="tight">
+    <thead><tr><th style="width:15%">Weeks</th><th style="width:37%">Build (Claude)</th><th style="width:27%">Plan and publish</th><th>You</th></tr></thead>
+    <tbody>
+      <tr><td><b>W1 · 19–25 Oct</b></td><td><code>import-item</code>, <code>check-item</code>; listing format v1; first port (claims extractor); <b>credit sprint starts</b></td><td>Port order for 263 items; ladder map; board and comment rules</td><td>Keys in <code>.env</code> on Monday; send the first sources</td></tr>
+      <tr><td><b>W2 · 26 Oct–1 Nov</b></td><td><code>run-test</code>, <code>grade</code>, <code>build-exports</code>, <code>build-graph</code>; first listing tested ✓; intake, scan-skill and build-mini-tool specified; <b>sprint ends 27 Oct</b></td><td>Listing and board page templates; site structure</td><td>Approve the first listing page (Gate 0)</td></tr>
+      <tr><td><b>W3–4 · 2–15 Nov</b></td><td>Brand brain v2 (built in the browser); 11 brain listings; build-mini-tool and 4 mini tools</td><td>Brain workflow page; site build starts: listing pages, boards, sign-in</td><td>Brain review; decisions 3, 12, 13</td></tr>
+      <tr><td><b>W5–7 · 16 Nov–6 Dec</b></td><td>~20 static ad listings; copy, scripts, avatars; scan-skill + 20 traps; intake v0; 4 more mini tools</td><td>Comments, votes, stars and moderation on staging; record 3 videos</td><td>Creative review; decisions 4–5</td></tr>
+      <tr><td><b>W8–9 · 7–20 Dec</b></td><td>Page audit; Meta ladder steps 1–4; research and offers; first 10 public sources through intake, incl. 5–10 GitHub skills</td><td>First 10 tool guides; newsletter; launch waitlist</td><td>Gate A (11 Dec); brand name and domain</td></tr>
+      <tr><td><b>W10–12 · 21 Dec–10 Jan</b></td><td>Site v0 finished: search, kits, follows, embeds, Learn; downloads opened in Claude, ChatGPT, Codex, Gemini; security check</td><td>Batch-record 6 videos; seed /ecommerce posts</td><td>Final page review (holidays: light)</td></tr>
+      <tr><td><b>W13 · 11–19 Jan</b></td><td>Fixes from the review; load and mobile checks</td><td><b>Open 19 Jan</b>: newsletter, YouTube, posts in communities we're part of</td><td>Gate B; launch day replies</td></tr>
+    </tbody>
+  </table>
+  <p class="small">Same dates and gates as the final plan (Part 13), with today's changes: brand brains are built in the browser, community features land on staging in W5–7, and decision 13 (votes and stars) is needed by mid-November.</p>
+</section>
+
+<!-- 35 CREDIT SPRINT -->
+<section class="slide">
+  <div class="eyebrow">Credit sprint · 19–27 October <span class="chip c-pro">Proposed</span></div>
+  <h1>Use the Anthropic credit <em>before it expires, on work we keep.</em></h1>
+  <p class="lead">About $200 of Anthropic credit runs out on 27 October. We spend it only on work that's useful however the plan changes: knowledge pulled out of our own sources, test sets, and first drafts. Each run still has the $2 cap.</p>
+  <table class="tight">
+    <thead><tr><th style="width:30%">Job</th><th>What we get</th><th class="num" style="width:12%">Budget</th></tr></thead>
+    <tbody>
+      <tr><td><b>Idea cards from our own sources</b></td><td>Creative Engine's 403 learning guides and our playbooks become idea cards (intake stages 4–6, text only), matched to our map. This is the backlog for every section.</td><td class="num">~$50</td></tr>
+      <tr><td><b>Golden test sets</b></td><td>Fixed test inputs for 3 kinds of business (an online store, a SaaS, a service), plus worked examples for the 8 mini tools, checked by hand</td><td class="num">~$30</td></tr>
+      <tr><td><b>General drafts of our own skills</b></td><td>First "any business" drafts of the brain and creative skills, ready for the 12 steps</td><td class="num">~$60</td></tr>
+      <tr><td><b>Claude model tests</b></td><td>Haiku, Sonnet and Opus runs on the first listings, to set the cost-per-run baseline</td><td class="num">~$30</td></tr>
+      <tr><td><b>Reserve</b></td><td>Fixes and re-runs</td><td class="num">~$30</td></tr>
+      <tr><td colspan="2"><b>Total</b></td><td class="num"><b>~$200</b></td></tr>
+    </tbody>
+  </table>
+  <div class="g3">
+    <div class="note"><b>Needs from you, Monday 19 Oct:</b> the Anthropic key in this repo's <code>.env</code> (and the other three when you can), plus a yes to start.</div>
+    <div class="note"><b>Your sources:</b> send GitHub links, transcripts and articles any time. The first ones go through the intake engine in W5–7.</div>
+    <div class="note warn"><b>If we don't spend it all,</b> the rest simply expires. We won't burn credit on runs we'd throw away. Budgets are estimates. <span class="chip c-ass">Assumption</span></div>
+  </div>
+</section>
+
+<!-- 36 METRICS -->
+<section class="slide">
+  <div class="eyebrow">How we'll know it's working</div>
+  <h1>One north star, <em>and the numbers that feed it.</em></h1>
+  <div class="dark"><div class="eyebrow">North star</div><p style="font-size:13pt"><b>Weekly returning people who take a listing</b> (download, copy, use a mini tool or save a kit): 500 by April 2027 and 3,000 by September 2027. <span class="chip c-ass">Assumption</span></p></div>
+  <div class="g2">
+    <table class="tight">
+      <thead><tr><th>Value to people</th><th>Target</th></tr></thead>
+      <tbody>
+        <tr><td><b>Time to first working result</b> (from landing to "it worked")</td><td>Under 10 minutes for Beginner listings</td></tr>
+        <tr><td><b>"It worked" share</b> of all reports</td><td>85%+; under 70% triggers a fix</td></tr>
+        <tr><td><b>Questions answered</b> by us</td><td>100%, within 2 working days</td></tr>
+        <tr><td><b>Listings re-tested</b> within 30 days of a big model release</td><td>The top 50</td></tr>
+        <tr><td><b>Safety:</b> traps caught; incidents after publishing</td><td>All traps; zero incidents</td></tr>
+      </tbody>
+    </table>
+    <table class="tight">
+      <thead><tr><th>Growth</th><th class="num">Jan 2027</th><th class="num">Apr 2027</th><th class="num">Sep 2027</th></tr></thead>
+      <tbody>
+        <tr><td><b>Listings</b> (general + board)</td><td class="num">75+</td><td class="num">300+</td><td class="num">700+</td></tr>
+        <tr><td><b>Sources through intake</b></td><td class="num">20</td><td class="num">200</td><td class="num">600</td></tr>
+        <tr><td><b>Monthly visits</b></td><td class="num">launch</td><td class="num">10k</td><td class="num">50k</td></tr>
+        <tr><td><b>Newsletter subscribers</b></td><td class="num">waitlist</td><td class="num">1,000</td><td class="num">5,000</td></tr>
+        <tr><td><b>Free accounts</b></td><td class="num">—</td><td class="num">1,500</td><td class="num">8,000</td></tr>
+        <tr><td><b>Mini tool uses a week</b></td><td class="num">—</td><td class="num">2,000</td><td class="num">10,000</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="small">Listings, intake and account targets beyond the final plan's are new estimates. <span class="chip c-ass">Assumption</span> Gates use quality and use, never revenue. We check them at the three-month review in April.</p>
+</section>
+
+<!-- 37 RISKS -->
+<section class="slide">
+  <div class="eyebrow">Risks</div>
+  <h1>What could go wrong, <em>and what we do about it.</em></h1>
+  <table class="tight">
+    <thead><tr><th style="width:27%">Risk</th><th style="width:10%">Likely</th><th>What we do</th></tr></thead>
+    <tbody>
+      <tr><td><b>The AI labs build this into their own apps</b> (skill stores, built-in templates)</td><td>High</td><td>We're the neutral one: we test across all four labs, show which is cheapest for each job, and teach the ladder. Our listings download into their stores, so their stores become a channel.</td></tr>
+      <tr><td><b>Nobody comes</b>: it's a crowded space and search is noisy</td><td>Medium</td><td>Content people search for ("how to … with AI"), YouTube before-and-afters, mini tool embeds that link back, credit to creators who then share. Gates are measured on use.</td></tr>
+      <tr><td><b>Quality slips as volume grows</b></td><td>Medium</td><td>Nothing goes live without the 12 steps and your tick. "Didn't work" reports trigger fixes. Re-tests when models ship.</td></tr>
+      <tr><td><b>A harmful import gets through</b></td><td>Low</td><td>Scan, sandbox, pinned versions, trap tests, a person reads every flag, fast take-down and a notice to the author.</td></tr>
+      <tr><td><b>Rights problems</b> (copied text, course material)</td><td>Low</td><td>Ideas in our own words, credit and link, only open licences copied, course material reference-only, 48-hour take-down, a lawyer once before anything paid.</td></tr>
+      <tr><td><b>Moderation and replies eat your time</b></td><td>Medium</td><td>Claude drafts replies for you to approve, FAQs cut repeats, trusted members help, and memberships later pay for priority time.</td></tr>
+      <tr><td><b>Model costs grow</b></td><td>Low</td><td>The cheapest model that passes, caps on every run, re-tests only on the top listings, and the cost ledger in every report.</td></tr>
+      <tr><td><b>No income for a year</b></td><td>Certain (by design)</td><td>Running costs of about $60–100 a month plus model credit. Income streams switch on one at a time once their condition is met (slide 16).</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- 38 DECISIONS -->
+<section class="slide">
+  <div class="eyebrow">What I need from you</div>
+  <h1>Three things this week, <em>and the decisions after that.</em></h1>
+  <div class="g3">
+    <div class="card blue"><div class="big">1</div><h4>A yes to start Week 1 on Monday</h4><p>Including the credit sprint. Until then everything stays planning only.</p></div>
+    <div class="card blue"><div class="big">2</div><h4>The Anthropic key in <code style="color:#fff">.env</code> on Monday</h4><p>In this repo, typed in by you. The Google, DeepSeek and OpenAI keys when you can.</p></div>
+    <div class="card blue"><div class="big">3</div><h4>Your first sources</h4><p>GitHub links, YouTube transcripts and articles you rate. Any format, any time.</p></div>
+  </div>
+  <table class="tight" style="margin-top:12px">
+    <thead><tr><th>#</th><th style="width:34%">Decision</th><th>My recommendation</th><th style="width:13%">Needed by</th></tr></thead>
+    <tbody>
+      <tr><td>3</td><td>Who can comment</td><td>Anyone with a free account; members later get priority replies, not the right to comment</td><td>Mid Nov</td></tr>
+      <tr><td>12</td><td>Mini tools: where they sit and how they're shared</td><td>Their own shelf in Tools and on each board; free, no email; embeds allowed with a credit link</td><td>Mid Nov</td></tr>
+      <tr><td>13</td><td>Votes, stars and kits</td><td>▲ Useful and "it worked / didn't" on listings; ▲▼ on comments; private stars collected into kits that become workflows</td><td>Mid Nov</td></tr>
+      <tr><td>—</td><td>Tech stack (slide 34)</td><td>Next.js on Vercel, Supabase for the community, Pagefind search, Plausible analytics</td><td>W3 (2 Nov)</td></tr>
+      <tr><td>4</td><td>Licence rule for imports</td><td>Copy only open licences; everything else gets a review page that links out</td><td>Early Dec</td></tr>
+      <tr><td>5</td><td>Brand name and domain</td><td>A shortlist of 5, not tied to one industry</td><td>11 Dec</td></tr>
+    </tbody>
+  </table>
+  <p class="small">The full list is in the final plan, Part 16. Decision 2 (spend cap) and the old decision 13 (reels) were settled today.</p>
+</section>
+
+<!-- SOURCES -->
+<section class="slide">
+  <div class="eyebrow">Appendix · Sources for the market numbers</div>
+  <h1>Where every number comes from, <em>and how far to trust it.</em></h1>
+  <p class="small" style="margin-bottom:4px"><b>Reliability:</b> F = official filing or government statistic · C = company statement · A = analyst or third-party measurement · B = blog or secondary source (used only as a range). Gathered 18 Oct 2026. Check them again before anything goes outside the team.</p>
+  <div class="g2">
+    <table class="tight" style="font-size:7.25pt">
+      <thead><tr><th>Figure</th><th>Source, date</th><th>Rel.</th></tr></thead>
+      <tbody>
+        <tr><td>ChatGPT: 900M weekly users</td><td>OpenAI, via TechCrunch, 27 Feb 2026</td><td>C</td></tr>
+        <tr><td>Gemini app: 1B+ monthly users</td><td>Sundar Pichai, via TechCrunch, 11 Aug 2026; 950M in Alphabet Q2 remarks, 22 Jul 2026</td><td>C/F</td></tr>
+        <tr><td>Claude: no official user count</td><td>Anthropic publishes none; Sensor Tower estimates ~245M monthly</td><td>A via B</td></tr>
+        <tr><td>52% of US employees use AI at work; 15% daily</td><td>Gallup, May 2026 (~23.7k employees)</td><td>A</td></tr>
+        <tr><td>19.8% of US businesses used AI; retail ~14%</td><td>US Census Business Trends and Outlook Survey, 26 May 2026</td><td>F</td></tr>
+        <tr><td>88% of organisations use AI; 7% fully scaled</td><td>McKinsey, State of AI 2025</td><td>A</td></tr>
+        <tr><td>SKILL.md open standard (agentskills.io)</td><td>December 2025; adopter count varies by source</td><td>B</td></tr>
+        <tr><td>Anthropic skills repo: 181,835 stars</td><td>GitHub API, 18 Oct 2026</td><td>F</td></tr>
+        <tr><td>SkillsMP: 3M+ skills indexed</td><td>skillsmp.com, self-claim</td><td>C</td></tr>
+        <tr><td>Shopify: 3,143,979 live stores (US 1,203,111; UK 234,860)</td><td>Store Leads, 9 Oct 2026</td><td>A</td></tr>
+        <tr><td>WooCommerce: 4,002,439 live stores</td><td>Store Leads, 9 Oct 2026</td><td>A</td></tr>
+        <tr><td>Shopify Q2 2026: GMV $115.6B, revenue $3.58B</td><td>Shopify 10-Q, 5 Aug 2026</td><td>F</td></tr>
+        <tr><td>$1.3B paid to Shopify app developers in 2025</td><td>Shopify newsroom, 28 Apr 2026</td><td>C</td></tr>
+      </tbody>
+    </table>
+    <table class="tight" style="font-size:7.25pt">
+      <thead><tr><th>Figure</th><th>Source, date</th><th>Rel.</th></tr></thead>
+      <tbody>
+        <tr><td>US online sales 17.1% of retail ($340.2B, Q2 2026)</td><td>US Census quarterly e-commerce report, 18 Aug 2026</td><td>F</td></tr>
+        <tr><td>36.2M US small businesses</td><td>SBA Office of Advocacy, 2025 profile</td><td>F</td></tr>
+        <tr><td>5.7M UK private-sector businesses</td><td>UK Business Population Estimates, 2 Oct 2025</td><td>F</td></tr>
+        <tr><td>322M formal small and medium firms in 77 economies</td><td>World Bank MSME note (2019 data)</td><td>F, dated</td></tr>
+        <tr><td>~30–33k SaaS companies</td><td>Secondary roundup, no underlying source</td><td>B</td></tr>
+        <tr><td>64M US freelancers (2023); 72.9M (2025)</td><td>Upwork, Dec 2023; MBO Partners via secondary sources</td><td>C / B</td></tr>
+        <tr><td>PromptBase ~425k users; sellers keep 80%</td><td>Secondary profiles</td><td>B</td></tr>
+        <tr><td>GPT Store: 3M+ GPTs created</td><td>OpenAI, Jan 2024 (no newer figure)</td><td>C, dated</td></tr>
+        <tr><td>n8n: 13,490 workflow templates</td><td>n8n.io/workflows, 18 Oct 2026</td><td>C</td></tr>
+        <tr><td>Skool $9 and $99 plans; God of Prompt $47–199 bundles</td><td>Their pricing pages, 18 Oct 2026</td><td>C</td></tr>
+        <tr><td>The Rundown AI 2M+ readers; TAAFT 3M+ visits a month; Ben's Bites ~150k</td><td>Their own media kits, self-reported</td><td>C</td></tr>
+        <tr><td>AI implementation ~$185/hour median; retainers $4–8k</td><td>Consultant rate card, mid-2026</td><td>B</td></tr>
+        <tr><td>Tech-content display ads $20–45 per 1,000 pageviews</td><td>Estimates for ad networks; none publish official figures</td><td>B</td></tr>
+        <tr><td>AI tool affiliates 20–30% recurring for 12 months</td><td>Program summaries; check each program's terms</td><td>B</td></tr>
+        <tr><td>Coursera: 12 generative-AI enrolments a minute (2025)</td><td>Coursera Global Skills Report 2025</td><td>C</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="src"><b>Gaps:</b> no official Claude user count, no official count of US or UK ecommerce businesses, no reliable count of SaaS companies, no survey of ecommerce brands using AI for creative work. The TAM, SAM and SOM narrowing on slides 11–12 is our arithmetic on the figures above.</p>
+</section>
+
+
+<script>
+/* Fit each content slide: scale its content up (at most 1.32x) to use the page, never past it. */
+(function () {
+  var PAD_T = 0.4 * 96, PAD_B = 0.5 * 96, PAD_X = 0.55 * 96, MAX = 1.32;
+  document.querySelectorAll('.slide:not(.cover):not(.div)').forEach(function (sl) {
+    var inner = document.createElement('div');
+    inner.className = 'inner';
+    while (sl.firstChild) inner.appendChild(sl.firstChild);
+    sl.appendChild(inner);
+    var W = sl.clientWidth - 2 * PAD_X, H = sl.clientHeight - PAD_T - PAD_B;
+    function fits(z) {
+      inner.style.zoom = z; inner.style.width = (W / z) + 'px';
+      return inner.offsetHeight * z <= H;
+    }
+    if (!fits(1)) { fits(1); return; }
+    var lo = 1, hi = MAX;
+    if (fits(hi)) return;
+    for (var k = 0; k < 14; k++) { var m = (lo + hi) / 2; if (fits(m)) lo = m; else hi = m; }
+    fits(lo);
+  });
+})();
+</script>
+</body>
+</html>

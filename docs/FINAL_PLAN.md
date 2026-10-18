@@ -242,7 +242,7 @@ Stages, sources and examples are as in version 3. Every stage is a part people c
 
 ## 5 · The intake engine [Decided; design Proposed]
 
-Paste in anything: a YouTube video or transcript, an Instagram reel, a Medium post, an article or a GitHub skill library. One engine reads it, breaks it into small pieces of know-how, finds where each piece fits in what we already have, and proposes what it should become. You tick what to build, and the library gets richer with every source. Full design: `docs/planning/08_INTAKE_ENGINE.md`.
+Paste in a GitHub skill library, a YouTube transcript or link, a Medium post or an article. One engine reads it, breaks it into small pieces of know-how, finds where each piece fits in what we already have, and proposes what it should become. You tick what to build, and the library gets richer with every source. Full design: `docs/planning/08_INTAKE_ENGINE.md`.
 
 **The nine stages:**
 1. **Drop in:** a link, a file or text (`/intake <link or file>`).
@@ -262,7 +262,7 @@ Our own sources go through first (Creative Engine's 403 learning guides, our pla
 | Source | How we get it | What we may take |
 |---|---|---|
 | YouTube video or transcript | The link (Gemini reads public videos straight from the link), or the pasted transcript | Ideas only, in our words |
-| Instagram reel, TikTok | No scrapers or logins. The app's own Download button where the creator allows it, or your own file, plus the caption (decision 13) | Ideas only |
+| Instagram reel, TikTok | Not at the start (decided 18 Oct). Links, GitHub, transcripts and articles first; video files later, never through scrapers or logins | Ideas only |
 | Article, blog, Medium, X or LinkedIn post | The link (readable text only) or pasted text; never round a paywall | Ideas only |
 | GitHub repo or skill library | Its own empty folder, one pinned version, sandbox only | The licence rule below |
 | Podcast, PDF, slides | A file or public link; Gemini for audio and scans | Ideas only, unless openly licensed |
@@ -453,7 +453,7 @@ It should feel like a friendly library with busy noticeboards. The look comes fr
 
 **Navigation:** the dock is now Home · Library · Boards · Tools · Learn, with the Normal/Advanced switch.
 
-Comments need free accounts (email only, no payment), a report button, spam filtering and a moderation queue.
+Comments need free accounts (email only, no payment), a report button, spam filtering and a moderation queue. **Accounts hold no business data** [Decided 18 Oct]: brand brains and mini tools run in your browser and download to your device. Votes, stars and kits are decision 13 (see `docs/business-deck/`).
 
 ---
 
@@ -522,7 +522,7 @@ Evergreen first: seasonal listings can exist, but we don't run campaigns around 
 1. **Discover:** find a listing, tool guide or video.
 2. **Take:** copy, download or run a listing, with no account needed.
 3. **Return:** come back for the next step or another listing (the north star).
-4. **Join:** a free account to comment, save brains and follow boards.
+4. **Join:** a free account to comment, vote, star, make kits and follow boards. No business data is stored.
 5. **Climb:** take a higher step on the same job's ladder.
 6. **Contribute:** comment, share a result, suggest a skill, or upload one later.
 
@@ -632,7 +632,7 @@ Mini tools take a shorter path: steps 1, 3 and 4, then worked examples checked b
 - **Which models:** the four labs we already have accounts with: Claude (Anthropic), GPT (OpenAI), Gemini (Google) and DeepSeek, which is what most people use. No router. Anyone who wants another model can test it themselves. [Decided]
 - **Recommended:** the cheapest within 5 points of the best.
 - **Budget:** the cheapest at ≥ 80%.
-- **Caps:** $2 per run and $25 per round (decision 2).
+- **Budget** [Decided 18 Oct]: the credits we have: about $200 Anthropic (until 27 Oct), $60–70 Google, $20 DeepSeek and $10 OpenAI, topped up when needed. **Caps:** $2 per run and $25 per round as safety stops. The Anthropic credit goes first, in a credit sprint (19–27 Oct).
 
 **Ladders and workflows:**
 
@@ -647,7 +647,7 @@ Mini tools take a shorter path: steps 1, 3 and 4, then worked examples checked b
 
 | Version | What it is | Ships |
 |---|---|---|
-| v0 | Free site: search, library, /ecommerce, listing pages with ladder and before/after, tool guides, mini tools with embeds, Learn, free accounts for comments and saved brains, newsletter | Gate B, 19 Jan 2027 |
+| v0 | Free site: search, library, /ecommerce, listing pages with ladder and before/after, tool guides, mini tools with embeds, Learn, free accounts for comments, votes, stars and kits (no business data stored), newsletter | Gate B, 19 Jan 2027 |
 | v1 | /saas, board following, "Ask" threads, contributor profiles, membership waitlist | Apr 2027 |
 | v2 | Membership, priority replies, consulting and implementation requests, premium workflows | When each money condition is met |
 | v3 | Run listings from the site; creator uploads; the 70/30 marketplace | When people ask and the pipeline is ready |
@@ -658,13 +658,13 @@ Mini tools take a shorter path: steps 1, 3 and 4, then worked examples checked b
 
 | Week | Build | Plan and publish | Founder |
 |---|---|---|---|
-| **W1 · 19–25 Oct** | `import-item`, `check-item`; listing format v1 (type, level, step, boards, tools, credit, licence, safety badge, before/after); first port: website claims extractor (general) | Port order for all 263 own items; map Creative Engine and ecomOS workflows onto the ladder; board and comment rules | Approve decision 2; put the four model keys in this repo's `.env`; glance at the port order |
+| **W1 · 19–25 Oct** | `import-item`, `check-item`; listing format v1 (type, level, step, boards, tools, credit, licence, safety badge, before/after); first port: website claims extractor (general) | Port order for all 263 own items; map Creative Engine and ecomOS workflows onto the ladder; board and comment rules | Say yes to start, including the credit sprint; put the Anthropic key (then the other three) in this repo's `.env`; glance at the port order |
 | **W2 · 26 Oct–1 Nov** | `run-test`, `grade`, `build-exports`, `build-graph`; first listing tested ✓ with before/after; `scan-skill`, `build-mini-tool` and the intake engine specified | Listing and board page templates; site structure | Review the first listing page |
 | | **Gate 0:** one listing end to end; template approved | | |
-| **W3–4 · 2–15 Nov** | Brand brain v2 format; 11 brain listings, general and /ecommerce; `build-mini-tool` and the first 4 mini tools (discount, order margin, volume planner, AI run cost) | Brand brain workflow page; site build starts (listing and board pages, accounts) | Brain section review; decisions 3 and 12 |
+| **W3–4 · 2–15 Nov** | Brand brain v2 format; 11 brain listings, general and /ecommerce; `build-mini-tool` and the first 4 mini tools (discount, order margin, volume planner, AI run cost) | Brand brain workflow page; site build starts (listing and board pages, accounts) | Brain section review; decisions 3, 12 and 13 |
 | | **Gate 1:** brain section passes on 3 kinds of business with zero invented claims or wrong prices | | |
 | **W5–7 · 16 Nov–6 Dec** | About 20 static ad listings; copy, scripts, avatars; `scan-skill` built; 20 trap skills; intake engine v0 (text, articles, repos), first on our own learning guides; next 4 mini tools (deal comparer, repeat customer profit, page and test, hourly rate) | Static ad and copy workflow pages; comments and moderation on staging; record 3 videos | Creative review; decisions 4–5 |
-| **W8–9 · 7–20 Dec** | Page audit; Meta ladder 1–4; research and offers; video and audio in the intake engine; first 10 public sources, including 5–10 GitHub skills | Tool guide template and first 10 guides; newsletter; launch waitlist | Gate A; brand name and domain; decision 13 |
+| **W8–9 · 7–20 Dec** | Page audit; Meta ladder 1–4; research and offers; video and audio in the intake engine; first 10 public sources, including 5–10 GitHub skills | Tool guide template and first 10 guides; newsletter; launch waitlist | Gate A; brand name and domain |
 | | **Gate A (11 Dec):** brain and creative ported; skeleton with boards and comments; 5+ imports checked; 5 sources through intake; all 20 trap skills and 10 trap sources caught; first 4 mini tools agree in all five ways | | |
 | **W10–12 · 21 Dec–10 Jan** | Site v0 finished, with mini tools and embeds; downloads opened in Claude, ChatGPT, Codex and Gemini | Batch-record 6 videos; seed /ecommerce posts | Final page review |
 | | **Gate B:** 50+ general and 25+ /ecommerce listings with before/after; 10+ imports; 20 sources through intake; 10 tool guides; 8 mini tools; downloads in 3+ tools; comments and moderation working; mobile check | | |
@@ -740,7 +740,7 @@ Mini tools take a shorter path: steps 1, 3 and 4, then worked examples checked b
 |---|---|---|---|
 | | **Needed for Week 1** | | |
 | 1 | Which models we test on | **Decided:** direct accounts with Claude (Anthropic), GPT (OpenAI), Gemini (Google) and DeepSeek. No router. The founder puts the keys in `.env`. | Done, 18 Oct |
-| 2 | Spend cap for model tests | $2 per run, $25 per round | 21 Oct |
+| 2 | Spend cap for model tests | **Decided:** the credits we have per lab; $2 per run and $25 per round as safety stops | Done, 18 Oct |
 | | **Needed before the site is built** | | |
 | 3 | Who can comment | Anyone with a free account. Members later get priority replies, not the right to comment. | Mid Nov |
 | 4 | Licence rule for imports | Copy and adapt only open licences (share-alike carried over); otherwise a review page that links out | Early Dec |
@@ -752,7 +752,7 @@ Mini tools take a shorter path: steps 1, 3 and 4, then worked examples checked b
 | 10 | `copy-craft` clean-room rewrite | Yes | Before the creative section ends |
 | 11 | A contact link at launch | Yes: one "Need help building this?" link; no prices, offers or outreach | Before 19 Jan |
 | 12 | Mini tools: where they sit and how they're shared | Own shelf in Tools and on each board, typed as applications; all five ways; always free, no email; anyone may embed with a credit link | Mid Nov |
-| 13 | Video from Instagram and TikTok for the intake engine | No scrapers or logins: the app's own Download button where the creator allows it, or your own file, plus the caption | Early Dec |
+| 13 | Votes, stars and kits | ▲ Useful and "it worked / didn't" on listings; ▲▼ on comments; private stars grouped into kits that become workflows | Mid Nov |
 | | **Later** | | |
 | 14 | Membership price | Test $99 vs $199 on the waitlist; Pro $499 | Apr 2027 |
 | 15 | What stays free | Everything free at launch stays free; only new premium workflows can be paid | Before any paywall |
@@ -763,4 +763,4 @@ Mini tools take a shorter path: steps 1, 3 and 4, then worked examples checked b
 
 The holiday sale sprint, the four launch jobs and the two extra test cases from version 3 are dropped, and so are the router and the "Jev" question.
 
-**Next step:** say yes to decision 2 (the spend cap) and put the four model keys in `.env`, and Week 1 starts on Monday 19 October. That means the first tools, the listing format, and the port order for everything we own. Nothing gets sold.
+**Next step:** say yes to start and put the Anthropic key in `.env`, and Week 1 starts on Monday 19 October, with a credit sprint before the Anthropic credit expires on 27 October. That means the first tools, the listing format, and the port order for everything we own. Nothing gets sold.

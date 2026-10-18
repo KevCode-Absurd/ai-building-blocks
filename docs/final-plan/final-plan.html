@@ -513,7 +513,7 @@
 <section>
   <div class="eyebrow" style="margin-top:22px">Part 5 · The intake engine</div>
   <h1>Paste any link. <em>Get building blocks out.</em></h1>
-  <p class="lead">Paste in a YouTube video, an Instagram reel, a Medium post, an article, a transcript or a GitHub skill library. One engine reads it, breaks it into small pieces of know-how, finds where each piece fits in what we already have, and proposes what it should become: a prompt, a skill, a routine, a workflow, a mini tool, an agent or a how-to guide. You tick what to build. The library gets richer with every source. <span class="chip c-dec">Decided</span> <span class="chip c-pro">design proposed</span></p>
+  <p class="lead">Paste in a GitHub skill library, a YouTube transcript or link, a Medium post or an article. One engine reads it, breaks it into small pieces of know-how, finds where each piece fits in what we already have, and proposes what it should become: a prompt, a skill, a routine, a workflow, a mini tool, an agent or a how-to guide. You tick what to build. The library gets richer with every source. <span class="chip c-dec">Decided</span> <span class="chip c-pro">design proposed</span></p>
 
   <div class="flow f9">
     <div><b>1 Drop in</b>a link, file or text</div>
@@ -533,7 +533,7 @@
     <thead><tr><th style="width:21%">Source</th><th>How we get it</th><th style="width:22%">What we may take</th></tr></thead>
     <tbody>
       <tr><td><b>YouTube video or transcript</b></td><td>The link. Gemini reads a public video straight from its link (picture and sound), or you paste the transcript.</td><td>Ideas only, in our words</td></tr>
-      <tr><td><b>Instagram reel, TikTok</b></td><td>No scrapers or logins. You save the file with the app's own Download button (where the creator allows it) or use your own file, and paste the caption. Gemini watches it. (decision 13)</td><td>Ideas only</td></tr>
+      <tr><td><b>Instagram reel, TikTok</b></td><td>Not at the start (decided 18 Oct). We begin with links, GitHub, transcripts and articles. Video files can come later, never through scrapers or logins.</td><td>Ideas only</td></tr>
       <tr><td><b>Article, blog, Medium, X or LinkedIn post</b></td><td>The link, keeping only the readable text, or pasted text. We never get round a paywall.</td><td>Ideas only</td></tr>
       <tr><td><b>GitHub repo or skill library</b></td><td>Downloaded into its own empty folder at one pinned version, never run outside a sandbox. One repo can hold dozens of skills.</td><td>The licence rule below</td></tr>
       <tr><td><b>Podcast, PDF, slides</b></td><td>A file or a public link. Gemini listens to audio and reads scanned pages.</td><td>Ideas only, unless openly licensed</td></tr>
@@ -729,7 +729,7 @@
       <tr><td><b>Workflow boards</b></td><td>Creative Engine's production Kanban: drag to run, with the cost shown before any paid step</td></tr>
     </tbody>
   </table>
-  <p class="small">Comments need free accounts at launch (just email, no payment), a report button, spam filtering and a moderation queue. I found no screen called "Creative Intelligence", so I've read it as the ecomOS dashboard (decision 6).</p>
+  <p class="small">Comments need free accounts at launch (just email, no payment), a report button, spam filtering and a moderation queue. Accounts hold no business data: brand brains and mini tools run in your browser and download to your device (decided 18 Oct). Votes, stars and kits are decision 13; the business deck shows the pages. I found no screen called "Creative Intelligence", so I've read it as the ecomOS dashboard (decision 6).</p>
 </section>
 
 <!-- PART 8 WHAT WE HAVE -->
@@ -814,7 +814,7 @@
       <tr><td><b>Discover</b></td><td>Find a listing, tool guide or video</td><td>Visits from search, YouTube and the newsletter</td></tr>
       <tr><td><b>Take</b></td><td>Copy, download or run a listing, no account needed</td><td>Listings taken; a useful first result within 30 minutes</td></tr>
       <tr><td><b>Return</b></td><td>Come back for the next step or another listing</td><td><b>Weekly returning users who take a listing</b> (north star)</td></tr>
-      <tr><td><b>Join</b></td><td>A free account to comment, save brains and follow boards</td><td>Accounts, newsletter subscribers</td></tr>
+      <tr><td><b>Join</b></td><td>A free account to comment, vote, star, make kits and follow boards. No business data is stored.</td><td>Accounts, newsletter subscribers</td></tr>
       <tr><td><b>Climb</b></td><td>Take a higher step on the same job's ladder</td><td>Users who climb a step within 60 days</td></tr>
       <tr><td><b>Contribute</b></td><td>Comment, share a result, suggest or (later) upload a skill</td><td>Comments per week per board; suggestions</td></tr>
     </tbody>
@@ -986,7 +986,7 @@
   <table class="compact">
     <thead><tr><th style="width:20%">Version</th><th>What's in it</th><th style="width:28%">Ships when</th></tr></thead>
     <tbody>
-      <tr><td><b>v0 · free site</b></td><td>Home, search, the general library, the /ecommerce board, listing pages with the ladder and the before and after, tool guides, mini tools with embeds, Learn, free accounts for comments and saved brains, newsletter, Normal and Advanced views</td><td>Gate B (19 Jan 2027)</td></tr>
+      <tr><td><b>v0 · free site</b></td><td>Home, search, the general library, the /ecommerce board, listing pages with the ladder and the before and after, tool guides, mini tools with embeds, Learn, free accounts for comments, votes, stars and kits (no business data stored), newsletter, Normal and Advanced views</td><td>Gate B (19 Jan 2027)</td></tr>
       <tr><td><b>v1 · more boards</b></td><td>/saas, board following, "Ask" threads, contributor profiles, the membership waitlist</td><td>April 2027</td></tr>
       <tr><td><b>v2 · help and premium</b></td><td>Membership, priority replies, consulting and implementation requests, premium workflows</td><td>When each money condition is met</td></tr>
       <tr><td><b>v3 · run and upload</b></td><td>Run a listing from the site (cost shown); creator uploads through the safety pipeline; the 70/30 marketplace</td><td>When people ask for it and the pipeline is ready</td></tr>
@@ -1003,7 +1003,7 @@
   <div class="week"><div class="wh"><b>Week 1 · 19–25 Oct</b><span>Tools, format, port order</span></div><div class="wb">
     <div><h5>Build (Claude)</h5><ul><li><code>import-item</code> and <code>check-item</code> tools</li><li>Listing format v1: type, level, ladder step, boards, tools, credit, licence, safety badge, before/after</li><li>First port: website claims extractor, general version</li></ul></div>
     <div><h5>Plan and publish</h5><ul><li>Port order for all 263 own items: merge, port or retire</li><li>Map Creative Engine and ecomOS workflows onto the ladder</li><li>Board and comment rules drafted</li></ul></div>
-    <div><h5>You</h5><ul><li>Approve decision 2 (spend cap)</li><li>Put the four model keys in this repo's <code>.env</code> yourself</li><li>Glance at the port order</li></ul></div>
+    <div><h5>You</h5><ul><li>Say yes to start, including the credit sprint</li><li>Put the Anthropic key (then the other three) in this repo's <code>.env</code> yourself</li><li>Glance at the port order</li></ul></div>
   </div></div>
 
   <div class="week"><div class="wh"><b>Week 2 · 26 Oct – 1 Nov</b><span>Tools working end to end</span></div><div class="wb">
@@ -1015,7 +1015,7 @@
   <div class="week"><div class="wh"><b>Weeks 3–4 · 2–15 Nov</b><span>Business brain section</span></div><div class="wb">
     <div><h5>Build</h5><ul><li>Brand brain v2 format: general "what you sell" (products, plans, services, courses) with dated offers and a claims register</li><li>All 11 brain listings, general and /ecommerce</li><li><code>build-mini-tool</code>, and the first 4 mini tools: discount, order margin and break-even, creative volume planner, AI run cost</li></ul></div>
     <div><h5>Plan and publish</h5><ul><li>Workflow page for brand brain</li><li>Site build starts: listing pages, board pages, accounts for comments</li></ul></div>
-    <div><h5>You</h5><ul><li>Brain section review</li><li>Decisions 3 (who can comment) and 12 (mini tools)</li></ul></div>
+    <div><h5>You</h5><ul><li>Brain section review</li><li>Decisions 3 (who can comment), 12 (mini tools) and 13 (votes and stars)</li></ul></div>
   </div><div class="gate"><b>Gate 1:</b> the brain section passes on 3 kinds of business, with zero invented claims or wrong prices on the golden set.</div></div>
 
   <div class="week"><div class="wh"><b>Weeks 5–7 · 16 Nov – 6 Dec</b><span>Creative and content section</span></div><div class="wb">
@@ -1027,7 +1027,7 @@
   <div class="week"><div class="wh"><b>Weeks 8–9 · 7–20 Dec</b><span>Website, paid media, first imports</span></div><div class="wb">
     <div><h5>Build</h5><ul><li>Landing-page audit; Meta ads ladder steps 1–4 with "unavailable" states; research and offers</li><li>Video and audio added to the intake engine (Gemini); the first 10 public sources through it, including 5–10 skills from GitHub</li></ul></div>
     <div><h5>Plan and publish</h5><ul><li>Tool guide template; the first 10 tool guides</li><li>Newsletter set up; waitlist for launch</li></ul></div>
-    <div><h5>You</h5><ul><li>Gate A review</li><li>Pick the brand name and domain</li><li>Decision 13 (reels and TikToks)</li></ul></div>
+    <div><h5>You</h5><ul><li>Gate A review</li><li>Pick the brand name and domain</li></ul></div>
   </div><div class="gate"><b>Gate A (Fri 11 Dec):</b> brain and creative sections ported; site skeleton with boards and comments working; at least 5 imported skills through the safety check; 5 sources through the intake engine with reports; all 20 trap skills and 10 trap sources caught; the first 4 mini tools give the same answers in all five ways.</div></div>
 
   <div class="week"><div class="wh"><b>Weeks 10–12 · 21 Dec – 10 Jan</b><span>Quiet weeks: finish the site</span></div><div class="wb">
@@ -1125,7 +1125,7 @@
     <tbody>
       <tr><td colspan="4" class="small"><b>Needed for Week 1</b></td></tr>
       <tr><td>1</td><td>Which models we test on</td><td><b>Decided:</b> Claude, GPT, Gemini and DeepSeek, direct; no router. You add the keys to <code>.env</code>.</td><td>Done, 18 Oct</td></tr>
-      <tr><td>2</td><td>Spend cap for model tests</td><td>$2 per run, $25 per round to start</td><td>21 Oct</td></tr>
+      <tr><td>2</td><td>Spend cap for model tests</td><td><b>Decided:</b> the credits we have per lab; $2 per run and $25 per round as safety stops</td><td>Done, 18 Oct</td></tr>
       <tr><td colspan="4" class="small"><b>Needed before the site is built</b></td></tr>
       <tr><td>3</td><td>Who can comment</td><td>Anyone with a free account. Members later get priority replies from us, not the right to comment.</td><td>Mid Nov</td></tr>
       <tr><td>4</td><td>Licence rule for imported skills</td><td>Copy and adapt only open licences (MIT, Apache 2.0, BSD, CC BY, with share-alike carried over); everything else gets a review page that links out</td><td>Early Dec</td></tr>
@@ -1137,7 +1137,7 @@
       <tr><td>10</td><td>Clean-room rewrite of <code>copy-craft</code></td><td>Yes, based on our own tests</td><td>Before the creative section ends</td></tr>
       <tr><td>11</td><td>A contact link at launch for people who ask for help</td><td>Yes: one "Need help building this?" link. No prices, no offers, no outreach. Requests go on a list.</td><td>Before 19 Jan</td></tr>
       <tr><td>12</td><td>Mini tools: where they sit, how they're shared</td><td>A shelf in Tools and on each board; free, no email; embeds allowed with a credit link</td><td>Mid Nov</td></tr>
-      <tr><td>13</td><td>Video from Instagram and TikTok for the intake engine</td><td>No scrapers or logins: the app's own Download button where the creator allows it, or your own file, plus the caption</td><td>Early Dec</td></tr>
+      <tr><td>13</td><td>Votes, stars and kits</td><td>▲ Useful and "it worked / didn't" on listings; ▲▼ on comments; private stars grouped into kits that become workflows</td><td>Mid Nov</td></tr>
       <tr><td colspan="4" class="small"><b>Later</b></td></tr>
       <tr><td>14</td><td>Membership price for the first tier</td><td>Test $99 against $199 on the waitlist page; Pro at $499</td><td>Apr 2027</td></tr>
       <tr><td>15</td><td>What stays free</td><td>Everything free at launch stays free for good; only new premium workflows can be paid</td><td>Before any paywall</td></tr>
@@ -1178,7 +1178,7 @@
   <table class="compact">
     <thead><tr><th style="width:30%">In the repo</th><th>What's there</th></tr></thead>
     <tbody>
-      <tr><td><code>docs/final-plan/</code></td><td>This plan (PDF + HTML source)</td></tr>
+      <tr><td><code>docs/final-plan/</code></td><td>This plan (PDF + HTML source); <code>docs/business-deck/</code> has the business and build deck</td></tr>
       <tr><td><code>docs/FINAL_PLAN.md</code></td><td>The same plan as Markdown, for quick reference and for agents</td></tr>
       <tr><td><code>docs/planning/</code></td><td>The detailed planning pack (older; where it differs, this plan wins)</td></tr>
       <tr><td><code>docs/inventory/</code></td><td>All 1,338 items with rights and proposed names (private)</td></tr>
@@ -1190,7 +1190,7 @@
 
   <div class="dark" style="margin-top:16px">
     <div class="eyebrow">The next step</div>
-    <p style="font-size:11pt">Say yes to decision 2 (the spend cap) and put the four model keys in <code>.env</code>, and Week 1 starts on Monday 19 October: the first tools, the listing format and the port order for everything we own. Nothing gets sold.</p>
+    <p style="font-size:11pt">Say yes to start and put the Anthropic key in <code>.env</code>, and Week 1 starts on Monday 19 October, with a credit sprint before the Anthropic credit expires on 27 October: the first tools, the listing format and the port order for everything we own. Nothing gets sold.</p>
   </div>
 </section>
 

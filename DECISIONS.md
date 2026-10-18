@@ -4,6 +4,11 @@ Newest first. The founder's latest direct instruction wins. Record changes here 
 
 | Date | Decision | Source |
 |---|---|---|
+| 2026-10-18 | **Sources to start: links, GitHub, YouTube transcripts and articles.** No Instagram reels or TikToks to start; the founder sends sources. Old decision 13 (reels) dropped. | Founder |
+| 2026-10-18 | **No user data stored on the site.** No business data, files, brand brains, results or keys. Brand brains and mini tools run in the browser and download to the person's device; we help people store things themselves. Accounts hold only email, display name, comments, votes, stars, kits, follows and settings. | Founder |
+| 2026-10-18 | **Everything free; comments for anyone signed in.** We answer questions in the comments. Paid priority help and a paid community come later. | Founder |
+| 2026-10-18 | **Model budget = the credits we have:** the credits we have: about $200 Anthropic (until 27 Oct), $60–70 Google, $20 DeepSeek and $10 OpenAI, topped up when needed. $2 per run and $25 per round stay as safety stops. Anthropic credit used first (credit sprint 19–27 Oct). Decision 2 closed. | Founder |
+| 2026-10-18 | **Business and build deck** (`docs/business-deck/`): market, beachhead, adjacent markets, site, votes/stars/kits, architecture, stack, phases. | Founder asked; content proposed |
 | 2026-10-18 | **Intake engine.** One engine takes any source (YouTube video or transcript, Instagram reel, TikTok, article, Medium post, X or LinkedIn post, GitHub skill library, podcast, PDF) through nine stages: drop in, read (Gemini for video and audio), safety, idea cards, match to our jobs/ladders/workflows, decide what each becomes (improvement, mini tool, prompt, skill, routine, workflow, agent, how-to guide), a one-page report the founder ticks, build through the 12 steps, publish with credit. Ideas only, in our own words; no scrapers or logins; raw files private. Replaces "skills from the internet" as a separate pipeline; the GitHub safety check and licence rule are unchanged. Design proposed in `docs/planning/08_INTAKE_ENGINE.md`; v0 Nov–Dec, v1 always on Feb–Mar 2027, v2 public "Suggest a source" Apr 2027. | Founder (design proposed) |
 | 2026-10-18 | **Mini tools.** Turn every calculator we built (discount, deal comparer, order margin and break-even, creative volume planner, CRO test, AI run cost and more) into free mini tools anyone can use: standalone, or ported into their own ChatGPT or Claude. The five ways to use them (site, download, sheet, in your AI, embed) are proposed in plan Part 6. | Founder |
 | 2026-10-18 | **Models: no router.** Test only on the four labs we already have accounts and keys for: Claude (Anthropic), GPT (OpenAI), Gemini (Google) and DeepSeek. That covers what most people use; anyone wanting other models can test them themselves. Supersedes OpenRouter and the "Jev" question. | Founder |
@@ -37,7 +42,7 @@ Newest first. The founder's latest direct instruction wins. Record changes here 
 The numbered list matches the decisions table in the final plan v4, Part 16.
 
 1. ~~Router for model tests~~ Decided 2026-10-18: direct accounts with Anthropic, OpenAI, Google and DeepSeek; no router.
-2. Spend cap for model tests: $2 per run, $25 per round? (Week 1)
+2. ~~Spend cap for model tests~~ Decided 2026-10-18: the credits we have per lab, with $2 per run and $25 per round as safety stops.
 3. Who can comment: anyone with a free account, with members later getting priority replies?
 4. Licence rule for imported skills: copy and adapt only open licences; otherwise a review page that links out?
 5. Final brand name and domain.
@@ -48,7 +53,7 @@ The numbered list matches the decisions table in the final plan v4, Part 16.
 10. OK to clean-room rewrite `copy-craft` (built from the purchased Copy Machine)?
 11. A "Need help building this?" contact link at launch (no prices, offers or outreach)?
 12. Mini tools: their own shelf in Tools and on each board, typed as applications; site, download, sheet, in your AI and embed; always free with no email; anyone may embed with a credit link? (Mid Nov)
-13. Intake engine, video from Instagram and TikTok: no scrapers or logins; the app's own Download button where the creator allows it, or the founder's own file, plus the caption? (Early Dec)
+13. Votes, stars and kits: ▲ Useful and "it worked / didn't" on listings; ▲▼ on comments; private stars grouped into kits that become workflows? (Mid Nov) (Replaces the dropped reels question.)
 14. Membership price for the first tier: $99 or $199? (Later.)
 15. Everything free at launch stays free for good; only new premium workflows can be paid? (Later.)
 16. Ad and affiliate rules: one quiet slot, labelled links, rankings from tests only? (Later.)

@@ -44,7 +44,7 @@ This replaces "skills from the internet" as a separate pipeline. Imported GitHub
 |---|---|---|---|
 | **YouTube video** | The link. Gemini can read a public YouTube video straight from its link (picture and sound). We also pull the captions where they exist. | Gemini (Pro for long videos, Flash for short ones) | Ideas only. We never republish the video, frames or transcript. |
 | **YouTube transcript** | Pasted text | Claude | Ideas only |
-| **Instagram reel, TikTok** | No scrapers. You save the file with the app's own **Download** button (where the creator allows it) or use your own file, then drop it in with the caption pasted. If there's no file, we work from the caption and your notes. *(Decision 13.)* | Gemini (Flash) | Ideas only |
+| **Instagram reel, TikTok** | **Not at the start** (decided 18 Oct). We begin with links, GitHub, transcripts and articles. Video files can come later, never through scrapers or logins. | Gemini (Flash), later | Ideas only |
 | **Article, blog, Medium post** | The link. We keep only the readable text. If it's behind a paywall, you paste the part you can read. | Claude | Ideas only |
 | **GitHub repo or skill library** | Downloaded into its own empty folder at one pinned version, read-only, never run outside a sandbox. One repo can hold dozens of skills. Each one gets its own card set. | `scan-skill` + Claude | Licence rule (Part 5): only open licences are copied |
 | **X or LinkedIn post, thread** | Pasted text (no scraping) | Claude | Ideas only |
@@ -231,9 +231,7 @@ Every source's cost goes in the cost ledger and on its report.
 
 ## 11. Decisions needed
 
-- **Decision 13 · video from Instagram and TikTok.**
-  - **Recommendation:** no scrapers and no logins. Use the app's own Download button where the creator allows it, or your own file, plus the pasted caption.
-  - **Needed by:** early December, before video intake.
+- ~~Decision 13 · video from Instagram and TikTok~~ Dropped 18 Oct: no reels or TikToks to start. Decision 13 is now votes, stars and kits.
 - The licence rule (decision 4) and course terms (decision 9) apply unchanged.
 
 ---

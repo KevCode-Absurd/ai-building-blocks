@@ -19,6 +19,7 @@ A **free, evergreen library** of tested AI building blocks for any business. It 
 | Read | What it is |
 |---|---|
 | [docs/final-plan/Final-Plan.pdf](docs/final-plan/Final-Plan.pdf) | **Read this first.** The final plan (v4), covering what we build, how it's organised, the intake engine (any video, article or skill library in; building blocks out), growth, money later, the build, and a week-by-week plan, in plain language. |
+| [docs/business-deck/Business-and-Build-Deck.pdf](docs/business-deck/Business-and-Build-Deck.pdf) | The business and build deck (43 slides): problem, who it serves, 10× value, TAM/SAM/SOM, ecommerce beachhead, adjacent markets, competitors, money, go to market, the site (votes, stars, kits, no stored data), architecture, tech stack and the build phases. |
 | [docs/FINAL_PLAN.md](docs/FINAL_PLAN.md) | The same plan as Markdown, for quick reference and for agents working in this repo. |
 | [DECISIONS.md](DECISIONS.md) | Every decision so far, dated, so later work doesn't undo it. |
 | [RULES.md](RULES.md) | Ground rules for anyone, person or AI agent, working in this repo. |

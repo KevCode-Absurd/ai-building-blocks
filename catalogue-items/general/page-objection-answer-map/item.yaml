@@ -1,0 +1,20 @@
+slug: page-objection-answer-map
+name: Page Objection Answer Map
+summary: Traces each customer doubt to the place on your page that answers it, and shows which answers are hidden, missing or unproven.
+category: general
+boards: [ecommerce]
+type: skill
+role: compress
+job: page
+level: intermediate
+inputs:
+  - {type: voc_reviews, required: true}
+  - {type: landing_page, required: true}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: objection_map}
+uses: []
+origin: own
+source_ids: [CES-050]
+old_name: landing-pages
+version: 1.0.0

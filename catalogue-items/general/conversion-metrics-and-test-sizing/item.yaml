@@ -1,0 +1,18 @@
+slug: conversion-metrics-and-test-sizing
+name: Conversion Metrics and Test Sizing
+summary: Reads your page numbers the honest way (revenue per visitor, not conversion rate alone) and says whether you have the traffic to run a test.
+category: general
+boards: [ecommerce]
+type: skill
+role: check
+job: analysis
+level: intermediate
+inputs:
+  - {type: performance_sheet, required: true}
+outputs:
+  - {type: audit_report}
+uses: []
+origin: own
+source_ids: [CES-050]
+old_name: landing-pages
+version: 1.0.0

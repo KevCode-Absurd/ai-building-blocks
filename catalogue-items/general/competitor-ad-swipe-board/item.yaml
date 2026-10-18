@@ -1,0 +1,20 @@
+slug: competitor-ad-swipe-board
+name: Competitor Ad Swipe Board
+summary: Sorts ads you collected from public ad libraries or your own exports into labelled buckets and picks the best few of each for study.
+category: general
+boards: [ecommerce]
+type: skill
+role: compress
+job: research
+level: intermediate
+inputs:
+  - {type: reference_set, required: true}
+  - {type: competitor_set, required: false}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: shortlist}
+uses: []
+origin: rebuilt
+source_ids: [CES-037]
+old_name: foreplay-ad-board
+version: 1.0.0

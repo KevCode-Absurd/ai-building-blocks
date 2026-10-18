@@ -1,0 +1,20 @@
+slug: video-ad-shot-list-director
+name: Video Ad Shot List Director
+summary: Turns an ad script into a timed shot list for an AI video model, with cuts and camera moves that keep the screen busy.
+category: general
+boards: [ecommerce]
+type: skill
+role: render
+job: video
+level: advanced
+inputs:
+  - {type: script, required: true}
+  - {type: product_data, required: true}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: shot_list}
+uses: []
+origin: own
+source_ids: [CES-147]
+old_name: video-director
+version: 1.0.0

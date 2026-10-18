@@ -1,0 +1,20 @@
+slug: video-ad-script-nine-beat-playbook
+name: Video Ad Script Playbook (Nine Beats)
+summary: Writes, reviews, varies or resizes a video ad script on nine beats, with or without customer research.
+category: general
+boards: [ecommerce]
+type: skill
+role: make
+job: video
+level: advanced
+inputs:
+  - {type: brand_brain, required: false}
+  - {type: voc_reviews, required: false}
+  - {type: product_data, required: true}
+outputs:
+  - {type: script}
+uses: [video-ad-script-principles-reference, read-aloud-script-polish, video-script-type-library]
+origin: own
+source_ids: [CES-145, CES-146]
+old_name: video-ad-copywriter; video-ad-scripts
+version: 1.0.0

@@ -1,0 +1,22 @@
+slug: podcast-clip-ad-script-format-rules
+name: Podcast Clip Ad Script Format Rules
+summary: Rules for a two-person podcast-style ad script or still frame that moves one belief without sounding sold.
+category: general
+boards: [ecommerce]
+type: skill
+role: make
+job: video
+level: intermediate
+inputs:
+  - {type: brief, required: true}
+  - {type: voc_reviews, required: true}
+  - {type: brand_brain, required: true}
+outputs:
+  - {type: script}
+  - {type: image_prompt}
+uses: []
+example: podcast
+origin: own
+source_ids: [CES-118]
+old_name: script-format-podcast
+version: 1.0.0

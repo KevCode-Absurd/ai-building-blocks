@@ -1,0 +1,20 @@
+slug: candid-flash-lifestyle-photo-set
+name: Candid Flash Lifestyle Photo Set
+summary: Product pictures that look like a friend's party snapshot, with direct flash and warm film tones, for ads and social.
+category: ecommerce
+type: skill
+role: render
+job: image
+level: advanced
+inputs:
+  - {type: product_photos, required: true}
+  - {type: brand_brain, required: true}
+  - {type: persona, required: false}
+outputs:
+  - {type: photo_set}
+uses: [product-truth-sheet-from-photos]
+example: flash-photoshoot
+origin: rebuilt
+source_ids: [CES-036]
+old_name: flash-photography
+version: 1.0.0

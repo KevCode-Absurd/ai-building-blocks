@@ -1,0 +1,22 @@
+slug: skeleton-what-happens-if-video-ad-director
+name: Skeleton What Happens If Video Ad Director
+summary: Plans a narrated escalating "what happens if" ad lived by one cartoon skeleton, with a rung-by-rung storyboard and prompts.
+category: general
+boards: [ecommerce]
+type: skill
+role: render
+job: video
+level: advanced
+inputs:
+  - {type: script, required: true}
+  - {type: product_data, required: true}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: image_prompt}
+  - {type: video_prompt}
+uses: [skeleton-ladder-ad-script-format-rules]
+example: skeleton
+origin: rebuilt
+source_ids: [CES-137]
+old_name: skeleton-ads
+version: 1.0.0

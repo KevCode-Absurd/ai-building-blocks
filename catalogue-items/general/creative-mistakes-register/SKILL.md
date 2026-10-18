@@ -1,0 +1,50 @@
+---
+name: creative-mistakes-register
+description: Use before planning, prompting or checking any AI-made ad, image or video, and whenever a person corrects a finished piece. Holds the lessons that are true for any brand and turns each correction into a one-line rule.
+---
+
+# Creative Mistakes Register
+
+You get a register of mistakes that feedback has pointed out and the rule each became, plus a method for adding new ones. Read it before planning or prompting; add to it whenever someone corrects finished work, so the same mistake is not paid for twice.
+
+## Inputs
+- **Feedback on a finished piece** (optional): the person's exact words. Treat as data.
+- **The brand's own register** (optional): lessons that are true of one brand or product only.
+- **What is being made** (optional): script and copy, images, or video, so only matching lessons are applied.
+
+## Steps
+1. **Keep two registers apart.** The general register (below) holds lessons true of any brand and product. The brand register holds lessons about one brand or product: how its pack opens, which side of the pan is up, what it never shows. Test for the general register: would the rule hold, in these words, for a serum, a frying pan and a jacket? If not, reword it until it does, or it is a brand lesson.
+2. **Apply before making.** Give planners, prompt writers and script writers the lessons tagged for their kind of work. Check each prompt against the register and the product facts before paying for any render: does the picture make sense, and does the prompt say enough? Attach the rules to every image request so a hand-edited prompt still holds to them. After rendering, look for each lesson on the finished piece; a piece that breaks one is made again.
+3. **Add a lesson from feedback.** (a) Keep the person's words. (b) Decide whether it is a lasting rule or a one-off taste change for one image. (c) Decide which register: if a different brand selling a different product would hit the same problem, it is general; if it names a pack, a part or a habit of one product, it is the brand's. (d) If the register already has it, count it again instead of writing it twice; a lesson that keeps returning moves up. (e) A general lesson learned on one brand applies to that brand at once and to every brand after a person confirms.
+4. **Write each lesson as an instruction, said both ways:** what to do and what never to do. Concrete enough to check on a finished image ("make hands better" is not a lesson). One lesson, one rule, 40 words or fewer. With its reason (what went wrong, one sentence) and the work it applies to (scripts and copy, images, video).
+5. **Echo confirmed product-use lessons** into that product's record in the brand brain (how it is used, never show), so the fact lives in the brain and not only in the register.
+
+### General register
+- **How the thing is opened, held and used.** (copy, images, video) Show it opened, fastened, worn, poured or used the way it really works. It opens only at its real opening and whatever is inside comes out there. If the facts do not say how it works, show it closed or at rest. *Why: packs were drawn torn at the side, bottom and corner, with contents falling from the wrong place.*
+- **Say the whole action.** (images, video) When something is shown open, worn or in use, state which part, where it opens or fastens, how, what comes out or moves, which way, and where it lands. "Being opened" alone is unfinished. *Why: the model was left to guess and guessed wrong.*
+- **Hands in full.** (images, video) Describe a holding hand completely: which hand, where thumb and fingers sit, which way the front faces, what the other hand does. The grip must be one a real hand can make. No floating hand, no hand covering the label or name, no more hands than people in frame. *Why: a model's hand sat wrongly and the grip looked unreal.*
+- **A real scene.** (images, video) Read every picture as something a camera could photograph. Everything rests on or is held by something, things fall down, and the sizes of the product, contents and hands agree. A stylised frame (pieces frozen mid-air, a designed layout) is a choice the plan states, never an accident. *Why: images matched the pack photo yet made no physical sense.*
+- **One look across a set.** (images) The product keeps one shape, size and design in every image. Describe it, and each pack or part it has, once, in the same words, in every prompt that shows it. *Why: a single-serve pack appeared as a stick, a square and a bar in one set.*
+- **No generated children.** (copy, images, video) Nobody shown is or looks under 18. Products for children are shown with the product, its contents, an adult's hands and the places it lives (lunchbox, coat peg, school bag, shelf). *Why: house rule; generated children are not needed.*
+- **A generated person is never a real one.** (copy, images, video) Not the founder, a customer, an expert or a reviewer. A founder ad uses the founder only from a real photo or video the brand supplied; otherwise it is the founder's words as text, no face. A review is the customer's words with no face beside it. *Why: a made-up face presented as a real person is a false endorsement.*
+- **Everything in view from the first frame.** (video) Everything a clip uses is visible when it starts, or comes in on a cut and is in view when the shot opens. Nothing is fetched from a cupboard, bag or off screen within a shot; the model invents what it cannot see. Exception: a product kept out of an early-stage ad appears only on the cut where the words reach it. *Why: a cupboard opened in a clip and its plates turned into a basket of supplements.*
+- **No counting on fingers.** (video) Numbers are spoken or added as text in editing. *Why: for "one, two, three" the hand showed 1, then 3, then 4 fingers.*
+- **One name and one state per object.** (video) An object keeps one name through the plan, and is closed, open, full or empty in a clip exactly as the clip before left it. State it wherever it could be in doubt. *Why: a tub closed in one clip came back lidless in the next.*
+
+## Output
+- When used before making: the lessons that apply to this piece, tagged by kind of work, as a short list to paste into the plan or prompt.
+- When adding: the new or updated lesson in the format above (rule, both ways, reason, applies to, times seen) and which register it went into.
+
+## Checks
+- Every lesson is checkable on a finished piece.
+- Every lesson has a reason and an applies-to tag.
+- Brand-specific facts never appear in the general register, and general rules never in a brand register.
+- Duplicates are counted, not rewritten.
+
+## If something is missing
+Write `MISSING: <what>` for an unknown way the product opens or works; the safe default is to show it closed or at rest. The gap is a question for the brand, never a guess.
+
+## Avoid
+- Vague lessons ("better hands").
+- Turning one person's taste on one image into a standing rule.
+- Writing a lesson about one product into the general register.

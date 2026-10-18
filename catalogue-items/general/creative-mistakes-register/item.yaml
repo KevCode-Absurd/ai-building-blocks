@@ -1,0 +1,19 @@
+slug: creative-mistakes-register
+name: Creative Mistakes Register
+summary: A register of ad, image and video mistakes and the rules they became, plus how to log new ones.
+category: general
+boards: [ecommerce]
+type: skill
+role: check
+job: image
+level: intermediate
+inputs:
+  - {type: feedback_notes, required: false}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: lessons_register}
+uses: []
+origin: own
+source_ids: [CES-025]
+old_name: creative-lessons
+version: 1.0.0

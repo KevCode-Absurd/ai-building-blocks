@@ -1,0 +1,18 @@
+slug: copy-draft-edit-and-repair-pass
+name: Copy Draft Edit and Repair Pass
+summary: An editor's pass that protects the best true details and fixes only the lines that fail.
+category: general
+type: skill
+role: check
+job: copy
+level: advanced
+inputs:
+  - {type: copy_draft, required: true}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: audit_report}
+uses: [machine-sounding-copy-tells-check, copy-final-sweep-fifteen-questions]
+origin: rebuilt
+source_ids: [CES-022]
+old_name: copy-craft
+version: 1.0.0

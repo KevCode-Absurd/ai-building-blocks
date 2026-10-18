@@ -1,0 +1,22 @@
+slug: comic-page-desk-video-ad-director
+name: Comic Page Desk Video Ad Director
+summary: Plans a video ad shown as a comic page on a photographed desk, with moving ink, a page turn and the real product at the end.
+category: general
+boards: [ecommerce]
+type: skill
+role: render
+job: video
+level: advanced
+inputs:
+  - {type: script, required: true}
+  - {type: product_data, required: true}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: image_prompt}
+  - {type: video_prompt}
+uses: [comic-page-ad-script-format-rules]
+example: comic
+origin: rebuilt
+source_ids: [CES-021]
+old_name: comic-book-ad
+version: 1.0.0

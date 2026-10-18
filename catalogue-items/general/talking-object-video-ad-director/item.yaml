@@ -1,0 +1,22 @@
+slug: talking-object-video-ad-director
+name: Talking Object Video Ad Director
+summary: Picks which household object talks and writes the character, still and clip prompts for a first-person object monologue ad.
+category: general
+boards: [ecommerce]
+type: skill
+role: render
+job: video
+level: advanced
+inputs:
+  - {type: script, required: true}
+  - {type: product_data, required: true}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: image_prompt}
+  - {type: video_prompt}
+uses: [talking-object-ad-script-format-rules]
+example: talking-object
+origin: rebuilt
+source_ids: [CES-141]
+old_name: talking-object-ad
+version: 1.0.0

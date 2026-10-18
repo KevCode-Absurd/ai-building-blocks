@@ -26,3 +26,30 @@ data_and_pages:
   email_flow:        {desc: "An email/SMS flow: trigger, timing, messages, segments."}
   audit_report:      {desc: "Findings with evidence, severity, missing inputs and next actions."}
   plan:              {desc: "A dated plan: what to do, in what order, with a decision rule for each step."}
+# Added 2026-10-18 in the skill pass.
+production:
+  copy_draft:      {desc: "A draft of any copy (ad, page, email or script) that a check or edit pass works on."}
+  angle_library:   {desc: "Ranked selling angles, each with the customer words and proof behind it."}
+  objection_map:   {desc: "Each buyer doubt paired with the proof or answer that settles it, and where it goes on the page."}
+  ad_style_dna:    {desc: "What makes a reference ad work (structure, pacing, look), described so it can be reused without copying."}
+  design_direction: {desc: "A page's visual direction: type, colour, layout rules and what to avoid."}
+  page_layout_spec: {desc: "A section-by-section layout for a page, with what each section holds."}
+  web_page:        {desc: "A built or live web page, as a URL or saved HTML."}
+  store_capture:   {desc: "Saved evidence from a storefront visit: screenshots, page text and what was observed, with dates."}
+  theme_files:     {desc: "Shopify theme files (Liquid sections, settings) ready to upload."}
+  brand_guide:     {desc: "A printable brand guide: voice, look, do and don't, with examples."}
+  lessons_register: {desc: "What past creative taught: what worked, what failed and why, with dates."}
+  feedback_notes:  {desc: "A person's notes on an output: what to keep, change or drop."}
+  image_plan:      {desc: "What an image should show and say, before any prompt is written."}
+  approved_image:  {desc: "An image a person has approved for use."}
+  upscaled_image:  {desc: "An approved image enlarged for print or large placements, checked for new defects."}
+  shot_list:       {desc: "A video broken into shots with framing, motion, timing and on-screen text."}
+  video_prompt:    {desc: "A render-ready prompt for one video shot, with the references it uses."}
+  footage:         {desc: "Raw or generated video clips to edit."}
+  edit_plan:       {desc: "A cut list: which takes, in what order, with trims, captions and sound."}
+  avatar_sheet:    {desc: "Reference images that keep one character looking the same across shots."}
+  product_photos:  {desc: "Photos of the real product, labelled by angle and use."}
+  truth_sheet:     {desc: "What the product really looks like (shape, colour, label text, size), read from photos, so images stay accurate."}
+  photo_set:       {desc: "A set of generated product photos in one style, checked against the truth sheet."}
+  gallery_plan:    {desc: "The planned frames of a product page image gallery, one job per frame."}
+  pdp_images:      {desc: "Finished product page gallery images with QA notes."}

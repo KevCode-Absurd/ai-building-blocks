@@ -1,0 +1,21 @@
+slug: native-ad-image-brief-writer
+name: Native Ad Image Brief Writer
+summary: Picks the right native image type from your approved story ad copy and writes the image brief and a ready-to-paste image prompt.
+category: general
+boards: [ecommerce]
+type: skill
+role: orchestrate
+job: image
+level: intermediate
+inputs:
+  - {type: ad_copy, required: true}
+  - {type: persona, required: false}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: image_prompt}
+uses: [native-ad-image-candid-moment, native-ad-image-worn-object-photo, native-ad-image-handwritten-note, native-ad-image-sticky-note-photo, native-ad-image-phone-notes-screenshot, native-ad-image-phone-reminders-screenshot, native-ad-image-two-person-text-thread, native-ad-image-group-chat-screenshot, native-ad-image-dont-buy-this, native-ad-image-one-star-review-card, native-ad-image-news-bulletin, native-ad-image-marked-up-photo, native-ad-image-problem-leftover, native-ad-image-symptom-in-routine, native-ad-image-room-that-changed, native-ad-image-test-result-photo, native-ad-image-feared-next-step, native-ad-image-drawn-panels, native-ad-image-article-headline-photo, native-ad-image-abstract-curiosity]
+example: native
+origin: own
+source_ids: [CES-054]
+old_name: native-ad-creative
+version: 1.0.0

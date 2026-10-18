@@ -1,0 +1,20 @@
+slug: long-narrated-video-ad-script-format-rules
+name: Long Narrated Video Ad Script Format Rules
+summary: "Rules for a 60-second to 10-minute narrated video ad: beats by length, loops, proof counted, editor-ready notes."
+category: general
+boards: [ecommerce]
+type: skill
+role: make
+job: video
+level: advanced
+inputs:
+  - {type: brief, required: true}
+  - {type: persona, required: false}
+  - {type: brand_brain, required: true}
+outputs:
+  - {type: script}
+uses: []
+origin: own
+source_ids: [CES-125]
+old_name: script-format-vsl
+version: 1.0.0

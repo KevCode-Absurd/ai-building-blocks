@@ -3,8 +3,9 @@ import {
   Background, BackgroundVariant, Controls, Handle, Position, ReactFlow, ReactFlowProvider, addEdge, useEdgesState, useNodesState, useReactFlow,
   type Connection, type Edge, type Node, type NodeProps,
 } from "@xyflow/react";
+import "@xyflow/react/dist/base.css";
 import { RoleMark, SearchIcon, Toast, useTitle } from "../components";
-import { type Block, type Catalogue, ROLES, portLabel, useCatalogue } from "../lib/data";
+import { type Block, type Catalogue, ROLES, portLabel, useCatalogue, wireSteps } from "../lib/data";
 import { type Flow, flows, takeQueued, uid, useStore } from "../lib/store";
 import { buildHandoffZip, download, orderFlow, typeMismatches } from "../lib/handoff";
 
@@ -49,9 +50,9 @@ const fromFlow = (f: Flow): { nodes: BlockNode[]; edges: Edge[] } => ({
 });
 
 /** Lays a list of blocks out left to right as a chain, wrapping every four. */
-function chain(slugs: string[], start = { x: 40, y: 120 }) {
+function chain(c: Catalogue, slugs: string[], start = { x: 40, y: 120 }) {
   const nodes: BlockNode[] = slugs.map((slug, i) => ({ id: uid(), type: "block", position: { x: start.x + (i % 4) * 310, y: start.y + Math.floor(i / 4) * 200 }, data: { slug } }));
-  const edges: Edge[] = nodes.slice(1).map((n, i) => ({ id: uid(), source: nodes[i].id, target: n.id }));
+  const edges: Edge[] = wireSteps(c, slugs).map(([a, b]) => ({ id: uid(), source: nodes[a].id, target: nodes[b].id }));
   return { nodes, edges };
 }
 
@@ -122,12 +123,18 @@ function Stage({ c }: { c: Catalogue }) {
   // Blocks queued from a block page ("Add to canvas").
   useEffect(() => {
     const q = takeQueued();
-    if (!q.length) return;
-    const known = q.filter((s) => c.bySlug[s]);
-    const maxY = nodes.reduce((m, n) => Math.max(m, n.position.y), -80);
-    const added = chain(known, { x: 40, y: maxY + 200 });
-    setNodes((ns) => [...ns, ...added.nodes]);
-    setEdges((es) => [...es, ...added.edges]);
+    if (!q.slugs.length) return;
+    const known = q.slugs.filter((s) => c.bySlug[s]);
+    if (q.name) {
+      // A ready-made workflow or a kit opens as its own canvas; the one that was open stays saved.
+      const g = chain(c, known);
+      setFlowId(uid()); setName(q.name); setNodes(g.nodes); setEdges(g.edges);
+    } else {
+      const maxY = nodes.reduce((m, n) => Math.max(m, n.position.y), -80);
+      const added = chain(c, known, { x: 40, y: maxY + 200 });
+      setNodes((ns) => [...ns, ...added.nodes]);
+      setEdges((es) => [...es, ...added.edges]);
+    }
     setToast(known.length === 1 ? "Block added to the canvas" : `${known.length} blocks added`);
     setTimeout(() => fitView({ padding: 0.2, duration: 300 }), 50);
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
@@ -170,7 +177,7 @@ function Stage({ c }: { c: Catalogue }) {
   };
   const loadTemplate = (t: Block) => {
     if (nodes.length && !confirm(`Replace what's on the canvas with "${t.name}"?`)) return;
-    const g = chain(t.steps.map((s) => s.uses).filter((s) => c.bySlug[s]));
+    const g = chain(c, t.steps.map((s) => s.uses).filter((s) => c.bySlug[s]));
     setFlowId(uid()); setName(t.name); setNodes(g.nodes); setEdges(g.edges);
     setTimeout(() => fitView({ padding: 0.2, duration: 300 }), 50);
   };

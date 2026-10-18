@@ -1,0 +1,21 @@
+slug: native-story-ad-copy-long-form
+name: Native Story Ad Copy (Long Form)
+summary: Writes a long, first-person-style story ad from your research, with a form, an arc and an honest narrator.
+category: general
+boards: [ecommerce]
+type: skill
+role: make
+job: ads
+level: advanced
+inputs:
+  - {type: voc_reviews, required: true}
+  - {type: brief, required: true}
+  - {type: product_data, required: true}
+outputs:
+  - {type: ad_copy}
+uses: [long-story-copy-for-cold-buyers, read-aloud-script-polish]
+example: native
+origin: own
+source_ids: [CES-053]
+old_name: native-ad-copy
+version: 1.0.0

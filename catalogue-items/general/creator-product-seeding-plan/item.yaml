@@ -1,0 +1,21 @@
+slug: creator-product-seeding-plan
+name: Creator Product Seeding Plan
+summary: A plan for sending your product to many small creators with no strings, a short note to go with it, and rules for who earns paid backing.
+category: general
+boards: [ecommerce]
+type: skill
+role: make
+job: organic
+level: intermediate
+inputs:
+  - {type: brand_brain, required: true}
+  - {type: persona, required: false}
+outputs:
+  - {type: plan}
+  - {type: brief}
+uses: []
+example: brief-ugc
+origin: rebuilt
+source_ids: [CES-092]
+old_name: organic-content
+version: 1.0.0

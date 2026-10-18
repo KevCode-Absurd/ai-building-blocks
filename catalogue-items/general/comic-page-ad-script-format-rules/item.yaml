@@ -1,0 +1,21 @@
+slug: comic-page-ad-script-format-rules
+name: Comic Page Ad Script Format Rules
+summary: Plans a comic ad, still page or desk-filmed video, with one claim, short captions and one accent colour.
+category: general
+boards: [ecommerce]
+type: skill
+role: make
+job: video
+level: intermediate
+inputs:
+  - {type: brief, required: true}
+  - {type: brand_brain, required: true}
+outputs:
+  - {type: script}
+  - {type: image_prompt}
+uses: []
+example: comic
+origin: own
+source_ids: [CES-112]
+old_name: script-format-comic
+version: 1.0.0

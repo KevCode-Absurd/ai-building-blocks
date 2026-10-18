@@ -1,0 +1,21 @@
+slug: same-ad-new-format-remake
+name: Same Ad, New Format Remake
+summary: Rebuilds one of your existing ads in a different format (video to carousel, static to video, live action to animation) with every word kept.
+category: general
+boards: [ecommerce]
+type: skill
+role: render
+job: ads
+level: advanced
+inputs:
+  - {type: script, required: true}
+  - {type: product_data, required: false}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: script}
+  - {type: image_prompt}
+uses: []
+origin: own
+source_ids: [CES-003]
+old_name: ad-reference-exact
+version: 1.0.0

@@ -1,0 +1,28 @@
+slug: brand-brain-to-video-ad-script-and-shot-list
+name: Brand Brain to Video Ad Script and Shot List
+summary: "From a website and customer reviews to a checked video ad script and a shot list ready for a video tool."
+category: orchestrator
+boards: [ecommerce]
+type: workflow
+role: orchestrate
+job: video
+level: advanced
+inputs:
+  - {type: web_page, required: true}
+  - {type: voc_reviews, required: true}
+  - {type: persona, required: true}
+  - {type: product_data, required: true}
+  - {type: performance_sheet, required: false}
+outputs:
+  - {type: shot_list}
+  - {type: audit_report}
+uses: [brand-knowledge-folder-from-website, customer-language-to-angle-library, video-ad-script-from-customer-research, read-aloud-script-polish, video-ad-shot-list-director, meta-ad-policy-check]
+steps:
+  - {uses: brand-knowledge-folder-from-website, note: "Build the brand brain the later steps read: facts, voice, offers, claims."}
+  - {uses: customer-language-to-angle-library, note: "Turn customer reviews into ranked angles in the buyers' own words."}
+  - {uses: video-ad-script-from-customer-research, note: "Write the script from the top angle, the brand brain and the product facts."}
+  - {uses: read-aloud-script-polish, note: "Make every line sound natural when spoken."}
+  - {uses: video-ad-shot-list-director, note: "Break the polished script into shots for a video tool."}
+  - {uses: meta-ad-policy-check, note: "Check the script and on-screen text against ad policy before anything is made."}
+origin: own
+version: 1.0.0

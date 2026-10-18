@@ -1,0 +1,18 @@
+slug: brand-evidence-records-for-creative
+name: Brand Evidence Records for Creative
+summary: Four separate brand records (product, buyer, voice, visual rules) and the right slice for each next step.
+category: general
+type: skill
+role: compress
+job: brand
+level: intermediate
+inputs:
+  - {type: product_data, required: true}
+  - {type: voc_reviews, required: false}
+outputs:
+  - {type: brand_brain}
+uses: []
+origin: rebuilt
+source_ids: [CES-082]
+old_name: operator-creative/brand
+version: 1.0.0

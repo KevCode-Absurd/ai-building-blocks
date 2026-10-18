@@ -1,0 +1,21 @@
+slug: founder-video-series-plan
+name: Founder Video Series Plan
+summary: A ten-week plan of short phone videos a founder films, each with its opening, its purpose, its beats and what must be real.
+category: general
+boards: [ecommerce]
+type: skill
+role: make
+job: organic
+level: beginner
+inputs:
+  - {type: brand_brain, required: true}
+  - {type: persona, required: false}
+outputs:
+  - {type: plan}
+  - {type: brief}
+uses: []
+example: brief-founder
+origin: rebuilt
+source_ids: [CES-092]
+old_name: organic-content
+version: 1.0.0

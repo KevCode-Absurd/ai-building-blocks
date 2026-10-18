@@ -1,0 +1,21 @@
+slug: watercolor-painted-ad-script-format-rules
+name: Watercolor Painted Ad Script Format Rules
+summary: Rules for a calm narrated ad or still painted in watercolour, built around one revealing pigment move.
+category: general
+boards: [ecommerce]
+type: skill
+role: make
+job: video
+level: intermediate
+inputs:
+  - {type: brief, required: true}
+  - {type: brand_brain, required: true}
+outputs:
+  - {type: script}
+  - {type: image_prompt}
+uses: []
+example: watercolor
+origin: rebuilt
+source_ids: [CES-126]
+old_name: script-format-watercolor
+version: 1.0.0

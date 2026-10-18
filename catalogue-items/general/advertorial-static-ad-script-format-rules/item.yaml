@@ -1,0 +1,22 @@
+slug: advertorial-static-ad-script-format-rules
+name: Advertorial Static Ad Script Format Rules
+summary: Rules and a brief for a static ad that reads like an article and leads to a long page, on one claim.
+category: general
+boards: [ecommerce]
+type: skill
+role: make
+job: copy
+level: intermediate
+inputs:
+  - {type: brief, required: true}
+  - {type: brand_brain, required: true}
+  - {type: landing_page, required: true}
+outputs:
+  - {type: ad_copy}
+  - {type: image_prompt}
+uses: []
+example: advertorial-static
+origin: own
+source_ids: [CES-104]
+old_name: script-format-advertorial
+version: 1.0.0

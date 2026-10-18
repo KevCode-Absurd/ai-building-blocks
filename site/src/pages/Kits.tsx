@@ -31,7 +31,7 @@ export default function Kits() {
           <div className="kit-head">
             <input value={k.name} onChange={(e) => kits.rename(k.id, e.target.value)} aria-label="Kit name" />
             <span className="small">{k.slugs.length} block{k.slugs.length === 1 ? "" : "s"}</span>
-            <button className="btn btn-primary btn-sm" disabled={!k.slugs.length} onClick={() => { queueForCanvas(k.slugs); nav("/canvas"); }}>Open on canvas</button>
+            <button className="btn btn-primary btn-sm" disabled={!k.slugs.length} onClick={() => { queueForCanvas(k.slugs, k.name); nav("/canvas"); }}>Open on canvas</button>
             <button className="btn btn-quiet btn-sm" onClick={() => { if (confirm(`Delete the kit "${k.name}"? The blocks stay in the library.`)) kits.remove(k.id); }}>Delete</button>
           </div>
           <div className="kit-items">

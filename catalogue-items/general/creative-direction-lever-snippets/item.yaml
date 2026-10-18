@@ -1,0 +1,17 @@
+slug: creative-direction-lever-snippets
+name: Creative Direction Lever Snippets
+summary: Short do and do-not snippets for look, product, selling, finish and pace; paste only the stops you choose.
+category: general
+type: prompt
+role: make
+job: ads
+level: intermediate
+inputs:
+  - {type: brief, required: true}
+outputs:
+  - {type: brief}
+uses: []
+origin: own
+source_ids: [CES-142]
+old_name: taste
+version: 1.0.0

@@ -1,0 +1,22 @@
+slug: anime-video-ad-director
+name: Anime Video Ad Director
+summary: Writes still and clip prompts for a 2D anime-style video ad with one locked hero, scene and drawing style.
+category: general
+boards: [ecommerce]
+type: skill
+role: render
+job: video
+level: advanced
+inputs:
+  - {type: script, required: true}
+  - {type: product_data, required: true}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: image_prompt}
+  - {type: video_prompt}
+uses: [anime-story-ad-script-format-rules]
+example: anime
+origin: rebuilt
+source_ids: [CES-008]
+old_name: anime-comic-animation
+version: 1.0.0

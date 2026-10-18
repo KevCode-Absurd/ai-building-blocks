@@ -4,16 +4,17 @@ import { type Block, type Catalogue, ROLES, type Role, adImage, portLabel, useCa
 
 // The hero chain and the featured rows name real blocks; if a slug is missing the item is skipped.
 const HERO_CHAIN: { slug: string; role: Role; name: string }[] = [
-  { slug: "brand-brain-builder", role: "source", name: "Brand brain builder" },
-  { slug: "customer-review-mining-to-ad-angles", role: "compress", name: "Review mining to ad angles" },
-  { slug: "static-ad-copy-from-brand-brain", role: "make", name: "Static ad copywriter" },
-  { slug: "image-prompt-writer", role: "render", name: "Image prompt writer" },
-  { slug: "pre-launch-ad-checklist", role: "check", name: "Pre-launch ad check" },
+  { slug: "brand-knowledge-folder-from-website", role: "source", name: "Brand brain from your website" },
+  { slug: "customer-language-to-angle-library", role: "compress", name: "Customer words to angles" },
+  { slug: "static-ad-copy-and-layout-planner", role: "make", name: "Ad copy and layout" },
+  { slug: "static-ad-image-prompt-compiler", role: "render", name: "Image prompts" },
+  { slug: "pre-launch-ad-creative-checklist", role: "check", name: "Pre-launch check" },
 ];
 const HERO_AD = "example-018";
+const ANATOMY = "customer-language-to-angle-library";
 export const START_HERE = [
-  "brand-brain-builder", "customer-review-mining-to-ad-angles", "brand-voice-check", "landing-page-from-brand-brain",
-  "video-ad-script-from-customer-research", "meta-ad-policy-check",
+  "brand-knowledge-folder-from-website", "customer-language-to-angle-library", "ad-copy-brand-voice-check",
+  "landing-page-copy-from-ad-and-facts", "video-ad-script-from-customer-research", "meta-ad-policy-check",
 ];
 
 function pick(c: Catalogue | null, slugs: string[]) {
@@ -32,7 +33,7 @@ function HeroChain({ c }: { c: Catalogue | null }) {
               {i > 0 && <div className="chain-link" style={{ animationDelay: `${0.25 + i * 0.32 - 0.1}s` }} />}
               <div className="chain-node" style={{ animationDelay: `${0.25 + i * 0.32}s` }}>
                 <div className="role"><RoleMark role={b?.role ?? n.role} /></div>
-                <div className="nm">{b?.name ?? n.name}</div>
+                <div className="nm">{n.name}</div>
                 <div className="sl">{b?.slug ?? n.slug}</div>
               </div>
             </div>
@@ -48,14 +49,14 @@ function HeroChain({ c }: { c: Catalogue | null }) {
 }
 
 function Anatomy({ b }: { b: Block | undefined }) {
-  const name = b?.name ?? "Review Mining to Ad Angles";
+  const name = b?.name ?? "Customer Language to Angle Library";
   return (
     <div className="anatomy">
       <div className="part">
         <span className="tab in" /><span className="tab out" />
         <RoleMark role={b?.role ?? "compress"} />
         <div className="nm">{name}</div>
-        <div className="sl">{b?.slug ?? "customer-review-mining-to-ad-angles"}</div>
+        <div className="sl">{b?.slug ?? "customer-language-to-angle-library"}</div>
         <p className="sm">{b?.summary ?? "Reads your customer reviews and returns the problems, doubts and words buyers use, ranked into angles you can write ads from."}</p>
         <div className="ports">
           <div><h5>Goes in</h5>{(b?.inputs ?? [{ type: "voc_reviews", required: true }, { type: "brand_brain", required: false }]).map((p) => <span key={p.type} className={`chip${p.required ? "" : " opt"}`}>{portLabel(p.type)}</span>)}</div>
@@ -105,7 +106,7 @@ export default function Home() {
             <h2 className="h1">Every block does one job, and says exactly how.</h2>
             <p className="lede">Prompts, skills and checks, each small enough to read in a few minutes and strict enough to give the same quality every time.</p>
           </div>
-          <Anatomy b={c?.bySlug["customer-review-mining-to-ad-angles"]} />
+          <Anatomy b={c?.bySlug[ANATOMY]} />
           <div className="principles" style={{ marginTop: 96, gridTemplateColumns: "repeat(3, minmax(0, 1fr))" }}>
             {ROLES.map((r) => (
               <div key={r.id}>
@@ -179,25 +180,25 @@ export default function Home() {
               ├─ workflow.json<br />
               ├─ README.txt<br />
               └─ skills/<br />
-              &nbsp;&nbsp;&nbsp;├─ brand-brain-builder/SKILL.md<br />
-              &nbsp;&nbsp;&nbsp;├─ customer-review-mining-to-ad-angles/SKILL.md<br />
-              &nbsp;&nbsp;&nbsp;└─ image-prompt-writer/SKILL.md
+              &nbsp;&nbsp;&nbsp;├─ brand-knowledge-folder-from-website/SKILL.md<br />
+              &nbsp;&nbsp;&nbsp;├─ customer-language-to-angle-library/SKILL.md<br />
+              &nbsp;&nbsp;&nbsp;└─ static-ad-copy-and-layout-planner/SKILL.md
             </div>
             <pre>{`# Handoff: Weekly ads
 
-This pack runs 3 building blocks in order and ends with: image prompt.
+This pack runs 3 building blocks in order and ends with: ad copy, image prompt.
 
 ## Before you start
-- Brand brain, for step 1
-- Voc reviews, for step 2
+- Web page, for step 1
+- Customer reviews, for steps 1, 2
 
 ## Steps
-### Step 1: Brand Brain Builder
-- Skill: skills/brand-brain-builder/SKILL.md
+### Step 1: Brand Knowledge Folder From Website
+- Skill: skills/brand-knowledge-folder-from-website/SKILL.md
 - Produces: brand brain
 - Before moving on: run the skill's Checks.
 
-### Step 2: Review Mining to Ad Angles
+### Step 2: Customer Language to Angle Library
 - Reads: the output of step 1
 …`}</pre>
           </div>

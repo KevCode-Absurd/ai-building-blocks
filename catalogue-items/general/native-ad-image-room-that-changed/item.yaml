@@ -1,0 +1,21 @@
+slug: native-ad-image-room-that-changed
+name: "Native Ad Image: Room That Changed"
+summary: "An empty, real room whose leftover objects show how the problem has changed someone's life, with no product and nobody in frame."
+category: general
+boards: [ecommerce]
+type: skill
+role: render
+job: image
+level: intermediate
+inputs:
+  - {type: ad_copy, required: true}
+  - {type: persona, required: false}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: image_prompt}
+uses: [native-ad-image-brief-writer]
+example: native
+origin: rebuilt
+source_ids: [CES-062]
+old_name: emotional-scene
+version: 1.0.0

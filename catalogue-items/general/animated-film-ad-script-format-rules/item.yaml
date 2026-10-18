@@ -1,0 +1,21 @@
+slug: animated-film-ad-script-format-rules
+name: Animated Film Ad Script Format Rules
+summary: Writes an ad in a premium 3D animated-feature look, a narrated scene or a film-still image, with the feeling acted on the face.
+category: general
+boards: [ecommerce]
+type: skill
+role: make
+job: video
+level: advanced
+inputs:
+  - {type: brief, required: true}
+  - {type: brand_brain, required: true}
+outputs:
+  - {type: script}
+  - {type: image_prompt}
+uses: []
+example: cinematic-3d
+origin: rebuilt
+source_ids: [CES-108]
+old_name: script-format-cinematic-3d
+version: 1.0.0

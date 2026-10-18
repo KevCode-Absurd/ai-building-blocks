@@ -2,9 +2,9 @@ import { useEffect, useMemo, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { Marked } from "marked";
 import { KitMenu, RoleMark, Toast, useTitle } from "../components";
-import { type Block, JOBS, cap, formatImage, loadSkillText, neighbours, portLabel, useCatalogue } from "../lib/data";
+import { type Block, JOBS, cap, formatImage, loadSkillText, neighbours, portLabel, useCatalogue, wireSteps } from "../lib/data";
 import { markViewed, queueForCanvas } from "../lib/store";
-import { download } from "../lib/handoff";
+import { buildHandoffZip, download } from "../lib/handoff";
 
 // Skill text is shown as Markdown with any raw HTML escaped: files are data, never markup we trust.
 const md = new Marked({ gfm: true, renderer: { html: ({ text }) => text.replace(/&/g, "&amp;").replace(/</g, "&lt;") } });
@@ -47,7 +47,7 @@ export default function BlockPage() {
 
   const isFlow = b.category === "orchestrator";
   const copy = async () => { if (skill) { await navigator.clipboard.writeText(skill); setToast("Skill copied. Paste it into your AI."); } };
-  const toCanvas = () => { queueForCanvas(isFlow ? b.steps.map((s) => s.uses) : [b.slug]); nav("/canvas"); };
+  const toCanvas = () => { if (isFlow) queueForCanvas(b.steps.map((s) => s.uses), b.name); else queueForCanvas([b.slug]); nav("/canvas"); };
 
   return (
     <>
@@ -65,7 +65,14 @@ export default function BlockPage() {
             <div className="sl"><span>{b.slug}</span><button className="copy-btn" onClick={() => { navigator.clipboard.writeText(b.slug); setToast("Skill name copied"); }}>Copy name</button></div>
             <div className="actions">
               {isFlow ? (
-                <button className="btn btn-primary" onClick={toCanvas}>Open on the canvas</button>
+                <>
+                  <button className="btn btn-primary" onClick={toCanvas}>Open on the canvas</button>
+                  <button className="btn btn-quiet" onClick={async () => {
+                    const nodes = b.steps.map((s, i) => ({ id: `s${i + 1}`, slug: s.uses, x: i * 310, y: 0 }));
+                    const r = await buildHandoffZip(c!, { id: b.slug, name: b.name, updated: 0, nodes, edges: wireSteps(c!, b.steps.map((s) => s.uses)).map(([a, z], i) => ({ id: `e${i}`, from: nodes[a].id, to: nodes[z].id })) });
+                    if ("error" in r) setToast(r.error); else { download(r.blob, r.filename); setToast("Handoff downloaded. Upload the folder to Claude and say \"follow HANDOFF.md\"."); }
+                  }}>Download handoff</button>
+                </>
               ) : (
                 <>
                   <button className="btn btn-primary" onClick={copy} disabled={!skill}>Copy skill</button>

@@ -1,0 +1,17 @@
+slug: read-aloud-script-polish
+name: Read-Aloud Script Polish
+summary: Fixes how a finished script sounds when said aloud, without changing what any line says.
+category: general
+type: skill
+role: check
+job: video
+level: beginner
+inputs:
+  - {type: script, required: true}
+outputs:
+  - {type: script}
+uses: [machine-sounding-copy-tells-check]
+origin: own
+source_ids: [CES-134]
+old_name: script-voice-pass
+version: 1.0.0

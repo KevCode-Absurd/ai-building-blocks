@@ -1,0 +1,17 @@
+slug: stage-context-packet-design
+name: Stage Context Packet Design
+summary: Plans what each stage of an AI creative pipeline is sent and returns, with claims kept whole and runs resumable.
+category: general
+type: skill
+role: orchestrate
+job: ops
+level: expert
+inputs:
+  - {type: plan, required: true}
+outputs:
+  - {type: plan}
+uses: []
+origin: rebuilt
+source_ids: [CES-091]
+old_name: operator-systems
+version: 1.0.0

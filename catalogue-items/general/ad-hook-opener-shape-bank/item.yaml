@@ -1,0 +1,17 @@
+slug: ad-hook-opener-shape-bank
+name: Ad Hook Opener Shape Bank
+summary: Opening-line shapes tagged by stage and proof need, plus how to name the right buyer in three seconds.
+category: general
+type: skill
+role: source
+job: copy
+level: beginner
+inputs:
+  - {type: brief, required: true}
+outputs:
+  - {type: hooks}
+uses: [scroll-stopping-hook-writer-and-grader]
+origin: rebuilt
+source_ids: [CES-043]
+old_name: hook-bank
+version: 1.0.0

@@ -1,0 +1,18 @@
+slug: buyer-led-selling-fact-to-appeal
+name: "Buyer-Led Selling: Fact To Appeal"
+summary: Picks the one verified product fact that earns a buyer's belief and carries it through copy, pictures and edits.
+category: general
+type: prompt
+role: make
+job: copy
+level: intermediate
+inputs:
+  - {type: brief, required: true}
+  - {type: product_data, required: true}
+outputs:
+  - {type: ad_copy}
+uses: []
+origin: own
+source_ids: [CES-014]
+old_name: buyer-led-selling
+version: 1.0.0

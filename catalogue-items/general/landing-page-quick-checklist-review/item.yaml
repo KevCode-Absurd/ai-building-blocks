@@ -1,0 +1,23 @@
+slug: landing-page-quick-checklist-review
+name: Landing Page Quick Checklist Review
+summary: Runs a landing page or page copy through 30 pass/warn/fail checks in the order a buyer needs, and ranks the fixes.
+category: general
+boards: [ecommerce]
+type: prompt
+role: check
+job: page
+level: beginner
+inputs:
+  - type: landing_page
+    required: true
+  - type: brand_brain
+    required: false
+  - type: design_direction
+    required: false
+outputs:
+  - {type: audit_report}
+uses: []
+origin: own
+source_ids: [CES-050]
+old_name: landing-pages
+version: 1.0.0

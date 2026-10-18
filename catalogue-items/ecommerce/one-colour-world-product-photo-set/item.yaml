@@ -1,0 +1,19 @@
+slug: one-colour-world-product-photo-set
+name: One-Colour-World Product Photo Set
+summary: Eight to fifteen product photos that share one colour scheme, light and prop kit, plus an optional silent montage.
+category: ecommerce
+type: skill
+role: render
+job: image
+level: advanced
+inputs:
+  - {type: product_photos, required: true}
+  - {type: brand_brain, required: true}
+outputs:
+  - {type: photo_set}
+uses: [product-truth-sheet-from-photos]
+example: instant-photoshoot
+origin: rebuilt
+source_ids: [CES-049]
+old_name: instant-photoshoot
+version: 1.0.0

@@ -1,0 +1,26 @@
+slug: competitor-ad-teardown-brief
+name: Competitor Ad Teardown Brief
+summary: Reads competitor ads one by one, finds the repeated formats and hooks and the gaps, and says how you would make your own version.
+category: general
+boards: [ecommerce]
+type: skill
+role: compress
+job: research
+level: advanced
+inputs:
+  - type: reference_set
+    required: true
+  - type: brand_brain
+    required: true
+  - type: competitor_set
+    required: false
+  - type: shortlist
+    required: false
+outputs:
+  - {type: ad_breakdowns}
+  - {type: brief}
+uses: [competitor-ad-swipe-board]
+origin: rebuilt
+source_ids: [CES-038]
+old_name: foreplay-creative-strategy
+version: 1.0.0

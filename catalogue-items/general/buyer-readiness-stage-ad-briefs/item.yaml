@@ -1,0 +1,19 @@
+slug: buyer-readiness-stage-ad-briefs
+name: Buyer Readiness Stage Ad Briefs
+summary: Short stage briefs that make an ad open, name the product and ask in the right way for how much the buyer knows.
+category: general
+boards: [ecommerce]
+type: skill
+role: make
+job: copy
+level: intermediate
+inputs:
+  - {type: brief, required: true}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: brief}
+uses: []
+origin: rebuilt
+source_ids: [CES-015]
+old_name: buyer-stage
+version: 1.0.0

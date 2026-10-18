@@ -1,0 +1,19 @@
+slug: selling-points-list-writer
+name: Selling Points List Writer
+summary: Turns a feature list into a short set of points that each sell one benefit with a reason to believe it.
+category: general
+boards: [ecommerce]
+type: skill
+role: make
+job: copy
+level: intermediate
+inputs:
+  - {type: product_data, required: true}
+  - {type: brief, required: true}
+outputs:
+  - {type: ad_copy}
+uses: [buyer-read-before-writing-copy]
+origin: rebuilt
+source_ids: [CES-022]
+old_name: copy-craft
+version: 1.0.0

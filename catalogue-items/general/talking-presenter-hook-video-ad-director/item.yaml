@@ -1,0 +1,24 @@
+slug: talking-presenter-hook-video-ad-director
+name: Talking Presenter Hook Video Ad Director
+summary: Writes 2 or 3 talking hook lines with different levers and the prompts for a fictional AI presenter to say them.
+category: general
+boards: [ecommerce]
+type: skill
+role: render
+job: video
+level: advanced
+inputs:
+  - {type: video_ads, required: true}
+  - {type: product_data, required: true}
+  - {type: persona, required: true}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: hooks}
+  - {type: image_prompt}
+  - {type: video_prompt}
+uses: [ai-ugc-video-ad-director]
+example: new-hooks
+origin: rebuilt
+source_ids: [CES-007]
+old_name: ai-ugc-hooks
+version: 1.0.0

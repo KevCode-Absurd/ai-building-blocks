@@ -1,0 +1,18 @@
+slug: paired-creative-quality-evaluation
+name: Paired Creative Quality Evaluation
+summary: Compares matched before-and-after creative with blind scoring, hard failures and cost per accepted asset.
+category: general
+type: skill
+role: check
+job: analysis
+level: expert
+inputs:
+  - {type: static_ads, required: true}
+  - {type: brief, required: true}
+outputs:
+  - {type: audit_report}
+uses: [stage-context-packet-design]
+origin: rebuilt
+source_ids: [CES-091, CES-090]
+old_name: operator-systems / operator-performance (paired evaluation)
+version: 1.0.0

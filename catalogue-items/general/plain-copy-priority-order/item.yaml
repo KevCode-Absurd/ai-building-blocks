@@ -1,0 +1,17 @@
+slug: plain-copy-priority-order
+name: Plain Copy Priority Order
+summary: A five-rule card that puts plain speech first, then selling, story, brand language and brand devices.
+category: general
+type: prompt
+role: make
+job: copy
+level: beginner
+inputs:
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: copy_draft}
+uses: []
+origin: own
+source_ids: [CES-023]
+old_name: copy-floor
+version: 1.0.0

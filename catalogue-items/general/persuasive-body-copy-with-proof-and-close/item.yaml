@@ -1,0 +1,20 @@
+slug: persuasive-body-copy-with-proof-and-close
+name: Persuasive Body Copy with Proof and Close
+summary: Writes the argument, proof placement and one clear closing ask for longer sales copy.
+category: general
+boards: [ecommerce]
+type: skill
+role: make
+job: copy
+level: advanced
+inputs:
+  - {type: brief, required: true}
+  - {type: product_data, required: true}
+  - {type: offer, required: false}
+outputs:
+  - {type: ad_copy}
+uses: [buyer-read-before-writing-copy, sales-opening-picker-six-leads]
+origin: rebuilt
+source_ids: [CES-022]
+old_name: copy-craft
+version: 1.0.0

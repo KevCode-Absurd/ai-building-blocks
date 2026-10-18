@@ -1,0 +1,20 @@
+slug: native-ad-image-phone-reminders-screenshot
+name: "Native Ad Image: Phone Reminders Screenshot"
+summary: "A generic lock screen or reminders list showing the reminders or alarms the narrator set because of the problem."
+category: general
+boards: [ecommerce]
+type: skill
+role: render
+job: image
+level: beginner
+inputs:
+  - {type: ad_copy, required: true}
+  - {type: persona, required: false}
+outputs:
+  - {type: image_prompt}
+uses: [native-ad-image-brief-writer]
+example: native
+origin: own
+source_ids: [CES-070]
+old_name: phone-reminder
+version: 1.0.0

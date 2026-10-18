@@ -1,0 +1,22 @@
+slug: ugc-selfie-ad-script-format-rules
+name: UGC Selfie Ad Script Format Rules
+summary: Rules for a talking-to-phone ad script or posted-photo still, for a real creator or an AI presenter.
+category: general
+boards: [ecommerce]
+type: skill
+role: make
+job: video
+level: intermediate
+inputs:
+  - {type: brief, required: true}
+  - {type: voc_reviews, required: true}
+  - {type: brand_brain, required: true}
+outputs:
+  - {type: script}
+  - {type: image_prompt}
+uses: []
+example: ugc
+origin: own
+source_ids: [CES-124]
+old_name: script-format-ugc
+version: 1.0.0

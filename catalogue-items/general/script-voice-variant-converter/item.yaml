@@ -1,0 +1,17 @@
+slug: script-voice-variant-converter
+name: Script Voice Variant Converter
+summary: Turns one script into other person-and-tense versions while keeping facts, order and length unchanged.
+category: general
+type: skill
+role: make
+job: video
+level: beginner
+inputs:
+  - {type: script, required: true}
+outputs:
+  - {type: script}
+uses: [read-aloud-script-polish]
+origin: own
+source_ids: [CES-132]
+old_name: script-transpose
+version: 1.0.0

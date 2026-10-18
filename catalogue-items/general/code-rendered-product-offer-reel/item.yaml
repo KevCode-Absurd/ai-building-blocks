@@ -1,0 +1,21 @@
+slug: code-rendered-product-offer-reel
+name: Code-Rendered Product Offer Reel
+summary: Builds a 10 to 20 second launch or offer reel in code from real photos and approved words, with no AI image or video.
+category: general
+boards: [ecommerce]
+type: workflow
+role: render
+job: video
+level: expert
+inputs:
+  - {type: product_data, required: true}
+  - {type: script, required: true}
+  - {type: offer, required: false}
+  - {type: brand_brain, required: true}
+outputs:
+  - {type: video_ads}
+uses: []
+origin: own
+source_ids: [CES-052]
+old_name: motion-reel
+version: 1.0.0

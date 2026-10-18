@@ -1,0 +1,18 @@
+slug: starter-offer-list-from-brand-facts
+name: Starter Offer List From Brand Facts
+summary: Lists the offers a brand runs and proposes new ones built only from what it already has.
+category: general
+boards: [ecommerce]
+type: prompt
+role: make
+job: offer
+level: beginner
+inputs:
+  - {type: brand_brain, required: true}
+outputs:
+  - {type: offer}
+uses: [offer-design-from-buyer-doubts]
+origin: own
+source_ids: [CES-079]
+old_name: offer-set
+version: 1.0.0

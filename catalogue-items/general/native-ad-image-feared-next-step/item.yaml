@@ -1,0 +1,21 @@
+slug: native-ad-image-feared-next-step
+name: "Native Ad Image: Feared Next Step"
+summary: "One quiet, ordinary object from the future the buyer fears, photographed on a real table, with nothing graphic and no product."
+category: general
+boards: [ecommerce]
+type: skill
+role: render
+job: image
+level: advanced
+inputs:
+  - {type: ad_copy, required: true}
+  - {type: persona, required: true}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: image_prompt}
+uses: [native-ad-image-brief-writer]
+example: native
+origin: rebuilt
+source_ids: [CES-067]
+old_name: nightmare-scenario
+version: 1.0.0

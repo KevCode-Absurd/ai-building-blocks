@@ -12,7 +12,7 @@ A **free, evergreen library** of tested AI building blocks for any business. It 
 
 **Free first.** There's no paywall and no selling at the start. Money comes later, one stream at a time: affiliates, advertising (site and YouTube), consulting and implementation, memberships, premium workflows, and a creator marketplace (70/30).
 
-> **Status (2026-10-18): planning and scaffolding only. The plan is version 4 (free platform).** No catalogue items, tools or site have been built yet. "AI Building Blocks" is a working name. The final brand name is still open.
+> **Status (2026-10-18): building v0 (Kevin approved building on 18 Oct).** The PRD is `docs/PRD.md`. `catalogue-items/` holds 166 renamed and tightened blocks (152 general, 14 ecommerce) plus 7 ready-made workflows; none is marked tested yet. `site/` is the first version of the website: homepage, library, block pages, kits, the drag-and-drop canvas and the handoff pack download. "AI Building Blocks" is a working name.
 
 ## Start here
 

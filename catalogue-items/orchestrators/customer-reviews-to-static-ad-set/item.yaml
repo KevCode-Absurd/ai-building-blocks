@@ -1,0 +1,27 @@
+slug: customer-reviews-to-static-ad-set
+name: Customer Reviews to Static Ad Set
+summary: "Turns your brand facts and customer reviews into static ad copy, layouts and image prompts, checked before launch."
+category: orchestrator
+boards: [ecommerce]
+type: workflow
+role: orchestrate
+job: image
+level: intermediate
+inputs:
+  - {type: web_page, required: true}
+  - {type: voc_reviews, required: true}
+  - {type: product_data, required: true}
+  - {type: brief, required: true}
+  - {type: performance_sheet, required: false}
+outputs:
+  - {type: image_prompt}
+  - {type: audit_report}
+uses: [brand-knowledge-folder-from-website, customer-language-to-angle-library, static-ad-copy-and-layout-planner, static-ad-image-prompt-compiler, pre-launch-ad-creative-checklist]
+steps:
+  - {uses: brand-knowledge-folder-from-website, note: "Build the brand brain: facts, voice, current offers and claims."}
+  - {uses: customer-language-to-angle-library, note: "Find the angles buyers care about, with their exact words."}
+  - {uses: static-ad-copy-and-layout-planner, note: "Write the copy and plan the layout for each ad."}
+  - {uses: static-ad-image-prompt-compiler, note: "Turn each plan into a render-ready image prompt."}
+  - {uses: pre-launch-ad-creative-checklist, note: "Check every finished ad before it goes live."}
+origin: own
+version: 1.0.0

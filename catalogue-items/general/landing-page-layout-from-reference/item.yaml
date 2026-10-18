@@ -1,0 +1,21 @@
+slug: landing-page-layout-from-reference
+name: Landing Page Layout From Reference
+summary: Turns a screenshot of a page you admire into a section-by-section layout plan filled with your own brand, facts and proof.
+category: general
+boards: [ecommerce]
+type: skill
+role: make
+job: page
+level: advanced
+inputs:
+  - {type: reference_set, required: true}
+  - {type: brand_brain, required: true}
+  - {type: offer, required: false}
+outputs:
+  - {type: page_layout_spec}
+  - {type: landing_page}
+uses: [landing-page-copy-from-ad-and-facts]
+origin: rebuilt
+source_ids: [CES-020]
+old_name: clone-from-screenshot
+version: 1.0.0

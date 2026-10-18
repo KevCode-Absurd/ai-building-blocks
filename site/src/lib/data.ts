@@ -93,3 +93,20 @@ export function neighbours(c: Catalogue, b: Block) {
   const after = c.blocks.filter((x) => x.slug !== b.slug && x.category !== "orchestrator" && x.inputs.some((p) => outs.has(p.type)));
   return { before, after };
 }
+
+/** Wires an ordered list of blocks: each step reads from the latest earlier step that makes one of its inputs,
+ *  or from the step just before it when none does. Returns [from, to] index pairs. */
+export function wireSteps(c: Catalogue, slugs: string[]): [number, number][] {
+  const edges: [number, number][] = [];
+  slugs.forEach((slug, i) => {
+    if (i === 0) return;
+    const b = c.bySlug[slug];
+    const from = new Set<number>();
+    for (const p of b?.inputs ?? []) {
+      for (let j = i - 1; j >= 0; j--) if (c.bySlug[slugs[j]]?.outputs.some((o) => o.type === p.type)) { from.add(j); break; }
+    }
+    if (!from.size) from.add(i - 1);
+    for (const j of [...from].sort((a, z) => a - z)) edges.push([j, i]);
+  });
+  return edges;
+}

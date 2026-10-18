@@ -64,9 +64,13 @@ export function markViewed(slug: string) {
 
 /** A block queued from a block page ("Add to canvas") for the canvas to pick up on open. */
 const PENDING = "abb:pending";
-export function queueForCanvas(slugs: string[]) {
-  try { sessionStorage.setItem(PENDING, JSON.stringify(slugs)); } catch { /* ignore */ }
+export function queueForCanvas(slugs: string[], asNewFlow?: string) {
+  try { sessionStorage.setItem(PENDING, JSON.stringify({ slugs, name: asNewFlow ?? null })); } catch { /* ignore */ }
 }
-export function takeQueued(): string[] {
-  try { const v = JSON.parse(sessionStorage.getItem(PENDING) ?? "[]"); sessionStorage.removeItem(PENDING); return v; } catch { return []; }
+export function takeQueued(): { slugs: string[]; name: string | null } {
+  try {
+    const v = JSON.parse(sessionStorage.getItem(PENDING) ?? "null");
+    sessionStorage.removeItem(PENDING);
+    return v && Array.isArray(v.slugs) ? v : { slugs: [], name: null };
+  } catch { return { slugs: [], name: null }; }
 }

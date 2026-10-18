@@ -1,0 +1,22 @@
+slug: ad-results-to-next-creative-brief
+name: Ad Results to Next Creative Brief
+summary: "Reads last period's ad results, finds the gaps in your creative, and writes the next brief and hooks."
+category: orchestrator
+boards: [ecommerce]
+type: workflow
+role: orchestrate
+job: analysis
+level: intermediate
+inputs:
+  - {type: performance_sheet, required: true}
+  - {type: brand_brain, required: true}
+outputs:
+  - {type: hooks}
+uses: [ad-performance-report-decision-brief, creative-coverage-gap-audit, creative-brief-three-concepts-nine-variants, scroll-stopping-hook-writer-and-grader]
+steps:
+  - {uses: ad-performance-report-decision-brief, note: "Turn the results export into decisions: what to keep, cut and test."}
+  - {uses: creative-coverage-gap-audit, note: "Find the angles, formats and buyers your ads don't cover yet."}
+  - {uses: creative-brief-three-concepts-nine-variants, note: "Brief three concepts with three variants each for the gaps."}
+  - {uses: scroll-stopping-hook-writer-and-grader, note: "Write and grade opening hooks for the new brief."}
+origin: own
+version: 1.0.0

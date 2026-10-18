@@ -1,0 +1,20 @@
+slug: image-prompt-from-approved-plan
+name: Image Prompt From Approved Plan
+summary: Turns an approved image plan into a render-ready prompt that names each reference by job and keeps the exact words and subject true.
+category: general
+boards: [ecommerce]
+type: skill
+role: render
+job: image
+level: advanced
+inputs:
+  - {type: image_plan, required: true}
+  - {type: product_data, required: false}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: image_prompt}
+uses: [upscale-approved-image-with-checks]
+origin: own
+source_ids: [CES-046]
+old_name: image-prompt-craft
+version: 1.0.0

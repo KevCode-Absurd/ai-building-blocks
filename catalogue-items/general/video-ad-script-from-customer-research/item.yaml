@@ -1,0 +1,29 @@
+slug: video-ad-script-from-customer-research
+name: Video Ad Script from Customer Research
+summary: Builds a video ad script from real customer quotes that moves one belief in one buyer, with assumptions listed.
+category: general
+boards: [ecommerce]
+type: skill
+role: make
+job: video
+level: advanced
+inputs:
+  - type: voc_reviews
+    required: true
+  - type: persona
+    required: true
+  - type: product_data
+    required: true
+  - type: offer
+    required: false
+  - type: brand_brain
+    required: false
+  - type: angle_library
+    required: false
+outputs:
+  - {type: script}
+uses: [video-ad-script-principles-reference, video-script-type-library, read-aloud-script-polish]
+origin: own
+source_ids: [CES-128]
+old_name: script-from-research
+version: 1.0.0

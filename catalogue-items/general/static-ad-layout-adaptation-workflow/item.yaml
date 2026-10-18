@@ -1,0 +1,21 @@
+slug: static-ad-layout-adaptation-workflow
+name: Static Ad Layout Adaptation Workflow
+summary: Rebuild proven static ad layouts for your brand in 4:5 and 9:16, with claims checked and review rounds.
+category: general
+boards: [ecommerce]
+type: workflow
+role: orchestrate
+job: ads
+level: expert
+inputs:
+  - {type: brand_brain, required: true}
+  - {type: reference_set, required: true}
+  - {type: product_photos, required: false}
+outputs:
+  - {type: static_ads}
+uses: [static-template-slot-contract, static-ad-format-families, static-ad-image-prompt-compiler]
+example: ad-layout
+origin: rebuilt
+source_ids: [CES-139]
+old_name: Static Ad Factory
+version: 1.0.0

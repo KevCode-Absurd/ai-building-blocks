@@ -1,0 +1,19 @@
+slug: customer-language-to-angle-library
+name: Customer Language To Angle Library
+summary: Turns reviews, tickets and calls into ranked ad angles built from real customer phrases with source IDs.
+category: general
+boards: [ecommerce]
+type: skill
+role: compress
+job: research
+level: intermediate
+inputs:
+  - {type: voc_reviews, required: true}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: angle_library}
+uses: []
+origin: rebuilt
+source_ids: [CES-103]
+old_name: review-mining
+version: 1.0.0

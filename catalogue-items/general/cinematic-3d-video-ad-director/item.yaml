@@ -1,0 +1,22 @@
+slug: cinematic-3d-video-ad-director
+name: Cinematic 3D Video Ad Director
+summary: Writes still and clip prompts for a premium 3D animated-film look with stylised adults and exact product labels.
+category: general
+boards: [ecommerce]
+type: skill
+role: render
+job: video
+level: advanced
+inputs:
+  - {type: script, required: true}
+  - {type: product_data, required: true}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: image_prompt}
+  - {type: video_prompt}
+uses: [animated-film-ad-script-format-rules]
+example: cinematic-3d
+origin: rebuilt
+source_ids: [CES-016]
+old_name: cinematic-3d-animation
+version: 1.0.0

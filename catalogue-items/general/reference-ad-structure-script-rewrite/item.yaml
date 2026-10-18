@@ -1,0 +1,19 @@
+slug: reference-ad-structure-script-rewrite
+name: Reference Ad Structure Script Rewrite
+summary: "Rewrites a reference ad's structure for your brand: same beats and device, every word and claim your own."
+category: general
+type: skill
+role: make
+job: video
+level: advanced
+inputs:
+  - {type: ad_breakdowns, required: true}
+  - {type: product_data, required: true}
+  - {type: voc_reviews, required: false}
+outputs:
+  - {type: script}
+uses: [video-ad-script-principles-reference]
+origin: own
+source_ids: [CES-130]
+old_name: script-reference-structure
+version: 1.0.0

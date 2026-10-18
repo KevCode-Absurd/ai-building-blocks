@@ -1,0 +1,26 @@
+slug: creative-coverage-gap-audit
+name: Creative Coverage Gap Audit
+summary: Maps what a brand's ads have and have not covered and writes five concepts for the biggest true gaps.
+category: general
+boards: [ecommerce]
+type: skill
+role: check
+job: analysis
+level: advanced
+inputs:
+  - type: brand_brain
+    required: true
+  - type: performance_sheet
+    required: false
+  - type: reference_set
+    required: false
+  - type: audit_report
+    required: false
+outputs:
+  - {type: audit_report}
+  - {type: brief}
+uses: [buyer-readiness-stage-ad-briefs]
+origin: rebuilt
+source_ids: [CES-140, CES-090]
+old_name: strategic-audit
+version: 1.0.0

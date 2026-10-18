@@ -1,0 +1,19 @@
+slug: static-ad-copy-from-visual-and-awareness
+name: Static Ad Copy From the Visual and the Buyer's Awareness
+summary: On-image words and feed copy that complete an approved picture and fit the buyer's awareness.
+category: general
+type: skill
+role: make
+job: copy
+level: intermediate
+inputs:
+  - {type: brief, required: true}
+  - {type: offer, required: false}
+  - {type: voc_reviews, required: false}
+outputs:
+  - {type: ad_copy}
+uses: []
+origin: rebuilt
+source_ids: [CES-086]
+old_name: operator-creative/static-copy
+version: 1.0.0

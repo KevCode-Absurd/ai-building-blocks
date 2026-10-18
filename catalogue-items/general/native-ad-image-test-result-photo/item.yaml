@@ -1,0 +1,21 @@
+slug: native-ad-image-test-result-photo
+name: "Native Ad Image: Test Result Photo"
+summary: "A phone photo of a plain test result or readout with one red mark on it and no names, so the reader asks what it shows."
+category: general
+boards: [ecommerce]
+type: skill
+role: render
+job: image
+level: advanced
+inputs:
+  - {type: ad_copy, required: true}
+  - {type: brand_brain, required: true}
+  - {type: persona, required: false}
+outputs:
+  - {type: image_prompt}
+uses: [native-ad-image-brief-writer]
+example: native
+origin: rebuilt
+source_ids: [CES-066]
+old_name: medical-imaging
+version: 1.0.0

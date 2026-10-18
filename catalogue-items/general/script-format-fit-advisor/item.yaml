@@ -1,0 +1,17 @@
+slug: script-format-fit-advisor
+name: Script Format Fit Advisor
+summary: Reads a finished script and says which format fits it, based on the beat doing the persuading.
+category: general
+type: skill
+role: check
+job: video
+level: intermediate
+inputs:
+  - {type: script, required: true}
+outputs:
+  - {type: plan}
+uses: [video-ad-script-principles-reference]
+origin: own
+source_ids: [CES-131]
+old_name: script-surfaces
+version: 1.0.0

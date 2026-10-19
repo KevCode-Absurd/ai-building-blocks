@@ -20,3 +20,4 @@ source_ids: [CES-050]
 version: 1.1.0
 credits:
   - {title: "Product Pages Need to Show 'Estimated Shipping Costs'", by: "Christian Holst, Baymard Institute", url: "https://baymard.com/blog/show-shipping-costs-on-product-pages", used: "Where the delivery and shipping answer belongs"}
+  - {title: "eCommerce CRO masterclass", by: "Blue Sense Digital", url: "https://www.youtube.com/channel/UCtOnZyHshTvH1GoboRzHqjw", used: "The starting idea: the page answers the doubts that stop a buyer, rebuilt in our own words"}

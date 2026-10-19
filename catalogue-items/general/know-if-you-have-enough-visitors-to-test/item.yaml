@@ -20,3 +20,4 @@ credits:
   - {title: "How Not To Run an A/B Test", by: "Evan Miller", url: "https://www.evanmiller.org/how-not-to-run-an-ab-test.html", used: "The 16 x p(1 - p) / change squared sample-size rule, and not stopping early"}
   - {title: "A/B Test Sample Size Calculator", by: "Evan Miller", url: "https://www.evanmiller.org/ab-testing/sample-size.html", used: "A second check on visitors per version"}
   - {title: "Trustworthy Online Controlled Experiments: A Practical Guide to A/B Testing", by: "Ron Kohavi, Diane Tang and Ya Xu", url: "https://experimentguide.com/", used: "Sizing before launch, checking the split stays even, and reading flat results"}
+  - {title: "eCommerce CRO masterclass", by: "Blue Sense Digital", url: "https://www.youtube.com/channel/UCtOnZyHshTvH1GoboRzHqjw", used: "The question of when a store has enough visitors to test"}

@@ -1,0 +1,318 @@
+// The Tools pages: a list of the free mini tools (/tools), and one page per tool (/tools/<slug>).
+// Every answer comes from the tool's formula file through the shared engine, as you type. Nothing is sent anywhere:
+// what you type is kept only in this browser. Loaded on demand, so the home page never waits for it.
+import { useEffect, useMemo, useRef, useState, type ReactNode } from "react";
+import "./tools.css";
+import { ArrowIcon } from "../ui";
+import { Link } from "../lib/router";
+import { pathOf, testedOn, useCatalogue } from "../lib/data";
+import { E, EXAMPLES, SITE, TOOLS, filesOf, saveSteps, shelfLabel, type Input, type Line, type Tool } from "./registry";
+
+const TITLE = "AI Building Blocks · Making humanity AI native";
+const store = {
+  get<T>(key: string, fallback: T): T { try { const v = localStorage.getItem(key); return v ? (JSON.parse(v) as T) : fallback; } catch { return fallback; } },
+  set(key: string, v: unknown) { try { localStorage.setItem(key, JSON.stringify(v)); } catch { /* private mode: still works for this visit */ } },
+};
+const asText = (d: Record<string, number>) => Object.fromEntries(Object.entries(d).map(([k, v]) => [k, String(v)]));
+const unitMark = (u: string, sym: string) => (u === "money" || u === "smallmoney" ? sym : u === "percent" ? "%" : u === "x" ? "x" : "");
+
+async function copy(text: string, toast: (m: string) => void, what: string) {
+  await navigator.clipboard.writeText(text).catch(() => {});
+  toast(`Copied the ${what}`);
+}
+function save(blob: Blob, name: string) {
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url; a.download = name; a.click();
+  setTimeout(() => URL.revokeObjectURL(url), 1000);
+}
+
+function CopyBox({ name, text, toast, testId }: { name: string; text: string; toast: (m: string) => void; testId?: string }) {
+  return (
+    <figure className="code mt-code">
+      <figcaption><span className="code-name">{name}</span><button className="code-copy" onClick={() => copy(text, toast, name)} data-testid={testId}>Copy</button></figcaption>
+      <pre>{text}</pre>
+    </figure>
+  );
+}
+
+function Field({ i, raw, error, sym, onChange }: { i: Input; raw: string; error?: string; sym: string; onChange: (v: string) => void }) {
+  const mark = unitMark(i.unit, sym);
+  const before = i.unit === "money" || i.unit === "smallmoney";
+  return (
+    <div className="mt-field">
+      <label className="mt-label" htmlFor={`in-${i.id}`}>{i.label}</label>
+      <div className={`mt-box${error ? " bad" : ""}`}>
+        {before && <span className="mt-unit">{mark}</span>}
+        <input id={`in-${i.id}`} inputMode="decimal" autoComplete="off" value={raw} onChange={(e) => onChange(e.target.value)} aria-invalid={!!error} aria-describedby={`help-${i.id}`} data-testid={`input-${i.id}`} />
+        {!before && mark && <span className="mt-unit">{mark}</span>}
+      </div>
+      <p className="mt-help" id={`help-${i.id}`}>{i.help}</p>
+      {error && <p className="mt-err" role="alert">{error}</p>}
+      <details className="mt-where">
+        <summary>Where to find this number</summary>
+        <p>{i.where}</p>
+        {i.tools.length > 0 && <p className="mt-held">Held in: {i.tools.join(", ")}</p>}
+      </details>
+    </div>
+  );
+}
+
+function Working({ lines }: { lines: Line[] }) {
+  return (
+    <ol className="mt-working" data-testid="working">
+      {lines.map((l) => (
+        <li key={l.id} data-line={l.id}>
+          <div className="mt-row"><span>{l.label}</span><b data-testid={`value-${l.id}`}>{l.shown}</b></div>
+          {l.sum && <code>{l.sum}</code>}
+          {l.means && <p>{l.means}</p>}
+        </li>
+      ))}
+    </ol>
+  );
+}
+
+/** Answers that come as a table, like cost per run and per month on each model. */
+function Grid({ tool, lines }: { tool: Tool; lines: Line[] }) {
+  const rows: Record<string, Record<string, string>> = {};
+  const cols: string[] = [];
+  for (const l of lines) {
+    const o = tool.outputs.find((x) => x.id === l.id)!;
+    (rows[o.row!] ??= {})[o.col!] = l.shown;
+    if (!cols.includes(o.col!)) cols.push(o.col!);
+  }
+  return (
+    <div className="mt-table-wrap">
+      <table className="mt-table" data-testid="model-table">
+        <thead><tr><th>{lines[0].group}</th>{cols.map((c) => <th key={c}>{c}</th>)}</tr></thead>
+        <tbody>{Object.entries(rows).map(([r, cells]) => <tr key={r}><td>{r}</td>{cols.map((c) => <td key={c}>{cells[c]}</td>)}</tr>)}</tbody>
+      </table>
+    </div>
+  );
+}
+
+function Way({ n, title, children, testId }: { n: number; title: string; children: ReactNode; testId: string }) {
+  return (
+    <section className="mt-way" data-testid={testId}>
+      <h3><span className="n">{n}</span>{title}</h3>
+      {children}
+    </section>
+  );
+}
+
+function ToolPage({ tool, toast }: { tool: Tool; toast: (m: string) => void }) {
+  const c = useCatalogue();
+  const key = `abb:tool:${tool.slug}`;
+  const saved = store.get<{ preset?: string; raw?: Record<string, string> }>(key, {});
+  const [preset, setPreset] = useState(() => (tool.presets.some((p) => p.id === saved.preset) ? saved.preset! : tool.presets[0].id));
+  const [raw, setRaw] = useState<Record<string, string>>(() => saved.raw && saved.preset === preset ? { ...asText(E.defaults(tool, preset)), ...saved.raw } : asText(E.defaults(tool, preset)));
+  const [symSaved, setSym] = useState(() => store.get("abb:currency", "$"));
+  const sym = tool.fixedCurrency ?? symSaved;
+  const [prompt, setPrompt] = useState<string | null>(null);
+  const [preview, setPreview] = useState(false);
+  // On a phone the answer sits below the fields, so a bar at the bottom shows it while you type.
+  const answerRef = useRef<HTMLDivElement>(null);
+  const [answerSeen, setAnswerSeen] = useState(true);
+  useEffect(() => {
+    const el = answerRef.current;
+    if (!el) return;
+    const io = new IntersectionObserver(([e]) => setAnswerSeen(e.isIntersecting || e.boundingClientRect.top < 0));
+    io.observe(el);
+    return () => io.disconnect();
+  }, []);
+  useEffect(() => { document.title = `${tool.name} · AI Building Blocks`; return () => { document.title = TITLE; }; }, [tool]);
+  useEffect(() => { store.set(key, { preset, raw }); }, [key, preset, raw]);
+  useEffect(() => { fetch(`${filesOf(tool.slug)}/prompt.txt`).then((r) => (r.ok ? r.text() : null)).then((t) => setPrompt(t && !t.trimStart().startsWith("<!doctype") ? t : null)).catch(() => setPrompt(null)); }, [tool]);
+
+  const pick = (id: string) => { setPreset(id); setRaw(asText(E.defaults(tool, id))); };
+  const reset = () => setRaw(asText(E.defaults(tool, preset)));
+  const { values, errors } = E.readInputs(tool, raw, preset);
+  const ok = Object.keys(errors).length === 0;
+  const env = useMemo(() => (ok ? E.compute(tool, values) : null), [ok, tool, JSON.stringify(values)]); // eslint-disable-line react-hooks/exhaustive-deps
+  const lines = env ? E.workingLines(tool, env, preset, sym) : [];
+  const answer = env ? E.answerLines(tool, env, preset, sym) : ["Fix the numbers marked in red to see the answer."];
+  const gridLines = lines.filter((l) => tool.outputs.find((o) => o.id === l.id)?.row);
+  const plain = lines.filter((l) => !gridLines.includes(l));
+  const compare = ok ? E.compareRows(tool, values, preset, sym) : null;
+  const next = env ? E.nextSteps(tool, env) : [];
+  const isExample = JSON.stringify(raw) === JSON.stringify(asText(E.defaults(tool, preset)));
+  const visible = E.visibleInputs(tool, preset);
+  const sections = tool.sections ?? [{ id: "numbers", label: "Your numbers" }];
+  const examples = EXAMPLES[tool.slug] ?? [];
+  const files = filesOf(tool.slug);
+  const best = E.worksBestWith(tool);
+
+  const xlsx = async () => {
+    const [{ buildXlsx }, fflate] = await Promise.all([import("../../../mini-tools/xlsx.mjs"), import("fflate")]);
+    const bytes = (buildXlsx as (t: Tool, o: object, z: object) => Uint8Array)(tool, { values: ok ? values : E.defaults(tool, preset), preset, sym, site: SITE }, fflate);
+    save(new Blob([bytes], { type: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" }), `${tool.slug}.xlsx`);
+    toast("Spreadsheet downloaded");
+  };
+  const embed = `<iframe src="${SITE}${files}/embed.html" title="${tool.name}" width="100%" height="760" style="border:0;max-width:100%" loading="lazy"></iframe>\n<p style="font-size:13px"><a href="${SITE}/tools/${tool.slug}">${tool.name}</a>, a free mini tool from AI Building Blocks</p>`;
+
+  return (
+    <main className="bp mt" data-testid="tool-page">
+      <header className="wrap bp-hero">
+        <Link to="/tools" className="back"><span aria-hidden="true">←</span> All mini tools</Link>
+        <p className="bp-kicker"><span className="kind">{tool.short}</span>Free. No sign-up. What you type stays in this browser.</p>
+        <h1 className="bp-h1">{tool.headline}</h1>
+        <p className="bp-sub">{tool.summary}</p>
+      </header>
+
+      <div className="wrap mt-calc">
+        <div className="mt-form" data-testid="tool-form">
+          {tool.presets.length > 1 && (
+            <div className="seg mt-seg" role="group" aria-label="Your business">
+              {tool.presets.map((p) => <button key={p.id} aria-pressed={p.id === preset} onClick={() => pick(p.id)} data-testid={`preset-${p.id}`}>{p.label}</button>)}
+            </div>
+          )}
+          <p className="mt-example" data-testid="example-note">
+            {isExample ? "These are example numbers, not from any real business. Type your own." : <>Your numbers. <button className="link-btn" onClick={reset}>Put the examples back</button></>}
+          </p>
+          {!tool.fixedCurrency && (
+            <label className="mt-cur"><span>Currency sign</span><input value={symSaved} maxLength={4} onChange={(e) => { setSym(e.target.value); store.set("abb:currency", e.target.value); }} data-testid="currency" /></label>
+          )}
+          {sections.map((s) => {
+            const list = visible.filter((i) => (i.section ?? "numbers") === s.id);
+            if (!list.length) return null;
+            const body = list.map((i) => <Field key={i.id} i={i} raw={raw[i.id] ?? ""} error={errors[i.id]} sym={sym} onChange={(v) => setRaw((r) => ({ ...r, [i.id]: v }))} />);
+            return s.closed ? (
+              <details className="mt-sec" key={s.id}><summary>{s.label}</summary>{body}</details>
+            ) : (
+              <fieldset className="mt-sec" key={s.id}><legend>{s.label}</legend>{body}</fieldset>
+            );
+          })}
+        </div>
+
+        <div className="mt-result" aria-live="polite">
+          <div className="mt-answer" data-testid="answer" ref={answerRef}>{answer.map((t) => <p key={t}>{t}</p>)}</div>
+          {env && (
+            <>
+              {compare && (
+                <div className="mt-table-wrap">
+                  <table className="mt-table" data-testid="compare">
+                    <thead><tr><th>{compare.label}</th>{compare.heads.map((h) => <th key={h}>{h}</th>)}</tr></thead>
+                    <tbody>{compare.rows.map((r) => <tr key={r.id}><td>{r.label}</td>{r.cells.map((x, k) => <td key={k}>{x}</td>)}</tr>)}</tbody>
+                  </table>
+                </div>
+              )}
+              {gridLines.length > 0 && <Grid tool={tool} lines={gridLines} />}
+              <h2 className="mt-h">The working, line by line</h2>
+              <Working lines={plain} />
+              {next.length > 0 && (
+                <div className="mt-next" data-testid="next-step">
+                  <h2 className="mt-h">Next step</h2>
+                  {next.map((n) => {
+                    const b = c?.bySlug[n.slug];
+                    return <p key={n.slug}>{n.why} {b ? <Link to={pathOf(b)}>{b.name} <ArrowIcon size={12} /></Link> : null}</p>;
+                  })}
+                </div>
+              )}
+            </>
+          )}
+        </div>
+      </div>
+      {!answerSeen && <div className="mt-peek" aria-hidden="true" data-testid="answer-peek">{answer[0]}</div>}
+
+      <div className="wrap mt-more">
+        <section className="bp-sec" aria-labelledby="best-h">
+          <h2 className="bp-h2" id="best-h">Works best with your real numbers</h2>
+          <p className="bp-note">The answer is only as good as what you type. Each number lives somewhere you already have.</p>
+          <div className="mt-best" data-testid="works-best-with">
+            {best.map((b) => <div key={b.name}><b>{b.name}</b><span>{b.for.slice(0, 3).join(", ")}{b.for.length > 3 ? ` and ${b.for.length - 3} more` : ""}</span></div>)}
+          </div>
+        </section>
+
+        <section className="bp-sec wide" aria-labelledby="ways-h" id="ways">
+          <h2 className="bp-h2" id="ways-h">Use it five ways</h2>
+          <p className="bp-note">The same formulas every way, checked against the same worked examples. If one gave a different answer, it wouldn't be here.</p>
+          <div className="mt-ways">
+            <Way n={1} title="On this page" testId="way-site"><p>Type your numbers above. The answer and each line of the working change as you type.</p></Way>
+            <Way n={2} title="Download it" testId="way-download">
+              <p>One file that opens in any browser and works offline. Your numbers stay on your computer.</p>
+              <a className="btn btn-primary btn-sm" href={`${files}/${tool.slug}.html`} download={`${tool.slug}.html`} data-testid="download-html">Download the calculator</a>
+            </Way>
+            <Way n={3} title="In a spreadsheet" testId="way-sheet">
+              <p>An Excel file with your numbers in it. Every answer is a formula you can read and change.</p>
+              <button className="btn btn-primary btn-sm" onClick={xlsx} data-testid="download-xlsx">Download the spreadsheet</button>
+              <p className="mt-small">Google Sheets: File &gt; Import &gt; Upload, then pick the file.</p>
+            </Way>
+            <Way n={4} title="In your AI" testId="way-ai">
+              <p>A skill and a prompt for Claude, ChatGPT and Gemini. Your AI asks for your numbers, runs the sums as code and shows each line.</p>
+              <div className="mt-btns">
+                <a className="btn btn-primary btn-sm" href={`${files}/${tool.slug}-skill.zip`} download data-testid="download-skill">Download the skill</a>
+                <button className="btn btn-dark btn-sm" disabled={!prompt} onClick={() => prompt && copy(prompt, toast, "prompt")} data-testid="copy-prompt">Copy the prompt</button>
+              </div>
+              <details className="mt-save" data-testid="save-steps">
+                <summary>Keep it in your AI as a skill, Project, custom GPT or Gem</summary>
+                {saveSteps(tool).map((s) => (
+                  <div key={s.ai}><h4>{s.ai}</h4><ol>{s.steps.map((x) => <li key={x}>{x}</li>)}</ol></div>
+                ))}
+              </details>
+            </Way>
+            <Way n={5} title="On your own site" testId="way-embed">
+              <p>Paste this into your website or Notion page. It shows the calculator, with a credit link back here.</p>
+              <CopyBox name="embed code" text={embed} toast={toast} testId="copy-embed" />
+              <details className="mt-save" onToggle={(e) => setPreview((e.target as HTMLDetailsElement).open)}>
+                <summary>See how it looks</summary>
+                {preview && <iframe className="mt-preview" src={`${files}/embed.html`} title={`${tool.name}, embedded`} loading="lazy" />}
+              </details>
+            </Way>
+          </div>
+        </section>
+
+        <section className="bp-sec" aria-labelledby="how-h">
+          <h2 className="bp-h2" id="how-h">How it works it out</h2>
+          <dl className="mt-sources">{tool.sources.map((s) => <div key={s.what}><dt>{s.what}</dt><dd>{s.how}</dd></div>)}</dl>
+          {tool.notes && tool.notes.length > 0 && (<><h3 className="sub-h">What it assumes</h3><ul className="mt-notes">{tool.notes.map((n) => <li key={n}>{n}</li>)}</ul></>)}
+          <h3 className="sub-h">Checked by hand</h3>
+          <p className="bp-note" data-testid="examples">{examples.length} worked examples, including the edge cases: {examples.map((x) => x.name.charAt(0).toLowerCase() + x.name.slice(1)).join("; ")}.</p>
+          <p className="mt-small">Version {tool.version}, updated {testedOn(tool.updated)}.{tool.checked ? ` Prices checked ${testedOn(tool.checked)}.` : ""} Nothing here promises a result: these are sums on the numbers you type.</p>
+        </section>
+      </div>
+    </main>
+  );
+}
+
+function ToolsIndex() {
+  useEffect(() => { document.title = "Free mini tools · AI Building Blocks"; return () => { document.title = TITLE; }; }, []);
+  return (
+    <main className="bp mt" data-testid="tools-index">
+      <header className="wrap bp-hero">
+        <Link to="/" className="back"><span aria-hidden="true">←</span> Home</Link>
+        <p className="bp-kicker"><span className="kind">Mini tools</span>{TOOLS.length} free calculators</p>
+        <h1 className="bp-h1">Know your numbers before you spend money</h1>
+        <p className="bp-sub">Calculators for discounts, deals, ads, repeat customers, page tests, AI costs and your hourly rate. Type your numbers and see the answer and every line of the sum. No sign-up, and what you type stays in your browser.</p>
+      </header>
+      <div className="wrap mt-index">
+        <div className="grid">
+          {TOOLS.map((t) => (
+            <Link key={t.slug} to={`/tools/${t.slug}`} className="card mt-card" data-testid="tool-card" data-slug={t.slug}>
+              <span className="meta"><span className="kind">{t.short}</span><span className="type">{shelfLabel(t)}</span></span>
+              <span className="nm">{t.name}</span>
+              <span className="peek">{t.summary}</span>
+              <span className="view">Open the calculator <ArrowIcon size={12} /></span>
+            </Link>
+          ))}
+        </div>
+        <p className="bp-note mt-index-note">Every tool works five ways: on this site, as a download that works offline, as a spreadsheet, in your AI, and on your own website.</p>
+      </div>
+    </main>
+  );
+}
+
+export default function ToolsPage({ path, toast }: { path: string; toast: (m: string) => void }) {
+  const slug = path.split("/").filter(Boolean)[1];
+  if (!slug) return <ToolsIndex />;
+  const tool = TOOLS.find((t) => t.slug === slug);
+  if (!tool) {
+    return (
+      <main className="wrap bp-missing" data-testid="tool-missing">
+        <h1 className="bp-h1">That mini tool isn't here</h1>
+        <p className="bp-sub">It may have a new name. All of them are on the Tools page.</p>
+        <Link to="/tools" className="btn btn-primary">See all mini tools <ArrowIcon /></Link>
+      </main>
+    );
+  }
+  return <ToolPage key={tool.slug} tool={tool} toast={toast} />;
+}

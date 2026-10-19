@@ -33,3 +33,4 @@ credits:
   - {title: "Directive 2011/83/EU on consumer rights", by: "European Union", url: "https://eur-lex.europa.eu/eli/dir/2011/83/oj", used: "Check 28, nothing ticked in advance"}
   - {title: "Understanding Success Criterion 2.5.8: Target Size (Minimum)", by: "W3C", url: "https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html", used: "Check 29 tap size"}
   - {title: "Web Vitals", by: "Google, web.dev", url: "https://web.dev/articles/vitals", used: "Check 30 speed marks"}
+  - {title: "eCommerce CRO masterclass", by: "Blue Sense Digital", url: "https://www.youtube.com/channel/UCtOnZyHshTvH1GoboRzHqjw", used: "The first set of page checks this was rebuilt from"}

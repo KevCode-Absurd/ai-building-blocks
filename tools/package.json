@@ -3,6 +3,10 @@
   "private": true,
   "type": "module",
   "description": "Checks and test runs for the AI Building Blocks catalogue",
+  "scripts": {
+    "mini-tools": "node build-mini-tool.mjs",
+    "test:mini-tools": "node --test \"../mini-tools/test/*.test.mjs\""
+  },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.135.0"
   }

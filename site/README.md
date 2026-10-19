@@ -18,7 +18,9 @@ npm run test:e2e   # Playwright end-to-end tests (uses the installed Chrome; PW_
 | `src/App.tsx` | The page and its sections |
 | `src/Builder.tsx` | The drag-and-drop canvas (React Flow), loaded after the page |
 | `src/BlockDrawer.tsx` | A block or workflow in the side drawer |
+| `src/tools/` | The Tools pages (`/tools`, `/tools/<slug>`), loaded on demand. They read the mini tools' formula files in `../mini-tools/` directly; `npm run index` also runs `../tools/build-mini-tool.mjs`, which builds each tool's download, embed, spreadsheet and AI skill into `public/mini-tools/` (generated, not committed) |
 | `e2e/site.spec.ts` | End-to-end tests: hero, no brands or jargon, theme, navigation, type tabs, search and filters, drawer, kits, builder, handoff zip, phone width |
+| `e2e/tools.spec.ts` | End-to-end tests for the mini tools: every worked example typed into each page, the offline download, the spreadsheet, the AI skill and prompt, the embed, reading level and phone width |
 
 The page shows no brand names or brand pictures (decided 18 Oct).
 

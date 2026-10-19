@@ -8,6 +8,7 @@
 | `reading-level.mjs` | Reading grade of every block page, one page, or any text (`--text`, `--file`). We keep it at grade 10 or below |
 | `readability.mjs` | The grade formula (Flesch-Kincaid) the two above and the site's tests share |
 | `apply-renames.mjs`, `make-orchestrators.mjs` | Rename block folders; build the ready workflows |
+| `build-mini-tool.mjs` | Builds every mini tool five ways from its formula file in `mini-tools/` (download, embed, spreadsheet, AI skill and prompt; the site page reads the file directly) and checks each way against the worked examples. Runs with the site's `npm run index`. Tests: `npm run test:mini-tools` here |
 
 ## Item factory (planned, not built)
 

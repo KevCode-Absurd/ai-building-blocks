@@ -2,6 +2,7 @@ node_modules
 dist
 public/data
 public/skills
+public/mini-tools
 tsconfig.tsbuildinfo
 test-results
 playwright-report

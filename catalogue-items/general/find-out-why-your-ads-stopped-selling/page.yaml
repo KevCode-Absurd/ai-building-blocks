@@ -4,12 +4,12 @@ summary: "Paste your ad numbers. You get the likely reasons ranked, the evidence
 job: read-ad-results
 
 headline: "Find out why your ads stopped selling"
-subhead: Paste the numbers you exported from your ad account. It redoes every sum from the totals, checks that sales are being counted properly, then ranks the possible reasons with the evidence for each, what to check next and what to do once you know.
+subhead: Paste the numbers you exported from your ad account. It redoes every sum, checks sales are being counted, shows which link broke (cost to be seen, clicks, buyers or order size) and by how much, then ranks the likely reasons with what to check next.
 
 explain: |
   When ad results slip, the usual reaction is to blame the ad and make a new one. Often the real cause sits somewhere else: sales not being recorded, an offer that doesn't show on the page, a product out of stock, or a budget cap. Changing the ad then fixes nothing and throws away an ad that was working.
 
-  This skill reads your export like a careful analyst. It recalculates every rate from the raw totals (never averaging percentages), checks the tracking first, then weighs five common explanations against each other, such as the same people seeing the ad too often or visitors clicking but not buying. Each finding comes with the evidence for and against, the next thing to check, and a proposed action. It changes nothing in your account.
+  This skill reads your export like a careful analyst. It recalculates every rate from the raw totals (never averaging percentages) and checks the tracking first. Then it splits the rise in cost per sale into its links: what it costs to be seen, how many viewers click, how many clickers buy, and how much they spend. You see, in numbers, which link did most of the damage. Each finding comes with the reasons for and against, the next thing to check, and a proposed action. It never changes a budget or pauses an ad, even if a tool is connected to your account. You approve and make every change.
 
 when:
   - Your cost per sale went up and you want to know why before you touch anything.
@@ -23,6 +23,7 @@ you_give:
   - A list of what you changed and when, such as new ads, prices or pages (optional)
 you_get:
   - A table of every ad with its rates recalculated from the totals
+  - The chain split, showing each link's share of the change in cost per sale
   - A ranked list of findings, tracking problems first, each with possible reasons, what to check and a proposed action
   - A list of the data that was missing and what it would have told you
 
@@ -38,14 +39,16 @@ how_it_works:
     text: Recalculates every rate from matching totals, marks what's missing, and treats a blank as unknown rather than zero.
   - title: Checks tracking first
     text: Looks at whether purchases and their values are being recorded properly. A drop in sales with steady clicks gets investigated as a counting or after-click problem first.
-  - title: Weighs the usual reasons
-    text: Tests five explanations against the evidence. Same people seeing it too often, running out of new people, visitors not buying after the click, budget limits, and wider changes like the season.
+  - title: Splits the chain
+    text: Cost per sale is cost per 1,000 views divided by clicks per view and buyers per click. It shows how much of the change each link caused.
+  - title: Weighs the reasons per link
+    text: For each link that moved, tests the likely causes, such as the same people seeing the ad too often, a page that no longer matches, or an ad set sent back to learning by a big edit.
   - title: Uses your targets, not rules of thumb
     text: Judges against your own targets and your own past results. A return above 1 is not called profit without your costs.
   - title: Ranks the findings
     text: Puts tracking problems first, then the problems with the most money behind them, and drops anything that wouldn't change a decision.
   - title: Proposes, never changes
-    text: Gives a proposed action and the condition for revisiting it. Budget moves stay inside the total you already spend.
+    text: Gives a proposed action and when to revisit it, one change at a time. It never changes a budget or pauses an ad; you approve each change.
 
 output_shape: |
   BASIS
@@ -54,6 +57,10 @@ output_shape: |
 
   RECALCULATED FROM TOTALS
   <table: ad | spend | clicks | click rate | buy rate | cost per sale | return>
+
+  CHAIN SPLIT
+  Cost per 1,000 views <change>, click rate <change>, buy rate <change>,
+  revenue per sale <change>. Share of the change in cost per sale: <...>
 
   FINDING 1. <a tracking problem, or "tracking checked" and why it's fine>
   Seen:      <what the numbers show>
@@ -66,6 +73,8 @@ output_shape: |
 
   NOT CONCLUDED
   - <what the data can't support yet>
+
+  Proposals only. Nothing has been changed.
 
 example:
   business: sprout
@@ -105,6 +114,12 @@ example:
     Revenue per sale    $34.20      $34.21       same
     Buy rate = purchases / clicks. Return = revenue / spend.
 
+    CHAIN SPLIT
+    Cost per sale rose 2.87 times. Of that rise, about 46% came from
+    fewer clicks per view, 29% from fewer buyers per click, and 24%
+    from dearer views. Revenue per sale didn't move. The weakest link
+    is clicks per view.
+
     FINDING 1. Tracking: no fault visible, not yet confirmed
     Seen:      revenue per sale is the same in both windows, so the
                way sale values are recorded didn't change. Sales fell
@@ -114,14 +129,14 @@ example:
     Check:     store orders from this ad's link in each window, and
                the event counts. MISSING: both.
 
-    FINDING 2. People tired of the ad
+    FINDING 2. Fewer clicks per view (the biggest share)
     Seen:      same ad, same spend, click rate down 38.7%.
     For:       the usual pattern when the same people see one ad
                over and over.
     Against:   can't be confirmed without reach and frequency.
     Check:     frequency (views per person) in each window.
 
-    FINDING 3. Running out of new people, or paying more to reach them
+    FINDING 3. Dearer to be seen
     Seen:      the same $3,000 bought 22.6% fewer impressions.
     Reasons:   (a) the same buyers are being reached again; (b) the
                15+ copies of this headline may be bidding for the
@@ -130,7 +145,7 @@ example:
     Check:     reach per window, and when the other copies launched.
                MISSING: change log.
 
-    FINDING 4. Fewer clickers buy
+    FINDING 4. Fewer buyers per click
     Seen:      buy rate down from 2.99% to 2.19%.
     Reasons:   (a) the page or offer changed near day 22; (b) the
                clicks that are left are from less ready buyers. The
@@ -139,15 +154,18 @@ example:
                worth fixing anyway.
     Check:     did the page, price or offer change around day 22?
 
-    PROPOSAL (nothing changed in the account)
+    PROPOSAL (for you to approve; nothing changed in the account)
     Don't pause yet. Check frequency first. If it rose while clicks
-    fell, add a new version of the price-doubt ad with a new first
-    image, inside the same $143 a day.
+    fell, add one new version of the price-doubt ad with a new first
+    image, inside the same $143 a day, and change nothing else that
+    week so the result is readable.
     Revisit: once frequency, reach and store orders are in.
 
     NOT CONCLUDED
     - Profit. First-order return leaves out $49.99 renewals.
       MISSING: renewal rate and margin.
+
+    Proposals only. Nothing has been changed.
 
 tweaks:
   - what: The earlier period
@@ -163,7 +181,8 @@ judge:
   - Pick one ad and check its cost per sale yourself (spend divided by purchases). It should match.
   - The first finding is about tracking or sale values, or it says tracking was checked and why it's fine.
   - Each finding lists at least two possible reasons, not one confident cause.
-  - Nothing says "pause now" or promises the money you'll save.
+  - Nothing says "pause now", nothing is changed in the account, and no saving is promised.
+  - The chain split's shares add up to the whole change in cost per sale.
   - Missing data is named, and the skill says what it would have changed.
 
 test:
@@ -174,10 +193,22 @@ test:
 
 improve:
   - Write your targets into "What you need" in the skill file (cost per sale, margin, the return where you break even), so every run judges against them without you pasting them.
+  - Export reach and frequency with every run. They're what tells "tired of the ad" apart from "running out of new people".
   - Add the exact column names your ad platform exports to step 1, so the skill reads them the same way every month.
   - If your business has a known pattern, such as a weekly email day or a slow January, add it to the list of explanations in step 3 so it gets weighed with the others.
-  - After each run, write down which finding turned out to be true in your brand file. Paste those notes in next time as your change log.
+  - After each run, write down which finding turned out to be true in log.md in your brand file, under Results. Paste those notes in next time as your change log.
   - Pair it with a skill that turns your ad numbers into a one-page report when someone else needs the short version, and with a store page check when the reasons point to what happens after the click.
+
+works_best_with:
+  tools:
+    - {name: "Claude", why: "Works the sums from a pasted export step by step and shows them, so you can check each one."}
+    - {name: "Google Sheets", why: "Lets you redo any number in the table yourself, from the same totals."}
+    - {name: "Meta Ads Manager", why: "Export both periods with reach, frequency and the attribution setting, and make any approved change there by hand."}
+  inputs:
+    - "Reach and frequency for both periods, so a tired audience can be told apart from a used-up one"
+    - "Your store's own orders for the same dates, so a counting fault shows up"
+    - "A dated change log of ads, prices, pages and budgets, so each drop can be lined up with what changed"
+    - "Your margin and renewal rate, so it can say whether an ad still makes money"
 
 terms:
   - term: Return (ROAS)

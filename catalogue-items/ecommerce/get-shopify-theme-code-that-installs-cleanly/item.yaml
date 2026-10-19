@@ -14,5 +14,8 @@ outputs:
 uses: []
 origin: rebuilt
 source_ids: [CES-136]
-old_name: shopify-liquid-themes
-version: 1.0.0
+version: 1.1.0
+credits:
+  - {title: "Liquid reference: theme tags (content_for)", by: "Shopify", url: "https://shopify.dev/docs/api/liquid/tags/theme-tags", used: "Rendering theme blocks and fixed blocks inside a section"}
+  - {title: "Theme limits", by: "Shopify", url: "https://shopify.dev/docs/storefronts/themes/architecture/limits", used: "Block limits and max_blocks"}
+  - {title: "Theme Check", by: "Shopify", url: "https://shopify.dev/docs/storefronts/themes/tools/theme-check", used: "The check before handing files over"}

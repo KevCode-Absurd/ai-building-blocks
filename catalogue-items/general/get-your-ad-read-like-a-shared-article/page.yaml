@@ -150,6 +150,15 @@ improve:
   - Add your page's first images to the brand file, so the scene check can run without you describing them.
   - Pair it with a skill that writes the landing page, so the page's opening line is written first and the picture follows it.
 
+works_best_with:
+  tools:
+    - {name: "GPT Image 2.5", why: "Spells a short line on a photo better than older models, and you can point at one wrong word to fix it."}
+    - {name: "Nano Banana 2.1", why: "Google's main image model, with better text on images and steady results across follow-up edits."}
+  inputs:
+    - "A phone screenshot of your page's first screen, so the scent check compares what buyers see"
+    - "Two or three real photos of the room where the problem happens, so the scene looks like your buyers' homes"
+    - "The words buyers use for the problem in reviews, so a fresh line sounds like them"
+
 terms:
   - term: Scent check
     meaning: Comparing an ad with the page it opens, to see if they share the same words, scene and promise. When they match, people keep reading.

@@ -1,10 +1,9 @@
-# Make an ad that looks like a text conversation: for online stores
+# For online stores: Get believed with a text someone else sent
 
-Use this with the main skill when the story ad sells a physical product.
+**What the other person notices**
+- Things people use up: the tub that's been open for months, the shaker still in the sink, the third bottle this year.
+- Things people buy once: "is yours peeling too?", "did you get soaked again", "that's the second suitcase".
 
-**Extra thing to give it:** your product photos, but only if you want the product in the picture. Otherwise send no product photo to the image tool.
+**Build it, don't generate it.** Type the messages into plain bubbles in a design tool and export a square image. Every word stays exact and nothing looks like a real app.
 
-**Ideas for physical products**
-- Something people buy once: the friend who asks "is yours peeling too?", or the partner who texts "did you get soaked again".
-
-**Reminder:** leave the product out unless asked. If it is asked for, use the real one, small and to one side, never held up or centred. The picture must still work with it taken out.
+**Product photos.** Send none. The product never appears in the thread.

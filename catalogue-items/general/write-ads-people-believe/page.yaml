@@ -7,9 +7,9 @@ headline: "Write ads people believe"
 subhead: Give it your product facts and the buyer you want. It finds the one fact that answers that buyer's biggest doubt, writes the ad around it, and shows which fact backs each line, so nothing in your ad is made up.
 
 explain: |
-  Most ads fail for one of two reasons. They praise the product in words anyone could use ("premium", "high quality"), or they promise more than the product can back up. This skill fixes both.
+  Most ads fail for one of two reasons. They praise the product in words anyone could use ("premium", "high quality"), or they promise more than the product can back up. Readers have learned to discount both. What they believe is a specific fact, because it sounds like something the seller has checked.
 
-  It works from your buyer's point of view. First it asks what this buyer wants and what makes them hesitate. Then it searches your product facts for the single detail that answers that, such as a dose, a material or how it's made, and builds the whole ad on it: the first line, the headline, the picture and the call to action. Every claim is checked against your facts, and anything you can't prove is flagged instead of written.
+  This skill works from your buyer's point of view. First it asks what this buyer wants and what makes them hesitate. Then it searches your product facts for the single detail that answers that, such as a dose, a material or a step in how it's made, and builds the whole ad on it: the first line, the headline, the picture and the next step. Every claim is checked against your facts, numbers keep their exact wording and conditions, and anything you can't prove is flagged instead of written.
 
 when:
   - You have a product with real details, but your ads sound like everyone else's.
@@ -88,12 +88,12 @@ example:
     Format: Facebook image ad. Main text under 125 characters,
     headline under 40.
   output: |
-    MAIN TEXT (110 characters)
+    MAIN TEXT (121 characters)
     Quit your greens powder? One Sprout pack has 21 vitamins and
-    minerals and 6 g of fiber, in gummies. No shaker.
+    minerals and 6 g of fiber, in gummies you eat from the pack.
 
-    HEADLINE (33 characters)
-    6 g of fiber. Zero chalky powder.
+    HEADLINE (34 characters)
+    6 g of fiber, and no chalky powder
 
     IMAGE
     A kitchen counter in morning light. A daily pack torn straight
@@ -114,8 +114,8 @@ example:
                      than 125 characters to explain fairly
     Not used:        the discount. This buyer's doubt is what's
                      inside, not the price
-    MISSING:         a fair side-by-side with a named powder's label.
-                     Without it, "zero chalky powder" is as far as
+    MISSING:         a fair side-by-side with a powder's label.
+                     Without it, "no chalky powder" is as far as
                      the ad can go
 
 tweaks:
@@ -146,7 +146,17 @@ improve:
   - Add your brand's voice rules to step 4 ("Write the words"), with two lines from your best ad as the model.
   - If you always write for the same platform, replace the format line in your input with fixed limits inside the skill.
   - When an ad wins, write the winning fact and buyer into your brand file, so the next run starts from what already sold.
-  - Pair it with "Make sure every ad sounds like your brand" before anything goes live.
+  - Pair it with "Make every ad sound like your brand" before anything goes live, and "Know if your copy is ready to publish" as the last read.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Matching one fact to one doubt works well in any strong chat AI with this skill."}
+    - {name: "Meta Ads Manager", why: "Its preview shows whether the fact lands before the main text is cut at See more."}
+  inputs:
+    - "Your full facts panel or spec sheet, with the source of each fact, so it can find the detail rivals don't mention"
+    - "Your allowed and banned claims list from your legal or compliance check"
+    - "Five reviews that state the buyer's doubt in their own words, so the fact answers the real worry"
+    - "A real photo of the product in use, so the image note shows how it's really used"
 
 terms:
   - term: Allowed claims

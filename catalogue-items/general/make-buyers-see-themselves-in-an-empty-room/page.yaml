@@ -141,6 +141,15 @@ improve:
   - Add the objects your brand never shows (medicine, bins, mess) to the house rules.
   - Write the trace into your story's first line, so the reader can match picture and text at once.
 
+works_best_with:
+  tools:
+    - {name: "GPT Image 2.5", why: "Its thinking mode plans where things sit before it draws, which helps place the three objects."}
+    - {name: "Nano Banana 2.1", why: "Takes up to 10 object photos, so a real mug, pillow or lamp can be copied into the room."}
+  inputs:
+    - "Photos of real rooms like your buyers' (your own or your team's, with permission), so the room looks lived in"
+    - "Reviews that mention a time of day, so the clock object and the light are real"
+    - "Your brand's past photos, so the light and finish match the rest of your feed"
+
 terms:
   - term: Story ad
     meaning: An ad whose main text tells one person's story, like a post from a friend.

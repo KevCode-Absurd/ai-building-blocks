@@ -183,6 +183,14 @@ improve:
   - Ask the creator to film both openings, so one shoot gives you two ads to test.
   - Pair it with the skill that writes the approved phone video script first.
 
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Claude, ChatGPT and Gemini all follow this skill well, so use the one you already have."}
+  inputs:
+    - "A sample video you like, with notes on what to match (light, framing), so the creator sees the target"
+    - "Links to the creator's own past videos, so the brief fits how they already film"
+    - "The offer code and pointer line exactly as they will appear, so nothing is misread"
+
 terms:
   - term: Talking point
     meaning: The point a part of the video must make. The creator says it in their own words.

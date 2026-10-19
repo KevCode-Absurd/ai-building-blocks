@@ -1,17 +1,17 @@
 # Selfie-style video ad script: for online stores
 
-## Extra things to give it
-- Product details: how it's unboxed, opened and used; sizes and versions; what a first use looks like.
-- Real customer clips or photos with permission to use them in ads (if a real creator or customer is used).
-- Review lines with source and date, for the doubt and for any quoted line.
+## Give it as well
+- How the product arrives, opens and is first used, step by step, plus the sizes or versions you sell.
+- Clips or photos from real customers or creators, with written permission to use them in ads.
+- Review lines with their source and date, for the doubt and for any quote.
 
-## Where it fits
-- Unboxing and first-use demonstrations for physical products.
-- Scripts built on one doubt: the common objection from reviews ("I thought it would be flimsy") said in the setup and answered in the demonstration.
-- Size, fit or "which one" decisions, shown in hand.
+## Good jobs for it in a store
+- A first unboxing, or a first use, filmed in hand.
+- One common doubt from your reviews ("I thought it would feel cheap"), said in the Doubt beat and answered in the Show beat.
+- Size, fit or "which one do I get" questions, settled by holding the options side by side.
 
-## Rules for stores
-- The one number is often a time to first use, a size, a count or "week 3" from real customer data. Take it from the product page, tests or reviews, never make it up.
-- A creator talking about a product they've used may give their own result. Don't script it for them; leave blanks.
-- An AI presenter never says they own or use the product. The offer and price go in the end text, checked against the current offer.
-- Don't show a made-up star rating or purchase counter.
+## Store rules
+- The anchor is often a size, a count, a time to first use, or a week number from real customer data. Take it from the product page, a test or reviews.
+- A creator who has used the product may give their own result. Leave it as a blank for them to fill.
+- An AI presenter never says they bought, own or use the product.
+- Price, bundle and shipping go in the end text, checked against today's offer. No made-up star rating or "sold today" counter.

@@ -144,6 +144,16 @@ improve:
   - Set your usual mark in step 4 if one always works better for your product.
   - Pair it with a story ad skill, so the story's first line explains what the mark points at.
 
+works_best_with:
+  tools:
+    - {name: "GPT Image 2.5", why: "Makes the plain photo, and lets you point at one spot to change it without remaking the rest."}
+    - {name: "Nano Banana 2.1", why: "A good second choice for the plain photo, and it holds the scene steady while you ask for small fixes."}
+    - {name: "iPhone Markup, or any phone photo editor", why: "Lets you draw the rough mark with a fingertip. Image models tend to draw it too neat."}
+  inputs:
+    - "A real phone photo of the flaw, if you have one, so the made photo copies its true size and look"
+    - "Where the buyer stands when they first notice it, so the camera sees it from their spot"
+    - "A count or time buyers mention (six days, the third tub), so the note says something real"
+
 terms:
   - term: Story ad
     meaning: An ad whose main text tells one person's story, like a post from a friend.

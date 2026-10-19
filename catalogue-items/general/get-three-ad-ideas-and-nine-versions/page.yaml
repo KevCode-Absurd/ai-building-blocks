@@ -194,6 +194,16 @@ improve:
   - Answer the footer questions and save the answers in your brand file, so the next brief has fewer "inferred" fields.
   - Pair it with a skill that maps which moments and messages you've already covered before choosing ideas, and one that checks each finished ad before you spend.
 
+works_best_with:
+  tools:
+    - {name: "Meta Ads Manager", why: "An export by ad for the last 1 to 4 weeks shows spend, purchases and frequency, which pick explore, extend or refresh."}
+    - {name: "Meta Ad Library", why: "Shows what runs now, as 'observed' evidence when you have no export."}
+    - {name: "Google Sheets", why: "Tracks cost per sale and frequency week by week, so you can see when a winner starts wearing out."}
+  inputs:
+    - "Your stock list and offer dates, so no idea briefs a product or deal that's gone"
+    - "A list of the photos and footage you already have, by file name, so versions name real files"
+    - "Answers from new buyers to 'what nearly stopped you?', so each doubt has a quote"
+
 terms:
   - term: Brief
     meaning: The written plan a designer or video maker works from, with every line, picture and choice already decided.

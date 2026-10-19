@@ -190,6 +190,15 @@ improve:
   - Save the question that wins in your brand file, then test new questions on the same game.
   - Pair it with the skill that turns a skeleton script into shots and prompts for your image and video tools.
 
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Claude, ChatGPT and Gemini all follow this skill well, so use the one you already have."}
+    - {name: "Nano Banana 2.1", why: "For the still version, it can work from your product photo as a reference, so the pack looks right."}
+  inputs:
+    - "Photos of the old things your product replaces, so each step shows real objects"
+    - "A short list of jokes your brand won't make, so the humor stays on brand"
+    - "Results from a past skeleton ad, so the next question tests something new"
+
 terms:
   - term: Game
     meaning: The one unusual thing in a comedy bit that keeps coming back bigger. Here, the thing that grows each rung.

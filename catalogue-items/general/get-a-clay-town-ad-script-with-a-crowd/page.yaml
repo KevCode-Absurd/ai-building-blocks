@@ -184,6 +184,15 @@ improve:
   - Save your lead's description in your brand file, so the same figure can come back in the next ad.
   - Pair it with the skill that turns a clay town script into still and clip prompts. For one character on a single tabletop, use the single-character clay script instead.
 
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Claude, ChatGPT and Gemini all follow this skill well, so use the one you already have."}
+    - {name: "Nano Banana 2.1", why: "For the still version, it can work from your product photo as a reference, so the pack looks right."}
+  inputs:
+    - "Photos of a real place your buyers share, like a school gate, so the set feels known"
+    - "Photos of the product from the front, side and top, so the sculpted version is never guessed"
+    - "A short list of moments your brand won't show, so the crowd scenes stay on brand"
+
 terms:
   - term: Stop-motion
     meaning: Animation made by moving clay figures a tiny bit between photos, which gives a slightly stepped movement.

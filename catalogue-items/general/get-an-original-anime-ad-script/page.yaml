@@ -1,170 +1,191 @@
 new_slug: get-an-original-anime-ad-script
 name: "An anime-style ad where your product saves the day"
-summary: "Give it your selling idea. You get an original anime-style script with a made-up hero and your real product."
+summary: "Give it your selling idea. You get an original anime-style script with a made-up hero, key poses and your real product."
 job: make-video-ads
 
 headline: "An anime-style ad where your product saves the day"
-subhead: Give it your selling idea and your brand file. It picks one drawing style, designs one original adult hero, chooses one story device (such as the old way as a rival, or a big reveal) and writes a clip-by-clip script or a single key image brief.
+subhead: Give it your selling idea and your brand file. It proposes one drawing look, designs one original adult hero, picks the one thing to exaggerate, and writes every shot as two key poses and a hold. Or you get one key image brief.
 
 explain: |
-  Hand-drawn anime can exaggerate in ways film can't. A frustration can tower over the hero, the old way of doing things can become an opponent, and an invisible benefit can be drawn as light. That makes it good for stopping a scroll. It also goes wrong easily: copied characters, a fight with no product in it, or a hero who "powers up" in a way that reads as a promised result.
+  Hand-drawn anime can push things past real life. A chore can tower over the hero, a sigh can become a storm cloud, one quick tear of a pack can stretch into a moment. That makes it good for stopping a scroll. It also goes wrong easily: copied characters, a fight with no product in it, or a hero who "powers up" in a way that reads as a promised result.
 
-  This skill keeps it original and honest. It writes one style sheet (line weight, shadows, colours) used for the whole ad, and one hero who reads as an adult even as a black outline. It picks one story device from seven, each with a limit, such as "the rival is never a named competitor". The product is drawn exactly, label words and all. The hero never says the product worked for them. When the script is done, "Turn your anime script into consistent clips" writes the prompts.
+  This skill keeps it original and honest. It proposes the look on four simple dials (line, shading, palette, backgrounds) and designs one hero who reads as an adult even as a black outline. It picks one thing to exaggerate, the size of the old way, a feeling, or the speed of one moment, each with a limit. It names the pose the whole ad builds to, then writes every shot the way TV anime is drawn: a start pose, an end pose and a short hold, with only a few parts moving. The product is drawn exactly, label words and all, and the hero never says it worked for them.
 
 when:
-  - Your buyer has an old way of doing things you can show as the enemy (a shoebox of receipts, a drawer of tangled chargers).
+  - Your buyer has an old way of doing things you can draw as huge and silly (a shoebox of receipts, a drawer of tangled chargers).
   - You want an ad that looks nothing like the others in your category.
-  - You're launching something and want a reveal moment.
+  - You want a script your video tool can follow shot by shot, without the hero changing.
 
 you_give:
   - Your selling idea or an existing script
   - Your brand file, with the product's look and label words, the old way it replaces, and your approved claims
   - Video, image or both, the length and your video tool's clip length (optional)
 you_get:
-  - A style sheet, a hero sheet and the chosen story device
-  - A shot table with clip, event, camera and light, words and speaker
-  - Or, for an image, the layout, exact words and an image prompt
+  - A proposed look line, a hero sentence and the one thing the drawing exaggerates
+  - The problem, turn and payoff poses the ad builds to
+  - Shot cards with key poses, holds, what moves, words and sound
+  - Or, for an image, the pose, layout, exact words and an image prompt
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste your selling idea and brand file. Include, in your buyer's words, the old way your product replaces.
-  - Say "video, 30 seconds" or "image", and your tool's clip length if you know it.
-  - Check that the device it picked uses only steps and claims from your facts.
-  - Take the script to "Turn your anime script into consistent clips" to make the prompts.
+  - Say "video, 20 seconds" or "image", and your tool's clip length if you know it.
+  - Picture it with the sound off. If you can't name the old way, the change and the product's part, ask for a clearer turn pose.
+  - Take the shot cards to "Turn your anime ad script into video clips" for the prompts.
 
 how_it_works:
   - title: Checks the fit
-    text: Confirms the idea suits exaggeration and doesn't depend on a real face or real texture.
-  - title: Writes one style sheet
-    text: Picks one of five looks and fixes line weight, shadows, colours and texture for the whole ad.
+    text: Confirms the idea suits drawing things bigger than life and doesn't rest on a real face or real texture.
+  - title: Proposes the look
+    text: Sets line, shading, palette and backgrounds as one look line, marked proposed so the clips skill can keep it.
   - title: Designs one hero
-    text: An original adult with a clear outline and two or three colours. Never a copied character.
-  - title: Picks one story device
-    text: Chooses from rival, reveal, routine shift, charge, guide, step panels or deadpan, each with its own limit.
-  - title: Draws the product exactly
-    text: True shape and every label word. No effect lines across it, and the hero claims no result.
-  - title: Writes the video or image
-    text: Timed shots with one event each and one speaker at a time, or one peak image with 20 words or fewer.
+    text: An original adult you'd know as a black outline, in one sentence reused unchanged.
+  - title: Picks one exaggeration
+    text: The old way drawn huge, a feeling drawn as a comic symbol, or one moment drawn fast or held still.
+  - title: Names three poses
+    text: The problem pose, the turn pose with the product in hand, and the payoff pose the ad ends on.
+  - title: Writes shot cards
+    text: A start pose, an end pose and a hold for each shot, what moves and what stays still, one speaker at a time.
 
 output_shape: |
-  STYLE SHEET  <look, line weight, shadow steps, colours, texture>
-  HERO         <one original adult: outline, hair, outfit colours, mark>
-  DEVICE       <rival / reveal / routine shift / charge / guide / steps / deadpan>
+  LOOK (proposed)  <line, shading, palette, backgrounds>
+  HERO             <one original adult, one sentence>
+  EXAGGERATION     <size / feeling / speed, and its limit here>
+  POSES            Problem: <...>  Turn: <...>  Payoff: <...>
 
-  Shot | clip | event | camera and light | words (speaker) | notes
-  1    | <clip 1, length> | <one event> | <one move, named light> | "<words>" (<speaker>) | <...>
-  <one row per shot>
+  Shot n · <seconds> · clip <n>
+  Key A: <opening pose>  >  Key B: <end pose> · hold <time>
+  Moves: <parts>   Holds: <parts>
+  Words: <speaker>: "<exact line>" or none   Sound: <contact sounds>
 
   NOTES
-  - MISSING: <anything the facts didn't give>
+  - Sound-off read: <old way, change, product's part>
+  - <metaphors flagged, MISSING items>
 
-  (For an image: device, layout, exact words in quotes, image prompt)
+  (For an image: pose, layout, exact words in quotes, image prompt)
 
 example:
   business: sprout
   input: |
     [the skill]
 
-    Idea: the old way (chalky greens powder and a shaker) as the
-    enemy. One daily pack wins.
+    Idea: the old way (chalky greens powder and a shaker) drawn as a
+    giant. One daily pack cuts it down to size.
     Buyer: the powder quitter. Review: "I've been choking on [a
     big-name greens powder] for the last few years".
     The old way (brand file): a half-used tub of powder and a
-    shaker, a shelf of separate pill bottles.
+    shaker.
     Product: glossy deep-green pouch, big yellow wordmark, yellow
     bear face top right, "28 Daily Packs" at the bottom. Daily pack
     torn straight across the top only. Gummies: small deep-green
     bears.
-    Approved: "60+ ingredients, 21 vitamins & minerals, and 6g fiber".
     Brand line: "Rip. Tip. Enjoy."
-    Settings: video, 30 seconds, narrator, 10-second clips.
+    Settings: video, 20 seconds, narrator only, light comedy,
+    8-second clips.
   output: |
-    STYLE SHEET  clean line: even black outline, flat colours, one
-                 hard shadow step, smooth paper-free surfaces.
-                 Colour, no grain.
-    HERO         an original adult man, 8 heads tall, spiky black
-                 hair, teal hoodie and sand trousers, a small scar on
-                 his chin. Reads as an adult in solid black outline.
-    DEVICE       Rival. The rival is "the old way": a plain,
-                 unlabelled tub of grey-green powder and a shaker.
+    LOOK (proposed)  thick even marker outline, flat colour with one
+                     shadow tone, full bright palette, flat graphic
+                     backgrounds.
+    HERO             an original adult man, tall and lanky, spiky
+                     black hair with one tuft over his left eye, teal
+                     hoodie, sand trousers, white trainers.
+    EXAGGERATION     Size. A plain, unlabelled tub of grey-green powder
+                     drawn three times his height. It shrinks back
+                     once the pack is open. A metaphor, not a result.
+    POSES            Problem: arms crossed, glaring up at the tub.
+                     Turn: both hands on the daily pack's top edge.
+                     Payoff: at the front door, facing screen right,
+                     the pouch at chest height, front to camera.
 
-    SHOT 1  Clip 1
-      Event:  the hero at a kitchen counter faces the tub, drawn
-              three times his height, chalk dust curling off it.
-      Camera: low angle, still. Light: flat morning light from the left.
-      Words:  "Every morning, the same fight." (Narrator)
-    SHOT 2  Clip 1
-      Event:  the shaker rattles; a clump hits the hero's cheek.
-              He wipes it off, eyes half closed, mouth flat.
-      Camera: level, slow push in. Light: same.
-      Words:  "Chalky powder. A shaker to wash." (Narrator)
+    Shot 1 · 4 s · clip 1
+    Key A: behind the counter, arms crossed, facing the tub (screen
+      right)  >  Key B: one eyebrow drops · hold 1 s
+    Moves: eyebrow, hoodie strings.  Holds: body, tub.
+    Words: Narrator: "Same fight, every morning."  Sound: fridge hum.
 
-    SHOT 3  Clip 2
-      Event:  the hero holds up one daily pack and tears it straight
-              across the top edge. Speed lines behind him point at it.
-      Camera: three-quarter view, still. Light: same.
-      Words:  "Or one daily pack. Rip. Tip. Enjoy." (Narrator)
-    SHOT 4  Clip 2
-      Event:  small deep-green gummy bears tip into his palm. Behind
-              him the tub shrinks to normal size.
-      Camera: close on the hand, then hold. Light: same.
-      Words:  none. A short hold is the joke.
+    Shot 2 · 3 s · clip 1
+    Key A: he lifts the scoop  >  Key B: powder puffs into his face,
+      he blinks · hold 0.5 s
+    Moves: arm, the puff.  Holds: the tub.
+    Words: none, the blink is the joke.  Sound: a soft puff.
 
-    SHOT 5  Clip 3
-      Event:  he eats the gummies. The pouch stands on the counter,
-              label to the viewer: "Sprout", yellow bear face, "28
-              Daily Packs".
-      Camera: level, still. Light: same.
-      Words:  "Sixty-plus ingredients. Twenty-one vitamins and
-              minerals. Six grams of fiber." (Narrator)
-    SHOT 6  Clip 3
-      Event:  held on the pouch, room to its right for offer text.
-      Words:  "We made daily nutrition, like, ridiculously easy."
-              (Narrator)
+    Shot 3 · 3 s · clip 2
+    Key A: both hands pinch the daily pack's top edge (wind-up: they
+      pinch tighter)  >  Key B: torn straight across in one pull ·
+      hold 0.5 s
+    Moves: hands, the torn strip.  Holds: the pack's front.
+    Words: Narrator: "Or skip the scoop."  Sound: one crisp tear.
+
+    Shot 4 · 4 s · clip 2
+    Key A: the pack tips  >  Key B: small deep-green bears in his
+      palm, the tub behind him shrunk to normal size · hold 1 s
+    Moves: the bears, the tub shrinking.  Holds: the hero.
+    Words: none.  Sound: a soft patter.
+
+    Shot 5 · 6 s · clip 3
+    Key A: he steps through the door, facing screen right  >
+      Key B: the payoff pose · hold 1.5 s
+    Moves: legs, then hair settling after the stop.  Holds: the
+      pouch, front to camera.
+    Words: Narrator: "Rip. Tip. Enjoy."  Sound: door click.
+
+    20 seconds, 11 spoken words.
 
     NOTES
-    - With the sound off: the enemy is the tub, the change is the
-      pack, the product is the pouch.
-    - The hero never says it worked for him. He doesn't speak.
-    - The shrinking tub is a metaphor, not a result.
-    - Offer text is added in editing, from the current offer.
+    - Sound-off read: the old way is the giant tub, the change is the
+      torn pack, the product is the pouch in the payoff.
+    - The hero never speaks and never says it worked for him.
+    - The shrinking tub is a metaphor for an easier routine.
+    - Offer text goes beside the pouch in editing, from the current
+      offer.
     - MISSING: the daily pack's own label words. Shots 3 and 4 show
-      it from the side until they're supplied.
+      its back until they're given.
 
 tweaks:
-  - what: The story device
-    how: Name one ("use the rival device") or let it choose. Rival suits buyers who know their problem; reveal suits a launch.
-  - what: The drawing style
-    how: Ask for "brush ink" for bold contrast or "soft film" for a calmer, painted feel. It keeps the one you choose for the whole ad.
+  - what: The exaggeration
+    how: Name one ("exaggerate the feeling") or let it choose. Size suits a cluttered old routine, speed suits a product whose use is the fun part.
+  - what: The look
+    how: Change any dial, such as "thin line and painted backgrounds" for a calmer feel. It keeps one look for the whole ad.
   - what: Video or image
-    how: An image gives you the peak moment of the device with one headline. A video gives you the full build-up and payoff.
+    how: An image gives you one key frame, the payoff pose for buyers who know you, the problem pose for those who don't.
   - what: Sound
-    how: Say "no dialogue" and it tells the whole story in pictures and on-screen text, which works with the sound off.
+    how: Say "no dialogue" and it tells the whole story in poses and on-screen text, which works with the sound off.
 
 judge:
-  - The style sheet and hero are named once at the top and never change.
-  - You could name the obstacle, the change and the product's part in it with the sound off.
+  - The look, the hero and the exaggeration are named once at the top and never change.
+  - You could name the old way, the change and the product's part in it with the sound off.
+  - Every shot has a start pose, an end pose and a hold.
   - The product's label words match your pack or screen exactly.
-  - No artist, studio, series or competitor is named anywhere.
-  - The hero never says "it worked for me" or shows a changed body.
+  - No artist, studio, series or competitor is named, and the hero never says "it worked for me".
 
 test:
-  - Picture it with the sound off. You should still be able to say the obstacle, the change and the product's part in it.
+  - Picture it with the sound off. You should still be able to say the old way, the change and the product's part in it.
   - Check every label word in the script against your real pack.
-  - Search it for any artist, studio, series or competitor name. There should be none.
-  - Run it twice with the same story device. The style sheet can change. The product and the claims must not.
+  - Count the moving parts on each shot card. Most should list only one or two.
+  - Run it twice. The look can change, but the product, the claims and the one exaggeration rule must hold.
 
 improve:
-  - Write the old way in your buyer's own words into "What you need" in the skill file, so the rival or obstacle is always theirs.
-  - If only one or two story devices suit your brand, delete the others from step 4.
-  - Save the style sheet and hero you like in your brand file, so a series of ads looks like one family.
-  - Add your banned claims to the checks, so the hero's change never shows a result you can't back.
-  - Pair it with a skill that turns an anime script into still and clip prompts for your video tool.
+  - Write the old way in your buyer's own words into "What you need" in the skill file, so the giant is always theirs.
+  - Save the look line and hero sentence you like in your brand file, so a series of ads looks like one family.
+  - Add your banned claims to the checks, so no pose shows a result you can't back.
+  - Pair it with "Turn your anime ad script into video clips" for the sheets and clip prompts.
+
+works_best_with:
+  tools:
+    - {name: "Claude", why: "Follows long skill files closely and keeps the hero sentence word for word across every shot."}
+    - {name: "GPT Image 2.5", why: "Keeps label words readable when you make the single key image, more often than most image models."}
+  inputs:
+    - "A photo of the product being opened and used, so the hero's hands copy your real steps"
+    - "Two or three buyer reactions to the old way (a groan, a joke), so the hero's feeling rings true"
+    - "A photo of the room where buyers use it, so the place feels like theirs"
+    - "Your never-show list, so no shot draws something your brand avoids"
 
 terms:
-  - term: Style sheet
-    meaning: A short fixed description of the drawing style (line, shadows, colours) used in every prompt so the look doesn't drift.
-  - term: Story device
-    meaning: The one trick the story is built on, such as the old way as a rival or a big reveal.
+  - term: Key pose
+    meaning: One of the main drawings in a shot, such as where an action starts and where it ends.
+  - term: Hold
+    meaning: A short moment where the drawing stays still before the cut, often where the joke lands.
+  - term: Payoff pose
+    meaning: The picture the whole ad builds to, usually the hero with your product, front to camera.
   - term: Key frame
     meaning: A single drawn image of the most important moment, used as a still ad or as a reference for a clip.

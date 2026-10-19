@@ -1,10 +1,9 @@
-# Make an ad from hand-drawn story panels: for online stores
+# For online stores: Keep people reading with a hand-drawn story
 
-Use this with the main skill when the story ad sells a physical product.
+**Shapes that suit a store**
+- Things people use up: the same shelf in three panels, the row of half-used tubs growing one at a time.
+- Things people buy once: the same doorway in three panels, a new coat on the hook each winter and the old one in the bin.
 
-**Extra thing to give it:** your product photos, but only if you want the product in the picture. Otherwise send no product photo to the image tool.
+**Who draws it.** A real drawing you make or pay an illustrator for, photographed on your table, beats a generated one. Agree in writing that you may use it in ads.
 
-**Ideas for physical products**
-- Something people buy once: the cycle of buying and replacing, one panel per purchase.
-
-**Reminder:** leave the product out unless asked. If it is asked for, use the real one, small and to one side, never held up or centred. The picture must still work with it taken out.
+**Product photos.** Send none. The product never appears in the panels.

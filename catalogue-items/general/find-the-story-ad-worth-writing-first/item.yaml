@@ -1,7 +1,7 @@
 slug: find-the-story-ad-worth-writing-first
 renamed_from: native-story-ad-setup-sheet
 name: "Find the story ad worth writing first"
-summary: "A one-page plan for a story ad, with the problem, narrator, pictures and a test of five."
+summary: "A setup sheet for a story ad: the fit, the problem and why people switch, the narrator, the page and a test of four."
 category: general
 boards: [ecommerce]
 type: skill
@@ -12,6 +12,7 @@ inputs:
   - {type: voc_reviews, required: true}
   - {type: product_data, required: true}
   - {type: persona, required: false}
+  - {type: landing_page, required: false}
 outputs:
   - {type: plan}
 uses: [get-story-ads-read-with-the-right-picture]
@@ -19,4 +20,8 @@ example: native
 origin: own
 source_ids: [CES-076]
 old_name: native-ads
-version: 1.0.0
+version: 2.0.0
+credits:
+  - {title: "The Four Forces of Progress: Push, Pull, Anxiety & Habit", by: "Bob Moesta and Chris Spiek, jobstobedone.org", url: "https://jobstobedone.org/the-four-forces/", used: "Mapping why buyers switch, push first"}
+  - {title: "Federal Trade Commission Announces Final Rule Banning Fake Reviews and Testimonials", by: "US Federal Trade Commission", url: "https://www.ftc.gov/news-events/news/press-releases/2024/08/federal-trade-commission-announces-final-rule-banning-fake-reviews-testimonials", used: "No invented narrator or customer voice"}
+  - {title: "5. Specific Ways to Generate Diverse Creative", by: "Jon Loomer Digital", url: "https://www.jonloomer.com/andromeda-5/", used: "Test rows that differ by a lot"}

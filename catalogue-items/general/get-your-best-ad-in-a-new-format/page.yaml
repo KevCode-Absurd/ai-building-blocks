@@ -42,7 +42,7 @@ how_it_works:
   - title: Rebuilds each part
     text: Keeps setting, framing, props and product placement, and follows set rules for each switch, like still to video or video to carousel.
   - title: Fits the slots
-    text: Uses the ad's own line for each slot with a limit. If none fits, the slot stays empty and is flagged.
+    text: Uses the ad's own line for each slot with a limit. If none fits, the slot stays empty and is flagged. A carousel's reveal gets its own card.
   - title: Lists every change
     text: Notes timing, anything it couldn't show, replacements, empty slots and lines that break a claim rule, which it flags but doesn't rewrite.
 
@@ -174,6 +174,17 @@ improve:
   - If you always remake into one format (for example 9:16 video), write its length and slot limits into step 3 as fixed rules.
   - Fix flagged lines in the original ad first, then remake it. A remake carries every word over, mistakes included.
   - Pair it with a skill that checks a finished ad before you spend, once the video or carousel is made.
+
+works_best_with:
+  tools:
+    - {name: "Claude", why: "Keeps every word of the original in order across a long remake and counts them back."}
+    - {name: "Veo 3.1", why: "Rebuilds shots as 9:16 video from a start frame, so the setting and product carry over."}
+    - {name: "GPT Image 2.5", why: "Redraws stills and carousel cards from your product photo with short text kept readable."}
+    - {name: "Meta Ads Manager", why: "Its preview shows the remake in each placement before you spend."}
+  inputs:
+    - "The original ad file itself, not just its words, so each new shot matches its setting and framing"
+    - "The ad's results, so you know which beat earned them and must survive"
+    - "Your live offer terms, so an offer that has ended gets flagged"
 
 terms:
   - term: Beat

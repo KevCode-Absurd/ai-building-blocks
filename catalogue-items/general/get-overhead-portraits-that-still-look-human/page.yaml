@@ -155,6 +155,15 @@ improve:
   - Add your claims rules to the avoid list. For skincare or supplements, ban any before and after and any skin result.
   - Pair it with the skill that turns an approved image plan into a prompt when the portrait carries a headline, and the one that makes an approved image bigger for the final export.
 
+works_best_with:
+  tools:
+    - {name: "Nano Banana Pro", why: "Takes up to 5 character references, so the approved person still looks like themselves from above."}
+    - {name: "GPT Image 2.5", why: "Holds small edits across several rounds, which suits 'change only the hair' requests."}
+  inputs:
+    - "Several photos of the approved person from different angles, so the face holds at close range"
+    - "A photo of the real surface (a bed, a rug, grass), so the hair and texture around the head look real"
+    - "Your brand's rules for skin and make-up, so the prompt keeps the person as they are"
+
 terms:
   - term: Rectilinear lens
     meaning: A wide lens that keeps straight lines straight, unlike a fisheye, which bends them into a curve.

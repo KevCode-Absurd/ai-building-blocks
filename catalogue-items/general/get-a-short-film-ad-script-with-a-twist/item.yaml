@@ -18,4 +18,8 @@ example: cinematic
 origin: own
 source_ids: [CES-107]
 old_name: script-format-cinematic
-version: 1.0.0
+version: 2.0.0
+credits:
+  - {title: "The But & Therefore Rule", by: "David Perell, on Trey Parker and Matt Stone", url: "https://perell.com/note/but-therefore-rule/", used: "The turn line and the but-or-therefore test between beats"}
+  - {title: "Chekhov's Gun: How To Setup and Payoff in Screenwriting", by: "Sam Kench, StudioBinder", url: "https://www.studiobinder.com/blog/chekhovs-gun/", used: "Plant early, pay off late, keep the plant quiet, misleading details that stay fair"}
+  - {title: "The ABCDs of effective video ads", by: "Google", url: "https://business.google.com/us/resources/articles/abcds-of-effective-video-ads/", used: "Brand on screen early, worked into the story; drop viewers in from the start"}

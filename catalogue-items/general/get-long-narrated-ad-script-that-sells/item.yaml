@@ -18,4 +18,9 @@ uses: []
 origin: own
 source_ids: [CES-125]
 old_name: script-format-vsl
-version: 1.0.0
+version: 2.0.0
+credits:
+  - {title: "Levels of Awareness", by: "Josh Kaufman, The Personal MBA", url: "https://personalmba.com/levels-of-awareness/", used: "A different opening for each buyer stage"}
+  - {title: "The ABCDs of effective video ads", by: "Google", url: "https://business.google.com/us/resources/articles/abcds-of-effective-video-ads/", used: "Show the brand early where viewers can skip; voice-over backing the ask"}
+  - {title: "The But & Therefore Rule", by: "David Perell, on Trey Parker and Matt Stone", url: "https://perell.com/note/but-therefore-rule/", used: "Linking each part of a round with but and so"}
+  - {title: "Creators: 150 WPM Timing and Formatting for Voice Over Script Writing", by: "VoiceBros Team", url: "https://voicebros.com/en/blog/voice-over-script-writing", used: "Word budgets at about 150 words a minute"}

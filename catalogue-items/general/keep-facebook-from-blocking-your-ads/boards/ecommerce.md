@@ -1,16 +1,16 @@
 # For online stores: Keep Facebook from blocking your ads
 
-## Read these first for supplement, food, cosmetic and household brands
-1. **Health and wellness:** supplements, weight products and cosmetic procedures run to people 18 and over only. No put-down of how people look, no pinched fat, no cure claim for a listed disease, no sensational or timed result without a qualifier. A result you show states how long it took.
-2. **Deceptive commercial practices:** the price, discount, "free", delivery and refund terms must be what the shop really charges and does. No endorsement a person or brand didn't give. A subscription states its terms before the sale.
-3. **Personal attributes:** describe the product and who it is for, never what the viewer is. Breaks the rule: "Do you have diabetes?", "Tired of your acne?". Fix: "New treatment available", "A cream for acne-prone skin".
-4. **Body image and eating disorders:** no before-and-after weight pictures that aren't about the product, no hollow-cheeked images, no admission of extreme weight-loss behaviour, no sad-mood opening.
-5. **Adult content:** crops on breasts, groin or buttocks, suggestive poses or revealing clothing need 18+. Sexual-health products run to 18+ when the focus is health, never pleasure.
-6. **Other brands' property:** another brand's logo, pack or music needs a licence.
-7. **Profanity:** no swearing, however disguised.
-8. **Misinformation and vaccines:** no miracle-cure claim and nothing fact-checked as false.
-9. **Relevance:** the picture, words and landing page sell the same product, price and offer.
-10. **Drugs and medicines:** a supplement presented as a drug, a prescription product, an over-the-counter medicine or CBD each has its own conditions.
+## The rules that trip up store ads most
+For supplement, food, skincare and household brands, read these before the rest of the table.
+
+1. **Health and wellness.** Supplements, diet and weight products run to people 18 and over. Leave out any line that runs down how people look, any close-up of pinched fat, and any cure claim for a listed disease. A result you show says how long it took, and a big or dated promise carries a qualifier. Everyday food, protein products and non-permanent cosmetics don't need 18+.
+2. **Prohibited commercial practices.** The price, discount, "free" gift, delivery and refund terms in the ad are what the shop really charges and does. A subscription shows its renewal price and how to cancel before the sale. No endorsement nobody gave, and no famous face or voice without a signed deal.
+3. **Privacy and personal attributes.** Say what the product does and who it's for, never what the viewer is. Breaks the rule: "Do you have diabetes?", "Tired of your acne?". Fixed: "Diabetes-friendly meal plans", "A cream for acne-prone skin".
+4. **Eating disorders.** No weight before-and-after that isn't about the product, no hollow-cheeked or ribs-showing images, no admission of extreme dieting.
+5. **Adult content.** Close crops on chest, groin or bottom, and suggestive poses, aren't allowed. Sexual-health products run 18+ and stay on health, never pleasure.
+6. **Intellectual property.** Another brand's logo, pack, characters or music needs a licence. A tie-in product needs the partner's written OK for every mark shown.
+7. **Relevance.** The picture, the words and the product page sell the same product, at the same price, with the same offer.
+8. **Drugs and pharmaceuticals.** A supplement shown as a medicine, a prescription product, an over-the-counter medicine or CBD each has its own conditions, and some need Meta's written permission.
 
 ## Extra things to give it
-The landing page text and offer, your subscription terms, your refund policy, and the countries and age range of the ad set.
+The product page text and offer, the checkout price, your subscription and refund terms, and the countries and age range of the ad set. Your `proof-and-claims.md` lets it flag pending and banned claims as well.

@@ -157,6 +157,15 @@ improve:
   - Describe the old way you sell against in "What you need" (for Sprout, a powder tub and a shaker), so swaps never show a real rival.
   - Pair it with the skill that turns a cutout explainer script into still and clip prompts for a video tool.
 
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Claude, ChatGPT and Gemini all follow this skill well, so use the one you already have."}
+    - {name: "Nano Banana 2.1", why: "For the still version, it can work from your product photo as a reference, so the pack looks right."}
+  inputs:
+    - "A photo of the old way you sell against, with no rival brand in view"
+    - "Photos of real paper or card in your brand colors, so the paper kit names materials that exist"
+    - "One or two explainers you find clear, so you can name the pace you want"
+
 terms:
   - term: Cutout
     meaning: A photo of your product with the background removed, so it can sit on any layout.

@@ -4,12 +4,12 @@ summary: "Paste this card above any writing request. Your AI then puts plain, cl
 job: write-ad-copy
 
 headline: "Rules that keep your AI's writing clear before clever"
-subhead: Paste this short card above any request for ads, pages, emails or scripts, or next to a draft you're checking. It ranks five rules in order, from plain speech to brand style tricks, so a catchy line never wins over one people understand.
+subhead: Paste this short card above any request for ads, pages, emails or scripts, or next to a draft you're checking. It ranks five rules, from plain speech down to brand style tricks, so a catchy line never wins over one people understand.
 
 explain: |
-  Brands with a strong voice often end up with copy nobody can follow. A line like "Your spine has opinions" sounds on-brand in a meeting, but a stranger has no idea what it means. Taglines in three beats and wordplay pile up until the ad says nothing.
+  Brands with a strong voice often end up with copy nobody can follow. A line like "Stairs? Not today, knees." sounds fun in a meeting, but a stranger has to stop and decode it, and most won't. Research backs the instinct: needlessly fancy wording makes readers think less of the writer, and headlines that only make sense after the body copy lose the people who read just the headline.
 
-  This card fixes the order of priority. Rule 1, natural: a whole sentence a person would say, in words a 13-year-old knows. Rule 2, it sells: it moves the reader from what they have to what they want. Rule 3, it tells a story: something happens to someone. Rule 4, the brand's language. Rule 5, the brand's style tricks, last and optional. A lower rule never buys back a higher one. When writing, it follows the rules. When checking, it lists each line that breaks one, names the rule, and gives a corrected line.
+  This card fixes the order of priority. Rule 1, natural: a complete sentence a person would say, in everyday words. Rule 2, it sells: it shows the reader getting somewhere better, with the product as the way. Rule 3, it tells a story: someone does something and something happens. Rule 4, the brand's language. Rule 5, the brand's style tricks, last and optional. A later rule never rescues a line that fails an earlier one. When writing, your AI follows the rules. When checking, it lists each line that breaks one, names the rule, and gives a corrected line.
 
 when:
   - Your brand voice is playful or punchy, and your ads have started to make less sense.
@@ -22,6 +22,7 @@ you_give:
 you_get:
   - If writing, the copy, following the five rules in order
   - If checking, each line that breaks a rule, the rule number, and a corrected full line
+  - If checking, the lines it left alone, so you can see what passed
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
@@ -32,15 +33,15 @@ how_to_use:
 
 how_it_works:
   - title: Natural first
-    text: Each line must be a whole sentence a person would say, in words a 13-year-old knows, clear to a stranger.
+    text: A complete sentence someone would say to a friend, in everyday words, that a stranger understands without context.
   - title: Then it sells
-    text: The line moves the reader from what they have to what they want. A number counts only once it says what changes for them.
+    text: The line shows the reader getting somewhere better. A number counts only once it says what changes for them.
   - title: Then a story
-    text: Something happens to someone. For a reader who doesn't know an answer exists, the product comes late.
+    text: Someone does something and something happens. For a reader who doesn't know a fix exists, the product comes late.
   - title: Then brand language
-    text: Who the brand talks to, its words for things, its tone.
+    text: Who the brand speaks to, its words for things, its tone.
   - title: Style tricks last
-    text: A rhythm or turn of phrase the brand sometimes uses, only on a line that takes it without bending.
+    text: A rhythm or turn of phrase the brand likes, only on a line that takes it without bending.
 
 output_shape: |
   When writing:
@@ -51,6 +52,9 @@ output_shape: |
      Breaks:    Rule <1 to 5>, <in a few words>
      Corrected: <the full line, with no new fact>
   (one entry per line that breaks a rule)
+
+  LEFT ALONE
+  <lines that pass every rule>
 
   MISSING
   <brand language, if none was given; rules 1 to 3 only>
@@ -107,9 +111,9 @@ tweaks:
   - what: Write or check
     how: Add a request to get new copy that follows the rules. Paste a draft and write "check this" to get a list of lines that break a rule.
   - what: Your brand's lines
-    how: Paste them. Rules 4 and 5 can only use brand language you've shown it; without it, the card uses rules 1 to 3 only.
+    how: Paste them. Rules 4 and 5 can only use brand language you've shown it. Without it, the card uses rules 1 to 3 only.
   - what: Numbers
-    how: In copy people read, prices, percentages and counts stay as figures ($24.99, 40%). Ask for spoken copy and it spells them out.
+    how: In copy people read, prices, percentages and counts stay as figures ($24.99, 40%). Ask for spoken copy and it writes them out.
   - what: Strictness on style
     how: If your brand's trick fits a line naturally, it stays. Say "flag every style trick" if you want a stricter pass.
 
@@ -118,20 +122,29 @@ judge:
   - No fix adds a fact that wasn't in the draft.
   - Corrected lines are whole sentences, not shorter slogans.
   - Brand style tricks only appear on lines that still read plainly.
-  - Each flagged line names the rule it breaks.
+  - Each flagged line names the first rule it breaks.
 
 test:
   - Check a draft you know well. The lines it flags under rule 1 should be the ones a stranger would stumble on.
   - Run the check twice. The flagged lines and rule numbers should match.
   - Give the same writing request with the card and without it. The version with the card should have fewer slogans and more whole sentences.
-  - Plant a clever line that bends the meaning, such as "Your spine has opinions." It should flag rule 1.
+  - Plant a clever line that bends the meaning, such as "Stairs? Not today, knees." It should flag rule 1.
 
 improve:
   - Replace the yes and no examples under each rule with lines from your own copy, so the card speaks your category.
   - Add your brand's real words to rule 4, and its one or two style tricks to rule 5.
-  - If you write spoken scripts, change the note on numbers so it spells them out.
+  - If you write spoken scripts, change the note on numbers so it writes them out.
   - Save the card at the top of your brand file, so every writing request starts with it.
-  - Pair it with "Stop your copy from sounding like AI" for a pattern-by-pattern scan, and "Make sure every ad sounds like your brand" if fixes start to sound off-voice.
+  - Pair it with "Stop your copy sounding like AI" for a sign-by-sign scan, and "Make every ad sound like your brand" if fixes start to sound off-voice.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "A short rule card works in any strong chat AI, and keeping it at the top keeps long chats on track."}
+    - {name: "Claude Projects or ChatGPT custom instructions", why: "Saving the card there applies it to every chat without pasting it each time."}
+  inputs:
+    - "Three to five lines your brand already publishes, so rules 4 and 5 have real brand language to work from"
+    - "Two lines you know confused customers, so you can check the card flags them"
+    - "The words your brand never uses, so fixes don't drift into them"
 
 terms:
   - term: Style trick

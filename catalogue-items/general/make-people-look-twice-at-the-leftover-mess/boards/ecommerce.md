@@ -1,10 +1,11 @@
-# Make an ad showing what the problem leaves behind: for online stores
+# A close-up of the mess the problem leaves: for online stores
 
 Use this with the main skill when the story ad sells a physical product.
 
-**Extra thing to give it:** your product photos, but only if you want the product in the picture. Otherwise send no product photo to the image tool.
+**Residue a store can show**
+- Something people buy once: what the old one leaves as it wears out, such as crumbs of foam from a cushion, flakes of coating in a pan or grit from a split sole.
+- Something people use up: the spill or leftover the old way makes every day, such as powder round a scoop or wax on a table.
 
-**Ideas for physical products**
-- Something people buy once: what the old one left behind, such as the cracked sole, the rusted blade or the flaked coating in the pan.
+**Product photos:** send none unless you want the product in the picture. If you do, use the real one, small and to one side. The picture must still work with it taken out.
 
-**Reminder:** leave the product out unless asked. If it is asked for, use the real one, small and to one side, never held up or centred. The picture must still work with it taken out.
+**The old thing** is generic and unbranded, never a rival's recognisable pack.

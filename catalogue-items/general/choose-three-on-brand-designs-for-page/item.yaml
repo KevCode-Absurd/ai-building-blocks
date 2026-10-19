@@ -17,5 +17,9 @@ outputs:
 uses: [finish-the-sale-your-ad-started]
 origin: own
 source_ids: [CES-031]
-old_name: ecommerce-page-design
-version: 1.0.0
+version: 1.1.0
+credits:
+  - {title: "frontend-design skill", by: "Anthropic", url: "https://github.com/anthropics/skills", used: "Adapted under Apache 2.0, see NOTICE.md"}
+  - {title: "Impeccable", by: "Paul Bakaus", url: "https://github.com/pbakaus/impeccable", used: "Adapted under Apache 2.0, see NOTICE.md"}
+  - {title: "Web Content Accessibility Guidelines (WCAG) 2.2", by: "W3C", url: "https://www.w3.org/TR/WCAG22/", used: "Contrast, reflow at 320 px and tap-size checks in the technical review"}
+  - {title: "Understanding Success Criterion 2.5.8: Target Size (Minimum)", by: "W3C", url: "https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html", used: "The 24 px floor for tap targets"}

@@ -50,9 +50,9 @@ how_it_works:
 
 output_shape: |
   DOUBT MAP
-  Customer question | Quote and source | Distinct sources
-    | Current answer and where | Visible / hidden / missing / unknown
-    | Fact or proof needed | Proposed answer and placement
+  Doubt | Quote and source | Distinct sources
+    | Where the page answers it now | Visible / hidden / missing / unknown
+    | Fact still needed | Answer to add, and where
   <question> | "<exact words>" (<source>) | <n> | <where, or none> | <label>
     | <fact, or none> | <answer> . <where on the page>
 
@@ -161,7 +161,17 @@ improve:
   - Add placements for your own page to step 5, such as next to the flavour picker or the subscription box, so answers land where your buyers decide.
   - Write the facts you can stand behind (policies, test results, measurements) into the skill under "Facts", so it can propose full answers instead of "needs a fact".
   - Save the "facts to collect" list in your brand file and fill it. Each fact you add turns a gap into an answer.
-  - Pair it with a skill that turns reviews into ranked buying reasons first, since its doubt list is the best input here, and a page-writing skill to rewrite your questions section.
+  - Pair it with "Learn why customers buy, in their own words" first, since its list of worries is the best input here, and with "Write a landing page that matches your ad" to rewrite the page around the answers.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI that reads images", why: "It can check your phone screenshots for where each answer sits, not just the page text."}
+    - {name: "Google Sheets", why: "Holds the doubt table so you can sort it, add new reviews, and tick off fixes."}
+  inputs:
+    - "Return and refund reasons from your own records, since they show doubts happy reviews never mention"
+    - "Pre-sale questions from chat, email or DMs, with dates, so you see what stops people before they buy"
+    - "Screenshots of the page on a phone with the FAQ and every fold-out opened"
+    - "Your measurements, test results and policy wording, so answers can be written instead of marked 'needs a fact'"
 
 terms:
   - term: Doubt

@@ -185,6 +185,16 @@ improve:
   - Save the hook that wins to your brand file, and test a new verse against it next time.
   - Pair it with the skill that turns a song script into shots, then check music rights before you pay to run it.
 
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Claude, ChatGPT and Gemini all follow this skill well, so use the one you already have."}
+    - {name: "Suno v5.5", why: "Has a style box and a lyrics box that reads section tags like [Verse]. Songs you download on a paid plan can run in ads."}
+    - {name: "Eleven Music v2.5", why: "Can build a song from a section-by-section plan, and its paid plans are cleared for commercial use."}
+  inputs:
+    - "How your brand name is said, with the stressed part marked, so the tag sings it right"
+    - "Two sounds your buyers like, described by tempo, voice and instruments (never by artist)"
+    - "Any jingle or sound the brand already owns, so the tag can reuse it"
+
 terms:
   - term: Hook
     meaning: The short sung line people remember. Here it says what the buyer gets.

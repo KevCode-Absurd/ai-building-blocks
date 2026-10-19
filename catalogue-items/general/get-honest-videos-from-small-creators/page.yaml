@@ -163,6 +163,17 @@ improve:
   - Keep the disclosure line in your brand file in your brand's voice.
   - Pair it with the founder video planner so your own account posts too, and with the filming brief for creators you pay.
 
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Claude, ChatGPT and Gemini all follow this skill well, so use the one you already have."}
+    - {name: "Google Sheets", why: "Holds the creator list, the tracking table and the box budget in one sheet you can share."}
+    - {name: "TikTok One Creator Marketplace", why: "TikTok's own place to find creators, filter them and see their recent posts, with no scraping."}
+    - {name: "Meta Partnership Ads Hub", why: "Lets you send a creator a request and run their post as an ad from your account."}
+  inputs:
+    - "Audience screenshots each creator shares with you, so the fit check uses real numbers"
+    - "A photo of the box and what goes in it, so the card fits the space"
+    - "A discount code or tracking link for each creator, so sales can be counted"
+
 terms:
   - term: Gifting
     meaning: Sending free product to creators with no requirement to post.

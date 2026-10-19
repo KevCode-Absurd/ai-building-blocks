@@ -178,6 +178,16 @@ improve:
   - Add real review quotes to your brand file. The moments then come with evidence instead of "inferred".
   - Pair it with a skill that writes ad copy from one true product fact, to turn the best idea into a finished ad.
 
+works_best_with:
+  tools:
+    - {name: "Meta Ads Manager", why: "An export by ad gives the 'measured' grade, with spend, results and days running for each ad."}
+    - {name: "Meta Ad Library", why: "Shows the ads your page runs now, with start dates, when you have no export to work from."}
+    - {name: "Google Sheets", why: "Keeps one row per past ad, so each of the five lenses is a filter you can check."}
+  inputs:
+    - "Notes on ads you paused and why, so the record keeps the losers too"
+    - "Messages that worked in emails or posts, so a value that won elsewhere can be tried in ads"
+    - "Answers from new buyers to 'what made you buy?', so moments come from buyers rather than guesses"
+
 terms:
   - term: Buying moment
     meaning: The situation that sends someone looking for a product like yours.

@@ -187,7 +187,7 @@ works_best_with:
   tools:
     - {name: "Claude", why: "Holds a 50-cell plan and its rules across a long chat without dropping cells."}
     - {name: "Google Sheets", why: "Adds up results by row and column once each ad name carries its code."}
-    - {name: "GPT Image 2", why: "Makes many pictures from the same product reference photos."}
+    - {name: "GPT Image 2.5", why: "Makes many pictures from the same product reference photos."}
     - {name: "Meta Ads Manager", why: "Runs the sprint and exports purchases per ad, so the grid can be read."}
   inputs:
     - "A naming rule that puts each ad's row, column and look in its ad name, so results sort into the grid"

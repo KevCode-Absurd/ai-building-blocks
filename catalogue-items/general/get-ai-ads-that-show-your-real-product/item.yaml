@@ -1,7 +1,7 @@
 slug: get-ai-ads-that-show-your-real-product
 renamed_from: ai-visual-production-checklist
 name: "Get AI ads that show your real product"
-summary: "A 15-point plan before any AI ad picture or clip, and an 8-line check after each one."
+summary: "A four-stage plan before any AI ad picture or clip, and a seven-line check after each one."
 category: general
 boards: [ecommerce]
 type: skill
@@ -18,4 +18,9 @@ uses: [stop-paying-for-the-same-ai-mistake-twice]
 origin: rebuilt
 source_ids: [CES-099]
 old_name: production-principles
-version: 1.0.0
+version: 2.0.0
+credits:
+  - {title: "Generate videos with Veo 3.1 in Gemini API", by: "Google AI for Developers", url: "https://ai.google.dev/gemini-api/docs/veo", used: "Start frame, last frame, up to three product references, clip lengths, and writing out sound and dialogue"}
+  - {title: "Image generation with Gemini (Nano Banana)", by: "Google AI for Developers", url: "https://ai.google.dev/gemini-api/docs/image-generation", used: "Reference image limits and editing step by step"}
+  - {title: "Instagram Reels video ads specs", by: "Meta Ads Guide", url: "https://www.facebook.com/business/ads-guide/update/video/instagram-reels", used: "The safe zones for frame 1"}
+  - {title: "Federal Trade Commission Announces Final Rule Banning Fake Reviews and Testimonials", by: "US Federal Trade Commission", url: "https://www.ftc.gov/news-events/news/press-releases/2024/08/federal-trade-commission-announces-final-rule-banning-fake-reviews-testimonials", used: "Why a generated person never stands in for a real customer"}

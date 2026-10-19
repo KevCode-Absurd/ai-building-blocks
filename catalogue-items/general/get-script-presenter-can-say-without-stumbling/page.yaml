@@ -4,47 +4,47 @@ summary: "Paste your script. You get every line that trips when spoken, fixed, w
 job: make-video-ads
 
 headline: "A script your presenter can say without stumbling"
-subhead: Paste a finished script or ad text. It reads every line as it would be said, finds the ones that trip, run out of breath or sound like a slogan, and hands back each corrected line with the rule it broke.
+subhead: Paste a finished script or ad text. It says every line the way it will be delivered and finds the ones that trip, run out of breath or sound like a slogan. You get each fixed line with the rule it broke.
 
 explain: |
-  A script can be right in every part and still sound wrong. The presenter stumbles on a tangled sentence, gasps through a long one, or reads three fragments that sound like a robot. Viewers hear it in a second, even if they couldn't say why.
+  A script can be right in every detail and still sound wrong. The presenter trips on a knotted sentence, gasps through a long one, or reads three fragments that sound like a robot. Viewers hear it at once, even if they couldn't say why.
 
-  This skill only works on how lines sound. It applies the read-aloud test to each line: would a person say this, in one breath, to a friend? It puts back dropped small words, splits sentences where a breath would fall, joins choppy lists, moves verbs earlier, uses contractions and removes patterns that sound machine-written. It keeps who it's addressed to, the tense and your brand's own phrases. It never changes a claim, number, price, guarantee or product name. If it spots one that looks wrong, it flags it for your claims check instead.
+  This skill works only on sound. Each line faces one test: would a person say this to a friend, in one breath? It puts back small words that were cut, splits sentences where a breath falls, joins choppy lists and brings verbs forward. It adds contractions and strips habits that sound machine-made. Who it speaks to, the tense and your brand's own phrases stay as they are. It never touches a claim, number, price, guarantee or product name. If one looks wrong, it flags it for your claims check.
 
 when:
   - Your script reads fine on paper but sounds stiff when someone says it.
-  - An AI wrote the draft and it has the tell-tale rhythms (fragments, "No X. No Y.").
-  - You're about to record a voice-over or a founder video and want no stumbles.
+  - An AI wrote the draft and it has the giveaway rhythms (fragments, "No X. No Y.").
+  - You're about to record a voice-over or a founder video and want a clean take.
 
 you_give:
   - The finished script or ad text
-  - Who it's for (general public, people who know the category, or professionals) (optional)
+  - Who it's for (the general public, people who know the category, or professionals) (optional)
   - A few of your brand's own published lines (optional)
   - Spoken or read, if it's ad text rather than a script (optional)
 you_get:
   - Each failing phrase, where it is and the rule it breaks
-  - The full corrected text for each fix
-  - Flags for any claim or number that looks wrong, left unchanged
+  - The full fixed text for each one
+  - Flags for any claim or number that looks wrong, left as written
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste your script or ad text underneath.
   - Say whether it will be spoken or read, and who it's for.
   - Paste two or three of your brand's own lines, so it keeps your phrases.
-  - Read each corrected line aloud yourself. Keep the ones that sound like you.
+  - Say each fixed line aloud yourself. Keep the ones that sound like you.
   - Send the flags to whoever checks your claims.
 
 how_it_works:
-  - title: Reads each line aloud
-    text: Checks where you'd stumble, run out of breath, feel embarrassed or need to re-read.
-  - title: Applies five rules
-    text: Whole sentences, one idea each, verbs early, plain words, and sayable in one breath.
-  - title: Keeps six settings steady
-    text: Who it's addressed to, tense, sentence length, reading level, contractions and line endings, flagging any wobble.
-  - title: Removes machine patterns
-    text: Uncontracted verbs, stacks of fragments, "No X. No Y. No Z.", clipped tag-ons and ad words nobody says.
+  - title: Says each line aloud
+    text: Notices where you'd trip, run out of air, feel silly or need to reread.
+  - title: Holds fixes to five rules
+    text: Whole sentences, one idea each, verbs early, plain words, one breath each.
+  - title: Keeps six things steady
+    text: Who it speaks to, tense, sentence length, reading level, contractions and endings. It flags any wobble.
+  - title: Strips machine habits
+    text: Uncontracted verbs, strings of fragments, "No X. No Y. No Z.", clipped add-ons and ad words nobody says.
   - title: Adjusts for read text
-    text: For ad text that's read, it joins one-line paragraphs into short paragraphs of whole sentences.
+    text: For text people read, it joins one-line paragraphs into short paragraphs of whole sentences.
   - title: Leaves meaning alone
     text: Never changes a claim, number, offer, product name or placeholder, and adds no sentences.
 
@@ -53,7 +53,7 @@ output_shape: |
   Where: <line or field>
   Failing phrase: "<exact words>"
   Rule: <which rule it breaks>
-  Corrected: "<full corrected text>"
+  Fixed: "<full fixed text>"
 
   LEFT AS IS
   <lines that already work, and brand phrases kept>
@@ -88,7 +88,7 @@ example:
     Failing phrase: "$29.99 for your first order, that's less than
       $1.10/day for 60+ whole-food ingredients..."
     Rule: two ideas in one sentence, joined by a comma
-    Corrected: "Your first order is $29.99. That's less than $1.10/day
+    Fixed: "Your first order is $29.99. That's less than $1.10/day
       for 60+ whole-food ingredients, 21 vitamins & minerals, and
       gut-supporting probiotics in one daily gummy pack."
 
@@ -97,7 +97,7 @@ example:
     Failing phrase: "Third-party tested. Online-exclusive offer. Shop
       Sprout."
     Rule: a run of fragments
-    Corrected: "✅ Third-party tested. This offer is online only, so
+    Fixed: "✅ Third-party tested. This offer is online only, so
       shop Sprout."
 
     FIX 3
@@ -105,7 +105,7 @@ example:
     Failing phrase: "...daily vitamins to help keep your gut balanced
       without powders or prep."
     Rule: too long for one breath, with a trailing clause
-    Corrected: "Sprout supports digestion with 6g of fiber, prebiotics,
+    Fixed: "Sprout supports digestion with 6g of fiber, prebiotics,
       and daily vitamins. They help keep your gut balanced, without
       powders or prep."
 
@@ -123,32 +123,43 @@ example:
 
 tweaks:
   - what: Spoken or read
-    how: Say "read" for ad text above an image. The breath test relaxes and it joins one-line paragraphs into short paragraphs instead.
+    how: Say "read" for ad text above an image. The breath test relaxes, and it joins one-line paragraphs into short paragraphs instead.
   - what: Audience level
     how: Say "professionals" or "people who know the category" to keep technical terms. The default keeps the reading level at US grade 7.
   - what: Your brand's own lines
-    how: Paste them. Words, rhythms and emojis from them are kept, as long as a person would still say the line.
+    how: Paste them. Their words, rhythms and emojis stay, as long as a person would still say the line.
+  - what: A recording
+    how: Attach one take of someone reading the script. It starts with the lines where they stumbled.
   - what: A full rewrite
-    how: If nearly every line fails, it fixes the worst and says the script needs rewriting for voice. Ask for that as a separate job.
+    how: If almost every line fails, it fixes the worst and says the script needs rewriting for voice. Ask for that as a separate job.
 
 judge:
-  - Read each corrected line aloud once. You can say it in one breath without stumbling.
-  - Every number, price and claim in the corrected text matches the original exactly.
-  - No new sentence was added, and no line was cut short except to split it in two.
+  - Say each fixed line aloud once. You can get through it in one breath without tripping.
+  - Every number, price and claim in the fixed text matches the original exactly.
+  - No new sentence was added, and no line got shorter except by splitting in two.
   - Your brand's own phrases and emojis are still there.
-  - Most good scripts get 0 to 5 fixes. Dozens of small changes mean it rewrote your voice.
+  - A good script gets 0 to 5 fixes. Dozens of small changes mean it rewrote your voice.
 
 test:
   - Run it on a script you've already recorded, and compare its fixes with the lines your presenter stumbled on.
-  - Check every number, price and claim in the corrected text against the original. They should match exactly.
+  - Check every number, price and claim in the fixed text against the original. They should match exactly.
   - Run it on a script you think is clean. Expect 0 to 5 fixes. Dozens means it is rewriting your voice.
-  - Run it twice on the same script. The lines it flags should mostly be the same.
+  - Run it twice on the same script. Most of the lines it flags should be the same both times.
 
 improve:
   - Add your brand's own phrases to step 3 of the skill file, so it never "fixes" a line you wrote that way on purpose (for Sprout, "Rip. Tip. Enjoy.").
   - "Write your settings into step 3 too: who you speak to (I, you or we), whether you use contractions, and your reading level."
   - Add the ad words your brand never uses to step 4, so it catches your own habits as well as the usual ones.
   - Pair it with a brand voice check and a claims check afterwards. This skill flags a wrong claim but never changes it.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Finding lines that trip and fixing only the sound works well in any strong chat AI."}
+    - {name: "Your phone's voice recorder", why: "One recorded read shows where the presenter stumbles, which is the best evidence for what to fix."}
+  inputs:
+    - "A recording of someone reading the script once, so it fixes the lines that tripped them first"
+    - "The presenter's name and how they talk (fast, slow, formal, chatty), so fixes suit their delivery"
+    - "Your approved claims list, so it can flag a wrong claim without changing it"
 
 terms:
   - term: Reading level

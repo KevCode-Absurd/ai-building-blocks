@@ -44,6 +44,8 @@ how_it_works:
     text: Uses real product shots, shows use when its line is spoken, and never crops away a qualification or lets a transition hide the label.
   - title: Times to the real footage
     text: Records source in and out times, re-times captions after every cut, and checks the transcript's names, numbers and negatives.
+  - title: Plans readable captions
+    text: Two lines at most, about 42 characters each, no faster than about 15 characters a second, inside the app's safe area.
   - title: Checks generated takes
     text: Looks at mouth timing, exact words and voice through the whole take, and names a replacement if a take is broken.
   - title: Plans sound and the close
@@ -120,11 +122,12 @@ example:
     3.2-8.5    This is one day. You tear the top, tip it out.
     8.5-13.6   21 vitamins and minerals and 6 grams of fiber, in one
                pack.
-    13.6-20.4  First order is $29.99 with the text sign-up. It renews
-               at $49.99 every 4 weeks.
+    13.6-17.0  First order is $29.99 with the text sign-up.
+    17.0-20.4  It renews at $49.99 every 4 weeks.
     Transcript checks: listen at B 7.9 for "21" (the site also says
     "over 20") and "6 grams"; at B 15.8 for "$29.99" and "$49.99".
-    The renewal stays in the same caption as the price.
+    Every caption stays under 2 lines of 42 characters and 15
+    characters a second. The renewal follows the price with no gap.
 
     SOUND
     Voice: B and the hook clips, natural delivery, no speed change.
@@ -176,6 +179,17 @@ improve:
   - Add your house caption style and export shapes to step 7, so delivery settings come out the same every time.
   - Keep separate voice and music tracks, and paste a transcript with times; without one every in and out point is an estimate.
   - Pair it with the skill that plans on-screen text for a finished video ad, once the cut is approved.
+
+works_best_with:
+  tools:
+    - {name: "Claude", why: "Holds a long transcript, the approved copy and the cut list in one chat without losing a number."}
+    - {name: "Descript", why: "Edits video by its transcript, so in and out points land on whole words."}
+    - {name: "DaVinci Resolve", why: "A free editor with subtitle tracks and the export settings this plan asks for."}
+  inputs:
+    - "A transcript with word timings for every clip, so cuts and captions land on real words"
+    - "Separate voice and music tracks, so music can be changed without touching the voice"
+    - "The licence for any music track, so you know it's cleared for paid ads"
+    - "Photos of the pack from each side, so every product shot can be checked against the real thing"
 
 terms:
   - term: Cut list

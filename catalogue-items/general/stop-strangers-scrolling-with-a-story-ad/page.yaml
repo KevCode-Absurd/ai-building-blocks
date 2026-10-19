@@ -184,6 +184,15 @@ improve:
   - When a picture and opening win, save them in your brand file and name them in your next run.
   - Pair it with a skill that writes the page the click goes to, and run the finished ad through the Facebook ad rules check.
 
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "The steps are plain, so any current chat AI can follow them. Paste the customer words with their sources."}
+    - {name: "Meta Ads Manager", why: "Its placement previews show where your text is cut at 'See more', so you can check the first line."}
+  inputs:
+    - "Support tickets or call notes as well as reviews, so you find the moment the old way broke"
+    - "Your last few story ads and how many readers reached the page, so the two tests start from what you know"
+    - "A phone screenshot of the page's first screen, so the page brief matches what's live"
+
 terms:
   - term: Story ad
     meaning: An ad made to look like a normal post, with a picture and a short story under it instead of a product pitch.

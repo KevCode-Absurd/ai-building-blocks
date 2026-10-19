@@ -1,191 +1,198 @@
 new_slug: turn-motion-graphics-script-into-ready-video-shots
-name: "Turn your graphic ad script into video clips"
-summary: "Give it your script and product cutout. You get a storyboard, clip prompts and every word to add in editing."
+name: "Turn your graphic ad script into a finished video"
+summary: "Give it your graphic ad script and product cutout. You get a build sheet per shot with exact text and timings."
 job: make-video-ads
 
-headline: "Turn your graphic ad script into video clips"
-subhead: Give it a motion graphics script and your product cutout. It fixes a design system in your colours and type, storyboards one move per shot, writes prompts for wordless plates, and lists every word and number for you to set in editing.
+headline: "Turn your graphic ad script into a finished video"
+subhead: Give it a motion graphics script (look card, fact sheet and shot table) and your product cutout. It checks the script, sets the canvas and safe area, and writes a layer-by-layer build sheet for every shot, ready for an editor or for code with Claude Code, with every word and number exact.
 
 explain: |
-  AI video tools are bad at text. Ask one for a graphic ad and you get misspelled labels, invented numbers, a logo that's almost yours, and bars on a chart that don't match any figure. The camera drifts and the flat design turns into fake 3D.
+  Graphic ads live on exact numbers, and AI video tools still misspell words, invent figures and redraw labels. So this skill never asks a video model for text, a chart or your product. Every word, number, bar and the product photo is built as a live layer in an editor or in code, so it comes out exactly as the script wrote it.
 
-  This skill splits the job in two. The video tool makes only what it's good at: flat shapes, backgrounds, icons drawing in, your product cutout turning slowly, all with no words. Every prompt repeats one look line and a movement lock, so each shot stays flat, square-on and in your palette, with one move that comes to rest. Then you get a list of every word, number and logo, with its timing and source, to set yourself in your editor using your own typefaces. Charts are drawn to the proportions of your real figures, with the figures added on top.
+  It takes the script skill's output as it is. It checks that every number has a source, every chart starts at zero and the full price terms travel with the price. Then it sets the canvas and the app's safe area, works out each shot's length from its hold time, and writes a build sheet per shot: layers from back to front, each move with its frames and easing (ease out to arrive, ease in to leave, under half a second). For code it lists one scene per shot for Remotion with Claude Code. If you want moving backgrounds, it writes wordless prompts for a video model, and nothing else.
 
 when:
-  - You have a motion graphics script and need prompts for an AI image and video tool.
-  - Earlier attempts came out with garbled text, wrong numbers or a drifting camera.
-  - You want charts or diagrams in the ad that match your real figures exactly.
+  - You have a motion graphics script and want it built without a single wrong number.
+  - Your last AI-made graphic ad came back with misspelled words or a redrawn label.
+  - You want to build ads in code with Claude Code and need a clear plan to hand it.
 
 you_give:
-  - The script or key messages, with any figures
-  - A cutout-quality photo of your product, or a screen capture for an app
-  - How your product works, and figures with sources
-  - Your colours, typefaces and never-show list (optional)
+  - The script from the motion graphics script skill (look card, fact sheet, shot table)
+  - A cutout of your product with the background removed
+  - Your font files, logo and colour codes (optional)
+  - Your route, an editor or code, and whether you want moving backgrounds (optional, code by default)
 you_get:
-  - A design system card in seven parts
-  - A storyboard with one message and one move per shot
-  - An opening still prompt, plate prompts and clip prompts
-  - A text layer list of every word and number, with time and source
+  - A script check that passes or lists what's wrong
+  - The canvas, frame rate, margins and safe area
+  - A build sheet for every shot, with layers, moves, frames and easing
+  - A Remotion scene list or editor layer list, background prompts if wanted, and a text table with sources
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Paste your script underneath, then attach or describe your product cutout.
-  - Add your colours, typefaces and any figures with sources.
-  - Make the opening still first and check it has no text in it.
-  - Make each clip with its prompt, ending with everything at rest.
-  - Set the words and numbers in your editor from the text layer list.
+  - Paste the whole script from the motion graphics script skill and attach your product cutout.
+  - Say whether you'll build in an editor or in code, and whether you want moving backgrounds.
+  - For code, open Claude Code in a Remotion project and give it the scene list.
+  - Watch the preview at phone size and check every number against the text table before the final render.
 
 how_it_works:
-  - title: Fixes the design system
-    text: Grid, three type sizes, your palette with one accent, one shape style, one icon style, one way of moving.
-  - title: One message per shot
-    text: Every move shows something. What matters most, cause and effect, a comparison, or how it works step by step.
-  - title: Keeps the cutout true
-    text: Your product from its photo, in every first shot, never redrawn as an icon.
-  - title: Draws honest charts
-    text: Bars keep the proportions of your figures. No data, no chart.
-  - title: Storyboards it
-    text: Shots of 3 to 4 seconds, 2 or 3 to a clip, each clip ending with everything still.
-  - title: Writes plates and clips
-    text: Wordless plate prompts with a plain copy area, and clip prompts with a movement lock.
-  - title: Lists the text
-    text: Every word and number for editing, checked against your approved copy and data.
+  - title: Checks the script
+    text: Every number on the fact sheet with a source, every chart from zero, full price terms with the price, one fact and one moving thing per shot.
+  - title: Sets the canvas
+    text: Size, frame rate and margins from the look card, with words kept out of the top 14%, the bottom 35% and the side edges.
+  - title: Times each shot
+    text: The script's hold time plus a short entrance. Arrivals ease out in under half a second, exits ease in, and text sits still while it's read.
+  - title: Writes build sheets
+    text: Background, product, shapes and charts, text and the small line, back to front, each move with its frames and easing. Bars are drawn from their numbers.
+  - title: Picks the route
+    text: One scene per shot for Remotion with Claude Code, or the same layers as keyframes for an editor.
+  - title: Keeps models wordless
+    text: A video model only makes moving backgrounds of plain shapes. Text, numbers, charts and the product always sit on top as layers.
 
 output_shape: |
-  DESIGN SYSTEM CARD
-  Grid: <...>  Type: <3 sizes>  Palette: <ground, brand colours, accent>
-  Shapes: <...>  Icons: <...>  Cutout: <...>  Transition: <one family>
+  SCRIPT CHECK  pass, or <problems>
+  CANVAS  <size>, <frame rate>, margins <..>, safe area <..>
 
-  STORYBOARD
-  Time | Message laid over | Picture, what its move shows | Enters | Hold | Exits
-  ...
+  SHOT <n> (<seconds>, <frames>)  Fact: <..>
+  Layers, back to front:
+  background: <colour or background prompt n>
+  product: <position, size, shadow>
+  shape/chart: <colour job>, <from> to <to>, frames <a-b>, <easing>
+  text: "<exact text>" <size>, <position>, in <frame>, out <frame>
+  small line: "<source or terms>"
 
-  OPENING STILL
-  <look line> <attached cutout and what to copy> <plate and plain copy area> <palette and light> <no generated words, numbers, logos>
-
-  CLIP <n>
-  <look line> <shots in order, one move each> <movement lock>
-
-  TEXT LAYER LIST
-  <time> "<word or number>" <size> <source>
-  MISSING: <...>
+  ROUTE  <Remotion scene list, or editor layer list>
+  BACKGROUNDS  <wordless prompts, or none>
+  TEXT TABLE  <shot | text | start-end | source>
+  MISSING: <..>
 
 example:
   business: sprout
   input: |
     [the skill]
 
-    Script (from "Get a motion graphics ad script that sells"):
-    1 "What's in one Sprout pack?"           WHAT'S IN ONE PACK?
-    2 "Sixty-plus ingredients."               60+ INGREDIENTS
-    3 "Twenty-one vitamins and minerals."     21 VITAMINS & MINERALS
-    4 "And 6 grams of prebiotic fiber."       6G PREBIOTIC FIBER
-    5 "In a 12-week study, vitamin C in the blood rose 2.7 times more
-       than placebo."  Chart: left bar 2.7x the right. VITAMIN C: 2.7X
-    6-7 Offer: $29.99 first order with text sign-up, then $49.99 every
-       4 weeks. Cancel anytime.
-    Cutout: Sprout pouch, glossy deep green, yellow wordmark (attached).
-    Colours: cream #FFF7DF, forest #00582D, deep forest #002C17,
-    kelly #007E40, accent sunflower #FFCC2E.
-    Type: Work Sans bold and medium, DM Mono. Clips: 10 s, 9:16.
+    Script (from the motion graphics script skill, 20 s, 9:16):
+    LOOK CARD  Frame: 9:16, 96 px side margins at 1080 wide, words
+    upper middle, product below. Colour jobs: cream #FFF7DF background;
+    forest #00582D and deep forest #002C17 for shapes and text;
+    sunflower #FFCC2E highlight, one thing per shot. Type: Work Sans
+    bold 96 px, Work Sans medium 48 px, DM Mono 28 px uppercase.
+    Product: pouch cutout, one soft shadow. Motion: rise in with ease
+    out, drop out with ease in, 0.4 s each.
+    FACT SHEET  60+ ingredients, 21 vitamins & minerals, 6g fiber =
+    label. Vitamin C 2.7x placebo = 2025 study, 12 weeks, 120 adults.
+    $29.99 first order with text sign-up; renews at $49.99 every 4
+    weeks, cancel anytime = offer terms.
+    SHOTS  1 opening "What's in one pack?" 1.8 s | 2 "60+ ingredients"
+    1.5 s | 3 "21 vitamins & minerals" 2.0 s | 4 "6 g prebiotic fiber"
+    1.8 s | 5 bars, "Vitamin C: 2.7x placebo" + "2025 study, 12 weeks,
+    120 adults" 4.2 s | 6 "$29.99 first order" + "with text sign-up"
+    2.8 s | 7 "Then $49.99 every 4 weeks" + "Cancel anytime" 3.1 s
+    Cutout attached. Route: code. Backgrounds: none.
   output: |
-    DESIGN SYSTEM CARD
-    Grid: 4 columns, 96 px margins; copy zone top third; cutout lower
-      two-thirds, centred
-    Type: Work Sans bold 96 px / Work Sans medium 48 px / DM Mono 28 px
-    Palette: cream ground; forest, deep forest, kelly; accent sunflower
-    Shapes: rounded corners throughout
-    Icons: outlined, 6 px line, 12 px radius, deep forest
-    Cutout: front on, true colour, one soft shadow beneath
-    Transition: slide along the grid, ease out, hold
+    SCRIPT CHECK  Pass. Every number is on the fact sheet with a
+    source; the bars in shot 5 are set from 2.7 and 1 on one zero
+    line; the renewal follows the first-order price in shot 7.
 
-    STORYBOARD
-    0-3 s | WHAT'S IN ONE PACK? | pouch slides up to centre; hierarchy
-      | pouch | 2 s | -
-    3-6 s | 60+ INGREDIENTS | leaf icon slides in left of pouch | icon
-      1 | 2 s | -
-    6-9 s | 21 VITAMINS & MINERALS | drop icon slides in beside it |
-      icon 2 | 2 s | -
-    (clip 1 ends, all at rest)
-    9-12 s | 6G PREBIOTIC FIBER | wheat icon completes the row | icon 3
-      | 2 s | icons slide off left
-    12-17 s | VITAMIN C: 2.7X PLACEBO | two bars rise on one baseline,
-      left bar 2.7x the right, left in sunflower; comparison | bars |
-      3 s | bars slide off
-    (clip 2 ends)
-    17-22 s | offer lines | pouch centred, still | - | 5 s | -
+    CANVAS  1080 x 1920, 30 frames a second. Side margins 96 px.
+    Safe area: no words above 269 px or below 1248 px from the top,
+    or within 65 px of either side.
 
-    OPENING STILL
-    A flat original graphic design on a plain warm cream ground
-    (#FFF7DF), even 4-column grid, flat rounded shapes in forest green
-    #00582D and kelly green #007E40, one sunflower #FFCC2E accent,
-    even shadowless light, locked square-on camera. Attached: Sprout
-    pouch cutout; copy its shape, colours and printing exactly. Plate:
-    the pouch centred in the lower two-thirds with one soft shadow;
-    the top third left plain cream for copy. No generated words,
-    numbers, logos, watermarks or app screens.
+    SHOT 1 (2.2 s, 66 frames)  Fact: none (opening)
+    background: cream #FFF7DF
+    product: pouch cutout, centred, lower half, 720 px tall, one soft
+      shadow; rises 120 px into place, frames 0-12, ease out
+    text: "What's in one pack?" Work Sans bold 96 px, deep forest,
+      upper middle; in at frame 6 (rise 40 px, 12 frames, ease out),
+      still to frame 66
 
-    CLIP 2 (10 s, continues from clip 1's last frame)
-    [Look line]. 0-3 s a third outlined icon, a wheat stalk, slides in
-    along the grid to complete a row of three, eases to a stop, holds.
-    3-5 s the icons slide off left together. 5-10 s two rounded bars
-    rise from one baseline beside the pouch, the left bar 2.7 times
-    the height of the right, left bar sunflower, right bar pale kelly;
-    both stop and hold. Movement lock: flat graphic motion at real
-    speed, locked camera, no shake, drift or zoom, no blur trails,
-    particles or lens flare, no 3D depth, nothing morphs, the pouch
-    keeps its proportions, colours and printing. No generated words,
-    numbers, logos, watermarks or app screens.
+    SHOT 2 (1.9 s, 57 frames)  Fact: count
+    product: holds
+    text: "60+" in sunflower and "ingredients" in deep forest, Work
+      Sans bold 96 px, beside the pouch; "60+" scales from 80% to 100%,
+      frames 0-12, ease out; still to frame 57
 
-    (cut for length: the full run also had plate prompts for each icon
-    and the bars, and clips 1 and 3)
+    SHOT 5 (4.6 s, 138 frames)  Fact: measured result
+    shape/chart: one zero line in forest; placebo bar grows to 200 px,
+      Sprout bar to 540 px (2.7 times), sunflower, frames 0-12, ease
+      out; then still
+    text: "Vitamin C: 2.7x placebo" Work Sans bold 96 px, in at frame
+      6, still to frame 138
+    small line: "2025 STUDY, 12 WEEKS, 120 ADULTS" DM Mono 28 px, held
+      the whole shot
 
-    TEXT LAYER LIST
-    0.5 s  "WHAT'S IN ONE PACK?"  96 px  script
-    3.5 s  "60+ INGREDIENTS"  48 px  label claim
-    6.5 s  "21 VITAMINS & MINERALS"  48 px  label claim
-    9.5 s  "6G PREBIOTIC FIBER"  48 px  label claim
-    13 s   "VITAMIN C: 2.7X PLACEBO"  96 px  2025 study
-    13 s   "2025 RANDOMIZED PLACEBO-CONTROLLED STUDY, 120 ADULTS"
-           28 px  study
-    17.5 s "$29.99 FIRST ORDER WITH TEXT SIGN-UP"  48 px  price box
-    19.5 s "THEN $49.99 EVERY 4 WEEKS. CANCEL ANYTIME."  48 px  price
-           box, under-button text
-    Logo: brand file needed (MISSING: logo file).
+    SHOTS 6 and 7 (3.2 s and 3.5 s)  Fact: price and terms
+    product: centred, still. Nothing moves while the terms are read.
+    text: "$29.99 first order" / "with text sign-up", then "Then
+      $49.99 every 4 weeks" / "Cancel anytime", each pair in together
+      at frame 6, out with ease in over 8 frames
+
+    (Shots 3 and 4 follow shot 2: each new line rises in under the
+    last, 12 frames, ease out. Total 20.0 s.)
+
+    ROUTE  Remotion with Claude Code: one composition, 1080 x 1920 at
+    30 a second, seven scenes in order with the frame counts above.
+    Fonts from your files; colours as hex codes; every line as a
+    typed string; bar heights computed from 2.7 and 1. Render a
+    preview first.
+    BACKGROUNDS  None. Flat cream throughout.
+
+    TEXT TABLE
+    1 | What's in one pack? | 0.2-2.2 s | opening, no claim
+    2 | 60+ ingredients | 2.2-4.1 s | label
+    3 | 21 vitamins & minerals | 4.1-6.5 s | label
+    4 | 6 g prebiotic fiber | 6.5-8.7 s | label
+    5 | Vitamin C: 2.7x placebo; 2025 study, 12 weeks, 120 adults |
+        8.7-13.3 s | 2025 study
+    6 | $29.99 first order; with text sign-up | 13.3-16.5 s | offer
+    7 | Then $49.99 every 4 weeks; Cancel anytime | 16.5-20.0 s |
+        offer terms
+    MISSING: the Work Sans and DM Mono font files, to install before
+    the render.
 
 tweaks:
-  - what: The transition family
-    how: Choose slide, wipe, scale or draw-on once. Slide suits contents and icons; draw-on suits a diagram that builds link by link.
-  - what: Shots per clip
-    how: Give your tool's clip length. It keeps each shot at 3 to 4 seconds and fits 2 or 3 to a 10-second clip.
-  - what: Charts
-    how: Paste the figure and its source. The prompt states the bar proportions in words, and the number goes in the text layer list.
-  - what: App instead of product
-    how: Give a screen capture of your app. It treats the capture as the cutout and never generates screens; real screenshots are prepared by hand.
+  - what: The route
+    how: Say "code" to get a Remotion scene list for Claude Code, or "editor" to get the same layers as keyframes for your motion editor.
+  - what: Moving backgrounds
+    how: Ask for them and you get wordless prompts of plain shapes in your colours for a video model. Text, charts and the product still sit on top as layers.
+  - what: Pace
+    how: Hold times come from the script (characters divided by 15, plus half a second). To go faster, cut words in the script, not hold time here.
+  - what: Shape
+    how: Ask for 4:5 or 1:1 as well. It resets the canvas and safe area and moves the layers, keeping every word and number the same.
 
 judge:
-  - The same look line appears in the opening still and every clip prompt.
-  - No prompt asks the tool to write any word, number or logo.
-  - Every shot has one move and ends at rest.
-  - Chart proportions in the prompt match the figure in the text list.
-  - Every line in the text layer list has a source.
+  - No word, number, chart or product is asked of a video model.
+  - Every number on screen matches the fact sheet, with its source in the text table.
+  - Bars are drawn from their numbers, to scale from one zero line.
+  - Text holds still for its full hold time and sits inside the safe area.
+  - Arrivals ease out and exits ease in, each in under half a second.
+  - The product cutout looks the same in every shot.
 
 test:
-  - Search every prompt for words, numbers or a logo. There should be none. They all belong in the text layer list.
-  - Check one chart. A bar twice as tall should stand for a figure twice as big, and the figure should be in the text list with its source.
-  - Make the opening still and look at it at phone size. The copy area should be plain enough to set text on.
-  - Run it twice on the same script. The design system card should name the same colours, typefaces and single accent both times.
+  - Give it a script with a number that has no source. The script check should stop and name it.
+  - Measure the two bars in the render. Their heights should keep the same ratio as their numbers.
+  - Pause on each shot at phone size. Every line should read twice before it leaves.
+  - Read the text table against your offer terms, character by character. The renewal price should never be missing from a shot that shows the first-order price.
 
 improve:
-  - Write your design system into step 1 of the skill file (your colour codes, typefaces and the one accent), so every ad in a series matches.
-  - Add your figures and their sources to your brand file. Step 4 only draws charts from them.
-  - List your own logo, icons and screenshots in "What you need", so the plan leaves them for editing instead of generating them.
-  - Pair it with the skill that writes the motion graphics script, so each shot already has one message.
+  - Save your canvas, fonts and colour codes in your brand file, so every build starts from them.
+  - Keep a Remotion project with your fonts installed, so Claude Code only has to add the scenes.
+  - Add your house entrance and exit moves to step 3, so every ad moves the same way.
+  - Pair it with the motion graphics script skill, which writes the look card, fact sheet and shot table this skill reads.
+
+works_best_with:
+  tools:
+    - {name: "Claude Code with Remotion", why: "Builds the ad in code, so every word, number and bar height renders exactly as written."}
+    - {name: "Claude", why: "Turns a long shot table into build sheets without dropping a layer or a source."}
+    - {name: "Veo 3.1", why: "Makes wordless moving backgrounds of plain shapes if you want them behind the layers."}
+  inputs:
+    - "Your font files and a vector logo, so text and branding render sharp at every size"
+    - "A clean cutout of the product in each view you show, so no shot needs a redrawn pack"
+    - "One past ad in your style, so entrance and exit moves match what buyers have seen"
 
 terms:
-  - term: Plate
-    meaning: A background image with no words on it, made so text can be added on top in editing.
-  - term: Movement lock
-    meaning: A fixed paragraph in every clip prompt that tells the video tool how things may and may not move.
-  - term: Text layer
-    meaning: The words and numbers you add on top of the video in your editor, instead of asking the AI to draw them.
+  - term: Build sheet
+    meaning: The list of layers in one shot, back to front, with each move's timing and easing.
+  - term: Ease out and ease in
+    meaning: Ease out starts fast and settles, for things arriving. Ease in starts slow and speeds away, for things leaving.
+  - term: Safe area
+    meaning: The part of a tall video the app doesn't cover with names, buttons or captions.

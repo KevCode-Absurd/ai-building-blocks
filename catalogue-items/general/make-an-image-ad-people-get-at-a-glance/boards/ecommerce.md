@@ -1,17 +1,17 @@
-# Make an image ad people get at a glance: for online stores
+# An image ad people get at a glance: for online stores
 
 ## Extra things to give it
-- Product data: variants, price, bundle options, review count and rating (real figures only), shipping and returns terms.
-- The current offer, with its start and end dates.
-- Product photos by job (pack, in use, size).
+- Product data: variants, price, bundle options, real review count and rating, shipping and returns terms.
+- The live offer, with its start and end dates.
+- Product photos by role: the pack, in use, next to something for size.
 
 ## Where it fits
-- Offer-led image ads for shoppers who know you: the price or bundle as the third read, the product as the picture, one proof point as the second read.
-- Problem-led plain-post ads for shoppers who don't know you: the thing they put up with, or the old way, as the picture, with the product small or absent.
-- Comparison ads: the old way beside the product, one contrast only.
+- **Offers** for shoppers who know you: the product as the picture, one proof as the second read, the price or bundle as the third.
+- **Problem-led plain posts** for shoppers who don't: the thing they put up with as the picture, the product small or left out.
+- **Comparisons:** the old way beside the product, one contrast only.
 
 ## Extra rules for a store
-- Show a star rating or review count only if it's real and current, and name where it comes from. Never a made-up or default rating.
-- Copy price, discount and shipping terms from the live offer. If the offer has ended, drop the line.
-- The product photo shows the true colour and size. A lifestyle crop must not hide the pack's label.
-- Keep the first read about the buyer's problem or the benefit, not the product's name.
+- A star rating or review count appears only if it's real and current, with where it comes from.
+- Price, discount and shipping lines come from the live offer, word for word. If the offer has ended, the line goes.
+- The product shows its true colour and size, with the label readable.
+- The first read is about the buyer's problem or the benefit, not the product's name.

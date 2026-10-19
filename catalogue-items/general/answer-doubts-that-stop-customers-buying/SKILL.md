@@ -25,17 +25,17 @@ You build a working table that links each real customer question to the exact sp
    - Will it fit, which variant: next to the size or variant picker; an image showing scale.
    - What do I get, why this price: beside the price; an image of the contents.
    - What's it made of, why does that help: an explanation of the material or ingredient. Keep feature (what it is), how it works (how it produces an effect) and benefit (what the buyer gets) separate; what it's made of doesn't prove a result on its own.
-   - How do I use or care for it: instructions or a demonstration from official sources only.
+   - How do I use it, how do I look after it: steps or a demonstration, taken only from the business's own instructions.
    - What if it doesn't work for me: current returns or warranty terms beside the buy button.
-   - When will it arrive, what does delivery cost: in the buying area, from real terms, never invented dates.
+   - Delivery time and cost: near the buy button but outside the buy box itself, from the real terms, with any free-shipping minimum spelled out. Never an invented date.
    - Can I trust this claim: next to the claim, with evidence that matches it, not unrelated praise.
 6. **Turn fixes into briefs.** Each page image or section answers one question with one supported answer and its sources. Pick only what the gaps need; there's no fixed number.
-7. **Recheck.** After the page changes, walk the same phone path: can the buyer find and understand the answer, do its terms match the offer, does the control work? Record the visible improvement separately from any guess about sales.
+7. **Recheck.** After the page changes, walk the same phone path again. Is each answer now easy to find and to understand? Do its terms agree with the offer? Does the control it sits by still work? Record what's now visible apart from any guess about sales.
 
 ## What you hand back
 A table with these columns:
 
-| Customer question | Quote and source | Distinct sources | Current answer and where | Visibility | Fact or proof needed | Proposed answer and placement |
+| Doubt | Quote and source | Distinct sources | Where the page answers it now | Visible, hidden, missing or unknown | Fact still needed | Answer to add, and where |
 
 Then: **Top 5 fixes** (one line each), **Facts to collect before writing**, and **What this can't tell you** (2 or 3 lines).
 

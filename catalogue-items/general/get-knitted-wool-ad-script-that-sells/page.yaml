@@ -1,6 +1,6 @@
 new_slug: get-knitted-wool-ad-script-that-sells
 name: "Make an awkward subject gentle with a knitted ad"
-summary: "Give it your brief, buyer and product facts. You get a narrated script set in a small world of knitted and crocheted wool."
+summary: "Give it your brief, buyer and product facts. You get a narrated script set in a tiny knitted and crocheted world."
 job: make-video-ads
 
 headline: "Make an awkward subject gentle with a knitted ad"
@@ -184,6 +184,15 @@ improve:
   - If you run a series, save the doll card and room list in your brand file and paste them into every run.
   - Add your house yarn thickness and colors to step 3, so every ad matches.
   - Pair it with the skill that turns a knitted script into video clips.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Claude, ChatGPT and Gemini all follow this skill well, so use the one you already have."}
+    - {name: "Nano Banana 2.1", why: "For the still version, it can work from your product photo as a reference, so the pack looks right."}
+  inputs:
+    - "Photos of knitted or crocheted toys you like, so the doll card names stitches that exist"
+    - "Your brand colors matched to real yarn shades, so the room list uses colors a maker could buy"
+    - "A photo of the product in a hand, so the knitted version keeps its true size"
 
 terms:
   - term: Show job

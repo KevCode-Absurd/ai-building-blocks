@@ -156,6 +156,16 @@ improve:
   - Save each winning hook with its next line to your brand file, since the two work together.
   - Pair it with "Get openings to test that each try something different" for more ways in.
 
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Hooks are short and the checks are plain, so any current chat AI does this well."}
+    - {name: "Meta Ad Library", why: "Shows the ads other brands run now, so you can check a hook isn't one buyers already see everywhere."}
+    - {name: "Meta Ads Manager", why: "Exports results for each ad, so score mode can be checked against the openings you ran."}
+  inputs:
+    - "Your past hooks with their results, so new ones avoid what already failed"
+    - "Stills from the first three seconds of your video, so the 'seen' layer matches the real footage"
+    - "Short phrases buyers use in reviews, so the flag uses their words"
+
 terms:
   - term: Hook
     meaning: The first line, or the first seconds of a video, that makes someone stop scrolling.

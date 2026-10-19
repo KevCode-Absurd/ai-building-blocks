@@ -187,6 +187,15 @@ improve:
   - When a script wins, save its concept and selling beat to your brand file, and change one thing per variant next time.
   - Pair it with the skill that finds the lines that lose the sale, or the one that plans a batch of different script types.
 
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Claude, ChatGPT and Gemini all follow this skill well, so use the one you already have."}
+    - {name: "Meta Ads Manager", why: "Its A/B test splits one audience between your ads and changes one thing, so the result is fair."}
+  inputs:
+    - "Return and cancel reasons, so the guarantee and the ask answer real doubts"
+    - "Your three best past ads with their results, so the test plan starts from what worked"
+    - "Screenshots of rival ads from the Meta Ad Library, so your openings avoid what everyone runs"
+
 terms:
   - term: Beat
     meaning: One part of the script with one job, like the problem or the proof. Several lines can make one beat.

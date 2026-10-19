@@ -1,33 +1,26 @@
-# Plan and check AI ad images and clips: for online stores
+# AI ads that show your real product: for online stores
 
-## Photos to attach (one per job)
-Pack front (as sold, straight on); the product out of its pack; in a hand (true size); in use; a close view of the surface. Only plain photographs count: no text, collage or badges. Name the file for each job in the prompt. A missing job is a gap to report to the brand, never one to fill from a designed image.
+## The five photos to have
+The pack front as sold, straight on; the product out of its pack; in a hand, for true size; in use; a close view of the surface. Plain photos only, with no text, badges or collage. Name each file's role in the prompt. A role with no photo is a gap to report to the brand, never one to fill from a designed image or a render.
 
-## Words repeated exactly
-From the product record, use "Looks like" and "Pack" in the same words in every prompt that shows the product. Also read: how it's used (steps as hand actions), what visibly changes, how it moves and sounds, and what never to show.
+## The same words every time
+From the product's entry in `offers.md`, copy how it looks and the pack into every prompt that shows it, word for word. Also read how it's used (as hand steps), what visibly changes, how it moves and sounds, and what never to show.
 
 ## Placing the product
-- Use a sharp main photo.
-- Size: use checked measurements plus something familiar in view (a hand, a countertop item). How much it holds never tells you how big it is outside.
-- Give it something real to rest on or be held by, with light, shadows, reflections, perspective and focus that match the scene.
-- Clean-up keeps the original shape and printing.
-- Through movement, the size, grip, rigid packaging and label stay the same as reflections and what's in front of it change.
-- Make it stand out with the camera and framing, never by making it bigger.
+- Start from the sharpest photo you have.
+- Size comes from real measurements plus something familiar in shot (a hand, a mug). How much a pack holds says nothing about how big it looks.
+- It rests on something or is held, with light, shadow, reflections and focus that match the scene.
+- Cleaning up a photo keeps the original shape and printing.
+- As it moves, the size, grip, rigid parts and label stay fixed while reflections change.
+- Make it stand out with framing and light, never by making it bigger than it is.
 
 ## Sound for products
-Plan the product's own sounds (tear, pour, click, zip). Mark any sound nobody has actually heard as "guessed", not recorded.
+Plan the product's own sounds (a tear, a pour, a click, a zip). Mark any sound nobody has heard for real as "guessed".
 
 ## Before and after
-A visible improvement after use is a result claim even with no text. It needs approved evidence, not a convincing generated face. A season gives context, never a new offer or benefit.
-
-## Judging by job
-- Opening: the first frame, and whether the eye stays to the end of the movement.
-- Demonstration: could a stranger say what happened?
-- Proof picture: is the source visible and real?
-- Product page image: does it answer one buyer question without reading the page?
+A visible change after use is a result claim, even with no words on screen. It needs real evidence on file in `proof-and-claims.md`, never a convincing generated face. A season sets the scene; it never adds an offer or a benefit.
 
 ## Extra checks
-- The product's colour is its own colour, not the background's.
 - The label is readable and never covered by a hand.
-- Packaging opens only at its real opening.
-- A set of images keeps one pack shape, size and design.
+- Packs open only where they really open.
+- Every image in a set shows the same pack shape, size and design.

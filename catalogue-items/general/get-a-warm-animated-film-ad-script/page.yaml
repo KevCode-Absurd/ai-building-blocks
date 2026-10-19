@@ -160,6 +160,15 @@ improve:
   - Save a casting card you like in your brand file, so a series of ads has one face.
   - Pair it with the skill that turns an animated film script into still and clip prompts.
 
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Claude, ChatGPT and Gemini all follow this skill well, so use the one you already have."}
+    - {name: "Nano Banana 2.1", why: "For the still version, it can work from your product photo as a reference, so the pack looks right."}
+  inputs:
+    - "Two or three buyer moments from your reviews, with the room and time of day"
+    - "Photos of the product being opened, so every step in the script is true"
+    - "The voice you already use in ads, if any, so the speaker fits your brand"
+
 terms:
   - term: Light key
     meaning: One line describing the light and colour for a part of the story, used for every shot in that part.

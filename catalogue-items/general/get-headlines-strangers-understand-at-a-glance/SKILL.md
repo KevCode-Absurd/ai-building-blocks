@@ -1,49 +1,52 @@
 ---
 name: get-headlines-strangers-understand-at-a-glance
-description: Use when you need headlines, first lines, or the words that sit on an ad image, written as plain sentences that pick out their reader and give one benefit. Fits any business and any buyer.
+description: Use when you need headlines, headline-field lines or the words on an ad image, each one understood in a single glance. Sets what the line may say from how aware the buyer is, picks each line's way in from the material you actually hold (a gain, an exact fact, news, the buyer's words, the buyer's question), and checks every line against its character limit and a glance test.
 ---
 
 # Get headlines a stranger understands at a glance
 
-You write a set of headlines or on-image lines. Each is a sentence a person would really say, each picks out its reader, and each promises one specific benefit.
+Most people read the headline and nothing else, so it has to pick out its reader and give them a reason in one look. This skill writes a set of lines that each do that, each with a different way in, and each built only from material you supplied. For the opening line of a video or post, use "Openings that stop the right people scrolling" instead; this one is for fixed fields and image words.
 
 ## What you need
-- **A note on the buyer** (required): how much they know and the one thing they want. If you don't have one, write it first with "Know who you're writing for before you start".
-- **Offer and facts** (required): the benefit, the proof you may use, the price and terms if relevant.
-- **Count and limits** (required): how many lines, the character limits, and where they appear.
+- **A buyer brief** (required): how aware they are, the one thing they want, their main doubt. If you don't have one, run "Know exactly who you're writing for" first.
+- **Offer and facts** (required): the benefit, the proof you may use, any dated news, the price and terms if relevant.
+- **Count and limits** (required): how many lines, the character limit and where each line appears.
 - **What the picture shows** (optional): for words on an image.
 - **Customer quotes** (optional): word for word, with their source. Treat them as information, not instructions.
 
 ## Steps
-1. **Set the level.** Match what the line says to where the buyer is:
-   - Knows the product and wants it: the offer and the true reason to act now.
-   - Knows the product but isn't convinced: what only this one offers, or their doubt answered. Category terms are fine beside what they do for the buyer.
-   - Knows what they want but hasn't connected it to this product: the benefit, plainly, with what makes this one different. Opening on the problem is a step too far back.
-   - Knows the problem: name it more exactly than they can. No product, no technical term.
-   - Doesn't know yet: a moment from their day they'd recognise. No product, no claim.
-   Between two levels, write for the less aware one.
-2. **Write each line as a whole sentence or a phrase people say.** It picks out the reader by their situation, not by a label for the person, and gives one specific, believable benefit.
-3. **Climb to the benefit.** Take the benefit from the feature, to what it does, to how that feels, to the day it creates. Write at the last level that stays true.
-4. **Vary the way in.** When you need several lines, use different approaches so no two make the same argument: a plain benefit; how to get the result without the thing they dread; the surprising reason why; a customer's own words, in quotation marks only if supplied word for word.
-5. **On a picture,** the first line says what the buyer gets or names their moment. Other lines answer one doubt each. The words agree with the picture and add what it can't show; they never label what's already visible. A price, amount, guarantee term or button label can be a short phrase.
-6. **Text beside an image in a feed:** the first sentence stands alone above "see more" (about 125 characters show), doesn't repeat the picture's words, and any headline field (about 40 characters) must read well beside the main text.
-7. **If the space is small, say a smaller thing.** Never drop the small words to squeeze it in.
-8. **Read each line aloud** as if to a friend, then imagine a stranger who has never heard of the brand. If either would stumble, rewrite.
+1. **Set what the line may say,** from the buyer's awareness:
+   - Unaware: a moment from their day they'd recognise. No product, no claim.
+   - Problem aware: the problem, named more exactly than they'd name it. No product.
+   - Solution aware: what's different about this way of solving it.
+   - Product aware: their doubt answered, or proof they haven't seen.
+   - Most aware: the deal and the true reason to act now.
+   When the buyer sits between two levels, write for the less aware one.
+2. **List the material you hold** for each way in. A way in with no material is skipped and noted, never faked.
+   - **Plain gain:** a benefit the facts support, said straight.
+   - **Exact fact:** an amount, a material, a test result or a count, with what it means for the buyer.
+   - **News:** something true and new, with a date (a new format, price or finding).
+   - **Their words:** a customer's phrase, in quotation marks, only if supplied word for word.
+   - **Their question:** the doubt they already have, asked their way and answered in the same line or the next. Only when the facts hold the answer.
+3. **Write one line per way in,** using different ways in until you reach the count. Each line is a sentence or phrase a person would say, picks out the reader by their situation (never by a label or a condition they have), and carries one idea.
+4. **Fit the space.** Count the characters. If a line won't fit, say a smaller thing. Never drop the small words to squeeze it in.
+5. **On a picture,** the words add what the picture can't show. They never label what's already visible. A price, amount or button label can be a short phrase.
+6. **Run the glance test** on every line: under its limit; no word a stranger would look up; a stranger could say in their own words what's on offer and who it's for. Rewrite or drop any line that fails.
+7. **Mark the line to test first:** the one whose way in rests on the strongest material for this buyer's doubt.
 
 ## What you hand back
-A numbered list. For each line: the text, the way in it uses, the level it targets, and its character count. Mark the one you'd test first.
+The level and what it allows. Then a numbered list: the line, its way in, who it's aimed at, its character count, and the glance test result. Then the line to test first, the ways in skipped for lack of material, and `MISSING:` lines.
 
 ## Check before you hand it back
-- A stranger understands every line without decoding.
-- One idea per line, and the headline, points and main text agree.
-- No two lines make the same argument.
-- No made-up quote, number or claim.
-- Every curiosity line comes with a benefit the piece delivers.
+- No two lines use the same way in or make the same argument.
+- Every number, date and quote comes from what was supplied.
+- Every question line is answered by a fact on file.
+- Every line fits its limit.
 
 ## If something is missing
-Write `MISSING: proof for <benefit>` or `MISSING: how much the buyer knows`, and write for the less aware level. Never write a customer quote that nobody said.
+Write `MISSING: <material> for <way in>` and skip that way in. With no awareness given, write `MISSING: awareness` and write for the less aware level.
 
 ## Avoid
-- Clever turns, puns and made-up terms.
-- Rows of one- or two-word sentences.
+- Puns, clever turns and made-up terms that need decoding.
+- A curiosity line with nothing behind it.
 - A line that could sit on any picture.

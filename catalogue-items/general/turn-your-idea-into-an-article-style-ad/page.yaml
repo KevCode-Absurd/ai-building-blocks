@@ -4,12 +4,12 @@ summary: "Give it your selling idea and the page it links to. You get the headli
 job: write-ad-copy
 
 headline: "An ad that reads like a short news article"
-subhead: Give it your selling idea, your brand facts and the page the ad links to. You get an editor-style headline, the main text in third person, and a brief for the image, plus a check that the first screen of your page says the same thing.
+subhead: Give it your selling idea, your brand facts and the page the ad links to. You get an editor-style headline, third-person main text and an image brief, plus a check that your page's first screen pays off the headline and is labelled as an ad.
 
 explain: |
-  An advertorial is an ad written like an article. In an image ad, it looks like a news item, a "3 reasons" list or a side-by-side comparison. It works for buyers who know their problem and want it explained, but it fails in two common ways. The headline turns into a tagline, or the ad promises an explanation the page never gives.
+  An advertorial is an ad written like an article. In an image ad, it looks like a news item, a "3 differences" list or a side-by-side comparison. It works for buyers who know their problem and want it explained. It fails in three common ways: the headline turns into a tagline, the page never gives the explanation the ad promised, or the ad pretends to be real reporting. That last one costs trust, and in the US the FTC treats ads dressed as independent content as deceptive.
 
-  This skill first checks the format fits, and stops if there's no page to send people to. It splits the work: the ad holds the headline, the problem and the promise of an answer; the page holds the full explanation, proof and offer. The headline reads like an editor wrote it, with no brand name. The main text tells a discovery or an honest comparison between kinds of product, never a named rival. It never invents a publication, expert or study.
+  This skill first checks the format fits, and stops if there's no page to send people to. It splits the work: the ad holds the headline, the problem and the promise of an answer, and the page holds the full explanation, proof and offer. The headline reads like an editor wrote it. The main text tells a discovery, an honest comparison between kinds of product, or a list where each item does a different job, and names the brand plainly. It never invents a publication, a byline, an expert or a study. Last, it checks your page: does its first screen make the same claim, and if it looks like an article, is it labelled "Advertisement" at the top?
 
 when:
   - Your buyers know their problem and respond to being told why it happens.
@@ -20,18 +20,18 @@ you_give:
   - Your selling idea, or an existing ad to reshape
   - Brand facts, customer words, product facts, kinds of competitor, approved claims and proof
   - The page the ad links to, or a note that there isn't one yet
-  - How much the buyer knows, problem or solutions (optional; defaults to problem)
+  - How aware the buyer is, problem or solution aware (optional; defaults to problem aware)
 you_get:
   - The headline for the image, a supporting line, the main text and the headline under the image
   - An image brief with the layout, what's shown and the exact words on it
   - Notes listing what the page must cover, and claims left out for lack of proof
-  - A check on whether your page's first screen pays off the ad
+  - A page check on whether the first screen pays off the ad and is labelled where it needs to be
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste your brand facts, including approved claims and the proof you can show.
   - Paste the text of the page the ad will link to, top to bottom.
-  - Write your selling idea in a sentence or two, and say whether the buyer knows the problem or is comparing solutions.
+  - Write your selling idea in a sentence or two, and say whether the buyer knows the problem or is comparing fixes.
   - Read the page check in the notes. If your page doesn't open on the same claim, fix the page before you run the ad.
 
 how_it_works:
@@ -40,18 +40,20 @@ how_it_works:
   - title: Splits ad from page
     text: The ad keeps the problem and the promise of an answer. Everything else is listed as page sections, not written here.
   - title: Writes an editor's headline
-    text: What was found, why something happens, or how many reasons, in the buyer's words, with no brand or product name.
+    text: What was found, why something happens, or how many differences there are, in the buyer's words, with no brand name.
   - title: Holds one claim
     text: The image headline, the first line of the main text, the headline under the image and the top of the page all say the same thing.
   - title: Writes in third person
-    text: A discovery, an explanation told as news, a comparison of kinds, or a list where each item does a different job, using only proof on file.
+    text: A discovery, a comparison of kinds or a list where each item does a different job, using only proof on file and naming the brand.
+  - title: Keeps it honest
+    text: No made-up publication, byline, expert or study. An article-style page gets an "Advertisement" label above its headline.
   - title: Briefs the image
     text: An article layout, list card or two-column comparison with 20 words or fewer, and the real product small or left out.
 
 output_shape: |
   ON IMAGE
-  Headline:        <what was found, why it happens, or how many reasons>
-  Supporting line: <one line>
+  Headline:        <what was found, why it happens, or how many>
+  Supporting line: <one line, or none>
 
   MAIN TEXT
   <3 to 6 short paragraphs in third person>
@@ -66,7 +68,8 @@ output_shape: |
 
   NOTES
   Page must cover:  <full explanation, proof, offer, guarantee...>
-  Page check:       <does the first screen say the same claim?>
+  Page check:       <does the first screen make the same claim?>
+  Page label:       <needed or not, and whether it's there>
   Left out:         <claims without proof on file>
   MISSING:          <anything you'd need to make it stronger>
 
@@ -141,38 +144,51 @@ example:
       about energy or immunity (the study measured two vitamins).
     MISSING: a page whose first screen makes the same comparison. Move
       "Us vs. Them" to the top, or build a page for this ad.
-    If the platform asks for an advertising label, it stays.
+    Page label: not needed today, because the product page doesn't look
+      like an article. If you build an article-style page for this ad,
+      put "Advertisement" just above its headline.
 
 tweaks:
-  - what: How much the buyer knows
-    how: For a buyer who knows the problem, it leans on a discovery ("why this happens"). For a buyer comparing solutions, it leans on a comparison of kinds of product.
+  - what: How aware the buyer is
+    how: For a buyer who knows the problem, it leans on a discovery ("why this happens"). For a buyer comparing fixes, it leans on a comparison of kinds of product.
   - what: The page
-    how: Paste the real page text. The page check is only as good as what you give it, and a generic shop grid as the first screen means you need a dedicated page.
-  - what: List or story
-    how: Ask for "list form" to get a "3 reasons" ad where each reason does a different job. Ask for "discovery" to get a short third-person account.
+    how: Paste the real page text. The page check is only as good as what you give it. A product grid or a discount banner as the first screen means you need a page built for the ad.
+  - what: List or discovery
+    how: Ask for "list form" to get a "3 differences" ad where each item does a different job. Ask for "discovery" to get a short third-person account.
   - what: Words on the image
-    how: If the image must have no words, it will tell you this format doesn't fit and suggest a plain photo with the headline as the first line of the main text.
+    how: If the image must have no words, it tells you this format doesn't fit. It suggests opening the main text with the headline and running it under a plain photo instead.
 
 judge:
-  - The headline names no brand or product and reads like an editor wrote it, not a slogan.
+  - The headline names no brand and reads like an editor wrote it, not a slogan.
   - The image headline, the first line of the main text and the top of your page make the same claim.
-  - Every figure and outside name in the ad is in your brand facts.
-  - No competitor is named or shown. Comparisons are between kinds of product.
+  - Nothing suggests independent reporting. No publication name, byline, expert or "as seen in" that isn't real and yours to use.
+  - Every figure and outside name in the ad is in your brand facts. No competitor is named or shown.
   - The image has 20 words or fewer. Count them.
 
 test:
-  - Run it on an idea whose landing page you know well. Check its page note against the first screen of your page yourself. If it says the page pays off the ad and you can't see the claim there, it skipped the check.
+  - Run it on an idea whose landing page you know well. Check its page note against your page's first screen yourself. If it says the page pays off the ad and you can't see the claim there, it skipped the check.
   - Run it with no landing page. It should stop and say the format has no job without a page.
   - Run it twice. The headline wording can change, but the one claim should be the same both times.
-  - Put its ad next to your current image ad, both linking to the same page. Ask someone who'd buy which one they'd tap, and whether the page matched what they expected.
+  - Give it an article-style page with no label. The page label line should say one is needed, and where.
   - Count the words in its image brief. There should be 20 or fewer, and no brand name in the headline.
 
 improve:
-  - Add your proof on file (test counts, outside checkers, review totals) to "Brand facts" in the skill file, so step 5 can use counted proof every time.
+  - Add your proof on file (test counts, outside checkers, review totals) to "Brand facts" in the skill file, so the main text can use counted proof every time.
   - If you sell against a known kind of product, write that comparison into step 5 (for example "gummy pack against powder tub"), using only facts you can back.
-  - If your platform requires an advertising label, add it to the checks so it's never dropped.
+  - If your platform or country has its own labelling rules, add them to step 6.
   - Save the page sections it lists in its notes to your brand file, as the outline for your article-style page.
-  - Pair it with "Finish your sales page with proof and one ask" to write the page the ad leads to.
+  - Pair it with "Finish your sales page with proof for every claim" to write the page the ad leads to.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Writing an editor-style headline and checking it against your page works in any strong chat AI."}
+    - {name: "Figma", why: "Sets the headline and list as real type over the image, so every word is spelled right."}
+    - {name: "GPT Image 2.5", why: "Handles several lines of text in a layout well, if you'd rather generate the list card."}
+  inputs:
+    - "The full text of your landing page from the top, so the page check is real"
+    - "One test result or outside check you can name, such as a lab test, so the main text has proof to carry"
+    - "Two or three reviews that describe the problem, so the headline uses the buyer's words"
+    - "Your platform's ad label rules, if you also run the page as a paid article"
 
 terms:
   - term: Advertorial

@@ -1,10 +1,12 @@
-# Make an ad that looks like a handwritten note: for online stores
+# A handwritten-note photo: for online stores
 
 Use this with the main skill when the story ad sells a physical product.
 
-**Extra thing to give it:** your product photos, but only if you want the product in the picture. Otherwise send no product photo to the image tool.
+**Notes a store's buyers really write**
+- A sum on an envelope: what the old ones cost, added up ("3 kettles in 4 years").
+- A list of what was tried and why each one went back.
+- A note left with the old thing: "don't use, handle loose".
 
-**Ideas for physical products**
-- Something people buy once: this works when the story gives a reason to write, such as what has been spent, added up on an envelope, or a note left with a gift. With no such reason, use `get-recognised-with-the-old-things-that-failed`.
+With no reason in the story to write anything down, use `get-recognised-with-the-old-things-that-failed` instead.
 
-**Reminder:** leave the product out unless asked. If it is asked for, use the real one, small and to one side, never held up or centred. The picture must still work with it taken out.
+**Product photos:** send none unless you want the product in the picture. If you do, use the real one, small and to one side. The picture must still work with it taken out.

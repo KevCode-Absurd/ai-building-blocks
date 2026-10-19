@@ -173,6 +173,15 @@ improve:
   - Save the show job that wins, and test a second job on the same idea next time.
   - Pair it with the skill that turns a watercolor script into video clips.
 
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Claude, ChatGPT and Gemini all follow this skill well, so use the one you already have."}
+    - {name: "Nano Banana 2.1", why: "For the still version, it can work from your product photo as a reference, so the pack looks right."}
+  inputs:
+    - "The full ingredient or parts list from the pack, so every painted reveal shows only what is really inside"
+    - "Two or three watercolor paintings you like, so you can name the paper and colors you want"
+    - "Results from your last ad, so the show job can test something new"
+
 terms:
   - term: Show job
     meaning: What the key shot has to show for the selling idea, such as a reveal or many parts adding up.

@@ -1,15 +1,15 @@
 new_slug: know-if-you-have-enough-visitors-to-test
 name: "Know if you have enough visitors to run a test"
-summary: "Paste your visits, orders and revenue. You get revenue per visitor and how long a fair test would take."
+summary: "Paste your visits, orders and revenue. You get revenue per visitor, the visitors a fair test needs, and how long it takes."
 job: audit-landing-page
 
 headline: "Know if you have enough visitors to run a test"
-subhead: Paste your visits, orders or sign-ups and revenue for a set of dates. It works out revenue per visitor, shows what your traffic mix does to the numbers, and says how many visitors and days a fair test would need, or that you can't test yet.
+subhead: Paste your visits, orders or sign-ups and revenue for a set of dates. It works out revenue per visitor for each traffic source, sizes a fair test with the standard sample-size sum, and says whether it would finish in about four weeks.
 
 explain: |
-  Conversion rate (the share of visitors who buy or sign up) is the number everyone quotes, and it misleads on its own. It drops when you send more cold traffic from ads, rises when you cut that traffic, and says nothing about how much each buyer spends. Teams redesign pages to fix a number that was never broken, or call a test after a few dozen sales.
+  Conversion rate (the share of visitors who buy or sign up) is the number everyone quotes, and on its own it misleads. It drops when you send more new people from ads, rises when you cut them, and says nothing about how much each buyer spends. Teams redesign pages to fix a number that was never broken, or call a test after a few dozen sales.
 
-  This skill reads your numbers the careful way. It works out revenue per visitor (conversion rate times average order value), checks whether a change in where visitors came from explains the movement, and shows how the number could be gamed. Then it sizes a test with a stated rule of thumb: roughly 1,000 sales or sign-ups per version. If your traffic can't support that, it tells you to ship the obvious fixes and track before and after instead.
+  This skill reads your numbers carefully. It works out revenue per visitor, splits it by where visitors came from, and shows how much a change in that mix explains. Then it sizes a test with the sum statisticians use as a rule of thumb, from your conversion rate and the smallest lift worth finding, and turns that into weeks at your traffic. If the test would run past about four weeks, it says so, and tells you to test a bolder change or to ship the fix and watch.
 
 when:
   - Someone says "our conversion rate dropped" and wants a redesign.
@@ -17,38 +17,38 @@ when:
   - You're thinking about A/B testing and want to know if you have the traffic for it.
 
 you_give:
-  - Visits, orders or sign-ups, and revenue for a fixed set of dates
+  - Visits, orders or sign-ups, and revenue, with the start and end dates
   - The same split by traffic source and by phone or desktop (optional, but it explains a lot)
+  - The change you'd test and the smallest lift worth acting on (optional)
   - Your margin per order (optional)
-  - What changed on the page and when (optional)
 you_get:
-  - A numbers table with conversion rate, average order value and revenue per visitor, with the working shown
-  - A short read of what moved, what the traffic mix explains and what is still unknown
-  - A test verdict with visitors and days needed, or "can't test, ship and monitor"
-  - Three next actions, each tied to a number
+  - A numbers table with conversion rate, average order value and revenue per visitor, each sum shown
+  - A short read of what moved and what the traffic mix explains
+  - The test sizing written out, with visitors and weeks needed
+  - A verdict (can test, test a bolder change, or ship and watch) and three next actions
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Paste your numbers for one closed date range (for example, all of last month), with the dates.
+  - Paste your numbers for one closed date range, such as all of last month, with the dates.
   - Add the split by traffic source if your analytics shows it.
-  - Say what you're trying to decide, such as "did the new page work?" or "can we A/B test this?".
+  - Say what you're trying to decide, such as "did the new page work?" or "can we A/B test the plan box?".
   - Check which figures are marked "your data" and which are "rule of thumb" before you quote any of them.
 
 how_it_works:
   - title: Works out the honest numbers
-    text: Conversion rate, average order value and revenue per visitor, plus profit per visitor if you gave a margin. The working is shown.
+    text: Conversion rate, average order value and revenue per visitor, plus profit per visitor if you gave a margin. Every sum is shown.
   - title: Compares you only with you
-    text: Refuses to compare your conversion rate with other businesses. A 9% rate on small orders can be a worse business than 1% on large ones.
-  - title: Reads the traffic mix
-    text: Checks whether more cold traffic explains a falling rate, which is expected and not a page fault.
-  - title: Shows how numbers get gamed
-    text: Points out that any single number can be pushed up while the business does worse, and judges by revenue or profit per visitor instead.
+    text: Never uses another business's rate as a target. A 9% rate on cheap orders can be worse than 1% on large ones.
+  - title: Splits by traffic source
+    text: Shows each source side by side, so you can see when a shift in who's visiting, not the page, moved the number.
+  - title: Picks the lift worth finding
+    text: Uses the smallest change that would pay for the work, or 20% for a small store if you don't say. Half the lift needs four times the visitors.
   - title: Sizes the test
-    text: Uses about 1,000 conversions per version, divides by your rate to get visitors needed, doubles it for an A/B test and converts it into days at your traffic.
-  - title: Rules out bad tests
-    text: Flags tests called too early, stopped the day they looked good, or skewed by an email blast.
-  - title: Says what to do
-    text: If you can't test, it tells you to ship the obvious fixes and compare before and after, and says that isn't proof.
+    text: Visitors per version equals 16 times p times (1 minus p), divided by the change squared. Then it converts that into whole weeks at your traffic.
+  - title: Gives a verdict
+    text: Can test if it finishes in about four weeks. Otherwise test a bolder change, or ship the fix and compare revenue per visitor before and after.
+  - title: Sets the rules
+    text: Fix the sample first, don't stop early on a good-looking result, keep the split even, and send any email or sale to both versions.
 
 output_shape: |
   WINDOW: <the dates the numbers cover>
@@ -59,20 +59,20 @@ output_shape: |
   Conversion rate         <rate> (<sum>)    your data
   Average order value     <amount> (<sum>)  your data
   Revenue per visitor     <amount> (<sum>)  your data
-  <or MISSING: what's needed to work it out>
+  <one row block per traffic group, if supplied>
 
   READ
-  - <5 to 8 lines: what moved, what the traffic mix explains, what's unknown>
+  - <4 to 6 lines: what moved, what the mix explains, what's unknown>
 
-  TEST VERDICT
-  Rule of thumb: about 1,000 conversions per version.
-  <visits needed per version, total, and how long at your traffic>
-  Verdict: <can test> or <cannot test; ship and monitor>
+  TEST SIZING                               rule of thumb
+  Lift to find: <n>%   Current rate p: <rate>
+  16 x p x (1 - p) / (p x lift)² = <visitors per version>
+  Total: <n>   Days at current traffic: <n>, rounded to <n> weeks
+
+  VERDICT: <can test | test a bolder change | ship and watch>
 
   NEXT 3 ACTIONS
   1. <action tied to a number>
-  2. ...
-  3. ...
 
 example:
   business: sprout
@@ -95,8 +95,8 @@ example:
     First order $29.99 (with text sign-up), renews at $49.99.
 
     Question: the team wants to A/B test the plan box, because the
-    ads say 61% off and the page says 52% and 55%. Can we, and
-    which number should we judge the page by?
+    ads say 61% off and the page says 52% and 55%. Can we, and which
+    number should we judge the page by?
   output: |
     WINDOW: 14 to 42 days per ad. MISSING: exact dates.
 
@@ -115,70 +115,80 @@ example:
     READ
     - Visitors from the 61% off ads buy less often and spend less.
       Each of their visits is worth $0.63, against $1.49 for the rest.
-    - So the page's overall rate moves with the ad mix. If more spend
-      goes to offer ads, conversion falls with no change to the page.
-    - Judge the page by revenue per visit, split by kind of ad, and
-      name the mix in every period you compare.
-    - Cutting the offer ads would raise conversion rate on paper and
-      could still lower total revenue. Don't judge by the rate alone.
-    - These are first orders only. Renewals at $49.99 aren't in here.
-      MISSING: how many first orders renew.
-    - Ad clicks aren't store visits. MISSING: store visits by source
-      and device.
+    - So the page's overall rate moves with the ad mix. More spend on
+      offer ads lowers conversion with no change to the page.
+    - Judge the page by revenue per visit, split by kind of ad.
+    - These are first orders only. MISSING: how many renew at $49.99.
 
-    TEST VERDICT
-    Rule of thumb: about 1,000 conversions per version.
-    1,000 / 0.026 = about 38,400 visits per version, 76,900 for an
-    A/B test. That's 3.2 times all the ad clicks in this file.
-    Days needed: MISSING, since there are no dates.
-    Verdict: cannot test at this volume. Ship and monitor.
+    TEST SIZING                       rule of thumb
+    Lift to find: 20% (none given; small-store default)
+    p = 0.026, change = 0.026 x 0.20 = 0.0052
+    16 x 0.026 x 0.974 / 0.0052² = about 15,000 visits per version
+    Total for an A/B test: about 30,000, more than all 23,941 clicks
+    in this file. A 10% lift would need about 120,000.
+    Days at current traffic: MISSING, since there are no dates.
+
+    VERDICT: ship and watch. The fix is a mismatch between the ad
+    and the page, so it doesn't need a test to prove it.
 
     NEXT 3 ACTIONS
-    1. Ship the obvious fix: one discount number that matches the ad
-       and the page. Compare revenue per visit before and after for
-       the offer ads (now $0.63), knowing that isn't proof.
-    2. Export store visits by source and device for the same dates.
+    1. Make the discount number on the page match the ad. Compare
+       revenue per visit for the offer ads (now $0.63) before and
+       after, knowing that isn't proof.
+    2. Export store visits by source and device, with dates, so the
+       weeks a test would take can be worked out.
     3. Get the renewal rate, so a $29.99 first order can be valued
        against the $49.99 renewals.
 
 tweaks:
+  - what: The lift worth finding
+    how: Say "only worth it at 10% or more" and the sizing uses that. A smaller lift needs far more visitors, so pick the smallest one that would change what you do.
   - what: The traffic split
-    how: Add visits and sign-ups by source (ads, email, search) and by device. The read will say how much of any change comes from the mix rather than the page.
+    how: Add visits and orders by source (ads, email, search) and by device. The read will say how much of any change comes from the mix rather than the page.
   - what: Your margin
     how: Add "margin 70%" or a profit per order and it judges by profit per visitor, which is harder to fool than revenue.
   - what: A before and after
     how: Paste two windows, one before the change and one after. It compares them on revenue per visitor and names the traffic mix in each.
-  - what: No analytics at all
-    how: Say so. It switches to walking through the page as a buyer on a phone and ranks fixes by impact, confidence and ease, each out of 10, with no money value attached.
 
 judge:
-  - Revenue per visitor is shown, or the skill says exactly why it can't be worked out.
-  - Every figure is marked "your data" or "rule of thumb". Nothing comes from an unnamed industry average.
-  - The test verdict gives visitors needed and how long that takes at your traffic.
-  - The date window is stated at the top.
-  - Nothing is called "significant" without the number of conversions behind it.
+  - Revenue per visitor is shown, or it says exactly why it can't be worked out.
+  - The sample-size sum is written out, with the lift it uses named.
+  - Every figure is marked "your data" or "rule of thumb". Nothing comes from an industry average.
+  - The verdict says how many weeks a test would take, or what's missing to say.
+  - Nothing is called "significant" before the planned sample is reached.
 
 test:
   - Use a period where you know why the numbers moved, such as a sale week. It should explain the jump through traffic mix or order size, not call the page better.
   - Work out revenue per visitor yourself (revenue divided by visits) for one window and check it matches.
-  - Give it a short window with under 100 orders. It should tell you a test can't be trusted yet, not size one anyway.
-  - Run it twice on the same numbers. The visitors needed should be the same both times, because it's a sum, not an opinion.
+  - Put your numbers into a free online A/B test sample-size calculator. The visitors per version should be close to the skill's.
+  - Halve the lift you ask for. The visitors needed should go up about four times.
 
 improve:
-  - Write your margin or profit per order into "What you need" in the skill file, so step 1 also judges by profit per visitor every time.
+  - Write your margin and the smallest lift worth acting on into "What you need" in the skill file, so every sizing uses them.
   - If your goal isn't a purchase (a sign-up, a booked call), change the words in step 1 so "orders" means your goal.
   - Add your traffic sources by name to step 3 (for example "Meta ads, new people" and "email, past buyers"), so the mix is read in your own groups.
   - Save each month's revenue per visitor in your brand file. The next run compares you with your own past, which is the comparison that counts.
-  - Pair it with a store page check when the answer is "can't test yet", to find the obvious fixes to ship and track instead.
+  - Pair it with "Know what to fix first on your page" when the answer is "ship and watch", to find the obvious fixes to ship.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "The sums are simple, and the main chat AIs all show their working when asked."}
+    - {name: "Google Sheets", why: "Keeps each month's numbers in one place, so you can check every sum and compare with your own past."}
+    - {name: "Evan Miller's sample size calculator", why: "Free, and a quick second check on the visitors per version."}
+  inputs:
+    - "Daily visits to the page you'd test, so the weeks a test needs can be worked out"
+    - "Your margin per order, so the page can be judged by profit per visitor"
+    - "How many first orders renew or reorder, so a cheap first order is valued properly"
+    - "A note of any sales, emails or price changes in the window, so their effect isn't read as the page"
 
 terms:
   - term: Conversion rate
     meaning: The share of visitors who buy or sign up. 623 purchases from 23,941 visits is 2.60%.
   - term: Revenue per visitor
-    meaning: Revenue divided by visitors, or conversion rate times average order value. It tells you what each visit is worth.
+    meaning: Revenue divided by visitors. It tells you what each visit is worth.
   - term: A/B test
     meaning: Showing two versions of a page to different visitors at the same time and comparing results.
-  - term: Cold traffic
-    meaning: Visitors who haven't heard of you before, usually from ads. They buy less often than returning visitors.
+  - term: Lift
+    meaning: How much better the new version does, as a share of the old. 2.6% to 3.1% is about a 20% lift.
   - term: Rule of thumb
     meaning: A rough working guide, not a published benchmark. The skill labels these so you don't quote them as fact.

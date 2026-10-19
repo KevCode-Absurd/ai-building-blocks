@@ -1,15 +1,15 @@
 new_slug: stop-tired-buyers-with-ignored-reminders
 name: "A phone screen of the reminders your buyer ignores"
-summary: "Give it your ad's story. You get one to four reminders and a prompt for the lock-screen image."
+summary: "Give it your ad's story. You get one to four reminders, how they pile up, and how to make the screenshot."
 job: make-image-ads
 
 headline: "A phone screen of the reminders your buyer ignores"
-subhead: Give it your story ad. It writes one to four short reminders with times, each something the narrator does because of the problem, and a prompt for a plain lock screen where they've piled up.
+subhead: Give it your story ad. It picks how the narrator's reminders pile up (repeating, getting sharper, or overdue over days), writes one to four of them with times, and tells you how to build the lock screen with every word and digit right.
 
 explain: |
-  Everyone knows what their own ignored reminders look like. A stack of them on a lock screen ("Vitamins.", "Vitamins. Still on the counter.") shows the workaround in the phone's own voice, and the person who has the same reminders sees themselves at once. It suits routines people can't keep: a cream twice a day, a supplement, a bedtime, a chore that keeps coming round.
+  Most people have a pile of reminders they keep swiping away. A stack of them on a lock screen ("Kids vitamins. Before shoes.", "Did anyone take the vitamins?") shows the workaround failing in the phone's own plain voice, and the person with the same reminders sees their own phone. Research on habit apps found that reminders help people repeat a task but don't turn it into a habit, so the pile-up is an honest picture of the problem.
 
-  The skill writes one to four reminders of three to eight words, each with a time, each something the narrator set because of the problem as your story tells it. Repetition does the work, so the same reminder minutes or hours apart is often stronger than four different ones. The lock screen is generic and copies no real phone's look, and no reminder pretends to come from an app, a shop or a clinic, or mentions your product.
+  The skill picks how the reminders pile up from your story: the same one repeating, each one sharper than the last, or one reminder overdue on several days. It writes one to four short reminders, each with a time, and sets the clock a few minutes after the last so the screen shows they were ignored. The screen copies no real phone, and no reminder pretends to come from an app, a shop or a clinic. It suggests building the screen with real text, because image tools swap digits.
 
 when:
   - Your story is about a routine the narrator can't keep, or a chore that keeps coming back.
@@ -18,59 +18,42 @@ when:
 
 you_give:
   - Your approved story ad, with the routine the narrator sets reminders for
-  - When in the day the problem happens (optional)
+  - When in the day the routine slips (optional)
   - Whether words on the image are on or off (optional, default on)
 you_get:
-  - One to four reminders, each with its exact text and time
-  - The lock screen layout and the time it shows
-  - A blank version and the headline under the image
-  - A 60 to 120 word image prompt, ready to paste
+  - How the reminders pile up, and why it fits your story
+  - One to four reminders with exact text and times
+  - A blank version and a short line to run under the image
+  - How to build the screen with exact words, or an image prompt
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste your story ad underneath. If it quotes the reminders, they'll be used word for word.
-  - Paste the image prompt into your image tool and make one square picture.
-  - Check each reminder's text and time in the result. Image tools mix up numbers.
-  - If the screen looks like a particular phone brand, ask again for "a generic lock screen".
+  - Build the lock screen in a design tool from the brief, with each reminder and time typed in as real text.
+  - If you use the image prompt instead, check every time and number in the result.
+  - Show it to someone who fits your buyer and ask "is this your phone?"
 
 how_it_works:
-  - title: Sets the ground rules
-    text: Square, looks like a phone screenshot, no logo, price, button, product or real phone look.
+  - title: Sets the house rules
+    text: Square, looks like a cropped screenshot, no logo, price, button, product, real phone look or wallpaper photo.
+  - title: Picks how they pile up
+    text: The same reminder repeating, each one sharper than the last, or one reminder overdue on several days.
   - title: Writes the reminders
-    text: One to four reminders of 3 to 8 words, each with a time, each something the narrator does because of the problem.
-  - title: Briefs a generic lock screen
-    text: The time, a plain wallpaper, and the reminders stacked as notification cards.
-  - title: Gives every word exactly
-    text: Each reminder's text and time, as a real-looking screenshot crop.
-  - title: Describes the blank version
-    text: The same screen with the notification area empty.
+    text: One to four of 2 to 8 words, each with a time, each something the narrator set because of the problem.
+  - title: Sets the clock
+    text: A few minutes after the last reminder, so the screen shows they were ignored.
+  - title: Says how to make it
+    text: Build it with real text in a design tool so digits stay right. The image tool is the fallback.
 
 output_shape: |
-  SCENE
-  <one sentence: what someone scrolling would say they saw>
-
-  WHERE AND WHEN
-  <the screen and the time shown>
-
-  THE SCREEN
-  <lock screen or list, wallpaper, clock>
-
-  REMINDERS
-  <time>  <reminder, 3 to 8 words>
-  <1 to 4 reminders, newest on top>
-
-  WORDS ON THE IMAGE
-  <the reminders and times, exactly as written, plus the clock>
-  BLANK VERSION
-  <the screen with an empty notification area>
-  HEADLINE UNDER THE IMAGE
-  Read this if you've snoozed this one too.
-
-  FLAGS
-  <lifted or written for the image; anything inferred>
-
-  IMAGE PROMPT
-  <60 to 120 words, ready to paste>
+  SCENE               <what someone scrolling would say they saw>
+  HOW THEY PILE UP    <repeating | getting sharper | spread over days>
+  THE SCREEN          <lock screen or list, wallpaper, clock or date>
+  WORDS ON THE IMAGE  <time>  <reminder>   (newest first, 1 to 4)
+  BLANK VERSION       <the screen with no reminders>
+  LINE UNDER IMAGE    <words> (<caption line>, <characters>)
+  FLAGS               <lifted or written for the image; anything inferred>
+  HOW TO MAKE IT      <design-tool build, or a 60 to 120 word prompt>
 
 example:
   business: sprout
@@ -91,86 +74,82 @@ example:
     Buyer: the busy parent, 30 to 45, mostly mums. Problem time: the
     school run.
   output: |
-    SCENE
-    A phone lock screen on a school morning with three ignored
-    vitamin reminders stacked up.
-
-    WHERE AND WHEN
-    A phone screen at 7:52 am.
-
-    THE SCREEN
-    A generic lock screen: large clock "7:52" at the top, plain pale
-    grey wallpaper, three notification cards stacked, newest on top.
-
-    REMINDERS
-    7:45   Did anyone take the vitamins?
-    7:30   Vitamins. Still on the counter.
-    7:15   Kids vitamins. Before shoes.
-
-    WORDS ON THE IMAGE
-    The three reminders and times above, exactly as written, plus the
-    clock "7:52".
-
-    BLANK VERSION
-    The lock screen with the clock and an empty notification area.
-
-    HEADLINE UNDER THE IMAGE
-    Read this if you've snoozed this one too.
-
-    FLAGS
-    Reminders lifted from the copy, word for word.
-    "7:52" is not in the story. It was chosen to sit after the last
-    reminder (inferred).
-    Each card is labelled only "Reminder". No app name or icon.
-    The wallpaper is a plain colour, not Sprout's green or yellow.
-    No children on screen or in a wallpaper photo. Claims about
-    children get extra scrutiny, and the reminders make none.
-
-    IMAGE PROMPT
-    Square 1:1 cropped phone screenshot of a generic lock screen with
-    a plain pale grey wallpaper and a large clock reading "7:52" at
-    the top. Below it, three stacked notification cards, each
-    labelled only "Reminder" with a plain grey square icon. Newest on
-    top: "Did anyone take the vitamins?" 7:45, then "Vitamins. Still
-    on the counter." 7:30, then "Kids vitamins. Before shoes." 7:15.
-    Text and times spelled exactly. Slightly cropped like a shared
-    screenshot, ordinary phone screen look. No real phone maker's
-    icons or fonts, no app names, no logo, no brand name, no product,
-    no emoji, no photo, no person.
+    SCENE               A phone lock screen on a school morning with
+                        three ignored vitamin reminders stacked up.
+    HOW THEY PILE UP    Getting sharper. Each one is blunter than the
+                        last, the way a rushed morning goes.
+    THE SCREEN          Generic lock screen, plain pale grey
+                        wallpaper, large clock "7:52", three cards
+                        stacked, newest on top, each labelled only
+                        "Reminder" with a plain grey square icon.
+    WORDS ON THE IMAGE  7:45  Did anyone take the vitamins?
+                        7:30  Vitamins. Still on the counter.
+                        7:15  Kids vitamins. Before shoes.
+    BLANK VERSION       The lock screen with the clock and no cards.
+    LINE UNDER IMAGE    Three reminders. One answer. (plain caption, 28)
+    FLAGS               Reminders lifted from the copy, word for word.
+                        "7:52" isn't in the story; it was set seven
+                        minutes after the last reminder (inferred). The
+                        wallpaper is a plain colour, not Sprout's green
+                        or yellow, and shows no children.
+    HOW TO MAKE IT      Design tool: a 1080 x 1080 pale grey frame,
+                        "7:52" in a large plain font near the top, then
+                        three rounded white cards with "Reminder" in
+                        small grey type above each line and the time at
+                        the right. Fallback prompt: Square 1:1 cropped
+                        phone screenshot of a generic lock screen with
+                        a plain pale grey wallpaper and a large clock
+                        reading "7:52". Three stacked notification
+                        cards, each labelled only "Reminder" with a
+                        plain grey square icon. Newest on top: "Did
+                        anyone take the vitamins?" 7:45, then
+                        "Vitamins. Still on the counter." 7:30, then
+                        "Kids vitamins. Before shoes." 7:15. Text and
+                        times spelled exactly, plain generic icons.
 
 tweaks:
-  - what: Same reminder or different ones
-    how: Ask for "the same reminder three times" for a routine people forget (a cream, a pill). Reminders that get sharper, like these, suit a routine that keeps slipping.
+  - what: How they pile up
+    how: Ask for "repeating" for a routine people simply forget (a cream, a pill), or "spread over days" in a list view for a weekly chore. Getting sharper suits a routine that slips when life is busy.
   - what: How many
     how: One reminder is quiet and sad. Three is the pile-up most people recognise. Four is the limit before it's hard to read.
-  - what: Lock screen or list
-    how: Ask for "a reminders list" instead of a lock screen when the story is about a chore that repeats over days or weeks, not hours.
-  - what: The time on the clock
-    how: Set it to the moment your story's problem peaks. A clock a few minutes after the last reminder shows it was ignored.
+  - what: The clock
+    how: Set it to when your story's problem peaks. A clock a few minutes after the last reminder shows it was ignored.
+  - what: Words off
+    how: Switch words off and it hands you to the snapshot skill, with the phone face down on the counter.
 
 judge:
-  - Every reminder is one the narrator set for themselves. None looks like it came from a real app, bank, clinic, shop or courier.
+  - Each reminder was set by the narrator, for the narrator. None looks like it came from a real app, bank, clinic, shop or courier.
   - No reminder is a sales message or names your product.
-  - Each reminder is something a person would set.
+  - Each reminder is something a person would really set.
   - There are four reminders or fewer, and every time and word is right.
-  - The screen copies no real phone's look or icons.
+  - The screen copies no real phone's look, and the wallpaper is a plain colour.
 
 test:
   - Run it on a story that quotes the reminders. They should appear word for word, in time order, newest on top.
-  - Run it on a story about something people buy once. It should send you to the sticky note or the old-thing picture instead.
-  - Check every time and number in the finished picture against the reminders list. Image tools swap digits.
+  - Run it on a story about something people buy once with no repeating chore. It should send you to another picture type.
+  - Check every time and number in the finished picture against the list. Image tools swap digits.
   - Show it to someone who fits your buyer and ask "is this your phone?" A nod is the result you want.
 
 improve:
-  - Add your buyer's problem times (the school run, bedtime, the first of the month) to the brand file section, so the clock fits every time.
-  - Add a fixed wallpaper colour to step 3 that is never your brand colour, so the screen never looks like your ad.
+  - Add your buyer's problem times (the school run, bedtime, the first of the month) to "What you need", so the clock fits every time.
+  - Save your lock-screen design as a template, so each new ad only changes the words.
   - Put the reminders in your story word for word, with their times, so nothing needs extra checking.
-  - Pair it with the everyday snapshot skill on the same morning, and test which one stops more people.
+  - Pair it with the snapshot skill on the same morning, and test which one stops more people.
+
+works_best_with:
+  tools:
+    - {name: "Canva", why: "Sets each reminder and time as real text on a plain screen, so no digit gets swapped."}
+    - {name: "Figma", why: "Finer control over card spacing and the crop, and the screen saves as a reusable template."}
+    - {name: "GPT Image 2.5", why: "The fallback if you want the screen generated. It handles short quoted text well, but check every time."}
+  inputs:
+    - "The times your buyers say the routine slips, from reviews or support emails, so the clock is believable"
+    - "A plain wallpaper colour that's never your brand colour, so the screen never looks like your ad"
+    - "Your saved lock-screen template, so every version looks the same"
 
 terms:
   - term: Lock screen
     meaning: What a phone shows before you open it, with the time and notifications.
   - term: Story ad
-    meaning: An ad whose main text tells one person's story in their own words, like a post from a friend.
+    meaning: An ad whose main text tells one person's story, like a post from a friend.
   - term: Blank version
     meaning: The same picture with no words, so you can change the words later without starting again.

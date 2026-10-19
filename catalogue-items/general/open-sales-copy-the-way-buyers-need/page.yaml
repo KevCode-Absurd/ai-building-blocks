@@ -132,6 +132,15 @@ improve:
   - Save each winning opening to your brand file, with the buyer it worked for.
   - Run "Know who you're writing for before you start" first, and pair it with "Finish your sales page with proof and one ask" to write the rest.
 
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Any current chat AI can pick and write the two openings. Give it the proof so it invents none."}
+    - {name: "Meta Ad Library", why: "Shows the promises other brands run now, so you can tell if the market has heard yours often."}
+  inputs:
+    - "Reviews that describe the problem in buyers' words, so the problem and story leads have material"
+    - "A real event you may tell, such as a support call or a founder's day, so a story lead can be true"
+    - "A dated test result or study you may cite, so the secret and proclamation leads become possible"
+
 terms:
   - term: Lead
     meaning: The opening of a piece of sales copy, the part read before someone decides to carry on.

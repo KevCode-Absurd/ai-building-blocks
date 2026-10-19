@@ -1,15 +1,15 @@
 new_slug: borrow-landing-page-layout-you-admire
-name: "Copy the layout of a page you love"
-summary: "Give it a screenshot of the page and your product details. You get the same layout, filled with your own words."
+name: "Borrow the layout of a page you admire"
+summary: "Give it a screenshot of the page and your product details. You get its layout, filled with your own words and proof."
 job: write-landing-page
 
-headline: "Copy the layout of a page you love"
+headline: "Borrow the layout of a page you admire"
 subhead: Give it a screenshot of a page whose structure you like, plus your brand facts. It maps the page section by section, keeps the order and proportions, decides what fills each slot from your facts or removes it, and writes your copy to fit.
 
 explain: |
   You've seen a page that just works, and you want yours to feel the same. The risky way is to copy it and change the words, which leaves their claims, their star rating, their countdown timer and sometimes their photos on your page.
 
-  This skill borrows only the structure. It reads the screenshot top to bottom and logs every section: its order, how much of the page it takes up, how many columns, where the image sits and what kind of block it is. Then it builds a slot map. Every slot that states a fact (reviews, star rating, press logos, timer, prices, guarantee, before and after) is either filled from your own facts or removed. Sections that suit a different kind of product are changed or cut. Your copy is written to about the same length so the layout still holds, and nothing from the reference ships.
+  This skill borrows only the structure. It reads the screenshot top to bottom and logs every section: its order, how much of the page it takes up, how many columns, where the image sits and what kind of block it is. Then it builds a slot map in four groups: people, numbers, badges, and pressure and price. Every slot that states a fact, from a review to a countdown timer, is filled from your own facts or removed. Sections that suit a different kind of product are changed or cut. Your copy is written to about the same length so the layout still holds, and nothing from the reference ships.
 
 when:
   - You've found a competitor's or another brand's page with a structure you'd like to follow.
@@ -46,7 +46,7 @@ how_it_works:
   - title: Checks fit to your product
     text: A subscribe box or a day 7, 30, 90 timeline suits something bought again. A size guide and warranty suit something bought once. Each section is marked keep, change or remove.
   - title: Builds the slot map
-    text: Fills every slot that states a fact from your facts, or removes it. A timer stays only with a real deadline.
+    text: Sorts fact slots into people, numbers, badges, and pressure and price. Each is filled from your facts or removed. A timer stays only with a real deadline.
   - title: Writes your copy to fit
     text: Writes each kept slot at about the reference's length, from your own reasons, and puts a labelled box where a photo is missing.
 
@@ -166,7 +166,17 @@ improve:
   - Add rows to the slot table in step 6 for slots common in your market, such as a size chart, with what fills them and what to do when you have none.
   - Put your colours, fonts and corner radius into step 9, so every skeleton starts in your brand.
   - Save layouts that work for you in your brand file, so your next page can start from your own best one.
-  - Pair it with a skill that writes landing page copy from your ad and facts, then place that copy into the slots.
+  - Pair it with "Write a landing page that matches your ad" to write the copy first, then place it into the slots. Once built, run "Find what stops visitors buying, in 30 checks".
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI that reads images", why: "It reads the reference screenshot section by section, which the layout map depends on."}
+    - {name: "Figma Make", why: "Turns the layout map and your copy into an editable page design you can adjust before anyone builds it."}
+  inputs:
+    - "A full-length phone screenshot of the reference, since many pages reorder or drop sections on phones"
+    - "Your colours as hex codes with the job each does, and your font names, so the result can't pass for the reference brand"
+    - "Your product photos listed by view (front, detail, in use, next to something for scale), so image slots get real pictures"
+    - "Real reviews with their sources and the rating you hold, so proof slots are kept instead of removed"
 
 terms:
   - term: Slot

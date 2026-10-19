@@ -1,10 +1,10 @@
-# Make an ad with a news-style caption: for online stores
+# For online stores: Get one true fact read in a caption bar
 
-Use this with the main skill when the story ad sells a physical product.
+**Facts a store can usually source**
+- What an outside lab tested, with the month and year, in the lab report's own words.
+- A result from the brand's own study, in the study's words, with its size and design.
+- A fact about the kind of product from a public source, such as how long the usual kind lasts, only with that source saved.
 
-**Extra thing to give it:** your product photos, but only if you want the product in the picture. Otherwise send no product photo to the image tool.
+**Where the click goes.** The page opens on the same fact and shows the full source near the top, so the reader can check it.
 
-**Ideas for physical products**
-- Something people buy once: a sourced fact about how long the usual kind lasts, what it costs over ten years, or how many get thrown away. Only with the source on file.
-
-**Reminder:** leave the product out unless asked. If it is asked for, use the real one, small and to one side, never held up or centred. The picture must still work with it taken out.
+**Product photos.** Send none unless the brief asks for the product.

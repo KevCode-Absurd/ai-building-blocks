@@ -1,7 +1,7 @@
 slug: know-which-ad-format-your-script-needs
 renamed_from: script-format-fit-advisor
 name: "Know which ad format your script needs"
-summary: "Reads a finished script and says which ad format can carry it, and at what length."
+summary: "Reads a finished script and says which ad format can carry it, which style skill to use, and at what length."
 category: general
 type: skill
 role: check
@@ -15,4 +15,4 @@ uses: [find-script-lines-that-lose-sale]
 origin: own
 source_ids: [CES-131]
 old_name: script-surfaces
-version: 1.0.0
+version: 2.0.0

@@ -1,53 +1,54 @@
 new_slug: finish-the-sale-your-ad-started
 name: "Write a landing page that matches your ad"
-summary: "Give it your ad and product details. You get the full page text, picking up exactly where the ad left off."
+summary: "Give it your ad, product details and reviews. You get the full page text, picking up exactly where the ad left off."
 job: write-landing-page
 
 headline: "Write a landing page that matches your ad"
-subhead: Give it the ad, your product facts and offer, and real customer words if you have them. It writes the whole page for one buyer and one offer, starting with a phone-sized first screen that repeats the ad's promise, then answers each question in the order a buyer asks it.
+subhead: Give it the ad, your product facts and offer, and real customer words if you have them. It writes the whole page for one buyer, opening with a first screen that picks up the ad's promise, then answering each doubt your customers raise, with the full cost stated before the last button.
 
 explain: |
-  People click an ad because of one promise. Then they land on a page that opens with the product name, lists every benefit, and buries the price. The promise they clicked for has vanished, so they leave.
+  People tap an ad because of one promise. Then the page opens with the product name, lists every benefit and hides the renewal price in small print. The promise they tapped for has gone, so they leave.
 
-  This skill writes a landing page for one buyer, one reason to buy and one offer. The headline keeps the ad's main words. The first screen, about five short lines on a phone, says what the buyer gets, why this product, why now, and why they should trust it, with the price and one button. The rest of the page answers what a buyer wants to know next: what it does for me, will it work for me, what does it cost in full, what if I don't like it. Every number and claim comes from your facts. Anything you didn't supply is left empty and listed.
+  This skill writes a page for one buyer, one reason to buy and one offer. The first screen carries on from the ad: its main words in the headline, the same product in the picture, the same offer at the same price, one button and your guarantee line. Then it lists the doubts your customers actually raise, from your reviews and questions, and gives each one a section whose heading states the answer, so a skimmer still gets the case. Before the last button it states the whole cost: the renewal price, shipping, delivery time and returns terms. Every number and claim comes from your facts. Anything you didn't supply is left empty and listed.
 
 when:
   - Your ad gets clicks but the page it sends people to doesn't sell.
-  - You're launching a new ad for a new kind of buyer and need a page that speaks to them.
+  - You're launching an ad for a new kind of buyer and need a page that speaks to them.
   - Your product page tries to say everything to everyone, and you want a focused version.
 
 you_give:
-  - Your facts, such as what you sell, prices and offer names, guarantee, delivery terms, the claims you may make and any rating you actually hold
-  - The ad that sends people there, with its first line, buyer, offer and image (optional, but strongest)
-  - Real customer quotes and the doubts that stop people buying (optional)
-  - Whether it's bought again (like a refill) or bought once (like a jacket) (optional)
+  - Your facts, such as what you sell, prices and offer names, guarantee, delivery and shipping terms, the claims you may make and any rating you hold
+  - The ad that sends people there, with its first line, picture, buyer and offer (strongly recommended)
+  - Real customer words, such as reviews, pre-sale questions and return reasons, each with a source (optional, best)
+  - Whether it's used up and bought again (like a refill) or bought once and kept (like a jacket) (optional)
 you_get:
-  - A three-line page brief (buyer, reason to buy, offer)
-  - The first screen, body sections, a comparison if useful, 5 to 8 questions and a closing block
+  - A page brief naming the buyer, the reason to buy and the offer
+  - A first screen built from the ad, and a list of your buyers' doubts with the section that answers each
+  - Body sections with answer-first headings, a cost block, questions and a closing
   - A list of every field left empty because a fact was missing
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste your product facts and current offers with their exact names and prices.
-  - Paste the ad word for word, and say who it's for.
-  - Add a few real customer quotes, and any questions buyers ask before buying.
+  - Paste the ad word for word, describe its picture, and say who it's for.
+  - Paste 10 to 20 real reviews or pre-sale questions with where each came from.
   - Check the "Left empty" list, then read the first screen on your phone to see it fits.
 
 how_it_works:
-  - title: Pins the page's job
-    text: Writes down one buyer, one reason to buy and one offer. A different buyer or offer gets its own page.
-  - title: Carries on from the ad
-    text: Keeps the ad's main words in the headline and leads with the offer the ad named, under the same name.
-  - title: Fills the first screen
-    text: Promise, proof, price and button, answering what it is, why this one, why now and why trust it. Leaves out any reason it can't back.
-  - title: Orders the rest
-    text: Follows the buyer's questions, from what it does for me to what it costs to what if it doesn't work and when it arrives.
-  - title: Writes the copy
-    text: Leads with the outcome and uses the feature as the reason to believe. Every line has to survive "so what?".
+  - title: Pins the page
+    text: One buyer, one reason to buy, one offer. A different buyer or offer gets its own page.
+  - title: Builds the first screen from the ad
+    text: The ad's words in the headline, a plain line on what it is, the same product and offer, one button and your guarantee line.
+  - title: Lists the doubts
+    text: Takes each distinct worry from your customer words, most common first. With none, it uses the order shoppers usually need.
+  - title: Answers each doubt
+    text: One section per doubt. The heading states the answer and the text gives the fact or quote that backs it.
+  - title: States the full cost
+    text: Price, renewal price, shipping, delivery time and returns terms, all before the last button, so checkout holds no surprise.
   - title: Fits how it's bought
-    text: For something bought again it covers taste, contents and subscriptions. For something bought once it covers fit, materials, returns and warranty.
+    text: Taste, contents and pausing for things used up. Fit, materials, returns and warranty for things kept, never a price per day.
   - title: Uses only real proof
-    text: Quotes customers word for word and never writes a review, rating, count or badge you didn't supply.
+    text: Quotes customers word for word and never writes a review, rating, count or deadline you didn't supply.
 
 output_shape: |
   PAGE BRIEF
@@ -55,23 +56,27 @@ output_shape: |
   Ad's opening line: "<...>"
 
   FIRST SCREEN
-  Eyebrow: <product name>
-  Headline: <6 to 12 words, the outcome, keeps the ad's words>
-  Sub-headline: <what the ad left out>
-  - <3 bullets: what this buyer must know before paying>
-  Proof: <rating or quote you hold, or nothing>
-  Price: <...>   Why now: <real reason, or none>
+  Headline: <carries the ad's main words>
+  What it is: <kind of product and form, in plain words>
+  Picture: <the product, pack and variant the ad showed>
+  Offer: <name and price the ad named>   Proof: <one that backs the promise, or none>
   Button: <what the buyer gets>   Under it: <risk line from your terms>
 
-  BODY
-  <Heading that says what the buyer gets>
-  <1 to 3 short paragraphs from your facts, one doubt per section>
+  DOUBTS
+  <doubt in the buyer's words> | <sources> | answered in <section>
 
-  QUESTIONS (5 to 8)
-  <a reason not to buy, in the buyer's words> / <answer from your facts>
+  BODY
+  <Heading that states the answer>
+  <1 to 3 short paragraphs from your facts and quotes>
+
+  COST BLOCK
+  <price, renewal, shipping, delivery, returns or guarantee terms>
+
+  QUESTIONS
+  <doubt still open> / <answer from your facts>
 
   CLOSING
-  <headline> <one sentence> <button> <risk line>
+  <one line back to the ad's promise> <button> <risk line>
 
   LEFT EMPTY
   MISSING: <each fact the page needed>
@@ -83,20 +88,19 @@ example:
 
     Facts: Sprout Original (Adults) greens gummies, Low Sugar. Pouch of 28
     daily packs; tear one open, eat the handful inside. 60+ ingredients,
-    21 vitamins and minerals, 6 g prebiotic fiber per pack. About 100% of
-    daily value for vitamins, about 25% for minerals. Vegan, pectin base.
-    Subscribe: $49.99 every 4 weeks ($1.78/day). First order $29.99 only
-    with the text sign-up discount. One-time $66.65. "Pause Or Cancel Any
-    Time." 30-day money-back guarantee, first order only. Ships within 24
-    hours, arrives in 3-5 days on average. Third-party tested.
-    Survey (say "of surveyed users"): 95% take it at least 4-6x a week.
-    Ratings on file disagree (4.8, 4.75, 4.74, 4.0).
-    Alternative: a big-name greens powder, about $79 a month.
+    21 vitamins and minerals, 6 g prebiotic fiber per pack. Vegan, pectin
+    base. Subscribe: $49.99 every 4 weeks. First box $29.99 only with the
+    text sign-up discount. One-time $66.65. "Pause Or Cancel Any Time."
+    30-day money-back guarantee, first order only. Ships within 24 hours,
+    arrives in 3-5 days on average. Shipping cost on one-time orders: not
+    stated. Survey (say "of surveyed users"): 95% take it at least 4-6x a
+    week. Ratings on file disagree (4.8, 4.75, 4.74, 4.0). Sugar-Free uses
+    sugar alcohols.
 
-    Ad: "One Step I Never Skip". No offer named. Buyer: has quit
-    powders and pill stacks, wants one habit that lasts.
+    Ad: "One Step I Never Skip". No offer named. Buyer: has quit powders
+    and pill stacks, wants one habit that lasts.
 
-    Quotes: R1, R3 and R18 from sprout/reviews.md.
+    Customer words: sprout/reviews.md, R1 to R20 and the two fragments.
     Bought again (subscription).
   output: |
     PAGE BRIEF
@@ -106,87 +110,94 @@ example:
     Ad's opening line: "One Step I Never Skip"
 
     FIRST SCREEN
-    Eyebrow: Sprout Original
-    Headline: The one daily step you won't skip, because you want to eat it
-    Sub-headline: 21 vitamins and minerals and 6 g fiber in one pack of
-    greens gummies. No shaker, no pills.
-    - Tear a pack, eat the handful. That's the whole step.
-    - About 100% of your daily value for vitamins, about 25% for minerals
-    - Third-party tested, vegan, pectin base
-    Proof: "[Sprout] has been the one thing I've been able to stick to."
-    Price: $29.99 first box with text sign-up, then $49.99 every 4 weeks
-    Why now: none (no dated offer on file)
+    Headline: The one daily step you won't skip, because you'll want it
+    What it is: Greens, vitamins and fiber in one pack of gummies a day
+    Picture: a hand tearing one daily pack straight across the top
+    Offer: $29.99 first box with text sign-up, then $49.99 every 4 weeks
+    Proof: "[Sprout] has been the one thing I've been able to stick to." (R1)
     Button: Start my first box
-    Under it: 30-day money-back guarantee on your first order. Pause or
-    cancel any time.
+    Under it: 30-day money-back guarantee on your first order
+
+    DOUBTS
+    Will I actually keep taking it?      | R1, R2       | section 1
+    Can it replace my powder and pills?  | R3, R5, R6   | section 2
+    What if I don't like the taste?      | R18, R19     | section 3
+    Is the subscription a trap?          | R17, R20     | section 4
+    Is it worth the price?               | R3, fragment | cost block
 
     BODY
-    You'll actually keep doing it
-    95% of surveyed users take it at least 4 to 6 times a week.
-    Your powder and your pill shelf, in one pack
+    1 You'll keep doing it, because there's nothing to mix
+    Tear a pack, eat the handful. 95% of surveyed users take it at least
+    4 to 6 times a week.
+    2 One pack covers the powder and the pill shelf
     60+ ingredients, 21 vitamins and minerals and 6 g prebiotic fiber.
-    "I was taking [a big-name greens powder] but even with their monthly
-    subscription discount it was still $94 a month and the drink was
-    definitely gritty/chalky."
+    "I also stopped buying separate probiotic gummies, b12 gummies, and
+    multivitamin gummies. I just take these now..." (R5)
+    3 Most people like the taste. Some need a few days
+    "I thought the first pack I tried tasted terrible, but after the third
+    day they started tasting better" (R18). Sensitive stomach? Start with
+    Low Sugar. Sugar-Free uses sugar alcohols.
+    4 You can pause or cancel any time
+    Your first order has a 30-day money-back guarantee.
 
-    COMPARISON  (only facts held for both sides)
-                   Sprout                     Greens powder
-    Taking it      tear, eat                  scoop, shake, wash up
-    Price          $49.99 / 4 weeks           about $79 a month
+    COST BLOCK
+    First box $29.99 with the text sign-up discount, then $49.99 every
+    4 weeks. One-time: $66.65. Ships within 24 hours, arrives in 3 to 5
+    days on average. 30-day money-back guarantee, first order only.
 
     QUESTIONS
-    Can a gummy hold enough? Each pack has 60+ ingredients, 21 vitamins
-      and minerals and 6 g fiber. Vitamins sit near 100% of daily value,
-      minerals near 25%.
-    What if I don't like the taste? Some people need a few days: "after the
-      third day they started tasting better". Your first order has a
-      30-day money-back guarantee.
-    Will the price jump? Yes, after the first box: $29.99, then $49.99
-      every 4 weeks.
-    Will it upset my stomach? Start with Low Sugar. Sugar-Free uses sugar
-      alcohols.
-    Can I cancel? Pause or cancel any time.
-    When does it arrive? Ships within 24 hours, 3-5 days on average.
+    How do I cancel? MISSING: the steps, so this stays unanswered
+    Does the price go up? Yes, after the first box: $29.99, then $49.99.
 
     CLOSING
-    Make it the step you keep. One pack a day.
-    Button: Start my first box. 30-day money-back guarantee, first order.
+    Make it the step you keep. Start my first box.
+    30-day money-back guarantee on your first order.
 
     LEFT EMPTY
+    MISSING: the steps to cancel (section 4 and the questions need them)
+    MISSING: shipping cost on one-time orders
     MISSING: one agreed star rating and its source, so no rating line
-    MISSING: steps to cancel, beyond "pause or cancel any time"
-    MISSING: a real dated reason to buy now
+    MISSING: a dated reason to buy now, so no deadline
 
 tweaks:
   - what: The ad
-    how: Paste a different ad and you get a different page. The headline, the first offer and the questions all follow the ad's buyer and promise.
-  - what: Bought again or bought once
-    how: Say which, if it's not obvious. A refillable product gets taste, contents and subscription terms. A one-off gets fit, materials, returns and warranty, and never a price per day.
-  - what: Customer quotes
-    how: Add quotes that prove the page's main promise. Without them the proof line stays empty rather than holding a made-up review.
+    how: Paste a different ad and you get a different page. The headline, the first offer and the proof line all follow the ad's buyer and promise.
+  - what: Customer words
+    how: Add reviews, pre-sale questions and return reasons. The doubt list, and so the order of the body, comes from them. Without them it uses a standard order.
+  - what: Used up or kept
+    how: Say which, if it's not obvious. Things used up get taste, contents and pausing. Things kept get fit, materials, returns and warranty, and never a price per day.
   - what: An existing page
-    how: Paste your current page and say "revise this". It fixes in order of clarity, copy, offer, proof and friction, and keeps what already works.
+    how: Paste your current page and say "revise this". It keeps what already answers a doubt and rewrites the rest.
 
 judge:
-  - The headline repeats the ad's main words.
-  - The first screen fits on a phone with the price and one button visible.
+  - The headline carries the ad's main words, and the first offer is the one the ad named.
+  - Each body heading states an answer to a real doubt from your customer words.
+  - The renewal price, shipping, delivery time and returns terms all appear before the last button.
   - Every price, number and timeframe on the page appears in your facts.
-  - No rating, review count, badge or "bought today" figure appears that you didn't supply.
-  - Each question is a real reason someone wouldn't buy, not "What is your shipping policy?".
+  - No rating, review count, badge or deadline appears that you didn't supply.
   - Buttons say the same thing all the way down the page.
 
 test:
   - Run it on an ad that already sends traffic to a page you know. The new first screen should repeat the ad's main words and show the price and one button.
   - Leave out your delivery terms. The page should promise no delivery time and list it under "Left empty".
-  - Run it twice with the same ad and facts. The buyer and reason to buy in the page brief should match. If they don't, write them into your input yourself.
-  - Read the questions to someone who talks to your customers. Each should be something buyers ask before they buy, not company history.
+  - Read only the body headings aloud. Someone who hasn't seen the page should be able to say why to buy.
+  - Read the doubt list to someone who talks to your customers. Each one should be something buyers really ask.
 
 improve:
-  - In step 6, delete the "bought once" or "bought again" branch that doesn't fit your product, and add your own pack sizes, pause rules or warranty terms.
-  - Write your standard button text into the first-screen line of "What you hand back", so every page you make uses the same words.
-  - Add your current offers, with their exact names and prices, under "Facts" in the skill, and update them when they change, so no page uses an old price.
-  - Save each page brief (buyer, reason to buy, offer) in your brand file next to the ad it belongs to.
-  - Pair it with a skill that matches real customer doubts to your page, for the questions section, and run a quick landing page checklist before it goes live.
+  - In step 6, delete the branch that doesn't fit your product, and add your own pack sizes, pause rules or warranty terms.
+  - Write your standard button text into step 2, so every page you make uses the same words.
+  - Add your current offers with their exact names and prices under "Facts" in the skill, and update them when they change.
+  - Save each page brief and its doubt list in your brand file next to the ad it belongs to.
+  - Pair it with "Answer the doubts that stop people buying" to build the doubt list from your reviews first, and run "Find what stops visitors buying, in 30 checks" before it goes live.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "This is a writing job from facts you supply, and the main chat AIs all handle it well."}
+  inputs:
+    - "The ad's picture as an image, so the first screen can show the same product and variant"
+    - "Your 20 most recent reviews plus your top pre-sale questions from support, so the doubts are real ones"
+    - "Your shipping and returns policy text, so the cost block uses your exact terms"
+    - "A phone screenshot of your current page, so it can keep what already works"
 
 terms:
   - term: Landing page
@@ -195,5 +206,5 @@ terms:
     meaning: What a visitor sees on their phone before scrolling.
   - term: Risk line
     meaning: The short line under the button that removes the worry, such as your guarantee or returns terms.
-  - term: Compare-at price
-    meaning: A crossed-out higher price shown next to the real one. It must be a real former or separate price.
+  - term: Doubt
+    meaning: A worry that stops someone buying, such as "will it fit?" or "is this subscription a trap?".

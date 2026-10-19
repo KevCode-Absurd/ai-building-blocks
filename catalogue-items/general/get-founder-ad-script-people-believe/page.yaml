@@ -1,68 +1,67 @@
 new_slug: get-founder-ad-script-people-believe
 name: "A founder video people believe"
-summary: "Give it your founder's own words. You get a filming brief built around one real decision behind your product."
+summary: "Give it your founder's own words. You get a filming brief built on one real decision and what it cost."
 job: make-video-ads
 
 headline: "A founder video people believe"
-subhead: Give it your founder's own words and your product facts. It picks one decision behind the product (what was chosen, what was turned down, and why) and hands back a filming brief, with a bracketed question wherever a fact is missing.
+subhead: Give it your founder's own words and your product facts. It picks one decision behind the product, tells it as the easy road, the road taken and what it cost, and hands back a filming brief. No founder words yet? You get the interview questions first.
 
 explain: |
-  Most founder ads sound the same. A founder smiles at the camera, tells the brand story and says the product is great. Viewers don't believe it, because anyone would say that about their own product.
+  Most founder ads sound alike. A founder smiles at the camera, tells the brand story and says the product is great. Viewers shrug, because anyone would say that about their own product.
 
-  What a founder can say that nobody else can is why the product is made this way. The ingredient amount and why, the cheaper material they turned down, the boring step they refused to skip. This skill builds the whole ad on one of those decisions. Every line comes from the founder's own answers or your brand facts. Where a fact is missing, it writes a question in brackets for the founder to answer on camera, never a made-up story. It never generates a founder's face or voice. You get a brief the real person films, or an image built from their real photo or a handwritten note.
+  What only a founder can tell is why the product is made this way, and what that choice cost. The cheaper material they turned down, the samples they threw out, the slow step they kept. This skill builds the whole ad on one of those decisions, picked because it answers a doubt your buyers really have. Every line comes from the founder's own answers or your brand facts. If those answers don't exist yet, it writes interview questions that draw out a clear, quotable answer, and never a made-up story. It never generates the founder's face or voice. You get a brief the real person films, or a still made from their real photo or a note in their words.
 
 when:
-  - Your founder made real choices about the product that customers don't know about.
+  - Your founder made real choices about the product that buyers don't know about.
   - Your current founder ad tells the brand story but doesn't sell anything.
-  - You want a short brief your founder can film on a phone in the workshop or kitchen.
+  - You want a short brief your founder can film on a phone where the product is made.
 
 you_give:
   - Your founder's own answers and words, and the decisions behind the product
   - Your product facts, claims with sources, proof and guarantee
-  - What almost stops your buyers, in their words
+  - What makes your buyers hesitate, in their words
   - Footage or photos you already have (optional)
   - Video or still, and the length (optional)
 you_get:
-  - A filming brief with each line's beat, words and what to film
-  - Bracketed questions where the founder needs to fill in a fact
+  - A filming brief with each line's move, words and what to film
+  - Two or three openings to record, each true for your founder
+  - Interview questions, if your founder's words are missing
   - Or, for a still, the layout, the exact words and an image prompt
   - Notes on the proof behind each claim, and any claims softened
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Paste your founder's own words underneath. A voice note transcript or a few written answers works.
+  - Paste your founder's own words. A voice note transcript or a few written answers works.
   - Add your product facts, claims and guarantee.
   - Say the length, for example "60 seconds".
-  - Send the bracketed questions to the founder before filming, or let them answer on camera.
-  - Film the main part once, then record two or three of the opening lines it suggests.
+  - If you get interview questions back, have your founder answer them on camera, then run it again with the answers.
+  - Film the main part once, then record each opening it suggests.
 
 how_it_works:
   - title: Confirms the person
-    text: The founder or expert appears only as themselves, in real footage. If nobody real can appear, it says the ad can't be made.
-  - title: Picks one decision
-    text: Chooses why the product is made this way. The amount, the material, the step, and what it cost to choose it.
-  - title: Sources every line
-    text: Uses the founder's words or your facts. Missing facts become bracketed questions for the founder.
-  - title: Sets the tone
-    text: First person, plain, short sentences, like explaining across a shop counter.
+    text: The founder or expert appears only as themselves, in real footage. If nobody real can appear, it says so.
+  - title: Finds the decision
+    text: Picks one choice with a real cost that answers a doubt your buyers have.
+  - title: Asks before it writes
+    text: Missing words become open interview questions, written so each answer works as a clip.
+  - title: Tells it in four moves
+    text: The usual way, the choice, what it cost, and what that means for the buyer. Then proof and the offer.
   - title: Adds stronger proof
     text: Backs each founder claim with a test, a count or a customer quote, or softens it.
-  - title: Writes the brief
-    text: An opening line that is a decision or admission, the problem, the decision, the objection, proof, the offer.
   - title: Tags every picture
-    text: Marks each shot "to film", "on file" or "product photo", so nothing needs to be generated.
+    text: Marks each shot "to film", "on file" or "product photo", so no person needs to be generated.
 
 output_shape: |
-  Line | Beat | Words or [question] | Visual note | On-screen text
-  1 | Opening | "<a decision or admission>" | <to film / on file / product photo> | <name and role>
-  2 | Problem | "<...>" | ... |
-  3 | Decision | "<feature, what it means, why>" | ... |
-  4 | Objection | ... | ... |
-  5 | Proof | ... | ... | <source>
-  6 | Offer | "<real terms>" | ... |
-  7 | Call to action | ... | ... |
+  Line | Move | Words or [question] | Picture (tag) | On-screen text
+  1 | Opening | "<the choice or the cost, as an admission>" | <to film / on file / product photo> | <name and role>
+  2 | Usual way | "<what most makers do>" | ... |
+  3 | Choice | "<what we did instead>" | ... |
+  4 | Cost | "<what it cost us>" | ... |
+  5 | What you get | "<what it means for the buyer>" | ... |
+  6 | Proof | ... | ... | <source>
+  7 | Offer and ask | "<real terms>" | ... |
 
-  Other openings to record: <two or three, each true for this founder>
+  Openings to record: <two or three, each true for this founder>
 
   NOTES
   Questions for the founder: [<...>]
@@ -91,78 +90,104 @@ example:
   output: |
     CAN THIS BE MADE?  Not yet. Nobody on file may appear as
     themselves. The paid athlete is a spokesperson, not a founder or
-    expert, so he can't tell a founder's decision. Send the questions
-    below to the founder first; the brief fills in from their answers.
+    expert, so he can't tell a founder's decision. The founder answers
+    the questions below first; the brief fills in from those answers.
 
-    QUESTIONS FOR THE FOUNDER
-    [Say who you are and your role, as it should appear on screen.]
-    [Say why you chose single daily packs over a tub, and what that
-     cost you.]
-    [Say why methylfolate and not folic acid, in your own words.]
-    [Say why pectin and no gelatin.]
-    [Say why you paid for a study of the product itself.]
-    [Say what you turned down along the way.]
+    DECISION  The study of the product itself. Of the five on file,
+    it's the one that speaks to the doubt "can a gummy hold enough".
 
-    BRIEF SHAPE (60 s, one decision: methylfolate, pending answers)
-    Line | Beat | Words or [question] | Visual note | On-screen
-    1 | Opening | [Say the methylfolate decision as one plain
-        admission, for example what it cost.] | to film: founder
-        where the product is made or packed | [founder's name and role]
-    2 | Problem | [Say what you saw people doing with supplements
-        before Sprout.] | to film | -
-    3 | Decision | "Methylfolate, not folic acid." [Then: what that
-        means for the buyer.] | product photo: the label, folate line
-        in view | Methylfolate, not folic acid
-    4 | Objection | [Answer "can a gummy hold enough?" without
-        claiming it replaces a powder.] | product photo: one pack's
-        gummies in a palm | -
-    5 | Proof | "We tested it. Folate in the blood went up 20.5%,
-        2.9 times placebo." | to film or on file: the study page |
-        2025 study, 12 weeks, 120 adults
-    6 | Offer | "30-day money-back on your first order." | product
-        photo: pouch | First order only
-    7 | Call to action | [Say who it's for, in one line.] | to film | -
+    INTERVIEW QUESTIONS
+    1. Tell me your name and what you do at Sprout, the way you'd
+       want it on screen.
+    2. Tell me about the moment you decided to have the gummies
+       themselves studied.
+    3. Why that study? Start your answer with "We had the gummies
+       studied because".
+    4. What did the study cost you, in money or in time?
+    5. When you started, what did other gummy makers point to as
+       proof?
+    6. What did you hope the results would show, and what did they
+       show?
+    7. What's one thing you turned down along the way? Walk me
+       through it.
+    For whoever films: chat off camera first, and let pauses sit.
+
+    BRIEF SHAPE (60 s, about 140 words, pending answers)
+    Line | Move | Words or [question] | Picture | On-screen
+    1 | Opening | [The study decision as one plain admission, such as
+        what it cost.] | to film: founder where Sprout is made or
+        packed | [founder's name and role]
+    2 | Usual way | [What other gummy makers pointed to as proof, at
+        category level, no names.] | to film | -
+    3 | Choice | [Why you had the gummies themselves studied, in
+        your words.] | on file or to film: the study page | 2025
+        study of the product
+    4 | Cost | [What the study cost in money or time.] | to film | -
+    5 | What you get | [What that means for someone choosing a
+        gummy, without saying it replaces a powder.] | product photo:
+        one pack's gummies in a palm | -
+    6 | Proof | "Folate in the blood went up 20.5%. That's 2.9 times
+        placebo." | text card: the two figures | 12 weeks, 120 adults
+    7 | Offer and ask | "Try it with a 30-day money-back guarantee
+        on your first order." | product photo: pouch | First order
+        only
+
+    Openings to record, once answers are in: the admission (line 1),
+    and the cost (line 4 moved to the top). Not "I was a customer
+    first" or "the making on camera": nothing on file supports them.
 
     NOTES
-    - Proof behind each claim: the folate line is backed by the
-      brand's own study; every other line waits for the founder.
-    - Line 5 is first person ("We tested it") only if the founder
-      confirms they ran the study.
-    - Claims softened: none yet. Line 4 must not say the gummies
-      replace a powder; no claim on file for that.
-    - No generated person, face or voice anywhere. Every shot is
-      "to film", "on file" or "product photo".
+    - Proof behind each claim: line 6 rests on the brand's study;
+      every other line waits for the founder.
+    - Say "we tested it" only if the founder confirms the brand ran
+      the study.
+    - Claims softened: none yet. Line 5 must not say the gummies
+      replace a powder; no claim on file supports that.
+    - Other decisions on file, for later ads: single daily packs,
+      pectin with no gelatin, methylfolate, low sugar.
+    - No generated person, face or voice anywhere.
     - MISSING: founder name and role, their own words, any footage or
       photos of where Sprout is made or packed.
 
 tweaks:
   - what: The decision
-    how: Name the decision you want told, for example "why we use the more expensive ingredient". Otherwise it picks the one with the clearest cost.
+    how: Name the decision you want told, for example "why we use the dearer ingredient". Otherwise it picks the one that best answers a buyer doubt.
   - what: The length
-    how: 30 seconds tells one decision briefly. 60 seconds adds one objection and one proof. 2 to 3 minutes can carry two or three decisions, each with proof.
+    how: 30 seconds tells the choice and what you get. 60 seconds adds the usual way, the cost and one proof. 2 to 3 minutes can carry two or three decisions.
   - what: Still instead of video
     how: Ask for a still. With a real photo it uses that photo untouched. Without one it plans a note on the workbench beside the product.
-  - what: The opening
-    how: Ask for several opening lines of different kinds (the frustration that started it, the hard moment, the process shown). It only offers ones that are true for your founder.
+  - what: The interview
+    how: Ask for "interview only" to get the questions and filming notes without a brief, for a shoot day.
 
 judge:
   - The ad tells one decision, and you learn something you didn't know about the product.
+  - The cost of the decision is said plainly.
   - Every fact traces to the founder's words or your brand file. Anything else is a bracketed question.
-  - No line has the founder saying the product is "great" or "the best". Each quality word has been swapped for a fact.
-  - Each shot is tagged, and none needs a generated person.
-  - Claims the founder makes have a test, count or quote beside them, or have been toned down.
+  - No line has the founder calling the product "great" or "the best".
+  - Every shot is tagged, and none needs a generated person.
+  - Each founder claim has a test, a count or a quote beside it, or has been toned down.
 
 test:
-  - Run it with no founder material at all. It should say the ad can't be made yet and give you questions to ask, never a made-up story.
-  - Run it on one decision you know the full story of. Check every line against what your founder said. Anything you can't trace should be a bracketed question.
-  - Run it twice on the same answers. It should pick the same decision, or say why the other one is stronger.
+  - Run it with no founder material. It should say the ad can't be made yet and give you interview questions, never a made-up story.
+  - Check the questions. None should be answerable with yes or no.
+  - Run it on a decision you know the full story of. Anything you can't trace to your founder should be a bracketed question.
   - Read the brief to your founder. Mark any line they wouldn't say in their own words, and rerun with their version.
 
 improve:
-  - Add your founder's answers to a few set questions (what did you turn down, what costs more than it needs to, what changed after the first batch) to your brand file, so step 2 has material every time.
-  - "Write your founder's way of speaking into step 4 of the skill file: sentence length, words they use, words they never say."
-  - If your founder can only film in one place, name it in "What you need", so every shot tagged "to film" can be made there.
+  - Keep your founder's answers to the interview questions in your brand file, so step 2 has material every time.
+  - Write your founder's way of talking into step 7 of the skill file, such as sentence length and words they never use.
+  - If your founder can film in only one place, name it in "What you need", so every "to film" shot can be made there.
   - Pair it with the skill that makes a script easy to say aloud, before filming.
+
+works_best_with:
+  tools:
+    - {name: "Claude", why: "Keeps each line traced to the founder's own words and turns gaps into questions instead of filling them."}
+    - {name: "Descript", why: "Turns the founder's recorded answers into text you can paste in, then lets you cut the film by editing that text."}
+  inputs:
+    - "Photos of rejected samples or early versions, so the cost can be shown on screen"
+    - "The cheaper option's price or spec, kept off screen, so the cost line is exact"
+    - "The one place your founder can film, so every shot marked to film can be made there"
+    - "Your buyers' doubts ranked by how often they come up, so the decision answers the biggest one"
 
 terms:
   - term: Filming brief

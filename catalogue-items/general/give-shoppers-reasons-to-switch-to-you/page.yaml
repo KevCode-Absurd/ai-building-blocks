@@ -177,6 +177,15 @@ improve:
   - Save the reasons that sell to your brand file, so your next page and your next ads start from them.
   - Pair it with a skill that turns reviews into ranked buying reasons first, and one that builds the finished page in your store.
 
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Any current chat AI can sort the facts and write the reasons. Give it the full facts so it adds nothing."}
+    - {name: "Hemingway Editor", why: "Marks hard sentences in yellow and red, so long reason bodies get cut before the page goes live."}
+  inputs:
+    - "Return reasons and pre-sale questions from your inbox, so the questions section answers real doubts"
+    - "The kinds of product buyers use now (no brand names), so each reason compares with the right old way"
+    - "Your price history with dates, so the offer block only shows savings against prices you charged"
+
 terms:
   - term: Reasons-to-switch page
     meaning: A short page listing a few distinct reasons to choose your product over what the reader uses now.

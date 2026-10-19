@@ -16,4 +16,8 @@ uses: [turn-website-into-brand-file-for-ai]
 origin: own
 source_ids: [CES-040]
 old_name: founder-interview
-version: 1.0.0
+version: 2.0.0
+credits:
+  - {title: "The Mom Test", by: "Rob Fitzpatrick", url: "https://www.momtestbook.com/", used: "Ask about real past moments, not opinions or habits"}
+  - {title: "User Interviews 101", by: "Maria Rosala and Kara Pernice, Nielsen Norman Group", url: "https://www.nngroup.com/articles/user-interviews/", used: "Open questions, follow-up probes, no leading questions"}
+  - {title: "Federal Trade Commission Announces Final Rule Banning Fake Reviews and Testimonials", by: "US Federal Trade Commission", url: "https://www.ftc.gov/news-events/news/press-releases/2024/08/federal-trade-commission-announces-final-rule-banning-fake-reviews-testimonials", used: "Why rights to people, reviews and AI presenters are asked and filed with limits"}

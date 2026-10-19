@@ -19,4 +19,8 @@ example: carousel
 origin: own
 source_ids: [CES-106]
 old_name: script-format-carousel
-version: 1.0.0
+version: 1.1.0
+credits:
+  - {title: "Facebook Ads Guide: carousel ad specs", by: "Meta", url: "https://www.facebook.com/business/ads-guide/update/carousel", used: "2 to 10 cards, 1:1 at 1080 px, about 20-character card headlines"}
+  - {title: "The Psychology of Curiosity: A Review and Reinterpretation", by: "George Loewenstein, Psychological Bulletin", url: "https://doi.org/10.1037/0033-2909.116.1.75", used: "Each card opens a small gap the next one closes"}
+  - {title: "How To Write Meta Ads That Scale: Copywriting Masterclass", by: "Blue Sense Digital", url: "https://www.youtube.com/watch?v=LoL1w-k9Mgg", used: "The order of the argument's steps across the cards"}

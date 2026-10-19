@@ -1,66 +1,68 @@
 new_slug: get-headlines-strangers-understand-at-a-glance
 name: "Headlines strangers understand at a glance"
-summary: "Tell it who your buyer is and what's true. You get plain headlines, each a different angle, with character counts."
+summary: "Tell it your buyer and what's true. You get plain headlines, each a different way in, with character counts."
 job: write-ad-copy
 
 headline: "Headlines strangers understand at a glance"
-subhead: Tell it who the buyer is, how much they know, your facts and how many lines you need. It writes each headline as a sentence a person would say, picks out the reader by their situation, gives each line a different way in, and counts the characters for you.
+subhead: Give it a note on your buyer, your facts and how many lines you need. It sets what each line may say for how aware the buyer is, picks each line's way in from what you can back, then counts the characters and runs a glance test.
 
 explain: |
-  Headlines go wrong in a few predictable ways. They get clever and need decoding. They drop the small words to fit the space ("Gut health, sorted"). They label the reader ("busy mums") instead of describing their day. Or five headlines all make the same argument, so a test tells you nothing.
+  Most people read the headline and nothing else, so it gets one look to pick out its reader and give them a reason. Headlines go wrong in a few predictable ways. They get clever and need decoding. They drop the small words to fit the space ("Gut health, sorted"). They label the reader ("busy mums") instead of describing their day. Or five lines make the same argument, so a test tells you nothing.
 
-  This skill first sets the level, meaning what the headline can say for how much the buyer knows. A buyer who doesn't know they have the problem gets a moment from their day, with no product. A buyer ready to buy gets the offer. Then it writes each line as a whole sentence, climbs from the feature to what it does to the day it creates, and varies the way in: a plain benefit, the result without the thing they dread, a surprising reason why, or a customer's words if you supplied them.
+  This skill first sets what a line may say for how aware the buyer is, from a moment in their day to the deal. Then it lists what you can actually back: a plain gain, an exact fact, something new and dated, a customer's own words, or the question buyers already ask. Each line uses a different way in. Any way in with nothing behind it is skipped, never faked. Every line is counted against its limit and has to pass a glance test.
 
 when:
-  - You need several headlines for an ad test and want each to try a different argument.
-  - You're writing the words that sit on an ad image and want them to add to the picture, not describe it.
+  - You need several headlines for an ad test, each trying a different argument.
+  - You're writing the words on an ad image and want them to add to the picture, not describe it.
   - Your headlines keep coming out clever or clipped, and you want plain ones that still sell.
 
 you_give:
-  - A note on the buyer, how much they know and the one thing they want
-  - Your offer and facts, the benefit, the proof you may use and the price if relevant
+  - A note on the buyer, how aware they are, the one thing they want and their main doubt
+  - Your offer and facts, the proof you may use, any dated news, and the price if relevant
   - How many lines, their character limits and where they appear
   - What the picture shows, for words on an image (optional)
   - Real customer quotes, word for word with their source (optional)
 you_get:
-  - A numbered list of headlines or image lines
-  - For each, the way in it uses, the buyer it targets and its character count
-  - A mark on the one to test first
+  - A numbered list of headlines or image lines, each with a different way in
+  - For each, who it's aimed at, its character count and its glance test result
+  - The line to test first, and the ways in it skipped for lack of proof
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Describe the buyer and how much they know in two or three lines.
+  - Describe the buyer, how aware they are and their doubt in two or three lines.
   - Paste the facts and proof it may use, and any real customer quotes.
-  - Say how many lines and the limits, for example "5 headlines, under 40 characters, under a Facebook image".
-  - Read each line aloud, then show it to someone who doesn't know your brand. Drop any they don't follow.
+  - Say how many lines and the limits, for example "4 lines for the image, under 40 characters each".
+  - Show the lines to someone who doesn't know your brand. Drop any they can't explain back to you.
 
 how_it_works:
   - title: Sets the level
-    text: Matches what the line can say to how much the buyer knows, from a moment in their day to the offer itself.
-  - title: Writes whole sentences
-    text: Each line is a sentence or phrase people say, picks the reader by their situation, and gives one believable benefit.
-  - title: Climbs to the benefit
-    text: Takes each fact up from the feature, to what it does, to how it feels, to the day it creates, and stops at the last level that's true.
-  - title: Varies the way in
-    text: Uses a different approach for each line so no two make the same argument.
+    text: Matches what a line may say to how aware the buyer is, from a moment in their day to the deal itself.
+  - title: Lists what you can back
+    text: A plain gain, an exact fact, dated news, a customer's words or the buyer's own question, each only if your material holds it.
+  - title: One way in per line
+    text: Each line uses a different way in, so no two lines make the same argument.
+  - title: Fits the space
+    text: Counts the characters. If a line won't fit, it says a smaller thing rather than dropping the small words.
   - title: Fits the picture
-    text: Image words say what the buyer gets or name their moment, and never label what's already visible.
-  - title: Says less when space is short
-    text: If the line won't fit, it says a smaller thing rather than dropping the small words.
-  - title: Tests it aloud
-    text: Reads each line as if to a friend, then as a stranger who has never heard of the brand. Either failing means a rewrite.
+    text: Image words add what the picture can't show, and never label what's already visible.
+  - title: Runs the glance test
+    text: Under the limit, no word a stranger would look up, and the offer clear in one look. Lines that fail are rewritten or dropped.
 
 output_shape: |
   LEVEL
-  <how much the buyer knows, and what that lets the lines say>
+  <how aware the buyer is, and what that lets the lines say>
 
   LINES
   <n>. <the headline or image line>
-     Way in:     <plain benefit / result without the dreaded thing /
-                 surprising reason why / customer's words>
-     Aimed at:   <the buyer it targets>
-     Characters: <count>
-  (test first: line <n>)
+     Way in:      <plain gain / exact fact / news / their words /
+                  their question>
+     Aimed at:    <the buyer it targets>
+     Characters:  <count>
+     Glance test: <pass, or what failed>
+  Test first: line <n>
+
+  SKIPPED
+  <ways in with no material behind them>
 
   MISSING
   <proof or buyer detail a line would need>
@@ -71,8 +73,8 @@ example:
     [the skill]
 
     Buyer: busy parents, mostly mums, with picky eaters at home. They
-    want no fight at the table. Doubt: "Is this just candy?" They know
-    what they want but haven't connected it to Sprout Kids.
+    want no fight at the table. Doubt: "Is this just candy?" They've
+    tried other kids' green options, but don't know Sprout Kids.
     Facts: Sprout Kids, 1 pack a day, 6 gummies, Strawberry Burst
     flavour, ages 2 to 13. Methylfolate, not folic acid. Free from
     synthetic dyes and synthetic sweeteners. Vegan.
@@ -84,71 +86,90 @@ example:
     pack at a breakfast table
   output: |
     LEVEL
-    They know what they want (an end to the fight) but haven't connected
-    it to Sprout Kids. So each line gives the benefit plainly, with what
-    makes this one different. Opening on the problem would be a step too
-    far back.
+    Solution aware. They've tried other kids' green options but don't
+    know Sprout Kids. So each line says what's different about this
+    one. Opening on the problem would be a step too far back.
 
     LINES
-    1. Kids' greens with no synthetic dyes
-       Way in:     plain benefit, answering "is this just candy?"
-       Aimed at:   parents who read the back of the pack
-       Characters: 35
+    1. Is it candy? No synthetic dyes.
+       Way in:      their question, answered from the facts
+       Aimed at:    parents who read the back of the pack
+       Characters:  31
+       Glance test: pass
 
     2. Their greens, without the dinner fight
-       Way in:     the result without the thing they dread
-       Aimed at:   parents worn out by the nightly standoff
-       Characters: 38
+       Way in:      plain gain
+       Aimed at:    parents worn out by the nightly standoff
+       Characters:  38
+       Glance test: pass
 
     3. "They think it's a treat."
-       Way in:     a customer's own words, supplied word for word
-       Aimed at:   parents who've tried other green options
-       Characters: 26
+       Way in:      their words, supplied word for word
+       Aimed at:    parents who've tried other green options
+       Characters:  26
+       Glance test: pass
 
-    4. Not written. The surprising-reason-why line would be "Why we use
-       methylfolate, not folic acid", but no reason is on file, so the
-       ad couldn't pay it off.
+    4. Methylfolate, not folic acid
+       Way in:      exact fact
+       Aimed at:    parents who compare labels
+       Characters:  28
+       Glance test: fails. A stranger can't say what it means for
+                    their child, and no reason is on file. Dropped.
 
-    Test first: line 2.
+    Test first: line 1. It answers the doubt buyers already have.
+
+    SKIPPED
+    News: nothing new and dated on file.
 
     MISSING
-    - why methylfolate matters for kids (needed for line 4)
-    - grams of sugar per pack, to answer "is this just candy?" with a
-      number
+    - why methylfolate matters for kids, to rescue line 4
+    - grams of sugar per pack, to answer "is this candy?" with a number
 
 tweaks:
-  - what: How much the buyer knows
-    how: This sets what a line may say. Between two levels, it writes for the less aware one, so if you're unsure, say so and expect plainer lines with no product name.
+  - what: How aware the buyer is
+    how: This sets what a line may say. If you're unsure between two levels, say so. It writes for the less aware one, so expect plainer lines with no product name.
   - what: The limits
-    how: Give exact character limits. About 40 characters fits a headline under a Facebook image; on-image words can run longer but fewer is better.
+    how: Give exact character limits. About 40 characters fits the headline under a Facebook image. On-image words can run longer, but fewer is better.
   - what: Customer quotes
-    how: Paste real quotes word for word. Without them, it won't write a quote-style line, because it never invents what a customer said.
-  - what: The picture
-    how: Describe the image and you get lines that add what the picture can't show. Leave it out and you get lines that work on their own.
+    how: Paste real quotes word for word. Without them it skips the their-words way in, because it never invents what a customer said.
+  - what: Dated news
+    how: A new flavour, price or finding with its date opens the news way in. Without one, that way in is skipped.
 
 judge:
   - A stranger understands every line without decoding.
-  - No two lines make the same argument.
+  - No two lines use the same way in.
   - Each line picks out the reader by what they do or feel, not by a label.
-  - Every number and quote comes from what you gave it.
-  - Any curiosity line has a benefit the ad actually delivers.
+  - Every number, date and quote comes from what you gave it.
+  - Every question line is answered by a fact you supplied.
 
 test:
-  - Give it the brief behind a headline that already won for you. Look for a line that makes the same argument. If none does, read the level it set. It may think the buyer knows less than they do.
-  - Run it twice. The level should be the same. The lines can differ, but both runs should use the same ways in.
+  - Give it the brief behind a headline that already won for you. Look for a line with the same way in. If none, check the level it set. It may think the buyer knows less than they do.
+  - Run it twice. The level should match. The lines can differ, but the ways in it skips should be the same.
   - Show the lines one at a time to someone who has never heard of your brand. Cross out any they need explained.
   - Count the characters on two lines yourself and check them against your limits.
   - Test the line it marks first against your current headline, with the same image and offer.
 
 improve:
-  - Write your field limits into step 6 of the skill file (for example "headline under 40 characters"), so you never repeat them.
-  - Add your best customer quotes, word for word with their source, to "What you need", so the customer's-words way in can always run.
+  - Write your field limits into "Count and limits" in the skill file (for example "headline under 40 characters"), so you never repeat them.
+  - Add your best customer quotes, word for word with their source, to "What you need", so the their-words way in can always run.
   - Add the words your brand never puts on an image to step 5.
-  - Save each winning line, and the level it was aimed at, to your brand file.
-  - Run "Know who you're writing for before you start" first, and pair it with "Get every word your image ad needs" for the main text and description.
+  - Save each winning line, with its way in and the level it was aimed at, to your brand file.
+  - Run "Know exactly who you're writing for" first, and pair it with "All the words your image ad needs" for the main text and description.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Short lines built from your facts come out well in any strong chat AI with this skill."}
+    - {name: "Meta Ads Manager", why: "Its ad preview shows whether each headline fits under the image on every placement."}
+  inputs:
+    - "Ten to twenty reviews in your buyers' own words, so the their-words and their-question lines use real phrases"
+    - "Your past headlines with their results, so it knows which ways in your buyers answer to"
+    - "Anything new with its date, such as a flavour, price or finding, so the news way in can run"
+    - "A screenshot of the image, so the words add what the picture can't show"
 
 terms:
   - term: Headline
     meaning: The short bold line in an ad, either on the image or in the field under it.
   - term: Way in
-    meaning: The approach a line takes to catch the reader, such as a plain benefit or a surprising reason why.
+    meaning: The approach a line takes, such as a plain gain, an exact fact or the buyer's own question.
+  - term: Glance test
+    meaning: Whether a stranger could say what's on offer, and who it's for, after one look.

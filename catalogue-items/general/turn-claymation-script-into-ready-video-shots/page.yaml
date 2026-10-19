@@ -4,212 +4,205 @@ summary: "Give it your clay script and product photo. You get image and clip pro
 job: make-video-ads
 
 headline: "Turn your clay ad script into video clips"
-subhead: Give it a narrated claymation script and a photo of your product. It fixes one clay character, one tabletop set and one object that changes, then hands you still prompts to approve and a clip prompt for every part of the script.
+subhead: Give it a narrated claymation script and a photo of your product. It fixes one clay character, one tabletop set with one finish, and your product as a labelled clay prop or its real photo, then writes stills to approve and a short clip prompt for every shot.
 
 explain: |
   AI video tools drift. The character's hair changes between clips, clay turns into shiny plastic, your label gets redrawn with wrong letters, and the one change the ad depends on happens off screen. You end up paying for the same clip again and again.
 
-  This skill turns a claymation script into instructions a video tool can follow shot by shot. It writes four fixed lines (character, material, light, product) that you paste unchanged into every prompt, so nothing drifts. It plans the opening still image for you to approve before any video is made, then one clip per part of the script, each with one small clay move and one change of state. Your product always comes from its real photo, and a checklist tells you what to look for in each clip.
+  This skill plans the shoot the way a stop-motion crew would. It writes fixed lines for the character, the set, the light and the lens, with one clay finish and named stand-ins (water as clear gel, steam as cotton wool), and pastes them unchanged into every prompt. Your product is either a clay prop wrapped in its printed label or the real photo lit to match the set, whichever the script chose. You approve reference stills first. Each clip is a few seconds long with one thing moving, stepped clay timing and one camera instruction, and the one clay morph, if there is one, comes from a first and last frame.
 
 when:
   - You have a claymation script and need prompts for an AI image and video tool.
   - Your earlier clips kept changing the character, the set or the product label.
-  - You want the change in the ad (a knot loosening, a stack shrinking) to happen on camera, at real clay speed.
+  - You want the change in the ad (a knot loosening, a tower squashing flat) to happen on camera, at clay speed.
 
 you_give:
-  - The narrated script, line by line
-  - A photo of your product's front, plus how it's used and how it works
-  - Your colours, the buyer's moment and what never to show (optional)
-  - The clip lengths your video tool accepts (optional)
+  - The script's shot table, with the changing object's three states, the character, the set and the product choice
+  - A photo of your product's front, every label line, and how it's used
+  - Your colours, approved claims and what never to show (optional)
+  - The clip lengths your video tool accepts (optional, 3 to 6 seconds by default)
 you_get:
-  - The idea in one line, with the changing object's three states
-  - Four fixed lines to paste unchanged into every prompt
-  - A character still prompt and an opening frame prompt to approve first
-  - One clip prompt per part of the script, plus a checklist for each clip
+  - Fixed lines for character, set, light, lens, palettes and product
+  - Reference still prompts for the character, the set and the product
+  - A still and a clip prompt for every shot, with one mover each
+  - The morph's frame pair (if used), edit notes and a check for each clip
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Paste your script underneath, then attach or describe your product photo, how it's used and your approved claims.
-  - Say which video tool you use and the clip lengths it allows, for example "8 to 10 second clips".
-  - Make the character still first. Only move on when you like it.
-  - Make the opening frame from the character still and the product photo, then make each clip from the approved still.
-  - Check every clip against the checklist at the end before you join them.
+  - Paste the script from the claymation script skill, then attach your product photo and list its label lines.
+  - Say which video tool you use and the clip lengths it allows.
+  - Make the reference stills first. Only move on when you like them.
+  - Make each shot's still from the references, then its clip, and check each clip before joining them.
 
 how_it_works:
-  - title: Finds what changes
-    text: Picks one clay object with three states and one thing that acts on it. A stranger with the sound off should be able to say what changed.
-  - title: Fixes the character
-    text: Writes one sentence for the clay character and reuses it unchanged. An adult who looks like the buyer, never a child or a real person, and who never talks.
-  - title: Builds one set
-    text: A small tabletop set from the buyer's moment, three or four pieces, no words anywhere, with everything except the product made of clay.
-  - title: Names two palettes
-    text: Grey and cool for the problem, your brand colours once it changes. Until then, the product is the only thing in your colours.
-  - title: Places the real product
-    text: Uses your product photo exactly, sets its size against the character once, and opens it only the way your use steps say.
-  - title: Plans clay movement
-    text: Pose to pose with short holds, one change of state per clip, the camera still or making one slow move.
-  - title: Stills before clips
-    text: You approve the character and the opening frame before any clip is made.
+  - title: Writes fixed lines
+    text: Character, set, light, lens and palettes, pasted word for word into every prompt. One clay finish for the whole ad, with stand-ins named.
+  - title: Sets the product
+    text: A clay prop wrapped in your printed label, or your real photo lit by the set's light. Never clay letters, and it opens only your way.
+  - title: References first
+    text: The character in two views, the empty set with the object in its before state, and the product. You approve them before any clip.
+  - title: One mover per shot
+    text: Only the character or the changing object moves. Everything else holds still or blinks.
+  - title: Clay timing
+    text: Every clip moves in small stepped poses, about 12 a second, with a smooth camera and the action in counted beats.
+  - title: One morph at most
+    text: If the script swaps the old thing for the new state, it gets a first and last frame and one change written as clay squashing and reshaping.
   - title: Checks each clip
-    text: Clay stays clay, the character matches clip one, the change happened in view, and the label wasn't altered.
+    text: Clay stays matte, the character matches, the change happens in view, one thing moves, and the label is unchanged.
 
 output_shape: |
-  THE IDEA
-  <the changing object, its three states, and what acts on it>
-
   FIXED LINES (paste unchanged into every prompt)
-  Character: <one sentence: size, build, clay colour, hair, two clothing colours, one mark>
-  Material: <what is clay, what handmade material, tool marks>
-  Light: <soft studio light, focus, scale>
-  Product: <copy the attached photo exactly; its size against the character>
+  CHARACTER: <the script's sentence, clay hands>
+  SET: <tabletop set, one finish, stand-ins, no words>
+  LIGHT: <key light side, fill>
+  LENS: <shallow focus, eye-level camera on a stand>
+  PALETTES: Before <..>  After <..>
+  PRODUCT: <clay prop with label lines in quotes, or the photo lit to match>; <size against the character>
 
-  PALETTES
-  Problem: <greyed, cool, one dull colour>
-  Changed: <your brand colours>
+  REFERENCES
+  1 <character, two views>  2 <empty set, before state>  3 <product>
 
-  STILL 1, CHARACTER
-  <prompt>
-  STILL 2, OPENING FRAME (attach: <picture> = <its job>)
-  <prompt>
+  SHOT <n> (<state>, mover: <..>)
+  Still: <camera, who or what, pose or state, place> + fixed lines
+  Clip (<seconds>): attach <image = job>. Motion line. Beats: <..>
+  Camera: <..>. Hold line. Sound: <..>
 
-  CLIP 1 (<length>, from <still>)
-  <time> <one small move> Narration: "<line>"
-  ... End frame: <...>
-  CLIP 2, CLIP 3 ...
-
-  CHECK EACH CLIP
-  - <five checks for this character, this object, this product>
-
-  MISSING: <what's needed and what the prompts do until you have it>
+  MORPH  <first frame, last frame, the one clay change> or none
+  EDIT NOTES  <order, offer text>
+  MISSING: <what's needed>
 
 example:
   business: sprout
   input: |
     [the skill]
 
-    Script (30 s, from "Get a claymation ad script that sells"):
-    1 "You bought the powder. And the shaker."
-    2 "Then it sat there. Half full."
-    3 "Chalky glass. Another thing to wash."
-    4 "So, one small pack instead."
-    5 "Rip. Tip. Enjoy."
-    6 "No water. No mixing. No shaker."
-    7 "Sixty-plus ingredients, 21 vitamins and minerals, 6 grams of fiber."
-    8 "First order, $29.99 with text sign-up. Money back in 30 days."
-    9 "For anyone with a half-used tub of powder."
-    Changing object: grey clay tower of tub, scoop and shaker.
-
-    Product: Sprout pouch, photo attached (glossy deep green stand-up
-    pouch, big yellow wordmark, yellow bear face top right, "28 Daily
-    Packs" at the bottom). Gummies: small opaque deep-green bears.
-    Use: tear one daily pack straight across the top, tip into palm.
-    Never tear the big pouch; it opens only at its resealable top.
-    Colours: forest green #00582D, cream #FFF7DF, sunflower #FFCC2E.
-    Clips: 10 seconds, 9:16.
+    Script (30 s, from the claymation script skill):
+    Object: a leaning grey clay tower of powder tub, scoop and shaker.
+    Before: it teeters. Changing: it squashes down into the counter.
+    After: a clear counter, the pouch on it.
+    Character: a clay man, 6 heads tall, slim, warm beige clay, short
+    dark hair as one shape, rust jumper, grey trousers, bead eyes, a
+    small clay watch.
+    Set: kitchen counter, shelf, sink, window. Handled finish. Water in
+    the sink as clear gel. Before: blue-grey with one dull khaki.
+    After: forest green, cream and sunflower.
+    Product: the real pouch photo, lit to match the set.
+    Shots: 1 whole set, tower teeters (mover: tower) | 2 the tub very
+    close (tower leans) | 3 him close, nose wrinkled (character) |
+    4 hands take one daily pack (character) | 5 he tears the pack
+    straight across the top, bears tip into his palm (hands) | 6 MORPH:
+    the tower squashes into the counter (tower) | 7 the clear counter,
+    pouch front on (colour settles) | 8 him beside the pouch (character)
+    | 9 held pose (none)
+    Pouch photo attached: glossy deep green, big yellow wordmark,
+    "28 Daily Packs". Tool: 4 to 6 second clips, 9:16, 3 references,
+    first and last frame.
   output: |
-    THE IDEA
-    A grey clay tower on the counter (powder tub, scoop, shaker).
-    Worst: it teeters. Changing: pieces sink flat one by one.
-    Changed: a clear counter. What acts on it: the pack being torn open.
-
     FIXED LINES (paste unchanged into every prompt)
-    Character: a clay adult man about five heads tall, medium build,
-      light brown clay skin, short dark hair as one smooth shape, rust
-      jumper, grey trousers, black bead eyes, a pressed-line mouth,
-      a small clay watch on his left wrist.
-    Material: everything except the pouch, pack and gummies is matte
-      modelling clay with slight tool marks and no fingerprints; the
-      dust ring and the glass of water are clay shapes; plain card
-      backdrop.
-    Light: soft even studio light, bright and sunny, shallow focus,
-      small-model scale.
-    Product: the Sprout pouch exactly as in the attached photo, no
-      letter redrawn; standing on the counter it reaches his shoulder.
+    CHARACTER: a clay man about 6 heads tall, slim, warm beige clay
+      skin, short dark hair as one smooth shape, rust jumper, grey
+      trousers, black bead eyes, a small clay watch on his left wrist;
+      chunky clay hands with rounded fingertips.
+    SET: a handmade stop-motion tabletop kitchen (counter, one shelf,
+      a sink, a window shape), matte modelling clay with some
+      thumbprints, photographed with a macro lens. The water in the
+      sink is clear gel. No words anywhere on the set.
+    LIGHT: one soft key light from the left, a gentle fill from the
+      right, bright and sunny.
+    LENS: shallow focus, background softly blurred, camera at his eye
+      level on a stand. The edges of the set never show.
+    PALETTES: Before: blue-grey, cool grey, one dull khaki (the tub).
+      After: forest green #00582D, cream #FFF7DF, sunflower #FFCC2E.
+      Until shot 6 the pouch is the only green thing.
+    PRODUCT: the Sprout pouch exactly as in the attached photo, lit by
+      the set's key light from the left, no letter redrawn; standing
+      on the counter it reaches his shoulder.
 
-    PALETTES
-    Problem: grey, cool blue-grey, one dull khaki (the tub).
-    Changed: forest green #00582D, cream #FFF7DF, sunflower #FFCC2E.
-    Until line 6 the pouch is the only green thing on the set. In 9:16
-    the tower sits upper third behind him; the pouch beside his hand.
+    REFERENCES
+    1 [CHARACTER] front and three-quarter, plain grey card backdrop.
+    2 [SET] empty but for the grey clay tower of tub, scoop and shaker,
+      teetering. Before palette.
+    3 The pouch photo, as supplied.
 
-    STILL 1, CHARACTER
-    [Character line], standing, front on, plain grey card backdrop.
-    [Material line]. [Light line].
+    SHOT 1 (before, mover: the tower)
+    Still: 9:16, wide on the whole set. The man (image 1) stands at the
+    counter, one hand on it, head tilted up at the teetering tower
+    (image 2); the pouch (image 3) beside his hand. [fixed lines]
+    Clip (4 s): attach image 1 = the man, image 2 = the set, image 3 =
+    the pouch. Stop-motion timing: the clay moves in small stepped
+    poses, about 12 new poses a second, with a faint shimmer between
+    poses. The camera moves smoothly. Beat 1 the tower rocks left;
+    beat 2 it rocks back; beat 3 it holds, leaning. Camera: locked off.
+    Same character, set and product as the references. Every surface
+    stays clay or its stand-in. His mouth stays still. The label stays
+    as printed. Sound: soft room tone, a faint clay creak.
 
-    STILL 2, OPENING FRAME (attach: character still = who he is;
-    pouch photo = the product, copy exactly)
-    9:16. A small clay kitchen set: counter, one cupboard, a window
-    shape. [Character line], one hand on the counter, head tilted at
-    a teetering grey clay tower of a tub, a scoop and a shaker.
-    [Product line], front to camera. [Material line]. [Light line].
-    Problem palette only.
+    SHOT 5 (mover: his hands)
+    Clip (4 s): beat 1 his hands hold one daily pack; beat 2 they tear
+    it straight across the top; beat 3 deep-green bears tip into his
+    palm. Camera: locked off, close on the hands.
 
-    CLIP 1 (10 s, from Still 2)
-    0-3 s  fixed camera at his eye level. The tower rocks in two small
-           steps. Narration: "You bought the powder. And the shaker."
-    3-6 s  a clay dust ring forms round the tub. "Then it sat there.
-           Half full."
-    6-10 s he lifts the shaker, arm out, nose wrinkling in one step.
-           "Chalky glass. Another thing to wash." End frame: shaker
-           held out, tower leaning.
+    SHOT 6 (changing, mover: the tower) MORPH
+    First frame: the tower standing on the counter, before palette.
+    Last frame: a clear counter, cream and green, the pouch front on.
+    Clip (6 s): the grey tower squashes down into the counter in a few
+    stepped poses, cream and green spreading out from where it stood.
+    Camera: locked off. Sound: a soft clay squash.
 
-    CLIP 2 (10 s, from Clip 1 end frame)
-    0-3 s  he sets the shaker down and takes one daily pack from beside
-           the pouch, touching the pouch's side, never its front. "So,
-           one small pack instead."
-    3-6 s  he tears the pack straight across the top; deep-green bears
-           tip into his palm. "Rip. Tip. Enjoy."
-    6-10 s the tower's pieces sink flat one by one, the counter taking
-           on cream and green. "No water. No mixing. No shaker."
+    (Shots 2 to 4 and 7 to 9 follow the same pattern: one still, one
+    clip, one mover. Shot 9 is a held pose, no mover.)
 
-    (cut for length: the full run also had Clip 3, ending on the held
-    pose with the offer added later, and the sound line: one off-screen
-    narrator, a soft paper rip, a clay tap per piece, no music)
-
-    CHECK EACH CLIP
-    - Clay stays matte; the gummies and pouch stay photographic
-    - Watch, jumper colour and hair shape match Clip 1
-    - The tower sank by clay moves in view, never vanished
-    - The pack tore straight across its top, never a side or corner
-    - Pouch printing unchanged; no words on the set
-
+    EDIT NOTES
+    Cut the nine clips over the narration in order, 30 seconds. On
+    screen over shot 8: "$29.99 first order with text sign-up. Renews
+    at $49.99 every 4 weeks." Never in a prompt.
     MISSING: a photo of a single daily pack (colour, printing). Until
-    supplied, Clip 2's hand shots can't match the real pack.
+    it's supplied, shot 5 can't match the real pack.
 
 tweaks:
-  - what: The fixed lines
-    how: Change the character line once (age, clothes, one mark like a scarf) and every prompt updates with it. Never write "same as before"; paste the line.
+  - what: The product choice
+    how: Say "clay prop" to sculpt the pack in clay wrapped in its printed label, or "real photo" to use your photo lit by the set. The script usually decides; this changes only the product line.
+  - what: The finish
+    how: Crisp (fine tool lines) suits premium and food, handled (some thumbprints) most everyday goods, rough (big thumbprints) silly brands. One finish for the whole ad.
   - what: The clip length
-    how: Give your tool's limits, for example "5 second clips". It spreads the script over more clips with one change of state each.
-  - what: Working by hand
-    how: Say "one still per scene". You get 6 to 10 scene stills of 5 to 8 seconds to join with hard cuts, instead of generated clips.
+    how: Give your tool's limits, for example "5 second clips". Each shot stays one action, so longer clips just hold the end pose longer.
   - what: Never-show list
     how: Paste the things your brand never shows (a body changing, a pack opened the wrong way). It writes them out of every prompt and describes what to show instead.
 
 judge:
-  - The four fixed lines appear word for word in every still and clip prompt.
-  - Each clip has exactly one change of state, and the narration over it is short.
-  - The product line says to copy the photo and never to redraw the label.
-  - Nothing in the clips falls, crashes or explodes.
-  - The checklist matches this ad (this changing object, this character), not generic advice.
+  - The fixed lines appear word for word in every still and clip prompt.
+  - Each clip has one mover and one camera instruction.
+  - There is at most one morph, at the swap, made from a first and last frame.
+  - The product follows its one product line in every shot, with the label exactly as printed.
+  - Nothing falls, crashes or explodes, and the change happens in view.
 
 test:
-  - Run it on a script where you already know the changing object and its three states. The idea line at the top should name the same object and states. If it picks a different one, your script doesn't make the change clear enough.
-  - Make the character still and the opening frame before any clip. If the clay looks like shiny plastic or the label has new letters, fix the four fixed lines now, while it's cheap.
-  - Run it twice on the same script and compare the four fixed lines. The character, material and product lines should say the same thing both times.
-  - Make only the first clip, watch it with the sound off, and ask someone what changed. If they can't say, the change happened off screen or too fast.
+  - Run it on a script where you already know the changing object and its three states. The before still should show the same object in the same state.
+  - Make the references before any clip. If the clay looks like shiny plastic or the label has new letters, fix the fixed lines now, while it's cheap.
+  - Run it twice on the same script and compare the fixed lines. They should say the same thing both times.
+  - Make only the morph clip and watch it muted. If someone can't say what changed, the change was too fast or happened off screen.
 
 improve:
-  - Write your product line into step 5 of the skill file once (exact shape, colours, printing and size against a hand), so every run starts with it.
+  - Write your product line into step 2 of the skill file once (shape, colours, label lines, size against a hand), so every run starts with it.
   - Add your brand's never-show rules to the Avoid list, for example that the daily pack is only ever torn straight across the top.
-  - If you always make one shape and length, set it in step 8 (for example 9:16, about 10 seconds a clip) instead of saying it each time.
-  - Save the approved character still and the four fixed lines to your brand file, so the next clay ad keeps the same character.
+  - Save the approved references and fixed lines to your brand file, so the next clay ad keeps the same character and set.
   - Pair it with the skill that writes the claymation script first, so the changing object and its three states are settled before any prompt.
 
+works_best_with:
+  tools:
+    - {name: "Nano Banana 2.1", why: "Takes many reference images at once, so the character, set and product stills match."}
+    - {name: "Veo 3.1", why: "Takes a first and a last frame, so the one morph starts and ends exactly where you planned."}
+    - {name: "Kling 4.0", why: "Takes several reference images in one job, so the character and product hold from shot to shot."}
+    - {name: "ElevenLabs", why: "Reads the narration at a steady pace you can time the clips to."}
+  inputs:
+    - "The flat label artwork, so a clay prop's printed label carries every line correctly"
+    - "Photos of real clay figures you like, so the finish line names marks that exist"
+    - "The recorded narration before you make clips, so each clip is timed to its line"
+
 terms:
-  - term: Still
-    meaning: A single image made first, so you can approve the look before paying for video.
-  - term: Clip prompt
-    meaning: The written instructions you give an AI video tool for one short piece of video.
-  - term: 9:16
-    meaning: A tall video shape, the one phones use for Reels, Stories and TikTok.
+  - term: Fixed lines
+    meaning: Short descriptions of the character, set, light, lens and product, pasted unchanged into every prompt so all shots match.
+  - term: Stand-in
+    meaning: What a model-maker uses for a hard material, such as clear gel for water or cotton wool for steam.
+  - term: Morph
+    meaning: One clay change where the old thing squashes and reshapes into the new state, made from a first and last frame.

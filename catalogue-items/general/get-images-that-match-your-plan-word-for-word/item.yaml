@@ -1,7 +1,7 @@
 slug: get-images-that-match-your-plan-word-for-word
 renamed_from: image-prompt-from-approved-plan
 name: "Get images that match your plan, word for word"
-summary: "An image prompt that keeps your product, your exact words and your layout, so fewer tries go wrong."
+summary: "Tool settings and an image prompt that keep your product, your exact words and your layout, with a fix for each fault."
 category: general
 boards: [ecommerce]
 type: skill
@@ -17,5 +17,12 @@ outputs:
 uses: [get-a-sharper-bigger-image-with-nothing-changed]
 origin: own
 source_ids: [CES-046]
-old_name: image-prompt-craft
-version: 1.0.0
+old_name: image prompt writer
+version: 2.0.0
+credits:
+  - {title: "The ultimate prompting guide for Nano Banana", by: "Khulan Davaajav and Hussain Chinoy, Google Cloud", url: "https://cloud.google.com/blog/products/ai-machine-learning/ultimate-prompting-guide-for-nano-banana", used: "say what each reference photo is for, words in quotes, positive framing, say what to keep in an edit"}
+  - {title: "Nano Banana image generation", by: "Google AI for Developers", url: "https://ai.google.dev/gemini-api/docs/image-generation", used: "reference photo limits per model, 1K to 4K set as a setting, edit one area and keep the rest"}
+  - {title: "GPT Image Generation Models Prompting Guide", by: "OpenAI Cookbook", url: "https://developers.openai.com/cookbook/examples/multimodal/image-gen-models-prompting-guide", used: "number each photo with its role, spell hard words letter by letter, higher quality for small text, repeat the keep list on every edit"}
+  - {title: "FLUX.2 [pro] & [max] Prompting Guide", by: "Black Forest Labs", url: "https://docs.bfl.ai/guides/prompting_guide_flux2", used: "most important words first, no negative prompts, hex codes tied to each object"}
+  - {title: "Text in Images", by: "Ideogram", url: "https://docs.ideogram.ai/prompting/text-in-images", used: "text in reading order with its own place and style, short lines, long copy added in a design tool"}
+  - {title: "Prompt Structure", by: "Ideogram", url: "https://docs.ideogram.ai/prompting/prompt-structure", used: "image type first, ratio and quality set in settings, not in words"}

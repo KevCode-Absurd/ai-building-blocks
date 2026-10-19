@@ -166,6 +166,16 @@ improve:
   - Save the chain, the option you chose and the parts key in your brand file.
   - Pair it with a skill that writes only the 3D how-it-works script, when you need the words without the prompts.
 
+works_best_with:
+  tools:
+    - {name: "Nano Banana 2.1", why: "Takes up to 14 reference images and keeps up to four characters the same, so your reference stills match."}
+    - {name: "Veo 3.1", why: "Takes a first and a last frame, so a planned change starts and ends exactly where you want."}
+    - {name: "ElevenLabs Eleven v4", why: "Reads the narration with tags for pauses and pace, and can use a voice cloned from your own recording."}
+  inputs:
+    - "Diagrams or microscope images from your supplier or a published study, so the 3D parts match the real thing"
+    - "How each hard word is said, from your supplier or a dictionary, so the voice gets it right"
+    - "The questions buyers ask about how it works, so the film answers a real one"
+
 terms:
   - term: Chain
     meaning: How something works, written as 2 to 4 linked steps. This meets that, that happens, so you get this.

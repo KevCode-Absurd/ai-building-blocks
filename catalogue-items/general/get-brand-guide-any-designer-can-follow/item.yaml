@@ -16,4 +16,8 @@ uses: [turn-website-into-brand-file-for-ai]
 origin: rebuilt
 source_ids: [CES-011]
 old_name: brand-guide
-version: 1.0.0
+version: 2.0.0
+credits:
+  - {title: "Understanding Success Criterion 1.4.3: Contrast (Minimum)", by: "W3C Web Accessibility Initiative", url: "https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html", used: "The 4.5 to 1 and 3 to 1 text contrast levels"}
+  - {title: "Design Tokens Community Group", by: "W3C Design Tokens Community Group", url: "https://www.designtokens.org/", used: "The design tokens format for the JSON block"}
+  - {title: "@page", by: "MDN Web Docs", url: "https://developer.mozilla.org/en-US/docs/Web/CSS/@page", used: "Page size, margins and page breaks for printing"}

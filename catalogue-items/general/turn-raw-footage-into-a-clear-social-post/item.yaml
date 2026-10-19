@@ -1,7 +1,7 @@
 slug: turn-raw-footage-into-a-clear-social-post
 renamed_from: organic-video-edit-plan-from-footage
 name: "Turn raw footage into a clear social post"
-summary: "Your own raw footage turned into one social post, with every cut, caption, cover and export planned."
+summary: "Plan one social post from your own raw footage, with every cut, caption, cover and export checked."
 category: general
 type: skill
 role: make
@@ -17,4 +17,10 @@ example: organic
 origin: own
 source_ids: [CES-093]
 old_name: organic-video-editing
-version: 1.0.0
+version: 2.0.0
+credits:
+  - {title: "Instagram Ranking Explained", by: "Adam Mosseri, Instagram", url: "https://about.instagram.com/blog/announcements/instagram-ranking-explained", used: "the export checks: watermarks, low resolution, borders, muted sound and mostly-text posts shown to fewer people"}
+  - {title: "English (USA) Timed Text Style Guide", by: "Netflix Partner Help Center", url: "https://partnerhelp.netflixstudios.com/hc/en-us/articles/217350977-English-USA-Timed-Text-Style-Guide", used: "two-line captions, about 20 characters a second, and never splitting a verb from its negation"}
+  - {title: "Timed Text Style Guide: General Requirements", by: "Netflix Partner Help Center", url: "https://partnerhelp.netflixstudios.com/hc/en-us/articles/215758617-Timed-Text-Style-Guide-General-Requirements", used: "captions on screen at least about 1 second and at most 7"}
+  - {title: "Video Ad Specs on Instagram Reels", by: "Facebook Ads Guide, Meta", url: "https://www.facebook.com/business/ads-guide/update/video/instagram-reels", used: "the safe area: clear of the top 14%, bottom 35% and 6% at each side"}
+  - {title: "Understand three-minute YouTube Shorts", by: "YouTube Help", url: "https://support.google.com/youtube/answer/15424877", used: "why claimed music can block a longer post"}

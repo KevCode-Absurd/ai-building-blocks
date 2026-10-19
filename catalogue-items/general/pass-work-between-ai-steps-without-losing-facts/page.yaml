@@ -4,12 +4,12 @@ summary: "Give it the steps of your AI process. You get what each step needs, re
 job: set-up-ai
 
 headline: "Pass work between AI steps without losing facts"
-subhead: Give it the steps of your AI process, in order. For each step it lists what must go in, what's optional, what comes out and what can never be cut, plus rules for saving, retrying and picking up where a run stopped.
+subhead: Give it the steps of your AI process, in order. It locks each claim as a card that travels word for word, writes a handoff card for every step (needs, may use, returns, never lose), and sets rules for caching, trimming, retries and picking up where a run stopped.
 
 explain: |
   When you chain AI steps together (brand, buyer, brief, copy, image, check), each step gets a bundle of text to work from. Send too much and it gets confused. Send too little, or trim carelessly, and things break quietly. "21 vitamins per pack" becomes "21 vitamins per gummy", a guarantee loses "first order only".
 
-  This skill plans the bundle for every step. It replaces references with the text they point to, labels each fact by how sure it is, and fills a table of what each step needs and returns. It keeps whole claims whole, shows each role only what it needs, puts stable material first so it can be reused, and trims in a fixed order. It also sets run rules: what to save at each step, when to retry, and never to report a failed or partial result as a success.
+  This skill starts by turning every claim into a card with its full wording and limits, which moves between steps word for word and is never rewritten. Then it writes a short handoff card for each step: what it needs, what it may use, what it returns and what it must never lose. Steps that can open files get a reference; steps that can't get the text itself. Stable material goes first so it can be reused, trimming follows a fixed order, and the run rules make sure a failed or partial result is never reported as a success.
 
 when:
   - You're building a chain of AI steps for ads or content and want each step to get the right material.
@@ -21,51 +21,51 @@ you_give:
   - What each step is sent today, with any measured token or cost numbers (optional)
   - Fixed settings, such as the chosen model or budget, which it will keep (optional)
 you_get:
-  - A table for each step (what must go in, what's optional, what comes out, what can never be trimmed)
-  - A template for ordering each bundle (stable part first, then the part that changes)
-  - Run rules (what to save, retry limits, budget, where to resume)
+  - Claim cards, each with its full wording, limits and source
+  - A handoff card for each step (needs, may use, returns, never lose)
+  - A bundle order (stable part first, then the part that changes) and run rules
   - A list of shortfalls and trade-offs
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - List your steps in order, one line each, with what each one should hand on.
+  - Attach proof-and-claims.md from your brand file, or paste the claims your ads use.
   - If you know what each step is sent now, paste it or describe it, with any measured costs.
-  - Read the never-trim list for each step and check your current setup keeps all of it.
-  - Build the run rules into your tool, then compare real usage with the estimates.
+  - Build the cards and run rules into your tool, then compare real usage with the estimates.
 
 how_it_works:
-  - title: Resolves references
-    text: Replaces every ID or link with the text it points to, and labels it as a checked fact, customer words, a guess or a creative choice.
-  - title: Fills the step table
-    text: For each step, what it must get, what's optional and what it must hand back, starting from a standard table of eleven steps.
-  - title: Keeps claims whole
-    text: Amount, serving, time, who it applies to and conditions all stay attached. A fictional presenter never becomes a real endorsement.
-  - title: Shows each role its share
-    text: Writers get voice and buyer words, designers get the look, checkers get the actual output and the original brief, fixers get only the failed part.
-  - title: Orders for reuse
-    text: Stable rules and product facts first, changing material last, so the stable part can be cached.
-  - title: Trims in order
-    text: Duplicates, unrelated products and buyers, unused formats, setup text, sample outputs. Never a required sentence cut in half.
-  - title: Saves and resumes
-    text: Records input, versions, settings, request, raw reply, result, usage and cost at every step, and resumes from the last valid result.
-  - title: Retries with limits
-    text: Each retry is tied to a named failure and a cap, and every retry counts against the same budget.
+  - title: Locks the claims
+    text: Turns each claim into a card with an ID, the full wording and its limits. Steps pick cards; they never rewrite them.
+  - title: Labels the rest
+    text: Marks every other fact as a checked fact, customer words, a guess or a creative choice.
+  - title: Pastes or points
+    text: Steps that can open files get a reference to fetch when needed. Steps that can't get the text itself.
+  - title: Writes handoff cards
+    text: For each step, what it needs, what it may use, what it returns in a fixed shape, and what it must never lose.
+  - title: Gives each role its share
+    text: Writers get buyer words and voice, designers the look and photos, checkers the real output and brief, fixers only the failed part.
+  - title: Orders, trims and runs
+    text: Stable material first so it can be cached, trimming in a fixed order, saving every step, capped retries, and nothing failed reported as a success.
 
 output_shape: |
-  STEP TABLE
+  CLAIM CARDS
+  <ID>  "<full wording>"  Limits: <amount, serving, time, who,
+        conditions>  Source: <...>
+
+  HANDOFF CARDS
   Step <n> <name>
-    Must get:    <...>
-    Optional:    <...>
-    Hands back:  <...>
-    Never trim:  <claims with their conditions, identity rules, ...>
+    Needs:       <...>
+    May use:     <...>
+    Returns:     <fixed shape, plus card IDs used>
+    Never lose:  <cards, identity rules, exact words, photo roles>
 
   BUNDLE ORDER
-  Stable first: <rules, product facts, voice>
+  Stable first: <rules, claim cards, product facts, voice>
   Changes each run: <buyer, brief, draft, ...>
 
   RUN RULES
-  Save per step: <input, versions, settings, request, raw reply,
-  result, usage, cost, retry history>
+  Save per step: <fingerprint, version, settings, request, raw reply,
+  result, usage, cost, retries>
   Retries: <named failure -> cap>   Budget: <...>   Resume from: <...>
 
   SHORTFALLS AND TRADE-OFFS
@@ -88,7 +88,8 @@ example:
     8. Fix: repair what failed
 
     Today every step gets the whole brand file plus all 20 reviews.
-    Usage: not measured. Fixed: none.
+    Usage: not measured. Fixed: none. Steps 1 and 7 run in a tool
+    that can open files; the rest can't.
 
     Facts the steps rely on: "60+ ingredients, 21 vitamins &
     minerals, and 6g fiber" in 1 pack. "Clinically tested for
@@ -99,52 +100,63 @@ example:
     30-day money-back, first order only. Reviews 11 and 14 mention
     GLP-1: customer words only, never the brand's claim.
   output: |
-    STEP TABLE (steps 3 to 8; steps 1 and 2 follow the standard table)
-    3 Brief
-      Must get:   product facts, the one buyer, how much they know,
-                  format, proof and offer available
-      Hands back: one argument, its evidence, hook, scene, format
-      Never trim: the claim conditions below
-    4 Copy
-      Must get:   the brief, product and offer facts, buyer words and
-                  doubt, voice rules with 3 or 4 real lines, length
-                  limits
-      Optional:   the closest proof
-      Hands back: the copy, each claim tagged with its source
-      Never trim: "per pack" (never "per gummy"); "of surveyed users";
-                  "$29.99 ... with text sign-up, renews at $49.99";
-                  "first order only" on the guarantee
-    5 Image prompt
-      Must get:   final scene, exact text and placement, pouch and
-                  pack photos with roles, how the pack opens (top edge
-                  only), colours and type, shape, what never appears
-      Hands back: one prompt keeping every locked word and photo role
-    6 Image
-      Must get:   the approved prompt and photos with their roles
-      Hands back: real pixels, run ID, status
-    7 Check
-      Must get:   the actual image and copy, the original brief, the
-                  exact copy, the photos, the claims rules
-      Hands back: issues tied to evidence; only what is visible
-    8 Fix
-      Must get:   only the failed part, the named fault, what depends
-                  on it
-      Hands back: the smallest fix and a new check
+    CLAIM CARDS
+    C1 "60+ ingredients, 21 vitamins & minerals, and 6g fiber"
+       Limits: per pack, never per gummy. Source: product page
+    C2 "Clinically tested for nutrient absorption"
+       Limits: 2025 study, 120 healthy adults, vitamin C and folate
+       only. Source: brand study
+    C3 "95% of users take Sprout at least 4-6x per week"
+       Limits: always "of surveyed users". Source: brand survey
+    C4 "$29.99 first order"
+       Limits: only with the text sign-up; renews at $49.99 every 4
+       weeks. Source: product page footer
+    C5 "30-day money-back guarantee"
+       Limits: first order only. Source: FAQ
+    Not a card: GLP-1 (reviews 11 and 14). Customer words only.
 
-    LABELS FOR STEP 2 OUTPUT
-    Checked brand fact: ingredients, study numbers, prices, guarantee
-    Customer words: the 20 reviews (11 and 14 never become claims)
-    Guess: buyer shares ("rough estimates from reviews")
+    HANDOFF CARDS (steps 3 to 8)
+    3 Brief
+      Needs:      product facts, the one buyer, how much they know,
+                  format, the cards available
+      Returns:    argument, evidence (card IDs), hook, scene, format
+      Never lose: C1 to C5 as written
+    4 Copy
+      Needs:      the brief, the chosen cards, buyer quotes and doubt,
+                  voice rules with 3 or 4 real lines, length limits
+      May use:    the closest proof card
+      Returns:    the copy, each claim tagged with its card ID
+      Never lose: "per pack"; "of surveyed users"; the renewal price;
+                  "first order only"
+    5 Image prompt
+      Needs:      final scene, exact words and placement, pouch and
+                  pack photos with roles, how the pack opens (top
+                  edge only), colours and type, shape, what never
+                  appears
+      Returns:    one prompt keeping every locked word and photo role
+    6 Image
+      Needs:      the approved prompt and photos with their roles
+      Returns:    real pixels, run ID, status
+    7 Check (can open files)
+      Needs:      the actual image and copy, the original brief, the
+                  cards (by reference), the photos
+      Returns:    issues tied to evidence; only what is visible
+    8 Fix
+      Needs:      only the failed part, the named fault, what depends
+                  on it
+      Returns:    the smallest fix, then a new check
 
     BUNDLE ORDER
-    Stable first: claims rules, product facts, voice, look
+    Stable first: claims rules, cards C1 to C5, product facts, voice,
+    look
     Changes each run: buyer, brief, draft, the failed part
 
     RUN RULES
-    Save per step: input hash, skill version, settings, exact request,
-    raw reply, checked result, usage, cost, retry history.
-    Retries: image text misspelled -> 2 tries, then change the idea.
-    Resume from the last checked result. A failed image stays failed.
+    Save per step: input fingerprint, skill version, settings, exact
+    request, raw reply, checked result, usage, cost, retries.
+    Retries: misspelt words in the image -> 2 tries, then change the
+    approach. Resume from the last checked result. A failed image
+    stays failed.
 
     SHORTFALLS
     Today all 20 reviews go to every step. Copy needs only the buyer's
@@ -153,39 +165,50 @@ example:
 
 tweaks:
   - what: The steps
-    how: Add or remove steps (a storyboard, a presenter, a report) and each gets its own row from the standard table, with its own never-trim list.
+    how: Add or remove steps (a storyboard, a presenter, a report) and each gets its own handoff card and never-lose list.
   - what: A budget
-    how: Give a token or cost limit. It trims in the fixed order and tells you plainly if a step still won't fit, rather than cutting a condition.
+    how: Give a token or cost limit. It trims in the fixed order and tells you plainly if a step still won't fit, rather than cutting a claim.
+  - what: Which steps can open files
+    how: Say which steps run in a tool that can read files. Those get references; the rest get the text pasted in.
   - what: Measured usage
-    how: Paste real usage from your tool. It's reported separately from estimates, so you can see which step costs most.
-  - what: Fixed settings
-    how: Name the model, budget or settings that can't change. They're kept as they are, and the plan works around them.
+    how: Paste real usage from your tool. It's reported apart from estimates, so you can see which step costs most.
 
 judge:
-  - Every claim in every bundle keeps its amount, conditions and who it applies to.
+  - Every claim travels as a whole card, with its amount, conditions and who it applies to.
   - The checking step gets the actual output and the original brief, not a summary.
   - The fixing step gets only the failed part and what depends on it.
-  - Counts, budgets and maths are left to code, not to the AI.
+  - Counts, budgets and sums are left to code, not to the AI.
   - Nothing failed or partial is marked as a success, and no stock or made-up output fills a gap.
 
 test:
-  - "Take one claim with a condition (for Sprout: \"30-day money-back guarantee, first order only\") and follow it through every step's bundle. The condition should still be there at the end."
+  - "Take one card with a condition (for Sprout: \"30-day money-back guarantee, first order only\") and follow it through every step. The condition should still be there at the end."
   - Run your chain once with the plan and open what the checking step received. It should be the real output and the original brief, not a summary.
   - Make one step fail on purpose. The run should stop and say why, and nothing should be reported as a success.
   - Measure real usage per step for one run and compare it with the plan's estimates.
 
 improve:
-  - Write your own steps into the step table in step 2 of the skill file, under their real names, so every plan starts from your chain.
-  - "Add your claims sheet to step 3: each claim with its full wording and conditions, so none is ever trimmed."
-  - Change the trim order in step 6 if your costs differ, but keep claim conditions as the last thing that can go.
+  - Keep your claim cards in proof-and-claims.md, so every chain starts from the same wording.
+  - Write your own steps and their handoff cards into the skill file, so every plan starts from your real chain.
+  - Change the trim order in step 7 if your costs differ, but keep claim cards as the one thing that never goes.
   - Add the model and settings you can't change, so the plan works around them.
-  - Pair it with the skill that writes one short image prompt for the image step, and use the product page image check as a model for any checking step.
+  - Pair it with the skill that tests whether a new prompt writes better ads, to check a slimmer bundle before it goes live.
+
+works_best_with:
+  tools:
+    - {name: "Claude Code", why: "Can run the chain as files and code, save every step's request and reply, and do the counts in code."}
+    - {name: "Claude", why: "Follows long handoff cards closely and returns work in the fixed shape you ask for."}
+  inputs:
+    - "Your proof-and-claims.md, so the claim cards start from approved wording"
+    - "Real usage per step from one run, so trimming targets the step that costs most"
+    - "One past output where a condition got lost, so the plan can show where it slipped"
 
 terms:
   - term: Step
     meaning: One AI task in a chain, such as writing the brief or checking the image.
   - term: Bundle
     meaning: All the text and files one step is sent to do its job.
+  - term: Claim card
+    meaning: One claim with its full wording, limits and source, passed between steps word for word.
   - term: Token
     meaning: The unit AI tools count text in. About four characters of English, as a rough estimate.
   - term: Cache

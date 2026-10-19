@@ -1,6 +1,6 @@
 slug: turn-reviews-into-a-video-ad-ready-to-film
 name: Turn reviews into a video ad ready to film
-summary: "A video ad script and shot list in your customers' words, checked against ad rules before you film."
+summary: "A video ad script with a source for every line, and timed shots for each clip, checked against ad rules before you film."
 category: orchestrator
 boards: [ecommerce]
 type: workflow
@@ -18,11 +18,11 @@ outputs:
   - {type: audit_report}
 uses: [turn-website-into-brand-file-for-ai, find-why-customers-buy-in-their-words, get-video-ad-script-in-customers-words, get-script-presenter-can-say-without-stumbling, get-shot-list-that-keeps-ad-moving, keep-facebook-from-blocking-your-ads]
 steps:
-  - {uses: turn-website-into-brand-file-for-ai, note: "Build your brand file from your website: facts, voice, offers and the claims you can make."}
-  - {uses: find-why-customers-buy-in-their-words, note: "Pull the reasons people buy out of your reviews, in their own words, ranked by how many say it."}
-  - {uses: get-video-ad-script-in-customers-words, note: "Write the script around the top reason, using only facts from the brand file."}
-  - {uses: get-script-presenter-can-say-without-stumbling, note: "Read every line aloud and fix the ones nobody would say, without changing what they say."}
-  - {uses: get-shot-list-that-keeps-ad-moving, note: "Turn the script into timed shots a video tool can follow, one action per shot."}
-  - {uses: keep-facebook-from-blocking-your-ads, note: "Check the script and on-screen words against Facebook and Instagram ad rules before anything is filmed or made."}
+  - {uses: turn-website-into-brand-file-for-ai, note: "Read the site, tag every fact by where it came from, and write the eight brand files. For the one check-in: if the person isn't there to answer, list each fact to confirm as a MISSING line and carry on with tagged facts only. Never fill where the brand sells or ships unless the site says so."}
+  - {uses: find-why-customers-buy-in-their-words, note: "Copy out every phrase that shows why people switched, word for word with its review number, tag its force (push, pull, anxiety, habit, result), count separate people and rank the reasons. A reason is a pattern only at 5 people across 2 kinds of source; say so when it isn't."}
+  - {uses: get-video-ad-script-in-customers-words, note: "Use the buyer given, the ranked reasons from step 2 and only facts from the brand file. Sort the quotes onto the buyer's timeline, name the belief shift, write the beats with on-screen text, a picture note and evidence for every line, keep spoken words inside the budget, and list every placeholder. Unverified quotes stay out of the paid ad."}
+  - {uses: get-script-presenter-can-say-without-stumbling, note: "Read every line of the step 3 script aloud and fix the ones nobody would say, without changing what they say or any number. Hand on the fixes and the whole script with them made."}
+  - {uses: get-shot-list-that-keeps-ad-moving, note: "Split the final script into clips of about 6 seconds, one scene each, and write a shot table per clip with 3 to 5 shots, carrying each continuity note into the next clip. Give any total of clips, shots or seconds by counting the tables."}
+  - {uses: keep-facebook-from-blocking-your-ads, note: "Check the final script, the on-screen words and the shot notes against Facebook and Instagram ad rules before anything is filmed or made, pointing to exact lines. State where the brand sells, ships or targets only if the brand file says so; otherwise write MISSING. Then close the run with a HAND-BACK SUMMARY: each step's file, the clip and shot count from the tables, any step not run and why, and every MISSING: line from all steps in one list."}
 origin: own
-version: 1.0.0
+version: 1.1.0

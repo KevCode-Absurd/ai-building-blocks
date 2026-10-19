@@ -19,4 +19,8 @@ example: static
 origin: own
 source_ids: [CES-122]
 old_name: script-format-static
-version: 1.0.0
+version: 1.1.0
+credits:
+  - {title: "Attention Capture and Transfer in Advertising: Brand, Pictorial, and Text-Size Effects", by: "Rik Pieters and Michel Wedel, Journal of Marketing", url: "https://doi.org/10.1509/jmkg.68.2.36.27794", used: "The picture draws the eye whatever its size; text needs size"}
+  - {title: "How To Write Meta Ads That Scale: Copywriting Masterclass", by: "Blue Sense Digital", url: "https://www.youtube.com/watch?v=LoL1w-k9Mgg", used: "The order of the argument's steps the main text follows"}
+  - {title: "Facebook Ads Guide: image ad specs", by: "Meta", url: "https://www.facebook.com/business/ads-guide/update/image", used: "4:5 Feed size, 27-character headline, primary text length"}

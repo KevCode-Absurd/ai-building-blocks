@@ -18,5 +18,10 @@ uses: [get-story-ads-read-with-the-right-picture]
 example: native
 origin: rebuilt
 source_ids: [CES-067]
-old_name: nightmare-scenario
-version: 1.0.0
+old_name: feared next step photo
+version: 2.0.0
+credits:
+  - {title: "Putting the Fear Back into Fear Appeals: The Extended Parallel Process Model", by: "Kim Witte, Communication Monographs", url: "https://doi.org/10.1080/03637759209376276", used: "Fear works only with a doable step; without one people look away"}
+  - {title: "Appealing to Fear: A Meta-Analysis of Fear Appeal Effectiveness and Theories", by: "Melanie B. Tannenbaum and others, Psychological Bulletin", url: "https://doi.org/10.1037/a0039729", used: "The review of 127 articles behind the gate's doable-step rule"}
+  - {title: "Privacy Violations and Personal Attributes", by: "Meta Transparency Center", url: "https://transparency.meta.com/policies/ad-standards/objectionable-content/privacy-violations-personal-attributes/", used: "No line about the reader, no health fears"}
+  - {title: "Facebook Ads Guide: image ad specs", by: "Meta", url: "https://www.facebook.com/business/ads-guide/update/image", used: "27-character line under the image"}

@@ -167,6 +167,15 @@ improve:
   - Save each brief to your brand file, one per buyer group, and update it when new reviews come in.
   - Pair it with "Open your sales copy the way your buyer needs" or "Openings that stop the right people scrolling", which both start from this brief.
 
+works_best_with:
+  tools:
+    - {name: "Claude", why: "Every current Claude model reads up to 1 million tokens, so a big pile of reviews and tickets fits in one chat."}
+    - {name: "Gemini", why: "Also takes long inputs, and works inside Google Sheets if your survey answers live there."}
+  inputs:
+    - "Cancellation reasons or refund notes, so the fear and habit forces have quotes"
+    - "Answers to 'what nearly stopped you buying?' from a short survey after purchase, so fears come from real words"
+    - "Competitor ads from the Meta Ad Library, so the market stage rests on what others promise"
+
 terms:
   - term: Buyer evidence
     meaning: Anything your buyers wrote or said in their own words, such as reviews, emails or survey answers.

@@ -1,14 +1,14 @@
 # Talking object video shots: for online stores
 
-Extra things to give it: a pack-front or out-of-pack photo, what it replaces, the visible result, what buyers tried before, and anything that must never be shown.
+Give it as well: a photo of the pack front and of the product out of the pack, what it replaces, whether the result can be seen, what buyers tried before, and anything never to show.
 
-Narrator ideas by product (examples to adapt):
+Narrator ideas by product (to adapt, not to copy):
 
-| Product | Witness | Thing it replaces | The problem |
+| Product | Witness | Has-been | Culprit |
 |---|---|---|---|
 | Bamboo bath mat | the towel rail | the soggy cotton mat | the puddle by the tub |
-| Descaling tablets | the empty mug on the shelf | the old limescaled kettle | the white crust inside the kettle |
-| Phone stand | the tangled charger cable | the stack of books propping up the phone | none (the result can't be seen) |
+| Descaling tablets | the mug on the shelf | the old kettle, furred inside | the white crust in the kettle |
+| Phone stand | the tangled charger cable | the pile of books propping the phone | none (nothing to see) |
 
-- The product stands at the edge of the frame, at true size against the object.
-- The object never states a price or offer. The offer text goes on the last shot, from the current offer.
+- The product stands at true size beside the object, label to camera, from its own photo.
+- The offer goes on the last shot as text, from the live offer. The object never says a price.

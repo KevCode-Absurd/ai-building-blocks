@@ -1,172 +1,205 @@
 new_slug: find-what-stops-visitors-buying-30-quick-checks
 name: "Find what stops visitors buying, in 30 checks"
-summary: "Paste your landing page text and a screenshot. You get 30 pass or fail checks and the five fixes to make first."
+summary: "Paste your page and the ad behind it. You get 30 yes-or-no checks, the deal-breakers flagged, and five fixes to make first."
 job: audit-landing-page
 
 headline: "Find what stops visitors buying, in 30 checks"
-subhead: Paste your page text, a phone screenshot of the first screen and, if you have them, the ad and your facts. It runs 30 checks in the order a buyer meets them (clarity, copy, offer, proof, friction, truth), quotes the evidence for each, and ranks the fixes.
+subhead: Paste your page text and phone screenshots, plus the ad that sends people there if you have it. It runs 30 yes-or-no checks at the five stops a buyer makes, quotes the evidence for each no, flags the deal-breakers, and lists the five fixes to make first.
 
 explain: |
-  Before a page goes live, or right after it flops, you need a quick, honest read of what's wrong. A gut feeling misses things, like the price being below the first screen on phones or a review nobody can trace.
+  Before a page goes live, or right after a bad week, you want a quick and honest pass that catches the obvious problems. A gut read misses things, like the renewal price sitting in small print or a sale that says "limited time" when it never ends.
 
-  This skill runs your page through 30 checks grouped the way a buyer meets the page. Clarity (does the headline say what I get?), copy (does it carry the ad's promise?), offer (is there a reason to buy now?), proof (are there real customer quotes?), friction (is the guarantee by the button?) and truth (is every number one you state?). Each check is pass, warn or fail, with a quote or location as evidence. The ten fail-level checks are the ones that most often cost sales or trust. Then it ranks the fixes by impact, confidence and ease, and names the first buyer need the page misses.
+  This skill walks your page the way a buyer does, in five stops. Arrive: is this what the ad promised? Understand: what exactly is it? Believe: why should I trust it? Commit: what will it cost me, and what if it goes wrong? Fine print: does anything feel off? Each stop has six checks, built from published shopper research, usability studies and the rules on pricing and reviews. Every check is yes, no or can't tell. Each "no" is tagged as a deal-breaker (the buyer can't buy, or would feel misled) or a drag. Deal-breakers come first in the fix list, then whatever sits highest on the page.
 
 when:
-  - A page is about to go live and you want a last check before spending on ads.
-  - A page just had a bad week and you want a quick idea of why before a deeper audit.
-  - You're reviewing someone else's page draft and want a structured way to give feedback.
+  - A page is about to go live and you want a last check before you spend on ads.
+  - A page just had a bad week and you want a quick read on why, before a deeper review.
+  - You're giving feedback on someone else's page and want a fair, structured way to do it.
 
 you_give:
-  - The page text, and a phone screenshot of the first screen if you can
-  - Whether it's a page you're building or one you captured from a link
-  - The ad that sends people there, for the continuity checks (optional)
-  - Your facts, such as approved claims, prices, banned claims, rating and guarantee, for the truth checks (optional)
+  - The page text, plus phone screenshots of the first screen and the buy area if you can
+  - The ad that sends people there, with its words and image (optional)
+  - Your real prices, offer terms, guarantee, delivery and returns terms, and the claims you may make (optional)
+  - A phone speed report for the page, such as PageSpeed Insights (optional)
 you_get:
-  - A two-line verdict naming the first buyer need the page fails
-  - A table of all 30 checks with result, evidence and fix
-  - The top five fixes, ranked by impact, confidence and ease
-  - A list of what it couldn't judge and what would let it
+  - A two-line verdict naming the stop where the page loses buyers
+  - All 30 checks with yes, no or can't tell, the evidence and a one-line fix
+  - A count of no's at each stop, so you see where the trouble clusters
+  - The five fixes to make first, deal-breakers at the top, and what it couldn't judge
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Paste the page text and attach a phone screenshot of the first screen.
-  - Paste the ad word for word, or the continuity checks are marked "not judged".
-  - Paste your approved and banned claims and your real prices, or the truth checks are marked "not judged".
-  - Fix the top five in order. Leave the warnings for a second pass.
+  - Paste the page text and attach phone screenshots, top to bottom.
+  - Paste the ad word for word. Without it, the first three checks are marked can't tell.
+  - Paste your real terms and claims, so it can spot where the page says something different.
+  - Make the five fixes, then run it again on the new page. The deal-breakers should be gone.
 
 how_it_works:
-  - title: Checks clarity
-    text: Nine checks, such as whether the headline states the outcome and the price shows without scrolling on a product page.
-  - title: Checks the copy
-    text: Seven checks, such as whether the first screen carries the ad's promise and the headings say what the buyer gets.
-  - title: Checks the offer
-    text: Four checks, such as a real offer worth acting on and savings shown in money.
-  - title: Checks the proof
-    text: Three checks, such as at least three real, traceable customer quotes.
-  - title: Checks friction
-    text: Three checks, such as the guarantee or returns line sitting under the main button.
-  - title: Checks the truth
-    text: Four checks, such as every number being one you state, no banned claim and no made-up urgency.
+  - title: Arrive
+    text: Six checks on the first phone screen. Does it repeat the ad's words, product and offer, and can a stranger tell what it is in five seconds?
+  - title: Understand
+    text: Six checks on what you get, how you use it, whether it fits, the photos, and whether the headings alone carry the main reason to buy.
+  - title: Believe
+    text: Six checks on reviews near the button, one rating with its count, critical reviews you can read, proof beside each claim, and who is selling.
+  - title: Commit
+    text: Six checks on the full price, shipping cost, a delivery date, returns near the button, how to cancel, and what checkout will ask for.
+  - title: Fine print
+    text: Six checks on crossed-out prices, deadlines, matching discount numbers, nothing ticked in advance, text size and phone speed.
   - title: Ranks the fixes
-    text: Scores each fix on impact, confidence and ease out of 10 and ranks by multiplying the three.
+    text: Deal-breakers first, then whatever sits higher on the page, then the quicker fix. Colour and style come last.
 
 output_shape: |
   VERDICT
-  <the first buyer need the page fails to meet, in 2 lines>
+  <the stop where the page loses buyers, and the check that shows it>
 
   CHECKS
-  #  | Check | Result (pass / warn / fail / not judged) | Evidence | Fix
-  1  | Headline states the outcome | <...> | "<quote>" | <one line>
-  ...
-  30 | No long dashes | <...> | <...> | <...>
+  # | Check | Yes / No / Can't tell / Doesn't apply | Deal-breaker or drag | Evidence | Fix
+  STOP 1 ARRIVE       1 to 6
+  STOP 2 UNDERSTAND   7 to 12
+  STOP 3 BELIEVE      13 to 18
+  STOP 4 COMMIT       19 to 24
+  STOP 5 FINE PRINT   25 to 30
 
-  TOP 5 FIXES  (impact x confidence x ease)
-  1 <fix>  <I> x <C> x <E> = <score>
+  NO'S BY STOP
+  Arrive <n>  Understand <n>  Believe <n>  Commit <n>  Fine print <n>
 
-  NOT JUDGED
-  <check>: <what you'd need to judge it>
+  FIRST FIVE FIXES
+  1 <fix>  (check <n>, <deal-breaker or drag>, <where on the page>)
+
+  CAN'T TELL
+  <check>: <what would let you judge it>
 
 example:
   business: sprout
   input: |
     [the skill]
 
-    The page: Sprout's main product page, captured from the live link as
-    text, top to bottom (sprout/product-page.md). No screenshot.
+    The page: Sprout's main product page, as text top to bottom
+    (sprout/product-page.md). No screenshots, no speed report.
 
     The ad: "'Sprout is too expensive': here's 61% off to prove otherwise"
 
-    Facts: sprout/brand.md, including the "risky or unsupported" claims
-    table and the real prices and guarantee terms.
+    Facts: sprout/brand.md, with the real prices, the guarantee terms
+    and the table of risky or unsupported claims.
   output: |
     VERDICT
-    The page fails the first thing a buyer checks: the ad promised 61%
-    off and the page says 52%, "up to 55%" and 55%.
+    Buyers are lost at stop 1. The ad promised 61% off, and the page
+    shows 52%, "up to 55%" and 55% (check 3).
 
-    CHECKS
-    #  Result      Evidence                                   Fix
-    1  fail        Headline "Sprout Superfood Gummies"         State the outcome
-    2  warn        "revive whole body vitality"                Say what's in a pack
-    3  warn        "$1.07/day" is the first box only           Real reason or none
-    4  warn        "4.8/5.0 (100,000)"; widget says 4.75       One rating, sourced
-    5  not judged  First screen not captured                   Phone screenshot
-    6  not judged  Price likely below first screen (inferred)  Phone screenshot
-    7  pass        Product page for buyers who know the brand
-    8  not judged  Gallery not captured
-    9  n/a         Product page
-    10 fail        Ad 61%, bar 52%, badge 55%                  One number everywhere
-    11 warn        Bullets: clarity, energy, immunity, stress,
-                   digestion, absorption                       One reason to buy
-    12 pass        "Snackable, Packable, Tested"
-    13 pass        Free shipping kept to bar and plan box
-    14 warn        FAQ has no taste, Sugar-Free or cancel Q    Add those three
-    15 warn        "Supports immunity" has no backing          Cut it
-    16 n/a         Not a long page
-    17 pass        Subscribe $29.99 against one-time $66.65
-    18 warn        "UP TO 55% OFF", over 30%                   Lead with value
-    19 pass        $66.65 crossed out, $29.99 shown
-    20 n/a
-    21 pass        Review cards and live widget
-    22 warn        Reviews at the very bottom                  Move 3 by the button
-    23 pass        Widget shows customers' own words
-    24 warn        Guarantee shown, "first order only" hidden  Add "first order"
-    25 not judged  Sticky button not captured
-    26 warn        "Sign Up for 55% Off" pop-up, timing unknown Delay it
-    27 fail        "21" and "over 20" vitamins; a stat with
-                   its number missing                          Fix or remove
-    28 fail        "Promotes mental clarity + energy" is on
-                   the brand's own risky list                  Remove
-    29 fail        "Limited Time Sale" beside a price cut
-                   "Not just for a week but indefinitely"      Drop "Limited Time"
-    30 pass        No long dashes seen
+    STOP 1 ARRIVE
+    1  No, drag     "Sprout Superfood Gummies" says nothing about price,
+                    which the ad was about. Fix: lead with the real price
+    2  Can't tell   Ad image and gallery not captured
+    3  No, DEAL     Ad 61%; bar "Save 52%"; badge "UP TO 55% OFF"
+                    Fix: one real first-order offer, the same everywhere
+    4  No, drag     From text only: "Superfood" doesn't say greens
+                    Fix: say greens, vitamins and fiber in one daily pack
+    5  No, drag     "Start Now" doesn't say what you get. Position can't
+                    tell. Fix: "Start my first box"
+    6  Can't tell   "Sign Up for 55% Off" pop-up, timing unknown
+    STOP 2 UNDERSTAND
+    7  Yes          "28 packs each 4 weeks"
+    8  Yes          Directions panel: one pack a day
+    9  Yes          Flavour tile, 28 packs, one pack a day
+    10 Can't tell   Gallery not captured
+    11 Yes          "Snackable, Packable, Tested", "Quality You Can Trust"
+    12 No, drag     Bullets: clarity, energy, immunity, stress, digestion,
+                    absorption. Fix: one reason first, the rest under it
+    STOP 3 BELIEVE
+    13 No, drag     Reviews sit at the very bottom
+                    Fix: three reviews next to the plan box
+    14 No, drag     4.8 (100,000) at the top, 4.75 (109,639) in the widget
+                    Fix: one rating, its count and its source
+    15 Yes          Widget shows newest first, including "the taste is off."
+    16 No, DEAL     "Promotes mental clarity + energy" is on the brand's
+                    risky list; the study measured 2 vitamins
+                    Fix: remove until a claims check backs it
+    17 Yes          Paid athlete is disclosed in small print
+    18 Can't tell   Footer contact details not captured
+    STOP 4 COMMIT
+    19 No, DEAL     "$29.99" with "DISCOUNT AUTO-APPLIED"; the text sign-up
+                    condition is in the footer; "Renews at $49.99" is small
+                    Fix: "$29.99 first box with text sign-up, then $49.99
+                    every 4 weeks" in the plan box
+    20 No, drag     One-time says "No Free Shipping" but no cost
+                    Fix: state the shipping cost
+    21 Yes          FAQ: ships within 24 hours, arrives in 3 to 5 days
+    22 No, DEAL     "30-Day Money-Back Guarantee"; "first order only" is in
+                    the last FAQ. Fix: "on your first order" by the button
+    23 No, drag     "Pause Or Cancel Any Time" with no steps
+                    Fix: one line on how to cancel
+    24 Can't tell   Checkout not captured
+    STOP 5 FINE PRINT
+    25 Yes          $66.65 crossed out is the real one-time price
+    26 No, DEAL     "Limited Time Sale" in the bar; the price cut is "Not
+                    just for a week but indefinitely". Fix: drop "Limited Time"
+    27 No, DEAL     52%, 55% and "up to 55%" on one visit (same fix as 3)
+    28 Yes          No add-ons seen ticked. Subscribe looks pre-selected
+                    (inferred), which is a plan choice, not an extra
+    29 Can't tell   No phone screenshots
+    30 Can't tell   No speed report
 
-    TOP 5 FIXES  (impact x confidence x ease)
-    1 Plan box says "$29.99 first box with text sign-up, then $49.99
-      every 4 weeks"                                  8 x 8 x 9 = 576
-    2 One discount number, matching the ad            9 x 9 x 7 = 567
-    3 "30-day money-back guarantee on your first order" 6 x 9 x 10 = 540
-    4 Remove "Limited Time Sale"                      6 x 8 x 10 = 480
-    5 Remove the three unbacked claims from the bullets 7 x 8 x 8 = 448
+    NO'S BY STOP
+    Arrive 4  Understand 1  Believe 3  Commit 4  Fine print 2
 
-    NOT JUDGED
-    Checks 5, 6, 8, 25: need a phone screenshot of the first screen and a
-    scroll past it. Check 26: needs the pop-up's timing.
+    FIRST FIVE FIXES
+    1 One discount number that matches the ad (checks 3 and 27, top bar)
+    2 Drop "Limited Time Sale" (check 26, top bar)
+    3 Pull the unbacked claims from the bullets (check 16, first screen)
+    4 Full price and renewal together in the plan box (check 19)
+    5 "On your first order" beside the guarantee line (check 22)
+
+    CAN'T TELL
+    Checks 2, 6, 10 and 29: phone screenshots from top to bottom.
+    Check 18: the footer. Check 24: checkout up to payment.
+    Check 30: a PageSpeed Insights report on a phone.
     MISSING: which discount is the real first-order offer
 
 tweaks:
   - what: The ad
-    how: Add it and the continuity checks (the first screen carries the ad's promise, offer and product) get judged instead of skipped.
+    how: Add it and the first three checks compare the page with it. Without it they're marked can't tell.
   - what: Your facts
-    how: Add your claims list and real prices and the four truth checks can run. Without them it lists which numbers on the page need a source.
-  - what: Building or captured
-    how: Say "I'm building this page" and it can judge things like the image slots and button text you control. A captured page is judged only on what's visible.
+    how: Add your real prices, terms and claims list. Check 16 can then catch claims you're not allowed to make, and check 27 can tell which discount is the real one.
+  - what: A checkout screenshot
+    how: Add one, stopping before payment. Check 24 then shows whether guest checkout and express ways to pay are there.
   - what: Product page add-on
-    how: For a product page in an online store, the store add-on adds checks for the variant picker, delivery and returns near the price, and subscription terms.
+    how: For an online store, the store add-on explains how some checks read on a product page, such as the grey add-to-cart button when no option is picked.
 
 judge:
-  - Every fail and warn quotes the page or says where on the page.
-  - The verdict names one buyer need, not a list.
-  - No fix adds a fact, rating or offer you didn't supply.
-  - Checks it couldn't see are marked "not judged", not passed.
-  - There's no overall score or percentage. The checks point to fixes, they don't predict sales.
+  - Every "no" quotes the page or says where it is.
+  - Checks it couldn't see are marked can't tell, never yes.
+  - The verdict names one stop, not a list.
+  - No fix adds a rating, count, price, offer or deadline you didn't supply.
+  - There's no score or percentage. The counts show where trouble clusters, nothing more.
 
 test:
-  - Run it on an old version of a page you've since fixed. The problems you fixed should come back as fails or warns.
-  - Leave out the ad. Check 10 and the other carry-on-from-the-ad checks should say "not judged", not pass.
-  - Run it twice on the same page. The fail results should match both times.
-  - Check every quote in the evidence column against your page. A quote that isn't on the page means it guessed.
+  - Run it on an old version of a page you've since fixed. The problems you fixed should come back as no's.
+  - Leave out the ad. Checks 1 to 3 should say can't tell, not yes.
+  - Run it twice on the same page. The deal-breakers should match both times.
+  - Check every quote in the evidence against your page. A quote that isn't on the page means it guessed.
 
 improve:
-  - Add checks your market needs (a size guide for clothing, a dosage line for supplements) and mark each one fail or warn. If you add or remove checks, change "30" in the skill's name and title.
-  - Change the discount limit in check 18 (under 30%) to match your own pricing rules.
-  - Paste your banned claims and real prices into the skill's "Facts" line once, so the truth checks run every time.
-  - Save each verdict and top five fixes, with the date, in your brand file, so you can see what you fixed last time.
-  - Pair it with a ranked page review when you want fixes in buyer order, and a full audit with your sales numbers when you need to know what each fix is worth.
+  - Add a check your market needs to the right stop, such as a size chart for clothing under Understand, and keep the count in the name true.
+  - Paste your real prices, terms and claims into "Your facts" in the skill once, so checks 16, 25 and 27 run every time.
+  - Save each verdict and its five fixes, with the date, in your brand file, so the next pass shows what you fixed.
+  - Pair it with "Know what to fix first on your page" when you want a deeper review ranked by severity, and with "Find where your page loses buyers, and what to fix" once you have sales numbers.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI that reads images", why: "It can judge the first-screen and phone checks from your screenshots instead of guessing from text."}
+    - {name: "PageSpeed Insights", why: "Free from Google. It gives the phone speed numbers check 30 needs from just the page's address."}
+  inputs:
+    - "Phone screenshots from top to bottom, taken on a real phone, so the first-screen checks aren't guesses"
+    - "The ad that sends the most traffic, word for word with its image, for the three arrival checks"
+    - "Your shipping, returns and subscription terms as written in your policies, to compare with the page"
+    - "A screenshot of checkout up to the payment step, so check 24 can be judged"
 
 terms:
-  - term: Pass, warn, fail
-    meaning: Fail checks are the ones that most often cost sales or trust. Warn checks are worth fixing next.
-  - term: Risk reversal
-    meaning: Anything that takes the risk off the buyer, such as a money-back guarantee or free returns.
-  - term: Sticky button
-    meaning: A buy button that stays on screen on a phone as the visitor scrolls.
+  - term: Deal-breaker
+    meaning: A problem that stops a buyer, or would make them feel misled after paying.
+  - term: Drag
+    meaning: A problem that costs some buyers or slows them down, but doesn't stop the sale on its own.
+  - term: First screen
+    meaning: What shows on a phone before you scroll.
+  - term: Free-shipping threshold
+    meaning: The order amount you must reach before shipping becomes free.

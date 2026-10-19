@@ -18,10 +18,10 @@ outputs:
   - {type: audit_report}
 uses: [turn-website-into-brand-file-for-ai, find-why-customers-buy-in-their-words, get-one-image-ad-ready-to-make, stop-image-tools-redrawing-your-product-and-words, catch-mistakes-in-your-ad-before-you-pay]
 steps:
-  - {uses: turn-website-into-brand-file-for-ai, note: "Build your brand file: facts, voice, current offers and the claims you can make."}
-  - {uses: find-why-customers-buy-in-their-words, note: "Find the reasons people buy, with your customers' exact words."}
-  - {uses: get-one-image-ad-ready-to-make, note: "Write the words and plan the picture and layout for each ad."}
-  - {uses: stop-image-tools-redrawing-your-product-and-words, note: "Turn each ad plan into an image prompt that keeps your real product and your exact words."}
-  - {uses: catch-mistakes-in-your-ad-before-you-pay, note: "Check every ad before it goes live, and list what a person still has to look at."}
+  - {uses: turn-website-into-brand-file-for-ai, note: "Read the site, tag every fact by where it came from, and write the eight brand files, with offers, prices and claims word for word. For the one check-in: if the person isn't there to answer, list each fact to confirm as a MISSING line and carry on with tagged facts only."}
+  - {uses: find-why-customers-buy-in-their-words, note: "Copy out every phrase that shows why people switched, word for word with its review number, tag its force, count separate people and rank the reasons. A reason is a pattern only at 5 people across 2 kinds of source; say so when it isn't."}
+  - {uses: get-one-image-ad-ready-to-make, note: "Use the brand file and the ranked reasons. Plan each ad the brief asks for: the one sentence it argues, the buyer (New, Warm or Ready), one claim, what the picture must prove, the layout, the words on the image and the feed copy with exact character counts, and the proof and gaps. Give each ad a different reason or ad type, and keep unverified quotes out."}
+  - {uses: stop-image-tools-redrawing-your-product-and-words, note: "Turn each approved ad plan from step 3 into one prompt per shape, with the approved words exactly, the real product's look from the brand file, and each reference photo named by its job. A missing photo is MISSING, never described from memory."}
+  - {uses: catch-mistakes-in-your-ad-before-you-pay, note: "Check every ad plan and prompt before it goes live: list stop-ship mistakes with the fix, anything worth a look with the number or quote, and what only a person can judge on a phone, then give the next action. Then close the run with a HAND-BACK SUMMARY: each step's file, any step not run and why, and every MISSING: line from all steps in one list."}
 origin: own
-version: 1.0.0
+version: 1.1.0

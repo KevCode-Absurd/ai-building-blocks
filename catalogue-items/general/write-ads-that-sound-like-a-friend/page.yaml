@@ -9,7 +9,7 @@ subhead: Give it the reason for the ad (who it's for, what they want, what stops
 explain: |
   Ads written by marketers, and by AI, tend to sound the same. Clipped fragments, a question the ad answers itself, a slogan at the end, three adjectives in a row. Readers spot it in a second and scroll on. Others drop in facts for no reason, or claim more than the proof shows.
 
-  This skill sets the rules for any ad: a video of one person talking to a phone camera, a founder video, an image ad, a long narrated video or an animated story. Before writing a line, it settles one thread, meaning who is speaking, about what moment, and where the product comes in. Then it tells that story in plain speech, brings each fact in only when the story needs it, uses customer words without reciting reviews, and keeps the length to what this buyer needs. Anything it can't prove becomes a [placeholder].
+  This skill sets the rules for any ad: a video of one person talking to a phone camera, a founder video, an image ad, a long narrated video or an animated story. Before writing a line, it settles one thread: the speaker, the scene they're talking about, and the point where the product arrives. Then it tells that story the way people talk, with joined sentences instead of clipped fragments. Each fact comes in only when the story needs it, and customer words are borrowed without reciting reviews. The length fits what this buyer needs, and anything it can't prove becomes a [placeholder].
 
 when:
   - You're writing a script or ad and want it to sound like a person, not a brand.
@@ -37,7 +37,7 @@ how_it_works:
   - title: Says it like a person
     text: Reads every line aloud in its head. Anything a person wouldn't say to a friend gets said the plain way, with no stock phrases.
   - title: Picks one thread
-    text: Decides in one sentence who is speaking, about what moment, and where the product comes in.
+    text: Names, in one sentence, the speaker, the scene and the point where the product arrives.
   - title: Moves the story
     text: Life with the problem, what they tried, the turn, the product as the way across, life after, then one next step.
   - title: Sticks to the facts
@@ -47,11 +47,11 @@ how_it_works:
   - title: Fits the voice
     text: Keeps brand slogans out of a speaker's mouth and uses brand style only where a line takes it naturally.
   - title: Sets the length
-    text: As long as this buyer needs. A buyer who doesn't know the problem gets the longest ad; a buyer who knows the product the shortest.
+    text: Strangers to the problem get the longest ad, and people who already know the product get the shortest.
 
 output_shape: |
   THREAD
-  <one sentence: who is speaking, about what moment, and where the
+  <one sentence: the speaker, the scene, and where the
   product comes in>
 
   SCRIPT
@@ -131,7 +131,7 @@ tweaks:
   - what: How much the buyer knows
     how: For a buyer who doesn't know the problem yet, it writes the long story of the problem. For a buyer who knows your product, it answers their one doubt and makes trying safe.
   - what: Who speaks
-    how: A real founder can say "I" and "we". An AI-made presenter can tell a story as someone like the buyer, but never as a named customer, the founder or an expert, and never quotes a figure or review.
+    how: A real founder can say "I" and "we". An AI-made presenter can tell a story as someone like the buyer, but it can't pose as a real customer, the founder or an expert, and it never quotes a figure or review.
   - what: A draft
     how: Paste a draft and say "review". You get each failing line, the rule it breaks and a plain replacement instead of a new ad.
 
@@ -149,11 +149,21 @@ test:
   - Find every number and quote in the result. Each one should be in your brand file, or show as a [placeholder].
 
 improve:
-  - Paste your voice notes and never-say list into step 6 of the skill file, so the voice rules travel with it.
+  - Paste your voice notes and never-say list into step 7 of the skill file, so the voice rules travel with it.
   - Delete the format notes you never use and keep yours, for example only "One image ad" and "One person talking to a phone camera".
   - Add your buyers' own words for the problem to step 4, so it borrows them without you pasting reviews each time.
   - Write your usual length for each kind of buyer into step 8, so it stops guessing.
-  - Pair it with "Know how your ad should open and ask" to set the length and the ask, and run "Stop your copy from sounding like AI" on the result.
+  - Pair it with "Fit your ad to what your buyer already knows" to set the length and the ask, and run "Stop your copy sounding like AI" on the result.
+
+works_best_with:
+  tools:
+    - {name: "Claude", why: "Writes in a natural spoken voice and follows a long rule file like this one closely."}
+    - {name: "Any good chat AI", why: "Any strong chat AI can follow these rules if you give it real buyer words."}
+  inputs:
+    - "Ten reviews in your buyers' own words, so the speaker borrows real phrases"
+    - "A transcript of a real customer or founder talking about the product, so spoken lines sound like a person"
+    - "Your never-say list and two lines your brand already uses, so the voice fits"
+    - "The length range that worked for each kind of buyer before, so it doesn't guess"
 
 terms:
   - term: Thread

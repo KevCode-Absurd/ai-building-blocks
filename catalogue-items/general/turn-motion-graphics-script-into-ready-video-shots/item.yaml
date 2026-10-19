@@ -1,7 +1,7 @@
 slug: turn-motion-graphics-script-into-ready-video-shots
 renamed_from: motion-graphics-video-ad-director
 name: "Turn your motion graphics script into ready-to-make video shots"
-summary: "A design card, storyboard, and wordless plate and clip prompts, plus every word to set in editing."
+summary: "A layer-by-layer build sheet per shot, for an editor or code, with every word and number exact and video models kept wordless."
 category: general
 boards: [ecommerce]
 type: skill
@@ -19,5 +19,8 @@ uses: [get-motion-graphics-ad-script-that-sells]
 example: motion-graphics
 origin: rebuilt
 source_ids: [CES-051]
-old_name: motion-graphics-animation
-version: 1.0.0
+version: 2.0.0
+credits:
+  - {title: "Executing UX Animations: Duration and Motion Characteristics", by: "Page Laubheimer, Nielsen Norman Group", url: "https://www.nngroup.com/articles/animation-duration/", used: "Ease out to enter, ease in to leave, moves under half a second, a timeline spec per element"}
+  - {title: "Prompting videos with coding agents", by: "Remotion", url: "https://www.remotion.dev/docs/ai/claude-code", used: "Building the ad in code with Claude Code"}
+  - {title: "Meta Ads Safe Zones: A Guide to the 2026 Unified Creative Updates", by: "Dovile Miseviciute, Billo", url: "https://billo.app/blog/meta-ads-safe-zones", used: "The safe area of a 9:16 canvas"}

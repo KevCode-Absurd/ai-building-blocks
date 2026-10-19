@@ -1,37 +1,40 @@
-# Founder interview: for online stores
+# Founder call: for online stores
 
-## Extra things to ask for before the call
-Ask the founder to have the product, in its packaging, on the desk. Ask for five photos of each product before the call (listed below) and any size, materials or ingredients documents.
+## Ask for these before the call
+The product itself on the desk, in the box it ships in. Five plain photos per product you'll advertise: the pack front as sold, the product out of the pack, in a hand or on a body for size, in use, and a close view of the surface. Any spec sheet, ingredient list or materials list. Note which photos are missing.
 
-## Product questions nothing else can answer
-Always ask these for the main product, then for each product you'll advertise.
-- **Looks like (core).** Take it out of its packaging and hold it. Shape, colour, shiny or matt, soft or hard, size next to your hand (or on a person, if worn).
-- **Pack.** What it arrives in (box, pouch, bottle, jar, bag, sleeve), its colour, and the words printed largest on the front, top to bottom.
-- **How it's used (core).** Show it one step at a time, as if we'd never seen it: where it opens, what comes out or goes on, what you do, how long it takes, what's left or put away. Ask the founder to hold it to the camera and use it once, talking it through. Write down the order and which hand does what. The recording is a handling reference, not ad footage, unless the founder agrees to it being used.
-- **Moves and sounds.** Two to four real movements (pours, tears, clicks, fizzes, folds, zips) and the sound of each.
-- **Visible result.** How long before a customer notices, and could a camera see it now, in a week, in a month, or is it only felt? "Nothing to see" is a useful answer.
-- **Never show.** The most common wrong use, and what pictures of it usually get wrong (held, opened, worn or served in a way that never happens; wrong amount, colour or size).
-- **Five photos (core).** The pack from the front as sold; out of the pack; in a hand or on a person; in use; a close view of the surface. Note which ones are missing.
+## Questions only the product can answer
+Ask these for the main product first, then each product you'll advertise. Starred ones need the call.
 
-## Used up or bought once
-Listen for different answers:
+- **What it looks like.*** With it in their hand: shape, colour, shine or matt, soft or firm, size against a hand or a body.
+- **The pack.** What it ships in (box, pouch, jar, bottle, sleeve, bag), its colour, and the biggest words on the front, read top to bottom.
+- **How it's used.*** Ask them to hold it up to the camera and use it once, talking through each step: where it opens, what comes out or goes on, what each hand does, how long it takes, what's put away. This recording is a reference for image and video work, not ad footage, unless they say it may be used.
+- **Moves and sounds.** Two to four real movements (it pours, tears, clicks, zips, folds, fizzes) and how each sounds.
+- **What changes, and when.** How soon a buyer notices, and whether a camera could see it on day one, in a week, in a month, or never. "You can't see it" is a useful answer.
+- **What pictures get wrong.** The common wrong use, and how drawings or AI images usually get it wrong: opened in the wrong place, held or worn in a way nobody does, the wrong size or colour.
 
-| Question | Used up (cream, snack, supplement) | Bought once (pan, jacket, bag) |
+## Repeat buys and one-time buys get different questions
+
+| Ask about | Used up and bought again (snacks, skincare, supplements) | Bought once and kept (pans, jackets, bags) |
 |---|---|---|
-| What they notice and when | Often felt, not seen, after days or weeks | Often seen at once (fit, finish), and again after a year |
-| How it's used | A short daily routine | First use, care and storage differ |
-| Guarantee, returns, warranty | Money back on the first order | Returns, size exchanges, a warranty in years; ask how often each is used |
-| After the first order | How long one unit lasts, subscription, pausing | How long it lasts, and what they buy next (second colour, accessory, a gift) |
-| Why people leave | Stopped using it, cancelled, didn't reorder | Sent it back, never bought the second thing |
-| What the sale is lost to | Doing nothing, or the brand they already buy | Keeping the one they already own |
+| The first sign it works | Usually felt over days or weeks | Usually seen straight away, then again after a year of use |
+| Use | A daily habit: when, where, how long | First use, cleaning, storing |
+| Promises | A first-order refund | Returns, size swaps, a warranty in years, and how often each is claimed |
+| What comes next | How long a pack lasts, subscribing, pausing | What they buy next: a second colour, a spare part, a gift |
+| Why people stop | They forgot it, cancelled or never reordered | They sent it back, or never came back |
+| The real rival | Doing nothing, or the brand already in the cupboard | The old one they already own |
 
-## Store money and honesty questions
-- Cost to make one unit and cost to ship an order (if they're willing to share).
-- Stock, shipping and last-order-date limits in the next 90 days.
-- Retailer or marketplace logos, certification marks and exact trademark spellings.
+## Money and limits
+- Cost to make one unit and to ship one order, if they'll share it.
+- Stock, shipping and last-order dates over the next 90 days.
+- Retailer and marketplace logos, certification marks, and the exact spelling of every trademark.
 
-## Where answers go (extra)
-Looks like, Pack, How it's used, Visible result, Moves and sounds, Never show and reference photos go to the product's entry in the brand file. A step that must never be shown wrongly also goes on the list of creative mistakes to avoid. Brand world (places, surfaces, light, people, what's never in frame) and Motion and sound go to brand guidelines.
+## Where the extra answers go
+- Looks, pack, use, moves and sounds, what changes, what pictures get wrong, and the photos: that product's entry in `offers.md`.
+- A step that must never be shown wrong: also the house rules in `00-start-here.md` and the mistakes list from "Stop paying for the same AI mistake twice".
+- Places, surfaces, light, people, what's never in frame, pace and sound: `voice-and-look.md`.
+- Stock and shipping limits: `log.md`, Recent changes.
+- Costs, logos and trademarks: `offers.md` and `proof-and-claims.md`.
 
-## Before the first picture
-No picture or video of a product is made until Looks like, How it's used and the five photos are answered for it, or the output is marked "product not confirmed". Where a photo, the founder's words and a description written from file names disagree, the photo wins, then the founder's words. Ask.
+## No product picture before this
+Don't make a picture or clip of a product until its looks, its use and its five photos are on file, or label the work "product not confirmed". When a photo, the founder's words and a file name disagree, trust the photo, then the founder, and ask.

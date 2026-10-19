@@ -16,7 +16,13 @@ outputs:
   - {type: image_prompt}
 uses: [get-story-ads-read-with-the-right-picture]
 example: native
-origin: own
+origin: rebuilt
 source_ids: [CES-059]
-old_name: candid-moment
-version: 1.0.0
+old_name: everyday moment photo
+version: 2.0.0
+credits:
+  - {title: "Henri Cartier-Bresson", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Henri_Cartier-Bresson", used: "The decisive moment: the one instant a situation reads at a glance"}
+  - {title: "Banner Blindness Revisited: Users Dodge Ads on Mobile and Desktop", by: "Kara Pernice, Nielsen Norman Group", url: "https://www.nngroup.com/articles/banner-blindness-old-and-new-findings/", used: "Why ad-looking pictures get skipped"}
+  - {title: "The Role of Expectancy and Relevancy in Memory for Verbal and Visual Information: What Is Incongruency?", by: "Susan Heckler and Terry Childers, Journal of Consumer Research", url: "https://doi.org/10.1086/209275", used: "The stop check: unexpected and relevant together"}
+  - {title: "Facebook Ads Guide: image ad specs", by: "Meta", url: "https://www.facebook.com/business/ads-guide/update/image", used: "27-character line under the image; 4:5 Feed size"}
+  - {title: "Privacy Violations and Personal Attributes", by: "Meta Transparency Center", url: "https://transparency.meta.com/policies/ad-standards/objectionable-content/privacy-violations-personal-attributes/", used: "The line never says what the reader has"}

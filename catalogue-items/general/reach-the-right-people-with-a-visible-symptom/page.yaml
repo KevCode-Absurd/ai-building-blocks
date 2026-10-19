@@ -140,6 +140,15 @@ improve:
   - Add your claim limits (for example "supports", never "fix") to the check list, so the flags catch risky copy every time.
   - Pair it with the everyday snapshot skill. When this one stops, the snapshot makes the picture it hands over.
 
+works_best_with:
+  tools:
+    - {name: "GPT Image 2.5", why: "Its thinking mode plans the frame before it draws, which helps a close-up keep the routine in view."}
+    - {name: "Nano Banana 2.1", why: "Holds the scene steady while you ask for small fixes, such as flatter light or less smooth skin."}
+  inputs:
+    - "A plain description of what an ordinary case looks like, from a health or brand source, so the amount shown is true"
+    - "The moment buyers say they notice it, quoted from reviews or tickets, so the scene is a real one"
+    - "Past brand photos that show skin, so the light and framing match what you've already approved"
+
 terms:
   - term: Before-and-after
     meaning: A pair of pictures showing a problem and then its fix. It counts as a result claim, and platforms restrict it.

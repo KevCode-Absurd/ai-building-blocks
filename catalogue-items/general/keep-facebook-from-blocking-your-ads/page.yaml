@@ -9,7 +9,7 @@ subhead: Paste the ad's words, describe the image or video, and add the landing 
 explain: |
   Meta reviews every ad before it runs, and rejected ads cost you time, while borderline ones can get your account flagged. The rules are long, spread across many pages and change often, so it's easy to miss that a supplement ad needs 18+ targeting or that "Are you tired all the time?" breaks a rule about telling people what they are.
 
-  This skill reads your ad against a digest of Meta's Advertising Standards, written from the published pages as read in October 2026. It picks the rule areas that matter for your kind of product, quotes the exact line or spot that's a problem, and rates each finding as "would reject", "needs a restriction" (such as age targeting) or "warning". You get one of three verdicts and the fixes. It is a careful reading of the rules, never Meta's decision, so confirm anything important on Meta's live policy pages.
+  This skill reads your ad against a digest of Meta's Advertising Standards, written from the published pages as read on 19 October 2026 and grouped the way Meta's own page groups them, so you can look up any finding. It picks the rule groups that matter for your kind of product, quotes the exact line or spot that's a problem, and rates each finding as "would reject", "needs a restriction" (such as age targeting) or "warning". You get one of three verdicts and the fixes. It is a careful reading of the rules, never Meta's decision, so confirm anything important on Meta's live policy pages.
 
 when:
   - You're about to launch ads for a supplement, food, cosmetic or anything health-related.
@@ -17,13 +17,13 @@ when:
   - You've written a strong claim and want to know if it crosses a line before you spend money on images.
 
 you_give:
-  - The ad's main text, headline, description and button
-  - The image described, or the video's key frames or script
+  - The ad's words (main text, headline, description and button), or a video script, or both
+  - The image described, or the video's key frames (optional, but some checks need it)
   - The landing page text and offer (optional, but some checks need it)
   - What you sell, the countries and the age range you target (optional)
 you_get:
   - A verdict (ready to run, fix first, or likely rejected) and the main reason
-  - A table of findings with the rule area, the exact spot, the problem and the fix
+  - A table of findings with the rule group, the exact spot, the problem and the fix
   - Settings to change outside the ad, such as age targeting
   - What passed, and what it couldn't check without more information
 
@@ -35,12 +35,12 @@ how_to_use:
   - Fix the "would reject" lines first, then set any restrictions in Ads Manager, then decide on the warnings.
 
 how_it_works:
-  - title: Picks the rule areas
-    text: Starts with the areas that matter for your product. For supplements, food and cosmetics that usually means health claims, offer terms, personal attributes and body image.
+  - title: Picks the rule groups
+    text: Starts with the groups that matter for your product. For supplements, food and skincare that usually means health and wellness, commercial practices, personal attributes, eating disorders and relevance.
   - title: Judges only what it can see
     text: Checks the words and pictures in the ad. Anything that depends on targeting, licences or the landing page is marked as such and never rated "would reject" on its own.
   - title: Writes each finding
-    text: Names the rule area, quotes where it is, says what's wrong in plain words and gives the fix.
+    text: Names the group and rule, quotes where it is, says what's wrong in plain words and gives the fix.
   - title: Rates how serious it is
     text: Uses "would reject" for a clear breach, "needs a restriction" for something fixed by a setting, and "warning" for a line a reviewer could read either way.
   - title: Gives the verdict
@@ -53,7 +53,7 @@ output_shape: |
   Main reason: <one line>
 
   FINDINGS
-  <n> <rule area> | <where: quote, spot or second> | <how serious>
+  <n> <group and rule> | <where: quote, spot or second> | <how serious>
     <what's wrong, in plain words>
     Fix: <the change>
 
@@ -61,7 +61,7 @@ output_shape: |
   <age, countries, permissions, disclaimers>
 
   PASSED
-  <areas checked and found fine>
+  <groups checked and found clear>
 
   COULD NOT CHECK
   <what needs the page, the account or the targeting>
@@ -103,25 +103,27 @@ example:
       "Hot Girl Tummy" can read as a comment on how a body looks.
       Fix: drop "Fix" and the slang, and use your own allowed claim,
       "Supports digestion and gut health".
-    3 Personal attributes | main text "Feeling off in your gut
-      lately?" | Warning
+    3 Privacy and personal attributes | main text "Feeling off in
+      your gut lately?" | Warning
       A question about the viewer's gut implies the ad knows their
       health.
       Fix: describe the product and who it's for, for example "For
       people who want an easy daily fiber habit."
-    4 Deceptive commercial practices | on-image "up to 61% OFF" |
-      Warning
+    4 Prohibited commercial practices, pricing | on-image "up to
+      61% OFF" | Warning
       The page says 52% in the bar and "up to 55%" in the badge. The
       ad and the page must offer the same thing.
       Fix: use the number that's live at checkout, everywhere.
       Depends on the page, so not rated "would reject".
-    5 Deceptive commercial practices | on-image "4 FREE gifts" |
-      Warning
+    5 Prohibited commercial practices, misrepresentation |
+      on-image "4 FREE gifts" | Warning
       No gifts are shown on the landing page.
       Fix: show the gifts on the page, or drop them from the ad.
-    6 Deceptive commercial practices | landing page | Warning
+    6 Prohibited commercial practices, subscriptions | landing page
+      | Warning
       The $29.99 needs a text sign-up and renews at $49.99. Both are
-      in small print. Hidden subscription terms are a named risk.
+      in small print. Meta names unclear subscription terms as a
+      banned practice.
       Fix: state the renewal price and the sign-up condition next to
       the price. Depends on the page, so not rated "would reject".
 
@@ -129,16 +131,16 @@ example:
     Age 18+. Countries: MISSING (not set yet).
 
     PASSED
-    Drugs and medicines: presented as gummies, not a medicine.
-    Third-party IP: no tie-in characters or partner marks in the image.
-    Body image, adult content, profanity, violence: nothing found.
+    Drugs and pharmaceuticals: presented as gummies, not a medicine.
+    Intellectual property: no tie-in characters or partner marks.
+    Eating disorders, adult content, profanity, violence: nothing found.
 
     COULD NOT CHECK
     The image itself (described only). Which discount is live at
     checkout. Whether the 4 gifts exist. Target countries.
 
     This reading is from Meta's published Advertising Standards as
-    read in October 2026. Confirm on the live policy pages before
+    read on 19 October 2026. Confirm on the live policy pages before
     relying on it. It is not Meta's decision.
 
 tweaks:
@@ -155,7 +157,7 @@ judge:
   - Every finding quotes the exact line or points to the exact spot.
   - Nothing that depends on targeting or the landing page is rated "would reject".
   - The fixes remove the problem. None of them hides a claim in code words, misspellings or symbols.
-  - Areas that don't apply to your ad aren't padded in.
+  - Groups that don't apply to your ad aren't padded in.
   - The note about the policy date and checking Meta's live pages is there.
 
 test:
@@ -165,11 +167,22 @@ test:
   - Check that nothing depending on your landing page or targeting is rated "would reject". If it is, the skill skipped its own rule.
 
 improve:
-  - Paste your allowed and banned claims into "What you need" in the skill file, so a line like "Fix the Hot Girl Tummy" is flagged against your own rules as well as Meta's.
+  - Attach proof-and-claims.md from your brand file, so a line like "Fix the Hot Girl Tummy" is flagged against your own claims list as well as Meta's rules.
   - Write your product type, target countries and age range into the skill, so the restrictions section is filled in every time.
-  - Delete the rule areas from the table that can never apply to you (for example weapons or gambling), so findings stay short.
-  - Every time a line gets flagged, add it to the "never say" list in your brand file.
+  - Delete the rows from the table that can never apply to you (for example weapons or gambling), so findings stay short.
+  - Every time a line gets flagged, add it to the house rules in 00-start-here.md, so every tool that loads your brand file avoids it.
+  - Re-read Meta's Advertising Standards page every few months and update the table date. Meta says the rules can change without notice.
   - Pair it with a skill that checks a finished ad for craft mistakes before you spend, since this one only reads the rules. Policies change, so open Meta's live page when a finding surprises you.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Claude, ChatGPT and Gemini all read the rule table well; what matters is pasting the ad exactly as it will run."}
+    - {name: "Meta Ads Manager", why: "Its rejection notice and Account Quality page name the policy Meta applied, so you can test the skill against real decisions."}
+  inputs:
+    - "Your product page text and the checkout price, so the offer and relevance checks are complete"
+    - "Your proof-and-claims.md, so pending and banned claims are caught as well as Meta's rules"
+    - "Any past rejection notices with the policy Meta named, so the skill knows where your ads tend to trip"
+    - "The ad set's age range and countries, so restrictions can be marked as already handled"
 
 terms:
   - term: Personal attributes

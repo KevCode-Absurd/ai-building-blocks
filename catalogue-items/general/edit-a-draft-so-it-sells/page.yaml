@@ -169,6 +169,15 @@ improve:
   - Save the specifics it protects to your brand file. They're often the best material for your next ad.
   - Run "Stop your copy from sounding like AI" first if an AI tool wrote the draft, and finish with "Know if your copy is ready to publish".
 
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Any current chat AI can follow the three reads. Give it the facts list so it adds nothing."}
+    - {name: "Hemingway Editor", why: "Gives a reading grade and marks hard sentences, so you can check the before and after numbers yourself."}
+  inputs:
+    - "Results for the draft if it already runs (clicks, replies), so the edit starts where readers stop"
+    - "Two or three pieces in your voice that worked, so the fixes sound like you"
+    - "The page or ad that comes before it, so the edit keeps the promise the reader arrived with"
+
 terms:
   - term: Specific
     meaning: A detail a reader can check or picture, such as a number, a name or how it's made. Every edit protects these.

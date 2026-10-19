@@ -4,12 +4,12 @@ summary: "Give it a few lines of your script. You get 3 to 5 timed shots an AI v
 job: make-video-ads
 
 headline: "A shot list that keeps your video ad moving"
-subhead: Give it the lines for one short clip and what you sell. It plans the place and cast first, then writes 3 to 5 timed shots, each with a size, camera position, one move and one action, with your voice-over running across the cuts.
+subhead: Give it the lines for one clip and what you sell. It plans the places and cast first, then writes 3 to 5 timed shots (more for animation), each with a size, a camera position, one move and one action, with your voice-over timed across the cuts.
 
 explain: |
   Ask an AI video tool for "a woman making a drink while she talks" and you get one long, flat shot: same distance, same angle, a face that only looks, a product that appears from nowhere halfway through. Viewers scroll past a picture that doesn't change, and the tool fills empty seconds with invented movement.
 
-  This skill plans one clip of about 6 seconds the way a director would. It decides the places and cast before any shot, opens mid-action, and changes both how close the camera is and where it stands at every cut. Each shot has exactly one action, written as what moves. The product comes in only when the words reach it, shown the way it's really used. It times every shot to the words at a speaking pace. Style-specific skills (clay, watercolor, skeleton) add their own shots on top of this.
+  This skill plans one clip the way a director would, using rules editors have used for decades. It decides the places and cast before any shot and opens mid-action. At every cut it moves the camera at least 30 degrees and changes the shot size, because changing only one reads as a jump. Each shot has one action, written as what moves. The product comes in by a cut when the words reach it, used the way it really is. It times the shots to the words at a calm, normal or brisk pace, and can write them as timed lines for tools that take several shots in one prompt.
 
 when:
   - You have a script and need clips from an AI video tool that don't look like one long static shot.
@@ -20,36 +20,36 @@ you_give:
   - The script or voice-over lines for this clip
   - What you sell, what it does and a real photo (product, app screen or packaging)
   - Your brand's places and light, how the product is used and what never to show (optional)
-  - The speaker's age or pace (optional, 3.3 words a second by default)
+  - The pace (calm, normal or brisk) and your tool's clip length (optional, normal and 8 seconds by default)
   - Live action or a made world like animation or clay (optional)
 you_get:
   - A short film plan (places, cast, the picture for each idea, total seconds)
   - A shot table with timings, size, camera position, move, place, objects and one action
-  - The voice line with its word count and the seconds it needs
+  - The voice line with its word count, pace and the seconds it needs
   - A continuity note so the next clip starts where this one ends
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Paste the lines for one scene, about one sentence or two.
+  - Paste the lines for one scene, about one or two sentences.
   - Add what you sell, how it's used and the places your brand shoots in. Attach a product photo.
-  - Say who is speaking (age, calm or fast) and whether it's live action or animated.
-  - Paste each shot into your video tool, then check the timings in the finished clip.
+  - Say the pace and whether it's live action or animated, and your tool's clip length.
+  - Paste the shots into your video tool, then check the timings in the finished clip.
 
 how_it_works:
   - title: Plans the film first
-    text: Lists the main place, one or two places it cuts to, who is in each, and the picture for each idea, before writing any shot.
-  - title: Cuts it to one scene
-    text: Aims for about 6 seconds and 3 to 5 shots ending where the sentence ends. Never stretches a clip to fill time.
+    text: Lists the main place, one or two places it cuts to, who is in each, and what we see for every idea, before writing any shot.
+  - title: Times the words
+    text: Counts the words at a calm, normal or brisk pace and fits them to one clip. If they don't fit, it splits at a sentence end.
   - title: Opens mid-action
-    text: Shot 1 starts with the action under way, because it's judged in under a second with the sound off.
-  - title: Changes two things per cut
-    text: Every cut changes both size (wide to close-up) and camera position (eye level to overhead), using at least 3 of each.
+    text: Shot 1 starts with the action under way, because people decide on it within a second, usually muted.
+  - title: Changes angle and size
+    text: Every cut moves the camera at least 30 degrees and changes how close it is, using at least 3 sizes and 3 positions.
   - title: Gives one action per shot
-    text: Says who, which hand and where it lands, and writes what moves, never "stays" or "remains".
+    text: Says who, which hand and where it lands, and describes what moves, never what holds still.
   - title: Brings the product in on cue
-    text: The product appears when the words reach it, being used the brand's way, and never from out of view inside a shot.
-  - title: Times the voice
-    text: Runs one voice track across the cuts at a pace set by the speaker's age, and notes where everything ends for the next clip.
+    text: The product arrives by a cut when the words reach it, used the brand's way, never sliding in mid-shot.
+  - title: Hands over cleanly
+    text: Notes where everyone and everything ends up, so the next clip starts in the same world.
 
 output_shape: |
   FILM PLAN
@@ -57,17 +57,17 @@ output_shape: |
   Pictures: <the picture for each idea in the lines>. Total <seconds>.
 
   SHOTS
-  <n>  <start-end>  <size> | <camera position> | <move, where it ends>
-     Fills frame: <what fills the frame>
+  <n>  <start-end>  <size> | <camera position> | <move, where it stops>
+     Fills frame: <..>
      Place: <..>  Objects: <one name each>
      Action: <the one action, who, which hand>
-     Voice: "<the words running under it>"
+     Words: "<the words under it>"
 
   VOICE LINE
   "<the whole line>"  <words>, <pace>, needs <seconds>
 
   CONTINUITY FOR THE NEXT CLIP
-  <who is where, and what each object looks like in the last frame>
+  <who is where, and what each object looks like at the end>
 
 example:
   business: sprout
@@ -84,7 +84,7 @@ example:
     gummies pour from the top into a palm; the pouch opens only at its
     resealable top.
     Brand places and light: bright, sunny, real homes; never clinical.
-    Speaker: man, early 30s, normal pace.
+    Speaker: man, early 30s, brisk. Tool: 8-second clips.
     Look: live action.
   output: |
     FILM PLAN
@@ -95,70 +95,70 @@ example:
     Pictures: "one little pack" = one pack out of the pouch; "tear the
     top" = the tear; "tip them out" = gummies into his palm; "21
     vitamins and minerals" = the serving in his hand; "no water, no
-    shaker" = the shaker left behind. Total 6.5 s.
+    shaker" = the shaker left behind. Total 8.0 s.
 
     SHOTS
-    1  0.0-1.8  medium | eye level | hand-held, ending on the pack
+    1  0.0-2.0  medium | eye level | hand-held, stopping on the pack
        Fills frame: him at the counter, window bright behind.
        Place: kitchen. Objects: pouch, pack.
        Action: his right hand pulls one pack out of the pouch, open at
        its resealable top.
-       Voice: "It's one little pack a day."
-    2  1.8-2.9  extreme close-up | over his shoulder | locked
+       Words: "It's one little pack a day."
+    2  2.0-3.0  extreme close-up | over his shoulder | locked off
        Fills frame: the pack's top edge between his fingers.
        Objects: pack.
        Action: both hands tear the pack straight across its top edge.
-       Voice: "Tear the top,"
-    3  2.9-4.2  close-up | overhead, straight down | locked
+       Words: "Tear the top,"
+    3  3.0-4.4  close-up | overhead, straight down | locked off
        Fills frame: his open left palm, the counter below.
        Objects: pack, gummies.
        Action: his right hand tips the pack; green gummy bears pour
        from the torn top into his palm.
-       Voice: "tip them out. Twenty-one"
-    4  4.2-5.3  medium | low, from the counter looking up | push in
+       Words: "tip them out. Twenty-one"
+    4  4.4-6.1  medium | low, from the counter looking up | push in
        Fills frame: the gummies in his palm in the lower half, his
        face above, kettle steam drifting behind.
        Objects: gummies.
        Action: he closes his hand around the gummies.
-       Voice: "vitamins and minerals in there."
-    5  5.3-6.5  wide | high, from the hallway | pull back, ending on
+       Words: "vitamins and minerals in there."
+    5  6.1-8.0  wide | high, from the hallway | pull back, stopping on
        the whole hallway
        Fills frame: the sink with a shaker bottle in the foreground,
-       him walking to the door. Place: hallway; the pouch stays on the
+       him walking to the door. Place: hallway; the pouch is on the
        kitchen counter.
        Action: his right hand takes the keys off the hook.
-       Voice: "No water, no shaker."
+       Words: "No water, no shaker."
 
     VOICE LINE
     "It's one little pack a day. Tear the top, tip them out. Twenty-
     one vitamins and minerals in there. No water, no shaker."
-    22 words. Man, early 30s: 3.4 words a second. Needs 6.5 seconds.
+    22 words, brisk (3.0 a second): 7.3 s, plus 0.7 s on the last
+    shot. Fits one 8-second clip.
 
     CONTINUITY FOR THE NEXT CLIP
     He stands at the front door, grey T-shirt, keys in his right hand.
     The pouch is on the kitchen counter, open at its resealable top,
     the torn empty pack beside it. The shaker is in the sink.
 
-    Checks: every cut changes size and position (4 sizes, 5
-    positions). Three of five shots move; the tear and the pour stay
-    locked. Tear and tip are split across shots 2 and 3. No object
-    appears inside a shot. Timings are directions; check them in the
-    finished clip.
+    Checks: every cut changes angle and size (4 sizes, 5 positions).
+    Three of five shots move; the tear and the pour are locked off.
+    Tear and tip are split across shots 2 and 3. Nothing appears
+    mid-shot. Timings are directions; check them in the finished clip.
 
 tweaks:
   - what: Live action or a made world
-    how: Live action gets 3 to 5 shots in 6 seconds, none under 1 second. A made world (animation, clay, paper) allows 4 to 8, none under half a second.
+    how: Live action gets 3 to 5 shots in 8 seconds, none under 1 second. A made world (animation, clay, paper) allows 4 to 8, none under half a second.
   - what: Pace
-    how: Give the speaker's age, or say "calm". Under 30 speaks about 3.6 words a second, 60 to 74 about 3.0, and a calm delivery is a sixth slower. The clip length follows.
+    how: Say calm (2.2 words a second), normal (2.6) or brisk (3.0). Then read the line aloud with a timer; your own time beats the estimate.
   - what: A calm brand
-    how: Say the brand or format is deliberately slow. You get about 2 shots in 10 seconds, each held for a reason, instead of a cut every 2 seconds.
-  - what: Places
-    how: Name the places your brand shoots in. The film plan picks a main place and one or two to cut to, and restates who is where in every shot that leaves the main place.
+    how: Say the brand or format is deliberately slow. You get 2 or 3 shots per clip, each held for a reason, instead of a cut every 2 seconds.
+  - what: Your tool
+    how: Say your clip length and whether the tool takes several timed shots in one prompt. If it does, the shots come as timed lines; if not, one prompt per shot.
 
 judge:
   - Shot 1 is already mid-action. No walking in, sitting down or hello.
-  - Every cut changes both how close the camera is and where it stands.
-  - Each shot has one action, and no "stays", "remains" or "slightly".
+  - Every cut changes both the camera angle and how close it is.
+  - Each shot has one action, described as what moves.
   - The product appears only when the words reach it, used the way your brand says.
   - Nothing appears from out of view inside a shot.
   - The shot times add up to what the words need at the stated pace, within 10%.
@@ -166,20 +166,33 @@ judge:
 test:
   - Give it a line with two moves in it ("tear it and tip it out"). The shot list should split them into two shots.
   - Read the voice line aloud with a timer at your speaker's pace. Your time and its total should be within 10%.
-  - Check each cut in the table. If any two shots in a row share a size or a camera position, the core rule was skipped.
+  - Check each cut in the table. If two shots in a row share a size or a camera position, the core rule was skipped.
   - Make only shot 1 in your video tool. If the tool adds movement or objects you didn't ask for, tighten the "fills frame" and "objects" lines before making the rest.
 
 improve:
   - Write your brand's places, light and never-show list into "What you need" in the skill file, so every film plan starts in your world.
-  - Add your product-showing rules to step 13 (how it opens, what one serving looks like), so the product is never shown the wrong way.
-  - Set your usual speaker pace in step 14, so timings fit your voice-over without you saying it.
+  - Add your product-showing rules to step 12 (how it opens, what one serving looks like), so the product is never shown the wrong way.
+  - Time your usual speaker once and write their real pace into step 2.
   - Save the continuity note from each clip with the project, and paste it into the next clip's run.
   - Pair it with a style skill (skeleton, song, watercolor, talking object) when you want a specific look on top of these rules.
+
+works_best_with:
+  tools:
+    - {name: "Veo 3.1", why: "Follows timed shot lines inside one 8-second prompt, so a clip can hold several cuts."}
+    - {name: "Kling 4.0", why: "Takes several shots in one generation from a shot list, keeping the same person across the cuts."}
+    - {name: "Any good chat AI", why: "Writing the plan and shot table to these rules works well in any strong chat AI."}
+  inputs:
+    - "Photos of the places your brand films in, so the film plan uses rooms that look like yours"
+    - "A recording of your speaker reading one line, so the pace is measured, not guessed"
+    - "A photo of one serving out of its pack, so close shots show the right thing"
+    - "The continuity note from the clip before, so this clip starts in the same world"
 
 terms:
   - term: Shot size
     meaning: How close the camera is. Wide shows the place; close-up shows a face or one object; extreme close-up shows one detail.
   - term: Camera position
     meaning: Where the camera stands, such as eye level, low looking up, high looking down, or overhead.
+  - term: Jump cut
+    meaning: A cut between two shots that are too alike, so the picture seems to twitch instead of change.
   - term: Continuity
     meaning: Keeping the same person, clothes, light and objects from one clip to the next.

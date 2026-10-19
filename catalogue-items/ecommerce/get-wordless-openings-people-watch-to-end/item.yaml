@@ -19,5 +19,9 @@ uses: [get-satisfying-motion-ad-script-that-sells]
 example: satisfying
 origin: rebuilt
 source_ids: [CES-006]
-old_name: ai-satisfying-hooks
-version: 1.0.0
+version: 2.0.0
+credits:
+  - {title: "Introducing Veo 3.1 and new creative capabilities in the Gemini API", by: "Google for Developers", url: "https://developers.googleblog.com/en/introducing-veo-3-1-and-new-creative-controls-in-the-gemini-api", used: "Making a clip between a start frame and an end frame"}
+  - {title: "Ultimate prompting guide for Veo 3.1", by: "Khulan Davaajav and Hussain Chinoy, Google Cloud", url: "https://cloud.google.com/blog/products/ai-machine-learning/ultimate-prompting-guide-for-veo-3-1", used: "SFX and ambient sound lines, describing what you want instead of what you don't"}
+  - {title: "Why Are Oddly Satisfying Videos So ... Satisfying?", by: "Nathaniel Scharping, Discover", url: "https://www.discovermagazine.com/why-are-oddly-satisfying-videos-sosatisfying-218", used: "The just-right feeling of a finish, behind the five finishes"}
+  - {title: "Meta Ads Safe Zones: A Guide to the 2026 Unified Creative Updates", by: "Dovile Miseviciute, Billo", url: "https://billo.app/blog/meta-ads-safe-zones", used: "Keeping the top and bottom of a 9:16 frame clear"}

@@ -168,6 +168,16 @@ improve:
   - Save the findings table with the date in your brand file, so the next review can see what was fixed.
   - Pair it with a quick landing page checklist for a fast pass first, and move up to a full audit with your sales numbers when you need fixes sized in money.
 
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Any current chat AI that reads screenshots can run the three reads. Give it phone screenshots, top to bottom."}
+    - {name: "PageSpeed Insights", why: "Shows your page's real-user speed against Google's 'good' marks, so the phone check has numbers."}
+    - {name: "Evan Miller's sample size calculator", why: "Tells you how many visitors a test needs, so you know if it can finish in about a month."}
+  inputs:
+    - "A screen recording of someone new using the page on their phone, so the glance read has a real reaction"
+    - "Your delivery, returns and cancellation pages, so the doubt read checks the terms in full"
+    - "Recent customer questions about delivery, returns or price, so the findings match what stops buyers"
+
 terms:
   - term: First screen
     meaning: What shows on a phone before you scroll.

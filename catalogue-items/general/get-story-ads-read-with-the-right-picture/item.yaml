@@ -1,7 +1,7 @@
 slug: get-story-ads-read-with-the-right-picture
 renamed_from: native-ad-image-brief-writer
 name: "Get your story ad read with the right picture"
-summary: "Reads your story ad, picks which of 20 post-like picture types fits honestly, and writes the prompt."
+summary: "Reads your story ad, finds where its evidence lives, and briefs the picture that shows it, plus a runner-up to test."
 category: general
 boards: [ecommerce]
 type: skill
@@ -16,7 +16,14 @@ outputs:
   - {type: image_prompt}
 uses: [stop-your-buyer-mid-scroll-with-a-snapshot, get-recognised-with-the-old-things-that-failed, stop-the-scroll-with-a-handwritten-note, get-noticed-with-a-sticky-note-ad, make-people-read-a-private-phone-note, stop-tired-buyers-with-ignored-reminders, get-believed-with-a-text-someone-else-sent, get-read-with-a-family-group-chat-ad, get-doubters-reading-with-a-dont-buy-warning, turn-a-real-complaint-into-praise-people-read, get-one-true-fact-read-in-a-caption-bar, make-people-look-with-one-red-circle, make-people-look-twice-at-the-leftover-mess, reach-the-right-people-with-a-visible-symptom, make-buyers-see-themselves-in-an-empty-room, get-a-second-look-with-a-test-result-photo, stop-worried-buyers-with-what-they-dread, keep-people-reading-with-a-hand-drawn-story, get-your-ad-read-like-a-shared-article, puzzle-people-into-reading-with-one-odd-photo]
 example: native
-origin: own
+origin: rebuilt
 source_ids: [CES-054]
-old_name: native-ad-creative
-version: 1.0.0
+old_name: picture picker for story ads
+version: 2.0.0
+credits:
+  - {title: "The Role of Expectancy and Relevancy in Memory for Verbal and Visual Information: What Is Incongruency?", by: "Susan Heckler and Terry Childers, Journal of Consumer Research", url: "https://doi.org/10.1086/209275", used: "The stop check: unexpected and relevant together"}
+  - {title: "Banner Blindness Revisited: Users Dodge Ads on Mobile and Desktop", by: "Kara Pernice, Nielsen Norman Group", url: "https://www.nngroup.com/articles/banner-blindness-old-and-new-findings/", used: "Why ad-looking pictures get skipped"}
+  - {title: "Forces Friday: Pull and Anxiety", by: "Bob Moesta and Chris Spiek, JTBD Radio", url: "https://jobstobedone.org/radio/pull-and-anxiety/", used: "Starting from the push, the moment the old way failed"}
+  - {title: "Information Scent: How Users Decide Where to Go Next", by: "Raluca Budiu, Nielsen Norman Group", url: "https://www.nngroup.com/articles/information-scent/", used: "The page opens on the same moment as the picture"}
+  - {title: "Facebook Ads Guide: image ad specs", by: "Meta", url: "https://www.facebook.com/business/ads-guide/update/image", used: "About 27 characters for the line under the picture"}
+  - {title: "Nano Banana image generation", by: "Google AI for Developers", url: "https://ai.google.dev/gemini-api/docs/image-generation", used: "Which image model to suggest for exact words"}

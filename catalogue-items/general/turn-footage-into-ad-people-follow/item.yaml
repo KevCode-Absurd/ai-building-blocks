@@ -19,4 +19,8 @@ uses: [make-video-ad-clear-with-sound-off]
 origin: own
 source_ids: [CES-032]
 old_name: ecommerce-video-editing
-version: 1.0.0
+version: 1.1.0
+credits:
+  - {title: "English (USA) Timed Text Style Guide", by: "Netflix Partner Help Center", url: "https://partnerhelp.netflixstudios.com/hc/en-us/articles/217350977-English-USA-Timed-Text-Style-Guide", used: "Two lines of about 42 characters and a reading-speed cap, set lower for feeds"}
+  - {title: "Meta Ads Safe Zones: A Guide to the 2026 Unified Creative Updates", by: "Dovile Miseviciute, Billo", url: "https://billo.app/blog/meta-ads-safe-zones", used: "Keeping captions inside the 9:16 safe area"}
+  - {title: "Federal Trade Commission Announces Final Rule Banning Fake Reviews and Testimonials", by: "US Federal Trade Commission", url: "https://www.ftc.gov/news-events/news/press-releases/2024/08/federal-trade-commission-announces-final-rule-banning-fake-reviews-testimonials", used: "AI presenters and drawings never stand in for a real buyer or testimonial"}

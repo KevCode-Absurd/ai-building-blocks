@@ -167,6 +167,14 @@ improve:
   - Let the creator change any line they wouldn't say, as long as they keep the point, and note what they changed.
   - Pair it with the skill that turns an approved script into a filming brief for a real person, or one that makes AI presenter openings for a made-up one.
 
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Claude, ChatGPT and Gemini all follow this skill well, so use the one you already have."}
+  inputs:
+    - "A voice memo of the speaker telling the story off the cuff, so the script keeps how they talk"
+    - "Five comments or messages that mention the main doubt, so the snag sounds real"
+    - "A past phone video that worked, with its results, so you know what to beat"
+
 terms:
   - term: Spine
     meaning: The one-line story behind the script. What was going on, what got in the way, and what they did.

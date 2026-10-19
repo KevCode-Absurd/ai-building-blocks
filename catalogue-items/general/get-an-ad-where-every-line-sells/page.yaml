@@ -1,59 +1,58 @@
 new_slug: get-an-ad-where-every-line-sells
 name: "Make every line of your ad sell"
-summary: "Paste your ad and product facts. You get it back with vague lines swapped for facts and your strong lines kept."
+summary: "Paste your ad and product facts. You get the weak lines fixed with real facts, and your strong lines kept."
 job: write-ad-copy
 
 headline: "Make every line of your ad sell"
-subhead: Paste your draft ad and your product facts. It reads each line the way an experienced ad writer would, swaps vague praise for real facts, adds the price and guarantee if they're hidden, and leaves the strong lines alone.
+subhead: Paste your draft ad and your product facts. Every line gets four quick tests and the whole ad gets five checks. You get each weak line fixed with a fact you gave it, the price and guarantee added if they're missing, and a verdict.
 
 explain: |
-  Most weak ads aren't wrong, they just don't sell. A line like "a premium blend for the modern ritual" sounds fine in a meeting, but nobody says it out loud and it gives a buyer no reason to care. The ad never says plainly what the buyer gets, and the price is missing.
+  Most weak ads aren't wrong. They just don't give anyone a reason to buy. A line like "a premium blend for the modern ritual" sounds fine in a meeting, but nobody would say it out loud, and any rival could print it. Often the price is missing too.
 
-  This skill reads the draft line by line. It checks that each line is something a person would say, that the ad makes one clear promise, and that words like "premium" or "best" are replaced with the fact that earns them, taken only from the facts you gave it. It checks the headline, the first line, the proof and the ask (what you want the buyer to do next). It never changes a claim, price or guarantee, and if the real problem is the reason to buy you chose, it tells you instead of polishing the wording.
+  This skill reads the draft the way an experienced editor would. Every line gets four tests in order. Would a person say it? Does it give this buyer a reason? Is the praise backed by a fact? Could a rival say it unchanged? Then the whole ad gets five checks: one promise, an opening that picks out the buyer, proof beside each claim, a full ask, and words that match the picture. It only uses facts you gave it. It never changes a claim, a price or the guarantee. If the real problem is the reason to buy, it says so instead of polishing.
 
 when:
-  - You have a draft ad that reads fine but you suspect it wouldn't make anyone buy.
-  - Your ad is full of words like "premium", "high quality" or "the best", and you want facts in their place.
+  - You have a draft ad that reads fine, but you doubt it would make anyone buy.
+  - Your ad leans on words like "premium", "high quality" or "the best", and you want facts in their place.
   - You want an editor's pass before the brand voice and claims checks.
 
 you_give:
-  - The draft (script, or image words, main text and headline)
+  - The draft, with each part labelled (on the image, main text, headline, or script lines)
   - Your product facts, approved claims, guarantee and offer terms
-  - Who the ad is for and how much they already know (optional)
-  - Your brand's voice notes and its own published lines (optional)
+  - Who the ad is for and their main doubt (optional)
+  - Your voice notes and lines your brand already publishes (optional)
 you_get:
-  - Each line that needs a change, with the failing phrase and the reason in a few words
+  - Each line that needs a change, with the failing phrase and the test it fails
   - The full corrected text for each of those lines
-  - A short verdict on whether the ad has one clear promise, and whether the problem is the wording or the reason to buy
+  - A list of facts a line needed but you didn't give
+  - A two-sentence verdict on the promise, and whether the wording or the reason to buy is the problem
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Paste your draft underneath, with each part labelled (on image, main text, headline).
-  - Paste the facts it's allowed to use. It will only use these, so include the guarantee and price.
-  - Add one line on who the ad is for, if you know.
-  - Read the verdict at the end first. If it says the reason to buy is the problem, rethink the ad before fixing lines.
+  - Paste your draft underneath, with each part labelled.
+  - Paste the facts it may use. It uses only these, so include the price and the guarantee wording.
+  - Add one line on who the ad is for and what makes them hesitate.
+  - Read the verdict first. If it says the reason to buy is the problem, rethink the ad before fixing lines.
 
 how_it_works:
-  - title: Plain first
-    text: Checks each line is a whole sentence a person would say to a friend and a stranger would understand.
-  - title: Finds the promise
-    text: Looks for the one sentence that says what the buyer gets. If there isn't one, that's the first fix.
-  - title: Swaps praise for facts
-    text: Replaces "premium", "best" or "amazing" with the amount, test or process that earns it, from your facts only.
-  - title: Runs the shelf test
-    text: Asks whether the product next to yours could say the same line. If so, and your facts hold something only yours has, it adds that.
-  - title: Checks headline and ask
-    text: Makes the headline give the right buyer a reason to read on, and makes the ask name the action, price and guarantee.
-  - title: Matches words and picture
-    text: Checks the image words act as the promise, match what's spoken, and name the brand early.
-  - title: Reports what changed
-    text: Lists each change with its reason, then says whether the ad has one clear promise.
+  - title: Say it
+    text: Each line must be a whole sentence a person would say, clear to a stranger on its own.
+  - title: So what
+    text: Each line must give this buyer a reason. A count or spec only counts once it says what it does for them.
+  - title: Prove it
+    text: Swaps "premium", "best" or "amazing" for the amount, test or process that earns it, from your facts only.
+  - title: Swap it
+    text: Asks if a rival's ad could carry the line unchanged. If so, and your facts hold something only yours has, it adds that.
+  - title: Checks the whole ad
+    text: One promise, an opening that picks out the buyer, proof beside each claim, a full ask, and words that match the picture.
+  - title: Gives a verdict
+    text: Lists each change with its reason, then says whether the wording or the reason to buy is the problem.
 
 output_shape: |
   CHANGES
   <n>. <field>
      Failing:   "<the exact phrase>"
-     Principle: <the rule it breaks, in a few words>
+     Fails:     <the test or check, in a few words>
      Corrected: <the full corrected text for that field>
   (usually 0 to 5 changes; most lines stay)
 
@@ -61,8 +60,8 @@ output_shape: |
   <any fact a line needed that wasn't in your facts>
 
   VERDICT
-  <one or two sentences: is there one clear promise, would a stranger
-  want the product, and is the problem the wording or the reason to buy>
+  <two sentences: is there one clear promise, and is the problem
+  the wording or the reason to buy>
 
 example:
   business: sprout
@@ -92,26 +91,27 @@ example:
     CHANGES
     1. On image
        Failing:   "Sprout Superfood Gummies"
-       Principle: names the product but promises nothing
+       Fails:     the opening, it names the product but gives no reason
        Corrected: Your daily greens, without the shaker
 
     2. Main text, first sentence
        Failing:   "60+ potent ingredients to revive whole body vitality
                   in great tasting gummies."
-       Principle: praise words with no fact behind them
+       Fails:     prove it, praise words with no fact behind them
        Corrected: One pack of gummies a day gives you 60+ ingredients,
                   21 vitamins and minerals, and 6 g of fiber.
 
     3. Main text, second sentence
        Failing:   "The best way to get your greens."
-       Principle: a superlative any greens brand could say
+       Fails:     swap it, any greens brand could say this
        Corrected: It's clinically tested for nutrient absorption. In a
                   12-week study of 120 adults, blood vitamin C went up
                   40.1% and folate 20.5%.
 
     4. Main text, the ask
        Failing:   "Shop now."
-       Principle: no price, no guarantee, nothing about what happens
+       Fails:     the ask, no price, no guarantee, nothing about what
+                  happens next
        Corrected: Your first box is $29.99 with our text sign-up
                   discount, then $49.99 every 4 weeks, and you can pause
                   or cancel any time. Your first order has a 30-day
@@ -119,7 +119,7 @@ example:
 
     5. Headline
        Failing:   "The ultimate daily supplement"
-       Principle: a superlative that gives no reason to read on
+       Fails:     so what, a superlative that gives no reason to read on
        Corrected: 21 vitamins and minerals, no shaker
 
     MISSING
@@ -135,11 +135,11 @@ example:
 
 tweaks:
   - what: The facts list
-    how: Every replacement for a vague word comes from here. A short list gets you more MISSING notes and plainer lines; a full list with amounts, tests and terms gets you specific ones.
+    how: Every fix for a vague word comes from here. A short list gets you more MISSING notes and plainer lines. A full list with amounts, tests and terms gets you specific ones.
   - what: The buyer line
-    how: Say how much the buyer already knows. For a buyer who has never heard of you, it pushes the headline toward their problem. For one who knows you, toward the doubt and the offer.
-  - what: Which fields to check
-    how: Paste only the headline if that's all you want checked. It will leave the rest alone.
+    how: Say how aware the buyer is. For a stranger, the opening check pushes toward their situation. For someone who knows you, toward their doubt and the offer.
+  - what: Which parts to check
+    how: Paste only the headline if that's all you want checked. It leaves the rest alone.
   - what: Your brand's own lines
     how: Paste lines you already publish. It won't rewrite a plain brand line just because it could be more specific.
 
@@ -151,23 +151,33 @@ judge:
   - The ask says what to do, what it costs and what happens if they don't like it.
 
 test:
-  - Run it on an ad you know sold well. It should leave most lines alone. If it rewrites a line people responded to, paste that line as one of your brand lines next time.
-  - Run the same draft twice. The changes should land on the same lines. If they move around, your facts list is thin, so add amounts, tests and terms.
-  - Put the word "premium" in a line where your facts hold the number behind it. It should swap the word for that number, not for another adjective.
-  - Put its corrected ad next to your current best with the same picture. Ask someone who'd buy which one they'd tap, without saying which is new.
-  - Read the MISSING list. Every gap it names should be a fact you lack, not one you gave it.
+  - Run it on an ad you know sold well. It should leave most lines alone. If it rewrites a line people answered to, paste that line as a brand line next time.
+  - Run the same draft twice. The changes should land on the same lines. If they move, your facts list is thin, so add amounts, tests and terms.
+  - Put "premium" in a line where your facts hold the number behind it. It should swap the word for that number, not for another adjective.
+  - Show its version and your current best, with the same picture, to someone who'd buy. Ask which one they'd tap, without saying which is new.
+  - Read the MISSING list. Every gap should be a fact you lack, not one you gave it.
 
 improve:
-  - Paste your full facts list (amounts, tests, price, guarantee terms) into "What you need" in the skill file, so step 3 always has real numbers to swap in.
+  - Paste your full facts list (amounts, tests, price, guarantee terms) into "What you need" in the skill file, so the prove-it test always has real numbers.
   - Add the claims your brand must never make, in your own words (for example "never say fix"), to the same section.
-  - If you write for one platform, put its limits into steps 6 and 9, for example "first line of the main text under 125 characters".
+  - If you write for one platform, add its limits to the opening check, for example "main text before See more under 125 characters".
   - When the same MISSING fact comes up twice, find it and add it to your brand file.
-  - Pair it with "Turn features into reasons to buy" when the draft is a feature list, and finish with "Make sure every ad sounds like your brand".
+  - Pair it with "Turn features into reasons to buy" when the draft is a feature list, then finish with "Make every ad sound like your brand" and "Know if your copy is ready to publish".
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Testing lines against a facts list works well in any strong chat AI with this skill."}
+    - {name: "Meta Ads Manager", why: "Its ad preview shows where your main text gets cut at See more, so you can check the opening."}
+  inputs:
+    - "Your claims list with the source of each claim, so the prove-it test only swaps in facts you can back"
+    - "Two or three lines from your best past ads, so it leaves your proven phrasing alone"
+    - "A screenshot of the image, so it can check the words agree with the picture"
+    - "Your buyers' main doubt in their own words from a review, so the opening and proof aim at it"
 
 terms:
   - term: The ask
     meaning: The part of the ad that tells the buyer what to do next, such as "Pick your size".
-  - term: Shelf test
-    meaning: Asking whether a competitor's product could carry the same line unchanged. If it could, the line says nothing about yours.
+  - term: Swap test
+    meaning: Asking whether a rival's ad could carry the same line unchanged. If it could, the line says nothing about yours.
   - term: Main text
     meaning: The words above the image in a Facebook or Instagram ad.

@@ -1,11 +1,11 @@
 # Product offer reel in code: for online stores
 
 ## Also give it
-A photo of the pack front on a clean background (required); photos of the product out of the pack, in a hand and in use; what it's made of and its key features; bundle and offer terms with the dates they apply; the guarantee wording; your "never show" list.
+A photo of the pack front on a clean background (required). Photos of the product unpacked, in a hand and in use. What it's made of and its key features. Bundle and offer terms, with the dates they run. The guarantee wording. Your "never show" list.
 
 ## What changes
-- Reasons are brand facts, each with the photo that shows it: the product out of its pack for what it's made of, in use for what it does.
-- An offer reel names the offer only as the live offer states it (price, dates, terms). No added urgency or countdowns.
-- A bundle reel shows each item from its own photo on one shared baseline, then the bundle price from the offer.
-- End card: the pack, the logo and the action in the brand's words, 2 seconds or less, never still.
-- Cutouts need clean edges. Add the contact shadow in the film, not in the photo.
+- Each reason is a brand fact matched to the photo that proves it. Use the unpacked shot for what's inside and the in-use shot for what it does.
+- An offer reel states the offer only as the live offer does: price, dates, terms. No extra urgency and no countdown timers.
+- A bundle reel lines up each item from its own photo on one shared baseline, then shows the bundle price from the offer.
+- The end card holds the pack, the logo and the action in your words, for 2 seconds or less, and never freezes.
+- Cutouts need clean edges. The contact shadow is added in the film, not baked into the photo.

@@ -19,4 +19,6 @@ example: satisfying
 origin: own
 source_ids: [CES-119]
 old_name: script-format-satisfying
-version: 1.0.0
+version: 2.0.0
+credits:
+  - {title: "Why Are Oddly Satisfying Videos So ... Satisfying?", by: "Nathaniel Scharping, Discover", url: "https://www.discovermagazine.com/why-are-oddly-satisfying-videos-sosatisfying-218", used: "The just-right feeling of completion and order, which shapes the five finishes"}

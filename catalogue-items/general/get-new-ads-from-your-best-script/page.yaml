@@ -4,16 +4,16 @@ summary: "Give it a script that works. You get it retold in a new voice, with ev
 job: make-video-ads
 
 headline: "New versions of your best script, with nothing broken"
-subhead: Give it a script you trust and say who should tell it (I, you or she) and when (past, present or future). It changes only the voice, keeps every fact, line and length, and flags any line it couldn't change honestly.
+subhead: Give it a script you trust, and say who tells it (I, you or she) and when (past, present or future). It moves only the voice. Every fact, line and length stays, and it flags any line it couldn't move honestly.
 
 explain: |
-  Writing a new ad from scratch is slow, and a fresh idea is a fresh risk. A script told as "I did this" and the same script told as "you do this" feel like two different ads to a viewer, and the ad platform treats them as two ads too. That makes a voice change the cheapest way to get more out of a script you already trust.
+  A new ad from scratch is slow, and a new idea is a new risk. Yet "I did this" and "you do this" land as two different ads, for viewers and for the ad platform. Retelling a script you already trust costs less than any other route to more ads.
 
-  This skill changes the person (I, you, she or they) and the tense (past, present, future) and nothing else. It leaves how the product works in the present tense, keeps the offer spoken to the viewer, and keeps customer quotes word for word. When a new voice would turn a line into a claim nobody can back, such as an AI presenter saying "it worked for me", it keeps the old wording and tells you why.
+  This skill moves the person (I, you, she or they) and the tense (past, present, future). Nothing else changes. How the product works stays in the present tense, because it's true today. The offer still speaks to the viewer, and customer quotes stay word for word. Some lines would become a claim nobody can back, such as an AI presenter saying "it worked for me". Those keep their old wording, and the notes say why.
 
 when:
   - You have a script that sells and want more versions to test without writing new ones.
-  - A customer story was written as "I" and you need a version an AI presenter or narrator can say honestly.
+  - A customer story was written as "I", and you need a version an AI presenter can say honestly.
   - You want the same ad as a direct "you" script and as a told story, to see which one people watch.
 
 you_give:
@@ -23,38 +23,38 @@ you_give:
   - A name and pronoun for a third-person version (optional)
   - Your brand voice (optional)
 you_get:
-  - The same script, same number of lines in the same order, in the new voice
-  - Opening-line variants and on-screen text changed the same way
-  - Notes on every line it kept in the old voice, and why
+  - The same script in the new voice, every line in its old place
+  - Opening variants and on-screen text moved the same way
+  - Notes on each line kept in the old voice, and why
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste your script underneath, one line per row, with any on-screen text and picture notes.
   - Write the new person and tense, for example "first person, past" or "third person, past, she".
-  - Say who will say it. This matters, because an AI presenter can't claim a personal result.
-  - Read the notes first, then read the new script aloud and compare it line by line with the old one.
+  - Say who will say it. An AI presenter can't claim a result of its own, so this changes what's allowed.
+  - Read the notes first. Then read the new script aloud and hold it next to the old one.
 
 how_it_works:
-  - title: Sets the new voice
-    text: Works out who the new subject is (the speaker, the viewer, or a described person) and which tense fits. It invents no surname or life story.
-  - title: Changes the story lines
-    text: Rewrites the opening, the problem and the experience lines in the new person and tense.
-  - title: Leaves facts in the present
-    text: Keeps how the product works in the present tense, because it's true now, and keeps the offer and call to action spoken to the viewer.
-  - title: Fixes what the change breaks
-    text: Turns lines that stop making sense (a confession told as "you") into something that does, without adding a claim.
+  - title: Picks the voice
+    text: Works out who the new subject is (the speaker, the viewer or a described person) and which tense suits the story.
+  - title: Moves the story lines
+    text: Retells the opening, the problem and the experience in the new person and tense.
+  - title: Keeps facts in the present
+    text: How the product works stays in the present tense, and the offer still speaks to the viewer.
+  - title: Repairs broken lines
+    text: Fixes lines that stop making sense in the new voice, such as a secret told as "you", without adding a claim.
   - title: Keeps the rhythm
-    text: Holds sentence lengths, repeated phrases and brand words, and keeps each line within about 10% of its old length.
-  - title: Updates text and pictures
-    text: Changes on-screen text and opening variants the same way, and rewrites picture notes only where the person on screen changes.
+    text: Sentence lengths, repeats and brand words stay, and each line stays within about 10% of its old length.
+  - title: Moves text and pictures
+    text: On-screen text and opening variants move the same way. Picture notes change only when a new person is on screen.
   - title: Checks honesty
-    text: Compares old and new line by line for the same facts in the same order, and notes any line where honesty limited the change.
+    text: Holds old and new side by side for the same facts in the same order, and flags each line where honesty held the move back.
 
 output_shape: |
   <line number>. "<spoken words in the new voice>"
-     text: <on-screen text, changed the same way>
-     picture: <picture note, changed only where the person on screen changes>
-  (same number of lines, in the same order)
+     text: <on-screen text, moved the same way>
+     picture: <picture note, changed only if a new person is on screen>
+  (every line kept, in its old place)
 
   OPENING VARIANTS
   "<variant in the new voice>"  (<leads into line 2, or kept and why>)
@@ -62,8 +62,8 @@ output_shape: |
   NOTES
   Kept in the old voice: <line numbers, and why>
   Pictures:  <what changed on screen>
-  Honesty:   <lines where honesty limited the change>
-  Length:    <any line outside 10% of its old length>
+  Honesty:   <lines where honesty limited the move>
+  Length:    <any line more than 10% off its old length>
   MISSING:   <anything it needed and didn't get>
 
 example:
@@ -128,8 +128,8 @@ example:
       tense. It is true now, not part of his story.
     - Line 6: a customer quote stays word for word in any voice.
     - Line 7: the price and renewal are spoken to the viewer, in the
-      present. In a third-person script the narrator turns to the
-      viewer here.
+      present. The narrator tells his story, then speaks straight
+      to the viewer for the close.
     - Variant 2: a brand line, kept as written.
     Pictures: lines 1 and 2 change from a presenter talking to camera
     to a man shown on screen with the narrator over him. He is a
@@ -144,34 +144,42 @@ example:
 
 tweaks:
   - what: The new person
-    how: '"I" suits a story a real customer tells; "you" suits a direct script; "she" or "they" suits a narrator over footage. If an AI will say it, ask for "you" or "she", because it cannot honestly say "I".'
+    how: '"I" suits a story a real customer tells. "You" suits a direct script. "She" or "they" suits a narrator over footage. If an AI will say it, ask for "you" or "she", because it can''t honestly say "I".'
   - what: The tense
-    how: Past tense reads as a story that happened. Present reads as now and how things work. Future reads as a promise or warning, so use it sparingly. Ask for two tenses at once to get two versions.
+    how: Past tense sounds like a story that happened. Present sounds like now. Future sounds like a promise or warning, so use it rarely. Ask for two tenses to get two versions.
   - what: Who says it
-    how: Change this from "AI presenter" to "real customer" and the skill will allow more first-person lines, but it leaves [brackets] where the customer's own true details go.
+    how: Switch from "AI presenter" to "real customer" and it allows more "I" lines, with [brackets] left where the customer's own true details go.
   - what: The name and pronoun
     how: Give a first name and pronoun for third person ("Dana, she"). Without one it uses "they" and never makes up a surname or back story.
 
 judge:
-  - Put old and new side by side. Same number of lines, same order, same facts in each.
+  - Hold old and new side by side. Every line is there, in its old place, with the same facts.
   - Every number, price, renewal term and customer quote is word for word the same.
   - Lines about how the product works are still in the present tense.
   - The offer and call to action still speak to the viewer.
   - Read it aloud. No line sounds translated or stiff.
-  - Nothing an AI presenter says claims a result of their own.
+  - Nothing an AI presenter says claims a result of its own.
 
 test:
-  - Convert a script, then ask it to convert the new version back to the original voice. The round trip should land almost word for word on your original. If facts drift, it is changing more than the voice.
-  - Run the same script and voice twice. The story lines may differ slightly; numbers, prices and quotes must never change.
-  - Ask for a first-person version twice, once with "AI presenter" and once with "real customer". The AI version should turn personal results into observations; if both read the same, the honesty rules were skipped.
-  - Hand the old and new scripts to a colleague and ask them to circle any line that now says something new. There should be none.
+  - Move a script, then ask it to move the new version back. The round trip should land close to your original, word for word. If facts drift, it is changing more than the voice.
+  - Run the same script and voice twice. The story lines may differ a little; numbers, prices and quotes never should.
+  - Ask for an "I" version twice, once with "AI presenter" and once with "real customer". The AI version should turn personal results into reports. If both read the same, it skipped the honesty rules.
+  - Give a colleague the old and new scripts and ask them to circle any line that now says something new. They should find none.
 
 improve:
   - Add your fixed brand lines and offer wording to step 7 of the skill file as words it must never change, so they survive every voice.
-  - If the same speaker always says your ads (an AI narrator, say), write that into "What you need" as the default, so the honesty rules apply without you typing it.
+  - If the same speaker always reads your ads (an AI narrator, say), write that into "What you need" as the default.
   - Paste your allowed claims under the checks, so it flags any new wording that strays from them.
-  - Only convert scripts that have already done well, and save which voice won back to your brand file next to the script.
+  - Only retell scripts that have already done well, and note which voice won in your brand file next to the script.
   - Pair it with a skill that makes a script easy to say aloud, and one that plans which versions to test against each other.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Moving a script into a new voice while holding every fact works well in any strong chat AI."}
+  inputs:
+    - "The results of the original ad (watch time, sales), so you only retell a script worth more versions"
+    - "Two or three customer reviews in their own words, so an \"I\" version for a real customer has true details to use"
+    - "Your list of allowed and banned claims, so a moved line never drifts into a new claim"
 
 terms:
   - term: Person

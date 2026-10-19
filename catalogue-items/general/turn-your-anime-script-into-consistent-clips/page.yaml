@@ -170,6 +170,16 @@ improve:
   - Save the approved hero sheet and look line in your brand file.
   - Pair it with a skill that writes an original anime ad script, and one that adds captions in your brand font.
 
+works_best_with:
+  tools:
+    - {name: "Nano Banana 2.1", why: "Takes up to 14 reference images and keeps up to four characters the same, so your reference stills match."}
+    - {name: "Kling 4.0", why: "Takes up to 10 keyframes in one clip, so the key poses you planned can be set ahead."}
+    - {name: "Gemini Omni Flash", why: "Lets you fix one thing in a clip by asking, while the rest of the shot stays the same."}
+  inputs:
+    - "Flat pack art or full-size app screens, so the product sheet matches the real thing"
+    - "A short voice note for each speaker (pitch, pace, accent), so voices stay the same in every clip"
+    - "Your own words for the look you want (line weight, color, light), so you never copy frames from a real show"
+
 terms:
   - term: Key pose
     meaning: A drawing of the main position in a movement. Animators draw these first, then fill the motion between them.

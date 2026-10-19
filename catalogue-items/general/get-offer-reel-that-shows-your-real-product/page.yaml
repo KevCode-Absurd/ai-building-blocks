@@ -4,13 +4,12 @@ summary: "Give it your product photos, words and offer. You get a finished 10 to
 job: make-video-ads
 
 headline: "An offer video with your product and price exactly right"
-subhead: Give it your real product photos, approved words, colours, fonts and offer. It plans a beat-timed shot list for you to approve, builds the reel in code, reviews the rendered frames at least three times, and hands you the finished video in each shape you need.
+subhead: Give it your real product photos, approved words, colours, fonts and offer. It plans a beat-timed shot list for you to approve and builds the reel in code. It reviews the rendered frames at least three times, then hands you the finished video in each shape you need.
 
 explain: |
-  AI video tools often get the one thing you can't afford wrong: the product. The label smudges, the pack changes shape, the colour shifts. For a launch or offer reel, where the whole point is "this product, this price", that's a problem.
+  AI video tools often get wrong the one thing you can't afford to: the product. The label smudges, the pack changes shape, the colour drifts. In a launch or offer reel, the whole point is "this product, this price", so that's a real problem.
 
-  This skill builds the reel in code instead. It uses only your real photos, your own fonts and colours, and words you've already approved. Text and photos move to a measured music beat, also made in code, so cuts land exactly on time. It writes the brief and a shot list first and stops until you say APPROVED. Then it builds, and a separate reviewer scores the actual rendered frames (at phone size, with the app's button areas marked) over at least three rounds before you see anything. It's for offers, launches and short lists of reasons, not demonstrations or stories.
-
+  This skill builds the reel in code instead, with a tool such as Remotion. It uses only your real photos, your own fonts and colours, and words you've already approved. Text and photos move to a music beat that is also made in code and measured, so every cut lands on time. It writes the brief and a shot list first, then stops until you reply APPROVED. After the build, a separate reviewer scores the rendered frames at phone size, with the app's covered areas marked. That happens over at least three rounds before you see anything. It's made for offers, launches and short lists of reasons, not demos or stories.
 when:
   - You're launching a product or an offer and need a short reel in your exact brand look.
   - AI-generated video keeps getting your pack or label wrong.
@@ -18,7 +17,7 @@ when:
 
 you_give:
   - What the reel is for (launch, offer, reasons, bundle, closing card)
-  - Real product photos (front on a clean background, plus out of pack, in hand, in use)
+  - Real product photos (the front on a clean background, plus unpacked, in a hand, in use)
   - Approved words in order, with sources for claims, prices and offers
   - Your colours, font files and logo file
   - Length, shapes, music and voice (optional)
@@ -29,7 +28,7 @@ you_get:
   - Final videos in each shape, with loudness and review scores
 
 how_to_use:
-  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in. It needs a version that can run code on your computer, such as Claude Code.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in. It needs a coding agent that can run code on your computer, such as Claude Code with Remotion.
   - Give it your photos, approved words, colours, font files and logo.
   - Answer the one round of questions about anything blank.
   - Read the shot list carefully, then reply APPROVED or ask for changes.
@@ -100,7 +99,7 @@ example:
     BRIEF
     Purpose: reasons reel, 17.5 s. Shapes: 9:16, 4:5. Music: code-made.
     Voice: none. Placement: feed, watched with the sound off.
-    Photos: pack-front (pouch on gradient), in-hand (pouring).
+    Photos: front (pouch on gradient), hand (pouring).
     Offer: "$29.99 first order with text sign-up" and "Renews at $49.99
       every 4 weeks", both on screen. No percentage: the site shows
       52%, 55%, 49% and 58%, so none is used until one is confirmed.
@@ -127,24 +126,24 @@ example:
 
     SHOT LIST
     Beats | Time | Words | Photo | Motion | Sound | New
-    1-4 | 0.00-2.50 | "Rip. Tip. Enjoy." | pack-front | pouch on frame
+    1-4 | 0.00-2.50 | "Rip. Tip. Enjoy." | front | pouch on frame
       0, micro push 1.00 to 1.05; words rise one per beat | kick on 1 |
       pouch + words
-    5-8 | 2.50-5.00 | "Sprout Superfood Gummies" | pack-front | line
+    5-8 | 2.50-5.00 | "Sprout Superfood Gummies" | front | line
       lifts out, title rises | snare on 5 | title
     9-12 | 5.00-7.50 | "60+ ingredients, 21 vitamins & minerals, and 6g
-      fiber" | in-hand | photo card rises; words type on | hit on 9 |
+      fiber" | hand | photo card rises; words type on | hit on 9 |
       hand photo
-    13-16 | 7.50-10.00 | "No water. No mixing. No shaker." | in-hand,
+    13-16 | 7.50-10.00 | "No water. No mixing. No shaker." | hand,
       tighter | push 1.00 to 1.08; each phrase rises on a beat | ticks
       on 13, 14, 15 | three phrases
     17-20 | 10.00-12.50 | "Vitamin C in the blood: up 40.1%" + DM Mono
-      "2025 study, 12 weeks, 120 adults. 2.7x placebo." | pack-front |
+      "2025 study, 12 weeks, 120 adults. 2.7x placebo." | front |
       card rise; "40.1%" in sunflower | hit on 17 | figure + source
     21-25 | 12.50-15.63 | "$29.99 first order with text sign-up" then
-      "Renews at $49.99 every 4 weeks" | pack-front | lines swap one
+      "Renews at $49.99 every 4 weeks" | front | lines swap one
       after the other | snare on 21, 23 | price, then renewal
-    26-28 | 15.63-17.50 | "Start Now" + logo | pack-front | micro push,
+    26-28 | 15.63-17.50 | "Start Now" + logo | front | micro push,
       button rises | final hit on 26 | end card (1.88 s)
 
     Sources: "Rip. Tip. Enjoy." = brand line; title = product page;
@@ -157,7 +156,7 @@ tweaks:
   - what: The purpose
     how: Say "launch", "offer", "3 reasons", "bundle" or "closing card". Each changes the shot order; an offer reel leads with the price as the offer states it.
   - what: Shapes
-    how: List every shape you need (9:16, 4:5, 1:1, 16:9). It renders the main one first, then the rest, and checks the app's button areas on the tall one.
+    how: List every shape you need (9:16, 4:5, 1:1, 16:9). It renders the main one first, then the rest, and checks the app's covered areas on the tall one.
   - what: Voice
     how: Leave it out for a feed reel watched on mute. Add one only if you own the recording or a voice tool's licence covers it.
   - what: A reference reel
@@ -174,7 +173,7 @@ test:
   - Stop at the shot list and check every word and price against your site. Each line should have a source next to it, and the full price terms should be there, not only the first-order price.
   - Look at the first rendered frame at phone size with the sound off. You should know what the product is within 2 seconds.
   - Put a frame of the reel next to your product photo. The label, shape and colour should be identical, because nothing is redrawn.
-  - Ask for a second shape (square after 9:16) and check that no text sits under the app's button areas in either one.
+  - Ask for a second shape (square after 9:16) and check that no text sits in the app's covered areas in either one.
   - Read the review log. Three rounds or more, every score 8 or above, and anything knowingly left imperfect named plainly.
 
 improve:
@@ -183,6 +182,15 @@ improve:
   - If you always deliver the same shapes and lengths, write them into step 9 instead of asking each time.
   - Settle one discount number across your site and ads, and put only that number in your brand file. The reel shows whatever terms you give it.
   - Pair it with the skill that writes a flat graphic ad script, if you'd rather settle the words and order before anything is built.
+
+works_best_with:
+  tools:
+    - {name: "Claude Code with Remotion", why: "Remotion draws each frame from code, and its agent skills let Claude Code build, render and re-check the reel on your computer."}
+  inputs:
+    - "Your product photos with clean cut-out edges as PNG files, so the pack sits on any background without a halo"
+    - "A reel whose pacing you like, so the beat grid and cut rhythm start from something you've already approved"
+    - "Your live offer page as it stands today, so every price and term on screen matches what buyers will see"
+    - "A licensed music track, if you want real music in place of music made in code"
 
 terms:
   - term: Beat grid

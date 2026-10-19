@@ -2,15 +2,15 @@
 
 ## Extra facts to give it
 - The ingredient or materials list, and how the product is made.
-- Batch or origin facts.
+- Where it's made, or batch facts, if the brand states them.
+- The one-time price, the subscription price and what it renews at.
+- The price per item in a bundle, or per day for something used up.
 - The returns window and its conditions.
-- The one-time price and the subscription price.
-- The price per item in a bundle.
 
-## Extra checks for online stores
-- **Price.** A missing price makes people leave. State it with the offer's terms.
-- **Discount.** A discount can bring in buyers who don't stay. For a premium product, don't let the discount be the whole message, because the price is part of what tells people it's good.
-- **Trial.** A starter size, a guarantee or a first-order price lowers the risk better than a price cut.
-- **Picture.** Show the end result (the finished dish, the made bed) rather than the parts, and show the product where it's really used.
-- **Proof.** Showing the product doing its job beats a describing word. Never suggest that an ingredient or a process proves a result.
-- **How it's made.** A checked, ordinary fact about how it's made can make the value concrete without claiming it's exclusive. Never call it unique without evidence.
+## What the tests look for in a store ad
+- **Prove it:** a dose, a size, a thickness or a test result usually sits behind "premium". Use the one the facts hold.
+- **Swap it:** a rival can claim "high quality". It can't claim your exact material or your exact routine. Those pass the test.
+- **The ask:** shoppers leave when the price is hidden. State it with its terms, and say what it renews at if it's a subscription.
+- **Discounts:** a big percentage off can pull in buyers who don't stay. For a premium product, lead with the reason to buy and put the deal in the ask.
+- **Lower the risk:** a starter size, a first-order price or the guarantee often does more than a bigger discount.
+- **The picture:** show the product in the place it's really used, and the result as it really looks. Never suggest that an ingredient or process proves a result.

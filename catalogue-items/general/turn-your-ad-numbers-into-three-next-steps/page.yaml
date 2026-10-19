@@ -4,12 +4,12 @@ summary: "Paste this period's ad totals and the last one's. You get what changed
 job: read-ad-results
 
 headline: "Turn your ad numbers into three next steps"
-subhead: Paste this period's ad totals and the period before. It recalculates every number from the totals, writes the two to four changes that matter, names the one worry still open, and ends with three ranked actions someone can own.
+subhead: Paste this period's ad totals and the period before. It recalculates every number from the totals, opens with the answer in one line, then gives the changes that matter, the one worry still open, and three ranked actions someone can own.
 
 explain: |
   Most ad reports are the export with a chart on top. Every number is there and nobody knows what to do. Some reports also average percentages across rows, which gives wrong answers, or credit the ads for a sales jump that came from a restock.
 
-  This skill writes only what someone needs in order to decide. It first recalculates each number from the raw totals: cost per sale, return on spend, click rate. Then it keeps three things apart: what changed, the explanation the data supports, and what to do about it. It never says an action was done unless you show a record of it, and it never invents wins to fill the page.
+  This skill writes only what someone needs in order to decide. It first recalculates each number from the raw totals: cost per sale, return on spend, click rate. Then it keeps three things apart: what changed, the explanation the data supports, and what to do about it. The answer comes first, in one line, so a busy reader can act on it alone. It never says an action was done unless you show a record of it, marks any budget or pause action as needing your approval, and never invents wins to fill the page.
 
 when:
   - You need a monthly or weekly ad report for a boss, client or co-founder, and it has to fit on one page.
@@ -23,8 +23,9 @@ you_give:
   - Findings from a diagnosis, and a log of what was changed (optional)
 you_get:
   - A coverage line saying what the report includes and what's missing
+  - The answer in one line, at the top
   - A table of the main numbers, this period against last, with the change
-  - Two to four changes that matter, one unresolved worry, and three ranked actions
+  - Two to four changes that matter, one unresolved worry, and three ranked actions, with budget changes marked for approval
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
@@ -40,10 +41,15 @@ how_it_works:
     text: Uses your store's own revenue for overall efficiency and shows what the ad platform claims separately, because platforms can count the same sale twice.
   - title: Separates three things
     text: What changed, the explanation the data supports, and the action. Unsupported causes are labelled as guesses.
-  - title: Writes the brief
-    text: Coverage, the numbers table, the main changes, one open worry and three actions. No padding with numbers that changed nothing.
+  - title: Leads with the answer
+    text: One line the reader could act on alone, then the support in order of weight.
+  - title: Picks three actions
+    text: Ranked by money at stake, each tied to a number, with an owner and a check. Anything touching a budget, bid or ad status is marked needs approval.
 
 output_shape: |
+  THE ANSWER
+  <one line someone could act on if they read nothing else>
+
   PERIOD AND COVERAGE
   <dates, currency, attribution window, what's included>
   MISSING: <anything not given>
@@ -59,6 +65,7 @@ output_shape: |
 
   THREE NEXT ACTIONS
   1. <action>. Owner: <who>. Done when: <how you check it>
+     <needs approval, if it changes a budget, bid or ad status>
   2. <action> ...
   3. <action> ...
 
@@ -85,6 +92,10 @@ example:
     Brand rule: say "supports", never "fix". Ads say 61% off; the
     product page shows 52% and 55%.
   output: |
+    THE ANSWER
+    Find out why P1 stopped working before spending more: it cost
+    $26.79 a sale in its first 21 days and $76.92 in the next 21.
+
     PERIOD AND COVERAGE
     9 ads, 14 to 42 days each (exact dates MISSING), USD, practice
     numbers. Revenue is what the ad platform reports. MISSING:
@@ -123,6 +134,7 @@ example:
     2. Before putting more money into T1, change its opening "Fix the
        Hot Girl Tummy". "Fix" breaks the brand's "supports" rule.
        Judge the new version on its own numbers. Owner: MISSING.
+       Needs approval before any budget moves to T1.
     3. Make the ad's discount match the page (61% against 52% or 55%),
        then re-read P2's 0.90% buy rate. A guess, not a proven cause.
        Owner: MISSING.
@@ -141,7 +153,9 @@ tweaks:
 
 judge:
   - Check one number yourself. Cost per sale should be total spend divided by total purchases, not an average of each ad's figure.
+  - The first line tells you what to do, on its own.
   - There are exactly three actions, ranked, and each one ties to a number in the report.
+  - Any action that changes a budget or pauses an ad says needs approval.
   - No action is described as already done unless you gave it a record.
   - Platform revenue and store revenue are never added together.
   - Anything missing is named in the coverage line, not quietly left out.
@@ -154,10 +168,19 @@ test:
 
 improve:
   - Put your targets (cost per sale or return) into "What you need" in the skill file, so every report judges against the same line.
-  - Name your reader in step 4 ("Write the brief"), for example "a co-founder who reads it on a phone". The length and the words follow from that.
+  - Name your reader in "What you need", for example "a co-founder who reads it on a phone". The length and the words follow from that.
   - If you report to a client, add their names for campaigns and products to the skill, so the report uses their words, not the platform's.
-  - Keep each month's three actions in your brand file, and paste them in next month so the report can say which were done and checked.
+  - Keep each month's three actions in log.md in your brand file, and paste them in next month so the report can say which were done and checked.
   - Pair it with a skill that finds out why your ads stopped selling. Run that first when something big moved, and paste its findings in here.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Claude, ChatGPT and Gemini all do the sums well when the totals are pasted as a table with clear column names."}
+    - {name: "Google Sheets", why: "Keeps both periods side by side, so you can check any number in the report yourself."}
+  inputs:
+    - "Your store's own orders and revenue for both periods, so overall return isn't based on platform claims"
+    - "Last month's three actions and whether they were done, so the report doesn't repeat them"
+    - "Findings from a diagnosis run, so the open worry has evidence behind it"
 
 terms:
   - term: Return (ROAS)

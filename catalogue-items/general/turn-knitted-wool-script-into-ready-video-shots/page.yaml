@@ -192,6 +192,17 @@ improve:
   - Add any miss you keep seeing to the fixes table, with the change that cured it.
   - Pair it with the skill that writes the knitted wool script, so every picture note already names its material.
 
+works_best_with:
+  tools:
+    - {name: "Nano Banana 2.1", why: "Takes up to 14 reference images and keeps up to four characters the same, so your reference stills match."}
+    - {name: "Veo 3.1", why: "Starts each clip from your approved still and can make sound with it, in 8-second clips."}
+    - {name: "Kling 4.0", why: "Takes up to 10 reference images in one job, so figures and product stay the same from shot to shot."}
+    - {name: "ElevenLabs Eleven v4", why: "Reads the narration with tags for pauses and pace, and can use a voice cloned from your own recording."}
+  inputs:
+    - "A close photo of a knitted swatch in your colors, so stitches look real in every frame"
+    - "The flat label artwork, so the label you put back in editing matches the pack exactly"
+    - "The recorded narration before you make clips, so each clip is timed to its line"
+
 terms:
   - term: Material sentence
     meaning: One fixed sentence giving every kind of surface its fabric, plus the yarn, colors and light, pasted word for word into every image prompt.

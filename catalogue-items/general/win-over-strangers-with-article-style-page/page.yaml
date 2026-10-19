@@ -195,6 +195,15 @@ improve:
   - Save the cause and the tests from section 4 to your brand file. They rarely change, and other pages can use them.
   - Pair it with a skill that maps real customer doubts, so section 9 answers what buyers ask, and run a landing page check before it goes live.
 
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Any current chat AI can write the ten sections. Give it every fact so the MISSING list stays honest."}
+    - {name: "Hemingway Editor", why: "Marks hard sentences in yellow and red, so paragraphs stay short enough for phones."}
+  inputs:
+    - "Test results or an ingredient or materials sheet, so the proof section has facts to walk through"
+    - "Real customer photos shared with permission, so image captions show real use"
+    - "Questions buyers ask before buying, from chat or email, so the questions section uses their words"
+
 terms:
   - term: Advertorial
     meaning: An ad written like an article. It must be clearly labelled as advertising.

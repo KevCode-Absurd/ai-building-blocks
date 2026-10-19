@@ -1,198 +1,205 @@
 new_slug: get-images-that-match-your-plan-word-for-word
-name: "Get the image you planned, in fewer tries"
-summary: "Give it your image plan and photos. You get one prompt that keeps your product, words and layout exact."
+name: "Get the image you planned, with every word right"
+summary: "Give it your image plan and photos. You get a prompt and settings that keep your product, words and layout exact."
 job: make-image-ads
 
-headline: "Get the image you planned, in fewer tries"
-subhead: Give it your approved image plan and your reference photos. It tells the image tool what each photo is for, writes every word once in quotes, sets out the layout and every hand, and lists the faults to check when the picture comes back.
+headline: "Get the image you planned, with every word right"
+subhead: Give it your agreed image plan and your product photos. You get the tool settings and a prompt that gives each photo one job and writes every word once in quotes. A fix list covers the faults to check when the picture comes back.
 
 explain: |
-  Most image prompts fail in small, expensive ways. The headline comes back misspelled or printed twice, the label is redrawn, a reference photo's props leak into your scene, or the product floats with no shadow. Each fix costs another try, and every try can break something that was right.
+  Image tools now spell well and follow long prompts, yet most images still fail on small things. A headline comes back with a letter missing, the label on your pack gets redrawn, a prop from a reference photo walks into your scene, or the product floats with no shadow. Each fix costs a try, and a careless retry can break what was right.
 
-  This skill works after the thinking is done. It adds no new idea, claim or style. It names each attached photo by number and says which single thing to take from it (the product's shape, the size in a hand, the light). It describes type by its look instead of a font name, writes every word once in quotes, sets out the layout in zones, and spells out hands and actions so the picture is physically possible. Then it lists the faults to check for when the image comes back.
+  This skill writes the brief the way current image models read best. Settings such as size and quality go in the tool, not the prompt. Each photo is numbered with one job ("use this for size only"). The product's most visible facts are written the same way every time. Every word sits once in quotes, top to bottom, with its place and colour. When the image comes back, it tells you what to read letter by letter and how to fix one fault per edit while keeping the rest.
 
 when:
-  - You've agreed what an image should say and show, and need a prompt that gets it right.
-  - Your image tool keeps garbling words, redrawing your label or copying things from reference photos.
-  - You're adapting a prompt you found online and want to strip out what doesn't belong.
+  - You've agreed what an image should say and show, and want it made right in as few tries as possible.
+  - Your image tool keeps misspelling words, redrawing your label or copying things from your reference photos.
+  - You found a prompt online and want to use its look without its people, brands or claims.
 
 you_give:
-  - The approved plan, including the exact words (or "no words"), scene, layout and sizes
+  - The agreed plan, with the exact words (or "no words"), the scene, the layout and the sizes
   - Reference photos, each with what it's for (optional)
-  - Facts about how the product or subject really looks and is used (optional)
-  - Your brand colours as hex codes and a sample of your type (optional)
+  - Facts about how the product looks and is used (optional)
+  - Your brand colours as hex codes and a picture of your type (optional)
 you_get:
-  - One prompt in a fixed shape, ready to paste into your image tool
-  - A list of the photos used and what each one controls
-  - The checks to run on the image that comes back, and how to fix one fault at a time
+  - The settings to choose in your image tool, kept apart from the prompt
+  - One prompt, ready to paste, with a job for every photo
+  - What to check letter by letter when the image comes back
+  - A fix for each common fault, one edit at a time
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Paste your approved plan. Include every word that should appear on the image, exactly as written.
-  - Attach your reference photos and say what each one is for, such as "the product as sold" or "the light I want".
-  - Paste the prompt into your image tool. Set the size with the tool's own controls, not by writing "4K".
-  - Check the image letter by letter at full size. If one detail is wrong, ask for a fix to that one detail only.
+  - Paste your plan. Include every word that should be on the image, exactly as written.
+  - Attach your photos and say what each is for, such as "the product as sold" or "the light I want".
+  - In your image tool, set the ratio, size and quality first. Then attach the photos in the order given and paste the prompt.
+  - Check the image at full size. If one thing is wrong, paste the fix line for that one thing and keep the rest.
 
 how_it_works:
-  - title: Checks six decisions
-    text: Subject, action, place, camera, light and style. Each is marked as fixed by the plan or deliberately left open.
-  - title: Cleans borrowed prompts
-    text: If you're adapting someone else's prompt, it removes people, brands, props and claims your plan didn't approve, and fixes contradictions.
-  - title: Names each photo's job
-    text: Every attached photo is listed once by number, with the one thing to take from it, such as shape, size in a hand or light only.
-  - title: Keeps the subject true
-    text: Repeats the two or three most visible facts in the same words, and says what the subject must not turn into.
-  - title: Sets words and type
-    text: Writes each line once in quotes with its place, colour and weight. Type is described by its look, and colours as hex codes.
-  - title: Lays out the scene
-    text: Two to four sentences on surface, light, camera and named props, then the layout in zones with proportions.
-  - title: Makes it physically possible
-    text: Says which hand holds what, where everything rests and how anything opens, so nothing floats.
-  - title: Lists the fixes
-    text: Gives the checks for the finished image and the rule for fixing it, one detail per try, stopping after two fixes.
+  - title: Locks the plan
+    text: Lists every fixed word, subject, scene and size. Anything still open goes on a MISSING line. A borrowed prompt loses whatever your plan didn't approve.
+  - title: Splits settings from words
+    text: Ratio, resolution and quality are set in the tool. Writing "4K" in a prompt sets nothing.
+  - title: Gives each photo one job
+    text: Every photo is numbered, with what to take from it and what to ignore, so its props and people stay out.
+  - title: Keeps the product true
+    text: The same two or three visible facts in every prompt, the printing kept as photographed, and the size anchored to a hand or an everyday object.
+  - title: Writes the scene, then the layout
+    text: Sentences in order of importance, named props, then zones in reading order with where the empty space goes.
+  - title: Writes each word once
+    text: In quotes, top to bottom, with place, colour and how the type looks, plus a count of the pieces of text.
+  - title: Fixes one fault per edit
+    text: A fix table matches each fault to one edit, repeating what to keep, and says when to start fresh instead.
 
 output_shape: |
-  A finished <kind of image>, ready to use.
+  SETTINGS (set in the tool, not in the prompt)
+  Model, ratio, resolution, quality, photos in order
 
-  IMAGES, by role. Do not blend their roles.
-  1. <job>: <what to copy>. <2 or 3 visible facts>. <what it must
-     not become>.
-  2. <job>. <take only this>.
-  3. <style or layout guide only; never in the picture>
+  PROMPT
+  <what the image is and where it runs>
+  Reference photos: Image 1: <what, take, ignore> ...
+  Product: <2 or 3 visible facts>. <what it must never become>.
+  Scene: <two to four sentences>
+  Layout: <zones from top to bottom; the empty space>
+  Words, top to bottom (exact, nothing else):
+  <role, place, look, hex>: "<exact words>"
+  The image has exactly <N> pieces of added text.
+  Hands and use: <only when held, opened or worn>
+  Keep out: <the few things that must not appear>
 
-  SCENE
-  <2 to 4 sentences, most important first>
-
-  LAYOUT
-  <zones in reading order, with proportions; where the empty space is>
-
-  TEXT (exact, nothing else)
-  <role, position, colour, weight: "exact words">
-  Type: <weight, width, style, case, spacing>
-  Colours: <hex (plain name)>
-  Each line appears exactly once. No other text anywhere except what
-  is printed on the product.
-
-  IN USE (only when shown open, held or used)
-  <what opens, what moves, each hand and its grip>
-
-  RULES
-  <people, props allowed, what must not appear>
-
-  REFERENCES USED: <photo number, role>
-  CHECK WHEN IT COMES BACK: <the faults to look for>
+  CHECK WHEN IT COMES BACK
+  <words to read letter by letter; product details; likely leaks>
+  MISSING: <anything the plan didn't settle>
 
 example:
   business: sprout
   input: |
     [the skill]
 
-    Approved plan: product page image 3, "Why does it work?"
-    - Kind: a finished product page image
+    Plan: product page image 3, "Why does it work?"
+    - Kind: a finished product page image for the Sprout store
     - Words: headline "One pack. 60+ ingredients." Points: "21 vitamins
       & minerals", "6g prebiotic fiber", "Vegan, pectin base"
     - Scene: the pouch standing on a soft two-colour gradient, a few
       gummies scattered in front
-    - Layout: headline band at the top, pouch in the centre-left,
-      three points in the right third
+    - Layout: headline band at the top, pouch centre-left, three points
+      in the right third
     - Sizes: 1:1 and 4:5
+    - Tool: GPT Image 2.5
 
-    Photos: 1 = the pouch front on. 2 = gummies in an open hand.
-    Subject facts: glossy deep green stand-up foil pouch, big yellow
+    Photos: 1 = the pouch, front on. 2 = gummies in an open hand.
+    Product facts: glossy deep green stand-up foil pouch, big yellow
     wordmark, yellow bear face top right, "28 Daily Packs" at the
     bottom. Gummies: small opaque deep-green bears, soft matte, about
-    thumbnail height.
-    Colours: deep forest green #002C17 (headings), cream #FFF7DF
-    (hero background), sunflower yellow #FFCC2E (badges).
-    Type: bold headings, medium body, in the brand's plain sans.
+    thumbnail height. The big pouch opens only at its resealable top
+    and is never shown torn.
+    Colours: deep forest green #002C17, warm cream #FFF7DF, sunflower
+    yellow #FFCC2E. Type: bold plain sans for headings, medium for body.
   output: |
-    A finished product page image, ready to upload.
+    SETTINGS (set in the tool, not in the prompt)
+    Model: GPT Image 2.5 · Ratio: 1:1 first, then 4:5 as its own image
+    Quality: high (small text on the image)
+    Photos attached, in this order: 1 = pouch, 2 = gummies in hand
 
-    IMAGES, by role. Do not blend their roles.
-    1. Subject as sold: copy shape, colours and printing exactly. A
-       glossy deep green stand-up foil pouch, big yellow wordmark,
-       yellow bear face top right, "28 Daily Packs" at the bottom. Not
-       a tub, not a jar; if it reads as a box it is wrong.
-    2. Close-up of the gummies: take texture and finish only. Small,
-       opaque, deep-green bears, soft matte, about thumbnail height.
-    Read the images by role. Do not blend their roles.
+    PROMPT
+    A photorealistic product page image for an online store.
 
-    SCENE
-    The pouch stands upright on a soft gradient from cream #FFF7DF at
-    the top to pale sunflower yellow at the bottom, closed at its
-    resealable top. Five gummies lie scattered on the surface in front
-    of it. Bright, even, sunny light from the front left with a soft
-    shadow behind the pouch. Camera straight on at the pouch's middle.
-    Photographed, not drawn.
+    Reference photos:
+    Image 1: the pouch as sold. Match its shape, colours and printing
+    exactly. Ignore its background.
+    Image 2: gummies in an open hand. Use it for the gummies' size,
+    colour and soft matte finish only. Ignore the hand.
 
-    LAYOUT
-    Top 22%: headline band, plain cream. Centre-left: the pouch at 55%
-    of frame height. Right third: three points stacked, each with a
-    small sunflower-yellow dot. Bottom fifth kept clear of text.
-    1:1: points beside the pouch. 4:5: the same, with more space above
-    the headline.
+    Product: a glossy deep green stand-up foil pouch, big yellow
+    wordmark, yellow bear face top right, "28 Daily Packs" along the
+    bottom. Always a stand-up pouch, never a tub, jar or box. Keep the
+    printing exactly as in Image 1; do not redraw it. The pouch is
+    closed at its resealable top.
 
-    TEXT (exact, nothing else)
-    Headline, top, deep forest green, bold: "One pack. 60+ ingredients."
-    Point 1, right third, deep forest green, medium: "21 vitamins &
-    minerals"
-    Point 2, below it: "6g prebiotic fiber"
-    Point 3, below it: "Vegan, pectin base"
-    Type: bold plain sans-serif for the headline, sentence case, tight
-    spacing; medium plain sans-serif for the points.
-    Colours: #002C17 (deep forest green) for text, #FFF7DF (cream),
-    #FFCC2E (sunflower yellow) for the dots only.
-    Render all text crisply, spelled exactly as written. The image
-    contains exactly 4 pieces of text. Each line appears exactly once.
-    No punctuation at the end of any point. No other text anywhere
-    except what is printed on the product.
+    Scene: The pouch stands upright on a smooth surface that fades from
+    warm cream at the top to pale sunflower yellow at the bottom. Five
+    small green gummy bears lie in front of it, each about the height
+    of a thumbnail. Bright, even, sunny light from the front left casts
+    a soft shadow behind the pouch. The camera faces the pouch straight
+    on at its middle.
 
-    RULES
-    No people, no hands. No other product, box or second pouch. No
-    badges, buttons or borders. The pouch is never shown open or torn.
+    Layout: Top fifth: a plain cream band for the headline. Left half:
+    the pouch, about half the frame height. Right third: three points
+    stacked, each with a small sunflower yellow dot. Bottom fifth: no
+    text.
 
-    REFERENCES USED: 1 = subject as sold; 2 = gummy texture only
-    CHECK WHEN IT COMES BACK: "60+" and "21" digit by digit; the "&"
-    kept; the bear face and "28 Daily Packs" not redrawn; no fifth piece
-    of text; no full stop after "minerals".
-    MISSING: the pouch's real size. It's shown alone, so no size is
-    stated.
+    Words, top to bottom (exact, nothing else):
+    Headline, top band, bold plain sans-serif, sentence case,
+    #002C17 (deep forest green): "One pack. 60+ ingredients."
+    Point 1, right third, medium plain sans-serif, #002C17:
+    "21 vitamins & minerals"
+    Point 2, below it, same style: "6g prebiotic fiber"
+    Point 3, below it, same style: "Vegan, pectin base"
+    No full stop after any point. The image has exactly 4 pieces of
+    added text. No other text except what is printed on the pouch.
+
+    Keep out: people and hands, a second pouch, a box, buttons,
+    borders, badges.
+
+    For 4:5, make a new image with the same prompt, and change the
+    layout line to: "Top quarter: the headline band, with more space
+    above it."
+
+    CHECK WHEN IT COMES BACK
+    Read "60+" and "21" digit by digit, and check the "&" stayed.
+    Compare the wordmark, bear face and "28 Daily Packs" with Image 1.
+    Count 4 pieces of added text. No full stop after "minerals". No
+    hand from Image 2 in the picture.
+    MISSING: the pouch's real height. It stands alone, so no size is
+    stated beyond the gummies.
 
 tweaks:
   - what: The photo jobs
-    how: Change what you say a photo is for and the prompt changes. "In hand" takes only the size; "in use" takes only the action; "composition reference" takes the camera and light but never its product or people.
+    how: Change what you say a photo is for and the prompt changes with it. "In a hand" gives only the size, "in use" gives only the action, and "the light I want" gives light and camera height but never its product or people.
   - what: No words on the image
-    how: Say "no words" in the plan and the TEXT section is left out. Instead it names a clean zone, such as "the top third is plain wall, left empty", for words added later in a design tool.
-  - what: Sizes
-    how: List every size you need (4:5, 1:1, 9:16). It says what moves for each one, and keeps words out of the top and bottom edges of 9:16 where apps put buttons.
+    how: Say "no words" in the plan. The words section is left out and a clean zone is named instead, such as "the top third is plain wall", so you can add type later in a design tool.
+  - what: The image tool
+    how: Name your tool. The settings line changes to its real controls, and the prompt follows its habits, such as describing what is there instead of using "no" for a model that ignores it.
   - what: An edit, not a new image
-    how: Paste the approved image and say what's wrong. You get a CHANGE line for the one element and a KEEP line for everything else.
+    how: Paste the image you made and say what's wrong. You get one line that changes that one thing and repeats what to keep.
 
 judge:
-  - Every planned word appears in the prompt once, in quotes, spelled exactly as in your plan.
-  - Each attached photo has one stated job, and none is described without one.
-  - The prompt names no font, only how the type looks (bold, narrow, all caps).
-  - No new claim, person, prop or style appears that your plan didn't approve.
-  - If a hand appears, the prompt says which hand, where the fingers are and what the other hand does.
-  - On the returned image, you can count the pieces of text and the count matches.
+  - Every planned word appears in the prompt once, in quotes, spelled exactly as in the plan.
+  - Every attached photo has one job, with what to take and what to ignore.
+  - Ratio, size and quality are in the settings, not written into the prompt.
+  - The type is described by its look, and every colour has a hex code.
+  - Nothing appears that the plan didn't approve, such as a new claim, person, prop or style.
+  - On the returned image, the pieces of text can be counted and the count matches.
 
 test:
-  - Run it on an image you already made and liked, using the plan you made it from. The new prompt should keep the same words, product facts and layout, and add a job for each photo.
-  - Run it twice on the same plan. The TEXT section should be the same both times, letter for letter. If a word or its position changes, your plan isn't exact enough at that point.
-  - Paste the prompt into your image tool and count the pieces of text on the result. The count should match the TEXT section, and every word should be spelled as in your plan.
-  - Give it a prompt you found online for a similar shot, along with your plan. Check that no person, brand, prop or claim from that prompt survived into yours.
+  - Run it on an image you already made and liked, with the plan you made it from. The new prompt should keep the same words, product facts and layout, and add a job for every photo.
+  - Run it twice on the same plan. The words section should match letter for letter. If it changes, your plan isn't exact enough at that point.
+  - Make the image and count the pieces of text. The count should match the prompt, with every word spelled as in your plan.
+  - Give it a prompt you found online, along with your plan. Check that none of that prompt's people, brands, props or claims made it into yours.
 
 improve:
-  - "Write your type, described by its look, and your hex colours into the step that sets words and type (for Sprout: forest green #00582D, warm cream #FFF7DF), so every prompt describes them the same way."
-  - "Add your product's two or three most visible facts as a fixed line in the step that keeps the subject true (for Sprout: glossy deep green pouch, big yellow wordmark, yellow bear face top right)."
-  - Add the faults your image tool makes most often, such as a headline printed twice, to the checks at the end, so you look for them every time.
-  - Keep the clear zones you need for each size in the skill file, so tall images always leave the top and bottom free for the app's buttons.
-  - Pair it with the skill that writes down exactly how your product looks from its photos before you start, and the one that makes an approved image bigger without changing it for the final size.
+  - "Write your colours as hex codes and how your type looks into step 7 (for Sprout: deep forest green #002C17, warm cream #FFF7DF, bold plain sans for headings), so every prompt describes them the same way."
+  - "Add your product's two or three most visible facts to step 4 as a fixed line (for Sprout: glossy deep green pouch, big yellow wordmark, yellow bear face top right)."
+  - Add the faults your own image tool makes most often to the fix table, with the fix that worked.
+  - Write your tool's real settings into step 2, such as its ratios, sizes and how many photos it takes.
+  - Pair it with the skill that writes down how your product looks from its photos before you start, and the one that makes the finished image bigger without changing it.
+
+works_best_with:
+  tools:
+    - {name: "GPT Image 2.5", why: "Reads numbered photos and quoted words closely, and edits one part while keeping the rest."}
+    - {name: "Nano Banana Pro", why: "Takes several product and people photos at once, and Google suggests it for finished images with text."}
+    - {name: "Ideogram 4.5", why: "Places several blocks of text where you say, and its paid editor fixes one misspelled word without a new image."}
+    - {name: "FLUX.2", why: "Matches hex colour codes tied to each object, which helps when brand colours must be exact."}
+  inputs:
+    - "A plain-background photo of the product, front on and at least 2000 pixels wide, so the label is copied, not guessed"
+    - "Your logo as a clean PNG or SVG file, to attach as artwork or add after"
+    - "A photo of the product in a real hand, so its size comes out right"
+    - "Your show-it-right rules, such as how the pack opens and what's never shown"
+    - "An image that came out right before, with the prompt that made it"
 
 terms:
   - term: Reference photo
-    meaning: A photo you attach for the image model to copy one thing from, such as the product's shape or the light.
+    meaning: A photo you attach so the image tool copies one thing from it, such as the product's shape or the light.
   - term: Hex code
-    meaning: A six-character colour code, such as "#1C2340", that names an exact colour.
-  - term: Safe zone
-    meaning: The part of a tall image where words won't be covered by the app's buttons and captions.
+    meaning: A six-character colour code, such as "#002C17", that names one exact colour.
+  - term: Edit
+    meaning: Asking the tool to change one part of an image it already made, while keeping everything else.

@@ -34,8 +34,9 @@ Each block is filed under the one job a visitor hires it for. Use the id.
 6. **How to use it**
 7. **What changes the result most** (tweaks)
 8. **Test it** (judge, test)
-9. **Improve it for your business** (improve)
-10. Words on this page, the full skill file, run before and after
+9. **Works best with** (works_best_with)
+10. **Improve it for your business** (improve)
+11. Words on this page, **Built with ideas from** (item.yaml `credits`), the full skill file, run before and after
 
 ## page.yaml fields
 
@@ -59,6 +60,7 @@ Each block is filed under the one job a visitor hires it for. Use the id.
 | `judge` | Shown under **Test it** as "Is the output good?": things a beginner can check in a minute. | 4 to 6 bullets |
 | `test` | Shown under **Test it** as "Test it on your business": steps to try the skill on your own work before you rely on it (a case where you know the right answer, two runs to see if it's consistent, a side-by-side with your current best). Specific to this skill. | 3 to 5 steps |
 | `improve` | Shown as **Improve it for your business**: how to change the skill file itself for your use case (which lines or rules to edit, what examples or brand rules to add, what to save back to your brand file), and what to pair it with. | 3 to 5 bullets |
+| `works_best_with` | Shown as **Works best with**. `tools`: 1 to 4 `{name, why}` naming the real products that do this block's job best today, checked on the web (say "Any good chat AI" when any will do). `inputs`: 2 to 5 optional extras that clearly raise the result, not repeating `you_give`. | 1 to 4 tools, 2 to 5 inputs |
 | `terms` | Words on the page a beginner might not know. Each: `term` and `meaning`. Leave out if none. | 0 to 5 |
 
 For workflows, `how_it_works` lists the workflow's steps in order, each naming the skill it uses. The example shows the input to step 1 and the final output.
@@ -79,7 +81,7 @@ If the block has one, rewrite it in plain language too. It's the "For online sto
 
 ## item.yaml
 
-Don't edit it. The build reads `name`, `summary` and `job` from page.yaml, and the folder rename is done afterwards by `tools/apply-renames.mjs`.
+Don't edit its names or ports by hand. One field is written here on purpose: `credits`, a list of `{title, by, url, used}` for the public sources the block was built from (videos, articles, books, docs). It shows on the page as **Built with ideas from**. Never credit or name Ecommerce OS or a paid course; Blue Sense Digital's public masterclass is the one course-type source credited. The build reads `name`, `summary` and `job` from page.yaml, and the folder rename is done afterwards by `tools/apply-renames.mjs`.
 
 ## Writing it
 

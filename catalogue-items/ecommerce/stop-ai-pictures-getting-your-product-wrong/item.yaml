@@ -15,5 +15,8 @@ outputs:
 uses: []
 origin: rebuilt
 source_ids: [CES-096, CES-049, CES-036, CES-009]
-old_name: photoshoot-factory/01-product-assets
-version: 1.0.0
+old_name: product truth sheet
+version: 2.0.0
+credits:
+  - {title: "How To Create a Tech Pack To Send To Manufacturers", by: "Danielle Bauter, Shopify", url: "https://www.shopify.com/blog/how-to-create-a-tech-pack", used: "The spec-sheet shape: materials, construction, artwork and label placement"}
+  - {title: "Gpt-image-1.5 Prompting Guide", by: "OpenAI Cookbook", url: "https://developers.openai.com/cookbook/examples/multimodal/image-gen-1.5-prompting_guide", used: "Restating what must stay fixed in every prompt: the lock lines"}

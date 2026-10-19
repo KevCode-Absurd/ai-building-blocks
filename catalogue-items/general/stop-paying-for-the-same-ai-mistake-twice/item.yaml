@@ -17,4 +17,7 @@ uses: []
 origin: own
 source_ids: [CES-025]
 old_name: creative-lessons
-version: 1.0.0
+version: 2.0.0
+credits:
+  - {title: "Postmortem Culture: Learning from Failure", by: "John Lunney and Sue Lueder, Google SRE Book", url: "https://sre.google/sre-book/postmortem-culture/", used: "Blame the process, not the person, and fix the cause"}
+  - {title: "The Checklist Manifesto: How to Get Things Right", by: "Atul Gawande", url: "https://atulgawande.com/book/the-checklist-manifesto/", used: "Keep the working list short, and retire items fixed elsewhere"}

@@ -193,7 +193,7 @@ improve:
 
 works_best_with:
   tools:
-    - {name: "GPT Image 2", why: "Takes several reference photos at once and makes targeted edits, so the product stays close to the real one."}
+    - {name: "GPT Image 2.5", why: "Takes several reference photos at once and makes targeted edits, so the product stays close to the real one."}
     - {name: "Nano Banana Pro", why: "Handles many reference images and shiny surfaces such as foil pouches and glass."}
     - {name: "Figma", why: "Sets real type and your logo over the picture and exports 4:5 and 9:16 from one file."}
     - {name: "Meta Ads Manager", why: "Its preview shows where Stories and Reels buttons cover a 9:16 ad before you spend."}

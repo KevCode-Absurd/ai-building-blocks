@@ -166,7 +166,17 @@ improve:
   - Add your page's section names (for example "plan box", "reviews block") to step 2, so each row uses the words your team uses.
   - If you always check the same shopper task, write it into the skill as the default question.
   - After you test a row in a real browser, save the result in your brand file, so the next check starts from what's known.
-  - Pair it with a skill that tells you if you have enough visitors to test, before you test any change it suggests.
+  - Pair it with "Know if you have enough visitors to run a test" before you test any change it suggests, and "Answer the doubts that stop people buying" when the shopper's question comes from reviews.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI that reads images", why: "It can tie each observation to a spot in your screenshots, which the evidence table depends on."}
+    - {name: "Chrome DevTools device mode", why: "Shows the page at a phone's width and saves a full-length screenshot, with the screen size known."}
+  inputs:
+    - "Full-length phone screenshots named with the date and screen width, such as C1-390px-13Oct"
+    - "Screenshots of each state the shopper sees: an option picked, the cart with an item, any pop-up"
+    - "Your prices, guarantee and shipping terms, so it can flag where the page says something else"
+    - "Your analytics share of phone visitors, so the phone captures get the most attention"
 
 terms:
   - term: Capture

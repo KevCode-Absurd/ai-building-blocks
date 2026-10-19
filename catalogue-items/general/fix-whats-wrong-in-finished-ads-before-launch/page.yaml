@@ -173,6 +173,16 @@ improve:
   - Save the flaws you see often in your brand file as a "before you brief" list, and add it to your next brief.
   - Pair it with a skill that checks a finished ad on a phone before you spend, and with one that checks ads against Meta's ad rules.
 
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Any current chat AI that reads images can run the checks. Attach each ad at full size."}
+    - {name: "Meta Ads Manager", why: "Its placement previews show each ad at phone size with the app's buttons over it, for the phone-size read."}
+    - {name: "Hemingway Editor", why: "Gives a reading grade for the feed text, so you can check it's plain enough."}
+  inputs:
+    - "The brand's real product photos, so the product check compares against the truth"
+    - "A screenshot of the live offer page, so prices and dates are checked against what shoppers will see"
+    - "Your last batch of ads, so the variety check spots ideas you already ran"
+
 terms:
   - term: Storyboard
     meaning: A set of sketches or stills showing each shot of a video before it is made.

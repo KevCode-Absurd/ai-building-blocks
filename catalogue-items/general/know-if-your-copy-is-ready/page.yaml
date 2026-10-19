@@ -157,6 +157,15 @@ improve:
   - Save the checks your copy fails most often to your brand file, and give them to writers up front.
   - Run "Edit a draft so it reads clean and sells" first, so this is the final check, not the first edit.
 
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Any current chat AI can run the 12 checks. Paste your facts so the facts gate can mark items held."}
+    - {name: "Hemingway Editor", why: "Gives a reading grade and marks hard sentences, so you can confirm the two measures."}
+  inputs:
+    - "A phone screenshot of how the piece will look, so the length and the ask are judged in place"
+    - "The ad or email that leads to it, so check 1 can test whether the first line matches"
+    - "Earlier versions that ran and their results, so the fixes avoid what already failed"
+
 terms:
   - term: Facts gate
     meaning: A check that every number, quote and claim in the copy matches the facts you gave it.

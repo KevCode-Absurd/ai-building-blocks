@@ -177,6 +177,16 @@ improve:
   - Save every phrase that wins in your brand file with its review id, and paste that list as the phrases next time.
   - Pair it with a skill that sorts your reviews into reasons to buy first, and one that checks finished ads before launch.
 
+works_best_with:
+  tools:
+    - {name: "Ideogram 4.5", why: "Known for clear text in images, and this version is built for precise edits when a letter comes out wrong."}
+    - {name: "GPT Image 2.5", why: "Lets you mark one word on the finished ad and fix it, instead of making the ad again from the brief."}
+    - {name: "Meta Ads Manager", why: "Its previews show how the headline and main text are cut in each placement, so you can check the 27 characters."}
+  inputs:
+    - "A review export with dates and ratings from your store or review app, so each quote's source can be checked later"
+    - "Customer photos shared with permission, so the routine shot can use a real setting"
+    - "Your claims list, so a number inside a quote is checked against what you may say"
+
 terms:
   - term: Main text
     meaning: The words above the image in a Facebook or Instagram ad.

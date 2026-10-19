@@ -1,16 +1,18 @@
 # Know if you have enough visitors to test: for online stores
 
 ## Extra things to give it
-- Your store's reports for the same dates: visits, conversion rate, average order value, orders, revenue, phone against desktop, top landing pages, new against returning visitors, and return or refund rate.
+- Your store reports for the same dates: sessions, orders, net sales, shipping collected, phone against desktop, top landing pages, new against returning customers, and refunds.
 
-## Store numbers that mislead (Shopify named, but the same traps exist elsewhere)
-- Total sales include tax. Use net sales plus the shipping you collected.
-- The store's average order value leaves out shipping you collected, which is real revenue. Add it back before working out revenue per visitor.
-- Store visit counts include bots. Use your analytics tool's visits for any per-visit number.
-- Conversion rate on its own can hide a change in where visitors came from (see step 3).
+## Store numbers that mislead (on Shopify and most other platforms)
+- A "total sales" figure usually counts tax. For revenue, take net sales and add the shipping customers paid.
+- Some order value reports leave shipping out. If yours does, put it back in before you divide by visitors.
+- Store session counts can include bots. Prefer your analytics tool's sessions for any per-visit number.
+- Ad clicks aren't store visits. Some people tap and leave before the page loads.
 
-## Rules of thumb and wording for stores
-- **Products bought once** have few repeat buyers, so judge them on first orders, return rate and referrals. **Products bought again** are judged on the first order, then reorder rate and how many subscribers cancel.
-- **Abandoned carts** (Baymard Institute research, quoted from a course; the study updates every year, so read the current one before quoting a number): about 70% of carts are abandoned. Reasons given in that research: extra costs too high, slow delivery, not trusting the site with card details, being forced to make an account, a long checkout, unclear returns, and the total cost not shown up front. Three of these (cost, delivery, returns) can be answered by facts the page states.
-- **A real testing programme** needs the volume described in step 8. Many stores below it should ship obvious fixes and track revenue per visitor monthly.
-- **Don't over-push:** tricks and claims the product can't keep raise sales now and cost you returns, chargebacks and repeat orders later. Watch return rate and one-year customer value for each reason to buy you advertise.
+## What to judge, by kind of product
+- **Used up and bought again:** the first order, then how many first orders renew and how many subscribers cancel. A cheaper first box can win on first orders and lose on renewals.
+- **Bought once and kept:** first orders, the return rate and referrals. A page that sells more but brings more returns hasn't won.
+
+## Before you call a store test
+- A subscription or bundle test needs at least one renewal cycle before you call it, or you only see the first order.
+- Keep the sale calendar out of it. A sitewide sale during the test lifts both versions and hides the difference.

@@ -1,7 +1,7 @@
 slug: tell-the-problem-so-buyers-see-themselves
 renamed_from: long-story-copy-for-cold-buyers
 name: "Tell your buyer's problem so well they see themselves"
-summary: "A long story of one person's problem that explains the cause plainly and brings your product in late."
+summary: "A long fall-then-rise story of your buyer's problem that turns on the real cause and brings your product in late."
 category: general
 type: skill
 role: make
@@ -16,5 +16,9 @@ outputs:
 uses: [know-who-youre-writing-for]
 origin: rebuilt
 source_ids: [CES-022]
-old_name: copy-craft
-version: 1.0.0
+old_name: long problem story for cold buyers
+version: 2.0.0
+credits:
+  - {title: "The role of transportation in the persuasiveness of public narratives", by: "Melanie C. Green and Timothy C. Brock, Journal of Personality and Social Psychology (2000)", url: "https://doi.org/10.1037/0022-3514.79.5.701", used: "Readers carried into a story hold more story-consistent beliefs and notice fewer false notes, so nothing ad-like before the turn"}
+  - {title: "Imagine yourself in the product: Mental simulation, narrative transportation, and persuasion", by: "Jennifer Edson Escalas, Journal of Advertising (2004)", url: "https://doi.org/10.1080/00913367.2004.10639163", used: "Letting the reader picture using the product raises persuasion, so the rise is a first use they can picture"}
+  - {title: "The emotional arcs of stories are dominated by six basic shapes", by: "Andrew J. Reagan, Lewis Mitchell, Dilan Kiley, Christopher M. Danforth and Peter Sheridan Dodds", url: "https://arxiv.org/abs/1606.07772", used: "The fall-then-rise shape as the base of the story"}

@@ -1,12 +1,18 @@
 # Founder video ad script: for online stores
 
-## Also give it
-- A "made this way because" list of 2 to 5 decisions per product: what was chosen, what was turned down, and why, in the founder's words.
-- Footage or photos you have of the workshop, packing area, testing or sourcing.
+## Give it as well
+- For each product, a few choices behind how it's made. For each one, note the option kept, the option dropped and the reason, as the founder would say it.
+- Any footage or photos of the workshop, packing table, testing or sourcing.
+
+## Decisions that work well for physical goods
+- The fabric, steel or ingredient chosen, and the cheaper one turned down.
+- How many samples were rejected before the final one.
+- The dose or amount, and why that amount.
+- The part that costs more and stayed in.
+- The slow or dull step in the making that never got cut.
 
 ## What changes
-- **Good decisions to talk about for physical goods:** the fabric or steel chosen and the cheaper one turned down; how many samples were rejected; the dose or amount and why that amount; the part that costs more and stayed; the step in the making that looks boring.
-- **Cutaways to film:** the product cut open, rejected samples beside the final one, raw material in a hand, the test, the label at the moment it's mentioned.
-- **For the still:** put the real pack beside the note on the bench, label sharp. Put the guarantee, in its real terms, as the second line.
-- **Proof beside each claim:** each founder claim gets a review count, a lab test with its source or a demonstration, or it's softened.
-- **Openings:** "I was sick of X, so I built it" suits a founder who was a customer first. "The process, shown" needs real workshop footage.
+- **Cutaways to film:** the product cut open, rejected samples beside the final one, raw material in a hand, the test, the label as it's named.
+- **For the still:** the real pack beside the note on the bench, label sharp, with the guarantee in its real terms as the second line.
+- **Proof beside each claim:** a review count, a lab test with its source, or a demonstration. Otherwise the claim is softened.
+- **Openings:** "I was a customer first" only suits a founder who really was. "The making, on camera" needs real workshop footage.

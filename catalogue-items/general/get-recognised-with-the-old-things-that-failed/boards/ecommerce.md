@@ -1,11 +1,9 @@
-# Make an ad from the old thing that failed: for online stores
+# For online stores: Get recognised with the old things that failed
 
-Use this with the main skill when the story ad sells a physical product.
+**What a store's buyers gave up on**
+- Things people use up: the tub still two-thirds full, three bottles pushed behind the rice, the shaker that never got washed again. Usually "left half full" or "hidden away".
+- Things people buy once: the pan with the bare patch, the suitcase on three wheels, the boots with split soles. Usually "worn out".
 
-**Extra thing to give it:** your product photos, but only if you want the product in the picture. Otherwise send no product photo to the image tool.
+**The easiest honest photo.** Your own team's or a willing customer's real cupboard, labels turned away. It costs nothing and nothing in it is generated.
 
-**Ideas for physical products**
-- Something people buy once is where this works best: the old one itself (the pan with the bare patch, the suitcase with three wheels), or the pile of them.
-- Something people use up: the half-used tub at the back of the cupboard, the row of nearly full bottles.
-
-**Reminder:** leave the product out unless asked. If it is asked for, use the real one, small and to one side, never held up or centred. The picture must still work with it taken out.
+**Product photos.** Send none unless the brief asks for the product.

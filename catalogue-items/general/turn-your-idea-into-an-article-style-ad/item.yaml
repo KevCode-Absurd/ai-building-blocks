@@ -1,7 +1,7 @@
 slug: turn-your-idea-into-an-article-style-ad
 renamed_from: advertorial-static-ad-script-format-rules
 name: "Turn your idea into an article-style image ad"
-summary: "An image ad that reads like a short article, with a check that your page pays it off."
+summary: "An image ad that reads like a short article, with checks that your page pays it off and is labelled as an ad."
 category: general
 boards: [ecommerce]
 type: skill
@@ -19,5 +19,8 @@ uses: []
 example: advertorial-static
 origin: own
 source_ids: [CES-104]
-old_name: script-format-advertorial
-version: 1.0.0
+old_name: article-style image ad format
+version: 2.0.0
+credits:
+  - {title: "Native Advertising: A Guide for Businesses", by: "US Federal Trade Commission", url: "https://www.ftc.gov/business-guidance/resources/native-advertising-guide-businesses", used: "Ads must not pass as independent content; a clear label such as \"Advertisement\" in front of or above the headline"}
+  - {title: "Going Native: Effects of Disclosure Position and Language on the Recognition and Evaluation of Online Native Advertising", by: "Bartosz W. Wojdynski and Nathaniel J. Evans, Journal of Advertising (2016)", url: "https://doi.org/10.1080/00913367.2015.1115380", used: "Where a label sits and how it's worded change whether readers see it as an ad"}

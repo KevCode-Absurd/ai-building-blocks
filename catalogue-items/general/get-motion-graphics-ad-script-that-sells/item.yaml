@@ -1,7 +1,7 @@
 slug: get-motion-graphics-ad-script-that-sells
 renamed_from: product-graphic-ad-script-format-rules
 name: "Get a motion graphics ad script that sells"
-summary: "A flat graphic ad script built around your product cutout, one message and one picture per shot."
+summary: "A graphic ad script built from your sourced facts, one fact per shot, with the picture picked to suit it."
 category: general
 boards: [ecommerce]
 type: skill
@@ -18,5 +18,11 @@ uses: []
 example: motion-graphics
 origin: rebuilt
 source_ids: [CES-116]
-old_name: script-format-motion-graphics
-version: 1.0.0
+old_name: motion graphics script format
+version: 2.0.0
+credits:
+  - {title: "Edward Tufte", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Edward_Tufte", used: "The lie factor idea: a chart must not show a bigger effect than the data"}
+  - {title: "Executing UX Animations: Duration and Motion Characteristics", by: "Page Laubheimer, Nielsen Norman Group", url: "https://www.nngroup.com/articles/animation-duration/", used: "Ease out to enter, ease in to leave, short move lengths"}
+  - {title: "The Role of Animation and Motion in UX", by: "Page Laubheimer, Nielsen Norman Group", url: "https://www.nngroup.com/articles/animation-purpose-ux/", used: "Motion must do a job; motion for its own sake distracts"}
+  - {title: "English (USA) Timed Text Style Guide", by: "Netflix Partner Help Center", url: "https://partnerhelp.netflixstudios.com/hc/en-us/articles/217350977-English-USA-Timed-Text-Style-Guide", used: "Reading speed in characters a second, used to set hold times"}
+  - {title: "Prompting videos with coding agents", by: "Remotion", url: "https://www.remotion.dev/docs/ai/claude-code", used: "Building the ad in code with Claude Code so text and figures stay exact"}

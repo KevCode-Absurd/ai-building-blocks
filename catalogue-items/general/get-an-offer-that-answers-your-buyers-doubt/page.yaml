@@ -172,6 +172,16 @@ improve:
   - Add a lesson from your own history to the five checks, such as "no new discount number while three are already live".
   - Pair it with the skill that lists offers from what you already have for a quick list, then use this one to build out the best.
 
+works_best_with:
+  tools:
+    - {name: "Shopify", why: "If you sell on Shopify, it exports every order with totals, line items, discounts and shipping, which the profit check needs."}
+    - {name: "Google Sheets", why: "Keeps the profit check as formulas, so you can change a cost and see what one order keeps."}
+    - {name: "Any good chat AI", why: "Any current chat AI can match the doubt to a lever and word the offer."}
+  inputs:
+    - "Payment fees and your return rate from your store reports, so the profit check counts every cost"
+    - "What competitors offer now, from their sites or the Meta Ad Library, so your offer doesn't copy theirs"
+    - "What a bundle or gift costs you to pack and send, so a gift is costed at its true price"
+
 terms:
   - term: Lever
     meaning: The part of value a doubt is about. Here, the result, certainty, time, effort or the price itself.

@@ -186,6 +186,17 @@ improve:
   - Note your music tool's layout and your video tool's clip length in "What you need", so you don't repeat them.
   - Pair it with the skill that writes a song ad script, if you don't have one yet.
 
+works_best_with:
+  tools:
+    - {name: "Suno v5.5", why: "Has a style box and a lyrics box that reads section tags like [Verse]. Songs you download on a paid plan can run in ads."}
+    - {name: "Eleven Music v2.5", why: "Can build a song from a section-by-section plan, and its paid plans are cleared for commercial use."}
+    - {name: "Nano Banana 2.1", why: "Takes up to 14 reference images and keeps up to four characters the same, so your reference stills match."}
+    - {name: "Kling 4.0", why: "Takes up to 10 reference images in one job, so figures and product stay the same from shot to shot."}
+  inputs:
+    - "The finished song file and its BPM, so the bar grid is timed to the real take"
+    - "A voice memo of the hook sung by anyone, so the music tool gets the tune"
+    - "Your brand font, for the words you add in editing"
+
 terms:
   - term: Bar
     meaning: A group of beats in music, usually four. At 120 BPM one bar lasts 2 seconds.

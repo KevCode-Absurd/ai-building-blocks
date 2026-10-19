@@ -18,7 +18,7 @@ when:
 
 you_give:
   - The finished ad copy or script, with numbered lines
-  - Your voice notes and never-say list (from your brand file)
+  - Your voice notes and never-say list (voice-and-look.md and the house rules in 00-start-here.md)
   - Who the ad is for, and a few real customer quotes showing how they talk
   - Fix or report, to apply changes or only list them (optional)
 you_get:
@@ -28,7 +28,7 @@ you_get:
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Paste the voice part of your brand file underneath. Your never-say list matters most.
+  - Attach voice-and-look.md, 00-start-here.md and customers.md from your brand file, or paste the same notes. Your never-say list matters most.
   - Add three to ten real customer quotes, copied as written, so it knows how your buyers talk.
   - Paste the ad with numbered lines and write "Mode, fix" or "Mode, report".
   - Check each fix against your original line. If it changed a number, a claim or the offer, reject it.
@@ -149,11 +149,19 @@ test:
   - Run it in report mode on your best live ad. If it flags a lot, your voice notes don't describe how you sound at your best. Fix the notes, not the ad.
 
 improve:
-  - Write your never-say list into step 1 of the skill file, so it outranks the tone notes on every run without you pasting it.
+  - Keep your never-say list in the house rules of 00-start-here.md, so it outranks the tone notes on every run and every other tool sees it too.
   - Add three to five real customer quotes to step 4, marked "use these words first". Most fixes come from there.
   - Add two lines from your best ads under step 5 as the voice done right, so it knows what on-voice looks like for you.
   - If you mostly check other people's live ads, change the default mode in "What you need" from fix to report.
-  - Each time it catches a word your writers keep using, add that word to the never-say list in your brand file. Run "Get an ad where every line sells" first, since this check only changes wording.
+  - Each time it catches a word your writers keep using, add that word to the never-say list in 00-start-here.md. Run "Get an ad where every line sells" first, since this check only changes wording.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Claude, ChatGPT and Gemini all do this well when the voice notes and customer quotes are pasted in full."}
+  inputs:
+    - "Ten real customer quotes from reviews or support emails, so swaps come from your buyers' own words"
+    - "Two or three of your best-performing ads, so it knows what on-voice sounds like at your best"
+    - "Lines an editor has rejected before, so known off-voice words are caught first"
 
 terms:
   - term: Voice notes

@@ -184,6 +184,14 @@ improve:
   - Keep a note of which move won on each ad. Over time you'll see which moves suit your buyers.
   - Pair it with "Stop the right people scrolling past your ad" to grade the list before you film.
 
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Claude, ChatGPT and Gemini all follow this skill well, so use the one you already have."}
+  inputs:
+    - "Your past openings with their hook rate (3-second views divided by impressions), so you can see which moves have worked"
+    - "Screenshots of comments under your ads, so mirror openings use real reactions"
+    - "The first three seconds of your best ad, so new openings can be judged against it"
+
 terms:
   - term: Hook
     meaning: The first line, or the first seconds of a video, that makes the right person keep watching.

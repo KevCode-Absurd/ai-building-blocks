@@ -42,7 +42,7 @@ how_it_works:
   - title: Sells against the old way
     text: The habit, the old product or doing nothing is the problem, never the buyer.
   - title: Puts proof next to claims
-    text: Matches the kind of proof to the doubt, sizes it to the claim, and places it in the same breath.
+    text: Matches the proof to the doubt (does it work, will it work for me, who says so, what if it doesn't) and places it in the same or the next sentence.
   - title: States the deal
     text: What they get, the price, how soon, every condition, and the real guarantee with its real limits.
   - title: Asks once
@@ -158,7 +158,16 @@ improve:
   - Write the one doubt that stops most of your buyers, from your reviews, into step 9.
   - Add the proof you hold to step 5, matched to the doubt it answers (for example reviews for "others like me", a lab test for "is it real").
   - Save the one true detail it builds around to your brand file.
-  - Pair it with "Open your sales copy the way your buyer needs" to write the opening first, and check the page with "Know if your copy is ready, in 15 questions".
+  - Pair it with "Open your sales copy the way your buyer needs" to write the opening first, and check the page with "Know if your copy is ready to publish".
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "This is a writing job from proof you supply, and the main chat AIs all do it well."}
+  inputs:
+    - "Your guarantee text with every condition, copied from your policy page, so the close states the real limits"
+    - "The single doubt that stops most buyers, in a customer's own words from a review or support ticket"
+    - "Test results, survey numbers and study details with their dates and sample sizes, so each proof line is exact"
+    - "Five reviews from buyers like this page's reader, so the 'will it work for me' proof sounds like them"
 
 terms:
   - term: Body

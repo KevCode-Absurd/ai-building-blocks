@@ -162,6 +162,15 @@ improve:
   - Test the whole batch at once on the same audience, and save which type won to your brand file.
   - Pair it with the skill that writes a video ad script from customer quotes, to write each chosen type.
 
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Claude, ChatGPT and Gemini all follow this skill well, so use the one you already have."}
+    - {name: "Meta Ads Manager", why: "Its A/B test splits one audience between your ads and changes one thing, so the result is fair."}
+  inputs:
+    - "Past ad results sorted by script type, so the shortlist skips types that failed"
+    - "A list of what you can film (founder on camera, product only, customer clips), so every type can be made"
+    - "Your brand voice rules, so each type's tone fits"
+
 terms:
   - term: Script type
     meaning: A shape for a script, such as Tries in a row or Show it working, with its own opening, order and selling beat.

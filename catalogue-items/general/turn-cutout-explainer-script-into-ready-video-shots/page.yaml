@@ -169,6 +169,17 @@ improve:
   - Add your figures with their sources to your brand file. The edit list checks every number against them.
   - Pair it with the skill that writes the cutout explainer script, so each line already has its proof picture and key word.
 
+works_best_with:
+  tools:
+    - {name: "Nano Banana 2.1", why: "Takes up to 14 reference images and keeps up to four characters the same, so your reference stills match."}
+    - {name: "Veo 3.1", why: "Starts each clip from your approved still and can make sound with it, in 8-second clips."}
+    - {name: "ElevenLabs Eleven v4", why: "Reads the narration with tags for pauses and pace, and can use a voice cloned from your own recording."}
+    - {name: "CapCut", why: "Lets you add the words, numbers and captions as their own layers after the clips are made."}
+  inputs:
+    - "Product photos on a plain background, so each piece cuts out cleanly"
+    - "Your brand font files, so the edit list can be set in them"
+    - "The final voice-over recording, so each move lands on its key word"
+
 terms:
   - term: Parts list
     meaning: Every paper piece and photo the ad needs, listed before anything is made.

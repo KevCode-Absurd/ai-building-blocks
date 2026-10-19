@@ -173,6 +173,15 @@ improve:
   - Add the looks you rejected to the avoid list, so the next shoot doesn't offer them again.
   - Pair it with the skill that borrows one photo's look for a single quick picture, and the gallery workflow when the photos need words for a product page.
 
+works_best_with:
+  tools:
+    - {name: "Nano Banana Pro", why: "Takes several product photos plus up to 3 style references, and is Google's pick for brand consistency."}
+    - {name: "GPT Image 2.5", why: "Keeps the product closer to your photos than older versions, and lets you point at one detail to fix it."}
+  inputs:
+    - "A flat, straight-on photo of the label, so printed words can be checked letter by letter"
+    - "Product photos past customers liked, so the look starts from what already works for you"
+    - "Photos of the real props and surfaces you own, so the set uses real things"
+
 terms:
   - term: Shot list
     meaning: The list of photos to make, each with its job and where it will be used.

@@ -16,28 +16,22 @@ You produce a layout plan read from the reference screenshot (section order, gri
 ## Steps
 1. **Read the image before designing anything.** Go top to bottom and log, for every section: its order, rough share of the page height, number of columns, which side the image sits on, background (light, tinted, dark band) and block type (hero, logo strip, alternating blocks, tile grid, timeline, table, quote cards, guarantee, review-site block, closing band, bottom bar).
 2. **Log the system, not the content.** Record roles, not borrowed values: content width, section spacing, corner style, button shape, type feel (serif or sans, weight contrast), image shapes and proportions. Don't record the reference's wording.
-3. **Decide what may be borrowed.** Borrow the order, grid, proportions and block types. Never carry over another business's words, images, logo, reviews, scores, press logos, badges, customer names or photos, or its product. Don't reproduce its distinctive look whole; apply your own colours and fonts so the result can't be mistaken for it.
+3. **Decide what may be borrowed.** Copyright protects a page's words, photos and artwork, not the idea of putting sections in a certain order. So borrow the order, the grid, the proportions and the kinds of block. Never carry over another business's words, images, logo, reviews, scores, press logos, badges, customers or product. A near copy of a brand's distinctive look can still confuse buyers, so apply your own colours and fonts until the result can't be mistaken for theirs.
 4. **Fix the page's job before filling it.** Which ad or link sends people here, who is the buyer, what's the single reason to buy, which offer? The first screen must carry on from the ad. With no ad, write one buyer and one reason to buy.
 5. **Check fit to your product.** A layout drawn for something bought again (ingredient table, day 7 / day 30 / day 90 timeline, subscribe box) doesn't suit something bought once (which needs size or fit, materials, what's in the box, returns, warranty), and the reverse. Mark each section **keep**, **change to ...** or **remove**.
-6. **Build the slot map.** For each remaining slot choose one: fill from your facts, or remove. Slots that state a fact must never be reworded from the reference:
+6. **Build the slot map.** Every slot that states a fact is filled from your facts or removed. It is never reworded from the reference. Work through them in four groups:
 
-   | Slot in the reference | Fill from | If you have none |
-   |---|---|---|
-   | Reviews, customer names, photos | Real reviews, word for word, with source | Remove the section |
-   | Star rating, review count, "customers served" | Your stated figure | Remove the element |
-   | Press logos, "as seen in" | Press you really had | Remove the strip |
-   | Review-site score block | Your own profile there | Remove |
-   | Certification icons, "tested by" | Certifications you hold | Remove |
-   | Countdown timer, "only N left", sale ribbon | A real deadline or stock figure | Remove |
-   | Prices, compare-at, offer, free gifts | Your current offer; a compare-at price must be real | Show the product price only |
-   | Guarantee, returns, delivery, warranty | Your terms | Remove the line |
-   | Before and after, results timeline | Results you may claim, as stated | Remove |
-   | Ingredient or spec table | Your own list | Remove |
-   | Author, expert, founder | A real person at the business who agreed | The business name |
+   | Group | Slots in the reference | Keep it only with | Otherwise |
+   |---|---|---|---|
+   | People | Customer quotes, names and photos; an author, expert or founder | Real reviews word for word with their source; a real person at your business who agreed | Cut the section; use the business name as the voice |
+   | Numbers | Star rating, review count, "customers served", stats bands | A figure you state, with its source | Cut that element |
+   | Badges | Press logos, "as seen in", certification icons, review-site scores | Press you really had, certificates you hold, your own profile on that site | Cut the strip |
+   | Pressure and price | Timers, "only a few left", sale ribbons, crossed-out prices, gifts | A real end date or stock figure; your current offer; a compare-at price the item really sold at | Cut it; show your plain price |
 
+   Terms (guarantee, returns, delivery, warranty), results (before and after, timelines) and spec or ingredient tables follow the same rule: your own, as stated, or the slot goes.
 7. **Write the copy for every kept slot** at roughly the reference's length, so the layout still holds, from your own reasons. Any wording transcribed from the reference is scaffolding and never ships, reworded or not.
 8. **Images.** Each image slot gets one of your own photos at the same proportions, or a labelled empty box. A photo of one product never sits under another product's name. Drop decorative textures rather than inventing them.
-9. **Skeleton page (optional).** If you can write files, produce one HTML file with CSS variables for colours, type and corner radius, numbered section IDs, and empty `[INSERT: ...]` image slots. Check it at phone width first.
+9. **Skeleton page (optional).** If you can write files, produce one HTML file with CSS variables for colours, type and corner radius, numbered section IDs, and empty `[INSERT: ...]` image slots. Build it for a phone first, with body text of at least 16 px and buttons easy to tap, then widen it.
 
 ## What you hand back
 1. **Layout map** (table): section number, name, height share, columns, background, block type, keep/change/remove.

@@ -18,4 +18,11 @@ uses: []
 origin: own
 source_ids: [CES-147]
 old_name: video-director
-version: 1.0.0
+version: 2.0.0
+credits:
+  - {title: "30-degree rule", by: "Wikipedia contributors", url: "https://en.wikipedia.org/wiki/30-degree_rule", used: "Moving the camera at least 30 degrees and changing size so a cut doesn't read as a jump"}
+  - {title: "180-degree rule", by: "Wikipedia contributors", url: "https://en.wikipedia.org/wiki/180-degree_rule", used: "Keeping two people on the same sides of the screen across cuts"}
+  - {title: "6 'Rules' for Good Cutting According to Oscar-Winning Editor Walter Murch", by: "No Film School", url: "https://nofilmschool.com/2016/11/6-rules-good-cutting-according-oscar-winning-editor-walter-murch", used: "Cutting for feeling, then story, then rhythm, and placing the next subject where the eye already is"}
+  - {title: "Ultimate Guide to Camera Shots", by: "StudioBinder", url: "https://www.studiobinder.com/blog/ultimate-guide-to-camera-shots/", used: "Shot sizes and camera positions"}
+  - {title: "Speech tempo", by: "Wikipedia contributors", url: "https://en.wikipedia.org/wiki/Speech_tempo", used: "Typical speaking rates, used to set the calm, normal and brisk paces"}
+  - {title: "Ultimate prompting guide for Veo 3.1", by: "Khulan Davaajav and Hussain Chinoy, Google Cloud", url: "https://cloud.google.com/blog/products/ai-machine-learning/ultimate-prompting-guide-for-veo-3-1", used: "Timed shot lines inside one prompt"}

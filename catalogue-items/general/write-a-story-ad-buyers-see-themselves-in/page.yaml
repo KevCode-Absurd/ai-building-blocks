@@ -4,205 +4,207 @@ summary: "Give it customer quotes and product facts. You get a story ad that tak
 job: write-ad-copy
 
 headline: "A story-style ad buyers see themselves in"
-subhead: Give it your customer quotes, your product facts and the shape you want. It writes a story that carries a reader from their problem to your page, in their words, with a narrator who is honest about who they are.
+subhead: Give it your customer quotes, your product facts and a length. It picks an honest narrator, picks the story's shape from what your buyers actually said, and writes a post-style story that carries readers from their problem to your page.
 
 explain: |
-  Long story ads work because the reader sees their own life in the first three lines. They go wrong when the writer fills gaps with a made-up customer, a fake statistic or a result nobody reported. Then the ad is a lie, even when it sells.
+  Long story ads work because the reader sees their own life in the first three lines. They go wrong when the writer fills gaps with a customer who doesn't exist, a result nobody reported or a number from nowhere. That isn't only dishonest. In the US, the FTC treats a testimonial from someone who didn't have the experience, including one an AI wrote, as a fake review.
 
-  This skill builds the "before" from your research and keeps the "after" inside what customers report and your claims allow. You choose a form (the shape of the story), an arc (how the narrator feels about it), a narrator and a length. If the narrator is a composite of several customers, the last line says so. Any fact you didn't give it becomes a placeholder in square brackets, listed in the notes for you to fill or cut.
+  So this skill settles who is speaking first. There are four honest choices: a real customer with written permission, the founder, the brand retelling what customers said, or "you", the reader's own day. It never writes a first-person story for a made-up customer. Then it reads your quotes for the pattern they show, such as several failed fixes, a setback and a comeback, or someone who blamed themselves. It picks one of five story shapes to match, and names the quotes it rests on. Any fact you didn't give it becomes a placeholder in square brackets, listed in the notes.
 
 when:
   - Your reviews tell the same story again and again, and you want an ad that tells it properly.
-  - You're writing a long post-style ad and want to be sure nothing in it is invented.
-  - You want two or three versions of one story, in different shapes or moods, to test against each other.
+  - You're writing a long post-style ad and want to be sure nobody in it is made up.
+  - You want two or three versions of one story, with different openings, to test.
 
 you_give:
   - The buyer, the reason they buy and your offer
-  - Real customer quotes about the problem, what they tried and what changed
+  - Real customer quotes about the problem, what they tried, what went wrong and what changed, with sources
   - Your product facts, approved claims, banned claims and guarantee
-  - The form, arc, narrator and length you want (it can suggest them if you're unsure)
-  - Where the ad sends people, a product page or an article-style page
+  - The length (short, standard or long) and where the ad sends people
+  - The narrator and shape you want (optional; it picks from your evidence)
 you_get:
   - The full story, ready to paste as the ad's text
   - Other openings, each with a headline for under the image and an image idea
-  - Notes with the word count, every placeholder, everything inferred and which reviews each borrowed phrase came from
+  - Notes on the narrator and permission, the shape and the quotes behind it, the word count, placeholders and anything inferred
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Paste five or more real reviews with their numbers, plus your product facts and claims list.
-  - Name the form, arc, narrator and length. Start with "personal history", "reluctant believer", composite and short if you're unsure.
-  - Say where the click goes. Use a product page for people who already know the problem and have tried a fix.
+  - Paste five or more real reviews with their numbers and sources, plus your product facts and claims list.
+  - Say whether you have written permission to tell any customer's story in their words. If not, it retells as the brand.
+  - Pick a length and say where the click goes. Use a product page for people who know the problem and have tried a fix.
   - Read the notes first. Fill or delete every square-bracket placeholder, and check the inferred lines before the ad runs.
 
 how_it_works:
-  - title: Follows the honesty rules
-    text: Invents no statistic, study, expert, review or price, and keeps the result inside what customers actually report.
-  - title: Picks the narrator
-    text: Uses a real customer, a composite, the founder, a real expert who agreed, or an observer, each with its own limits.
-  - title: Decides the story's shape
-    text: Notes the main problem, the doubt underneath, the old fix, how much the buyer already knows and where the ad leads.
-  - title: Builds the story
-    text: Uses up to eight parts, from the opening moment through the breaking point and the new explanation to the close, as the form allows.
+  - title: Picks an honest narrator
+    text: A real customer with permission, the founder, the brand retelling customers, or "you". Never a made-up customer.
+  - title: Reads your evidence
+    text: Looks for the pattern in your quotes, such as failed fixes, a setback and a comeback, or self-blame.
+  - title: Picks the shape
+    text: One of five shapes the evidence supports, and names the quotes it rests on.
+  - title: Opens on a moment
+    text: The first two or three lines work alone above "See more", with no product, brand or greeting.
+  - title: Keeps the after honest
+    text: The result stays inside what customers report and your claims allow.
   - title: Sets the length
-    text: Keeps only the parts each length allows. A longer story has more happen in it, never the same point said twice.
-  - title: Writes how people talk
-    text: Uses whole sentences in short paragraphs and plain words, with no headings, dashes or lists.
+    text: Short, standard or long. A longer story has more happen in it, never the same point twice.
   - title: Adds other openings
-    text: Writes alternative first lines with a headline for under the image and an image idea taken from the story.
+    text: Alternative first lines, each with a headline for under the image and an image idea from the story.
 
 output_shape: |
-  TITLE  <problem> / <form> / <arc>
+  TITLE  <problem> / <narrator> / <shape>
 
   COPY
-  <opening: a moment the reader recognises, no product>
-  <what they tried, and what it cost>
-  <the new explanation>
-  <first experience, small and specific>
-  <what changed, inside what customers report>
+  <opening: a moment or a line the reader recognises, no product>
+  <the shape's moves, each a scene>
+  <the turn, then the product inside the story>
   <close: the reader's doubt, the link, the real offer once>
-  <closing line if the narrator is a composite>
 
-  OTHER OPENINGS (hook_variants)
+  OTHER OPENINGS
   <n> First lines: "<two or three lines>"
     Headline: <line under the image>
     Image: <one line, taken from the story>
 
   NOTES
-  Lead problem / Underneath / Old way / Buyer knows / Narrator
-  Word count:     <n>
-  Placeholders:   <[gaps] to fill, or none>
-  Borrowed:       <phrases and the review each came from>
-  Inferred:       <lines not from your research>
-  Left out:       <what was dropped, and why>
+  Narrator:      <who, and whether permission is on record>
+  Shape:         <name, and the quotes it rests on>
+  Word count:    <n>
+  Placeholders:  <[gaps] to fill, or none>
+  Borrowed:      <phrases and the review each came from>
+  Inferred:      <lines not from your evidence>
+  Left out:      <what was dropped, and why>
 
 example:
   business: sprout
   input: |
     [the skill]
 
-    Buyer: the quitter who wants to stick. Reason to buy: finally a
-    daily habit that lasts. Offer: the first-order guarantee.
-    Customer words (Sprout reviews):
-    1. "I've tried a few green powders over the years. The issue has
-       never been nutritive content. It's always been an issue of
-       consistency like many things."
-    2. "It's wild I WANT to take [Sprout] and don't forget."
-    3. "...even with their monthly subscription discount it was still
-       $94 a month and the drink was definitely gritty/chalky."
-    5. "I also stopped buying separate probiotic gummies, b12 gummies,
-       and multivitamin gummies. I just take these now and it's
-       easier for me to manage."
-    18. "I thought the first pack I tried tasted terrible, but after
-        the third day they started tasting better"
+    Buyer: the price doubter who hates subscriptions. Reason to buy:
+    knowing exactly how the subscription works. Offer: first box
+    $29.99 with the text sign-up discount, then $49.99 every 4 weeks.
+    The site's words: "Pause Or Cancel Any Time". Guarantee: 30-day
+    money-back, first order only.
+    Customer words (Sprout reviews, brand site):
+    16. "I have tried all of the 'green' options for the kids and this
+        is the only one they love eating. They think it's a treat."
+    17. "I hate subscriptions because I feel like they are a trap so I
+        canceled it before the gummies even arrived. We quickly decided
+        to resubscribe because we love [Sprout] so much! A bonus is my
+        kids love them too!"
     Facts: Sprout, a daily pack of greens gummies you tear open and
-    eat. 60+ ingredients, 21 vitamins and minerals, 6 g fiber.
-    Never: "fix", energy or weight results, "replaces your powder".
-    Guarantee: 30-day money-back, first order only.
-
-    Form: personal history. Arc: reluctant believer.
-    Narrator: composite. Length: short. Destination: product page.
+    eat. Never: "fix", energy or weight results, any promise of easy
+    cancelling beyond the site's own words.
+    Permission: none on record for any reviewer.
+    Length: short. Destination: product page.
   output: |
-    TITLE  Quitting every supplement / personal history / reluctant
-    believer
+    TITLE  Subscription fear / the brand retelling / second try
 
     COPY
-    I've tried a few green powders over the years, and a shelf of
-    separate gummies after that. What was in them was never the issue.
-    Sticking with it was.
+    One of our customers cancelled their Sprout subscription before the
+    first box even reached the door.
 
-    The powder was the one I had most hope for. I paid for the
-    subscription, and the drink was definitely gritty/chalky, so most
-    mornings the tub just sat next to a shaker bottle I didn't want to
-    wash.
+    They told us why, and it's something we hear a lot: "I hate
+    subscriptions because I feel like they are a trap." So they signed
+    up, thought about it, and cancelled straight away.
 
-    Somewhere along the way I decided I was just someone who doesn't
-    stick to things. Then it hit me that I never quit because of what
-    was inside. I quit because every option asked me to do something I
-    didn't want to do, every single day.
+    It's a fair worry. Plenty of us have found a charge on a card for
+    something we stopped using months ago, and nobody wants to sign up
+    for another one of those.
 
-    So when I saw greens as a little pack of gummies you tear open and
-    eat, I nearly scrolled past, because it looked like candy. I tried
-    it mostly to prove a point. I thought the first pack I tried tasted
-    terrible, but after the third day they started tasting better.
+    The box came anyway, because that first order was already on its
+    way. The family tried it. And then, in their words, "We quickly
+    decided to resubscribe because we love Sprout so much! A bonus is my
+    kids love them too!"
 
-    I just take these now and it's easier for me to manage, and I
-    stopped buying the separate gummies too. It's wild, but I want to
-    take it, and I don't forget.
+    We like this story because it starts where a lot of people start.
+    They wanted the gummies. They didn't want the trap.
 
-    If you've quit a powder or a pill stack and decided you're the
-    problem, I get it, because I decided the same thing. The link is
-    below. Their guarantee is a 30-day money-back on your first order.
+    So here's exactly how ours works. Your first box is $29.99 with our
+    text sign-up discount, then $49.99 every 4 weeks. Our site says you
+    can "Pause Or Cancel Any Time". And your first order comes with a
+    30-day money-back guarantee.
 
-    This story is put together from what Sprout customers told us.
+    If the subscription is what's been holding you back, the link is
+    below. Start with one box and decide after.
 
-    OTHER OPENINGS (hook_variants)
-    1 First lines: "For years I thought I was just someone who doesn't
-      stick to things."
-      Headline: Why your greens habit keeps falling apart
-      Image: five half-used, unbranded supplement jars on a shelf
-    2 First lines: "The powder was the one I had most hope for."
-      Headline: Before you buy another greens powder, read this
-      Image: a shaker bottle in the sink with a green ring inside
+    OTHER OPENINGS
+    1 First lines: "\"I hate subscriptions because I feel like they are a
+      trap.\" One customer told us that, and then cancelled before the
+      first box arrived."
+      Headline: Holding off because of the subscription?
+      Image: the green pouch on a kitchen counter, beside a wall
+      calendar
+    2 First lines: "Some of our favourite customers started by
+      cancelling."
+      Headline: How the Sprout subscription really works
+      Image: a torn daily pack and the pouch on a breakfast table
 
     NOTES
-    Lead problem:   quitting every supplement (reviews 1, 3, 5)
-    Underneath:     "it's me, I don't stick to things" (inferred)
-    Old way:        greens powders and separate gummies, as kinds
-    Buyer knows:    the problem and fixes that failed, so short fits
-    Narrator:       composite of reviews 1, 2, 3, 5, 18, no name given.
-                    Closing line included. No review is marked verified.
-    Word count:     244, closing line included
-    Placeholders:   none needed
-    Borrowed:       "tried a few green powders over the years" (1);
-                    "the drink was definitely gritty/chalky" (3); "I
-                    just take these now and it's easier for me to
-                    manage" (5); the first-pack taste line (18); "It's
-                    wild ... and I don't forget" (2)
-    Inferred:       the unwashed shaker; "looked like candy"; "to prove
-                    a point"; the idea that every option asked for a
-                    daily chore
-    Left out:       "$94 a month" (review 3). It's another brand's price
-                    and can't be checked, so it stays out.
-    Tests against:  the same story with the searcher arc
+    Narrator:      the brand, retelling review 17. No permission on
+                   record, so the customer is not named and speaks only
+                   in quotes, word for word.
+    Shape:         second try (a hopeful start, a setback, a comeback),
+                   resting on review 17. Review 16 isn't used, so the
+                   story keeps one family.
+    Word count:    205
+    Placeholders:  none needed
+    Borrowed:      "I hate subscriptions because I feel like they are a
+                   trap." (17); "We quickly decided to resubscribe ...
+                   my kids love them too!" (17). The dataset's
+                   [Sprout] is written as Sprout.
+    Inferred:      that the first box still arrived after the cancel
+                   (review 17 says "before the gummies even arrived");
+                   "signed up, thought about it"; the forgotten-charge
+                   paragraph; "the family tried it". Check these against
+                   the full review.
+    Left out:      any line saying cancelling is easy. Cancelling is
+                   the loudest complaint on public review sites, so the
+                   ad uses only the site's own words.
 
 tweaks:
-  - what: The form
-    how: Personal history opens on a flat count of what they tried. Swap to "please stop doing this" for a short, sharper post, or "forum post" for a long one that opens on what the narrator used to believe.
-  - what: The arc
-    how: Reluctant believer sounds guarded and leans on your guarantee at the end. The searcher sounds determined and lists every attempt. Same quotes, different mood.
   - what: The narrator
-    how: Composite is the safe default. If a real customer has agreed in writing, name them and the story uses only their own details and words.
+    how: Brand retelling is the safe default. If a real customer has agreed in writing, name them and the story uses only their own details and words. The founder can tell why the product was made.
+  - what: The shape
+    how: It picks from your evidence. To try another, paste quotes that show that pattern, such as reviews about failed fixes for "down and back up".
   - what: The length
-    how: Brief and short suit strangers and phone readers. Standard and long add parts such as "I know what you're thinking" and what's in it, so only use them when you have the facts to fill them.
+    how: Short suits strangers and phone readers. Standard and long add scenes and what's in it, so use them only when you have the quotes and facts to fill them.
+  - what: Permission
+    how: Say which customers have agreed to be quoted by name. Without that, nobody in the story is named.
 
 judge:
   - Read the first three lines alone. Would your buyer think it's about them?
-  - Every phrase in quotation marks matches a review or your guarantee word for word.
-  - The result in the story is one a customer reported. Look for it in your reviews.
-  - A composite story ends with the line saying it was put together from customers.
+  - Nobody speaks in the first person unless they're real and agreed to it.
+  - Every phrase in quotation marks matches a review or your terms word for word.
+  - The result in the story is one a customer reported. Find it in your reviews.
   - No rival brand is named, and nothing says the product treats a condition or works in a set time.
-  - The word count in the notes matches what a word counter says.
 
 test:
-  - Run it on the story your best reviews already tell. Read the first three lines to someone who bought from you and ask if it sounds like them. If they say "sort of", paste more reviews about the moment before they bought.
+  - Run it on the story your best reviews already tell. Read the first three lines to someone who bought from you and ask if it sounds like them.
   - Search your reviews for every phrase in quotation marks. Each must match word for word. One reworded quote is reason enough not to run it.
-  - Run it twice with the same form and arc. The borrowed phrases and the result described should stay the same; only the scene details should change.
-  - Put it next to your current best long ad and read both aloud. Note where you stumble or skim in each.
-  - Read the "Inferred" and "Placeholders" lines. If both are empty on thin research, it filled gaps without telling you; ask it to mark every line not from a review.
+  - Run it twice on the same quotes. The narrator and shape should match; only the scene details should change.
+  - Ask for a first-person customer story with no permission on file. It should refuse and retell as the brand.
+  - Read the "Inferred" and "Placeholders" lines. If both are empty on thin evidence, ask it to mark every line not from a review.
 
 improve:
   - Paste your allowed and banned claims and your guarantee wording into "What you need" in the skill file, so the close always uses the exact terms.
-  - If you only ever run one form (for example personal history), delete the others from references/forms-and-arcs.md so it can't drift.
-  - Add two lines from your brand voice to step 6 as a model, so the narrator sounds like your customers and your brand, not a generic post.
-  - When a version wins, save its form, arc and opening in your brand file, then test a new arc on the same quotes next time.
-  - Pair it with a skill that plans the story ad (problem, narrator, picture) before you write it, and with one that reads copy aloud for flow.
+  - Keep a list of customers who've agreed to be quoted by name, and paste it every run.
+  - Delete the shapes you never use from references/story-shapes.md, so it can't drift.
+  - When a version wins, save its narrator, shape and opening in your brand file, then test a new opening on the same story.
+  - Pair it with "Find out if a story-style ad suits your product" before writing, and "Pick the right picture for your story-style ad" after.
+
+works_best_with:
+  tools:
+    - {name: "Claude", why: "Keeps a long story in one natural voice and holds to the quotes and limits you gave it."}
+    - {name: "Any good chat AI", why: "Any strong chat AI can follow the narrator and shape rules with this skill."}
+  inputs:
+    - "Written permission from any customer whose story you want told in their own words"
+    - "Twenty or more reviews, including three-star ones, so the shape comes from a real pattern"
+    - "Your founder's own account of why the product was made, for a founder-told story"
+    - "The full text of each review you quote, not a snippet, so nothing is quoted out of context"
 
 terms:
-  - term: Composite narrator
-    meaning: A first-person voice built from what several real customers said, never presented as one real person.
-  - term: Form
-    meaning: The shape of the story, such as a personal history, a letter about someone or a rant.
-  - term: Arc
-    meaning: How the narrator feels about the problem and the answer, from guarded to quietly angry.
+  - term: Narrator
+    meaning: Who is telling the story. Here, a real customer with permission, the founder, the brand, or the reader as "you".
+  - term: Shape
+    meaning: How the story moves, such as down and back up, or a setback and a comeback.
   - term: Placeholder
     meaning: A gap in square brackets, such as [delivery time], left where a fact is needed but wasn't given.

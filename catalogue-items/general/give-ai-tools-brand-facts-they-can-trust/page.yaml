@@ -1,15 +1,15 @@
 new_slug: give-ai-tools-brand-facts-they-can-trust
 name: "Brand facts your team and AI tools can trust"
-summary: "Give it your website text, product sheet and reviews. You get your facts, voice and look sorted, each with its source."
+summary: "Give it your website text, product sheet and reviews. You get offers, claims, buyers and look sorted, each line sourced."
 job: brand-file
 
 headline: "Brand facts your team and AI tools can trust"
-subhead: Give it your website text, product sheet, reviews and brand guidelines. It sorts them into four separate records (product facts, buyer evidence, writing voice, visual rules), tags every line with its source, lists the gaps, and hands each next step only the part it needs.
+subhead: Paste your pages, product sheet, reviews and style guide, each with a short label. It sorts them into four sections that drop straight into your brand file (offers, claims, buyers, voice and look), tags every line with its source, lists the gaps, and hands the next step only what it needs.
 
 explain: |
-  Brand material is usually a pile. Claims from the sales page sit next to the logo colours and a few customer quotes, and nobody knows which line is proven and which is just something the brand says. Then an AI writing an ad picks up "premium" from the product page and treats it as a fact, or an image tool gets a page of claims it can't use.
+  Brand material is usually a pile. Claims from the sales page sit next to the logo colours and a few customer quotes, and nobody knows which line is proven and which is just something the brand says. Then an AI writing an ad picks up "clinically tested" from the product page and stretches it, or an image tool gets a page of claims it can't use.
 
-  This skill keeps four records apart. Product facts hold what you can say about the product, with exact prices and terms. Buyer evidence holds what real customers live through, in their words. Voice holds how you write. Visual rules hold colours, fonts and logo, each marked as seen in your own material or only suggested. Every claim is labelled as proven by a named source or as something the brand asserts. Anything missing stays missing.
+  This skill keeps four sections apart: your offers with exact prices and terms, your claims with what backs each one, your buyers in their own words, and your voice and look. Every line gets the same tag your brand file uses (confirmed with its source, inferred, disputed or unknown), so the sections can go straight into offers.md, proof-and-claims.md, customers.md and voice-and-look.md. A claim with nothing behind it is marked pending, even when it's on your own site. Then it cuts a short slice for whoever works next, so a designer never gets review quotes and a writer never gets hex codes.
 
 when:
   - You're about to brief a writer, designer or AI tool and want to hand over facts you can stand behind.
@@ -17,57 +17,55 @@ when:
   - Your product, price or offer just changed and the facts every tool works from need refreshing.
 
 you_give:
-  - Your brand's own material, such as website pages, product sheet, packaging, guidelines, reviews and past ads
-  - What the records are for next, such as planning, writing or making images (optional)
+  - Your brand's own material, such as website pages, product sheet, packaging, style guide, reviews and past ads, each with a short label
+  - What happens next, such as planning, writing or image work (optional)
 you_get:
-  - Four records under headings, every line followed by its source
-  - Each claim labelled as backed by a named source or as a brand assertion
-  - A GAPS list of what is missing, such as a logo file or proof
-  - A short handoff for the next step, if you named one
+  - Four sections (offers, claims, buyers, voice and look), every line tagged with its source
+  - Each claim marked approved, pending or banned, with what backs it
+  - A GAPS list of what's missing and who can answer it
+  - A short slice for the next step, if you named one
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Paste your material underneath and give each piece a short label (product page, facts panel, reviews) so the sources make sense.
-  - Say what comes next, for example "this goes to a copywriter", to get the handoff slice.
-  - Read the GAPS list and the "brand assertion" labels first. Those are the lines nobody should use in an ad until you find proof.
-  - Save the four records in your brand file and rerun the skill when a product, price or offer changes.
+  - Paste your material and give each piece a short label and date (product page, Oct 2026) so the sources make sense.
+  - Say what comes next, for example "this goes to a designer", to get the slice.
+  - Read GAPS and the pending claims first. Those are the lines nobody should use in an ad until you find proof.
+  - Copy each section into its brand file, and rerun the skill when a product, price or offer changes.
 
 how_it_works:
-  - title: Keeps four records apart
-    text: Product facts, buyer evidence, writing voice and visual rules each get their own section, so a colour rule never sits beside a health claim.
-  - title: Labels every claim
-    text: A claim found on a sales page counts as something the brand says until a source backs it. A review of another product never counts as proof for yours.
-  - title: Takes only what's there
-    text: Missing testimonials, certificates or results stay missing. It won't invent a colour palette to fill a template.
-  - title: Explains technical words
-    text: Keeps every line plain enough for a 13-year-old, and adds a short meaning to any technical term the buyer needs.
-  - title: Keeps real logo and font files
-    text: Records the actual files. A missing one is listed as a gap, never swapped for a stand-in.
-  - title: Hands over a slice
-    text: Planning gets the buyer and the main promise, writing gets facts, quotes and voice, image work gets the scene, product references and visual rules.
+  - title: Tags every line
+    text: Uses the brand file's tags, confirmed with its source, inferred, disputed or unknown, so nothing unproven reads as fact.
+  - title: Sorts into four sections
+    text: Offers, claims, buyers, and voice and look, each matching one file in your brand file.
+  - title: Marks every claim
+    text: Approved when a document or test backs it, pending when the brand says it with nothing on file, banned when the material rules it out.
+  - title: Keeps proof honest
+    text: A review of another product never counts as proof for yours. Missing testimonials or test results stay missing.
+  - title: Keeps real files
+    text: Names the actual logo and font files. A missing one is listed as a gap, never swapped for a stand-in.
+  - title: Cuts a slice
+    text: Planning gets buyers and approved claims, writing gets offer facts, claims and quotes, image work gets the product's look, colours and allowed words.
 
 output_shape: |
-  RECORD 1  PRODUCT FACTS
-  <fact: contents, size, price, offer terms>  [<source>]
-  Claims
-    <claim>   supported by <source>  |  brand assertion
+  OFFERS  (for offers.md)
+  <product, variant, contents, price, terms>  [confirmed: <label>, <date>]
 
-  RECORD 2  BUYER EVIDENCE
-  <buyer group>  [<source>]
-    Moment: "<their words>" [<source>]
-    Wants: <...>   Doubts: <...>
+  CLAIMS  (for proof-and-claims.md)
+  "<claim as written>" | <approved | pending | banned> | <what backs it>
 
-  RECORD 3  WRITING VOICE
-  <how the brand writes>, lines in use, words it never uses  [<source>]
+  BUYERS  (for customers.md)
+  <buying situation>  [<tag>]
+    "<their words>" [<review number>]   Wants: <...>   Doubts: <...>
 
-  RECORD 4  VISUAL RULES
-  <colour, font, logo, photo rule>   observed [<source>] | suggested
+  VOICE AND LOOK  (for voice-and-look.md)
+  <voice lines, words used and avoided>  [<tag>]
+  <colour, font, logo file, photo style>  [confirmed | inferred]
 
   GAPS
-  MISSING: <logo file | font file | proof | ...>
+  [unknown: <what>, <who can answer>]
 
-  HANDOFF: <NEXT STEP>
-  <only the facts, quotes or rules that step needs>
+  SLICE FOR <NEXT STEP>
+  <only what that step needs>
 
 example:
   business: sprout
@@ -75,109 +73,117 @@ example:
     [the skill]
 
     Sources:
-    S1 brand file (sprout/brand.md)
-    S2 main product page as text (sprout/product-page.md)
-    S3 20 public reviews, numbered R1 to R20 (sprout/reviews.md)
-    S4 15 live ad headlines (sprout/ads.md)
+    S1 brand notes, Oct 2026
+    S2 main product page as text, 13 Oct 2026
+    S3 20 public reviews, numbered R1 to R20
+    S4 15 live ad headlines
 
-    Next stage: image work. A designer is making image ads for the
+    Next step: image work. A designer is making image ads for the
     Original pouch.
   output: |
-    RECORD 1  PRODUCT FACTS
-    Sprout Original (Adults): pouch of 28 daily packs, about 20 g per pack,
-      "a small handful" of gummies [S1, S2]
-    60+ ingredients, 6 g prebiotic fiber per pack [S1]
-    Vitamins and minerals: "21" [S1 science page] and "over 20" [S2
-      ingredients panel]. The two counts disagree.
-    Vegan, pectin base, no gelatin [S2]
+    OFFERS  (for offers.md)
+    Sprout Original (Adults): pouch of 28 daily packs, about 20 g each
+      [confirmed: S1, S2]
+    60+ ingredients, 6 g prebiotic fiber per pack [confirmed: S1]
+    Vitamins and minerals: "21" [confirmed: S1] and "over 20"
+      [confirmed: S2 ingredients panel] [disputed]
+    Vegan, pectin base, no gelatin [confirmed: S2]
     Subscribe $49.99 every 4 weeks. One-time $66.65. First order $29.99
-      only with the text sign-up discount (footer small print) [S1, S2]
-    Guarantee: 30-day money-back, "This policy applies only to your
-      initial purchase." [S2 FAQ]
-    Claims
-      "Clinically tested for nutrient absorption"  supported by the brand's
-                                                    2025 study (vit C, folate)
-      "Supports digestion and gut health"          supported: listed as fine
-                                                    to repeat [S1]
-      "Supports immunity + stress relief"          brand assertion [S2]
-      "revive whole body vitality"                 brand assertion [S2]
-      "4.8/5.0 (100,000)"                          brand assertion. Widget says
-                                                    4.75 from 109,639 [S2]
-      "1M+ Customers"                              brand assertion [S2]
+      only with the text sign-up discount [confirmed: S2 footer]
+    Guarantee: "This policy applies only to your initial purchase."
+      30 days [confirmed: S2 FAQ]
 
-    RECORD 2  BUYER EVIDENCE  (shares are estimates from reviews [S1])
-    Quitter who wants to stick (about 40%)
+    CLAIMS  (for proof-and-claims.md)
+    "Clinically tested for nutrient absorption" | approved | the
+      brand's 2025 study (vitamin C, folate) | only for those two
+    "Supports digestion and gut health" | approved | listed as fine to
+      repeat [S1]
+    "Supports immunity + stress relief" | pending | nothing on file
+    "revive whole body vitality" | pending | nothing on file
+    "4.8/5.0 (100,000)" | pending | the page widget says 4.75 from
+      109,639 [disputed]
+    "1M+ Customers" | pending | nothing on file
+
+    BUYERS  (for customers.md; shares are estimates from reviews)
+    The quitter who wants to stick (about 40%) [inferred share]
       "[Sprout] has been the one thing I've been able to stick to." [R1]
-    Gut-fix seeker (about 25%)
+    The gut-fix seeker (about 25%) [inferred share]
       "Feel lighter, less bloated and overall good." [R10]
-      Doubt: Sugar-Free upsets some stomachs [S1, review-site fragment]
-    Busy parent (about 25%)
+    The busy parent (about 25%) [inferred share]
       "They think it's a treat." [R16]
-    Price doubter (share unknown)
+    The price doubter (share unknown)
       "I hate subscriptions because I feel like they are a trap" [R17]
 
-    RECORD 3  WRITING VOICE
-    Playful, cheeky, casual. Short lines, numbers up front [S1]
-    Lines in use: "Rip. Tip. Enjoy." / "Tastes like a treat, works like a
-      supplement." [S1]
-
-    RECORD 4  VISUAL RULES
-    Forest green #00582D, deep forest #002C17, cream #FFF7DF,
-      kelly green #007E40 (buttons), yellow #FFCC2E, plum #581E5A  observed [S1]
-    Work Sans bold headings, Work Sans medium body, DM Mono tags   observed [S1]
-    Adult pouch: glossy deep green foil, big yellow wordmark, yellow bear
-      face top right, "28 Daily Packs" at the bottom              observed [S1]
-    Gummies: small opaque deep-green bears, soft matte            observed [S1]
-    Daily pack torn straight across the top, never side or corner observed [S1]
-    Never show tie-in cartoon characters or partner marks          observed [S1]
-    Yellow for stars and badges only, never body text              suggested
+    VOICE AND LOOK  (for voice-and-look.md)
+    Playful, cheeky, short lines, numbers up front [confirmed: S1]
+    In use: "Rip. Tip. Enjoy." [confirmed: S1, S4]
+    Forest green #00582D, deep forest #002C17, cream #FFF7DF, kelly
+      green #007E40 (buttons), sunflower #FFCC2E, plum #581E5A
+      [confirmed: S1]
+    Work Sans bold headings, Work Sans medium body, DM Mono tags
+      [confirmed: S1]
+    Pouch: glossy deep green foil, big yellow wordmark, "28 Daily
+      Packs" at the bottom [confirmed: S1]
+    Daily pack torn straight across the top [confirmed: S1]
+    Sunflower for stars and badges only, never body text [inferred]
 
     GAPS
-    MISSING: logo file
-    MISSING: font files, and the name of the display font
-    MISSING: grams of sugar per pack
-    MISSING: one agreed star rating with its source
+    [unknown: logo file, founder]
+    [unknown: font files and the display font's name, founder]
+    [unknown: grams of sugar per pack, founder]
+    [unknown: one agreed star rating with its source, founder]
 
-    HANDOFF: IMAGE WORK
+    SLICE FOR IMAGE WORK
     Product: green Original pouch, 28 packs; gummies small, deep green,
       matte. Tear the pack straight across the top.
-    Colours and fonts: Record 4. Photo style: bright, sunny, soft
+    Colours and fonts: as above. Photo style: bright, sunny, soft
       two-colour gradient, gummies poured into a hand.
     Words allowed on the image: "21 vitamins & minerals", "6g fiber",
       "Third-party tested". No rating, no "1M+", no tie-in characters.
 
 tweaks:
-  - what: The next stage
-    how: Name it and the handoff changes. "Image work" gets colours, the product's look and the photo rules, with no claims at all. "Writing" gets facts, quotes and voice, with no hex codes.
+  - what: The next step
+    how: Name it and the slice changes. "Image work" gets the product's look, colours and allowed words, with no claims list. "Writing" gets offer facts, approved claims and quotes, with no hex codes.
   - what: Source labels
-    how: Give every pasted piece a short label and a date. The labels are what make the records checkable later, so "S2 product page, Oct 2026" beats an unlabelled paste.
+    how: Give every pasted piece a short label and a date. The labels are what make the sections checkable later, so "S2 product page, Oct 2026" beats an unlabelled paste.
   - what: Reviews
     how: Add a review export with the verified-buyer column. Without it, the skill notes which quotes it can't confirm as real buyers.
   - what: One product at a time
     how: If you sell several products, run it once per product. Facts and buyer quotes don't transfer between products.
 
 judge:
-  - Every line ends with a source label. Pick three and check them against the original.
-  - Sales-page wording such as "premium" is marked as a brand assertion, not a fact.
+  - Every line ends with a tag, and every confirmed line names its source. Pick three and check them against the original.
+  - Claims with nothing behind them on file are marked pending, even when they're on your own site.
   - Prices and offer terms are copied exactly, not rounded or reworded.
-  - Colours and fonts sit in the visual record only, each marked observed or suggested.
-  - The GAPS list names real missing files or proof, and nothing in the records quietly fills them.
+  - Colours and fonts sit only under voice and look.
+  - The GAPS list names real missing files or proof, and nothing in the sections quietly fills them.
 
 test:
-  - Give it a product page with one claim you know has no proof behind it. That claim should come back marked as a brand assertion, not a fact.
-  - Pick five lines at random and check each source label against the original. If any line has no source or the wrong one, don't pass the records on yet.
-  - Leave out your logo file or your font name. It should appear under GAPS, and the visual record should not name a stand-in.
-  - Name a next step, such as image work, and check the slice holds only the scene, product references and visual rules, with no review quotes or research notes.
+  - Give it a product page with one claim you know has no proof behind it. That claim should come back pending.
+  - Pick five lines at random and check each source against the original. If any line has no source or the wrong one, don't pass the sections on yet.
+  - Leave out your logo file or your font name. It should appear under GAPS, and the look section should not name a stand-in.
+  - Name a next step, such as image work, and check the slice holds only the product's look, colours and allowed words, with no review quotes or research notes.
 
 improve:
-  - Rename or split the four records in step 1 to match how your team works. If you sell to two separate kinds of buyer, give each one its own buyer evidence record.
-  - Add your own source labels to step 1 (product page, label, lab report, founder), so every run names sources the same way.
+  - Add your own source labels to "What you need" (product page, label, lab report, founder), so every run names sources the same way.
   - Write your banned claims into step 2, so any line that matches one is flagged, even when it comes from your own site.
-  - Save the finished records in your brand file with today's date, and rerun them (step 7) whenever a price, offer or product changes.
-  - Pair it with a skill that interviews the founder to fill the gaps it lists. If you're starting from nothing, use a skill that builds a full brand file from your website instead.
+  - If you sell to two very different buyers, ask for a separate buyers section for each.
+  - Copy the sections into your brand file with today's date, and rerun when a price, offer or product changes.
+  - If you're starting from nothing, run the skill that builds a full brand file from your website instead. Use this one for new material and for slices.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Claude, ChatGPT and Gemini all sort and tag material well when every piece has a clear label."}
+  inputs:
+    - "A review export with the verified-buyer column, so quotes can be confirmed as real buyers"
+    - "Your lab reports or test certificates, so more claims can be marked approved instead of pending"
+    - "Your logo and font files by name, so the look section has no gaps"
+    - "Your current brand file, so new material is checked against what's already confirmed"
 
 terms:
-  - term: Brand assertion
+  - term: Pending claim
     meaning: Something the brand says about itself with no proof on file yet. Fine on your own page, risky in an ad.
-  - term: Source label
-    meaning: A short tag after each line showing where it came from, so anyone can check it.
+  - term: Tag
+    meaning: A short label after each line showing whether it's confirmed (and where from), inferred, disputed or unknown.
+  - term: Slice
+    meaning: The short part of the sections that one next step needs, such as the look and allowed words for a designer.

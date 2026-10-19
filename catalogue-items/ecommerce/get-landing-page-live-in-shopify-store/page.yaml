@@ -47,7 +47,7 @@ how_it_works:
   - title: Handles reviews and labels
     text: Uses your reviews app's block or real quotes, with no default rating. Article-style pages get an "Advertisement" label that can't be switched off.
   - title: Styles and checks it
-    text: Scopes the styles to the section, sizes images properly with alt text, and builds for phone width first.
+    text: Scopes the styles to the section, sizes images with alt text, builds for phone width first, and runs Shopify's Theme Check if it can.
 
 output_shape: |
   sections/<page-name>.liquid
@@ -185,7 +185,18 @@ improve:
   - Add your subscription and reviews apps under "Apps", so it uses their blocks instead of building its own.
   - Add your brand colours and fonts under "Design notes" once, so every section starts in your style.
   - Keep the section file once it works. Your next page can reuse it with new copy in a new template.
-  - Pair it with a skill that writes the landing page copy first, and the skill that holds the rules for clean Shopify theme code when you change the section later.
+  - Pair it with "Write a landing page that matches your ad" or "A long page that wins over people new to you" for the copy, and "Shopify theme code that installs cleanly" when you change the section later.
+
+works_best_with:
+  tools:
+    - {name: "Claude Code", why: "Works on your theme files directly and can run Shopify CLI to preview and check them."}
+    - {name: "Shopify CLI", why: "Pulls your theme, previews the new page on a duplicate, and runs Theme Check before you upload."}
+    - {name: "Shopify AI Toolkit", why: "Shopify's own add-on for coding AIs, which checks Liquid against Shopify's current rules."}
+  inputs:
+    - "Your theme's name and version, so it knows whether theme blocks are supported"
+    - "The names of your reviews and subscription apps, so it uses their blocks"
+    - "An existing section file from your theme, so the new one matches its class names and spacing"
+    - "Your images already uploaded to Shopify Files, with what each shows"
 
 terms:
   - term: Section

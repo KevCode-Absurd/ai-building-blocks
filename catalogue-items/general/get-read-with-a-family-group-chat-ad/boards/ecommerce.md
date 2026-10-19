@@ -1,10 +1,9 @@
-# Make an ad that looks like a group chat: for online stores
+# For online stores: Get read with a family group chat ad
 
-Use this with the main skill when the story ad sells a physical product.
+**What the family keeps noticing**
+- Things people use up: the cupboard of bottles, the shaker nobody washes, "which ones do you actually take".
+- Things people buy once: "who took the good pan", "mum's bought ANOTHER one", "that's the third umbrella".
 
-**Extra thing to give it:** your product photos, but only if you want the product in the picture. Otherwise send no product photo to the image tool.
+**Build it, don't generate it.** Type the messages into plain bubbles in a design tool and export a square image. Every word stays exact and nothing looks like a real app.
 
-**Ideas for physical products**
-- Something people buy once: the family chat where the thing comes up, such as "who took the good pan" or "mum's bought ANOTHER one".
-
-**Reminder:** leave the product out unless asked. If it is asked for, use the real one, small and to one side, never held up or centred. The picture must still work with it taken out.
+**Product photos.** Send none. The product never appears in the chat.

@@ -1,7 +1,7 @@
 slug: get-an-original-anime-ad-script
 renamed_from: anime-story-ad-script-format-rules
 name: "Get an original anime ad script"
-summary: "An original anime-style ad script or image brief, with a made-up hero and your real product."
+summary: "An original anime-style ad script or key image brief: one look, one adult hero, one exaggeration, and shots as key poses."
 category: general
 boards: [ecommerce]
 type: skill
@@ -18,5 +18,9 @@ uses: []
 example: anime
 origin: rebuilt
 source_ids: [CES-105]
-old_name: script-format-anime
-version: 1.0.0
+old_name: anime ad script
+version: 2.0.0
+credits:
+  - {title: "Twelve basic principles of animation", by: "Wikipedia, summarising Frank Thomas and Ollie Johnston, The Illusion of Life (1981)", url: "https://en.wikipedia.org/wiki/Twelve_basic_principles_of_animation", used: "Exaggeration with restraint, wind-up before an action, staging one clear idea per shot"}
+  - {title: "Limited animation", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Limited_animation", used: "Moving only a few parts per shot, with holds"}
+  - {title: "Manga iconography", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Manga_iconography", used: "Feelings drawn as shared symbols, such as the sweat drop"}

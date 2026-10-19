@@ -172,6 +172,15 @@ improve:
   - Write your biggest label lines and their colors into "What you need".
   - Pair it with the skill that turns a paper-craft script into video clips.
 
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Claude, ChatGPT and Gemini all follow this skill well, so use the one you already have."}
+    - {name: "Nano Banana 2.1", why: "For the still version, it can work from your product photo as a reference, so the pack looks right."}
+  inputs:
+    - "Photos of a paper craft or pop-up book you like, so the build has a clear model"
+    - "The pack's flat artwork, so the paper pieces match its real colors and shapes"
+    - "A photo of the product in a hand, so the paper world gets the size right"
+
 terms:
   - term: Show job
     meaning: What the key shot has to show for the selling idea, such as a reveal or many parts adding up.

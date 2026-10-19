@@ -4,12 +4,12 @@ summary: "Give it your ad brief. You get one clear point for the image, the read
 job: make-image-ads
 
 headline: "An image ad people understand at a glance"
-subhead: Give it your ad script or brief and your product facts. It picks the one idea an image can carry, sets what the eye reads first, second and third in 20 words or fewer, moves everything else to the text above the image, and writes a brief for the picture.
+subhead: Give it your ad script or brief and your product facts. It picks the one point an image can carry, sets what the eye reads first, second and third in 20 words or fewer, moves the rest into the text above, and writes a brief for the picture.
 
 explain: |
-  An image ad has no sound, no order and about a second of attention. Most image ads fail because they try to fit a whole video script onto one picture: five claims at the same size, a slogan, a price and a list of features. Nobody reads it, so nobody remembers it.
+  An image ad has no sound, no set order and about a second of attention. Most image ads fail because they try to fit a whole video script onto one picture: five claims at the same size, a slogan, a price and a list of features. Nobody reads it, so nobody remembers it.
 
-  This skill makes the image carry one idea, usually an offer, one proof point or one before-and-after contrast. It plans the reading order: the biggest words pick out the right person, the picture shows the problem or the product working, a second line gives the promise, and the smallest line gives the offer and what to do. Everything the image leaves out goes into the main text above it, in the script's order. It also checks that the image headline, the first line of the main text and the headline under the image all make the same claim.
+  This skill makes the image carry one point: an offer, one proof or one contrast. Eye-tracking research on print ads found the picture pulls the eye whatever its size, while words get read only as they get bigger. So the picture carries the point where it can, the biggest words pick out the right person, a second line gives the promise, and the smallest gives the offer and what to do. Everything else goes into the main text above, in the script's order. A blur test and a two-second test check the result.
 
 when:
   - You have a video script or a brief and need an image ad version of it.
@@ -23,10 +23,10 @@ you_give:
   - Your customers' own words for the problem (optional)
   - Whether the image should carry no words, and whether it should look like a plain post or a designed ad (optional)
 you_get:
-  - The one idea and the reading order, with exact words and word counts
+  - The one point and the reading order, with exact words and word counts
   - A brief for the picture (what's in it, where the product and words sit, the look)
   - The main text above the image, with the first sentence's character count
-  - The headline under the image, the button, and a source for every number and offer term
+  - The line under the image, the button, and a source for every number and offer term
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
@@ -36,40 +36,38 @@ how_to_use:
   - Check the sources list at the end before the ad goes to a designer or an image tool.
 
 how_it_works:
-  - title: Picks one idea
-    text: An image makes one claim. It suits an offer, one proof point or one contrast. The rest goes to the main text and the landing page.
-  - title: Sets the reading order
-    text: First read picks out the person, the picture shows the problem or the product working, the second read gives the promise, the third gives the offer and the action.
-  - title: Writes the image words
-    text: 20 words or fewer in total, the first read 10 words or fewer, with a number, a measure or a customer's word instead of adjectives.
-  - title: Chooses the look
-    text: A plain-post look suits problem-led ads for people who don't know you; a designed look suits offers for people who do.
+  - title: Picks one point
+    text: An image makes one claim. It carries an offer, one proof or one contrast. The rest goes to the main text and the landing page.
+  - title: Lets the picture lead
+    text: The picture is seen first whatever its size, so it shows the problem, the product at work or the two ways side by side.
+  - title: Sizes the words by job
+    text: The first read picks out the person, the second gives the promise, the third gives the offer and the action. 20 words or fewer in all.
   - title: Writes the main text
-    text: The points the image left out, in script order. The first sentence is 125 characters or fewer and doesn't repeat the image headline.
-  - title: Makes the lines agree
-    text: Image headline, first line of the main text and the headline under the image make the same claim in different words.
-  - title: Briefs the picture
-    text: What's in it, where the real product sits, where each line of text goes, keeping clear of the app's buttons.
+    text: The steps the image left out, in the script's order. It opens with a sentence of 125 characters or fewer that doesn't repeat the image headline.
+  - title: Makes the openers agree
+    text: Image headline, first line of the main text and the line under the image make the same claim in different words.
+  - title: Runs two quick checks
+    text: Blur the layout and the picture should still be the biggest shape. Show it for two seconds and someone should be able to say the claim.
 
 output_shape: |
-  1. IDEA AND READING ORDER
-  The one idea: <offer | proof | contrast>
-  First read:  "<words>" (<n> words)
+  1. POINT AND READING ORDER
+  The one point: <offer | proof | contrast>
   The picture: <what it shows>
+  First read:  "<words>" (<n> words)
   Second read: "<words>" (<n> words)
   Third read:  "<words>" (<n> words)
 
   2. IMAGE WORDS: <total> words
 
   3. PICTURE BRIEF
-  Look: <plain post | designed>
+  Look: <plain post | designed>, 4:5
   <what's in the picture, where the product sits, where each line goes>
 
   4. MAIN TEXT
   <first sentence> (<n> characters)
   <the points the image left out, in order>
 
-  5. HEADLINE UNDER THE IMAGE: "<...>"   BUTTON: <...>
+  5. LINE UNDER THE IMAGE: "<...>" (<n> characters)   BUTTON: <...>
 
   6. SOURCES
   "<number, quote or offer term>": <where it comes from>
@@ -99,24 +97,25 @@ example:
     Customer words: "[Sprout] has been the one thing I've been able
     to stick to." / "not having to clean a shaker bottle"
   output: |
-    1. IDEA AND READING ORDER
-    The one idea: contrast, the powder you quit vs a pack you eat
+    1. POINT AND READING ORDER
+    The one point: contrast, the powder you quit vs a pack you eat
+    The picture: old way beside new way
     First read:  "The one thing I've been able to stick to."
                  (9 words, a customer's words, in quote marks)
-    The picture: old way beside new way
     Second read: "No shaker. No mixing." (4 words)
     Third read:  "30-day money-back on your first order" (6 words)
 
     2. IMAGE WORDS: 19 words
 
     3. PICTURE BRIEF
-    Look: plain post. A real kitchen counter in daylight, shot like a
-    phone photo. Left: a half-used tub of greens powder, no label,
-    and a shaker bottle with green residue. Right: one Sprout daily
-    pack torn straight across its top edge, green gummy bears poured
-    into an adult's palm. Quote across the top third on the wall,
-    second read under it, third read small at the bottom. No person's
-    face. Keep text clear of the top and bottom edges.
+    Look: plain post, 4:5. A real kitchen counter in daylight, shot
+    like a phone photo. Left: a half-used tub of greens powder, no
+    label, and a shaker bottle with green residue. Right: one Sprout
+    daily pack torn straight across its top edge, green gummy bears
+    poured into an adult's palm. Quote across the top third, second
+    read under it, third read small at the bottom. No face. Blur
+    check: the two halves of the counter are the biggest shapes,
+    then the quote.
 
     4. MAIN TEXT
     The problem with greens powder was never the nutrition. It was
@@ -130,7 +129,7 @@ example:
     $49.99 every 4 weeks. Pause or cancel any time. 30-day
     money-back guarantee on your first order.
 
-    5. HEADLINE UNDER THE IMAGE: "Greens you'll actually stick with"
+    5. LINE UNDER THE IMAGE: "Greens you'll stick with" (24)
        BUTTON: Shop now
 
     6. SOURCES
@@ -148,7 +147,7 @@ tweaks:
   - what: Which point the ad makes
     how: Say "offer", "proof" or "contrast". An offer ad puts the real price and terms in the third read; a proof ad builds the whole image around one number with its source.
   - what: No words on the image
-    how: Say "image carries no words" and the picture alone does the first read, by showing the problem or the comparison plainly. The hook becomes the first sentence of the main text.
+    how: Say "no words on the image" and the picture does the first read alone, by showing the problem or the comparison plainly. The opening moves to the first sentence of the main text.
   - what: Plain post or designed
     how: Ask for a plain-post look for people who don't know you yet, or a designed look with your colours for people who already do.
   - what: Customer words
@@ -157,22 +156,33 @@ tweaks:
 judge:
   - The image makes one claim, not three of the same size.
   - Count the words on the image. 20 or fewer, and the biggest line 10 or fewer.
-  - The first sentence of the main text is 125 characters or fewer and doesn't repeat the image headline word for word.
+  - Blur the picture. The biggest shape should be the picture, then the first read.
   - Every number, quote and offer term has a source in the last section.
   - No generated person is presented as a customer, founder or expert, and no child appears.
 
 test:
-  - Run it on a script you already turned into an image ad that worked. Compare the idea it picks with the one you used. If they differ, read its reason before you choose.
-  - "Run it twice on the same script. It should pick the same idea both times. If it changes, tell it which kind you want: offer, proof or contrast."
-  - "Count the image words yourself: 20 or fewer in total, and 10 or fewer in the biggest line."
+  - Run it on a script you already turned into an image ad that worked. Compare the point it picks with the one you used, and read its reason if they differ.
+  - Run it twice on the same script. It should pick the same point both times. If it changes, tell it which kind you want.
+  - Count the image words yourself, 20 or fewer in total and 10 or fewer in the biggest line.
   - Once the image is made, show it to someone for two seconds, then hide it. Ask what the ad was about. If they can't say, the first read is wrong.
 
 improve:
   - List your usual offer, proof and contrast in step 1 of the skill file, with the fact each one rests on, so every run picks from points you can back.
-  - 'Add your offer terms, exactly as written, to the third read in step 2 (for Sprout: "$29.99 first order with the text sign-up, renews at $49.99 every 4 weeks"), so the conditions always sit next to the price.'
-  - "Set your default look in step 4: a plain post for people who don't know you, or designed with your colours for people who do."
+  - Add your offer terms, exactly as written, to the third read in step 2, so the conditions always sit next to the price.
+  - Set your default look in step 4, a plain post for people who don't know you or designed with your colours for people who do.
   - Add a list of your customers' exact words for the problem to "What you need", so the first read can use them.
-  - Pair it with the skill that turns an approved image plan into a prompt to make the picture, and the carousel skill when one image can't hold the argument.
+  - Pair it with the skill that turns an approved image plan into a prompt, and the carousel skill when one image can't hold the argument.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Choosing the point and writing the words works the same in any strong chat AI."}
+    - {name: "Canva", why: "Sets your three reads as real text over the picture, so you can resize and blur-check them."}
+    - {name: "Meta Ads Manager", why: "Its placement previews show whether text sits clear of the buttons in Feed, Stories and Reels."}
+  inputs:
+    - "The video script or brief this ad comes from, so the main text keeps its order"
+    - "Ten real review lines, so the first read can use a customer's word"
+    - "Your live offer page as text, so terms are copied and not remembered"
+    - "Your best image ad so far, so the new one has something to beat"
 
 terms:
   - term: Reading order
@@ -181,5 +191,5 @@ terms:
     meaning: The words above the image in a Facebook or Instagram ad.
   - term: Plain-post look
     meaning: An ad image made to look like a normal photo or post, not like an ad.
-  - term: Hook
-    meaning: The first line or first two seconds that make someone stop scrolling.
+  - term: Line under the image
+    meaning: The bold headline under the picture in a Facebook or Instagram ad.

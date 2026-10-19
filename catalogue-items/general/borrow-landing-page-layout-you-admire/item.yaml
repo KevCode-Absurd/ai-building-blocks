@@ -18,5 +18,7 @@ outputs:
 uses: [finish-the-sale-your-ad-started]
 origin: rebuilt
 source_ids: [CES-020]
-old_name: clone-from-screenshot
-version: 1.0.0
+version: 1.1.0
+credits:
+  - {title: "Works Not Protected by Copyright (Circular 33)", by: "US Copyright Office", url: "https://www.copyright.gov/circs/circ33.pdf", used: "Why a section order can be borrowed but words and images can't"}
+  - {title: "Understanding Success Criterion 2.5.8: Target Size (Minimum)", by: "W3C", url: "https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html", used: "Tap sizes for the phone-first skeleton"}

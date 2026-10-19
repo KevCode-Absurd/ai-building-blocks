@@ -1,81 +1,85 @@
 new_slug: get-one-image-ad-ready-to-make
-name: "One image ad, planned and ready to make"
-summary: "Give it your product details and buyer. You get the picture plan, the words on it and the text above it."
+name: "Get one image ad ready to make"
+summary: "Give it your product facts and buyer. You get the picture plan, its words, the feed copy and an image prompt."
 job: make-image-ads
 
-headline: "One image ad, planned and ready to make"
-subhead: Give it your business facts, the buyer you want and, if you have them, customer quotes. It picks one claim and one ad type, plans the picture and layout, writes the words on the image and the feed copy with exact character counts, and lists what to check.
+headline: "One image ad, planned down to the last word"
+subhead: Give it your facts, the buyer and any reviews. It writes the one sentence the ad argues, picks what the picture must prove, and plans the layout. Then it writes the image words and feed copy to Meta's current lengths, plus a prompt for an image model and a list of gaps.
 
 explain: |
-  Most image ads try to say three things at once, crowd the picture with words, and repeat the headline in the text above it. A stranger scrolls past without knowing what was on offer.
+  Many image ads try to say three things at once. The picture shows one idea, the words on it say another, and the text above repeats the headline. A stranger scrolls past without knowing what was on offer.
 
-  This skill builds one ad around one buyer and one claim. It places the buyer by how much they already know about the problem and about you, which decides what the ad leads with. It checks your offer can answer five plain questions, then finds the one specific thing a rival can't say. It picks an ad type from twelve, such as a customer's words set as type or an old way against a new way, and plans the picture zone by zone. Then it writes about 20 words or fewer for the image, and feed copy that fits every limit, counted exactly. Anything it couldn't back with your facts is listed as missing.
+  This skill starts with one sentence: this buyer should do this, because of this one fact. Then it picks the claim a rival can't copy, and lets that claim choose the picture's job, such as a close view of how it works or the real price shown large. It plans the layout zone by zone, keeps the image words short enough to read in a glance, and fits the feed copy to the lengths Meta shows today. Anything it couldn't back with your facts is listed as missing.
 
 when:
-  - You need one image ad for a new buyer and don't know what the picture or words should be.
-  - Your image ads have too many words on them and nobody can say what they argue.
-  - You have customer quotes and want an ad built on them without anything made up.
+  - You need one image ad for a buyer and don't know what the picture or words should be.
+  - Your image ads carry too many words and nobody can say what they argue.
+  - You want a plan a designer or an image model can follow without asking you anything.
 
 you_give:
-  - Your business facts (what you sell, price, offer, guarantee, claims you can and can't make)
-  - Which slots you want (words on the image, feed copy or both), how many ads and which sizes
-  - Customer quotes, reviews or support tickets (optional)
-  - The buyer and how much they already know (optional; it picks one and says so)
-  - An ad you want to build from (optional; it asks how closely to follow it)
+  - Your business facts (what you sell, prices now and later, the guarantee, claims you can and can't make)
+  - What to plan (words on the image, feed copy or both), how many ads and which sizes
+  - Customer reviews or support tickets (optional)
+  - The buyer and how much they know (optional; it picks one and says so)
+  - Labelled product photos or an ad you like (optional)
 you_get:
-  - A plan for the picture and layout, zone by zone, with the photos you'll need
-  - The words on the image, about 20 or fewer
-  - Feed copy with the first line, headline options, description and button, each with its character count
-  - An evidence and flags list, with every guess marked and every gap written as MISSING
+  - The one sentence the ad argues, with the claim and where it came from
+  - A picture plan, zone by zone, with the photos you'll need
+  - The words on the image, about 20 or fewer, with a word count
+  - Feed copy with three headlines, each with its character count
+  - A prompt for an image model, and a list of every guess and gap
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Paste your business facts, including your offer exactly as you state it.
-  - Paste any customer quotes word for word, with who said them if you know.
-  - Name the buyer, for example "people who think it costs too much and fear the price jumps after the first order".
-  - Say which slots you want and the size, for example "words on the image and feed copy, one ad, 4:5".
-  - Check the evidence and flags section before you hand the plan to a designer.
+  - Paste your business facts, with the offer and guarantee exactly as your site states them.
+  - Paste customer reviews word for word, with where each one came from.
+  - Name the buyer, for example "people who know us and think we cost too much".
+  - Say what to plan and the size, for example "words on the image and feed copy, one ad, 4:5".
+  - Read the proof and gaps list before you hand the plan to a designer.
 
 how_it_works:
-  - title: Picks a starting point
-    text: Builds from your research, or from an ad you name, either keeping its words, keeping its structure, or only taking why it worked.
-  - title: Grounds it in the buyer
-    text: Pulls five findings from your research, such as the fix that failed and the doubt that nearly stopped the sale. Without research it marks its guesses "inferred".
+  - title: Writes the argument
+    text: Puts the whole ad in one sentence, the buyer, the action and one fact on file, before anything else.
   - title: Places the buyer
-    text: Decides how much the buyer already knows, which sets what the ad leads with and how technical it can be.
-  - title: Audits the offer
-    text: Checks the ad answers what you get, what it costs, what if it doesn't work, why now and what to do, using only real numbers and your guarantee's exact words.
-  - title: Finds one claim
-    text: Cuts what any rival could say and keeps one specific, provable thing that matters to a stranger.
-  - title: Plans picture and words
-    text: Picks the ad type, plans the layout zones, then writes the image words and feed copy to their limits.
-  - title: Checks its own work
-    text: Counts every character, traces every number to your facts and says a check was done only if it was.
+    text: Marks them new to the problem, comparing fixes, or ready to decide. That sets what the ad leads with.
+  - title: Picks one claim
+    text: Keeps the fact that is on file, matters to this buyer and can't be copied by a rival, then makes it specific.
+  - title: Says the offer plainly
+    text: States what you get, today's price, the later price and the guarantee, with every condition and real numbers only.
+  - title: Chooses the picture's job
+    text: Lets the claim decide what the picture proves, such as how it's used, what's inside or the real price.
+  - title: Writes to the limits
+    text: Keeps image words readable in a glance and fits the feed copy to Meta's lengths, then counts every character.
+  - title: Hands over a prompt
+    text: Writes one paragraph for an image model, with each product photo given a role and the empty space marked for the words.
 
 output_shape: |
   ## Ad <n>: <short name>
-  Concept: <buyer> x <reason to buy> x <offer>
-  Stage: <how much they know> | Type: <ad type> | <size>
+  Argument: <one sentence>
+  Buyer: <who> | <New, Warm or Ready> | Size: <4:5, 9:16>
+  Claim: <the fact> (source: <where>)
+  Offer: <what you get, price today, price after, guarantee>
+  Picture job: <what the picture must prove>
 
   ### Picture and layout
-  <scene, layout zones in reading order, empty space, photos needed>
+  <zones in reading order, empty space, photos needed>
 
-  ### On-image text (<word count>)
-  Headline: <plain sentence>
-  Badge:    <price, amount or guarantee term>
+  ### Words on the image (<word count>)
+  Headline: <line>
+  Other: <badge or support line>
 
   ### Feed copy
-  Primary text
-    <first line> (<characters>)
-    <the rest, sized to the stage>
-  Headline options
-    <option>   (<characters>)
-  Description: <line>   (<characters>)
+  First line: <line> (<characters>)
+  Rest: <lines>
+  Headlines: <option> (<characters>) x3
+  Description: <line> (<characters>)
   Button: <button>
 
-  ### Evidence and flags
-  Offer audit: <what I get, cost, if it doesn't work, why now, what to do>
-  Claim / Guardrail / Inferred / MISSING / Check before launch
+  ### Image prompt
+  <one paragraph>
+
+  ### Proof and gaps
+  Sources | Inferred | MISSING | Check before launch
 
 example:
   business: sprout
@@ -88,106 +92,128 @@ example:
     Buyer: the price doubter. Knows the brand, maybe from a store
     shelf, thinks it costs too much. Doubts: "Which discount is
     real?" "Will the price jump after the first order?"
-    Stage: product aware
-    Offer: Sprout Original, Low Sugar. $29.99 first box with the text
-    sign-up, then $49.99 every 4 weeks ($1.78/day, site's figure).
-    30-day money-back, first order only. "Pause Or Cancel Any Time."
-    Slots: words on the image and feed copy. One ad, 4:5.
-    Reference ad: none
+    Offer: Sprout Original, Low Sugar. $29.99 first box with the
+    text sign-up, then $49.99 every 4 weeks ($1.78/day, site's
+    figure). 30-day money-back, first order only. "Pause Or Cancel
+    Any Time."
+    Plan: words on the image and feed copy. One ad, 4:5.
+    Photos: pouch on gradient (1), gummies in a palm (2).
   output: |
-    ## Ad 1: The full price
-    Concept: price doubter x what it costs after box one x
-    $29.99 first box
-    Stage: product aware | Type: price truth bomb | 4:5
+    ## Ad 1: Every price, up front
+    Argument: Price doubters should start a Sprout box because the
+      ad shows what box two costs, before they sign up.
+    Buyer: the price doubter | Ready | Size: 4:5
+    Claim: renews at $49.99 every 4 weeks for 28 daily packs, which
+      the site gives as $1.78 a day (source: product page)
+    Offer: 28 daily packs every 4 weeks. $29.99 first box with the
+      text sign-up, then $49.99. 30-day money-back, first order
+      only. Start the subscription.
+    Picture job: the price or the deal
 
     ### Picture and layout
     Warm cream ground. Reading order: the headline, large, upper
     third; a hand holding one daily pack torn straight across the
-    top, gummies in the palm, centre; the pouch behind it showing
-    "28 Daily Packs"; badge lower left. Empty space around the
-    headline. No face.
-    Photos needed: a torn daily pack in a hand (not on file).
+    top, gummies in the palm, centre; the green pouch behind it
+    with "28 Daily Packs" in view; the badge lower left. Empty
+    space around the headline. No face.
+    Photos needed: a daily pack torn across the top, in a hand
+    (not on file).
 
-    ### On-image text (14 words)
-    Headline: $1.78 a day, even after your first box.
-    Badge:    First box $29.99 with text sign-up
+    ### Words on the image (13 words)
+    Headline: $1.78 a day. Even after box one.
+    Other:    First box $29.99 with text sign-up
 
     ### Feed copy
-    Primary text
-      Think Sprout costs too much? Here's the full price, with
-      nothing hidden. (72 characters)
-      Your first box is $29.99 with the text sign-up. After that it
-      renews at $49.99 every 4 weeks for 28 daily packs, which is
-      $1.78 a day. Each pack has 60+ ingredients, 21 vitamins and
-      minerals and 6 g of prebiotic fiber. One customer had been
-      paying for a greens powder where "it was still $94 a month".
-      Your first order has a 30-day money-back guarantee. Pause or
-      cancel any time.
-    Headline options
-      The full price, with nothing hidden   (35)
-      $1.78 a day after your first box      (32)
-      What Sprout costs after box one       (31)
+    First line: Think Sprout costs too much? Here's every price, box
+      one and after. (67)
+    Rest: Your first box is $29.99 with the text sign-up. After
+      that it renews at $49.99 every 4 weeks for 28 daily packs.
+      That's $1.78 a day for 60+ ingredients, 21 vitamins and
+      minerals and 6g fiber in each pack. One customer was paying
+      for a powder where "it was still $94 a month". Your first
+      order has a 30-day money-back guarantee. Pause or cancel any
+      time.
+    Headlines:
+      The full price, up front   (24)
+      $1.78 a day after box one  (25)
+      What box two costs         (18)
     Description: 30-day money-back, first order   (30)
     Button: Shop now
 
-    ### Evidence and flags
-    Offer audit
-      What I get:    28 daily packs every 4 weeks
-      What it costs: $29.99, then $49.99 ($1.78 a day)
-      If it doesn't work: 30-day money-back, first order only, as
-                     the FAQ says
-      Why now:       none that's real, so the ad gives none
-      What to do:    start the subscription (Shop now)
-    Claim: the renewal price stated up front. The buyer's doubt is
-      the price jump, and no rival ad on file states its renewal.
-    Guardrail: cancelling is the loudest complaint on review sites,
-      so the ad uses only the site's own words, "Pause or cancel any
-      time", and promises nothing easier.
-    No percentage: the site shows 49, 52, 55, 58 and 61%.
-    Quote: review 3, cut at a whole word. It names a powder brand,
-      which stays out.
-    Check before launch: $49.99 / 28 is $1.785; the site rounds to
-      $1.78. Use its figure or say "under $1.80". Low Sugar only:
-      Sugar-Free renews at $54.99.
+    ### Image prompt
+    Vertical 4:5 photo, 1440 x 1800. Soft daylight from the left
+    on a plain warm cream surface. An adult hand, no face, holds
+    one small flat daily pack torn straight across its top edge,
+    with a small handful of deep-green gummy bears in the palm.
+    Behind it stands the green foil pouch from photo 1: keep its
+    shape, colour and label exactly, closed at its top. Match the
+    gummies to photo 2. Leave the upper third empty and plain for
+    a headline. No text, logos or extra packs in the image; the
+    words are set afterwards in Work Sans bold.
+
+    ### Proof and gaps
+    Sources: prices and renewal from the product page; counts from
+      the fine-to-repeat claims; quote is review 3, cut at whole
+      words, with the powder brand left out.
+    Not used: any percentage off. The site shows 49, 52, 55, 58
+      and 61%, so none is safe.
+    Guardrail: cancelling is the loudest complaint on review
+      sites, so the ad uses only the site's words, "Pause or
+      cancel any time", and promises nothing easier.
+    Check before launch: $49.99 / 28 is $1.785 and the site rounds
+      to $1.78. Use its figure or say "under $1.80". Low Sugar
+      only: Sugar-Free renews at $54.99.
     MISSING: the torn-pack photo; a logo file.
-    Character counts above were counted, not estimated.
+    All counts above were counted, not estimated.
 
 tweaks:
-  - what: The stage
-    how: Change "product aware" to "unaware" and the image loses its headline; the ad becomes a scene or a post-style note, and the story moves into the feed copy.
-  - what: The slots
-    how: Ask for "image only, no feed copy" and the picture carries the claim plus a 2 to 4 word action. Ask for "no words on the image" and the first feed line does the stopping.
-  - what: A reference ad
-    how: Name an ad you like and choose keep the words, keep the structure (no shared phrase of 6 words or more), or loose inspiration only.
+  - what: The buyer
+    how: Change the buyer to one who has never heard of you. The image loses its headline and shows a moment from their day, and the story moves into the feed copy.
+  - what: What to plan
+    how: Ask for "image only" and the picture carries the claim plus a short action. Ask for "no words on the image" and the first feed line does the stopping.
   - what: Number of ads
-    how: Ask for three and each one changes the reason to buy or the ad type, not just the wording, with a note on what each tests.
+    how: Ask for three. Each one changes the claim or the picture's job, with a note on what each one tests.
+  - what: The size
+    how: Ask for 9:16 as well. It moves the words and logo out of the top, the bottom and the edges that Stories and Reels cover.
 
 judge:
   - You can say in one sentence what the ad argues, and the picture and every line argue the same thing.
-  - The words on the image are about 20 or fewer, and none of them repeat what the picture already shows.
-  - Every character count is shown and within its limit (first line 125, headline 40, description 30).
-  - Customer quotes are word for word, never shown beside a face or dressed as a review-site screenshot.
+  - The image headline is 8 words or fewer, and no line repeats what the picture already shows.
+  - Every character count is shown and within its limit (first line under 125, headline 27 or fewer).
+  - Customer quotes are word for word, with a source, and never sit beside a face.
   - The offer appears in your exact words, and anything the ad couldn't back is listed as MISSING.
 
 test:
-  - Run it for a buyer and offer you've already advertised. Compare its one claim with your best ad's. If it picks something weaker, check that the fact your winner used is in your business facts.
-  - Count two of its character counts yourself and check every price against your page. One miscount or a rounded price it didn't flag means you should check them all.
-  - Run it twice with the same input. The claim and ad type should match. If they change, the buyer or stage is too loose; pin them down.
-  - Put its feed copy next to your current best ad text and ask a colleague which one tells them exactly what they'd pay. Don't say which is new.
+  - Run it for a buyer and offer you've already advertised. Compare its claim with your best ad's. If it picks something weaker, check that your winning fact is in your business facts.
+  - Count two of its character counts yourself and check every price against your site. One miscount means you should check them all.
+  - Run it twice with the same input. The claim and the picture's job should match. If they change, pin down the buyer more tightly.
+  - Show the feed copy and your current best ad text to a colleague. Ask which one tells them exactly what they'd pay. Don't say which is new.
 
 improve:
-  - Paste your offer, renewal terms and guarantee wording into "What you need" in the skill file, exactly as your site states them, so every ad uses the same words.
-  - Add your refund and cancel reasons to step 3 as fixed guardrails, so no ad promises the thing that disappoints.
-  - Delete ad types from step 7 you never make (for example an ad written like an article), so it picks from ones you'll actually build.
-  - Save each winning claim and ad type in your brand file, and paste them next time so new ads start from what sold.
-  - Pair it with a skill that edits ad copy for selling once the plan is approved, and with one that checks a finished ad before you spend.
+  - Paste your offer, renewal terms and guarantee into "What you need" in the skill file, word for word from your site, so every ad uses the same terms.
+  - Add your top refund and cancel reasons as fixed rules, so no ad promises the thing that lets buyers down.
+  - Cut rows from the picture table in step 5 that you never make, so it only picks pictures you can produce.
+  - Save each winning claim and picture job in your brand file, and paste them next time so new ads start from what sold.
+  - Pair it with a skill that checks a finished ad before you spend.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Planning one ad from your facts and counting characters works well in any strong chat AI."}
+    - {name: "Nano Banana Pro", why: "Takes up to 14 reference images and draws legible text, so the pack and any typed words come out close to real."}
+    - {name: "GPT Image 2.5", why: "Accepts product photos as inputs and edits parts of a picture, so you can fix one zone without redoing the rest."}
+    - {name: "Meta Ads Manager", why: "Its ad preview shows where the first line and headline get cut on each placement before you spend."}
+  inputs:
+    - "Your last 20 reviews, including the 2 to 4 star ones, so the claim answers a doubt buyers really have"
+    - "Product photos labelled front, open, in a hand and in use, so the prompt can give each one a role"
+    - "Your best and worst image ads with their results, so it can pick a claim your buyers already answer to"
+    - "Your typeface files and logo as an SVG, so the designer sets the words to match your brand"
 
 terms:
   - term: Feed copy
-    meaning: The words that sit around an image ad in the feed, the main text above it plus the headline, description and button below.
-  - term: Product aware
-    meaning: The buyer knows your product but hasn't bought yet, often because of one last doubt such as the price.
-  - term: Proof ad
-    meaning: An ad where a customer's own words, set as plain type, do the persuading.
-  - term: Badge
-    meaning: A small label on the image, such as a price or a trial term.
+    meaning: The words around an image ad in the feed, the main text above it plus the headline, description and button below.
+  - term: Picture job
+    meaning: What the picture has to prove for the claim, such as how the product is used or what it really costs.
+  - term: Ready buyer
+    meaning: Someone who knows your product but hasn't bought yet, often because of one last doubt such as the price.
+  - term: Safe zone
+    meaning: The part of a Stories or Reels ad that buttons and captions don't cover. Words and logo go inside it.

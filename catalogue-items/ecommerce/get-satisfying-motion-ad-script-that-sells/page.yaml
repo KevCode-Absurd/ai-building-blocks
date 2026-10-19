@@ -1,32 +1,32 @@
 new_slug: get-satisfying-motion-ad-script-that-sells
 name: "Stop the scroll with one satisfying product moment"
-summary: "Give it how your product is used and one fact. You get a five-second opening and a short demo script."
+summary: "Give it how your product is used and one fact. You get a wordless opening and a short demo script."
 job: make-video-ads
 
 headline: "Stop the scroll with one satisfying product moment"
-subhead: Give it how your product looks and is used, one fact you can prove and your offer. It picks one real motion (a pour, a peel, a click) and hands back a wordless five-second opening with a short narrated demonstration, or one frozen still.
+subhead: Give it how your product looks and is used, one fact you can prove and your offer. It picks one real motion that ends in a clear finish (a fill, a click, a peel, a clean wipe, a sort) and writes a wordless opening of 4 to 6 seconds with a short narrated demo, or one frozen still.
 
 explain: |
-  People stop for a satisfying motion: a seal peeling off in one piece, a pour that fills a glass to the brim, a lid that clicks shut. Most attempts fall flat. The product spins on a turntable, nothing actually finishes, or the shot is slowed down and splashed until it looks fake.
+  People stop for a motion they can see coming to an end: a seal peeling off in one piece, a glass filling to its line, a lid clicking shut. Writers on these clips put it down to the "just right" feeling of things being finished and in order. Most attempts fall flat. The product spins on a turntable, nothing actually finishes, or the shot is slowed and splashed until it looks fake.
 
-  This skill builds the opening on one motion your product actually makes, at real speed, in the buyer's own kitchen or bathroom, with no face and no talking. The motion is already under way when the shot starts, and you can see the finish coming in the last third. Then a plain narrated demonstration connects what you just watched to the buyer, shows one action, says one fact you can prove, and ends on your offer. For an image ad it freezes the motion just before it finishes, which is the moment that holds the eye.
+  This skill starts from what using your product ends with, and sorts it into one of five finishes: level, fit, release, smooth or order. The opening shows that one motion at real speed, already under way, in the buyer's own room, with no face and no talking, and the finish lands in the last third. Then a plain narrated demo ties what they just watched to the buyer, shows one action, says one approved fact and ends on your offer. For an image ad it freezes the motion just before it finishes.
 
 when:
-  - Your product makes a motion worth watching when it's used (pours, peels, clicks, fits).
-  - You need a strong opening for people who already know they want something like this.
+  - Your product makes a motion worth watching when it's used (it pours, peels, clicks or fits).
+  - You need an opening for people who already know they want something like this.
   - You want an ad with no presenter and no face to film.
 
 you_give:
   - How your product and pack look, and how it's used, step by step
   - The motions and sounds it makes, if you know them
-  - The buyer stage, the one fact to prove and the length
+  - How much the buyer knows, the one fact to prove and the length
   - Your approved claims and your offer
   - The buyer's own words and where they use it (optional)
 you_get:
-  - A wordless opening line with its overlay and a precise visual note
-  - Demonstration lines with spoken words, on-screen text and visual notes
+  - The fit, what's in focus and the finish, in three lines
+  - A wordless opening with its overlay and an exact visual note
+  - Demo lines with spoken words, on-screen text and visual notes
   - Or a frozen-instant still with its line, layout and image prompt
-  - Any motion the facts don't describe, marked inferred
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
@@ -38,38 +38,42 @@ how_to_use:
 
 how_it_works:
   - title: Checks it fits
-    text: Needs a motion a camera can see. If using the product is nothing to look at, it says so.
+    text: Needs a motion a camera can see. If using the product is nothing to look at, it says so and points you to the old way instead.
   - title: Picks what's in focus
-    text: The product out of its pack first, then what it's made of, then the thing it replaces.
-  - title: Picks one real motion
-    text: A pour, a peel, a click, a fit, or order from mess. Anything the facts don't describe is marked inferred.
-  - title: Keeps it real
-    text: Real weight, real speed, the real product opened where it actually opens, in the buyer's own room.
+    text: The product out of its pack first, then what it's made of, then the old way it replaces.
+  - title: Picks the finish
+    text: Level, fit, release, smooth or order, chosen from what using your product ends with. Anything the facts don't describe is marked inferred.
+  - title: Keeps it physical
+    text: Real weight, real speed and plain verbs, with the real product opened where it actually opens, in the buyer's own room.
   - title: Writes the opening
-    text: Four to five seconds, one shot, no words spoken, an overlay of one to four words.
-  - title: Writes the demonstration
-    text: A bridge line, then start, action and end, one fact said once, and the offer.
+    text: One shot of 4 to 6 seconds, no speech, no cut, the finish in the last third, and an overlay of one to four words.
+  - title: Writes the demo
+    text: A line that ties the motion to the buyer, then start, action and end, one approved fact said once, and the offer.
   - title: Or freezes a still
-    text: The instant just before the motion finishes, with one short line and 14 words in total.
+    text: The instant just before the finish, with one short line and 14 words in all.
 
 output_shape: |
-  OPENING (4 to 5 s, one shot, no spoken words)
-  Overlay: "<1 to 4 words>"
-  Visual note: <object in the brand's words>, <motion already part way>, <what done looks like>, <place>, <end sound>, <last frame>
+  FIT  <why it works for this product and buyer>
+  IN FOCUS  <product out of pack, material, or the old way>
+  FINISH  <level, fit, release, smooth or order>: <the motion>
 
-  DEMONSTRATION
-  Line | Spoken | On-screen text | Visual note
-  2 | "<bridge: what they watched, what it means for them>" | - | ...
-  3 | "<start, action or end>" | - | ...
-  ... | "<one provable fact>" | ... | ...
-  Close | "<offer and 2 to 4 word call to action>" | <same> | ...
+  OPENING (<4 to 6 s>, one shot, no speech)
+  Overlay: "<1 to 4 words>"
+  Visual note: <object>, <motion part done>, <what done looks like>,
+  <place>, <sound at the finish>, <last frame>
+
+  DEMO
+  Line | Spoken | On-screen | Visual note
+  2 | "<what they saw, what it means for them>" | - | ...
+  ... | "<one approved fact>" | <same> | ...
+  Close | "<offer, 2 to 4 word call to action>" | <same> | ...
 
   OR STILL
   Instant: <just before or at the finish>  Line: "<6 words or fewer>"
-  Layout: <...>  Image prompt: <...>
+  Layout: <..>  Image prompt: <..>
 
   Inferred: <motions or sounds not in the facts>
-  MISSING: <...>
+  MISSING: <..>
 
 example:
   business: sprout
@@ -84,34 +88,35 @@ example:
     resealable top.
     Brand photos: bright, sunny, adults at home pouring gummies into
     a hand.
-    Buyer stage: product aware. Length: 15 seconds.
+    Buyer: knows Sprout already. Length: 15 seconds.
     Fact to prove: "60+ ingredients, 21 vitamins & minerals, and 6g
     fiber" in 1 pack.
     Also true: no water, no mixing, no shaker.
     Offer: $29.99 first order with text sign-up, renews at $49.99
     every 4 weeks.
   output: |
-    FIT  A real motion you can watch (tip and pour). Product-aware
-         buyer. Fits.
+    FIT  A real motion you can watch (tip and pour). The buyer knows
+         the product. Fits.
     IN FOCUS  The product out of its pack: the gummies.
-    MOTION  Pour and settle: the gummies tip out of the torn top into
-            a palm. (How they bounce and the sound: inferred.)
+    FINISH  Level: the gummies tip out of the torn top into a palm
+            until the last one lands. (How they bounce and the sound:
+            inferred.)
 
-    OPENING (5 s, one shot, no spoken words)
+    OPENING (5 s, one shot, no speech)
     Overlay: "Wait for it"
     Visual note: one Sprout daily pack, already torn straight across
     its top and tipping, held over a cupped palm at a sunny kitchen
     counter. The small deep-green bears slide out in a run and settle
-    into the palm; the last one drops with a soft tap. Last frame: a
+    in the palm; the last one drops with a soft tap. Last frame: a
     small handful still in the palm, the empty pack in the other
     hand, the pouch upright behind them, in focus.
 
-    DEMONSTRATION
+    DEMO
     Line | Spoken | On-screen | Visual note
     2 | "That's the whole routine. One pack, straight into your hand."
         | - | Same palm, same counter, from above
-    3 | "No water, no mixing, no shaker to wash." | - | Hand closes over
-        the gummies; the counter beside it is bare
+    3 | "No water, no mixing, no shaker to wash." | - | The hand closes
+        over the gummies; the counter beside it is bare
     4 | "One pack has 60-plus ingredients, 21 vitamins and minerals,
         and 6 grams of fiber." | 60+ ingredients. 21 vitamins &
         minerals. 6g fiber | The pouch close, front on
@@ -128,17 +133,17 @@ example:
 
 tweaks:
   - what: What's in focus
-    how: For people who know the problem but not you, ask to put the thing your product replaces in focus (a tub and shaker) instead of the product.
+    how: For people who know the problem but not you, ask to put the old way in focus (a tub and a shaker) instead of the product.
+  - what: The finish
+    how: Name the kind you want (level, fit, release, smooth or order). A product with two motions can give you two openings to test, one each.
   - what: Video or still
-    how: Ask for a still. It freezes the instant just before the motion finishes and adds one line of six words or fewer.
-  - what: The overlay
-    how: Give the buyer's own words for the moment. It uses the first words of their thought. Without them it uses "Wait for it".
+    how: Ask for a still. It freezes the instant just before the finish and adds one line of six words or fewer.
   - what: Length
     how: 15 seconds gives the opening plus two or three lines. 30 seconds gives five or six, with start, action and end in separate shots.
 
 judge:
-  - The opening describes one motion, already under way, with a visible finish.
-  - Nobody speaks in the first five seconds and there's no cut.
+  - The opening shows one motion, already under way, with a finish you can see coming.
+  - Nobody speaks in the opening and there's no cut.
   - The overlay is four words or fewer and says nothing about price or results.
   - The fact said is one of your approved claims, said once.
   - The product opens exactly where it opens in real life.
@@ -147,18 +152,29 @@ test:
   - Check the motion against how your product is opened and used. For Sprout, the pack should tear straight across the top, nowhere else.
   - Run it on a product where using it is nothing to look at. It should tell you the format doesn't fit.
   - Read the opening on its own. One motion, already under way, no speech, no cut, and an overlay of four words or fewer.
-  - Run it twice. If both runs pick the same motion, ask for a different one and film both to see which holds attention.
+  - Ask for two openings with different finishes and run both in front of the same demo, as separate ads.
 
 improve:
   - Write your product's real motions into "What you need" in the skill file (how it opens, pours or clicks), so step 3 never has to mark one inferred.
-  - Add your never-show rules to step 4 ("Keep it real"), for example where the pack opens and where it never does.
-  - Paste your approved claims into "What you need", so the one fact the demonstration says is always one you can back.
-  - Pair it with the skill that makes wordless satisfying openings for video ads, to test more openings in front of the same demonstration.
+  - Add your never-show rules to step 4, for example where the pack opens and where it never does.
+  - Paste your approved claims into "What you need", so the one fact is always one you can back.
+  - Pair it with the skill that makes wordless openings, to test more openings in front of the same demo.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Writing the opening and demo to these rules works well in any strong chat AI."}
+    - {name: "Veo 3.1", why: "Makes 4 to 8 second clips with matching sound, and can aim at an end frame you give it."}
+    - {name: "Nano Banana Pro", why: "Makes crisp close-up stills of shiny packs and small things in motion for the still version."}
+  inputs:
+    - "A phone video of the product being opened and used in real time, so the motion and its sound are true, not inferred"
+    - "A close photo of the product out of its pack, so its colour and texture in the opening are right"
+    - "The brand's rule for where the pack opens and where it never does, so nothing is shown torn the wrong way"
+    - "A photo of the old way it replaces, in case the opening should start there"
 
 terms:
   - term: Overlay
     meaning: Short text on screen over the video, added in editing.
-  - term: Opening
-    meaning: The first few seconds of an ad, the part that makes someone stop scrolling.
-  - term: Buyer stage
-    meaning: How much the buyer already knows about the problem and about you.
+  - term: Finish
+    meaning: The end of the motion that the eye waits for, such as a fill reaching its line or a lid clicking shut.
+  - term: Inferred
+    meaning: A motion or sound the skill guessed from how the product is used, for you to confirm.

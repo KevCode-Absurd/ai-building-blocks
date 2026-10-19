@@ -1,76 +1,61 @@
 new_slug: stop-the-scroll-with-a-handwritten-note
 name: "A handwritten-note photo people stop to read"
-summary: "Give it your ad's story. You get a short note in the narrator's words and a prompt for the photo."
+summary: "Give it your ad's story. You get a short note in the narrator's words and how to make the photo."
 job: make-image-ads
 
 headline: "A handwritten-note photo people stop to read"
-subhead: Give it your story ad. It lifts 8 to 25 words the narrator wrote (a note, a list, a line on the back of an envelope), sets them in an ordinary adult hand on real paper, and writes the prompt.
+subhead: Give it your story ad. It decides who the note was written for, lifts 5 to 20 of the narrator's words, sets the paper and the place, and tells you how to make the photo. Writing it yourself and taking the picture beats any image tool.
 
 explain: |
-  Handwriting is rare in a feed and feels personal, so people read it before they decide whether to. This picture type is a photo of a few handwritten lines on paper: a note left for someone, a notebook page, a list on the back of an envelope. It suits things people feel but don't say aloud, and stories where the narrator blames themselves.
+  Handwriting is rare in a feed and looks like personal effort, so people read it before they decide whether to. Research on handwritten notes backs this up: a short note in someone's own hand gets far more people to act than the same words in print. This picture is a photo of a few handwritten lines: a list on the back of an envelope, a note on the fridge, an old note found in a drawer.
 
-  It takes the words from a line the narrator writes in your story, or turns the story's opening into a note, and makes the first line the one that stops people. The handwriting is an ordinary adult hand, legible and slightly uneven, never calligraphy or a handwriting font. If the story doesn't contain words to quote, it writes the fewest that say what the story already says, and flags them for you to read.
+  The skill starts with who the note was written for, because that sets everything else. A note to yourself is a list or a sum. A note for someone at home is short and hurried. A note from your past self is folded and a little faded, and carries time on its own. It lifts the words from your story and makes the first line the one that names the problem. Then it tells you the most reliable way to make it: write it by hand and photograph it on your phone, so every letter is right.
 
 when:
-  - Your story has a line the narrator wrote down (a note, a list, a reminder to themselves).
+  - Your story has a line the narrator wrote down, such as a list, a sum or a reminder to themselves.
   - The problem is something people feel and don't say out loud.
-  - Your buyers are older, or your story is about blaming yourself or putting something off.
+  - Your story is about blaming yourself, putting something off or adding up what it cost.
 
 you_give:
   - Your approved story ad, with any note or list the narrator writes
   - How your buyer would put it in their own words (optional)
   - Whether words on the image are on or off (optional, default on)
 you_get:
+  - Who the note was for, and the paper and place that follow
   - The note's words, line by line, exactly as they'll appear
-  - The paper, the surface and the style of handwriting
-  - A blank version, and the headline under the image
-  - A 60 to 120 word image prompt, ready to paste
+  - A blank version and a short line to run under the image
+  - How to make it by hand, or an image prompt if you can't
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste your story ad underneath. The note works best if the story quotes it.
-  - Paste the image prompt into your image tool and make one square picture.
-  - Read every handwritten word in the result. Image tools misspell, and one wrong letter gives the game away.
-  - If it looks like a font, ask for it again with "uneven, ordinary handwriting".
+  - Write the note on the paper it names, in your own ordinary handwriting, and put it where the brief says.
+  - Take the photo on your phone in the light it describes, square, a little off-centre.
+  - If you use the image prompt instead, read every word in the result. One wrong letter gives the game away.
 
 how_it_works:
-  - title: Sets the ground rules
-    text: Square, looks taken on a phone, no logo, price, button, brand colour or product.
+  - title: Sets the house rules
+    text: Square, looks taken on a phone, no logo, price, button, brand colour or product, and no signature with a full name.
+  - title: Decides who it was for
+    text: Themselves, someone at home or their past self. That sets the paper, the place and the tone.
   - title: Takes the words
-    text: Lifts 8 to 25 words from a line the narrator writes, or the story's opening said as a note. The first line is the hook.
-  - title: Picks the paper and place
-    text: Lined or plain paper on a real surface, such as a kitchen table or bedside table, with a pen nearby.
-  - title: Sets the handwriting
-    text: An ordinary adult hand, legible, slightly uneven, at most one crossing-out, with correct spelling.
-  - title: Describes the blank version
-    text: The same page with nothing written and the pen beside it, so you can change the words later.
+    text: Lifts 5 to 20 words on up to 5 lines from your story. The first line names the problem.
+  - title: Sets the hand
+    text: An ordinary adult's ballpoint or pencil, legible and a little uneven, with a crossing-out only if the story has one.
+  - title: Says how to make it
+    text: Write it and photograph it yourself for exact letters. The image tool is the fallback, checked letter by letter.
 
 output_shape: |
-  SCENE
-  <one sentence: what someone scrolling would say they saw>
-
-  WHERE AND WHEN
-  <place, time of day, what is within reach>
-
-  THE PAPER AND SURFACE
-  <what kind of paper, where it lies>
-
-  THE HANDWRITING
-  <pen, tone, any crossing-out>
-
-  WORDS ON THE IMAGE (<word count>, line by line)
-  <8 to 25 words, exactly as written>
-  BLANK VERSION
-  <the same page with nothing written, pen beside it>
-
-  HEADLINE UNDER THE IMAGE
-  Read this if you've written something like this.
-
-  FLAGS
-  <whether the words were lifted or written for the image>
-
-  IMAGE PROMPT
-  <60 to 120 words, ready to paste>
+  SCENE               <what someone scrolling would say they saw>
+  WHO IT WAS FOR      <themselves | someone at home | their past self>
+  PAPER AND PLACE     <paper, where it lies, light, what is within reach>
+  THE HAND            <pen, tone, any crossing-out>
+  WORDS ON THE IMAGE  (<word count>, line by line)
+                      <exactly as written>
+  BLANK VERSION       <the same paper, nothing written, pen beside it>
+  LINE UNDER IMAGE    <words> (<caption line>, <characters>)
+  FLAGS               <lifted or written for the image; words to check>
+  HOW TO MAKE IT      <by hand, or a 60 to 120 word image prompt>
 
 example:
   business: sprout
@@ -92,64 +77,60 @@ example:
 
     Buyer: the quitter who wants to stick, 28 to 45.
   output: |
-    SCENE
-    A handwritten list of quit supplements on the back of an
-    envelope, lying on a kitchen counter.
-
-    WHERE AND WHEN
-    A kitchen counter, late morning, window light from the left.
-    Within reach: a pen, an open drawer edge, a phone charger, keys.
-
-    THE PAPER AND SURFACE
-    The back of a white envelope, torn open along the top, slightly
-    creased, lying at a slant on a pale counter.
-
-    THE HANDWRITING
-    Black ballpoint, ordinary adult hand, legible, a little rushed on
-    the last line. No crossing-out (the story quotes it without one).
-
-    WORDS ON THE IMAGE (12 words, line by line)
-    greens powder: gritty
-    pills: made me gag
-    multivitamin gummies: forgot
-    probiotics: stopped
-
-    BLANK VERSION
-    The same envelope back with nothing written, pen beside it.
-
-    HEADLINE UNDER THE IMAGE
-    Read this if you've written something like this.
-
-    FLAGS
-    Words lifted from the copy, not written for the image.
-    Check "multivitamin" and "probiotics" letter by letter in the
-    result.
-    The list names kinds of products only, no brands.
-
-    IMAGE PROMPT
-    Square 1:1 phone photo of the back of a white envelope, torn open
-    along the top and slightly creased, lying at a slant on a pale
-    kitchen counter in late-morning window light from the left.
-    Written in black ballpoint in an ordinary, slightly uneven adult
-    hand, legible and spelled exactly, on four lines: "greens powder:
-    gritty / pills: made me gag / multivitamin gummies: forgot /
-    probiotics: stopped". A pen lies beside it, with keys, a phone
-    charger and the edge of an open drawer at the edges. Ordinary
-    light, a little grain, unstyled. No signature, no logo, no brand
-    name, no price, no person, no calligraphy or handwriting font.
+    SCENE               A handwritten list of quit supplements on the
+                        back of an old envelope, lying by an open
+                        kitchen drawer.
+    WHO IT WAS FOR      Their past self. A list written months ago,
+                        found again, so the paper looks handled.
+    PAPER AND PLACE     The back of a white envelope, torn open along
+                        the top, creased in half once, on a pale
+                        counter beside the open drawer. Late-morning
+                        window light from the left. Within reach: a
+                        pen, a phone charger, a few loose keys.
+    THE HAND            Black ballpoint, ordinary adult hand, legible,
+                        a little rushed on the last line. No
+                        crossing-out (the story quotes none).
+    WORDS ON THE IMAGE  (12 words, line by line)
+                        greens powder: gritty
+                        pills: made me gag
+                        multivitamin gummies: forgot
+                        probiotics: stopped
+    BLANK VERSION       The same envelope back, nothing written, the
+                        pen beside it.
+    LINE UNDER IMAGE    Found in a kitchen drawer. (plain caption, 26)
+    FLAGS               Words lifted from the copy, word for word. If
+                        made with an image tool, check "multivitamin"
+                        and "probiotics" letter by letter. The list
+                        names kinds of products only, no brands.
+    HOW TO MAKE IT      By hand: write the four lines on the back of a
+                        used envelope in ballpoint, fold it once and
+                        open it, lay it by an open drawer near a
+                        window, and take the photo from standing.
+                        Fallback prompt: Square 1:1 phone photo of the
+                        back of a white envelope, torn open along the
+                        top and creased once, lying at a slant on a
+                        pale kitchen counter beside an open drawer, in
+                        late-morning window light from the left.
+                        Written in black ballpoint in an ordinary,
+                        slightly uneven adult hand, legible and spelled
+                        exactly, on four lines: "greens powder: gritty
+                        / pills: made me gag / multivitamin gummies:
+                        forgot / probiotics: stopped". A pen, a phone
+                        charger and loose keys at the edges. A little
+                        grain, unstyled, real handwriting only.
 
 tweaks:
-  - what: The paper
-    how: Change it to a notebook page for a private thought, a note left on the fridge for someone else, or the back of an envelope for a list or a sum. The paper tells the reader who it was written for.
+  - what: Who it was for
+    how: Change it and the whole picture changes. A note to yourself is a list on scrap paper; a note for someone at home is a hurried line on the fridge; a note from your past self is folded and faded.
   - what: Length
-    how: Eight words reads in a glance. Twenty-five is the most a phone screen can hold in handwriting. Ask for fewer if the first line isn't landing.
+    how: Five words reads in a glance. Twenty is the most a phone screen holds in handwriting. Ask for fewer if the first line isn't landing.
   - what: A crossing-out
     how: One crossed-out word can make it feel real ("forgot" crossed out, "stopped" written after). Only use one if your story's note has it.
   - what: Words off
-    how: Switch words off and it describes the same page blank with the pen beside it.
+    how: Switch words off and it describes the same paper blank with the pen beside it, ready for you to write on later.
 
 judge:
-  - The note is the narrator's own. It isn't a letter from a doctor, an authority, or a customer to your brand.
+  - The note is the narrator's own. It isn't from a doctor, an expert or a customer.
   - There's no signature with a full name, and no claim about the product.
   - Every word is spelled exactly as given.
   - It looks like real handwriting, not calligraphy or a font.
@@ -158,19 +139,28 @@ judge:
 test:
   - Run it on a story that quotes a note word for word. The words on the image should match it exactly, and the flags should say they were lifted.
   - Run it on a story with no note. It should write the fewest words that say what the story says, and flag them for you to read.
-  - Make the picture and read every word aloud from the phone screen at arm's length. If you have to zoom, the note is too long.
+  - Read every word aloud from the phone screen at arm's length. If you have to zoom, the note is too long.
   - Put it next to a snapshot of the same story and ask which one people read first.
 
 improve:
-  - Add your buyers' own phrases to the brand file section, so any written note sounds like them.
-  - Add the paper and surfaces that fit your buyers (a work notebook, a fridge door, a car dashboard) to step 3.
-  - Put the note in your story word for word when you have one. Then the picture quotes the story and the flags stay empty.
-  - If your story gives the narrator no reason to write anything, use the everyday snapshot skill instead.
+  - Add your buyers' own phrases to "What you need", so any written note sounds like them.
+  - Add the paper and places that fit your buyers (a work notebook, a fridge door, a car dashboard) to step 2.
+  - Put the note in your story word for word when you have one. Then the picture quotes the story and the flags stay short.
+  - If your story gives the narrator no reason to write anything, use the snapshot skill instead.
+
+works_best_with:
+  tools:
+    - {name: "Any phone camera", why: "Photographing a note you really wrote gets every letter right and looks like a post, because it is one."}
+    - {name: "GPT Image 2.5", why: "The fallback when you can't write it yourself. It renders short quoted text better than older models, but still check each letter."}
+  inputs:
+    - "The pen and paper the brief names, such as a used envelope or a notebook page, so the photo looks lived in"
+    - "Five reviews in your buyers' own words, so any written line sounds like them"
+    - "A handwriting sample from someone on your team in the buyer's age group, so the hand fits the narrator"
 
 terms:
   - term: Story ad
-    meaning: An ad whose main text tells one person's story in their own words, like a post from a friend.
-  - term: Hook
-    meaning: The first line, written to make the right person stop scrolling.
+    meaning: An ad whose main text tells one person's story, like a post from a friend.
   - term: Blank version
     meaning: The same picture with no words, so you can change the words later without starting again.
+  - term: Line under the image
+    meaning: The bold headline under the picture in a Facebook or Instagram ad.

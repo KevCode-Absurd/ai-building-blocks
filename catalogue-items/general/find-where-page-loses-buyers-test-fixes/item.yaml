@@ -1,7 +1,7 @@
 slug: find-where-page-loses-buyers-test-fixes
 renamed_from: landing-page-cro-audit
 name: "Find where your page loses buyers, then test fixes"
-summary: "A full page audit that shows where buyers give up, sizes fixes from your numbers, and plans tests."
+summary: "A full audit that finds the step where buyers drop out, sizes fixes from your own rates, and plans tests."
 category: general
 boards: [ecommerce]
 type: skill
@@ -15,8 +15,13 @@ inputs:
   - {type: brand_brain, required: false}
 outputs:
   - {type: audit_report}
-uses: [find-what-stops-visitors-buying-30-quick-checks, know-if-you-have-enough-visitors-to-test, answer-doubts-that-stop-customers-buying]
+uses: [fix-page-in-order-buyers-read-it, find-what-stops-visitors-buying-30-quick-checks, know-if-you-have-enough-visitors-to-test, answer-doubts-that-stop-customers-buying]
 origin: rebuilt
 source_ids: [CES-027]
-old_name: cro-audit
-version: 1.0.0
+version: 2.0.0
+credits:
+  - {title: "Information Scent", by: "Raluca Budiu, Nielsen Norman Group", url: "https://www.nngroup.com/articles/information-scent/", used: "Checking the landing page against the ad"}
+  - {title: "Five-Second Testing", by: "Lyssna", url: "https://www.lyssna.com/guides/five-second-testing/", used: "The glance read of the first screen"}
+  - {title: "F-Shaped Pattern of Reading on the Web", by: "Kara Pernice, Nielsen Norman Group", url: "https://www.nngroup.com/articles/f-shaped-pattern-reading-web-content/", used: "The skim read"}
+  - {title: "Cart Abandonment Rate Statistics", by: "Baymard Institute", url: "https://baymard.com/lists/cart-abandonment-rate", used: "What to look for at the cart and checkout steps"}
+  - {title: "How Not To Run an A/B Test", by: "Evan Miller", url: "https://www.evanmiller.org/how-not-to-run-an-ab-test.html", used: "Only test what can reach its sample"}

@@ -176,6 +176,16 @@ improve:
   - Save the finished map to the customer profiles in your brand file, with each reason's status, so you don't rebuild the same ideas next quarter.
   - Pair it with a skill that checks whether your product page answers these anxieties, and a writing skill that builds one ad per reason.
 
+works_best_with:
+  tools:
+    - {name: "Claude", why: "Every current Claude model reads up to 1 million tokens, so hundreds of reviews fit in one chat with their source IDs."}
+    - {name: "Gemini", why: "Also takes long inputs, and works inside Google Sheets if your reviews live there."}
+    - {name: "Google Sheets", why: "One row per quote with its source ID lets you count separate people with COUNTUNIQUE, so counts can be checked."}
+  inputs:
+    - "Survey answers to 'what nearly stopped you?', so the list of worries isn't built from reviews alone"
+    - "Questions from people who asked but didn't buy, so the map covers more than happy buyers"
+    - "The date of your last product, price or plan change, so the scope step keeps the right sources"
+
 terms:
   - term: Force
     meaning: What a phrase shows about switching. Push (what was wrong before), pull (what drew them), anxiety (what nearly stopped them), habit (what kept them stuck) or result (what they got).

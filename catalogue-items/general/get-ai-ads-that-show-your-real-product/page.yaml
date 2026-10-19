@@ -1,15 +1,15 @@
 new_slug: get-ai-ads-that-show-your-real-product
 name: "AI ad images that get your product right"
-summary: "Give it your brief and product photos. You get a checklist before you make anything and a check for each result."
+summary: "Give it your brief and product photos. You get a four-stage plan before you make anything and a check for each result."
 job: check-ads
 
 headline: "AI ad images that get your product right"
-subhead: Give it your brief and photos of your real product. Before you make anything, it fills a 15-point sheet (which photo does which job, still before clip, movement, sound, people, words, camera, spend). After each result, it runs an eight-line pass-or-fail check.
+subhead: Give it your brief and photos of your real product. Before you spend anything, it plans the job in four stages (gather the photos, make the still, move it, finish it). After each result, it runs a seven-line pass-or-fail check against your photos.
 
 explain: |
   Image and video tools invent whatever you describe in words. Describe your product and you get something close to it, but wrong: the wrong colour, a hand over the name, a pack that opens where it doesn't. Clips cost far more than stills, so these mistakes get expensive fast.
 
-  This skill rests on one idea. Show the tool your real product photos, then look hard at every result. Before you make anything, it fills a one-page sheet: which photo does which job, the words repeated in every prompt, a still before any clip, real-speed movement, a sound plan, rules for people and hands, words added later in editing, the scene's light, the camera position and the spend. After each result it runs a short pass-or-fail check and writes each failure as one line for your mistakes list.
+  This skill rests on one idea. Show the tool your real product photos, approve a still before you pay for motion, and check every result against the photos. The plan names each photo's role in the prompt, fixes the few words that describe the product, sets the scene's light and the camera, and decides people, words and sound on purpose. That last one matters more now that many video tools add sound unless you say otherwise. After each result, a short check catches the usual faults, and each failure becomes one line for your mistakes list.
 
 when:
   - You're about to make an AI picture or clip that shows your real product.
@@ -17,62 +17,57 @@ when:
   - You're moving from stills to video and want to stop paying for clips that fail.
 
 you_give:
-  - Your brief, with the idea, format, size, length and any approved words
-  - Photos of your real product (needed whenever the product appears)
-  - Your brand file, covering how the product looks and is used and your places and light (optional)
-  - Your list of past mistakes, and your tool's limits and prices (optional)
+  - Your brief, with the idea, where it runs, shape, length and any approved words
+  - Photos of your real product, one per job (needed whenever the product appears)
+  - Your brand file, for how the product looks and is used and your places and light (optional)
+  - Your mistakes list, and your tool's limits and prices (optional)
 you_get:
-  - The filled 15-point sheet, with the choices made and each photo's job named
-  - An eight-line check to run on every result, pass or fail
+  - A four-stage plan with every choice made and each photo's role named
+  - A seven-line check to run on every result, pass or fail
   - One-line failure notes ready for your mistakes list
   - MISSING lines for anything about the product it can't know
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste your brief and list your product photos, with what each one shows.
-  - Paste your brand file, or at least how the product looks, opens and is used.
+  - Attach your brand file, or at least how the product looks, opens and is used.
   - Make the first still only, and run the check on it before you ask for any clip.
-  - Add every failure line to your mistakes list, so the next brief starts with it.
+  - Add every failure line to your mistakes list, so the next plan starts with it.
 
 how_it_works:
-  - title: Shows the product true
-    text: Names each product photo and its job in the prompt, repeats the two or three most visible facts in the same words, and shows only actions your facts describe.
-  - title: Makes a still before a clip
-    text: Makes and checks the opening frame first, then asks for the clip from that frame. Tests the hardest movement first, in the smallest clip.
-  - title: Makes frame one work alone
-    text: Plans a first frame that reads in under a second with the sound off, with nothing important where app buttons sit.
-  - title: Plans movement and sound
-    text: One small action per clip at real speed, objects that behave, and a stated sound plan that a person listens to.
-  - title: Sets rules for people and words
-    text: Made-up adults only, hands described in full and never over the label. Words go on in editing, never invented.
-  - title: Sets the scene and camera
-    text: Takes the place and light from your brand, lights the product to match, and names a real camera position and distance.
-  - title: Keeps spend small
-    text: States the price first, then one still, one clip, then a small batch, changing one thing per attempt.
+  - title: Gathers the proof
+    text: Names each product photo and its role in the prompt, fixes the two or three words that describe the product, lists the actions your facts allow, and states the price.
+  - title: Makes the still
+    text: Plans a first frame that reads in under a second with the sound off, a real scene with matching light, a real camera position, and rules for people, hands and words.
+  - title: Moves it
+    text: Asks for the clip only from the approved still. One small action at real speed, objects that keep their state, and the sound written out.
+  - title: Finishes it
+    text: Edits one area at a time, upscales last, and spends in small steps, changing one choice per try.
   - title: Checks every result
-    text: Eight pass-or-fail lines, with each failure written as one line for your mistakes list.
+    text: Seven pass-or-fail lines against your photos, with each failure written as one line for your mistakes list.
 
 output_shape: |
-  PRE-FLIGHT SHEET
-  1  Product true: <each photo and its job>, <words repeated in
-     every prompt>, <how it opens and is used>
-     MISSING: <product facts or photos it can't know>
-  2  Still first: <the opening still, the hardest movement to test>
-  3  Frame 1: <what is already happening, thumb-size check>
-  4  Movement: <one action at real speed, object names and states>
-  5  Sound: <what is heard, music or none>
-  6  People: <made-up adult, which hand does what>
-  7  Words: <none in the clip, or exact words and typeface>
-  8  Scene: <place and light from your brand>
-  9  Camera: <framing, height, distance>
-  10 Sequence: <what the viewer learns>
-  11 Direction: <what is fixed, what is open>
-  12-14 Edits, references, upscale: <the rule for each>
-  15 Spend: <price, then one still, one clip, a small batch>
+  STAGE 1  GATHER THE PROOF
+  Photos and roles: <Image n = file, role>
+  Words in every prompt: "<the fixed description>"
+  Allowed actions: <steps from your facts>
+  Price: <per still, per clip>
+  MISSING: <facts or photos it can't know>
 
-  CHECK AFTER EVERY RESULT (pass or fail)
-  [ ] <eight lines: product, action, frame 1, speed, hands,
-      camera, sound, full watch>
+  STAGE 2  MAKE THE STILL
+  Frame 1: <what's already happening>  Scene and light: <...>
+  Camera: <framing, height, distance>  People: <who, which hand>
+  Words: <none, or exact words and font>
+
+  STAGE 3  MOVE IT
+  Clip from the approved still: <one action, real speed>
+  Sound: <what's heard, music or none>  Hardest part to test: <...>
+
+  STAGE 4  FINISH IT
+  Edits, upscale, spend: <the plan>
+
+  CHECK EVERY RESULT (pass or fail)
+  [ ] <seven lines>
 
   FAILURE NOTE
   Asked: <what was asked>. Got: <what came back>.
@@ -82,118 +77,126 @@ example:
   input: |
     [the skill]
 
-    Brief: 5-second vertical clip (9:16) for Instagram Reels. A hand
+    Brief: 6-second vertical clip (9:16) for Instagram Reels. A hand
     pours green gummy bears from a Sprout daily pack into an open
     palm on a kitchen counter in the morning. No words in the clip.
 
     Photos: pack-front.jpg (one daily pack, sealed, straight on),
     pouch-front.jpg (the 28-pack pouch as sold).
 
-    Brand file (pasted): one pouch holds 28 small flat daily packs.
-    The daily pack is torn straight across its top edge, never the
-    side, bottom or a corner. Gummies pour out of the torn top into a
-    palm or bowl. The pouch opens only at its resealable top and is
-    never shown torn. Gummies: small opaque deep-green bears, soft
-    matte, about thumbnail height. Photos are bright, sunny and
-    candy-like, everyday adults at home. Never clinical. Type: Work
-    Sans.
+    Brand file: offers.md says one pouch holds 28 small flat daily
+    packs. The daily pack is torn straight across its top edge, never
+    the side, bottom or a corner. Gummies pour out of the torn top
+    into a palm or bowl. The pouch opens only at its resealable top.
+    Gummies: small opaque deep-green bears, soft matte, about
+    thumbnail height. voice-and-look.md says photos are bright, sunny
+    and candy-like, everyday adults at home, never clinical, and the
+    font is Work Sans.
 
     Tool and prices: not decided yet.
   output: |
-    PRE-FLIGHT SHEET
-    1  Product true. Image 1 = pack-front.jpg, "the daily pack as
-       sold: copy its shape, colours and printing exactly". The pouch
-       stays out of frame, so pouch-front.jpg is not sent. Repeat in
-       every prompt: "small flat daily pack, torn straight across its
-       top edge; small opaque deep-green gummy bears, soft matte".
-       Action from the brand file: gummies pour out of the torn top
-       into the palm. Never a side, bottom or corner tear.
-       MISSING: the daily pack's colours and printing in words. The
-       brand file describes the pouch only.
-       MISSING: a photo of the pack torn open, and of gummies in a
-       palm.
-       MISSING: how many gummies an adult pack holds. The file says
-       only "a small handful", about 20 g.
-    2  Still first. Make the opening frame as a still: pack already
-       torn, the first gummies landing in the palm. Approve it, then
-       ask for the 5 s clip from that frame. Hardest part to test:
-       gummies falling from the torn top into the hand.
-    3  Frame 1. The pour has started. Pack, palm and gummies read at
-       thumb size. Nothing key in the top or bottom bands.
-    4  Movement. One pour at real speed. Gummies drop and settle with
-       a small bounce; nothing floats. One name per object: the daily
-       pack, the palm, the gummies. The pack is torn at the start and
-       stays torn.
-    5  Sound. "Gummies landing softly in a palm, a quiet kitchen, no
-       music." A person listens before it's used.
-    6  People. A made-up adult, casual top. Left hand holds the pack
-       by its lower half, torn top tipped down. Right hand open, palm
-       up, below it. No face. Fingers never cover the printing.
-    7  Words. None in the clip. Captions go on in editing, in Work
-       Sans.
-    8  Scene. A kitchen counter in bright morning sun, a mug and keys
-       at the edge. Pack and gummies take the window light from the
-       left, with soft contact shadows. Bright, never clinical.
-    9  Camera. Close, at counter height, about 40 cm away, a little
-       above the palm. Pack upper left, palm centre.
-    10 Sequence. One shot. The viewer sees a snack-sized pour; the
-       torn pack is the only new information.
-    11 Direction. Fixed: pack look, where it tears, gummy look,
-       hands, sound. Open: mug, counter colour.
-    12 Edits. None yet. Fix one named area at a time.
-    13 References. None borrowed.
-    14 Upscale. Last, after approval. Compare the printing, the torn
-       edge and the gummies with the source photo.
-    15 Spend. MISSING: the tool's price per still and per clip. State
-       it before anything is made. Then 1 still, 1 clip, then 2 or 3.
+    STAGE 1  GATHER THE PROOF
+    Photos and roles: Image 1 = pack-front.jpg, "the daily pack as
+      sold: copy its shape, colours and printing exactly". The pouch
+      stays out of frame, so pouch-front.jpg is not sent.
+    Words in every prompt: "small flat daily pack, torn straight
+      across its top edge; small opaque deep-green gummy bears, soft
+      matte"
+    Allowed actions: gummies pour out of the torn top into the palm.
+      Never a side, bottom or corner tear.
+    Price: MISSING. State the price per still and per clip before
+      anything is made.
+    MISSING: a photo of the pack torn open, and of gummies in a palm.
+    MISSING: how many gummies an adult pack holds. offers.md says
+      only "a small handful", about 20 g.
 
-    CHECK AFTER EVERY RESULT (pass or fail)
+    STAGE 2  MAKE THE STILL
+    Frame 1: pack already torn, the first gummies landing in the palm.
+      Pack, palm and gummies read at thumb size; nothing key in the
+      top 14% or bottom 35%.
+    Scene and light: a kitchen counter in bright morning sun, a mug
+      and keys at the edge. Window light from the left, soft contact
+      shadows under the gummies. Bright, never clinical.
+    Camera: close, at counter height, about 40 cm away, a little above
+      the palm. Pack upper left, palm centre.
+    People: a made-up adult, casual top, no face. Left hand holds the
+      pack by its lower half, torn top tipped down. Right hand open,
+      palm up, below it. Fingers never cover the printing.
+    Words: none in the clip. Captions go on in editing, in Work Sans.
+
+    STAGE 3  MOVE IT
+    Clip from the approved still: one pour at real speed. Gummies drop
+      and settle with a small bounce; nothing floats. The pack is torn
+      at the start and stays torn.
+    Sound: "gummies landing softly in a palm, a quiet kitchen, no
+      music, no voice." A person listens before it's used.
+    Hardest part to test: gummies falling from the torn top into the
+      hand. Test it in the shortest clip the tool allows first.
+
+    STAGE 4  FINISH IT
+    Edits: one named area at a time. Upscale last, then compare the
+    printing, the torn edge and the gummies with pack-front.jpg.
+    Spend: 1 still, 1 clip, then 2 or 3 more.
+
+    CHECK EVERY RESULT (pass or fail)
     [ ] Pack matches pack-front.jpg: shape, colours, printing
+    [ ] No words in the picture
     [ ] Torn straight across the top, gummies coming out there
-    [ ] Frame 1 already shows the torn pack and the pour
-    [ ] Real speed, gummies fall and land, nothing floats
-    [ ] Two real hands, a possible grip, no stray letters or logos
-    [ ] Camera close and at counter height, as planned
-    [ ] A person has listened to the sound
-    [ ] Watched start to end at normal speed
+    [ ] Two whole hands, a grip a real hand can make, no stray letters
+    [ ] Window light from the left, gummies touch the palm
+    [ ] Camera close and at counter height
+    [ ] Real speed, pack stays torn, listened to with sound on
 
     FAILURE NOTE (one line per failure, for the mistakes list)
     Asked: <what the prompt said>. Got: <what came back>.
 
 tweaks:
   - what: Still or clip
-    how: For a still image, it skips the movement and sound items and keeps the rest. For a clip, it always plans the still first, so don't ask it to skip that.
+    how: For a still image, it skips stage 3 and the video line of the check. For a clip, it always plans the still first, so don't ask it to skip that.
   - what: Your tool's limits
-    how: Paste the tool's clip lengths, modes and prices as a separate note. Keep them apart from the sheet so a new tool means changing one note.
+    how: Paste the tool's clip lengths, reference limits and prices as a separate note. Keep them apart from the plan so a new tool means changing one note.
   - what: Product photos
     how: Give one photo per job (front as sold, open, in a hand, in use). The more jobs covered, the fewer MISSING lines and the fewer guessed actions.
   - what: Your mistakes list
-    how: Paste it in and the sheet will add those rules to the right items, such as "hand never covers the label" under people.
+    how: Paste it in and the plan adds those rules to the right stage, such as "hand never covers the label" under people.
 
 judge:
-  - Every product photo is named in the prompt with its job.
-  - No clip was asked for before its opening still was approved.
+  - Every product photo is named in the prompt with its role.
+  - No clip was asked for before its still passed.
   - No word, claim or price appears in any picture that isn't in your facts.
-  - The sound was planned, and a person listened to it.
-  - The spend was stated before anything was made.
+  - The sound was written out, and a person listened to it.
+  - The price was stated before anything was made.
   - Anything it couldn't know about your product is marked MISSING, and the product is shown closed or at rest until you answer.
 
 test:
-  - Run it on a brief for a picture that already went wrong. One item on the sheet should have caught the mistake. If none does, add that rule to your mistakes list.
+  - Run it on a brief for a picture that already went wrong. One part of the plan should have caught the mistake. If none does, add that rule to your mistakes list.
   - Leave out how your product opens. It should write MISSING and keep the product closed or at rest, not guess an opening.
-  - Run the eight-line check on your best existing AI image. It should pass. If it fails a line you're happy with, read that line and decide which of you is right.
-  - Fill the sheet twice for the same brief. The words repeated in every prompt (item 1) should match. If they drift, write them into your brand file.
+  - Run the check on your best existing AI image. It should pass. If it fails a line you're happy with, read that line and decide which of you is right.
+  - Make the plan twice for the same brief. The words for every prompt should match. If they drift, write them into your brand file.
 
 improve:
-  - Write your product's look and use into "What you need" as fixed lines, such as "the daily pack tears straight across the top", so every sheet starts with them.
-  - Add your brand's light, places and caption typeface to steps 7 and 8, so those items stop coming back MISSING.
-  - Keep your image tool's clip lengths and prices in a separate note and paste it in. Change the note, not the skill, when you switch tools.
-  - Save the photos it lists as MISSING (open, in a hand, in use) to your brand file, each with its job named.
-  - Pair it with the skill that turns feedback on AI ads into rules, so each failure line becomes a rule the next sheet starts with.
+  - Write your product's look and use into offers.md as fixed lines, such as "the daily pack tears straight across the top", so every plan starts with them.
+  - Add your brand's light, places and caption font to voice-and-look.md, so those parts stop coming back MISSING.
+  - Keep your tool's clip lengths, reference limits and prices in a separate note. Change the note, not the skill, when you switch tools.
+  - Save the photos it lists as MISSING (open, in a hand, in use) next to your brand file, each with its job named.
+  - Pair it with the skill that turns feedback on AI ads into rules, so each failure line becomes a rule the next plan starts with.
+
+works_best_with:
+  tools:
+    - {name: "Nano Banana Pro", why: "Google's image model takes several product photos at once and keeps the pack's shape across new scenes."}
+    - {name: "GPT Image 2.5", why: "OpenAI's image model, the stronger pick when exact words on a label or pack must come out right."}
+    - {name: "Veo 3.1", why: "Starts a clip from your approved still, takes up to three product photos as references, and makes sound you can describe."}
+  inputs:
+    - "Five plain photos of the product (front as sold, out of the pack, in a hand, in use, close-up), so nothing about its look is guessed"
+    - "A short phone video of someone using the product, so the hands and steps match real use"
+    - "The real measurements of the pack, so the size against a hand comes out right"
+    - "Your mistakes list from past AI jobs, so known faults are planned out from the start"
 
 terms:
   - term: Still
     meaning: A single image. Here, the first frame of a clip, made and checked before the clip.
+  - term: Reference photo
+    meaning: A real photo you give the tool to copy from, with its role named in the prompt.
   - term: Upscale
     meaning: Making a finished image or clip bigger and sharper without changing what's in it.
   - term: Frame 1

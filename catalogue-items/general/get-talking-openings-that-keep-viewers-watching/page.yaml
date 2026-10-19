@@ -177,6 +177,16 @@ improve:
   - Keep a note of which move won on each ad, and ask for that move first next time.
   - For an opening with no talking, pair it with the skill that makes wordless, satisfying openings.
 
+works_best_with:
+  tools:
+    - {name: "Veo 3.1", why: "Makes speech and lip movement along with the picture, starting from your approved still."}
+    - {name: "Kling 4.0", why: "Makes speech with lip sync in several languages, from your reference images."}
+    - {name: "Nano Banana 2.1", why: "Makes the opening image from your product photos, so the real product is in frame from the first second."}
+  inputs:
+    - "Your ad's audience retention chart, so you can see the second where viewers leave"
+    - "Photos of a real room like your buyer's, so the presenter's room looks lived in"
+    - "A note of your typical buyer's age and style, so the presenter feels like one of them"
+
 terms:
   - term: Opening (hook)
     meaning: The first line or first few seconds of an ad, whose job is to keep the right person watching.

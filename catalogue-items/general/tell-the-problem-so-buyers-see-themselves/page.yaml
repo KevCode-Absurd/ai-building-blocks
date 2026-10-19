@@ -1,15 +1,15 @@
 new_slug: tell-the-problem-so-buyers-see-themselves
 name: "Tell the problem so buyers think \"that's me\""
-summary: "Give it your buyer, their problem and your product. You get a long story that ends with your product as the fix."
+summary: "Give it your buyer, their problem and your product. You get a story that ends with your product as the way out."
 job: write-ad-copy
 
 headline: "Tell the problem so buyers think \"that's me\""
-subhead: Give it a note on your buyer, the real cause of the problem if you know it, your product facts and a length. It writes one person's problem as it gets worse, explains why it keeps happening in plain words, and brings your product in late as the way out.
+subhead: Give it a note on your buyer, the real cause of the problem if you know it, your product facts and a length. It writes a story that falls through every fix they tried, turns on one plain idea, then rises with your product, arriving late.
 
 explain: |
-  People who don't know their problem has an answer won't read a sales pitch. They'll read a story about themselves. Most copy for these cold buyers gives up after one line of problem and jumps to the product, so the reader never recognises themselves.
+  People who don't know their problem has an answer won't read a sales pitch. They'll read a story about themselves. Research on stories shows why: readers who get carried into one, picturing it and feeling it, come out agreeing with it, unless something jolts them out first. An early pitch is that jolt. So most copy for these buyers fails twice. It gives one line of problem, then jumps to the product.
 
-  This skill writes the long version. It opens inside one moment, with one person, and stays with them. The problem gets worse through what they do about it: the small ways they work around it, each fix they tried and why it stopped working. Then it states the real cause in one plain idea that makes every failed fix make sense, if your facts hold one. If they don't, it stays with what the person notices and invents no cause. The product arrives late, with one fact at most, and the story ends back at the opening moment, changed.
+  This skill uses the oldest story shape there is: things get worse, then better. It opens inside one small moment from your buyers' own days. Then it falls through three to five drops, the workarounds and fixes they tried, each with a different cost. It hits a low point, then turns on the real cause in one plain idea, if your facts hold one. If not, it uses what the person notices and invents no cause. Your product arrives only after the turn, as a first use the reader can picture, with one fact at most. Before handing it over, it reads for false notes: anything that sounds like an ad too early gets cut.
 
 when:
   - Your buyers don't know an answer exists, or only feel the problem, and short ads aren't landing.
@@ -17,13 +17,14 @@ when:
   - You know why the problem keeps happening and want that told plainly, not as a pitch.
 
 you_give:
-  - A note on the buyer, how much they know, the one thing they want, what they tried and their own words
+  - A note on the buyer, how aware they are, what they want, what they tried and their own words
   - The real cause of the problem, from your product facts (optional, but best)
   - Your product facts, offer and the proof you may use
   - How long it can be, in words or characters
   - Your voice notes and claims you must never make (optional)
 you_get:
   - The finished story in paragraphs, with no headings or lists
+  - A shape line listing each drop, the low point and where your product first appears
   - A line saying which cause was used and where it came from, or that none was
   - A line listing anything assumed
 
@@ -32,30 +33,29 @@ how_to_use:
   - Paste a note on your buyer, including what they tried and their own words from reviews.
   - If you know why the problem keeps happening, and your facts support it, paste that as the cause.
   - Paste your product facts and offer, and give a length, for example "300 to 400 words".
-  - Read the "Cause used" and "Assumed" lines. Anything assumed is worth checking before it runs.
+  - Read the shape, cause and assumed lines. Anything assumed is worth checking before it runs.
 
 how_it_works:
   - title: Opens inside a moment
-    text: A time, a place, one person doing one thing. No product, no name for the problem, no greeting.
-  - title: Keeps one person
-    text: The same person from the first line to the last, so the reader thinks "that's me" more than once.
-  - title: Makes it worse
-    text: The small ways they work around it, then each fix they tried, what it cost and why it stopped. The fix fails, never the person.
-  - title: States the cause
-    text: One plain idea, said as a friend would, that makes every failed fix make sense. Only if your facts hold it.
-  - title: Brings the product late
-    text: After the cause. How they found it, their doubt, the first use and one ordinary day since, with one fact at most.
-  - title: Ends with one step
-    text: Returns to the opening moment, changed, then gives one thing to do.
-  - title: Checks the pace
-    text: Each paragraph leans into the next and adds an event, a cost or a detail. Nothing is said twice.
+    text: One place, one time, one small action from your buyers' days. No product, no name for the problem, no greeting.
+  - title: Maps the fall
+    text: Three to five drops, the workarounds and fixes they tried, each with a different cost. The fix fails, never the person.
+  - title: Finds the low point
+    text: One small, exact moment where carrying on stops being bearable.
+  - title: Turns on the cause
+    text: One plain idea that makes every failed fix make sense, only if your facts hold it.
+  - title: Rises with your product
+    text: After the turn and past the 60% mark. A first use the reader can picture, with one fact at most.
+  - title: Closes the loop
+    text: Returns to the opening moment, changed, then gives one next step.
+  - title: Reads for false notes
+    text: Cuts any line that sounds like an ad before the turn, and any detail buyers wouldn't recognise.
 
 output_shape: |
-  <the story, in paragraphs of 2 to 5 whole sentences, no headings:
-  about a quarter on life as it is, half on the problem getting
-  worse and fixes failing, a quarter on the cause, the product and
-  the next step>
+  <the story, in paragraphs of 2 to 5 whole sentences, no headings>
 
+  Shape:      <drop 1 / drop 2 / ... / low point; product first appears
+              at <n>% of words>
   Cause used: <the source fact, quoted, or "none, stayed with what
               the person notices">
   Assumed:    <anything inferred>
@@ -114,6 +114,12 @@ example:
     one pouch of Sprout Kids, from $24.99 for your first box, and see
     how the first week goes.
 
+
+    Shape:      drop 1, hiding greens in sauce and smoothies (effort) /
+                drop 2, the juice powder (money) / drop 3, the
+                supermarket chewable (hope) / drop 4, the nightly
+                standoff (energy) / low point, the green bits lined up
+                on the plate. Product first appears at 65% of words.
     Cause used: none, stayed with what the person notices.
                 MISSING: real cause
     Assumed:    the juice powder and the supermarket chewable are
@@ -123,37 +129,48 @@ example:
 
 tweaks:
   - what: The cause
-    how: This is what makes the story land. Paste a cause your facts support and it becomes the turn of the story. Leave it out and the story stays with what the person notices.
+    how: This is what makes the story turn. Paste a cause your facts support and it becomes the turn. Leave it out and the story turns on what the person notices.
   - what: What they tried
-    how: List the real fixes your buyers mention in reviews. Each one becomes a step in the story where hope rises and falls.
+    how: List the real fixes your buyers mention in reviews. Each one becomes a drop, where hope rises and falls.
   - what: The length
-    how: Long means more happens, not more words. Give it room (300 words or more) only if you have enough tried fixes and detail to fill it.
-  - what: Who the person is
-    how: Name the moment from your reviews, such as a morning routine or a meal. The more exact the moment, the more readers recognise themselves.
+    how: Long means more happens, not more words. Give it 300 words or more only if you have enough tried fixes and detail to fill it.
+  - what: Who it's told to
+    how: The default is "you". Ask for "one person" to tell it about someone like your buyer in the third person. For a real customer's or founder's own story, use "A story-style ad buyers see themselves in".
 
 judge:
-  - The product doesn't appear before the cause, or before the reader knows the problem.
-  - Every paragraph adds something new, an event, a cost or a detail.
+  - The product doesn't appear before the turn, or before the reader knows the problem.
+  - Each drop has a different cost, and every paragraph adds an event, a cost or a detail.
   - There's no figure, quote, study or deadline you didn't supply. Any quote in quotation marks is word for word.
   - The reader is never blamed. The fixes fail, not the person.
   - It reads aloud without fragments or rows of one-line paragraphs.
 
 test:
-  - Run it with a buyer note built from reviews you know well. Each failed fix in the story should be one your buyers mention.
+  - Run it with a buyer note built from reviews you know well. Each drop in the story should be a fix your buyers mention.
   - Run it twice. The cause and the opening moment should match. If the cause changes, it's guessing, so give it the cause from your facts.
   - Give the story to someone like your buyer without saying what it sells. Ask where they first thought "that's me", and where they got bored.
-  - Find the first mention of the product. It should come after the cause.
-  - Check the "Cause used" line. It should quote a fact you gave it, or say none.
+  - Check the shape line against the story. The product's first mention should come after the turn.
+  - Check the cause line. It should quote a fact you gave it, or say none.
 
 improve:
   - Write the plain cause of your buyer's problem, from your product facts, into "What you need" in the skill file, so step 4 has it every run.
-  - Add the fixes your buyers say they tried (from reviews) to step 3, so the story uses them.
-  - Change the rough split under step 7 if your stories run short, for example less time on life as it is.
+  - Add the fixes your buyers say they tried, from reviews, to step 2, so the drops use them.
   - Save the opening moment that works to your brand file.
-  - Run "Know who you're writing for before you start" first, and finish with "Know if your copy is ready, in 15 questions".
+  - Run "Know exactly who you're writing for" first, and finish with "Know if your copy is ready to publish".
+
+works_best_with:
+  tools:
+    - {name: "Claude", why: "Holds a long story in a steady, natural voice and keeps to the facts you gave it."}
+    - {name: "Any good chat AI", why: "Any strong chat AI can follow the shape if you give it real buyer words."}
+  inputs:
+    - "Ten or more reviews that describe life before buying, so the drops and the opening scene come from real days"
+    - "Unhappy reviews of the fixes your buyers used before, so each drop has a real cost"
+    - "The plain reason the problem keeps happening, from your product team, so the story turns on a fact"
+    - "One line on where buyers first notice the problem (a meal, a commute, a mirror), so the opening scene lands"
 
 terms:
   - term: Cold buyer
     meaning: Someone who doesn't know you, and may not know their problem has an answer.
-  - term: Cause
-    meaning: The plain reason the problem keeps happening, which explains why the usual fixes didn't work.
+  - term: Drop
+    meaning: One step down in the story, such as a fix they tried and what it cost them.
+  - term: Turn
+    meaning: The point where the story explains why nothing worked, before the product appears.

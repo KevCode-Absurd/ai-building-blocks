@@ -175,6 +175,16 @@ improve:
   - Save the approved hero line and hero still in your brand file for the next ad.
   - Pair it with the skill that writes the comic script, so the claim and panels are settled first.
 
+works_best_with:
+  tools:
+    - {name: "Nano Banana 2.1", why: "Takes up to 14 reference images and keeps up to four characters the same, so your reference stills match."}
+    - {name: "Veo 3.1", why: "Starts each clip from your approved still and can make sound with it, in 8-second clips."}
+    - {name: "CapCut", why: "Lets you add the words, numbers and captions as their own layers after the clips are made."}
+  inputs:
+    - "Your lettering font file, so captions match your brand"
+    - "Two comic pages you like, described in your own words (ink weight, color), so the ink line has a target"
+    - "The final narration recording, so each panel's length fits its line"
+
 terms:
   - term: Panel transition
     meaning: What changes between two comic panels, such as the next step of an action or a jump in time.

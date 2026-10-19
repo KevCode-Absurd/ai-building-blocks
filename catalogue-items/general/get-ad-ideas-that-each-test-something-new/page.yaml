@@ -185,6 +185,16 @@ improve:
   - After each test, write the answer to its test question in your brand file, then list it under "Recent ads" so the next run builds on it.
   - Pair it with a skill that turns a chosen idea into a full brief and versions a designer can build.
 
+works_best_with:
+  tools:
+    - {name: "Meta Ads Manager", why: "Exports results for each ad as a spreadsheet, so each idea can be labelled 'measured' or 'guess'."}
+    - {name: "Google Sheets", why: "Holds the coverage map as a grid of moments against what buyers know, so empty cells are easy to see."}
+    - {name: "Any good chat AI", why: "Any current chat AI can find moments and write the ideas once the map is filled."}
+  inputs:
+    - "Support tickets and reviews with dates, so every buying moment has a source"
+    - "A list of what you can film or photograph now (people, places, props), so every idea can be made"
+    - "Your last test plan and what it found, so no test question is asked twice"
+
 terms:
   - term: Buying moment
     meaning: The situation that sends someone looking for a product like yours, such as a rushed morning or a gritty shaker in the sink.

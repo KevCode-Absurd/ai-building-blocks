@@ -112,6 +112,12 @@ const FLOWS = [
 ];
 
 const OUT = "catalogue-items/orchestrators";
+// The workflows were rewritten by hand on 19 Oct 2026 (step notes, hand-back step, examples) and the specs above
+// no longer match them. Running this would undo that work, so it refuses unless told to start over.
+if (fs.existsSync(OUT) && !process.argv.includes("--overwrite")) {
+  console.error("catalogue-items/orchestrators/ already exists and holds hand-edited workflows. Edit those files directly, or rerun with --overwrite to replace them from the specs here.");
+  process.exit(1);
+}
 fs.rmSync(OUT, { recursive: true, force: true });
 for (const f of FLOWS) {
   const missing = f.steps.filter(([s]) => !by[s]).map(([s]) => s);

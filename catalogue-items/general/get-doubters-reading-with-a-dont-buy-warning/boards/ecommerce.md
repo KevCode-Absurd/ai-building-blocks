@@ -1,10 +1,10 @@
-# Make an ad that says don't buy this: for online stores
+# For online stores: Get doubters reading with a don't-buy warning
 
-Use this with the main skill when the story ad sells a physical product.
+**Where it lands hardest.** Things people think about before buying again: pans, luggage, coats, mattresses, a supplement they've tried before. Impulse buys rarely need a warning.
 
-**Extra thing to give it:** your product photos, but only if you want the product in the picture. Otherwise send no product photo to the image tool.
+**Checks a store can hand the reader**
+- "Check the seam first" for bags and clothes.
+- "Lift it before you buy" for pans and luggage.
+- "Read the back, not the front" for anything with a label, if the story says what to look for.
 
-**Ideas for physical products**
-- Something people buy once is where this works best. "Before you buy another one" lands hardest on purchases people think about first: pans, luggage, coats, mattresses.
-
-**Reminder:** leave the product out unless asked. If it is asked for, use the real one, small and to one side, never held up or centred. The picture must still work with it taken out.
+**Product photos.** Send none unless the brief asks for the product. The old thing in the frame is a generic kind, labels turned away.

@@ -1,7 +1,7 @@
 slug: get-a-3d-how-it-works-ad-script
 renamed_from: cgi-explainer-ad-script-format-rules
 name: "Get a 3D how-it-works ad script"
-summary: "A narrated 3D mini-documentary script, or one cutaway image, about one hidden process your facts support."
+summary: "Tests one hidden process, writes it as a marked chain, then scripts a 3D film that dives in and back out, or one cutaway image."
 category: general
 boards: [ecommerce]
 type: skill
@@ -16,7 +16,12 @@ outputs:
   - {type: image_prompt}
 uses: []
 example: explainer
-origin: own
+origin: rebuilt
 source_ids: [CES-113]
-old_name: script-format-explainer
-version: 1.0.0
+old_name: 3D how-it-works ad script
+version: 2.0.0
+credits:
+  - {title: "Powers of Ten (film)", by: "Wikipedia, on Charles and Ray Eames (1977)", url: "https://en.wikipedia.org/wiki/Powers_of_Ten_(film)", used: "Starting at human size, one move down through scale, then back out"}
+  - {title: "Mayer's 12 Principles of Multimedia Learning", by: "Dartmouth, summarising Richard E. Mayer, Multimedia Learning", url: "https://services.dartmouth.edu/TDClient/1806/Portal/KB/PrintArticle?ID=171655", used: "Colour-coded parts as signals, one line per picture, short on-screen words"}
+  - {title: "Health Products Compliance Guidance", by: "US Federal Trade Commission staff", url: "https://www.ftc.gov/business-guidance/resources/health-products-compliance-guidance", used: "Pictures carry claims too, every claim needs support before it runs"}
+  - {title: "Speech tempo", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Speech_tempo", used: "Broadcast speaking pace, to set about 2.5 words a second for a calm narrator"}

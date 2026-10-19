@@ -1,38 +1,37 @@
-# Audit a landing page and plan tests: for online stores
+# Find where your store loses buyers: for online stores
 
-## Pages a whole-store audit must cover (don't skip any without saying so)
-1. Home page
-2. Navigation menu (open)
-3. Collection page
-4. Product pages
-5. Landing pages (article-style, reasons-to-buy), if any
-6. FAQ, About and story pages
-7. Cart (with an item in it)
-8. Checkout, as far as it goes without paying
+## The store's steps, and the page that owns each
+| Step buyers drop at | Page to review | What to look for first |
+|---|---|---|
+| Land, then leave | Home, collection or landing page | Does the first screen match the ad? Can you tell what's sold in five seconds? |
+| Browse, then don't open a product | Menu and collection page | Can shoppers find the product, filter and see prices? |
+| View the product, then don't add it | Product page | What it is, fit or size, real photos, reviews near the button, the full price |
+| Add to cart, then stop | Cart | Shipping cost, delivery, any free-shipping minimum, surprise fees |
+| Reach checkout, then stop | Checkout, as far as it goes without paying | Guest checkout, ways to pay, the total. Much of this is store settings |
+| Buy once, never again | Order emails and the account page | How to reorder, pause or return |
 
-For each page, give one to three test ideas that each change a different thing; never pad to three. If a page doesn't exist (no landing page, no story page), say so and suggest what to build. An audit of one page covers that page only.
+A whole-store audit covers every step that has traffic. Say which pages don't exist (no landing page, no FAQ) instead of skipping them. A one-page audit covers that page only.
 
 ## Numbers to ask for (ready to paste)
-Ask the store for these, from its own analytics, for a stated range (30, 60 or 90 days) and the same range a year ago if available:
-- Visits, overall conversion rate, average order value, orders, revenue.
-- Step by step: added-to-cart rate, reached-checkout rate, checkout completion rate.
-- Visits and conversion rate for phone against desktop.
-- Top five products by units and revenue; top five landing pages by visits, with each one's conversion rate.
-- Share of orders from new against returning customers; return or refund rate and reasons; share of orders on subscription.
-- Rough trend against last year.
-The minimum for money estimates: visits, overall conversion rate, average order value and the phone and desktop split. Mark every gap; never fill one.
+From the store's own analytics, for a stated range of 30, 60 or 90 days, and the same range a year ago if there is one:
+- Sessions, orders, net sales and the shipping collected.
+- The count at each step: product views, added to cart, reached checkout, completed.
+- The same counts for phone and desktop, and for new and returning customers.
+- The top five landing pages and top five traffic sources, each with sessions and orders.
+- Refund or return rate, and the share of orders on subscription.
 
-## What each number adds (say this in a page-only audit)
-| Number | What it lets you say |
+The minimum for money figures: sessions and orders for the page, and one step in between or one split. Mark every gap; never fill one.
+
+## What each number lets you say
+| Number | What it shows |
 |---|---|
-| Visits, conversion rate, average order value | How big a leak is in money |
-| Phone against desktop | Whether the loss happens on phones |
-| Step-by-step rates | Which step loses the most people |
-| Landing pages by visits | Which page to fix first |
-| New against returning | Whether it's a page problem or a change in who's visiting |
+| Counts at each step | Which step loses the most people |
+| Phone against desktop | Whether the loss is a phone problem |
+| By traffic source | Whether one ad or channel brings people the page doesn't suit |
+| New against returning | Whether it's the page or a change in who's visiting |
 | Return rate | Whether a page that sells is over-promising |
 
 ## Capture notes
-- Use a phone width of about 390 px at 2x. Clear any age or region checks, decline non-essential cookie banners, then hide pop-ups for the screenshot. Check that the open menu and cart screenshots really show the open panel.
-- Frame each BEFORE as an upright 9:16 crop with the whole section in view; a tall section needs several frames.
-- The offer to look for, by how it's bought. Bought again: a starter pack, bundle, or a subscribe saving shown in money. Bought once: one clear price, what's in the box, the set that completes it, pay-in-instalments, a delivery date.
+- Use a phone width of about 390 px. Clear any age or region check, decline non-essential cookies, then capture the first screen before and after any pop-up.
+- Capture the open menu, an option picked on the product page, and the cart with an item in it. Check the screenshots really show the open panel.
+- Stop before payment. Never enter card details.

@@ -1,10 +1,9 @@
-# Make an ad that looks like a phone note: for online stores
+# A phone-note picture: for online stores
 
 Use this with the main skill when the story ad sells a physical product.
 
-**Extra thing to give it:** your product photos, but only if you want the product in the picture. Otherwise send no product photo to the image tool.
+**Notes a store's buyers keep**
+- Something people buy once: a tried list of every one they've owned and what went wrong, or a running cost of replacing it.
+- Something people use up: a streak that keeps resetting, or a restart plan dated every Monday.
 
-**Ideas for physical products**
-- Something people buy once: a list of the ones bought, with the year and how each ended, or a running total of what they cost.
-
-**Reminder:** leave the product out unless asked. If it is asked for, use the real one, small and to one side, never held up or centred. The picture must still work with it taken out.
+**Product:** the note never names it, and the screen shows no product photo.

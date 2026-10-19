@@ -15,4 +15,8 @@ uses: [stop-your-copy-sounding-like-ai]
 origin: own
 source_ids: [CES-134]
 old_name: script-voice-pass
-version: 1.0.0
+version: 1.1.0
+credits:
+  - {title: "Use contractions", by: "PlainLanguage.gov guidelines (US General Services Administration)", url: "https://github.com/GSA/plainlanguage.gov/blob/main/_pages/guidelines/conversational/use-contractions.md", used: "Write the way you talk, with contractions where they sound natural"}
+  - {title: "Use the present tense", by: "PlainLanguage.gov guidelines (US General Services Administration)", url: "https://github.com/GSA/plainlanguage.gov/blob/main/_pages/guidelines/conversational/use-the-present-tense.md", used: "Present tense for how things work"}
+  - {title: "Clear and short", by: "Digital.gov plain language guide", url: "https://digital.gov/guides/plain-language/writing/clear-short", used: "One idea per sentence"}

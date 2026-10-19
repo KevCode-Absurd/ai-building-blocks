@@ -174,6 +174,15 @@ improve:
   - Save the approved frame 01 in your brand file and attach it to every future set for this product.
   - Pair it with the skill that writes down exactly how your product looks, and the one that plans product page images if the photos are going on your product page.
 
+works_best_with:
+  tools:
+    - {name: "Nano Banana Pro", why: "Takes up to 6 product photos plus 3 style references, which suits holding one look across nine frames."}
+    - {name: "GPT Image 2.5", why: "Keeps the product closer to your reference photos than older versions, and holds small edits across rounds."}
+  inputs:
+    - "Photos of the real props and surfaces you own, so repeated props look the same in every frame"
+    - "A screenshot of your current feed grid, so the colour plan sits well next to what's already there"
+    - "A close, straight-on photo of the label, so small print stays right in the close frames"
+
 terms:
   - term: Style sheet
     meaning: A few lines that fix the look of a whole shoot (colours, light, lens, surfaces, props, finish).

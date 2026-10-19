@@ -166,6 +166,15 @@ improve:
   - When the same fault shows up on two products, turn it from a note into a named check.
   - Pair it with the skill that plans product page images one by one, so there's a plan to check against, or the workflow that runs the whole gallery job.
 
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Any current chat AI that reads images can run the checks. Attach each file at full size, then zoom in yourself too."}
+    - {name: "Google Merchant Center", why: "Its Diagnostics page flags product images that break Google's rules, such as promo text or a missing AI label."}
+  inputs:
+    - "Screenshots of the live product page on a real phone, so the glance and crop checks match what shoppers see"
+    - "The marketplace's image rules page, saved on the day you check, so the first-image check uses today's rules"
+    - "Fault logs from earlier sets, so mistakes that came up before are checked first"
+
 terms:
   - term: Callout
     meaning: A short label on an image with a thin line pointing to the part it names.

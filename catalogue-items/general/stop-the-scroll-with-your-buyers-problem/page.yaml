@@ -176,6 +176,15 @@ improve:
   - Save each one thought that wins, with its twist, in your brand file, and name it in your next run.
   - Pair it with a skill that checks finished image ads for errors before you spend.
 
+works_best_with:
+  tools:
+    - {name: "GPT Image 2.5", why: "Keeps your real product closer to its reference photo than older versions, and sets short headlines better."}
+    - {name: "Nano Banana Pro", why: "Takes up to 6 product photos and is Google's pick for brand consistency, so the product and colours stay true."}
+  inputs:
+    - "Two or three of your ads that people ignored, so the twist avoids looking like them"
+    - "A photo of the real moment from your team or a customer (with permission), so the scene has the one exact detail"
+    - "A product photo from the angle the scene needs, so the image model doesn't have to guess the side it can't see"
+
 terms:
   - term: Twist
     meaning: The one unexpected move in the picture, such as two things side by side or one thing swapped in where another belongs.

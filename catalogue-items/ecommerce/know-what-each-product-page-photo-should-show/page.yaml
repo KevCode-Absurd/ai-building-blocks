@@ -175,6 +175,15 @@ improve:
   - Save the finished cards in your brand file. When you remake the gallery, rescore only the questions with new evidence.
   - Pair it with the skill that writes down exactly how your product looks, and the one that checks the finished images against this plan.
 
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "The scoring is simple sums, so any current chat AI can run it. Attach the photos so it can sort them by job."}
+    - {name: "Google Sheets", why: "Keeps the score table in rows, so you can re-sort it when a new photo or fact arrives."}
+  inputs:
+    - "Return reasons and pre-sale questions with counts, so the 'asked' scores rest on real numbers"
+    - "Your current gallery in upload order, so the plan shows what to keep and what to swap"
+    - "For worn products, the model's height and size, so the scale card can state them"
+
 terms:
   - term: Gallery
     meaning: The row of images at the top of a product page that shoppers swipe through.

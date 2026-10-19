@@ -4,12 +4,12 @@ summary: "Give it your script and product photo. You get image and clip prompts 
 job: make-video-ads
 
 headline: "Turn your podcast-style script into video clips"
-subhead: Give it a Host-and-Guest script and your product photo. It casts two people nobody could mix up, fixes one room and one camera, places your product on the table, and hands back still prompts, timed clip prompts and finishing notes.
+subhead: Give it a Host-and-Guest script and your product photo. It casts two people nobody could mix up, fixes one room and one locked camera, places your product on the table, and hands back still prompts, timed clip prompts with every line in quotes, a voice plan and finishing notes.
 
 explain: |
-  AI video tools find two-person talk hard. The wrong mouth moves, voices swap between clips, the listener nods on a loop, the camera sways, a hand knocks the product, and any sign or book on the set comes back misspelled. It also tempts people to dress a speaker up as a doctor, which is a claim you can't make.
+  AI video tools find two-person talk hard. The wrong mouth moves, voices swap between clips, the listener nods on a loop, the camera sways, and any sign or book on the set comes back misspelled. A made-up chat that looks real also needs to say it's a dramatization, because US ad rules ask for that when people who seem unscripted are actors.
 
-  This skill sets everything that can drift once and repeats it. Two cast lines describe people who differ in at least four ways and are pasted unchanged into every prompt. One plain room, one locked camera, one microphone each, placed so no mouth is hidden. The product stands on the table between them from the first frame to the last. Each clip prompt lists the turns in order with one visible reaction for the listener. The offer is never spoken; it goes in as text in editing.
+  This skill sets everything that can drift once and repeats it. Two cast cards describe people who differ in at least four ways and are pasted unchanged into every prompt. One plain room, one locked camera, a microphone each placed so no mouth is hidden, and the product standing on the table. Each clip is a set of timed beats with the line in quotes, the speaker's voice, and one reaction from the listener, whose mouth stays closed. If the voices drift, it tells you to record both parts first and lip-sync. The offer and the disclosure line go in as text in editing.
 
 when:
   - You have a podcast-style script and need prompts for an AI image and video tool.
@@ -17,184 +17,196 @@ when:
   - You want the product in every frame without anyone holding it up to the camera.
 
 you_give:
-  - The script, with lines labelled Host and Guest
-  - A front photo of your product, its size, and how it's held and used
-  - Your buyers' real doubts, your room and light, and how your brand name is said (optional)
-  - The clip lengths your video tool accepts (optional)
+  - The script, with lines labelled Host and Guest and the clip plan
+  - A front photo of your product, its height against a mug or glass, and how it's held
+  - Your buyer's room and light, and how your brand name is said (optional)
+  - Your video tool's clip lengths and whether it makes speech (optional)
 you_get:
-  - The argument, structure and length, and the script split into clips
-  - Fixed cast lines, room and frame lines, and a product line
-  - A cast still prompt, an opening frame prompt and clip prompts with timed beats
-  - Finishing notes for captions, punch-ins, offer text and sound
+  - A script check, two fixed cast cards, room and camera lines and a product line
+  - A cast picture prompt and an opening frame prompt
+  - Clip prompts with timed beats, quoted lines and one listener reaction per turn
+  - A voice plan, finishing notes with the disclosure line, and a fix table
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Paste your script underneath, then attach or describe your product photo.
-  - Make the cast still first and check the two people look clearly different.
-  - Make the opening frame from the cast still and product photo.
+  - Paste your script underneath, then attach your product photo.
+  - Make the cast picture first and check the two people look clearly different.
+  - Make the opening frame from the cast picture and product photo.
   - Make each clip from its prompt, continuing from the last if your tool allows.
-  - Edit with the finishing notes, then listen on headphones and a phone speaker.
+  - Edit with the finishing notes, then listen on headphones and on a phone speaker.
 
 how_it_works:
-  - title: Settles four things
-    text: The one argument, the structure, the length and the two people.
-  - title: Sets what each may say
-    text: Facts about the product and attributed reviews only. No results, titles, studies or show names.
-  - title: Fits words to clips
-    text: Two or three turns per clip, each clip ending on the listener's face, no sentence crossing a cut.
-  - title: Gives the listener a job
-    text: One visible reaction per turn, tied to the meaning of the line, mouth closed.
+  - title: Checks the script
+    text: One speaker and one fact per turn, no personal results or titles, no spoken offer, and each clip ending where a turn ends.
   - title: Casts two clear people
-    text: Different in at least four ways, written once and pasted unchanged.
-  - title: Fixes room, frame and product
-    text: One plain room, a locked camera, the product on the table facing the camera from start to end.
-  - title: Writes stills and clips
-    text: Cast and opening stills first, then clip prompts with timed beats and plain sound.
+    text: Different in at least four ways, written once and pasted unchanged. Nothing about them suggests an expert.
+  - title: Fixes room and camera
+    text: One plain room, a locked camera, Host left and Guest right, a microphone each that hides no mouth.
+  - title: Places the product
+    text: On the table between them, front to camera, nearer the lens than the microphones, with nothing crossing in front of it.
+  - title: Writes timed beats
+    text: Each line in quotes with the speaker's voice, and one reaction from the listener tied to what was just said.
+  - title: Plans two voices
+    text: Two voices that differ in pitch and pace. If they drift, record both parts first and lip-sync.
   - title: Adds finishing notes
-    text: Captions per speaker, a punch-in on a reaction, and the offer as text over the last two seconds.
+    text: Captions per speaker, a punch-in on a reaction, the disclosure line, and the offer as text over the last two seconds.
 
 output_shape: |
-  ARGUMENT  <...>   STRUCTURE  <...>   LENGTH  <...>
-  SCRIPT BY CLIP
-  Clip 1 (<words>): <turns>  ...
+  SCRIPT CHECK  pass, or <lines to send back>
 
   CAST (paste unchanged)
-  HOST (left): <age, build, skin tone, hair, glasses or facial hair, top, one mark>
+  HOST (left): <age, build, skin, hair, glasses or beard, top, one mark>
   GUEST (right): <the same seven, each different>
 
-  ROOM AND FRAME
-  <room line>  <frame line>
+  ROOM  <one line>   CAMERA  <one line>
+  PRODUCT  <placement, height against something on the table>
 
-  PRODUCT
-  <placement, height against something on the table, handled or displayed>
-
-  CAST STILL  <prompt>
+  CAST PICTURE  <prompt>
   OPENING FRAME  <prompt>
 
-  CLIP <n> (<length>)
-  [0-3 s] <speaker, line, tone>; <listener reaction>
-  ... End frame: <...>  Sound: <...>
+  CLIP <n> (<seconds>, from <frame>)
+  [00:00-00:03] The <speaker>, in <voice>, says: "<line>"
+  The <listener> listens, mouth closed, <one reaction>.
+  End frame: <..>  Ambient noise: <..>
 
-  FINISHING NOTES
-  <cuts, captions, punch-in, offer text, sound check>
-  MISSING: <...>
+  VOICES  Host: <..>  Guest: <..>  Route: <..>
+  FINISHING NOTES  <cuts, captions, punch-in, disclosure, offer text>
+  MISSING: <..>
 
 example:
   business: sprout
   input: |
     [the skill]
 
-    Script (30 s, myth-bust, from "Get a podcast clip ad script that
-    sells"):
+    Script (from the podcast clip script skill, 30 s, myth-bust):
+    Belief: they think a gummy can't hold enough; by the end they
+    think one pack holds more than they guessed.
+    Product entry: on the table from frame 1.
+    Muted opener: "Can a gummy hold enough?"
+    Disclosure: "Dramatization", plus the AI label.
     Clip 1: Host: "A gummy can't hold enough to replace my powder."
-            Guest: "It's a whole pack, though. About twenty grams, a
-            small handful." Host: "A small handful of candy."
-    Clip 2: Guest: "Sixty-plus ingredients, twenty-one vitamins and
-            minerals, six grams of fiber." Host: "Twenty-one. At full
-            dose?" Guest: "Vitamins, about a hundred percent of daily
-            value. Minerals, about a quarter."
-    Clip 3: Host: "Huh. At least that's honest." Guest: "And the reviews
-            keep saying, 'the one thing I've been able to stick to.'"
-            Host: "Okay. Send me that."
-    Product: Sprout pouch, front photo attached. Glossy deep-green
-    stand-up pouch, yellow wordmark. Opens only at its resealable top.
-    Brand world: bright, sunny, at home. Clips: 10 s, 9:16.
+      Guest: "It's a whole pack. About twenty grams, a small handful."
+      Host: "So, a handful of candy."
+    Clip 2: Guest: "Sixty-plus ingredients. Twenty-one vitamins and
+      minerals. Six grams of fiber." Host: "Twenty-one. At full
+      amounts?" Guest: "Vitamins, about a hundred percent of daily
+      value. Minerals, about a quarter."
+    Clip 3: Guest: "The reviews keep saying 'the one thing I've been
+      able to stick to.'" Host: "Okay. Send me that."
+    Product: Sprout pouch, front photo attached; as tall as a mug and
+    a half. Displayed, not handled.
+    Tool: 10-second clips with speech, 3 reference images.
   output: |
-    ARGUMENT  Overturn "a gummy can't hold enough".
-    STRUCTURE  Myth-bust.   LENGTH  30 s, 3 clips of about 25 words.
+    SCRIPT CHECK  Pass. Every fact is on the facts list, the review is
+    credited, nobody claims a result, and the offer isn't spoken.
 
     CAST (paste unchanged)
-    HOST (left): man, about 40, broad build, light skin, short sandy
-      hair, short beard, plain navy crew-neck jumper, a silver watch.
-    GUEST (right): woman, about 30, slim, brown skin, long black hair
-      tied back, no glasses, plain mustard shirt, small gold earrings.
+    HOST (left): looks about 45, broad build, medium-brown skin, short
+      grey-black hair, a trimmed beard, a navy crew-neck sweater, a
+      silver watch.
+    GUEST (right): looks about 30, slim build, pale freckled skin,
+      shoulder-length red hair, round glasses, a mustard-yellow
+      cardigan, small hoop earrings.
 
-    ROOM AND FRAME
-    Room: a bright kitchen-diner in daylight, one wooden table, one
-      plain cream wall, one lamp, no signs, screens, books or windows
-      in view.
-    Frame: both behind the table, chest up, turned about 45 degrees
-      toward each other, Host left, Guest right, faces fully visible;
-      one broadcast mic each on an arm, head below the chin, outer
-      side; camera on a stand, not moving; faces upper middle, table
-      lower middle.
+    ROOM  A quiet living room in daylight: one wooden table, one
+      plain sage-green wall, one floor lamp, two mugs. No signs, books,
+      screens or posters.
+    CAMERA  Locked, chest-up wide two-shot at seated eye level; Host
+      sits screen left, Guest screen right, angled partly toward each
+      other; a black microphone on an arm for each, below the chin.
+    PRODUCT  The Sprout pouch exactly as in the photo, standing on the
+      table between them, front to camera, nearer the lens than the
+      microphones, as tall as a mug and a half. Nobody touches it.
 
-    PRODUCT
-    The Sprout pouch from its photo, standing on the table between
-    them, nearer the camera than the mics, front to the camera.
-    Displayed only: the script doesn't need it picked up.
+    CAST PICTURE
+    [HOST] and [GUEST] side by side, waist up, against a plain light
+    wall, soft daylight. Natural, uneven skin, real creased cloth.
 
-    CAST STILL
-    [Host line] and [Guest line] standing side by side, waist up,
-    against a plain cream wall, soft daylight. A real photograph.
-
-    OPENING FRAME (attach: cast still = who they are; pouch photo =
-    the product, copy exactly)
-    [Room]. [Frame]. [Host line] mid-word, mouth open, right hand
-    flat on the table. [Guest line] listening, eyebrows just lifting,
-    mouth closed. [Product]. Natural uneven faces, real creased cloth,
-    soft daylight from the left.
+    OPENING FRAME (attach: cast picture = the two people; pouch photo
+    = the product)
+    [ROOM] [CAMERA] [PRODUCT]. The Host mid-word, mouth open, one hand
+    flat on the table; the Guest's brows already lifting.
 
     CLIP 1 (10 s, from the opening frame)
-    [Room] [Frame] [cast lines]
-    [0-3 s] Host: "A gummy can't hold enough to replace my powder."
-      Tone: flat, sure. Guest listens, eyebrows lifting, mouth closed.
-    [3-7 s] Guest: "It's a whole pack, though. About twenty grams, a
-      small handful." Tone: easy. Host leans back, arms folding.
-    [7-10 s] Host: "A small handful of candy." Tone: dry. Guest half
-      smiles, mouth closed.
-    End frame: Guest's face, smile settling. Sound: two voices close
-    to the mics, a little room tone, no music.
+    Host sits screen left, Guest screen right. [ROOM] [CAMERA] [HOST]
+    [GUEST] [PRODUCT]
+    [00:00-00:04] The Host, in a low, slow, doubtful man's voice,
+    says: "A gummy can't hold enough to replace my powder." The Guest
+    listens, mouth closed, brows lifting.
+    [00:04-00:08] The Guest, in a quick, bright woman's voice, says:
+    "It's a whole pack. About twenty grams, a small handful." The Host
+    listens, mouth closed, leaning back, arms folding.
+    [00:08-00:10] The Host says: "So, a handful of candy." The Guest
+    listens, mouth closed, a half smile forming.
+    End frame: the Guest's half smile. Ambient noise: a quiet room,
+    close microphones. No music.
+    CLIP 2 (10 s, from clip 1's last frame)
+    The Guest gives the three numbers while the Host's eyes drop to
+    the pouch; the Host asks "Twenty-one. At full amounts?" with one
+    brow up; the Guest answers. End frame: the Host unfolding his
+    arms. (Same beat format as clip 1.)
+    CLIP 3 (7 s, from clip 2's last frame)
+    The Guest quotes the reviews; the Host glances at the pouch, then
+    says "Okay. Send me that." End frame: both still, pouch low in the
+    middle.
 
-    (cut for length: the full run also had Clips 2 and 3, the second
-    re-stating the cast lines after a clean cut)
-
-    FINISHING NOTES
-    - Hard cuts. Captions for every word in Work Sans bold, white for
-      Host, sunflower #FFCC2E for Guest, middle band, clear of faces
-      and the pouch.
-    - "Can a gummy really hold enough?" on screen from frame 1.
-    - Punch in 10 to 15 percent on the Guest's half smile, about 8 s.
-    - Last 2 s: "$29.99 first order with text sign-up. Renews at
-      $49.99 every 4 weeks. 30-day money-back on your first order."
-    - No music. Listen on headphones and a phone speaker.
-
-    MISSING: the pouch's real height, to state it against a mug on
-    the table.
+    VOICES  Host: a man in his forties, low pitch, slow, doubtful and
+    warm, plain US accent. Guest: a woman about thirty, higher pitch,
+    quick, bright and patient, plain US accent. Route: in the video
+    tool; if a voice drifts by clip 2, record both parts and lip-sync.
+    FINISHING NOTES  Hard cuts. A 12% punch-in on the Host's folded
+    arms in clip 1. Captions for every word, Host in cream, Guest in
+    sunflower, between the faces and the table. "Can a gummy hold
+    enough?" on screen from frame 1. "Dramatization" and the AI label
+    small in the top corner throughout. Over the last 2 seconds:
+    "$29.99 first order with text sign-up. Renews at $49.99 every 4
+    weeks. 30-day money-back on your first order."
+    MISSING: whether the brand uses music. None is planned.
 
 tweaks:
-  - what: The cast lines
-    how: Change age, hair or clothes to match your buyers. Keep at least four differences between the two, or the tool mixes them up.
+  - what: Clip length
+    how: Give your tool's clip lengths. At 8 seconds a clip holds two short turns; at 10 to 15 it holds three. Each clip still ends where a turn ends.
+  - what: Voice route
+    how: If your video tool makes speech, the lines stay in the prompts. If voices drift or swap, record both parts in a voice tool and lip-sync each clip.
   - what: The room
-    how: Describe the place your brand lives (a kitchen, a garage, a living room). Keep it to one table, one wall and one lamp.
-  - what: Handling the product
-    how: If the script needs the product picked up and it fits in one hand, give the brand's steps for holding and opening it. That becomes its own short beat.
-  - what: One clip or several
-    how: Say whether your tool can continue a clip from the last one. If it can't, every clip prompt repeats the cast lines after a clean cut.
+    how: Name your buyer's world (a kitchen table, a small studio, a garden table). The room line changes; the plain walls and the locked camera stay.
+  - what: Picking up the product
+    how: Say how it's held and opened, and it gets its own short beat with the product in one hand. Without that, it stays standing on the table.
 
 judge:
-  - The two cast lines appear unchanged in every clip prompt.
-  - Each clip ends at the end of a turn, on the listener's face.
-  - Every turn has one listener reaction, and the listener's mouth stays closed.
-  - The product is on the table in every frame and nobody's hands cross it.
-  - The offer appears only in the finishing notes as on-screen text.
+  - Each line comes from the right mouth, and the listener's mouth stays closed.
+  - The two people look clearly different and keep their sides in every clip.
+  - The two voices stay apart and the same throughout.
+  - The product is on the table in every frame, label unchanged, nothing in front of it.
+  - The disclosure line and the offer text are in the finishing notes, and nobody says the offer.
 
 test:
-  - Make the cast still first. If the two people look alike, change the cast lines before anything else.
-  - Check that every clip ends at the end of a turn, on the listener's face, and that no sentence crosses a cut.
-  - Run it twice on the same script. Within each run, the two cast lines should appear unchanged in every clip prompt.
-  - Make one clip and watch the mouths. Only the speaker's should move, and nobody's hands should cross the product.
+  - Make the cast picture and look at it at thumbnail size. If you can't tell the two apart in a second, change two more traits in the cast cards.
+  - Make clip 1 and watch the listener's mouth during each line. If it moves, use the fix in the skill's table before making more.
+  - Lay the end frames of clips 1 and 3 side by side. Faces, clothes, sides and microphones should match.
+  - Play the finished ad on a phone speaker with your eyes closed. You should always know who is talking.
 
 improve:
-  - Write your two approved cast lines into step 6 of the skill file, so a series of clips looks like one show.
-  - Add your room to step 7 and your product's height against a mug or a hand to step 8, so placement is the same every time.
-  - Set your caption typeface and colour in the finishing notes under "What you hand back".
-  - Pair it with the skill that writes the podcast clip script, so every fact is sourced before casting.
+  - Save your approved cast cards and cast picture in your brand file, so a second podcast-style ad keeps the same two people.
+  - Write your room and light into step 3, so every run starts in your buyer's world.
+  - Add your caption colours and disclosure wording to step 8, so finishing is the same every time.
+  - Pair it with the podcast clip script skill, which writes the turns, the clip plan and the disclosure this skill reads.
+
+works_best_with:
+  tools:
+    - {name: "Veo 3.1", why: "Speaks quoted lines for a named speaker and keeps faces from up to three reference images."}
+    - {name: "Kling 4.0", why: "Reuses saved characters made from your reference pictures, so both faces hold across clips."}
+    - {name: "ElevenLabs", why: "Records two clearly different voices once, so they never swap between clips."}
+    - {name: "Nano Banana Pro", why: "Makes the cast picture and opening frame with real-looking skin and cloth."}
+  inputs:
+    - "A photo of a real room in your buyer's world, so the set feels like where they live"
+    - "Short voice samples or descriptions you like for each part, so the voices fit your brand"
+    - "Your caption colours and disclosure wording, so finishing matches your other ads"
 
 terms:
-  - term: Two-shot
-    meaning: A shot with both people in frame.
+  - term: Cast card
+    meaning: A fixed description of one person, pasted word for word into every prompt so they look the same in every clip.
   - term: Punch-in
-    meaning: Zooming into part of the frame during editing to make a close-up, without moving the camera.
-  - term: Listener reaction
-    meaning: The small visible response of the person not speaking, which keeps a talking clip alive.
+    meaning: Zooming into part of the frame during editing to make a closer shot from the same footage.
+  - term: Disclosure line
+    meaning: A small on-screen note such as "Dramatization" that tells viewers the people are actors or AI-made.

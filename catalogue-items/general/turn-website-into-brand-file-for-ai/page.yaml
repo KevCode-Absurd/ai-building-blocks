@@ -188,6 +188,16 @@ improve:
   - Re-run step 7 after big edits, to catch prices or claims that no longer match across files.
   - Pair it with a skill that interviews the founder to fill the unknowns only they can answer, and with one that turns the folder into a printable guide for designers.
 
+works_best_with:
+  tools:
+    - {name: "Claude", why: "A project keeps the start file as its instructions and the other files as knowledge, even on a free account."}
+    - {name: "Gemini", why: "A Gem keeps the start file as instructions that Gemini follows every time you use it."}
+    - {name: "Shopify", why: "If you sell on Shopify, it exports your products and variants as a spreadsheet, so offers.md matches every variant."}
+  inputs:
+    - "Names of 3 to 5 competitors you already watch, so the market map starts from real ones"
+    - "Your logo file and brand colours as hex codes, so the look file doesn't have to guess them"
+    - "Who on your team can answer questions about proof and offers, so each unknown names a real person"
+
 terms:
   - term: Brand file
     meaning: One folder with your facts, offers, buyers, claims, voice and history, which any AI or person can read before working for you.

@@ -1,71 +1,68 @@
 new_slug: catch-mistakes-in-your-ad-before-you-pay
 name: "Catch mistakes in your ad before you pay"
-summary: "Give it your finished ad. You get a list of what's fine, what to look at again and what to fix."
+summary: "Give it your finished ad. You get what should stop launch, what's worth a look, and what to check on a phone."
 job: check-ads
 
 headline: "Catch mistakes in your ad before you pay"
-subhead: Give it the finished video or image ad with its words and button. It runs the checks it can do from the file, points to anything worth a second look with the exact number or line, and lists what only you can judge on a phone.
+subhead: Give it the finished ad with its words, button and your live offer. It walks the ad the way a viewer meets it on a phone, flags wrong facts and hidden words as stop-ship, points to anything worth a second look with the exact line, and lists what only you can judge.
 
 explain: |
-  Most ad mistakes are small and cheap to fix before launch: words hidden under the app's buttons, too many words on the first frame, a picture that says something different from the headline, a button with no clear next step. Once the ad is live, the same mistakes cost you money to find.
+  Most ad mistakes are small and cheap to fix before launch: words hidden under the app's buttons, a price that no longer matches the shop, a picture that says something different from the headline, a button with no clear next step. Once the ad is live, the same mistakes cost you money to find.
 
-  This skill is a checklist for that last look. It sorts every item into three lists. "Checked" is what it could confirm from the file. "Worth a look" comes with the number or quote that triggered it, such as more than 30 words on a still or a filler word like "really". "For a person" is what needs your eyes on a real phone, like reading every word at full size. It gives no score and never blocks a launch. You decide.
+  This skill is that last look. It goes through the ad in the order a viewer meets it: the file and where it runs, the first second with the sound off, the middle, the end, then the facts. A short stop-ship list holds the mistakes that should stop a launch, like a wrong price or words in the zone the app covers. "Worth a look" comes with the number or quote that triggered it. "For a person" is what needs your eyes on a real phone. It gives no score and never blocks a launch. You decide.
 
 when:
   - You're about to approve an ad from a designer, an editor or an AI tool.
   - An ad looks fine on your laptop and you haven't seen it on a phone yet.
-  - You've made a few versions of one ad and want to know if they differ.
+  - You've made a few versions of one ad and want to know if they really differ.
 
 you_give:
   - The finished ad, as a video with its script or an image at full size
-  - Its headline, main text, button and the platform it will run on
-  - The ad it was built from, to compare against (optional)
-  - The one message it is meant to carry (optional)
+  - Its main text, headline, button and where it will run
+  - Your live offer and approved claims, from your brand file (recommended)
+  - The one message it should carry, or the ad it came from (optional)
 you_get:
-  - Three short lists, with what's checked, what's worth a look, and what's for a person
-  - The ad's message in one sentence
-  - One next action, either approve, change one named thing, or hold
+  - A stop-ship list of wrong facts, hidden or misspelt words and the wrong shape, each with its fix
+  - A worth-a-look list, each item with the number or quote behind it
+  - The things to check yourself on a phone
+  - The ad's message in one sentence and one next action
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Attach the image at full size, or the video's key frames and its script with timings.
-  - Paste the headline, main text and button exactly as they'll run, and name the platform.
-  - Read "Worth a look" first, then open the ad on your own phone and go through "For a person".
-  - Run a separate Meta ad rules check before launch. This list doesn't cover policy.
+  - Paste the main text, headline and button exactly as they'll run, name where it runs, and attach offers.md and proof-and-claims.md.
+  - Fix the stop-ship list first, then read "worth a look", then open the ad on your own phone for "for a person".
+  - For Facebook and Instagram, also run the Meta ad rules check. This list doesn't cover policy.
 
 how_it_works:
-  - title: Checks the basics
-    text: Size, length, captions, the button and whether words sit clear of the app's own buttons. Items it can't see are passed to you.
-  - title: Looks for what lifts it
-    text: Checks that the opening has a picture and words, counts words on the first frame, looks for filler words and checks for an opening, a story and an ask.
-  - title: Asks four questions of a still
-    text: Where the eye goes first, whether it's easy to read on a phone, whether the picture fights the words, and how it compares with the ad it came from.
-  - title: Checks the versions
-    text: Flags versions that only change a colour or a word, because those aren't new ads.
-  - title: Points to the other checks
-    text: Reminds you to check claims against your approved facts and run the Meta rules check, which this list doesn't replace.
+  - title: Checks the file fits
+    text: Shape and size for where it runs, Meta's safe zones on tall video (top 14%, bottom 35%, 6% each side), text lengths and captions.
+  - title: Looks at the first second
+    text: With the sound off, is something already happening, can you see the product or brand, and can the words be read in about two seconds?
+  - title: Reads the middle
+    text: Finds the one message, notes the longest shot, flags words that add no fact, and checks the picture agrees with the words.
+  - title: Checks the end
+    text: One clear next step that matches the button, and whether the video still lands with the last three seconds cut.
+  - title: Checks the facts
+    text: Price, offer, claims and the product's look against your brand file. A wrong one goes on the stop-ship list.
   - title: Gives one next step
     text: Approve, change one named thing, or hold.
 
 output_shape: |
-  AD: <name> (<size>, <platform>)
+  AD: <name> (<shape>, <where it runs>)
 
-  CHECKED
-  - <what it confirmed from the file>
+  STOP-SHIP
+  - <the mistake, quote or spot> . Fix: <change>
 
   WORTH A LOOK
-  - <the issue, with the number or quote that triggered it, and a fix>
+  - <the issue, with the number or quote that triggered it> . Try: <change>
 
   FOR A PERSON
   - <what to look at yourself, on a real phone>
 
   MESSAGE IN ONE SENTENCE
   <the ad's one message>
-  <the "cut the last 3 seconds" result, for video>
-
-  POLICY AND CLAIMS
-  <claims that don't match your facts, and the reminder to run a rules
-  check>
+  <for video: the "cut the last three seconds" result>
 
   NEXT ACTION
   <approve | change one named thing | hold>
@@ -75,7 +72,7 @@ example:
   input: |
     [the skill]
 
-    Platform: Instagram feed. Image ad, 4:5.
+    Where it runs: Instagram feed. Image ad, 4:5.
     Picture (described): the green pouch on a soft green gradient,
     gummies scattered in front.
     On-image words: "Trusted by 1M+: Take 61% OFF" / chips: "21
@@ -89,90 +86,95 @@ example:
       Sprout.
     Headline field: Trusted by 1M+: Take 61% OFF
     Button: Shop now
-    Built from: P1 (image), "'Sprout is too expensive': here's 61% off
-      to prove otherwise"
-    Approved facts: the Sprout brand file and ingredient list.
+    Facts: the Sprout brand file (offers.md, proof-and-claims.md).
   output: |
     AD: Trusted by 1M+ still (4:5, Instagram feed)
 
-    CHECKED
-    - Size is 4:5 for the feed.
-    - The button is there: Shop now.
-    - The opening has a picture and words.
-    - 13 words on the picture, under the 30 guide.
-    - Headline on the image is 6 words, inside the 6 to 10 guide.
+    STOP-SHIP
+    - "gut-supporting probiotics" in the main text. The ingredient list
+      in offers.md has prebiotic fiber and no probiotics.
+      Fix: "prebiotic fiber".
+    - "61% Off" on the image and headline. The live product page says
+      52% in the bar and "up to 55%" in the badge.
+      Fix: use the discount live at checkout, everywhere.
+    - "21 Vitamins" on the chip. The fact is 21 vitamins and minerals.
+      Fix: "21 vitamins & minerals".
 
     WORTH A LOOK
-    - Four deals in one ad: 61% off, $29.99 first order, $20 off,
-      +$5 per extra person. A reader can't tell which is the offer.
-      Pick one.
-    - Opening, story, ask: the opening (1M+) and the ask (Shop now)
-      are there, but there's no story. Fine for an offer ad, if that's
-      its one job.
-    - The headline field repeats the on-image line word for word. Use
-      the field for something new, such as the renewal price.
-    - Filler word in the main text: "just got a lot more affordable".
-      Cut "just", or swap in the number.
-    - "21 Vitamins" on the chip. The fact is 21 vitamins and minerals.
+    - Four deals in one ad: 61% off, $29.99 first order, $20 off, +$5
+      per extra person. A reader can't tell which is the offer. Try:
+      keep one.
+    - "1M+" is pending in proof-and-claims.md (no source on file). Try:
+      lead with a fact that's approved until the source arrives.
+    - "Less than $1.10/day" is the first box only; it renews at $49.99.
+      Try: add the renewal price.
+    - The headline field repeats the on-image line word for word. Try:
+      use it for the renewal price or the guarantee.
+    - "just got a lot more affordable" adds no fact. Try: "$29.99 for
+      your first box".
+    - 13 words on the image, three chips. Fine for a still, but the
+      eye has four places to go.
 
     FOR A PERSON
     - Open the image at 100% and read every word letter by letter.
       MISSING: the image file. Only a description was given.
-    - On a real phone, check no words sit under the name bar or the
-      caption area.
     - Where does your eye land first, the 61% or the pouch?
-    - Next to P1: P1 opens on the buyer's own doubt ("too
-      expensive"). Is "Trusted by 1M+" stronger or weaker for the same
-      buyer? Only a person can call it.
+    - On your phone, does the first 125 characters of main text make
+      sense before "more"?
 
     MESSAGE IN ONE SENTENCE
     Lots of people trust Sprout, and it's 61% off right now.
-    The "cut the last 3 seconds" test doesn't apply to a still.
-
-    POLICY AND CLAIMS
-    - "gut-supporting probiotics": the ingredient list shows prebiotic
-      fiber and no probiotics. This is a factual error.
-    - "61%" doesn't match the product page (52% in the bar, "up to 55%"
-      in the badge).
-    - "1M+" is brand-reported. "Less than $1.10/day" is the first box
-      only; it renews at $49.99.
-    Run a Meta rules check before launch (supplement ads need 18+).
 
     NEXT ACTION
-    Change one thing: replace "probiotics" with "prebiotic fiber".
+    Hold. Fix the three stop-ship lines, then run the Meta rules check
+    (supplement ads need 18+).
 
 tweaks:
-  - what: The ad it was built from
-    how: Add the original and question four compares them directly. It tells you whether the new version is better or worse, and why.
-  - what: Your approved facts
-    how: Paste your ingredient list or facts panel. Then claims like "probiotics" in the example get caught against your own facts, not just flagged as something to check.
+  - what: Your facts
+    how: Attach offers.md and proof-and-claims.md. Then claims like "probiotics" in the example are caught against your own facts, not just flagged as something to check.
+  - what: The ad it came from
+    how: Add the earlier version and it says whether the new one is clearer or weaker, and why.
   - what: Several versions
-    how: Paste all of them. It checks that each one changes a nameable thing (the reason to buy, format, buyer) and flags more than four versions of one ad.
+    how: Paste all of them. It checks that each one changes one nameable thing (the reason to buy, the buyer, the format, the opening) and flags sets of more than four.
   - what: Video
-    how: Give the script with seconds and the shot list. It counts the shots, notes the longest, and tests whether the ad still lands with the last 3 seconds cut.
+    how: Give the script with seconds and the shot list. It notes the longest shot and tests whether the ad still lands with the last three seconds cut.
 
 judge:
-  - Every "worth a look" item quotes the line or gives the number.
-  - Nothing is marked "checked" that only a person on a phone could judge.
-  - There's no score or pass percentage.
-  - The next action is one thing, not a list of ten.
+  - Every item quotes the line, gives the number or names the spot.
+  - The stop-ship list holds only facts, hidden or misspelt words and the wrong shape, never taste.
+  - Nothing is marked as checked that only a person on a phone could judge.
+  - There's no score, and the next action is one thing.
   - It doesn't use results numbers like click rate. Those only exist after the ad runs.
 
 test:
-  - Run it on an ad where you already found a mistake after launch. The mistake should appear under "Worth a look" or "Policy and claims". If it doesn't, add the fact it would need (your ingredient list, your live offer) to the input.
-  - Plant one mistake on purpose, such as a price that doesn't match your page, and check it gets flagged with the exact quote.
-  - Run it twice on the same ad. The "Checked" list and the next action should match. If the next action changes, ask it which item it ranked first and why.
-  - Go through "For a person" on your own phone. If you find a problem it didn't list there, add that check to the skill file.
+  - Run it on an ad where you found a mistake after launch. The mistake should land on the stop-ship or worth-a-look list. If it doesn't, attach the fact it would need, such as your live offer.
+  - Plant one mistake on purpose, such as a price that doesn't match your page. It should appear under stop-ship with the exact quote.
+  - Run it twice on the same ad. The stop-ship list and the next action should match.
+  - Go through "for a person" on your own phone. If you find a problem it didn't list, add that check to the skill file.
 
 improve:
-  - Paste your approved facts, live offer and banned words into "What you need" in the skill file, so claim mistakes are caught every time without pasting.
-  - Add your own filler words and brand-specific red flags (for example a discount number you no longer run) to the list in step 2.
-  - If you only make image ads, delete the video rows in step 1 so the lists stay short.
-  - Save the mistakes it catches in your brand file as a "check before launch" list, and paste that list next time.
-  - Pair it with a skill that checks your ad against Meta's ad rules, and with one that finds flaws across a whole batch of finished image ads.
+  - Keep your brand file current. The facts check is only as good as offers.md and proof-and-claims.md on the day you run it.
+  - Add your own red flags to step 5, such as a discount you no longer run or a pack design you retired.
+  - If you only make image ads, delete the video lines in steps 2 to 4 so the lists stay short.
+  - Save the mistakes it catches in the mistakes list from "Stop paying for the same AI mistake twice", so the next ad avoids them from the start.
+  - Pair it with the Meta ad rules check, and with the skill that reviews a whole batch of finished image ads.
+
+works_best_with:
+  tools:
+    - {name: "Claude", why: "Reads full-size images closely, so it can spell-check the words in the picture and spot the safe zones."}
+    - {name: "Meta Ads Manager", why: "Its ad preview shows the ad in each placement with the app's buttons on top, so you see what gets covered."}
+  inputs:
+    - "The image at full size or the real video file, not a description, so the words in the picture can be checked"
+    - "A screenshot of your checkout showing today's price, so the offer check uses what buyers really pay"
+    - "Your mistakes list from earlier ads, so known problems are checked first"
+    - "The ad it was built from, so it can say which version is clearer"
 
 terms:
   - term: 4:5 and 9:16
-    meaning: Image shapes. 4:5 is the tall-ish feed post; 9:16 is the full phone screen used by Reels, Stories and TikTok.
+    meaning: Image shapes. 4:5 is the tall-ish feed post; 9:16 is the full phone screen used by Reels and Stories.
+  - term: Safe zone
+    meaning: The part of a tall video the app doesn't cover with its name, buttons and caption.
+  - term: Stop-ship
+    meaning: A mistake that should be fixed before the ad goes live, such as a wrong price or a false claim.
   - term: Main text
     meaning: The words above the image in a Facebook or Instagram ad.

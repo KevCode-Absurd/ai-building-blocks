@@ -176,6 +176,16 @@ improve:
   - Write your font names and on-screen text rules into step 3, so text is never left to the image tool.
   - Pair it with a skill that writes ad copy from one true product fact for the narration, one that turns the board into clips, and one that adds captions in your brand font.
 
+works_best_with:
+  tools:
+    - {name: "Nano Banana Pro", why: "Takes up to 5 character references, so frames drawn from the storyboard keep the same face."}
+    - {name: "Kling 4.0", why: "Takes up to 10 images of the same person to keep them steady across scenes, and makes multi-shot clips."}
+    - {name: "Veo 3.1", why: "Can start from a chosen frame and set the last frame, which helps cuts between shots match."}
+  inputs:
+    - "A voice recording of the script at real speed, so each shot's timing matches the read"
+    - "A photo or sketch of the set from above, so the room layout and light direction hold between shots"
+    - "Photos of each prop in each state (sealed, torn, empty), so the continuity note matches real objects"
+
 terms:
   - term: Storyboard
     meaning: A shot-by-shot plan of an ad, drawn or described before anything is filmed or generated.

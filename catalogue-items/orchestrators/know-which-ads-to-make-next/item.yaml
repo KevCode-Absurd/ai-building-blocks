@@ -1,6 +1,6 @@
 slug: know-which-ads-to-make-next
 name: Know which ads to make next
-summary: "What to keep, cut and make next from your results, with a brief and graded opening lines."
+summary: "What to keep, cut and make next from your results, with a brief for three ideas and scored opening lines."
 category: orchestrator
 boards: [ecommerce]
 type: workflow
@@ -14,9 +14,9 @@ outputs:
   - {type: hooks}
 uses: [turn-your-ad-numbers-into-three-next-steps, get-five-ad-ideas-you-havent-tried-yet, get-three-ad-ideas-and-nine-versions, stop-the-right-people-scrolling]
 steps:
-  - {uses: turn-your-ad-numbers-into-three-next-steps, note: "Work out the numbers from your results export and decide what to keep, cut and test."}
-  - {uses: get-five-ad-ideas-you-havent-tried-yet, note: "List the buying reasons, buyers and formats your ads haven't covered yet."}
-  - {uses: get-three-ad-ideas-and-nine-versions, note: "Brief three new ideas for the gaps, each with three genuinely different versions."}
-  - {uses: stop-the-right-people-scrolling, note: "Write the opening lines for the new ads and grade each one."}
+  - {uses: turn-your-ad-numbers-into-three-next-steps, note: "Work out every figure from the export's totals: return on spend, cost per sale and click rate, per ad and for the account. For any group of ads, show the row sums it rests on (spend and sales added up) before the result. Then write what changed, one open worry and three ranked actions, each with how to check it."}
+  - {uses: get-five-ad-ideas-you-havent-tried-yet, note: "Use the report from step 1 and the brand file. Grade the evidence, place every past ad by moment, value, buyer knowledge, opening and format, rank the five biggest gaps, and write one idea per gap."}
+  - {uses: get-three-ad-ideas-and-nine-versions, note: "Use the report and the gap map. Grade what the results prove, pick the plan (explore, extend or refresh), and brief three ideas aimed at three different buyer doubts. Fill each thinking block, then write three versions per idea, each with its own first frame."}
+  - {uses: stop-the-right-people-scrolling, note: "Write opening lines for the ideas in the step 3 brief, then score each on flags, gain, new and clear plus the honesty gate, with a fix for any under 3. Then close the run with a HAND-BACK SUMMARY: each step's file, any step not run and why, and every MISSING: line from all steps in one list."}
 origin: own
-version: 1.0.0
+version: 1.1.0

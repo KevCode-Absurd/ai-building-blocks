@@ -1,11 +1,11 @@
 # Motion graphics video shots: for online stores
 
-## Also give it
-A cutout photo of the pack front, a photo of the product out of its pack, a "made of" list, figures you can back (weights, sizes, counts, with the source of any rating), and how it's used.
+## Give it as well
+A cutout of the pack front with the background removed, a cutout of the product out of its pack if a shot shows it, your font files, and the live offer with its full terms.
 
-## What changes
-- One icon per ingredient or material the brand lists, or per use step, in a row of three or four.
-- Spec comparison: two bars on one baseline only if both figures are supplied (yours, and a stated category or old-way figure with a source).
-- Example diagram for a layered product: a backpack in section, three bands (shell, foam, lining) drawing in one after another, an accent band widening where the stated benefit happens.
-- Don't animate the pack opening unless the brand's use steps show how.
-- Price, discount and guarantee text: set in editing on the last shot, from your current offer.
+## Store rules
+- Build the pack as the supplied cutout in every shot. A video model never draws it.
+- A spec comparison is two bars on one zero line, only when both figures are on the fact sheet with sources (yours, and a stated figure for the old way or the product type).
+- Ingredient or material lines use the label's own words, one line joining per shot.
+- Don't animate the pack opening unless the brand's use steps say how it opens.
+- Price, discount and guarantee lines are typed text layers on the closing shots, with the renewal price in the same shot as the first-order price.

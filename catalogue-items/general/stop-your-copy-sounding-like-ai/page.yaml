@@ -152,6 +152,14 @@ improve:
   - Save your most common hits to your brand file as things every writing request should avoid.
   - Pair it with "Edit a draft so it reads clean and sells" for a full editor's read, and "Make sure every ad sounds like your brand" if the rewrite lost your tone.
 
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Any current chat AI can scan for the 16 signs. Ask it to quote each hit exactly as written."}
+  inputs:
+    - "The prompt or brief that made the draft, so the fixes go back into it and the next draft starts cleaner"
+    - "A second draft for the same job, so the hits per 100 words can be compared"
+    - "Your list of words the brand never uses, so those are flagged too"
+
 terms:
   - term: Sign
     meaning: A recognisable habit of machine writing, such as "No X. No Y. Just Z.", that makes copy read as AI-made.

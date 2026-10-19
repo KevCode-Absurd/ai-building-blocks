@@ -1,183 +1,165 @@
 new_slug: get-a-second-look-with-a-test-result-photo
-name: "A test-result photo that makes people look twice"
-summary: "Give it your ad and the test it mentions. You get a prompt for a photo of the result, circled in red."
+name: "A photo of the chart your buyer already checks"
+summary: "Give it your story ad and your claims. You get a phone photo of a real reading with one mark."
 job: make-image-ads
 
-headline: "A test-result photo that makes people look twice"
-subhead: Give it your story ad and what your brand can support about the test it names. It briefs a phone photo of the readout (a chart, a strip, a lab table), adds one rough red mark, keeps every name and number unreadable, and flags it for review.
+headline: "A photo of the chart your buyer already checks"
+subhead: Give it your story ad and the claims you can back. It checks the reading is one your buyer takes at home, briefs a phone photo of it with one rough mark on the part that tells the story, and keeps every readable number true.
 
 explain: |
-  A result with a red circle on it is a question people won't scroll past: what does that line say, and should I check mine? People photograph results like this to send to family. This picture type copies that, for problems and products that come with a test or readout.
+  People who track something stare at the same screens: a sleep chart, a habit calendar, a test strip held to its colour card. A photo of that reading, with one rough mark on the part that matters, makes them look twice. They have seen that exact gap or dip on their own phone.
 
-  It takes the test your story opens with and photographs it as a person would, tilted, with screen glare or room reflections and the edge of a desk. It marks the one place the eye should land with a rough red circle or arrow. Every name, date, institution and number stays out of focus, so nothing can be quoted or mistaken for a real patient's file. It only works when your brand's facts support what the test shows, and it always flags the picture for a person to check before it runs.
+  This skill starts with a gate. The reading must be one the buyer takes themselves, the brand must be able to back what the story says about it, and it must look ordinary, with no condition named and no clinic paperwork. Then it picks the one part that tells the story, marks it once in the colour least present in the photo, and keeps every readable number to the ones in your story. It never shows scans or doctors' files, because those invite a diagnosis the brand can't make.
 
 when:
-  - Your story opens with a test, readout or report the buyer looked at.
-  - Your brand has facts on file that support what that test shows.
-  - You want a picture that makes people ask "should I check mine?"
+  - Your story mentions something the buyer measures or counts, like sleep, a streak or a test strip.
+  - You have claims with sources that cover what the story says about that reading.
+  - You want a picture that sorts trackers from everyone else at a glance.
 
 you_give:
-  - Your approved story ad and the test its opening names
-  - What your brand can support about the test, with its source
-  - What the buyer was told, in their words (optional)
+  - Your approved story ad and the reading it mentions
+  - The claims you can back about that reading, with sources
+  - Any real numbers the story states (optional)
 you_get:
-  - The readout, the surface it's on and where the one mark goes
-  - A flag for a person to check the claims behind it
-  - The headline to run under the image
-  - A 60 to 120 word image prompt, ready to paste
+  - The gate's three answers, so you can see why it passed
+  - The reading, the one part that tells the story, and the mark
+  - Each readable number and where it came from
+  - A 60 to 120 word photo prompt, plus how to add the mark by hand
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Paste your story ad underneath.
-  - Paste the fact your brand can support about the test, with where it comes from.
-  - Paste the image prompt into your image tool. If any number or name is readable, make it again.
-  - Have a person check the claims behind it before it runs. The flag is there every time.
+  - Paste your story ad and your claims list. Without sources, it stops.
+  - If you can, build the real chart yourself from the story's numbers and photograph it on a second phone.
+  - Otherwise make the photo from the prompt, then draw the mark in your phone's photo editor.
+  - Have a person check the claims behind the reading before the ad runs.
 
 how_it_works:
-  - title: Sets the ground rules
-    text: Square, looks taken on a phone, no logo, price, button, brand colour or product, and no person beyond a hand.
-  - title: Names the readout
-    text: Takes the test from your story's opening, like a sleep-tracker chart, a water-test strip or a lab results table.
-  - title: Picks where the eye lands
-    text: One rough red circle or short arrow, as if drawn with a marker or a finger.
-  - title: Photographs it like a person
-    text: A tilted capture of a screen or sheet, with glare or reflections, showing an ordinary finding, not a dramatic one.
-  - title: Hides the details
-    text: Every name, date, institution and number stays unreadable.
-  - title: Flags it for review
-    text: Always marks it for a person to check the claims it rests on.
+  - title: Sets the house rules
+    text: Square, looks taken on a phone, no logo, price, button or brand colour, no face, no product unless asked.
+  - title: Runs the gate
+    text: The buyer takes this reading at home, the brand can back what the story says about it, and it can stay ordinary.
+  - title: Picks one part
+    text: The empty week, the dip at 3am, the square that changed colour. One part only.
+  - title: Marks it once
+    text: A rough circle or a short arrow, in the colour least present in the photo, best drawn by hand afterwards.
+  - title: Keeps numbers true
+    text: Every readable number comes from your story. The rest is blurred or cut off, so nothing invented can be quoted.
 
 output_shape: |
-  SCENE
-  <one sentence: what someone scrolling would say they saw>
-
-  WHERE AND WHEN
-  <place, time of day, what is within reach>
-
-  THE READOUT
-  <what it is, on what surface, all print unreadable>
-
-  THE MARK
-  <one rough red circle or arrow, and where>
-
-  WORDS ON THE IMAGE
-  None. Every number, name and date stays unreadable.
-  HEADLINE UNDER THE IMAGE
-  <"What I wish I'd checked before..." or "Stop blaming ... Look at ...">
-
-  FLAGS
-  Medical-look image: a person must check the claims basis before
-  it runs.
-  Claims basis: <the fact and its source>
-  <MISSING lines, and anything that doesn't add up>
-
-  IMAGE PROMPT
-  <60 to 120 words, ready to paste>
+  GATE              <three answers, one line each>
+  SCENE             <what someone scrolling would say they saw>
+  WHERE AND WHEN    <place, time, what's around it, camera spot>
+  THE READING       <what, on what, the one part that tells the story>
+  THE MARK          <circle | arrow>, <colour and why>, <where>
+  NUMBERS IN VIEW   <each readable number and its source, or none>
+  LINE UNDER IMAGE  <words> (<which line>, <characters>)
+  FLAGS             <claims behind the reading, with sources>
+  IMAGE PROMPT      <60 to 120 words, the photo alone>
+  MARK STEP         <by hand, or one fallback prompt line>
 
 example:
   business: sprout
   input: |
     [the skill]
 
-    Story ad (approved, built on the product page):
-    I'm the one who reads labels. My last greens powder, I never
-    checked how it was tested.
-    This time I went looking first. Sprout's testing section says
-    third-party tested for 70 pesticides, 4 heavy metals, 16
-    contaminants and 9 microbial contaminants, by an outside lab, in
-    September 2026.
-    Then I bought one pouch. Each daily pack: 60+ ingredients, 21
-    vitamins and minerals, 6 g prebiotic fiber.
+    Story ad (approved; narrator: a customer who agreed, example only):
+    My habit app has a row called "vitamins". In March it had 4
+    ticks out of 31.
+    I've tried a few green powders over the years. The issue was
+    never what was in them. It was sticking with it.
+    Sprout is one daily pack you tear open and eat: a small handful
+    of gummies, 21 vitamins and minerals, 6 g prebiotic fiber.
 
-    What we can support (product page): "Third-party tested for 70
-    pesticides, 4 heavy metals, 16 contaminants, 9 microbial
-    contaminants." The same page says: "Tested by [an outside lab]
-    in SEP 2026. 35 substances tested for quality."
+    Claims list: 21 vitamins and minerals, 6 g prebiotic fiber
+    (label). "95% of users take Sprout at least 4-6x per week"
+    (brand survey of 3,000+ customers, always "of surveyed users").
   output: |
-    SCENE
-    A laptop screen showing a plain table of test results,
-    photographed on a phone, with one row circled in red.
-
-    WHERE AND WHEN
-    A kitchen table in the evening, overhead light reflecting on the
-    screen. Within reach: the laptop edge, a mug, reading glasses.
-
-    THE READOUT
-    A plain results table on a laptop: four rows, a few columns,
-    every number and word too small and blurred to read. A generic
-    page with no company name, logo or brand colour.
-
-    THE MARK
-    One rough red circle, as if drawn with a finger on the photo,
-    around a single row.
-
-    WORDS ON THE IMAGE
-    None. Every number, name and date on the screen stays
-    unreadable.
-
-    HEADLINE UNDER THE IMAGE
-    What I wish I'd checked before buying my last greens powder.
-
-    FLAGS
-    Medical-look image: a person must check the claims basis before
-    it runs.
-    Claims basis: "Third-party tested for 70 pesticides, 4 heavy
-    metals, 16 contaminants, 9 microbial contaminants" (product
-    page).
-    The numbers don't agree. 70 + 4 + 16 + 9 is 99, but the same
-    page says "35 substances tested for quality". Settle which is
-    right before this runs.
-    MISSING: a real lab report to copy the layout from. The files
-    hold the claim, not the report, so the table must not invent
-    numbers someone could quote.
-    The circle marks a row, not a verdict. Don't add "passed" or
-    "clean".
-
-    IMAGE PROMPT
-    Square 1:1 phone photo of a laptop screen on a kitchen table in
-    the evening, taken at a slight tilt, with overhead light
-    reflecting on the screen and faint moire lines. The screen shows
-    a plain, generic results table with four rows and a few columns,
-    every number and word too small and blurred to read, no company
-    name, logo or brand colour. One rough red circle, as if drawn
-    with a finger, surrounds a single row. The laptop edge, a mug and
-    a pair of reading glasses sit at the edges of the frame.
-    Ordinary, unstyled, a little grain. No readable text or numbers,
-    no person, no product, no pouch, no children, no white coat.
+    GATE              Takes it herself: yes, a habit app on her phone.
+                      Brand can back it: the story only counts her own
+                      missed days, and claims nothing about the app.
+                      Ordinary: yes, a calendar with ticks, no
+                      condition named.
+    SCENE             A phone showing a month of a habit calendar with
+                      only four ticks, the empty weeks circled.
+    WHERE AND WHEN    Kitchen counter, evening, overhead light. The
+                      phone is held over the counter by a second phone.
+                      A mug and a set of keys at the edge.
+    THE READING       A generic habit app, month view, one row labelled
+                      "vitamins". Ticks on 4 days; the other 27 empty.
+                      The part that tells the story: the long empty
+                      stretch from the 9th to the 31st.
+    THE MARK          One rough red circle round the empty stretch.
+                      Red, because the app is grey and white and the
+                      counter is pale wood.
+    NUMBERS IN VIEW   The dates 1 to 31 (a calendar), "March" and
+                      "vitamins" (both from the story). No other text.
+    LINE UNDER IMAGE  4 ticks in March. (plain caption, 17)
+    FLAGS             A reading in the picture: a person checks the
+                      claims behind it. The picture claims nothing.
+                      If the copy adds the survey line, it must say
+                      "95% of surveyed users" and name the survey.
+                      Keep the app generic: no real app's icon,
+                      colours or layout.
+    IMAGE PROMPT      Square 1:1 phone photo of a second phone held
+                      over a pale wood kitchen counter in the evening,
+                      overhead light, a little glare on the screen.
+                      The screen shows a plain generic habit app in
+                      grey and white, month view for March, one row
+                      labelled "vitamins". Small grey ticks on four
+                      days only, the 2nd, 3rd, 5th and 8th; every
+                      other day is empty. A mug and keys at the frame
+                      edge, a thumb at the bottom of the phone.
+                      Slight tilt, unretouched. No logo, no app name,
+                      no other text, no product, no face, no marks.
+    MARK STEP         In your phone's editor, pick red and draw one
+                      quick, slightly open circle round the 9th to the
+                      31st. Fallback line: "One rough, uneven red
+                      circle round the empty days from the 9th to the
+                      31st."
 
 tweaks:
-  - what: Screen or paper
-    how: Ask for "a printed sheet on the table" instead of a screen. Paper feels more private; a screen feels more like something the reader could look up today.
-  - what: Where the circle goes
-    how: Point it at the one line your story talks about. One mark only, since two make it a diagram.
-  - what: How ordinary the finding is
-    how: Ask for "an ordinary result, nothing dramatic". A dramatic reading suggests a diagnosis and breaks the rules.
-  - what: A hand
-    how: Add "a hand at the edge holding the phone up to the screen" if you want it to feel more like someone checking their own result.
+  - what: Build the real chart
+    how: Make the calendar or chart yourself in a habit app or a spreadsheet using the story's numbers, then photograph it on another phone. Every number in it is then true.
+  - what: Circle or arrow
+    how: A circle suits an area, like an empty week. An arrow suits a line on a chart, like a dip at 3am. Ask for the one that fits, never both.
+  - what: Paper or screen
+    how: Ask for a log on paper (a fridge chart, a notebook) if your buyers track by hand. It looks even less like an ad.
+  - what: How much shows
+    how: Ask for a tighter crop if the reading has lots of small text. Less to read means less that can be wrong.
 
 judge:
-  - It shows a kind of result, not a real person's file. No readable name, date of birth, institution or doctor.
-  - No number in the picture can be read or quoted.
-  - There's exactly one mark.
-  - Nothing suggests the reader has a condition, or that the product treats, cures or reverses one.
-  - There's no before-and-after, no white coat, no hand holding a product, and the review flag is there.
+  - The reading is one your buyer takes themselves, not a clinic scan or a doctor's file.
+  - There's exactly one mark, on the part your story's first line explains.
+  - Every number you can read comes from your story or research.
+  - It names no condition and shows no name, date of birth or clinic.
+  - The app or sheet looks generic, with no real app's icon or colours.
 
 test:
-  - Give it a test claim with no source. It should stop, not plan the picture.
-  - Give it two claims that disagree, as the example's 99 and 35 do. It should flag the mismatch instead of picking one.
-  - Zoom into the finished picture on your phone. If any number or word can be read, make it again.
-  - Show it to the person who signs off your claims, with the claim beside it, before it runs.
+  - Give it a story about an X-ray or a lab report. It should stop and send you to a safer picture.
+  - Give it a reading with no claim behind it on your list. It should write MISSING and stop.
+  - Zoom into the finished picture. If any number you didn't give is readable, ask for it blurred.
+  - Run the marked photo against the same photo with no mark. Keep whichever brings more readers to the offer.
 
 improve:
-  - Add your test claims with their sources and dates to "What you need", so the claims basis is filled in every time.
-  - Keep a real copy of your lab or lot report in your brand file. Then the layout can follow it without inventing numbers.
-  - Add the words your brand may never put near a result ("passed", "clean", "safe") to the check list in the skill file.
-  - If your problem has no test, or your facts don't support what it shows, use the empty-room skill instead.
+  - Add the readings your buyers mention in reviews (the app, the strip, the log) to your brand file. Their real readings make the strongest pictures.
+  - Keep a source next to every claim in your claims list. This skill can't run without them.
+  - Add your never-shown list to the house rules, so the photo leaves those things out.
+  - Pair it with a story ad skill, so the story's first line says what the marked part means.
+
+works_best_with:
+  tools:
+    - {name: "Google Sheets", why: "Builds the real chart from your story's numbers, so every figure in the photo is true."}
+    - {name: "Nano Banana Pro", why: "Google's image model, which Google recommends for accurate text, so dates and labels come out right."}
+    - {name: "Your phone's photo editor", why: "Drawing the mark yourself looks rough and human, which image tools rarely manage."}
+  inputs:
+    - "A screenshot of the real reading your buyers mention, with personal details removed, so the layout looks right"
+    - "The exact numbers from the story or a customer, so nothing on the screen is made up"
+    - "Your claims list with a source and a date for each line, so the gate can pass"
 
 terms:
-  - term: Readout
-    meaning: Any test result you can look at, such as a chart, a strip, a printed log or a lab table.
-  - term: Claims basis
-    meaning: The facts and sources that back what your ad says or shows.
-  - term: Story ad
-    meaning: An ad whose main text tells one person's story in their own words, like a post from a friend.
+  - term: Reading
+    meaning: A chart, count or result the buyer checks for themselves, like a sleep chart or a test strip.
+  - term: Gate
+    meaning: Three questions the idea must pass before the picture is briefed.
+  - term: Line under the image
+    meaning: The bold headline under the picture in a Facebook or Instagram ad.

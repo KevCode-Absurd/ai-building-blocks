@@ -4,12 +4,12 @@ summary: "Give it your ad results and brand details. You get what to keep and cu
 job: read-ad-results
 
 headline: "Know which ads to keep, cut and make next"
-subhead: Give it your ad results export and your brand file. It works out the numbers per ad, decides what to keep, cut and check, lists the buyers and ideas your ads haven't tried, then briefs three new ideas and writes graded opening lines for them.
+subhead: Give it your ad results export and your brand file. It works out every number from the totals, writes three ranked actions, maps what your ads haven't tried, briefs three new ideas aimed at different buyer doubts, and scores opening lines for them.
 
 explain: |
   An ad results export is a wall of numbers, and it doesn't say what to make next. Teams often react to one number, or make more of whatever they made last month, and miss the buyers and reasons they've never tried.
 
-  This workflow reads the export first and works every figure out from the totals: return on ad spend, cost per sale, click rate. It writes a short decision report with three actions and the one concern it can't resolve. Then it maps what your ads have and haven't covered (reasons to buy, kinds of opening, buyers, formats) and briefs three new ideas aimed at the biggest gaps, each with three versions that differ in more than wording. Last, it writes opening lines for the new ads and grades each one. Nothing is called a winner unless your numbers show it.
+  This workflow reads the export first and works every figure out from the totals: return on ad spend, cost per sale, click rate. Any group figure shows the rows it adds up. It writes a short report with three ranked actions and the one worry it can't resolve. Then it maps your past ads by the buying moment, the value they lead with, how much the buyer knows, how they open and their format, and ranks the five biggest gaps. Next it briefs three ideas, each aimed at a different doubt, with three versions that each open on a different first frame. Last, it writes opening lines and scores each one. Nothing is called a winner unless your numbers show it.
 
 when:
   - A month or a campaign has ended and you need to decide what to make next.
@@ -20,47 +20,50 @@ you_give:
   - Your ad results export, one row per ad with spend, clicks, sales and revenue
   - Your brand file, with your buyers, offers and the claims you can make
 you_get:
-  - A short report with the numbers per ad, three next actions and one open concern
-  - A map of what your ads haven't covered yet, ranked
+  - A short report with the numbers per ad, three ranked actions and one open worry
+  - A map of what your ads haven't tried yet, with the five biggest gaps ranked
   - A brief for three new ideas with three different versions each
-  - Opening lines for the new ads, each graded with a fix if it's weak
+  - Opening lines for the new ads, each scored out of 4 with a fix if it's weak
 
 how_to_use:
   - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Have your inputs ready. Export your results with one row per ad (spend, impressions, clicks, purchases, revenue, days live and each ad's opening line), plus your brand file. Add the previous period and your targets if you have them.
-  - It works step by step and saves each result. Read the report's three actions first, then check the gap map before it writes the brief.
-  - Give the brief and the graded opening lines to whoever makes your ads.
+  - It works step by step and saves each result. Read the report's three actions first, then check the gap map before you use the brief.
+  - Give the brief and the scored opening lines to whoever makes your ads.
 
 how_it_works:
   - title: Works out the numbers
-    text: Uses the ad report skill to calculate each figure from the totals, then write what changed, three actions and the one concern it can't resolve.
+    text: Uses the ad report skill to work out each figure from the totals, then write what changed, one open worry and three ranked actions.
   - title: Finds what you haven't tried
-    text: Uses the gap audit skill to compare what your ads have covered with what they haven't, from reasons to buy to buyers and formats.
+    text: Uses the ad gap map skill to place every past ad by moment, value, buyer knowledge, opening and format, and rank the five biggest gaps.
   - title: Briefs three new ideas
-    text: Uses the three-ideas brief skill to aim each idea at one gap, name the belief it must change, and spec three genuinely different versions.
+    text: Uses the three-ideas brief skill to grade what your results prove, pick a plan, and aim each idea at a different buyer doubt with three versions.
   - title: Writes the opening lines
-    text: Uses the hook skill to write opening lines for the new ideas and grade each one on a short, ordered test.
+    text: Uses the opening lines skill to write openings for the new ideas and score each on four checks plus an honesty gate.
 
 output_shape: |
   REPORT: <dates>, <currency>, <attribution window>
   | Ad | Spend | Sales | Cost per sale | Return on spend | Click rate |
   ...
   What changed: <2 to 4 lines>
-  Open concern: <one>
+  Open worry: <one>
   Next actions: 1 <action, how to check it> 2 <...> 3 <...>
 
-  GAPS NOT YET TRIED
-  1 <gap> (<buyers it reaches>) ...
+  GAPS
+  1 <gap> (<lens>, known from <results / what's running>) ...
 
-  BRIEF (rests on: <measured / reported / not measured>)
-  Idea <A>: <name> | Buyer: <who> | Belief in the way: "<their words>"
-    Belief to install: <belief> because <fact>
-    Versions: <A1>, <A2>, <A3> (each differs on <two of: person, feeling, stage, opening>)
-  ...
+  BRIEF
+  Evidence: <tested / measured / reported / observed / inferred> | Plan: <explore / extend / refresh>, because <why>
+  Idea <n>: <name> | Stage: <waking / comparing / closing>
+    Doubt: "<their words>" (<one of the five>) | Answer: <belief> because <fact>
+    Moment: <a scene> | Versions: <A>, <B>, <C>, each with its own first frame
 
   OPENING LINES
-  | Line | Idea | Grade 1 to 5 | Fix |
+  | Line | Flags | Gain | New | Clear | Score out of 4 | Fix |
+
+  HAND-BACK SUMMARY
+  Files: <each step's file> | MISSING: <every line, in one list>
 
 example:
   business: sprout
@@ -88,10 +91,11 @@ example:
     What changed:
     - P1's second 21 days against its first: click rate 1.50% to 0.92%,
       cost per sale $26.79 to $76.92.
-    - P2 gets the most clicks per view (2.45%), but only 0.90% of clicks buy.
-    - Offer ads bring smaller orders: $31.10 to $34.21 per sale (P1, P2, S1)
-      against $40.00 to $48.60 for the others.
-    Open concern: no store revenue and no targets, so nothing here says
+    - P2 gets the most clicks per view (2.45%), but only 0.90% of clicks
+      buy (50 / 5,569).
+    - Offer ads bring smaller orders: $31.10 to $34.21 per sale (P1, P2,
+      S1) against $40.00 to $48.60 for the others.
+    Open worry: no store revenue and no targets, so nothing here says
     whether the account as a whole makes money. MISSING: both.
     Next actions (owner: MISSING):
     1 Rewrite T1 without "Fix" before it gets more budget. "Fix" is on
@@ -99,65 +103,77 @@ example:
     2 Find out why P2's clicks don't buy. The ad says 61% off and the
       page says 52% or 55% (a likely cause, not proven). Check: the page
       shows the ad's offer, then compare how many clicks buy.
-    3 Pause R1 ($100 a sale) and W1 (a weight-loss claim with no
-      evidence on file). Check: their budget went to another ad.
+    3 Pause R1 and W1: together $1,900 for 33 sales ($1,000 + $900;
+      10 + 23), so $57.58 a sale, and W1 makes a weight-loss claim with
+      no evidence on file. Check: their budget went to another ad.
 
-    GAPS NOT YET TRIED (top 3 of 10)
-    1 The "I quit powders" story: no ad, and the strongest review theme.
-    2 The "I finally stuck with it" story: only H1, 16 days, measured.
-    3 The parent buying for herself and the kids in one order: no ad.
+    GAPS (top 3 of 5)
+    1 Moment: the "I quit powders" story. No ad, and the strongest
+      review theme (reviews 1 to 6). Known from what's running.
+    2 Opening: proof first. No ad opens on the study or the survey.
+    3 Buyer knowledge: doesn't see the problem yet. Only H1 speaks there,
+      16 days, measured.
 
-    BRIEF (rests on: measured, practice numbers. Mode: build on what
-    works, assumed because no target was given.)
-    Idea A, "The one I kept" (H1 taken further) | Stage: hasn't looked yet
-      Belief in the way: "It's always been an issue of consistency" (review 1)
-      Belief to install: you keep taking the one you want to eat, because
+    BRIEF
+    Evidence: measured, practice numbers. Plan: extend, because T1 is
+    the best measured ad ($21.21 a sale over 30 days, one window, so no
+    sign of wear yet). One new opening for T1's idea, two new ideas.
+    Idea 1, "Easy on the gut" (T1's idea, new opening) | Stage: comparing
+      Doubt: "Will this upset my stomach more?" (brand file; will it
+      work for me?) | Answer: Sprout supports digestion with 6g prebiotic
+      fiber, and gut-sensitive buyers can start with Low Sugar
+      Moment: after lunch at a desk, a fiber powder untouched (inferred)
+    Idea 2, "The one I kept" | Stage: waking
+      Doubt: "It's always been an issue of consistency" (review 1; why
+      switch?) | Answer: you keep taking the one you want to eat, because
       80% of surveyed users take it daily (brand survey, 3,000+)
-      A1 office worker, relief, opens on vitamin bottles by the kettle
-      A2 parent, pride, opens on a pack torn open in the car
-      A3 powder quitter, curiosity, opens on a shaker left in the sink
-    Idea B, "Easy on the gut" (T1's buyer, new opening) | Stage: knows the problem
-      Belief in the way: "Will this upset my stomach more?" (brand file)
-      Belief to install: Sprout supports digestion with 6g prebiotic
-      fiber, and gut-sensitive buyers can start with Low Sugar (Sugar-Free
-      uses sugar alcohols)
-    Idea C, "Enough in a gummy?" (new buyer) | Stage: comparing fixes
-      Belief in the way: "A gummy can't hold enough to replace my powder."
-      Belief to install: one pack holds 60+ ingredients, 21 vitamins and
-      minerals and 6g fiber, and was tested for absorption
-    (cut for length: the full run also had versions for B and C, the
-    moments and the footer questions)
+      Moment: 7:40 am, yesterday's shaker still in the sink (inferred)
+      A: the shaker in the sink. B: a pack torn open in the car. C: a
+      row of half-full bottles by the kettle.
+    Idea 3, "Enough in a gummy?" | Stage: comparing
+      Doubt: "A gummy can't hold enough to replace my powder." (brand
+      file; will it work?) | Answer: one pack holds 60+ ingredients, 21
+      vitamins and minerals and 6g fiber, tested for absorption
+    (cut for length: the full run also had the thinking blocks, versions
+    for ideas 1 and 3, and the footer questions)
 
-    OPENING LINES, IDEA A (line 2: "Most people quit because taking it
+    OPENING LINES, IDEA 2 (next line: "Most people quit because taking it
     feels like a chore.")
-    | Line | Grade | Fix |
-    | The vitamins by the kettle are all still half full. | 4 | none |
-    | Why your greens powder is still in the cupboard. | 4 | none |
-    | 80% of surveyed users take it daily. Here's why. | 3 | Proof first to a cold buyer. Open on the moment, move the 80% to line 3 |
-    | Supplements are hard. We made one easy. | 2 | Could open any ad in the category. Name a moment instead |
+    | Line | Flags | Gain | New | Clear | Score | Fix |
+    | The greens you'll still be taking next month. | 1 | 1 | 1 | 1 | 4 | none |
+    | Yesterday's shaker is still in the sink. | 1 | 0 | 1 | 1 | 3 | none |
+    | 80% of surveyed users take it daily. | 0 | 1 | 1 | 1 | 3 | Proof first to a cold buyer. Open on the moment, move the 80% to line 2 |
+    | Supplements are hard. We made one easy. | 0 | 1 | 0 | 1 | 2 | Could open any ad in the category. Name a moment instead |
+    Honesty gate: all pass.
+
+    HAND-BACK SUMMARY
+    Files: outputs/step-01 to step-04.
+    MISSING: store revenue; targets; who owns each action; quotes for
+    the moments marked inferred; consent before any review is quoted in
+    a paid ad.
 
 tweaks:
   - what: The previous period
     how: Add last period's export and the report shows what changed. Without it, the report shows this period only and says so.
   - what: Targets
     how: Give a target cost per sale or return on ad spend. With targets it can say what's on or off track; without them it reports numbers without judging them.
-  - what: The mode
-    how: Ask for "promote our offer" if you need offer ads. Otherwise it picks from the numbers whether to try new ideas, push the best ad further or make more of what works.
+  - what: The plan
+    how: Ask for "build this round around the offer" if you need offer ads. Otherwise it picks from your numbers whether to try new ideas, extend your best ad or refresh one that's wearing out.
   - what: Formats you can make
     how: Say "image ads only" or "no people on camera". The gap map and brief stay inside what you can actually produce.
 
 judge:
-  - Every figure in the report can be worked out from your export. Check one cost per sale with a calculator.
+  - Every figure in the report can be worked out from your export, and every group figure shows the rows it adds up. Check one cost per sale with a calculator.
   - No ad is called a winner without numbers, and running a long time isn't treated as winning.
-  - Each of the three ideas targets a different gap and a different buyer belief.
-  - The three versions of each idea differ in more than wording (a different person, feeling or opening).
-  - The opening lines contain no fact that isn't in your brand file.
+  - Each of the three ideas answers a different buyer doubt, and each fills a gap from the map.
+  - The three versions of each idea open on different first frames, not just new words.
+  - The opening lines contain no fact that isn't in your brand file, and the run ends with a summary of every file and every MISSING line.
 
 test:
   - Check one cost per sale from step 1 with a calculator, using the same rows of your export.
   - Check the ads it says to cut against what you know. If it cuts an ad you know is selling, check the date range and the sales column in your export.
   - Read the gap list from step 2. Each gap should be something your ads haven't tried yet. If you tried it before this export, add that period.
-  - Run step 3 twice. The three ideas should aim at the same gaps both times.
+  - Run step 3 twice. The three ideas should aim at the same doubts both times.
 
 improve:
   - In the builder, add a step at the end that turns the strongest idea into image ads or a video script, so the brief becomes ads in one run.
@@ -165,6 +181,17 @@ improve:
   - "Tune step 1's skill: write your target cost per sale or return on ad spend into its file, so every run judges against the same line."
   - Add your formats and limits to step 3's skill ("image ads only", "no people on camera"), so the brief stays inside what you can make.
   - Run it at the same point every month, so the brief never repeats an idea you already tested.
+
+works_best_with:
+  tools:
+    - {name: "Meta Ads Manager", why: "Exports spend, impressions, clicks, purchases and revenue per ad for the dates you pick."}
+    - {name: "Google Sheets", why: "Recomputes cost per sale and return on spend from the export, so you can check every number."}
+    - {name: "Claude", why: "Holds the export, the brand file and four steps of work in one run without dropping rows."}
+  inputs:
+    - "The same export for the period before, so the report can say what changed"
+    - "Your store's own revenue for the period, so overall return isn't the ad platform's guess"
+    - "Your target cost per sale or return on ad spend, so actions are judged against your line"
+    - "A screenshot of each ad's first frame, so the gap map reads the opening and not just the name"
 
 terms:
   - term: Return on ad spend

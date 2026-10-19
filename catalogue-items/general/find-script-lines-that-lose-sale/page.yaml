@@ -171,6 +171,14 @@ improve:
   - Save the problems it finds often to your brand file as "lines we keep getting wrong", and check new drafts against them first.
   - Pair it with the skill that writes a video ad script beat by beat, to rewrite once you know what's wrong.
 
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Claude, ChatGPT and Gemini all follow this skill well, so use the one you already have."}
+  inputs:
+    - "The ad's audience retention chart, if it has run, so you can see the line where people left"
+    - "The reviews and research the script was built from, so fixes use buyers' real words"
+    - "Your list of lines you keep getting wrong, so it checks those first"
+
 terms:
   - term: Beat
     meaning: One part of the script with one job, like the problem or the proof.

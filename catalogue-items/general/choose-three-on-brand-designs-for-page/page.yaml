@@ -24,7 +24,7 @@ you_give:
 you_get:
   - One design system with named colours, font roles, a main visual move and layout rules
   - Three design directions, each with its first screen, image job and section order
-  - A section plan with one row per section, for phone and desktop
+  - A section plan with one row per section, for phone and desktop, and a build brief you can paste into a design tool
   - If you sent screenshots, design and technical findings with a fix for each
 
 how_to_use:
@@ -66,6 +66,10 @@ output_shape: |
 
   SECTION PLAN
   # | Section | Buyer question | Phone layout | Desktop layout | Image
+
+  BUILD BRIEF  (chosen direction)
+  Job: <...>  System: <values>  Sections: <in order, phone layout each>
+  Images: <real photos to use>  Always visible: <terms>
 
   REVIEW  (only if you sent screenshots)
   Visual: <section>, <screen size>: <what's wrong> . <fix>
@@ -131,6 +135,13 @@ example:
     6 | Testing       | Can I trust it?           | one dark band   | none
     7 | Questions     | What if...?               | open by default | none
 
+    BUILD BRIEF (direction B)
+    Job: first orders from people who quit powders. Cream page, deep
+    forest headings, one kelly green button, Work Sans, DM Mono tags.
+    Sections 1 to 7 as above, phone first. Images: the counter swap shot
+    and the label close-up (MISSING: both need shooting). Always visible:
+    the four lines below. Add no offer, rating or badge.
+
     KEPT VISIBLE ON PHONES
     "Renews at $49.99 each 4 weeks", "30-day guarantee on your first
     order", the text sign-up condition for $29.99, delivery time.
@@ -168,7 +179,18 @@ improve:
   - Replace the example directions in step 3 with kinds that suit your brand, for example a recipe-card layout for a food brand.
   - Add the terms you must always show to step 6 (renewal price, delivery time), so no direction hides them.
   - Save the direction you choose to the look section of your brand file, so later pages match it.
-  - Pair it with a skill that writes the page copy from your ad first, and one that borrows the layout of a page you admire when you have a reference.
+  - Pair it with "Write a landing page that matches your ad" for the copy first, and "Borrow the layout of a page you admire" when you have a reference page.
+
+works_best_with:
+  tools:
+    - {name: "Claude", why: "Holds a long design system and section plan in one chat, and can turn the chosen direction into a working page to preview."}
+    - {name: "Figma Make", why: "Turns the build brief into an editable design, so you can compare directions before anyone codes."}
+    - {name: "WebAIM Contrast Checker", why: "A free check of each text and background pair in your colours, before and after the page is built."}
+  inputs:
+    - "Your colours as hex codes, each with its job, and your font files or names"
+    - "Product photos listed by view (front, detail, in use, next to something for scale)"
+    - "Two or three pages you like the feel of, with a line on what you like, as mood references only"
+    - "Screenshots of the built page at 390, 768 and 1280 px wide, for the review"
 
 terms:
   - term: Design system

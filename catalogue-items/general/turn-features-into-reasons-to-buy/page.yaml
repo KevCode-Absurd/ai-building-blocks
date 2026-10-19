@@ -1,59 +1,64 @@
 new_slug: turn-features-into-reasons-to-buy
 name: "Turn features into reasons to buy"
-summary: "Paste your feature list and a note on your buyer. You get short selling points, each a benefit with proof."
+summary: "Paste your feature list and a note on your buyer. You get short selling points, each answering a real buyer question."
 job: write-ad-copy
 
 headline: "Turn features into reasons to buy"
-subhead: Paste your feature and fact list, a note on your buyer, and where the points will go. It turns each feature into what the buyer gets, aims each point at a different want or doubt, and lists which claims still need evidence.
+subhead: Paste your feature and fact list, a note on your buyer, and where the points will go. It climbs each feature only as far as your facts support, answers the questions your buyer asks before buying, and lists which claims still need evidence.
 
 explain: |
-  Most feature lists read like a spec sheet. "21 vitamins and minerals. 6 g fiber. Vegan." The buyer has to work out what each one means for them, and most won't. The opposite mistake is worse: turning "contains fiber" into "fixes your digestion" without any proof.
+  Most feature lists read like a spec sheet. "21 vitamins and minerals. 6 g fiber. Vegan." The buyer has to work out what each one means for them, and most won't. The opposite mistake is worse: turning "contains fiber" into "fixes your digestion" with no proof.
 
-  This skill climbs a chain for each feature: what it is, how it works, what the buyer gets. It checks each step on its own, because an ingredient or a certificate proves only itself. If the next step isn't supported, it keeps the checked fact and lists the gap under "Needs evidence" instead of guessing. Then it mixes kinds of point, such as a plain benefit with its number, an exact detail or a real customer line, aims each at a different want or doubt, and puts the strongest first and the proof or guarantee last.
+  This skill climbs three rungs for each feature: the fact, what it does, and what the buyer gets. Each rung needs its own support, because an ingredient or a certificate proves only itself. Where the facts stop, the climb stops, and the gap goes on a "needs evidence" list. Then it sorts the points by the five questions buyers ask before they buy. Will it work? Is it easy? Why this one? Is it worth it? What if it's not for me? It keeps the questions your buyer really asks, puts the first one first and the guarantee last, and checks each point against what rivals already say.
 
 when:
-  - You have a list of features and need the bullet points for a product page, an ad image or a long ad.
+  - You have a list of features and need the points for a product page, an ad image or a long ad.
   - Your points all sound like a spec sheet, or all make the same argument.
   - You want to know which of your benefit claims you can actually back.
 
 you_give:
   - Your feature and fact list, with where each fact comes from
-  - A note on the buyer, how much they know and their main wants and doubts
+  - A note on the buyer, how aware they are and their doubts in their own words
   - Where the points go (on an image, in a list or in long copy), how many and the length limits
-  - What competitors all claim, so you can avoid it (optional)
+  - What competitors all claim (optional)
 you_get:
-  - A numbered list of points, each tagged with its kind, the want or doubt it targets and the source fact
-  - A "Needs evidence" list of benefit steps your facts don't support yet
+  - A numbered list of points, each tagged with the buyer question it answers, how far it climbs and its source
+  - A "needs evidence" list of claims your facts don't support yet
+  - Any buyer question your facts can't answer yet
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste your facts with their source, such as "label", "lab report" or "product page".
-  - Describe the buyer's main wants and doubts. Two to four-star reviews hold the real doubts.
+  - Describe the buyer's doubts, in their words if you can. Two to four-star reviews hold the real ones.
   - Say where the points go and how many, for example "4 bullets under the price, one sentence each".
-  - Read the "Needs evidence" list. Each item is a claim to drop or to find proof for.
+  - Read the "needs evidence" list. Each item is a claim to drop or to find proof for.
 
 how_it_works:
-  - title: Climbs the chain
-    text: For each feature, works from what it is, to how it works, to what the buyer gets, and checks each step separately.
-  - title: Makes it specific
-    text: Adds the how or why, such as an amount or a moment of use, but only an exact detail your source holds.
-  - title: Mixes the kinds
-    text: Uses different kinds of point, such as a benefit with its number, a fact and what it changes, a real customer line, and proof last.
-  - title: Aims each point
-    text: Points each one at a different want or doubt. Two points making the same argument become one.
+  - title: Climbs three rungs
+    text: The fact, what it does, what the buyer gets. Each rung needs its own support, and the climb stops where the facts stop.
+  - title: Answers buyer questions
+    text: Tags each point with one question. Will it work, is it easy, why this one, is it worth it, what if it's not for me.
+  - title: Keeps the real ones
+    text: Uses the doubts your buyers actually have. A question nobody asks gets no point.
   - title: Orders the list
-    text: Strongest first, proof or guarantee last, and the order shifts with how much the buyer knows.
-  - title: Skims it fast
-    text: Reads each aloud, then skims the list quickly and rewrites or cuts any point the eye slides past.
+    text: The question this buyer asks first goes first. The guarantee or returns go last.
+  - title: Asks "so what?"
+    text: Writes each point as one plain sentence, payoff first, then checks the buyer wouldn't still ask "so what?".
+  - title: Checks rivals and skims
+    text: Cuts or sharpens any point a rival also claims, then skims the list fast and cuts any point the eye slides past.
 
 output_shape: |
   POINTS
   <n>. <the point, one plain sentence>
-     (<kind> | <want or doubt it targets> | <source fact>)
-  (strongest first, proof or guarantee last)
+     (<question it answers> | <rung: fact, effect or payoff> |
+     <source fact>)
+  (first question first, risk last)
 
   NEEDS EVIDENCE
-  MISSING: evidence for <the benefit step your facts don't support>
+  MISSING: evidence for <the rung your facts don't support>
+
+  UNANSWERED
+  <buyer questions your facts can't answer yet>
 
 example:
   business: sprout
@@ -80,67 +85,81 @@ example:
     Competitors all say: "science-first", long ingredient lists
   output: |
     POINTS
-    1. One pack holds 60+ ingredients, 21 vitamins and minerals, and 6 g
-       of prebiotic fiber, in a small handful of gummies.
-       (benefit with its number | "can a gummy hold enough?" | product
-       page)
+    1. One pack gives you 60+ ingredients, 21 vitamins and minerals, and
+       6 g of prebiotic fiber, in a small handful of gummies.
+       (will it work? "can a gummy hold enough?" | fact | product page)
 
-    2. You tear the pack open and eat the gummies, so there's nothing to
-       mix or wash, and 80% of surveyed users take it daily.
-       (the easy way, and what makes it easy | one habit that lasts |
-       product page and survey)
+    2. It's clinically tested for nutrient absorption. In a 12-week
+       study of 120 adults, blood vitamin C went up 40.1% and folate
+       20.5%.
+       (will it work? proof of point 1 | effect | science page)
 
-    3. It's clinically tested for nutrient absorption, and in a 12-week
-       study blood vitamin C went up 40.1% and folate 20.5%.
-       (proof | "does a gummy actually work?" | science page)
+    3. You tear the pack open and eat the gummies, with nothing to mix
+       or wash, and 80% of surveyed users take it daily.
+       (is it easy? and why this one | payoff | product page and
+       survey)
 
     4. Your first order comes with a 30-day money-back guarantee.
-       (guarantee, with its first-order limit | "they are expensive" |
+       (what if it's not for me? | fact, with its first-order limit |
        FAQ)
 
-    Point 2 is the one a "science-first" powder can't say.
+    Point 3 is the one a "science-first" powder can't say.
 
     NEEDS EVIDENCE
     MISSING: evidence for "mental clarity + energy" and "immunity +
     stress relief". The study measured blood vitamin C and folate only,
     so both stay off the list.
     MISSING: evidence that the other vitamins and minerals are absorbed
-    as well. Point 3 names only the two the study measured.
-    MISSING: a price-per-day fact. "They are expensive" is answered only
-    by the guarantee here.
+    as well. Point 2 names only the two the study measured.
+
+    UNANSWERED
+    Is it worth it? "They are expensive" needs a price-per-day fact,
+    which isn't in this list. Add it and it becomes point 4, with the
+    guarantee last.
 
 tweaks:
   - what: Where the points go
-    how: On an image, three points is a full list and each answers one doubt in a short sentence. In a product page list or long copy, points can carry more detail.
-  - what: How much the buyer knows
-    how: A ready buyer gets facts and terms. A buyer comparing products gets the difference. A buyer who only knows the problem gets their struggle recognised, without technical words.
+    how: On an image, three points is a full list, each answering one doubt in a short sentence. A product page list holds four to six. Long copy can carry more detail per point.
+  - what: How aware the buyer is
+    how: A stranger's first question is "will it work?". Someone comparing asks "why this one?". Someone who knows you asks "is it worth it?". The list starts there.
   - what: Competitor claims
-    how: Paste what every rival says. When everyone lists the same benefits, it adds the point that removes the first objection, or says how yours works.
+    how: Paste what every rival says. Any point they also claim gets your exact number or how it works, or is cut.
   - what: Sources
-    how: Tag each fact with where it came from. Points are only as trustworthy as their sources, and the tags show you which ones to double-check.
+    how: Tag each fact with where it came from. Points are only as trustworthy as their sources, and the tags show which to double-check.
 
 judge:
   - Every number and claim traces to a fact you gave it. Check two.
-  - No point is a bare feature. Each says what the buyer gets.
+  - No point is a bare feature. Each says what the buyer gets or what it does.
+  - Each point answers a question your buyers really ask.
   - No two points make the same argument.
-  - Each point is a plain sentence a person would say.
-  - Gaps sit in "Needs evidence", not in the points.
+  - Gaps sit in "needs evidence" or "unanswered", not in the points.
 
 test:
-  - Run it on a product page whose points you know sell. Compare its list with yours. Points it drops or moves to "Needs evidence" are worth a second look.
-  - Run it twice. The same claims should land in "Needs evidence" both times.
+  - Run it on a product page whose points you know sell. Compare its list with yours. Points it drops or moves to "needs evidence" are worth a second look.
+  - Run it twice. The same claims should land in "needs evidence" both times.
   - Pick two points and trace each one to the fact it came from.
+  - Change the buyer from a stranger to someone comparing brands. The first point should change.
   - Skim the list fast and cross out any point your eye slides past. If there is one, it should be the weakest.
 
 improve:
   - Paste your feature list with sources into "What you need" in the skill file, so you don't have to each time.
-  - Add what every rival says to "Competitor claims", so step 6 works on every run.
+  - Add your price per day or per use, worked out from your own prices, so "is it worth it?" can always be answered.
   - If your points always go on an image, set the count and length in "Where the points go" (for example "three points, under 8 words each").
-  - When you find proof for an item in "Needs evidence", add it to your brand file.
-  - Pair it with "Get headlines a stranger understands at a glance" when the points sit on an ad image, and "Get an ad where every line sells" for the copy around the list.
+  - When you find proof for an item in "needs evidence", add it to your brand file.
+  - Pair it with "Headlines strangers understand at a glance" when the points sit on an ad image, and "Make every line of your ad sell" for the copy around the list.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Sorting facts into supported points works well in any strong chat AI with this skill."}
+    - {name: "Google Sheets", why: "Works out your price per day or per use from your own prices, so the worth-it point has a real number."}
+  inputs:
+    - "Your two to four-star reviews, so the points answer the doubts buyers really have"
+    - "A lab report, spec sheet or label photo, so each rung can be checked against a source"
+    - "Your price per day or per use, so the worth-it question can be answered"
+    - "Three competitor product pages, so it can cut points every rival already makes"
 
 terms:
-  - term: Chain
-    meaning: The steps from a feature (what it is) to how it works to what the buyer gets. Each step needs its own support.
+  - term: Rung
+    meaning: One step from a feature to a reason to buy. The fact, what it does, then what the buyer gets. Each needs its own support.
   - term: Needs evidence
     meaning: A benefit your facts don't prove yet. Keep it off the page until you have proof.

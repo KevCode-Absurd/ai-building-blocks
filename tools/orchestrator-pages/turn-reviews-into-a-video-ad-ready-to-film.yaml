@@ -4,12 +4,12 @@ summary: "Give it your website and reviews. You get a script in your customers' 
 job: make-video-ads
 
 headline: "Turn reviews into a video ad ready to film"
-subhead: Give it your website, your customer reviews and the buyer you want to reach. It builds your brand file, finds why people buy, writes and polishes a script, plans each shot for a video tool and checks it against ad rules.
+subhead: Give it your website, your customer reviews and the buyer you want to reach. It builds your brand file, ranks why people buy, writes a script where every line has a source, fixes how it sounds, plans timed shots in short clips and checks it all against ad rules.
 
 explain: |
-  Most video ads start from a blank page and a guess about what buyers care about. The result sounds like every other brand, and the person filming it has to make up the shots. This workflow starts from your customers instead. It reads your reviews for the reasons people buy and the words they use, and builds the script on the strongest one.
+  Most video ads start from a blank page and a guess about what buyers care about. The result sounds like every other brand, and the person filming it has to make up the shots. This workflow starts from your customers instead. It reads your reviews for the reasons people switch and the words they use, and counts how many separate people say each one.
 
-  It runs six skills in order. The first collects your facts, voice and allowed claims into a brand file, so no later step invents anything. The middle steps write the script, read every line aloud to fix what sounds stiff, and turn it into timed shots. The last step checks the script and on-screen words against Facebook and Instagram ad rules before you spend anything making it.
+  It runs six skills in order. The first collects your facts, voice and allowed claims into a brand file, with every fact tagged by where it came from, so no later step invents anything. The script names the one belief the ad must change, then builds nine beats from the opening to the call to action, each with the review or fact behind it, inside a word budget for the length. The next steps read every line aloud to fix what sounds stiff, and split the script into clips of about six seconds with three to five timed shots each. The last step checks the script and on-screen words against Facebook and Instagram ad rules before you spend anything making it.
 
 when:
   - You need a new video ad and don't know where to start.
@@ -23,8 +23,8 @@ you_give:
   - Your product facts and the claims you may and may not make
   - Your ad results, so it knows what has already run (optional)
 you_get:
-  - A video script, line by line, with on-screen words and what is seen
-  - A timed shot list for each part of the script, ready for a video tool
+  - A script beat by beat, with on-screen words, what is seen and the source for each line
+  - A timed shot list for each clip of the script, ready for a video tool
   - An ad rules check with fixes, and what to set when you launch
   - Your brand file and a ranked list of why people buy, to reuse next time
 
@@ -32,43 +32,42 @@ how_to_use:
   - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Have your inputs ready. Your website link, your reviews pasted or saved as a file, one or two sentences on who the ad is for, and your product facts with the claims you may make.
-  - It works step by step and saves each result. Check each one before it moves on, especially the list of buying reasons, because the script is built on the top one.
+  - It works step by step and saves each result. When it shows you the brand file's short fact sheet, fix anything wrong before it goes on. Then check the list of buying reasons, because the script is built on it.
   - Read the ad rules check last. Fix anything marked "Fix first" before you film or make the video.
 
 how_it_works:
   - title: Builds your brand file
-    text: Uses the brand file skill to read your website and ask a few questions, then writes down your facts, voice, offers and the claims you can make.
+    text: Uses the brand file skill to read your website, check the basics with you once, and write eight files where every fact says where it came from.
   - title: Finds why people buy
-    text: Uses the buying reasons skill to pull phrases from your reviews, word for word, and rank the reasons by how many separate customers say them.
+    text: Uses the buying reasons skill to copy out phrases word for word, tag what pushed and pulled each buyer, and rank reasons by how many separate people say them.
   - title: Writes the script
-    text: Uses the video script skill to build the ad around the top reason, with one belief to change and a picture for every line.
+    text: Uses the video script skill to name the one belief to change and build nine beats, each line with its source, inside a word budget for the length.
   - title: Fixes how it sounds
     text: Uses the read-aloud skill to fix lines nobody would say out loud, without changing any claim, price or fact.
   - title: Plans the shots
-    text: Uses the shot list skill to turn each part of the script into timed shots, each with one action, a camera position and the words running under it.
+    text: Uses the shot list skill to split the script into clips of about 6 seconds, with 3 to 5 timed shots each and one action per shot.
   - title: Checks the ad rules
     text: Uses the Facebook and Instagram ad rules skill to flag anything that could get the ad rejected, and lists what to set when you launch.
 
 output_shape: |
-  SCRIPT (<length> seconds, spoken by <who>)
-  Belief: they think <what they believe now>. After this they think <the new belief>.
-  1 "<spoken line>"
-    Screen: <words on screen> | Seen: <what is in the picture> | Backed by: <review or claim>
-  2 ...
-  Fixed when read aloud: line <n> was "<old wording>". <why it changed>.
+  SCRIPT (<length> seconds, spoken by <who>, <spoken words> of a <budget> word budget)
+  Belief shift: Now they believe <...>. After this ad they believe <...>.
+  Assumed: <thin or empty items, and how they were handled>
+  | Beat | Spoken line | On-screen text | Picture note | Evidence |
+  Fixed when read aloud: <line> was "<old wording>". <why it changed>.
 
   SHOT LIST, CLIP <n> (<which lines>, <seconds>)
-  1 | <start> to <end> s | <shot size> | <where the camera stands> | <camera move>
-    <the one action>. Words: "<words heard under it>"
-  2 ...
-  Continuity: <light, place, what is in frame for the next clip>
+  <#> | <start> to <end> s | <size> | <camera position> | <move> | <the one action> | Words: "<voice under it>"
+  Continuity: <who is where, and what each object looks like, for the next clip>
 
   AD RULES CHECK
   Verdict: <ready to run / fix first / likely rejected>. Main reason: <one line>
   - <rule area>, <where>: <problem>. <fix>
   Passed: <areas checked and clear>
   Could not check: <what needs the landing page or account>
-  MISSING: <anything it could not find>
+
+  HAND-BACK SUMMARY
+  Files: <each step's file> | Clips and shots: <counted from the tables> | MISSING: <every line, in one list>
 
 example:
   business: sprout
@@ -86,53 +85,65 @@ example:
     Length and speaker: about 40 seconds, voice-over, no customer
     on camera.
   output: |
-    Built on: reason 1 from step 2, sticking with it (reviews 1, 2, 5).
-    20 reviews is too few to call a pattern. No review is marked as a
+    Built on: the buyer you named. In step 2, quitting powders and
+    sticking with it come from 6 people, all on the brand site, so the
+    reason is "one channel", not a pattern. Gut trouble is the only
+    pattern (5 people, from the brand site and a retailer). No review is marked as a
     verified buyer, so no quote appears in the paid ad.
 
-    SCRIPT (37 seconds at 3.3 words a second, voice-over)
-    Belief: they think a gummy can't hold enough to replace a powder.
-    After this they think one pack holds what they need, and it's the
-    one they'd keep taking.
-    1 "Most greens powders end up here, half a tub at the back of the cupboard."
-      Screen: Still half full | Seen: an unbranded tub pushed behind jars
-    2 "People quit them for the gritty taste, the shaker to wash and the
-      mornings they forget." Seen: a green-ringed shaker in the sink.
-      Backed by reviews 1, 3, 4 (not quoted)
-    3 "So we put the greens in a gummy you'd actually want to eat."
-      Seen: the deep green pouch on the counter
-    4 "Tear the top off one small pack and tip the gummies into your hand."
-      Screen: Rip. Tip. Enjoy. | Seen: a pack torn straight across its top
-    5 "Each pack has 60-plus ingredients, 21 vitamins and minerals, and 6
-      grams of fiber." Screen: 60+ ingredients, 21 vitamins & minerals, 6g fiber
-    6 "And it's clinically tested for nutrient absorption."
-      Screen: 2025 study, 120 adults, 12 weeks: vitamin C +40.1%, folate +20.5%
-    7 "In a survey of over 3,000 customers, 80% said they take it every day."
-      Screen: 80% of surveyed users take it daily (brand survey)
-    8 "Your first box is $29.99 with our text sign-up, then $49.99 every
-      four weeks." Screen: $29.99 first box with text sign-up. Renews at $49.99.
-    9 "You can pause or cancel any time, and your first order has a 30-day
-      money-back guarantee." Screen: 30-day guarantee, first order only
+    SCRIPT (42 seconds, voice-over, 117 of a 120 word budget)
+    Belief shift: Now they believe a gummy can't hold enough to replace
+    a powder. After this ad they believe one pack holds what they need,
+    and it's the one they'll keep taking.
+    Assumed: comparing fixes; used up and bought again; no customer on
+    camera, so the brand speaks.
+    | Opening | "Most greens powders end up here, half a tub at the back of
+      the cupboard." | Still half full | an unbranded tub pushed behind
+      jars | the old way (brand file)
+    | Problem | "People quit them for the gritty taste and the shaker to
+      wash." | | a green-ringed shaker in the sink | reviews 3, 6, not
+      quoted
+    | Promise | "So we put the greens in a gummy you'd actually want to
+      eat." | | the deep green pouch on the counter | review 2, not quoted
+    | How it works | "Tear the top off one small pack and tip the
+      gummies into your hand." | Rip. Tip. Enjoy. | a pack torn straight
+      across its top | brand file
+    | Doubt | "Can a gummy hold enough? Each pack has 60-plus ingredients,
+      21 vitamins and minerals, and 6 grams of fiber." | 60+ ingredients,
+      21 vitamins & minerals, 6g fiber | gummies in an open palm | the
+      buyer's doubt; fine-to-repeat claim
+    | Proof | "It's clinically tested for nutrient absorption, and 80% of
+      surveyed users take it every day." | 2025 study, 120 adults, 12
+      weeks: vitamin C +40.1%, folate +20.5% | the pouch beside a mug |
+      science page; brand survey, 3,000+
+    | Offer | "Your first box is $29.99 with our text sign-up, then $49.99
+      every four weeks." | $29.99 first box with text sign-up. Renews at
+      $49.99. | the pouch and one pack | price table and footer terms
+    | Guarantee | "Your first order has a 30-day money-back guarantee." |
+      30-day guarantee, first order only | | FAQ
+    | Call to action | "Tap below to start your first box." | Start your
+      first box | |
     Fixed when read aloud:
-    - Line 5 was "Each pack: 60+ ingredients, 21 vitamins & minerals, 6g fiber."
-      Nobody says a colon aloud. Made it a whole sentence.
-    - Line 8 was "First box $29.99 with text sign-up, then $49.99 every 4 weeks."
-      Small words were dropped, so it sounded like a slogan. Put them back.
-    The lines that carry it: the proof (lines 5 to 7).
-    Test against: H1 "One Step I Never Skip", which opens on the habit, not
-    the old powder.
+    - Doubt line was "Each pack: 60+ ingredients, 21 vitamins & minerals,
+      6g fiber." Nobody says a colon aloud. Made it a whole sentence.
+    - Offer line was "First box $29.99 with text sign-up, then $49.99
+      every 4 weeks." Small words were dropped, so it sounded like a
+      slogan. Put them back.
+    Selling beat: the doubt and proof. Test against H1 "One Step I Never
+    Skip", which opens on the habit, not the old powder.
 
-    SHOT LIST, CLIP 1 (line 1, 15 words, 4.5 seconds)
+    SHOT LIST, CLIP 1 (opening line, 15 words, 4.5 seconds at 3.3 words a second)
     1 | 0.0 to 1.5 s | close-up | inside the cupboard, looking out | locked
       A hand pushes a half-full unbranded powder tub behind a jar.
       Words: "Most greens powders end up here,"
-    2 | 1.5 to 3.0 s | extreme close-up | overhead, above the sink | slow push in
-      Tap water runs over green grit in a shaker. Words: "half a tub"
+    2 | 1.5 to 3.0 s | extreme close-up | overhead, above the shelf | push in
+      A finger draws a line through dust on the tub's lid.
+      Words: "half a tub"
     3 | 3.0 to 4.5 s | medium | low, from counter height | hand-held, follows the door
-      An adult in a T-shirt closes the cupboard door.
+      An adult in a T-shirt swings the cupboard door shut.
       Words: "at the back of the cupboard."
-    Continuity: morning daylight, same kitchen; the pouch is not in frame
-    until line 3.
+    Continuity: morning daylight, same kitchen, the door shut; the pouch
+    is not in frame until the promise line.
     (cut for length: the full run also had clips 2 to 7, the ranked list
     of buying reasons and the brand file)
 
@@ -140,8 +151,8 @@ example:
     Verdict: Fix first. Main reason: a supplement ad needs 18+ targeting.
     - Health and wellness, whole ad: a supplement ad. Set age targeting
       to 18+.
-    - Commercial practices, line 8: $29.99 needs the text sign-up. It is
-      said and shown. Keep both.
+    - Commercial practices, offer line: $29.99 needs the text sign-up. It
+      is said and shown. Keep both.
     Passed: personal attributes (no line says what the viewer has),
     third-party marks (the powder tub is unbranded), claims (all from
     the fine-to-repeat list).
@@ -149,22 +160,29 @@ example:
     ad says $29.99, so check the page offers $29.99 on the same terms.
     Policies change, so confirm against Meta's live Advertising Standards.
 
+    HAND-BACK SUMMARY
+    Files: outputs/step-01 to step-06. Clips and shots: 7 clips, counted
+    from the shot tables.
+    MISSING: your answers to the brand file's check-in; which countries
+    the ad targets and where you ship; the landing page; grams of sugar.
+
 tweaks:
   - what: The buyer
-    how: Name one buyer, with what they want and what makes them doubt. A different buyer gets a different top reason and a different script from the same reviews.
+    how: Name one buyer, with what they want and what makes them doubt. A different buyer gets a different belief to shift and a different script from the same reviews.
   - what: Length and speaker
-    how: Say "30 seconds, voice-over" or "15 seconds, founder to camera". Length sets how many beats fit, and the speaker decides who can say what (only a real customer can report their own result).
+    how: Say "30 seconds, voice-over" or "15 seconds, founder to camera". Length sets the word budget and how many beats fit. The speaker decides who can say what, and only a real customer can report their own result.
   - what: Scripts you already run
     how: Paste the opening lines of your current video ads. The script will open differently and lean on a different proof, so you test something new.
   - what: Video tool look
     how: Tell the shot list "live action" or "animation". Animation allows faster cuts and more shots per clip.
 
 judge:
-  - The first line describes a moment your buyer lives through, not your product.
+  - The opening describes a moment your buyer lives through, not your product.
   - Every claim in the script appears in your product facts or approved claims. Check two.
-  - Every customer quote is word for word from a review, with its source.
-  - Each shot has one action you could film with your real product and an adult.
-  - The ad rules check names an exact place in the script for each problem, not a general warning.
+  - Every customer quote is word for word from a review, with its source, and unverified quotes stay out of the paid ad.
+  - Each shot has one action you could film with your real product and an adult, and every cut changes both shot size and camera position.
+  - The ad rules check names an exact place in the script for each problem, and states no country or rule it wasn't given.
+  - The run ends with a summary of every file and every MISSING line, with clip and shot counts taken from the tables.
 
 test:
   - Run it for a product that already has a video ad that worked. Compare the top buying reason in step 2 with the one your winner used.
@@ -180,10 +198,23 @@ improve:
   - Swap step 4 for a skill that checks lines against your brand voice if your scripts already read well aloud.
   - Pair it with a check for finished ads once the video is made, before you spend on it.
 
+works_best_with:
+  tools:
+    - {name: "Claude", why: "Holds the brand file, every review number and six steps of work in one run."}
+    - {name: "Veo 3.1", why: "Follows timed shot lines inside one 8-second prompt, so a clip can hold several cuts."}
+    - {name: "Kling 4.0", why: "Makes several shots in one go from a shot list, keeping the same person across the cuts."}
+    - {name: "Meta Ads Manager", why: "Sets the 18+ age and countries the rules check asks for, and previews the ad in Reels and Stories."}
+  inputs:
+    - "Support emails, survey answers or call notes as well as reviews, so a reason can count as a pattern across more than one source"
+    - "Which reviews come from verified buyers, so their words can be quoted in a paid ad"
+    - "The opening lines of video ads you already run, so the new script opens differently"
+    - "Photos of the product in use and of the places it lives, so the shot notes match what you can film"
+    - "The speaker's age range, so the shot timings use the right speaking pace"
+
 terms:
   - term: Brand file
     meaning: One folder with your facts, voice, offers and the claims you can make, so every AI step works from the same truth.
   - term: Shot list
     meaning: The script broken into short timed shots, each saying what the camera sees and does.
-  - term: Hook
-    meaning: The first line or first two seconds that make someone stop scrolling.
+  - term: Belief shift
+    meaning: The one thing the buyer believes before the ad, and what they should believe after it.

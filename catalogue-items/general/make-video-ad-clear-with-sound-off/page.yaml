@@ -4,12 +4,12 @@ summary: "Give it your finished ad and script. You get a few timed words on scre
 job: make-video-ads
 
 headline: "Make your video ad clear with the sound off"
-subhead: Give it your finished ad, its approved script and your allowed claims. It picks the few moments that earn on-screen text, takes the words from the script, times each one, and places it where it covers no product, face or hand.
+subhead: Give it your finished ad, its approved script and your allowed claims. It picks the few moments that earn on-screen text, takes the words from the script, times each one to be read, and places it inside the app's safe area, clear of the product, faces and hands.
 
 explain: |
-  Many people watch ads with the sound off, so a finished video needs to say three things on screen: what the product is, the one fact worth knowing, and what to do next. The usual fix overdoes it: text on every scene, badges repeating captions, numbers rounded up.
+  Many people scroll with the sound off. Meta's own research found that many feed video ads mean almost nothing without sound, and that captions kept people watching longer. So a finished ad has to answer three questions on screen: what is it, why should I care, and what do I do now. The usual fix overdoes it: text on every scene, badges repeating captions, numbers rounded up.
 
-  This skill adds as little as possible. It works through a fixed order (what the product is, the one number, a step a viewer could miss, the offer) and stops when the video has enough. Words come from the line spoken in that scene, so eye and ear agree, and numbers appear exactly as approved. It places each one in the emptiest part of the frame, away from the product, faces and hands, and away from the parts of a vertical video the app covers. It never changes the footage, sound or length.
+  This skill adds as little as possible. It checks captions first, then works through a fixed order (the name, the one proof, a step a viewer could miss, the next step) and stops once the three questions are answered. Words come from the line spoken in that scene, and numbers appear exactly as approved. Each overlay stays up long enough to read and sits inside the safe area of a vertical video, clear of the app's buttons, the product, faces and hands. It never changes the footage, sound or length.
 
 when:
   - Your ad is finished and approved, and you want it to work for people scrolling with the sound off.
@@ -18,6 +18,7 @@ when:
 
 you_give:
   - The approved script with scene lengths (the only words allowed on screen)
+  - Whether your captions are already burned in
   - The finished video, or frames sampled from it
   - Your allowed copy (offer, numbers, claims, customer words) exactly as written
   - Your on-screen text habits, fonts and colors (optional)
@@ -36,16 +37,18 @@ how_to_use:
   - Add the overlays to a copy of the video. Keep the clean version.
 
 how_it_works:
+  - title: Checks captions first
+    text: If spoken lines have no captions, it says so up front, because captions come before any extra text.
   - title: Decides what earns text
-    text: In order, what the product is, the one number, a step a viewer could miss, the offer. It stops when that's enough, and leaves empty time empty.
+    text: In order, the name, the one proof, a step a viewer could miss, the next step. It stops once a muted viewer can say what it is, why it matters and what to do.
   - title: Chooses the words
     text: Usually 2 to 4 words, taken from the line spoken in that scene, with numbers and claims exactly as approved.
-  - title: Counts
-    text: About one every 6 to 8 seconds at most, and never two that make the same point.
+  - title: Times and counts
+    text: Each one stays up long enough to read, about 15 characters a second and never under 1.5 seconds. At most one every 6 to 8 seconds.
   - title: Places each one
-    text: In the emptiest part of the nearest sampled frame, away from the product, faces and hands, and clear of the app's buttons and captions.
+    text: Inside the safe area of a 9:16 frame (clear of the top 14%, bottom 35% and the side edges), in the emptiest spot away from the product, faces and hands.
   - title: Styles it
-    text: Your font and colors with a light outline for contrast, checked at 4.5 to 1 or better, never covering the product's printing.
+    text: Your font and colors with a thin outline, checked for contrast (4.5 to 1 for small text, 3 to 1 for large bold text), never covering the product's printing.
   - title: Matches the format
     text: Fewest and smallest for a person talking, paper-tag labels for clay or paper, bold badges for cartoons, precise callouts for demonstrations.
   - title: Leaves the video alone
@@ -94,7 +97,8 @@ example:
     sunflower yellow #FFCC2E for badges.
   output: |
     OVERLAYS
-    1 label | "Sprout" | 8.7-10.7 s | top-left, on the kitchen wall
+    1 label | "Sprout" | 8.7-10.7 s | upper-left, on the kitchen wall,
+      below the top safe margin
       Anchored to: scene 5, the pouch, the first time its name is
       clearly seen.
       Reason: the product's name is never spoken in this version.
@@ -116,7 +120,8 @@ example:
 
     STYLE
     Format: clean (a person talking), so one small label and one
-    badge, nowhere near her mouth. Label in Work Sans bold, warm cream
+    badge, nowhere near her mouth. Both sit inside the 9:16 safe
+    area; the burned-in captions keep the lower part. Label in Work Sans bold, warm cream
     with a thin forest green outline. Badge in sunflower yellow with
     forest green type. Check contrast at 4.5 to 1 against the wall in
     f5 and f9. The pouch's own printing stays uncovered.
@@ -146,7 +151,8 @@ judge:
   - Nothing covers the product, a face or a hand, and no overlay repeats a caption.
   - There are few overlays, about one every 6 to 8 seconds at most, never two at once.
   - Each one stays up long enough to read (about 2 seconds for 6 words).
-  - Watch it at phone size with the sound off. You know what it is and what to do next.
+  - Watch it at phone size with the sound off. You can say what it is, why it matters and what to do next.
+  - Nothing sits in the top 14% or bottom 35% of a vertical video, where the app's names and buttons go.
 
 test:
   - Give it an ad with captions on every line. It should add very little, and say which moments it left out because a caption already covers them.
@@ -160,6 +166,16 @@ improve:
   - Note your usual format (clean, tactile, graphic or premium) for each kind of ad you make, so it picks the right amount of text.
   - If the plan says "better left as it is", believe it, and test the ad without overlays.
   - Pair it with the skill that turns your footage into a timed cut list, so the edit and the text are planned together.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Planning a few overlays from your script and frames works well in any strong chat AI that reads images."}
+    - {name: "Meta Ads Manager", why: "Its ad preview shows where Reels and Stories buttons sit over your text before you spend."}
+    - {name: "Descript", why: "Edits video by its transcript and adds captions, so overlay times line up with the real words."}
+  inputs:
+    - "One frame every 2 seconds from the final export, so fewer placements are guesses"
+    - "A transcript with word timings, so each overlay starts on the spoken word, not a scene estimate"
+    - "Your brand font files and colour codes, so the overlays match your other ads"
 
 terms:
   - term: Overlay

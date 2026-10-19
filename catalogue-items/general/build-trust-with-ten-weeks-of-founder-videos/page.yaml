@@ -171,6 +171,15 @@ improve:
   - Post each week's answer in your FAQ too, so the work pays twice.
   - Pair it with the skill that turns raw footage into a social post, and with the creator gifting plan for posts from other people.
 
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Claude, ChatGPT and Gemini all follow this skill well, so use the one you already have."}
+    - {name: "CapCut", why: "Adds captions from the speech and lets you correct them by hand, on a phone or a computer."}
+  inputs:
+    - "Your FAQ page and recent support emails, so the question bank starts full"
+    - "A 30-second phone clip of the founder talking, so lines are written in their real voice"
+    - "The days you can film and post, so the plan fits a real week"
+
 terms:
   - term: Thread
     meaning: One of four kinds of question the series answers, such as how it's made or who it's for.

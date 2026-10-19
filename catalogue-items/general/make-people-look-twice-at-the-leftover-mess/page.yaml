@@ -1,73 +1,58 @@
 new_slug: make-people-look-twice-at-the-leftover-mess
 name: "A close-up of the mess your buyer's problem leaves"
-summary: "Give it your ad's story. You get the one telling detail to shoot and a prompt for the close-up photo."
+summary: "Give it your ad's story. You get the residue to shoot, its honest amount and a prompt for the close-up."
 job: make-image-ads
 
 headline: "A close-up of the mess your buyer's problem leaves"
-subhead: Give it your story ad. It names the one thing the problem leaves behind (hair in a brush, lint in a tray, green dust on a counter), frames it close with flash or flat room light, and writes the prompt. No product, no person.
+subhead: Give it your story ad. It pins down what the problem leaves behind, how much of it is honest and where it was found, frames it close with flash or room light, and writes the prompt. No product, no person.
 
 explain: |
-  Many problems leave something you can see or hold: shed hair, limescale, lint, a worn-out part, a heap of paper, powder spilled every morning. Photographed close, the way a friend would send it in disgust, it's hard to tell what it is for half a second, and the only way to find out is to read on. That half second is what stops the scroll.
+  Many problems leave something you can see: shed hair, lint, limescale, spilled powder, a worn-out sole. Shot close, the way a friend sends proof, it takes a second look to work out what it is. People with the problem get there on that second look, and the story's first line confirms it. That small gap, opened and closed fast, is what makes people stop.
 
-  The skill takes the object your story's opening names and where it was found, frames it close so it fills about a third of the picture, and lights it the cheap way: phone flash or flat room light, a slight tilt, soft edges. A hand may hold or point at it, but there's no face, no product and nothing drawn on top. It keeps the object and the amount true to what your research describes, and stays gross rather than graphic.
+  The skill fixes three facts first: what the residue is in your buyer's words, the honest amount, and the surface or container that gives it away. Then it frames it close with that container cut by the edge, and picks the light by tone: hard flash for mess people complain about, softer room light for mess they'd rather not mention. It keeps the amount true to your research and never shows anything that reads as injury.
 
 when:
-  - Your buyer's problem leaves something behind they can see or hold.
-  - You're running to cold traffic (people who don't know you) and want a picture that makes them look twice.
+  - Your buyer's problem leaves something behind they can see or touch.
+  - You're showing ads to people who don't know you yet and want a picture that earns a second look.
   - Your story opens by describing what the narrator keeps finding.
 
 you_give:
-  - Your approved story ad and the object its opening names
-  - How your buyer describes what they find, in their words (optional)
+  - Your approved story ad and the residue it names
+  - How your buyers describe what they find, and how much (optional)
 you_get:
-  - The object, how much of it, and where it was found
-  - The surface it sits on and how it's lit
-  - The headline to run under the image
+  - The residue, its honest amount and where it was found
+  - How close to shoot it, from what angle, and with which light
+  - A short line to run under the image
   - A 60 to 120 word image prompt, ready to paste
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Paste your story ad underneath. The object should be named in the first lines.
+  - Paste your story ad underneath. The residue should be named in the first lines.
   - Add how your buyers describe what they find, from reviews or messages, if you have it.
   - Paste the image prompt into your image tool. If it looks like a clean studio close-up, ask again with "phone flash, slightly blurry edges".
-  - Compare the amount in the picture to your research. If it looks worse than real life, make it again.
+  - Compare the amount in the picture with your research. If it looks worse than real life, make it again.
 
 how_it_works:
-  - title: Sets the ground rules
-    text: Square, looks taken on a phone, no logo, price, button, brand colour or product, and no face.
-  - title: Names the object
-    text: Takes the one object from your story's opening and where it was found, like a dryer's lint tray or the bottom of a water jug.
+  - title: Sets the house rules
+    text: Square, looks taken on a phone, no logo, price, button, brand colour or product, and at most one hand at the edge.
+  - title: Fixes three facts
+    text: What the residue is in your buyer's words, the honest amount, and the surface or container that gives it away.
   - title: Frames it close
-    text: From above or tilted the way a hand holds a phone, filling about a third of the frame, on a real, slightly worn surface.
-  - title: Lights it cheaply
-    text: Phone flash or flat room light, a slight tilt and soft edges, with the imperfections named.
-  - title: Keeps people out
-    text: A hand may hold or point at it. No face.
+    text: The residue fills a third to half the frame, with the giveaway container cut by the edge so the second look can happen.
+  - title: Picks the light by tone
+    text: Hard flash for mess people complain about, softer room light for mess they're embarrassed by.
+  - title: Runs the two-look test
+    text: One second for "something spilled", two seconds for "I know that". Too obvious goes closer; too vague shows more container.
 
 output_shape: |
-  SCENE
-  <one sentence: what someone scrolling would say they saw>
-
-  WHERE AND WHEN
-  <place, time of day, what is within reach>
-
-  THE OBJECT
-  <what it is, how much, where it was found>
-
-  THE SURFACE AND LIGHT
-  <what it sits on, how it's lit, the imperfections>
-
-  WORDS ON THE IMAGE
-  None.
-
-  HEADLINE UNDER THE IMAGE
-  <"Why your ... keeps coming back" or "Stop blaming ... Look at ...">
-
-  FLAGS
-  <none by default; note the amount and anything inferred>
-
-  IMAGE PROMPT
-  <60 to 120 words, ready to paste>
+  SCENE               <what someone scrolling would say they saw>
+  WHERE AND WHEN      <place, time of day, what is within reach>
+  THE RESIDUE         <what it is, how much, where it was found>
+  FRAMING AND LIGHT   <how close, angle, flash or room light and why>
+  WORDS ON THE IMAGE  None.
+  LINE UNDER IMAGE    <words> (<caption line>, <characters>)
+  FLAGS               <the amount and its source, anything inferred>
+  IMAGE PROMPT        <60 to 120 words, ready to paste>
 
 example:
   business: sprout
@@ -86,79 +71,80 @@ example:
 
     Buyer: the quitter who wants to stick, 28 to 45.
   output: |
-    SCENE
-    A close-up of green powder dusted across a dark kitchen counter
-    around a scoop.
-
-    WHERE AND WHEN
-    A kitchen counter, 7am, under the kitchen light. Within reach:
-    the base of a plain tub at the frame edge, a damp cloth.
-
-    THE OBJECT
-    A dusting of fine green powder scattered around a plain plastic
-    scoop, a few small clumps near its edge. One morning's spill, as
-    the story says, not a heap.
-
-    THE SURFACE AND LIGHT
-    A dark, slightly scratched counter. Harsh phone flash from
-    above, a slight tilt, soft blurry corners, the cloth half in
-    view.
-
-    WORDS ON THE IMAGE
-    None.
-
-    HEADLINE UNDER THE IMAGE
-    Why the green dust keeps coming back.
-
-    FLAGS
-    None. The amount (one morning's dusting) is what the story
-    describes. Don't make it a pile.
-    The scoop and tub are plain and unbranded, never a rival's.
-
-    IMAGE PROMPT
-    Square 1:1 close phone photo taken from above with harsh
-    on-camera flash. A dusting of fine green powder lies scattered
-    across a dark, slightly scratched kitchen counter around a plain
-    plastic scoop, with a few small clumps near the scoop's edge. The
-    powder and scoop fill about a third of the picture; the base of a
-    plain unlabelled tub sits at the edge of the frame. Slight tilt,
-    soft blurry corners, a damp cloth half in view. Ordinary and
-    unstyled, no retouching. No text, no arrows or circles, no logo,
-    no brand name, no product, no person, no children.
+    SCENE               A close-up of fine green dust scattered across
+                        a dark kitchen counter around a plastic scoop.
+    WHERE AND WHEN      A kitchen counter, 7am, before work. Within
+                        reach: the base of a plain tub, a damp cloth.
+    THE RESIDUE         Green dust, "a dusting", as the story says.
+                        One morning's spill around the scoop, a few
+                        small clumps by its edge. Found where it always
+                        lands: around the scoop, next to the tub.
+    FRAMING AND LIGHT   Close, from above, the dust and scoop filling
+                        about a third of the frame. The tub base is cut
+                        by the top edge, so the second look reads
+                        "powder tub". Hard phone flash: this is mess
+                        people complain about.
+    WORDS ON THE IMAGE  None.
+    LINE UNDER IMAGE    My counter at 7am. Daily. (plain caption, 25)
+    FLAGS               Amount from the story ("a dusting"). Don't make
+                        it a pile. The scoop and tub are plain and
+                        unbranded, never a rival's. The damp cloth is
+                        from the story's second line.
+    IMAGE PROMPT        Square 1:1 close phone photo taken from above
+                        with harsh on-camera flash. A light dusting of
+                        fine green powder lies scattered across a dark,
+                        slightly scratched kitchen counter around a
+                        plain white plastic scoop, with a few small
+                        clumps by the scoop's edge. The powder and
+                        scoop fill about a third of the picture. The
+                        base of a plain unlabelled tub is cut off by
+                        the top edge, and a damp grey cloth sits half
+                        in view at the right. Slight tilt, soft blurry
+                        corners, ordinary and unstyled. Plain objects
+                        only, nothing written or drawn on the image.
 
 tweaks:
   - what: How close
-    how: Closer makes it harder to tell what it is, which is the point. Ask for "fill half the frame" if the first picture is too easy to read, or "show a little more counter" if nobody can tell at all.
+    how: Closer makes the first look harder, which is the point. Ask for "fill half the frame" if it reads too easily, or "show more of the tub" if nobody can tell at all.
   - what: The light
-    how: Flash makes it look like evidence a friend sent. Flat room light is softer and suits problems people feel embarrassed about.
+    how: Flash looks like proof a friend sent. Room or window light is softer and suits mess people would rather not talk about.
   - what: A hand
-    how: Add "a hand wiping at it with a cloth" to show it happens daily, or keep it hands-free so the mess is all there is.
+    how: Add "a hand wiping it with a cloth at the edge" to show it happens every day, or keep it hands-free so the mess is all there is.
   - what: The amount
-    how: Say the real amount, like "one morning's dusting" or "a palm-sized clump". Exaggeration reads as a trick and breaks trust.
+    how: Say the real amount, such as "one morning's dusting" or "a palm-sized clump". Exaggeration reads as a trick.
 
 judge:
-  - It's one object, in the amount your research describes, not exaggerated.
-  - It's gross or odd, never graphic. No blood, wound or open skin.
-  - Nothing in the picture says your product removes it, and there's no before-and-after.
+  - It's one residue, in the amount your research describes, not exaggerated.
+  - It's odd or unpleasant, never graphic. No blood, wound or anything medical.
+  - The giveaway container or surface is partly in shot, so the second look can happen.
   - There's no product, pack, logo, text, arrow or circle anywhere.
   - It looks like a cheap phone photo, not a clean studio close-up.
 
 test:
   - Show the picture to someone for one second and ask what it is. A pause, then the right answer, is what you want. No answer at all means it's too close.
   - Compare the amount in the picture with how your buyers describe it. If it's worse, make it again with the real amount named.
-  - Run it on a story whose problem leaves nothing behind. It should send you to the everyday snapshot instead.
+  - Run it on a story whose problem leaves nothing behind. It should send you to the snapshot skill instead.
   - Test it against a snapshot of the same story with a person in it, so the picture is the only change.
 
 improve:
-  - Add your buyers' words for what they keep finding to the brand file section. Their exact description makes the best story opening and the best picture.
-  - Add the amounts your research describes to "What you need", so the skill never has to guess how much.
+  - Add your buyers' words for what they keep finding to "What you need". Their exact description makes the best opening and the best picture.
+  - Add the amounts your research describes, so the skill never has to guess how much.
   - Add the surfaces of your buyers' homes (dark counters, tiled floors) to step 3, so the place looks like theirs.
-  - If you want to point at one spot, use the skill that adds one red circle to a photo instead. This picture has no marks.
+  - Pair it with the story ad skill, so the first line names what the picture shows.
+
+works_best_with:
+  tools:
+    - {name: "Nano Banana Pro", why: "Follows named light and camera terms, such as 'harsh on-camera flash, from above'."}
+    - {name: "GPT Image 2.5", why: "Follows detailed placement, so the residue and the cut-off container sit where you describe them."}
+  inputs:
+    - "A real phone photo of the mess from your own home or a customer who agreed, so the image tool can match its texture"
+    - "Reviews that mention the mess with an amount, such as 'every morning' or 'a handful', so the amount is honest"
+    - "Your never-shown list, so mess you don't want linked to the brand stays out"
 
 terms:
-  - term: Cold traffic
-    meaning: People who have never heard of your business before seeing the ad.
+  - term: Residue
+    meaning: What a problem leaves behind, such as lint, hair, powder or limescale.
   - term: Story ad
-    meaning: An ad whose main text tells one person's story in their own words, like a post from a friend.
-  - term: Image prompt
-    meaning: The text you paste into an image tool to make the picture.
+    meaning: An ad whose main text tells one person's story, like a post from a friend.
+  - term: Line under the image
+    meaning: The bold headline under the picture in a Facebook or Instagram ad.

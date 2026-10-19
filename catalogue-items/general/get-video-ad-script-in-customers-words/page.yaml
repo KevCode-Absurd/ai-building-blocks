@@ -197,6 +197,14 @@ improve:
   - When a script wins, save its belief shift and selling beat to your brand file, and test that beat as a new opening.
   - Pair it with the skill that finds the script lines that lose the sale, before you film.
 
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Claude, ChatGPT and Gemini all follow this skill well, so use the one you already have."}
+  inputs:
+    - "Answers to a survey question like \"What almost stopped you buying?\", so the last doubt is in buyers' words"
+    - "Sales call notes or chat logs, so quotes cover the moments reviews miss"
+    - "Support tickets about the product, so the script never promises what buyers got wrong"
+
 terms:
   - term: Buyer's timeline
     meaning: Five points in the order the buyer lived them. Before, the day it got bad enough, what they tried, the last doubt, and life after.

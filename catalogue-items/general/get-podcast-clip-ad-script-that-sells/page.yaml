@@ -1,69 +1,69 @@
 new_slug: get-podcast-clip-ad-script-that-sells
 name: "A podcast-style clip that changes one belief"
-summary: "Give it the belief to change and your facts. You get a 15 to 45 second script for a two-person chat."
+summary: "Give it the belief to change and your facts. You get a timed two-person talk where every fact has a source."
 job: make-video-ads
 
 headline: "A podcast-style clip that changes one belief"
-subhead: Give it the belief you want to change, real customer doubts and your facts. It writes a 15 to 45 second exchange between a doubting Host and an explaining Guest, where every fact comes from your list and nobody claims a result.
+subhead: Give it a doubt your buyers really hold and the facts you can stand behind. You get a 15 to 45 second talk between a doubting Host and an explaining Guest, timed to your clips, or one frame with its subtitle.
 
 explain: |
-  Clips of two people talking at microphones get watched, because they feel like real conversation, not an ad. Done badly they turn into a fake expert in a studio saying the product changed their life. That's a testimonial and a credential you can't back, and buyers hear the ad copy straight away.
+  Clips of two people talking at microphones get watched because they feel like overhearing a real talk. They go wrong when a "guest" in a studio says the product changed their life. That's a testimonial from someone who never used it, with a title nobody can check, and viewers hear the ad copy at once.
 
-  This skill keeps the format honest. The Host voices a doubt your real customers have; the Guest answers with facts from your list, or passes on what reviews say, word for word and attributed. Neither is an expert, a customer or your founder, and neither claims to have used the product. Each turn is a sentence or two, with one fact, so it sounds like talk. The product sits on the table in view, and the offer appears as text at the end, never spoken.
+  This skill starts from one line: what buyers believe now, and what they should believe by the end. The Host voices a doubt your buyers really have. The Guest answers with facts from your list, or passes on what reviews say, word for word and credited. Neither speaker is an expert, a customer or your founder, and a small "Dramatization" line makes clear they're actors. Each turn holds one fact, the words are counted to fit each clip, and the offer shows as text at the end, never spoken.
 
 when:
-  - Your buyers hold a belief that stops them buying, and you can answer it with facts.
-  - Your category has heard every claim, and a plain ad gets ignored.
-  - You want a believable talking ad without hiring a presenter who pretends to be a customer.
+  - Your buyers hold a belief that stops them buying, and your facts can answer it.
+  - Your category has heard every claim, and plain ads get ignored.
+  - You want a talking ad that feels real without anyone pretending to be a customer.
 
 you_give:
-  - The one belief to change, the buyer stage and the length
+  - The one belief to change, how much your buyer knows already, and the length
   - Real customer doubts and words, with sources
   - Your product facts and a short reason it works
-  - Every fact a speaker may state, your offer and banned claims
+  - Every fact a speaker may say, your offer and banned claims
   - Video or still
 you_get:
-  - A line-by-line script for Host and Guest with visual notes
-  - The structure chosen and a clip plan with words per clip
-  - A six-word opener for sound-off viewers and the end text
-  - A list of every fact said, with its source
+  - A belief line and the way the argument moves
+  - A line-by-line script for Host and Guest, with picture notes
+  - A clip plan with the words in each clip, a muted opener and the end text
+  - Every fact said, with its source, and the disclosure line
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Paste the doubt or belief you want to change, in your customers' own words.
+  - Paste the doubt you want to answer, in your customers' own words.
   - Paste the facts a speaker may say, one per line, with sources.
   - Say "video, 30 seconds" or "still".
-  - Read it aloud with someone. If a line sounds like ad copy, ask for it to be rewritten as talk.
+  - Read it aloud with someone, one part each. Any line that sounds like ad copy goes back for a rewrite.
   - For a video, take the script to "Turn your podcast clip script into ready-to-make video shots".
 
 how_it_works:
   - title: Checks it fits
-    text: Suits a doubt or myth said out loud. It says so if your point needs a picture or the offer has many terms.
-  - title: Sets the cast
-    text: Two fictional, unnamed adults. Host on the left asks and doubts, Guest on the right explains.
-  - title: Applies speech rules
-    text: Speakers state facts about the product or pass on reviews, attributed. Never a result, a title or an unsourced number.
-  - title: Sets one plain room
-    text: No logos or signs, the product on the table facing the camera, the offer as text only.
-  - title: Picks one argument
-    text: One belief changes by the end, and the doubt is one real customers voiced.
-  - title: Writes the video
-    text: One of four structures, short turns of one fact each, the product named late, the Host closing.
-  - title: Or writes the still
-    text: A frame caught mid-reaction with one subtitle of ten words or fewer.
+    text: Talk suits a doubt said out loud. It says so when your point needs a picture or the offer has many terms.
+  - title: Writes the belief line
+    text: What buyers think now and what they'll think after, taken from a doubt real buyers voiced.
+  - title: Sets two honest speakers
+    text: Two made-up, unnamed adults, marked as a dramatization. Host on the left doubts, Guest on the right explains.
+  - title: Limits what they say
+    text: Facts from your list and credited reviews only. Never a result, a title or a number without a source.
+  - title: Picks the shape
+    text: Problem then fix, discovery, or myth-bust, plus how the product enters the frame.
+  - title: Counts the words
+    text: About 2.5 words a second, two or three turns per clip, and no sentence split across clips.
 
 output_shape: |
-  BELIEF  <they think ___; after this they think ___>
-  STRUCTURE  <problem then fix, discovery, myth-bust, or what's on the table>
-  SOUND-OFF OPENER  "<6 words>"
+  BELIEF  They think <...>. By the end they think <...>.
+  SHAPE  <problem then fix, discovery or myth-bust>
+  PRODUCT ENTRY  <on the table from frame 1, or noticed partway>
+  MUTED OPENER  "<6 words or fewer>"
+  DISCLOSURE  <Dramatization line, AI label if AI-made>
 
-  Line | Speaker and words | On-screen text | Visual note
-  1 | Host: "<doubt or reaction, not a greeting>" | <opener> | Host left, Guest right; <one action, one reaction>
+  Line | Speaker and words | On-screen text | Picture note
+  1 | Host: "<doubt or reaction>" | <opener> | Host left, Guest right; <one action, one reaction>
   2 | Guest: "<one fact>" | - | ...
   ...
-  <last> | Host: "<what they'll do next>" | <offer and call to action> | ...
+  <last> | Host: "<what they'll do next>" | <offer as end text> | ...
 
-  Clip plan: <clip> = <lines>, <words>
+  CLIP PLAN  <clip> = <lines>, <words>
 
   FACTS SAID
   <fact> = <source>
@@ -75,97 +75,107 @@ example:
     [the skill]
 
     Belief to change: "A gummy can't hold enough to replace my powder."
-    (a real doubt from the brand's buyer research)
-    Buyer stage: solution aware. Video, 30 seconds.
-    Facts a speaker may state:
+    (a doubt from the brand's buyer research)
+    Buyer: knows the usual fixes. Video, 30 seconds.
+    Facts a speaker may say:
     - One daily pack is about 20 g, "a small handful" of gummies
-    - 60+ ingredients, 21 vitamins & minerals, and 6g fiber in 1 pack
+    - 60+ ingredients, 21 vitamins & minerals, and 6g fiber per pack
     - About 100% of daily value for vitamins, about 25% for minerals
       (science page)
     Review on file: "[Sprout] has been the one thing I've been able to
     stick to." (brand site)
-    Never: claims that it replaces a powder; any result as the
-    speaker's own.
+    Never: that it replaces a powder; any result as a speaker's own.
     Offer: $29.99 first order with text sign-up, renews at $49.99
     every 4 weeks. 30-day money-back, first order only.
     Brand name said: "Sprout".
   output: |
-    BELIEF  They think a gummy can't hold enough. After this they
-            think one pack holds more than they expected, and they
-            know exactly what it doesn't.
-    STRUCTURE  Myth-bust (the buyer research shows the belief)
-    SOUND-OFF OPENER  "Can a gummy really hold enough?"
+    BELIEF  They think a gummy can't hold enough. By the end they
+            think one pack holds more than they guessed, and they
+            know what it doesn't hold.
+    SHAPE  Myth-bust (the research shows the belief)
+    PRODUCT ENTRY  On the table from frame 1, front to camera
+    MUTED OPENER  "Can a gummy hold enough?"
+    DISCLOSURE  "Dramatization" small in a top corner, plus the AI
+                label if the clip is AI-made.
 
-    Line | Speaker and words | On-screen | Visual note
+    Line | Speaker and words | On-screen | Picture note
     1 | Host: "A gummy can't hold enough to replace my powder." |
-        Can a gummy really hold enough? | Two-shot, Host left, Guest
-        right. Host taps the table once; Guest's eyebrows lift.
-    2 | Guest: "It's a whole pack, though. About twenty grams, a
-        small handful." | - | Single on Guest, hands showing the
-        size; Host leans back, arms folded.
-    3 | Host: "A small handful of candy." | - | Listener single: Guest
-        half smiles, mouth closed.
-    4 | Guest: "Sixty-plus ingredients, twenty-one vitamins and
-        minerals, six grams of fiber." | - | Product close: the pouch
-        on the table, front on.
-    5 | Host: "Twenty-one. At full dose?" | - | Host single, one brow
-        raised; Guest nods once.
+        Can a gummy hold enough? | Two-shot, Host left, Guest right.
+        Host taps the table; Guest's brows lift.
+    2 | Guest: "It's a whole pack. About twenty grams, a small
+        handful." | - | Guest single, hands showing the size; Host
+        leans back, arms folded.
+    3 | Host: "So, a handful of candy." | - | Guest reacting: a half
+        smile, mouth closed.
+    4 | Guest: "Sixty-plus ingredients. Twenty-one vitamins and
+        minerals. Six grams of fiber." | - | Close on the pouch on the
+        table, front on.
+    5 | Host: "Twenty-one. At full amounts?" | - | Host single, one
+        brow up; Guest nods once.
     6 | Guest: "Vitamins, about a hundred percent of daily value.
         Minerals, about a quarter." | - | Two-shot; Host unfolds his
         arms.
-    7 | Host: "Huh. At least that's honest." | - | Host single; Guest
-        glances at the pouch.
-    8 | Guest: "And the reviews keep saying, 'the one thing I've been
-        able to stick to.'" | - | Guest single; Host looks at the
-        pouch.
-    9 | Host: "Okay. Send me that." | $29.99 first order with text
+    7 | Guest: "The reviews keep saying 'the one thing I've been able
+        to stick to.'" | - | Guest single; Host glances at the pouch.
+    8 | Host: "Okay. Send me that." | $29.99 first order with text
         sign-up. Renews at $49.99 every 4 weeks. 30-day money-back on
-        your first order | Two-shot, pouch in the lower middle.
+        your first order | Two-shot, pouch low in the middle.
 
-    Clip plan: 1 = lines 1-3 (25 words), 2 = lines 4-6 (25 words),
-    3 = lines 7-9 (24 words).
+    CLIP PLAN  1 = lines 1-3 (24 words), 2 = lines 4-6 (26 words),
+    3 = lines 7-8 (17 words). 67 words, about 27 seconds.
 
     FACTS SAID
-    About 20 g, a small handful: product page and brand file
-    60+ ingredients, 21 vitamins & minerals, 6 g fiber: label claim
-    About 100% vitamins, about 25% minerals: science page
-    Review quote, word for word: brand site review
-    Nobody says it replaces a powder: no claim on file for that. The
-    Guest gives the numbers and lets the viewer decide.
+    About 20 g, a small handful = product page and brand file
+    60+ ingredients, 21 vitamins & minerals, 6 g fiber = label claim
+    About 100% vitamins, about 25% minerals = science page
+    Review words, exact = brand site review
+    Nobody says it replaces a powder. There's no claim on file for
+    that, so the Guest gives the numbers and the viewer decides.
 
 tweaks:
-  - what: The structure
-    how: Ask for myth-bust when buyers hold a clear belief, discovery when the Guest can be surprised by a fact, or problem then fix when you have the problem in customers' words.
+  - what: The shape
+    how: Ask for myth-bust when buyers hold a clear belief, discovery when a fact can surprise the Guest, or problem then fix when you have the problem in buyers' words.
+  - what: How the product enters
+    how: Ask for "noticed on the table" and the Host spots the pack partway and asks what it is. It's still never pulled from a bag.
   - what: The length
-    how: 15 seconds is one clip of two or three turns. 45 seconds runs to four clips. Over 45 seconds, use another format.
+    how: 15 seconds is one clip of two or three turns. 45 seconds runs to three or four clips. Past 45 seconds, use another format.
   - what: Still instead of video
-    how: Ask for a still. You get one frame caught mid-reaction, a subtitle of ten words or fewer, and a full image prompt.
-  - what: How the brand name is said
-    how: Give the pronunciation if it's unusual. Otherwise it spells it as said and marks it inferred.
+    how: Ask for a still. You get one frame caught mid-reaction, a subtitle of 10 words or fewer, and an image prompt.
 
 judge:
-  - The opening line is a doubt or reaction, not "welcome back".
-  - The Host's doubt is one your customers have said in their own words.
-  - Every fact the Guest says appears in the facts list with a source.
-  - Nobody says they tried it, saw results, or is an expert.
-  - The offer only appears as on-screen text at the end.
+  - The first line is a doubt or a reaction, never "welcome back".
+  - The Host's doubt is one your buyers have said in their own words.
+  - Every fact the Guest says is on your facts list with a source.
+  - Nobody says they tried it, saw results or is an expert.
+  - The word count fits the length, and the offer only appears as end text.
 
 test:
-  - Run it on a doubt a customer said in their own words. The Host's first line should be that doubt, not "welcome back".
-  - Check each fact the Guest says against your facts list. Every one should be there, with its source.
-  - Run it twice on the same doubt. In neither version should anyone say they tried it, saw results or is an expert.
-  - Read it aloud with a colleague, one part each. Any turn longer than two sentences, or any line that sounds written, needs fixing.
+  - Read line 1 on its own. If it doesn't make you want line 2, ask for a new opener.
+  - Tick each fact the Guest says against your facts list. Every one should be there.
+  - Run it twice on the same doubt. Neither version should have anyone claim a result or a title.
+  - Count the words in each clip. At about 2.5 words a second, they should fit the clip length.
 
 improve:
-  - Paste your buyers' doubts, word for word from reviews and support emails, into "What you need" in the skill file, so step 5 always starts from a real one.
-  - Add your allowed facts with sources to step 3 ("Follow the speech rules"), so the Guest only ever says those.
-  - If you make a series, write your room and props into step 4, so every clip looks like the same show.
-  - Pair it with the skill that turns a podcast clip script into cast, room and clip prompts for a video tool.
+  - Paste your buyers' doubts, word for word from reviews and support emails, into "What you need" in the skill file, so step 2 always starts from a real one.
+  - Add your allowed facts with sources to step 5, so the Guest only ever says those.
+  - If you make a series, write your room and props into step 10, so every clip looks like the same set.
+  - Put your video tool's clip length into step 9, so the clip plan fits it.
+
+works_best_with:
+  tools:
+    - {name: "Claude", why: "Keeps every spoken fact tied to your list and counts the words in each clip."}
+    - {name: "Kling 4.0", why: "Makes long clips with cuts and speech for more than one person, so a clip can hold a few turns."}
+    - {name: "GPT Image 2.5", why: "Sets the subtitle words cleanly in the frame, so the still needs less fixing."}
+  inputs:
+    - "A recorded sales or support call, used with permission, so the turns sound like your buyers really talk"
+    - "A voice note of how your brand name is said, so neither speaker gets it wrong"
+    - "A photo of the room you want, so a series of clips keeps one set"
+    - "Your video tool's clip lengths, so every clip ends on a whole turn"
 
 terms:
   - term: Myth-bust
-    meaning: A conversation where one person states what buyers believe and the other gives the one reason it isn't so.
-  - term: Sound-off opener
+    meaning: A talk where one person states what buyers believe and the other gives the one reason it isn't so.
+  - term: Muted opener
     meaning: A short version of the first line shown as text, for people watching with the sound off.
-  - term: Buyer stage
-    meaning: How much the buyer already knows about the problem and about you.
+  - term: Dramatization
+    meaning: A small on-screen label saying the people are actors, not a real unscripted talk.

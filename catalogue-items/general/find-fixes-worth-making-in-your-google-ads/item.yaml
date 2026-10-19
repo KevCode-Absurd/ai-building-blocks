@@ -15,5 +15,9 @@ outputs:
 uses: []
 origin: rebuilt
 source_ids: [CES-090]
-old_name: operator-performance (google-diagnostics)
-version: 1.0.0
+old_name: Google Ads export review by area
+version: 1.1.0
+credits:
+  - {title: "About Quality Score for Search campaigns", by: "Google Ads Help", url: "https://support.google.com/google-ads/answer/6167118", used: "Quality Score is a diagnostic, not an auction input or a goal; its three parts and 90-day comparison"}
+  - {title: "About negative keywords", by: "Google Ads Help", url: "https://support.google.com/google-ads/answer/2453972", used: "Negative match types, and that negatives don't cover close variants"}
+  - {title: "Google adds search terms visibility to Performance Max campaigns", by: "Search Engine Land", url: "https://searchengineland.com/google-adds-search-terms-visibility-to-performance-max-campaigns-453489", used: "Performance Max search terms and campaign-level negatives"}

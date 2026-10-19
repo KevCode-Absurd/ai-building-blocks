@@ -19,4 +19,8 @@ example: founder-image
 origin: own
 source_ids: [CES-114]
 old_name: script-format-founder
-version: 1.0.0
+version: 2.0.0
+credits:
+  - {title: "5 Quick Techniques for Better On-Camera Interviews", by: "Sanora Bartels, New York Film Academy", url: "https://www.nyfa.edu/student-resources/on-camera-interviews-tips", used: "Open how and why questions, chatting off camera first, leaving pauses, using the subject's own words"}
+  - {title: "FTC's Endorsement Guides: What People Are Asking", by: "US Federal Trade Commission", url: "https://www.ftc.gov/business-guidance/resources/ftcs-endorsement-guides-what-people-are-asking", used: "Endorsements must reflect real experience; experts speak within their expertise"}
+  - {title: "Creators: 150 WPM Timing and Formatting for Voice Over Script Writing", by: "VoiceBros Team", url: "https://voicebros.com/en/blog/voice-over-script-writing", used: "Word counts per length from a talking pace"}

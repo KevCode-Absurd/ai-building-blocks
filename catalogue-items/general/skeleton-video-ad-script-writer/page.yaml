@@ -1,0 +1,222 @@
+new_slug: skeleton-video-ad-script-writer
+name: "Skeleton video ad script writer"
+summary: "Name the habit you replace. Get a skeleton comedy video script, claims list and score out of 100."
+job: make-video-ads
+
+headline: "Skeleton video ad script writer"
+subhead: Give it your product, the old habit it replaces and your approved claims. It asks one open question and climbs four ever-sillier steps with a cartoon skeleton, then your product lands once. You get a timed script, a claims list, a cast note and a score out of 100.
+
+explain: |
+  Some selling ideas are about things building up: the tubs you gave up on, the mess a small problem makes over a year. A camera can't film that in 30 seconds. A cartoon skeleton can, and an open question ("How many tubs can one cupboard hold?") keeps people watching until the answer.
+
+  This skill builds the script like a comedy sketch. It finds the "game", the one thing that grows, and picks how each step is counted on screen: a count, a distance, a crowd or, only with proof, a time. Then it climbs four rungs, from true to life to the place giving up. Every rung changes one thing in one place, so the climb reads with the sound off. Any number tied to a result must come from your approved claims. Silly exaggeration is free.
+
+  It ends with a cast note on how the skeleton should look and why. The skill that turns a skeleton script into shots takes it from there.
+
+when:
+  - Your product replaces a habit or a pile of old things, and you want to show where the old way ends up.
+  - You need an ad for people who don't yet think they have a problem, and a straight product ad would get skipped.
+  - You want something funny and visual that still keeps every claim honest.
+
+you_give:
+  - Your product, who it's for, how much they already know, and the length (15, 25 or 35 seconds)
+  - The old habit or old things it replaces, and how your product is used
+  - Your approved claims, any time points you can back with a source, and your offer
+  - Review lines about the old way (optional)
+  - A signature item for the skeleton, like a cap or scarf (optional)
+you_get:
+  - The game in one sentence, what grows, how it's counted, and why it fits
+  - A script table with each rung's label, narration, picture beats and seconds
+  - A timing map with the word count, and a claims list showing which labels are free
+  - A cast note on how the skeleton should look, and why
+  - A score out of 100 for how many of its own checks the script passes, with any it missed
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your product facts and approved claims underneath. Your brand file works.
+  - Write the old habit your product replaces, in your customers' words if you have them.
+  - Say the length ("25 seconds") and who the ad is for.
+  - Check the claims list. Any rung with a number tied to a result should point to a claim you hold.
+  - Take the script and cast note to the skill that turns a skeleton script into shots. It runs the video process from there.
+
+how_it_works:
+  - title: Checks the fit
+    text: Confirms the idea is about something building up, which suits people who don't see the problem yet. A change in a body is never the subject.
+  - title: Finds the game
+    text: Writes "the more X, the more Y grows" in one line, and picks whether it runs without your product (a pile-up) or with it (a win).
+  - title: Picks what grows
+    text: A pile, a space, a crowd or how far the effect reaches. Then a label for each rung, preferring counts over times.
+  - title: Writes the question
+    text: One open question about the viewer's habit, under 10 words, that the last rung answers.
+  - title: Climbs four rungs
+    text: True to life, a bit much, silly, then the peak. Only one thing changes each time, in one place.
+  - title: Lands the product once
+    text: Right after the peak, or in the first rung if the ad runs with your product. Then the offer, with exact terms on screen.
+  - title: Checks every claim
+    text: Allows a result, time or count claim only if it's approved. Plain labels and silly exaggeration are free.
+  - title: Writes the cast note
+    text: Says how the skeleton should look (default, a signature item, or dressed for the place) and any silent onlookers, and why.
+
+output_shape: |
+  GAME      The more <habit>, the more <thing you can see> grows.
+  RUNS      <without it / with it>   GROWS <pile / space / crowd / reach>
+  LABEL     <count / distance / crowd / time>
+  WHY       <one line>
+
+  QUESTION  "<open question about the viewer's habit>"
+
+  #  label   narration                 picture (wind-up, change, reaction)   s
+  <one row per rung, then the turn, the claim line and the close>
+
+  ON SCREEN (close)  <exact offer terms>
+
+  TIMING  <words> spoken words (target <target>), about <seconds> s
+
+  CLAIMS
+  <label or claim>   <free, or approved claim and its source>
+  Not used: <claims left out, and why>
+
+  CAST NOTE  <skeleton look, onlookers>: <why>
+  MISSING: <facts it needed and didn't get>
+
+  SCORE  <n>/100 (<passed> of <total> checks passed)
+  Missed: <one line per check missed, or none>
+
+example:
+  business: sprout
+  input: |
+    [the skill]
+
+    Length: 25 seconds
+    Product: Sprout daily greens gummies. A pouch of 28 daily packs;
+    tear one pack and eat the small handful of gummies inside.
+    No water, no mixing, no shaker.
+    Buyer: the quitter who wants to stick, 28 to 45. Has quit greens
+    powders and pill stacks. Knows the problem, not the fix.
+    Old way: a half-used tub of greens powder and a shaker.
+    Reviews: "the drink was definitely gritty/chalky", "not having to
+    clean a shaker bottle".
+    Approved claims: "60+ ingredients, 21 vitamins & minerals, and 6g
+    fiber" in 1 pack. "Supports digestion and gut health."
+    Never say: fix, treats, energy or immunity results, weight loss.
+    Time points we can back: none.
+    Offer: $29.99 first order with the text sign-up, renews at $49.99
+    every 4 weeks. 30-day money back, first order only.
+    Show it right: daily pack torn straight across its top edge;
+    gummies pour from the top into a palm; the pouch opens only at its
+    resealable top.
+    Voice: playful, cheeky, short lines. "Rip. Tip. Enjoy."
+  output: |
+    GAME      The more powder tubs you give up on, the fuller the
+              cupboard gets.
+    RUNS      without it   GROWS space (one kitchen cupboard)
+    LABEL     count (tubs)
+    WHY       Sprout replaces the tub and the shaker, and reviewers name
+              the chalky powder as what they quit. No time points are
+              held, so the labels are tub counts with no result.
+
+    QUESTION  "How many half-used tubs can one cupboard hold?"
+
+    #  label   narration                          picture                  s
+    Q  none    "How many half-used tubs can one   wide: a sunny kitchen,   0-3.5
+               cupboard hold?"                    one open cupboard, a
+                                                  row of identical tubs
+                                                  end to end, sealed. The
+                                                  pouch small on the far
+                                                  counter.
+    1  TUB 1   "Tub one. Two scoops, then the     lifts the scoop; tub 1   3.5-7.5
+               chalky taste wins."                goes back, lid half on;
+                                                  eyes squint, shoulders
+                                                  drop
+    2  TUB 5   "Tub five. The shelf starts to     reaches for tub 5; five  7.5-10.5
+               bend."                             tubs open, shelf dips;
+                                                  eyes flick to the dip
+    3  TUB 12  "Tub twelve. The door needs a hip  pushes the door; twelve  10.5-14
+               to shut."                          open, shelf sags, door
+                                                  springs back; it leans
+                                                  in with one hip
+    4  TUB 20  "Tub twenty. The cupboard gives    steps back; the shelf    14-18.5
+               up."                               folds and tubs slide to  (held)
+                                                  the floor; eyes wide,
+                                                  arms full
+    T  none    "Or skip the tub. Rip. Tip.        turns to the counter,    18.5-21.5
+               Enjoy."                            tears one daily pack
+                                                  straight across its top
+    C  none    "Sprout gummies. Sixty-plus        close: green gummy bears 21.5-24.5
+               ingredients in one daily pack."    pour from the torn top
+                                                  into its palm
+    O  offer   "First order, $29.99 with text     hold: pouch and pack     24.5-27
+               sign-up."                          front on, cupboard behind
+
+    ON SCREEN (close)  $29.99 first order with SMS sign-up. Renews at
+    $49.99 every 4 weeks. 30-day money back, first order only.
+
+    TIMING  59 spoken words (target 55, within 10%), about 27 s with
+    the beats after each label. Each rung joins the next on a match
+    cut: same camera, skeleton on the same spot, only the tubs moved on.
+
+    CLAIMS
+    Tub 1, 5, 12, 20      counts with no result: free
+    "chalky taste"         the old way, from a review: free
+    Bent shelf, door       plain exaggeration: free
+    "Sixty-plus ingredients in one daily pack"
+                           approved claim, brand file
+    $29.99, $49.99         price page; the SMS condition and the
+                           renewal are on screen, in full
+    Money back             FAQ: 30 days, first order only
+    Not used: "supports digestion". It would need its own game; this
+    one is about quitting, not the gut.
+
+    CAST NOTE  The default skeleton, no clothes, alone in the kitchen.
+    No onlookers: the joke is the cupboard, and one figure keeps every
+    rung's picture clear. Add a signature item if Sprout runs a series.
+    MISSING: nothing for this script.
+
+tweaks:
+  - what: Which way it runs
+    how: Without your product, the old way piles up and the peak is a mess people enjoy watching. With it, the good effect spreads. Choose "with it" only if you can back every rung that shows a result.
+  - what: What grows on screen
+    how: Ask for a pile, a space, a crowd or reach. A crowd suits things people notice, like a scent or a bag. A space suits things that protect or maintain.
+  - what: The label on each rung
+    how: Counts, distances and crowd sizes are free. A time label like "Week 3" next to a result reads as a promise, so give a sourced time point or keep the result off it.
+  - what: Length
+    how: 15 seconds drops rung 2 and keeps about 30 words. 35 seconds gives each rung more room at about 75 words.
+  - what: The skeleton
+    how: Give it one signature item it wears in every ad, like a cap or scarf, so people start to know it. Or dress it for the place.
+
+judge:
+  - The question is about the viewer's habit, not your product, and the last rung answers it.
+  - Each rung goes one step further on the same thing, and nothing else changes.
+  - Any number or time tied to a result points to a claim you actually hold.
+  - The skeleton never speaks and its bones never change. Only its situation does.
+  - The product shows up once, after the peak or in the first rung, and the ad never stops to sell midway.
+  - The cast note says how the skeleton looks, and the reason fits your brand.
+
+test:
+  - Run it on a product with no time points you can back. Every label should come back as a count, distance or crowd, with no result next to it.
+  - Read the four rungs out of order to a colleague and ask them to put them back. If they can't, the climb isn't steep enough.
+  - Run the same brief twice. The game sentence should stay close; if it jumps to a new idea, write the old habit more exactly in your brief.
+  - Time yourself reading the script aloud at an easy pace. A 25-second script should take 23 to 28 seconds.
+
+improve:
+  - Add the habit your buyers quit, in their own words, to "What you need" in the skill file, so every run starts from the real old way.
+  - Write your product-showing rules (how the pack opens, what never appears) into the video section, so picture notes get them right first time.
+  - Pick one signature item for your skeleton and write it into "The skeleton", so it becomes a character people know across ads.
+  - Save the question that wins in your brand file, then test new questions on the same game.
+  - Pair it with the skill that turns a skeleton script into shots, which runs the full video process.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Claude, ChatGPT and Gemini all follow this skill well, so use the one you already have."}
+  inputs:
+    - "Photos of the old things your product replaces, so each step shows real objects"
+    - "A short list of jokes your brand won't make, so the humor stays on brand"
+    - "Results from a past skeleton ad, so the next question tests something new"
+
+terms:
+  - term: Game
+    meaning: The one unusual thing in a comedy bit that keeps coming back bigger. Here, the thing that grows each rung.
+  - term: Rung
+    meaning: One step of the climb. Each rung has a label, one narrated line and one picture.
+  - term: Match cut
+    meaning: A cut between two shots framed the same way, so only the thing that changed stands out.

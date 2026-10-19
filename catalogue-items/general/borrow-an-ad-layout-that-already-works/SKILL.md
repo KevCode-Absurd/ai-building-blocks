@@ -9,7 +9,7 @@ You keep the layout of a reference ad or template and nothing else, and rebuild 
 
 A template is tempting because the layout already reads well. It also asks for things: five comparison rows, a customer photo, a star rating, a discount. Fill those with guesses and the ad claims what nobody can back. So every spot is tested against the proof before anything is written.
 
-This workflow uses "Find image ad types worth testing next" for the ad type map and `stop-image-tools-redrawing-your-product-and-words` for the image prompts.
+This workflow uses "Find image ad types worth testing next" for the ad type map and `product-exact-image-prompt-writer` for the image prompts.
 
 ## What you need
 - **Brand facts** (required): voice, colours and typefaces, the never-say list, the figures you may quote (ratings, counts, prices, sizes) with their source, the live offer if any, customer quotes with where they came from, and the logo file.

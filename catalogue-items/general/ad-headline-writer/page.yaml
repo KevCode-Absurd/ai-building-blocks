@@ -1,0 +1,182 @@
+new_slug: ad-headline-writer
+name: "Ad headline writer"
+summary: "Paste your buyer and facts. Get plain headlines with character counts and a score out of 100."
+job: write-ad-copy
+
+headline: "Ad headline writer"
+subhead: Give it a note on your buyer, your facts and how many lines you need. It writes each line from a different way in, using only what you can back, and runs a glance test. You get headlines with character counts and a score out of 100.
+
+explain: |
+  Most people read the headline and nothing else, so it gets one look to pick out its reader and give them a reason. Headlines go wrong in a few predictable ways. They get clever and need decoding. They drop the small words to fit the space ("Gut health, sorted"). They label the reader ("busy mums") instead of describing their day. Or five lines make the same argument, so a test tells you nothing.
+
+  This skill first sets what a line may say for how aware the buyer is, from a moment in their day to the deal. Then it lists what you can actually back: a plain gain, an exact fact, something new and dated, a customer's own words, or the question buyers already ask. Each line uses a different way in. Any way in with nothing behind it is skipped, never faked. Every line is counted against its limit and has to pass a glance test.
+
+when:
+  - You need several headlines for an ad test, each trying a different argument.
+  - You're writing the words on an ad image and want them to add to the picture, not describe it.
+  - Your headlines keep coming out clever or clipped, and you want plain ones that still sell.
+
+you_give:
+  - A note on the buyer, how aware they are, the one thing they want and their main doubt
+  - Your offer and facts, the proof you may use, any dated news, and the price if relevant
+  - How many lines, their character limits and where they appear
+  - The picture, for words on an image (attach it; your AI can see pictures) (optional)
+  - Real customer quotes, word for word with their source (optional)
+you_get:
+  - A numbered list of headlines or image lines, each with a different way in
+  - For each, who it's aimed at, its character count and its glance test result
+  - The line to test first, and the ways in it skipped for lack of proof
+  - A score out of 100 for how many of its own checks the set passes, with each miss named
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Describe the buyer, how aware they are and their doubt in two or three lines.
+  - Paste the facts and proof it may use, and any real customer quotes.
+  - Say how many lines and the limits, for example "4 lines for the image, under 40 characters each".
+  - Show the lines to someone who doesn't know your brand. Drop any they can't explain back to you.
+
+how_it_works:
+  - title: Sets the level
+    text: Matches what a line may say to how aware the buyer is, from a moment in their day to the deal itself.
+  - title: Lists what you can back
+    text: A plain gain, an exact fact, dated news, a customer's words or the buyer's own question, each only if your material holds it.
+  - title: One way in per line
+    text: Each line uses a different way in, so no two lines make the same argument.
+  - title: Fits the space
+    text: Counts the characters. If a line won't fit, it says a smaller thing rather than dropping the small words.
+  - title: Fits the picture
+    text: Image words add what the picture can't show, and never label what's already visible.
+  - title: Runs the glance test
+    text: Under the limit, no word a stranger would look up, and the offer clear in one look. Lines that fail are rewritten or dropped.
+  - title: Scores the set
+    text: Goes through its own checks, such as no two lines with the same way in, fixes what it can, and scores checks passed out of all checks, times 100.
+
+output_shape: |
+  LEVEL
+  <how aware the buyer is, and what that lets the lines say>
+
+  LINES
+  <n>. <the headline or image line>
+     Way in:      <plain gain / exact fact / news / their words /
+                  their question>
+     Aimed at:    <the buyer it targets>
+     Characters:  <count>
+     Glance test: <pass, or what failed>
+  Test first: line <n>
+
+  SKIPPED
+  <ways in with no material behind them>
+
+  MISSING
+  <proof or buyer detail a line would need>
+
+  SCORE
+  <passed> of <all> checks = <score> out of 100
+  Missed: <one line per check still missed, or none>
+
+example:
+  business: sprout
+  input: |
+    [the skill]
+
+    Buyer: busy parents, mostly mums, with picky eaters at home. They
+    want no fight at the table. Doubt: "Is this just candy?" They've
+    tried other kids' green options, but don't know Sprout Kids.
+    Facts: Sprout Kids, 1 pack a day, 6 gummies, Strawberry Burst
+    flavour, ages 2 to 13. Methylfolate, not folic acid. Free from
+    synthetic dyes and synthetic sweeteners. Vegan.
+    Customer quote (brand site, Kids page): "I have tried all of the
+    'green' options for the kids and this is the only one they love
+    eating. They think it's a treat."
+    Count and limits: 4 lines for the image, under 40 characters each
+    Picture: a small hand taking gummies from a torn yellow Sprout Kids
+    pack at a breakfast table
+  output: |
+    LEVEL
+    Solution aware. They've tried other kids' green options but don't
+    know Sprout Kids. So each line says what's different about this
+    one. Opening on the problem would be a step too far back.
+
+    LINES
+    1. Is it candy? No synthetic dyes.
+       Way in:      their question, answered from the facts
+       Aimed at:    parents who read the back of the pack
+       Characters:  31
+       Glance test: pass
+
+    2. Their greens, without the dinner fight
+       Way in:      plain gain
+       Aimed at:    parents worn out by the nightly standoff
+       Characters:  38
+       Glance test: pass
+
+    3. "They think it's a treat."
+       Way in:      their words, supplied word for word
+       Aimed at:    parents who've tried other green options
+       Characters:  26
+       Glance test: pass
+
+    4. Methylfolate, not folic acid
+       Way in:      exact fact
+       Aimed at:    parents who compare labels
+       Characters:  28
+       Glance test: fails. A stranger can't say what it means for
+                    their child, and no reason is on file. Dropped.
+
+    Test first: line 1. It answers the doubt buyers already have.
+
+    SKIPPED
+    News: nothing new and dated on file.
+
+    MISSING
+    - why methylfolate matters for kids, to rescue line 4
+    - grams of sugar per pack, to answer "is this candy?" with a number
+
+tweaks:
+  - what: How aware the buyer is
+    how: This sets what a line may say. If you're unsure between two levels, say so. It writes for the less aware one, so expect plainer lines with no product name.
+  - what: The limits
+    how: Give exact character limits. About 40 characters fits the headline under a Facebook image. On-image words can run longer, but fewer is better.
+  - what: Customer quotes
+    how: Paste real quotes word for word. Without them it skips the their-words way in, because it never invents what a customer said.
+  - what: Dated news
+    how: A new flavour, price or finding with its date opens the news way in. Without one, that way in is skipped.
+
+judge:
+  - A stranger understands every line without decoding.
+  - No two lines use the same way in.
+  - Each line picks out the reader by what they do or feel, not by a label.
+  - Every number, date and quote comes from what you gave it.
+  - Every question line is answered by a fact you supplied.
+
+test:
+  - Give it the brief behind a headline that already won for you. Look for a line with the same way in. If none, check the level it set. It may think the buyer knows less than they do.
+  - Run it twice. The level should match. The lines can differ, but the ways in it skips should be the same.
+  - Show the lines one at a time to someone who has never heard of your brand. Cross out any they need explained.
+  - Count the characters on two lines yourself and check them against your limits.
+  - Test the line it marks first against your current headline, with the same image and offer.
+
+improve:
+  - Write your field limits into "Count and limits" in the skill file (for example "headline under 40 characters"), so you never repeat them.
+  - Add your best customer quotes, word for word with their source, to "What you need", so the their-words way in can always run.
+  - Add the words your brand never puts on an image to step 5.
+  - Save each winning line, with its way in and the level it was aimed at, to your brand file.
+  - Run "Buyer brief writer" first, and pair it with "Image ad copy writer" for the main text and description.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Short lines built from your facts come out well in any strong chat AI with this skill."}
+    - {name: "Meta Ads Manager", why: "Its ad preview shows whether each headline fits under the image on every placement."}
+  inputs:
+    - "Ten to twenty reviews in your buyers' own words, so the their-words and their-question lines use real phrases"
+    - "Your past headlines with their results, so it knows which ways in your buyers answer to"
+    - "Anything new with its date, such as a flavour, price or finding, so the news way in can run"
+    - "A screenshot of the image, so the words add what the picture can't show"
+
+terms:
+  - term: Headline
+    meaning: The short bold line in an ad, either on the image or in the field under it.
+  - term: Way in
+    meaning: The approach a line takes, such as a plain gain, an exact fact or the buyer's own question.
+  - term: Glance test
+    meaning: Whether a stranger could say what's on offer, and who it's for, after one look.

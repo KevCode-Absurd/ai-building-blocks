@@ -24,7 +24,7 @@ Every block that turns a script into AI video follows these stages, in this orde
 When there's no character: if the product alone carries the ad (motion graphics, satisfying motion, a product reel), stages 1 to 3 become the **product sheet** and **set sheet**. The product is the avatar.
 
 Which blocks this covers:
-- Real footage blocks, which only edit what was filmed (turn-footage-into-ad-people-follow, turn-raw-footage-into-a-clear-social-post), skip stages 1 to 4.
+- Real footage blocks, which only edit what was filmed (video-ad-edit-planner, social-video-edit-planner), skip stages 1 to 4.
 - Script blocks end by handing over the script and a cast note (who should carry it). The video block for that look runs stages 1 to 5.
 
 ## People and honesty

@@ -1,0 +1,29 @@
+slug: brand-voice-editor
+renamed_from: make-every-ad-sound-like-your-brand
+name: "Brand voice editor"
+summary: "Paste your ad and customer quotes. Get off-brand words fixed, claims untouched, and a score out of 100."
+category: general
+type: skill
+role: check
+job: copy
+level: intermediate
+inputs:
+  - {type: script, required: false}
+  - {type: ad_copy, required: false}
+  - {type: brand_brain, required: true}
+outputs:
+  - {type: audit_report}
+uses: []
+origin: own
+source_ids: [CES-012]
+old_name: brand-voice-check
+version: 1.1.0
+credits:
+  - {title: "The Four Dimensions of Tone of Voice", by: "Kate Moran, Nielsen Norman Group", url: "https://www.nngroup.com/articles/tone-of-voice-dimensions/", used: "The four scales a wrong-tone line is checked against"}
+  - {title: "Voice and Tone", by: "Mailchimp Content Style Guide", url: "https://styleguide.mailchimp.com/voice-and-tone/", used: "Voice stays the same while tone shifts by situation"}
+tested:
+  on: 2026-10-19
+  business: sprout
+  model: claude-opus-5-5
+  judge: claude-fable-5-1
+  result: fail

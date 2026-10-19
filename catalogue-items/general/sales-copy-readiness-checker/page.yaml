@@ -1,0 +1,180 @@
+new_slug: sales-copy-readiness-checker
+name: "Sales copy readiness checker"
+summary: "Paste finished copy and facts. Get ship, fix or rewrite, three fixes and a score out of 100."
+job: check-ads
+
+headline: "Sales copy readiness checker"
+subhead: Paste a finished ad, page or email and your facts. It checks every claim against your facts, measures the reading grade and runs twelve yes or no checks. You get ship, fix or rewrite, up to three fixes and a score out of 100.
+
+explain: |
+  The last read before copy goes out is usually a gut feeling. Someone says "looks good" or "something's off", and nobody can say what. Copy then ships with a claim the product can't back, or gets rewritten for being plain when plain was fine.
+
+  This skill makes that read a set of checks that follow the reader. First a facts gate: every number, quote and claim is marked held, contradicted or not in your facts. Then the reading grade and the longest sentence. Then twelve checks, grouped as the reader meets the piece: notice, understand, believe, act, and fit. A failure early on means a rewrite, because the reader leaves before the rest matters. A failure later means fixing named lines. Anything your facts contradict blocks the piece.
+
+when:
+  - An ad, page or email is finished and you need a ship or don't-ship decision.
+  - You're reviewing a writer's or an AI's copy and want reasons you can send back.
+  - Two people disagree about whether a piece is ready.
+
+you_give:
+  - The finished copy
+  - Your approved claims, prices and offer terms (strongly recommended)
+  - Who it's for, how aware they are, and their main doubt (optional)
+you_get:
+  - A verdict, blocked, rewrite, fix or ship, with the part or lines named
+  - Every number and claim marked held, contradicted or unverified
+  - The reading grade and the longest sentence, against a target
+  - Twelve yes or no answers, each with the line behind it, and up to three fixes
+  - A readiness score out of 100 (the share of the 12 checks and 2 measures it passes), now and with the fixes made
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste the finished copy underneath.
+  - Paste your approved claims and offer terms. Without them, nothing can be marked held.
+  - Add one line on who it's for and their main doubt.
+  - Fix the first fix on the list, then run it again.
+
+how_it_works:
+  - title: Checks the facts
+    text: Marks every number, quote, rating and claim as held, contradicted or unverified against your facts.
+  - title: Measures it
+    text: Gives the reading grade and longest sentence, against grade 8 for ads and emails and 10 for pages.
+  - title: Notice and understand
+    text: Does the first line flag the reader? Can a stranger say what it is? Does a skim carry the argument?
+  - title: Believe and act
+    text: Is each claim backed beside it, the main doubt answered, the ask clear, and every term stated in full?
+  - title: Checks the fit
+    text: Is the length right for how aware this reader is?
+  - title: Gives the verdict
+    text: Contradicted facts block it. Early failures mean rewrite. Later failures mean fix the lines. Otherwise, ship.
+
+output_shape: |
+  VERDICT: <BLOCKED / REWRITE (part) / FIX (lines) / SHIP>
+
+  FACTS GATE
+  "<item>"  <held / contradicted / unverified>
+
+  MEASURES
+  Grade <n> (target <n>), longest sentence <n> words
+
+  NOTICE      1 <yes/no> <line>   2 <yes/no> <line>
+  UNDERSTAND  3 ...  4 ...  5 ...
+  BELIEVE     6 ...  7 ...  8 ...
+  ACT         9 ...  10 ... 11 ...
+  FIT         12 ...
+
+  FIXES
+  1. <blocker or first failure>
+  2. <...>
+  3. <...>
+
+  READINESS SCORE
+  Now: <passed> / <judged> x 100 = <score>
+  With the fixes made: <score>
+
+example:
+  business: sprout
+  input: |
+    [the skill]
+
+    Copy (Facebook ad, emoji removed):
+    Main text: Big news: your first order of [Sprout] just got a lot
+    more affordable. $29.99 for your first order, that's less than
+    $1.10/day for 60+ whole-food ingredients, 21 vitamins & minerals,
+    and gut-supporting probiotics in one daily gummy pack. $20 off your
+    first order. +$5 off for every extra person. Third-party tested.
+    Online-exclusive offer. Shop [Sprout].
+    Headline: Get up to 61% OFF + 4 FREE gifts: online exclusive
+
+    Buyer: knows Sprout and thinks it costs too much. Doubt: "Will the
+    price jump after the first order?"
+
+    Facts: 60+ ingredients, 21 vitamins & minerals, 6 g prebiotic
+    fiber (no probiotics in the ingredient list). First box $29.99 with
+    the text sign-up discount, then $49.99 every 4 weeks. 30-day
+    money-back guarantee, first order only. Third-party tested.
+  output: |
+    VERDICT: BLOCKED, then FIX (main text)
+
+    FACTS GATE
+    "gut-supporting probiotics"     contradicted (prebiotic fiber only)
+    "$29.99 for your first order"   held, but the text sign-up
+                                    condition is missing
+    "60+", "21 vitamins & minerals" held
+    "Third-party tested"            held
+    "$20 off", "+$5 off", "up to 61% OFF + 4 FREE gifts",
+    "Online-exclusive"              unverified
+
+    MEASURES
+    Grade 6.6 (target 8), longest sentence 25 words
+
+    NOTICE      1 yes  "just got a lot more affordable" flags a price
+                       doubter
+                2 yes  the first line and "Shop" say it's a cheaper
+                       first order
+    UNDERSTAND  3 yes  "one daily gummy pack"
+                4 yes  headline and first line both carry the deal
+                5 no   "$29.99 for your first order, that's less than
+                       $1.10/day for 60+..." packs four ideas
+    BELIEVE     6 no   "gut-supporting probiotics" has no fact behind it
+                7 no   the counts never say what changes for the buyer
+                8 no   nothing says it renews at $49.99
+    ACT         9 no   "Shop [Sprout]" doesn't say what they get
+                10 no  renewal price, sign-up condition and guarantee
+                       are all missing
+                11 cannot verify "Online-exclusive"
+    FIT         12 yes short, right for a buyer who knows Sprout
+
+    FIXES
+    1. Remove "probiotics". The product has prebiotic fiber.
+    2. Pick one deal and state it in full: $29.99 for the first box with
+       the text sign-up discount, then $49.99 every 4 weeks.
+    3. Add the 30-day guarantee with its first-order limit, and make the
+       ask say what they get ("Get my first box").
+
+tweaks:
+  - what: The facts
+    how: The facts gate is only as good as your facts. Paste prices, terms and approved claims, and most items come back held or contradicted instead of unverified.
+  - what: The buyer line
+    how: Check 12 compares length with how aware the buyer is. Say "has never heard of us" and a short ad fails; say "ready to buy" and a long one does.
+  - what: The reading grade target
+    how: It uses grade 8 for ads and emails and 10 for pages. Set your own if your buyers read at a different level.
+  - what: Several pieces
+    how: Paste one piece per run. Mixing an ad and its landing page blurs which line failed.
+
+judge:
+  - Every no quotes a real line from your copy.
+  - Every number and claim in the copy appears in the facts gate.
+  - The verdict follows the rule, with blocked items first.
+  - No fix asks you to add a fact you don't have.
+  - It doesn't mark you down for being plain or using "best" in your own voice.
+
+test:
+  - Run it on a piece you know worked and one you know flopped. The winner should ship or need small fixes.
+  - Run it twice on the same piece. The verdict and the facts gate should match.
+  - Paste copy with one guarantee condition left out. Check 10 should catch it.
+  - Plant a number your facts contradict. The verdict should be blocked.
+  - Check the reading grade with a free readability checker. It should be close.
+
+improve:
+  - Paste your exact guarantee wording and offer terms into "Facts" in the skill file, so the gate always has them.
+  - Add a check of your own under Act or Believe if every piece must pass a rule of yours, such as "every star rating names its source".
+  - Save the checks your copy fails most often to your brand file, and give them to writers up front.
+  - Run "Edit a draft so it reads clean and sells" first, so this is the final check, not the first edit.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Any current chat AI can run the 12 checks. Paste your facts so the facts gate can mark items held."}
+    - {name: "Hemingway Editor", why: "Gives a reading grade and marks hard sentences, so you can confirm the two measures."}
+  inputs:
+    - "A phone screenshot of how the piece will look, so the length and the ask are judged in place"
+    - "The ad or email that leads to it, so check 1 can test whether the first line matches"
+    - "Earlier versions that ran and their results, so the fixes avoid what already failed"
+
+terms:
+  - term: Facts gate
+    meaning: A check that every number, quote and claim in the copy matches the facts you gave it.
+  - term: Reading grade
+    meaning: The school year a reader needs to follow the text easily, worked out from sentence and word length.
+  - term: The ask
+    meaning: The part that tells the reader what to do next.

@@ -1,0 +1,28 @@
+slug: product-image-spec-writer
+renamed_from: stop-ai-pictures-getting-your-product-wrong
+name: "Product image spec writer"
+summary: "Attach your product photos. Get a sourced truth sheet, lock lines and a score out of 100."
+category: ecommerce
+type: skill
+role: source
+job: image
+level: intermediate
+inputs:
+  - {type: product_photos, required: true}
+  - {type: product_data, required: false}
+outputs:
+  - {type: truth_sheet}
+uses: []
+origin: rebuilt
+source_ids: [CES-096, CES-049, CES-036, CES-009]
+old_name: product truth sheet
+version: 2.0.0
+credits:
+  - {title: "How To Create a Tech Pack To Send To Manufacturers", by: "Danielle Bauter, Shopify", url: "https://www.shopify.com/blog/how-to-create-a-tech-pack", used: "The spec-sheet shape: materials, construction, artwork and label placement"}
+  - {title: "Gpt-image-1.5 Prompting Guide", by: "OpenAI Cookbook", url: "https://developers.openai.com/cookbook/examples/multimodal/image-gen-1.5-prompting_guide", used: "Restating what must stay fixed in every prompt: the lock lines"}
+tested:
+  on: 2026-10-19
+  business: sprout
+  model: claude-opus-5-5
+  judge: claude-sonnet-5-5
+  result: pass

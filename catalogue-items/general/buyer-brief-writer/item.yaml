@@ -1,0 +1,29 @@
+slug: buyer-brief-writer
+renamed_from: know-who-youre-writing-for
+name: "Buyer brief writer"
+summary: "Paste your offer and some reviews. Get a half-page buyer brief and a score out of 100."
+category: general
+type: skill
+role: compress
+job: copy
+level: intermediate
+inputs:
+  - {type: voc_reviews, required: true}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: brief}
+uses: []
+origin: rebuilt
+source_ids: [CES-022]
+version: 2.0.0
+credits:
+  - {title: "Breakthrough Advertising", by: "Eugene Schwartz", url: "https://en.wikipedia.org/wiki/Eugene_Schwartz", used: "The five awareness levels and the stages of what a market has heard"}
+  - {title: "The Four Forces", by: "Bob Moesta and Chris Spiek, The Re-Wired Group", url: "https://jobstobedone.org/the-four-forces/", used: "Push, pull, anxiety and habit as the forces behind a switch"}
+  - {title: "Know Your Customers' Jobs to Be Done", by: "Clayton M. Christensen, Taddy Hall, Karen Dillon and David S. Duncan, Harvard Business Review", url: "https://hbr.org/2016/09/know-your-customers-jobs-to-be-done", used: "Describe the buyer by the situation and the progress they want, not by a label"}
+  - {title: "Replacing the User Story with the Job Story", by: "Alan Klement", url: "https://oreil.ly/UGXy_", used: "The When / I want to / so I can shape of the job line"}
+tested:
+  on: 2026-10-19
+  business: sprout
+  model: claude-opus-5-5
+  judge: claude-fable-5-1
+  result: pass

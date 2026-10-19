@@ -1,0 +1,167 @@
+new_slug: tracker-chart-image-ad-maker
+name: "Tracker chart image ad maker"
+summary: "Paste your story ad and claims. Get a tracker-photo image prompt and a score out of 100."
+job: make-image-ads
+
+headline: "Tracker chart image ad maker"
+subhead: Paste your story ad and the claims you can back. It checks the chart, calendar or test strip is one your buyer reads at home, then briefs a phone photo with one rough mark. You get the image prompt, the line under it and a score out of 100.
+
+explain: |
+  People who track something stare at the same screens: a sleep chart, a habit calendar, a test strip held to its colour card. A photo of that reading, with one rough mark on the part that matters, makes them look twice. They have seen that exact gap or dip on their own phone.
+
+  This skill starts with a gate. The reading must be one the buyer takes themselves, the brand must be able to back what the story says about it, and it must look ordinary, with no condition named and no clinic paperwork. Then it picks the one part that tells the story, marks it once in the colour least present in the photo, and keeps every readable number to the ones in your story. It never shows scans or doctors' files, because those invite a diagnosis the brand can't make.
+
+when:
+  - Your story mentions something the buyer measures or counts, like sleep, a streak or a test strip.
+  - You have claims with sources that cover what the story says about that reading.
+  - You want a picture that sorts trackers from everyone else at a glance.
+
+you_give:
+  - Your approved story ad and the reading it mentions
+  - The claims you can back about that reading, with sources
+  - Any real numbers the story states (optional)
+you_get:
+  - The gate's three answers, so you can see why it passed
+  - The reading, the one part that tells the story, and the mark
+  - Each readable number and where it came from
+  - A 60 to 120 word photo prompt, plus how to add the mark by hand
+  - A score out of 100 for the share of its six checks the brief passes, with each one missed
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your story ad and your claims list. Without sources, it stops.
+  - If you can, build the real chart yourself from the story's numbers and photograph it on a second phone.
+  - Otherwise make the photo from the prompt, then draw the mark in your phone's photo editor.
+  - Have a person check the claims behind the reading before the ad runs.
+
+how_it_works:
+  - title: Sets the house rules
+    text: Square, looks taken on a phone, no logo, price, button or brand colour, no face, no product unless asked.
+  - title: Runs the gate
+    text: The buyer takes this reading at home, the brand can back what the story says about it, and it can stay ordinary.
+  - title: Picks one part
+    text: The empty week, the dip at 3am, the square that changed colour. One part only.
+  - title: Marks it once
+    text: A rough circle or a short arrow, in the colour least present in the photo, best drawn by hand afterwards.
+  - title: Keeps numbers true
+    text: Every readable number comes from your story. The rest is blurred or cut off, so nothing invented can be quoted.
+
+output_shape: |
+  GATE              <three answers, one line each>
+  SCENE             <what someone scrolling would say they saw>
+  WHERE AND WHEN    <place, time, what's around it, camera spot>
+  THE READING       <what, on what, the one part that tells the story>
+  THE MARK          <circle | arrow>, <colour and why>, <where>
+  NUMBERS IN VIEW   <each readable number and its source, or none>
+  LINE UNDER IMAGE  <words> (<which line>, <characters>)
+  FLAGS             <claims behind the reading, with sources>
+  IMAGE PROMPT      <60 to 120 words, the photo alone>
+  MARK STEP         <by hand, or one fallback prompt line>
+  SCORE             <passed> / 6 checks x 100 = <score>, missed: <one line each>
+
+example:
+  business: sprout
+  input: |
+    [the skill]
+
+    Story ad (approved; narrator: a customer who agreed, example only):
+    My habit app has a row called "vitamins". In March it had 4
+    ticks out of 31.
+    I've tried a few green powders over the years. The issue was
+    never what was in them. It was sticking with it.
+    Sprout is one daily pack you tear open and eat: a small handful
+    of gummies, 21 vitamins and minerals, 6 g prebiotic fiber.
+
+    Claims list: 21 vitamins and minerals, 6 g prebiotic fiber
+    (label). "95% of users take Sprout at least 4-6x per week"
+    (brand survey of 3,000+ customers, always "of surveyed users").
+  output: |
+    GATE              Takes it herself: yes, a habit app on her phone.
+                      Brand can back it: the story only counts her own
+                      missed days, and claims nothing about the app.
+                      Ordinary: yes, a calendar with ticks, no
+                      condition named.
+    SCENE             A phone showing a month of a habit calendar with
+                      only four ticks, the empty weeks circled.
+    WHERE AND WHEN    Kitchen counter, evening, overhead light. The
+                      phone is held over the counter by a second phone.
+                      A mug and a set of keys at the edge.
+    THE READING       A generic habit app, month view, one row labelled
+                      "vitamins". Ticks on 4 days; the other 27 empty.
+                      The part that tells the story: the long empty
+                      stretch from the 9th to the 31st.
+    THE MARK          One rough red circle round the empty stretch.
+                      Red, because the app is grey and white and the
+                      counter is pale wood.
+    NUMBERS IN VIEW   The dates 1 to 31 (a calendar), "March" and
+                      "vitamins" (both from the story). No other text.
+    LINE UNDER IMAGE  4 ticks in March. (plain caption, 17)
+    FLAGS             A reading in the picture: a person checks the
+                      claims behind it. The picture claims nothing.
+                      If the copy adds the survey line, it must say
+                      "95% of surveyed users" and name the survey.
+                      Keep the app generic: no real app's icon,
+                      colours or layout.
+    IMAGE PROMPT      Square 1:1 phone photo of a second phone held
+                      over a pale wood kitchen counter in the evening,
+                      overhead light, a little glare on the screen.
+                      The screen shows a plain generic habit app in
+                      grey and white, month view for March, one row
+                      labelled "vitamins". Small grey ticks on four
+                      days only, the 2nd, 3rd, 5th and 8th; every
+                      other day is empty. A mug and keys at the frame
+                      edge, a thumb at the bottom of the phone.
+                      Slight tilt, unretouched. No logo, no app name,
+                      no other text, no product, no face, no marks.
+    MARK STEP         In your phone's editor, pick red and draw one
+                      quick, slightly open circle round the 9th to the
+                      31st. Fallback line: "One rough, uneven red
+                      circle round the empty days from the 9th to the
+                      31st."
+
+tweaks:
+  - what: Build the real chart
+    how: Make the calendar or chart yourself in a habit app or a spreadsheet using the story's numbers, then photograph it on another phone. Every number in it is then true.
+  - what: Circle or arrow
+    how: A circle suits an area, like an empty week. An arrow suits a line on a chart, like a dip at 3am. Ask for the one that fits, never both.
+  - what: Paper or screen
+    how: Ask for a log on paper (a fridge chart, a notebook) if your buyers track by hand. It looks even less like an ad.
+  - what: How much shows
+    how: Ask for a tighter crop if the reading has lots of small text. Less to read means less that can be wrong.
+
+judge:
+  - The reading is one your buyer takes themselves, not a clinic scan or a doctor's file.
+  - There's exactly one mark, on the part your story's first line explains.
+  - Every number you can read comes from your story or research.
+  - It names no condition and shows no name, date of birth or clinic.
+  - The app or sheet looks generic, with no real app's icon or colours.
+
+test:
+  - Give it a story about an X-ray or a lab report. It should stop and send you to a safer picture.
+  - Give it a reading with no claim behind it on your list. It should write MISSING and stop.
+  - Zoom into the finished picture. If any number you didn't give is readable, ask for it blurred.
+  - Run the marked photo against the same photo with no mark. Keep whichever brings more readers to the offer.
+
+improve:
+  - Add the readings your buyers mention in reviews (the app, the strip, the log) to your brand file. Their real readings make the strongest pictures.
+  - Keep a source next to every claim in your claims list. This skill can't run without them.
+  - Add your never-shown list to the house rules, so the photo leaves those things out.
+  - Pair it with a story ad skill, so the story's first line says what the marked part means.
+
+works_best_with:
+  tools:
+    - {name: "Google Sheets", why: "Builds the real chart from your story's numbers, so every figure in the photo is true."}
+    - {name: "Nano Banana", why: "Google's image model, which Google recommends for accurate text, so dates and labels come out right."}
+    - {name: "Your phone's photo editor", why: "Drawing the mark yourself looks rough and human, which image tools rarely manage."}
+  inputs:
+    - "A screenshot of the real reading your buyers mention, with personal details removed, so the layout looks right"
+    - "The exact numbers from the story or a customer, so nothing on the screen is made up"
+    - "Your claims list with a source and a date for each line, so the gate can pass"
+
+terms:
+  - term: Reading
+    meaning: A chart, count or result the buyer checks for themselves, like a sleep chart or a test strip.
+  - term: Gate
+    meaning: Three questions the idea must pass before the picture is briefed.
+  - term: Line under the image
+    meaning: The bold headline under the picture in a Facebook or Instagram ad.

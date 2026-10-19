@@ -1,0 +1,216 @@
+new_slug: shopify-landing-page-builder
+name: "Shopify landing page builder"
+summary: "Paste your page copy and theme. Get Shopify files, install steps and a score out of 100."
+job: write-landing-page
+
+headline: "Shopify landing page builder"
+subhead: Give it your finished page copy, your product's handle and your theme. It writes a section file and a page template with your copy loaded in. You get the files, an image list, six install steps and a score out of 100.
+
+explain: |
+  You've written a good landing page, and now it has to live in your Shopify store. Pasting it into a basic page loses the layout. Hiring a developer for one page is slow. And hand-built pages often have prices typed into the code, which go wrong the day you change a price.
+
+  This skill turns the copy into two Shopify theme files. A section file holds the layout, with your headline, button and guarantee line as settings you can edit in the theme editor, and repeated parts (each reason, review or question) as blocks you can add, remove or reorder. A page template loads the section with your real copy already in place, so the page looks finished on install. Prices are read from the product you pick, policies from your store's policy pages, and reviews from your reviews app or from real quotes. Nothing is invented as a default.
+
+when:
+  - You have finished copy for an article-style, reasons-to-buy or product landing page and want it in your Shopify store.
+  - You want to edit the words yourself in the theme editor afterwards, without touching code.
+  - You've been burned by a page with a typed-in price that went out of date.
+
+you_give:
+  - The finished page copy, with sections, headings, body, questions, offer rows, button text and risk lines
+  - Store details, such as the product's handle, the page handle and template name you want, and your theme
+  - Design notes, such as colours, fonts and spacing (optional)
+  - Which apps supply your reviews and subscriptions (optional)
+you_get:
+  - A section file and a page template, each in a code block with its file path
+  - A list of images to upload, with what each must show and its size
+  - Six install steps, and a MISSING list of anything left empty
+  - A score out of 100 for how many of its own checks the files pass, with each miss named
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your finished page copy. Write it first with a landing page skill if you haven't.
+  - Add your product's handle (the last part of its web address), the template name you want and your theme's name.
+  - Say which apps handle reviews and subscriptions, so it uses their blocks instead of rebuilding them.
+  - Follow the six install steps on a copy of your theme first, then place a test order before sending traffic.
+
+how_it_works:
+  - title: Plans the files
+    text: One section file, one page template that loads it, and an image list, following the Shopify theme code rules.
+  - title: Puts copy in settings
+    text: One-off parts like the headline are settings. Repeated parts like reasons and questions are blocks. The template carries your real copy so the page looks complete on install.
+  - title: Reads prices from the store
+    text: Adds a product picker and prints the price and any compare-at price from it. It never types a price.
+  - title: Wires up buying
+    text: An add-to-cart form with the variant, a size or colour picker for one-off products, and your subscription app's block for repeat products.
+  - title: Pulls facts from the store
+    text: Policies from your store's policy pages, sizes and materials from product fields. A fact the store doesn't hold is left empty, never filled with a default.
+  - title: Handles reviews and labels
+    text: Uses your reviews app's block or real quotes, with no default rating. Article-style pages get an "Advertisement" label that can't be switched off.
+  - title: Styles and checks it
+    text: Scopes the styles to the section, sizes images with alt text, builds for phone width first, and runs Shopify's Theme Check if it can.
+  - title: Scores the files
+    text: Goes through its own checks, such as valid JSON and no typed prices, fixes what it can, and scores checks passed out of all checks, times 100.
+
+output_shape: |
+  sections/<page-name>.liquid
+    <layout markup reading section and block settings>
+    <product picker, price from the store, add-to-cart form>
+    {% schema %} <settings, blocks, presets> {% endschema %}
+
+  templates/page.<suffix>.json
+    { "sections": { "main": { "type": "<page-name>",
+      "settings": { <your headline, button, risk line> },
+      "blocks": { <one per reason, review, question> },
+      "block_order": [ ... ] } }, "order": ["main"] }
+
+  IMAGE LIST
+  <slot>: <what it must show>, <suggested size>
+
+  INSTALL STEPS
+  1 Upload the files  2 Create a page  3 Choose the template
+  4 Pick the product  5 Upload images  6 Preview on a phone
+
+  MISSING
+  <each fact slot left empty because the store doesn't hold it>
+
+  SCORE
+  <passed> of <all> checks = <score> out of 100
+  Missed: <one line per check still missed, or none>
+
+example:
+  business: sprout
+  input: |
+    [the skill]
+
+    Finished page copy: our five-reasons page (headline, 5 reasons with
+    quotes, offer block, 7 questions, button "Start my first box").
+
+    Store details:
+    - Product: sprout.example/products/sprout, so the handle is "sprout"
+    - Page handle "five-reasons", template "page.five-reasons"
+    - Theme: not sure which, or whether it has theme blocks
+    - Reviews app and subscription app: don't know
+  output: |
+    sections/five-reasons.liquid  (abridged)
+    {%- assign product = section.settings.product -%}
+    <div class="five-reasons" id="FiveReasons-{{ section.id }}">
+      <h1>{{ section.settings.headline }}</h1>
+      <p>{{ section.settings.subhead }}</p>
+      {%- for block in section.blocks -%}
+        {%- case block.type -%}
+          {%- when 'reason' -%}
+            <div class="five-reasons__reason" {{ block.shopify_attributes }}>
+              <h2>{{ forloop.index }}. {{ block.settings.title }}</h2>
+              {{ block.settings.body }}
+              {%- if block.settings.quote != blank -%}
+                <blockquote>{{ block.settings.quote }}</blockquote>
+              {%- endif -%}
+            </div>
+          {%- when 'question' -%}
+            <details {{ block.shopify_attributes }}>
+              <summary>{{ block.settings.question }}</summary>
+              {{ block.settings.answer }}
+            </details>
+        {%- endcase -%}
+      {%- endfor -%}
+      {%- if product != blank -%}
+        <p>One-time: {{ product.price | money }}</p>
+        <a class="five-reasons__button" href="{{ product.url }}">
+          {{- section.settings.button_label -}}</a>
+      {%- endif -%}
+      <a href="{{ shop.refund_policy.url }}">{{ section.settings.risk_line }}</a>
+    </div>
+    {% schema %}
+    { "name": "Five reasons",
+      "settings": [
+        { "type": "product", "id": "product", "label": "Product" },
+        { "type": "text", "id": "headline", "label": "Headline" },
+        { "type": "textarea", "id": "subhead", "label": "Line under headline" },
+        { "type": "text", "id": "button_label", "label": "Button" },
+        { "type": "text", "id": "risk_line", "label": "Line under button" } ],
+      "blocks": [
+        { "type": "reason", "name": "Reason", "settings": [ ... ] },
+        { "type": "question", "name": "Question", "settings": [ ... ] } ],
+      "max_blocks": 12,
+      "presets": [ { "name": "Five reasons" } ] }
+    {% endschema %}
+
+    templates/page.five-reasons.json  (abridged)
+    { "sections": { "main": { "type": "five-reasons",
+        "settings": { "product": "sprout",
+          "headline": "Why powder people are swapping the shaker for a gummy pack",
+          "button_label": "Start my first box",
+          "risk_line": "30-day money-back guarantee on your first order." },
+        "blocks": { "reason_1": { "type": "reason", "settings": {
+          "title": "The greens habit you'll still have in three months",
+          "quote": "[Sprout] has been the one thing I've been able to stick to." } } },
+        "block_order": [ "reason_1" ] } },
+      "order": [ "main" ] }
+
+    IMAGE LIST
+    Reason 1: hand tearing a daily pack straight across the top, 1200 px wide
+
+    INSTALL STEPS
+    1 Upload both files to a duplicate theme  2 Add page "five-reasons"
+    3 Choose template "five-reasons"  4 Check the product picker shows
+    Sprout  5 Upload images  6 Preview on a phone, then test-order
+
+    MISSING
+    - "$29.99 first box" and "$49.99 every 4 weeks" aren't typed in. The
+      button goes to the product page, whose plan box shows them. Name your
+      subscription app to read the $49.99 from its selling plan here.
+    - Theme and reviews app unknown: built with a section and blocks
+      only; quotes sit in reason blocks, word for word.
+
+tweaks:
+  - what: Your theme
+    how: Say whether it supports theme blocks. Newer themes can take more flexible blocks; with no theme info it builds with sections and snippets only, and says so.
+  - what: Subscription app
+    how: Name it. If it provides its own block, the page uses that block for subscribe options. With no app info, it builds one-time purchase only and says so.
+  - what: Button behaviour
+    how: Choose "add to cart on this page" or "every button goes to the product page". The first keeps buyers on the page; the second is simpler and works with any app.
+  - what: Page type
+    how: Say whether it's an article-style page. If it is, the "Advertisement" label is built into the section and can't be turned off.
+
+judge:
+  - The template's JSON is valid and every block type it names exists in the section.
+  - No price, policy or review score is typed into the code.
+  - No rating, review count or badge has a default value.
+  - Every button leads to a real product, cart or page.
+  - Styles are scoped to the section, and every image has alt text.
+  - It tells you what it couldn't test (cart and payment need a real test order).
+
+test:
+  - Install it on a duplicate of your live theme. Open the page and check every section shows the copy you gave it.
+  - Change the product's price in your store admin. The page should show the new price without any code change.
+  - Search the files for a typed price, star rating or review count. There should be none.
+  - Place a test order through the page's button on a phone before you send ad traffic to it.
+
+improve:
+  - Write your theme's name, and whether it supports theme blocks, into "Store details" in the skill, so you don't repeat it each time.
+  - Add your subscription and reviews apps under "Apps", so it uses their blocks instead of building its own.
+  - Add your brand colours and fonts under "Design notes" once, so every section starts in your style.
+  - Keep the section file once it works. Your next page can reuse it with new copy in a new template.
+  - Pair it with "Ad-matched landing page writer" or "Article-style landing page writer" for the copy, and "Shopify theme code writer" when you change the section later.
+
+works_best_with:
+  tools:
+    - {name: "Claude Code", why: "Works on your theme files directly and can run Shopify CLI to preview and check them."}
+    - {name: "Shopify CLI", why: "Pulls your theme, previews the new page on a duplicate, and runs Theme Check before you upload."}
+    - {name: "Shopify AI Toolkit", why: "Shopify's own add-on for coding AIs, which checks Liquid against Shopify's current rules."}
+  inputs:
+    - "Your theme's name and version, so it knows whether theme blocks are supported"
+    - "The names of your reviews and subscription apps, so it uses their blocks"
+    - "An existing section file from your theme, so the new one matches its class names and spacing"
+    - "Your images already uploaded to Shopify Files, with what each shows"
+
+terms:
+  - term: Section
+    meaning: A full-width part of a Shopify page with its own settings in the theme editor.
+  - term: Block
+    meaning: A repeatable piece inside a section, such as one review or one question, that you can add, remove or reorder.
+  - term: Template
+    meaning: A file that tells Shopify which sections a page shows. You pick it when creating a page.
+  - term: Handle
+    meaning: The short name at the end of a product or page's web address, such as "sprout" in /products/sprout.

@@ -1,0 +1,39 @@
+slug: product-page-gallery-planner
+renamed_from: know-what-each-product-page-photo-should-show
+name: "Product page gallery planner"
+summary: "Attach your product photos and facts. Get an 8-image gallery plan and a score out of 100."
+category: ecommerce
+type: skill
+role: make
+job: image
+level: intermediate
+inputs:
+  - type: product_data
+    required: true
+  - type: product_photos
+    required: true
+  - type: brand_brain
+    required: false
+  - type: voc_reviews
+    required: false
+  - type: truth_sheet
+    required: false
+outputs:
+  - {type: gallery_plan}
+uses: [product-image-spec-writer]
+example: pdp
+origin: rebuilt
+source_ids: [CES-098, CES-095]
+old_name: product page gallery plan
+version: 2.0.0
+credits:
+  - {title: "Product Page UX: All Products Need at Least One 'In Scale' Image (28% Get It Wrong)", by: "Christian Holst, Baymard Institute", url: "https://baymard.com/blog/in-scale-product-images", used: "Shoppers explore images first and judge size from them, so every set needs a scale image"}
+  - {title: "UX: 7 Types of Product Images", by: "Christian Holst, Baymard Institute", url: "https://baymard.com/blog/ux-product-image-categories", used: "Image types beyond the packshot, including compatibility, texture and size"}
+  - {title: "Product Photography: A DIY Guide for Beginners (2026)", by: "Lizzie Davey, Shopify", url: "https://www.shopify.com/blog/12206313-the-ultimate-diy-guide-to-beautiful-product-photography", used: "Shot types a product page combines (detail, scale, angles, group or packaging)"}
+  - {title: "Image link [image_link]", by: "Google Merchant Center Help", url: "https://support.google.com/merchants/answer/6324350", used: "Plain main-image rules for shopping feeds"}
+tested:
+  on: 2026-10-19
+  business: sprout
+  model: claude-opus-5-5
+  judge: claude-fable-5-1
+  result: pass

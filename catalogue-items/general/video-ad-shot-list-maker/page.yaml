@@ -1,0 +1,204 @@
+new_slug: video-ad-shot-list-maker
+name: "Video ad shot list maker"
+summary: "Paste your script and storyboard. Get timed shots, clip prompts, an edit list and score out of 100."
+job: make-video-ads
+
+headline: "Video ad shot list maker"
+subhead: Give it your approved script, storyboard and product photos. It times the script into clips and writes 3 to 8 shots per clip, each with a size, camera position, one move and one action. You get shot tables, clip prompts, an edit list and a score out of 100.
+
+explain: |
+  Ask an AI video tool for "a woman making a drink while she talks" and you get one long, flat shot: same distance, same angle, a face that only looks, a product that appears from nowhere halfway through. Viewers scroll past a picture that doesn't change, and the tool fills empty seconds with invented movement.
+
+  This skill runs the last stage of making a video, after your avatar, sheets and storyboard are approved. If they're missing for an AI video, it stops and sends you to the storyboard skill, so no face gets invented inside a clip. Then it plans each clip like a director. It opens mid-action, and at every cut it moves the camera at least 30 degrees and changes the shot size, because changing only one reads as a jump. Each shot has one action, and the product comes in by a cut when the words reach it. Once you approve the shot tables, it writes the start and end frames, clip prompts that describe only the motion, the voice plan and the edit list.
+
+when:
+  - Your storyboard is approved and you need clips that don't look like one long static shot.
+  - Your AI clips keep inventing objects mid-shot or showing the product the wrong way.
+  - You want to brief a real film crew with exact shot sizes, angles and timings.
+
+you_give:
+  - The approved script or voice-over lines
+  - What you sell, how it's used and a real photo (product, app screen or packaging; attach it, your AI can see pictures)
+  - The approved avatar card, sheets, lock lines and storyboard, for AI video
+  - Your brand's places, light and what never to show (optional)
+  - The pace, the look and your tool's clip length (optional, normal and 8 seconds by default)
+you_get:
+  - A clip plan and a film plan for each clip
+  - A shot table per clip with timings, size, camera position, move and one action, for your approval
+  - Start and end frame prompts and clip prompts that describe only the motion
+  - A voice plan and an edit list with captions, music and the end card
+  - A score out of 100 for how many of its own checks the shot list passes, with any it missed
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste the approved script. For AI video, attach the approved storyboard, sheets and lock lines from the storyboard skill.
+  - Add what you sell, how it's used and a product photo. Say the pace, the look and your tool's clip length.
+  - Approve the shot tables, then make two or three takes of each clip from its prompt and pick the best.
+  - Cut the clips together with the edit list, and check the timings in the finished video.
+
+how_it_works:
+  - title: Checks what came in
+    text: Uses your approved avatar, sheets and lock lines. For AI video without them it stops; for a real shoot it writes a casting and wardrobe note.
+  - title: Times the words
+    text: Counts the words at a calm, normal or brisk pace and splits the script into clips at sentence ends.
+  - title: Plans each clip
+    text: The main place, one or two places it cuts to, who is in each, and what we see for every idea in the lines.
+  - title: Changes angle and size
+    text: Shot 1 opens mid-action. Every cut moves the camera at least 30 degrees and changes how close it is.
+  - title: Gives one action per shot
+    text: Says who, which hand and where it lands. The product arrives by a cut when the words reach it. You approve the tables.
+  - title: Writes the clips
+    text: Start and end frames, prompts that describe only the motion, and two or three takes of each clip.
+  - title: Plans the voice and edit
+    text: One voice across the cuts, lip-sync only where someone speaks on camera, then the edit list and a check against the script.
+
+output_shape: |
+  STAGES 1-3  CAST IN
+  Lock lines: <identity, product, set, from the approved sheets>
+  (or: casting and wardrobe note, or product sheet, for your yes)
+
+  STAGE 4  CLIP PLAN (approval 3)
+  Clip <n>: "<lines>" <words>, <pace>, <seconds>
+  FILM PLAN  Main place: <..>  Cuts to: <..>  Cast: <..>
+  <n>  <start-end>  <size> | <camera position> | <move, where it stops>
+     Fills frame: <..>  Objects: <..>
+     Action: <the one action, who, which hand>  Words: "<..>"
+  CONTINUITY  <who is where, what each object looks like at the end>
+
+  STAGE 5  CLIPS AND EDIT
+  Start frame: <storyboard frame or prompt>  End frame: <..>
+  Clip prompt: <lock lines> [00:00-00:02] <what moves> ...
+  Takes: <how many, what to check>  Voice: <route>
+  EDIT LIST  <order, cuts, captions, music, end card, safe areas>
+  MISSING: <..>
+
+  SCORE  <n>/100 (<passed> of <total> checks passed)
+  Missed: <one line per check missed, or none>
+
+example:
+  business: sprout
+  input: |
+    [the skill]
+
+    Lines for this clip: "It's one little pack a day. Tear the top,
+    tip them out. Twenty-one vitamins and minerals in there. No
+    water, no shaker."
+    Approved lock lines (from the storyboard skill):
+    Identity: man about 32, short dark curly hair, light brown skin,
+    trimmed stubble, plain grey T-shirt.
+    Product: glossy deep green stand-up foil pouch, big yellow
+    wordmark, yellow bear face top right, closed at its resealable
+    top. Daily pack torn straight across its top edge only.
+    Set: home kitchen counter in the morning, window light from the
+    left; front hallway by the door.
+    Storyboard frame for this clip: him at the counter, pouch beside him.
+    Speaker pace: brisk. Tool: 8-second clips, timed shots in one
+    prompt, takes a start and an end frame. Look: live action.
+  output: |
+    STAGES 1-3  CAST IN
+    Lock lines as approved. Nothing written here, so no new approval.
+
+    STAGE 4  CLIP PLAN (approval 3)
+    Clip 1: 22 words, brisk (3.0 a second) = 7.3 s, plus 0.7 s on the
+    last shot. Fits one 8-second clip.
+    FILM PLAN  Main place: kitchen counter. Cuts to: the hallway.
+    Cast: the man; the pouch, one daily pack, a shaker in the sink.
+    Pictures: "one little pack" = a pack out of the pouch; "tear the
+    top" = the tear; "tip them out" = gummies into his palm; "no
+    shaker" = the shaker left behind.
+    1  0.0-2.0  medium | eye level | hand-held, stopping on the pack
+       Action: his right hand pulls one pack out of the pouch's open
+       resealable top.  Words: "It's one little pack a day."
+    2  2.0-3.0  extreme close-up | over his shoulder | locked off
+       Action: both hands tear the pack straight across its top edge.
+       Words: "Tear the top,"
+    3  3.0-4.4  close-up | overhead | locked off
+       Action: his right hand tips the pack; green gummy bears pour
+       into his left palm.  Words: "tip them out. Twenty-one"
+    4  4.4-6.1  medium | low, from the counter | push in
+       Fills frame: gummies in his palm below, his face above, kettle
+       steam behind.  Action: he closes his hand around the gummies.
+       Words: "vitamins and minerals in there."
+    5  6.1-8.0  wide | high, from the hallway | pull back
+       Fills frame: the shaker in the sink up front, him at the door.
+       Action: his right hand takes the keys off the hook.
+       Words: "No water, no shaker."
+    CONTINUITY  He's at the front door, keys in his right hand. The
+    pouch is on the counter, open at its top, the torn empty pack
+    beside it. The shaker is in the sink.
+    Checks: 4 sizes, 5 positions, every cut changes both. Tear and
+    tip split across shots 2 and 3. Nothing appears mid-shot.
+    [approved]
+
+    STAGE 5  CLIPS AND EDIT
+    Start frame: the storyboard frame. End frame: [identity] at the
+    front door, keys in his right hand, from the hallway, window light
+    from the left.
+    Clip prompt: [identity] [product] [set]. [00:00-00:02] his right
+    hand pulls one pack from the pouch's open top. [00:02-00:03] both
+    hands tear it straight across the top edge. [00:03-00:04] he tips
+    it; gummies pour into his left palm. [00:04-00:06] push in as his
+    hand closes. [00:06-00:08] pull back from the hallway; he takes
+    the keys off the hook. He says, brisk and warm: "It's one little
+    pack a day. Tear the top, tip them out. Twenty-one vitamins and
+    minerals in there. No water, no shaker."
+    Takes: 3. Keep the one where the tear runs straight across.
+    Voice: in the tool; if it drifts, record the line and lip-sync
+    shot 1 only, the one shot where his face shows.
+    EDIT LIST  This clip first, hard cuts. Captions for every word in
+    Work Sans. No music in the clip. End card and offer come in the
+    final clip, clear of the app's covered areas.
+    MISSING: nothing for this clip.
+
+tweaks:
+  - what: AI video or a real shoot
+    how: For AI video it needs your approved sheets and lock lines first. For a real shoot it writes a casting and wardrobe note, and the shot tables become the crew's list.
+  - what: Live action or a made world
+    how: Live action gets 3 to 5 shots in 8 seconds, none under 1 second. A made world (animation, clay, paper) allows 4 to 8, none under half a second.
+  - what: Pace
+    how: Say calm (2.2 words a second), normal (2.6) or brisk (3.0). Then read the line aloud with a timer; your own time beats the estimate.
+  - what: Your tool
+    how: Say your clip length and whether the tool takes timed shots in one prompt and a start and end frame. The clip prompts follow what it can do.
+
+judge:
+  - It used your approved lock lines, or stopped and asked for them, and never made up a face inside a clip.
+  - Shot 1 is already mid-action. No walking in, sitting down or hello.
+  - Every cut changes both the camera angle and how close it is.
+  - Each shot has one action, described as what moves, and the product appears only when the words reach it.
+  - The clip prompts describe the motion, not the whole scene again.
+  - The shot times add up to what the words need at the stated pace, within 10%.
+
+test:
+  - Give it a script with no storyboard or sheets and ask for AI video. It should stop and send you to the storyboard skill.
+  - Give it a line with two moves in it ("tear it and tip it out"). The shot table should split them into two shots.
+  - Read the voice line aloud with a timer at your speaker's pace. Your time and its total should be within 10%.
+  - Make only clip 1 in your video tool. If it adds movement or objects you didn't ask for, tighten the "fills frame" and "objects" lines before making the rest.
+
+improve:
+  - Write your brand's places, light and never-show list into "What you need" in the skill file, so every film plan starts in your world.
+  - Add your product-showing rules to stage 4 (how it opens, what one serving looks like), so the product is never shown the wrong way.
+  - Time your usual speaker once and write their real pace into stage 4.
+  - Pair it with the storyboard skill, which makes the avatar, sheets and storyboard this skill starts from.
+
+works_best_with:
+  tools:
+    - {name: "Veo", why: "Follows timed shot lines inside one 8-second prompt and can aim at an end frame you give it."}
+    - {name: "Kling", why: "Takes several shots in one generation from a shot list, keeping the same person across the cuts."}
+    - {name: "Any good chat AI", why: "Writing the clip plan and shot tables to these rules works well in any strong chat AI."}
+  inputs:
+    - "Photos of the places your brand films in, so the film plan uses rooms that look like yours"
+    - "A recording of your speaker reading one line, so the pace is measured, not guessed"
+    - "A photo of one serving out of its pack, so close shots show the right thing"
+    - "The continuity note from the clip before, so this clip starts in the same world"
+
+terms:
+  - term: Shot size
+    meaning: How close the camera is. Wide shows the place; close-up shows a face or one object; extreme close-up shows one detail.
+  - term: Camera position
+    meaning: Where the camera stands, such as eye level, low looking up, high looking down, or overhead.
+  - term: Lock lines
+    meaning: Fixed descriptions of the person, product and set, pasted word for word into every prompt so nothing drifts.
+  - term: Jump cut
+    meaning: A cut between two shots that are too alike, so the picture seems to twitch instead of change.
+  - term: Edit list
+    meaning: The order of the clips, the cuts, captions, music and end card, written before you edit.

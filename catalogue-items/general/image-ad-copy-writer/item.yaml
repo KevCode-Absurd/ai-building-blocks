@@ -1,0 +1,31 @@
+slug: image-ad-copy-writer
+renamed_from: get-every-word-your-image-ad-needs
+name: "Image ad copy writer"
+summary: "Attach your ad image and offer. Get every word the ad needs and a score out of 100."
+category: general
+type: skill
+role: make
+job: copy
+level: intermediate
+inputs:
+  - {type: brief, required: true}
+  - {type: offer, required: false}
+  - {type: voc_reviews, required: false}
+outputs:
+  - {type: ad_copy}
+uses: []
+origin: rebuilt
+source_ids: [CES-086]
+old_name: image ad copy writer
+version: 2.0.0
+credits:
+  - {title: "Tested Advertising Methods", by: "John Caples", url: "https://openlibrary.org/search?q=tested+advertising+methods+caples", used: "self-interest, news and curiosity as headline appeals"}
+  - {title: "Breakthrough Advertising", by: "Eugene M. Schwartz", url: "https://openlibrary.org/search?q=breakthrough+advertising+schwartz", used: "stages of awareness, folded into New, Warm and Ready"}
+  - {title: "How many words do we read per minute? A review and meta-analysis of reading rate", by: "Marc Brysbaert", url: "https://doi.org/10.1016/j.jml.2019.104047", used: "238 words a minute, so the 7-word image headline"}
+  - {title: "The magical number 4 in short-term memory", by: "Nelson Cowan", url: "https://pubmed.ncbi.nlm.nih.gov/11515286/", used: "the support line counts toward 3 extra things to read"}
+tested:
+  on: 2026-10-19
+  business: sprout
+  model: claude-opus-5-5
+  judge: claude-fable-5-1
+  result: pass

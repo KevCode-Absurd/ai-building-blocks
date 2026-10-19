@@ -1,0 +1,173 @@
+new_slug: ad-script-read-aloud-editor
+name: "Ad script read-aloud editor"
+summary: "Paste your script. Get every line that trips when spoken, fixed, and a score out of 100."
+job: make-video-ads
+
+headline: "Ad script read-aloud editor"
+subhead: Paste a script or ad text. It says every line the way it will be delivered and finds the ones that trip, run out of breath or sound like a slogan. You get each fix with the rule it broke, and a read-aloud score out of 100 before and after.
+
+explain: |
+  A script can be right in every detail and still sound wrong. The presenter trips on a knotted sentence, gasps through a long one, or reads three fragments that sound like a robot. Viewers hear it at once, even if they couldn't say why.
+
+  This skill works only on sound. Each line faces one test: would a person say this to a friend, in one breath? It puts back small words that were cut, splits sentences where a breath falls, joins choppy lists and brings verbs forward. It adds contractions and strips habits that sound machine-made. Who it speaks to, the tense and your brand's own phrases stay as they are. It never touches a claim, number, price, guarantee or product name. If one looks wrong, it flags it for your claims check.
+
+when:
+  - Your script reads fine on paper but sounds stiff when someone says it.
+  - An AI wrote the draft and it has the giveaway rhythms (fragments, "No X. No Y.").
+  - You're about to record a voice-over or a founder video and want a clean take.
+
+you_give:
+  - The finished script or ad text
+  - Who it's for (the general public, people who know the category, or professionals) (optional)
+  - A few of your brand's own published lines (optional)
+  - Spoken or read, if it's ad text rather than a script (optional)
+you_get:
+  - Each failing phrase, where it is and the rule it breaks
+  - The full fixed text for each one
+  - Flags for any claim or number that looks wrong, left as written
+  - A read-aloud score out of 100 before and after the fixes, for the share of sentences a presenter can say cleanly
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your script or ad text underneath.
+  - Say whether it will be spoken or read, and who it's for.
+  - Paste two or three of your brand's own lines, so it keeps your phrases.
+  - Say each fixed line aloud yourself. Keep the ones that sound like you.
+  - Send the flags to whoever checks your claims.
+
+how_it_works:
+  - title: Says each line aloud
+    text: Notices where you'd trip, run out of air, feel silly or need to reread.
+  - title: Holds fixes to five rules
+    text: Whole sentences, one idea each, verbs early, plain words, one breath each.
+  - title: Keeps six things steady
+    text: Who it speaks to, tense, sentence length, reading level, contractions and endings. It flags any wobble.
+  - title: Strips machine habits
+    text: Uncontracted verbs, strings of fragments, "No X. No Y. No Z.", clipped add-ons and ad words nobody says.
+  - title: Adjusts for read text
+    text: For text people read, it joins one-line paragraphs into short paragraphs of whole sentences.
+  - title: Leaves meaning alone
+    text: Never changes a claim, number, offer, product name or placeholder, and adds no sentences.
+
+output_shape: |
+  FIX <n>
+  Where: <line or field>
+  Failing phrase: "<exact words>"
+  Rule: <which rule it breaks>
+  Fixed: "<full fixed text>"
+
+  LEFT AS IS
+  <lines that already work, and brand phrases kept>
+
+  FLAGS FOR THE CLAIMS CHECK (not changed)
+  <claim, number or offer that looks wrong, and why>
+
+  SCORE  Before: <n>/100 (<passing> of <sentences> sentences pass)
+         After:  <n>/100 (<passing> of <sentences> sentences pass)
+  Still failing: <line, or none>
+
+example:
+  business: sprout
+  input: |
+    [the skill]
+
+    Mode: read (the main text above a Meta ad). Audience: general.
+    Brand lines: "Rip. Tip. Enjoy." "We made daily nutrition, like,
+    ridiculously easy."
+
+    Text 1:
+    Big news: your first order of Sprout just got a lot more
+    affordable. 💚 $29.99 for your first order, that's less than
+    $1.10/day for 60+ whole-food ingredients, 21 vitamins & minerals,
+    and gut-supporting probiotics in one daily gummy pack. ✅ $20 off
+    your first order ✅ +$5 off for every extra person ✅ Third-party
+    tested. Online-exclusive offer. Shop Sprout.
+
+    Text 2:
+    Feeling off in your gut lately? Sprout supports digestion with 6g
+    of fiber, prebiotics, and daily vitamins to help keep your gut
+    balanced without powders or prep.
+  output: |
+    FIX 1
+    Where: text 1, second sentence
+    Failing phrase: "$29.99 for your first order, that's less than
+      $1.10/day for 60+ whole-food ingredients..."
+    Rule: two ideas in one sentence, joined by a comma
+    Fixed: "Your first order is $29.99. That's less than $1.10/day
+      for 60+ whole-food ingredients, 21 vitamins & minerals, and
+      gut-supporting probiotics in one daily gummy pack."
+
+    FIX 2
+    Where: text 1, end
+    Failing phrase: "Third-party tested. Online-exclusive offer. Shop
+      Sprout."
+    Rule: a run of fragments
+    Fixed: "✅ Third-party tested. This offer is online only, so
+      shop Sprout."
+
+    FIX 3
+    Where: text 2
+    Failing phrase: "...daily vitamins to help keep your gut balanced
+      without powders or prep."
+    Rule: too long for one breath, with a trailing clause
+    Fixed: "Sprout supports digestion with 6g of fiber, prebiotics,
+      and daily vitamins. They help keep your gut balanced, without
+      powders or prep."
+
+    LEFT AS IS
+    "Big news: your first order of Sprout just got a lot more
+    affordable." Plain and sayable. The 💚 and ✅ are the brand's own.
+    "Feeling off in your gut lately?" Works as a question.
+
+    FLAGS FOR THE CLAIMS CHECK (not changed)
+    - "probiotics": the ingredient list shows prebiotic fiber and no
+      probiotics.
+    - "less than $1.10/day": the product page says $1.07/day, and that
+      is the first box only. It renews at $49.99 ($1.78/day).
+    - "$29.99" needs the text sign-up discount; this text doesn't say so.
+
+tweaks:
+  - what: Spoken or read
+    how: Say "read" for ad text above an image. The breath test relaxes, and it joins one-line paragraphs into short paragraphs instead.
+  - what: Audience level
+    how: Say "professionals" or "people who know the category" to keep technical terms. The default keeps the reading level at US grade 7.
+  - what: Your brand's own lines
+    how: Paste them. Their words, rhythms and emojis stay, as long as a person would still say the line.
+  - what: A recording
+    how: Attach one take of someone reading the script. It starts with the lines where they stumbled.
+  - what: A full rewrite
+    how: If almost every line fails, it fixes the worst and says the script needs rewriting for voice. Ask for that as a separate job.
+
+judge:
+  - Say each fixed line aloud once. You can get through it in one breath without tripping.
+  - Every number, price and claim in the fixed text matches the original exactly.
+  - No new sentence was added, and no line got shorter except by splitting in two.
+  - Your brand's own phrases and emojis are still there.
+  - A good script gets 0 to 5 fixes. Dozens of small changes mean it rewrote your voice.
+
+test:
+  - Run it on a script you've already recorded, and compare its fixes with the lines your presenter stumbled on.
+  - Check every number, price and claim in the fixed text against the original. They should match exactly.
+  - Run it on a script you think is clean. Expect 0 to 5 fixes. Dozens means it is rewriting your voice.
+  - Run it twice on the same script. Most of the lines it flags should be the same both times.
+
+improve:
+  - Add your brand's own phrases to step 3 of the skill file, so it never "fixes" a line you wrote that way on purpose (for Sprout, "Rip. Tip. Enjoy.").
+  - "Write your settings into step 3 too: who you speak to (I, you or we), whether you use contractions, and your reading level."
+  - Add the ad words your brand never uses to step 4, so it catches your own habits as well as the usual ones.
+  - Pair it with a brand voice check and a claims check afterwards. This skill flags a wrong claim but never changes it.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Finding lines that trip and fixing only the sound works well in any strong chat AI."}
+    - {name: "Your phone's voice recorder", why: "One recorded read shows where the presenter stumbles, which is the best evidence for what to fix."}
+  inputs:
+    - "A recording of someone reading the script once, so it fixes the lines that tripped them first"
+    - "The presenter's name and how they talk (fast, slow, formal, chatty), so fixes suit their delivery"
+    - "Your approved claims list, so it can flag a wrong claim without changing it"
+
+terms:
+  - term: Reading level
+    meaning: How hard text is to read, given as a US school grade. Grade 7 is easy for most adults.
+  - term: Contraction
+    meaning: Two words joined with an apostrophe, like "don't" or "it's", which is how people talk.

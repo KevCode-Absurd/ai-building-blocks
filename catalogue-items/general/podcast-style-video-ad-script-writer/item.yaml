@@ -1,0 +1,33 @@
+slug: podcast-style-video-ad-script-writer
+renamed_from: get-podcast-clip-ad-script-that-sells
+name: "Podcast-style video ad script writer"
+summary: "Paste the doubt and your facts. Get a two-person podcast-style video script and score out of 100."
+category: general
+boards: [ecommerce]
+type: skill
+role: make
+job: video
+level: intermediate
+inputs:
+  - {type: brief, required: true}
+  - {type: voc_reviews, required: true}
+  - {type: brand_brain, required: true}
+outputs:
+  - {type: script}
+uses: []
+example: podcast
+origin: own
+source_ids: [CES-118]
+old_name: script-format-podcast
+version: 2.1.0
+credits:
+  - {title: "How to pick clips for social media", by: "Megan Schmidt, Descript", url: "https://www.descript.com/blog/article/how-to-choose-clips-for-social-media", used: "Open on a hook and make the clip stand on its own"}
+  - {title: "16 CFR 255.2 Consumer endorsements", by: "US Federal Trade Commission, via Cornell LII", url: "https://www.law.cornell.edu/cfr/text/16/255.2", used: "Say plainly when people who seem unscripted are actors"}
+  - {title: "Levels of Awareness", by: "Josh Kaufman, The Personal MBA", url: "https://personalmba.com/levels-of-awareness/", used: "The buyer stages that decide fit"}
+  - {title: "Creators: 150 WPM Timing and Formatting for Voice Over Script Writing", by: "VoiceBros Team", url: "https://voicebros.com/en/blog/voice-over-script-writing", used: "Words per clip from a talking pace"}
+tested:
+  on: 2026-10-19
+  business: sprout
+  model: claude-opus-5-5
+  judge: claude-fable-5-1
+  result: pass

@@ -1,0 +1,27 @@
+slug: ad-results-report-writer
+renamed_from: turn-your-ad-numbers-into-three-next-steps
+name: "Ad results report writer"
+summary: "Paste two periods of ad totals. Get the answer, three ranked actions and a score out of 100."
+category: general
+boards: [ecommerce]
+type: skill
+role: compress
+job: analysis
+level: intermediate
+inputs:
+  - {type: performance_sheet, required: true}
+outputs:
+  - {type: audit_report}
+uses: [ad-sales-drop-analyst]
+origin: rebuilt
+source_ids: [CES-090]
+old_name: ad performance report as a decision brief
+version: 1.1.0
+credits:
+  - {title: "The Minto Pyramid Principle: Logic in Writing, Thinking and Problem Solving", by: "Barbara Minto", url: "https://www.barbaraminto.com/", used: "Lead with the answer, then the support in order of weight"}
+tested:
+  on: 2026-10-19
+  business: sprout
+  model: claude-opus-5-5
+  judge: claude-fable-5-1
+  result: pass

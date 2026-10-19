@@ -1,0 +1,187 @@
+new_slug: unanswered-customer-question-finder
+name: "Unanswered customer question finder"
+summary: "Paste customer questions and page screenshots. Get unanswered doubts, answers to add and a score out of 100."
+job: audit-landing-page
+
+headline: "Unanswered customer question finder"
+subhead: Paste reviews, support questions or call notes, and attach phone screenshots of your page. It finds each real doubt and where the page answers it, if anywhere. You get a doubt table, the answers to add and where, and a coverage score out of 100.
+
+explain: |
+  Customers keep asking the same questions in reviews and support emails. Sometimes your page already answers them, but behind a closed FAQ or in the fifth photo. Sometimes it never does. And sometimes no amount of copy can answer, because the fact or test simply doesn't exist yet.
+
+  This skill builds a table that links each real customer doubt to the exact spot on your page that answers it. It opens the FAQ, scrolls the whole photo gallery and checks the buying area on a phone before marking anything missing. Each answer is labelled visible, hidden, missing or unknown. It separates a missing answer (move or write copy) from missing proof (go and get the fact). Then it proposes where each answer belongs, such as risk questions under the buy button. It never invents a doubt, a test or a number to fill a gap.
+
+when:
+  - Customers keep asking support things you thought the page already said.
+  - Reviews mention the same worry again and again, and you want to know if the page addresses it.
+  - You're rewriting a product page FAQ and want it built on real questions.
+
+you_give:
+  - Customer words such as reviews, return reasons, support tickets, pre-sale questions or call notes, each with a source
+  - Phone screenshots of your page, with the FAQ opened, every gallery photo and the buying area (attach them; your AI can see pictures)
+  - Facts you can stand behind, such as policies, measurements, test results and terms (optional)
+you_get:
+  - A table of doubts, each with a quote, its source count, where the page answers it and how visible that is
+  - The fact or proof each answer needs, and a proposed answer and place
+  - The top five fixes and a list of facts to collect before writing
+  - A coverage score out of 100 (how many doubts the page answers where buyers can see them), now and with the new answers in
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your customer words with a source for each (review number, ticket ID, date).
+  - Attach phone screenshots of the whole page, with the FAQ opened and every gallery photo. Paste the page text too if you have it.
+  - Add any policies, measurements or test results you have.
+  - Fix "hidden" answers first (they only need moving), then collect the facts listed for the "needs a fact" rows.
+
+how_it_works:
+  - title: Lists the doubts
+    text: One row per distinct question, with an exact quote and its source. One person asking three times counts once.
+  - title: Finds the current answer
+    text: Opens the FAQ, scrolls the whole gallery and checks the buying area, then labels each answer visible, hidden, missing or unknown.
+  - title: Separates answer from proof
+    text: If the fact doesn't exist in your records, moving copy can't fix it. Those rows say "needs a fact" and name it.
+  - title: Prioritises honestly
+    text: How often a doubt comes up tells you what these sources discuss, not how many buyers you lose. With few sources, it calls the priority a guess.
+  - title: Places the answer at the decision
+    text: Fit next to the size picker, cost beside the price, ingredients near the claim, risk under the buy button, delivery in the buying area.
+  - title: Turns fixes into briefs
+    text: Each new page section or image answers one question with one supported answer and its sources.
+  - title: Rechecks after changes
+    text: Walks the same phone path again to confirm the buyer can now find and understand each answer.
+
+output_shape: |
+  DOUBT MAP
+  Doubt | Quote and source | Distinct sources
+    | Where the page answers it now | Visible / hidden / missing / unknown
+    | Fact still needed | Answer to add, and where
+  <question> | "<exact words>" (<source>) | <n> | <where, or none> | <label>
+    | <fact, or none> | <answer> . <where on the page>
+
+  TOP 5 FIXES
+  1 <one line>
+
+  FACTS TO COLLECT BEFORE WRITING
+  MISSING: <fact or test>
+
+  COVERAGE SCORE
+  Now: <points> / <doubts counted> x 100 = <score>
+  With the new answers in: <score>
+
+  WHAT THIS CAN'T TELL YOU
+  <2 or 3 lines>
+
+example:
+  business: sprout
+  input: |
+    [the skill]
+
+    Customer words: 20 public reviews R1 to R20 plus two short fragments,
+    with where each came from (sprout/reviews.md).
+
+    The page: Sprout's main product page as text, including the closed
+    accordions and FAQ, with notes on what wasn't captured
+    (sprout/product-page.md).
+
+    Facts: Sugar-Free uses sugar alcohols. Subscriptions "Pause Or Cancel
+    Any Time". Guarantee: 30 days, first order only.
+  output: |
+    DOUBT MAP
+    1 Will I get stuck in the subscription?
+      Quotes: "I hate subscriptions because I feel like they are a trap"
+      (R17, brand site); "I have tried multiple times to cancel my
+      subscription." (R20, review site)            Sources: 2
+      Current answer: "Pause Or Cancel Any Time" in the plan box . visible
+      Needs a fact: the actual steps to cancel. MISSING
+      Proposed: one line under the button, "Cancel in your account in
+      <steps>", once the steps are written down
+
+    2 Will I like the taste?
+      Quotes: "I thought the first pack I tried tasted terrible, but after
+      the third day they started tasting better" (R18, retailer); "the
+      taste is off." (R19, widget, Sugar-Free tie-in)   Sources: 2
+      Current answer: flavour tile, "Where fresh strawberries meets clean
+      greens" . visible, but says nothing about the first few days
+      Needs a fact: none
+      Proposed: an FAQ beside the flavour picker: some people need a few
+      days, with R18 word for word, and the first-order guarantee
+
+    3 Is it worth the price?
+      Quote: "They are expensive" (retailer fragment)   Sources: 1
+      Current answer: "$1.07/day" (first box) and Us vs. Them ($1.26 vs
+      $3.60) . visible, but the renewal is $1.78/day and the comparison is
+      flagged as dated
+      Needs a fact: current prices for the comparison
+      Proposed: show $1.78/day beside the renewal price, recheck the table
+
+    4 Will Sugar-Free upset my stomach?
+      Quote: "The sugar free [Sprout] worked too well." (review site
+      fragment)   Sources: 1
+      Current answer: "Low Sugar vs. Sugar-Free" accordion . unknown (its
+      text wasn't captured)
+      Needs a fact: none; the brand file says Sugar-Free uses sugar alcohols
+      Proposed: one line under the sugar picker: "Sugar-Free uses sugar
+      alcohols. Sensitive stomach? Start with Low Sugar."
+
+    TOP 5 FIXES
+    1 Write down the cancel steps, then put them under the button
+    2 Taste FAQ by the flavour picker, with R18
+    3 Sugar-alcohol line under the sugar picker
+    4 Renewal price per day beside the plan box price
+    5 Recheck or remove the Us vs. Them prices
+
+    FACTS TO COLLECT BEFORE WRITING
+    MISSING: the steps a customer takes to cancel
+    MISSING: current prices for the Us vs. Them table
+    MISSING: the text of the Low Sugar vs. Sugar-Free accordion
+
+    WHAT THIS CAN'T TELL YOU
+    Only 6 of the 22 entries raise a doubt, so every priority here is a
+    guess. Most reviews come from the brand's own site, which shows the
+    happy ones. People who never bought aren't in this sample.
+
+tweaks:
+  - what: Which customer words
+    how: Add return reasons and pre-sale questions, not just reviews. Happy reviewers rarely mention the doubts that stopped other people buying.
+  - what: The page capture
+    how: Include the opened FAQ and a line for each gallery photo. Anything it can't inspect is marked "unknown" instead of "missing".
+  - what: Your facts
+    how: Paste measurements, test results and policy wording. Each one you supply turns a "needs a fact" row into a ready answer.
+  - what: After the fix
+    how: Paste the updated page and ask for a recheck. It walks the same path and records what's now visible, kept separate from any guess about sales.
+
+judge:
+  - Every row has a real quote and a source.
+  - Nothing is marked "missing" unless the FAQ, gallery and buying area were checked, or it's marked "unknown".
+  - No proposed answer states a fact, test or number you didn't supply.
+  - Counts are distinct sources, not mentions.
+  - With a small sample, priorities are labelled as a guess.
+
+test:
+  - Pick a question your support team gets every week. It should be in the table with a real quote, and its visibility should match what you see on your phone.
+  - Leave the FAQ closed in your screenshots. Doubts the FAQ might answer should be marked unknown, not missing.
+  - Check every proposed answer against your facts. Any number or test it mentions should be one you supplied.
+  - Run it on only ten reviews. The priorities should be labelled as a guess.
+
+improve:
+  - Add placements for your own page to step 5, such as next to the flavour picker or the subscription box, so answers land where your buyers decide.
+  - Write the facts you can stand behind (policies, test results, measurements) into the skill under "Facts", so it can propose full answers instead of "needs a fact".
+  - Save the "facts to collect" list in your brand file and fill it. Each fact you add turns a gap into an answer.
+  - Pair it with "Customer buying reasons finder" first, since its list of worries is the best input here, and with "Ad-matched landing page writer" to rewrite the page around the answers.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI that reads images", why: "It can check your phone screenshots for where each answer sits, not just the page text."}
+    - {name: "Google Sheets", why: "Holds the doubt table so you can sort it, add new reviews, and tick off fixes."}
+  inputs:
+    - "Return and refund reasons from your own records, since they show doubts happy reviews never mention"
+    - "Pre-sale questions from chat, email or DMs, with dates, so you see what stops people before they buy"
+    - "Screenshots of the page on a phone with the FAQ and every fold-out opened"
+    - "Your measurements, test results and policy wording, so answers can be written instead of marked 'needs a fact'"
+
+terms:
+  - term: Doubt
+    meaning: A question or worry that stops someone buying, such as "will it fit?" or "what if I don't like it?".
+  - term: Hidden answer
+    meaning: An answer that exists but sits behind a closed section or far below the buy button.
+  - term: Gallery
+    meaning: The row of product photos at the top of a product page.

@@ -99,8 +99,8 @@ export default {
     ],
   ],
   next: [
-    { if: "OR(NOT(HAS(paybackOrder)), paybackOrder > 2)", slug: "find-offers-hiding-in-what-you-already-sell", why: "Find an offer that brings customers back sooner, so they pay back faster." },
-    { slug: "find-why-customers-buy-in-their-words", why: "Learn why your repeat buyers come back, in their own words, and say it in your ads." },
+    { if: "OR(NOT(HAS(paybackOrder)), paybackOrder > 2)", slug: "hidden-offer-finder", why: "Find an offer that brings customers back sooner, so they pay back faster." },
+    { slug: "customer-buying-reasons-finder", why: "Learn why your repeat buyers come back, in their own words, and say it in your ads." },
   ],
   sources: [
     { what: "Orders per customer", how: "1 + r + r² + … + r^k = (1 − r^(k+1)) ÷ (1 − r), the sum of a geometric series, with r the share who come back each time." },

@@ -1,0 +1,36 @@
+slug: jingle-video-clip-prompt-writer
+renamed_from: turn-song-script-into-shots-ai-can-make
+name: "Jingle video clip prompt writer"
+summary: "Paste your song script and attach product photos. Get music, clip prompts and a score out of 100."
+category: general
+boards: [ecommerce]
+type: skill
+role: render
+job: video
+level: expert
+inputs:
+  - {type: script, required: true}
+  - {type: product_data, required: true}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: shot_list}
+  - {type: video_prompt}
+uses: [jingle-video-ad-script-writer]
+example: song
+origin: rebuilt
+source_ids: [CES-138]
+old_name: song music video shot planner
+version: 2.1.0
+credits:
+  - {title: "Eleven Music: best practices", by: "ElevenLabs", url: "https://elevenlabs.io/docs/overview/capabilities/music/best-practices", used: "Music prompts: stated BPM and key, arrangement in order, timing cues in seconds, length"}
+  - {title: "The ultimate prompting guide for Veo 3.1", by: "Khulan Davaajav and Hussain Chinoy, Google Cloud", url: "https://cloud.google.com/blog/products/ai-machine-learning/ultimate-prompting-guide-for-veo-3-1", used: "Timed multi-shot prompts, reference images named by role, prompt order"}
+  - {title: "Sora 2: Prompting Guide", by: "OpenAI Cookbook", url: "https://developers.openai.com/cookbook/examples/sora/sora2_prompting_guide", used: "Short shots, one camera move and one action, motion in counted beats"}
+  - {title: "YouTube video ad creative: the ABCDs", by: "Think with Google", url: "https://business.google.com/us/think/future-of-marketing/youtube-video-ad-creative/", used: "Show the brand early, for the product on screen within 5 seconds"}
+  - {title: "Model sheet", by: "Wikipedia contributors", url: "https://en.wikipedia.org/wiki/Model_sheet", used: "A character drawn at every angle with its expressions and poses, for the stage 3 sheets"}
+  - {title: "180-degree rule", by: "Wikipedia contributors", url: "https://en.wikipedia.org/wiki/180-degree_rule", used: "Keeping screen positions steady from shot to shot, for the storyboard continuity check"}
+tested:
+  on: 2026-10-19
+  business: sprout
+  model: claude-opus-5-5
+  judge: claude-fable-5-1
+  result: pass

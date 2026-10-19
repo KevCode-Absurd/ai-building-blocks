@@ -1,0 +1,177 @@
+new_slug: brand-voice-editor
+name: "Brand voice editor"
+summary: "Paste your ad and customer quotes. Get off-brand words fixed, claims untouched, and a score out of 100."
+job: check-ads
+
+headline: "Brand voice editor"
+subhead: Paste a finished ad or script, your voice notes and a few real customer quotes. It flags words your brand wouldn't say or your buyers wouldn't use, and swaps in plainer ones. You get each fix, every claim unchanged, and a voice score out of 100.
+
+explain: |
+  An ad can get every fact right and still sound like the wrong company. It says "sleep onset" when your customers say "can't switch off", or it gushes like a spa when your brand talks like a friend. Buyers notice, even if they can't say why.
+
+  This skill is the last read before a person sees the ad. It takes your voice notes, your never-say list and some real customer quotes, then checks each line for three things only: a wrong word, a wrong tone, or wording that talks past the buyer. It never touches product names, numbers, prices, legal lines or the guarantee. When it fixes a line, it changes the smallest piece it can, using your customers' own words first.
+
+when:
+  - An ad or script is written and checked for facts, and you want one last read for how it sounds.
+  - A freelancer or AI wrote the copy and it sounds like a generic brand in your category.
+  - You run an existing ad and want a list of off-voice words without changing anything yet.
+
+you_give:
+  - The finished ad copy or script, with numbered lines
+  - Your voice notes and never-say list (voice-and-look.md and the house rules in 00-start-here.md)
+  - Who the ad is for, and a few real customer quotes showing how they talk
+  - Fix or report, to apply changes or only list them (optional)
+you_get:
+  - A verdict, on voice or needs fixes, with a one-sentence summary
+  - Each off-voice phrase quoted exactly, with the rule or customer quote it breaks
+  - The full corrected line for each fix, with numbers and claims unchanged
+  - A voice score out of 100 (the share of lines on voice), now and after the fixes
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Attach voice-and-look.md, 00-start-here.md and customers.md from your brand file, or paste the same notes. Your never-say list matters most.
+  - Add three to ten real customer quotes, copied as written, so it knows how your buyers talk.
+  - Paste the ad with numbered lines and write "Mode, fix" or "Mode, report".
+  - Check each fix against your original line. If it changed a number, a claim or the offer, reject it.
+
+how_it_works:
+  - title: Reads your voice rules
+    text: Reads the voice notes, never-say list and customer quotes. A banned word always outranks a general tone note.
+  - title: Checks each line
+    text: Flags a word or phrase only if it's the wrong word, the wrong tone, or wording your buyer wouldn't use.
+  - title: Leaves facts alone
+    text: Never flags product names, numbers, prices, legal wording, offer terms or the structure of the ad.
+  - title: Makes the smallest fix
+    text: Replaces only the off-voice piece, using the customer's own word first, then a phrase your brand already uses.
+  - title: Keeps it natural
+    text: Every fixed line must still be a sentence a person would say aloud. It never adds a tagline or a claim.
+  - title: Gives the verdict
+    text: Returns on voice or needs fixes, a one-line summary, and each issue with its reason and corrected text.
+
+output_shape: |
+  VERDICT: <on_voice or needs_fixes>
+
+  SUMMARY
+  <one sentence on how the piece sounds against your voice notes>
+
+  ISSUES
+  Line <number>
+    Phrase:    "<the off-voice words, quoted exactly>"
+    Why:       <wrong word, wrong tone or talks past the buyer, and the
+               rule or customer quote it breaks>
+    Corrected: <the full line with only that piece changed>
+  (repeat for each line that needs a change, usually 0 to 4)
+
+  NOT FLAGGED
+  <lines left alone because they are facts, numbers, prices or terms>
+
+  VOICE SCORE
+  Now: <lines on voice> / <lines checked> x 100 = <score>
+  After the fixes: <score>
+
+example:
+  business: sprout
+  input: |
+    [the skill]
+
+    Voice: playful, cheeky, casual internet voice. A funny friend who
+    is into wellness but refuses to be preachy. No lab-coat tone.
+    Brand lines: "Rip. Tip. Enjoy." / "No more gagging on pills,
+    sloshing chalky powders, or cleaning messy counters."
+    Approved claim: "Supports digestion and gut health."
+    Buyer: people who quit greens powders and pill stacks
+    Customer quotes: "I've been choking on [a big-name greens powder]
+    for the last few years" / "the drink was definitely gritty/chalky"
+    / "[Sprout] has been the one thing I've been able to stick to."
+    Mode: fix
+
+    Script:
+    1. Struggling to maintain a consistent supplementation regimen?
+    2. Sprout is a daily greens gummy, clinically tested for nutrient
+       absorption.
+    3. 60+ ingredients, 21 vitamins & minerals, and 6g fiber in 1 pack.
+    4. Say goodbye to unpleasant powdered beverages.
+    5. Our formulation is designed to support digestive wellness.
+    6. Rip. Tip. Enjoy.
+    7. $29.99 for your first box with our text sign-up discount.
+       Renews at $49.99 every 4 weeks.
+  output: |
+    VERDICT: needs_fixes
+
+    SUMMARY
+    Lines 1, 4 and 5 sound like a lab report, not a funny friend. The
+    facts, the brand's own line and the price terms are fine as written.
+
+    ISSUES
+    Line 1
+      Phrase:    "maintain a consistent supplementation regimen"
+      Why:       wrong word and lab-coat tone. Customers say they
+                 couldn't "stick to" a supplement.
+      Corrected: Struggling to stick to a supplement?
+
+    Line 4
+      Phrase:    "unpleasant powdered beverages"
+      Why:       wrong word. Customers say "gritty/chalky" and
+                 "choking on", and the brand says "chalky powders".
+      Corrected: Say goodbye to chalky powders.
+
+    Line 5
+      Phrase:    "Our formulation is designed to support digestive
+                 wellness"
+      Why:       wrong word. "Formulation" and "digestive wellness" are
+                 marketing talk. The claim stays the same, in the plain
+                 words of the approved claim.
+      Corrected: It supports digestion and gut health.
+
+    NOT FLAGGED
+    Line 2: a plain sentence with an approved claim.
+    Line 3: product facts and numbers.
+    Line 6: the brand's own line.
+    Line 7: price and renewal terms.
+
+tweaks:
+  - what: The mode
+    how: Use "fix" for your own new ads. Use "report" for an ad that's already running, so you get a list of problems and nothing is changed until you decide.
+  - what: The customer quotes
+    how: This is where most fixes come from. Five real quotes from reviews or support emails beat a page of voice notes, because the skill reaches for your buyers' words first.
+  - what: The buyer line
+    how: Name a different buyer and the fixes change, because each group of buyers has its own words for the same problem. The same script gets different swaps.
+  - what: Opening-line variants
+    how: If you have several first lines to test, number them as separate lines. Each one gets checked on its own.
+
+judge:
+  - Every flagged phrase is quoted exactly as it appears in your ad.
+  - Each issue names a rule from your voice notes or a customer quote, not general taste.
+  - Numbers, prices, the guarantee and approved claims are word for word the same. Check line by line.
+  - Most good scripts get zero to four fixes. If it rewrote nearly every line, it went too far.
+  - Read the fixed lines aloud. They should sound more like your customers, not more clever.
+
+test:
+  - Run it on an ad a good editor has already fixed for voice. It should flag the lines your editor changed. If it misses one, add that word to your never-say list and run it again.
+  - Run it twice on the same script. The flagged phrases should match both times. If they don't, your voice notes are too loose, so add the words to use and avoid.
+  - Plant two off-voice words, such as "formulation" and "regimen", in a line you know is on voice. It should catch both and leave the rest of the line alone.
+  - Read the Why line on each issue. It should name a rule from your voice notes or quote a customer. If it only says the new line sounds better, it's using its own taste.
+  - Run it in report mode on your best live ad. If it flags a lot, your voice notes don't describe how you sound at your best. Fix the notes, not the ad.
+
+improve:
+  - Keep your never-say list in the house rules of 00-start-here.md, so it outranks the tone notes on every run and every other tool sees it too.
+  - Add three to five real customer quotes to step 4, marked "use these words first". Most fixes come from there.
+  - Add two lines from your best ads under step 5 as the voice done right, so it knows what on-voice looks like for you.
+  - If you mostly check other people's live ads, change the default mode in "What you need" from fix to report.
+  - Each time it catches a word your writers keep using, add that word to the never-say list in 00-start-here.md. Run "Sales copy editor" first, since this check only changes wording.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Claude, ChatGPT and Gemini all do this well when the voice notes and customer quotes are pasted in full."}
+  inputs:
+    - "Ten real customer quotes from reviews or support emails, so swaps come from your buyers' own words"
+    - "Two or three of your best-performing ads, so it knows what on-voice sounds like at your best"
+    - "Lines an editor has rejected before, so known off-voice words are caught first"
+
+terms:
+  - term: Voice notes
+    meaning: A short description of how your brand talks, with words it uses and words it never uses.
+  - term: Never-say list
+    meaning: Words and phrases your brand has decided never to use in its copy.
+  - term: Approved claim
+    meaning: A sentence about your product that your legal or compliance check says you may use.

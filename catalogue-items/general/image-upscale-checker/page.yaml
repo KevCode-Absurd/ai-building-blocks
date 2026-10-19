@@ -1,0 +1,182 @@
+new_slug: image-upscale-checker
+name: "Image upscale checker"
+summary: "Attach your image and size needed. Get upscale settings, a change check and a score out of 100."
+job: make-image-ads
+
+headline: "Image upscale checker"
+subhead: Attach the approved image and say the size you need and your upscaler. It picks the safest upscale and settings, then checks the returned file against the original. You get the settings, a size and difference check, and a fidelity score out of 100.
+
+explain: |
+  Upscaling means making an image larger, with more pixels, so it stays sharp at a bigger size. Many upscalers now redraw the picture as they enlarge it. That can look great and still smooth a face, change a grip or re-letter your label. If nobody compares the result with the original, those changes go to print.
+
+  This skill starts by asking what's in the picture. Words, logos and faces get a faithful upscaler, one that enlarges what's there and invents as little as possible. A generative upscaler, which adds new detail, comes second and only at its lowest setting. Your words and logo are put back from the design file or artwork where you have it. When the file comes back, it reads the real pixel size, then runs a difference check: the original laid over the result, so any change shows up bright. A failed try starts again from the original, one step safer each time.
+
+when:
+  - You need a larger version of an approved image for print, a big banner or a high-resolution export.
+  - You want a sharper first frame to start an AI video from.
+  - A past upscale changed a face, a hand or your label, and you want to catch it next time.
+
+you_give:
+  - The approved image, the original file, attached (your AI can see pictures)
+  - The size you need and what it's for
+  - The upscaler you'll use, and which models and settings it has
+  - How many tries you'll allow (optional; 3 if you don't say)
+you_get:
+  - The real target size in pixels, worked out from where the image will go
+  - The kind of upscaler to use and the settings that keep it faithful
+  - A plan for keeping your words and logo exact
+  - A size check, a difference check and a review of words, faces, hands, product and texture
+  - A verdict, either accepted or the original returned with the reason
+  - A fidelity score out of 100 for each try, from the share of checked areas that match the original
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Attach the approved image and say what it's for, for example "a 24 x 30 inch print banner".
+  - Name your upscaler and its models. Set the size and settings there, as the skill says.
+  - Attach the returned file to the same chat for the checks.
+  - Use the result only if every row passes. Keep the original untouched either way.
+
+how_it_works:
+  - title: Checks the original
+    text: A wrong word, a broken hand or an unapproved face gets fixed first, since an upscale makes every fault bigger.
+  - title: Works out the real size
+    text: Turns the use into pixels, such as inches times pixels per inch for print, and picks the smallest scale that gets there.
+  - title: Picks the kind of upscaler
+    text: Faithful for words, logos and faces. Generative only as a second choice, at its lowest setting. A plain resize for small jumps.
+  - title: Sets it to stay faithful
+    text: Size set in the tool, creativity low, face recovery off or low, and a keep-everything prompt if the tool takes one.
+  - title: Protects small text
+    text: Puts words and logos back from the design file or artwork, or reads them letter by letter.
+  - title: Finds every change
+    text: Checks the real pixel size, then lays the original over the result in Difference mode so any change shows up bright.
+  - title: Retries one step safer
+    text: Each try starts from the untouched original and moves toward faithful, ending with a plain resize that can't invent anything.
+
+output_shape: |
+  SOURCE:     <file>, <width> x <height> px, <ratio>
+  TARGET:     <width> x <height> px, for <use>
+  UPSCALER:   <tool, model>, <settings>, because <reason>
+  TEXT/LOGO:  <how they are kept exact>
+
+  PROMPT (only if the tool takes one)
+  This is an approved photograph. Make it larger and cleaner,
+  and change nothing in it. Keep exactly: <...>
+  Allowed: <...>   Not allowed: <...>
+
+  RESULT:     <file>, <width> x <height> px, ratio kept: <yes/no>
+  DIFFERENCE CHECK: <what showed up bright>
+  REVIEW
+  Words and logos    <pass | fail | needs a person>, <change>
+  Faces              <...>
+  Hands              <...>
+  Product            <...>
+  Texture and edges  <...>
+  FIDELITY SCORE: <passed> / <counted> x 100 = <score>
+  Tries used: <n> of <n>   Verdict: <accepted | original returned, why>
+
+example:
+  business: sprout
+  input: |
+    [the skill]
+
+    Approved image attached: sprout-pour_4x5.png, 1080 x 1350 px.
+    An adult's hand holds a Sprout daily pack torn across the top,
+    green gummy bears pour into the other palm, and the Sprout Original
+    pouch stands behind (glossy deep green foil, big yellow wordmark,
+    yellow bear face top right, "28 Daily Packs" at the bottom).
+    Words on the image, added in Figma: "Rip. Tip. Enjoy."
+
+    Need: a 4:5 banner printed at 12 x 15 inches, 180 ppi.
+    Tool: Topaz Gigapixel.
+  output: |
+    SOURCE:     sprout-pour_4x5.png, 1080 x 1350 px, 4:5 portrait
+    TARGET:     12 x 15 in at 180 ppi = 2160 x 2700 px, for a printed
+                banner. Scale 2x.
+    UPSCALER:   Topaz Gigapixel, Standard model, 2x, face recovery
+                off. Faithful model, because the image has words, a
+                logo and two hands. No face in frame.
+    TEXT/LOGO:  Export "Rip. Tip. Enjoy." again from the Figma file at
+                2160 x 2700 and place it over the upscaled photo. The
+                pouch printing stays in the photo, so read it letter by
+                letter after.
+    Keep sprout-pour_4x5.png untouched. Save the try as
+    sprout-pour_2160x2700_try1.png.
+
+    PROMPT: not needed. This model takes no prompt.
+
+    WHEN THE FILE COMES BACK
+    1. Size: the file's details must read 2160 x 2700 px. Padded,
+       cropped or stretched fails.
+    2. Difference check: resize the original to 2160 x 2700 in an
+       editor with layers, put it under the result, set the top layer
+       to Difference. Look for bright areas on the fingers, the tear
+       line and the pouch printing.
+    3. At 100%, area by area:
+       Words and logos    "28 Daily Packs", the wordmark and the bear
+                          face, letter by letter and line by line
+       Faces              none in this image
+       Hands              five fingers on each hand; same grip; nails
+                          unchanged
+       Product            tear still straight across the top edge;
+                          pouch outline and foil crinkles
+       Texture and edges  gummy edges, no halo along the pouch, palm
+                          skin not smoothed
+    4. If anything changed: try 2 from the original with sharpening
+       and noise reduction lower; try 3 is a plain bicubic resize.
+
+    RESULT: not run yet. Attach the returned file and I'll fill in the
+    review. Until then it is marked "not reviewed".
+
+tweaks:
+  - what: What it's for
+    how: Say "video start frame" and it first checks the largest size your video tool accepts, since pixels beyond that are thrown away.
+  - what: Your tool's real controls
+    how: Name the tool and its models. The settings line uses them, and if the tool's largest size is below your target, the report says so.
+  - what: What's in the picture
+    how: Describe the people, product and printed words. The keep list and the review rows name each one, so nothing goes unchecked.
+  - what: Number of tries
+    how: Allow more or fewer. Each try starts from the untouched original and moves one step closer to a plain resize.
+
+judge:
+  - The report gives the returned file's real pixel size, and it matches the target and the original's ratio.
+  - The kind of upscaler fits what's in the picture, and a faithful model was tried first.
+  - Every printed word and logo was read letter by letter, or put back from the design file or artwork.
+  - A difference check was done, or the report says why it couldn't be.
+  - Nothing is marked "pass" that wasn't compared. Unseen areas say "needs a person".
+  - The original file is still there, unchanged.
+
+test:
+  - Upscale an image with small print on it, once with a faithful model and once with a generative one. Run the difference check on both. The generative result should light up more around the text, which shows why the skill picks faithful first.
+  - Check the returned file's size in your computer's file details, not the tool's label. It should match the report.
+  - Run it twice from the same original and compare the two results with the difference check. If they differ from each other, the upscaler is changing things.
+  - Ask for a size your tool can't reach. The report should say so, and never call a smaller file the target.
+
+improve:
+  - Write your upscaler's models and settings into step 4 of the skill file, so it always picks from the tools you really have.
+  - "Add your product's printed words to the keep list in step 4 (for Sprout: the wordmark and \"28 Daily Packs\"), so they're named every time."
+  - Add your printer's pixels-per-inch rule to step 2, so print targets are always right.
+  - Add your file naming rule to step 9, with the size in the name, so nobody uses an unchecked copy.
+  - Use it as the last step after the skills that turn an image plan into a prompt or borrow a photo's look for your product.
+
+works_best_with:
+  tools:
+    - {name: "Topaz Gigapixel", why: "Lets you choose a faithful model, including one made for text and logos, and turn face recovery down or off."}
+    - {name: "Magnific", why: "Offers a Precision upscaler with plain sharpen and grain sliders, apart from its Creative one."}
+    - {name: "GIMP", why: "Free editor whose Difference layer mode shows any change between the original and the result."}
+  inputs:
+    - "The design file the words came from, such as Figma or Canva, so you can export the words at the final size"
+    - "Your logo or label artwork as SVG or a large PNG, so you can place it back sharp"
+    - "The highest-quality copy of the image, a PNG or the first export, not a screenshot"
+    - "Your printer's size and pixels-per-inch rule, so the target size is exact"
+
+terms:
+  - term: Upscale
+    meaning: Making an image larger, with more pixels, so it stays sharp at a bigger size.
+  - term: Faithful upscaler
+    meaning: An upscaler that enlarges what is there and invents as little as possible.
+  - term: Generative upscaler
+    meaning: An upscaler that redraws the image and adds new detail, which can change faces and text.
+  - term: Difference check
+    meaning: Laying the original over the result so matching areas go dark and any change shows up bright.
+  - term: Pixels
+    meaning: The tiny dots an image is made of. Width and height in pixels set how large it can be shown sharply.

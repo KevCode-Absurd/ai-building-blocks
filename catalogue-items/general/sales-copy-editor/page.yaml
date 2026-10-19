@@ -1,0 +1,241 @@
+new_slug: sales-copy-editor
+name: "Sales copy editor"
+summary: "Paste a draft and facts. Get weak lines fixed and a score out of 100, before and after."
+job: write-ad-copy
+
+headline: "Sales copy editor"
+subhead: Paste an ad, page or email and the facts it may use. It reads the draft as a skimmer, a line-by-line reader and a doubter, and fixes only where one would stop. You get each fix with its gain, and a score out of 100 before and after.
+
+explain: |
+  Edits often make copy worse. The odd true detail gets cut because it sounds informal, or the whole piece gets rewritten and loses its voice. Meanwhile the real gaps stay: no clear promise, praise words with no fact behind them, a price with its renewal hidden.
+
+  This skill first points to the sentence that says what the buyer gets. Then it reads the draft three ways. As a skimmer, who sees only headings, first lines and buttons. Line by line, asking if a person would say each sentence. As a doubter about to pay, swapping praise for your facts and checking every price and guarantee. Ads get four more checks, such as an ask that gives the price. Each change goes in a ledger with its gain. A change with no gain is undone.
+
+when:
+  - You have a draft ad, page, email or script and want an editor's read before it goes out.
+  - Your copy leans on words like "premium" or "potent", and you want your real facts in their place.
+  - You need to change one thing in copy that already works, without breaking the rest.
+
+you_give:
+  - The draft, with each part labelled (headline, main text, button)
+  - The ad's image, if it's an ad (attach it; your AI can see pictures)
+  - The facts it may use, such as product facts, approved claims, price and guarantee terms
+  - Who it's for and their main doubt (optional)
+  - One specific change you want, if the copy already runs (optional)
+  - Your voice notes and claims you must never make (optional)
+you_get:
+  - The one promise, and the claims, terms and details it locked
+  - The word count, reading grade and longest sentence, before and after
+  - A ledger of changes, each with the check that found it and what it gains
+  - Claims to send to a claims check, missing facts, and a one-line verdict
+  - A score out of 100 on six checks (ten for an ad), before and after the edit, with each check still failed named
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your draft underneath, with each part labelled. Say if it's an ad, and attach the image.
+  - Paste the facts it may use, including the price, what it renews at and the guarantee wording. It won't add anything beyond them.
+  - Add one line on who it's for and what makes them hesitate.
+  - Read the verdict first. If it says the reason to buy is weak, rethink the offer before you polish lines.
+  - Read the ledger. Undo any change whose gain doesn't convince you.
+
+how_it_works:
+  - title: Locks what can't move
+    text: Lists your claims, numbers, prices, guarantee wording and quotes, plus every specific detail. None of them gets reworded.
+  - title: Finds the one promise
+    text: Points to the sentence that says what the buyer gets. If there isn't one, writing it is the first fix.
+  - title: Reads as a skimmer
+    text: Checks that headings, first sentences, prices and buttons carry the promise on their own.
+  - title: Reads line by line
+    text: Marks every place a reader could stop, and asks if a person would say each line out loud.
+  - title: Reads as a doubter
+    text: Asks of each line "so what?", swaps praise words for your facts, and checks every price and guarantee is stated in full.
+  - title: Checks an ad's opening and ask
+    text: For ads, checks that the first words pick out the buyer and match the picture. The ask must give the price and guarantee.
+  - title: Fixes from the top
+    text: Makes the plainest fix for each stop, top first, and logs the gain. No gain means no change.
+  - title: Measures again
+    text: Re-reads around each change, then gives the new word count and reading grade.
+  - title: Scores before and after
+    text: Checks six things, such as one clear promise and every praise word backed by a fact, plus four more for an ad. The score is checks passed out of all checks, times 100, before and after.
+
+output_shape: |
+  LOCKED
+  <claims, numbers, terms, quotes, the order of the argument>
+
+  SPECIFICS PROTECTED
+  <every number, name, how-it-works detail or odd true detail>
+
+  MEASURES
+  <words, reading grade, longest sentence> -> <after>
+
+  PROMISE
+  "<the sentence that says what the buyer gets>"
+
+  LEDGER
+  <n>. <part> | <promise / skim / slide / doubt / ad>
+     Was:  "<old text>"
+     Now:  "<new text>"
+     Gain: <fewer words / stop removed / term in full / claim backed>
+
+  LEFT AS IS
+  <lines kept, and why>
+
+  FOR A CLAIMS CHECK / MISSING
+  <locked claims your facts don't back; facts a fix needed>
+
+  VERDICT
+  <a wording problem, or a weak reason to buy no edit can fix>
+
+  SCORE
+  Before: <passed>/<checks> = <score> out of 100
+  After:  <passed>/<checks> = <score> out of 100
+  Still failed: <one line per check, or none>
+
+example:
+  business: sprout
+  input: |
+    [the skill]
+
+    Draft (Facebook ad, two live Sprout lines put together for this run):
+    Headline: "Sprout is too expensive": here's 61% off to prove otherwise
+    Main text: Big news: your first order of Sprout just got a lot more
+    affordable. 💚 $29.99 for your first order, that's less than
+    $1.10/day for 60+ whole-food ingredients, 21 vitamins & minerals,
+    and gut-supporting probiotics in one daily gummy pack. ✅ $20 off
+    your first order ✅ +$5 off for every extra person ✅ Third-party
+    tested. Online-exclusive offer. Shop Sprout.
+
+    Facts:
+    - 1 pack a day: 60+ ingredients, 21 vitamins & minerals, 6 g
+      prebiotic fiber. The ingredient list shows no probiotics.
+    - $29.99 first box needs the text sign-up discount, new customers
+      only. Then $49.99 every 4 weeks. Pause or cancel any time.
+    - One-time price $66.65. Buy 2, save $5.
+    - Third-party tested for 70 pesticides, 4 heavy metals, 16
+      contaminants, 9 microbial contaminants.
+    - Orders usually ship within 24 hours.
+    - 30-day money-back guarantee, first order only.
+    - The site shows 52% and 55% off. Ads say 61%.
+    Buyer: knows Sprout, thinks it costs too much. Doubt: "Will the
+    price jump after the first order?"
+  output: |
+    LOCKED
+    "61% off", "$29.99", "less than $1.10/day", "$20 off", "+$5 off",
+    "Third-party tested", "Online-exclusive offer", the quoted words
+    "Sprout is too expensive", the probiotics claim. Order: the price
+    doubt, the price, what's in the pack, the three ticks, the ask.
+
+    SPECIFICS PROTECTED
+    "60+ whole-food ingredients", "21 vitamins & minerals", "less than
+    $1.10/day", "one daily gummy pack", "+$5 off for every extra person"
+
+    MEASURES
+    65 words, grade 6.8, longest sentence 25 words -> 99 words, grade
+    6.9, longest 20. The extra words are the terms the doubter needed.
+
+    PROMISE
+    "$29.99 for your first order, that's less than $1.10/day for 60+
+    whole-food ingredients ... in one daily gummy pack." One promise,
+    but it sits behind a sentence that says nothing.
+
+    LEDGER
+    1. Main text, opening | skim
+       Was:  "Big news: your first order of Sprout just got a lot more
+             affordable."
+       Now:  (cut)
+       Gain: 13 fewer words. The price is now in the first words
+             before "See more".
+    2. Main text, price | doubt
+       Was:  "$29.99 for your first order, that's less than..."
+       Now:  "Your first order is $29.99 with our text sign-up discount
+             for new customers. That's less than..."
+       Gain: claim backed, and the longest sentence split in two.
+    3. After the price | doubt
+       Was:  (nothing)
+       Now:  "After that, it's $49.99 every 4 weeks, and you can pause
+             or cancel any time."
+       Gain: term in full. It answers "will the price jump?" and
+             explains the "$20 off" tick.
+    4. Third tick | doubt, prove it
+       Was:  "Third-party tested."
+       Now:  "Third-party tested for 70 pesticides and 4 heavy metals."
+       Gain: claim backed by a supplied fact.
+    5. The ask | ad
+       Was:  "Shop Sprout."
+       Now:  "Shop Sprout. Your first box usually ships within 24 hours,
+             and your first order has a 30-day money-back guarantee."
+       Gain: the ask says what happens next and gives the guarantee.
+
+    LEFT AS IS
+    The headline picks out the price doubter in their own words. The
+    "$20 off" and "+$5 off" ticks are plain price labels.
+
+    FOR A CLAIMS CHECK
+    "gut-supporting probiotics": your facts list prebiotic fiber and
+    no probiotics. It's locked, so it wasn't changed here.
+
+    MISSING
+    What the 61% is taken off. $29.99 against $66.65 is 55%, and the
+    site shows 52% or 55%. Also the image, so the picture check
+    wasn't run.
+
+    VERDICT
+    A wording problem. The reason to buy is clear, but the draft hid
+    the renewal price, the very thing this buyer fears. Fix
+    "probiotics" and "61%" before this ad runs again.
+
+tweaks:
+  - what: The facts
+    how: Every fix for a vague word comes from here. A short list gets you more MISSING notes and plainer lines. A full list with amounts, tests, renewal price and guarantee terms gets you specific ones.
+  - what: Saying it's an ad
+    how: Label the draft as an ad and it adds four checks on the opening, the picture, the ask and any urgency. Paste a screenshot of the image so the picture check can run.
+  - what: A change request
+    how: If the copy already runs, name the one change you want. It locks everything else and only touches what the request needs.
+  - what: The buyer and their doubt
+    how: The doubter read aims at the doubt you name. "Will the price jump?" pulls the renewal price forward; "will it fit in my kitchen?" pulls the sizes forward.
+  - what: How many changes
+    how: Six is the default. Ask for "the top three" if you're short on time. It fixes from the top down.
+
+judge:
+  - You can point to the one sentence that says what the buyer gets.
+  - No claim, number, price, guarantee wording, name or quote was reworded. Compare them side by side.
+  - Every new fact in a fix is in the facts you gave it, and every ledger row names a gain.
+  - Most lines were left as they were, with a reason.
+  - If it's an ad, the ask says what to do, what it costs and what happens if they don't like it.
+
+test:
+  - Run it on copy a good editor has already fixed. It should find most of the same lines and keep the details your editor kept.
+  - Run it twice. The locked list, the promise and the changed lines should match both times. If they move, add amounts, tests and terms to your facts.
+  - Put "premium" in a line where your facts hold the number behind it. It should swap the word for that number, not for another adjective.
+  - Plant a guarantee with its limit left out, or a price with no renewal. The doubter read should catch it.
+  - Check the before and after reading grades with a free readability checker. They should be close to what it reports.
+
+improve:
+  - Paste your full facts list and the claims your brand must never make into "What you need" in the skill file. Then every fix has real numbers, and none goes near a banned claim.
+  - If your copy always has the same parts, list them in step 1 (for example "headline, main text, button").
+  - Set your own reading grade target in step 2. Add your platform's limits to step 7, such as "main text before See more under 125 characters".
+  - When the same MISSING fact comes up twice, find it and save it to your brand file. Save the specifics it protects there too.
+  - If an AI tool wrote the draft, run "AI-sounding copy editor" first. Finish with "Sales copy readiness checker".
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Any current chat AI can follow the reads. Give it the facts list so it adds nothing."}
+    - {name: "Hemingway Editor", why: "Gives a reading grade and marks hard sentences, so you can check the before and after numbers yourself."}
+    - {name: "Meta Ads Manager", why: "Its ad preview shows where your main text gets cut at See more, so you can check the opening."}
+  inputs:
+    - "Results for the draft if it already runs (clicks, replies), so the edit starts where readers stop"
+    - "Two or three pieces in your voice that worked, so it leaves your proven phrasing alone"
+    - "A screenshot of the ad image, so it can check the words agree with the picture"
+    - "Your buyers' main doubt in their own words from a review, so the doubter read aims at it"
+
+terms:
+  - term: Promise
+    meaning: The one sentence that says what the buyer gets. Every edit starts by finding it.
+  - term: Specific
+    meaning: A detail a reader can check or picture, such as a number, a name or how it's made. Every edit protects these.
+  - term: Stop
+    meaning: A place where a reader would stop reading, such as a word they'd have to decode or a jump in logic.
+  - term: The ask
+    meaning: The part that tells the buyer what to do next, such as "Shop Sprout".
+  - term: Reading grade
+    meaning: The school year a reader needs to follow the text easily, worked out from sentence and word length.

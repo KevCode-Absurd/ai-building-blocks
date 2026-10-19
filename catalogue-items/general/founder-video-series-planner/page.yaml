@@ -1,0 +1,192 @@
+new_slug: founder-video-series-planner
+name: "Founder video series planner"
+summary: "Paste buyer questions. Get a ten-week founder video plan, filming setup and a score out of 100."
+job: grow-social
+
+headline: "Founder video series planner"
+subhead: Paste the questions buyers really ask, plus what you make and what the founder can show. It plans ten weekly videos, each answering one question with something real on camera. You get the plan, a filming setup, three cuts and a score out of 100.
+
+explain: |
+  A founder talking to a phone can earn more trust than a polished brand post, and it costs nothing to film. Most founders stop after a few videos because they run out of things to say. The fix is already in your inbox. Buyers keep asking the same questions in reviews, emails and comments, and each one is a video.
+
+  This skill turns those questions into a weekly series. Marcus Sheridan's "They Ask, You Answer" makes the case that answering buyers honestly, price and problems included, wins trust. Austin Kleon's "Show Your Work!" makes the case for showing the process. So every week answers one real question and shows one real thing: a test report, the packing table, the label. Questions fall into four threads: how it's made, why we chose it, who it's for, and what we fixed. Anything the founder hasn't told it becomes a question in square brackets, so nothing is made up.
+
+when:
+  - You want the founder or owner to post regular videos as themselves.
+  - You tried founder videos but ran out of ideas after two or three.
+  - Buyers keep asking the same questions and you want to answer them in public.
+
+you_give:
+  - What you make or offer, who it's for, and the founder's name and role
+  - At least ten real buyer questions, from reviews, emails, DMs or comments
+  - What the founder can show on camera, such as a place, a test report or a message shared with permission (recommended)
+  - One goal, such as trust or launch support (optional; trust if you don't say)
+you_get:
+  - A question bank sorted into four threads, with what can be shown for each
+  - A ten-week plan with each video's first line, short answer, what's shown and next week's question
+  - A filming setup for one phone and one room
+  - Three cuts from the first shoot, and a MISSING list of facts only the founder has
+  - A score out of 100 for the share of its five checks the plan passes, with each one missed
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your facts, then ten or more real buyer questions in their own words.
+  - List what the founder can show on camera.
+  - The founder answers the questions in square brackets on camera, not in the script.
+  - Film week 1 with the setup, then make the three cuts.
+
+how_it_works:
+  - title: Starts from real questions
+    text: Every week is a question a buyer really asked. It checks your list covers cost, problems, comparisons, reviews and "which is best".
+  - title: Sorts them into four threads
+    text: How it's made, why we chose it, who it's for, and what we fixed. No thread runs two weeks in a row.
+  - title: Shows something every week
+    text: A question with nothing to show on camera is parked. It never fills the gap with a made-up story.
+  - title: Answers fast
+    text: The question opens the video, on screen as text. The one-sentence answer comes within five seconds, then the proof.
+  - title: Ends on next week
+    text: Each video closes on the next question, so viewers know what's coming.
+  - title: Gets three cuts from one shoot
+    text: The full answer, one short clip of the answer and the proof, and the question and answer as text for your caption and FAQ.
+
+output_shape: |
+  QUESTION BANK
+  "<question>" (<source>) | <thread> | Show: <what> / parked
+
+  TEN-WEEK PLAN
+  Wk | Thread | Question | First line | Short answer | Show |
+     | What it means for you | Next week | [Questions for the founder]
+
+  FILMING SETUP
+
+  THREE CUTS, WEEK 1
+  Full answer | Short clip (<in> to <out>) | Q and A text
+
+  MISSING: <facts only the founder can supply>
+
+  SCORE  <passed> / 5 checks x 100 = <score>   Missed: <one line each>
+
+example:
+  business: sprout
+  input: |
+    [the skill]
+
+    Business: Sprout, daily greens gummies in single-serve packs. 28
+    daily packs per pouch; tear one open and eat the small handful of
+    gummy bears. Low Sugar or Sugar-Free. Adult and kids lines.
+    Facts: 60+ ingredients, 21 vitamins & minerals, 6g fiber per pack.
+    Third-party tested for 70 pesticides, 4 heavy metals, 16
+    contaminants, 9 microbial contaminants. Methylfolate, not folic
+    acid. 2025 study, 12 weeks, 120 adults: blood vitamin C +40.1%,
+    folate +20.5%. Subscription $49.99 every 4 weeks after a $29.99
+    first order with the text sign-up. Sugar-Free upsets some stomachs;
+    Low Sugar is the gentler pick.
+    Questions from reviews and support: "Is this just candy?" / "A
+    gummy can't hold enough to replace my powder." / "Will the
+    sugar-free one upset my stomach?" / "Which discount is real?" /
+    "I thought the first pack I tried tasted terrible" / "How is it
+    tested?" / "Why methylfolate?" / "How do I fit it into a busy
+    morning?" / "Why gummies, not powder?" / "Why does it cost more
+    than drugstore gummies?"
+    Can show: the pouch and packs, the label, the old tub and shaker.
+    Founder: [not given]. Goal: trust.
+  output: |
+    TEN-WEEK PLAN (first lines are the buyers' words)
+    1  Who it's for | "Is this just candy?" | "It's one daily pack
+       with 21 vitamins and minerals and 6 grams of fiber, and it
+       comes Low Sugar or Sugar-Free." | Show: the label, finger on
+       the numbers | Next: how do you test it?
+    2  How it's made | "How is it tested?" | "An outside lab tests
+       it for 70 pesticides, 4 heavy metals, 16 contaminants and 9
+       microbial contaminants." | Show: [a real test report, if you
+       can show one on camera] | [How often is it tested?]
+    3  Why we chose it | "Why does it cost more than drugstore
+       gummies?" | [Your reason, in one sentence.] | Show: the label,
+       line by line, and what each line costs to put in [if you know] |
+       Price said as the site states it: $49.99 every 4 weeks after a
+       $29.99 first order with the text sign-up
+    4  Who it's for | "Will the sugar-free one upset my stomach?" |
+       "For some people it does. If your stomach is sensitive, start
+       with Low Sugar." | Show: both pouches side by side
+    5  Why we chose it | "Can a gummy hold enough to replace my
+       powder?" | Show: the label, then the study's two numbers on
+       screen | Say "in the blood" and both numbers, never "it works"
+    6  What we fixed | "The first pack tasted terrible." | [What did
+       you learn or change about the taste? If nothing, park this
+       week.] | Show: [your answer decides it]
+    7  How it's made | "Why methylfolate, not folic acid?" | [Your
+       reason, in your words, inside your claims rules] | Show: the
+       line on the label
+    8  Who it's for | "How do I fit it into a busy morning?" | "Tear,
+       tip, eat. One pack a day." | Show: the whole routine in one
+       take, in the founder's kitchen
+    9  Why we chose it | "Why gummies, not powder?" | [The real reason
+       you made a gummy.] | Show: the old tub and shaker, then one pack
+    10 What we fixed | "Which discount is real?" | [What you changed
+       so the first-order price is clear, or what you're changing.] |
+       Show: the checkout page as it is now
+
+    Every video closes on next week's question. No discount codes, no
+    countdowns.
+
+    FILMING SETUP
+    Phone upright at eye height, propped. Face the window. Quiet room,
+    mic within arm's reach. Face and text clear of the top and bottom
+    sixth. Talk from three bullets on a card. One practice run, then
+    film. Captions on.
+
+    THREE CUTS, WEEK 1
+    Full answer | Short clip: the one-sentence answer plus the finger
+    on the label, cut where the sentence ends | Q and A text for the
+    caption and the product FAQ
+
+    MISSING: the founder's name and role; how often it's tested; why
+    the price is what it is; anything changed about the taste or the
+    discount; why methylfolate; why a gummy.
+
+tweaks:
+  - what: The goal
+    how: Trust is the default. Say "launch support" and the "why we chose it" weeks move to the front.
+  - what: Fewer questions
+    how: Give it five and you get five weeks plus a list of places to find more, such as your support inbox and review sites.
+  - what: An existing recording
+    how: Paste the transcript of a talk or interview. It finds the passages that answer a buyer question, with in and out times, instead of planning new videos.
+  - what: Watch-time data
+    how: Give where viewers stop watching. It names one change to test, such as a shorter answer before the proof, without changing the real story.
+
+judge:
+  - Every week answers a question a real buyer asked.
+  - Every week shows something real on camera, or is parked.
+  - Every number is in your facts or is a question in square brackets.
+  - No discount code, countdown or "buy now" in any video.
+  - No competitor is named anywhere.
+
+test:
+  - Find every number in the plan in your facts. Anything you can't find should be a question in square brackets.
+  - Read the question bank. Every question should trace back to a review, email or comment you gave it.
+  - Film week 1 and watch the first five seconds. The question and the answer should both be there.
+  - Run it twice. The questions should stay the same; only the order and wording should change.
+
+improve:
+  - Keep a running list of new buyer questions in the skill file under "What you need". Add every new one from your inbox.
+  - Add what the founder can show to the list, so more questions get a week.
+  - Write the founder's voice into step 4 (for Sprout, short lines, says the gross thing plainly, no lab-coat tone).
+  - Post each week's answer in your FAQ too, so the work pays twice.
+  - Pair it with the skill that turns raw footage into a social post, and with the creator gifting plan for posts from other people.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Claude, ChatGPT and Gemini all follow this skill well, so use the one you already have."}
+    - {name: "CapCut", why: "Adds captions from the speech and lets you correct them by hand, on a phone or a computer."}
+  inputs:
+    - "Your FAQ page and recent support emails, so the question bank starts full"
+    - "A 30-second phone clip of the founder talking, so lines are written in their real voice"
+    - "The days you can film and post, so the plan fits a real week"
+
+terms:
+  - term: Thread
+    meaning: One of four kinds of question the series answers, such as how it's made or who it's for.
+  - term: Parked
+    meaning: A question kept for later because there's nothing real to show on camera yet.
+  - term: Cut
+    meaning: A shorter post made from part of a longer video.

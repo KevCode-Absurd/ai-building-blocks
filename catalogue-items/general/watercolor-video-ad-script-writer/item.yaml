@@ -1,0 +1,32 @@
+slug: watercolor-video-ad-script-writer
+renamed_from: get-watercolor-ad-script-that-sells
+name: "Watercolor video ad script writer"
+summary: "Paste your idea and product facts. Get a watercolor video script, cast note and score out of 100."
+category: general
+boards: [ecommerce]
+type: skill
+role: make
+job: video
+level: intermediate
+twin: watercolor-image-ad-maker
+inputs:
+  - {type: brief, required: true}
+  - {type: brand_brain, required: true}
+outputs:
+  - {type: script}
+uses: []
+example: watercolor
+origin: rebuilt
+source_ids: [CES-126]
+version: 2.1.0
+credits:
+  - {title: "Watercolor painting", by: "Wikipedia contributors", url: "https://en.wikipedia.org/wiki/Watercolor_painting", used: "Washes, glazing, wet-in-wet, wet-on-dry, dry brush, lifting, masking, paper surfaces"}
+  - {title: "Creating granulation with watercolour", by: "Winsor & Newton", url: "https://eu.winsornewton.com/blogs/guides/granulation-techniques-watercolour", used: "Granulation, rough paper, salt and dry-brush texture"}
+  - {title: "Elevate Your Watercolour Painting - Intermediate Watercolour Techniques", by: "Eckersley's", url: "https://www.eckersleys.com.au/blogs/learn/elevate-your-watercolour-painting-intermediate-watercolour-techniques", used: "Glazing, lifting off and how rushed layers turn muddy"}
+  - {title: "Prompt and image attribute guide", by: "Google Cloud", url: "https://docs.cloud.google.com/vertex-ai/generative-ai/docs/image/img-gen-prompt-guide", used: "Image prompt order, short text in images, avoid lists as plain nouns"}
+tested:
+  on: 2026-10-19
+  business: sprout
+  model: claude-opus-5-5
+  judge: claude-fable-5-1
+  result: pass

@@ -1,0 +1,193 @@
+new_slug: product-image-spec-writer
+name: "Product image spec writer"
+summary: "Attach your product photos. Get a sourced truth sheet, lock lines and a score out of 100."
+job: product-photos
+
+headline: "Product image spec writer"
+subhead: Attach your real photos of one exact product variant. It keeps the photos you can trust, writes a seven-part truth sheet with a source on every line, and picks the lines every prompt repeats. You get the sheet, the next photo to take and a score out of 100.
+
+explain: |
+  Image models redraw products. They swap a matte tub for a glossy one, invent a lid, re-letter the label or show the wrong flavour. Usually that happens because nobody wrote down what the product looks like, so the model filled the gaps with a typical product from your category.
+
+  This skill closes those gaps first, the way a factory spec sheet does. It checks each photo with three questions: is it this exact variant, can you read it, is the colour honest? Then it writes the truth sheet in seven parts: identity, body, marks, build, use, never show and evidence. Every line says where it came from, a photo or a fact, or says MISSING. It picks the three to five details every prompt must repeat word for word, lists the shots each gap blocks, and asks for the one photo that unblocks the most.
+
+when:
+  - You're about to make product photos, ads or product page images with AI and want the product right in every one.
+  - Your AI pictures keep showing a slightly wrong product (the wrong lid, a redrawn label, a lookalike).
+  - You want to know which product photo to take next, and why.
+
+you_give:
+  - The product and exact variant (size, colour, flavour or finish)
+  - Every real photo you have of that exact variant, ideally one of it in use
+  - Basic facts, such as how it's used, what's in one order and what you never show (optional)
+you_get:
+  - A photo check saying which photos to trust and why the rest are out
+  - A one-page truth sheet in seven parts, with a source on every line
+  - Three to five lock lines that every prompt repeats word for word
+  - The shots that can't be made yet, and the one photo to take next
+  - A score out of 100 for the sheet, with one line for each check it missed
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Attach your product photos at full size, not thumbnails. Say which variant they show, and say so if you're not sure.
+  - Paste any facts you have underneath, such as how to use it and what's in the box.
+  - Read the blocked shots and the photo to take next. One phone photo often unblocks several shots.
+  - Keep the sheet, and paste the lock lines into every image prompt you write.
+
+how_it_works:
+  - title: Checks every photo
+    text: Three questions at full size. Is it this exact variant? Can you read the smallest word? Is the colour honest? Any no and it's out.
+  - title: Writes seven parts
+    text: Identity, body, marks, build, use, never show and evidence, the way a factory spec sheet describes a product.
+  - title: Sources every line
+    text: Each line names the photo or fact it came from, or says MISSING. Nothing is guessed.
+  - title: Picks the lock lines
+    text: Three to five visible details a model gets wrong first, written once and repeated word for word in every prompt.
+  - title: Lists the blocked shots
+    text: Each gap names the shots it stops, such as no back photo means no shot of the back.
+  - title: Asks for one photo
+    text: The one photo that unblocks the most shots, with the angle and background to use.
+
+output_shape: |
+  PHOTO CHECK
+  <file>   <kept or out, and which question it failed>
+
+  TRUTH SHEET: <product, variant>
+  IDENTITY     <name, variant, told apart by, the lookalike>   [source]
+  BODY         <shape, colour, finish, size against a hand>   [source]
+  MARKS        <"exact printed words", in order, and where>   [source]
+  BUILD        <how parts meet, where it opens, in one order>  [source]
+  USE          <steps, one use, in use, changes with use>      [source]
+  NEVER SHOW   <brand rules, known wrong versions>             [source]
+  EVIDENCE     <file, face or angle, job>
+  (any line without a source says MISSING)
+
+  LOCK LINES   1. <...>  2. <...>  3. <...>
+  BLOCKED      <gap>  ->  <shots it blocks>
+  NEXT PHOTO   <the one photo, angle, background, why>
+  SCORE        <n>/100 (<checks passed> of 5 checks)
+               Missed: <one line per check still missed>
+
+example:
+  business: sprout
+  input: |
+    [the skill]
+
+    Product: Sprout Original (Adults), Low Sugar, pouch of 28 daily packs
+
+    Photos I have:
+    1. pouch-front.jpg: the pouch front on, soft gradient background
+       (from our product page gallery)
+    2. gummies-hand.jpg: gummies in an adult's open hand (gallery)
+    3. pouch-sf.jpg: a pouch with a white burst on the front
+
+    Facts:
+    - Glossy deep green stand-up foil pouch, big yellow wordmark, yellow
+      bear face top right, "28 Daily Packs" at the bottom. Sugar-Free
+      adds a white burst.
+    - Gummies: small opaque deep-green bears, soft matte, about
+      thumbnail height. One pack is about 20 g, "a small handful".
+    - Tear the daily pack straight across its top edge, never the side,
+      bottom or a corner. The big pouch opens only at its resealable
+      top and is never shown torn.
+    - Never show cartoon tie-in characters or partner brand marks.
+  output: |
+    PHOTO CHECK
+    pouch-front.jpg   Kept. This variant (no white burst), front
+                      readable at full size, even light.
+    gummies-hand.jpg  Kept for the gummies only. No pack in it.
+    pouch-sf.jpg      Out. The white burst means Sugar-Free, a sibling
+                      variant.
+
+    TRUTH SHEET: Sprout Original (Adults), Low Sugar, 28 daily packs
+    IDENTITY     Told apart from Sugar-Free by having no white burst
+                 [facts, pouch-front.jpg]. How "Low Sugar" is printed:
+                 MISSING. Lookalike: a tub, jar or bottle of pills, or
+                 a loose bag of glossy clear gummies [facts].
+    BODY         Glossy deep green stand-up foil pouch [pouch-front.jpg].
+                 Gummies: small opaque deep-green bears, soft matte,
+                 about thumbnail height [gummies-hand.jpg]. Pouch size
+                 against a hand: MISSING.
+    MARKS        Big yellow Sprout wordmark; yellow bear face top right
+                 (a graphic); "28 Daily Packs" at the bottom
+                 [pouch-front.jpg]. Every other word: MISSING, read it
+                 from pouch-front.jpg at full size.
+    BUILD        Resealable top on the pouch [facts, not seen in a
+                 photo]. Daily pack tear line: MISSING. In one order:
+                 one pouch holding 28 daily packs [facts].
+    USE          Tear one daily pack straight across the top, tip the
+                 gummies into the palm, eat. One use = one pack, about
+                 20 g, a small handful [facts]. In use: loose bears in
+                 an open palm [gummies-hand.jpg]. The daily pack in
+                 use: MISSING. Changes with use: none.
+    NEVER SHOW   The pouch torn; a daily pack torn at the side, bottom
+                 or a corner; tie-in characters or partner marks
+                 [facts].
+    EVIDENCE     pouch-front.jpg, front, identity. gummies-hand.jpg,
+                 in hand, substance (gummies only).
+
+    LOCK LINES   1. glossy deep green stand-up foil pouch
+                 2. big yellow wordmark, yellow bear face top right
+                 3. "28 Daily Packs" at the bottom
+                 4. small opaque deep-green bears, soft matte
+                 5. daily pack torn straight across the top only
+
+    BLOCKED      No daily pack photo   -> use, arrival, ad base with
+                                          the pack
+                 No pouch in a hand    -> scale
+                 No back of the pouch  -> any turned or back shot
+                 No pouch open at top  -> substance with the pouch open
+
+    NEXT PHOTO   One daily pack torn straight across the top, held over
+                 an open palm, on a plain light surface, the torn edge
+                 sharp. It unblocks use, arrival and the ad base.
+
+tweaks:
+  - what: The variant line
+    how: Be exact ("Original, Low Sugar, 28 daily packs", not "the pouch"). The sheet is true for one variant only, and a sibling flavour is treated as out.
+  - what: An in-use photo
+    how: Add one photo of the product being used and the build and use parts fill in. Those two parts are what stop a model inventing how your product opens.
+  - what: The lock lines
+    how: Ask for three if your product is simple, five if it has small print or a tricky opening. More than five and prompts get crowded.
+  - what: Two kinds of use
+    how: If your product is, say, both worn and held, say so. The use part then covers how it sits on a body and how it's held.
+
+judge:
+  - Every line names a photo or fact, or says MISSING.
+  - The printed words are quoted exactly, not "brand name and logo".
+  - The lookalike names a real thing a model would draw for your category.
+  - No AI-made picture is listed as evidence.
+  - Every gap names the shots it blocks as well as the missing photo.
+
+test:
+  - Slip one photo of a sibling variant in with your real photos (for Sprout, the yellow Kids pouch). The check should mark it out. If it keeps it, your variant line is too loose.
+  - Run it twice on the same photos. The printed words should be quoted the same way, letter for letter. Any difference means one photo isn't sharp enough.
+  - Check three lines against the product in your hand, such as one colour, one printed word and how it opens.
+  - Paste the lock lines into one prompt and make a picture. If the product still comes back wrong, find the line that failed and take the photo it needs.
+
+improve:
+  - Add your never-show list and how the product is used to "What you need" in the skill file, so those lines are never MISSING.
+  - Add your category's usual lookalike to the identity part (for Sprout, drugstore multivitamin gummies).
+  - Write the way your store names variants into step 1, so the sheet always names the exact variant the same way.
+  - Save the sheet in your brand file with its date, and run it again whenever the packaging changes.
+  - Pair it with the skills that plan a matching photo set or a full photoshoot. Both start from this sheet.
+
+works_best_with:
+  tools:
+    - {name: "Claude", why: "Reads several product photos at full size and quotes printed words line by line with the photo they came from."}
+    - {name: "Google Sheets", why: "Keeps one row per variant, so the sheet and its lock lines are easy to find and update."}
+  inputs:
+    - "One photo of the product in use, so the build and use parts come from a photo and not a guess"
+    - "A sharp photo of the back of the pack, so every printed word can be quoted"
+    - "Photos of each sibling variant, labelled, so the sheet can say exactly how this one differs"
+    - "Your brand's never-show list and any recall or packaging change dates"
+
+terms:
+  - term: Variant
+    meaning: One exact version of a product, such as one flavour, size or colour.
+  - term: Truth sheet
+    meaning: The written record this skill makes. Every later picture is checked against it.
+  - term: Lock lines
+    meaning: The few visible details every image prompt repeats word for word, so the product doesn't drift.
+  - term: Render
+    meaning: An AI-made or 3D picture of a product, as opposed to a real photo.

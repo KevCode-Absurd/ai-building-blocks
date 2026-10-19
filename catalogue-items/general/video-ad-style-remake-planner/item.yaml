@@ -1,0 +1,28 @@
+slug: video-ad-style-remake-planner
+renamed_from: get-your-best-ad-in-a-new-format
+name: "Video ad style remake planner"
+summary: "Paste your best ad. Get a video remake plan, every word kept, and a score out of 100."
+category: general
+boards: [ecommerce]
+type: skill
+role: render
+job: video
+level: advanced
+twin: image-ad-remake-planner
+inputs:
+  - {type: script, required: true}
+  - {type: product_data, required: false}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: script}
+uses: []
+origin: own
+source_ids: [CES-003]
+old_name: ad-reference-exact
+version: 2.0.0
+tested:
+  on: 2026-10-19
+  business: sprout
+  model: claude-opus-5-5
+  judge: claude-fable-5-1
+  result: pass

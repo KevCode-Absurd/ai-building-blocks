@@ -1,0 +1,175 @@
+new_slug: ad-script-format-finder
+name: "Ad script format finder"
+summary: "Paste a finished script. Get formats ranked by fit score out of 100, plus the skills to use."
+job: make-video-ads
+
+headline: "Ad script format finder"
+subhead: Paste a finished script. It finds the part doing the persuading, marks what that part needs from a format, and ranks the formats that can carry it. You get the formats ranked with a fit score out of 100 each, the skills that make them and a length check.
+
+explain: |
+  Many ads fail because a good script was made in the wrong format. An explanation of something invisible gets filmed as a talking head. A story that needs to unfold in order becomes a single image. A script written to be heard runs in a feed where nobody has the sound on.
+
+  This skill reads your script, not your product page, and finds the part that carries it: how it works, proof, the offer or the problem. It then decides, for six properties (a face people believe, showing what a camera can't, controlled order, sound, time to hold attention, sounding like a person), whether the script must have it, would be helped by it, or doesn't need it, quoting the line that makes it so. Then it ranks the formats that can hold all the "musts", suggests blending two when different parts need different things, and names the skills that make it. A video route is a script skill, then the clips skill that runs the avatar, sheets, storyboard and clips. A still goes to an image skill in the same look. Last, it checks the length.
+
+when:
+  - You have a finished script and you're deciding what to make it as.
+  - An ad tested badly and you suspect the format, not the words.
+  - You're choosing between a person on camera, animation and an image ad for the same idea.
+
+you_give:
+  - The finished script
+  - What the product is and how it's bought (optional)
+  - The buyer stage and the reason someone buys (optional)
+  - Your limits, like budget, footage or presenters you have (optional)
+you_get:
+  - The part that carries the script, with the line that shows it
+  - Six properties marked must, helps or no, each with a reason
+  - Formats ranked by a fit score out of 100 (the share of the script's musts each can hold), with a blend if two parts need different ones
+  - The skills that make it, as a script skill and its clips skill for video, or an image skill for a still
+  - A length check, and where to add length for a longer test
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your finished script underneath, with the parts labelled if you have them.
+  - Add what the product is and any limits (no presenter, no budget for animation).
+  - Read the "must" lines first. Each one should quote your script.
+  - Make the top-ranked format, or the blend it suggests.
+
+how_it_works:
+  - title: Finds the carrying part
+    text: Reads where the script spends its time and best lines. How it works, proof, the offer or the problem.
+  - title: Lists what it needs
+    text: Six properties, each marked must, helps or no, with a quoted line from the script as the reason.
+  - title: Matches formats
+    text: Compares what a person to camera, animation, mixed video, long-text image ads, designed images and carousels can hold.
+  - title: Suggests a blend
+    text: If two parts need different formats, it recommends changing surface part way through.
+  - title: Names the skills that make it
+    text: For video, the script skill and then its clips skill, such as selfie-style for a doubt settled in hand. For a still, the image skill in the same look.
+  - title: Checks the length
+    text: Says whether the carrying part has room at this length, and where extra length should come from.
+
+output_shape: |
+  Part that carries it: <how it works, proof, offer or problem> (<kind of edge>)
+    Why: "<quoted line>"
+
+  Properties
+  Face people believe: <must/helps/no> because "<line>"
+  Shows what a camera can't: <...>
+  Order controlled: <...>
+  Sound can be assumed: <...>
+  Holds attention long enough: <...>
+  Reads as a person: <...>
+
+  Best formats
+  1 <format>: fit <n>/100 (<musts held> of <musts>), <reason>
+  2 <format>: fit <n>/100 (<musts held> of <musts>), <reason>
+  Blend: <if needed>
+
+  Make it with: <video: script skill, then clips skill> or <still: image skill>, each tied to a must
+
+  Length: <fits?> <best length> <where to add length>
+
+example:
+  business: sprout
+  input: |
+    [the skill]
+
+    Script (20 s, narrated):
+    1 "Greens powder takes a scoop, water and a shaker."
+    2 "Then the shaker needs washing."
+    3 "A Sprout pack takes one tear."
+    4 "Inside: sixty-plus ingredients, 21 vitamins and minerals, 6 grams
+       of fiber."
+    5 "One tear. That's the routine."
+    Offer on screen: $29.99 first order with text sign-up. Renews at
+    $49.99 every 4 weeks.
+    Product: daily greens gummies, bought again (subscription).
+    Limits: no presenter booked.
+  output: |
+    Part that carries it: proof (the edge is visible: you can watch
+    the routine).
+      Why: lines 1 to 3 spend the script comparing steps you can see:
+      "a scoop, water and a shaker" against "one tear".
+
+    Properties
+    Face people believe: helps. No line needs a person to vouch, but a
+      real hand doing line 3 makes it believable.
+    Shows what a camera can't: no. Every step in lines 1 to 3 can be
+      filmed.
+    Order controlled: must. "A Sprout pack takes one tear" only lands
+      after line 1 has counted the powder steps.
+    Sound can be assumed: no. Every line is short enough to put on
+      screen.
+    Holds attention long enough: helps. Five lines need about 15 to 20
+      seconds.
+    Reads as a person: no. The opening is a plain comparison, not a
+      voice.
+
+    Best formats
+    1 Filmed side-by-side demonstration: a real hand with a tub, scoop
+      and shaker, then a hand tearing one pack. Proof you can watch is
+      strongest filmed, and no presenter is needed.
+    2 Animated paper cutout explainer: keeps the order and reads on
+      mute, but you're shown the routine rather than watching it.
+    3 Carousel: one card per step keeps a partial order. Weaker: the
+      "one tear" moment isn't seen happening.
+    Not a single designed image: it can't hold the order line 3 needs.
+    Blend: none needed; one part carries it.
+
+    Make it with: the satisfying motion script (open on the one tear,
+    then a short demo), because proof you can watch is the must. Then
+    the storyboard skill with the pack as the avatar, and the shot
+    list skill for the clips, or the shot list alone for a real shoot.
+    If you can't film: the cutout explainer script, then its clips
+    skill. For a still: the paper cutout image ad, one proof picture.
+
+    Length: 20 s fits. A demonstration works at 15 s too, as opening
+    and proof at once. For a longer test, add the objection the
+    research shows ("a gummy can't hold enough") with the vitamin and
+    mineral figures, before the offer.
+
+tweaks:
+  - what: Your limits
+    how: Say what you can't do (no presenter, no animation budget). It ranks only the formats you can make, and says what you lose.
+  - what: How it's bought
+    how: Say whether it's bought once or again and again. It changes which objections the length check suggests adding.
+  - what: Several scripts
+    how: Run it on each sibling script. Scripts carried by different parts often want different formats, which is a good test plan.
+  - what: Labelled parts
+    how: Label the parts of your script (problem, proof, offer). It still reads the lines itself, but the labels make the reasoning easier to check.
+
+judge:
+  - Every "must" quotes a line from your script.
+  - The carrying part comes from what the script spends its lines on, not what the product page stresses.
+  - Each ranked format has a reason tied to the script, not "it's popular".
+  - The length check says where extra length would come from, not just "make it longer".
+  - It doesn't treat an AI-generated presenter as a real customer.
+
+test:
+  - Run it on the script of an ad that worked. It should rank the format you used near the top, or say why another would carry it better.
+  - Check every "must". Each one should quote a line from your script.
+  - Run it twice on the same script. The carrying part should be the same both times.
+  - Paste a script that explains something you can't see (for Sprout, how well the vitamins are absorbed). It shouldn't rank a person talking to camera first.
+
+improve:
+  - Delete the formats you never make from step 3 of the skill file, so it only ranks what you can produce.
+  - Add the lengths you run to step 4, so the length check uses them.
+  - Say in "What you need" whether you can film a real customer or founder. A face people believe is a must for some scripts.
+  - Pair it with the script skill for the style it picks, and keep the six property lines as the brief for whoever makes it.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Reading a script and quoting the lines behind each choice works well in any strong chat AI."}
+  inputs:
+    - "The results of past ads with their formats, so the ranking can be checked against what worked for you"
+    - "A list of what you can make (a presenter, footage, an animation budget), so it ranks only formats you can produce"
+    - "Sibling scripts for the same product, so you can test formats that rest on different parts"
+
+terms:
+  - term: Carrying part
+    meaning: The one part of a script (how it works, proof, the offer or the problem) that does most of the persuading.
+  - term: Carousel
+    meaning: An ad made of several images or cards that people swipe through.
+  - term: Blend
+    meaning: An ad that changes format part way through, like a person on camera then an animation.

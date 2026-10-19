@@ -24,11 +24,11 @@ Keep each headline under 40 characters.
 Use only the facts above. Don't make up claims.`;
 
 const SKILL = `---
-name: keep-facebook-from-blocking-your-ads
+name: meta-ads-compliance-checker
 description: Use before launching ads on Facebook or Instagram, to check the words, images and video scripts against Meta's published Advertising Standards.
 ---
 
-# Keep Facebook from blocking your ads
+# Meta ads compliance checker
 
 ## What you need
 ## Steps
@@ -149,7 +149,7 @@ export default function HowItWorks({ toast }: { toast: (m: string) => void }) {
             ]} />
             <h3 className="sub-h">Use it</h3>
             <Steps items={[
-              <>Start a chat and ask for it by name, like “use the keep-facebook-from-blocking-your-ads skill”. In Claude Code, type <code>/</code> and its name.</>,
+              <>Start a chat and ask for it by name, like “use the meta-ads-compliance-checker skill”. In Claude Code, type <code>/</code> and its name.</>,
               "Paste in what it asks for. Each skill's page lists what to give it.",
               "Read what comes back. The skill has already checked it, but you're the final check.",
             ]} />
@@ -176,7 +176,7 @@ export default function HowItWorks({ toast }: { toast: (m: string) => void }) {
               <p>A workflow runs skills in order. Each step saves its result and hands it to the next step. For example: teach your AI your brand, work out who you're writing for, write the ad, then check it against Meta's ad rules.</p>
             </div>
             <div className="hiw-flow" aria-label="An example workflow">
-              {[["Teach AI your brand, straight from your website", "brand file"], ["Know exactly who you're writing for", "brief"], ["Write ads people believe", "ad copy"], ["Keep Facebook from blocking your ads", ""]].map(([step, carry], i) => (
+              {[["Website brand file builder", "brand file"], ["Buyer brief writer", "brief"], ["Fact-based ad copy writer", "ad copy"], ["Meta ads compliance checker", ""]].map(([step, carry], i) => (
                 <div className="hiw-flow-step" key={step}>
                   <span className="hiw-flow-box"><span className="hiw-n">{i + 1}</span>{step}</span>
                   {carry && <span className="hiw-carry">{carry}</span>}
@@ -239,7 +239,7 @@ export default function HowItWorks({ toast }: { toast: (m: string) => void }) {
             ]} />
             <Box title="Tips" items={[
               "Put “Teach AI your brand, straight from your website” first. Most steps read your brand file.",
-              "End with a check, like “Keep Facebook from blocking your ads”.",
+              "End with a check, like “Meta ads compliance checker”.",
               "Start with three to five steps. Add more once it works.",
               "Made a mistake? Press Ctrl+Z to undo it.",
               "On a phone, the builder shows a list. Use the arrows to change the order.",

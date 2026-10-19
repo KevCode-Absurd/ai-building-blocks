@@ -1,0 +1,33 @@
+slug: story-ad-test-planner
+renamed_from: find-the-story-ad-worth-writing-first
+name: "Story ad test planner"
+summary: "Paste your facts and reviews. Get a fit verdict, four story tests and a score out of 100."
+category: general
+boards: [ecommerce]
+type: skill
+role: compress
+job: ads
+level: intermediate
+inputs:
+  - {type: voc_reviews, required: true}
+  - {type: product_data, required: true}
+  - {type: persona, required: false}
+  - {type: landing_page, required: false}
+outputs:
+  - {type: plan}
+uses: [story-ad-image-picker]
+example: native
+origin: own
+source_ids: [CES-076]
+old_name: native-ads
+version: 2.0.0
+credits:
+  - {title: "The Four Forces of Progress: Push, Pull, Anxiety & Habit", by: "Bob Moesta and Chris Spiek, jobstobedone.org", url: "https://jobstobedone.org/the-four-forces/", used: "Mapping why buyers switch, push first"}
+  - {title: "Federal Trade Commission Announces Final Rule Banning Fake Reviews and Testimonials", by: "US Federal Trade Commission", url: "https://www.ftc.gov/news-events/news/press-releases/2024/08/federal-trade-commission-announces-final-rule-banning-fake-reviews-testimonials", used: "No invented narrator or customer voice"}
+  - {title: "5. Specific Ways to Generate Diverse Creative", by: "Jon Loomer Digital", url: "https://www.jonloomer.com/andromeda-5/", used: "Test rows that differ by a lot"}
+tested:
+  on: 2026-10-19
+  business: sprout
+  model: claude-opus-5-5
+  judge: claude-fable-5-1
+  result: pass

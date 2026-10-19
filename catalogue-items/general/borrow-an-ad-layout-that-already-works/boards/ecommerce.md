@@ -1,7 +1,7 @@
 # For online stores: Borrow an ad layout that already works
 
 ## Extra things to give it
-- Photos of every variant in the ad, named by view: front, open or out of the pack, in a hand, in use, close up. Add the product's truth sheet if you have one (`stop-ai-pictures-getting-your-product-wrong`).
+- Photos of every variant in the ad, named by view: front, open or out of the pack, in a hand, in use, close up. Add the product's truth sheet if you have one (`product-image-spec-writer`).
 - The live offer in its own words (price, bundle, dates) and, for a range layout, the list of products you sell.
 
 ## Extra rules for a store

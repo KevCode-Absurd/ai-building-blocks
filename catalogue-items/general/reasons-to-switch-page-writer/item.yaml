@@ -1,0 +1,35 @@
+slug: reasons-to-switch-page-writer
+renamed_from: give-shoppers-reasons-to-switch-to-you
+name: "Reasons-to-switch page writer"
+summary: "Paste your facts and offer. Get 3 to 7 reasons to switch and a score out of 100."
+category: general
+boards: [ecommerce]
+type: skill
+role: make
+job: page
+level: intermediate
+inputs:
+  - {type: brand_brain, required: true}
+  - {type: offer, required: true}
+  - {type: ad_copy, required: false}
+  - {type: voc_reviews, required: false}
+outputs:
+  - {type: landing_page}
+uses: [ad-matched-landing-page-writer]
+origin: rebuilt
+source_ids: [CES-034, CES-035, CES-050]
+old_name: reasons-to-buy landing page
+version: 2.0.0
+credits:
+  - {title: "Forces Friday: Pull and Anxiety", by: "Bob Moesta and Chris Spiek, JTBD Radio", url: "https://jobstobedone.org/radio/pull-and-anxiety/", used: "The four piles, and easing worry over adding appeal"}
+  - {title: "Text Scanning Patterns: Eyetracking Evidence", by: "Kara Pernice, Nielsen Norman Group", url: "https://www.nngroup.com/articles/text-scanning-patterns-eyetracking/", used: "Titles that make the case for readers who only scan headings"}
+  - {title: "Scientific Advertising", by: "Claude C. Hopkins", url: "https://openlibrary.org/works/OL20736174W", used: "Specific facts over general claims"}
+  - {title: "Guides Against Deceptive Pricing (16 CFR Part 233)", by: "US Federal Trade Commission", url: "https://www.ecfr.gov/current/title-16/chapter-I/subchapter-B/part-233", used: "Savings only against a price really charged"}
+  - {title: "Native Advertising: A Guide for Businesses", by: "US Federal Trade Commission", url: "https://www.ftc.gov/business-guidance/resources/native-advertising-guide-businesses", used: "Real byline; nothing passes for a publication"}
+  - {title: "eCommerce CRO masterclass", by: "Blue Sense Digital", url: "https://www.youtube.com/channel/UCtOnZyHshTvH1GoboRzHqjw", used: "Early ideas on a reasons-to-switch page, rebuilt in our own words"}
+tested:
+  on: 2026-10-19
+  business: sprout
+  model: claude-opus-5-5
+  judge: claude-fable-5-1
+  result: fail

@@ -1,0 +1,35 @@
+slug: wordless-video-ad-opening-writer
+renamed_from: get-wordless-openings-people-watch-to-end
+name: "Wordless video ad opening writer"
+summary: "Attach product photos. Get 2 or 3 wordless openings, clip prompts and a score out of 100."
+category: ecommerce
+type: skill
+role: render
+job: video
+level: intermediate
+inputs:
+  - {type: product_data, required: true}
+  - {type: video_ads, required: true}
+  - {type: brand_brain, required: false}
+  - {type: product_photos, required: false}
+outputs:
+  - {type: hooks}
+  - {type: image_prompt}
+  - {type: video_prompt}
+  - {type: edit_plan}
+uses: [satisfying-motion-video-ad-script-writer]
+example: satisfying
+origin: rebuilt
+source_ids: [CES-006]
+version: 2.1.0
+credits:
+  - {title: "Introducing Veo 3.1 and new creative capabilities in the Gemini API", by: "Google for Developers", url: "https://developers.googleblog.com/en/introducing-veo-3-1-and-new-creative-controls-in-the-gemini-api", used: "Making a clip between a start frame and an end frame"}
+  - {title: "Ultimate prompting guide for Veo 3.1", by: "Khulan Davaajav and Hussain Chinoy, Google Cloud", url: "https://cloud.google.com/blog/products/ai-machine-learning/ultimate-prompting-guide-for-veo-3-1", used: "SFX and ambient sound lines, describing what you want instead of what you don't"}
+  - {title: "Why Are Oddly Satisfying Videos So ... Satisfying?", by: "Nathaniel Scharping, Discover", url: "https://www.discovermagazine.com/why-are-oddly-satisfying-videos-sosatisfying-218", used: "The just-right feeling of a finish, behind the five finishes"}
+  - {title: "Meta Ads Safe Zones: A Guide to the 2026 Unified Creative Updates", by: "Dovile Miseviciute, Billo", url: "https://billo.app/blog/meta-ads-safe-zones", used: "Keeping the top and bottom of a 9:16 frame clear"}
+tested:
+  on: 2026-10-19
+  business: sprout
+  model: claude-opus-5-5
+  judge: claude-fable-5-1
+  result: pass

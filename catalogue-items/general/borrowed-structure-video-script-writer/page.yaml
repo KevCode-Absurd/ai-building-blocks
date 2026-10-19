@@ -1,0 +1,193 @@
+new_slug: borrowed-structure-video-script-writer
+name: "Borrowed-structure video script writer"
+summary: "Paste an admired ad and facts. Get a script on its structure and a score out of 100."
+job: study-competitors
+
+headline: "Borrowed-structure video script writer"
+subhead: Give it a video ad you admire, broken down row by row with timings and screenshots, plus your product facts. It keeps the rows, order and pace and writes every line and shot new. You get the script, a copy check and a score out of 100.
+
+explain: |
+  When an ad works, much of the power sits in its skeleton: a confession that opens it, a list of three, a short pause before the turn, the product showing up at second ten. Copying the ad word for word is theft. "Taking inspiration" loosely often loses the exact move that made it work.
+
+  This skill keeps the skeleton and nothing else. It maps each row of the reference (its time, its pace in words per second, its job and its move), then writes one new row for each, in the same order and at the same pace, from your facts only. Ideas and methods are free to reuse. Lines, slogans, claims, numbers, people, music and footage are not, so none of those come across.
+
+  Where a row rests on a fact you don't have, such as a free trial, it finds a true fact that does the same job or leaves a marked gap. If you want only the idea behind an ad, with your own order and length, use the skill that writes a fresh script from why an ad worked instead.
+
+when:
+  - You found an ad (yours or another brand's) and want the same shape for your product.
+  - A teammate says "make one like this" and you need to pin down what "like this" means, row by row.
+  - You want to test whether a winning structure works for a different product or buyer.
+
+you_give:
+  - A row-by-row breakdown of the reference, with start and end times, spoken words and on-screen text
+  - Screenshots of each shot, or the video file if your AI can watch it (attach them; your AI can see pictures)
+  - Your product facts, proof with sources, and the offer and guarantee as written
+  - Your approved and banned claims
+  - Buyer quotes from reviews or surveys (optional)
+  - Your brand voice (optional)
+you_get:
+  - The move the whole reference depends on, in one sentence
+  - A frame map of each row's time, pace, job and move, and what yours keeps or changes
+  - Your new script, row by row, with timings, on-screen text and visual notes
+  - A list of gaps to fill and guesses to confirm
+  - A distance check with row count, total time and the longest run of words shared with the reference
+  - A score out of 100 on six checks, such as same row count and no shared five-word run, with each miss named
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste the reference breakdown, one row per line or shot, with start and end times, and attach a screenshot of each shot.
+  - Paste your product facts, proof and offer underneath, and any buyer quotes.
+  - Read the frame map first. If a row was changed, check you agree with the reason.
+  - Fill or remove every gap, and confirm the speaker, before anything is filmed.
+
+how_it_works:
+  - title: Maps the frame
+    text: Times each row, works out its words per second, and names its job and its move. Then names the move the whole ad depends on.
+  - title: Splits keep from leave
+    text: Keeps the row count, order, moves, timing and kind of shot. Leaves every line, slogan, claim, figure, person, sound and signature look.
+  - title: Finds a true fact for each move
+    text: Picks your fact that does the same job. If none exists, it uses another true fact or leaves a marked gap.
+  - title: Writes at the same pace
+    text: One line per row, sized to that row's seconds and words per second, within two words.
+  - title: Rebuilds shots and captions
+    text: Same kind of framing with your real product. Captions carry each row's point, so it works with the sound off.
+  - title: Checks the speaker and the distance
+    text: A first-person line needs a real customer, or an actor note. No stretch of 5 words in a row matches the reference.
+  - title: Scores the script
+    text: Checks six things, such as row count, pace, timing and copied words, fixes what it can, and scores checks passed out of 6, times 100.
+
+output_shape: |
+  Move: <one sentence>
+
+  FRAME MAP
+  Row | Time | Words/sec | Job | Move | Yours: kept / changed (why) / [MISSING]
+
+  SCRIPT
+  Row | Time | Spoken line | On-screen text | Visual note
+
+  PLACEHOLDERS: <each gap and the fact that fills it>
+  ASSUMED: <each guess, and what breaks if it's wrong>
+  DISTANCE CHECK: rows, total time, longest shared run, borrowed claims
+  SCORE: <passed>/6 checks = <score> out of 100
+  Missed: <one line per check still missed, or none>
+
+example:
+  business: sprout
+  input: |
+    [the skill]
+
+    Reference: a 25-second ad for a meal-planning app (described, not
+    the brand's own). Person to camera at a kitchen table.
+    1 (0-3 s) "Every Sunday I spent two hours planning dinners."
+    2 (3-7 s) "The list. The shop. The meal nobody ate."
+      Three quick cuts.
+    3 (7-10 s) "Then I stopped planning." Beat of silence.
+    4 (10-16 s) "The app plans the week from what's already in your
+      fridge." Phone screen close-up.
+    5 (16-21 s) "Four thousand reviews. Average 4.8." Text card.
+    6 (21-25 s) "First week free. Cancel in the app." End card.
+
+    Product facts: Sprout daily greens gummies. One pack a day, torn
+    straight across the top. Survey of 3,000+ customers: "80% taking
+    daily" (of surveyed users). Offer: $29.99 first order with text
+    sign-up; 30-day money-back, first order only.
+    Buyer quotes: "the drink was definitely gritty/chalky", "not
+    having to clean a shaker bottle".
+  output: |
+    Move: a first-person confession, a list of three, then a
+    four-word turn after a pause.
+
+    FRAME MAP
+    Row | Time | Words/sec | Job | Move | Yours
+    1 | 0-3 | 2.7 | Opening | Confession: habit plus time | Kept:
+        the powder habit
+    2 | 3-7 | 2.0 | Problem | List of three, quick cuts | Kept:
+        three powder steps
+    3 | 7-10 | 1.3 | Turn | Four-word turn, then silence | Kept
+    4 | 10-16 | 1.8 | Demo | Product does the work in one line |
+        Kept: tear and tip
+    5 | 16-21 | 1.0 | Proof | Review count and rating | Changed:
+        Sprout's rating sources disagree, so a survey figure
+    6 | 21-25 | 1.8 | Offer | Free first week, easy cancel |
+        Changed: Sprout has no free trial, so the first-order price
+
+    SCRIPT
+    Row | Time | Spoken | On-screen | Visual note
+    1 | 0-3 | "For years I bought greens I never drank." | - |
+      Person to camera at a kitchen table, a powder tub beside them
+    2 | 3-7 | "The scoop. The shaker. The chalky glass." | - |
+      Three quick cuts: scoop, shaker, a glass with powder lumps
+    3 | 7-10 | "So I quit mixing." | - | Back to camera; they push
+      the shaker away. A beat of silence
+    4 | 10-16 | "Now it's one small pack a day. Tear the top, tip,
+      done." | One pack a day | Hands tear a daily pack straight
+      across the top; gummies tip into a palm
+    5 | 16-21 | "80% of surveyed users take it daily." | 80% of
+      surveyed users take it daily (brand survey, 3,000+
+      customers) | Text card
+    6 | 21-25 | "First order $29.99 with text sign-up." | $29.99
+      first order with text sign-up. 30-day money-back, first
+      order only | End card with the pouch
+
+    PLACEHOLDERS: none.
+    ASSUMED: the speaker is a real customer who quit powders and
+      agreed to say rows 1 and 3. If an actor plays them, add
+      "Actor portrayal" on screen, or move to third person, which
+      weakens the confession.
+    ASSUMED: no easy-cancel line. Cancelling is the loudest
+      complaint about Sprout, so the guarantee goes in the caption.
+    DISTANCE CHECK: rows 6/6 · time 25 s/25 s · words 43/44 ·
+      longest shared run 1 word · borrowed claims, figures,
+      names: none
+
+tweaks:
+  - what: The breakdown detail
+    how: Give start and end times and a shot note for every row. Exact timings give an exact pace.
+  - what: When a fact is missing
+    how: Tell it to leave the gap instead of finding a stand-in, if you'd rather get the real fact (a review count, a test) first.
+  - what: Your voice
+    how: Paste a few of your brand's lines. The words become yours while the pace stays the reference's.
+  - what: A different kind of product
+    how: If the reference sells something bought differently (a refill versus a one-off), it matches each row's job, not its content, and explains the swap.
+
+judge:
+  - The new script has the same number of rows as the reference, in the same order, with the same timings.
+  - Each spoken line is within two words of its row's word budget.
+  - You can't find any five-word run from the reference in your script.
+  - None of the reference's numbers, claims, offer terms or slogans appear.
+  - Every changed row in the frame map says why.
+  - A first-person speaker is a real customer, or the notes flag an actor note or a switch to third person.
+
+test:
+  - Search the new script for any five-word run from the reference. There should be none.
+  - Check the frame map. Same number of rows, same order, and every changed row says why.
+  - Use a reference that rests on a fact you don't have (a free trial, a price drop). It should change that row or leave a gap, never borrow the claim.
+  - Mute the finished ad in your head and read only the captions. The offer and the proof should still come through.
+  - Run it twice on the same breakdown. The move it names for the whole ad should be the same both times.
+
+improve:
+  - Add your real offer terms and proof to "What you need" in the skill file, so step 3 always has true facts to use.
+  - Add your brand's voice rules to step 4. The words are yours and only the pace comes from the reference, so this is where your sound goes in.
+  - Keep the breakdowns you've used, with the move each one depends on, and save the ones that worked to your brand file.
+  - Pair it with the skill that keeps only the idea behind an ad, when you want your own order instead of the same skeleton.
+
+works_best_with:
+  tools:
+    - {name: "Gemini", why: "Watches a video file you upload and drafts the timed, row-by-row breakdown. Check the timings, which can be off by a second."}
+    - {name: "Meta Ad Library", why: "Free to browse, and shows when each ad started running, so you can pick references that have run for months."}
+    - {name: "Any good chat AI", why: "Writing the script from the breakdown and your facts works about the same in any leading chat AI."}
+  inputs:
+    - "The reference video file, so the breakdown's timings and shots are exact"
+    - "A short phone clip of your product being used, so every new shot can really be filmed"
+    - "The name of a real customer who will speak on camera, so a first-person reference can stay first person"
+    - "Your offer terms copied from the checkout page, so the price and guarantee lines match what buyers see"
+
+terms:
+  - term: Move
+    meaning: The trick a row plays to persuade, like a confession, a list of three or a sudden pause.
+  - term: Breakdown
+    meaning: A reference ad written out row by row (each line, shot, on-screen text and timing).
+  - term: Frame map
+    meaning: The table of each reference row's time, pace, job and move, and what your version does with it.
+  - term: Placeholder
+    meaning: "A marked gap in the script, like [MISSING: review count], left where a real fact is needed."

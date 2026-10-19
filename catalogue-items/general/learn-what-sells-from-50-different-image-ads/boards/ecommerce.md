@@ -8,5 +8,5 @@
 - One product per sprint keeps the grid clean. With several products, give each its own rows, so a product's result never hides inside an argument's.
 - Children's products: write to the adult buyer and show the product with no child.
 - A physical product appears opened, held, worn or used only as its facts describe. If they don't say, show it closed and still.
-- Run `stop-ai-pictures-getting-your-product-wrong` for any product with fewer than three usable photos, and suggest `get-a-full-product-photoshoot-from-phone-photos` before the sprint.
+- Run `product-image-spec-writer` for any product with fewer than three usable photos, and suggest `get-a-full-product-photoshoot-from-phone-photos` before the sprint.
 - Old way, new way for a store is the old routine beside the new one, shown with objects, never a body or a face.

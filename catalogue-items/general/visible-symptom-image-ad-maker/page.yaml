@@ -1,0 +1,161 @@
+new_slug: visible-symptom-image-ad-maker
+name: "Visible symptom image ad maker"
+summary: "Paste your story ad. Get a body-safety check, a close-up photo prompt and a score out of 100."
+job: make-image-ads
+
+headline: "Visible symptom image ad maker"
+subhead: Give it your story ad. It runs a three-question body check first. If the sign passes, it briefs a close phone photo of the moment your buyer notices it. If not, it hands the idea to a safer picture. Either way you get a score out of 100.
+
+explain: |
+  People notice problems on their own bodies at ordinary moments: dry knuckles at the sink, a sock line at bedtime. A photo of that moment stops the people who have it, and everyone else scrolls on. It's also the picture most likely to get an ad rejected, because platforms ban ads that hint at what a viewer has or make people feel bad about their bodies.
+
+  So the skill starts with a gate. Is the sign on a hand, foot, arm or leg, never a face, chest or stomach? Can the words describe the moment without saying the reader has it? Would someone without it feel fine looking? If all three pass, it frames the sign close, with the routine in view and real skin. If any fails, it stops and hands you a safer moment.
+
+when:
+  - Your buyer's problem shows on a hand, foot, arm or leg.
+  - Your reviews describe that sign in the buyer's own words.
+  - You want a picture that only the people with the problem will stop for.
+
+you_give:
+  - Your approved story ad and the sign its opening describes
+  - Your buyers' own words for the sign, and their age and skin tone where it matters (optional)
+  - What your brand may show of the body (optional)
+you_get:
+  - The three gate answers, so you can see why it passed or stopped
+  - The sign, the moment it's noticed and what's in view
+  - A 60 to 120 word image prompt when it passes
+  - A hand-off moment and line idea for a safer picture when it doesn't
+  - A score out of 100, from the brief against the skill's five checks when it passes, or the gate answers when it stops
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your story ad.
+  - Add your buyers' words for the sign, taken from reviews or research, not your guess.
+  - Add any limits your brand has on showing the body.
+  - If it stops and hands you to another picture, follow that. Don't push it to show a face or a stomach.
+
+how_it_works:
+  - title: Runs the body gate
+    text: Checks where the sign is, whether the words can stay off the reader, and whether someone without it would feel fine looking.
+  - title: Names the sign
+    text: Takes it as your research describes it, with its amount and its place on the body.
+  - title: Finds the noticing moment
+    text: Where and when your buyer sees it, like rinsing a mug or pulling off a sock.
+  - title: Frames it in place
+    text: Close, with the routine in view, never a body part on a blank background.
+  - title: Keeps skin real
+    text: Texture, fine hair, uneven tone and flat indoor light, in the age and tone your research gives.
+
+output_shape: |
+  GATE
+  Where:          <body part, go or stop>
+  Words:          <can the copy stay off the reader? yes or no>
+  Feels fine:     <nothing graphic or shaming? yes or no>
+
+  When it passes:
+  SCENE  <what someone scrolling would say they saw>
+  THE SIGN  <what, how much, where on the body>
+  THE MOMENT  <where, when, what is in view>
+  WORDS ON THE IMAGE  None.
+  LINE UNDER THE IMAGE  <words> (<characters>)
+  FLAGS  <near the body limits, claims to watch>
+  IMAGE PROMPT  <60 to 120 words>
+  SCORE  <n>/100 (<passed> of 5 checks) | missed: <one line each>
+
+  When it stops:
+  WHY IT STOPS  <which answer failed>
+  HAND-OFF  <skill, the moment to show, a line idea>
+  GATE SCORE  <n>/100 (<answers passed> of 3; the photo needs all 3)
+
+example:
+  business: sprout
+  input: |
+    [the skill]
+
+    Story ad (approved, built on reviews 8 and 10):
+    By 3pm, every day, my stomach was swollen and tight under my work
+    trousers.
+    So I started skipping lunch. Most days the lunchbox came home
+    full.
+    I'd tried fiber powders and probiotics. Sprout is a daily pack of
+    gummies with 6 g prebiotic fiber, and it supports digestion and
+    gut health. One reviewer wrote: "Feel lighter, less bloated and
+    overall good." Start with Low Sugar if your stomach is sensitive.
+
+    Buyer: the gut-fix seeker, 25 to 55, mostly women.
+    Brand limits: "supports", never "fix".
+  output: |
+    GATE
+    Where:          Stomach. Stop.
+    Words:          No. Any line about a swollen stomach points at
+                    the reader's body.
+    Feels fine:     No. A tight stomach next to a fiber gummy reads as
+                    a "before" picture, and Sprout may only say it
+                    supports digestion.
+
+    WHY IT STOPS
+    All three answers fail. The sign is real (the brand file names
+    bloating for this buyer, and review 10 says "less bloated"), but
+    it can't be shown honestly here.
+
+    HAND-OFF
+    Skill: problem-moment-image-ad-maker
+    Moment: the story's second line, the lunchbox that comes home
+    full. An office desk at 1pm, a lunchbox with its lid still on
+    pushed to one side, a made-up adult's hands typing beside it. No
+    face, no stomach.
+    Line idea: Lunch, still in the box. (24, plain caption)
+
+    FLAGS
+    Keep the copy at "supports digestion and gut health". No "fix",
+    no "flat stomach", no promise the bloating stops.
+    "Less bloated" is a customer's words. Keep it as a quote, never as
+    a brand claim.
+    Skipping lunch is the narrator's old workaround. Nothing in the
+    ad should suggest it, or Sprout, as a way to treat bloating.
+
+tweaks:
+  - what: Body part
+    how: Name the part where the sign shows ("knuckles", "the back of the heel"). If the only honest place is the face or the stomach, it stops rather than bend the gate.
+  - what: The noticing moment
+    how: Name the routine (rinsing a mug, taking off boots). The routine is what makes it a snapshot instead of a medical photo.
+  - what: The light
+    how: Flat bathroom light or phone flash keeps it honest. Ask for it by name if the result looks retouched.
+  - what: Age and skin
+    how: Give the buyer's age range and skin tone from your research, so the made-up person looks like your buyer.
+
+judge:
+  - The gate answers are shown, and a stop comes with a hand-off you can use.
+  - The person is made up, shows no face, and nothing says they're a customer.
+  - It's never the "before" of a before-and-after.
+  - No disease is named, and your copy doesn't say the product treats or cures it.
+  - The skin looks real, with no retouching and no product on it.
+
+test:
+  - Run it on a story whose sign is on the stomach or face, as in the example. It should stop and hand you a safer moment.
+  - Run it on a sign on a hand or heel that your reviews describe. It should pass the gate and brief the photo with the routine in view.
+  - Remove the buyer research from the input. It should mark the sign MISSING instead of guessing what it looks like.
+  - Read your line under the image aloud. If it tells the listener what they have, ask for a line about the moment instead.
+
+improve:
+  - Write your brand's body limits into "What you need" once, so every run checks against them.
+  - Add your buyers' words for the sign to your brand file. Without them, the skill will flag the picture as a guess.
+  - Add your claim limits (for example "supports", never "fix") to the check list, so the flags catch risky copy every time.
+  - Pair it with the everyday snapshot skill. When this one stops, the snapshot makes the picture it hands over.
+
+works_best_with:
+  tools:
+    - {name: "GPT Image", why: "Its thinking mode plans the frame before it draws, which helps a close-up keep the routine in view."}
+    - {name: "Nano Banana", why: "Holds the scene steady while you ask for small fixes, such as flatter light or less smooth skin."}
+  inputs:
+    - "A plain description of what an ordinary case looks like, from a health or brand source, so the amount shown is true"
+    - "The moment buyers say they notice it, quoted from reviews or tickets, so the scene is a real one"
+    - "Past brand photos that show skin, so the light and framing match what you've already approved"
+
+terms:
+  - term: Before-and-after
+    meaning: A pair of pictures showing a problem and then its fix. It counts as a result claim, and platforms restrict it.
+  - term: Body gate
+    meaning: The three questions this skill asks before it shows any part of the body.
+  - term: Workaround
+    meaning: What someone does to cope with a problem they haven't fixed.

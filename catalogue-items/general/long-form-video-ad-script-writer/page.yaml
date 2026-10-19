@@ -1,0 +1,227 @@
+new_slug: long-form-video-ad-script-writer
+name: "Long-form video ad script writer"
+summary: "Paste research and proof. Get a 1 to 10 minute narrated script and score out of 100."
+job: make-video-ads
+
+headline: "Long-form video ad script writer"
+subhead: Give it your customer research, product facts and the proof you hold. It sets the length from what you can back, from 1 to 10 minutes, and writes narration that teaches in rounds. You get a timed script with a picture note per line and a score out of 100.
+
+explain: |
+  Long video ads (often called video sales letters) can sell to people who have never heard of you, because there's time to teach. Most fail because they're a short ad stretched out. The same claim comes back three times, the adjectives pile up, the only ask comes at minute eight, and a "results by day 30" promise has nothing behind it.
+
+  This skill starts by taking stock: your separate problems, how the product deals with each, your buyers' doubts and your real proof. Each round of the script needs one problem, one explanation and some proof, so your stock decides how many rounds you get, and the length follows at about 150 words a minute. If you asked for more than your facts can fill, it writes the longest honest version and tells you what would add a round. The opening matches how much your buyer knows. Every line gets a picture that changes every few seconds, tagged with whether you have it or need to film or make it.
+
+when:
+  - You're selling to people who don't know yet that they need a product like yours.
+  - Your product needs explaining before people trust it, and 15 seconds can't hold that.
+  - Someone asked for a 5-minute video and you want to know if your facts can fill it.
+
+you_give:
+  - The brief, the length you want, where it will run, and the buyer stage
+  - Customer research, with the buyer's own words and doubts
+  - Product facts, how it works, and any change over time with sources
+  - The proof you hold, one line each with its source
+  - Screenshots of footage you already own (attach them), your offer and your claims
+you_get:
+  - A stock list of problems, explanations, doubts and proof, with the rounds and length they support
+  - A timed table of narration, on-screen text and a picture note for every line
+  - The rounds, the product's arrival, each proof and each ask marked
+  - Notes on what would add another round
+  - A score out of 100 for how many of its own checks the script passes, with any it missed
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your customer research, product facts and claims.
+  - List your proof, one line each, with its source.
+  - Say the length and where it runs, for example "5 minutes, YouTube, skippable".
+  - Read the stock list first. If it chose a shorter length, it says what a longer one would need.
+  - Read the whole script aloud with a timer before it goes to the editor.
+
+how_it_works:
+  - title: Checks it fits
+    text: Narration suits buyers who need teaching. It says so when a short offer ad would do better.
+  - title: Takes stock
+    text: Lists your problems, explanations, doubts and proof, each with a source.
+  - title: Sets the length
+    text: One round per problem that has an explanation and proof, then about 150 words a minute.
+  - title: Opens for your buyer
+    text: A story for people who don't see the problem yet, the doubt first for people who know you.
+  - title: Builds each round
+    text: Problem, why the usual fix fails, how this works, the doubt, the proof, then a light ask.
+  - title: Plans the pictures
+    text: A new picture every 2 to 4 seconds, each tagged on file, product photo, diagram, text card, or to film.
+
+output_shape: |
+  STOCK
+  Problems: <each, with source>
+  Explanations: <each, with the problem it answers and its source>
+  Doubts: <each, with its answer>
+  Proof: <each piece, with source>
+  Time points: <usable ones, or "none, so no timeline">
+  Rounds: <number>   Length: <time>   Words: <budget>
+
+  Time | Narration | On-screen text | Picture note (kind: description)
+  ROUND 1
+  0:00-0:04 | "<opening for the buyer stage>" | - | to film: <...>
+  ...
+  PRODUCT ARRIVES ...
+  PROOF 1 (<source>) ...
+  ASK 1 ...
+  ROUND 2 ...
+
+  NOTES
+  <what would add a round, MISSING items>
+
+  SCORE  <n>/100 (<passed> of <total> checks passed)
+  Missed: <one line per check missed, or none>
+
+example:
+  business: sprout
+  input: |
+    [the skill]
+
+    Length: 5 minutes. Runs on YouTube, skippable after 5 seconds.
+    Buyer stage: knows the problem.
+    Research: people quit greens powders and pill stacks. "The issue
+    has never been nutritive content. It's always been an issue of
+    consistency like many things." (review). "gritty/chalky" (review).
+    Gut buyers: bloating, irregularity, tried fiber powders.
+    Doubt: "A gummy can't hold enough to replace my powder."
+    Product: Sprout, daily greens gummies. One pack a day, torn straight
+    across the top. 60+ ingredients, 21 vitamins & minerals, 6 g
+    prebiotic fiber. Vitamins about 100% of daily value, minerals about
+    25%. Approved: "Supports digestion and gut health."
+    Proof: 2025 study (12 weeks, 120 adults, vitamin C +40.1%, 2.7x
+    placebo; folate +20.5%, 2.9x placebo). Third-party tested for 70
+    pesticides, 4 heavy metals, 16 contaminants, 9 microbial
+    contaminants. Survey of 3,000+ customers: 80% of surveyed users take
+    it daily; 67% better, more regular digestion. NSF, GMP, FDA-
+    registered facilities. 20 review quotes. Ratings: four different
+    numbers by source.
+    Time points: FAQ says "within days or weeks". The site's 30/60/90-day
+    timeline is unsupported.
+    Footage: brand photos of adults pouring gummies into a hand.
+    Offer: 30-day money-back, first order only.
+  output: |
+    STOCK
+    Problems: 2. (1) Dropping powders and pill stacks (reviews).
+      (2) Gut irregularity (buyer research). Price is a doubt, not a
+      problem.
+    Explanations: 3. The one-pack format (answers 1). 6 g prebiotic
+      fiber with "supports digestion and gut health" (answers 2). The
+      2025 study of the product (backs both).
+    Doubts: 1. "Can a gummy hold enough?" Answered by about 100% of
+      daily value for vitamins and about 25% for minerals.
+    Proof: 6. Study, testing, survey, review quotes, facilities, a
+      rating (only with one source named).
+    Time points: none usable, so no timeline.
+    Rounds: 2.   Length: about 3 minutes.   Words: about 450.
+
+    Time | Narration | On-screen | Picture note
+    ROUND 1: DROPPING THE HABIT
+    0:00-0:04 | "There's a tub of green powder somewhere in your
+      kitchen." | - | to film: a half-used tub at the back of a
+      cupboard, the green Sprout pouch at the edge of frame on the
+      counter (skippable slot, so the pack shows early)
+    0:04-0:06 | "It's about half full." | - | to film: lid off, the
+      scoop buried in powder
+    0:06-0:09 | "And you haven't touched it in weeks." | - | to film:
+      the shaker upside down on a drying rack
+    0:09-0:13 | "One reviewer said the nutrients were never the
+      problem." | "The issue has never been nutritive content."
+      (customer review, brand site) | text card: the quote exactly
+    0:13-0:19 | "Keeping it up was. The scoop, the water, the shaker
+      you have to wash." | - | to film: three quick cuts, one per item
+    0:19-0:23 | "So what would you still do on a rushed Tuesday
+      morning?" | - | to film: a hand pausing over the tub
+    0:23-0:26 | "Probably something you'd want to eat." | - | on file:
+      an adult pouring gummies into a hand
+    PRODUCT ARRIVES
+    0:26-0:30 | "Sprout is one small pack of green gummies a day." |
+      Sprout | product photo: the pouch
+    0:30-0:35 | "Tear it across the top and tip a handful into your
+      palm." | Rip. Tip. Enjoy. | to film: the tear, straight across
+    0:35-0:41 | "Each pack has sixty-plus ingredients, twenty-one
+      vitamins and minerals, and six grams of fiber." | 60+
+      ingredients. 21 vitamins & minerals. 6g fiber | text card
+    0:41-0:44 | "Fair question. Can a gummy hold enough?" | - | to
+      film: one pack's gummies in a palm, close
+    0:44-0:51 | "The vitamins come to about a hundred percent of daily
+      value. The minerals, about a quarter." | Vitamins ~100% DV.
+      Minerals ~25% DV | diagram: two bars, the second a quarter of
+      the first
+    PROOF 1 (brand survey of 3,000+ customers)
+    0:51-0:59 | "And people stay with it. In a survey of over three
+      thousand customers, eighty percent said they take it every day."
+      | 80% of surveyed users take it daily | text card with source
+    ASK 1
+    0:59-1:03 | "Your first order comes with a thirty-day money-back
+      guarantee." | First order only | text card
+    1:03-1:05 | "Start with one pouch." | sprout.example | product
+      photo: the pouch
+
+    (cut for length: round 2, from 1:05 to about 3:00, starts from
+    what round 1 left open, the bloating. It covers why fiber powders
+    get dropped too, the 6 g of prebiotic fiber with "supports
+    digestion and gut health", the survey's 67% line marked "of
+    surveyed users", and the testing. Then the full offer and the
+    last ask.)
+
+    NOTES
+    - Round 1 is 156 words in 65 seconds, on budget.
+    - No timeline. The 30/60/90-day promises have no support.
+    - The rating stays out. Four sources disagree; if used, name one.
+    - Minerals at about 25% is said plainly. It answers the doubt
+      honestly.
+    - MISSING for 5 minutes: a third problem with its own explanation
+      and proof.
+    - MISSING: customer footage cleared for ads. Real-person shots are
+      hands only, "to film".
+
+tweaks:
+  - what: The length you ask for
+    how: Ask for any length. If your stock can't fill it, you get the longest honest version and a list of what's missing.
+  - what: Your proof list
+    how: Add a piece of proof or a third problem and run it again. A new problem with its own explanation and proof adds a round.
+  - what: A timeline
+    how: Paste sourced time points (week 1, month 1) and it can use one per round. Without them it leaves the timeline out.
+  - what: Where it runs
+    how: Say "skippable" and the pack shows in the first 5 seconds. Say "sales page" and the opening can take longer.
+
+judge:
+  - The stock list counts your problems, explanations and proof, and the rounds match it.
+  - The word count is close to 150 words a minute for the length.
+  - The opening suits how much your buyer knows.
+  - The product arrives as the answer to the first round, not before.
+  - Each proof shows its source on screen when it's cited.
+  - There's a light ask after each round, not one at the very end.
+
+test:
+  - Ask for 10 minutes on a product with little proof. It should write a shorter script and say what's missing.
+  - Check its stock list against your own. The rounds should equal the problems that have an explanation and proof.
+  - Count the words in the first minute. You should find about 150.
+  - Read the first minute aloud with a timer. Any picture that holds past about four seconds needs another note.
+
+improve:
+  - Add your proof list with sources (studies, tests, survey lines marked "of surveyed users") to "What you need" in the skill file, so step 2 counts the same things every time.
+  - Write the lengths you really run into step 3, so it only plans for those.
+  - Add your brand's own phrases to step 6, so the voice still sounds like you at minute eight.
+  - When the notes name a missing problem or proof, add it to your brand file. Each one earns more minutes than any rewrite.
+
+works_best_with:
+  tools:
+    - {name: "Claude", why: "Keeps a long stock list and every source straight across a script of 1,500 words."}
+    - {name: "ElevenLabs", why: "Reads the draft aloud in a steady voice, so you can time it and hear slow stretches before recording."}
+  inputs:
+    - "The questions from your FAQ page, so the doubts list holds what people ask before buying"
+    - "Where viewers dropped off in a past long video, from your video stats, so the new script fixes that spot"
+    - "How-it-works drawings you already own, so fewer picture notes need making"
+    - "A sample of the narrator's voice, so the sentence rhythm suits it"
+
+terms:
+  - term: Video sales letter
+    meaning: A long ad where a narrator explains the problem and the product over changing pictures, usually several minutes long.
+  - term: Round
+    meaning: One problem, how the product deals with it, a doubt and the proof. Long scripts have several, each with a new problem.
+  - term: Buyer stage
+    meaning: How much the buyer already knows about the problem and about you.

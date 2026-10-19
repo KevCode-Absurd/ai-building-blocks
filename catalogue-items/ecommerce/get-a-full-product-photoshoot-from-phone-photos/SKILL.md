@@ -16,7 +16,7 @@ A workflow that turns phone photos of one product into a planned shoot: 8 to 12 
 
 ## Steps
 1. **Brief.** One product, one variant. Make only the sizes named.
-2. **Truth sheet.** Run `stop-ai-pictures-getting-your-product-wrong` ("Stop AI pictures getting your product wrong"). If no photo shows this exact variant, stop and ask for one. No in-use photo, no in-use shot: ask for one, or leave those shots out and say so.
+2. **Truth sheet.** Run `product-image-spec-writer` ("Product image spec writer"). If no photo shows this exact variant, stop and ask for one. No in-use photo, no in-use shot: ask for one, or leave those shots out and say so.
 3. **Shot list.** Each shot is a job, a distance (wide, mid, close) and an angle (eye level, high, straight down, low). Jobs: identity, scale, use, substance (texture or contents), arrival (what's in the box), place, range, ad base (space for words). Lean the list by destination:
    - Product page: identity, scale, substance, use, arrival. Every page needs at least one scale shot.
    - Ads: use, place, ad base, and one identity shot.

@@ -23,7 +23,7 @@ inputs:
 outputs:
   - {type: pdp_images}
   - {type: gallery_plan}
-uses: [stop-ai-pictures-getting-your-product-wrong, know-what-each-product-page-photo-should-show, catch-product-page-image-mistakes-before-shoppers-do]
+uses: [product-image-spec-writer, product-page-gallery-planner, product-page-image-checker]
 example: pdp
 origin: rebuilt
 source_ids: [CES-095, CES-098]
@@ -33,3 +33,9 @@ credits:
   - {title: "Use Your Words: An Interview on Conversion Copywriting with Joanna Wiebe", by: "Meryl Ayres, Wistia", url: "https://wistia.com/learn/marketing/joanna-wiebe-conversion-copywriting", used: "Message mining: read customer words line by line, tag repeated phrases, let frequency set priority"}
   - {title: "Product Page UX: All Products Need at Least One 'In Scale' Image (28% Get It Wrong)", by: "Christian Holst, Baymard Institute", url: "https://baymard.com/blog/in-scale-product-images", used: "Shoppers read the gallery before the text and misjudge size without a scale image"}
   - {title: "Image link [image_link]", by: "Google Merchant Center Help", url: "https://support.google.com/merchants/answer/6324350", used: "Shopping feed main-image rules and keeping the AI label in AI-made files"}
+tested:
+  on: 2026-10-19
+  business: sprout
+  model: claude-opus-5-5
+  judge: claude-fable-5-1
+  result: pass

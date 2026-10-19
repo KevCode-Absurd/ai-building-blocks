@@ -64,4 +64,4 @@ The old skill names used our internal terms. Replace them on the page, or explai
 
 ## Names
 
-A block's name says the job, starting with a verb, in sentence case, six words or fewer when you can: "Write ads from one real product fact", "Check a landing page against 20 questions", "Find why your ads stopped working". No colons, no brand names, no internal terms.
+A skill's or prompt's name is its job title, 2 to 6 words in sentence case: "Meta ads compliance checker", "Landing page auditor", "Customer buying reasons finder". Read it and you know what you'd hire it for. No colons, no internal terms. Platform names are fine when the job is tied to one. Workflows keep verb-first names for now. Full rule: `brand/COPYWRITING.md`, "Names and headlines of blocks".

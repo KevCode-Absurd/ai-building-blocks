@@ -1,6 +1,6 @@
 # Block page format
 
-Every block (prompt, skill or workflow) has its own page on the site. The page is built from `page.yaml` in the block's folder, plus the block's `SKILL.md`. Read `brand/COPYWRITING.md` (headline and name rules, these win) and `docs/WRITING.md` (plain words, our jargon) first. The model to copy is `catalogue-items/general/write-ads-people-believe/page.yaml`.
+Every block (prompt, skill or workflow) has its own page on the site. The page is built from `page.yaml` in the block's folder, plus the block's `SKILL.md`. Read `brand/COPYWRITING.md` (headline and name rules, these win) and `docs/WRITING.md` (plain words, our jargon) first. The model to copy is `catalogue-items/general/meta-ads-compliance-checker/page.yaml`.
 
 ## Jobs
 
@@ -43,11 +43,11 @@ Each block is filed under the one job a visitor hires it for. Use the id.
 | Field | What goes in it | Length |
 |---|---|---|
 | `new_slug` | The new name in lowercase-with-dashes. Must match `name`. | |
-| `name` | The job it does, verb first, sentence case. See WRITING.md, "Names". | 6 words or fewer if you can, 8 max |
-| `summary` | The card line: what you get, plainly. | 18 words max |
+| `name` | The job title, as if you were hiring it: "Meta ads compliance checker". See `brand/COPYWRITING.md`, "Names and headlines of blocks". Workflows keep verb-first names. | 2 to 5 words |
+| `summary` | The card line: what you give, then what you get, including the score. "Paste your ad and its image. Get a compliance score out of 100, every problem, and a fixed ad." | 18 words max |
 | `job` | One job id from the table above. | |
-| `headline` | Short and to the point: the problem it solves or the result you get, in words a stranger understands on one read. No "because" clauses; the subhead explains. | 4 to 10 words |
-| `subhead` | Explains the headline: what you give it, what it does, what you get. | 25 to 50 words |
+| `headline` | Skills and prompts: the same as `name`. Workflows: the result you get, in words a stranger understands on one read. | 2 to 10 words |
+| `subhead` | The job description, in two or three short sentences: what you give it, what it does, what you get (name the real outputs and the score). | 25 to 50 words |
 | `explain` | Two short paragraphs. The problem it solves, then how it works. Explain any term in the old name. | 80 to 150 words |
 | `when` | Three situations where you'd reach for it. | 3 bullets |
 | `you_give` | What you give it, in plain words. Mark optional ones "(optional)". | 2 to 5 bullets |
@@ -74,6 +74,10 @@ For skills that produce an image or video, the output is the text the skill prod
 ## SKILL.md
 
 Rewrite it in plain language with the same substance. Keep the sections: a one-line description in the frontmatter, what you need, numbered steps, what you hand back, checks, "If something is missing" with `MISSING: <what>`, and avoid. Set the frontmatter `name` to the new slug. Keep every rule that protects the user (no invented facts, claims or results).
+
+Every skill and prompt ends with a score out of 100, so any input gets an output and a score. A checker or audit scores what it was given (and again after its fixes). A maker scores its own result against its Checks, fixes anything that fails before handing it back, and shows the score with one line per check missed. The score always says what it measures and how it was worked out. Never an unexplained number.
+
+When a skill needs a picture or video, ask the person to attach it: the AI can see images. A written description is only the fallback for an AI that can't take files, and then say what couldn't be checked.
 
 ## boards/ecommerce.md
 

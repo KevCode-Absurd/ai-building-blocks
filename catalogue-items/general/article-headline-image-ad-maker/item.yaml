@@ -1,0 +1,33 @@
+slug: article-headline-image-ad-maker
+renamed_from: get-your-ad-read-like-a-shared-article
+name: "Article headline image ad maker"
+summary: "Paste your ad and page headline. Get a matching image prompt and a score out of 100."
+category: general
+boards: [ecommerce]
+type: skill
+role: render
+job: image
+level: intermediate
+inputs:
+  - {type: ad_copy, required: true}
+  - {type: landing_page, required: false}
+  - {type: persona, required: false}
+outputs:
+  - {type: image_prompt}
+uses: [story-ad-image-picker]
+example: native
+origin: rebuilt
+source_ids: [CES-064]
+old_name: headline on a photo
+version: 2.0.0
+credits:
+  - {title: "Information Scent: How Users Decide Where to Go Next", by: "Raluca Budiu, Nielsen Norman Group", url: "https://www.nngroup.com/articles/information-scent/", used: "The scent check between ad and page"}
+  - {title: "Capturing Attention in Feed: The Science Behind Effective Video Creative", by: "Facebook IQ", url: "https://www.facebook.com/business/news/insights/capturing-attention-feed-video-creative", used: "1.7 seconds per post on mobile, behind the 7-word limit"}
+  - {title: "Native Advertising: A Guide for Businesses", by: "US Federal Trade Commission", url: "https://www.ftc.gov/business-guidance/resources/native-advertising-guide-businesses", used: "No masthead, outlet name or byline; never posing as a publisher"}
+  - {title: "Facebook Ads Guide: image ad specs", by: "Meta", url: "https://www.facebook.com/business/ads-guide/update/image", used: "4:5 Feed shape and the 27-character headline"}
+tested:
+  on: 2026-10-19
+  business: sprout
+  model: claude-opus-5-5
+  judge: claude-fable-5-1
+  result: pass

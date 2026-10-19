@@ -1,0 +1,31 @@
+slug: video-ad-script-line-checker
+renamed_from: find-script-lines-that-lose-sale
+name: "Video ad script line checker"
+summary: "Paste your video ad script. Get each weak line with a fix, and a score out of 100."
+category: general
+type: skill
+role: make
+job: video
+level: intermediate
+inputs:
+  - {type: script, required: false}
+outputs:
+  - {type: audit_report}
+uses: []
+origin: rebuilt
+source_ids: [CES-004]
+old_name: video ad script checks
+version: 2.0.0
+credits:
+  - {title: "How To Write Meta Ads That Scale: Copywriting Masterclass", by: "Blue Sense Digital", url: "https://www.youtube.com/watch?v=LoL1w-k9Mgg", used: "The order of the nine beats"}
+  - {title: "Breakthrough Advertising (1966)", by: "Eugene M. Schwartz", url: "https://openlibrary.org/works/OL2625224W", used: "The Fit checks: awareness level and claim fatigue"}
+  - {title: "Tested Advertising Methods (1932)", by: "John Caples", url: "https://openlibrary.org/works/OL3350190W", used: "Opening checks: pick out the reader, give a reason to stay"}
+  - {title: "My Life in Advertising and Scientific Advertising", by: "Claude C. Hopkins", url: "https://openlibrary.org/works/OL2702313W", used: "Specific, checkable facts over adjectives"}
+  - {title: "Do Your Ads Talk Too Fast to Your Audio Audience? (Journal of Advertising Research, 2020)", by: "Emma Rodero", url: "https://thearf.org/access-knowledge-2/publications/journal-of-advertising-research/do-your-ads-talk-too-fast-to-your-audio-audience-how-speech-rates-of-audio-commercials-influence-cognitive-and-physiological-outcomes/", used: "The pace check and cutting ideas rather than speeding up"}
+  - {title: "About text overlays and the safe zone for ads in Stories and Reels", by: "Meta Business Help Center", url: "https://www.facebook.com/business/help/980593475366490", used: "The silent check: text clear of the app's buttons"}
+tested:
+  on: 2026-10-19
+  business: sprout
+  model: claude-opus-5-5
+  judge: claude-fable-5-1
+  result: pass

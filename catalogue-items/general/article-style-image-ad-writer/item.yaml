@@ -1,0 +1,32 @@
+slug: article-style-image-ad-writer
+renamed_from: turn-your-idea-into-an-article-style-ad
+name: "Article-style image ad writer"
+summary: "Paste your idea and its landing page. Get an article-style ad and a score out of 100."
+category: general
+boards: [ecommerce]
+type: skill
+role: make
+job: copy
+level: intermediate
+inputs:
+  - {type: brief, required: true}
+  - {type: brand_brain, required: true}
+  - {type: landing_page, required: true}
+outputs:
+  - {type: ad_copy}
+  - {type: image_prompt}
+uses: []
+example: advertorial-static
+origin: own
+source_ids: [CES-104]
+old_name: article-style image ad format
+version: 2.0.0
+credits:
+  - {title: "Native Advertising: A Guide for Businesses", by: "US Federal Trade Commission", url: "https://www.ftc.gov/business-guidance/resources/native-advertising-guide-businesses", used: "Ads must not pass as independent content; a clear label such as \"Advertisement\" in front of or above the headline"}
+  - {title: "Going Native: Effects of Disclosure Position and Language on the Recognition and Evaluation of Online Native Advertising", by: "Bartosz W. Wojdynski and Nathaniel J. Evans, Journal of Advertising (2016)", url: "https://doi.org/10.1080/00913367.2015.1115380", used: "Where a label sits and how it's worded change whether readers see it as an ad"}
+tested:
+  on: 2026-10-19
+  business: sprout
+  model: claude-opus-5-5
+  judge: claude-fable-5-1
+  result: pass

@@ -15,7 +15,7 @@ inputs:
   - {type: voc_reviews, required: false}
 outputs:
   - {type: static_ads}
-uses: [find-image-ad-types-worth-testing-next, stop-image-tools-redrawing-your-product-and-words]
+uses: [image-ad-gap-finder, product-exact-image-prompt-writer]
 example: ad-layout
 origin: rebuilt
 source_ids: [CES-139, CES-088]
@@ -30,3 +30,9 @@ credits:
   - {title: "Visual Hierarchy in UX: Definition", by: "Kelley Gordon, Nielsen Norman Group", url: "https://www.nngroup.com/articles/visual-hierarchy-ux-definition/", used: "scale, contrast and the squint test for the eye path; new content can shift a layout's hierarchy"}
   - {title: "About text overlays and the safe zone for ads in Stories and Reels", by: "Meta Business Help Center", url: "https://www.facebook.com/business/help/980593475366490", used: "keeping words out of the covered bands in 9:16"}
   - {title: "Advertising FAQ's: A Guide for Small Business", by: "Federal Trade Commission", url: "https://www.ftc.gov/business-guidance/resources/advertising-faqs-guide-small-business", used: "claims need objective proof, comparisons must be true and endorsements honest, so the spot test and the line labels"}
+tested:
+  on: 2026-10-19
+  business: sprout
+  model: claude-opus-5-5
+  judge: claude-fable-5-1
+  result: pass

@@ -1,0 +1,46 @@
+slug: customer-quote-video-ad-script-writer
+renamed_from: get-video-ad-script-in-customers-words
+name: "Customer quote video ad script writer"
+summary: "Paste real customer quotes and facts. Get a sourced video script, checked openings and score out of 100."
+category: general
+boards: [ecommerce]
+type: skill
+role: make
+job: video
+level: advanced
+inputs:
+  - type: voc_reviews
+    required: true
+  - type: persona
+    required: false
+  - type: product_data
+    required: true
+  - type: offer
+    required: false
+  - type: brand_brain
+    required: false
+  - type: angle_library
+    required: false
+outputs:
+  - {type: script}
+uses: [video-ad-script-line-checker, video-ad-script-type-planner, ad-script-read-aloud-editor]
+origin: rebuilt
+source_ids: [CES-128, CES-145, CES-146]
+old_name: video script from customer research
+version: 3.0.0
+credits:
+  - {title: "How To Write Meta Ads That Scale: Copywriting Masterclass", by: "Blue Sense Digital", url: "https://www.youtube.com/watch?v=LoL1w-k9Mgg", used: "The nine beats and their order"}
+  - {title: "Breakthrough Advertising (1966)", by: "Eugene M. Schwartz", url: "https://openlibrary.org/works/OL2625224W", used: "Placing the buyer by how much they know, and claim fatigue"}
+  - {title: "Tested Advertising Methods (1932)", by: "John Caples", url: "https://openlibrary.org/works/OL3350190W", used: "Openings that pick out the reader; testing one change at a time"}
+  - {title: "My Life in Advertising and Scientific Advertising", by: "Claude C. Hopkins", url: "https://openlibrary.org/works/OL2702313W", used: "Specific facts over adjectives; telling the making steps rivals never mention"}
+  - {title: "Monroe's motivated sequence", by: "Wikipedia, after Alan H. Monroe", url: "https://en.wikipedia.org/wiki/Monroe%27s_motivated_sequence", used: "Using the After quote so the buyer can picture the result"}
+  - {title: "Do Your Ads Talk Too Fast to Your Audio Audience? (Journal of Advertising Research, 2020)", by: "Emma Rodero", url: "https://thearf.org/access-knowledge-2/publications/journal-of-advertising-research/do-your-ads-talk-too-fast-to-your-audio-audience-how-speech-rates-of-audio-commercials-influence-cognitive-and-physiological-outcomes/", used: "Default pace of 3 words a second and the 3.3 ceiling"}
+  - {title: "Articulation rate across dialect, age, and gender (2009)", by: "Ewa Jacewicz, Robert A. Fox, Caitlin O'Neill and Joseph Salmons", url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC2790192", used: "The slower 2.7 pace for older and calm speakers"}
+  - {title: "Towards an integrated understanding of speaking rate in conversation (2006)", by: "Jiahong Yuan, Mark Liberman and Christopher Cieri", url: "https://www.isca-archive.org/interspeech_2006/yuan06_interspeech.html", used: "Older speakers talk more slowly"}
+  - {title: "About text overlays and the safe zone for ads in Stories and Reels", by: "Meta Business Help Center", url: "https://www.facebook.com/business/help/980593475366490", used: "Keeping text clear of the app's buttons and labels"}
+tested:
+  on: 2026-10-19
+  business: sprout
+  model: claude-opus-5-5
+  judge: claude-fable-5-1
+  result: pass

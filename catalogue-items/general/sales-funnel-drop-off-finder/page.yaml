@@ -1,0 +1,204 @@
+new_slug: sales-funnel-drop-off-finder
+name: "Sales funnel drop-off finder"
+summary: "Paste step numbers and screenshots. Get the worst drop-off step, fixes and a score out of 100."
+job: audit-landing-page
+
+headline: "Sales funnel drop-off finder"
+subhead: Paste your step numbers, from visits to orders, and attach phone screenshots of the page and its ads. It finds the step where most buyers drop out, then reviews the page behind it. You get sized fixes, what to ship or test, and a page score out of 100.
+
+explain: |
+  Most page reviews start with button colours and end with 40 tips. But buyers don't leave evenly. Most drop out at one step: they land and bounce, they look at the product and don't add it, or they reach the cart and stop. Fixing the wrong step wastes a month.
+
+  This skill starts with your numbers. It builds a table of each step, split by phone and desktop and by traffic source, and finds the biggest gap, such as one ad's visitors buying at half the rate of the rest. Then it reviews the page that owns that step on a phone, three ways: a five-second glance, a skim, and a full read as a doubter. Each fix is sized from your own better rates and labelled as a model, not a forecast. Plain mistakes ship now. Bigger changes get tested, but only if your traffic can finish a fair test in about four weeks. Without numbers it still reviews the page, and gives no money figures at all.
+
+when:
+  - Your ads get clicks but few sales, and you need to know where people give up.
+  - You're about to spend on a redesign and want to know which step to fix first.
+  - You have step-by-step data and want fixes sized in money, not just a list.
+
+you_give:
+  - The page, as its text plus phone screenshots of the first screen, the full scroll and the buying area (attach them; your AI can see pictures)
+  - The ads or links that send people there, with their words and offer, and each ad's image attached (recommended)
+  - Your numbers for one date range, such as visits, product views, adds to cart, checkouts and orders, split by phone and desktop and by source (optional)
+  - Your facts, such as policies, the claims you may make and any rating you hold (optional)
+you_get:
+  - A step table and the step where most buyers drop out, with the page that owns it
+  - Findings for that page with evidence, each tied to the step it should move
+  - Fixes sized from your own rates and labelled as a model, or ranked if you gave no numbers
+  - Which fixes to ship now and which to test, what the page needs from you, and what already works
+  - A page score out of 100 for the page behind the leakiest step, now and after the ship-now fixes
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your page text and attach phone screenshots. Say the date you captured them.
+  - Paste the ads that send most people there and attach their images, so the page can be checked against them.
+  - Paste your step counts for one date range, split by phone and desktop and by source if you can. Without them you get a page review, not money figures.
+  - Ship the "ship now" fixes first, then run only the tests your traffic can finish in about four weeks.
+
+how_it_works:
+  - title: Picks a mode
+    text: Uses your numbers if you gave visits and orders plus one step or split. Otherwise it reviews the page only and gives no money figures.
+  - title: Builds the step table
+    text: Counts each step from landing to order, and the share who go on, for the whole range and for each split you gave.
+  - title: Finds the leakiest step
+    text: Looks for the biggest gap against your own groups or your own past, such as phone against desktop. Never against anyone else's numbers.
+  - title: Reviews the page that owns it
+    text: A five-second glance at the first phone screen, a skim of headings, prices and buttons, and a full read as someone about to pay.
+  - title: Writes each finding
+    text: Evidence, the step it should move, the change, what must stay, and how sure it is, with the reason.
+  - title: Sizes the fix
+    text: Uses your own better rate as the hoped-for rate, works out extra orders and revenue, and labels it a model.
+  - title: Splits ship from test
+    text: Plain mistakes ship now. Bigger changes get tested only if a fair test would finish in about four weeks.
+
+output_shape: |
+  AUDIT FINDINGS
+  1 MODE AND SOURCES
+  Mode: <with numbers | page only>   Dates: <...>
+  Ads checked: <...>   Captured: <how, when>
+
+  2 STEP TABLE  (with numbers)
+  Step | Count | Share who go on | Phone | Desktop | By source
+
+  3 LEAKIEST STEP
+  <step> for <group>. Page that owns it: <page>
+
+  4 FINDINGS
+  Evidence: <quote or screenshot>   Moves step: <step>
+  Change: <...>   Keep: <...>   Confidence: <high | medium | low>, <why>
+  Serious: <stops the sale | slows buyers | minor>
+
+  5 SIZED FIXES  (model, not a forecast)
+  <fix>: <visitors> x (<hoped-for rate> - <rate now>) = <extra orders>
+         x <average order> = <revenue>
+
+  6 SHIP NOW / TEST
+  Test: change <X>, because <Y>, to move <step>. Traffic can support it: <yes | no | unknown>
+  7 WHAT THE PAGE NEEDS FROM YOU   MISSING: <fact>
+  8 ALREADY WORKING   <section and why>
+  9 PAGE SCORE   Now: 100 - <deductions> = <score>   After ship-now fixes: <score>
+
+example:
+  business: sprout
+  input: |
+    [the skill]
+
+    The page: sprout.example/products/sprout, as text top to bottom, with
+    earlier notes (sprout/product-page.md). No
+    screenshots.
+
+    Numbers: the practice ad file (sprout/ad-results.csv), with clicks,
+    purchases and revenue for nine ads. No steps between click and
+    purchase, no device split, no dates.
+
+    Facts: sprout/brand.md (offers, guarantee, claims fine and risky).
+  output: |
+    AUDIT FINDINGS
+
+    1 MODE AND SOURCES
+    Mode: with numbers, ad level only (clicks and purchases, no steps in
+    between). Page captured as text; no screenshots.
+    Ads checked: all nine in the file.
+
+    2 STEP TABLE (click to purchase only)
+    Group                  Clicks   Purchases   Buy rate   Avg order
+    61% off ads (P1,P2,S1) 12,699   239         1.88%      $33.36
+    All other ads          11,242   384         3.42%      $43.48
+
+    3 LEAKIEST STEP
+    Click to purchase, for the 61% off ads: they buy at about half the
+    rate of the rest. Page that owns it: the product page they land on.
+
+    4 FINDINGS
+    Evidence: the ads say "61% off". The bar says "Save 52%", the badge
+    "UP TO 55% OFF", the pop-up "Sign Up for 55% Off".
+    Moves step: click to purchase, 61% off ads
+    Change: one real first-order discount, the same in the ads and on
+    the page. Keep: the plan box layout. Confidence: high, the mismatch
+    is visible on every visit from these ads.
+
+    Evidence: "$29.99" beside "DISCOUNT AUTO-APPLIED"; the text sign-up
+    condition is only in the footer; "Renews at $49.99" is small.
+    Change: "$29.99 first box with text sign-up, then $49.99 every 4
+    weeks" in the plan box. Keep: the price per day.
+    Confidence: medium, the price doubter these ads speak to is the one
+    most likely to notice.
+
+    Evidence: plan box "30-Day Money-Back Guarantee"; the last FAQ says
+    it covers the first order only.
+    Change: "on your first order" in the plan box line. Confidence: high.
+
+    5 SIZED FIXES (model, not a forecast)
+    If the 61% off visitors bought at the all-ads rate of 2.60%:
+    12,699 x (2.60% - 1.88%) = about 91 more first orders in the window
+    x $33.36 = about $3,040. Assumes the mismatch explains the whole gap,
+    which it may not: these ads may also bring more price-led buyers.
+
+    6 SHIP NOW / TEST
+    Ship now: one discount number, the guarantee limit by the button,
+    the sign-up condition beside $29.99. These are plain mistakes.
+    Test: reviews from powder quitters next to the plan box, to move
+    click to purchase. Traffic can support it: unknown, no dates.
+
+    7 WHAT THE PAGE NEEDS FROM YOU
+    MISSING: which discount is the real first-order offer
+    MISSING: step counts (product view, add to cart, checkout) and a
+    phone and desktop split, with dates
+    MISSING: phone screenshots of the first screen and the plan box
+
+    8 ALREADY WORKING
+    The FAQ gives a clear delivery promise ("ship within 24 hours ...
+    3-5 days later"). The testing section names what was tested and when.
+    Survey numbers say "of surveyed users". The paid athlete is disclosed.
+
+tweaks:
+  - what: Step counts
+    how: Add product views, adds to cart and checkouts for the same dates. The audit can then name the exact step that leaks, not just "somewhere between click and order".
+  - what: Splits
+    how: Add phone against desktop and new against returning. A step that only leaks on phones points to a layout problem; one that only leaks for new visitors points to trust or the ad.
+  - what: One page or the whole store
+    how: Ask for a whole-store audit and the store add-on maps each step (landing, product, cart, checkout, reorder) to the page that owns it.
+  - what: Mock-ups
+    how: Ask for before and after images. The before is always your real screenshot, and the after shows only your real prices and proof, with grey boxes where you hold none.
+
+judge:
+  - The top of the audit says which mode it ran in, and page-only mode has no money figures.
+  - The first finding is on the step that loses the most buyers, not on colour or fonts.
+  - Every finding quotes the page or points to a screenshot.
+  - Sized fixes use your own rates, show the sum, and say "model, not a forecast".
+  - No fix adds a rating, review count, price or offer you don't hold.
+  - Sections that work are named as working.
+
+test:
+  - Run it page only first, with no numbers. There should be no money figures. Then add your numbers and check the first finding moves to the leakiest step.
+  - Give it numbers where you already know the weak step, such as a cart that adds shipping late. It should name that step.
+  - Redo one sized fix with a calculator. The extra orders and revenue should match.
+  - Check each finding's evidence against your screenshots. A quote that isn't on your page is a mistake.
+
+improve:
+  - Write your monthly visits and orders into step 9, so it never suggests tests your traffic can't finish.
+  - Add your own step names (for example "quiz", "plan picker") to step 4, so the table matches your analytics.
+  - Save the step table each month in your brand file, so the next audit compares with your own past.
+  - Save the "what the page needs from you" list and fill it. Missing returns and delivery terms come back as findings every time.
+  - Pair it with the "Landing page auditor" for a review without numbers, and the "A/B test traffic checker" before you start any test it suggests.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI that reads images", why: "It can work from your phone screenshots and a pasted step table in one chat."}
+    - {name: "Your analytics or GA4 funnel report", why: "Gives the counts at each step, split by device and source, which the step table needs."}
+    - {name: "Google Sheets", why: "Holds the step table so you can check every rate and sizing sum yourself."}
+  inputs:
+    - "Step counts for the same dates, from landing to order, so the leakiest step can be named"
+    - "The same counts split by phone and desktop, since most store traffic is on phones"
+    - "Last year's numbers for the same weeks, so a drop is judged against your own past"
+    - "Screenshots of the cart with an item in it and of checkout up to payment"
+
+terms:
+  - term: Step
+    meaning: One stage on the way to buying, such as viewing the product or adding it to the cart.
+  - term: Leakiest step
+    meaning: The step where the biggest share of buyers drop out, compared with your own other groups or your own past.
+  - term: Model
+    meaning: A sum that shows what a fix could be worth if an assumption holds. It isn't a forecast.
+  - term: Revenue per visitor
+    meaning: Revenue divided by visits. It tells you what each visit is worth.

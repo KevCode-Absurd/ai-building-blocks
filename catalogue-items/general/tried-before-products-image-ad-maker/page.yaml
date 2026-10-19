@@ -1,0 +1,154 @@
+new_slug: tried-before-products-image-ad-maker
+name: "Tried-before products image ad maker"
+summary: "Paste your story ad. Get an image prompt of abandoned things and a score out of 100."
+job: make-image-ads
+
+headline: "Tried-before products image ad maker"
+subhead: Paste your story ad. It reads how the old things were given up (worn out, left half full or hidden away) and shows them where they ended up. You get the image prompt, the line under it and a score out of 100.
+
+explain: |
+  Most people who switch have a cupboard of things they tried first: the tub still two-thirds full, the bottles pushed to the back, the pan with the bare patch. A plain photo of that cupboard is the habit made visible. People who own the same leftovers see their own shelf and stop.
+
+  This skill reads how your narrator gave up on each thing, because that decides the picture. Worn out means one thing, close, with real wear. Left half full means showing how much is left. Hidden away means showing the hiding place. It puts the camera where they'd find it, shows only as many things as your story names, and keeps every object a generic kind with no readable label.
+
+when:
+  - Your story says what the buyer tried before and gave up on.
+  - Your buyers tend to try several things before they find one that sticks.
+  - You want a photo with no person and no product that still tells the story.
+
+you_give:
+  - Your approved story ad, with what the narrator tried
+  - What your buyers tried before, how long it lasted and why they stopped (optional)
+you_get:
+  - How the old things were given up, and the picture that follows
+  - Each object, how much use shows, and where it sits
+  - The camera spot and the ordinary things around it
+  - A 60 to 120 word image prompt and the line under the picture
+  - A score out of 100 for the share of its six checks the brief passes, with each one missed
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your story ad. Make sure it names what was tried, as kinds of product.
+  - Paste the prompt into your image tool, or photograph a real cupboard with the labels turned away.
+  - Zoom in on the result. If any label is readable, ask for it turned away or out of focus.
+  - Show it to a customer. "That's my cupboard" means it's working.
+
+how_it_works:
+  - title: Sets the house rules
+    text: Square, looks taken on a phone, no logo, price, button or brand colour, no person and no product unless asked.
+  - title: Lists what was tried
+    text: As kinds of product from your story, never a rival's name, pack or label.
+  - title: Reads how it was given up
+    text: Worn out, left half full or hidden away. Each one sets a different picture.
+  - title: Places the camera
+    text: Where they'd find it, like a cupboard door just opened or a drawer seen from above.
+  - title: Hides the labels
+    text: Packs turned away, cropped or out of focus. Plain shapes and colours tell the kind.
+
+output_shape: |
+  SCENE             <what someone scrolling would say they saw>
+  WHERE AND WHEN    <place, time, light, camera spot>
+  HOW GIVEN UP      <worn out | left half full | hidden away>, <why>
+  THE OBJECTS       <each kind, how much use shows, where it sits>
+  AROUND IT         <ordinary things nearby>
+  WORDS ON IMAGE    <none, or the narrator's own mark from the story>
+  LINE UNDER IMAGE  <words> (<which line>, <characters>)
+  FLAGS             <inferred details, anything that could look like a rival's product>
+  IMAGE PROMPT      <60 to 120 words, ready to paste>
+  SCORE             <passed> / 6 checks x 100 = <score>, missed: <one line each>
+
+example:
+  business: sprout
+  input: |
+    [the skill]
+
+    Story ad (approved; narrator: a customer who agreed, built on
+    review 5, example only):
+    The cupboard by the kettle: every supplement I've given up on.
+    A greens powder tub, a third full, the scoop stuck in dried
+    powder. Probiotic gummies. B12 gummies. Multivitamin gummies,
+    lid left loose.
+    I stopped buying the separate ones. Now it's one Sprout daily
+    pack: 60+ ingredients, 21 vitamins and minerals, 6 g prebiotic
+    fiber, in a small handful of gummies. Tear the top, eat them.
+  output: |
+    SCENE             An open kitchen cupboard with a third-full powder
+                      tub and three supplement bottles crowded at the
+                      back.
+    WHERE AND WHEN    The cupboard above the kettle, morning, kitchen
+                      light from the left. Camera: standing at the
+                      counter, cupboard door just opened.
+    HOW GIVEN UP      Left half full. The story says how much is left
+                      in each one.
+    THE OBJECTS       A plain white powder tub, lid off, a third full,
+                      a scoop stuck in dried green powder. Three plain
+                      gummy bottles, labels turned to the back wall,
+                      one lid sitting loose on top.
+    AROUND IT         A tin of tea bags, a spare light bulb, a bag of
+                      rice at the front.
+    WORDS ON IMAGE    None.
+    LINE UNDER IMAGE  Four tries. All still open. (plain caption, 27)
+    FLAGS             Kinds only: one powder, three gummy bottles, as
+                      the story names. Inferred: tea, bulb, rice.
+                      Copy check: "60+ ingredients, 21 vitamins and
+                      minerals, 6 g prebiotic fiber" is on the claims
+                      list.
+    IMAGE PROMPT      Square 1:1 phone photo looking into an open
+                      kitchen cupboard above a kettle, morning light
+                      from the left. At the back, a plain white powder
+                      tub with its lid off, about a third full, a
+                      plastic scoop stuck upright in dried green
+                      powder. Beside it three plain supplement bottles,
+                      labels turned to the wall, one lid resting loose
+                      on top. At the front a tin of tea bags, a spare
+                      light bulb and a bag of rice. Slight tilt, a
+                      little grain, ordinary and unstyled. No readable
+                      labels, no logo, no brand name, no person, no
+                      product.
+
+tweaks:
+  - what: How it was given up
+    how: Ask for "worn out" if your buyers used the old thing until it broke, like a pan or a strap. You get one object, close, with real wear.
+  - what: How many things
+    how: It shows as many as your story names. Name more in the story if the point is "again and again".
+  - what: Photograph a real one
+    how: Use the brief to shoot a real cupboard at home or at work, with labels turned away. Nothing in it is then generated.
+  - what: A narrator's mark
+    how: If your story says the narrator wrote on the old thing, like a date on a lid, give the exact words and it appears on the object.
+
+judge:
+  - Every object is a generic kind with no readable label.
+  - It shows only the things your story names, with the use the story describes.
+  - The camera is where your buyer would find these things.
+  - It looks like a real cupboard, familiar and not disgusting.
+  - There's no person and no product.
+
+test:
+  - Give it a story that names a rival's product. The picture should show only the kind, with no name or pack shape.
+  - Give it a story with nothing tried before. It should send you to the everyday snapshot.
+  - Zoom in on the finished photo. If any label is readable, ask again.
+  - Run it against a snapshot of the moment from the same story. Keep whichever brings more readers to the offer.
+
+improve:
+  - Add what your buyers tried before, as kinds, with how long they lasted, to your brand file.
+  - Note how your buyers usually give up (worn out, left half full or hidden away), so step 3 starts there.
+  - Ask customers for a photo of their own cupboard, with permission. It shows you what's really in there.
+  - Pair it with a story ad skill, so the first lines say what was tried and why it stopped.
+
+works_best_with:
+  tools:
+    - {name: "Your phone camera", why: "A real cupboard with the labels turned away is the most believable version, and nothing in it is generated."}
+    - {name: "Nano Banana", why: "Google's image model. Its guide says a detailed scene gives you more control, and this brief is detailed."}
+    - {name: "Any good chat AI", why: "Reading the story for what was tried is careful reading, which Claude, ChatGPT and Gemini all do well."}
+  inputs:
+    - "Five to ten reviews that name what buyers used before, so the objects are the ones they really owned"
+    - "A photo of a typical buyer's cupboard or shelf, so the place and clutter look right"
+    - "How long the old things lasted, in buyers' words, so the amount of use is true"
+
+terms:
+  - term: The old way
+    meaning: What the buyer used before, shown as a kind of product, never a named rival.
+  - term: Story ad
+    meaning: An ad whose main text tells one person's story, like a post from a friend.
+  - term: Line under the image
+    meaning: The bold headline under the picture in a Facebook or Instagram ad.

@@ -1,0 +1,237 @@
+new_slug: ad-first-line-writer-and-scorer
+name: "Ad first line writer and scorer"
+summary: "Paste your buyer and proof. Get ten first lines, or fixes for yours, and a score out of 100."
+job: write-ad-copy
+
+headline: "Ad first line writer and scorer"
+subhead: Give it a brief on your buyer, your proof and who speaks, then say write or score. It writes about ten first lines that each make a different move, or scores yours on four checks. You get the lines, what comes after each and a score out of 100.
+
+explain: |
+  A hook is the first line of an ad, or its first seconds, that makes someone stop scrolling. Odd hooks stop people, but often the wrong ones. And most people test ten hooks that open the same way, which teaches them one thing ten times.
+
+  This skill follows rules that mail-order advertisers proved with split tests. Flag the right reader, offer a gain and bring news. Use curiosity only when it points at that gain. It writes about ten hooks across six moves, chosen by how much your buyer knows. Each line is checked against who speaks and the facts you gave it. Every question a hook opens is matched to the line that answers it. For video, it writes what's seen, read and heard, so the hook works with the sound off. To score, it checks Flags, Gain, New and Clear, then an honesty gate.
+
+when:
+  - You need new openings for a video, image ad or post, aimed at the right buyer.
+  - Your hooks all start the same way, and you want a test that teaches you something.
+  - You have a list of hooks and want to know which to keep before you spend money testing them.
+
+you_give:
+  - A brief on your buyer, with their moment, what they own, their doubts and their own words
+  - How much they already know, the proof you may claim, and claims you must never make
+  - Who speaks in the ad (a real founder, customer or expert, or an AI-made presenter)
+  - Write (how many, which format) or score (paste your hooks)
+  - The rest of the ad, or the line after the hook (optional, but best)
+you_get:
+  - In write mode, about ten hooks across the moves your facts allow, at most three per move
+  - For each, what backs it, its next line, a short screen version and what a win would tell you, plus what's seen for video
+  - In score mode, each hook's four checks, a score out of 4, the honesty gate and a fix for any under 3
+  - A list of what it skipped and why, or the buyers your hooks miss
+  - A set score out of 100, the points won on the four checks across all hooks, with gate failures counted as zero
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste a brief on your buyer, how much they know, and the proof you may use.
+  - Say who speaks. Then write "Mode, write, 10 hooks, 20-second video", or "Mode, score" with your hooks below.
+  - Paste the rest of the ad, so every hook gets paid off.
+  - Read the SKIPPED list. Add the missing fact, or leave that move out.
+  - In score mode, fix the hooks under 3 first. Drop any that fail the gate.
+
+how_it_works:
+  - title: Flags the buyer
+    text: Names a moment or an object the buyer owns, in their words. Never a condition, such as bloating.
+  - title: Picks moves by awareness
+    text: A buyer who doesn't see the problem gets mirror and gap hooks. A buyer who knows you gets proof and news. No offer for someone who hasn't heard of you.
+  - title: Checks speaker and facts
+    text: An AI-made presenter never says "I tried it". A proof hook needs a fact you gave it, and a gap hook needs the line in your ad that answers it.
+  - title: Puts the point up front
+    text: The point lands in the first 8 words. The whole line stays at 12 words or fewer.
+  - title: Spreads the test
+    text: Every move your facts allow, three at most per move, never two in a row on the same move. Lines that start with the same three words count as one.
+  - title: Pays off every hook
+    text: Writes the next line, a screen version of 7 words or fewer, and for video what's seen, read and heard. Then it lists what it skipped and why.
+  - title: Scores four checks
+    text: Flags, Gain, New and Clear, one point each. Keep 3 or 4, fix anything under 3.
+  - title: Applies the honesty gate
+    text: Any fact not in your proof, a banned claim, or a line telling viewers they have a body condition fails the hook.
+  - title: Scores the set out of 100
+    text: Adds the points across all hooks and divides by 4 times the number of hooks, times 100. A hook that fails the gate counts zero. Score mode gives it before and after the fixes.
+
+output_shape: |
+  Write mode:
+  FLAG: <the moment or object that flags the buyer>
+  <n>. "<the hook>"
+     <move> (<form>) | backed by: <the fact, or the ad line that closes the gap>
+     Next:   <the line that pays it off>
+     Screen: <7 words or fewer> | Seen: <the first frame, for video>
+     A win says: <what you'd learn if it wins>
+  (about ten, at most three per move)
+
+  SKIPPED
+  <move or form>: MISSING <what it needed>
+
+  Score mode:
+  <n>. "<the hook>"
+     Flags <0/1>  Gain <0/1>  New <0/1>  Clear <0/1>  = <score>/4
+     Gate: <pass / fail, why>
+     Fix:  <one line, for any under 3>
+
+  MISSED
+  <buyers or moments no hook flags>
+
+  SET SCORE (both modes)
+  <points won>/<4 x hooks> = <score> out of 100 (gate failures count 0)
+  With the fixes, score mode: <points>/<4 x hooks> = <score> out of 100
+
+example:
+  business: sprout
+  input: |
+    [the skill]
+
+    Mode: write, 10 hooks, 20-second video
+    Buyer: the price doubter. Knows Sprout from a store shelf, hasn't
+    bought. Doubts: "They are expensive." "I hate subscriptions because
+    I feel like they are a trap." Stage: product aware.
+    Who speaks: an AI-made narrator over product footage
+    Ad body (illustrative, written for this example): "One pack: 60+
+    ingredients, 21 vitamins & minerals, 6 g fiber. Tear the top, tip it
+    into your hand. On subscription, $49.99 every 4 weeks. Pause or
+    cancel any time."
+    Proof on file: 2025 study, 120 adults, 12 weeks, vs placebo: blood
+    vitamin C up 40.1%. 4.75 stars from 109,639 reviews (product page
+    widget). Survey of 3,000+ customers: 80% take it daily. $1.78/day on
+    subscription. Brand line: "Tastes like a treat, works like a
+    supplement." Reviews (brand site): "We quickly decided to resubscribe
+    because we love [Sprout] so much!" (had cancelled before the gummies
+    arrived) / "It's wild I WANT to take [Sprout] and don't forget."
+    Raspberry and blueberry flavour shown as NEW; subscribers
+    get it for 1 month, then Original. "Subs Now Start at $29.99" (no date).
+    Never: "fix", weight loss, energy or immunity results.
+    No unbroken footage of the pack in use. No offer end date.
+  output: |
+    FLAG: the green pouch they picked up in a store and put back
+    Product aware: new proof, a fact or a reason. Heard = AI narrator.
+
+    1. "Blood vitamin C up 40.1% in Sprout's 12-week study."
+       Proof (the number) | backed by: the 2025 study
+       Next: "That's a study of 120 adults, against a placebo."
+       Screen: Vitamin C up 40.1% in 12 weeks | Seen: a torn pack
+       A win says: a checked number moves this buyer
+
+    2. "Your greens, vitamins and fiber in one pack you tear and eat."
+       Gain (in their terms) | backed by: the pack facts
+       Next: "60+ ingredients, 21 vitamins & minerals, 6 g fiber."
+       Screen: Greens, vitamins, fiber. One pack. | Seen: the tear
+       A win says: ease plus what's inside is the reason to pay
+
+    3. "New for now: Sprout in raspberry and blueberry, until it's gone."
+       News (the launch) | backed by: the NEW label (recheck on the day)
+       Next: "Subscribers get it for a month, then go back to Original."
+       Screen: New: raspberry and blueberry | Seen: flavour words only
+       A win says: something new gets a "maybe later" buyer to try
+
+    4. "The pricey greens are the tub you stop using."
+       Flip (the usual belief) | backed by: the survey
+       Next: "In a survey of 3,000+ customers, 80% take it daily."
+       Screen: The tub you quit costs most | Seen: a half-used tub
+       A win says: value over time beats the sticker price
+
+    5. On screen only: "We quickly decided to resubscribe because we
+       love [Sprout] so much!" (review, brand site). Narrator silent.
+       Proof (the real line) | backed by: review 17, quoted exactly
+       Next: "That buyer cancelled before the first box arrived."
+       Screen: "We quickly decided to resubscribe" | Seen: gummies
+       A win says: a buyer who shared the trap fear is the proof
+
+    6. "Here's a whole day of Sprout, from pouch to palm."
+       Gain (the preview) | backed by: the body shows it
+       Next: "Grab a pack, tear the top, tip it into your hand."
+       Screen: A day of Sprout, pouch to palm | Seen: one pack lifted out
+       A win says: showing the routine beats saying it
+
+    7. "Subscriptions feel like a trap? Pause or cancel any time."
+       Flip (the usual belief) | backed by: the product page wording
+       Next: "It renews at $49.99 every 4 weeks, and the page says so."
+       Screen: Pause or cancel any time | Seen: the plan box on a phone
+       A win says: the trap fear stops them more than the price
+       Cancelling is the top complaint on review sites. Test it first.
+
+    8. "4.75 stars from 109,639 reviews on Sprout's product page."
+       Proof (the number) | backed by: the review widget
+       Next: "It's wild I WANT to take [Sprout] and don't forget." (review)
+       Screen: 4.75 stars, 109,639 reviews | Seen: the count on screen
+       A win says: a crowd of buyers outweighs the price doubt
+
+    9. "Tastes like a treat, with 6 g fiber in every pack."
+       Gain (in their terms) | backed by: the brand line, 6 g per pack
+       Next: "No water, no shaker. Tear the top and eat."
+       Screen: Tastes like a treat. 6 g fiber. | Seen: a bite
+       A win says: taste is what makes it worth the money
+
+    10. "Put the pouch back last time? $1.78 a day, on subscription."
+        Flip (off the hook) | backed by: the subscription price
+        Next: "That's $49.99 every 4 weeks for 28 packs."
+        Screen: $1.78 a day on subscription | Seen: the store shelf
+        A win says: a per-day price beats a discount for this buyer
+
+    SKIPPED
+    Mirror, Gap: for colder buyers. Gain (the deal): most aware only.
+    News (the change): MISSING the date of "Subs Now Start at $29.99".
+    Proof (the live test): MISSING unbroken footage. Timing: MISSING an
+    end date. Founder, customer, expert: MISSING a real speaker.
+
+tweaks:
+  - what: How much the buyer knows
+    how: This picks the moves. Say "unaware" and you get mostly mirror and gap hooks. Say "product aware" and proof and news lead, as in the example.
+  - what: Who speaks
+    how: Say "real founder" and it adds lines only a maker can say, such as a step they kept. Say "AI-made presenter" and every line stays in "you".
+  - what: Facts on file
+    how: Add study numbers, review counts or a real offer date and more proof, news and timing hooks open up. Without them, those forms are skipped and listed.
+  - what: Write or score
+    how: Score your current hooks before writing new ones. You'll see which buyer each one flags, and the fixes often beat starting over.
+  - what: The rest of the ad
+    how: Paste it. Without it, gap hooks can't be checked and scores come with a warning. A hook the next line drops loses the viewer anyway.
+
+judge:
+  - No more than three hooks share a move, and no two start with the same three words.
+  - Every number matches a fact you gave it, word for word.
+  - Every gap hook names the line in your ad that answers it.
+  - No hook tells the viewer they have a health or body condition.
+  - An AI-made presenter never says "I tried it" or "I was sceptical".
+  - In score mode, every hook under 3 has a fix you could use today.
+
+test:
+  - Score a hook you know won and one you know lost. The winner should score higher. If it doesn't, check the buyer you named.
+  - Run write mode on an ad where you know which hook won. Find the winner's move in the list. If it's missing, your buyer notes are missing what made it work.
+  - Change "who speaks" from an AI-made narrator to a real founder. Maker lines should appear only on the second run.
+  - Plant a number that isn't in your proof. Write mode should skip it, and score mode should fail it at the gate.
+  - Read each hook aloud with a timer. The point should land inside 3 seconds.
+
+improve:
+  - Write your buyer's moments and their own words into step 1 of the skill file, so every run flags the same person.
+  - Add your proven facts and your never-say list to "What you need", so proof hooks are always possible and the gate catches banned claims.
+  - Add a form you've seen win to references/moves.md, under the move it makes.
+  - Keep a note of which move won on each ad, and save each winning hook with its next line to your brand file.
+  - If you mostly make video, add your own first-frame rules to step 8 (for example "show the pack in a hand").
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Hooks are short and the checks are plain, so Claude, ChatGPT or Gemini all do this well."}
+    - {name: "Meta Ad Library", why: "Shows the ads other brands run now, so you can check a hook isn't one buyers already see everywhere."}
+    - {name: "Meta Ads Manager", why: "Exports results for each ad, so score mode can be checked against the openings you ran."}
+  inputs:
+    - "Your past hooks with their hook rate (3-second views divided by impressions), so new ones avoid what already failed"
+    - "Stills from the first three seconds of your video, so the 'seen' layer matches the real footage"
+    - "Short phrases buyers use in reviews and comments, so the flag uses their words"
+
+terms:
+  - term: Hook
+    meaning: The first line, or the first seconds of a video, that makes the right person stop scrolling.
+  - term: Move
+    meaning: What a hook does to earn attention. This skill uses six, from mirror to flip, plus timing when there's a real date.
+  - term: Awareness
+    meaning: How much the buyer already knows, from not seeing the problem at all to ready to buy.
+  - term: Next line
+    meaning: The sentence that comes right after the hook. It must pay off what the hook started.
+  - term: AI-made presenter
+    meaning: A person or voice in a video made by an AI tool. They can't speak as a real customer, founder or expert.

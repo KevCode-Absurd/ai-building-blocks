@@ -1,0 +1,189 @@
+new_slug: clay-scene-image-ad-maker
+name: "Clay scene image ad maker"
+summary: "Paste your selling idea. Get a clay before-and-after image prompt, feed copy and a score out of 100."
+job: make-image-ads
+
+headline: "Clay scene image ad maker"
+subhead: Give it your selling idea, product facts and photos. It picks one clay object that stands for the problem and builds a handmade set around it, showing the before and after in one frame. You get the image prompt, the words, the feed copy and a score out of 100.
+
+explain: |
+  A clay scene stops the thumb because it looks handmade and small, unlike every product photo around it. It goes wrong when there's nothing to read in it: a cute clay mascot beside the pack, a set crowded with moments, or a label sculpted into wobbly clay letters.
+
+  This skill builds the picture around one clay object that stands for the problem, such as a leaning tower of tubs or a knot of cables. A still can't show clay moving, so it shows one state, or the same set split in two: the problem greyed on the left, the change in your colours on the right. The set follows the same plan as the clay video, with one finish and model-maker stand-ins. Your product keeps its real label, and the words pass image-ad rules: a headline of 7 words or fewer and type that reads on a phone.
+
+when:
+  - Your product's benefit is real but hard to photograph, and plain product shots get scrolled past.
+  - You can name one everyday thing that gets simpler, neater or easier with your product.
+  - You made the clay video and want a still on the same set.
+
+you_give:
+  - Your selling idea
+  - Your product facts, approved claims and claims you must never make
+  - Who the buyer is and the moment the problem hits them
+  - Your colours, typefaces, label lines and offer
+  - Product photos with a sharp label, attached (optional at first, needed before you make the image)
+you_get:
+  - The changing object with its three states, and the frame (one state or a split set)
+  - The set plan, the character sentence and how the product appears
+  - The layout, the words on the image checked for size and contrast, and an image prompt
+  - Feed copy with a first line, headline and button
+  - A score out of 100 from the skill's five checks, with one line per check missed
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your product facts, claims, label lines and colours underneath.
+  - Describe the buyer and the moment the problem bites, in one or two sentences.
+  - Make the image from the prompt with your product photo attached, then set the words in a design tool.
+  - Shrink it to phone size. If the set and the one change don't read before the headline, ask for a simpler set.
+
+how_it_works:
+  - title: Checks clay fits
+    text: Clay suits a hidden cause or a small everyday problem. If your point needs a real face or is only a price, it says so.
+  - title: Picks the changing object
+    text: One clay object with a before, changing and after state, readable from the picture alone.
+  - title: Picks the frame
+    text: One state, or a split set with the problem greyed on the left and your colours on the right.
+  - title: Plans the set
+    text: One small set, one finish, model-maker stand-ins, at most one silent clay character, and your product with its real label.
+  - title: Lays out and checks words
+    text: 4:5 or 1:1, the object largest, a headline of 7 words or fewer, at most three other things to read, 30 px type and 4.5:1 contrast.
+  - title: Writes the prompt and copy
+    text: A photographed tabletop set prompt with no text in it, and feed copy that carries the change.
+
+output_shape: |
+  FIT        <why clay suits this, or what to use instead>
+  OBJECT     <one clay object>
+             Before: <...>  Changing: <...>  After: <...>
+  FRAME      <one state, or split set: left before, right after>
+  SET        <pieces, finish, stand-ins, palettes>
+  CHARACTER  <one sentence, or none>
+  PRODUCT    <clay prop with printed label, or real photo lit to match>
+  LAYOUT     <4:5 or 1:1>, zone map in %
+  WORDS      Headline: "<7 words or fewer>" <size, colour, contrast>
+             Other: "<up to 3 items>"
+  IMAGE PROMPT  <ready to paste, no text in the image>
+  FEED COPY  <first line, primary text, headline, button>
+  NOTES      <claims used and sources, MISSING>
+  SCORE      <n>/100 (<passed> of 5 checks) | missed: <one line each>
+
+example:
+  business: sprout
+  input: |
+    [the skill]
+
+    Idea: people who quit greens powder. The tub, the scoop, the
+    shaker, then the tub sits half used.
+    Buyer: 28 to 45, office job, has quit powders. Wants one habit
+    that lasts.
+    Product: Sprout daily greens gummies. Pouch of 28 daily packs.
+    Tear one pack straight across the top, tip the gummies into your
+    palm. Pouch: glossy deep green, big yellow wordmark, "28 Daily
+    Packs".
+    Approved: "60+ ingredients, 21 vitamins & minerals, and 6g fiber"
+    in 1 pack.
+    Colours: forest green #00582D, deep forest #002C17, cream #FFF7DF,
+    sunflower #FFCC2E. Type: Work Sans bold.
+    Offer: $29.99 first order with text sign-up, renews at $49.99
+    every 4 weeks.
+    Photos: [pouch front]
+  output: |
+    FIT        A routine problem told with objects. Clay fits.
+    OBJECT     A leaning grey clay tower on the counter: powder tub,
+               scoop and shaker.
+               Before: it teeters.  Changing: it squashes down into the
+               counter.  After: a clear counter, the pouch on it.
+               (It shows the routine getting simpler. Nothing on file
+               says the pack replaces a powder's nutrients.)
+    FRAME      Split set. Left: the tower teetering beside the clay
+               man, blue-grey. Right: the same counter clear, the pouch
+               standing on it, cream and green.
+    SET        Kitchen counter, a shelf, a window shape. Handled finish.
+               No water in frame, so no stand-ins needed.
+               Before: blue-grey, cool grey, dull khaki. After: forest
+               green, cream, sunflower.
+    CHARACTER  A clay man, 6 heads tall, slim, warm beige clay, short
+               dark hair as one shape, rust jumper, grey trousers, bead
+               eyes, a small clay watch. Left side only, head tilted up
+               at the tower.
+    PRODUCT    The real pouch photo, lit from the left to match the
+               set, right side only, front to camera, shoulder high.
+    LAYOUT     4:5, 1080 x 1350. Headline 0-14% on the plain backdrop /
+               split set 16-88%, the tower and the pouch the largest
+               things / small line 90-97%.
+    WORDS      Headline: "From a tub tower to one pack" Work Sans bold
+               72 px, deep forest on cream backdrop, 14.3:1.
+               Other: "60+ ingredients. 21 vitamins & minerals. 6g
+               fiber." Work Sans bold 32 px, deep forest on cream,
+               14.3:1. 1 other thing to read.
+    IMAGE PROMPT  A photographed handmade stop-motion tabletop set,
+      4:5, matte modelling clay with some thumbprints, macro lens, one
+      soft key light from the left and a gentle fill, shallow focus.
+      One kitchen counter split down the middle. Left half, blue-grey
+      and cool: a leaning tower of a plain unlabelled grey clay powder
+      tub, a scoop and a shaker, and a clay man about 6 heads tall
+      (slim, warm beige clay, short dark hair as one shape, rust jumper,
+      grey trousers, black bead eyes, a small clay watch) looking up at
+      it. Right half, cream and forest green: the same counter clear,
+      the pouch from photo 1 standing on it, shape, colours and label
+      unchanged. Plain cream backdrop with an empty band at the top.
+      No text, letters or numbers anywhere except the pouch's printed
+      label.
+    FEED COPY  First line: The tub, the scoop and the shaker, or one
+               small pack you tear open.
+               Primary text: 60+ ingredients, 21 vitamins & minerals
+               and 6g fiber in one pack. $29.99 first order with text
+               sign-up. Renews at $49.99 every 4 weeks.
+               Headline: Rip. Tip. Enjoy. (16 characters)
+               Button: Shop now
+    NOTES      Claim used: the label line, word for word. MISSING: a
+               photo of the pouch's side, so the clay set's light can
+               be matched to it.
+
+tweaks:
+  - what: One state or a split
+    how: Ask for "before only" for buyers who don't see the problem yet, or "after only" for buyers comparing fixes. The split suits most others.
+  - what: The finish
+    how: Say crisp, handled or rough. Crisp suits premium and food brands, rough suits snacks, gifts and playful brands.
+  - what: The product
+    how: Say "clay prop" to sculpt the pack wrapped in its printed label from your artwork, or "real photo" to use your photo lit by the set.
+  - what: The size
+    how: Ask for 1:1 as well as 4:5. A square split puts the before and after side by side, the headline above.
+
+judge:
+  - You can say in one sentence what the object is and what changed it.
+  - There's one moment, one changing object and one character at most.
+  - The picture shows nothing beyond your approved claims.
+  - The headline is 7 words or fewer, with at most 3 other things to read, each at 30 px or more and 4.5:1 contrast.
+  - The product keeps its real label, and nothing is sculpted as letters.
+
+test:
+  - Give it a plain price offer as the idea. It should tell you clay doesn't fit.
+  - Show the finished image to someone for two seconds and ask what changed. Their answer should match the object's before and after.
+  - Run it twice on the same input. The object can differ, but both should stay inside your approved claims.
+  - Put it beside a frame from your clay video. The set, finish and character should match.
+
+improve:
+  - Paste your approved and banned claims into "What you need" in the skill file, so every picture is checked against them.
+  - When a changing object works, save it with its three states in your brand file, so your stills and clay videos share it.
+  - Add your product's never-show rules to step 7, for example that the daily pack is only ever torn straight across the top.
+  - Pair it with "Claymation video ad script writer" when you want the video version too.
+
+works_best_with:
+  tools:
+    - {name: "Nano Banana", why: "Takes your product photo as a reference and keeps the clay finish steady across retries."}
+    - {name: "GPT Image", why: "Lets you point at one part of the set to fix it without remaking the rest."}
+    - {name: "Canva or Figma", why: "Sets the headline and small line in your brand fonts on top, so every letter is exact."}
+  inputs:
+    - "The flat label artwork, so a clay prop's printed label carries every line correctly"
+    - "Photos of real clay figures you like, so the finish names marks that exist"
+    - "Two or three reviews about the old routine, so the before side shows a fix buyers really tried"
+
+terms:
+  - term: Claymation
+    meaning: Animation made with clay figures moved a little between frames. Here it's one photographed clay scene.
+  - term: Split set
+    meaning: One clay set shown twice side by side, the problem on the left and the change on the right.
+  - term: Stand-in
+    meaning: A material a model-maker uses in place of the real thing, such as clear gel for water.
+  - term: Contrast
+    meaning: How much the words stand out from what's behind them. 4.5:1 is the usual floor for easy reading.

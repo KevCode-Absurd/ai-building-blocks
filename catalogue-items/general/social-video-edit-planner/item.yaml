@@ -1,0 +1,32 @@
+slug: social-video-edit-planner
+renamed_from: turn-raw-footage-into-a-clear-social-post
+name: "Social video edit planner"
+summary: "Attach clips and the post's idea. Get a timed cut list, captions and a score out of 100."
+category: general
+type: skill
+role: make
+job: organic
+level: advanced
+inputs:
+  - {type: footage, required: true}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: edit_plan}
+uses: []
+example: organic
+origin: own
+source_ids: [CES-093]
+old_name: organic-video-editing
+version: 2.0.0
+credits:
+  - {title: "Instagram Ranking Explained", by: "Adam Mosseri, Instagram", url: "https://about.instagram.com/blog/announcements/instagram-ranking-explained", used: "the export checks: watermarks, low resolution, borders, muted sound and mostly-text posts shown to fewer people"}
+  - {title: "English (USA) Timed Text Style Guide", by: "Netflix Partner Help Center", url: "https://partnerhelp.netflixstudios.com/hc/en-us/articles/217350977-English-USA-Timed-Text-Style-Guide", used: "two-line captions, about 20 characters a second, and never splitting a verb from its negation"}
+  - {title: "Timed Text Style Guide: General Requirements", by: "Netflix Partner Help Center", url: "https://partnerhelp.netflixstudios.com/hc/en-us/articles/215758617-Timed-Text-Style-Guide-General-Requirements", used: "captions on screen at least about 1 second and at most 7"}
+  - {title: "Video Ad Specs on Instagram Reels", by: "Facebook Ads Guide, Meta", url: "https://www.facebook.com/business/ads-guide/update/video/instagram-reels", used: "the safe area: clear of the top 14%, bottom 35% and 6% at each side"}
+  - {title: "Understand three-minute YouTube Shorts", by: "YouTube Help", url: "https://support.google.com/youtube/answer/15424877", used: "why claimed music can block a longer post"}
+tested:
+  on: 2026-10-19
+  business: sprout
+  model: claude-opus-5-5
+  judge: claude-fable-5-1
+  result: pass

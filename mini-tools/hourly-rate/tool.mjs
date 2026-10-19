@@ -39,7 +39,7 @@ export default {
       { text: "Charge at least {hourlyRate} an hour, or {dayRate} a day. That covers {takeHome} take-home, {savings} savings, tax and {businessCosts} of costs over {billableHours} you can bill." },
     ],
   ],
-  next: [{ slug: "turn-features-into-reasons-to-buy", why: "Explain what clients get for your rate, in reasons they care about." }],
+  next: [{ slug: "selling-points-writer", why: "Explain what clients get for your rate, in reasons they care about." }],
   sources: [
     { what: "Hourly rate", how: "(Take-home + savings) ÷ (1 − tax rate) + business costs, divided by billable hours. A standard cost-plus rate sum." },
   ],

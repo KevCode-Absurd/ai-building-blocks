@@ -1,0 +1,31 @@
+slug: founder-video-ad-script-writer
+renamed_from: get-founder-ad-script-people-believe
+name: "Founder video ad script writer"
+summary: "Paste your founder's words. Get a filming brief on one real decision and a score out of 100."
+category: general
+boards: [ecommerce]
+type: skill
+role: make
+job: video
+level: intermediate
+inputs:
+  - {type: brief, required: true}
+  - {type: brand_brain, required: true}
+outputs:
+  - {type: script}
+uses: []
+example: founder-image
+origin: own
+source_ids: [CES-114]
+old_name: script-format-founder
+version: 2.1.0
+credits:
+  - {title: "5 Quick Techniques for Better On-Camera Interviews", by: "Sanora Bartels, New York Film Academy", url: "https://www.nyfa.edu/student-resources/on-camera-interviews-tips", used: "Open how and why questions, chatting off camera first, leaving pauses, using the subject's own words"}
+  - {title: "FTC's Endorsement Guides: What People Are Asking", by: "US Federal Trade Commission", url: "https://www.ftc.gov/business-guidance/resources/ftcs-endorsement-guides-what-people-are-asking", used: "Endorsements must reflect real experience; experts speak within their expertise"}
+  - {title: "Creators: 150 WPM Timing and Formatting for Voice Over Script Writing", by: "VoiceBros Team", url: "https://voicebros.com/en/blog/voice-over-script-writing", used: "Word counts per length from a talking pace"}
+tested:
+  on: 2026-10-19
+  business: sprout
+  model: claude-opus-5-5
+  judge: claude-fable-5-1
+  result: fail

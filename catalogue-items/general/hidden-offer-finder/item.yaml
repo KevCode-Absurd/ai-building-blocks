@@ -1,0 +1,31 @@
+slug: hidden-offer-finder
+renamed_from: find-offers-hiding-in-what-you-already-sell
+name: "Hidden offer finder"
+summary: "Paste your prices and deals. Get clashes flagged, new offers to try and a score out of 100."
+category: general
+boards: [ecommerce]
+type: prompt
+role: make
+job: offer
+level: beginner
+inputs:
+  - {type: brand_brain, required: true}
+  - {type: persona, required: false}
+outputs:
+  - {type: offer}
+uses: [buyer-doubt-offer-builder]
+origin: own
+source_ids: [CES-079]
+old_name: offer-set
+version: 2.0.0
+credits:
+  - {title: "16 CFR 251.1, Guide concerning use of the word \"free\" and similar representations", by: "US Federal Trade Commission (text via Cornell Legal Information Institute)", url: "https://www.law.cornell.edu/cfr/text/16/251.1", used: "Free offers name the paid item, put conditions beside the offer and don't run all year"}
+  - {title: "16 CFR Part 233, Guides Against Deceptive Pricing", by: "US Federal Trade Commission (eCFR)", url: "https://www.ecfr.gov/current/title-16/chapter-I/subchapter-B/part-233", used: "A was price or percent off counts from a price really charged for a real period"}
+  - {title: "FTC Restarts Negative Option Rulemaking After Eighth Circuit Vacatur; Enforcement Under ROSCA Continues", by: "Gibson Dunn (Svetlana Gans and others)", url: "https://www.gibsondunn.com/ftc-restarts-negative-option-rulemaking-after-eighth-circuit-vacatur-enforcement-under-rosca-continues/", used: "What a subscription offer states before the buyer pays: terms, consent, a simple way to cancel"}
+  - {title: "$100M Offers", by: "Alex Hormozi", url: "https://www.acquisition.com/books", used: "Value grows when the result is bigger, surer, sooner and easier, used to spread the new offers"}
+tested:
+  on: 2026-10-19
+  business: sprout
+  model: claude-opus-5-5
+  judge: claude-fable-5-1
+  result: pass

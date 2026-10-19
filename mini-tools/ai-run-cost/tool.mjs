@@ -95,8 +95,8 @@ export default {
     [{ text: `Prices are each lab's standard rate, checked in ${CHECKED_WORDS}. You can change any price under "Prices per million tokens".` }],
   ],
   next: [
-    { slug: "stop-paying-for-the-same-ai-mistake-twice", why: "Cut repeat runs by keeping a record of what went wrong last time." },
-    { slug: "know-if-your-new-prompt-writes-better-ads", why: "Check a cheaper model or a shorter prompt still does the job, before you switch." },
+    { slug: "ai-mistake-rule-writer", why: "Cut repeat runs by keeping a record of what went wrong last time." },
+    { slug: "ad-prompt-comparison-scorer", why: "Check a cheaper model or a shorter prompt still does the job, before you switch." },
   ],
   sources: [
     { what: "Cost of one run", how: "(Tokens in × price in + tokens out × price out) ÷ 1,000,000. Labs price per million tokens." },

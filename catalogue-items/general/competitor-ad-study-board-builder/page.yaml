@@ -1,0 +1,182 @@
+new_slug: competitor-ad-study-board-builder
+name: "Competitor ad study board builder"
+summary: "Paste ads from Meta's Ad Library. Get them sorted into 9 types and a score out of 100."
+job: study-competitors
+
+headline: "Competitor ad study board builder"
+subhead: Give it competitor ads you collected from Meta's Ad Library, each with its ID, start date and a screenshot. It files every ad under one of nine types. You get a study board with three examples per type, what to study in each, and a score out of 100.
+
+explain: |
+  Most people save competitor ads into one long folder and never look at it again. With no order, you can't see which kinds of ad a category runs, which ones last, or what an ad of a certain type needs to work.
+
+  This skill turns that pile into a study board. It looks at each ad itself, not just its text, and files it under one of nine types on the same map the other ad skills here use, such as a product shot, a customer quote, a before-and-after with objects, or an offer. It picks three per type from at least two brands, so one brand's habit isn't mistaken for a pattern. Each ad gets a tier from its start date: new (under 30 days), kept (30 to 89) or long-runner (90 or more). The Ad Library shows no spend or sales for ordinary ads, so the board never calls anything a winner. It's for learning how ads are built. Nothing from it is copied into your own.
+
+when:
+  - You've saved dozens of competitor ads and want them organised before planning your own.
+  - You want three good examples of one kind of ad (a customer quote ad, a comparison) before you make one.
+  - You're new to a category and want a quick picture of what other brands run and keep running.
+
+you_give:
+  - The ads, each with its library ID, advertiser, start date, text and a screenshot (attach the screenshots; your AI can see pictures)
+  - What you sell, who to, and which competitors matter (recommended)
+  - Which types to fill, if not all nine (optional)
+you_get:
+  - A board table with type, advertiser, library ID, start date, tier and what to study
+  - A one-line pattern note for each buyer question
+  - A list of thin types and ads it couldn't look at
+  - A score out of 100 for how many of its own checks the board passes, with each miss named
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Open facebook.com/ads/library, pick your country, and search each competitor by name. Don't use scrapers or spy tools.
+  - For each ad you keep, copy the library ID and the "started running" date, and take a screenshot.
+  - Paste them in with a line on what you sell and who your competitors are.
+  - Read the "what to study" column, then open those ads and look at their structure, not their wording.
+
+how_it_works:
+  - title: Removes your own ads
+    text: The board is for learning from other advertisers, so anything of yours comes out first.
+  - title: Merges duplicates
+    text: An ad with several versions, or the same image with new words, becomes one card with the earliest start date.
+  - title: Looks at each ad
+    text: Files from the image or first frame, never from the search that found it. An ad it can't see is marked "not looked at".
+  - title: Files by type
+    text: Puts each ad under one of nine types. If it fits two, the biggest thing in the frame decides.
+  - title: Picks three per type
+    text: Long-runners first, then kept ads, from at least two brands, so a pattern isn't one brand's habit.
+  - title: Flags thin types
+    text: Searches a neighbouring category once if a type is thin, then records an honest gap rather than padding it.
+  - title: Scores the board
+    text: Goes through its own checks, fixes what it can, and scores checks passed out of all checks, times 100.
+
+output_shape: |
+  BOARD
+  Type | Code | Advertiser | Library ID | Started | Tier | Live? | What to study
+  <type> | <type · dress> | <name> | <id> | <date> | <tier> | <...> | <skeleton,
+                                                          eye path, proof or offer>
+
+  NOTES
+  <question>: <the pattern across its cards, and the main dress>
+
+  GAPS
+  <type>: <fewer than three, or one advertiser, and why>
+
+  NOT LOOKED AT
+  <ad>: <why it couldn't be seen>
+
+  SCORE
+  <passed> of <all> checks = <score> out of 100
+  Missed: <one line per check still missed, or none>
+
+example:
+  business: sprout
+  input: |
+    [the skill]
+
+    My business: a smaller greens gummy brand. I'm studying the category
+    leader's ads before we plan ours.
+
+    The ads: 15 live headlines from Sprout in the public Meta Ad Library,
+    with what each one pushes and how many
+    copies were live, plus the extra Kids headlines (sprout/ads.md).
+    Formats and start dates weren't copied. Headlines only; no
+    screenshots, no library IDs.
+  output: |
+    BOARD
+    (empty)  None of these ads can go on the board yet. I can't see any
+    of the images or videos, and there are no library IDs or start
+    dates. A headline alone can put an ad under the wrong type.
+
+    NOT LOOKED AT (16). Pencilled in by headline only, not counted.
+    They move to the board once you add a screenshot, ID and date.
+    What is it?
+      Look inside      #15 "Methylfolate, Not Folic Acid"
+      Product alone or Look inside
+                       #8 "Nutrition for Healthy Hair"
+    Is it for me?
+      The moment       #6 "Fix the Hot Girl Tummy"
+                       #7 "Struggling to Get Enough Fiber?"
+                       #9 "Support Muscle While You Lose Weight"
+                       #10 "The Daily Nutrition Every Runner Forgets"
+                       #13 "He Asked What Day It Was. I Handed Him a
+                       Gummy."
+                       #14 "Fiber Kids Won't Fight"
+      In use           #12 "One Step I Never Skip"
+    Why now?
+      The offer        #1 "'Sprout is too expensive': here's 61% off
+                       to prove otherwise" (15+ copies live)
+                       #2 "Don't Pay Full Price. You Literally Don't
+                       Have To. (61% off inside)"
+                       #3 "Get up to 61% OFF + 4 FREE gifts: online
+                       exclusive"
+                       #5 "We're Lowering Our Prices"
+                       #11 "Perks That Really Pile Up"
+      The offer or Checked fact
+                       #4 "Trusted by 1M+: Take 61% OFF"
+      The occasion     "The Lemon Aid Stand is open." (a limited
+                       flavour launch, Kids)
+
+    GAPS (expected, even after screenshots)
+    All 16 come from one advertiser, so no type can reach three cards
+    from two brands. Every type stays a gap until you add others.
+    No pencils at all for: Old way new way, Their words, Checked fact
+    (except possibly #4).
+
+    NOTES
+    Not written. Patterns need ads that were looked at. From the
+    pencils alone: "Why now?" and "Is it for me?" carry almost every
+    headline, and "Can I believe it?" is nearly empty.
+
+    MISSING
+    - A screenshot of each ad
+    - The library ID and "started running" date for each
+    - Ads from at least two other advertisers in the category
+
+tweaks:
+  - what: Which types
+    how: Ask for only the types you need ("Their words and Old way, new way only") to get a deeper pick in each.
+  - what: Screenshots
+    how: Attach the creative for every ad. The more it can see, the fewer get left off as "not looked at".
+  - what: What you sell
+    how: Name your category and competitors. It then knows which ads come from neighbouring categories and says so on the board.
+  - what: Rerunning it
+    how: Paste the existing board's library IDs and say "add only new ads". It also updates each card's tier.
+
+judge:
+  - None of your own ads are on the board.
+  - Every card has a library ID and start date you can check in the library.
+  - No ad appears twice, and each full type has three cards from at least two advertisers.
+  - Nothing is called a "winner". The tier is shown as a hint, with the days live.
+  - The "what to study" line points at structure (layout, eye path, how it proves or offers), not wording to copy.
+
+test:
+  - Slip two of your own ads into the pile. Neither should appear on the board.
+  - Add an ad you've only seen as text, with no screenshot. It should land on the "not looked at" list.
+  - Add three near-identical ads from one advertiser. They should merge into one card.
+  - Run it twice on the same pile. The types should match. If an ad moves, check which element is biggest in its frame.
+  - Look up three library IDs from the board yourself. The advertiser and start date should match.
+
+improve:
+  - Mark the types your market never uses, so the board doesn't chase them.
+  - Change "three per type" in step 5 to two if you want a quick look, and keep the two-advertiser rule.
+  - Write your main competitors and category into "Your work" in the skill, so you don't paste them every time.
+  - Save the notes to the competitors page of your brand file each time you rebuild the board, with the date.
+  - Pair it with a skill that finds the ad ideas competitors all miss, then a writing skill that builds your own ad from your product facts.
+
+works_best_with:
+  tools:
+    - {name: "Meta Ad Library", why: "The public source for every active ad, with its library ID and start date, browsed by hand."}
+    - {name: "Google Sheets", why: "Keeps the board and its library IDs, so reruns only add new ads."}
+    - {name: "Any good chat AI", why: "Filing ads from screenshots works in any strong chat AI that reads images."}
+  inputs:
+    - "A screenshot of each ad's whole library card, so the start date and versions are on file"
+    - "Ads from 3 to 6 advertisers, so each type can reach two brands"
+    - "One or two neighbouring categories whose buyers ask the same questions, for thin types"
+
+terms:
+  - term: Study board
+    meaning: A collection of other brands' ads saved for study, sorted so you can find examples fast. Marketers often call it a swipe board.
+  - term: Meta Ad Library
+    meaning: Meta's public site that shows the ads running across Facebook, Instagram and its other apps, with when each started.
+  - term: Tier
+    meaning: How long an ad has run, as new, kept or long-runner. A hint about what an advertiser keeps, not proof of results.

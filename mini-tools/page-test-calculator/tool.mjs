@@ -71,8 +71,8 @@ export default {
     [{ text: "If new visitors from ads go from {coldShare} to {coldShareNext} of your traffic, your conversion rate moves from {blendNow} to {blendNext}, with no change to the page." }],
   ],
   next: [
-    { slug: "know-if-you-have-enough-visitors-to-test", why: "Paste your numbers and get a plain read of them, and whether a test can give a trusted answer." },
-    { slug: "find-what-stops-visitors-buying-30-quick-checks", why: "Find what stops visitors buying, so your test tries a change worth making." },
+    { slug: "ab-test-traffic-checker", why: "Paste your numbers and get a plain read of them, and whether a test can give a trusted answer." },
+    { slug: "landing-page-30-point-checker", why: "Find what stops visitors buying, so your test tries a change worth making." },
   ],
   sources: [
     { what: "Revenue per visitor", how: "Orders × average order value ÷ visitors." },

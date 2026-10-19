@@ -1,0 +1,31 @@
+slug: empty-room-image-ad-maker
+renamed_from: make-buyers-see-themselves-in-an-empty-room
+name: "Empty room image ad maker"
+summary: "Paste your story ad. Get an empty-room photo prompt, its caption line and a score out of 100."
+category: general
+boards: [ecommerce]
+type: skill
+role: render
+job: image
+level: intermediate
+inputs:
+  - {type: ad_copy, required: true}
+  - {type: persona, required: false}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: image_prompt}
+uses: [story-ad-image-picker]
+example: native
+origin: rebuilt
+source_ids: [CES-062]
+old_name: empty room photo
+version: 2.0.0
+credits:
+  - {title: "Ogilvy on Advertising", by: "David Ogilvy", url: "https://openlibrary.org/works/OL3346506W", used: "Story appeal: a picture that makes people ask what happened"}
+  - {title: "Understanding Comics", by: "Scott McCloud", url: "https://openlibrary.org/works/OL276032W", used: "Closure: readers fill in what the frame leaves out"}
+tested:
+  on: 2026-10-19
+  business: sprout
+  model: claude-opus-5-5
+  judge: claude-fable-5-1
+  result: pass

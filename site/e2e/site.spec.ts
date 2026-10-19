@@ -15,7 +15,7 @@ test.afterEach(async ({ page }) => {
 });
 
 const cards = (page: Page) => page.getByTestId("block-card");
-const MODEL = "write-ads-people-believe"; // the block with the finished model page
+const MODEL = "fact-based-ad-copy-writer"; // the block with the finished model page
 const WORKFLOW = "turn-your-reviews-into-image-ads-buyers-believe";
 
 test("hero is the headline, the mono subhead, and three buttons (the last is How it works), over the globe", async ({ page }) => {
@@ -126,13 +126,13 @@ test("create ads: image ads and video ads sit apart, and a page links to the sam
   await page.getByTestId("job-make-video-ads").click();
   await expect(cards(page).first().locator(".type")).toHaveText("Video ad");
   // A video script page says it makes video, and links to its image twin; the twin links back.
-  await page.goto("/skills/get-watercolor-ad-script-that-sells");
+  await page.goto("/skills/watercolor-video-ad-script-writer");
   const note = page.getByTestId("format-note");
   await expect(note).toContainText("Video ad");
   await note.getByTestId("twin-link").click();
-  await expect(page).toHaveURL(/\/skills\/show-whats-inside-in-one-watercolor-image-ad$/);
+  await expect(page).toHaveURL(/\/skills\/watercolor-image-ad-maker$/);
   await expect(page.getByTestId("format-note")).toContainText("Image ad");
-  await expect(page.getByTestId("twin-link")).toHaveAttribute("href", "/skills/get-watercolor-ad-script-that-sells");
+  await expect(page.getByTestId("twin-link")).toHaveAttribute("href", "/skills/watercolor-video-ad-script-writer");
 });
 
 test("a card opens the block's own page, with the outcome, a real example and the steps", async ({ page }) => {
@@ -141,7 +141,7 @@ test("a card opens the block's own page, with the outcome, a real example and th
   await card.click();
   await expect(page).toHaveURL(new RegExp(`/prompts/${MODEL}$`));
   const bp = page.getByTestId("block-page");
-  await expect(bp.getByRole("heading", { level: 1 })).toContainText("Write ads people believe");
+  await expect(bp.getByRole("heading", { level: 1 })).toContainText("Fact-based ad copy writer");
   await expect(bp.locator(".bp-sub")).toContainText("product facts");
   await expect(bp.locator("#example .code")).toHaveCount(2);
   await expect(bp.locator("#example")).toContainText("Sprout");
@@ -212,10 +212,10 @@ test("a ready workflow opens in the builder as connected, numbered steps", async
 test("blocks can be added from the palette and auto-connect", async ({ page }) => {
   await page.goto("/#build");
   const builder = page.getByTestId("builder");
-  await builder.getByTestId("palette-search").fill("blocking your ads");
-  await builder.locator('.pal-item[data-slug="keep-facebook-from-blocking-your-ads"] .add').click();
-  await builder.getByTestId("palette-search").fill("sound like your brand");
-  await builder.locator('.pal-item[data-slug="make-every-ad-sound-like-your-brand"] .add').click();
+  await builder.getByTestId("palette-search").fill("compliance checker");
+  await builder.locator('.pal-item[data-slug="meta-ads-compliance-checker"] .add').click();
+  await builder.getByTestId("palette-search").fill("brand voice");
+  await builder.locator('.pal-item[data-slug="brand-voice-editor"] .add').click();
   await expect(builder.getByTestId("flow-node")).toHaveCount(2);
   await expect(builder.locator(".react-flow__edge")).toHaveCount(1);
 });
@@ -315,7 +315,7 @@ test("the workflow download is a complete, repeatable pack", async ({ page }, in
   expect(Buffer.compare(a.bytes, b.bytes), "same workflow, same bytes").toBe(0);
   const files = unzipSync(new Uint8Array(a.bytes));
   const names = Object.keys(files);
-  expect(names).toEqual(expect.arrayContaining(["HANDOFF.md", "workflow.json", "README.txt", "skills/stop-image-tools-redrawing-your-product-and-words/SKILL.md"]));
+  expect(names).toEqual(expect.arrayContaining(["HANDOFF.md", "workflow.json", "README.txt", "skills/product-exact-image-prompt-writer/SKILL.md"]));
   expect(names, "no about-me file was given").not.toContain("about-me.md");
   expect(names.filter((n) => n.startsWith("skills/"))).toHaveLength(5);
   const handoff = strFromU8(files["HANDOFF.md"]);
@@ -324,26 +324,26 @@ test("the workflow download is a complete, repeatable pack", async ({ page }, in
   expect(handoff).toContain("Write `MISSING: <what>`");
   expect(handoff).not.toContain("Role:");
   const wf = JSON.parse(strFromU8(files["workflow.json"]));
-  expect(wf.steps.map((s: { skill: string }) => s.skill)[0]).toBe("turn-website-into-brand-file-for-ai");
+  expect(wf.steps.map((s: { skill: string }) => s.skill)[0]).toBe("website-brand-file-builder");
 });
 
 test("a skill installs: the zip is a folder Claude can upload, and every AI has its steps", async ({ page }, info) => {
-  await page.goto("/skills/get-different-video-ads-from-same-research");
+  await page.goto("/skills/video-ad-script-type-planner");
   const bp = page.getByTestId("block-page");
   await bp.getByTestId("add-to-ai").click();
   const box = bp.getByTestId("install");
   await expect(box).toBeInViewport();
   await expect(box.getByRole("tab", { selected: true })).toHaveText("Claude");
   const [dl] = await Promise.all([page.waitForEvent("download"), box.getByTestId("install-zip").click()]);
-  expect(dl.suggestedFilename()).toBe("get-different-video-ads-from-same-research.zip");
+  expect(dl.suggestedFilename()).toBe("video-ad-script-type-planner.zip");
   const path = info.outputPath(dl.suggestedFilename());
   await dl.saveAs(path);
   const files = unzipSync(new Uint8Array(fs.readFileSync(path)));
-  const skill = strFromU8(files["get-different-video-ads-from-same-research/SKILL.md"]);
-  expect(skill).toMatch(/^---\nname: get-different-video-ads-from-same-research\ndescription: /);
-  expect(Object.keys(files)).toContain("get-different-video-ads-from-same-research/references/types.md");
+  const skill = strFromU8(files["video-ad-script-type-planner/SKILL.md"]);
+  expect(skill).toMatch(/^---\nname: video-ad-script-type-planner\ndescription: /);
+  expect(Object.keys(files)).toContain("video-ad-script-type-planner/references/types.md");
   await box.getByTestId("install-code").click();
-  await expect(box).toContainText("/get-different-video-ads-from-same-research");
+  await expect(box).toContainText("/video-ad-script-type-planner");
   await box.getByTestId("install-chatgpt").click();
   await expect(box).toContainText(/characters/);
   // The choice is remembered on the next skill.
@@ -671,7 +671,7 @@ test("anyone can ask for a skill tailored to their work, and it becomes an email
   await page.goto(`/prompts/${MODEL}`);
   await page.getByTestId("tailor-open").click();
   const form = page.getByTestId("tailor-form");
-  await expect(form.getByTestId("tailor-skill")).toHaveValue("Write ads people believe");
+  await expect(form.getByTestId("tailor-skill")).toHaveValue("Fact-based ad copy writer");
   await expect(form.getByTestId("tailor-send")).toBeDisabled();
   await form.getByRole("button", { name: "Lead generation" }).click();
   await expect(form.getByRole("button", { name: "Lead generation" })).toHaveAttribute("aria-pressed", "true");
@@ -683,7 +683,7 @@ test("anyone can ask for a skill tailored to their work, and it becomes an email
   await form.getByTestId("tailor-copy").click();
   const copied = await page.evaluate(() => navigator.clipboard.readText());
   expect(copied).toContain("To: hello@useaiblocks.com");
-  expect(copied).toContain("Subject: Tailored skill: Write ads people believe for lead generation");
+  expect(copied).toContain("Subject: Tailored skill: Fact-based ad copy writer for lead generation");
   expect(copied).toContain("My work: Lead generation");
   expect(copied).toContain("Write the ads to get sign-ups.");
   expect(copied).toContain("Email: sam@example.com");

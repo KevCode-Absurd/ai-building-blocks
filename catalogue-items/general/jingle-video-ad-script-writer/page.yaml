@@ -1,0 +1,218 @@
+new_slug: jingle-video-ad-script-writer
+name: "Jingle video ad script writer"
+summary: "Paste product facts and buyer. Get a 6 to 30 second jingle script and score out of 100."
+job: make-video-ads
+
+headline: "Jingle video ad script writer"
+subhead: Give it your product facts, buyer's moment and approved claims. It writes a rhymed jingle about what they get, picks a sound to match and lays it out bar by bar, a picture per line. You get the lyric, a music-tool brief and a score out of 100.
+
+explain: |
+  Memory research on jingles points the same way again and again. Words set to a simple tune are easier to recall, especially when the tune comes back. Rhymed lines feel truer. Faster tunes with a familiar shape tend to stick. Most song ads ignore this. They open on a long intro, change the tune every chorus, or chant the brand name instead of the reason to buy.
+
+  This skill writes the hook first: 4 to 8 syllables about what the buyer gets, sung from the first bar and repeated on the same tune. It picks the sound from the buyer's moment (a morning rush wants a faster beat than a wind-down), lays every line on a bar grid so the length is right, and puts your brand name in a short sung tag at the end. A sung claim follows the same rules as a spoken one.
+
+  It ends with a cast note: the singer's voice and who is on screen, and why. The skill that turns a song script into shots makes the music first, then the video, from there.
+
+when:
+  - Your product sells on a feeling (ease, relief, fun) and a catchy line would help people remember it.
+  - Your spoken ads explain well, but nobody remembers them a day later.
+  - You want a 6, 15 or 30 second ad for people who know the problem but haven't picked a fix.
+
+you_give:
+  - Why people buy, how much they already know, and the length (6, 15 or 30 seconds)
+  - Your buyer and the moment your product fits into, like a school run or a late shift
+  - Your main benefit, how the product is used, and any brand lines
+  - Your brand voice and whether your brand uses music in ads
+  - Your approved and banned claims, the offer and the guarantee
+you_get:
+  - Three hook drafts, the pick and why
+  - Two sound options and the pick, chosen by fit with the buyer's moment
+  - The lyric on a bar grid, with a picture for every line
+  - A sound brief for the music tool, a claims list and a cast note
+  - A score out of 100 for how many of its own checks the script passes, with any it missed
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your brand file or product facts and approved claims underneath.
+  - Say who the buyer is, the moment the product fits into, the length, and whether your brand uses music.
+  - Clap the beat and sing the hook. Check every sung claim against your claims list.
+  - Take the script and cast note to the skill that turns a song script into shots. It makes the music first, then runs the video process.
+
+how_it_works:
+  - title: Checks the fit
+    text: A song suits a feeling and a phrase that sticks. It's weak at explaining how something works, at proof and at offer terms.
+  - title: Writes the hook
+    text: Three drafts of 4 to 8 syllables about what the buyer gets, with a rhyme or repeated sound. It picks one and says why.
+  - title: Picks the sound by fit
+    text: Sets the tempo from how fast the moment is, the instruments from the product's world, and the voice from who the buyer would hum along with.
+  - title: Lays out the bars
+    text: Works out seconds per bar from the tempo, then fits the hook, verse, lift and tag to 6, 15 or 30 seconds.
+  - title: Writes the lyric
+    text: Sings the hook from bar 1 and repeats it on the same tune, puts key words on the beat, and saves the brand name for the tag.
+  - title: Checks the claims
+    text: A sung line may claim no more than a spoken one. If a fact doesn't fit the rhythm, it changes the words around it, never the fact.
+  - title: Writes the cast note
+    text: Describes the singer's voice and who is on screen (one animated lead, the cast on the tag, or the product alone), and why.
+
+output_shape: |
+  HOOK DRAFTS  1 "<...>"  2 "<...>"  3 "<...>"
+  PICK         <number>: <why>
+
+  SOUND  A <genre, tempo, voice, instruments>: <why>
+         B <...>: <why>
+         Pick: <A or B>
+
+  GRID   <BPM>, <seconds> s a bar, <bars> bars = <seconds> s
+  bars  section  lyric (syllables)        picture            on screen
+  <one row per line>
+
+  SOUND BRIEF
+  <length, BPM, key, voice, instruments, arrangement in order>
+  <lyric with [Hook] [Verse] [Lift] [Tag] tags>
+
+  CLAIMS IN THE LYRIC
+  <line>  <approved claim, brand line, or plain figure of speech>
+
+  CAST NOTE  <voice>; <who is on screen>: <why>
+  MISSING: <anything to confirm before the song is made>
+
+  SCORE  <n>/100 (<passed> of <total> checks passed)
+  Missed: <one line per check missed, or none>
+
+example:
+  business: sprout
+  input: |
+    [the skill]
+
+    Length: 30 seconds
+    Reason to buy: daily nutrition she can keep up with on busy
+    mornings
+    Buyer: the busy parent, 30 to 45, mostly mums. Buys Adults for
+    herself. Has quit powders. Knows the problem, not this fix.
+    Moment: the school-run morning, out the door by 8.
+    Their words: "So easy to grab and eat on my way to the billion
+    things I have to do as a mom." (review 15)
+    Product: Sprout greens gummies. One daily pack, torn across the
+    top, a small handful of gummies. No water, no mixing, no shaker.
+    Approved claims: "60+ ingredients, 21 vitamins & minerals, and 6g
+    fiber" in 1 pack. "Supports digestion and gut health."
+    Brand lines: "Rip. Tip. Enjoy." "Tastes like a treat, works like a
+    supplement."
+    Never say: fix, energy or immunity results, weight loss.
+    Offer: $29.99 first order with the text sign-up, renews at $49.99
+    every 4 weeks. Voice: playful, cheeky, short lines.
+  output: |
+    HOOK DRAFTS  1 "Rip it, tip it, out the door"
+                 2 "Grab it on the way"
+                 3 "One little pack and go"
+    PICK  1. It reworks the brand's "Rip. Tip." into the buyer's own
+          moment (out the door), rhymes inside itself, and is 7
+          syllables in one bar.
+
+    SOUND  A Bright indie pop, 120 BPM, warm female lead, handclaps,
+             jangly guitar: a quick morning that stays playful.
+           B Bouncy acoustic folk-pop, 112 BPM, female lead with a
+             small group on the hook, stomps: homey, a little slower.
+           Pick: A. The school run is a rush, and the voice is cheeky.
+
+    GRID  120 BPM, 2 s a bar, 15 bars = 30 s. Hook 3 times.
+    bars   section  lyric (syllables)               picture
+    1      Hook     Rip it, tip it, out the door (7) at the front door she
+                                                    tears a daily pack
+                                                    across its top; the
+                                                    pouch on the hall table
+    2               A handful of greens and nothing close: green gummy
+                    more (9)                        bears tip into her palm
+    3      Verse    Lunch box packed and the        a lunch box snaps shut,
+                    kettle's on (8)                 the kettle steams
+    4               Keys in my hand and the         she lifts keys off the
+                    morning's gone (9)              hook
+    5               That chalky shake? Still in the close: a shaker of
+                    sink (8)                        green sludge in the sink
+    6               No time to scrub, no time to    she glances at it and
+                    think (8)                       walks past
+    7-8    Hook     (same two lines, same tune)     she eats the gummies,
+                                                    bag on her shoulder
+    9-10   Lift     Twenty-one vitamins and         the pouch open at its
+                    minerals (10, two bars)         resealable top, one pack
+                                                    beside it
+    11-12           Tastes like a treat, works like she smiles and pulls the
+                    a supplement (10, two bars)     door shut behind her
+    13-14  Hook     (same two lines, same tune)     she walks down the path
+    15     Tag      Rip. Tip. Sprout. (3 notes)     the pouch front on
+           On screen (bar 15): $29.99 first order with SMS sign-up.
+           Renews at $49.99 every 4 weeks.
+
+    SOUND BRIEF
+    30 seconds, 120 BPM, 4/4, C major. Warm, bright female lead; two
+    backing voices join the last hook and the tag. Handclaps, jangly
+    electric guitar, light bass, simple drums. Start on the sung hook
+    at 0 seconds, no intro. Lighter drums in the verse, full band on
+    the second hook, claps and voice only in the lift, full band on
+    the last hook. End on the sung tag with a clean stop at 30 s.
+    [Hook] [Verse] [Hook] [Lift] [Hook] [Tag], lyric as above.
+
+    CLAIMS IN THE LYRIC
+    Bars 9-10   "21 vitamins & minerals", approved, sung in words. It
+                takes two bars because the fact can't be shortened.
+    Bars 11-12  brand line, sung exactly. The lift doesn't rhyme: both
+                lines are fixed wording.
+    Bar 2       "nothing more": figure of speech for "that's all it
+                takes", not a result
+    Bar 5       "chalky" names the old way, no rival named
+    Not sung: digestion, energy, any time to results. No child
+    appears; the lunch box carries the school run.
+
+    CAST NOTE  Voice: warm, bright female lead, unseen. On screen: one
+    animated adult woman, the busy parent, in every shot. The song is
+    her morning, so one lead the buyer sees herself in carries it.
+    MISSING: whether Sprout uses music in ads. Confirm before the
+    song is made.
+
+tweaks:
+  - what: Length
+    how: 6 seconds is the hook and the tag. 15 seconds adds a two-line verse and plays the hook twice. 30 seconds adds a lift and plays the hook three times.
+  - what: The buyer's moment
+    how: The tempo follows it. A morning rush or workout lands around 112 to 128 BPM, a wind-down around 70 to 90. Name the moment exactly and the sound gets closer.
+  - what: The singer
+    how: An unseen singer is the default and easiest to make. Ask for "lead sings on long notes" to show an animated singer only on held notes, or "crowd on the tag" for a group finish.
+  - what: Brand lines
+    how: Paste lines your brand already uses. The skill sings them exactly, and they often make the best hook or tag.
+
+judge:
+  - Sing it once, then try to sing the hook back without looking. If you can't, the hook is too long or too twisty.
+  - The hook is about what the customer gets, and the brand name sits only in the tag.
+  - The hook comes back on the same tune every time.
+  - Every number or health result in the lyric is in your approved claims, word for word.
+  - The pack is on screen within the first 5 seconds.
+
+test:
+  - Clap the beat and speak each line. Any key word that lands between claps needs a rewrite.
+  - Count the bars and multiply by the seconds per bar. A 30-second song should come to 28 to 32 seconds.
+  - Circle every number in the lyric and find it in your claims list. One that isn't there means the claims step was skipped.
+  - Play a rough version to someone who hasn't seen the brief and ask what the product does for them. If they only remember the brand name, the hook isn't about the customer.
+
+improve:
+  - Add your brand lines to "What you need" in the skill file, marked as sung exactly, so every song can use them.
+  - Fix your tag (the brand name and its 2 to 4 notes) in the skill file, and use the same one in every song ad.
+  - Write your answer to "does the brand use music in ads?" into the skill file, so it stops asking.
+  - Save the hook that wins to your brand file, and test a new verse against it next time.
+  - Pair it with the skill that turns a song script into shots, which makes the music first, then check music rights before you pay to run it.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Claude, ChatGPT and Gemini all follow this skill well, so use the one you already have."}
+    - {name: "Suno", why: "Has a style box and a lyrics box that reads section tags like [Verse]. Songs you download on a paid plan can run in ads."}
+    - {name: "Eleven Music", why: "Can build a song from a section-by-section plan, and its paid plans are cleared for commercial use."}
+  inputs:
+    - "How your brand name is said, with the stressed part marked, so the tag sings it right"
+    - "Two sounds your buyers like, described by tempo, voice and instruments (never by artist)"
+    - "Any jingle or sound the brand already owns, so the tag can reuse it"
+
+terms:
+  - term: Hook
+    meaning: The short sung line people remember. Here it says what the buyer gets.
+  - term: Tag
+    meaning: A short sung phrase with the brand name, at the end, the same in every ad.
+  - term: BPM
+    meaning: Beats per minute, the speed of the song. At 120 BPM, one bar of four beats lasts 2 seconds.

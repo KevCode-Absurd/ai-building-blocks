@@ -1,0 +1,216 @@
+new_slug: untried-ad-idea-finder
+name: "Untried ad idea finder"
+summary: "Paste your past ads and brand file. Get five untried ad ideas and a score out of 100."
+job: plan-ad-tests
+
+headline: "Untried ad idea finder"
+subhead: Give it your past ads and your brand file. It maps every ad through five lenses, ranks the five biggest gaps and writes one idea per gap, each a test. You get a gap map, five ideas and a score out of 100.
+
+explain: |
+  When ads stop working, most teams make more of the same: a new colour, a new headline, the same opening shot. The account fills up with near-copies while whole areas stay empty. A buying moment nobody speaks to. A reason to buy nobody leads with. Proof you hold that no ad has used.
+
+  This skill takes stock first. It places every past ad through five lenses: the buying moment, the value it leads with, how much the buyer knows, how it opens, and its format and product. It lists the proof you hold, such as a demo, a review or a sourced number. Then it ranks the five biggest gaps by reach, proof on hand and cost. Each idea fills one gap and names what you'd learn if it wins. A five-link check covers who it's for, the gain, the proof, the risk and the next step.
+
+when:
+  - Your ads have gone stale and every new one looks like the last one.
+  - You're planning next month's tests and want each one to answer a different question.
+  - You only have an ad library page or your own memory of what you ran, and want a clear view anyway.
+
+you_give:
+  - What your ads have done, from an account export, an ad library page or your own list
+  - Your brand file, with products, prices, claims, offers and the proof you hold
+  - Your buyers and their doubts (optional, or it uses the ones in your brand file)
+  - Reviews or support tickets (optional)
+  - Competitor ads or notes, and who can appear on camera (optional)
+you_get:
+  - A record of every past ad, with each result graded measured, reported or seen running
+  - Five lenses and a list of your proof, showing what's covered, thin or open
+  - The five biggest gaps, ranked, plus the proof worth collecting
+  - Five ad ideas, each with its test question, a five-link check, headlines and an opening
+  - A score out of 100 for the map, with one line for each check it missed
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your past ads. An export with spend and purchases is best, but a list of what you ran works too.
+  - Paste your brand file underneath, with your approved claims, current offers and any studies, tests or guarantees.
+  - Add reviews if you have them. They turn guessed buying moments into real ones.
+  - Read the test questions first. Make the ideas whose answers would change what you do next.
+
+how_it_works:
+  - title: Grades its evidence
+    text: Says whether it works from measured results, the founder's account or an ad library, and claims only what that evidence supports.
+  - title: Builds the record
+    text: One row per past ad with its moment, value, buyer knowledge, opening, format, product, the proof it used and its graded result.
+  - title: Lists your proof
+    text: Checks six kinds, from showing it work to your guarantee, and notes which ones past ads used. Proof you don't hold can't carry an idea.
+  - title: Looks through five lenses
+    text: Buying moments, value, what the buyer knows, the opening, and format and product. A grid of moments against buyer knowledge shows the empty cells.
+  - title: Ranks five gaps
+    text: Scores each gap by reach, proof on hand and cost, and breaks ties by how much the answer would change your next move. Gaps with no real proof go on a list to collect.
+  - title: Writes five ideas
+    text: One per gap, each with "If this wins, we learn ___". Two ideas that answer the same question count as one.
+  - title: Checks five links
+    text: Who, gain, proof, risk and step, each marked strong, thin or missing. It fixes the weakest link, then sets the final order.
+
+output_shape: |
+  EVIDENCE: <measured / reported / observed>, <what it is>
+
+  RECORD
+  <ad | moment | value | knows | opening | format | product | proof | result, grade>
+  Patterns: <two or three, or "not measured">
+
+  PROOF ON HAND
+  <kind>: <what's on file, source> or none.   Past ads leaned on: <kinds>
+
+  LENSES
+  1 Moments  2 Value  3 Knowledge (with grid)  4 Openings  5 Form
+  <place>: covered / thin / open   (<quote, source> or inferred)
+
+  GAPS (ranked)
+  <n> <gap> | reach | proof on hand | cost | known from <results / running>
+  Proof worth collecting: <gaps with no real proof>
+
+  IDEA A: <name> | fills gap <n> | <proof kind, source>
+  Test: if this wins, we learn <...>
+  Lenses: <moment / value / knows / opening / format / product>
+  Doubt, belief, promise limit: <...>
+  Headlines: <three, ten words or fewer>   Opening: <...>
+  Offer and step: <real offer>, <action>, <page>
+  Links: who / gain / proof / risk / step (strong, thin, missing). Label: <guess / measured>
+  (ideas B to E in the same layout)
+
+  SCORE  <n>/100 (<checks passed> of 8 checks)
+  Missed: <one line per check still missed>
+
+example:
+  business: sprout
+  input: |
+    [the skill]
+
+    Evidence: the brand's ad library page (sprout/ads.md: 15 live
+    headlines, copies live, the mix of the 40 newest ads) and
+    practice results for 9 ads (sprout/ad-results.csv).
+    Brand file: sprout/brand.md and sprout/product-page.md.
+    Buyers: the four in the brand file. Reviews: sprout/reviews.md.
+    Competitors: the five described in the brand file.
+    People on camera: a paid former pro athlete only. No founder
+    story on file. Formats: any.
+  output: |
+    EVIDENCE: observed (ad library, no results) plus practice numbers
+    for 9 ads. "Practice" means made-up numbers, not real results.
+
+    RECORD (6 of 15 rows; cost per sale, account average $34.51)
+    #1 Too expensive  price doubt | saves money | gain | P1 won days
+       1-21 ($26.79), lost days 22-42 ($76.92)
+    #2 Don't pay full price | saves money | news | P2 lost ($50.00)
+    #4 Trusted by 1M+ | saves money | proof first, a count | S1 lost ($42.11)
+    #6 Hot Girl Tummy  bloated | less worry | gain | T1 won ($21.21)
+    #12 One Step I Never Skip  routine | less effort | H1 won ($29.55)
+    #10 Runner | life | curiosity | too little to tell (10 sales)
+    Patterns (practice): ads that name a moment cost least per sale.
+    The top money-off ad wore down in its second 21 days.
+
+    PROOF ON HAND
+    Showing it work: tear and tip (brand rules). Customer's words: 20
+    reviews, verified status not on file. Number: the 2025 study, the
+    label. Side by side: about $79 a month powder vs $49.99. Why it's
+    made this way: thin. Safe yes: thin, 30 days, first order only.
+    Past ads leaned on: numbers only. Never the study or a quote.
+
+    LENSES
+    1 Moments: rinsing the shaker open (R3, R6); a shelf of bottles
+      open (R5); school run, for herself open (R15); scared of the
+      stomach open (brand file); bloated covered (#6).
+    2 Value: saves money led 19 of 40 newest. "I stick with it" never
+      led (R1, R2). Bigger than me never, nothing on file to back it.
+    3 Knowledge: knows the kinds of fix thin; no adult ad names
+      powders. Grid: shaker, shelf and stomach are empty at that level.
+    4 Openings: proof first thin (one count). Expert: needs one.
+    5 Form: no ad for Buy 2 Save $5, Sugar-Free or 84 packs.
+
+    GAPS (ranked)
+    1 Powder quitters | about 40% | side by side, R3 | low | running
+    2 Study as opening | anyone comparing | the study | low | running
+    3 Scared of the stomach | about 25% | R8 | low | results (T1)
+    4 The parent, for herself | about 25% | demo, R15 | low | running
+    5 One pack, not a shelf | inferred | R5, label | low | running
+    Tie: 3 above 4, since its answer decides whether "Fix" can go.
+    Proof worth collecting: a clear cancel path (R17, R20), a maker's
+    story, verified-buyer status.
+
+    IDEA A: "The tub in the cupboard" | gap 1 | side by side, R3
+    Test: if this wins, we learn powder quitters answer a switch story
+      better than money-off ads.
+    Lenses: rinsing the shaker / less effort / knows the kinds of fix
+      / curiosity / image 4:5 / Original, 28 packs
+    Doubt: "A gummy can't hold enough to replace my powder." (brand
+      file). Belief: 60+ ingredients, 21 vitamins and minerals, 6 g
+      fiber. Promise limit: never "replaces your powder".
+    Headlines: "Your greens powder is still in the cupboard" / "Same
+      daily greens. No shaker to wash." / "60+ ingredients. Tear, tip,
+      done."
+    Opening: tub and shaker vs pouch and torn pack. Rows: mix / tear;
+      about $79 a month / $49.99 every 4 weeks; 90-day guarantee / 30
+      days, first order (the row the powder wins).
+    Offer: $29.99 first box with text sign-up. Shop now, product page.
+    Links: who strong (picture) / gain strong / proof strong / risk
+      thin (guarantee row) / step strong. Label: guess.
+    MISSING: the powder's current price; recheck $79 before launch.
+    (cut for length: the full run also had all 15 record rows, ideas B
+    to E with their links, and the note on what to make first)
+
+tweaks:
+  - what: The evidence you give
+    how: An export with spend and purchases lets it say "tested and lost", and lets ideas be labelled "measured". A library page or your own list only lets it say "ran" or "never ran".
+  - what: Your proof
+    how: Paste your studies, test reports, guarantee terms and what you can film. Gaps with no proof go to "proof worth collecting" instead of becoming ideas.
+  - what: Reviews
+    how: Paste 20 or more and the moments lens fills with real situations instead of "inferred" ones.
+  - what: Allowed formats
+    how: Add "image ads only" and it judges form inside image formats, so it won't fill the list with video gaps you can't make.
+  - what: People and rights
+    how: Say who can appear on camera. Ideas that need a person you don't have get marked "needs" instead of recommended.
+
+judge:
+  - The first line grades the evidence the map rests on.
+  - Nothing is called a winner without numbers and dates. "Still running" isn't treated as a win.
+  - Each idea fills a different gap and has its own test question. No two ask the same thing.
+  - Every proof named is in what you gave it. Check one review number against your file.
+  - Who it's for and what they gain show in the first second of every idea.
+  - The ideas use only your claims, prices and offers, and a side by side shows a row where the other option wins.
+
+test:
+  - Think of a gap you already know about, such as a buyer you've never spoken to or a product with no ads. Check it shows up in the lenses or the ranked gaps.
+  - Run it twice on the same list. The top gaps should mostly match, even if the ideas differ.
+  - Read each test question aloud. If you can't say what you'd do differently after a win, ask it to replace that idea.
+  - Read "proof worth collecting". On a thin brand file it should list something. If it lists nothing, it's guessing.
+
+improve:
+  - Add values your buyers name often to lens 2 in the skill file, in their own words, so the map speaks your market's language.
+  - Write your own rule for "tested" into step 1 (for example "spend of at least three times our target cost per sale"), so results are judged your way.
+  - Add your own proof kinds to step 3 if you hold one it doesn't list, such as a press review.
+  - After each test, write the answer to its test question in your brand file, and paste the gap map back next month so filled gaps drop off.
+  - Pair it with a skill that turns a chosen idea into a full brief and versions a designer can build.
+
+works_best_with:
+  tools:
+    - {name: "Meta Ads Manager", why: "An export by ad gives the 'measured' grade, with spend and results for each ad over the dates you pick."}
+    - {name: "Meta Ad Library", why: "Shows the ads your page runs now, with start dates, when you have no export to work from."}
+    - {name: "Google Sheets", why: "Keeps one row per past ad, so each lens and the moments grid are filters you can check."}
+  inputs:
+    - "Notes on ads you paused and why, so the record keeps the losers too"
+    - "Answers from new buyers to 'what made you buy?', so moments come from buyers rather than guesses"
+    - "A list of what you can film or photograph now (people, places, props), so every idea can be made"
+    - "Your last test plan and what it found, so no test question is asked twice"
+
+terms:
+  - term: Buying moment
+    meaning: The situation that sends someone looking for a product like yours.
+  - term: Ad library
+    meaning: A public page where an ad platform shows the ads a brand runs now. It shows the ads, not the results.
+  - term: Buyer knowledge level
+    meaning: How much the buyer already knows about the problem and about you, from "doesn't see the problem" to "ready to buy".
+  - term: Proof kind
+    meaning: What makes the idea believable, such as a demo, a customer's words, a sourced number or your guarantee.
+  - term: Five links
+    meaning: Who it's for, what they gain, the proof, the risk removed and the next step. An ad is as strong as its weakest link.

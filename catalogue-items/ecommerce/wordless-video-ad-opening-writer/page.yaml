@@ -1,0 +1,201 @@
+new_slug: wordless-video-ad-opening-writer
+name: "Wordless video ad opening writer"
+summary: "Attach product photos. Get 2 or 3 wordless openings, clip prompts and a score out of 100."
+job: make-video-ads
+
+headline: "Wordless video ad opening writer"
+subhead: Give it your product photos, how it moves and the ad it will open. It plans 2 or 3 wordless openings, each a motion with a clear finish like a fill, click or peel. You get product sheets, start and end frames, clip prompts and a score out of 100.
+
+explain: |
+  The first seconds of an ad decide whether anyone sees the rest. A motion with a finish holds the eye: a glass filling to its line, a seal peeling off in one piece, a lid clicking shut. People wait for the end. A product slowly turning on a stand doesn't do this, because nothing finishes.
+
+  This skill picks motions from the way your product really opens, pours or closes, never one made up, and gives each opening a different finish. Each one starts with the motion already under way, lands its finish in the last third, and holds still for the final half second. With no person in shot, your product is the avatar: you approve a product card, then a sheet from your photos and a set that matches your ad's first frame. Then it storyboards a start and an end frame for each opening, so the join into your ad doesn't jump, and writes the clip prompts with "real speed" once and the sound named.
+
+when:
+  - Your ad holds people once they're in, but too many scroll past the first second.
+  - Your product has a satisfying moment (a pour, a scoop, a click, a peel) that you've never shown up front.
+  - You want to test new openings on an ad you already run, without filming a new ad.
+
+you_give:
+  - Your product photos by what they show (pack front, out of the pack, in hand, close-up of the surface)
+  - How it opens, pours or is used, its real motions and sounds, and what it's made of
+  - The ad it goes in front of (a still of its first frame, its first line, place and light)
+  - Your brand's places, light, on-screen text style and what never to show (optional)
+  - Your tool's shortest clip, and whether it takes a start and end frame (optional)
+you_get:
+  - A line-up of 2 or 3 openings, each with a different finish and a reason someone would wait
+  - A product card, product and set sheets, and lock lines that spell out how the material moves
+  - A start frame, an end frame and a shot card for each opening you approve
+  - A clip prompt for each, a suggested overlay (or none) and a delivery list
+  - A score out of 100 for how many of its own checks the openings pass, with any they missed
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Attach your product photos and describe exactly how it opens and is used, in your brand's words.
+  - Attach a still of the first frame of the ad it goes in front of.
+  - Approve the line-up, the product card, the sheets and the storyboard, in that order.
+  - Make one clip, check it, then the rest. Test each opening on the same ad as separate ads.
+
+how_it_works:
+  - title: Picks by finish
+    text: Level, fit, release, smooth or order, taken from how your product really moves. A motion nobody described is marked inferred.
+  - title: Shapes it in thirds
+    text: The motion is already part done in frame 1, the finish lands in the last third, and the final half second holds still.
+  - title: Makes the product the avatar
+    text: A product card for your yes, then a sheet of every view and state, a set that matches your ad, and a line on how the material moves.
+  - title: Storyboards two frames each
+    text: A start frame with the motion under way and an end frame with the finish done, so a tool that takes both makes the motion between.
+  - title: Keeps real speed
+    text: Writes "real speed" once, never slow motion or time-lapse, uses plain verbs and names the sound.
+  - title: Checks one clip first
+    text: Frame 1 moving, the finish late, nothing new after it, a still last half second, and only the motion's own sound.
+
+output_shape: |
+  STAGE 0  LINE-UP (approve one or more rows)
+  <n> Focus: <..>  Finish: <kind>: <motion>. Done = <..>
+    Camera: <..>  Sound: <..>  Last frame: <..>
+    Why they'd wait: <one sentence>
+  Inferred: <motions to confirm>
+  STAGE 1  PRODUCT CARD (approval 1)  <variant, photos by job, never changes>
+  STAGE 2  REFERENCE IMAGES  1-4 <prompt>  Picked: <n per row>
+  STAGE 3  SHEETS (approval 2)
+  Product: <views, label words, states>  Set: <the ad's place and light>
+  LOCK LINES  <product> <set> <material>
+  STAGE 4  STORYBOARD (approval 3)
+  START FRAME (row <n>)  <motion part done>
+  END FRAME (row <n>)  <finished, still, matching the ad's first frame>
+  SHOT CARD  <camera, timed motion, finish, hold, SFX, ambient>
+  STAGE 5  CLIP PROMPT (row <n>)
+  <aspect>, <seconds>, real speed. <timed motion>. No words, no one speaking.
+  OVERLAY  <1 to 4 words, or none>   DELIVER  <raw clip, overlay copy, end frame>
+  MISSING: <..>
+
+  SCORE  <n>/100 (<passed> of <total> checks passed)
+  Missed: <one line per check missed, or none>
+
+example:
+  business: sprout
+  input: |
+    [the skill]
+
+    Product: Sprout greens gummies. Photos attached: pouch front, one
+    daily pack, gummies in a palm, close-up of the gummies. Pouch:
+    glossy deep green foil, big yellow wordmark. Gummies: small opaque
+    deep-green bears, soft matte.
+    How it's used: tear one daily pack, tip the small handful of
+    gummies into your hand, eat. No water, no shaker.
+    Brand handling notes: "The daily pack is torn straight across its
+    top edge. Never the side, bottom or a corner." "Gummies pour out
+    of the torn top into a palm or bowl." "The big pouch opens only at
+    its resealable top. It is never shown torn."
+    Real motions and sounds: not written down yet.
+    Ad it goes before: "Powder tub". First frame (still attached): a
+    man at a kitchen counter, morning window light from the left,
+    holding a half-used powder tub.
+    Tool: 4-second clips, takes a start and an end frame.
+  output: |
+    STAGE 0  LINE-UP
+    1 Focus: the gummies, out of the pack
+      Finish: level: gummies pour from the torn top of a daily pack
+      into an open palm. Done = the last gummy lands, the pack empty.
+      Camera: overhead, locked. Sound: a soft patter, a faint crinkle.
+      Last frame: a palm of green bears, the empty pack, the pouch at
+      the edge. Why they'd wait: a tipped pack wants its last gummy.
+    2 Focus: the daily pack
+      Finish: release: the pack torn straight across its top edge in
+      one pull. Done = the strip comes away whole. Camera: locked,
+      close, at counter height. Why they'd wait: a half tear wants
+      finishing.
+    Inferred: both motions come from "tear, tip, eat" and the
+    handling notes.  [row 1 approved]
+
+    STAGE 1  PRODUCT CARD (approval 1)
+    Adult greens gummies. Photos: pouch front, daily pack, gummies in
+    a palm, gummy close-up. Never changes: the pack tears straight
+    across its top edge only; the pouch opens only at its resealable
+    top; gummies are small opaque deep-green bears.  [approved]
+
+    STAGE 2  REFERENCE IMAGES
+    1-3 the gummies tipping from a torn daily pack, from the pack and
+    close-up photos, morning window light from the left. Picked: 2.
+
+    STAGE 3  SHEETS (approval 2)
+    Product: pouch front and label as photographed; daily pack sealed,
+    torn across the top, empty. Side and top views: MISSING.
+    Set: the ad's kitchen counter, overhead, window light from the left.
+    LOCK LINES  Material: small soft solids tumble and stop. Count: not
+    on file, so none given.  [approved]
+
+    STAGE 4  STORYBOARD (approval 3)
+    START FRAME (row 1)  Overhead on the counter. A daily pack torn
+    straight across its top edge, already tipped over an open adult
+    palm, the first gummies falling; the pouch at the top edge, label
+    clear. Top seventh and bottom third kept plain.
+    END FRAME (row 1)  Same counter, light and angle. A small heap of
+    green bears in the palm, still; the empty pack above it.
+    SHOT CARD  Locked overhead. 0-2.5 s gummies tumble and stop; 2.5-3.5
+    s the last one drops; 3.5-4 s nothing moves. SFX: a soft patter,
+    a faint foil crinkle. Ambient noise: a quiet kitchen.  [approved]
+
+    STAGE 5  CLIP PROMPT (row 1)
+    9:16, 4 seconds, real speed. Camera: overhead, locked. The daily
+    pack is torn straight across its top edge, already tipped. Small
+    green gummy bears tumble from the torn top into the palm and stop;
+    the last gummy drops at 3.5 s; then nothing moves. Small soft
+    solids tumble and stop. SFX: a soft patter. Ambient noise: a quiet
+    kitchen in the morning. No music. No words, no one speaking.
+    OVERLAY  Suggest none, or "Wait for it" below the top safe margin.
+    DELIVER  raw clip, the overlay copy, the end frame, one line.
+    MISSING: how many gummies are in one pack; Sprout's real motions
+    and sounds, written down.
+
+tweaks:
+  - what: The finish
+    how: Choose level (a pour that settles), fit (a click, a cap on its thread), release (a seal off in one piece), smooth (a clean wipe) or order (a sort, old things swept aside).
+  - what: What's in focus
+    how: The product out of its pack, something it's made of, or the old things it replaces. A sealed pack turning on a stand is a pack shot, not an opening.
+  - what: The camera
+    how: Locked by default. Overhead suits fills, sorts and spreads. A slow push in must stop when the motion ends.
+  - what: Clip length
+    how: 4 seconds suits most motions; ask for 6 if the motion needs it. The finish is kept in doubt until late either way.
+
+judge:
+  - The run stopped for your yes on the line-up, the product card, the sheets and the storyboard.
+  - The first frame already shows the motion part done, at thumbnail size.
+  - The finish lands in the last third, and nothing new happens after it.
+  - The end frame is still and sits next to your ad's first frame without a jump in place or light.
+  - The prompt says "real speed" once, with no slow-motion, time-lapse or "explode" style words.
+  - No words in the picture and nobody talking.
+
+test:
+  - Give it a product with no out-of-pack photo. It should refuse any opening that shows the product out of its pack and say MISSING, not guess what's inside.
+  - Search each clip prompt for "slow", "time-lapse", "explode" or a frame rate. Any of these changes how the tool plays it back.
+  - Make one clip and scrub to the last half second. Nothing should move; if it does, end the motion earlier in the prompt and remake it.
+  - Put the end frame next to your ad's first frame. If the place or light jumps, change the set sheet before making the batch.
+
+improve:
+  - Write your product's real motions and sounds into the "Product" line of the skill file once (how it opens, pours, seals), so every product card starts from them.
+  - Copy your brand's handling rules there word for word, so every clip prompt carries them.
+  - Save your approved product sheet in your brand file, so the next batch starts at the storyboard.
+  - Save which finish won to your brand file, and test a new focus with the same finish next time.
+  - For a talking opening instead, pair it with the skill that makes talking openings.
+
+works_best_with:
+  tools:
+    - {name: "Veo", why: "Makes the motion between a start frame and an end frame you give it, with matching sound."}
+    - {name: "Kling", why: "Starts each clip from the start frame you choose, which helps when testing several openings."}
+    - {name: "Nano Banana", why: "Makes the product sheet and the start and end frames from your photos with real-looking light."}
+  inputs:
+    - "A still of your ad's first frame, so the end frame can match its place and light exactly"
+    - "A phone clip of the product being opened or poured, so the motion and its timing come from real life"
+    - "The number of pieces in one serving, so counts in the prompt are right"
+
+terms:
+  - term: Opening (hook)
+    meaning: The first few seconds of an ad, whose only job is to keep the right person watching.
+  - term: Product card
+    meaning: A fixed description of the product (variant, photos, how it opens, what never changes), used when no person is on screen.
+  - term: Start and end frame
+    meaning: Two approved stills. Some video tools make the motion between them, which keeps the finish where you want it.
+  - term: Real speed
+    meaning: The motion plays at normal speed. Words like "slow pour" make video tools play it back slowly.

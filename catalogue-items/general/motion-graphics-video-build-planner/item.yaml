@@ -1,0 +1,33 @@
+slug: motion-graphics-video-build-planner
+renamed_from: turn-motion-graphics-script-into-ready-video-shots
+name: "Motion graphics video build planner"
+summary: "Paste your graphic script and attach cutouts. Get an exact build plan and a score out of 100."
+category: general
+boards: [ecommerce]
+type: skill
+role: render
+job: video
+level: advanced
+inputs:
+  - {type: script, required: true}
+  - {type: product_data, required: true}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: image_prompt}
+  - {type: video_prompt}
+uses: [motion-graphics-video-ad-script-writer]
+example: motion-graphics
+origin: rebuilt
+source_ids: [CES-051]
+version: 2.1.0
+credits:
+  - {title: "Executing UX Animations: Duration and Motion Characteristics", by: "Page Laubheimer, Nielsen Norman Group", url: "https://www.nngroup.com/articles/animation-duration/", used: "Ease out to enter, ease in to leave, moves under half a second, a timeline spec per element"}
+  - {title: "Prompting videos with coding agents", by: "Remotion", url: "https://www.remotion.dev/docs/ai/claude-code", used: "Building the ad in code with Claude Code"}
+  - {title: "Meta Ads Safe Zones: A Guide to the 2026 Unified Creative Updates", by: "Dovile Miseviciute, Billo", url: "https://billo.app/blog/meta-ads-safe-zones", used: "The safe area of a 9:16 canvas"}
+  - {title: "Storyboard", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Storyboard", used: "One frame per shot with framing, camera, movement, dialogue and timing, approved before production"}
+tested:
+  on: 2026-10-19
+  business: sprout
+  model: claude-opus-5-5
+  judge: claude-fable-5-1
+  result: pass

@@ -126,7 +126,7 @@ export default {
   ],
   next: [
     { slug: "know-which-ads-to-make-next", why: "Turn the number of ads into a list of what to make next." },
-    { slug: "get-three-ad-ideas-and-nine-versions", why: "Get three ad ideas, each in three versions, to fill the plan." },
+    { slug: "ad-test-brief-writer", why: "Get three ad ideas, each in three versions, to fill the plan." },
   ],
   sources: [
     { what: "New ads a month", how: "Ad spend ÷ what one ad spends over its life, rounded up." },

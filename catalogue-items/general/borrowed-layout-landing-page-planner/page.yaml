@@ -1,0 +1,194 @@
+new_slug: borrowed-layout-landing-page-planner
+name: "Borrowed-layout landing page planner"
+summary: "Attach a page screenshot and facts. Get its layout in your words and a score out of 100."
+job: write-landing-page
+
+headline: "Borrowed-layout landing page planner"
+subhead: Attach a screenshot of a page whose structure you like, and paste your brand facts. It maps the page section by section and fills each slot from your facts or removes it. You get a layout map, your copy for every slot and a score out of 100.
+
+explain: |
+  You've seen a page that just works, and you want yours to feel the same. The risky way is to copy it and change the words, which leaves their claims, their star rating, their countdown timer and sometimes their photos on your page.
+
+  This skill borrows only the structure. It reads the screenshot top to bottom and logs every section: its order, how much of the page it takes up, how many columns, where the image sits and what kind of block it is. Then it builds a slot map in four groups: people, numbers, badges, and pressure and price. Every slot that states a fact, from a review to a countdown timer, is filled from your own facts or removed. Sections that suit a different kind of product are changed or cut. Your copy is written to about the same length so the layout still holds, and nothing from the reference ships.
+
+when:
+  - You've found a competitor's or another brand's page with a structure you'd like to follow.
+  - You're briefing a designer and want a clear section-by-section plan, not "make it like this".
+  - You want to test a new page layout without copying anyone's content.
+
+you_give:
+  - A screenshot of the reference page, desktop and phone if you have both (attach it; your AI can see pictures)
+  - Your brand facts, such as colours, fonts, voice, product, prices, offers, guarantee, delivery, real reviews and photos
+  - The ad that will send people to the page (optional)
+  - Whether your product is bought again or bought once (optional)
+you_get:
+  - A layout map of every section, marked keep, change or remove
+  - A short list of the layout rules (width, spacing, corners, buttons, type feel)
+  - A slot map with your copy for each slot, or MISSING
+  - A list of what you still need to supply, and an optional plain HTML skeleton
+  - A score out of 100 for how many of its own checks the plan passes, with each miss named
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Attach the screenshot. Use a page you own or one you're allowed to study.
+  - Paste your brand facts, real reviews with sources, your rating if you have one, and the list of photos you have.
+  - Paste the ad that will send people to the page, so the first screen carries on from it.
+  - Read the "removed" rows in the slot map. Those are the things you'd need real proof for before adding them back.
+
+how_it_works:
+  - title: Reads the image first
+    text: Logs each section's order, share of page height, columns, image side, background and type of block, before designing anything.
+  - title: Records the system, not the content
+    text: Notes width, spacing, corner style, button shape and type feel as roles. It never records the reference's wording.
+  - title: Decides what may be borrowed
+    text: Order, grid, proportions and block types. Never their words, images, logo, reviews, scores, press logos or product.
+  - title: Fixes the page's job
+    text: Pins the ad, buyer, reason to buy and offer, so the first screen carries on from the ad.
+  - title: Checks fit to your product
+    text: A subscribe box or a day 7, 30, 90 timeline suits something bought again. A size guide and warranty suit something bought once. Each section is marked keep, change or remove.
+  - title: Builds the slot map
+    text: Sorts fact slots into people, numbers, badges, and pressure and price. Each is filled from your facts or removed. A timer stays only with a real deadline.
+  - title: Writes your copy to fit
+    text: Writes each kept slot at about the reference's length, from your own reasons, and puts a labelled box where a photo is missing.
+  - title: Scores the plan
+    text: Goes through its own checks, such as no sentence from the reference and no rating you don't hold, fixes what it can, and scores checks passed out of all checks, times 100.
+
+output_shape: |
+  LAYOUT MAP
+  # | Section | Height | Columns | Background | Block type | Keep / change / remove
+
+  LAYOUT RULES
+  Width: <...>  Spacing: <...>  Corners: <...>  Buttons: <...>  Type feel: <...>
+
+  SLOT MAP
+  Slot | Filled from | Your text, or MISSING
+  <reviews>  | <real reviews, source> | "<quote>" (<source>) | removed
+  <rating>   | <your stated figure>    | <...> | removed
+  <timer>    | <real deadline>        | removed
+
+  NOT SOURCED
+  <missing photos, removed fact slots, colour roles, logo, contact details>
+
+  SKELETON (optional)
+  <one HTML file, your colours as variables, [INSERT: <image>] slots>
+
+  SCORE
+  <passed> of <all> checks = <score> out of 100
+  Missed: <one line per check still missed, or none>
+
+example:
+  business: sprout
+  input: |
+    [the skill]
+
+    Reference: our own adult product page, as text top to bottom
+    (sprout/product-page.md). No screenshot, so no heights or columns.
+
+    Build: a landing page for Sprout Kids on the same structure.
+
+    Kids facts (sprout/brand.md): pouch of 28 packs, 1 pack = 15 g,
+    6 gummies, ages 2 to 13, Strawberry Burst, yellow pouch. One-time
+    $53.32. First order "starts at" $24.99. Renewal price not clear.
+    Methylfolate, not folic acid (from our Kids ads).
+    Guarantee: 30 days, first order only. Ships within 24 hours.
+    Review: "I have tried all of the 'green' options for the kids and this
+    is the only one they love eating. They think it's a treat." (R16)
+    Ad: "Fiber Kids Won't Fight".
+    Bought again.
+  output: |
+    LAYOUT MAP  (from text only: height and columns not captured)
+    #  | Section                        | Block type      | Keep/change/remove
+    1  | Announcement bar (rotating)    | bar             | change: one line
+    2  | Gallery                        | hero gallery    | keep
+    3  | Title, under-title, rating     | hero text       | change
+    4  | Four bullets                   | list            | keep
+    5  | Flavour, sugar, how many       | pickers         | keep
+    6  | Autoship and Save plan box     | buy box         | keep
+    7  | Accordions (5)                 | fold-outs       | keep
+    8  | "Modern Living ..." stats      | stat band       | remove
+    9  | Survey numbers                 | stat band       | remove
+    10 | Quality You Can Trust          | trust band      | keep
+    11 | Review cards by theme          | quote cards     | change: 1 card
+    12 | Us vs. Them cost per serving   | table           | remove
+    13 | Athlete quote                  | endorsement     | remove
+    14 | FAQ                            | questions       | keep
+    15 | Reviews widget                 | review feed     | keep if Kids-only
+
+    LAYOUT RULES
+    Not captured from text. Use the brand's own: cream background, kelly
+    green button, Work Sans, DM Mono tags.
+
+    SLOT MAP
+    Announcement  | ad + shipping fact | "Ships within 24 hours"
+    Headline      | the ad's words     | "Fiber kids won't fight. Greens they
+                  |                    | think are a treat."
+    Rating        | Kids rating        | MISSING (removed; adult figures
+                  |                    | don't carry over)
+    Bullet 1      | ingredient fact    | "Methylfolate, not folic acid"
+    Bullet 2      | serving            | "6 gummies in one pack, ages 2 to 13"
+    Bullet 3      | Kids ingredients   | MISSING: the Kids ingredients panel
+    Bullet 4      | fiber amount       | MISSING: Kids fiber per pack
+    Plan box      | Kids offer         | "$24.99 first box", then MISSING:
+                  |                    | the renewal price for one child
+    Guarantee     | terms              | "30-day money-back guarantee on
+                  |                    | your first order"
+    Review card   | real review        | R16, word for word
+    Stats (8, 9)  | Kids facts         | removed: none held for Kids
+    Athlete       | rights for Kids    | removed: no rights on file
+    Us vs. Them   | dated prices       | removed
+
+    NOT SOURCED
+    - Kids photos by job: pack front, out of pack, in a child's hand
+    - Kids fiber, vitamin and mineral amounts
+    - Renewal price for one child ($74.98 is shown, probably for 2)
+    - Any Kids claim beyond the label: "bright minds" and "Supports brain
+      health" are on the risky list, so no slot uses them
+
+tweaks:
+  - what: The reference
+    how: Choose a page built for a product like yours. A page for something bought again (subscribe box, ingredient table) needs many sections changed if you sell something bought once.
+  - what: Your proof
+    how: Paste real reviews with sources and your stated rating. Each one you supply keeps a slot that would otherwise be removed.
+  - what: The skeleton
+    how: Ask for the HTML skeleton if you can open files. You get one page with your colours as variables and numbered, empty image slots, checked at phone width first.
+  - what: Phone screenshot
+    how: Add the reference's phone view too. Many pages reorder or drop sections on phones, and the layout map will show both.
+
+judge:
+  - No sentence from the reference appears anywhere in the output.
+  - Every fact on the page is one you supplied.
+  - No rating, review count, press logo, badge, timer or stock figure appears unless you hold it.
+  - The first screen carries on from your ad.
+  - Sections that don't suit how your product is bought are changed or removed.
+  - The colours and fonts are yours, so the page can't be mistaken for the reference brand.
+
+test:
+  - Search the output for any sentence from the reference page. There should be none, reworded or not.
+  - Use a reference with a star rating and press logos you don't hold. The slot map should remove both, not keep them with your name on.
+  - Try a reference for a different kind of product (bought once if yours is bought again). Sections that don't fit should be marked change or remove.
+  - Ask for the skeleton page and open it at phone width. The sections should stack in the same order as the layout map.
+
+improve:
+  - Add your proof on file to "Your brand facts" in the skill (real reviews, the rating you hold and where it comes from), so slots get filled instead of removed.
+  - Add rows to the slot table in step 6 for slots common in your market, such as a size chart, with what fills them and what to do when you have none.
+  - Put your colours, fonts and corner radius into step 9, so every skeleton starts in your brand.
+  - Save layouts that work for you in your brand file, so your next page can start from your own best one.
+  - Pair it with "Ad-matched landing page writer" to write the copy first, then place it into the slots. Once built, run "Landing page 30-point checker".
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI that reads images", why: "It reads the reference screenshot section by section, which the layout map depends on."}
+    - {name: "Figma Make", why: "Turns the layout map and your copy into a working page prototype you can adjust before anyone builds it."}
+  inputs:
+    - "A full-length phone screenshot of the reference, since many pages reorder or drop sections on phones"
+    - "Your colours as hex codes with the job each does, and your font names, so the result can't pass for the reference brand"
+    - "Your product photos listed by view (front, detail, in use, next to something for scale), so image slots get real pictures"
+    - "Real reviews with their sources and the rating you hold, so proof slots are kept instead of removed"
+
+terms:
+  - term: Slot
+    meaning: One place on the page that holds a piece of content, such as a headline, a review, a photo or a price.
+  - term: Slot map
+    meaning: A table saying what fills each slot on your version, or that it's removed.
+  - term: Skeleton
+    meaning: A bare HTML page with the layout and empty boxes, ready for real content and design.

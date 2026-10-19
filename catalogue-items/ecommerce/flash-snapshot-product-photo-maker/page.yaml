@@ -1,0 +1,201 @@
+new_slug: flash-snapshot-product-photo-maker
+name: "Flash snapshot product photo maker"
+summary: "Attach your product photos. Get 6 flash snapshot prompts from one occasion and a score out of 100."
+job: product-photos
+
+headline: "Flash snapshot product photo maker"
+subhead: Attach your product photos and say who uses it and when. It sets three flash dials, plans six snapshots of one real occasion in time order, and writes one prompt per photo after your OK. You get the roll, the prompts and a score out of 100.
+
+explain: |
+  Polished product photos look like ads, and people scroll past what looks like decoration. A snapshot from a real morning or evening, lit by a small camera's flash, reads as life instead. The risk is that AI pictures in this style drift. The product changes shape, people stare into the lens, hands hold things no hand could.
+
+  This skill builds the look from how flash really behaves. Three dials set it: how much room light shows, how close the wall is (which decides where the hard shadow falls), and the colour of the room. Then it plans the photos as one occasion in time order, from getting ready to what's left after, with every action written hand by hand. It's for feed ads and social posts, not the first image on your product page.
+
+when:
+  - Your ads look too polished and you want photos that feel like real life.
+  - You need a "people like you" strip of photos for social or an email.
+  - Your product belongs to a real moment, such as breakfast, a picnic or a dinner with friends.
+
+you_give:
+  - Real photos of the product, including one of it in a hand or in use
+  - Who buys it, and where, when and with whom they use it
+  - Your brand's places, colours and what you never show
+  - Where the photos will be used (feed ad, post, email)
+  - How many photos (optional; 6 is the default)
+you_get:
+  - The three flash dials, set for your brand
+  - A roll of frames from one occasion, for you to approve
+  - One prompt per photo, written in a fixed order
+  - A check log for each photo, with what was remade and why
+  - A score out of 100 for the roll, with one line for each check it missed
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Attach your product photos, including one of it in a hand if you have it.
+  - Say who buys it and their moment, such as "busy parents, 7 am, kitchen, school run".
+  - Read the dials and the roll. Cross out frames that don't fit your brand, then approve.
+  - Make the test photo first, check the product against your real photo, then make the rest.
+
+how_it_works:
+  - title: Writes down the product
+    text: Fixes one phrase for your product, including what it is not, and repeats it word for word in every prompt.
+  - title: Sets three flash dials
+    text: Ambient (flash only, flash plus lamps, or flash as fill in daylight), falloff (close wall or deep room), and colour (neutral, warm mix or your brand's daylight).
+  - title: Plans one occasion
+    text: Frames in time order, from before and the reach to passing it on, the table and what's left after. At least two frames have no people.
+  - title: Spells out every action
+    text: Which hand holds what and where the other hand is. Actions your product facts don't describe are left out.
+  - title: Waits for your OK
+    text: Shows the dials and the roll before anything is made.
+  - title: Writes each prompt
+    text: The moment, the people and their hands, the product, then the camera and flash in plain physical terms, ending with no added words or date stamps.
+  - title: Checks every photo
+    text: At full size beside your real photo. The label must sit outside the flash's brightest spot, and the shadows must match the dials.
+
+output_shape: |
+  BEFORE WE START
+  <missing photos or facts; whether the look fits your brand>
+
+  PRODUCT, SAME WORDS EVERY TIME
+  "<exact phrase>; not <the lookalike>"
+
+  FLASH DIALS
+  Ambient: <flash only | flash plus room light | flash as fill>
+  Falloff: <close wall | deep room>
+  Colour:  <neutral | warm mix | brand daylight>
+
+  THE ROLL: <one occasion> (for your approval)
+  01 <moment> | <who> | <action, hand by hand> | <job>
+  ...
+  TEST FRAME: <which, and why>
+
+  PROMPT, FRAME <nn>
+  <moment and place>. <people and hands>. <product>. <camera and
+  flash>. <texture>. No added words, date stamps or borders.
+
+  CHECK LOG
+  <frame>: asked <...> / came back <...> / fix <...>
+
+  SCORE  <n>/100 (<checks passed> of 5 checks)
+  Missed: <one line per check still missed>
+
+example:
+  business: sprout
+  input: |
+    [the skill]
+
+    Product: Sprout Original (Adults), Low Sugar. Attached: the pouch
+    front on, and gummies in an open hand. Glossy deep green stand-up
+    foil pouch, big yellow wordmark, yellow bear face top right, "28
+    Daily Packs" at the bottom. One daily pack a day, torn straight
+    across the top, gummies tipped into a palm. The pouch opens only at
+    its resealable top.
+
+    Buyers: people who quit greens powders and pill stacks; busy
+    parents who grab one on the way out ("So easy to grab and eat on my
+    way to the billion things I have to do as a mom").
+
+    Brand world: bright, sunny, candy-like. Everyday adults in casual
+    clothes, at home or outdoors. Never clinical, never muted. There's
+    also a Kids line.
+
+    For: Instagram feed ads, 4:5. 6 photos.
+  output: |
+    BEFORE WE START
+    MISSING: a daily pack photo, whole and torn. Until it arrives, no
+    frame shows a pack torn or gummies tipped from one. Gummies appear
+    loose in a palm, as your photo shows them.
+    Your world is bright and daytime, so the flash works as fill.
+    Kids line: no child or part of one in any frame.
+
+    PRODUCT, SAME WORDS EVERY TIME
+    "the glossy deep green Sprout stand-up foil pouch with a big yellow
+    wordmark and a yellow bear face top right, closed at its resealable
+    top; not a tub, not a jar, not a bottle"
+
+    FLASH DIALS
+    Ambient: flash as fill (morning window light carries the scene)
+    Falloff: close wall (cream kitchen wall just behind)
+    Colour:  brand daylight
+
+    THE ROLL: a weekday breakfast rush (for your approval)
+    01 Before | woman, 30s, grey hoodie | zips a work bag with her right
+       hand, left hand flat on the counter; pouch by the fruit bowl |
+       feed ad
+    02 The reach | man, 40s, work shirt | right hand reaches for the
+       closed pouch, left hand holds a mug | feed ad
+    03 In use | the woman from 01 | left palm holds a small handful of
+       gummies, right thumb and finger pick one | feed ad
+    04 Passing it on | the two adults at the counter | she tips gummies
+       from her palm into his open palm | post
+    05 The table | nobody | closed pouch among keys, a phone face down,
+       a packed lunch box and a half-drunk mug | email strip
+    06 After | nobody | one gummy left on the counter by the closed
+       pouch, the keys gone | post
+
+    TEST FRAME: 05, since it needs no hands. Watch the foil: the flash
+    spot must land on the pouch's edge, not the wordmark.
+
+    PROMPT, FRAME 03
+    A weekday morning in a real home kitchen, cream wall close behind,
+    wooden counter, daylight from a window on the left. One adult woman
+    in her thirties, hair in a loose bun, grey hoodie, a watch on her
+    left wrist. Her left palm holds a small handful of small, opaque,
+    deep-green gummy bears (Image 2); her right thumb and finger pick
+    one up. Her eyes are on her hand. On the counter stands the glossy
+    deep green Sprout stand-up foil pouch with a big yellow wordmark and
+    a yellow bear face top right from Image 1, closed at its resealable
+    top, label sharp and turned to the lens, the flash's brightest spot
+    on its top edge; not a tub, not a jar, not a bottle. A compact
+    camera held at chest height, its built-in flash fired straight from
+    beside the lens as fill, a hard shadow on the wall just behind her.
+    Fine film grain, slightly off level. No added words, date stamps or
+    borders.
+
+tweaks:
+  - what: The buyer and moment
+    how: This sets the occasion and every room. "Busy parents on the school run" gives a bright kitchen with flash as fill; "friends at a dinner party" gives an evening table with lamps glowing.
+  - what: The flash dials
+    how: Change one dial at a time. Deep room makes the background fall dark; close wall puts a hard shadow right behind people.
+  - what: People or product only
+    how: Say "product only" and the roll keeps the table, the after and product-only versions of the reach. Good for brands that never show faces.
+  - what: Video
+    how: Ask to turn one approved photo into a few seconds of video, with one small action at real speed and a little handheld shake.
+
+judge:
+  - The shadows and glow match the three dials.
+  - The label is sharp, faces the lens and sits outside the flash's brightest spot.
+  - Nobody poses, and at most one person has just noticed the camera.
+  - Every hand could really hold what it holds, with five fingers.
+  - No children, no real person's face, no other brand's logo, no added words or date stamps.
+
+test:
+  - Make the test frame and put it beside your real product photo at full size. If the label, shape or colour drifted, fix the product phrase before you make any more.
+  - Change only the falloff dial and remake one frame. The shadow should move from just behind the person to gone, with a darker background.
+  - Mix three new photos with three of your usual ad photos and show them to someone outside the business. Ask which ones a friend took.
+  - Check the eyes in every photo with people. Remake any frame where someone stares into the lens, with that one line rewritten.
+
+improve:
+  - "Write your real buyers into \"What you need\" in the skill file, with ages and clothes (for Sprout: office workers aged 28 to 45, and busy parents), so every roll casts from the same people."
+  - Save your usual dial settings in step 2 (for Sprout, flash as fill, close wall, brand daylight).
+  - If your brand never shows faces, change step 3 to product-only moments.
+  - When the check log shows the same failure three times, add the fix to the prompt order in step 7, such as "flash spot on the cap, never the label".
+  - Pair it with the skill that writes down exactly how your product looks, and the one that borrows a photo's look for the cleaner shots this set can't give you.
+
+works_best_with:
+  tools:
+    - {name: "GPT Image", why: "Follows long scene descriptions well, and its thinking mode plans the frame before it draws."}
+    - {name: "Nano Banana", why: "Takes up to 10 object photos and holds the product steady across follow-up edits."}
+    - {name: "Veo", why: "For the optional short clip. It can start from your approved frame and add sound if you want it."}
+  inputs:
+    - "Real flash photos from one of your own events, so the light and grain look true"
+    - "Photos of the real food, drinks or things at the occasion, so the props are ones the product goes with"
+    - "A note of the frames you've already used in ads, so the new roll shows new moments"
+
+terms:
+  - term: Built-in flash
+    meaning: The small flash on the front of a compact camera or phone, fired straight at the subject from next to the lens.
+  - term: Falloff
+    meaning: How fast light gets weaker as it travels. With a flash, things further back get darker quickly.
+  - term: Feed ad
+    meaning: An ad that appears between normal posts as people scroll Instagram or Facebook.

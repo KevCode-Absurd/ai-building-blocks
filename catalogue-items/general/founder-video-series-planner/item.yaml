@@ -1,0 +1,32 @@
+slug: founder-video-series-planner
+renamed_from: build-trust-with-ten-weeks-of-founder-videos
+name: "Founder video series planner"
+summary: "Paste buyer questions. Get a ten-week founder video plan, filming setup and a score out of 100."
+category: general
+boards: [ecommerce]
+type: skill
+role: make
+job: organic
+level: beginner
+inputs:
+  - {type: brand_brain, required: true}
+  - {type: persona, required: false}
+outputs:
+  - {type: plan}
+  - {type: brief}
+uses: []
+example: brief-founder
+origin: rebuilt
+source_ids: [CES-092]
+old_name: founder video plan
+version: 2.0.0
+credits:
+  - {title: "What is The Big 5? (The 5 Content Topics That Grow Your Business)", by: "Marcus Sheridan", url: "https://www.impactplus.com/blog/big-5-blog-article-topics", used: "Build content from the questions buyers ask, price and problems included; the five kinds of question as a coverage check"}
+  - {title: "Show Your Work!", by: "Austin Kleon", url: "https://austinkleon.com/show-your-work/", used: "Show the process on camera every week, not just the finished product"}
+  - {title: "Creative best practices for performance ads", by: "TikTok Ads Help Center", url: "https://ads.tiktok.com/help/article/creative-best-practices", used: "Answer up front and use on-screen text for context"}
+tested:
+  on: 2026-10-19
+  business: sprout
+  model: claude-opus-5-5
+  judge: claude-fable-5-1
+  result: pass

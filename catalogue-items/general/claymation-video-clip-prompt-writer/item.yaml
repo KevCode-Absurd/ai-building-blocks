@@ -1,0 +1,33 @@
+slug: claymation-video-clip-prompt-writer
+renamed_from: turn-claymation-script-into-ready-video-shots
+name: "Claymation video clip prompt writer"
+summary: "Paste your clay script and attach product photos. Get matching clip prompts and a score out of 100."
+category: general
+boards: [ecommerce]
+type: skill
+role: render
+job: video
+level: advanced
+inputs:
+  - {type: script, required: true}
+  - {type: product_data, required: true}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: image_prompt}
+  - {type: video_prompt}
+uses: [claymation-video-ad-script-writer]
+example: claymation
+origin: rebuilt
+source_ids: [CES-018]
+version: 2.1.0
+credits:
+  - {title: "Clay animation", by: "Wikipedia contributors", url: "https://en.wikipedia.org/wiki/Clay_animation", used: "Shooting on twos (about 12 poses a second) and a set kept the same between frames"}
+  - {title: "Ultimate prompting guide for Veo 3.1", by: "Khulan Davaajav and Hussain Chinoy, Google Cloud", url: "https://cloud.google.com/blog/products/ai-machine-learning/ultimate-prompting-guide-for-veo-3-1", used: "References named by role and a first and last frame for the one morph"}
+  - {title: "Model sheet", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Model_sheet", used: "The sheet that keeps a character the same: several angles, expressions and poses"}
+  - {title: "Storyboard", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Storyboard", used: "One frame per shot with framing, camera, movement, dialogue and timing, approved before production"}
+tested:
+  on: 2026-10-19
+  business: sprout
+  model: claude-opus-5-5
+  judge: claude-fable-5-1
+  result: pass

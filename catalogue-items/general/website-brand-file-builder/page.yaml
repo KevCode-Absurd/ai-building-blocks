@@ -1,0 +1,228 @@
+new_slug: website-brand-file-builder
+name: "Website brand file builder"
+summary: "Give it your website. Get eight brand files, every fact sourced, and a score out of 100."
+job: brand-file
+
+headline: "Website brand file builder"
+subhead: Give it your website address, plus any brand material, reviews and results you have. It checks the basics with you once and asks only what's missing. You get eight files where every fact names its source, a slice for your next step and a score out of 100.
+
+explain: |
+  Every time you ask an AI to write an ad, a page or an email, it starts from nothing. You paste the same facts again, it guesses the rest, and the guesses creep into your copy as prices you don't charge and claims you can't make.
+
+  This skill builds your brand file once, for any online business. It reads your website, then sorts in what you already have, like product sheets, a style guide or old ads. You get one folder of eight files. They cover what you sell, who buys and why, what you can claim, how you sound and look, your market, and a log. Every fact carries a tag (confirmed, inferred, disputed or unknown). A claim with no proof on file is marked pending, even on your own site. Paste the start file into a Claude project, a ChatGPT project or a Gemini Gem, and add the other seven as files.
+
+when:
+  - You use AI for marketing and keep pasting the same background into every chat.
+  - You're briefing a new writer, designer or AI tool and want them working from facts you can stand behind.
+  - Your facts are spread across your site, product sheets and old ads, and you can't tell which claims are proven.
+
+you_give:
+  - Your website address, or your pages pasted in if it can't be read
+  - Brand material you already have, like product sheets, a style guide or past ads, each with a label and date (optional)
+  - Customer reviews, survey answers or support emails (optional)
+  - Past results from ads, emails or offers (optional)
+  - Your next step, such as planning, writing or image work (optional)
+you_get:
+  - A folder of eight plain files, from a start file for your AI to a claims list and a change log
+  - A tag on every fact, and every claim marked approved, pending or banned
+  - A two-sentence diagnosis of your biggest gap, and a list of what's missing and who can answer it
+  - A short slice for your next step, if you name one
+  - A score out of 100 for the share of its five checks the files pass, with each one missed
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in. A tool that can read websites works best.
+  - Give it your website address. Add any brand material you have, each piece with a short label and when you got it, like "product page, read this week".
+  - Check the fact sheet it shows you and correct anything wrong. Then answer the questions you can and skip the rest.
+  - Say what comes next, for example "a designer is making image ads", to get a slice with only what that step needs.
+  - Read the MISSING lines and pending claims first. Nobody should use those in an ad until you find proof.
+  - Paste 00-start-here.md into your AI project's instructions and add the other files. When something changes, edit the file, add a line to log.md and upload it again.
+
+how_it_works:
+  - title: Reads the site and your material
+    text: Reads the pages every business has, then the ones your kind of business has, then each labelled piece you gave it. If the site can't be read, it builds from your material.
+  - title: Tags every fact
+    text: Marks each fact confirmed (with its page or label and date), inferred, disputed or unknown. When your material and your site disagree, it keeps both.
+  - title: Checks in once
+    text: Shows you a short fact sheet and waits for your corrections. If no one can answer, it lists each fact to confirm as MISSING and uses only tagged facts.
+  - title: Asks the most-needed questions
+    text: At most five, one at a time, each skippable, ranked by how many later tasks need the answer.
+  - title: Maps your market
+    text: Lists the options buyers weigh, including doing nothing, and 3 to 5 competitors with their pitch, prices and the gap they leave.
+  - title: Writes eight files
+    text: Marks each claim approved, pending or banned. A review of a rival never counts as proof, and a missing logo or font file is listed as a gap.
+  - title: Checks its own work
+    text: Makes sure prices match across files and every claim sits in the claims list. Colours and fonts never share a line with a claim.
+  - title: Cuts a slice
+    text: Planning gets buyers and approved claims. Writing gets offer facts, claims and quotes. Image work gets the product's look, colours, fonts and the words allowed on the picture.
+
+output_shape: |
+  brand-file/
+    00-start-here.md     <the business in five lines, diagnosis,
+                          house rules, which file for which task>
+    business.md          <one line, category, stage, positioning>
+    offers.md            <each offer: price, terms, policies>
+    customers.md         <buyer profiles with real quotes>
+    proof-and-claims.md  <claim | approved, pending or banned |
+                          proof | source>
+    voice-and-look.md    <voice, colours, fonts, logo and font
+                          files, photo style>
+    market.md            <options buyers weigh, competitors>
+    log.md               <changes, decisions, graded results>
+
+  SLICE FOR <NEXT STEP>
+  <only what that step needs>
+
+  SUMMARY
+  Disputed: <n, and which>
+  Buyer profiles grounded: <n of n>
+  MISSING: <what>, <who can answer>
+
+  SCORE  <passed> / 5 checks x 100 = <score>   Missed: <one line each>
+
+example:
+  business: sprout
+  input: |
+    [the skill]
+
+    Website: sprout.example
+    Brand material I already have:
+    - brand notes (colours, fonts, pouch, product rules)
+    - live ads (15 headlines, 2 main texts)
+    - public reviews, numbered R1 to R20
+    Next step: image work. A designer is making image ads for the
+    Original pouch.
+
+    (Check-in) Fact sheet looks right.
+    (Questions, one at a time)
+    1 Proof for "1M+ customers" and the 4.8 rating? Skip.
+    2 What's live right now? The $29.99 first box with text sign-up.
+    3 Logo and font files? Not to hand. Skip.
+    4 Past results with numbers? None. Skip.
+    5 Who may appear in content? Skip.
+    Competitors: your list of five is right, go ahead.
+  output: |
+    CHECK-IN
+    Sprout | daily greens gummies in single-serve packs | greens gummy
+    supplement | established [inferred: sold in big-box stores] |
+    Original Adults $49.99 every 4 weeks or $66.65 once [confirmed:
+    product page] | #00582D [confirmed: brand notes]
+    > You: looks right
+
+    --- 00-start-here.md (top) ---
+    Diagnosis: Buyers already know the problem and have tried powders
+    and pills; the gut-fix seeker feels it most. The ads lead with
+    money off, while buyers talk most about finally sticking with a
+    supplement, and only 3 of the 40 newest ads are habit or story.
+
+    --- offers.md (excerpt) ---
+    Sprout Original (Adults), Low Sugar, 28 packs
+      One-time $66.65 ($2.38/day). Subscribe $49.99 every 4 weeks
+      [confirmed: product page]
+      First order $29.99, only with the text sign-up discount
+      [confirmed: product page footer; you, question 2]
+      Discount: 52% and up to 55% on this page, 49% and 58% on others,
+      61% in ads [disputed]
+      Vitamins and minerals: "21" [confirmed: brand notes; live ads]
+      and "over 20" [confirmed: product page ingredients] [disputed]
+      An ad says "probiotics"; the ingredient list shows prebiotic
+      fiber and no probiotics [disputed]
+
+    --- proof-and-claims.md (excerpt) ---
+    "Clinically tested for nutrient absorption" | approved | 2025
+      study, 120 adults: vitamin C +40.1%, folate +20.5% | name the
+      study and those two nutrients only
+    "Third-party tested" | approved | "Tested by [an outside lab]" |
+      product page | name what was tested
+    "Supports digestion and gut health" | approved | on the label,
+      brand notes list it as fine to repeat | as written
+    "Supports immunity + stress relief" | pending | nothing on file
+    "1M+ Customers" | pending | nothing on file
+    "4.8/5.0 (100,000)" | pending | widget 4.75 from 109,639, reviews
+      page 4.74 from 118,002, a review site 4.0 from 2,411 [disputed]
+    "Fix the Hot Girl Tummy" | banned | brand notes: claims stay at
+      "supports" | live ads
+    Category research, not proof: rival gummy reviews say "stringy, gooey"
+
+    SLICE FOR IMAGE WORK (Original pouch)
+    Product: glossy deep green stand-up foil pouch, big yellow
+      wordmark, yellow bear face top right, "28 Daily Packs" at the
+      bottom. Gummies: small opaque deep-green bears, soft matte.
+    Show it right: tear the daily pack straight across the top and
+      pour gummies into a palm or bowl. The big pouch opens only at
+      its resealable top. No tie-in characters or partner marks.
+    Colours: #00582D, #002C17 headings, #FFF7DF background, #007E40
+      buttons, #FFCC2E stars and badges. Fonts: Work Sans, DM Mono.
+    Photo style: bright and sunny, one pouch on a soft two-colour
+      gradient, everyday adults pouring gummies into a hand.
+    Words allowed on the picture: "Supports digestion and gut
+      health", "60+ ingredients", "6g fiber", "Third-party tested",
+      "Rip. Tip. Enjoy."
+    Held back: ratings, "1M+", discounts, the vitamin count (disputed).
+
+    SUMMARY
+    Files written: 8 of 8. Buyer profiles grounded: 4 of 4.
+    Disputed: 5 (the discount, 21 against "over 20", probiotics, the
+    star rating, the Kids first price)
+    MISSING: logo file, font files, display font name (founder)
+    MISSING: proof for "1M+" and one agreed star rating (founder)
+    MISSING: the real discount, grams of sugar per pack, who may
+    appear in content (founder)
+    MISSING: ad results with real numbers (whoever runs the ad account)
+    (cut for length: the full run also had business.md, customers.md,
+    voice-and-look.md, market.md, log.md, and how to load the folder)
+
+tweaks:
+  - what: Your material and reviews
+    how: Every labelled piece fills blanks the site leaves. Pasting 20 or more real reviews is the biggest upgrade, because it turns inferred buyer profiles into ones built on real words.
+  - what: The next step
+    how: Name it and you get a slice. Image work gets the product's look, colours and allowed words, with no review quotes. Writing gets offer facts, approved claims and quotes, with no hex codes.
+  - what: Pages it reads
+    how: Point it at specific pages if your site is big ("read the homepage, /pricing and these three product pages"). For an online store, the store add-on adds product photos and a truth sheet per product.
+  - what: Competitors
+    how: Name the competitors you care about instead of letting it search. You'll get a sharper market file and fewer irrelevant names.
+  - what: Results
+    how: Paste an export with real numbers. Without numbers, every result in the log is graded "seen running" or "reported", which is honest but less useful.
+
+judge:
+  - Every price in the files matches your price list exactly.
+  - Every fact carries a tag, and every confirmed fact names its page, label or person.
+  - Claims with nothing on file are marked pending, even when they're on your own site.
+  - Every customer quote is something a real customer wrote, with where it came from. Profiles without quotes say inferred.
+  - Two sources that disagree are both recorded and tagged disputed, never quietly picked.
+  - The slice holds only what the next step needs. An image slice has no review quotes and no pending claims.
+
+test:
+  - Check the prices first. Compare three offers line by line with your price list; any rounding or a missing offer means it read an old or wrong page.
+  - Give it a product sheet that disagrees with your site, such as an old price. Both versions should be there, tagged disputed.
+  - Leave out your logo file. It should come back as a MISSING line, with no stand-in logo or font.
+  - Start a fresh project, load only the folder, and ask for one ad. If your AI asks for something the folder should hold, fill that blank.
+
+improve:
+  - Edit the page list in step 1 to name the pages that matter on your site, so it never skips them.
+  - Add your banned claims and house rules to the 00-start-here.md row, so every tool that loads the folder follows them.
+  - Keep log.md current. Add a dated line every time a price, offer or product changes, so later tasks don't use old facts.
+  - Rerun it with new material when a product, price or offer changes, then rerun step 8 to catch facts that no longer match.
+  - Pair it with a skill that interviews the founder to fill the gaps only they can answer. Then add one that turns the folder into a printable guide for designers.
+
+works_best_with:
+  tools:
+    - {name: "Claude", why: "A project keeps the start file as its instructions and the other files as knowledge, even on a free account."}
+    - {name: "Gemini", why: "A Gem keeps the start file as instructions that Gemini follows every time you use it."}
+    - {name: "Shopify", why: "If you sell on Shopify, it exports your products and variants as a spreadsheet, so offers.md matches every variant."}
+  inputs:
+    - "Names of 3 to 5 competitors you already watch, so the market map starts from real ones"
+    - "Your logo and font files by name, so the look file has no gaps"
+    - "Lab reports or test certificates, so more claims can be approved instead of pending"
+    - "Who on your team can answer questions about proof and offers, so each gap names a real person"
+
+terms:
+  - term: Brand file
+    meaning: One folder with your facts, offers, buyers, claims, voice and history, which any AI or person can read before working for you.
+  - term: Tag
+    meaning: A short label on each fact saying whether it's confirmed (with its source), inferred, disputed or unknown.
+  - term: Claims list
+    meaning: Every claim you might make, with its proof. Approved means a document or test backs it, pending means nothing is on file yet, banned means you've ruled it out.
+  - term: Buyer profile
+    meaning: A short description of one kind of buyer, what they want and what makes them hesitate, built on their own words where possible.
+  - term: Slice
+    meaning: The short part of the brand file one next step needs, such as the look and allowed words for a designer.

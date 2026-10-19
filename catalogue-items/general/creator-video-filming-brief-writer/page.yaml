@@ -1,0 +1,206 @@
+new_slug: creator-video-filming-brief-writer
+name: "Creator video filming brief writer"
+summary: "Paste your approved script. Get a creator filming brief, shoot order and a score out of 100."
+job: make-video-ads
+
+headline: "Creator video filming brief writer"
+subhead: Give it your approved script, what you need delivered and how the product is used. It lays out a brief in the order a creator films, with talking points, not lines to read. You get the brief, a run order, a file-naming pattern and a score out of 100.
+
+explain: |
+  A vague brief gets you the wrong length, a window behind the creator's head, no shot of the product being opened, and lines read off a screen. A brief that scripts every word is worse. It asks people to say things that never happened to them, which is dishonest and sounds it.
+
+  This skill gives them talking points with blanks for their own true details, and tells them to drop a line if they have nothing true to put there. It sets a run order for the shoot: a quick test clip, the talk takes, silent product shots, the openings last once they're warmed up, and a few seconds of room sound for the edit. Rules are split into must and maybe, so the creator knows what's fixed and where they're free. Anything you haven't confirmed, like the deadline or how the video will be used, sits at the top for you to sort before it goes out.
+
+when:
+  - A customer, creator or founder is about to film a video from a script you've approved.
+  - Past creator videos came back unusable (wrong length, bad light, no product close-ups).
+  - You want to be sure nobody is asked to claim a result they didn't have.
+
+you_give:
+  - The approved script (the openings chosen, talking points, the proof moment, facts allowed, the hand-off line)
+  - What you need delivered (length, shape, raw files, deadline, how it will be used)
+  - How the product is opened, held and used
+  - Words and claims they must never say
+  - Your brand voice (optional)
+you_get:
+  - A "before you start" box with deliverables, deadline, usage and anything to confirm
+  - The idea in two or three sentences
+  - A run order for the shoot, from test clip to room sound
+  - Must and maybe rules, and one file-naming pattern
+  - A score out of 100 for how many of its own checks the brief passes, with any it missed
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your approved script, then your delivery needs and how the product is used.
+  - Add your never-say list. If you don't have one, write the claims you can't make.
+  - Fix every [CONFIRM] at the top before you send the brief.
+  - Send it to the creator as it is. The skill doesn't send or post anything.
+
+how_it_works:
+  - title: Starts with the terms
+    text: Deliverables, deadline, how the video will be used and for how long. Missing items are flagged, never guessed.
+  - title: Sums up the idea
+    text: Who is talking, where, what happens with the product, and what the viewer is left thinking, in two or three sentences.
+  - title: Sets a run order
+    text: Test clip, talk takes, silent product shots, openings last, then 5 seconds of room sound.
+  - title: Leaves the words to them
+    text: Talking points with blanks for their own true details. No true detail, drop the line.
+  - title: Splits must from maybe
+    text: Light, sound, product and claims rules are fixed. Where they film, what they wear and how they phrase things are theirs.
+  - title: Names the files one way
+    text: brand, name, part, take. No folders to sort, and a short note on what they changed and why.
+
+output_shape: |
+  BEFORE YOU START
+  Deliver: <length, shape, raw files>  Deadline: <date or [CONFIRM]>
+  Use: <paid / organic, channels, how long, or [CONFIRM]>
+  Filming this doesn't by itself give us the right to run it as an ad.
+
+  THE IDEA
+  <two or three sentences>  <why it should look like their own post>
+
+  RUN ORDER
+  1 Test clip   <10 seconds, play back, check>
+  2 Talk takes  <points with [blanks]>
+  3 Hands takes <silent shots, in real order, incl. the proof moment>
+  4 Openings    <each approved opening, 2 takes; "only if true">
+  5 Room sound  <5 seconds, no talking>
+
+  MUST | MAYBE
+  <fixed rules> | <their choices>
+
+  SENDING
+  <brand_name_part_take>  <note: favourite opening, changes, missed shots>
+
+  SCORE  <n>/100 (<passed> of <total> checks passed)
+  Missed: <one line per check missed, or none>
+
+example:
+  business: sprout
+  input: |
+    [the skill]
+
+    Approved script (a real creator who has used it):
+    Openings chosen:
+    A "These taste like the fruit snacks I ate as a kid. Which worried
+       me."
+    B "If your greens powder lives at the back of the cupboard, watch
+       this."
+    Talking points: what you took before | one pack, the label, tear,
+    tip | what you noticed | hand-off: first order $29.99 with the text
+    sign-up, then $49.99 every 4 weeks.
+    Proof moment: the pack's label held to the lens.
+    Facts allowed: 21 vitamins and minerals and 6 g of fiber in one
+    pack.
+    Delivery: about 40 seconds, 9:16, raw files. Deadline: not set.
+    Paid or organic: not decided.
+    Handling: the pouch opens only at its resealable top. The daily
+    pack tears straight across its top edge, never the side or a
+    corner. Gummies tip from the top into a palm.
+    Never say: "fix", weight loss, energy or immunity results,
+    "clinically proven", "probiotics".
+  output: |
+    BEFORE YOU START
+    Deliver: about 40 seconds, 9:16, raw files straight from the phone.
+    Deadline: [CONFIRM: deadline]
+    Use: [CONFIRM: paid or organic, which channels, for how long]
+    Filming this doesn't by itself give us the right to run it as an ad.
+
+    THE IDEA
+    You talk to your phone in your own kitchen about the moment you
+    thought these were candy. You take one pack out, show the label,
+    tear it and tip the gummies into your hand. The viewer is left
+    thinking "there's more on that label than candy, and it's easy." It should look
+    like your own post: your kitchen, your phone, your words.
+
+    RUN ORDER
+    1 Test clip: talk for 10 seconds, play it back. Can you hear
+      yourself clearly? Is your face lit? Is your head inside the frame?
+    2 Talk takes (use your own words, keep the point)
+      - [what you took before, and why you stopped]
+      - one pack, the label: "21 vitamins and minerals and 6 grams of
+        fiber in one pack"
+      - [what you noticed, from what you tasted or did]
+      - "First order is $29.99 with their text sign-up. Then it's
+        $49.99 every 4 weeks."
+      No true detail for a blank? Drop that line and tell us.
+    3 Hands takes (no talking, close, well lit)
+      - the pouch where you keep it
+      - opening the pouch at its resealable top
+      - taking out one pack
+      - the pack's label to the lens, numbers readable (hold 3 seconds)
+      - tearing the pack straight across the top
+      - tipping the gummies into your palm
+      - your old powder tub or shaker, if you have one, label turned away
+    4 Openings, two takes each, starting right on the line
+      A "These taste like the fruit snacks I ate as a kid. Which
+        worried me." Film only if true for you.
+      B "If your greens powder lives at the back of the cupboard,
+        watch this." Hold up one pack on "this".
+    5 Room sound: 5 seconds of your kitchen, nobody talking.
+
+    MUST                                 | MAYBE
+    9:16, head inside the frame          | which room
+    face a window or lamp                | sit or stand
+    quiet room, no music, TV or fan      | what you wear (plain is best)
+    pack name readable, fingers off it   | your way into each point
+    no other brands in frame             |
+    no "fix", "clinically proven",       |
+    "probiotics", weight loss, energy    |
+    or immunity                          |
+    raw files, no filters or edits       |
+
+    SENDING
+    Name each file sprout_yourname_part_take, for example
+    sprout_ana_talk_t2, sprout_ana_hands-tear_t1, sprout_ana_open-B_t1.
+    With the files, tell us which opening felt most like you, any line
+    you changed or dropped and why, and any shot you couldn't get.
+
+tweaks:
+  - what: Who is filming
+    how: A founder gets talking points about the founding story in their own words. A customer or creator only gets openings true for them; anything else is marked "film only if true".
+  - what: Hands takes
+    how: Ask for shots particular to your idea, such as "the pack going into a gym bag". The standard ones (opening it, the label to the lens, using it) are always included.
+  - what: Delivery needs
+    how: Give the length, shape (9:16, 4:5), deadline and how it will be used. Anything missing becomes a [CONFIRM] at the top, and the skill never borrows numbers from another brief.
+  - what: Your voice
+    how: Paste your brand voice and it adjusts the wording of the openings and the hand-off, while still telling the creator to use their own words.
+
+judge:
+  - Every spoken line in the brief is from the approved script or is a [blank] for their own detail.
+  - No result, health or money claim appears that isn't in the approved script.
+  - Every first-person opening is marked "film only if true for you".
+  - The deadline and usage come from you, or are flagged [CONFIRM].
+  - The hands takes show the product opened the way it really opens.
+  - A creator could read the must and maybe rules in a minute and know what's fixed.
+
+test:
+  - Leave the deadline and usage out of your input on purpose. Both should come back as [CONFIRM] at the top, never filled in with a guess.
+  - Give it a script with a first-person result in it ("it sorted my gut"). The brief should turn it into a blank or mark it optional, not ask the creator to say it.
+  - Hand the brief to a colleague who hasn't seen the script and ask them to film the hands takes on their phone. Anything they get wrong is a line to make clearer.
+  - Compare it with the last brief you sent that came back unusable. Each problem you had should now have a must rule.
+
+improve:
+  - Write your product's handling rules (how it opens, what never appears on camera) into "What you need", so every brief carries them.
+  - Add your standard usage terms and channels to step 1 once you've agreed them, so [CONFIRM] lines only appear when something is new.
+  - Keep your never-say list in your brand file and paste it in every time. Add any line creators tell you they wouldn't say.
+  - Ask the creator to film both openings, so one shoot gives you two ads to test.
+  - Pair it with the skill that writes the approved selfie-style script first.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Claude, ChatGPT and Gemini all follow this skill well, so use the one you already have."}
+  inputs:
+    - "A sample video you like, with notes on what to match (light, framing), so the creator sees the target"
+    - "Links to the creator's own past videos, so the brief fits how they already film"
+    - "The offer code and hand-off line exactly as they will appear, so nothing is misread"
+
+terms:
+  - term: Talking point
+    meaning: The point a part of the video must make. The creator says it in their own words.
+  - term: Hands takes
+    meaning: Silent close-ups of the product being used, for the editor to cut in.
+  - term: Raw files
+    meaning: The original videos straight from the phone, with no editing, filters or music.
+  - term: Usage rights
+    meaning: Your permission to run the video, and where and for how long. Agree it in writing; filming alone doesn't grant it.

@@ -1,0 +1,237 @@
+new_slug: hidden-offer-finder
+name: "Hidden offer finder"
+summary: "Paste your prices and deals. Get clashes flagged, new offers to try and a score out of 100."
+job: make-offer
+
+headline: "Hidden offer finder"
+subhead: Give it your brand file. It quotes every deal you run today, flags any that clash and builds new offers only from what you already have, like sizes, prices and your guarantee. You get your live offers, new ones, three to try first and a score out of 100.
+
+explain: |
+  Ask most businesses for their offers and you hear about money off, again and again. An offer is the whole deal: what the buyer gets, what they pay, and what makes yes feel safe today. A trial pack, the guarantee said up front or one box for the whole family can each do that job better than a bigger discount.
+
+  This skill starts with the deals you already run, quoted word for word, and points out where two pages say different things about the same deal. Then it lists what you already own: pack sizes, price points, your guarantee, delivery speed, extras and past buyers. Every new offer is made from that list, matched to one buyer's doubt, and checked against plain honesty rules for "free", "was" prices and subscriptions. It ends with the three worth trying first.
+
+when:
+  - You're setting up your brand file and need a list of offers to work from.
+  - You're writing an ad and need an honest offer to end on.
+  - Your deals have piled up and different pages now say different things.
+
+you_give:
+  - Your brand file (products, sizes and prices, guarantee, delivery and cancel terms, current deals, buyers and their main doubts)
+  - One buyer to focus on (optional)
+  - Anything you can't do, such as no new pack sizes (optional)
+you_get:
+  - Your live offers, quoted in your own words
+  - Every clash between pages, and the figure to use until you fix it
+  - A short list of what you already own that could become an offer
+  - New offers, each with plain terms, the buyer it suits and what you'd need to set up
+  - Three offers to try first, with the reason for each
+  - A score out of 100 from the prompt's seven checks, with one line per check missed
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your brand file, or at least your prices, guarantee, delivery terms, current deals and buyers.
+  - Name one buyer if you want the list built around them.
+  - Fix the clashes first. Pick one figure for each deal and change every page that disagrees.
+  - Start with the three marked "try first", and check each one's "must arrange" line before you promise it anywhere.
+
+how_it_works:
+  - title: Quotes what's live
+    text: Every deal on your site, in ads, emails and pop-ups, copied exactly and marked live.
+  - title: Flags the clashes
+    text: Where two pages state one deal differently, it lists both and uses the smaller claim until you choose.
+  - title: Takes stock
+    text: Sizes, price points, price per day, your guarantee, delivery, extras, partner perks, past buyers and real dates.
+  - title: Builds from that stock
+    text: New offers that give more, feel surer, arrive sooner, ask less effort or cost less to start. Two money-off ideas at most.
+  - title: Matches a buyer and a stage
+    text: Each starts from one buyer's doubt. People who haven't noticed the problem get safe ways to try; people comparing get the risk taken away; people who know you get the deal.
+  - title: Checks it's honest
+    text: Free offers name what you pay for, "was" prices are prices you really charged, and subscriptions state the renewal price and how to cancel.
+  - title: Picks three to try
+    text: Ranked by the doubt answered, the work to set up and the cost to you.
+
+output_shape: |
+  LIVE
+  <n>. <NAME, 2 to 4 words>
+     Said simply: "<one sentence, one number at most>"
+     Terms:       <what they get and pay; a first-order price says
+                  what it becomes after>
+     For:         <buyers>   Stage: <how much they already know>
+
+  CLASHES
+  - <deal>: <figure> on <page> vs <figure> on <page>. Using <smaller>.
+
+  STOCK
+  <sizes | prices and price per day | guarantee | delivery | extras |
+   partner perks | past buyers | real dates>
+
+  NEW
+  <n>. <NAME>
+     Said simply / Terms / For / Stage   (as above)
+     Changes:      <more | surer | sooner | easier | cheaper to start>
+     Must arrange: <what you'd need to set up, or nothing>
+     Costs you:    <per order, or unknown>
+     Why:          <one line>
+
+  TRY FIRST
+  <n>, <n>, <n> with one line each
+
+  MISSING: <facts that would change the list>
+
+  SCORE  <n>/100 (<passed> of 7 checks) | missed: <one line each>
+
+example:
+  business: sprout
+  input: |
+    [the skill]
+
+    [brand file: sprout/brand.md, the products, prices and offers
+    sections, plus the buyers section]
+
+    Prices: Adults 28 packs $66.65 one-time ($2.38/day); subscription
+    $49.99 every 4 weeks ($1.78/day); $29.99 first order with the text
+    sign-up discount. 84-pack pouch sold. Big-box retailer 12-pack:
+    $19.97 Adults, $14.97 Kids. Kids 28 packs $53.32 one-time.
+    Deals live at once: 49%, 52%, "up to 55%", 55% and 58% (Kids page)
+    off; ads say 61%. Kids plan box: $22.49, "Renews at $74.98 each 4
+    weeks". "Buy 2 Save $5". 4 free gifts on a first order in ads
+    (which gifts changes). VIP: "Save up to $80, get limited flavors,
+    and VIP access". Subscription: "Pause Or Cancel Any Time".
+    Guarantee: 30-day money-back, first order only. Ships within 24
+    hours, arrives in 3 to 5 days on average. New limited flavour every
+    4 to 8 weeks.
+    Buyers: the quitter, the gut-fix seeker, the busy parent, the
+    price doubter.
+  output: |
+    LIVE
+    1. FIRST BOX $29.99
+       Said simply: "Your first box is $29.99 if you sign up by text."
+       Terms: 28 Adult packs for $29.99 with the text sign-up discount,
+              then $49.99 every 4 weeks. Pause or cancel any time.
+       For: price doubter, quitter. Stage: knows you.
+    2. BUY 2 SAVE $5
+       Said simply: "Order for two people and save $5."
+       Terms: "Buy 2 Save $5" when an order has more than one adult
+              or kid. For: busy parent. Stage: knows you.
+    3. FOUR FIRST-ORDER GIFTS (ads only)
+       Terms: the gifts aren't named and they change. Name each gift
+              and its price before an ad uses this.
+    4. VIP
+       Said simply: "Save up to $80 and get limited flavors."
+       For: past buyers. Stage: knows you.
+    5. MONEY BACK ON YOUR FIRST BOX
+       Terms: 30-day money-back guarantee, first order only.
+
+    CLASHES
+    - First-order saving: 49%, 52%, 55%, 58% and 61% across pages
+      and ads. Quote the $29.99 price and no percent. If a percent
+      is needed, use 49%.
+    - Kids renewal: the plan box says $74.98 every 4 weeks, which is
+      more than the $53.32 one-time price. Kids renewal price is
+      unclear until fixed.
+
+    STOCK
+    28 and 84-pack pouches; a 12-pack sold only in big-box stores.
+    $1.78 a day on subscription, $2.38 one-time. 30-day guarantee,
+    shown only in the FAQ. Ships within 24 hours. Kids line. A new
+    limited flavour every 4 to 8 weeks. Past subscribers.
+
+    NEW
+    6. TRY 12 FIRST
+       Said simply: "Try 12 packs for $19.97, no subscription."
+       Terms: 12 Adult daily packs for $19.97, one time.
+       For: price doubter ("I hate subscriptions"). Stage: comparing.
+       Changes: cheaper to start, surer.
+       Must arrange: selling the 12-pack on your own site.
+       Costs you: unknown. Why: answers the subscription fear with
+       a price you already charge in stores.
+    7. MONEY BACK, SAID FIRST
+       Said simply: "Try your first box. Not for you? Get your money
+       back within 30 days."
+       Terms: as offer 5, first order only, stated in full.
+       For: gut-fix seeker ("Will this upset my stomach?").
+       Stage: comparing. Changes: surer. Must arrange: nothing.
+       Why: the guarantee exists but sits in the FAQ.
+    8. $1.78 A DAY
+       Said simply: "Your daily greens for $1.78 a day."
+       Terms: $49.99 every 4 weeks for 28 packs. Pause or cancel
+              any time. For: quitter ("They are expensive").
+       Stage: knows you. Changes: cheaper to start.
+       Must arrange: nothing. Why: the price you charge, said per day.
+    9. FAMILY BOX
+       Said simply: "Adults and Kids in one box, $5 off."
+       Terms: one Adults and one Kids pouch per order with "Buy 2
+              Save $5". For: busy parent ("Two subscriptions is too
+              much money"). Stage: knows you. Changes: easier.
+       Must arrange: one combined box, and one clear Kids renewal
+       price. Costs you: $5 an order.
+    10. NEW FLAVOUR FIRST
+       Said simply: "Subscribers try each new flavour first."
+       Terms: subscribers get the next limited flavour on its real
+              launch date. For: past buyers. Stage: knows you.
+       Changes: more. Must arrange: a launch date to name.
+
+    TRY FIRST
+    7: nothing to set up, and it answers the strongest doubt.
+    8: nothing to set up, and it makes the real price feel small.
+    6: one listing on your site answers the subscription fear.
+
+    MISSING: one Kids renewal price; the names and prices of the four
+    gifts; your cost per order.
+
+tweaks:
+  - what: One buyer
+    how: Name a buyer and every new offer starts from their doubt. The price doubter gets ways to try without a subscription; the busy parent gets household deals.
+  - what: Runs out or bought once
+    how: For things that get used up, it looks at price per day, longer supplies, trial packs and a reward on order two. For things bought once, it looks at sets, care kits, a second one to give and the warranty.
+  - what: What you can't do
+    how: Tell it your limits, such as no new sizes this year, and it stops proposing them.
+  - what: A real date
+    how: Give a real launch date, shipping cut-off or season and it can add an offer with a true reason to act now. Without one, it adds no urgency.
+
+judge:
+  - Every live offer is there, in your exact wording.
+  - Every clash between pages is listed, with the smaller figure in use.
+  - Every price is one of yours, or worked from yours with the sum shown.
+  - The guarantee is quoted in full, with its limits.
+  - No more than two new offers are only money off.
+  - Every new gift, size or service sits under "must arrange".
+  - Nothing says "limited time" or "exclusive" without a real end date, and there are no exclamation marks.
+
+test:
+  - Check the live offers against your site, ads and pop-ups. One missing means a page wasn't pasted.
+  - Look up each clash on the pages it names. Each should be real.
+  - Check every price against your price list.
+  - Run it twice. The live offers and clashes should match exactly; only the new ideas should change.
+  - Read each one-sentence version to a friend and ask them to say it back. If they can't, it's too long.
+
+improve:
+  - Paste your price list and guarantee into "What you need" in the skill file, so every idea uses your real prices.
+  - "Add your buyers and their main doubts to step 5 (for Sprout: the price doubter who fears the subscription is a trap)."
+  - Add your cost per order, so each new offer shows what it costs you.
+  - Fix the clashes on your pages first, then run it again on the clean list.
+  - Pair it with the skill that builds one offer around a buyer's doubt, with a profit check, to work out the best one.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "This is careful reading and plain writing, so Claude, ChatGPT or Gemini all do it well with a full brand file."}
+    - {name: "Google Sheets", why: "Works out price per day, per pack and cost per order with formulas you can check."}
+  inputs:
+    - "Screenshots or text of every pop-up, banner and checkout page, so no live deal or clash is missed"
+    - "Your cost for one unit, delivery and each gift, so every new offer shows what it costs you"
+    - "Your average order value, so a free-delivery level can sit just above it"
+    - "Sizes or bundles you sell only in shops or on marketplaces, since these are often the easiest new offers"
+    - "Your next real launch date or shipping cut-off, so an offer can have a true reason to act now"
+
+terms:
+  - term: Live offer
+    meaning: A deal running on your site, in ads, emails or pop-ups today.
+  - term: Clash
+    meaning: Two places that state the same deal differently, such as two discount sizes.
+  - term: First-order price
+    meaning: A lower price for someone's first purchase, which changes to the normal price after.
+  - term: Stage
+    meaning: How much the buyer already knows about the problem and about you.
+  - term: Must arrange
+    meaning: Anything you'd need to set up before a new offer can run.

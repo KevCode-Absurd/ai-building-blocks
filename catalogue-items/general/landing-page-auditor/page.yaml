@@ -1,0 +1,194 @@
+new_slug: landing-page-auditor
+name: "Landing page auditor"
+summary: "Paste your page and attach screenshots. Get ranked fixes, quick wins first, and a score out of 100."
+job: audit-landing-page
+
+headline: "Landing page auditor"
+subhead: Paste your page text, attach phone screenshots, and add the ad that leads there if you have it. It reads the page three ways, as buyers do, and rates each problem from 0 to 4. You get ranked fixes, quick wins, tests and a page score out of 100.
+
+explain: |
+  You don't need analytics to see most of what's wrong with a page. You need to read it the way buyers do. Eyetracking studies show people spend most of their time on the first screen, skim the rest by headings and pictures, and read every word only when they're about to pay.
+
+  This skill reads your page those three ways. The glance: five seconds on the phone's first screen, then can you say what it is, who it's for and what to do next? The skim: only headings, pictures, prices and buttons. Do the benefit, price, proof and guarantee come through? The doubt: every word, looking for what makes buyers quit, such as costs that appear late or a hidden returns policy. Each problem gets a severity from 0 to 4 and is ranked by how high on the page it sits. No money figures without analytics.
+
+when:
+  - You want a page review today and don't have analytics, or don't trust them.
+  - You inherited a page and want a ranked list of what to change, not a redesign.
+  - You want a short list of quick wins for this week and a few bigger ideas to test later.
+
+you_give:
+  - The page, as its full text and phone screenshots (attach them; your AI can see pictures), or its address
+  - The ad or link that leads to it (optional, but best)
+  - Your brand file with buyer doubts, offer terms, real proof, guarantee and delivery terms (optional)
+  - Analytics, such as conversion by step and phone against desktop (optional)
+you_get:
+  - The page's job, a one-line verdict, and whether the page matches its ad
+  - What a buyer takes from a five-second glance and from a skim
+  - A ranked findings table, each with a severity from 0 to 4 and where it sits
+  - Up to five quick wins, up to three tests, and what the page can't tell you
+  - A page score out of 100 worked out from the severities, now and after the quick wins
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste the page's text and attach phone screenshots from top to bottom.
+  - Paste the ad that sends people there, so the first screen can be checked against it.
+  - Add your guarantee, delivery and returns terms if they're not on the page. Missing terms are findings in their own right.
+  - Do the quick wins this week. Only test the bigger ideas if your traffic can support a test.
+
+how_it_works:
+  - title: Names the page's job
+    text: A first purchase, a lead, a bigger order or a return customer. The review is judged against that job.
+  - title: Checks the ad match
+    text: The first screen should carry the ad's words, its picture and any offer it named, at the same price.
+  - title: The glance
+    text: Five seconds on the first screen. What is it, who is it for, what do I do next, and what stood out?
+  - title: The skim
+    text: Only headings, pictures, captions, prices and buttons. The benefit, full price, proof and guarantee should all come through.
+  - title: The doubt
+    text: Every word, as someone about to pay. Late costs, hidden terms, unbacked claims, fake-looking prices and unsourced ratings.
+  - title: Rates and ranks
+    text: Severity from 0 to 4, then how high on the page it sits, then how easy it is to fix. Colour comes last.
+  - title: Splits wins from tests
+    text: Easy, serious fixes ship now. Big changes get tested, but only if your traffic can reach a fair result in about a month.
+
+output_shape: |
+  PAGE JOB: <first purchase | lead | bigger order | return customer>
+  VERDICT: <one line>
+  SCENT: <match / mismatch / MISSING: ad>
+
+  GLANCE  What is it? <...>  For whom? <...>  Next? <...>  Stood out: <...>
+  SKIM    <the two-line story a skimmer takes away>
+
+  FINDINGS
+  # | Read | Where | Now | Fix | Severity 0-4 | Ease | Needs analytics?
+  1 | <glance/skim/doubt> | <screen> | "<quote>" | <fix> | <n> | <h/m/l> | <y/n>
+
+  QUICK WINS THIS WEEK (up to 5)
+  - <fix>
+
+  TESTS (up to 3)
+  - <big change>: <one-line hypothesis>
+
+  PAGE SCORE
+  Now: 100 - <deductions> = <score>
+  After the quick wins: <score>
+
+  WHAT THE PAGE CAN'T TELL US
+  MISSING: <proof, terms or data>
+
+example:
+  business: sprout
+  input: |
+    [the skill]
+
+    The page: sprout.example/products/sprout, as text top to bottom, with
+    the notes on what was and wasn't seen (sprout/product-page.md).
+
+    Brand file: sprout/brand.md (buyers and their doubts, offers, the
+    guarantee, claims that are fine and risky).
+
+    No ad and no analytics this time. Judge the page on its own.
+  output: |
+    PAGE JOB: first purchase (subscription) from new visitors
+    VERDICT: The real price and the guarantee limit only reach someone
+    who reads every word, and the first screen sells "vitality" instead
+    of saying what Sprout is.
+    SCENT: MISSING: the ad, so not judged.
+
+    GLANCE (first screen inferred: bar, gallery, title, rating)
+      What is it? Some kind of gummy. "Superfood" doesn't say greens.
+      For whom? Not said.
+      Next? The button is likely below the first screen.
+      Stood out: "Limited Time Sale ... Save 52%" and "4.8/5.0 (100,000)"
+    SKIM
+      Gummies with 60+ ingredients, about half off, rated 4.8. The renewal
+      price, the text sign-up condition and the guarantee limit never show.
+
+    FINDINGS
+    1 | doubt | screen 2 | "$29.99" beside "DISCOUNT AUTO-APPLIED"; the
+        text sign-up condition is only in the footer
+        Fix: the condition next to the price | Sev 4 | Ease high | Data: yes
+    2 | doubt | screen 2 | "Renews at $49.99" in small type under the button
+        Fix: both prices together in the plan box | Sev 3 | high | yes
+    3 | glance | screen 1 | "Superfood Gummies" / "revive whole body vitality"
+        Fix: say what it is, greens, vitamins and fiber in one pack you
+        eat | Sev 3 | high | yes
+    4 | doubt | screen 1 | "Supports immunity + stress relief", "Promotes
+        mental clarity + energy"; the study measured 2 vitamins
+        Fix: remove until a claims check backs them | Sev 3 | high | no
+    5 | doubt | screen 2 | "30-Day Money-Back Guarantee"; "applies only to
+        your initial purchase" is in the last FAQ
+        Fix: "on your first order" beside the button | Sev 3 | high | no
+    6 | skim | screens 1-2 | 52% in the bar, "up to 55%" on the badge, 55%
+        in the pop-up | Fix: one discount, stated in money | Sev 3 | med | no
+    7 | skim | screen 1 and bottom | 4.8 (100,000) at the top, 4.75 (109,639)
+        in the widget | Fix: one rating with its source | Sev 2 | med | no
+    8 | skim | bottom | reviews sit at the very end
+        Fix: three reviews near the button | Sev 2 | med | yes
+
+    QUICK WINS THIS WEEK
+    - Findings 1, 2 and 5: the full price and guarantee terms at the button
+    - Finding 4: pull the two unbacked claims
+    - Remove "Limited Time Sale" (the price cut is "indefinitely")
+
+    TESTS
+    - First screen that says what it is and who it's for: more visitors
+      reach the plan box
+    - One-time purchase shown fairly, without "No First Order Discount":
+      fewer subscription-wary buyers leave at the plan box
+    Sample size can't be judged without analytics.
+
+    WHAT THE PAGE CAN'T TELL US
+    MISSING: the ad that sends most traffic, the phone first screen and
+    page speed, and the steps to cancel
+
+tweaks:
+  - what: The page's job
+    how: Name it ("this page is for first orders from ad traffic"). A page meant to raise order size is judged on bundles and add-ons, not on explaining the product.
+  - what: The ad
+    how: Add it and the scent check runs. Without it, the review starts from the glance.
+  - what: Analytics
+    how: Add conversion by step and the phone and desktop split. The "needs analytics?" column turns into sized findings, and the test list gets a real sample check.
+  - what: Store pages
+    how: For an online store, the store add-on covers home, collection, product, cart, checkout and after-purchase pages with the same three reads.
+
+judge:
+  - Every finding quotes or points to a specific place on the page.
+  - The ranking follows severity first, then position on the page.
+  - No money figure or predicted lift appears without analytics.
+  - No fix asks for proof, ratings, counts or urgency you don't have.
+  - The advice is about this page. "Improve your headline" with no specifics doesn't count.
+
+test:
+  - Give it a page with one problem you already know, such as no returns terms near the button. It should appear as a doubt finding rated 3 or higher.
+  - Run it with the ad, then without. With the ad, the scent check should compare words, picture and offer.
+  - Check that no finding has a money figure or predicted lift. Without analytics there should be none.
+  - Show the first screen to someone for five seconds and ask the four glance questions. Their answers should match the skill's.
+  - Ship the quick wins, then run it on the new page. The top severity should drop.
+
+improve:
+  - Set the page's job in step 1 to the one you always need, so you don't have to say it each time.
+  - Add your own house rules to read 3, such as how you always show subscription prices.
+  - Write your delivery, returns and cancellation terms into your brand file, so they stop coming back as missing.
+  - Save the findings table with the date in your brand file, so the next review can see what was fixed.
+  - Pair it with a quick landing page checklist for a fast pass first, and move up to a full audit with your sales numbers when you need fixes sized in money.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Any current chat AI that reads screenshots can run the three reads. Give it phone screenshots, top to bottom."}
+    - {name: "PageSpeed Insights", why: "Shows your page's real-user speed against Google's 'good' marks, so the phone check has numbers."}
+    - {name: "Evan Miller's sample size calculator", why: "Tells you how many visitors a test needs, so you know if it can finish in about a month."}
+  inputs:
+    - "A screen recording of someone new using the page on their phone, so the glance read has a real reaction"
+    - "Your delivery, returns and cancellation pages, so the doubt read checks the terms in full"
+    - "Recent customer questions about delivery, returns or price, so the findings match what stops buyers"
+
+terms:
+  - term: First screen
+    meaning: What shows on a phone before you scroll.
+  - term: Severity
+    meaning: How badly a problem stops a buyer, from 0 (not a problem) to 4 (stops the purchase).
+  - term: Scent
+    meaning: How well the page matches what the ad or link promised, so the buyer knows they're in the right place.
+  - term: Quick win
+    meaning: A serious problem with an easy fix you can ship this week without testing.

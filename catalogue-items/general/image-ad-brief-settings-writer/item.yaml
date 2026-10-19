@@ -1,0 +1,28 @@
+slug: image-ad-brief-settings-writer
+renamed_from: make-ai-build-the-ad-you-pictured
+name: "Image ad brief settings writer"
+summary: "Paste your brief and choices. Get a fixed-line brief, a conflict check and a score out of 100."
+category: general
+type: prompt
+role: make
+job: ads
+level: intermediate
+inputs:
+  - {type: brief, required: true}
+outputs:
+  - {type: brief}
+uses: []
+origin: own
+source_ids: [CES-142]
+old_name: taste
+version: 1.1.0
+credits:
+  - {title: "Prompting Guide - FLUX.2 [pro] & [max]", by: "Black Forest Labs", url: "https://docs.bfl.ai/guides/prompting_guide_flux2", used: "Describing what you want instead of negatives"}
+  - {title: "Nano Banana image generation", by: "Google AI for Developers", url: "https://ai.google.dev/gemini-api/docs/image-generation", used: "Describing scenes in full with camera and light terms"}
+  - {title: "Gpt-image-1.5 Prompting Guide", by: "OpenAI Cookbook", url: "https://developers.openai.com/cookbook/examples/multimodal/image-gen-1.5-prompting_guide", used: "Stating exclusions once, after the description"}
+tested:
+  on: 2026-10-19
+  business: sprout
+  model: claude-opus-5-5
+  judge: claude-sonnet-5-5
+  result: pass

@@ -1,0 +1,29 @@
+slug: sales-copy-readiness-checker
+renamed_from: know-if-your-copy-is-ready
+name: "Sales copy readiness checker"
+summary: "Paste finished copy and facts. Get ship, fix or rewrite, three fixes and a score out of 100."
+category: general
+type: skill
+role: check
+job: copy
+level: beginner
+inputs:
+  - {type: copy_draft, required: true}
+  - {type: brief, required: false}
+outputs:
+  - {type: audit_report}
+uses: [sales-copy-editor]
+origin: rebuilt
+source_ids: [CES-022]
+version: 2.0.0
+credits:
+  - {title: "Tested Advertising Methods", by: "John Caples", url: "https://en.wikipedia.org/wiki/John_Caples", used: "The opening must flag the reader and their gain (checks 1 and 2)"}
+  - {title: "How Users Read on the Web", by: "Jakob Nielsen, Nielsen Norman Group", url: "https://www.nngroup.com/articles/how-users-read-on-the-web/", used: "Most readers scan, so the skim must carry the argument (check 4); objective language is believed more (check 7)"}
+  - {title: "Breakthrough Advertising", by: "Eugene Schwartz", url: "https://en.wikipedia.org/wiki/Eugene_Schwartz", used: "Length and content follow how aware the reader is (check 12)"}
+  - {title: "Flesch-Kincaid readability tests", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Flesch%E2%80%93Kincaid_readability_tests", used: "The reading grade measure"}
+tested:
+  on: 2026-10-19
+  business: sprout
+  model: claude-opus-5-5
+  judge: claude-fable-5-1
+  result: pass

@@ -1,0 +1,204 @@
+new_slug: watercolor-video-clip-prompt-writer
+name: "Watercolor video clip prompt writer"
+summary: "Paste your watercolor script and attach product photos. Get painted clip prompts and a score out of 100."
+job: make-video-ads
+
+headline: "Watercolor video clip prompt writer"
+subhead: Give it a narrated watercolor ad script and product photos. It writes an avatar card, sheets, a storyboard and clip prompts that describe only what the paint does, stopping three times for your OK. You get every prompt, an edit list and a score out of 100.
+
+explain: |
+  AI video tools lose watercolor fast. Paint swirls through every frame. The result looks like a photo with a filter. A brush and a hand wander in because the prompt said "brush". The figure changes from shot to shot, and the label on your pack gets misspelled.
+
+  This skill runs the same six stages as every video block here. It picks who carries the ad, turns them into an image, and makes a sheet of every angle, plus product and set sheets. One material sentence (paper, pigment, texture, colors, light) is locked there and pasted into every prompt. Then a storyboard, with a frame and a card for each shot. Only then come clips that describe only what the paint does, like a thin see-through layer that darkens where it overlaps. You approve the avatar, the sheets and the storyboard before anything costs money.
+
+when:
+  - You have a watercolor ad script and need it made with AI image and video tools.
+  - Earlier tries looked like a filter, or the paint and the figure kept changing.
+  - You want to approve each step before you spend credits on video.
+
+you_give:
+  - The script with narration and picture notes (and its show plan and cast note, if you have them)
+  - Clean photos of your product's front, side and top, and its label text word for word
+  - What the product is made of, as your brand lists it
+  - Your tools and clip lengths, and whether your video tool makes sound (optional)
+you_get:
+  - An avatar card to approve, then reference image prompts and a pick
+  - Character, product and set sheets, with the lock lines every prompt repeats
+  - A storyboard with a frame prompt and a shot card for every shot
+  - Clip prompts that describe only the paint change, and an edit list
+  - A score out of 100 for the prompts, with one line for each check they missed
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your watercolor script and attach the product photos. Type out the label text.
+  - Approve the avatar card, then make the reference images and pick one.
+  - Make the sheets and approve them with the lock lines, then approve the storyboard.
+  - Make the clips from the approved frames, record the narration, and cut the edit from the edit list.
+
+how_it_works:
+  - title: Takes in the script
+    text: Reads the show job and paint technique, and where the change starts, stops and must never cross.
+  - title: Picks the avatar
+    text: One painted adult, hands only, or the product alone, written as a card. You approve it.
+  - title: Turns it into an image
+    text: Three or four painted reference images of the avatar, and the pick.
+  - title: Makes sheets and lock lines
+    text: Every angle of the figure, the product from your photos, each empty place, and one material sentence. You approve them.
+  - title: Storyboards every shot
+    text: A frame and a shot card per shot, checked for continuity. You approve the whole board.
+  - title: Turns it into video
+    text: Start and end frames, clip prompts that describe only the paint, the narration, then the edit and a final claims check.
+
+output_shape: |
+  STAGE 0  SCRIPT IN   Turn: <show job>, <technique>. Starts <where>,
+           stops <where>, never crosses <the label>.
+  STAGE 1  AVATAR CARD (approve)
+           Role <...> | Age <...> | Look <...> | Clothes <...>
+           Props <...> | Voice <...> | Never changes <...>
+  STAGE 2  REFERENCE IMAGES  <prompt>  Make <3 or 4>. Pick: <which, why>
+  STAGE 3  SHEETS AND LOCK LINES (approve)
+           MATERIAL <sentence>  FIGURE <line>  PRODUCT <line>
+           Character sheet <angles, poses, size>  Product sheet <views>
+           Set sheet <each place, empty>
+  STAGE 4  STORYBOARD (approve)
+           F<n> <frame prompt with [MATERIAL]>  Attach: <sheet> = <job>
+           Card <n>: <framing> | <camera> | <action> | "<line>" | <s> | <sound>
+           Continuity <180° line, hands, product state>
+  STAGE 5  CLIP <n> (<s>, start F<n>, end <frame or none>)
+           Camera <one move>  0 to <n> s <...>  Fixed <...>  End <...>
+           VOICE <...>  EDIT <order, captions, overlay, end card, safe zone>
+           MISSING: <facts it needed>
+  SCORE  <n>/100 (<checks passed> of 7 checks)
+  Missed: <one line per check still missed>
+
+example:
+  business: sprout
+  input: |
+    [the skill]
+
+    Script (from the watercolor ad script skill), about 30 s.
+    Show plan: build, glazing. Leaf glazes stack until they match the
+    pouch's deep forest green. Cold-press, light granulation.
+    3 "Here are those greens, one layer at a time." One pale kale leaf.
+    4 "Kale. Spinach. Spirulina. Broccoli. Wheatgrass." THE TURN.
+    5 "Sixty-plus ingredients, twenty-one vitamins and minerals, six
+      grams of fiber." The pouch where the layers meet.
+    6 "In one pack you tear and eat." Hand, torn daily pack, bears.
+    (lines 1-2 shelf, 7-8 offer and close)
+    Cast note: hands only, in line 6. The pouch carries the ad.
+    Photos attached: pouch front, side and top; one daily pack.
+    Pouch: glossy deep green, "Sprout" in big yellow letters, yellow
+    bear face top right, "28 Daily Packs" at the bottom. Pack torn
+    straight across the top only. Video tool: 8-second clips, takes an
+    end frame, no sound.
+  output: |
+    STAGE 0  SCRIPT IN  Turn: build, glazing. Starts on the pale kale
+    leaf at line 4, stops settled before line 5, never crosses the
+    pouch. 8 lines, 4 clips. Claim: line 5, said in full.
+
+    STAGE 1  AVATAR CARD (approve)
+    Role: hands only, line 6. An adult's right hand, loosely painted,
+    warm medium skin tone, a cream knit cuff. Props: one daily pack
+    torn straight across the top, small deep-green bears in the palm.
+    Voice: none on screen; calm off-screen narrator. Never changes:
+    the right hand, the cream cuff, the tear only across the top.
+
+    STAGE 2  REFERENCE IMAGES
+    A loosely painted watercolor right hand of an adult, palm up, a
+    cream knit cuff, on bare paper. [draft MATERIAL]. Make 4. Pick
+    the loosest edges, so the pouch stays the crispest thing.
+
+    STAGE 3  SHEETS AND LOCK LINES (approve)
+    MATERIAL  Transparent watercolor on warm-white cold-press paper
+    with a visible tooth, pigment pooling slightly darker at the edge
+    of each dried shape, light granulation in the greens, colors kept
+    to grey-green, leaf green, yellow-green, blue-green and deep forest
+    green, bare paper as the brightest light.
+    HAND  An adult's loosely painted right hand, warm medium skin tone,
+    a cream knit cuff.
+    POUCH  A painted deep forest green stand-up pouch, crisp hard
+    edges, a small yellow bear face top right; label "Sprout" in large
+    sunflower-yellow letters, "28 Daily Packs" small at the bottom.
+    Hand sheet: palm up, palm side, back, three-quarter left and right,
+    holding the torn pack. Pouch sheet: front, side, top, from the
+    photos. Set sheets: the shelf of plain tubs, empty; bare paper.
+
+    STAGE 4  STORYBOARD (approve)
+    F3 (lines 3-4) A single pale painted kale leaf, still wet and
+    shiny, lower centre of bare paper. [MATERIAL]. Flat and square to
+    the sheet. Avoid field: photograph, 3D render, brush, hand, desk.
+    Card 3: close | locked-off | the leaf dries, then four leaf glazes
+    stack, each overlap deeper | "Here are those greens..." | 8 s | none
+    Continuity: the right hand in every hand shot; the pack is torn
+    from line 6 on; the pouch is never torn.
+
+    STAGE 5  CLIP 2 (8 s, start F3, end: a settled deep green stack)
+    Camera: locked-off, square to the sheet. 0 to 4 s: the kale leaf
+    dries from shiny to matte. 4 to 7 s: four thin see-through green
+    layers spread over it one after another, each shaped like a leaf;
+    where they overlap, the color deepens toward forest green. 7 to 8
+    s: the last wet edge stops and dries matte. Fixed: the paper and
+    every dry shape. Narration: lines 3 and 4. Takes: 3.
+    VOICE  Narrator recorded separately in a stock voice, about 2.2
+    words a second. Nobody on screen speaks, so no lip-sync.
+    EDIT  Clips 1 to 4 in order, cuts. Captions inside the safe zone.
+    If the pouch label is wrong in clip 4, lay the real label from the
+    photo over it. End card: $29.99 first order with text sign-up.
+    Renews at $49.99 every 4 weeks. Check line 5 against the claim.
+    MISSING: the daily pack's real size, for the hand sheet.
+    (cut for length: the full run also had F1, F5, F6, F7 and clips 1,
+    3 and 4)
+
+tweaks:
+  - what: Who carries it
+    how: One painted figure, hands only, or the product alone. With no figure, stages 1 to 3 become the product and set sheets.
+  - what: Paper
+    how: Rough paper with granulation feels earthy. Hot-press is smooth and keeps fine shapes and label letters crisp. Change it in the material sentence and every prompt follows.
+  - what: Camera
+    how: Locked-off is the default and the safest. Ask for one slow dolly in on the held product shot, never two moves in one clip.
+  - what: Your video tool
+    how: Give its clip length and say if it takes an end frame or makes sound. The timed steps, the turn's end frame and the sound line change to fit.
+
+judge:
+  - It stopped for your approval after the avatar card, the sheets and the storyboard.
+  - The material sentence and lock lines are word for word the same in every image prompt.
+  - Each clip prompt names one camera move and at most one paint change.
+  - The turn is written as what wet paint does, never as a brush at work.
+  - The product's label lines are short, in quotes, and match your pack.
+  - Every frame reads as watercolor on paper, never as a filtered photo.
+
+test:
+  - Make the product sheet first and hold it next to your real pack. If a label line is wrong, plan the overlay before making anything else.
+  - Flick through the storyboard frames with no sound. Ask someone who hasn't read the script what the paint showed. If they can't say, the turn isn't reading.
+  - Make the turn's clip and watch the paper. If the grain slides or more than one thing moves, lock the camera and name the fixed parts more plainly.
+  - Search every prompt for "brush". There should be none outside the avoid field.
+
+improve:
+  - Save your approved material sentence and lock lines in your brand file, so every painted ad uses the same paper and colors.
+  - Keep your approved sheets and list them in "What you need", so new ads start at stage 4.
+  - Add your video tool, clip length and end-frame support to "Your tools", so the timing fits first time.
+  - Add any miss you keep seeing to the fixes table in stage 5, with the change that cured it.
+  - Pair it with the skill that writes a watercolor ad script, if you don't have a script yet.
+
+works_best_with:
+  tools:
+    - {name: "Nano Banana", why: "Takes up to 14 reference images and keeps up to four characters the same, so your sheets and frames match."}
+    - {name: "Veo", why: "Starts each clip from your approved frame and can end on a second frame, in 8-second clips."}
+    - {name: "Kling", why: "Takes up to 7 reference images in one video job, so figures and product stay the same from shot to shot."}
+    - {name: "ElevenLabs", why: "Reads the narration in a stock voice from its library, with tags for pauses and pace."}
+  inputs:
+    - "A scan of a real watercolor you like, attached as a style reference, so edges and paper look painted"
+    - "The flat label artwork, so the label you put back in editing matches the pack exactly"
+    - "The recorded narration before you make clips, so each clip is timed to its line"
+
+terms:
+  - term: Avatar card
+    meaning: A short description of who or what carries the ad (look, clothes, props, voice, what never changes). You approve it before any image is made.
+  - term: Lock lines
+    meaning: Fixed lines, like the material sentence, pasted word for word into every prompt so every frame matches.
+  - term: Material sentence
+    meaning: One fixed sentence describing the paper, paint, texture, colors and light.
+  - term: Start frame
+    meaning: The approved still a video tool animates from. The clip prompt then describes only what moves.
+  - term: 180° line
+    meaning: An imaginary line through the action. Keeping the camera on one side of it stops people and things swapping sides between shots.

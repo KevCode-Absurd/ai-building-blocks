@@ -1,0 +1,204 @@
+new_slug: customer-buying-reasons-finder
+name: "Customer buying reasons finder"
+summary: "Paste reviews or support emails. Get buying reasons in customers' exact words and a score out of 100."
+job: understand-customers
+
+headline: "Customer buying reasons finder"
+subhead: Give it your reviews, support tickets, call notes or survey answers. It copies out every phrase that shows why people switched or nearly didn't, and counts separate people. You get the reasons ranked in their exact words, risky quotes flagged and a score out of 100.
+
+explain: |
+  Your customers have already written your best ad lines. They're sitting in reviews and support emails, in words no copywriter would invent. But reading 200 reviews and remembering the one you liked is how teams end up building ads on a single person's opinion.
+
+  This skill reads customer words phrase by phrase and copies out the ones that matter, exactly as written, typos included. It tags each one with the force it shows, an idea from jobs-to-be-done research. Push is what was wrong with the old way. Pull is what drew them to you. Anxiety is what nearly stopped them, and habit is what kept them stuck. It adds a fifth tag, result, for what they got. Then it groups phrases that make the same point and ranks each group by how many separate people said it. It flags risky quotes and points out reasons your brand never mentions. One rule holds it together. No source, no line.
+
+when:
+  - You're about to write ads or a product page and want the words to come from customers, not from your team.
+  - You have hundreds of reviews and no idea which points come up most.
+  - Your ads all say the same three things and you suspect customers care about something else.
+
+you_give:
+  - Customer words such as reviews, tickets, call notes, survey answers or forum posts, each with an ID and date
+  - Flags like verified buyer, rating, product, or "got it free" (optional)
+  - Your own product page, to see what you already say (optional)
+  - Your brand file with product facts and customer profiles (optional)
+you_get:
+  - A ranked map of reasons by force, each with its best exact quote, backups and how many people said it
+  - The reasons customers give that your brand never says
+  - A ranked list of what nearly stopped them, in customers' words
+  - A "check before use" list of risky quotes, with the reason each is flagged
+  - A score out of 100 for how many of its own checks the map passes, with each miss named
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste or attach your reviews with an ID and date for each. A review export from your reviews app works, and so does a numbered list.
+  - Add support tickets or call notes if you can. That's where the anxieties are.
+  - Add your product page text so it can tell which reasons you already use.
+  - Read the "never said by the brand" list first. Those are the reasons worth testing next.
+
+how_it_works:
+  - title: Cleans and scopes
+    text: Removes names and contact details, keeps every entry that gives a reason however short, and flags anything older than your last product or price change.
+  - title: Copies phrases exactly
+    text: Pulls out every phrase that shows a force, word for word, and checks each one appears in its source.
+  - title: Tags the force
+    text: Push, pull, anxiety, habit or result, plus the moment where the phrase gives it.
+  - title: Counts people
+    text: Groups phrases that make the same point and counts separate people, not mentions. A pattern needs five people across two kinds of source.
+  - title: Finds what you never say
+    text: Flags any top-five reason missing from your own pages. A person confirms it before it's called a gap.
+  - title: Checks if it's enough
+    text: Says whether the newest sources still add new reasons. If they do, more sources will change the map.
+  - title: Flags risky quotes
+    text: Lists quotes that hint at a health result, an unusual result, a competitor or a claim you can't support, so a person decides.
+  - title: Scores the map
+    text: Goes through its own checks, such as exact quotes and counts of separate people, fixes what it can, and scores checks passed out of all checks, times 100.
+
+output_shape: |
+  FORCES MAP (ranked by separate people)
+  # | Reason | Force | People (n, share, channels) | Pattern or thin
+    | Best quote [ID] | Backups [IDs] | Brand says it?
+
+  NEVER SAID BY THE BRAND
+  <reason>: <n people>
+
+  WHAT NEARLY STOPPED THEM
+  1 "<exact words>" [<IDs>]  <n people>
+
+  CHECK BEFORE USE
+  "<quote>" [<ID>]: <why it's flagged>
+
+  NOTES
+  Sources: <n>, <kinds>, <date range>. Dropped: <...>. Saturation: <...>.
+  What this can't tell you: <...>
+
+  SCORE
+  <passed> of <all> checks = <score> out of 100
+  Missed: <one line per check still missed, or none>
+
+example:
+  business: sprout
+  input: |
+    [the skill]
+
+    Customer sources: 20 public reviews, numbered R1 to R20, with where
+    each came from (brand site, brand site widget, retailer, review site),
+    plus two short fragments, F1 and F2 (sprout/reviews.md). Captured
+    over two months. No dates per review, no verified-buyer flags, no
+    star ratings.
+
+    Our product page text is below, so you can see what we already say.
+    [sprout/product-page.md]
+  output: |
+    FORCES MAP (22 sources kept, ranked by separate people)
+    1 Digestion feels normal again | Result | 5 of 22 | 3 channels |
+      pattern
+      Best: "Feel lighter, less bloated and overall good." [R10]
+      Backups: R9, R7, R8. R7, R8 and R11 are on the check-before-use
+      list. Brand says it: yes ("Supports digestion and gut health").
+    2 The old way was a chore | Push | 5 of 22 | brand site only |
+      pattern, one channel
+      Best: "not having to clean a shaker bottle or extra dishes for
+      greens stuff in powder form" [R6]
+      Backups: "the drink was definitely gritty/chalky" [R3] / "I've
+      been choking on [a big-name greens powder] for the last few
+      years" [R4] / "I also stopped buying separate probiotic gummies,
+      b12 gummies, and multivitamin gummies." [R5]
+      Brand says it: yes, inside a closed section.
+    3 Tastes like a treat | Pull | 4 of 22 | thin
+      Best: "[Sprout] literally tastes like fruit snacks I ate as a
+      kid." [R12]  Backups: R6, R14, R16
+    4 Easy to grab and go | Pull | 3 of 22 | thin
+      Best: "So easy to grab and eat on my way to the billion things I
+      have to do as a mom." [R15]  Backups: R5, R6
+    5 I finally stuck with it | Result | 2 of 22 | thin
+      Best: "[Sprout] has been the one thing I've been able to stick
+      to." [R1]  Backup: R2
+    6 The kids love it too | Result | 2 of 22 | thin
+      Best: "They think it's a treat." [R16]  Backup: R17
+    Habit: no phrases found. People who stayed with their powder don't
+    write reviews here.
+
+    Every best phrase is unverified (no verified-buyer flags), and most
+    come from the brand's own site. Keep them out of paid ads until you
+    can confirm them.
+
+    NEVER SAID BY THE BRAND
+    Reason 6, "the kids love it too", isn't on the adult product page.
+    Reasons 2 and 5 are said only inside closed sections.
+
+    WHAT NEARLY STOPPED THEM
+    1 Subscriptions feel like a trap: "I hate subscriptions because I
+      feel like they are a trap" [R17], "I have tried multiple times to
+      cancel my subscription." [R20]  2 people
+    2 The taste at first: "I thought the first pack I tried tasted
+      terrible" [R18], "the taste is off." [R19]  2 people
+    3 Price: "They are expensive" [F1]  1 person
+    4 Sugar-Free and the stomach: "The sugar free [Sprout] worked too
+      well." [F2]  1 person
+
+    CHECK BEFORE USE
+    "This is huge for someone who suffers from chronic IBS!" [R8]: names
+      a condition
+    "I've been on a glp1 for about a year now and was always constipated
+      not anymore" [R11]: health claim tied to a medication
+    "My bowel movements are normal for the 1st time in 15 years!" [R7]:
+      a strong result that could read as typical
+    "$94 a month" [R3]: a competitor's price, as one customer remembers it
+
+    NOTES
+    Sources: 22 (20 reviews, 2 fragments), 4 kinds, over two months.
+    Dropped: none; every entry gives a reason. Saturation: not reached.
+    The last 5 sources in the file added 3 reasons not seen before
+    (the taste at first, price, Sugar-Free), so more sources will
+    change this map. MISSING: dates
+    per review. This can't tell you why people who didn't buy said no.
+
+tweaks:
+  - what: Which sources
+    how: Add support tickets and call notes, not just five-star reviews. Anxieties live in mixed reviews and tickets, and those make the best FAQ and doubt-answering ads.
+  - what: Verified-buyer flags
+    how: Include them if your export has them. Without them, every best quote is marked "unverified" and kept out of paid ads.
+  - what: Your product page
+    how: Paste it and the "brand says it?" column fills in, which is how the skill spots reasons customers give that you never mention.
+  - what: Rerunning it
+    how: Paste only new sources and the existing map. It keeps your groups and marks what's new, what's fading and what clashes with your customer profiles.
+
+judge:
+  - Every quote appears word for word in its source, with spelling mistakes kept.
+  - Counts are separate people, not mentions. One person saying it three times counts once.
+  - Nothing is called a pattern with fewer than five people, and one-channel patterns say so.
+  - The "check before use" list exists, even if it's empty.
+  - No quote has a name, initial or city that wasn't in the source.
+
+test:
+  - Pick three quotes from the map and search for them in your review export. Each should appear word for word, typos included.
+  - Paste one review twice under the same source ID. The count for its reason should not go up.
+  - Compare the top reasons with what your support team hears most. A reason you know well should be on the map. If it's missing, add tickets as a source.
+  - Look for health or result claims among the best phrases. Every one should also sit on the "check before use" list.
+
+improve:
+  - "Add your product's risky topics to step 10 (for a supplement: digestion, weight, medication; for a loan: fees, credit scores), so quotes about them always land on the check list."
+  - Raise the pattern bar in step 5 if you have thousands of sources. Five people is a floor for small sets, not a rule for big ones.
+  - Add the moment tag to your survey. Ask buyers what happened that made them start looking. It fills the push column fast.
+  - Save the finished map to the customer profiles in your brand file, with each reason's status, so you don't rebuild the same ideas next quarter.
+  - Pair it with a skill that checks whether your product page answers these anxieties, and a writing skill that builds one ad per reason.
+
+works_best_with:
+  tools:
+    - {name: "Claude", why: "Every current Claude model reads up to 1 million tokens, so hundreds of reviews fit in one chat with their source IDs."}
+    - {name: "Gemini", why: "Also takes long inputs, and works inside Google Sheets if your reviews live there."}
+    - {name: "Google Sheets", why: "One row per quote with its source ID lets you count separate people with COUNTUNIQUE, so counts can be checked."}
+  inputs:
+    - "Survey answers to 'what nearly stopped you?', so the list of worries isn't built from reviews alone"
+    - "Questions from people who asked but didn't buy, so the map covers more than happy buyers"
+    - "The date of your last product, price or plan change, so the scope step keeps the right sources"
+
+terms:
+  - term: Force
+    meaning: What a phrase shows about switching. Push (what was wrong before), pull (what drew them), anxiety (what nearly stopped them), habit (what kept them stuck) or result (what they got).
+  - term: Pattern
+    meaning: A reason said by at least five separate people, across at least two kinds of source.
+  - term: Saturation
+    meaning: The point where new sources stop adding new reasons. Until then, more sources will change the map.
+  - term: Verified buyer
+    meaning: A review the seller confirmed came from someone who actually bought the product.

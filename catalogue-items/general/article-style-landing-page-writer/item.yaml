@@ -1,0 +1,35 @@
+slug: article-style-landing-page-writer
+renamed_from: win-over-strangers-with-article-style-page
+name: "Article-style landing page writer"
+summary: "Paste your facts, offer and ad. Get an article-style page and a score out of 100."
+category: general
+boards: [ecommerce]
+type: skill
+role: make
+job: page
+level: advanced
+inputs:
+  - {type: brand_brain, required: true}
+  - {type: offer, required: true}
+  - {type: ad_copy, required: false}
+  - {type: voc_reviews, required: false}
+  - {type: persona, required: false}
+outputs:
+  - {type: landing_page}
+uses: [ad-matched-landing-page-writer, unanswered-customer-question-finder]
+origin: rebuilt
+source_ids: [CES-005, CES-050]
+version: 2.0.0
+credits:
+  - {title: "Native Advertising: A Guide for Businesses", by: "US Federal Trade Commission", url: "https://www.ftc.gov/business-guidance/resources/native-advertising-guide-businesses", used: "Label wording (\"Advertisement\"), placing the label above the headline, and keeping it on the click-through page"}
+  - {title: "Breakthrough Advertising", by: "Eugene Schwartz", url: "https://en.wikipedia.org/wiki/Eugene_Schwartz", used: "Moving a cold reader up the awareness levels, one step per move"}
+  - {title: "Ogilvy on Advertising", by: "David Ogilvy", url: "https://en.wikipedia.org/wiki/David_Ogilvy_(businessman)", used: "Editorial-style layouts draw readers; put a caption under every picture"}
+  - {title: "The Layer-Cake Pattern of Scanning Content on the Web", by: "Nielsen Norman Group", url: "https://www.nngroup.com/articles/layer-cake-pattern-scanning/", used: "Subheads that carry the argument for readers who scan only headings"}
+  - {title: "Information Scent", by: "Raluca Budiu, Nielsen Norman Group", url: "https://www.nngroup.com/articles/information-scent/", used: "The first screen must keep the promise of the link that brought the reader"}
+  - {title: "eCommerce CRO masterclass", by: "Blue Sense Digital", url: "https://www.youtube.com/channel/UCtOnZyHshTvH1GoboRzHqjw", used: "Early ideas on article-style pages, rebuilt in our own words"}
+tested:
+  on: 2026-10-19
+  business: sprout
+  model: claude-opus-5-5
+  judge: claude-fable-5-1
+  result: pass

@@ -1,0 +1,40 @@
+slug: ad-test-brief-writer
+renamed_from: get-three-ad-ideas-and-nine-versions
+name: "Ad test brief writer"
+summary: "Paste your brand file and results. Get three ideas, nine designer-ready versions and a score out of 100."
+category: general
+boards: [ecommerce]
+type: skill
+role: make
+job: ads
+level: advanced
+inputs:
+  - type: brand_brain
+    required: true
+  - type: performance_sheet
+    required: false
+  - type: voc_reviews
+    required: false
+  - type: competitor_set
+    required: false
+  - type: audit_report
+    required: false
+  - type: brief
+    required: false
+outputs:
+  - {type: brief}
+uses: [untried-ad-idea-finder]
+origin: rebuilt
+source_ids: [CES-013]
+old_name: ad brief, three ideas and nine versions
+version: 2.0.0
+credits:
+  - {title: "The Habit of the Present: Forces Friday on Jobs-to-be-Done", by: "Chris Spiek and Bob Moesta, Jobs-to-be-Done Radio", url: "https://jobstobedone.org/radio/forces-friday-habit-of-the-present/", used: "Doubts grouped as habit of the present and anxiety about the new"}
+  - {title: "Breakthrough Advertising", by: "Eugene M. Schwartz", url: "https://breakthroughadvertisingbook.com/", used: "Buyer knowledge levels behind the three stages"}
+  - {title: "Meta Andromeda and Creative Diversification: 7 Examples Explained", by: "Jon Loomer", url: "https://www.jonloomer.com/meta-andromeda-creative-diversification/", used: "Versions must differ in visual and message, not small edits"}
+tested:
+  on: 2026-10-19
+  business: sprout
+  model: claude-opus-5-5
+  judge: claude-fable-5-1
+  result: pass

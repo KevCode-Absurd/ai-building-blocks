@@ -1,0 +1,29 @@
+slug: founder-call-planner
+renamed_from: fill-brand-file-gaps-in-one-founder-call
+name: "Founder call planner"
+summary: "Attach your brand file. Get a founder call plan, filed answers and a score out of 100."
+category: general
+boards: [ecommerce]
+type: skill
+role: source
+job: brand
+level: intermediate
+inputs:
+  - {type: brand_brain, required: true}
+outputs:
+  - {type: brand_brain}
+uses: [website-brand-file-builder]
+origin: own
+source_ids: [CES-040]
+old_name: founder-interview
+version: 2.0.0
+credits:
+  - {title: "The Mom Test", by: "Rob Fitzpatrick", url: "https://www.momtestbook.com/", used: "Ask about real past moments, not opinions or habits"}
+  - {title: "User Interviews 101", by: "Maria Rosala and Kara Pernice, Nielsen Norman Group", url: "https://www.nngroup.com/articles/user-interviews/", used: "Open questions, follow-up probes, no leading questions"}
+  - {title: "Federal Trade Commission Announces Final Rule Banning Fake Reviews and Testimonials", by: "US Federal Trade Commission", url: "https://www.ftc.gov/news-events/news/press-releases/2024/08/federal-trade-commission-announces-final-rule-banning-fake-reviews-testimonials", used: "Why rights to people, reviews and AI presenters are asked and filed with limits"}
+tested:
+  on: 2026-10-19
+  business: sprout
+  model: claude-opus-5-5
+  judge: claude-fable-5-1
+  result: fail

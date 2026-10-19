@@ -1,0 +1,204 @@
+new_slug: watercolor-video-ad-script-writer
+name: "Watercolor video ad script writer"
+summary: "Paste your idea and product facts. Get a watercolor video script, cast note and score out of 100."
+job: make-video-ads
+
+headline: "Watercolor video ad script writer"
+subhead: Give it your selling idea, product facts and approved claims. It picks the real watercolor technique that shows what a camera can't, and tests every painted change as a claim. You get a 15 to 40 second script, a cast note and a score out of 100.
+
+explain: |
+  Some selling ideas are hard to film. Sixty ingredients in one pack. A scent filling a room. A tense evening going soft. Paint can show them, and a calm watercolor stands out in a loud feed. The risk is a pretty painting where nothing sells, or a spreading color that quietly promises more than you're allowed to say.
+
+  This skill starts from the job. It asks what the turning shot must show (a reveal, something spreading, two things joining, parts adding up, a mood calming, or the product held still) and picks the watercolor technique painters use for exactly that. Glazing stacks see-through layers, so it suits a long ingredient list. Lifting pulls color off the paper, so a shape appears. Then it reads every painted change as a sentence and keeps only the ones your claims back.
+
+  It ends with a cast note: one painted figure, hands only, or the product alone, and why. The skill that turns a watercolor script into shots takes it from there. Want a still instead? Use "Watercolor image ad maker".
+
+when:
+  - Your product sells on what's inside it, a scent or a mood, and plain footage looks flat.
+  - You want a calm ad for people who haven't met you yet.
+  - You want a script ready to hand to an AI video process, with the cast already chosen.
+
+you_give:
+  - The reason someone buys, what the buyer knows, the selling idea and the length
+  - A photo of your product (attach it; your AI can see pictures), its biggest label lines and what it's made of
+  - Your approved claims, banned claims and offer
+  - Your buyer's moment and words, brand colors and voice (optional)
+you_get:
+  - A show plan with the technique, what changes and the claim it implies
+  - A line-by-line script with picture notes, word counts and a clip split
+  - A list of every painted change with its source, and the ones it rejected
+  - A cast note saying who should carry the ad, and why
+  - A score out of 100 for how many of its own checks the script passes, with any it missed
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your product facts, ingredient list and approved claims underneath.
+  - Write the selling idea in one sentence ("a whole shelf of greens in one small pack" or "a full tool kit that fits in a glovebox") and the length.
+  - Read the show plan first. If the implied sentence isn't something you can say, ask for another show job.
+  - Take the script and cast note to the skill that turns a watercolor script into shots. It runs the video process from there.
+
+how_it_works:
+  - title: Checks the fit
+    text: Paint suits contents, scent, mood and many parts. It tells you to film instead when proof or real texture is the point.
+  - title: Names what the key shot must show
+    text: One of six jobs (reveal, spread, join, build, calm, hold), chosen from your selling idea.
+  - title: Picks the real technique
+    text: Each job has a painter's technique that does it, like glazing for many parts or lifting for a reveal.
+  - title: Sets paper, texture and color
+    text: Cold-press, rough or smooth paper, optional granulation or dry brush, and colors that won't mix to mud.
+  - title: Reads every change as a claim
+    text: Writes the sentence each painted change implies and keeps it only if your claims back it.
+  - title: Writes the script
+    text: Words planned by time, 5 words or fewer over the turn, and the offer over the settled painting.
+  - title: Writes the cast note
+    text: Picks one painted figure, hands only, or the product alone to carry the ad, and says why.
+
+output_shape: |
+  SHOW PLAN
+  Selling idea: <one sentence>
+  Show job: <reveal, spread, join, build, calm, hold>
+  Technique: <glazing, lift-out, wet-in-wet charge...>
+  What changes: <what the viewer sees>
+  It implies: "<sentence>"  Source: <claim or fact>
+  Paper and color: <paper, texture, 3 or 4 colors>
+
+  # | Narration | Picture | What moves
+  <n> | "<line>" | <what's painted> | <one wet edge, or settled>
+  <n> | "<5 words or fewer>" | THE TURN: <technique> | <change>
+
+  Timing: <words> at 2.2 a second = <seconds>. Clips: <split>
+
+  CLAIMS PAINTED
+  <change> = <source>
+  Rejected: <change> (<why>)
+
+  CAST NOTE  <figure, hands only, or product alone>: <why>
+  MISSING: <facts it needed>
+
+  SCORE  <n>/100 (<passed> of <total> checks passed)
+  Missed: <one line per check missed, or none>
+
+example:
+  business: sprout
+  input: |
+    [the skill]
+
+    About 30 seconds.
+    Selling idea: a whole shelf of greens in one small pack.
+    Buyer: the quitter who wants to stick, 28 to 45. Gave up greens
+    powders ("gritty/chalky"). Knows the fixes, not Sprout.
+    Product: Sprout Low Sugar, 28 daily packs. Glossy deep green
+    stand-up pouch, big yellow wordmark "Sprout", yellow bear face top
+    right, "28 Daily Packs" at the bottom. Daily pack torn straight
+    across the top only. Small opaque deep-green gummy bears.
+    Ingredients include organic kale, spinach, spirulina, chlorella,
+    wheatgrass, broccoli and beet; acai, goji, pomegranate.
+    Approved: "60+ ingredients, 21 vitamins & minerals, and 6g fiber"
+    in 1 pack.
+    Never say: fix, energy or immunity results, weight loss.
+    Colors: forest green #00582D, warm cream #FFF7DF, sunflower
+    yellow #FFCC2E.
+    Offer: $29.99 first order with the text sign-up, renews at $49.99
+    every 4 weeks.
+  output: |
+    SHOW PLAN
+    Selling idea: a whole shelf of greens in one small pack.
+    Show job: build (many parts adding up).
+    Technique: glazing. See-through green leaf shapes are laid one
+    over another on dry paint. Each overlap reads darker, until the
+    stack matches the pouch's deep forest green.
+    It implies: "These greens are in this pack." Source: ingredients
+    panel.
+    Paper and color: cold-press, light granulation in the greens.
+    Before the turn: grey-green, warm grey, bare cream paper. The turn:
+    leaf green, yellow-green, blue-green. Sunflower yellow on the
+    pouch only.
+
+    1 | "Your shelf has a tub for every green." | A painted shelf of
+        plain unlabelled tubs and a shaker, crisp wet-on-dry edges. |
+        One damp edge still creeping at the shaker's base.
+    2 | "Most of them stopped getting opened." | Closer: a tub lid
+        with a dusty rim in dry brush. | Settled.
+    3 | "Here are those greens, one layer at a time." | Bare cream
+        paper with one pale painted kale leaf. | The kale glaze dries.
+    4 | "Kale. Spinach. Spirulina. Broccoli. Wheatgrass." | THE TURN:
+        glazing. Four more leaf glazes land over the kale, one by one;
+        every overlap goes a shade deeper. | About 3 seconds, 5 words.
+    5 | "Sixty-plus ingredients, twenty-one vitamins and minerals, six
+        grams of fiber." | Where the layers meet, the painted pouch
+        stands in the same deep green, crispest edges on the sheet,
+        "Sprout" in yellow, "28 Daily Packs" at the bottom. | Settled.
+    6 | "In one pack you tear and eat." | A loosely painted adult hand
+        holds a daily pack torn straight across the top, small green
+        bears in the palm. | One slow tilt of the hand.
+    7 | "Sprout. First order $29.99 with the text sign-up." | Held on
+        the pouch, bare paper above. On screen: $29.99 first order with
+        text sign-up. Renews at $49.99 every 4 weeks. | Dry and still.
+    8 | "For anyone who quit the powder." | Same frame, held. | Still.
+
+    Timing: 60 words at 2.2 a second, plus the 3-second turn, is about
+    30 seconds. Clips of 8 s: 1 = lines 1-2 (14 words), 2 = lines 3-4
+    (the turn), 3 = lines 5-6 (17 words), 4 = lines 7-8, held and dry.
+
+    CLAIMS PAINTED
+    Kale, spinach, spirulina, broccoli, wheatgrass = ingredients panel
+    The stack becoming the pouch = same list, all in one pack
+    Line 5 = approved claim, said in full
+    Dusty tub rim = the buyer's own words about powders; no brand shown
+    Rejected: a glow spreading from the pouch into a figure (implies
+      an energy result, which is banned)
+    Rejected: beet, acai and pomegranate (their red-violets would mix
+      to brown with the greens)
+
+    CAST NOTE  Hands only: one loosely painted adult hand in line 6,
+    holding the torn pack. The ad is about what's inside the pouch, so
+    the pouch carries it; a face would pull the eye from the greens.
+    MISSING: a clean front photo of the pouch, so the full label can be
+    laid over the painted one in editing.
+
+tweaks:
+  - what: The show job
+    how: Ask for reveal to show one hero ingredient, spread for a scent or warmth, join for an ingredient becoming the product, calm for a mood, or hold for buyers who already know you.
+  - what: Paper and texture
+    how: Rough paper with granulation feels earthy and handmade. Smooth hot-press keeps fine detail and label shapes crisp. Dry brush makes anything look dusty or chalky.
+  - what: Who carries it
+    how: Ask for one painted figure when the problem lives in someone's day, hands only when the product needs holding, or the product alone for a "what's inside" story.
+  - what: Length
+    how: 15 to 40 seconds. It counts words at about 2.2 a second, so a 20-second ad has room for about 40 words.
+
+judge:
+  - The show plan's implied sentence is something your claims let you say.
+  - There is one turn, and its technique fits the job (glazing for many parts, lifting for a reveal).
+  - Every painted ingredient is on your list, and nothing shows a body changing.
+  - No shot mixes two opposite colors, so nothing turns brown.
+  - The product has the crispest edges and only real label words.
+  - The narration fits the length at a calm pace, with 5 words or fewer over the turn.
+  - The cast note makes one choice and gives a reason you agree with.
+
+test:
+  - Give it a short ingredient list and ask for a "what's inside" ad. Every painted ingredient should be on your list.
+  - Ask for an ad that hints at an energy boost. The claim step should reject the change and say why.
+  - Count the words and divide by 2.2. The answer should be close to the length you asked for.
+  - Leave out your label lines. It should write MISSING, not invent words for the pack.
+
+improve:
+  - Add your full ingredient list and banned claims to "What you need" in the skill file, so the claim step has something to test against.
+  - Note your house paper and colors in step 3, so every painted ad in a series matches.
+  - Save the show job that wins, and test a second job on the same idea next time.
+  - Pair it with the skill that turns a watercolor script into shots, and with the watercolor image ad skill for a matching still.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Claude, ChatGPT and Gemini all follow this skill well, so use the one you already have."}
+  inputs:
+    - "The full ingredient or parts list from the pack, so every painted reveal shows only what is really inside"
+    - "Two or three watercolor paintings you like, so you can name the paper and colors you want"
+    - "Results from your last ad, so the show job can test something new"
+
+terms:
+  - term: Show job
+    meaning: What the key shot has to show for the selling idea, such as a reveal or many parts adding up.
+  - term: Glazing
+    meaning: Laying a thin see-through layer of paint over dry paint. Where layers overlap, the color goes deeper.
+  - term: Bare paper
+    meaning: Parts of the sheet left unpainted. In watercolor they are the brightest light, and the space where words go.

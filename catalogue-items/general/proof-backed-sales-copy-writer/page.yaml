@@ -1,0 +1,185 @@
+new_slug: proof-backed-sales-copy-writer
+name: "Proof-backed sales copy writer"
+summary: "Paste your opening and proof. Get the body and close, claims backed, and a score out of 100."
+job: write-landing-page
+
+headline: "Proof-backed sales copy writer"
+subhead: Give it the opening you have, a note on your buyer, and your facts, proof, offer and guarantee. It writes the body and close, with each claim's proof beside it. You get the finished text, a proof list and a score out of 100.
+
+explain: |
+  The opening of a sales page gets the attention, but the body and close make the sale, and that's where most pages go soft. Claims sit in one section and proof sits three scrolls away. The deal is vague, the guarantee loses its conditions, and the page ends on three buttons and a fake countdown.
+
+  This skill writes the middle and the end. It finds the one interesting true thing a rival couldn't say and builds around it. It covers four things: a problem the buyer has now, a promise this offer can make, proof beside the claim, and an easy next step. The close states the deal plainly with every condition, uses the real guarantee, answers the doubt most likely to stop this buyer, and asks for one action named by what's behind it.
+
+when:
+  - You have a strong opening for a page, email or long ad and need the rest written.
+  - Your page makes claims but the proof is buried or missing.
+  - Your close is a pile of buttons, offers and timers, and you want one clear ask.
+
+you_give:
+  - The opening lines you already have, or the kind of opening
+  - A note on the buyer, how much they know, their doubts and their words
+  - Your facts, proof, offer and guarantee, only what the business can show
+  - How long it should be
+  - Your voice notes and claims you must never make (optional)
+you_get:
+  - The body and close as finished text, within your length
+  - A list of each claim and the proof placed beside it
+  - What it assumed, and any placeholders left for missing figures
+  - A score out of 100 for how many of its own checks the copy passes, with each miss named
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste the opening you already have.
+  - Paste a note on your buyer and the doubt most likely to stop them.
+  - Paste your facts, proof and offer with every condition, including the guarantee's small print.
+  - Give a length, then check the "Proof placed" list against your files before it goes live.
+
+how_it_works:
+  - title: Finds the true detail
+    text: Looks for the one interesting fact a rival couldn't say, such as how it's made or an odd detail a customer noticed, and builds around it.
+  - title: Covers four things
+    text: A problem the buyer has now, a promise this offer can make, proof beside the claim, and an easy next step.
+  - title: Sells against the old way
+    text: The habit, the old product or doing nothing is the problem, never the buyer.
+  - title: Puts proof next to claims
+    text: Matches the proof to the doubt (does it work, will it work for me, who says so, what if it doesn't) and places it in the same or the next sentence.
+  - title: States the deal
+    text: What they get, the price, how soon, every condition, and the real guarantee with its real limits.
+  - title: Asks once
+    text: Answers the main doubt, then gives one action named by what's behind it, and adds urgency only if it's true.
+  - title: Closes the loop
+    text: Comes back to what the opening promised, so the buyer can say in one sentence what they get.
+  - title: Scores the copy
+    text: Goes through its own checks, such as proof within one sentence of each claim, fixes what it can, and scores checks passed out of all checks, times 100.
+
+output_shape: |
+  <the body and close as finished text, within your length>
+
+  PROOF PLACED
+  <claim>  backed by  <proof, and where it comes from>
+  (one line per claim)
+
+  ASSUMED
+  <anything inferred>
+
+  PLACEHOLDERS
+  <[gaps] left for figures you didn't supply>
+
+  SCORE
+  <passed> of <all> checks = <score> out of 100
+  Missed: <one line per check still missed, or none>
+
+example:
+  business: sprout
+  input: |
+    [the skill]
+
+    Opening (already written): One step I never skip.
+    Buyer: people who quit greens powders. They know the problem, not
+    Sprout. Doubts: "A gummy can't hold enough to replace my powder." /
+    "I hate subscriptions because I feel like they are a trap."
+    Facts and proof:
+    - 1 pack a day, torn across the top. No water, no mixing, no shaker.
+    - 60+ ingredients, 21 vitamins & minerals, 6 g prebiotic fiber
+    - 2025 study, 12 weeks, 120 adults: blood vitamin C +40.1% (2.7x
+      placebo), folate +20.5% (2.9x placebo)
+    - Survey of 3,000+ customers: 95% of surveyed users take it at
+      least 4 to 6 times a week, 80% daily
+    - Third-party tested for 70 pesticides and 4 heavy metals
+    Offer: 28 packs. First box $29.99 with the text sign-up discount
+    for new customers, then $49.99 every 4 weeks. "Pause Or Cancel Any
+    Time." Ships within 24 hours, arrives in 3 to 5 days on average.
+    Guarantee: 30-day money-back, first order only.
+    Length: 200 to 280 words, for a product page section.
+  output: |
+    If you've quit a greens powder, you probably didn't quit the
+    vitamins. You quit the shaker and the water, and on a rushed
+    morning that's the step that goes first.
+
+    Sprout is one pack of green gummy bears a day. You tear it open
+    across the top and eat the handful inside, which is why people keep
+    it up. In our survey of 3,000+ customers, 95% of surveyed users said
+    they take it at least 4 to 6 times a week, and 80% take it daily.
+
+    You might wonder whether a gummy can hold enough to replace your
+    powder. One pack has 60+ ingredients, 21 vitamins and minerals, and
+    6 g of prebiotic fiber. In a 12-week study of 120 adults, blood
+    vitamin C went up 40.1% and folate went up 20.5%, 2.7 and 2.9 times
+    the rise in the placebo group. It's also third-party tested for 70
+    pesticides and 4 heavy metals.
+
+    Your first box is 28 packs for $29.99 with the text sign-up
+    discount for new customers. After that it's $49.99 every 4 weeks.
+    Orders usually ship within 24 hours and arrive in 3 to 5 days.
+
+    Not sure about a subscription? You can pause or cancel any time,
+    and your first order comes with a 30-day money-back guarantee. The
+    guarantee covers that first order only.
+
+    Start your first box. Then it's one step you don't skip, because
+    there's nothing to mix.
+
+    PROOF PLACED
+    "people keep it up"          backed by  the survey (95% at least 4
+                                            to 6 times a week, 80% daily)
+    "a gummy can hold enough"    backed by  per-pack contents and the
+                                            12-week study
+    "is it clean?"               backed by  third-party testing
+    "what if I don't like it?"   backed by  the 30-day guarantee, first
+                                            order only
+
+    ASSUMED
+    That powder quitters quit the routine, not the vitamins. It comes
+    from the buyer note, not a source.
+
+    PLACEHOLDERS
+    None.
+
+tweaks:
+  - what: The buyer's main doubt
+    how: The close answers one doubt just before the ask. Give it the real one from your reviews, such as price or whether a subscription is a trap, and the ending changes to match.
+  - what: The guarantee wording
+    how: Paste it with every condition, such as "first order only". It states the real limits and never turns a guarantee into a promise of results.
+  - what: How much the buyer knows
+    how: For a doubtful buyer, it may admit a small real flaw early, then the larger benefit. For a cold buyer, the benefit comes first.
+  - what: Urgency
+    how: Give it a real date, stock level or price change and it will use it. Without one, it uses the real cost of the problem continuing, or leaves urgency out.
+
+judge:
+  - Every claim a doubtful buyer would question has proof within one sentence.
+  - There's one action, not several.
+  - No figure, review, expert, study, date or count you didn't supply.
+  - The guarantee is stated with its real conditions, or not at all.
+  - The ending comes back to what the opening promised.
+
+test:
+  - Run it with the opening of a page you know sells. Compare its body and close with yours, and check its proof list uses the proof you rely on.
+  - Run it twice. The one true detail it builds around should be the same both times.
+  - Read each claim in the result and find its proof within one sentence. Mark any claim with none.
+  - Check the guarantee in the close word for word against your real terms.
+  - Show its close and yours to someone like your buyer. Ask which one makes the next step clearer.
+
+improve:
+  - Paste your guarantee with every condition into "What you need" in the skill file, so step 8 always states the real terms.
+  - Write the one doubt that stops most of your buyers, from your reviews, into step 9.
+  - Add the proof you hold to step 5, matched to the doubt it answers (for example reviews for "others like me", a lab test for "is it real").
+  - Save the one true detail it builds around to your brand file.
+  - Pair it with "Sales copy opening writer" to write the opening first, and check the page with "Sales copy readiness checker".
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "This is a writing job from proof you supply, and the main chat AIs all do it well."}
+  inputs:
+    - "Your guarantee text with every condition, copied from your policy page, so the close states the real limits"
+    - "The single doubt that stops most buyers, in a customer's own words from a review or support ticket"
+    - "Test results, survey numbers and study details with their dates and sample sizes, so each proof line is exact"
+    - "Five reviews from buyers like this page's reader, so the 'will it work for me' proof sounds like them"
+
+terms:
+  - term: Body
+    meaning: The middle of a sales page or long ad, where the argument and proof go.
+  - term: Close
+    meaning: The end, where you state the deal and ask for one action.
+  - term: Landing page
+    meaning: The page someone lands on after tapping your ad.

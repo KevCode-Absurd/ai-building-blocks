@@ -1,0 +1,34 @@
+slug: customer-quote-image-ad-maker
+renamed_from: turn-one-customer-quote-into-image-ads
+name: "Customer quote image ad maker"
+summary: "Paste review lines. Get quote image ads, feed text and a score out of 100."
+category: general
+boards: [ecommerce]
+type: skill
+role: make
+job: ads
+level: intermediate
+inputs:
+  - {type: angle_library, required: true}
+  - {type: product_photos, required: false}
+outputs:
+  - {type: static_ads}
+  - {type: ad_copy}
+uses: [customer-buying-reasons-finder]
+example: review-ad
+origin: rebuilt
+source_ids: [CES-102]
+old_name: review quote image ads
+version: 2.0.0
+credits:
+  - {title: "Forces Friday: Pull and Anxiety", by: "Bob Moesta and Chris Spiek, JTBD Radio", url: "https://jobstobedone.org/radio/pull-and-anxiety/", used: "Sorting quotes by push, pull, doubt and habit"}
+  - {title: "How Online Reviews Influence Sales", by: "Spiegel Research Center, Northwestern University", url: "https://spiegel.medill.northwestern.edu/How-Online-Reviews-Influence-Sales", used: "Why a mix of praise and an answered doubt reads truer than perfection"}
+  - {title: "FTC's Endorsement Guides: What People Are Asking", by: "US Federal Trade Commission", url: "https://www.ftc.gov/business-guidance/resources/ftcs-endorsement-guides-what-people-are-asking", used: "Disclosing free products; not asking only happy buyers"}
+  - {title: "Trade Regulation Rule on the Use of Consumer Reviews and Testimonials", by: "US Federal Trade Commission", url: "https://www.ftc.gov/system/files/ftc_gov/pdf/r311003consumerreviewstestimonialsfinalrulefrn.pdf", used: "No invented or misattributed reviews"}
+  - {title: "Facebook Ads Guide: image ad specs", by: "Meta", url: "https://www.facebook.com/business/ads-guide/update/image", used: "27-character headline and 50 to 150 character main text"}
+tested:
+  on: 2026-10-19
+  business: sprout
+  model: claude-opus-5-5
+  judge: claude-fable-5-1
+  result: pass

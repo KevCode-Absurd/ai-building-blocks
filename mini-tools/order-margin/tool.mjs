@@ -118,8 +118,8 @@ export default {
     ],
   ],
   next: [
-    { if: "profitAfterAds <= 0", slug: "find-offers-hiding-in-what-you-already-sell", why: "Find an offer that raises what each order brings in." },
-    { slug: "turn-your-ad-numbers-into-three-next-steps", why: "Paste your ad results and get three next steps, judged against your break-even." },
+    { if: "profitAfterAds <= 0", slug: "hidden-offer-finder", why: "Find an offer that raises what each order brings in." },
+    { slug: "ad-results-report-writer", why: "Paste your ad results and get three next steps, judged against your break-even." },
   ],
   sources: [
     { what: "What's left before ads", how: "Order value minus the costs that come with each order. The standard contribution margin sum." },

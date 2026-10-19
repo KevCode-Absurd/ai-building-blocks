@@ -1,0 +1,30 @@
+slug: competitor-ad-study-board-builder
+renamed_from: learn-from-competitor-ads-sorted-by-type
+name: "Competitor ad study board builder"
+summary: "Paste ads from Meta's Ad Library. Get them sorted into 9 types and a score out of 100."
+category: general
+boards: [ecommerce]
+type: skill
+role: compress
+job: research
+level: intermediate
+inputs:
+  - {type: reference_set, required: true}
+  - {type: competitor_set, required: false}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: shortlist}
+uses: []
+origin: rebuilt
+source_ids: [CES-037]
+old_name: competitor ad study board
+version: 2.0.0
+credits:
+  - {title: "Ad Library", by: "Meta Help Center", url: "https://www.facebook.com/help/259468828226154", used: "what the public library shows and keeps, and that ordinary ads show no spend"}
+  - {title: "About the Learning Phase", by: "Meta Business Help Center", url: "https://www.facebook.com/business/help/112167992830700", used: "7-day learning windows, behind the 30-day line for new ads"}
+tested:
+  on: 2026-10-19
+  business: sprout
+  model: claude-opus-5-5
+  judge: claude-sonnet-5-5
+  result: pass

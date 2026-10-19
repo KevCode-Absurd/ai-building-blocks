@@ -1,0 +1,35 @@
+slug: clay-town-image-ad-maker
+renamed_from: turn-an-everyday-hassle-into-a-clay-town-image-ad
+name: "Clay town image ad maker"
+summary: "Paste your idea, attach photos. Get a clay-town image prompt, ad words and a score out of 100."
+category: general
+boards: [ecommerce]
+type: skill
+role: make
+job: image
+level: intermediate
+inputs:
+  - {type: brief, required: true}
+  - {type: brand_brain, required: true}
+  - {type: product_photos, required: false}
+outputs:
+  - {type: image_prompt}
+  - {type: ad_copy}
+uses: []
+example: clay-world
+origin: rebuilt
+source_ids: [CES-109]
+version: 1.0.0
+credits:
+  - {title: "Animation: Wallace & Gromit - Vengeance Most Fowl", by: "Marc Loftus, Post Magazine, interviewing supervising animator Will Becher", url: "https://www.postmagazine.com/Publications/Post-Magazine/2024/November-December-2024/Animation-I-Wallace-Gromit-Vengeance-Most-Fowl-I.aspx", used: "One scale, chunky oversized props, gel and resin stand-ins"}
+  - {title: "Using Blur to Affect Perceived Distance and Size", by: "Robert T. Held, Emily A. Cooper, James F. O'Brien and Martin S. Banks, ACM Transactions on Graphics, 2010", url: "https://escholarship.org/uc/item/3ts0x35k", used: "Shallow focus makes a scene read as small"}
+  - {title: "How many words do we read per minute? A review and meta-analysis of reading rate", by: "Marc Brysbaert", url: "https://doi.org/10.1016/j.jml.2019.104047", used: "Reading speed behind the 7-word headline"}
+  - {title: "The magical number 4 in short-term memory", by: "Nelson Cowan", url: "https://pubmed.ncbi.nlm.nih.gov/11515286/", used: "A headline plus at most 3 other things to read"}
+  - {title: "Typography, Human Interface Guidelines", by: "Apple", url: "https://developer.apple.com/design/human-interface-guidelines/typography", used: "Smallest readable size on a phone, behind the 30 px floor"}
+  - {title: "Understanding Success Criterion 1.4.3: Contrast (Minimum)", by: "W3C Web Accessibility Initiative", url: "https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html", used: "The 4.5:1 contrast floor for words on the image"}
+tested:
+  on: 2026-10-19
+  business: sprout
+  model: claude-opus-5-5
+  judge: claude-fable-5-1
+  result: pass

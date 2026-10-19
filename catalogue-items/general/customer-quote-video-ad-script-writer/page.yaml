@@ -1,0 +1,239 @@
+new_slug: customer-quote-video-ad-script-writer
+name: "Customer quote video ad script writer"
+summary: "Paste real customer quotes and facts. Get a sourced video script, checked openings and score out of 100."
+job: make-video-ads
+
+headline: "Customer quote video ad script writer"
+subhead: Give it real customer quotes, your facts and the buyer you want. It names the one belief the ad must shift and writes nine beats with a source for every line. You get the script, 4 to 6 checked openings, a first test plan and a score out of 100.
+
+explain: |
+  Most weak scripts fail before the first line. Nobody pinned down the buyer, checked the offer or asked what can be proved. Ads written from the product outwards sound like the product page with an opening stuck on, and ads copied from a rival's structure sound like the rival. The quickest way to an ad only you could run is what your customers already said: their word for the problem, what they tried first, the doubt that nearly stopped them.
+
+  This skill files every quote on the buyer's timeline, then writes one sentence: "Now they believe ___. After this ad they believe ___." Every line serves it or is cut. It places the buyer by what they know, reads what your offer really has, and writes nine beats from opening to call to action, fitted to a word budget for the length. Openings come last, each checked four ways. It can also resize a script, borrow the shape of an ad you like, or find the beat that's failing.
+
+  The beats follow Blue Sense Digital's public masterclass, How To Write Meta Ads That Scale. Buyer awareness comes from Eugene Schwartz, opening checks from John Caples, facts over adjectives from Claude Hopkins, and the pace of 3 words a second from published research on how fast ads should talk.
+
+when:
+  - You have reviews, survey answers or support tickets and want an ad built from them.
+  - Your current scripts could be about any brand in your category, or one has stopped working and you want to know which beat is broken.
+  - You need a 15-second or 60-second version of a script that works at 30.
+
+you_give:
+  - Customer research with real quotes and where each came from
+  - Your product facts, how it works, proof with sources, price, offer, guarantee and allowed claims
+  - The buyer, the reason they buy and how much they already know (optional, it proposes them)
+  - Length, speaker and script type (optional, 30 seconds and a creator by default)
+  - Scripts you already have, an ad you'd like to borrow from, or a script and its results to fix (optional)
+you_get:
+  - The belief shift and a list of what was assumed
+  - The script, beat by beat, with spoken line, on-screen text, picture and source
+  - The spoken word count against the budget for the length and pace
+  - 4 to 6 openings from different sources, each marked pass or fail on four checks
+  - A suggested format, a test plan and a list of gaps
+  - A score out of 100 for how many of its own checks the script passes, with any it missed
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste 10 or more real customer quotes with where each came from. Include a few 3-star reviews.
+  - Paste your product facts, allowed claims and the real offer terms.
+  - Say what you want, such as "a 45-second script", "three scripts to test" or "what's wrong with this script".
+  - Read the "Assumed" line first. Each item there is something to find out before you spend on the ad.
+  - Test 3 to 5 openings on one body first, before you write new bodies.
+
+how_it_works:
+  - title: Sorts the quotes
+    text: Files each quote under one point on the buyer's timeline, word for word. With no research it marks the whole map as assumed.
+  - title: Names the belief shift
+    text: '"Now they believe ___. After this ad they believe ___." Every beat serves it.'
+  - title: Places the buyer
+    text: Names how much they know, how tired the market is of claims like yours, and whether the product is reordered or kept.
+  - title: Reads the offer
+    text: Lists what the offer really has, picks one price frame the real numbers support, and finds the claim a rival can't copy.
+  - title: Writes nine beats to a budget
+    text: Opening, problem, promise, how it works, doubt, proof, offer, guarantee, call to action, fitted to the words the length holds.
+  - title: Writes openings last
+    text: 4 to 6, each from a different source, each checked on who it picks out, why they'd stay, whether it runs into line 2 and whether picture and words agree.
+  - title: Picks a format and a test
+    text: Chooses the format from what the viewer must see to believe, then plans a test that changes one thing at a time.
+
+output_shape: |
+  Belief shift: Now they believe <now>. After this ad they believe
+  <after>.
+  Assumed: <each thin or missing point, and what was done about it>
+  <concept> | <awareness> | Claim fatigue <1 to 5> | <reordered or
+  kept> | <length> | Pace <n> | Budget <n> | Spoken <n>
+  Person/tense <..> | Selling beat <beat> | Format <format>
+
+  <BEAT>
+    Says: "<spoken line>"
+    Screen: <on-screen text, or nothing>
+    Picture: <who and what is in frame, what happens>
+    Evidence: <quote and source, or fact and source>
+  (opening to call to action; any beat left out says why)
+
+  OPENINGS (Who, Why stay, Flow, Agree)
+  <n> <source>: "<line>"  <pass or fail x4>  keep or drop
+
+  Test plan: <what changes, what a win means, what to make next>
+  Placeholders and risky claims: <[brackets] and notes>
+
+  SCORE  <n>/100 (<passed> of <total> checks passed)
+  Missed: <one line per check missed, or none>
+
+example:
+  business: sprout
+  input: |
+    [the skill]
+
+    Buyer: the gut-fix seeker, 25 to 55, mostly women. Has tried fiber
+    powders and probiotics. Doubt: "Will this upset my stomach more?"
+    Reason to buy: to feel normal. Offer: first order price.
+    Quotes:
+    7 "My bowel movements are normal for the 1st time in 15 years!"
+      (brand site)
+    8 "The prebiotics do their job, but not aggressively, and I feel
+      like my overall digestion has improved. ..." (brand site)
+    10 "Feel lighter, less bloated and overall good." (retailer)
+    Facts: 1 daily pack = 6 g prebiotic fiber, a small handful of
+    gummies. Low Sugar or Sugar-Free; point gut-sensitive buyers to
+    Low Sugar. Survey of 3,000+ customers after 3 months: "67% ...
+    experienced better, more regular digestion" (always "of surveyed
+    users"). $29.99 first order with the text sign-up, renews at
+    $49.99 every 4 weeks. 30-day money back, first order only.
+    Allowed claims: "Supports digestion and gut health."
+    Never say: fix, treat, cure, IBS, bloating relief as a promise.
+    Knows: the problem and the fixes, not Sprout. Length: 45 seconds.
+    Speaker: AI presenter.
+  output: |
+    Belief shift: Now they believe fiber supplements are rough on
+    their stomach. After this ad they believe a daily pack with 6 g
+    of prebiotic fiber is gentle enough to try, starting with Low
+    Sugar.
+    Assumed: no Trigger quote, so the main opening leads on a fact. No
+    study of digestion on the product (the study measured two
+    vitamins in the blood), so proof is the brand's own survey,
+    labelled as one. No true reason for now, so no urgency.
+    Gut-fix seeker x feel normal x first order price | Aware of fixes
+    | Claim fatigue 4 (fiber and probiotic claims everywhere, so how
+    it works comes before who it's for) | Reordered | 45 s | Pace 3.0
+    | Budget 129 | Spoken 122
+    You, present | Selling beat: the doubt | Format: AI presenter to
+    camera, since the doubt is a shared feeling. Price frame: 28 daily
+    packs for $29.99, renewal said aloud. No per-day figure, because
+    $1.07 a day holds only for the first box.
+
+    OPENING
+      Says: "Six grams of prebiotic fiber. In gummies. Gentle enough
+      to try?"  Screen: 6 g prebiotic fiber. In gummies.
+      Picture: a hand tears a pack open over a kitchen counter.
+      Evidence: product page
+    PROBLEM
+      Says: "Fiber powders. Probiotics. And every time, you wonder if
+      this one will upset your stomach more."
+      Picture: presenter at a kitchen table, a plain unlabelled fiber
+      tub pushed to one side. Evidence: brand file, buyer 2 (Tries)
+    PROMISE AND HOW IT WORKS
+      Says: "You just want to feel normal. One daily pack has 6 grams
+      of prebiotic fiber in a small handful of gummies. It supports
+      digestion and gut health."
+      Screen: 6 g prebiotic fiber per pack
+      Picture: gummies tipped from the pack into her palm.
+      Evidence: product page; allowed claim
+    DOUBT
+      Says: "Worried it'll be harsh? One buyer wrote, 'The prebiotics
+      do their job, but not aggressively.'"
+      Screen: "do their job, but not aggressively" Customer review
+      Evidence: review 8, word for word (Last doubt)
+    PROOF
+      Says: "In the brand's survey of over 3,000 customers, 67% of
+      surveyed users experienced better, more regular digestion."
+      Screen: 67% of surveyed users. Brand survey, 3,000+ customers,
+      after 3 months
+      Picture: the green pouch on the counter, closed.
+      Evidence: product page, survey section (buyers say it)
+    OFFER AND GUARANTEE
+      Says: "It's called Sprout. Your first order is $29.99 with the
+      text sign-up, then $49.99 every 4 weeks. The first order comes
+      with a 30-day money-back guarantee."
+      Evidence: price page, footer, FAQ (first order only)
+    CALL TO ACTION
+      Says: "If your stomach is sensitive, start with Low Sugar."
+      Picture: the Low Sugar pouch beside one torn pack. End card
+      with the offer, held 2 seconds.
+      Evidence: brand file (point gut-sensitive buyers to Low Sugar)
+
+    OPENINGS (Who, Why stay, Flow, Agree)
+    1 A fact: "Six grams of prebiotic fiber. In gummies. Gentle enough
+      to try?"  pass pass pass pass  keep (used above)
+    2 Last doubt: "Worried a fiber gummy will be harsh on your
+      stomach?"  pass pass pass pass  keep
+    3 After: "'Feel lighter, less bloated and overall good.' One
+      buyer's review." (review 10)  pass pass pass fail  drop: next to
+      the problem line it reads as a bloating promise
+    4 The offer: "Twenty-nine ninety-nine for your first 28 daily
+      packs."  fail pass pass pass  drop: it picks out deal hunters,
+      not the gut buyer
+
+    Test plan: run openings 1 and 2 on this body as separate ads,
+    against ad 6, "Fix the Hot Girl Tummy", the only live gut ad. This
+    one drops "fix" and leads on gentleness. If 2 wins, the doubt is
+    the draw; try the review 8 quote as the opening next.
+    Placeholders and risky claims: none open. Grams of sugar in Low
+    Sugar aren't on file, so the script gives no sugar figure. Review
+    7 stays out of the paid ad: one buyer's story would read as a
+    promise.
+
+tweaks:
+  - what: What you ask for
+    how: '"Openings only" runs the timeline and openings. "Three scripts to test" gives three scripts on three different reasons to buy. "A 15-second version" re-plans from the word budget. "What''s wrong with this script" runs fix mode.'
+  - what: Speaker and pace
+    how: An AI presenter or narrator tells the problem and quotes customers word for word, never a result of their own. A calm or older voice gets 2.7 words a second; a fast young creator can go to 3.3, with fewer ideas.
+  - what: Script type or a reference ad
+    how: Name a type ("Tries in a row", "Flaw first") and it wins on the opening and beat order. Paste an ad you like and it rebuilds the job each line does with your facts, sharing no run of 6 words.
+  - what: Results for a fix
+    how: Paste the ad's numbers. An early drop points at the opening, a drop when the product appears points at the reveal, and clicks without sales point at the landing page and price.
+  - what: Scripts you already have
+    how: Paste them and the new script differs in how it opens, which beat carries it and the proof or picture it uses.
+
+judge:
+  - The belief shift is there, and every beat serves it.
+  - No line would work for the product next to yours on the shelf.
+  - Every quote is word for word with a source, and every fact traces to your facts.
+  - The problem is one person's workaround, not solved yet, and the product is named late, at the offer.
+  - Every picture note can be made with your real product and an adult.
+  - The spoken word count fits the budget for the length and pace.
+
+test:
+  - Leave out your proof. The proof beat should become a demonstration or a [placeholder], never a made-up number or study.
+  - Give it no research. Every insight should come back marked as an assumed timeline.
+  - Check every quote against your reviews, word for word. One changed word is a fail.
+  - Paste a script that isn't working, with its numbers. It should name one beat as the weakest and say which number points there.
+
+improve:
+  - Paste your best quotes into "What you need" in the skill file once, already sorted by timeline point, so every run starts from the same evidence.
+  - Add your banned claims and the safe wording for your category (for example "supports", never "fixes") to the "Rules that never bend".
+  - Feed it 2 to 4 star reviews, support tickets and cancel reasons. They hold the last doubts and the things a script must not promise.
+  - When a script wins, save its belief shift and selling beat to your brand file, and change one thing per variant next time.
+  - Pair it with the skill that finds the script lines that lose the sale, or the one that plans a batch of different script types.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Claude, ChatGPT and Gemini all follow this skill well, so use the one you already have."}
+    - {name: "Meta Ads Manager", why: "Its A/B test splits one audience between your openings and changes one thing, so the result is fair."}
+  inputs:
+    - "Answers to a survey question like \"What almost stopped you buying?\", so the last doubt is in buyers' words"
+    - "Sales call notes or chat logs, so quotes cover the moments reviews miss"
+    - "Your three best past ads with their results, so the test plan starts from what worked"
+    - "Screenshots of rival ads from the Meta Ad Library, so your openings avoid what everyone runs"
+
+terms:
+  - term: Buyer's timeline
+    meaning: Five points in the order the buyer lived them. Before, the day it got bad enough, what they tried, the last doubt, and life after.
+  - term: Belief shift
+    meaning: '"Now they believe ___. After this ad they believe ___." The one change the ad has to make in the buyer''s mind.'
+  - term: Selling beat
+    meaning: The part of the script doing most of the selling (the problem, how it works, a doubt, the proof or the offer).
+  - term: Word budget
+    meaning: How many spoken words fit the length. Seconds minus 2 for the end card, times the pace.
+  - term: Reordered or kept
+    meaning: Used up and bought again (coffee, a supplement, a face cream) versus bought once and owned (a jacket). It changes the buyer's doubts and what proof works.

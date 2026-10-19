@@ -1,0 +1,205 @@
+new_slug: clay-town-image-ad-maker
+name: "Clay town image ad maker"
+summary: "Paste your idea, attach photos. Get a clay-town image prompt, ad words and a score out of 100."
+job: make-image-ads
+
+headline: "Clay town image ad maker"
+subhead: Give it your selling idea, brand file and product photos. It finds a hassle a whole crowd shares, picks one moment with one lead and dresses the clay set like a stop-motion studio. You get an image prompt, the ad words, a layout and a score out of 100.
+
+explain: |
+  Some problems are awkward to show with real people: a queue at the office sink, a packed train, the school-gate rush. In a handmade clay town they become funny and easy to look at, because everyone knows the routine and nobody real is embarrassed. The risk is a busy frame nobody can read in a glance, and a clay pack whose label reads as nonsense.
+
+  This skill plans one image. It names the shared hassle, picks the moment from what your buyer knows and the show job the picture must do, like the lead calm in front while the crowd carries on behind. It writes a set card the way a studio plans one: one scale, one finish, model-maker stand-ins, soft light and shallow focus. It reads the picture as a sentence and never uses the crowd as proof. Then it applies the image-ad rules: a headline of 7 words or fewer, at most 3 other things to read, big type on a plain clay wall, strong contrast, feed sizes, and your real label laid on.
+
+when:
+  - Your buyer's problem happens around other people, like a commute, an office or a family dinner.
+  - You run a clay-town video and want a still that matches it.
+  - You want a playful image ad without hiring a cast or building a set.
+
+you_give:
+  - The reason someone buys, what the buyer knows and the selling idea
+  - Your brand file, with the buyer's moment, who else is there, label text, approved claims and offer
+  - Photos of your product's front, side and top, attached (optional, needed if it appears)
+you_get:
+  - A moment plan with the shared hassle, the show job and the claim it implies
+  - A set card, the lead written in full and the crowd
+  - A layout for 4:5 or 1:1, the words on the image, an image prompt and the post words
+  - The edit step that lays your real label over the clay one
+  - A score out of 100 from the skill's six checks, with one line per check missed
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your selling idea and brand file. Say where your buyer's hassle happens and who else is there.
+  - Attach the product photos and type out every label line. It won't invent label words.
+  - Make the image, then lay the real label and the words on it in your editor.
+  - Show it to someone for 2 seconds. If they can't say what it's for, ask for fewer figures in focus.
+
+how_it_works:
+  - title: Checks the fit
+    text: Confirms the hassle happens around other people, and says where proof must come from elsewhere.
+  - title: Picks the moment
+    text: Names the shared hassle, then the moment from what the buyer knows and one of six show jobs.
+  - title: Sets the look
+    text: A set card (scale, finish, stand-ins, light, focus), a diorama camera, and a plain clay wall for the words.
+  - title: Reads the picture as a claim
+    text: Writes the sentence the picture implies, keeps it only if your claims back it, and never uses the crowd as proof.
+  - title: Applies the image-ad rules
+    text: The glance test, a short headline, at most 3 other things to read, 30 px type, 4.5:1 contrast, 4:5 or 1:1.
+  - title: Writes the prompt and words
+    text: An image prompt with the lead in full and the label in quotes, the words, the post words, and the real label laid on.
+
+output_shape: |
+  HASSLE   Every <time>, everyone at <place> <does the annoying thing>.
+  MOMENT   <hassle at its worst / lead stepping out / pack held>
+  SHOW JOB <reveal, spread, join, build, calm, hold>
+  It implies: "<sentence>"  Source: <claim or fact>
+
+  SET CARD  Scale <...> | Finish <...> | Stand-ins <...> | Light <...>
+  LEAD      <adult, build, clay skin colour, hair, clothes, item>
+  CROWD     <3 or 4 base figures>
+
+  LAYOUT   <4:5 or 1:1>, <pixels>
+  <0 to n %> <quiet area: words> | <n to n %> <picture> | <product spot>
+
+  WORDS ON THE IMAGE  Headline (<n> words) "<...>" | <up to 3 more>
+
+  IMAGE PROMPT  <camera, lead, crowd, place, product, set card, colours>
+  AVOID FIELD   <plain nouns>
+  POST WORDS  Primary text <...> | Headline field <...> | Button <...>
+  EDIT STEP   <label overlay, word placement, contrast check>
+  SCORE       <n>/100 (<passed> of 6 checks) | missed: <one line each>
+  MISSING: <facts it needed>
+
+example:
+  business: sprout
+  input: |
+    [the skill]
+
+    Idea: the office sink queue of people rinsing shaker bottles.
+    One daily pack skips all of it.
+    Buyer: the powder quitter, 28 to 45, office job. Knows the
+    problem, comparing fixes. Runs in the Instagram feed.
+    Brand lines: "No more gagging on pills, sloshing chalky powders,
+    or cleaning messy counters." "Rip. Tip. Enjoy."
+    Approved: "60+ ingredients, 21 vitamins & minerals, and 6g fiber".
+    Product: glossy deep-green pouch, big yellow wordmark "Sprout",
+    yellow bear face top right, "28 Daily Packs" at the bottom.
+    Photos attached: front, side, top. Daily pack torn straight
+    across the top. Daily pack label words: not captured.
+    Offer: first order $29.99 with text sign-up, renews at $49.99
+    every 4 weeks. Voice: playful, cheeky.
+  output: |
+    HASSLE   Every morning, everyone in the office queues at one sink
+             to rinse a shaker.
+    MOMENT   The lead stepping out: the buyer is comparing fixes.
+    SHOW JOB Calm. Dev at ease in front, tearing a daily pack, while
+             the queue scrubs shakers behind.
+    It implies: "One pack skips the shaker and the sink." Source:
+    product facts (no water, no mixing, no shaker) and the brand line.
+    Rejected: a crowd turning to stare at Dev's pack (reads as
+    "everyone's switching", which no fact backs).
+
+    SET CARD  Figures a hand tall, chunky oversized shakers | Finish:
+    handled, some thumbprints | Stand-ins: running water as clear gel,
+    sludge as grey-green clay | Light: soft key from a window on the
+    left, a fill, bright morning | Focus: Dev sharp, queue soft
+    LEAD   Dev, a clay adult man, about 30, slim, warm brown clay skin,
+           short black clay hair with comb grooves, a mustard knit
+           jumper of real fabric, navy clay trousers, a lanyard.
+    CROWD  Four base figures (tall, short, round, slight), varied by
+           hair and office clothes; five in the queue.
+
+    LAYOUT   4:5, 1080 x 1350
+    0-24 %   plain cream clay wall: headline and small line
+    24-88 %  Dev sharp in the front third, the pouch on the counter
+             beside him; the queue at the sink behind, soft
+    88-100 % solid forest green strip added in editing: offer line
+
+    WORDS ON THE IMAGE
+    Headline (4 words): "Skip the shaker queue."
+    Small line: "60+ ingredients, 21 vitamins & minerals, and 6g
+    fiber" in 1 pack.  Source: approved claim, word for word
+    Offer line: "$29.99 first order with text sign-up. Renews at
+    $49.99 every 4 weeks."  Source: offer terms
+    Type: headline 72 px and small line 34 px in forest green on the
+    cream wall (about 8:1); offer 30 px in cream on the green strip.
+
+    IMAGE PROMPT
+    Diorama view a little above his eye line. Dev, a clay adult man,
+    about 30, slim, warm brown clay skin, short black clay hair with
+    comb grooves, a mustard knit jumper of real fabric, navy clay
+    trousers, a lanyard, stands relaxed in the front third, tearing a
+    small deep-green clay daily pack straight across its top edge, the
+    pack seen from its top. Behind him, softly blurred, five clay
+    office workers from four base figures queue at one sink, scrubbing
+    chunky clay shakers under clear-gel water. On the counter beside
+    him, a deep-green clay pouch wrapped in a printed paper label:
+    "Sprout" in big yellow letters, a yellow bear face top right, "28
+    Daily Packs" at the bottom. A handmade stop-motion miniature set,
+    figures about a hand tall, some thumbprints on matte modelling
+    clay, photographed on a real tabletop set with a macro lens. Forest
+    green, warm cream, sunflower yellow, mustard, navy. Shallow focus.
+    The top quarter is a plain smooth cream clay wall.
+    AVOID FIELD  photograph, smooth 3D render, plastic, real human
+    hands, text, signs
+
+    POST WORDS
+    Primary text: No shaker to rinse. Rip. Tip. Enjoy. Sprout is 60+
+    ingredients, 21 vitamins & minerals, and 6g fiber in 1 pack.
+    Headline field: Skip the sink queue
+    Button: Shop now
+    EDIT STEP  Lay the real pouch, cut out from the front photo, over
+    the clay one. Add the green strip and set the words. Check
+    contrast on the finished image. For 1:1, recompose with a shorter
+    queue; never crop the pouch.
+    CHECKS  Glance test: one calm man, a queue behind, a pack in hand.
+    Headline 4 words, 2 more things to read, 30 px and up, 4.5:1.
+    MISSING: the daily pack's label words, so it faces top-edge on.
+
+tweaks:
+  - what: The moment
+    how: The hassle at its worst suits people who haven't spotted the problem. The lead stepping out suits people comparing fixes. The pack held large suits people who know you.
+  - what: The finish
+    how: Ask for "crisp" for a premium look, or "rough" for big thumbprints on a silly brand. "Handled" sits between.
+  - what: The shared hassle
+    how: Name the place and the routine (a train, a till queue, a school gate). The crowd, the lead and the headline are built around it.
+  - what: Size
+    how: 4:5 is the default for feeds. Ask for 1:1 as well and it recomposes the picture, never stretching or cropping the product.
+
+judge:
+  - Shown for 2 seconds, someone can say what the product is and the one idea.
+  - The headline has 7 words or fewer, with at most 3 other things to read.
+  - One lead stands out sharp; the crowd is soft and never used as proof.
+  - Every label word matches your real pack, and no other words appear on the set.
+  - The product matches your photos, with your real label laid over it.
+
+test:
+  - Check the picture needs other people. If one figure on a tabletop could tell it, a single-character clay ad fits better.
+  - Ask for a crowd turning to admire the product. The claim step should reject it and say why.
+  - Run it twice on the same brief. The hassle and the lead should stay close.
+  - Put the finished image next to your current best image ad at phone size. Ask which one someone understands first.
+
+improve:
+  - Pick your finish once and write it into step 3 of the skill file, so every clay ad in a series matches.
+  - Save your lead's description in your brand file, so the same figure comes back in the next ad and the video.
+  - Add the shared places your buyers know to step 2.
+  - Pair it with the clay-town video skills, so the still and the video share one world.
+
+works_best_with:
+  tools:
+    - {name: "Nano Banana", why: "Works from your product photos as references, so the clay pack keeps its true shape."}
+    - {name: "Any good chat AI", why: "Claude, ChatGPT and Gemini all follow this skill well, so use the one you already have."}
+  inputs:
+    - "Photos of a real place your buyers share, like a school gate, so the set feels known"
+    - "Photos of real stop-motion clay figures you like, so the finish names marks that exist"
+    - "Your best current image ad, so you can test the clay one against it"
+
+terms:
+  - term: Show job
+    meaning: What the picture has to show for the selling idea, such as the product arriving or the lead calm while the crowd carries on.
+  - term: Set card
+    meaning: A short list that fixes the scale, finish, stand-in materials, light and focus.
+  - term: Quiet area
+    meaning: A calm part of the picture, here a plain clay wall, kept free for the words.
+  - term: Glance test
+    meaning: Showing the ad for 2 seconds. If a stranger can say what it's for, it passes.

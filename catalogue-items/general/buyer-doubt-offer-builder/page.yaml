@@ -1,0 +1,193 @@
+new_slug: buyer-doubt-offer-builder
+name: "Buyer doubt offer builder"
+summary: "Paste your buyer's doubt and costs. Get an offer, a profit check and a score out of 100."
+job: make-offer
+
+headline: "Buyer doubt offer builder"
+subhead: Give it one buyer and their doubt, your prices, costs and guarantee. It finds what the doubt is about (the result, certainty, time, effort or price) and builds an offer that answers it. You get up to three offers, their wording, a profit check and a score out of 100.
+
+explain: |
+  When sales slow down, most businesses reach for a discount. A discount moves only one thing, the price, and often teaches buyers to wait for the next sale. It does nothing about the reason this buyer is hesitating, such as not trusting the subscription.
+
+  This skill starts from one buyer and the doubt that holds them back, in their own words. It uses a simple value sum, made popular by Alex Hormozi's $100M Offers. People value an offer more when the result is bigger and more certain, and when it comes sooner and with less effort. So it asks which of those the doubt is about, or whether it's the price itself. Then it picks tools for that lever, such as a guarantee for "will it work for me?" or one clear price for "which discount is real?". It works out what an order keeps after costs and runs five checks. Unknown costs become a formula, never an invented number.
+
+when:
+  - You're about to run a discount and want to check there isn't a better offer.
+  - You know what stops people buying (price, trust, "will it work for me") and want an offer that answers it.
+  - You want different offers for new buyers and returning buyers.
+
+you_give:
+  - One buyer and their main doubt, in their own words
+  - What you sell, the price, what each unit costs you, and delivery cost
+  - Your guarantee and terms, quoted exactly
+  - Recent order values, items per order, repeat buying and past discounts (optional)
+  - Your voice and current offers with dates (optional)
+you_get:
+  - Up to three offers, each on a different lever, with who it's for, what they pay and what makes yes safe
+  - The line for the page, the line a person would say aloud, and the terms
+  - A profit check, or the formula when a cost is missing
+  - What you must arrange first, the five checks, and a test plan
+  - A score out of 100 for each offer from the five checks, with one line per check missed
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Name one buyer and their biggest doubt, using real customer words if you have them.
+  - Paste your prices, unit costs, delivery costs and guarantee exactly as written.
+  - Add recent order data if you have it. It's what lets the profit check give numbers instead of formulas.
+  - Pick one offer and test it on its own page beside your current offer. Keep the current one until the new one beats it.
+
+how_it_works:
+  - title: Starts from the buyer
+    text: Names one buyer, first-time or returning, and their biggest doubt in their own words.
+  - title: Finds the lever
+    text: Is the doubt about the result, how sure they are it will work, how long it takes, the effort, or the price itself?
+  - title: Picks tools for that lever
+    text: A guarantee or trial size for certainty, one clear price for price doubts, a ready-to-use bundle for effort. One or two tools, then it stops.
+  - title: Checks the profit
+    text: What an order keeps after every unit at full cost, delivery, fees and returns, and how many extra items a discount needs to hold today's profit.
+  - title: Runs five checks
+    text: It fits the doubt, it's true as written, it pays, a stranger could explain the terms, and it won't teach buyers to wait.
+  - title: Words it
+    text: A short name, a page line, a spoken line and why it answers the doubt. Savings show as a percent under $100 and as money over $100.
+
+output_shape: |
+  OFFER <n>: <name, 2 to 4 words>
+  Buyer and doubt: <who, first-time or returning> / "<doubt in their words>"
+  Lever:           <result | certainty | time | effort | price>
+  Tools:           <one or two>
+  Build:           for <...> | pays <now, and after> | gets <...> |
+                   safe yes <...> | why now <... or none>
+  Page line:       "<...>"
+  Said aloud:      "<...>"
+  Terms:           <one or two sentences; a first-order price says what
+                   it becomes after>
+  Profit check:    <kept per order, or MISSING: cost + the formula>
+  Must arrange:    <...>
+  Checks:          fits / true / pays / clear / lasting
+  Score:           <n>/100 (<passed> of 5 checks) | missed: <one line each>
+  Why it answers the doubt: <...>
+
+  TEST PLAN
+  <run beside the current offer; ask new buyers what nearly stopped
+  them and what made them go ahead>
+
+example:
+  business: sprout
+  input: |
+    [the skill]
+
+    Buyer: the price doubter, first-time. Knows the brand, thinks it
+    costs too much. Doubts: "Which discount is real?" "Will the price
+    jump after the first order?" "I hate subscriptions because I feel
+    like they are a trap."
+
+    Prices: one-time 28 packs $66.65. Subscription $49.99 every 4
+    weeks. First order $29.99, only with the text sign-up discount.
+    Live on the site at once: "Save 52%", "up to 55% off", "49% off",
+    "58%"; ads say "61% off". "Buy 2 Save $5" for more than one
+    person on an order.
+    Terms: "Pause Or Cancel Any Time." Guarantee: 30-day money-back,
+    "This policy applies only to your initial purchase."
+    Cost per pouch, delivery cost, fees: not known.
+  output: |
+    OFFER 1: One price, said once
+    Buyer and doubt: price doubter, first-time / "Which discount is
+                  real?"
+    Lever:        price
+    Tools:        one price shown the same way everywhere; what it
+                  becomes, in the same sentence
+    Build:        for people who saw several different discounts | pays
+                  $29.99 now with text sign-up, then $49.99 every 4
+                  weeks | gets 28 daily packs | safe yes: 30-day
+                  money-back on the first order | why now: none
+    Page line:    "$29.99 for your first box when you sign up by text.
+                  Then $49.99 every 4 weeks. Pause or cancel any time."
+    Said aloud:   "First box is thirty bucks if you sign up by text,
+                  then it's fifty every four weeks."
+    Profit check: none needed. The price doesn't change.
+    Must arrange: remove the other discount numbers from the bar,
+                  badge, pop-up and ads, so one figure shows everywhere
+    Checks:       fits / true / pays / clear / lasting (fixed: it
+                  replaces the live numbers instead of adding one)
+    Why: the doubt is about trust in the number, and one number with
+    its renewal in the same sentence answers it.
+
+    OFFER 2: A text before box two
+    Buyer and doubt: price doubter, first-time / "I hate subscriptions
+                  because I feel like they are a trap"
+    Lever:        certainty (fear of being stuck)
+    Tools:        a reminder before any renewal; the brand's own
+                  pause and cancel words
+    Build:        for first-time subscribers | pays $29.99, then $49.99
+                  | gets a text 3 days before box two, with a pause
+                  link | safe yes: "Pause Or Cancel Any Time." | why
+                  now: none
+    Page line:    "We'll text you 3 days before your next box. Pause
+                  or cancel any time."
+    Profit check: MISSING: cost of a text message, and how many
+                  subscribers pause instead of cancelling. Kept per
+                  subscriber = box-two orders x (49.99 - pouch cost -
+                  delivery - fees) - texts sent x text cost
+    Must arrange: the reminder text, and a pause link that works.
+                  Cancelling is the loudest public complaint (review
+                  20), so test the link before you promise it.
+    Checks:       fits / true / pays (formula) / clear / lasting
+    Why: it removes the trap by telling them before money moves.
+
+    OFFER 3: Not offered yet
+    A bundle or an order-level reward needs your order values and
+    costs. MISSING: last 90 days of order values, items per order,
+    cost per pouch, delivery for 1, 2 and 3 pouches.
+
+    TEST PLAN
+    Run offer 1 on its own page beside today's page, which stays live
+    until something beats it. Ask new buyers two questions: what
+    nearly stopped you, and what made you go ahead?
+
+tweaks:
+  - what: The buyer
+    how: Change the buyer and the lever changes. A buyer who doubts it works gets a certainty tool; a buyer who finds it a hassle gets an effort tool; a returning buyer gets a reason to stay.
+  - what: Order data
+    how: Paste your last 90 days of order values and items per order. Order levels are then set from the real spread, and the profit check gives real numbers.
+  - what: Price level
+    how: Under $100, savings read better as a percent. Over $100, as money. Tell it your price and it frames the saving that way.
+  - what: Add-ons
+    how: Ask for "cart and checkout add-ons" and it adds one per spot, judged by the profit each adds per order, not by how many people take it.
+
+judge:
+  - Each offer names one buyer and answers a doubt from your research, in their words.
+  - Each offer says which lever it pulls, and its tools fit that lever.
+  - The guarantee is quoted exactly. Anything longer or wider is listed under "must arrange".
+  - A first-order price states what it becomes after, in the same sentence. No urgency appears without a real date or limit.
+  - Unknown costs show as a formula with MISSING, not as made-up numbers. No offer says the product treats, cures or prevents anything.
+
+test:
+  - Run it for a buyer you've already won with an offer that worked. Its offer should pull the same lever. If not, check the doubt you gave it.
+  - Fill in your real costs and check its profit sum with a calculator.
+  - Run it twice for the same buyer. It should pick the same lever both times.
+  - Read the wording to someone who fits the buyer. Ask what they'd pay today, what it becomes and how to stop. If they can't tell you, the offer fails the "clear" check.
+
+improve:
+  - "Write your real costs into step 5 of the skill file: cost per unit, and delivery for one, two and three items. Every formula then becomes a number."
+  - "Add your guarantee, word for word, to the certainty tools in step 3 (for Sprout: 30-day money-back, first order only), so no offer stretches it."
+  - Add your buyers and their doubts to step 1, copied from your brand file.
+  - Add a lesson from your own history to the five checks, such as "no new discount number while three are already live".
+  - Pair it with the skill that lists offers from what you already have for a quick list, then use this one to build out the best.
+
+works_best_with:
+  tools:
+    - {name: "Shopify", why: "If you sell on Shopify, it exports every order with totals, line items, discounts and shipping, which the profit check needs."}
+    - {name: "Google Sheets", why: "Keeps the profit check as formulas, so you can change a cost and see what one order keeps."}
+    - {name: "Any good chat AI", why: "Any current chat AI can match the doubt to a lever and word the offer."}
+  inputs:
+    - "Payment fees and your return rate from your store reports, so the profit check counts every cost"
+    - "What competitors offer now, from their sites or the Meta Ad Library, so your offer doesn't copy theirs"
+    - "What a bundle or gift costs you to pack and send, so a gift is costed at its true price"
+
+terms:
+  - term: Lever
+    meaning: The part of value a doubt is about. Here, the result, certainty, time, effort or the price itself.
+  - term: Margin
+    meaning: What you keep from a sale after the cost of making and sending the product.
+  - term: Safe yes
+    meaning: Anything that makes saying yes feel safe, such as a money-back guarantee, a trial size or a reminder before you're charged again.

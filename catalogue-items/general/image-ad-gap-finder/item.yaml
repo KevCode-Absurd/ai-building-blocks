@@ -1,0 +1,31 @@
+slug: image-ad-gap-finder
+renamed_from: find-image-ad-types-worth-testing-next
+name: "Image ad gap finder"
+summary: "Attach your image ads. Get the types you're missing, test briefs and a score out of 100."
+category: general
+type: skill
+role: make
+job: ads
+level: intermediate
+inputs:
+  - {type: static_ads, required: true}
+  - {type: voc_reviews, required: false}
+outputs:
+  - {type: brief}
+uses: []
+origin: rebuilt
+source_ids: [CES-039]
+old_name: image ad type gap finder
+version: 2.0.0
+credits:
+  - {title: "Influence: The Psychology of Persuasion", by: "Robert B. Cialdini", url: "https://www.porchlightbooks.com/products/influence-robert-b-cialdini-9780061241895", used: "social proof, authority and scarcity behind the believe and why-now types"}
+  - {title: "About the Learning Phase", by: "Meta Business Help Center", url: "https://www.facebook.com/business/help/112167992830700", used: "about 50 results a week per ad set, so three new ads at a time"}
+  - {title: "Capturing Attention in Feed: The Science Behind Effective Video Creative", by: "Facebook IQ (Meta)", url: "https://www.facebook.com/business/news/insights/capturing-attention-feed-video-creative", used: "1.7 seconds per feed post on a phone"}
+  - {title: "How many words do we read per minute? A review and meta-analysis of reading rate", by: "Marc Brysbaert", url: "https://doi.org/10.1016/j.jml.2019.104047", used: "238 words a minute, so the 7-word headline"}
+  - {title: "The magical number 4 in short-term memory", by: "Nelson Cowan", url: "https://pubmed.ncbi.nlm.nih.gov/11515286/", used: "a headline plus at most 3 more things to read"}
+tested:
+  on: 2026-10-19
+  business: sprout
+  model: claude-opus-5-5
+  judge: claude-fable-5-1
+  result: pass

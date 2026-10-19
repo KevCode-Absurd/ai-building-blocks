@@ -1,0 +1,187 @@
+new_slug: story-ad-image-picker
+name: "Story ad image picker"
+summary: "Paste your story ad. Get the right picture, a runner-up to test and a score out of 100."
+job: make-image-ads
+
+headline: "Story ad image picker"
+subhead: Paste your approved story ad. It finds the moment the old way stopped working and where that moment leaves evidence, then picks the picture that shows it. You get the brief, a runner-up to test and a score out of 100.
+
+explain: |
+  A story ad (an ad whose text tells one person's story) needs a picture that looks like something a person posted. People skip anything that looks like an ad. The picture's only job is to stop the right stranger and make them want the first line.
+
+  This skill doesn't start from a list of looks. It quotes the moment in your story where the old way stopped being bearable, then asks where that moment would show up if someone took out their phone: in a room, on a thing, on the body, in words someone wrote or sent, in a fact you can source, or nowhere safe to photograph. That answer picks the picture skill. It runs that skill's own honesty checks, adds a runner-up from a different kind of evidence for your first test, and writes the line under the picture.
+
+when:
+  - You have an approved story ad and don't know what picture to put with it.
+  - You were asked for a picture type and want to check you have the facts to make it honestly.
+  - You want two pictures worth testing against each other, not two versions of the same idea.
+
+you_give:
+  - Your approved story ad, and who narrates it
+  - When the problem bites for your buyer, in their words (optional)
+  - Your places, things never shown, and claims with sources (optional)
+  - A picture type you'd like, if you have one (optional)
+you_get:
+  - The moment it builds on, quoted from your story
+  - The picture skill chosen, and why, plus a runner-up to test
+  - The full brief and a ready-to-paste image prompt
+  - The line under the picture and a one-line test plan
+  - A score out of 100 for the share of its own checks and the chosen picture skill's checks the brief passes
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your approved story ad. The picture is chosen from the story, so don't skip this.
+  - Add a few lines on your buyer and your claims list, if you have them.
+  - Read the flags first, then paste the image prompt into your image tool.
+  - Make the runner-up too, and test the two under the same story.
+
+how_it_works:
+  - title: Quotes the moment
+    text: Finds the line where the old way stopped working. With no such moment, it tells you to run a direct product ad.
+  - title: Asks where it shows
+    text: A room, a thing, the body, words someone wrote or sent, a sourced fact, or nowhere safe to photograph. That picks the skill.
+  - title: Breaks ties
+    text: Closest to your story's own words first, then fewest words on the image, then the one whose facts are already on file.
+  - title: Adds a runner-up
+    text: A second picture from a different kind of evidence, so your first test teaches you something.
+  - title: Runs that skill's rules
+    text: Its gate, its steps and its honesty checks become part of the brief.
+  - title: Writes the line under
+    text: About 27 characters. A plain caption, a question about the thing, your buyer's own line, or the swap from old step to new.
+
+output_shape: |
+  PUSH
+  <the quote, and where it came from>
+  TRACE AND SKILL
+  <where the evidence lives> -> <skill>, and "changed from X because Y" if swapped
+  RUNNER-UP
+  <a skill from a different trace, for the test>
+  THE BRIEF
+  <everything the chosen skill hands back, in its order, with its image prompt>
+  WHAT IT MAKES PEOPLE WONDER
+  <one line> / picked up by: "<the story's opening words>"
+  LINE UNDER THE PICTURE
+  <words> (<which of the four lines>, <characters>)
+  TEST
+  <chosen picture against the runner-up, under the same story>
+  SCORE
+  <passed> / <checks> x 100 = <score>   Missed: <one line each>
+
+example:
+  business: sprout
+  input: |
+    [the skill]
+
+    Story ad (approved; narrator: a customer who agreed, example only):
+    Every day at 3pm I'd push my chair back from my desk and wait
+    for my stomach to settle.
+    I'd tried fiber powders. I'd tried probiotics. Nothing stuck.
+    Sprout is a daily pack of gummies with 6 g prebiotic fiber. It
+    supports digestion and gut health. One reviewer with IBS wrote
+    that the prebiotics "do their job, but not aggressively."
+    If your stomach is sensitive, start with Low Sugar.
+
+    Buyer: the gut-fix seeker, 25 to 55, mostly women.
+    Picture wanted: the caption bar, with "61% of Americans
+    experience weekly digestive issues" (product page).
+    Brand rule: "supports", never "fix".
+  output: |
+    PUSH
+    "Every day at 3pm I'd push my chair back from my desk and wait
+    for my stomach to settle." (story, line 1)
+
+    TRACE AND SKILL
+    Only a moment -> problem-moment-image-ad-maker.
+    Changed from the caption bar, because that skill needs one fact
+    with its source on file. On the product page, the 61% line
+    links only to the word "Source". MISSING: that source.
+
+    RUNNER-UP
+    On a thing -> tried-before-products-image-ad-maker:
+    the fiber powder tub and probiotic bottle she gave up on, at the
+    back of a desk drawer.
+
+    THE BRIEF
+    Scene: a woman at an office desk mid-afternoon, chair rolled
+    back, one hand flat on the desk, waiting.
+    Where and when: an open-plan office, about 3pm, overhead light
+    and a window. Within reach: a laptop, a lunch box with its lid
+    on, a mug, a lanyard.
+    Person: a made-up woman in her early 40s, loose cardigan, hair
+    tied back. Right hand flat on the desk edge, left hand in her
+    lap, shoulders a little forward. No hand on the stomach, no
+    pained face.
+    Words on the image: none.
+    Not in the picture: logo, price, button, pouch, gummies, powder
+    tubs, a readable screen, children.
+    Image prompt: Square 1:1 phone photo taken from the next desk at
+    sitting height, in an ordinary office at about 3pm, overhead
+    light and window light. A made-up woman in her early 40s in a
+    loose cardigan, hair tied back, has rolled her chair back from
+    the desk. Right hand flat on the desk edge, left hand in her
+    lap, shoulders slightly forward, eyes on the laptop. A lunch box
+    with its lid on, a mug and a lanyard on the desk. Slight tilt, a
+    little grain, unretouched, not posed. No text, no logo, no
+    readable screen, no supplements, no children.
+
+    WHAT IT MAKES PEOPLE WONDER
+    Why has she stopped working? / picked up by: "Every day at 3pm
+    I'd push my chair back"
+
+    LINE UNDER THE PICTURE
+    3pm. Chair pushed back. (plain caption, 23)
+
+    TEST
+    The snapshot against the drawer of old tubs, same story. Judge
+    on readers who reach the offer on the page, then on sales.
+
+tweaks:
+  - what: Name a skill
+    how: Ask for one, such as the sticky note. It makes it if your story and facts allow, or swaps and tells you why, as in the example.
+  - what: The runner-up
+    how: It always comes from a different kind of evidence. Ask for "runner-up from words" or "from a thing" to steer it.
+  - what: Words off
+    how: Say "no words on the image" and only photo skills stay open. Notes, chats and captions fall back to a snapshot.
+  - what: The product
+    how: It stays out by default. Ask for it and send your product photos, and it comes back small and off to one side.
+
+judge:
+  - The picture builds on a moment quoted from your story, not on the product.
+  - Someone with the problem would know what it's about with no caption.
+  - Someone without it would scroll past, and nothing says what the reader has.
+  - The story's first line answers what the picture makes people wonder.
+  - The runner-up shows a different kind of evidence, so the test can teach you something.
+  - Any swap from the skill you asked for is explained.
+
+test:
+  - Ask for a skill you know you can't back, such as a review card with no real review on file. It should swap and say why.
+  - Run the same story twice. The moment and the skill should match both times. If not, your story has two openings competing.
+  - Give it a story with no moment of struggle, such as a product bought only for its looks. It should send you to a direct ad.
+  - Run the chosen picture against the runner-up under the same story. Keep whichever brings more readers to the offer.
+
+improve:
+  - Add your buyers' own words for the moment the problem bites. The best pushes are quotes.
+  - Add claims with sources and reviews with permission to your brand file. Several picture skills need them to pass.
+  - Write your places, light and never-shown list into the house rules, so every picture follows them.
+  - When you already know the picture you want, use that skill on its own for more options.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Choosing the picture is reading and judgement, which Claude, ChatGPT and Gemini all handle well."}
+    - {name: "Nano Banana", why: "Google's image model, which Google recommends for accurate words in a picture, as notes and chats need."}
+    - {name: "Meta Ads Manager", why: "Its A/B test shows the chosen picture and the runner-up to separate groups under the same story."}
+  inputs:
+    - "Five to ten customer quotes about the moment the problem bites, so the picture starts from their words"
+    - "Your claims list with a source for each, so the fact and readout pictures can pass their checks"
+    - "Reviews with written permission to quote, so the review card is open to you"
+    - "A link to the page the ad opens, so the picture and the page start on the same moment"
+
+terms:
+  - term: Story ad
+    meaning: An ad whose main text tells one person's story, like a post from a friend.
+  - term: Push
+    meaning: The moment the old way stopped being bearable for the buyer.
+  - term: Trace
+    meaning: Where that moment leaves evidence a camera or a screen could show.
+  - term: Line under the picture
+    meaning: The bold headline under the image in a Facebook or Instagram ad.

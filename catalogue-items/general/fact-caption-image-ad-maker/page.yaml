@@ -1,0 +1,165 @@
+new_slug: fact-caption-image-ad-maker
+name: "Fact caption image ad maker"
+summary: "Paste your story ad and sourced fact. Get the caption, image prompt and a score out of 100."
+job: make-image-ads
+
+headline: "Fact caption image ad maker"
+subhead: Paste your story ad and the one fact it turns on, with its source. It checks the fact against the source and keeps its exact number. You get a caption, a source line, a phone photo prompt and a score out of 100.
+
+explain: |
+  A specific number over an everyday photo makes people stop to read it. A short line saying where the number comes from is what makes them believe it. Together they work like a photo someone captioned before sharing it.
+
+  This skill takes the one fact your story's turn rests on and checks it against its source: the number stays exact, the verbs stay the source's own, it says only what was measured, and the year is shown. Then it writes a caption of five to twelve words, a small source line, and briefs the photo with calm space for a plain strip. It never borrows a news outlet's look, never says "breaking", and always flags the picture for a person to check before it runs.
+
+when:
+  - Your story's turn rests on one fact you can source.
+  - Your buyers doubt the kind of product, and a tested result answers that doubt.
+  - You want a picture with words that people read and believe.
+
+you_give:
+  - Your approved story ad, with the fact its turn rests on
+  - The fact as its source states it, with who measured it, how and when
+  - The scene the fact belongs over (optional)
+you_get:
+  - A pass or fail on the number, the wording, what was measured and the year
+  - The caption and source line, exactly as they'll appear
+  - The strip's place, colour and typeface, and a blank version
+  - A 60 to 120 word photo prompt and the line under the picture
+  - A score out of 100 for the share of its six checks the brief passes, with each one missed
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your story ad, then the fact and its source. Without a source, it stops.
+  - Make the photo from the prompt, then add the strip in your phone editor or a design tool.
+  - Check the number in the finished picture digit by digit against the source.
+  - Have a person check the fact before the ad runs, and make sure the page shows the full source.
+
+how_it_works:
+  - title: Sets the house rules
+    text: Square, looks taken on a phone, no logo, price, button or brand colour, and no outlet's look.
+  - title: Takes one fact
+    text: The single number or finding your story turns on, the one closest to your buyer's doubt.
+  - title: Checks the source
+    text: The exact number, the source's own verbs, only what was measured, and the year. Older than five years gets flagged.
+  - title: Writes the strip
+    text: A caption of five to twelve words and a short source line, in one plain typeface.
+  - title: Briefs the photo
+    text: The everyday moment the fact is about, or the doubt it answers, with calm space for the strip.
+
+output_shape: |
+  FACT AND SOURCE   <as the source states it, who, how, the year>
+  SOURCE CHECK      <number | verbs | what was measured | year>: pass or fail each
+  SCENE             <what someone scrolling would say they saw>
+  WHERE AND WHEN    <place, time, light, camera spot>
+  WORDS ON IMAGE    "<caption>" / "<source line>"
+  THE STRIP         <where, colour, opacity, typeface>
+  BLANK VERSION     <the photo with no strip>
+  LINE UNDER IMAGE  <words> (<which line>, <characters>)
+  FLAGS             <a person checks the fact, plus anything else>
+  IMAGE PROMPT      <60 to 120 words for the photo>
+  SCORE             <passed> / 6 checks x 100 = <score>, missed: <one line each>
+
+example:
+  business: sprout
+  input: |
+    [the skill]
+
+    Story ad (approved; narrator: a customer who agreed, example
+    only):
+    I figured gummy vitamins were candy with a label on.
+    Then I read Sprout's study. 12 weeks, 120 adults, randomized and
+    placebo-controlled. Blood vitamin C went up 40.1%, and folate up
+    20.5%, against placebo.
+    It measured absorption, nothing else. That was the part I'd
+    doubted.
+    One daily pack: 21 vitamins and minerals and 6 g prebiotic fiber,
+    in a small handful of gummies.
+
+    Fact: "Blood vitamin C up 40.1% (2.7x placebo)."
+    Source: Sprout science page. 2025 study, 12 weeks, randomized,
+    double-blind, placebo-controlled, 120 healthy adults aged 23 to
+    59.
+  output: |
+    FACT AND SOURCE   Blood vitamin C up 40.1% (2.7 times placebo).
+                      The brand's 2025 study: 12 weeks, randomized,
+                      double-blind, placebo-controlled, 120 healthy
+                      adults aged 23 to 59.
+    SOURCE CHECK      Number: pass, 40.1% kept exact. Verbs: pass,
+                      "up", as the source says. What was measured:
+                      pass, blood vitamin C only, no energy or
+                      immunity. Year: pass, 2025. Vitamin C chosen over
+                      folate: it's the bigger, simpler number for the
+                      doubt "it's just candy".
+    SCENE             A jar of mixed gummy sweets on a kitchen shelf,
+                      with a caption about a vitamin C study across it.
+    WHERE AND WHEN    An open kitchen shelf, afternoon window light.
+                      Camera: standing, at shelf height. Calm wall in
+                      the lower third.
+    WORDS ON IMAGE    "Blood vitamin C up 40.1% in a 12-week study"
+                      / "2025 study, 120 adults, placebo-controlled"
+    THE STRIP         Across the lower third, black at 70% opacity,
+                      white text, one plain sans-serif. The source line
+                      smaller, under the caption.
+    BLANK VERSION     The shelf photo with no strip.
+    LINE UNDER IMAGE  Candy, or not? (a question about the thing, 14)
+    FLAGS             A fact on the image: a person checks it against
+                      the study before it runs. Keep "against placebo"
+                      in the story. The study measured absorption only,
+                      so no energy or immunity claim anywhere. The page
+                      must show the study's full details near the top.
+    IMAGE PROMPT      Square 1:1 phone photo of an open kitchen shelf
+                      in afternoon window light, taken standing at
+                      shelf height. A clear glass jar of mixed, brightly
+                      coloured gummy sweets sits left of centre between
+                      a bag of flour and a tin of tea. Plain painted
+                      wall in the lower third. Slight tilt, a little
+                      grain, ordinary and unstyled. No text, no logo,
+                      no label on the jar, no brand name, no person, no
+                      supplements, no product.
+
+tweaks:
+  - what: Which fact
+    how: If your story has two facts, ask for the one that answers your buyer's main doubt. One fact per picture, always.
+  - what: The strip
+    how: Ask for a white strip on dark scenes or a black one on light scenes. Keep it plain, like a caption added on a phone.
+  - what: The scene
+    how: Ask for the moment the fact is about, or for the doubt it answers, as in the example. The doubt often stops more people.
+  - what: Add the strip yourself
+    how: Make the photo without words, then add the strip in a design tool. Every digit stays exact.
+
+judge:
+  - The number and the wording match the source exactly.
+  - There's one fact, with a source line you can read.
+  - It looks like a captioned photo, not a news report or a TV graphic.
+  - Nothing claims more than the source measured.
+  - It's flagged for a person to check before it runs.
+
+test:
+  - Give it a fact with no source. It should stop and send you to another picture.
+  - Give it a rounded number, like "about 40%", next to a source that says 40.1%. It should use 40.1%.
+  - Zoom into the finished picture. Check every digit and the source line against the study.
+  - Run it with the source line against the same picture without it. Keep whichever brings more readers to the offer.
+
+improve:
+  - Keep your claims list with the source, the year and the exact wording for every line.
+  - Add your buyers' main doubts to your brand file, so it picks the fact that answers one.
+  - Build one caption strip in your design tool and reuse it, so every fact ad looks the same.
+  - Pair it with a story ad skill, so the first lines say why the fact matters.
+
+works_best_with:
+  tools:
+    - {name: "Canva", why: "Adds the caption strip and source line as real text on your photo, so every digit is exact."}
+    - {name: "Nano Banana", why: "Google recommends it for accurate text, if the strip must be generated."}
+    - {name: "Any good chat AI", why: "Checking a sentence against its source is careful reading, which Claude, ChatGPT and Gemini all do well."}
+  inputs:
+    - "The full source document, such as the study summary or lab report, so the fact is checked against it and not a summary"
+    - "Your buyers' three biggest doubts, in their words, so the fact chosen answers one"
+    - "The page the ad opens, so it can check the page shows the same fact and the full source"
+
+terms:
+  - term: Caption strip
+    meaning: A plain band of text across part of a photo, like a caption added on a phone.
+  - term: Source line
+    meaning: A short note under the fact saying who measured it, how and when.
+  - term: Line under the image
+    meaning: The bold headline under the picture in a Facebook or Instagram ad.

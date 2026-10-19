@@ -2,20 +2,20 @@
 
 Result: **pass**. Ran on claude-opus-5-5 (effort medium), graded by claude-fable-5-1. Judge list: 5 of 5 met. Invented facts: 0.
 
-A tight, honest brief: every quote is real, the moment is concrete, and it picks one clear force (price fear) with a sensible reason. Minor softness: the market stage rests on a single review and is labelled inferred, and the advice to lead with $29.99 should remind the writer of the text sign-up and renewal conditions given in the offer.
+A tight, honest brief built entirely from the seven pasted reviews, with every quote verifiable and gaps flagged rather than guessed. The owner gets a clear single instruction (spend words on price proof) and a usable word bank, though the brand file's richer evidence was not drawn on.
 
 ## Judge list
 
 - Met: Every quote appears word for word in the evidence
-  "the drink was definitely gritty/chalky" (review 3) and "I WANT to take [Sprout] and don't forget" (review 2) both match exactly.
+  "the drink was definitely gritty/chalky" (review 3) and "It's always been an issue of consistency like many things." (review 1) both match exactly.
 - Met: Exactly one force to work on, with a reason
-  "Force to work on: Fear (price). The push is already loud, so the ad should spend its words on cost."
-- Met: Forces with no evidence marked as gaps, not guesses
-  All four forces carry real quotes; thin Fear evidence is backed by gap questions ("Did the subscription or cancelling worry you?").
-- Met: Job line describes a moment, not an age group or job title
-  "When I've been 'choking on' gritty greens powder 'for the last few years'" is a situation, no demographic label.
-- Met: Market stage names the evidence it rests on
-  "Stage 4, inferred. Buyers discount the nutrient promise: 'The issue has never been nutritive content.'"
+  "Force to work on: Fear (price). Push and pull are already loud, so the ad spends its words on cost"
+- Met: Forces with no evidence are marked as gaps, not filled with guesses
+  "Doubt that it will work and fear of being locked in are MISSING." Habit backed by review 4; awareness marked "assumed".
+- Met: The job line describes a moment, not an age group or job title
+  "When I've been choking on gritty/chalky greens powder for years" is a situation, no demographic label.
+- Met: The market stage names the evidence it rests on
+  "4, inferred, since no competitor claims were supplied. Nutrition is assumed: 'The issue has never been nutritive content.'"
 
 ## What went in
 
@@ -47,25 +47,28 @@ Where it runs: a Facebook ad
 ## What came out
 
 ```text
-**Job line:** When I've been "choking on" gritty greens powder "for the last few years," I want to take my greens without the shaker bottle, so I can finally "stick to" it. What stops me: "They are expensive."
+**Job line:** "When I've been choking on gritty/chalky greens powder for years, I want greens I can stick to and don't forget, so I can stop having to clean a shaker bottle and keep it easier for me to manage. What stops me: they are expensive."
 
-**Awareness:** Solution aware (non-buyers). They already use greens powders: "I've tried a few green powders over the years," "I was taking [a big-name greens powder]." They know the solution but not Sprout.
+**Awareness:** Solution aware (assumed for non-buyers). Buyers came from powders: "I've tried a few green powders over the years." No non-buyer evidence.
 
-**Market stage:** 4, inferred. Buyers discount the nutrient promise: "The issue has never been nutritive content." A better *how* (a gummy that ends the chalky drink) is what moves them.
+**Market stage:** 4, inferred, since no competitor claims were supplied. Nutrition is assumed: "The issue has never been nutritive content." Copy needs a better how: the gummy format.
 
 **Forces**
-- **Push:** "the drink was definitely gritty/chalky"; "it was still $94 a month"
-- **Pull:** "I WANT to take [Sprout] and don't forget"; "it's easier for me to manage"
-- **Fear:** "They are expensive"
+- **Push:** "the drink was definitely gritty/chalky" / "It's always been an issue of consistency like many things."
+- **Pull:** "the one thing I've been able to stick to" / "not having to clean a shaker bottle or extra dishes"
+- **Fear:** "They are expensive". Doubt that it will work and fear of being locked in are `MISSING`.
 - **Habit:** "I've been choking on [a big-name greens powder] for the last few years"
 
-**Force to work on:** Fear (price). The push is already loud, so the ad should spend its words on cost. Compare it to "$94 a month" and to the separate gummies it replaces, and lead with the $29.99 first box.
+**Force to work on:** Fear (price). Push and pull are already loud, so the ad spends its words on cost: $49.99 against "$94 a month," with a $29.99 first box.
 
-**Word bank:** "gritty/chalky" · "choking on" · "stick to" · "don't forget" · "consistency" · "clean a shaker bottle" · "$94 a month" · "easier for me to manage"
+**Word bank:** "stick to" · "I WANT to take" · "don't forget" · "gritty/chalky" · "choking on" · "clean a shaker bottle" · "easier for me to manage" · "$94 a month"
 
 **Gaps**
-- Before you bought, did you worry the gummies wouldn't work as well as powder?
-- Did the subscription or cancelling worry you?
-- What happened right before you started looking for something other than your powder?
-- What do the greens brands you've used promise in their ads?
+- What happened the day you started looking beyond your powder?
+- Did you doubt a gummy could replace a powder?
+- Did the subscription worry you before ordering?
+- Non-buyers: what are you using for greens now?
+
+---
+**Score:** 4/4 checks passed = 100/100. No checks missed.
 ```

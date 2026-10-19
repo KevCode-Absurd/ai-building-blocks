@@ -1,23 +1,34 @@
 # Test run on Sprout, 2026-10-19
 
-Result: **pass**. Ran on claude-opus-5-5 (effort medium), graded by claude-fable-5-1. Judge list: 6 of 6 met. Invented facts: 0.
+Result: **fail**. Ran on claude-opus-5-5 (effort medium), graded by claude-sonnet-5-5. Judge list: 6 of 6 met. Invented facts: 4.
 
-A clean, paste-ready GPT Image prompt that keeps every lock line, the approved words and the sealed pouch, and drops the rejected shaker, old tagline and placeholder. Minor soft spots: hands aren't named left/right, 'rounded sans' doesn't match the brand's Work Sans, and 'hands lower right' was chosen without seeing the layout sketch, but the MISSING list and check are useful.
+The prompt is solid and keeps the lock lines, the words and the sealed pouch, and it flags missing photos honestly. But it ignores the required output shape: it uses a numbered markdown layout instead of the PROMPT/IMAGES/LEFT OUT/SCORE format, and it adds scene details the brief never approved.
+
+## Fix
+
+In the hand-back step, require the exact output shape block (PROMPT (<chars>), numbered 1-5 lines, Keep, IMAGES, LEFT OUT, CHECK, MISSING, SCORE) instead of free numbered sections. Also add a rule that scene details not in the approved ad, such as counter material and time of day, must be flagged or left out.
 
 ## Judge list
 
 - Met: Every attached photo has one stated role.
-  "Image 1 is the real product... Image 2 is the real product, the daily pack... Image 3 is the layout, used for structure only."
-- Met: Lock lines appear word for word, and the pack hasn't been swapped or simplified.
-  Keep line repeats all five input lock lines verbatim; subject block uses "glossy deep green stand-up foil pouch" and "torn straight across the top only".
-- Met: Approved words appear once, in quotes, with their place, or clear space is asked for.
-  "Words: \"Rip. Tip. Enjoy.\" top left, large bold rounded sans, colour #00582D." appears once in the prompt.
+  Image 1 real pouch; Image 2 real daily pack; Image 3 "not sent. Its only job is the layout".
+- Met: Lock lines appear word for word, pack not swapped or simplified.
+  Keep line repeats all five lock lines verbatim, including "daily pack torn straight across the top only".
+- Met: Approved words appear once, in quotes, with place, or clear space asked.
+  Top left, large bold rounded sans-serif text "Rip. Tip. Enjoy." in colour #00582D.
 - Met: No rejected idea, research note or placeholder made it into the prompt.
-  Prompt has no shaker bottle, no "Tear. Pour. Done.", no "HEADLINE HERE"; Left out lists all three as dropped.
-- Met: The camera is a real position, and the hands say which one holds what.
-  "Camera: counter height, 40 cm away"; "an adult hand holds the daily pack... tips... into the other palm" (not left/right, but roles clear).
-- Met: Anything it couldn't know is marked MISSING, and the product is shown closed until answered.
-  Six MISSING lines (bear count, size vs hand, pack printing, three photo roles); "the sealed pouch" kept closed; pack tear is on file.
+  Shaker, "Tear. Pour. Done." and "HEADLINE HERE" listed under Left out; none in prompt.
+- Met: Camera is a real position, and hands say which one holds what.
+  "Counter height, 50 cm away"; "right hand tilts the daily pack... cupped left palm".
+- Met: Anything it couldn't know is marked MISSING, and product shown closed until answered.
+  MISSING lines for photo files, in-hand photo, bear close-up, bear count, pack colour/printing; pouch shown sealed.
+
+## Invented
+
+- other: pale wood counter (Scene detail not in the approved brief, which only said kitchen counter in daylight.)
+- other: Bright morning sun from the left (Brief said daylight only; morning and left direction were added, though it is a reasonable translation.)
+- other: rounded sans-serif text, large bold (Font look was not approved, though the skill asks for a font look.)
+- claim: I got descriptions of all three photos, not the photos themselves. (The run input gave only text labels for the photos, not descriptions, so this is slightly off but it is honest about not seeing them.)
 
 ## What went in
 
@@ -46,42 +57,60 @@ super bright and fun.
 ## What came out
 
 ```text
-**1. Prompt** (997 characters including line breaks)
+I can write and check this prompt, but I can't make the picture because no image tool is connected in this chat.
+
+**1. Prompt** (966 characters, under the 1,000 limit; recount in your tool before pasting)
 
 ```
-A 4:5 photo for a social ad. Image 1: real pouch. Image 2: real daily pack. Image 3: layout only, ignore its text.
-Subject: an adult hand holds the daily pack torn straight across the top only, and tips small opaque deep-green bears, soft matte, into the other palm; fingers clear of the print. Behind, the sealed pouch, label to camera: glossy deep green stand-up foil pouch; big yellow wordmark, yellow bear face top right; "28 Daily Packs" at the bottom.
-Place: kitchen counter; hands lower right, pouch behind, space top left.
-Camera: counter height, 40 cm away, sharp focus. Light: bright sunlight from the left, soft shadows, saturated colour.
-Words: "Rip. Tip. Enjoy." top left, large bold rounded sans, colour #00582D.
-Keep the product exactly as in Images 1–2, labels as printed: glossy deep green stand-up foil pouch; big yellow wordmark, yellow bear face top right; "28 Daily Packs" at the bottom; small opaque deep-green bears, soft matte; daily pack torn straight across the top only.
+A 4:5 photo for a social ad. Image 1: the real pouch. Image 2: the real daily pack.
+
+An adult's right hand tilts the daily pack, torn straight across the top only, pouring small opaque deep-green bears, soft matte, into the cupped left palm. Behind stands the sealed glossy deep green stand-up foil pouch, label to camera: big yellow wordmark, yellow bear face top right, "28 Daily Packs" at the bottom.
+
+Sunny kitchen, pale wood counter; hands centre-right, pouch behind on the right.
+
+Counter height, 50 cm away, natural lens. Bright morning sun from the left, soft shadows, saturated candy colour.
+
+Top left, large bold rounded sans-serif text "Rip. Tip. Enjoy." in colour #00582D.
+
+Keep both packs exactly as in Images 1 and 2: glossy deep green stand-up foil pouch; big yellow wordmark, yellow bear face top right; "28 Daily Packs" at the bottom; small opaque deep-green bears, soft matte; daily pack torn straight across the top only. Labels as printed and fully visible.
 ```
 
 **2. Images**
-- Image 1 is the real product, the adult pouch front-on. Copy its shape, colours and printing.
-- Image 2 is the real product, the daily pack torn across the top. Copy its shape, colours, printing and tear.
-- Image 3 is the layout, used for structure only. Its "HEADLINE HERE" text is ignored.
-- These roles come from your descriptions. I haven't opened the photos, so confirm each one shows what's listed before sending.
+- Image 1: the real product (the pouch). Copy its shape, colours and printing. It stands sealed.
+- Image 2: the real product (the daily pack). Copy its shape, colours, printing and tear line.
+- Image 3: not sent. Its only job is the layout, and the "Top left" line covers that. Sending it would risk "HEADLINE HERE" showing up in the picture.
+- I got descriptions of all three photos, not the photos themselves. So I can't confirm that the lock lines match them, and I can't run the side-by-side checks yet.
 
 **3. Left out**
-- Dropped: the rejected shaker-bottle version, the old line "Tear. Pour. Done.", the "HEADLINE HERE" placeholder, and the stacked "pop / bright / vibrant / super bright / fun" adjectives. Those adjectives became bright sunlight and saturated colour. "Candy-like, never clinical" also became sunlight and saturated colour.
-- The pouch's resealable-top rule became "sealed pouch" behind the hands.
+- The shaker-bottle version and "Tear. Pour. Done." are rejected.
+- "HEADLINE HERE" is placeholder text.
+- "Pop, really bright, vibrant, super bright, fun" became visible cues: morning sun, saturated candy colour and a pale wood counter.
+- Tool and limit settings aren't part of the scene.
+- The tearing moment is shown as the pour, with the tear already made, because one still can show only one action.
 
-**4. Check** (run on the first image, side by side with Images 1–2 and zoomed in. Pass/fail is pending until the image exists)
-1. Product: pouch shape, gloss, deep green, yellow wordmark, bear face top right, "28 Daily Packs" at the bottom. The daily pack matches Image 2, is torn straight across the top only, and is the right size in the hand. The pouch is sealed and not torn.
-2. Words: "Rip. Tip. Enjoy." appears once, top left, in #00582D, spelt right. There is no other text, and "HEADLINE HERE" does not appear.
-3. Action: the bears tip out of the torn top only, in a realistic amount, into the open palm. The pouch stays closed.
-4. Hands and faces: the hands are adult, whole and natural, with a real grip. No finger covers the pack print or the pouch label. There are no stray letters or logos.
-5. Light: sunlight comes from the left, and shadows and reflections on both packs and the bears match the counter. The pouch sits on the counter and the pack touches the fingers.
-6. Camera: counter height, about 40 cm, hands lower right, pouch behind, clear space top left.
-
-Write each failure as one line (asked → got) for the mistakes list. Fix one thing per round, using the keep line and "keep everything else the same".
+**4. Check** (run on the first image, zoomed in, beside Images 1 and 2)
+1. Product: is the pouch shape, gloss, green, yellow wordmark, bear face and "28 Daily Packs" exact? Is the pouch sealed at its resealable top and not torn? Does the daily pack match Image 2? Is the size believable against the hands? (Pending.)
+2. Words: is "Rip. Tip. Enjoy." present once, spelt exactly, top left, in #00582D, with no other added text? (Pending.)
+3. Action: is the pour coming from the straight top tear only, with a believable single-serving amount landing in the palm? (Pending.)
+4. Hands and faces: are both hands whole and natural, with a real grip? Are both labels fully visible, with no stray letters or logos? (Pending.)
+5. Light: does the sun come from the left with soft shadows on both packs? Does the pouch reflect only the kitchen? Is the pouch resting on the counter? (Pending.)
+6. Camera: is it at counter height, about 50 cm away, with the hands centre-right and the pouch behind on the right? (Pending.)
 
 **5. Missing**
-- MISSING: product fact: how many bears are in one daily pack. The prompt shows the pack's contents without a count, which risks an unrealistic amount.
-- MISSING: product fact: daily pack size against a hand, and pouch size against a hand or counter.
-- MISSING: product fact: lock lines for the daily pack's own colour and printing. Right now only Image 2 carries them.
-- MISSING: photo role: pack in a hand (true size).
-- MISSING: photo role: pack in use (pouring).
-- MISSING: photo role: close-up of the bears' surface.
+- MISSING: photo role: Images 1 and 2 themselves. I need the actual files, not descriptions.
+- MISSING: photo role: product in a hand, for true size of the pouch and the daily pack.
+- MISSING: photo role: close-up of the bears (surface and colour).
+- MISSING: product fact: how many bears are in one daily pack. The prompt says "pouring" without a number until this arrives.
+- MISSING: product fact: the daily pack's colour and printing. It isn't in the lock lines, so the prompt relies on Image 2 alone.
+
+**6. Score**
+- Prompt: 100/100 (5 of 5 checks passed). One caveat on check 1: the image roles rest on your descriptions, not on photos I opened.
+- First image: not scored yet. It will be scored on the 6 lines in section 4 once you have it.
+
+**To make it**
+- **ChatGPT:** attach Images 1 and 2, paste the prompt, and ask for the picture (GPT Image). Free plans have tight daily limits. Codex on a paid ChatGPT plan can also make it.
+- **Higgsfield:** paste the prompt into its image tool with the two photos, or connect Higgsfield to Claude.
+- **Claude Code:** with `OPENAI_API_KEY` saved (get one at platform.openai.com/api-keys), the prompt can be sent to the OpenAI image API and the file saved. OpenAI bills each picture.
+
+Make one image, run section 4 on it, then fix one thing at a time.
 ```

@@ -1,31 +1,27 @@
 # Test run on Sprout, 2026-10-19
 
-Result: **fail**. Ran on claude-opus-5-5 (effort medium), graded by claude-fable-5-1. Judge list: 1 of 6 met. Invented facts: 1.
+Result: **fail**. Ran on claude-opus-5-5 (effort medium), graded by claude-fable-5-1. Judge list: 1 of 6 met. Invented facts: 0.
 
-The cast cards and voice lines are strong and the approval stop is correct, but the owner gets only a bounced script and two avatars, with no sheets, storyboard, clips or finishing notes. The script check is arguably too strict (the three-part label line is one approved claim, and the 'stick to' quote is a real review on file), and the MISSING lines ask for brand facts that were already available.
+What was produced is sound: a careful script check that sends back the three-fact turn and the review line rather than patching them, two cast cards and voices that could not be confused, the no-tool disclaimer up front, and clear MISSING lines for the photo, accent and never-show list. But the run ends at approval 1, so the sheets, storyboard, clip prompts, finishing notes and score that judge checks 2 to 6 depend on do not exist yet, and the owner must re-attach the photo and resend script lines before anything usable for video comes back.
 
 ## Fix
 
-In Stage 0, add: 'A single approved label line (e.g. 60+ ingredients, 21 vitamins & minerals, 6 g fiber) counts as one fact, and a review quote attributed to reviews is not a result claim.' In 'If something is missing', add: 'Read the business brand and review files before writing MISSING: brand file.'
+In 'What you hand back', state that at each approval stop the run hands back only the files for stages done so far under the STAGE headings, and that the score and finishing notes come only at the final hand-back; and in 'What you need', tell the run to check the chat for the attached product photo before declaring it MISSING.
 
 ## Judge list
 
 - Met: The run stopped for your yes after the cast cards, the sheets and the storyboard.
-  "Approval 1 of 3: waiting for approval of both cast cards and both voice lines before stage 2." Sheets and storyboard not yet reached.
+  "Approval 1 of 3: Do you approve both cast cards and voice lines?" Stopped correctly after Stage 1; sheets and storyboard not yet reached.
 - Not met: Each line comes from the right mouth, and the listener's mouth stays closed.
-  No storyboard or clip prompts produced; run ended at approval 1, so no beats or 'mouth closed' instructions exist.
+  Not demonstrated: no storyboard or clip prompts exist yet; run ended at approval 1.
 - Not met: The two people look clearly different and keep their sides in every clip.
-  Cast cards differ on all seven points (38 stocky bearded vs 29 slim glasses), but no clips exist to show sides held.
+  Cards differ in seven ways ("looks about 34, slim" vs "looks about 47, broad stocky"), but no clips exist to check sides.
 - Not met: The two voices stay apart and the same throughout.
-  "low baritone, slow" vs "bright mid-range alto, quick" defined, but no clip prompts carry them through.
+  Voice lines differ ("mid-high pitch, quick pace" vs "low pitch, slow even pace") but no clips exist to check consistency.
 - Not met: The product is on the table in every frame, label unchanged, nothing in front of it.
-  No product sheet, product line, opening frame or clips produced.
+  Not demonstrated: "MISSING: product front photo"; no product line, opening frame or clips produced.
 - Not met: The disclosure line and the offer text are in the finishing notes, and nobody says the offer.
-  Script check notes "The offer is not spoken", but no finishing notes, disclosure line or offer text produced.
-
-## Invented
-
-- claim: MISSING: brand file (buyer's room and light, how "Sprout" is said, never-show list) (Sprout's brand.md was on file with US home market, room/photo style and the never-show list; treating it as absent is unsupported.)
+  No finishing notes produced; only "The offer is not spoken" confirmed in script check.
 
 ## What went in
 
@@ -55,53 +51,45 @@ Tool: 10-second clips with speech, 3 reference images.
 ## What came out
 
 ```text
-# File 1: Script check
-
-**Result: does not pass. Send these lines back to the podcast clip script skill. No lines have been changed here.**
-
-| Clip | Speaker | Line | Rule broken | What the rewrite needs |
-|---|---|---|---|---|
-| 2 | Guest | "Sixty-plus ingredients. Twenty-one vitamins and minerals. Six grams of fiber." | One fact per turn. This turn has three. | Keep one fact, for example the 21 vitamins and minerals, because the Host's next line picks up "Twenty-one." Move the other facts out, or into their own turns in another clip. |
-| 2 | Guest | "Vitamins, about a hundred percent of daily value. Minerals, about a quarter." | One fact per turn. This turn has two amounts. It also pushes the clip past 10 s: clip 2 runs about 11 s of speech before any pauses, so the last word gets cut off. | One amount per turn. Clip 2 must fit inside 10 s and end on a turn. |
-| 3 | Guest | "The reviews keep saying 'the one thing I've been able to stick to.'" | No speaker claims a result. Sticking to a routine is a result, here spoken through reviews, and "keep saying" claims many of them. | Either replace it with a product fact that serves the belief (one pack holds more than they guessed), or supply the exact review wording, its source and how often it appears, so it can be shown as a quoted review rather than spoken as a claim. |
-
-**Lines that pass:**
-- Clip 1, all three turns. Each turn has one speaker and one fact. "My powder" is the Host's doubt about another product, not a claim of using Sprout.
-- Clip 2, Host: "Twenty-one. At full amounts?"
-- Clip 3, Host: "Okay. Send me that."
-- The offer is not spoken.
-- Clips 1 and 3 end where a turn ends.
-
-**Timing at 10-second clips:**
-- Clip 1: about 8 s. A silent reaction fills the remaining time.
-- Clip 2: about 11 s or more. Too long, as noted above.
-- Clip 3: about 6 s, and this will change with the rewrite.
-
-The storyboard and clip prompts (stages 4 and 5) wait for the revised lines. The cast, reference images and sheets do not depend on them.
+I can only write the prompts; no picture or video tool is connected in this chat, so no images or clips will come from here.
 
 ---
 
-# File 2: Avatar cards
+**File 1: Script check: lines to send back**
 
-**Cast cards** (paste word for word into every later prompt)
+| Clip | Line | Problem | Send back for |
+|---|---|---|---|
+| 2 | Guest: "Sixty-plus ingredients. Twenty-one vitamins and minerals. Six grams of fiber." | Three facts in one turn. Each turn gets one fact. | Split into separate turns with a Host line between them, or keep one fact and move the others. |
+| 2 | Whole clip (about 28 spoken words plus three turn changes) | Likely runs past 10 seconds. Words can't be slowed or cut at the clip end. | Trim, or spread across clips. The fix above may handle this. |
+| 3 | Guest: "The reviews keep saying 'the one thing I've been able to stick to.'" | This is a result claim relayed through reviews. "Keep saying" claims a frequency. | Replace it with a real review quoted word for word, with its source on file, and drop "keep", or replace it with a product fact. |
+| All | Twenty grams, sixty-plus ingredients, twenty-one vitamins and minerals, six grams of fiber, about 100% daily value for vitamins and about 25% for minerals | Can't be checked against the label without the photo. | Confirm each number against the pack before Stage 3. |
 
-- `HOST (left): looks about 38, broad-shouldered stocky build, deep brown skin with warm undertones, close-cropped black hair, short neat black beard and no glasses, plain mustard-yellow crewneck sweatshirt with no print, a small healed scar through the left eyebrow`
-- `GUEST (right): looks about 29, slim narrow-shouldered build, fair skin with light freckles across the nose, shoulder-length wavy auburn hair tucked behind one ear, thin round tortoiseshell glasses and no beard, plain forest-green cotton button-up shirt with sleeves rolled to the forearm and no print, a small dark mole on the right cheekbone`
+These lines pass:
+- Clip 1, all three turns.
+- Clip 2, "Twenty-one. At full amounts?" and the daily-value answer, if it is confirmed as one fact.
+- Clip 3, Host: "Okay. Send me that."
 
-The two cards differ on all seven points: age, build, skin, hair, glasses or beard, top, and mark. Both are ordinary peers in plain clothes. There are no words, logos, coats, lanyards or titled books.
+The offer is not spoken. Every clip ends where a turn ends.
 
-**Voice lines** (unchanged in every clip)
+---
 
-- `HOST VOICE: about 38, low baritone, slow and deliberate pace, dry, warmly skeptical, General American accent`
-- `GUEST VOICE: about 29, bright mid-range alto, quick even pace, matter-of-fact, lightly amused, General American accent`
+**File 2: Avatar cards**
 
-The two voices differ in pitch (low against mid) and in pace (slow against quick). Neither is modelled on a real person, show or creator.
+`HOST (left): looks about 34, slim build with narrow shoulders, light olive skin with faint freckles across the nose, dark brown shoulder-length hair in a low ponytail, round tortoiseshell glasses, plain mustard-yellow crew-neck knit sweater, a single small silver stud in the left ear only`
 
-**MISSING lines**
+`GUEST (right): looks about 47, broad stocky build, deep brown skin, close-cropped black hair greying at the temples, short trimmed salt-and-pepper beard and no glasses, plain navy-blue collared cotton shirt with sleeves rolled to the elbow, a plain steel wristwatch on the right wrist`
 
-- `MISSING: accent. The brand file is missing. Using General American as the brand's home accent, inferred from "fiber" and "daily value". Replace this if the brand file says otherwise.`
-- `MISSING: brand file (buyer's room and light, how "Sprout" is said, never-show list). Needed for the set sheet in stage 3.`
-- `MISSING: buyer review doubts (store add-on). Needed if the clip 3 rewrite draws on reviews.`
+**Voice lines**
+- `HOST VOICE: woman about 34, mid-high pitch, quick pace, dry and sceptical, warm underneath, General American accent`
+- `GUEST VOICE: man about 47, low pitch, slow even pace, calm and matter-of-fact, General American accent`
 
-**Approval 1 of 3:** waiting for approval of both cast cards and both voice lines before stage 2.
+The two cards differ in seven ways: age, body, skin, hair, glasses or beard, top colour, and personal mark. Both wear plain clothes with no words, logos or prints. Neither has anything that suggests an expert.
+
+`MISSING: product front photo.` The attached photo isn't visible to me. Please re-attach it. Stage 3 won't start without it.
+`MISSING: brand file.` No accent was given, so I used General American, based on the US spelling "fiber". Confirm or change it.
+`MISSING: how "Sprout" is said, and the never-show list.`
+
+---
+
+**Approval 1 of 3:** Do you approve both cast cards and voice lines? Send the revised script lines and the product photo at the same time.
 ```

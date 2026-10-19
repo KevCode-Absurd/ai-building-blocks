@@ -2,22 +2,22 @@
 
 Result: **pass**. Ran on claude-opus-5-5 (effort medium), graded by claude-fable-5-1. Judge list: 6 of 6 met. Invented facts: 0.
 
-A clean, honest offer ad for the price doubter: both prices at equal size with their conditions right beside them, no percentage mess, no star ratings, guarantee and SMS condition quoted word for word. All numbers trace to the files, gaps are flagged, and the image prompt and layout are specific enough to hand to a designer; only small quirks are a bulleted prompt instead of one paragraph and the note that reviews weren't received despite the brief saying they were pasted.
+A clean, buildable plan that answers the price doubter's exact doubt with the two real prices and their conditions, uses no conflicting percentage, and traces every number to the brand file. The owner gets a ready layout, feed copy within limits, and a sensible pre-launch checklist on the discount mess and cancel wording.
 
 ## Judge list
 
 - Met: One-sentence argument; picture and every line argue the same thing
-  "both prices are shown up front: $29.99 ... then $49.99 every 4 weeks"; headline "What you'll actually pay."; first line "Yes, it goes up after box one"
-- Met: Ad type's proof is in the inputs, and ruled-out types each have a reason
-  Checked fact backed by "Product page price table: $29.99 ... $49.99 renewal"; ruled out Their words, The offer, The occasion, Product alone, Look inside each with a reason
+  "Argument: The price doubter... because the site shows both prices up front: $29.99... then $49.99" matches headline, price-block picture and feed copy.
+- Met: Ad type's proof is in the inputs; ruled-out types each have a reason
+  Checked fact backed by "Prices table, Sprout Original (Adults), Low Sugar, 28 packs"; The offer, Occasion, Their words and the rest each get a reason.
 - Met: Image headline 7 words or fewer, at most three other things to read
-  "What you'll actually pay. (4)"; three other items (two price+condition pairs, "Pause Or Cancel Any Time."), 21 words total
+  "First box $29.99. Then $49.99. (5)" plus condition, renewal and source lines; 19 words total.
 - Met: Every character count shown and within limit
-  First line (83) verified; headlines (25), (21), (25); description (43); all counts correct
-- Met: Customer quotes word for word, with source, never beside a face
-  No customer quotes used; "no customer words are used"; brand/site wording is quoted with source
+  "(88)" first line; headlines "(24)", "(24)", "(26)"; description "(47)"; all verified correct.
+- Met: Customer quotes word for word with source, never beside a face
+  No customer quotes used; guarantee quote "This policy applies only to your initial purchase." matches FAQ, source given.
 - Met: Offer in exact words; anything unbacked listed as MISSING
-  Offer block matches the brief; MISSING lists reviews text, renewal shipping, tax, pause/cancel source, sugar grams
+  "Today $29.99, but only with the promotional SMS discount... After that, $49.99 every 4 weeks... Pause Or Cancel Any Time." MISSING list of five gaps.
 
 ## What went in
 
@@ -44,130 +44,129 @@ Take 61% OFF".
 ## What came out
 
 ```text
-## Ad 1: Both prices, same size
+I can't draw the picture here (no image tool is connected), so this is the full plan and prompt. How to make it is at the end.
 
-Argument: A price doubter who suspects Sprout's deal hides a jump should start the Low Sugar subscription, because both prices are shown up front: $29.99 for the first 28 packs with the text sign-up, then $49.99 every 4 weeks.
-
-Buyer: The price doubter, who knows the brand (maybe from a store shelf) and thinks it costs too much | Ready | Question: Can I believe it? The named doubt is "Will the price jump after the first order?"
-
-Claim: $29.99 first box, then $49.99 every 4 weeks for 28 packs ($1.78/day, the site's figure). Source: sprout.example product page, prices captured late Sept to mid Oct 2026. Footer terms: "Offer assumes customer has received and uses promotional SMS discount reserved for new customers only."
-
-Offer:
-- What you get: Sprout Original, Low Sugar, 28 daily packs.
-- Today's price: $29.99 for the first box. This is for new customers who use the text sign-up discount.
-- Later price: $49.99 every 4 weeks ($1.78/day).
-- Pause and cancel: "Pause Or Cancel Any Time."
-- Guarantee: 30-day money-back. "This policy applies only to your initial purchase."
-- Action: shop at sprout.example and use the text sign-up.
-
-Code: Checked fact · Designed · Ready | Skeleton: Big type, with the pouch beside it | Size: 4:5
-
+## Ad 1: The real price, in dollars
+Argument: The price doubter who has seen Sprout on a shelf should start the subscription because the site shows both prices up front: $29.99 for the first box with the text sign-up, then $49.99 every 4 weeks ($1.78/day).
+Buyer: Price doubter, knows the brand and thinks it costs too much | Ready | Question: Can I believe it? (named doubts: "Which discount is real?" "Will the price jump after the first order?")
+Claim: First box $29.99 with the new-customer text sign-up, then $49.99 every 4 weeks for 28 packs, $1.78/day (source: brand file, Prices and offers table and footer small print; $1.78/day is the site's figure)
+Offer: 28 daily packs of Sprout Original, Low Sugar. Today $29.99, but only with the promotional SMS discount for new customers. After that, $49.99 every 4 weeks. Guarantee: 30-day money-back, "This policy applies only to your initial purchase." Subscription: "Pause Or Cancel Any Time." Action: Shop Now.
+Code: Checked fact · Designed · Ready | Skeleton: Big type | Size: 4:5
 Ruled out:
-- **Their words:** the 20 reviews were not in the inputs I received. The brand file's price lines ("They are expensive", "I feel like they are a trap") are doubts with no named source, and none says the price is fair.
-- **The offer:** there is no true reason to act now. The birthday price is "indefinitely", with no end date. The live percentages (52/55/49/58/61%) contradict each other. P1 and S1 already run this type.
-- **The occasion:** no real date on file.
-- **Product alone and Look inside:** these answer "What is it?", which a Ready buyer already knows.
+- The offer: there is no true reason to act now, because the birthday price is framed as "indefinitely" and has no end date. P1 and S1 already lead with an offer.
+- The occasion: there is no real date on file.
+- Their words: no review text arrived (see MISSING), so there is no exact price quote with a source.
+- Product alone, Look inside, The moment, Old way/new way, In use: these answer "What is it?" or "Is it for me?". This buyer already knows the brand.
 
 ### Picture and layout
+Picture must show: The two prices set large as the picture itself, with the source line right beside them. The closed adult pouch sits small below on cream, with a few green bears in front.
 
-Picture must show:
-- The two prices as the picture, set at the same size, so the renewal price is not hidden in small print.
-- Photo 1's deep-green Low Sugar pouch beside them, upright and sealed, with a few green bears in front.
+Reading order: picture (the price block), then the first read "First box $29.99. Then $49.99.", then the second read (the condition under $29.99 and the renewal line under $49.99), then the third read (the source line).
 
-Reading order: picture (the $29.99 and $49.99 numerals plus the pouch), then the headline "What you'll actually pay.", then each price's label (its condition, sitting right beside it), then "Pause Or Cancel Any Time."
-
-Zones, 4:5 at 1440 x 1800, top to bottom. Side margins are 5%.
-
-| Height | What sits there |
+Zones, 4:5 (1440 x 1800), 6% side margins:
+| Zone (top to bottom) | What sits there |
 |---|---|
-| 0–5% | Empty cream (#FFF7DF) |
-| 5–18% | Headline, left aligned, Work Sans bold 120 px, #002C17 |
-| 20–44% | Left 5–65% width: "$29.99" in the chunky display font at 260 px, kelly green #007E40. Directly under it: "first box, new customers, text sign-up", Work Sans medium 52 px, #002C17 |
-| 44–48% | Left: thin #002C17 rule with a small downward arrow (graphic only, not a button) |
-| 48–70% | Left 5–65% width: "$49.99" at 260 px, same size and font, #002C17. Directly under it: "every 4 weeks after" at 52 px |
-| 18–80% | Right 62–95% width (overlaps the rows above): the photo 1 pouch, upright, about 58% of frame height. It is closed at its resealable top, never torn, with "28 Daily Packs" readable at its base |
-| 74–84% | Left: "Pause Or Cancel Any Time.", Work Sans bold 60 px, #002C17, with a thin sunflower (#FFCC2E) underline. Plain text, no pill or button shape |
-| 84–100% | Cream fading to soft pale green. A loose scatter of deep-green bears runs in front of the pouch base. No words. The bottom 5% is clear |
+| 0–6% | Empty cream |
+| 6–26% | "First box $29.99." in Work Sans bold, about 170 px, deep forest #002C17. "$29.99" is in kelly green #007E40 with a sunflower #FFCC2E underline swash. |
+| 26–31% | "New customers, with text sign-up", Work Sans medium, 52 px, directly under $29.99 |
+| 33–53% | "Then $49.99." in the same size and colour as line 1 |
+| 53–58% | "Every 4 weeks · $1.78/day", Work Sans medium, 56 px, directly under $49.99 |
+| 59–63% | "PRICES ON SPROUT.EXAMPLE, OCT 2026", DM Mono uppercase, 40 px, forest green #00582D |
+| 64–94% | Closed adult pouch (photo 1), centre-right, about 30% of the frame height, with 5 to 7 bears scattered in front. Left side stays empty cream. |
+| 94–100% | Empty cream |
 
-The price block covers about 50% of the height by 60% of the width, which is more than a third of the frame.
+The price block (6–63%) fills more than half the frame. Each condition sits right under the price it limits.
 
 Photos needed:
-- **Photo 1 (pouch on gradient):** confirm it is the Low Sugar pouch, with no white Sugar-Free burst.
-- **Photo 2 (gummies in a palm):** not used. It is kept for a later "In use" ad.
+- Photo 1: pouch on gradient. Use the pouch exactly as shown.
+- Photo 2: gummies in a palm. Use it only as the reference for the gummies' look.
+- The ground is flat cream, not the photo's gradient.
 
-### Words on the image (21 words)
-
-Headline: What you'll actually pay. (4)
+### Words on the image (19 words)
+Headline: First box $29.99. Then $49.99. (5)
 
 Other:
-- "$29.99" (1) + "first box, new customers, text sign-up" (6)
-- "$49.99" (1) + "every 4 weeks after" (4)
-- "Pause Or Cancel Any Time." (5)
+- Condition: New customers, with text sign-up (5)
+- Renewal: Every 4 weeks · $1.78/day (4)
+- Source: Prices on sprout.example, Oct 2026 (5)
+
+Smallest type is 40 px on the 1440 px canvas.
 
 ### Feed copy
-
-First line: Yes, it goes up after box one: $29.99 with text sign-up, then $49.99 every 4 weeks. (83)
+First line: Here's what Sprout costs: $29.99 first box with text sign-up, then $49.99 every 4 weeks. (88)
 
 Rest:
-1. The $29.99 first box is for new customers who use our text sign-up discount. After that it's $49.99 for 28 packs every 4 weeks, or $1.78 a day.
-2. Pause Or Cancel Any Time.
-3. 30-day money-back guarantee on your first order. This policy applies only to your initial purchase.
-4. Sprout Original, Low Sugar: 21 vitamins & minerals and 6g fiber in one pack. Rip. Tip. Enjoy.
+- That first-box price is for new customers who use the text sign-up discount.
+- After that: $49.99 every 4 weeks for 28 daily packs. That's $1.78 a day, and no shaker to wash.
+- 30-day money-back on your first order. The FAQ says it plainly: "This policy applies only to your initial purchase."
+- Subscriptions: "Pause Or Cancel Any Time."
 
 Headlines:
-- $29.99, then $49.99/4 wks (25)
-- Every price, up front (21)
-- $1.78 a day after box one (25)
+- $29.99 now, $49.99 after (24)
+- The real price of Sprout (24)
+- Every box after: $1.78/day (26)
 
-Description: Sprout Original, Low Sugar. 28 daily packs. (43)
-
+Description: Low Sugar, 28 daily packs, ships every 4 weeks. (47)
 Button: Shop Now
 
 ### Image prompt
+**Canvas:** 4:5 portrait, 1440 x 1800, flat warm cream background #FFF7DF, soft even daylight from the upper left, gentle contact shadows only.
 
-A 4:5 vertical image, 1440 x 1800 px, in a bright, sunny, candy-like product style.
+**Top area:** Leave the top 63% of the frame completely empty cream for type that will be added later in a design tool. Draw no text, letters, numbers, labels or logos anywhere except what is already printed on the pouch.
 
-- **Background and light:** a smooth warm cream (#FFF7DF) background that fades to soft pale green across the bottom 15%. Soft, even daylight from the upper left, with a gentle shadow on the floor.
-- **Photo 1 is the Sprout Original Low Sugar pouch.** Keep its glossy deep-green stand-up foil shape, yellow wordmark, yellow bear face top right and "28 Daily Packs" at the bottom exactly as photographed. Do not add a white burst, and do not change any colour or label.
-- **Placement and angle:** stand the pouch upright, shot straight on at eye level. Place it in the right third of the frame, from 62% to 95% of the width and from 18% to 80% of the height.
-- **Opening rule:** the pouch is sealed at its resealable top. It is never shown torn or open.
-- **Props:** five to eight small, opaque, soft matte deep-green gummy bears, about thumbnail height, loosely scattered on the floor in front of the pouch base, between 84% and 95% of the height. No other props.
-- **Empty space:** leave the left 65% of the frame, from 5% to 84% of the height, completely empty, flat cream for type.
-- **Do not include:** people, hands, children, cartoon characters or any partner brand marks.
-- **No text:** generate no text, numbers or logos beyond what is printed on the pouch in photo 1. All type will be set afterwards in a design tool.
+**Pouch:** In the lower third (64–94% from the top), place the Sprout adult pouch from photo 1 slightly right of centre, standing upright, about 30% of the frame height.
+- Photo 1 is the pouch. Keep its shape, glossy deep green foil, yellow wordmark, yellow bear face top right and "28 Daily Packs" exactly as shown.
+- The pouch is closed and sealed at its resealable top. Never show it torn or opened.
+
+**Gummies:** In front of the pouch, scatter 5 to 7 small opaque deep-green gummy bears.
+- Photo 2 is the reference for the gummies only. Match their soft matte texture, colour and thumbnail size exactly.
+- No hand, no person.
+
+**Mood:** Bright and candy-like, never clinical. Leave the left side of the lower third as empty cream.
 
 ### Proof and gaps
-
 **Sources:**
-- Product page price table: $29.99 "starts at" price, $49.99 renewal every 4 weeks, "$1.78/day", 28 packs, Low Sugar.
-- Product page footer (SMS condition): "Offer assumes customer has received and uses promotional SMS discount reserved for new customers only."
-- FAQ (guarantee): "This policy applies only to your initial purchase."
-- Product page and science page: "21 vitamins & minerals and 6g fiber" (fine-to-repeat list).
-- Brand lines: "Rip. Tip. Enjoy." (brand line).
-- Pause and cancel wording: "Pause Or Cancel Any Time." comes from your brief, not the brand file.
-- Price check: $49.99 ÷ 28 = $1.785, which the site shows as $1.78. No per-day figure is built from the $29.99 price.
+- $29.99 first order, $49.99 every 4 weeks and $1.78/day: Prices table, Sprout Original (Adults), Low Sugar, 28 packs.
+- "New customers, with text sign-up": footer small print, "Offer assumes customer has received and uses promotional SMS discount reserved for new customers only."
+- Guarantee quote: product page FAQ.
+- "21 vitamins and minerals, 6 g fiber" was not used, to keep one claim.
+- Pouch look: Look section and photo 1.
 
 **Inferred:**
-- The buyer's Ready stage and the jump doubt come from the brief and the brand file's buyer summary, not from reviews I could read.
-- This is a test of transparency against percentage-off.
+- The buyer and their doubts come from your brief and the brand file's buyer summary. The 20 reviews did not arrive with the files, so no customer words are used.
+- The ad is a test of the price-doubter angle without review backing.
 
 **Against the batch:**
-- P1 and S1 are offer-type ads built on "61% off". This ad uses a different type (Checked fact) and a different argument: both prices shown, with no percentage.
-- It tests whether showing the renewal price up front persuades price doubters better than a discount headline.
-- The dress of P1 and S1 was not given, so it is not confirmed that Designed is the least-used dress in the batch.
+- P1 and S1 both lead with "61% off", and P1 also answers the price objection.
+- This ad uses no percentage at all, only the two dollar prices with their conditions. It differs in code (Checked fact, not The offer) and in claim (what you pay now and after, versus how much is off).
+- What it tests: whether showing the renewal price up front beats a percent-off headline for the buyer who asks "will the price jump?"
 
 **MISSING:**
-- Fact: the text of the 20 pasted reviews. It was not in the inputs I received, so no customer words are used.
-- Fact: shipping cost on renewal boxes. Free shipping is only stated for the first order.
-- Fact: whether tax applies.
-- Source: the brand file does not record "Pause Or Cancel Any Time." as site wording.
+- Review text (source): the 20 reviews were not attached.
+- Fact: whether free shipping applies to this $29.99 order. The bar says it does, but the offer lines conflict, so it is left out.
+- Fact: how a subscriber actually pauses or cancels (the steps).
+- Fact: whether $29.99 is before tax and shipping.
 - Fact: grams of sugar in Low Sugar.
 
 **Check before launch:**
-- **"Pause Or Cancel Any Time.":** confirm it appears on sprout.example word for word. Cancelling is the loudest complaint on public review sites, so add nothing beyond those words.
-- **Prices:** confirm $29.99 and $49.99 are still live together for Original Low Sugar.
-- **Conflicting discounts:** the live percentages (52%, 55%, 49%, 58%, 61%) contradict each other and are deliberately left out.
-- **Conflicting ratings:** the star rating appears four ways (4.8, 4.75, 4.74 and 4.0), so none is used.
-- **Photo 1:** confirm it shows the Low Sugar pouch.
-- **Type sizes:** confirm all type is at least 40 px. The smallest planned is 52 px.
+- Discount figures conflict across the site (49%, 52%, 55%, 58%, 61%), so none are used here. Settle them before any percent ad runs alongside this one.
+- "Pause Or Cancel Any Time." comes from your brief, not the brand file. Confirm the exact wording and capitals on the live site. Cancelling is the loudest public complaint, so add nothing beyond those words.
+- Confirm checkout renews the adult Low Sugar box at $49.99. The Kids page shows "Renews at $74.98", which suggests renewal prices may be inconsistent.
+- Confirm $29.99 is still live, and update "Oct 2026" on the source line if the ad runs later.
+- Link the SMS terms on the landing page.
+
+### Score
+5 / 5 checks x 100 = 100. Missed: none.
+- Picture, image words and feed copy all argue the same two prices.
+- The source line the Checked fact type needs is on the image.
+- Limits are met: 19 image words; first line 88 characters; headlines 24, 24 and 26 characters; nothing under 40 px.
+- The offer and guarantee are given with every condition.
+- Every gap is listed.
+
+**To make the picture:**
+- **ChatGPT (GPT Image) or Gemini (Nano Banana):** paste the image prompt into a chat with photos 1 and 2 attached and ask for the picture. Free plans have tight daily limits. Codex on a paid ChatGPT plan can also make it.
+- **Higgsfield:** paste the prompt into its image tool, or connect Higgsfield to Claude so Claude makes it there.
+- **Claude Code:** with `OPENAI_API_KEY` (platform.openai.com/api-keys) or `GEMINI_API_KEY` (aistudio.google.com/apikey) saved, the prompt can be sent to that image API and the file saved. OpenAI or Google bills each picture.
+
+Then set the type in a design tool using the zones above.
 ```

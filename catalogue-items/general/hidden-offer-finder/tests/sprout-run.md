@@ -2,24 +2,24 @@
 
 Result: **pass**. Ran on claude-opus-5-5 (effort medium), graded by claude-fable-5-1. Judge list: 7 of 7 met. Invented facts: 0.
 
-A thorough, honest offer map: every live deal is quoted, the discount mess is laid out with arithmetic that exposes it, and the nine new offers all come from things Sprout already has. The three picks (cancel terms up front, first-order guarantee, the 12-pack store trial) are cheap to arrange and aimed at real buyer doubts; minor nits are a few said-simply lines with two numbers and NEW 3's "most people who try it" leaning on a customer survey (qualified in its terms).
+A thorough, honest offer list: every live deal is quoted, the discount tangle is laid out with the 49% math exposed, and the ten proposals are built only from Sprout's own stock with clear must-arrange lines. The only slips are cosmetic: two LIVE said-simply lines carry two numbers, and the tabular LIVE layout differs from the shape.
 
 ## Judge list
 
-- Met: Every live offer is there, in your exact wording
-  22 LIVE items, e.g. "Save 52% + free shipping on your first order", "Sign Up for 55% Off", VIP, cashback, HSA/FSA, guarantee, shipping all quoted.
-- Met: Every clash between pages is listed, with the smaller figure in use
-  "Figure used: 49%. Even 49% does not match its own $45.33, so new offers quote dollar prices and no percent."
-- Met: Every price is one of yours, or worked from yours with the sum shown
-  "$22.49 ÷ 28 = $0.80 a day", "$52.79 − $49.99" = $2.80; per-day table shows each division.
-- Met: The guarantee is quoted in full, with its limits
-  "30-day money-back, first order only. 'This policy applies only to your initial purchase.' ... Renewals are not covered."
-- Met: No more than two new offers are only money off
-  Only NEW 5 ("money-off proposal 1 of 2") and NEW 9 ($29.99 first order) rest on money off.
-- Met: Every new gift, size or service sits under "must arrange"
-  NEW 4: "Write the real pause and cancel steps"; NEW 7: "An opt-out choice"; NEW 1: "A store finder".
-- Met: Nothing says "limited time" or "exclusive" without a real end date, and there are no exclamation marks
-  "exclusive" appears only inside the quoted brand VIP line in LIVE 15; no exclamation marks in the run's own text.
+- Met: Every live offer is there, in your exact wording.
+  20 LIVE rows quote brand.md verbatim, e.g. "Save 52% + free shipping on your first order", "MOST POPULAR: GET 49% OFF" at $45.33, "Buy 2 Save $5".
+- Met: Every clash between pages is listed, with the smaller figure in use.
+  "Headline discount: 49%, 52%, 'up to 55%', 55%, 58%, 'up to 61%' ... Figure used: 49%"; Kids $22.49 vs $24.99 uses $24.99; $20 off vs $29.99/$45.33 uses $20 off.
+- Met: Every price is one of yours, or worked from yours with the sum shown.
+  "$49.99 ÷ 28 = $1.785", "$19.97 ÷ 12 = $1.66", "$29.99 + ... $24.99 − $5 = $49.98", "1 − 45.33 ÷ 66.65 = 32% off".
+- Met: The guarantee is quoted in full, with its limits.
+  "30-day money-back. 'This policy applies only to your initial purchase.'" repeated in LIVE 19 and N1 terms.
+- Met: No more than two new offers are only money off.
+  Only N2 "(money-off 1 of 2)" and N4 "(money-off 2 of 2)"; N7 states "It claims no saving, because there isn't one."
+- Met: Every new gift, size or service sits under "must arrange".
+  N10 tote: "Must arrange: The gift program itself. Stock. Its end date."; N3: "Or sell the 12-pack on sprout.example."
+- Met: Nothing says "limited time" or "exclusive" without a real end date, and there are no exclamation marks.
+  No exclamation marks anywhere; "limited flavors" appears only inside the quoted VIP line, never "limited time" or "exclusive".
 
 ## What went in
 
@@ -50,436 +50,227 @@ price doubter.
 ```text
 ## LIVE
 
-**1. "Save 52% + free shipping on your first order"** (announcement bar)
-- **Name:** 52% First Order
-- **Said simply:** "They take about half off your first box and ship it free."
-- **Terms:** First subscription order only. The base price for the 52% is not stated.
-- **For:** price doubter
-- **Stage:** knows you already
-
-**2. "Save 55% + Free Shipping"** (second announcement bar line)
-- **Name:** 55% Off Bar
-- **Said simply:** "Over half off and free shipping."
-- **Terms:** No first-order limit is shown on this line, though line 1 limits it to the first order. The base price is not stated.
-- **For:** price doubter
-- **Stage:** knows you already
-
-**3. "MOST POPULAR: GET UP TO 55% OFF"** (product page plan box)
-- **Name:** Up to 55%
-- **Said simply:** "The subscription gets you up to about half off."
-- **Terms:** Subscription. "Up to" is not explained.
-- **For:** price doubter
-- **Stage:** knows you already
-
-**4. "MOST POPULAR: GET 49% OFF" at $45.33 ($1.62/day)** (how-it-works page plan box)
-- **Name:** 49% Plan
-- **Said simply:** "The plan's about $45 for the first box."
-- **Terms:** $45.33 ÷ 28 = $1.62 a day. The renewal price is not shown in this box.
-- **For:** price doubter
-- **Stage:** knows you already
-
-**5. "MOST POPULAR: GET 58% WITH FREE SHIPPING" at $22.49, "Renews at $74.98 each 4 weeks"** (Kids page plan box)
-- **Name:** Kids 58%
-- **Said simply:** "The kids' first box is about $22."
-- **Terms:** First order $22.49 ($22.49 ÷ 28 = $0.80 a day), then $74.98 every 4 weeks ($2.68 a day).
-- **For:** busy parent
-- **Stage:** knows you already
-
-**6. "Sign Up for 55% Off"** (text sign-up pop-up)
-- **Name:** Text for 55%
-- **Said simply:** "Give them your number and you get more than half off."
-- **Terms:** Needs a text-message sign-up. New customers only, per the footer.
-- **For:** price doubter
-- **Stage:** knows you already
-
-**7. "up to 61% OFF + 4 FREE gifts"** (Meta ads)
-- **Name:** 61% + Gifts
-- **Said simply:** "Big discount plus a few gifts in the box."
-- **Terms:** The gifts are not named and change from ad to ad. Fails step 6 until the gifts are named and the conditions sit next to the offer.
-- **For:** price doubter
-- **Stage:** knows you already
-
-**8. "$20 off your first order" and "+$5 off for every extra person"** (one ad's main text)
-- **Name:** $20 Off, $5 Per Person
-- **Said simply:** "Twenty off your first order, and a bit more for each person you add."
-- **Terms:** The base price for the $20 is not stated.
-- **For:** price doubter, busy parent
-- **Stage:** knows you already
-
-**9. "Same Sprout. New Lower Price. Subs Now Start at $29.99." / "Not just for a week but indefinitely."** (birthday price cut)
-- **Name:** $29.99 Start
-- **Said simply:** "The subscription now starts at thirty bucks."
-- **Terms:** The footer says: "Offer assumes customer has received and uses promotional SMS discount reserved for new customers only." That condition sits in a footnote, not next to the offer, so this fails step 6. Renews at $49.99 every 4 weeks.
-- **For:** price doubter
-- **Stage:** knows you already
-
-**10. Subscription terms**
-- **Name:** Subscribe and Save
-- **Said simply:** "It's $49.99 every 4 weeks and you can pause or cancel."
-- **Terms:**
-  - Adults Low Sugar is $49.99 every 4 weeks ($1.78/day as shown). Sugar-Free is $54.99.
-  - The site says "Pause Or Cancel Any Time" (from the brief; the steps are not captured).
-  - One-time purchase is framed as "No Free Shipping" and "No First Order Discount".
-- **For:** quitter, price doubter
-- **Stage:** knows you already
-
-**11. Limited flavour pricing and rule**
-- **Name:** Limited Flavour
-- **Said simply:** "There's a new flavour every month or two."
-- **Terms:**
-  - Adults: starts at $32.79, renews at $52.79 Low Sugar or $57.79 Sugar-Free.
-  - Kids: starts at $27.79. The Kids renewal is not captured.
-  - "Subscribers get the limited flavour for 1 month, then switch back to Original automatically."
-- **For:** busy parent, quitter
-- **Stage:** knows you already
-
-**12. Kids "starts at" $24.99** (Kids price list)
-- **Name:** Kids from $24.99
-- **Said simply:** "Kids' boxes start around $25."
-- **Terms:** First order. The renewal is not stated here.
-- **For:** busy parent
-- **Stage:** knows you already
-
-**13. "Buy 2 Save $5"**
-- **Name:** Buy 2 Save $5
-- **Said simply:** "Add a second person and save $5."
-- **Terms:** Applies to more than one adult or kid on the order. It is not stated whether it applies to renewals.
-- **For:** busy parent
-- **Stage:** knows you already
-
-**14. 4 free gifts with a first order** (ads)
-- **Name:** 4 Free Gifts
-- **Said simply:** "Your first order comes with some gifts."
-- **Terms:** The gifts change and are not named. Fails step 6 until each gift is named.
-- **For:** price doubter
-- **Stage:** knows you already
-
-**15. VIP: "Save up to $80, get limited flavors, and VIP access"** (also "Savings, exclusive flavors, and a minor sense of superiority.")
-- **Name:** VIP
-- **Said simply:** "Members save money and get the special flavours."
-- **Terms:** Not captured: the basis for the $80, the cost to join and what "VIP access" is.
-- **For:** quitter
-- **Stage:** knows you already
-
-**16. Cashback** through a third-party app
-- **Name:** Cashback App
-- **Said simply:** "You get some of your money back through an app."
-- **Terms:** 20% cash back or 40% store credit after purchase. The app's terms are not captured.
-- **For:** price doubter
-- **Stage:** knows you already
-
-**17. Referral program**
-- **Name:** Refer a Friend
-- **Said simply:** "You get something for sending friends."
-- **Terms:** Not captured.
-- **For:** quitter
-- **Stage:** knows you already
-
-**18. Monthly smartwatch giveaway**
-- **Name:** Smartwatch Giveaway
-- **Said simply:** "They give away a smartwatch every month."
-- **Terms:** Rules not captured.
-- **For:** price doubter
-- **Stage:** knows you already
-
-**19. HSA/FSA eligible** through a third-party service
-- **Name:** HSA/FSA
-- **Said simply:** "You can pay with HSA or FSA money."
-- **Terms:** Goes through a third-party service. The details are not captured.
-- **For:** price doubter
-- **Stage:** comparing options
-
-**20. Free 30 days of a fitness app** (partner offer, one ad)
-- **Name:** Fitness App Month
-- **Said simply:** "You get a month of a fitness app."
-- **Terms:** Partner offer. The conditions are not captured.
-- **For:** quitter
-- **Stage:** knows you already
-
-**21. Guarantee: 30-day money-back, first order only.** "This policy applies only to your initial purchase."
-- **Name:** 30-Day Money Back
-- **Said simply:** "If the first order isn't for you, you can get your money back."
-- **Terms:** First order only. Renewals are not covered.
-- **For:** gut-fix seeker, quitter
-- **Stage:** comparing options
-
-**22. Shipping: "typically ship within 24 hours and on average arrive 3-5 days later"**
-- **Name:** Ships in a Day
-- **Said simply:** "It usually ships the next day."
-- **Terms:** These are typical and average times, not promises.
-- **For:** busy parent
-- **Stage:** knows you already
+| # | Name | Brand's words (terms) | Said simply | For | Stage |
+|---|---|---|---|---|---|
+| 1 | First-order bar, 52% | "Save 52% + free shipping on your first order" | About half off your first order, shipping free | Price doubter | Knows you |
+| 2 | Bar line, 55% | "Save 55% + Free Shipping" | Over half off, shipping free | Price doubter | Knows you |
+| 3 | Product page plan box | "MOST POPULAR: GET UP TO 55% OFF" | Up to 55% off if you subscribe | Price doubter | Knows you |
+| 4 | How-it-works plan box | "MOST POPULAR: GET 49% OFF" at $45.33 ($1.62/day) | $45.33 for your first month | Price doubter | Knows you |
+| 5 | Kids plan box | "MOST POPULAR: GET 58% WITH FREE SHIPPING" at $22.49, "Renews at $74.98 each 4 weeks" | Kids' first month is $22.49 | Busy parent | Knows you |
+| 6 | Text sign-up pop-up | "Sign Up for 55% Off" | Give your number and get 55% off | Price doubter | Comparing options |
+| 7 | Meta ads | "up to 61% OFF + 4 FREE gifts" (which gifts changes) | Up to 61% off plus four gifts | Price doubter | Knows you |
+| 8 | Ad dollar offer | "$20 off your first order" and "+$5 off for every extra person" | $20 off, and $5 more for each extra person | Busy parent | Knows you |
+| 9 | Birthday price | "Same Sprout. New Lower Price. Subs Now Start at $29.99." "Not just for a week but indefinitely." Footer: "Offer assumes customer has received and uses promotional SMS discount reserved for new customers only." | Your first subscription order is $29.99 | Price doubter | Knows you |
+| 10 | Subscription | $49.99 every 4 weeks ($1.78/day); "Pause Or Cancel Any Time" | $49.99 every four weeks | Quitter | Knows you |
+| 11 | One-time purchase | $66.65 ($2.38/day); framed "No Free Shipping", "No First Order Discount" | $66.65 with no subscription | Price doubter | Knows you |
+| 12 | Buy more, save more | "Buy 2 Save $5" | $5 off when you order for two people | Busy parent | Knows you |
+| 13 | VIP program | "Save up to $80, get limited flavors, and VIP access" | Members save and get the new flavours | Quitter | Knows you |
+| 14 | Limited flavour | New one every 4 to 8 weeks. Subscribers get it for 1 month, then switch back to Original automatically. Adults 28 packs: $70.38 Low Sugar / $77.05 Sugar-Free one-time; $52.79 / $57.79 subscription; $32.79 first order. Kids: $57.05 one-time, $27.79 first order. | Try the new flavour for a month | Quitter, busy parent | Knows you |
+| 15 | Cashback app | 20% cash back or 40% store credit after purchase, through a third-party app | Get some money back through an app | Price doubter | Knows you |
+| 16 | Referral and giveaway | Referral program and a monthly smartwatch giveaway | Refer friends, enter to win a watch | Quitter | Knows you |
+| 17 | HSA/FSA | HSA/FSA eligible through a third-party service | You can pay with your health account | Price doubter | Comparing options |
+| 18 | Fitness app partner | Free 30 days of a fitness app (one ad) | A month of a fitness app comes with it | Quitter | Knows you |
+| 19 | Guarantee | 30-day money-back. "This policy applies only to your initial purchase." Also: "Less than 1% of customers use our Money-Back Guarantee" | Your first order is refundable for 30 days | Gut-fix seeker, price doubter | Comparing options |
+| 20 | Shipping | Orders "typically ship within 24 hours and on average arrive 3-5 days later" | It usually arrives within a week | Busy parent | Knows you |
 
 ## CLASHES
 
-1. **Discount size.**
-   - Live figures:
-     - 49%: how-it-works page
-     - 52%: announcement bar
-     - "up to 55%": product page
-     - 55%: bar line and text pop-up
-     - 58%: Kids page
-     - "up to 61%": Meta ads
-   - Worked against one-time prices:
-     - $29.99 vs $66.65: 1 − 29.99/66.65 = 55.0%
-     - $45.33 vs $66.65: 32.0%, not 49%
-     - Kids $22.49 vs $53.32: 57.8%
-     - No price on file gives 61%. It would need $66.65 × 0.39 = $25.99, which was not seen.
-   - **Figure used: 49%.** Even 49% does not match its own $45.33, so new offers quote dollar prices and no percent.
-2. **First-order Adults price.**
-   - $29.99 appears in the birthday banner and the "starts at" price, and needs the text sign-up.
-   - $45.33 appears on the how-it-works page.
-   - "$20 off your first order" (ad) gives $29.99 if taken from $49.99, or $46.65 if taken from $66.65.
-   - **Figure used: $45.33**, or $29.99 only with "with text sign-up, new customers only" stated beside it.
-3. **How long $29.99 lasts.**
-   - The birthday banner says "indefinitely".
-   - The footer says "reserved for new customers only".
-   - **Figure used:** first order, new customers only.
-4. **First-order Kids price.**
-   - $22.49 on the Kids plan box.
-   - $24.99 as the Kids "starts at" price.
-   - **Figure used: $24.99.**
-5. **Kids renewal.**
-   - "Renews at $74.98 each 4 weeks" on the Kids plan box.
-   - The Kids one-time price is $53.32, so the renewal is $21.66 more than buying once ($74.98 − $53.32).
-   - The brand file marks the Kids subscription price as unclear.
-   - **Figure used: $74.98.**
-6. **Free shipping scope.**
-   - "on your first order" (bar line 1).
-   - "Save 55% + Free Shipping" with no limit (bar line 2).
-   - "No Free Shipping" on one-time purchases.
-   - **Figure used:** free shipping on the first subscription order only.
-7. **Multi-person saving.**
-   - "Buy 2 Save $5" (site).
-   - "+$5 off for every extra person" (ad).
-   - **Figure used:** $5 off once, on an order with 2 people.
-8. **84-pack format.**
-   - The brief says "84-pack pouch".
-   - The brand file says the 84-pack is 3 pouches of 28.
-   - **Figure used:** 3 pouches of 28.
-9. **Per-day price.**
-   - The product page compares "$1.26" a serving (dated).
-   - The current subscription is $49.99 ÷ 28 = $1.785, which the site shows as $1.78.
-   - **Figure used:** $1.79 ($1.785 rounded).
+| Clash | Where each shows | Figure used |
+|---|---|---|
+| Headline discount: 49%, 52%, "up to 55%", 55%, 58%, "up to 61%" | How-it-works box (49%); announcement bar (52%); product page box (up to 55%); bar line and SMS pop-up (55%); Kids box (58%); Meta ads (up to 61%) | **49%**. The new offers below lead with dollar prices instead. |
+| The 49% does not compute from the one-time price | How-it-works box: $45.33 against $66.65 is 1 − 45.33 ÷ 66.65 = 32% off. A 49% cut would need a "was" price of $45.33 ÷ 0.51 = $88.88, and no such price is on file. | Do not quote 49% until the brand names its base price. |
+| Adults first-order price: $29.99 vs $45.33 | Birthday line and "starts at" ($29.99, with SMS only); how-it-works box ($45.33) | $29.99 only with the SMS condition beside it; otherwise $45.33 |
+| Dollar vs percent first-order deal | Ad: "$20 off your first order" ($66.65 − $20 = $46.65) vs $29.99 or $45.33 elsewhere | $20 off |
+| Kids first-order price: $22.49 vs $24.99 | Kids plan box ($22.49); "starts at" ($24.99) | $24.99 (the less generous figure) |
+| Kids renewal above the Kids one-time price | Kids box: "Renews at $74.98 each 4 weeks" vs Kids one-time $53.32 | None confirmed. Kids subscription offers hold until fixed. If quoted, use $74.98 as the page shows it. |
+| Multi-person saving | "Buy 2 Save $5" vs ad "+$5 off for every extra person" | $5 per order |
+| "Indefinitely" vs new-customer-only | Birthday line ("Not just for a week but indefinitely") vs footer ("reserved for new customers only") | $29.99 is a first order for new customers using the SMS discount. It renews at $49.99. |
+| Price per serving | Product page "$1.26" vs $1.07/day first order vs $1.78/day subscription | $1.07 (first order) and $1.78 (renewal). Drop $1.26. |
+| Free gifts: "4 FREE gifts" with no names | Meta ads only; the gifts change | Not quoted. The gifts are unnamed and their price is unknown. |
 
 ## STOCK
 
-**Sizes**
-- Adults 28 packs, Low Sugar or Sugar-Free
-- Adults 84 packs (3 × 28)
-- Kids 28 and 84 packs
-- Limited flavour 28 packs, Adults and Kids
-- **Shops only:** 12-pack at a big-box retailer, Adults $19.97 and Kids $14.97
-
-**Prices per day**
-
-| Product | Price | Per day |
-|---|---|---|
-| Adults one-time, Low Sugar | $66.65 ÷ 28 | $2.38 |
-| Adults one-time, Sugar-Free | $73.32 ÷ 28 | $2.62 |
-| Adults subscription, Low Sugar | $49.99 ÷ 28 | $1.79 |
-| Adults subscription, Sugar-Free | $54.99 ÷ 28 | $1.96 |
-| Adults first order (text sign-up) | $29.99 ÷ 28 | $1.07 |
-| Adults first order (how-it-works) | $45.33 ÷ 28 | $1.62 |
-| Adults 84 packs, Low Sugar | $199.95 ÷ 84 | $2.38 |
-| Adults 84 packs, Sugar-Free | $219.96 ÷ 84 | $2.62 |
-| Kids one-time | $53.32 ÷ 28 | $1.90 |
-| Kids 84 packs | $159.96 ÷ 84 | $1.90 |
-| Kids first order (plan box) | $22.49 ÷ 28 | $0.80 |
-| Kids first order ("starts at") | $24.99 ÷ 28 | $0.89 |
-| Kids renewal | $74.98 ÷ 28 | $2.68 |
-| Shop 12-pack, Adults | $19.97 ÷ 12 | $1.66 |
-| Shop 12-pack, Kids | $14.97 ÷ 12 | $1.25 |
-| Limited flavour, Adults first order | $32.79 ÷ 28 | $1.17 |
-| Limited flavour, Adults renewal (Low Sugar) | $52.79 ÷ 28 | $1.89 |
-
-- The 84-pack gives no unit saving: it costs exactly 3 times the 28-pack price.
-- The shop 12-pack costs less per day than the site subscription.
-
-**Guarantee**
-- 30-day money-back, first order only. It sits in the FAQ.
-- The product page says "Less than 1% of customers use our Money-Back Guarantee" (brand-reported).
-
-**Delivery**
-- Ships within 24 hours typically, then arrives in 3 to 5 days on average.
-- Free shipping on the first subscription order. None on one-time orders.
-- Free-delivery threshold: MISSING.
-
-**Extras**
-- Kids line
-- Sugar-Free version
-- Limited flavours every 4 to 8 weeks
-- Electrolyte variety pack, $75.88
-- Merch: hoodie $45.49, tee $25.99, tote $36.99, caps $25.99
-
-**Partner perks**
-- Cashback app
-- HSA/FSA through a third-party service
-- 30 days of a fitness app
-- Monthly smartwatch giveaway
-- Referral program
-
-**Proof**
-- 2025 study of 120 adults over 12 weeks: blood vitamin C up 40.1%, folate up 20.5%.
-- Brand-reported survey of 3,000+ customers: "95% ... at least 4-6x per week with 80% taking daily" (of surveyed users).
-- Third-party tested for 70 pesticides, 4 heavy metals, 16 contaminants and 9 microbial contaminants.
-
-**Past buyers it can reach**
-- Subscribers
-- The text-message list
-- VIP members
-- Reviewers (on-page widget: 109,639)
-
-The size of each list is MISSING.
-
-**Dates**
-- A new limited flavour every 4 to 8 weeks.
-- The birthday price cut (date not captured).
-- The holiday season, with an earlier holiday flavour. Shipping cut-offs are MISSING.
+- **Sizes:**
+  - Adults 28 packs (Low Sugar, Sugar-Free) and 84 packs (3 pouches).
+  - Kids 28 and 84 packs.
+  - Limited flavour 28 packs.
+  - Big-box 12-pack, Adults and Kids, sold in shops only.
+- **Prices per day/pack:**
+  - Adults one-time: $66.65 ÷ 28 = $2.38.
+  - Adults subscription: $49.99 ÷ 28 = $1.785 (the brand states $1.78).
+  - Adults first order: $29.99 ÷ 28 = $1.07.
+  - Sugar-Free: subscription $54.99 ÷ 28 = $1.96; one-time $73.32 ÷ 28 = $2.62.
+  - Adults 84 packs: $199.95 ÷ 84 = $2.38, the same per day as one-time with no bulk saving.
+  - Kids: $53.32 ÷ 28 = $1.90, and $159.96 ÷ 84 = $1.90.
+  - Big-box Adults: $19.97 ÷ 12 = $1.66 a pack, which is below the site subscription. Big-box Kids: $14.97 ÷ 12 = $1.25.
+- **Guarantee:** 30-day money-back, first order only. It sits in the FAQ, plus a "less than 1%" line on the product page. It is not a headline anywhere.
+- **Delivery:** ships within about 24 hours and arrives in 3 to 5 days on average. Free shipping comes on first orders and subscriptions. One-time orders are "No Free Shipping". No threshold is on file.
+- **Extras:**
+  - Kids line.
+  - Sugar-Free option.
+  - Limited flavours.
+  - Electrolyte variety pack, $75.88.
+  - Merch: hoodie $45.49, tee $25.99, tote $36.99, caps $25.99.
+- **Partner perks:**
+  - Cashback app.
+  - HSA/FSA via a third party.
+  - 30-day fitness app.
+  - Smartwatch giveaway.
+  - Referral program.
+- **Proof:**
+  - 2025 12-week study: vitamin C +40.1%, folate +20.5%.
+  - Third-party testing: 70 pesticides, 4 heavy metals, 16 contaminants, 9 microbial contaminants. Outside lab, Sept 2026.
+  - Survey of 3,000+ users.
+- **Reachable buyers:**
+  - Subscribers.
+  - SMS list.
+  - VIP members.
+  - Reviewers. 109,639 is the on-page widget count.
+- **Dates:** a new limited flavour every 4 to 8 weeks. A past holiday flavour shows a season exists. No cut-offs are on file.
 
 ## NEW
 
-**1. Try a 12 First**
-- **Said simply:** "Grab the 12-pack at the store and see if you like it before you subscribe."
-- **Terms:** The Sprout Adults 12-pack has been seen at a big-box retailer for $19.97 ($19.97 ÷ 12 = $1.66 a day), and the Kids 12-pack for $14.97 ($1.25 a day). The retailer sets the shelf price. There is no subscription.
-- **For:** price doubter and quitter ("expensive", "can a gummy replace my powder")
-- **Stage:** hasn't noticed the problem / comparing options
-- **Changes:** cheaper to start, surer
+**N1. First Month, Money Back**
+- **Said simply:** "If it doesn't work for you, you get your first 30 days back."
+- **Terms:** First order $29.99 with the SMS sign-up discount (new customers only), renewing at $49.99 every 4 weeks. 30-day money-back guarantee: "This policy applies only to your initial purchase." Gut-sensitive buyers are pointed to Low Sugar.
+- **For:** Gut-fix seeker ("Will this upset my stomach more?"); price doubter.
+- **Stage:** Comparing options.
+- **Changes:** Surer.
 - **Must arrange:**
-  - A store finder or retailer wording the ads may use.
-  - A check of the current shelf price.
-  - A ruling on whether a shop purchase counts for the guarantee.
-- **Costs you:** unknown (retailer margin)
-- **Why:** It is the smallest real way to try that already exists. Twelve days also covers the "tastes better after day three" pattern reviewers describe.
+  - Put the guarantee in the headline, not just the FAQ.
+  - Write one line saying how to cancel.
+- **Costs you:** Refunds on first orders. Unknown.
+- **Why:** It takes the risk off the doubt with the strongest feelings, using a guarantee the brand already gives but barely shows.
 
-**2. Your First Order Is Covered**
-- **Said simply:** "Your first order has a 30-day money-back guarantee, so if your stomach doesn't like it, you're not stuck."
-- **Terms:**
-  - 30-day money-back guarantee: "This policy applies only to your initial purchase." Renewals are not covered.
-  - First order $45.33, then $49.99 every 4 weeks.
-  - Gut-sensitive buyers are pointed to Low Sugar, not Sugar-Free.
-- **For:** gut-fix seeker ("Will this upset my stomach more?")
-- **Stage:** comparing options
-- **Changes:** surer
+**N2. A Dollar-Seven a Day** *(money-off 1 of 2; reuses live offer 9)*
+- **Said simply:** "Your first month works out to about a dollar a day."
+- **Terms:** $29.99 for your first 28 packs ($29.99 ÷ 28 = $1.07/day) with the SMS sign-up discount, new customers only, then $49.99 every 4 weeks ($1.78/day). Free shipping on the first order, per the site bar.
+- **For:** Price doubter ("Will the price jump after the first order?").
+- **Stage:** Knows you.
+- **Changes:** Cheaper to start.
 - **Must arrange:**
-  - Move the guarantee and its limit from the FAQ to the plan box and the ads.
-  - Confirm what a refund covers (opened packs, shipping).
-- **Costs you:** refunds on returned first orders. The brand says under 1% use the guarantee (brand-reported, unverified).
-- **Why:** It answers the strongest-feeling buyer's fear with a promise the brand already makes but keeps quiet.
+  - Retire the competing percentages.
+  - Write the cancel steps.
+- **Costs you:** Nothing new. This is today's first-order price.
+- **Why:** One price and its renewal in the same sentence answers "which discount is real?"
 
-**3. Stick-With-It Proof**
-- **Said simply:** "Most people who try it actually keep taking it every day."
-- **Terms:**
-  - First order $45.33, then $49.99 every 4 weeks, covered by the 30-day first-order money-back guarantee.
-  - Shown with "80% taking daily" (of surveyed users, from a brand-reported survey of 3,000+ customers).
-- **For:** quitter ("one habit that lasts")
-- **Stage:** comparing options
-- **Changes:** surer
-- **Must arrange:** the survey date and method beside the claim
-- **Costs you:** none beyond current pricing
-- **Why:** The top review theme is barely used in ads, and this puts that proof up front.
-
-**4. Cancel Terms Up Front**
-- **Said simply:** "It's $49.99 every 4 weeks and they show you how to pause or cancel before you pay."
-- **Terms:**
-  - Renews at $49.99 (Low Sugar) or $54.99 (Sugar-Free), billed every 4 weeks.
-  - "Pause Or Cancel Any Time", with the actual steps printed next to the price and shown before checkout.
-- **For:** price doubter ("I hate subscriptions because I feel like they are a trap")
-- **Stage:** comparing options / knows you already
-- **Changes:** easier
+**N3. Try the 12-Pack**
+- **Said simply:** "Not sure yet? Grab the small pack at the store first."
+- **Terms:** The 12-pack is sold at big-box retailers, $19.97 Adults ($1.66/pack) or $14.97 Kids ($1.25/pack). It is a one-time buy with no subscription.
+- **For:** Quitter ("A gummy can't hold enough"); busy parent ("Is this just candy?").
+- **Stage:** Hasn't noticed the problem.
+- **Changes:** Cheaper to start, surer.
 - **Must arrange:**
-  - Write the real pause and cancel steps.
-  - Confirm whether skip exists.
-  - Make checkout show the same renewal price.
+  - A store-finder link.
+  - Or sell the 12-pack on sprout.example. It is shops-only today.
+- **Costs you:** Unknown. It may pull buyers from the site price.
+- **Why:** A small, safe try already exists. Note the retail pack is cheaper per day than the subscription.
+
+**N4. One Box, Whole Household** *(money-off 2 of 2; reuses live offer 12)*
+- **Said simply:** "Your gummies and the kids' come in one box, $5 off."
+- **Terms:** Adults first order $29.99 + Kids first order $24.99 − $5 = $49.98. The renewal price must be stated before launch.
+- **For:** Busy parent ("Two subscriptions is too much money").
+- **Stage:** Knows you.
+- **Changes:** Easier, more.
+- **Must arrange:**
+  - Confirm the Kids renewal price ($74.98 vs $53.32 one-time).
+  - Confirm whether $5 applies on renewals.
+  - Confirm whether the SMS price applies to Kids.
+  - Write the cancel steps.
+- **Costs you:** $5 per order, plus anything unknown.
+- **Why:** It answers the two-subscription doubt with a deal the brand already runs.
+
+**N5. Your Plan, Spelled Out**
+- **Said simply:** "It bills every four weeks, and you can pause or cancel any time."
+- **Terms:** $49.99 every 4 weeks. "Pause Or Cancel Any Time." A limited flavour runs 1 month, then switches back to Original automatically. All of this sits beside the price before checkout.
+- **For:** Price doubter ("subscriptions… are a trap").
+- **Stage:** Comparing options.
+- **Changes:** Easier.
+- **Must arrange:**
+  - Exact cancel and pause steps.
+  - Say whether skip exists.
   - Promise nothing beyond the site's words.
-- **Costs you:** unknown (possibly more pauses)
-- **Why:** Cancelling is the loudest public complaint, and this passes the subscription check outright.
+- **Costs you:** Nothing.
+- **Why:** Cancelling is the loudest public complaint. Clear terms answer it without a discount.
 
-**5. One Box, Whole House**
-- **Said simply:** "I put mine and the kids' on one order and saved $5."
-- **Terms:**
-  - Adults and Kids on one order with "Buy 2 Save $5".
-  - Adults renews at $49.99 every 4 weeks. Kids renews at $74.98 every 4 weeks, as the Kids page shows, until the brand confirms its price.
-  - Both renewal prices are stated before payment.
-- **For:** busy parent ("Two subscriptions is too much money")
-- **Stage:** knows you already
-- **Changes:** easier, more (money-off proposal 1 of 2)
+**N6. Proof Next to the Price**
+- **Said simply:** "In their study, vitamin C levels in the blood went up 40% in 12 weeks."
+- **Terms:** $29.99 first order (SMS, new customers only), then $49.99 every 4 weeks. 21 vitamins & minerals and 6 g fiber per pack. Clinically tested for nutrient absorption (2025, 12 weeks, 120 adults: vitamin C +40.1%, folate +20.5%). Third-party tested, Sept 2026.
+- **For:** Quitter ("can't hold enough to replace my powder").
+- **Stage:** Comparing options.
+- **Changes:** Surer.
+- **Must arrange:** Nothing new. Keep the claims at "supports".
+- **Costs you:** Nothing.
+- **Why:** It answers the quitter's doubt with facts the brand owns.
+
+**N7. 84 Days, No Subscription**
+- **Said simply:** "Three months of gummies in one order, nothing to cancel."
+- **Terms:** 84 packs, $199.95 Low Sugar, one-time ($199.95 ÷ 84 = $2.38/day, the same as three single pouches). No renewal. Shipping is charged per the "No Free Shipping" one-time rule.
+- **For:** Price doubter who hates subscriptions.
+- **Stage:** Knows you.
+- **Changes:** More, easier.
+- **Must arrange:** State the shipping cost.
+- **Costs you:** Nothing new.
+- **Why:** It gives a real way out of the subscription fear. It claims no saving, because there isn't one.
+
+**N8. Pay With Your HSA**
+- **Said simply:** "You can use your HSA or FSA card for it."
+- **Terms:** HSA/FSA eligible through a third-party service. Prices as above: $29.99 first order (SMS, new customers only), then $49.99 every 4 weeks.
+- **For:** Price doubter.
+- **Stage:** Comparing options.
+- **Changes:** Cheaper to start, without cutting price.
 - **Must arrange:**
-  - Confirm the Kids renewal price.
-  - Confirm it is one charge and one shipment.
-  - Confirm whether the $5 repeats on renewals.
-- **Costs you:** $5 per qualifying order
-- **Why:** It turns two bills into one using a deal that is already live.
+  - Name the service.
+  - State any steps or fees.
+- **Costs you:** Unknown.
+- **Why:** It eases the price without adding a sixth discount.
 
-**6. Ships in a Day**
-- **Said simply:** "It usually ships within a day and shows up a few days later."
-- **Terms:** Orders "typically ship within 24 hours and on average arrive 3-5 days later". This is not a guaranteed date.
-- **For:** busy parent, and the quitter whose powder has run out
-- **Stage:** knows you already
-- **Changes:** sooner
-- **Must arrange:** nothing
-- **Costs you:** none
-- **Why:** It is a true speed fact, and it removes "I'll order later".
+**N9. Ships Within a Day**
+- **Said simply:** "It usually ships the next day."
+- **Terms:** Orders "typically ship within 24 hours and on average arrive 3-5 days later."
+- **For:** Busy parent.
+- **Stage:** Knows you.
+- **Changes:** Sooner.
+- **Must arrange:** Nothing.
+- **Costs you:** Nothing.
+- **Why:** A true, quick start. It must keep "typically" and "on average".
 
-**7. New Flavour Month**
-- **Said simply:** "Subscribers get each new flavour for a month, then it goes back to the regular one on its own."
-- **Terms:**
-  - Subscribers get the limited flavour for 1 month, then switch back to Original automatically. A new flavour comes every 4 to 8 weeks.
-  - The Adults limited flavour renews at $52.79, which is $2.80 more than Original ($52.79 − $49.99). That difference is stated next to the offer.
-- **For:** busy parent (picky eaters), quitter
-- **Stage:** knows you already
-- **Changes:** more
+**N10. Tote on Order Two**
+- **Said simply:** "Stick with it to your second box and a tote comes with it."
+- **Terms:** On your first renewal at $49.99, a Sprout tote (sold at $36.99) ships with it, one per customer.
+- **For:** Quitter ("the one thing I've been able to stick to").
+- **Stage:** Knows you.
+- **Changes:** More.
 - **Must arrange:**
-  - Confirm what subscribers are charged in the flavour month.
-  - An opt-out choice.
-  - The next flavour's date.
-  - Flavour descriptions only, with no tie-in characters or partner marks.
-- **Costs you:** unknown
-- **Why:** It gives a recurring reason to stay with no discount.
-
-**8. Pay With HSA/FSA**
-- **Said simply:** "You can use your HSA or FSA money for it."
-- **Terms:** HSA/FSA eligible through a third-party service. The service's name and steps sit beside the offer. Eligibility depends on the buyer's plan.
-- **For:** price doubter
-- **Stage:** comparing options
-- **Changes:** cheaper to start
-- **Must arrange:** name the service and confirm any fee or paperwork
-- **Costs you:** unknown
-- **Why:** It answers "too expensive" without cutting the price.
-
-**9. The $1.79 Day**
-- **Said simply:** "After the first box it's under $1.80 a day."
-- **Terms:**
-  - $49.99 every 4 weeks ÷ 28 packs = $1.785 a day.
-  - First order $29.99 with text sign-up for new customers only ($1.07 a day), then $49.99 every 4 weeks.
-- **For:** price doubter ("Will the price jump after the first order?")
-- **Stage:** knows you already
-- **Changes:** cheaper to start
-- **Must arrange:** drop the dated "$1.26" comparison
-- **Costs you:** none
-- **Why:** It leads with the price the buyer will actually keep paying.
+  - The gift program itself.
+  - Stock.
+  - Its end date.
+- **Costs you:** Tote cost, unknown.
+- **Why:** It rewards the habit, which is the open lane in ads, with a gift that has a real price.
 
 ## TRY FIRST
 
-- **4:** It answers the loudest complaint and the trap fear, and needs only the cancel steps written down.
-- **2:** It answers the strongest-feeling buyer with a guarantee the brand already gives, at almost no new cost.
-- **1:** It is the cheapest real way to try, and the pack is already on shelves, so there is nothing to build.
+1. **N1:** It answers the biggest-feeling doubt using a guarantee the brand already gives. Only placement and cancel wording are needed.
+2. **N2:** It turns five clashing discounts into one price with its renewal. It costs nothing beyond today's offer.
+3. **N5:** It takes on the loudest complaint directly at zero cost. It needs only written terms.
 
 ## MISSING
 
-- MISSING: the base price behind each % claim, and whether $66.65 was openly charged for a real stretch of time.
-- MISSING: the Kids subscription renewal price ($74.98 vs the $53.32 one-time).
-- MISSING: the actual pause, skip and cancel steps.
-- MISSING: whether renewals ship free, the free-delivery threshold, one-time shipping cost and average order value.
-- MISSING: the names and values of the 4 free gifts.
-- MISSING: VIP cost and terms, and the basis for "up to $80".
-- MISSING: terms for the referral program, smartwatch giveaway, cashback app, fitness app and the HSA/FSA service.
-- MISSING: whether "Buy 2 Save $5" applies to renewals.
-- MISSING: the 84-pack subscription price and the Sugar-Free first-order price.
-- MISSING: what subscribers pay in a limited-flavour month, and the next flavour date.
-- MISSING: current big-box shelf price and stores, and whether shop purchases are covered by the guarantee.
-- MISSING: grams of sugar per pack, which matters for the busy parent's "Is the sugar okay for kids?"
-- MISSING: cost per order (unit, delivery, gifts).
-- MISSING: subscriber and text-list sizes.
-- MISSING: the birthday price-cut date and holiday shipping cut-offs.
+- `MISSING: how to cancel and pause`, word for word. Also whether skip exists.
+- `MISSING: Kids subscription renewal price` ($74.98 vs $53.32 one-time) and whether the SMS price applies to Kids.
+- `MISSING: whether "Buy 2 Save $5" applies on renewals.`
+- `MISSING: free-shipping threshold, renewal shipping, one-time shipping cost.`
+- `MISSING: average order value.` The add-on free-delivery check can't be run.
+- `MISSING: cost per order`, and the names and prices of the "4 FREE gifts".
+- `MISSING: the base price behind 49%, 52%, 55%, 58% and 61%.`
+- `MISSING: what subscribers pay in a limited-flavour month`, and the next flavour's dates.
+- `MISSING: holiday shipping cut-offs.`
+- `MISSING: HSA/FSA service name and fees`, VIP terms, and the 84-pack subscription price.
+- `MISSING: whether the site can sell the 12-pack.`
+
+## SCORE
+
+Score: 86/100 (6 of 7 checks)
+
+- **Missed, "Each 'free', 'was', subscription and urgency line passes step 6":** the subscription offers (N1, N2, N4, N5, N6, N8) can't yet say how to cancel, because the file only gives "Pause Or Cancel Any Time". N4 also has no confirmed renewal price.
 ```

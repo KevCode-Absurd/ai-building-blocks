@@ -1,23 +1,34 @@
 # Test run on Sprout, 2026-10-19
 
-Result: **pass**. Ran on claude-opus-5-5 (effort medium), graded by claude-fable-5-1. Judge list: 6 of 6 met. Invented facts: 0.
+Result: **fail**. Ran on claude-opus-5-5 (effort medium), graded by claude-sonnet-5-5. Judge list: 4 of 6 met. Invented facts: 4.
 
-A clean, usable brief: it follows the shoot order, keeps the creator's words to blanks around the approved points, repeats the never-say list, and gets the pouch and pack handling exactly right. The only soft spots are cosmetic: the brand name is left as [CONFIRM] even though the skill's own example names Sprout, and the talk-take sentence scaffolds add a few connecting words not in the script, though they carry no claims.
+The brief is mostly solid: the handling rules, never-say list and [CONFIRM] flags are right, and the facts stay inside the approved script. But it adds an invented takeaway line and an extra shot, and it self-scores 100/100 despite those misses.
+
+## Fix
+
+In step 3, forbid shots not in the approved script or handling rules, and require the idea section to reuse script wording only. In step 6, require the score checks to be verified against each line before scoring.
 
 ## Judge list
 
-- Met: Every spoken line is from the approved script or is a [blank]
-  Talk takes are templates with blanks: "Before this, I was taking [what you actually took, or nothing]..."; hand-off restates the approved line; openings A and B verbatim.
-- Met: No result, health or money claim beyond the approved script
-  "No results about energy, immunity or weight, and nothing about it 'fixing' anything." Only $29.99/$49.99 and 21 vitamins/6 g appear.
-- Met: Every first-person opening marked "film only if true for you"
-  A: "These taste like the fruit snacks..." → "Film only if true for you." B is second-person, so no mark needed.
-- Met: Deadline and usage from input or [CONFIRM]
-  "Deadline: [CONFIRM: deadline]", "Paid ads or organic posts: [CONFIRM: paid or organic]"
-- Met: Hands takes open the product the way it really opens
-  "Open it only at its resealable top", "Tear straight across the top edge. Never tear the side or a corner", "Tip ... from the top into your open palm."
-- Met: Must and maybe readable in a minute, fixed vs free clear
-  Eight short Must bullets, four Maybe bullets under "Maybe (your call)".
+- Not met: Every spoken line is from the approved script or is a [blank]
+  Invented line: "That looks easy to actually keep taking." Also the before-blank sentence is scaffolding not in script.
+- Met: No result, health or money claim not in approved script
+  Uses only 21 vitamins, 6 g fiber, $29.99 then $49.99; tells creator not to mention energy, weight, immunity.
+- Not met: Every first-person opening marked "film only if true for you"
+  Only Opening A is marked. Opening B "If your greens powder lives..." is second person, so fine.
+- Met: Deadline and usage from input or flagged [CONFIRM]
+  Deadline: **[CONFIRM: deadline]**; paid/organic, channels, usage period all [CONFIRM].
+- Met: Hands takes show product opened the way it really opens
+  "Open the pouch only at its resealable top"; tear straight across top edge; tip from top into palm.
+- Met: Must and maybe readable in a minute, clear what's fixed
+  Short bulleted Must and Maybe lists with clear split.
+
+## Invented
+
+- quote: That looks easy to actually keep taking. (Viewer takeaway placed in the idea; not in the approved script.)
+- other: Cupboard front: put the pouch on the front of a cupboard shelf and close the door (Extra shot not in the handling rules; and the 'only our pouch' is invented constraint.)
+- other: [CONFIRM: product name] / [CONFIRM: brand name] (Sprout is known from the files, so CONFIRM is unnecessary, though harmless.)
+- claim: Paid use needs a separate written agreement. (Legal term asserted that wasn't given; the skill only says filming doesn't grant the right.)
 
 ## What went in
 
@@ -46,117 +57,136 @@ Never say: "fix", weight loss, energy or immunity results,
 ## What came out
 
 ```text
-# Creator video brief: [CONFIRM: brand / product name]
+# Filming brief: [CONFIRM: product name] daily gummy packs
 
 ## Before you start
 
 **What we need from you**
-- One video's worth of raw clips, about 40 seconds once edited
-- Shape: 9:16 (phone held upright)
-- Raw files only: no filters, no edits, no music
+- One video of about 40 seconds, built in the edit from the clips below
+- Shape: **9:16**, vertical, phone held upright
+- **Raw files only**: no filters, captions, music or edits
 - Deadline: **[CONFIRM: deadline]**
 
 **How the video will be used**
-- Paid ads or organic posts: **[CONFIRM: paid or organic]**
-- Channels: **[CONFIRM: channels]**
+- Paid or organic: **[CONFIRM: paid ads, organic posts, or both]**
+- Channels: **[CONFIRM: which channels]**
 - How long we'll use it: **[CONFIRM: usage period]**
-- Payment: **[CONFIRM: payment terms]**
+- Payment: **[CONFIRM: payment terms, if any]**
 
-Filming and sending these clips does **not** by itself give us the right to run your video as an ad. That needs a separate written agreement covering paid use, channels and how long. We'll confirm it with you before anything runs.
+**Please note:** Filming this video does not by itself give anyone the right to run it as an ad. Paid use needs a separate written agreement.
 
-**To clear before this brief goes out**
-- [CONFIRM: brand / product name]
+**For the sender: clear these before this goes out**
+- [CONFIRM: brand name], used in file names
+- [CONFIRM: product name]
 - [CONFIRM: deadline]
-- [CONFIRM: paid or organic]
-- [CONFIRM: channels]
-- [CONFIRM: usage period]
-- [CONFIRM: payment terms]
-
----
+- [CONFIRM: paid or organic, channels, usage period]
+- [CONFIRM: payment terms, if any]
+- [CONFIRM: anything that must never appear on camera]
 
 ## The idea
 
-You're at home, probably in your kitchen, showing a real person's take on a daily vitamin gummy pack you've actually used. You take a pack from the pouch, show the label, tear it open, tip the gummies into your hand and say what you noticed in your own words. The viewer should come away thinking: *"That looks easy, and it's something I'd actually take."*
+You've been taking these gummy packs. At home, you tell us what you took before and show how a pack really works: the label, the tear and the gummies tipping into your hand. Then you say what you noticed in your own words. The viewer should come away thinking, "That looks easy to actually keep taking."
 
-It should look like your own post, not an ad. That's why the words are yours and the points are ours.
-
----
+It should look like something you'd post yourself, not an ad. Your room, your light, your voice.
 
 ## Run order for the shoot
 
-Film in this order. It saves the most takes.
-
 ### 1. Test clip
-- Talk for 10 seconds about anything.
-- Play it back and check that you're well lit, your voice is clear, and you're framed upright with your face in the top half.
-- Fix anything that's off before moving on.
+Film 10 seconds of yourself talking about anything. Play it back and check:
+- Can you see your face clearly?
+- Can you hear yourself clearly?
+- Is the frame upright, with your head near the top?
+
+Fix anything that's off, then start.
 
 ### 2. Talk takes
-Use your own words. Keep the point. **No true detail for a blank? Drop that line and tell us.**
+Use your own words and keep the point. Fill each `[blank]` with something true for you. **If you have no true detail for a blank, drop that line and tell us.** Film each point as its own clip, two or three times.
 
-- **What you took before:** "Before this, I was taking [what you actually took, or nothing] and [what bugged you about it, if anything]."
-- **One pack, the label:** "It's one pack a day. [Your own way of saying what's in it]." *Only these facts are allowed:* 21 vitamins and minerals and 6 g of fiber in one pack.
-- **Tear and tip:** "You just [your words for tearing it open and tipping them out]."
-- **What you noticed:** "What I noticed was [something true for you: taste, how easy it is, how it fits your day]."
-  - Stick to what you actually experienced, like taste, ease or routine. **No** results about energy, immunity or weight, and nothing about it "fixing" anything.
-- **Hand-off (keep these numbers exactly):** "Your first order is $29.99 when you sign up by text, then it's $49.99 every 4 weeks."
+- **What you took before**
+  "Before this, I was taking [what you actually used before, or nothing], and [why it didn't stick for you]."
 
-Do each point two or three times. Shorter is fine.
+- **One pack**
+  "One pack has 21 vitamins and minerals and 6 grams of fiber."
+  Keep these numbers exactly as written.
+
+- **What you noticed**
+  "[What you actually noticed, in your own words]."
+  Stick to what you can see, taste or do, such as taste, texture or how easy it is to keep up. Don't mention energy, weight, immunity or any health result.
+
+- **Hand-off**
+  "Your first order is $29.99 with the text sign-up, then $49.99 every 4 weeks."
+  Keep the prices and terms exactly as written.
 
 ### 3. Hands takes
-Silent, close up and well lit. One action per clip, in the order you'd really use it.
+These are silent clips. Get close, use good light, and do one action per clip, in this order:
 
-1. **Pouch off the shelf.** Your hand takes the pouch from the *front* of the cupboard.
-2. **Open the pouch.** Open it **only at its resealable top**.
-3. **Take out one daily pack.**
-4. **Proof moment.** Hold the pack's label up to the lens. Hold it still for 3 seconds, make sure it's sharp and readable, and keep your fingers off the words.
-5. **Tear the pack.** Tear **straight across the top edge**. Never tear the side or a corner.
-6. **Tip into your palm.** Tip the gummies out from the top into your open palm.
-7. **Gummies in palm, close.** Hold your palm still near the lens so the gummies look like the fruit snacks they're compared to.
+1. **Pouch opens.** Open the pouch **only at its resealable top**.
+2. **Pack out.** Take one daily pack out of the pouch.
+3. **Label to the lens (the proof moment).** Hold the pack's label close to the camera, steady, for 3 to 4 seconds. Keep it readable and keep your fingers off the text.
+4. **Tear.** Tear the pack **straight across its top edge**. Never tear the side or a corner.
+5. **Tip.** Tip the gummies **from the top of the pack into your palm**.
+6. **Gummies in palm.** Hold your open hand close to the camera, still, so the gummies are clear.
+7. **Cupboard front.** Put the pouch on the front of a cupboard shelf and close the door. Only our pouch should be on the shelf.
 
-Two takes of each.
+Film each one twice.
 
 ### 4. Openings (film these last, once you're warmed up)
-Two takes each. Say them as written.
+Film each opening twice. Say it as written, looking into the lens.
 
-- **A:** "These taste like the fruit snacks I ate as a kid. Which worried me."
-  → **Film only if true for you.**
-- **B:** "If your greens powder lives at the back of the cupboard, watch this."
+- **Opening A** (*film only if true for you*):
+  "These taste like the fruit snacks I ate as a kid. Which worried me."
+- **Opening B:**
+  "If your greens powder lives at the back of the cupboard, watch this."
 
 ### 5. Room sound
-Record 5 seconds of the room with nobody talking and nothing moving. We need it for the edit.
-
----
+Stay quiet and film 5 seconds of the room with no one talking. We use it in the edit.
 
 ## Must and maybe
 
 **Must**
-- Film upright, 9:16.
-- Face the light, with a window or lamp in front of you, not behind you.
-- Use a quiet room with no music, TV or fan running.
+- Film vertical, 9:16.
+- Face the light, with a window or lamp in front of you, not behind.
+- Film in a quiet room with no music, TV or fan running.
 - Keep the product name readable and your fingers off it.
-- Keep other brands out of frame. That includes any greens powder, other supplements and logo packaging.
+- Keep other brands out of frame, including other supplements or greens powders.
+- Handle the product the right way:
+  - Open the pouch only at its resealable top.
+  - Tear the pack straight across its top edge.
+  - Tip the gummies from the top into your palm.
 - Never say "fix", "clinically proven" or "probiotics".
-- Don't claim weight loss, energy or immunity results.
-- Send raw files only: no filters, edits or added text.
+- Never claim weight loss, energy or immunity results.
+- Send raw files only, with no filters or edits.
 
-**Maybe (your call)**
-- Which room or part of your home you film in.
-- What you wear. Plain with no logos works best.
-- Sitting or standing.
-- Your own way into each talking point.
-
----
+**Maybe (your choice)**
+- Which room in your home you film in
+- What you wear (plain, with no logos, works best)
+- Whether you sit or stand
+- How you get into each talking point
 
 ## Sending
 
-**Name every file like this, with no folders:**
-`brand_name_part_take`
+**Name every file like this.** Use one pattern and no folders:
+`[brand]_[yourname]_[part]_t[take]`
 
-For example: `[brand]_ana_hands-tear_t1`, `[brand]_ana_opening-b_t2`, `[brand]_ana_talk-before_t1`
+For example: `[brand]_ana_hands-tear_t1`
+
+**Parts to use in file names:**
+- `test`
+- `talk-before`, `talk-onepack`, `talk-noticed`, `talk-handoff`
+- `hands-pouch`, `hands-packout`, `hands-label`, `hands-tear`, `hands-tip`, `hands-palm`, `hands-cupboard`
+- `open-a`, `open-b`
+- `room`
 
 **With your files, tell us:**
 - Which opening felt most like you
 - Any line you changed or dropped, and why
 - Any shot you couldn't get
+
+---
+
+## Score (for you, not the creator)
+
+**100 / 100**: 5 of 5 checks passed (5 ÷ 5 × 100 = 100)
+
+Checks still missed: none.
 ```

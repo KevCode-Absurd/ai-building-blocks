@@ -1,21 +1,30 @@
 # Test run on Sprout, 2026-10-19
 
-Result: **pass**. Ran on claude-opus-5-5 (effort medium), graded by claude-fable-5-1. Judge list: 5 of 5 met. Invented facts: 0.
+Result: **fail**. Ran on claude-opus-5-5 (effort medium), graded by claude-sonnet-5-5. Judge list: 1 of 5 met. Invented facts: 2.
 
-A clean Stage 0 and Stage 1 that fixes the dial, place and lines, computes timings correctly at 2.3 words a second, and locks the product-opening rules exactly as the brand shows them. It stops properly at the first approval gate; the only quibbles are over-cautious MISSING lines for facts already in the brand file and calling the tubs "protein-style" when the brand's enemy is greens powder.
+The run correctly stopped for approval after the avatar card and flagged missing facts clearly. But it relabelled the tubs as 'protein tubs', which the script never said, and the other criteria couldn't be checked because the run stopped early. It also skipped the Stage 2 heading, the shape-listed format and the reference prompts.
+
+## Fix
+
+In Stage 0 and the avatar card, add the rule 'use the script's own words for the prop (say 'tubs', don't name a product type)'. Also make Stage 1 output include the Stage 2 reference prompts so nothing is skipped.
 
 ## Judge list
 
 - Met: It stopped for your approval after the avatar card, the sheets and the storyboard.
-  "Stopped for approval 1. Reply yes to approve the avatar card... Stage 2 (reference images) starts only after a yes." Later stops not yet reached.
-- Met: Every step is framed the same way, and only the growing thing changes between them.
-  Not yet applicable: storyboard (stage 4) not reached because the run correctly halted at approval 1. Stage 0 fixes "One place: one kitchen cupboard".
-- Met: The skeleton has the same eyes, bones and proportions in every image.
-  No images yet; card locks it: "Bone count, proportions, ivory colour and matte finish. The eye style. The closed jaw."
-- Met: No calendar, clock, sign or number appears inside any picture.
-  Not yet applicable: no frame prompts written; tubs specified as "plain unmarked white tubs with plain white lids".
-- Met: The product matches its photos, label and all, and opens the way your brand shows it.
-  "opens only at its resealable top and is never torn"; pack "torn straight across its top edge only" matches brand rules.
+  "Stopping here for approval 1." It correctly halted after stage 1 and did not go on to later stages.
+- Not met: Every step is framed the same way, and only the growing thing changes between them.
+  No rung camera or storyboard exists yet because the run correctly paused at approval 1. Nothing to verify.
+- Not met: The skeleton has the same eyes, bones and proportions in every image.
+  No images or prompts exist yet. Only the avatar card with 'What never changes' was written.
+- Not met: No calendar, clock, sign or number appears inside any picture.
+  No picture prompts exist yet. It does note labels are 'added in editing and never drawn'.
+- Not met: The product matches its photos, label and all, and opens the way your brand shows it.
+  No product sheet yet. It also claims the photos are not visible and asks for re-attachment.
+
+## Invented
+
+- claim: protein tubs (The script says 'half-used tubs' and 'chalky taste', never protein. It's also a category Sprout doesn't say it competes with.)
+- number: Seconds estimates (3.5, 3.9, 3.0, 2.6, 27.3 s) (Marked as estimates at 2.3 words/s as the skill instructs, so allowed.)
 
 ## What went in
 
@@ -41,64 +50,63 @@ yes. Music: not stated.
 ## What came out
 
 ```text
-# Stage 0: Script in (fixed from here)
+I'll write the prompts. This chat has no video tool connected, so no pictures or clips will come from here.
 
-- **Dial:** the number of half-used protein-style tubs packed into one kitchen cupboard.
-- **Rung labels:** TUB 1 · TUB 5 · TUB 12 · TUB 20.
-- **One place:** one kitchen cupboard, seen with its doors open. The script never changes the place.
-- **Product enters:** at the turn (T): one Sprout daily pack, torn and tipped.
+## Stage 0: Script in
 
-| # | Line | Words | Seconds | Claims |
-|---|---|---|---|---|
-| Q | "How many half-used tubs can one cupboard hold?" | 8 | 3.5 `estimate` | none |
-| 1 | "Tub one. Two scoops, then the chalky taste wins." | 9 | 3.9 `estimate` | taste, about generic tubs (no brand shown) |
-| 2 | "Tub five. The shelf starts to bend." | 7 | 3.0 `estimate` | none |
-| 3 | "Tub twelve. The door needs a hip to shut." | 9 | 3.9 `estimate` | none |
-| 4 | "Tub twenty. The cupboard gives up." | 6 | 2.6 `estimate` | none (peak) |
-| T | "Or skip the tub. Rip. Tip. Enjoy." | 7 | 3.0 `estimate` | none |
-| C | "Sprout gummies. Sixty-plus ingredients in one daily pack." | 8 | 3.5 `estimate` | **"Sixty-plus ingredients"** (number) |
-| O | "First order, $29.99 with text sign-up." | 7 spoken | 3.0 `estimate` | **"$29.99 with text sign-up"** (offer) |
+**Dial:** the number of half-used protein tubs in one kitchen cupboard.
+**Rung labels:** TUB 1 · TUB 5 · TUB 12 · TUB 20. These are added in editing and never drawn.
+**The one place:** a single wall-mounted kitchen cupboard with one shelf and one hinged door, in one kitchen.
+**Product enters:** at the turn (T), in the same kitchen. The script doesn't change the place between rungs.
 
-Total about 26.4 s `estimate`. All times use 2.3 spoken words a second until the narration exists.
+| # | Line | Seconds | Claims |
+|---|---|---|---|
+| Q | "How many half-used tubs can one cupboard hold?" | 3.5 `estimate` | none |
+| 1 | "Tub one. Two scoops, then the chalky taste wins." | 3.9 `estimate` | "chalky taste" refers to generic tubs only (plain, unbranded, never a rival's pack) |
+| 2 | "Tub five. The shelf starts to bend." | 3.0 `estimate` | none |
+| 3 | "Tub twelve. The door needs a hip to shut." | 3.9 `estimate` | none |
+| 4 | "Tub twenty. The cupboard gives up." | 2.6 `estimate` | none |
+| T | "Or skip the tub. Rip. Tip. Enjoy." | 3.0 `estimate` | Shows use. The daily pack is torn straight across its top edge only, and the pouch opens only at its resealable top. |
+| C | "Sprout gummies. Sixty-plus ingredients in one daily pack." | 3.5 `estimate` | "Sixty-plus ingredients" needs a source |
+| O | "First order, $29.99 with text sign-up." | 3.9 `estimate` | Price and condition, word for word from the current offer |
 
-MISSING: source for "Sixty-plus ingredients"
-MISSING: current offer terms, word for word, confirming "$29.99 with text sign-up" for first orders
-MISSING: pouch and daily-pack label text, typed out word for word (photos received, text not)
-MISSING: how the gummies are taken after "Tip". Into the palm, or straight from the pack to the mouth?
-MISSING: brand file voice notes, and whether the brand uses music. Default until answered: no music.
+Estimated total: about 27.3 s, at 2.3 spoken words a second. These times stay estimates until the narration is recorded.
 
----
+MISSING: the pouch photos (front, side, top) and the daily-pack photo. They are referenced but not visible in this chat. Please re-attach them before Stage 3. The product sheet can't be built or checked without them.
+MISSING: a source for "Sixty-plus ingredients" (for example, the label's ingredient list).
+MISSING: confirmation that "$29.99 with text sign-up" is the current offer, word for word, and any terms line for the end card.
+MISSING: whether the brand uses music. The default is no music, only room tone and prop sounds.
+MISSING: the label text on the pouch and daily pack, word for word.
 
-# Stage 1: Avatar card (approval 1)
+## File 1: Avatar card
 
-**Role:** The one living the habit. It buys tub after tub, manages a couple of scoops of each, then shoves the half-used tub into the cupboard and buys another.
+**Role:** the one living the habit. It buys a protein tub, takes two scoops, gives up on the taste and shoves the tub in the cupboard. Then it does the same again, tub after tub. At the turn it swaps the tubs for one Sprout daily pack.
 
-**Look:** A lanky adult cartoon skeleton with warm ivory bones and a soft matte finish. Big round cartoon eyes sit in the sockets, white with dark pupils. Friendly and a little hapless. Its feelings show through the eyes first, then the pose.
+**Look:** a lanky adult cartoon skeleton with warm ivory bones and a soft matte finish. Its big round cartoon eyes sit in the sockets, white with dark pupils. Its proportions are friendly and slightly long-limbed. It reads as a grown-up, never a toy or a children's character.
 
-**Clothes / signature item:** None, per the cast note. Bare skeleton only.
+**Clothes / signature item:** none. The cast note says no clothes.
 
 **Props:**
-- Plain unmarked white tubs with plain white lids, all the same size, never branded and never a rival's pack.
-- One plain white plastic scoop.
-- One kitchen cupboard: plain wooden shelves and plain doors.
-- The Sprout pouch, built from the attached photos with its printing unchanged. It opens only at its resealable top and is never torn.
-- One Sprout daily pack, built from the photo. It is torn straight across its top edge only, and only from the shot where it is torn.
+- Plain unmarked protein tubs with plain lids, all one size and one colour, never branded or a rival's pack.
+- One plain scoop.
+- The cupboard door and its single shelf.
+- The Sprout pouch and one Sprout daily pack, drawn only from the real photos.
 
-**Voice:** None. The jaw stays closed in every shot. The narrator is off screen. There is no lip-sync.
+**Voice:** none. The jaw stays closed, and the narrator is off screen in a real or stock voice, never cloned.
+
+**Feeling is shown by:** eyes first (squint, wide, rolling), then the whole pose (shoulders dropping, arms full, a hip pushed against the door).
 
 **What never changes:**
-- Bone count, proportions, ivory colour and matte finish.
-- The eye style.
-- The closed jaw.
-- No clothes.
-- The same hand (right) on the scoop and the pack.
-- It never reads as a customer, founder or expert, and there is no body before-and-after.
+- Bone colour and finish.
+- Eye shape and size.
+- Proportions.
+- The bones stay joined and rigid.
+- The jaw stays closed.
+- It has no clothes, and gains no accessories or text.
 
-**Note for later stages:** Because the jaw stays closed, the "chalky taste" at TUB 1 is shown as a squint and dropped shoulders after the scoop, not as chewing. "Tip" is shown as gummies tipping into the palm unless you tell me otherwise.
+**Reaction figures:** none. The cast note says no onlookers.
 
-**Reaction figures:** None, per the cast note.
+**Never:** a real person, a child, a known character, a toy for children, a customer/founder/expert role, or a body before-and-after.
 
----
-
-**Stopped for approval 1.** Reply yes to approve the avatar card, or send changes. Stage 2 (reference images) starts only after a yes.
+**Stopping here for approval 1.** Reply "yes" to approve the avatar card, or tell me what to change. Please re-attach the product photos before Stage 3.
 ```

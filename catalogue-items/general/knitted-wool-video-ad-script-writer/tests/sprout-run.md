@@ -2,26 +2,26 @@
 
 Result: **fail**. Ran on claude-opus-5-5 (effort medium), graded by claude-fable-5-1. Judge list: 5 of 6 met. Invented facts: 0.
 
-A careful, usable script: one turn, claims kept to the approved lines, the pouch drawn correctly, the offer stated with its terms, and body-change shots explicitly rejected. The only slip is that several later picture notes name objects (her palm, the counter, the mug, the pouch) without their material or colour, which risks the video tool rendering them as real.
+A careful, usable script that stays inside the approved claims, keeps the turn wordless, uses the correct offer and renewal price, and flags the two lines that need sign-off. The only real lapse is that several picture notes drop the colour or material on the doll, glass and steam, which the skill says risks those objects rendering as real.
 
 ## Fix
 
-In step 6 and the final check, add: "Repeat the material word and colour on every mention of an object, including hands, palms and objects already named in an earlier shot; a bare second mention counts as missing."
+In step 6, add: 'Repeat the material word and colour on every mention of an object in the picture column, including the doll, even when the room list already has them; never write a bare noun like "the glass" or "the doll".'
 
 ## Judge list
 
 - Met: The show plan's implied sentence is something your claims let you say.
-  "This is Sprout Low Sugar, and it comes as a pouch of daily packs." Source: product facts (pouch of 28 daily packs, pouch design).
+  "There's a Sprout pouch of daily packs, a different option from the powders." Source: product facts (pouch of 28 daily packs, buyer tried powders).
 - Not met: Every object in every picture note has a material word and a color.
-  "Close on her open palm." (no material, no colour); "honey-oak counter", "glossy deep-green pouch", "mug", "felted steam" appear bare on later mentions.
+  "The crocheted doll" (no colour), "a crocheted glass" (no colour), "A felted puff of steam" (no colour), later "the glass", "The doll" bare.
 - Met: There is one main doll, sketched the same way every time, and no doll speaks.
-  "No second doll appears"; "The doll never speaks"; "Use this same sketch in every shot."
+  One doll, oatmeal jumper and chestnut hair in every shot; "She never speaks"; narrator carries all words.
 - Met: No shot is a close-up of a face, and nothing shows a body getting better.
-  "never framed closer than a medium shot. All close-ups are on her hands and the product"; tummy/belly changes all rejected.
+  Only close-up is "Close-up on her hands"; "No body change is shown"; tummy knot and before-and-after explicitly rejected.
 - Met: The product has its true shape and only real label words.
-  "yellow intarsia 'Sprout', the yellow bear face at top right, and '28 Daily Packs' stitched in yellow"; "Low Sugar" withheld pending photo.
+  Deep-green pouch, yellow intarsia "Sprout", yellow bear face top right, "28 Daily Packs" at bottom; matches brief, no extra text.
 - Met: The narration fits the length at a calm pace, with 5 words or fewer over the turn.
-  "Meet Sprout Low Sugar." (4 words); ~57–60 words over 31 s, about 2 words a second.
+  "TURN: no narration (0 words)"; 55 words over 32 s is under the 70-word ceiling (clips 3 and 4 run slightly brisk at ~2.4 w/s).
 
 ## What went in
 
@@ -51,116 +51,130 @@ Offer: $29.99 first order with text sign-up, renews at $49.99 every
 ```text
 ## 1. Show plan
 
-| Item | Plan |
+| | |
 |---|---|
 | **Selling idea** | Six grams of prebiotic fiber, in a gummy you'll actually eat. |
-| **Show job** | **Reveal**: the product arriving as a gummy, for a buyer who is tired of powders and jars. |
-| **Technique** | **Knitting up.** The Sprout pouch knits itself row by row, from the bottom edge upward, in the doll's cupped hands. The turn is the only yarn change. There is no yarn-made scene change, and the whole ad stays in one kitchen. |
-| **Yarn thickness** | Fine (sport weight) throughout. This keeps the wordmark, the bear face and the small gummy bears readable. |
-| **Fabrics** | Stockinette for the walls, the sky behind the window, the clothes and the doll's skin. Garter for the floor and the rug. Rib for the curtains and the cuffs. Crochet for the counter, the jars, the mug, the pouch, the packs, the bears and the doll. Felted wool for the steam. Fair Isle for the tea towel. Intarsia for the pouch label. Loose yarn for the hair. |
-| **What changes** | Rows of glossy deep-green crochet grow up from her palms into the full pouch: the yellow "Sprout" wordmark, the yellow bear face at top right, and "28 Daily Packs" at the bottom. |
-| **Sentence it implies** | "This is Sprout Low Sugar, and it comes as a pouch of daily packs." |
-| **Source** | Product facts: a pouch of 28 daily packs, with the listed pouch design. |
+| **Show job** | **Reveal**: the product arriving after the powders and capsules she's given up on. |
+| **Technique** | **Knitting up**: the Sprout pouch grows into view row by row from its bottom edge on the counter, beside her abandoned glass of powder. |
+| **Yarn thickness** | Chunky throughout, so the stitches are big and readable. |
+| **Fabrics** | Stockinette for the walls, the doll's skin and her jumper. Garter for the floor rug. Rib for the curtains and the counter's wood grain. Crochet for the doll, the glass, the tub, the bottle, the pouch, the daily pack and the bears. Felted wool for the powder clumps and the kettle steam. Loose yarn for her hair. Intarsia for the pouch wordmark. |
+| **What changes** | One change: the pouch knits up out of nothing on the counter. |
+| **Sentence it implies** | "There's a Sprout pouch of daily packs, a different option from the powders." |
+| **Source** | Product facts: the pouch of 28 daily packs and its look. |
+| **Yarn-made scene changes** | None. |
 
 ## 2. Room list
 
+The room is inferred as a kitchen counter by a window.
+
 | Object | Material | Colour |
 |---|---|---|
-| Walls | Stockinette knitted | Cream |
-| Floor | Garter knitted | Warm oak brown |
-| Rug | Garter knitted | Dusty rose |
-| Window frame | Crocheted | White |
-| Sky through window | Stockinette knitted | Pale morning blue |
-| Curtains | Rib knitted | Mustard |
-| Kitchen counter | Crocheted, rib-textured top for wood grain | Honey oak |
-| Powder tub | Crocheted | Pale grey, plain with no words |
-| Powder shaker bottle | Crocheted | White with a grey lid, plain |
-| Probiotic jar | Crocheted | Off-white with a lilac lid, plain |
-| Mug | Crocheted | Terracotta |
-| Steam from mug | Felted wool | Soft white |
-| Tea towel | Fair Isle knitted | Red and cream |
-| Pot plant | Crocheted pot with crocheted leaves | Sage pot, olive leaves |
-| Sprout pouch | Tight crocheted, mercerised cotton for sheen | Glossy deep green |
-| Pouch wordmark "Sprout" | Intarsia | Yellow |
-| Pouch bear face, top right | Intarsia | Yellow |
-| Pouch line "28 Daily Packs" | Stitched lettering | Yellow |
-| Daily pack | Crocheted | Deep green (inferred) |
-| Gummy bears | Crocheted, tiny and firm | Deep green |
-| Doll | Crocheted | See cast note |
+| Back wall | knitted stockinette | cream |
+| Floor rug | knitted garter | oatmeal |
+| Window curtains | knitted rib | sage green |
+| Counter top | knitted rib (wood grain) | honey brown |
+| Kettle | crocheted | teal |
+| Puff of steam from the kettle | felted | white |
+| Drinking glass | crocheted, stiffened | clear-look pale grey-white |
+| Clumps of fiber powder in the glass | felted | dull grey |
+| Spoon | crocheted | tan |
+| Powder tub, no text | crocheted | white with a mustard lid |
+| Capsule bottle, no text | crocheted | amber brown |
+| Loose capsules (3) | crocheted | cream |
+| Sprout pouch | crocheted in mercerized cotton for gloss | deep green |
+| Wordmark "Sprout" on the pouch | intarsia | yellow |
+| Bear face, top right of the pouch | crocheted appliqué | yellow |
+| "28 Daily Packs" at the bottom of the pouch | stitched lettering | yellow |
+| Single daily pack (inferred look) | crocheted, no text | deep green |
+| Gummy bears (5) | crocheted amigurumi | deep green |
+| Doll | crocheted, with stockinette skin | warm beige |
+| Doll's hair | loose yarn | chestnut |
+| Doll's jumper | knitted stockinette | oatmeal |
+| Doll's trousers | knitted with rib cuffs | denim blue |
 
 ## 3. Script
 
-Light is soft window daylight from the left, with shallow focus throughout. Pace is stop-motion.
+**Specs:** about 32 seconds, 55 words, 4 clips of 8 seconds. Calm pace is about 2.2 words a second, so the ceiling for 32 seconds is about 70 words. Every sentence sits inside one clip.
 
-| Clip | Time | Narration | Picture | The one move |
+**Light and look:** soft window daylight through the sage knitted curtains. Shallow focus. Stop-motion pace.
+
+| Time | Clip | Narration | Picture | The one move |
 |---|---|---|---|---|
-| 1 | 0:00–0:03 | "She's tried the powders. The shakers." | Medium shot. The crocheted doll stands at the honey-oak crocheted counter. A pale-grey crocheted powder tub and a white crocheted shaker bottle sit in front of her. Mustard rib-knitted curtains are behind her. | She slowly slides the pale-grey crocheted tub to the back of the counter. |
-| 1 | 0:03–0:05 | "The probiotic jars." | Same medium shot. An off-white crocheted jar with a lilac lid sits beside the terracotta crocheted mug and its felted white steam. | She sets the jar back beside the tub. Her shoulders drop. |
-| 1 | 0:05–0:08 | "So what about something she'd actually eat?" | Full shot of the doll by the cream stockinette wall and white crocheted window. | Her head tilts as she turns her cupped hands palm-up. |
-| **2: TURN** | **0:08–0:10.5** | **"Meet Sprout Low Sugar."** (4 words) | **Close on her cupped crocheted hands. Rows of glossy deep-green crochet knit up from her palms into the pouch: yellow intarsia "Sprout", the yellow bear face at top right, and "28 Daily Packs" stitched in yellow at the bottom.** | **The rows grow upward one by one. The camera is locked off.** |
-| 2 | 0:10.5–0:13 | "Tear one pack straight across." | Close on her hands holding a small deep-green crocheted daily pack over the honey-oak counter. | She tears the pack straight across the top. |
-| 2 | 0:13–0:16 | "Tip the bears into your palm." | Close on her open palm. | Small deep-green crocheted gummy bears tip out into her hand. |
-| 3 | 0:16–0:19.5 | "Six grams of prebiotic fiber, twenty-one vitamins and minerals." | Close on her palm of deep-green crocheted bears. The glossy deep-green pouch stands softly out of focus behind them. | Slow push-in. |
-| 3 | 0:19.5–0:23 | "Supports digestion and gut health." | Medium shot. She lifts one deep-green crocheted bear to her mouth. Her shoulders are easy, with a small embroidered smile. Her hands stay away from her tummy. | One slow lift of her hand. |
-| 4 | 0:23–0:31 | "First order, $29.99 with text sign-up. Renews at $49.99 every four weeks." | The glossy deep-green crocheted pouch stands still on the honey-oak counter beside the Fair Isle red-and-cream tea towel. On-screen text reads: **$29.99 first order with text sign-up. Renews at $49.99 every 4 weeks.** | Locked off. Only the felted steam drifts from the mug at frame edge. |
+| 0–4s | 1 | "She's tried the gritty powders…" | Medium-wide shot. The crocheted doll in her oatmeal knitted jumper stands at the honey-brown knitted counter. She stirs a crocheted glass of dull-grey felted clumps with a tan crocheted spoon. A white crocheted tub sits beside her. A felted puff of steam rises from the teal crocheted kettle. | A slow stir. |
+| 4–8s | 1 | "…and the capsules she forgets." | Medium shot. Three cream crocheted capsules lie forgotten beside an amber crocheted bottle. She looks at them with shoulders dropped and head tilted, brows slightly raised, mouth flat. | Her shoulders sink slowly. |
+| 8–11.5s | 2 | "Her worry: will it upset her stomach more?" | Medium shot. She sets the glass down and steps back from it. Her hands hang at her sides, her chin dips and her brows knit together. Her hands stay away from her body. | She sets the glass down. |
+| **11.5–16s** | **2** | **TURN: no narration (0 words)** | Medium shot of the counter. Beside the glass, a deep-green crocheted pouch knits up row by row from its bottom edge. First the yellow stitched "28 Daily Packs" appears, then the body of the pouch, then the yellow intarsia "Sprout" and the yellow crocheted bear face top right. The doll watches at the edge of frame, head lifting. | Rows grow upward; the camera holds still. |
+| 16–20s | 3 | "For sensitive stomachs, Sprout points you to Low Sugar." | Medium shot. The doll picks up the deep-green crocheted pouch and holds it at chest height, label to camera. Her shoulders lift and her head tilts with curious interest. | She lifts the pouch. |
+| 20–24s | 3 | "Six grams of prebiotic fiber, in gummies you'll actually eat." | Close-up on her hands. She tears a deep-green crocheted daily pack straight across the top and tips five deep-green crocheted gummy bears into her beige palm. | One slow tip. |
+| 24–26.5s | 4 | "Supports digestion and gut health." | Medium shot. She raises one deep-green crocheted bear toward her mouth. Her shoulders are relaxed, her head is upright and she gives a small embroidered smile. No body change is shown. | She raises the bear. |
+| 26.5–32s | 4 | "First order twenty-nine ninety-nine with text sign-up, then forty-nine ninety-nine every four weeks." | Still product shot. The deep-green crocheted pouch stands on the honey-brown knitted counter with three deep-green crocheted bears beside it. **On-screen text, added in edit:** "$29.99 first order with text sign-up. Renews at $49.99 every 4 weeks." | Slow camera push-in; the product stays still. |
 
-**Word count:** 60 narrated words, which is about 27 seconds of speech at 2.2 words a second. That leaves room for a 2.5-second turn and a held end card.
+**Words per clip:**
 
-**Seconds:** 31.
+| Clip | Time | Words |
+|---|---|---|
+| 1 | 0–8s | 10 |
+| 2 | 8–16s | 8 |
+| 3 | 16–24s | 19 |
+| 4 | 24–32s | 18 |
 
-**Clip split:**
-* Clip 1 runs 0:00–0:08.
-* Clip 2 runs 0:08–0:16.
-* Clip 3 runs 0:16–0:23.
-* Clip 4 runs 0:23–0:31.
-
-Every sentence sits inside one clip.
+The turn carries 0 words. Swap the real pouch label in during editing if any knitted line comes out wrong.
 
 ## 4. Claims shown
 
-**Changes kept:**
+**Kept**
 
-| Change | Sentence a viewer takes | Source |
+| What's shown | Sentence a viewer takes from it | Source |
 |---|---|---|
-| She slides the powder tub and the jar aside | "She's moved on from powders and probiotics." | Buyer brief: has tried fiber powders and probiotics. No claim is made about those products. |
-| The pouch knits up in her hands (turn) | "Sprout Low Sugar comes as a pouch of daily packs." | Product facts |
-| Pack torn straight across, bears tipped into her palm | "You tear a pack and tip the gummies into your hand." | Product facts: how it's used |
-| Push-in on bears with the fiber and vitamin line | "Each pack has 6 g prebiotic fiber and 21 vitamins and minerals." | Approved: "60+ ingredients, 21 vitamins & minerals, and 6g fiber." Product fact: 6 g prebiotic fiber per pack. |
-| She eats a bear with a small smile | "It's a gummy she's happy to eat." | Selling idea in the brief. The approved "Supports digestion and gut health" is pictured as the product in use only. |
+| The pouch knits up on the counter (yarn change) | "There's a Sprout pouch of daily packs." | Product facts |
+| Pack torn across the top, bears tipped into her palm | "This is how you take it." | Product facts (how it's used) |
+| "Six grams of prebiotic fiber" | 6 g prebiotic fiber per pack | Product facts and the approved claim ("6g fiber") |
+| "Supports digestion and gut health," shown as the product in use | "This supports digestion and gut health." | Approved claim |
+| "For sensitive stomachs, Sprout points you to Low Sugar" | "Sprout recommends Low Sugar for sensitive stomachs." | Brand note. Worded as a recommendation, not a result. Needs legal sign-off (see MISSING). |
+| Offer narration and text | The offer as stated | Offer |
 
-**Changes rejected:**
+**Rejected**
 
-| Rejected change | Why it's out |
+| Rejected idea | Why |
 |---|---|
-| A knot loosening on her tummy, or a tangle unravelling for "regularity" | It implies the product fixes the body. That is banned. |
-| A felted balloon belly deflating, or a felted gas cloud fading | This is a body change and a before/after. |
-| She rubs her tummy, relieved, after eating | It reports a result. A doll never reports one. |
-| Powder clumping in a glass, or a grey cloud over the tub | It makes an unbacked claim against competitors. |
-| A Sugar-Free pouch shown beside Low Sugar, with "gentle on sensitive stomachs" | This is not an approved claim. See MISSING. |
-| Joined squares for the 60+ ingredients | It would be a second turn. The figure is said by the narrator instead. |
+| A knot loosening or a tangle smoothing near her tummy | Shows the body being fixed, which is banned. |
+| The doll's hand on her stomach, before and after | A before-and-after that implies a result. |
+| "Won't upset your stomach," or any answer to her worry phrased as a result | Not an approved claim; it promises a result. |
+| A how-it-works close-up of the fiber | The brand hasn't stated how it works. |
+| Joined squares for "60+ ingredients" | Off the selling idea and adds a second turn. |
+| Narrating "60+ ingredients, 21 vitamins & minerals" | Cut for time. The approved line can return if the ad runs to 40 seconds. |
+
+**Flagged:** "Gummies you'll actually eat" comes from the brief's selling idea, not the approved claims list. It implies the gummies are easier or nicer to take than powder. Confirm it before running.
 
 ## 5. Cast note
 
-**Who carries the ad:** one crocheted doll, with the product taking over from the turn onward. The buyer's doubt is personal, and the product's routine is a hands ritual: tear, tip, eat. A doll is needed to show that she's tried other things and moved on. The doll never speaks and is never framed closer than a medium shot. All close-ups are on her hands and the product. No second doll appears.
+**Who carries the ad:** one crocheted doll, with her hands carrying the tear-and-tip close-up and the product alone for the close.
 
-**Doll sketch (`inferred`; no buyer look was given):**
-* **Who:** a made-up crocheted woman, about 40, of medium build.
-* **Skin and face:** warm beige stockinette skin with embroidered dark-brown eyes, brows and mouth.
-* **Hair:** shoulder-length loose yarn in chestnut brown.
-* **Top:** a rust stockinette knitted top, with an oatmeal stockinette knitted cardigan over it with rib cuffs.
-* **Trousers:** navy stockinette knitted.
-* **Shoes:** cream crocheted slippers.
+**Why:** a gentle adult doll makes bloating and irregularity kind to watch without showing a body. Her pose carries the doubt and the relief, and the product does the claiming through narration.
 
-Use this same sketch in every shot.
+**Doll sketch (inferred, because the buyer's look wasn't given):**
+- About 40, a woman, medium build.
+- Shoulder-length chestnut loose-yarn hair.
+- Embroidered brown eyes and a small embroidered mouth.
+- Warm-beige stockinette skin.
+- Oatmeal knitted stockinette jumper and denim-blue knitted trousers with rib cuffs.
+
+She never speaks, and she is never framed as a face close-up. Use this same sketch for every shot. The video block turns it into the avatar card and then locks the doll card in its character sheet.
 
 ## 6. MISSING
 
-* `MISSING: approved wording for the doubt "Will this upset my stomach more?"` The brand note points gut-sensitive buyers to Low Sugar, but it is not an approved claim. The narration names "Low Sugar" only and promises nothing about gentleness.
-* `MISSING: front photo of the pouch`, to confirm whether "Low Sugar" appears on the front. It is left off the knitted pouch until confirmed.
-* `MISSING: look and colour of a single daily pack`. Deep green is inferred.
-* `MISSING: pouch size`, needed to scale the crocheted pouch in her hands.
-* `MISSING: offer end date and cancellation terms`. Check against the live offer on the day of the edit before the end card goes on.
-* `MISSING: brand narrator voice and colours`. A calm, warm female narrator is assumed.
-* `MISSING: video tool clip length`. 8 seconds is assumed.
-* `MISSING: how it works`. No how-it-works shot is included.
+- MISSING: product photo. The pouch, daily pack and bears are built from the description and couldn't be checked against the real product. Please attach a front photo of the pouch.
+- MISSING: whether "Low Sugar" is printed on the pouch. It is left off the knitted pouch until confirmed.
+- MISSING: look of the single daily pack (colour, print). It is inferred as plain deep green.
+- MISSING: buyer's look and clothes, the room where the problem happens, and more of her own words. The doll and the kitchen are inferred.
+- MISSING: approved wording for the sensitive-stomach and Low Sugar line, and approval for "gummies you'll actually eat."
+- MISSING: offer end date and cancellation terms, for the on-screen text. Check them against the live offer on the day.
+- MISSING: narrator voice. A warm, plain female voice is assumed.
+- MISSING: clip length of your video tool. 8 seconds is assumed.
+
+## 7. Score
+
+**83 / 100** (5 of 6 checks passed: 5 ÷ 6 × 100 = 83)
+
+**Missed:** "Product has its true shape" couldn't be confirmed, because there's no product photo. The shape and colours come from the description only.
 ```

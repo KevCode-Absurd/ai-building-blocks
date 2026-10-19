@@ -2,20 +2,20 @@
 
 Result: **pass**. Ran on claude-opus-5-5 (effort medium), graded by claude-fable-5-1. Judge list: 5 of 5 met. Invented facts: 0.
 
-A usable, disciplined claymation script that keeps the picture inside the one approved claim, shows the real tear-and-tip routine correctly, and puts both the first-order price and the renewal price on screen together. It is over-cautious in marking the guarantee and buyer quotes MISSING when Sprout's files contain them, and the 4-to-5 gummy guess is low versus the files, but both are clearly flagged for confirmation.
+A usable, honest 30-second script: the powder-quitter story is told entirely with facts from the brief, the morph is a clear routine metaphor, the offer shows the renewal price, and no health result is drawn or spoken. Small nits only: the narration word count is slightly off (about 58-59 words, not 57), and several MISSING items (brand voice, buyer quotes, the 30-day first-order guarantee) were actually available in Sprout's brand file and could have been used to strengthen the close.
 
 ## Judge list
 
 - Met: You can say in one sentence what the object is and what changes it.
-  "Changing object: the grey routine stack" that "squashes down into one grey lump... takes on forest green" into one daily pack, triggered by finding Sprout.
+  "tall grey clutter of tub, shaker and glass become one green gummy bear, right after the pack is torn and tipped."
 - Met: The three states are marked, and the change happens in front of the camera.
-  "Before: a tall, tilted grey stack... Changing: the stack squashes down... After: one small, flat, forest-green daily pack"; shot 5 shows it on camera.
+  Before/Changing/After listed under the object; shot 6 "MORPH: the grey tower squashes down ... reshapes into a single gummy bear and turns forest green."
 - Met: Each shot has one thing moving, and there's one morph at most.
-  Mover column names one mover per shot; "Morph: shot 5 only." Shot 6 gummies fall only as the hand tips.
+  Mover column is single per shot (character, lump, gummies, tower, none); only shot 6 is marked MORPH.
 - Met: The character never talks, never says the product worked for them, and isn't a child.
-  "a 7-heads-tall clay adult"; "pops one gummy in with mouth closed"; "The character never speaks or mouths words".
+  "A clay adult, 6 heads tall"; narration is off-screen "you"; feelings shown as "shoulders drop" / "shoulders lift and the head tilts".
 - Met: Every picture matches an approved claim, and the product keeps its real label.
-  Label lines "Sprout" and "28 Daily Packs" only; no body or health result drawn; morph declared "an obvious metaphor for four steps become one".
+  On-screen text is the approved line word for word; label "Sprout" / "28 Daily Packs" printed paper, "no clay lettering"; morph flagged as routine metaphor.
 
 ## What went in
 
@@ -40,93 +40,98 @@ Video, 30 seconds.
 ## What came out
 
 ```text
-## 1. Fit, object, character, set
+## 1. Fit, changing object, character, set
 
-**Fit:** Clay suits this ad. The product is a small everyday problem (a routine too heavy to keep) told as a story, and clay can show four steps squashing into one. The proof is the approved counts and the real steps shown plainly. No real face or before-and-after body is needed.
+**Fit:** Clay fits this idea. It is a small everyday problem told as a story: a powder routine that gets dropped and leaves a half-used tub. The proof is a count (the approved numbers) and a change the viewer can see (the routine shrinking to tear and tip). No claim depends on a real person's face. The buyer is not shopping on price alone, so this format holds.
 
-**Changing object: the grey routine stack** (half-used tub, scoop, shaker, glass of chalky drink, leaning together on the counter)
-- **Before:** a tall, tilted grey stack. The tub is half full of grey-green powder, the scoop is dusty, and the glass has cloudy clumps stuck to its sides.
-- **Changing:** the stack squashes down into one grey lump. The lump lifts and takes on forest green.
-- **After:** one small, flat, forest-green daily pack, lying label side down where the stack stood. The counter around it is clear.
-- **Sound-off read:** four grey things become one small green pack. Then hands tear the pack and tip gummies into a palm.
+**Changing object: "the routine tower"** (a metaphor for the steps, not for the product's ingredients)
+- **Before:** A leaning grey stack on the counter. The bottom is a half-used powder tub with its lid askew and a scoop sticking out. On it sits a shaker with grey clumps inside. A clear glass of chalky drink perches on top, with lumps stuck to the rim. Everything is cool grey.
+- **Changing (the morph):** The tower squashes down from the top. The glass presses into the shaker and the shaker into the tub. It becomes one grey ball, which reshapes into a single gummy bear and turns forest green.
+- **After:** One glossy forest-green gummy bear sits where the tower stood. It is about the size of the old tub lid, beside the open pouch.
+- **Sound-off test:** A stranger sees a tall grey clutter of tub, shaker and glass become one green gummy bear, right after the pack is torn and tipped. They would say: "the whole routine turned into one gummy, because of that pack."
 
-**Character:** a 7-heads-tall clay adult with an average, slightly soft build, warm tan clay, hair as one rounded dark-brown bob, a cream knit jumper and slate-grey trousers, black bead eyes, and one freckle on the left cheek.
+**Character:** A clay adult, 6 heads tall, average build with slightly rounded shoulders, warm tan clay, dark-brown hair as one smooth side-parted cap, slate-blue sweater over charcoal trousers, black bead eyes, and one mark: a thin white lanyard with a blank ID card.
 
-**Set:** a weekday kitchen counter just before work (moment inferred).
-- **Finish:** handled, with light thumbprints and soft edges.
-- **Pieces (4):**
-  1. Counter slab with an inset sink
-  2. Back wall with a small window
-  3. Wall hook holding a work bag
-  4. Low cream shelf
-- **No words anywhere** on the set.
+**Set (story moment "inferred": a weekday morning before work)**
+- **Finish:** Crisp. Fine tool lines, smooth surfaces, food and supplement category, glossy pack.
+- **Pieces (4), no words anywhere:**
+  - A kitchen counter slab.
+  - A tiled splashback wall.
+  - A small window with morning light.
+  - A wall hook holding a work bag.
 - **Stand-ins:**
-  - Sink water and drips: clear gel
-  - Glass: clear acrylic
-  - Chalky drink: cloudy grey-green gel with clay clumps
-  - Powder: dry sifted clay crumbs
-  - Gummy bears: semi-translucent green gel-clay
-  - Pouch gloss: gloss varnish over clay
-- **Problem palette:** cool blue-grey light, slate, washed sage, dull grey objects.
-- **After palette:** warm light with forest green #00582D, cream #FFF7DF, and a sunflower #FFCC2E patch of sun through the window.
+  - The chalky drink is cloudy grey gel in a clear acrylic glass.
+  - Spilled powder is grey chalk-pastel dust.
+  - The window is clear acrylic.
+  - The gummies are translucent green clay with clear gloss varnish.
+  - The torn pack edge is real paper.
+- **Problem palette:** cool grey, blue-grey, chalky off-white, all desaturated.
+- **After palette:** forest green #00582D, cream #FFF7DF, sunflower #FFCC2E.
 
-**Product:** a clay prop pouch at its true shape and colour (glossy deep green), wrapped in a printed paper label:
-- "Sprout" (big yellow wordmark)
-- "28 Daily Packs"
-
-The pouch sits on the counter behind the tub from shot 1, within the character's reach, half hidden. It is never opened on screen (see MISSING). The daily pack stays label side down.
+**Product:** A clay prop at the pouch's true shape and colours, glossy deep green, wrapped in a printed paper label.
+- Pouch label lines: "Sprout" (big yellow wordmark) and "28 Daily Packs".
+- The single daily pack keeps its label turned away and shows a plain green back, because its label text wasn't given.
+- The pouch is already open in every shot, so its opening method is never shown.
+- It stands on the counter edge within the character's reach from shot 1, partly behind the tower. Its top is level with the character's chest.
+- It opens only in the brand's steps: tear one pack straight across the top, then tip it into the palm.
 
 ## 2. Shot table
 
-| Shot | Seconds | Narration | Picture | Mover | State | On-screen text |
+Story shape: fixes that failed. The small stake is the half-used tub glaring from the counter, one more habit that didn't stick.
+
+| Shot | seconds | narration | picture | mover | state | on-screen text |
 |---|---|---|---|---|---|---|
-| 1 | 0–4 | "You bought the tub. The scoop. The shaker." | Whole set, cool light. Character stands at the counter with the work bag on one shoulder, facing the grey stack. The pouch peeks from behind the tub. | Character (shoulders drop) | Before | none |
-| 2 | 4–7 | "And the chalky glass." | Object very close: the acrylic glass of cloudy gel. One clump slides slowly down the inside wall. | Object (clump slides) | Before | none |
-| 3 | 7–10 | "Half a tub later, you quit." | Character close: looks at the half-used tub, head tilts, eyes lower. The stack holds still. | Character (head tilt) | Before | none |
-| 4 | 10–13 | "Then you found Sprout." | Hands at product: one hand nudges the tub aside and lifts the Sprout pouch, label to camera. | Character (hand) | Before (pouch found) | none |
-| 5 | 13–17 | "All of that, now one pack." | Object very close. **MORPH:** the grey stack squashes down into one lump, which lifts, turns forest green and reshapes into one small daily pack, label side down. | Object | Changing → After | none |
-| 6 | 17–21 | "Rip. Tip. Enjoy. No water, no shaker." | Hands at product, warm light: hands tear the pack straight across the top, then tip a small handful of green gummy bears into the open palm. | Character (hands; gummies fall with the tip) | After | "No water. No mixing. No shaker." |
-| 7 | 21–25 | "60-plus ingredients, 21 vitamins and minerals, and 6 grams of fiber." | Whole set in the after palette: clear counter, sunflower sun patch on the wall. Character pops one gummy in with mouth closed, shoulders drop, and reaches for the bag. | Character | After | "60+ ingredients · 21 vitamins & minerals · 6g fiber · in 1 pack" |
-| 8 | 25–30 | "Made for people who quit powders. Twenty-nine ninety-nine first order, with text sign-up." | Character close: holds the pouch at chest height, label to camera, small head tilt. Held pose with one blink. | None (blink only) | After (held) | "$29.99 first order with text sign-up discount · Renews at $49.99 every 4 weeks" |
+| 1 | 0–4 (4) | "Week one, you meant it. Tub, scoop, shaker." | Whole set, cool grey. The character at the counter sips from the chalky glass, lowers it, and the shoulders drop. The grey tower leans beside them, with the pouch at the counter edge behind it. | character | before | none |
+| 2 | 4–8 (4) | "Then the chalky glass. Then the half-used tub." | Very close on the tower: the tub lid askew, powder line halfway down, chalk dust around it. One grey lump slides slowly down the glass rim. | object (lump on the tower) | before | none |
+| 3 | 8–11 (3) | "Then you find Sprout. 28 daily packs." | Hands at the product. The character's hand reaches past the tower to the already-open pouch, "Sprout" and "28 Daily Packs" facing camera, and draws out one daily pack, label turned away. | character | product found | none |
+| 4 | 11–14 (3) | "Rip one straight across the top." | Hands close. The pack is torn straight across the top in one clean pull; the paper strip curls. | character | product found (pack opened) | none |
+| 5 | 14–17 (3) | "Tip. No water, no mixing, no shaker." | Very close on the open palm, held still, with the tilted pack held still above it. A small handful of glossy green gummy bears slides out into the palm. | gummies | how it works | none |
+| 6 | 17–20 (3) | "The whole routine, down to this." | Object close. **MORPH:** the grey tower squashes down from the top into one grey ball, which reshapes into a single gummy bear and turns forest green. | object (tower) | changing | none |
+| 7 | 20–26 (6) | "One pack: 60+ ingredients, 21 vitamins & minerals, and 6g fiber." | Cut to the after state, set warmed to cream, forest green and sunflower. Character close: the character pops one gummy in, then the shoulders lift and the head tilts. The green bear sits where the tower stood. | character | after | "60+ ingredients, 21 vitamins & minerals, and 6g fiber in 1 pack" |
+| 8 | 26–30 (4) | "Done with powders? Rip. Tip. Enjoy." | Whole set, held pose. The character stands relaxed with the pouch upright, label to camera. The green bear is on the counter and the bag is on the hook, ready for work. | none (held) | after / offer | "$29.99 first order with text sign-up discount. Renews at $49.99 every 4 weeks." · "Rip. Tip. Enjoy." |
 
-**Morph:** shot 5 only.
-
-**Word count:** 59 words over 30 seconds, about 2.0 words a second. Shot 5, during the change, has 6 words.
+**Word count:** 57 written words, about 61 spoken over 30 seconds (about 2.0 a second). Every shot with a change in progress carries 8 words or fewer.
 
 ## 3. Notes
 
-**Claims used and their sources:**
-- "60+ ingredients, 21 vitamins & minerals, and 6g fiber" in 1 pack: approved claims. Narration and on-screen text keep these terms.
-- Tear the pack straight across the top, tip gummies into your palm, no water, no mixing, no shaker: product description (real use, shown as it happens).
-- "Rip. Tip. Enjoy.": brand line.
-- $29.99 first order with the text sign-up discount, renews at $49.99 every 4 weeks: current offer. Both prices stay on screen together.
+**Claims used:**
+- "60+ ingredients, 21 vitamins & minerals, and 6g fiber" in 1 pack. Source: approved claims, shot 7 narration and on-screen text, word for word.
+- "28 Daily Packs". Source: pouch label.
+- Tear the pack straight across the top and tip the gummies into the palm, with no water, no mixing and no shaker. Source: brand how-to. Shown in shots 4–5 and said in shot 5.
+- $29.99 first order with the text sign-up discount, renewing at $49.99 every 4 weeks. Source: current offer, on-screen in shot 8.
+- "Rip. Tip. Enjoy." Source: brand line.
 
 **Left out on purpose:**
-- Any health, energy, gut or body result.
-- Any promise that the habit will last or that "you'll stick with it". These are not approved claims, so the story only shows fewer steps.
-- No scarcity.
-- No competitor brands.
-- The morph (stack into pack) is an obvious metaphor for "four steps become one". It is not a claim that the pack replaces any specific product's nutrition.
+- Any health, energy, gut, digestion or body result. Nothing on the body is drawn changing.
+- Any promise that the habit will last. The narrator only shows the old one failing and the new routine being shorter.
+- Any nutrient comparison with powders or pills.
+- Any guarantee, because none was given.
+- Any scarcity.
+- The morph is a step-count metaphor. Nothing on screen suggests powder becomes gummies or what is inside them.
+
+**Edit flag:** The renewal terms sit on a 4-second end shot. Check with legal whether the disclosure needs a longer hold or a larger size.
 
 **MISSING:**
-- MISSING: pouch front photo with the label sharp, and the full list of label lines. Only "Sprout" and "28 Daily Packs" are used.
-- MISSING: the pouch's real size next to a person. Hand-held scale is assumed.
-- MISSING: how the pouch opens and closes. It stays closed on screen.
-- MISSING: the daily pack's real colour and label text. It is shown forest green and label side down until these are given.
-- MISSING: gummies per pack. Shown as "a small handful", about 4 to 5 bears; please confirm the count.
-- MISSING: guarantee terms. None is shown.
-- MISSING: the visible result on the product page. Treated as "nothing visible".
-- MISSING: the buyer's own words. The buyer moment (weekday morning before work) is inferred.
+- Product photo. The pouch prop couldn't be checked against the real one, so its shape, gloss and label layout are inferred from the description.
+- Daily-pack label text. The pack keeps its label turned away.
+- The pouch's real size. Scale is inferred.
+- How the pouch opens. It is shown already open.
+- The number of gummies per pack. A "small handful" is shown.
+- The buyer's own words.
+- The buyer moment. "Weekday morning before work" is inferred.
+- The visible result from the product page. Treated as "nothing visible."
+- Brand voice and banned claims.
+- How the text sign-up works.
 
 ## 4. Cast note
 
-- **Who carries it:** the clay character carries this ad. The changing stack supports the story in shot 5.
-- **Why:** this buyer has already quit powders and pill stacks. They need to see someone like them give up on the tub and then find something lighter, not a product demo.
-- **Voice:** warm, dry, a little wry, like a friend who also has a half-used tub at home. Never preachy, never hyped.
-- **What never changes:**
-  - The character sentence, word for word
-  - The handled finish
-  - The pouch label lines
-  - The one morph, in shot 5 only
-  - The character never speaks or mouths words
+- **Who carries it:** The clay character carries the ad. The buyer's story is about their own habits failing, and their hands do the rip and tip, so the shopper sees themselves in the routine. The changing tower is the payoff, not the lead.
+- **Narrator voice:** Warm, dry and a little wry. It sounds like a friend who also quit powders, talking to "you" plainly, never salesy.
+- **Never changes:** The character sentence exactly as written, the crisp finish, and the pouch label lines "Sprout" / "28 Daily Packs" with no clay lettering.
+
+## 5. Score
+
+**100 / 100** (6 of 6 checks passed: 6 ÷ 6 × 100 = 100)
+
+No checks missed.
 ```

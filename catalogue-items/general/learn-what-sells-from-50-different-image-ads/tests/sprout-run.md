@@ -1,21 +1,25 @@
 # Test run on Sprout, 2026-10-19
 
-Result: **pass**. Ran on claude-opus-5-5 (effort medium), graded by claude-fable-5-1. Judge list: 5 of 5 met. Invented facts: 0.
+Result: **fail**. Ran on claude-opus-5-5 (effort medium), graded by claude-fable-5-1. Judge list: 4 of 5 met. Invented facts: 0.
 
-A careful, honest plan: every cost-per-purchase figure checks out against the CSV, risky figures (star ratings, discount percentages, vitamin count) are held back, and the tie-in pouch is correctly barred. It is small (11 ads) because it treated the 20 reviews as missing and asked for them rather than guessing, so the owner should send them and get a fuller grid before approving.
+This is a careful, honest plan: every cost figure is correct arithmetic from the CSV, two-way figures (discount %, 21 vitamins, star rating) are held back, risky claims are kept out, and the two EMPTY cells are marked with reasons. Its one real flaw is that rows C, D and E sit in the grid without the proof the skill requires (three buyers or a winning past ad), with the shrink deferred to later instead of done now, so the owner may approve a 48-ad grid built partly on hunches.
+
+## Fix
+
+In Step 2 and 'If something is missing', add: an argument that lacks 3 named buyers or 1 buyer plus a winning ad is dropped from the grid in Stage 1 and the grid shrunk now; it may not be kept in the grid with a note to verify later.
 
 ## Judge list
 
-- Met: Every reason to buy names three buyers, or one buyer and a past ad that beat your cost per sale.
-  Row A: quote + "H1 'One Step I Never Skip' ran at $29.55 against the $34.51 account cost." Row B: quote + "T1 ran at $21.21 against $34.51."
+- Not met: Every reason to buy names three buyers, or one buyer and a past ad that beat your cost per sale.
+  Row C: "A doubt the brand file records for the largest buyer group"; Rows D and E "must each be backed by 3 or more separate reviewers" later.
 - Met: Every cell in the grid is either a real idea or marked EMPTY with the reason.
-  "B6 ... EMPTY. There is only one gut figure on file, and reusing 67% would duplicate B5." C1–C6 EMPTY with Row C reasons.
+  "E3 OW · Camera | EMPTY. The only honest 'old way' here is generic gummy vitamins, and nothing is on file"; all other 48 cells have ideas.
 - Met: The counts per row and column add up to the total.
-  Rows 6+5+0=11, columns 4+4+3=11, "By dress: Camera 6, Designed 5" = 11.
+  Rows 10+10+10+10+8 = 48; columns 10+8+10+10+10 = 48; "Camera: 24 ads. Lo-fi: 24 ads."
 - Met: Read two cell ideas aloud. Each names something true about your product that a rival couldn't copy unchanged.
-  A4: "The new way has three: Rip. Tip. Enjoy."; A1: "28 daily packs", "6 g fiber", "one deep-green pouch".
+  C7 "Blood vitamin C up 40.1% (2.7x placebo)"; B2 "pack on a kitchen scale reading about 20 g... 6 g of it is prebiotic fiber".
 - Met: It stopped at the approval and didn't start writing briefs.
-  Ends with "Approval 1: the plan. To approve, confirm or change:" and no briefs follow.
+  "Approval 1: do you approve this grid, or want changes? I'll start the Row A pilot only after a clear yes."
 
 ## What went in
 
@@ -36,137 +40,264 @@ Audience: new to Sprout. Run stage 1 only and stop for my approval.
 ## What came out
 
 ```text
-# Sprout: Stage 1 plan (grid for approval)
+*No image tool is connected here, so I'll write the plan and, later, the prompts. I can't draw the pictures.*
 
-**Audience:** New to Sprout · **Product:** Sprout Original (Adults), one product only · **Grid:** shrunk to 3 × 3 × 2 = 18 cells, 11 filled, 7 EMPTY (reasons below)
+# Sprout: 50-ad sprint, Stage 1 plan (for approval)
 
-## Missing inputs
+**Product in this sprint:** Sprout Original (Adults), shown as **Low Sugar** throughout. Gut-sensitive buyers are pointed to Low Sugar, and Sugar-Free upsets some stomachs.
 
-- **MISSING: research.** The 20 reviews were not included in what you pasted. Only the brand file's four buyer groups and one quote per group arrived. With one quote each, an argument qualifies only if an ad on it beat the account's cost per purchase. Two arguments pass that test, so the grid shrinks instead of being padded.
-- **MISSING: photos.** There are only 2 usable photos. The Camera cells for "Old way, new way" need a shoot. Run `product-image-spec-writer` before Stage 2, and `get-a-full-product-photoshoot-from-phone-photos` is suggested before the sprint.
-- **MISSING: live offer.** No offer has a single set of terms or a date. Six discount levels are live at once (49, 52, 55, 58 and 61% off, plus "$20 off"). The $29.99 price depends on the SMS discount, and the guarantee covers the first order only. Because of this, there is no "Why now?" column.
-- **MISSING: source.** The brand file does not name which review site each buyer quote came from. That is needed before any "Their words" ad. The survey's date and method are also not on file.
+**Kids is left out.** The store rules allow one product per sprint. There is also no Kids pouch photo, and Kids needs its own parent-facing rows. K1 ran at $34.92 per purchase, about the account's $34.51, so it is worth its own sprint later.
+
+**Audience:** New to Sprout.
+
+---
 
 ## 1. Photo list
 
-| # | Shows | Can lead an ad? |
+| # | What it shows | Can it lead an ad? |
 |---|---|---|
-| P-1 | Adult pouch on a soft 2-colour gradient, gummies scattered in front | **Yes.** Real product, no designed lettering, no child. *Confirm the variant:* it should be Low Sugar (no white burst), because the gut row points sensitive stomachs to Low Sugar. |
-| P-2 | Gummies poured into a hand | **Yes.** *Confirm* it is an adult hand. If a daily pack is visible, confirm it is torn straight across the top. |
-| P-3 | Cartoon-movie tie-in pouch | **No.** It carries licensed cartoon marks, which the brand's never-show list forbids. It is also a limited flavour, not the sprint product. |
+| 1 | Adult pouch on a soft gradient, gummies in front | **Yes, if** it has no added lettering beyond the pouch's own print. Please confirm the variant: Sugar-Free has a white burst. Low Sugar is needed. |
+| 2 | Gummies poured into a hand | **Yes, if** the hand is clearly an adult's and there is no text. Please confirm whether a daily pack is visible. If it is, it must be torn straight across the top. |
+| 3 | Cartoon-movie tie-in pouch | **No.** It carries licensed cartoon and partner marks. It is not used anywhere in the sprint. |
 
-**Suggested shoot (minimum):**
-- An unbranded half-used greens tub with a crusted shaker and 3 unbranded pill bottles on a kitchen counter.
-- The same counter with one daily pack torn across the top and a handful of bears beside it.
-- An unbranded fiber-powder canister with a glass of cloudy fiber drink and a spoon.
-- A single daily pack, torn and untorn, on cream #FFF7DF.
+**MISSING: photos.** There are only 2 usable photos, so run `product-image-spec-writer`, then `get-a-full-product-photoshoot-from-phone-photos`, before Stage 2. Shot list:
 
-## 2. Arguments (format: buyer | problem | what only Sprout does | proof)
+- A single daily pack torn straight across the top, with gummies pouring into a palm and into a small bowl.
+- The Low Sugar and Sugar-Free pouches side by side.
+- The pouch open at its resealable top, with daily packs inside.
+- All 28 packs laid out in a 4 x 7 grid.
+- The ingredients panel, legible.
+- Props for the old way, all unbranded:
+  - a half-used greens powder tub and scoop
+  - a dirty shaker
+  - a fiber powder canister and a glass of clumpy water
+  - 5 plain pill bottles
 
-**Past results check.** The practice numbers cover 9 ads. P1 appears as two 21-day rows. Totals are $21,500 spend and 623 purchases, so the **account cost per purchase is $34.51**.
+---
 
-| Ad | Cost per purchase | Beats $34.51? |
+## 2. What is held back or kept out
+
+**Held back until the brand confirms one live figure:**
+
+| Item | Why it is held |
+|---|---|
+| "21 vitamins & minerals" | The site also says "20+" and "over 20". |
+| First-order price | Shown as $29.99 on the product page and birthday banner, but $45.33 on the how-it-works page. |
+| Every discount % | 49, 52, 55, 58 and 61 are all live at once. |
+| Testing counts | 70 + 4 + 16 + 9 named, against "35 substances tested". |
+| Star rating | 4.8, 4.75, 4.74 and 4.0 all appear. |
+| "Trusted by 1M+" | No source on file. |
+| "$1.26 vs $3.60" a serving | The comparison is dated. |
+
+**Kept out (risky claims):**
+- "Fix" or any treatment wording
+- Weight loss or muscle
+- Hair
+- Energy or immunity
+- The 30/60/90-day results timeline
+- "Works", in the broad sense
+- GLP-1
+- The fiber "5 g" comparison
+- "Less than 1% use the guarantee"
+
+---
+
+## 3. Past results (practice numbers)
+
+The file has 10 rows covering 9 ads, because P1 is split into two 21-day windows.
+
+| Ad | Cost per purchase |
+|---|---|
+| **Account** | **$21,500 / 623 = $34.51** |
+| T1 Hot girl tummy | **$21.21** (beats the account) |
+| P1 Too expensive, days 1–21 | **$26.79** (beats the account) |
+| P1 Too expensive, days 22–42 | $76.92 (tired after 3 weeks) |
+| H1 One step never skip | **$29.55** (beats the account) |
+| K1 Fiber kids | $34.92 |
+| F1 Fiber question | $39.13 |
+| W1 Muscle weight loss | $39.13 (claim kept out) |
+| S1 Trusted by 1M | $42.11 |
+| P2 Dont pay full price | $50.00 (high clicks, low buying) |
+| R1 Runner | $100.00 |
+
+---
+
+## 4. The 5 arguments
+
+Each is written as `buyer | problem | what only this product does | proof`.
+
+| Row | Argument | Why it qualifies |
 |---|---|---|
-| T1 Hot girl tummy | $21.21 | Yes |
-| H1 One step never skip | $29.55 | Yes |
-| K1 Fiber kids | $34.92 | No (by $0.41, and it is a different product) |
-| P1 Too expensive | $39.74 overall: $26.79 in days 1–21, then $76.92 in days 22–42 | No |
-| F1, W1 | $39.13 | No |
-| S1 | $42.11 | No |
-| P2 | $50.00 | No |
-| R1 | $100.00 | No |
+| **A. Stick with it** | Quitter who wants to stick \| has quit powders, pill stacks and multis \| one pack a day you want to eat: rip, tip, no water, no shaker \| "95% of surveyed users take Sprout at least 4–6x per week with 80% taking daily" (brand survey, 3,000+ customers) | The brand file names it the top review theme ("I finally stuck with a supplement"). H1 ran at $29.55 against $34.51. |
+| **B. Gut** | Gut-fix seeker \| bloating, irregularity, done with gritty fiber drinks \| 6 g prebiotic fiber in a gummy, Low Sugar \| "Supports digestion and gut health"; "67% of surveyed users experienced better, more regular digestion" | T1 ran at $21.21, the best in the account. The wording moves from "fix" to "supports". |
+| **C. Enough in it** | Powder switcher \| "A gummy can't hold enough to replace my powder" \| 60+ ingredients and 6 g fiber per pack: about 100% DV of the vitamins, about 25% of the minerals \| label; 2025 randomized, double-blind, placebo-controlled study of 120 adults over 12 weeks: blood vitamin C +40.1% (2.7x placebo), folate +20.5% (2.9x placebo) | A doubt the brand file records for the largest buyer group (about 40%). |
+| **D. On the way out the door** | Busy parent, buying for themselves \| no time for their own routine \| a sachet you grab and eat anywhere \| format facts: 1 pack, about 20 g, no water or mixing; ships within 24 h, arrives in 3–5 days on average | Busy-parent group (about 25%), with the quote "So easy to grab and eat on my way to the billion things I have to do as a mom." |
+| **E. Not just candy** | Skeptic, a parent or a quitter \| "Is this just candy?" \| pectin base, methylfolate (not folic acid), B12 as methylcobalamin, no synthetic dyes or sweeteners \| science page and ingredients panel; NSF, GMP and FDA-registered facilities in the US and Canada | A doubt the brand file records for parents. This is the weakest row. |
 
-**Row A: Habit**
-- **Buyer:** The quitter who wants to stick (about 40%).
-- **Problem:** Has quit greens powders, pill stacks and multivitamins, and nothing lasts.
-- **What only Sprout does:** One daily pack you tear and eat. No water, no mixing, no shaker ("Rip. Tip. Enjoy.").
-- **Proof:**
-  - Buyer quote: "Sprout has been the one thing I've been able to stick to."
-  - H1 "One Step I Never Skip" ran at $29.55 against the $34.51 account cost.
-  - Survey: "95% of users take [Sprout] at least 4-6x per week with 80% taking daily" (of surveyed users, brand survey of 3,000+).
-  - This is the brand's top review theme and is barely used in ads.
+**MISSING: research.** The 20 reviews were not attached. Only the brand file's summaries and quotes were. Before Stage 2:
+- Rows **D and E** must each be backed by 3 or more separate reviewers.
+- If either fails, drop **E first**, then D. That shrinks the grid to 4 x 4 x 2 = 32 ads.
+
+---
+
+## 5. The 5 ad types and why
+
+| Question | Type | Proof that allows it |
+|---|---|---|
+| What is it? | **Look inside** | Every label comes from the ingredients panel or the science page. |
+| Is it for me? | **Old way, new way** | Uses the brand's own named old ways: a powder tub and shaker, a shelf of pill bottles. Shown as objects only, all unbranded. |
+| Is it for me? | **In use** | Photo 2, plus the facts on how the pack opens: torn straight across the top, poured into a palm or bowl. |
+| Can I believe it? | **Checked fact** | The study, the survey (always "of surveyed users") and label numbers. Each comes with its source and what it counts. |
+| Why now? | **The offer** | Only the terms that agree everywhere they appear. See the box below. |
+
+**Why other types were left out:**
+- **Product alone:** there is one pouch photo, so it would make 10 near-copies.
+- **Their words:** the quotes on file have no named source.
+- **The moment:** there is only one buyer quote per moment.
+- **The occasion:** there is no real date.
+
+**Offers used**, all stated without a %:
+- Free shipping on the first order.
+- 30-day money-back guarantee, **first order only**.
+- Renews at $49.99 every 4 weeks, which is $1.78 a day.
+- Buy 2, save $5.
+- HSA/FSA eligible through a third-party service.
+
+**MISSING: live offer.** The brand needs to confirm one first-order price and its start and end dates. No urgency is used anywhere. Easy cancelling is never promised.
+
+**Audience rule:** there is 1 "Why now?" type out of 5, so price-led ads are 10 of 48.
+
+## 6. The 2 dresses
+
+**Camera** and **Lo-fi**.
+
+- The CSV doesn't log dress. Judging by their opening lines, the past image ads (P1, P2, S1, W1, R1) look like Designed text-led offer cards. The only phone-made ad was a video (T1).
+- So for images, Camera and Lo-fi are the least tested.
+- Lo-fi is always our own design: hands and objects, with no customer voice and no implied person.
+- If the past images were actually photos, swap Lo-fi for Designed.
+
+---
+
+## 7. The 48 cells
+
+Codes are `type · dress · New`.
+
+Type abbreviations used in the cell tables:
+- LI: Look inside
+- OW: Old way, new way
+- IU: In use
+- CF: Checked fact
+- OF: The offer
+
+**Row A: Stick with it**
+
+| Cell | Idea |
+|---|---|
+| A1 LI · Camera | One daily pack torn straight across the top, beside a coffee mug on a cream counter, bears spilling out. Three callouts: "1 pack a day", "about 20 g", "no water, no mixing". |
+| A2 LI · Lo-fi | Phone shot from above of the pouch open at its resealable top, daily packs fanned inside. A sticky note reads "28 packs = 4 weeks". |
+| A3 OW · Camera | The back of a pantry shelf: a half-used unbranded greens tub with a dried crust on the scoop. The Sprout pouch sits at the front of the shelf. |
+| A4 OW · Lo-fi | Phone shot of a shaker in the sink with green residue, next to one torn Sprout pack on the drying rack. That's the cleanup chore that's gone. |
+| A5 IU · Camera | Adult hand pouring bears from a top-torn pack into a palm, right beside the coffee maker. The pack lives where the morning habit already is. |
+| A6 IU · Lo-fi | Phone shot of an office desk: laptop, a top-torn pack, a small handful of bears in an open palm. |
+| A7 CF · Camera | Pouch on the gradient, with "80% of surveyed users take it daily". Source line: brand survey of 3,000+ customers. |
+| A8 CF · Lo-fi | An index card propped against a torn pack: "95% of surveyed users take it 4–6x a week". Same source line. |
+| A9 OF · Camera | Pouch, with "28 days to see if it sticks". Terms: 30-day money-back on the first order only; renews at $49.99 every 4 weeks. |
+| A10 OF · Lo-fi | Phone shot of all 28 packs in a 4 x 7 grid on a table, one torn. Terms: free shipping on the first order. |
 
 **Row B: Gut**
-- **Buyer:** The gut-fix seeker (about 25%).
-- **Problem:** Bloating and irregularity after trying fiber powders and probiotics.
-- **What only Sprout does:** 6 g prebiotic fiber in a gummy you eat, not a drink you finish. Low Sugar for sensitive stomachs.
-- **Proof:**
-  - Buyer quote: "My bowel movements are normal for the 1st time in 15 years!"
-  - T1 ran at $21.21 against $34.51.
-  - Survey: "67% ... experienced better, more regular digestion" (of surveyed users).
-- **Claim rules:** Claims stay at "Supports digestion and gut health". "Fix" is never reused.
 
-**Row C: EMPTY.** No third argument meets the evidence bar yet. The candidates below would qualify if 3 or more of the 20 reviews say the same thing:
-- **Busy parent:** "So easy to grab and eat on my way to…". K1 does not beat $34.51, and it sells Kids, which needs its own rows.
-- **Powder texture and taste:** "gritty/chalky".
-- **Price doubter:** P1 beat $34.51 only for its first 21 days. Every discount figure it would use is stated more than one way.
+| Cell | Idea |
+|---|---|
+| B1 LI · Camera | Macro of a torn Low Sugar pack and bears. Callouts: "6 g prebiotic fiber", "inulin", "pectin base, no gelatin". |
+| B2 LI · Lo-fi | Phone shot of one pack on a kitchen scale reading about 20 g, with a note: "6 g of it is prebiotic fiber". |
+| B3 OW · Camera | A toiletry bag with an unbranded fiber powder in a leaking zip bag, beside a stack of sealed Sprout packs. That's travelling with fiber, old and new. |
+| B4 OW · Lo-fi | Phone shot of a glass with undissolved fiber clumps at the bottom, next to one torn pack and no glass. |
+| B5 IU · Camera | Adult hand pouring bears into a small bowl at a sunny kitchen table, with the Low Sugar pouch behind. |
+| B6 IU · Lo-fi | Phone shot of a top-torn pack sticking out of a jeans pocket, one bear between two fingers. There's no shaker to carry. |
+| B7 CF · Camera | Low Sugar pouch on the gradient: "6 g prebiotic fiber per pack", with "Supports digestion and gut health". Source: label. |
+| B8 CF · Lo-fi | A handwritten card: "67% of surveyed users had better, more regular digestion". Source: brand survey of 3,000+ customers. |
+| B9 OF · Camera | Low Sugar pouch, answering "Will this upset my stomach?": "Try Low Sugar. 30-day money-back on the first order only." |
+| B10 OF · Lo-fi | Phone shot of the Low Sugar and Sugar-Free pouches side by side, with a hand-drawn arrow to Low Sugar: "gut-sensitive? start here". Terms: free shipping on the first order. |
 
-## 3. Types and why
+**Row C: Enough in it**
 
-| Column | Question | Type | Proof on file |
+| Cell | Idea |
+|---|---|
+| C1 LI · Camera | Macro of a small handful of bears. Callouts: vitamin C 93 mg, D3 20 mcg, B12 2.4 mcg, "about 100% DV vitamins, about 25% minerals, per pack". |
+| C2 LI · Lo-fi | Phone shot of the ingredients panel, with the greens list highlighted in pen: kale, spinach, spirulina, chlorella, wheatgrass, broccoli, beet. |
+| C3 OW · Camera | A level scoop of green powder beside a small handful of bears. Old side: "1 scoop + water + shaker". New side: "1 pack, 60+ ingredients". |
+| C4 OW · Lo-fi | Phone shot of a cobbled-together shelf of 5 plain unlabelled bottles, with the Sprout pouch beside it. |
+| C5 IU · Camera | Adult hand holding a full palm of bears from one pack, showing the serving is a handful, not one gummy. |
+| C6 IU · Lo-fi | Phone shot of one bear pinched between thumb and finger, with a sticky note: "per pack, not per gummy: 60+ ingredients". |
+| C7 CF · Camera | Pouch, with "Blood vitamin C up 40.1% (2.7x placebo)". Source line: 2025 randomized, double-blind, placebo-controlled study, 120 adults, 12 weeks. |
+| C8 CF · Lo-fi | An index card: "Folate up 20.5%, 2.9x placebo", same study, "as methylfolate". |
+| C9 OF · Camera | Pouch, with "$1.78 a day on subscription, 60+ ingredients". Terms: renews at $49.99 every 4 weeks. |
+| C10 OF · Lo-fi | Phone shot of a shopping-list notepad with "greens powder, multi, fiber" crossed out and "Sprout: $1.78/day on sub" written in. Terms: free shipping on the first order. |
+
+**Row D: On the way out the door**
+
+| Cell | Idea |
+|---|---|
+| D1 LI · Camera | One sealed pack beside car keys and a lip balm for scale. Labels: "about 20 g", "no water", "28 per pouch". |
+| D2 LI · Lo-fi | Phone flat lay of an adult tote's contents: keys, sunglasses, a school-pickup lanyard and one torn pack. No child anywhere. |
+| D3 OW · Camera | A passenger footwell with a leaking unbranded shaker rolled under the seat, against a single Sprout pack in the cup holder. |
+| D4 OW · Lo-fi | Phone shot of a fridge whiteboard with "mix greens drink" crossed out, and a Sprout pack held on by a magnet. |
+| D5 IU · Camera | Adult hand tipping bears into a palm at the front door, keys in the same hand and a backpack on the hook. |
+| D6 IU · Lo-fi | Phone shot from a folding chair at a sports-field sideline: a top-torn pack, bears in a palm, coffee in the cup holder. Field only, no people. |
+| D7 CF · Camera | Pouch, with "Ships within 24 hours, arrives in 3–5 days on average". Source: site shipping terms. |
+| D8 CF · Lo-fi | A sticky note on the pouch: "Rip. Tip. Enjoy. 1 pack, about 20 g, no water." Source: product page. |
+| D9 OF · Camera | Two adult Low Sugar pouches side by side: "Buy 2, save $5", one for each adult on the order. |
+| D10 OF · Lo-fi | Phone shot of a mailer box on a doormat, opened, with the pouch inside. Terms: free shipping on the first order. |
+
+**Row E: Not just candy**
+
+| Cell | Idea |
+|---|---|
+| E1 LI · Camera | Macro of matte green bears. Callouts: "pectin, no gelatin", "methylfolate, not folic acid", "B12 as methylcobalamin", "no synthetic dyes". |
+| E2 LI · Lo-fi | Phone shot of a pen-ticked checklist next to the pouch: free from gluten, dairy, tree nuts, peanuts, caffeine, synthetic sweeteners, synthetic dyes. |
+| E3 OW · Camera | **EMPTY.** The only honest "old way" here is generic gummy vitamins, and nothing is on file about what they contain. |
+| E4 OW · Lo-fi | **EMPTY.** Same reason. |
+| E5 IU · Camera | Adult fingers holding one opaque, soft-matte bear up to window light, with a top-torn pack in the other hand. |
+| E6 IU · Lo-fi | Phone shot of one pack's handful in a small ceramic bowl beside a planner. Only the pack's portion is shown, no candy dish. |
+| E7 CF · Camera | Pouch, with "Made in NSF, GMP and FDA-registered facilities in the US and Canada". Never "FDA-approved". |
+| E8 CF · Lo-fi | An index card: "Folate: 400 mcg DFE, as methylfolate, not folic acid". Source: science page. |
+| E9 OF · Camera | Pouch, with "Vegan. Methylfolate. No synthetic dyes." Terms: free shipping on the first order. |
+| E10 OF · Lo-fi | Phone shot of the pouch with a hand-lettered tag: "HSA/FSA eligible", plus the fine print "through a third-party service". |
+
+**Recommended pilot row: A (Stick with it).** It has the open lane in the ads, a result that beat the account, and the cleanest proof.
+
+---
+
+## 8. Counts
+
+| | Look inside | Old way | In use | Checked fact | Offer | **Row** |
+|---|---|---|---|---|---|---|
+| A Stick with it | 2 | 2 | 2 | 2 | 2 | **10** |
+| B Gut | 2 | 2 | 2 | 2 | 2 | **10** |
+| C Enough in it | 2 | 2 | 2 | 2 | 2 | **10** |
+| D Out the door | 2 | 2 | 2 | 2 | 2 | **10** |
+| E Not just candy | 2 | 0 | 2 | 2 | 2 | **8** |
+| **Column** | **10** | **8** | **10** | **10** | **10** | **48** |
+
+- Camera: 24 ads. Lo-fi: 24 ads.
+- The Old way column and Row E are read on 8 ads each.
+
+## 9. Budget check
+
+| Grid | Ads | Purchases needed | Budget |
 |---|---|---|---|
-| 1 | What is it? | Look inside | Label facts: 60+ ingredients, 6 g prebiotic fiber, methylfolate not folic acid, B12 as methylcobalamin, pectin base, vegan, free from gluten and dairy |
-| 2 | Is it for me? | Old way, new way | The old way is in the brand file, unbranded: powder tub and shaker, pill-bottle shelf, fiber powder. The new way comes from the product page facts. |
-| 3 | Can I believe it? | Checked fact | Survey figures with "of surveyed users", source line: brand survey of 3,000+ customers |
+| 5 x 5 x 2 (this plan) | 48 | about 100 | about 100 x $34.51 = **about $3,450** |
+| 4 x 4 x 2 (drop Row E) | 32 | about 80 | about $2,760 |
+| 3 x 3 x 2 | 18 | about 60 | about $2,070 |
 
-**Types left out:**
-- **Why now? (Offer, Occasion):** no dated live offer and no real date. The New audience allows only 1 such column anyway.
-- **Their words:** only one quote per argument, and its source site is unnamed.
-- **In use:** shares the "Is it for me?" question with Old way, new way, which fits both rows more tightly.
-- **Product alone:** too neutral to test an argument.
+- **About 100 purchases** reads all 5 rows and all 5 columns at about 20 each.
+- These are practice numbers, and a new audience usually costs more per purchase. Treat these budgets as the floor.
+- P1 tripled in cost after 3 weeks. Plan to read groups within about 3 weeks.
 
-## 4. Dresses
+---
 
-**Camera** and **Designed.** The past results do not record dress, so this is treated as no history.
-
-## 5. The cells
-
-**Figures held back in every cell:**
-- "21 vitamins & minerals" (the site also says "20+" and "over 20").
-- Every star rating (4.8, 4.75, 4.74 and 4.0 all appear).
-- Every discount percentage.
-- "Trusted by 1M+" (from S1, not on file).
-- "35,000+ studies" and any energy or immunity claim from the study. The study measured blood vitamin C and folate only.
-
-| Code | Argument | Idea (what is in the frame) |
-|---|---|---|
-| A1 · Look inside · Camera · New | Habit | P-1 with thin callouts to the pouch and the bears in front: "28 daily packs", "60+ ingredients", "6 g fiber", "no water, no shaker". The whole routine that used to need a tub, a shaker and a pill shelf, in one deep-green pouch. |
-| A2 · Look inside · Designed · New | Habit | Flat illustration of one daily pack torn straight across the top, bears spilling into a palm. The labels belong to the *pack*, not to single gummies (avoiding the brand's own "each gummy" error): 60+ ingredients, 6 g prebiotic fiber, methylfolate, B12 as methylcobalamin. The idea is that "Sachet is a fancy word for our gummy pack". |
-| A3 · Old way, new way · Camera · New | Habit | *Needs the shoot.* Left: unbranded half-used greens tub, crusted shaker and 3 unbranded pill bottles on a kitchen counter. Right: the same counter wiped clean, one Sprout pack torn at the top, a few bears beside it. Objects only, no hands or faces. |
-| A4 · Old way, new way · Designed · New | Habit | Two illustrated step strips. The old way has five steps: scoop, add water, shake, rinse the shaker, swallow pills. The new way has three: Rip. Tip. Enjoy. It is a count of steps, not a promise of results. |
-| A5 · Checked fact · Camera · New | Habit | P-2 (adult hand holding today's handful) with "80% of surveyed users take it daily" set beside the palm, and a DM Mono source line: "brand survey, 3,000+ customers". |
-| A6 · Checked fact · Designed · New | Habit | A 7-day strip in brand greens with days filled in, carrying the other survey figure: "95% of surveyed users take it 4–6x a week". It uses the same source line as A5, but a different number and picture. |
-| B1 · Look inside · Camera · New | Gut | P-1 (Low Sugar pouch confirmed) with callouts on the bears: "6 g prebiotic fiber", "pectin base, no gelatin", "Low Sugar". The fiber this buyer was stirring into water sits in the green bears in front of the pouch. |
-| B2 · Look inside · Designed · New | Gut | Illustrated torn daily pack with a "free-from" list beside it: gluten, dairy, tree nuts, peanuts, caffeine, synthetic dyes, plus "vegan" and "pectin base". The angle is what *isn't* in it, for a buyer worried about upsetting her stomach. |
-| B3 · Old way, new way · Camera · New | Gut | *Needs the shoot.* Left: unbranded fiber-powder canister, a glass of cloudy fiber drink with a spoon still in it, an unbranded probiotic bottle. Right: one torn Sprout pack and a handful of bears on a saucer. Objects only. |
-| B4 · Old way, new way · Designed · New | Gut | Illustrated "drink it vs eat it": a tall glass of thick fiber drink you have to finish, beside a small palmful of green bears ("no water, no mixing"). No unsourced fiber comparison: the "most only contain 5g" line is held back. |
-| B5 · Checked fact · Camera · New | Gut | P-2 with "67% of surveyed users experienced better, more regular digestion" and the survey source line. It carries the claim "Supports digestion and gut health", with no "fix" and no before-and-after body. |
-| B6 · Checked fact · Designed · New | Gut | **EMPTY.** There is only one gut figure on file, and reusing 67% would duplicate B5. |
-| C1–C6 | — | **EMPTY.** No third argument qualifies (see Row C above). |
-
-## 6. Counts per row and column
-
-| | Look inside | Old way, new way | Checked fact | Row total |
-|---|---|---|---|---|
-| A Habit | 2 | 2 | 2 | **6** |
-| B Gut | 2 | 2 | 1 | **5** |
-| C (EMPTY) | 0 | 0 | 0 | **0** |
-| **Column total** | **4** | **4** | **3** | **11** |
-
-By dress: Camera 6, Designed 5. Two of the Camera cells (A3, B3) depend on the shoot.
-
-## 7. Budget check
-
-- **Purchases needed.** Read a group at about 20 purchases. 2 rows × 20 = 40 purchases, and 3 columns × 20 = 60, so about **60 purchases** reads every row and column.
-- **Cost.** 60 × $34.51 ≈ **$2,070**, on practice numbers. If the gut row keeps T1's $21.21, it may read sooner.
-- **Weaker pooling.** Each group pools only 3 to 6 ads instead of 10. One weak ad can move its group by a sixth to a third, so treat close results as ties.
-- **Fatigue.** P1's cost per purchase nearly tripled after day 21. Plan to read inside about 3 weeks.
-- **Growing the grid.** Once the reviews arrive and Row C qualifies, the grid becomes a full 3 × 3 × 2. If two more arguments and one more type qualify, it becomes 4 × 4 × 2 = 32 cells, needing about 80 purchases (about $2,760).
-
-**Approval 1: the plan.** To approve, confirm or change:
-- The 2 arguments, and whether to send the 20 reviews so Row C can qualify.
-- The 3 types.
-- Camera and Designed as the 2 dresses.
-- The shoot list.
-- That P-1 is the Low Sugar variant.
+**Approval 1:** do you approve this grid, or want changes? I'll start the Row A pilot only after a clear yes. Before Stage 2 I'll need:
+- the 20 reviews, to confirm rows D and E
+- the confirmed first-order price and offer dates
+- the missing photos
 ```

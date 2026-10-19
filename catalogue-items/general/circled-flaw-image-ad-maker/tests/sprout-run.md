@@ -1,26 +1,29 @@
 # Test run on Sprout, 2026-10-19
 
-Result: **pass**. Ran on claude-opus-5-5 (effort medium), graded by claude-sonnet-5-5. Judge list: 5 of 5 met. Invented facts: 2.
+Result: **fail**. Ran on claude-opus-5-5 (effort medium), graded by claude-sonnet-5-5. Judge list: 5 of 5 met. Invented facts: 1.
 
-A clear, usable brief: one rough red loop on a pill organiser with six full days, a quoted note, and a ready image prompt. It flags its inferred details and the unused review text, and it keeps the product and any body out of frame.
+This is a solid, usable brief: one rough red circle on a pill organiser, a note taken from the story, and clear steps to finish it. But it breaks a few skill rules, so it fails strictly.
+
+## Fix
+
+Tighten step 6 and the house rules: the note must be the buyer's own phrase or a count from the story, and the handback must use the output shape's one-line formats.
 
 ## Judge list
 
 - Met: There's exactly one mark.
-  "one rough, uneven, slightly open loop around compartments T to S"; the note is a permitted note, not a second mark.
+  "one rough, uneven loop around compartments two to seven"; the note "still full" is words, not a second mark.
 - Met: The flaw is shown at the size your story gives, not bigger.
-  "a standard organiser, about 19 cm long... shown at that size, not filling the frame."
+  Six of seven compartments full, Monday empty, matches the story; the organiser size is flagged as inferred.
 - Met: The mark is on a thing or a room, never on a body.
-  Circle drawn around pill organiser compartments on a kitchen counter; no hands or people in frame.
+  Circle is around pill organiser compartments on a kitchen counter; no body in frame.
 - Met: The circle looks drawn with a finger, not a neat shape or a brand-coloured arrow.
-  "With a fingertip, draw one quick, uneven loop... leaving a small gap"; colour is red, not brand colour.
+  "rough, uneven loop... slightly open"; "drawn with a fingertip"; red, not brand colour.
 - Met: There's no second photo with the flaw fixed, and no product.
-  Blank versions are with/without mark only; "Product: left out of the frame".
+  Blank versions are with mark and with neither; "pills are generic tablets and capsules, not gummies"; no product shown.
 
 ## Invented
 
-- number: about 19 cm long, with compartments about 2.5 cm square (Dimensions not in the story or files; invented as the flaw's "real size", though they describe a generic prop.)
-- other: warm overhead kitchen light... Monday empty (days run M T W T F S S) (Scene details are inferred, but they are flagged as inferred, so acceptable.)
+- quote: The note is "still full"... It is quoted exactly from the story: "Six of the seven days were still full." ("still full" is a fragment of the story line, but the story has "still full", so the quote is accurate; the claim of exact quote is slightly loose.)
 
 ## What went in
 
@@ -40,53 +43,51 @@ Buyer: the quitter who wants to stick, 28 to 45.
 ## What came out
 
 ```text
+No image tool is connected in this chat, so I can write the brief but can't make the picture. How to finish it is at the end.
+
 **1. Scene**
-A clear seven-day pill organiser on a kitchen counter, lids open, Monday empty and the other six days still full.
+A weekly pill organiser on a kitchen counter at night, lids open, with Monday empty and the other six days still full, and a rough red circle around the full ones.
 
 **2. Where and when**
-- **Place:** a kitchen counter on Sunday night, at refill time.
-- **Within reach:** a folded tea towel, the edge of a white kettle, a few crumbs and a phone charger cable trailing off the edge.
-- **Light:** warm overhead kitchen light with soft shadows.
-- **Camera:** held looking down from standing, slightly angled, the way you'd look at the organiser before refilling it.
+A kitchen counter on Sunday night, under ordinary overhead light. Within reach are a glass of water, a phone face down, a folded tea towel and a few crumbs. The camera is held at chest height, looking down from standing, the way you'd see it when you open the organiser to refill it.
 
 **3. The flaw**
-- **What it is:** six of seven compartments still full of capsules and tablets. Monday is empty.
-- **Real size:** a standard organiser, about 19 cm long, with compartments about 2.5 cm square. It's shown at that size, not filling the frame.
-- **Where it sits:** the organiser lies in the lower-left third. The days run M T W T F S S left to right, so the six full ones sit together. The counter in the upper right is plain and calm.
+Six of seven compartments are still full of tablets and capsules, and only the first (Monday) is empty. The organiser is a standard seven-day size, about 20 cm long, with compartments about 2.5 cm across. It sits in the lower-left third of the frame, angled slightly, with open countertop to the upper right.
 
 **4. The mark**
-- **Shape:** a circle, because the flaw is an area (six full days).
-- **Colour:** red. The organiser is clear, the counter light grey, the tea towel and kettle white. Red is the colour least present in the frame.
-- **Position:** one rough, uneven, slightly open loop around compartments T to S (the second S included), with Monday left outside the loop.
+- **Shape:** a circle, because the flaw is an area: six full days.
+- **Colour:** red, because the scene is white, beige, grey and wood, so red is the colour least present in it. Keep red pills and red objects out of the frame.
+- **Position:** one rough, uneven loop around compartments two to seven, slightly open where it meets, leaving the empty first compartment outside it.
 
 **5. Words on the image**
-- **Note:** "still full", in red, handwritten, just above and to the right of the circle.
-- **Source:** quoted exactly from the approved ad text ("Six of the seven days were still full").
+The note is **"still full"**, in red rough handwriting, in the calm space upper right, beside the circle. It is quoted exactly from the story: "Six of the seven days were still full."
 
 **6. Blank version**
-- **A:** the photo with the red circle and no note.
-- **B:** the photo with neither mark nor note.
+- **With the mark and no words:** the same photo with the red circle only.
+- **With neither:** the plain photo with no mark and no note.
 
 **7. Line under the image**
-Sunday night, six days full
+Six of the seven, still full
 
 **8. Flags**
-- **Note source:** "still full" comes from the approved ad copy, not a separate buyer phrase. MISSING: review 1 and review 5 text. If either uses its own words for the full organiser (for example "barely touched"), swap that in, at 3 words at most.
-- **Inferred:**
-  - a clear organiser starting on Monday
-  - unbranded supplement capsules and tablets rather than prescription-looking pills
-  - a kitchen setting
-  - grey counter
-  - warm evening light
-- **Claims to watch in the copy:**
-  - Check "21 vitamins and minerals" and "6 g prebiotic fiber" against the actual Sprout label.
-  - Keep the copy free of any health-outcome promise.
-- **Pills in the frame:** keep them generic and visually unmedical. Don't use anything that reads as a prescription drug.
-- **Product:** left out of the frame, and no product photo goes to the image tool.
+- The organiser's size is inferred from a standard seven-day organiser. The story gives no size.
+- The prompt leaves day letters off the lids, because image tools misspell them. Monday reads as the first compartment by position. If you want letters, add them by hand or check them closely.
+- No buyer phrase was supplied, so the note comes from the story. If reviews have a shorter line about forgetting, swap it in, quoted exactly.
+- The pills are generic tablets and capsules, not gummies, so nothing in the frame stands in for Sprout.
+- **Claims to watch in the copy:** "21 vitamins and minerals" and "6 g prebiotic fiber" need to match the label. Avoid any implied health benefit beyond those.
 
 **9. Image prompt**
-Phone photo, square 1:1, taken looking down from standing at a kitchen counter on a Sunday evening. A clear plastic seven-day pill organiser with translucent hinged lids, letters M T W T F S S moulded on, lies in the lower-left third of the frame, all lids flipped open. The Monday compartment is empty. The other six each hold the same small mix of unbranded tan and white supplement capsules and tablets. Plain light grey laminate counter with a few crumbs, a folded white tea towel and the edge of a white kettle near the top edge. Warm overhead kitchen light, soft shadows, slight phone grain. Empty counter space in the upper right. No text, logos, labels, hands or people. Unretouched, ordinary.
+Square 1:1 phone photo taken looking down from standing at a kitchen counter on a Sunday night. A plain seven-day pill organiser, about 20 cm long, in translucent white plastic with no printed letters, sits in the lower-left third of the frame with all seven lids flipped open. The first compartment is empty. The other six still hold the same small mix of white tablets and beige capsules. Ordinary overhead kitchen light, soft shadows, slight phone grain. Normal clutter nearby: a glass of water, a phone face down, a folded tea towel at the edge, a few crumbs. Grey or light wood countertop with open space to the upper right. No text, no labels, no logos, no red objects, nothing retouched.
 
 **10. Mark step**
-Open the finished photo in any phone photo editor's markup tool and pick red. With a fingertip, draw one quick, uneven loop around the six full compartments, leaving a small gap where the line meets itself. Then handwrite "still full" just above and to the right of it.
+- **Best:** make the photo first. Then, in any phone photo editor's markup or draw tool, use your fingertip in red to draw one uneven loop around the six full compartments. Write "still full" beside it in the upper-right space.
+- **Fallback line to add at the end of the prompt:** *Last, add one rough red circle drawn with a fingertip, uneven and slightly open, around the six full compartments only, with the words "still full" in messy red handwriting beside it in the empty space to the upper right.*
+
+**11. Score**
+Score: 100/100 (5 of 5 checks)
+
+**How to finish it**
+- **ChatGPT or Gemini:** paste the image prompt into a chat and ask for the picture. ChatGPT uses GPT Image and Gemini uses Nano Banana. Free plans have tight daily limits. Codex on a paid ChatGPT plan can also make it.
+- **Higgsfield:** paste the prompt into its image tool, or connect Higgsfield to Claude so Claude makes it there.
+- **Claude Code:** with `OPENAI_API_KEY` or `GEMINI_API_KEY` saved, I can send the prompt to that image API and save the file. Get a key at platform.openai.com/api-keys or aistudio.google.com/apikey. OpenAI or Google bills each picture.
 ```

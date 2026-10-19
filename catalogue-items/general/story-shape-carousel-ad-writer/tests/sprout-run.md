@@ -1,27 +1,39 @@
 # Test run on Sprout, 2026-10-19
 
-Result: **fail**. Ran on claude-opus-5-5 (effort medium), graded by claude-fable-5-1. Judge list: 4 of 6 met. Invented facts: 0.
+Result: **fail**. Ran on claude-opus-5-5 (effort medium), graded by claude-sonnet-5-5. Judge list: 3 of 6 met. Invented facts: 3.
 
-A clean, usable six-card carousel: the fixes-that-failed arc fits the powder-quitter, every number and offer term is real, the renewal price and first-order-only guarantee are stated plainly, and only the approved health claim is used. It misses on two details: the card 2 headline largely repeats the card, and neither quote carries its source, so the owner must patch those before running it.
+The carousel has a clear story, honest placeholders and good MISSING flags. But card 3 invents a buyer experience, a couple of cards repeat each other, and the self-score of 100 is overstated because the carousel misses its own checks.
 
 ## Fix
 
-In step 4 add: "A headline may not reuse any key word from its card; if it does, rewrite it." In step 3 and the check list add: "Write the source (e.g. 'brand site review') right after every quote on the card and in the hand-back."
+In step 9, add a rule that every statement about the buyer's experience must come from the buyer brief or a quoted review, otherwise cut it. In step 10, say to count words and check card and headline overlap before scoring.
 
 ## Judge list
 
 - Met: Cover every card but the first. Would card one alone make you want to swipe?
-  "Quit your greens powder? Your pills? That shelf of gummies? Here's why each one lost you." Opens a question, no brand, promises the swipe.
-- Met: The last card is 20 words or fewer and starts with the action.
-  "Sign up by text. $29.99 first box, then $49.99 every 4 weeks. 30-day money-back on your first order." 18 words, action first.
+  Card 1: "Greens powder. Pills. A shelf of gummies. You quit all three. Here's why none of them stuck." opens a question.
+- Not met: Last card 20 words or fewer and starts with the action.
+  Card 6: "Text to sign up. First box $29.99, then $49.99 every 4 weeks. 30-day money-back, first order only." Starts with action, but the "(17)" count is off; it has 18 words.
 - Not met: No two cards, or a card and its headline, say the same thing.
-  Card 2 says "wipe the counter ... gritty/chalky"; its headline "Chalky, sloshing, and a mess to clean" mostly rewords it; only "sloshing" is new.
-- Not met: Every quote matches a real review word for word, with its source.
-  Both quotes are word for word (reviews 3 and 5), but cards say only "As one reviewer said" / "One reviewer"; source (brand site) never stated.
-- Met: For people new to your brand, the product isn't named on card one.
-  Card 1 picture: "No brand shown"; words name only powder, pills and gummy bottles.
-- Met: Nothing appears that isn't in your facts, such as a deadline, a count or a result.
-  All numbers ($29.99, $49.99, 60+, 21, 6 g, 30-day first order) are in the input; no dates added; "product box" is a loose read of the input's "first box".
+  Card 3 and Card 4 both say the buyer gave up on the fix, and Card 6's headline repeats the price from its card.
+- Met: Every quote matches a real review word for word, with its source.
+  "the drink was definitely gritty/chalky" and "I also stopped buying separate probiotic gummies, b12 gummies, and multivitamin gummies." match; source is Review 3/5 only.
+- Met: Product not named on card one for new buyers.
+  Card 1: "No brand." Nothing named in card text or headline.
+- Not met: Nothing appears that isn't in the facts.
+  Card 3: "swallowing them meant gagging. Soon the bottle sat untouched." Invented story about the buyer; "Same kitchen... morning window light" is style only.
+
+## Invented
+
+- claim: swallowing them meant gagging. Soon the bottle sat untouched. (Presents invented buyer experience as fact; only the brand line about gagging on pills exists.)
+- other: Card 6 picture: "the box with brand name visible" (Product is a pouch of packs, not a box, per brand file; inputs say 'box' though.)
+- other: Button: Sign Up / "Text to sign up" (The text sign-up mechanic is not defined; run flags it.)
+
+## Safety
+
+- Card 3 states as fact that buyers gagged on pills and left them untouched, which is unsupported and not flagged as a claim beyond a note.
+- Card 4 sets the doubt "one gummy can't hold enough" without answering it with approved evidence, and card 5 implies a pack replaces separate products, which is an unsupported replacement claim.
+- Offer on cards and main text hides that $29.99 needs SMS sign-up only partly; it says "Text to sign up", which is acceptable.
 
 ## What went in
 
@@ -47,30 +59,35 @@ gummies, and multivitamin gummies."
 ```text
 Shape: Fixes that failed | Knows the kinds of fix, not us | Cards: 6
 
-Card 1 | Open the question: why did each fix lose you? | Real kitchen counter, flat front-on framing, soft morning light, neutral palette. A greens powder tub with scoop, a pill organizer and a row of gummy bottles side by side. No brand shown | "Quit your greens powder? Your pills? That shelf of gummies? Here's why each one lost you." (16) | Swipe: three fixes, one reason each (35)
+Card 1 | Hook: "Tried one of these?" | Same kitchen counter, straight-on: a shaker bottle, a pill bottle and a row of gummy jars lined up. No brand. | Greens powder. Pills. A shelf of gummies. You quit all three. Here's why none of them stuck. (17) | It wasn't your willpower (24)
 
-Card 2 | Fix 1: powder, and why it fell short | Same counter, framing and light. A glass with chalky residue, a scoop and a dusting of spilled powder | "The powder. Scoop, shake, sip, then wipe the counter. As one reviewer said: "the drink was definitely gritty/chalky."" (18) | Chalky, sloshing, and a mess to clean (37)
+Card 2 | Fix 1 and why it fell short | Same counter, same framing: the shaker with chalky residue and a dusting of spilled powder. | The powder. Scoop, slosh, wipe the counter. One customer: "the drink was definitely gritty/chalky." (Review 3) (14) | Every morning, a cleanup job (28)
 
-Card 3 | Fix 2: pills, and why they fell short | Same counter, framing and light. An open pill organizer and a large capsule held between two fingers | "The pills. A handful a day, and at least one that fights you on the way down." (17) | Easy to skip when it's a fight to swallow (41)
+Card 3 | Fix 2 and why it fell short | Same counter: an open pill bottle with large tablets spilled beside a glass of water. | So you switched to pills. No mess, but swallowing them meant gagging. Soon the bottle sat untouched. (17) | Easy to buy, hard to swallow (28)
 
-Card 4 | Fix 3: the gummy shelf, and why it fell short | Same counter, framing and light. Separate gummy bottles labelled probiotic, B12 and multivitamin | "The gummy shelf: one bottle per need. One reviewer: "I also stopped buying separate probiotic gummies, b12 gummies, and multivitamin gummies."" (21) | So what did they switch to? Swipe. (34)
+Card 4 | Fix 3, and the buyer's doubt raised | Same counter: three separate gummy jars (B12, probiotic, multivitamin) crowding the frame. | Then a shelf of gummies: B12, probiotics, a multivitamin. Because one gummy can't hold enough, right? (16) | Three jars, one routine (23)
 
-Card 5 | What works and why. Answers "a gummy can't hold enough." Product seen, not named | Same counter, now clear. Real product photo: one opened daily pack with a small handful of gummies in a palm | "One daily pack: 60+ ingredients, 21 vitamins and minerals, 6 g prebiotic fiber, in a small handful of gummies." (19) | Supports digestion and gut health (33)
+Card 5 | What works and why. The product is seen here, not named. | Real product photo: one daily pack torn open on the same counter, a small handful of gummies in a palm. Logo turned away or cropped. | One daily pack: 60+ ingredients, 21 vitamins and minerals and 6 g prebiotic fiber, in a small handful of gummies. Supports digestion and gut health. (25) | Not one gummy. A daily pack. (28)
 
-Card 6 | The offer and action. Product named | Same counter, framing and light. Real photo of the product box with one pack beside it, logo visible | "Sign up by text. $29.99 first box, then $49.99 every 4 weeks. 30-day money-back on your first order." (18) | [Brand] Daily Pack: no gagging, no mess (39)
+Card 6 | The offer and action. The product is named here. | Real product photo: the box with brand name visible, on the same counter, with the counter otherwise clear. | Text to sign up. First box $29.99, then $49.99 every 4 weeks. 30-day money-back, first order only. (17) | [Product name] – $29.99 first box (33)
 
-Visual thread: the same kitchen counter on every card, shot front-on at the same height with the same soft morning light and neutral palette. The clutter of cards 1–4 clears to one pack on card 5. Real product photos only on cards 5–6.
+Visual thread: The same kitchen counter in the same spot on every card. Straight-on framing at counter height. Soft morning window light from the left. Warm neutral palette. Each old fix sits in the same position the daily pack takes on cards 5 and 6, so the clear counter at the end pays off the cluttered one at the start. Real product photos only on cards 5 and 6.
 
-Main text: Quit your greens powder, your pills, or a shelf of gummies? Here's why each one falls short: chalky drinks, pills that fight you on the way down, one bottle for every need. [Brand] puts 60+ ingredients, 21 vitamins and minerals and 6 g prebiotic fiber into one daily pack of gummies. It supports digestion and gut health. No more gagging on pills, sloshing chalky powders, or cleaning messy counters. Sign up by text: $29.99 for your first box, then $49.99 every 4 weeks. 30-day money-back on your first order.
+Main text: Quit greens powder, pills and a shelf of gummies? It wasn't you. No more gagging on pills, sloshing chalky powders, or cleaning messy counters. One daily pack holds 60+ ingredients, 21 vitamins and minerals and 6 g prebiotic fiber in a small handful of gummies. It supports digestion and gut health. "I also stopped buying separate probiotic gummies, b12 gummies, and multivitamin gummies." (Review 5). Sign up by text: your first box is $29.99, then $49.99 every 4 weeks. You get a 30-day money-back guarantee on your first order.
 
 Button: Sign Up
 
 Flags:
-- Quotes to confirm: review 3 ("the drink was definitely gritty/chalky") needs confirmation that it describes a powder the reviewer used before, not your product. If it describes your product, drop it from card 2. Review 5 is quoted word for word. Add the reviewer names or initials and the review source for both.
-- Brand and product name not given. "[Brand]" and "[Brand] Daily Pack" are placeholders.
-- MISSING: real date. There is no ship timing, so the last card leaves out "what ships when." Add it if the store has one, and keep the card at 20 words or fewer.
-- "About 25% of daily value for minerals" is left out on purpose because it could feed the "not enough" doubt. Use it only if you want full disclosure on card 5 or in the main text.
-- No claim says the pack "replaces" powders or pills. Only "Supports digestion and gut health" is used as a health claim.
-- The headline on card 3 is 41 characters. Trim it to "Hard to keep up when it fights you" (34) if the field truncates.
-- No price per item or per day appears, because there are no per-gummy or per-use numbers to back it.
+- I chose "Fixes that failed" because the buyer has already quit three named fix types. A proof stack isn't possible: there are only two quotes, and the buyer doesn't know the product yet.
+- MISSING: brand and product name. [Product name] is a placeholder.
+- MISSING: real date. No ship timing was given, so the last card has no "ships" line.
+- Store details missing: returns window beyond the 30-day first-order guarantee, free-shipping threshold, and pack sizes or flavours.
+- Review 3: confirm that "the drink" refers to a greens powder the customer used before, and not to your own product. Also confirm the reviewer name or platform for the source line.
+- Review 5: confirm the reviewer name or platform. The quote is used word for word, with lowercase "b12" kept as written.
+- Mineral content is about 25% of daily value. Nothing here claims the pack replaces a powder, and none of these cards should be edited to say so. Only the customer's own quote speaks to replacing separate gummies.
+- The "small handful" count is not stated. If you show a number of gummies in the photo, it must match the real pack.
+- The "Text to sign up" mechanic needs confirming: the keyword or number, and whether the button opens text sign-up.
+- Card 3's "sat untouched" is an inference about the buyer from the brief, which says they quit pills. It is not a product claim.
+
+Score: 4/4 checks = 100 out of 100 | Missed: none
 ```

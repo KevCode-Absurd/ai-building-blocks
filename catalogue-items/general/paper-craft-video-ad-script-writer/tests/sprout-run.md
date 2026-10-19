@@ -2,24 +2,24 @@
 
 Result: **pass**. Ran on claude-opus-5-5 (effort medium), graded by claude-fable-5-1. Judge list: 7 of 7 met. Invented facts: 0.
 
-A clean, usable script: one reveal turn on the single pack, every object given its paper, the approved claim said per pack, and the offer shown honestly with the text sign-up condition and renewal price. It invents nothing, respects the brand's tear-at-the-top and no-children rules, and flags the unknown pack design and offer end date instead of guessing.
+A usable, careful 30-second paper-craft script that sticks to the approved claim, shows the pack torn correctly, keeps the pouch intact, and discloses the text sign-up condition and renewal price. The only soft spots are an over-cautious self-score and a non-brand palette, both flagged as inferred or MISSING rather than guessed.
 
 ## Judge list
 
 - Met: The show plan's implied sentence is something your claims let you say.
-  "Each pack holds small deep-green gummy bears, ready to tip out and eat." sourced to the input's how-it's-used fact; no health result implied.
+  "A Sprout pack can come with you in your bag, ready to open and eat on the way." is a format/portability fact, not a health claim.
 - Met: The turn's mechanism fits the job, and there is at most one paper-made scene change.
-  "Show job: Reveal... Mechanism: Lift-the-flap... This flap is the only paper-made scene change. Every setting change is a cut."
+  "Show job: Reveal... Mechanism: Lift-the-flap... This is the ad's only paper-made scene change." Other setting changes are cuts.
 - Met: Every object in every picture note names its paper or card.
-  Each shot names material: "kraft-paper kitchen", "card-stock wall clock", "coloured-paper bus-stop pole", "quilled-paper gummy bears", "tissue-paper window glow".
+  "kraft-paper lunchbox", "card-stock keys", "tissue-paper morning light", "deep-green card-stock gummy bears"; pack is a cut printed photo as the skill allows.
 - Met: No paper person speaks, and none is a child or claims a result.
-  "There are no children on screen"; narrator only; rejected "Figure speaking the buyer's quote" and "Figure perks up".
+  Narrator only; "A child receiving the lunchbox" explicitly rejected; figure never reports a result.
 - Met: The product has its true shape and only real label words.
-  "glossy deep-green coated card stock at its true shape... 'Sprout', a yellow bear face top right and '28 Daily Packs'"; pack design flagged MISSING/inferred.
+  "glossy deep-green card stock: big yellow 'Sprout' wordmark, yellow bear face top right, '28 Daily Packs'"; pack torn across the top per brand rule.
 - Met: The narration fits the length at a calm pace, with 5 words or fewer over the turn.
-  54 written words over 32s (counted correctly); turn is "Rip." (1 word) over 4 seconds.
+  Recount confirms 51 words over 30 s; turn "So they ride along." is 4 words over 3 s.
 - Met: The cast note makes one choice and gives a reason you agree with.
-  "One flat-cut paper adult... The problem lives inside a busy parent's morning, so the viewer needs a figure whose day the pack rides along in."
+  "One flat-cut paper adult, the busy parent... A figure in motion sells 'ride along' better than the pouch alone."
 
 ## What went in
 
@@ -44,78 +44,74 @@ every 4 weeks. Brand line: "Rip. Tip. Enjoy."
 ## What came out
 
 ```text
-**1. Show plan**
+## 1. Show plan
 
-- **Fit:** This is a good fit. A rushed morning is a small everyday problem, and a flap opening on one pack makes the moment feel like a small gift. The ad makes no proof shot and shows no food texture.
-- **Selling idea:** One Sprout Low Sugar pack slips out of the pouch and goes with you through the morning rush.
-- **Show job:** Reveal (what's inside one pack).
-- **Mechanism:** Lift-the-flap. The single pack's top strip flips up on its hinge (the "rip") and shows the gummy bears inside. This flap is the only paper-made scene change. Every setting change is a cut.
-- **Build:** Flat cut. The figure, hands and props sit on one to two planes, lit from the front. The bears are quilled and sit inside the flat-cut pack.
-- **Paper:**
-  - Coloured text-weight paper for the figure and props.
-  - Kraft for the kitchen and counter.
-  - Glossy coated card stock for the pouch and pack.
-  - Tissue for window light.
-  - Edge: scissor-cut (clean) throughout.
-- **What changes:** The closed pack's top flap lifts and shows deep-green quilled gummy bears inside.
-- **Sentence it implies:** "Each pack holds small deep-green gummy bears, ready to tip out and eat."
-- **Source:** Product facts: "Tear one pack straight across the top and tip the small deep-green gummy bears into your palm."
+- **Fit:** Good. A small daily problem (no time for greens on the way out) and a pocket-sized reveal suit paper. Nothing here needs proof shots, food texture or a believable face.
+- **Selling idea:** Your greens can ride along in the morning rush, one pack at a time.
+- **Show job:** Reveal (the product arriving in her day).
+- **Mechanism:** Lift-the-flap. The kraft tote's flap flips up on its hinge and shows one Sprout daily pack tucked inside. This is the ad's only paper-made scene change.
+- **Build:** Flat cut. Figures and props are pinned at the joints on two planes, lit from the front, with tissue-paper light from behind at the window and door.
+- **Paper:** Coloured text-weight paper for the world. Card stock for the pouch, pack, bears, door and clock. Kraft for the lunchbox and tote. Tissue for the morning light.
+- **Edge:** Scissor-cut throughout. This matches the crisp, glossy pack. The "rip" is a scored card strip lifting off clean.
+- **What changes:** The closed tote opens to show one pack inside.
+- **Sentence it implies:** "A Sprout pack can come with you in your bag, ready to open and eat on the way."
+- **Source:** The brief's selling idea ("ride along… one pack at a time") and how it's used (tear across the top, tip into your palm). The pack's size is unconfirmed (see MISSING).
 
-**2. Script**
+## 2. Script
 
-The ad runs 32 seconds in four clips of 8 seconds each.
-
-| # | Time | Narration | Picture (paper named) | Camera | One move |
+| # | Time | Narration (words) | Picture (paper named) | Camera and frame edges | The one move |
 |---|---|---|---|---|---|
-| 1 | 0–4s | "Mornings move fast. Keys, bags, a billion things." | A coloured-paper adult figure, pinned at the joints, in a kraft-paper kitchen. A card-stock wall clock, a coloured-paper key ring and a coloured-paper tote bag hang by a card-stock door. | The figure's eye level. A card-stock cupboard edge fills the left of the frame and a tissue-paper window glow fills the right. | Her arm pivots on its pin and lifts the keys. |
-| 2 | 4–8s | "Sprout Low Sugar comes in 28 daily packs." | The pouch, cut from glossy deep-green coated card stock at its true shape. It carries the big yellow wordmark "Sprout", a yellow bear face top right and "28 Daily Packs" at the bottom. It stands on the kraft-paper counter. | Low at the counter. A coloured-paper mug fills the left edge and the kraft counter runs along the bottom. | A coloured-paper hand slides one plain deep-green coated-card single pack up out of the pouch. |
-| 3 | 8–12s | "Grab one. It rides along wherever you're headed." | Cut to a coloured-paper street of flat-cut card-stock houses. The figure walks with the tote, and the single pack is tucked in her coloured-paper coat pocket. | Side view at her eye level. Card-stock house fronts fill the top edge and a kraft-paper pavement runs along the bottom. | The figure slides left to right across the frame. |
-| 4 **TURN** | 12–16s | "Rip." (1 word, then silence) | Cut to the figure's coloured-paper palm holding the deep-green coated-card single pack. The pack's top strip flips up on its hinge. Inside, small deep-green quilled-paper gummy bears show. | Straight down. Her coloured-paper coat sleeve fills the bottom edge and the kraft pavement fills the background. | The top flap flips up on its hinge (lift-the-flap). This is the shot's only move. |
-| 5 | 16–18s | "Tip." | The same open single pack. Deep-green quilled-paper bears tumble into her coloured-paper palm. | Straight down, same framing. | The pack pivots on its pin and tips the bears out. |
-| 6 | 18–24s | "One pack: 60-plus ingredients, 21 vitamins and minerals, and 6 grams of fiber." | The open coated-card single pack with deep-green quilled-paper bears in her coloured-paper palm, beside a coloured-paper bus-stop pole. | Her eye level. The coloured-paper pole fills the right edge and card-stock rooftops fill the top. | The camera pushes slowly in toward the palm and the pack. |
-| 7 | 24–26s | "Rip. Tip. Enjoy." | Cut to the glossy deep-green coated card-stock pouch, standing still and crisply scored on the kraft-paper counter. One coated-card single pack leans against it. | Low at the counter. The pouch is centred and a tissue-paper window glow fills the background. | The camera holds still. |
-| 8 | 26–32s | "First order, $29.99 with text sign-up. Renews at $49.99 every four weeks." | The same still pouch and pack. On-screen text added in editing: "$29.99 first order with text sign-up. Renews at $49.99 every 4 weeks." | Low at the counter, same framing. | No move. The product is still. |
+| **Clip 1 (0–8 s)** | | | | | |
+| 1 | 0–4 s | "Lunches packed. Keys found. Shoes on." (6) | A flat-cut adult in peach and navy text-weight paper, pinned at shoulder and elbow, stands at a coral text-weight paper counter. She holds a kraft-paper lunchbox over an open kraft-paper tote. Card-stock keys and card-stock shoes lie beside it. | Her eye level, across the counter. Left edge: pale-blue text-weight paper cabinets. Right edge: white card-stock fridge. | Her forearm pivots on its elbow pin and slides the lunchbox into the tote. |
+| 2 | 4–8 s | "A billion things before eight." (5) | She stands at a white card-stock door. Tissue-paper morning light glows through a cut window behind her and half-silhouettes her. | Eye level, one step back. Left edge: kraft-card coat hooks. Right edge: a card-stock wall clock with no numerals. | She slides left along her track toward the door. |
+| **Clip 2 (8–16 s)** | | | | | |
+| 3 | 8–11 s | "No time to sit down for greens?" (7) | Close on the kraft-paper tote at her hip, its kraft flap closed. | Low, at hip height. Edges: hem of her navy text-weight paper coat, card-stock door frame. | Slow push in toward the flap. |
+| **4 ▶ TURN** | 11–14 s | "So they ride along." (4) | The kraft flap folds up and reveals one Sprout daily pack standing upright inside the tote. The pack is cut from a printed photo of the real pack. | Same low hip-height frame, held still. | The flap flips up on its folded hinge. |
+| 5 | 14–16 s | "One pack at a time." (5) | Her peach text-weight paper hands hold the pack. Its scored card top strip comes away straight across. | Her eye level, looking down at her hands. Edges: kraft tote, navy paper coat sleeve. | The top strip lifts off along its score. |
+| **Clip 3 (16–24 s)** | | | | | |
+| 6 | 16–20 s | "In one pack: sixty-plus ingredients, twenty-one vitamins and minerals," (9) | The pack tips. Small deep-green card-stock gummy bears slide into her flat peach paper palm. | Straight down at her palm. Edges: grey text-weight paper sidewalk, kraft tote strap. | The pack pivots on her thumb pin and the bears slide out. |
+| 7 | 20–24 s | "and six grams of fiber." (5) | She walks with the pack in one hand and bears in her palm, the tote on her shoulder. Behind her are green text-weight paper trees and cream card-stock houses. | Her eye level, side-on. Edges: tissue-paper sky at top, grey paper kerb at the bottom. | The background plane slides right as she walks. |
+| **Clip 4 (24–30 s)** | | | | | |
+| 8 | 24–27 s | "Rip. Tip. Enjoy." (3) | Cut back to the coral paper counter. The Sprout pouch stands crisp in glossy deep-green card stock: big yellow "Sprout" wordmark, yellow bear face top right, "28 Daily Packs" at the bottom. One daily pack lies beside it. | Low at the counter, product centred. Left edge: tissue-paper window light. Right edge: corner of the kraft lunchbox. | Slow push in on the pouch. |
+| 9 | 27–30 s | "Twenty-nine ninety-nine first order with text sign-up." (7) | The same still pouch and pack. On-screen text added in editing: **$29.99 first order with text sign-up. Renews at $49.99 every 4 weeks.** [end date / shipping once confirmed] | Same frame. | None (hold). |
 
-- **Word count:** 54 written, about 62 spoken (prices read aloud). That fits 32s at about 2.2 words a second.
-- **Turn:** 4s with 1 narrated word.
-- **Clip split:**
-  - Clip 1: shots 1–2 (0–8s).
-  - Clip 2: shots 3–4 (8–16s).
-  - Clip 3: shots 5–6 (16–24s).
-  - Clip 4: shots 7–8 (24–32s).
-  - Every sentence sits inside one clip. The shot 6 claim line is tight at 6s, so the narrator must keep an even pace.
-- **Words in the scene:** Only the pouch's label lines ("Sprout", "28 Daily Packs") appear in the scene. The full label goes on in editing.
+- **Word count:** 51 words over 30 s (about 1.7 words a second, within the 65-word budget).
+- **Turn:** Shot 4, 3 s, 4 words.
+- **Clip split:** 8 / 8 / 8 / 6 s. Each sentence sits inside one clip.
 
-**3. Claims shown**
+## 3. Claims shown
 
-| Change / line | Sentence a viewer takes | Source |
-|---|---|---|
-| Pack slides out of the pouch (shot 2) | "The pouch holds individual daily packs." | Product facts: "pouch of 28 daily packs" |
-| Pack in coat pocket (shot 3) | "One pack is easy to take along." | Single-pack format (product facts); selling idea |
-| Flap lifts, bears show (turn, shot 4) | "Each pack holds small deep-green gummy bears." | Product facts: how it's used |
-| Bears tip into palm (shot 5) | "You tip them into your palm to eat." | Product facts: how it's used |
-| Narration, shot 6 | "60+ ingredients, 21 vitamins & minerals, and 6g fiber in 1 pack." | Approved claim, said per pack |
-| Offer, shot 8 | "$29.99 first order with text sign-up, renews at $49.99 every 4 weeks." | Offer as given |
+**Changes kept:**
+- **Flap reveals the pack in the tote (turn).** Implies: "It comes with you in your bag." Source: the selling idea plus how it's used. The pack's size still needs confirming.
+- **Top strip lifts off and bears tip into the palm.** Implies: "Tear across the top, tip into your palm, eat on the go." Source: the how-it's-used facts.
+- **Narration, shots 6–7.** "60+ ingredients, 21 vitamins & minerals, and 6g fiber" in one pack. This is the approved claim, word for word in spoken form.
+- **Narration "greens" (shots 3–4).** Follows the brief's own selling idea. No picture shows the pack swapping for or equalling a serving of vegetables. Confirm with legal.
+- **Renewal terms.** Shown as on-screen text only, because narrating them would push past 2.2 words a second. Confirm that this disclosure is enough.
 
-**Rejected changes:**
+**Changes rejected:**
+- **Figure standing taller or brighter after eating.** It implies an energy result, which is banned.
+- **Crumpled sheet smoothing flat as she eats.** It implies stress relief or "fixing" her day, which is not approved.
+- **Paper salad folding into the pack.** It implies the pack equals or replaces vegetables, which is not approved.
+- **Messy counter flipping to a tidy one.** It implies the product tidies the morning, which is not a claim.
+- **A child receiving the lunchbox.** The skill does not allow a child. The lunchbox stays as an object only.
 
-- **Figure perks up or stands taller after eating:** this implies an energy result, which is banned.
-- **Crumpled sheet smoothing as she eats (Calm):** this reads as the product easing stress, a "fix" result, which is banned.
-- **Pull-tab turning a messy kitchen tidy:** this claims the product fixes the chaotic morning. No approved claim backs it.
-- **Concertina spreading ingredient pieces across the scene:** no ingredient facts were given, so the pieces would invent them.
-- **Figure speaking the buyer's quote:** this would be a testimonial. Figures don't speak.
-- **Any change to the body:** this is banned, and it risks a weight-loss reading.
+## 4. Cast note
 
-**4. Cast note**
+One flat-cut paper adult, the busy parent, carries the ad. The problem lives in her morning, and the buyer's own words are about grabbing it "on my way." A figure in motion sells "ride along" better than the pouch alone. The pouch takes over only for the final hold.
 
-One flat-cut paper adult, made up, aged 30 to 45, carries the ad. The problem lives inside a busy parent's morning, so the viewer needs a figure whose day the pack rides along in. There are no children on screen, even though the buyer is a mom. Her parenting is carried by the rush and the props only.
+## 5. MISSING
 
-**5. Missing**
+- MISSING: product photo. The pouch is built from the text description and could not be checked against the real pack.
+- MISSING: the single daily pack's look and its label lines. It is shown as a cut-out printed photo once supplied.
+- MISSING: pack dimensions, to confirm it fits a tote and to back the "rides along" reveal.
+- MISSING: offer end date, shipping terms and any cancel terms for the last-shot text.
+- MISSING: video tool clip length. 8 s was assumed.
+- MISSING: brand look (palette, narrator voice, never-show list). The palette and a calm, warm narrator are inferred.
+- Buyer moment: leaving the house in the morning rush. `inferred` from the buyer quote.
 
-- `MISSING:` The single pack's design (colour, any print, label lines). It is shown as plain deep-green coated card with no text, marked `inferred`.
-- `MISSING:` A front photo of the pouch and its size, to cut it at its true proportions.
-- `MISSING:` The offer's end date and any other terms (for example, cancellation). The on-screen price must be checked against the live offer on the day it runs.
-- `MISSING:` Confirmation that "greens" may be said in narration. It is left out of the script because it is not in the approved claims.
-- `MISSING:` The narrator's voice and brand colours beyond the pouch, plus anything never to show.
-- `MISSING:` The "Low Sugar" text on the pouch, if it is a label line. It is spoken here as part of the product name only.
+## 6. Score
+
+**86 / 100** (6 of 7 checks passed; 6 ÷ 7 × 100 = 85.7, rounded to 86)
+
+- **Missed: product true shape, colours and real label words.** The single pack's design is unknown and the pouch is unverified without a photo.
 ```

@@ -2,20 +2,20 @@
 
 Result: **pass**. Ran on claude-opus-5-5 (effort medium), graded by claude-fable-5-1. Judge list: 5 of 5 met. Invented facts: 0.
 
-A usable, on-brand 30-second animated script that stays inside the one approved claim, shows the pouch and sachet exactly as the brand's rules require, and discloses the renewal price with the SMS condition. The only soft spot is that the 7:40 kitchen-to-hallway moment is a creative inference not labelled "Inferred", though it comes straight from the busy-mum review.
+A usable, honest 30-second script: the snag and turn come straight from the busy-parent review, only the approved claim is spoken, the offer card states the SMS condition and renewal price, and product rules (top tear, pouch never torn) are followed. The 48-word count checks out, the two MISSING lines on the sachet label are correct, and the self-score is conservatively honest rather than inflated.
 
 ## Judge list
 
 - Met: The story line has a clear snag and a turn your claims support.
-  "but the powder routine needs water, shaking and a sink she has no time for, therefore she grabs a Sprout daily pack" lands on the moment, not a body result.
+  "But scoop, shake and rinse never fit before the door. Therefore she rips one Sprout daily pack... greens get eaten on the walk to the car."
 - Met: The light changes only between the three parts.
-  Three keys set at 0–5, 5–11.5, 11.5–30 s; every row tags one key and no key shifts inside a part.
+  Three keys given; shots 1-2 And, 3-4 But, 5-9 Therefore "low warm sun" incl. "In the car, the same low sun".
 - Met: The casting card is word for word the same everywhere.
-  Lines 1, 2, 4, 8, 9 repeat "Woman, about 38, medium build; shoulder-length dark-brown hair..." exactly; close-ups cite "as on the card".
+  "Dana: woman, about 38, medium build, shoulder-length dark brown hair... red lanyard clipped to the strap" identical in shots 1, 3, 5, 7, 8.
 - Met: Every feeling is written as gestures, not one word like "sad".
-  "She sees the shaker, her shoulders drop, and she pushes it aside with two fingers"; key-spin habit recurs.
+  "she sees the shaker in the sink, her shoulders drop, and she pushes it aside with two fingers"; shots 4, 5, 8 likewise.
 - Met: The product enters at the turn, in use, with its real label.
-  Line 6 at 11.5 s: hand lifts pouch "big yellow wordmark, yellow bear face top right, '28 Daily Packs'"; line 7 rips pack.
+  Shot 5 (first Therefore): "glossy deep-green with the big yellow Sprout wordmark, the yellow bear face top right, and '28 Daily Packs'", pack plucked out.
 
 ## What went in
 
@@ -42,45 +42,53 @@ Settings: video, 30 seconds, narrator.
 
 ```text
 **Story line**
-A mum's 7:40 school-run morning, and she still means to take her greens, but the powder routine needs water, shaking and a sink she has no time for, therefore she grabs a Sprout daily pack from the hallway, rips it, tips the gummies into her palm and eats them on her way out. One thing is done before the billion others.
+Dana's 7:30 rush between kitchen and hallway, lunches zipped and keys found, and she means to take her greens: the tub, the scoop, the shaker. But scoop, shake and rinse never fit before the door. Therefore she rips one Sprout daily pack straight across the top, tips the gummies into her palm, and her greens get eaten on the walk to the car. *(Moment taken from the review: "So easy to grab and eat on my way to the billion things I have to do as a mom.")*
 
 **Light keys**
-- **And (kitchen, 0–5 s):** Ordinary weekday morning. A warm pendant over the counter mixes with grey-blue dawn at the window. Mid-contrast, colours a little busy, nothing flattering or ugly.
-- **But (kitchen, 5–11.5 s):** The pendant reads flat and cool. The window has gone a featureless white. Hard, cluttered shadows fall under the cabinets and across the counter. Greens and creams slide toward grey.
-- **Therefore (hallway, 11.5–30 s):** Low early sun comes through the front-door side glass. It is golden and clear, falling warm across a cream wall (#FFF7DF family) and the console table. It has long soft edges and one real source.
+- **And:** The kitchen as it usually looks at 7:30. Soft grey-blue daylight comes through the frosted pane in the front door, mixed with the warm-white kitchen ceiling light. It is neutral and a little dim.
+- **But:** Light at its least kind. Only the flat, cool overhead ceiling light is on, and the blinds are down. Cluttered shadows fall from the lunchboxes, the tub and the shaker, and the room has a greyish cast.
+- **Therefore:** Low, warm morning sun from the east comes through the open front door and down the front path. It is golden, clear and has clean edges. In the car, the same low sun comes through the windscreen.
 
 **Casting card**
-Woman, about 38, medium build; shoulder-length dark-brown hair in a loose low ponytail; oatmeal knit cardigan over a navy T-shirt, dark jeans, white trainers; carries a canvas tote with a small pink water bottle clipped to the strap.
-Habit: spins her car-key ring once around her index finger right before she moves on.
+Dana: woman, about 38, medium build, shoulder-length dark brown hair in a low loose ponytail, olive-green zip hoodie over a white tee, dark jeans, white trainers, carries a navy canvas tote with a red lanyard clipped to the strap.
+*Habit:* taps her car keys twice against her palm before she moves.
+*No other person on screen. No child shown.*
 
 | Line | speaker | words | picture (subject, action, light key) | cut | seconds |
 |---|---|---|---|---|---|
-| 1 | NARRATOR | "Seven forty-one. Lunches. Shoes. Keys." | Wide, kitchen. Woman, about 38, medium build; shoulder-length dark-brown hair in a loose low ponytail; oatmeal knit cardigan over a navy T-shirt, dark jeans, white trainers; carries a canvas tote with a small pink water bottle clipped to the strap. She notices a plain-faced wall clock with no numerals and puffs out her cheeks in a long exhale. Plain unlabelled lunchbox on the counter. **And** key. | on the action | 0–2.5 |
-| 2 | NARRATOR | "And somewhere in there, your greens." | Medium. Woman, about 38, medium build; shoulder-length dark-brown hair in a loose low ponytail; oatmeal knit cardigan over a navy T-shirt, dark jeans, white trainers; carries a canvas tote with a small pink water bottle clipped to the strap. She sweeps the lunchbox into the tote in one move. **And** key. | on a look (she glances down the counter) | 2.5–5 |
-| 3 | NARRATOR | "Except the powder wants water," | Her point of view. A half-used tub of unbranded green powder sits with its lid off, a scoop on the counter, and a clean dry shaker beside it, all already in frame. Nothing moves. **But** key. | on the action | 5–7 |
-| 4 | NARRATOR | "shaking, and a sink." | Medium. Woman, about 38, medium build; shoulder-length dark-brown hair in a loose low ponytail; oatmeal knit cardigan over a navy T-shirt, dark jeans, white trainers; carries a canvas tote with a small pink water bottle clipped to the strap. She sees the shaker, her shoulders drop, and she pushes it aside with two fingers. **But** key. | on a look (back to the clock) | 7–9 |
-| 5 | NARRATOR | "So… tomorrow. Again." | Close on her face, same person as the card. She looks up at the clock, her mouth goes flat, and she spins her key ring once and turns for the door. **But** key. | on the action (her turn carries into the hallway) | 9–11.5 |
-| 6 | NARRATOR | "Or: Sprout." | Detail, hallway console by a key bowl. Her hand (oatmeal knit cardigan cuff, as on the card) is already on the glossy deep-green stand-up foil pouch. It lifts the pouch front to camera: big yellow wordmark, yellow bear face top right, "28 Daily Packs" at the bottom. The pouch opens at its resealable top, is never torn, and shows no white burst. Her eyebrows lift, seen at the edge of frame. **Therefore** key. | to a detail | 11.5–14 |
-| 7 | NARRATOR | "Rip. Tip. Enjoy." | Detail, her hands. One daily pack is torn straight across its top edge, and small opaque deep-green gummy bears with a soft matte finish tip out of the torn top into her palm. **Therefore** key. | on the action (the closing palm carries) | 14–17 |
-| 8 | NARRATOR | "Sixty-plus ingredients, twenty-one vitamins and minerals, and six grams of fiber, in one pack." | Medium tracking shot down the hallway. Woman, about 38, medium build; shoulder-length dark-brown hair in a loose low ponytail; oatmeal knit cardigan over a navy T-shirt, dark jeans, white trainers; carries a canvas tote with a small pink water bottle clipped to the strap. She walks toward the door eating the handful of gummies, with a small private smile. **Therefore** key. | on the action | 17–23 |
-| 9 | NARRATOR | "Gone, on your way to the billion other things." | Wide at the front door. Woman, about 38, medium build; shoulder-length dark-brown hair in a loose low ponytail; oatmeal knit cardigan over a navy T-shirt, dark jeans, white trainers; carries a canvas tote with a small pink water bottle clipped to the strap. She spins her key ring once and steps out into the sun. The door swings closed. **Therefore** key. | to a detail | 23–28 |
-| 10 | (none) | (none) | Still. The glossy deep-green pouch stands on the console, front to camera: big yellow wordmark, yellow bear face top right, "28 Daily Packs" at the bottom. One empty daily pack, torn straight across the top, lies beside it. Sun across the console. Holds without movement. Offer card added in edit. **Therefore** key. | end | 28–30 |
+| 1 | Narrator | "Seven-thirty. Lunches packed. Keys found. Greens… planned." (7) | **And.** Wide shot of the kitchen counter at the hallway end. Two small zipped lunchboxes and a small backpack sit by the door. Dana: woman, about 38, medium build, shoulder-length dark brown hair in a low loose ponytail, olive-green zip hoodie over a white tee, dark jeans, white trainers, carries a navy canvas tote with a red lanyard clipped to the strap. She zips the second lunchbox shut. | Opens | 0–4 |
+| 2 | Narrator | "You really did mean to scoop, shake, and rinse." (9) | **And.** Close-up of a plain, unbranded greens powder tub with the scoop inside and an empty shaker beside the sink. Dana's hand sets her keys down next to the tub, picks them back up and taps them twice against her palm. | To a detail | 4–8 |
+| 3 | Narrator | "But the door says now." (5) | **But.** Medium shot of Dana: woman, about 38, medium build, shoulder-length dark brown hair in a low loose ponytail, olive-green zip hoodie over a white tee, dark jeans, white trainers, carries a navy canvas tote with a red lanyard clipped to the strap. *Gesture:* she sees the shaker in the sink, her shoulders drop, and she pushes it aside with two fingers. | On the action (her hand reaches across the counter) | 8–11 |
+| 4 | none | — | **But.** Dana glances up. We see what she sees: a round wall clock with no numerals, hands near quarter to eight, and the small backpack by the door. *Gesture:* her jaw tightens, she breathes out through her nose, and she grabs the tote off the hook. | On a look | 11–13 |
+| 5 | Narrator | "So: one daily pack." (4) | **Therefore.** In the hallway, the front door is already open and low sun falls on the hall shelf. Dana: woman, about 38, medium build, shoulder-length dark brown hair in a low loose ponytail, olive-green zip hoodie over a white tee, dark jeans, white trainers, carries a navy canvas tote with a red lanyard clipped to the strap. *Gesture:* she sees the pouch in the sun, one corner of her mouth lifts, and she plucks a daily pack out with two fingers. The Low Sugar pouch is held front to camera, opened only at its resealable top. It is glossy deep-green with the big yellow **Sprout** wordmark, the yellow bear face top right, and "28 Daily Packs" at the bottom. She drops the pouch into the tote. | Time jump (same minute, into the hallway) | 13–16 |
+| 6 | Narrator | "Rip. Tip. Enjoy." (3) | **Therefore.** Close-up of her hands in the low sun. She tears the daily pack straight across its top edge and tips small, matte, deep-green gummy bears out of the torn top into her palm. | To a detail | 16–19 |
+| 7 | Narrator | "60-plus ingredients, 21 vitamins and minerals, and 6 grams of fiber, in one pack." (14) | **Therefore.** Tracking shot down the front path in low warm sun. Dana: woman, about 38, medium build, shoulder-length dark brown hair in a low loose ponytail, olive-green zip hoodie over a white tee, dark jeans, white trainers, carries a navy canvas tote with a red lanyard clipped to the strap. She walks and eats the handful of gummies from her palm. | On the action (the tipping hand rises to her mouth) | 19–25 |
+| 8 | Narrator | "Eaten before the car door shuts." (6) | **Therefore.** At the car, Dana: woman, about 38, medium build, shoulder-length dark brown hair in a low loose ponytail, olive-green zip hoodie over a white tee, dark jeans, white trainers, carries a navy canvas tote with a red lanyard clipped to the strap. Her palm is empty. She taps her keys twice against it and pulls the car door shut. | On the action (her stride carries to the car) | 25–28 |
+| 9 | none | — | **Therefore.** The pouch stands upright on the passenger seat, front to camera, in low sun through the windscreen. The wordmark, bear face and "28 Daily Packs" are readable. The shot holds still. Offer card is added in editing. | To a detail | 28–30 |
 
 **Notes**
-- **Fit:** Strong. The ad carries a feeling the buyer knows from her own morning. The gummy pour is shown as a usage action, not as proof of texture or taste. If the ad later needs viewers to judge the gummy by eye, use filmed product footage for that shot.
-- **Word count:** 51 spoken words in 28 s, about 1.8 a second. The last 2 s are silent.
-- **Claim:** The only claim is line 8, which matches the approved "60+ ingredients, 21 vitamins & minerals, and 6g fiber" in 1 pack. The "therefore" lands on the morning going easier, not on any body or health result. There are no energy, gut, immunity or weight lines.
-- **Offer card (last 2 s, added in edit):** "First order $29.99 with text sign-up discount. New customers only. Renews at $49.99 every 4 weeks." Do not use any "% off" figure; the site's percentages conflict. Do not add an easy-cancel line. The money-back guarantee covers the first order only; include it only with that wording.
-- **Suggested addition:** the standard FDA statement in small text on the end card, since the brand's ads currently omit it.
-- **No child on screen.** The kids are implied only by the lunchbox and the small pink water bottle.
-- **No words in scene except on the product.** The clock has no numerals. The lunchbox, powder tub and water bottle carry no text or logos. The powder tub is generic, not the competitor's.
-- **Pouch variant:** Show the pouch with no white burst, i.e. not Sugar-Free. Low Sugar suits gut-sensitive buyers. The Low Sugar label text itself was not captured.
-- **MISSING:** daily pack (sachet) artwork, colours and label lines. Until supplied, keep the sachet's face away from camera in line 7 and show only the straight top tear and the gummies.
-- **MISSING:** a "how it works" description from the brand. No inside view is included.
-- **Never show** tie-in characters, partner marks or limited-flavour shapes. These are Original green bears only.
+- **Word budget:** 48 spoken words in 28 seconds, about 1.7 a second. The final 2 seconds have no words.
+- **Fit check:**
+  - The rushed-morning feeling is strong for the busy parent.
+  - The gummy pour is a texture people judge by eye, so it is weaker. Keep it to one short close-up, or swap in a filmed live-action insert of the real pour.
+  - No inside view is used. The brand gives no "how it works" for the gummy, so none is shown.
+- **Offer card, last 2 seconds (edit text):** "First order $29.99 with text sign-up discount, new customers only. Renews at $49.99 every 4 weeks."
+  - Low Sugar, 28 packs. Do not add any "% off" figure, because the site's percentages conflict.
+  - Add the standard FDA line in small print. The brand's ads usually leave it out.
+- **Claims:** The only claim spoken is the approved "60+ ingredients, 21 vitamins & minerals, and 6g fiber" in 1 pack. The "therefore" lands on the morning going easier, with no health or body result.
+- **Kids are implied only** by the lunchboxes and backpack. No child appears, and no Kids product appears.
+- **Product rules followed:**
+  - The daily pack is torn straight across its top edge.
+  - The big pouch is opened only at its resealable top and is never shown torn.
+  - The competitor tub and shaker carry no brand marks.
+  - The only words in any scene are on the product.
+- **MISSING:** The daily pack's own label lines and colours are not in the brand file. Until they are supplied, shot 6 cannot show the sachet face exactly, so keep its printed side soft or angled away.
+- **MISSING:** Whether the Low Sugar pouch carries a "Low Sugar" label line, and where it sits. Only the Sugar-Free white burst is described.
 
 **Cast note**
-An off-screen narrator carries the ad, speaking over the woman from the casting card, who stays silent on camera. Mid-rush, this buyer doesn't stop to talk, and a dry, funny-friend voice saying the thing in her head suits her better than a testimonial. The voice is an adult woman, warm and a little amused, quick but never hurried, with no announcer polish and no preaching.
+A narrator carries the ad over Dana, who never speaks. A rushing mum's hands and mouth stay busy with the pack and the gummies. Using a narrator also keeps the claim in the brand's voice, not a customer's, so Dana never says what it did for her. The voice is a warm, dry woman in her mid-30s, like a funny friend: quick but unhurried, with no lab-coat tone. Never change Dana's card (hair, olive-green hoodie, navy tote with the red lanyard), her two-tap key habit, or the rule that no child appears on screen.
 
-Never change the casting card wording, her key-spin habit or her silence. She never speaks, never addresses camera and never describes what the product did for her.
+**Score: 83 / 100**
+5 of 6 checks passed: 5 ÷ 6 × 100 = 83.
+- Missed, "product enters at therefore, in use, label exact": the pouch label is exact, but the daily pack in use has no label lines in the brand file, so it cannot be shown exactly.
 ```

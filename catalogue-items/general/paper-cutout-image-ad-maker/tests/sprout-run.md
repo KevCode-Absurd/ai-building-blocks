@@ -2,20 +2,20 @@
 
 Result: **pass**. Ran on claude-opus-5-5 (effort medium), graded by claude-fable-5-1. Judge list: 5 of 5 met. Invented facts: 0.
 
-A clean, usable plan: one clear swap picture, one signal on the torn edge, honest offer terms in the feed copy, and no invented figures or health claims. It correctly caught that no torn-pack photo was supplied, though a couple of MISSING lines (source for the approved line, one pack per day) are over-cautious given the brand file already covers them.
+A clean, usable plan: one fewer-steps point, a proof picture that matches it, a single yellow ring on the torn pack, brand colours and type, the offer with its renewal price in the copy, and no invented numbers. The owner should know the run was over-cautious in docking itself for the 60+/21/6g source (the brand file lists product and science pages), and "Same daily greens" in the first line leans toward equivalence with powders, so soften it if the owner wants to be strict.
 
 ## Judge list
 
 - Met: You can say the point in one breath, and the proof picture fits the claim's verb.
-  One "but": "...but it means measuring, shaking, a gritty, chalky drink and a shaker bottle to scrub after, therefore Sprout..."; verb "takes fewer steps", row of old objects vs pack alone.
+  "You take a greens powder... but every scoop comes out gritty and chalky... therefore Sprout puts your daily greens in one tear-open pack." Verb "takes fewer steps", row of greyed objects vs pack alone.
 - Met: The headline is 7 words or fewer, with at most 3 other things to read.
-  "Greens, minus the shaker." (4 words) plus "Scoop. Shake. Scrub.", "Tear. Eat.", "$29.99 first order".
+  "No scoop. No shaker. One pack." (6 words) plus two strips: "Gritty, chalky, then scrub" and "Tear and eat"; no button or offer line.
 - Met: Every word is 30 px or larger on a 1080 px frame, with its contrast stated at 4.5:1 or more.
-  84 px / 14.3:1, 40 px / 10.8:1, 44 px / 14.3:1, 32 px / 14.3:1; ratios check out for the given hex colours.
+  72 px headline, 34 px labels, all "#002C17 on cream #FFF7DF | 14.3:1" (ratio checks out).
 - Met: There's one signal, and it points at the part that matters.
-  "One sunflower #FFCC2E hand-cut paper ring, used once. It circles the torn top edge of the pack, which is the single step."
+  "One sunflower (#FFCC2E) torn-paper ring, used once. It circles the torn top of the pack"; prompt adds "nothing else is yellow".
 - Met: The prompt asks for no text, and the product comes from your photo.
-  "No text, letters, numbers or logos anywhere except the existing printing on photo 1... keep its shape, colours and every word of its printing exactly"
+  "No text, letters or numbers anywhere except the pack's own printing; both strips stay blank"; "photo 1 is the Sprout daily pack. Keep its shape, colours and printing exactly".
 
 ## What went in
 
@@ -37,86 +37,91 @@ every 4 weeks.
 ## What came out
 
 ```text
-**1. Point, verb, proof picture**
+No image tool is connected in this chat, so I'll write the prompt and you'll make the picture elsewhere. The steps for that are in the Notes.
 
-- **Point:** You want your greens every day and expect a scoop of powder to be the easy way, but it means measuring, shaking, a gritty, chalky drink and a shaker bottle to scrub after, therefore Sprout daily greens gummies come in one daily pack you tear and eat.
-- **Claim's verb:** "takes fewer steps"
-- **Proof picture:** The old steps sit in a row on one side: a half-used tub with its scoop, a shaker bottle and a bottle brush. On the other side the product sits alone: one Sprout pack torn straight across the top, with gummies tipped into a palm beside it.
+## 1. Point, verb, proof picture
 
-**2. Paper kit**
+**Point:** You take a greens powder every day and expect an easy habit, but every scoop comes out gritty and chalky and leaves a shaker bottle to scrub, therefore Sprout puts your daily greens in one tear-open pack.
 
-- **Material:** The ground is heavyweight cream paper, #FFF7DF. Every piece is scissor-cut, with visible paper thickness and soft, short shadows.
-- **Signal:** One sunflower #FFCC2E hand-cut paper ring, used once. It circles the torn top edge of the pack, which is the single step.
-- **Photo treatment:** The Sprout pack and the gummies-in-palm stay in full colour from the real photos. All old-way photos (tub, shaker) are black and white. The bottle brush is cut from flat grey paper.
+**Claim's verb:** "takes fewer steps." This suits a paper cutout still.
 
-**3. Layout**
+**Proof picture:** The old routine runs as a row of greyed objects across the upper frame: an open, half-used tub, a scoop of powder, a shaker bottle and a sponge. The Sprout daily pack sits alone below and to the right in full colour. Its top is torn straight across and gummies are tipped into an open palm.
 
-- **Size:** 4:5, 1080 x 1350. Recompose for 1:1 rather than cropping. In 1:1, the before row runs across the top half and the after block sits bottom right.
-- **Zone map (top to bottom):**
-  - **4–15% Headline.** A calm cream band, left-aligned, with 80 px side margins.
-  - **18–47% Proof, before.** Tub with scoop, shaker and bottle brush in an even row across the left 75% of the width. They rest on a strip of greyed paper, #D9D9D4.
-  - **49–55% Label 1.** A grey #D9D9D4 paper strip directly under the before row, left-aligned.
-  - **58–90% Proof, after / product.** The torn Sprout pack, front on, upright, about 40% of the frame width, set right of centre (centre at about 64% across). The gummies-in-palm sits overlapping its lower right corner. The sunflower ring circles the torn top edge.
-  - **70–76% Label 2.** A deep forest #002C17 paper strip to the left of the pack, pointing toward it.
-  - **92–97% Small line.** Offer line on the cream ground, bottom left.
-- The proof spans 18–90% of the height and is off centre, weighted right in the lower half. The product is the only full-colour object, so the eye finds it first.
+## 2. Paper kit
 
-**4. Words on the image** (set in a design tool, never in the image)
+- **Material:** The ground is cream (#FFF7DF) cardstock. Every piece is scissor-cut with slightly uneven edges. Paper thickness shows at every edge, and each piece casts a soft, short shadow.
+- **Signal:** One sunflower (#FFCC2E) torn-paper ring, used once. It circles the torn top of the pack.
+- **Photo treatment:** The product is in full colour from its real photos: the pouch, the gummies and the palm. The old-way objects (tub, scoop, shaker, sponge) are black and white and greyed down, with no brand marks.
 
-| Element | Text | Type | Colour / background | Contrast |
+## 3. Layout
+
+**Size:** 4:5, 1080 x 1350. Recompose for a 1:1 version (1080 x 1080) rather than stretching this one: put the row of 4 objects at 14–44% and the pack and palm at 46–94%.
+
+**Zone map (top to bottom):**
+| Zone | % of height | What sits there |
+|---|---|---|
+| Headline | 0–14% | A calm cream band. The headline is set left. No pieces sit here. |
+| Proof: old steps | 14–48% | 4 greyed cutouts in a row, left to right: open tub, scoop with a powder heap, shaker bottle, damp sponge. Each overlaps the next slightly, like a queue. |
+| Label 1 | 48–54% | A cream paper strip lying under the row, left of centre. |
+| Proof: product | 54–92% | The torn daily pack, front on, right of centre at about 55–85% width, filling about 30% of the frame height. The gummies spill into an open palm just below and left of it. The sunflower ring circles the torn top edge. |
+| Label 2 | about 72–78% | A cream paper strip at the left of the palm. |
+| Small line | 92–100% | Quiet cream margin. Nothing to read. |
+
+Together the row and the pack take up about 75% of the frame and weight to the right. The pack is the easiest thing to find.
+
+## 4. Words on the image (set afterwards in a design tool)
+
+| Text | Where | Type | Colour / ground | Contrast |
 |---|---|---|---|---|
-| Headline | "Greens, minus the shaker." | Work Sans Bold, 84 px | #002C17 on cream #FFF7DF | 14.3:1 |
-| Label 1 | "Scoop. Shake. Scrub." | Work Sans Bold, 40 px | #002C17 on grey strip #D9D9D4 | 10.8:1 |
-| Label 2 | "Tear. Eat." | Work Sans Bold, 44 px | #FFF7DF on forest strip #002C17 | 14.3:1 |
-| Small line | "$29.99 first order" | Work Sans Medium, 32 px | #002C17 on cream #FFF7DF | 14.3:1 |
+| "No scoop. No shaker. One pack." (6 words) | Headline band | Work Sans Bold, 72 px | Deep forest #002C17 on cream #FFF7DF | 14.3:1 |
+| "Gritty, chalky, then scrub" | Label 1 strip | Work Sans Medium, 34 px | #002C17 on cream strip | 14.3:1 |
+| "Tear and eat" | Label 2 strip | Work Sans Medium, 34 px | #002C17 on cream strip | 14.3:1 |
 
-- That is one headline (4 words) plus 3 other things to read.
-- Nothing is under 30 px.
-- No text sits on sunflower.
+That is one headline plus 2 other things to read, within the limit of 3. There is no button or offer line on the image. Nothing is under 30 px.
 
-**5. Image prompt**
+## 5. Image prompt
 
-```
-A paper cutout collage photographed flat from directly above, filling a 4:5 vertical frame edge to edge. Even, soft overhead light, no hotspots, short soft shadows under every piece showing real paper thickness. Ground: heavyweight cream paper (#FFF7DF) with a faint natural fibre texture. All pieces are scissor-cut with slightly uneven hand-cut edges, a thin white paper border around each photo cutout.
+> A paper cutout collage photographed flat from directly above, filling a 4:5 frame edge to edge. The ground is a sheet of cream cardstock (#FFF7DF). Every piece is scissor-cut with slightly uneven edges, the paper thickness visible along each edge, and a soft short shadow under each piece. Even, diffuse overhead light, no hot spots.
+>
+> Top 14% of the frame: empty cream paper, nothing placed there.
+>
+> From 14% to 48% of the height: a row of four black-and-white, greyed-down photo cutouts running left to right and overlapping slightly like a queue: an open, half-used tub of greens powder with its lid set aside, a scoop holding a heap of dull green powder, a plastic shaker bottle, and a damp kitchen sponge. No logos or brand marks on any of them.
+>
+> Just under that row, left of centre: one blank cream paper strip lying slightly askew.
+>
+> From 54% to 92% of the height, right of centre: photo 1 is the Sprout daily pack. Keep its shape, colours and printing exactly, every letter unchanged, front on, with its top torn straight across. Below and to its left, photo 2 is the gummies in an open palm. Keep the gummies' colour and shape exactly, in full colour, with the hand cropped at the wrist. To the left of the palm: one more blank cream paper strip.
+>
+> One torn-paper ring in sunflower yellow (#FFCC2E) circles the torn top edge of the pack, and nothing else is yellow.
+>
+> Only the pack and the gummies in the palm are in full colour; everything else is cream paper or greyed. No text, letters or numbers anywhere except the pack's own printing; both strips stay blank. Not a vector illustration: real photographed paper with texture and depth.
 
-Top 15% of the frame: empty cream paper, nothing on it.
+## 6. Feed copy
 
-Upper middle band (18–47% down): a horizontal row of three objects, evenly spaced across the left three-quarters of the frame, resting on a long strip of light grey paper (#D9D9D4). From left: photo 3 is a half-used tub of greens powder with a scoop inside, keep its shape, cut out, black and white; photo 4 is a plastic shaker bottle, keep its shape, cut out, black and white; then a bottle brush cut from flat mid-grey paper. No brand marks on any of them.
-
-Just below that row (49–55%): a blank strip of light grey paper (#D9D9D4), left-aligned, about half the frame wide. Leave it completely blank.
-
-Lower right (58–90%): photo 1 is the Sprout daily greens pack torn straight across the top; keep its shape, colours and every word of its printing exactly, full colour, upright and front on, about 40% of the frame width, centred about 64% across. Photo 2 is gummies tipped into a palm; keep it exactly as photographed, full colour, cut out, overlapping the lower right corner of the pack. One hand-cut ring of sunflower yellow paper (#FFCC2E) circles only the torn top edge of the pack.
-
-To the left of the pack (70–76%): a blank strip of deep forest green paper (#002C17), pointing toward the pack. Leave it completely blank.
-
-Bottom 8%: empty cream paper.
-
-No text, letters, numbers or logos anywhere except the existing printing on photo 1. All strips stay blank. Not a digital vector illustration: real photographed paper with thickness, cut edges and shadows. Only the Sprout pack and the gummies are in colour; everything else is black, white, grey or cream.
-```
-
-**6. Feed copy**
-
-- **First line:** No scoop, no gritty sip, no shaker to scrub: tear one Sprout pack and eat. (76 characters)
+- **First line (82 characters):** "Quit greens powders over the grit and the shaker? Same daily greens, one pack."
 - **Primary text:**
-  No scoop, no gritty sip, no shaker to scrub: tear one Sprout pack and eat.
+  > Quit greens powders over the grit and the shaker? Same daily greens, one pack.
+  >
+  > No more chalky scoops. No more shaker bottle to scrub in the sink. Tear open one Sprout pack and eat your gummies. 60+ ingredients, 21 vitamins & minerals, and 6g fiber in 1 pack.
+  >
+  > Sign up for texts and your first order is $29.99. After that, it renews at $49.99 every 4 weeks.
+- **Headline (18 characters):** "Greens in one pack"
+- **Button:** Shop Now
 
-  If you've quit greens powders over the chalky taste and the bottle in the sink, Sprout daily greens gummies come in one daily pack. Tear it across the top, tip the gummies into your palm, and that's it.
+## 7. Notes
 
-  Your first order is $29.99 when you sign up for texts. It then renews at $49.99 every 4 weeks.
-- **Headline:** Greens in one daily pack (24 characters)
-- **Button:** Get Offer
+- **Figure source:** The claim "60+ ingredients, 21 vitamins & minerals, and 6g fiber in 1 pack" is on the brand's approved-claims list, but the facts panel or lab document behind it isn't on file. MISSING: the label facts panel (or lab test) for the 60+, 21 and 6g figures.
+- **Offer terms:** MISSING: how to cancel or skip, and any limits on the text sign-up price (first order only? new customers only?). Add these to the primary text before it runs.
+- **Photos:** The photos were named but not attached, so I couldn't check the label, colours or shape. MISSING: the pouch front photo and the gummies-in-hand photo as files. MISSING: a photo of one daily pack torn straight across the top, so the tear is real and not drawn in; if the "pouch front" is a larger bag rather than the daily pack, this one is needed. MISSING: a clean cutout of the pack with the background removed and the label sharp. Don't make any image until these are given.
+- **Old-way photos:** MISSING: plain photos of an open tub, a scoop, a shaker bottle and a sponge, with no brand marks. Without them the tool will invent these objects.
+- **Hand:** Keep the hand anonymous, cropped at the wrist with no face, so no real person appears.
+- **Making the picture:**
+  - **ChatGPT (GPT Image) or Gemini (Nano Banana):** attach the photos, paste the image prompt and ask for the picture. Free plans have tight daily limits. Codex on a paid ChatGPT plan can make it too.
+  - **Higgsfield:** paste the prompt into its image tool, or connect Higgsfield to Claude so Claude makes it there.
+  - **Claude Code:** with `OPENAI_API_KEY` (platform.openai.com/api-keys) or `GEMINI_API_KEY` (aistudio.google.com/apikey) saved, it can send the prompt to that image API and save the file. OpenAI or Google bills each picture.
+  - **Type:** set the headline and both labels afterwards in Work Sans.
 
-**7. Notes**
+## 8. Score
 
-- **Figures:** None are used on the image or in the copy. Once the source is on file, you can add this approved line to the primary text: "Each pack: 60+ ingredients, 21 vitamins & minerals, and 6g fiber." Its source (supplement facts panel or lab test) needs to be recorded first.
-- **Offer:** $29.99 and $49.99 are taken from the offer as given. The renewal sits in the primary text, not only in the description.
-- **No image until:** photo 1 (the torn pack) arrives, because the signal sits on the torn edge and the pack must not be redrawn.
-- **Missing items:**
-  - MISSING: source for "60+ ingredients, 21 vitamins & minerals, and 6g fiber".
-  - MISSING: photo of the daily pack torn straight across the top. Only the pouch front was given, and the tear can't be faked on it.
-  - MISSING: background-removed cutout of the pack, label sharp.
-  - MISSING: plain photos of a greens powder tub with scoop and a shaker bottle, with no brand marks. Fallback is to cut both from grey paper instead.
-  - MISSING: cancellation and skip terms for the 4-week renewal, to add to the primary text.
-  - MISSING: banned claims list from the brand file. Confirm "chalky"/"gritty" may be used about powders in general.
-  - MISSING: confirmation that one pack is the full daily serving.
+**Score: 83/100 (5 of 6 checks)**
+- Missed: "Every figure has a source, or isn't there." The 60+ / 21 / 6g claim has no label or lab source on file. Attach one, or cut the claim from the primary text.
 ```

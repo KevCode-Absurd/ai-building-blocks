@@ -1,29 +1,34 @@
 # Test run on Sprout, 2026-10-19
 
-Result: **fail**. Ran on claude-opus-5-5 (effort medium), graded by claude-fable-5-1. Judge list: 3 of 5 met. Invented facts: 1.
+Result: **fail**. Ran on claude-opus-5-5 (effort medium), graded by claude-sonnet-5-5. Judge list: 2 of 5 met. Invented facts: 2.
 
-An honest, well-sourced ad: every number comes from the files, risky claims and the discount mess are correctly kept out, and the MISSING list is useful. But the copy opens on specs rather than the buyer's situation, the image note never locks the brand's top-tear rule, and one note overstates what the mobile first screen shows.
+The copy is factually careful and keeps the "about" qualifiers, with sensible MISSING notes. But it opens on a spec list rather than the buyer's doubt, the image skips the torn-top detail, and the lines could belong to any gummy brand.
 
 ## Fix
 
-In step 4 add: "The main text's first words name the buyer's situation or doubt (what they quit or fear) before the fact." In step 5 add: "State exactly how the product is opened or used per the brand's product rules (here: pack torn straight across the top, gummies pouring into a palm)."
+In step 4, require the first line to open on the buyer's doubt or experience (e.g. the powder they quit) with the fact as the answer; in step 5, require the image to show the pack torn straight across its top edge.
 
 ## Judge list
 
-- Not met: The first line names something this buyer feels or has done, not your product's name.
-  Headline: "21 vitamins & minerals. No shaker." Main text opens "One daily pack: ~100% daily value..." Leads with product specs; buyer only in the tail "No shaker".
-- Met: You can point to a fact for every claim.
-  "~100% daily value of vitamins, ~25% of minerals, 6 g prebiotic fiber" and "small handful" all in run input and page Directions; "no shaker" follows from format.
-- Met: Nothing says fix, best, clinically proven or an unbackable result.
-  Copy contains only amounts and "No shaker"; notes say "The ad does not say Sprout replaces a powder."
-- Not met: The image shows the product used the real way (pack torn across the top).
-  "A real photo of one open daily pack, with the small handful of green gummy bears in a hand." Tear direction never specified.
-- Met: Read aloud, it could not be any brand in the category.
-  "21 vitamins & minerals. No shaker." plus exact %DV and 6 g fiber is specific to this product.
+- Not met: First line names something this buyer feels or has done, not the product name
+  Main text opens "One daily pack of gummies: 21 vitamins and minerals..." and never names the powder quitter's doubt or experience.
+- Met: Every claim traces to a fact; two lines checkable against product page
+  21 vitamins/minerals, about 100% DV vitamins, about 25% minerals, 6 g prebiotic fiber all in the inputs; "No shaker" backed by page.
+- Met: Nothing says fix, best, clinically proven or an unbacked result
+  No such words in the main text or headline; the study and result claims were left out.
+- Not met: Image shows product used the real way (pack torn across the top)
+  "one opened daily pack with the small handful of gummies in an open palm" never says torn straight across the top edge.
+- Not met: Not generic: could not be any brand in the category
+  Main text is a vitamin and fiber list; the headline "No shaker. One pack of gummies a day." fits any gummy brand.
 
 ## Invented
 
-- claim: The mobile first screen shows the announcement bar's 52% offer, not the pack contents. (Page file says the phone first screen was not captured (inferred) and the bar rotates four lines; stated as fact.)
+- number: Main text (119 characters) (Actual length is roughly 120 characters, so the count is close and may be slightly off; minor.)
+- other: Button: Shop Now (leads to sprout.example/products/sprout) (Destination URL assumed; page is the Adults product page, but the run input never named a landing page.)
+
+## Safety
+
+- The image note suggests the nutrition label beside the pack so the full facts are visible, yet "about 100% DV vitamins" in the main text sits close to a claim about quantity that is not compared against any powder, which could read as answering the doubt "replace my powder" without proof.
 
 ## What went in
 
@@ -50,46 +55,72 @@ headline under 40.
 ## What came out
 
 ```text
-**Headline** (34 characters)
-21 vitamins & minerals. No shaker.
+**Main text (119 characters)**
+One daily pack of gummies: 21 vitamins and minerals (about 100% DV vitamins, about 25% minerals) + 6 g prebiotic fiber.
 
-**Main text** (124 characters)
-One daily pack: ~100% daily value of vitamins, ~25% of minerals, 6 g prebiotic fiber. No shaker. A small handful of gummies.
+**Headline (37 characters)**
+No shaker. One pack of gummies a day.
 
-**CTA button:** Learn More. Don't use a discount button (see notes).
+**Button:** Shop Now (leads to sprout.example/products/sprout)
 
 ---
 
 **Image note**
-- **What to show:** A real photo of one open daily pack, with the small handful of green gummy bears in a hand. Put the pouch next to it.
-- **Text overlay:** Use only the pack contents, worded exactly as in the main text: "~100% DV vitamins · ~25% DV minerals · 6 g prebiotic fiber."
-- **Optional comparison:** A shaker bottle can sit to one side, unused, to show what this buyer is leaving behind.
-- **What to avoid:** No faces reacting to taste, no before/after shots, no energy or glow scenes, and no powder-vs-gummy amount comparison.
-- **Proof footage:** I have none. Use a studio pack shot. Don't use a generated scene that implies a result.
+Use a real photo, not a generated scene. Show one opened daily pack with the small handful of gummies in an open palm. Put the pouch or the nutrition label beside it so the full facts are visible, including the roughly 25% of daily value for minerals. There is no shaker, glass or powder in the shot.
+
+Do not show a side-by-side "dose vs. a powder" comparison, energy or glow, or any before/after. The facts support none of these. The picture makes the same promise as the words: this is what one daily pack holds, and it is gummies you eat from the pack.
+
+MISSING: confirmation that a real photo of one pack in hand exists. The page gallery was inferred from file names, not seen.
 
 ---
 
 **Notes**
 
-- **Reason chosen:** This buyer's doubt is about amount: "a gummy can't hold enough." So the ad opens on what one pack actually holds.
-- **Fact behind the copy:** The pack-content figures and the 21 count come from your product facts (product page and science page): 21 vitamins and minerals, about 100% DV for vitamins, about 25% for minerals, and 6 g prebiotic fiber. "Small handful of gummies" is from the page's Directions. "No shaker" follows from the format: single-serve gummy packs, nothing to mix.
+- **Buyer in one line:** They quit greens powders because of the taste and the shaker, and they doubt a few gummies can hold enough. Sprout gives them a measured daily pack they eat straight from the sachet, with nothing to mix and nothing to clean.
+
+- **Reason chosen:** Answer the "can't hold enough" doubt directly, with what one pack contains.
+
+- **Facts behind it and their source** (product facts provided, matching the product page):
+  - 1 daily pack contains 21 vitamins and minerals.
+  - It gives about 100% of daily value for vitamins and about 25% for minerals.
+  - It contains 6 g prebiotic fiber.
+  - It comes as "a small handful of gummies."
+  - The headline's "one pack a day" and "no shaker" rest on the Directions: "Grab a single pack daily" from a pouch of 28 individual packs. They also rest on the page's "No more ... sloshing chalky powders."
+
 - **Conditions kept:**
-  - "~" keeps the "about" on both percentages.
-  - Minerals are stated at ~25%, not rounded up to "full daily value." That honest gap is part of why the ad can be believed.
-  - The ad does not say Sprout replaces a powder.
+  - "About" stays on both percentages.
+  - The minerals figure (about 25%) is shown next to the vitamins figure, not hidden. This buyer's doubt is about quantity, so dropping it would mislead.
+
 - **Strong facts left out, and why:**
-  - **The 12-week study** (vitamin C +40.1%, folate +20.5% vs placebo). It measures absorption of 2 vitamins only. It answers "does it absorb," not "does it hold enough," and it didn't fit the character limit. If you use it elsewhere, keep "absorption only."
-  - **"60+ ingredients."** It's a big number but says nothing about amounts, which is this buyer's doubt. The 21 vitamins and minerals plus the %DV do that job.
-  - **Cost per serving** ($1.26 vs greens powders $3.60). There's no source for the comparison, and it conflicts with the $1.07/day and $1.78/day renewal figures on the page.
-  - **Survey figures** (67% better digestion, 52% more energized). These are self-reported. The energy figure isn't allowed.
-  - **Discounts.** The page shows 52%, "up to 55%", 55% and 61%. The $29.99 needs an SMS sign-up and renews at $49.99, and the guarantee covers the first order only. No offer is mentioned, so the ad can't promise a price the page then changes. That's why the button is "Learn More."
-  - **Star ratings.** Four different figures appear. None is used.
-  - **Taste.** There's no taste claim. The page's "great tasting" is a boast, and recent reviews include "the taste is off." The ad only removes the shaker, which is a fact.
-- **MISSING:**
-  - The amount of each greens ingredient per pack. There's no basis to say it matches a greens powder.
-  - Whether "about 100% DV" applies to each vitamin or is an average, and which minerals reach what level.
-  - The Sugar-Free version's sugar alcohol content and any stomach warning. This matters for the gut buyer, and the panel wasn't captured.
-  - A consistent vitamin and mineral count. The ingredients panel says "over 20," and 21 is used here from your facts. Confirm the panel matches.
-  - A real photo of one pack's contents, for the image.
-  - Which page the ad leads to. The mobile first screen shows the announcement bar's 52% offer, not the pack contents.
+  - **"60+ ingredients":** This is a big number with no amounts per ingredient. It doesn't prove there is "enough," which is the buyer's doubt.
+  - **The 12-week study** (blood vitamin C up 40.1%, folate up 20.5% vs placebo): It measures absorption of 2 vitamins only. It doesn't answer "how much is in it," and in an ad it would read as a broader result claim.
+  - **"Supports digestion and gut health":** This claim is allowed. It was left out to keep within 125 characters and to stay on the quantity doubt. It's a good candidate for a second variant.
+  - **Taste:** The page asserts good taste, but the latest reviews include "the taste is off." Saying "tastes great" would be a boast, not a checked fact.
+  - **Prices, discounts and guarantee:**
+    - The page shows conflicting discounts (52%, up to 55%, 55%, 61%, 49%, 58%).
+    - The $29.99 price depends on an SMS sign-up, which only the footer reveals.
+    - The plan renews at $49.99.
+    - The guarantee covers the first order only.
+    - Any offer line under 125 characters would drop one of these terms, so no offer is mentioned.
+  - **Energy, immunity, "mental clarity," "replace your powder":** These are not allowed or not supported. Nothing in the facts compares Sprout's amounts with a powder's.
+
+- **Things to fix or confirm before running:**
+  - MISSING: whether the vitamin count is "21" or "over 20." The page uses both, and the ad uses 21 from the product facts.
+  - MISSING: content of the Low Sugar vs. Sugar-Free panel, including any sugar-alcohol warning. The ad avoids the sugar options, but gut-focused buyers who land on the page may pick Sugar-Free without that warning.
+  - MISSING: share of mobile visitors and what fits on the first phone screen. On the landing page the plan box and button likely sit below the fold.
+  - MISSING: whether Subscribe & Save is preselected. "Shop Now" leads to a page that probably defaults to a subscription, which this powder-quitting buyer may already be wary of.
+
+---
+
+**Score: 5 / 5 checks passed = 100**
+
+| Check | Result |
+|---|---|
+| Every selling line traces to a fact given | Pass |
+| No "unique", "best" or result claim without proof | Pass |
+| Numbers keep exact wording and conditions | Pass ("about" kept on both; minerals shown) |
+| Picture and words make the same promise | Pass (real pack-in-palm photo with label, no result imagery) |
+| Says only as much as this buyer is ready for | Pass (they know the category and the powder problem; the ad answers their stated doubt and makes no new promises) |
+
+No checks missed. The score measures the copy against its own checks, not how the ad will perform.
 ```

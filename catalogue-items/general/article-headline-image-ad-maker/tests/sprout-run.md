@@ -2,20 +2,20 @@
 
 Result: **pass**. Ran on claude-opus-5-5 (effort medium), graded by claude-fable-5-1. Judge list: 5 of 5 met. Invented facts: 0.
 
-A clean, usable brief: the line is lifted straight from the approved ad, the photo is candid and brand-free, and the scent check correctly tells the owner the product page must change (new first line, same photo, drop the vitality claim, add the first-order limit to the plan box). It also catches the real 21 vs over-20 mismatch and flags the fiber claim as not seen on the page rather than assuming it.
+A clean, usable brief: the on-image line is cut straight from the approved ad, the photo is a candid sink-and-shaker scene with no product or brand marks, and the scent check honestly scores 50 while telling the owner exactly what to change on the product page. Its only caution is that it could not verify spelling on an image that doesn't exist yet, which it flags rather than claims.
 
 ## Judge list
 
 - Met: The line on the photo matches the page's first screen, or the scent check says how to fix it.
-  "Words: fix. ... add a first line above the title: 'Every evening ended the same way.'" plus scene and promise fixes.
+  "Words: fix... Add a first line that names the situation, e.g. 'Every evening, shaker soaking in the sink'" and "Open the page on the same sink and shaker photo."
 - Met: It's 7 words or fewer, and every letter is right on the finished picture.
-  "Every evening ended the same way." Word count: 6; the image prompt repeats it spelled identically.
+  "Every evening, shaker soaking in the sink" (7 words); prompt spells it identically and flags the letter check as pending until an image exists.
 - Met: It says only what your copy supports. No invented number and no named expert.
-  "cut word for word from the approved story ad"; no numbers or experts on the image.
+  Line is cut from the story's "Every evening ended the same way: the shaker soaking in the sink"; no numbers, no expert.
 - Met: Nothing looks like a newspaper. There is no masthead, outlet name, byline or date.
-  "no masthead, outlet name, byline or date" and prompt ends "no other text".
+  "Leave out: script fonts, the brand font, masthead, byline and date." Prompt: "No other text, no logos".
 - Met: The line under the image is different from the line on it.
-  "No shaker. One daily pack." (26 characters) vs "Every evening ended the same way."
+  "One pack, no shaker to rinse" (28 characters), distinct from the on-image line and supported by "No water, no shaker."
 
 ## What went in
 
@@ -40,76 +40,74 @@ gummies." First image: the pouch on a soft gradient.
 ## What came out
 
 ```text
-## 1. Scene
-A plastic shaker bottle soaking in a kitchen sink at night, with a green film inside it that won't rinse out. Above it, one line of text: "Every evening ended the same way."
+No image tool is connected here, so this is the brief and prompt. The picture itself is made elsewhere (see the end).
 
-## 2. Where and when
-- **Place:** an ordinary home kitchen sink with a tiled backsplash.
-- **Time:** about 9 pm, under the overhead kitchen light. It is warm and slightly uneven.
+**1. Scene**
+"Someone's kitchen sink at night, a greens shaker left soaking with green gunk still stuck inside."
+
+**2. Where and when**
+- **Place:** a home kitchen sink.
+- **Time:** evening, after dinner, under the warm ceiling light.
 - **Within reach:**
-  - a sponge and a dish-soap bottle with its label turned away
-  - a tea towel over the tap
-  - a mug left from dinner
-  - a few drops on the steel
+  - An unlabelled clear plastic shaker bottle half-sunk in grey-green water.
+  - Its lid upside down on the counter edge.
+  - A worn sponge, a tea towel and a dish rack with a couple of plates.
 
-## 3. The photo
-**The moment:** shot on a phone from standing height, looking down and slightly forward. A clear plastic shaker lies on its side in shallow, cloudy water. Its lid and mixing ball sit beside it. Green residue streaks the inside walls and has gathered at the bottom.
+**3. The photo**
+The moment the story opens on: the shaker that "wouldn't rinse out," shot from standing height and slightly above, as if on a phone.
+- The faint green film is visible on the inside walls of the shaker.
+- The light is everyday and nothing is retouched.
+- **Clear area:** the plain, matte off-white wall above the sink fills the top third. There is nothing on it.
+- There is no product, no person and no brand mark.
 
-**What stays out:**
-- No hands.
-- No person.
-- No product. It wasn't asked for.
-- No brand marks on anything.
+**4. Words on the image**
+"Every evening, shaker soaking in the sink" (7 words)
 
-**The clear area:** the plain pale tiled backsplash fills the top third and stays empty for the words. The sink and shaker sit in the middle and lower part of the frame.
+- **Where it came from:** written from the story's opening ("Every evening… the shaker soaking in the sink"). It is a plain caption line with a time cue, cut from the story's own words.
+- **Flag:** the page headline "Sprout Superfood Gummies" is a product name with no situation in it. The line under it ("revive whole body vitality") is a health claim, so neither can be used.
+- **The page should change to match:** open with this line or the same situation, or build a separate page for this ad.
 
-**Format:** square 1:1. The bottom stays free of anything important.
+**5. Type and place**
+- **Position:** one line, centred on the wall in the top third, well clear of the bottom.
+- **Type:** plain heavy sans-serif, sentence case, near-black on off-white.
+- **Size:** big enough to read at arm's length on a phone.
+- **Leave out:** script fonts, the brand font, masthead, byline and date.
 
-## 4. Words on the image
-**"Every evening ended the same way."**
-- **Word count:** 6.
-- **Where it came from:** cut word for word from the approved story ad ("Every evening ended the same way: …").
+**6. Blank version**
+The same photo, sink, shaker and empty off-white wall, with no words at all.
 
-**Flag:** the page's headline is "Sprout Superfood Gummies", which is a product name with no situation in it. So the line was written from the story instead. The page should change to match (see the scent check).
+**7. Line under the image**
+"One pack, no shaker to rinse" (28 characters). It is supported by the ad's "No water, no shaker."
 
-## 5. Type and place
-- **Position:** one line, centred on the backsplash in the top third, with a clear margin from the edges.
-- **Type:** plain heavy sans-serif in sentence case, near-black (#1A1A1A) on the pale tile. It should be big enough to read at arm's length, about 8–9% of the frame height.
-- **What to leave out:**
-  - no script
-  - no brand font
-  - no brand colour
-  - no masthead, outlet name, byline or date
-  - no second line
+**8. Scent check**
+- **Words: fix.** The page's first screen says "Sprout Superfood Gummies / 60+ potent ingredients to revive whole body vitality."
+  - Add a first line that names the situation, e.g. "Every evening, shaker soaking in the sink," or "Gave up the greens shaker."
+  - Drop "revive whole body vitality."
+- **Scene: fix.** The page opens on the pouch on a soft gradient, and the ad opens on a sink and a shaker.
+  - Open the page on the same sink and shaker photo.
+  - Move the "Vs Powders" reviews (now at the very bottom) up near the button.
+  - Not checked by eye: this is based on a description, not a screenshot. MISSING: screenshot of the first screen on a phone.
+- **Promise: fix.** The ad promises no water and no shaker, while the page's first screen promises "vitality." Three facts in the ad also don't line up with the page:
+  - "21 vitamins and minerals" in the ad, but "over 20" in the page's ingredients panel. Pick one number.
+  - "6 g prebiotic fiber": MISSING: where the page states this. It wasn't seen in the captured page text.
+  - The guarantee: the ad correctly says "first order only." The plan box just says "30-Day Money-Back Guarantee." Add "on your first order" there so the page keeps the ad's promise.
 
-## 6. Blank version
-The same photo, framing and light, with no words. The backsplash is left empty.
+**9. Image prompt**
+> Candid smartphone photo, square 1:1, of a home kitchen sink in the evening under warm ordinary ceiling light. A clear unlabelled plastic shaker bottle lies half-sunk in grey-green water in the basin, a faint green film stuck to its inside walls. Its lid sits upside down on the counter edge beside a worn sponge, a tea towel and a dish rack with two plates. A plain matte off-white wall fills the top third. Centred on that wall, one line of large heavy near-black sans-serif text in sentence case: "Every evening, shaker soaking in the sink". No other text, no logos, no people, no brand colours, natural clutter, not retouched.
 
-## 7. Line under the image
-**"No shaker. One daily pack."** (26 characters)
+**10. Score: 50/100**
+(0 scent matches + 4 checks passed) / 8 × 100 = 50.
+- **Words missed:** the page title is a product name with a vitality claim under it, not this situation.
+- **Scene missed:** the page opens on the pouch on a gradient, not the sink and shaker.
+- **Promise missed:** the first screen promises "vitality," not the shaker swap. Its vitamin count (over 20) doesn't match the ad's 21, and the 6 g fiber wasn't found on the captured page.
+- **Spelling check not passed yet:** no image exists. Check every letter of "Every evening, shaker soaking in the sink" on the finished picture, and make it again if anything is off.
 
-This is "the swap": the old step goes out and the new one comes in. The ad supports it with "No water, no shaker" and "one daily pack".
+---
 
-## 8. Scent check
-
-**Words: fix.**
-- **The problem:** the first screen opens on "Sprout Superfood Gummies" and "revive whole body vitality". That is a product name plus a risky claim the study doesn't support (page issue 6), and neither matches the ad.
-- **Fix option 1:** add a first line above the title: "Every evening ended the same way." Follow it with a line naming the swap.
-- **Fix option 2:** build a separate article-style page for this ad that opens on that line.
-- **Either way:** drop "revive whole body vitality" from the first screen.
-
-**Scene: fix.**
-- **The problem:** the first image is the pouch on a soft gradient, a studio pack shot.
-- **Fix:** open the page on this same shaker-in-the-sink photo, or one from the same moment.
-- **Also:** move the "Vs Powders" review cards up from the bottom, so the powder-quitter story continues straight away (page issue 10).
-- **Note:** what the phone first screen shows was not captured. **(inferred)** The announcement bar, gallery and title likely fill it, so the new line and photo must sit above the gallery.
-
-**Promise: fix.**
-- **What matches:** the ad promises one daily gummy pack in place of a powder, and the page's Directions match that. "60+ ingredients" also matches.
-- **Vitamin count:** the ad says "21 vitamins and minerals", but the ingredients panel says "over 20" (page issue 7). Make the page say 21 everywhere.
-- **Guarantee:** the ad correctly says "first order". The plan box says only "30-Day Money-Back Guarantee", and the limit is buried in the last FAQ (page issue 4). Add "on your first order" to the plan box.
-- **Fiber:** `MISSING: where the page states "6 g prebiotic fiber".` It was not seen in the page text. Confirm it is on the page, or remove it from the ad.
-
-## 9. Image prompt
-Candid smartphone photo, square 1:1, of a home kitchen sink at night under warm, uneven overhead light. A clear plastic shaker bottle lies on its side in shallow cloudy water, with green powder residue streaked inside and settled at the bottom. Its lid and mixing ball sit beside it. A sponge, an unbranded dish-soap bottle and a used mug are nearby, with water drops on steel. Shot from standing height, slightly downward, unretouched, everyday clutter. The top third is a plain pale tiled backsplash. Centred on it, one line of plain heavy sans-serif text in near-black, sentence case: "Every evening ended the same way." No logos, no brand names, no people, no other text.
+**To make the picture:**
+- **ChatGPT or Gemini:** paste the image prompt into a chat and ask for the picture. ChatGPT uses GPT Image, Gemini uses Nano Banana. Free plans have tight daily limits. Codex on a paid ChatGPT plan can make it too.
+- **Higgsfield:** paste the prompt into its image tool, or connect Higgsfield to Claude so Claude makes it there.
+- **Claude Code:** save an OpenAI or Google key as `OPENAI_API_KEY` or `GEMINI_API_KEY` and I can send the prompt to that image API and save the file.
+  - Get a key at platform.openai.com/api-keys (OpenAI) or aistudio.google.com/apikey (Google).
+  - OpenAI or Google bills each picture.
 ```

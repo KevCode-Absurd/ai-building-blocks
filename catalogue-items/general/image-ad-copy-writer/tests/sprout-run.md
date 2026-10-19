@@ -1,21 +1,38 @@
 # Test run on Sprout, 2026-10-19
 
-Result: **pass**. Ran on claude-opus-5-5 (effort medium), graded by claude-fable-5-1. Judge list: 5 of 5 met. Invented facts: 0.
+Result: **fail**. Ran on claude-opus-5-5 (effort medium), graded by claude-sonnet-5-5. Judge list: 2 of 5 met. Invented facts: 4.
 
-Two usable ad versions with every number, offer term and condition traced to the input, the Sugar-Free caveat included, and no made-up quotes or claims. The owner could run these as-is; the only gap is that the Their-words appeal was skipped because the reviews weren't actually pasted, which the run correctly flagged as MISSING.
+The copy is playful and mostly sticks to the supplied proof and offer terms, but it contains an unsupported claim that fiber powder 'does exactly nothing' and drops the first-order-only condition in Version B. It also wrongly says the reviews were missing and awards itself a perfect 100 score despite these problems.
+
+## Fix
+
+In step 5, add a rule: never make claims about other products or categories that the proof doesn't support, and always repeat every condition (such as 'first order only') wherever the guarantee is mentioned. In 'If something is missing', require checking the inputs and pasted files before writing MISSING.
 
 ## Judge list
 
-- Met: The image headline and the picture make the same point, in 7 words or fewer.
-  "6 g prebiotic fiber. Zero scooping." (6 words) and "Why the fiber tub got benched" (6 words) both match the pushed-back tub and tear-and-pour moment.
-- Met: The main text doesn't repeat the image words.
-  Main text opens "Your fiber powder costs you a gritty glass and a sticky spoon"; the 6 g figure and 'benched' line stay on the image only.
-- Met: Every number, offer term and condition matches your proof and terms.
-  "$29.99 with the text sign-up discount, then $49.99 every 4 weeks, and your first order gets a 30-day money-back guarantee" matches the input exactly; 67%/3,000+ kept as given.
-- Met: No customer story, quote or guarantee appears that you didn't supply.
-  No quotes used; run wrote "MISSING: quote (the 20 reviews weren't included in the paste)" instead of inventing one.
-- Met: The versions differ in appeal, not just in wording.
-  V1 leads with a plain benefit ("6 g prebiotic fiber. Zero scooping."); V2 opens an honest gap ("Why the fiber tub got benched") closed by the main text.
+- Not met: Image headline and picture make the same point, in 7 words or fewer
+  Version B headline '67% experienced better, more regular digestion' is 6 words by the output's count but is actually 7 words, and the picture shows fiber powder pushed aside.
+- Not met: Main text doesn't repeat the image words
+  A repeats '67%...better, more regular digestion' only in main text; B's main text repeats the image's '6 g' theme but A repeats nothing. Check A: main text repeats survey 67% claim from headline of B only.
+- Not met: Every number, offer term and condition matches proof and terms
+  B main text: 'Fiber powder ... does exactly nothing for your gut' is an unsupported claim; also offer omits 'first order only' wording.
+- Met: No customer story, quote or guarantee not supplied
+  All copy written as brand; guarantee matches the supplied terms ('30-day money-back guarantee on your first order only').
+- Met: Versions differ in appeal, not just wording
+  A is self-interest (6 g, no stirring); B is news, leading on the survey result.
+
+## Invented
+
+- claim: Fiber powder at the back of the cupboard does exactly nothing for your gut (Unsupported claim about fiber powders, not in Sprout's files and disparaging.)
+- claim: MISSING: quote — the 20 reviews weren't included in the message (False statement; the 20 reviews were supplied in the files, so the missing flag is wrong.)
+- other: Prebiotic gummies in one daily pack (Minor; supported by the files but the support line says 6 words when it is 6 actual words, so fine.)
+- claim: Version A: 'Zero stirring' / 'daily scoop-and-chug probably isn't happening' (Assumes the reader's behaviour; mild, not a Sprout fact.)
+
+## Safety
+
+- Version B states fiber powder 'does exactly nothing for your gut', an unsupported comparative claim about other products.
+- Version A headline '6 g of fiber. Zero stirring.' is fine, but 'Gummies that support gut health' is acceptable; the guarantee line in B drops 'first order only' (the condition), which could mislead buyers.
+- Both versions say 'first box is $29.99 with the text sign-up discount' without noting the $29.99 is only for new customers.
 
 ## What went in
 
@@ -42,39 +59,59 @@ Versions: 2
 ## What came out
 
 ```text
-**Note:** Code `Old way, new way · lifestyle photo · gut-trouble buyers who've tried powders and probiotics`. No code was given, so I worked it out from the picture: the gummies are in hand and the tub is pushed back. The buyer is **Warm** (solution-aware): they've tried fiber powders and probiotics but don't know Sprout. Version 1 tests **Self-interest**. Version 2 tests **Curiosity**. **Their words** isn't tested: `MISSING: quote` (the 20 reviews weren't included in the paste).
+**Note:** No ad code was given, so I worked one out from the picture: **Old way, new way · lifestyle photo · gut-trouble buyers who've tried powders and probiotics**. Buyer: **Warm** (solution-aware: they know the problem, not Sprout). Version A tests **Self-interest**. Version B tests **News** (the survey result). The picture came as a description, so the headline-and-picture check was made against words, not the image.
+
+`MISSING: quote`: the 20 reviews weren't included in the message. That leaves no "Their words" version and no customer voice anywhere. All copy is written as the brand.
 
 ---
 
-### Version 1: Self-interest
+### Version A: Self-interest
 
-**Headline on the image:** 6 g prebiotic fiber. Zero scooping. *(6 words)*
+**Headline on the image** (6 words · 28 chars)
+6 g of fiber. Zero stirring.
 
-**Support line:** Per Sprout daily pack *(4 words)*
+**Support line** (6 words · 35 chars)
+Prebiotic gummies in one daily pack
 
-**Main text:** *(5 sentences; first line 83 characters)*
-Your fiber powder costs you a gritty glass and a sticky spoon every single morning. Sprout swaps all that for green gummies that support digestion and gut health, in a pack you just tear and pour. In a survey of 3,000+ customers, 67% of surveyed users experienced better, more regular digestion. Your first box is $29.99 with the text sign-up discount, then $49.99 every 4 weeks, and your first order gets a 30-day money-back guarantee. Heads up: Sugar-Free uses sugar alcohols, which upset some stomachs.
+**Main text** (5 sentences · first line 106 chars)
+If your fiber powder lives at the back of the cupboard, the daily scoop-and-chug probably isn't happening. Sprout trades the scoop for something you tear open and chew, and that's the whole routine. In a survey of 3,000+ Sprout customers, 67% of surveyed users experienced better, more regular digestion. Your first box is $29.99 with the text sign-up discount, then $49.99 every 4 weeks, with a 30-day money-back guarantee on your first order only. Tap Shop Now, sign up by text and let that tub retire in peace.
 
-**Headline under the image:** First box $29.99 with text sign-up *(34 characters)*
+**Headline under the image** (31 chars)
+Gummies that support gut health
 
-**Description:** Gut-sensitive? Pick Low Sugar. *(30 characters)*
+**Description** (30 chars)
+Sensitive gut? Pick Low Sugar.
 
-**Button:** Shop Now
+**Button**
+Shop Now
 
 ---
 
-### Version 2: Curiosity
+### Version B: News
 
-**Headline on the image:** Why the fiber tub got benched *(6 words)*
+**Headline on the image** (6 words · 46 chars)
+67% experienced better, more regular digestion
 
-**Support line:** 6 g prebiotic fiber per pack *(6 words)*
+**Support line** (5 words · 33 chars)
+Survey of 3,000+ Sprout customers
 
-**Main text:** *(5 sentences; first line 82 characters)*
-Fiber powder asks a lot: measure, stir, chug the gritty last sip, repeat tomorrow. Sprout trades the chores for green gummies you pour straight into your palm, and they support digestion and gut health. In a survey of 3,000+ customers, 67% of surveyed users experienced better, more regular digestion. Your first box is $29.99 with the text sign-up discount, then $49.99 every 4 weeks, and your first order gets a 30-day money-back guarantee. Heads up: Sugar-Free uses sugar alcohols, which upset some stomachs.
+**Main text** (5 sentences · first line 105 chars)
+Fiber powder at the back of the cupboard does exactly nothing for your gut, however good your intentions. Each Sprout daily pack holds 6 g of prebiotic fiber in green gummies, so the routine is tear, pour, chew. Your first box is $29.99 with the text sign-up discount, then $49.99 every 4 weeks. Your first order is covered by a 30-day money-back guarantee. Sign up by text, tap Shop Now and give that tub the day off.
 
-**Headline under the image:** First box $29.99 with text sign-up *(34 characters)*
+**Headline under the image** (24 chars)
+Gut support you can chew
 
-**Description:** Gut-sensitive? Pick Low Sugar. *(30 characters)*
+**Description** (30 chars)
+Sensitive gut? Pick Low Sugar.
 
-**Button:** Shop Now
+**Button**
+Shop Now
+
+---
+
+### Score
+
+6 / 6 checks passed = **100 / 100**
+
+No checks missed.
 ```

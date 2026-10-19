@@ -2,28 +2,28 @@
 
 Result: **fail**. Ran on claude-opus-5-5 (effort medium), graded by claude-fable-5-1. Judge list: 4 of 5 met. Invented facts: 1.
 
-The plan is well built: a clear Build moment, a 7-word headline, the approved claim word for word, honest offer terms with the renewal price, and sensible MISSING lines. But the image prompt calls the pouch "greens powder", which misdescribes the product to the image tool and clashes with the exact buyer this ad targets.
+A tidy, usable plan: the Build/glazing idea fits the selling line, every painted ingredient is on the list, the offer terms are exact and the contrast maths checks out. The one real error is calling the pouch 'greens powder' in the image prompt, which would paint the brand as the thing it sells against unless the owner catches it.
 
 ## Fix
 
-In step 7 (image prompt) add: "Name what is inside the pack exactly as the brand file does (e.g. gummies); never describe the product as the thing it replaces." Add the same line to the check list.
+In step 7 (image prompt), add: 'Name the product's format exactly as the brand file does (e.g. gummy packs) and never use a competitor's format word (powder, pill) for the product.'
 
 ## Judge list
 
 - Met: Shown for 2 seconds, someone can say what the product is and the one idea.
-  "The Sprout pouch upright and centred, about 40% of frame width" with glazed greens stacking above it and "A whole shelf of greens. One pack."
+  "bands of greens funnel down into its top" plus headline "A whole shelf of greens. One pack." gives one moment, one idea.
 - Met: The headline has 7 words or fewer, with at most 3 other things to read.
-  "Headline (7 words): A whole shelf of greens. One pack." plus claim line and offer line; "There is no button on the image."
+  "Headline (7 words): 'A whole shelf of greens. One pack.'" then small line, offer, button: exactly 3 more.
 - Met: The words sit on bare paper, big and dark enough to read on a phone.
-  "Headline: forest green #00582D, about 64 px, centred on the bare paper"; offer at 30 px on a solid brand-colour band, contrast ~8:1.
+  "Forest green on the cream quiet area, about 64 px"; small line "30 px or larger"; offer on a solid #00582D band, 8.1:1.
 - Met: The implied sentence is something your claims let you say, and nothing shows a body changing.
-  "One Sprout pack holds a lot of different greens." backed by the approved 60+ claim; all painted plants on the given list; no figure.
+  "One small pack holds a lot of different greens" sourced to the approved 60+ ingredients claim; painted greens all on the list; no body shown.
 - Not met: The product matches your photos, with your real label laid over it.
-  Image prompt opens "A painted watercolour stand-up pouch of greens powder"; the product is gummies. Overlay step is present but premise is wrong.
+  Prompt says "stand-up pouch of greens powder"; Sprout is gummies. Overlay step exists, but photos unread and the pouch is misdescribed.
 
 ## Invented
 
-- claim: stand-up pouch of greens powder (Sprout sells gummies, not powder; powder is the enemy this buyer quit, and the avoid field even lists "powder".)
+- claim: A painted deep forest-green glossy stand-up pouch of greens powder (Sprout is a pouch of gummy packs, not powder; powder is the enemy the brand names, so the generated pouch would be wrong.)
 
 ## What went in
 
@@ -49,94 +49,74 @@ every 4 weeks.
 ## What came out
 
 ```text
-## 1. Moment plan
-- **Fit:** Good. "A whole shelf of greens in one small pack" is many parts adding up, which a photo of a pouch can't show. Watercolour is not used to prove texture or taste.
-- **Moment:** The buyer is comparing fixes, so the painted change is caught halfway. Painted leafy greens stack up in see-through layers. Each layer deepens as it drops toward the pouch, as if the shelf is filling the pack.
-- **Show job:** Build.
-- **Technique:** Glazing, wet-on-dry. There are four transparent layers, from top to bottom:
-  1. Pale yellow-green wheatgrass blades
-  2. Spinach leaves
-  3. Kale and broccoli florets
-  4. A deep blue-green spirulina and chlorella glaze, where the layers meet the pouch top
+I can't draw the picture in this chat because no image tool is connected, so this is the plan and the prompt.
 
-  Every overlap is a shade deeper. The top layer is still the pale first glaze.
-- **Paper:** Hot-press. It is smooth, gives crisp label shapes and has no grain. There is no granulation, salt or dry brush, so nothing reads as gritty or chalky.
-- **Colour:** Greens and yellows next to each other on the wheel: forest green #00582D, sap green, a cool blue-green and sunflower yellow #FFCC2E. Acai, goji, pomegranate and beet are left out on purpose. Reds and purples glazed over green turn brown.
-- **Sentence it implies:** "One Sprout pack holds a lot of different greens."
-- **Source:** The approved claim "60+ ingredients, 21 vitamins & minerals, and 6g fiber" in 1 pack. Every painted plant is on the given list: kale, spinach, broccoli, wheatgrass, spirulina, chlorella.
-- **What it does not imply:**
-  - Nothing about smoothness or taste. There is no approved claim for either.
-  - Nothing about energy, immunity, weight or a body changing.
+**1. Moment plan**
+- **Moment:** The buyer already knows the other greens products, so the picture shows the painted change caught halfway. A shelf's worth of painted greens builds up in see-through glazes and gathers into one small Sprout pouch. Three layers are finished and the fourth is still being laid down.
+- **Show job:** Build (many parts adding up).
+- **Technique:** Glazing, wet-on-dry. There are four see-through layers, and each overlap is a shade deeper than the one beneath it. The pouch itself is painted crisp.
+- **Sentence the picture implies:** "One small pack holds a lot of different greens."
+- **Source:** The approved claim "60+ ingredients, 21 vitamins & minerals, and 6g fiber" in 1 pack. Every greens ingredient painted is on your list: kale, spinach, spirulina, chlorella, wheatgrass and broccoli.
+- **Left out on purpose:**
+  - Beet, acai, goji and pomegranate are left out because red and purple glazed over green turns brown.
+  - The painting makes no texture claim, so it says nothing about grit or chalk.
+  - No energy, immunity, weight or body change is shown.
 
-## 2. Layout
-- **Size:** 4:5, 1080 x 1350.
-- **Zone map, top to bottom:**
+**2. Layout: 4:5, 1080 x 1350**
+- **0–24% (quiet area):** Bare warm-cream paper. It holds the headline and the small line, and there is no paint in it.
+- **24–60% (picture):** Glazed greens in overlapping translucent bands that sweep down and inward. The fourth glaze is half laid and its edge is still wet.
+- **50–88% (product):** The Sprout pouch, upright and slightly right of centre, with the crispest edges in the frame. The bands of greens funnel down into its top.
+- **88–100% (solid band):** A flat forest green #00582D band holding the offer line and the button.
+- **1:1 version (1080 x 1080):** Recompose it rather than cropping. Quiet area top 0–22%, glazes 20–55%, pouch 45–86%, green band 86–100%. Shrink the glaze bands, not the pouch.
 
-| Zone | Height | Contents |
-|---|---|---|
-| 0–25% | Quiet area | Bare cream paper. Holds the headline and the claim line. |
-| 25–58% | Picture | The four glazed layers of greens, tapering down toward the pouch. |
-| 58–87% | Product | The Sprout pouch upright and centred, about 40% of frame width. It sits on bare paper with the deepest glaze just behind its top edge, and has the crispest edges in the frame. |
-| 87–100% | Offer band | A solid forest green #00582D band with the offer line. |
+**3. Words on the image**
+- **Headline (7 words):** "A whole shelf of greens. One pack."
+  - Forest green on the cream quiet area, about 64 px.
+- **Small line:** "60+ ingredients, 21 vitamins & minerals, and 6g fiber in 1 pack"
+  - Source: approved claim, word for word.
+  - Forest green on the cream quiet area, 30 px or larger.
+- **Offer:** "$29.99 first order with text sign-up. Renews at $49.99 every 4 weeks."
+  - Source: your offer and its terms.
+  - Cream on the green band, 30 px or larger, on two lines.
+- **Button:** "Shop Sprout"
+  - Sunflower yellow #FFCC2E pill with forest green text, or yellow text straight on the green band.
 
-- **1:1 (1080 x 1080) recompose:** Do not stretch the 4:5 version.
-  - 0–24%: headline and claim
-  - Left 0–55%, from 24% to 86%: the glazes, painted wider and shorter
-  - Right 50–95%, from 24% to 86%: the pouch
-  - 86–100%: offer band
+**4. Image prompt**
 
-## 3. Words on the image
-1. **Headline (7 words):** A whole shelf of greens. One pack.
-   - This is a plain metaphor. It is backed by the listed greens and the 60+ ingredients claim.
-2. **Claim line:** 60+ ingredients, 21 vitamins & minerals, and 6g fiber in 1 pack
-   - Source: the approved claim, word for word.
-3. **Offer line:** $29.99 first order with text sign-up. Renews at $49.99 every 4 weeks.
-   - Source: the brand offer and its terms.
+> A painted deep forest-green glossy stand-up pouch of greens powder, upright in the lower centre-right of the frame, painted crisp and sharp-edged in wet-on-dry watercolour, with the crispest edges in the whole picture. Above and around it, a whole shelf's worth of painted watercolour greens: painted kale leaves, painted spinach leaves, painted broccoli florets, painted wheatgrass blades, and painted blue-green swirls of spirulina and chlorella. They are arranged as four overlapping translucent glazed bands that sweep down and funnel into the top of the pouch. Each overlap is a shade deeper green. Three glazes are dry and the fourth is half laid, its leading edge still wet and shining. Setting: plain warm-cream watercolour paper, no surface or background objects. Paint: cold-press watercolour paper with light granulation in the greens. Analogous palette only: sap green, viridian blue-green, yellow-green, plus the pouch's deep forest green and sunflower yellow. No red or purple. Light: soft, even daylight, with the bare paper as the brightest light. Framing: 4:5 vertical. The top quarter of the frame is completely bare cream paper with no paint. A plain flat area runs along the bottom edge. Painted pouch label: a large yellow wordmark "Sprout", a small yellow bear face top right, and "28 Daily Packs" at the bottom.
 
-There is no button on the image. The Instagram CTA button carries it, so the image has 2 items to read besides the headline.
+**Avoid field:** photograph, 3D render, plastic, brush, hand of a painter, desk, text, letters, red, purple, brown, person, face, child.
 
-## 4. Image prompt
-> A painted watercolour stand-up pouch of greens powder standing upright, glossy deep forest green, with a big painted sunflower-yellow wordmark and a small painted yellow bear face in the top right corner. Above the pouch, painted watercolour greens build up in four transparent glazed layers:
-> - pale yellow-green painted wheatgrass blades at the top
-> - then painted spinach leaves
-> - then painted kale and broccoli florets
-> - then a deep blue-green painted wash where the layers meet the top of the pouch
->
-> Each overlap is visibly a shade deeper, and the topmost layer is still a pale first glaze.
->
-> No setting, only bare white-cream watercolour paper. Transparent watercolour glazing, wet-on-dry, on smooth hot-press paper with clean hard-edged layers and no granulation. Palette: forest green, sap green, cool blue-green, sunflower yellow.
->
-> Soft even light, with the bare paper as the brightest light. Vertical 4:5 framing:
-> - The top quarter of the frame is empty bare cream paper.
-> - The greens fill the middle third.
-> - The pouch is centred in the lower third with the sharpest, crispest edges in the image.
-> - A plain empty strip runs along the bottom 13%.
->
-> Label lines: "Sprout", "28 Daily Packs".
-
-**Avoid field:** photograph, 3D render, plastic, brush, hand of a painter, desk, powder, dust, scoop, glass, spoon, berries, beetroot, text, person.
-
-## 5. Post words
-- **Primary text:** Gave up on greens powders? One Sprout pack holds 60+ ingredients, 21 vitamins & minerals, and 6g fiber, and your first order is $29.99 with text sign-up, renewing at $49.99 every 4 weeks.
-- **Headline field:** First order $29.99 with text sign-up
+**5. Post words**
+- **Primary text:** "Kale, spinach, spirulina, broccoli and more in one small daily pack: 60+ ingredients, 21 vitamins & minerals, and 6g fiber in 1 pack. First order $29.99 with text sign-up, then $49.99 every 4 weeks."
+- **Headline field:** "A whole shelf of greens, one pack"
 - **Button:** Shop Now
 
-## 6. Edit step
-1. **Label overlay:** Cut the real pouch out of the front photo. Lay it over the painted pouch, matched to its size and angle. Feather only the outer edge so that "Sprout", the bear face and "28 Daily Packs" are the real ones, letter for letter. Use the side and top photos to check the pouch shape and gusset.
-2. **Placing the words:**
-   - Headline: forest green #00582D, about 64 px, centred on the bare paper at 6–15%.
-   - Claim line: forest green, 32 px, at 16–23%.
-   - Offer line: warm cream #FFF7DF, 30 px, centred in the green band at 87–100%.
-   - Keep everything off the glazes. Never set yellow type on cream.
-3. **Contrast check:**
-   - Forest green on cream: about 8.0:1. Passes.
-   - Cream on forest green: about 8.0:1. Passes.
-   - If the paper reads darker than #FFF7DF in the render, sample it and recheck that it stays at 4.5:1 or more.
-4. **Glance check:** View it at phone size for 2 seconds. A stranger should be able to say "Sprout greens pack, lots of greens in one." Before it runs, check the price and terms against the live offer that day.
+**6. Edit step**
+- **Real pack overlay:** Lay the real pouch, cut out from the front photo, over the painted one. Match its size and angle so "Sprout", the bear face and "28 Daily Packs" are exact. Keep a soft painted edge or shadow so it sits in the painting.
+- **Where the words go:** The headline and small line go on the top cream quiet area. The offer and button go on the flat #00582D band. If paper grain shows behind the headline, lay a flat #FFF7DF patch under it, so no words sit on texture.
+- **Contrast check:**
+  - Forest green #00582D on cream #FFF7DF: about 8.1:1, passes.
+  - Cream on forest green: about 8.1:1, passes.
+  - Sunflower yellow #FFCC2E on forest green: about 5.7:1, passes.
+  - Never use yellow on cream: it fails.
+  - Re-check the final exported file.
+- **Final checks:**
+  - Check the price and terms against the live offer on the day the ad runs.
+  - Run the 2-second phone glance test: can a stranger name the product and the idea?
 
-## 7. MISSING
-- MISSING: the pouch label text word for word. Is "Low Sugar" printed on the front? If so, it is the third label line, and the overlay must show it.
-- MISSING: the full ingredient list. Only "includes" was given, so nothing beyond the listed greens is painted.
-- MISSING: the offer end date and the full sign-up and cancel terms.
-- MISSING: an approved claim on texture or taste (for example, smooth or not chalky). Without one, the "gritty/chalky" objection is not answered in words or paint.
+**7. Score: 83/100 (5 of 6 checks)**
+- Missed: "Product has its real label." Your photos didn't come through, so I couldn't check the pouch's shape, colours or label text against them. This passes once the overlay is made from the real photos.
+
+**8. Missing**
+- MISSING: product photos (front, side, top). They didn't come through, so please re-send them. The label and shape above come from your description only.
+- MISSING: the full ingredient list. Only the listed greens are painted.
+- MISSING: the offer's end date.
+- MISSING: whether "Low Sugar" is printed on the pouch, and where. It isn't painted and isn't used as a claim.
+
+**To make the picture:**
+- **ChatGPT (GPT Image) or Gemini (Nano Banana):** Paste the prompt into a chat and ask for the picture. Free plans have tight daily limits.
+- **Codex:** It can make the picture on a paid ChatGPT plan.
+- **Higgsfield:** Paste the prompt into its image tool, or connect Higgsfield to Claude so Claude makes it there.
+- **Claude Code:** If you save an API key as `OPENAI_API_KEY` or `GEMINI_API_KEY`, I can send the prompt to that image API and save the file. Keys are at platform.openai.com/api-keys (OpenAI) or aistudio.google.com/apikey (Google). OpenAI or Google bills each picture.
 ```

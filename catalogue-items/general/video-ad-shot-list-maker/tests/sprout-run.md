@@ -1,23 +1,27 @@
 # Test run on Sprout, 2026-10-19
 
-Result: **pass**. Ran on claude-opus-5-5 (effort medium), graded by claude-fable-5-1. Judge list: 6 of 6 met. Invented facts: 0.
+Result: **fail**. Ran on claude-opus-5-5 (effort medium), graded by claude-fable-5-1. Judge list: 5 of 6 met. Invented facts: 0.
 
-A tight, filmable 5-shot plan that honours the brand's open-the-pack rules, keeps the pouch untorn and hands over a clean approval point. The owner must still approve and come back for frame prompts, clip prompts and the edit list, and some MISSING items (gummy bears, how it is eaten) were actually answerable from the brand file.
+The shot table is tight, correct and shoot-ready: timings match the brisk pace, every cut changes angle and size, the pack is torn straight across and tipped into a palm as the brand requires, and every unknown is flagged MISSING rather than guessed. It stops at approval 3 as the skill instructs, so the owner gets no clip prompts, edit list or score yet, which leaves criterion 5 undemonstrated.
+
+## Fix
+
+Resolve the conflict between 'Stop for approval after stages 1, 3 and 4' and an output shape and judge list that expect Stage 5: either state that when lock lines arrive pre-approved the run may draft Stage 5 as 'provisional pending approval 3', or trim the judge list and output shape to what Stage 4 produces.
 
 ## Judge list
 
-- Met: Used approved lock lines or asked; no face invented inside a clip
-  "Lock lines used, as approved from the storyboard skill" repeated verbatim; no clip prompts written, so no face invented.
-- Met: Shot 1 is mid-action, no walk-in, sit-down or hello
-  "Already mid-lift, his right hand finishes raising the daily pack to chest height as he speaks to camera"
-- Met: Every cut changes both angle and size
-  medium/eye level → ECU/overhead → CU/low → medium/high OTS → wide/profile: 4 sizes, 5 positions, both change at each cut.
-- Met: One action per shot, described as motion; product appears only on its words
-  Tear and tip split into shots 2 and 3; pack enters on "one little pack a day". Minor: shot 2 frame note says fingers "stay off the printing".
-- Met: Clip prompts describe motion only
-  "Held for approval 3 of 3." No prompts written yet, per the skill's rule to stop after stage 4; nothing restated.
-- Met: Shot times match words at stated pace within 10%
-  "22 words, brisk at 3.0 words a second, which is 7.3 s against an 8.0 s clip"; shots sum 1.8+1.2+1.4+2.0+1.6=8.0.
+- Met: Used approved lock lines or stopped and asked; no face invented inside a clip
+  "Identity: man about 32, short dark curly hair..." copied verbatim; "I wrote no new cast or sheets here."
+- Met: Shot 1 is already mid-action; no walk-in, sit-down or hello
+  Shot 1: "his right hand, already rising as the shot opens, lifts the pack to chest height"
+- Met: Every cut changes both camera angle and shot size
+  Cut table: "1→2 eye level → high, medium → extreme close-up ... 4→5 overhead → profile, extreme close-up → wide"; 4 sizes, 5 positions.
+- Met: One action per shot, described as what moves; product appears only when words reach it
+  Tear and tip split into shots 2 and 3; pack enters on "It's one little pack a day"; pouch only in storyboard shot 1.
+- Not met: Clip prompts describe the motion, not the whole scene again
+  No clip prompts written: "approve this clip plan... before I write the start and end frames, clip prompts". Stopped at approval 3 as the skill requires, so unverifiable.
+- Met: Shot times add up to the words at the stated pace, within 10%
+  "23 spoken words... brisk at 3.0 words a second, 7.7 s"; shots total 8.0 s (4% over).
 
 ## What went in
 
@@ -41,71 +45,69 @@ prompt, takes a start and an end frame. Look: live action.
 ## What came out
 
 ```text
-## 1. Cast in
+No video tool is connected to this chat, so I'll write the prompts and you make the clips.
 
-**Lock lines used, as approved from the storyboard skill:**
+**1. Cast in**
+- Approvals 1 and 2 of 3: the lock lines and storyboard frame came marked approved. I wrote no new cast or sheets here.
 - **Identity:** man about 32, short dark curly hair, light brown skin, trimmed stubble, plain grey T-shirt.
 - **Product:** glossy deep green stand-up foil pouch, big yellow wordmark, yellow bear face top right, closed at its resealable top. Daily pack torn straight across its top edge only.
 - **Set:** home kitchen counter in the morning, window light from the left; front hallway by the door.
 
-**Hero object for this clip:** the single daily pack, because the line is "one little pack a day." The pouch appears only in shot 1, closed and untouched, soft in the background, to match the storyboard frame. It is not attached in any later shot, so the tool won't try to tear or pour from it.
+**2. Clip plan and film plan**
 
-## 2. Clip plan and film plan
+*Clip plan:* one clip, 8.0 s.
+- Clip 1 (0.0–8.0): the full script, four sentences.
+- The voice ends at about 7.7 s. The last 0.3 s is the tail of the walk in shot 5, not a held picture.
 
-**Clip plan:** 1 clip, 8.0 s. The lines fit one clip at brisk pace, so there is no split.
+*Film plan:*
+- **Kitchen counter (shots 1–4):** morning window light from the left. He picks up one daily pack, tears it, tips the contents into his palm and sets the empty pack down.
+- **Front hallway by the door (shot 5):** the cutaway that pictures "no water, no shaker." He eats them on his way out with nothing in his other hand.
+- **Shot 1 is the storyboard frame:** him at the counter with the pouch beside him.
+- **The pouch:** it appears only in shot 1, as where the pack came from. After that the daily pack is the object.
+- **What we see per idea:**
+  - "One pack a day": one pack lifted.
+  - "Tear / tip": hands.
+  - "Twenty-one… in there": the contents in his palm.
+  - "No water, no shaker": eating them while walking out.
 
-**Film plan:**
-- **Main place:** the kitchen counter in morning light from the left. He is already holding a daily pack when the clip opens, and the closed pouch sits behind him on the counter.
-- **Cutaway place:** the front hallway by the door. It pictures "no water, no shaker": he eats on the move with no glass and no shaker anywhere.
-- **What we see for each idea:**
-  - "one little pack": the daily pack in his hand.
-  - "tear the top": the straight tear across the top edge.
-  - "tip them out": the contents landing in his palm.
-  - "twenty-one vitamins and minerals in there": the palmful lifted into the window light.
-  - "no water, no shaker": he tosses them into his mouth mid-stride, heading out.
-- **Key moment kept from the storyboard:** him at the counter with the pouch beside him (shot 1).
-- **Cast across cuts:** 1 person, 2 objects (daily pack and contents), plus the pouch in shot 1 only.
-
-## 3. Shot table: Clip 1
+**3. Shot table: Clip 1**
 
 | # | start-end | size | camera position | move and where it stops | fills the frame | place | objects | one action | words under it |
 |---|---|---|---|---|---|---|---|---|---|
-| 1 | 0.0–1.8 | medium | eye level, straight across the counter at his chest | slow push in, stops at mid-chest | his face and the daily pack held at chest height in his right hand. Foreground: rim of a coffee mug, steam rising. Background: closed pouch, soft, and the window | kitchen counter | daily pack, closed pouch, mug | Already mid-lift, his right hand finishes raising the daily pack to chest height as he speaks to camera | "It's one little pack a day." (on camera) |
-| 2 | 1.8–3.0 | extreme close-up | overhead, looking straight down at his hands over the counter | locked off | the top edge of the daily pack. Left hand grips the lower half, right thumb and finger pinch the top corner, and his fingers stay off the printing | kitchen counter | daily pack | His right hand tears straight across the top edge in one firm pull, and the strip ends pinched between his fingers | "Tear the top," (voice-over) |
-| 3 | 3.0–4.4 | close-up | low, camera resting on the counter by his left wrist, looking up | locked off | his open left palm and the torn pack tilted above it. Foreground: counter edge, soft. Background: window light flaring left | kitchen counter | torn daily pack, contents | His right hand tips the torn pack, and the contents slide out and land in his left palm | "tip them out." (voice-over) |
-| 4 | 4.4–6.4 | medium | high, over his right shoulder, looking down past his ear | small push in, stops with the palm centred | his left palm full of contents at chest height, the counter below, and the torn pack in his right hand at the frame's edge. Foreground: his shoulder and curls. Moving layer: window light across the counter | kitchen counter | contents, torn pack | His left hand lifts the open palm a hand-width up into the window light | "Twenty-one vitamins and minerals in there." (voice-over) |
-| 5 | 6.4–8.0 | wide | eye level, profile, from the hallway wall | track alongside him, stops at the front door | the whole hallway: him mid-stride and the solid front door ahead. Foreground: a jacket on a wall hook, swaying. Background: daylight under the door | front hallway | contents in his left hand, torn pack in his right | Mid-stride, his left hand tosses the palmful into his mouth and drops back to his side | "No water, no shaker." (voice-over) |
+| 1 | 0.0–2.0 | medium | eye level, across the counter facing him | slow push in, stops at chest-up | his face and the pack held at chest height. Foreground: the closed pouch soft at the left edge. Background: the window, with the curtain edge stirring | kitchen counter | daily pack (front to camera, fingers on the bottom edge clear of print), closed pouch | his right hand, already rising as the shot opens, lifts the pack to chest height while he speaks to camera | "It's one little pack a day." |
+| 2 | 2.0–3.2 | extreme close-up | high, looking down over his hands | locked off | the top edge of the pack between two pinching hands. Foreground: the counter edge. Background: the soft counter top | kitchen counter | daily pack | both hands tear the top straight across in one firm pull, ending with the strip held in his left fingers | "Tear the top," |
+| 3 | 3.2–4.6 | close-up | low, camera on the counter by his left elbow looking up | slight hand-held drift, settles on the palm | the tilted torn pack and his cupped left palm. Foreground: the fruit bowl rim soft. Background: window light | kitchen counter | torn daily pack, contents | his right hand tips the torn pack and the contents drop into his left palm | "tip them out." |
+| 4 | 4.6–6.3 | extreme close-up | overhead, straight down | locked off | his open left palm with the contents spread, and the counter beside it. Foreground: none. Background: counter grain. Moving layer: his right hand | kitchen counter | contents in palm, empty torn pack | his right hand lays the empty torn pack flat on the counter beside the open palm | "Twenty-one vitamins and minerals in there." |
+| 5 | 6.3–8.0 | wide | profile, from the hallway wall | track alongside him, stops at the front door | the whole hallway, with him mid-stride toward the door. Foreground: a coat on a hook near the lens, swaying as he passes. Background: the front door | front hallway | contents in left palm, right hand empty | his left hand tips the contents from his palm into his mouth as he walks | "No water, no shaker." |
 
-**Variety check:**
-- **Sizes used:** medium, extreme close-up, close-up, wide.
-- **Positions used:** eye level, overhead, low, over the shoulder from high, profile.
-- **Moves:** shots 1, 4 and 5 (3 of 5).
-- **Cuts:** every cut changes both size and angle by at least 30°.
+**Voice line**
+- 23 spoken words ("twenty-one" counted as two), brisk at 3.0 words a second, 7.7 s.
+- We see him say the first sentence on camera in shot 1. His voice runs over shots 2–5.
 
-**Voice line:** 22 words, brisk at 3.0 words a second, which is 7.3 s against an 8.0 s clip (within 10%). He speaks on camera in shot 1. The same voice continues over shots 2 to 5. Read the line aloud with a timer and trust that over the count.
+**Continuity note (end frame)**
+- He is in the front hallway at the door, profile, left hand dropping from his mouth, both hands empty.
+- The empty torn pack is on the kitchen counter, out of this frame.
+- The pouch is not in the hallway.
 
-**Continuity note:**
-- **Shot 1:** the pouch is on the counter, closed.
-- **Shots 2 to 4:** the pouch is out of frame.
-- **Shots 3 to 5:** the torn daily pack stays in his right hand.
-- **Clip end:** he is in the hallway at the front door, in profile, mouth closed and chewing, left hand empty at his side, torn pack in his right hand, grey T-shirt unchanged. Shot 5 keeps moving and does not hold, because it is not the final shot of the ad.
+**Cut checks**
 
-**Stopped at approval 3 of 3.** Approve or correct the clip plan and shot table. The start and end frame prompts, the clip prompts and the edit list follow after approval.
+| Cut | Angle | Size |
+|---|---|---|
+| 1→2 | eye level → high | medium → extreme close-up |
+| 2→3 | high → low | extreme close-up → close-up |
+| 3→4 | low → overhead | close-up → extreme close-up |
+| 4→5 | overhead → profile | extreme close-up → wide, plus a place change |
 
-## 4. Start and end frame prompts
-Held for approval 3 of 3.
+This uses 4 sizes and 5 positions. Moves are in 3 of 5 shots.
 
-## 5. Clip prompts
-Held for approval 3 of 3.
+**MISSING**
+- `MISSING:` photo of one daily pack (front and back). The lock lines describe only its torn top, so shots 1–4 couldn't be checked against it.
+- `MISSING:` what comes out of the pack and a photo of it out of the pack: gummies, tablets or other, plus shape, colour and count. "Tip them out" is written as the contents falling into his palm.
+- `MISSING:` the brand's own words for how it's opened and taken. The "tear straight across, tip into palm, eat on the go" steps are my reading of the script.
+- `MISSING:` sign-off on the "Twenty-one vitamins and minerals" claim.
+- `MISSING:` the brand's "never show" list.
+- `MISSING:` the live offer, and whether this is the last clip of the ad. That decides if shot 5 may hold.
+- **Pouch photo:** attach it to shot 1 only. Sending the pouch as "the product" in later shots risks the tool tearing the pouch instead of the daily pack.
 
-## 6. Edit list
-Held for approval 3 of 3.
-
-- MISSING: confirmation that the avatar card, character sheet, product sheet and set sheet images are marked approved (only the lock lines were supplied).
-- MISSING: what comes out of the daily pack (gummies? shape, colour, how many per pack) and a product photo of the contents in a palm.
-- MISSING: a product photo of one daily pack on its own, out of the pouch, front and torn. This is the photo to attach for shots 1 to 5, not the pouch.
-- MISSING: whether the daily pack has printing on its face, so the hands can be kept off it.
-- MISSING: whether the storyboard frame's pouch must stay in shot 1, or can be cut (the pouch is not named in these lines).
-- MISSING: whether this clip is the final clip of the ad (it decides whether shot 5 may hold).
-- MISSING: the brand file, covering how the pack is opened and eaten, what never to show, and the live offer for the end card.
+Approval 3 of 3: approve this clip plan and shot table, or send changes, before I write the start and end frames, clip prompts, edit list and score.
 ```

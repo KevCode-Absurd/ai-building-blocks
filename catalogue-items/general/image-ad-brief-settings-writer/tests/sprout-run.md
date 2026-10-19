@@ -1,21 +1,25 @@
 # Test run on Sprout, 2026-10-19
 
-Result: **pass**. Ran on claude-opus-5-5 (effort medium), graded by claude-sonnet-5-5. Judge list: 5 of 5 met. Invented facts: 0.
+Result: **fail**. Ran on claude-opus-5-5 (effort medium), graded by claude-sonnet-5-5. Judge list: 5 of 5 met. Invented facts: 0.
 
-The run pasted the library snippets word for word with one choice per setting. It also caught the phone-photo clash with brand styling and the headline. It invented nothing and hands the owner a clean brief with a clear warning.
+The snippets are pasted correctly, with one choice per setting and a correct conflict call. But the output departs from the required shape, which has a SCORE section and explicit headings, and it leaves a real conflict unresolved when it could have chosen.
+
+## Fix
+
+Add a rule in 'What you hand back' to use the exact headings BRIEF, ALWAYS ON, CONFLICT CHECK, MISSING and SCORE, in that order, and to use the table's one-line verdict only, with no extra suggestions.
 
 ## Judge list
 
 - Met: Every snippet matches the library word for word
-  All five snippets and the always-on rules match the library text exactly, e.g. 'Use the sent colours and fonts exactly.'
+  All five chosen snippets, e.g. "Use the sent colours and fonts exactly. Choose layout and picture type freely.", match the library.
 - Met: One choice per setting
-  Five settings, each with one choice: Shown clearly, Phone photo, Direct, Colours and fonts, Headline only.
-- Met: Conflict check names fighting pair and which wins
-  'Phone photo fights with both colours and fonts and headline only, and phone photo wins.'
+  Five settings, one choice each: Shown clearly, Phone photo, Direct, Colours and fonts, Headline only.
+- Met: Conflict check names fighting pairs and says which wins
+  "Phone photo fights with colours and fonts and with headline only. Phone photo wins."
 - Met: Each MISSING line names a specific piece of material
-  'MISSING: none' - all material needed was supplied, though no photo shows the pack torn open.
-- Met: Snippets don't name brand, product or AI tool
-  Snippets are generic; Sprout appears only in the brief.
+  "MISSING: none." Nothing needed was absent, so no line was required.
+- Met: Snippets name no brand, product or AI tool
+  Snippets are generic; only the brief names Sprout.
 
 ## What went in
 
@@ -44,9 +48,10 @@ gradient. Colours #00582D, #FFF7DF, #FFCC2E. Font: Work Sans.
 ## What came out
 
 ```text
-**Brief:** One image ad for Sprout greens gummies, for busy parents buying for themselves. The moment: the morning rush, keys in hand. Buyer's words: "So easy to grab and eat on my way to the billion things I have to do as a mom." (review 15)
+Brief: one image ad for Sprout greens gummies, for busy parents buying for themselves. The moment: the morning rush, keys in hand. Buyer's words: "So easy to grab and eat on my way to the billion things I have to do as a mom." (review 15)
 Allowed claim: "60+ ingredients, 21 vitamins & minerals, and 6g fiber" in 1 pack. Show it right: the daily pack is torn straight across its top edge, gummies pour into a palm.
 Offer: $29.99 first box with the text sign-up, then $49.99 every 4 weeks. 30-day money-back guarantee, first order only.
+
 Material: photo of gummies in a hand, photo of the pouch on a soft gradient. Colours #00582D, #FFF7DF, #FFCC2E. Font: Work Sans.
 
 **Always on**
@@ -71,6 +76,9 @@ Use the sent colours and fonts exactly. Choose layout and picture type freely.
 **Words on the picture: Headline only**
 Plan one headline that carries the idea with the picture, short enough to read at a glance, and nothing else in type.
 
-CONFLICT CHECK: Phone photo fights with both colours and fonts and headline only, and phone photo wins. A better fix is to switch the finish to studio, or move the headline and offer into the text around the ad.
-MISSING: none
+Conflict check: Phone photo fights with colours and fonts and with headline only. Phone photo wins. A better fix is to switch the finish to studio, or to move the headline and the offer into the text around the ad.
+
+MISSING: none.
+
+Score: 100/100 (4 of 4 checks)
 ```

@@ -2,22 +2,22 @@
 
 Result: **pass**. Ran on claude-opus-5-5 (effort medium), graded by claude-fable-5-1. Judge list: 6 of 6 met. Invented facts: 0.
 
-A clean, usable 30-second AI-presenter script that sticks to the one approved number, the sourced review quote and the offer exactly as stated, with the AI disclosure, handling rules and renewal price all handled. The owner gets a shootable shot list and a sensible gap list (review date, permission, whether the pack label shows '60+'), with nothing made up.
+A tight, usable 30-second AI-presenter script that uses only the approved claim, the sourced quote and the offer exactly as stated, with the renewal price said out loud and the AI tag kept on screen throughout. The one soft spot is "Here's today's", which hints the made-up presenter takes it daily; swapping to "Here's one pack" would remove any doubt.
 
 ## Judge list
 
-- Met: Read aloud it sounds said; no line suits a polished voice-over
-  "That greens powder you stopped mixing?" / "It's on [Sprout]'s site. First order's $29.99 with text sign-up" — texting register, contractions, fragments.
-- Met: Story line has a real 'but'; hook opens on it, no greeting, no brand name
-  Spine: "but you've quit powders before and figure a gummy can't hold enough"; hook "That greens powder you stopped mixing?" names no brand.
-- Met: One number in the spoken lines, from the facts, seen on screen
-  "Sixty-plus ingredients in each" (approved claim), proof moment 0:07–0:10 pack label to lens plus text "60+ ingredients / pack".
-- Met: Show beat is the longest and followable with sound off
-  Show 0:07–0:18 (11 s) vs result 7 s, hand-off 6 s; label to lens, tear across top, tip into palm, eat.
-- Met: Every first-person line truthful for the speaker or a blank
-  Presenter speaks in 'you'; only first-person is the sourced quote: "A review on their site: '[Sprout] has been the one thing I've been able to stick to.'"
-- Met: Word count fits the length, about 70 words for 30 s
-  Spoken lines total roughly 74–76 words; output states "Spoken words: 76 ... about 30.4 s" for a 31 s script.
+- Met: Read it aloud. It sounds said, and no line would suit a polished advert's voice-over.
+  "Here's today's. Tear straight across, tip them out, and… that's it." Fragments, contractions, no hype; hand-off is plain, slightly stiff but textable.
+- Met: The story line has a real "but", and the hook opens on it with no greeting and no brand name.
+  Spine: "...but you've quit powders before and a gummy can't seem to hold enough..."; hook "So you've quit greens powder before." No hello, no Sprout.
+- Met: There's one number or detail in the spoken lines, it's in your facts, and you can see it on screen.
+  Spoken "Sixty-plus ingredients per pack" (approved claim), on screen "60+ ingredients per pack" at 0:15–0:17; price terms excluded as the skill allows.
+- Met: The Show beat is the longest, and you could follow it with the sound off.
+  Show 0:07–0:17 (10 s) vs result 7 s, hand-off 6 s; tear, tip, eat, empty counter, label to lens read without sound.
+- Met: Every first-person line is something the speaker could truthfully say, or a blank for them.
+  No first-person lines; the only "I" is inside the sourced quote on a card. Caveat: "Here's today's" softly implies the AI presenter's own daily routine.
+- Met: The word count fits the length, about 70 words for 30 seconds.
+  Recounted spoken lines: 6+10+20+17+14 = 67 words, matches output's "67 spoken words take about 27 s".
 
 ## What went in
 
@@ -45,95 +45,88 @@ every 4 weeks.
 ## What came out
 
 ```text
-## Spine
-You want greens every morning, **but** you've quit powders before and figure a gummy can't hold enough to replace one, **so** you tear open one day's pack and eat it on the way out the door.
-
-## Script (about 31 s, AI presenter)
+**Spine:** You want greens every day, but you've quit powders before and a gummy can't seem to hold enough, so here's today's pack torn open, tipped into a palm and eaten, with 60+ ingredients, no water and no mixing.
 
 | Beat | Time | Says | On screen | Picture |
 |---|---|---|---|---|
-| 1. Hook | 0:00–0:03 | "That greens powder you stopped mixing?" | still in the cupboard? | Kitchen counter, weekday morning. Presenter slides an unbranded powder tub to the back of the counter. The open [Sprout] pouch is already in her other hand, not named yet. |
-| 2. Doubt | 0:03–0:07 | "You'd think a gummy can't hold enough to replace it." | can't hold enough? | Pulls one pack from the pouch and gives a small knowing look to the lens. |
-| 3. Show **[DEMO]** | 0:07–0:18 | "One day's pack. Sixty-plus ingredients in each, right on the label. Tear across the top, tip them into your hand, eat. No shaker, no water." | **60+ ingredients / pack**, then: no water · no mixing | **PROOF MOMENT (0:07–0:10):** the pack is held to the lens with the label readable. She tears straight across the top, tips the gummies into her palm and eats them with a neutral face and no taste reaction. |
-| 4. Honest result | 0:18–0:25 | "A review on their site: '[Sprout] has been the one thing I've been able to stick to.'" | Quote card: "[Sprout] has been the one thing I've been able to stick to." (review, [Sprout] site, [date]) | Sealed pouch held at chest height with the label to camera. |
-| 5. Hand-off | 0:25–0:31 | "It's on [Sprout]'s site. First order's $29.99 with text sign-up, then it's $49.99 every four weeks." | End text: $29.99 first order with text sign-up · then $49.99 every 4 weeks | She picks up her keys and bag. The pouch is left on the counter with the label to camera. |
+| 1 Hook | 0:00–0:03 | "So you've quit greens powder before." | quit greens again? | Kitchen counter, morning window light. Keys in left hand. The right hand lifts the pouch into frame and thumbs open the resealable top. |
+| 2 Doubt | 0:03–0:07 | "You figure a gummy can't hold enough to replace it." | enough in a gummy? | Closer on face, one eyebrow up. The right hand pulls one pack from the pouch and holds it up. |
+| 3 Show **[DEMO]** | 0:07–0:17 | "Here's today's. Tear straight across, tip them out, and… that's it. No water, nothing to mix. Sixty-plus ingredients per pack." | no water · no mixing / **60+ ingredients per pack** | Hands from above: tear straight across the top, tip the gummies into the left palm, eat. Wide shot with no glass or shaker on the counter. **PROOF MOMENT (0:15–0:17):** the right hand holds the pouch label to the lens. |
+| 4 Honest result | 0:17–0:24 | "A review on their site: '[Sprout] has been the one thing I've been able to stick to.'" | Quote card with source: "review, brand site" | Cut away from the face. The pouch sits upright on the counter with the torn pack beside it. Voice only. |
+| 5 Hand-off | 0:24–0:30 | "Twenty-nine ninety-nine first order with text sign-up. Renews at forty-nine ninety-nine every four weeks." | $29.99 first order with text sign-up · renews at $49.99 every 4 weeks · [URL] | Back to face. They pick up the keys, take a half-step toward the door and end with a small shrug. |
 
-There are no creator blanks because the presenter is an AI and states no personal result.
+**Anchor:** "60+ ingredients" per pack. Source: approved claims. It is said once at 0:15 and seen on the label or on-screen text at 0:15–0:17. The 21 vitamins & minerals and the 6g fiber are left out on purpose.
 
-## Anchor, length, disclosure
-- **Anchor:** "60+ ingredients" per pack. Source: the approved claim "60+ ingredients, 21 vitamins & minerals, and 6g fiber" per pack. It is spoken once and seen on the label and in on-screen text. The other two figures are left out so it doesn't read like a brochure.
-- **Length from the hands:** there are 5 use steps (open the pouch, take a pack, tear the top, tip into palm, eat). At 5 × 4 s, plus 8 s for hook and doubt and 12 s for result and hand-off, that comes to **40 s**.
-- **Fitting 30 s:** the "open the pouch" step is dropped, so the pouch starts already open. Taking the pack happens during the doubt line. Eating overlaps the "No shaker, no water" line. This version was written fresh at this length.
-- **Spoken words:** 76. At 2.5 words a second that is about **30.4 s**, landing at about 31 s with action pauses.
-- **Disclosure:**
-  - Switch on the platform's AI-generated content label.
-  - Show a small "AI presenter" line on screen from 0:00 to 0:31. Place it upper-left, just below the top button strip.
+**Length**
+- **From the hands:** there are 5 steps (open pouch, take pack, tear, tip, eat). That is 5 × 4 s = 20 s, plus 8 s for hook and doubt and 12 s for result and hand-off, which gives 40 s.
+- **To fit 30 s:** opening the pouch runs under the Hook and taking a pack runs under the Doubt. The Show beat keeps tear, tip, eat and the label.
+- **From the words:** 67 spoken words take about 27 s at 2.5 words a second. That leaves about 3 s of action-only time inside the Show beat and stays under the 70-word cap for 30 s.
 
-## Shot list
-Format: 9:16. The phone is propped against the backsplash at chest height, with a second top-down angle for hand shots. Light comes from the kitchen window only. The kitchen should look lived-in: mug, keys, mail on the counter.
+**Disclosure:**
+- Switch on the platform's AI-generated content label.
+- Show a small "AI presenter" tag for the whole video, at the left edge, just below the top strip.
+- The quote is shown on a card with its source, never as the presenter's own words.
 
-| Time | Shot | Action | Hands |
-|---|---|---|---|
-| 0:00–0:03 | Medium, propped | Pushes the unbranded tub to the back of the counter | Left: pushes tub. Right: holds open pouch, label partly visible |
-| 0:03–0:05 | Tighter on face | Pulls one pack out | Left: pouch. Right: draws out pack |
-| 0:05–0:07 | Top-down | Sets the pouch down | Right: pack. Left: sets pouch on counter |
-| 0:07–0:10 | Close, eye level | **Proof moment:** pack to lens, "60+ ingredients" readable, held still for 2 s | Left: pack to lens. Right: free |
-| 0:10–0:12 | Top-down | Tears straight across the top | Both hands on the pack |
-| 0:12–0:15 | Close | Tips the gummies into her palm | Right: tips pack. Left: open palm |
-| 0:15–0:18 | Medium | Eats from her palm and reaches for keys | Left: palm to mouth. Right: picks up keys |
-| 0:18–0:22 | Medium, face | Quote card appears | Right: sealed pouch at chest, label out. Left: keys |
-| 0:22–0:25 | Slightly closer | Holds the pouch steady | Same as above |
-| 0:25–0:28 | Medium | Slings her bag on | Left: bag strap. Right: sets pouch on counter |
-| 0:28–0:31 | Counter close-up | End text over the pouch | No hands. Pouch stands with label to camera |
+**Shot list**
 
-Placement rules:
-- The face, product and all text stay out of the bottom third and the top strip.
-- Subtitles of every spoken word are added in editing, above the bottom third.
-- On-screen text never repeats a full spoken sentence.
+All shots are 9:16. The phone is propped against the backsplash at chest height, the presenter is right-handed and the only light is the room's.
 
-## How to say it
-- **Tone:** dry and knowing, like texting a friend who also has a tub in the cupboard. Not salesy, not a confession.
-- **Pace:** relaxed. Leave a half-beat pause after the hook, slow slightly on "sixty-plus ingredients", and keep the price line flat and plain.
-- **Setting and wardrobe:** her own kitchen, about to leave. She wears weekday work-casual with a jacket half on, and her bag and keys are on the counter.
-- **Phone:** propped, never handheld during the demo.
-- **Face at the snag:** small raised eyebrows and a half-smile at the lens, the "you know the one" look. No sigh or eye-roll that implies she quit a powder herself.
-- **While eating:** neutral. No "mm", no reaction to taste or effect.
+| Time | Action | Hands |
+|---|---|---|
+| 0:00–0:03 | The pouch rises into frame and the top is opened. | Left: keys. Right: pouch, thumb on the seal. |
+| 0:03–0:07 | Closer cut. One pack is pulled out and held up. | Left: sets the keys down and steadies the pouch. Right: the pack. |
+| 0:07–0:09 | From above: the pack is torn straight across the top. | Both hands on the pack. |
+| 0:09–0:11 | The gummies are tipped into the palm. | Right: tips the pack. Left: open palm. |
+| 0:11–0:13 | Face: eats from the palm, then a small "huh". | Left: brings the palm to the mouth. Right: the empty pack. |
+| 0:13–0:15 | Wide shot of the counter with no glass and no shaker. | Right: the empty pack, lowered. |
+| 0:15–0:17 | **Proof moment:** the label is held to the lens. | Right: pouch. Left: out of frame. |
+| 0:17–0:24 | Product shot: pouch upright with the torn pack beside it, plus the quote card. | No hands. |
+| 0:24–0:30 | Face: picks up the keys and turns toward the door. | Left: keys. Right: free. |
 
-## Two other openings
-**A. Situation (the hassle):**
-"Keys in your hand and you're supposed to shake a powder now?" → "One day's pack. Sixty-plus ingredients in each, right on the label."
+Framing rules for every shot:
+- The face, the product and all text stay in the middle band, out of the bottom third and the top strip.
+- Subtitles of every spoken word are added in editing.
 
-**B. Question (the quitting track record):**
-"Be honest — how many greens powders have you given up on?" → "One day's pack. Sixty-plus ingredients in each, right on the label."
+**How to say it**
+- **Tone and pace:** wry and low-key, at a relaxed talking pace with no push. It should sound like telling a friend while you're on the way out.
+- **Where and what they wear:** a lived-in weekday kitchen. They wear a commute jacket that is half zipped, with a bag on the shoulder.
+- **Phone:** propped up, never handheld during the Show beat.
+- **The snag:** a small knowing wince on "quit… before".
+- **The surprise:** a beat of mild surprise on "and… that's it".
+- **The ending:** the same volume as the open, with no sell in the voice.
 
-## Cast note
-- **Who:** a made-up adult, 30 to 45, who leaves the house for work. She films in her own slightly cluttered kitchen in everyday work clothes.
-- **Why:** she is a peer who has the same rushed mornings as the buyer. She is not an expert or a wellness personality, which fits a buyer who has already quit powders and distrusts hype.
-- **Rules:** she never says she bought, uses or likes the product. The quoted reviewer is never turned into the avatar.
+**Two other openings**
+
+Each is read aloud straight into the first Show line, "Here's today's."
+1. **From the situation (morning rush):** "Keys in your hand, half out the door, and the greens powder's still on the counter." → "Here's today's."
+2. **From a question (mixing hassle):** "What if the reason you quit greens was the mixing?" → "Here's today's."
+
+**Cast note:**
+- **Who:** a made-up adult aged roughly 28 to 40. They look like someone who has bought a greens tub that went unused.
+- **Where and dress:** they film in their own slightly cluttered kitchen (mail, a dish rack, a mug) and are dressed for a weekday commute.
+- **Why:** they match the buyer's moment and doubt without claiming any use.
+- **Never:** cast a real person as this avatar.
 - **Next step:** hand the script and this note to **selfie-style-video-clip-prompt-writer** for the avatar, sheets, storyboard and clips.
-- **If it runs long:** cut "right on the label" first, because the picture shows it. Then cut "No shaker". Never cut the label proof moment or the review quote.
+- **If it runs long:** first cut "No water, nothing to mix", because the picture already shows it. Keep the proof moment and the review.
 
-## Claims, numbers, quotes and gaps
-**Claims and numbers in the script:**
-- **"Sixty-plus ingredients in each."** Approved claim, per pack. Partial use of the approved trio, so confirm the brand allows using one part on its own.
-- **"One day's pack."** From the facts: a pouch of 28 daily packs.
-- **"No shaker, no water."** From the facts: "No water, no mixing."
-- **Doubt line.** A paraphrase of the buyer's doubt. It is not shown in quotation marks.
-  - The script answers the doubt only with the ingredient count. It never says the gummies replace a powder.
-  - Confirm with legal that the doubt line doesn't read as an implied equivalence claim.
-- **Price.** "$29.99 first order with text sign-up, then $49.99 every 4 weeks." This is the stated offer. Check it against today's live offer before publishing.
-- **Never-say list.** Checked: no "fix", no "everything you need", no energy or immunity results, no weight loss.
+**Claims, numbers, quotes and sources**
 
-**Quote:** "[Sprout] has been the one thing I've been able to stick to." Source: review, brand site.
-- MISSING: the review date.
-- MISSING: the reviewer name or handle.
-- MISSING: whether "[Sprout]" is the reviewer's exact wording or an edit. It must be quoted exactly as written.
-- MISSING: written permission to use the review in ads.
+| Item | Source |
+|---|---|
+| "60+ ingredients" per pack | Approved claims |
+| "No water, nothing to mix" | Product facts |
+| "today's" pack (daily packs, 28 per pouch; the 28 is not spoken) | Product facts |
+| "[Sprout] has been the one thing I've been able to stick to." | Review, brand site |
+| $29.99 first order with text sign-up; renews at $49.99 every 4 weeks | Offer as stated by the brand |
+| Never-say list (fix, "everything you need", energy, immunity, weight loss) | None used. "Replace" appears only as the buyer's doubt and is never claimed. |
 
-**Other gaps:**
-- MISSING: confirmation that "60+ ingredients" is printed on the single pack. If it is only on the pouch, hold the pouch to the lens for the proof moment instead.
-- MISSING: anything that must never be shown on camera.
-- `[Sprout]`: brand-name placeholder, kept exactly as supplied.
-- The gummy count per pack is not given, so no number is said and "small handful" is not implied either way.
-- Taste is not in the facts, so nothing is said or acted about it.
+**Gaps**
+- MISSING: whether "60+ ingredients" is printed on the pouch or pack. If it isn't, the proof moment becomes on-screen text next to the held pack and is not called the label.
+- MISSING: the review's date, and written permission to use it in ads.
+- MISSING: the exact brand name, since the quote shows "[Sprout]" in brackets.
+- MISSING: the store URL or where it's sold, for the end text.
+- MISSING: confirmation that the text sign-up offer is live today.
+- MISSING: any packaging that must not be shown on camera.
+
+**Score: 100 / 100** (7 of 7 checks passed, 7 ÷ 7 × 100 = 100). No checks still missed.
 ```

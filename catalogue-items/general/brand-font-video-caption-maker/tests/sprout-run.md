@@ -1,21 +1,30 @@
 # Test run on Sprout, 2026-10-19
 
-Result: **pass**. Ran on claude-opus-5-5 (effort medium), graded by claude-fable-5-1. Judge list: 5 of 5 met. Invented facts: 0.
+Result: **fail**. Ran on claude-opus-5-5 (effort medium), graded by claude-sonnet-5-5. Judge list: 3 of 5 met. Invented facts: 2.
 
-A careful, honest caption plan: the words are locked to the approved script, the groups and character counts are correct, the contrast and minimum on-screen times are properly worked out, and every unverifiable check is marked blocked rather than passed. The owner gets a ready-to-run plan the moment the font file and real clips arrive, with nothing invented.
+The run correctly stopped on the missing font, lengths and frames, and did not fake a pass. But it invented unlabeled pixel zones, broke the output shape, and some caption line breaks are not in natural places.
+
+## Fix
+
+In Step 2, add: break lines at phrase boundaries (e.g. keep "If your greens powder is still half full" together) and require the output headings (STOPPED STEPS, CAPTION GROUPS, STYLE, TIMING TABLE, CHECKLIST, FAULTS, SCORE) exactly; in Step 5 mark pixel figures as assumptions.
 
 ## Judge list
 
-- Met: Every caption matches the script word for word; only number format changed.
-  All 11 groups reproduce the script; only "Sixty-plus" → "60+", "twenty-one" → "21", "six grams" → "6 g" changed.
-- Met: No caption has more than two lines, and each line breaks in a natural place.
-  Max two lines (1a, 1b); "in the cupboard, / this is for you." breaks after punctuation; 1a breaks at subject/verb boundary, natural though not in the skill's listed rule.
-- Met: The font on screen is the brand font, not a default like Arial.
-  "No fallback font will be used." Font marked MISSING and rendering steps stopped rather than substituting.
-- Met: No caption sits under the app's buttons, or on the product, a face or the hands.
-  Band y≈1080–1260 clear of top seventh and bottom third; label/face/hands overlap explicitly marked "Blocked (no clips)" with a fix in fault 5.
-- Met: Anything it couldn't check is marked blocked, not passed.
-  Checklist marks font measurement, cps, safe zones, phone check and .srt as "Blocked"; timing table cells say "blocked".
+- Met: Every caption matches the script word for word; only number format changed
+  Only "Sixty-plus"→"60+", "twenty-one"→"21", "six grams"→"6 g" changed; wording kept, split across clips.
+- Not met: No caption has more than two lines, and each line breaks in a natural place
+  Group 1a breaks "If your greens powder / is still half full" and 1b splits "in the cupboard, / this is for you" oddly; 1a/1b break before a verb/mid-clause.
+- Met: The font on screen is the brand font, not a default like Arial
+  "MISSING: font file ... I won't use a fallback font." No fallback applied.
+- Not met: No caption sits under the app's buttons, or on the product, a face or the hands
+  Proposed zone computed, but stated "blocked until the frames are seen"; placement unverified and bottom edge near y 1240 is untested.
+- Met: Anything it couldn't check is marked blocked, not passed
+  Checklist marks measured, speed, placement, .srt as "Blocked"; score counts them as not passed.
+
+## Invented
+
+- number: 1080×1920 frame; top 275 px, below y 1280, about 140 px right edge (Pixel safe-zone values are not from inputs; presented as the covered areas rather than as assumptions.)
+- number: about 14.4 to 1 (Contrast ratio between cream and forest green is computed from given colours; roughly correct, so fine.)
 
 ## What went in
 
@@ -41,105 +50,110 @@ Logo file: not attached. Runs on Reels and TikTok.
 ## What came out
 
 ```text
+I can't open, edit or export video in this chat, so I can't make the burned-in captions or the .srt file here. Below are the caption plan and checks, ready for your editor.
+
 ## 1. Stopped steps
 
-- `MISSING: font file`: Work Sans Bold .ttf/.otf. This blocks line measurement (step 2), the look and caption size (step 4), the on-phone font check (step 6) and every export (step 7). The groups below are counted by characters only and are provisional until each line is measured with the file. No fallback font will be used.
-- `MISSING: clip length`: there are only planned lengths (10, 5, 5, 5, 10, 5, 5 s), and no clip files are attached. This blocks speech timing (step 3), the reading-speed check, final timeline times, placement against label, faces and hands (step 5), the phone check (step 6) and exports (step 7).
-- `MISSING: logo file`: this blocks any logo or end card, if the selfie-style plan includes one. It does not block captions.
-- Not missing, but blocked: checking the captions word for word against the actual delivered speech needs the clip audio. Until then the approved script is the source.
-- Assumption to confirm when the cut is locked: script line *n* is spoken entirely within clip *n*. If any line crosses a cut, that group splits at the cut.
+- `MISSING: font file`: The Work Sans Bold .ttf/.otf is not attached. This stops line measurement (Step 2 is provisional), the look (Step 4) and the on-screen font check (Step 7). I won't use a fallback font.
+- `MISSING: clip length`: The real lengths of the 7 clips haven't been measured. This stops final timing (Step 3), the final length and the .srt times.
+- `MISSING: clip frames`: There are no clips or screenshots (first, middle and last frame of each clip). This stops placement against the face, label and demo hands (Step 5) and the phone check (Step 6).
+- `MISSING: word timings`: There is no audio and no timed transcript. This stops the start and end time of each group (Step 3).
+- `MISSING: logo file`: Only needed if the selfie-style plan has an end card or logo. If it does, that step is blocked.
 
-## 2. Caption groups per clip (word-locked)
+## 2. Caption groups per clip (word for word)
 
-Only format changes were made: "Sixty-plus" → "60+", "twenty-one" → "21", "six grams" → "6 g". No other words were changed. A bracketed sound cue (e.g. a pack tear in clip 3 or 7) can only be decided after listening, so it is pending.
+The only format changes are "Sixty-plus" to "60+", "twenty-one" to "21" and "six grams" to "6 g". No sound cues are added, because the audio hasn't been heard.
 
-Counts include spaces and punctuation.
+Character counts are by count, not yet measured with the font. They are provisional until the font file is supplied.
 
-| Clip | Group | Line 1 (chars) | Line 2 (chars) |
-|---|---|---|---|
-| 1 | 1a | If your greens powder (21) | is still half full (18) |
-| 1 | 1b | in the cupboard, (16) | this is for you. (16) |
-| 2 | 2a | This is one daily pack. (23) | n/a |
-| 3 | 3a | Tear the top, (13) | n/a |
-| 4 | 4a | tip it into your hand. (22) | n/a |
-| 5 | 5a | 60+ ingredients, (16) | n/a |
-| 5 | 5b | 21 vitamins and minerals, (25) | n/a |
-| 5 | 5c | 6 g of prebiotic fiber. (23) | n/a |
-| 6 | 6a | No shaker. (10) | n/a |
-| 6 | 6b | No chalky glass to rinse. (25) | n/a |
-| 7 | 7a | Rip. Tip. Enjoy. (16) | n/a |
+| Clip | Group | Line 1 (chars) | Line 2 (chars) | Total on screen |
+|---|---|---|---|---|
+| 1 | 1a | If your greens powder (21) | is still half full (18) | 39 |
+| 1 | 1b | in the cupboard, (16) | this is for you. (16) | 32 |
+| 2 | 2a | This is one daily pack. (23) | n/a | 23 |
+| 3 | 3a | Tear the top, (13) | n/a | 13 |
+| 4 | 4a | tip it into your hand. (22) | n/a | 22 |
+| 5 | 5a | 60+ ingredients, (16) | n/a | 16 |
+| 5 | 5b | 21 vitamins and minerals, (25) | n/a | 25 |
+| 5 | 5c | 6 g of prebiotic fiber. (23) | n/a | 23 |
+| 6 | 6a | No shaker. (10) | n/a | 10 |
+| 6 | 6b | No chalky glass to rinse. (25) | n/a | 25 |
+| 7 | 7a | Rip. (4) | n/a | 4 |
+| 7 | 7b | Tip. (4) | n/a | 4 |
+| 7 | 7c | Enjoy. (6) | n/a | 6 |
 
-Line breaks follow the skill's rules:
-- Breaks fall after punctuation or before a preposition ("in the cupboard").
-- "6 g" stays together.
-- No article is split from its noun.
-
-If the font measurement shows 25-character lines (5b, 6b) are too wide at caption size, there are two fallbacks:
-- 5b breaks as "21 vitamins / and minerals,".
-- 6b breaks as "No chalky glass / to rinse.".
+Lines 3 and 4 are one sentence across a cut. They are kept as separate groups, and the script's lowercase "tip" is kept.
 
 ## 3. Style
 
-- **Font file:** Work Sans Bold. MISSING, so the caption size is not set.
+- **Font:** Work Sans Bold. `MISSING: font file`. This is not applied and not measured.
 - **Letters:** warm cream #FFF7DF.
-- **Outline:** a thin outline or soft shadow in deep forest green #002C17. There is no solid box.
-- **Letter-to-outline contrast:** about 14.3 : 1, which passes the 4.5 : 1 minimum.
-- **Contrast over footage:** blocked until the clips are available.
-- **Position:** one fixed spot in all 7 clips. On a 1080×1920 frame it sits in the lower-middle band, with the text block bottom no lower than y ≈ 1260 and its top around y ≈ 1080. That keeps it clear of:
-  - the top seventh (0–275 px);
-  - the bottom third (below 1280 px);
-  - the right edge, with about 160 px kept clear on the right.
-
-  Left and centre margins are about 60 px.
-- **Blocked checks:** the position must still be checked against the Reels and TikTok safe-zone previews and the pack label, face and hands in each clip.
+- **Outline or soft shadow:** deep forest green #002C17, thin. There is no solid box.
+- **Contrast between letters and outline:** about 14.4 to 1. This passes the 4.5 to 1 minimum.
+- **Proposed position** (on a 1080×1920 frame; blocked until the frames are seen):
+  - The covered areas are the top 275 px, everything below y 1280 and about 140 px on the right edge.
+  - The caption block sits inside x 60 to 940, centred at x 500, with its bottom edge near y 1240.
+  - It stays in the same spot in every clip.
+  - It must be moved if it lands on the face, the pack label or the hands tearing and tipping.
 
 ## 4. Timing table
 
-Start and end times are blocked until the speech is timed in the real files. The minimum on-screen time is the time that keeps each group at or below 17 characters a second.
-
-| Clip | Real length | Final length | Group | Start | End | Min. on-screen at ≤17 cps | Reading speed |
+| Clip | Real length | Final length | Group | Start | End | Minimum time shown at 17 chars/s | Reading speed |
 |---|---|---|---|---|---|---|---|
-| 1 | MISSING (plan 10 s) | blocked | 1a | blocked | blocked | 2.29 s (39 ch) | blocked |
-| 1 | | | 1b | blocked | blocked | 1.88 s (32 ch) | blocked |
-| 2 | MISSING (plan 5 s) | blocked | 2a | blocked | blocked | 1.35 s (23 ch) | blocked |
-| 3 | MISSING (plan 5 s) | blocked | 3a | blocked | blocked | 0.76 s (13 ch) | blocked |
-| 4 | MISSING (plan 5 s) | blocked | 4a | blocked | blocked | 1.29 s (22 ch) | blocked |
-| 5 | MISSING (plan 10 s) | blocked | 5a | blocked | blocked | 0.94 s (16 ch) | blocked |
-| 5 | | | 5b | blocked | blocked | 1.47 s (25 ch) | blocked |
-| 5 | | | 5c | blocked | blocked | 1.35 s (23 ch) | blocked |
-| 6 | MISSING (plan 5 s) | blocked | 6a | blocked | blocked | 0.59 s (10 ch) | blocked |
-| 6 | | | 6b | blocked | blocked | 1.47 s (25 ch) | blocked |
-| 7 | MISSING (plan 5 s) | blocked | 7a | blocked | blocked | 0.94 s (16 ch) | blocked |
+| 1 | MISSING (plan: 10 s) | blocked | 1a | blocked | blocked | 2.29 s | blocked |
+| 1 | | | 1b | blocked | blocked | 1.88 s | blocked |
+| 2 | MISSING (plan: 5 s) | blocked | 2a | blocked | blocked | 1.35 s | blocked |
+| 3 | MISSING (plan: 5 s) | blocked | 3a | blocked | blocked | 0.76 s | blocked |
+| 4 | MISSING (plan: 5 s) | blocked | 4a | blocked | blocked | 1.29 s | blocked |
+| 5 | MISSING (plan: 10 s) | blocked | 5a | blocked | blocked | 0.94 s | blocked |
+| 5 | | | 5b | blocked | blocked | 1.47 s | blocked |
+| 5 | | | 5c | blocked | blocked | 1.35 s | blocked |
+| 6 | MISSING (plan: 5 s) | blocked | 6a | blocked | blocked | 0.59 s | blocked |
+| 6 | | | 6b | blocked | blocked | 1.47 s | blocked |
+| 7 | MISSING (plan: 5 s) | blocked | 7a | blocked | blocked | 0.24 s | blocked |
+| 7 | | | 7b | blocked | blocked | 0.24 s | blocked |
+| 7 | | | 7c | blocked | blocked | 0.35 s | blocked |
 
-The planned cumulative timeline is 0 / 10 / 15 / 20 / 25 / 35 / 40, ending at 45 s. It is for reference only. Times will be stored relative to each clip and converted once, after the cut is locked.
+The planned total is 45 s, which is not confirmed. Each group's times will be stored from the start of its clip and turned into timeline times once the cut is locked.
 
-## 5. Checklist and faults
+## 5. Checklist per caption and fault list
 
-**Checklist (applies to every group, 1a–7a):**
+| Group | Words match | Measured with font | Within one clip | 17 chars/s or less | Clear of covered areas, face, label and demo | Matches .srt |
+|---|---|---|---|---|---|---|
+| 1a to 7c (all 13) | Pass | Blocked | Pass | Blocked | Blocked | Blocked |
 
-| Check | Status |
-|---|---|
-| Words match script | Pass, with format-only changes |
-| Matches delivered audio | Blocked (no clips) |
-| Measured with brand font file | Blocked (MISSING font) |
-| No group across a cut | Pass on plan; blocked until cut locked |
-| ≤17 cps | Blocked (no speech timing) |
-| Out of app-covered areas | Blocked (no safe-zone preview check) |
-| Clear of label, face, hands | Blocked (no clips) |
-| Same spot every clip | Set; blocked until checked |
-| Phone check, sound off and on | Blocked |
-| .srt matches burn-in | Blocked (not exported) |
+**Faults and the smallest fix for each:**
 
-**Faults, with the smallest fix:**
+| Where | Fault | Smallest fix |
+|---|---|---|
+| All clips, all groups | Not measured with Work Sans Bold | Attach the .ttf or .otf file, then re-measure. Re-split only lines over the measured width (most likely 1a line 1 and 5b). |
+| All clips | No real lengths or word timings | Supply the clip files or a timed transcript, then fill in each group's start and end. |
+| Clip 1, groups 1a and 1b, centre band | Two lines may land on the face in a selfie frame | Check the first, middle and last frames. If the face is there, move the shared caption spot lower within the safe band for every clip. |
+| Clips 3 and 4, lower centre | Tearing and tipping hands may sit in the caption band | Check the frames and keep one shared position that clears the demo hands. |
+| Clip 5, lower centre | The caption may cover the pack's ingredient panel or small print | Check the frames and shift the shared caption spot if the label shows. |
+| Clip 7, groups 7a to 7c | One-word groups may flash too briefly if "Rip. Tip." is said fast | Once timed, merge them into one group, "Rip. Tip. Enjoy." (16 chars), if any group is under about 0.4 s. |
+| End card (if planned) | No logo file | Attach the logo file. |
 
-1. **All groups, all frames:** the font file is not attached. Fix: supply the Work Sans Bold .ttf or .otf.
-2. **All clips:** lengths are planned, not measured, and the files are absent. Fix: supply the final clip files.
-3. **Clip 1, groups 1a and 1b:** these are the densest captions (39 and 32 characters). Fix: if speech timing shows more than 17 cps, split 1a into "If your greens powder" and "is still half full". Do not reword.
-4. **Clips 3 and 4, groups 3a and 4a:** one sentence spans a cut. It is already split per clip. Fix: confirm the cut falls between "top," and "tip" in the edit.
-5. **Clips 3, 4 and 7, centre-lower frame:** the hands and pack demo are likely to sit in the caption band. Fix: if they overlap, move the shared caption spot up within the safe band, and use the same new spot in all clips.
-6. **Logo or end card:** the file is not attached. Fix: supply the logo file if the plan includes one.
+A caption check says nothing about whether the ad will sell.
 
 ## 6. Exports
 
-Blocked. The clean video, the captioned video and the .srt can be made once the font file and the clips are supplied.
+None were produced: there is no editing tool here and the font, clips and timings are missing. The clean video, the captioned video and the .srt file still need to be exported.
+
+## 7. Score
+
+**33 / 100.** 2 of 6 checks passed: 2 ÷ 6 × 100 = 33.
+
+- **Blocked:** No line was measured with the brand's font file, because the font file is missing.
+- **Blocked:** Reading speed is unverified. There are no word timings or real clip lengths. The "no group runs across a cut" part of this check passes.
+- **Blocked:** Placement against the covered areas, face, label and demo is unverified, because there are no frames.
+- **Blocked:** The .srt file has not been made or matched.
+
+**To finish it:**
+- Run these steps in your editor once you have the clips, the font file and the word timings.
+- If the clips still need making:
+  - **Each clip starts from a picture.** Make the first frame from its image prompt in ChatGPT (GPT Image), Gemini (Nano Banana) or Higgsfield, then animate that picture with the clip prompt.
+  - **Higgsfield:** Paste each clip prompt into its video tool and pick Seedance, Kling or Veo, or connect Higgsfield to Claude so Claude makes the clips there. It runs on paid credits.
+  - **Gemini:** Paid Google AI plans include Veo video in the Gemini app, with a few clips a day.
+  - **Claude Code:** With a key from a video service that offers Seedance, Kling or Veo, Claude Code can send each clip prompt to it and save the files. Pictures alone need an OpenAI key (platform.openai.com/api-keys) or a Google key (aistudio.google.com/apikey). OpenAI or Google bills each picture.
 ```

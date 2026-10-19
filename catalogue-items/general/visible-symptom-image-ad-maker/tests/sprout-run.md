@@ -1,21 +1,25 @@
 # Test run on Sprout, 2026-10-19
 
-Result: **pass**. Ran on claude-opus-5-5 (effort medium), graded by claude-fable-5-1. Judge list: 5 of 5 met. Invented facts: 0.
+Result: **fail**. Ran on claude-opus-5-5 (effort medium), graded by claude-sonnet-5-5. Judge list: 5 of 5 met. Invented facts: 0.
 
-The run correctly stopped at the body gate because the sign is on the stomach, explained why clearly, and handed off a usable snapshot moment with a 27-character line. Everything it said traces to the input or the skill's own rules, so the owner can act on it without checking anything.
+The gate call is right: a swollen stomach fails the body gate, and the hand-off to a lunchbox moment is usable and safe. But the output drifts from the required stop shape, and the line idea is miscounted, so it falls short of a clean pass.
+
+## Fix
+
+In "What you hand back" for the stop case, require the exact labels (WHY IT STOPS, HAND-OFF, GATE SCORE) and an exact character count for any line idea, with the GATE block in the Where/Words/Feels fine format.  Also state that the stomach fail makes the Where answer "stop".
 
 ## Judge list
 
 - Met: The gate answers are shown, and a stop comes with a hand-off you can use.
-  "Where is it? The stomach. This fails" ... "Hand-off to problem-moment-image-ad-maker" with moment and line idea.
+  Three gate answers shown; hand-off to problem-moment-image-ad-maker with lunchbox moment and line idea "The lunchbox came home full".
 - Met: The person is made up, shows no face, and nothing says they're a customer.
-  "There's no person, or at most a made-up adult's hand at the edge unclipping the lid."
-- Met: It's never the 'before' of a before-and-after.
-  "would also suggest a before-and-after next to the copy's 'feel lighter, less bloated'" — named the risk and avoided it.
+  Stopped at gate; hand-off scene is "no person needed", so no real or customer person shown.
+- Met: It's never the "before" of a before-and-after.
+  No before-and-after proposed; only a lunchbox scene and a doodle.
 - Met: No disease is named, and your copy doesn't say the product treats or cures it.
-  No disease named; run flags "supports, never fix" limit and the line idea makes no claim.
+  No disease named; line ideas "The lunchbox came home full" and "Every day, right at 3pm" make no treatment claims.
 - Met: The skin looks real, with no retouching and no product on it.
-  "flat indoor light or phone flash" ... "The product is left out." Only a hand at the edge, nothing retouched.
+  No image prompt produced because the gate stopped; no skin or product depicted.
 
 ## What went in
 
@@ -37,15 +41,19 @@ Brand limits: "supports", never "fix".
 ## What came out
 
 ```text
+No image tool is connected here, so I can only write the brief, not draw the picture.
+
 **Gate**
-- **Where is it?** The stomach. This fails, because stomach is on the stop list.
-- **Can the words stay off the reader?** Yes. The opening is first person ("my stomach was swollen"), and a line under the picture can name the moment instead of the reader's body.
-- **Would someone without it feel fine?** Not reliably. A swollen stomach pressed against trousers invites body comparison and shame, and platforms read it as a hint about the viewer's body.
+- **Where is it?** Fail. The sign is a swollen, tight stomach, and the stomach is on the stop list.
+- **Can the words stay off the reader?** Pass. The line can describe the moment ("By 3pm, the waistband pinches") without saying the reader is bloated.
+- **Would someone without it feel fine?** Fail. A close-up of a swollen belly under trousers invites body comparison and shame. Platforms reject that as a negative body image.
 
-**Why it stops**
-The sign sits on the torso, a body area this picture can't show. Any close-up of a tight waistband or swollen belly would also suggest a before-and-after next to the copy's "feel lighter, less bloated." That copy also needs care under the brand's "supports, never fix" limit.
+**Why it stops:** The sign lives on the stomach. Even framed kindly, the photo would show a midsection and imply what the viewer's own body looks like. A visible-symptom photo needs all three answers to pass.
 
-**Hand-off to `problem-moment-image-ad-maker`**
-- **Moment:** It's early evening on a kitchen counter. A work lunchbox sits open with the lunch untouched inside. Next to it are a commuter tote, a lanyard or keys, and the room's ordinary clutter. The light is flat indoor light or phone flash. There's no person, or at most a made-up adult's hand at the edge unclipping the lid. The product is left out.
+**Hand-off: `problem-moment-image-ad-maker`**
+- **Moment to give it:** The workaround, not the body. A packed lunchbox comes home unopened on the kitchen counter in the evening. The lid is clipped shut, with work keys and a lanyard tossed beside it. Everyday light and normal mess, no person needed.
 - **Line idea:** "The lunchbox came home full" (27 characters)
+- **Backup for `hand-drawn-story-image-ad-maker`:** A simple doodle of an office clock at 3:00 next to a trouser button straining on its thread. Line idea: "Every day, right at 3pm"
+
+**Gate score: 33/100.** One of three answers passed, and the photo needs all three.
 ```

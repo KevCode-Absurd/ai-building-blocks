@@ -2,20 +2,20 @@
 
 Result: **pass**. Ran on claude-opus-5-5 (effort medium), graded by claude-sonnet-5-5. Judge list: 5 of 5 met. Invented facts: 0.
 
-The run correctly rejected all seven reviews with sound reasons and stopped instead of forcing a card. It listed the MISSING items, pointed to a fallback picture and gave labelled examples of what to watch for.
+The run correctly sorted all seven reviews, failed each with a sound reason, and stopped instead of forcing a card. It listed MISSING items, pointed to better image skills, and scored 0/100, which is useful and safe for the owner.
 
 ## Judge list
 
 - Met: The review is real and you can point to where it was posted.
-  No card made; every review is listed with its source, e.g. "Retailer", "Review site". Nothing fabricated as a review.
+  No card made; all seven reviews listed with their sources (brand site, retailer, review site). Nothing fabricated.
 - Met: Its grumble would disappear if the product stopped working.
-  Correctly failed all seven; 17 and 20 are service, 18 and 19 taste, 21 a side effect.
+  Correctly sorted all seven as fail; "No review passes, so don't use this picture."
 - Met: Every word on the card matches the original. Nothing was reworded or merged.
-  No card produced; the examples are labelled "Example:" and not presented as real reviews.
+  No card produced. The example grumbles are labelled as shapes to watch for, not card text.
 - Met: The stars, name and date match the original and what the customer allowed.
-  No card; stars, dates and permission flagged as MISSING and never guessed.
+  No card; stars, name and date marked MISSING, none guessed.
 - Met: The card looks like no real shop or review site, with no badge the review didn't have.
-  No card built, so no look or badge to copy.
+  No card made, so no look or badge to copy. Nothing breaks this check.
 
 ## What went in
 
@@ -46,36 +46,44 @@ Ad-use permission: not recorded for anyone.
 ## What came out
 
 ```text
+I can't draw the picture here because no image tool is connected to this chat. This is the brief only.
+
 **Review check**
 
 | # | Source | Result | Reason |
 |---|---|---|---|
-| 2 | Brand site | Fail | No grumble. It is plain praise, so there is nothing for the test to turn. |
-| 16 | Brand site, Kids page | Fail | No grumble. It is plain praise. |
-| 17 | Brand site | Fail | The grumble is about the subscription, which is service. It would stay even if the gummies stopped working. |
-| 18 | Retailer | Fail | Taste always fails. |
-| 19 | Brand site widget | Fail | Taste always fails. |
-| 20 | Review site | Fail | Trouble cancelling is service. It also accuses the brand and should never sit on an ad. |
-| 21 | Review site | Fail | With a sugar-free gummy, "worked too well" most likely means a digestive side effect. A side effect fails even when it reads as a joke. No known side effects were supplied to rule this out. |
+| 2 | brand site | Fail | No grumble. It's pure praise ("I WANT to take it"). |
+| 16 | brand site, Kids page | Fail | No grumble. It's pure praise about the kids. |
+| 17 | brand site | Fail | The grumble is about subscriptions being "a trap." That's service, and it stays even if the product stopped working. |
+| 18 | retailer | Fail | Taste complaint. Taste always fails. |
+| 19 | brand site widget | Fail | Taste complaint. Taste always fails. |
+| 20 | review site | Fail | Cancellation trouble. That's service, a real fault, and not a joke. |
+| 21 | review site | Fail | "Worked too well" on a sugar-free gummy most likely means a digestive side effect read as a joke. Side effects always fail. |
+
+No review passes, so don't use this picture.
 
 **MISSING**
-- `MISSING: a review that passes the test`. No card can be made.
-- `MISSING: stars` for all reviews. They were not captured, so never guess them.
-- `MISSING: ad-use permission` for all reviewers. If any review is used later, show no name and flag "real review: check permission before it runs."
-- `MISSING: review dates` for all reviews.
-- `MISSING: known side effects`. These are needed to judge #21 and any future "worked too well" review.
+- `MISSING: a real review whose grumble only exists because the product works`
+- `MISSING: stars` for all seven reviews
+- `MISSING: ad-use permission` for all seven reviewers. Each one is a real review, so check permission before it runs.
+- `MISSING: dates` for all seven reviews
+- `MISSING: original wording` behind each "[Sprout]". The brackets are an edit, so the posted text is needed to quote it word for word.
+- `MISSING: known side effects` list. Use it to confirm what #21 refers to before anyone reads it as praise.
 
-**Picture to use instead**
-
-Use `tried-before-products-image-ad-maker`. The story opens with "I was paying $94 a month for a greens powder," so a picture of the abandoned greens powder tub picks up that first line directly.
-
-The fallback is `problem-moment-image-ad-maker`.
+**Use this picture instead**
+- `tried-before-products-image-ad-maker` fits best. The story opens on the $94-a-month greens powder, so a picture of the abandoned old option leads straight into the first line.
+- `problem-moment-image-ad-maker` is the backup.
 
 **What kind of review to watch for**
 
-Check star reviews, post-purchase emails, return-reason notes and marketplace questions. Record the stars, date, source and permission with each one.
+These are grumbles that vanish if Sprout stopped working, and they should pick up the greens-powder story:
+- **It made something pointless:** "now I've got a tub of greens powder I'll never finish." This is the strongest fit with the opening line.
+- **Others take it:** "my partner keeps eating my gummies," or "the kids finished my pack."
+- **It runs out because it's used:** "the box went faster than planned, because I actually take them now."
 
-- **It made something pointless.** Example: "now I've got half a tub of greens powder I'll never finish." This is the best fit, because it echoes the story's first line.
-- **Others take it.** Example: "the kids keep eating my pack, had to order my own." Reviews #16 and #17 suggest this is likely to show up.
-- **It runs out because people use it.** Example: "the bag empties faster than I planned, because I actually take them now." Review #2's "I WANT to take them" points this way.
+Look in return-reason notes, post-purchase emails, marketplace questions and star reviews. For each one, record the exact posted wording, the stars, the date, the source, the name the customer allows, and whether they agreed to ad use.
+
+**Score: 0 / 100**
+
+0 of 7 reviews passed the test. None can be used.
 ```

@@ -1,27 +1,27 @@
 # Test run on Sprout, 2026-10-19
 
-Result: **fail**. Ran on claude-opus-5-5 (effort medium), graded by claude-fable-5-1. Judge list: 4 of 6 met. Invented facts: 1.
+Result: **fail**. Ran on claude-opus-5-5 (effort medium), graded by claude-fable-5-1. Judge list: 5 of 6 met. Invented facts: 0.
 
-This is a careful, honest brief: it refuses to fake a founder, sidelines the paid athlete, picks one defensible decision, backs it with the real study numbers and leaves every unknown as a bracketed question. The one slip is the opening line, which puts an unverified category claim ("most gummies skip") in the founder's mouth despite the notes saying it should stay a question; it also marks folate dose and the offer MISSING when the brand file has them.
+With no founder words on file, the run did the right thing: it refused to script a story, excluded the paid athlete, and delivered a usable interview guide plus a bracketed brief with no invented facts. It fails only because the cost of the decision cannot yet be said plainly, and it over-marked MISSING for per-pack amounts, the study source and offer terms that are in the brand file.
+
+## Fix
+
+In step 3 (interview mode), add: before writing MISSING, pull any needed amounts, study source and offer terms from the brand facts, and state that in interview mode the cost check counts as pending (not failed) while it is a bracketed question for the founder.
 
 ## Judge list
 
 - Met: The ad tells one decision, and you learn something you didn't know about the product.
-  "Decision chosen: methylfolate, not folic acid." The whole brief stays on that one choice; vitamin C is held back.
-- Met: The cost of the decision is said plainly.
-  Left as bracketed question, correctly given no founder words: "[Say what it cost you: money per batch, time, or a supplier.]"
-- Not met: Every fact traces to the founder's words or your brand file. Anything else is a bracketed question.
-  Line 1 spoken words assert "one ingredient most gummies skip" outside brackets; the bracket only asks to confirm cost, not the category claim.
+  "The decision chosen: single-serve daily packs instead of a tub" — one decision throughout, built to teach amount per pack.
+- Not met: The cost of the decision is said plainly.
+  Line 4: "[Say plainly what the packs cost you compared with a tub...]" — cost is still a bracketed question, as the run admits.
+- Met: Every fact traces to the founder's words or your brand file. Anything else is a bracketed question.
+  Study, guarantee and daily packs are from input; reasons and costs are bracketed; examples marked "Only say this if it's true."
 - Met: No line has the founder calling the product "great" or "the best".
-  No quality words in any line; proof line is numbers only: "Twelve weeks, a hundred and twenty adults."
+  No quality words in any scripted line; "Nothing here says Sprout 'replaces your powder.'"
 - Met: Every shot is tagged, and none needs a generated person.
-  All pictures carry (to film) or (product photo); "no stock or generated person is captioned as the founder."
-- Not met: Each founder claim has a test, a count or a quote beside it, or has been toned down.
-  "most gummies skip" in line 1 has no proof and isn't softened, though the notes say that very claim "stays a bracketed question".
-
-## Invented
-
-- claim: We pay more for one ingredient most gummies skip. (Nothing on file says methylfolate costs more or that most gummies omit it; only the cost part is bracketed for confirmation, and the notes contradict this line.)
+  All eight pictures tagged "(to film)"; "No AI avatar and no AI voice."
+- Met: Each founder claim has a test, a count or a quote beside it, or has been toned down.
+  "We had it studied" paired with on-screen study numbers; guarantee "stated as is"; packs "shown on camera being filled and opened."
 
 ## What went in
 
@@ -44,92 +44,112 @@ Video, 60 seconds.
 ## What came out
 
 ```text
-**MISSING: a real founder, maker or expert who agrees to appear.** There are no founder words and no footage on file. The paid spokesperson is not a founder and can't tell a founder's decision. **This ad can't be filmed yet.** The founder's answers to the interview below come first. The brief after it is the shape their answers will fill.
+**The ad can't be made yet.** Nobody on file can appear as the founder. The paid spokesperson, a former pro athlete, is not a founder and can't tell a founder's decision. We need the real founder's consent to appear, filmed by them or by the brand, plus their own answers. Their answers come first.
+
+`MISSING: the founder's identity, role, and consent to appear as themselves`
+`MISSING: any founder words`
+`MISSING: any footage or photos (workshop, packing table, testing, sourcing)`
 
 ---
 
-## Interview guide (founder, on a phone or to camera)
+## Interview guide
 
-**Decision chosen:** methylfolate, not folic acid. It is the one decision on file that a real result can back up (folate +20.5%, 2.9x placebo). It also speaks to the buyer's doubt: *"A gummy can't hold enough to replace my powder."*
+**The decision chosen:** single-serve daily packs instead of a tub. It is the only decision on file that speaks to the buyer's doubt about amount ("A gummy can't hold enough to replace my powder"). We have the fact but not the reason or the cost, so we ask for both.
 
-1. Tell me about the day you decided to use methylfolate instead of folic acid. Where were you, and what made you choose?
-2. How would you explain the difference between methylfolate and folic acid to a friend who's never heard either word?
-3. Why do you think most gummy makers use folic acid? *(Answer at category level, with no brand names.)*
-4. Tell me what that choice cost you. Was it a higher price per batch, a supplier you lost, or a formula you had to redo?
-5. Tell me how much folate is in one daily pack, and how you settled on that amount.
-6. How would you answer someone who says, "A gummy can't hold enough to replace my powder"?
-7. Tell me about the moment you saw the 2025 study results. What did you think?
-8. Tell me how you first came to make Sprout. Were you ever someone taking supplements yourself?
+**Note for whoever films:**
+- Chat off camera for a few minutes before recording.
+- After each answer, wait. Leave pauses unfilled, because the best line often comes after a silence.
+- Ask the founder to answer in full sentences that name the subject, so each answer works as a clip on its own. For example: "We put each day in its own pack because…"
+- Use whatever words they use for things, not the brand's.
+- Film on a phone, at the packing table if there is one.
 
-**Answer in full sentences that name the subject**, for example "We chose methylfolate because…", so that each answer works as a clip on its own.
-
-**For whoever films:** chat off camera first. Leave pauses unfilled, because the best line often comes after a silence.
+**Questions**
+1. Tell me about the day you decided Sprout wouldn't come in a tub. Start with "We didn't use a tub because…"
+2. How many gummies go into one day's pack, and why that number? Start with "Each pack holds…"
+3. Tell me about what the packs cost you compared with a tub: money, packing time, machines, anything. Start with "The packs cost us…"
+4. How do you explain to someone on a powder that a day's pack gives them enough? Use the words you'd use across a counter.
+5. Tell me about the first time you saw a full day of Sprout laid out next to a scoop of powder. What did you notice?
+6. Why did you have the product studied, and what did you want to find out? Start with "We had Sprout studied because…"
+7. Tell me about a customer who switched from a powder. What did they say, in their words?
+8. How would you ask someone to try their first month? Say it the way you'd say it to a friend.
 
 ---
 
-## Brief shape: 60 seconds (about 140 words once filled)
+## Brief shape (60 seconds, about 140 words once answered)
 
 | Line | Move | Words or [question] | Picture (tag) | On-screen text |
 |---|---|---|---|---|
-| 1 | Opening: the choice as an admission | "We pay more for one ingredient most gummies skip. [Confirm it costs more, and say roughly how much.]" | Founder at the packing table, one daily pack in hand (to film) | [Founder name], [role]: MISSING |
-| 2 | The usual way | "[Say what most gummy makers use for folate, and why they use it.]" | Founder's hands sorting daily packs (to film) | None |
-| 3 | The choice | "We went with methylfolate instead. [Say in your own words what methylfolate is, in one breath, in buyer terms.]" | Label close-up as "methylfolate" is said (product photo) | Methylfolate, not folic acid |
-| 4 | The cost | "[Say what it cost you: money per batch, time, or a supplier.]" | Raw ingredient in the founder's hand, only if they hold it (to film) | None |
-| 5 | What you get | "[Say how much folate is in one pack, and what that means for the person taking it.]" | Single-serve pack torn open and gummies tipped into a palm (to film) | [Folate amount per pack]: MISSING |
-| 6 | Proof | "We had it tested. Twelve weeks, a hundred and twenty adults. Folate went up twenty point five percent, nearly three times the placebo group." | Founder at the bench, study report on the table, only if it's a real printed copy (to film) | 2025 study, 12 weeks, 120 adults: folate +20.5% (2.9x placebo). Source: MISSING |
-| 7 | Offer and guarantee | "Try your first order. If it's not right within thirty days, we give your money back." | Daily packs lined up on the table (product photo) | 30-day money-back guarantee, first order only. [Offer: MISSING] |
-| 8 | The ask | "[Say your ask in your own words, for example 'Try a month of Sprout.']" | Founder looking to camera at the bench (to film) | [Link or code]: MISSING |
+| 1 | Opening: the choice, as an admission | [Say the moment you decided against a tub. Start with "We didn't put Sprout in a tub because…"] | Founder at the packing table, one daily pack in hand (to film) | [Founder name], [role]. `MISSING` |
+| 2 | The usual way | [Say what most gummy brands do instead of daily packs, and what goes wrong with it. Category level, no brand names.] | A plain, unbranded tub beside a scoop of powder (to film) | — |
+| 3 | The choice | "So we put each day in its own pack." [Say how many gummies are in one pack, and why that number.] | Hands filling or sealing a daily pack (to film) | [Gummies per pack]. `MISSING` |
+| 4 | The cost | [Say plainly what the packs cost you compared with a tub: money, time or machines.] | Stack of packs at the packing table (to film) | — |
+| 5 | What you get | [Say what one pack means for someone used to a powder scoop.] | A pack torn open, gummies laid out beside a scoop of powder (to film) | [Key amounts per pack]. `MISSING` |
+| 6 | Proof | "We had it studied. Twelve weeks, a hundred and twenty adults." | Label close-up as it's named (to film) | 2025 study, 12 weeks, 120 adults: vitamin C +40.1% (2.7x placebo), folate +20.5% (2.9x placebo). Source: `MISSING` |
+| 7 | Guarantee | "Your first order comes with thirty days to get your money back." | Founder at the packing table (to film) | 30-day money-back, first order only |
+| 8 | Ask | [Say how you'd ask someone to try their first month.] | Founder hands a pack toward camera (to film) | [Offer and where to buy]. `MISSING` |
 
-Subtitles of every spoken word are added in editing.
+### Extra openings (record each separately; film the main part once)
+- **The cost:** [Start with what the packs cost you. For example: "Packs cost us more than a tub ever would." Only say this if it's true.]
+- **The moment it began:** only if the founder took a powder or gummies themselves first. [Say what you were taking before Sprout and what was wrong with it.] If they weren't a customer first, drop this opening.
 
-### Extra openings (record each one separately; film the main part once)
-- **The cost:** "[Say the cost plainly: 'Methylfolate costs us ___ more than folic acid.']"
-- **The admission, aimed at the doubt:** "People tell me a gummy can't hold enough. [Say what you did about that.]"
-- **The moment it began:** use this only if the founder really was a supplement buyer first. "[Tell the moment you went looking for a better folate yourself.]"
+*A process opening isn't offered because there is no real footage. A credential opening isn't offered because no credential is on file.*
 
 ---
 
 ## Notes
 
-**Questions for the founder (bracketed in the brief)**
-- Does methylfolate cost more than folic acid, and by how much?
-- What do most gummy makers use, and why? (Category level only.)
-- What is methylfolate, in your own buyer words?
-- What did the choice cost: money, time or a supplier?
-- How much folate is in one pack?
-- What is your ask?
-- Were you a customer first? Needed only for that opening.
+**Questions for the founder** (each bracket above)
+- Why not a tub, and the moment the decision was made.
+- What most gummy brands do instead (category level).
+- Gummies per pack, and why that number.
+- What the packs cost: money, time or machines.
+- What one pack means for someone used to a powder.
+- How they'd ask someone to try.
 
-**Claims softened or held back**
-- "Replaces your powder" is not said anywhere. Nothing on file shows a gummy matches a powder dose. The doubt is answered with the study result only.
-- "Methylfolate works better than folic acid" is not said as a general claim. The only proof on file is this product's study, so the brief says what that study found and nothing wider.
-- "Most gummies use folic acid" stays a bracketed question until the founder says it in their own words.
-- Vitamin C (+40.1%, 2.7x placebo) is left out to keep the ad on one decision. It is held for a vitamin C ad.
+**Other missing facts**
+- `MISSING: amounts per pack (which nutrients, how much)`
+- `MISSING: the study's source, who ran it, and what was measured (for example, blood levels)`
+- `MISSING: offer and CTA destination`
+- `MISSING: product photos`
+
+**Claims softened or held**
+- Nothing here says Sprout "replaces your powder." The founder answers the doubt in their own words in line 5, and the per-pack amounts on screen back it.
+- The study results appear as on-screen text from the study, not as the founder's own result. The film doesn't say the study shows Sprout matches powder, and it doesn't credit any single ingredient for the folate result.
 
 **Proof behind each claim**
-- Folate +20.5%, 2.9x placebo comes from the 2025 study of the product (12 weeks, 120 adults). **MISSING:** who ran it, whether it's published, and what was measured (for example, blood levels). These are needed before it goes on screen.
-- The 30-day money-back guarantee for first orders comes from the brand facts.
-- "Methylfolate" on the label comes from the product decisions on file and is shown on the label itself.
+- **Daily packs:** shown on camera being filled and opened.
+- **"Enough per day":** the per-pack amounts on screen. `MISSING` until supplied.
+- **The study:** 12 weeks, 120 adults, vitamin C +40.1% (2.7x placebo), folate +20.5% (2.9x placebo). It needs a citation before airing.
+- **Guarantee:** 30-day money-back, first order only, stated as is.
 
-**Also missing:** founder identity and consent, the offer or price, folate amount per pack, and the link or code. Banned claims and claim sources beyond the study are also not on file.
+**Decisions held for other ads**
+- **Methylfolate, not folic acid:** could pair with the folate result once the reason and cost are given.
+- **Pectin base, vegan:** needs a reason and a cost.
+- **Low Sugar or Sugar-Free:** needs a reason and a cost.
 
-**Other decisions saved for separate ads:** single-serve daily packs, pectin base, Low Sugar and Sugar-Free gummies. Each needs the founder's reason and cost first. Ask them the same way: tell me the day you chose it, and what it cost.
+These suit a 2 to 3 minute version once each has the founder's reason and its own proof.
 
 ---
 
 ## Casting and wardrobe note
 
-- **Who appears:** only the real founder, as themselves, filmed for real, with their consent. There is no AI avatar and no AI voice, and no stock or generated person is captioned as the founder.
-- **The spokesperson:** the paid spokesperson (the former pro athlete) does not appear in this ad and does not tell the methylfolate decision.
-- **If no founder agrees to appear:** this ad isn't made.
-- **Where:** at the packing table or bench where the daily packs are handled, never at a desk.
-- **Wear:** the founder's usual work clothes, plain, with no other brand's logo.
-- **In reach for cutaways:**
-  - a box of daily packs
-  - one pack to tear open
-  - the label showing methylfolate
-  - the raw ingredient, if the founder really has it on hand
-  - a printed copy of the 2025 study, if one exists
+- **Who appears:** only the real Sprout founder, as themselves, filmed for real, with their consent. No AI avatar and no AI voice. The former pro athlete spokesperson does not appear in this ad and must not deliver the founder's decision. `MISSING: founder name, role, consent`
+- **Where they film:** at the packing table where daily packs are filled, not at a desk.
+- **What they wear:** their usual work clothes, plain, with no other brand's logo.
+- **What's in reach:**
+  - daily packs, sealed and torn open
+  - a full day's gummies laid out
+  - a plain unbranded tub
+  - a scoop of powder
+  - the label, ready for the close-up
+- **Next steps:** the shot list skill turns this brief into a real-camera shot list once the answers are in. For a still instead, use `handwritten-note-image-ad-maker` with the founder's own words.
 
-The shot list skill turns this brief into a real-camera shot list once the founder's answers are in. For a still instead of a video, use `handwritten-note-image-ad-maker` with the founder's own words.
+---
+
+## Score: 67 / 100
+
+4 of 6 checks passed: 4 ÷ 6 × 100 = 67.
+
+- **Missed: one decision with its cost said plainly.** The cost is still a bracketed question until the founder answers.
+- **Missed: each founder claim has stronger proof beside it.** The study needs its source, and the "enough per day" point needs the per-pack amounts.
 ```

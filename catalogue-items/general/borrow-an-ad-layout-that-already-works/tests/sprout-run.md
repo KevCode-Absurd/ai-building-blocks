@@ -2,22 +2,22 @@
 
 Result: **pass**. Ran on claude-opus-5-5 (effort medium), graded by claude-fable-5-1. Judge list: 6 of 6 met. Invented facts: 0.
 
-A careful, honest plan that uses only the three fine-to-repeat facts, flags the 21 vs 20+ count mix-up, drops the fourth label to meet the glance rule, and stops correctly for the missing logo, typeface and photos. The owner gets a buildable Look-inside ad plan that borrows only the layout and makes no claim Sprout can't back.
+A careful, honest plan: it kept only the centre-and-labels skeleton, filled it with three on-file label facts per pack, dropped the fourth label to respect the glance rule, and stopped for approval with every missing asset named. The owner gets a buildable spec with sourced claims and real risks flagged (serving size in the hand photo, the 21 vs 20+ count), nothing invented and nothing that would break ad rules.
 
 ## Judge list
 
 - Met: Every spot marked keep has a named source you can check.
-  Labels 1-3 cite "Product page, science page"; label 2 adds "Confirm the printed panel says 21 before export." Logo keep is blocked by MISSING.
-- Met: Nothing from the reference survives except the layout.
-  "Reference's own labels and claims | Not seen | Left behind entirely"; background switched to "#FFF7DF instead of the reference's colour".
-- Met: Every line of copy has a label and a source, quotes match word for word.
-  Copy table labels each line "Our line" or "Fact" with "Product page; science page"; no customer quotes used.
-- Met: Brand name isn't typed; plan places logo or says missing.
-  "Logo | Real Sprout logo file | MISSING: logo"; no copy line contains the brand name.
-- Met: Headline 7 words or fewer, no more than 3 other things.
-  "The headline is 6 words. With 3 labels, that is the headline plus 3 things to read."
-- Met: Verdict follows the rule.
-  "Main spot: passes... under half, so this is still the same ad... Type switch: none." Change count omits the background (3 of 9, not 2) but conclusion holds.
+  "60+ ingredients ... in 1 pack" (product page, science page); "6 g prebiotic fiber" (product page, science page); headline keep cites format facts.
+- Met: Nothing from the reference survives except the layout. No borrowed claim, badge, number or product.
+  "What's left behind from the reference: the reference brand's colours, type, words, product and any person." Only skeleton and label positions kept.
+- Met: Every line of copy has a label and a source, and quotes match the review word for word.
+  "No scoop. No shaker. One daily pack. | 7 | Our line"; labels 2-4 marked "Fact: product page, science page". No customer quotes used.
+- Met: The brand name isn't typed anywhere. The plan places the real logo or says it's missing.
+  "MISSING: logo. The brand name will not be typed in its place." Copy lines contain no brand name; slot 5 is "Logo (file)".
+- Met: The headline is 7 words or fewer, with no more than 3 other things to read.
+  "No scoop. No shaker. One daily pack." is 7 words; label 4 dropped so "the headline plus 3 labels, which is within the limit."
+- Met: The verdict follows the rule. If the main spot fails, it switches type or says pick another.
+  "The main spot passes... 3 of 9 spots change or drop, which is under half. It stays the same ad." Switches recorded.
 
 ## What went in
 
@@ -44,141 +44,155 @@ Sizes: 4:5 and 9:16.
 ## What came out
 
 ```text
-# Sprout · Centre-and-labels reference → "What's in one daily pack"
+I can't make pictures in this chat because no image tool is connected. I'll write the plan and image prompts, and the last section explains how to finish the picture.
+
+# Reference 1: product centre, four labels
 
 ## 1. Kit check
 
 | Item | Status |
 |---|---|
-| Brand facts | On hand (sprout/brand.md, updated 2026-10-18) |
-| Logo file | **MISSING: logo.** Not attached. Nothing is built without it. |
-| Typefaces | **MISSING: typeface.** Confirm Work Sans (Bold, Medium) is installed. The brand's chunky display font is not named, so this plan uses only Work Sans. |
-| Photo: gummies poured into a hand | **MISSING: photo.** It exists but is not attached, so it counts as absent. This is the planned centre image. |
-| Photo: pouch on soft gradient | **MISSING: photo.** It exists but is not attached. Fallback only. |
-| Photo: daily pack torn at the top, gummies spilling | **MISSING: photo.** Not on file. This would be the most exact centre image if one exists. |
-| Way to make images | Not needed for the main picture. The background is a flat colour set in HTML, so only a cut-out of the real hand photo is needed. |
-| Live offer | Not used. This is not an offer ad. |
+| Brand facts | On hand (`sprout/brand.md`) |
+| Logo file | **MISSING: logo**. The brand name will not be typed in its place. |
+| Typefaces | **MISSING: typeface**. Work Sans Bold, Work Sans Medium and DM Mono are named but not confirmed installed. The chunky display font is unnamed, so this plan doesn't use it. |
+| Photo: gummies poured into a hand | **MISSING: photo**. It exists but isn't attached. |
+| Photo: pouch on soft gradient | **MISSING: photo**. It exists but isn't attached, and this plan doesn't use it (see the product spot). |
+| Photo: a single daily pack, torn across the top | **MISSING: photo**. None is on file. It's only needed if you want the pack itself in the centre. |
+| Image tool | None connected |
+
+Nothing gets built until the logo, typefaces and hand photo arrive.
 
 ## 2. Reading the reference
 
-- **Source:** the owner's description only. No image was seen. Nothing below describes details beyond that description.
-- **Code (reference):** Look inside · Designed · audience unknown from the description.
+- **Source:** your description only. I haven't seen the image, so I can't say anything about its colours, product, wording, light or exact proportions.
+- **Code:** Look inside · Designed · New. "New" is inferred, because the description shows no offer or rating.
 - **Skeleton:** Centre and labels.
-- **Eye path (inferred from the described layout):**
-  1. The product, dead centre.
+- **Eye path (inferred from the description):**
+  1. The product, big and dead centre.
   2. The headline across the top.
-  3. The four labels.
-  4. The logo, small at the bottom.
-- **Share of frame (estimated from the description, not measured):** picture about 35–40%, words about 15%, space about 45–50%.
-- **The one move:** a single product isolated on flat colour, with thin lines tying each short fact to the thing itself. The contents feel physically inside the product.
-- **Main spot:** the labels. They carry the point, and the product is their anchor.
+  3. The four labels, read left then right.
+  4. The small logo at the bottom.
+- **Share of frame (estimate, not measured):** about 45% picture, 20% words and 35% flat space.
+- **The move that makes it work:** one object on nothing, with short labels pinned to it. The parts read in one sweep.
+- **Main spot:** the labels. They carry the point of the ad, which is what's inside.
 
 ## 3. Spot test
 
 | Spot | What it claims | Proof needed | Proof on hand | Verdict |
 |---|---|---|---|---|
-| Flat background | Nothing | n/a | n/a | **Change:** use Sprout cream #FFF7DF instead of the reference's colour. |
-| Product, dead centre | "This is the product, and the labels are its contents" | A real photo of the exact variant at a usable angle | Hand-with-gummies photo exists but is not attached; no open daily-pack photo | **Change:** show one pack's worth of green Original bears in a palm, not a packaged product. The forearm enters from the bottom edge, with the palm at centre. The labels describe one pack, so a 28-pack pouch in the centre would mismatch the unit. If the hand shot won't cut out cleanly, use a torn-top daily pack photo (MISSING). |
-| Headline across top | Sets the unit and the reason to care | Room for ≤7 words | Brand voice and the old-way enemy on file | **Keep** the position, with new words. The headline must name "one daily pack" so the labels read per pack, not per gummy. |
-| Label 1 | "60+ ingredients" | Source | Product page, science page (fine-to-repeat list) | **Keep**, with new words. |
-| Label 2 | "21 vitamins & minerals" | One figure, one source | Product and science pages say 21. The home page and ingredients panel say "20+" / "over 20". | **Keep, with a flag.** 21 is consistent with "20+" and is on the fine list. Confirm the printed panel says 21 before export. |
-| Label 3 | "6 g prebiotic fiber" | Source | Product page, science page | **Keep**, with new words. |
-| Label 4 | n/a | n/a | n/a | **Drop.** A headline plus 4 labels is 5 things to read, which breaks the "headline + max 3" glance rule. A fourth fact (greens list, methylfolate) would also need its own proof line. |
-| Thin leader lines | Nothing | n/a | n/a | **Keep:** 3 lines, 3 px, deep forest #002C17. |
-| Logo, small at bottom | The brand | The real mark as a file | None attached | **Keep**, as Sprout's real logo file. Blocked by MISSING: logo. |
+| Headline | The ad's one point | Room at phone size, 7 words or fewer | Format facts: no water, no mixing, no shaker | **Keep.** It gets a new line in our voice. |
+| Product, centre | "This is the thing, and this is one serving" | A real photo of one daily pack's contents, at an angle that suits centre placement | Hand-with-gummies photo exists. No photo of a single daily pack. It's unconfirmed whether the hand holds exactly one pack's worth. | **Change.** Use the hand photo, cut out onto flat colour, if it shows one pack's worth. Otherwise we need a new photo. The pack isn't generated, because there is no real pack photo to anchor it to. |
+| Label 1 | 60+ ingredients | Published fact | "60+ ingredients ... in 1 pack" (product page, science page) | **Keep** |
+| Label 2 | 21 vitamins & minerals | One figure with a source | "21" on the product and science pages. The home page and panel say "20+" and "over 20". These don't contradict 21, but they aren't the same figure. | **Keep**, once you confirm 21 is the label count |
+| Label 3 | 6 g fiber | Published fact | "6 g prebiotic fiber" (product page, science page) | **Keep** |
+| Label 4 | A fourth part | Published fact, and room within the glance rules | Facts exist (e.g. organic kale, spinach, spirulina), but the headline plus 4 labels makes 5 things to read. The limit is the headline plus 3. | **Drop.** It breaks the glance rule. The layout becomes two labels left, one right. |
+| Thin lines | Each label belongs to the product | None | n/a | **Keep** |
+| Flat colour field | None | Brand colour | Warm cream #FFF7DF | **Change.** The reference colour is swapped for brand cream. |
+| Logo, small, bottom | The maker | Real logo file | Not attached | **Keep** the spot. **MISSING: logo** |
 
 ## 4. Verdict
 
-- **Main spot:** passes. All three labels are on-file facts.
-- **Structural changes:** 2 of 9 spots (product treatment, label count 4→3). The rest keep their place and take Sprout's own words and colours. That is under half, so this is still the same ad.
-- **Type switch:** none. It stays a Look inside ad under "What is it?".
-- **Audience:** set to New, because the direction targets people who quit greens powders and may not know Sprout.
-- **New code:** Look inside · Designed · New.
+- The main spot passes. Three of four labels carry on-file facts, stated per pack, which matches the brand's own wording.
+- 3 of 9 spots change or drop, which is under half. It stays the same ad.
+- The skeleton is kept and the type is unchanged.
+- **Switches recorded:**
+  - The labels go from 4 to 3 because of the glance rule.
+  - The centre object changes from the reference's product to gummies in a hand. This is because no single daily pack photo exists.
+  - The flat colour becomes brand cream.
 
-## 5. Plan
+## 5. Plan (awaiting your approval)
 
 **Direction (word for word):** "Use this to show what's in one daily pack, for people who quit greens powders."
 
-**Product variant:** Sprout Original (Adults), "Fresh & Sweet". Small opaque deep-green bears, no limited-flavour shapes. Low Sugar unless the owner says otherwise.
+**New code:** Look inside · Designed · New
 
-**Doubt it answers:** "A gummy can't hold enough to replace my powder." The ad shows what's in the pack and does not claim it replaces anything.
+**Product variant:** Sprout Original (Adults), deep-green bears. Please confirm whether the hand photo shows Low Sugar or Sugar-Free. The ad names neither.
 
-**Eye path (planned):** handful of green bears → headline → 60+ → 21 → 6 g → logo.
+### Zones, top to bottom
 
-### Zones, 4:5 (1080 × 1350)
+**4:5 (1080 × 1350)**
 
-| Zone | Top–bottom | Content |
+| % of height | Zone |
+|---|---|
+| 0–5 | Margin |
+| 5–19 | Headline, centred, 2 lines |
+| 22–84 | Hand and gummies centred, about 55% of width. Labels 1 and 2 sit left at about 35% and 60% height. Label 3 sits right at about 48%. Thin lines run to the gummies. |
+| 87–94 | Logo, small, centred |
+| 94–100 | Margin |
+
+**9:16 (1080 × 1920), composed on its own**
+
+| % of height | Zone |
+|---|---|
+| 0–14 | Clear. No words or logo. |
+| 15–26 | Headline, centred, 2 lines |
+| 28–57 | Hand and gummies, about 60% of width, with the same label positions relative to the hand |
+| 59–64 | Logo, small, centred |
+| 65–100 | Clear of words and logo. Flat cream only. |
+
+### Copy in reading order
+
+| # | Line | Words | Label |
+|---|---|---|---|
+| 1 | No scoop. No shaker. One daily pack. | 7 | Our line (built on the fact: no water, no mixing, no shaker) |
+| 2 | 60+ ingredients | 2 | Fact: product page, science page |
+| 3 | 21 vitamins & minerals | 4 | Fact: product page, science page |
+| 4 | 6 g prebiotic fiber | 4 | Fact: product page, science page |
+| 5 | Logo (file) | n/a | n/a |
+
+- **Condition beside the claim:** "One daily pack" in the headline is the "per pack" condition. Every label points at that one serving. Nothing says "per gummy", because the brand file flags that as the wrong unit.
+- **Total reading load:** the headline plus 3 labels, which is within the limit.
+
+### Type and colour
+
+| Element | Setting | Contrast on cream |
 |---|---|---|
-| Headline | 6–20% | 2 lines, centred, Work Sans Bold ~88 px, #002C17 |
-| Picture + labels | 22–86% | Palm with gummies centred. Forearm enters from bottom-centre and crops at the frame edge. Labels zig-zag: L1 left-upper, L2 right-middle, L3 left-lower. |
-| Logo | 88–95% | Bottom-right, about 180 px wide, clear of the forearm |
-| Background | full frame | Flat #FFF7DF |
-
-### Zones, 9:16 (1080 × 1920), composed on its own
-
-Words are kept between 14% (269 px) and 65% (1248 px).
-
-| Zone | Top–bottom | Content |
-|---|---|---|
-| Top cover band | 0–14% | Cream only |
-| Headline | 16–25% | Same 2 lines, ~92 px |
-| Picture + labels | 27–58% | Palm centred, same zig-zag labels, slightly tighter |
-| Logo | 59–64% | Bottom-right of the safe area |
-| Bottom cover band | 65–100% | Forearm runs down out of the frame. Picture only, no words. |
-
-### Copy, in reading order
-
-| # | Line | Words | Set as | Label | Source |
-|---|---|---|---|---|---|
-| 1 | One daily pack. | 3 | Headline line 1 | **Our line** | n/a |
-| 2 | No chalky shaker. | 3 | Headline line 2 | **Our line** | Names the old way, unbranded (brand file: "chalky powders") |
-| 3 | 60+ / ingredients | 2 | "60+" Bold 64 px, "ingredients" Medium 34 px | **Fact** | Product page; science page |
-| 4 | 21 / vitamins & minerals | 4 | "21" Bold 64 px, words Medium 34 px | **Fact** | Product page; science page (confirm against printed panel) |
-| 5 | 6 g / prebiotic fiber | 3 | "6 g" Bold 64 px, words Medium 34 px | **Fact** | Product page; science page |
-
-- The headline is 6 words. With 3 labels, that is the headline plus 3 things to read.
-- There are no conditions to place, since there is no offer, guarantee or rating.
-- All type is ≥34 px except the logo.
-- Contrast: #002C17 on #FFF7DF is well above 7:1.
+| Headline | Work Sans Bold, about 84 px, deep forest #002C17 | About 14:1 |
+| Labels | DM Mono uppercase, 34 px minimum, #002C17 | About 14:1 |
+| Lines | 3 px, kelly green #007E40 | About 4.8:1 (not text) |
 
 ### Claims table
 
-| Line | Label | Source | Keep / cut |
+| Line | Label | Source | Keep or cut |
 |---|---|---|---|
-| One daily pack. No chalky shaker. | Our line | n/a | Keep. Says nothing about results. |
-| 60+ ingredients | Fact | Product page | Keep |
-| 21 vitamins & minerals | Fact | Product/science page | Keep. Flag the "20+" mix-up and confirm the panel. |
-| 6 g prebiotic fiber | Fact | Product/science page | Keep. No "supports gut health" line is added, so no FDA disclaimer is needed on the image. |
-| "Each gummy delivers 100%…" | n/a | Science page (wrong unit) | **Cut.** The facts are per pack. |
-| "60+ potent ingredients to revive…" | n/a | Product page (unsupported) | **Cut** |
-| "Replaces your greens powder" or any equivalence | n/a | None | **Cut**, never written. |
-| Reference's own labels and claims | n/a | Not seen | Left behind entirely |
+| No scoop. No shaker. One daily pack. | Our line | Format facts (product page) | Keep |
+| 60+ ingredients | Fact | Product page, science page | Keep |
+| 21 vitamins & minerals | Fact | Product page, science page. The home page says "20+". | Keep, once you confirm |
+| 6 g prebiotic fiber | Fact | Product page, science page | Keep |
+| Organic kale, spinach, spirulina + more | Fact | Ingredients panel | Cut (glance rule) |
+| "Replaces your powder" or similar | Unsupported | None | Cut. It was never written in. |
+| Reference's own labels and claims | n/a | Not ours | Left behind |
 
 ### Assets table
 
 | Slot | Source | Status |
 |---|---|---|
-| Background | Flat #FFF7DF set in HTML | Ready |
-| Palm with green bears (centre) | Real photo: "gummies poured into a hand", cut out at 2× | **MISSING: photo** |
-| Fallback centre: daily pack torn straight across the top, bears spilling into a palm | Real photo | **MISSING: photo** (not on file) |
-| Leader lines | Drawn in HTML, #002C17 | Ready |
-| Headline and labels | Work Sans Bold / Medium | **MISSING: typeface** (confirm installed) |
-| Logo | Real Sprout logo file | **MISSING: logo** |
-| Generated imagery | None planned | n/a |
+| Hand with gummies | Real brand photo, background removed onto flat cream with the product pixels untouched | **MISSING: photo** (not attached) |
+| Single daily pack (optional alternative centre) | Real photo, torn straight across the top | **MISSING: photo** (not on file) |
+| Flat cream field | Set in HTML | Ready |
+| Logo | Real file | **MISSING: logo** |
+| Work Sans and DM Mono | Installed fonts | **MISSING: typeface** (unconfirmed) |
 
 ### Risks
 
-1. **Unit:** the headline must say "One daily pack" so no one reads the labels as per gummy.
-2. **Count:** 21 vs "20+" on the brand's own pages. Confirm the printed panel.
-3. **Handful size:** the photo must show about one pack's worth (about 20 g, "a small handful"). If it shows more, the labels mislead. Confirm with the owner, or crop to fewer bears without altering them.
-4. **Variant facts:** confirm 60+ / 21 / 6 g are identical for Low Sugar and Sugar-Free if a Sugar-Free photo is used.
-5. **Photo rights:** confirm the hand photo is the brand's own and cleared for ads. It shows a hand only, with no face.
-6. **Cut-out quality:** a floating hand can look odd, so the forearm stays attached to the bottom edge in both sizes.
-7. **Show it right:** if the daily-pack fallback is used, it must be torn straight across the top edge only. The big pouch is never shown torn.
+- **Serving size:** if the hand holds more or less than one pack, the ad misstates the serving. You'll need to confirm or reshoot.
+- **Gummy count:** the adult per-pack count isn't on file. No count is shown.
+- **Vitamin count:** "21" and "20+" both appear on the site.
+- **Cut-out quality:** cutting a hand out of a gradient photo can leave edge halos. Each export gets checked zoomed in.
+- **Disclaimer:** there's no FDA line, which matches current ads. A rival's label figures could tempt a comparison row. None is added here.
+- **What's left behind from the reference:** the reference brand's colours, type, words, product and any person.
 
-### Revision log
+**Stop: please approve this plan, or note changes, before anything is built.** Along with approval, I need:
+- the logo file
+- the hand photo, plus which sugar variant it shows
+- confirmation that the fonts are installed
+- confirmation that "21" is the count to use
 
-- v0: plan written. Reference read from the owner's description. Label count cut from 4 to 3 (glance rule). Centre changed from packaged product to a palm of bears (unit match). No type switch.
+## Finishing the picture
 
-**Stop: this plan needs the owner's approval.** Build, export checks and the review deck follow once approved and the logo, typeface and photos are supplied.
+The picture here is your own photo with its background removed, so it needs a cut-out rather than generation. If you later want a daily pack shot generated, it has to be anchored to a real pack photo. After approval I'll write that prompt for `product-exact-image-prompt-writer`. To use it:
+
+- **ChatGPT or Gemini:** paste the prompt into a chat and ask for the image. ChatGPT uses GPT Image and Gemini uses Nano Banana. Free plans have tight daily limits.
+- **Higgsfield:** paste the prompt into its image tool, or connect Higgsfield to Claude.
+- **Claude Code:** with `OPENAI_API_KEY` (from platform.openai.com/api-keys) or `GEMINI_API_KEY` (from aistudio.google.com/apikey) saved, the prompt can be sent to that API. Each image is billed.
 ```

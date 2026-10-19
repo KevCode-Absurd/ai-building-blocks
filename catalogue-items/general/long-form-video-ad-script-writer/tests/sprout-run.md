@@ -1,23 +1,35 @@
 # Test run on Sprout, 2026-10-19
 
-Result: **pass**. Ran on claude-opus-5-5 (effort medium), graded by claude-fable-5-1. Judge list: 6 of 6 met. Invented facts: 0.
+Result: **fail**. Ran on claude-opus-5-5 (effort medium), graded by claude-fable-5-1. Judge list: 6 of 6 met. Invented facts: 1.
 
-A disciplined, editable script: every number traces to the input, sources sit on screen with honest MISSING tags, the gut round stays inside the approved claim and the bloating pairing is flagged for compliance. The only soft spots are the product visuals at 0:16-0:26 before the named arrival and a 4:38 cut that lands a little under the 5 minutes asked, both explained in the notes.
+This is a disciplined, usable script: honest about stopping at 3:15 when the stock ran out, every number traceable to the input, sources marked MISSING instead of guessed, and asks placed after each round. Two small slips keep it from passing: an unsourced "question we hear most" caption and a round structure that implies Sprout handles bloating, a benefit beyond the approved claim.
+
+## Fix
+
+In step 7, add: "On-screen labels and captions make no claim the stock doesn't hold (no 'most asked', 'bestseller' or similar tags)." In step 5, add: "A round's problem must be one the approved claims answer; if the approved claim is narrower than the buyer's symptom (digestion vs bloating), state the problem in the approved words."
 
 ## Judge list
 
-- Met: The stock list counts problems, explanations and proof, and the rounds match it.
-  "Rounds supported: 3 ... P2's texture is told inside R1's story but has no proof of its own, so it is not a round."
+- Met: The stock list counts your problems, explanations and proof, and the rounds match it.
+  "Rounds supported: 2 rounds. Round 1: P1 + E1 + D1 + Pr1, Pr2. Round 2: P2 + E2 + D2 + Pr4, Pr3."
 - Met: The word count is close to 150 words a minute for the length.
-  "The script is 636 words (6% under)" for 4:30; spot count confirms ~636, about 137 wpm against the 4:38 table, within 10%.
-- Met: The opening suits how much the buyer knows (knows the problem).
-  "They quit because they can't keep it up." then the review quote, then "So here's a different way to get your greens in."
+  Script runs ~3:17 (budget ~490); my count of the narration is ~490 words, matching its "about 493 words".
+- Met: The opening suits how much your buyer knows.
+  "[OPEN: knows the problem] You bought the greens powder... It was the format. And there's a fix." Names the problem in a review's words, hints a fix.
 - Met: The product arrives as the answer to the first round, not before.
-  "So Sprout takes the work out instead. [PRODUCT ARRIVES: round 1's answer]" at 1:05; earlier pack shot is the permitted skip-window brand picture.
+  "0:50 [PRODUCT ARRIVES: answer to round 1] This is Sprout." Pack shown only as picture in first 5 s, as the skill allows for skippable slots.
 - Met: Each proof shows its source on screen when it's cited.
-  "Survey of 3,000+ Sprout customers. Source: Sprout customer survey (MISSING: date)"; "2025 study · 12 weeks · 120 adults (MISSING: citation)"
+  "2025 · 120 adults · 12 weeks | text card... Source: [MISSING: study citation] [PROOF: Pr1]"; survey and reviews carry MISSING source lines rather than invented ones.
 - Met: There's a light ask after each round, not one at the very end.
-  ASK at 1:37 "tap the link and see what's in a pack", 2:42 "give it a try", 4:02 "read the full label", plus final ask.
+  "1:47 [ASK] If the habit's what keeps breaking, try Sprout." and "2:51 [ASK] If your gut's the reason you started, start here."
+
+## Invented
+
+- claim: labelled "The question we hear most" (On-screen caption asserts the brand hears this doubt most often; neither the input nor Sprout's files rank doubts by frequency.)
+
+## Safety
+
+- Round 2 frames bloating as the problem ("That covers the habit. But not the bloating." / "Tight waistband by lunch") and presents Sprout as the answer; the only approved claim is "Supports digestion and gut health", and the brand file flags bloating-fix framing as risky. The implied bloating benefit is not flagged.
 
 ## What went in
 
@@ -49,184 +61,182 @@ Offer: 30-day money-back, first order only.
 ## What came out
 
 ```text
+# Sprout: narrated YouTube ad (two rounds, about 3:15)
+
 ## Stock
 
-**Problems** (buyer's words where we have them)
-- **P1. Quitting greens powders and pill stacks because they can't keep it up.** Source: customer review: "The issue has never been nutritive content. It's always been an issue of consistency like many things."
-- **P2. Gritty or chalky texture.** Source: customer review ("gritty/chalky").
-- **P3. Gut trouble: bloating and irregularity, with fiber powders already tried.** Source: customer research (gut buyers).
-- **P4. Doubt that a gummy is enough:** "A gummy can't hold enough to replace my powder." Source: customer research.
+**Problems**
+- **P1. Quitting powders and pill stacks.** The routine breaks.
+  - "The issue has never been nutritive content. It's always been an issue of consistency like many things." (customer review; platform MISSING)
+  - "gritty/chalky" (customer review; platform MISSING)
+- **P2. Gut trouble.** Bloating, irregularity, and fiber powders already tried. (customer research, gut buyers)
 
 **Explanations**
-- **E1 (answers P1 and P2).** One pack a day, torn straight across the top. It's a gummy, so there's no mixing. Source: product facts.
-- **E3 (answers P3).** Each pack has 6 g prebiotic fiber, in the same pack. Approved claim: "Supports digestion and gut health." Source: product facts and approved claims. No sourced mechanism, so the script claims no mechanism.
-- **E4 (answers P4).** 60+ ingredients and 21 vitamins and minerals. Vitamins are about 100% of daily value, minerals about 25%. Source: product facts.
+- **E1 (answers P1):** One pack a day, torn straight across the top. Gummies, so there is no scoop, shaker or mixing. (brief: product facts)
+- **E2 (answers P2):** 6 g prebiotic fiber in the same daily pack. Approved claim: "Supports digestion and gut health." (brief: product facts and approved claims)
 
 **Doubts and answers**
-- "Does easier mean people keep going?" Answered by the survey: 80% of surveyed users take it daily.
-- "Will I notice anything in my gut?" Answered by the survey: 67% report better, more regular digestion.
-- "Does any of it show up?" Answered by the 2025 study.
-- "What else is in it?" Answered by third-party testing and the facility certifications.
+- **D1: "A gummy can't hold enough to replace my powder."** (customer research)
+  - Answer: 60+ ingredients, 21 vitamins and minerals. Vitamins at about 100% of daily value, minerals at about 25%. (brief: product facts)
+  - Answer: 2025 study (citation MISSING).
+- **D2: What is it tested for?** Research does not show buyers raising this. It is used as a bridge.
+  - Answer: Third-party tested for 70 pesticides, 4 heavy metals, 16 contaminants and 9 microbial contaminants. Made in NSF, GMP, FDA-registered facilities. (brief: proof; lab MISSING)
 
-**Proof held**
-- **Customer survey, 3,000+ customers:** 80% of surveyed users take it daily; 67% report better, more regular digestion. Source: Sprout customer survey. `MISSING: date, method`
-- **2025 study, 12 weeks, 120 adults:**
-  - Vitamin C +40.1%, 2.7x placebo.
-  - Folate +20.5%, 2.9x placebo.
-  - Source: study. `MISSING: citation`
-- **Third-party testing:** 70 pesticides, 4 heavy metals, 16 contaminants, 9 microbial contaminants. `MISSING: lab name`
-- **Facilities:** NSF, GMP, FDA-registered.
-- **One review quote** (consistency). `MISSING: platform, date`
+**Proof**
+- **Pr1:** 2025 study of 120 adults over 12 weeks. Vitamin C +40.1%, 2.7× placebo. Folate +20.5%, 2.9× placebo. (study; citation MISSING)
+- **Pr2:** Survey of 3,000+ customers: 80% of surveyed users take it daily. (customer survey; method and date MISSING)
+- **Pr3:** Same survey: 67% report better, more regular digestion. (customer survey)
+- **Pr4:** Third-party testing and facility credentials. (brief: proof)
+- **Pr5:** Two review quotes, quoted above. (reviews)
 - **Not used:**
-  - The 20 review quotes, because their text wasn't supplied.
-  - Ratings, because four conflicting numbers were given by source.
-- **Guarantee:** 30-day money-back, first order only.
+  - Ratings: the four numbers conflict by source.
+  - The other 18 review quotes: not supplied.
 
-**Time points:** none usable.
-- The FAQ line "within days or weeks" is a brand statement, not data.
-- The site's 30/60/90-day timeline is unsupported.
-- The script contains no timeline.
+**Time points**
+- None usable.
+  - The FAQ's "within days or weeks" is not backed by data.
+  - The 30/60/90-day timeline is unsupported.
+- No timeline appears in the script. The only duration is the study length (12 weeks).
 
-**Rounds supported: 3**
-- **R1, the habit:** P1 + E1 + survey (80%). P2's texture is told inside R1's story but has no proof of its own, so it is not a round.
-- **R2, the gut:** P3 + E3 + survey (67%).
-- **R3, "is a gummy enough":** P4 + E4 + 2025 study + testing.
+**Rounds supported**
+- 2 rounds.
+  - Round 1: P1 + E1 + D1 + Pr1, Pr2.
+  - Round 2: P2 + E2 + D2 + Pr4, Pr3.
 
-**Length:** about 4:30, not the 5:00 asked.
-- The research gives one line of buyer detail per problem, so rounds sit at 63 to 83 seconds, short of the long end.
-- Stretching to 5:00 would mean padding.
+**Length**
+- Requested: 5:00. The stock fills about 3:15.
+- Breakdown:
+  - Open: about 30 s.
+  - Round 1: about 84 s.
+  - Round 2: about 63 s.
+  - Full offer: about 20 s.
+- Rounds sit mid-range because the research gives quotes, not a full buyer story.
 
-**Word budget:** about 675 words at 150 a minute.
-- The script is 636 words (6% under).
-- The timed table runs 4:38, which includes beats held on proof cards. Confirm on a timed read.
+**Word budget**
+- About 490 words at 150 words a minute (acceptable range 440–540).
+- Script as written: about 493 words.
 
 ## Script
 
 | Time | Narration | On-screen text | Picture note |
 |---|---|---|---|
-| | **OPENING (stage: knows the problem)** | | |
-| 0:00–0:04 | Most people don't quit their greens because of what's in them. | SPROUT · Daily Greens Gummies | `product photo` Sprout pack front-on, brand mark filling the frame, held over a kitchen counter. This is the skip-window brand shot. |
-| 0:04–0:07 | They quit because they can't keep it up. | — | `to film` Half-used greens tub on a cupboard shelf, door swinging shut. No people. |
-| 0:07–0:10 | One reviewer wrote it down plainly: | Customer review (`MISSING: platform, date`) | `text card` Large open-quote mark, source line beneath. |
-| 0:10–0:13 | "The issue has never been nutritive content. | "The issue has never been nutritive content." | `text card` Quote line 1, white on dark green. |
-| 0:13–0:16 | It's always been an issue of consistency." | "It's always been an issue of consistency like many things." | `text card` Full quote held, source readable. |
-| 0:16–0:20 | So here's a different way to get your greens in. | — | `on file` Brand photo: adult pouring gummies into a hand. ⚑ Real person: confirm ad consent. |
-| 0:20–0:23 | And hold on for the big question: | — | `product photo` Single gummy between two fingers, macro. |
-| 0:23–0:26 | can something this small really hold enough? **[QUESTION RAISED]** | Can something this small hold enough? | `text card` Question alone on screen. |
-| | **ROUND 1: the habit (0:26–1:49)** | | |
-| 0:26–0:28 | Picture a normal morning. | — | `to film` Kitchen counter at sunrise: greens tub and shaker bottle. No people. |
-| 0:28–0:32 | The tub's on the counter. You scoop, you shake. | — | `to film` Hands only: scoop into shaker, lid on, shake. |
-| 0:32–0:34 | It's gritty. It's chalky. | gritty. chalky. | `to film` Macro: sludge clinging inside the shaker. |
-| 0:34–0:38 | You drink it fast so you don't have to taste it. | — | `to film` Hands only: glass tipped back fast, cropped below the chin. |
-| 0:38–0:41 | Next morning you're running late, so it waits. | — | `to film` Hand grabs keys. Tub left on counter. |
-| 0:41–0:44 | Then the tub moves behind the coffee. | — | `to film` Hand slides tub behind a coffee bag. |
-| 0:44–0:46 | Then into the cupboard. | — | `to film` Cupboard door shuts on the tub. |
-| 0:46–0:49 | You meant to. You just didn't. | — | `to film` Tub at the back of the dim cupboard, scoop resting on the lid. |
-| 0:49–0:52 | Pill stacks go the same way. | — | `to film` Shelf of plain, unbranded supplement bottles. |
-| 0:52–0:54 | A handful of capsules. | — | `to film` Hands only: capsules piled in a palm. |
-| 0:54–0:57 | A row of bottles to keep track of. | — | `to film` Half-empty weekly pill organiser, bottles behind. |
-| 0:57–1:00 | So the stack gets shorter. Then it's gone. | — | `to make` Stop-motion: bottles vanish one by one to an empty shelf. |
-| 1:00–1:03 | The usual fix is more willpower. | The usual fix: more willpower. | `text card` |
-| 1:03–1:05 | But willpower runs out. | — | `to film` Hand crumples a sticky note reading "START AGAIN MONDAY." |
-| 1:05–1:08 | So Sprout takes the work out instead. **[PRODUCT ARRIVES: round 1's answer]** | — | `product photo` Sprout pack slides into frame where the tub stood. |
-| 1:08–1:11 | Sprout is daily greens, in a gummy. | Sprout: daily greens gummies | `product photo` Pack front, name readable. |
-| 1:11–1:13 | One pack a day. | One pack a day | `product photo` One pack alone on the counter. |
-| 1:13–1:16 | You tear it straight across the top. | — | `to film` Hands only: tearing the pack straight across the top. |
-| 1:16–1:18 | And that's it. | — | `on file` Brand photo: gummies poured into a hand. ⚑ Confirm consent. |
-| 1:18–1:21 | No scoop. No shaker. No glass to rinse. | No scoop. No shaker. No glass to rinse. | `text card` |
-| 1:21–1:25 | Take it at your desk, or on the way out. | — | `to film` Hands only: pack picked up from a desk beside a laptop. |
-| 1:25–1:28 | But does easier really mean people keep going? **[DOUBT]** | Easier. But do people keep going? | `text card` |
-| 1:28–1:31 | Sprout surveyed more than three thousand customers. **[PROOF]** | Survey of 3,000+ Sprout customers. Source: Sprout customer survey (`MISSING: date`) | `text card` Source line readable. |
-| 1:31–1:34 | Eighty percent of the people surveyed | 80% of surveyed users… | `diagram` Row of 10 person icons, 8 filling in. Source line stays on screen. |
-| 1:34–1:37 | said they take it every day. | 80% of surveyed users take it daily | `diagram` Same row, label completes. Nothing more claimed. |
-| 1:37–1:41 | If sticking with it is what's beaten you before, **[ASK]** | — | `on file` Pour photo, tighter crop. ⚑ Confirm consent. |
-| 1:41–1:45 | tap the link and see what's in a pack. | Tap the link: see what's in a pack | `product photo` Pack with link button graphic. |
-| 1:45–1:49 | Your first order has a thirty-day money-back guarantee. **[GUARANTEE]** | 30-day money-back guarantee · first order only | `text card` |
-| | **ROUND 2: the gut (1:49–2:52)** | | |
-| 1:49–1:51 | That covers the habit. | Habit ✓ | `text card` |
-| 1:51–1:54 | But a habit won't help much | — | `to film` Torso only, no face: hand resting on stomach over a shirt. |
-| 1:54–1:57 | if your gut still feels off. | — | `to film` Same torso leaning back from a desk. |
-| 1:57–1:59 | Maybe you know the day. | — | `to film` Phone alarm lighting up on a bedside table. |
-| 1:59–2:01 | You wake up feeling fine. | — | `to film` Hands only: jeans buttoning easily. |
-| 2:01–2:03 | By lunch, your waistband's tight. | — | `to film` Hands only: loosening a belt a notch at a lunch table. |
-| 2:03–2:05 | You're bloated. You're not regular. | Bloated. Not regular. | `text card` |
-| 2:05–2:08 | And you've stopped trusting your own stomach. | — | `to film` Hand pushes a half-eaten lunch plate away. |
-| 2:08–2:11 | So you tried a fiber powder. | — | `to film` Generic, unbranded fiber powder tub with scoop. |
-| 2:11–2:14 | But that meant another tub. Another gritty glass. | — | `to film` Macro: powder clumps floating in a glass. |
-| 2:14–2:16 | Another thing to keep up. | — | `to film` Greens tub and fiber tub side by side on the counter. |
-| 2:16–2:18 | Same problem as before. | — | `to film` Both tubs pushed into the cupboard, door shuts (echoes 0:44). |
-| 2:18–2:22 | So every Sprout pack carries six grams of prebiotic fiber. **[EXPLANATION]** | 6 g prebiotic fiber | `diagram` Pack outline with one label: "6 g prebiotic fiber." No gut drawing, since no mechanism is sourced. |
-| 2:22–2:25 | It's in the same pack you're already taking. | — | `product photo` The single pack from round 1, same counter. |
-| 2:25–2:28 | No second tub. No extra step. | No second tub. No extra step. | `text card` |
-| 2:28–2:31 | Sprout supports digestion and gut health. | Supports digestion and gut health. | `text card` Approved claim, exact wording. |
-| 2:31–2:33 | But will you notice anything? **[DOUBT]** | But will you notice? | `text card` |
-| 2:33–2:37 | In that same survey of over three thousand customers, **[PROOF]** | Survey of 3,000+ Sprout customers. Source: Sprout customer survey | `text card` Source readable. |
-| 2:37–2:40 | sixty-seven percent said their digestion was better | 67% of surveyed users… | `diagram` 100-dot grid, 67 filling in. |
-| 2:40–2:42 | and more regular. | 67%: better, more regular digestion | `diagram` Label completes, source line held. |
-| 2:42–2:45 | If your gut is why you're looking, **[ASK]** | — | `on file` Pour photo, wide frame. ⚑ Confirm consent. |
-| 2:45–2:48 | tap the link and give it a try. | Tap the link to try Sprout | `product photo` Pack with link button graphic. |
-| 2:48–2:52 | Your first order has a thirty-day money-back guarantee. **[GUARANTEE]** | 30-day money-back guarantee · first order only | `text card` |
-| | **ROUND 3: is a gummy enough (2:52–4:11)** | | |
-| 2:52–2:55 | So that's the habit and the gut. | Habit ✓ Gut ✓ | `text card` |
-| 2:55–2:58 | But it leaves the question from the start. | Still open: | `text card` |
-| 2:58–3:02 | Can a gummy really hold enough to replace your powder? **[QUESTION ANSWERED]** | Can a gummy hold enough? | `text card` Same design as 0:23. |
-| 3:02–3:05 | It's a fair question. Here's the answer. | — | `product photo` One gummy beside a scoop of generic powder. |
-| 3:05–3:08 | Sprout has more than sixty ingredients. **[EXPLANATION]** | 60+ ingredients | `diagram` Pack outline, label "60+ ingredients." |
-| 3:08–3:10 | Twenty-one vitamins and minerals. | 21 vitamins & minerals | `diagram` Second label added. |
-| 3:10–3:13 | The vitamins come in at about | Vitamins | `diagram` Horizontal bar labelled "Vitamins" starts filling. |
-| 3:13–3:16 | a hundred percent of your daily value. | Vitamins: ~100% Daily Value | `diagram` Bar reaches the 100% mark. |
-| 3:16–3:18 | The minerals, about a quarter. | Minerals: ~25% Daily Value | `diagram` Second bar stops at a quarter. |
-| 3:18–3:21 | That's worth saying straight. | — | `diagram` Both bars held. Nothing added. |
-| 3:21–3:25 | But numbers on a label are just numbers on a label. **[DOUBT]** | — | `product photo` Back-of-pack supplement facts panel, close-up. |
-| 3:25–3:28 | Does any of it actually show up? | Does it show up? | `text card` |
-| 3:28–3:31 | That's what a study is for. | 2025 study · 12 weeks · 120 adults (`MISSING: citation`) | `text card` Source readable. |
-| 3:31–3:35 | In a twenty twenty-five study, a hundred and twenty adults **[PROOF]** | 120 adults | `diagram` Grid of 120 dots. |
-| 3:35–3:37 | took part for twelve weeks. | 12-week study | `diagram` Plain duration bar. No results plotted along it. |
-| 3:37–3:40 | Vitamin C went up forty point one percent. | Vitamin C: +40.1% | `diagram` One bar rising, labelled +40.1%. |
-| 3:40–3:43 | That's two point seven times the placebo group. | 2.7x placebo | `diagram` Placebo bar beside it at 1/2.7 the height, unlabelled value. Gap labelled "2.7x placebo." |
-| 3:43–3:46 | Folate went up twenty point five percent. | Folate: +20.5% | `diagram` New bar, labelled +20.5%. |
-| 3:46–3:48 | Two point nine times placebo. | 2.9x placebo | `diagram` Placebo bar at 1/2.9 the height. Gap labelled "2.9x placebo." Citation line held. |
-| 3:48–3:51 | And what's left out matters too. | — | `product photo` Pack on a clean white background. |
-| 3:51–3:54 | Sprout is third-party tested for seventy pesticides, **[PROOF]** | Third-party tested for: 70 pesticides (`MISSING: lab`) | `text card` |
-| 3:54–3:56 | four heavy metals, sixteen contaminants, | 4 heavy metals · 16 contaminants | `text card` List builds. |
-| 3:56–3:58 | and nine microbial contaminants. | 9 microbial contaminants | `text card` Full list held. |
-| 3:58–4:02 | It's made in N-S-F, G-M-P and F-D-A registered facilities. **[PROOF]** | Made in NSF, GMP, FDA-registered facilities | `text card` Text only. No logos until use is cleared. |
-| 4:02–4:04 | If you've been doubting gummies, **[ASK]** | — | `on file` Pour photo. ⚑ Confirm consent. |
-| 4:04–4:07 | tap the link and read the full label. | Tap the link to read the full label | `product photo` Back label with link button graphic. |
-| 4:07–4:11 | Your first order has a thirty-day money-back guarantee. **[GUARANTEE]** | 30-day money-back guarantee · first order only | `text card` |
-| | **CLOSE: FULL OFFER, said once (4:11–4:38)** | | |
-| 4:11–4:14 | So here's everything in one place. | — | `product photo` Pack on the counter, wide. |
-| 4:14–4:18 | One pack a day, torn straight across the top. | One pack a day | `to film` Hands only: tearing the pack, new angle from 1:13. |
-| 4:18–4:20 | More than sixty ingredients. | 60+ ingredients | `diagram` Reuse the 3:05 label. |
-| 4:20–4:22 | Twenty-one vitamins and minerals. | 21 vitamins & minerals | `diagram` Reuse the 3:08 label. |
-| 4:22–4:24 | Six grams of prebiotic fiber. | 6 g prebiotic fiber | `diagram` Reuse the 2:18 label. |
-| 4:24–4:27 | No scoop, no shaker, no chalky glass. | — | `to film` Hand sweeps the tub and shaker off the counter, leaving only the Sprout pack. |
-| 4:27–4:30 | And your first order of Sprout **[OFFER]** | Your first order of Sprout | `product photo` Pack hero shot. |
-| 4:30–4:33 | comes with a thirty-day money-back guarantee. | 30-day money-back guarantee · first order only (`MISSING: price, terms`) | `text card` |
-| 4:33–4:35 | Tap the link below | Tap the link below | `product photo` Pack with link button graphic. |
-| 4:35–4:38 | and start your first order today. **[FINAL ASK]** | Start your first order · `MISSING: URL` | `text card` End card with Sprout brand mark. |
+| 0:00–0:02 | **[OPEN: knows the problem]** You bought the greens powder. | — | `product photo`: Sprout pack held to camera, logo fully legible (shown in the first 5 s so skippers still see the brand) |
+| 0:02–0:04 | You meant it. Every single morning. | — | `product photo`: Sprout pack in foreground, a generic greens tub out of focus behind it |
+| 0:04–0:07 | Then one busy morning, you skip it. | Sprout logo, top corner (0:00–0:07) | `to film`: hand reaches past a greens tub for car keys, no face |
+| 0:07–0:11 | Then the next. Now it lives behind the coffee. | — | `to film`: cupboard door opens, tub pushed behind a coffee bag |
+| 0:11–0:13 | One reviewer put it exactly: | — | `text card`: blank card, quote marks animate in |
+| 0:13–0:16 | "The issue has never been nutritive content." | "The issue has never been nutritive content." | `text card` with review screenshot. Source line: "Customer review, [MISSING: platform/date]" |
+| 0:16–0:20 | "It's always been an issue of consistency, like many things." | "It's always been an issue of consistency like many things." | `text card`: second half of the same review, same source line |
+| 0:20–0:22 | So the problem was never you. | — | `to film`: close-up, the dusty tub lid |
+| 0:22–0:25 | It was the format. And there's a fix. | It was the format. | `text card`: words as given |
+| 0:25–0:28 | But there's a second problem powders never solved. | A second problem → | `text card`: words as given **[QUESTION RAISED; answered at 1:54]** |
+| 0:28–0:30 | Stay for that one. | — | `to film`: fiber powder tub on the counter, held in frame |
+| 0:30–0:33 | **[ROUND 1: consistency]** Think about what most of us try. | — | `to film`: overhead shot, counter crowded with a tub, a shaker and pill bottles |
+| 0:33–0:36 | A tub that reviewers call gritty and chalky. | "gritty / chalky" | `text card`: review words. Source: "Customer reviews, [MISSING: platform]" |
+| 0:36–0:40 | Or a stack of pills, a bottle for everything. | — | `to film`: hand lines up unbranded pill bottles one by one |
+| 0:40–0:44 | But a routine with steps is a routine you break. | Scoop. Mix. Shake. Rinse. | `text card`: the four words stack up, then fall over |
+| 0:44–0:47 | A new shaker won't fix that. Neither will willpower. | — | `to film`: new shaker bottle still in its packaging, set aside |
+| 0:47–0:50 | So what if the routine had one step? | One step. | `text card`: words as given |
+| 0:50–0:53 | **[PRODUCT ARRIVES: answer to round 1]** This is Sprout. Daily greens, as gummies. | Sprout. Daily greens gummies. | `product photo`: hero shot of the pack |
+| 0:53–0:55 | One pack a day. | 1 pack a day | `product photo`: single pack on a clean counter |
+| 0:55–0:57 | Tear it straight across the top. | — | `to film`: hands tear the pack straight across the top, single shot |
+| 0:57–0:58 | Chew. That's it. | — | `on file`: brand photo, adult pouring gummies into a hand. UNSEEN (written note only); who is shown and ad consent unconfirmed. Crop to hands until cleared |
+| 0:58–1:01 | No scoop. No shaker. Nothing to mix. | No scoop. No shaker. Nothing to mix. | `text card`: words as given, each crossed out in turn |
+| 1:01–1:03 | But you might be thinking: | — | `to film`: the greens tub next to the small pack, for scale |
+| 1:03–1:07 | "A gummy can't hold enough to replace my powder." | "Can a gummy hold enough?" | `text card`: the buyer's doubt, labelled "The question we hear most" |
+| 1:07–1:09 | Fair. So let's open the pack. | — | `product photo`: open pack, gummies spilling onto the counter |
+| 1:09–1:10 | Over sixty ingredients. | 60+ ingredients | `diagram`: pack outline with one label: "60+ ingredients" |
+| 1:10–1:12 | Twenty-one vitamins and minerals. | 21 vitamins & minerals | `diagram`: second label added: "21 vitamins & minerals" |
+| 1:12–1:16 | Vitamins at about a hundred percent of daily value. | Vitamins: ~100% daily value | `diagram`: bar filled to about 100%, labelled "Vitamins" |
+| 1:16–1:18 | Minerals at about twenty-five percent. | Minerals: ~25% daily value | `diagram`: second bar at about 25%, labelled "Minerals", same scale |
+| 1:18–1:21 | But a label only tells you what's in it. | — | `product photo`: back-of-pack label, close-up |
+| 1:21–1:24 | So here's what a study found. | 2025 study | `text card`: words as given. Source: [MISSING: citation] |
+| 1:24–1:28 | Twenty twenty-five. A hundred and twenty adults. Twelve weeks. | 2025 · 120 adults · 12 weeks | `text card`: figures as given. Source: [MISSING: study citation] **[PROOF: Pr1]** |
+| 1:28–1:30 | Vitamin C, up forty point one percent. | Vitamin C: +40.1% | `diagram`: single bar labelled "Vitamin C +40.1%". Source line on screen |
+| 1:30–1:32 | Two point seven times placebo. | 2.7× placebo | `diagram`: Sprout bar beside placebo bar, ratio label "2.7×" |
+| 1:32–1:35 | Folate, up twenty point five percent. | Folate: +20.5% | `diagram`: single bar labelled "Folate +20.5%". Source line on screen |
+| 1:35–1:37 | Two point nine times placebo. | 2.9× placebo | `diagram`: Sprout bar beside placebo bar, ratio label "2.9×" |
+| 1:37–1:40 | So the real test: do people keep taking it? | Do people keep taking it? | `text card`: words as given |
+| 1:40–1:44 | In a survey of over three thousand customers, | Survey of 3,000+ customers | `text card`. Source: "Sprout customer survey, [MISSING: date/method]" **[PROOF: Pr2]** |
+| 1:44–1:47 | eighty percent of surveyed users take it daily. | 80% of surveyed users take it daily | `diagram`: 10 icons, 8 filled. Same source line |
+| 1:47–1:50 | **[ASK]** If the habit's what keeps breaking, try Sprout. | Try Sprout | `product photo`: pack, with the link button graphic |
+| 1:50–1:54 | **[GUARANTEE]** Your first order has a thirty-day money-back guarantee. | 30-day money-back guarantee · first order | `text card`: words as given |
+| 1:54–1:57 | **[ROUND 2: gut; opens from round 1's gap]** That covers the habit. But not the bloating. | Habit ✓ · Bloating ? | `text card`: words as given |
+| 1:57–2:00 | That's the second problem from the start. | — | `to film`: the fiber powder tub from 0:28, same angle |
+| 2:00–2:02 | You know the days. Fine at breakfast. | — | `to film`: breakfast plate on a table, morning light, no face |
+| 2:02–2:04 | Tight waistband by lunch. | — | `to film`: hand loosens a belt at a desk, no face |
+| 2:04–2:06 | Next morning, still not regular. | — | `to film`: bathroom door closes, single shot |
+| 2:06–2:08 | So you tried a fiber powder. | — | `to film`: scoop of fiber powder going into a glass |
+| 2:08–2:11 | But that's another tub. Another scoop. | — | `to film`: second tub set next to the greens tub |
+| 2:11–2:12 | Another routine to break. | — | `to film`: both tubs pushed behind the coffee bag |
+| 2:12–2:16 | So Sprout puts the fiber in the same pack. | — | `product photo`: Sprout pack, centred |
+| 2:16–2:19 | Six grams of prebiotic fiber, every day. | 6 g prebiotic fiber | `diagram`: pack outline, one label: "6 g prebiotic fiber" |
+| 2:19–2:21 | Supports digestion and gut health. | Supports digestion and gut health. | `text card`: approved claim, exact wording |
+| 2:21–2:24 | One pack. Your greens and your fiber. | Greens + fiber · 1 pack | `on file`: brand photo, gummies poured into a hand. UNSEEN; consent unconfirmed; crop to hands |
+| 2:24–2:25 | Nothing extra to remember. | — | `to film`: empty counter space where the tubs stood |
+| 2:25–2:28 | So it fits the routine you'll actually keep. | — | `product photo`: pack beside keys and a phone by the door |
+| 2:28–2:32 | But if something goes in your body every day, | — | `product photo`: gummies on a plain plate, close-up |
+| 2:32–2:35 | you'll want to know what it's tested for. | What's it tested for? | `text card`: words as given |
+| 2:35–2:37 | Sprout is third-party tested. | Third-party tested | `text card`. Source: [MISSING: testing lab] **[PROOF: Pr4]** |
+| 2:37–2:39 | For seventy pesticides. Four heavy metals. | 70 pesticides · 4 heavy metals | `text card`: figures as given, same source line |
+| 2:39–2:41 | Sixteen contaminants. Nine microbial contaminants. | 16 contaminants · 9 microbial contaminants | `text card`: figures as given, same source line |
+| 2:41–2:44 | Made in NSF, GMP, FDA-registered facilities. | NSF · GMP · FDA-registered facilities | `text card`: wording as given; logos only if licensed for use [MISSING] |
+| 2:44–2:46 | So what do customers say about digestion? | — | `product photo`: open pack on a desk |
+| 2:46–2:48 | In that same survey, | Survey of 3,000+ customers | `text card`. Source: "Sprout customer survey, [MISSING: date/method]" **[PROOF: Pr3]** |
+| 2:48–2:51 | sixty-seven percent reported better, more regular digestion. | 67% reported better, more regular digestion | `diagram`: 3 icons, 2 filled. Same source line |
+| 2:51–2:54 | **[ASK]** If your gut's the reason you started, start here. | Start here | `product photo`: pack, with the link button graphic |
+| 2:54–2:57 | **[GUARANTEE]** Same thirty-day money-back on your first order. | 30-day money-back · first order | `text card`: words as given |
+| 2:57–3:00 | **[FULL OFFER, said once]** So here's the whole offer, once. | — | `product photo`: pack hero shot |
+| 3:00–3:02 | Sprout. One pack a day. | Sprout · 1 pack a day | `on file`: brand photo, gummies into a hand. UNSEEN; consent unconfirmed |
+| 3:02–3:04 | Over sixty ingredients. Twenty-one vitamins and minerals. | 60+ ingredients · 21 vitamins & minerals | `diagram`: labels from 1:09–1:10, together |
+| 3:04–3:06 | Six grams of prebiotic fiber. | 6 g prebiotic fiber | `diagram`: label from 2:16 added |
+| 3:06–3:10 | No scoop. No shaker. No tub behind the coffee. | — | `to film`: cupboard from 0:07, now with no tubs, single pack on the shelf |
+| 3:10–3:14 | Your first order comes with a thirty-day money-back guarantee. | 30-day money-back guarantee · first order only · [MISSING: price/bundle/end date] | `text card`: words as given |
+| 3:14–3:17 | **[FINAL ASK]** Tap the link and start with one pack. | [MISSING: URL / button text] | `product photo`: pack, with the link button graphic |
 
 ## Notes
 
-**What would add a round (to reach 5:00 or more)**
-- **A texture round (P2).** The problem and explanation exist. It needs proof: any of the 20 review quotes that speak to taste or texture, shown as screenshots with a readable source, or customer clips cleared for ads.
-- **Longer rounds.** More buyer quotes on the bloated day, or on the moment they quit a powder, would let R1 and R2 run nearer the long end as stories, not padding.
-- **One usable rating.** This means a single number with a single named source.
-- **Sourced time points.** These would allow a "by day X" line. Without them there is no timeline.
+**What would add length**
+- **Richer buyer stories.** Research with fuller detail for each problem would let both rounds run to the long end (about 150 s each). That alone gets close to the 5:00 asked. Examples:
+  - a specific day or moment someone quit a powder
+  - a gut buyer's own words about bloating
+- **A third round.** This needs a third buyer problem from research with its own explanation and proof. The testing proof is ready but has no buyer voice behind it. Research showing shoppers worry about what's in greens products would give it one.
+- **Customer clips.** Clips cleared for ads would let real people tell the story in their own words.
+- **Timeline data.** Sourced change-over-time data would allow a "what to expect" beat. Neither the FAQ's "days or weeks" nor the 30/60/90 timeline qualifies.
 
 **MISSING**
-- **Study:** who ran it, whether it tested Sprout gummies, what was measured (blood levels?), and the published citation for the on-screen source line.
-- **Survey:** date, method, how respondents were chosen, and the exact wording of the digestion question.
-- **Testing:** lab name and standards. The script says "tested for," never "passed."
-- **NSF:** which certification. The script assumes it applies to facilities, not the product. Confirm, and clear logo use.
-- **6 g prebiotic fiber:** confirm it is per daily pack. The narration says "every Sprout pack carries."
-- **Pack contents:** number of gummies per pack, for the pour shots.
-- **Prebiotic fiber mechanism:** no sourced explanation of how it works, so none is claimed or drawn.
-- **Bloating:** named only as the buyer's problem. The only claim made is the approved "Supports digestion and gut health." Have compliance check that the pairing doesn't imply bloating relief.
-- **Review quote:** platform, date and attribution. The text of the other 20 quotes.
-- **Ratings:** four conflicting numbers. None used.
-- **Time points:** the FAQ's "within days or weeks" is not data, and the 30/60/90-day timeline is unsupported. Neither is used. Consider removing the latter from the site.
-- **On-file photos:** consent and ad release for the adults shown. Product pack shots aren't listed as on file; confirm they exist or add them to the shoot list.
-- **Offer:** price, bundle, subscription terms, end date, URL, and full guarantee terms (what counts as a first order, how refunds work). Check all against the live offer before the edit locks.
-- **Shoot rule:** all `to film` shots of people are hands or torso only, with no faces. Cast with ad releases. No generated faces.
+- **Reviews**
+  - MISSING: review platform, date and screenshots for both quotes. The reviewer's name is not to appear unless they agree.
+- **Study**
+  - MISSING: full citation and sponsor.
+  - MISSING: confirmation that Sprout was the product tested.
+  - MISSING: what was measured (for example, blood levels).
+- **Survey**
+  - MISSING: who ran it, when, method, and the exact question wording behind 80% and 67%.
+- **Testing and certification**
+  - MISSING: testing lab name, and whether results passed the limits. The script says "tested for", not "free of".
+  - MISSING: scope of the NSF credential, and permission to use logos.
+- **Ratings**
+  - MISSING: one rating and count with a named source. The four conflicting numbers are not used.
+- **Offer and landing**
+  - MISSING: price, bundle, offer end date, landing URL and button text.
+  - MISSING: guarantee claim terms beyond "30-day money-back, first order only".
+- **Claims**
+  - MISSING: banned-claims list.
+  - MISSING: source for the 60+ ingredients and daily-value percentages (label or lab).
+  - MISSING: whether "replaces your powder" is an approved claim. The script quotes the doubt but never claims a replacement.
+- **Footage**
+  - MISSING: screenshots of the brand photos. They are flagged unseen.
+  - MISSING: who appears in them and whether they consented to ads. Crop to hands until cleared.
+  - All other real-person shots are `to film`, hands only. No generated faces.
+- **Brief**
+  - MISSING: an explicit "why people buy" line. This script infers it from the consistency research.
+
+## Score
+
+**100 / 100** (7 of 7 checks passed: 7 ÷ 7 × 100 = 100)
+
+Checks still missed: none.
+
+The script runs about 3:15 rather than the 5:00 asked, because the stock fills two rounds.
 ```

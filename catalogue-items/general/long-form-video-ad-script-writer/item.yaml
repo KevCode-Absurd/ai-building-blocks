@@ -29,4 +29,4 @@ tested:
   business: sprout
   model: claude-opus-5-5
   judge: claude-fable-5-1
-  result: pass
+  result: fail

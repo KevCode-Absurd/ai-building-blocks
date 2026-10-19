@@ -1,21 +1,31 @@
 # Test run on Sprout, 2026-10-19
 
-Result: **pass**. Ran on claude-opus-5-5 (effort medium), graded by claude-fable-5-1. Judge list: 5 of 5 met. Invented facts: 0.
+Result: **fail**. Ran on claude-opus-5-5 (effort medium), graded by claude-sonnet-5-5. Judge list: 1 of 5 met. Invented facts: 3.
 
-A careful stage 1 that follows the skill's stop rule, builds a clear avatar card and four distinct adult crowd figures, and refuses to invent the 10 script lines it wasn't given. The owner now needs to paste the actual script and the daily pack label words before it can go further.
+The run correctly stopped for approval after the avatar card, with a solid Dev card and four distinct crowd figures, but nothing past stage 1 exists yet. It wrongly said the script lines and photos were missing even though the run input gave the places, the morph on line 5, the pouch label and photos, so it asked for facts it already had.
+
+## Fix
+
+In Stage 0, add a rule to read the script from the run input (places, morph line, set card) and always output the STAGE 0 SCRIPT IN line before stage 1. Only write MISSING for facts that truly aren't in the input, and say 'photos listed in the input' rather than asking for them again.
 
 ## Judge list
 
 - Met: It stopped for your approval after the avatar card, the sheets and the storyboard.
-  "**Approval 1:** Is this avatar card for Dev and the four crowd figures a yes?" Stopped at checkpoint 1; later stops not yet reached.
-- Met: The set, light, palette and lens lines are word for word the same in every prompt.
-  No prompts written yet (correctly paused before stage 2/3); nothing differs. Colours noted as fixed: "forest green #00582D, warm cream #FFF7DF, sunflower yellow #FFCC2E".
-- Met: The lead's full description appears wherever they do.
-  Full card given once: "Slim build... Warm brown matte clay skin. Short black clay hair with visible comb grooves"; no shots yet to repeat it in.
-- Met: Every shot card names one mover, and everyone else holds still.
-  No shot cards yet; run flagged "MISSING: the script text... the mover column" rather than inventing shots.
-- Met: The label lines are written out exactly, and there's at most one clay morph, built from a first and last frame.
-  "This is the only morph." and "MISSING: daily pack label words. I'll ask for these before writing the product sheet"; tool first/last frame noted.
+  "Stopping here. Reply \"yes\" to approve this avatar card and crowd" — correctly stopped at stage 1 and did not proceed.
+- Not met: The set, light, palette and lens lines are word for word the same in every prompt.
+  Run stopped at stage 1; no SET/LIGHT/PALETTE/LENS lines or prompts were written yet.
+- Not met: The lead's full description appears wherever they do.
+  Description given once in the avatar card; no shot prompts exist to repeat it in.
+- Not met: Every shot card names one mover, and everyone else holds still.
+  No shot cards produced; the script's mover column was claimed missing.
+- Not met: The label lines are written out exactly, and there's at most one clay morph, built from a first and last frame.
+  No product sheet or morph frame pair written; label lines only mentioned as missing.
+
+## Invented
+
+- other: dark brown clay shoes (`proposed`) (Marked proposed, so acceptable.)
+- other: forest-green felt strap with a small cream clay badge (Lanyard design detail not in cast note, but a reasonable creative choice for the avatar card.)
+- other: Crowd figure details (grey bun, moustache, glasses, auburn hair, etc.) (Crowd was only given as tall/short/round/slight; faces are creative design the skill requires.)
 
 ## What went in
 
@@ -41,48 +51,74 @@ yellow #FFCC2E. Tool: 5-second clips, first and last frame: yes.
 ## What came out
 
 ```text
-# File 1: Avatar card
+I write the prompts only. No video tool is connected in this chat, so I can't make pictures or clips here.
+
+---
+
+# File 1: Avatar card (stage 1)
 
 ## Lead: Dev
 
-| Field | Card |
-|---|---|
-| **Role in the story** | Office worker. He stands at the office kitchen sink with a shaker (lines 1 to 4). At line 5 the shaker in his hand squashes into a flat daily pack. He carries the daily pack at his desk (lines 6 to 10). |
-| **Age range** | Adult, about 30. |
-| **Look** | Slim build, about a hand tall. Warm brown matte clay skin. Short black clay hair with visible comb grooves. Simple sculpted face: small bead eyes and a mouth sculpted closed in a calm, slightly tired half-smile. Chunky clay hands with rounded fingertips and no nails. |
-| **Clothes and materials** | Mustard knit jumper of real knitted fabric with visible stitches. Navy clay trousers with handled thumbprint texture. Simple dark clay shoes. |
-| **Signature item** | A lanyard of real woven cord around his neck. It holds a plain cream card badge with **no words on it**. |
-| **Props** | Kitchen: a chunky clay shaker in his **right hand**. Desk: the flat daily pack, also in his right hand. The mug, keyboard and other desk props get named in stage 3. |
-| **Voice** | None on screen. His mouth stays sculpted closed. The narrator is off screen. |
-| **Never changes** | Skin colour, hair shape and grooves, the mustard knit jumper, the navy trousers, the lanyard with its blank badge, the closed mouth, his hand-tall scale and the right hand as the holding hand. |
+- **Role in the story:** the office worker with the sink problem in the kitchen (lines 1 to 4). His shaker squashes into a flat daily pack at the swap (line 5). He is at his desk with the Sprout daily pack (lines 6 to 10).
+- **Age range:** adult, about 30.
+- **Look:**
+  - slim build, a hand tall
+  - warm brown matte clay skin
+  - short black clay hair with visible comb grooves
+  - an oval face
+  - small dark bead eyes
+  - simple sculpted brows
+  - chunky clay hands with rounded fingertips and no nails
+- **Clothes and materials:**
+  - mustard knit jumper of real knitted fabric
+  - navy clay trousers
+  - dark brown clay shoes (`proposed`)
+- **Signature item:** a lanyard. It is a forest-green felt strap with a small cream clay badge. The badge is blank, with no words.
+- **Props:**
+  - a chunky clay shaker bottle, held in his right hand, lines 1 to 5
+  - the Sprout daily pack: sculpted clay in a printed paper label, in his right hand from line 5
+  - the Sprout pouch: clay in a printed paper label, on his desk, lines 6 to 10
+- **Voice:** none on screen. His mouth is sculpted closed in a set expression: flat and tired in the kitchen, a small closed smile at the desk. The narrator is off screen.
+- **Never changes:**
+  - his skin tone, hair shape and grooves, face shape and eyes
+  - the mustard knit jumper and navy trousers
+  - the lanyard and its blank badge, always on
+  - his height next to the pack
+  - the right hand holds the shaker or pack in every shot
+  - the handled finish: some thumbprints on matte clay
 
 ## Crowd: four base figures
 
-All four are adult office workers and all are hand tall in scale. The "short" figure is a short adult, not a child. No text appears on their clothes. Each has a distinct face:
+All are adults, a hand tall, in the handled clay finish. Mouths are sculpted closed. None of them is ever used as proof.
 
-1. **Tall:** Long narrow face, heavy clay brows, sculpted closed mouth in a flat line. Pale peach clay skin, grey clay cardigan over a cream shirt.
-2. **Short:** Adult proportions, broad cheeks, round glasses of thin wire, mouth set in a small "o" of mild surprise. Deep brown clay skin, forest-green felt vest.
-3. **Round:** Wide round face, rosy pressed-in cheeks, wide closed-mouth grin. Light olive clay skin, bun of coiled grey clay hair, sunflower-yellow felt top.
-4. **Slight:** Narrow shoulders, pointed chin, half-lidded sleepy eyes, mouth sculpted in a slight frown. Tan clay skin, short wavy auburn clay hair, cream knit jumper of real fabric.
+1. **Tall:**
+   - long narrow face, pale peach clay skin, high grey clay bun
+   - heavy straight brows, long nose
+   - cream felt cardigan
+2. **Short:**
+   - wide square face, deep umber clay skin, cropped curly black hair
+   - round cheeks, thick moustache
+   - forest-green clay shirt
+3. **Round:**
+   - full round face, light olive clay skin, chin-length brown bob with a fringe
+   - small round glasses of clear acrylic
+   - sunflower-yellow knit vest
+4. **Slight:**
+   - narrow pointed chin, tan clay skin, swept-back auburn hair
+   - large eyes, freckle dots pressed into the clay
+   - navy felt blazer
 
-None of them is a child, a real person, a known character, a customer, a founder or an expert.
+---
 
-## Stage 0 notes (fixed from here on)
+MISSING: the 10 script lines themselves, with each line's seconds, its claims and the mover column. I can't fix the lines, timings or claims until I have them. Please paste the script.
 
-- **Places:** office kitchen (lines 1 to 4) and Dev's desk (lines 6 to 10).
-- **Morph:** line 5. The shaker in Dev's right hand squashes into the flat daily pack. This is the only morph.
-- **Set card:** hand-tall figures, chunky props, handled finish, water as clear gel, soft morning key light from a window.
-- **Colours:** forest green #00582D, warm cream #FFF7DF, sunflower yellow #FFCC2E.
-- **Tool:** 5-second clips, first and last frame supported.
+MISSING: the photo files. I can't see any attached images in this chat. Please attach the pouch front, side and top, and the daily pack. A described pack can't be checked against the real one, so I'll ask for the photos again before stage 3.
 
-## MISSING
+MISSING: the daily pack's label words. Until I have them, the daily pack's label side faces away from camera in every shot, including the morph's last frame.
 
-- `MISSING: the script text.` I need the 10 narration lines, each line's seconds, its claims and the mover column, so I can list and fix them. If there is no mover column, I'll pick the one figure each line is about.
-- `MISSING: daily pack label words.` I'll ask for these before writing the product sheet in stage 3. Until then, any unknown side faces away.
-- `MISSING: product name and type, and how it's used.` "Sprout" appears only as the wordmark. I also need the brand's real opening and use steps for the daily pack.
-- `MISSING: brand tone, approved claims and a "never show" list.`
-- `MISSING: whether the tool makes sound.`
-- `MISSING: daily pack size next to a person.` The photo of it in a hand helps; exact dimensions would lock the scale.
+MISSING: the pack's size next to a person, and your "never show" list (online-store add-on).
 
-**Approval 1:** Is this avatar card for Dev and the four crowd figures a yes?
+Note: the "daily pack in a hand" photo is used only as a reference for size and grip. No human hand enters the set; Dev's clay right hand holds it.
+
+**Stopping here.** Reply "yes" to approve this avatar card and crowd, or tell me what to change.
 ```

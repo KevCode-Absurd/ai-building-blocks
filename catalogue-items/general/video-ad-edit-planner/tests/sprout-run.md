@@ -1,23 +1,36 @@
 # Test run on Sprout, 2026-10-19
 
-Result: **pass**. Ran on claude-opus-5-5 (effort medium), graded by claude-fable-5-1. Judge list: 6 of 6 met. Invented facts: 0.
+Result: **fail**. Ran on claude-opus-5-5 (effort medium), graded by claude-sonnet-5-5. Judge list: 5 of 6 met. Invented facts: 2.
 
-A careful, usable edit plan: timings add up, the banned health line is cut with margin, the renewal term stays glued to the price, and nothing beyond the approved words appears on screen. The owner still needs to supply a CTA, pack photos and word-level timings before an editor can lock it, and might want a proof shot, which the plan does not call out as a missing job.
+This is a sound plan that cuts the banned "fixed my stomach" line, keeps the price and renewal terms together, and flags its gaps honestly. But the cut points for the tear, pour and pouch shots are guesses, and the caption timing depends on them.
+
+## Fix
+
+In step 5, require cut points and caption windows only from transcript times given. Where an end time is missing, write MISSING and leave that window open, instead of estimating in/out seconds.
 
 ## Judge list
 
-- Met: Every claim, number and offer on screen is in your approved copy.
-  Captions are only hook lines, "This is one day", "21 vitamins... 6 grams of fiber", and "$29.99... renews at $49.99 every 4 weeks"; end card repeats that line verbatim.
-- Met: The product looks right in every shot it appears in, label readable, opened the way it really opens.
-  "Pack torn across top edge, close" matches the brand rule; "Pouch to lens, name readable, held 3.5 s"; pack-photo check listed in GAPS.
-- Met: Each caption matches what's actually said after the cuts.
-  Windows built only from kept lines; "Make sure nothing from 'Honestly…' or '…stomach' survives"; re-time instruction after cuts lock.
+- Met: Every claim, number and offer on screen is in the approved copy.
+  Captions use only hook lines and body lines: "21 vitamins and minerals", "$29.99", "$49.99 every 4 weeks"; "fixed my stomach" cut.
+- Met: Product looks right in every shot, label readable, opened the way it really opens.
+  Tear straight across top, pour from torn top; pouch held 2 s with name readable, captions placed clear of the name.
+- Not met: Each caption matches what's actually said after the cuts.
+  Shot 5 body 7.8–10.6 only covers part of the line; shot 6 audio 10.6–12.6 "of fiber, in one pack" is guessed.
 - Met: Off-script lines, like a creator's own health claim, are cut, not kept.
-  "body 12.9–15.7, 'Honestly it fixed my stomach.' Uses 'fix' and states a health result. Both are banned. Cut completely."
-- Met: The ending carries only your approved terms. No added urgency or discount.
-  "No 'link in bio', discount, deadline or guarantee unless it appears in the approved copy"; CTA marked MISSING rather than invented.
-- Met: The plan says it's a plan, and lists any missing shots.
-  "This is an edit plan. No video file exists yet." GAPS lists CTA, pack photos, transcript end times, disclosure decision.
+  "Honestly it fixed my stomach." cut in full, out point before 13.0.
+- Met: Ending carries only approved terms. No added urgency or discount.
+  "no end card, discount, deadline, guarantee or 'link in bio.'"
+- Met: Plan says it's a plan and lists missing shots.
+  "This is a plan. No edited file exists yet." plus MISSING items.
+
+## Invented
+
+- other: Shot 3-4 in/out for tear.mp4 and pour.mp4 and the tear/tip audio taken from body.mp4 4.0–6.6 (Estimated timings presented as cut points, though flagged as estimates.)
+- number: SCORE 67/100 (4 of 6 checks) (Lists two missed checks, but 4 of 6 is 67; consistent, yet the second missed check is unverified rather than failed.)
+
+## Safety
+
+- Shot 3's audio uses body.mp4 "You tear the top" while the tear is shown from a separate clip; timing was estimated, so product use could appear out of sync with its spoken line.
 
 ## What went in
 
@@ -46,183 +59,156 @@ Need: two versions (H1 + body, H2 + body), 9:16 and 4:5, under
 ## What came out
 
 ```text
-# Edit plan: greens gummies customer ad, two openings (9:16 and 4:5)
+# Edit plan: greens gummies, two hook versions
 
 ## 1. Cut list
 
-The body is the same in both versions. Only the opening differs, and everything after it moves 0.9 s later in V2.
-
-**V1: H1 + body (24.4 s)**
+**Version 1: H1 + body (19.5 s)**
 
 | # | source file | in-out (s) | timeline start-end | what it shows | audio | on-screen text |
 |---|---|---|---|---|---|---|
-| 1 | hookA.mp4 | 0.3–3.8 | 0.0–3.5 | Customer to camera | H1: "I quit greens powder more times than I can count." | Caption |
-| 2 | body.mp4 | 2.5–4.0 | 3.5–5.0 | To camera, pack in hand, sealed | B: "This is one day." | Caption |
-| 3 | tear.mp4 | full tear, ~1.9 s (pick the window that holds the whole tear, start to finish) | 5.0–6.9 | Pack torn across top edge, close | B voice continues ("You tear the top,"), tear sound under it if recorded | Caption, kept clear of hands and the tear |
-| 4 | pour.mp4 | ~2.0 s, the full tip into the palm | 6.9–8.9 | Gummies tip into her palm | B voice continues ("tip it out."), then the natural pause | Caption, kept clear of palm and pack |
-| 5 | body.mp4 | 7.9–12.9 | 8.9–13.9 | To camera, back in lip sync (same source time as the audio bed) | B: "21 vitamins and minerals and 6 grams of fiber, in one pack." | Caption |
-| 6 | body.mp4 | 15.7–22.7 | 13.9–20.9 | To camera, 110% punch-in to soften the jump cut | B: "First order is $29.99 with the text sign-up. It renews at $49.99 every 4 weeks." | Two captions, no gap between them |
-| 7 | pouch.mp4 | 0.3–3.8 | 20.9–24.4 | Pouch to lens, name readable, held 3.5 s | Room tone from the clip, no music | End card (see Close) |
+| 1 | hookA.mp4 | 0.3–3.8 | 0.0–3.5 | Customer to camera, hook | Sync: "I quit greens powder more times than I can count." | Caption C1 |
+| 2 | body.mp4 | 2.5–4.0 | 3.5–5.0 | To camera, pack in hand | Sync: "This is one day." | Caption C2 |
+| 3 | tear.mp4 | ~1.0–2.5 (set to the tear itself) | 5.0–6.5 | Pack torn straight across the top, close | body.mp4 4.0–5.5: "You tear the top," plus tear.mp4 natural sound, low | Caption C3 |
+| 4 | pour.mp4 | ~0.5–1.6 (set to the tip) | 6.5–7.6 | Gummies tip into palm, close | body.mp4 5.5–6.6: "tip it out." | Caption C3 continues |
+| 5 | body.mp4 | 7.8–10.6 | 7.6–10.4 | To camera, pack in hand | Sync: "21 vitamins and minerals and 6 grams…" | Caption C4 |
+| 6 | pouch.mp4 | 0.5–2.5 | 10.4–12.4 | Pouch to lens, name readable, held 2 s | body.mp4 10.6–12.6: "…of fiber, in one pack." | Caption C4 continues, placed clear of the name |
+| 7 | body.mp4 | 15.7–22.7 | 12.4–19.5 | To camera, price line (close) | Sync: "First order is $29.99 with the text sign-up. It renews at $49.99 every 4 weeks." | Captions C5, C6 |
 
-Shots 2–5 sit on one continuous audio bed, body.mp4 2.5–12.9. Shots 3 and 4 are picture cutaways only, so the speaker's pace stays natural.
-
-**V2: H2 + body (25.3 s)**
+**Version 2: H2 + body (20.4 s)**
 
 | # | source file | in-out (s) | timeline start-end | what it shows | audio | on-screen text |
 |---|---|---|---|---|---|---|
-| 1 | hookB.mp4 | 0.2–4.6 | 0.0–4.4 | Customer to camera, holds up pack | H2: "If your greens powder lives at the back of the cupboard, watch this." | Caption |
-| 2 | body.mp4 | 2.5–4.0 | 4.4–5.9 | To camera, pack in hand | B: "This is one day." | Caption |
-| 3 | tear.mp4 | full tear, ~1.9 s | 5.9–7.8 | Tear, close | B voice continues | Caption |
-| 4 | pour.mp4 | ~2.0 s | 7.8–9.8 | Gummies into palm | B voice continues | Caption |
-| 5 | body.mp4 | 7.9–12.9 | 9.8–14.8 | To camera | B: claim line | Caption |
-| 6 | body.mp4 | 15.7–22.7 | 14.8–21.8 | To camera, 110% punch-in | B: price and renewal | Two captions, no gap |
-| 7 | pouch.mp4 | 0.3–3.8 | 21.8–25.3 | Pouch, name readable | Room tone | End card |
+| 1 | hookB.mp4 | 0.2–4.6 | 0.0–4.4 | Customer to camera, holds up pack | Sync: "If your greens powder lives at the back of the cupboard, watch this." | Caption H2 |
+| 2–7 | Same as Version 1 shots 2–7 | Same source in-outs | Version 1 timeline +0.9 s (4.4–20.4) | Same | Same | Same |
 
 **What was cut and why**
-
-| Cut | Why |
-|---|---|
-| hookA 0.0–0.3, hookB 0.0–0.2 | Set-up. The first word is not clipped. |
-| hookA 3.8–4.0, hookB 4.6–5.0 | Dead tail after the line. |
-| body 0.0–2.5, "Okay, um, so." | Set-up and filler. |
-| body 12.9–15.7, "Honestly it fixed my stomach." | Uses "fix" and states a health result. Both are banned. Cut completely. |
-| body 22.7–32.0 | She looks off camera. Covered by the pouch end card. |
-| tear.mp4 and pour.mp4 outside the chosen windows | Lead-in and run-out. Never cut mid-tear or mid-pour. |
+- body.mp4 0.0–2.5, "Okay, um, so.": set-up and filler.
+- body.mp4 6.6–7.8: dead air between lines. It is hidden under the pour.mp4 cutaway.
+- body.mp4 12.6–15.7, "Honestly it fixed my stomach.": this line uses the banned word "fix" and makes a health result claim. Cut it in full. The out point must sit before 13.0 so no "Honestly" leaks through. This jump is hidden under the pouch.mp4 cutaway.
+- body.mp4 22.7–32.0: she looks off camera.
+- hookA 0.0–0.3 and hookB 0.0–0.2: set-up before the first word, trimmed with about 0.1 s lead so the first word isn't clipped.
+- **Timing caveat:** the in/out points above are estimates from start times only. The transcript gives no end times except 3.6, 4.4 and 22.6. Confirm the actual end of "tip it out" (estimated 6.3–6.6) and "in one pack" (estimated 12.4–12.6) on the waveform, then re-time everything after them.
 
 ## 2. Join notes
 
-**V1 (H1 into "This is one day.")**
-- **Pronoun:** H1 shows no pack, so "This" must point at the pack in her hand in body.mp4. Check that the pack is clearly in frame at body 2.5 when viewed small. If it isn't, the join fails.
-- **Argument:** "I quit greens powder…" leads to "This is one day." The ad implies this product is the answer. That holds, but the brand should confirm it is happy with that reading.
-- **Product state:** No pack in H1. The pack is sealed at body 2.5 and torn in shot 3. Correct order.
-- **Voice, light, room sound:** Same speaker. Compare light, background, wardrobe and room tone between hookA and body. If they were filmed at different times, match room tone at the cut.
+**H1 → body (hookA 3.8 → body 2.5)**
+- **Pronoun:** "This is one day" follows "…than I can count." The word "this" lands on the pack she is holding in body.mp4, so it reads.
+- **Argument:** she quit powders, and this is the alternative. The argument holds.
+- **To check:**
+  - That the pack is sealed in the body opening frame.
+  - That light, framing and room tone match between hookA and body.
+  - Add a 2–3 frame room-tone crossfade if the backgrounds differ.
 
-**V2 (H2 into "This is one day.")**
-- **Pronoun:** "watch this" is followed by "This is one day." It reads naturally because she is holding up the pack.
-- **Product state:** The pack must be sealed and the same version in hookB and in body at 2.5. Also check where her hand and the pack sit. A big jump in pack position at 4.4 will read as a mistake.
-- **Voice, light, room sound:** Check the same items as V1.
+**H2 → body (hookB 4.6 → body 2.5)**
+- **Pronoun:** "…watch this. This is one day." The repeated "this" is acceptable, and it points at the pack she has just held up.
+- **To check:**
+  - The pack in hookB matches the body pack in version and state. Both must be sealed, because it is torn in shot 3.
+  - Hand position. If she holds it up in hookB and it sits in her hand in body, the change must not read as a jump on the pack.
+  - Voice level and room tone.
+  - If the pack in hookB is a different item from the body pack, this join fails. Use Version 1 only until it is reshot.
 
-**Both:** There is no music, so no music joins to check.
+**Internal joins**
+- **Body → tear → pour:** the product state goes sealed → torn → open, which is the correct order.
+- **Return from cutaways:** after pour.mp4 and pouch.mp4 the cut goes back to body on matching source time, so lip sync holds.
 
 ## 3. Caption windows
 
-All windows are timeline times. They are built from sentence start times. Word-level end times were not supplied, so re-time every window to the real words after the cuts are locked.
+Times are for Version 1. For Version 2, add 0.9 s to C2–C6.
 
-**V1**
+| ID | text (line 1 / line 2) | start | end | chars | cps |
+|---|---|---|---|---|---|
+| C1 | I quit greens powder more times / than I can count. | 0.0 | 3.5 | 49 | 14.0 |
+| H2 (V2 only) | If your greens powder lives at the back / of the cupboard, watch this. | 0.0 | 4.4 | 68 | 15.5 |
+| C2 | This is one day. | 3.6 | 5.0 | 16 | 11.4 |
+| C3 | You tear the top, tip it out. | 5.0 | 7.6 | 29 | 11.2 |
+| C4 | 21 vitamins and minerals and / 6 grams of fiber, in one pack. | 7.7 | 12.4 | 58 | 12.3 |
+| C5 | First order is $29.99 / with the text sign-up. | 12.5 | *start of "It renews"* (≈16.1) | 43 | ≈12.3 |
+| C6 | It renews at $49.99 / every 4 weeks. | *start of "It renews"* (≈16.1) | 19.5 | 33 | ≈9.6 |
 
-| Text | Start | End |
-|---|---|---|
-| I quit greens powder / more times than I can count. | 0.1 | 3.5 |
-| This is one day. | 3.6 | 4.9 |
-| You tear the top, tip it out. | 5.0 | 7.2 (to word end) |
-| 21 vitamins and minerals and / 6 grams of fiber, in one pack. | 8.9 | 13.8 |
-| First order is $29.99 / with the text sign-up. | 14.0 | ≈17.6 (start of "It renews") |
-| It renews at $49.99 / every 4 weeks. | ≈17.6 | 20.9 |
-
-**V2**
-
-| Text | Start | End |
-|---|---|---|
-| If your greens powder lives / at the back of the cupboard, | 0.0 | ≈3.6 (start of "watch") |
-| watch this. | ≈3.6 | 4.5 |
-| This is one day. | 4.5 | 5.8 |
-| You tear the top, tip it out. | 5.9 | 8.1 (to word end) |
-| 21 vitamins and minerals and / 6 grams of fiber, in one pack. | 9.8 | 14.7 |
-| First order is $29.99 / with the text sign-up. | 14.9 | ≈18.5 (start of "It renews") |
-| It renews at $49.99 / every 4 weeks. | ≈18.5 | 21.8 |
-
-**Caption rules**
-- **Reading speed:** The H2 caption runs at about 15 characters a second because her delivery is fast. Do not speed up or trim her voice to fix this.
-- **Price and renewal:** The two price captions must butt together with no gap between them.
-- **Placement:** Keep every caption inside the app safe area. Keep it clear of her face, her hands, the palm in pour.mp4, and the label in the tear and pouch shots.
-- **4:5:** Re-place every caption for the 4:5 frame.
+**Notes on the windows**
+- **H2 rate:** H2 runs at about 15.5 cps, just over the limit. If it reads fast, extend the hookB out to 4.8 and push the body by 0.2 s, which brings it to 14.8 cps.
+- **Price and renewal:** C5 and C6 are back to back with no gap, so the renewal terms are never off screen after the price.
+- **Placement:**
+  - Keep all captions inside the 9:16 and 4:5 safe areas.
+  - Keep them clear of her face and hands.
+  - In shots 3, 4 and 6, keep them off the pack and pouch label.
 
 **Words to listen for in the transcript**
-- "quit"
+- "can count" (not "can't count")
 - "greens powder"
-- "cupboard"
-- "watch this"
-- "This is one day"
-- "tear the top"
 - "21"
-- "6 grams"
-- "fiber"
-- "$29.99" (spoken "twenty-nine ninety-nine")
+- "6 grams" and "fiber" (spelling as in the approved copy)
+- "$29.99"
 - "text sign-up"
-- "renews"
 - "$49.99"
 - "every 4 weeks"
-
-**At the 12.9 / 15.7 cut:** Make sure nothing from "Honestly…" or "…stomach" survives. That includes a breath or syllable.
+- Confirm that no fragment of "Honestly" remains at the shot 6 → 7 cut.
 
 ## 4. Sound plan
 
-- **Voice:** Each clip's own sync sound. body.mp4 runs as one bed from 2.5 to 12.9 under the cutaways.
-  - Use 2–4 frame audio crossfades at the hook join, at 12.9/15.7 and into the end card. This prevents clicks.
-  - Match room tone across the hook join and the jump cut.
-  - Confirm the voice is clear on a phone speaker.
-- **Effects:** Use only real sound from tear.mp4 (the tear) and pour.mp4 (gummies landing). Lay them low under the voice and only at the moment the action is on screen. If those clips have no sound, add nothing.
-- **Music:** None was supplied, so the ad uses no music. If the brand wants music, it must be a track the brand owns, or one cleared for paid ads and not only for organic posts.
-- **End card:** Pouch clip room tone or near-silence. No sting.
-- **Listening check:** Listen at every cut for clicks, doubled audio and abrupt starts.
+- **Voice:** sync audio from each clip carries the whole argument.
+  - Keep her natural pace. Nothing is sped up.
+  - Normalise hook and body to the same loudness.
+  - Check clarity on a phone speaker.
+- **Effects:** use only the real tear sound from tear.mp4, and only if it was recorded. Keep it low under "You tear the top." Add no other effects.
+- **Music:** none was supplied, so the plan ships with no music. If music is wanted later, use only a track you own or one cleared for paid ads.
+- **Cut checks:** listen for clicks, doubled words and room-tone jumps at:
+  - 3.5 (hook → body)
+  - 5.0 and 6.5 (cutaways over continuous body audio)
+  - 7.6 (audio jump 6.6 → 7.8)
+  - 12.4 (audio jump 12.6 → 15.7)
+  - Use 2–3 frame crossfades where needed.
 
 ## 5. Close
 
-- **Approved offer, shown as an end-card super over pouch.mp4 in the exact approved wording:** "First order is $29.99 with the text sign-up. It renews at $49.99 every 4 weeks." The renewal stays in the same super as the price.
-- **Action and destination:** MISSING: approved call to action and destination. This includes how the text sign-up works (number or keyword) and whether a URL or "Shop now" is approved.
-- **Not allowed:** No "link in bio", discount, deadline or guarantee unless it appears in the approved copy.
-- **Product name:** It appears on the pouch. Any added name super must match the pack exactly.
-- **Final check:** Look at the last frame small and muted. The name and price must read.
+- **What the close carries:** the approved body line, spoken and captioned, with nothing added:
+  - "First order is $29.99 with the text sign-up. It renews at $49.99 every 4 weeks."
+- **What is not added:** no end card, discount, deadline, guarantee or "link in bio."
+- **The action:** the one action is the text sign-up. The approved number or keyword for the text sign-up was not supplied, so no destination appears on screen yet.
+- **Last frame:** her to camera with C6 on screen. Check it small and muted.
 
 ## 6. Exports
 
-Eight files in total:
+Source files are kept untouched. Each version is delivered in each shape, clean and captioned: 8 files.
 
 | Version | Shape | Clean | Captioned |
 |---|---|---|---|
-| V1 (H1 + body) | 9:16, 1080 × 1920 | ✓ | ✓ |
-| V1 (H1 + body) | 4:5, 1080 × 1350 | ✓ | ✓ |
-| V2 (H2 + body) | 9:16, 1080 × 1920 | ✓ | ✓ |
-| V2 (H2 + body) | 4:5, 1080 × 1350 | ✓ | ✓ |
+| V1 (H1) | 9:16, 1080×1920 | V1_916_clean.mp4 | V1_916_capt.mp4 |
+| V1 (H1) | 4:5, 1080×1350 | V1_45_clean.mp4 | V1_45_capt.mp4 |
+| V2 (H2) | 9:16, 1080×1920 | V2_916_clean.mp4 | V2_916_capt.mp4 |
+| V2 (H2) | 4:5, 1080×1350 | V2_45_clean.mp4 | V2_45_capt.mp4 |
 
-**File settings**
-- H.264 MP4, yuv420p, with audio.
-- Keep all source files.
-- Edit at full 9:16 first, then crop to 4:5.
-- **Clean copy:** No added captions. The end-card offer super still stays, because the terms must be on screen. The voice stays in.
-
-**4:5 crop checks (the crop removes about 30% of the height), shot by shot**
-- H2: the raised pack.
-- Body shots: her face and the pack in hand.
-- Shot 6: the punch-in combined with the crop. Her face must stay fully in frame.
-- Tear and pour: the full action stays in frame.
-- Pouch: the name stays fully readable.
-
-**Review pass:** For each export, watch these with sound on and with sound off:
-- the first frame
-- the hook join
-- the tear and pour
-- the 12.9/15.7 cut
-- the price captions
-- the end card
-
-**First frame:** Check that hookA at 0.3 and hookB at 0.2 are not mid-blink or mid-mouth-shape, and that they read at thumbnail size.
-
-Every finished file is a draft for the brand to approve.
+- **Format:** all files H.264 MP4, yuv420p, with audio.
+- **4:5 crop:** this is a crop from the full 9:16 frame and drops about 570 px of height. Re-frame per shot:
+  - Keep her face in shots 1, 2, 5 and 7.
+  - Keep the tear and the hands in shot 3.
+  - Keep the palm in shot 4.
+  - Keep the full readable name in shot 6.
+  - Re-check caption placement in the cropped frame.
+- **Review pass:** watch the first frame, every join, the tear and pour demo, the pouch hold and the close, once with sound on and once muted.
+- **Status:** the finished files are drafts for brand approval.
 
 ## 7. Gaps
 
-- **MISSING: approved brief text.** "21 vitamins and minerals and 6 grams of fiber, in one pack." and the price lines need checking word for word against the approved script before captions are locked.
-- **MISSING: approved CTA and destination,** including the text sign-up mechanics. The close cannot be finished without these.
-- **MISSING: pack photos.** These are needed to confirm:
-  - the single-day pack in body and tear.mp4,
-  - the pouch in pouch.mp4,
-  - the gummies in pour.mp4,
+This is a plan. No edited file exists yet.
 
-  are all the current product, version and packaging. Also confirm whether the pouch is the same item as the pack (sealed or opened state at the end card) or a different pack size.
-- **MISSING: word-level transcript end times** for every line. These are needed to lock the caption windows, the tear/pour cut point and the price caption boundary.
-- **MISSING: confirmation of the H2 pack and the body pack.** Confirm the pack in hookB is sealed and matches the one in body, and that the pack is visible at body 2.5.
-- **MISSING: disclosure decision.** She is a real customer filmed from a brief. Brand or legal should confirm whether a paid or brief disclosure is required and how it is worded. Nothing has been added.
-- **Music:** None cleared, none used.
-- **Status:** This is an edit plan. No video file exists yet.
+- **MISSING: pack photos.** I can't confirm that the pack in hookB and body.mp4, the torn pack in tear.mp4 and the pouch in pouch.mp4 are the same current product and version. That includes logo, colours and shape.
+  - Confirm that "pack" in the body and the "pouch" in pouch.mp4 are the same item. If they are not, drop shot 6 and hold body.mp4 on camera through "in one pack."
+- **MISSING: screenshots from each clip.** Without them I could not check:
+  - Label legibility.
+  - Product state (sealed or opened).
+  - Light and framing at the joins.
+  - Where the tear and pour actions sit in X1 and X2.
+- **MISSING: approved text sign-up destination.** The close needs the exact number, keyword or URL and its wording before any on-screen action can be added.
+- **MISSING: confirm the offer is live.** Check that $29.99 for the first order with text sign-up, renewing at $49.99 every 4 weeks, is the current offer.
+- **MISSING: line end times.** I need the end times for "tip it out" and "in one pack" to lock the in/out points and caption windows.
+- **Optional shot:** a back-of-pack close-up showing the 21 vitamins and minerals and the 6 g fiber panel, held 2 s, to sit under C4 as support for the claim. Without it, the ad has no proof shot. That is acceptable, because the cut "fixed my stomach" line is not usable as proof.
+- **Music:** none planned. Any music needs paid-ad clearance first.
+
+## 8. Score
+
+SCORE 67/100 (4 of 6 checks)
+- **Pack looks true in every shot:** not verifiable. There are no pack photos or screenshots, and pack vs pouch is unconfirmed.
+- **First frame, joins and close checked muted and with sound:** cannot be checked until a file exists.
 ```

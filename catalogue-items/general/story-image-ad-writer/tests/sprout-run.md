@@ -1,23 +1,31 @@
 # Test run on Sprout, 2026-10-19
 
-Result: **pass**. Ran on claude-opus-5-5 (effort medium), graded by claude-fable-5-1. Judge list: 6 of 6 met. Invented facts: 0.
+Result: **fail**. Ran on claude-opus-5-5 (effort medium), graded by claude-sonnet-5-5. Judge list: 3 of 6 met. Invented facts: 1.
 
-The run honestly found that the four result-only quotes contain no moment of struggle, wrote the required MISSING line, recommended a direct ad and told the owner exactly what customer words to collect to unlock the story ad. The owner gets no ad today, which is a conservative call, but nothing is invented, every rule about narrators, claims and the teaching page is respected, and the next steps are clear.
+The run flagged a missing push, which is arguably what the skill demands, and it invented nothing. But it stopped at a direct-ad recommendation and left the owner with no story, picture, line or score, so it is not a usable deliverable.
+
+## Fix
+
+Step 1 should say that when no moment is found the output still fills every section of the shape, with MISSING in the fields it can't write. Alternatively, it should draft the story as 'you' from the quotes, since the review about 15 years of irregularity (#7) implies a long struggle.
 
 ## Judge list
 
-- Met: Cover the product name; picture and first line still make sense
-  Not applicable: no picture or story written. Run stopped at step 1 as the skill's push rule directs ("MISSING: a moment people struggle with").
-- Met: First 125 characters pick up what the picture makes people wonder
-  Not applicable: "4. Story: Not written (stopped at step 1)", a stop the skill explicitly sanctions.
-- Met: Every quoted phrase matches a review word for word
-  "My bowel movements are normal for the 1st time in 15 years!" and "Feel lighter, less bloated and overall good." match input exactly.
-- Met: Nobody speaks in first person unless real and agreed
-  "No customer permission is on file, so no first-person customer voice is allowed." No story written in first person.
-- Met: For a teaching page, no price, discount or product page link in the story
-  No story text exists; the only offer mention is a recommendation for a separate direct ad, not story copy.
-- Met: Word count fits the length asked
-  Not applicable: no story produced; skill says "No moment of struggle: recommend a direct product ad and stop."
+- Not met: Cover the product name. The picture and the first line should still make sense.
+  Story: not written. No picture or first line was produced, so it can't be judged.
+- Not met: The first 125 characters pick up what the picture makes people wonder.
+  "Story: not written." No opening exists.
+- Met: Every quoted phrase matches a review word for word.
+  Quotes #7-#10 reproduced exactly, e.g. "Feel lighter, less bloated and overall good."
+- Met: Nobody speaks in first person unless they're real and agreed.
+  No story written; flags state no first-person customer voice without permission.
+- Met: For a teaching page, no price, discount or product page link appears in the story.
+  No story written, so no price or discount appears.
+- Not met: The word count fits the length you asked for (short, 120 to 260).
+  Story: not written; no word count given.
+
+## Invented
+
+- other: unbuttoning after lunch, changing outfits, cancelling plans, or the morning routine that wasn't working (Offered as things to look for when collecting reviews, not as Sprout facts, so acceptable.)
 
 ## What went in
 
@@ -46,43 +54,48 @@ built yet. Length: short.
 ## What came out
 
 ```text
-**1. Push: FAIL**
+I can't draw pictures in this chat because no image tool is connected, and this brief stops before the picture stage anyway.
 
+**1. Push: FAIL**
 `MISSING: a moment people struggle with`
 
-None of the four quotes describes the moment the old way stopped being bearable, such as a day, a place or the thing in their hand. All four describe results:
-- #7: "My bowel movements are normal for the 1st time in 15 years!" (no source given). This implies a long struggle but no scene.
-- #8: "The prebiotics do their job, but not aggressively, and I feel like my overall digestion has improved." (brand site). This is an outcome.
-- #9: "[Sprout] have been the solution to my problems with regularity." (retailer). This is an outcome.
-- #10: "Feel lighter, less bloated and overall good." (retailer). This is an outcome.
+None of the four quotes describes the day, the place or the thing in hand when the old way stopped being bearable. They all describe results after switching:
+- #7 "My bowel movements are normal for the 1st time in 15 years!" (no source given) shows how long the struggle lasted, not a moment.
+- #8 "The prebiotics do their job, but not aggressively…" (brand site) is a result.
+- #9 "[Sprout] have been the solution to my problems with regularity." (retailer) is a result.
+- #10 "Feel lighter, less bloated and overall good." (retailer) is a result.
 
-The buyer note says she "has tried fiber powders and probiotics." That is a brief, not customer words, so it can't carry the push or a "down and back up" shape.
+The line "Has tried fiber powders and probiotics" comes from the buyer description, not from customer words. A story can't rest on it.
 
-**Recommendation:** run a direct product ad for now. It would cover the product, the approved benefit ("Supports digestion and gut health"), the survey line ("67% of surveyed users experienced better, more regular digestion") and the offer. Then come back to the story ad once the push exists.
+**Recommendation:** run a direct product ad for now. Build it on the approved claim "Supports digestion and gut health," the survey line "67% of surveyed users experienced better, more regular digestion," and the format (a daily pack of greens gummies with 6 g of prebiotic fiber, in Low Sugar or Sugar-Free). Stopping here, as the skill requires.
 
-**To unlock the story ad, collect:** reviews, support emails or call notes, each with its source, in which buyers describe a specific moment with the old routine. For example, what happened with the fiber powder or probiotic they quit, when and where the bloating made them give up on it, or what they were holding or wearing. Look for quotes about what they tried before Sprout, a setback and return, or self-blame. These would also decide the shape.
+**To unlock the story ad, collect:**
+- Reviews, support emails or call notes that describe the bad moment, each with its source. Look for things like unbuttoning after lunch, changing outfits, cancelling plans, or the morning routine that wasn't working.
+- Quotes about the fiber powders and probiotics people tried before, and how each one failed: taste, texture, cost, or not sticking with it. These would support the "down and back up" shape.
 
-**2. Narrator and shape:** Not written (stopped at step 1). When the story is written, the narrator must be the brand retelling customer words word for word, because no customer has agreed in writing. If no usable quotes turn up, it would be told as "you" with nothing in quotation marks. The shape can't be chosen until the push quotes exist.
+**2. Narrator and shape:** not chosen. No push was found.
+- When it is chosen: nobody has given permission, so the brand would retell the story and quote reviews word for word.
+- If there are no quotes, the ad would be told as "you", with nothing in quotation marks.
 
-**3. Picture:** Not written (stopped at step 1).
+**3. Picture:** not chosen. The picture has to come after the push.
 
-**4. Story:** Not written (stopped at step 1).
+**4. Story:** not written.
 
-**5. Line under the picture:** Not written (stopped at step 1).
+**5. Line under the picture:** not written.
 
-**6. Other openings:** Not written (stopped at step 1).
+**6. Other openings:** not written.
 
-**7. Page:** `MISSING: a teaching page that opens on the moment.` It must be built before any story ad runs. Its first screen must repeat the picture's moment and the story's first line, teach before it sells, and show that it's from Sprout. Strangers must not be sent to a product page.
+**7. Page:** `MISSING: teaching page`. It isn't built yet, and it must exist before any story ad runs. Its first screen has to open on the same moment as the picture and say who the page is from.
 
 **8. Flags**
-- Quote #7 has no source. Confirm it before any use.
-- Quote #7 is a strong bowel-health result. In any ad, keep it word for word and attributed to one customer, never "people say."
-- No customer permission is on file, so no first-person customer voice is allowed.
-- The survey claim must always read "of surveyed users."
-- Never use "fix," IBS or treatment language, or any result tied to a set time (including "in X weeks").
-- Nothing was written past step 1, so no claims were used.
+- **#7 has no source.** Add one before using it anywhere. "Normal for the 1st time in 15 years" is one customer's result. It must stay quoted and never be presented as typical.
+- **#9 has been edited.** "[Sprout]" was inserted in brackets, so get the original wording.
+- **Missing quotes.** Quotes #1 to #6 weren't supplied. They may contain the missing moment, so please share them.
+- **Survey wording.** The survey line must always include "of surveyed users."
+- **Health claims.** No line can say the product fixes, treats or relieves IBS or bloating, or works within a set time. Bloating stays in a customer's own words only.
+- **Narrator permission.** No customer has given written permission, so there can be no first-person customer voice.
 
-**9. Tests**
-- Not planned (stopped at step 1).
-- Once a push quote and the teaching page exist, test one story with two pictures from different traces. Then test the winning picture with a second opening. Judge first on readers reaching the offer on the page, then on sales, compared against other new-customer ads.
+**9. Tests:** not planned. There is no story ad yet.
+
+**10. Score:** not scored. No ad was written, so there is nothing to check yet.
 ```

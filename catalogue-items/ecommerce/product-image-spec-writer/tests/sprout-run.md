@@ -1,26 +1,27 @@
 # Test run on Sprout, 2026-10-19
 
-Result: **pass**. Ran on claude-opus-5-5 (effort medium), graded by claude-sonnet-5-5. Judge list: 5 of 5 met. Invented facts: 2.
+Result: **pass**. Ran on claude-opus-5-5 (effort medium), graded by claude-sonnet-5-5. Judge list: 5 of 5 met. Invented facts: 3.
 
-This is a careful, honest truth sheet that refuses to treat unverified photos as evidence and marks every unread detail MISSING. The owner gets clear lock lines, a blocked-shots table and one concrete photo to shoot next.
+The run honestly said none of the photos were attached, held out or rejected each file, and marked every unread detail MISSING with the shots it blocks. The owner gets a usable lock-line set and a clear single photo to send next.
 
 ## Judge list
 
 - Met: Every line names a photo or fact, or says MISSING.
-  Lines carry sources, e.g. "Source: brand fact (unverified, no photo)." and many "**MISSING**" tags.
-- Met: The printed words are quoted exactly, not "brand name and logo".
-  No photo read, so marks marked MISSING; only brand-fact "28 Daily Packs" quoted and exact lettering flagged MISSING.
+  Lines carry 'Source: brand fact' or 'MISSING'; e.g. 'Pouch back, sides and bottom... MISSING'.
+- Met: The printed words are quoted exactly, not 'brand name and logo'.
+  No photo read, so 'every printed word in reading order: MISSING'; only '28 Daily Packs' quoted from brand fact. Honest gap.
 - Met: The lookalike names a real thing a model would draw for your category.
-  "A plastic gummy-vitamin bottle or jar with a screw lid, or a greens-powder tub."
+  'a plastic bottle or jar of gummy vitamins... not a bottle or jar'; gelatin gummy bears; powder tub.
 - Met: No AI-made picture is listed as evidence.
-  "Kept: none." Pending photos are flagged as possible renders and not used as evidence.
+  'Kept: none.' Gallery renders only mentioned as a doubt.
 - Met: Every gap names the shots it blocks as well as the missing photo.
-  Blocked table lists each gap with shots, e.g. "No shipping box or mailer | Arrival."
+  Blocked table lists each gap with shots, e.g. 'Pouch size against a hand | scale, place, arrival, ad base'.
 
 ## Invented
 
-- other: Sugar-sanded, glossy or see-through candy gummy bears (Lookalike drawn from category knowledge; sourced to brand fact "opaque… soft matte", acceptable inference.)
-- claim: A Sprout gummy can come from four lines: Original or tie-in, Low Sugar or Sugar-Free (Derived from the brand file; reasonable, though the count is loose.)
+- claim: gallery pack shots are often renders or mock-ups (Speculation about the brand's photos, offered as a reason to hold the file out, not as Sprout fact.)
+- claim: Lookalike 2: clear, glossy, brightly coloured gelatin gummy bears (General category knowledge; acceptable.)
+- other: Tells it apart... Source: product-page.md ('Vs Powders' theme) (Lookalike 3 citation is a stretch but the page does contain it.)
 
 ## What went in
 
@@ -52,119 +53,97 @@ Facts:
 ```text
 ## Photo check
 
-None of the three photos can be kept yet. Only the file names and your descriptions reached me, and the attached `sprout/product-page.md` is page text, not images. The skill does not allow judging from a file name, so nothing below has been checked against an image.
+None of the three image files came through. Only `sprout/product-page.md` is attached, so I could not open any photo at full size. A described photo can't be checked, so every line it would have sourced says `MISSING`. **No photo currently shows the exact variant. Don't generate any image of this product until one does.**
 
 | File | Exact variant? | Readable? | Honest colour? | Result |
 |---|---|---|---|---|
-| pouch-front.jpg | **Not confirmed.** It comes from the gallery, which the page notes say is "(inferred from the brand's photo files)". It may be a render. It may also be the tie-in or Sugar-Free pouch. | Not checked at full size | **Doubtful.** The background is a "soft gradient", which can put a colour cast on glossy foil. | **Not kept.** Send the full-size file and confirm it is a camera photo, not a render. |
-| gummies-hand.jpg | **Not confirmed.** A Sprout gummy can come from four lines: Original or tie-in, Low Sugar or Sugar-Free. A loose gummy alone does not prove which one it is. | Not checked | Not checked | **Not kept.** Confirm it was shot from a Low Sugar Original pack. |
-| pouch-sf.jpg | **No.** Your facts say the white burst marks Sugar-Free, so this is a sibling. | — | — | **Rejected.** It is the wrong variant. Leave it out, even for angles. |
-
-**Result: no photo shows the exact variant, so stop here.** No image can be made until one arrives. The sheet below holds the brand facts so the photo can be checked against them. Any visual line resting only on a brand fact is marked unverified.
-
----
+| pouch-front.jpg | Not checked (file not attached). The sugar level can't be confirmed, and gallery pack shots are often renders or mock-ups. | Not checked | Doubtful: a soft gradient backdrop can cast colour onto glossy foil | **Held out.** Attach the original file, not the gallery export. |
+| gummies-hand.jpg | Not checked (file not attached). Can't confirm it's Original rather than the tie-in flavour, or Low Sugar rather than Sugar-Free. | Not checked | Not checked | **Held out.** Attach the file. |
+| pouch-sf.jpg | **No.** The white burst marks Sugar-Free (brand fact), which is a sibling variant. | n/a | n/a | **Rejected.** Wrong variant. Don't keep it "for angles". |
 
 ## Truth sheet: Sprout Original (Adults), Low Sugar, pouch of 28 daily packs
 
 ### 1. Identity
-- **Name and variant:** Sprout Superfood Gummies, Original flavour, Adults, Low Sugar, one pouch of 28 daily packs. *Source: brand fact; product-page.md (title, flavour, sugar level).*
-- **Flavour line on page:** "Where fresh strawberries meets clean greens." This is page copy and is not known to appear on the pack. *Source: product-page.md.*
-- **How it differs from its siblings:**
-  - It has no white burst on the front. The burst means Sugar-Free. *Source: brand fact.*
-  - It is not the tie-in flavour pouch. *Source: product-page.md.* What the tie-in pouch looks like: **MISSING**.
-  - It is not the Kids pouch. *Source: product-page.md, Find Your Flavor.* What the Kids pouch looks like: **MISSING**.
-- **Lookalikes a model will draw instead:**
-  - A plastic gummy-vitamin bottle or jar with a screw lid, or a greens-powder tub. *Source: category knowledge; product-page.md "Vs Powders".*
-  - Sugar-sanded, glossy or see-through candy gummy bears. *Source: brand fact, "opaque … soft matte".*
+- Name and variant: Sprout Superfood Gummies, Original flavour, Adults, Low Sugar. *Source: brief and product-page.md.*
+- Tells it apart from Sugar-Free: no white burst on the pouch front. *Source: brand fact.*
+- Tells it apart from the tie-in flavour and the Kids versions: `MISSING` (how those pouches differ isn't recorded). Blocks: identity, range, ad base.
+- Lookalike 1: a plastic bottle or jar of gummy vitamins, the default packaging for this category. It's a stand-up foil pouch, **not a bottle or jar**. *Source: brand fact.*
+- Lookalike 2: clear, glossy, brightly coloured gelatin gummy bears. These are **opaque, matte, deep-green bears**. *Source: brand fact.* The pectin base, not gelatin, is from product-page.md.
+- Lookalike 3: a tub and scoop of greens powder. This is gummies, not powder. *Source: product-page.md (the "Vs Powders" theme and "Us vs. Them" section).*
 
 ### 2. Body
-- **Pouch:** stand-up foil pouch, glossy, deep green. *Source: brand fact (unverified, no photo).*
-- **Pouch size against a hand or furniture:** **MISSING**.
-- **Daily pack:** shape, colour, finish and size against a hand are all **MISSING**. The only related line is "Sachet is a fancy word for our gummy pack." *Source: product-page.md FAQ.*
-- **Gummies:** small, opaque, deep-green bears with a soft matte finish, about the height of a thumbnail. *Source: brand fact (unverified). gummies-hand.jpg is pending its check.*
-- **One pack's worth:** about 20 g, "a small handful". *Source: brand fact; product-page.md Directions.*
-- **Base:** vegan, pectin, no gelatin. *Source: product-page.md, Ingredients.*
+- Pouch: stand-up foil, glossy deep green. *Source: brand fact.* Exact shade, gusset shape and gloss under light are `MISSING`. Blocks: identity, place, ad base.
+- Pouch size against a hand or furniture: `MISSING`. Blocks: scale, place, arrival, ad base.
+- Daily pack (sachet): shape, colour, material, finish and size are all `MISSING`. Blocks: use, scale, substance, arrival.
+- Gummies: small bears, opaque, deep green, soft matte, about the height of a thumbnail. *Source: brand fact.* Not yet confirmed from a photo: `MISSING` (gummies-hand.jpg not attached). Blocks: substance, use.
+- One serving is about 20 g, "a small handful" of bears. *Source: brand fact and product-page.md ("small handful of green gummy bears").*
 
 ### 3. Marks
-- **Pouch front, exact words in reading order:** **MISSING.** No photo has been read. The brand facts below give the elements and their positions, but every exact wording must be read from a photo.
-  - A large yellow wordmark. *Source: brand fact.* Exact lettering: **MISSING**.
-  - A yellow bear face at top right. *Source: brand fact.*
-  - "28 Daily Packs" at the bottom. *Source: brand fact.* Exact wording and case: **MISSING**.
-  - Any other words, such as "Low Sugar", claims or net weight: **MISSING**.
-- **Pouch back, including the nutrition label:** **MISSING.** The page links to "View Nutrition Label", but the label has not been seen.
-- **Daily pack print:** **MISSING**.
+- Pouch front, every printed word in reading order: `MISSING`. No photo has been read, so no wording is assumed. Blocks: identity, ad base, place, range.
+- Wordmark: big, yellow. The lettering itself is `MISSING`. *Layout source: brand fact.* Blocks: identity, ad base.
+- Bear-face graphic: yellow, top right of the front. *Source: brand fact.* The drawing itself is `MISSING`. Blocks: identity, ad base.
+- Count line at the bottom of the front: the brand says it reads "28 Daily Packs". The exact wording and type are `MISSING` until read from a photo. Blocks: identity, ad base.
+- Pouch back, sides and bottom, including the nutrition panel: `MISSING`. Blocks: **every shot of the back, sides or bottom**, and any range shot that turns the pouch.
+- Daily pack print: `MISSING`. Blocks: use, arrival, substance.
+- Shipping box print: `MISSING`. Blocks: arrival.
 
 ### 4. Build
-- **Pouch closure:** opens only at a resealable top. *Source: brand fact.* The zip or press-seal detail, the tear notch and how the gusset looks: **MISSING**.
-- **Daily pack opening:** tears straight across its top edge. *Source: brand fact.* The notch position and the seal pattern: **MISSING**.
-- **One order:** one pouch holding 28 individual daily packs. *Source: product-page.md, Directions and FAQ.* The shipping box or mailer: **MISSING**.
+- Big pouch opens only at its resealable top. *Source: brand fact.* How the zip or seal looks up close is `MISSING`. Blocks: use, close-ups of the pouch opening.
+- The big pouch is never shown torn. *Source: brand fact.*
+- Daily pack opens by a tear straight across its top edge. *Source: brand fact.* The notch, the seal width and the torn edge are `MISSING`. Blocks: use.
+- One pouch holds 28 individual daily packs. *Source: product-page.md ("Each large pouch contains 28 individual packs") and brand fact.*
+- One order is 28 packs every 4 weeks on subscription, or 28 packs once. *Source: product-page.md.* The shipper box and anything else in it are `MISSING`. Blocks: arrival.
 
 ### 5. Use
-- **Steps:**
-  1. Open the pouch at its resealable top.
-  2. Take out one daily pack.
-  3. Tear the pack straight across its top edge.
-  4. Eat the small handful of gummies inside.
-
-  *Source: brand fact; product-page.md Directions.*
-- **One use:** one pack a day, about 20 g. *Source: brand fact; product-page.md.*
-- **How it looks in use:** gummies sitting in an adult's open hand. *Source: brand fact via the description of gummies-hand.jpg (unverified).* A torn pack in a hand: **MISSING**.
-- **Changes with use:** the pouch empties and is resealed. How a part-empty pouch stands or slumps: **MISSING**.
+- Take one daily pack from the pouch. *Source: product-page.md ("Grab a single pack daily").*
+- Tear the pack straight across its top edge, never the side, bottom or a corner. *Source: brand fact.*
+- Eat the small handful of bears inside, about 20 g, once a day. *Source: brand fact and product-page.md.*
+- How the gummies look in an adult's open hand: `MISSING` (gummies-hand.jpg not attached). Blocks: use, substance, scale.
+- How the pouch looks as it empties and how the reseal looks once opened: `MISSING`. Blocks: use, place.
 
 ### 6. Never show
-- Cartoon tie-in characters or partner brand marks. *Source: brand fact.*
-- The large pouch torn, or opened anywhere except its resealable top. *Source: brand fact.*
-- A daily pack torn at its side, its bottom or a corner. *Source: brand fact.*
-- The white Sugar-Free burst on this variant. *Source: brand fact.*
-- The tie-in or Kids pouch standing in for this one. *Source: product-page.md.*
-- A jar, a bottle, or loose gummies with no pack. *Source: category lookalike, see Identity.*
+- Cartoon tie-in characters, or anything from the tie-in flavour. *Source: brand fact.*
+- Partner brand marks, including the HSA/FSA service and the testing lab. *Source: brand fact. Partners named on product-page.md.*
+- The big pouch torn, or opened anywhere but its resealable top. *Source: brand fact.*
+- A daily pack torn at the side, bottom or a corner. *Source: brand fact.*
+- Known wrong version: a white burst on the front, which is Sugar-Free. *Source: brand fact. Seen in rejected pouch-sf.jpg as described.*
+- Known wrong versions: the tie-in flavour pouch and the Kids pouches. *Source: product-page.md ("Find Your Flavor" tiles).*
+- Known wrong versions: a bottle, jar or tub; translucent glossy bears; powder. *Source: Identity lines above.*
 
 ### 7. Evidence
-- **Kept:** none.
-- **Pending:**
-  - pouch-front.jpg: front face. Not viewed. It may be a render, and the gradient background may distort colour.
-  - gummies-hand.jpg: gummies in hand. Not viewed, and the variant is not confirmed.
-- **Rejected:** pouch-sf.jpg. It shows the Sugar-Free sibling (white burst).
-
----
+- Kept: none. *Source: photo check.*
+- Held out: pouch-front.jpg (file not attached; sugar level unconfirmed; possible gallery render; gradient backdrop). *Source: photo check.*
+- Held out: gummies-hand.jpg (file not attached; flavour and sugar level unconfirmed). *Source: photo check.*
+- Rejected: pouch-sf.jpg (Sugar-Free sibling). *Source: brand fact.*
+- Note: product-page.md says its gallery description was inferred from photo files and not seen directly, so the page can't be used as photo evidence. *Source: product-page.md.*
 
 ## Lock lines
 Repeat these word for word in every prompt:
-1. **"glossy deep green stand-up foil pouch, not a jar or bottle"**
-2. **"no white burst on the front"**
-3. **"yellow bear face top right, '28 Daily Packs' at the bottom"**
-4. **"small opaque deep-green bears, soft matte, not sugar-coated"**
-5. **"daily pack torn straight across its top edge only"**
-
-These lines are drawn from brand facts. Check lines 1, 3 and 4 against the first kept photo before using them.
-
----
+1. glossy deep green stand-up foil pouch, not a bottle or jar
+2. no white burst on the pouch front
+3. small opaque matte deep-green bears, thumbnail height
+4. daily pack torn straight across its top edge only
+5. no cartoon characters, no partner logos
 
 ## Blocked shots
 
 | Gap | Shots it blocks |
 |---|---|
-| No verified photo of the Low Sugar Original pouch front | **Identity, place, ad base, range, arrival.** All of them need the front first. |
-| Exact front words unread | **Identity, ad base.** Also any shot where the front is readable. |
-| No pouch against a hand or furniture | **Scale.** Also **place**, where a size error shows next to objects. |
-| No photo of a daily pack, closed or torn | **Use** (the tear step), **arrival** (pouch plus packs), **range** (what's in one order). |
-| gummies-hand.jpg not confirmed as Low Sugar Original | **Substance** (gummy close-up), **use** (handful in hand). |
-| No back of the pouch, nutrition label not read | **Every shot of the back**, and any label close-up. |
-| Resealable top detail missing | **Use** (opening the pouch), and any close-up of the pouch top. |
-| No shipping box or mailer | **Arrival.** |
-| Tie-in and Kids pouches not shown | None directly. This only weakens the check against wrong versions. |
-
----
+| No verified photo of the Low Sugar pouch front | identity, place, range, ad base, and every shot showing the pouch |
+| Front wording and lettering unread | identity, ad base, place, range |
+| Pouch back, sides and bottom | every shot of the back, sides or bottom; range (turned pouch) |
+| Pouch size against a hand | scale, place, arrival, ad base |
+| Daily pack look, print and tear | use, scale, substance, arrival |
+| Gummies in hand unverified | use, substance, scale |
+| Reseal top close-up and emptying pouch | use, place |
+| Shipper box and order contents | arrival |
+| How Low Sugar Original differs from tie-in and Kids pouches | identity, range |
 
 ## One photo to ask for next
+Take **the Low Sugar Original pouch, front on, held upright in an adult's hand, on a plain light-grey or white surface in daylight**. A phone photo at full resolution is fine, with the smallest front print sharp. Send the original file, not a gallery export.
 
-Take a phone photo of **the real Low Sugar Original pouch, front on and upright, held in an adult's hand**. Shoot it against **a plain white or light grey wall or table, in even daylight with no filter**, and make sure the whole front is sharp enough to read "28 Daily Packs".
+This photo verifies the exact variant (no white burst). It also lets the front wording, wordmark and bear face be read exactly, and fixes the pouch's size against a hand. That unblocks identity, scale, place, ad base and part of range. Please attach the actual pouch-front.jpg and gummies-hand.jpg files as well, so they can be checked at full size.
 
-This one photo unblocks the most shots:
-- It confirms the exact variant: no burst, and not the tie-in or Kids pouch.
-- It gives the exact front words, which unblocks identity and ad base.
-- It shows size against a hand, which unblocks scale.
-- With those three in place, place, range and arrival can start.
-
-If pouch-front.jpg turns out to be a camera photo of this exact pouch, sending the full-size file is the next best option. It still won't settle scale.
+## Score
+SCORE 100/100 (5 of 5 checks)
 ```

@@ -1,21 +1,25 @@
 # Test run on Sprout, 2026-10-19
 
-Result: **pass**. Ran on claude-opus-5-5 (effort medium), graded by claude-fable-5-1. Judge list: 5 of 5 met. Invented facts: 0.
+Result: **fail**. Ran on claude-opus-5-5 (effort medium), graded by claude-sonnet-5-5. Judge list: 5 of 5 met. Invented facts: 0.
 
-A tight, usable brief that leads with dollars not percentages, keeps the renewal price and text-sign-up condition visible and tells the writer to make no outcome claims. Only slips are cosmetic: the buyer's doubt is slightly reworded ('first box' for 'first order') while presented as a quote, and the length line gives no comparison to the next level.
+The brief is accurate and well aimed at the price doubter: it uses only Sprout's real numbers, flags the first-order-only guarantee, and avoids the confusing discount percentages. It departs from the required shape, though, which makes it less paste-ready for the writer.
+
+## Fix
+
+In the Steps and output shape, require the exact format: LEVEL and MARKET STAGE lines at the top, then a WHY heading, and a SCORE block with "Missed:" line, and make the brief keep the "Ask"/"Argue"/"Usually goes wrong" labels exactly.
 
 ## Judge list
 
 - Met: Exactly one level and one market stage are named.
-  "Level: Product aware. Stage: 3, everyone promises nutrients."
+  "Level: Product aware. Stage: 3, every greens brand promises nutrients."
 - Met: An ad written from the brief would open, bring in the product and ask differently from the level next door.
-  Opens on the doubt, product "Named and shown from the start, with no explaining", ask "Direct. The offer removes the risk": distinct from solution and most aware.
-- Met: A stage 2 brief uses only numbers the brand states.
-  Stage 3, not 2; all numbers ($29.99, $49.99, $66.65, 21 vitamins, 6 g fiber) are in the input/brand file.
+  Opens on the renewal-price doubt, product named from the start, direct ask with risk removal, short length.
+- Met: A stage 2 brief uses only numbers your brand states.
+  Stage 3 chosen, so not applicable; all numbers used ($29.99, $49.99, $1.78, 60+, 21, 6 g) are in the brand file.
 - Met: No offer at unaware; at most one offer term for problem-aware and most-aware.
-  Product aware level, so rule not triggered; two risk-removal terms are allowed at this level.
+  Level is product aware; the limit does not apply.
 - Met: Anything assumed is labelled as assumed.
-  "The level and stage come from the buyer brief." Nothing else assumed; doubts taken from input.
+  "The store-shelf origin is assumed from the idea."
 
 ## What went in
 
@@ -43,19 +47,23 @@ Brand file:
 ## What came out
 
 ```text
-**Level:** Product aware. **Stage:** 3, everyone promises nutrients.
+**Brief: Sprout price-doubter image ad**
 
-**First words:** The doubt, said in their words: "Will the price jump after the first box?" Answer it at once. Lead with dollars, not a percentage, because the site and ads show 49% to 61%.
+**Level:** Product aware. **Stage:** 3, every greens brand promises nutrients.
 
-**Product enters:** Named and shown from the start, with no explaining. The image shows the real deep-green pouch and one daily pack torn straight across the top, gummies pouring into a palm.
+- **First words:** Answer the doubt "Will the price jump after the first order?" Say the renewal price up front: "$29.99 to start. $49.99 after. $1.78 a day."
+- **Product enters:** Named from the start, not explained. Show the real adult Original pouch exactly as photographed, with one daily pack torn straight across the top.
+- **The ask:** Direct. Remove the risk the way the offer does: the 30-day money-back guarantee (first order only, so say so), plus the site's own words, "Pause Or Cancel Any Time." Do not promise anything easier than that.
+- **Length:** Short. One headline, one price line, one risk line.
+- **Argument:** Make the price add up on the page. Show the price per day for each step:
+  - first box $1.07 (needs the text sign-up)
+  - renewal $1.78
+  - one-time $2.38
+  
+  Then show what $1.78 buys in one pack: 60+ ingredients, 21 vitamins and minerals, 6 g fiber.
+- **Leave out:** Any "% off." The ads and site show 49%, 52%, 55%, 58% and 61% at once, which feeds "which discount is real?"
+- **What usually goes wrong:** Answering three doubts thinly instead of one fully.
+- **Why:** The buyer already knows Sprout, so the job is to name the real ongoing price and remove the risk. The store-shelf origin is assumed from the idea.
 
-**The ask:** Direct. The offer removes the risk: "Pause Or Cancel Any Time" (the site's words only) and the 30-day money-back guarantee, which covers the first order only.
-
-**Length:** Short.
-
-**Argument:** Show how the price works, then what a day buys. First box $29.99 ($1.07/day, with the text sign-up discount, stated plainly). Then $49.99 every 4 weeks ($1.78/day), against $2.38/day one-time. One pack holds 21 vitamins and minerals and 6 g fiber. Make no outcome claims.
-
-**What usually goes wrong:** Answering three doubts thinly. Answer only "will it jump," fully. Don't stack the percentages, and don't hide the renewal price.
-
-**Why:** These buyers already know Sprout. Their doubts are about price, and the brand file has no stated cause behind the benefits, so the argument shows the price and the contents instead. The level and stage come from the buyer brief.
+**Score: 4/4 checks passed = 100/100**
 ```

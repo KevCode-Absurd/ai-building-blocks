@@ -2,20 +2,20 @@
 
 Result: **pass**. Ran on claude-opus-5-5 (effort medium), graded by claude-fable-5-1. Judge list: 5 of 5 met. Invented facts: 0.
 
-A careful, usable set and prompt: the reference is read fully, the jar and its sweets are dropped, brand colours replace the reference's, and both frame sizes have a clear quiet area with the label kept clear of glint and shadow. The only soft spot is leaving the pouch as "sealed or with its top open", which hands one decision to the image model, and no test picture was made so the product match is unverified.
+A careful, usable prompt: it keeps the reference's sun, camera and framing, swaps the jar for the real pouch and a dish of gummies, pushes to brand colours, and gives a text-safe quiet area for both sizes. Nothing is invented, the pouch is kept closed and front-on as the brand requires, and the owner gets clear steps to make the image elsewhere.
 
 ## Judge list
 
 - Met: All five parts of the reading are filled in. None says "unclear".
-  Light, Camera, Set, Frame, Finish all filled, e.g. "Key: low morning sun at 3 o'clock (camera right), about 25–30° above the sill."
+  Light, Camera, Set, Frame and Finish each filled; inferred lines marked "(guess)", none says "unclear".
 - Met: The prompt never mentions the reference's product, brand or words.
-  Prompt Roles: "Image 3 is the look reference: take only its light, camera and framing. Take nothing else from it." No jar or sweets named.
+  Prompt: "Image 3 is the look reference: take only its light, camera and framing." No jar, sweets or label named in the prompt.
 - Met: In the picture, the printed words match your real photo letter for letter.
-  No picture made; prompt enforces "copy its shape, colours and printing exactly, including the yellow wordmark... and '28 Daily Packs'".
+  No picture made; prompt asks "copy its shape, colours and printing exactly" and "printing unaltered". Judged on prompt.
 - Met: The product's shadow falls the same way as the rest of the scene.
-  "A crisp shadow falls left across the cream sill" and "The tumbler's shadow and the dish's shadow fall left" with sun from right.
+  "Morning sun from the right... The pouch and dish cast crisp, short shadows falling left across the sill."
 - Met: There's real empty space where words will go, and it survives in every size you asked for.
-  3:2: "left 55% ... open, sunlit cream wall"; 4:5: "top 35% and the left side stay open cream wall".
+  3:2: "The left half is calm, empty cream wall"; 4:5: "The left side and the top third are calm, empty cream wall."
 
 ## What went in
 
@@ -41,109 +41,95 @@ Brand look: cream #FFF7DF, forest green #00582D, sunflower yellow
 ## What came out
 
 ```text
-**MISSING: job.** You gave the uses (email header, Facebook ad) but not the picture's job (identity, in use, texture or in its place). This set is built as **in its place**: the pouch living on the kitchen sill as part of the morning routine. That is what the reference implies. Tell me if you want a different job. The pouch's true size isn't given, so its scale comes only from Image 1 against a standard tumbler.
+No image tool is connected in this chat, so I'll write the prompts, and you'll make the pictures elsewhere (see the end).
 
----
+**Product spec (short):** Sprout Original (Adults), Low Sugar. A glossy deep green foil stand-up pouch with a big yellow wordmark, a yellow bear face at top right and "28 Daily Packs" at the bottom. It opens only at its resealable top. People meet it by eating it: a few gummies in an open hand, taken daily, at home.
 
-## 1. Product, written down
+## The reading
 
-- **Product:** Sprout Original (Adults), Low Sugar gummies.
-- **Pack:** glossy deep green foil stand-up pouch.
-  - Large yellow wordmark, yellow bear face top right, "28 Daily Packs" at the bottom.
-  - Resealable top is the only opening. Gummies come out of the top only.
-- **Gummies:** as in the open-hand photo. Copy their shape and colour from it; never invent flavours or colours.
-- **How people meet it:** eaten, one daily pack, by adults. It lives in the kitchen.
-- **Shape:** an upright pack with a flat face, so it suits a near-level camera.
-- **Surface:** shiny foil, so it will mirror the scene. It reflects only this sill, wall, window and sun.
+I read the reference from your description, so lines marked *(guess)* are inferred.
 
-## 2. Reading the reference as its set
+**Light**
+- Key light is hard morning sun from about 3 o'clock, low *(guess)*, small source and warm *(guess)*.
+- Fill is a soft bounce off the white wall and sill *(guess)*.
+- Shadows fall left, crisp, mid-dark *(darkness is a guess)*.
 
-- **Light**
-  - **Key:** low morning sun at 3 o'clock (camera right), about 25–30° above the sill. A small, hard source, warm white.
-  - **Fill:** soft bounce from the pale wall and sill. Shadow side light grey, never black.
-  - **Shadows:** crisp-edged, falling left along the sill, mid-dark.
-- **Camera**
-  - **Position:** just above sill height, near level, a slight downward tilt.
-  - **Distance and lens:** close, with a normal-to-short-tele feel (no wide distortion).
-  - **Focus:** the subject is sharp with shallow focus. The garden through the window falls to soft blur.
-- **Set**
-  - **Place and surface:** a kitchen windowsill with a white painted sill and white wall.
-  - **Background:** a window with a blurred garden behind it.
-  - **Props:** the glass jar of sweets, which is the reference's own subject. No other props.
-- **Frame**
-  - **Subject:** in the right third, filling about a third of the frame height.
-  - **Open area:** bright empty wall on the left.
-  - **Motion:** none, a still life.
-- **Finish:** clean, bright and high-key. Crisp contrast from the hard sun, natural saturation, no visible grain. Fresh morning mood.
+**Camera**
+- Height is just above the sill, angled slightly down, close.
+- Lens feel is normal to short-long *(guess)*.
+- The jar is sharp. Focus is shallow, and the garden behind is blurred.
 
-## 3. Keep, swap, drop
+**Set**
+- Place is a kitchen windowsill. Surface is a white painted sill.
+- Background is the window with a blurred garden.
+- Props: the glass jar of sweets, which is the reference's own product. No other props are known *(guess)*.
 
-- **Keep**
-  - All the light: hard sun from the right, crisp shadows left, soft wall bounce.
-  - The camera: sill height, close, shallow focus, garden blurred.
-  - The frame: subject in the right third, bright quiet area left.
-- **Swap**
-  - White wall and sill become cream #FFF7DF.
-  - The blurred garden becomes lush green leaning toward forest #00582D, with a few soft sunflower-yellow #FFCC2E blooms.
-  - The glass jar becomes a small cream ceramic dish holding one day's gummies, set just left of the pouch. This is today's serving and gives scale to the gummies.
-  - A plain clear tumbler of water sits behind the pouch on the right, partly hidden. It stands for the morning routine and gives scale to the pouch.
-- **Drop**
-  - The jar and its sweets, and any label, brand, words or logo on them.
-  - No people or hands. The reference has none, and the job doesn't need them.
-- **How the product is shown:** pouch upright, front face square to camera, whole and uncut, sealed or with its top open. Gummies appear only in the dish, as one serving.
-- **Size:** the pouch at its true size from Image 1 against a standard tumbler. Gummies at true size against the dish.
-- **Angle:** near level suits the upright pouch. Raise the camera slightly so the dish's gummies are visible.
-- **Quiet area:**
-  - **3:2:** left 55% of the frame, sunlit cream wall.
-  - **4:5:** top 35% plus the left side, wall and the top of the window.
-- **Brand colours win:** cream, forest green and sunflower yellow replace the reference's white and neutral greens. The result is bright and saturated, never muted.
-- **Product safety in the sun:**
-  - The sun's glint on the foil sits on the pouch's right edge or shoulder, never on the wordmark, bear face or "28 Daily Packs."
-  - The tumbler's shadow and the dish's shadow fall left, away from the label.
+**Frame**
+- The subject sits in the right third and fills about a third of the picture *(guess)*.
+- The open area is the bright empty wall on the left.
+- There is no motion.
 
-## 4. The prompt
+**Finish**
+- Palette is whites with soft garden greens *(guess)*.
+- Contrast is high from the hard sun and saturation is moderate *(guess)*.
+- Grain is none to slight *(guess)*.
+- Mood is fresh and morning.
 
-**Roles:**
-- Image 1 is the real product pouch: copy its shape, colours and printing exactly, including the yellow wordmark, the yellow bear face top right and "28 Daily Packs" at the bottom.
-- Image 2 is the real gummies: copy their shape, colour and finish exactly.
-- Image 3 is the look reference: take only its light, camera and framing. Take nothing else from it.
+## Keep, swap, drop
 
-**Scene:**
-- A sunny kitchen windowsill early in the morning. The sill and wall are painted a warm cream.
-- Behind the window, a lush green garden in deep forest greens with a few sunflower-yellow blooms, all softly out of focus.
-- On the sill sit a small plain cream ceramic dish holding one day's serving of gummies, and a plain clear glass tumbler of water.
+**Keep**
+- Hard low sun from the right, with crisp shadows falling left.
+- Camera just above sill height, close, with shallow focus and a blurred garden.
+- Subject in the right third, with open wall on the left.
 
-**Product in the scene:**
-- The Sprout stand-up pouch stands upright on the sill in the right third of the frame, front face square to camera, whole and uncut, at its true size against the tumbler. The tumbler stands just behind it, slightly to the right.
-- The dish of gummies sits on the sill just left of the pouch's base.
-- The pouch is lit by the scene's sun from the right. A crisp shadow falls left across the cream sill.
-- Its glossy green foil reflects only this sunlit sill, cream wall and window. One small bright glint sits on its right edge, clear of all printing.
-- No hands, no people.
+**Swap**
+- The glass jar becomes the Sprout pouch, standing upright and closed on the sill, front-on.
+- Add one prop from real use: a small sunflower-yellow ceramic dish beside the pouch on the left. It holds the gummies exactly as they appear in the hand photo, with the same shape, colour and count.
+- The white wall becomes cream #FFF7DF.
+- The garden blur leans toward forest green #00582D.
+- The sunlight's warmth is pushed toward sunflower yellow #FFCC2E.
 
-**Camera and light:**
-- Camera just above sill height, nearly level, tilted down slightly.
-- Close, with a natural normal-to-short-telephoto perspective and shallow depth of field.
-- Pouch and gummies tack sharp. The garden is a soft, creamy blur.
-- Hard, low morning sunlight from camera right, about 30° high, warm white.
-- Crisp, defined shadows falling left. Soft bounce from the cream wall keeps the shadow side light and open.
+**Drop**
+- The jar, its sweets and any label or brand on it.
+- Any words or people from the reference.
 
-**Finish:**
-- A bright, sunny, candy-fresh palette: cream #FFF7DF, forest green #00582D, sunflower yellow #FFCC2E.
-- Clean highs, crisp contrast, rich but natural saturation, no grain.
-- Cheerful and warm, never clinical, never muted.
+**Settle**
+- **How it's shown:** the pouch is closed and upright, with its daily serving of gummies in a dish. I have no photo of a single daily pack, so none is shown.
+- **Scale:** the dish gives the familiar size. Confirm the pouch's real height so the dish can be sized against it.
+- **Angle:** a stand-up pouch suits a near-level camera. Keep it front-on, because only the front was photographed.
+- **Quiet area:** the cream wall on the left in both sizes. In 4:5 the quiet area also runs along the top.
+- **Shiny foil:** the pouch reflects only this scene, meaning the window and the sun. The sun's hot spot sits low on the right edge, clear of the bear face and the wordmark.
+
+## Prompt
+
+**Roles:** Image 1 is the real product, the Sprout Original (Adults) Low Sugar pouch: copy its shape, colours and printing exactly. Image 2 is the gummies in an open hand: copy only the gummies' shape, colour and look. Image 3 is the look reference: take only its light, camera and framing.
+
+**Scene:** A sunny kitchen windowsill in early morning. The sill is smooth painted cream, and the wall behind the left side of the sill is plain cream (#FFF7DF). Through the window on the right is a garden, fully out of focus as soft forest-green and sunlit yellow-green shapes. A small glossy sunflower-yellow ceramic dish sits on the sill just left of the pouch, holding a few gummies exactly like those in Image 2.
+
+**Product in the scene:** The pouch stands upright and closed on the sill in the right third, front facing the camera. It fills about a third of the frame height-wise and is whole, with nothing cut off. Morning sun from the right lights it, with a natural glossy foil sheen. The one bright highlight sits low on the right edge, never on the bear face, wordmark or "28 Daily Packs". The pouch and dish cast crisp, short shadows falling left across the sill. No hands.
+
+**Camera and light:** Shot from just above sill height, angled slightly down, close, with a normal-to-short telephoto feel. The pouch and its printing are pin sharp, and focus falls off quickly so the garden melts into blur. Key light is hard, low, warm morning sun from camera right. Soft fill comes from the bright cream wall and sill, so the front of the pouch reads clearly.
+
+**Finish:** Bright, sunny, candy-like. Cream highlights, rich forest greens, warm sunflower-yellow light. Clean, high-key, saturated but natural, with fine detail and no muddy tones. Never clinical, never muted.
 
 **Keep:**
-- The pouch and gummies exactly as in Images 1 and 2, whole and uncut.
-- No added words, logos or marks anywhere; the tumbler and dish are unmarked.
-- No shadow, glint or prop crossing the wordmark, bear face or "28 Daily Packs."
+- The product exactly as in Image 1, whole and uncut, with printing unaltered.
+- No added words, logos, marks or labels anywhere.
+- No people.
+- A clear, empty cream area for text, as set out in the frame line below.
+- The frame size and shape exactly as stated.
 
-**Frame, 3:2 email header version:**
-- Wide 3:2 frame.
-- Pouch in the right third, about 60% of frame height.
-- The left 55% stays an open, sunlit cream wall and sill with only soft shadow, as clear space for words.
+**Frame, email header:** 3:2 landscape. The pouch and dish are in the right third. The left half is calm, empty cream wall and sill.
 
-**Frame, 4:5 Facebook ad version:**
-- Vertical 4:5 frame.
-- Pouch lower right, about 50% of frame height, the label large enough to read at thumbnail size.
-- The top 35% and the left side stay open cream wall and soft window light, as clear space for words.
+**Frame, Facebook ad:** 4:5 portrait. The pouch and dish are in the lower right third. The left side and the top third are calm, empty cream wall.
+
+Make the 3:2 first as the test. Check it at full size beside the pouch photo: the printing, the bear face and the shadow direction. Then make the 4:5.
+
+SCORE 100/100 (4 of 4 checks)
+
+## How to finish it
+
+- **ChatGPT or Gemini:** paste the prompt into a chat with the pouch photo, the hand photo and the reference attached in that order, then ask for the picture. ChatGPT uses GPT Image and Gemini uses Nano Banana. Free plans have tight daily limits. Codex on a paid ChatGPT plan can make it too.
+- **Higgsfield:** paste the prompt and the three images into its image tool, or connect Higgsfield to Claude so Claude makes it there.
+- **Claude Code:** with `OPENAI_API_KEY` or `GEMINI_API_KEY` saved, the prompt can be sent to that image API and the file saved. Get a key at platform.openai.com/api-keys or aistudio.google.com/apikey. Each picture is billed by OpenAI or Google.
 ```

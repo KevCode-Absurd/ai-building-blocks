@@ -1,21 +1,29 @@
 # Test run on Sprout, 2026-10-19
 
-Result: **pass**. Ran on claude-opus-5-5 (effort medium), graded by claude-fable-5-1. Judge list: 5 of 5 met. Invented facts: 0.
+Result: **fail**. Ran on claude-opus-5-5 (effort medium), graded by claude-fable-5-1. Judge list: 5 of 5 met. Invented facts: 1.
 
-The run correctly recognised that an ad-creative results file cannot answer a search-terms question and refused to guess which searches to block, which protects the owner from acting on nonsense. It gave a precise shopping list of the report, columns, negatives and targets to bring back, so the next attempt can produce real findings.
+The run did the right thing: it recognised the file was an ad-level creative report, not a search terms export, refused to guess at exclusions, and listed exactly which Google Ads report, columns, negatives and targets to pull. Its one real error is the stated total spend of $18,500, which is wrong (the rows sum to $21,500), a careless number the owner could repeat.
+
+## Fix
+
+In the 'Score it' section add: 'When you state any spend total (including unjudged spend), list the row values you added and show the sum so it can be checked.'
 
 ## Judge list
 
-- Met: Coverage note says how many rows it read and the date range, matching the file
-  "rows read: 10 (ad-results.csv, all rows...)" and "dates: not stated (only days_live, 14–30 per row...)" — matches the 10-row file.
-- Met: Every finding names exact rows or IDs
-  "findings: [ ]" — no findings offered, so none lack rows or IDs; correct given the wrong export.
+- Met: Coverage note says how many rows it read and the date range
+  "rows read: 10 ... dates: not stated (only a days_live count per ad: 14–30 days)" matches the 10-row file.
+- Met: Every finding names the exact rows or IDs behind it
+  "findings: [ ]" — no findings given, so nothing unsupported.
 - Met: No exclusion suggested without match type and brand/profitable check
-  No exclusions proposed; "Each proposed block would be checked against your profitable and brand searches before I suggest it."
+  "Proposing exclusions from it would be guesswork." No exclusions proposed.
 - Met: Nothing says a change was made or promises a Quality Score result
-  "Proposals only. Nothing has been changed." No QS promises anywhere.
+  "Proposals only. Nothing has been changed." No QS promises.
 - Met: If the file was wrong for the area, it stopped and listed what to pull
-  "MISSING: wrong export. ad-results.csv is an ad-level creative report..." followed by "Report to pull: Google Ads > ... Search terms" with columns.
+  "MISSING: wrong export ... Report to pull: Google Ads → Insights and reports → Search terms ... Columns: Search term, Search term match type..."
+
+## Invented
+
+- number: Unjudged spend: $18,500 (all 10 rows) (The spend_usd column sums to $21,500, not $18,500; the stated total cannot be worked out from the file.)
 
 ## What went in
 
@@ -42,24 +50,44 @@ P1 Too expensive days 1-21, image, "'Sprout is too expensive':
 
 ```text
 ```
-area: search terms
-rows read: 10 (ad-results.csv, all rows; practice numbers)
+area: Search terms (requested). The export doesn't fit this area.
+rows read: 10
 rows hidden: not stated
-dates: not stated (only days_live, 14–30 per row; no start or end dates)
-currency: USD (from column names spend_usd and revenue_usd)
+dates: not stated (only a days_live count per ad: 14–30 days)
+currency: USD (taken from column names spend_usd and revenue_usd)
+
 findings: [ ]
+
 missing: [
-  "MISSING: wrong export. ad-results.csv is an ad-level creative report (ad_name, format, opening_line, days_live, spend_usd, impressions, link_clicks, purchases, revenue_usd). It has no search terms, campaign or ad group IDs, match types, brand flag or current negatives, so it can't show which searches waste money or what to exclude.",
-  "MISSING: source and date. The file doesn't say which platform or account it came from, when it was pulled, or the exact date range.",
-  "MISSING: targets. There is no target cost per sale or target return. Even with the right export, any cutoff would have to be labelled exploratory.",
-  "MISSING: current negative keywords. These are needed to avoid duplicates and to check the match-type scope of any new block.",
-  "Report to pull: Google Ads > Insights and reports > Search terms (for Performance Max, its search terms view as well), one fixed date range, account currency, and the note on rows hidden for privacy. Columns: Search term, Campaign (name and ID), Ad group (name and ID), Keyword, Search term match type, Impressions, Clicks, Cost, Conversions, Conversion value. Then add a brand flag column yourself (Y/N for searches with 'Sprout' or your product names).",
-  "Also export: all current negative keywords and shared negative lists, with match type and level (account, campaign, ad group, or Performance Max campaign).",
-  "Also give: a target cost per sale or target return (ROAS), ideally allowing for refunds and returns."
+  "MISSING: wrong export. ad-results.csv is an ad-level creative report (ad_name, format, opening_line, link_clicks). It has no search terms, so no search can be judged or excluded from it. The columns ('link_clicks', 'UGC video', 'opening_line') look like a social-ads export rather than Google Ads. Please confirm the source.",
+  "MISSING: search term column. No field holds what people typed.",
+  "MISSING: campaign ID and ad group ID.",
+  "MISSING: match type (search term match type) and the keyword that triggered each search.",
+  "MISSING: cost, clicks, impressions, conversions and conversion value per search term.",
+  "MISSING: brand flag. Mark which searches contain your brand or product names, e.g. 'sprout'.",
+  "MISSING: current negative keywords, with their match type (broad, phrase or exact) and level (account list, campaign or ad group).",
+  "MISSING: source and date range. State where and when the export was pulled, and the exact start and end dates.",
+  "MISSING: rows hidden for privacy. Include the 'Other search terms' total row if Google shows one.",
+  "MISSING: targets. Give a target cost per sale or a target return (ROAS), and say whether refunds and returns should be netted out."
 ]
+
+Report to pull:
+  Google Ads → Insights and reports → Search terms, for the Search
+  campaigns. For Performance Max, also pull its search terms view.
+  Columns: Search term, Search term match type, Keyword, Campaign
+  (+ ID), Ad group (+ ID), Impressions, Clicks, Cost, Conversions,
+  Conversion value, Added/Excluded status.
+  Also export: your negative keyword lists (Tools → Shared library)
+  and the campaign- and ad-group-level negatives, each with match type.
+
+score: not scored. There is no search-terms data to judge and no target, so no spend score is possible. A check-based score would also be empty, because no review was run. Unjudged spend: $18,500 (all 10 rows; none of it is search-term spend).
 ```
 
-**Summary:** There are no findings yet because the file you sent isn't a search terms export. It reports results by ad creative, such as "Fix the Hot Girl Tummy" and the "61% off" images. Nothing in it shows what people searched, so I can't say which searches to keep, watch or block. If you send the Search terms report and your current negatives with the columns above, plus a target cost per sale or return, I can rank wasteful searches by money at stake. Each proposed block would be checked against your profitable and brand searches before I suggest it.
+The summary:
+
+1. **No searches to exclude yet.** The file lists 10 ads (videos, images, a carousel) and their results. It doesn't show what anyone searched for, so it can't show which searches waste money. Proposing exclusions from it would be guesswork.
+2. **The data may not be from Google Ads.** "Link clicks", UGC video and opening lines suggest a social-ads export. Please pull the Google Ads search terms report listed above, along with your current negative keywords and their match types. Every block has to be checked against profitable searches and brand searches before it's proposed.
+3. **Set a target first.** Choose a target cost per sale or a target return, and decide whether refunds count. With that and the right export, the next run can sort searches into keep, watch, add as exact keyword, or block, and score how much of the spend meets the target.
 
 Proposals only. Nothing has been changed.
 ```

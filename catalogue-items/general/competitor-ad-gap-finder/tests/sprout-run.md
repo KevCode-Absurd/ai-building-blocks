@@ -1,21 +1,29 @@
 # Test run on Sprout, 2026-10-19
 
-Result: **pass**. Ran on claude-opus-5-5 (effort medium), graded by claude-fable-5-1. Judge list: 5 of 5 met. Invented facts: 0.
+Result: **fail**. Ran on claude-opus-5-5 (effort medium), graded by claude-fable-5-1. Judge list: 4 of 5 met. Invented facts: 1.
 
-A careful, honest run: it maps Sprout's ads from the words available, labels every limit (text only, one competitor, no dates), and keeps its briefs free of health claims and Sprout's phrases. The owner gets three demand-backed ad directions and a clear list of what they must supply before any can run; the only soft spot is counting review 2 under "taste", which is a stretch but is cited so it can be checked.
+A careful, honest reading of Sprout's ad mix and buyer themes with correct counts and no borrowed copy, and it flags every missing input rather than guessing. But because the business supplied no facts, claims or reviews, the three briefs are proofless candidates the owner cannot run yet, and one line ("shrunk") overstates a trend the data doesn't show.
+
+## Fix
+
+In "If something is missing", add: "No business facts, claims list or reviews: hand back the sample, map, cards, clichés and buyer check only, ask for them, and do not write gap briefs or a score until they arrive." Also in step 5, require "heading there" statements to cite both the earlier and newer counts."fix":""}
 
 ## Judge list
 
 - Met: Every card has a library ID, an advertiser and a start date, or "not shown".
-  Shared card fields: "Library ID: not shown", "Advertiser: Sprout", "Start date: not shown", "Tier: unknown" apply to all 17 cards.
+  "For all 15 cards: Library ID: not shown, Advertiser: Sprout, Start date: not shown, Tier: unknown"
 - Met: Claims are quoted word for word, from the ad itself, not the caption.
-  "Text only. Every card below comes from headlines and main texts, not creatives." Headlines quoted exactly; main texts excerpted with ellipses.
+  All 15 claims match ads.md exactly, e.g. "He Asked What Day It Was. I Handed Him a Gummy."; cards labelled "text only".
 - Met: The words "winner" and "profitable" never describe a competitor's ad.
-  Output uses "what Sprout is betting on, not results"; neither word appears.
-- Met: Each gap names both its reason (the map or the buyers) and the proof that fills it.
-  "Why it's a gap: 4 buyers. Open at headline level." then "Proof needed: MISSING: your format facts" for each gap.
+  Neither word appears; run says "'Copies live' is a bet, not a result."
+- Not met: Each gap names both its reason (the map or the buyers) and the proof that fills it.
+  "None of these gaps has your proof on file yet"; every brief's proof is "MISSING". Run itself scores this check as missed.
 - Met: The briefs use your facts and claims only, with none of their words, people or footage.
-  Avoid lists bar "Sprout reviewer phrases ('choking on', 'gritty/chalky')" and "'One Step I Never Skip' or 'Ridiculously Easy' wording"; headlines are new.
+  Briefs avoid "Never Skip", "Ridiculously Easy", "gritty/chalky", "$94"; headlines like "Swap the scoop for a chew" are new.
+
+## Invented
+
+- claim: Gut ads have shrunk to 2 of 40. (ads.md gives 2 gut ads among the 40 newest but no earlier count, so "shrunk" is an unsupported trend.)
 
 ## What went in
 
@@ -41,205 +49,218 @@ nearest view of what buyers in this category say.
 ## What came out
 
 ```text
-# Competitor ad gaps: Sprout sample, first image ads for New buyers, US
-
-**Text only.** Every card below comes from headlines and main texts, not creatives. The study has no screenshots, library IDs or start dates.
-
-**One competitor only.** This map shows Sprout's habits, not the category's.
-
-**MISSING:** your facts sheet and claims list. Every brief below is a draft until you add them.
-
 ## 1. Summary
 
-Sprout's live ads lean hardest on the offer: "61% off" carries its most-copied headlines and 19 of its 40 newest ads. Its next biggest bet is gut and identity "moment" headlines, plus a new push on hair. The strongest buyer themes in its own reviews get no headline: quitting powders (4 buyers), taste (5 buyers) and the ease of a daily habit (5 buyers). Sprout runs nothing in Product alone, Old way new way, Their words, or a sourced Checked fact.
+Sprout, the only advertiser in this sample, spends most of its ad effort on "Why now?" offers: 26 of its 40 newest ads lead with an offer or with member perks, and "61% off" is its most-copied line. The three things Sprout's buyers praise that its headlines barely touch are how easy the gummy is to keep taking, quitting powders, and taste for adults. Sprout's only "old way, new way" ads are for kids. Every gap below is a candidate, not a finished brief: your facts, claims list and reviews aren't written yet, so none of them has proof on file. With one competitor, this map shows Sprout's habits, not the category's.
 
-You hold no proof on file yet, so each gap below is a candidate that needs your facts before it can run.
-
-**Top 3 gaps:**
-1. Old way, new way: powder to gummy (4 buyers, no headline).
-2. Product alone: the gummy itself, sold on taste and format (5 buyers on taste, no adult taste headline).
-3. In use: the daily pack that fits the day (5 buyers on ease and habit; one Sprout headline).
+**Top 3 gaps (candidates):**
+1. **Easy to keep taking.** 5 buyers mention it. Sprout runs 1 headline on it.
+2. **Quitting powders, for adults.** 4 buyers mention it. No Sprout headline covers it.
+3. **Taste, for adults.** 4 buyers mention it. Sprout's taste lines are all about kids.
 
 ## 2. Sample
 
-- **Competitors:** 1 (Sprout). `MISSING: at least 2 more competitors` for a category map. Good next picks are other greens gummy and greens powder brands selling in the US, for you to name and confirm.
-- **Ads read:**
-  - 15 headlines, plus 2 main texts with no headline attached.
-  - Also noted but not carded: 4 more Kids headlines, "30 Days Of [a fitness app], Free" and "Perfect Supplement for Weight Loss Support | Support Energy & Wellness".
-  - The 10-ad cap (5 longest-running, 5 newest) could not be applied, because there are no start dates. All 15 were kept, and this is noted as a departure.
-- **Versions merged:** "Copies live" counts are recorded on each card.
-- **Skips:** none. All ads are US and English.
-- **Tiers:** all unknown (`MISSING: start dates`). The only date signal is that the 6 hair ads were all made 2 Oct, which makes them New (under 30 days).
+- **Competitors:** 1 (Sprout). The user named it. `MISSING: 2 to 5 more competitor names`. Send them, or ask me to propose a list and confirm it before I use it.
+- **Ads:** 15 numbered headlines, 6 extra headlines and 2 main texts, all from Sprout and all live when pulled on 30 Sept and 4 Oct 2026.
+- **Selection rule not applied:** the rule is the 5 longest-running plus the 5 newest ads. That needs start dates, so I carded all 15 numbered headlines instead. The 6 extra headlines are counted on the map but not carded.
+- **Skips:** none. All ads are US and in English.
+- **Tiers:** all "unknown". `MISSING: start dates`.
+- **Creative:** none was seen, so every card is **text only**. `MISSING: screenshots` and `MISSING: library IDs`.
+- **"Copies live":** this is a rough sign of what Sprout is betting on. It is not a result.
 
-## 3. Category map (Sprout only)
+## 3. Category map
 
-With one advertiser, "half or more" and "one advertiser" both equal Sprout. So "crowded" and "thin" can't be told apart. Cells are marked **Used by Sprout** or **Open in this sample**. Dress is not shown for any ad.
+There is only one advertiser, so "crowded" (half or more of advertisers) and "thin" (one advertiser) can't be told apart. Each type below is marked either as used by 1 of 1 advertisers or as open. The ad count shows Sprout's own weight on each type. Dress is not seen for any ad, because no creative was captured.
 
-| Question | Type | Sprout cards | Status | Main dress |
+| Question | Type | Sprout ads using it | Status | Main dress |
 |---|---|---|---|---|
-| What is it? | Product alone | none | **Open** | not shown |
-| What is it? | Look inside | S15 | Used (1) | not shown |
-| Is it for me? | The moment | S06, S07, S08, S09, S10, S13, S14, T2 | Used (heaviest after offer) | not shown |
-| Is it for me? | Old way, new way | none as a headline; T2 says "without powders or prep" in body text | **Open** at headline level | not shown |
-| Is it for me? | In use | S12 | Used (1) | not shown |
-| Can I believe it? | Their words | none | **Open** | not shown |
-| Can I believe it? | Checked fact | none sourced; S04 "1M+" and T1 "Third-party tested" have no source shown | **Open** for a sourced fact | not shown |
-| Why now? | The offer | S01, S02, S03, S04, S11, T1 | Used (heaviest) | not shown |
-| Why now? | The occasion | S05 (birthday price cut) | Used (1) | not shown |
+| What is it? | Product alone | 0 seen (needs images to judge) | Unknown | not seen |
+| What is it? | Look inside | 1 (#8, 6 copies) | Used, 1 of 1 | not seen |
+| Is it for me? | The moment | 9 (#6, 7, 9, 10, 13, 14, plus 3 extras) | Used, 1 of 1 (Sprout's most-used type) | not seen |
+| Is it for me? | Old way, new way | 2 (#15, plus "The veggies they won't eat…"), kids only | Used, 1 of 1. **Open for adults** | not seen |
+| Is it for me? | In use | 1 (#12, plus "Nutrition Made Ridiculously Easy") | Used, 1 of 1 | not seen |
+| Can I believe it? | Their words | 0 | **Open** | n/a |
+| Can I believe it? | Checked fact | 0 headlines lead with one ("1M+" in #4 sits inside an offer and has no source) | **Open** | n/a |
+| Why now? | The offer | 7 (#1–5, #11, plus the fitness-app gift), with the most copies | Used, 1 of 1 (heaviest by copies) | not seen |
+| Why now? | The occasion | 1 ("The Lemon Aid Stand is open. 🍋") | Used, 1 of 1 | not seen |
 
-## 4. Ad cards
+**Offer shapes seen:**
+- Percent off: "61% off". The site shows 52%, 55%, 49% or 58%, depending on the page.
+- Percent off plus gift: "up to 61% OFF + 4 FREE gifts".
+- Money off: "$29.99 for your first order", "$20 off your first order" and "+$5 off for every extra person".
+- Partner gift: "30 Days Of [a fitness app], Free".
+- Membership perks: gifts, limited flavours and savings.
+- Subscription terms: not shown in any ad.
 
-**Fields that are the same for every card:**
-- Library ID: not shown
-- Advertiser: Sprout
-- Start date: not shown
-- Tier: unknown
-- Status: live when pulled (30 Sept or 4 Oct 2026)
-- Basis: text only
-- Proof shown and dress: not shown
-- Where it leads: not shown
-- Cover-the-logo check: can't be done without the creative
+**Where the ads lead:** not captured. Main text 1 says "Online-exclusive offer. Shop [Sprout]."
 
-| Code | Main claim, word for word | Question / type | Proof in the words | Offer shown | Claim flag | Copies |
+## 4. Ad cards (text only)
+
+For all 15 cards:
+- **Library ID:** not shown
+- **Advertiser:** Sprout
+- **Start date:** not shown
+- **Tier:** unknown
+- **Status:** live
+- **Dress:** not seen
+- **Cover-the-logo check:** can't be done without the creative
+
+| # | Code (type) | Question | Main claim, word for word | Proof shown | Offer shown | Health or beauty claim flag |
 |---|---|---|---|---|---|---|
-| S01 | "'Sprout is too expensive': here's 61% off to prove otherwise" | Why now? / The offer | none | 61% off; deadline and subscription terms not shown | none | 15+ |
-| S02 | "Don't Pay Full Price. You Literally Don't Have To. (61% off inside)" | Why now? / The offer | none | 61% off | none | 8+ |
-| S03 | "Get up to 61% OFF + 4 FREE gifts: online exclusive" | Why now? / The offer | none | up to 61% off, 4 gifts, online only | none | 10 (with sister line) |
-| S04 | "Trusted by 1M+: Take 61% OFF" | Why now? / The offer (leans on a count) | "1M+", with no source or definition of what it counts | 61% off | unsourced count | 4 |
-| S05 | "We're Lowering Our Prices 🔥" | Why now? / The occasion (birthday price cut) | none | price cut; amount not shown | none | 1 |
-| S06 | "Fix the Hot Girl Tummy" | Is it for me? / The moment | none | not shown | **"Fix" reads as a treatment claim** | 5 |
-| S07 | "Struggling to Get Enough Fiber?" | Is it for me? / The moment | none in headline (6 g fiber in notes) | not shown | none | not counted |
-| S08 | "Nutrition for Healthy Hair" | Is it for me? / The moment (beauty benefit) | none | not shown | **beauty benefit, no evidence on file** | 6 |
-| S09 | "Support Muscle While You Lose Weight" | Is it for me? / The moment (weight-loss buyer) | none | not shown | **weight-loss claim, no evidence on file** | 1 |
-| S10 | "The Daily Nutrition Every Runner Forgets" | Is it for me? / The moment (identity) | none | not shown | none | 2 |
-| S11 | "Perks That Really Pile Up" | Why now? / The offer (membership; aimed at Warm buyers) | none | gifts, limited flavours, savings; terms not shown | none | 7 |
-| S12 | "One Step I Never Skip" | Is it for me? / In use (daily habit, first-person voice) | none; not shown to be a real customer | not shown | none | 1 (+ "Nutrition Made Ridiculously Easy") |
-| S13 | "He Asked What Day It Was. I Handed Him a Gummy." | Is it for me? / The moment (story) | none | not shown | none | 1 |
-| S14 | "Fiber Kids Won't Fight" | Is it for me? / The moment (picky eater) | none | not shown | none | not counted |
-| S15 | "Methylfolate, Not Folic Acid" | What is it? / Look inside | ingredient name only | not shown | none | not counted |
-| T1 | Main text: "$29.99 for your first order … 60+ whole-food ingredients, 21 vitamins & minerals, and gut-supporting probiotics … ✅ Third-party tested" | Why now? / The offer | "Third-party tested", no source | $29.99 first order, $20 off, +$5 off per extra person, online only | **"probiotics" contradicts the product page, which lists prebiotic fiber and no probiotics** | not shown |
-| T2 | Main text: "Feeling off in your gut lately? … supports digestion with 6g of fiber, prebiotics … without powders or prep" | Is it for me? / The moment | 6 g fiber, no source shown | not shown | "supports digestion" is soft structure/function wording | not shown |
+| 1 | The offer | Why now? | "'Sprout is too expensive': here's 61% off to prove otherwise" | none (the quote is unsourced) | 61% off, no deadline shown | none |
+| 2 | The offer | Why now? | "Don't Pay Full Price. You Literally Don't Have To. (61% off inside)" | none | 61% off | none |
+| 3 | The offer | Why now? | "Get up to 61% OFF + 4 FREE gifts: online exclusive" | none | up to 61% off, 4 gifts, online only | none |
+| 4 | The offer | Why now? | "Trusted by 1M+: Take 61% OFF" | checked fact claimed ("1M+"), no source or count basis shown | 61% off | none |
+| 5 | The offer | Why now? | "We're Lowering Our Prices 🔥" | none | price cut (birthday), no amount shown | none |
+| 6 | The moment | Is it for me? | "Fix the Hot Girl Tummy" | none | none | **"Fix" is a treatment-style claim** |
+| 7 | The moment | Is it for me? | "Struggling to Get Enough Fiber?" | none in the headline (6 g fiber is in the main text) | none | none |
+| 8 | Look inside | What is it? | "Nutrition for Healthy Hair" | none | none | **Beauty benefit claim** |
+| 9 | The moment | Is it for me? | "Support Muscle While You Lose Weight" | none | none | **Weight-loss claim, no evidence on file** |
+| 10 | The moment | Is it for me? | "The Daily Nutrition Every Runner Forgets" | none | none | none |
+| 11 | The offer | Why now? | "Perks That Really Pile Up" | none | membership perks: gifts, limited flavours, savings | none |
+| 12 | In use | Is it for me? | "One Step I Never Skip" | none (first-person voice, but written by the brand) | none | none |
+| 13 | The moment | Is it for me? | "He Asked What Day It Was. I Handed Him a Gummy." | none | none | none |
+| 14 | The moment | Is it for me? | "Fiber Kids Won't Fight" | none | none | none |
+| 15 | Old way, new way | Is it for me? | "Methylfolate, Not Folic Acid" | ingredient named, no source | none | none |
 
-**Offer note:** ads say 61% off. The site shows 52%, 55%, 49% or 58% depending on the page.
+**Main texts (no headline linked):**
+- **T1:** "…60+ whole-food ingredients, 21 vitamins & minerals, and gut-supporting probiotics…"
+  - Offer: $29.99 first order, $20 off, +$5 per extra person, online only.
+  - **Flag:** the product page lists no probiotics.
+  - **Flag:** "Third-party tested" is shown with no source.
+- **T2:** "[Sprout] supports digestion with 6g of fiber, prebiotics, and daily vitamins to help keep your gut balanced without powders or prep."
+  - **Flag:** "supports digestion" and "keep your gut balanced" are health claims.
+  - This is the only line in the sample that mentions powders.
+
+**Other health claims flagged in the extra headlines:**
+- "Perfect Supplement for Weight Loss Support | Support Energy & Wellness" (weight loss)
+- "One pack a day keeps the gut happy 💩" (gut)
 
 ## 5. Clichés and direction
 
-- **Category clichés:** none can be named. A cliché needs 2 or more advertisers (`MISSING: more competitors`).
-- **Sprout's own repeats**, to steer clear of:
-  - "61% off" (S01 to S04)
-  - "Don't pay full price"
-  - "online exclusive"
-  - "Fix" for gut
-  - "Support … while you lose weight"
-- **Where the newest ads are heading:** long-runners can't be compared with the newest without start dates. The 40 newest (30 Sept to 3 Oct) split as follows:
-  - 19 offer
-  - 7 perks
-  - 6 hair (all made 2 Oct)
-  - 3 habit or story
-  - 2 gut
-  - 2 limited flavour
-  - 1 weight loss
+**Category clichés:** none can be named. A cliché needs nearly the same words from 2 or more advertisers, and there is only 1 here.
 
-  So the newest money goes to the offer and a fresh hair test. Habit and story stay small.
+**Sprout's own repeated lines** (keep clear of these so you don't look like a smaller Sprout):
+- "61% off" / "61% OFF", across 4 headlines and 37+ copies
+- "Actually Want" and "Literally Don't Have To"
+- the kids "won't eat / won't fight / they will" pattern
+- "Daily Nutrition"
 
-## 6. Buyer check
+**Direction:**
+- Long-runners can't be compared with the newest ads without start dates.
+- The newest 40 ads lean further into offers (19) and perks (7).
+- Sprout is adding "Look inside" with hair: all 6 hair ads were made on 2 Oct.
+- Gut ads have shrunk to 2 of 40.
+- Habit and story ads are 3 of 40.
 
-These are Sprout's 20 reviews, used as the nearest view of the category. 13 are hand-picked by the brand, so they lean positive. Only themes from 3 or more separate buyers are counted.
+## 6. Buyer check (Sprout's 20 public reviews, used as the category view)
 
-| Buyer want or doubt | Buyers | Reviews | Sprout ads that speak to it |
+**Counted (3 or more separate buyers):**
+
+| Want or doubt | Count | Reviews | Sprout ads that speak to it |
 |---|---|---|---|
-| Gut: regularity, bloating, digestion | 6 | 7, 8, 9, 10, 11, 14 | S06, S07, T2, "One pack a day keeps the gut happy 💩" |
-| Easy to stick to, convenient daily habit | 5 | 1, 2, 5, 6, 15 | S12 and "Nutrition Made Ridiculously Easy" (2 copies) |
-| Tastes good, feels like a treat | 5 | 2, 6, 12, 14, 16 | Kids headlines only ("Vitamins They Actually Want"); **no adult headline** |
-| Quit powders (gritty, pricey, cleanup) | 4 | 1, 3, 4, 6 | **No headline**; one body line in T2 |
+| Gut, regularity, less bloating | 6 | 7, 8, 9, 10, 11, 14 | #6, #7, #14, T2, "One pack a day keeps the gut happy" |
+| Easy to keep taking / convenient | 5 | 1, 2, 5, 6, 15 | #12 (1 copy) and "Nutrition Made Ridiculously Easy" only |
+| Tastes good | 4 | 6, 12, 14, 16 | kids only ("Vitamins They Actually Want", "The veggies they won't eat…"). **None for adults** |
+| Quitting or disliking powders | 4 | 1, 3, 4, 6 | T2 ("without powders or prep") only. **No headline** |
+| Fits family life / kids | 3 | 15, 16, 17 | #14, #15, and 4 kids extras |
 
-**Under the threshold (2 buyers each), not counted:**
-- energy (13, 14)
-- GLP-1 (11, 14; not usable by a brand anyway)
-- kids love it (16, 17)
-- subscription trap (17, 20)
-- bad taste (18, 19)
-- price (3, plus "They are expensive")
-
-Sprout's most-copied ad (S01) answers a price doubt that only 2 reviewers on file voice.
+**Below 3 buyers (noted, not counted):**
+- Price: review 3 and "They are expensive", so 2.
+- Subscription doubt: reviews 17 and 20, so 2.
+- Bad taste: reviews 18 and 19, so 2.
+- Energy: reviews 13 and 14, so 2.
+- GLP-1 use: reviews 11 and 14, so 2.
+- Sugar-alcohol effects: 1.
 
 ## 7. Gaps and briefs
 
-**Proof rule.** None of these can run until you add your own proof to your facts file. Sprout's reviews show buyer demand. They are **not** proof for your brand and can't be quoted. The proof each brief needs is marked `MISSING:`.
+None of these gaps has your proof on file yet. Each brief lists the proof it needs.
 
-Gut (6 buyers) is not a gap: Sprout already occupies it, and it carries the most claim risk.
+`MISSING: your product facts`
+`MISSING: your allowed and banned claims list`
+`MISSING: your reviews`
+`MISSING: your past ads and results`
 
-### Gap 1: Old way, new way: powder to gummy
-- **Why it's a gap:** 4 buyers. Open at headline level.
-- **Code:** G1
+**Not gaps:**
+- Gut (6 buyers) and kids (3 buyers) are both well covered by Sprout.
+- "Their words" and "Checked fact" are open cells, but you have no reviews or sourced numbers to fill them yet. Revisit them once you do.
+
+---
+
+**Gap 1: Easy to keep taking.** 5 buyers mention it. Sprout covers it with 1 headline and 3 of its 40 newest ads.
+
+- **Code:** In use · Camera
 - **Question:** Is it for me?
-- **Picture:** split frame, camera dress.
-  - Left: a plain, unbranded scoop of green powder, a shaker bottle and a sink of dishes.
-  - Right: one of your packs opened, gummies on a hand.
-- **Headline:** "No scoop. No shaker. Just chew." (6 words)
-- **Proof needed:**
-  - `MISSING: your format facts` (gummy, single-serve pack, no mixing).
-  - `MISSING: claims list sign-off` that format comparisons are allowed.
-  - The powder side stays generic, with no brand, colour or tub shape a buyer could link to anyone.
-- **How to read:** link clicks to the product page as the early read at 7 days, then purchases at 14 days, against G2 and G3.
+- **Picture:** a real hand pulling one of your packs from a jacket pocket or bag on the way out the door. Shoot your exact pack, unstaged and in daylight.
+- **Headline:** "Daily greens that fit in your pocket" (7 words)
+- **Proof needed:** your pack format and serving facts, from your label or product page. `MISSING`. Any "easy to stick with" line has to wait for your own reviews or reorder data.
+- **How to read it:**
+  - At day 7, after one learning window: link clicks to the product page.
+  - At day 14 to 30: purchases from new customers.
 - **Avoid:**
-  - naming or showing any powder brand
-  - any taste or "better" claim about rivals
-  - Sprout reviewer phrases ("choking on", "gritty/chalky")
+  - "Never Skip" and "Ridiculously Easy" (Sprout's lines)
+  - a first-person "I" voice with no real source behind it
+  - "61% off"-style offer stickers
 
-### Gap 2: Product alone: the gummy, close up
-- **Why it's a gap:** 5 buyers on taste. Open type. No adult taste headline.
-- **Code:** G2
-- **Question:** What is it?
+---
+
+**Gap 2: Quitting powders, for adults.** 4 buyers mention it. No Sprout headline covers it, and Sprout's only "old way, new way" ads are for kids.
+
+- **Code:** Old way, new way · Camera
+- **Question:** Is it for me?
 - **Picture:**
-  - a real photo of your exact variant: the pack and a few gummies, on a plain background in your own colours
-  - flavour and serving shown on the pack
-- **Headline:** "Your greens, in a [flavour] gummy." (6 words)
+  - Left side: an unbranded shaker bottle, a scoop and a dusty counter.
+  - Right side: one of your gummy packs.
+  - No rival tub, colours or label anywhere in the frame.
+- **Headline:** "Swap the scoop for a chew" (6 words)
 - **Proof needed:**
-  - `MISSING: product photo of the exact variant`
-  - `MISSING: flavour name`
-  - `MISSING: count of ingredients or nutrients` if you add a line
-  - Taste is shown, not claimed, until you have your own reviews. A "Their words" version can follow once you do.
-- **How to read:** purchases, read at 14 days. Clicks at 7 days as the early signal.
+  - Old way: a plain statement that greens powders are mixed into liquid.
+  - New way: your serving facts, i.e. what's in one pack and how many gummies. `MISSING`.
+- **How to read it:**
+  - At day 7: link clicks.
+  - At day 14 to 30: purchases from new customers.
 - **Avoid:**
-  - "tastes like fruit snacks" (a Sprout buyer's words)
-  - any percent-off headline
-  - any colour palette or pack look like Sprout's (`MISSING: Sprout creatives` to check its look against)
+  - naming or picturing any powder brand
+  - the buyers' words "gritty/chalky", "choking" and "$94" (those describe a rival)
+  - nutrition comparisons you can't source
 
-### Gap 3: In use: the daily pack that fits the day
-- **Why it's a gap:** 5 buyers on ease and habit. Sprout uses this once (S12) and is putting few new ads here.
-- **Code:** G3
-- **Question:** Is it for me?
-- **Picture:** lo-fi phone photo of your pack in real use, such as a hand pulling it from a work bag or a car cup-holder in the morning.
-- **Headline:** "Daily greens that fit your bag." (6 words)
+---
+
+**Gap 3: Taste, for adults.** 4 buyers mention it. Sprout only speaks to taste through kids.
+
+- **Code:** Product alone · Camera
+- **Question:** What is it?
+- **Picture:** a close-up of your actual gummies in their real colour, with the flavour named on the pack. One adult hand at most, and no kids.
+- **Headline:** "Greens you'll look forward to" (5 words)
 - **Proof needed:**
-  - `MISSING: a photo of real use`
-  - `MISSING: pack size and servings-per-day facts`
-  - Make no promise that buyers will "stick with it". That needs your own reviews, told as one buyer's story.
-- **How to read:** purchases at 14 days. Clicks at 7 days.
+  - your flavour name
+  - sugar or sugar-alcohol per serving, shown plainly (2 buyers raised taste and sugar-free doubts)
+  - your own taste feedback before you claim anything stronger
+  - `MISSING` for all of the above
+- **How to read it:**
+  - At day 7: link clicks.
+  - At day 14 to 30: purchases from new customers.
 - **Avoid:**
-  - "One Step I Never Skip" or "Ridiculously Easy" wording
-  - mom framing copied from Sprout review 15
-  - any gut, energy, hair, weight-loss or GLP-1 claim
-
-**For all three:**
-- Make no health claim until your claims list exists.
-- Don't say "probiotics" unless your label has them.
-- Don't lead with a percent off. That is Sprout's loudest space.
+  - "fruit snacks", "treat" and "Actually Want" wording
+  - any gut, weight or GLP-1 claim riding along in the caption
+  - a "Sugar-Free" label unless your claims list allows it
 
 ## 8. Limits
 
-- **Only one competitor.** This is Sprout's pattern, not the category's.
-- **No creatives.** Type was judged from words alone. Dress, the biggest thing in each frame, the cover-the-logo check and where each ad leads are unknown.
-- **No library IDs or start dates.** Every tier is unknown, long-runners can't be compared with the newest, and the 10-ad cap couldn't be applied.
-- **Ad copy is incomplete.** Only 2 main texts, and they aren't matched to headlines. "Copies live" shows what Sprout is betting on, not results.
-- **Reviews are one brand's, mostly hand-picked.** Star ratings weren't captured, and the brand's 4.8 from 100,000 differs from a public 4.0 from 2,411.
-- **Your business inputs are missing:**
-  - `MISSING: facts sheet`
-  - `MISSING: claims list`
-  - `MISSING: products, price range, live offers`
-  - `MISSING: your own reviews`
-  - `MISSING: your own past ads`
+- **Only 1 competitor**, so this map shows Sprout's habits, not the category's.
+- **No screenshots or frames.** Types are judged from text only, and dress, logo checks and Product-alone use are unseen.
+- **No library IDs or start dates.** There are no tiers, the 5-longest plus 5-newest rule couldn't be applied, and long-runners couldn't be compared with the newest ads.
+- **No landing pages** were captured.
+- **The buyer view is Sprout's buyers talking about Sprout.** Your own buyers may want different things.
+- **Most star ratings weren't captured.** Sprout claims 4.8 stars from 100,000 reviews, while a public review site showed 4.0 from 2,411.
+- **No spend or results** are visible in the Ad Library. "Copies live" is a bet, not a result.
+- **Your claims list, facts and past ads are missing**, so the briefs can't be checked against what you already run or are allowed to say.
 
-  Until these exist, the gaps are demand-backed but unproven for you.
+## 9. Score
+
+3 checks passed out of 5 → 3 / 5 × 100 = **60 / 100**
+
+- **Missed: every gap has a map or buyer reason and proof on file.** Each gap has a buyer reason and a map reason, but none has your proof, because your facts and reviews aren't written yet.
+- **Missed: no competitor material in the briefs, and every claim is on the allowed list.** No competitor words, people or logos are used, but there is no allowed claims list to check the headlines against.
 ```

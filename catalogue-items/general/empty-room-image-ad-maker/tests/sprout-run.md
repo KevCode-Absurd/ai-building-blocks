@@ -1,21 +1,25 @@
 # Test run on Sprout, 2026-10-19
 
-Result: **pass**. Ran on claude-opus-5-5 (effort medium), graded by claude-fable-5-1. Judge list: 5 of 5 met. Invented facts: 0.
+Result: **fail**. Ran on claude-opus-5-5 (effort medium), graded by claude-sonnet-5-5. Judge list: 5 of 5 met. Invented facts: 0.
 
-A clean, usable brief: every object traces back to the approved story ad, the three roles are clear, and the prompt is in the word range and ready to paste. Small nits only: the character count was left off the caption line and the cereal bowls (from the story) were filed under ordinary clutter.
+The brief is a usable, well-composed kitchen scene with clear roles, clutter and no product. But it breaks the output shape, scores itself down for an invented missing-research problem, and miscounts the roles.
+
+## Fix
+
+In the output step, require the exact labelled-line shape (SCENE, ROOM AND HOUR, ... SCORE) and state that the story ad itself counts as the lived-in evidence for check 1. Also say the 'one more trace' must be listed separately and never as an extra object inside a role.
 
 ## Judge list
 
 - Met: Nobody is in the frame, and nothing suggests harm or an emergency.
-  "empty, nobody in frame"; scene is cold coffee and bitten toast, nothing dangerous.
+  "No people, no text, no logos"; scene is just-left kitchen, no harm suggested.
 - Met: You can name the trace, the clock and the gap without being told.
-  "The trace: a full mug of coffee gone cold"; "The clock: a lunchbox lid"; "The gap: her chair pushed back".
+  Cold coffee mug (trace), lunchbox lid plus morning sun (clock), pushed-back chair (gap) are clear.
 - Met: It looks lived in, with clutter that has nothing to do with the story.
-  "a phone charger cable trailing off the counter, a hair tie by the fruit bowl, an opened letter"
+  "phone charger cable, a hair tie, an opened letter" in the prompt.
 - Met: Nothing says whose home it is.
-  No names, photos, mail addressed to anyone or identifying marks; "No text, logos, brands, people".
+  Plain lunchbox lid, no brands; flags say it should not hint at whose children live there.
 - Met: There's no product and no second, happier photo.
-  "Product left out. No product photo should be sent to the image tool." Single image only.
+  No Sprout pack in the prompt; single scene only.
 
 ## What went in
 
@@ -37,35 +41,38 @@ Brand look: bright, sunny, real homes. Never clinical.
 ## What came out
 
 ```text
-**1. Scene**
-An empty family kitchen right after the school run. Morning sun falls on the table. At one place there's a full cup of coffee and a piece of toast with one bite gone, and the chair is still pushed back.
+I can't draw the picture here because no image tool is connected, so this is the brief and a ready-to-paste prompt.
 
-**2. Room and hour**
-The kitchen, about 8:15 on a school day. Bright, low morning sun comes through the window and lies across the table and counter. The house is just empty and sunny, not clinical.
+1. **Scene:** A sunny kitchen just after the school run. At one place on the table there's a full mug and a slice of toast with one bite out of it, and the chair is pushed back.
 
-**3. The three roles**
-- **The trace:** a full mug of coffee gone cold. A second trace is the slice of toast with one bite out of it, beside the mug.
-- **The clock:** a lunchbox lid left on the counter, which shows the school run just happened.
-- **The gap:** her chair pushed back from the table at an angle, the one she got up from without finishing.
+2. **Room and hour:** The kitchen at about 8:15 on a school morning. Bright, low morning sun comes through the window and falls across the table and counter. It's warm and sunny, never clinical.
 
-**4. Camera**
-In the kitchen doorway at adult standing eye level. That's where she'd stand coming back in after drop-off and see her own breakfast still sitting there.
+3. **The three roles:**
+   - **Trace:** A full mug of coffee gone cold. The one extra trace is a slice of toast with a single bite taken, on a plate beside it.
+   - **Clock:** A plain plastic lunchbox lid left on the counter after the school run, with low morning sun backing it up.
+   - **Gap:** Her chair pushed back from the table and angled out, as if she stood up mid-bite.
 
-**5. Ordinary clutter**
-Two cereal bowls in the sink, a phone charger cable trailing off the counter, a hair tie by the fruit bowl, an opened letter on the table edge, and a tea towel hung over the oven handle.
+4. **Camera:** In the hallway doorway at adult standing eye level, slightly tilted. This is where she would stand coming back in and seeing the breakfast she didn't eat.
 
-**6. Words on the image**
-None.
+5. **Ordinary clutter:** Two cereal bowls in the sink, a phone charger cable on the counter, a hair tie by the fruit bowl and an opened letter.
 
-**7. Line under the image**
-Breakfast, most school days
+6. **Words on the image:** None.
 
-**8. Flags**
-- The cold full mug, the bitten toast, the lunchbox lid, the two cereal bowls and the 8:15 timing all come from the approved story ad, which is built on review 15. No separate buyer research was supplied to confirm them.
-- The pushed-back chair is my addition to play the gap. It isn't in the story or research.
-- MISSING: buyer research confirming that busy parents commonly skip or abandon breakfast on school mornings like this one.
-- Product left out. No product photo should be sent to the image tool.
+7. **Line under the image:** "Breakfast, most school days"
 
-**9. Image prompt**
-Square 1:1 photo taken casually on a phone. A real, lived-in family kitchen at about 8:15 on a school morning, empty, nobody in frame. Shot from the doorway at adult standing eye level, with a slight tilt and a little grain in the shadows. Bright low morning sun slants across a wooden table. At one place sit a full mug of coffee gone cold and a slice of toast with one bite missing, and the chair is pushed back at an angle. A lone plastic lunchbox lid lies on the counter. Two cereal bowls sit in the sink. There's a phone charger cable, a hair tie and an opened letter. Everyday mess, unstyled. No text, logos, brands, people or clock.
+8. **Flags:**
+   - The cold mug, bitten toast, lunchbox lid and two cereal bowls all come from the story ad's opening, not from buyer research.
+   - The pushed-back chair is invented for the gap role. It is not in the story or the research.
+   - Keep the lunchbox lid plain, with no character prints or brand. It should not hint at whose children live there.
+
+9. **Image prompt:**
+   > Phone photo of an ordinary family kitchen at 8:15 on a school morning, just after everyone has left. Shot from the hallway doorway at adult standing eye level, slightly tilted, 1:1 square. Bright low morning sun through the window across the counter. On the table at one place: a full mug of coffee gone cold, a slice of toast with one bite taken, and the chair pushed back from the table, angled out. A plain plastic lunchbox lid left on the counter. Two cereal bowls in the sink, a phone charger cable, a hair tie, an opened letter. Everyday mess, real home, natural light, faint grain in the shadows. No people, no text, no logos, no brands, not styled.
+
+10. **Score: 80/100 (4 of 5 checks)**
+    - Missed: buyer research showing that busy parents skip or abandon breakfast on school mornings. The review quote shows rushed mornings, not this exact moment. `MISSING: buyer research (e.g. review 15 in full or similar reviews) confirming the cold-coffee, half-eaten-breakfast morning.`
+
+**To make the picture:**
+- **ChatGPT or Gemini:** Paste the image prompt into a chat and ask for the picture. ChatGPT uses GPT Image and Gemini uses Nano Banana. Free plans have tight daily limits. Codex on a paid ChatGPT plan can make it too.
+- **Higgsfield:** Paste the prompt into its image tool, or connect Higgsfield to Claude so Claude makes it there.
+- **Claude Code:** If you have `OPENAI_API_KEY` or `GEMINI_API_KEY` saved, I can send the prompt to that image API and save the file. You can get keys at platform.openai.com/api-keys or aistudio.google.com/apikey. OpenAI or Google bills each picture.
 ```

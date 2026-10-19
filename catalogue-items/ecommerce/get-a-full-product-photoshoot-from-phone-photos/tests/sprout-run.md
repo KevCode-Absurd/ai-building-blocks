@@ -1,21 +1,29 @@
 # Test run on Sprout, 2026-10-19
 
-Result: **pass**. Ran on claude-opus-5-5 (effort medium), graded by claude-fable-5-1. Judge list: 5 of 5 met. Invented facts: 0.
+Result: **fail**. Ran on claude-opus-5-5 (effort medium), graded by claude-fable-5-1. Judge list: 5 of 5 met. Invented facts: 1.
 
-A careful, well-structured plan that stops at the right approval point: ten distinct shots, a light card each, and every shot that needs the unseen daily pack or pouch dimensions cut and explained. The owner gets a clear shot list to approve and a precise list of the photos still needed, with nothing invented about the product.
+A careful, well-structured Stop 1 package: a sound truth sheet, eight non-overlapping shots with real light cards, correct MISSING lines for the daily pack and pouch dimensions, and everything held until approvals. The only slip is asserting the wordmark sits in the centre of the pouch when no input says so, a small but prompt-driving label detail that should have been a [confirm] line.
+
+## Fix
+
+In Step 2 (Truth sheet), add: 'State a label element's position only if a photo or the brand facts give it; otherwise write [confirm] or MISSING.'
 
 ## Judge list
 
 - Met: Every photo has one job, and no two share job, distance and angle.
-  Ten shots listed; e.g. "01 identity mid eye level", "02 identity mid straight down", "08 ad base mid straight down", "10 ad base mid eye level": no triple repeats.
+  Table: 01 Identity Mid Eye, 02 Scale Close High ... 07 Use Close Low, 08 Place Mid Straight down; no combination repeats.
 - Met: At least one shot shows how big the product is.
-  "03 | scale | close | high | page | One adult open palm holding the photo's count of bears, fingers giving size"; pouch-scale shot rightly held for MISSING dimensions.
+  "02 Scale: open adult palm with one pack's bears" and "The palm is the size reference." Pouch scale held pending MISSING dimensions.
 - Met: Each shot has a light card, and the shadows in the photo match it.
-  Light cards 01 to 10 each give main, fill, background, time, surface fix; no photos made yet (Stop 1), so shadow check not yet due.
+  All 8 shots have Main/Fill/Background/Time/surface fix lines, e.g. "Shadows fall long toward 3 o'clock." No photos made yet, so nothing to contradict.
 - Met: The label matches the real photo when zoomed to full screen.
-  No images made; truth sheet holds "Other printed words ... To be copied one by one from the pouch photo" and lists MISSING photo files.
+  No files made; run held work: "Every [confirm] line must be checked against those photos before Stop 2." Nothing delivered that could mismatch.
 - Met: The test photo was approved before the rest were made.
-  "None made. This step comes after Stop 1 and Stop 2. The test shot will be 01_identity_1x1."
+  "Nothing is made until Stop 1 and the 01 test shot at Stop 2 are both approved."
+
+## Invented
+
+- other: Big yellow wordmark, centre (Brand facts give the wordmark no position; 'centre' is a label-layout guess stated as fact, not marked [confirm].)
 
 ## What went in
 
@@ -42,203 +50,171 @@ No reference photos yet.
 ## What came out
 
 ```text
-# Sprout Original (Adults), Low Sugar: photoshoot
+I can write every prompt here, but I can't make the pictures because no image tool is connected to this chat.
+
+---
 
 ## 1. Truth sheet
 
-**Product:** Sprout Original (Adults), Low Sugar, 28 daily packs. This is one variant. The Sugar-Free version, the tie-in flavour and the Kids range are all other variants.
+**Source check:** Only `product-page.md` reached me. The two phone photos (pouch front on, gummies in an open hand) did not come through. I built this sheet from your brand facts. Every **[confirm]** line must be checked against those photos before Stop 2.
 
-**Sources:** the brand facts you gave and the product page text (`sprout/product-page.md`). I treated the page text as information only. Your two photos were not in this message. Only the page text arrived.
+| Field | Fact |
+|---|---|
+| Product | Sprout Original (Adults), **Low Sugar**, one pouch of 28 daily packs |
+| Variant mark | **[confirm]** How the pouch front shows "Low Sugar" and how it differs from the Sugar-Free pouch. The page sells both, so the two must not be swapped. If your front photo isn't the Low Sugar pouch, send one. |
+| Format | Stand-up pouch, front panel only. Sides, gusset, base and back are not photographed. |
+| Material | Glossy deep-green foil |
+| Printed words | Big yellow wordmark, centre. "28 Daily Packs" at the bottom. **[confirm]** Every other word on the front, transcribed one by one, with position and type size. |
+| Marks | Yellow bear face, top right |
+| Closure | Resealable top, always shown closed. Never torn, never cut. |
+| Contents | Small opaque deep-green gummy bears with a soft matte surface. **[confirm]** Count per pack. Use the count in the hand photo, never more. |
+| Use | Tear one daily pack straight across the top and tip the bears into a palm. One pack a day. |
+| Colours | Forest green, cream, sunflower yellow |
+| Look | Bright, sunny, candy-like. Everyday adults at home or outdoors. |
+| State | Identity shots: new, crisp, closed pouch. Use shots: bears in a palm with the pouch closed nearby. |
 
-**Pouch (front only)**
+**Never show:**
+- The tie-in flavour, its characters or partner marks
+- Kids variants or any child
+- Clinical or lab looks: white coats, test tubes, pharmacy shelves
+- A torn or open pouch
+- The inside of the pouch
+- The daily pack (none photographed yet)
+- Any invented side or back panel
+- More than one pack's worth of bears in a hand
+- Pills, powders or other supplement brands
+- Symptom or "before and after" body imagery (the page's health claims are already a risk)
+- The paid athlete or any real person's face
+- Discount numbers, ratings or any added words
 
-| Point | Truth | Status |
-|---|---|---|
-| Type | Stand-up pouch with a resealable top | Brand facts |
-| Material | Glossy foil, deep forest green | Brand facts |
-| Wordmark | Big, sunflower yellow, on the front | Exact word and position to be copied from the pouch photo |
-| Bear face | Yellow, top right of the front | Brand facts |
-| Bottom line | "28 Daily Packs" | Brand facts |
-| Other printed words | Unknown | **To be copied one by one from the pouch photo** |
-| Variant mark | Unknown. Nothing seen yet says which mark shows "Low Sugar". | **Must be confirmed from the photo** |
-| Closure | Resealable top. Always shown closed and never torn. | Brand facts |
-| Sides, back, gusset, nutrition label | Not seen | Never drawn |
-| Size (height × width) | Not given | MISSING |
+**Missing:**
+- `MISSING: daily pack photo (arrival, use: tear-and-tip)`. Shots dropped: arrival, tearing the pack, and pack-in-bag portability.
+- `MISSING: pouch height and width (fact)`. Shots 04, 05, 06 and 08 put the pouch beside familiar objects. Without real dimensions its size would be guessed. If dimensions don't arrive by Stop 2, 04 runs without the pouch, and 05, 06 and 08 are held.
+- `MISSING: back or side photo of the pouch`. All pouch angles stay front-facing. There is no turned three-quarter view.
+- **Sizes:** proposed 1:1 at 2048×2048 and 4:5 at 1080×1350. [confirm]
 
-**Gummies**
-- Small bears, opaque, deep green, soft matte. They are never glossy and never another colour.
-- The count in one palm must match the photo of gummies in a hand. One pack holds "a small handful".
+---
 
-**Correct use**
-- Tear one daily pack straight across the top and tip the bears into a palm, then eat.
-- The pouch only holds the packs. Loose bears never sit inside the pouch.
+## 2. Shot list and light cards (for approval at Stop 1)
 
-**Never show**
-- Tie-in characters, tie-in flavour packs or colours, or partner marks.
-- Children of any age. A Kids range exists, so none are cast.
-- Clinical looks: lab glass, pill organisers, white coats, medical props, a sterile white set.
-- The pouch torn, opened, or with its inside shown.
-- The pouch's back, sides, gusset or nutrition label.
-- The daily pack, until it has been photographed.
-- Loose bears inside the pouch.
-- Glossy or translucent bears.
-- Any other brand's mark.
-- The athlete spokesperson, or any real person's face.
-- Words on the image, including any price, discount, rating or claim from the page.
+Clock positions are seen from above, with the camera at 6 o'clock and the product in the centre.
 
-**Missing before Stop 2**
-- `MISSING: photo job — pouch front photo file`. Needed to copy every printed word and to confirm the Low Sugar mark. If this photo turns out to show Sugar-Free or another flavour, the shoot stops until the right pouch is photographed.
-- `MISSING: photo job — gummies-in-hand photo file`. Needed for bear shape, colour, finish and the palm count.
-- `MISSING: photo job — daily pack (front, and torn open)`.
-- `MISSING: fact — pouch dimensions`.
-
-## 2. Shot list with light cards (for Stop 1)
-
-**Destinations:** product page at 1:1 and Meta feed at 4:5. No other sizes will be made.
-
-**How to read the light cards:** this is a top-down clock. The camera sits at 6 o'clock and the product is at the centre.
-
-**Pouch angle rule:** the pouch's front always faces the camera. Turn it no more than the front photo shows, so the gusset and back are never drawn.
-
-| # | Job | Distance | Angle | Destination | Scene |
+| # | Job | Distance | Angle | Destination | Sizes |
 |---|---|---|---|---|---|
-| 01 | identity | mid | eye level | page (test shot, main size 1:1) and ads | Pouch standing on a cream counter, front on, a few bears in front of it |
-| 02 | identity | mid | straight down | ads | Pouch lying flat, front up, on cream linen, one palm's count of bears beside it |
-| 03 | scale | close | high | page | One adult open palm holding the photo's count of bears, fingers giving size |
-| 04 | substance | close | eye level | page | Macro of bears in a low pile on cream, texture and opacity |
-| 05 | use | mid | eye level | page and ads | Adult at a sunny kitchen counter lifting a palm of bears to the mouth, pouch upright behind and in focus enough to read |
-| 06 | use | wide | eye level | ads | Adult outdoors on a sunny step or park bench, bears in an open palm. The pouch is left out because it stays at home. |
-| 07 | place | wide | eye level | page and ads | Pouch on a sunny kitchen counter with a mug, a bowl of strawberries and a linen towel. **Harder light.** |
-| 08 | ad base | mid | straight down | ads | Pouch flat, front up, on a sunflower-yellow surface, a few bears, a large clear area. **Harder light.** |
-| 09 | place | wide | low | ads | Pouch standing on a cream picnic blanket on grass, sky behind. **Harder light.** |
-| 10 | ad base | mid | eye level | page and ads | Pouch standing in front of a forest-green and cream wall split, wide clear space beside it |
+| 01 | Identity | Mid | Eye level | Product page + feed | 1:1, 4:5 |
+| 02 | Scale | Close | High | Product page | 1:1 |
+| 03 | Substance | Close | Straight down | Product page + feed | 1:1, 4:5 |
+| 04 | Use | Mid | Eye level | Product page + feed | 1:1, 4:5 |
+| 05 | Place | Wide | Eye level | Feed + product page | 4:5, 1:1 |
+| 06 | Ad base | Wide | High | Feed | 4:5 |
+| 07 | Use | Close | Low | Feed | 4:5 |
+| 08 | Place | Mid | Straight down | Product page + feed | 1:1, 4:5 |
 
-**Coverage checks**
-- Close shots: 03 and 04. Wide shots: 06, 07 and 09. Harder light: 07, 08 and 09.
+**Coverage:**
+- Close shots: 02, 03 and 07.
+- Wide shots: 05 and 06.
+- Harder light: 03, 05 and 07.
 - No two shots share job, distance and angle.
-- Every product page shot set includes 03 as its scale shot.
 
-**Cut or held back, and why**
-- **Arrival** (28 packs inside the pouch): cut. Needs `MISSING: photo job — daily pack` and would show the pouch open, which the brand rules out.
-- **Use, tearing a daily pack and tipping it into a palm:** cut. Needs `MISSING: photo job — daily pack`.
-- **Grab-and-go pack in a bag or pocket:** cut. Needs `MISSING: photo job — daily pack`.
-- **Pouch scale** (pouch in a hand or beside a mug at true size): cut. Needs `MISSING: fact — pouch dimensions`. Shot 07 includes a mug, but true scale will only be claimed once the dimensions arrive.
-- **Back of pouch or nutrition label close-up:** cut, because neither side has been seen.
-- **Range** (Low Sugar beside Sugar-Free): cut. There is no photo of the Sugar-Free pouch, and the brief is one variant.
+**Shots cut:**
+- Arrival: no daily pack photo, and the inside of the pouch is unseen.
+- Range: only one variant is photographed, and the range tiles carry the banned tie-in.
+- Back panel: not photographed.
 
-### Light cards
+**01 Identity: pouch front on, cream sweep**
+- Main light: large soft box at 10 o'clock, raised about 30° above the product. Large, soft.
+- Fill: white card at 3 o'clock.
+- Background: soft warm wash on the cream sweep for a sunny gradient.
+- Time of day: studio, warm daylight balance.
+- Foil adjustment: the soft box sits far enough to the side that its reflection lands as one clean vertical stripe on the pouch's left edge, clear of the wordmark, the bear and "28 Daily Packs".
 
-The pouch is glossy foil. In every card, its reflection either misses the label or falls as one clean stripe on the edge furthest from the words. The bears are matte, so they are lit from the side for texture.
+**02 Scale: open adult palm with one pack's bears, pouch out of frame**
+- Main light: window at 9 o'clock, slightly above the hand. Medium, soft.
+- Fill: none, so the bears keep their shape.
+- Background: out-of-focus cream kitchen.
+- Time of day: mid-morning.
+- Matte adjustment: side light shows each bear's soft surface. The palm is the size reference.
 
-**01 identity, mid, eye level**
-- Main: a large soft window at 9 o'clock, at pouch height, about 2 m wide, soft.
-- Fill: a white card at 3 o'clock.
-- Background: the sun falls as a soft warm wash on the back wall only.
-- Time: mid-morning.
-- Surface: the window's reflection falls as a single vertical stripe on the left edge, clear of the wordmark and bear face. The bears are lit from the side.
+**03 Substance: bears scattered on a cream ceramic dish**
+- Main light: low sun at 9 o'clock, about 10° above the table. Small, hard. This is the harder-light shot.
+- Fill: white card at 3 o'clock, just enough to lift the shadows.
+- Background: none.
+- Time of day: early morning.
+- Matte adjustment: the raking light draws the texture of the bears' ears and bellies. Shadows fall long toward 3 o'clock.
 
-**02 identity, straight down**
-- Main: a large soft source at 11 o'clock, high and angled.
-- Fill: a white card at 5 o'clock.
-- Background: none. Cream linen only.
-- Time: late morning.
-- Surface: the reflection is pushed off the top-left corner. A flat foil front catches the overhead light, so the main sits off-axis and never above the camera.
+**04 Use: adult at a sunny kitchen counter, palm of bears raised, pouch closed behind**
+- Main light: window at 10 o'clock, at head height. Large, soft.
+- Fill: a second, smaller window at 2 o'clock.
+- Background: sunlit counter and wall, cream and green.
+- Time of day: morning.
+- Foil adjustment: turn the pouch a few degrees so the window's reflection skims its left edge, away from the words.
 
-**03 scale, close, high**
-- Main: a soft window at 9 o'clock, slightly above the hand.
-- Fill: none. A natural shadow on the palm side gives the bears depth.
-- Background: soft out-of-focus cream kitchen.
-- Time: morning.
-- Surface: the side light shows the matte bear texture and the skin texture.
+**05 Place: outdoors, pouch on a sunlit garden table, adult relaxed and partly in frame**
+- Main light: direct sun at 11 o'clock, high. Hard.
+- Fill: none. Bright ground bounce only.
+- Background: green garden, softly blurred.
+- Time of day: late morning.
+- Foil adjustment: set the pouch so the sun's highlight falls on its top seal or edge, not the label. Shadow falls toward 5 o'clock.
 
-**04 substance, close, eye level**
-- Main: a hard low sun at 8 o'clock, raking across the bears.
-- Fill: a small white card at 4 o'clock.
-- Background: dark-ish cream falloff.
-- Time: early morning.
-- Surface: the raking light shows the soft matte surface and edges. There are no specular highlights, because the bears are not glossy.
+**06 Ad base: pouch standing on a cream counter with fresh strawberries and greens**
+- Main light: soft box at 9 o'clock, about 45° up. Large, soft.
+- Fill: white card at 3 o'clock.
+- Background: plain sunflower-yellow wall that fills the empty top two-fifths of the frame for headline space.
+- Time of day: bright midday look.
+- Foil adjustment: reflection stripe on the left edge only.
+- Props: strawberries and greens are proposed from the Original flavour line ("fresh strawberries meets clean greens"). [approve]
 
-**05 use, mid, eye level**
-- Main: a soft window at 10 o'clock, above head height.
-- Fill: a bounce from a cream wall at 2 o'clock.
-- Background: a sunny kitchen, a little brighter than the subject.
-- Time: morning.
-- Surface: the pouch sits behind and is turned so the window's reflection lands on its left edge, away from the words.
+**07 Use: palm of bears held up toward camera against blue sky**
+- Main light: midday sun at 12 o'clock, behind and above the hand. Hard rim light.
+- Fill: white card below frame bouncing light into the palm.
+- Background: open sky.
+- Time of day: midday.
+- Matte adjustment: the bears are opaque, so expect a rim on their edges and no glow through them. Keep the card fill so the green doesn't go black.
 
-**06 use, wide, eye level**
-- Main: sun at 10 o'clock, high, softened by light cloud or open shade.
-- Fill: open sky.
-- Background: a sunlit street or park, kept bright and candy-coloured.
-- Time: late morning.
-- Surface: there is no pouch in this shot. The bears in the palm are side-lit.
+**08 Place: breakfast flat lay, pouch lying flat front up**
+- Main light: window at 10 o'clock, high. Large, soft.
+- Fill: white card at 4 o'clock.
+- Background: none.
+- Time of day: morning.
+- Scene: coffee mug, cream linen, a small dish holding one pack's bears.
+- Foil adjustment: from straight down, a window at 10 o'clock puts its reflection off the top-left corner of the pouch. Check the reflection misses the wordmark.
 
-**07 place, wide, eye level, harder light**
-- Main: direct sun through a window at 10 o'clock, high and hard. It casts a crisp window-frame shadow on the counter.
-- Fill: a white card at 4 o'clock lifts the pouch front.
-- Background: the sun pattern falls on the cream tiles.
-- Time: late morning.
-- Surface: the pouch stands just inside the sun's edge, so the hard light grazes its left edge as one bright stripe. The front stays in even light from the card, which keeps hotspots off the label.
+**References:** None were sent, and I can't search from here. These are the searches per shot problem. Send one or two per shot, or approve going without.
+- 01: "glossy dark foil pouch studio front, soft side light, clean edge highlight"
+- 02 and 07: "small matte candy in open palm, natural window light" and "hand held up to sky, hard sun, rim light"
+- 03: "matte gummy macro, low raking morning sun, long shadows"
+- 04 and 05: "sunny home kitchen candid, morning" and "garden table, hard sun, glossy packaging"
+- 06: "packaging on counter, coloured wall, negative space top"
+- 08: "breakfast flat lay, window light, glossy pack"
 
-**08 ad base, straight down, harder light**
-- Main: hard sun at 11 o'clock, low enough to throw a defined shadow toward 5 o'clock.
-- Fill: a white card at 5 o'clock.
-- Background: the yellow surface in full sun.
-- Time: midday to early afternoon.
-- Surface: the foil is tilted a few degrees so the sun's reflection leaves the frame. If it can't be kept off, it falls as a stripe along the top edge only. The bears cast small, crisp shadows.
+**Rejected looks (recorded from brand rules, first run):**
+- Clinical white lab
+- Tie-in character scenes
+- Kids or family-with-children setups
+- Same-distance soft-light-only sets
 
-**09 place, wide, low, harder light**
-- Main: hard sun at 1 o'clock, behind and to the right, which rims the pouch.
-- Fill: a large white bounce at 7 o'clock lights the front.
-- Background: bright sky and grass.
-- Time: late afternoon.
-- Surface: the backlight draws the pouch's outline as a rim on the right edge, away from the label. The front reads from the bounce, not from direct sun.
-
-**10 ad base, mid, eye level**
-- Main: a large soft source at 8 o'clock, at pouch height.
-- Fill: a white card at 4 o'clock.
-- Background: a separate soft light on the wall evens the green and cream split.
-- Time: neutral daylight.
-- Surface: the reflection is one vertical stripe on the left edge. The words stay clear.
-
-### References, by shot problem
-
-You have no reference photos yet, and I have not chosen any here. These are the searches to run for each shot, followed by the setup to look for:
-
-| # | Search for | Setup to look for |
-|---|---|---|
-| 01, 10 | "glossy dark foil pouch, soft side window, cream counter" | Camera at product height; one big soft source to the side |
-| 02, 08 | "flat lay glossy pouch, hard sun, colored backdrop" | Overhead camera; sun off-axis; crisp shadows |
-| 03 | "open palm holding small gummies, morning side light" | Close camera, slightly high; soft window to the side |
-| 04 | "macro matte gummy texture, raking light" | Low camera; very short distance; one hard side source |
-| 05, 06 | "adult eating snack from palm, sunny kitchen" and "… outdoors" | Mid or wide camera at eye level; natural light |
-| 07 | "product on counter, window-frame sun shadows" | Wide camera at eye level; hard window sun |
-| 09 | "product on picnic blanket, low angle, backlit sun" | Low camera; sun behind; bounce in front |
-
-The same lines apply to every reference:
-- **Keep** the camera height, distance, lens feel and light.
-- **Swap** the props for this brief's real ones: cream counter or linen, mug, strawberries, picnic blanket, yellow surface.
-- **Drop** the reference's product, brand, words, people and colours.
-
-### Rejected looks
-
-None yet. This is the first run.
-
-The brand has already ruled out these looks: clinical or lab, tie-in or cartoon, a sterile white studio, and children.
-
-**Stop 1:** awaiting your approval of the shot list, the light cards and the reference picks. Your picks can be chosen from the searches above, or supplied by you. Any look you reject will be recorded here.
+---
 
 ## 3. Plan for each shot
 
-Not started. This step comes after Stop 1. It covers the keep, swap and drop lines; the adult cast for shots 03, 05 and 06; and every point where reference and product disagree.
+Held until Stop 1 is approved.
 
 ## 4. Approved sizes
 
-None made. This step comes after Stop 1 and Stop 2.
-- The test shot will be `01_identity_1x1`.
-- Every later shot will be composed separately in 1x1 and 4x5, never cropped from one to the other.
-- Each file will be marked as made with AI and kept apart from the real photos.
+Held. Nothing is made until Stop 1 and the 01 test shot at Stop 2 are both approved.
 
 ## 5. Pass or fail per file
 
-No files yet.
+None yet.
+
+---
+
+**Stop 1:** Approve, edit or cut the shot list and light cards. Confirm the Low Sugar front photo, the pouch dimensions and the pixel sizes, and send references if you have them. Also send:
+- A daily pack photo, if you want the arrival and tear-and-tip shots added back.
+- The two phone photos, so I can fill in the [confirm] lines.
+
+**To make the pictures once approved:**
+- **ChatGPT or Gemini:** paste each prompt into a chat with the real photos attached and ask for the image. ChatGPT uses GPT Image and Gemini uses Nano Banana. Free plans have tight daily limits. Codex on a paid ChatGPT plan can also make them.
+- **Higgsfield:** paste the prompt into its image tool, or connect Higgsfield to Claude so Claude makes the images there.
+- **Claude Code:** with `OPENAI_API_KEY` (from platform.openai.com/api-keys) or `GEMINI_API_KEY` (from aistudio.google.com/apikey) saved, I can send each prompt to that API and save the file. Each image is billed by OpenAI or Google.
 ```

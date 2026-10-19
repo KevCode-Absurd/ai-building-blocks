@@ -2,20 +2,20 @@
 
 Result: **pass**. Ran on claude-opus-5-5 (effort medium), graded by claude-fable-5-1. Judge list: 5 of 5 met. Invented facts: 0.
 
-A careful, correct first pass: it listed every piece per line, marked what must be shot or supplied, picked the daily pack as avatar and stopped exactly where the skill says. The owner gets a clear to-do list (pack photos, old-way shoot, figure sources, offer terms) with nothing guessed, though the powder-or-gummies question could have been answered from the brand file had it been supplied.
+The run did exactly what the skill asks at this point: a full parts list, a clear avatar card, and a hard stop for approval with every gap flagged as MISSING rather than guessed. The owner gets a clean checklist of what to send next (photos, offer terms, sources) before any credits are spent.
 
 ## Judge list
 
 - Met: It stopped for your OK after the avatar card, the sheets and the storyboard.
-  "**Stopped at approval 1.** Please approve or correct the avatar card." Stages 2-5 correctly not started.
+  "Stop: approval 1. Please approve or correct the parts list and the avatar card" - stopped at the first gate; later gates not yet reached.
 - Met: Every piece in every layer stack appears on the parts list.
-  No layer stacks yet (stage 4 not reached); parts list covers ground, old-way pieces, pack, pouch, strips per line.
+  No layer stacks written yet (Stage 4 not reached); parts list is complete and covers every scripted piece, strips included.
 - Met: The product cutout is made once from its photo and reused.
-  "Lines 3 and 4: daily pack, front photo, full colour"; "Line 5: pouch front photo (have), cut the same way."
+  "Hero piece: the pouch, cut from the pouch front photo"; "The cutout is cut from the photo, never redrawn."
 - Met: No prompt asks the tool to write a letter or a number.
-  No image prompts written yet; strips listed as "Blank strip for on-screen word" and "Three blank strips, one per figure".
+  No image prompts written yet; all strips are listed as "blank" and "the three figures are set in editing".
 - Met: Every move has a start, an end and a key word it lands on, and every figure in the edit list has a source.
-  No moves or edit list yet; figures already flagged: "MISSING: source for each figure (label panel or spec sheet)".
+  No moves or edit list yet; figures withheld: "These figures stay out of the edit until a source is given."
 
 ## What went in
 
@@ -41,122 +41,71 @@ Clips: 8 seconds, 9:16.
 ## What came out
 
 ```text
-# 1. Parts list (Stage 0)
+I can only write the prompts here; no picture or video tool is connected to this chat, so no images or clips will come from me.
 
-Script locked as written. No words changed.
+## Stage 0: Parts list
 
-**Ground**
+Script is locked; not a word changed. Format: 9:16, 8-second clips, each starting from an approved frame.
 
-| Piece | Source | Status |
-|---|---|---|
-| Ground paper: warm cream card, flat, fills the 9:16 frame edge to edge | Made in paper kit | make |
+| Line | Piece | Source | Status |
+|---|---|---|---|
+| All | Ground: warm cream card, filling the 9:16 frame, flat from above, even light | Paper | make |
+| 1 | Greens-powder tub, plain and unbranded, black and white | Old-way photo | make (to shoot) |
+| 1 | Scoop, plain, black and white | Old-way photo | make (to shoot) |
+| 1 | Glass, plain, black and white | Old-way photo | make (to shoot) |
+| 1 | Shaker, plain and unbranded, black and white (carries into line 2) | Old-way photo | make (to shoot) |
+| 1 | Signal strip: sunflower #FFCC2E, one pointed end, blank | Paper | make |
+| 2 | Sink, plain, black and white | Old-way photo | make (to shoot) |
+| 2 | Signal strip, blank (same cut as line 1) | Paper | make |
+| 3 | Sprout single daily pack, sealed, front on, full colour | Daily pack photo | **MISSING** |
+| 3 | Signal strip, blank | Paper | make |
+| 4 | Daily pack with its top edge as a flap, hinge pin marked along the tear line | Daily pack photo | **MISSING** |
+| 4 | What the flap reveals: the contents of the pack | Opened-pack photo, or gummies cut from the hand photo | **MISSING** (see questions) |
+| 4 | Signal strip, blank (one strip for the line; the three figures are set in editing) | Paper | make |
+| 5 | Sprout pouch, front on, full colour, hero size | Pouch front photo | have (not attached yet, so unchecked) |
+| 5 | Offer strip, blank | Paper | make |
 
-**Line 1: "A greens powder takes four steps." (key: four, build-up)**
+**Lines waiting:**
+- **Lines 1–2:** wait on the old-way shoot.
+- **Lines 3–4:** wait on the daily pack photos.
+- **Line 5:** waits on the pouch photo being attached and on the offer terms.
 
-| Piece | Source | Status |
-|---|---|---|
-| Plain unbranded greens-powder tub cutout, black and white | Old-way photo | MISSING: photo (to be shot) |
-| Plain scoop cutout, black and white | Old-way photo | MISSING: photo (to be shot) |
-| Plain glass cutout, black and white | Old-way photo | MISSING: photo (to be shot) |
-| Plain shaker cutout, black and white | Old-way photo | MISSING: photo (to be shot) |
-| Sunflower #FFCC2E signal strip, one pointed end, blank | Paper kit | make |
-| Blank strip for on-screen word | Paper kit | make |
+## Stage 1: Avatar card
 
-**Line 2: "Then one more: rinsing the shaker." (key: rinsing, slide)**
+- **Avatar:** the Sprout product. The product carries the ad, and there is no person cutout.
+  - **Hero piece:** the pouch, cut from the pouch front photo.
+  - **Working piece:** the single daily pack, cut from its own photo once it exists. It is the same product family and follows the same cut rules.
+- **Cut:**
+  - Scissor-cut edge following the photo's outline.
+  - Thin white margin of about 1–2 mm at print scale.
+  - Visible cream card thickness on the edge.
+  - Short, soft shadow falling lower right, close to the piece.
+- **Colour:** full colour. Only the old-way pieces are black and white.
+- **Hero size:**
+  - In line 5, the pouch is centred and fills about two-thirds of the frame height.
+  - In lines 3–4, the daily pack sits centre and fills about half the frame height. It is larger than any old-way piece, so its print stays readable.
+- **Narrator:**
+  - Quick and dry, a plain adult voice with no hype in it.
+  - Short pauses land just after each key word.
+  - The voice is designed from this card, never cloned. Nobody speaks on screen.
+- **Never changes:**
+  - Pouch and pack shape, colours and printing exactly as on the photos.
+  - Every label word stays word for word. I will list them once I have the photos.
+  - The cutout is cut from the photo, never redrawn.
+- **Hand photo:** the gummies-in-a-hand photo is not used as a person. If its gummies are used, they are cut out alone and the hand is cropped away.
 
-| Piece | Source | Status |
-|---|---|---|
-| Plain sink cutout, black and white | Old-way photo | MISSING: photo (to be shot) |
-| Shaker cutout | Carried from line 1 | have, once shot |
-| Sunflower signal strip | Carried | make |
-| Blank strip | Paper kit | make |
+## MISSING
 
-**Line 3: "A Sprout pack takes one tear." (key: one, swap)**
+- **MISSING: pouch front photo, attached.** I need it to check the cutout against the real pack and to copy every label word.
+- **MISSING: single daily pack photo,** sealed and front on. It is needed for lines 3 and 4.
+- **MISSING: what's inside the pack, for the line 4 flap.** Two things to confirm:
+  - Is Sprout a powder or gummies? The script says a greens powder is the old way, and your photo shows gummies.
+  - Please send an opened daily pack photo, or confirm I should cut the gummies alone from the hand photo.
+- **MISSING: pouch and pack relationship.** Does the pouch hold the daily packs? Line 5 shows the pouch and lines 3–4 show a pack, so the link should be clear.
+- **MISSING: sources for "sixty-plus ingredients", "twenty-one vitamins and minerals" and "six grams of fiber".** These figures stay out of the edit until a source is given. No figure will be invented.
+- **MISSING: current offer terms** for line 5.
+- **MISSING: every label word on the pouch and the pack,** as printed.
+- **Optional: brand file** (colours beyond #FFCC2E, typefaces, approved claims), for the edit stage.
 
-| Piece | Source | Status |
-|---|---|---|
-| Sprout single daily pack cutout, full colour, sealed | Daily pack front photo | MISSING: single daily pack photo |
-| Sunflower signal strip | Paper kit | make |
-| Blank strip | Paper kit | make |
-
-**Line 4: "Inside: sixty-plus ingredients, twenty-one vitamins and minerals, and six grams of fiber." (key: Inside, flap)**
-
-| Piece | Source | Status |
-|---|---|---|
-| Daily pack cutout with its tear edge as a flap, pin at the tear line | Daily pack photo, plus a torn-open pack photo | MISSING: torn/open daily pack photo |
-| What the flap reveals: contents | Photo of what is inside the pack | MISSING: contents photo. Powder or gummies? See note below. |
-| Three blank strips, one per figure | Paper kit | make |
-| Figures 60+, 21, 6 g | Source per figure | MISSING: source for each figure (label panel or spec sheet) |
-
-**Line 5: "One tear a day." (pouch large and still, offer on screen)**
-
-| Piece | Source | Status |
-|---|---|---|
-| Sprout pouch cutout, full colour, large | Pouch front photo | have |
-| Blank strip for offer | Paper kit | make |
-| Offer text | Current offer terms | MISSING: current offer, price and guarantee wording |
-
-**Also needed across all lines**
-
-| Item | Status |
-|---|---|
-| Every label word on the pouch and the daily pack, word for word | MISSING |
-| Brand typefaces | MISSING. This is optional, but needed for the edit. |
-
-**Notes**
-- The "gummies in a hand" photo is not on any line, so it is not used. It also shows a real person's hand.
-- Line 1 says "greens powder" and line 3 says "Sprout pack". Please confirm whether Sprout is a powder in single packs or gummies. This decides what the line 4 flap reveals.
-- Please confirm whether the line 5 pouch is the same product as the line 3 daily pack, or the outer pouch that holds the packs.
-- Lines that must wait:
-  - Lines 1 and 2 wait until the old-way photos are shot.
-  - Lines 3 and 4 wait until the daily pack photos (sealed and open) exist and the figure sources are in.
-  - Line 5 waits for the offer terms.
-- Timing flag: line 4 is long for a 20 s cut. It will likely need its own 8 s clip.
-
----
-
-# 2. Avatar card (Stage 1)
-
-**Avatar:** the Sprout single daily pack. The product carries the ad, and there is no person cutout.
-
-**Source photo**
-- Lines 3 and 4: daily pack, front photo, full colour. MISSING: this photo needs to be shot.
-- Line 4 open state: the same pack photographed torn open. MISSING.
-- Line 5: pouch front photo (have), cut the same way.
-
-**Cut**
-- Scissor-cut edge, slightly irregular. It must not look like a vector outline.
-- Thin, even white margin, about 2 mm at pack scale.
-- Visible card thickness on the edge.
-- Short, soft drop shadow falling lower right, the same direction in every frame.
-- The photo is cut out, never redrawn.
-
-**Hero size against the 9:16 frame**
-
-| Line | Size | Position |
-|---|---|---|
-| Line 3 | About 55% of frame height | Centred, front on |
-| Line 4 | About 60% of frame height | Centre, so label and contents stay legible |
-| Line 5 | About 75% of frame height | Centred, front on, still |
-
-**Narrator voice**
-- Adult, quick and dry. Plain delivery with a slight deadpan, as if stating the obvious.
-- Short pause before each key word, no hype and no upward sell.
-- The voice is designed from this card, never cloned. Nobody speaks on screen.
-
-**Never changes**
-- Pack and pouch outline shape.
-- Printed colours as photographed.
-- All printing and label words, word for word from the photo.
-- Front-on angle.
-- Sealed or torn state carries over from the line where it changes, which is line 4.
-
-**Old-way pieces (not avatar)**
-- Black and white only.
-- Plain and unbranded.
-- Never a named rival.
-
----
-
-**Stopped at approval 1.** Please approve or correct the avatar card. Please also send the missing items: the daily pack photos (sealed and open), the contents photo, the label words, the sources for the three figures, the offer terms, and the old-way shoot. Please also answer the powder-or-gummies question and the pack-versus-pouch question.
+**Stop: approval 1.** Please approve or correct the parts list and the avatar card, and send the photos and answers above. I will start Stage 2 (reference cutout prompts) only after your approval.
 ```

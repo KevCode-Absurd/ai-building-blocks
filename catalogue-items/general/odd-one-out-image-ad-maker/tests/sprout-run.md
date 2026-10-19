@@ -2,20 +2,20 @@
 
 Result: **pass**. Ran on claude-opus-5-5 (effort medium), graded by claude-sonnet-5-5. Judge list: 5 of 5 met. Invented facts: 0.
 
-This is a solid brief: one clear mismatch taken straight from the approved story, with no product, no invented facts and a clean caption. It is ready to paste into an image tool.
+A solid brief with one clear wrong-use mismatch taken straight from the approved story, with no product or invented facts. It follows the shape and is ready to paste into an image tool.
 
 ## Judge list
 
-- Met: Exactly one mismatch, nothing else competes
-  Wrong use: a shaker bottle doing a pen cup's job. Desk clutter is cropped and plain.
+- Met: Exactly one mismatch, nothing competes
+  "Wrong use: a shaker bottle doing a pen cup's job." The green ring supports the same mismatch.
 - Met: Story's first two lines explain it
   Closed by "My old shaker bottle holds pens now. / There's still a green ring at the bottom."
 - Met: Hints at nothing that didn't happen in the story
-  Green ring and pens are both in the story; a mug ring and clutter are ordinary surroundings, no accident.
+  Dried green ring is in the story; "not mould or sludge" keeps it plain.
 - Met: No product and no shock value
-  Flags: "Product: left out... No Sprout pack"; the image is a plain desk scene.
-- Met: Line under image doesn't give answer away; words on image come from copy
-  "Guess what it used to hold?" gives nothing away; overlay lifted from story line 2.
+  "No product is in the picture." Shaker is plain, unbranded; ring is a dried tint.
+- Met: Line under image doesn't give answer away; words come from copy
+  Line under image: "My old shaker holds pens now." Words on image are lifted from line 2 ("There's still a green ring").
 
 ## What went in
 
@@ -37,40 +37,50 @@ Words on the image: yes, if they help.
 ## What came out
 
 ```text
+I can't draw the picture in this chat because no image tool is connected, so this is the brief and prompt only.
+
 **1. Scene**
-A clear, scratched plastic shaker bottle on a home desk, stuffed with pens and highlighters, with a faint green ring stuck at the bottom.
+An old, see-through shaker bottle on a desk, full of pens, with a faint green ring stuck at the bottom.
 
 **2. The mismatch**
-Wrong use: a shaker bottle doing a pen cup's job. The story's first two lines close it: "My old shaker bottle holds pens now. / There's still a green ring at the bottom."
+Wrong use: a shaker bottle doing a pen cup's job. Lines 1–2 close it: "My old shaker bottle holds pens now. / There's still a green ring at the bottom." Line 1 says the shaker is retired, and the ring shows what it used to hold. Line 4 ("I rinsed that shaker every morning until I didn't") fills in the rest.
 
 **3. Where and when**
-- **Place:** an ordinary home desk.
-- **Time:** daytime, with soft window light.
-- **Surroundings:** a corner of a laptop, a sticky note, a coiled charging cable and a mug ring on the wood. Nothing tidy or staged.
+- **Place:** A home desk or work corner.
+- **Time:** Mid-afternoon, with daylight from a window.
+- **Surroundings:** Ordinary mess, such as the edge of a notebook, a charging cable, a coaster and a sticky note.
+- **Kept out:** No gym gear, no supplement tubs and no kitchen.
 
 **4. Framing**
-- **Distance:** close, at desk height and slightly above, so the pens and the green ring at the base are both easy to read.
-- **Position:** the shaker sits just off-centre and fills about half the frame. The desk clutter is cropped at the edges.
-- **Format:** square 1:1.
+- **Distance:** Close, from just above eye level, so you can see the pens and the ring through the plastic.
+- **Position:** The shaker sits in the left third of the frame.
+- **Ring:** It must be readable but not gross. It's a dried tint, not mould or sludge.
+- **Format:** Square 1:1.
 
 **5. Words on the image**
-"There's still a green ring." It is set small in plain white sans-serif with a soft shadow, low in the frame like a caption typed in a phone editor.
+"There's still a green ring" (5 words, lifted from line 2). It's set small in white, low in the frame, like a caption added in a phone story editor. It pulls the eye to the ring and raises the question of what was in it, without giving the answer.
 
 **6. Blank version**
-The same photo and framing with no words on it.
+The same photo with no caption. Use the prompt below without its last sentence.
 
 **7. Line under the image**
-Guess what it used to hold?
+My old shaker holds pens now. (28 characters)
 
 **8. Flags**
-- **Lifted words:** the overlay "There's still a green ring" comes word for word from line 2 of the story.
-- **Written words:** the line under the image is new and was not lifted.
-- **Inferred:**
-  - The desk setting, daytime light and surrounding clutter, because no buyer's moment was given.
-  - The colour and wear of the shaker.
-- **Product:** left out, as nothing asked for it. No Sprout pack and no product photos are needed.
-- **Shaker:** it must have no logo or brand marks.
+- The words on the image are lifted word for word from line 2.
+- The line under the image is lifted from line 1 with "bottle" cut to fit the length.
+- The desk setting and afternoon light are inferred, because no buyer's moment was given.
+- No product is in the picture.
+- The shaker must be plain and unbranded.
 
 **9. Image prompt**
-Casual smartphone photo, square 1:1, of a clear plastic shaker bottle with its lid removed, standing on a slightly cluttered home desk and stuffed with ballpoint pens, a pencil and two highlighters. The plastic is scuffed and cloudy, and a faint dried green powder ring is visible at the very bottom. The shot is close and slightly above desk height, with the shaker just off-centre. Soft natural daylight from a window, ordinary shadows. Background details are partly cropped: a laptop corner, a yellow sticky note, a coiled charging cable, a mug ring on the wood. No logos, no labels, no brand marks, no people, no retouching, realistic everyday mess, slight phone-camera grain.
+> Casual smartphone photo, square 1:1, of a used translucent plastic shaker bottle with its lid off, sitting on a home desk and filled with ballpoint pens, a highlighter and a pencil. A faint dried green ring tints the inside bottom of the bottle, clearly visible through the plastic. Ordinary desk clutter around it: edge of a notebook, a charging cable, a coaster. Soft afternoon window light, natural shadows, slight phone-camera grain, unretouched. Shaker in the left third, shot close from just above eye level. No logos, no brand names, no text on the bottle, no people, no packaging. Small white caption text near the bottom, like a phone story editor: "There's still a green ring".
+
+**10. Score**
+Score: 100/100 (5 of 5 checks)
+
+**To make the picture:**
+- **ChatGPT (GPT Image) or Gemini (Nano Banana):** Paste the image prompt into a chat and ask for the picture. Free plans have tight daily limits. Codex on a paid ChatGPT plan can make it too.
+- **Higgsfield:** Paste the prompt into its image tool, or connect Higgsfield to Claude so Claude makes it there.
+- **Claude Code:** Save an `OPENAI_API_KEY` (platform.openai.com/api-keys) or `GEMINI_API_KEY` (aistudio.google.com/apikey), and the prompt can be sent to that image API and the file saved. OpenAI or Google bills each picture.
 ```

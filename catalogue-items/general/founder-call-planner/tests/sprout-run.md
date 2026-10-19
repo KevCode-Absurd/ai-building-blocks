@@ -2,24 +2,24 @@
 
 Result: **fail**. Ran on claude-opus-5-5 (effort medium), graded by claude-fable-5-1. Judge list: 4 of 5 met. Invented facts: 0.
 
-A thorough, well-ranked, fully grounded call plan: every number traces to the brand file, risky claims and the probiotics error are surfaced, and the product-in-hand and rights questions are all there. It only falls short on tagging: the 35 written-form questions don't say which file each answer will land in, which later filing steps rely on.
+A strong, well-ranked plan: 50 real gaps from the files, the 99-vs-35 testing mismatch spotted, site facts kept to yes/no checks, rights asked with all four fields, and nothing invented. It fails only on a small gap-tagging lapse in the written form (a few rows lack a gap ID or register entry), and Q7 leads the founder on who shouldn't buy.
 
 ## Fix
 
-In step 3 and 'What you hand back', state that written-form questions must carry the same '<- fills <gap> in <file>' tag as call questions, and that the Close questions are tagged too.
+In step 3, add: 'Every written-form row carries its gap ID and target file; if an item has no gap in the register, add the gap first or drop the row.'
 
 ## Judge list
 
 - Met: Nothing your brand file already confirms is asked as a fresh question.
-  Known facts sit in the quick checks ("C8 The 30-day money-back guarantee covers the first order only"); call and form questions target unknowns and disputes.
+  Site facts sit under 'Yes-or-no checks... Confirm them; don't discuss them'; call questions target disputed, pending or unknown items only.
 - Not met: Every question says which gap it fills and which file the answer goes to.
-  Call Q1-Q13 carry Gap and File, but written-form items like "21. The guarantee: what it covers..." name no target file; Close has no gap tag.
+  Form rows 'Deepest discount ever run, and when', 'Offers you will never run', 'VIP program terms; cashback app name', 'What "4 free gifts" currently includes' carry no gap ID.
 - Met: Every filed answer carries founder, date and question number, in the file the skill's table names.
-  No answers yet ("No answers yet" in input); nothing filed, so nothing untagged. Vacuously met.
+  No answers yet; run states 'Does not apply yet: no answers filed' and the gap register pre-maps each target file.
 - Met: Beliefs are filed as story, not as claims.
-  Nothing filed yet; plan instructs "note whether the answer is a document, a belief or a story" and grades ad results "reported".
+  Nothing filed yet; interviewer rule: 'note whether the answer is a document, a belief or a story'.
 - Met: Rights are recorded with who, where, how long and paid or unpaid. No limits on file means no use.
-  Q5 and form 29 ask "who is in it, where it may run, how long, and whether it is paid or unpaid." Nothing recorded yet.
+  Form D: 'Fill one row per person or asset: who / where / how long / paid or unpaid'; Q4 'For every yes, record who, where, how long, and paid or unpaid'.
 
 ## What went in
 
@@ -41,245 +41,273 @@ The call is next Tuesday. Make the call plan. No answers yet.
 ## What came out
 
 ```text
-# Sprout founder call plan (call: next Tuesday)
+# Sprout founder call plan
 
-Send the written form and the "bring" list by **Sunday**, two days before the call.
+Call: next Tuesday. Answers: none yet.
 
----
+Built from `sprout/brand.md` and `sprout/reviews.md`. In those files, the gaps appear as "not captured", "not clear", "risky or unsupported" and "hypotheses". There are no formal tags. Each gap below is mapped to the eight-file folder by the filing table.
 
-## 1. Yes-or-no checks (one minute at the top of the call)
+## Gap register (50 gaps collected)
 
-These come from the site and the brand's own rules. Confirm or correct each one. Nothing here is asked again later.
+| ID | Gap | Type | Target file | Route |
+|---|---|---|---|---|
+| G1 | Star rating given four ways: 4.8/100k, 4.75/109,639, 4.74/118,002, and 4.0/2,411 on a review site | disputed | `proof-and-claims.md`: claims | Form |
+| G2 | "21" vs "20+" / "over 20" vitamins and minerals | disputed | `proof-and-claims.md`: claims | Form |
+| G3 | An ad says "probiotics", but the ingredient list has none | disputed | `proof-and-claims.md`: claims | Call Q2 + form |
+| G4 | Testing says "35 substances tested", but 70+4+16+9 = 99 | disputed (spotted) | `proof-and-claims.md`: claims | Form |
+| G5 | "Each gummy delivers 100%", but the dose is per pack | disputed | `proof-and-claims.md`: claims | Form |
+| G6 | 2025 study: report on file? Which formula? Who ran and funded it? | pending | `proof-and-claims.md`: claims | Call Q1 + docs |
+| G7 | Survey of 3,000+: date, method, questions | pending | `proof-and-claims.md`: claims | Form + docs |
+| G8 | "Clinically backed… energy, immunity", "[Sprout] works" | pending | `proof-and-claims.md`: claims | Call Q1 |
+| G9 | "Backed by 35,000+ studies" | pending | `proof-and-claims.md`: claims | Call Q1 |
+| G10 | "Breaking down almost immediately… bioavailability" | pending | `proof-and-claims.md`: claims | Call Q1 |
+| G11 | "Fix the Hot Girl Tummy" | pending | `proof-and-claims.md`: claims | Call Q2 |
+| G12 | Weight loss support, "support muscle" | pending | `proof-and-claims.md`: claims | Call Q2 |
+| G13 | "Nutrition for Healthy Hair" | pending | `proof-and-claims.md`: claims | Call Q2 |
+| G14 | "Revive whole body vitality" | pending | `proof-and-claims.md`: claims | Call Q1 |
+| G15 | 30/60/90-day timeline (skin, metabolism, hormones) | pending | `proof-and-claims.md`: claims | Call Q1 |
+| G16 | "Fill the gaps… on a GLP-1" | pending | `proof-and-claims.md`: claims | Call Q2 |
+| G17 | Kids: "bright minds", "supports brain health" | pending | `proof-and-claims.md`: claims | Call Q3 |
+| G18 | "Most fiber-focused supplements contain only 5g" | pending | `proof-and-claims.md`: claims | Call Q10 |
+| G19 | "Less than 1% use our Money-Back Guarantee" | pending | `proof-and-claims.md`: claims | Call Q6 + form |
+| G20 | "$1.26" vs "$3.60" per serving | pending | `proof-and-claims.md`: claims | Call Q10 + form |
+| G21 | FDA line is in the site footer but not in ads; required warnings | unknown | `proof-and-claims.md`: claims | Form |
+| G22 | Banned lines, rejected ads, legal or platform notes | unknown | `proof-and-claims.md`: claims | Call Q2 |
+| G23 | Founder on camera, voice, AI version | unknown | `proof-and-claims.md`: rights | Call Q4 |
+| G24 | Other people, creators, AI presenters, labelling | unknown | `proof-and-claims.md`: rights | Call Q4 |
+| G25 | Reviews word for word: with or without names, which sources | unknown | `proof-and-claims.md`: rights | Call Q4 |
+| G26 | Photos, video, fonts (the display font especially), music cleared for paid ads | unknown | `proof-and-claims.md`: rights | Form |
+| G27 | Tie-in and partner terms: may the flavour be named? Time limits? | unknown | `proof-and-claims.md`: rights | Call Q4 + docs |
+| G28 | Grams of sugar per pack | unknown: founder | `offers.md`: each product | Form |
+| G29 | Live offer: which of 49/52/55/58/61%, $20 off, "up to $80" is real; deepest ever | disputed | `offers.md`: price summary | Call Q5 |
+| G30 | Kids renews at $74.98, above the $53.32 one-time price | disputed | `offers.md`: price summary | Call Q5 |
+| G31 | 84-pack subscription prices, Sugar-Free first-order price, Kids limited renewal | unknown | `offers.md`: price summary | Form |
+| G32 | "$29.99 indefinitely" vs "SMS discount, new customers only" | disputed | `offers.md`: policies | Call Q5 |
+| G33 | Guarantee in full: who pays, how claimed, how often | unknown | `offers.md`: policies | Call Q6 + form |
+| G34 | Cancel and pause steps (loudest public complaint) | unknown | `offers.md`: policies | Call Q6 + form |
+| G35 | Product in hand: adult gummy count, look, use steps, what pictures get wrong, 5 photos | unknown | `offers.md`: each product | Call Q7 + docs |
+| G36 | Which "adaptogens", and how much | unknown | `offers.md`: Original | Form |
+| G37 | Who it's wrong for (Sugar-Free and stomachs, taste takes days) | inferred | `offers.md`: each product | Call Q7 |
+| G38 | Electrolyte variety pack facts | unknown | `offers.md`: electrolytes | Form |
+| G39 | Cost per unit and per order shipped | unknown | `offers.md` | Form |
+| G40 | Retailer logos, NSF/GMP marks, trademark spellings | unknown | `offers.md` + `proof-and-claims.md` | Form + docs |
+| G41 | First product a new buyer should get | inferred | `offers.md`: price summary | Call Q5 |
+| G42 | Buyer segments and shares (from review mix only) | inferred | `customers.md`: founder's view | Call Q8 |
+| G43 | Words loved and banned, how far humour goes ("f*&$%#g work", poop) | unknown | `voice-and-look.md` | Call Q9 |
+| G44 | Founder-written samples; video pace, phone or polished | unknown | `voice-and-look.md` | Call Q9 + docs |
+| G45 | What a sale is lost to; may we name rivals or compare prices | unknown | `market.md` | Call Q10 |
+| G46 | "What works" is guessed from copy counts; no numbers | inferred | `log.md`: Results | Call Q11 + docs |
+| G47 | Next 90 days: flavour dates, stock, shipping limits | unknown | `log.md`: Recent changes | Form |
+| G48 | 90-day goal, who approves ads and how fast | unknown | `log.md`: Decisions | Call Q11 + form |
+| G49 | House rules: topics never touched, same-day pull, blended reviewers, notes-app posts | unknown | `00-start-here.md`: house rules | Call Q2 + form |
+| G50 | Origin story, positioning, what's private | unknown | `business.md`: story, positioning | Call Q12 (if time) |
 
-| # | Check | File |
-|---|---|---|
-| C1 | One pouch holds 28 daily packs, and the 84-pack size is 3 pouches. | `offers.md` |
-| C2 | An adult pack is about 20 g. A kids pack is 15 g, 6 gummies. | `offers.md` |
-| C3 | The base is pectin, with no gelatin. Vegan. Free from gluten, dairy, tree nuts, peanuts, caffeine, synthetic sweeteners and synthetic dyes. | `offers.md` |
-| C4 | Folate is methylfolate and B12 is methylcobalamin, in both lines. | `offers.md` |
-| C5 | It is made in NSF, GMP and FDA-registered facilities in the US and Canada. | `proof-and-claims.md` |
-| C6 | The 2025 study ran 12 weeks, was randomized, double-blind and placebo-controlled, with 120 adults aged 23 to 59. Results: vitamin C +40.1%, folate +20.5%. | `proof-and-claims.md` |
-| C7 | Subscribers get a limited flavour for 1 month, then switch back to Original automatically. | `offers.md` |
-| C8 | The 30-day money-back guarantee covers the first order only. | `offers.md` |
-| C9 | Orders ship within 24 hours and arrive in 3 to 5 days. | `offers.md` |
-| C10 | The daily pack tears straight across the top edge only. The big pouch is never shown torn. | `00-start-here.md` |
-| C11 | Tie-in characters and partner marks are never shown. Only the flavour description is used. | `00-start-here.md` |
-| C12 | The brand colours are #00582D, #002C17, #FFF7DF, #007E40, #FFCC2E and #581E5A. The fonts are Work Sans and DM Mono. | `voice-and-look.md` |
+## Yes-or-no checks (read back in the first 3 minutes, or tick on the form)
 
----
+These facts come from the site and label. Confirm them; don't discuss them.
 
-## 2. Call list, ranked (about 60 minutes)
+1. One pouch holds 28 daily packs, and 84 packs means 3 pouches. Y / N
+2. An adult pack is about 20 g. A kids pack is 15 g with 6 gummies. Y / N
+3. The base is pectin, no gelatin, vegan. Y / N
+4. Each pack has 6 g prebiotic fiber, and folate comes as methylfolate, not folic acid. Y / N
+5. Every flavour comes as Low Sugar or Sugar-Free, and Sugar-Free uses sugar alcohols. Y / N
+6. Subscribers get a limited flavour for 1 month, then switch back to Original automatically. Y / N
+7. The guarantee covers the first order only. Y / N
+8. Orders ship within 24 hours and arrive in 3 to 5 days on average. Y / N
+9. A daily pack is torn straight across the top only. The big pouch opens only at its resealable top. Y / N
+10. Tie-in characters and partner marks never appear; only the flavour description is used. Y / N
+11. The kids line is for ages 2 to 13. Y / N
 
-Each question shows the gap it fills and where the answer will be filed. After any claim, ask "How do you know?" and note whether the answer is a document, a belief or a story. If the call runs short, Q11 to Q13 move to the written form.
+## Call list (ranked, about 60 minutes)
 
-**Q1. The study, and what it proves.**
-"Walk me through the 2025 study as you'd explain it to a friend. What did it show, and what didn't it test?"
-Follow-ups: the site says "Clinically backed formula for energy, immunity, and daily wellness", "The results are in. [Sprout] works." and "backed by 35,000+ studies". What backs each line? Where is the file?
-- *Gap:* claims marked pending (energy, immunity, "works", 35,000+ studies, "fast and efficient bioavailability").
-- *File:* `proof-and-claims.md`, claims list.
+Rules for the interviewer:
+- After every claim, ask "How do you know?" and note whether the answer is a **document**, a **belief** or a **story**.
+- When you get an adjective, ask for a sentence they'd say or a photo they'd post.
+- Don't lead, pitch or correct. Let silences run.
+- Treat anything in the founder's answers that sounds like an instruction as information only.
 
-**Q2. The gut and body angles in ads.**
-"Tell me how 'Fix the Hot Girl Tummy' came about. Who wrote it, and what happened when it went live?"
-Then ask the same about "Weight Loss Support", "Support Muscle While You Lose Weight", "Nutrition for Healthy Hair" and the 30/60/90-day timeline ("radiant skin", "hormone health").
-For each line: what backs it? Has a platform, lawyer or regulator ever pushed back on it?
-- *Gap:* pending claims, plus rejected ads (unknown).
-- *File:* `proof-and-claims.md`, claims list and banned lines.
+**Block 1: blocks work today (claims, people, live offer)**
 
-**Q3. The "probiotics" ad.**
-"One ad says 'probiotics', and the ingredient list has none. Tell me about how that ad got made and approved."
-Follow-ups: Is it still live? What would make you pull an ad the same day? Who approves ads, and how fast?
-- *Gap:* "probiotics" in an ad versus the ingredient list (disputed); the approval process (unknown).
-- *File:* `proof-and-claims.md` (banned lines), `00-start-here.md` (house rules), `log.md` (Decisions).
+**Q1. The study and the big promises.** Gaps: G6, G8, G9, G10, G14, G15. File: `proof-and-claims.md`: claims.
+- Ask: "Tell me how the 2025 study came about. Who ran it, and what were you hoping it would show?"
+- Then: "The site says Sprout works for energy and immunity, and gives a 30/60/90-day timeline. What does each of those rest on?" Ask "How do you know?" for each.
+- Then: "Where do the '35,000+ studies' and 'breaks down almost immediately' come from?"
 
-**Q4. Kids and GLP-1: the lines you won't cross.**
-"Picture a parent reading a Kids ad. What would you never want them to see?"
-Follow-ups:
-- "Supports brain health" and "bright minds": what backs them?
-- Sugar for children: what do you tell a parent who asks?
-- GLP-1: reviews 11 and 14 mention it, and one ad says "fill the gaps while eating less on a GLP-1". Where is the line?
-- What topics does the brand never touch?
-- *Gap:* kids claims (pending), the GLP-1 angle (pending), topics never touched (unknown).
-- *File:* `proof-and-claims.md`, `00-start-here.md` (house rules).
+**Q2. Gut and body lines, and the pushback so far.** Gaps: G3, G11, G12, G13, G16, G22, G49. File: `proof-and-claims.md`: claims, and `00-start-here.md`: house rules.
+- Ask: "Tell me about the last time a platform, lawyer or retailer told you no on an ad."
+- Then: "'Fix the Hot Girl Tummy', weight loss, hair, GLP-1, and one ad that says 'probiotics'. Which of these would you still sign off today, and why?"
+- Then: "What would make you pull an ad the same day?"
 
-**Q5. Who may appear.**
-"Would you appear in an ad, or lend your voice? Would an AI version of you, saying approved lines, be acceptable?"
-Follow-ups:
-- AI presenters: are they allowed? With what limits? Must they be labelled?
-- Creators, staff or customers on file: who, where, for how long, paid or unpaid?
-- May reviews be quoted word for word? With names or without?
-- May we tell a story blended from several real reviewers, if it is labelled?
-- *Gap:* all rights are unknown.
-- *File:* `proof-and-claims.md` (rights), `00-start-here.md` (blended stories).
+**Q3. Kids.** Gaps: G17, G49. File: `proof-and-claims.md`: claims, and `00-start-here.md`: house rules.
+- Ask: "A parent asks you, 'Is this just candy?' What do you say, in your own words?"
+- Then: "What backs 'bright minds' and 'brain health'?"
+- Then: "What will you never show or say in a kids ad?"
 
-**Q6. The live offer.**
-"A stranger lands on the site today. What should they buy first, and what price should they actually pay?"
-Follow-ups:
-- Ten discounts are live at once: 49%, 52%, 55%, 58%, 61%, $20 off, $29.99 "indefinitely", and others. Which is the real one?
-- The $29.99 "indefinitely" price needs the new-customer SMS discount. How do we say that honestly?
-- What is the deepest discount you have ever run? Which offers have you never run?
-- *Gap:* the discount mess (disputed), the first product (unknown).
-- *File:* `offers.md` (price summary), `00-start-here.md` (honesty lines), `log.md` (Decisions).
+**Q4. Who may appear.** Gaps: G23, G24, G25, G27. File: `proof-and-claims.md`: rights.
+- Ask: "Will you appear or lend your voice? Is an AI version of you, saying only approved lines, acceptable?"
+- Then: "Who else may appear (staff, creators, customers, AI presenters), and on what terms?"
+- Then: "May we quote reviews word for word, with or without names?"
+- Then: "Under the tie-in deals, may we even say the flavour name, and until when?"
+- For every yes, record who, where, how long, and paid or unpaid.
 
-**Q7. After the first order.**
-"Tell me about the last time a customer said they couldn't cancel. What happened?"
-Follow-ups:
-- What may an ad promise about pausing, skipping or cancelling?
-- Why does the guarantee cover the first order only?
-- The Kids page shows a $22.49 plan that "renews at $74.98", which is above the $53.32 one-time price. What does a Kids subscriber really pay?
-- *Gap:* cancelling (the loudest complaint), Kids renewal price (unclear).
-- *File:* `offers.md` (policies), `customers.md`.
+**Q5. The live offer.** Gaps: G29, G30, G32, G41. File: `offers.md`: price summary and policies.
+- Ask: "A stranger lands on the site today. Walk me through exactly what they pay on the first order, the second, and the third."
+- Then: "Of 52, 55, 58 and 61%, which is the real one? What is the deepest discount you've ever run, and which offers will you never run?"
+- Then: "The Kids page says it renews at $74.98, which is more than the one-time price. Is that right?"
+- Then: "Is $29.99 permanent, or SMS-only?"
 
-**Q8. Trade-offs, and who it's wrong for.**
-"What choice made Sprout harder or dearer to make, and why did you keep it?"
-Follow-ups:
-- Minerals sit at about 25% of daily value. Why?
-- Who shouldn't buy it?
-- Sugar-Free "worked too well" for some buyers, and some say the taste only grows on you after a few days. What do you tell those buyers?
-- *Gap:* trade-offs and who it's wrong for (unknown).
-- *File:* `offers.md` (product entry).
+**Q6. After the first order.** Gaps: G33, G34, G19. File: `offers.md`: policies, and `proof-and-claims.md`: claims.
+- Ask: "Tell me about the last customer who tried to cancel. What happened, step by step?"
+- Then: "Give me the guarantee in full: who pays return shipping, how it's claimed, and where the '<1%' comes from."
 
-**Q9. The product in hand (online-store add-on).**
-"Hold up an adult pouch and one daily pack. Use it once, and talk me through each step."
-Follow-ups:
-- Where does the pack open? What does each hand do? How long does it take? Where does the empty pack go?
-- How many gummies are in an adult pack?
-- Describe a gummy in your own words: shape, shine or matt, soft or firm, size against a fingertip.
-- What sounds does it make: the pouch zip, the tear, the pour?
-- When does a buyer first notice a change, and could a camera ever see it?
-- How do pictures and AI images usually get it wrong?
+**Q7. Product in hand (online-store add-on).** Gaps: G35, G37. File: `offers.md`: each product, and `00-start-here.md` for any step that must never be shown wrong.
+- Ask the founder to hold an adult pack up to the camera, tear it, and pour it into a palm, talking through each step. Cover:
+  - where it tears and what each hand does
+  - how many gummies come out
+  - shape, colour, shine or matt, soft or firm, size against a fingertip
+  - the sound of the tear and the pour
+- Then do the same with a Kids pack and the 28-pack pouch: the biggest words on the front, read top to bottom.
+- Then: "How do drawings or AI images usually get this wrong?"
+- Then: "Who shouldn't buy it? Sugar-Free and sensitive stomachs, and the taste that takes a few days."
+- Then: "When does a buyer notice a change, and could a camera ever see it?"
+- Record this as a reference only, not ad footage, unless they say it may be used. Keep looks in the founder's exact words.
 
-Repeat this short version for the Kids pack and the current limited flavour. The recording is a reference only. It is not ad footage unless the founder says it may be.
-- *Gap:* gummy count (unknown), the founder's own words on looks, use and timing.
-- *File:* `offers.md` (product entries), `00-start-here.md` (never-show-wrong steps).
+**Block 2: shapes every ad (buyer, voice, market)**
 
-**Q10. The buyer.**
-"Describe one real best customer, no name. What did they buy, and what did they say?"
-Follow-ups:
-- The reviews suggest 40% habit-quitters, 25% gut, 25% parents. Does that match what you see?
-- Who do you want more of, and fewer of?
-- What do people say on calls but never write in reviews?
-- *Gap:* buyer shares inferred from reviews.
-- *File:* `customers.md`, marked "founder's view". Keep the review-based picture alongside it.
+**Q8. The buyer.** Gap: G42. File: `customers.md`, founder's view.
+- Ask: "Tell me about one real best customer, no name."
+- Then: "Tell me about a buyer who surprised you."
+- Then: "Who do you want more of, and fewer of?"
+- Then: "What do people say on support calls but never write in reviews?"
+- If the founder's picture differs from the reviews (quitter 40%, gut 25%, parent 25%, price doubter), note both.
 
-**Q11. Voice and humour.**
-"Read me something you wrote yourself recently: an email, a post, a voice note."
-Follow-ups:
-- The site says "f*&$%#g work" and "better poops". How far can humour go?
-- Which words do you love, and which do you ban?
-- Name three ads you wish were yours, and three you never want to resemble.
-- Video: fast or slow? Phone-shot or polished? Close on the product or on the person?
-- *Gap:* voice built only from the site.
-- *File:* `voice-and-look.md`.
+**Q9. Voice and humour.** Gaps: G43, G44. File: `voice-and-look.md`.
+- Ask: "Read me a line you wrote yourself that sounds most like Sprout."
+- Then: "Which words do you love, and which are banned?"
+- Then: "How far can humour go? Is the 'f*&$%#g work' line in or out? Poop jokes in kids ads?"
+- Then: "Name three ads you wish were yours, and three you never want to resemble."
+- Then: "For video: fast or slow, phone or polished, close on the product or on the person?"
 
-**Q12. The market.**
-"When a sale is lost, what is it lost to? Include doing nothing."
-Follow-ups:
-- May we name the big greens powder, or compare prices with it?
-- The "$1.26 vs $3.60" comparison is dated. Stand by it?
-- Say the habit you're against the way you'd say it when annoyed.
-- *Gap:* rival naming and price comparison (unknown).
-- *File:* `market.md`.
+**Q10. Market.** Gaps: G45, G18, G20. File: `market.md` and `proof-and-claims.md`.
+- Ask: "When you lose a sale, what is it lost to, doing nothing included?"
+- Then: "May we name a rival or compare prices? The $1.26 vs $3.60 and 'only 5g fiber' lines: what are they based on, and how old are they?"
+- Then: "Describe the powder-and-shaker habit the way you'd say it when annoyed."
 
-**Q13. History and story.**
-"The 'too expensive, here's 61% off' ad has 15+ live copies. Why do you think it works, and what number do you judge it by?"
-Follow-ups:
-- Only 2 of the 40 newest ads use the "I finally stuck with it" habit idea. Why so few?
-- If time allows: what was going on the week you decided to start? Which parts of that story are private?
-- *Gap:* no spend or results on file, no origin story.
-- *File:* `log.md` (Results, graded "reported" unless a number comes with it), `business.md` (story).
+**Block 3: history and close**
 
-**Close.**
-- "What must be true in 90 days for this to be worth it? Give me one number."
-- "What haven't we asked?"
-- *File:* `log.md` (Decisions).
+**Q11. Best ads and the 90-day number.** Gaps: G46, G48. File: `log.md`: Results (graded "reported" unless a number comes with it) and Decisions.
+- Ask: "What are your three best ads, why do you think they worked, and what number do you judge them by?" Include the "too expensive → 61% off" ad and the "One Step I Never Skip" ad.
+- Then: "What must be true in 90 days for this to be worth it, as one number?"
+- Then: "Who approves ads, and how fast?"
+- Then: "What haven't we asked?"
 
----
+**Q12. Only if time remains: the story.** Gap: G50. File: `business.md`: story and positioning.
+- Ask: "The week you decided to start: what was going on?"
+- Then: "What did you believe about supplements that others got wrong?"
+- Then: "Which parts of the story are private?"
+- If Q12 isn't reached, mark it `[unknown: founder]` and list it in the readback.
 
-## 3. Written form (send by Sunday)
+## Written form (send the Sunday before the call; due back before the call)
 
-Please answer in writing and attach the file where one exists. "Don't know" and "never checked" are real answers.
+**A. Label and formula** → `offers.md`, `proof-and-claims.md`
 
-**A. Formula and label**
-1. Grams of sugar per pack, for Adults Low Sugar, Adults Sugar-Free, Kids, and each limited flavour. *(unknown: founder)*
-2. For Sugar-Free: which sugar alcohol, and how many grams per pack?
-3. The exact count of vitamins and minerals. Is it 21? Should the "20+" and "over 20" wording be changed, and on which pages? *(disputed)*
-4. Does any product contain probiotics, at any dose? Yes or no. *(disputed)*
-5. The full supplement facts panel for Adults and for Kids: calories, fiber grams and the name of the fiber blend.
-6. Which "adaptogens" are in it, and how much of each? Are they in the Kids formula too?
-7. How many gummies are in an adult pack?
-8. The facts panel for the electrolyte variety pack. *(not captured)*
+| Item | Answer |
+|---|---|
+| Grams of sugar per pack: Adult Low Sugar / Adult Sugar-Free / Kids / each current limited flavour (G28) | |
+| Sugar alcohols used in Sugar-Free, and grams per pack | |
+| Correct vitamin and mineral count, so every page says the same thing: 21 or another number (G2) | |
+| Does any product contain probiotics? Y / N. If not, which ad used the word, and is it still live? (G3) | |
+| Which "adaptogens", and how much per pack (G36) | |
+| Gummies per adult pack (G35) | |
+| Daily value is per pack, not per gummy. Confirm, and say how many gummies make up a pack (G5) | |
+| Testing: "35 substances" vs 70 pesticides + 4 metals + 16 contaminants + 9 microbial = 99. Which is right, and what does the lab certificate say? (G4) | |
+| Electrolyte variety pack: contents, serving, price per serving, sugar (G38) | |
 
-**B. Testing and certification**
-9. The site says "70 pesticides, 4 heavy metals, 16 contaminants, 9 microbial", which adds up to 99, and also says "35 substances tested". Which figure is right, and what is the difference? *(gap spotted)*
-10. The outside lab's name. May we name it in ads?
-11. Is NSF a certification of the facility or of the product? What is the exact wording allowed?
-12. Any required warnings: the FDA line in ads, Prop 65, Canada, retailer requirements.
+**B. Prices and offers** → `offers.md`: price summary and policies
 
-**C. Public numbers (give the source, date and count for each)**
-13. The star rating. It appears as 4.8 from 100,000; 4.75 from 109,639; 4.74 from 118,002; and 4.0 from 2,411 on a public review site. Which may appear in ads, and with what source line? *(disputed)*
-14. The customer survey: date, number of people, method, exact question wording, and any incentive paid. This backs the 95%, 80%, 67% and 52% figures.
-15. "Less than 1% of customers use our Money-Back Guarantee": the source and the period.
-16. "Most fiber-focused supplements contain only 5g": the source.
-17. "Backed by 35,000+ studies": the source and how the number was counted.
+| Item | Answer |
+|---|---|
+| Subscription price, 84 packs: Low Sugar / Sugar-Free / Kids (G31) | |
+| First-order price: Adult Sugar-Free 28 packs (G31) | |
+| Kids 28 packs: correct renewal price (the page shows $74.98) (G30) | |
+| Kids limited flavour renewal price (G31) | |
+| Every offer live today: wording, start date, end date, conditions (G29) | |
+| Deepest discount ever run, and when | |
+| Offers you will never run | |
+| VIP program terms; cashback app name and terms; HSA/FSA service name | |
+| What "4 free gifts" currently includes | |
+| Guarantee: length, who pays return shipping, how it's claimed, number of claims last 12 months and total orders (G33, G19) | |
+| Cancel and pause: exact steps, channels, time to process (G34) | |
+| Cost to make one 28-pack, and cost to ship one order (optional) (G39) | |
 
-**D. Prices (please fill the gaps in this table)**
-18. The full current price sheet. Missing cells: Kids subscription renewal, 84-pack subscriptions, Sugar-Free "starts at", and Kids limited-flavour subscription.
-19. Current retail prices and pack sizes at big-box stores and warehouse clubs.
-20. The HSA/FSA wording that is allowed, and the cashback partner's terms.
+**C. Proof and numbers** → `proof-and-claims.md`: claims
 
-**E. Policies, in full**
-21. The guarantee: what it covers, how long it lasts, who pays return shipping, how to claim, and how often it is claimed.
-22. Cancel, pause and skip: the exact steps a customer takes, and the wording support uses.
-23. The current free gifts: what they are, when the list changes, and the stock you hold.
-24. Rules for the VIP program, the referral program and the smartwatch giveaway.
+| Item | Answer |
+|---|---|
+| Star rating to use in ads: number, review count, platform, date captured (G1) | |
+| Survey: date, number of people asked and answered, how chosen, exact questions (G7) | |
+| Source and date for "$1.26 vs $3.60" and "most fiber supplements contain only 5g" (G18, G20) | |
+| Required warnings and disclaimers, by country and platform; why ads carry no FDA line (G21) | |
+| Exact spelling of every trademark, and which certification marks may appear (NSF, GMP, FDA-registered) (G40) | |
 
-**F. The next 90 days**
-25. Upcoming limited flavours and their dates, with the flavour description only and no partner names.
-26. Stock limits, holiday shipping cut-offs and launch dates.
+**D. Rights** → `proof-and-claims.md`: rights. Fill one row per person or asset: who / where / how long / paid or unpaid.
 
-**G. Rights and marks**
-27. Tie-in flavours: what may be said about each, and when each agreement ends.
-28. Retailer logos and certification marks you may show, and the exact spelling of every trademark (brand, product names, fiber blend).
-29. For each photo, video, creator clip and music track cleared for paid ads: who is in it, where it may run, how long, and whether it is paid or unpaid.
-30. The licence for the chunky display font.
+| Item | Who | Where | How long | Paid? |
+|---|---|---|---|---|
+| Founder face and voice; AI version (G23) | | | | |
+| Creators, staff, customers in current ads (G24) | | | | |
+| Named reviewer quotes (G25) | | | | |
+| Product and lifestyle photos, video (G26) | | | | |
+| Fonts: Work Sans, DM Mono, the display font (G26) | | | | |
+| Music used in ads (G26) | | | | |
+| Tie-in flavour names (cartoon-movie, ice-pop, soda) (G27) | | | | |
 
-**H. Ads and approvals**
-31. An export from the ad account showing spend and results for the top ads.
-32. Every rejected ad, with the reason given.
-33. Who approves ads, and how fast.
+**E. Next 90 days** → `log.md`: Recent changes
 
-**I. Voice**
-34. Three things you wrote yourself: an email, a post and a voice note.
-35. Your list of words you love and words you ban.
+| Item | Answer |
+|---|---|
+| Next limited flavours: names as they may be written, launch and end dates (G47) | |
+| Stock limits, last-order dates, shipping cut-offs (G47) | |
+| Retailer launches or promotions coming up (G47) | |
 
----
+**F. House rules and approvals** → `00-start-here.md`, `log.md`: Decisions
 
-## 4. Bring to the call, or send ahead
+| Item | Answer |
+|---|---|
+| Topics the brand never touches (G49) | |
+| Story told by a blend of real reviewers: allowed? Labelled? (G49) | |
+| Post styled as a text or notes app: allowed? (G49) | |
+| Who approves ads, and the usual turnaround (G48) | |
 
-**Products on the desk, in the box they ship in:**
-- Adults Original Low Sugar (one pouch and one loose daily pack)
-- Adults Original Sugar-Free
-- Kids Strawberry Burst
-- The current limited flavour
+## Documents and items to bring (list sent with the form)
 
-**Five plain photos per product above:**
-1. The pack front as sold
-2. The gummies out of the pack
-3. In a hand, for size
-4. In use: torn across the top edge and poured into a palm
-5. A close view of the gummy surface
+1. **The products on the desk, in their shipping box:** Adult Original Low Sugar, Adult Sugar-Free, Kids, the current limited flavour, and an 84-pack.
+2. **Five plain photos per product you'll advertise:** pack front as sold, product out of the pack, gummies in a hand for size, a pack being torn and poured, and a close view of the gummy surface.
+   - **Missing now: all photos for all products.** Until these and Q7 are on file, any product image or clip is labelled "product not confirmed".
+3. **Supplement Facts panel and full ingredient list** for each product and variant.
+4. **The full 2025 study report:** protocol, which formula was used, who ran it, who funded it.
+5. **Lab certificates** from the Sept 2026 testing.
+6. **Survey questionnaire and raw results.**
+7. **Review platform exports or screenshots** with counts and dates.
+8. **Any platform rejections, legal notes or regulator letters** about claims.
+9. **Tie-in and partner agreements** (the usage clauses only).
+10. **Model, creator and photo releases;** licences for the display font and for music.
+11. **NSF and GMP certificates.**
+12. **Three things the founder wrote:** an email, a post, a voice note.
+13. **Ad results export** for the top and bottom ads, with the metric the founder uses.
 
-Note which photos are missing. No product image or clip will be made before these are on file, unless it is labelled "product not confirmed".
+## Score
 
-**Documents:**
-- The full 2025 study report
-- The September 2026 lab report (certificate of analysis)
-- Supplement facts panels for every product
-- The survey method and question list
-- Exports from each review platform
-- The current price sheet
-- Summaries of partner and licensing agreements
-- Talent and creator releases
-- The brand guidelines file
-- Any notices from a platform, lawyer or regulator, including rejected-ad notices
+**Checks score: 1 / 1 × 100 = 100**
+
+| Check | Status now |
+|---|---|
+| No `[confirmed]` fact was asked as a fresh question | Passed. The source files carry no `[confirmed]` tags; site and label facts appear only as yes-or-no checks. |
+| Every filed answer carries the founder tag, date and question number | Does not apply yet: no answers filed. |
+| No belief became a claim | Does not apply yet: nothing filed. |
+| Every right on file names who, where, how long and paid or unpaid | Does not apply yet: no rights filed. The form's section D asks for all four. |
+| Where founder and reviews disagree about the buyer, both are kept | Does not apply yet: comes after Q8. |
+| Answers about looks are kept in the founder's words | Does not apply yet: comes after Q7. |
+
+**Gaps closed score: not scored until after the call** (0 filed / 50 collected so far).
 ```

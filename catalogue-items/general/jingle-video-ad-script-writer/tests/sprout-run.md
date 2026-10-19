@@ -2,20 +2,20 @@
 
 Result: **pass**. Ran on claude-opus-5-5 (effort medium), graded by claude-fable-5-1. Judge list: 5 of 5 met. Invented facts: 0.
 
-A usable 30-second song script that sticks to the approved brand lines and the one approved health claim, with correct bar math and the renewal price shown honestly on the tag. The owner can paste the sound brief straight into a music tool once music use and the offer end date are confirmed.
+A ready-to-use 30-second jingle script that keeps every sung number and health line inside the approved claims, puts the pack on screen at 0 seconds, and follows the brand's own tear-across-the-top rule. The bar math checks out (112 BPM, 14 bars = 30.0 s), the offer text on the tag states the renewal price honestly, and the two real gaps (music use, offer end date) are flagged as MISSING rather than guessed.
 
 ## Judge list
 
-- Met: Hook can be sung back after one hearing (not too long or twisty)
-  "Rip. Tip. Enjoy. Let's go!" (6 syllables); melody: "Rip and Tip on the same note, Enjoy steps up, Let's go makes one jump up and holds."
-- Met: Hook is about what the customer gets; brand name only in the tag
-  Hook carries the brand's ease line; "Sprout" appears in the lyric only in "[Tag] Sprout greens gummies!"
-- Met: Hook returns on the same tune every time
-  "Identical melody every time the hook returns"; bars 6 and 12 marked "same tune".
-- Met: Every number or health result in the lyric is in the approved claims word for word
-  "Supports digestion and gut health" word for word; "Out by eight" is the brief's buyer moment, flagged "not a timing claim"; 60+/21/6g held out intact.
-- Met: Pack on screen within the first 5 seconds
-  Bar 1: "Pack front fills the frame in the first second."
+- Met: Sing it once, then sing the hook back without looking; not too long or twisty
+  "Grab it, eat it, out the door (7)" with a repeated "-it" sound and a held "door"; simple, 7 syllables, one bar.
+- Met: The hook is about what the customer gets, and the brand name sits only in the tag
+  Hook is the buyer's outcome ("Grab it, eat it, out the door"); brand name appears only in "[Tag] Sprout greens!".
+- Met: The hook comes back on the same tune every time
+  Sound brief: "The hook melody is identical all three times." Hook sung in bars 1, 7, 12.
+- Met: Every number or health result in the lyric is in the approved claims, word for word
+  "Supports digestion and gut health" unchanged; "Sixty-plus ingredients in one pack" is the approved "60+ ingredients ... in 1 pack" with the number written as words per the skill.
+- Met: The pack is on screen within the first 5 seconds
+  Bar 1 (0.0–2.1s): "She grabs a Sprout Adults pack from the bowl by the door, and the pack front faces camera."
 
 ## What went in
 
@@ -42,122 +42,106 @@ every 4 weeks. Voice: playful, cheeky, short lines.
 ## What came out
 
 ```text
-**MISSING:**
-- **Whether the brand uses music at all.** Please confirm before any track is generated.
-- **Guarantee.** It is not on screen until it is supplied.
-- **Offer end date.** It is needed for the tag text.
-- **Music rights and platform rules.** Check these for the generated track before it runs as a paid ad.
+**MISSING: whether Sprout uses music in its ads at all.** Confirm this before the song shots skill generates any track or video.
+**MISSING: offer end date** for the tag's on-screen text.
 
 ---
 
 ## Hook drafts
 
-| # | Hook | Syllables | Sound device |
+| # | Hook | Syllables | Notes |
 |---|---|---|---|
-| A | **Rip. Tip. Enjoy. Let's go!** | 6 | rip / tip rhyme, short punchy beats |
-| B | Grab it on the go, go, go | 7 | repeated "go," from review 15 ("easy to grab… on my way") |
-| C | Tear it, tip it, out the door | 7 | repeated "-it," hard door landing |
+| A | "Rip. Tip. Enjoy." | 4 | An approved brand line with a strong rip/tip sound. It is only 4 syllables, so it can't fill a bar as a lyric line, and it describes how she uses it more than what she gets. |
+| B | "Easy to grab, easy to eat" | 8 | Close to review 15's own words, with "easy" repeated. It sits at the top of the range, so it's harder to sing back after one hearing. |
+| C | "Grab it, eat it, out the door" | 7 | Review 15 ("grab and eat") set in her moment, with a repeated "-it" sound. It ends on a held "door". |
 
-**Pick: A.** It uses the approved brand line word for word, and "Let's go!" sits after it without bending it. It says what she gets: done and out the door, no scoop, no stir. The rip / tip rhyme sticks after one hearing. The tune has one jump, up to a held "go," which gives the lead an easy held note to sing to camera. B is the runner-up and borrows the review's "grab" spirit, but A carries the brand's own words.
-
----
+**Pick: C.** It is her own phrase placed in the 8 a.m. rush. It says what she gets: her daily pack is done by the time she's out. The repeated "-it" makes it singable, and the long "door" is an easy note for the lead to sing on camera. The brand line from A is kept intact in the lift.
 
 ## Sound options
 
-**1. Bright kitchen acoustic pop, 112 BPM. Picked.**
-- **Speed:** The school run is a rush, so the tempo sits in the 112 to 128 range.
-- **Instruments:** Strummed acoustic guitar, handclaps on 2 and 4, tambourine, light kick and snare, bouncy bass, and a glockenspiel ping on "Rip" and "Tip." This is a kitchen sound.
-- **Voice:** A warm, bright adult female lead she'd hum along with while packing lunches.
-- **Timing:** At 112 BPM, 14 bars lands on exactly 30.0 seconds.
+| Option | Sound | Reason |
+|---|---|---|
+| 1 | 112 BPM bright acoustic pop: hand claps, strummed acoustic guitar, ukulele, tambourine, a glockenspiel sparkle on the tag, warm bass | The school run is a rush, so the tempo sits in the 112–128 range. The setting is a home hallway and kitchen, which suits claps and acoustic textures. It is playful without being frantic. |
+| 2 | 124 BPM bouncy funk-pop: slap-style bass, finger snaps, short brass stabs, crisp kit | It has more push and cheek, and the faster tempo may stick harder. It also reads as "city night out" rather than "home at 7:50 a.m.", and the brass can bury the words. |
 
-**2. Ukulele, snaps and duet, 120 BPM.**
-- Cheeky and quick, with a playful male and female trade-off.
-- **Rejected:** Ukulele and glockenspiel lean kids'-TV and could make an Adults pack read as a children's product.
+**Pick: Option 1.** It matches the moment and the setting, and it leaves room for the words to be heard. At 112 BPM one bar is 2.14 seconds, so 14 bars come to 30.0 seconds.
 
----
+## Bar grid (112 BPM, 4/4, 1 bar = 2.14 s, 14 bars = 30.0 s)
 
-## Bar grid
-
-112 BPM, 4/4, 1 bar = 2.14 s, 14 bars = 30.0 s. Setting: one open-plan kitchen and hallway leading to the front door.
-
-| Bars (time) | Section | Lyric (syllables) | Picture | ON CAMERA | On-screen text |
+| bars | section | lyric (syllables) | picture | ON CAMERA | on-screen text |
 |---|---|---|---|---|---|
-| 1 (0.00–2.14) | Hook | Rip. Tip. Enjoy. Let's go! (6) | Close-up: her hands rip the Sprout pack across the top on "Rip," tip gummies into her palm on "Tip," then cut to her grinning, coat half on. Pack front fills the frame in the first second. | ON CAMERA (held "go") | — |
-| 2 (2.14–4.29) | Verse | Lunchbox open, shoes untied (7) | Open lunchbox on the counter, her own sneakers with laces trailing | — | — |
-| 3 (4.29–6.43) | Verse | Keys and coffee, bags beside (7) | Keys on a hook, coffee mug, school bags lined up by the front door | — | — |
-| 4 (6.43–8.57) | Verse | No more shaker in the sink (7) | Dusty shaker bottle in the sink; she gives it a cheeky side-eye | — | — |
-| 5 (8.57–10.71) | Verse | No more scoop and stir to drink (7) | A powder tub and scoop slide off the counter edge out of frame, and the Sprout pack slides in to replace them | — | — |
-| 6 (10.71–12.86) | Hook | Rip. Tip. Enjoy. Let's go! (6) | Same action as bar 1, now one-handed while she zips her jacket | ON CAMERA (held "go") | — |
-| 7–8 (12.86–17.14) | Lift | Tastes like a treat, works like a supplement (10, brand line, two bars) | She pops a gummy, happy "mm" face, then cuts to the pack on the counter beside her keys | — | — |
-| 9 (17.14–19.29) | Lift | Supports digestion and gut health (8, approved claim) | Clean pack-front close-up, gummies spilling from the torn top. No body graphics. | — | — |
-| 10 (19.29–21.43) | Lift | One small handful, front door click (7) | A small handful of gummies in her palm as the other hand opens the front door, with a latch click | — | — |
-| 11 (21.43–23.57) | Lift | Out by eight, the school-run trick (7) | Hallway clock reads 7:59; she winks at it, bags on her shoulder | — | — |
-| 12 (23.57–25.71) | Hook | Rip. Tip. Enjoy. Let's go! (6) | Same action again on the doorstep; adult voices join in | ON CAMERA (held "go") | — |
-| 13–14 (25.71–30.00) | Tag | Sprout greens gummies! (4 notes, last one held) | Pack centred on the hall table, door swinging shut behind her | — | **$29.99 first order with text sign-up. Renews at $49.99 every 4 weeks.** Sign up by text today. *(end date: MISSING)* |
+| 1 (0.0–2.1s) | Hook | Grab it, eat it, out the door (7) | An animated, made-up mum in her late 30s has her coat half on in her front hallway. She grabs a Sprout Adults pack from the bowl by the door, and the pack front faces camera. | ON CAMERA on held "door" | — |
+| 2 (2.1–4.3s) | Verse | Shoes on, lunches, where's the key (7) | Small shoes paired on the mat, two lunchboxes zipped shut, and her patting her pockets. Kids stay out of frame. | — | — |
+| 3 (4.3–6.4s) | Verse | No water, no shaker for me (8) | An old powder tub and shaker bottle on the hall shelf. She nudges them into a cupboard and it clicks shut. | — | — |
+| 4–5 (6.4–10.7s) | Verse | Sixty-plus ingredients in one pack (10, claim over two bars) | Close-up: she tears the pack across the top and tips a small handful of gummies into her palm. Tiny animated leaves and fruit swirl out. No numbers on screen. | — | — |
+| 6 (10.7–12.9s) | Verse | Car keys found, and we're on track (7) | Keys turn up inside a lunchbox. She jingles them and the front door swings open. | — | — |
+| 7 (12.9–15.0s) | Hook | Grab it, eat it, out the door (7) | On the doorstep she pops the gummies in and sings to camera. | ON CAMERA on held "door" | — |
+| 8–9 (15.0–19.3s) | Lift | Tastes like a treat, works like a supplement (10, brand line over two bars) | Bar 8: she chews, eyebrows up, the way you'd react to a sweet. Bar 9: the pack sits in the shelf spot where the powder tub used to be. | — | — |
+| 10 (19.3–21.4s) | Lift | Supports digestion and gut health (8) | She walks down the front path, folds the empty pack into her coat pocket and smiles. No glowing or body effects. | — | — |
+| 11 (21.4–23.6s) | Lift | Rip. Tip. Enjoy. That's the score (7) | Three cuts on the beat: rip (tear), tip (into palm), enjoy (chew and a wink). | — | — |
+| 12 (23.6–25.7s) | Hook | Grab it, eat it, out the door (7) | Animated adult neighbours heading out with bags join her on the front path and sing along. | ON CAMERA, lead and crowd on held "door" | — |
+| 13 (25.7–27.9s) | Tag | Sprout greens! (2 syllables, 3 notes) | Hero shot of the pack on the doorstep step, with the cast singing the tag. | ON CAMERA, crowd | $29.99 first order with text sign-up · Renews at $49.99 every 4 weeks · Sign up by text today |
+| 14 (27.9–30.0s) | Tag (hold) | (the tag's final chord rings, with a clean stop at 29.5s) | End card: the pack and the Sprout logo. | — | Same offer text as bar 13 (end date MISSING) |
 
-- **Syllable counts:** The tag runs 4 syllables because it is a 2 to 4 note sung tag.
-- **Beat check:** The key words land on the beat, for example RIP / TIP / en-JOY / let's GO, and sup-PORTS di-GES-tion AND GUT HEALTH.
-
----
-
-## Sound brief (paste-ready)
+## Sound brief (ready to paste)
 
 ```
 Length: 30 seconds
-Tempo: 112 BPM, 4/4 (14 bars)
-Key: D major (optional)
-Voice: warm, bright adult female lead, playful and cheeky, crisp diction; small group of adult voices joins on the final hook and the tag
-Instruments: strummed acoustic guitar, handclaps on 2 and 4, tambourine, light kick and snare, bouncy electric bass, glockenspiel ping on "Rip" and "Tip"
-Hook melody: "Rip" and "Tip" on the same note, "Enjoy" steps up, "Let's go" makes one jump up and holds. Identical melody every time the hook returns.
-Arrangement: start on the sung hook at 0 seconds, no intro, stop-time claps under "Rip. Tip."; bars 2–5 verse with guitar and claps; bar 6 hook, same tune; bars 7–11 lift, drums build, bass climbs; bar 12 final hook, same tune, group joins; bars 13–14 sung tag of 4 notes, last note held, clean stop at 30 seconds.
+Tempo: 112 BPM, 4/4
+Key: D major
+Voice: bright, cheeky female lead, warm and conversational, clear diction, a smile in the voice; small mixed group of adult voices joins on the last hook and the tag
+Instruments: hand claps, strummed acoustic guitar, ukulele, tambourine, warm bass, glockenspiel sparkle on the tag only
+Arrangement: start on the sung hook at 0 seconds, no intro; light claps and guitar under the verse; drop to claps and voice for "Sixty-plus ingredients in one pack" so every word is clear; full band from the second hook; lift builds with stacked claps and tambourine; last hook with group vocals; end on the sung tag at bar 13, let the chord ring one bar, clean stop at 29.5 seconds. The hook melody is identical all three times. The tag is three notes, rising.
 
 [Hook]
-Rip. Tip. Enjoy. Let's go!
+Grab it, eat it, out the door
 
 [Verse]
-Lunchbox open, shoes untied
-Keys and coffee, bags beside
-No more shaker in the sink
-No more scoop and stir to drink
+Shoes on, lunches, where's the key
+No water, no shaker for me
+Sixty-plus ingredients in one pack
+Car keys found, and we're on track
 
 [Hook]
-Rip. Tip. Enjoy. Let's go!
+Grab it, eat it, out the door
 
 [Lift]
 Tastes like a treat, works like a supplement
 Supports digestion and gut health
-One small handful, front door click
-Out by eight, the school-run trick
+Rip. Tip. Enjoy. That's the score
 
 [Hook]
-Rip. Tip. Enjoy. Let's go!
+Grab it, eat it, out the door
 
 [Tag]
-Sprout greens gummies!
+Sprout greens!
 ```
 
----
+Before running this as a paid ad, check the platform's rules and the music rights for the generated track.
 
 ## Claims list
 
 | Line | Type | Source |
 |---|---|---|
-| Rip. Tip. Enjoy. (in the hook, ×3) | Brand line, word for word | Approved brand lines. "Let's go!" is added after it and makes no claim. |
-| Tastes like a treat, works like a supplement | Brand line, word for word | Approved brand lines |
-| Supports digestion and gut health | Health claim, word for word | Approved claims |
-| No more shaker in the sink / No more scoop and stir to drink | Product fact | Product facts: no water, no mixing, no shaker. This is no rival claim, just the format she has quit. |
-| One small handful | Product fact | Product facts: a small handful of gummies |
-| Out by eight, the school-run trick | Buyer's moment, not a timing claim | Brief: out the door by 8. It makes no claim that the product saves time. |
-| "60+ ingredients, 21 vitamins & minerals, and 6g fiber" | **Held out** | It won't fit two bars without changing the approved wording, so it is not sung and not shown. Use it in a non-song format. |
-| On-screen price and offer text | Offer | Brief: $29.99 first order with text sign-up, renews at $49.99 every 4 weeks. Check it against the live offer. End date is MISSING. |
+| "Grab it, eat it, out the door" | Outcome phrase in the buyer's words, not a claim | Review 15: "So easy to grab and eat on my way…" |
+| "No water, no shaker for me" | Product fact | Product facts: no water, no mixing, no shaker |
+| "Sixty-plus ingredients in one pack" | Approved claim (the 60+ element, wording kept, number sung as words) | Approved: "60+ ingredients, 21 vitamins & minerals, and 6g fiber" in 1 pack |
+| "Tastes like a treat, works like a supplement" | Brand line, unchanged | Brand lines |
+| "Supports digestion and gut health" | Approved claim, unchanged | Approved claims |
+| "Rip. Tip. Enjoy. That's the score" | Brand line unchanged, plus a figure of speech | Brand lines |
+| Tag text: $29.99 first order with text sign-up, renews at $49.99 every 4 weeks | Offer | Brief offer. Check it against the live offer; end date MISSING. |
 
-**Banned words check:** none of "fix," energy, immunity or weight loss appears in any lyric, picture or text.
-
----
+The script contains no energy, immunity, weight-loss or "fix" language. No picture shows a body effect or a sudden burst of energy; her pace comes from the school run, not from the product.
 
 ## Cast note
 
-- **Voice:** A warm, bright adult female lead with playful, cheeky phrasing, joined by a small group of adult voices on the last hook and the tag.
-- **On screen:** One animated, made-up mum in her late 30s, the only lead. She sings to camera only on the held "go!" at the end of each hook and is otherwise shown mid-rush. The Sprout pack is the second star, on screen from bar 1.
-- **Why:** The buyer is a mum doing the school run, so she should see herself in one quick, funny morning rather than a crowd. Keeping it to one lead holds one picture per line and makes the three ON CAMERA notes easy to sync.
+- **Voice:** an unseen, bright, cheeky female lead, warm and conversational like a friend singing in the hallway, with a small group of adult voices on the last hook and the tag. It fits a playful brand and a buyer who would hum along with someone who sounds like her.
+- **On screen:** one animated, made-up mum in her late 30s in her front hallway and on her doorstep. She sings to camera only on the held "door" notes. Animated adult neighbours join on the last hook and the tag. Kids stay out of frame and are suggested by the shoes and lunchboxes.
+- **Why:** the buyer sees her own 8 a.m. rush. The doorstep crowd makes the tag feel shared, like the school-gate moment she already knows.
+
+## Score
+
+**100 / 100** (7 of 7 checks passed: 7 ÷ 7 × 100 = 100)
+
+No checks missed. The two MISSING items (whether the brand uses music, and the offer end date) must be resolved before production.
 ```

@@ -2,20 +2,20 @@
 
 Result: **pass**. Ran on claude-opus-5-5 (effort medium), graded by claude-fable-5-1. Judge list: 5 of 5 met. Invented facts: 0.
 
-A careful, usable plan: every fact the owner listed becomes a locked card with its conditions, risky site claims go on a block list, and each step gets only what it needs. The owner still has to supply the reviews file, product photos, ad format and a budget, all of which are clearly marked MISSING rather than guessed.
+The plan locks every risky Sprout claim into a card with its conditions, blocks the conflicting discount percentages and risky health lines, and gives each step only what it needs. It is honest about what is missing (budget, reviews, photos, placement) and the owner could hand it straight to a developer.
 
 ## Judge list
 
 - Met: Every claim travels as a whole card, with its amount, conditions and who it applies to.
-  C4: "$29.99 first order with the text sign-up discount for new customers. Renews at $49.99 each 4 weeks." Limits name product, plan, new customers.
+  C4: "First order only, new customers only, needs the SMS discount. Not for Sugar-Free... limited flavours or Kids"; C2 carries study size, vitamins, 12 weeks.
 - Met: The checking step gets the actual output and the original brief, not a summary.
-  Step 7 Needs: "Paths to the actual image, the actual copy and the original brief... Never a summary of any of these."
+  Step 7 Needs: "The actual image file. The actual copy.json. The original brief.json. cards.json."
 - Met: The fixing step gets only the failed part and what depends on it.
-  Step 8 Needs: "Only the failed part... The named fault from step 7... The list of parts that depend on it."
+  Step 8 Needs: "Only the failed field or the failed image. The named fault. The cards and on-image words that depend on it."
 - Met: Counts, budgets and sums are left to code, not to the AI.
-  "Code runs before the model check... Character counts." and "Code keeps a ledger of spent plus reserved"; estimates "computed by code".
+  "Code checks run between steps (not done by a model)"; "Before each call, code reserves the estimated cost"; character counts by code.
 - Met: Nothing failed or partial is marked as a success, and no stock or made-up output fills a gap.
-  "A failed or partial result stays marked as such. It is never filled with stock images, sample copy or invented output."
+  "Failed or partial work stays failed or partial. It is never filled with stock or made-up output"; not_checked never counts as pass.
 
 ## What went in
 
@@ -49,282 +49,314 @@ GLP-1: customer words only, never the brand's claim.
 ## What came out
 
 ```text
+# Sprout ad chain: handoff plan
+
 ## 1. Claim cards
 
-Cards travel word for word, with their limits. A step may pick cards by ID. It never rewrites, shortens or merges them. Where a card has a required partner, the partner goes into the same ad.
+These cards are the only source for claims. Steps pick cards by ID and never reword them. If an ad uses a card's **Wording**, it must also carry that card's **Travels with** text word for word in the same ad, in the copy or on the image. Code checks this after every step.
 
-| ID | Wording (exact) | Limits that travel with it | Source |
-|---|---|---|---|
-| **C1** | "60+ ingredients, 21 vitamins & minerals, and 6g fiber in 1 pack" | Sprout Original (Adults), 1 pack (about 20 g). The claim is per **pack**, never per gummy. Never use "20+" or "over 20". Not confirmed for Kids packs. | Product page, science page |
-| **C2a** | "Clinically tested for nutrient absorption" | Must appear with C2b in the same ad. Covers absorption of 2 nutrients only. Never stretch it to energy, immunity, "it works" or "clinically backed formula". | Science page |
-| **C2b** | "2025 study: 12 weeks, randomized, double-blind, placebo-controlled, 120 healthy adults aged 23 to 59. Blood vitamin C up 40.1% (2.7x placebo), folate up 20.5% (2.9x placebo)." | Adults only. The numbers are blood levels, not felt benefits. | Science page |
-| **C3** | "95% of surveyed users take Sprout at least 4-6x per week" | "of surveyed users" is part of the wording and can't be dropped. Requires footnote **C3f**: "Brand-reported survey of 3,000+ customers after 3 months." | Brand survey |
-| **C4** | "$29.99 first order with the text sign-up discount for new customers. Renews at $49.99 each 4 weeks." | Covers only: Sprout Original (Adults), Low Sugar, 28 packs, subscription. The first order needs the promotional SMS discount and is for new customers only. "$29.99" never appears without the rest of this card. No per-day price unless it is a new card. | Plan box, footer small print |
-| **C5** | "30-day money-back guarantee on your first order." | Initial purchase only ("This policy applies only to your initial purchase."). Never "30-day guarantee" alone. | FAQ |
-| **C6** | "Supports digestion and gut health" | "Supports" only. Never fix, relieve, cure or flatten. | Label bullet |
-| **C7** | "Third-party tested for 70 pesticides, 4 heavy metals, 16 contaminants, 9 microbial contaminants" | Lot testing. Don't add "35 substances". | Product page |
-| **C8** | "Vegan. Pectin base, no gelatin. Free from gluten, dairy, tree nuts, peanuts, caffeine, synthetic sweeteners and synthetic dyes." | The free-from list is whole. Don't add items. | Science page, ingredients panel |
-| **C9** | "Methylfolate, not folic acid" | Adults pack: folate 400 mcg DFE as methylfolate. | Science page |
-| **CW-GLP1** | Reviews 11 and 14, verbatim. MISSING: review text (the reviews file was not attached). | **Customer words** (quoted research only). It may shape the buyer step's understanding. It never appears in copy, the image or the brief as a claim or testimonial. The word "GLP-1" in any output is a fail. | Reviews 11, 14 |
+| ID | Wording (exact) | Travels with (exact) | Limits | Source · label |
+|---|---|---|---|---|
+| C1 | "60+ ingredients, 21 vitamins & minerals, and 6g fiber in 1 pack." | (none) | Per 1 daily pack, Adults (about 20 g). Never "per gummy". Never "20+" or "over 20". Kids pack facts: MISSING, so not for Kids ads. | Product page, science page · checked brand fact |
+| C2 | "Clinically tested for nutrient absorption." | "2025 study of 120 healthy adults: blood vitamin C up 40.1%, folate up 20.5% after 12 weeks." | Randomized, double-blind, placebo-controlled, adults aged 23 to 59. Measured 2 vitamins in the blood only. Never "works", "proven", energy, immunity or "clinically backed formula". Adults only. | Science page · checked brand fact |
+| C3 | "95% of surveyed users take Sprout at least 4-6x per week, with 80% taking daily." | "Brand survey of 3,000+ customers after 3 months." | "Of surveyed users" is never dropped. | Product page · checked brand fact (brand-reported) |
+| C4 | "$29.99 for your first 28 packs ($1.07/day) with our new-customer text sign-up discount." | "Renews at $49.99 every 4 weeks ($1.78/day)." | Sprout Original Adults, Low Sugar, 28-pack subscription. First order only, new customers only, needs the SMS discount. Not for Sugar-Free (renews at $54.99, first-order price not shown), limited flavours or Kids. Never "DISCOUNT AUTO-APPLIED" alone. | Product page plan box and footer · checked brand fact |
+| C5 | "30-day money-back guarantee on your first order." | (none) | Initial purchase only. Never "30-day guarantee" without "first order". | Product page FAQ · checked brand fact |
+| C6 | "Supports digestion and gut health." | (none) | "Supports" only. Never fix, cure, relieve or end bloating, IBS or irregularity. | Product page · checked brand fact |
+| C7 | "Third-party tested for 70 pesticides, 4 heavy metals, 16 contaminants, and 9 microbial contaminants." | (none) | Lot tested Sep 2026. Recheck the date before use. | Product page · checked brand fact |
+| C8 | "Vegan, pectin-based, and free from gluten, dairy, tree nuts, peanuts, caffeine, synthetic sweeteners, and synthetic dyes." | (none) | Sugar-Free contains sugar alcohols. Never imply "no sweeteners at all". | Science page, ingredients panel · checked brand fact |
+| C9 | "Made with methylfolate, not folic acid." | (none) | (none) | Science page · checked brand fact |
+| C10 | "67% of surveyed users experienced better, more regular digestion." | "Brand survey of 3,000+ customers after 3 months." | Same as C3. | Product page · checked brand fact (brand-reported) |
+| C11 | "52% of surveyed users feel more energized." | "Brand survey of 3,000+ customers after 3 months." | Same as C3. Never "boosts energy". | Product page · checked brand fact (brand-reported) |
+| C12 | "4.75 stars from 109,639 reviews on our site." | (none) | On-site widget, read 13 Oct 2026. Never "4.8 from 100,000". Recheck before use. | Product page widget · checked brand fact (brand-reported) |
 
-**Block list (B).** These go to every writing step and to the checker. Any match is a fail.
-- Discount percentages: 49%, 52%, 55%, 58%, 61%, "up to".
-- "4 free gifts", "$20 off", "Buy 2 Save $5". None of these has a card.
-- Star ratings and review counts (4.8, 100,000, 1M+). None has a sourced card.
-- "Fix" / "Hot Girl Tummy".
-- Weight loss and muscle claims.
-- Hair growth.
-- "Revive whole body vitality".
-- "Mental clarity", "energy", "immunity", "stress relief" as benefits.
-- "Works" / "clinically backed".
-- "35,000+ studies".
-- "Per gummy".
-- 30/60/90-day results.
-- "Fast bioavailability".
-- GLP-1.
-- Kids "bright minds" or "brain health".
-- "Most fiber supplements contain only 5g".
-- "$1.26 vs $3.60".
-- "First smart gummy" / "fills the gaps".
-- "Less than 1% use our guarantee".
-- Any cancel promise beyond "Cancel anytime".
-- Kids prices: the renewal is unclear, so there is no card.
+**Blocked list.** Code rejects any of these if found in copy, prompt or image text.
 
-## 2. Fact labels (non-claim facts)
+| ID | Blocked | Why |
+|---|---|---|
+| B1 | Any discount percentage (49%, 52%, 55%, 58%, 61%, "up to") | The live pages conflict. MISSING: which percentage, if any, is approved. Use C4 instead. |
+| B2 | "Fix the Hot Girl Tummy", weight loss or muscle, "revive whole body vitality", energy or immunity from the study, "[Sprout] works", "35,000+ studies", "per gummy", 30/60/90-day results, "breaks down immediately / bioavailability", "Most fiber supplements contain only 5g", "$1.26 vs $3.60", "Less than 1% use our guarantee", "1M+ customers" | Risky or unsupported, per the brand file |
+| B3 | GLP-1 as a brand claim, e.g. "help fill the gaps while eating less on a GLP-1" | Drug-adjacent. Reviews 11 and 14 are customer words only. |
+| B4 | Kids: "bright minds", "brain health" | Claims about children. Kids facts are MISSING anyway. |
+| B5 | Easy-cancel promises beyond "Pause Or Cancel Any Time" | Cancelling is the loudest public complaint |
+| B6 | Cartoon or partner characters and marks | Brand rule. Use the flavour description only. |
 
-| Label | Facts |
-|---|---|
-| **Checked brand fact** | <ul><li>28 daily packs per pouch.</li><li>Adults pack about 20 g, "a small handful" of gummies.</li><li>Original flavour is "Fresh & Sweet" (strawberry and sweet greens).</li><li>Low Sugar or Sugar-Free. Sugar-Free uses sugar alcohols.</li><li>Ships "typically within 24 hours and on average arrive 3-5 days later".</li><li>One-time price $66.65.</li><li>The show-it-right rules and the look (section 3).</li><li>Brand voice lines.</li></ul> |
-| **Customer words** | <ul><li>Quotes in the brand file, e.g. "Sprout has been the one thing I've been able to stick to", "after the third day they started tasting better".</li><li>Reviews R01–R20.</li><li>Research only, never a testimonial.</li></ul> |
-| **Guess to test** | <ul><li>Buyer shares (rough estimates).</li><li>All "what works" angles: price objection, habit/stick-with-it open lane, gut slang, limited flavours.</li><li>Mostly-mobile traffic (inferred).</li><li>Sugar-Free upsetting some stomachs (customer reports plus an inferred missing warning).</li></ul> |
-| **Creative choice** | <ul><li>Angle, hook, scene and line choices made in steps 3–5.</li></ul> |
+**Other facts and how they are labelled**
 
-## 3. Handoff cards
+- **Checked brand fact:**
+  - Format: 28 packs a pouch; "small handful" of gummies.
+  - Flavours and sugar levels.
+  - Look and colours.
+  - The "show it right" rules.
+  - Voice lines.
+  - Shipping: "typically ship within 24 hours and on average arrive 3-5 days later".
+- **Customer words** (quoted research, never a testimonial in the ad):
+  - The 20 reviews, each tagged R1 to R20.
+  - R11 and R14 also carry the tag `GLP-1: research only`.
+  - Buyer quotes from the brand file.
+- **Guess to test:**
+  - Everything under "What is known to work".
+  - Every **(inferred)** item.
+  - Buyer shares.
+- **Creative choice:**
+  - Angle, hook, scene and layout, as decided in steps 3 to 5.
 
-**Paste or point.**
-- Steps 1 and 7 can open files, so they get file paths and card IDs.
-- Steps 2, 3, 4, 5 and 8 get pasted text only.
-- Step 6 gets the prompt and any reference images.
-- Every artefact is saved as a file so step 7 can open the real output.
+`MISSING: the text of the 20 reviews` (not attached).
 
-**Identity rules (IR).** These apply wherever an image is involved.
-- **IR1:** The daily pack is torn straight across its top edge only. Never the side, the bottom or a corner.
-- **IR2:** Gummies pour from the torn top into a palm or bowl.
-- **IR3:** The big pouch opens only at its resealable top and is never shown torn.
-- **IR4:** No cartoon tie-in characters and no partner brand marks. Use the flavour description only.
-- **IR5:** Adult pouch is a glossy deep green stand-up foil pouch with a big yellow wordmark, a yellow bear face top right and "28 Daily Packs" at the bottom. Sugar-Free adds a white burst.
-- **IR6:** Gummies are small, opaque, soft matte deep-green bears, about thumbnail height.
+## 2. Handoff cards
 
-### Step 1: Brand reading (can open files)
+**Step 1. Brand reading** (can open files, so it gets pointers)
+
 - **Needs:**
-  - Paths to `sprout/brand.md`, `sprout/product-page.md` and the reviews file (MISSING: reviews file path).
-  - This plan's claim cards and block list, as a file.
-  - The job: confirm each card still matches the live sources, and report drift. It does not rewrite.
-- **May use:** Other site pages, if it can open them.
-- **Returns** (fixed shape):
-  - `cards_status`: per card ID, one of `match` / `changed` / `not found`, with the source line quoted.
-  - `facts`: label plus source for each fact.
-  - `reviews`: R01–R20 verbatim, each with ID, buyer type guess and theme.
-  - `conflicts`: a list.
-- **Never lose:** Card wording and limits; the CW-GLP1 rule; IR1–IR6.
-
-### Step 2: Buyer (text pasted)
-- **Needs:**
-  - The buyer chosen for this run (MISSING: who picks it).
-  - That buyer's brand-file profile (wants, doubts, quote).
-  - The reviews tagged to that buyer, verbatim, with IDs.
-  - The card list (full text) so it can map doubts to answers.
+  - Pointers to `sprout/brand.md`, `sprout/product-page.md`, the reviews file and `cards.json`, which holds this section as locked.
 - **May use:**
-  - Reviews from other buyers that share a doubt, whole and never excerpted mid-sentence.
-  - CW-GLP1 as research only.
-- **Returns:**
-  - `buyer_id`.
-  - `who` (1 line).
-  - `wants` (1 line).
-  - `doubts`: up to 3. Each is verbatim with its R-ID, or marked as the brand file's wording.
-  - `words`: 3–5 verbatim quotes with R-IDs.
-  - `answers`: doubt → card IDs, or "no card".
+  - The site pages, fetched if the tool allows.
+- **Returns:** `facts.json`, containing:
+  - `facts[]`, each with `{id, text, label, source}`.
+  - `reviews[]`, each with `{R#, text, tags}`. R11 and R14 are tagged GLP-1.
+  - `proposed_cards[]`. New claims go here and only become cards after a human approves them.
+  - `conflicts[]`.
 - **Never lose:**
-  - Quotes stay verbatim and labelled as customer words.
-  - Card IDs.
-- **Don't send:** Look, competitors, merch, the electrolyte pack, other buyers' profiles, prices outside C4.
+  - The cards. This step reads them and may not edit them.
+  - The labels.
+  - Review text word for word.
 
-### Step 3: Brief (text pasted)
+**Step 2. Buyer** (no file access, so text is pasted)
+
+- **Needs (pasted):**
+  - The text of one buyer segment.
+  - Reviews whose tags match that segment, in full.
+- **May use:**
+  - Doubts and quotes from the brand file for that segment.
+- **Returns:** `buyer.json`, containing:
+  - `segment`
+  - `situation`
+  - `tried_before[]`
+  - `doubts[]`, as quotes with R#.
+  - `words[]`, as quotes with R#.
+  - `label: customer words`
+- **Never lose:**
+  - Exact quote wording and R# for every quote.
+  - The GLP-1 tag on R11 and R14.
+- **MISSING:** which buyer this run targets. If it is set by hand, paste only that segment.
+
+**Step 3. Brief** (pasted)
+
 - **Needs:**
-  - Step 2 output.
-  - All claim cards (full text) and the block list.
-  - The "what works" hypotheses, labelled as guesses.
-  - A voice summary with the brand lines.
-  - IR1–IR6 (so the scene idea is legal).
-  - The competitor descriptions relevant to the buyer's doubt.
-- **May use:** The limited-flavour rule (subscribers get it for 1 month, then revert to Original) if the angle uses a flavour.
+  - The full text of all cards C1 to C12.
+  - The blocked list.
+  - `buyer.json`.
+- **May use:**
+  - The "known to work" lines, labelled as guesses to test.
+  - Product format facts.
+- **Returns:** `brief.json`, containing:
+  - `buyer_segment`
+  - `angle` (creative choice)
+  - `hypothesis_tested`
+  - `card_ids[]` (at most 3)
+  - `on_image_words`, as exact strings.
+  - `product_shown`, with each photo's role.
+  - `cta`
+  - `format`
+- **Never lose:**
+  - Card IDs, with each card's "Travels with" text counted as part of the card.
+- **MISSING:**
+  - Ad placement and size.
+  - Character limits.
+  - Which CTA buttons are allowed.
+
+**Step 4. Copy** (pasted)
+
+- **Needs:**
+  - `brief.json`.
+  - The full text of the selected cards only.
+  - Customer words from `buyer.json`.
+  - The voice section and the brand's existing lines.
+  - The blocked list.
+- **May use:**
+  - Format facts, e.g. "Rip. Tip. Enjoy." and "small handful".
+- **Returns:** `copy.json`, containing:
+  - `primary_text`
+  - `headline`
+  - `description`
+  - `cta`
+  - `card_ids_used[]`
+- **Never lose:**
+  - Card wording and its "Travels with" text, word for word.
+  - Customer words, used as research only, never as a quoted testimonial.
+
+**Step 5. Image prompt** (pasted)
+
+- **Needs:**
+  - The "Look" section.
+  - The "Show it right" rules.
+  - `on_image_words` and `product_shown` from the brief.
+  - Product photo files with their roles.
+- **May use:**
+  - The photo style line: bright, sunny, two-colour gradient, everyday adults.
+- **Returns:** `prompt.json`, containing:
+  - `prompt`
+  - `must_not[]`: no torn big pouch, no side or corner tear, no partner marks.
+  - `exact_text[]`
+  - `reference_images[]`, each with `{file, role}`.
+  - `aspect`
+- **Never lose:**
+  - The exact on-image words.
+  - Photo roles.
+  - Pouch and pack rules.
+- **MISSING:**
+  - The product photo files.
+  - Whether the image tool accepts reference images.
+
+**Step 6. Image tool**
+
+- **Needs:**
+  - `prompt.json` as plain fields.
+  - The reference image files.
+- **May use:** nothing else.
 - **Returns:**
-  - `angle` and `hypothesis_tested`.
-  - `doubt_answered`, with its R-ID.
-  - `cards_to_state`: IDs, with required partners listed (C2a+C2b, C3+C3f, C4 whole).
-  - `on_image_words`: exact text, or "none".
-  - `scene` (product, hands, setting).
-  - `format` (MISSING: placement, aspect ratio, character limits).
-- **Never lose:** Card IDs with partners; the CW-GLP1 exclusion; IR rules referenced in `scene`.
+  - The image file.
+  - Tool metadata: seed, model and usage.
+- **Never lose:**
+  - The reference images and their roles.
 
-### Step 4: Copy (text pasted)
+**Step 7. Check** (can open files, so it gets pointers)
+
 - **Needs:**
-  - The brief.
-  - The full text of only the cards in `cards_to_state`, with their limits.
-  - Buyer `words` and `doubts`, verbatim.
-  - Voice notes and brand lines.
-  - The block list.
-- **May use:** Brand lines: "Rip. Tip. Enjoy.", "Tastes like a treat, works like a supplement.", "No more gagging on pills, sloshing chalky powders, or cleaning messy counters."
-- **Returns:**
-  - `primary_text`, `headline`, `description`, `cta`.
-  - `on_image_words`: must equal the brief's, character for character.
-  - `footnotes`: C2b, C3f or C4 as needed.
-  - `cards_used`: IDs.
-- **Never lose:** Card text verbatim, including "of surveyed users", "first order", "new customers" and "Renews at $49.99 each 4 weeks."
-- **Don't send:** Look, image rules, other cards, competitors.
+  - The actual image file.
+  - The actual `copy.json`.
+  - The original `brief.json`.
+  - `cards.json`.
+  - The blocked list.
+  - The "show it right" rules.
+  - The results of the code checks.
+- **May use:**
+  - `buyer.json`, to judge fit.
+- **Returns:** `check.json` with one entry per check, each holding:
+  - `{check, pass|fail|not_checked, fault, location, card_id}`
+- **Never lose:**
+  - Any fault.
+  - The rule that a check it cannot do counts as `not_checked`, never `pass`.
+- **MISSING:** whether the checker model can see images. If it cannot, the image checks report `not_checked` and the run stays partial.
 
-### Step 5: Image prompt (text pasted)
+**Step 8. Fix** (pasted)
+
 - **Needs:**
-  - The brief's `scene`.
-  - The copy's `on_image_words`, verbatim.
-  - IR1–IR6.
-  - The look:
-    - Colours: #00582D, #002C17, #FFF7DF, #007E40, #FFCC2E, #581E5A.
-    - Fonts: Work Sans bold for headings, Work Sans medium for body, DM Mono for tags, plus the chunky display font.
-    - Photo style: bright, sunny, a 2-colour gradient, everyday adults; never clinical.
-  - Product photos with roles (MISSING: no photo files provided; the gallery was inferred).
-- **May use:** Pouch and gummy changes for a limited flavour, as long as IR4 holds.
-- **Returns:**
-  - `prompt`.
-  - `must_not` list (side or corner tears, a torn big pouch, characters, partner marks, clinical look).
-  - `exact_text_strings`.
-  - `aspect_ratio` (MISSING).
-  - `reference_images` with roles (MISSING).
-- **Never lose:** On-image words exactly; IR1–IR6.
-- **Don't send:** Buyer quotes, card limits beyond the on-image words, prices unless C4 is on the image as a whole card.
-
-### Step 6: Image made by the image tool
-- **Needs:** The prompt, `must_not`, the exact text strings and reference images (if the tool accepts them).
-- **Returns:**
-  - Image file saved to a path.
-  - Tool settings, seed and raw response.
-- **Never lose:** Exact text strings.
-
-### Step 7: Check (can open files)
-- **Needs:**
-  - Paths to the actual image, the actual copy and the original brief.
-  - The step 2 buyer output.
-  - The full claim card file.
-  - The block list.
-  - IR1–IR6.
-  - The code-check report (below).
-  - Never a summary of any of these.
-- **Code runs before the model check:**
-  - Card text verbatim match.
-  - Required partners present.
-  - Block-list scan, including "GLP-1".
-  - `on_image_words` the same in brief, copy and prompt.
-  - Character counts.
-- **The model judges:**
-  - Image against IR1–IR6.
-  - Rendered on-image text against `exact_text_strings`.
-  - Whether the brief's doubt is answered.
-  - Whether the voice fits.
-  - Whether any implied claim goes beyond its card (e.g. the image suggests weight loss).
-- **Returns** one row per check:
-  - `check_id`
-  - `pass` / `fail`
-  - `part` (field name or image region)
-  - `fault` (named)
-  - `card_or_rule_id`
-  - `depends_on_it` (e.g. a headline change affects `on_image_words` → image)
-- **Overall status:** `checked` / `failed` / `partial`.
-- **Never lose:** Every card and IR checked by ID.
-
-### Step 8: Fix (text pasted)
-- **Needs:**
-  - Only the failed part (the field text, or the prompt for an image fault).
-  - The named fault from step 7.
-  - The full text of the card or rule involved.
-  - The list of parts that depend on it.
+  - Only the failed field or the failed image.
+  - The named fault.
+  - The cards and on-image words that depend on it.
+- **May use:**
   - The brief's angle line.
 - **Returns:**
-  - The replacement for the failed part only, in the same field shape.
-  - `cards_used`.
-  - A note on which dependents must re-run (e.g. a prompt change → step 6 → step 7).
-- **Never lose:** Card text verbatim. It may not soften a card to fix a length fault; it raises a length fault back as a fail instead.
+  - The repaired field in the same shape. An image fault returns a repaired `prompt.json`, which goes back through step 6.
+  - `card_ids_used[]`.
+  - The result always goes back through step 7.
+- **Never lose:**
+  - Untouched fields.
+  - Card wording.
 
-## 4. Bundle order (per step, so the start can be cached)
+**Code checks run between steps** (not done by a model):
 
-1. **Stable start**, byte-identical across runs for that role:
-   - Role rules.
-   - Block list.
-   - Claim cards (all, or the role's fixed subset).
-   - IR1–IR6 (image roles and the checker).
-   - Product facts.
-   - Voice or look for that role.
-2. **Changing part, last:**
-   - Chosen buyer and reviews.
-   - Brief.
-   - Draft or output under check.
-   - Named fault.
+- JSON shape.
+- Every card ID exists.
+- Each used card's Wording and Travels-with text appear word for word.
+- Every number, `%` and `$` in the copy, prompt or image text matches a used card.
+- No blocked string appears.
+- Character counts.
+- OCR on the image to compare its text with `on_image_words`, if OCR is available.
 
-Trim order when over budget:
-1. Duplicates (keep the sourced wording).
-2. Other buyers, the Kids line, the electrolyte pack and merch.
-3. Unused formats.
-4. Setup notes meant for people.
-5. Sample outputs.
+## 3. Bundle order
 
-Reviews are dropped whole, never cut mid-quote. If a bundle is still over budget, raise the budget or split the step, and record that.
+| Order | Stable start (cached) | Changing part (last) |
+|---|---|---|
+| 1 | Output rules → `cards.json` pointer → blocked list → brand file pointers | Reviews file pointer |
+| 2 | Output rules → labels → buyer segment text | Matching reviews |
+| 3 | Output rules → C1 to C12 → blocked list → format facts → "known to work" guesses | `buyer.json` |
+| 4 | Output rules → voice → blocked list | Selected cards → buyer words → brief |
+| 5 | Output rules → look → show-it-right → photo roles | `on_image_words`, `product_shown` |
+| 6 | (none) | Prompt and references |
+| 7 | Check list → cards → blocked list → show-it-right | Brief → copy → image → code results |
+| 8 | Output rules | Failed part → fault → dependent cards |
 
-## 5. Run rules
+What was cut compared with today's "whole file plus 20 reviews to every step":
 
-**Save per step:**
-- Input fingerprint (a hash of the exact bundle).
-- Skill version.
+- The reviews go only to steps 1 and 2.
+- Competitors, merch, electrolytes, the Kids line (for Adults ads) and the "Page facts" setup notes are cut from steps 2 to 8.
+- No claim card is cut.
+
+## 4. Run rules
+
+**Save for each step:**
+
+- Input fingerprint (a hash of the bundle).
+- Skill and prompt version.
 - Model and settings.
 - The exact request.
 - The raw reply.
-- The checked result and its status.
-- Provider-reported usage.
+- The checked result and its status (`checked`, `failed`, `partial` or `not_run`).
+- Provider usage.
 - Cost.
-- Retry count and reasons.
-
-**Resume:**
-- Start from the last step whose result is `checked`.
-- A `failed` or `partial` result stays marked as such. It is never filled with stock images, sample copy or invented output.
-- A fingerprint change upstream invalidates downstream results.
+- Retry count and the reason for each retry.
 
 **Retries:**
-- Only for a named, fixable failure: invalid shape, card mismatch, blocked term, a broken IR, wrong rendered text.
-- Steps 2–5: at most 2 retries each.
-- Step 6: at most 2 regenerations per named fault.
-- Fix loop (8 → 7): at most 2 rounds per ad. After that the ad is reported as `failed`, with the last check report.
-- Every retry is re-checked: code checks plus step 7.
+
+| Failure | Action | Cap |
+|---|---|---|
+| Parse or shape failure | Rerun the same step | 2 |
+| Image tool error (timeout or server error) | Rerun the image tool | 2 |
+| Named check fault | Step 8, then step 7 again | 2 rounds per fault |
+
+- When a cap is hit, the run is marked `failed: <fault>` and stops.
+- "Make it better" with no named fault is never a reason to retry.
 
 **Budget:**
-- Total budget: MISSING.
-- Code keeps a ledger of spent plus reserved (an estimated maximum for each call still running).
-- A call starts only if spent + reserved + its estimate fits the budget.
-- Retries draw on the same ledger.
 
-**Measure:**
-- Usage is not measured today. Plan with estimates computed by code at about 4 characters per token.
-- After each call, record the provider's real usage and report it separately from the estimates.
-- No token figures are given here.
+- `MISSING: budget`.
+- Before each call, code reserves the estimated cost.
+- A new call starts only if spent + reserved + the next estimate is within the budget.
+- Retries draw on the same budget.
+- When a job finishes, its reservation is released and replaced with the actual cost.
 
-## 6. Shortfalls and trade-offs
+**Resume:**
 
-- MISSING: the reviews file, including the text of reviews 11 and 14. CW-GLP1 can't be filled until it exists.
-- MISSING: product photo files and their roles. Without them step 6 has no references, so IR5/IR6 accuracy rests on the prompt alone.
-- MISSING: ad placement, aspect ratio and character limits. Copy length checks can't run.
-- MISSING: total budget.
-- MISSING: who picks the buyer per run.
-- **No discount-percentage card.** The most-copied angle ("61% off") can't run until a percentage card with its conditions is confirmed. The site shows 49% to 61% at once. The price-doubter angle can use C4 instead.
-- **No star-rating card.** If wanted, add one with its source named, e.g. the on-page widget at 4.75 from 109,639.
-- **C1 is not confirmed for Kids.** The Kids renewal price is unclear, so Kids ads need their own cards before use.
-- **No sugar card.** Sugar grams and the Low Sugar vs. Sugar-Free panel were not captured. Gut-focused ads can't make sugar claims or tell gut-sensitive buyers which option to pick, beyond leaving Sugar-Free out.
-- **Policy decision needed:** the site carries the FDA line but the brand's ads don't. Decide whether ads must carry it, and add it as a card if so.
-- **C4 is long for an image.** Putting "$29.99" on the image means the whole card goes on the image. The trade-off is keeping price off the image and in the primary text.
+- A resumed run starts from the last step whose status is `checked` and whose fingerprint matches.
+- Failed or partial work stays failed or partial. It is never filled with stock or made-up output.
+
+**Measuring:**
+
+- Usage has not been measured yet.
+- Code estimates each bundle at characters ÷ 4 tokens. These are labelled `estimate`.
+- Provider usage is recorded separately as `measured`. The two are never mixed in one total.
+
+## 5. Shortfalls and trade-offs
+
+**Missing inputs:**
+
+- `MISSING: review text (20 reviews)`
+- `MISSING: which buyer this run targets`
+- `MISSING: ad placement, size and character limits`
+- `MISSING: product photo files, and whether the image tool accepts them`
+- `MISSING: whether the checker can see images`
+- `MISSING: budget`
+- `MISSING: which discount percentage is approved`. Until one is approved, all percentages stay blocked and C4 carries the offer.
+- `MISSING: Kids pack nutrition facts`. Until they arrive, the cards are for Adults ads only.
+
+**Trade-offs:**
+
+- **Length:** carrying C2 and C4 with their "Travels with" text makes the copy longer. If a placement's character limit is too short for that, the brief should not pick those cards. The text is never cut.
+- **Testimonials:** customer words cannot appear as quoted testimonials, so review lines shape the voice but are not quoted in the ad.
+- **Bundle size:** step 3 gets all 12 cards so it can choose. That costs tokens, but it means no card ever arrives without its limits.
+
+## 6. Score
+
+| Check | Result |
+|---|---|
+| Every claim travels as a whole card, with its limits | Pass |
+| No step depends on a reference it can't open | Pass. Pointers go only to steps 1 and 7; the rest get pasted text. |
+| Checkers and fixers get what they need to judge or repair the real output | Pass. The checker gets the real image and copy plus the brief and cards. The fixer gets the failed part, the fault and the dependent cards. |
+| Counts, budgets and sums are done by code | Pass |
+| Nothing failed or partial is reported as a success | Pass. `not_checked` is never counted as a pass. |
+| Measured usage is reported apart from estimates | Pass |
+
+**6 / 6 × 100 = 100.** No checks missed. The score measures the plan against its own checks, not the MISSING inputs listed above.
 ```

@@ -1,25 +1,31 @@
 # Test run on Sprout, 2026-10-19
 
-Result: **pass**. Ran on claude-opus-5-5 (effort medium), graded by claude-sonnet-5-5. Judge list: 5 of 5 met. Invented facts: 1.
+Result: **fail**. Ran on claude-opus-5-5 (effort medium), graded by claude-sonnet-5-5. Judge list: 5 of 5 met. Invented facts: 3.
 
-The run correctly identifies the problem as the carrying part, ties its single must to quoted lines, and ranks formats with reasons from the script. It also gives a clear video route and says where extra length would come from, so the owner can act on it.
+The analysis is sound and tied to the script, correctly picking the problem as the carrying part and warning that the renewal terms must stay visible. But it deviates from the required output shape and misapplies the scoring rule, so it isn't a clean result.
+
+## Fix
+
+In step 3 and the hand-back shape, require ranking to follow the script's musts only with the format's real score plus a stated tie-break, and require the exact shape headings (Part that carries it, Why, Properties, Best formats, Blend, Make it with, Length). Also forbid listing a surface (Mixed) with a 100 score when it adds nothing.
 
 ## Judge list
 
 - Met: Every "must" quotes a line from your script.
-  Only must: controlled order, quoting "a scoop, water and a shaker", "Then the shaker needs washing." and "One tear. That's the routine."
+  Order and Time musts quote "A Sprout pack takes one tear." and "Greens powder takes a scoop, water and a shaker."
 - Met: The carrying part comes from what the script spends its lines on, not the product page.
-  "Lines 1, 2, 3 and 5 all work the routine"; line 4 noted as support only.
+  "The problem... Lines 1–2 spend the most time on the powder routine"
 - Met: Each ranked format has a reason tied to the script, not "it's popular".
-  Carousel: "scoop, water, shaker, wash, tear, inside"; designed image "loses the order the punchline depends on".
+  Animated: "Holds order and time... pack opening onto line 4"; carousel tied to three-step contrast.
 - Met: The length check says where extra length would come from, not just "make it longer".
-  "More problem: clumps... Objections: taste, sugar... Proof: a week of tears vs. a week of washing."
+  "the problem: more of the routine, such as clumps... an objection... proof"
 - Met: It doesn't treat an AI-generated presenter as a real customer.
-  Says no face is needed and no presenter is booked; no AI presenter is mentioned.
+  "An AI presenter could act out the scoop-and-wash hassle, but would only be acting it, never vouching."
 
 ## Invented
 
-- claim: More problem: clumps, the shaker left in the bag, skipping days. (Specific problem details not in the files, but offered as suggestions for a longer script, not as Sprout facts.)
+- number: The opening and problem (lines 1–2) take about 6 s, the tear about 2 s, line 4 on screen about 5 s, line 5 about 2 s, and the offer card about 4–5 s. (Timing breakdown is an estimate presented as fact; plausible planning guess, not from inputs.)
+- other: clumps, a rushed morning, or the shaker left in a bag (Suggested ideas for extra length; marked as examples, acceptable.)
+- other: Card 1 is scoop + water + shaker, card 2 is washing, card 3 is one tear, card 4 is the facts and offer. (Suggestion, not a fact; fine.)
 
 ## What went in
 
@@ -40,42 +46,38 @@ Limits: no presenter booked.
 ## What came out
 
 ```text
-Carrying part: The problem (ending a daily hassle the buyer knows well). Lines 1, 2, 3 and 5 all work the routine: "Greens powder takes a scoop, water and a shaker." / "Then the shaker needs washing." / "One tear. That's the routine." Line 4 supports it with facts but doesn't carry it.
+Carrying part: The problem (ending a daily hassle the buyer already knows). Lines 1–2 spend the most time on the powder routine, "Greens powder takes a scoop, water and a shaker." / "Then the shaker needs washing.", and lines 3 and 5 pay it off: "A Sprout pack takes one tear." / "One tear. That's the routine."
 
 Needs:
-- A believed face: **no**. The script is narrated and nobody vouches. "A Sprout pack takes one tear." is a claim that can be shown, not testified to. No presenter is booked, and none is needed.
-- Showing the unseen: **helps**. "Inside: sixty-plus ingredients, 21 vitamins and minerals, 6 grams of fiber." is the inside of the pack, but it lands as numbers on screen. It doesn't need a cutaway.
-- Controlled order: **must**. The before steps ("a scoop, water and a shaker" → "Then the shaker needs washing.") have to come before the payoff ("A Sprout pack takes one tear."). The callback "One tear. That's the routine." only works because it comes last.
-- Sound: **helps**. "One tear. That's the routine." is written with spoken rhythm, but it survives muted if every line is also on screen.
-- Time: **helps**. The hassle in "a scoop, water and a shaker" and "the shaker needs washing" needs a few seconds per step to feel tedious. That is seconds, not minutes.
-- Sounds like a person: **no**. "Greens powder takes a scoop, water and a shaker." is plain narration. It doesn't need to pass as a person talking.
+- A believed face: no. Nothing is vouched for or lived on camera. It is a narrated comparison: "Greens powder takes a scoop, water and a shaker."
+- Showing the unseen: helps. "Inside: sixty-plus ingredients, 21 vitamins and minerals, 6 grams of fiber" gains from opening the pack visually, but the argument stands without it.
+- Controlled order: must. "A Sprout pack takes one tear." only works after "Then the shaker needs washing." The contrast is a set-up and a payoff.
+- Sound: helps. "One tear. That's the routine." is written with spoken rhythm, but it survives muted if every line is on screen.
+- Time: must. "Greens powder takes a scoop, water and a shaker." / "Then the shaker needs washing." is a sequence of steps. The hassle has to be seen taking seconds before "one tear" lands as short.
+- Sounds like a person: no. "Greens powder takes a scoop, water and a shaker." is a brand-voice statement, not a person speaking.
 
-Surfaces:
-1. **Animated or handmade video.** This is the best fit. It holds the before-then-after order and keeps attention without a face. It can also stage the shaker chores playfully, and line 4 fits as on-screen counts.
-2. **Carousel.** This is workable. It gives partial order with one picture per card: scoop, water, shaker, wash, tear, inside. Sound is lost, so the lines go on the cards.
-3. **Designed image ad.** This is weak. It can only show one split (shaker pile vs. one torn pack) and loses the order the punchline depends on.
+Surfaces (2 musts: controlled order, time. Video surfaces are read as holding time; stills are not):
+1. Animated, drawn or handmade: 2 of 2 = 100. Holds order and time. Also holds the "helps" of showing the unseen (the pack opening onto line 4) and attention. Narration supplies the sound. It needs no presenter, which fits "no presenter booked."
+2. One person on camera: 2 of 2 = 100. Holds order and time, plus the "help" of sound. It ranks below animated on helps (it can't show the unseen) and on limits (no presenter booked). An AI presenter could act out the scoop-and-wash hassle, but would only be acting it, never vouching.
+3. Mixed (person, then animation, then person): 2 of 2 = 100. It adds nothing the script needs. It costs two kinds of footage and still needs a presenter.
+4. Carousel: 1 of 2 = 50. Partial order is enough for the three-step contrast (scoop and shake / wash / tear). It can't hold time.
+5. Long-text image ad styled as a post: 0 of 2 = 0. It can't hold order or time.
+6. Designed image ad: 0 of 2 = 0. It can't hold order or time.
 
-Ruled out:
-- **One person on camera:** no face is needed and no presenter is booked.
-- **Long-text post-style image:** no "sounds like a person" need.
-
-No blend is needed, because one part carries the script.
+No blend is needed, because one part carries the whole script.
 
 Make it with:
-- **Video (order must, gentle or playful problem):** `paper-craft-video-ad-script-writer`, then `paper-craft-video-clip-prompt-writer`.
-  - Paper props suit the scoop, shaker and sink steps, and the single tear can be a literal paper tear.
-  - Feed this script in as the input.
-- **Video, alternative (order must, told in panels):** `motion-comic-video-ad-script-writer`, then `motion-comic-video-clip-prompt-writer`.
-- **Still in the same look:** `paper-craft-image-ad-maker`.
-- **Carousel (partial order for the before steps):** `card-by-card-carousel-ad-writer`.
+- Video, ranked #1 surface, answering controlled order and time: `paper-craft-video-ad-script-writer`, then `paper-craft-video-clip-prompt-writer`. This is the problem told playfully: a cut-paper scoop, water, shaker and sink, then one clean tear. The buyer already knows this hassle, so "told gently or playfully" fits better than the "buyer doesn't see it yet" styles.
+- Alternative in the same surface, also for order and time: `clay-town-video-ad-script-writer`, then `clay-town-video-clip-prompt-writer`.
+- Fallback still, answering order only (scores 50): `card-by-card-carousel-ad-writer`. Card 1 is scoop + water + shaker, card 2 is washing, card 3 is one tear, card 4 is the facts and offer.
+- Offer card: show "$29.99 first order with text sign-up. Renews at $49.99 every 4 weeks." in full and readable. The renewal terms must not be cut in any version.
 
-Length:
-- **Fits.** The best length is 15–20 s, and this script is at 20 s.
-  - The carrying part is a problem plus a visible demo (the tear). The demo serves as opening and proof at once, so it lands in this length. Nothing here needs explaining over time.
-- **The offer:** "$29.99 first order with text sign-up. Renews at $49.99 every 4 weeks." stays the same at any length, and the renewal terms should stay legible on screen.
-- **If a longer cut is wanted (30–45 s),** write it as its own script rather than stretching this one. The extra time would come from:
-  - More problem: clumps, the shaker left in the bag, skipping days.
-  - Objections: taste, sugar, and whether a gummy matches the powder (line 4 starts to answer this).
-  - Proof: a week of tears vs. a week of washing.
-  - Running the problem → promise → proof cycle twice.
+Length: Fits at 20 s, and 20 s is the best length here.
+- The opening and problem (lines 1–2) take about 6 s, the tear about 2 s, line 4 on screen about 5 s, line 5 about 2 s, and the offer card about 4–5 s.
+- 15 s works only if the tear is played as the demo, so opening and proof happen at once, and line 4 is trimmed.
+- At 30 s or more, extra length would come from:
+  - the problem: more of the routine, such as clumps, a rushed morning, or the shaker left in a bag
+  - an objection, such as taste or sugar per serving, which needs real product facts the script doesn't give
+  - proof
+- A longer version should be written as its own script, not stretched from this one.
 ```

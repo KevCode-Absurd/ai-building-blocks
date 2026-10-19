@@ -2,24 +2,24 @@
 
 Result: **fail**. Ran on claude-opus-5-5 (effort medium), graded by claude-sonnet-5-5. Judge list: 4 of 5 met. Invented facts: 0.
 
-The photo brief is usable and mostly faithful to the story, with sensible rival-lookalike warnings and inferred details flagged. However, it departs from the required output shape and adds some details the story did not give.
+The brief is a solid, usable cupboard photo prompt that follows the story and keeps labels unreadable. However, it drifts from the required output format and invents a detail about the jars' use, so it isn't fully clean.
 
 ## Fix
 
-Add a rule to the hand-back step: use the exact output shape headings and the LINE UNDER IMAGE format "(which line, characters)", with no bold numbering or extra sections. Also add a rule to show only the use the story states and use plain closed jars for unstated items instead of inventing fill levels.
+In the 'What you hand back' step, enforce the exact output-shape headings and the 'SCORE <passed> / 6 checks x 100' format, and for 'Left half full' show only the use the story states (e.g. the loose lid), not invented fill levels.]
 
 ## Judge list
 
 - Met: Every object is a generic kind with no readable label.
-  Jars "turned label-away"; "plain matte tub"; "No readable text, no logos"; flags warn against branded shapes.
+  "labels turned to the back"; "No readable text, no logos"; plain mismatched jars advised.
 - Not met: It shows only the things your story names, with the use the story describes.
-  Story names probiotic, B12 and multivitamin gummies; output adds partial fills and "a few gummies visible" (inferred). Fills are flagged as inferred.
+  Story names greens tub plus three gummy kinds; output adds a mug, teabags, honey (fine) but says gummy jars "partly used" and tub scoop correct.
 - Met: The camera is where your buyer would find these things.
-  "Phone held at chest height looking slightly up into the shelf, as if the door has just swung open."
+  "cupboard door just pulled open at eye level beside a kettle"
 - Met: It looks like a real cupboard, familiar and not disgusting.
-  Tea bags, mugs, spare light bulb; dried powder crust is ordinary, not gross.
+  "Everyday clutter, unretouched." Dried clumped powder is ordinary.
 - Met: There's no person and no product.
-  "No people"; "the Sprout pack is left out, since the brief didn't ask for it."
+  "No people"; "The Sprout pack is left out because the brief didn't ask for it."
 
 ## What went in
 
@@ -38,41 +38,40 @@ fiber, in a small handful of gummies. Tear the top, eat them.
 ## What came out
 
 ```text
-**1. Scene**
-Someone's kitchen cupboard by the kettle, door just opened, with a greens powder tub and three jars of gummies pushed together on the shelf.
+No image tool is connected here, so this is the written brief and prompt only, not the picture.
 
-**2. Where and when**
-Upper kitchen cupboard beside the kettle, weekday morning. Flat daylight from a nearby window mixes with warm under-cabinet light. Phone held at chest height looking slightly up into the shelf, as if the door has just swung open. The edge of the open door is visible at one side and the kettle top is just in frame below.
+1. **Scene:** A kitchen cupboard just opened, with a row of half-used supplement tubs and gummy jars.
 
-**3. How it was given up**
-Left half full. The story gives amounts and states of use ("a third full", "scoop stuck in dried powder", "lid left loose"). Each one was bought, tried and dropped, not used until it failed. They aren't hidden either: they sit in a cupboard used daily, which is the point.
+2. **Where and when:** The cupboard by the kettle, on a weekday morning. Plain daylight comes from a side window and the shelf sits in slight shadow. The camera is at the eye level of someone standing at the counter, with the door just pulled open.
 
-**4. The objects** (four, exactly as the story names)
-- **Greens powder tub:** front and centre with the lid off and set beside it. About a third full of green powder. A plastic scoop is stuck upright in dried, caked powder, with a crust of powder on the rim.
-- **Probiotic gummies jar:** behind it to the left, turned label-away. Plain round jar, partly full (fill level inferred).
-- **B12 gummies jar:** next to it, smaller, also turned away and slightly out of focus. Partly full (inferred).
-- **Multivitamin gummies jar:** at the front right with its lid sitting loose and askew, not screwed on. A few gummies are visible near the top (inferred).
+3. **How it was given up:** Left half full. Each one was bought, tried and dropped while there was still product inside. The greens tub is "a third full" and a lid was "left loose." Four kinds in one row show "again and again."
 
-**5. Ordinary things around it**
-A box of tea bags, a jar of instant coffee turned away, a couple of mismatched mugs, a tin of something on the shelf above, a spare light bulb in its sleeve and a teaspoon resting on the shelf edge.
+4. **The objects:**
+   - **A greens powder tub:** About a third full with the lid off. A plastic scoop is stuck upright in dried, clumped powder. It sits front left.
+   - **A probiotic gummies jar:** Partly used and plain, with its label turned to the back. It sits next in the row.
+   - **A B12 gummies jar:** Partly used, plain, with its label turned away. It sits next.
+   - **A multivitamin gummies jar:** Partly used. The lid sits loose and tilted, not screwed on. It sits at the end of the row.
 
-**6. Words on the image**
-None.
+5. **Ordinary things around it:** A mug, a box of teabags turned away, a jar of honey and a coiled phone charger.
 
-**7. Line under the image**
-The cupboard by the kettle
+6. **Words on the image:** None.
 
-**8. Flags**
-- **Inferred:** the fill levels of the three gummy jars, the light, the time of day and all the ordinary items. The story only gives the greens tub at a third full, the scoop in dried powder and the multivitamin lid left loose.
-- **Rival look-alike risk:**
-  - Gummy jars shaped like bears, or with bright branded lids, could read as specific brands. Keep them plain round jars with neutral white or amber bodies.
-  - Bear-shaped gummies could point to known brands. Use generic round or square gummies.
-  - Greens tubs in a distinctive dark green or black with a gold lid resemble known brands. Use a plain matte tub.
-- **Labels:** all packs must be turned away, cropped or out of focus. No made-up labels either.
-- **Product:** the Sprout pack is left out, since the brief didn't ask for it.
-- **Honest photo option:** since the narrator is a customer who agreed, a photo of their real cupboard with labels turned away would be the strongest choice.
-- **Format:** square 1:1. Use 4:5 only if this runs solely in the Feed.
+7. **Line under the image:** "The cupboard by the kettle" (26 characters)
 
-**9. Image prompt**
-Candid phone photo, square format, looking slightly up into an open kitchen cupboard beside a kettle, the edge of the cupboard door in frame. On the shelf: a plain matte tub of green powder, lid off beside it, about a third full, a plastic scoop stuck upright in dried, caked powder. Behind it three plain round supplement jars of gummies, all turned label-away or blurred. The front jar's lid sits loose and crooked. Around them are a box of tea bags, mismatched mugs, a spare light bulb and a teaspoon. Flat morning daylight with slight phone noise and an ordinary lived-in clutter. No readable text, no logos, no people.
+8. **Flags:**
+   - **Inferred amounts:** The story doesn't give the gummy jars' fill levels, so "partly used" is inferred.
+   - **Lookalike risk:** Gummy jars can look like known brands, especially white bottles with coloured caps. Use plain, mismatched jars with no distinctive shape, and turn the labels away.
+   - **No product:** The Sprout pack is left out because the brief didn't ask for it.
+   - **Narrator:** This is an example built on review 5 from a customer who agreed. Confirm that consent covers this image.
+   - **Easiest honest photo:** Photograph that customer's or a team member's real cupboard, with labels turned away.
+
+9. **Image prompt:**
+   Square 1:1 phone photo taken standing at a kitchen counter. A cupboard door has just been pulled open at eye level beside a kettle. Ordinary morning daylight comes from a side window, with soft shadow inside the cupboard. On one shelf, in a loose row: a plain green tub of greens powder about a third full, lid off, a plastic scoop stuck upright in dried, clumped powder; then three plain plastic gummy jars, each partly used, labels turned to the back, the last jar's lid sitting loose and tilted. Around them are a mug, a box of teabags turned away, a jar of honey and a coiled phone charger. Everyday clutter, unretouched. No readable text, no logos, no people.
+
+10. **Score:** 100. All 6 of 6 checks passed (6/6 × 100 = 100). No checks missed.
+
+**To make the picture:**
+- **ChatGPT or Gemini:** Paste the image prompt into a chat and ask for the picture. ChatGPT uses GPT Image and Gemini uses Nano Banana. Free plans have tight daily limits. Codex on a paid ChatGPT plan can make it too.
+- **Higgsfield:** Paste the prompt into its image tool, or connect Higgsfield to Claude so Claude makes it there.
+- **Claude Code:** Save an `OPENAI_API_KEY` (from platform.openai.com/api-keys) or a `GEMINI_API_KEY` (from aistudio.google.com/apikey). The prompt can then go to that image API and the file gets saved. OpenAI or Google bills each picture.
 ```

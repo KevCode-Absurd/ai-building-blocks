@@ -2,20 +2,20 @@
 
 Result: **pass**. Ran on claude-opus-5-5 (effort medium), graded by claude-fable-5-1. Judge list: 5 of 5 met. Invented facts: 0.
 
-The run correctly refused to build because shot 6 shows the $29.99 price without the renewal terms, the exit timing breaks the motion rules and the shot table is missing columns, and it listed every gap as MISSING without inventing anything. Three of its six objections are stricter than the skill requires (the 2.7x ratio is exactly how the skill says to size a bar, the brand's own science page is the study source, and 'prebiotic' is on Sprout's label), so the owner can push back on those while fixing the real ones.
+The run correctly refused to build from a script that puts the $29.99 price in a different shot from the $49.99 renewal and lacks narration, moves and build notes, and it listed every problem with no invented facts. The owner gets a precise send-back list and clear MISSING lines, though the 6g versus 6 g nitpick is more pedantic than useful.
 
 ## Judge list
 
 - Met: It stopped for your OK after the product card, the theme and the storyboard.
-  Not reached: "Script check (stage 0): FAILED, build stopped". Stage 0 stop is mandated by the skill, no approval was skipped.
+  "Script check (stage 0): FAILED, build stopped" — it halted at stage 0 as the skill requires, advancing past no approval gate.
 - Met: No word, number, chart or product is asked of a video model.
-  Nothing was built or prompted; input said "Backgrounds: none" and the run requested no generation.
+  "can't render frames or clips. That doesn't block a code build with no backgrounds." No video-model prompts written.
 - Met: Every number on screen matches the fact sheet, with its source in the text table.
-  No text table yet; stage 0 checked numbers: "The $29.99 and $49.99 figures and their terms are on the fact sheet."
+  No text built; it checked each number against the fact sheet and flagged "'Prebiotic' isn't on it" and the 6g/6 g mismatch.
 - Met: Bars are drawn from their numbers, to scale from one zero line.
-  Not reached; run asked for "placebo figure, both sourced, so the shot 5 bars can be drawn from numbers on one zero line."
+  No bars built; it flagged "the bar measure is undefined" and asked for both values so bars can be drawn from a shared zero line.
 - Met: Text holds still for its full hold time and sits inside the safe area, and the product cutout looks the same in every shot.
-  Not reached; run did check margins: "The 96 px side margins (8.9%) are wider than the 6% minimum."
+  Nothing built yet; it checked "96 px (8.9%) sit inside the 6% safe edge" and asked for the cutout file.
 
 ## What went in
 
@@ -44,35 +44,32 @@ Cutout attached (front). Route: code. Backgrounds: none.
 ## What came out
 
 ```text
+No video or image tool is connected here, so I'll write the build plan and prompts but can't render frames or clips. That doesn't block a code build with no backgrounds.
+
 ## 1. Script check (stage 0): FAILED, build stopped
 
-The script goes back to the script skill. Nothing below has been fixed here.
+The script must go back to the motion graphics script skill before stage 1 can start. I haven't fixed anything here.
 
-| # | Shot | Check | Problem |
-|---|---|---|---|
-| 1 | 4 | Every on-screen number and claim is on the fact sheet | The on-screen text says "6 g prebiotic fiber." The fact sheet says "6g fiber = label." The word "prebiotic" has no source. |
-| 2 | 5 | Every chart is to scale from zero, with both figures sourced | The fact sheet gives only a ratio, "2.7x placebo." It does not say what was measured or give a stated figure for the placebo bar. A two-bar comparison needs both figures on the fact sheet with sources. |
-| 3 | 5 | Every fact has a source | "2025 study, 12 weeks, 120 adults" describes the study but does not identify it: no authors, title, journal or link. The claim can't be traced. |
-| 4 | 6 | Full price terms sit wherever the price does | Shot 6 shows "$29.99 first order" without the renewal price or "cancel anytime." Those only appear in shot 7. The store rule requires the renewal price in the same shot as the first-order price. |
-| 5 | All | Each shot has one fact and one moving thing | The shot table has no narration, picture-and-move or build-note columns. This check can't be run, and narration can't be timed to the holds. |
-| 6 | All | Look card motion rules | "Drop out with ease in, 0.4 s" is longer than the 0.2 to 0.3 s allowed for exits. This needs confirming or correcting before the look card is locked in stage 3. |
+**Failures:**
 
-These checks passed:
-- Shots 2 and 3 match the label.
-- The 96 px side margins (8.9%) are wider than the 6% minimum.
-- The $29.99 and $49.99 figures and their terms are on the fact sheet.
+1. **Shot 6: price shown without its full terms.** "$29.99 first order" appears without "renews at $49.99 every 4 weeks, cancel anytime". The full price terms must sit wherever the price does, and the store rule puts the renewal price in the same shot as the first-order price. Shot 6 needs the renewal line, or shots 6 and 7 need to merge.
+2. **Shot 4: a word on screen isn't on the fact sheet.** The fact sheet says "6g fiber = label". "Prebiotic" isn't on it. The script needs to either add "prebiotic" to the fact sheet with the label as its source or drop the word. The number also needs one written form ("6g" on the sheet, "6 g" on screen) so the text layer matches the label exactly.
+3. **The shot table is incomplete.** Every shot is missing four columns: narration, picture and move, on-screen text split into lines, and build note. Without them I can't confirm that each shot has one fact and one moving thing, that narration ends inside its shot, or what the shot 1 picture is.
+4. **Shot 5: the bar measure is undefined.** "Vitamin C 2.7x placebo" doesn't say what was measured (for example, the rise in blood level). The script must name the measure so the chart labels and both bar values can be drawn to scale from a shared zero line. The study source also needs a name or citation beyond "2025 study, 12 weeks, 120 adults".
+5. **The timing doesn't add up.** The hold times total 17.2 s against a 20 s runtime. The script should say whether the remaining 2.8 s is transitions or an end card. The end card with the full offer isn't specified.
+6. **Exit timing conflicts with the motion rules.** The look card sets exits at 0.4 s with ease in, but the build rule is 0.2 to 0.3 s. The script should confirm 0.3 s exits or accept the conflict.
 
-The canvas will be set and the product card written (stage 1) once a corrected script passes this check.
+**Passed:**
+- 60+ ingredients and 21 vitamins & minerals are on the fact sheet, sourced to the label.
+- The colour jobs give one highlight per shot.
+- The side margins of 96 px (8.9%) sit inside the 6% safe edge.
 
 ## MISSING
 
-- MISSING: a source for "prebiotic" on shot 4, or on-screen text that matches the label line "6g fiber."
-- MISSING: the measured Vitamin C outcome and the placebo figure, both sourced, so the shot 5 bars can be drawn from numbers on one zero line.
-- MISSING: an identifiable citation for the 2025 study (authors or title, and where it was published).
-- MISSING: the renewal price and "cancel anytime" in shot 6, alongside "$29.99 first order."
-- MISSING: the narration, picture-and-move and build-note columns for shots 1 to 7.
-- MISSING: confirmation of the exit duration (0.2 to 0.3 s ease in).
-- MISSING: Work Sans and DM Mono font files. If they aren't supplied, the fallback will be the Google Fonts releases of Work Sans and DM Mono, and this will be flagged in the build.
-- MISSING: the full live offer terms text for the end card.
-- MISSING (optional): the logo as a vector file.
+- `MISSING: product cutout file`. No image came through with the message, so please attach the pouch front with the background removed.
+- `MISSING: font files (Work Sans Bold, Work Sans Medium, DM Mono)`. The fallback is the Google Fonts releases of the same families, flagged until the brand files are supplied.
+- `MISSING: logo as a vector file` (optional, for the end card).
+- `MISSING: full shot table columns (narration, picture and move, build note)`. This goes back to the script skill.
+
+Once the revised script and the cutout file arrive, I'll set the canvas (1080 × 1920, 30 fps, safe area) and write the product card for approval 1.
 ```

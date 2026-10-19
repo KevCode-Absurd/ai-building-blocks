@@ -1,21 +1,30 @@
 # Test run on Sprout, 2026-10-19
 
-Result: **pass**. Ran on claude-opus-5-5 (effort medium), graded by claude-fable-5-1. Judge list: 5 of 5 met. Invented facts: 0.
+Result: **fail**. Ran on claude-opus-5-5 (effort medium), graded by claude-sonnet-5-5. Judge list: 5 of 5 met. Invented facts: 2.
 
-A usable, disciplined script: one claim, honest drawings, buyer words kept close to source, the offer's renewal and text-sign-up terms carried into fine print, and clear MISSING lines for photos and typeface. One wording risk the owner should fix in editing: panels 5 and 6 say "pouch" and "the torn pouch" where the brand rule allows only the small daily pack to be shown torn, never the big pouch.
+The script is a strong, usable motion comic with a clear story, exact product details and honest MISSING/inferred notes. But it departs from the required output shape, and a couple of lines break the skill's own limits.
+
+## Fix
+
+Add to the handback step a rule to output the plain-text shape exactly (FIT/CLAIM/HERO/PALETTE labels, pipe table, NOTES, CAST NOTE, SCORE and Missed lines) with no markdown headings, and to run the word-count check on every caption and narration line before scoring.
 
 ## Judge list
 
-- Met: Cover the captions: you can still tell what was wrong and what changed
-  Drawings go from "scooping powder... into a shaker" and "crusted grey-green ring" to "The counter is clear: no tub, no shaker."
-- Met: Only one claim appears anywhere, including cutaway labels
-  No cutaway; narration stays on "No water. No mixing. No shaker."; ingredient claim explicitly "belongs in a second ad."
-- Met: Every panel has a named cut and the reveal panel is the longest
-  All seven rows name a transition; panel 5 (reveal) is 6 s, every other panel 4 s.
-- Met: No drawn person says the product worked, and none is an expert or child
-  Only balloon is about the old powder: "I've been choking on this for years." Hero is one adult office worker.
-- Met: Ends on a photo panel of the real product, not a drawing
-  Panel 7: "The real Sprout pack photo... set in the same panel border in editing."
+- Met: Cover the captions. Can you still tell what was wrong and what changed?
+  Drawings show shaker clumps, crusty sink scrub, tub shoved in cupboard, then pouch and gummies tipped into palm.
+- Met: Only one claim appears anywhere, including the cutaway labels.
+  Claim is no water/mixing/shaker; 60+ ingredients explicitly left out. No cutaway used.
+- Met: Every panel has a named cut, and the reveal panel is the longest.
+  Panel 6 'moment to moment', 6 seconds, longest; all panels name a transition.
+- Met: No drawn person says the product worked for them, and none is an expert or a child.
+  Single adult office worker hero, no speech balloons, no drawn customer testimonial.
+- Met: The ad ends on a photo panel of your real product, not a drawing of it.
+  Panel 8: 'The real Sprout pouch photo in the same border, set in editing.'
+
+## Invented
+
+- other: 6:45. Greens before work. (Invented time of day in a caption; harmless story detail but not from the inputs.)
+- other: Gummies drawn in Sprout green (inferred) (Brand file says deep-green bears; flagged inferred and consistent, so acceptable.)
 
 ## What went in
 
@@ -41,73 +50,81 @@ Video, 30 seconds.
 ```text
 ## 1. Fit and claim
 
-**Fit:** Yes. This is a short problem-and-fix story about a chore routine, and the drawings can carry it. One caution: the offer has long terms (text sign-up, renewal price, first-order-only guarantee). A comic can't carry those, so the photo panel shows one short headline and the full terms are set as fine print in editing. If the terms need more than fine print, give them their own end card outside the comic.
+**Fit:** This works as a comic. It is a short problem-and-fix story about a routine, and the story can be drawn.
 
-**Claim:** Sprout greens come in one daily pack: rip, tip, enjoy, with no water, no mixing and no shaker.
-**Source:** brand facts, "how the product is used" (one daily pack, torn straight across the top, gummies tipped into a palm; no water, no mixing, no shaker) and the brand line "Rip. Tip. Enjoy."
+The offer does not fit the photo panel. The terms are long: text sign-up, a renewal price, and a first-order-only guarantee. The photo panel cannot show "$29.99" without the renewal terms next to it. The full terms are set there in small type (below). Repeat them in the ad copy and on the landing page.
+
+**Claim:** Sprout greens need no water, no mixing and no shaker. Rip the pack and tip the gummies into your palm.
+**Source:** brand usage facts: "One daily pack, torn straight across the top, gummies tipped into a palm. No water, no mixing, no shaker."
 
 ## 2. Hero line and palette
 
-**Hero line (reuse unchanged):** One adult office worker, simple round face, short round bob, blue-grey shirt, cream trousers, plain black lanyard badge with no writing.
+**Hero line (reuse unchanged):** One adult office worker. Short round black bob, round black glasses, grey-blue sweater, black trousers. Simple face: dot eyes and a single-line mouth.
 
-**Palette (reuse unchanged):** Black line and flat colour only. The four colours are:
-- deep glossy green, used only for the Sprout pouch at full strength
-- bright yellow, the pouch's band where the wordmark sits, with no letters
-- dusty blue-grey for rooms and shadows
-- pale cream for light and skin
+**Palette (reuse unchanged):** Black, plus deep Sprout green, warm yellow, grey-blue and cream.
+- Deep green and yellow appear only on the Sprout pouch and gummies.
+- The old greens powder is drawn as grey-blue sludge, so Sprout green stays the most saturated thing on screen.
+- Clock faces have no numerals.
 
-The old powder drink is a greyed, washed-out tint of the green so the pouch stays the most saturated thing on screen.
+**Drawn product (inferred, no photo supplied):** A small single-serve pouch standing upright in glossy deep green. A blank yellow band sits where the wordmark is, with no letters. The tear line runs straight across the top.
 
 ## 3. Panel list
 
 | Panel | Movement | Transition in | What's drawn | Motion | Caption | Narration | Seconds |
 |---|---|---|---|---|---|---|---|
-| 1 | Set | scene to scene (open on the place and hour) | Hero at a kitchen counter, early morning, scooping powder from a plain unbranded tub into a shaker. Large thing: a looming wall clock filling the top of the frame. | Flat layers drift apart: the clock layer pushes toward camera | 6:58 a.m. Again. | Every morning, the same green sludge. | 4 |
-| 2 | Grow | action to action | Same hero, same counter, shaking the shaker hard. Grey-green clumps cling to the lid. Large thing: a storm cloud over the hero's head. One thought balloon. | One part moving: the shaker shakes | (none) | (silent) | 4 |
-| 3 | Grow | scene to scene ("that evening") | Hero at the kitchen sink, evening, holding the shaker with a crusted grey-green ring inside. Large thing: the dirty shaker in the foreground. One sweat drop on the hero's brow. | One part moving: a drip falls from the tap | That evening. | Then the shaker waits in the sink. | 4 |
-| 4 | Turn | subject to subject | Same sink scene. The eye moves from the hero to the counter beside the sink. Large thing: the Sprout pouch standing upright, glossy deep green with a blank yellow band and no letters, thin black outline. Hero small at the edge, looking at it. | Flat layers drift apart: the pouch layer slides slightly forward | Or skip the shaker. | Sprout. Daily greens in one gummy pack. | 4 |
-| 5 (reveal) | Turn | moment to moment | Tall panel. Top: the hero's hands tear the pack straight across the top. Middle: the pack tips. Bottom: gummies land in an open palm. Large thing: the pouch and the tear line. Gummies are drawn from the product photo. | Pan down the tall panel, from tear to palm | Rip. Tip. Enjoy. | No water. No mixing. No shaker. | 6 |
-| 6 | Land | scene to scene (next morning) | Same kitchen, 6:58 a.m. The counter is clear: no tub, no shaker. The hero stands by the window with gummies in a palm and the torn pouch on the counter. Large thing: the clear counter. The clock is now small and calm in the corner. | Flat layers drift apart: the window light layer drifts across | 6:58 a.m. Done. | Not having to clean a shaker bottle. | 4 |
-| 7 (photo) | Land | subject to subject (from the drawn pouch to the real one) | The real Sprout pack photo, pack front and pack out with gummies, set in the same panel border in editing. Offer text is set in editing. | Still; offer text fades in | First order $29.99. | (none) | 4 |
+| 1 | Set | scene to scene (opening: kitchen, early morning, dark window) | Hero at the kitchen counter, heavy-lidded. Large thing: a huge tub of powder beside a shaker bottle. | Flat layers drifting apart: counter in front, dark window behind | 6:45. Greens before work. | Every morning, the same green ritual. | 3 |
+| 2 | Set | action to action | Hero shaking the shaker hard. Grey-blue clumps cling inside. One sweat drop. | One part moving: the shaker shakes | Choking on it for years. | Scoop, pour, shake… and it still clumps. | 4 |
+| 3 | Grow | action to action | Hero at the sink scrubbing crusted residue from the shaker. A wall clock with no numerals looms large behind. | One part moving: the sponge scrubs | Late again. Shaker still crusty. | Then the shaker sits in the sink, crusting. | 4 |
+| 4 | Grow | scene to scene ("that evening") | Tall panel: storm cloud over the hero's head at the top. Below, the hero's hand shoves the tub to the back of a low cupboard. | Pan down the tall panel, from the cloud to the tub | That evening. Quit again. | So the tub ends up at the back. | 3 |
+| 5 | Turn | scene to scene ("next morning") | Same counter where the tub stood. Now a single deep-green pouch stands upright, the largest and brightest thing. Hero behind it, small lightbulb overhead. | Flat layers drifting apart: pouch in front, hero behind | Next morning. No tub. | What if greens didn't need a shaker? | 3 |
+| 6 | Turn (reveal) | moment to moment | Close on the hero's hands. The pouch is torn straight across the top and gummies tip into an open palm. Gummies drawn in Sprout green (inferred). | One part moving: gummies slide into the palm, slowed | Rip. Tip. Enjoy. | Rip the pack. Tip them out. Done. | 6 |
+| 7 | Land | action to action | Same kitchen, morning light. Hero chewing and heading out, coat on. The sink is empty, the clock small and calm, the torn pouch on the counter. | One part moving: the front door swings open | Not cleaning a shaker bottle. | No water. No mixing. No shaker to scrub. | 4 |
+| 8 | Photo panel | subject to subject (drawn pouch to real pouch) | The real Sprout pouch photo in the same border, set in editing. Text in editing: "Rip. Tip. Enjoy." Small type below: "$29.99 first order with text sign-up. Renews at $49.99 every 4 weeks. 30-day money-back, first order only." | Slight push-in on the photo | n/a (offer text only) | none | 3 |
 
-**Panel 2 thought balloon** (the ad's only balloon, set in editing): "I've been choking on this for years."
-
-**Panel 7 fine print** (set in editing, exact current terms): "$29.99 first order with text sign-up. Renews at $49.99 every 4 weeks. 30-day money-back guarantee, first order only."
-
-**Total running time:** 30 seconds.
+**Total:** 30 seconds.
 
 ## 4. Notes
 
 **Buyer words used:**
-- "Not having to clean a shaker bottle" is used as panel 6 narration, close to word for word.
-- "I've been choking on [a big-name greens powder] for the last few years" is adapted for the panel 2 thought balloon (inferred adaptation). The competitor is not named, and its tub is drawn plain and unbranded.
+- "Choking on it for years." This trims "I've been choking on [big-name greens powder] for the last few years." The competitor name is kept out (inferred trim).
+- "Not cleaning a shaker bottle." This trims "not having to clean a shaker bottle" to fit 6 words (inferred trim).
+
+**Brand line:** "Rip. Tip. Enjoy." is the reveal caption and the photo-panel line.
 
 **Claims left out:**
-- "60+ ingredients, 21 vitamins & minerals, and 6g fiber in 1 pack" is approved but is a second claim, so it belongs in a second ad.
-- There is no health or energy outcome. Because nothing is visible, the land panel shows an easier morning only.
+- "60+ ingredients, 21 vitamins & minerals, and 6g fiber" is a second claim and belongs in a second ad.
+- No health or energy outcome is shown. There is no visible result, so the land panel shows only a morning routine that goes easier.
 
-**Inferred:**
-- The 6:58 a.m. hour.
-- The sink as the "that evening" setting.
-- The blank yellow band standing in for the wordmark.
+**No cutaway:** The comic does not explain how the product works, so none is needed.
+
+**Speech balloons:** None. All lettering is added in editing.
 
 **MISSING:**
-- How it works, with a source. No cutaway is used for this reason.
-- Banned claims list.
+- Product photos: pack front and gummies out of the pack. The drawn pouch shape, size relative to a hand, and gummy shape and colour could not be checked against the real product.
 - Lettering typeface.
-- Pack-front photo and out-of-pack photo with a sharp label. These are needed for the drawn pouch and the photo panel.
-- Gummy colour and shape. Draw these from the photo once supplied.
-- Verified reviews. No review phrase is used.
+- Verified review phrase (optional).
 
-**Offer:** The renewal and first-order-only terms must appear in full in editing. Confirm that the fine print is legal-compliant at phone size, or move it to a separate end card.
+**Inferred:**
+- The pouch is drawn standing upright.
+- The wordmark is a blank yellow band.
+- The gummies are Sprout green.
+- The pouch is deep green, not black, white or grey, so it needs no outline.
 
 ## 5. Cast note
 
 **Who carries it:** The drawn hero carries the ad, with a narrator over the panels.
 
-**Why it suits this buyer:** This buyer is a 28-to-45 office worker who has already quit powders. A plain, simple-faced hero in an ordinary kitchen lets them see their own mornings without a real person making claims.
+**Why:** This buyer has already quit powders. A simple, plain face lets them see their own groggy mornings without being lectured.
 
-**Narrator's voice:** A dry, warm peer who sounds tired of the routine at first, then quietly relieved. It should be conversational, never an announcer.
+**Voice:** A dry, warm, slightly wry peer who has been there. Unhurried and conversational, never a hype announcer.
 
-**What never changes about the hero:** Simple round face, short round bob, blue-grey shirt, cream trousers, plain black lanyard badge with no writing.
+**Never changes:** The black round bob, round black glasses, grey-blue sweater, black trousers and simple dot-eye face. Sprout green and yellow appear only on the pouch and gummies.
+
+## 6. Score
+
+**100 / 100**
+
+**Sum:** 6 of 6 checks passed. 6 ÷ 6 × 100 = 100.
+
+**Checks missed:** None.
 ```

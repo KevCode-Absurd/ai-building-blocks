@@ -1,21 +1,29 @@
 # Test run on Sprout, 2026-10-19
 
-Result: **pass**. Ran on claude-opus-5-5 (effort medium), graded by claude-fable-5-1. Judge list: 5 of 5 met. Invented facts: 0.
+Result: **fail**. Ran on claude-opus-5-5 (effort medium), graded by claude-fable-5-1. Judge list: 4 of 5 met. Invented facts: 0.
 
-A clean stage 0 and stage 1: a specific made-up parent, children kept off-frame, no customer framing, and it stopped where the skill says to. Two MISSING lines ask for facts already in the brand file (that the product is gummies, the source for the 60+/21/6 g claim), so the owner will do a little needless confirming, and the headings don't match the shape labels.
+A careful stage 0 and avatar card that stops at the right place, invents no facts and asks for the missing timings, label photo and pack states instead of guessing. The one slip is a gummy jar in the prop list, which doesn't match how the product is sold and could mislead if it reaches the storyboard.
+
+## Fix
+
+In Stage 0, add a rule: props that hold or show the product come only from the product photos; never add a jar, bottle or other container the product doesn't come in.
 
 ## Judge list
 
-- Met: The run stopped for your yes after the avatar card, the sheets and the storyboard.
-  "Approval 1 of 3: approve or change the avatar card before reference images are written." No stage 2+ work started.
-- Met: The identity line is word for word the same in every frame where the avatar appears.
-  Not yet reachable: the run correctly halted at approval 1, so no frames exist to break this; 'Never changes' row sets the basis.
-- Met: The character sheet has front, both three-quarters, side and back, plus the avatar beside the product.
-  Not yet reachable by design (stage 3 waits on approval 1); nothing produced that conflicts.
-- Met: There's one stop shot, every link has a shot or is flagged as a gap, and there's exactly one call to action.
-  Not yet reachable (stage 4); run already flagged the CTA step as MISSING rather than inventing a text keyword.
-- Met: The product is shown and handled the way your photos and rules show it.
-  Not yet depicted; states listed as "sealed, ripped, tipped out, empty" and extra product photos requested as MISSING.
+- Met: Stopped for approval after the avatar card, the sheets and the storyboard
+  "Approval 1 of 3: please approve the avatar card, or change it, before I write the reference image prompts (stage 2)." Later stops not yet reached.
+- Met: Identity line word for word the same in every avatar frame
+  Not reached: no frames yet because the run correctly stopped at approval 1. Card lists fixed 'Must never change' traits.
+- Met: Character sheet has front, both three-quarters, side, back, and avatar beside product
+  Not reached: stage 3 correctly waits for approval 1. Nothing done wrong yet.
+- Met: One stop shot, every link has a shot or gap, exactly one call to action
+  Not reached: stage 4 correctly waits for approvals 1 and 2.
+- Not met: Product shown and handled the way the photos and rules show it
+  Props include "a plain, unbranded gummy jar and a handful of gummies": Sprout comes in packs, never a jar; no photo shows one.
+
+## Safety
+
+- Planning a 'plain, unbranded gummy jar' as a prop could show Sprout gummies coming from a jar, misrepresenting the single-pack format the brand sells.
 
 ## What went in
 
@@ -38,46 +46,81 @@ Font: Work Sans Bold and Medium.
 ## What came out
 
 ```text
-# 1. Avatar card
+Text only: no image tool is connected here, so I'll write the prompts but can't make the pictures.
 
-**Script check (stage 0)**
-- No line needs rewriting. All five lines are voice-over, and none has the avatar claim it used the product or got a result.
-- Line 4 is a product claim and needs its source before the board shows it. See the `MISSING:` lines below.
-- **Places:** the kitchen at breakfast and the front hallway or door on the way out.
+## Stage 0: Script in
+
+**Status:** approved narration received. Delivery is voice-over only, and nobody speaks on camera. I have not rewritten any lines.
+
+**What needs sorting before the storyboard:**
+- **Line timing.** Only the 22 s total was given, not a time per line. I'll need a length for each of lines 1 to 5 and for the end text.
+- **Line 3, "Rip, tip, enjoy."** The screen can't show "tip" until I know what comes out of the pack and where it goes: into the hand, into the mouth, or into a bowl or drink. Please send a photo of the pack open, with its contents showing.
+- **Line 4 claims.** "60+ ingredients, 21 vitamins and minerals, 6 grams of fiber" has to match the pack label word for word. I can't confirm this until there is a readable label photo or a claim source.
+- **End text.** The offer terms ("$29.99 with text sign-up", "Renews at $49.99 every 4 weeks") need a source or the offer page. It runs long, so it needs its own on-screen time to be readable. I'll plan that time in stage 4.
+- **No line puts words in the avatar's mouth.** The narrator speaks to "you", and the avatar never says it used the product. This passes.
+- **Avatar shown using the product.** The avatar is made up, so it must not be framed as a real customer: no names, no "real mum" captions and no review stars.
+
+**Places, props and product states the script needs:**
+- **Places:** a sunny home kitchen at breakfast, and a front hallway or door for the school run and the grab and go.
 - **Props:**
-  - Three breakfast settings
-  - Work bag
-  - Car keys
-  - Two small school backpacks
-  - The pouch
-  - The daily pack, sealed, torn open, and tipped with the gummies in a palm
-- **Product states:** sealed, ripped, tipped out, empty
+  - three breakfast settings, two of them clearly kids' (small bowls, cups)
+  - two small school backpacks and small shoes by the door
+  - the work bag and car keys
+  - a plain, unbranded gummy jar and a handful of gummies
+  - the pouch
+  - the daily pack
+- **Product states:** pouch closed. Daily pack sealed, then ripped, then tipped, then empty.
+- **Children:** none on camera. Kids are implied through their bowls, backpacks, shoes and an out-of-frame bustle.
 
-**Options**
-1. **Busy parent at the counter.** A late-30s parent mid-morning-rush who stops for one beat with the pack. This is the cast-note pick.
-2. **Parent on the doorstep.** The same parent always half out the door, with every shot on the move.
-3. **Product alone.** The pouch and pack carry it, with the parent seen only as hands.
+## Stage 1: Pick the avatar
 
-**Pick: Option 1, the busy parent**
+**Options:**
+1. **Workday parent:** dressed for the office, mid-rush, juggling the bag and breakfast. This matches the cast note.
+2. **Weekend-casual parent:** hoodie and sneakers, a looser and more relaxed rush. It reads less "busy", which undercuts line 1.
+3. **Product carries it alone:** pouch and pack only. This loses the buyer's moment that lines 1 and 2 depend on.
 
-| Field | Detail |
-|---|---|
-| Role | Made-up busy parent, the buyer's mirror. Seen, never speaks on camera. Never presented as a real customer or reviewer. |
-| Age range | Late 30s (37–39 look) |
-| Look | Woman, warm medium skin, dark brown shoulder-length hair with a soft wave, worn half up with a claw clip. Light freckles across the nose. Natural brows, minimal makeup. Average build, about 5'6". |
-| Clothes | Oatmeal crew-neck knit with sleeves pushed to the forearm, dark straight jeans, white sneakers. Small gold hoop earrings and a thin gold watch on the left wrist. No logos or text on clothing. |
-| Props | Tan leather work tote, car keys on a single plain ring, the daily pack (right hand). |
-| Voice | None on camera. The narration is a separate voice-over that is not tied to her lips, so there is no lip-sync. |
-| Children | The children are never shown as avatars. They are implied off-frame by two small backpacks by the door and two cereal bowls. No child's face or body appears in frame. |
-| Never changes | Face, freckles, hair colour, length and claw clip, gold hoops, watch on the left wrist, oatmeal knit, sleeves pushed up, product held in the right hand. |
+**Pick: 1, the workday parent.**
 
-`MISSING: product photo: pouch side, pouch top, pack out of the pouch, gummies tipped out, label close-up with every word readable`
-`MISSING: product name and label text word for word`
-`MISSING: script line: confirm the product itself is gummies (line 2 reads as if gummies are the old habit, the doubt says "candy")`
-`MISSING: script line: per-line timing within the 22 s`
-`MISSING: script line: source for "60+ ingredients, 21 vitamins and minerals, 6 grams of fiber"`
-`MISSING: script line: the call to action step (how to text to sign up: number or keyword) for the end card`
-`MISSING: narrator voice (age, pitch, pace, accent)`
+### Avatar card
+- **Role:**
+  - The buyer: a busy working parent in their own morning rush.
+  - Seen but silent.
+  - A dramatization only, never shown or captioned as a real customer.
+  - Made up, not based on any real person, creator or known character.
+- **Age range:** late 30s.
+- **Look:**
+  - Woman with warm medium-brown skin.
+  - Light freckles across the nose and upper cheeks.
+  - Dark brown, shoulder-length hair in a low ponytail with a few loose strands at the front.
+  - Average build, about 5'6".
+  - Natural, minimal makeup.
+  - Short, unpolished nails.
+  - Right-handed.
+- **Clothes:**
+  - Sage-green crewneck knit sweater over a white collared shirt, collar showing.
+  - Dark navy straight-leg trousers.
+  - White leather sneakers.
+- **Props:**
+  - Thin gold watch on the left wrist.
+  - Tan leather work tote over the right shoulder.
+  - Car keys on a small brown leather fob.
+- **Voice:**
+  - None on camera. The avatar never speaks or lip-syncs.
+  - Narration is a separate voice-over. My suggestion is a warm, mid-pitch adult voice at a brisk, friendly pace with a neutral accent. Please confirm or replace it.
+- **Must never change:**
+  - face and freckles
+  - hair colour, length and low ponytail
+  - sage sweater with the white collar
+  - navy trousers and white sneakers
+  - gold watch on the left wrist
+  - tan tote on the right shoulder
+  - right hand on the product
 
-**Approval 1 of 3:** approve or change the avatar card before reference images are written.
+**Approval 1 of 3:** please approve the avatar card, or change it, before I write the reference image prompts (stage 2).
+
+MISSING: script line (time per line for lines 1 to 5 and the end text)
+MISSING: product photo (pouch side, top and back with the label readable)
+MISSING: product photo (daily pack sealed, ripped open with contents showing, and empty)
+MISSING: script line (claim source for "60+ ingredients, 21 vitamins and minerals, 6 grams of fiber" and for the offer terms)
+MISSING: script line (narrator voice spec, to confirm)
 ```

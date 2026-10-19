@@ -1,23 +1,32 @@
 # Test run on Sprout, 2026-10-19
 
-Result: **pass**. Ran on claude-opus-5-5 (effort medium), graded by claude-fable-5-1. Judge list: 6 of 6 met. Invented facts: 0.
+Result: **fail**. Ran on claude-opus-5-5 (effort medium), graded by claude-sonnet-5-5. Judge list: 2 of 6 met. Invented facts: 2.
 
-A disciplined Stage 0: three rows that differ by finish and focus, every motion marked inferred, the right things flagged MISSING (pack count, pouch closure, sounds), and a clean stop for approval. The owner gets a usable line-up with clear reasons each row holds a powder-tub buyer, and nothing is made up about the product; the only soft spot is that the brand file it marked MISSING actually exists and could have supplied "Rip. Tip. Enjoy." and the handful count.
+The run handled missing inputs well: it flagged the photos, motions and gummy count as MISSING, marked motions inferred, and stopped for approval. It is a sensible line-up, but it is only Stage 0 with a table instead of the shape, so the owner has no frames or clip prompts yet.
+
+## Fix
+
+Add a rule to Stage 0 that the line-up must use the output-shape row layout, and that missing photos should not block writing the line-up when a description exists. Also require ad-supplied props only in rows, or mark extras as inferred.
 
 ## Judge list
 
-- Met: Stopped for your yes on the line-up, product card, sheets and storyboard
-  "Which rows go ahead: A, B, C, or a combination? I'll write the product card once you say yes." Correctly stopped at the first gate.
-- Met: First frame already shows the motion part done, at thumbnail size
-  "The pack is tipped and the first gummies are already falling"; "The tear is already a third of the way across".
-- Met: Finish lands in the last third and nothing new happens after it
-  "The last gummy drops, the small heap tumbles and stops... still" then "Last frame (held still for 0.5s)".
-- Met: End frame still and sits next to the ad's first frame without a jump
-  "All three rows use the ad's first-frame place and light: a kitchen counter with morning window light from the left."
-- Met: Prompt says 'real speed' once, no slow-motion, time-lapse or explode words
-  Clip prompt not yet reached (stopped at Stage 0); no slow-motion, time-lapse or explode-style words appear anywhere.
-- Met: No words in the picture and nobody talking
-  "SFX: soft patter of gummies landing in a palm, then nothing. Ambient: quiet morning kitchen"; overlay left as a question.
+- Met: The run stopped for your yes on the line-up, the product card, the sheets and the storyboard.
+  Stopped after the line-up: "Which rows do you approve (2 or 3)?" No later stage was written ahead.
+- Not met: The first frame already shows the motion part done, at thumbnail size.
+  No start frame yet. Rows only hint: "already tipped", "a third of the way". Stage 4 not reached.
+- Not met: The finish lands in the last third, and nothing new happens after it.
+  No timed thirds or shot card written; only a "done" description per row.
+- Not met: The end frame is still and sits next to your ad's first frame without a jump in place or light.
+  Only a "Last frame" row line, e.g. "in the spot where the tub stood"; no end frame produced.
+- Not met: The prompt says "real speed" once, with no slow-motion, time-lapse or "explode" style words.
+  No clip prompt exists, so "real speed" never appears.
+- Met: No words in the picture and nobody talking.
+  Sound rows are SFX and ambient only; overlay not yet added and no speech.
+
+## Invented
+
+- claim: "Row C: the shaker and scoop sliding out, then the powder tub" (Shaker and scoop are not in the ad's first frame; only a tub is. Plausible but unconfirmed.)
+- claim: "They own this exact kit" (Asserts the buyer owns a shaker and scoop; the brand file only says some reviewers quit powders and shakers.)
 
 ## What went in
 
@@ -42,31 +51,28 @@ Tool: 4-second clips, takes a start and an end frame.
 ## What came out
 
 ```text
-# Line-up: Sprout greens gummies, before "Powder tub"
+I can only write prompts here. No pictures or clips will come out of this chat unless a video tool is connected.
 
-All three rows use the ad's first-frame place and light: a kitchen counter with morning window light from the left. All three are filmed on a locked camera. No real motions or sounds were supplied, so every motion below is **inferred** from your use steps and handling notes. Please confirm or correct each one.
+**MISSING:** the four product photos and the ad's first-frame still did not come through on my side. Please re-attach them. Until then I'm working from your written description, and nothing below is checked against the real pouch, pack or bears.
+**MISSING:** real motions and sounds. Every motion below is proposed from how the product is used and marked *inferred*. Please confirm or correct them.
+**MISSING:** how many gummies are in one daily pack. I've written "N" until you give the exact count.
 
-| | **Row A: Level** | **Row B: Release** | **Row C: Fit** |
+## Line-up (Stage 0)
+
+| | Row A: Level | Row B: Release | Row C: Order |
 |---|---|---|---|
-| **Focus** | The gummies | One daily pack | The big pouch |
-| **The motion** | Gummies tip from the torn top of a daily pack into an open palm *(inferred, from "gummies pour out of the torn top into a palm")* | The daily pack tears straight across its top edge, held in two hands *(inferred, from "torn straight across its top edge")* | A thumb and finger press the pouch's resealable top closed from one side to the other *(inferred: closure type not given)* |
-| **Frame 1 (already part done)** | The pack is tipped and the first gummies are already falling | The tear is already a third of the way across | The seal is already pressed a third of the way along |
-| **The finish / "done"** | The last gummy drops, the small heap tumbles and stops, and the palm holds the whole daily serving, still | The top strip comes away in one piece and the pack's top stands open | The seal reaches the far edge, the hand lifts away, and the pouch stands upright with the yellow wordmark to camera |
-| **Place and camera** | Counter edge at hand height, side-on, locked | Counter, waist height, front-on, locked | Counter, front-on, pouch centred, locked |
-| **Sound** | SFX: soft patter of gummies landing in a palm, then nothing. Ambient: quiet morning kitchen | SFX: one clean foil tear, then a small tick as the strip clears. Ambient: quiet morning kitchen | SFX: a short run of seal clicks ending in one firm press. Ambient: quiet morning kitchen |
-| **Last frame (held still for 0.5s)** | The palm of deep-green bears, with the empty torn pack lying on the counter beside it, printing clear | The open daily pack upright in hand, with the torn strip on the counter, printing clear | The sealed pouch on the counter in window light, wordmark clear |
-| **Why this buyer waits for the end** | Someone mid-way through a powder tub wants to see whether the whole daily dose really fits in one hand, with no scoop and no shaker. | They want to see whether the tear runs clean across, because a pack that opens cleanly in one go is the opposite of a scoop and a dusty lid. | The tub buyer knows a lid that never quite shuts, so they wait to see whether this seal goes all the way across. |
-| **Hand-over to the ad** | Hand in frame, gummies in focus | Hands in frame, pack in focus | Pouch alone, hand gone |
+| **Focus** | The bears leaving the torn daily pack | The daily pack's top strip | The old powder kit against one daily pack |
+| **Motion** *(all inferred)* | A torn daily pack, already tipped, pours bears into a small bowl. | A tear already a third of the way straight across the daily pack's top edge runs to the far side. | The shaker and scoop are already sliding out of frame, then the powder tub. One daily pack is set down in the cleared spot. |
+| **Finish / what "done" looks like** | The last bear tumbles, the pile settles and nothing moves. N bears in the bowl. | The strip comes away whole in one piece, the pack sits open at its top and the bears are just visible. | The counter is clear except for the daily pack, flat and square to camera. |
+| **Place & camera** | Kitchen counter, morning window light from the left. Overhead, locked. | Same counter and light. Locked, at the pack's height. | Same counter and light. Locked, at counter height, matching the ad's angle. |
+| **Sound** | SFX: soft patter of bears into the bowl, the last one landing. Ambient: quiet kitchen morning. | SFX: one clean foil tear, the strip lifting free. Ambient: quiet kitchen. | SFX: plastic scraping on the counter, the tub's hollow slide, a light foil tap as the pack lands. Ambient: quiet kitchen. |
+| **Last frame** | Bowl of N bears, the opened daily pack beside it with its printing clear, window light from the left. | Opened daily pack held still, strip gone, printing clear. | Daily pack alone on the counter, printing clear, in the spot where the tub stood in the ad. |
+| **Why this buyer waits** | Powder users know clumps and dust. They'll wait to see a dose that lands clean and counted. | A tear that goes wrong is a small daily annoyance, so they'll wait to see this one come away whole. | They own this exact kit and will wait to see whether all of it really gets replaced by one pack. It sets up the man and his tub with no change of subject. |
+| **Hands** | None | A hand is needed to tear: hands only, no face | A hand is needed to sweep and set down: hands only, no face |
 
-Order was considered and left out. Sweeping a powder tub aside would contradict the ad's first frame, which shows a man holding that same tub, and that would make a jump at the cut. Smooth was also left out because no wipe or bead motion fits this product.
+All three keep the pouch out of the motion. It is never torn and only ever opens at its resealable top. The powder tub, scoop and shaker would be plain and unbranded.
 
-`MISSING: real motions and sounds for the tear, the pour and the pouch closure`. Please confirm or correct the inferred lines above.
-`MISSING: how the big pouch reseals (press seal, zip slider, fold-over)`. Row C depends on this.
-`MISSING: how many gummies are in one daily pack`. The count gets locked for Row A.
-`MISSING: a written description of the daily pack (colour, printing, size)`. The photo will be used, but the label words need stating word for word.
-`MISSING: brand file (on-screen text style, buyer words, what never to show)`. This is optional, and the defaults will be used without it.
-
-**Overlay:** do you want one, up to 4 words such as "Wait for it" or "POV:", or none?
-
-**Which rows go ahead: A, B, C, or a combination?** I'll write the product card once you say yes.
+**Before I go on:**
+1. Which rows do you approve (2 or 3)? Are hands-only shots acceptable for B and C? If not, I'll replace them with motions that need no hand.
+2. Do you want an overlay (up to 4 words, e.g. "Wait for it"), or none?
 ```

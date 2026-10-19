@@ -2,22 +2,22 @@
 
 Result: **pass**. Ran on claude-opus-5-5 (effort medium), graded by claude-fable-5-1. Judge list: 6 of 6 met. Invented facts: 0.
 
-The run did exactly what the skill asks for a first turn: confirmed the shaker, wrote a tight character card in the required order with no limbs, set a voice, and stopped for approval. The owner gets a clean, pasteable card and a clear list of what to supply next (sizes, pack photo, accent), though the brand file facts were on hand and could have answered the brand-file MISSING line.
+A correct partial run: it confirmed the shaker, wrote a well-ordered character card and voice line, then stopped at approval 1 and for the missing product photo exactly as the skill requires. Stages 2 to 5 and the score are still to come once the owner approves and sends the pouch and daily-pack photos; headings use "File 1/2" rather than "STAGE 0/1" but nothing due at this point is missing.
 
 ## Judge list
 
 - Met: The run stopped for your yes after the character card, the sheets and the storyboard.
-  "Approval 1 of 3: please approve or change the character card and voice line before I write the reference image prompts." Stopped correctly at gate 1.
+  "Approval 1 of 3: approve or edit the character card and voice line above." Stopped at approval 1; sheets and storyboard not yet due.
 - Met: Pause the first frame, muted, at thumbnail size. You can see the face and its feeling.
-  Not yet reached (stops at approval 1 as the skill requires); card fixes a clear face spot "moulded into the smooth upper front".
+  Not reached (run halted correctly at approval 1 and for the missing photo); card already fixes face spot, low raised brows, lopsided mouth.
 - Met: The face sits in the same spot in every clip, with the same eyes, brows and mouth.
-  Not yet reached; one-sentence card with fixed face spot, eyes, brows, mouth is set to be pasted into every prompt.
+  Not reached; card is written as one sentence "pasted word for word into every later prompt" with the face spot fixed.
 - Met: The mouth moves only with the words and closes when each line ends.
-  Not yet reached (no clip prompts yet); nothing so far conflicts; "small closed slightly lopsided mouth at rest".
+  Not reached; no clip prompts yet, nothing contradicts it. "a small closed lopsided mouth at rest".
 - Met: The product's label matches its photo, it has no face, and it arrives by a cut at the turn.
-  "The bear printed on the pouch is the product's own label art. It is never animated and never given features." Turn cut not yet reached.
+  "The Sprout pouch never gets one." Plus: bear face "stays flat, still and exactly as in the photo". Stopped for the photo.
 - Met: The object never states a price, a result it couldn't see, or a sales pitch.
-  Script kept unchanged; its lines contain no price, offer or result ("No water. No shaking. No me.").
+  Script lines kept unchanged; no price in them. "MISSING: live offer text for the last two seconds of on-screen text."
 
 ## What went in
 
@@ -41,25 +41,31 @@ Tool: 8-second clips with sound, up to 3 reference images.
 ## What came out
 
 ```text
-## 1. Narrator
+I write the prompts only; this chat has no video tool connected, so no pictures or clips will come from here.
 
-**Confirmed: the shaker bottle (has-been).** It belongs on that kitchen counter. It has a simple cylinder shape with a smooth front for the face. It has no brand and no body, and its clear-white plastic and black lid look nothing like the glossy green Sprout pouch. The face stays on the shaker only. The bear printed on the pouch is the product's own label art. It is never animated and never given features.
+## File 1: Narrator
 
-## 2. Avatar card
+**Confirmed: the shaker bottle (has-been).** It really sits on a kitchen counter. It is one simple cylinder with a natural face spot on its smooth body, and it is unbranded and has no body parts. A clear plastic bottle can't be mistaken for a glossy green foil pouch. The face stays on the shaker. The Sprout pouch never gets one.
 
-**Character card:**
-"A plain unbranded translucent white plastic shaker bottle with a black flip-top lid and no lettering, measurement marks or logos anywhere, stained by a faded olive-green powder ring around the inside just above the base, a few dried green flecks under the lid rim and light scuffs on the body, its face moulded into the smooth upper front of the body just below the lid band, with two round glossy dark eyes, two thin raised plastic brow ridges, a small closed slightly lopsided mouth at rest, and no arms and no legs."
+## File 2: Avatar card
 
-**Voice line:**
-"A man in his early thirties, slow and unhurried with small pauses, sheepish and dryly self-aware, neutral General American accent."
+**Character card** (pasted word for word into every later prompt):
+> A plain translucent cloudy-white plastic protein shaker bottle with a matte black screw lid and flip cap, no logo, no words and no measuring marks anywhere; a faint green powder ring stained around the inside just below its shoulder and a dull, lightly scuffed body; its face sits on the smooth middle of the body, below the green ring; two round glossy black eyes; soft grey brows set low and slightly raised in the middle; a small closed lopsided mouth at rest; no arms, no legs.
 
-No line needs a gesture. The shaker shows "This green ring?" by sliding its eyes down to the stain, so it has no limbs.
+No limbs: no line needs a gesture. On "This green ring?" the eyes roll up to the ring instead.
 
-MISSING: accent. No brand home accent was given, so I assumed neutral General American. Change it if the brand is based elsewhere.
-MISSING: true size of the Sprout pouch and of one daily pack (height × width), needed for the side-by-side picture.
-MISSING: photo of the daily pack on its own. Please confirm whether one is attached alongside the pouch front photo.
-MISSING: brand file: the buyer's moment, humour limits, anything never to show.
-MISSING: what buyers tried before Sprout (other than the shaker), and whether the result can be seen.
+**Voice line** (used once, in every clip prompt):
+> A man in his late thirties, slow and slightly halting pace, sheepish and gently self-mocking, general American accent.
 
-**Approval 1 of 3:** please approve or change the character card and voice line before I write the reference image prompts.
+## MISSING
+
+- `MISSING: Sprout pouch front photo`. The note says it is attached, but no image arrived. The product sheet can't be checked against the real pack without it, so I stop before Stage 3 until it comes.
+- `MISSING: photo of the single daily pack, out of the pouch`. This is needed for the "tears a little pack" beat and the torn-straight-across state.
+- `MISSING: brand home accent`. I assumed general American. Tell me if it should be different.
+- `MISSING: live offer text` for the last two seconds of on-screen text.
+- `MISSING: brand file`, meaning the never-show list and the humour limits.
+
+Flag for later: the pouch's printed yellow bear face is label art. In every prompt it stays flat, still and exactly as in the photo, so it never blinks or talks.
+
+**Approval 1 of 3:** approve or edit the character card and voice line above. Send the pouch photo and the daily pack photo too, and I'll write the reference image prompts.
 ```

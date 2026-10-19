@@ -80,7 +80,7 @@ example:
 
     Reference ad: Sprout's own live ad, headline as written: "'Sprout
     is too expensive': here's 61% off to prove otherwise". Public Meta
-    Ad Library, 30 Sept 2026, 15+ copies live. (No competitor ad was on
+    Ad Library, 15+ copies live. (No competitor ad was on
     file, so this uses one of ours.)
     Don't borrow: the discount or the price doubt.
     Research: buyer doubt from the brand file, "A gummy can't hold
@@ -94,7 +94,7 @@ example:
     narrator.
   output: |
     REFERENCE
-    Ad: Sprout, ID not on file, seen 30 Sept 2026 | What it does: puts
+    Ad: Sprout, ID not on file, seen live | What it does: puts
     the buyer's complaint in quotes, in their words, then answers it.
 
     IDEA BORROWED

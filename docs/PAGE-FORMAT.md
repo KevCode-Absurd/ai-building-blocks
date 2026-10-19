@@ -77,7 +77,7 @@ Rewrite it in plain language with the same substance. Keep the sections: a one-l
 
 ## boards/ecommerce.md
 
-If the block has one, rewrite it in plain language too. It's the "For online stores" add-on: extra steps for selling physical products online.
+Not shipped or shown any more (2026-10-19). Every skill is a base skill for anyone. These notes are raw material for the online-store versions we build later, so leave them as they are. Put nothing in SKILL.md or page.yaml that only works for one industry: give examples from more than one field.
 
 ## item.yaml
 

@@ -152,7 +152,7 @@ improve:
   - Write your usual strength and frame shape into step 2 of the skill file, so every portrait matches.
   - Keep one approved person photo per character and name it in step 1, so the same person appears in every ad.
   - "If you show a product, write how it's held in real life into step 6 (for Sprout: the pouch closed at its resealable top, rested against the cheek)."
-  - Add your claims rules to the avoid list. For skincare or supplements, ban any before and after and any skin result.
+  - Add your claims rules to the avoid list. In a field with claim rules (health, beauty, food, money, alcohol and the like), ban any before and after and any result shown on a person.
   - Pair it with the skill that turns an approved image plan into a prompt when the portrait carries a headline, and the one that makes an approved image bigger for the final export.
 
 works_best_with:

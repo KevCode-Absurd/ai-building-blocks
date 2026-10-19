@@ -1,9 +1,10 @@
 import { Suspense, lazy, useCallback, useDeferredValue, useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import { ArrowIcon, BlockCard, Drawer, Logo, PixelIcon, SearchIcon, Select, ThemeToggle, Toast } from "./ui";
-import { type Block, type Catalogue, type Kind, BUSINESSES, FUNCTIONS, FUNCTION_MOVED, KINDS, LEVELS, TASKS, cap, functionsOf, kindOf, pathOf, taskOf, useCatalogue } from "./lib/data";
+import { type Block, type Catalogue, type Kind, FUNCTIONS, FUNCTION_MOVED, KINDS, LEVELS, TASKS, cap, functionsOf, kindOf, pathOf, taskOf, useCatalogue } from "./lib/data";
 import { kits, queueForCanvas, useStore } from "./lib/store";
 import { Link, navigate, setSearch, useLocation } from "./lib/router";
 import { BusinessDrawer, openBusiness, useBusinessOpener } from "./Business";
+import { TailorDrawer, openTailor, useTailorOpener } from "./Tailor";
 import { hasBusiness, useBusiness } from "./lib/business";
 
 const Builder = lazy(() => import("./Builder")); // the canvas loads only when someone scrolls near it
@@ -79,8 +80,8 @@ function Header({ onKits }: { onKits: () => void }) {
   );
 }
 
-type Filters = { q: string; fn: string; task: string; kind: Kind | "all"; level: string; biz: string };
-const NONE: Filters = { q: "", fn: "", task: "", kind: "all", level: "", biz: "" };
+type Filters = { q: string; fn: string; task: string; kind: Kind | "all"; level: string };
+const NONE: Filters = { q: "", fn: "", task: "", kind: "all", level: "" };
 
 function Library({ c }: { c: Catalogue }) {
   const { search } = useLocation();
@@ -89,7 +90,7 @@ function Library({ c }: { c: Catalogue }) {
     const fnId = FUNCTION_MOVED[search.get("fn") ?? ""] ?? search.get("fn");
     const fn = FUNCTIONS.find((x) => x.id === fnId)?.id ?? (task ? FUNCTIONS.find((x) => x.tasks.includes(task))!.id : "");
     const kind = KINDS.some((k) => k.id === search.get("kind")) ? (search.get("kind") as Kind) : "all";
-    return { ...NONE, q: search.get("q") ?? "", fn, task, kind, level: search.get("level") ?? "", biz: search.get("biz") ?? "" };
+    return { ...NONE, q: search.get("q") ?? "", fn, task, kind, level: search.get("level") ?? "" };
   });
   const set = (patch: Partial<Filters>) => setF((x) => ({ ...x, ...patch }));
   const [limit, setLimit] = useState(PAGE);
@@ -105,7 +106,7 @@ function Library({ c }: { c: Catalogue }) {
     window.addEventListener("keydown", on);
     return () => window.removeEventListener("keydown", on);
   }, []);
-  useEffect(() => { setLimit(PAGE); setSearch({ q: f.q, fn: f.fn, job: f.task, kind: f.kind === "all" ? "" : f.kind, level: f.level, biz: f.biz }); }, [f]);
+  useEffect(() => { setLimit(PAGE); setSearch({ q: f.q, fn: f.fn, job: f.task, kind: f.kind === "all" ? "" : f.kind, level: f.level }); }, [f]);
 
   // Every count reflects all the other choices, so a zero is never a surprise.
   // The list and the counts follow the typing a beat behind, so the search box never waits on them.
@@ -119,7 +120,6 @@ function Library({ c }: { c: Catalogue }) {
     task: (b, v) => !v || b.task === v,
     kind: (b, v) => v === "all" || kindOf(b) === v,
     level: (b, v) => !v || b.level === v,
-    biz: (b, v) => !v || !!BUSINESSES.find((x) => x.id === v)?.test(b),
   };
   const keys = Object.keys(tests) as (keyof Filters)[];
   // Counts are worked out once per settled search, not on every redraw.
@@ -174,8 +174,6 @@ function Library({ c }: { c: Catalogue }) {
           ))}
         </div>
         <div className="filters">
-          <Select label="Made for" value={f.biz} onChange={(v) => set({ biz: v })} testId="filter-biz"
-            options={[{ value: "", label: "All", count: count({ biz: "" }) }, ...BUSINESSES.map((x) => ({ value: x.id, label: x.name, count: count({ biz: x.id }) }))]} />
           <Select label="Level" value={f.level} onChange={(v) => set({ level: v })} testId="filter-level"
             options={[{ value: "", label: "Any", count: count({ level: "" }) }, ...LEVELS.map((l) => ({ value: l, label: cap(l), count: count({ level: l }) }))]} />
         </div>
@@ -285,6 +283,9 @@ export default function App() {
   const [kitsOpen, setKitsOpen] = useState(false);
   const [bizOpen, setBizOpen] = useState(false);
   const closeBiz = useCallback(() => setBizOpen(false), []);
+  const [tailor, setTailor] = useState<string | null>(null);
+  const closeTailor = useCallback(() => setTailor(null), []);
+  useTailorOpener(useCallback((s: string) => { setKitsOpen(false); setBizOpen(false); setTailor(s); }, []));
   useBusinessOpener(useCallback(() => { setKitsOpen(false); setBizOpen(true); }, []));
   const [toast, setToast] = useState<string | null>(null);
   const clearToast = useCallback(() => setToast(null), []);
@@ -340,10 +341,12 @@ export default function App() {
             <Link to="/apps">Apps</Link>
             <Link to="/apps/starter-pack">App starter pack</Link>
             <Link to="/how-it-works">How it works</Link>
+            <button className="link-btn" onClick={() => openTailor()} data-testid="tailor-footer">Get a skill tailored for you</button>
           </nav>
         </div>
       </footer>
       {bizOpen && <BusinessDrawer onClose={closeBiz} toast={setToast} />}
+      {tailor !== null && <TailorDrawer skill={tailor} onClose={closeTailor} toast={setToast} />}
       {c && kitsOpen && <KitsDrawer c={c} onClose={closeKits} toBuilder={toBuilder} />}
       <Toast message={toast} onDone={clearToast} />
     </>

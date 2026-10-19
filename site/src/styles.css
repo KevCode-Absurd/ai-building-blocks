@@ -158,6 +158,12 @@ code { font: 400 0.88em var(--mono); background: var(--raise); border-radius: 4p
 .bp-hero { padding-top: clamp(32px, 5vw, 64px); }
 .back { display: inline-flex; gap: 8px; font: 500 13px var(--mono); color: var(--muted); }
 .back:hover { color: var(--text); }
+.bp-top { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px 20px; }
+.tailor-link { font-size: 13.5px; }
+.tailor-kinds { border: 0; padding: 0; margin: 0; }
+.tailor-kinds legend { padding: 0; margin-bottom: 8px; }
+.tailor-kinds .chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.footer .link-btn { font: inherit; color: inherit; }
 .bp-kicker { display: flex; align-items: center; gap: 12px; margin: 36px 0 18px; font-size: 13.5px; color: var(--faint); }
 .bp-kicker .kind { border: 1px solid var(--text); border-radius: 4px; padding: 1px 7px; }
 .bp-kicker a { text-decoration: underline; text-decoration-color: var(--line-2); text-underline-offset: 3px; }

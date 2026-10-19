@@ -47,6 +47,6 @@ type E = {
 export const E = engine as unknown as E;
 
 /** Which boards a tool sits on, in words. */
-export const shelfLabel = (t: Tool) => (t.shelf.includes("general") ? (t.shelf.includes("ecommerce") ? "Any business, with online store extras" : "Any business") : "Online stores");
+export const shelfLabel = (t: Tool) => (t.shelf.includes("general") ? "For anyone" : "For selling products");
 /** Where the five ways' files are served from. */
 export const filesOf = (slug: string) => `/mini-tools/${slug}`;

@@ -30,7 +30,7 @@ export default function Install({ b, skill, toast }: { b: Block; skill: string |
   const pick = (t: Tab) => { setTab(t); try { localStorage.setItem(KEY, t); } catch { /* private mode */ } };
   const zip = async () => {
     if (!skill) return;
-    download(await buildSkillZip(b.slug, skill, b.addon, b.files ?? []), `${b.slug}.zip`);
+    download(await buildSkillZip(b.slug, skill, b.files ?? []), `${b.slug}.zip`);
     toast("Skill downloaded");
   };
   const file = () => { if (skill) { download(new Blob([skill], { type: "text/markdown" }), "SKILL.md"); toast("Downloaded SKILL.md"); } };

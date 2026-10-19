@@ -1,5 +1,5 @@
 // Builds the handoff pack from a saved workflow with plain code: same workflow in, same pack out.
-// PRD §6: HANDOFF.md, workflow.json, skills/<slug>/SKILL.md (+ boards/ecommerce.md), README.txt.
+// PRD §6: HANDOFF.md, workflow.json, skills/<slug>/SKILL.md, README.txt.
 // The zip library loads only when someone downloads.
 import type { Zippable } from "fflate";
 import { type Catalogue, loadSkillText, portLabel, taskOf } from "./data";
@@ -87,7 +87,7 @@ export function handoffMarkdown(c: Catalogue, flow: Flow, order: Ordered[], with
     const b = blockOf(o);
     if (!b) { L.push(`### Step ${o.step}: ${o.node.slug}`, "", "This block isn't in the library any more. Skip it and tell the person.", ""); continue; }
     L.push(`### Step ${o.step}: ${b.name}`, "");
-    L.push(`- **Skill:** \`skills/${b.slug}/SKILL.md\`${o.node.ecommerce && b.addon ? ` plus the ecommerce add-on \`skills/${b.slug}/boards/ecommerce.md\`` : ""}`);
+    L.push(`- **Skill:** \`skills/${b.slug}/SKILL.md\``);
     L.push(`- **What it does:** ${b.summary}`);
     L.push(`- **Job:** ${taskOf(b).name}`);
     L.push(`- **Reads:** ${o.from.length ? o.from.map((s) => `the output of step ${s}`).join(", ") : "the inputs prepared above"}${b.inputs.length ? ` (${b.inputs.map((p) => portLabel(p.type).toLowerCase()).join(", ")})` : ""}`);
@@ -112,7 +112,7 @@ export function workflowJson(c: Catalogue, flow: Flow, order: Ordered[]) {
     name: flow.name,
     steps: order.map((o) => {
       const b = c.bySlug[o.node.slug];
-      return { step: o.step, id: o.node.id, skill: o.node.slug, version: b?.version ?? null, role: b?.role ?? null, ecommerce: !!o.node.ecommerce, reads_from: o.from, inputs: b?.inputs ?? [], outputs: b?.outputs ?? [] };
+      return { step: o.step, id: o.node.id, skill: o.node.slug, version: b?.version ?? null, role: b?.role ?? null, reads_from: o.from, inputs: b?.inputs ?? [], outputs: b?.outputs ?? [] };
     }),
     edges: flow.edges.map((e) => ({ from: e.from, to: e.to })),
   };
@@ -160,10 +160,6 @@ export async function buildHandoffZip(c: Catalogue, flow: Flow, business: Busine
   for (const slug of [...new Set(order.map((o) => o.node.slug))].sort()) {
     const skill = await loadSkillText(slug);
     if (skill) put(`skills/${slug}/SKILL.md`, skill);
-    if (order.some((o) => o.node.slug === slug && o.node.ecommerce)) {
-      const addon = await loadSkillText(slug, "ecommerce.md");
-      if (addon) put(`skills/${slug}/boards/ecommerce.md`, addon);
-    }
   }
   const zipped = zipSync(files, { level: 6 });
   return { blob: new Blob([zipped], { type: "application/zip" }), filename: zipName(flow.name) };
@@ -176,13 +172,11 @@ export function download(blob: Blob, filename: string) {
   setTimeout(() => URL.revokeObjectURL(url), 1000);
 }
 
-/** One skill as a folder Claude can install: <slug>/SKILL.md, plus its online-store steps and reference files. */
-export async function buildSkillZip(slug: string, skill: string, addon: boolean, files: string[]) {
+/** One skill as a folder Claude can install: <slug>/SKILL.md, plus its reference files. */
+export async function buildSkillZip(slug: string, skill: string, files: string[]) {
   const { strToU8, zipSync } = await import("fflate");
   const tree: Zippable = {};
-  const store = addon ? await loadSkillText(slug, "ecommerce.md") : null;
-  tree[`${slug}/SKILL.md`] = strToU8(store ? `${skill.trimEnd()}\n\n## For an online store\n\nIf the business sells products online, also follow \`ecommerce.md\` in this folder.\n` : skill);
-  if (store) tree[`${slug}/ecommerce.md`] = strToU8(store);
+  tree[`${slug}/SKILL.md`] = strToU8(skill);
   for (const f of files) {
     const t = await loadSkillText(slug, f);
     if (t) tree[`${slug}/${f}`] = strToU8(t);

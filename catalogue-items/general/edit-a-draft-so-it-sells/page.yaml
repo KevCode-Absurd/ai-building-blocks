@@ -183,7 +183,7 @@ tweaks:
   - what: A change request
     how: If the copy already runs, name the one change you want. It locks everything else and only touches what the request needs.
   - what: The buyer and their doubt
-    how: The doubter read aims at the doubt you name. "Will the price jump?" pulls the renewal price forward; "can a gummy hold enough?" pulls the amounts forward.
+    how: The doubter read aims at the doubt you name. "Will the price jump?" pulls the renewal price forward; "will it fit in my kitchen?" pulls the sizes forward.
   - what: How many changes
     how: Six is the default. Ask for "the top three" if you're short on time. It fixes from the top down.
 

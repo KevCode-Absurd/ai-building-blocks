@@ -55,7 +55,7 @@ Blocks connect through **typed ports** listed in `catalogue-items/_types.yaml` (
 
 ```
 catalogue-items/
-  general/<slug>/      item.yaml, SKILL.md, boards/ecommerce.md (optional add-on)
+  general/<slug>/      item.yaml, SKILL.md, boards/ecommerce.md (notes for a later store version; not shipped)
   ecommerce/<slug>/    item.yaml, SKILL.md
   orchestrators/<slug>/ item.yaml, SKILL.md
   _types.yaml  _models.yaml  _names.yaml
@@ -91,7 +91,8 @@ Orchestrators (`category: orchestrator`, `type: workflow`, `role: orchestrate`) 
 
 - **Rename** every block to a descriptive name that says what it does and what it makes.
 - **Tighten.** Cut anything that repeats, explains the obvious, or tells the history of the skill. Keep every rule that changes the output.
-- **Split general from ecommerce.** If the method works for any business, the main skill is general and the ecommerce detail moves into `boards/ecommerce.md`. If it only makes sense for physical products (PDP images, photoshoots), it lives in `ecommerce/`.
+- **Base skill first, industry versions later (2026-10-19).** Every skill is written as a base skill that works for anyone, with examples from more than one field. Industry versions (online stores, lead generation, SaaS, and later shops and local businesses) come after, as separate skills, because what counts as a good result differs: a store page is judged on orders and basket size, a lead-gen page on form sign-ups and cost per lead. The old `boards/ecommerce.md` notes are kept as raw material for the store versions but are no longer shipped or shown. Skills that only make sense for physical products (product photos, Shopify) stay in `ecommerce/` and still read for anyone selling a product.
+- **Tailored skills.** Each skill page has "Want this skill tailored for you?" at the top, and the footer has it on every page. The form asks for the skill, the kind of work (online store, lead generation, SaaS, agency, local business, other), what it should do, a name and an email, and opens an email to hello@useaiblocks.com with it filled in. We shape the skill with them and help them set it up. This is the first paid path.
 - **Rights.** Own material is tightened. Course-derived material is rebuilt from scratch in our own words with new names and new examples, never copied (RULES.md §2).
 - **Sources stay read-only.** We copy from Creative Engine; we never edit it.
 
@@ -111,7 +112,8 @@ Anyone should land, understand it and start in under a minute. A visitor is hiri
 - **Library cards** show a peek of the real output and a "View the skill" link. The home subhead types itself out once; `/` jumps to search.
 - **Examples:** one real brand, anonymized ("Sprout", a US greens-gummy brand, name and details changed), built from its public site, ads and reviews in `knowledge/example-businesses/sprout/`. Results files there are practice numbers and say so.
 - **Names:** every block has a plain, verb-first name ("Write ads from one real product fact"); folders and skill files use the same name, so the handoff and the site match.
-- **Not shown to people:** the internal roles. The general/ecommerce split shows only as the Business filter. The store add-on appears inside a page as "Extra steps for online stores".
+- **Not shown to people:** the internal roles and the general/ecommerce split. The library filters are type, job and level; there is no "Made for" filter, since every skill is for anyone.
+- **Page order:** what it does (with the step-by-step), what you give it and what you get, add it to your AI, how to use it, what changes the result most, test it, works best with, make it fit your work, then see it work (a real run), then the skill file.
 - **Look:** monochrome, dark by default with a remembered light mode, with an old-computer character: Space Grotesk for headings and text, JetBrains Mono for the subhead, file names, counts and step numbers; code windows with pinstriped title bars and line numbers; hard offset shadows on hover. The globe draws the real world map in 0s and 1s and is the only thing that moves on its own; hovering colours it, digits near the cursor scramble, and it can be dragged to spin. It holds still for reduced motion (hover and drag still work).
 - **No brand names** on the site.
 
@@ -121,7 +123,7 @@ Built in the browser by plain code from the saved workflow. Same workflow in, sa
 
 - `HANDOFF.md`: what the workflow makes; what to prepare (the inputs nothing inside the chain provides); then each step in order with the block's name and slug, what it does, which earlier step's output it reads, what it must produce, and the check before moving on; then the run rules (stop on a failed check, write `MISSING:` instead of guessing, ask before anything that publishes or spends).
 - `workflow.json`: the graph (nodes, edges, order, versions) for tools and agents.
-- `skills/<slug>/SKILL.md` (and `boards/ecommerce.md` when the ecommerce add-on is on), so the agent uses the same skill names.
+- `skills/<slug>/SKILL.md`, so the agent uses the same skill names.
 - `README.txt`: three lines on how to use it ("Upload this folder to Claude, then say: follow HANDOFF.md").
 
 Order is a topological sort of the graph, ties broken by canvas position (top to bottom, left to right). A cycle is refused with a clear message.

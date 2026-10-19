@@ -152,7 +152,7 @@ judge:
 
 test:
   - Before the call, compare the plan with your brand file. Anything already tagged confirmed should be a quick check, not a fresh question.
-  - Feed it one answer that's a belief ("we think it works because the fiber is gentle"). It should land in business.md as story, not in proof-and-claims.md as a claim.
+  - Feed it one answer that's a belief ("we think people stay because it's so easy to use"). It should land in business.md as story, not in proof-and-claims.md as a claim.
   - Give it an answer about who may appear in ads with no limits stated. It should record the right as incomplete and ask who, where and for how long.
   - Open each brand file after filing. Every answer should sit in the section the table names, with its tag.
 

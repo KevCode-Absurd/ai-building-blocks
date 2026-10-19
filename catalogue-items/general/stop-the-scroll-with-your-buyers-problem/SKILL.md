@@ -30,7 +30,7 @@ You plan one designed image ad built on a problem the buyer already feels. Ask a
    Then say what the viewer should conclude: **this goes with that**, **this is like that** or **this is the opposite of that**.
 4. **Run the two-by-two.** Is it unexpected? Is it relevant? Yes and yes: keep it. Unexpected only: bring it back to the moment. Relevant only: add the twist again. Neither: start again from step 1.
 5. **Write the words.** Give the headline one job:
-   - **Gain**: what the buyer gets or stops having to do ("Greens with nothing to wash").
+   - **Gain**: what the buyer gets or stops having to do ("Greens with nothing to wash", "Dinner without the pile of pans").
    - **News**: something true they haven't heard (only facts on file).
    - **Curiosity**: a question about the thing in the picture, never about the reader.
    Headline on the image: 7 words or fewer, naming the moment or the gain, never the product name or the offer. One support line, in the brand's own words, if the picture needs it. The headline under the image: about 27 characters.

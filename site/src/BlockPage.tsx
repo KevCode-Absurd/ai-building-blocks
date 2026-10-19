@@ -1,9 +1,10 @@
 import { useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import { ArrowIcon, BlockCard, KitMenu } from "./ui";
-import { type Catalogue, type Page, cap, formatOf, kindInfo, kindOf, loadPage, loadSkillText, neighbours, pathOf, taskOf, testedOn, wireSteps } from "./lib/data";
+import { type Catalogue, type Page, cap, formatOf, kindInfo, kindOf, loadPage, loadSkillText, neighbours, pathOf, taskOf, wireSteps } from "./lib/data";
 import { markViewed } from "./lib/store";
 import { buildHandoffZip, download, finalOutputs, needsOf, orderFlow, zipName } from "./lib/handoff";
 import { businessText, getBusiness, hasBusiness, useBusiness, withBusiness } from "./lib/business";
+import { openTailor } from "./Tailor";
 import { BusinessNote, openBusiness } from "./Business";
 import { DownloadDialog } from "./DownloadDialog";
 import type { Flow } from "./lib/store";
@@ -154,26 +155,28 @@ export default function BlockPage({ c, slug, toast, toBuilder }: Props) {
 
   const has = (x?: unknown[]) => !!x && x.length > 0;
   const toc: [string, string, boolean][] = [
-    ["example", "See it work", !!p?.example],
-    ["install", "Add it to your AI", !isFlow],
     ["what", "What it does", !!p?.explain],
     ["io", "What you give it, what you get", true],
     ["steps", "The steps", isFlow],
+    ["install", "Add it to your AI", !isFlow],
     ["use", "How to use it", has(p?.how_to_use)],
     ["most", "What changes the result most", has(p?.tweaks)],
     ["test", "Test it", has(p?.judge) || has(p?.test)],
     ["best", "Works best with", has(p?.works_best_with?.tools) || has(p?.works_best_with?.inputs)],
     ["improve", "Make it fit your work", has(p?.improve)],
+    ["example", "See it work", !!p?.example],
     ["file", isFlow ? "The workflow file" : "The skill file", true],
-    ["with", "Run before and after", !isFlow && !!near && (near.before.length > 0 || near.after.length > 0)],
-  ];
+    ["with", "Run before and after", !isFlow && !!near && (near.before.length > 0 || near.after.length > 0)],  ];
 
   return (
     <main className="bp" data-testid="block-page" data-slug={b.slug}>
       {adding && <AddToFlow c={c} slug={b.slug} onClose={() => setAdding(false)} toast={toast} />}
       {dl && dlOrder && <DownloadDialog name={dl.name} zip={zipName(dl.name)} needs={needsOf(c, dlOrder)} finals={finalOutputs(c, dl, dlOrder)} onDownload={getPack} onClose={() => setDl(null)} />}
       <header className="wrap bp-hero">
-        <Link to="/#library" className="back"><span aria-hidden="true">←</span> Library</Link>
+        <div className="bp-top">
+          <Link to="/#library" className="back"><span aria-hidden="true">←</span> Library</Link>
+          <button className="link-btn tailor-link" onClick={() => openTailor(b.name)} data-testid="tailor-open">Want this skill tailored for you?</button>
+        </div>
         <p className="bp-kicker"><span className="kind">{kind.name}</span><Link to={`/?job=${task.id}#library`}>{task.name}</Link></p>
         <h1 className="bp-h1">{p?.headline || b.name}</h1>
         <p className="bp-sub">{p?.subhead || b.summary}</p>
@@ -201,7 +204,7 @@ export default function BlockPage({ c, slug, toast, toBuilder }: Props) {
           )}
         </div>
         <BusinessNote />
-        <p className="bp-file"><span>{b.name}</span><code>{b.slug}</code><span>{cap(b.level)}</span>{b.tested?.result === "pass" && <span data-testid="tested" title="Run on a real business's files and graded by a second AI against this page's checks">Tested {testedOn(b.tested.on)}</span>}</p>
+        <p className="bp-file"><span>{b.name}</span><code>{b.slug}</code><span>{cap(b.level)}</span>{b.tested?.result === "pass" && <span data-testid="tested" title="Run on a real business's files and graded by a second AI against this page's checks">Tested</span>}</p>
       </header>
 
       <div className="wrap bp-body">
@@ -212,23 +215,6 @@ export default function BlockPage({ c, slug, toast, toBuilder }: Props) {
 
         <div className="bp-main">
           {page === undefined && <p className="small">Loading…</p>}
-
-          {p?.example && (
-            <Section id="example" title="See it work" lead={BUSINESSES[p.example.business] ?? "A real run of this skill."} wide>
-              <Code name="what-you-get.txt" text={p.example.output} toast={toast} tall typed />
-              <details className="went-in">
-                <summary>See what went in</summary>
-                <p className="bp-note">This is what was pasted after the skill. Swap in your own details and you get the same kind of result for your own work.</p>
-                <Code name="what-went-in.txt" text={p.example.input} toast={toast} />
-              </details>
-            </Section>
-          )}
-
-          {!isFlow && (
-            <Section id="install" title="Add it to your AI once, then start it by name" lead="It takes about two minutes, once. Pick the AI you use.">
-              <Install b={b} skill={skill} toast={toast} />
-            </Section>
-          )}
 
           {p?.explain && (
             <Section id="what" title="What it does">
@@ -274,6 +260,12 @@ export default function BlockPage({ c, slug, toast, toBuilder }: Props) {
                   );
                 })}
               </ol>
+            </Section>
+          )}
+
+          {!isFlow && (
+            <Section id="install" title="Add it to your AI once, then start it by name" lead="It takes about two minutes, once. Pick the AI you use.">
+              <Install b={b} skill={skill} toast={toast} />
             </Section>
           )}
 
@@ -327,6 +319,17 @@ export default function BlockPage({ c, slug, toast, toBuilder }: Props) {
             </Section>
           )}
 
+          {p?.example && (
+            <Section id="example" title="See it work" lead={BUSINESSES[p.example.business] ?? "A real run of this skill."} wide>
+              <Code name="what-you-get.txt" text={p.example.output} toast={toast} tall typed />
+              <details className="went-in">
+                <summary>See what went in</summary>
+                <p className="bp-note">This is what was pasted after the skill. Swap in your own details and you get the same kind of result for your own work.</p>
+                <Code name="what-went-in.txt" text={p.example.input} toast={toast} />
+              </details>
+            </Section>
+          )}
+
           {has(p?.terms) && (
             <section className="bp-sec terms" aria-label="Words on this page">
               <h3>Words on this page</h3>
@@ -346,12 +349,6 @@ export default function BlockPage({ c, slug, toast, toBuilder }: Props) {
               <summary>Read the full {isFlow ? "workflow" : "skill"}</summary>
               {p ? <div className="prose" dangerouslySetInnerHTML={{ __html: p.html.skill }} /> : skill ? <pre className="prose">{skill}</pre> : <p className="small">Loading…</p>}
             </details>
-            {p?.html.addon && (
-              <details className="skill-file">
-                <summary>Extra steps for online stores</summary>
-                <div className="prose" dangerouslySetInnerHTML={{ __html: p.html.addon }} />
-              </details>
-            )}
           </Section>
 
           {!isFlow && near && (near.before.length > 0 || near.after.length > 0) && (

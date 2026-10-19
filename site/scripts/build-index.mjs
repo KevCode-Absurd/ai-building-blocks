@@ -44,11 +44,8 @@ for (const category of ["general", "ecommerce", "orchestrators"]) {
     try { item = YAML.parse(fs.readFileSync(yamlPath, "utf8")); } catch (e) { problems.push(`${category}/${slug}: ${e.message.split("\n")[0]}`); continue; }
     if (item.slug !== slug) problems.push(`${category}/${slug}: slug in item.yaml is "${item.slug}"`);
     const skill = fs.readFileSync(skillPath, "utf8");
-    const addon = path.join(folder, "boards", "ecommerce.md");
-    const hasAddon = fs.existsSync(addon);
     fs.mkdirSync(path.join(OUT_SKILLS, slug), { recursive: true });
     fs.copyFileSync(skillPath, path.join(OUT_SKILLS, slug, "SKILL.md"));
-    if (hasAddon) fs.copyFileSync(addon, path.join(OUT_SKILLS, slug, "ecommerce.md"));
     // Reference files and a licence travel with the skill, so a download installs complete.
     const refDir = path.join(folder, "references");
     const files = [...(fs.existsSync(refDir) ? fs.readdirSync(refDir).filter((f) => f.endsWith(".md")).sort().map((f) => `references/${f}`) : []), ...(fs.existsSync(path.join(folder, "LICENSE")) ? ["LICENSE"] : [])];
@@ -62,7 +59,7 @@ for (const category of ["general", "ecommerce", "orchestrators"]) {
       // Public sources a block was built from, shown on its page. Only http(s) links are kept.
       const credits = (item.credits ?? []).filter((c) => c && c.title && (!c.url || /^https?:\/\//.test(c.url))).map((c) => ({ title: String(c.title), by: c.by ? String(c.by) : "", url: c.url ? String(c.url) : "", used: c.used ? String(c.used) : "" }));
       if (credits.length) out.credits = credits;
-      out.html = { explain: page.explain ? md.parse(String(page.explain)) : "", skill: md.parse(bodyOf(skill)), addon: hasAddon ? md.parse(bodyOf(fs.readFileSync(addon, "utf8"))) : "" };
+      out.html = { explain: page.explain ? md.parse(String(page.explain)) : "", skill: md.parse(bodyOf(skill)) };
       fs.writeFileSync(path.join(OUT_PAGES, `${slug}.json`), JSON.stringify(out));
     }
     blocks.push({
@@ -86,7 +83,6 @@ for (const category of ["general", "ecommerce", "orchestrators"]) {
       tested: item.tested ? { on: String(item.tested.on), result: item.tested.result, business: item.tested.business ?? "sprout" } : null,
       version: String(item.version ?? "1.0.0"),
       words: skill.split(/\s+/).length,
-      addon: hasAddon,
       // The same look in the other format: a video block's image twin, or the other way round.
       twin: item.twin ?? null,
       files,

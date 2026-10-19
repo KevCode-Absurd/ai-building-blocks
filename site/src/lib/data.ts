@@ -22,7 +22,6 @@ export type Block = {
   tested: { on: string; result: "pass" | "fail"; business: string } | null;
   version: string;
   words: number;
-  addon: boolean;
   /** Extra files in the skill's folder, like references/types.md or LICENSE. */
   files: string[];
   /** The same look in the other format (image or video), if the library has it. */
@@ -46,7 +45,7 @@ export type Page = {
   /** Public sources the block was built from (item.yaml credits). */
   credits?: { title: string; by: string; url: string; used: string }[];
   /** Markdown already turned into HTML by the index build. */
-  html: { explain: string; skill: string; addon: string };
+  html: { explain: string; skill: string };
 };
 export type Catalogue = { built: string; portTypes: Record<string, string | null>; renamed: Record<string, string>; blocks: Block[]; bySlug: Record<string, Block> };
 
@@ -62,8 +61,8 @@ export const roleName = (r: Role) => ROLES.find((x) => x.id === r)?.name ?? r;
 
 export const LEVELS = ["beginner", "intermediate", "advanced", "expert"] as const;
 export const cap = (s: string) => s.charAt(0).toUpperCase() + s.slice(1);
-/** "2026-10-19" as "19 Oct 2026". */
-export const testedOn = (iso: string) => new Date(`${iso}T12:00:00Z`).toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric", timeZone: "UTC" });
+/** "2026-10-19" as "Oct 2026". Pages never show a day, only the month. */
+export const monthOf = (iso: string) => new Date(`${iso}T12:00:00Z`).toLocaleDateString("en-GB", { month: "short", year: "numeric", timeZone: "UTC" });
 const PORT_NAMES: Record<string, string> = {
   voc_reviews: "Customer reviews", pdp_copy: "Product page copy", ad_copy: "Ad copy", brand_brain: "Brand file",
   competitor_set: "Competitor set", reference_set: "Reference ads", ad_breakdowns: "Ad breakdowns", image_prompt: "Image prompt",
@@ -171,8 +170,3 @@ export const FUNCTION_MOVED: Record<string, string> = { designer: "ads", video: 
 export const formatOf = (b: Block): "image" | "video" | null => (b.task === "make-image-ads" ? "image" : b.task === "make-video-ads" ? "video" : null);
 export const functionsOf = (b: Block) => FUNCTIONS.filter((f) => f.tasks.includes(b.task));
 
-/** Who a block suits. Most work for anyone, at a job or in a business; some are only for shops selling physical products. */
-export const BUSINESSES: { id: string; name: string; test: (b: Block) => boolean }[] = [
-  { id: "any", name: "Anyone", test: (b) => b.category !== "ecommerce" },
-  { id: "store", name: "Online stores", test: (b) => b.category === "ecommerce" || b.addon },
-];

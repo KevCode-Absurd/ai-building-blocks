@@ -6,7 +6,7 @@
 // Every price is an input, so anyone can type in a newer one.
 
 export const CHECKED = "2026-10-19";
-const CHECKED_WORDS = "19 Oct 2026";
+const CHECKED_WORDS = "Oct 2026"; // shown on pages: the month only, never a day
 
 /** Models we price, from each lab's public pricing page. Prices are US dollars per million tokens. */
 export const MODELS = [
@@ -92,7 +92,7 @@ export default {
       { if: "runs = 0", text: "With no runs a month, the job costs nothing yet. Type how often you'll run it." },
       { text: "At {runs} runs a month, the cheapest model here costs {cheapestMonth} a month and the dearest costs {dearestMonth}." },
     ],
-    [{ text: `Prices are each lab's standard rate, read on ${CHECKED_WORDS}. You can change any price under "Prices per million tokens".` }],
+    [{ text: `Prices are each lab's standard rate, checked in ${CHECKED_WORDS}. You can change any price under "Prices per million tokens".` }],
   ],
   next: [
     { slug: "stop-paying-for-the-same-ai-mistake-twice", why: "Cut repeat runs by keeping a record of what went wrong last time." },
@@ -100,7 +100,7 @@ export default {
   ],
   sources: [
     { what: "Cost of one run", how: "(Tokens in × price in + tokens out × price out) ÷ 1,000,000. Labs price per million tokens." },
-    ...[...new Set(MODELS.map((m) => m.lab))].map((lab) => ({ what: `${lab} prices`, how: `${MODELS.find((m) => m.lab === lab).url}, read ${CHECKED_WORDS}.` })),
+    ...[...new Set(MODELS.map((m) => m.lab))].map((lab) => ({ what: `${lab} prices`, how: `${MODELS.find((m) => m.lab === lab).url}, checked ${CHECKED_WORDS}.` })),
   ],
   notes: [
     "Prices are in US dollars, at the standard rate: no batch discount and no caching. Caching and batch runs cost less.",

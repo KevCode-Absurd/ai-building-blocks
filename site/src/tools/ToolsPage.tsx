@@ -5,7 +5,7 @@ import { useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import "./tools.css";
 import { ArrowIcon } from "../ui";
 import { Link } from "../lib/router";
-import { pathOf, testedOn, useCatalogue } from "../lib/data";
+import { monthOf, pathOf, useCatalogue } from "../lib/data";
 import { E, EXAMPLES, SITE, TOOLS, filesOf, saveSteps, shelfLabel, type Input, type Line, type Tool } from "./registry";
 
 const TITLE = "AI Blocks · Making humanity AI native";
@@ -267,7 +267,7 @@ function ToolPage({ tool, toast }: { tool: Tool; toast: (m: string) => void }) {
           {tool.notes && tool.notes.length > 0 && (<><h3 className="sub-h">What it assumes</h3><ul className="mt-notes">{tool.notes.map((n) => <li key={n}>{n}</li>)}</ul></>)}
           <h3 className="sub-h">Checked by hand</h3>
           <p className="bp-note" data-testid="examples">{examples.length} worked examples, including the edge cases: {examples.map((x) => x.name.charAt(0).toLowerCase() + x.name.slice(1)).join("; ")}.</p>
-          <p className="mt-small">Version {tool.version}, updated {testedOn(tool.updated)}.{tool.checked ? ` Prices checked ${testedOn(tool.checked)}.` : ""} Nothing here promises a result: these are sums on the numbers you type.</p>
+          <p className="mt-small">Version {tool.version}.{tool.checked ? ` Prices checked ${monthOf(tool.checked)}.` : ""} Nothing here promises a result: these are sums on the numbers you type.</p>
         </section>
       </div>
     </main>

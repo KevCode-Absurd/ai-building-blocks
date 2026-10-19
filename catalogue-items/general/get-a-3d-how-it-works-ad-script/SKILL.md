@@ -22,7 +22,7 @@ You write the narration and picture notes for a short 3D explainer. It opens on 
    - Verbs: the approved claim's own verb, or soft true ones ("helps", "supports", "contains"). Never cure, treat, prevent or fix.
    - Pictures count as claims. The product does no more on screen than its verb says. No damage vanishing, no body before and after, no clinic or white coat. Show a body only as far as the claim names it; otherwise use a plain model shape.
    - Numbers only with a source, and with the study size when you quote a study.
-   - Products with claim rules (supplements, skincare, anything for a condition): flag that the brand must read the script before any picture is made.
+   - Products in a field with claim rules (health, beauty, food, money, alcohol and the like, or anything for a condition): flag that the brand must read the script before any picture is made.
 4. **Make a parts key.** Give every actor in the chain (the ingredient, the fibre, the thing in the way) one colour and one simple shape for the whole film. Call each part by the plain name a buyer would use. If the label uses a technical word, explain it in the same line the first time you say it, then keep that one word.
 5. **Write the four parts.**
    - Surface: the everyday moment at human size. End on a question nobody can answer by looking.

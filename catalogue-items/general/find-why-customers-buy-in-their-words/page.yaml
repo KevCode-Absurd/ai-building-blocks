@@ -76,7 +76,7 @@ example:
     Customer sources: 20 public reviews, numbered R1 to R20, with where
     each came from (brand site, brand site widget, retailer, review site),
     plus two short fragments, F1 and F2 (sprout/reviews.md). Captured
-    Sept to Oct 2026. No dates per review, no verified-buyer flags, no
+    over two months. No dates per review, no verified-buyer flags, no
     star ratings.
 
     Our product page text is below, so you can see what we already say.
@@ -139,7 +139,7 @@ example:
     "$94 a month" [R3]: a competitor's price, as one customer remembers it
 
     NOTES
-    Sources: 22 (20 reviews, 2 fragments), 4 kinds, Sept to Oct 2026.
+    Sources: 22 (20 reviews, 2 fragments), 4 kinds, over two months.
     Dropped: none; every entry gives a reason. Saturation: not reached.
     The last 5 sources in the file added 3 reasons not seen before
     (the taste at first, price, Sugar-Free), so more sources will
@@ -170,7 +170,7 @@ test:
   - Look for health or result claims among the best phrases. Every one should also sit on the "check before use" list.
 
 improve:
-  - "Add your product's risky topics to step 10 (for a supplement: digestion, weight, medication), so quotes about them always land on the check list."
+  - "Add your product's risky topics to step 10 (for a supplement: digestion, weight, medication; for a loan: fees, credit scores), so quotes about them always land on the check list."
   - Raise the pattern bar in step 5 if you have thousands of sources. Five people is a floor for small sets, not a rule for big ones.
   - Add the moment tag to your survey. Ask buyers what happened that made them start looking. It fills the push column fast.
   - Save the finished map to the customer profiles in your brand file, with each reason's status, so you don't rebuild the same ideas next quarter.

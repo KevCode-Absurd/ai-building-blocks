@@ -1,7 +1,7 @@
 slug: keep-facebook-from-blocking-your-ads
 renamed_from: meta-ad-policy-check
 name: "Keep Facebook from blocking your ads"
-summary: "Your Facebook or Instagram ad read against Meta's published ad rules, with what to fix first."
+summary: "Your Facebook or Instagram ad read against Meta's published ad rules, for any field, with a compliance score and each fix."
 category: general
 boards: [ecommerce]
 type: skill
@@ -19,9 +19,9 @@ uses: []
 origin: own
 source_ids: [CES-001]
 old_name: ad-compliance
-version: 1.1.0
+version: 1.2.0
 credits:
-  - {title: "Advertising Standards", by: "Meta Transparency Center", url: "https://transparency.meta.com/policies/ad-standards/", used: "The policy groups and rule names, read 19 Oct 2026"}
+  - {title: "Advertising Standards", by: "Meta Transparency Center", url: "https://transparency.meta.com/policies/ad-standards/", used: "The policy groups and rule names"}
   - {title: "Health and Wellness", by: "Meta Transparency Center", url: "https://transparency.meta.com/policies/ad-standards/restricted-goods-services/health-wellness/", used: "18+ rules, cure claims, before and after, time to result"}
   - {title: "Prohibited Commercial Practices", by: "Meta Transparency Center", url: "https://transparency.meta.com/policies/community-standards/fraud-scams/", used: "Pricing, misrepresentation, subscriptions, refunds, brand-bait and celebrity-bait"}
   - {title: "Privacy Violations and Personal Attributes", by: "Meta Transparency Center", url: "https://transparency.meta.com/policies/ad-standards/objectionable-content/privacy-violations-personal-attributes/", used: "The attribute list and allowed and banned wording"}

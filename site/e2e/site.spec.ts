@@ -98,11 +98,7 @@ test("picking a function, a job and filters narrow the library; the choice is ke
   await page.getByRole("button", { name: "Clear all" }).click();
   await expect(count).toHaveText(new RegExp(`^${all} results`));
   // The dropdowns: pick with the mouse, then with the keyboard.
-  await page.getByTestId("filter-biz").click();
-  await page.getByRole("option", { name: /Online stores/ }).click();
-  await expect(page).toHaveURL(/biz=store/);
-  const stores = parseInt(await count.innerText());
-  expect(stores).toBeLessThan(all);
+  await expect(page.getByTestId("filter-biz"), "every skill is for anyone, so there is no 'Made for' filter").toHaveCount(0);
   await page.mouse.move(0, 0); // keep the pointer off the list, so only the keys pick
   await page.getByTestId("filter-level").focus();
   await page.keyboard.press("ArrowDown");
@@ -159,6 +155,12 @@ test("a card opens the block's own page, with the outcome, a real example and th
   await out.getByTestId("code-replay").click(); // Skip
   await expect(out.locator(".ln.ghost")).toHaveCount(0);
   for (const id of ["what", "io", "use", "most", "test", "improve", "file"]) await expect(bp.locator(`#${id}`)).toBeVisible();
+  // What it does comes first, then what goes in and out, then adding it to your AI. A real run comes near the end.
+  const order = await bp.locator(".bp-main > section[id]").evaluateAll((els) => els.map((e) => e.id));
+  expect(order.slice(0, 3)).toEqual(["what", "io", "install"]);
+  expect(order.indexOf("example")).toBeGreaterThan(order.indexOf("test"));
+  expect(await bp.locator(".bp-toc a").evaluateAll((els) => els.map((e) => e.getAttribute("href")))).toEqual(order.map((id) => `#${id}`));
+  await expect(bp.getByText("Extra steps for online stores")).toHaveCount(0);
   await expect(bp.locator(".prose").first()).not.toContainText("name: ");
   await page.getByRole("link", { name: /Library/ }).first().click();
   await expect(page).toHaveURL(/\/(\?.*)?#library$/);
@@ -663,4 +665,31 @@ test("phone width: the header fits, and the step list shows each result as it ru
   const builder = await planGoal(page, "a landing page for my best ad");
   await builder.getByTestId("preview").click();
   await expect(builder.getByTestId("step-list").getByTestId("step-sample")).toContainText("what it made for Sprout");
+});
+
+test("anyone can ask for a skill tailored to their work, and it becomes an email to us", async ({ page }) => {
+  await page.goto(`/prompts/${MODEL}`);
+  await page.getByTestId("tailor-open").click();
+  const form = page.getByTestId("tailor-form");
+  await expect(form.getByTestId("tailor-skill")).toHaveValue("Write ads people believe");
+  await expect(form.getByTestId("tailor-send")).toBeDisabled();
+  await form.getByRole("button", { name: "Lead generation" }).click();
+  await expect(form.getByRole("button", { name: "Lead generation" })).toHaveAttribute("aria-pressed", "true");
+  await form.getByTestId("tailor-want").fill("We sell a course through a free webinar. Write the ads to get sign-ups.");
+  await form.getByTestId("tailor-name").fill("Sam");
+  await form.getByTestId("tailor-email").fill("sam@example.com");
+  await expect(form.getByTestId("tailor-send")).toBeEnabled();
+  await page.context().grantPermissions(["clipboard-read", "clipboard-write"]);
+  await form.getByTestId("tailor-copy").click();
+  const copied = await page.evaluate(() => navigator.clipboard.readText());
+  expect(copied).toContain("To: hello@useaiblocks.com");
+  expect(copied).toContain("Subject: Tailored skill: Write ads people believe for lead generation");
+  expect(copied).toContain("My work: Lead generation");
+  expect(copied).toContain("Write the ads to get sign-ups.");
+  expect(copied).toContain("Email: sam@example.com");
+  // It's on every page too, from the footer, with no skill filled in.
+  await page.keyboard.press("Escape");
+  await page.goto("/");
+  await page.getByTestId("tailor-footer").click();
+  await expect(page.getByTestId("tailor-skill")).toHaveValue("");
 });

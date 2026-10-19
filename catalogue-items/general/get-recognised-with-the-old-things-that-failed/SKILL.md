@@ -24,7 +24,7 @@ You brief a plain phone photo of the things someone tried and gave up on, where 
 
 ## Steps
 1. **Follow the house rules.**
-2. **List what was tried,** as kinds of product, from the story: "a greens powder", "a probiotic". Never a rival's name, pack or label.
+2. **List what was tried,** as kinds of product, from the story: "a greens powder", "a foam roller", "a budgeting app". Never a rival's name, pack or label.
 3. **Read how it was given up.** This sets the picture:
    - **Worn out**: used until it failed. Show one thing, close, with the wear the research describes (the bare patch, the split strap).
    - **Left half full**: bought, tried, dropped. Show how much is left: the tub two-thirds full, the scoop still inside, a little dust on the lid.

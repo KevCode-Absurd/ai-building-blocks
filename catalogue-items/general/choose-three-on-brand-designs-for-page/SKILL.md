@@ -51,4 +51,4 @@ Write `MISSING: <what>`. No reference images: plan from the brand and the produc
 - Claiming a design will raise revenue.
 
 ## Attribution
-Adapted from Anthropic's frontend-design skill and Impeccable by Paul Bakaus (both Apache 2.0); see NOTICE.md and LICENSE.txt. This file was changed from the originals: rewritten for landing pages, with a build brief and WCAG 2.2 checks added (October 2026).
+Adapted from Anthropic's frontend-design skill and Impeccable by Paul Bakaus (both Apache 2.0); see NOTICE.md and LICENSE.txt. This file was changed from the originals: rewritten for landing pages, with a build brief and WCAG 2.2 checks added.

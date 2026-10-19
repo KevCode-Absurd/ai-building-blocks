@@ -80,8 +80,8 @@ example:
   input: |
     [the skill]
 
-    The page: sprout.example/products/sprout, as text top to bottom, read
-    13 Oct 2026 with notes from 30 Sept (sprout/product-page.md). No
+    The page: sprout.example/products/sprout, as text top to bottom, with
+    earlier notes (sprout/product-page.md). No
     screenshots.
 
     Numbers: the practice ad file (sprout/ad-results.csv), with clicks,
@@ -94,7 +94,7 @@ example:
 
     1 MODE AND SOURCES
     Mode: with numbers, ad level only (clicks and purchases, no steps in
-    between). Page captured as text on 13 Oct 2026; no screenshots.
+    between). Page captured as text; no screenshots.
     Ads checked: all nine in the file.
 
     2 STEP TABLE (click to purchase only)

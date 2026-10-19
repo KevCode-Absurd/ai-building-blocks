@@ -173,7 +173,7 @@ tweaks:
   - what: Your targets and margin
     how: Add "target cost per sale $X, margin Y%" and it will call each ad above or below target. Without them it only describes.
   - what: The change log
-    how: List dated changes ("price page edited 3 Oct, new offer 10 Oct"). It will line each one up against the numbers and often finds the cause there.
+    how: List your changes with when each happened ("price page edited, then a new offer a week later"). It will line each one up against the numbers and often finds the cause there.
   - what: Store orders
     how: Paste your store's own order count and revenue for the same dates. It will compare them with what the ad platform claims and flag gaps.
 

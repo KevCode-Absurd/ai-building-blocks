@@ -188,7 +188,7 @@ terms:
   - term: Any-product list
     meaning: Rules true for any product, such as hands described in full and no generated children.
   - term: Product list
-    meaning: Rules about your product only, such as how your pack opens or what colour your gummies are.
+    meaning: Rules about your product only, such as how your pack opens or what colour the lid is.
   - term: Prompt line and check line
     meaning: The words to put in the next prompt, and the thing to look for in the result to know it worked.
   - term: One-off taste

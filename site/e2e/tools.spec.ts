@@ -121,7 +121,7 @@ test("AI run cost shows each model per run and per month, with the date the pric
   await expect(table.locator("tbody tr")).toHaveCount(12);
   await expect(table.locator("tr", { hasText: "Claude Opus 5.5" })).toContainText("$0.0320");
   await expect(table.locator("tr", { hasText: "Claude Opus 5.5" })).toContainText("$16.00");
-  await expect(page.getByTestId("answer")).toContainText("19 Oct 2026");
+  await expect(page.getByTestId("answer")).toContainText("checked in Oct 2026");
   await expect(page.getByTestId("currency")).toHaveCount(0); // lab prices are in dollars
   await fill(page, "runs", "1000");
   await expect(table.locator("tr", { hasText: "Claude Opus 5.5" })).toContainText("$32.00");

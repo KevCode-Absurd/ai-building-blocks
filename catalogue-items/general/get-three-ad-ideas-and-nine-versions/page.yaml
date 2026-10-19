@@ -98,7 +98,7 @@ example:
 
     Write the brief.
   output: |
-    AD BRIEF 2026-10-18, Sprout
+    AD BRIEF, Sprout
     EVIDENCE   Measured: ad-results.csv, 9 ads, 14 to 30 days. Practice
                numbers. No frequency or on/off in the file.
     MISSING    target return. The account's own: 24,668 / 21,500 = 1.15.
@@ -172,7 +172,7 @@ tweaks:
   - what: The last brief
     how: Paste it and the skill avoids repeating any idea or doubt from it, so each round tests something new.
   - what: Product type
-    how: For something kept, like a suitcase or a mattress, it adds an idea for buyers comparing options. For something used up, like a daily gummy, it focuses on the daily moment and a safe first try.
+    how: For something kept, like a suitcase or a mattress, it adds an idea for buyers comparing options. For something used up, like coffee or a daily gummy, it focuses on the daily moment and a safe first try.
 
 judge:
   - The header grades the evidence, and anything missing (like a target) is written as MISSING, not guessed.

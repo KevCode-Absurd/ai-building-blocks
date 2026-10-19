@@ -176,7 +176,7 @@ test:
 
 improve:
   - Paste your product photo list and how the product opens into "What you need" in the skill file, so the product is always rebuilt the right way (in the example, the pouch is never shown torn).
-  - Add your claims list to the skill, so every remake flags lines like "probiotics" against your own facts, without pasting.
+  - Add your claims list to the skill, so every remake flags lines like "probiotics" or "lowest price" against your own facts, without pasting.
   - If you always remake into one style (for example 9:16 live action), write its length and slot limits into step 3 as fixed rules.
   - Fix flagged lines in the original ad first, then remake it. A remake carries every word over, mistakes included.
   - Pair it with a skill that checks a finished ad before you spend, once the video is made.

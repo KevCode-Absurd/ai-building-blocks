@@ -30,7 +30,7 @@ you_get:
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in. A tool that can read websites works best.
-  - Give it your website address. Add any brand material you have, each piece with a short label and date, like "product page, Oct 2026".
+  - Give it your website address. Add any brand material you have, each piece with a short label and when you got it, like "product page, read this week".
   - Check the fact sheet it shows you and correct anything wrong. Then answer the questions you can and skip the rest.
   - Say what comes next, for example "a designer is making image ads", to get a slice with only what that step needs.
   - Read the MISSING lines and pending claims first. Nobody should use those in an ad until you find proof.
@@ -83,9 +83,9 @@ example:
 
     Website: sprout.example
     Brand material I already have:
-    - brand notes, Oct 2026 (colours, fonts, pouch, product rules)
-    - live ads, 4 Oct 2026 (15 headlines, 2 main texts)
-    - public reviews, Sept to Oct 2026, numbered R1 to R20
+    - brand notes (colours, fonts, pouch, product rules)
+    - live ads (15 headlines, 2 main texts)
+    - public reviews, numbered R1 to R20
     Next step: image work. A designer is making image ads for the
     Original pouch.
 
@@ -102,7 +102,7 @@ example:
     Sprout | daily greens gummies in single-serve packs | greens gummy
     supplement | established [inferred: sold in big-box stores] |
     Original Adults $49.99 every 4 weeks or $66.65 once [confirmed:
-    product page, 13 Oct 2026] | #00582D [confirmed: brand notes]
+    product page] | #00582D [confirmed: brand notes]
     > You: looks right
 
     --- 00-start-here.md (top) ---
@@ -114,7 +114,7 @@ example:
     --- offers.md (excerpt) ---
     Sprout Original (Adults), Low Sugar, 28 packs
       One-time $66.65 ($2.38/day). Subscribe $49.99 every 4 weeks
-      [confirmed: product page, 13 Oct 2026]
+      [confirmed: product page]
       First order $29.99, only with the text sign-up discount
       [confirmed: product page footer; you, question 2]
       Discount: 52% and up to 55% on this page, 49% and 58% on others,
@@ -128,8 +128,8 @@ example:
     "Clinically tested for nutrient absorption" | approved | 2025
       study, 120 adults: vitamin C +40.1%, folate +20.5% | name the
       study and those two nutrients only
-    "Third-party tested" | approved | "Tested by [an outside lab] in
-      SEP 2026" | product page | name what was tested
+    "Third-party tested" | approved | "Tested by [an outside lab]" |
+      product page | name what was tested
     "Supports digestion and gut health" | approved | on the label,
       brand notes list it as fine to repeat | as written
     "Supports immunity + stress relief" | pending | nothing on file

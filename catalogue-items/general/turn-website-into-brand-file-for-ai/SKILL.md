@@ -15,7 +15,7 @@ You build a folder of eight plain markdown files about one business, from its we
 
 ## What you need
 - **Website address** (required). Pasted pages count, if the site can't be read.
-- **Brand material you already have** (optional): product sheets, packaging photos, a style guide, past ads, pasted pages. Give each piece a short label and date ("product page, Oct 2026") so tags can name it.
+- **Brand material you already have** (optional): product sheets, packaging photos, a style guide, past ads, pasted pages. Give each piece a short label and when you got it ("product page, read this week") so tags can name it.
 - **Customer words** (optional): reviews, survey answers, support emails, call notes, each quote numbered.
 - **Results** (optional): ads, emails, pages or offers that worked or didn't. Use a connected tool first if there is one.
 - **The next step** (optional): planning, writing or image work, if a slice is wanted.

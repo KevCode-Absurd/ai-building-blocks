@@ -1,9 +1,9 @@
 # For online stores: Keep Facebook from blocking your ads
 
 ## The rules that trip up store ads most
-For supplement, food, skincare and household brands, read these before the rest of the table.
+For any shop, read these before the rest of the table. The first one matters most if you sell anything for health, beauty, diet or the body.
 
-1. **Health and wellness.** Supplements, diet and weight products run to people 18 and over. Leave out any line that runs down how people look, any close-up of pinched fat, and any cure claim for a listed disease. A result you show says how long it took, and a big or dated promise carries a qualifier. Everyday food, protein products and non-permanent cosmetics don't need 18+.
+1. **Health and wellness.** Diet, weight and health products, supplements among them, run to people 18 and over. Leave out any line that runs down how people look, any close-up of pinched fat, and any cure claim for a listed disease. A result you show says how long it took, and a big or dated promise carries a qualifier. Everyday food, protein products and non-permanent cosmetics don't need 18+.
 2. **Prohibited commercial practices.** The price, discount, "free" gift, delivery and refund terms in the ad are what the shop really charges and does. A subscription shows its renewal price and how to cancel before the sale. No endorsement nobody gave, and no famous face or voice without a signed deal.
 3. **Privacy and personal attributes.** Say what the product does and who it's for, never what the viewer is. Breaks the rule: "Do you have diabetes?", "Tired of your acne?". Fixed: "Diabetes-friendly meal plans", "A cream for acne-prone skin".
 4. **Eating disorders.** No weight before-and-after that isn't about the product, no hollow-cheeked or ribs-showing images, no admission of extreme dieting.

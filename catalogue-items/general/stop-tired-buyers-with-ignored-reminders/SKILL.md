@@ -27,7 +27,7 @@ You write the brief for a phone screen of reminders the narrator set for themsel
 1. **Follow the house rules.**
 2. **Pick how they pile up:**
    - **Repeating:** the same reminder at set gaps (9:00, 9:30, 10:00). Suits a task people simply forget.
-   - **Getting sharper:** each reminder blunter than the last ("vitamins", "vitamins!!", "did you take them"). Suits a routine that keeps slipping under pressure.
+   - **Getting sharper:** each reminder blunter than the last ("stretch", "stretch!!", "did you actually stretch"). Suits a routine that keeps slipping under pressure.
    - **Spread over days:** one reminder in a list, overdue on several dates. Suits a chore that comes round weekly.
 3. **Write 1 to 4 reminders** of 2 to 8 words, each with a time or date. Each one exists because of the problem in the story. Take the story's wording if it quotes them.
 4. **Set the clock** a few minutes after the last reminder, so the screen shows they were ignored. For a list, show today's date past the last one.

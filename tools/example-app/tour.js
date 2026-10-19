@@ -104,7 +104,8 @@
   // Pictures and links added after the page loads may still point at the app's own server paths.
   var ATTRS = ["src", "href", "poster"];
   function patch(el) {
-    if (!el || el.nodeType !== 1) return;
+    if (!el || el.nodeType !== 1 || (el.closest && el.closest("#tour-bar"))) return; // the bar's links leave the app
+
     for (var i = 0; i < ATTRS.length; i++) {
       var v = el.getAttribute(ATTRS[i]);
       if (v && v.charAt(0) === "/") { var f = fix(v); if (f !== v) el.setAttribute(ATTRS[i], f); }

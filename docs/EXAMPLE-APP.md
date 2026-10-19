@@ -10,8 +10,9 @@ The open-source app people install is the separate `mercatura-client-starter` re
 
 `tools/example-app/tour.js` runs first on every saved page.
 
-- **Reads** (pictures, data the screen asks for) go to the saved files. Ones asked for with a query string (`?w=320`) are in `_q/`, listed in `_q/index.json`.
-- **Anything that would make, change or send something** (a POST, a server action, a form) is stopped. A note says "Nothing is made, changed or saved here."
+- **Reads** (pictures, data the screen asks for) go to the saved files. Ones asked for with a query string (`?w=320`), or with no file extension (`/api/avatar-library`), are in `_q/`, listed in `_q/index.json`. A screen opened with a query (`/production?job=job_018`) is a saved page in `_q/` too: the tour opens it and puts the address back.
+- **Data a panel loads as it opens** (a job's drawer, for example) comes from a Next.js server action. The crawl saved each one's answer in `_a/`, keyed by the action and what it sent, and the tour plays it back.
+- **Anything that would make, change or send something** (any other POST, server action or form) is stopped. If someone has just clicked, a note says "Nothing is made, changed or saved here."
 - **Moving between screens:** the app asks its server for the next screen, gets no answer, and loads the saved page instead.
 - **A small bar** says it's an example app and links back to AI Blocks.
 
@@ -24,7 +25,7 @@ Do this when the app changes. It needs a copy of the Creative Engine repo and it
 1. **Copy the app.** Clone the repo into a scratch folder and copy in the data folders. Keep the path short (Windows: `subst Q: <folder>`), or the image library can't open the pictures.
 2. **Build it under the base path.** In the copy's `next.config.ts`, set `basePath: "/example-app"`. Then run `pnpm install --frozen-lockfile` and `LLM_MODE=mock pnpm next build`.
 3. **Start it with no keys.** Run `LLM_MODE=mock pnpm next start -p 3300`. There's no `.env` in the copy, so nothing can call a paid service.
-4. **Save the screens.** Run `node tools/example-app/snapshot.mjs --base http://localhost:3300/example-app --out <raw folder>`. Set how many of each detail page to keep in `CAPS`.
+4. **Save the screens.** Run `node tools/example-app/snapshot.mjs --base http://localhost:3300/example-app --out <raw folder>`. Set how many of each detail page to keep in `CAPS`. To re-save a few screens into the same folder, add `--start /a,/b --follow 0`. In Git Bash, put `MSYS_NO_PATHCONV=1` in front, or `/a` becomes a Windows path.
 5. **Finish it.** Run `node tools/example-app/finish.mjs --raw <raw folder> --out site/public`. This adds the tour script and bar, points links and pictures at the saved files, and makes big pictures smaller.
 6. **Take the screenshots for /apps.** With the site's dev server running, run `node tools/example-app/shots.mjs`.
 7. **Check it.** Run `node tools/check-masking.mjs`; no client words may appear. Then run `npx playwright test e2e/apps.spec.ts` from `site/`.

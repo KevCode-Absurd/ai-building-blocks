@@ -53,7 +53,8 @@ test("the example app works with no server: screens open, links move between the
   await page.locator('a[href="/example-app/references"]').first().click();
   await expect(page).toHaveURL(/\/example-app\/references$/);
   await expect(page.locator("main h1, main h2").first()).toBeVisible();
-  // Anything that would make or save something is stopped, with a note.
+  // Anything that would make or save something is stopped, with a note for the person who clicked.
+  await page.mouse.click(4, 450);
   const status = await page.evaluate(() => fetch("/api/jobs", { method: "POST", body: "{}" }).then((r) => r.status));
   expect(status).toBe(403);
   await expect(page.locator("#tour-toast")).toContainText("Nothing is made, changed or saved here");

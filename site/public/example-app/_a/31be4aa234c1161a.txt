@@ -1,0 +1,103 @@
+0:{"a":"$@1","f":"","q":"?job=job_005","i":false,"b":"FOfrVa0a1hochL3keaTrA"}
+2:T31fe,# UGC creator brief: The half-used greens tub
+
+**Brand:** Grüns · **Script:** scr_013 v1 · **Length:** 60s (163 words, about 63s)
+**Concept:** Serial quitter x the one habit that sticks x first sub $29.99
+**Meta ad set:** `GRU|C004|quitter|serial-quitter|first_sub|PA`
+**Ad name:** `GRU|C004|S013v1|ugc|hk1|creator`
+
+## Who this is for
+
+per_quitter
+
+**Awareness stage:** Problem aware. Everyone working on this ad builds to this 1 stage.
+**What the viewer should feel:** Seen: "That's exactly what I do."
+
+**The angle:** I buy a supplement in January and it's dead in the cabinet by February, every single year. This is a pack of gummies I actually reach for, so this time the habit lasts.
+**The offer:** First subscription order (with SMS sign-up discount), USD 29.99 (1.07 a day). 'Subs now start at $29.99'. Discount % differs by surface (52 to 61%); never quote one number as fact.
+**The guarantee:** 30-day money-back guarantee on your first order.
+
+## The script
+
+| Beat | Spoken line | On-screen text | Visual |
+|---|---|---|---|
+| hook | If there's a half-used greens tub in your cabinet, you know how this goes. | the greens tub I quit 🙃 | Selfie, handheld. Creator already mid-action: pulls a half-used greens powder tub (no visible competitor branding, label turned away) out of a kitchen cabinet and holds it to camera. Grüns pouch sits blurred on the counter behind her. |
+| problem | You buy it in January. You choke it down for a few weeks. Then you skip a morning and feel relieved and defeated. | Jan: new tub. Week 3: skip. | Quick cuts every 2 to 3 seconds: close-up of a scoop going into gritty water; creator grimacing mid-sip; then the tub pushed to the back of the cabinet. Overlay changes with each cut. |
+| problem | By February, it's in the graveyard. | the cabinet graveyard | Wide shot of the open cabinet: 2 or 3 unbranded tubs and a pill organizer lined up. Slow push-in. Creator closes the door. |
+| promise | You need one habit you'll actually keep. | 1 habit you actually keep | Back to selfie, creator leaning on the counter, talking straight to camera. Grüns pouch now in her hand, label partly visible, not named. |
+| mechanism | So here's a pack of gummies. No scoop, no shaker, no gritty water. Rip it open and eat them. | No scoop. No shaker. Rip. Eat. | Close-up demo, sound on for the rip. Hands tear open 1 daily sachet, tip the gummies into a palm, eat 1. Cut to a split screen: scoop and shaker on the left crossed out, single sachet on the right. |
+| mechanism | One pack has 60+ ingredients, 21 vitamins and minerals and 6 grams of fiber. | 60+ ingredients · 21 vitamins & minerals · 6g fiber | Macro of the gummies in an open palm, then the creator turns the pouch to show the real Supplement Facts panel to camera. Each number pops on screen as it's said. |
+| objection | Think you'll quit this one too? Fair. | "I always quit, why would this be different" | Selfie, creator raises an eyebrow and nods. Overlay styled as a comment bubble paraphrasing the doubt (not presented as a real comment). |
+| proof | In a survey of over 3,000 customers, 80% take it every single day. | 80% take it every day (Grüns survey, 3,000+ customers) | Clean text card or the real survey stat from gruns.co shown as a screen recording. Cut back to creator grabbing a sachet from her bag on the way out the door. |
+| bridge | Heads up, some people get gas the first few days while they adjust. That's normal. | First few days: some gas while you adjust. Normal. | Selfie, casual and honest tone, creator shrugs. Pouch on the counter in frame. Keep it light, no grimace. |
+| offer | It's Grüns. Your first subscription order is $29.99 for 28 packs, about $1.07 a day, then $49.99 after that. | Grüns · 1st sub order $29.99 (about $1.07/day) · then $49.99 | Product finally named. Creator holds the Low Sugar Original pouch up to camera, then fans out a few sachets on the counter. Price card animates in within the safe zone. |
+| risk reversal | Taste is personal. If it's not for you, your first order has a 30-day money-back guarantee. | 30-day money-back guarantee · first order only | Close-up of creator eating 1 gummy, then a guarantee card held for 2 seconds. |
+| cta | Tap the link. Start this week, not next January. | 1st order $29.99 · 30-day guarantee (first order) · Tap the link | Creator points down to the link. End card held about 2 seconds: pouch, price framing, guarantee with 'first order only', renewal price, and FDA disclaimer in small text. |
+
+## Hook variants
+
+Record every hook as a separate take. It takes minutes and gives 4 or more ads.
+
+| # | Type | Spoken hook | On-screen text | First frame |
+|---|---|---|---|---|
+| 1 | accommodation | If there's a half-used greens tub in your cabinet, you know how this goes. | the greens tub I quit 🙃 | Hand pulling a half-used, unbranded greens tub out of a kitchen cabinet, selfie angle. |
+| 2 | confrontation | That cabinet full of half-used supplements? That's the actual problem. | the cabinet graveyard | Cabinet door swinging open on 3 half-used tubs and an abandoned pill organizer. |
+| 3 | truth bomb | Your greens powder can't do a thing sitting in the cabinet. | the best greens = the ones you take | Close-up of a dusty, half-used tub on a cabinet shelf, a finger tapping the lid. |
+| 4 | curiosity gap | Why do greens habits always die by February? | why my greens habit dies in Feb | Calendar on the fridge flipped from January to February, a greens tub sitting beneath it. |
+| 5 | specific proof | In one customer survey, 80% took their greens every single day. That's rare. | 80% take it every day | Creator mid-rip of a single sachet, gummies tipping into her palm, stat text already on screen. |
+
+## Notes for the creator
+
+- **Who should be on camera:** male, mid 30s; Short brown hair, relaxed and approachable, slightly tired but upbeat; Casual crew-neck tee and a zip hoodie. Setting: Home kitchen counter or desk at a home office in the morning.
+- **Accent:** American (general US), for the US market.
+- **Only say "I" about things you have really done with the product.** If a line isn't true for you, say it in your own words or tell us, and we'll change it.
+- Real light, a real room, phone camera. No ring-light glow, no hype voice.
+- Start mid-action. No greeting, no "so", no logo.
+- **Shoot 1 take on script and 1 in your own words. We will run both.**
+
+## Do and don't
+
+- Do: Casual internet cadence, like a funny friend who is into wellness but not preachy
+- Do: Say the gross thing plainly: 'better poops', 'Fix the Hot Girl Tummy'
+- Do: Short 3-beat rhythms: 'Rip. Tip. Enjoy.'
+- Do: Lead with numbers: 60+ ingredients, 21 vitamins and minerals, 6g fiber, 1 pack
+- Do: Name the enemy by how it feels: chalky powders, gagging on pills, a cobbled-together stack
+- Do: Tie every benefit to ease: 1 pack, grab and go
+- Don't: Clinical or lab-coat tone in hooks (science goes in the proof beat)
+- Don't: Guilt or fear about health, or shaming parents
+- Don't: Disease claims: cures, treats, prevents
+- Don't: Long paragraphs
+- Don't: Em dashes
+- Don't: Generating Shrek, Minions or Popsicle characters (licensed IP): use flavor names only
+- Don't: Quoting a single discount % as fact, or promising the guarantee on repeat orders
+- Never say: "cures", "treats", "prevents", "cure IBS", "treats bloating", "heals", "guarantee on every order", "clinically proven to"
+
+## Guardrails (from refunds and complaints)
+
+- Never claim Sugar-Free is healthier or better than Low Sugar. Ads must warn that Sugar-Free may cause stomach upset (gas, cramping, bloating) in sensitive stomachs, and recommend Low Sugar as the gentler option for digestive sensitivity. Banned phrases: "sugar-free healthier", "sugar-free better", "sugar-free gentler".
+- Do not promise instant comfort or immediate results. Ads must disclose that some customers experience gas, bloating, or gurgles in the first few days as the body adjusts, and that this is normal. Banned phrases: "instant comfort", "immediate relief", "no adjustment period".
+- Emphasize the 30-day money-back guarantee as a risk-free trial. Ads should frame the guarantee as protection against wasted money, not as a promise of fast refund processing.
+- Do not claim 'easy cancel' or 'cancel anytime' unless the cancellation flow is genuinely simple and does not loop or redirect to pause options. If claiming easy cancellation, be prepared to back it with frictionless UX. Banned phrases: "easy cancel", "cancel anytime", "one-click cancel".
+- The 30-day guarantee applies to the first order only. Ads and all checkout pages must state 'first order only' clearly and upfront to prevent refund disputes on subsequent orders. Banned phrases: "30-day guarantee all orders", "money-back guarantee every order".
+- Limited-time flavors are available for one month only, then the subscription reverts to Original. Ads and cart must state this swap-back rule clearly before purchase so customers are not surprised when their second box arrives. Banned phrases: "lto flavor continues", "limited flavor permanent".
+- Do not overpromise taste or claim every customer will love the flavor. Ads should acknowledge that taste is personal and lean on the 30-day guarantee as the safety net for flavor mismatches. Banned phrases: "tastes like candy", "everyone loves the taste", "delicious snack".
+- Never promise fast results, energy boosts, or digestion improvements within a specific timeframe (e.g., 2 weeks). Ads should focus on the daily habit and nutrient content, not on speed of benefit. Banned phrases: "energy in two weeks", "better digestion fast", "results in 14 days", "energy boost guaranteed".
+- Do not promise that picky eaters or all children will enjoy the gummies. Ads should acknowledge that taste and texture are personal, especially for kids, and recommend the 30-day guarantee for families trying them. Banned phrases: "kids love them", "picky eaters will enjoy", "all children love".
+- Do not promise constant availability or guarantee that customers can always swap flavors or reorder their preferred variant. Ads should note that popular flavors may sell out and encourage early reorder. Banned phrases: "always in stock", "guaranteed availability", "swap anytime".
+- Do not promise that limited-time flavors will work for the whole family. Ads should acknowledge that flavor preference is personal and remind customers of the 30-day guarantee if a family member dislikes the LTO variant. Banned phrases: "whole family loves", "kids will love this", "family favorite flavor".
+
+## Delivery
+
+- 9:16 vertical, 1080 x 1920 or better. Keep faces, product and text clear of the top 14% and bottom 20%.
+- Captions off: deliver the video clean, with no captions or text drawn into the picture. They are added where the ad is edited or run. The first frame must still make sense with the sound off.
+- Hold the end card (action, price, guarantee) for about 2 seconds.
+- File name: `GRU_C004_S013v1_ugc_hk1_creator_hk1.mp4`, then `_hk2`, `_hk3` for each hook take.
+- The mechanism beat does most of the persuading. Formats that suit it: Claymation, CGI explainer, Cartoon, UGC (AI or human creator).
+
+## What this ad tests
+
+This script tests the accommodation entry (the cabinet graveyard) with the format mechanism (a rip-and-eat pack vs scoop and shaker) as the reason it sticks; run the 5 hooks on this one body first and compare hook rate and hold to 3 to 15 seconds. If it wins, cut a static of the winning hook plus the 80% stat for the image ad skill, and make a 30s version and a 1st person story version with a real customer who quit powders.
+
+## Open items
+
+Spoken words: 162 (target 155, within 90 to 105%). Numbers traced: 60+, 21, 6g (clm_formula); 3,000+ and 80% (clm_adherence_survey, brand-reported, so the overlay attributes it to a Grüns survey); $29.99, $1.07/day and $49.99 (off_first_sub, off_sub_28). No discount % quoted. Guarantee stated as first order only on screen and in speech. Early adjustment disclosure included per guardrail. No 'cancel anytime' or 'easy cancel' language used. Taste framed as personal; no taste promise. No timeline or speed of results promised. Identity close skipped to stay inside the word target. Compliance flags: show the Low Sugar pouch only; if a Sugar-Free variant appears anywhere, add the stomach-upset warning and recommend Low Sugar. Add the FDA disclaimer to the end card. Free shipping deliberately left out because the brand brain only confirms it on the standard subscription, so verify before adding it. The competitor tub in the hook must have no visible brand. The objection overlay is a paraphrase of survey language and must not be styled as a real comment from a named user. Creator delivers in 2nd person, so no 1st person claims are needed.1:{"ok":true,"job":{"id":"job_005","brand_id":"gruns","created_at":"2026-10-01T12:09:33.666Z","updated_at":"2026-10-07T18:05:46.200Z","script_id":"scr_013","output_type":"human_brief_ugc","skill":null,"count":1,"payload":{},"status":"in_review","assets":[{"path":"job_005/brief.md","kind":"doc","caption":"Brief (markdown)"}],"review_notes":null,"meta_ad_name":"GRU|C004|S013v1|ugc|hk1|creator","tag":"net_new","production":{"recipe":"brief","preset":"default","aspect":"4:5","resolution":"1080","segments":0,"cards":0,"notes":"","product_id":"prd_original_adults","reference_id":null,"context_used":{"brief":["brand","market","accent","offer","guarantee","voice","guardrails","forbidden_claims","product","product_facts","terms"]},"skills_used":[],"plan_status":"none","audit":[],"clips":[],"next":"done","log":[{"at":"2026-10-01T12:09:51.336Z","step":"brief","message":"Brief written from the script, concept and brand brain"},{"at":"2026-10-06T15:41:31.613Z","step":"brief","message":"Captions switched on"},{"at":"2026-10-06T15:41:31.637Z","step":"brief","message":"Brief written from the script, concept and brand brain"},{"at":"2026-10-06T15:41:33.595Z","step":"brief","message":"Captions switched off"},{"at":"2026-10-06T15:41:33.606Z","step":"brief","message":"Brief written from the script, concept and brand brain"},{"at":"2026-10-06T15:41:36.139Z","step":"brief","message":"Captions switched on"},{"at":"2026-10-06T15:41:36.147Z","step":"brief","message":"Brief written from the script, concept and brand brain"},{"at":"2026-10-06T15:41:37.744Z","step":"brief","message":"Captions switched off"},{"at":"2026-10-06T15:41:37.752Z","step":"brief","message":"Brief written from the script, concept and brand brain"},{"at":"2026-10-06T15:41:41.719Z","step":"brief","message":"Captions switched on"},{"at":"2026-10-06T15:41:41.727Z","step":"brief","message":"Brief written from the script, concept and brand brain"},{"at":"2026-10-06T15:41:45.781Z","step":"brief","message":"Captions switched off"},{"at":"2026-10-06T15:41:45.794Z","step":"brief","message":"Brief written from the script, concept and brand brain"}],"brief_markdown":"$2"},"error":null}}

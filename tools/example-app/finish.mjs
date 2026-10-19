@@ -69,7 +69,7 @@ fs.rmSync(DST, { recursive: true, force: true });
 await walk(SRC);
 // A file asked for with a query is also kept under its plain name, so a request that skips the lookup still works.
 for (const [key, file] of Object.entries(Q)) {
-  const plain = path.join(DST, key.split("?")[0]);
+  const plain = path.join(DST, key.split("?")[0].slice(BASE.length));
   const saved = path.join(DST, file.slice(BASE.length + 1));
   if (file.endsWith(".html") || fs.existsSync(plain) || !fs.existsSync(saved) || fs.statSync(saved).size > 200_000) continue;
   fs.mkdirSync(path.dirname(plain), { recursive: true });

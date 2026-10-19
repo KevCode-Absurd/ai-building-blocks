@@ -721,6 +721,7 @@ test("a picture skill says what turns its prompt into a picture, and shows a fin
 
 test("every skill has questions and comments on the side, kept on that skill", async ({ page }) => {
   const q = `Does it work with phone photos? ${Date.now()}`;
+  const answer = `Yes, if the label is sharp. ${Date.now()}`; // the dev server keeps comments until it stops
   await page.goto("/skills/knitted-wool-image-ad-maker");
   await page.getByTestId("comments-open").click();
   const panel = page.getByTestId("comments");
@@ -734,9 +735,9 @@ test("every skill has questions and comments on the side, kept on that skill", a
   await page.reload();
   await page.getByTestId("comments-open").click();
   await panel.getByTestId("comment").filter({ hasText: q }).getByTestId("comment-reply").click();
-  await panel.getByTestId("reply-form").locator("textarea").fill("Yes, if the label is sharp.");
+  await panel.getByTestId("reply-form").locator("textarea").fill(answer);
   await panel.getByTestId("reply-form").getByTestId("comment-post").click();
-  await expect(panel.getByTestId("comment").filter({ hasText: "Yes, if the label is sharp." })).toContainText("Answer from us");
+  await expect(panel.getByTestId("comment").filter({ hasText: answer })).toContainText("Answer from us");
   await expect(page.getByTestId("comments-count")).not.toHaveText("0");
   // Another skill doesn't show it.
   await page.goto("/skills/watercolor-image-ad-maker#comments");

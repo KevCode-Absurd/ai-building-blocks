@@ -10,7 +10,9 @@
 .ap-shot { display: block; border: 1px solid var(--line); border-radius: 14px; overflow: hidden; background: var(--panel); box-shadow: 0 1px 0 var(--line); transition: transform 0.15s, box-shadow 0.15s, border-color 0.15s; }
 .ap-shot:hover { transform: translate(-3px, -3px); box-shadow: var(--hard); border-color: var(--text); }
 .ap-shot img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 10; object-fit: cover; object-position: top; }
-.ap-areas { display: grid; grid-template-columns: repeat(auto-fill, minmax(270px, 1fr)); gap: 16px; }
+.ap-areas { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+@media (max-width: 900px) { .ap-areas { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 560px) { .ap-areas { grid-template-columns: 1fr; } }
 .ap-area { display: flex; flex-direction: column; border: 1px solid var(--line); border-radius: 12px; overflow: hidden; background: var(--panel); transition: transform 0.12s, box-shadow 0.12s, border-color 0.12s; }
 .ap-area:hover { transform: translate(-3px, -3px); box-shadow: var(--hard); border-color: var(--text); }
 .ap-area:focus-visible, .ap-shot:focus-visible { outline: 2px solid var(--text); outline-offset: 3px; }

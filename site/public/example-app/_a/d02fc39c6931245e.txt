@@ -1,0 +1,68 @@
+0:{"a":"$@1","f":"","q":"?job=job_118","i":false,"b":"FOfrVa0a1hochL3keaTrA"}
+2:Tc4b,9:16 video, 7 seconds, 5 shots with hard cuts at 1.2s, 2.4s, 3.9s and 5s; each cut is to a new camera set-up, a different size and angle, and the camera cuts only there. UGC (AI or human creator).
+Audio: the woman's voice and the room's own sounds, nothing else.
+References:
+@Image1 defines the woman: the face.
+@Image2 defines the same woman, waist up.
+@Image3 defines the same woman, full figure.
+@Image4 defines the same woman, in profile.
+@Image5 defines the hands of the same woman.
+@Image6 is the first frame.
+@Image7 is shot 2.
+@Image8 is shot 3.
+@Image9 is shot 4.
+@Image10 is shot 5, the last.
+@Image1, @Image2, @Image3, @Image4 and @Image5 show 1 person, and only that person appears.
+No shot copies a reference picture's pose or framing.
+Each shot is set up as its still shows: full frame, hard cuts, no grid.
+Camera: A phone-video feel: close and slightly off-centre when held by hand.
+The only objects, each in the shots that name it: black phone; steel spoon; chalky powder; shaker; plain bottles. Each keeps its shape, size and printing from shot to shot.
+Person: the woman; the same adult in every shot, and the only person in the frame.
+Dialogue language: English, American (general US) accent.
+[0-1.2s] Shot 1 (close-up, point of view, static locked-off camera: Her right thumb and the screen fill the frame from her view): Her right thumb presses the smallest size on the black phone's generic, unbranded shop page.
+[1.2-2.4s] Shot 2 (medium, eye level, dolly in toward the subject, the foreground sliding past: The camera pushes in from her waist to her face): The woman turns the black phone screen-down with her right hand and gives the lens a half-smirk.
+[2.4-3.9s] Shot 3 (extreme close-up, overhead, static locked-off camera: Her spoon bowl and the shaker opening fill the frame from above): Her right hand tips the steel spoon; chalky powder falls into the shaker and clumps against its side.
+[3.9-5s] Shot 4 (wide, framed, tracking shot moving with the subject: Through the cabinet opening, the camera tracks with the shaker): Facing the upper cabinet, the woman pushes the shaker behind the plain bottles with her right hand.
+[5-7s] Shot 5 (full, profile, dolly out, more of the place coming into frame: Head to toe, the camera pulls back from the cabinet): In profile, the woman swings the upper cabinet door shut with her right hand and crosses toward the counter.
+Every shot is moving from its first frame, at a quick real-life pace: the action is under way and is done before the cut. Nobody waits, drifts or moves in slow motion.
+Spoken as 1 unbroken track across the cuts, from 0s, with no pause at a cut or between sentences:
+The woman (knowing, quick): "If you buy the small size because you know you'll quit,"
+The woman (dry): "that's because chalky powder turns every habit into a chore."
+The woman is seen saying the words in the shots that show the speaker's face, and is heard over the other shots.
+Hands: five fingers each, a natural grip.
+Voice: Woman in her 30s, quick and easy, 1 sentence straight after the last. Lip-synced whenever the speaker's face is on camera.
+No subtitles and no on-screen text.3:Tbc6,9:16 video, 6 seconds, 5 shots with hard cuts at 1.7s, 2.7s, 3.7s and 4.7s; each cut is to a new camera set-up, a different size and angle, and the camera cuts only there. UGC (AI or human creator).
+Audio: the woman's voice and the room's own sounds, nothing else.
+References:
+@Image1 defines the woman: the face.
+@Image2 defines the same woman, waist up.
+@Image3 defines the same woman, full figure.
+@Image4 defines the same woman, in profile.
+@Image5 defines the same woman, from behind.
+@Image6 defines the hands of the same woman.
+@Image7 defines the light and look only.
+@Image8 is shot 1.
+@Image9 is shot 2.
+@Image10 is shot 3.
+@Image11 is shot 5, the last.
+@Video1 = the previous clip: the same cast, voice and look. Open on a hard cut to a new shot. Replay none of it.
+The only objects, each in the shots that name it: Grüns pouch; daily sachet; green gummies.
+Person: the woman; the same adult in every shot, and the only person in the frame.
+Dialogue language: English, American (general US) accent.
+No greeting, no recap.
+[0-1.7s] Shot 1 (medium, over the shoulder, dolly in toward the subject, the foreground sliding past: Over her shoulder, the camera pushes in to her hands): She slides the sealed daily sachet into her left palm; her right thumb and fingers leave the grüns name clear.
+[1.7-2.7s] Shot 2 (extreme close-up, overhead, static locked-off camera: The top edge and her fingertips fill the frame from above): Her left hand grips the daily sachet below grüns; her right hand tears straight across its top edge above the name.
+[2.7-3.7s] Shot 3 (close-up, point of view, tilt: The camera follows the top-edge pour down to her palm): Her right hand tips the torn daily sachet; green gummies pour like cereal from its torn top into her left palm.
+[3.7-4.7s] Shot 4 (medium, profile, tracking shot moving with the subject: Waist up, the camera tracks beside her toward the counter): In profile, she lifts her left palm and eats the green gummies; her right hand lowers the empty daily sachet.
+[4.7-6s] Shot 5 (full, low angle, dolly out, more of the place coming into frame: Head to toe, the camera pulls back to include the counter): Facing the lens, she points down with her right hand; her left grips the Grüns pouch at its side, front clear.
+Spoken as 1 unbroken track across the cuts, from 0s, with no pause at a cut or between sentences:
+The woman (easy): "Grüns is one pack of gummies a day."
+The woman (quick): "Rip."
+The woman (quick): "Eat."
+The woman (matter of fact): "Done."
+The woman (warm, offhand): "First sub starts at $29.99. Tap below."
+The woman is seen saying the words in the shots that show the speaker's face, and is heard over the other shots.
+The last shot holds still for its final half second.
+Product: Grüns Original (Adults). Its shape, colours and printing stay exactly as in the references.
+Voice: Woman in her 30s, quick and easy, 1 sentence straight after the last. Lip-synced whenever the speaker's face is on camera.
+No subtitles and no on-screen text.1:{"ok":true,"pack":{"dir":"assets/job_118/handoff","seconds":10,"total":13,"aspect":"9:16","limit":3200,"model":"Seedance 2.5","clips":[{"index":0,"dir":"clip-1","seconds":7,"prompt":"$2","refs":[{"tag":"@Image1","file":"clip-1/01_face.png","purpose":"defines the woman: face, hair and skin, close up. Ignore its plain wall and identity-sheet lighting"},{"tag":"@Image2","file":"clip-1/02_waist-up.png","purpose":"defines the same woman from the waist up, in the same outfit"},{"tag":"@Image3","file":"clip-1/03_full-figure.png","purpose":"defines the same woman: full figure and outfit"},{"tag":"@Image4","file":"clip-1/04_profile.png","purpose":"defines the same woman from the side"},{"tag":"@Image5","file":"clip-1/05_hands.png","purpose":"defines the hands of the same woman"},{"tag":"@Image6","file":"clip-1/06_first-frame.png","purpose":"is the first frame: shot 1 as it opens"},{"tag":"@Image7","file":"clip-1/07_shot-2.png","purpose":"is shot 2, from 1s: Medium eye-level kitchen view: the woman gives the lens a half-smirk as her right hand turns the black phone screen-down; her left hand is empty."},{"tag":"@Image8","file":"clip-1/08_shot-3.png","purpose":"is shot 3, from 2s: Extreme close-up overhead: her right hand tips the steel spoon of chalky powder into the shaker; her left hand is out of frame."},{"tag":"@Image9","file":"clip-1/09_shot-4.png","purpose":"is shot 4, from 4s: Wide view through the upper cabinet: the woman faces it, pushing the shaker behind the plain bottles with her right hand; her left hand is empty."},{"tag":"@Image10","file":"clip-1/10_shot-5.png","purpose":"is shot 5, the last, and the frame the clip ends on: Full profile in the kitchen: the cabinet door has shut and the woman is crossing toward the counter, eyes ahead, both hands empty. No product is visible."}],"overlays":["buying the small size bc I know I'll quit","gritty.","chalky.","skipped."]},{"index":1,"dir":"clip-2","seconds":6,"prompt":"$3","refs":[{"tag":"@Image1","file":"clip-2/01_face.png","purpose":"defines the woman: face, hair and skin, close up. Ignore its plain wall and identity-sheet lighting"},{"tag":"@Image2","file":"clip-2/02_waist-up.png","purpose":"defines the same woman from the waist up, in the same outfit"},{"tag":"@Image3","file":"clip-2/03_full-figure.png","purpose":"defines the same woman: full figure and outfit"},{"tag":"@Image4","file":"clip-2/04_profile.png","purpose":"defines the same woman from the side"},{"tag":"@Image5","file":"clip-2/05_from-behind.png","purpose":"defines the same woman from behind: the back of the hair and the outfit"},{"tag":"@Image6","file":"clip-2/06_hands.png","purpose":"defines the hands of the same woman"},{"tag":"@Image7","file":"clip-2/07_look.png","purpose":"defines the light, the colours and the look of the film only. Ignore its framing and what is in it"},{"tag":"@Image8","file":"clip-2/08_shot-1.png","purpose":"is shot 1, the first: Medium view over her shoulder: she looks down as her right hand slides the sealed daily sachet, front visible, into her open left palm."},{"tag":"@Image9","file":"clip-2/09_shot-2.png","purpose":"is shot 2, from 2s: Extreme close-up overhead: her left hand grips the daily sachet below grüns while her right hand tears straight across its top edge."},{"tag":"@Image10","file":"clip-2/10_shot-3.png","purpose":"is shot 3, from 3s: Close view from her eyes: her right hand tips the torn daily sachet above her left palm; green gummies pour through its top opening."},{"tag":"@Image11","file":"clip-2/11_shot-5.png","purpose":"is shot 5, the last, and the frame the clip ends on: Full low-angle kitchen view: she faces the lens, right hand pointing down. Her left thumb grips behind the Grüns pouch, fingers at its side, full front label beside her face."},{"tag":"@Video1","file":"","purpose":"The clip you made for clip 1. Attach it as the video reference"}],"overlays":["1 pack a day · 60+ ingredients · 6g fiber","80% of surveyed users take it daily*","First sub $29.99, then $49.99 per 28 packs · 30-day money-back guarantee, first order only"]}],"index":"index.html"}}

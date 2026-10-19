@@ -1,0 +1,107 @@
+0:{"a":"$@1","f":"","q":"?job=job_031","i":false,"b":"FOfrVa0a1hochL3keaTrA"}
+2:T362f,# Founder brief: The Half-Used Tub in the Back of Your Cabinet
+
+**Brand:** Grüns · **Script:** scr_074 v2 · **Length:** 60s (165 words, about 41s)
+**Concept:** Founder brief: Grüns Original (Adults)
+**Meta ad set:** `GRU|C024|quitter|founder-brief-gr-ns-original-adults|sub_28|PA`
+**Ad name:** `GRU|C024|S074v2|founder|hk1|creator`
+
+## Who this is for
+
+The Quitter Who Wants to Stick. Has tried greens powders, pill stacks or multivitamins and quit every one. Wants 1 habit that lasts. About 40% (est.).
+Their problem: Every past supplement habit failed because it was gross, messy, a chore or too expensive What makes them start looking: Another half-used tub of powder, or the AG1 bill ($94 a month)
+
+**Awareness stage:** Problem aware. Everyone working on this ad builds to this 1 stage.
+**What the viewer should feel:** Seen: "That's exactly what I do."
+
+**The angle:** For Grüns Original (Adults).
+**The offer:** Original Adults, Low Sugar, subscription (28 packs), USD 49.99 (1.78 a day). Free shipping, pause or cancel anytime. 30-day guarantee on the first order.
+**The guarantee:** 30-day money-back guarantee on your first order.
+
+## The script
+
+| Beat | Spoken line | On-screen text | Visual |
+|---|---|---|---|
+| hook | There's a half-used tub of greens powder in the back of your cabinet. You put it there so you'd stop feeling bad. | Half-used greens powder, back of your cabinet | Kitchen cabinet door swings open. An unlabeled tub of green powder sits pushed to the back behind coffee mugs, lid dusty. A hand slides the Grüns pouch to the front of the shelf, closing the door on the old tub. No face in frame. |
+| problem | You wanted the habit. You just couldn't choke down the drink. | You wanted the habit, not a chore | Close up: the tub lid comes off, powder is caked and gritty at the edges. A hand sets the lid back down and walks away from it. Cut on the lid meeting the counter. |
+| promise | You get a greens habit you actually keep. | A greens habit you actually keep | The Grüns pouch sits open on the counter, resealable top open along the closure. A hand reaches in through the open top and lifts out one daily pack. Shot from counter height, no face. |
+| mechanism | A supplement you dread is a supplement you waste. So we didn't make a drink. 60+ ingredients, 21 vitamins and 6g of fiber, in one pack. It's a gummy you'd happily eat anyway. | 60+ ingredients. 21 vitamins. 6g fiber. One pack. | The daily pack is torn straight across the top edge, above the Grüns name, and tipped. Gummies pour out like cereal into an open palm. Numbers land on screen as the handful fills. Small text in the corner reads [FOUNDER NAME], Co-founder. No face anywhere in frame. |
+| objection | You've tried drugstore gummies. Chalky, sticky, stringy. Ours are pectin, so they chew like a snack. | Chalky. Sticky. Stringy. Not this. | Macro on a gummy squeezed between two fingers, springing back to shape, then a second one bitten in half to show a clean chew. Beside it, a chalky broken tablet crumbles. Cut back to the full palm. |
+| proof | We tested absorption too. Double-blind, placebo-controlled, 2025. Vitamin C up 40.1%, folate up 20.5%. | Double-blind, placebo-controlled. Vitamin C +40.1%. Folate +20.5%. | A printed study summary sits on the counter, a finger tracks down to the two result lines and stops on each number as it is said. The torn daily pack rests beside the page, gummies still in the palm. |
+| offer | Buy those 60 ingredients one at a time, or take one pack a day. That's Grüns. First order's $29.99, then $49.99, so $1.78 a day. Free shipping, cancel any time. | First order $29.99, then $49.99 ($1.78 a day). Free shipping. | 28 daily packs laid out on the counter in rows like a month. A hand takes one from the row. Cut to the pouch being resealed along its top closure and slid into a work bag. |
+| risk reversal | 30-day money-back guarantee on that first order. | 30-day money-back guarantee on your first order | The empty torn packs from the first week sit in a small bowl next to the pouch. Overlay of the guarantee holds for two seconds. No faces. |
+| cta | Tap below and try one pack a day. Rip. Tip. Enjoy. | Tap below. One pack a day. | A thumb taps a phone screen, then the same hand tears a daily pack straight across the top and tips the gummies into a breakfast bowl beside a coffee cup. |
+| identity | You're not a quitter. You just hadn't found a snack you'd keep. |   | The Grüns pouch is zipped into a bag on a kitchen chair, the cabinet behind it closed with the old tub still out of sight. Hand lifts the bag off the chair and the frame goes to black on the pouch. |
+
+## Hook variants
+
+Record every hook as a separate take. It takes minutes and gives 4 or more ads.
+
+| # | Type | Spoken hook | On-screen text | First frame |
+|---|---|---|---|---|
+| 1 | accommodation | There's a half-used tub of greens powder in the back of your cabinet. You put it there so you'd stop feeling bad. | Half-used greens powder, back of your cabinet | Cabinet door open on an unlabeled tub of green powder pushed to the back behind coffee mugs, a hand sliding the Grüns pouch in front of it. |
+| 2 | failed solution | Paying $94 a month for green powder you'll quit? | $94 a month, still quit | A hand drops a scoop of powder into a shaker, then the shaker gets set down untouched on the counter beside a full tub. |
+| 3 | question | How many half-finished supplements are in your kitchen right now? | How many half-finished supplements are in your kitchen? | A cabinet door opens on a shelf of half-empty tubs and bottles, dust on the lids. |
+| 4 | callout by what they do | If you've quit every supplement you've ever bought, this one's for you. | If you've quit every supplement you've bought | Tight shot of a hand counting on fingers, then pushing a cabinet door shut on old tubs. |
+| 5 | founder decision | Greens powder is gross. So we made a gummy. | Greens powder is gross. So, a gummy. | A daily pack in open palm next to a scoop of caked powder on a counter, hand flicking the scoop away out of frame. |
+
+## Notes for the founder
+
+- Tell the real story. Show what only you can show: the making, the rejected samples, the product cut open.
+- Real light, a real room, phone camera. No ring-light glow, no hype voice.
+- Start mid-action. No greeting, no "so", no logo.
+- **Shoot 1 take on script and 1 in your own words. We will run both.**
+
+## Do and don't
+
+- Do: Casual internet cadence, like a funny friend who is into wellness but not preachy
+- Do: Say the gross thing plainly: 'better poops', 'Fix the Hot Girl Tummy'
+- Do: Short 3-beat rhythms: 'Rip. Tip. Enjoy.'
+- Do: Lead with numbers: 60+ ingredients, 21 vitamins and minerals, 6g fiber, 1 pack
+- Do: Name the enemy by how it feels: chalky powders, gagging on pills, a cobbled-together stack
+- Do: Tie every benefit to ease: 1 pack, grab and go
+- Don't: Clinical or lab-coat tone in hooks (science goes in the proof beat)
+- Don't: Guilt or fear about health, or shaming parents
+- Don't: Disease claims: cures, treats, prevents
+- Don't: Long paragraphs
+- Don't: Em dashes
+- Don't: Generating Shrek, Minions or Popsicle characters (licensed IP): use flavor names only
+- Don't: Quoting a single discount % as fact, or promising the guarantee on repeat orders
+- Never say: "cures", "treats", "prevents", "cure IBS", "treats bloating", "heals", "guarantee on every order", "clinically proven to"
+
+## Guardrails (from refunds and complaints)
+
+- Never claim Sugar-Free is healthier or better than Low Sugar. Ads must warn that Sugar-Free may cause stomach upset (gas, cramping, bloating) in sensitive stomachs, and recommend Low Sugar as the gentler option for digestive sensitivity. Banned phrases: "sugar-free healthier", "sugar-free better", "sugar-free gentler".
+- Do not promise instant comfort or immediate results. Ads must disclose that some customers experience gas, bloating, or gurgles in the first few days as the body adjusts, and that this is normal. Banned phrases: "instant comfort", "immediate relief", "no adjustment period".
+- Emphasize the 30-day money-back guarantee as a risk-free trial. Ads should frame the guarantee as protection against wasted money, not as a promise of fast refund processing.
+- Do not claim 'easy cancel' or 'cancel anytime' unless the cancellation flow is genuinely simple and does not loop or redirect to pause options. If claiming easy cancellation, be prepared to back it with frictionless UX. Banned phrases: "easy cancel", "cancel anytime", "one-click cancel".
+- The 30-day guarantee applies to the first order only. Ads and all checkout pages must state 'first order only' clearly and upfront to prevent refund disputes on subsequent orders. Banned phrases: "30-day guarantee all orders", "money-back guarantee every order".
+- Limited-time flavors are available for one month only, then the subscription reverts to Original. Ads and cart must state this swap-back rule clearly before purchase so customers are not surprised when their second box arrives. Banned phrases: "lto flavor continues", "limited flavor permanent".
+- Do not overpromise taste or claim every customer will love the flavor. Ads should acknowledge that taste is personal and lean on the 30-day guarantee as the safety net for flavor mismatches. Banned phrases: "tastes like candy", "everyone loves the taste", "delicious snack".
+- Never promise fast results, energy boosts, or digestion improvements within a specific timeframe (e.g., 2 weeks). Ads should focus on the daily habit and nutrient content, not on speed of benefit. Banned phrases: "energy in two weeks", "better digestion fast", "results in 14 days", "energy boost guaranteed".
+- Do not promise that picky eaters or all children will enjoy the gummies. Ads should acknowledge that taste and texture are personal, especially for kids, and recommend the 30-day guarantee for families trying them. Banned phrases: "kids love them", "picky eaters will enjoy", "all children love".
+- Do not promise constant availability or guarantee that customers can always swap flavors or reorder their preferred variant. Ads should note that popular flavors may sell out and encourage early reorder. Banned phrases: "always in stock", "guaranteed availability", "swap anytime".
+- Do not promise that limited-time flavors will work for the whole family. Ads should acknowledge that flavor preference is personal and remind customers of the 30-day guarantee if a family member dislikes the LTO variant. Banned phrases: "whole family loves", "kids will love this", "family favorite flavor".
+
+## Delivery
+
+- 9:16 vertical, 1080 x 1920 or better. Keep faces, product and text clear of the top 14% and bottom 20%.
+- Captions on for the whole ad. The first frame and its on-screen text must make sense with the sound off.
+- Hold the end card (action, price, guarantee) for about 2 seconds.
+- File name: `GRU_C024_S074v2_founder_hk1_creator_hk1.mp4`, then `_hk2`, `_hk3` for each hook take.
+- The mechanism beat does most of the persuading. Formats that suit it: Claymation, CGI explainer, Cartoon, UGC (AI or human creator).
+
+## What this ad tests
+
+This script tests whether the format-swap mechanism, a gummy instead of a drink, carries the argument for a problem-aware quitter, against sibling scripts that lead with price or with the ingredient stack. If it wins, make the next one the same mechanism told as a 90-day timeline with a real customer voice on the proof rung.
+
+## Open items
+
+Founder rule: no generated face can play the founder, so the founder is never shown. These lines are written in the brand's 'we' voice over hands and product only. If the brand has real founder footage or an approved founder audio read, cut it in; otherwise the 'we' lines run as brand voiceover, not as a person on camera. Person: the controls asked for second person, and the format asks for the founder's first person on the decisions, so the script addresses 'you' throughout while the mechanism and proof lines carry the 'we' decisions. The hook follows the accommodation control rather than the format's admission hook; the founder admission sits in hook variant 5. Guardrails held: no cure, treat or prevent language, no disease claim, no FDA line, no 'risk-free', product opened and used exactly per the brand's facts, no children generated, no competitor product or brand shown in frame. Soft spot I could not fix: the call to action has no real reason for now beyond the first-order price, so it names the action, the effort and what happens next but leans on the offer for urgency.
+Copy pass (claude-sonnet-5-5): 5 lines sharpened. The ad makes one clear promise, a greens habit she keeps because it's a snack and not a chore, and it will land with a quitter; only a few lines need tightening, mainly the unsupported time claim, the hook that asserts a condition, and the blind format hook.
+- Invented time claim, not in material: "Ten seconds a morning." became "Rip. Tip. Enjoy."
+- Vague; tie to ease: "in a gummy you'd eat anyway" became "in one pack, a gummy you'd eat anyway"
+- Asserts condition she may not have: "You spent $94 a month on green powder, and you still quit." became "Paying $94 a month for green powder you'll quit?"
+- About the brand, blind: "The first thing we changed wasn't the ingredients. It was the format." became "Greens powder is gross. So we made a gummy."
+- About brand; match spoken hook: "We changed the format on purpose" became "Greens powder is gross. So, a gummy."
+Placeholders to fill: [FOUNDER NAME] and co-founder title for the corner text on the mechanism line, only if the brand has a real founder to attach it to, Study citation and year naming the lab behind the double-blind, placebo-controlled absorption results, A real reason for now, if the client has one, since the first-order price is currently the only honest urgency in the offer1:{"ok":true,"job":{"id":"job_031","brand_id":"gruns","created_at":"2026-10-04T17:19:00.834Z","updated_at":"2026-10-13T16:39:46.560Z","script_id":"scr_074","output_type":"human_brief_founder","skill":null,"count":1,"payload":{},"status":"rejected","assets":[{"path":"job_031/brief.md","kind":"doc","caption":"Brief (markdown)"}],"review_notes":null,"meta_ad_name":"GRU|C024|S074v2|founder|hk1|creator","tag":"net_new","production":{"recipe":"brief","preset":"default","aspect":"4:5","resolution":"1080","segments":0,"cards":0,"notes":"","product_id":"prd_original_adults","reference_id":null,"reference_mode":null,"claim_checks":false,"context_used":{"brief":["brand","market","accent","persona","offer","guarantee","voice","guardrails","forbidden_claims","product"]},"skills_used":[],"plan_status":"none","audit":[],"clips":[],"next":"done","log":[{"at":"2026-10-04T17:19:00.967Z","step":"brief","message":"Brief written from the script, concept and brand brain"}],"brief_markdown":"$2"},"error":null}}

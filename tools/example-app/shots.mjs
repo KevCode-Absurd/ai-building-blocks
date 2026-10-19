@@ -19,7 +19,7 @@ const browser = await chromium.launch({ channel: "chrome" });
 const page = await browser.newPage({ viewport: { width: 1440, height: 900 }, deviceScaleFactor: 1 });
 for (const [id, p] of shots) {
   await page.goto(`${SITE}/example-app/${p}`, { waitUntil: "networkidle" });
-  await page.waitForTimeout(1200);
+  await page.waitForTimeout(3500);
   await page.addStyleTag({ content: "#tour-bar, #tour-toast { display: none !important; }" });
   const png = await page.screenshot();
   await sharp(png).resize({ width: id === "home" ? 1440 : 720 }).webp({ quality: 80 }).toFile(path.join(OUT, `${id}.webp`));

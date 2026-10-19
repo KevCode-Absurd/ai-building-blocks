@@ -57,7 +57,9 @@ let videos = 0;
 const saved = new Set();
 function fileFor(u, ct, doc) {
   const rel = decodeURIComponent(u.pathname);
-  if (u.search) {
+  // Data addresses with no file extension (/api/avatar-library) go in _q/ too: saved under their own name they'd
+  // be a file where a folder is needed (/api/avatar-library/media/...).
+  if (u.search || (!doc && !path.posix.extname(rel))) {
     const f = `${PREFIX}/_q/${hashOf(rel + u.search)}${doc ? ".html" : ext(ct, rel)}`;
     queries[rel + u.search] = f;
     return f;
@@ -100,6 +102,7 @@ await page.route((u) => u.origin === origin && !/^\/(api|_next)\//.test(u.pathna
   } catch (e) { log.push(`action ${act} failed: ${String(e).slice(0, 80)}`); await route.abort().catch(() => {}); }
 });
 page.on("response", (r) => {
+  if (process.env.SNAP_DEBUG && r.url().includes(process.env.SNAP_DEBUG)) console.log("RES", r.status(), r.request().method(), r.request().resourceType(), r.url());
   const req = r.request();
   const u = new URL(r.url());
   if (!u.pathname.startsWith(PREFIX)) u.pathname = PREFIX + u.pathname;

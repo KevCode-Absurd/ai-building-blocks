@@ -1,0 +1,26 @@
+/* The tour bar and its note, on top of the saved example app. Kept small so the app looks as it does live. */
+#tour-bar {
+  position: fixed; left: 16px; bottom: 16px; z-index: 2147483000;
+  display: flex; align-items: center; gap: 10px; max-width: min(520px, calc(100vw - 32px));
+  padding: 7px 8px 7px 16px; border-radius: 999px;
+  background: #14213d; color: #f5f7fb; box-shadow: 0 6px 24px rgba(20, 33, 61, .28);
+  font: 13px/1.35 system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+#tour-bar span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+#tour-bar a { flex: none; color: #14213d; background: #ffd166; padding: 5px 12px; border-radius: 999px; text-decoration: none; font-weight: 600; }
+#tour-bar a + a { background: transparent; color: #f5f7fb; border: 1px solid rgba(245, 247, 251, .35); }
+#tour-bar a:focus-visible, #tour-bar button:focus-visible { outline: 2px solid #ffd166; outline-offset: 2px; }
+#tour-bar button { flex: none; width: 26px; height: 26px; border: 0; border-radius: 50%; background: rgba(245, 247, 251, .12); color: inherit; font-size: 16px; cursor: pointer; }
+#tour-toast {
+  position: fixed; left: 50%; bottom: 96px; transform: translate(-50%, 12px); z-index: 2147483001; opacity: 0; pointer-events: none;
+  max-width: min(440px, calc(100vw - 32px)); padding: 12px 16px; border-radius: 12px;
+  background: #14213d; color: #f5f7fb; font: 14px/1.4 system-ui, -apple-system, "Segoe UI", sans-serif; text-align: center;
+  transition: opacity .2s, transform .2s;
+}
+#tour-toast.on { opacity: 1; transform: translate(-50%, 0); }
+/* Narrow screens: the app's own menu sits at the bottom, so the bar moves to the top and keeps only its links. */
+@media (max-width: 1180px) {
+  #tour-bar { bottom: auto; top: 8px; left: auto; right: 8px; padding: 5px; }
+  #tour-bar span { display: none; }
+}
+@media (prefers-reduced-motion: reduce) { #tour-toast { transition: none; } }

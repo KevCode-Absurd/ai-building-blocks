@@ -36,6 +36,26 @@ const BlockPage = lazy(PAGES.block);
 const HowItWorks = lazy(PAGES.guide);
 const ToolsPage = lazy(PAGES.tools);
 const AppsPage = lazy(PAGES.apps);
+/**
+ * An in-page link (#install) scrolls smoothly, and a page loading in the background can cut that scroll short.
+ * Once it has had time to land, finish the jump if the target still isn't on screen.
+ */
+function useHashLanding() {
+  useEffect(() => {
+    let t = 0;
+    const land = () => {
+      window.clearTimeout(t);
+      t = window.setTimeout(() => {
+        const el = location.hash.length > 1 ? document.getElementById(decodeURIComponent(location.hash.slice(1))) : null;
+        const top = el?.getBoundingClientRect().top;
+        if (el && top !== undefined && (top < 0 || top > innerHeight * 0.6)) el.scrollIntoView({ behavior: "auto" });
+      }, 900);
+    };
+    addEventListener("hashchange", land);
+    return () => { window.clearTimeout(t); removeEventListener("hashchange", land); };
+  }, []);
+}
+
 function useIdlePrefetch() {
   useEffect(() => {
     const idle = window.requestIdleCallback ?? ((f: () => void) => window.setTimeout(f, 1200));
@@ -279,6 +299,7 @@ function Home({ c, toast }: { c: Catalogue | null; toast: (m: string) => void })
 export default function App() {
   const c = useCatalogue();
   useIdlePrefetch();
+  useHashLanding();
   const { path, search } = useLocation();
   const [kitsOpen, setKitsOpen] = useState(false);
   const [bizOpen, setBizOpen] = useState(false);

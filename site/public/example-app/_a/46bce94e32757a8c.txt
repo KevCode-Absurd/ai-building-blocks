@@ -1,0 +1,56 @@
+0:{"a":"$@1","f":"","q":"?job=job_116","i":false,"b":"FOfrVa0a1hochL3keaTrA"}
+2:Tb28,9:16 video, 7 seconds, 6 shots with hard cuts at the times given; each cut is to a new camera set-up, a different size and angle, and the camera cuts only there. Claymation.
+Audio: the narrator's voice and the room's own sounds, nothing else.
+References:
+@Image1 defines the character.
+@Image2 is the first frame.
+@Image3 is shot 2.
+@Image4 is shot 4.
+@Image5 is shot 5.
+@Image6 is shot 6, the last.
+The only objects, each in the shots that name it: Grüns pouch; grey powder clump; shop phone; spoon; shaker.
+Character: woman, 33; light brown skin. The same person in every picture, made the way claymation makes a character
+Dialogue language: English, American (general US) accent.
+[0-1s] Shot 1 (close-up, point of view, tracking shot moving with the subject: The camera tracks across her thumb to the selected size on the generic shop screen): The woman's right thumb presses the smallest-size choice on the shop phone.
+[1-2s] Shot 2 (medium, eye level, dolly out, more of the place coming into frame: Waist up, the camera pulls back from her hands to her half-smirk; the pouch's back enters view): The woman slides the shop phone across the counter with her left hand, her mouth pulling into a half-smirk.
+[2-3s] Shot 3 (full, low angle, tracking shot moving with the subject: The camera tracks beside her full clay figure and ends at the shaker): The woman drags the shaker across the counter with her right hand toward the spoon.
+[3-4.4s] Shot 4 (extreme close-up, overhead, static locked-off camera: The camera holds overhead on the spoon bowl and shaker rim for the quick, sticky landing): The woman tips the spoon with her right hand; the grey powder clump hits and sticks to the shaker's inner wall.
+[4.4-5.6s] Shot 5 (close-up, high angle, dolly in toward the subject, the foreground sliding past: The camera pushes into the cabinet after the shaker and ends on its clumped inner wall; place: Cabinet recess): The woman pushes the shaker to the back of the cabinet shelf with her right hand.
+[5.6-7s] Shot 6 (wide, framed, static locked-off camera: Through the cabinet opening, the camera holds as the door crosses the frame; place: Cabinet recess): The woman slides the cabinet door shut with her left hand, cutting the clumped shaker from view.
+Spoken as 1 unbroken track across the cuts, from 0s, with no pause at a cut or between sentences:
+The voice (knowing, quick): "If you buy the small size because you know you'll quit,"
+The voice (dry): "that's because chalky powder turns every habit into a chore."
+Product: Grüns Electrolyte Blends Variety Pack. Its shape, colours and printing stay exactly as in the references. Nobody holds, eats or drinks it.
+Voice: Voice-over narrator, off screen: adult, quick and easy, 1 sentence straight after the last. A voice-over: the character's mouth stays closed.
+No subtitles and no on-screen text.3:Tc67,9:16 video, 6 seconds, 7 shots with hard cuts at the times given; each cut is to a new camera set-up, a different size and angle, and the camera cuts only there. Claymation.
+Audio: the narrator's voice and the room's own sounds, nothing else.
+References:
+@Image1 defines the character.
+@Image2 defines the light and look only.
+@Image3 is shot 1.
+@Image4 is shot 3.
+@Image5 is shot 6.
+@Image6 is shot 7, the last.
+@Video1 = the previous clip: the same cast, voice and look. Open on a hard cut to a new shot. Replay none of it.
+The only objects, each in the shots that name it: Grüns pouch; daily sachet; Grüns gummies; keys.
+Character: woman, 33; light brown skin. The same person in every picture, made the way claymation makes a character
+Dialogue language: English, American (general US) accent.
+No greeting, no recap.
+[0-0.7s] Shot 1 (close-up, low angle, push in: The camera pushes in fast from her hand to the daily sachet's front): The woman turns the daily sachet toward the lens in her right hand, gripping its side edges without covering the printing.
+[0.7-1.3s] Shot 2 (extreme close-up, overhead, locked off: The camera holds above her two hands and the sachet): The woman moves the daily sachet across her clear left palm with her right hand, readying its top edge.
+[1.3-1.9s] Shot 3 (medium, eye level, locked off: Waist up, the camera holds square to her hands so the straight top tear reads): The woman tears the daily sachet straight across its top edge above the upright Grüns name.
+[1.9-2.5s] Shot 4 (close-up, point of view, track: The camera tracks across her left palm and ends where the gummies land): Holding the torn daily sachet by its sides in her right hand, the woman tips Grüns gummies through its open top into her left.
+[2.5-3.1s] Shot 5 (medium, profile, track: In profile, the camera tracks quickly with her left hand to her mouth): The woman brings the Grüns gummies from her left palm to her mouth and eats them.
+[3.1-3.9s] Shot 6 (full, high angle, track: The camera travels beside her full figure, ending where sunlight reaches the counter): The woman picks up the keys with her right hand and crosses the kitchen toward the counter's sunny end.
+[3.9-6s] Shot 7 (wide, over the shoulder, pull back: Over her shoulder, the camera pulls back to include her pointing hand and both packs): Beside the Grüns pouch and daily sachet, the woman points down with her empty left hand while her right hand grips the keys.
+Spoken as 1 unbroken track across the cuts, from 0s, with no pause at a cut or between sentences:
+The voice (bright, quick): "Grüns is one pack of gummies a day."
+The voice (snappy): "Rip."
+The voice (snappy): "Eat."
+The voice (amused): "Done."
+The voice (matter-of-fact): "First sub starts at $29.99."
+The voice (easy): "Tap below."
+The last shot holds still for its final half second.
+Product: Grüns Electrolyte Blends Variety Pack. Its shape, colours and printing stay exactly as in the references. Nobody holds, eats or drinks it.
+Voice: Voice-over narrator, off screen: adult, quick and easy, 1 sentence straight after the last. A voice-over: the character's mouth stays closed.
+No subtitles and no on-screen text.1:{"ok":true,"pack":{"dir":"assets/job_116/handoff","seconds":10,"total":13,"aspect":"9:16","limit":3200,"model":"Seedance 2.5","clips":[{"index":0,"dir":"clip-1","seconds":7,"prompt":"$2","refs":[{"tag":"@Image1","file":"clip-1/01_character-sheet.png","purpose":"defines the character: its shape, colours, proportions and material. Ignore its background and its pose"},{"tag":"@Image2","file":"clip-1/02_first-frame.png","purpose":"is the first frame: shot 1 as it opens"},{"tag":"@Image3","file":"clip-1/03_shot-2.png","purpose":"is shot 2, from 1s: At the kitchen counter, the woman faces left with a half-smirk as her left hand slides the shop phone. The back of the Grüns pouch faces the camera behind her."},{"tag":"@Image4","file":"clip-1/04_shot-4.png","purpose":"is shot 4, from 3s: Overhead extreme close-up: her right hand tips the spoon over the shaker; the grey powder clump is poised at its rim."},{"tag":"@Image5","file":"clip-1/05_shot-5.png","purpose":"is shot 5, from 4s: In the cabinet recess, close on the shaker moving under her right hand; the grey powder clump marks its inner wall."},{"tag":"@Image6","file":"clip-1/06_shot-6.png","purpose":"is shot 6, the last, and the frame the clip ends on: Wide through the cabinet opening: the woman faces the closing door, left palm against its edge, right hand empty. The shaker and grey powder clump disappear behind it."}],"overlays":["buying the small size bc I know I'll quit","gritty.","chalky.","skipped."]},{"index":1,"dir":"clip-2","seconds":6,"prompt":"$3","refs":[{"tag":"@Image1","file":"clip-2/01_character-sheet.png","purpose":"defines the character: its shape, colours, proportions and material. Ignore its background and its pose"},{"tag":"@Image2","file":"clip-2/02_look.png","purpose":"defines the light, the colours and the look of the film only. Ignore its framing and what is in it"},{"tag":"@Image3","file":"clip-2/03_shot-1.png","purpose":"is shot 1, the first: Close and low in the kitchen: the woman faces the lens, right hand at the daily sachet's side edges with its front visible; her left hand is empty."},{"tag":"@Image4","file":"clip-2/04_shot-3.png","purpose":"is shot 3, from 1s: Waist-up at eye level: the woman looks at the daily sachet, left hand bracing one top edge and right hand pulling the other straight across."},{"tag":"@Image5","file":"clip-2/05_shot-6.png","purpose":"is shot 6, from 3s: High-angle full figure: the woman crosses the sunny kitchen with the keys in her right hand and her left hand empty."},{"tag":"@Image6","file":"clip-2/06_shot-7.png","purpose":"is shot 7, the last, and the frame the clip ends on: Wide at the sunny counter: the woman faces the Grüns pouch and daily sachet, right hand gripping the keys, empty left hand pointing below the frame. Both pack fronts face the lens."},{"tag":"@Video1","file":"","purpose":"The clip you made for clip 1. Attach it as the video reference"}],"overlays":["1 pack a day","60+ ingredients · 6g fiber","80% take it daily*","First sub from $29.99","Then $49.99 per 28 packs · 30-day money-back guarantee, first order only"]}],"index":"index.html"}}

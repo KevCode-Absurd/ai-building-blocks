@@ -350,7 +350,7 @@ Skills and code are the riskiest sources, so they get extra steps inside stage 3
 - **Plain-words install steps.**
 - **Where it fits** on the ladder and in the boards.
 
-Later, people can upload their own skills. These go through the same pipeline. If the creator charges, they get 70% and we keep 30%.
+People can add their own skills too (`planning/11_YOUR_OWN_SKILLS.md`, 19 Oct). First, in site v0, they add a skill in their browser and use it in kits and workflows next to ours. Then, from site v1, they can submit one to the library. It goes through this same pipeline plus a test run, a person approves it, and it goes live for free with their name on it. Paid listings (70% to the creator, 30% to us) stay later, as stream 7.
 
 ---
 
@@ -524,7 +524,7 @@ Evergreen first: seasonal listings can exist, but we don't run campaigns around 
 3. **Return:** come back for the next step or another listing (the north star).
 4. **Join:** a free account to comment, vote, star, make kits and follow boards. No business data is stored.
 5. **Climb:** take a higher step on the same job's ladder.
-6. **Contribute:** comment, share a result, suggest a skill, or upload one later.
+6. **Contribute:** comment, share a result, suggest a skill, use your own skills in workflows, or submit one to the library (from v1).
 
 ### Numbers we watch [Assumption]
 
@@ -647,10 +647,10 @@ Mini tools take a shorter path: steps 1, 3 and 4, then worked examples checked b
 
 | Version | What it is | Ships |
 |---|---|---|
-| v0 | Free site: search, library, /ecommerce, listing pages with ladder and before/after, tool guides, mini tools with embeds, Learn, free accounts for comments, votes, stars and kits (no business data stored), newsletter | Gate B, 19 Jan 2027 |
-| v1 | /saas, board following, "Ask" threads, contributor profiles, membership waitlist | Apr 2027 |
+| v0 | Free site: search, library, /ecommerce, listing pages with ladder and before/after, tool guides, mini tools with embeds, Learn, free accounts for comments, votes, stars and kits (no business data stored), your own skills in kits and workflows (kept in your browser), newsletter | Gate B, 19 Jan 2027 |
+| v1 | /saas, board following, "Ask" threads, contributor profiles, free skill submissions (tested, then approved), membership waitlist | Apr 2027 |
 | v2 | Membership, priority replies, consulting and implementation requests, premium workflows | When each money condition is met |
-| v3 | Run listings from the site; creator uploads; the 70/30 marketplace | When people ask and the pipeline is ready |
+| v3 | Run listings from the site; paid creator listings; the 70/30 marketplace | When people ask and the pipeline is ready |
 
 ---
 
@@ -674,10 +674,10 @@ Mini tools take a shorter path: steps 1, 3 and 4, then worked examples checked b
 | Jan 2027 | Lifecycle (archive), analytics, AI operations | Public 19 Jan; weekly content; labelled affiliate links | All own items ported or retired |
 | Feb | Intake engine v1, always on: about 15 sources a week; 20 more tool guides; new mini tools from requests | Daily board posts and replies; weekly newsletter | Safety pipeline at about 2 h per skill |
 | Mar | Meta mini app; avatar and video workflows; /saas versions of the top 20 | "Climb the ladder" and "GitHub vs ours" series | /saas reviewed by someone in software |
-| Apr | **/saas opens**; first routines; public "Suggest a source" | Three-month review; money model rebuilt; membership waitlist | 10k visits/month; 1,000 subscribers |
+| Apr | **/saas opens**; first routines; public "Suggest a source"; free skill submissions open | Three-month review; money model rebuilt; membership waitlist | 10k visits/month; 1,000 subscribers |
 | May | First agents (bounded, red-teamed) | Site ads if traffic allows; YouTube partner check | Routines run 4 weeks without silent failure |
-| Jun | Profit ranker; creator upload design | Mid-year review; consulting page if people are asking | Agent passes red-team; cost cap holds |
-| Jul–Sep | Third board (by demand); creator uploads beta; /marketing scoped | Membership opens if the waitlist is there | 50k visits/month; 5,000 subscribers |
+| Jun | Profit ranker; paid creator listing design | Mid-year review; consulting page if people are asking | Agent passes red-team; cost cap holds |
+| Jul–Sep | Third board (by demand); paid creator listings beta, if the money conditions are met; /marketing scoped | Membership opens if the waitlist is there | 50k visits/month; 5,000 subscribers |
 
 **How Claude works:**
 - One section at a time, in batches of about 4.

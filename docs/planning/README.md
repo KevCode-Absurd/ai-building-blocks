@@ -21,6 +21,7 @@
 | `08_INTAKE_ENGINE.md` | **The intake engine (18 Oct):** paste any YouTube video, reel, article, post or GitHub skill library; it becomes idea cards, matched to our jobs, ladders and workflows, then prompts, skills, routines, workflows, mini tools and agents. Rights, safety, models, and the path from v0 to production. |
 | `09_MAKE_IT_YOURS.md` | **Make it yours (18 Oct):** teaching people to test and evaluate outputs, tighten prompts and skills, give the right context, prepare big data sets (reviews, call transcripts), teach an agent from a book, build an interface, make inference cheaper, and train models. |
 | `10_AI_ENGINEERING_FRAMEWORK.md` | **The master engineering standard (18 Oct, proposed):** built on Chip Huyen's *AI Engineering*. How every prompt, skill, routine, workflow, agent and app is built, tested, fixed, shipped and watched, plus the course "from a prompt to a platform". Chapter mappings in `10-book-notes/`. Wins over 04–09 where they differ. |
+| `11_YOUR_OWN_SKILLS.md` | **Your own skills (19 Oct):** add your own skill and use it in workflows next to ours (next, site v0); submit one to the library, where we test it and a person approves it (after launch, v1). Paid skills are parked. |
 | `sources/` | One report (`.md`) and item list (`.csv`) per source, plus `_SCHEMA.md`. Go here for detail and citations. |
 
 ## Sources covered

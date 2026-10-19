@@ -1,32 +1,32 @@
 new_slug: turn-your-products-hidden-process-into-3d-clips
 name: "Turn your 3D ad idea into video clips"
-summary: "Give it your product facts and sources. You get story options, then the image and clip prompts and captions."
+summary: "Give it your product facts and sources. You get honest story options, then a 3D explainer plan, prompts and captions."
 job: make-video-ads
 
 headline: "Turn your 3D ad idea into video clips"
-subhead: Give it your product facts with sources and your claims list. It tests which hidden process is honest and interesting, offers you story options to pick from, then writes the seven beats, the stills, the clip prompts, the captions and the voice brief.
+subhead: Give it your product facts with sources and your claims list. It tests which hidden process is true and worth teaching, offers 2 or 3 story options and waits for your pick. Then it plans a 3D film that dives from an everyday moment into the process and back out.
 
 explain: |
-  A short 3D lesson about something nobody can see (what an ingredient does, how a fabric handles sweat) can hold attention like a documentary. Most attempts fail one of two ways. They bend a claim to fit a dramatic picture, or the "lesson" is only a pitch in disguise and viewers feel it.
+  A short 3D explainer about something nobody can see (what an ingredient does, how a fabric handles sweat) can hold attention like a good science film. Most attempts fail one of two ways. They bend a claim to fit a dramatic picture, or the "lesson" is a sales pitch in disguise and viewers can tell.
 
-  This skill starts by hunting for the process. It writes each candidate as a three-link chain ("A meets B, B does C, so you get D"), marks every link as sourced, common knowledge or unsupported, and drops chains that fail its five questions. The sharpest asks whether it would be interesting if the product didn't exist. Then it offers story options and stops so you can choose. Only after that does it write the beats and prompts. The product stays hidden until about three quarters through and is the only photo-real thing on screen.
+  This skill starts by testing the process. It writes each candidate as a short chain of links ("this meets that, that happens, so you get this") and marks every link as sourced, common knowledge or unsupported. A chain survives only if it's hidden from a camera, true at every link, and teaches something a viewer could sketch afterwards. Then it offers story options and stops so you can choose. The film it plans has four movements: the everyday moment, one long dive down to where the process happens, the chain link by link, and back out to the same moment. Your product appears at the link where it acts, and each part of the process keeps one colour all the way through.
 
 when:
   - Your product's benefit is invisible and you want to know if there's an honest story to tell about it.
-  - You want to compare two or three explainer story options before paying for any video.
+  - You want to compare story options before paying for any video.
   - You've picked a story option and need the stills, clips, captions and voice brief.
 
 you_give:
-  - Your product, a clean pack photo and how it's used
-  - How it works, ideally two or three steps, each with a source
+  - Your product, clean pack photos and how it's used
+  - How it works, step by step, each step with a source
   - Your approved and banned claims, and what buyers assume
   - Your colours, font and a voice you have the right to use (optional at first)
   - Your video tool's clip lengths (optional)
 you_get:
-  - The candidate chains with each link marked, and which survived
+  - Candidate chains with every link marked, and which survived
   - Honesty notes, including anything a regulator might look at
-  - Story options to choose from, each a whole film in under 120 words
-  - After you choose, the seven-beat script, still and clip prompts, captions and voice brief
+  - 2 or 3 story options to choose from, each a whole film in 80 words or fewer
+  - After you choose, a four-movement film plan, a colour key, still and clip prompts, captions and a voice brief
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
@@ -36,37 +36,37 @@ how_to_use:
   - If your product has claim rules (supplements, skincare), get the script checked before any picture is made.
 
 how_it_works:
-  - title: Runs the four tests
-    text: Invisible, one thing acting on another, supported, and news to the buyer.
-  - title: Hunts for the process
-    text: Writes candidate chains by product type, marks every link, and drops chains that fail two of five questions.
-  - title: Keeps it honest
-    text: 'Only "supports" or "helps". No body before and after, no invented readings, numbers only with sources.'
-  - title: Offers story options, then stops
-    text: Gives 3 to 5 whole-film story options in under 120 words each, flags risks, and waits for your choice.
-  - title: Writes seven beats
-    text: Scale opening, wrong cause, how it works, left alone, what gets in the way, the product, what the buyer can do.
-  - title: Sets the look and voice
-    text: Matte 3D, one forward-gliding camera, the product the only photo-real thing, and a voice you have the right to use.
+  - title: Runs three tests
+    text: Hidden from a camera, true at every link, and worth teaching even without your brand name.
+  - title: Writes candidate chains
+    text: Looks at the tiny, the surface and the structure, writes each process as 2 to 4 links, and marks every link.
+  - title: Sets honesty rules
+    text: 'Only "supports" or "helps". No body before and after, numbers only with sources.'
+  - title: Offers options, then stops
+    text: 2 or 3 whole-film options in 80 words or fewer, with risks flagged, and waits for your choice.
+  - title: Plans four movements
+    text: The everyday moment, one long dive down, the chain link by link, then back out to the same moment.
+  - title: Colour-codes the parts
+    text: Each part of the process keeps one colour and shape all the way through, so the eye can follow it.
   - title: Stills, then clips
-    text: Approves the key stills first, then writes clip prompts that start from them, and checks the finished clips.
+    text: Approves the key stills first, then writes clips that start from them, with a voice a person has approved.
 
 output_shape: |
   CHAINS
-  <name>: A <meets> B, B <does> C, so you get D
+  <name>: <this> meets <that>, <that happens>, so you get <this>
     Links: <sourced / common knowledge / unsupported, each>
-    Five questions: <which it passes or fails>   Kept or dropped
+    Tests: hidden <y/n>  true <y/n>  teaches <y/n>   Kept or dropped
 
   HONESTY NOTES
-  - <verbs, numbers, pictures to avoid, regulator flags>
+  - <words, pictures and numbers to avoid, regulator flags>
 
   STORY OPTIONS (pick one)
-  A "<name>": <opening, process, what gets in the way, payoff,
-     who it's for, under 120 words>. Sources: <...>. Flags: <...>
+  A "<name>": <moment, chain, snag, product's link, closing moment,
+     who it suits, 80 words or fewer>. Sources: <...>. Flags: <...>
   B ...
 
-  STOPPED: waiting for your choice. After it: seven beats, look
-  lines, still and clip prompts, captions, voice brief.
+  STOPPED: waiting for your choice. After it: film plan by movement,
+  parts key, still and clip prompts, captions, voice brief.
 
 example:
   business: sprout
@@ -89,92 +89,89 @@ example:
     "61% of Americans experience weekly digestive issues" (footnote
     only says "Source").
     Buyer assumptions: "A gummy can't hold enough to replace my
-    powder." "Will this upset my stomach more?"
+    powder." Reviews: people quit gritty, chalky powders.
   output: |
     CHAINS
-    1 Absorption: the pack's vitamin C meets the gut, passes into
-      the blood, so blood levels rise (+40.1% in the study).
-      Links: study (sourced); gut to blood (common knowledge).
-      Five questions: fails "interesting without the product".
-      Passes the rest for this buyer, who doubts a gummy holds
-      enough. KEPT.
-    2 Fiber as food: 6 g prebiotic fiber meets the bacteria already
+    1 Fiber as food: 6 g prebiotic fiber meets the bacteria already
       in the gut, they feed on it, so it supports digestion.
       Links: 6 g (label); bacteria feed on prebiotic fiber (common
       knowledge, brand to confirm); "supports digestion" (approved).
-      Five questions: passes all. KEPT.
-      What gets in the way: the "61%" stat has no source, so not
-      used. Reviews 3 and 4 support a habit instead: people skip
-      gritty, chalky powders.
+      Snag link: the fiber never arrives when the powder tub sits
+      unopened (reviews: people quit gritty powders).
+      Tests: hidden yes, true yes, teaches yes. KEPT.
+    2 Absorption: vitamin C from the pack passes into the blood, and
+      blood levels rose 40.1% in the study.
+      Links: study (sourced); gut to blood (common knowledge).
+      Tests: hidden yes, true yes, teaches no. The only new fact is
+      the study result, which is about the brand. DROPPED here; it
+      suits a cutout explainer with a two-bar chart.
     3 Fast breakdown: the brand's own line has no support. DROPPED.
-    4 Methylfolate: a fact, but no sourced chain of what it does.
-      A feature, not a process. DROPPED.
-    Only 2 chains survived, so 2 story options, not the 3 to 5 the method
-    asks for.
+    4 Methylfolate: a fact with no sourced chain of what it does. A
+      feature, not a process. DROPPED.
+    Only chain 1 survived, so both options use it with different
+    openings.
 
     HONESTY NOTES
     - Supplements have claim rules. The brand reads the script before
       any picture is made.
     - Say "supports digestion", never "fixes bloating".
-    - Say the study's size and length wherever 40.1% appears.
-    - The gut is drawn as a plain tube shape, not anatomy.
-    - Don't show energy or immunity. The study didn't test them.
-    - Gut-sensitive buyers: point to Low Sugar. The brand file notes
-      Sugar-Free's sugar alcohols upset some stomachs.
+    - The "61%" figure has no source. Leave it out.
+    - The gut is a plain tube shape at the small size, never anatomy.
+    - Don't show energy or immunity. Nothing here tested them.
 
     STORY OPTIONS (pick one)
-    A "The 40.1%". Opens on a flat number: "Blood vitamin C rose
-      40.1% in twelve weeks." Inside a vast red river as if 1 mm
-      tall. Wrong cause: you'd think a gummy is too small to count.
-      In the way: the powder you skip. Payoff: tearing a pack on
-      the way out. Strongest for the powder quitter. Sources: study.
-      Flag: no energy or immunity.
-    B "Feeding the crowd inside". Opens on a question: "What do the
-      bacteria in your gut eat?" A city of tiny stylised bacteria,
-      as if 1 mm tall. How it works: the fiber arrives and they feed.
-      In the way: the chalky powder you stopped drinking. Payoff:
-      one pack a day. Strongest for the gut buyer. Sources: label,
-      common knowledge. Flag: "supports" only; brand to confirm the
-      feeding link.
+    A "Who's eating breakfast?" Opens on a kitchen table at 7 am,
+      then asks who else is having breakfast. Dives into a plain
+      tube where tiny stylised bacteria wait. Snag: the fiber never
+      arrives, because the gritty powder stays in the cupboard. The
+      pack's fiber arrives (yellow strands); they feed. Back out:
+      she tears a pack at the door. Suits the gut-health buyer.
+      Sources: label, approved claim, common knowledge. Flag:
+      "supports" only; brand to confirm the feeding link.
+    B "The unopened tub". Opens on a full powder tub with dust on its
+      lid, then dives through the lid into the still, sealed powder.
+      Same chain from there, ending on a pack torn open instead.
+      Suits the powder quitter. Same sources and flags as A.
 
-    STOPPED: waiting for your choice of A or B. After it come the
-    seven beats, look lines, still and clip prompts, captions and
-    the voice brief.
+    STOPPED: waiting for your choice of A or B. After it come the film
+    plan, parts key, still and clip prompts, captions and voice brief.
 
 tweaks:
   - what: Your sources
     how: Add a source for each step of how it works. Links marked "common knowledge, brand to confirm" turn into sourced ones and more chains survive.
-  - what: Number of story options
-    how: Ask for "five story options" if you have several processes worth testing. It will still only offer chains that pass the tests.
+  - what: Number of options
+    how: Ask for three if you have several processes worth testing. It still offers only chains that pass all three tests.
   - what: Your script
-    how: Paste an existing script and it checks it against the tests, then writes the prompts from it instead of writing a new one.
+    how: Paste an existing script and it runs the tests on it, then builds the film plan from it instead of writing a new one.
   - what: Clip limits
-    how: Give your tool's real clip lengths and join types. It plans one continuous move only where it helps the story, and dissolves elsewhere.
+    how: Give your tool's real clip lengths and whether it can start on a chosen image. It keeps the dive as one move only if your tool can join clips cleanly.
 
 judge:
   - Every link in a kept chain is marked sourced or common knowledge, never assumed.
-  - At least one chain was dropped, and the reason is clear.
+  - At least one chain was dropped, and the reason names the test it failed.
   - The honesty notes name the exact words and pictures to avoid for your product.
   - It stops after the story options and waits for your choice.
-  - No story option shares an opening or a process with another.
+  - In the film plan, the product first appears at its own link.
 
 test:
-  - Look at the dropped chains. At least one should be dropped for a clear reason. If every chain survives, your facts may be too thin to test.
+  - Look at the dropped chains. Each should name the test it failed. If every chain survives, your facts may be too thin to test.
   - Check each link in the kept chain against its source.
-  - Pick a story option and check the seven beats follow that option, not another one.
-  - Make the opening still, the cutaway and the product's arrival before any clip. The pack should match its photo in all three.
+  - Pick an option and check the film plan follows it, with the dive, the chain and the return to the same moment.
+  - Make the surface still, the deepest dive frame and the product's arrival before any clip. The parts key colours should match in all three.
 
 improve:
   - Add your sourced chains to "What you need" in the skill file, so step 2 starts from them instead of hunting from scratch.
-  - If your product type isn't in the list in step 2, add a line for it with the kind of hidden process to look for.
-  - Write the details of the voice you've recorded or licensed into step 7, so every video uses the same one.
-  - Save the chain and the story option you chose in your brand file.
+  - If your product's process lives at a size not listed in step 2, add it with an example.
+  - Write the details of the voice you've recorded or licensed into step 8, so every video uses the same one.
+  - Save the chain, the option you chose and the parts key in your brand file.
   - Pair it with a skill that writes only the 3D how-it-works script, when you need the words without the prompts.
 
 terms:
   - term: Chain
-    meaning: How it works, written as three links. A meets B, B does C, so you get D.
+    meaning: How something works, written as 2 to 4 linked steps. This meets that, that happens, so you get this.
   - term: Common knowledge
     meaning: Something a school textbook would say, so it doesn't need the brand's own source.
+  - term: Parts key
+    meaning: A list giving each part of the process one colour and one shape, kept the same in every shot.
   - term: Dissolve
-    meaning: A soft fade from one clip into the next, used so one bad clip doesn't spoil a joined pair.
+    meaning: A soft fade from one clip into the next.

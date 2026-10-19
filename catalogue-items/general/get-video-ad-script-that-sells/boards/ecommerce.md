@@ -1,32 +1,36 @@
 # Write or fix a video ad script: for online stores
 
-**Bought again or bought once** changes the doubts, proof, offer and action.
-- Bought again (eaten, applied, used up): the doubts are "will it work on me", "will I keep it up", "am I locked in". Proof: the first use shown, people who reordered. Offer: the first order and what it costs after. Action: start.
-- Bought once (worn, cooked on, carried): the doubts are price, size or fit, whether it lasts, whether it can go back. Proof: the product put through something, how it's made, how long people have had theirs. Offer: one price against what it replaces or how long it lasts. Action: choose the right one.
-
-**Offer details to check and say plainly**
-| Detail | Say | Watch for |
+**Reordered or kept.** Say which, because it changes four beats.
+| Beat | Reordered (eaten, applied, used up) | Kept (worn, cooked on, carried) |
 |---|---|---|
-| Subscription | Price, how often it ships, how to pause or cancel | Never "cancel anytime" unless true; answer the fear of being locked in with the real steps |
-| First-order discount | The price today and after | A surprising renewal price comes back as refunds |
-| Bundle | Price per unit or per day, and why that quantity | "Save 20%" on its own is weak |
-| Guarantee | How long, what the buyer does, what they get back | First order only? Opened product? Say the limit |
-| Returns and exchanges | How long, whether used or worn items can go back, who pays postage | Answer "which size am I?" |
-| Size or version | How they find theirs (quiz, guide, the presenter's size) | Never guess a fit |
-| Warranty | Period and what it covers | A warranty period is not a lifespan |
+| Doubt | Will it work on me? Will I keep it up? Can I stop? | Is it worth the price? Which size? Will it last? Can I send it back? |
+| Proof | The first use on camera; people who came back for more | The product put through a test; how it's made; how long owners have had theirs |
+| Offer | The first order, and what it costs after | One price, set beside the thing it replaces or spread over its years of use |
+| Call to action | Start | Pick the right one |
+
+**Offer terms to say out loud**
+| Term | Say it plainly | Careful |
+|---|---|---|
+| Subscription | What it costs, how often it arrives, and the steps to pause or stop | "Cancel anytime" only if it's true and easy; a surprise renewal comes back as refunds |
+| First-order price | Today's price and the price after | Conditions in small print (a sign-up, a code) are said aloud |
+| Bundle | Price per unit or per day, and why that amount | "Save 20%" alone tells the buyer little |
+| Guarantee | How long, what they do, what they get back | Say "first order only" or "unopened only" if that's the rule |
+| Returns and exchanges | How long, whether used items qualify, who pays postage | Answer "which size am I?" |
+| Size or version | How they find theirs (a guide, a quiz, the presenter's size) | Never guess a fit |
+| Warranty | How long and what it covers | It isn't a lifespan claim |
 | Shipping | A date the store can keep | |
-| Reason for now | Stock, batch, season, price change | Must be true |
+| Reason for now | Stock, batch, season, a price change | It has to be true |
 
-**Price frames:** per day suits things that get used up; per use, per year or "against what it replaces" suits things that are kept.
+**Price frames.** For reordered goods, give the cost of a day. For kept goods, divide by uses or years, or set it beside the thing it replaces.
 
-**In the feed:** sound is often off at the start; end on a readable card (action, price frame, guarantee) held about two seconds; write for vertical first.
+**In the feed.** Many people start with sound off, so the first frame and overlay must work silent. Shoot vertical first. Hold the end card (action, price, guarantee) for about two seconds; the word budget already leaves room for it.
 
 **What each format needs from the script**
-| Format | The script must supply |
+| Format | The script supplies |
 |---|---|
-| Human creator | Lines they can honestly say, bracketed blanks for their true details, delivery notes, a list of extra shots, openings to record, what not to say |
-| AI presenter | Who the person is, a shot per line, the exact spoken line per clip, short clips of one or two sentences each, the product's own reference photos, no made-up label text, an adult |
-| Claymation or animation | A character and world, one visual metaphor for how it works, a scene per beat, a voice-over and on-screen text per scene; fiction may dramatise how they cope but not invent proof |
-| Long sales video or faceless video | A picture per sentence, the looped structure, proof items on screen |
-| Founder | The real founding story, and what the founder shows on camera |
-| Image ads and carousels cut from it | The opening as the overlay, how it works as the subline, proof as a badge, the offer as the final card |
+| Hired creator | Lines they can say honestly, brackets for their own details, delivery notes, extra shots to grab, openings to record, lines never to say |
+| AI presenter | Who the person is, one shot per line, the exact words per clip in one or two sentences, the product's real photos as reference, no invented label text, an adult |
+| Animation | A character and a world, one picture for how it works, a scene per beat, voice-over and screen text per scene; it can act out the problem but never invent proof |
+| Long sales video | A picture per sentence, the second round of how it works and proof, proof items shown on screen |
+| Founder | The real story of starting, and what the founder shows on camera |
+| Image ads cut from it | Opening as the overlay, how it works as the subline, proof as a badge, offer as the last card |

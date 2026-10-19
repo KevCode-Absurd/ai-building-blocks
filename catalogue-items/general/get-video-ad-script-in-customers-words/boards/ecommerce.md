@@ -1,13 +1,20 @@
 # Video ad script from customer quotes: for online stores
 
-**Where to look in your research:** reviews sorted by star rating (2 to 4 stars hold the objections), return reasons and support tickets (what not to promise), questions people ask on product pages before buying, and post-purchase survey answers.
+**Where each timeline point hides in store data**
+| Point | Look in |
+|---|---|
+| Before | Reviews that start "I used to..." or "Before this I...", and product-page questions |
+| Trigger | Post-purchase survey answers to "what made you buy now?" |
+| Tries | Reviews that name a kind of product they switched from |
+| Last doubt | 2 to 4 star reviews, pre-sale chat logs, abandoned-cart replies |
+| After | 5-star reviews written after a few weeks, and reorder notes |
 
-**Bought again or bought once** (see step 3), in store data:
-- Bought again: subscription and reorder rate, pack size, first-order price, how to pause and cancel.
-- Bought once: size and fit data, returns policy, warranty, how long customers say theirs lasted.
+**Reordered or kept, in store data**
+- Reordered: subscription and reorder rate, pack size, first-order price, the real steps to pause and cancel.
+- Kept: size and fit data, returns policy, warranty, how long customers say theirs has lasted.
 
-**Where "how it works" comes from in a store:** the materials list, how it's made, what was rejected while developing it, test results the store holds.
+**Where "how it works" comes from:** the materials list, how it's made, what was tried and dropped while making it, test results the store holds.
 
-**Where proof comes from:** review counts and the word customers use most (only if real), reorder numbers, independent tests, a demonstration the store can film.
+**Where proof comes from:** a demonstration the store can film, independent tests, reorder numbers, and review counts or the word buyers use most (only if counted).
 
-**A rule from refunds:** if refunds come from people who expected something the product doesn't do, no beat may suggest it does.
+**A rule from refunds and returns:** if they come from people who expected something the product doesn't do, no beat may hint that it does.

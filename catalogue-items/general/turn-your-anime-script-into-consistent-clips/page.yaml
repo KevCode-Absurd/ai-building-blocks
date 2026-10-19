@@ -1,185 +1,181 @@
 new_slug: turn-your-anime-script-into-consistent-clips
 name: "Turn your anime ad script into video clips"
-summary: "Give it your script and product photo. You get image and clip prompts with the same hero and style throughout."
+summary: "Give it your script and product photo. You get image and clip prompts that keep one hero and one drawing style."
 job: make-video-ads
 
 headline: "Turn your anime ad script into video clips"
-subhead: Give it an approved script and a real photo of your product. It fixes one drawing style and one hero, maps where everything stands, and writes the still prompts and timed clip prompts, with each clip handing over to the next.
+subhead: Give it an approved script and a real photo of your product. It sets the drawing look and makes reference sheets for the hero, the product and the place. Then it writes every shot as two key poses with a hold, ready for your AI video tool.
 
 explain: |
-  AI video tools can make good 2D animation, one clip at a time. Across a whole ad, things drift. The hero's hair changes colour, the style slides towards 3D, the product's label melts, or a clip forgets that the hero was holding something at the end of the last one.
+  AI video tools can draw good 2D animation one clip at a time. Across a whole ad, things drift. The hero's hair changes, the style slides toward 3D, the label on your pack melts, and every part of the body moves at once, so it stops looking hand-drawn.
 
-  This skill writes the instructions that stop that. It fixes one drawing style and one hero in words used in every prompt. It prepares separate reference images, each with one job: the hero's design, the place, the opening layout and key moments. Each clip prompt says where it starts, what happens second by second, and where it ends, so the next clip can pick up from there. When a shot fails, it changes the one instruction that controls the fault and leaves the rest alone.
+  This skill plans each shot the way TV anime is made. It picks the look with four settings (line, shading, palette, backgrounds) and repeats it word for word. It makes three reference sheets before any clip. Each shot is written as a starting pose, an end pose and a short hold, with a line saying what moves and what stays still. Fewer moving parts look more like anime and give the tool less to get wrong. When a shot fails, it reruns, simplifies, then changes one thing.
 
 when:
   - You have an approved anime-style script and need prompts for an AI image and video tool.
-  - Your animated clips keep changing the character or the product between shots.
-  - One shot failed and you want to fix it without remaking the whole ad.
+  - Your animated clips keep changing the hero or the product between shots.
+  - Your clips look like smooth 3D instead of hand-drawn animation.
 
 you_give:
-  - The approved script with its story beats
+  - The approved script with its shots
   - A real photo of your product, its pack or its app screen
-  - How the product is really used
-  - Your tone, colours and approved claims from your brand file (optional)
+  - How the product is opened and used
+  - Your tone, colours and approved claims (optional)
   - Your video tool's clip lengths and how many reference images it takes (optional)
 you_get:
-  - A style line, a hero line and a map of where everything stands
-  - Still prompts for the character sheet, scene master, opening layout and key frames
-  - One timed clip prompt per clip, with start and end states
-  - A fix list for any shot that goes wrong
+  - A look line and the one payoff picture the ad builds to
+  - Prompts for a hero sheet, a product sheet and a location sheet
+  - One shot card per shot, with key poses, a hold, what moves and how it cuts
+  - Retake notes for any shot that goes wrong
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste the approved script, ideally from "Get an original anime ad script".
-  - Attach a real product photo and say how the product is used.
-  - Make the still images first and approve them before making any clip.
-  - Make clips in order. If one fails, paste what went wrong and ask for the one-line fix.
+  - Attach a real product photo and say how the product is opened and used.
+  - Make the three sheets first and approve them before any clip.
+  - Make the clips in order. If one fails, paste what went wrong and ask for the retake.
 
 how_it_works:
-  - title: Picks one drawing style
-    text: Chooses one of eight looks and fixes its line, shadows, colours and rhythm for the whole ad.
-  - title: States the purpose
-    text: Writes one sentence on what the viewer expects, discovers and understands about the product.
-  - title: Designs the hero
-    text: One original adult in one line. Never a known character or a copied style.
-  - title: Prepares references
-    text: A character sheet, a scene master, the opening layout and key frames, each with one job.
-  - title: Maps the scene
-    text: Fixes where the hero, product and obstacle stand, where they look and which way they move.
-  - title: Times each clip
-    text: Splits each clip into build-up, action, reaction and payoff, with one event and one camera move per shot.
-  - title: Chains clips by state
-    text: Every clip has a start state and an end state, so the next clip opens on what was last visible.
-  - title: Fixes one thing at a time
-    text: Names one fault, changes the one instruction that controls it, and keeps everything else the same.
+  - title: Sets the look with four dials
+    text: Line, shading, palette and backgrounds, chosen from your tone and written as one line used in every prompt.
+  - title: Names the payoff picture
+    text: The one image the ad builds to, with your product's front to camera.
+  - title: Makes three sheets
+    text: The hero from three sides with the expressions the script needs, the product from its photo, and the empty location.
+  - title: Writes each shot as key poses
+    text: A starting pose, an end pose and a hold, with a wind-up before big actions and a settle after.
+  - title: Moves only what matters
+    text: Each shot lists what moves and what holds still, the way TV anime saves motion.
+  - title: Keeps direction and plans cuts
+    text: The hero keeps facing the same way, and every cut follows an action, a look, a detail or a time jump.
+  - title: Checks, then retakes in order
+    text: Compares stills at thumbnail size, then reruns, simplifies and changes one thing at a time.
 
 output_shape: |
-  STYLE    <drawing style traits, used word for word everywhere>
-  PURPOSE  The viewer expects <...>, discovers <...>, and understands
-           the product's value because <...>.
-  HERO     <one line: outline, build, face, hair, outfit, accessory>
-  MAP      <where hero, product and obstacle stand, gaze, direction>
+  LOOK      <line, shading, palette, backgrounds, in words>
+  PAYOFF    <who holds what, facing where, product front to camera>
 
-  STILL PROMPTS
-  Character sheet: <prompt>
-  Scene master:    <prompt>
-  Opening layout:  <prompt>  Attach: <image> for <its job>
+  SHEETS
+  Hero:     <prompt>
+  Product:  <prompt>  Attach: <photo> = shape, colour, printing
+  Location: <prompt>
 
-  CLIP 1 (<length>)
-  References: <image> = <job>
-  Start: <state>
-  0-3 s: <camera / action / light / sound / effect>
-  3-6 s: <...>
-  Words: "<exact line>" (<speaker>)
-  End: <state the next clip opens on>. No generated captions.
+  SHOT <n> · <length> · <size, angle, camera move>
+  Key A: <opening pose>  >  Key B: <end pose> · hold <time>
+  Moves: <parts>   Holds: <parts>
+  Words: <speaker>: "<exact line>"   Sound: <contact sounds>
+  Cut out: <on the action / on a look / to a detail / jump>
+  Attach: <sheet> = <what to take from it>
 
-  FIX LIST
-  <one fault> > <one instruction to change>
+  RETAKES
+  <shot>: rerun > simplify > change <one instruction>
 
 example:
   business: sprout
   input: |
     [the skill]
 
-    Script: the 30-second rival script from "Write an anime video ad
-    script" (6 shots, 3 clips, narrator). Shot 1: the hero faces a
-    giant tub of powder. Shot 2: a clump from the shaker hits his
-    cheek. Shot 3: he tears a daily pack across the top. Shot 4:
-    gummies tip into his palm, the tub shrinks. Shots 5 and 6: he
-    eats; held on the pouch.
-    Style: clean line. Hero: original adult man, 8 heads tall,
-    spiky black hair, teal hoodie, sand trousers, chin scar.
+    Script: the 20-second script from "Get an original anime ad
+    script". Narrator only. Shot 1: the hero glares at a towering tub
+    of powder. Shot 2: a scoop of powder puffs into his face. Shot 3:
+    he tears a daily pack across the top. Shot 4: gummies tip into
+    his palm. Shot 5: he heads out the door, pouch in hand.
+    Narration: "Same fight, every morning." / "Or skip the scoop." /
+    "Rip. Tip. Enjoy."
+    Tone: light comedy. Hero: an original adult man, spiky black
+    hair, teal hoodie.
     Photos: [pouch front] [daily pack in a hand] [gummies in a palm]
-    Handling: the daily pack tears straight across its top edge only.
-    The pouch opens only at its resealable top, never torn.
-    Never show: cartoon tie-in characters, partner brand marks.
-    Tool: 10-second clips, up to 3 reference images.
+    Handling: tear the daily pack straight across the top only.
+    Tool: 8-second clips, up to 3 reference images.
   output: |
-    STYLE    clean cel: even black outline, flat colours, two-tone
-             shadows, softer painted background. Snappy drawn timing.
-    PURPOSE  The viewer expects another morning fight with the
-             powder, discovers one pack and a handful of gummies,
-             and gets the value because there's nothing to mix or wash.
-    HERO     an original adult man, 8 heads tall, spiky black hair,
-             teal hoodie, sand trousers, a small scar on his chin.
-    MAP      Hero behind the counter, centre-left, facing right. The
-             tub on the counter at right, an arm's length away. Shaker
-             in front of the tub. One daily pack and the pouch on the
-             counter at his left. He looks at the tub (shots 1 and 2),
-             then at the pack.
+    LOOK     thick even marker outline, flat colour with one shadow
+             tone, full bright palette, flat graphic backgrounds.
+    PAYOFF   the hero at the front door, facing screen right, the
+             pouch held at chest height, its front to camera.
 
-    STILL PROMPTS
-    Character sheet: an original hand-drawn animated character sheet,
-      the HERO alone, front, side and back views, plain background.
-    Scene master: a small kitchen, counter across the frame, window
-      at left, flat morning light from the left, [STYLE].
-    Opening layout: the MAP as the first frame, the tub drawn three
-      times his height. Attach: character sheet = his design only,
-      ignore its background; scene master = the room.
-    Key frame (tear): close on his hands tearing the daily pack
-      straight across the top edge. Attach: daily pack in a hand =
-      shape, colour and grip. A target to reach, not a hold.
+    SHEETS
+    Hero: an original adult man, tall and lanky, spiky black hair
+      with one tuft over his left eye, teal hoodie, sand trousers,
+      white trainers. Front, three-quarter and side views. Three
+      expressions: a glare, a startled blink, a small grin. [LOOK]
+      Plain light-grey background.
+    Product: the pouch and one daily pack drawn in [LOOK], front and
+      three-quarter. Attach: pouch front = shape, deep green colour,
+      yellow wordmark and bear face; daily pack in a hand = its size.
+    Location: a small kitchen, counter across the frame, window at
+      left as the only light, front door at the far right. No people.
 
-    CLIP 1 (10 s)
-    References: opening layout = start image; character sheet = design.
-    Start: as the MAP. Tub towers, dust curling.
-    0-1 s: still low angle. Hold. Dust drifts.
-    1-4 s: still. Narrator: "Every morning, the same fight."
-    4-5 s: cut to level angle. The shaker rattles; one clump flies.
-    5-6 s: one-frame impact on his cheek. Clump sound only.
-    6-9 s: slow push in. Narrator: "Chalky powder. A shaker to wash."
-           He wipes his cheek, eyes half closed.
-    End: right hand lowering from his cheek, cheek clean, pack still
-    on the counter at his left. No generated captions or lettering.
+    SHOT 1 · 3 s · wide, low angle, still camera
+    Key A: hero behind the counter, arms crossed, facing the tub
+      (screen right)  >  Key B: same, one eyebrow drops · hold 1 s
+    Moves: eyebrow, hoodie strings.  Holds: body, tub.
+    Words: Narrator: "Same fight, every morning."
+    Sound: a low hum from the fridge.
+    Cut out: on the action (he reaches for the scoop)
+    Attach: hero sheet = face, hair, clothes only; location sheet =
+      room and light. The tub is drawn three times his height.
 
-    CLIP 2 (10 s)
-    References: clip 1's last frame = start; tear key frame = target.
-    0-2 s: three-quarter view, still. Left hand lifts the pack.
-    2-4 s: right hand tears straight across the top. Narrator: "Or
-           one daily pack. Rip. Tip. Enjoy." Speed lines behind him.
-    4-7 s: deep-green gummy bears tip into his right palm.
-    7-10 s: hold on his face; behind him the tub shrinks to normal.
-    End: gummies in his right palm, torn pack in his left hand, tub
-    normal size. No generated captions or lettering.
-    (cut for length: the full run also had clip 3, with the pouch
-    label from the attached photo, and an empty fix list)
+    SHOT 3 · 2 s · close, eye level, still camera
+    Key A: both hands hold the daily pack at its top edge
+      >  Key B: the top is torn off in one pull · hold 0.5 s
+    Wind-up: hands pinch tighter before the pull.
+    Moves: hands, the torn strip.  Holds: the pack's front.
+    Words: Narrator: "Or skip the scoop."   Sound: one crisp tear.
+    Cut out: on the action (the pack tips)
+    Attach: product sheet = pack shape and print; daily pack in a
+      hand = grip.
+
+    SHOT 5 · 3 s · medium, eye level, slow push in
+    Key A: hero steps through the door, facing screen right
+      >  Key B: the payoff pose · hold 1.5 s
+    Moves: legs, then hair settling after the stop.  Holds: the
+      pouch, front to camera.
+    Words: Narrator: "Rip. Tip. Enjoy."   Sound: door click.
+    Attach: hero sheet = design; pouch front = label exactly.
+
+    (cut for length: the full run also had shots 2 and 4, and
+    clip groupings for 8-second clips)
+
+    RETAKES
+    None yet. If his tuft moves sides: rerun once, then add "tuft
+    over his left eye" to the shot's first line.
 
 tweaks:
-  - what: The drawing style
-    how: Name one of the eight looks ("brush ink", "pop") or let it propose one, marked "proposed", from your tone.
+  - what: The look
+    how: Set any of the four dials yourself ("tapered brush line, black and greys with one green accent"). If you don't, it picks them from your tone and marks them "proposed".
   - what: Clip limits
-    how: Give your tool's real clip lengths and reference slots. It splits the action to fit, instead of assuming long clips.
-  - what: Key frames
-    how: Ask for an extra key frame for any hard moment, such as a hand gripping the product. It fixes grips better than more style words.
-  - what: The fix list
-    how: Paste the failed clip's problem ("the label blurs at 4 seconds"). You get one instruction to change and nothing else.
+    how: Give your tool's real clip lengths and reference slots. It groups shot cards into clips that fit, instead of assuming long clips.
+  - what: Extra key poses
+    how: Ask for an extra pose still for any hard moment, such as a hand gripping the pack. A target picture fixes grips better than more words.
+  - what: Retakes
+    how: Paste the failed clip's problem ("the label blurs at 4 seconds"). You get the next step in the retake order, not a whole new prompt.
 
 judge:
-  - The style line and hero line are word for word the same in every prompt.
-  - Every clip prompt ends with an end state, and the next clip starts from it.
+  - The look line and hero description are the same, word for word, in every prompt.
+  - Every shot card has two key poses, a hold, and a moves and holds line.
+  - The hero faces the same way toward the product unless a turn is shown.
   - The dialogue matches the script exactly.
-  - No artist, studio or series is named.
-  - The product's label is never covered by an effect.
+  - No artist, studio, show or character is named.
 
 test:
-  - Make the character sheet, the scene master and one clip. Compare the hero in the clip with the sheet before you make the rest.
-  - Read each clip's end state next to the next clip's start. They should match.
-  - Check the dialogue in every clip prompt against the script, word for word.
-  - When a clip fails, paste the fault back in. You should get one instruction to change, not a whole new prompt.
+  - Make the three sheets and one clip. Compare the hero in the clip with the sheet before you make the rest.
+  - Read the moves and holds lines. If most shots move everything, the ad will drift toward 3D.
+  - Check every shot's facing direction. Any flip toward the product should have a turn or a close-up between.
+  - When a clip fails, paste the fault back in. You should get the next retake step, not a new prompt.
 
 improve:
-  - Write your chosen drawing style into step 1 of the skill file and delete the others, so every ad uses the same look.
+  - Write your chosen dial settings into step 1 of the skill file, so every ad in a series has the same look.
   - Add your video tool's clip lengths and reference slots to "What you need".
-  - Keep a short list of the faults your tool keeps making and add it to step 12, so the checks look for those first.
-  - Save the approved hero line and style line in your brand file.
+  - Keep a short list of the faults your tool keeps making and add it to step 9, so the checks look for those first.
+  - Save the approved hero sheet and look line in your brand file.
   - Pair it with a skill that writes an original anime ad script, and one that adds captions in your brand font.
 
 terms:
-  - term: Character sheet
-    meaning: An image of the hero alone from several angles, used only to keep their design the same.
-  - term: Scene master
-    meaning: One image of the place, used in every clip so the room, light and colours don't change.
-  - term: End state
-    meaning: What's visible in the last frame of a clip (a grip, an object's position), so the next clip can start from it.
-  - term: Key frame
-    meaning: A still image of a hard moment, such as a grip or a reveal, that a clip aims for.
+  - term: Key pose
+    meaning: A drawing of the main position in a movement. Animators draw these first, then fill the motion between them.
+  - term: Hold
+    meaning: A moment where the picture stays still before the cut, so the viewer can read it.
+  - term: Reference sheet
+    meaning: An image made only to keep something the same across clips, such as the hero from three sides.
+  - term: Screen direction
+    meaning: Which way someone faces or moves across the screen. Keeping it the same stops viewers losing track.

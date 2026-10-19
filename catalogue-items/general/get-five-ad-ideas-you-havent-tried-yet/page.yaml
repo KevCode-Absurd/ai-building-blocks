@@ -1,78 +1,78 @@
 new_slug: get-five-ad-ideas-you-havent-tried-yet
 name: "Five ad ideas you haven't tried yet"
-summary: "Give it your past ads and brand details. You get a map of what you've tried and five ideas for the gaps."
+summary: "Give it your past ads and brand file. You get a map of what you tried and five ideas for the gaps."
 job: plan-ad-tests
 
 headline: "Five ad ideas you haven't tried yet"
-subhead: Give it your past ads (an account export, an ad library page or just your own list) and your brand file. It maps what has run against what hasn't, ranks the biggest gaps, and writes five ideas that each fill one gap with your real claims and offers.
+subhead: Give it your past ads (an account export, an ad library page or your own list) and your brand file. It maps every ad by moment, value, buyer knowledge, opening and form, ranks the five biggest gaps, and writes one idea for each with your real claims and offers.
 
 explain: |
-  When ads stop working, most teams make more of the same: a new colour, a new headline, the same opening shot. The account fills up with near-copies while whole lanes stay empty, such as a buyer nobody has spoken to, a reason to buy nobody has led with, or a product that never got an ad.
+  When ads stop working, most teams make more of the same: a new colour, a new headline, the same opening shot. The account fills up with near-copies while whole areas stay empty. A buying moment nobody speaks to. A reason to buy nobody leads with. A product that never got an ad.
 
-  This skill takes stock first. It sorts your past ads by reason to buy, kind of opening line, how much the buyer already knows, format and product, and marks each as measured, reported or never run. Then it checks ten motives, nine kinds of opening, five buyer knowledge levels and your competitors' ads for lanes you haven't used. The five ideas each fill one gap, differ from each other, and use only claims and offers from your brand file.
+  This skill takes stock first. It places every past ad through five lenses: the buying moment, the value it leads with, how much the buyer already knows, how it opens, and its format and product. It grades your evidence (measured, reported, or only seen running) and claims no more than that evidence allows. Then it ranks the five biggest gaps by how many buyers sit there, whether you can back an ad there today, and what it costs to make. Each of the five ideas fills one gap and uses only claims and offers from your brand file.
 
 when:
   - Your ads have gone stale and every new one looks like the last one.
   - You're planning next month's tests and want ideas that are truly new for your brand.
-  - You only have an ad library page or your own memory of what you ran, and want a structured view anyway.
+  - You only have an ad library page or your own memory of what you ran, and want a clear view anyway.
 
 you_give:
   - What your ads have done, from an account export, an ad library page or your own list
   - Your brand file, with products, prices, buyers, claims and offers
+  - Reviews or support tickets (optional)
   - Competitor ads or notes (optional)
   - Who can appear on camera, and which formats you can make (optional)
 you_get:
-  - Tables of what has run, with each result marked measured, reported or not measured
-  - The open lanes, covering motives, openings, buyer knowledge levels, narrow buyers, formats and products
+  - A record of every past ad, with each result graded measured, reported or seen running
+  - Five lenses showing what's covered, thin or open
+  - The five biggest gaps, ranked, each marked as known from results or from what's running
   - Five ad ideas, each with headlines, an opening and the gap it fills
-  - A ranked list of the ten gaps that matter most
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste your past ads. An export with spend and purchases is best, but a list of what you ran works too.
   - Paste your brand file underneath, including your approved claims and current offers.
-  - Add competitor ads if you have them. Without them it skips that section and says so.
-  - Read the ranked gaps at the end first, then pick the one or two ideas that fill the top gaps.
+  - Add reviews if you have them. They turn guessed buying moments into real ones.
+  - Read the ranked gaps first, then pick the one or two ideas that fill the top gaps.
 
 how_it_works:
-  - title: States its evidence
-    text: Says whether it's working from measured results, the founder's account or an ad library, and only claims what that evidence supports.
-  - title: Lists what has run
-    text: Tables every reason to buy and every format used, with its result and what that result rests on.
-  - title: Checks the open lanes
-    text: Goes through ten motives, nine kinds of opening line and five buyer knowledge levels, and marks which ones no ad has used.
-  - title: Finds narrower buyers
-    text: Names six to eight buyers narrower than your profiles, each backed by a review or remark, or marked "inferred".
-  - title: Checks formats, products and competitors
-    text: Finds the biggest format gap, the product with no ads, and what competitors lean on that you haven't tried.
+  - title: Grades its evidence
+    text: Says whether it works from measured results, the founder's account or an ad library, and claims only what that evidence supports.
+  - title: Builds the record
+    text: One row per past ad with its moment, value, buyer knowledge, opening, format, product and graded result.
+  - title: Looks through five lenses
+    text: Buying moments, the value led with, what the buyer knows, the kind of opening, and format and product. Each place is marked covered, thin or open.
+  - title: Finds real moments
+    text: Lists the situations that send buyers looking, each backed by a review or remark, or marked "inferred".
+  - title: Ranks five gaps
+    text: Scores each open place by how many buyers sit there, whether you can back it today, and cost to make.
   - title: Writes five ideas
-    text: Each idea fills one gap and differs from the others in motive, buyer and how much the buyer knows. Every claim and offer comes from your brand file.
-  - title: Ranks the gaps
-    text: Lists the ten gaps that matter most and says whether each is known from results or only from what's running.
+    text: One per gap. Each differs from the others on at least two lenses, and every claim and offer comes from your brand file.
 
 output_shape: |
-  EVIDENCE: <account export / founder's account / ad library>
+  EVIDENCE: <measured / reported / observed>, <what it is>
 
-  1. WHAT HAS RUN
-  <table: ad | reason to buy | format | buyer | buyer knows | result | result rests on>
-  Worked: <pattern>   Didn't: <pattern>
+  RECORD
+  <ad | moment | value | knows | opening | format | product | result, grade>
+  Patterns: <two or three, or "not measured">
 
-  3. MOTIVES NOT LED WITH      <open lanes, from the ten>
-  4. OPENINGS NOT USED         <kinds that fit, or "needs: ...">
-  5. BUYER KNOWLEDGE LEVELS    <level: enough / thin / nothing>
-  6. NARROW BUYERS             "<name>": <who, moment, evidence or "inferred">
-  7. FORMATS                   <biggest format gap>
-  9. PRODUCTS                  <the one with no ads that most deserves them>
+  LENSES
+  1 Moments     <moment>: covered / thin / open   (<quote, source> or inferred)
+  2 Value       <value, layer>: led with / never
+  3 Knowledge   <level>: enough / thin / nothing
+  4 Openings    <gain | news | curiosity | proof first>: used / unused / needs
+  5 Form        <format or product>: <ads>, <status>
 
-  10. IDEA A: <name>
-  Gap filled: <section and line>   Motive: <...>   Buyer: <...>
-  Belief in the way: "<buyer's words>" (<source>)
+  GAPS (ranked)
+  <n> <gap> | reach <...> | proof on hand <...> | cost <...> | known from <...>
+
+  IDEA A: <name>   fills gap <n>
+  Lenses: <moment / value / knows / opening / format / product>
+  Doubt: "<buyer's words>" (<source>). Belief to plant: <...>, held up by <fact>
+  Why it's new: <two sentences>
   Headlines: <three, ten words or fewer>
   Opening: <2 to 4 sentences, or first five seconds of video>
   (ideas B to E in the same layout)
-
-  11. TOP 10 GAPS
-  <rank | gap | why | known from results or from what's running>
 
 example:
   business: sprout
@@ -87,110 +87,105 @@ example:
     People on camera: a paid former pro athlete only. No founder
     story on file. Formats: any.
   output: |
-    EVIDENCE: ad library (what's running, no results) plus practice
-    numbers. "Practice" below means made-up numbers, not real results.
+    EVIDENCE: observed (ad library, no results) plus practice numbers
+    for 9 ads. "Practice" means made-up numbers, not real results.
 
-    1. WHAT HAS RUN (top lines)
-    Reason to buy              Copies  Result
-    Price doubt + 61% off      15+     P1 $26.79 then $76.92 a sale (practice)
-    Deal as insider tip        8+      P2 $50.00 a sale (practice)
-    Deal + 4 free gifts        10      not measured
-    Gut pain in slang          5       T1 $21.21 a sale (practice)
-    Hair                       6       not measured
-    Habit ("One Step I Never Skip") 1  H1 $29.55 a sale (practice)
-    Worked (practice): pain and habit openings cost less per sale
-    than deal openings. Didn't: the top deal ad wore down (P1).
+    RECORD (top lines)
+    Ad                     Moment         Value         Opening  Result
+    Price doubt + 61% off  none           saves money   gain     P1 $26.79 then $76.92 a sale (practice)
+    Deal as insider tip    none           saves money   news     P2 $50.00 a sale (practice)
+    Hot Girl Tummy         bloated        less worry    gain     T1 $21.21 a sale (practice)
+    One Step I Never Skip  daily routine  less effort   curiosity  H1 $29.55 a sale (practice)
+    Hair                   none           look good     gain     not measured
+    Patterns (practice): moment-led ads cost less per sale than
+    money-off ads. The top money-off ad wore down (P1).
 
-    3. MOTIVES NOT LED WITH
-    Prove something to myself (no), feel in control (no), save
-    effort (partly). Biggest open lane: "I finally stuck with it",
-    the top review theme, in 2 of the 40 newest ads.
+    LENSES
+    1 Moments: "rinsing the shaker again" open (R3, R6); "a shelf of
+      bottles" open (R5); "the school run, nothing for me" thin (R15);
+      "I want to cancel but can't" open, complaint only (R20).
+    2 Value: saves money led 19 of 40 newest ads. Feeling in control
+      and "I'm someone who sticks with it" never led (top review theme).
+    3 Knowledge: doesn't see the problem, nothing. Knows the kinds of
+      fix, nothing against powders. Knows the product, heavy.
+    4 Openings: proof first unused. The absorption study is on file
+      (vitamin C +40.1% in the blood). Real expert: needs one. The
+      athlete is a paid spokesperson.
+    5 Form: Sugar-Free has no ad. MISSING: a reason in the brand file
+      to push it (it notes sugar alcohols upset some stomachs).
 
-    4. OPENINGS NOT USED THAT FIT
-    Push back on a belief: "The issue has never been nutritive
-    content... It's always been ... consistency" (review 1).
-    Cost of the problem: the half-used tub of powder.
-    Startling fact: the study (vitamin C +40.1% in the blood).
-    Real expert: needs a real expert. The athlete is a paid
-    spokesperson, not an expert.
+    GAPS (ranked)
+    1 Powder quitters, comparing fixes | reach: about 40% of buyers
+      (brand file estimate) | proof: R1, R3, prices | cost: low |
+      known from what's running
+    2 Proof-first opening | reach: anyone comparing | proof: the study |
+      cost: low | known from what's running
+    (gaps 3 to 5 cut for length)
 
-    5. HOW MUCH THE BUYER KNOWS
-    Doesn't see the problem: nothing. Knows the problem: thin.
-    Comparing solutions: nothing against powders. Knows Sprout: heavy.
-    Ready to buy: heavy (61% off everywhere).
-
-    6. NARROW BUYERS (3 of 7 shown)
-    "The powder quitter with a tub in the cupboard": "I've been
-      choking on [a big-name greens powder] for the last few years"
-      (review 4). Opening: the tub. First buy: Original, 28 packs.
-    "The shelf of gummy bottles": "I also stopped buying separate
-      probiotic gummies, b12 gummies, and multivitamin gummies"
-      (review 5). Opening: the shelf, then one pack.
-    "The subscription-wary": "I hate subscriptions because I feel
-      like they are a trap" (review 17). Use only the site's own
-      words on cancelling ("Pause Or Cancel Any Time").
-
-    7. FORMATS: not captured in the library. Not known, ask.
-
-    9. PRODUCTS: Sugar-Free has no ad. MISSING: a reason in the
-    brand file to push it (it notes sugar alcohols upset some
-    stomachs), so no idea is aimed at it.
-
-    10. IDEA A: "The tub in the cupboard"
-    Gap filled: section 3, prove something to myself. Buyer:
-    powder quitter, comparing solutions. Format: video.
-    Belief in the way: "A gummy can't hold enough to replace my
-      powder." (brand file). Belief to plant: one pack holds 60+
-      ingredients, 21 vitamins & minerals, 6 g fiber, and it's
-      the one people keep taking (review 1).
+    IDEA A: "The tub in the cupboard"   fills gap 1
+    Lenses: rinsing the shaker / feeling in control / knows the kinds
+      of fix / curiosity / video / Original, 28 packs
+    Doubt: "A gummy can't hold enough to replace my powder." (brand
+      file). Belief to plant: one pack holds 60+ ingredients, 21
+      vitamins and minerals and 6 g fiber, and it's the one people
+      keep taking (R1).
+    Why it's new: no live ad speaks to the powder they quit. The
+      habit idea runs in 2 of the 40 newest ads, never as a switch.
     Headlines: "The greens you'll actually finish" /
       "Your powder is still in the cupboard" /
       "60+ ingredients. No shaker to wash."
-    First five seconds: a half-used tub of green powder and a
-      shaker in the sink. A hand tears a daily pack straight across
-      the top and tips the gummies into a palm.
-    IDEA B: "One pack, not a shelf". Gap: feel in control. Image,
-      a row of bottles against one pouch. Note: don't say it
-      replaces a multivitamin; minerals are about 25% of daily value.
-    (cut for length: the full run also had ideas C to E, section 8
-    on competitors and the ranked top 10 gaps)
+    First five seconds: a half-used tub of green powder and a shaker
+      in the sink. A hand tears a daily pack straight across the top
+      and tips the gummies into a palm.
+
+    IDEA B: "Measured in the blood"   fills gap 2
+    Lenses: label reader / less worry / knows the kinds of fix /
+      proof first / image / Original
+    Headline: "Vitamin C up 40.1% in a 12-week study." Sub: 120
+      healthy adults, randomised, placebo-controlled. Note: the study
+      measured absorption only. No energy or immunity claim.
+    (cut for length: the full run also had ideas C to E)
 
 tweaks:
   - what: The evidence you give
     how: An export with spend and purchases lets it say "tested and lost". A library page or your own list only lets it say "ran" or "never ran". Give the best you have and it adjusts what it claims.
+  - what: Reviews
+    how: Paste 20 or more and the moments lens fills with real situations instead of "inferred" ones.
   - what: Allowed formats
-    how: Add "image ads only" and it judges coverage inside image formats, so it won't fill the list with video gaps you can't make.
+    how: Add "image ads only" and it judges form inside image formats, so it won't fill the list with video gaps you can't make.
   - what: People and rights
-    how: Say who can appear on camera (the founder, a staff member, nobody). Ideas that need a person you don't have get marked "needs" instead of recommended.
+    how: Say who can appear on camera. Ideas that need a person you don't have get marked "needs" instead of recommended.
   - what: Competitor ads
-    how: Paste five to ten competitor ads or describe them. The audit adds what they lean on that you haven't tried, and what nobody in your market does.
+    how: Paste five to ten competitor ads or describe them. Each lens then notes what others lean on that you haven't tried.
 
 judge:
-  - The first line says what evidence the audit rests on.
+  - The first line grades the evidence the map rests on.
   - Nothing is called a winner without numbers and dates. "Still running" isn't treated as a win.
-  - Each of the five ideas names a different gap, and no two share the same buyer and motive.
-  - Every narrow buyer quotes a real review or remark, or is marked "inferred".
+  - Each of the five ideas fills a different gap and differs from the others on at least two lenses.
+  - Every buying moment quotes a real review or remark, or is marked "inferred".
   - The ideas use only your claims, prices and offers. Check one headline against your brand file.
 
 test:
-  - Think of a gap you already know about, such as a buyer you've never spoken to or a product with no ads. Check it shows up in the map or the top ten gaps.
-  - Run it twice on the same list. The top gaps should mostly match, even if the five ideas differ.
+  - Think of a gap you already know about, such as a buyer you've never spoken to or a product with no ads. Check it shows up in the lenses or the ranked gaps.
+  - Run it twice on the same list. The top gaps should mostly match, even if the ideas differ.
   - Check one headline from each idea against your brand file. Any price, claim or offer you can't find there is a fail.
   - Show the five ideas and your last five ads to whoever makes your ads, mixed up, and ask which ones feel new.
 
 improve:
-  - Edit the lists of motives, openings and formats in steps 3, 4 and 7 of the skill file. Add the ones that matter in your market and delete the ones you'll never use.
-  - Write your own rule for "tested" into step 1 (for example "at least three times our target cost per sale spent"), so results are judged your way.
+  - Add values your buyers name often to lens 2 in the skill file, in their own words, so the map speaks your market's language.
+  - Write your own rule for "tested" into step 1 (for example "spend of at least three times our target cost per sale"), so results are judged your way.
   - Save the gap map in your brand file after each run, and paste it back next month so filled gaps drop off.
-  - Add real review quotes to your brand file. The narrow buyers then come with evidence instead of "inferred".
+  - Add real review quotes to your brand file. The moments then come with evidence instead of "inferred".
   - Pair it with a skill that writes ad copy from one true product fact, to turn the best idea into a finished ad.
 
 terms:
-  - term: Reason to buy
-    meaning: The reason someone buys, in their words. An ad usually leads with one.
+  - term: Buying moment
+    meaning: The situation that sends someone looking for a product like yours.
+  - term: Value
+    meaning: What the buyer gets that matters to them, such as saved time, less worry or looking good to others.
   - term: Opening
     meaning: The first line or first two seconds of an ad, the part that makes someone stop scrolling.
   - term: Buyer knowledge level
-    meaning: How much the buyer already knows about the problem and about you, from "doesn't know they have the problem" to "ready to buy".
+    meaning: How much the buyer already knows about the problem and about you, from "doesn't see the problem" to "ready to buy".
   - term: Ad library
-    meaning: A public page where an ad platform shows the ads a brand is running now. It shows the ads, not the results.
+    meaning: A public page where an ad platform shows the ads a brand runs now. It shows the ads, not the results.

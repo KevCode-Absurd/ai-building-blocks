@@ -4,12 +4,14 @@ summary: "Give it real customer quotes and your facts. You get a script where ev
 job: make-video-ads
 
 headline: "A video ad script in your customers' own words"
-subhead: Give it real customer quotes, one buyer, the reason they buy and your facts. It writes down the one belief the ad must change, builds a script from problem to call to action with a source for every line, and lists what it had to assume.
+subhead: Give it real customer quotes, one buyer, the reason they buy and your facts. It sorts the quotes into what the buyer lived through, writes down the one belief the ad must shift, builds nine beats with a source for every line, and lists what it had to assume.
 
 explain: |
-  Ads written from the product outwards sound like the product page with a hook stuck on. Ads copied from a competitor's structure sound like the competitor. The fastest way to an ad that could only be yours is what your customers already said: the word they use for the problem, what they tried first, the doubt that nearly stopped them.
+  Ads written from the product outwards sound like the product page with an opening stuck on. Ads copied from a competitor's structure sound like the competitor. The quickest way to an ad that could only be yours is what your customers already said: their word for the problem, what they tried first, the doubt that nearly stopped them.
 
-  This skill takes your quotes and facts and first writes one sentence: "They think ___. After this they think ___." Every line has to serve that sentence or it's cut. It then works through problem, promise, how it works, the doubt, proof, offer and call to action, choosing proof and offer to fit whether your product is bought again or bought once. Every line carries its evidence, quotes stay word for word, and anything missing becomes a marked gap, never an invented fact.
+  This skill files every quote on the buyer's timeline (life before, the day it got bad enough, what they tried, the last doubt, life after). Then it writes one sentence: "Now they believe ___. After this ad they believe ___." Every line has to serve that sentence or it's cut. It works through the nine beats, from opening to call to action, choosing proof and offer to fit whether your product is used up and reordered or bought once and kept. Quotes stay word for word, every line carries its source, and anything missing becomes a marked gap.
+
+  The beats follow Blue Sense Digital's public masterclass, How To Write Meta Ads That Scale. Placing the buyer by what they know comes from Eugene Schwartz, and the pace of 3 words a second from published research on how fast ads should talk.
 
 when:
   - You have reviews, survey answers or support tickets and want an ad built from them, not from a reference ad.
@@ -18,55 +20,58 @@ when:
 
 you_give:
   - The buyer, the reason they buy and the offer
-  - Customer research with real quotes (their words, their moment, what they tried, what nearly stopped them)
-  - Your product facts, how it works, proof with sources, offer, guarantee and claims
+  - Customer research with real quotes and where each came from
+  - Your product facts, how it works, proof with sources, offer, guarantee and allowed claims
   - How much the buyer already knows about the problem and about you
   - Length, speaker, script type and scripts you already have (optional)
 you_get:
-  - The belief sentence and a list of what was assumed
-  - The script, beat by beat, with spoken line, on-screen text, picture and evidence
-  - Opening variants, each a different type
-  - The beat that carries the ad, a test plan and a list of gaps
+  - The belief shift and a list of what was assumed
+  - The script, beat by beat, with spoken line, on-screen text, picture and source
+  - The spoken word count against the budget for the length
+  - Opening variants from different points on the timeline
+  - The selling beat, a test plan and a list of gaps
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste 10 or more real customer quotes with where each came from. Include a few 3-star reviews.
-  - Paste your product facts, approved claims and the real offer terms.
+  - Paste your product facts, allowed claims and the real offer terms.
   - Name one buyer and say how much they already know.
   - Read the "Assumed" line first. Each item there is something to find out before you spend on the ad.
 
 how_it_works:
-  - title: Takes stock
-    text: Checks seven needs (their words, the moment, the old way, the doubt, how it works, proof, the offer) and lists what was thin or blank.
-  - title: Names the belief
-    text: '"They think ___. After this they think ___." Every beat serves it.'
+  - title: Sorts the quotes
+    text: Files each quote under one point on the buyer's timeline, word for word, and lists which points and facts are thin or blank.
+  - title: Names the belief shift
+    text: '"Now they believe ___. After this ad they believe ___." Every beat serves it.'
   - title: Places the buyer
-    text: Sets doubts, proof, offer and action by whether the product is bought again (will I keep it up, am I locked in) or bought once (price, fit, returns).
+    text: Names how much they know, and whether the product is reordered or kept. That sets the doubts, proof, offer and action.
   - title: Reads the offer
     text: Lists what the offer really has and picks one price frame the real numbers support.
   - title: Writes the beats
-    text: Problem, promise then how it works, the doubt, the strongest proof, offer and guarantee, call to action. Leaves a beat out if the length rules it out.
+    text: Problem, promise, how it works, the doubt, the strongest proof, offer and guarantee, call to action. Leaves a beat out if the length rules it out.
   - title: Writes the opening last
-    text: Starts from the customer's own word for the problem, with variants of different types, each read with line 2.
+    text: Starts from the customer's own word or the day it got bad, with variants from other timeline points, each read with line 2.
   - title: Audits itself
-    text: Checks every beat serves the belief, every picture can be made, and nothing is invented. Names the beat carrying the ad and the test.
+    text: Checks every beat serves the belief shift, the words fit the length, every picture can be made and nothing is invented.
 
 output_shape: |
-  Belief: They think <now>. After this they think <after>.
-  Assumed: <each thin or missing need, and what was done about it>
-  <Bought again or bought once>: <the doubts that follow>
+  Belief shift: Now they believe <now>. After this ad they believe
+  <after>.
+  Assumed: <each thin or missing point, and what was done about it>
+  <Awareness> | <Reordered or kept> | <length> | Budget <n> |
+  Spoken <n>
 
   <BEAT>
     Says: "<spoken line>"
     Screen: <on-screen text, or nothing>
     Picture: <who and what is in frame, what happens>
-    Evidence: <quote and source, or claim and source>
-  (problem, promise and how it works, doubt, proof, offer, call to action)
+    Evidence: <quote and source, or fact and source>
+  (opening to call to action; any beat left out says why)
 
   OPENING VARIANTS (each read with the problem line)
-  <type>: "<line>"
+  <timeline point>: "<line>"
 
-  Load-bearing beat: <which beat carries it>
+  Selling beat: <which beat carries it>
   Test plan: <what it tests against, what to make next if it wins>
   Placeholders: <missing figures in [brackets]>
 
@@ -90,49 +95,56 @@ example:
     experienced better, more regular digestion" (always "of surveyed
     users"). $29.99 first order with the text sign-up, renews at
     $49.99 every 4 weeks. 30-day money back, first order only.
-    Approved claims: "Supports digestion and gut health."
+    Allowed claims: "Supports digestion and gut health."
     Never say: fix, treat, cure, IBS, bloating relief as a promise.
     Knows: the problem and the fixes, not Sprout. Length: 45 seconds.
     Speaker: AI presenter.
   output: |
-    Belief: They think fiber supplements are rough on their stomach.
-    After this they think a daily pack with 6 g of prebiotic fiber is
-    gentle enough to try, starting with Low Sugar.
-    Assumed: no study of digestion on the product (the study measured
-    two vitamins in the blood), so proof is the brand's own survey,
-    labeled as one. The Low Sugar advice comes from the brand file,
-    not a claim. No real reason for now, so no urgency.
-    Bought again: doubts are "will it work on me" and "will it upset
-    my stomach".
+    Belief shift: Now they believe fiber supplements are rough on
+    their stomach. After this ad they believe a daily pack with 6 g
+    of prebiotic fiber is gentle enough to try, starting with Low
+    Sugar.
+    Assumed: no Trigger quote, so the opening leads on a fact. No
+    study of digestion on the product (the study measured two
+    vitamins in the blood), so proof is the brand's own survey,
+    labelled as one. The Low Sugar advice comes from the brand file.
+    No true reason for now, so no urgency.
+    Aware of fixes | Reordered: the doubts are "will it work on me"
+    and "will it upset my stomach" | 45 s | Budget 129 | Spoken 121
 
+    OPENING
+      Says: "Six grams of prebiotic fiber. In gummies. Gentle enough
+      to try?"  Screen: 6 g prebiotic fiber. In gummies.
+      Picture: a hand tears a pack open over a kitchen counter.
+      Evidence: product page
     PROBLEM
-      Says: "You've tried fiber powders and probiotics, and you still
-      wonder if the next one will upset your stomach more."
-      Picture: presenter at a kitchen table, a plain unlabeled fiber
-      tub pushed to one side. Evidence: brand file, buyer 2
+      Says: "Fiber powders. Probiotics. And every time, you wonder if
+      this one will upset your stomach more."
+      Picture: presenter at a kitchen table, a plain unlabelled fiber
+      tub pushed to one side. Evidence: brand file, buyer 2 (Tries)
     PROMISE AND HOW IT WORKS
       Says: "You just want to feel normal. One daily pack has 6 grams
       of prebiotic fiber in a small handful of gummies. It supports
       digestion and gut health."
       Screen: 6 g prebiotic fiber per pack
-      Picture: a pack torn straight across the top, gummies tipped into
-      her palm. Evidence: product page; approved claim
-    THE DOUBT
-      Says: "Worried it'll be harsh? One buyer wrote: 'The prebiotics
+      Picture: gummies tipped from the pack into her palm.
+      Evidence: product page; allowed claim
+    DOUBT
+      Says: "Worried it'll be harsh? One buyer wrote, 'The prebiotics
       do their job, but not aggressively.'"
       Screen: "do their job, but not aggressively" Customer review
-      Evidence: review 8, word for word
+      Evidence: review 8, word for word (Last doubt)
     PROOF
       Says: "In the brand's survey of over 3,000 customers, 67% of
       surveyed users experienced better, more regular digestion."
       Screen: 67% of surveyed users. Brand survey, 3,000+ customers,
       after 3 months
-      Picture: the green pouch on the counter, closed at its top.
-      Evidence: product page, survey section
+      Picture: the green pouch on the counter, closed.
+      Evidence: product page, survey section (buyers say it)
     OFFER AND GUARANTEE
       Says: "It's called Sprout. Your first order is $29.99 with the
-      text sign-up, then $49.99 every 4 weeks. Your first order has a
-      30-day money-back guarantee."
+      text sign-up, then $49.99 every 4 weeks. The first order comes
+      with a 30-day money-back guarantee."
       Evidence: price page, footer, FAQ (first order only)
     CALL TO ACTION
       Says: "If your stomach is sensitive, start with Low Sugar."
@@ -140,54 +152,57 @@ example:
       Evidence: brand file (point gut-sensitive buyers to Low Sugar)
 
     OPENING VARIANTS (each read with the problem line)
-    Quote: "'Feel lighter, less bloated and overall good.' One buyer's
+    After: "'Feel lighter, less bloated and overall good.' One buyer's
     review." (review 10)
-    Story: "One buyer wrote: 'My bowel movements are normal for the 1st
-    time in 15 years!'" (review 7, one buyer's story, never a promise)
-    Number: "Six grams of prebiotic fiber. In gummies."
+    After: "One buyer wrote: 'My bowel movements are normal for the
+    1st time in 15 years!'" (review 7, one buyer's story, never a
+    promise)
+    Last doubt: "Worried a fiber gummy will be harsh on your stomach?"
 
-    Load-bearing beat: the doubt ("not aggressively").
+    Selling beat: the doubt ("not aggressively").
     Test plan: test against T1 "Fix the Hot Girl Tummy", the only live
-    gut ad. This one drops "fix" and leads on gentleness and the survey.
-    If it wins, test the doubt quote as the opening next.
+    gut ad. This one drops "fix" and leads on gentleness and the
+    survey. If it wins, test the doubt quote as the opening next.
     Placeholders: none. Grams of sugar in Low Sugar aren't on file, so
     the script gives no sugar figure.
 
 tweaks:
   - what: Speaker
-    how: An AI presenter or narrator tells the problem and shows the product, and quotes customers word for word. Switch to a real customer and their own result can go in, with blanks for their details.
+    how: An AI presenter or narrator tells the problem, shows the product and quotes customers word for word. Switch to a real customer and their own result can go in, with blanks for their details.
   - what: Script type
-    how: Name a type ("confession", "failed solutions", "honest review") and it wins on the opening and beat order. A skill that plans a batch of different scripts can help you pick types.
+    how: Name a type ("Tries in a row", "Flaw first", "Doubt first") and it wins on the opening and beat order. The skill that plans a batch of different scripts can help you pick types.
   - what: Length
-    how: Shorter lengths drop beats. At 15 seconds there's no room for the doubt or the guarantee; at 60 seconds you get a full doubt and proof. It says which beats it left out and why.
+    how: Shorter lengths drop beats. At 15 seconds there's room for about 39 words, so no doubt or guarantee beat; at 60 seconds there's room for both. It says which beats it left out and why.
   - what: Scripts you already have
     how: Paste them and the new script differs in how it opens, which beat carries it and the proof or picture it uses.
 
 judge:
-  - The belief sentence is there, and every beat serves it.
-  - No line could be said by the product next to yours on the shelf.
+  - The belief shift is there, and every beat serves it.
+  - No line would work for the product next to yours on the shelf.
   - Every quote is word for word with a source, and every fact traces to your facts.
-  - Proof, offer and action fit how your product is bought (again, or once).
+  - Proof, offer and action fit whether your product is reordered or kept.
   - Every picture note can be made with your real product and an adult.
-  - Read it aloud at the speaker's pace. It fits the length.
+  - The spoken word count fits the budget for the length.
 
 test:
   - Leave out your proof. The proof beat should become a demonstration or a [placeholder], never a made-up number or study.
-  - Run it twice for the same buyer. The belief sentence should say the same thing both times; if it changes, add the buyer's doubt in their own words.
+  - Run it twice for the same buyer. The belief shift should say the same thing both times; if it changes, add the buyer's doubt in their own words.
   - Check every quote against your reviews, word for word. One changed word is a fail.
   - Put it next to your best current script and ask a colleague which one could be for another brand. If they pick the new one, your quotes aren't specific enough.
 
 improve:
-  - Paste your research themes and best quotes into "What you need" in the skill file once, with sources, so every run starts from the same evidence.
+  - Paste your best quotes into "What you need" in the skill file once, already sorted by timeline point, so every run starts from the same evidence.
   - Add your banned claims and the safe wording for your category (for example "supports", never "fixes") to the "What never changes" rules.
-  - Feed it 2 to 4 star reviews and support tickets. They hold the doubts and the things a script must not promise.
-  - When a script wins, save its belief sentence and load-bearing beat to your brand file, and test that beat as a new opening.
-  - Pair it with a skill that checks a script against video ad rules before you film.
+  - Feed it 2 to 4 star reviews and support tickets. They hold the last doubts and the things a script must not promise.
+  - When a script wins, save its belief shift and selling beat to your brand file, and test that beat as a new opening.
+  - Pair it with the skill that finds the script lines that lose the sale, before you film.
 
 terms:
-  - term: Belief sentence
-    meaning: '"They think ___. After this they think ___." The one change the ad has to make in the buyer''s mind.'
-  - term: Load-bearing beat
-    meaning: The part of the script doing most of the selling (the problem, how it works, the proof or the offer).
-  - term: Bought again or bought once
-    meaning: Used up and reordered (a supplement) versus kept (a jacket). It changes the buyer's doubts and what proof works.
+  - term: Buyer's timeline
+    meaning: Five points in the order the buyer lived them. Before, the day it got bad enough, what they tried, the last doubt, and life after.
+  - term: Belief shift
+    meaning: '"Now they believe ___. After this ad they believe ___." The one change the ad has to make in the buyer''s mind.'
+  - term: Selling beat
+    meaning: The part of the script doing most of the selling (the problem, how it works, a doubt, the proof or the offer).
+  - term: Reordered or kept
+    meaning: Used up and bought again (a supplement) versus bought once and owned (a jacket). It changes the buyer's doubts and what proof works.

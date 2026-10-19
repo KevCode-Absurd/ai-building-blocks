@@ -1,177 +1,195 @@
 new_slug: get-openings-that-each-try-something-different
-name: "First lines that each try a different way in"
-summary: "Tell it who your buyer is and what's true. You get about ten opening lines, each testing something different."
+name: "Ten opening lines that each test something new"
+summary: "Give it your ad, your buyer and your facts. You get about ten openings, each making a different move."
 job: write-ad-copy
 
-headline: "First lines that each try a different way in"
-subhead: Tell it who the buyer is, how much they know, who speaks in the ad and what proof you have. It picks shapes from a bank of 33 openings, fills them only with true things, and says what each one tests.
+headline: "Ten opening lines that each test something new"
+subhead: Give it the rest of your ad, notes on your buyer, who speaks and the facts you can back. You get about ten first lines spread across five moves, each tied to a fact or to the line in your ad that pays it off.
 
 explain: |
-  The first line of an ad, or the first two seconds of a video, decides who stops scrolling. That opening is often called the hook. Most people test ten hooks that all open the same way, which is one hook tested ten times. Others fill a template with a claim they can't back.
+  The first line of an ad, or the first seconds of a video, decides who keeps watching. People call it the hook. TikTok's own advice is to get your main point across in the first 3 seconds. Most people test ten hooks that open the same way, which teaches them one thing ten times.
 
-  This skill holds a bank of 33 opening shapes, grouped by kind: name the moment, name the habit, a doubter who changed their mind, the maker speaks, a question, a real customer's words and more. Each shape is tagged with how much the buyer needs to know already and whether it needs a real person or real proof. It picks shapes that fit, fills them only with what your buyer notes and facts support, and names the buyer by what they do, never by a condition they have. Founder openings get their own rules.
+  This skill sorts openings into five moves. Mirror shows the viewer their own day. Gap asks a question your ad answers. Promise says what they get or what they'll see. Proof leads with a fact or a real review. Flip turns over something they believe. It picks the moves that fit how much your buyer already knows. It skips any line the speaker can't truthfully say or your facts can't back. Every question it opens is matched to the line in your ad that closes it.
 
 when:
-  - You have one ad that works and want new openings to test on top of it.
-  - Your hooks all sound the same and you want different ways in.
-  - Your founder will film the ad and you want openings built from their real story.
+  - You have an ad that works and want new openings to test on it.
+  - Your hooks all start the same way and you want real variety.
+  - You need openings for a buyer who has never heard of you, and offers won't work.
 
 you_give:
-  - Notes on the buyer, what they live with, the moment they're in and what they want instead
-  - How much the buyer already knows about the problem and about you
-  - Who speaks in the ad (the real founder, a real customer, an expert, or an AI-made presenter)
-  - Numbers, counts or results you can show (optional)
-  - An occasion such as a gift season or a sale (optional)
+  - The rest of the ad, so every question an opening raises gets answered
+  - Notes on your buyer, with their own words from reviews or messages
+  - How much the buyer already knows, from unaware to ready to buy
+  - Who speaks in the ad (a real founder, customer or expert, or an AI-made presenter)
+  - Facts you can back, such as numbers, test results, reviews and real offer dates (optional)
 you_get:
-  - A list of about ten openings, each with its kind, the buyer it fits, and what it needs
-  - A short on-screen version of each
-  - One line per opening saying what it tests
-  - Questions for your founder to answer on camera where their story is needed
+  - About ten openings, at most three from any one move
+  - For each, what backs it and a short version for the screen
+  - One line per opening saying what a win would teach you
+  - A list of skipped openings and what each one was missing
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Describe the buyer in a few lines, using what customers actually say.
-  - Say how much they already know, and who will speak in the ad.
-  - Paste any proof you can show (counts, results, real customer quotes).
+  - Paste the body of your ad, then a few lines on your buyer in their own words.
+  - Say how much they already know and who speaks.
+  - Paste the facts you can back. Leave out anything you can't prove.
   - Keep the rest of the ad the same and test only the openings.
 
 how_it_works:
-  - title: Names the buyer fast
-    text: Picks out the buyer in the first three seconds by what they do or the moment they're in, never by a health or body condition.
-  - title: Picks the shapes
-    text: Chooses shapes that fit how much the buyer knows, one of each kind before a second, and skips any that need a real person or proof you don't have.
-  - title: Fills them truthfully
-    text: Writes each shape in the buyer's own words and puts nothing in a blank that your facts don't support.
-  - title: Adds founder openings
-    text: Only when a real founder films it. A missing fact becomes a question for them to answer on camera.
-  - title: Keeps lines speakable
-    text: About 15 words, never over about 22, no offer for a buyer who's never heard of you, and no filler words.
-  - title: Makes each one different
-    text: Checks no two openings try the same way in, and says what each one tests.
+  - title: Matches the buyer's stage
+    text: A buyer who has never heard of you gets mirror and gap openings. A buyer who knows you gets proof and promise.
+  - title: Checks the speaker
+    text: An AI-made presenter never speaks from experience. A real founder can add what only the maker knows, such as a step they refused to skip.
+  - title: Backs every line
+    text: A proof opening needs a fact you gave it. A gap opening needs the line in your ad that answers it. No backing, no opening.
+  - title: Puts the point up front
+    text: The point lands in the first 8 words, about 3 seconds of speech. The whole line stays under 15 words.
+  - title: Spreads the test
+    text: Every move your facts allow gets used, three at most from one move. Lines that start with the same three words count as one.
 
 output_shape: |
   OPENINGS
-  <n>. <the opening line>
-     Kind:      <name the moment, name the habit, question, founder...>
-     Fits:      <how much the buyer knows>
-     Needs:     <none / real person / real proof>
-     On screen: <short version for the video or image>
-     Tests:     <what you learn if this one wins>
-  (about ten, each a different way in)
+  <n>. "<the line>"
+     Move:      <mirror / gap / promise / proof / flip> (<form>)
+     Stage:     <how much the buyer knows>
+     Backed by: <the fact, or the ad line that closes the gap>
+     On screen: <7 words or fewer>
+     Tests:     <what a win would tell you>
+  (about ten)
 
-  QUESTIONS FOR THE FOUNDER
-  <facts their story needs, to answer on camera>
-
-  MISSING
-  <real speaker or proof you'd need for shapes that were skipped>
+  SKIPPED
+  <form>: MISSING <what it needed>
 
 example:
   business: sprout
   input: |
     [the skill]
 
-    Buyer notes: has quit greens powders, pill stacks and multivitamins.
-    Lives with a half-used tub of powder and a shaker. Wants one habit
-    that lasts. Doubt: "A gummy can't hold enough to replace my powder."
-    Their words: "I've been choking on [a big-name greens powder] for
-    the last few years" / "[Sprout] has been the one thing I've been
-    able to stick to." / "not having to clean a shaker bottle"
-    How much they know: they know solutions exist and are comparing
+    Ad body (illustrative, written for this example):
+    "You bought the big tub of greens powder. Again. Scoop, shake,
+    rinse the shaker. Every day. Sprout is one daily pack of gummies.
+    Tear it, tip it, eat it. 60+ ingredients, 21 vitamins & minerals
+    and 6g fiber in one pack. In Sprout's 2025 study, blood vitamin C
+    went up 40.1% in 12 weeks. No water, no shaker."
+    Buyer: the quitter who wants to stick, 28 to 45. Has quit greens
+    powders and pill stacks. Doubt: "A gummy can't hold enough to
+    replace my powder." Their words: "The issue has never been
+    nutritive content. It's always been an issue of consistency" /
+    "[Sprout] has been the one thing I've been able to stick to." /
+    "not having to clean a shaker bottle"
+    Stage: solution aware, comparing fixes
     Who speaks: an AI-made narrator over product footage
-    Proof on file: 2025 study, 12 weeks, 120 adults, blood vitamin C
-    +40.1%, folate +20.5%. No water, no mixing, no shaker.
+    Facts: the pack numbers and study numbers above. No real offer
+    date. No unbroken footage of the product in use.
   output: |
-    OPENINGS (8 written; the other shapes need a real speaker)
+    OPENINGS
 
-    1. You've tried the powder and the pill stack, and you still can't
-       keep a supplement going.
-       Kind: name the pain | Fits: comparing | Needs: none
-       On screen: Tried the powder and the pills?
-       Tests: naming the fixes they already gave up on
+    1. "If your shaker bottle has been in the sink since Monday, keep
+       watching."
+       Move: mirror (the object) | Stage: solution aware
+       Backed by: review 6, "not having to clean a shaker bottle"
+       On screen: Shaker still in the sink?
+       Tests: whether a chore they own stops them
 
-    2. For people who are done choking down chalky greens powder.
-       Kind: how they see themselves | Fits: comparing | Needs: none
-       On screen: Done choking down greens powder?
-       Tests: their own word, "choking", as the filter
+    2. "Morning, shaker in the sink, greens skipped again."
+       Move: mirror (the clock) | Stage: solution aware
+       Backed by: buyer notes, quitting
+       On screen: Greens skipped again?
+       Tests: the daily moment against the object in line 1
 
-    3. What if you're not bad at supplements, and the powder is just
-       hard to keep taking?
-       Kind: question | Fits: comparing | Needs: none
-       On screen: Maybe the powder's the problem, not you
-       Tests: taking the blame off the buyer
+    3. "Why does the greens tub always end up at the back of the
+       cupboard?"
+       Move: gap (the why) | Stage: solution aware
+       Closed by: "Scoop, shake, rinse the shaker. Every day."
+       On screen: Why the tub gets forgotten
+       Tests: a question about their habit
 
-    4. A longer ingredient list is the wrong place to start when you
-       pick your greens.
-       Kind: against the usual | Fits: comparing | Needs: none
-       On screen: Don't pick greens by the ingredient list
-       Tests: arguing for the habit over the label
+    4. "How much fits in one small pack of gummies? Here's the label."
+       Move: gap (the doubt, asked) | Stage: solution aware
+       Closed by: "60+ ingredients, 21 vitamins & minerals and 6g fiber
+       in one pack."
+       On screen: What's in one pack?
+       Tests: meeting the "can't hold enough" doubt head on
 
-    5. 40.1% is how much blood vitamin C went up in Sprout's 12-week
-       study.
-       Kind: unknown fact | Fits: comparing | Needs: real proof (on file)
-       On screen: Blood vitamin C up 40.1% in 12 weeks
-       Tests: answering "can a gummy hold enough?" with a number
+    5. "Greens you can take with one hand, on your way out the door."
+       Move: promise (the gain) | Stage: solution aware
+       Backed by: tear, tip, eat. No water.
+       On screen: Greens with one hand
+       Tests: ease as the reason to switch
 
-    6. Nobody mentions you can take your greens without water or a
-       shaker.
-       Kind: unknown fact | Fits: comparing | Needs: none
-       On screen: Greens with no water and no shaker
-       Tests: the format itself as news
+    6. "Here's a whole day of greens, from pouch to palm."
+       Move: promise (the preview) | Stage: solution aware
+       Backed by: the body shows tear, tip, eat
+       On screen: A day of greens, pouch to palm
+       Tests: whether showing the routine beats saying it
 
-    7. If you're someone who buys the healthy thing and never finishes
-       the tub, keep watching.
-       Kind: how they see themselves | Fits: any | Needs: none
-       On screen: Never finish the tub?
-       Tests: the quitter as an identity, said kindly
+    7. "Blood vitamin C up 40.1% in Sprout's 12-week study."
+       Move: proof (the number) | Stage: solution aware
+       Backed by: 2025 study, 120 adults, as worded in the body
+       On screen: Vitamin C up 40.1% in 12 weeks
+       Tests: a number as the answer to "can a gummy hold enough?"
 
     8. On screen only: "[Sprout] has been the one thing I've been able
-       to stick to." (a customer review)
-       Kind: customer's words | Fits: any | Needs: a real review (on file)
-       Tests: a real buyer's words as the whole opening. Shown as text;
-       the AI-made narrator doesn't say it.
+       to stick to." (customer review, brand site)
+       Move: proof (the real line) | Stage: solution aware
+       Backed by: review 1, quoted exactly. The narrator doesn't say it.
+       Tests: a buyer's words as the whole opening
+
+    9. "Maybe you're not bad at supplements. Maybe the powder is."
+       Move: flip (off the hook) | Stage: solution aware
+       Backed by: review 1, "an issue of consistency"
+       On screen: Maybe the powder's the problem
+       Tests: taking the blame off the buyer
+
+    10. "Everyone picks greens by the label. Pick the one you'll keep
+        taking."
+        Move: flip (the usual advice) | Stage: solution aware
+        Backed by: review 1, "never been nutritive content"
+        On screen: Pick the one you'll keep taking
+        Tests: habit over ingredients as the deciding point
 
     SKIPPED
-    - Doubter-turned shapes ("I almost didn't order this"). MISSING: real
-      speaker. An AI-made narrator can't say "I tried it".
-    - Founder openings. MISSING: a real founder on their own footage.
-    - Proof-count, offer and occasion shapes. They don't fit a buyer who
-      is still comparing.
+    Proof (the live test): MISSING unbroken footage of the pack in use.
+    Timing: MISSING a real offer date.
+    Founder and customer forms: MISSING a real speaker. The AI-made
+    narrator can't say "I tried it".
 
 tweaks:
-  - what: Who speaks
-    how: Say "real founder" and you get founder openings and doubter-turned lines. Say "AI-made presenter" and those are skipped, because a made-up person can't say "I tried it".
   - what: How much the buyer knows
-    how: A buyer who's never heard of you gets moment and habit openings. A buyer who knows the product gets proof, maker and offer openings.
-  - what: Proof on file
-    how: Add real counts and results and it can use the shapes that lead with a number. Without them, it skips those and says so.
-  - what: The occasion
-    how: Add "gift season" or "sale" to get the occasion shapes. Leave it out and they're never used.
+    how: Say "unaware" and you get mostly mirror and gap openings. Say "product aware" and proof and promise lead.
+  - what: Who speaks
+    how: Say "real founder" and it adds lines only a maker can say, such as a step they kept. Say "AI-made presenter" and every line stays in "you".
+  - what: Facts on file
+    how: Add test results, review counts or a real offer date and more proof and timing openings open up. Without them, those forms are skipped and listed.
+  - what: How many
+    how: Ask for five instead of ten. It keeps one per move rather than doubling up.
 
 judge:
-  - No two openings start the same way or try the same thing.
-  - Every number in an opening matches proof you gave it.
+  - No more than three openings share a move, and no two start with the same three words.
+  - Every number matches a fact you gave it.
+  - Every gap opening names the line in your ad that answers it.
   - No opening tells the viewer they have a health or body problem.
   - An AI-made presenter never says "I tried it" or "I was sceptical".
-  - Each line could be said to a friend in one breath.
 
 test:
-  - Run it on an ad where you already know which opening won. Look for the winner's way in on the list. If it isn't there, your buyer notes are missing what made it work.
-  - Run it twice with the same input. The kinds of opening should mostly repeat, even if the words change. If the kinds change a lot, add more on what the buyer lives with.
-  - Change "who speaks" from an AI-made narrator to a real founder and run it again. Founder openings should appear only on the second run.
-  - Put its list next to the openings you run now and mark any that start the same way as yours. Those won't teach you anything new.
-  - Read the skipped list. Each skipped shape should name what's missing, such as a real speaker or proof.
+  - Run it on an ad where you already know which opening won. Find the winner's move on the list. If it's missing, your buyer notes are missing what made it work.
+  - Read each gap opening, then the line it says closes it. If the answer doesn't satisfy the question, cut that opening.
+  - Change "who speaks" from an AI-made narrator to a real founder. Maker lines should appear only on the second run.
+  - Time each line read aloud. The point should land inside 3 seconds.
 
 improve:
-  - Write your buyer notes and their own words into "What you need" in the skill file, so step 1 names the buyer the same way every run.
-  - Add your proof on file (counts, study numbers, review totals) to the skill, so step 2 can use the shapes that lead with a number.
-  - Delete shapes in references/shapes.md that never fit your brand, such as the occasion shapes if you never run sales, and add one you've seen win.
-  - If a real founder will film, answer the founder questions it hands back and save the answers in your brand file.
+  - Save your buyer notes and their own words in the skill file, so step 4 starts from the same words every run.
+  - Add your proven facts (study numbers, review totals, test results) to "Facts on file", so proof openings are always possible.
+  - Add a form you've seen win to references/shapes.md, under the move it makes.
+  - Keep a note of which move won on each ad. Over time you'll see which moves suit your buyers.
   - Pair it with "Stop the right people scrolling past your ad" to grade the list before you film.
 
 terms:
   - term: Hook
-    meaning: The first line, or the first two seconds of a video, that makes someone stop scrolling.
-  - term: Shape
-    meaning: A fill-in pattern for an opening, such as "If you [do this], this is for you." You fill the blank only with what's true.
+    meaning: The first line, or the first seconds of a video, that makes the right person keep watching.
+  - term: Move
+    meaning: What an opening does to earn attention. This skill uses five, from mirror to flip.
+  - term: Awareness stage
+    meaning: How much the buyer already knows, from not seeing the problem at all to ready to buy.
   - term: AI-made presenter
-    meaning: A person in a video made by an AI tool. They can't speak as a real customer, the founder or an expert.
+    meaning: A person in a video made by an AI tool. They can't speak as a real customer, founder or expert.

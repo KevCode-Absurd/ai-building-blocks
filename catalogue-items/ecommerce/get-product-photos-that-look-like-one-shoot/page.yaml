@@ -1,87 +1,77 @@
 new_slug: get-product-photos-that-look-like-one-shoot
 name: "Product photos that look like one shoot"
-summary: "Give it your product photos and colours. You get 8 to 12 matching photo prompts with one look and one light."
+summary: "Give it your product photos and colours. You get a style sheet and 9 matching photo prompts, none alike."
 job: product-photos
 
 headline: "Product photos that look like one shoot"
-subhead: Give it your product photos and brand colours. It picks one colour scheme, one light and a small kit of real props, plans 8 to 12 different frames for you to approve, then writes a prompt for each. A short silent montage of the set is optional.
+subhead: Give it your product photos and brand colours. It writes one style sheet (colour plan, light, lens, surfaces, props, finish) that every prompt repeats word for word, then plans about 9 frames that each differ in job, distance or angle. A short loop clip is optional.
 
 explain: |
-  Product photos made one at a time rarely match. One is cool and bright, the next warm and dark, the props change, and side by side they look like five different brands. A set that shares one colour, one light and the same few props looks planned, and the product stands out because everything around it is calm.
+  Product photos made one at a time rarely match. One is cool and bright, the next warm and dark, the props change, and side by side they look like five different brands. Photographers avoid this with a style guide: a few choices that never change across a shoot.
 
-  This skill decides the look once for the whole set. You pick one of four colour schemes, such as everything in tones of your signature colour, or a different bold background per frame for a range of flavours. It chooses 3 to 6 real props and places, then picks frames from 15 kinds (main shot, held, very close, from above, in motion and so on) weighted by how your product is used. The first frame is a test you approve before the rest are made.
+  This skill writes that style guide first, as six lines: a colour plan, one light setup, one lens feel, two or three surfaces, a small kit of real props and one finish. Every prompt repeats those lines word for word. Then it plans the frames on a grid of job (identity, scale, use and so on), distance and angle, so no two frames are alike. You approve the first frame before the rest are made.
 
 when:
-  - You need a full set of product photos for a launch, a product page or social, and they must look like one shoot.
+  - You need a set of product photos for a launch, a product page or social, and they must look like one shoot.
   - Your current photos all look different and your grid looks messy.
-  - You want a fast montage that flashes through the set for a story or reel.
+  - You want a short loop clip of the set for a story or reel.
 
 you_give:
   - Real photos of the exact product and variant
-  - Your brand colours, which one is the signature colour, your photo style, places, props and what you never show
+  - Your brand colours as hex codes, your photo style, places and what you never show
   - Where the photos go and in which size (product page 1:1, feed 4:5, stories 9:16)
   - Who uses it, where and when (optional)
-  - Whether you want the montage, and whether you hold the rights to a music track (optional)
+  - Whether you want the loop clip, and whether you hold rights to a music track (optional)
 you_get:
-  - One paragraph setting the direction (colour scheme, props, places, light)
-  - A numbered frame list, each with what it shows and its job
-  - A prompt per frame, named in order, plus a check of the whole set side by side
-  - Optional plan for a silent 9-second montage
+  - A six-line style sheet for the whole set
+  - A frame list, each with its job, distance, angle and what it shows
+  - One prompt per frame, plus a check of the whole set side by side
+  - An optional plan for a 6 to 8 second loop clip
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Attach your product photos and paste your brand colours. Say which colour is your signature, or it will ask.
-  - Say where the photos go and in which size, and whether you want the montage.
-  - Approve the first frame (the product alone on your main colour) before anything else is made.
-  - Read the frame list, change any you don't want, then say "go ahead".
+  - Attach your product photos and paste your brand colours with their hex codes.
+  - Say where the photos go and in which size, and whether you want the loop clip.
+  - Read the style sheet and frame list, change anything you don't want, then say "go ahead".
+  - Approve frame 01 (the product alone) before anything else is made.
 
 how_it_works:
-  - title: Asks two questions
-    text: Photos only or photos plus montage, and which exact product and variant.
   - title: Writes down the product
-    text: Writes down exactly how your product looks from its photos. With no true photo of the exact variant, there's no shoot.
-  - title: Makes a test frame
-    text: The product alone, whole, on a plain background in your main colour. You approve it, and it's attached to every later frame.
-  - title: Sets one direction
-    text: One of four colour schemes, 3 to 6 real props, 3 to 6 real places, one light recipe with one frame in deliberate contrast.
-  - title: Chooses the frames
-    text: Picks from 15 kinds of frame, weighted by whether the product is worn, applied, eaten, used by hand or placed in a room. Every set has a main shot, a size frame, a close-up and a frame with empty space.
-  - title: Waits for your go-ahead
-    text: Shows the direction and frame list and waits for changes.
-  - title: Makes and checks the set
-    text: Makes two or three frames, checks them, then the rest. All frames go on one sheet to check the product is identical in each.
-  - title: Plans the montage
-    text: If asked, about 9 seconds of hard cuts, 3 or 4 a second, starting and ending on the main shot. Silent unless you hold the music rights.
+    text: Records exactly how your product looks from its photos. With no true photo of the exact variant, there's no shoot.
+  - title: Picks a colour plan
+    text: One of five, such as warm against cool or quiet set and loud product, chosen to keep your product's edge clear.
+  - title: Fixes the light and lens
+    text: One light setup written like a photographer's note, and one lens feel for the set. Glossy packs get the light moved so it doesn't flare across the label.
+  - title: Plans the grid
+    text: Each frame is a job, a distance and an angle, and no two frames share all three. Every set has the product alone, a size frame, a close frame and one with space for words.
+  - title: Writes the prompts
+    text: A short paragraph each, with the role of every attached image and the style sheet's light and finish lines copied word for word.
+  - title: Tests, then makes the set
+    text: Frame 01 first, for your approval. It then joins every later prompt as the look to match.
+  - title: Checks the contact sheet
+    text: All frames at phone size. Any frame warmer, cooler or brighter than the rest is remade from the style sheet.
 
 output_shape: |
-  QUESTIONS FIRST (only if not answered)
-  <photos only, or photos and montage?> <which exact variant?>
-  <which colour is your signature?>
+  STYLE SHEET
+  Colour plan: <one of five>, <hex codes>
+  Light:       <main light position, size, hard or soft, fill, time>
+  Lens:        <lens feel; macro for close frames>
+  Surfaces:    <2 or 3>
+  Props:       <3 to 5 real things>
+  Finish:      <contrast, saturation, grain>
 
-  DIRECTION
-  Colour scheme: <single-hue wash | rotating bold grounds | quiet
-                 material tones | natural earth tones>, <hex codes>
-  Props:         <3 to 6 real things it's made of or used with>
-  Places:        <3 to 6 real places, plus tinted plain surfaces>
-  Light:         <one recipe>; contrast frame: <which>
-
-  FRAME LIST (for your go-ahead)
-  01 Main shot | <product alone on main colour> | <job>
-  02 <kind> | <what it shows> | <job>
+  FRAMES (for your go-ahead)
+  01 identity | <distance> | <angle> | <what it shows>  (test frame)
+  02 <job> | <distance> | <angle> | <what it shows>
   ...
+  Left out: <job, and the missing photo or rule>
 
   PROMPT, FRAME <nn>
-  <exact product, same words every time>. <colour, prop, place and
-  light from the direction>. <who is in it and what each hand does,
-  or "nobody">. <real lens, shallow focus, true texture, fine grain>.
-  No words, no logos, no marks.
+  <image roles>. <scene>. <product, hands, size>. <camera>.
+  <light line>. <finish line>. No added words, logos or marks.
 
   SET CHECK
-  <product identical? one colour scheme? no words? no two alike?>
-
-  MONTAGE (only if asked)
-  <frame order, about 9 seconds, 3 or 4 cuts a second; sound: silent
-  or licensed track>
+  <same product? same light and finish? no two alike?>
 
 example:
   business: sprout
@@ -93,10 +83,9 @@ example:
     foil pouch, big yellow wordmark, yellow bear face top right. The
     84-pack size is 3 pouches.
 
-    Brand colours: forest green #00582D; deep forest green #002C17
-    (headings, dark sections); cream #FFF7DF (hero background); kelly
-    green #007E40 (buttons); sunflower yellow #FFCC2E (stars, badges);
-    plum #581E5A (top banner).
+    Brand colours: forest green #00582D; deep forest green #002C17;
+    cream #FFF7DF (hero background); kelly green #007E40 (buttons);
+    sunflower yellow #FFCC2E (stars, badges); plum #581E5A (banner).
     Photo style: bright, sunny, candy-like. Everyday adults at home or
     outdoors. Never clinical, never muted.
     Ingredients include organic kale, spinach and spirulina. "Just grab
@@ -104,92 +93,91 @@ example:
 
     For: Instagram feed, 4:5. Photos only.
   output: |
-    QUESTION FIRST
-    None of your colours is marked as the signature. I've drafted the
-    set on sunflower yellow #FFCC2E: the green pouch keeps a clear edge
-    on it, and the yellow is already on the pouch (wordmark, bear face).
-    A green flood would swallow a green pouch. Confirm yellow, or name
-    another.
+    STYLE SHEET
+    Colour plan: warm against cool. The pouch is a cool green, so the
+                 grounds are warm: cream #FFF7DF and sunflower yellow
+                 #FFCC2E. A green ground would swallow a green pouch
+    Light:       large soft window light from 10 o'clock, white card
+                 fill at 3 o'clock, bright late morning. The window
+                 sits to the side so its shine misses the wordmark
+    Lens:        50 to 85 mm full-frame feel; macro for close frames
+    Surfaces:    cream plaster wall, pale oak counter, yellow paper
+                 sweep
+    Props:       loose gummies, fresh kale leaves, spinach leaves, a
+                 set of keys, a canvas tote
+    Finish:      bright, medium contrast, light film grain
 
-    DIRECTION
-    Colour scheme: single-hue wash in sunflower yellow #FFCC2E and its
-                   lighter tones, with cream #FFF7DF as the lightest
-    Props:         the gummies; fresh kale leaves; spinach leaves; a set
-                   of keys; a canvas backpack
-    Places:        kitchen counter, a desk, an open backpack, a front
-                   step, plus yellow-tinted plain surfaces
-    Light:         bright sunny daylight from the left in every frame;
-                   frame 08 is the contrast, one hard beam on a deeper
-                   yellow ground
-
-    FRAME LIST (for your go-ahead)
-    01 Main shot | pouch alone on flat yellow, soft shadow | test frame
-    02 Held | gummies in an adult palm, pouch soft behind | gummy size
-    03 Very close | three gummies, soft matte texture | carousel card
-    04 Beside what it's made of | pouch with kale and spinach leaves |
-       ingredients post
-    05 In action | adult mid-bite on a front step, pouch beside her |
-       feed ad
-    06 In its place | pouch on a yellow-tinted kitchen counter by the
-       keys | banner
-    07 From above | pouch laid flat, gummies scattered, keys | feed
-    08 Moody | pouch in one hard beam on a deeper yellow | contrast
-    09 Group | three pouches standing together (the 84-pack) | 84-pack
-       post
-    10 Small in space | pouch small, lower right, clean yellow above |
-       base for an ad
-    Left out: the pour (no daily pack photo) and the pouch held up (no
-    photo of the pouch in a hand).
+    FRAMES (for your go-ahead)
+    01 identity  | mid   | eye level     | pouch alone on the cream
+                   sweep (test frame)
+    02 scale     | close | high          | a small handful of gummies
+                   in an adult palm, pouch soft behind
+    03 substance | close | eye level     | three gummies, matte surface
+    04 substance | mid   | straight down | pouch with kale and spinach
+                   leaves on oak
+    05 use       | mid   | eye level     | adult picking one gummy from
+                   her palm at the counter
+    06 place     | wide  | eye level     | pouch on the counter by keys
+    07 range     | mid   | high          | three pouches together (the
+                   84-pack)
+    08 ad base   | wide  | low           | pouch small, lower right, on
+                   yellow, clean space above
+    09 use       | wide  | high          | pouch in an open tote with
+                   keys on a hall bench
+    Left out: arrival (no daily pack photo) and the pouch held up (no
+    photo of the pouch in a hand). No pouch size is on file, so the
+    prompts state none; check frame 01 against the real pouch.
 
     PROMPT, FRAME 04
-    The glossy deep green Sprout stand-up foil pouch with a big yellow
-    wordmark and a yellow bear face top right, from Image 1, standing
-    closed on a pale yellow surface against a sunflower yellow #FFCC2E
-    wall. Beside it, a few fresh kale leaves and a small pile of spinach
-    leaves. Bright sunny daylight from the left, soft shadows to the
-    right. Nobody in the frame. Real lens, shallow focus, true texture,
-    fine grain. No words, no logos, no marks.
+    Image 1 is the real product: copy its shape, colours and printing
+    exactly. Image 2 is the approved frame 01, for light and colour
+    only. Seen from straight above, the glossy deep green Sprout
+    stand-up foil pouch with a big yellow wordmark and a yellow bear
+    face top right lies flat and closed on a pale oak counter, with a
+    few fresh kale leaves and a small pile of spinach leaves beside it.
+    The pouch is about the length of a hand. Camera straight down at
+    mid distance, 50 mm feel. Large soft window light from 10 o'clock,
+    white card fill at 3 o'clock, bright late morning. Bright, medium
+    contrast, light film grain. No added words, logos or marks.
 
-    SET CHECK (after the first three frames)
-    Pouch identical in every frame? One yellow world? No words added?
-    No two compositions alike?
-    MISSING: your signature colour; a daily pack photo; a photo of the
-    pouch in a hand.
+    SET CHECK (after frames 01 to 03)
+    Same pouch in every frame? Same light and finish? No two frames
+    share job, distance and angle?
 
 tweaks:
-  - what: The colour scheme
-    how: Single-hue wash floods everything in one colour. Rotating bold grounds give each frame its own flat colour, which suits a range of flavours or shades. Quiet material tones suit clothes and hard goods. Natural earth tones suit products sold on what they're made of.
-  - what: The signature colour
-    how: Name it. If your product is the same colour as the flood, the background becomes a lighter or darker tone so the product's edge stays clear.
-  - what: The kind of product
-    how: Say whether it's worn, applied, eaten, used by hand or placed in a room. A worn product gets about half its frames on a body; a room object gets three frames in its place and few or no people.
-  - what: The montage
-    how: Ask for it and you get the frame order for a 9-second montage. Planned frames keep the product at about the same height and size, so it seems to hold still while the world changes.
+  - what: The colour plan
+    how: Tone on tone floods one brand colour; warm against cool and opposites play the ground against the product; quiet set, loud product suits clothes and hard goods; small splash keeps things neutral with one patch of colour.
+  - what: The light
+    how: Name your light in one line, such as "hard sun from the right, late afternoon". It goes into every prompt unchanged.
+  - what: The number of frames
+    how: Ask for 6 or 12 instead of 9. The grid rules still hold, so a smaller set keeps its spread of distances and angles.
+  - what: The loop clip
+    how: Ask for it and you get the frame order for a 6 to 8 second loop that cuts on the product's position and starts and ends on frame 01.
 
 judge:
   - The product looks identical in every frame (label, shape, colours, finish).
-  - The colour fills the scene, never the product. The product keeps its own colours.
-  - Every frame has a stated job and no two share a composition.
-  - Props are real things the product is made of or used with, with no other brand's mark.
-  - At least one frame has nobody in it, and there are no words except those printed on the product.
+  - The light, lens and finish lines are word for word the same in every prompt.
+  - No two frames share job, distance and angle.
+  - Props are real things the product contains or is used with, with no other brand's mark.
+  - There are no words in any photo except those printed on the product.
 
 test:
-  - Approve the test frame only after you've put it beside your real product photo at full size. If the product took on the scene's colour, ask for a lighter or darker background before the set is made.
-  - Ask for the frame list twice with the same colour scheme. The frames can change, but the direction (colour, light, props) should stay the same. If the props change, name them yourself.
-  - Lay the finished set out in a grid on your phone. Any frame that looks warmer, cooler or brighter than the rest gets remade from the direction, not from the odd frame.
+  - Put frame 01 beside your real product photo at full size before you approve it. If the pouch took on the scene's colour, ask for a different colour plan before the set is made.
+  - Ask for the frame list twice. The frames can change, but the style sheet should stay the same. If it drifts, paste your own light line.
+  - Lay the finished set out in a grid on your phone. Any frame warmer, cooler or brighter than the rest gets remade from the style sheet.
   - Cover the product in each frame and compare the backgrounds. If two look the same, one of those frames has no job of its own.
 
 improve:
-  - "Write your signature colour as a hex code into step 4 of the skill file (for Sprout, forest green #00582D), so it never has to ask."
-  - Edit the 15 kinds of frame in step 5. Strike the kinds your product can't use (a supplement is never worn) and mark the ones you need in every set.
-  - "Add your rules for showing the product to step 3 (for Sprout: the daily pack torn straight across the top, gummies pouring into a palm), so the test frame starts right."
-  - Save the approved test frame in your brand file and attach it to every future set for this product.
-  - Pair it with the skill that writes down exactly how your product looks before you start, and the one that plans product page images image by image if the photos are going on your product page.
+  - Write your colour plan and hex codes into step 3 of the skill file (for Sprout, cream #FFF7DF and sunflower yellow #FFCC2E behind the green pouch), so every set starts there.
+  - Save your best light line in step 3 too, so every shoot shares it.
+  - "Add your rules for showing the product to step 2 (for Sprout: the daily pack torn straight across the top, gummies poured into a palm)."
+  - Save the approved frame 01 in your brand file and attach it to every future set for this product.
+  - Pair it with the skill that writes down exactly how your product looks, and the one that plans product page images if the photos are going on your product page.
 
 terms:
-  - term: Signature colour
-    meaning: The one colour most linked to your brand, used to flood the scene.
-  - term: Prop kit
-    meaning: The small set of real objects repeated across every photo in the set.
-  - term: Montage
-    meaning: A short video made of the still photos cut together quickly.
+  - term: Style sheet
+    meaning: A few lines that fix the look of a whole shoot (colours, light, lens, surfaces, props, finish).
+  - term: Match cut
+    meaning: A cut between two shots where something sits in the same place in both, so the eye stays on it.
+  - term: Contact sheet
+    meaning: All the photos from a shoot laid out small, side by side, to compare them.

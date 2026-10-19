@@ -1,77 +1,78 @@
-# Ad script principles
+# Script review checks
 
-Examples are made up and come from several categories. Where two ways of buying differ: **bought again** = used up and reordered (tried cheaply, judged in use, sold on the first order and the habit); **bought once** = kept (considered longer, judged before buying, sold on price against lifespan, fit and returns).
+Twelve groups of checks: three for the whole script, then one for each of the nine beats. Cite a check by its code (for example `Proof 2`). Examples here are made up, from mixed categories; never use one as a fact.
 
-## 1. Desire and research
-- Copy cannot create desire; it points wants that already exist in many people at one product. An ad that starts from the product and works backwards reads like a product page with a hook. A desire is real when it shows up outside the business's own marketing: a review, ticket, call, thread. With none, the script is a guess and says so.
-- Five findings from research, each feeding a beat: the **accommodation** (what they changed to cope; feeds problem), the **failed solution** (objection), the **nearly-didn't-buy** (offer and risk reversal), **the word** they use (hook), **the moment** they began looking (urgency, setting).
-  - Bought again: "I buy a coffee on the way in because the one at home is bad"; doubts: will I keep it up, is this a trap.
-  - Bought once: "I check the forecast before deciding to walk"; doubts: is it worth it, which size, can I send it back.
-- A source decides what it is good for: reviews give words (2 to 4 stars give objections); returns and tickets give what not to promise; calls give the last objection; forums give the language of non-buyers. The founder and the website supply facts, never quotes.
-- Customers rarely use the category's word. Marketer language asks the buyer to translate. Anything a model makes up about the customer is a labelled hypothesis.
+Shared words: **Reordered** means used up and bought again; buyers try it cheaply and decide while using it. **Kept** means bought once and owned; buyers decide up front, weighing the price against how long it will last, whether it fits, and whether it can go back.
 
-## 2. Buyer stage
-- **Awareness:** unaware (not that they have a problem), problem aware (not that answers exist), solution aware (answers exist, not this product), product aware (knows it, not convinced), most aware (close to buying). Colder costs more and scales further; colder ads run longer. Bought-once products keep buyers product aware for weeks, so more ads answer one remaining doubt.
-- **Sophistication:** 1 first to claim; 2 claims common (bigger or more exact claim); 3 tired of claims (a mechanism); 4 everyone has a mechanism (a sharper one); 5 tired of mechanisms (identity). An ad written higher than the market needs still beats one written lower. Stage 2 claims are where compliance trouble starts.
-- Stage is a property of the whole ad: hooks, overlay, script and landing page sit at one stage.
+The beat order follows Blue Sense Digital's public masterclass "How To Write Meta Ads That Scale". Awareness and claim fatigue are Eugene Schwartz's (*Breakthrough Advertising*). Opening checks lean on John Caples (*Tested Advertising Methods*). Specifics over adjectives are Claude Hopkins's (*Scientific Advertising*). Pace numbers come from Emma Rodero's 2020 study of speech rate in audio ads.
 
-## 3. Offer
-- What decides whether an ad sells: the offer, the market, the mechanism, the proof, then everything else. A script can only use parts the offer has.
-- Five parts: the thing, the terms, the reversal, the reason for now, the effort. Often the offer needs saying, not changing: a returns policy stated with specifics becomes a guarantee.
-- Price frames: against the alternative; down to the unit; price the problem; effort as the price. Every number is the business's or worked out with the basis in view. A warranty period is not a lifespan.
-- A guarantee works when specific, slightly uncomfortable for the seller and as long as the buyer needs to find out. Urgency must be real and specific.
+## Whole script
 
-## 4. Claims and specificity
-- Two questions for every claim: is it true and can the business stand behind it; could the product on the next shelf say it. If so, drop it.
-- A differentiator earns its seconds only if it is a proposition, unavailable to rivals and moves a stranger, and speaks to an existing desire. A weak line often needs to go, not be improved.
-- Specifics are evidence, adjectives are opinion. Ladder: measured number, named third party, physical detail, time, proper noun. Specificity needs no outcome claim.
-- Process as mechanism: facts hide in what the maker thinks is boring, what was rejected, and a constraint nobody mentioned.
-- Never made up: testimonials, counts, statistics, studies, awards, experts. A figure stated two ways is not yet a fact. A missing fact is a marked gap.
+### Truth
+1. Every number, quote, count, rating, study, award and expert traces to the business's facts or research. Nothing invented.
+2. Quotes are word for word, with a source. A figure the business states two different ways isn't used until one is agreed.
+3. Every claim is allowed for the category. Watch "fix", "cure", "treat", "prevent", guaranteed timelines and before-and-after.
+4. Each first-person line is honest for this speaker. A hired creator reports only what they did. An AI presenter or cartoon gives no personal result.
+5. No line tells viewers what they have or are.
 
-## 5. The nine beats
-Hook, problem, promise, mechanism, objection, proof, offer, risk reversal, call to action; an identity line often closes. A beat is a job, not a sentence. The order follows the buyer's doubts: is this for me, will it work, will it work for me, is it worth it, what if I'm wrong, why now. Early beats argue at problem and category level; belief in the brand is asked for late. Most people see only the hook, but nobody is sold in three seconds: the selling is in the rest. The beats make a script competent; wanting comes from desire, identity and voice. A writer who knows why each beat exists may drop or reorder one on purpose.
+### Fit
+1. The script speaks to one awareness level: unaware of the problem, aware of it, aware of fixes, aware of this product, or ready to buy. Opening, screen text and landing page match it.
+2. The claim suits how tired the market is of claims like it. A tired market needs how it works, then who it's for, more than a bigger promise.
+3. Doubts, proof and offer suit whether the product is reordered or kept.
+4. The desire it speaks to shows up outside the brand's own marketing (a review, a ticket, a thread). If not, the script is a guess and should say so.
 
-## 6. Problem
-- Agitate the accommodation, not the symptom ("you've stopped cooking steak at home", not "pans wear out"). Where a product is bought for pleasure, the accommodation is the compromise they settle for.
-- Entries: accommodation (default), moment, failed solution (puts the ad at solution aware).
-- Works when: one person, category level, unresolved, escalating toward one consequence (swappable lines are a symptom list), short in a normal ad. An observation describes what someone does and never tells them what they have.
+### Delivery
+1. **Ear.** One idea per sentence, verb early, plain words, contractions, mixed sentence lengths. Read it aloud: if you trip, rewrite the line; if you need a breath mid-line, split it. Delivery notes stay out of the spoken words.
+2. **Pace.** Spoken words fit the budget: (seconds - 2 for the end card) x pace. Pace is 3.0 words a second by default, 2.7 for calm, older or technical voices, 3.3 at most. Above budget, cut ideas; don't speed up.
+3. **Picture.** Every line has a picture that can be made with the real product, an adult, hands, a place or a simple drawing. None uses a celebrity, an unfilmed real person, news footage, a child, or text read inside the image.
+4. **Silent.** The opening frame, overlay and end card make sense with sound off. Text and product sit clear of the app's top bar and bottom buttons.
 
-## 7. Promise and mechanism
-- Chain: feature, which means promise, which is why (mechanism). A feature alone sells the already-convinced; a promise alone is what the category says.
-- Promise failures: none, several, a feature in its place, bigger than the proof. A smaller promise that is proved outsells a bigger one that is not.
-- Promise first, then mechanism: attention falls through an ad. A contradiction ("waterproof and breathable") is not a mechanism; it is a question for a hook, or needs the mechanism right behind it. No mechanism: alternate promise and proof (weaker).
-- Every product has a mechanism because someone made a decision. Name the product after the mechanism; seen is not named.
+## The nine beats
 
-## 8. Hook and bridges
-- A hook pre-qualifies: the right person keeps watching; the platform then finds more like them. Its material is the customer's word; it is the cheapest thing to vary.
-- Native versus obvious advertising: what puts an ad in the "obvious" pile is marketing language more than picture quality. First frame, spoken line, overlay, headline and landing page top make one claim.
-- The hook sells line 2; judge it with the line that follows. Stitched-on hooks cause retention cliffs.
-- Bridges: hook into problem, and the product's arrival. Content that turns into an ad in one line loses people. Ease in: "the fix isn't a better spray, it's a pan that stays hot" before the product. An open question the script answers later holds viewers.
+### Opening
+1. Picks out the right buyer: the wrong person would scroll past.
+2. Gives a reason to stay: self-interest or news, in the buyer's own word.
+3. Read with line 2, it runs on. A stock opening stapled to a body causes a drop.
+4. Picture, spoken line and overlay make one claim. Marketing language, more than polish, makes a post look like an ad.
 
-## 9. Objections, proof and call to action
-- Six objections, in order: not for me, won't work, won't work for me, not worth it, what if I'm wrong, later. Bought again: hard doubts are 2 and 5 before the first order and "will I keep it up" after. Bought once: 3, 4 and 5, answered with size guide, price against what it replaces, and returns.
-- Strongest handling names the objection before it forms, in the buyer's own experience ("you'll react in week 1; everyone does"), from research.
-- Proof ladder: demonstration; third-party verification; volume of specific social proof; named testimony; mechanism explanation (plausibility, not proof); founder assertion. "Customers love it" is not proof. A presenter who is not a real customer shows and explains and reports no result. Modest claim with strong proof beats big claim with weak proof.
-- Call to action has four parts: the action, what happens next, the effort priced, a reason for now. Bought once, the work is choosing; bought again, the work is starting.
+### Problem
+1. Shows the workaround the buyer lives with, not the symptom ("I take the car when it looks grey", not "jackets leak").
+2. One person, at category level, left unsolved.
+3. Lines raise the stakes in order. If two lines can swap, it's a list.
+4. Short in a normal-length ad.
 
-## 10. Identity
-- Believing is not wanting. People buy a version of themselves. A script joins a feeling the buyer already has; it creates none.
-- "So what?" test: the answer cannot be the mechanism; it must be why a person cares.
-- Identity needs a mechanism tied to it or it is a lifestyle ad. It shows in the accommodation named, the promise and the register, and often closes the ad.
+### Promise
+1. Exactly one promise, in the buyer's words.
+2. A promise, not a feature in its place.
+3. No bigger than the proof that follows. A small promise that's proved beats a big one that isn't.
 
-## 11. Story
-- A carrier for all nine beats, not a tenth. The viewer's job changes from evaluating to finding out what happened.
-- Shapes: failed-solutions journey (carries objection), discovery (mechanism), witness (proof), confession (problem). First person past tense is usually strongest; in first person the promise cannot precede the mechanism.
-- It breaks on: the bridge into the ad (needs length), an obvious actor, and no stakes. Stories without stakes come from too little research. Do not resolve in the hook. If it did not happen, it is fiction and must read as fiction; a generated presenter gives no personal result.
+### How it works
+1. Feature, what it means for them, why it works.
+2. Comes after the promise.
+3. A contradiction ("light and warm") is a question to answer, not an explanation.
+4. The product is shown before it's named. With no real how-it-works, promise and proof alternate.
 
-## 12. Voice
-- Written is not spoken: plain words, verb early, the joins people use. Sentence length as speech has it; a run of very short sentences sounds like a machine. Plain reading level for a general audience; technical terms only where the buyer already uses them.
-- Person and tense each make a different ad. Register changes the same angle: casual customer, calm documentary, diary.
-- Read-aloud test: a stumble marks a line to fix; running out of breath marks a long sentence; embarrassment marks a line nobody says. Spoken copy stays clean; performance notes go in direction fields.
+### Doubt
+1. Answers the doubt the research shows is loudest: fit, works, cost or timing.
+2. Answers it in the buyer's own experience, from facts only.
+3. Reordered goods: "will I keep it up" and "can I stop" come first. Kept goods: price against lifespan, size and returns.
 
-## 13. Length and format
-- Decide format after the argument exists. Most format failures are writing failures.
-- Load-bearing beat: invisible edge -> mechanism; visible result -> proof; terms -> offer; shared experience -> problem.
-- Surfaces: one person to camera (a believed face, controlled order, sound; cannot show the invisible); drawn or animated (shows the unshowable, holds attention, no believed face); long-copy native static (reads as a person, no face or sound); designed static (a glance). A video can change surface part-way. Fit is what matters.
-- A line is only as good as its picture: the real product, an adult, a hand, a place, a simple drawing. No celebrity, unfilmed real person, news clip, someone else's footage, child, or words read inside the moving picture.
-- Length: no length is best; longer scales further because unaware buyers need it. Hook and offer never grow. About 15 seconds fits a hook, a line of problem or proof, the offer and action; a promise and a sentence of mechanism arrive at 30; an objection and risk reversal at 60. Long ads loop three times with a call to action after each. Each length is its own script.
+### Proof
+1. Ranked by who vouches: the viewer can check it, an outsider checked it, buyers say it, the brand says it. Uses the highest the brand truly has.
+2. Brand-only proof sits beside proof from higher up.
+3. "Customers love it" is not proof. A bare count is weaker than a specific result with its source.
+
+### Offer
+1. Names the product here, and not much earlier.
+2. Frames the price one way, with real numbers. A warranty period is not a lifespan.
+3. States the effort to start and any condition (a sign-up, a code) aloud.
+
+### Guarantee
+1. Real terms: how long, what the buyer does, what they get back, any limit.
+2. Aimed at the doubt that nearly stopped buyers.
+3. Folded into the offer, or left out, when the length has no room.
+
+### Call to action
+1. Says what to do, what happens next, how easy it is, and a true reason for now.
+2. Kept goods: the work is choosing the right one. Reordered goods: the work is starting.
+3. Any urgency is real and specific, or left out.

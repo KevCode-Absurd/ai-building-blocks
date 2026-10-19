@@ -160,6 +160,7 @@ export default function BlockPage({ c, slug, toast, toBuilder }: Props) {
     ["use", "How to use it", has(p?.how_to_use)],
     ["most", "What changes the result most", has(p?.tweaks)],
     ["test", "Test it", has(p?.judge) || has(p?.test)],
+    ["best", "Works best with", has(p?.works_best_with?.tools) || has(p?.works_best_with?.inputs)],
     ["improve", "Improve it for your business", has(p?.improve)],
     ["file", isFlow ? "The workflow file" : "The skill file", true],
     ["with", "Run before and after", !isFlow && !!near && (near.before.length > 0 || near.after.length > 0)],
@@ -296,6 +297,20 @@ export default function BlockPage({ c, slug, toast, toBuilder }: Props) {
             </Section>
           )}
 
+          {(has(p?.works_best_with?.tools) || has(p?.works_best_with?.inputs)) && (
+            <Section id="best" title="Works best with" lead="It runs in any good AI chat. These tools and extra files give you the best result.">
+              {has(p!.works_best_with!.tools) && (
+                <dl className="best-tools">{p!.works_best_with!.tools!.map((t, i) => <div key={i}><dt>{t.name}</dt><dd>{txt(t.why)}</dd></div>)}</dl>
+              )}
+              {has(p!.works_best_with!.inputs) && (
+                <>
+                  <h3 className="best-h3">Add these for a better result</h3>
+                  <ul className="plain-list">{p!.works_best_with!.inputs!.map((x, i) => <li key={i}>{txt(x)}</li>)}</ul>
+                </>
+              )}
+            </Section>
+          )}
+
           {has(p?.improve) && (
             <Section id="improve" title="Improve it for your business" lead="The skill is a plain text file. Change it once and every run after that fits you better.">
               <ul className="plain-list">{p!.improve.map((j, i) => <li key={i}>{txt(j)}</li>)}</ul>
@@ -306,6 +321,13 @@ export default function BlockPage({ c, slug, toast, toBuilder }: Props) {
             <section className="bp-sec terms" aria-label="Words on this page">
               <h3>Words on this page</h3>
               <dl>{p!.terms.map((t, i) => <div key={i}><dt>{t.term}</dt><dd>{t.meaning}</dd></div>)}</dl>
+            </section>
+          )}
+
+          {has(p?.credits) && (
+            <section className="bp-sec terms credits" aria-label="Built with ideas from">
+              <h3>Built with ideas from</h3>
+              <ul className="plain-list">{p!.credits!.map((c, i) => <li key={i}>{c.url ? <a href={c.url} target="_blank" rel="noopener noreferrer">{c.title}</a> : c.title}{c.by && <>, {c.by}</>}{c.used && <><br /><span className="small">{c.used}</span></>}</li>)}</ul>
             </section>
           )}
 

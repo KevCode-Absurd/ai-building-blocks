@@ -1,87 +1,76 @@
 new_slug: borrow-a-photos-look-for-your-product
 name: "Your product in the style of a photo you love"
-summary: "Give it your product photos and one photo you like. You get a prompt for new photos in that light and mood."
+summary: "Give it your product photos and one photo you like. You get a prompt for new photos in that light and setting."
 job: product-photos
 
 headline: "Your product in the style of a photo you love"
-subhead: Give it your product photos and one photo whose look you like. It copies that photo's camera, light, setting and colour, never its product, and writes a prompt for pictures with no added words, ready for your ads and emails.
+subhead: Give it your product photos and one photo whose look you like. It reads that photo as the set that made it (light, camera, set, frame, finish), moves the set onto your real product, and writes a prompt for photos with no added words. Or pick one of 16 camera looks.
 
 explain: |
-  Most small brands have three or four pack shots and need dozens of pictures. Asking an AI for "a nice lifestyle photo" gets a generic scene and often a redrawn label. Copying the look of a photo you like works much better, as long as you take only its look and never its product, brand or people.
+  Most small brands have three or four pack shots and need dozens of pictures. Asking an AI for "a nice lifestyle photo" gets a generic scene and often a redrawn label. Copying the look of a photo you like works much better, as long as you take its light and camera and never its product, brand or people.
 
-  The skill reads the reference photo (the one you're copying) in six parts: camera, light, depth, place, colour and composition. It fills in every line, because anything left blank is something the image model will make up. Then it decides what changes for your product, such as which props to swap and where to leave empty space for words, and writes a prompt that names your product first and last. You check one test picture before making more.
+  The skill reads your reference (the photo you're copying) the way a photographer would rebuild it: where each light sits, where the camera stands, the surfaces and props, how the frame is laid out, and the finish. Each line is kept, swapped for something from your product's real use, or dropped. The prompt names the role of every attached image, so the reference sets the look and your photo sets the product. Finished pictures are ranked with weights that change by use: a feed ad rewards stopping the scroll, a product page rewards room for words.
 
 when:
   - You have a few pack shots and need more photos for ads, emails or your product page.
   - You've seen a photo whose light and mood you want on your own product.
-  - You need photos with clear empty space where a headline can go later.
+  - You want a bold camera look, such as blind shadows or tilt-shift, for a feed ad.
 
 you_give:
   - Real photos of the exact product and variant
-  - One photo whose look you want to copy (your own, a past ad that worked, or any photo you like)
-  - What the picture is for (main shot, in use, close-up of texture, in its place) and where it will be used
+  - One photo whose look you want to copy (your own, a past ad, or any photo you like), or the name of a camera look
+  - What the picture is for (identity, in use, texture, in its place) and where it will go
   - Your brand colours and what you never show (optional)
   - The sizes you need (optional)
 you_get:
-  - A six-part reading of the reference photo
-  - Notes on what changes for your product, and why
+  - A five-part reading of the reference photo
+  - A keep, swap or drop line for each part
   - The finished image prompt, ready to paste
-  - If your chat can make images, the pictures ranked best first, with a reject list
+  - If your chat can make images, the pictures ranked with a score out of 100, and a reject list
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Attach your real product photos and say which variant they show.
-  - Attach the photo whose look you want. Say what the new picture is for and where it will go, for example "email header, words added later".
-  - Read the six-part reading. If a line is wrong (the light comes from the right, not the left), correct it before you use the prompt.
+  - Attach the photo whose look you want, and say what the new picture is for, such as "email header, words added later".
+  - Read the reading. If a line is wrong (the sun comes from the right, not the left), correct it before you use the prompt.
   - "Make one picture first (ChatGPT and Gemini can make images; with Claude, paste the prompt into your image tool). Compare it with your real photo at full size before making more."
 
 how_it_works:
   - title: Writes down your product
-    text: Writes down exactly how your product looks before anything else, so it knows the shape, colours, printed words and how the product is used.
-  - title: Reads the reference
-    text: Fills in six parts (camera, light, depth, place, colour, composition). It takes only these, never the reference's product, brand, words, logo or people.
-  - title: Moves the look across
-    text: Decides where your product stands, what shows its true size, which props to swap for ones from its real use, and where the empty space goes. Your brand colours win over the reference's.
+    text: Records exactly how your product looks, so it knows the shape, colours, printed words and how the product is used.
+  - title: Reads the set behind the photo
+    text: Light, camera, set, frame and finish, every line filled in. The reference's own product, brand, words, logo and people are never taken.
+  - title: Keeps, swaps or drops
+    text: Keeps the light, camera and frame, swaps props for ones from your product's real use, and settles size, angle and the quiet area. Your brand colours win.
   - title: Writes the prompt
-    text: Names your product first and last, because image models follow the last instruction hardest, and bans added words and logos.
+    text: Names what each attached image is for, then describes the scene, your product in it, the camera and light, and what must stay exactly the same.
+  - title: Offers camera looks
+    text: 16 looks in four families, ordered safest first for your product's true shape and colour. None is used as the main product page image.
   - title: Tests one picture
-    text: You check it at full size beside the real photo. A prompt that failed is rewritten, never resent in the same words.
-  - title: Offers variations
-    text: Five deliberately different pictures, or a special camera look such as warm flash film or tilt-shift, which is never used as the main product page image.
+    text: You check it at full size beside the real photo. A prompt that failed is rewritten, never resent unchanged.
   - title: Ranks the keepers
-    text: Only pictures where the product is right get ranked, best first, each with one line on what it's for. Wrong-product pictures go to the rejects.
+    text: Three gates first (right product, light that agrees, nothing added). Then five scores, weighted for a feed ad or for a page or email.
 
 output_shape: |
-  SIX-PART READING
-  Camera:      <lens feel, height, distance, focus>
-  Light:       <kind, direction, soft or hard, warm or cool, shadows>
-  Depth:       <what's sharp, what's blurred, how many layers>
-  Place:       <setting, surface, background, props>
-  Colour:      <main colours, contrast, mood>
-  Composition: <where the subject sits, where the empty space is>
+  READING
+  Light:  <each source: clock position, height, size, hard or soft,
+          colour; fill; shadows>
+  Camera: <height, angle, distance, lens feel, focus>
+  Set:    <place, surface, background, props and their roles>
+  Frame:  <where the subject sits, fill, empty space, movement>
+  Finish: <palette, contrast, saturation, grain, mood>
 
-  MOVING IT ACROSS
-  Job:        <what the picture is for, where words go>
-  Product:    <which variant stands where, from which angle>
-  Person:     <needed or not, and doing what>
-  Size:       <against a hand, body or furniture, or MISSING>
-  Props:      <reference props out, real-use props in>
-  Angle:      <keep or change, and why>
-  Empty area: <where>
-  Colour:     <your brand colours that lead>
+  KEEP / SWAP / DROP
+  <part>: keep | swap -> <what> | drop
+  Shown as: <...>  Size: <...>  Angle: <...>  Quiet area: <...>
 
   PROMPT
-  THE PRODUCT: <exact description; not <lookalike>>
-  THE REFERENCE: <camera, light, depth; never its product or brand>
-  SCENE: <place, surface, props>
-  THE PRODUCT IN THE SCENE: <position, light, shadow, any hands>
-  COLOUR AND MOOD: <...>
-  RULES: <no added words or logos; product whole; empty area; sizes>
-  THE PRODUCT (again): <exactly the one in Image 1>
+  Roles / Scene / Product in the scene / Camera and light /
+  Finish / Keep
 
-  RANKED PICTURES (only if your chat made them)
-  1. <file>  <what it's for>
-  REJECTS: <file, why>
+  RANKED (only if your chat made pictures)
+  1. <file>  <score>/100 for <feed ad | page or email>  <job>
+  REJECTS: <file, gate failed>
   MISSING: <...>
 
 example:
@@ -106,98 +95,89 @@ example:
     Brand look: cream #FFF7DF, forest green #00582D, sunflower yellow
     #FFCC2E. Bright, sunny, candy-like. Never clinical, never muted.
   output: |
-    SIX-PART READING
-    Camera:      normal lens feel, just above sill height, close,
-                 shallow focus
-    Light:       hard morning sun from the right, crisp shadows left
-    Depth:       two layers. Jar sharp, garden behind blurred
-    Place:       white kitchen windowsill, window, garden outside
-    Colour:      bright whites and greens, high contrast, fresh mood
-    Composition: subject in the right third, bright empty wall on the
-                 left, still
+    READING
+    Light:  hard morning sun from 3 o'clock, low and small; no fill;
+            crisp dark shadows falling left
+    Camera: just above sill height, close, normal lens feel, shallow
+            focus
+    Set:    white kitchen windowsill, window behind, garden outside;
+            the jar is the only prop
+    Frame:  subject in the right third, bright empty wall on the left,
+            still
+    Finish: bright whites and greens, high contrast, fresh
 
-    MOVING IT ACROSS
-    Job:        email header and Facebook ad; words go on the left
-    Product:    the Low Sugar pouch stands where the jar stood, front
-                label to camera (the angle your photo shows)
-    Person:     none needed. Eaten products show one serving: a small
-                handful of gummies scattered in front (your gummy photo
-                shows how they look)
-    Size:       MISSING. No photo of the pouch in a hand, so the prompt
-                states no size. Check the test picture against the real
-                pouch
-    Props:      jar of sweets out; a few loose gummies in
-    Angle:      sill height suits a stand-up pouch
-    Empty area: the left half, the bright wall
-    Colour:     cream wall and your greens lead; the sun suits "bright,
-                sunny"
+    KEEP / SWAP / DROP
+    Light: keep. Camera: keep. Frame: keep (left half is the quiet
+    area for words).
+    Set: swap the white sill for a cream sill #FFF7DF; swap the jar of
+    sweets for a few loose gummies in front of the pouch.
+    Drop: the jar, its sweets, any label or brand.
+    Shown as: one serving, gummies loose on the sill (your gummy photo
+    shows how they look). Size: MISSING, no photo of the pouch in a
+    hand, so the prompt states none. Angle: sill height suits a
+    stand-up pouch.
 
     PROMPT
-    THE PRODUCT: Image 1 is the real product, front on. Copy its shape,
-    colours and printing exactly: a glossy deep green stand-up foil
-    pouch, big yellow wordmark, yellow bear face top right, "28 Daily
-    Packs" at the bottom, no white burst. Closed at its resealable top.
-    Not a tub, not a jar. Do not redraw the label.
-    Image 2 shows the gummies: small, opaque, deep-green bears, soft
-    matte. Take their look only.
-    THE REFERENCE: Image 3 is for camera, light and composition only.
-    Just above sill height, close, shallow focus. Hard morning sun from
-    the right, crisp shadows falling left. Window behind softly blurred.
-    Never use its jar, sweets, brand, words or people.
-    SCENE: a kitchen windowsill in a real home, cream wall #FFF7DF,
-    green garden blurred outside. A small handful of the gummies
-    scattered on the sill in front of the pouch.
-    THE PRODUCT IN THE SCENE: the pouch stands upright in the right
-    third, lit by the sun from the right, its shadow falling left on the
-    sill. The foil shine comes from this sun, not its studio light.
-    COLOUR AND MOOD: bright, sunny, candy-like; cream, forest green,
-    sunflower yellow. Never clinical, never muted.
-    RULES: no words, logos or marks except those printed on the pouch.
-    Pouch whole, not cut by the edge, never torn. Left half kept as
-    bright, empty wall. Make 3:2 and 4:5 each as its own composition.
-    THE PRODUCT (again): exactly the pouch in Image 1.
+    Roles: Image 1 is the real product: copy its shape, colours and
+    printing exactly. Image 2 shows the gummies: small, opaque,
+    deep-green bears, soft matte. Image 3 is the look reference: take
+    only its light, camera and framing.
+    Scene: a kitchen windowsill in a real home, cream wall #FFF7DF, a
+    green garden softly blurred through the window behind.
+    Product in the scene: the glossy deep green Sprout stand-up foil
+    pouch stands upright and closed in the right third, a small handful
+    of the gummies scattered on the sill in front of it. Hard sun
+    lights it from the right and its shadow falls left across the sill.
+    The foil's shine comes from this sun.
+    Camera and light: just above sill height, close, normal lens,
+    shallow focus. Hard low morning sun from the right, no fill, crisp
+    shadows.
+    Finish: bright, high contrast, cream with forest green and
+    sunflower yellow.
+    Keep: the pouch exactly as in Image 1, whole and never torn; no
+    added words, logos or marks; the left half as bright, empty wall.
+    Make 3:2 and 4:5 each as its own picture.
 
     NEXT
     Make one 3:2 picture. Check the wordmark, the bear face, "28 Daily
     Packs" and the shadow direction at full size, then make the 4:5.
-    MISSING: a photo of the pouch in a hand, for true size.
 
 tweaks:
   - what: The reference photo
-    how: This decides the whole look. Choose by kind of shot (a small object on a sunny windowsill), not by product category. A jar of sweets can suit a supplement pouch perfectly.
-  - what: The job line
-    how: Asking for a "main shot" pulls the camera in and keeps the product large; "in its place" makes it small in a wider room. Say which, or you'll get something in between.
-  - what: Five variations
-    how: Ask for five and you get five deliberately different pictures, for example warm and lived-in, dramatic on a dark ground, bright and clean, very close for texture, and one special camera look.
+    how: Choose by the problem the shot solves (a small object on a sunny windowsill), not by product category. A jar of sweets can suit a supplement pouch.
   - what: A camera look instead of a reference
-    how: Name one, such as "warm flash film" or "tilt-shift", and the prompt describes the lens, flash and colour instead. Use these for ads and social, never for the first product page image.
+    how: Name one, such as "blind shadows" or "tilt-shift", and the prompt describes the lens, light and colour instead. The safest looks for true colour are in the light family.
+  - what: A spread of five
+    how: Ask for five and you get one look from each family plus one picture in your everyday light, so you can see which direction suits your brand.
+  - what: Where it's used
+    how: Say "feed ad" or "product page". The ranking weights change, so a scroll-stopper wins in the feed and a picture with room for words wins on the page.
   - what: Fabric or room products
-    how: For a blanket, rug or lamp, ask for placements (draped in sun, folded on a shelf, lifted out of a box) so the product stays the subject.
+    how: For a blanket, rug or lamp, ask for the four room set-ups (in use, folded with a hand, pattern close-up, lifted from the box).
 
 judge:
-  - All six parts of the reading are filled in. None says "unclear".
+  - All five parts of the reading are filled in. None says "unclear".
   - The prompt never mentions the reference's product, brand or words.
   - In the picture, the printed words match your real photo letter for letter.
-  - The product casts a shadow on the surface and is lit from the same side as the rest of the scene.
+  - The product's shadow falls the same way as the rest of the scene.
   - There's real empty space where words will go, and it survives in every size you asked for.
 
 test:
-  - Use a photo of your own product that you already like as the reference. The six-part reading should describe its light, camera height and lens the way you would. If it gets the light side wrong here, it will get it wrong on new photos too.
-  - Run the same reference twice. The two readings should agree line for line. If the camera height or the light changes, add one plain note with the reference, such as "sun from the left window, phone at table height".
-  - Make one picture and put it beside your real pack shot at full size. Read the printed words letter for letter, and check the shadow falls the same way as the room's light.
-  - Try a reference from another category, such as a jar of sweets for a pouch. Search the prompt for the jar, its label or its sweets. If any of them appear, the reference leaked into your prompt; don't use it.
+  - Use a photo of your own product that you already like as the reference. The reading should describe its light, camera height and lens the way you would. If it gets the light side wrong here, it will on new photos too.
+  - Run the same reference twice. The two readings should agree line for line. If they don't, add one plain note with the reference, such as "sun from the left window, phone at table height".
+  - Make one picture and put it beside your real pack shot at full size. Read the printed words letter for letter and check the shadow direction.
+  - Rank the same pictures for a feed ad and for a product page. The order should change. If it doesn't, the pictures are too alike to need ranking.
 
 improve:
-  - Add your brand's rules for showing the product to step 3 of the skill file. For Sprout that's "the daily pack is torn straight across the top; the big pouch is never shown torn", so no prompt can get it wrong.
-  - Write your brand colours and the things you never show into "What you need" as fixed lines, so you stop pasting them every time.
-  - Change the ranking weights in step 9 to suit your use. For email headers with words on top, raise "easy to build on" to 20% and lower the weight for believable light to 10%.
-  - Save the references that worked in your brand file, sorted by kind of shot, and name them in step 2 as the first ones to try.
-  - Pair it with the skill that writes down exactly how your product looks from its photos (step 1 already calls it), and with the one that makes an approved image bigger without changing anything.
+  - Add your brand's rules for showing the product to step 3 of the skill file. For Sprout that's "the daily pack is torn straight across the top; the big pouch is never shown torn".
+  - Write your brand colours and the things you never show into "What you need" as fixed lines.
+  - Change the weights in step 8 to suit your use. For email headers with long headlines, raise "room to build on" and lower "feels photographed" by the same amount.
+  - Strike camera looks you'll never use from the table in step 6, and add the ones that worked for you.
+  - Pair it with the skill that writes down exactly how your product looks (step 1 already calls it), and the one that makes an approved image bigger without changing anything.
 
 terms:
   - term: Reference photo
-    meaning: The photo you copy the look from (camera, light, colour). Its contents are never copied.
-  - term: Empty space
+    meaning: The photo you copy the look from (light, camera, colour). Its contents are never copied.
+  - term: Quiet area
     meaning: A plain part of the picture kept free so a headline or button can be added later.
   - term: Camera look
-    meaning: A special way of shooting, such as direct flash or tilt-shift, that changes how the camera sees but not what's in the frame.
+    meaning: A special way of shooting, such as tilt-shift or flash with a slow shutter, that changes how the picture looks but not what's in it.

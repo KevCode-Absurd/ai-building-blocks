@@ -1,7 +1,7 @@
 slug: know-who-youre-writing-for
 renamed_from: buyer-read-before-writing-copy
 name: "Know who you're writing for before you start"
-summary: "A half-page note, from your reviews, on who your copy is for and how to open."
+summary: "A half-page brief, from your reviews, on what makes your buyer switch and what your copy must work on."
 category: general
 type: skill
 role: compress
@@ -15,5 +15,9 @@ outputs:
 uses: []
 origin: rebuilt
 source_ids: [CES-022]
-old_name: copy-craft
-version: 1.0.0
+version: 2.0.0
+credits:
+  - {title: "Breakthrough Advertising", by: "Eugene Schwartz", url: "https://en.wikipedia.org/wiki/Eugene_Schwartz", used: "The five awareness levels and the stages of what a market has heard"}
+  - {title: "The Four Forces", by: "Bob Moesta and Chris Spiek, The Re-Wired Group", url: "https://jobstobedone.org/the-four-forces/", used: "Push, pull, anxiety and habit as the forces behind a switch"}
+  - {title: "Know Your Customers' Jobs to Be Done", by: "Clayton M. Christensen, Taddy Hall, Karen Dillon and David S. Duncan, Harvard Business Review", url: "https://hbr.org/2016/09/know-your-customers-jobs-to-be-done", used: "Describe the buyer by the situation and the progress they want, not by a label"}
+  - {title: "Replacing the User Story with the Job Story", by: "Alan Klement", url: "https://oreil.ly/UGXy_", used: "The When / I want to / so I can shape of the job line"}

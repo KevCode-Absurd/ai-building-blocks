@@ -1,15 +1,15 @@
 new_slug: learn-what-sells-from-50-different-image-ads
 name: "Learn what sells from 50 different image ads"
-summary: "Give it your brand details and photos. You get 50 image ads planned to differ on purpose, made with your approval."
+summary: "Give it your brand details and photos. You get 50 image ads planned as a grid, so you can see what won."
 job: plan-ad-tests
 
 headline: "Learn what sells from 50 different image ads"
-subhead: Give it your brand file, buyer research and the photos you have. It splits 50 slots across ad formats by exact arithmetic, maps 9 or 10 reasons to buy, writes each slot's idea, and waits for your approval before briefs and again before images.
+subhead: Give it your brand file, buyer research and the photos you have. It plans 50 ads as a grid of 5 reasons to buy by 5 ad types by 2 looks, checks your budget can read it, makes one row as a pilot for your approval, then makes the rest.
 
 explain: |
-  A first big batch of ads often turns into fifty versions of one idea, so when one wins you can't tell why. Or the batch fills with invented urgency, fake experts and stock faces that can't be used.
+  A first big batch of ads often turns into fifty versions of one idea, so when one wins you can't tell why. Was it the message, or the kind of ad? Or the batch fills with invented urgency, fake experts and stock faces that can't be used.
 
-  This workflow plans before it makes anything. It lists your photos and says which can lead an ad. It fixes the format mix by arithmetic (40% workhorse formats, 30% under-used, 20% tied to one reason to buy, 10% experimental), then maps up to ten reasons to buy, with no reason in more than six ads. Each slot gets a buyer, how much that buyer already knows, an opening line type and a one-sentence idea that names something true about your product. Formats you can't make honestly are dropped. You approve the plan, then the briefs, then it makes the images.
+  This workflow plans the 50 as a grid. Five reasons to buy run across five ad types, each in two looks. Every reason meets every type, so afterwards you can see whether a reason won or a type won, with ten ads behind each answer. It checks your budget first: about 100 sales across the sprint reads every row and column, and if that's too much it shrinks the grid instead of padding it. A cell it can't fill honestly stays empty. You approve the grid, then a pilot row of ten finished ads, before it makes the rest.
 
 when:
   - You're about to make your first large batch of image ads and want each one to teach you something.
@@ -20,58 +20,56 @@ you_give:
   - Your brand file with voice, claims, live offers, guarantee and never-show list
   - Buyer research such as reviews, buyer types and their own words
   - A list of the product photos you have and what each one shows
-  - Competitor gaps or past winning ads (optional)
+  - Your cost per sale and past ad results, such as the Results section of your brand file's log.md (optional)
 you_get:
-  - A list of your assets saying which can lead an ad, with a photoshoot suggestion if there are too few
-  - The format mix worked out for 50, a map of 9 or 10 reasons to buy, and all 50 slots with their idea
-  - Counts by format, reason, opening line, buyer and level of knowledge, plus a list of what's missing
-  - After your approvals, 50 briefs and the finished images with their check results
+  - A list of your photos saying which can lead an ad, with a shoot suggestion if there are too few
+  - Five reasons to buy, five ad types and two looks, with the proof for each
+  - The grid of 50, empty cells marked, counts per row and column, and a budget check
+  - After your approvals, a pilot row, then all the briefs and finished images with their check results
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste your brand file and buyer research underneath, including only offers that are live today.
   - List every product photo you have and what it shows. Be honest if you only have one or two.
-  - Ask for stage 1 only. Read the plan and the MISSING lines before you approve anything.
-  - Reply "approved" to move on. If you ask for changes, it shows the plan again and waits.
+  - Ask for stage 1 only. Read the grid, the budget check and the MISSING lines before you approve anything.
+  - Reply "approved" to move on. If you ask for changes, it shows the stage again and waits.
 
 how_it_works:
-  - title: Lists your assets
-    text: Uses this workflow's own first step. Notes what each photo shows and whether it can lead an ad, and suggests a photoshoot if you have too few.
-  - title: Fixes the format mix
-    text: Uses a skill that finds the image ad types you're missing to split 50 slots across format groups by arithmetic, and drops any format you can't make honestly.
-  - title: Maps reasons to buy
-    text: Writes 9 or 10 one-sentence reasons, each about one buyer, with no more than 6 ads per reason.
-  - title: Fills every slot
-    text: Gives each slot a buyer, a level of knowledge, an opening line type and an idea, then stops for your approval of the plan.
-  - title: Writes the briefs
-    text: Uses a skill that plans an image ad's layout from its job for each slot's words, picture, layout and prompt, then stops for your approval again.
-  - title: Makes and checks
-    text: Makes each image with your real product photo, then uses a skill that finds flaws in finished image ads to check it. Failed images are shown, never hidden.
+  - title: Lists your photos
+    text: Notes what each photo shows and whether it can lead an ad, and suggests a shoot if you have too few.
+  - title: Picks five reasons to buy
+    text: Each needs three separate buyers saying it, or one buyer and a past ad that beat your usual cost per sale.
+  - title: Picks five ad types
+    text: Uses a skill that finds the image ad types you're missing, covering at least three of the four buyer questions.
+  - title: Fills the grid
+    text: Every reason meets every type in two looks. Cells it can't fill honestly are marked empty.
+  - title: Checks the budget
+    text: Works out the sales needed to read every row and column, and shrinks the grid if your budget can't reach it.
+  - title: Makes a pilot row
+    text: Uses a skill that plans an image ad's layout to brief and make ten ads, then waits for your approval before the other forty.
+  - title: Makes and checks the rest
+    text: Uses a skill that finds flaws in finished image ads. Failed images are shown, never hidden.
 
 output_shape: |
-  STAGE 1 PLAN. No briefs until you approve.
+  STAGE 1 PLAN. Nothing is briefed until you approve.
 
-  ASSETS
+  PHOTOS
   <photo>   <what it shows>   <can lead | supports only, and why>
-  <photoshoot suggestion if there are too few>
+  <shoot suggestion if there are too few>
 
-  FORMAT MIX (<sale status>; a starting guess, not a benchmark)
-  Workhorse 40% = 20      <format and count, ...>
-  Under-used 30% = 15     <format and count, ...> (<dropped, and why>)
-  One reason 20% = 10     <format and count, ...>
-  Experimental 10% = 5    <format and count, ...>
-  Text-led: <n> of 50
+  REASONS TO BUY (rows)
+  R<n> <buyer | problem | only this product | proof>
 
-  REASONS TO BUY (max 6 ads each)                      ads
-   <n> <one buyer, one sentence> (<sources>)            <n>
-                                                 total  50
+  AD TYPES (columns)  <5 types, and the questions they cover>
+  LOOKS               <2 dresses>
 
-  FIRST SLOTS
-  <nn> <format> | reason <n> | <buyer> | <what they know> | <opening>
-       <the idea: what it argues, what the picture shows>
+  GRID (<dress>)
+          <type>   <type>   <type>   <type>   <type>
+  R<n>    <idea>   <idea>   EMPTY    ...
 
-  COUNTS   <by opening line, level of knowledge, buyer>
-  MISSING: <photos, research, live offer, proof>
+  COUNTS   <ads per row, per column, total>
+  BUDGET   <purchases needed> x <cost per purchase> = <spend>
+  MISSING: <photos, research, live offer, source>
   APPROVAL 1  WAITING FOR YOU.
 
 example:
@@ -87,109 +85,119 @@ example:
     Past results: ad-results.csv, 9 ads (practice numbers, pasted).
     Photos: the adult pouch on a soft gradient with gummies in front;
     gummies poured into a hand; the cartoon-movie tie-in pouch.
-    Run stage 1 only and stop for my approval.
+    Audience: new to Sprout. Run stage 1 only and stop for my approval.
   output: |
-    STAGE 1 PLAN. No briefs until you approve.
+    STAGE 1 PLAN. Nothing is briefed until you approve.
 
-    ASSETS
+    PHOTOS
     Pouch on gradient        pack front    can lead
     Gummies in a hand        in use        can lead (real product)
     Tie-in pouch             pack front    can't lead: licensed character
-    Three photos for 50 ads is too few. Suggested photoshoot: a daily
+    Two usable photos for 50 ads is too few. Suggested shoot: a daily
     pack torn straight across the top, gummies into a palm in a real
-    kitchen, the kids pouch in an adult's hand. Bright, sunny light.
+    kitchen, the pouch on a breakfast table. Bright, sunny light.
 
-    FORMAT MIX (sale status unclear: "Limited Time Sale" and a price
-    cut "indefinitely"; a starting guess, not a benchmark)
-    Workhorse 40% = 20     demonstration 4, testimonial 4, headline-led
-                           4, montage 3, listicle 3, offer-first 2
-    Under-used 30% = 15    unboxing 5, point of view 5, behind the
-                           scenes 5 (founder dropped: none on file)
-    One reason 20% = 10    us vs the usual way 4, problem agitation 3,
-                           before and after as objects 3
-    Experimental 10% = 5   statistic 2, looks like a post 2, collage 1
-                           (expert dropped: the athlete is a paid
-                           spokesperson, not an expert)
-    Text-led: 18 of 50 (36%, inside 30 to 40%)
+    REASONS TO BUY (rows)
+    R1 quitter | the chalky shake | a pack you tear and eat, no water
+       | reviews 3, 4, 6
+    R2 quitter | never stuck with greens | a daily pack people keep
+       | reviews 1, 2 + H1 ($29.55 a sale vs $34.51 usual)
+    R3 gut-fix | wants to be regular | 6 g prebiotic fiber in gummies
+       | reviews 7, 8, 9, 10
+    R4 quitter | greens taste bad | tastes like fruit snacks
+       | reviews 6, 12, 14
+    R5 price doubter | "They are expensive" | $49.99 every 4 weeks,
+       $1.78 a day | retailer review + P1 days 1-21 ($26.79 a sale)
+    Hunch, left out: kids love it (reviews 16, 17 only).
 
-    REASONS TO BUY (max 6 ads each)                            ads
-     1 Quit a greens powder over the chalky shake (3, 4)          6
-     2 Has never stuck with a supplement before (1, 2)            6
-     3 Bloated and irregular, tried fiber powders (8, 9, 10)      6
-     4 Parent whose kids won't eat their greens (16)              6
-     5 Parent with no minute for herself in the morning (15)      5
-     6 Owns a shelf of separate gummy bottles (5)                 5
-     7 Thinks a gummy can't hold enough (brand file doubt)        5
-     8 Thinks it costs too much ("They are expensive")            5
-     9 Hates subscriptions, fears the trap (17)                   3
-    10 Reads labels: methylfolate, third-party tests (facts)      3
-                                                         total   50
+    AD TYPES (columns)  Old way new way, In use (is it for me?);
+                        Look inside (what is it?); Their words,
+                        Checked fact (can I believe it?). 3 questions.
+                        No "Why now?" type: no offer has an end date.
+    LOOKS               Camera, Designed (no history, so the default)
 
-    FIRST SLOTS (6 of 50)
-    01 Headline-led | reason 1 | quitter | knows solutions | confession
-       Big type: "I quit my greens powder, not greens". Pouch small.
-    02 Testimonial | reason 2 | quitter | knows problem | confession
-       Review 1 word for word on a quote card, no face.
-    03 Us vs the usual way | reason 6 | quitter | knows solutions |
-       curiosity. Three unbranded gummy jars beside one pouch.
-    04 Demonstration | reason 7 | quitter | knows product | curiosity
-       The in-hand photo, with three labels: 60+ ingredients, 21
-       vitamins and minerals, 6 g fiber.
-    05 Before and after, objects | reason 3 | gut-fix | knows problem
-       | curiosity. The same shelf twice: fiber tub and probiotic
-       bottle, then one pouch. No body, no result shown.
-    06 Offer-first | reason 8 | price doubter | ready | price anchor
-       "$29.99 first box with text sign-up, then $49.99 every 4
-       weeks." No percentage: the site shows 49, 52, 55, 58 and 61.
+    GRID (Camera; the Designed layer repeats the same cells)
+         Old way new way  In use        Look inside   Their words  Checked fact
+    R1   shaker in the    pack torn at  open pack,    review 6,    EMPTY: no
+         sink vs a torn   the counter,  "no water,    "not having  number for
+         pack             gummies in    no mixing"    to clean a   the shake
+                          a palm                      shaker..."
+    R2   a shelf of       the pack by   one pack:     review 1,    "80% taking
+         half-used tubs   the keys at   60+ ingred-   "the one     daily", of
+         vs one pouch     the door      ients         thing..."    surveyed users
+    R3   fiber tub        pack at the   "6 g pre-     review 8,    "67% ... better,
+         pushed back vs   breakfast     biotic        cut at the   more regular
+         one pack         table         fiber"        comma        digestion"
+    R4   chalky green     gummies       pectin base,  review 12,   EMPTY: no
+         sludge vs green  poured like   vegan,        "fruit       number for
+         bears            sweets        strawberry    snacks"      taste
+    R5   "$94 a month"    the pouch on  what's in one EMPTY: no    "$1.78 a day"
+         (review 3's own  the counter,  pack, priced  review       on subscrip-
+         sum) vs $49.99   "$1.78 a      per day       praises the  tion, renews
+         every 4 weeks    day"                        price        $49.99/4 wks
 
-    COUNTS (whole plan)
-    Opening  confession 7, curiosity 8, price anchor 5, missing out 4
-             (a real new flavour every 4 to 8 weeks), urgency 3 (cost
-             of waiting; no honest deadline). 27 of 50
-    Knows    nothing 8, problem 14, solutions 12, product 10, ready 6
-    Buyers   quitter 22, parent 14, price doubter 8, gut-fix 6
-
-    MISSING: which discount is live, so no percentage is quoted
-    MISSING: photos of a torn pack, the kids pouch and the lab tests
-    No review is marked verified. Quotes run as "review", no names.
+    COUNTS   3 empty cells x 2 looks = 6 empty. 44 ads planned.
+             Rows: R1 8, R2 10, R3 10, R4 8, R5 8.
+             Columns: Old way 10, In use 10, Look inside 10, Their
+             words 8, Checked fact 6.
+    BUDGET   100 purchases x $34.51 (practice cost per purchase) =
+             about $3,450 to read every row and column.
+    MISSING: which discount is live, so no percentage is quoted. The
+             site shows 49, 52, 55 and 58%, and the ads say 61%.
+    MISSING: photos of a torn pack and a pack in use. R1 and R3 need
+             them for their In use cells.
+    No review is marked verified. Quotes run as "Sprout customer
+    review", no names.
     APPROVAL 1  WAITING FOR YOU. Asking for changes isn't approval.
-    (cut for length: the full run also had slots 07 to 50)
+    (cut for length: the full run also had the one-line idea for all
+    44 cells)
 
 tweaks:
-  - what: Your own mix
-    how: Replace the 40/30/20/10 split with what your results say. If testimonials have always won for you, give that group more slots and it recalculates the counts.
+  - what: Grid size
+    how: Ask for 4 x 4 x 2 (32 ads) or 3 x 3 x 2 (18 ads) if your budget can't reach about 100 sales. The rules stay the same.
   - what: Live offers
-    how: Only list offers running today, and say which number is the real one if your site shows several. With no offer it drops offer-first slots and gives them to the other workhorse formats.
-  - what: Number of ads
-    how: Ask for 20 instead of 50. The same rules apply, with fewer reasons to buy and the caps lowered to match.
-  - what: Competitor gaps
-    how: Add what competitors never say. It turns those gaps into reasons to buy, described without naming the competitor.
+    how: List only offers running today, with an end date. Only then can a "Why now?" type join the grid, and it takes one column at most.
+  - what: The two looks
+    how: Name them if you know which you've tested least, such as phone-made and photographed.
+  - what: Your audience
+    how: Say "people who know us" and it leans the types toward "can I believe it?" and "why now?".
 
 judge:
-  - The format numbers add up to exactly 50, and each group matches its share.
-  - No reason to buy has more than 6 ads and no opening line type more than 8.
-  - Read two slot ideas aloud. Each names something true about your product that a rival couldn't copy unchanged.
-  - Every quote is word for word with its review number, and no slot shows a child, a made-up expert or a generated customer.
+  - Every reason to buy names three buyers, or one buyer and a past ad that beat your cost per sale.
+  - Every cell in the grid is either a real idea or marked EMPTY with the reason.
+  - The counts per row and column add up to the total.
+  - Read two cell ideas aloud. Each names something true about your product that a rival couldn't copy unchanged.
   - It stopped at the approval and didn't start writing briefs.
 
 test:
-  - Run stage 1 with last year's winning ad in the past results. Its reason to buy should be on the map. If it's missing, your buyer research doesn't cover that buyer yet.
-  - Add the counts yourself for the format mix and the reasons. They must add to exactly 50, with no reason above 6 and no opening line type above 8. A wrong sum means the plan can't be trusted.
-  - Run stage 1 twice. The reasons to buy should mostly match. If half of them change, give it fewer, sharper buyer descriptions.
-  - Ask for changes and check it shows the plan again and waits. If it starts writing briefs, it skipped the approval.
-  - Pick any two slots and swap them in your head. If nobody would notice, the slot ideas aren't specific enough; tell it which ones.
+  - Add the counts yourself. Rows and columns must each add up to the planned total, with empty cells subtracted.
+  - Run stage 1 with last year's winning ad in the past results. Its reason to buy should be a row. If it isn't, your research doesn't cover that buyer yet.
+  - Run stage 1 twice. The rows and columns should mostly match. If half of them change, give it fewer, sharper buyer descriptions.
+  - Ask for changes and check it shows the plan again and waits.
+  - After the sprint, check each winning row or column had about 20 sales before you call it.
 
 improve:
-  - Replace the 40/30/20/10 split in step 2 of the skill file with your own mix once you have results, and write the reason next to it.
-  - Add your live offer and the one discount number that's real to "What you need", so offer-first slots never quote a number the site states two ways.
-  - Delete formats from step 2 you'll never make (for example founder, if there's no founder to show), so their shares go where they're useful.
-  - After the sprint, save the three best reasons and formats in your brand file, and run a smaller sprint on just those.
+  - Write your cost per sale into "What you need" in the skill file, so the budget check is exact every time.
+  - Add your live offer and the one discount number that's real, so a "Why now?" column never quotes a number the site states two ways.
+  - Mark the types you can never fill (for example Checked fact, with no study on file), so they're never chosen as a column.
+  - After the sprint, keep the winning row and column and plan the next grid around them.
   - Pair it with a skill that finds the image ad types you've never tried before you start, and with one that finds flaws in finished image ads at the end.
 
+works_best_with:
+  tools:
+    - {name: "Claude", why: "Holds a 50-cell plan and its rules across a long chat without dropping cells."}
+    - {name: "Google Sheets", why: "Adds up results by row and column once each ad name carries its code."}
+    - {name: "GPT Image 2", why: "Makes many pictures from the same product reference photos."}
+    - {name: "Meta Ads Manager", why: "Runs the sprint and exports purchases per ad, so the grid can be read."}
+  inputs:
+    - "A naming rule that puts each ad's row, column and look in its ad name, so results sort into the grid"
+    - "A fresh product shoot by view (open, in hand, in use), so more cells can be filled honestly"
+    - "Your account's cost per purchase for the last 30 days, so the budget check uses a real number"
+
 terms:
-  - term: Slot
-    meaning: One planned ad in the 50, with its format, buyer, reason to buy and idea fixed before anyone writes it.
-  - term: Text-led
-    meaning: An ad where the words carry the message and the product is only a small picture.
-  - term: Opening line type
-    meaning: The kind of first line that makes someone stop scrolling, such as a confession or a price comparison. Marketers call this the hook.
+  - term: Grid
+    meaning: The plan of the sprint. Rows are reasons to buy, columns are ad types, and each cell is made in two looks.
+  - term: Pilot row
+    meaning: One row of ten finished ads, made first so you can approve the look and the briefs before the other forty.
+  - term: Reading a row
+    meaning: Adding up the results of every ad in it, so you learn about the reason to buy, not one ad.

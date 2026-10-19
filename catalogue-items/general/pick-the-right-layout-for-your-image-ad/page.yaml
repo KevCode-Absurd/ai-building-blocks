@@ -1,15 +1,15 @@
 new_slug: pick-the-right-layout-for-your-image-ad
 name: "Pick the right layout for your image ad"
-summary: "Give it your buyer, message and proof. You get the ad type, reading order, layout map and style."
+summary: "Give it your buyer, message and proof. You get the ad type, layout, zone map and what the picture must show."
 job: make-image-ads
 
 headline: "Pick the right layout for your image ad"
-subhead: Give it the buyer, the argument, the size and the proof you have. It picks the kind of ad your evidence allows, then plans the reading order, a zone map in percentages, the style and how it differs from your other ads.
+subhead: Give it the buyer, the message, the size and the proof you have. It finds the question the buyer needs answered, picks the ad type your proof allows, then sets the look, the layout, what the picture must show and a zone map in percent.
 
 explain: |
-  Most image ads start from a layout someone liked. That's how you end up with a testimonial ad and no real testimonial, or a founder ad with a stock face. The layout looks right, but the ad has nothing true to stand on.
+  Most image ads start from a layout someone liked. That's how you end up with a review ad and no real review, or a founder ad with a stock face. The layout looks right, but the ad has nothing true to stand on.
 
-  This skill starts from the job instead. It lists the kinds of ad that could work, such as a review that answers a doubt, a fair comparison or a labelled feature, and rules out any your evidence can't back. Then it plans one ad. It sets the order the eye reads it, where each piece sits on the canvas for your size, and a style chosen for the job (studio for clarity, graphic for explaining, documentary for real use). If you share your other ads, it checks this one changes the argument or the scene, not just the colours.
+  This skill starts from the buyer's question instead. Someone who has never heard of you asks "what is it?" or "is it for me?". Someone with a doubt asks "can I believe it?". Someone ready to buy asks "why now?". Each question has two or three ad types, and each type needs one kind of proof, such as a real review or a source for a number. It rules out the types you can't back, then plans one ad: the look, the layout, what the picture must show, and where each piece sits for your size. If you share your other ads, it checks this one changes the type or the message, not just the colours.
 
 when:
   - You know who the ad is for and what it argues, but not what it should look like.
@@ -17,56 +17,56 @@ when:
   - You're adding an ad to a batch and need it to be truly different from the rest.
 
 you_give:
-  - The buyer, the argument, the product and the ad size
-  - The proof you have, such as reviews, photos, offers and comparison facts
+  - The buyer, what they know, their doubt, the message, the product and the ad size
+  - The proof you have, such as reviews, photos, figures and offers
   - Your other ads in the batch (optional)
-  - Fixed rules, such as no text in the image or a set layout (optional)
+  - Fixed rules, such as no words on the image or a set layout (optional)
 you_get:
-  - The kind of ad chosen and why your evidence allows it, plus the kinds ruled out
-  - The reading order and a zone map for your size
-  - The style and the job it does
-  - What this ad changes compared with the rest of the batch
+  - The question and the ad type, with the proof it rests on, plus the types ruled out
+  - The look, the layout and what the picture must show
+  - A zone map for your size, top to bottom
+  - How this ad differs from the rest of the batch
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Write a short brief underneath with the buyer, the argument, the product and the size, such as "4:5 feed".
-  - Paste your evidence, and say plainly what you don't have (no founder photo, no sale).
+  - Write a short brief underneath with the buyer, their doubt, the message, the product and the size, such as "4:5 feed".
+  - Paste your proof, and say plainly what you don't have (no founder photo, no sale).
   - Add your other ads in the batch if you want this one to differ from them.
   - Hand the zone map to your designer or image tool, and fix any MISSING item first.
 
 how_it_works:
-  - title: Picks the job first
-    text: Chooses from twelve kinds of ad, such as a problem moment or a review that answers an objection, and rules out any your evidence can't back.
-  - title: Sets the reading order
-    text: One main idea first, then the support, then the action, with qualifications kept next to their claim.
+  - title: Finds the question
+    text: A named doubt means "can I believe it?". Otherwise the buyer's stage sets it, from "what is it?" for strangers to "why now?" for people ready to buy.
+  - title: Picks the type
+    text: Checks each ad type under that question against your proof, using a skill that finds the image ad types you're missing, and rules out what you can't back.
+  - title: Picks the look
+    text: Photographed when the scene is the proof, designed when it must explain, phone-made when it must sound like a person.
+  - title: Sets the layout and picture
+    text: Chooses one of five layout shapes and says what the picture must show, such as both sides lit the same for a comparison.
   - title: Maps the zones
-    text: Places image, text, attribution, product and action for your exact size, rearranged rather than stretched.
-  - title: Chooses the style
-    text: Picks a style by the job it does, such as studio for product clarity or graphic for explaining.
-  - title: Varies against the batch
-    text: Keeps the product and brand rules fixed and changes the argument or scene, so no two ads share both.
+    text: Places each piece for your exact size, with a headline of 7 words or fewer and qualifiers next to their claims.
+  - title: Checks the batch
+    text: Makes sure no other ad shares both its type and its message.
 
 output_shape: |
-  JOB  <the kind of ad>
-  <why your evidence allows it, with the source>
-  Flag: <anything about the proof to state truthfully>
+  QUESTION  <what is it? | is it for me? | can I believe it? | why now?>
+  TYPE      <type>, resting on <the proof, with its source>
+  Flag      <anything about the proof to state truthfully>
 
   RULED OUT
-  <kind of ad>   <the missing proof, photo or offer>
+  <type>   <the missing proof, photo or offer>
 
-  READING ORDER
-  1 <main idea>  2 <support>  3 <qualifier>  4 <product>  5 <action>
+  CODE      <type · dress · audience>
+  SKELETON  <skeleton>
+  PICTURE   <what it must show>
 
-  ZONE MAP, <shape> (<pixels>), top to bottom
+  ZONE MAP, <size> (<pixels>), top to bottom
   <from-to %>   <what sits there, colour and size>
 
-  STYLE  <style>
-  Job    <what the style does for this ad>
+  AGAINST THE BATCH
+  <other ad>  <what this one changes: type or message>
 
-  VARIES AGAINST THE BATCH
-  <other ad>  <what this one changes: argument or scene>
-
-  FIXED    <product identity and brand rules kept>
+  FIXED    <product and brand rules kept>
   MISSING: <proof, photo or file still needed>
 
 example:
@@ -75,63 +75,58 @@ example:
     [the skill]
 
     Brief: one image ad for the gut-fix seeker (bloating and
-    irregularity, has tried fiber powders and probiotics). Doubt:
-    "Will this upset my stomach more?" Argument: a gentle daily fiber
-    habit. Product: Sprout Original. Size: feed, 4:5.
-    Evidence: Sprout brand file and all 20 reviews (pasted below).
+    irregularity, has tried fiber powders and probiotics). Knows the
+    problem, not Sprout. Doubt: "Will this upset my stomach more?"
+    Message: a gentle daily fiber habit. Product: Sprout Original.
+    Size: feed, 4:5.
+    Proof: Sprout brand file and all 20 reviews (pasted below).
     Photos: the pouch on a soft gradient; gummies poured into a hand.
     No founder photo. No sale with an end date.
     Other ads in the batch:
     T1 video, opens "Fix the Hot Girl Tummy"
     F1 carousel, opens "Struggling to Get Enough Fiber?"
   output: |
-    JOB  A review that answers an objection
-    Objection: "Will this upset my stomach more?" (brand file, the
-    gut-fix seeker's stated doubt)
-    Answer, review 8, word for word, cut at a full stop:
-      "The prebiotics do their job, but not aggressively, and I feel
-      like my overall digestion has improved."
-    Flag: review 8 has no name and isn't marked verified. Attribute it
-    as "Sprout customer review", never as verified. Its next sentence
-    names IBS, a condition, so it stays out of the ad.
+    QUESTION  Can I believe it? (the brief names a doubt)
+    TYPE      Their words, resting on review 8 (brand site):
+              "The prebiotics do their job, but not aggressively..."
+              Cut at the comma. The rest of the sentence ("and I feel
+              like my overall digestion has improved") is left out to
+              fit, and its meaning isn't changed. 8 words, inside the
+              12-word limit for a quote.
+    Flag      Review 8 has no name and isn't marked verified. Credit it
+              "Sprout customer review", never "verified". Its next
+              sentence names IBS, a condition, so it stays out.
 
     RULED OUT
-    Founder portrait     no founder on file
-    Genuine deadline     the price cut is "indefinitely", no end date
-    Problem moment       no photo of the problem; a staged scene would
-                         be an illustration, not proof
-    Fair comparison      the only comparison fact ("most fiber
-                         supplements contain only 5g") has no source
-    Grid of proof        no review is marked verified
+    Checked fact   "67% of surveyed users experienced better, more
+                   regular digestion" is usable, but it's a result
+                   claim and doesn't speak to the doubt. Kept as the
+                   back-up type.
+    Is it for me?  skipped: the doubt comes first for this buyer
+    Why now?       no sale with an end date; the price cut runs
+                   "indefinitely"
 
-    READING ORDER
-    1 the quote (main idea)
-    2 attribution: Sprout customer review
-    3 fact: "6 g prebiotic fiber in every pack"
-    4 qualifier: "Sensitive stomach? Choose Low Sugar."
-    5 gummies in a hand, with the pouch
-    6 action button
+    CODE      Their words · Designed · New
+    SKELETON  Big type
+    PICTURE   the quote, large. The gummies-in-hand photo, small. No
+              face anywhere near the quote.
 
     ZONE MAP, 4:5 (1080 x 1350), top to bottom
     0-8%     margin
-    10-46%   quote, forest green #00582D on warm cream #FFF7DF, large,
+    10-44%   the quote, forest green #00582D on warm cream #FFF7DF,
              left aligned, yellow #FFCC2E quote marks
-    48-53%   attribution, small
-    56-63%   fact line, forest green, under the attribution
-    64-68%   qualifier, small, right under the fact it qualifies
-    70-90%   the gummies-in-hand photo, cut out, about 40% of width,
-             pouch beside it, closed
+    46-51%   source line: "Sprout customer review", 30 px or larger
+    54-62%   "6 g prebiotic fiber in every pack. Sensitive stomach?
+             Choose Low Sugar." The qualifier sits under the fact.
+    64-90%   the gummies-in-hand photo, cut out, about a third of the
+             width, the pouch beside it, closed
     91-96%   button, 2 to 4 words
-    No face anywhere near the quote.
+    To read: the quote, the source, the fact line. That's the quote
+    plus 2.
 
-    STYLE  Graphic: flat cream card, real type set over it, one real
-           photo
-    Job    let the customer's words carry the ad. The hand photo shows
-           real use without a staged person.
-
-    VARIES AGAINST THE BATCH
-    T1  argues gut pain in slang, on video, with a face. This argues
-        gentleness, with a quote and no face.
+    AGAINST THE BATCH
+    T1  The moment, on video, with a face, gut pain in slang. This is
+        Their words, no face, and argues gentleness.
     F1  asks about getting enough fiber, card by card. This answers a
         doubt in one frame.
     Found while checking: T1's "Fix" is on the brand's own risky list.
@@ -143,39 +138,50 @@ example:
     MISSING: a logo file. Work Sans bold is on file.
 
 tweaks:
-  - what: The objection
-    how: Name a different doubt, such as "a gummy can't hold enough". It may pick a labelled feature ad with the ingredient counts instead of a review.
+  - what: The doubt
+    how: Name a different one, such as "a gummy can't hold enough". It may pick Look inside with the ingredient counts instead of a review.
   - what: The size
-    how: Ask for 9:16 as well. It rearranges the zones for the tall frame and keeps the qualifier next to its claim.
+    how: Ask for 9:16 as well. It recomposes the zones for the tall frame and keeps words out of the bands Stories and Reels cover.
   - what: Fixed choices
-    how: Say "no product in the image" or "use a set layout". It keeps those and chooses the job and style around them.
+    how: Say "no product in the image" or "use a set layout". It keeps those and picks the type and look around them.
   - what: The batch
-    how: Paste every ad already running. The more it sees, the more precisely it can make this one different.
+    how: Paste every ad already running, with codes if you have them. The more it sees, the more precisely it can make this one different.
 
 judge:
-  - The chosen kind of ad names the evidence it rests on, and that evidence is in what you gave it.
-  - Quotes match the review word for word, with the reviewer named and verification stated truthfully.
-  - The zone map covers top to bottom for your exact size, with one clear main idea.
-  - No generated face or person stands next to a customer quote.
-  - It says what changes against each other ad, in argument or scene, not only colour.
+  - The chosen type names the proof it rests on, and that proof is in what you gave it.
+  - Quotes match the review word for word, any cut is marked, and verification is stated truthfully.
+  - The headline is 7 words or fewer, or 12 for a real quote, with no more than 3 other things to read.
+  - The zone map covers top to bottom for your exact size.
+  - It says what changes against each other ad, in type or message, not only the look.
 
 test:
-  - Run it on an ad you already ran that worked. If it picks the same kind of ad, good. If it rules that kind out, read why; you may be missing the proof it needs in your input.
-  - Leave out a photo or a review you'd normally rely on, and check it rules out the kinds of ad that need it.
-  - Run it twice on the same brief. The job and the ruled-out list should match. The zone percentages can shift a little.
+  - Run it on an ad you already ran that worked. If it picks the same type, good. If it rules that type out, read why; you may be missing the proof in your input.
+  - Leave out a photo or a review you'd normally rely on, and check it rules out the types that need it.
+  - Run it twice on the same brief. The question, the type and the ruled-out list should match. The zone percentages can shift a little.
   - Hand the zone map to your designer without notes. If they ask where something goes, that zone is missing from the map.
 
 improve:
-  - List your real photos and proof (verified reviews, founder story, comparison facts) in "What you need" in the skill file, so it knows which kinds of ad you can always make.
-  - Delete the kinds of ad in step 1 your business can never back (for example a founder portrait, if there's no founder to show).
-  - Add your brand colours, typeface and show-it-right rules to step 4, so every zone map uses them.
-  - Save each zone map that wins as a template in your brand file, with the job it did.
+  - List your real photos and proof (reviews with source, figures with source) in "What you need" in the skill file, so it knows which types you can always make.
+  - Mark the types on the map your business can never back, so they're ruled out at once.
+  - Add your brand colours, typeface and show-it-right rules to step 5, so every zone map uses them.
+  - Save each zone map that wins in your brand file, with its code.
   - Pair it with a skill that checks your facts fit an ad template, and with one that finds the image ad types you've never tried.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "The job is reasoning about proof and space, which any strong chat AI does well with this skill."}
+    - {name: "Figma", why: "Turns the zone map into a frame your designer or image tool can fill."}
+  inputs:
+    - "The buyer's doubt in their own words, copied from a review, so the plan answers what they really ask"
+    - "A list of every real photo by view (front, open, in hand, in use), so it never plans a picture you can't make"
+    - "Your brand colours as hex codes and your typeface names, so the zone map is ready to build"
 
 terms:
   - term: Zone map
     meaning: Where each piece of the ad sits, given as a share of the canvas from top to bottom.
+  - term: Ad type
+    meaning: One of nine kinds of image ad on the shared map, such as Their words or Old way, new way, each needing its own proof.
   - term: Qualifier
-    meaning: The small words that keep a claim true, such as "on your first order". They must sit right beside the claim.
+    meaning: The small words that keep a claim true, such as "on your first order". They sit right beside the claim.
   - term: Objection
     meaning: The doubt that stops a buyer, such as "will this upset my stomach more?".

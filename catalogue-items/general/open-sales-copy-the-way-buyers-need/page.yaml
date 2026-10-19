@@ -1,15 +1,15 @@
 new_slug: open-sales-copy-the-way-buyers-need
 name: "Open your sales copy the way your buyer needs"
-summary: "Give it your buyer, offer and proof. You get the right opening for what they know, plus a second one to test."
+summary: "Give it your buyer, offer and proof. You get the right opening for what they know, plus a neighbouring one to test."
 job: write-ad-copy
 
 headline: "Open your sales copy the way your buyer needs"
-subhead: Give it a note on your buyer, your offer and the proof you can use. It picks one of six ways to open (deal, benefit, problem, fact, statement or scene) for how much the buyer knows, writes that opening, then writes a second one using a different way in.
+subhead: Give it a brief on your buyer, your offer and the proof you can use. It picks one of the six classic lead types for how aware the buyer is, checks you have what that lead needs, then writes a second opening one step along the scale.
 
 explain: |
-  The opening decides whether anyone reads the rest. Most writers open the same way every time, or test two versions that are the same opening reworded. When one wins, nobody learns anything.
+  The opening decides whether anyone reads the rest. Most writers open the same way every time, or test two versions of the same opening reworded. When one wins, nobody learns anything.
 
-  This skill chooses from six ways to open, each suited to a different buyer. Deal first suits someone who knows the product and wants it. A headline benefit suits someone comparing. Problem to relief suits someone searching for a fix. An unknown fact suits someone who doubts the usual answers, but only with a real fact. A fresh statement or a scene suits someone who doesn't know the problem yet, or has heard every claim. It writes the opening that fits, then a second from the paired way in, and says what the close must come back to.
+  This skill uses the six lead types from the copywriting book Great Leads, by Michael Masterson and John Forde: offer, promise, problem-solution, secret, proclamation and story. The book lines them up from direct to indirect. A buyer ready to buy gets a direct lead. A buyer who doesn't know they have the problem gets an indirect one. The skill picks the starting lead, checks you have what it needs (a secret lead needs a real fact), and writes it. Then it writes the next lead along the scale, so your test compares two real approaches.
 
 when:
   - You're writing an ad, page or email and aren't sure how to start it.
@@ -17,46 +17,49 @@ when:
   - Your openings keep starting with the product for buyers who've never heard of you.
 
 you_give:
-  - A note on the buyer, who it's for, how much they know and the one thing they want
+  - A brief on the buyer, how aware they are, what they want and their main doubt
   - Your offer, its terms and the proof you can use
+  - What competitors promise, or what the market has heard (optional)
   - What shows before "see more" or before the thumb moves on (optional)
-  - Your voice notes, approved claims and current offers (optional)
 you_get:
-  - How much the buyer knows, and opening A with the reason it fits
-  - Opening B, using a different way in, with the reason it differs
-  - One line on what the close must come back to
+  - How aware the buyer is, and whether the market has heard the promise often
+  - Opening A, with the lead it uses and why it fits
+  - Opening B, from the next lead along the scale, with the reason for the step
+  - The promise the close must keep, and any lead skipped for lack of proof
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Paste a note on your buyer, including how much they already know.
+  - Paste a brief on your buyer, including how aware they are.
   - Paste your offer and the proof you're allowed to use.
   - Say where it will run, such as "Facebook main text, about 125 characters show".
   - Run both openings on the same body copy, so only the opening changes.
 
 how_it_works:
-  - title: Matches the buyer
-    text: Uses a table of six ways to open to pick the one that fits how much the buyer knows.
+  - title: Finds the starting lead
+    text: Uses the buyer's awareness to pick a place on the scale, from the offer for ready buyers to a story for cold ones.
+  - title: Checks what it needs
+    text: Each lead needs something real, such as a deal with full terms or a checkable fact. If it's missing, it moves one step.
   - title: Writes opening A
-    text: Writes the part read before the reader decides to continue. A ready buyer gets a line; a cold buyer gets the first scene.
+    text: The first sentence carries what the reader gets, or makes the next one hard to skip. Length follows awareness.
   - title: Writes opening B
-    text: Uses the paired way in, not a rewording, so the two openings test different ideas.
+    text: Steps one lead toward indirect if the market has heard the promise often, or toward direct if it's fresh.
   - title: Sets the close
-    text: Says what the close must come back to, so the piece ends where it promised.
+    text: Names the promise the close must keep, so the piece ends where its opening pointed.
 
 output_shape: |
-  BUYER: <how much they know>
+  BUYER: <awareness>, market <fresh / heard it often>
 
-  OPENING A: <way in>, <why it fits, one line>
+  OPENING A: <lead>, <why it fits>
   <the opening>
 
-  OPENING B: <a different way in>, <why it differs, one line>
+  OPENING B: <next lead>, one step <direct / indirect>, <why>
   <the opening>
 
-  CLOSE MUST COME BACK TO
+  CLOSE MUST KEEP
   <one line>
 
-  MISSING
-  <buyer detail or proof the openings would need>
+  SKIPPED
+  <any lead you lacked the material for>
 
 example:
   business: sprout
@@ -64,74 +67,75 @@ example:
     [the skill]
 
     Buyer: knows Sprout, maybe from a store shelf, and thinks it costs
-    too much. Hasn't decided. Wants proof it's worth it, or a real deal.
+    too much. Hasn't decided (product aware).
     Doubts: "Which discount is real?" / "Will the price jump after the
     first order?"
+    Market: every greens brand promises the same nutrients.
     Offer and proof:
     - Per pack: 60+ ingredients, 21 vitamins & minerals, 6 g fiber
     - First box $29.99 with the text sign-up discount for new
       customers, then $49.99 every 4 weeks ($1.78/day). One-time $66.65.
-    - Price cut: "Same Sprout. New Lower Price. Subs Now Start at
-      $29.99." / "It's our birthday, and we're lowering prices. Not
-      just for a week but indefinitely."
     - 30-day money-back guarantee, first order only
     Channel: Facebook main text, about 125 characters show before
     "see more"
   output: |
-    BUYER: knows the product, hasn't decided, weighing it against the
-    price
+    BUYER: product aware, market has heard the promise often
 
-    OPENING A: headline benefit. Fits a buyer who knows Sprout but
-    hasn't decided.
+    OPENING A: promise. A product-aware buyer who hasn't decided needs
+    the biggest benefit you can back.
     Your greens, vitamins and fiber in one pack a day, for $1.78 a day
     after your first box. Each pack has 60+ ingredients, 21 vitamins and
     minerals, and 6 g of fiber.
 
-    OPENING B: deal first. A different way in: the deal leads and the
-    benefit waits.
-    Sprout subscriptions now start at $29.99 for your first box, with
-    the text sign-up discount for new customers. A box bought once is
-    $66.65. We lowered prices for our birthday, and not just for a week.
-    After the first box it's $49.99 every 4 weeks, and your first order
-    has a 30-day money-back guarantee.
+    OPENING B: problem-solution, one step indirect, because every greens
+    brand makes the same nutrients promise.
+    Seen a few different Sprout discounts and can't tell which is real?
+    Here it is, plainly. Your first box is $29.99 with the text sign-up
+    discount for new customers. After that it's $49.99 every 4 weeks,
+    and your first order has a 30-day money-back guarantee.
 
-    CLOSE MUST COME BACK TO
+    CLOSE MUST KEEP
     The real price now and after the first box, so "too expensive" is
     answered with numbers.
 
+    SKIPPED
+    Secret: no little-known, checkable fact in the proof given.
+
 tweaks:
-  - what: How much the buyer knows
-    how: This picks opening A. If your buyer and your market point different ways, the buyer wins. Being wrong here gives you an opening for the wrong person.
+  - what: How aware the buyer is
+    how: This picks opening A. If you're wrong here, you get an opening for the wrong person, so base it on reviews or support messages, not a guess.
+  - what: What the market has heard
+    how: This decides which way opening B steps. Paste three competitor promises and it can judge it instead of assuming.
   - what: Proof
-    how: The unknown-fact opening needs a real, surprising fact. Without one it won't use that way in, and picks a scene or problem opening instead.
+    how: The secret and proclamation leads need a real fact. Without one, they're skipped and named under SKIPPED.
   - what: Where it runs
-    how: Tell it how much shows before "see more". It keeps the opening's key sentence inside that space.
-  - what: Length
-    how: For a ready buyer, the opening is a line. For a cold buyer, ask for "the first scene of a longer piece" and you get a paragraph or two.
+    how: Tell it how much shows before "see more". It keeps each opening's key sentence inside that space.
 
 judge:
-  - The two openings use different ways in, not the same idea reworded.
+  - The two openings use different leads, next to each other on the scale.
   - Neither uses a fact, number or quote you didn't supply.
-  - A cold buyer's opening doesn't start with the product.
+  - An opening for a cold buyer doesn't start with the product.
   - A named customer or founder moment appears only if it's on record.
-  - The close line tells you what the ending must deliver.
+  - The first sentence of each opening says what the reader gets, or makes the next sentence hard to skip.
 
 test:
-  - Run it for a buyer and offer where you know which opening worked. Opening A should use that way in, or its line should say why not.
-  - Run it twice. Opening A's way in should be the same both times.
-  - Read the two openings back to back. If you can't name the different way in each one uses, they're the same opening reworded.
-  - Check every fact, number and quote against what you gave it.
+  - Run it for a buyer and offer where you know which opening worked. Opening A should use that lead, or say why not.
+  - Run it twice. Opening A's lead should be the same both times.
+  - Read the two openings back to back. If you can't name the lead each one uses, they're the same opening reworded.
+  - Remove all proof and run it again. It should fall back to problem-solution or story.
   - Test both with the same body and picture, changing only the opening.
 
 improve:
-  - Write your buyer note into "What you need" in the skill file, so the choice in step 1 is the same every run.
-  - Delete rows from the table you can't use, such as "Unknown fact" if you have no surprising fact on file.
-  - Add a pair you've seen test well to the pairs under the table.
+  - Write your buyer brief into "What you need" in the skill file, so step 1 starts from the same place every run.
+  - Write what your competitors promise into the skill file, so step 4 steps the same way each time.
+  - Add a real, checkable fact to your brand file if you want the secret lead available.
   - Save each winning opening to your brand file, with the buyer it worked for.
   - Run "Know who you're writing for before you start" first, and pair it with "Finish your sales page with proof and one ask" to write the rest.
 
 terms:
-  - term: Way in
-    meaning: How the copy opens, such as with the deal, a problem, a fact or a scene.
-  - term: Cold buyer
-    meaning: Someone who doesn't know you, and may not know their problem has an answer.
+  - term: Lead
+    meaning: The opening of a piece of sales copy, the part read before someone decides to carry on.
+  - term: Direct and indirect
+    meaning: A direct lead opens with the deal or the benefit. An indirect one opens with a problem, a fact, news or a story, and reaches the product later.
+  - term: Awareness
+    meaning: How much the buyer knows, from not knowing they have the problem to knowing your product and only needing the deal.

@@ -1,17 +1,17 @@
 # Watercolour video ad script: for online stores
 
-## Extra things to give it
-- Product details: the exact pack shape, colours, every line on the label, the ingredient or material list, the size.
-- A product photo, so the painted pack keeps its true outline.
-- Your current offer and its end date.
+## Give it as well
+- A front photo of the pack, its 1 to 3 biggest label lines, and its size.
+- The full ingredient or material list, copied from the pack or product page.
+- The live offer, its terms and its end date.
 
-## Where it fits
-- Scent, taste, ingredient or origin stories: candles, teas, skincare, food and drink, home fragrance.
-- Gifts and seasonal products where mood sells.
-- A "what's inside" reveal for products with a clear ingredient list.
+## Good fits
+- Ingredient stories: teas, skincare, supplements, food and drink. Use Build (glazing) for a long list, Reveal (lift-out) for one hero ingredient.
+- Scent and warmth: candles, room sprays, bath goods. Use Spread.
+- Gifts and seasonal ranges where the mood sells. Use Calm or Hold.
 
-## Rules for stores
-- Paint only ingredients on the product's list. The brush reveal must match it.
-- Never paint skin, hair or body changes as results. Keep to scent, mood or ingredient.
-- The pack keeps its true colours, and the label text is given exactly in the prompt. A product with a very busy label gets the `pack-portrait` look or is kept small.
-- The offer, price and shipping terms go in the final overlay only, checked against the live offer.
+## Store rules
+- Every painted ingredient must be on the list you gave. Leave out listed ones whose colours would mix to mud with the rest.
+- Paint scent, mood and contents. Never paint skin, hair or a body changing.
+- Paint the pack's biggest label lines only, and lay the real label over it in editing if a line comes out wrong.
+- Price, offer and shipping terms appear as on-screen text in the last shot, checked against the live offer that day.

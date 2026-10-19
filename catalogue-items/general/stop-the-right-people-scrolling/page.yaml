@@ -1,15 +1,15 @@
 new_slug: stop-the-right-people-scrolling
 name: "Openings that stop the right people scrolling"
-summary: "Give it your buyer, offer and proof. You get new opening lines, or a grade and fix for ones you run."
+summary: "Give it your buyer, offer and proof. You get new openings, or a score and a fix for ones you run."
 job: write-ad-copy
 
 headline: "Openings that stop the right people scrolling"
-subhead: Give it a note on your buyer, your offer and proof, and either "write" or "grade". It writes hooks that start from the belief keeping your buyer stuck, or it grades your existing hooks in a set order and gives a one-line fix for any that score under 4.
+subhead: Give it a brief on your buyer, your offer and proof, and either "write" or "score". It writes hooks that flag your buyer and promise a gain, or scores your hooks on four checks plus an honesty gate, with a fix for any under 3.
 
 explain: |
-  A hook is the first line of an ad, or its first two seconds, that makes someone stop scrolling. Weird hooks stop people but pull in the wrong ones. And hooks that sound strong on their own often fall apart at line two.
+  A hook is the first line of an ad, or its first seconds, that makes someone stop scrolling. Odd hooks stop people but often the wrong ones. Clever hooks hide what the reader gets, so the people who'd buy keep scrolling.
 
-  To write, this skill first answers four questions. What is the buyer stuck on? What belief keeps them there, as they'd say it? What would have to be untrue for that belief to fall? What becomes possible then? Each hook leads with the break or the new possibility, never the product, and carries a feeling, a reason to stay and something at stake. To grade, it asks in order: would a person say it, and would a stranger get it at once? Does it give this buyer a reason to stay? Does something happen? Then it scores each hook from 1 to 5.
+  This skill follows rules that mail-order advertisers proved with split tests nearly a century ago. The opening that sells flags down the right reader, offers them a gain, and brings news. Curiosity works only when it points at that gain. To write, it decides what the hook must name from how aware the buyer is, then spreads hooks across gain, news and curiosity. For video, it writes what's seen, read and heard, so the hook works with the sound off. To score, it checks each hook for Flags, Gain, New and Clear, then fails any that break the honesty gate.
 
 when:
   - You need new openings for a video, image ad or post and want them aimed at the right buyer.
@@ -17,62 +17,62 @@ when:
   - Your hooks get attention but the wrong people stop.
 
 you_give:
-  - A note on the buyer, how much they know and the one thing they want
+  - A brief on the buyer, how aware they are and what stops them
   - Your offer and the proof you may claim
-  - Write (how many, which format) or grade (paste your hooks)
+  - Write (how many, which format) or score (paste your hooks)
   - The line that follows the hook (optional, but best)
   - Your voice notes and claims you must never make (optional)
 you_get:
-  - In write mode, a list of hooks with the way in, the feeling, the reason to stay, the stakes and an on-screen version
-  - In grade mode, each hook's pass or fail on three ordered questions, a score from 1 to 5, and a one-line fix for any under 4
+  - In write mode, hooks spread across gain, news and curiosity, each with its next line, and for video what's seen, read and heard
+  - In score mode, each hook's four checks, a score out of 4, the honesty gate, and a fix for any under 3
+  - The buyers your set of hooks misses
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Paste a note on your buyer and the proof you're allowed to use.
-  - Write "Mode, write, 6 hooks, 20-second video", or "Mode, grade" with your hooks pasted below.
-  - Paste the line that comes after the hook, so it can check the hook leads into it.
-  - In grade mode, look at the fixes first. Rewrite those hooks before you test.
+  - Paste a brief on your buyer and the proof you're allowed to use.
+  - Write "Mode, write, 6 hooks, 20-second video", or "Mode, score" with your hooks pasted below.
+  - Paste the line that comes after each hook, so it can check the hook gets paid off.
+  - In score mode, fix the hooks under 3 first. Drop any that fail the gate.
 
 how_it_works:
-  - title: Finds the stuck belief
-    text: Works out what the buyer is stuck on, the belief that keeps them there, what would break it, and what becomes possible.
-  - title: Leads with the break
-    text: Opens on the belief breaking or on what becomes possible, never on the product.
-  - title: Adds three things
-    text: A feeling in the first second, a reason to stay, and something at stake. A hook missing two of these is rewritten.
-  - title: Splits a video opening
-    text: Seconds 0 to 2 show something to look at with no product name; seconds 2 to 5 say who it's for and why to keep watching.
-  - title: Grades in order
-    text: Would a person say it and a stranger get it? Does it give this buyer a reason to stay? Does something happen? Then a score.
+  - title: Flags the buyer
+    text: Names the buyer's moment in words they'd use, so the right person knows it's for them.
+  - title: Matches their awareness
+    text: An unaware buyer gets their situation. A ready buyer gets the deal. Each level in between gets its own job.
+  - title: Spreads three appeals
+    text: Gain is the default. News only when it's true and new. Curiosity only when the answer is the gain.
+  - title: Writes for sound off
+    text: For video, it writes what's seen, read and heard, with movement and the brand early, all carrying one message.
+  - title: Scores four checks
+    text: Flags, Gain, New and Clear, one point each. Keep 3 or 4, fix anything under 3.
+  - title: Applies the honesty gate
+    text: Any fact not in your proof, a banned claim, or a line telling viewers they have a body condition fails the hook.
 
 output_shape: |
   Write mode:
   <n>. <the hook>
-     Way in:    <...>
-     Feeling:   <worry, surprise, recognition, wanting>
-     Stay for:  <the gap>
-     Stakes:    <why it matters>
-     On screen: <the words shown>
+     Appeal:    <gain / news / curiosity>
+     Names:     <what it names for this awareness level>
+     Next line: <the line that pays it off>
+     Video:     seen <...> / read <...> / heard <...>
 
-  Grade mode:
+  Score mode:
   <n>. "<the hook>"
-     Says it / gets it:  <pass/fail>
-     Reason to stay:     <pass/fail>
-     Something happens:  <pass/fail>
-     Score:              <1 to 5>
-     Fix:                <one line, for any under 4>
+     Flags <0/1>  Gain <0/1>  New <0/1>  Clear <0/1>  = <score>/4
+     Gate: <pass / fail, why>
+     Fix:  <one line, for any under 3>
 
-  MISSING
-  <line 2, or the stuck belief, if not given>
+  MISSED
+  <buyers or moments no hook flags>
 
 example:
   business: sprout
   input: |
     [the skill]
 
-    Mode: grade
+    Mode: score
     Buyer: people who quit greens powders and pill stacks. They want one
-    habit that lasts. They may not know Sprout yet.
+    habit that lasts. Solution aware; they may not know Sprout yet.
     Proof: 60+ ingredients, 21 vitamins & minerals, 6 g fiber per pack.
     Approved wording is "supports", never "fix".
 
@@ -85,94 +85,81 @@ example:
     6. He Asked What Day It Was. I Handed Him a Gummy.
   output: |
     WARNING
-    MISSING: line 2. Each hook is graded alone, so a hook that falls
-    apart at line 2 won't show up here.
+    MISSING: next line. Each hook is scored alone, so a hook the next
+    line drops won't show up here.
 
     1. "'Sprout is too expensive': here's 61% off to prove otherwise"
-       Says it / gets it:  pass
-       Reason to stay:     fail for this buyer. It answers a price doubt
-                           they may not have yet.
-       Something happens:  pass. An objection is about to be answered.
-       Score: 3
-       Fix: keep it for people who know Sprout. For quitters, an offer
-       this early is too soon. Check the 61% matches the landing page.
+       Flags 0  Gain 1  New 1  Clear 1  = 3/4
+       Gate: fail. "61% off" isn't in the proof you gave.
+       Fix:  check 61% against the live offer. Even then, a deal hook
+             suits people who know Sprout, not quitters who may not.
 
     2. "Fix the Hot Girl Tummy"
-       Says it / gets it:  fail. A stranger may not know the slang, and
-                           "Fix" goes past the brand's "supports".
-       Score: 1
-       Fix: this speaks to gut buyers, not quitters. For them, say the
-       problem plainly and drop "Fix".
+       Flags 0  Gain 1  New 0  Clear 0  = 1/4
+       Gate: fail. "Fix" breaks the approved "supports".
+       Fix:  for gut buyers, name the problem plainly and use
+             "supports".
 
     3. "One Step I Never Skip"
-       Says it / gets it:  pass
-       Reason to stay:     pass. Never skipping is what this buyer wants.
-       Something happens:  pass. You want to know what the step is.
-       Score: 4
-       Note: the "I" must be a real person, not an AI-made presenter.
+       Flags 1  Gain 1  New 0  Clear 1  = 3/4
+       Gate: pass. The "I" must be a real person, not an AI presenter.
+       Keep. Never skipping is what this buyer wants.
 
     4. "Struggling to Get Enough Fiber?"
-       Says it / gets it:  pass
-       Reason to stay:     fail. This buyer isn't thinking about fiber.
-       Something happens:  fail
-       Score: 2
-       Fix: save it for gut buyers. For quitters, lead with the habit.
+       Flags 0  Gain 0  New 0  Clear 1  = 1/4
+       Gate: pass
+       Fix:  save it for fiber buyers, and add what they get.
 
     5. "The Daily Nutrition Every Runner Forgets"
-       Says it / gets it:  pass
-       Reason to stay:     fail. It calls out runners, a different buyer.
-       Something happens:  pass. Something is about to be revealed.
-       Score: 2
-       Fix: keep it for runners. It doesn't name the quitter's moment.
+       Flags 0  Gain 0  New 0  Clear 1  = 1/4
+       Gate: pass
+       Fix:  it flags runners. Keep it for them, not for quitters.
 
     6. "He Asked What Day It Was. I Handed Him a Gummy."
-       Says it / gets it:  pass
-       Reason to stay:     fail. It's odd, but the oddness isn't about
-                           the habit or the product.
-       Something happens:  pass
-       Score: 2
-       Fix: tie the odd moment to the habit, such as the half-used
-       powder tub, so the stop pulls in the right people.
+       Flags 0  Gain 0  New 1  Clear 1  = 2/4
+       Gate: pass
+       Fix:  tie the odd moment to the habit, such as the half-used
+             powder tub, so it flags the quitter.
 
-    GAP
-    None of these opens on the quitter's moment. Switch to write mode
-    for that buyer.
+    MISSED
+    Only hook 3 flags the quitter. Run write mode for that buyer, with
+    gain hooks about keeping the habit.
 
 tweaks:
-  - what: Write or grade
-    how: Grade your current hooks before writing new ones. You'll see which buyer each one speaks to, and the fixes often beat starting over.
+  - what: Write or score
+    how: Score your current hooks before writing new ones. You'll see which buyer each one flags, and the fixes often beat starting over.
   - what: Which buyer
-    how: Grades depend on the buyer you name. A hook built for price doubters scores low for someone who has never heard of you, and that's useful to know.
-  - what: Line 2
-    how: Paste the line that follows the hook. Without it, hooks are graded alone with a warning, because a hook that's dropped by line 2 loses the viewer anyway.
-  - what: The stuck belief
-    how: If you know the belief, give it in their words. If you don't, it lists the three questions to ask buyers.
+    how: Flags and Gain depend on the buyer you name. A deal hook scores well for people who know you and badly for people who don't, and that's useful to know.
+  - what: The next line
+    how: Paste it. Without it, hooks are scored alone with a warning, because a hook the next line drops loses the viewer anyway.
+  - what: Mix of appeals
+    how: Ask for "mostly gain" or "include two news hooks" if you know what your buyers respond to.
 
 judge:
-  - Every hook is plain speech with one idea and no made-up term.
+  - Every hook is one idea in plain words, with no made-up term.
   - No hook states a fact you didn't supply.
-  - There's no offer in a hook meant for buyers who don't know you.
+  - Every curiosity hook says or shows what the reader gets.
   - No hook tells the viewer they have a health or body condition.
-  - In grade mode, every score under 4 has a fix you could use today.
+  - In score mode, every hook under 3 has a fix you could use today.
 
 test:
-  - Grade a hook you know won and one you know lost. The winner should score higher. If it doesn't, check the buyer you named.
-  - Grade the same hooks twice. The scores should match within one point.
-  - Write hooks, then grade them in a second run. The hooks it wrote should pass the three ordered questions.
-  - Read the four answers it gives before the hooks in write mode. The stuck belief should sound like your buyer, not like a marketer.
-  - Run its best hook against your current one, with the same line 2 after both.
+  - Score a hook you know won and one you know lost. The winner should score higher. If it doesn't, check the buyer you named.
+  - Score the same hooks twice. The scores should match within one point.
+  - Write hooks, then score them in a second run. The hooks it wrote should score 3 or 4 and pass the gate.
+  - Plant a hook with a number that isn't in your proof. The gate should fail it.
+  - Run its best hook against your current one, with the same next line after both.
 
 improve:
-  - Write your buyer's stuck belief, in their words, into step 1 of the write steps in the skill file.
-  - Add your never-say list and health claim rules to "What you need", so no hook names a condition.
-  - If you mostly make video, add your own rules for the first two seconds to step 5 (for example "show the pack before saying the name").
-  - Save each winning hook with its line 2 to your brand file, since the two work together.
+  - Write your buyer's moment, in their words, into step 1 of the write steps in the skill file.
+  - Add your never-say list and health claim rules to "What you need", so the gate catches them every time.
+  - If you mostly make video, add your own first-frame rules to step 4 (for example "show the pack in a hand").
+  - Save each winning hook with its next line to your brand file, since the two work together.
   - Pair it with "Get openings to test that each try something different" for more ways in.
 
 terms:
   - term: Hook
-    meaning: The first line, or the first two seconds of a video, that makes someone stop scrolling.
-  - term: Stuck belief
-    meaning: What the buyer believes that keeps them doing things the old way, in their own words.
-  - term: Line 2
-    meaning: The sentence that comes right after the hook. It must carry the same question forward.
+    meaning: The first line, or the first seconds of a video, that makes someone stop scrolling.
+  - term: Appeal
+    meaning: What the hook offers to make someone stop, such as a gain, a piece of news or a question.
+  - term: Next line
+    meaning: The sentence that comes right after the hook. It must pay off what the hook started.

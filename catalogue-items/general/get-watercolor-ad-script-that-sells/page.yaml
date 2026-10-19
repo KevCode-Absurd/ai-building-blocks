@@ -1,181 +1,182 @@
 new_slug: get-watercolor-ad-script-that-sells
-name: "A calm watercolor ad that shows what cameras can't"
-summary: "Give it your selling idea and facts. You get a 20 to 45 second script for a hand-painted watercolor ad."
+name: "Show what cameras can't in a watercolor ad"
+summary: "Give it your selling idea and product facts. You get a narrated watercolor ad script built on one real paint technique."
 job: make-video-ads
 
-headline: "A calm watercolor ad that shows what cameras can't"
-subhead: Give it the reason someone buys, your product facts and your claims. It picks one paint movement (a bloom, a wash, a brush reveal) that shows the selling idea, and writes a 20 to 45 second narrated script or one painted still with room for words.
+headline: "Show what cameras can't in a watercolor ad"
+subhead: Give it the reason people buy, your product facts and your approved claims. It picks what the key shot must show, the real paint technique that shows it (glazing, lifting, wet-in-wet), and writes a 15 to 40 second script or one painted still.
 
 explain: |
-  Some products sell on something you can't film: a scent filling a room, a warm drink easing a tense evening, where an ingredient comes from. A watercolor can show it, and a calm painted ad stands out in a loud feed. But a pretty painting where nothing sells is just decoration, and a spreading wash can claim more than a sentence would.
+  Some selling ideas are hard to film. Sixty ingredients in one pack. A scent filling a room. A tense evening going soft. Paint can show them, and a calm watercolor stands out in a loud feed. The risk is a pretty painting where nothing sells, or a spreading color that quietly promises more than you're allowed to say.
 
-  This skill builds the ad around one paint movement, used once, on the line that states the idea: a drop of color blooming, a wash changing the room from cold to warm, a stroke revealing what's inside. It picks one of five looks, keeps one painted world in every shot, and paints the product at its true shape with its label exact. Everything painted is held to your claims. An ingredient is painted only if it's listed, and a mood stays an obvious metaphor.
+  This skill starts from the job. It asks what the turning shot must show (a reveal, something spreading, two things joining, parts adding up, a mood calming, or the product held still) and picks the watercolor technique painters use for exactly that. Glazing stacks see-through layers, so it suits a long ingredient list. Lifting pulls color off the paper, so a shape appears. Then it reads every painted change as a sentence and keeps only the ones your claims back.
 
 when:
-  - Your product sells on a feeling, a scent or what it's made of, and live footage looks flat.
-  - You want a calm ad for people who don't yet know they need you, without a hard sell.
-  - You want a painted still image with clear space for a headline.
+  - Your product sells on what's inside it, a scent or a mood, and plain footage looks flat.
+  - You want a calm ad for people who haven't met you yet.
+  - You want one painted still with clear space for a headline.
 
 you_give:
-  - The reason someone buys, how much the buyer knows, the selling idea and the length
-  - Video or still image, and a look (optional, cosy scene by default)
-  - Your product's shape, colors, every line on the label, what it's made of and how it works
+  - The reason someone buys, what the buyer knows, the selling idea and the length
+  - Video or still
+  - Your product's shape, colors, biggest label lines and what it's made of
+  - Your approved claims, banned claims and offer
   - Your buyer's moment and words, brand colors and voice (optional)
-  - Your approved and banned claims and the offer
 you_get:
-  - The paint movement and what it reveals
-  - A line-by-line script with narration, picture notes, colors and a clip plan
-  - Or, for a still, the moment, look, headline and an image prompt
-  - A list of every claim or ingredient painted, with its source
+  - A show plan with the technique, what changes and the claim it implies
+  - A line-by-line script with picture notes, word counts and a clip split
+  - Or, for a still, the moment, the headline and an image prompt
+  - A list of every painted change with its source, and the ones it rejected
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Paste your product facts, the full label text and your approved claims underneath.
-  - Say the selling idea in a sentence ("a calm, caffeine-free wind-down") and the length.
-  - Pick a look if you have a preference, or let it choose.
-  - Take the script to the skill that turns a watercolor script into shots, to make it.
+  - Paste your product facts, ingredient list and approved claims underneath.
+  - Write the selling idea in one sentence ("a whole shelf of greens in one small pack") and the length.
+  - Read the show plan first. If the implied sentence isn't something you can say, ask for another show job.
+  - Take the script to the skill that turns a watercolor script into video clips.
 
 how_it_works:
   - title: Checks the fit
-    text: Paint shows a scent, a warmth, a mood or an origin. It's weak for hard proof, urgency, loud offers and a product's real texture.
-  - title: Locks the painting
-    text: Fixes the paper, pigment, edges and colors before anything moves, so every shot looks like the same painting.
-  - title: Picks one paint movement
-    text: Chooses the one thing paint really does (bloom, bleed, dissolve, brush reveal, wash change, pigment trail) that shows the idea, used once.
-  - title: Picks one look
-    text: Cosy scene, specimen, mood wash, line and wash, or a portrait of the pack.
-  - title: Holds paint to the claims
-    text: A spreading wash claims as much as a sentence. Ingredients only if listed, how it works only as stated, no body before-and-after.
+    text: Paint suits contents, scent, mood and many parts. It tells you to film instead when proof or real texture is the point.
+  - title: Names what the key shot must show
+    text: One of six jobs (reveal, spread, join, build, calm, hold), chosen from your selling idea.
+  - title: Picks the real technique
+    text: Each job has a painter's technique that does it, like glazing for many parts or lifting for a reveal.
+  - title: Sets paper, texture and color
+    text: Cold-press, rough or smooth paper, optional granulation or dry brush, and colors that won't mix to mud.
+  - title: Reads every change as a claim
+    text: Writes the sentence each painted change implies and keeps it only if your claims back it.
   - title: Writes the video or still
-    text: One calm narrator, the movement on the line that states the idea with 8 words or fewer, offer over the settled painting. A still keeps a third of the sheet bare for words.
+    text: Words planned by time, 5 words or fewer over the turn, and the offer over the settled painting.
 
 output_shape: |
-  PAINT MOVEMENT  <the one movement>. <what it reveals or shows>
-  LOOK  <cosy scene, specimen, mood wash, line and wash, pack portrait>
+  SHOW PLAN
+  Selling idea: <one sentence>
+  Show job: <reveal, spread, join, build, calm, hold>
+  Technique: <glazing, lift-out, wet-in-wet charge...>
+  What changes: <what the viewer sees>
+  It implies: "<sentence>"  Source: <claim or fact>
+  Paper and color: <paper, texture, 3 or 4 colors>
 
-  <n> "<narration line>"
-    <picture note: what's painted, one gesture or movement>
-    Colors: <one color family>
-  (THE MOVEMENT on the line that states the idea, 8 words or fewer)
-    On screen: <offer, last lines only>
+  # | Narration | Picture | What moves
+  <n> | "<line>" | <what's painted> | <one wet edge, or settled>
+  <n> | "<5 words or fewer>" | THE TURN: <technique> | <change>
 
-  CLIP PLAN (<words>, <seconds>)
-  Clip <n>: lines <n-n> (<words>)
+  Timing: <words> at 2.2 a second = <seconds>. Clips: <split>
 
-  CLAIMS AND MATERIALS PAINTED
-  <what's painted>   <source, or "a mood metaphor, no claim">
-  Not painted: <what the facts don't support>
-  MISSING: <facts it needed and didn't get>
+  CLAIMS PAINTED
+  <change> = <source>
+  Rejected: <change> (<why>)
+  MISSING: <facts it needed>
 
 example:
   business: sprout
   input: |
     [the skill]
 
-    Media: video, about 25 seconds. Look: your choice.
-    Selling idea: what's inside. A small handful of gummies holds the
-    greens people won't drink as a powder.
-    Buyer: the quitter who wants to stick, 28 to 45. Has quit greens
+    Video, about 30 seconds.
+    Selling idea: a whole shelf of greens in one small pack.
+    Buyer: the quitter who wants to stick, 28 to 45. Gave up greens
     powders ("gritty/chalky"). Knows the fixes, not Sprout.
-    Product: Sprout. Glossy deep green stand-up foil pouch, big yellow
-    wordmark, yellow bear face top right, "28 Daily Packs" at the
-    bottom. Daily pack torn straight across the top edge only. Small
-    opaque deep-green gummy bears.
-    Made of: 60+ ingredients, including organic kale, spinach,
-    spirulina, chlorella, wheatgrass, broccoli and beet; acai, goji,
-    pomegranate. Pectin base.
-    Approved claims: "60+ ingredients, 21 vitamins & minerals, and 6g
-    fiber" in 1 pack.
+    Product: Sprout Low Sugar, 28 daily packs. Glossy deep green
+    stand-up pouch, big yellow wordmark "Sprout", yellow bear face top
+    right, "28 Daily Packs" at the bottom. Daily pack torn straight
+    across the top only. Small opaque deep-green gummy bears.
+    Ingredients include organic kale, spinach, spirulina, chlorella,
+    wheatgrass, broccoli and beet; acai, goji, pomegranate.
+    Approved: "60+ ingredients, 21 vitamins & minerals, and 6g fiber"
+    in 1 pack.
     Never say: fix, energy or immunity results, weight loss.
     Colors: forest green #00582D, warm cream #FFF7DF, sunflower
     yellow #FFCC2E.
     Offer: $29.99 first order with the text sign-up, renews at $49.99
     every 4 weeks.
   output: |
-    PAINT MOVEMENT  brush reveal. A wet green stroke crosses bare paper
-    beside the torn pack, and painted kale, spinach, broccoli and
-    wheatgrass stand behind it. It shows what's inside.
-    LOOK  specimen (single subjects on mostly bare paper, for what it's
-    made of)
+    SHOW PLAN
+    Selling idea: a whole shelf of greens in one small pack.
+    Show job: build (many parts adding up).
+    Technique: glazing. See-through green leaf shapes are laid one
+    over another on dry paint. Each overlap reads darker, until the
+    stack matches the pouch's deep forest green.
+    It implies: "These greens are in this pack." Source: ingredients
+    panel.
+    Paper and color: cold-press, light granulation in the greens.
+    Before the turn: grey-green, warm grey, bare cream paper. The turn:
+    leaf green, yellow-green, blue-green. Sunflower yellow on the
+    pouch only.
 
-    1 "You know you should eat more greens."
-      A painted plain tub of powder, no label, on bare cream paper. One
-      wet grey-green edge still spreading at its base.
-      Colors: grey-green, warm grey, bare paper.
-    2 "The powder is the part you can't face."
-      Closer: a painted spoon in the tub, dull clumps of powder.
-    3 "So the greens come in one small daily pack."
-      New sheet area: the painted deep green pouch, crisp outline,
-      yellow wordmark "Sprout", "28 Daily Packs" at the bottom. One
-      daily pack beside it, torn straight across the top.
-      Colors: the product's own deep green and yellow, bare paper.
-    4 "Tear the top. Here's what's inside."
-      THE MOVEMENT. A wet stroke of fresh leaf green crosses the bare
-      paper from the torn pack, and painted kale, spinach, broccoli
-      and wheatgrass stand behind it. The stroke stops short of the
-      pouch label. 6 words over the movement.
-      Colors: leaf green family (the turn).
-    5 "Sixty-plus ingredients, twenty-one vitamins and minerals, six
-      grams of fiber."
-      The whole sheet: the greens behind, a painted bowl in front with
-      small green gummy bears tipped in from the pack. Pigment settling.
-    6 "Sprout. First order, $29.99 with the text sign-up."
-      Held on the pouch and bowl, label clear, bare paper above.
-      On screen: $29.99 first order with SMS sign-up. Renews at $49.99
-      every 4 weeks.
-    7 "For people who'd rather eat their greens than drink them."
-      Same held frame, dry.
+    1 | "Your shelf has a tub for every green." | A painted shelf of
+        plain unlabelled tubs and a shaker, crisp wet-on-dry edges. |
+        One damp edge still creeping at the shaker's base.
+    2 | "Most of them stopped getting opened." | Closer: a tub lid
+        with a dusty rim in dry brush. | Settled.
+    3 | "Here are those greens, one layer at a time." | Bare cream
+        paper with one pale painted kale leaf. | The kale glaze dries.
+    4 | "Kale. Spinach. Spirulina. Broccoli. Wheatgrass." | THE TURN:
+        glazing. Four more leaf glazes land over the kale, one by one;
+        every overlap goes a shade deeper. | About 3 seconds, 5 words.
+    5 | "Sixty-plus ingredients, twenty-one vitamins and minerals, six
+        grams of fiber." | Where the layers meet, the painted pouch
+        stands in the same deep green, crispest edges on the sheet,
+        "Sprout" in yellow, "28 Daily Packs" at the bottom. | Settled.
+    6 | "In one pack you tear and eat." | A loosely painted adult hand
+        holds a daily pack torn straight across the top, small green
+        bears in the palm. | One slow tilt of the hand.
+    7 | "Sprout. First order $29.99 with the text sign-up." | Held on
+        the pouch, bare paper above. On screen: $29.99 first order with
+        text sign-up. Renews at $49.99 every 4 weeks. | Dry and still.
+    8 | "For anyone who quit the powder." | Same frame, held. | Still.
 
-    CLIP PLAN (calm narrator, 58 words, about 25 seconds)
-    Clip 1: lines 1-2 (15 words) | Clip 2: lines 3-4 (15 words, the
-    movement) | Clip 3: lines 5-7 (28 words, about 12 s, last shot
-    held and dry)
+    Timing: 60 words at 2.2 a second, plus the 3-second turn, is about
+    30 seconds. Clips of 8 s: 1 = lines 1-2 (14 words), 2 = lines 3-4
+    (the turn), 3 = lines 5-6 (17 words), 4 = lines 7-8, held and dry.
 
-    CLAIMS AND MATERIALS PAINTED
-    Kale, spinach, broccoli, wheatgrass  ingredients panel, listed
-    Line 5               approved claim, said in full
-    Grey-green to leaf   a change of mood, no claim
-    Not painted: beet, acai and pomegranate, which would bring a second
-    color family into the turn; no body, glow or energy.
-    MISSING: the pouch's full label text. Only "Sprout" and "28 Daily
-    Packs" are on file, so the painted pouch carries those alone.
-    MISSING: the daily pack's printing. Paint it from its photo.
+    CLAIMS PAINTED
+    Kale, spinach, spirulina, broccoli, wheatgrass = ingredients panel
+    The stack becoming the pouch = same list, all in one pack
+    Line 5 = approved claim, said in full
+    Dusty tub rim = the buyer's own words about powders; no brand shown
+    Rejected: a glow spreading from the pouch into a figure (implies
+      an energy result, which is banned)
+    Rejected: beet, acai and pomegranate (their red-violets would mix
+      to brown with the greens)
+    MISSING: a clean front photo of the pouch, so the full label can be
+    laid over the painted one in editing.
 
 tweaks:
-  - what: The look
-    how: Cosy scene suits the buyer's moment. Specimen suits what it's made of. Mood wash suits an idea. Line and wash suits how a thing works. A pack portrait suits buyers who already know the product.
-  - what: The paint movement
-    how: Ask for a brush reveal to show what's inside, a bloom for something spreading (a scent, a warmth), or a pigment trail from an ingredient to the pack. It's used once, on the line that states the idea.
+  - what: The show job
+    how: Ask for reveal to show one hero ingredient, spread for a scent or warmth, join for an ingredient becoming the product, calm for a mood, or hold for buyers who already know you.
+  - what: Paper and texture
+    how: Rough paper with granulation feels earthy and handmade. Smooth hot-press keeps fine detail and label shapes crisp. Dry brush makes anything look dusty or chalky.
   - what: Video or still
-    how: A still is one painted moment with at least a third of the sheet left bare, a headline of 8 words or fewer and 20 words in all.
+    how: A still is one moment with about a quarter of the frame left as bare paper, a headline of 6 words or fewer and 15 words in all.
   - what: Length
-    how: 20 to 45 seconds suits most ideas, 60 at most. Under 20 seconds you get one picture, one movement and the product.
+    how: 15 to 40 seconds. It counts words at about 2.2 a second, so a 20-second ad has room for about 40 words.
 
 judge:
-  - There is one paint movement, used once, on the line that states the idea.
-  - Everything painted is in your facts. No ingredient you don't list, no body before-and-after.
-  - The product's label is exact and no wash or bloom crosses it.
-  - Each shot stays in one color family, so nothing turns muddy.
-  - The painted figure, if there is one, never speaks and is never presented as a customer.
-  - The last shot is held, with the paint settled and dry.
+  - The show plan's implied sentence is something your claims let you say.
+  - There is one turn, and its technique fits the job (glazing for many parts, lifting for a reveal).
+  - Every painted ingredient is on your list, and nothing shows a body changing.
+  - No shot mixes two opposite colors, so nothing turns brown.
+  - The product has the crispest edges and only real label words.
+  - The narration fits the length at a calm pace, with 5 words or fewer over the turn.
 
 test:
-  - Give it an ingredient list and ask for a "what's inside" ad. Every ingredient painted should be on your list; any extra means it filled a gap.
-  - Count the narrated words on the movement line. Eight or fewer passes; more means the movement gets talked over.
-  - Run it twice. The paint movement it picks should be the same kind both times for the same selling idea; if not, state the selling idea more plainly.
-  - Leave out your label text. It should flag MISSING, not invent lines for the pack.
+  - Give it a short ingredient list and ask for a "what's inside" ad. Every painted ingredient should be on your list.
+  - Ask for an ad that hints at an energy boost. The claim step should reject the change and say why.
+  - Count the words and divide by 2.2. The answer should be close to the length you asked for.
+  - Leave out your label lines. It should write MISSING, not invent words for the pack.
 
 improve:
-  - Write your fixed style lock (paper, pigment, your color families) into the image prompt rules in the skill file, so every painted ad matches.
-  - Add your full label text and product-showing rules to "What you need", so the painted pack is right first time.
-  - Note which looks suit your brand (specimen for ingredients, cosy scene for routines) in step 4, so it picks for you.
-  - Save the movement that wins to your brand file, and test a second movement on the same idea next time.
-  - Pair it with the skill that turns a watercolor script into image and video prompts.
+  - Add your full ingredient list and banned claims to "What you need" in the skill file, so the claim step has something to test against.
+  - Note your house paper and colors in step 3, so every painted ad in a series matches.
+  - Save the show job that wins, and test a second job on the same idea next time.
+  - Pair it with the skill that turns a watercolor script into video clips.
 
 terms:
-  - term: Paint movement
-    meaning: The one thing the paint does on screen (a bloom opening, a wash spreading, a stroke revealing) that shows the selling idea.
-  - term: Color family
-    meaning: A small set of 3 or 4 colors that belong together. One per shot keeps watercolor clean.
+  - term: Show job
+    meaning: What the key shot has to show for the selling idea, such as a reveal or many parts adding up.
+  - term: Glazing
+    meaning: Laying a thin see-through layer of paint over dry paint. Where layers overlap, the color goes deeper.
   - term: Bare paper
-    meaning: Unpainted parts of the sheet. In watercolor they are the light, and the space where words go.
+    meaning: Parts of the sheet left unpainted. In watercolor they are the brightest light, and the space where words go.

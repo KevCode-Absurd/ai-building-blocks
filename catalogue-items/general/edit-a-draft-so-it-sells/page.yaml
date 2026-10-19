@@ -1,15 +1,15 @@
 new_slug: edit-a-draft-so-it-sells
 name: "Fix the lines in your draft that lose sales"
-summary: "Paste your draft and your facts. You get it back with the weak lines fixed and your best lines kept."
+summary: "Paste your draft and your facts. You get the weak lines fixed, each with what it gains, and your best details kept."
 job: write-ad-copy
 
 headline: "Fix the lines in your draft that lose sales"
-subhead: Paste any customer-facing draft and the facts it's allowed to use. It marks the details worth keeping, checks each line against eleven common faults, makes the smallest fix that works, and keeps the old line whenever the new one isn't clearly better.
+subhead: Paste any customer-facing draft and the facts it may use. It reads the draft as a skimmer, as a line-by-line reader and as a doubter, fixes only where one of them would stop, and logs each change with what it gains.
 
 explain: |
-  Edits often make copy worse. An editor cuts the odd, true detail because it sounds informal, softens a clear line to sound safer, or rewrites everything so the piece loses the voice it had. The draft ends up smoother and says less.
+  Edits often make copy worse. The odd true detail gets cut because it sounds informal, a clear line gets softened, or the whole piece gets rewritten and loses its voice. Nobody can say what each change was for.
 
-  This skill edits the way a careful editor does. It reads the draft once as if aloud, then marks the one to three keepers, the true details that make the piece interesting, and protects them. Each line is checked against eleven faults, such as a line nobody would say, a number that never says what changes for the buyer, an opening the body doesn't pay off, or an ask that names a button instead of what's behind it. Every fix is tested against the old line in place, and the old line wins a tie.
+  This skill reads your draft three ways. First as a skimmer, who only sees headings, first sentences and buttons. Then line by line, marking every place a reader could stop. Then as a doubter about to pay, checking each claim and term. It fixes the stops from the top of the page down, because the top gets the most attention. Every change goes in a ledger with its gain. That might be a lower reading grade, or a claim now backed by your facts. A change with no gain is undone.
 
 when:
   - You have a draft ad, page, email or script and want an editor's read before it goes out.
@@ -18,53 +18,58 @@ when:
 
 you_give:
   - The draft, with each part labelled (headline, body, button)
-  - The facts it may use, approved claims, offer terms and product facts
+  - The facts it may use, such as approved claims, offer terms and product facts
   - Who it's for and how much they know (optional)
-  - A specific change you want, if the copy already runs (optional)
+  - One specific change you want, if the copy already runs (optional)
   - Your voice notes and claims you must never make (optional)
 you_get:
-  - The keepers, the details every fix must protect
-  - Up to about five changes, each with the failing phrase, what it costs you and the corrected text
-  - Which lines were left alone, and why
-  - A one or two sentence summary, including whether the problem is the reason to buy rather than the wording
+  - What it locked, and the specific details it protected
+  - The word count, reading grade and longest sentence, before and after
+  - A ledger of changes, each with the read that found it and what it gains
+  - Lines left as they are, with the reason, and a one-line verdict
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste your draft underneath, with each part labelled.
-  - Paste the facts it's allowed to use. It won't add anything beyond them.
+  - Paste the facts it may use. It won't add anything beyond them.
   - If you only want one thing changed, say so, for example "make the headline answer the price doubt".
-  - Read the keepers first. If it marked the wrong details as keepers, tell it which ones matter and run it again.
+  - Read the ledger. Undo any change whose gain doesn't convince you.
 
 how_it_works:
-  - title: Reads it aloud
-    text: Reads the draft once through, noting where attention rises and falls and where belief slips.
-  - title: Marks the keepers
-    text: Finds the one to three true details that make the piece interesting, never a clever phrase, and protects them.
-  - title: Checks every line
-    text: Tests each part against eleven faults, from a line nobody would say to an ask that names the button instead of what's behind it.
-  - title: Makes the smallest fix
-    text: Finds the one thing stopping the reader from understanding, wanting, believing or acting, and removes only that.
-  - title: Tests the fix
-    text: Keeps a change only if it's clearer, easier to say, or adds a reason, attention or belief. The old line wins a tie.
-  - title: Rereads the joins
-    text: Reads the lines either side of each change, because a bigger promise or a tighter line can break what's around it.
+  - title: Locks what can't move
+    text: Lists your claims, numbers, terms and the order of the argument, plus every specific detail, and protects them.
+  - title: Measures the draft
+    text: Counts the words and gives the reading grade and the longest sentence, so you can see the change.
+  - title: Reads as a skimmer
+    text: Checks that headings, first sentences, captions and buttons carry the point on their own.
+  - title: Reads line by line
+    text: Marks every place a reader could stop, such as a jump in logic or a word to decode.
+  - title: Reads as a doubter
+    text: Checks each claim for a fact beside it, and each price, renewal and guarantee for its full terms.
+  - title: Fixes from the top
+    text: Makes the plainest fix for each stop, top of the page first, and logs the gain. No gain means no change.
 
 output_shape: |
-  KEEPERS
-  <one to three true details every fix protects>
+  LOCKED
+  <claims, numbers, terms, the order of the argument>
 
-  CHANGES
-  <n>. <field>
-     Failing:   "<the exact phrase>"
-     Costs:     <clarity, attention, trust or the sale>
-     Corrected: <the full corrected text for that field>
-  (usually 0 to 5)
+  SPECIFICS PROTECTED
+  <every number, name, how-it-works detail or odd true detail>
 
-  LEFT ALONE
+  MEASURES
+  <words, reading grade, longest sentence> -> <after>
+
+  LEDGER
+  <n>. <part> | read <1 skim / 2 slide / 3 doubt>
+     Was:  "<old text>"
+     Now:  "<new text>"
+     Gain: <fewer words / lower grade / stop removed / claim backed>
+
+  LEFT AS IS
   <lines kept, and why>
 
-  SUMMARY
-  <one or two sentences, and whether the reason to buy is the problem>
+  VERDICT
+  <a wording problem, or a weak reason to buy no edit can fix>
 
 example:
   business: sprout
@@ -90,83 +95,84 @@ example:
     guarantee covers the first order only.
     Buyer: people who quit powders and think it costs too much.
   output: |
-    KEEPERS
-    - "sloshing chalky powders, or cleaning messy counters" (the real
-      hassle buyers left behind)
-    - "Renews at $49.99 each 4 weeks." (an honest detail most pages hide)
-    - "Clinically tested for nutrient absorption" (answers "does a gummy
-      even work?")
+    LOCKED
+    $29.99, $1.07/day, $49.99 each 4 weeks, the 30-day guarantee, the
+    four bullets, the order (promise, bullets, plan, button, why)
 
-    CHANGES
-    1. Under title
-       Failing:   "60+ potent ingredients to revive whole body vitality"
-       Costs:     clarity. Nobody can picture "whole body vitality".
-       Corrected: 60+ ingredients, 21 vitamins and minerals, and 6 g of
-                  fiber, in one pack of great tasting gummies a day.
+    SPECIFICS PROTECTED
+    "60+", "Renews at $49.99 each 4 weeks", "gagging on pills",
+    "sloshing chalky powders", "cleaning messy counters"
 
-    2. Plan box
-       Failing:   "30-Day Money-Back Guarantee."
-       Costs:     trust. The first-order limit is only in the last FAQ.
-       Corrected: 30-day money-back guarantee on your first order.
+    MEASURES
+    69 words, grade 8.3 -> 94 words, grade 6.0. The extra words are the
+    terms the doubter needed.
 
-    3. Under button
-       Failing:   "DISCOUNT AUTO-APPLIED."
-       Costs:     trust. The $29.99 needs the text sign-up, so it isn't
-                  automatic.
-       Corrected: $29.99 for your first box with the text sign-up
-                  discount for new customers.
+    LEDGER
+    1. Under title | read 3 doubt
+       Was:  "60+ potent ingredients to revive whole body vitality"
+       Now:  "60+ ingredients, 21 vitamins and minerals, and 6 g of
+             fiber, in one pack of great tasting gummies a day."
+       Gain: claim backed. Nobody can picture "whole body vitality";
+             the facts list says what's in the pack.
+    2. Plan box | read 3 doubt
+       Was:  "30-Day Money-Back Guarantee."
+       Now:  "30-day money-back guarantee on your first order."
+       Gain: term stated in full, where the buyer decides.
+    3. Button | read 1 skim
+       Was:  "Start Now"
+       Now:  "Start my first box"
+       Gain: stop removed. It says what the buyer gets.
+    4. Under button | read 3 doubt
+       Was:  "DISCOUNT AUTO-APPLIED."
+       Now:  "$29.99 for your first box with the text sign-up discount
+             for new customers."
+       Gain: claim backed. The discount needs the text sign-up, so
+             "auto-applied" isn't true.
 
-    4. Button
-       Failing:   "Start Now"
-       Costs:     the sale. It names the button, not what's behind it.
-       Corrected: Start my first box
-
-    LEFT ALONE
+    LEFT AS IS
     "Renews at $49.99 each 4 weeks. Cancel anytime." is plain and
-    honest. "Supports digestion and gut health" and "Clinically tested
-    for nutrient absorption" are plain. The "Why Sprout" line keeps its
-    true details. The first two bullets are bold claims, so they belong
-    to a claims check, not to this edit.
+    honest. The "Why Sprout" line is all specifics. Bullets 1 and 2 are
+    bold claims, so a claims check owns them.
 
-    SUMMARY
-    The wording problems are a vague promise at the top and offer terms
-    that hide their conditions. The reason to buy (no more chalky
-    powders) is fine. Run bullets 1 and 2 through a claims check before
-    this page is finished.
+    VERDICT
+    A wording problem. The reason to buy (no more chalky powders) is
+    strong. Run bullets 1 and 2 through a claims check.
 
 tweaks:
   - what: A change request
-    how: If the copy already runs, name the one change you want. It first lists what must stay (the idea, the voice, the offer, the order) and only touches what the request needs.
+    how: If the copy already runs, name the one change you want. It locks everything else and only touches what the request needs.
   - what: The facts
-    how: A fix that needs a fact you didn't give becomes MISSING. Give it the full facts list and it can turn vague trust words into something you can point to.
-  - what: Who it's for
-    how: Tell it the buyer and how much they know. A buyer who doesn't know an answer exists needs a story, and it will tell you when a line edit can't fix that.
+    how: A fix that needs a fact you didn't give becomes MISSING. Give it the full facts list and it can back vague claims with something you can point to.
+  - what: The reading grade target
+    how: It aims for grade 8 or under for ads and emails and 10 for pages. Name your own target if your buyers read at a different level.
   - what: How many changes
-    how: Ask for "the top three" if you're short on time. It orders changes by how much each fault costs you.
+    how: Six is the default. Ask for "the top three" if you're short on time. It fixes from the top of the page down.
 
 judge:
-  - The keepers are true details from your draft, not catchy phrases.
-  - Every change names what the fault costs you. If it can't, it shouldn't be a change.
+  - Every ledger row names a gain you can check.
   - No claim, number, price, guarantee, name or quote changed.
-  - Most lines were left alone, with a reason given.
-  - Read each corrected line beside the old one. The new one should be plainer, not just shorter or safer.
+  - Every specific detail from your draft is still there.
+  - Most lines were left as they were, with a reason.
+  - Read each new line beside the old one. The new one should be plainer, not cleverer.
 
 test:
-  - Run it on copy a good editor has already fixed. Compare its changes with theirs. It should find most of the same lines and keep the details your editor kept.
-  - Run it twice. The keepers should be the same both times. If they change, the draft has no clear standout detail, which is worth knowing.
+  - Run it on copy a good editor has already fixed. It should find most of the same lines and keep the details your editor kept.
+  - Run it twice. The locked list and the specifics should match both times.
   - Plant a line nobody would say in a strong draft, such as "Nutrition, reimagined." It should fix that line and leave the rest.
-  - Read the cost on each change. If it can't name clarity, attention, trust or the sale, the change shouldn't be there.
-  - Read its version and your original aloud, side by side. The plainer one should win.
+  - Plant a guarantee with its limit left out. The doubter read should catch it.
+  - Check the before and after reading grades with a free readability checker. They should be close to what it reports.
 
 improve:
   - Paste the claims your brand must never make into "What you need" in the skill file, so no fix goes near them.
   - If your copy always has the same parts, list them in step 1 (for example "headline, main text, button").
-  - Add faults you see often in your own drafts to the list in step 3, each with what it costs.
-  - Write the keepers it finds into your brand file. They're often the best material for your next ad.
-  - Run "Stop your copy from sounding like AI" first if an AI tool wrote the draft, and finish with "Know if your copy is ready, in 15 questions".
+  - Set your own reading grade target in step 2.
+  - Save the specifics it protects to your brand file. They're often the best material for your next ad.
+  - Run "Stop your copy from sounding like AI" first if an AI tool wrote the draft, and finish with "Know if your copy is ready to publish".
 
 terms:
-  - term: Keeper
-    meaning: A true, interesting detail in your draft, such as an odd fact about how it's made, that every edit must protect.
-  - term: The ask
-    meaning: The part that tells the reader what to do next.
+  - term: Specific
+    meaning: A detail a reader can check or picture, such as a number, a name or how it's made. Every edit protects these.
+  - term: Stop
+    meaning: A place where a reader would stop reading, such as a word they'd have to decode or a jump in logic.
+  - term: Reading grade
+    meaning: The school year a reader needs to follow the text easily, worked out from sentence and word length.

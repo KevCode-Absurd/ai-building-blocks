@@ -1,10 +1,10 @@
 # Paper world video shots: for online stores
 
-## Also give it
-A photo of the pack front, every label line, the product's size next to the paper character, and how it's used.
+## Give it as well
+A clean front photo of the pack, its biggest label lines with their colours, how big it is next to the paper figure, and how it's used.
 
-## What changes
-- Paper pack: cut from card at the true shape and colours, with the label lines stated exactly. In the collage look, use a photo cutout instead.
-- Layered papercraft suits gifts and premium shelf products; handmade stop-motion suits honest everyday goods; origami suits calm self-care and before-and-after stories.
-- Show use as the brand's own steps, one gesture per clip (a jointed hand lifting a lid).
-- Prices and offers are on-screen text added in editing.
+## What changes for stores
+- Make the card pack first and hold it next to the real one. For a busy label, use a printed photo of the real pack cut out and set in the scene, so every word stays right.
+- Show use as your own steps, one paper move per clip (a pinned hand tipping the pack).
+- A pop-up of the product suits gifts and launches. Layered planes suit premium shelf goods. Flat-cut figures suit everyday problem-solvers.
+- Price and offer go on as on-screen text in editing, from the offer that is live that day.

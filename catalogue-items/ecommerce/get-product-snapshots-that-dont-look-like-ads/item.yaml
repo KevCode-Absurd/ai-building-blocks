@@ -1,7 +1,7 @@
 slug: get-product-snapshots-that-dont-look-like-ads
 renamed_from: candid-flash-lifestyle-photo-set
 name: "Get product snapshots that don't look like ads"
-summary: "Flash snapshots of people using your product on a real evening, for ads and posts that feel real."
+summary: "Flash snapshots of one real occasion with your product in it, for ads and posts that feel real."
 category: ecommerce
 type: skill
 role: render
@@ -14,8 +14,13 @@ inputs:
 outputs:
   - {type: photo_set}
 uses: [stop-ai-pictures-getting-your-product-wrong]
-example: flash-photoshoot
+example: flash-snapshots
 origin: rebuilt
 source_ids: [CES-036]
-old_name: flash-photography
-version: 1.0.0
+old_name: candid flash photo set
+version: 2.0.0
+credits:
+  - {title: "Bounce flash photography & The Inverse Square Law", by: "Neil van Niekerk, Tangents", url: "https://neilvn.com/tangents/bounce-flash-photography-and-inverse-square-law/", used: "Why direct flash leaves the background dark, and how distance to the wall changes falloff"}
+  - {title: "Flash synchronization", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Flash_synchronization", used: "Flash with a slow shutter: lit areas sharp, ambient areas glowing with motion trails"}
+  - {title: "Photos as Web Content", by: "Jakob Nielsen, Nielsen Norman Group", url: "https://www.nngroup.com/articles/photos-as-web-content/", used: "People skip decorative stock-style images and look at real people and real products"}
+  - {title: "How to prompt Gemini 2.5 Flash Image Generation for the best results", by: "Philipp Schmid, Logan Kilpatrick, Alisa Fortin, Google", url: "https://developers.googleblog.com/en/how-to-prompt-gemini-2-5-flash-image-generation-for-the-best-results/", used: "Prompts as one described scene, with camera and light in physical terms"}

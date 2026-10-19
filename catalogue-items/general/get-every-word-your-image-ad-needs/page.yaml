@@ -4,62 +4,63 @@ summary: "Describe your picture and buyer. You get the words on the image and ev
 job: write-ad-copy
 
 headline: "All the words your image ad needs"
-subhead: Describe the picture you've chosen and who it's for, then paste your proof and offer terms. It writes the words on the image and every field around it, so they finish the picture's idea instead of repeating it, with one framing per version.
+subhead: Describe the picture you've chosen and who it's for, then paste your proof and offer terms. It gives each text field one job, opens the main text to suit the kind of ad, and writes versions that each test a different appeal.
 
 explain: |
-  Once the picture for an image ad is chosen, the words around it often undo it. The main text repeats the headline on the image word for word, the headline under the image argues something else, and the offer loses the small print it needs.
+  Once the picture for an image ad is chosen, the words around it often undo it. The main text repeats the headline on the image, the headline under the image argues something else, and the offer loses the small print it needs.
 
-  This skill writes the words that complete the picture. The headline on the image and the picture make one argument together. A supporting line adds a new reason or a needed condition. The main text develops the same idea without repeating the image. The level of explanation follows how much the buyer knows, from a scene they recognise to the offer and the action. Versions test different framings, such as a supported benefit, a specific question or a call-out by habit. It never invents a customer's experience, a quote or a guarantee.
+  This skill gives every field one job. The words on the image make the point in 7 words or fewer. The main text opens in a way that suits the kind of ad, such as saying who said it for a review ad, or what the number counts for a stat ad, then adds the proof and the full offer terms. Versions test one appeal each: what the buyer gets, what's new, an honest bit of curiosity, or a phrase buyers use in their reviews. It never invents a customer's story, a quote or a guarantee.
 
 when:
   - You've chosen the picture for an image ad and need every text field written.
-  - You want two or three versions that test different framings on the same picture.
+  - You want two or three versions that test different appeals on the same picture.
   - Your current image ads repeat the same words on the image and in the main text.
 
 you_give:
-  - What the picture shows, its argument and who it's for
-  - How much the buyer knows, from unaware to ready to buy
+  - What the picture shows and who it's for, plus its ad type if you know it
+  - How much the buyer knows, new to you, warm or ready to buy
   - Your proof, real quotes with source, exact offer terms and conditions
-  - Your voice notes and each field's character limit
-  - How many versions, and whether a long story is allowed (optional)
+  - Your voice notes and each field's limit
+  - How many versions, and whether a story is allowed (optional)
 you_get:
-  - For each version, the image headline, support line, headline under the image, main text, description and button
-  - A one-line note naming how much the buyer knows and the framing each version tests
-  - A long story for the main text, if you asked for one
+  - For each version, the headline and support line on the image, main text, headline under the image, description and button, with counts
+  - A note naming the ad type, what the buyer knows and the appeal each version tests
+  - A story for the main text, if you asked for one
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Describe the picture in a sentence or two, and say who it's for.
   - Say how much the buyer knows, for example "knows the problem, not us".
   - Paste your proof and offer terms with every condition, plus the field limits.
-  - Check each version's offer wording against your real terms before it goes live.
+  - Check each version in your ad preview before it goes live, since cut-off points change.
 
 how_it_works:
-  - title: Makes words and picture agree
-    text: The image headline and the picture make one argument. The support line adds a new reason, proof or a needed condition.
+  - title: Gives each field a job
+    text: The image headline makes the point, the support line adds one fact or condition, and the main text carries the proof and full terms.
+  - title: Opens to suit the ad type
+    text: A review ad says who said it, a stat ad says what the number counts, an offer ad states the terms.
   - title: Matches what the buyer knows
-    text: A scene they recognise for an unaware buyer, then a way forward, then proof, then the doubt answered, then the offer and action.
-  - title: Varies the framing
-    text: Each version tests a different framing, such as a supported benefit or a specific question, with the product and offer kept the same.
+    text: Strangers get their situation first, warm buyers get what's different and the proof, ready buyers get the offer.
+  - title: Tests one appeal per version
+    text: What they get, what's new, honest curiosity, or the buyer's own phrase, with the picture and offer kept the same.
   - title: Uses only real proof
-    text: No borrowed figures, quotes, guarantees or customer stories. A cast of made-up people is never a testimonial.
-  - title: Writes the long story
-    text: Only if allowed. One reader, one problem, opening on the picture's everyday moment, with the product as a supported option.
-  - title: Keeps to the fields
-    text: Returns only the fields and versions asked for, each within its limit.
+    text: No borrowed figures, quotes, guarantees or customer stories. A made-up person is never a testimonial.
+  - title: Keeps to the limits
+    text: Image headline of 7 words or fewer, main text that works before "See more", and every field counted.
 
 output_shape: |
-  VERSION <n>: <the framing it tests>
-  On image, headline:  <words on the picture>
-  On image, support:   <one line, or none>
-  Headline under image: <within the limit>
-  Main text:           <first sentence stands alone above "See more">
-  Description:         <within the limit>
-  Button:              <the call to action>
+  VERSION <n>: <appeal it tests>
+  On image, headline:   <7 words or fewer> (<words>)
+  On image, support:    <one line, or none>
+  Main text:            <first line stands alone above "See more">
+  Headline under image: <40 characters or fewer> (<characters>)
+  Description:          <within the limit>
+  Button:               <the action>
 
   NOTE
-  Buyer knows: <unaware / problem / solutions / product / ready>
-  MISSING:     <offer terms, quote or proof that wasn't supplied>
+  Code:        <type · dress · audience>
+  Buyer knows: <new | warm | ready>
+  MISSING:     <offer terms, quote or source not supplied>
 
 example:
   business: sprout
@@ -71,90 +72,109 @@ example:
     palm. A tub of fiber powder sits pushed to the back.
     Who it's for: people with gut troubles who've tried fiber powders
     and probiotics. They know the problem, not Sprout.
-    Evidence: 6 g prebiotic fiber per pack. Approved: "Supports
+    Proof: 6 g prebiotic fiber per pack. Approved: "Supports
     digestion and gut health." Survey of 3,000+ customers: "67% of
     surveyed users experienced better, more regular digestion."
+    Reviews: all 20 (pasted below).
     Qualifier: Sugar-Free uses sugar alcohols, which upset some
     stomachs; point gut-sensitive buyers to Low Sugar.
     Offer: first box $29.99 with the text sign-up discount, then $49.99
     every 4 weeks. 30-day money-back guarantee, first order only.
     Voice: playful, cheeky, never preachy.
-    Limits: image headline 8 words, support 10 words, headline under
-    image 40 characters, main text 4 sentences (the first under 125
-    characters), description 30 characters.
+    Limits: main text 5 sentences, first under 125 characters;
+    description 30 characters.
     Versions: 2
   output: |
-    VERSION 1: a supported benefit
-    On image, headline:   6 g of prebiotic fiber in every pack
+    VERSION 1: self-interest
+    On image, headline:   6 g prebiotic fiber, no shaker needed (7)
     On image, support:    Supports digestion and gut health.
-    Headline under image: Fiber you don't have to stir
-    Main text:            If fiber powder has become one more thing you
-                          mean to drink and don't, try it as gummies.
-                          Each Sprout pack has 6 g of prebiotic fiber, and
-                          67% of surveyed users experienced better, more
-                          regular digestion. If your stomach is sensitive,
-                          start with Low Sugar rather than Sugar-Free.
-                          Your first box is $29.99 with the text sign-up
-                          discount, then $49.99 every 4 weeks.
-    Description:          30-day guarantee, first order
-    Button:               Shop Now
+    Main text:            Breakfast is one pack, torn across the top and
+                          eaten from your palm. That's 6 g of prebiotic
+                          fiber with nothing to stir. In a survey of
+                          3,000+ customers, 67% of surveyed users
+                          experienced better, more regular digestion. If
+                          your stomach is sensitive, start with Low Sugar
+                          rather than Sugar-Free. Your first box is $29.99
+                          with the text sign-up discount, then $49.99
+                          every 4 weeks.
+    Headline under image: Fiber you don't have to stir (28)
+    Description:          30-day guarantee, first order (29)
+    Button:               Shop now
 
-    VERSION 2: a specific question
-    On image, headline:   Tried fiber powders and probiotics already?
-    On image, support:    This one's a gummy you eat from the pack.
-    Headline under image: 6 g of prebiotic fiber per pack
-    Main text:            Already tried fiber powders and probiotics?
-                          Sprout is one pack of gummies a day, with 6 g
-                          of prebiotic fiber that supports digestion and
-                          gut health. If your stomach is sensitive, start
-                          with Low Sugar rather than Sugar-Free. Your
-                          first box is $29.99 with the text sign-up
-                          discount, then $49.99 every 4 weeks.
-    Description:          From $29.99 with text sign-up
-    Button:               Shop Now
+    VERSION 2: their words
+    On image, headline:   Still cleaning a shaker bottle? (5)
+    On image, support:    Try your fiber as gummies instead.
+    Main text:            Breakfast is one pack, torn across the top and
+                          eaten from your palm. Each pack has 6 g of
+                          prebiotic fiber that supports digestion and gut
+                          health, with no water and no mixing. If your
+                          stomach is sensitive, start with Low Sugar
+                          rather than Sugar-Free. Your first box is $29.99
+                          with the text sign-up discount, then $49.99
+                          every 4 weeks.
+    Headline under image: 6 g of prebiotic fiber per pack (31)
+    Description:          From $29.99 with text sign-up (29)
+    Button:               Shop now
 
     NOTE
-    Buyer knows: the problem, not Sprout. Both versions keep the same
-    picture, product, offer and argument; only the framing changes.
+    Code:        In use · Camera · New (worked out from the picture)
+    Buyer knows: new. Knows the problem, not Sprout, so the situation
+                 comes first and the product second.
+    Version 2's phrase comes from review 6: "not having to clean a
+    shaker bottle". Both versions keep the same picture, product,
+    offer and point. Only the appeal changes.
+    First line: an In use ad says when and where, so both open on
+    breakfast at the counter (68 characters, under 125).
     Left out: "Fix the Hot Girl Tummy" ("fix" goes past "supports"), and
-    one buyer's before-and-after review, which isn't a promise.
+    the reviews that describe personal results, which aren't a promise.
     MISSING: grams of sugar in Low Sugar.
 
 tweaks:
   - what: How much the buyer knows
-    how: Moves every field. An unaware buyer gets a scene they recognise; a ready buyer gets the offer terms and the action.
-  - what: The framings
-    how: Name the ones you want to test, such as "a supported benefit and a call-out by habit". When testing headlines only, it keeps the product, offer and argument the same.
-  - what: Long story
-    how: Say "long story allowed" to get a story in the main text that opens on the picture's moment and earns "See more".
+    how: Moves every field. A stranger gets their situation first. A ready buyer gets the offer terms and the action.
+  - what: The appeals
+    how: Name the ones you want, such as "news and their words". When testing words only, it keeps the product, offer and point the same.
+  - what: The ad type
+    how: Give the type if you know it. A review ad opens on who said it, a stat ad on what the number counts.
   - what: Who speaks
-    how: Without a real, sourced testimonial, it writes as the brand or in "If your morning starts with..." form. Paste a real quote with its source to use a customer's words.
+    how: Without a real, sourced quote, it writes as the brand or in "If your morning starts with..." form. Paste a real quote with its source to use a customer's words.
 
 judge:
-  - The image headline and the picture make the same argument.
-  - The main text doesn't repeat the image words word for word.
+  - The image headline and the picture make the same point, in 7 words or fewer.
+  - The main text doesn't repeat the image words.
   - Every number, offer term and condition matches your proof and terms.
   - No customer story, quote or guarantee appears that you didn't supply.
-  - The versions differ in framing, not just in wording.
+  - The versions differ in appeal, not just in wording.
 
 test:
-  - Run it on a picture you've already run with words that worked. Compare its fields with yours. Each version should make one argument with the picture, as yours did.
-  - Run it twice with the same picture. The framing for each version should stay the same.
+  - Run it on a picture you've already run with words that worked. Each version should make one point with the picture, as yours did.
+  - Run it twice with the same picture. The appeal for each version should stay the same.
   - Cover the image and read the main text. It shouldn't repeat the words on the image.
   - Check every number, offer term and condition against your offer.
   - Test one of its versions against your current ad, with the same picture.
 
 improve:
-  - Write your field limits into "What you need" in the skill file (for example "headline under 40 characters").
-  - Paste your exact offer terms and required conditions into "Evidence and offer", so step 4 keeps them.
-  - Add the framings you want tested by default to step 3.
-  - Save each winning version and its framing to your brand file.
-  - Plan the picture first with a skill that picks image ad ideas, then pair this with "Get headlines a stranger understands at a glance" for more headlines to test.
+  - Write your field limits into "What you need" in the skill file, for example "headline under the image, 30 characters".
+  - Paste your exact offer terms and conditions into "Proof and offer", so step 5 keeps them.
+  - Add the appeals you want tested by default to step 4.
+  - Save each winning version and its appeal to your brand file.
+  - Plan the picture first with a skill that picks the right layout, then pair this with "Get headlines a stranger understands at a glance" for more headlines to test.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Writing to field limits from your proof works well in any strong chat AI."}
+    - {name: "Meta Ads Manager", why: "Its ad preview shows where the main text and headline get cut off on each placement."}
+  inputs:
+    - "Five to ten reviews in your buyers' own words, so the their-words version has real phrases to use"
+    - "Headlines that won before, with their results, so it knows what your buyers answer to"
+    - "A screenshot of the finished image, so the words fit the space that's really there"
 
 terms:
   - term: Main text
     meaning: The words above the image in a Facebook or Instagram ad. Long ones are cut off with "See more".
   - term: Headline under the image
-    meaning: The bold line under a Facebook image ad, usually about 40 characters.
-  - term: Framing
-    meaning: The angle a version takes on the same picture and offer, such as a benefit or a question.
+    meaning: The bold line under a Facebook image ad. Some placements cut it short.
+  - term: Appeal
+    meaning: What a headline leans on to get read, such as what you get, what's new, or curiosity.
+  - term: Ad type
+    meaning: One of nine kinds of image ad on the shared map, such as In use or Their words.

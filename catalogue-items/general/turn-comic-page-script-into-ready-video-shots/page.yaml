@@ -1,197 +1,186 @@
 new_slug: turn-comic-page-script-into-ready-video-shots
 name: "Turn your comic ad script into video clips"
-summary: "Give it your comic script and product photo. You get image and clip prompts for each page, with clean lettering."
+summary: "Give it your comic script and product photo. You get a full-screen panel-by-panel video plan, with prompts and clean lettering."
 job: make-video-ads
 
 headline: "Turn your comic ad script into video clips"
-subhead: Give it a comic ad script and a photo of your product. It plans each page, fixes the look of the desk, the ink and the drawn person, then writes stills to approve and one clip per page, ending on your real product.
+subhead: Give it a comic ad script and a photo of your product. Each panel becomes one full-screen shot, and each cut gets a named comic transition. You get a panel list, panel stills and one clip per panel, ending on a photo panel of your real product.
 
 explain: |
-  A comic page lying on an artist's desk, filmed from above, with a little movement in the ink and a hand turning the page. People stop for it. But AI video tools ruin it in predictable ways. They draw letters as scribble, turn the flat ink into 3D, change the drawn person between pages, and redraw your label.
+  Comics are built for phones. One panel at a time, read top to bottom, with the story jumping forward in the gap between panels. AI video tools spoil the look in familiar ways. They draw letters as scribble, puff flat ink into 3D, change the hero between shots, and redraw your label.
 
-  This skill writes prompts that avoid those failures. The desk, paper, hand and product are always a photograph; inside the panels is always flat ink. Caption boxes stay empty, so you add the real words in editing. The accent colour stays out of the ink until your product arrives in the story. Each page is one clip with one small movement and one page turn, and the ad ends on your real product standing on the same desk.
+  This skill turns each panel into one vertical shot and treats the cut as the gap between comic panels. Every cut is named for what it does (the next step of an action, a jump to a new subject, a jump in time, or one moment slowed down for the reveal). The hero is drawn simple, so viewers see themselves in them, and the product is drawn exactly from its photo with no letters. Each panel moves in one small way, by splitting into flat layers, moving one part or panning down. Captions go in during editing, and the last panel is your real product photo, framed like a panel.
 
 when:
   - You have a comic ad script and need prompts for an AI image and video tool.
   - Earlier attempts gave you garbled lettering or a product with a made-up label.
-  - You want a handmade look that tells a short problem-and-fix story in 15 to 30 seconds.
+  - You want a short, handmade-looking problem-and-fix story for vertical video.
 
 you_give:
-  - The comic script, with its one claim and short narration
-  - A photo of your product, how it's used, and how it works
-  - Your colours, typeface and desk setting (optional)
+  - The comic script, with its panels, captions and narration
+  - A photo of your product, how it's used, and the one claim
+  - Your colours and lettering typeface (optional)
   - The clip lengths your video tool accepts (optional)
 you_get:
-  - A page plan table of panels, lettering, narration and what moves
-  - Fixed lines for the desk and ink, the drawn person and the accent colour
-  - Still prompts per page and one clip prompt per page
-  - Editing notes for captions, narration and music
+  - A panel list with a named transition into every panel
+  - Fixed lines for the ink, the hero, the product and the palette
+  - A still prompt and a clip prompt for each panel
+  - Edit notes for captions, narration, sound and the final photo panel
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Paste your comic script underneath, then attach or describe your product photo.
+  - Paste your comic script underneath, then attach your product photo.
   - Add how the product is used and the one claim the comic acts out.
-  - Agree the page plan table before asking for prompts.
-  - Make and check the stills, then make one clip per page from them.
-  - Add captions and narration in your editor last.
+  - Agree the panel list before asking for prompts.
+  - Make the hero still and the panel stills, compare them, then make one clip per panel.
+  - Add captions, narration and the photo panel in your editor last.
 
 how_it_works:
   - title: Checks it fits
-    text: Suits a short problem story or a drawable explanation. It says so if your product is sold on how it looks in use.
-  - title: Protects four things
-    text: The photographed desk, the panels, the page turn and the real product at the end. Any idea that risks one gets simpler.
-  - title: Plans the pages
-    text: One page per clip, two panels a page. Problem, how it works, then the same panels changed.
-  - title: Keeps drawings honest
-    text: The diagram shows only what the brand states. The drawn person is a fictional adult who claims nothing.
-  - title: Writes the look
-    text: Photo desk, flat ink, one accent colour held back until the product appears, the drawn product with no printing.
-  - title: Sets camera and sound
-    text: Straight down, one small ink movement per panel, one page turn, paper sounds only.
-  - title: Orders the work
-    text: Page plan first, then stills, then clips, then lettering and narration in editing.
+    text: Suits a short problem story or a drawable how-it-works. It says so if your product is judged by how it looks in use.
+  - title: Lists the panels
+    text: 5 to 8 panels, each with a named transition, and the reveal panel held longest.
+  - title: Keeps the hero simple
+    text: A few clear features in the same words every time, so viewers see themselves in the hero.
+  - title: Draws the product exact
+    text: Shape and colours from your photo, the brightest thing in its panels, with no drawn letters.
+  - title: Moves one thing per panel
+    text: Flat layers drifting apart, one moving part, or a pan down a tall panel. The ink stays flat.
+  - title: Letters in editing
+    text: Captions, narration and sound effects go in afterwards, and the last panel is your real product photo.
 
 output_shape: |
-  PAGE PLAN
-  Page | Panel | What's drawn | Lettering | Narration | What moves
-  1 | 1 | <who, where> | <empty box, caption added later> | "<8 words or fewer>" | <one small movement>
+  PANEL LIST
+  Panel | transition in | what's drawn | motion | caption (edit) | narration | s
+  1 | opens | <who, where> | <layers / one part / pan> | <6 words or fewer> | "<10 words or fewer>" | <n>
   ...
+  <last> | subject to subject | PHOTO PANEL (set in editing) | none | offer | none | <n>
 
   FIXED LINES
-  Desk and ink: <photo desk, flat 2D ink inside the panels>
-  Drawn person: <role, look, clothes, same every time>
-  Accent: <colour>, arrives on page <n>, panel <n>
+  Ink:     <line, fills, shadow, dots, palette>
+  Hero:    <simple features, same words every time>
+  Product: <shape and colours from the photo, no letters>
 
-  STILL PROMPTS
-  Page 1 (attach: <product photo> = <its job>): <prompt>
-  ...
+  PANEL <n> STILL  <prompt>  Attach: <photo> = <its job>
+  PANEL <n> CLIP   <length>, from still <n>: <one motion>. No words appear.
 
-  CLIP PROMPTS
-  Page 1: <shape, length, camera drift, one ink movement, page turn, sound, no words appear>
-  ...
-
-  EDITING NOTES
-  <captions per panel, narration, music start>
-  MISSING: <anything the plan needed>
+  EDIT NOTES
+  <captions, narration, sound, photo panel and offer>
+  MISSING: <...>
 
 example:
   business: sprout
   input: |
     [the skill]
 
-    Script (30 s, from "Get a comic page ad script that sells"):
+    Script (30 s, from "Get a comic page ad script that sells",
+    written for a page on a desk):
     Claim: "60+ ingredients, 21 vitamins & minerals, and 6g fiber" in
-    1 pack. Accent: forest green #00582D, arrives page 2 panel 2.
+    1 pack.
     P1 "Every morning, the same chalky glass." CHOKING ON POWDER AGAIN
     P2 "Then the shaker sits in the sink." THE SHAKER WINS AGAIN
     P3 "So the whole lot went in one pack." 60+ INGREDIENTS / 6G FIBER
     P4 "One small handful a day." RIP. TIP. ENJOY.
     P5 "Same kitchen. Nothing to rinse." NO SHAKER TO WASH
-    P6 (no narration) changed sink, out the door
-    Close: real pouch on the desk, offer text.
+    P6 (no narration) out the door
+    Close: real pouch, offer text.
 
     Product: Sprout pouch, photo attached (glossy deep green, big yellow
     wordmark, yellow bear face top right, "28 Daily Packs").
     Use: tear one daily pack straight across the top, tip into palm.
-    The big pouch opens only at its resealable top, never torn.
     Brand photos: bright, sunny, never clinical.
   output: |
-    PAGE PLAN
-    Page | Panel | What's drawn | Lettering | Narration | What moves
-    1 | 1 | Woman in a work blazer at a kitchen counter, shaker in
-        hand, face screwed up | CHOKING ON POWDER AGAIN | "Every
-        morning, the same chalky glass." | a lump slides down the glass
-    1 | 2 | Same woman and angle, shaker in the sink, tub at the back
-        of the shelf | THE SHAKER WINS AGAIN | "Then the shaker sits in
-        the sink." | a drip from the tap
-    2 | 1 | Cutaway of one daily pack, construction lines, pencil
-        shading, two empty tags | 60+ INGREDIENTS / 6G FIBER | "So the
-        whole lot went in one pack." | a line traces the top edge
-    2 | 2 | She tears a pack straight across the top, bears tip into
-        her palm; green arrives | RIP. TIP. ENJOY. | "One small handful
-        a day." | the last bear drops
-    3 | 1 | Page 1 panel 1, changed: counter clear, eating from her
-        palm | NO SHAKER TO WASH | "Same kitchen. Nothing to rinse." |
-        she pockets the empty pack
-    3 | 2 | Page 1 panel 2, changed: empty sink, keys in hand | - | - |
-        the door swings
+    Desk, hand and page turns dropped; the six panels and their
+    words kept.
+
+    PANEL LIST
+    1 | opens | the hero at the counter, glass of green sludge
+        raised, face screwed up | glass layer drifts forward | CHOKING
+        ON POWDER AGAIN | "Every morning, the same chalky glass." | 4
+    2 | action to action | same angle, the shaker dropped in the sink
+        | one drip from the tap | THE SHAKER WINS AGAIN | "Then the
+        shaker sits in the sink." | 4
+    3 | subject to subject | a clean cutaway of one daily pack, small
+        green bears inside | pan down the tall panel | 60+ INGREDIENTS /
+        6G FIBER | "So the whole lot went in one pack." | 5
+    4 | moment to moment | close on her hands tearing the pack across
+        the top, bears tipping into her palm | the tear, slowed | RIP.
+        TIP. ENJOY. | "One small handful a day." | 6
+    5 | action to action | the counter clear, she eats from her palm
+        | three layers drift apart | NO SHAKER TO WASH | "Same kitchen.
+        Nothing to rinse." | 4
+    6 | scene to scene | outside, she walks off down a sunny street,
+        keys swinging | keys swing | none | none | 3
+    7 | subject to subject | PHOTO PANEL: the real pouch photo in the
+        same border, set in editing | none | offer | none | 4
 
     FIXED LINES
-    Desk and ink: a real photographed artist's desk in bright morning
-      light, marker pens, graphite pencils, a steel ruler, a mug,
-      loose sketches; on it a printed comic page in flat 2D ink, bold
-      black outlines, flat colour, halftone dots, cream newsprint.
-    Drawn person: an adult woman with a dark ponytail, navy work
-      blazer, white top, drawn the same in every panel.
-    Accent: forest green #00582D, from page 2 panel 2 only. Before
-      that: black ink, grey-blue and pale khaki.
+    Ink:     bold even black line, flat fills, one shadow tone, light
+             halftone dots in shadows; palette black, cream, sky blue,
+             warm grey, and the product's deep green.
+    Hero:    an adult woman, round simple face, dark ponytail, navy
+             blazer over a white top, small gold hoop earrings.
+    Product: the daily pack as a small flat deep-green sachet with a
+             yellow edge, bears deep green; no letters.
 
-    STILL 1, PAGE 1 (attach: pouch photo = the real product on the
-    desk, copy exactly)
-    [Desk and ink line]. Seen straight down. The page has two panels,
-    one above the other, each with an empty caption box top left.
-    Panel 1: [drawn person] at a kitchen counter, shaker in hand,
-    face screwed up. Panel 2: same woman, same angle, shaker in the
-    sink. Black ink, grey-blue and pale khaki only. Beside the page,
-    the real Sprout pouch standing upright as in its photo. An
-    artist's hand rests on the lower page corner. No words appear.
+    PANEL 4 STILL  9:16. A thin black panel border with a cream gutter
+      at the screen edges. Inside: close on two hands tearing a
+      small flat deep-green sachet straight across its top, small
+      deep-green gummy bears tipping into the left palm. [Ink line].
+      The sachet is the most saturated thing in the frame. No words.
+      Attach: pouch front = the green and yellow colours only.
 
-    CLIP 1 (10 s, from Still 1 to Still 2)
-    0-4 s  camera drifts toward panel 1; the powder lump slides down
-           the inked glass.
-    4-7 s  drift to panel 2; one drip falls from the inked tap.
-    7-10 s the hand lifts the corner and lays the page over; page 2
-           lies flat beneath. Sound: room tone, a page snap. No words
-           appear; caption boxes stay empty; the pouch stays in frame.
+    PANEL 4 CLIP   6 s, from panel 4 still: the tear runs slowly
+      across the top, then the bears tip out. Ink stays flat 2D.
+      No words appear.
 
-    (cut for length: the full run also had Stills 2 and 3 on the same
-    desk, the last frame with the pouch centred, and Clips 2 and 3)
+    (cut for length: the full run also had the hero still and
+    stills and clips for panels 1 to 3, 5 and 6)
 
-    EDITING NOTES
-    - Captions: the six above, Work Sans bold capitals in the empty
-      boxes. Narration over each panel, none over a page turn.
-    - Final frame text: "$29.99 first order with text sign-up. Renews
+    EDIT NOTES
+    - Captions in Work Sans bold capitals, one box per panel, top left.
+    - Narration over panels 1 to 5; panels 6 and 7 silent.
+    - Sound: a glass clink, a drip, one tear, light music from panel 5.
+    - Photo panel text: "$29.99 first order with text sign-up. Renews
       at $49.99 every 4 weeks."
-    - Music: none in the clips; if used, bring it in on page 3.
-    - The pouch on the desk stays closed. Only the drawn pack is torn.
-
-    MISSING: a photo of a single daily pack, so the inked pack shape
-    in page 2 matches the real one.
+    MISSING: a photo of a single daily pack, so the drawn sachet in
+    panels 3 and 4 matches the real one.
 
 tweaks:
-  - what: Number of pages
-    how: Three pages for a full story. Two if you have no drawable explanation of how it works. One for a quick problem-then-product cut.
-  - what: The desk
-    how: Describe the desk your brand would own (a kitchen table, a workshop bench). The surface and light follow it, the ink stays the same.
-  - what: Fancier moves
-    how: Ask for a desk sweep or a push through the last panel only after the plain version works. It will plan them from approved first and last stills.
-  - what: Music
-    how: Say whether your brand uses music. If yes, it marks where to bring it in (on the turn page) for you to add in editing.
+  - what: Number of panels
+    how: Five panels for a quick 20-second cut, up to eight for a fuller story. The reveal panel always stays longest.
+  - what: Transitions
+    how: Ask for a slower, moodier open and it adds one "details of a place" transition at the start. It never stacks two.
+  - what: Motion
+    how: Say "layers only" for the calmest look, or allow one moving part per panel for more life.
+  - what: The palette
+    how: Give your brand colours. The ink keeps black plus 3 or 4 flat colours, and your product stays the brightest.
 
 judge:
-  - Every caption box in the prompts is empty. No prompt asks the tool to write words.
-  - The accent colour only shows up from the panel where the product arrives.
-  - The drawn person is described in the same words in every prompt.
-  - The real product is on the desk from the first frame of every clip.
-  - Each clip has one ink movement and one page turn, nothing more.
+  - Every panel has a named transition, and the reveal panel is the longest.
+  - The hero line is the same, word for word, in every prompt.
+  - No prompt asks the tool to draw words or numbers.
+  - Each clip has one kind of motion, and the ink stays flat.
+  - The last panel is your real product photo, set in editing.
 
 test:
-  - Search every prompt for words the tool would have to write. Caption boxes should be empty, with the lettering only in the editing notes.
-  - Make the stills for the first and last page. The accent colour should be missing from the first and present from the panel where the product arrives.
-  - Run it twice on the same script and compare the drawn person line. It should be word for word the same in every prompt.
-  - Make one clip. It should have one ink movement and one page turn, with your product on the desk from the first frame.
+  - Read the transition column. Most should be "action to action" or "subject to subject", with one slowed reveal.
+  - Make the hero still and three panel stills. The hero should look the same in each.
+  - Search every prompt for words the tool would have to write. There should be none.
+  - Make one clip. It should have one motion and flat ink, with no drift toward 3D.
 
 improve:
-  - Write your desk, paper and accent colour into the fixed lines in step 5 of the skill file, so every comic ad in a series sits on the same desk.
-  - Add your product's never-show rules to the Avoid list, so the product on the desk is always shown your way.
-  - If you use your own music, say where it starts in step 8, so the paper sounds stay clean under it.
-  - Save the approved desk still and the drawn person line to your brand file for the next ad.
-  - Pair it with the skill that writes the comic page script, so the claim and panels are settled first.
+  - Write your ink line and palette into step 4 of the skill file, so every comic ad in a series looks the same.
+  - Add your product's never-show rules to the Avoid list.
+  - Save the approved hero line and hero still in your brand file for the next ad.
+  - Pair it with the skill that writes the comic script, so the claim and panels are settled first.
 
 terms:
-  - term: Still
-    meaning: A single image made first, so you can approve the look before paying for video.
-  - term: Accent colour
-    meaning: The one bright colour on the page, saved for the product.
-  - term: Cross-section
-    meaning: A drawing of something sliced open, so you can see its layers or parts inside.
+  - term: Panel transition
+    meaning: What changes between two comic panels, such as the next step of an action or a jump in time.
+  - term: Gutter
+    meaning: The gap between comic panels, where the reader fills in what happened.
+  - term: Photo panel
+    meaning: Your real product photo framed like a comic panel, added in editing.
+  - term: Cutaway
+    meaning: A drawing of something with part removed, so you can see inside.

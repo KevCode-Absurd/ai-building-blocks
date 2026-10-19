@@ -1,62 +1,59 @@
-# Opener shapes
+# Five moves for an opening
 
-Format: shape | stage (any = none) | needs. Brackets are blanks to fill from the buyer read and facts, only if true. "RP" = real person must say it. "RPF" = real proof figure needed.
+Every opening makes one move. The forms under each move are starting points. Rewrite each in the buyer's words; never fill a bracket with something you can't back.
 
-## Name the behaviour or situation
-- If you [do the thing they quietly do], this is for you. | problem | none
-- Planning [event]? Here is what is easy to miss about [topic]. | any | none
-- You are three weeks into [change]. This part is rarely mentioned. | problem | none
+## Which moves fit which buyer
 
-## Name the pain
-- You have tried [fix A] and [fix B] and [problem] is still there. | solution | none
-- Another [time unit] of [frustration]? | problem | none
-- I spent [amount] on [category] before I stopped. | solution | RP, RPF
+| How aware the buyer is | Lead with | Also fits |
+|---|---|---|
+| Unaware | Mirror | Gap |
+| Problem aware | Mirror, Gap | Flip |
+| Solution aware (comparing) | Gap, Flip | Mirror, Promise, Proof |
+| Product aware | Proof, Promise | Flip |
+| Most aware | Proof | Timing (only with a real date) |
 
-## Name how they see themselves
-- If you are someone who [habit or value]... | any | none
-- For people who will not settle for [inferior option]... | solution | none
-- Short on time and done with [inconvenience]? | problem | none
+## 1. Mirror: the viewer sees themselves
+They stop because the line describes their day before it mentions you.
+- **The clock:** a time and what's going wrong at it. "7:40, keys in hand, and the vitamins are still on the counter."
+- **The object:** something they own that proves the problem. "If there's a half-full tub at the back of your cupboard..."
+- **Their sentence:** a thing they've said to themselves, taken from reviews. Said as a thought, never as a quote from a person who doesn't exist.
+Needs: buyer notes with real moments and objects.
 
-## Name the moment
-- It starts the day [trigger moment] happens. | problem | none
-- The third [morning/night/week] of [recurring annoyance]. | problem | none
-- You are standing at [place] with [object] and [it has failed again]. | problem | none
+## 2. Gap: a question the ad will answer
+Curiosity needs a gap the viewer believes will close soon. Write the closing line from the body next to every gap opening.
+- **The why:** why something they've noticed happens. "Why does the greens tub always end up at the back of the cupboard?" (only if the body answers it)
+- **The doubt, asked:** the buyer's own doubt as a question, answered by a fact in the body. "How much fits in one small pack of gummies?"
+- **The hidden step:** a part of making or using it they never see.
+- **The second thing:** "Two things to check before you buy [kind of product]. The second one matters more." The body must give both.
+Needs: a body line that closes it.
 
-## The doubter turned
-- I assumed [claim] was marketing. Then I [saw/did one specific thing]. | solution | RP
-- I almost did not order this. Here is what changed my mind. | product | RP
-- My [relative/friend] told me to try it; I rolled my eyes. | solution | RP
+## 3. Promise: what they get, or what they'll see
+Says the gain or announces the content, so the right viewer knows to stay.
+- **The gain in their terms:** "Your greens, done in the car." The gain must be one the product really gives.
+- **The preview:** "Here's a whole day of greens, start to finish." The video must show it.
+Needs: a gain or a demonstration the ad delivers.
 
-## The maker speaks (see founder openings)
-- I make this, so here is the part I would want to know as a buyer. | product | RP
-- We threw away [number] batches before this one. | product | RP, RPF
+## 4. Proof: a fact or a real voice first
+Leads with something the viewer could check.
+- **The number:** a fact on file with its source. "Blood vitamin C up 40.1% in Sprout's 12-week study."
+- **The real line:** a review quoted exactly, shown on screen, with where it came from.
+- **The live test:** something done in frame, from start to end, without a cut.
+Needs: the fact, the review or the footage.
 
-## Question
-- When did [normal thing] get so complicated? | problem | none
-- What if [belief that holds them back] is not true? | solution | none
-- Why does [common problem] happen right after [common fix]? | solution | none
+## 5. Flip: a belief turned over
+Names what the buyer believes, then gives the fact that changes it.
+- **The usual advice:** "Everyone says pick the longest ingredient list. Start with the one you'll keep taking." Needs a fact or a buyer truth behind the turn.
+- **Off the hook:** takes the blame off the buyer. "Maybe you're not bad at supplements. Maybe the powder is."
+Needs: a fact or a buyer truth that backs the turn. Never a claim about a named rival.
 
-## Against the usual
-- Stop [common habit]. It is working against you. | solution | none
-- [Popular advice] is the wrong place to start. | solution | none
-- Everyone says [advice]. Almost nobody checks [fact]. | solution | none
+## Add-on: Timing
+Only with a real date or offer, quoted exactly. A season, a restock, an offer that ends. Never invent urgency.
 
-## An unknown fact
-- [Number or fact] is how long/much [thing] really [does]. | solution | RPF
-- Nobody mentions that [true detail about how it works]. | solution | none
+## Who may say what
 
-## Number or proof first
-- [Count] people reordered this month. Here is the reason they give most. | product | RPF
-- [Result] in [period], shown here on camera. | product | RPF
-
-## Offer stated
-- [Offer in exact terms], through [real end date]. | most aware | none
-- Back in stock: [size/variant]. | most aware | none
-
-## Gifting and occasions
-- Gift for someone who has everything and [habit]: | gifting | none
-- Last [day count] to order for [occasion]. | season | none (date must be real)
-- Hard to buy for? Start with what they use [often/daily]. | gifting | none
-
-## Customer's words (real only)
-- "[Exact customer sentence]" - [name or descriptor, source]. | any | RP, real review
+| Speaker | Can use | Can't use |
+|---|---|---|
+| AI-made presenter or narrator | Any move in "you" or as an observer | "I tried it", "I was sceptical", any personal result |
+| Real customer, own footage | Any move, their own result | Claims the brand can't back |
+| Real founder, own footage | Any move, plus what only the maker knows: a choice made, a step kept, a thing refused | Results they didn't measure |
+| Real expert, own footage | Proof and Flip with a credential that can be checked | Anything outside their field |

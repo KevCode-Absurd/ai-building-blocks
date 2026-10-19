@@ -251,6 +251,14 @@ code { font: 400 0.88em var(--mono); background: var(--raise); border-radius: 4p
 .plain-list li { margin-bottom: 10px; }
 .terms { margin-top: 56px; padding: 20px 24px !important; border: 1px solid var(--line); border-radius: 8px; background: var(--panel-2); }
 .terms dl { margin: 0; }
+.credits { margin-top: 16px; }
+.best-tools { margin: 0 0 20px; }
+.best-tools div { display: grid; grid-template-columns: 170px minmax(0, 1fr); gap: 16px; padding: 8px 0; border-bottom: 1px solid var(--line); font-size: 15px; }
+.best-tools dt { font-weight: 600; }
+.best-tools dd { margin: 0; color: var(--text-2); }
+.best-h3 { font-size: 15px; margin: 0 0 8px; }
+@media (max-width: 640px) { .best-tools div { grid-template-columns: 1fr; gap: 2px; } }
+.credits li { font-size: 14.5px; }
 .terms dl div { display: grid; grid-template-columns: 170px minmax(0, 1fr); gap: 16px; padding: 7px 0; font-size: 14.5px; }
 .terms dt { font-weight: 600; }
 .terms dd { margin: 0; color: var(--text-2); }

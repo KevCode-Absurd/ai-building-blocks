@@ -1,8 +1,8 @@
 # Watercolour video shots: for online stores
 
-Extra things to give it: a pack-front photo, every label line with its colour, what it's made of (ingredients or materials), how it works, and anything that must never be shown.
+Give it as well: a clean front photo of the pack, its biggest label lines with their colours, the ingredient or material list, and anything that must never be shown.
 
-- A pigment trail from a painted ingredient (a lavender sprig) to the painted bottle works only when that ingredient is on your list. Never paint an ingredient you don't list.
-- Use the product illustration look for known products and launches, and botanical for plant-based or ingredient-led goods.
-- A painted scent or warmth is a metaphor. Keep it plainly one and claim no effect.
-- The offer and price are on-screen text after the held last frame, from the current offer.
+- Make the painted pack first and hold it next to the real one. If a label line is wrong, plan to overlay the real label in editing rather than prompting it again and again.
+- Ingredient shapes come only from your list. A glaze or a charge of colour can stand for an ingredient; it never shows what happens inside a body.
+- Shelf products with a busy label: paint the pack smaller in the scene and save the large product shot for a held frame with the real label laid over it.
+- Price and offer go on as on-screen text after the last clip, from the offer that is live that day.

@@ -1,76 +1,75 @@
 new_slug: turn-one-customer-quote-into-image-ads
 name: "Turn one customer quote into image ads"
-summary: "Give it a line from your reviews and a product photo. You get image ads built on their exact words."
+summary: "Give it review lines and a product photo. You get image ads built on their exact words."
 job: make-image-ads
 
 headline: "Turn one customer quote into image ads"
-subhead: Give it a phrase from your reviews and a real product photo. It picks a layout made to carry a quote, locks the words letter for letter, writes the text that runs with the ad, and flags any quote you shouldn't run yet.
+subhead: Give it phrases from your reviews and a real product photo. It sorts each quote by the job it does for a buyer, picks a layout that suits that job, locks the words letter for letter, and writes feed text inside Meta's recommended lengths.
 
 explain: |
-  A customer's own sentence often sells better than anything you could write, because it sounds like a person and not a brand. The trouble starts when it gets "tidied up". A writer smooths the grammar, an image tool swaps a word, and the quote is no longer something a customer said.
+  A customer's own sentence often sells better than anything you could write, because it sounds like a person. The trouble starts when it gets tidied up. A writer smooths the grammar, an image tool swaps a word, and the quote is no longer something a customer said.
 
-  This skill protects the quote. It chooses from seven layouts that are made to carry a quote, such as a quote card, a taped handwritten note or your own product page line crossed out with the customer's line beneath. The phrase is the biggest text on the image and stays exactly as written, typos included. Then it writes the headline, main text and description that run with the ad, and lists anything that blocks the quote from running, such as a review not marked as a verified buyer.
+  This skill protects the quote and puts it to work. It sorts each one by the job it does for someone deciding to switch: it names the old struggle, says what's better, answers a worry, or shows the product fitting the day. Each job gets its own layout, such as a big quote card or a worry with the customer's reply under it. The phrase stays exactly as written. Then it writes a 27-character headline, a short and a long main text to test, and flags any quote that shouldn't run yet.
 
 when:
   - Your reviews have a line that says it better than your own ads do.
   - You want to test which reason to buy works, using customers' words instead of yours.
-  - You need several image ads quickly and want each one to start from a different customer.
+  - You have a review that admits a doubt and then answers it, and want to use it honestly.
 
 you_give:
-  - One reason to buy, the customer phrase you picked, and the review it came from
-  - Two or three backup quotes from other customers, and the doubts buyers raise
+  - One reason to buy, the customer phrases you picked, and the reviews they came from
+  - A backup quote or two from other customers, and the doubts buyers raise
   - A real photo of your product
-  - Your colours, fonts and voice (optional)
-  - How many ads you want, from 1 to 7 (optional)
+  - Whether each reviewer is a verified buyer or got the product free (optional)
+  - How many ads you want, from 1 to 4 (optional)
 you_get:
-  - A short brief for each ad, with the layout, the locked phrase and the scene
-  - The headline, main text and description for each ad
+  - A brief for each ad, with its job, layout, locked phrase and scene
+  - A headline, a short and a long main text, and an optional description for each ad
   - A record of any quote that was shortened, and why
   - Flags for quotes that need checking before they run as paid ads
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste the reviews you want to use, each with a number or name so the source is clear.
-  - Say which reason to buy the set is about, and which phrase to build on. One reason per set, so the test tells you something.
-  - Say how many ads, and which product photo the image tool should use.
-  - Read the flags first. A quote marked "check before paid use" should not run until you've confirmed it.
+  - Say which reason to buy the set is about. One reason per set, so the test tells you something.
+  - Say which product photos you have, and how many ads you want.
+  - Read the flags first. Don't run a quote marked "check before paid use" until you've confirmed it.
   - After you make each image, read the words on it at full size and compare them with the brief.
 
 how_it_works:
-  - title: Picks layouts for the quote
-    text: Matches each phrase to a layout made to carry it. A complaint suits a "don't buy this if" notice; a small win suits a quote card or a taped note.
+  - title: Sorts quotes by job
+    text: Each quote names the old struggle, says what's better, answers a doubt, or shows the product fitting the day.
+  - title: Picks a layout per job
+    text: A caption on the old way, a big quote card, a question and reply, or a routine shot of the product where it lives.
   - title: Keeps one reason per set
-    text: Every ad in the set argues the same reason to buy, and each one opens with a different customer.
+    text: Every ad argues the same reason to buy, and each one opens with a different customer.
+  - title: Keeps an honest doubt
+    text: Uses a review that admits a worry and then answers it, since a mix reads truer than perfection.
   - title: Locks the phrase
-    text: The quote is the biggest text on the image, exactly as written. If it must be shortened, it is cut at a whole word and the cut is recorded.
-  - title: Writes only the real name
-    text: Uses a first name only if the review has one, and never invents a name, city or star rating.
-  - title: Briefs each image
-    text: Writes the layout, the phrase with its source, the scene, the real product photo to use and the rule against rewording.
-  - title: Checks the finished image
-    text: Reads the words on the made image at full size, because image tools quietly change words.
+    text: The quote is the biggest text on the image, exactly as written. Any cut is at a whole word and recorded.
+  - title: Credits only what's real
+    text: A first name only if the review has one, and a note when a reviewer got the product free.
   - title: Writes the feed text
-    text: A headline from the quote, main text that mixes two more customer quotes with plain lines, and a short description that answers a doubt.
+    text: A headline of 27 characters or fewer, a short main text of 50 to 150 characters, and a longer one to test.
 
 output_shape: |
-  AD <n>  <layout>
+  AD <n>  <job> / <layout>
   Phrase (<review id>): "<the quote, exactly as written>"
-  <other words on the image, plainer than the quote>
+  Other words: <plainer than the quote, or none>
   Scene: <background, where the quote sits, the real product photo>
-  Rule: never reword, tidy or shorten the phrase
+  Rule: cut only at a whole word, never reword
 
   FEED TEXT, AD <n>
   Headline (<characters>): <the phrase cut at a whole word>
-  Main text (<word count>):
-  <who it's for> <quote> <plain line> <quote> <the win> <call to action>
-  Description (<characters>): <the doubt, answered>
+  Short (<characters>): <who it's for or the moment, then the quote>
+  Long (<words>): <one more buyer quoted, plain call to action>
+  Description (<characters>): <the doubt answered, or none>
 
   TRIM RECORD
   <what was cut, where, and why>
 
   FLAGS
-  MISSING: <verified status, source, names>
-  <anything to check on the finished image>
+  <verified status, free product status, claims inside quotes>
 
 example:
   business: sprout
@@ -78,117 +77,110 @@ example:
     [the skill]
 
     Reason to buy: finally a supplement I stick with.
-    Main phrases:
-    - Review 1 (brand site): "[Sprout] has been the one thing I've
+    Phrases:
+    - Review 1 (brand site): "...[Sprout] has been the one thing I've
       been able to stick to."
-    - Review 2 (brand site): "It's wild I WANT to take [Sprout] and
-      don't forget."
+    - Review 18 (retailer): "I thought the first pack I tried tasted
+      terrible, but after the third day they started tasting better"
     - Review 5 (brand site): "I just take these now and it's easier
       for me to manage."
-    Backup quotes: review 3 "the drink was definitely gritty/chalky",
-    review 6 "not having to clean a shaker bottle or extra dishes".
-    Doubts: "A gummy can't hold enough to replace my powder."
-    Product photo: the deep green adult pouch, one daily pack torn
-    across the top.
-    Our product page line: "A habit that tastes so good, you'll
-    actually want to keep it."
-    Number of ads: 3
+    Backup: review 6 "not having to clean a shaker bottle or extra
+    dishes". Doubt: "A gummy can't hold enough to replace my powder."
+    Photos: the deep green pouch; one daily pack torn across the top,
+    gummies pouring into a palm.
+    Verified and free-product status: not on file. Number of ads: 3
   output: |
     ([Sprout] is the swapped brand name in the review file. On the ad
     it reads as the brand name; every other letter stays.)
 
-    AD 1  Crossed-out line
-    Phrase (review 1): "Sprout has been the one thing I've been able
-                        to stick to."
-    Struck line: "A habit that tastes so good, you'll actually want to
-                 keep it." (our own product page)
-    Small text: their words, not ours
-    Scene: warm cream background, struck line small at top, the
-           review line large below, the real green pouch small in the
-           corner with one pack torn straight across the top
-    Rule: never reword, tidy or shorten the phrase
+    AD 1  Pull / big quote card
+    Phrase (review 1): "Sprout has been the one thing I've been able to
+                        stick to."
+    Other words: none
+    Scene: warm cream background, the quote very large, the torn pack
+           photo small at bottom right
 
-    AD 2  Quote card
-    Phrase (review 2): "It's wild I WANT to take Sprout and don't
-                        forget."
-    "WANT" stays in capitals, as written. No name: the review has none.
+    AD 2  Doubt / question and reply
+    Phrase (review 18): "I thought the first pack I tried tasted
+                         terrible, but after the third day they started
+                         tasting better"
+    Other words: "What if I don't like the taste?" in plain small type
+    Scene: the question at top, the reply below in larger type, the
+           gummies-in-palm photo at the foot
 
-    AD 3  Taped note
+    AD 3  Habit / routine shot
     Phrase (review 5): "I just take these now and it's easier for me
                         to manage."
-    Scene: the phrase handwritten on paper, taped over the real photo
-           of gummies pouring from a torn pack into a palm
+    Scene: an open handbag on a desk with the torn pack inside, built
+           from the torn-pack photo; the quote as one line across the top
 
     FEED TEXT, AD 1
-    Headline (40 chars): the one thing I've been able to stick to
-    Main text (93 words):
-    For anyone with a half-used tub of greens powder in the cupboard.
-    One buyer quit hers because "the drink was definitely
-    gritty/chalky." Sprout is a small pack of green gummy bears you
+    Headline (40): the one thing I've been able to stick to
+    Short (106): Tried greens before and quit? One buyer wrote: "Sprout
+    has been the one thing I've been able to stick to."
+    Long (80): For anyone with a half-used tub of greens powder in the
+    cupboard. One buyer wrote that Sprout "has been the one thing I've
+    been able to stick to." It's a small pack of green gummy bears you
     tear open and eat, with no water and no shaker. Another buyer's
     favourite part: "not having to clean a shaker bottle or extra
     dishes." Each pack holds 60+ ingredients, 21 vitamins and minerals
-    and 6 g of prebiotic fiber. In a brand survey, 80% of surveyed
-    users take it daily. Your first box comes with a 30-day money-back
-    guarantee. Shop Sprout.
-    Description (29 chars): 6 g fiber in every daily pack
-    (answers "a gummy can't hold enough")
+    and 6 g of prebiotic fiber. Start your first box.
+    Description (23): 6 g fiber in every pack
 
     HEADLINES, ADS 2 AND 3
-    Ad 2 (31 chars): It's wild I WANT to take Sprout
-    Ad 3 (21 chars): I just take these now
+    Ad 2 (19): after the third day
+    Ad 3 (21): I just take these now
 
     TRIM RECORD
-    Ad 1 headline drops "Sprout has been" from the front; the image
-    keeps the full phrase.
-    Ad 2 headline cut after "Sprout". Ad 3 headline cut after "now".
-    Review 3 quoted from "the drink" on, so the powder brand it names
-    never appears. Review 6 cut after "dishes", before its
-    exclamation mark.
+    Ad 1 headline drops "Sprout has been" and runs 40 characters, past
+    the 27 Meta suggests. No shorter whole cut keeps the point. It may
+    be cut off on some placements.
+    Ad 2 short text would quote from "tasted terrible" on; the image
+    keeps the full line.
 
     FLAGS
-    MISSING: verified-buyer status for reviews 1, 2, 3, 5 and 6. All
-    are from the brand site, picked by the brand. Check before paid use.
-    The guarantee covers the first order only. The main text says
-    "first box", so it stays true.
-    After making each image, read the quote letter by letter at full
-    size against this brief.
+    MISSING: verified-buyer and free-product status for reviews 1, 5,
+    6 and 18. Reviews 1, 5 and 6 come from the brand's own picks.
+    Check before paid use.
+    Ad 2's question is ours, taken from the taste notes in the brand
+    file, not from a review.
+    Read each quote letter by letter at full size on the made image.
 
 tweaks:
   - what: The reason to buy
-    how: Change it and every layout and quote changes with it. Keep one reason per set, or a winning ad won't tell you which reason worked.
-  - what: The phrase
-    how: Pick lines with a specific detail ("not having to clean a shaker bottle") over general praise ("love it"). Specific lines make better headlines and survive the 40-character limit.
+    how: Change it and every quote and layout changes with it. Keep one reason per set, or a winning ad won't tell you which reason worked.
+  - what: The quotes you pick
+    how: Pick lines with a specific detail ("not having to clean a shaker bottle") over general praise ("love it"). Specific lines make better headlines and fit the 27-character limit more often.
+  - what: An honest doubt
+    how: Give it a review that admits a worry and answers it, such as a taste that grew on someone. It becomes the question-and-reply ad, often the most believable of the set.
   - what: The number of ads
-    how: Ask for 3 to start. More ads need more customers, because six ads in one person's voice count as one ad.
-  - what: Your own page line
-    how: Paste the product page sentence closest to the customer's phrase. It becomes the struck-out line in the crossed-out layout, which works best when your line is vague and theirs is specific.
+    how: Ask for up to 4, one per job. More ads need more customers, because several ads in one voice teach you what one would.
 
 judge:
   - Put the quote on the image next to the review. Every letter should match, or the cut should be recorded.
-  - The headline is the quote cut at a whole word, 40 characters or fewer, never reworded.
-  - The main text has at least two other customers in quotation marks, and never three quotes in a row.
-  - The description answers a doubt and has no discount in it.
+  - Each ad uses a different customer, and the set argues one reason to buy.
+  - Headlines are 27 characters or fewer, or the trim record says why not.
+  - The short main text is 50 to 150 characters and lands the quote's point.
   - No invented name, city, star rating or face sits beside a quote.
-  - Any review not marked as a verified buyer is flagged before paid use.
+  - Unverified and free-product reviews are flagged before paid use.
 
 test:
-  - Run it on a quote you've already used in an ad that worked. Compare its headline and layout with what you ran; if it picks a weaker cut of the quote, tell it which words carry the point.
-  - Run it twice with the same phrases. The quotes on the images must be identical both times. If a single letter changes, the skill isn't locking the phrase and you shouldn't trust it yet.
+  - Run it on a quote you've already used in an ad that worked. Compare its headline cut with what you ran; if it picks a weaker cut, tell it which words carry the point.
+  - Run it twice with the same phrases. The quotes on the images must be identical both times.
   - Paste in a quote with a typo or odd capitals on purpose. The brief should keep them exactly as written.
-  - Put its main text next to your current best ad text and read both aloud. Its own sentences should be plainer than the quotes; if yours sound better than the customers', ask for a rewrite with fewer of its own words.
+  - Run the short and the long main text against each other on the same image. Keep the one that brings more buyers to the page.
 
 improve:
-  - Paste your brand's nearest product page lines into "What you need" as a fixed list, so the crossed-out layout always strikes a real line of yours.
-  - Delete the layouts in step 1 you never want (for example the poll sticker if you don't run stories), so it only picks from ones you'll make.
-  - Add your guarantee and offer terms to step 7, so the main text closes on words your legal check already approved.
-  - Save every phrase that wins in your brand file with its review id and verified status, and paste that list as the main phrases next time.
-  - Pair it with a skill that sorts your reviews into reasons to buy first, and with one that checks finished image ads for errors before launch.
+  - Add each review's verified and free-product status to your review export, so the flags clear themselves.
+  - Delete the layouts you never want (for example the routine shot if you have no lifestyle photos).
+  - Add your guarantee and offer terms to step 8, so the long text closes on words your legal check already approved.
+  - Save every phrase that wins in your brand file with its review id, and paste that list as the phrases next time.
+  - Pair it with a skill that sorts your reviews into reasons to buy first, and one that checks finished ads before launch.
 
 terms:
   - term: Main text
     meaning: The words above the image in a Facebook or Instagram ad.
   - term: Verified buyer
     meaning: A review your store or review app has confirmed came from someone who bought the product.
-  - term: Feed text
-    meaning: The headline, main text and description that run with the image in the feed.
+  - term: Push, pull, doubt, habit
+    meaning: What moves people to switch (the old way's problems, the new way's appeal) and what holds them back (worries and old routines).

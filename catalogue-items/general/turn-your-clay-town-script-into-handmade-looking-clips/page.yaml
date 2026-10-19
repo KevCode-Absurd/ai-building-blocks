@@ -4,174 +4,185 @@ summary: "Give it your script and product photo. You get image and clip prompts 
 job: make-video-ads
 
 headline: "Turn your clay-world script into video clips"
-subhead: Give it a narrated clay-world script and your product photo with its label lines. It picks one of four clay looks, writes fixed wording for it, describes each character in full, and hands back still prompts, clip prompts and clay transitions for your AI tools.
+subhead: Give it a narrated clay-town script and your product photo with its label lines. It writes a set bible like a stop-motion crew's, the reference images to make first, and still and clip prompts with one figure moving at a time.
 
 explain: |
-  AI tools can make convincing clay animation, but they slip out of it easily. A word like "glossy" turns the clay into smooth computer graphics, a wide shot makes faces stiff and doll-like, dusk light kills the handmade feel, and label text comes out reading "CLAY".
+  AI tools can make convincing clay animation, but they slip out of it easily. Faces drift between shots, a crowd turns to mush when everyone moves at once, water comes out photo-real, and the label on your clay pack reads as nonsense.
 
-  This skill keeps every frame looking like photographed clay. It writes one fixed look line, a cast template and a closing line, and pastes them unchanged into every prompt. Each character is described in full every time and made once as a picture to attach. The product is sculpted at its true shape under a real printed paper label with every word stated. Each clip carries a movement lock (stepped stop-motion, no motion blur) and one gesture, and scenes change with one named clay transition.
+  This skill plans the shoot the way a stop-motion crew does. It fixes four lines for every prompt: the set (scale, finish, model-maker stand-ins such as clear gel for water), the light, the palette and the lens. It has you make a lead sheet, a crowd sheet, empty sets and the clay product first, and builds every shot from those. Each clip is 2 to 5 seconds with one mover, stepped stop-motion timing for the figures and a smooth camera, the way studios shoot it. Scene changes are chosen on purpose: a cut, a match cut, one clay morph or a pass-by wipe.
 
 when:
-  - You have a narrated clay-world script and need prompts for an AI image and video tool.
-  - Your clay clips keep sliding into a smooth computer-graphics look.
+  - You have a narrated clay-town script and need prompts for an AI image and video tool.
+  - Your clay clips keep sliding into a smooth computer-graphics look, or the crowd falls apart.
   - Your clay product keeps getting the label wrong.
 
 you_give:
-  - The narrated script and list of scenes
+  - The narrated script with its shots, set card and cast sheet
   - A real product photo and every line of its label
   - How the product is used
-  - Your tone, colours and the buyer's moment from your brand file (optional)
-  - Your video tool's clip lengths (optional)
+  - Your brand colours and tone (optional)
+  - Your video tool's clip lengths and whether it takes a first and last frame (optional)
 you_get:
-  - A look pack with the fixed look line, cast template and closing line
-  - A cast sheet with one full description per character, and the product's size next to them
-  - Still prompts per scene and clip prompts with a movement lock
-  - Transition prompts between scenes
+  - A set bible with fixed set, light, palette and lens lines
+  - Reference prompts for the lead, the crowd, each empty set and the clay product
+  - Still prompts per shot and clip prompts with stop-motion timing and one mover
+  - Scene changes, including the frame pair for the one clay morph
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste the script, ideally from "Get a clay town ad script with a crowd".
   - Attach your product photo and type out every label line.
-  - Make each character's picture and each scene's still first, and approve them before making clips.
+  - Make the references first and approve them, then each still, then each clip.
   - Paste the fixed lines exactly as given. Don't shorten them to "same style as before".
 
 how_it_works:
-  - title: Makes everything clay
-    text: Making marks, matte plasticine, clay imitations of glass and liquid, real shadows and stepped movement.
-  - title: Picks one look
-    text: Refined, playful, minimal or puppet, written as fixed lines pasted into every prompt.
-  - title: Writes each character in full
-    text: Age, build, hair, clothes and the look's face recipe, every time, never shortened.
+  - title: Writes the set bible
+    text: Four fixed lines for the set, light, palette and lens, built from the script's set card and pasted into every prompt.
+  - title: Makes the references
+    text: A lead sheet, a crowd sheet of base figures, each place empty, and the clay product with its printed paper label.
   - title: Writes each still
-    text: Look line, scene, closing line, with feelings written as what the face does and bright warm light.
-  - title: Sculpts the product
-    text: True shape and colours under a real printed paper label, every line stated.
-  - title: Locks the movement
-    text: Every clip prompt carries the stop-motion lock and one gesture, and scenes change with one clay transition.
+    text: Camera, subject, action, place, then the fixed lines. The lead's full description goes in every shot they're in.
+  - title: Keeps one mover
+    text: Only the figure the script names moves. Everyone else holds or does one small repeat, like a blink.
+  - title: Writes short clips
+    text: 2 to 5 seconds, counted beats, stepped stop-motion timing for figures, a smooth camera and a hold line.
+  - title: Chooses scene changes
+    text: A cut by default, a match cut, a pass-by wipe, or one clay morph at the swap built from a first and last frame.
 
 output_shape: |
-  LOOK PACK
-  Look:          <refined / playful / minimal / puppet>
-  Look line:     <fixed, pasted into every prompt>
-  Cast template: <fixed>
-  Closing line:  <fixed, refined look only>
+  SET BIBLE
+  SET      <scale, finish, materials, stand-ins, photographed on a set>
+  LIGHT    <key and its direction, fill, any lamps in the set>
+  PALETTE  <3 to 5 colours>
+  LENS     <shallow focus, camera height inside the world>
 
-  CAST SHEET
-  <character>: <full description>   Product size: <next to them>
+  REFERENCES
+  Image <n> (<job>): <prompt>
 
-  STILL <scene>   [Look line] <scene> [Closing line]
-                  Attach: <image> = <job>
+  STILL <shot>  (attach: <image> = <job>)
+  <camera>, <figure, one held pose>, in <place>, <props>.
+  [SET] [LIGHT] [PALETTE] [LENS]
 
-  CLIP <n>        [Movement lock] <one gesture>. <one camera move>.
-                  Narration: "<line>". End frame: <...>
+  CLIP <shot>  <seconds>, start frame: still <shot>
+  [MOTION] Beat 1 <...>. Beat 2 <...>. Camera: <one instruction>.
+  [HOLD]
 
-  TRANSITION      <scene> > <scene>: <one clay action> + movement lock
+  SCENE CHANGE  <shot> > <shot>: <cut / match cut / morph / wipe>
+  MISSING: <anything the inputs didn't give>
 
 example:
   business: sprout
   input: |
     [the skill]
 
-    Script: the 9-line office-sink script from "Write a clay town
-    video ad script". Crafted look. Narrator only. Scenes: the sink
-    queue (lines 1 to 3), Dev's desk (lines 4 to 9). Line 4 is a
-    clay transition: the queue rolls into a ball and unfolds as the
-    desk.
+    Script: the 10-line office-sink script from "Get a clay town ad
+    script with a crowd". Places: the office kitchen (lines 1 to 4),
+    Dev's desk (lines 6 to 10). Line 5 is the morph: the shaker in
+    Dev's hand squashes into a flat daily pack.
+    Set card: figures a hand tall, chunky props, handled finish,
+    water as clear gel, soft morning key light from a window.
     Lead: Dev, a clay adult man, about 30, slim, warm brown clay
-    skin, short black clay hair with tool-line grooves, a mustard
-    knit jumper of real fabric, navy clay trousers.
+    skin, short black clay hair with comb grooves, a mustard knit
+    jumper of real fabric, navy clay trousers, a lanyard.
+    Crowd: four base figures (tall, short, round, slight).
     Photos: [pouch front] [daily pack in a hand]
     Pouch label: big yellow "Sprout" wordmark on deep green, yellow
     bear face top right, "28 Daily Packs" at the bottom.
     Daily pack label words: not captured.
-    Gummies: small opaque deep-green bears.
-    Tool: 10-second clips, one start image each.
+    Colours: forest green #00582D, warm cream #FFF7DF, sunflower
+    yellow #FFCC2E. Tool: 5-second clips, first and last frame: yes.
   output: |
-    LOOK PACK
-    Look: refined (the script's "crafted").
-    Look line: a handmade stop-motion clay miniature world, matte
-      plasticine with fine tool lines, dense set, warm earthy
-      palette with deep green accents, real cast shadows, macro lens
-      with a soft background, camera inside the world.
-    Cast template: a sculpted clay adult, <age>, <build>, <clay skin
-      colour>, <hair shape and colour with tool grooves>, <real
-      fabric clothes>, detailed sculpted eyes with clay lids.
-    Closing line: everything is clay and fabric, photographed on a
-      physical set.
+    SET BIBLE
+    SET      A handmade stop-motion miniature set, figures about a hand
+             tall, some thumbprints on matte modelling clay, felt and
+             real woven fabric, chunky oversized props, running water
+             as clear gel, photographed on a real tabletop set with a
+             macro lens.
+    LIGHT    One soft key light from a window on the left, a gentle
+             fill from the right, bright morning.
+    PALETTE  Forest green, warm cream, sunflower yellow, mustard, navy.
+    LENS     Shallow focus, subject sharp, background softly blurred,
+             camera inside the miniature world at clay chest height.
 
-    CAST SHEET
-    Dev: a sculpted clay adult man, about 30, slim, warm brown clay
-      skin, short black clay hair with tool-line grooves, a mustard
-      knit jumper of real fabric, navy clay trousers, detailed
-      sculpted eyes with clay lids.
-    Queue: six office workers, each a distinct sculpted clay face,
-      adults, real fabric office clothes.
-    Product size: the pouch is about the height of Dev's forearm;
-      a daily pack fits in his palm.
+    REFERENCES
+    Image 1 (Dev): Dev, a clay adult man, about 30, slim, warm brown
+      clay skin, short black clay hair with comb grooves, a mustard
+      knit jumper of real fabric, navy clay trousers, a lanyard. Front
+      and three-quarter views on a plain cream backdrop. [SET] [LIGHT]
+    Image 2 (crowd): four clay office workers side by side, one tall,
+      one short, one round, one slight, each a distinct sculpted face,
+      real fabric office clothes. [SET] [LIGHT]
+    Image 3 (kitchen): an empty clay office kitchen, one sink, a
+      counter, a plain clay clock with a blank face. [SET] [LIGHT] [LENS]
+    Image 4 (pouch): the Sprout pouch sculpted in clay at its true
+      shape, deep green, wrapped in a printed paper label reading
+      "Sprout" in big yellow letters, a yellow bear face top right,
+      "28 Daily Packs" at the bottom. [SET] [LIGHT]
 
-    STILL 1 (sink queue)  [Look line] A clay office kitchen in bright
-      warm morning light. A queue of six workers at a clay sink, each
-      a distinct sculpted clay face, each holding a clay shaker
-      bottle. A clay imitation of running water. Seen from clay-ankle
-      height. [Closing line]
-    STILL 3 (Dev, line 3)  [Look line] Tight medium on [Dev], fourth
-      in the queue, a clay shaker in his right hand. Inner brows
-      pushed up, mouth pulled flat. [Closing line]
-      Attach: Dev's picture = who he is.
-    STILL 6 (pouch, line 6)  [Look line] The clay pouch on Dev's clay
-      desk, sculpted from the attached photo, deep green, under a
-      real printed paper label reading "Sprout" with a yellow bear
-      face top right and "28 Daily Packs" at the bottom. [Closing line]
-      Attach: pouch front = shape, colours and label.
+    STILL 3  (attach: image 1 = Dev, image 3 = the kitchen)
+    Medium at clay chest height, Dev, a clay adult man, about 30,
+    slim, warm brown clay skin, short black clay hair with comb
+    grooves, a mustard knit jumper of real fabric, navy clay trousers,
+    a lanyard, slumped on the counter with elbows wide, eyes on the
+    blank clock, a clay shaker held low, in the kitchen, two soft
+    queue figures behind. [SET] [LIGHT] [PALETTE] [LENS]
 
-    CLIP 3 (line 3)  Handmade stop-motion clay throughout, slightly
-      stuttery rhythm, no motion blur, not computer graphics, not a
-      cartoon, movement starts on the first frame. Dev's shoulders
-      sink once. The camera holds. Narration: "Dev is fourth in line.
-      Again." End frame: Dev still in the queue, shoulders low.
+    CLIP 3  4.5 s, start frame: still 3
+    Stop-motion timing: the figures move in small stepped poses,
+    about 12 new poses a second, with a faint shimmer of fingerprints
+    between poses. The camera moves smoothly. Beat 1 Dev's eyes lift
+    to the clock. Beat 2 his shoulders sink. Beat 3 he holds. The
+    queue behind holds still. Camera: locked off.
+    HOLD: Same figures as the references. Every surface stays clay,
+    felt or fabric. Mouths stay still. Labels stay as printed.
 
-    TRANSITION queue > desk (line 4)  The whole queue scene rolls into
-      a clay ball and unfolds as Dev's desk; Dev stays as the shared
-      anchor and the queue does not return. [Movement lock]
+    SCENE CHANGE 4 > 5: morph, built as a frame pair.
+    First frame: close on Dev's clay hand holding the clay shaker.
+    Last frame: the same hand and camera, holding a flat clay daily
+    pack seen from its top edge, no label in view.
+    Clip prompt: the clay shaker squashes down and flattens into the
+    daily pack in a few stepped poses. [MOTION] [HOLD]
+    SCENE CHANGE 7 > 8: match cut. Dev at his desk on the same spot
+    in frame, the queue now soft behind him.
 
-    MISSING: the daily pack's label words. Show the pack side-on in
-    line 5 until they're supplied.
-    (cut for length: the full run also had stills and clips for
-    lines 1, 2, 5, 7, 8 and 9)
+    MISSING: the daily pack's label words. It is shown from its top
+    edge in shots 5 and 6 until they're supplied.
+    (cut for length: the full run also had set plate for the desk,
+    stills and clips for shots 1, 2, 4 and 6 to 10)
 
 tweaks:
-  - what: The look
-    how: Choose refined, playful, minimal or puppet. Each comes with its own fixed lines, palette and face recipe.
+  - what: The finish
+    how: Crisp gives fine tool lines for a premium feel. Handled adds some thumbprints. Rough gives big prints and lumpy shapes for a silly brand. The SET line changes with it.
   - what: The palette
-    how: Give your brand colours and it builds the set around them. Without them it proposes a palette and marks it "proposed".
-  - what: Transitions
-    how: Ask for a camera-led push or a clay move (melting, kneading, rolling into a ball). Each prompt names one action and nothing else.
-  - what: Shot types
-    how: Ask for crowd shots for an "everyone has this problem" opening, or clay-hands close-ups for the product moment.
+    how: Give your brand colours and the set is built around them. Without them it proposes three to five colours and marks them "proposed".
+  - what: Scene changes
+    how: Ask for a cut, a match cut or a pass-by wipe between shots. Keep the clay morph for the one moment that matters, usually when the product arrives.
+  - what: Clip length
+    how: Give the shortest clip your tool makes well. Clips of 2 to 5 seconds with one action hold the clay look far better than long ones.
 
 judge:
-  - The look line and closing line are word for word the same in every prompt.
-  - Every character's full description appears wherever they do.
+  - The set, light, palette and lens lines are word for word the same in every prompt.
+  - The lead's full description appears wherever they do.
+  - Every clip names one mover, and everyone else holds still.
   - The label lines are written out exactly, and nothing else on the set has words.
-  - No prompt says "smooth", "polished" or "glossy" outside the fixed wording.
-  - Every clip prompt starts with the movement lock.
+  - There's at most one clay morph, built from a first and last frame.
 
 test:
-  - Search the prompts for "smooth", "polished" and "glossy" outside the fixed wording. There should be none.
-  - Make two stills and look at the light. Dusk or long shadows mean you fix the still before making its clip.
-  - Check that every clip prompt starts with the movement lock.
+  - Make the lead sheet and two stills. If Dev's face differs between them, fix the lead description before making clips.
+  - Make one clip and watch the background. If the crowd moves when it shouldn't, strengthen the "holds still" line and remake it.
   - Compare the label in a still with your real pack, word by word.
+  - Watch one clip at full size. If it looks like smooth computer graphics, check the motion line is there word for word.
 
 improve:
-  - Write the clay look you chose, with its fixed lines, into step 2 of the skill file and delete the other three.
-  - Add your brand colours to "What you need", so the set is built around them instead of a proposed palette.
-  - Save the cast sheet in your brand file, so the same figures can come back in the next ad.
-  - Pair it with a skill that writes a clay town ad script first, and one that adds captions in your brand font afterwards.
+  - Write your chosen finish and palette into step 1 of the skill file, so every clay ad you make matches.
+  - Save the lead sheet and crowd sheet with your brand files, so the same figures can come back in the next ad.
+  - Add your product's label lines and "never show" list to "What you need", so the product reference is right first time.
+  - Pair it with the skill that writes a clay town ad script first, and one that adds captions in your brand font afterwards.
 
 terms:
-  - term: Movement lock
-    meaning: A fixed line in every clip prompt that keeps the movement stepped and handmade, with no motion blur.
-  - term: Look pack
-    meaning: The chosen clay look written as fixed lines (look, cast template, closing line) to paste into every prompt.
-  - term: Stop-motion
-    meaning: Animation made by moving figures a tiny bit between photos, which gives a slightly stepped movement.
+  - term: Set bible
+    meaning: Four fixed lines (set, light, palette, lens) pasted into every prompt so all shots look like one set.
+  - term: Mover
+    meaning: The one figure or object that moves in a shot. Everyone else holds still.
+  - term: First and last frame
+    meaning: Two images you give a video tool so it makes the motion between them. Used here for the clay morph.

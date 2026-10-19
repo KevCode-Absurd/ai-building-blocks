@@ -1,7 +1,7 @@
 slug: get-an-offer-that-answers-your-buyers-doubt
 renamed_from: offer-design-from-buyer-doubts
 name: "Get an offer that answers your buyer's doubt"
-summary: "An offer built around what stops one buyer saying yes, with terms, wording and a profit check."
+summary: "An offer built on the lever behind one buyer's doubt, with terms, wording and a profit check."
 category: general
 boards: [ecommerce]
 type: skill
@@ -17,5 +17,10 @@ outputs:
 uses: []
 origin: rebuilt
 source_ids: [CES-078]
-old_name: offer-building
-version: 1.0.0
+old_name: offer building from buyer doubts
+version: 2.0.0
+credits:
+  - {title: "$100M Offers: How to Make Offers So Good People Feel Stupid Saying No", by: "Alex Hormozi", url: "https://www.acquisition.com/books", used: "The value equation: result, likelihood, time delay, effort and sacrifice"}
+  - {title: "Fuzzy Math: What Makes Something Seem Like a Good Deal?", by: "Jonah Berger", url: "https://jonahberger.com/fuzzy-math-what-makes-something-seem-like-a-good-deal/", used: "The Rule of 100 for showing a saving as a percent or as money"}
+  - {title: "Signaling Quality with a Money-Back Guarantee: The Role of Transaction Costs", by: "Sridhar Moorthy and Kannan Srinivasan, Marketing Science", url: "https://doi.org/10.1287/mksc.14.4.442", used: "Guarantees as a signal of quality for the certainty lever"}
+  - {title: "50 Cart Abandonment Rate Statistics", by: "Baymard Institute", url: "https://baymard.com/lists/cart-abandonment-rate", used: "Extra costs and an unclear total drive checkout drop-off, so the full price is shown up front"}

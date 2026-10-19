@@ -1,7 +1,7 @@
 slug: get-watercolor-ad-script-that-sells
 renamed_from: watercolor-painted-ad-script-format-rules
-name: "Get a watercolor ad script that sells"
-summary: "A calm narrated ad in hand-painted watercolor, built around one paint movement that shows your selling idea."
+name: "Show what cameras can't in a watercolor ad"
+summary: "A narrated watercolor ad that turns on one real paint technique, picked for what your selling idea must show."
 category: general
 boards: [ecommerce]
 type: skill
@@ -18,5 +18,9 @@ uses: []
 example: watercolor
 origin: rebuilt
 source_ids: [CES-126]
-old_name: script-format-watercolor
-version: 1.0.0
+version: 2.0.0
+credits:
+  - {title: "Watercolor painting", by: "Wikipedia contributors", url: "https://en.wikipedia.org/wiki/Watercolor_painting", used: "Washes, glazing, wet-in-wet, wet-on-dry, dry brush, lifting, masking, paper surfaces"}
+  - {title: "Creating granulation with watercolour", by: "Winsor & Newton", url: "https://eu.winsornewton.com/blogs/guides/granulation-techniques-watercolour", used: "Granulation, rough paper, salt and dry-brush texture"}
+  - {title: "Elevate Your Watercolour Painting - Intermediate Watercolour Techniques", by: "Eckersley's", url: "https://www.eckersleys.com.au/blogs/learn/elevate-your-watercolour-painting-intermediate-watercolour-techniques", used: "Glazing, lifting off and how rushed layers turn muddy"}
+  - {title: "Prompt and image attribute guide", by: "Google Cloud", url: "https://docs.cloud.google.com/vertex-ai/generative-ai/docs/image/img-gen-prompt-guide", used: "Image prompt order, short text in images, avoid lists as plain nouns"}

@@ -1,79 +1,72 @@
 new_slug: turn-cutout-explainer-script-into-ready-video-shots
 name: "Turn your paper-cutout script into video clips"
-summary: "Give it your script and product photo. You get image and clip prompts, plus the words to add when editing."
+summary: "Give it your script and product photos. You get piece, frame and clip prompts, plus the words to add when editing."
 job: make-video-ads
 
 headline: "Turn your paper-cutout script into video clips"
-subhead: Give it a one-point script and your product photo. It fixes one graphic style, plans a proof shot for every sentence, and writes prompts for wordless paper plates that move as flat layers. You also get an editing list of every word and figure to add.
+subhead: Give it a one-point cutout script and your product photos. It lists every paper piece, makes the pieces before the scenes, and describes each frame as a stack of layers. Each move is timed to the word it proves, and you get a list of every word and figure to add in editing.
 
 explain: |
-  A paper collage explainer looks handmade and clear: your product cut out, an arrow, a ring round the part that matters. Ask an AI video tool for it and you usually get the opposite. Flat vector graphics instead of paper, misspelled labels, layers bending like rubber, and a chart with bars that mean nothing.
+  A paper-cutout explainer looks handmade and clear: your product cut out, an arrow, a ring round the part that matters. Ask an AI video tool for it and you often get the opposite. Flat digital graphics, misspelled labels, paper bending like rubber, and your product redrawn a little differently in every scene.
 
-  This skill writes prompts that hold the look. Every prompt repeats one look line (photographed paper seen from above, scissor-cut edges, soft shadows), so frames match. Label strips are left blank and all words, numbers and charts are added in editing, checked against your real figures. Each clip carries a movement lock: layers slide, scale or wipe as flat pieces, one move per shot, and every move shows something. Your product stays exactly as its photo.
+  This skill works like a cutout animator. It starts with a parts list, then makes each piece on its own, so your product cutout comes from its photo once and stays the same everywhere. Each frame is described as a stack of paper layers, back to front. Each move is rigged with a start and an end (a slide, a swap, a part swinging on its pin, a flap lifting, pieces landing one by one) and timed to land on its key word. The tool never writes a letter. Words, numbers and charts go in during editing, checked against your real figures.
 
 when:
   - You have a one-point explainer script and need prompts for an AI image and video tool.
   - Earlier attempts came out as flat digital graphics or with garbled text.
-  - You want charts in the ad, drawn to the proportions of your real figures.
+  - Your product looked slightly different in every scene.
 
 you_give:
-  - The script, or the one point you want to prove
-  - Your product photo and how it works
+  - The script, ideally with a proof picture, key word and move for each line
+  - Your product photos and how the product works
   - Any figures you want shown, with their sources
   - Your colours, typefaces and approved claims (optional)
 you_get:
-  - The main point, the narration and a graphic style card
-  - A storyboard with one proof shot per sentence
-  - Still prompts and clip prompts with a movement lock
-  - An editing list of every word and number, with its source
+  - A parts list marking what you have, what to make and what's missing
+  - Prompts for each paper piece and the empty ground
+  - Still prompts as layer stacks, and clip prompts with moves timed to the voice-over
+  - An edit list of every word and number, with its source
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Paste your script underneath, then attach or describe your product photo.
+  - Paste your script underneath, then attach your product photos.
   - Add any figures you want charted, each with where it comes from.
-  - Make the stills first and approve them.
-  - Make each clip from the last approved frame.
-  - Add the words, numbers and charts in your editor, using the editing list.
+  - Make the pieces first, then the stills, and approve them.
+  - Make each clip from its approved still, with the narration timed.
+  - Add the words, numbers and charts in your editor, using the edit list.
 
 how_it_works:
-  - title: States the main point
-    text: One sentence, one of four kinds. The problem, how it works, a comparison with the old way, or a surprising fact.
-  - title: Writes the voice-over first
-    text: Gives every sentence one proof shot of three to four seconds, and cuts any sentence nothing can prove.
-  - title: Fixes the graphic style
-    text: Two type sizes, one accent, one paper, one photo treatment, one family of arrows and labels, repeated in every prompt.
-  - title: Gathers the proof
-    text: Your product as a full-colour cutout, photos you own, and charts only from figures you supplied.
-  - title: Storyboards it
-    text: One row per sentence, three rows per 10-second clip, each clip ending with everything still.
-  - title: Writes stills and clips
-    text: Five-part prompts for wordless plates, then clip prompts where layers move only as flat paper.
+  - title: Lists every piece
+    text: Product cutouts, other photos, paper shapes and the ground, each marked have, make or missing.
+  - title: Makes pieces before scenes
+    text: Each piece is its own image, so your product comes from its photo once and never gets redrawn.
+  - title: Stacks the layers
+    text: Each frame is written back to front, with a place and size for every piece.
+  - title: Rigs every move
+    text: Slide, swap, pivot on a pin, lift a flap or build up, each with a start and an end, and paper that stays flat and stiff.
+  - title: Times moves to words
+    text: Each move lands on the word it proves, and every clip ends with a short still hold.
   - title: Leaves words for editing
-    text: Every word and figure is listed for you to set in editing, checked against your data.
+    text: Every word and figure is listed for your editor and checked against your sources.
 
 output_shape: |
-  MAIN POINT
-  <one sentence>
+  PARTS LIST
+  <piece> | <from which photo, or made> | have / make / MISSING
 
-  NARRATION
-  1 "<sentence>"  2 "<sentence>"  ...
+  PIECE <n>  <prompt for one piece on a plain background>
+  GROUND     <empty paper, filling the frame, flat from above>
 
-  GRAPHIC STYLE
-  Type: <claim size, label size>  Accent: <colour>  Paper: <ground>
-  Photos: <treatment>  Arrows and strips: <one family>
+  STILL <line n>  Layers, back to front:
+    1 <ground>  2 <piece, place, size>  3 <product, place, size>
+    4 <signal, from where to where>
+    Attach: <piece image> = <its job>
 
-  STORYBOARD
-  Row | Narration | Claim laid over | Proof image | Pointer | Layer move
-  ...
+  CLIP <n> (<length>, from still <n>)
+  <s>-<s>  <move: start position > end position>  (lands on "<key word>")
+  Paper rules: <flat, stiff, one plane, pins, shadows, no morphing>
+  End: hold, all pieces at rest
 
-  STILL PROMPT <n>
-  1 Look: <fixed look line>  2 Attached: <picture> = <job>
-  3 Claim and proof: <...>  5 Closing: label strips blank, no words
-
-  CLIP PROMPT <n>
-  <five parts plus the movement lock>
-
-  EDITING LIST
+  EDIT LIST
   <every on-screen word and number, with source>
   MISSING: <...>
 
@@ -83,116 +76,105 @@ example:
     [the skill]
 
     Script (20 s, from "Get a cutout explainer ad script that sells"):
-    Main point: a greens powder takes a scoop, water and a shaker;
-    a Sprout pack takes one tear.
-    1 "Greens powder takes a scoop, water and a shaker."
-    2 "Then the shaker needs washing."
-    3 "A Sprout pack takes one tear."
-    4 "Inside: sixty-plus ingredients, 21 vitamins and minerals, 6 grams
-       of fiber."
-    5 "One tear. That's the routine."
-    Product photos: pouch front, gummies in a hand. No photo of a
-    single daily pack yet. Old-way photos: to be shot (plain tub,
-    scoop, glass, shaker, no brand marks).
-    Colours: cream #FFF7DF, forest green #00582D, sunflower #FFCC2E.
-    Type: Work Sans bold and medium. Clips: 10 seconds, 9:16.
+    1 "A greens powder takes four steps." key: four. Row of tub,
+      scoop, glass, shaker. Build-up.
+    2 "Then one more: rinsing the shaker." key: rinsing. Sink slides
+      in under the shaker.
+    3 "A Sprout pack takes one tear." key: one. Swap: the row out, a
+      daily pack in.
+    4 "Inside: sixty-plus ingredients, twenty-one vitamins and
+      minerals, and six grams of fiber." key: Inside. Flap.
+    5 "One tear a day." Pouch large and still, offer on screen.
+    Paper kit: warm cream card, scissor-cut edges; signal sunflower
+    #FFCC2E strip with one pointed end; old way in black and white.
+    Photos: pouch front, gummies in a hand. No single daily pack
+    photo yet. Old-way photos: to be shot.
+    Type: Work Sans bold and medium. Clips: 8 seconds, 9:16.
   output: |
-    MAIN POINT
-    A greens powder takes a scoop, water and a shaker; a Sprout pack
-    takes one tear.
+    PARTS LIST
+    Pouch cutout | pouch front photo | have
+    Gummies-in-a-hand cutout | hand photo | have
+    Daily pack cutout | single pack photo | MISSING
+    Tub, scoop, glass, shaker cutouts | to shoot, no brand marks |
+      MISSING
+    Paper sink | made: grey card, two layers | make
+    Signal strips x3 | made: sunflower card, one pointed end | make
+    Blank label strips x2 | made: cream card | make
+    Ground | made: warm cream card | make
 
-    GRAPHIC STYLE CARD
-    Type: claim in Work Sans bold, label in Work Sans medium
-    Accent: sunflower #FFCC2E, on the pointer only
-    Paper: warm cream card
-    Photos: old way in black and white with coarse dots; product in
-      full colour
-    Arrows and strips: hand-cut arrows with blunt heads, strips with
-      one torn end, blank
+    PIECE (pouch)  The attached pouch photo cut out as a printed
+      photo on card, scissor-cut edge with a thin white margin,
+      visible card thickness, short soft shadow, plain grey
+      background. Shape, colours and printing unchanged.
+    GROUND  Warm cream card filling the frame, faint paper grain,
+      seen flat from above, even overhead light with no glare.
 
-    STORYBOARD
-    Row | Narration | Claim laid over | Proof | Pointer | Move
-    1 | line 1 | 4 STEPS | old-way row | arrow along the row | row
-        slides in from left
-    2 | line 2 | +1 TO WASH | shaker close | ring round the lid |
-        scale up
-    3 | line 3 | 1 STEP | daily pack | arrow along the top edge | old
-        row slides off right
-    (clip 1 ends: pack centred, all layers at rest)
-    4 | line 4 | 60+ ingredients. 6g fiber | gummies in a hand | two
-        arrows from blank strips | wipe uncovers the hand
-    5 | line 5 | offer text | pouch large | none | hard cut, hold
+    STILL 1  Layers, back to front:
+      1 ground  2 tub, scoop, glass and shaker cutouts in a row
+      across the middle third, each about a fifth of the frame wide
+      3 one sunflower strip under the row, point at right
+      Attach: the four old-way cutouts = their shapes, in black and
+      white. No words appear; strips are blank.
 
-    STILL PROMPT 1 (opening plate)
-    1 Look: a photographed paper collage seen flat from above, filling
-      the frame; warm cream card ground; scissor-cut photo cutouts
-      with visible paper thickness and short soft shadows; the product
-      in full true colour; flat cut-paper shapes in cream and pale grey
-      with one sunflower-yellow accent; even overhead light.
-    2 Attached: tub, scoop, glass, shaker photos = the old way, in
-      black and white with coarse dots.
-    3 Claim and proof: four old-way cutouts in a row across the middle
-      third; one hand-cut sunflower-yellow arrow with a blunt head
-      runs under all four.
-    5 Closing: label strips are blank; no words appear anywhere.
+    CLIP 1 (8 s, starts on the empty ground; still 1 is the frame
+    it builds to)
+    0.0-0.6 s  tub drops in at left, eases to a stop
+    0.6-1.2 s  scoop lands beside it
+    1.2-1.8 s  glass lands
+    1.8-2.4 s  shaker lands  (lands on "four" at 2.2 s)
+    2.4-3.0 s  sunflower strip slides in under the row
+    3.0-5.2 s  sink piece slides up under the shaker  (lands on
+               "rinsing" at 4.6 s)
+    5.2-8.0 s  hold, all pieces at rest
+    Paper rules: flat stiff card on one plane, shadows travel with
+    their pieces, photos stay photos, nothing bends or morphs.
 
-    CLIP PROMPT 1 (10 s, from Still 1)
-    [Parts 1 to 3 as above.] 4 Motion: 0-3 s the row slides in from
-    the left as one flat piece, quick start, clean stop, hold. 3-6 s
-    scale up to the shaker; a yellow paper ring settles round its lid.
-    6-10 s the daily pack cutout slides in to centre while the old row
-    slides off right; an arrow lands along the pack's top edge.
-    Movement lock: layers move as flat planes at real speed; paper
-    doesn't bend, stretch or morph; photos stay photos; shadows travel
-    with their layers; the pack's shape, colours and printing never
-    change. [Part 5.]
+    (cut for length: the full run also had stills 2 to 5 and clips
+    2 and 3, which wait for the daily pack photo)
 
-    (cut for length: the full run also had Still 2 and Clip 2,
-    continuing from Clip 1's last frame)
-
-    EDITING LIST
-    4 STEPS / +1 TO WASH / 1 STEP: counts of the steps shown
-    60+ ingredients. 6g fiber: label claim
+    EDIT LIST
+    4 STEPS, +1 RINSE, 1 STEP: counts of the pieces shown
+    60+ INGREDIENTS. 6G FIBER: label claim
     $29.99 first order with text sign-up. Renews at $49.99 every 4
       weeks: product page price box and footer
-    Pack shown torn straight across the top: brand's own rule
-
-    MISSING: a photo of a single daily pack (rows 3 and 4 wait for
-    it) and the four old-way photos (still 1 waits for them).
+    MISSING: the daily pack photo (lines 3 and 4) and the four
+    old-way photos (line 1).
 
 tweaks:
-  - what: The kind of main point
-    how: Tell it which kind you want. A comparison gives slides of the old way leaving; how-it-works gives a paper diagram with arrows along it.
-  - what: Shots per clip
-    how: Give your tool's clip length. At 10 seconds you get three proof shots per clip; at 5 seconds, one or two.
-  - what: The graphic style
-    how: Name your paper ground and photo treatment up front, for example "kraft paper, black-and-white photos with coarse dots". It repeats them word for word.
+  - what: Clip length
+    how: Give your tool's clip length. At 8 seconds you fit two or three lines a clip; at 5 seconds, one or two.
+  - what: The paper kit
+    how: Name your paper and cut style up front, for example "kraft paper, torn edges". Every piece prompt repeats it.
+  - what: Diagrams that move
+    how: Mark the pin points on a diagram piece ("the lid hinge"). Its pivot is then rigged around that pin and nowhere else.
   - what: Charts
-    how: Paste the figures with sources and say which line they prove. The prompt states the bar proportions; the numbers go in during editing.
+    how: Paste the figures with sources and say which line they prove. The layer stack sets the bar lengths; the numbers go in during editing.
 
 judge:
-  - The same look line appears in every still and clip prompt.
-  - No prompt asks the tool to write a word or number.
-  - Every shot has one move, and you can say what that move shows.
-  - Every figure in the editing list has a source.
-  - The product cutout is front on and big enough for the label to read.
+  - Every piece in every layer stack appears on the parts list.
+  - The product cutout is made once from its photo and reused.
+  - No prompt asks the tool to write a letter or a number.
+  - Every move has a start, an end and a key word it lands on.
+  - Every figure in the edit list has a source.
 
 test:
-  - Run it on a script whose figures you know by heart. Every number in the editing list should match your source, and no prompt should ask the tool to write one.
-  - Make the first plate and look at it at phone size. If it looks like flat digital art rather than photographed paper, fix the look line before any clip.
-  - Run it twice on the same script and compare the look lines. They should match. If they wander, write your own into the skill file.
-  - For each shot, say out loud what its one move shows. If you can't, that shot needs a different proof picture.
+  - Run it on a script whose figures you know by heart. Every number in the edit list should match your source, and no prompt should ask the tool to write one.
+  - Make the product piece and two stills. The product should look identical in both.
+  - Play the narration with the clip timings beside it. Each move should land as its key word is said.
+  - For each move, say out loud what it shows. If you can't, that line needs a different proof picture.
 
 improve:
-  - Write your own look line into step 3 of the skill file (your paper, your accent colour, your typefaces), so every run uses the same graphic style.
-  - List the photos you own in "What you need" (product front, out of pack, in use), so step 4 picks proof from them instead of asking.
-  - Add your figures with their sources to your brand file. The editing list checks every number against them.
-  - Pair it with the skill that writes the cutout explainer script, so each line already has its proof picture.
+  - Write your paper kit into step 2 of the skill file, so every run uses the same paper and cut style.
+  - Keep your approved piece images in one folder and list them in "What you need", so step 1 marks them "have".
+  - Add your figures with their sources to your brand file. The edit list checks every number against them.
+  - Pair it with the skill that writes the cutout explainer script, so each line already has its proof picture and key word.
 
 terms:
-  - term: Plate
-    meaning: A background image with no words on it, made so text can be added on top in editing.
-  - term: Movement lock
-    meaning: A fixed paragraph in every clip prompt that tells the video tool how things may and may not move.
+  - term: Parts list
+    meaning: Every paper piece and photo the ad needs, listed before anything is made.
+  - term: Layer stack
+    meaning: A frame described as paper layers from back to front, with a place for each piece.
+  - term: Pin
+    meaning: The point a jointed paper part turns around, like a split pin in a card puppet.
   - term: Cutout
     meaning: A photo of your product with the background removed.

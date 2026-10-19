@@ -1,14 +1,15 @@
 # AI presenter openings: for online stores
 
-Extra things to give it: pack-front, in-hand and in-use photos; evidence of how it can be handled (a front-only photo supports showing it on display, not in-hand size or use); what it replaces; the visible result; anything that must never be shown; a real offer date with terms, for the deadline approach.
+Extra things to give it: pack-front, in-hand and in-use photos; how the product may be handled (a front-only photo supports a product on a surface, never in-hand size or use); what it replaces; any visible result; anything that must never be shown; a real offer date with its terms, for a timing opening.
 
-Opening line patterns to rewrite in your brand's voice (examples only, with the cue word last):
+Line patterns by move, to rewrite in your brand's voice (Sprout examples, each 11 words or fewer):
 
-- Recognisable habit: "If your sink has four half-empty sprays under it, look at *this*."
-- Put it down: "Stop. Put the cheap sponge back. Check the back of *this* one."
-- Open question: "Why does the grout go grey in the same corner every single *time*?"
-- Number first: "Three hundred grams. Now weigh the one you already *own*." (only with the sourced weight)
-- Replaces these: "These three can go. *This* does all of it."
+- Mirror: "Half a tub of powder left? This pack needs no water." (the old thing in frame beside the pack)
+- Gap: "How much fits in one small pack? Stay for the label." (the ad must read the label)
+- Promise: "Here's a whole day of greens, pouch to palm." (only with real footage of tear and tip)
+- Proof: "Blood vitamin C up 40.1% in a 12-week study." (only with the study named in the ad)
+- Flip: "You're not bad at supplements. Powder is hard to keep up." (backed by real reviews about sticking with it)
 
-- Hands: if your evidence only supports display, the presenter points to or stands beside the product on a stand; nobody opens or uses it.
-- The offer and price are never spoken. The deadline approach uses the real date only.
+Handling: if the evidence only supports display, the product stands on the counter, label to the lens. The touch is a tap or a turn on the surface. Nobody opens or uses it.
+
+Prices and offers are never spoken in the opening. A timing opening uses the real date only.

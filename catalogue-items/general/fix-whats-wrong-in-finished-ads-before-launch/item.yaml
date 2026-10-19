@@ -1,7 +1,7 @@
 slug: fix-whats-wrong-in-finished-ads-before-launch
 renamed_from: static-ad-and-storyboard-review
 name: "Fix what's wrong in finished ads before launch"
-summary: "Finished image ads or storyboards reviewed, with the smallest fix for each flaw and a verdict per ad."
+summary: "Finished image ads or storyboards reviewed for truth, argument and look, with the smallest fix for each flaw and a verdict per ad."
 category: general
 boards: [ecommerce]
 type: skill
@@ -16,5 +16,8 @@ outputs:
 uses: []
 origin: rebuilt
 source_ids: [CES-085]
-old_name: operator-creative/review
-version: 1.0.0
+old_name: finished ad and storyboard review
+version: 2.0.0
+credits:
+  - {title: "Federal Trade Commission Announces Final Rule Banning Fake Reviews and Testimonials", by: "US Federal Trade Commission", url: "https://www.ftc.gov/news-events/news/press-releases/2024/08/federal-trade-commission-announces-final-rule-banning-fake-reviews-testimonials", used: "Reviews from people who don't exist, including AI-made ones, fail the truth check"}
+  - {title: "Meta Andromeda and Creative Diversification: 7 Examples Explained", by: "Jon Loomer", url: "https://www.jonloomer.com/meta-andromeda-creative-diversification/", used: "The batch check: near-identical visuals add little"}

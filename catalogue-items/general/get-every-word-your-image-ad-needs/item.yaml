@@ -1,7 +1,7 @@
 slug: get-every-word-your-image-ad-needs
 renamed_from: static-ad-copy-from-visual-and-awareness
 name: "Get every word your image ad needs"
-summary: "The image headline, main text, headline, description and button, all finishing your picture's idea."
+summary: "The image headline, main text, headline, description and button, each with one job, all finishing your picture's point."
 category: general
 type: skill
 role: make
@@ -16,5 +16,10 @@ outputs:
 uses: []
 origin: rebuilt
 source_ids: [CES-086]
-old_name: operator-creative/static-copy
-version: 1.0.0
+old_name: image ad copy writer
+version: 2.0.0
+credits:
+  - {title: "Tested Advertising Methods", by: "John Caples", url: "https://openlibrary.org/search?q=tested+advertising+methods+caples", used: "self-interest, news and curiosity as headline appeals"}
+  - {title: "Breakthrough Advertising", by: "Eugene M. Schwartz", url: "https://openlibrary.org/search?q=breakthrough+advertising+schwartz", used: "stages of awareness, folded into New, Warm and Ready"}
+  - {title: "How many words do we read per minute? A review and meta-analysis of reading rate", by: "Marc Brysbaert", url: "https://doi.org/10.1016/j.jml.2019.104047", used: "238 words a minute, so the 7-word image headline"}
+  - {title: "The magical number 4 in short-term memory", by: "Nelson Cowan", url: "https://pubmed.ncbi.nlm.nih.gov/11515286/", used: "the support line counts toward 3 extra things to read"}

@@ -1,7 +1,7 @@
 slug: find-script-lines-that-lose-sale
 renamed_from: video-ad-script-principles-reference
 name: "Find the script lines that lose the sale"
-summary: "Your video ad script checked line by line against 13 sets of rules, with the rule broken and a fix for each."
+summary: "Your video ad script checked line by line against 12 groups of checks, with the check it fails and a fix for each."
 category: general
 type: skill
 role: make
@@ -12,7 +12,14 @@ inputs:
 outputs:
   - {type: audit_report}
 uses: []
-origin: own
+origin: rebuilt
 source_ids: [CES-004]
-old_name: ad-script-principles
-version: 1.0.0
+old_name: video ad script checks
+version: 2.0.0
+credits:
+  - {title: "How To Write Meta Ads That Scale: Copywriting Masterclass", by: "Blue Sense Digital", url: "https://www.youtube.com/watch?v=LoL1w-k9Mgg", used: "The order of the nine beats"}
+  - {title: "Breakthrough Advertising (1966)", by: "Eugene M. Schwartz", url: "https://openlibrary.org/works/OL2625224W", used: "The Fit checks: awareness level and claim fatigue"}
+  - {title: "Tested Advertising Methods (1932)", by: "John Caples", url: "https://openlibrary.org/works/OL3350190W", used: "Opening checks: pick out the reader, give a reason to stay"}
+  - {title: "My Life in Advertising and Scientific Advertising", by: "Claude C. Hopkins", url: "https://openlibrary.org/works/OL2702313W", used: "Specific, checkable facts over adjectives"}
+  - {title: "Do Your Ads Talk Too Fast to Your Audio Audience? (Journal of Advertising Research, 2020)", by: "Emma Rodero", url: "https://thearf.org/access-knowledge-2/publications/journal-of-advertising-research/do-your-ads-talk-too-fast-to-your-audio-audience-how-speech-rates-of-audio-commercials-influence-cognitive-and-physiological-outcomes/", used: "The pace check and cutting ideas rather than speeding up"}
+  - {title: "About text overlays and the safe zone for ads in Stories and Reels", by: "Meta Business Help Center", url: "https://www.facebook.com/business/help/980593475366490", used: "The silent check: text clear of the app's buttons"}

@@ -1,16 +1,16 @@
 # Cartoon skeleton ad script: for online stores
 
 ## Extra things to give it
-- Product details: the pack, its size, how long one lasts, and what it replaces (the old way the shopper owns now).
-- Review lines about where the old way fails, with where each came from.
-- Your current offer and its end date.
+- The pack, its size, how long one lasts, and the old things it replaces in the shopper's home.
+- Two or three review lines about where the old way lets people down, each with where it came from.
+- Your current offer, its exact terms and its end date.
 
-## Where it fits
-- Things that get used up or replaced: a product that stands in for several old ones (one concentrate for nine sprays) suits a quantity ladder that ends in catastrophe.
-- Products that protect or maintain something (covers, filters, descalers) suit a time ladder: "what if you never ...".
-- Things that last suit a "keep using it" ladder, but only if you state how long they last in numbers you can back.
+## Which game fits your product
+- **It replaces a drawer of single-use things** (one cloth for six sprays): run it `without it`, with a pile that grows and a count label.
+- **It protects or maintains something** (a filter, a cover, a descaler): run it `without it`, with a space that slowly gives up. Use a count or distance label unless you hold sourced time points.
+- **People notice it** (a scent, a bag, a jacket): run it `with it`, with a crowd that grows from one glance to a queue. Keep the reactions silly and the claim plain.
 
 ## Rules for stores
-- Times and counts on a step (months of wear, number of uses) are claims. Take them only from the product page, the warranty or test results.
-- Never name a competitor's product as the failing old way. Name the kind of thing ("single-use gadgets", "old filters").
-- Put the price, bundle and guarantee in the last frame as on-screen text, with the current end date.
+- Counts and times tied to a result (uses per pack, months of wear) are claims. Take them from the product page, the warranty or test results only.
+- Name the old way by its kind ("half-used tubs", "old filters"), never by a rival's product.
+- The price, bundle and guarantee go on screen in the last shot, with the current end date, worded exactly as on the site.

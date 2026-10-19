@@ -1,12 +1,15 @@
 # Article-style page: for online stores
 
 ## Extra things to give it
-- The variant the ad showed, the pack sizes, and what's in the box.
-- The returns window and who pays return postage, the warranty, delivery time and cost, and the subscription terms.
+- The variant and pack the ad showed, the pack sizes, and what's in the box.
+- Returns window and who pays return postage, warranty, delivery time and cost, and subscription terms (renewal price, how to pause, how to cancel).
 
 ## What changes
-- **Something bought again (serum, snack, coffee, supplement):** the offer card shows a single pack, one-time against subscribe with the saving in money, and a starter or routine bundle. Say how long a pack lasts and how to pause or cancel, in the store's own words. Questions cover taste or feel, who it suits, when a change might be noticed (only as the store states it) and pausing.
-- **Something bought once (pan, jacket, luggage, mattress):** one price with a size or colour picker, what's in the box, the set that completes it, delivery date, returns window and warranty. Questions cover which size, what it works with, care, how a return works and what the warranty covers.
-- **Risk line:** for things bought again, the guarantee and "cancel any time". For things bought once, returns and warranty.
-- **The buy button follows the reader** on phones from the product section onward.
-- **Images:** the first image shows the ad's product and pack. A clean product shot sits beside the offer. Add a close-up of an ingredient, material or making step. Use customer photos only if they're real and you have permission.
+- **Section 4, the tests.** For something bought again, the tests are usually about the taking: taste, effort, how many steps. For something bought once, they're usually about lasting: what wears out, what breaks, what it works with.
+- **Section 6, proof.** Bought again: what each ingredient does, and test results with the lab or standard named as the store states it. Bought once: materials, how it's put together, and any test by a named body.
+- **Section 7, honest fit.** Bought again: who should pick which variant, and when a change might be noticed, only as the store states it. Bought once: which size, what it works with, and how to look after it.
+- **Section 8, the offer.** Bought again: one pack, the subscribe price beside the one-off price with the difference in money, the number of days a pack covers, and the store's own pause and cancel wording. Bought once: a single price, a size or colour picker, the box contents, an arrival date, the returns window and the warranty.
+- **Risk line.** Bought again: the guarantee and its limits, and "cancel any time" only if it's true. Bought once: returns and warranty.
+- **On phones,** the buy button stays in view from section 5 onward, never before.
+- **Images.** The first image shows the ad's product and pack. A clean product shot sits beside the offer. Add a close-up of an ingredient, material or making step. Customer photos only if they're real and you have permission. Every image gets a caption with one fact.
+- **The label** stays on the page itself, above the headline, even when the ad was labelled too, because people reach the page from shares and links.

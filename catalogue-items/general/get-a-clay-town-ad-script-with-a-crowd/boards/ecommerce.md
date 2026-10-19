@@ -2,10 +2,10 @@
 
 ## Extra things to give it
 - A product photo with a sharp label, and every label line written out with its colours.
-- The shopper's moment: where they are and who else is there (a commute, an office kitchen, a dinner table).
+- The shopper's moment: where it happens and who else is there (a commute, an office kitchen, a dinner table).
 
 ## What changes
-- **The product moment:** the clay product sits under a real printed paper label, so shoppers recognise the pack when they reach the product page.
-- **Scenes that suit stores:** a queue at a till, a shared kitchen, a gift being opened, a morning rush.
-- **Offer at the end:** price, bundle or guarantee as narration or on-screen text, using current terms. Nothing invented.
-- **Proof:** a crowd of clay faces never stands for reviews or sales. Use real review counts as on-screen text with their source.
+- **The product moment:** the clay pack is wrapped in a printed paper label, so shoppers know the pack when they land on the product page.
+- **Hassles that suit stores:** the queue for the one good kettle, the school-gate rush, wrapping a gift at midnight, the gym bag that smells by Thursday.
+- **Offer at the end:** price, bundle or guarantee as narration, with the exact terms on screen. Nothing invented.
+- **Proof:** a crowd of clay faces never stands in for reviews or sales. Use a real review count as on-screen text, with its source.

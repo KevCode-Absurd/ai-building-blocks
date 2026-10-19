@@ -1,7 +1,7 @@
 slug: get-five-ad-ideas-you-havent-tried-yet
 renamed_from: creative-coverage-gap-audit
 name: "Get five ad ideas you haven't tried yet"
-summary: "A map of what your ads have and haven't tried, plus five new ideas for the biggest gaps."
+summary: "A map of what your ads have and haven't tried, through five lenses, plus one new idea for each of the five biggest gaps."
 category: general
 boards: [ecommerce]
 type: skill
@@ -17,11 +17,18 @@ inputs:
     required: false
   - type: audit_report
     required: false
+  - type: voc_reviews
+    required: false
 outputs:
   - {type: audit_report}
   - {type: brief}
 uses: [know-how-your-ad-should-open]
 origin: rebuilt
 source_ids: [CES-140, CES-090]
-old_name: strategic-audit
-version: 1.0.0
+old_name: ad coverage gap audit
+version: 2.0.0
+credits:
+  - {title: "Category Entry Points (the 7W questions)", by: "quantilope, explaining the Ehrenberg-Bass Institute's work by Jenni Romaniuk and Byron Sharp", url: "https://www.quantilope.com/resources/category-entry-points", used: "The moments lens and its seven prompts"}
+  - {title: "The Elements of Value", by: "Eric Almquist, John Senior and Nicolas Bloch (Bain & Company), Harvard Business Review", url: "https://hbr.org/2016/09/the-elements-of-value", used: "The value lens and its four layers"}
+  - {title: "Breakthrough Advertising", by: "Eugene M. Schwartz", url: "https://breakthroughadvertisingbook.com/", used: "The five buyer knowledge levels"}
+  - {title: "Tested Advertising Methods", by: "John Caples", url: "https://en.wikipedia.org/wiki/John_Caples", used: "Gain, news and curiosity as opening families"}

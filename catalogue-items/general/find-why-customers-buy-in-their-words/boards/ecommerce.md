@@ -1,32 +1,27 @@
-# Ranked buying reasons: for online stores
+# Why customers buy, in their words: for online stores
 
 ## Extra things to give it
-A review export from any reviews app with: rating, title, text, date, product, verified-purchase flag, helpful votes, and "received free product" if it's there.
+A review export from your reviews app with rating, title, text, date, product, verified-purchase flag, helpful votes, and "received free product" if it's there. Add support tickets about returns and refunds: that's where anxiety lives.
 
-## What changes
-- **Which ratings to keep:** 5, 4 and every 3 star. A 3-star reviewer is lukewarm but took the time to explain, and the explanation usually matches what holds a first-time buyer back. Read 1 and 2 star reviews for complaints and refund reasons.
-- **Verified first:** the best phrase comes from a verified purchase where there is one. Unverified phrases are shown but marked. Reviewers who got the product free or were paid are never the best phrase, and must be disclosed wherever they're quoted.
-- **Split by product** once the store has more than four products; buying reasons don't carry over cleanly.
-- **How many:** a few hundred reviews per run. Over about 1,000, split by product.
+## What changes for a store
+- **Ratings:** keep them all. Five-star reviews are rich in pull and result. Three-star reviews often name the anxiety a first-time buyer has. One- and two-star reviews and refund tickets show what to fix or answer first.
+- **Verified first:** the best phrase comes from a verified purchase where there is one. A reviewer who got the product free or was paid is never the best phrase, and is disclosed wherever quoted.
+- **Big exports:** over a few hundred reviews, read a spread across ratings and months, not just the newest.
 
-## Where each story part earns its keep
-| Story part | Use in a store |
+## Where each force earns its keep
+| Force | Use in a store |
 |---|---|
-| Starting point, trigger | Ads for people who don't know you, welcome email, seasonal campaigns |
-| Past fixes | "Us versus the old way" ads, comparison sections on the product page |
-| Doubt | Product page FAQ, abandoned-cart message, "this isn't for you if" ads |
-| Rough patch | The first email after purchase (day two), stopping refunds |
-| In their words | Explaining how it works to people who are interested, the opening of an article-style page |
-| Turning point | Ads built around a review, email subject lines |
-| What stayed | Ads to past visitors, win-back emails, rethinking how you position the product |
-| Complaint | Ads that answer a worry before it's raised, FAQ, product improvements |
-| Pass it on | Selling a second product, gifting, subscriptions |
+| Push | Ads for people who don't know you yet, the welcome email, seasonal campaigns |
+| Pull | Headlines, the first lines of the product page, image ads built on a review |
+| Anxiety | Product page FAQ, the abandoned-cart message, the day-two email after purchase, "is this for me?" ads |
+| Habit | "Us against the old way" ads, comparison sections, switching guides |
+| Result | Ads to past visitors, win-back emails, gifting and second-product offers |
 
-On the product page, how it works and "what stayed" become bullet points, and doubts and complaints ranked by count become the FAQ. For image ads built on a review: one buying reason per image, with the quote in quotation marks and its source.
+On the product page, pull and result become the bullet points, and anxieties ranked by people become the FAQ, in the order buyers raise them.
 
 ## Extra legal flags for stores
-- A quoted result is still a claim the brand must be able to stand behind. For supplements, skincare and health products, it goes past whoever approves claims.
-- An unusual result (one reviewer lost a large amount of weight) is never shown as typical.
+- A quoted result is still a claim the store must stand behind. For supplements, skincare and health products, it goes past whoever approves claims.
+- One unusual result is never shown as typical.
 - Ad platforms restrict before-and-after images and claims about someone's body or personal traits, whoever said them.
-- An unexpected use goes under "What stayed" with the product and source ID. Check the product's official use and safety before suggesting it in an ad or demo; one customer's experiment isn't permission to recommend it.
-- When you hand a product page doubt to the page writer, give the question, the number of separate sources and the source IDs. Matching words alone don't show the page already answers it; read the actual answer.
+- An unexpected use a customer found goes on the map with its source ID. Check the product's official use and safety before showing it in an ad.
+- When you hand a product page doubt to the page writer, give the question, the number of people and the source IDs. Read the page's actual answer before you call it covered.

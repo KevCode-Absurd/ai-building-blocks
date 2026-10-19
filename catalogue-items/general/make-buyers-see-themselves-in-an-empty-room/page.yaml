@@ -1,76 +1,62 @@
 new_slug: make-buyers-see-themselves-in-an-empty-room
 name: "An empty-room photo that tells your buyer's story"
-summary: "Give it your ad's story. You get the room, the objects and the light, and a prompt for the photo."
+summary: "Give it your ad's story. You get the room, three telling objects, the light and a photo prompt."
 job: make-image-ads
 
 headline: "An empty-room photo that tells your buyer's story"
-subhead: Give it your story ad. It picks the room where the change shows, two or three objects that tell it (a cold coffee, a pillow on the sofa, a second alarm clock), the hour and its light, and writes a prompt for a plain doorway photo.
+subhead: Give it your story ad. It picks the room where the change shows, casts three objects with set jobs (what the problem left, what tells the hour, where the person should be), places the camera and writes the photo prompt.
 
 explain: |
-  Some problems change how people live more than how they look: sleep, energy, routines, the morning rush. A photo of a sad person at a window is a cliché and reads as an ad. An empty room with the evidence left in it works better, because the reader fills in the missing person, and the person they picture is themselves.
+  Some problems change how people live more than how they look: sleep, rushed mornings, a routine that slips. A sad face at a window is a cliché and reads as an ad. A room just after someone left it works better, because readers fill in the missing person, and the person they picture is themselves.
 
-  The skill takes the room from your story and research, then names two or three objects that show what changed, like a full mug gone cold beside one bitten slice of toast. It sets the hour and the light that hour gives, and briefs a phone photo from the doorway, slightly tilted, with real clutter and a little noise in the dark areas. Nobody is in the frame, nothing suggests harm or an emergency, and there's no second, happier photo.
+  The skill casts three objects, each with one job. The trace is what the problem left behind, like a full mug gone cold. The clock tells the hour, like low sun after the school run. The gap shows where the person should be, like a chair pushed back. It puts the camera where that person would stand coming back in, lets the hour set the light, and adds ordinary clutter so the room looks lived in.
 
 when:
-  - Your buyer's problem changes their routine, sleep or home life more than their appearance.
-  - You want an emotional picture without a staged sad face.
-  - Your story mentions what the room looked like because of the problem.
+  - Your buyer's problem changes their routine, sleep or home life more than their looks.
+  - You want a picture with feeling and no staged sad face.
+  - Your story already mentions what the room looked like.
 
 you_give:
-  - Your approved story ad, with the changed-life detail in its opening
+  - Your approved story ad, with the changed-day detail in its opening
   - What changed in how buyers live, in their words (optional)
   - Your brand's places, light and anything you never show (optional)
 you_get:
   - The room, the hour and the light
-  - Two or three objects that tell the story
-  - The headline to run under the image, and flags on anything inferred
+  - The trace, the clock and the gap, with where the camera stands
+  - The line under the image, and flags on anything taken from the story alone
   - A 60 to 120 word image prompt, ready to paste
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Paste your story ad underneath. The room and its objects should be in the opening lines.
-  - Add what customers say changed in their lives, if you have reviews or notes.
-  - Paste the image prompt into your image tool. If the room looks like a hotel or a catalogue, ask again with more clutter.
-  - Read the flags. Anything marked inferred should be checked against what buyers say.
+  - Paste your story ad. The room and its objects should be in the opening lines.
+  - Add what customers say changed in their days, if you have reviews or notes.
+  - Paste the image prompt into your image tool. If the room looks like a catalogue, ask again with more clutter.
+  - Read the flags. Check anything taken only from the story against what buyers say.
 
 how_it_works:
-  - title: Sets the ground rules
+  - title: Sets the house rules
     text: Square, looks taken on a phone, no logo, price, button, brand colour or product, and nobody in frame.
-  - title: Finds the changed room
-    text: Takes the room from your story and research, and names two or three objects that show what changed.
-  - title: Sets the hour
-    text: Names the time and the light it gives, like a hallway lamp at 2am or bright sun after the school run.
-  - title: Shoots from the doorway
-    text: A phone photo, slightly tilted, with a little noise in the dark areas.
-  - title: Adds real clutter
-    text: A mug, a remote, shoes. Nothing styled.
+  - title: Picks the room
+    text: The room your buyer would recognise first, without a caption.
+  - title: Casts three objects
+    text: One trace of the problem, one clock that tells the hour, one gap where the person should be.
+  - title: Places the camera
+    text: Where the person would stand coming back in, at their eye level.
+  - title: Sets light and clutter
+    text: The hour sets the light, and ordinary clutter makes the room look lived in.
 
 output_shape: |
-  SCENE
-  <one sentence: what someone scrolling would say they saw>
-
-  WHERE AND WHEN
-  <place, time of day, what is within reach>
-
-  THE ROOM AND HOUR
-  <the room seen from the doorway, the time, the light>
-
-  THE 2 OR 3 OBJECTS
-  <each object that tells the change>
-
-  REAL CLUTTER
-  <ordinary things around them, nothing styled>
-
-  WORDS ON THE IMAGE
-  None.
-  HEADLINE UNDER THE IMAGE
-  <"The reason you..." or "Why your ... ended up ...">
-
-  FLAGS
-  <anything inferred, and where it came from>
-
-  IMAGE PROMPT
-  <60 to 120 words, ready to paste>
+  SCENE              <what someone scrolling would say they saw>
+  ROOM AND HOUR      <room, time, light>
+  THE TRACE          <what the problem left behind>
+  THE CLOCK          <what tells the hour>
+  THE GAP            <where the person should be>
+  CAMERA             <where it stands, and why>
+  ORDINARY CLUTTER   <things with nothing to do with the story>
+  WORDS ON THE IMAGE None.
+  LINE UNDER IMAGE   <words> (<characters>)
+  FLAGS              <objects from the story alone, and their source>
+  IMAGE PROMPT       <60 to 120 words, ready to paste>
 
 example:
   business: sprout
@@ -90,85 +76,75 @@ example:
     Buyer: the busy parent, 30 to 45, mostly mums.
     Brand look: bright, sunny, real homes. Never clinical.
   output: |
-    SCENE
-    An empty kitchen after the school run, with a full mug of coffee
-    and a bitten slice of toast left at one place.
-
-    WHERE AND WHEN
-    A family kitchen, about 8:15am, bright sun through the window.
-    Within reach: the table, the counter, the sink.
-
-    THE ROOM AND HOUR
-    Kitchen seen from the doorway, just after everyone has left.
-    Warm morning sun across the table, lights off.
-
-    THE 3 OBJECTS
-    A full mug of coffee gone cold, a faint skin on top.
-    A slice of toast on a plate with one bite out of it.
-    A lunchbox lid left on the counter, its box gone.
-
-    REAL CLUTTER
-    Two cereal bowls in the sink, a hair tie and a school letter on
-    the table, a chair pushed back at an angle.
-
-    WORDS ON THE IMAGE
-    None.
-
-    HEADLINE UNDER THE IMAGE
-    Why your breakfast ended up cold on the counter.
-
-    FLAGS
-    Inferred: the cold coffee and the toast come from the story, not
-    from customer research. Review 15 backs the rush in a mum's own
-    words, but not these objects. Check this is a morning real buyers
-    describe before it runs.
-    No children in frame. The bowls and lunchbox lid are objects
-    only.
-
-    IMAGE PROMPT
-    Square 1:1 phone photo taken from a kitchen doorway at about
-    8:15am, slightly tilted, bright morning sun across the table,
-    lights off, a little noise in the shadows. Nobody in the room. At
-    one place on the table, a full mug of coffee gone cold with a
-    faint skin on top, and a plate with a slice of toast with one
-    bite out of it. A lunchbox lid left on the counter. Two cereal
-    bowls in the sink, a hair tie and a school letter on the table, a
-    chair pushed back. Lived-in, not styled. No person, no children,
-    no logo, no product, no text.
+    SCENE              An empty kitchen just after the school run, a
+                       full mug and a bitten slice of toast left at one
+                       place.
+    ROOM AND HOUR      Family kitchen, about 8:15am, bright low sun
+                       through the window, lights off.
+    THE TRACE          At one place: a full mug of coffee gone cold,
+                       and a plate with a slice of toast, one bite out.
+    THE CLOCK          A lunchbox lid left on the counter, its box gone,
+                       with the low morning sun across the table.
+    THE GAP            The chair at that place pushed back at an angle,
+                       as if someone stood up mid-bite.
+    CAMERA             In the doorway at adult eye level, where the
+                       parent would stand coming back for their keys.
+    ORDINARY CLUTTER   Two cereal bowls in the sink, a hair tie and a
+                       school letter on the table, a charger cable.
+    WORDS ON THE IMAGE None.
+    LINE UNDER IMAGE   Breakfast, one bite in. (23, plain caption)
+    FLAGS              From the story, not research: the cold coffee
+                       and the toast. Review 15 backs the rush in a
+                       mum's own words, but not these objects. Check
+                       this is a morning real buyers describe before it
+                       runs. No children in frame; the bowls and
+                       lunchbox lid are objects only.
+    IMAGE PROMPT       Square 1:1 phone photo taken from a kitchen
+                       doorway at adult eye level at about 8:15am,
+                       slightly tilted, bright low morning sun across
+                       the table, lights off, a little grain in the
+                       shadows. Nobody in the room. At one place, a
+                       full mug of coffee gone cold and a plate with a
+                       slice of toast with one bite out of it; that
+                       chair is pushed back at an angle. A lunchbox lid
+                       on the counter. Two cereal bowls in the sink, a
+                       hair tie, a school letter and a charger cable on
+                       the table. Lived-in, unstyled. No person, no
+                       children, no logo, no product, no text.
 
 tweaks:
   - what: Which room
-    how: Ask for "the bedroom at 2am" or "the hallway by the front door" instead, if that's where your buyer's change shows. The room should be the one your buyer would recognise first.
-  - what: The objects
-    how: Name the two or three you want from your research. More than three turns it into clutter with no story.
+    how: Ask for "the bedroom at 2am" or "the hallway by the front door" if that's where your buyer's change shows. Pick the room they'd recognise first.
+  - what: The three objects
+    how: Name your own trace, clock or gap from your research. Keep one per role, plus one extra trace at most.
   - what: The hour
-    how: The light does a lot of the feeling. Grey early light reads as "after a bad night"; bright sun on an empty table reads as "everyone left without me".
-  - what: How tidy
-    how: If the picture comes out too clean, ask for specific clutter (shoes, a remote, a charger). Hotel-clean rooms look like ads.
+    how: The light does much of the feeling. Grey early light reads as "after a bad night"; bright sun on an empty table reads as "everyone left already".
+  - what: Where the camera stands
+    how: Move it to where your buyer would come back in, such as the top of the stairs or the end of the bed.
 
 judge:
-  - Nobody is in the frame, and nothing suggests harm, an accident or an emergency.
-  - The objects tell the change without a caption.
-  - It looks lived-in, with real clutter, not styled.
-  - Nothing says whose house it is.
-  - There's no product, and no second, happier photo.
+  - Nobody is in the frame, and nothing suggests harm or an emergency.
+  - You can name the trace, the clock and the gap without being told.
+  - It looks lived in, with clutter that has nothing to do with the story.
+  - Nothing says whose home it is.
+  - There's no product and no second, happier photo.
 
 test:
   - Show the picture to someone who fits your buyer and ask what happened in this room this morning. If they can tell the story back, the objects work.
-  - Run it twice on the same story. The room and the objects should stay the same.
-  - Run it on a story with no changed room. It should send you to the everyday snapshot instead of inventing a room.
-  - Test it against a snapshot with a person in it. Some buyers respond to the empty room, some to the face.
+  - Run it twice on the same story. The room and the three roles should stay the same.
+  - Run it on a story with no changed room. It should send you to the everyday snapshot instead of inventing one.
+  - Test it against a snapshot with a person in it. Some buyers respond to the empty room, some to a face.
 
 improve:
-  - Add what buyers say changed at home, in their own words, to the brand file section. Those details become the objects and stop the inferred flags.
-  - Add your brand's light and time of day to step 3, so the hour matches your look.
-  - Add the objects your brand never shows (medicine, mess, bins) to the ground rules in step 1.
-  - Write the objects into your story's first lines, so the reader can match picture and text at once.
+  - Add what buyers say changed at home, in their own words, to your brand file. Those details become the trace and stop the flags.
+  - Add your brand's light and time of day to step 5, so the hour matches your look.
+  - Add the objects your brand never shows (medicine, bins, mess) to the house rules.
+  - Write the trace into your story's first line, so the reader can match picture and text at once.
 
 terms:
   - term: Story ad
-    meaning: An ad whose main text tells one person's story in their own words, like a post from a friend.
-  - term: Inferred
-    meaning: Taken from the story or a guess, not from buyer research. Check it before it runs.
-  - term: Headline under the image
-    meaning: The bold line under the picture in a Facebook or Instagram ad.
+    meaning: An ad whose main text tells one person's story, like a post from a friend.
+  - term: The trace, the clock, the gap
+    meaning: The three objects in the room. One shows what the problem left, one tells the time, one shows where the person should be.
+  - term: Line under the image
+    meaning: The bold headline under the picture in a Facebook or Instagram ad.

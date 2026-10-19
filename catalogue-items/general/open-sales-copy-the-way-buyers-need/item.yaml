@@ -1,7 +1,7 @@
 slug: open-sales-copy-the-way-buyers-need
 renamed_from: sales-opening-picker-six-leads
 name: "Open your sales copy the way your buyer needs"
-summary: "The right way to open for how much your buyer knows, with two different openings to test."
+summary: "The right opening for how aware your buyer is, from the six classic lead types, plus a neighbouring one to test."
 category: general
 type: skill
 role: make
@@ -15,5 +15,8 @@ outputs:
 uses: [know-who-youre-writing-for]
 origin: rebuilt
 source_ids: [CES-022]
-old_name: copy-craft
-version: 1.0.0
+version: 2.0.0
+credits:
+  - {title: "Great Leads: The Six Easiest Ways to Start Any Sales Message", by: "Michael Masterson and John Forde", url: "https://www.awai.com/p/is/lds/", used: "The six lead types and their order from direct to indirect"}
+  - {title: "Breakthrough Advertising", by: "Eugene Schwartz", url: "https://en.wikipedia.org/wiki/Eugene_Schwartz", used: "Awareness levels to pick the starting lead; a market that has heard the promise needs a less direct opening"}
+  - {title: "The Adweek Copywriting Handbook", by: "Joseph Sugarman", url: "https://en.wikipedia.org/wiki/Joseph_Sugarman", used: "The first sentence's job is to get the next one read"}

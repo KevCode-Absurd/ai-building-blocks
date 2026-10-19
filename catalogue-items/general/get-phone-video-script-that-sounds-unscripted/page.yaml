@@ -1,71 +1,68 @@
 new_slug: get-phone-video-script-that-sounds-unscripted
 name: "A phone video script that sounds unscripted"
-summary: "Give it your buyer and product facts. You get a natural script, delivery notes, a shot list and three openings."
+summary: "Give it your buyer and product facts. You get a four-part script, a shot list and two other openings to test."
 job: make-video-ads
 
 headline: "A phone video script that sounds unscripted"
-subhead: Give it one buyer, your product facts and who will film it. It writes a five-part script that moves one belief, with the person's own true details left as blanks, plus delivery notes, a shot list and three other ways to open.
+subhead: Give it one buyer, your product facts and who will film it. You get a script that starts on the buyer's snag and spends most of its time on the product in someone's hands, with the length worked out from the real steps, a shot list and two other snags to test.
 
 explain: |
-  A video that looks filmed by a customer on their phone works because it sounds like a person, not a brand. Most scripts for these videos fail at exactly that: they read like an advert, the creator sounds like they're reading, and the ending gets louder and pushier than anything a person would say to a friend.
+  A video that looks filmed by a customer works because it sounds like a person, not a brand. Most scripts for these videos fail at exactly that. They list features, the creator sounds like they're reading, and the ending turns into a sales pitch.
 
-  This skill first settles who is talking, because that changes what they may say. A real creator can tell their own story, so their true details become blanks for them to fill. An AI presenter gets no personal story or result. Then it writes down the one belief the video should move, and builds five parts: an opening line mid-thought, the doubt in the buyer's words, the product shown in use, a small honest verdict and an easy handoff. Exactly one concrete number, taken from your facts.
+  People tell stories in three moves: this was going on, but something got in the way, so I did this. Randy Olson calls it And, But, Therefore. This skill writes that spine first, then four parts. The snag opens it, in the buyer's own words. The hands part shows the product used in its real order, with one proof you can see, like the label held to the lens. Noticed says only what the speaker saw, tasted or did. The pointer says where to get it and one honest thing to know first. The length comes from the number of real steps, so it's never squeezed or padded.
 
 when:
   - You're briefing a creator or customer to film a video about your product and need the words.
   - Your current phone-style ads sound read, not said.
-  - You want one script that answers one specific doubt, such as "does this actually do anything?"
+  - You want one script that answers one specific doubt, such as "is this just candy?"
 
 you_give:
-  - One buyer, the moment the problem shows, the doubts that almost stop them and their own words
-  - Your product facts, price, how it's used, approved and banned claims, offer and guarantee
+  - One buyer, the moment the problem shows, their main doubt and their own words
+  - Your product facts, how it's used step by step, handling rules, claims allowed and banned, and the price as stated
   - Who will say it (a real creator who has used it, an AI presenter, or a founder or customer on their own footage)
-  - The length, your brand voice and banned words, and how the product may be handled (optional)
+  - Your brand voice, banned words and past scripts (optional)
 you_get:
-  - The script in five timed parts, with the one belief it moves written down first
-  - Delivery notes (tone, pace, where, what's in frame, how the phone is held)
-  - A shot list of 4 to 8 shots saying which hand holds what
-  - Three other openings, a shorter cut if the idea survives one, and a list of blanks to fill
+  - The spine in one line, then the script in four timed parts
+  - Notes on how to say it (tone, pace, where, how the phone is held)
+  - A shot list part by part, saying which hand holds what
+  - Two other snags to test, and a list of blanks the speaker fills
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Paste your product facts, approved claims and a handful of real reviews underneath.
+  - Paste your product facts, claims and a handful of real reviews underneath.
   - Describe one buyer and their doubt in a sentence or two. Say who will film it.
   - Read the script aloud standing up, at speaking pace. Rewrite any line you stumble on.
-  - Turn it into a filming brief for your creator with the filming brief skill, so they know what to film.
+  - Turn it into a filming brief for your creator with the filming brief skill.
 
 how_it_works:
   - title: Settles who says it
     text: A real creator may tell their own story, with blanks for their true details. An AI presenter gets no personal story or result.
-  - title: Writes the backbone
-    text: Names the person and their moment, the one belief to move, how much they know, the doubts, the story type and how it's filmed. If one is missing, the script isn't ready.
-  - title: Writes five parts
-    text: An opening line mid-thought, the doubt in their words, the product in use, a verdict that claims less than it could, and an easy handoff.
+  - title: Writes the spine
+    text: One line, "situation, but snag, so what they did". No snag, no script.
+  - title: Works out the length
+    text: About 4 seconds for each real use step, plus time for the snag, what they noticed and the pointer.
+  - title: Writes four parts
+    text: Snag, hands, noticed, pointer. The hands part is the longest on screen and makes sense with the sound off.
+  - title: Caps the claims
+    text: Noticed holds only what the speaker saw, tasted, timed or did. At most two product facts, each also shown on screen.
   - title: Adds what the maker needs
-    text: Delivery notes, a shot list with which hand holds what, three other openings and, only if it works, a shorter cut.
-  - title: Fits it to clips
-    text: For AI video, starts each part at the start of a clip and cuts in a fixed order if it runs long. Never cuts the opening, the number, the shown use or the verdict.
-  - title: Checks it
-    text: Read aloud at pace, one concrete number, every fact from your facts, and no line that would suit a polished advert's voice-over.
+    text: How to say it, a shot list with which hand holds what, and two other snags, each a different doubt.
 
 output_shape: |
-  Script: "<title>" (<seconds>; <real creator or AI presenter>)
-  Spine: <person and moment> | belief: "<now>" -> "<after>" |
-  <how much they know> | doubt: <doubt> | story: <type> | <how filmed>
+  Script: "<title>" (<seconds>, from <n> hand steps; <speaker>)
+  Spine: <situation>, but <snag>, so <what they did>
 
-  Opening (0-3 s): "<line>"  [<what is seen, only if true>]
-  Setup (<times>): "<the doubt in the buyer's words, [blanks]>"
-  Shown use (<times>): "<the product in use, one number>"
-  Verdict (<times>): "<small and plain, or a [blank]>"
-  Handoff (<times>): "<the action, offer terms as stated>"
+  Snag (<times>): "<line>"
+  Hands (<times>): "<words>"  [proof moment: <what is seen>]
+  Noticed (<times>): "<observation or [blank]>"
+  Pointer (<times>): "<where, plus one thing to know>"
 
-  DELIVERY NOTES  <tone, pace, place, clothes, phone, face>
+  HOW TO SAY IT  <tone, pace, place, clothes, phone, face>
   SHOT LIST
-  <n> <times>  <one action, which hand holds what>
-  OTHER OPENINGS (each read with the setup line)
-  <n> <way in>: "<line>"
-  SHORTER CUT  <a cut, or why there is none>
-  PLACEHOLDERS AND GAPS  <blanks, the one number, where it goes next>
+  <part> <times>  <one action, which hand holds what>
+  OTHER SNAGS (each read with the first hands line)
+  <n> <doubt>: "<line>"
+  BLANKS AND GAPS  <blanks, facts used, where it goes next>
 
 example:
   business: sprout
@@ -78,9 +75,9 @@ example:
     things I have to do as a mom." (review 15). "[Sprout] literally
     tastes like fruit snacks I ate as a kid." (review 12)
     Product: Sprout, daily greens gummies. Pouch of 28 daily packs.
-    1 pack = 60+ ingredients, 21 vitamins and minerals, 6 g prebiotic
-    fiber. Every gummy comes Low Sugar or Sugar-Free. Tear one pack
-    across the top, tip the gummies into a hand. Result can't be seen.
+    1 pack = 60+ ingredients, 21 vitamins and minerals, 6 g fiber.
+    Every gummy comes Low Sugar or Sugar-Free. Take one pack from the
+    pouch, tear it across the top, tip the gummies into a hand.
     Price: $29.99 first order with the text sign-up, then $49.99 every
     4 weeks.
     Approved claims: the pack facts above. "Supports digestion and gut
@@ -89,59 +86,53 @@ example:
     Handling: pouch opens only at its resealable top; the pack tears
     straight across its top edge.
     Speaker: a real creator who has used it.
-    Length: about 45 seconds.
   output: |
-    Script: "Not candy" (about 45 seconds; real creator)
-    Spine: a mum on her way out the door, at the kitchen counter in the
-    morning | belief: "a gummy this tasty is just candy" -> "it's one
-    daily pack with real fiber I'll keep taking" | knows the fixes, not
-    this one | doubt: is this just candy | story: a routine | phone at
-    arm's length, then propped; loosely from points
+    Script: "Not candy" (40 seconds, from 5 hand steps; real creator)
+    Spine: these taste like the fruit snacks I grew up on, but that
+    made me think they were candy, so I read the pack.
 
-    Opening (0-3 s): "I've quit every vitamin I've ever bought. Except
-    this one."  [only if true for you; at the counter, bag on]
-    Setup (3-15 s): "[What you tried before, in your words]. And the
-    first time I tasted these, I honestly thought, this is just candy."
-    Shown use (15-32 s): "This is one day. You tear the top, tip it
-    out. Little green bears. Six grams of fiber in there, and it comes
-    low sugar or sugar-free."
-    Verdict (32-38 s): "[What's different for you, small and plain.
-    Claim less than you could.]"
-    Handoff (38-45 s): "It's on their site. Your first order's $29.99
-    if you sign up for their texts, then $49.99 every four weeks."
+    Snag (0-8 s): "These taste like the fruit snacks I ate as a kid.
+    Which worried me. [What you took before, in your words.]"
+    [only if true for you]
+    Hands (8-28 s): "This is one day. One pack. Look, 21 vitamins and
+    minerals and six grams of fiber, in this. Tear the top, tip them
+    out, little green bears."  [proof moment: the pack's label held to
+    the lens, numbers readable]
+    Noticed (28-34 s): "[What you noticed, from what you tasted or
+    did. For example, how many days in a row you've kept it up, if you
+    counted.]"
+    Pointer (34-40 s): "They're on their site. Heads up, the $29.99
+    first order is with their text sign-up. After that it's $49.99
+    every four weeks."
 
-    DELIVERY NOTES
+    HOW TO SAY IT
     Bright, quick, a little wry. Kitchen in the morning, window light,
-    bag on her shoulder. Plain top, no logos. Arm's length for the face,
-    propped on the counter for the shown use. Eyebrows up at "just
-    candy"; a small nod at the verdict.
+    bag on her shoulder. Plain top, no logos. Phone at arm's length
+    for the snag, propped on the counter for the hands. Eyebrows up on
+    "worried me". A small shrug at noticed.
 
     SHOT LIST
-    1 0-3 s    face, medium; left hand holds a daily pack low
-    2 3-15 s   face; right hand gestures on "just candy"
-    3 15-20 s  close, from above: left hand holds the pouch open at its
-               resealable top, right hand takes out one pack
-    4 20-24 s  both hands tear the pack straight across its top edge
-    5 24-28 s  left hand tips the gummies into the right palm
-    6 28-32 s  left hand holds the pouch to the lens, name readable, on
-               "six grams"
-    7 32-38 s  face; she eats the gummies
-    8 38-45 s  face; picks up her keys on "every four weeks"
+    Snag    0-8 s    face, medium; left hand holds a daily pack low
+    Hands   8-12 s   from above: left hand holds the pouch open at its
+                     resealable top, right hand takes out one pack
+            12-17 s  right hand holds the pack to the lens, label
+                     readable, on "21 vitamins"
+            17-21 s  both hands tear the pack straight across the top
+            21-25 s  left hand tips the gummies into the right palm
+            25-28 s  she eats them
+    Noticed 28-34 s  face, medium
+    Pointer 34-40 s  face; picks up her keys on "every four weeks"
 
-    OTHER OPENINGS (each read with the setup line)
-    1 Doubt first: "I genuinely thought these were candy with a green
-      label."  [only if true for you]
-    2 Recognizable moment: "If your vitamins live in a drawer you never
-      open, watch this."  (for a buyer who knows less)
-    3 Routine: "[Time], bag on, keys in hand. This is the whole routine."
+    OTHER SNAGS (each read with "This is one day. One pack.")
+    1 Sugar: "I wanted greens, not a sugar habit." (then the hands
+      show the Low Sugar label)
+    2 Time: "Mornings here, there's no time to mix a shake."
       [only if true for you]
 
-    SHORTER CUT  None. The belief only moves after the candy doubt is
-    said; cut it and it's a product demo.
-    PLACEHOLDERS AND GAPS
-    [What you tried before] and [What's different for you] are the
-    creator's own. If they have no true detail, leave the part out and
-    tell us. One concrete number: 6 g of fiber, from the product page.
+    BLANKS AND GAPS
+    [What you took before] and [What you noticed] are the creator's own.
+    If they have no true detail, they drop that line and tell us.
+    Facts used: 21 vitamins and minerals and 6 g fiber, from the pack.
     The prices are offer terms, said as the business states them.
     Hand on to: the filming brief skill.
 
@@ -149,37 +140,39 @@ tweaks:
   - what: Who says it
     how: Change "real creator" to "AI presenter" and the script switches to "you" and observation, with no blanks for personal experience, because a made-up person can't have one.
   - what: The length
-    how: A doubt talked through needs 45 seconds or more; a routine or a discovery lands in 20 to 30. Ask for a length that fits the idea; it won't squeeze a script into one that doesn't.
-  - what: The story type
-    how: Ask for a change, a confession, a routine or a discovery. A confession suits a buyer embarrassed about the problem; a routine suits a product that fits a daily moment.
+    how: Add or remove real use steps and the length follows, about 4 seconds a step. Ask for a fixed length and it tells you which steps it would drop to fit.
+  - what: The snag
+    how: Name the doubt or hassle you want to answer, such as price or taste. The spine, the proof moment and the pointer change to match it.
   - what: Handling rules
-    how: Paste how the product may be held, opened and shown. If it may only be displayed, the shown use becomes the sealed product on a surface and the words change to match.
+    how: Paste how the product may be held, opened and shown. If it may only be displayed, the hands part becomes the sealed product on a surface, turned to show the label.
 
 judge:
-  - Read it aloud. It sounds said, and no line would work as a polished advert's voice-over.
-  - There is exactly one concrete number, and it's in your facts.
-  - The shown use is the longest part on screen and you could follow it with the sound off.
-  - The verdict is smaller than the opening, and the handoff is in the same voice.
+  - Read it aloud. It sounds said, and no line would suit a polished advert's voice-over.
+  - The spine has a real "but", and the script opens on it.
+  - The hands part is the longest on screen and you could follow it with the sound off.
+  - Every spoken fact is in your facts and also visible on screen.
   - Every first-person line is something the speaker could truthfully say, or a blank for them.
   - No stock hype words like "obsessed" or "life-changing".
 
 test:
-  - Leave out who the buyer is. It should stop and ask, because the skill writes no script without one buyer.
-  - Run it for a real creator and for an AI presenter on the same facts. Only the creator version should have [blanks] and first-person lines.
-  - Film yourself reading it on your phone, standing up, at pace. Any line you stumble on or wouldn't say is a line to rewrite.
-  - Watch the shot list with the sound off in your head. If you can't follow the product being used from shots alone, the shown use needs more steps.
+  - Leave out who the buyer is. It should stop and ask, because it writes no script without one buyer.
+  - Run it for a real creator and for an AI presenter on the same facts. Only the creator version should have blanks and first-person lines.
+  - Count the use steps in the shot list. The length should be close to 4 seconds a step plus about 20 for the rest.
+  - Watch the shot list in your head with the sound off. If you can't follow the product being used, the hands part needs more steps.
 
 improve:
-  - Add your product's handling rules to "What you need" in the skill file as standard, so every shot list opens and holds the product the right way.
-  - Paste your buyers' own words from reviews into the buyer section each time, and save the phrases that work to your brand file.
-  - Add your banned words and past ads to the check step, so it never repeats an opening you've already run.
+  - Add your product's handling rules to "What you need" as standard, so every shot list opens and holds the product the right way.
+  - Paste your buyers' own words from reviews each time, and save the snags that work to your brand file.
+  - Add your banned words and past scripts to the say test, so it never repeats a snag you've already run.
   - Let the creator change any line they wouldn't say, as long as they keep the point, and note what they changed.
   - Pair it with the skill that turns an approved script into a filming brief for a real person, or one that makes AI presenter openings for a made-up one.
 
 terms:
   - term: Spine
-    meaning: The plan behind the script. Who it's for, the one belief it moves, the doubt, the story type and how it's filmed.
-  - term: Handoff
-    meaning: The last line, where the speaker passes the product on the way a friend would, with no hard sell.
-  - term: Placeholder
-    meaning: A blank in [brackets] for the creator's own true detail. They fill it, or leave that part out.
+    meaning: The one-line story behind the script. What was going on, what got in the way, and what they did.
+  - term: Snag
+    meaning: The doubt or hassle the buyer has, said first so the right viewer recognises it.
+  - term: Proof moment
+    meaning: One thing the viewer can see that backs a fact, such as the label held to the lens.
+  - term: Blank
+    meaning: A gap in [brackets] for the speaker's own true detail. They fill it, or drop that line.

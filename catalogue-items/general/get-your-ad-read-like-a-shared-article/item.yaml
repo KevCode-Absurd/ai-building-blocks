@@ -1,7 +1,7 @@
 slug: get-your-ad-read-like-a-shared-article
 renamed_from: native-ad-image-article-headline-photo
 name: "Get your ad read like a shared article"
-summary: "A plain photo of the problem with one article-style headline across it, matching the page your ad opens."
+summary: "A candid photo carrying your page's own headline, so the ad and the page it opens tell one story."
 category: general
 boards: [ecommerce]
 type: skill
@@ -18,5 +18,10 @@ uses: [get-story-ads-read-with-the-right-picture]
 example: native
 origin: rebuilt
 source_ids: [CES-064]
-old_name: hook-headline-photo
-version: 1.0.0
+old_name: headline on a photo
+version: 2.0.0
+credits:
+  - {title: "Information Scent: How Users Decide Where to Go Next", by: "Raluca Budiu, Nielsen Norman Group", url: "https://www.nngroup.com/articles/information-scent/", used: "The scent check between ad and page"}
+  - {title: "Capturing Attention in Feed: The Science Behind Effective Video Creative", by: "Facebook IQ", url: "https://www.facebook.com/business/news/insights/capturing-attention-feed-video-creative", used: "1.7 seconds per post on mobile, behind the 7-word limit"}
+  - {title: "Native Advertising: A Guide for Businesses", by: "US Federal Trade Commission", url: "https://www.ftc.gov/business-guidance/resources/native-advertising-guide-businesses", used: "No masthead, outlet name or byline; never posing as a publisher"}
+  - {title: "Facebook Ads Guide: image ad specs", by: "Meta", url: "https://www.facebook.com/business/ads-guide/update/image", used: "4:5 Feed shape and the 27-character headline"}

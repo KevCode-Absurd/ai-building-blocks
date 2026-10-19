@@ -1,169 +1,175 @@
 new_slug: catch-product-page-image-mistakes-before-shoppers-do
 name: "Catch mistakes in your product images before shoppers do"
-summary: "Give it your product page images and facts. You get 11 checks on each image and the smallest fix for each fault."
+summary: "Give it your product page images and facts. You get 13 checks in three passes and one fix per fault."
 job: product-photos
 
 headline: "Catch mistakes in your product images before shoppers do"
-subhead: Give it your finished product page images, the plan they were made from, your real product photos and your facts. It runs 11 checks on each image, from spelling to size to phone readability, and gives a pass or fail with the smallest fix for each fault.
+subhead: Give it your finished product page images, the plan they came from, your real product photos and your facts. It checks the set as thumbnails, each image at phone size, then every word and figure zoomed in, and gives each fault a severity and one fix.
 
 explain: |
-  AI-made product images often look finished while being wrong. A headline is missing a letter, "350 mg" became "35 mg", the product in the hand shot is bigger than in the main shot, or a callout line points at the wrong part. Once those images are live, shoppers see a sloppy brand, and a wrong number on a product page can be a legal problem.
+  AI-made product images often look finished while being wrong. "350 mg" turns into "35 mg", the product in the hand shot is bigger than in the main shot, or a step shows the pack opened the wrong way. Shoppers notice, and a wrong number on a product page can become a legal problem.
 
-  This skill checks every image at full size beside your real product photo, never from a thumbnail or memory. It runs 11 checks in order: words, figures, same product, same size, one question per image, callouts and steps, counts, people and proof, each shape, phone readability, and edges. Last, it runs a stranger test, where each image must make its question and answer clear in three seconds. Every failure gets its check number, where in the image it is, and the smallest fix.
+  This skill checks the way a shopper looks, from far to close. First the whole set as a strip of thumbnails: is it one product, does each image have its own job, and does the first image meet your store's or marketplace's rules. Then each image at phone size, with a one-second glance test. Then each image zoomed in beside your real photo, letter by letter and digit by digit. Every fault is marked Stop, Fix or Polish, with the one change that fixes it.
 
 when:
   - Your product page images are made and you're about to upload them.
-  - An AI tool or designer made the images and you want an independent check before you approve them.
-  - You've changed one image and need to know the set still works together.
+  - A designer or an AI tool made the images and you want an independent check before you approve them.
+  - You've remade one image and need to know the set still works together.
 
 you_give:
-  - Every finished image at full size, in each shape you made
-  - The plan (the question, answer and exact words for each image, with sources)
+  - Every finished image at full size, in each shape you'll upload
+  - The plan (each image's job, its message and its exact words, with sources)
   - The real product photos the images were made from
-  - Your facts (figures, claims and terms the words must match)
+  - Your facts (figures, claims, reviews and guarantee terms)
+  - Where the images go, such as your own store or a marketplace (optional)
 you_get:
   - PASS or FAIL for each image
-  - For every fault, the check number, where it is, what's wrong and the smallest fix
-  - A verdict for the whole set (reads as one gallery, no two alike, upload order right)
+  - One line per fault, with the check, severity, where it is, what was planned, what came out and the fix
+  - A verdict for the whole set, and a list of any check that couldn't run
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Attach every image at full size, not as thumbnails or a screenshot of the page.
+  - Attach every image as a file at full size, not a screenshot of your page.
   - Paste the plan and your facts, and attach the real product photos.
-  - Fix the failures it lists, one at a time, and run the check again on the remade images.
+  - Fix the Stop faults first, one change per remake, then run the check again on the new images.
   - Upload only when every image passes and the set verdict is clean.
 
 how_it_works:
-  - title: Looks at full size
-    text: Each image beside the real product photo. It never judges from a thumbnail or from memory.
-  - title: Checks words and figures
-    text: Every planned line is present and spelled as planned, and every number and unit matches your facts digit for digit.
-  - title: Checks the product
-    text: All images on one sheet so shape, colour and proportion can't drift, and the hand shot beside the main shot so the product is one size.
-  - title: Checks each image's job
-    text: Every image answers one question; callout lines touch the right part; steps run in order; items in the box can be counted.
-  - title: Checks people and proof
-    text: No generated person looks like a customer or expert, no child appears, and every review and rating is real.
-  - title: Checks shape and phone
-    text: Square and tall versions side by side with nothing cut off, readable at phone width, with no added borders, buttons or logos.
-  - title: Runs the stranger test
-    text: Each image alone for three seconds. If a viewer can't name its question and answer, it fails however good it looks.
+  - title: Checks the set
+    text: All images side by side as thumbnails. Same product and size in each, one job per image, the right order, and a first image that meets your store's or marketplace's rules.
+  - title: Checks each image on a phone
+    text: About 400 pixels wide. A one-second glance must give the planned message, every word must read, and no shape may cut anything off.
+  - title: Checks the facts zoomed in
+    text: Words letter by letter, figures digit by digit, label and parts against the real photo, counts, and every review and badge real.
+  - title: Checks the file
+    text: No added borders, buttons, watermarks or logos, detail that holds up when zoomed, and the AI label kept in an AI-made file.
+  - title: Ranks every fault
+    text: Stop for a wrong fact, wrong product or fake proof. Fix for anything misleading or unreadable. Polish for the rest.
+  - title: Gives one fix per fault
+    text: Each fix changes one thing and says what stays the same, so the remake doesn't break something else.
 
 output_shape: |
-  IMAGE <nn>-<question>  <PASS | FAIL>
-  Check <number> (<name>) | <where in the image> | <what was planned>
-    -> <what came back> | fix: <smallest change>
+  IMAGE <nn>-<job>  <PASS | FAIL>
+  <check> | <Stop / Fix / Polish> | <where in the image>
+    planned: <...>  found: <...>
+    fix: <one change; what stays the same>
 
   (one block per image)
 
-  SET VERDICT
-  Reads as one gallery: <yes/no, why>
-  No two alike:         <yes/no>
-  Upload order right:   <yes/no>
-  Not inspected:        <any image not seen at full size = FAIL>
-  MISSING: <real photo | plan | facts>
+  SET (pass 1)
+  S1 one object:   <pass/fail, why>
+  S2 one job each: <pass/fail>
+  S3 order:        <pass/fail>
+  S4 first image:  <pass/fail, which rules>
+
+  NOT RUN
+  <check, and what's needed to run it>
+  MISSING: <image file | plan | real photo | facts>
 
 example:
   business: sprout
   input: |
     [the skill]
 
-    Facts: "60+ ingredients, 21 vitamins & minerals, and 6g fiber" per
-    pack. Study: 2025, 12 weeks, 120 healthy adults, vitamin C
-    +40.1%, folate +20.5%. Daily pack tears straight across its top
-    edge, never a corner. 28 daily packs per pouch.
+    Facts: per pack "60+ ingredients, 21 vitamins & minerals, and 6g
+    fiber". Study: 2025, 12 weeks, 120 healthy adults aged 23 to 59;
+    blood vitamin C +40.1%, folate +20.5%. The daily pack tears
+    straight across its top edge, never a corner. 28 daily packs per
+    pouch. Guarantee: 30-day money-back, first order only.
 
     The plan, and what I see on each image at full size:
-    02-top-results. Plan: "60+ ingredients" / "21 vitamins & minerals"
-    / "6g fiber". On the image: "60+ ingredients" / "20 vitamins &
-    minerals" / "6g fiber".
-    03-reason. Plan: "Clinically tested for nutrient absorption" /
+    02-made-of. Plan: "60+ ingredients" / "21 vitamins & minerals" /
+    "6g fiber". Image: "60+ ingredients" / "20 vitamins & minerals" /
+    "6g fiber".
+    03-tested. Plan: "Clinically tested for nutrient absorption" /
     "Vitamin C +40.1%" / "Folate +20.5%" / small print "2025 study, 12
-    weeks, 120 healthy adults". On the image: the first three lines,
-    no small print.
-    04-use-it. Plan: "1 Grab a pack" / "2 Tear across the top" / "3 Tip
-    into your palm". On the image: all three lines; the step 2 picture
-    shows the pack torn at a corner.
-    08-in-the-box. Plan: pouch plus 28 daily packs laid out. On the
-    image: I count 24 packs.
-    11-promise. Plan: "30-day money-back guarantee on your first
-    order". On the image: the same words.
+    weeks, 120 healthy adults". Image: the first three lines only.
+    04-steps. Plan: "1 Grab a pack" / "2 Tear across the top" / "3 Tip
+    into your palm". Image: all three lines; step 2 shows a corner torn.
+    05-what-arrives. Plan: pouch plus 28 daily packs laid out. Image: I
+    count 24 packs.
+    08-promise. Plan: "30-day money-back guarantee on your first
+    order". Image: the same words.
 
-    Real photos attached: pouch front on, gummies in a hand.
+    For our own store. Real photos attached: pouch front on, gummies in
+    a hand.
   output: |
-    IMAGE 02-top-results  FAIL
-    Check 2 (figures) | second point | planned "21 vitamins & minerals"
-      -> came back "20 vitamins & minerals" | fix: remake from this
-      image, change only that line, and spell the number out on the
-      retry ("2, then 1")
+    IMAGE 02-made-of  FAIL
+    Z2 figures | Stop | second line
+      planned: "21 vitamins & minerals"  found: "20 vitamins & minerals"
+      fix: remake from this image, change only that line. Spell the
+      number in the prompt as "two-one" so the tool can't drop a digit
 
-    IMAGE 03-reason  FAIL
-    Check 1 (words) | bottom | planned small print "2025 study, 12
-      weeks, 120 healthy adults" -> missing | fix: add it back as its
-      own line. Without it, "+40.1%" loses the conditions it rests on
+    IMAGE 03-tested  FAIL
+    Z2 figures | Stop | bottom edge
+      planned: small print "2025 study, 12 weeks, 120 healthy adults"
+      found: missing
+      fix: add the small print as its own line under "Folate +20.5%".
+      Without it the percentages lose the conditions they rest on
 
-    IMAGE 04-use-it  FAIL
-    Check 6 (callouts and steps) | step 2 picture | planned a tear
-      straight across the top -> torn at a corner | fix: rewrite the
-      step 2 scene, "the pack is torn straight across its top edge,
-      never a corner", and attach a real photo of a torn pack
+    IMAGE 04-steps  FAIL
+    Z3 product detail | Stop | step 2 picture
+      planned: torn straight across the top  found: torn at a corner
+      fix: rewrite only the step 2 scene ("torn straight across its
+      top edge, never a corner") and attach a real photo of a torn pack
 
-    IMAGE 08-in-the-box  FAIL
-    Check 7 (count) | the layout | planned 28 daily packs -> 24
-      countable | fix: lay them out in 4 rows of 7 and say "exactly 28
-      packs, 4 rows of 7"
+    IMAGE 05-what-arrives  FAIL
+    Z4 counts | Fix | the layout
+      planned: 28 daily packs  found: 24 countable
+      fix: ask for "exactly 28 packs in 4 rows of 7", keep the pouch
+      and the light as they are
 
-    IMAGE 11-promise  PASS on checks 1, 2, 5, 8
+    IMAGE 08-promise  PASS on Z1, Z2, Z5
     "first order" is kept, as planned.
 
-    NOT YET CHECKED (need the image files themselves)
-    Check 3 (same product) and 4 (same size): put all images on one
-      sheet, and the in-hand shot beside the main shot
-    Check 9 (each shape): square and 4:5 side by side
-    Check 10 (phone): view each at 390 px wide
-    Check 11 (edges): look for added borders, buttons or logos
-    Stranger test: each image alone for 3 seconds
-    Until these are done, no image passes.
+    SET (pass 1)
+    S2 one job each: pass, from the plan (made of, tested, steps, what
+      arrives, promise)
+    S3 order: pass, the files follow the plan's numbers
+    S1 one object and S4 first image: not run (need the files, and
+      image 01)
 
-    SET VERDICT
-    Reads as one gallery: not checked (needs the files)
-    No two alike: yes, from the plan
-    Upload order right: 02, 03, 04, 08, 11 follow the plan
-    4 of 5 images fail. Remake them one fault at a time, then check the
-    whole set again.
+    NOT RUN
+    Pass 2 (glance, readable, crop): needs each file at phone size
+    Z6 clean file: needs the files to check edges, zoom and metadata
+    Until these run, no image counts as passed.
+    4 of 5 images fail, 3 of them at Stop. Remake one fault at a time,
+    then send the remade files with the rest of the set.
 
 tweaks:
+  - what: Where the images go
+    how: Say "Google Shopping" or "Amazon" and check S4 uses that platform's main-image rules. It tells you to confirm them on the platform's own page, since they change.
   - what: Both shapes
-    how: Attach square and tall versions together. Check 9 compares them side by side and catches words cut off in one shape only.
+    how: Attach the square and tall versions together. P3 compares them and catches words cut off in one shape only.
   - what: The facts you paste
-    how: Paste the exact figures from your label or facts sheet. Check 2 compares digit for digit, so it can only be as good as the facts you give it.
+    how: Paste figures exactly as your label prints them. Z2 compares digit for digit, so it can only be as good as the facts you give it.
   - what: A re-check after fixes
-    how: Send only the remade images plus the set. It reruns all 11 checks on them, and the set checks on everything, since one new image can make two images answer the same question.
-  - what: Marketplace rules
-    how: Say if the images are for a marketplace. It adds a check that image 1 is the product alone on plain white with no words.
+    how: Send the remade images with the rest of the set. It reruns every check on the new images and pass 1 on all of them, since one new image can repeat another's job.
 
 judge:
   - Every image has a verdict, including ones that didn't change.
-  - Every failure names a check number and a place in the image, not just "looks off".
-  - Number faults quote both the planned figure and what appeared.
-  - The set verdict is separate from the image verdicts.
-  - Nothing passes that wasn't seen at full size.
+  - Every fault names its check, severity and place in the image, never a vague "looks off".
+  - Number faults quote the planned figure and the one that appeared.
+  - Wrong facts, wrong product and fake proof are always Stop.
+  - Nothing counts as passed that wasn't seen at full size.
 
 test:
-  - Give it one image you know is wrong, such as a headline missing a letter or a wrong number. It should fail that image with the check number, the place and the fix. If it passes it, don't trust its passes.
-  - Run it twice on the same set. The verdicts should match. If an image flips between pass and fail, the facts you pasted for that image are too vague.
-  - Take one fail line and check it yourself. Open the image at full size and find the fault where the line says it is.
-  - Compare its stranger test with a real stranger. Show each image for three seconds to someone outside the business and ask what question it answers.
+  - Give it one image you know is wrong, such as a headline missing a letter. It should fail it with the check, the place and the fix. If it passes it, don't trust its passes.
+  - Run it twice on the same set. The verdicts should match. If one flips, the facts you pasted for that image are too vague.
+  - Take one fault line and check it yourself at full size. The fault should be where the line says it is.
+  - Try the glance test on a real person. Show each image for one second to someone outside the business and ask what it told them.
 
 improve:
-  - 'Paste your label figures into "What you need" in the skill file, so the figures check always compares against the same numbers (for Sprout: vitamin C 93 mg, D3 20 mcg, 6 g prebiotic fiber per pack).'
-  - Add your rules for showing the product to the same-product check, such as "the daily pack is torn straight across the top, never the side".
-  - Add any rule your marketplace or legal team sets as a 12th check in step 2.
+  - 'Paste your label figures into "What you need" in the skill file, so Z2 always checks against the same numbers (for Sprout: vitamin C 93 mg, D3 20 mcg, 6 g prebiotic fiber per pack).'
+  - Add your rules for showing the product to Z3, such as "the daily pack is torn straight across the top, never the side".
+  - Add any rule your marketplace or legal team sets as an extra check in pass 3, with its own severity.
   - When the same fault shows up on two products, turn it from a note into a named check.
-  - Pair it with the skill that plans product page images image by image, so there's a plan to check against, or the one that runs the whole gallery job from audit to upload.
+  - Pair it with the skill that plans product page images one by one, so there's a plan to check against, or the workflow that runs the whole gallery job.
 
 terms:
   - term: Callout
     meaning: A short label on an image with a thin line pointing to the part it names.
-  - term: Stranger test
-    meaning: Showing one image alone for three seconds to see if someone new can say what it's telling them.
+  - term: Glance test
+    meaning: Looking at one image for a second, then saying what it told you, to see if its message lands.
+  - term: Metadata
+    meaning: Hidden information stored inside an image file, such as how and when it was made.

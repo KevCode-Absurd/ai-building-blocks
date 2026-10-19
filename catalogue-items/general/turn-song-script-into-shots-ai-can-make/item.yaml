@@ -1,7 +1,7 @@
 slug: turn-song-script-into-shots-ai-can-make
 renamed_from: song-music-video-ad-director
 name: "Turn your song script into shots AI can make"
-summary: "A music-tool brief, a storyboard cut to the song's real timings, and prompts that keep one singer the same."
+summary: "A music-tool prompt, a storyboard cut on the song's bars, and prompts that keep one animated lead and your product the same."
 category: general
 boards: [ecommerce]
 type: skill
@@ -19,5 +19,10 @@ uses: [get-catchy-song-ad-script-that-sells]
 example: song
 origin: rebuilt
 source_ids: [CES-138]
-old_name: song-style-ad
-version: 1.0.0
+old_name: song music video shot planner
+version: 2.0.0
+credits:
+  - {title: "Eleven Music: best practices", by: "ElevenLabs", url: "https://elevenlabs.io/docs/overview/capabilities/music/best-practices", used: "Music prompts: stated BPM and key, arrangement in order, timing cues in seconds, length"}
+  - {title: "The ultimate prompting guide for Veo 3.1", by: "Khulan Davaajav and Hussain Chinoy, Google Cloud", url: "https://cloud.google.com/blog/products/ai-machine-learning/ultimate-prompting-guide-for-veo-3-1", used: "Timed multi-shot prompts, reference images named by role, prompt order"}
+  - {title: "Sora 2: Prompting Guide", by: "OpenAI Cookbook", url: "https://developers.openai.com/cookbook/examples/sora/sora2_prompting_guide", used: "Short shots, one camera move and one action, motion in counted beats"}
+  - {title: "YouTube video ad creative: the ABCDs", by: "Think with Google", url: "https://business.google.com/us/think/future-of-marketing/youtube-video-ad-creative/", used: "Show the brand early, for the product on screen within 5 seconds"}

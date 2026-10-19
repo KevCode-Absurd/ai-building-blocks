@@ -1,15 +1,17 @@
 new_slug: get-different-video-ads-from-same-research
 name: "Four different video ads from one round of research"
-summary: "Give it your buyer and what you can prove. You get four kinds of video ad that each persuade a different way."
+summary: "Give it your buyer and what you can prove. You get four kinds of video ad that each sell a different way."
 job: make-video-ads
 
 headline: "Four different video ads from one round of research"
-subhead: Give it your buyer, the reason they buy, the length and what you can actually prove. It picks script types from a library of 19, spreads them so each ad is carried by something different, sets the feeling for each, and lists the types it skipped and why.
+subhead: Give it your buyer, the reason they buy, the length and what you can prove. It picks from 14 script types in four groups (talk, show, story, teach), spreads the batch so each ad sells through a different beat, sets each one's tone, and lists the types it skipped and why.
 
 explain: |
   Write four scripts from the same research with the same recipe and you get the same ad four times, with new words. Viewers and the ad platform treat them as one ad, so your test tells you nothing.
 
-  A script type is a different shape for the same truth: a different way in, a different order, a different thing doing the persuading. A confession, a list of three things, a customer who noticed the change and an offer up front can all sell the same product to the same buyer. This skill shortlists the types your facts can support (a type that needs a customer story or a test you don't have is skipped, never faked), spreads the batch across problem, how it works, proof and offer, and gives each script a starting feeling and an ending feeling. Pair it with a script-writing skill to write them.
+  A script type is a different shape for the same truth. One ad has a person talking to camera, one shows the product working, one tells a story, one teaches the viewer something. Each also hands the selling to a different beat: the problem, a doubt, how it works, the proof or the offer. This skill shortlists the types your facts can support (a type that needs a customer story or a test you don't have is skipped, never faked), takes one from each group where it can, and gives each script a starting and ending tone. Pair it with a script-writing skill to write them.
+
+  Every type uses the nine beats in the order taught in Blue Sense Digital's public masterclass, How To Write Meta Ads That Scale, and says where it changes that order. Matching types to what the buyer knows follows Eugene Schwartz.
 
 when:
   - Your last batch of ads all looked like versions of one ad.
@@ -19,11 +21,11 @@ when:
 you_give:
   - The buyer, the reason they buy and the offer
   - How much the buyer already knows, and the length
-  - What you can supply (how buyers cope now, what they tried, what nearly stopped them, process facts, a real customer account, time points, offer terms, a real shortcoming)
+  - What you can supply, such as what buyers tried, the doubt at checkout, process facts, a real customer story, a real shortcoming
   - How many scripts you want (optional, 4 by default)
 you_get:
-  - A batch of script types, each with what carries it, how it opens and its feeling
-  - The fact that meets each type's needs
+  - A batch of script types, each with its group, selling beat, opening and tone
+  - The fact that meets each type's needs, with its source
   - A list of skipped types, each with the reason
   - The scripts themselves, if you pair it with a writing skill
 
@@ -32,30 +34,30 @@ how_to_use:
   - Paste your buyer, the reason they buy, the offer and the length.
   - List what you can prove. Be honest about what you don't have; missing facts just skip types.
   - Read the skipped list. It shows which facts would open up more types.
-  - Take each chosen type to a script-writing skill, such as the one that writes from customer quotes or the nine-beat one.
+  - Take each chosen type to a script-writing skill, such as the one that writes from customer quotes.
 
 how_it_works:
   - title: Shortlists types
-    text: Checks all 19 types against your facts, how much the buyer knows and the length. A type that needs something you don't have is skipped.
+    text: Checks all 14 types against your facts, how much the buyer knows and the length. A type that needs something you don't have is skipped.
   - title: Spreads the batch
-    text: One type carried by the problem, one by how it works, one by proof, one by the offer or a doubt. Never two that open on the same fact.
+    text: One type from each group (talk, show, story, teach) where it can, at least three different selling beats, and never two that open on the same fact.
   - title: Loads each recipe
-    text: Takes the person, tense, beat order and where the product arrives for each type from the reference file.
-  - title: Sets the feeling
-    text: Gives each script a lead feeling and an ending feeling, each starting from something your research shows customers feel.
+    text: Takes the speaker, tense, beat order and where the product appears from the reference file.
+  - title: Sets the tone
+    text: Gives each script a starting tone and an ending tone, each matched to something your research shows customers feel.
   - title: Lists what it skipped
     text: Names every type left out and the missing fact or rule behind it.
 
 output_shape: |
   Batch: <n> scripts
 
-  <n>. <type> | carried by <beat> | opens <how it opens> |
-     feel: <lead feeling> -> <ending feeling>
+  <n>. <type> (<group>) | selling beat: <beat> |
+     opens on: <timeline point or fact> | tone: <start> -> <end>
      | needs met: <the fact, and where it came from>
   (one row per script)
 
-  Spread: <which beats carry the batch>. <check that no two open on
-  the same fact>
+  Spread: <groups used>, <selling beats used>, <check that no two
+  open on the same fact>
 
   Skipped types and why
   <type>   <reason, or MISSING: the fact it needs>
@@ -89,90 +91,83 @@ example:
   output: |
     Batch: 4 scripts
 
-    1. straight argument | carried by the problem | opens on how he
-       copes, said to "you" (the half-used tub at the back of the
-       cupboard) | feel: matter of fact -> relief
-       | needs met: quitting powders (buyer profile, review 3)
-    2. honest review | carried by the doubt | opens on what isn't
-       perfect: the first pack can taste odd | feel: matter of fact ->
-       joy | needs met: a real shortcoming (review 18, brand file note
-       that taste can take a few days)
-    3. three things | carried by how it works | opens on a count and an
-       open question (three things a habit needs, and the one powders
-       miss) | feel: matter of fact -> pride
-       | needs met: one pack a day (nothing to measure), no water or
-       shaker (nothing to wash), 21 vitamins and minerals and 6 g of
-       fiber (what's in it), each with what it means for him
-    4. daily routine | carried by proof | opens on a moment of an
-       ordinary morning, pack torn on the way out | feel: joy -> pride
-       | needs met: how and when customers use it (review 15) and the
-       survey, said as "of surveyed users"
+    1. Tries in a row (story) | selling beat: how it works (what the
+       powders missed) | opens on: Tries, the gritty powder, then a shelf of
+       separate gummies | tone: fed up -> relieved
+       | needs met: two tries (reviews 3 and 5)
+    2. Doubt first (talk) | selling beat: doubt | opens on: Last
+       doubt, "a gummy can't hold enough" | tone: matter of fact ->
+       confident | needs met: the buyer's doubt (brand file), answered
+       by one pack's 60+ ingredients, 21 vitamins and minerals and
+       6 g of fiber (product page)
+    3. Day in use (show) | selling beat: proof | opens on: a morning,
+       pack torn on the way out the door | tone: amused -> proud
+       | needs met: when and how it's used (review 15) and the survey,
+       said as "of surveyed users"
+    4. Flaw first (talk) | selling beat: doubt | opens on: a real
+       shortcoming, the first pack can taste odd | tone: matter of
+       fact -> pleased | needs met: review 18, and the brand file note
+       that taste can take a few days
 
-    Spread: problem, doubt, how it works, proof. No two open on the
-    same fact. No fear or guilt: the brand's voice rules them out, so
-    script 1 leads on matter of fact, not fear of loss.
+    Spread: story, talk, show; no teach type qualifies, so talk is
+    used twice and the batch says so. Selling beats: how it works,
+    doubt and proof. No two open on the same fact.
+    No worry or guilt: the brand's voice rules them out, so script 1
+    starts fed up, not worried.
 
     Skipped types and why
-    failed solutions  needs met (reviews 3 and 5), but it opens on the
-                      same powder fact as script 1. Swap it in if you
-                      drop script 1.
-    objection first   needs met (the "can't hold enough" doubt). The
-                      batch is full; swap it for script 2 if you'd
-                      rather not raise taste.
-    confession        needs a real customer telling her own story with
-                      stakes; an AI presenter can't
-    unaware observation  wrong stage: this buyer knows the problem
-    discovery         MISSING: one true cause to teach. The study shows
-                      absorption only.
-    category call-out "gritty/chalky" is one customer's words, and it
-                      opens on the powder again
-    timeline, days in MISSING: time points and a day count Sprout holds
-    how it's made     real facts (pectin base, testing), but they
-                      answer "is it clean", a doubt this buyer doesn't
-                      have
-    witness           MISSING: a real account of someone else noticing
-    demonstration     no visible result; the tear and pour already sit
-                      inside scripts 3 and 4
-    side by side      MISSING: a real test against rivals
-    price of the problem  "$94 a month" is one reviewer's powder bill,
-                      not a cost the business states
-    offer first, identity led  wrong stage: these suit buyers who
-                      already know Sprout
+    The real cause   MISSING: one true cause to teach. The study shows
+                     absorption only.
+    Time-lapse       MISSING: time points Sprout can back
+    Making of        real facts (pectin base, testing), but they answer
+                     "is it clean", a doubt this buyer doesn't have
+    Straight case    needs met, but its Before point is the powder
+                     again, the same fact script 1 opens on
+    Turning point    needs a real customer telling her own Trigger
+                     day; an AI presenter can't
+    Someone noticed  MISSING: a real account of someone else noticing
+    Mirror           wrong stage: this buyer knows the problem
+    Show it working  no visible result; the tear and tip already sit
+                     inside script 3
+    Line-up          MISSING: a real test against rivals
+    Offer up front   wrong stage: suits buyers who already know Sprout
 
 tweaks:
   - what: How many scripts
-    how: Ask for 3, 4 or 6. Above 4 it still keeps no more than two scripts carried by the same beat, so bigger batches need more facts.
+    how: Ask for 3, 4 or 6. Above 4 it still needs a different opening fact for each script, so bigger batches need more facts.
   - what: What you can supply
-    how: Each fact you add can open a type. Two failed fixes from reviews open "failed solutions"; a real shortcoming opens "honest review"; a process decision opens "how it's made".
+    how: Each fact you add can open a type. Two things buyers tried open "Tries in a row"; a real shortcoming opens "Flaw first"; a decision in how it's made opens "Making of".
   - what: Length
-    how: Stories need about 60 seconds and a timeline needs longer. At 30 seconds the shortlist leans to demonstration, three things and offer first.
-  - what: Feelings your brand avoids
-    how: Say if your voice rules out fear or guilt. It takes the nearest allowed feeling and says so.
+    how: Stories need about 45 seconds or more, and a time-lapse 60 or more. At 30 seconds the shortlist leans to Show it working, Doubt first and Offer up front.
+  - what: Tones your brand avoids
+    how: Say if your voice rules out worry or guilt. It takes the nearest allowed tone and says so.
 
 judge:
-  - Each script would be called a different ad from its neighbor.
+  - Each script would be called a different ad from its neighbour.
   - Each type's needs are met by a fact you supplied, named next to it.
-  - No more than two scripts are carried by the same beat.
+  - The batch uses at least three selling beats and, where facts allow, all four groups.
   - Two types never open on the same fact.
   - Every skipped type has a reason, and missing facts are marked.
 
 test:
-  - Leave out any customer story. "Witness" and "confession" should land in the skipped list with a reason, never in the batch with a made-up account.
-  - Run it twice on the same input. The beats carrying the batch should stay spread the same way, even if the types differ.
-  - Read the four opening descriptions aloud to a colleague. If two sound like the same ad, ask for a swap from the skipped list.
-  - Add one new fact (a real shortcoming, say) and run it again. The type it unlocks should appear in the batch or move up the skipped list.
+  - Leave out any customer story. "Someone noticed" and "Turning point" should land in the skipped list, never in the batch with a made-up account.
+  - Run it twice on the same input. The groups and selling beats should spread the same way, even if the types differ.
+  - Read the four openings aloud to a colleague. If two sound like the same ad, ask for a swap from the skipped list.
+  - Add one new fact (a real process decision, say) and run it again. The type it opens should appear in the batch or move up the skipped list.
 
 improve:
-  - Keep a standing list of what your business can supply (failed fixes, shortcomings, process facts, time points) in "What you need" in the skill file, and add to it as you learn more.
-  - Write your brand's banned feelings (fear, guilt) into step 4, so the feeling plan always fits your voice.
-  - Add a note to the type library for types that have won for you, so the shortlist tries them first.
+  - Keep a standing list of what your business can supply (what buyers tried, shortcomings, process facts, time points) in "What you need" in the skill file, and add to it as you learn more.
+  - Write your brand's banned tones (worry, guilt) into step 4, so the tone plan always fits your voice.
+  - Add a note to the type recipes for types that have won for you, so the shortlist tries them first.
   - Test the whole batch at once on the same audience, and save which type won to your brand file.
-  - Pair it with a skill that writes a video ad script from customer quotes, to write each chosen type.
+  - Pair it with the skill that writes a video ad script from customer quotes, to write each chosen type.
 
 terms:
   - term: Script type
-    meaning: A shape for a script, such as a confession or a demonstration, with its own opening, order and thing doing the persuading.
-  - term: Carried by
-    meaning: The part of the argument doing most of the selling (the problem, a doubt, how it works, proof or the offer).
-  - term: Lead and ending feeling
-    meaning: The feeling the script opens with and the one it ends on. The move between them is the script's shape.
+    meaning: A shape for a script, such as Tries in a row or Show it working, with its own opening, order and selling beat.
+  - term: Group
+    meaning: What the viewer is watching. A person talking, something shown, a story lived, or a lesson taught.
+  - term: Selling beat
+    meaning: The part of the script doing most of the selling (the problem, a doubt, how it works, proof or the offer).
+  - term: Starting and ending tone
+    meaning: How the script feels at the opening and at the call to action. The change between them happens at the promise.

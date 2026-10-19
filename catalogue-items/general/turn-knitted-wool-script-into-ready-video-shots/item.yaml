@@ -1,7 +1,7 @@
 slug: turn-knitted-wool-script-into-ready-video-shots
 renamed_from: knitted-wool-video-ad-director
-name: "Turn your knitted wool script into ready-to-make video shots"
-summary: "Fixed look wording, doll descriptions, still and clip prompts that keep every frame knitted."
+name: "Turn your knitted script into video clips"
+summary: "One material sentence, a doll card, reference stills and clip prompts where yarn moves only as yarn can, so every frame stays wool."
 category: general
 boards: [ecommerce]
 type: skill
@@ -19,5 +19,12 @@ uses: [get-knitted-wool-ad-script-that-sells]
 example: wool
 origin: rebuilt
 source_ids: [CES-151]
-old_name: wool-crochet-animation
-version: 1.0.0
+version: 2.0.0
+credits:
+  - {title: "Knitting", by: "Wikipedia contributors", url: "https://en.wikipedia.org/wiki/Knitting", used: "Stitch looks for each surface, intarsia, yarn thickness and detail"}
+  - {title: "Amigurumi", by: "Wikipedia contributors", url: "https://en.wikipedia.org/wiki/Amigurumi", used: "Crocheted, firmly stuffed figures and objects"}
+  - {title: "Plying", by: "Wikipedia contributors", url: "https://en.wikipedia.org/wiki/Plying", used: "How strands twist into one yarn"}
+  - {title: "Stop motion", by: "Wikipedia contributors", url: "https://en.wikipedia.org/wiki/Stop_motion", used: "Knitted and fabric puppets as a stop-motion material"}
+  - {title: "Inbetweening", by: "Wikipedia contributors", url: "https://en.wikipedia.org/wiki/Inbetweening", used: "Animating on twos, about 12 drawings a second"}
+  - {title: "Prompting Guide", by: "Runway Academy", url: "https://academy.runwayml.com/prompt-guide", used: "Image-to-video prompts that describe motion only, positive phrasing, locked-off camera, timed steps"}
+  - {title: "Video generation prompt guide", by: "Google Cloud", url: "https://docs.cloud.google.com/vertex-ai/generative-ai/docs/video/video-gen-prompt-guide", used: "Framing terms, named camera moves, avoid lists as plain nouns, sound in its own sentence"}

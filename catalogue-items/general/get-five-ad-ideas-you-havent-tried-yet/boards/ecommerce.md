@@ -1,21 +1,22 @@
 # Get five ad ideas you haven't tried yet: for online stores
 
-## Decide first: used up, or bought once
-The gaps sit in different places for each.
+## First, is it used up or kept?
+Store ads tend to bunch in different places for each, so the empty places differ too.
 
-| | Used up (cream, snack, powder) | Bought once (pan, jacket, bag) |
+| | Used up (a snack, a cream, a supplement) | Kept (a pan, a bag, a lamp) |
 |---|---|---|
-| Ads usually cover too much of | The first try: taste, feel, an opening offer | The product as an object: studio pictures, a feature list |
-| Gaps usually found | The daily moment it fits into; the buyer who tried it and stopped; what's in it and why; the returning buyer | The moment the old one fails; proof it lasts (a year on); how to care for and use it; fit; returns and warranty; the comparison with keeping what they own; the gift |
-| Motives most often left unsaid | Control, ease, relief | Being seen well, "this is who I am", feeling safe about the money spent |
-| Products section | Sizes, flavours, the bundle, the subscription | The second purchase: an accessory, a part, a matching piece |
+| Ads usually crowd into | The first order: taste, texture, a starter price | The object itself: studio shots and a feature list |
+| Moments often left open | The daily slot it fits into; restarting after a lapse; the refill day; sharing it at home | The day the old one breaks; week three of owning it; looking after it; giving it as a gift |
+| Values often left unsaid | Less worry, less effort, feeling in control | Looking good to others, money well spent, "this is me" |
+| Form gaps to check | Sizes, flavours, bundles, the subscription | The add-on, the spare part, the matching piece |
 
-## Format checklist for stores
-- Used up: a person to camera with a real moment of use; an image with three short points; a reaction to taste, feel or scent; a new flavour or batch as real news.
-- Bought once: a demonstration (working, being cared for, after a year); a side-by-side with the thing it replaces; an image of it in a real room or on a real person; a customer a year on.
-- What tends to fail. Used up: an ingredient list with no result, "feel your best", a price-led ad for a premium product. Bought once: a feature list with no moment, a studio picture with nothing to show size, urgency with no reason, "quality" with nothing to show for it.
+## Formats that suit each
+- Used up: a person mid-routine using it; a close-up reaction to the taste or smell; an image with three short facts; a new batch or flavour told as news.
+- Kept: a demo after months of wear; a side by side with what it replaces; a shot in a home that shows its size; an owner showing theirs after a long while.
+- Ads that tend to fall flat. Used up: a list of what's inside with no result; vague "feel good" lines; leading with price on a premium product. Kept: specs with no moment of use; a white-background shot with no sense of size; a countdown with no reason; the word "quality" with nothing to show it.
 
 ## Extra things to give it, and extra checks
-- Your product list and bundles. Real urgency only from recent changes.
-- Formats that need a real person: confirm who may appear and with what permission before listing them as opportunities.
-- Any fact about using the product in an idea (how it opens, how it's worn or used) comes from the product record in the brand file, not from the idea writer's imagination.
+- Your product list and bundles, so lens 5 can count ads per product.
+- Who may appear on camera and with what permission, before any format that needs a person counts as open.
+- Any detail of how the product opens, is worn or is used comes from the product record in the brand file, never from the idea writer.
+- Real urgency only from the recent changes.

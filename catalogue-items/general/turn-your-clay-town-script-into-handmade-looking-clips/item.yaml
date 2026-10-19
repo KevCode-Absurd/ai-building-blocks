@@ -1,7 +1,7 @@
 slug: turn-your-clay-town-script-into-handmade-looking-clips
 renamed_from: clay-world-video-ad-director
 name: "Turn your clay town script into handmade-looking clips"
-summary: "Still and clip prompts for a narrated clay-world ad that looks handmade, with your label readable."
+summary: "A set bible, reference images, and still and clip prompts for a narrated clay-town ad, with one figure moving at a time and your label readable."
 category: general
 boards: [ecommerce]
 type: skill
@@ -19,5 +19,10 @@ uses: [get-a-clay-town-ad-script-with-a-crowd, turn-claymation-script-into-ready
 example: clay-world
 origin: rebuilt
 source_ids: [CES-019]
-old_name: claymation-animation
-version: 1.0.0
+old_name: clay world shot planner
+version: 2.0.0
+credits:
+  - {title: "Animation: Wallace & Gromit - Vengeance Most Fowl", by: "Marc Loftus, Post Magazine, interviewing supervising animator Will Becher", url: "https://www.postmagazine.com/Publications/Post-Magazine/2024/November-December-2024/Animation-I-Wallace-Gromit-Vengeance-Most-Fowl-I.aspx", used: "Figures animated on every other frame while the camera moves every frame; one scale; gel and resin stand-ins"}
+  - {title: "Using Blur to Affect Perceived Distance and Size", by: "Robert T. Held, Emily A. Cooper, James F. O'Brien and Martin S. Banks, ACM Transactions on Graphics, 2010", url: "https://escholarship.org/uc/item/3ts0x35k", used: "Shallow focus makes a scene read as miniature, for the lens line"}
+  - {title: "The ultimate prompting guide for Veo 3.1", by: "Khulan Davaajav and Hussain Chinoy, Google Cloud", url: "https://cloud.google.com/blog/products/ai-machine-learning/ultimate-prompting-guide-for-veo-3-1", used: "Prompt order, reference images named by role, first and last frame for transitions"}
+  - {title: "Sora 2: Prompting Guide", by: "OpenAI Cookbook", url: "https://developers.openai.com/cookbook/examples/sora/sora2_prompting_guide", used: "Short clips, one action and one camera move, counted beats, a fixed palette"}

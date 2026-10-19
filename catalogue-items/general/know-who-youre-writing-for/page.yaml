@@ -1,83 +1,78 @@
 new_slug: know-who-youre-writing-for
 name: "Know exactly who you're writing for"
-summary: "Paste your offer and some reviews. You get a half-page note on your buyer and one sentence to write from."
+summary: "Paste your offer and some reviews. You get a half-page brief on what makes your buyer switch, and what stops them."
 job: understand-customers
 
 headline: "Know exactly who you're writing for"
-subhead: Paste your offer and real buyer evidence, such as reviews, support emails or survey answers. It works out how much the buyer knows, what they want most, what they've tried and what holds them back, then hands you one sentence to write from.
+subhead: Paste your offer and real buyer evidence, such as reviews, support emails or survey answers. It sorts their words into what pushes them, pulls them, worries them and holds them back, then tells you which one your copy must work on.
 
 explain: |
-  Most copy misses because the writer is aiming at a label ("busy mums 30 to 45") or at three wants at once. The result is copy that tries to say everything to everyone, and lands with no one.
+  Most copy misses because it's aimed at a label ("busy mums 30 to 45") or at everything at once. It describes the problem to people who already feel it, and skips the worry that's really stopping them.
 
-  This skill reads your buyer evidence and settles the questions before anyone writes a line. How much does the buyer already know about the problem and about you? How many times have they heard this promise before? What is the one want they live with today, in their own words? What did they try, and why did it fail? How big a change are you asking for? It fills each answer only from the evidence, names every gap as a gap, and ends with one aim sentence the writer works from. None of its wording goes into the copy itself.
+  This skill reads your buyer evidence the way switching research does. Buyers move when the push of the problem and the pull of something better outweigh their fear of the new and the comfort of habit. It quotes your buyers for each of those four forces, places them on Eugene Schwartz's five levels of awareness, and judges how much the market has already heard. Then it picks the one force your copy must move, and ends with a one-line job statement the writer works from.
 
 when:
   - You're about to write an ad, a page, an email or a script and want to aim it first.
-  - You have a pile of reviews and want to know what they say about your buyer.
-  - A writer, or an AI, keeps giving you copy that tries to say everything.
+  - You have a pile of reviews and want to know what they say about why people buy.
+  - Your copy explains the problem well, but people still don't buy.
 
 you_give:
   - Your offer in a few lines, what you sell, the price and the terms
-  - Buyer evidence, such as reviews, support messages, survey answers, call notes or forum posts
+  - Buyer evidence, such as reviews, support messages, survey answers, call notes or cancellation reasons
   - Where the copy will run (optional)
-  - Your brand file, with voice, offers, approved claims and buyer groups (optional)
+  - Your brand file, with voice, offers, approved claims and what competitors promise (optional)
 you_get:
-  - One aim sentence that says who it's for, what they want, what they tried and how to open
-  - How much the buyer knows, with the evidence that shows it
-  - The one want, a short sketch of the buyer, and the size of the change you're asking for
-  - A list of gaps the evidence couldn't fill
+  - A job line that says when they look, what they want, and what stops them
+  - How aware the buyer is, and how much the market has already heard, with the evidence
+  - The four forces in your buyers' own words, and the one your copy must work on
+  - A bank of buyer phrases to borrow, and a list of gaps to ask customers about
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste your offer in three or four lines.
-  - Paste the buyer evidence as written. Include the unhappy reviews; they hold the real doubts.
-  - Say where the copy will run, if you know.
+  - Paste the buyer evidence as written. Include unhappy reviews and cancellation reasons; they hold the fears.
+  - Add what competitors promise, if you know, so it can judge what the market has heard.
   - Read the gaps list. Each one is a question worth asking your customers.
 
 how_it_works:
-  - title: Places the buyer
-    text: Picks one of five levels, from doesn't know the problem to knows this product and needs a reason, and quotes the evidence.
-  - title: Counts the promise
-    text: Judges whether the buyer has heard this promise rarely, often or from everyone, which decides how much proof the copy needs.
-  - title: Finds the one want
-    text: Takes it from what buyers say and do. If two wants compete, it picks the one they live with today.
-  - title: Sketches the buyer
-    text: What they live through, what they do about it, what they tried, the belief that holds them back. Each line from evidence, or marked as a gap.
-  - title: Sizes the change
-    text: Decides whether you're asking them to add one thing, swap one thing, or change their whole routine.
-  - title: Picks one idea
-    text: One argument, one feeling, one action, then the aim sentence that ties it together.
+  - title: Finds the moment
+    text: Quotes what happened right before buyers started looking, as a situation, never a label.
+  - title: Sorts four forces
+    text: Push, pull, fear of switching and habit, each with your buyers' own words, or marked as a gap.
+  - title: Places awareness
+    text: Puts the buyer on Schwartz's five levels, from unaware to most aware, and names the evidence.
+  - title: Judges what they've heard
+    text: Decides whether your promise is new, common, or so common the copy must show how it works.
+  - title: Picks one force
+    text: Chooses the force your copy must move. Loud fear means proof and risk removal; weak push means making the problem felt.
+  - title: Writes the job line
+    text: When this happens, I want this, so I can do this. What stops me is this.
 
 output_shape: |
-  AIM
-  For <who buys>, who wants <what>, after trying <what>, the way in is
-  <how to open>.
+  JOB LINE
+  When <the moment>, I want to <the progress>, so I can <what it gives
+  them>. What stops me: "<fear or habit, in their words>".
 
-  HOW MUCH THEY KNOW
+  AWARENESS
   <one of five levels>, because <evidence>
 
-  HOW OFTEN THEY'VE HEARD THE PROMISE
-  <rarely / often / from everyone>, because <evidence>
+  WHAT THE MARKET HAS HEARD
+  Stage <1 to 5>, because <evidence>
 
-  THE ONE WANT
-  <the want>. In their words: "<phrase>" / "<phrase>"
+  FOUR FORCES
+  Push:   "<quote>"
+  Pull:   "<quote>"
+  Fear:   "<quote>"
+  Habit:  "<quote>" or MISSING
 
-  BUYER SKETCH
-  Lives through:  <...>
-  Does now:       <...>
-  Tried:          <... and why it failed>
-  Feels:          <...>
-  Holding back:   <the belief, as they'd say it>
-  Under the want: <...>
+  WORK ON
+  <the one force>, which means the copy <what to spend words on>
 
-  CHANGE SIZE
-  <add one thing / swap one thing / change the whole routine>
-
-  THE ONE IDEA
-  <one argument, one feeling, one action>
+  WORD BANK
+  "<phrase>" / "<phrase>" / ...
 
   GAPS
-  MISSING: <what the evidence didn't show>
+  <each as a question to ask customers>
 
 example:
   business: sprout
@@ -107,78 +102,77 @@ example:
 
     Where it runs: a Facebook ad
   output: |
-    AIM
-    For people who've quit greens powders, who want one supplement they
-    keep taking, after trying gritty powders and a pile of separate
-    gummies, the way in is the habit they keep breaking.
+    JOB LINE
+    When I've paid for greens again and stopped taking them, I want one
+    I keep taking, so I can stop managing a shelf of bottles. What stops
+    me: "They are expensive".
 
-    HOW MUCH THEY KNOW
-    Knows the kind of product and is comparing (reviews 1, 3, 5).
+    AWARENESS
+    Solution aware. They know greens supplements and have tried them
+    (reviews 1, 3, 4).
 
-    HOW OFTEN THEY'VE HEARD THE PROMISE
-    Often. They've paid for greens before (reviews 1, 3, 4), so the
-    promise needs a how: why this one gets taken.
+    WHAT THE MARKET HAS HEARD
+    Stage 3. Review 1 says "The issue has never been nutritive content",
+    so the nutrients promise is old news. The copy must show how this
+    one gets taken every day.
 
-    THE ONE WANT
-    To keep taking it. In their words: "the one thing I've been able to
-    stick to" / "I WANT to take [Sprout] and don't forget"
+    FOUR FORCES
+    Push:   "the drink was definitely gritty/chalky" / "choking on"
+    Pull:   "the one thing I've been able to stick to" / "I WANT to take
+            [Sprout] and don't forget"
+    Fear:   "They are expensive"
+    Habit:  MISSING. Every review is from someone who already switched.
 
-    BUYER SKETCH
-    Lives through:  buying greens and not keeping it up ("an issue of
-                    consistency")
-    Does now:       MISSING (every review is from someone who already
-                    switched)
-    Tried:          greens powders ("gritty/chalky", "choking on") and
-                    separate gummies for each vitamin
-    Feels:          put off by the taste and the cleanup ("choking on",
-                    "clean a shaker bottle")
-    Holding back:   price ("They are expensive")
-    Under the want: one less thing to manage ("easier for me to manage")
+    WORK ON
+    Fear. The push and pull are loud in these reviews, so the copy
+    shouldn't spend its words on the problem. It should put the real
+    price per day beside the first-order guarantee and its limit.
 
-    CHANGE SIZE
-    Swap one thing: the powder for a pack.
-
-    THE ONE IDEA
-    Greens you keep taking, because there's nothing to mix or wash.
+    WORD BANK
+    "stick to" / "gritty/chalky" / "choking on" / "clean a shaker
+    bottle" / "easier for me to manage" / "I WANT to take"
 
     GAPS
-    MISSING: what they use right now, from people who haven't bought yet
-    MISSING: whether "can a gummy hold enough?" worries them. It's in
-             the brand file, but none of these reviews say it.
-    MISSING: whether price stops them at the first order or at renewal
+    - What do people who haven't bought yet use now, and why do they stay?
+    - Is the price worry about the first box or the renewal?
+    - Does "can a gummy hold enough?" worry them? The brand file says so,
+      but none of these reviews do.
 
 tweaks:
   - what: The evidence you paste
-    how: Reviews tell you about people who bought. Support messages and cancellation reasons tell you about doubts. Paste both for a fuller sketch.
+    how: Reviews come from people who already switched, so they show push and pull. Cancellation reasons and support messages show fear and habit. Paste both for all four forces.
   - what: Which buyer
-    how: If your evidence mixes different kinds of buyer, add "focus on buyers who mention X" to get one clear read instead of a blend.
-  - what: Where it runs
-    how: Name the channel. It doesn't change the read, but it helps the aim sentence suggest an opening that fits.
+    how: If your evidence mixes different kinds of buyer, add "focus on buyers who mention X" to get one clear brief instead of a blend.
+  - what: Competitor promises
+    how: Paste what three competitors promise. It makes the market stage a judgement from evidence instead of a guess.
   - what: No evidence at all
-    how: It will stop after placing the buyer, label it "assumed", and give you three questions to ask customers. Use those before writing.
+    how: It will mark the awareness level as assumed and give you three questions to ask customers. Ask them before writing.
 
 judge:
-  - The aim sentence is complete and uses words your buyers use.
-  - Every phrase in quotes appears in the evidence you pasted. Search for two of them.
-  - There's exactly one want and one idea.
-  - Gaps are listed as gaps, not filled with guesses.
-  - The sketch describes what the buyer lives through, not an age group or a job title.
+  - Every quote appears word for word in the evidence you pasted. Search for two of them.
+  - There's exactly one force to work on, with a reason.
+  - Forces with no evidence are marked as gaps, not filled with guesses.
+  - The job line describes a moment, not an age group or a job title.
+  - The market stage names the evidence it rests on.
 
 test:
-  - Run it on reviews from a buyer group you know well. If the aim sentence describes someone you don't recognise, check which reviews it leaned on.
-  - Run it twice on the same evidence. How much they know and the one want should match. If they don't, add "focus on buyers who mention X" to narrow it.
-  - Search your evidence for two of the phrases it quotes. Both should be there word for word.
-  - Give the aim sentence to a writer, and compare their draft with one written without it. The aimed draft should open on the buyer, not the product.
+  - Run it on reviews from a buyer group you know well. If the job line describes someone you don't recognise, check which reviews it leaned on.
+  - Run it twice on the same evidence. The awareness level and the force to work on should match.
+  - Add a batch of cancellation reasons and run it again. The fear and habit lines should fill in.
+  - Give the brief to a writer and compare their draft with one written without it. The aimed draft should spend its words on the chosen force.
 
 improve:
-  - Add the buyer groups from your brand file to "What you need" in the skill file, so step 1 places each group the same way every run.
-  - If your market is crowded, write what every competitor promises into step 2, so it can tell how often buyers have heard the promise.
-  - Remove fields from the sketch in step 4 that never matter for you, and add one that does (for example "who else at home uses it").
-  - Save each aim sentence and sketch to your brand file, one per buyer group.
-  - Pair it with "Open your sales copy the way your buyer needs" or "Get headlines a stranger understands at a glance", which both start from this note.
+  - Add the buyer groups from your brand file to "What you need" in the skill file, so step 3 places each group the same way every run.
+  - Write what your main competitors promise into step 4, so the market stage is judged the same way every time.
+  - Save each brief to your brand file, one per buyer group, and update it when new reviews come in.
+  - Pair it with "Open your sales copy the way your buyer needs" or "Openings that stop the right people scrolling", which both start from this brief.
 
 terms:
   - term: Buyer evidence
     meaning: Anything your buyers wrote or said in their own words, such as reviews, emails or survey answers.
-  - term: Aim sentence
-    meaning: One sentence that says who the copy is for, what they want, what they tried and how the copy should open.
+  - term: Four forces
+    meaning: Push (what's wrong now), pull (what's better), fear (of switching) and habit (the comfort of the old way).
+  - term: Awareness level
+    meaning: How much the buyer knows, from not knowing they have the problem to knowing your product and only needing the deal.
+  - term: Job line
+    meaning: One sentence that says when the buyer looks, what they want, and what stops them.

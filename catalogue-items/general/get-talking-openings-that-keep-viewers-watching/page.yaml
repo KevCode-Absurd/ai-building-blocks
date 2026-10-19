@@ -1,77 +1,75 @@
 new_slug: get-talking-openings-that-keep-viewers-watching
 name: "New openings that keep people watching your ad"
-summary: "Give it an ad you run and your product photos. You get two or three new 6-second openings and their prompts."
+summary: "Give it an ad you run and your product photos. You get three new 6-second openings and their prompts."
 job: make-video-ads
 
 headline: "New openings that keep people watching your ad"
-subhead: Give it the ad you already have, your product photos and your buyer. It writes 2 or 3 opening lines that each stop scrolling a different way, and the prompts to make them with a made-up AI presenter who lifts your product on a cue word.
+subhead: Give it the ad you already run, your product photos and your buyer. You get three spoken openings that each stop the scroll a different way, sized to fit the clip, with the prompts to make them with a made-up AI presenter.
 
 explain: |
-  Most people see only the first few seconds of an ad. If the opening doesn't hold them, the rest never gets seen, however good it is. Writing a whole new ad to fix that is slow. Swapping in a new opening and testing it is fast.
+  Most people see only the first few seconds of an ad. If the opening doesn't hold them, the rest never gets seen. Writing a whole new ad to fix that is slow. Putting a new opening in front of the ad you have, and testing it, is fast.
 
-  This skill writes openings that lead straight into your ad's first line. Each one uses a different way to stop the scroll: a habit the right buyer recognizes, a customer's real words, a doubt named before they think it, a number said plainly. Each is 18 words or fewer, said by a made-up adult presenter in one real-looking room, with your product lifted into view on one cue word. It never lets the AI presenter claim a personal result, and every fact comes from your brand, word for word.
+  This skill writes three openings that lead straight into your ad's first line. Each one makes a different move: it mirrors the buyer's day, asks a question your ad answers, promises what they'll see, leads with proof, or flips a belief. TikTok advises testing a few creatives that differ a lot, so it gives you three, not ten. Each line is counted against the clip at a normal speaking pace. Your product is in frame from the first second, and the presenter never claims a result only a real customer could have.
 
 when:
   - You have an ad that explains well but loses people in the first seconds.
-  - You want to test several openings on the same ad without filming a new one.
+  - You want to test new openings on the same ad without filming a new one.
   - You need a talking opening but don't have a creator available.
 
 you_give:
-  - The ad you already run (its first spoken line, first frame, who's in it and where)
-  - Your product photos (front, in hand, in use), how it's used and what it replaces
-  - Your buyer, what almost stops them, their own words, and your approved claims
+  - The ad you already run (its first spoken line, its first frame, and the script if you have it)
+  - Your product photos (front, in hand, in use), how it's handled and what it replaces
+  - Your buyer, their main doubt, their own words, and the claims you can back
   - An approved AI presenter, if you have one (optional)
   - The clip length your video tool makes (optional, 6 seconds by default)
 you_get:
-  - A line-up of 2 or 3 openings, each with a different approach, a cue word and a pace
+  - Three openings, each with its move, word count, delivery and the ad line that pays it off
   - Fixed descriptions of the presenter and the room
-  - An opening image prompt and a video clip prompt for each opening
-  - A checklist for the finished clips and what to deliver
+  - An opening image prompt and a clip prompt for each opening
+  - Checks for the finished clips and what to deliver
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Paste the first line of your existing ad and describe its first frame. The full script is better.
-  - Paste your brand facts, approved claims and a few real reviews. Attach product photos.
-  - Approve one opening line before anything is made. Read it aloud with your ad's first line.
+  - Paste the first line of your ad and describe its first frame. The full script is better.
+  - Paste your brand facts, the claims you can back and a few real reviews. Attach product photos.
+  - Read each opening aloud, then your ad's first line. Approve one before anything is made.
   - Make the opening image, then one clip, then the rest. Test each opening on the same ad as separate ads.
 
 how_it_works:
-  - title: Applies the rules
-    text: Each line is written against your ad, said by a made-up adult who claims nothing only a real customer could, 18 words or fewer, ending on a closed mouth.
-  - title: Picks the presenter
-    text: Reuses your approved presenter, or offers three from your buyer profile. Never a look-alike of a real creator.
-  - title: Chooses an approach for each
-    text: Picks from recognizable habit, customer quote, doubt first, number first and others, only where your facts support it.
-  - title: Sets a pace
-    text: Quiet, fast or direct, described as what you see and hear. At most one quiet opening per batch.
-  - title: Checks each line
-    text: Fits the clip with half a second to spare, every fact word for word, and leads into your ad's first line.
-  - title: Shapes the 6 seconds
-    text: Presenter mid-thought at 0, the line, the product lifted on the cue word around second 4, a still last half second.
+  - title: Picks three moves
+    text: From mirror, gap, promise, proof and flip, only where your facts support it. Each one names the line in your ad that pays it off.
+  - title: Counts the words
+    text: About 2.5 spoken words a second, with time to settle and a still second at the end. That's 11 words for 6 seconds, 16 for 8.
+  - title: Shows the product early
+    text: It's in frame from the first frame, label to the lens. The presenter touches it once, when the line names it.
+  - title: Sets two dials
+    text: Energy (calm, level or lively) and distance (close or propped). One opening matches your ad's first frame so the cut feels like one video.
+  - title: Keeps it honest
+    text: A made-up adult who speaks in "you", never "I tried it". Every fact is your brand's, word for word.
   - title: Writes the prompts
-    text: An opening image, then a clip prompt in phone-video words, with no music, no subtitles and no film terms.
+    text: An opening image, then a clip prompt in phone-video words, with no music in the clip and no film terms.
 
 output_shape: |
-  LINE-UP (cue word in *stars*)
-  <n> <approach> | <pace> | <words>
-    "<opening line with the *cue* word>"
-    Room: <room>. Product: <where it starts, when it's lifted>
-    Leads into: <the ad's first line, and what pays it off>
-  Not used: <approaches the facts don't support, and why>
+  LINE-UP
+  <n> <move> | <words>/<budget> | energy <dial>, <distance>
+    "<opening line>"
+    Product: <where it sits>. Touch: <tap / turn / nudge, on which word>
+    Paid off by: <the ad line that answers or delivers it>
+  Not used: <moves the facts don't support, and why>
 
   PRESENTER  <fixed description, a made-up adult>
   ROOM       <the one room and its light>
 
-  OPENING IMAGE (<opening>)
+  OPENING IMAGE
   Attach: <each reference and what it's for>. <first frame>
 
   CLIP PROMPT (<opening>)
-  <aspect, length, speed, references, place, objects, camera>
-  <0-4 s line>, <cue and lift>, <last half second still>
-  Voice: <age, pace, traits, accent>. Sound: <room, product, no music>
+  <aspect, length, speed, references, room, objects, camera>
+  <the line, the touch, the still last second>
+  Voice: <age, pace, accent>. Sound: <room only, no music>
 
   CHECKS PER CLIP  <what to check>
-  DELIVER  <raw clip, last frame, line, approach>
+  DELIVER  <raw clip, last frame, line, move>
   MISSING: <facts it needed and didn't get>
 
 example:
@@ -84,112 +82,107 @@ example:
     Line 4: "Sprout is 60+ ingredients, 21 vitamins and minerals and
     6 g of fiber in one daily pack."
     First frame: our approved AI presenter (man, early 30s) at a
-    kitchen counter, morning, holding a half-used powder tub.
+    kitchen counter, morning, holding a half-used powder tub, at
+    arm's length, level voice.
     Product: Sprout. Photos attached: pouch front, one daily pack in a
     hand, gummies in a palm. One pack a day, torn straight across the
     top. Visible result: none.
-    Buyer: the quitter who wants to stick, 28 to 45. Doubts: "A gummy
-    can't hold enough to replace my powder." "They are expensive."
+    Buyer: the quitter who wants to stick, 28 to 45. Doubt: "A gummy
+    can't hold enough to replace my powder."
     Review 1: "[Sprout] has been the one thing I've been able to stick
     to." (already used as line 6 of the ad)
-    Approved claims: "60+ ingredients, 21 vitamins & minerals, and 6g
-    fiber" in 1 pack.
     Never say: fix, energy or immunity results, weight loss.
     Real deadline: none.
   output: |
-    LINE-UP (cue word in *stars*)
-    1 Put it down | Fast | 15 words
-      "Put the shaker down. Your daily greens can come in a little
-      pack you *tear*."
-      Room: kitchen counter. Product: a daily pack low in his hand,
-      lifted to chest height on "tear", front to the lens, not torn.
-      Leads into: "You bought the big tub of greens powder. Again."
-    2 Recognizable habit | Direct | 12 words
-      "Scoop, shake, gag, then the shaker sits in the sink till
-      *Friday*."
-      Product: the pack on the counter, lifted on "Friday".
-      Leads into the same first line; the ad's line 2 (the sludge in
-      the shaker) pays off the habit.
-    3 Doubt first | Direct | 12 words
-      "Think a handful of gummies can't hold much? Wait for the
-      *numbers*."
-      Product: pack in hand, lifted on "numbers".
-      Pays off: the ad's line 4 says the numbers word for word.
-    Not used: watch this (no visible result), customer quote (the ad
-    already uses the strongest review), number first (line 4 already
-    says the numbers), replaces these (no approved claim that it
-    replaces powder), real deadline (none). No quiet pace: the ad
-    opens bright.
+    LINE-UP
+    1 Mirror | 11/11 | energy level, arm's length (matches the ad)
+      "Shaker in the sink since Monday? This pack needs no water."
+      Product: a daily pack in his free hand, low, front to the lens.
+      Touch: he turns the pack's front square to the lens on "This pack".
+      Paid off by: "You bought the big tub of greens powder. Again."
+    2 Gap | 11/11 | energy lively, arm's length
+      "How much fits in one little pack? Stay for the label."
+      Product: the pack held up beside his face from frame one.
+      Touch: he taps the pack on "label".
+      Paid off by: line 4 reads the label's numbers word for word.
+    3 Flip | 11/11 | energy calm, propped at mid shot
+      "You're not bad at supplements. Powder is hard to keep up."
+      Product: pack on the counter beside the powder tub.
+      Touch: he nudges the tub away on "Powder"; the pack stays.
+      Paid off by: the ad's tub-and-shaker routine in lines 1 and 2.
+    Not used: proof (line 4 already says the numbers; review 1 is
+    already line 6), promise (no visible result or unbroken use
+    footage), timing (no real date).
 
     PRESENTER  The approved AI presenter from "Powder tub" (man, early
     30s), worded exactly as in his approved picture. A made-up adult,
     never called a customer.
     ROOM  The same kitchen: counter, window, morning daylight.
 
-    OPENING IMAGE (opening 1)
+    OPENING IMAGE (openings 1 and 2)
     Attach: presenter picture = the man; pack-in-hand photo = the
     product. He stands at the counter, mouth just opening, eyes on the
-    lens, the daily pack low in one hand, front uncovered. Phone video
-    look, window light only, nothing important in the top or bottom
-    sixth of the frame.
+    lens, a daily pack in one hand, front uncovered. Phone video look,
+    window light only, nothing important in the top or bottom sixth.
 
     CLIP PROMPT (opening 1)
     9:16, 6 seconds, real speed. References: presenter picture, pack
-    photo. Place: the kitchen above; only the counter, the pack and a
-    shaker bottle in the scene. Camera: held at arm's length.
-    0-4 s: he says "Put the shaker down. Your daily greens can come in
-    a little pack you tear." Bright, quick, eyebrows moving, his free
-    hand pushes the shaker aside, a small lean in. About 4-5 s, on
-    "tear": he lifts the pack to chest height beside his face, front
-    to the lens. Last half second: mouth closed, eyes on the lens,
-    pack held still.
-    Voice: man, early 30s, quick, bright and wry, plain US accent.
-    Room: faint kitchen hum. Pack sound: a soft foil crinkle on the
-    lift. No music, no subtitles.
+    photo. Room: the kitchen above; only the counter, the pack and a
+    shaker bottle in the sink behind him. Camera: held at arm's length.
+    0 to 0.5 s: settles, mouth opening. 0.5 to 5 s: he says "Shaker in
+    the sink since Monday? This pack needs no water." Even, dry voice,
+    eyebrows up on "Monday". On "This pack" he turns the pack's front
+    square to the lens. 5 to 6 s: mouth closed, eyes on the lens,
+    pack still.
+    Voice: man, early 30s, even pace, plain US accent.
+    Sound: faint kitchen hum, a soft foil crinkle on the turn. No
+    music, no subtitles.
 
     CHECKS PER CLIP
-    Whole line said word for word, not rushed. Lips match. The pack
-    comes up on the cue word, matches its photo and is not torn. Last
-    frame: mouth closed, pack still, sits beside the ad's first frame.
-    DELIVER  raw clip, its last frame as a picture, the line, the
-    approach. Test the ad with each opening as a separate ad.
-    MISSING: your tool's prices. The batch is 1 image and 3 clips.
+    Every word said, not rushed. Lips match. The pack matches its photo
+    and stays sealed. The last second is still and sits beside the ad's
+    first frame without a jump.
+    DELIVER  raw clip, its last frame as a picture, the line, the move.
+    Test the ad with each opening as a separate ad.
+    MISSING: your tool's prices. The batch is 1 or 2 images and 3 clips.
 
 tweaks:
-  - what: Which approaches
-    how: Look at what you can back first. A real review allows the customer quote. A sourced number allows number first. A visible result allows "watch this". A real offer end date allows a deadline. Without the fact, that approach is skipped.
-  - what: The pace
-    how: Quiet is low and steady (10 to 14 words). Fast is bright with one free hand (14 to 18). Direct is level and square (12 to 16). Your brand voice decides first; match the pace of your ad's opening.
+  - what: Which moves
+    how: Look at what you can back. A visible result allows a promise preview. A sourced number allows proof. A real date allows timing. Without the fact, that move is skipped.
+  - what: The dials
+    how: Calm, level or lively for energy; close or propped for distance. Your brand voice sets the range. A quiet brand may drop lively altogether.
   - what: The presenter
     how: Reuse an approved presenter so the opening and the ad match. If your ad has a real creator, use their own footage or a plainly different person, never an AI look-alike.
   - what: Clip length
-    how: 6 seconds suits most lines; ask for 8 for a quiet opening. If a line won't fit, it proposes shorter words for you to approve, and never cuts it silently.
+    how: 6 seconds gives an 11-word line. Ask for 8 and the budget goes to 16. A line that won't fit gets shorter words for you to approve.
 
 judge:
-  - Each opening uses a different approach. None starts with a greeting, "so" or your brand name.
-  - Each line is 18 words or fewer and has one cue word marked.
-  - Read each one aloud, then your ad's first line. It flows.
+  - The three openings make three different moves.
+  - Each line is within its word budget, and none starts with a greeting, "so" or your brand name.
+  - Read each one aloud, then your ad's first line. It flows as one video.
   - The presenter never says "I tried it", "this worked for me" or a personal story.
-  - Every fact is your brand's, word for word, and every quote has its source.
-  - The last frame is a closed mouth and a still product.
+  - Every fact is your brand's, word for word.
+  - The product is in frame from the first frame.
 
 test:
-  - Give it an ad with no visible result and no review. It should skip "watch this" and "customer quote" and say why, not write them anyway.
-  - Read each opening aloud with a timer, followed by your ad's first line. Each should finish with half a second to spare inside the clip length.
-  - Run it twice on the same ad. Approaches may change, but every fact and quote should stay word for word.
-  - Make one clip before the batch and play it in front of your ad on your phone. If the join jumps (a word cut off, a product that moves), fix that clip before making the others.
+  - Give it an ad with no visible result and no review. It should skip promise and real-line proof and say why.
+  - Read each opening aloud with a timer. It should finish with a full second to spare inside the clip.
+  - Run it twice on the same ad. The moves may change, but every fact should stay word for word.
+  - Make one clip and play it in front of your ad on your phone. If the join jumps, fix that clip before making the others.
 
 improve:
-  - Paste your full ad script into "What you need" rather than only the first line, so it can check each opening is paid off later in the ad.
+  - Paste your full ad script, not just the first line, so it can name the exact line that pays off each opening.
   - Add your approved presenter's fixed description to the skill file, so every batch reuses the same face.
-  - Write your banned phrases and claims into step 1's rules, so no opening needs a second check.
-  - Keep a note of which approach won on each ad in your brand file, and ask for that approach first next time.
+  - Write your banned claims into step 2, so no opening needs a second check.
+  - Keep a note of which move won on each ad, and ask for that move first next time.
   - For an opening with no talking, pair it with the skill that makes wordless, satisfying openings.
 
 terms:
   - term: Opening (hook)
-    meaning: The first line or first few seconds of an ad, whose only job is to make the right person keep watching.
-  - term: Cue word
-    meaning: The word in the line where the presenter lifts the product into view.
+    meaning: The first line or first few seconds of an ad, whose job is to keep the right person watching.
+  - term: Move
+    meaning: The way an opening earns attention, such as mirroring the buyer's day or asking a question the ad answers.
+  - term: Word budget
+    meaning: How many words fit in the clip at a normal speaking pace, with time to settle and a still second at the end.
   - term: AI presenter
     meaning: A made-up adult generated by a video tool. Not a customer, so they can't claim personal results.

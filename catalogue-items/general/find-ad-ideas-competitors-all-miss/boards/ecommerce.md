@@ -1,11 +1,11 @@
-# Competitor ad breakdown: for online stores
+# Competitor ad gaps: for online stores
 
 ## Extra things to give it
-- Your main products, your price range, your current offers, and which ones you're pushing this month.
+- Your main products, your price range, your live offers, and which product you're pushing this month.
 
 ## What changes
-- **What the brief is for changes the search.** One product: lean toward competitors selling that kind of product. A sale: lean toward similar offer shapes (buy-one-get-one, percent off, free gift).
-- **Offer details to record for each ad:** the offer wording, whether the saving is in money or percent, any deadline, any gift, subscription terms.
-- **Food, supplements and skincare:** record how claims are worded and flag any your own claims list wouldn't allow, so your-version notes avoid them.
-- **Where the ad goes:** note whether the link leads to a product page, a collection or an article-style page, because ad type and page type often go together.
-- **Paid ads only.** Public ad libraries show paid ads. Unpaid social posts need a different method (see the founder video series skill).
+- **The job changes the sample.** One product: take the competitors selling that kind of product. A sale: take more ads under "Why now?" and note each offer's shape (percent or money off, gift, bundle, free shipping threshold, subscribe-and-save).
+- **Record the offer on every card**: its wording, money or percent, any deadline, any gift, any subscription terms.
+- **Food, supplements and skincare:** note how each health or beauty claim is worded and flag any your own claims list wouldn't allow, so your briefs steer clear of them.
+- **Where the ad leads:** product page, collection or article-style page. Ad type and page type often travel together.
+- **Paid ads only.** The Ad Library shows ads, not a brand's unpaid posts. Study those by hand on the brand's own pages, with a different method.

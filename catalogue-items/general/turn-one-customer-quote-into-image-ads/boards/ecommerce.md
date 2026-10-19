@@ -1,11 +1,11 @@
 # For online stores: Turn one customer quote into image ads
 
 ## Extra things to give it
-- Reviews exported from your store or review app, with the reviewer's name as published, whether they are a verified buyer, and whether they received the product free.
-- The product photo for the taped-note layout (a real photograph under the note).
+- Reviews exported from your store or review app, with the reviewer's name as published, verified-buyer status, and whether they got the product free.
+- A photo of the product where it lives day to day (a bag, a shelf, a car) for the routine shot.
 
 ## Extra rules for a store
-- The two-sided scene uses objects (the old pan beside the new one, the old routine beside the new), never a body.
-- The crossed-out line quotes your own product page sentence that comes closest to the buyer's phrase.
-- Star ratings and review counts appear only if your review data holds them. A reviewer who got the product free is named as such beside the quote.
-- For the description ("the doubt, answered"), use the most common return reason or the question people ask most before they buy.
+- The caption-on-the-old-way layout shows a generic old item, never a rival's recognisable pack.
+- Star ratings and review counts appear only if your review data holds them, with their source named.
+- Return reasons and pre-sale questions are the best source for the doubt in a question-and-reply ad.
+- If you invited reviews only from buyers you expected to be happy, don't build ads on that set.

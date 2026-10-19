@@ -1,72 +1,49 @@
 ---
 name: get-talking-openings-that-keep-viewers-watching
-description: Use when you need 6 to 8 second talking openings to put in front of an ad you already have. One made-up adult presenter says one line to their phone, and the real product comes up on a cue word. Writes 2 or 3 opening lines, each stopping the scroll a different way, plus the opening image prompt and the clip prompts.
+description: Use when you need short talking openings (6 or 8 seconds) to put in front of an ad you already run. A made-up adult presenter says one line to a phone with the real product in frame from the first frame. Writes three openings that each make a different move, sets two delivery dials for each, sizes every line to the clip, and writes the opening image and clip prompts.
 ---
 
 # Get talking openings that keep viewers watching
 
-You write 2 or 3 opening lines, each using a different honest way to stop the scroll, plus the opening image and clip prompts to make them with a made-up AI presenter. An opening sells line 2 of the ad. It has one job: keep people watching so the rest of the ad gets seen.
+You write three spoken openings for an existing ad, plus the prompts to make them with an AI-made presenter. An opening has one job: keep the right person watching long enough for the ad's first line. Three openings that differ a lot teach you more than ten that differ a little.
 
 ## What you need
-- **The ad it goes in front of** (required): its first spoken line, first frame, who's in it and where. If there's no ad yet, the opening is the first clip of a new ad and the script comes first.
-- **What you sell** (required): name, real photos by what they show (front, in hand, in use), evidence of size and handling, how it's used, what it replaces, the visible result.
-- **Buyer and brand file** (required): who they are, what almost stops them, their own words, their moment; brand voice and pace; claims with sources; a real deadline only if one exists.
-- **Approved presenter** (optional): reuse them if the brand has one.
-- **Clip limits** (optional): the lengths your tool accepts. Default 6 seconds (8 for a quiet opening).
+- **The ad it goes in front of** (required): its first spoken line, its first frame (who, where, light, what's in hand) and the full script if you have it.
+- **The product** (required): photos by what they show (front, in hand, in use), how it's handled, what it replaces, any visible result.
+- **Buyer and brand file** (required): the buyer's moment and own words, their main doubt, the brand voice, claims with sources, words never to say, a real deadline only if one exists.
+- **Approved presenter** (optional): reuse them so the opening and the ad match.
+- **Clip length** (optional): 6 seconds by default, 8 if your tool allows it.
 
 ## Steps
-1. **Apply the rules:**
-   - write the line against the ad, and read it aloud with the ad's first line before anything is made
-   - an AI presenter is a made-up adult who says nothing only a real customer could say; a founder, customer or expert appears only from their own footage; no children
-   - the product comes from its photos, is in the opening frame, and is lifted into view on a cue word; the camera doesn't turn to find it
-   - 18 words or fewer at the speaker's pace; 8 or fewer while the product is being lifted
-   - every number, date, price or claim is the brand's own; a customer's words are word for word, with the source
-   - it looks like a phone video: one person, one real room, the room's own light
-   - voice and sound are named; no music
-   - it ends on a closed mouth and a still product, so no word crosses into the ad
-   - an image first, then one clip, then a batch of 2 or 3; never 10
-2. **Pick the presenter:** the approved one, or three options from the buyer profile with one chosen and made as one picture. If the ad has a real creator, use that creator's own footage or a plainly different person; never an AI look-alike.
-3. **Choose an approach for each opening** from the list below. Look at the product first, then choose. A product with an action you can see: watch this, replaces these, number first. A gift: for someone else, recognisable habit. A category people doubt: doubt first, flip the belief, customer quote. An edge that's a number: number first. Never draft the line first and force the product to fit. Each line starts mid-thought: no greeting, no brand name in the first 3 words, no "so". Mark one cue word near the end.
-   - **Recognisable habit:** a habit so specific the right buyer thinks "that's me" (needs who the buyer is)
-   - **Put it down:** tells the viewer to put the usual thing down (needs what it replaces)
-   - **Open question:** a question the ad answers (needs what almost stops them)
-   - **Flip the belief:** the opposite of what buyers believe, only if the brand can back it (needs how it works, as the brand states it)
-   - **Watch this:** the product's action is the opening and the line points at it (needs a visible result and real motions)
-   - **Number first:** one fact said plainly, then what it belongs to (needs the sourced number)
-   - **Customer quote:** a real review line as a quote, with its source
-   - **Doubt first:** names the objection before the viewer forms it (needs what almost stops them)
-   - **Replaces these:** the old things are in frame from the start and slid aside (needs what it replaces, and a claim that it does)
-   - **For someone else:** the buyer isn't the user (a gift, a household)
-   - **Real deadline:** only with a real date and terms in the offer
-   - Wildcards, at most one per batch: *quiet aside* (close to the lens, almost whispered, for brands whose voice allows it); *caught mid-task* (the presenter is doing the thing and speaks without looking up at first).
-   - Only a real person can say: a confession or near miss, their own result, a family story, a filmed reaction. Leave true details as `[placeholders]` for a real creator.
-4. **Choose a pace for each opening.** *Quiet:* low, warm, steady, almost no gesture, product lifted gently, 10 to 14 words (suits customer quote, for someone else, quiet aside). *Fast:* bright, quick, eyebrows moving, one free hand, a small lean in, 14 to 18 words (suits put it down, replaces these, deadline, mid-task). *Direct:* level eyes, even voice, shoulders square, one clear lift, 12 to 16 words (suits recognisable habit, open question, flip, watch this, number, doubt). The brand's voice decides first; match the pace of the ad's opening; at most one quiet opening per batch. Describe each as what is seen and heard, not a mood word. All start with the mouth opening, no greeting, and end with the mouth closed and the pose held for half a second.
-5. **Check each line:** an approach not used elsewhere in the batch; fits the clip with half a second to spare when read aloud; cue word marked; a made-up adult could truthfully say it; every fact matches the brand's facts word for word; it leads into the ad's first line; a deadline only with a real date. Name the question or expectation the ad pays off and the exact use step or explanation that does it. An unrelated stunt is a different idea, not a better opening.
-6. **Shape it for 6 seconds:** at 0.0 the presenter is mid-thought, mouth just opening, eyes on the lens, product already in frame, low in a hand or on a surface; 0 to 4 the line, with the face and one free hand doing what the pace says; about 4 to 5 the cue word, one hand lifts the product to chest height beside the face, front to the lens; the last half second the mouth is closed, eyes on the lens, product held still. Approved handling overrides this: if the evidence only supports display, reveal the verified sealed front on a stand at the cue cut and leave it there. If an approved line can't fit, propose shorter words, get the new line approved, then make it; never cut or stretch it silently.
-7. **Show the line-up for a yes:** rows of approach, line (cue word marked), pace, room, product at the start and the lift, what it leads into. Say what the images and clips will cost.
-8. **Opening image, approved.** Made from the presenter's picture and the labelled product photos. Check: product matches its photo; presenter matches the approved picture; reads as a phone video at thumbnail size; product in frame with printing uncovered; nothing important in the top or bottom sixth. Openings that share a presenter and room share this image.
-9. **Clip prompt** (one first, then the batch): aspect, length, real speed, references and what each is for, place, the only objects in the scene, camera (propped or at arm's length), the line with its cue, the lift, the last still frame, voice (age, pace, traits, accent), room sound, product sound on its beat, no music, no subtitles. Use phone-video words and leave out film words (cinematic, bokeh, anamorphic, grain, dramatic lighting, any camera maker, slow motion).
-10. **Check the clip:** the whole line said word for word, not rushed or cut off; lips match; the product comes up on the cue word and is the brand's product; phone look with an unsmoothed face; the last frame is a closed mouth and a still product that sits beside the ad's first frame; a person has listened to it. Deliver each as the raw clip, its last frame as a picture, the line and the approach. Test the same ad with each opening in front, as separate ads.
+1. **Choose three moves.** Use the five moves (mirror, gap, promise, proof, flip) from the openings skill. Look at the product and the ad first. A visible result allows a promise preview. A sourced number allows proof, unless the ad already says it. A doubt the ad answers allows a gap. Name the ad line that pays each opening off. Skip any move the facts don't support, and say why.
+2. **Gate the speaker.** The presenter is a made-up adult. They speak in "you" or as an observer, never "I tried it" or a personal result. A real founder, customer or expert appears only on their own footage. No children.
+3. **Size the line to the clip.** People speak about 2.5 words a second. Leave half a second to settle at the start and one second of stillness at the end. That gives 11 words for 6 seconds and 16 for 8. Count the words. If a line won't fit, shorten it and get the new line approved.
+4. **Put the product in frame from the first frame.** It sits in a hand or on the surface, label to the lens. When the line names it, the free hand touches it once: a tap, a turn of the label or a nudge forward. The camera never searches for it.
+5. **Set two dials for each opening.** Energy: calm, level or lively. Distance: close at arm's length, or propped at mid shot. One opening matches the ad's first frame on both dials, so the cut feels like one video. The other two change at least one dial. Describe each as what you see and hear: voice pitch, how fast, what the hands do.
+6. **Read each one aloud, then the ad's first line.** It should flow as one video. No greeting, no "so", no brand name in the first three words.
+7. **Show the line-up for a yes:** move, line, word count, dials, where the product sits, the touch, and the ad line that pays it off.
+8. **Opening image prompt.** From the presenter picture and the labelled product photos. One person, one real room, the room's own light, product label readable, nothing important in the top or bottom sixth of the frame. Openings that share a room share this image.
+9. **Clip prompt, one at a time.** 9:16, length, real speed, references and what each is for, the room, the only objects in it, camera (held or propped), the line word for word, the touch, the final still second, the voice (age, pace, accent), room sound. No music in the clip; add any music in the edit across the whole ad. Use phone-video words; leave out film words (cinematic, bokeh, anamorphic, dramatic lighting, slow motion, camera brands).
+10. **Check the clip before making the rest:** every word said, lips in sync, product matches its photo, the last second is still, and the last frame sits next to the ad's first frame without a jump.
 
 ## What you hand back
-1. **Line-up table** (approach, line with cue word, pace, room, product start and lift, what it leads into).
-2. **Presenter description** (fixed words) and **room description**.
-3. **Opening image prompt.**
-4. **Clip prompt** for each opening.
-5. **Checklist** and delivery list.
+1. Line-up table (move, line, words, dials, product, touch, paid off by), plus moves not used and why.
+2. Presenter and room descriptions in fixed words.
+3. Opening image prompt.
+4. One clip prompt per opening.
+5. Clip checks and what to deliver (raw clip, last frame, the line, the move).
 
 ## Check before you hand it back
-- A different approach in each opening, and none the inputs don't support.
-- 18 words or fewer; cue word marked; none starts with a greeting or the brand name.
-- No personal result, no personal story told as fact, no "this worked for me".
-- Facts are the brand's, word for word.
-- Last frame: closed mouth, still product.
+- Three different moves, each paid off by a named line in the ad.
+- Every line fits its word budget.
+- No personal result or story from the presenter.
+- Every fact is the brand's, word for word.
+- One opening matches the ad's first frame on both dials.
 
 ## If something is missing
-Write `MISSING: <what>`. No pack photo: no opening. No "how it's used" or visible result: don't use watch this. No sourced quote: don't use customer quote. No real date: no deadline.
+Write `MISSING: <what>`. No product photo: no opening. No visible result: no promise preview. No sourced quote: no real-line proof. No real date: no timing.
 
 ## Avoid
 - An AI look-alike of a real creator or any real person.
-- Facts the brand hasn't stated.
-- A word running across the join into the ad.
-- Ten openings at once.
+- A word that runs across the cut into the ad.
+- Hiding the product until late in the clip.

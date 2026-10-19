@@ -1,75 +1,73 @@
 new_slug: get-honest-videos-from-small-creators
 name: "Get honest videos from small creators"
-summary: "Give it who you want to reach. You get how to pick creators, the note to send, and which posts to boost."
+summary: "Give it your product and budget. You get who to pick, the card for the box, and which posts to run."
 job: grow-social
 
 headline: "Get honest videos from small creators"
-subhead: Give it your business facts and who you want to reach. It sets how to pick small creators, writes the half-page note that goes in the box, gives you a table to track who posted, and sets the rules for turning a good post into a paid ad.
+subhead: Give it your business facts, what a box costs you and who you want to reach. You get a fit checklist for picking creators, a one-card note for the box with the disclosure wording, a tracking table, and the two things you need before any post runs as your ad.
 
 explain: |
-  Paying creators to read your script gets you videos that look like ads. Sending your product to many small creators with no strings, and letting them say what they honestly think, gets you real reactions. Some won't post at all. The ones that post and do well are the ones worth putting ad money behind.
+  Paying creators to read your script gets you videos that look like ads. Gifting your product with no strings, and letting creators say what they honestly think, gets you real reactions. Some won't post. The posts that do well with real viewers are the ones worth backing with ad money.
 
-  This skill sets that up. It picks creators by fit rather than follower count, writes a short note with three ideas (not a script) and the one thing they must not say, and puts a disclosure line in every brief, because a gift is a connection viewers have to be told about. It sorts creators by what happened, comparing each post with that creator's own usual views, so a small creator can win. And it requires a written agreement before any creator's post runs as your ad. A person does the finding, sending and posting.
+  This skill picks creators by evidence of fit, not follower count: do they already post about the moment your product touches, and do people like your buyers comment? It writes a short card for the box with one open question your buyers ask, the claims to avoid, and the disclosure the FTC asks for: said in the video, out loud and on screen. It judges each post against that creator's own normal views, so a small account can win. And it won't let a post run as your ad until the creator has granted platform permission and signed a written agreement. A person does the finding, sending and messaging.
 
 when:
-  - You want real content about your product without scripting creators.
-  - You're about to send free product to creators and want a simple way to track it.
+  - You want real videos about your product without scripting creators.
+  - You're about to gift product to creators and want a simple way to track it.
   - Some creator posts did well and you want to run them as ads, the right way.
 
 you_give:
-  - What you make, in one or two sentences, and the one thing creators should not say
-  - The account to tag and what you can afford to send
-  - Who you want creators' followers to be (recommended)
-  - Creator names with follower counts and their usual views (optional)
-  - How you'll pay, such as gifted only, a share of sales or a monthly fee (optional)
+  - What you make in one or two sentences, how it's used, and what creators must not say
+  - What one box costs you and your budget for the round
+  - Who you want creators' followers to be, and the questions those buyers ask (recommended)
+  - Creator handles with links to recent posts and their view counts (optional)
+  - How you'll pay, such as gifted only or a share of sales (optional)
 you_get:
-  - Five lines on how to choose creators, and fit notes if you gave candidates
-  - The note, ready to print and put in the box
-  - A tracking table and the rule for sorting creators into groups
-  - A disclosure line for every brief, and a MISSING list
+  - A four-signal fit checklist, and a score for each creator if you gave a list
+  - The card for the box, ready to print, with the disclosure line
+  - A tracking table and the rule for sorting posts into four groups
+  - How many boxes your budget covers, and a MISSING list
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste what you make, the claims you can and can't make, and who you want to reach.
-  - Add the account to tag and your budget per creator. If you have a list of creators, paste it.
-  - Print the note, send the product, and fill in the tracking table as posts come in.
-  - Before running any post as an ad, get the creator's written agreement, including how long and any fee.
+  - Add what one box costs you and your budget. If you have a list of creators, paste it.
+  - Print the card, send the product, and fill in the tracking table as posts come in.
+  - Before running any post as an ad, get the platform permission and a written agreement.
 
 how_it_works:
-  - title: Chooses by fit, not size
-    text: Starts with small accounts (roughly 5,000 to 50,000 followers) whose audience matches yours and whose videos are clear and well lit.
-  - title: Writes the note
-    text: Half a page with what you make, three ideas (first time opening it, where it fits in their day, an honest review after a week), the one thing not to say, and where to tag.
-  - title: Asks for nothing
-    text: Posting is their choice. No reminders.
-  - title: Adds the disclosure
-    text: Every brief says the post must mention the gift, payment or commission. Checking it is your job, not the creator's.
-  - title: Sorts by results
-    text: Winner (posted, at twice their usual views or more), posted, or silent. Each post is compared with that creator's own average.
-  - title: Agrees use first
-    text: Running a creator's post as your ad needs their written agreement, how long it runs and any fee, recorded before it runs.
-  - title: Sets expectations
-    text: Many creators won't post, and only some posts are good enough to back with money. Your own numbers after the first round are what count.
-  - title: Writes fuller briefs
-    text: For posts you'll pay behind, one of three kinds (problem then the fix, unboxing and first impression, or part of their day).
+  - title: Picks by fit evidence
+    text: One point each for posting about your buyer's moment, buyer-like comments, past honest criticism, and clear face and sound. Send to 3 or 4 points.
+  - title: Writes one card
+    text: About 120 words. Why you picked them, how the product is used, one open question your buyers ask, what not to say.
+  - title: Puts disclosure on every card
+    text: Plain words, said in the video and shown on screen. A tag or caption alone isn't enough, per the FTC's guide for influencers.
+  - title: Reads each post fairly
+    text: Views against the creator's own median from their last 10 posts, plus saves, shares and comments from likely buyers.
+  - title: Sorts into four groups
+    text: Ask to run, fix first, send again, or stop. A post with a missing disclosure is never shared or run until it's fixed.
+  - title: Locks in permission
+    text: Platform permission (a partnership ad approval on Meta, a video code on TikTok) and a written agreement, recorded before any ad goes live.
+  - title: Uses your own numbers
+    text: After round one, you write down your own post rate and cost per usable video, and size round two from those.
 
 output_shape: |
-  1. HOW TO CHOOSE CREATORS
-  <five lines: size range, audience fit, video quality, ...>
-  <fit notes per candidate, if you gave a list>
+  1. FIT CHECKLIST
+  <four signals, one point each; send to 3 or 4>
+  <scores per candidate, if you gave a list>
 
-  2. THE NOTE (half a page)
-  <what you make> / Three ideas, not scripts: <1, 2, 3> / The one
-  thing not to say: <...> / The only rule: film it however feels
-  natural / Tag: <account>
+  2. THE CARD (about 120 words)
+  <why you / what it is and how it's used / one open question /
+  what not to say / disclosure / posting is your choice / tag>
 
-  3. TRACKING TABLE
-  creator | handle | sent | posted | views vs their average | group
-  | permission to run as an ad (asked / agreed / until)
+  3. DISCLOSURE LINE: "<...>" and how to check it
 
-  4. FULLER BRIEF (only if asked)
+  4. TRACKING TABLE
+  creator | handle | sent | posted (days) | disclosure | views vs
+  median | saves+shares | buyer comments | group | permission
+  (platform / agreement until)
 
-  5. DISCLOSURE LINE: "<...>"
+  5. ROUND SIZE: <budget> / <cost per box> = <boxes>
 
   6. MISSING: <...>
 
@@ -79,97 +77,98 @@ example:
     [the skill]
 
     What we make: Sprout, daily greens gummies in single-serve packs.
-    28 daily packs per pouch. Tear one open, eat the small handful of
-    gummy bears. No water, no mixing, no shaker.
-
+    28 daily packs per pouch. Tear one straight across the top, tip
+    the gummies into your hand. No water, no mixing, no shaker.
     Claims we can make: 60+ ingredients, 21 vitamins & minerals, 6g
     fiber per pack; "supports digestion and gut health"; vegan.
     Never say: that it fixes or treats bloating or anything else;
     weight loss or muscle; anything about GLP-1 medication.
-
-    Who we want to reach: people who quit greens powders or pill
-    stacks because they couldn't stick with them; busy parents.
-
+    Buyers: people who quit greens powders or pills; busy parents.
+    Their questions: "Is this just candy?" "Can a gummy hold enough?"
+    Budget (illustrative): $12 a box, $600 this round.
     Pay: gifted only.
   output: |
-    1. HOW TO CHOOSE CREATORS
-    - Start with accounts of roughly 5,000 to 50,000 followers
-    - Their followers look like your buyers: people who post about
-      routines, quitting powders or pills, or busy family life
-    - Clear, well-lit videos with clean sound beat a bigger account
-    - They review things honestly, including what they didn't like
-    - Start with a few dozen a month, as many as you can pack and post
+    1. FIT CHECKLIST (one point each, send to 3 or 4)
+    - Posts about mornings, routines, family life or quitting powders
+    - Comments ask about routines, snacks or supplements
+    - Has said something critical about a product before
+    - Face, hands and sound clear enough to run as an ad
+    No candidates given. Accounts that usually charge go on a paid list.
 
-    2. THE NOTE
-    Hi,
-    We make Sprout: daily greens gummies in single-serve packs. One
-    pack is a small handful of gummy bears. No water, no shaker.
-    Three ideas, not scripts:
-    1. Opening your first pack (tear it across the top).
-    2. Where it fits in your morning or your evening.
-    3. An honest review after a week, good or bad.
-    The one thing not to say: that it fixes or treats anything, or
-    anything about weight loss or medication. Just say how it was
-    for you.
-    The only rule: film it however feels natural.
-    If you post, tag us at [MISSING: account handle].
-    This is a gift. If you post, please say so in the post.
+    2. THE CARD
+    Hi [name],
+    We picked you because of your [name one real post].
+    This is Sprout: daily greens gummies. Each pouch holds 28 small
+    packs. Tear one straight across the top, tip the gummies into your
+    hand, eat. No water, no shaker.
+    A question our buyers ask: is this just candy? We'd love your
+    honest answer, good or bad.
+    Please don't say it fixes or treats anything, or anything about
+    weight loss or medication. Just say what you tasted and noticed.
+    If you post, say in the video, out loud and on screen: "Sprout
+    sent me this for free."
+    Posting is up to you. Either way, enjoy it.
+    Tag: [MISSING: account handle]
 
-    3. TRACKING TABLE
-    creator | handle | sent | posted | views vs their average |
-    group | ad permission (asked / agreed / until)
-    Groups: Winner = posted at 2x their usual views or more. Posted.
-    Silent = no post 30 days after sending (your own cutoff). Don't
-    send to Silent creators again.
+    3. DISCLOSURE LINE
+    "Sprout sent me this for free." Said out loud and shown on screen
+    in the video. Check every post. If it's missing, ask for a fix
+    before you share or run it.
 
-    4. FULLER BRIEF: not asked for.
+    4. TRACKING TABLE
+    creator | handle | sent | posted (days) | disclosure | views vs
+    median | saves+shares | buyer comments | group | permission
+    Groups: Ask to run = disclosed, above their median, at least one
+    buyer comment ("where do I get these?"). Fix first = posted with
+    no clear disclosure. Send again = posted, no lift. Stop = no post
+    by your cutoff (for example, when round two ships).
 
-    5. DISCLOSURE LINE (in every brief)
-    "Sprout sent me this for free." The post itself must say it.
-    You check every post for it.
+    5. ROUND SIZE
+    $600 / $12 = 50 boxes (illustrative numbers).
 
     6. MISSING
     - The account handle to tag
-    - Cost per creator (product, packaging, postage), to set how many
-      you can send
+    - Creator candidates. A person finds them; this plan doesn't.
+    - Your real cost per box
     - A unique link or code per creator, if you later pay a share of
       sales
-    - Creator candidates. A person finds them; this plan doesn't.
 
 tweaks:
   - what: How you pay
-    how: Gifted only keeps it simple. A share of sales needs a unique link or code per creator; a monthly fee is for creators who already proved themselves. You agree numbers per creator; the plan never copies another business's rates.
-  - what: A fuller brief
-    how: Ask for "problem then the fix", "unboxing" or "part of their day". You get a fuller brief for posts you plan to pay behind, still with no script.
+    how: Gifted only keeps it simple. A share of sales needs a unique link or code per creator. A fee is for the right to run a video as an ad. You agree numbers per creator; the plan never suggests a rate.
   - what: Your list of creators
-    how: Paste names, follower counts and a few of their usual view counts. You get a fit note for each, and the tracking table comes pre-filled.
-  - what: The silent cutoff
-    how: 30 days is a suggestion. Set your own and it's written into the sorting rule.
+    how: Paste handles, links to a few recent posts and their view counts. You get a fit score for each, and the tracking table comes pre-filled.
+  - what: The cutoff
+    how: Set when a creator moves to "stop", such as when the next round ships. It's written into the sorting rule.
+  - what: The open question
+    how: Swap in the doubt your buyers raise most. One question works better than a list of ideas.
 
 judge:
-  - The note fits on half a page and has no lines for the creator to read out.
-  - The disclosure line is in every brief.
-  - Winners are judged against each creator's own usual views, not by follower count.
-  - The "never say" line matches your real claims rules.
-  - No pay figure is offered as a recommendation.
+  - The card fits on one card and has no lines for the creator to read out.
+  - The disclosure line is on every card, and it's said in the video, not just in the caption.
+  - Posts are judged against each creator's own median, not follower count.
+  - The "don't say" line matches your real claims rules.
+  - No post runs without platform permission and a written agreement.
 
 test:
-  - Read the note aloud. It should take under a minute and contain no lines for the creator to read out. If it sounds like a script, cut it.
-  - 'Check the "never say" line against your claims rules (for Sprout: no "fix", and no weight loss, energy or immunity results).'
-  - Fill the tracking table for the first five creators you'd pick. If the fit notes could describe anyone, give it their usual view counts and run it again.
-  - Before any post runs as an ad, check the permission column has a written yes for that creator.
+  - Read the card aloud. It should take under a minute. If it sounds like a script, cut it.
+  - 'Check the "don''t say" line against your claims rules (for Sprout: no "fix", and no weight loss, energy or immunity results).'
+  - Score five creators you'd pick by hand. If the checklist would send to one you'd never pick, tighten a signal.
+  - Before any post runs as an ad, check the permission column has both a platform yes and an agreement date.
 
 improve:
-  - Write your claims rules into step 2 of the skill file as the "never say" line, word for word, so every note carries them.
-  - Set your follower range and fit rules in step 1 for your category.
-  - Change the silent cutoff in step 5 (30 days by default) once you know how long your creators take to post.
-  - Write the disclosure line in step 4 in your brand's voice, and keep a copy in your brand file.
-  - Pair it with the founder video planner so your own account posts too, and with a filming brief writer for the creators you decide to pay.
+  - Write your claims rules into step 2 as the "don't say" line, word for word, so every card carries them.
+  - Add a fifth fit signal that matters in your category, such as "shows their kitchen" for food.
+  - Write your own post rate and cost per usable video into step 6 after round one.
+  - Keep the disclosure line in your brand file in your brand's voice.
+  - Pair it with the founder video planner so your own account posts too, and with the filming brief for creators you pay.
 
 terms:
-  - term: Seeding
+  - term: Gifting
     meaning: Sending free product to creators with no requirement to post.
   - term: Disclosure
-    meaning: Telling viewers in the post that the creator got the product free or was paid.
+    meaning: Telling viewers in the video that the creator got the product free or was paid.
+  - term: Median views
+    meaning: The middle view count of a creator's recent posts. One viral post doesn't skew it.
   - term: Partnership ad
-    meaning: An ad that runs from the creator's own account, paid for by you, with their written agreement.
+    meaning: An ad that runs from the creator's own account, paid for by you, after they grant permission.

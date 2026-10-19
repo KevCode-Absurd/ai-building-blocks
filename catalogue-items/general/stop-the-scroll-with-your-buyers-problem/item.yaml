@@ -1,7 +1,7 @@
 slug: stop-the-scroll-with-your-buyers-problem
 renamed_from: problem-first-static-ad-concept
 name: "Stop the scroll with your buyer's problem"
-summary: "One image ad whose picture makes the buyer's problem felt before they read a word."
+summary: "One designed image ad whose picture puts the buyer's problem in a real moment with one twist, before they read a word."
 category: general
 boards: [ecommerce]
 type: skill
@@ -19,5 +19,12 @@ uses: [stop-image-tools-redrawing-your-product-and-words]
 example: ad-concept
 origin: rebuilt
 source_ids: [CES-135]
-old_name: scroll-stopper-static-ads
-version: 1.0.0
+old_name: problem-first image ad
+version: 2.0.0
+credits:
+  - {title: "The Role of Expectancy and Relevancy in Memory for Verbal and Visual Information: What Is Incongruency?", by: "Susan Heckler and Terry Childers, Journal of Consumer Research", url: "https://doi.org/10.1086/209275", used: "The unexpected-and-relevant check"}
+  - {title: "Beyond Visual Metaphor: A New Typology of Visual Rhetoric in Advertising", by: "Barbara J. Phillips and Edward F. McQuarrie, Marketing Theory", url: "https://doi.org/10.1177/1470593104044089", used: "Side by side, merged and swapped in, ordered by how much they ask of the viewer"}
+  - {title: "The Stopping Power of Advertising: Measures and Effects of Visual Complexity", by: "Rik Pieters, Michel Wedel and Rajeev Batra, Journal of Marketing", url: "https://doi.org/10.1509/jmkg.74.5.048", used: "Simple pixels, clever arrangement"}
+  - {title: "Tested Advertising Methods", by: "John Caples", url: "https://openlibrary.org/works/OL3350190W", used: "Headline jobs: gain, news, curiosity"}
+  - {title: "Facebook Ads Guide: image ad specs", by: "Meta", url: "https://www.facebook.com/business/ads-guide/update/image", used: "4:5 Feed shape and the 27-character headline"}
+  - {title: "Privacy Violations and Personal Attributes", by: "Meta Transparency Center", url: "https://transparency.meta.com/policies/ad-standards/objectionable-content/privacy-violations-personal-attributes/", used: "No line or picture saying the reader has a condition"}

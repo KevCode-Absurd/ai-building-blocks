@@ -1,7 +1,7 @@
 slug: get-a-clay-town-ad-script-with-a-crowd
 renamed_from: clay-town-ad-script-format-rules
 name: "Get a clay town ad script with a crowd"
-summary: "A narrated ad played by clay figures in a miniature world full of people, with your real label."
+summary: "A narrated ad played by clay figures in a miniature town, built on a hassle the whole crowd shares, with your real label."
 category: general
 boards: [ecommerce]
 type: skill
@@ -18,5 +18,10 @@ uses: []
 example: clay-world
 origin: rebuilt
 source_ids: [CES-109]
-old_name: script-format-clay-world
-version: 1.0.0
+old_name: clay town script rules
+version: 2.0.0
+credits:
+  - {title: "Animation: Wallace & Gromit - Vengeance Most Fowl", by: "Marc Loftus, Post Magazine, interviewing supervising animator Will Becher", url: "https://www.postmagazine.com/Publications/Post-Magazine/2024/November-December-2024/Animation-I-Wallace-Gromit-Vengeance-Most-Fowl-I.aspx", used: "One scale for a whole film, chunky oversized props, water and jam made from gel and resin"}
+  - {title: "Using Blur to Affect Perceived Distance and Size", by: "Robert T. Held, Emily A. Cooper, James F. O'Brien and Martin S. Banks, ACM Transactions on Graphics, 2010", url: "https://escholarship.org/uc/item/3ts0x35k", used: "Shallow focus makes a scene read as small, for the focus rule"}
+  - {title: "Twelve basic principles of animation", by: "Wikipedia, summarising Frank Thomas and Ollie Johnston, The Illusion of Life (1981)", url: "https://en.wikipedia.org/wiki/Twelve_basic_principles_of_animation", used: "Staging one clear idea per shot, behind the one-mover rule and held poses"}
+  - {title: "The Seven Habits Of Highly Effective Characters", by: "System1 Group", url: "https://system1group.com/blog/the-seven-habits-of-highly-effective-characters", used: "A recurring lead in a built world with a cast around them"}

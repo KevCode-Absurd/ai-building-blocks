@@ -1,11 +1,12 @@
 # For online stores: Stop strangers scrolling with a story ad
 
-**Keep a balance.** Run these story ads beside direct ads (product, benefit, offer, button). The story ad finds new people. The direct ads close the ones who now know the brand.
+**Run both kinds.** Story ads find new people. Direct ads (product, benefit, offer, button) close the people who now know the store. Keep both running.
 
-**Which products fit**
-- Problems a store can use: a stained collar, a loose seam, a pan that sticks, hair in the brush, lint in the dryer filter.
-- Fashion bought only because it looks good has no problem to show. Write a direct ad. Garments that fix something (sweat-proof, compression, insoles) do fit.
+**Pushes a store can show**
+- A thing that failed: a collar stained after three washes, a pan that grabs the egg, a seam that splits.
+- A workaround: tape on the charger cable, a towel along the window sill, a second fan.
+- Fashion bought only because it looks good has no push. Write a direct ad. Clothing that solves something (sweat, chafing, cold, sore feet) fits.
 
-**Where the click goes.** An article-style page that teaches the problem, with the product and offer near the end. If none exists, write that page first.
+**Where the click goes.** A page that opens on the same moment as the picture, teaches the problem, and reaches the product and offer near the end. If the store has none, write that page first.
 
-**The product in the picture.** None. If a story truly needs the product in frame, use the real one from its reference photos, small and to one side.
+**The product in the picture.** None. If a story truly needs it, use the real product from its photos, small and off to one side.

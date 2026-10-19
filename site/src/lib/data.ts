@@ -39,6 +39,10 @@ export type Page = {
   example?: { business: string; input: string; output: string };
   tweaks: { what: string; how: string }[]; judge: string[]; test?: string[]; improve: string[];
   terms: { term: string; meaning: string }[];
+  /** The AI tools and extra inputs that get the best result from this block. */
+  works_best_with?: { tools?: { name: string; why: string }[]; inputs?: string[] };
+  /** Public sources the block was built from (item.yaml credits). */
+  credits?: { title: string; by: string; url: string; used: string }[];
   /** Markdown already turned into HTML by the index build. */
   html: { explain: string; skill: string; addon: string };
 };

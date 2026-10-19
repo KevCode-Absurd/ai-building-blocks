@@ -16,7 +16,7 @@ fs.mkdirSync(OUT_PAGES, { recursive: true });
 
 // Until a block has its page written, it is filed under the job closest to its old group.
 const TASK_FROM_JOB = { copy: "write-ad-copy", email: "write-ad-copy", ads: "make-image-ads", image: "make-image-ads", video: "make-video-ads", page: "write-landing-page", analysis: "read-ad-results", research: "understand-customers", brand: "brand-file", offer: "make-offer", organic: "grow-social", ops: "set-up-ai" };
-const PAGE_FIELDS = ["headline", "subhead", "explain", "when", "you_give", "you_get", "how_to_use", "how_it_works", "output_shape", "example", "tweaks", "judge", "test", "improve", "terms"];
+const PAGE_FIELDS = ["headline", "subhead", "explain", "when", "you_give", "you_get", "how_to_use", "how_it_works", "output_shape", "example", "tweaks", "judge", "test", "improve", "terms", "works_best_with"];
 
 const types = YAML.parse(fs.readFileSync(path.join(ROOT, "_types.yaml"), "utf8"));
 const typeDesc = {};
@@ -59,6 +59,9 @@ for (const category of ["general", "ecommerce", "orchestrators"]) {
     if (pagePath) { try { page = YAML.parse(fs.readFileSync(pagePath, "utf8")); } catch (e) { problems.push(`${category}/${slug}: page: ${e.message.split(/\r?\n/)[0]}`); } }
     if (page) {
       const out = Object.fromEntries(PAGE_FIELDS.filter((f) => page[f] != null).map((f) => [f, page[f]]));
+      // Public sources a block was built from, shown on its page. Only http(s) links are kept.
+      const credits = (item.credits ?? []).filter((c) => c && c.title && (!c.url || /^https?:\/\//.test(c.url))).map((c) => ({ title: String(c.title), by: c.by ? String(c.by) : "", url: c.url ? String(c.url) : "", used: c.used ? String(c.used) : "" }));
+      if (credits.length) out.credits = credits;
       out.html = { explain: page.explain ? md.parse(String(page.explain)) : "", skill: md.parse(bodyOf(skill)), addon: hasAddon ? md.parse(bodyOf(fs.readFileSync(addon, "utf8"))) : "" };
       fs.writeFileSync(path.join(OUT_PAGES, `${slug}.json`), JSON.stringify(out));
     }

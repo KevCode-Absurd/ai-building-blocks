@@ -19,5 +19,9 @@ uses: [get-cutout-explainer-ad-script-that-sells]
 example: collage
 origin: rebuilt
 source_ids: [CES-033]
-old_name: editorial-collage-animation
-version: 1.0.0
+old_name: paper cutout explainer video prompts
+version: 2.0.0
+credits:
+  - {title: "Cutout animation", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Cutout_animation", used: "Flat pieces with pin joints moving on one plane, made before the scenes"}
+  - {title: "Twelve basic principles of animation", by: "Wikipedia, summarising Frank Thomas and Ollie Johnston, The Illusion of Life (1981)", url: "https://en.wikipedia.org/wiki/Twelve_basic_principles_of_animation", used: "Moves that start quick and ease to a stop, holds"}
+  - {title: "Mayer's 12 Principles of Multimedia Learning", by: "Dartmouth, summarising Richard E. Mayer, Multimedia Learning", url: "https://services.dartmouth.edu/TDClient/1806/Portal/KB/PrintArticle?ID=171655", used: "Each move timed to land on the word it proves"}

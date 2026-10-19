@@ -1,18 +1,17 @@
 # Knitted wool video ad script: for online stores
 
-## Also give it
-- Product data: the exact pack shape, colours, every label line, size, how it's used.
-- A product photo, so the knitted pack matches the true shape.
+## Give it as well
+- A front photo of the pack, its 1 to 3 biggest label lines, its size and how it's used.
 - The ingredient or part list, if you want a how-it-works shot.
-- Your current offer with its end date.
+- The live offer, its terms and its end date.
 
-## Where it fits
-- Awkward or sensitive categories that a camera makes uncomfortable (digestion, sleep, pests, household grime), told gently through a doll and a room.
-- Supplements and wellness drinks where how it works is a simple ingredient story, within the claims you're allowed.
-- Home products where a problem-in-a-room story works.
+## Good fits
+- Subjects people would rather not watch on camera: digestion, sleep, pests, cleaning. A doll in a knitted room tells them kindly.
+- Home goods, pet products and gifts that suit a warm, cosy world.
+- Supplements, as long as every yarn change stays inside your approved claims.
 
-## Rules for stores
-- Health and supplement products: how-it-works wording stays inside your approved claims. No body before and after. "Supports" stays "supports".
-- State the pack's label lines exactly in every prompt. A busy label gets a shorter, cleaner version with the key lines only.
-- Food and fabric products that must look good to eat or wear are weak here. Use another format for those.
-- The offer, price and shipping terms go in the final overlay only, checked against your live offer.
+## Store rules
+- Health and supplement products: say the approved claim in the narration and picture the product in use. Never picture a body changing.
+- Knit only the 1 to 3 biggest label lines onto the pack, and lay the real label over it in editing if a line comes out wrong.
+- Food that must look tasty and clothes that must fit look weak in yarn. Use another format for those.
+- Price, offer and shipping go on as on-screen text in the last shot, checked against the live offer that day.

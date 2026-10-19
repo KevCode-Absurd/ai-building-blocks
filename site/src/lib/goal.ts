@@ -51,9 +51,10 @@ export function planFromGoal(c: Catalogue, goal: string): Plan | null {
     const needed = b.inputs.filter((p) => p.type === "brand_brain" || (p.required && !(depth === 0 && b.role === "check")));
     for (const p of needed) {
       if (have.has(p.type) || !makers[p.type] || depth >= 3 || picked.length >= 5) continue;
+      // A maker that needs things nobody has yet makes the chain longer, so it loses to one that can start now.
       const best = makers[p.type]
         .filter((m) => m.slug !== b.slug && !picked.includes(m.slug))
-        .map((m) => ({ m, s: (before.get(b.slug)?.has(m.slug) ? 6 : 0) + hits(toks, `${m.name} ${m.summary}`) * 2 + m.usedIn * 0.2 + (kindOf(m) === "skill" ? 1 : 0) - m.inputs.filter((q) => q.required && makers[q.type] && !have.has(q.type)).length * 0.5 }))
+        .map((m) => ({ m, s: (before.get(b.slug)?.has(m.slug) ? 6 : 0) + hits(toks, `${m.name} ${m.summary}`) * 2 + m.usedIn * 0.2 + (kindOf(m) === "skill" ? 1 : 0) - m.inputs.filter((q) => q.required && makers[q.type] && !have.has(q.type)).length * 2 }))
         .sort((x, y) => y.s - x.s)[0];
       if (best) want(best.m, depth + 1);
     }

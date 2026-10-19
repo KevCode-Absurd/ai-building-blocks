@@ -1,40 +1,47 @@
 ---
 name: find-script-lines-that-lose-sale
-description: Use when you want the underlying rules of ad scripts that sell (what the buyer wants, how much they know, the offer, claims, the nine beats, problem, promise and how it works, openings, doubts and proof, identity, story, voice, length) to guide writing or to judge a script line by line.
+description: Use when you want a video ad script checked line by line before filming, or a guide while writing one. Applies 12 groups of checks (truth, fit, delivery, then one group per beat from opening to call to action) and returns each weak line with the check it breaks and a fix from the business's own facts.
 ---
 
 # Find the script lines that lose the sale
 
-A reference of what's true of ad scripts that sell, for any product. It describes; it doesn't order. Load only the sections the task needs.
+A set of checks for video ad scripts that sell, for any product. They describe; they don't dictate. Load only the groups the task needs.
 
 ## What you need
-- **Task** (required): the script you're writing or judging.
-- **Sections wanted** (optional): default is the sections the task needs (table below).
-- **Product type** (optional): bought again (used up, reordered) or bought once (kept). Most rules differ by this.
+- **Script** (required): the script you're judging or writing, one line per row if possible.
+- **Business facts** (optional): product facts, allowed claims, brand voice. Without them, fixes that need a fact are marked MISSING.
+- **Groups wanted** (optional): default is the groups the task needs (table below).
+- **Reordered or kept** (optional): used up and bought again, or bought once and owned. Several checks differ.
+- **Length and speaker** (optional): for the pace check.
 
 ## Steps
-1. Read `references/principles.md` for the sections you need.
-2. Use each section as a standard, not a script. The business's own voice, facts and limits win wherever they differ.
-3. When judging a script, quote the line and name the section it breaks. Any fix uses only the business's facts.
+1. Read `references/principles.md` for the groups you need.
+2. Label each line of the script with its beat. Note any beat that's missing.
+3. Run the checks. Treat each as a test, not a template. The business's own voice, facts and limits win wherever they differ.
+4. For each weak line, quote it, cite the check code, say what's wrong in one line, and give a fix that uses only the facts you were given.
+5. Count spoken words and compare them with the budget for the length.
+6. Rank the problems: Truth first (they can get the ad rejected or mislead), then the opening, then the rest in beat order.
 
-| Task | Sections |
+| Task | Groups |
 |---|---|
-| Writing from research | all |
-| Rewriting a reference ad's structure | claims, offer, promise and how it works, opening and bridges, doubts, proof and call to action, voice |
-| Picking a format | the nine beats, length and format |
-| Polishing for speech | voice |
+| Full review before filming | all 12 |
+| Writing from research | Fit, then the nine beats |
+| Borrowing a reference ad's shape | Truth, Fit, Problem, Promise, How it works, Proof, Offer |
+| Picking a length or format | Delivery, Offer, Call to action |
+| Polishing for speech | Delivery |
 
 ## What you hand back
-Used as guidance: no separate output; the script follows the sections. Used to judge: a list of `line | section | what is wrong | fix`, plus any beat that's missing.
+Used to judge: one block per weak line (`line | check | what's wrong | fix`), then missing beats, the word count against budget, and a list of MISSING facts. Used as a guide: no separate output; the script follows the checks.
 
 ## Check before you hand it back
-- Each principle you cite is actually in the reference.
-- No example from the reference ends up in a script as a fact.
+- Every check you cite exists in the reference, and the reason matches it.
+- Every quoted line is really in the script.
+- No example from the reference appears as a fact.
 - Every fix rests on a fact you were given.
 
 ## If something is missing
-Product type not given: write `MISSING: product type` and apply the rule for both ways of buying, naming the difference. A fix that needs a fact you don't have: write `MISSING: <fact>` instead of filling it in.
+Reordered or kept not given: write `MISSING: reordered or kept`, apply both versions of the checks that differ, and name the difference. A fix that needs a fact you don't have: write `MISSING: <fact>` instead of filling it in.
 
 ## Avoid
-- Treating the reference's examples as usable copy. They're made up.
-- Using a section the task didn't call for.
+- Using the reference's examples as copy. They're made up.
+- Flagging style choices the brand's voice allows.

@@ -1,7 +1,7 @@
 slug: get-video-ad-script-in-customers-words
 renamed_from: video-ad-script-from-customer-research
 name: "Get a video ad script in your customers' words"
-summary: "A video ad script built from what your customers said, that changes one belief in one buyer."
+summary: "A video ad script built from what your customers said, sorted onto the buyer's timeline, that shifts one belief in one buyer."
 category: general
 boards: [ecommerce]
 type: skill
@@ -24,7 +24,12 @@ inputs:
 outputs:
   - {type: script}
 uses: [find-script-lines-that-lose-sale, get-different-video-ads-from-same-research, get-script-presenter-can-say-without-stumbling]
-origin: own
+origin: rebuilt
 source_ids: [CES-128]
-old_name: script-from-research
-version: 1.0.0
+old_name: video script from customer research
+version: 2.0.0
+credits:
+  - {title: "How To Write Meta Ads That Scale: Copywriting Masterclass", by: "Blue Sense Digital", url: "https://www.youtube.com/watch?v=LoL1w-k9Mgg", used: "The nine beats and their order"}
+  - {title: "Breakthrough Advertising (1966)", by: "Eugene M. Schwartz", url: "https://openlibrary.org/works/OL2625224W", used: "Placing the buyer by how much they know"}
+  - {title: "Monroe's motivated sequence", by: "Wikipedia, after Alan H. Monroe", url: "https://en.wikipedia.org/wiki/Monroe%27s_motivated_sequence", used: "Using the After quote so the buyer can picture the result"}
+  - {title: "Do Your Ads Talk Too Fast to Your Audio Audience? (Journal of Advertising Research, 2020)", by: "Emma Rodero", url: "https://thearf.org/access-knowledge-2/publications/journal-of-advertising-research/do-your-ads-talk-too-fast-to-your-audio-audience-how-speech-rates-of-audio-commercials-influence-cognitive-and-physiological-outcomes/", used: "The 3 words a second word budget"}

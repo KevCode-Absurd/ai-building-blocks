@@ -1,16 +1,16 @@
 # Paper world video ad script: for online stores
 
-## Also give it
-- Product data: the exact pack shape, colours, every label line, size or count, how it's used.
-- A product photo, so the paper pack matches the true shape.
-- Your current offer with its end date.
+## Give it as well
+- A front photo of the pack, its 1 to 3 biggest label lines, its size and how it's used.
+- The live offer, its terms and its end date.
 
-## Where it fits
-- A gift or premium product: `layered-stack` or `folded`, with the product as the hero.
-- A small problem-solver: `flat-cutout` or `torn-and-glued`, the problem as a mini storybook, 20 to 30 seconds.
-- Products with variants: show one variant only and name its flavour or colour in the label lines.
+## Good fits
+- Gifts and premium goods: a pop-up reveal of the product, layered planes for a rich scene.
+- Small problem-solvers for busy days: flat-cut figures, a flap or a concertina for how the product fits the day.
+- Ranges with many flavours or colours: quilled or layered pieces can show the range, as long as each one is real and on sale.
 
-## Rules for stores
-- The pack is the one thing that must stay exact. Repeat its label lines in every clip prompt.
-- Worn items, how fabric hangs and food texture are weak in paper. Show the setting and the problem; let the real product photo appear on the product page.
-- The offer (price, bundle, shipping) goes in as on-screen text on the last shot only, with its current end date, never as narration over the paper.
+## Store rules
+- Show one variant at a time and name it in the label lines.
+- A flap or pull-tab that turns a messy scene into a tidy one is a claim. Use it only if your approved claims say the product does that.
+- Clothing fit, fabric drape and food texture read poorly in paper. Use the paper story for the problem, and real photos on the product page.
+- Price, offer and shipping go on as on-screen text in the last shot, checked against the live offer that day.

@@ -1,7 +1,7 @@
 slug: get-a-full-product-photoshoot-from-phone-photos
 renamed_from: product-photoshoot-set-workflow
 name: "Get a full product photoshoot from phone photos"
-summary: "8 to 12 photos of your real product, each with one job, checked at full size."
+summary: "8 to 12 photos of your real product, each with one job and its own light setup, checked at full size."
 category: ecommerce
 type: workflow
 role: orchestrate
@@ -17,5 +17,11 @@ uses: [stop-ai-pictures-getting-your-product-wrong]
 example: photoshoot
 origin: rebuilt
 source_ids: [CES-096]
-old_name: Photoshoot Factory
-version: 1.0.0
+old_name: product photoshoot workflow
+version: 2.0.0
+credits:
+  - {title: "Light: Science & Magic", by: "Fil Hunter, Steven Biver, Paul Fuqua", url: "https://www.routledge.com/Light----Science--Magic-An-Introduction-to-Photographic-Lighting/Hunter-Biver-Fuqua-Reid/p/book/9780367860271", used: "Placing the light so reflections miss the label on glossy, metal and glass products"}
+  - {title: "Product Photography: A DIY Guide for Beginners (2026)", by: "Lizzie Davey, Shopify", url: "https://www.shopify.com/blog/12206313-the-ultimate-diy-guide-to-beautiful-product-photography", used: "Window and side light, white and black cards, large sources for glossy products, shot types"}
+  - {title: "Product Page UX: All Products Need at Least One 'In Scale' Image (28% Get It Wrong)", by: "Christian Holst, Baymard Institute", url: "https://baymard.com/blog/in-scale-product-images", used: "Every product page set needs a scale shot"}
+  - {title: "How to prompt Gemini 2.5 Flash Image Generation for the best results", by: "Philipp Schmid, Logan Kilpatrick, Alisa Fortin, Google", url: "https://developers.googleblog.com/en/how-to-prompt-gemini-2-5-flash-image-generation-for-the-best-results/", used: "Prompts written as a described scene with the lighting setup and camera"}
+  - {title: "Gpt-image-1.5 Prompting Guide", by: "OpenAI Cookbook", url: "https://developers.openai.com/cookbook/examples/multimodal/image-gen-1.5-prompting_guide", used: "Naming each attached image's role in the prompt"}

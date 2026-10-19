@@ -1,58 +1,64 @@
 new_slug: find-script-lines-that-lose-sale
 name: "Find the script lines that lose the sale"
-summary: "Give it your ad script. You get every weak line, why it loses people, and a better line to use."
+summary: "Give it your ad script. You get every weak line, the check it fails, and a better line to use."
 job: make-video-ads
 
 headline: "Find the script lines that lose the sale"
-subhead: Give it a script you're writing or one that isn't working. It checks every line against 13 short sets of rules (buyer research, offer, claims, opening, proof, voice, length and more), and returns each problem with the rule it breaks and a fix.
+subhead: Give it a script you're about to film or one that isn't working. It labels every line by beat, runs 12 groups of checks (truth, fit, delivery, then one per beat), and returns each weak line with the check it fails and a fix built from your facts.
 
 explain: |
-  "This script feels flat" isn't something you can fix. Neither is "make it punchier". A script usually fails for nameable reasons: it opens with a greeting, praises the product in words any rival could use, lists features instead of making one promise, claims a crowd of happy users it can't count, or ends on "sign up now" with nothing about what happens next.
+  "This script feels flat" isn't something you can fix. Neither is "make it punchier". Scripts fail for reasons you can name: an opening that picks out nobody, praise any rival could copy, a list of features where one promise should be, a crowd of happy users nobody counted, or "shop now" with nothing about what happens next.
 
-  This skill carries a reference of what's true of ad scripts that sell, in 13 short sections, from buyer research and the offer to openings, proof, voice and length. Used to judge, it quotes each weak line, names the section it breaks, says what's wrong and gives a fix. Used while writing, it loads only the sections the job needs. Your brand's own voice and facts always win.
+  This skill gives each of those a check with a code, so a review reads like a marked-up draft. Three groups cover the whole script: is it true, does it fit the buyer, and will it work spoken and silent. Nine more cover each beat, from opening to call to action. Truth problems come first, because they can get an ad rejected. Your brand's own voice and facts always win.
+
+  The beat order follows Blue Sense Digital's public masterclass, How To Write Meta Ads That Scale. Other checks come from Eugene Schwartz, John Caples and Claude Hopkins, and the pace check from published research on how fast ads should talk.
 
 when:
   - A script is about to be filmed and you want a second opinion before spending money.
   - An ad isn't working and you want to know which lines are to blame.
-  - You're writing a script and want the rules for one part, such as openings or proof.
+  - You're writing a script and want the checks for one part, such as the opening or the proof.
 
 you_give:
   - The script you're writing or judging
-  - Which sections you want (optional, it picks the ones the task needs)
-  - Whether the product is bought again or bought once (optional)
-  - Your product facts, claims and brand voice, so fixes stay true (optional)
+  - Your product facts, allowed claims and brand voice, so fixes stay true (optional)
+  - Whether the product is used up and reordered, or bought once and kept (optional)
+  - The length and speaker, for the pace check (optional)
+  - Which groups of checks you want (optional, it picks for the task)
 you_get:
-  - A list of weak lines, each with the section it breaks, what's wrong and a fix
-  - Notes on any beat the script is missing
-  - Or, while writing, the sections that apply to your task
+  - Every weak line, quoted, with the check it fails, what's wrong and a fix
+  - The beats the script is missing
+  - The spoken word count against the budget for the length
+  - A list of facts a fix would need that you haven't given
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste its reference file (principles.md) too, then your script, one line per row.
-  - Add your product facts and approved claims, so every fix uses only true facts.
+  - Add your product facts and allowed claims, so every fix uses only true facts.
   - Say whether your product is used up and reordered, or bought once and kept.
-  - Fix the lines in order, then read the whole script aloud again.
+  - Fix the Truth problems first, then read the whole script aloud again.
 
 how_it_works:
-  - title: Picks the sections
-    text: Loads all 13 for writing from research, or only the few a task needs, such as voice for polishing speech.
-  - title: Treats them as a standard
-    text: Uses each section as a test, not a template. Your brand's voice, facts and limits win wherever they differ.
-  - title: Quotes and names
-    text: For each weak line, quotes it, names the section it breaks and says what's wrong in one line.
-  - title: Gives a fix
-    text: Writes a fix using only your facts. If a fix needs a fact you don't have, it marks it MISSING.
-  - title: Never copies examples
-    text: The examples in the reference are made up. None of them ends up in your script as a fact.
+  - title: Labels every line
+    text: Tags each line with its beat and notes any beat that's missing.
+  - title: Checks the whole script
+    text: Truth (nothing invented, claims allowed), Fit (one awareness level, the right doubts) and Delivery (sounds right, fits the budget, works with sound off).
+  - title: Checks each beat
+    text: Nine groups, from whether the opening picks out the buyer to whether the call to action says what happens next.
+  - title: Quotes, codes and fixes
+    text: For each weak line, quotes it, cites a check code like Proof 2, and writes a fix from your facts. A fix that needs a missing fact is marked MISSING.
+  - title: Ranks what to fix
+    text: Truth first, then the opening, then the rest in beat order.
 
 output_shape: |
-  LINE <n> "<the line, quoted>"
-  Section <n>, <name>: <what is wrong>
+  LINE <n> "<the line, quoted>"  Beat: <beat>
+  <Check code>: <what is wrong>
   Fix: <a rewrite using only your facts, or MISSING>
-  (one block per weak line)
+  (one block per weak line, Truth problems first)
 
   MISSING BEATS
-  Section <n>, <beat>: <what the script never does>
+  <beat>: <what the script never does>
+
+  WORDS  <spoken> of <budget> for <length> at <pace>
   MISSING: <facts a fix would need>
 
 example:
@@ -80,90 +86,95 @@ example:
     probiotics. Doubt: "Will this upset my stomach more?"
     Customer words: "The prebiotics do their job, but not
     aggressively" (review 8).
-    Voice: playful, cheeky. Bought: again (subscription).
+    Voice: playful, cheeky. Bought: reordered (subscription).
   output: |
-    LINE 1 "Fix the Hot Girl Tummy."
-    Section 4, claims: "fix" sounds like treating bloating; the
-    allowed wording is "supports". Section 6, problem: it tells the
-    viewer what they have, instead of showing what they do.
-    Fix: open on how they cope. "Fiber powder. Probiotics. That tea
-    your friend swore by. Then 3 pm hits." [ASSUMED: the 3 pm moment]
-
-    LINE 2 "the first smart gummy that fills the gaps"
-    Section 4: "first" has no source, and "smart" and "fills the gaps"
-    are words any rival could say. Section 7: the product is named
-    before anything has landed.
-    Fix: cut it. Name Sprout at the offer.
-
-    LINE 3 "60+ potent ingredients to revive whole body vitality"
-    Section 4: "potent" is opinion and "revive whole body vitality"
-    can't be backed. Section 7: a feature with a vague promise, and no
-    reason it works.
-    Fix: "One pack has 6 grams of prebiotic fiber in a handful of
-    gummies. It supports digestion and gut health."
-
     LINE 4 "Clinically backed formula for energy, immunity..."
-    Section 4: the study measured two vitamins in the blood, not
-    energy or immunity. Section 9, proof: the claim is bigger than
-    the proof.
+    Beat: proof
+    Truth 1: the study measured two vitamins in the blood, not energy
+    or immunity. Proof 1: the claim is far bigger than the proof.
     Fix: proof that matches the gut promise. "67% of surveyed users
-    experienced better, more regular digestion." On screen: brand
+    experienced better, more regular digestion." Screen: brand
     survey, 3,000+ customers.
 
-    LINE 5 "Trusted by 1M+."
-    Section 4: the product on the next shelf could say "trusted".
-    Section 9: a bare count is weak proof next to line 4's survey.
-    Fix: cut it at 30 seconds.
+    LINE 1 "Fix the Hot Girl Tummy."  Beat: opening
+    Truth 3: "fix" sounds like treating bloating; the allowed word is
+    "supports". Truth 5: it tells viewers what they have.
+    Problem 1: a symptom, not what they do about it.
+    Fix: open on what they've tried. "Fiber powder. Probiotics. That
+    tea your friend swore by. Then 3 pm hits." [ASSUMED: the 3 pm
+    moment]
 
-    LINE 6 "Get up to 61% OFF + 4 FREE gifts. Shop now!"
-    Section 4: the discount is stated four ways across ads and site,
-    so it isn't yet a fact. Section 9, call to action: no next step,
-    no effort, no reason for now.
+    LINE 6 "Get up to 61% OFF + 4 FREE gifts. Shop now!"  Beat: offer
+    and call to action
+    Truth 2: the discount appears four ways across ads and site, so
+    it isn't a fact yet. Call to action 1: no next step, no effort,
+    no reason for now.
     Fix: "Your first order is $29.99 with the text sign-up, then
     $49.99 every 4 weeks. Start with Low Sugar."
 
+    LINE 2 "the first smart gummy that fills the gaps"  Beat: promise
+    Truth 1: "first" has no source. Offer 1: the product is named
+    before anything has landed. "Smart" and "fills the gaps" are
+    words any rival could use.
+    Fix: cut it. Name Sprout at the offer.
+
+    LINE 3 "60+ potent ingredients to revive whole body vitality"
+    Beat: how it works
+    Truth 3: "revive whole body vitality" can't be backed. How it
+    works 1: a feature with a vague promise and no reason it works.
+    Fix: "One pack has 6 grams of prebiotic fiber in a handful of
+    gummies. It supports digestion and gut health."
+
+    LINE 5 "Trusted by 1M+."  Beat: proof
+    Proof 3: a bare count is weak next to a specific survey result,
+    and "trusted" is a word any rival could use.
+    Fix: cut it at 30 seconds.
+
     MISSING BEATS
-    Section 9, doubts: "Will this upset my stomach more?" is never
-    answered. Add review 8: "The prebiotics do their job, but not
-    aggressively."
-    Section 12, voice: six lines in brand-ad voice and none in the
-    playful voice the brand uses elsewhere.
+    Doubt: "Will this upset my stomach more?" is never answered. Add
+    review 8: "The prebiotics do their job, but not aggressively."
+    Problem: there is no workaround, only a slogan.
+
+    WORDS  46 of 84 for 30 s at 3.0 a second. Room for the doubt beat
+    and one problem line.
     MISSING: one agreed discount figure. Until then the script uses
     prices, not a percentage.
     MISSING: which 4 gifts. They change, so the line can't name them.
 
 tweaks:
-  - what: Which sections
-    how: Ask for "voice only" to polish a script for speaking, "beats, length and format" to pick a format, or "all" when writing from research. Fewer sections means a shorter, sharper review.
-  - what: Bought again or bought once
-    how: Most rules change with this. Something used up and reordered is judged on the first order and the habit; something kept is judged on price against how long it lasts, fit and returns. If you don't say, it applies both and names the difference.
+  - what: Which groups
+    how: Ask for "Delivery only" to polish a script for speaking, "Offer and call to action" to tighten the ending, or "all" for a full review. Fewer groups means a shorter, sharper review.
+  - what: Reordered or kept
+    how: Several checks change with this. For something reordered, the first order and the habit matter most. For something kept, the buyer weighs price against how long it lasts, the fit and the returns policy. If you don't say, it applies both and names the difference.
   - what: Your facts
-    how: Paste your product facts and approved claims. Without them, fixes that need a fact are marked MISSING instead of filled in.
+    how: Paste your product facts and allowed claims. Without them, fixes that need a fact are marked MISSING instead of filled in.
   - what: Writing, not judging
-    how: Say "use as guidance while I write" and it gives no separate review. The script you write follows the sections instead.
+    how: Say "use as a guide while I write" and it gives no separate review. The script you write follows the checks instead.
 
 judge:
   - Every problem quotes a real line from your script.
-  - Every section it names is actually in the reference, and the reason matches it.
+  - Every check code it cites is in the reference, and the reason matches it.
+  - Truth problems come first.
   - Every fix uses only your facts. Nothing from the reference's examples appears as a fact.
-  - It spots claims any rival could make and claims you can't back.
-  - Missing beats are named, not just weak lines.
+  - Missing beats are named, as well as weak lines.
 
 test:
-  - Run it on your best-performing ad. It should flag little; if it tears a winner apart, read which rules it cites before you change anything.
-  - Plant one claim you know you can't back in a script. It should catch it under claims and offer a fix from your facts or a MISSING line.
-  - Run it twice on the same script. The same lines should be flagged both times, even if the wording of the fixes changes.
-  - Leave out whether your product is bought again or once. It should say MISSING and judge both ways.
+  - Run it on your best-performing ad. It should flag little; if it tears a winner apart, read which checks it cites before you change anything.
+  - Plant one claim you know you can't back. It should catch it under Truth and offer a fix from your facts or a MISSING line.
+  - Run it twice on the same script. The same lines should be flagged both times, even if the fixes are worded differently.
+  - Leave out whether your product is reordered or kept. It should say MISSING and judge both ways.
 
 improve:
   - Add your allowed and banned claims to "What you need" in the skill file, so every review checks against your real limits.
-  - Add a short section to the reference file with your brand's voice rules and never-say list, so voice problems are flagged as your rules, not general ones.
-  - Write your product type (bought again or once) into the skill file as a default, so the right doubts are always used.
+  - Add your brand's voice rules and never-say list under Delivery in the reference file, so voice problems cite your own rules.
+  - Write your product type (reordered or kept) into the skill file as a default.
   - Save the problems it finds often to your brand file as "lines we keep getting wrong", and check new drafts against them first.
-  - Pair it with the skill that writes or fixes a video ad script beat by beat, to rewrite once you know what's wrong.
+  - Pair it with the skill that writes a video ad script beat by beat, to rewrite once you know what's wrong.
 
 terms:
   - term: Beat
     meaning: One part of the script with one job, like the problem or the proof.
-  - term: Bought again or bought once
-    meaning: Used up and reordered (a subscription, a supplement) versus kept (a jacket). The buyer's doubts differ.
+  - term: Check code
+    meaning: A short name for one check, like Truth 1 or Proof 2, so you can look it up in the reference file.
+  - term: Reordered or kept
+    meaning: Used up and bought again (a supplement) versus bought once and owned (a jacket). The buyer's doubts differ.

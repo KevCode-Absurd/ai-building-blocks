@@ -4,62 +4,67 @@ summary: "Give it your selling idea and brand details. You get a narrated script
 job: make-video-ads
 
 headline: "Turn an everyday hassle into a clay-world ad"
-subhead: Give it your selling idea and brand file. It builds a miniature clay world with a lead figure and the people around them, writes one narrated line per picture, and brings your product in, sculpted in clay under its real printed label.
+subhead: Give it your selling idea and brand file. It finds a hassle a whole crowd shares, dresses a miniature clay set like a stop-motion studio would, and writes a narrated story in five movements where one lead gets out of it with your product.
 
 explain: |
-  Some problems are awkward to show with real people: a queue at the office sink, a crowded train, a dinner that goes wrong. In a handmade clay world they become funny and easy to watch, and a change can happen in a way only clay can show, like a scene melting into the next one.
+  Some problems are awkward to show with real people: a queue at the office sink, a packed train, the school-gate rush. In a handmade clay town they become funny and easy to watch, because everyone recognises the routine and nobody real is embarrassed.
 
-  This skill writes for that world. It checks the story needs other people in it, picks one of four clay looks, and casts a lead who is described the same way every time. A narrator tells the story; no clay figure speaks or claims a result, and a crowd is only ever the setting, never proof. Your product is sculpted at its true shape under a real paper label with every word exact. Light stays bright and warm, because dusk and long shadows ruin the clay look.
+  This skill builds the story on that shared hassle. The crowd does the routine, one lead hits a snag, swaps in your product, and steps out while everyone else carries on. It writes a set card the way a studio plans one: one scale, one finish, model-maker stand-ins for water and glass, studio light and shallow focus. Only one figure moves in each shot, as in real stop-motion. A narrator tells the story; no clay figure speaks or claims a result. Your product is sculpted under its real printed label, every word exact.
 
 when:
   - Your buyer's problem happens around other people (a commute, an office, a family dinner).
-  - You want a playful, handmade-looking ad without hiring a cast or a set.
-  - You want one image of a clay figure at the worst moment of the problem.
+  - You want a playful, handmade-looking ad without hiring a cast or building a set.
+  - You want one image of a clay town with your buyer's hassle at its worst.
 
 you_give:
   - Your selling idea or an existing script
   - Your brand file, with the buyer's moment, who else is there, your product's shape, colours and label lines, and your approved claims
-  - Video or image, the length, and how much the buyer already knows (optional)
+  - Video or image, the length (20, 30 or 45 seconds), and how much the buyer already knows (optional)
 you_get:
-  - A sheet for the lead figure and the chosen clay look
-  - A line-by-line script with narration, picture, any clay transition and clip
-  - Or an image brief with the moment, layout, exact words and image prompt
+  - A set card (scale, finish, stand-ins, light, focus) and a cast sheet
+  - A line-by-line script in five movements, with the picture, who moves and the seconds
+  - Or an image brief with the moment, layout, every word and the image prompt
   - Notes on what was inferred and what's missing
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Paste your selling idea and your brand file. Include where your buyer's problem happens and who else is there.
+  - Paste your selling idea and your brand file. Say where your buyer's hassle happens and who else is there.
   - Type out every line of your product's label. It won't invent label words.
   - Say "video, 30 seconds" or "image".
   - Take the script to "Turn your clay town script into handmade-looking clips" for the prompts.
 
 how_it_works:
   - title: Checks the fit
-    text: Confirms the story needs other people, and says where proof must come from elsewhere.
-  - title: Builds the clay world
-    text: Seen from inside, with fingerprints and tool marks, bright warm light and real shadows.
+    text: Confirms the hassle happens around other people, and says where proof must come from elsewhere.
+  - title: Names the shared hassle
+    text: Writes one line about what everyone at the place does, so the crowd has a routine to perform.
+  - title: Dresses the set
+    text: One scale, one finish level, stand-ins like clear gel for water, studio light and shallow focus.
   - title: Casts the figures
-    text: A made-up adult lead and the people around them. A narrator speaks; no figure does.
-  - title: Picks one look
-    text: Crafted, lumpy, soft or felt puppet, kept for the whole ad.
-  - title: Sculpts the product
-    text: True shape and colours under a real printed paper label, every word exact.
-  - title: Writes the video or image
-    text: One picture per narrated line, one gesture per shot, at most one clay transition per clip. Or one moment with 20 words or fewer.
+    text: A made-up adult lead written the same way every time, and a crowd built from a few varied base figures.
+  - title: Writes five movements
+    text: The routine, the snag, the swap, the ripple and the sign-off, with one mover per shot and at most one clay morph.
+  - title: Holds the claims
+    text: Label words exact, how it works only as you state it, and the crowd never used as proof.
 
 output_shape: |
-  LOOK  <crafted / lumpy / soft / felt puppet>
-  LEAD  <adult, build, clay skin colour, hair, clothes, used every time>
+  FIT       <why the hassle suits a crowd, and what clay can't prove>
+  HASSLE    Every <time>, everyone at <place> <does the annoying thing>.
 
-  Line | narration | picture | clay transition | clip
-  1    | "<line>" | <one picture, one gesture> | - | 1 (<length>)
+  SET CARD  Scale <...> | Finish <crisp / handled / rough>
+            Stand-ins <...> | Light <...> | Focus <...>
+  LEAD      <adult, build, clay skin colour, hair, clothes, signature item>
+  CROWD     <3 or 4 base figures and how they vary>
+
+  #  movement  narration          picture                  mover   s
   <one row per line>
 
+  WORDS  <spoken words> (target <target>)
   NOTES
   - Inferred: <...>
   - MISSING: <anything the facts didn't give>
 
-  (For an image: look, moment, layout, exact words, image prompt)
+  (For an image: set card, moment, layout, every word, image prompt)
 
 example:
   business: sprout
@@ -69,8 +74,8 @@ example:
     Idea: the office sink queue of people rinsing shaker bottles.
     One daily pack skips all of it.
     Buyer: the powder quitter, 28 to 45, office job.
-    Brand line: "No more gagging on pills, sloshing chalky powders,
-    or cleaning messy counters." Also "Rip. Tip. Enjoy."
+    Brand lines: "No more gagging on pills, sloshing chalky powders,
+    or cleaning messy counters." "Rip. Tip. Enjoy."
     Approved: "60+ ingredients, 21 vitamins & minerals, and 6g fiber".
     Product: glossy deep-green pouch, big yellow wordmark "Sprout",
     yellow bear face top right, "28 Daily Packs" at the bottom.
@@ -78,90 +83,111 @@ example:
     deep-green bears. Daily pack label words: not captured.
     Offer: first order $29.99 with text sign-up, renews at $49.99
     every 4 weeks.
-    Settings: video, about 35 seconds, 10-second clips.
+    Voice: playful, cheeky. Settings: video, 30 seconds.
   output: |
-    FIT: the problem happens around other people, so the clay town
-    suits it. Nothing here proves the product works; the claim line
-    stays exactly as approved.
+    FIT     The hassle happens in a queue, so a clay crowd suits it.
+            Nothing here proves the product works; the claim line
+            stays exactly as approved.
+    HASSLE  Every morning, everyone in the office queues at one sink
+            to rinse a shaker.
 
-    LOOK  crafted: detailed clay faces, real fabric clothes, close
-          film framing, fingerprints and tool marks.
-    LEAD  Dev, a clay adult man, about 30, slim, warm brown clay
-          skin, short black clay hair with tool-line grooves, a
-          mustard knit jumper of real fabric, navy clay trousers.
+    SET CARD  Scale: figures a hand tall, chunky oversized mugs and
+              shakers | Finish: handled, some thumbprints
+              Stand-ins: running water as clear gel, sludge as
+              grey-green clay | Light: soft key from a window, a
+              fill, bright morning | Focus: lead sharp, rest soft
+    LEAD   Dev, a clay adult man, about 30, slim, warm brown clay
+           skin, short black clay hair with comb grooves, a mustard
+           knit jumper of real fabric, navy clay trousers, a lanyard.
+    CROWD  Four base figures (tall, short, round, slight), varied by
+           hair and office clothes; six in the queue, each face
+           distinct.
 
-    1 "Every morning, the office sink has a queue."
-      Picture: a crowd of office workers in line at a clay sink,
-      each a distinct sculpted clay face, each holding a clay
-      shaker bottle. Bright warm morning light.          Clip 1
-    2 "Shaker bottles. Green sludge. Someone's always scrubbing."
-      Picture: macro of a clay shaker, grey-green clay sludge inside,
-      chunky clay hands scrubbing it.                    Clip 1
-    3 "Dev is fourth in line. Again."
-      Picture: tight medium on Dev. Inner brows pushed up, mouth
-      pulled flat, a clay shaker in one hand.            Clip 1
-    4 "Then Dev skips the sink."
-      Clay transition: the queue rolls into a ball and unfolds as
-      Dev's desk.                                        Clip 2
-    5 "One daily pack. Rip. Tip. Enjoy."
-      Picture: from a clay daily pack torn straight across the
-      top, Dev's clay hand tips small deep-green clay gummy bears
-      into his palm.                                     Clip 2
-    6 "Sixty-plus ingredients, twenty-one vitamins and minerals, six
-      grams of fiber."
-      Picture: the clay pouch on his desk under a real printed paper
-      label: "Sprout", yellow bear face, "28 Daily Packs".  Clip 2
-    7 "No shaker. No sink. No queue."
-      Picture: view from clay-ankle height. The queue far behind,
-      Dev at his desk, brows smooth, one corner of his mouth up.
-                                                         Clip 3
-    8 "Your first order is $29.99 with text sign-up, then $49.99
-      every four weeks."
-      Picture: Dev holds the pouch, label to camera.     Clip 3
-    9 "For anyone done with the shaker."
-      Picture: held on Dev and the pouch.                Clip 4 (5 s)
+    #  movement  narration                 picture             mover  s
+    1  routine   "Every morning at nine,   wide: six workers   crowd  0-4.5
+                 the whole office queues   at a clay sink,
+                 at one sink."             shaking clay
+                                           shakers in step
+    2  routine   "Green sludge. Scrub.     clay hands scrub    hands  4.5-7
+                 Rinse. Next."             a shaker under gel
+                                           water
+    3  snag      "Dev is fourth in line.   medium: Dev slumped lead   7-11.5
+                 His meeting starts at     on the counter,
+                 five past."               elbows wide, eyes
+                                           on a blank clock
+    4  swap      "So Dev steps out of the  Dev steps sideways  lead   11.5-14.5
+                 queue."                   out of line; the
+                                           queue holds
+    5  swap      "One daily pack."         morph: the shaker   object 14.5-16
+                                           in his hand squashes
+                                           down into a flat
+                                           daily pack
+    6  swap      "Rip. Tip. Enjoy."        clay hands tear it  hands  16-18
+                                           across the top;
+                                           green clay bears tip
+                                           into his palm
+    7  swap      "Sixty-plus ingredients,  the clay pouch on   none   18-22
+                 twenty-one vitamins and   his desk, real paper
+                 minerals, six grams of    label: "Sprout",
+                 fiber."                   bear face, "28 Daily
+                                           Packs"
+    8  ripple    "The queue carries on.    Dev at his desk,    one    22-26
+                 Dev's already at his      sharp; behind, soft, colleague
+                 desk."                    one colleague in the
+                                           queue glances over
+    9  sign-off  "First order, $29.99      Dev holds the pouch, lead  26-29
+                 with text sign-up."       label to camera
+    10 sign-off  "For anyone done with     held on Dev and the none   29-32
+                 the shaker."              pouch
 
+    On screen with line 9: $29.99 first order with SMS sign-up.
+    Renews at $49.99 every 4 weeks.
+
+    WORDS  71 spoken words (target 70)
     NOTES
-    - No figure speaks. The queue is a setting, not proof.
-    - Light stays bright and warm. No dusk or long shadows.
-    - Inferred: the office kitchen and Dev's name aren't in the
-      brand file. They come from the buyer's office job.
-    - MISSING: the daily pack's label words. In line 5 the pack is
-      seen side-on so no label shows.
+    - No figure speaks. The queue is the setting, never proof.
+    - One morph in the ad, at line 5, with 3 words over it.
+    - Inferred: the office kitchen, Dev's name and his meeting come
+      from the buyer's office job, not the brand file.
+    - MISSING: the daily pack's label words. In lines 5 and 6 the
+      pack is seen from its top edge, so no label shows.
 
 tweaks:
-  - what: The look
-    how: Ask for "lumpy" for a sillier, big-headed cast, or "felt puppet" for a moodier, premium feel. The light and faces change with it.
-  - what: The crowd
-    how: Name the shared place (a train, a till queue, a school gate). The opening and the lead's stakes are built around it.
+  - what: The finish
+    how: Ask for "crisp" for a premium, careful look, or "rough" for big thumbprints and lumpy shapes on a silly brand. "Handled" sits between.
+  - what: The shared hassle
+    how: Name the place and the routine (a train, a till queue, a school gate). The opening, the snag and the ripple are all built around it.
+  - what: Length
+    how: 20 seconds keeps the routine, the swap and the sign-off at about 45 words. 45 seconds gives the snag and the ripple more room at about 100.
   - what: Video or image
-    how: Say "image" and you get one moment with the lead at the worst of the problem, a headline and 20 words in all.
+    how: Say "image" and you get one diorama view, with the lead sharp in front, the crowd behind and 15 words in all.
   - what: How it works
-    how: If your brand file says how the product works, it can show it as clay changing shape. Without it, there's no how-it-works moment.
+    how: If your brand file says how the product works, the swap can show it in clay. Without it, there's no how-it-works moment.
 
 judge:
   - The lead is described in exactly the same words every time.
   - No clay figure speaks or says the product worked.
-  - The crowd is never used as proof ("thousands love it").
+  - Only one figure moves in each shot.
   - Every label word matches your real pack.
-  - There's at most one clay transition per clip, and no dusk or night scenes.
+  - There's one clay morph at most, at the swap.
 
 test:
   - Check the story needs other people. If one figure on a tabletop could tell it, a single-character clay script fits better.
   - Search the script for any line spoken by a clay figure. There should be none.
+  - Read the "mover" column. If any row names two movers, ask it to split the shot.
   - Check every label word against your real pack.
-  - Count the clay transitions in each clip. There should be one at most.
 
 improve:
-  - Pick your clay look once and delete the other three from step 4 of the skill file, so every ad in the series matches.
+  - Pick your finish once and write it into step 3 of the skill file, so every ad in the series matches.
   - Paste your label lines with their colours into "What you need", so the sculpted product is never guessed.
-  - Add the shared places your buyers know to step 1 (for Sprout, an office kitchen or a school gate).
-  - Pair it with a skill that turns a clay town script into still and clip prompts. For one character on a single tabletop set, use the single-character clay script instead.
+  - Add the shared places your buyers know to step 2 (for Sprout, an office kitchen or a school gate).
+  - Save your lead's description in your brand file, so the same figure can come back in the next ad.
+  - Pair it with the skill that turns a clay town script into still and clip prompts. For one character on a single tabletop, use the single-character clay script instead.
 
 terms:
   - term: Stop-motion
     meaning: Animation made by moving clay figures a tiny bit between photos, which gives a slightly stepped movement.
-  - term: Clay transition
-    meaning: Moving to a new scene by changing the clay itself, such as the scene rolling into a ball and unfolding.
-  - term: Narrator
-    meaning: A voice you hear but don't see, telling the story.
+  - term: Clay morph
+    meaning: One clay object reshaping into another in a few stepped poses, like a shaker squashing into a flat pack.
+  - term: Set card
+    meaning: A short list that fixes the scale, finish, stand-in materials, light and focus for the whole ad.

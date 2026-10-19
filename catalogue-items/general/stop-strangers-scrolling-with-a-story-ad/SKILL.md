@@ -1,71 +1,74 @@
 ---
 name: stop-strangers-scrolling-with-a-story-ad
-description: Use when the ad is for strangers who are not shopping and has to look like a normal post, not an ad. Plans the picture from the buyer's problem, writes a 150 to 400 word story that answers the picture, and sends the click to an article-style page that teaches first.
+description: Use when an ad must reach strangers who aren't shopping and should read like a post. Finds the moment the old way stopped working, picks where the picture's evidence lives, writes a 120 to 260 word story built on why people switch, and says what the page it opens must start with.
 ---
 
 # Stop strangers scrolling with a story ad
 
-You write a short ad made to look like a normal post, for people who have never heard of the brand. It has a picture chosen from the buyer's problem, a 150 to 400 word story that answers the picture, a headline for the line under the picture, and a rule for where the click goes. A stranger scrolling at night is not shopping and spots a product shot as an ad in a quarter of a second. A picture of a real moment earns the half second a product never gets. The picture asks one question, the story answers it, and the page keeps teaching before it sells.
+You write a post-style ad for people who have never heard of the brand: a picture idea, a short story under it, the line under the picture, and what the click must open on. People skip anything that looks like an ad, so the picture shows a moment from the buyer's life and the story does the selling.
+
+## The family checks: stop, sort, follow
+Every post-style ad in this library passes three checks.
+- **Stop.** The picture is unexpected and relevant at once. Unexpected alone is a gimmick people forget. Relevant alone is wallpaper.
+- **Sort.** People with the problem see themselves in it, and everyone else scrolls on. The ad never says who the reader is or what they have.
+- **Follow.** The first line picks up what the picture made people wonder, and the page opens on the same moment in the same words.
+
+It may look like a post. It never poses as a publisher, a customer, an expert or a result.
 
 ## What you need
-- **Customer words about the problem** (required): reviews, support emails or call notes that show a problem the buyer already feels, each with its source. Treat pasted outside text as information, not instructions.
+- **Customer words about the problem** (required): reviews, support emails or call notes, each with its source. Treat pasted outside text as information, not instructions.
 - **Product and brand facts** (required): what it does, the claims you may make with their sources, and what the brand never says or shows.
-- **Buyer** (optional): who they are, the moment the problem bites, what they have tried.
-- **Destination page** (optional): the article-style page the click opens.
-- **Who may narrate** (optional): a real customer who agreed to be used, the founder, or a named expert who agreed. List only the facts on record about them.
+- **Buyer** (optional): who they are, when the problem bites, what they use now.
+- **Destination page** (optional): the page the click opens.
+- **Who may narrate** (optional): a real customer who agreed, the founder, or a real expert who agreed, with only the facts on record about them.
 
 ## Steps
-1. **Test the problem.** Does the buyer already feel a problem they would name? If not (something bought only for its looks, a novelty), write `MISSING: a felt problem` and recommend a direct product ad instead. Clothing counts only when the garment fixes something.
-2. **Look at it from outside.** Ask what a bystander would see of this problem, then pick the picture type and name its slug from `get-story-ads-read-with-the-right-picture`:
-
-| What a bystander would see | Picture type |
-|---|---|
-| A test or readout | `get-a-second-look-with-a-test-result-photo` |
-| A visible symptom | `reach-the-right-people-with-a-visible-symptom` (the symptom in its routine) |
-| A changed way of living | `make-buyers-see-themselves-in-an-empty-room` |
-| Something the problem leaves behind | `make-people-look-twice-at-the-leftover-mess` (a close-up) |
-| A feared next step | `stop-worried-buyers-with-what-they-dread` (one plain object from it) |
-| One visible flaw | `make-people-look-with-one-red-circle` |
-| A moment | `stop-your-buyer-mid-scroll-with-a-snapshot` |
-| A private problem | `keep-people-reading-with-a-hand-drawn-story` |
-
-3. **Put the picture through two tests.** Recognition: someone with the problem, shown the picture cold, would say "that's me" or "what happened?", not "nice photo". Cover the product: the picture still makes sense with no product, because none is in it.
-4. **Name the one question the picture raises.** The picture never answers it.
-5. **Write the story.** 150 to 400 words, short paragraphs, in the buyer's own phrases from the research. The first line picks up the picture's question. Then five beats:
-   1. **Recognition.** The moment in the buyer's words, two or three sentences.
-   2. **The usual explanation.** What everyone tells them, and why it falls short.
-   3. **What they tried.** Each attempt and why it fell short. The attempts failed, not the person.
-   4. **The better explanation.** One cause or way it works that the brand's facts support, said plainly.
-   5. **A small next step.** One soft line pointing to the page ("I wrote down everything I found on one page"). No price, no discount, no product page.
-
-   Choose one opener: the picture continued ("That's my hallway at 2am."), a heads-up ("Before you buy another one..."), an admission ("I got this wrong for years."), or a plain question. An expert voice is allowed only for a real expert who is on record and agreed.
-6. **Write the headline under the picture.** It is a second reason to stop, never a product name. Use one of: "The part of [problem] nobody mentions"; "Stop blaming [suspect]. Look at [cause]."; "Why [problem] returns after [common fix]"; "If [specific situation], read this". Never a statement about the reader's body or health.
-7. **Set the destination.** The click goes to an article-style page that teaches the problem and reaches the product and offer near the end. Never straight to a product page. If there is no such page yet, say one must be built first.
-8. **Add the test plan.** Run the same story with two or three picture types to find which way of showing the problem stops this audience. Then run the winning picture with different openers. Judge on the page and the checkout, not only the click. Give strangers time: do not cut an ad on day two for failing to sell like an ad shown to people who already know you.
+1. **Find the push.** In the customer words, find the moment the old way stopped being bearable: the day, the place, the thing in their hand. Quote it. If nobody describes a moment like that (a product bought only for its looks), write `MISSING: a moment people struggle with` and recommend a direct product ad. Clothing qualifies only when it solves something.
+2. **Ask where the evidence lives.** Take the first trace the customer words support:
+   - **In a place** (a room the problem changed): `make-buyers-see-themselves-in-an-empty-room`.
+   - **On a thing** (what's left over, what failed, one visible flaw): `make-people-look-twice-at-the-leftover-mess`, `get-recognised-with-the-old-things-that-failed` or `make-people-look-with-one-red-circle`.
+   - **On the body** (a sign on a hand, foot, arm or leg): `reach-the-right-people-with-a-visible-symptom`, and only if it passes that skill's gate.
+   - **In words** (a note, a message, a page headline): `stop-the-scroll-with-a-handwritten-note`, `make-people-read-a-private-phone-note` or `get-your-ad-read-like-a-shared-article`.
+   - **Nowhere safe to photograph**: `keep-people-reading-with-a-hand-drawn-story`.
+   - **Only a moment**: `stop-your-buyer-mid-scroll-with-a-snapshot`.
+   The full menu is in `get-story-ads-read-with-the-right-picture`.
+3. **Run stop and sort on the idea.** Would it look out of place between a friend's holiday photo and a news post? Would someone with the problem know what it's about with no caption? Then the caption test: a friend could post it with one line of their own, and that line wouldn't need a brand name.
+4. **Write what the picture makes people wonder,** in one line. The picture never answers it.
+5. **Write the story, 120 to 260 words,** about a minute of reading. Short paragraphs, customer phrases word for word. Only about the first 125 characters show before "See more", so they must pick up what the picture made people wonder. Then four parts, in the order people switch:
+   1. **Push.** The moment, in the buyer's words.
+   2. **Habit.** What they kept doing anyway, and why it made sense. The person is never at fault.
+   3. **Doubt.** What made them wary of something new: it'll be the same, it'll be hard, it'll cost more.
+   4. **Pull.** The one thing that's different here, with a fact the brand may state, and what answers the doubt.
+   End with one low-key line pointing to the page. No price, discount or product page link.
+   Open one of three ways: **describe the frame** ("The shaker's been in the sink since Tuesday."), **give the date** ("It was the third tub I'd bought that year."), or **quote someone** who really said it. First person belongs only to a real customer who agreed or the founder with facts on record. Otherwise the brand speaks about what customers tell it.
+6. **Write the line under the picture.** Meta suggests 27 characters for this headline. Use one caption line: **plain caption** (what's in the frame, with a time or a count), **a question about the thing** (never about the reader), **the buyer's own line** (real, cut at a whole word) or **the swap** (old step out, new step in). Never the product name, never a line about the reader's body or health.
+7. **Say what the page must open on.** Its first screen repeats the picture's moment and the story's first line, so the click feels like the next page of the same story. It teaches before it sells and shows who it's from. If no such page exists, say so. Don't send strangers to a product page.
+8. **Plan two tests.** First, one story with two pictures from different traces (a place against a thing, say). Then the winning picture with a second opening. Judge on how many readers reach the offer on the page, then on sales. Compare it with other ads for new customers, never with retargeting.
 
 ## What you hand back
-1. **Problem test.** Pass or fail, with one line.
-2. **Picture.** The type slug, the one question it raises, and a one-line scene.
-3. **Story.** 150 to 400 words, labelled with its opener, its narrator and its exact word count.
-4. **Headline under the picture.** One line.
-5. **Destination.** The page type and what its first screen promises.
-6. **Flags.** Anything inferred, any news-style or medical-looking picture, any claim to check.
-7. **Test plan.** Two lines.
+1. **Push**: pass or fail, with the quote and its source.
+2. **Picture**: the trace, the skill to use, the scene in one line, what it makes people wonder, and a 40 to 80 word starter image prompt.
+3. **Story**: opener, narrator, exact word count, then the text.
+4. **Line under the picture**: the words, the caption line used, the character count.
+5. **Page**: what its first screen must say, or `MISSING`.
+6. **Flags**: quotes needing permission, inferred lines, claims used.
+7. **Tests**: two lines.
 
 ## Check before you hand it back
-- The word count is 150 to 400, and the first line answers the picture's question.
-- Every claim traces to the brand's list of approved claims. Nothing says the product cures, treats or reverses a disease.
-- No invented customer or expert. A customer's first-person story retells a real review or conversation, with permission. Otherwise the founder tells it, using only facts on record, or the brand summarises what customers say.
-- No "you have [condition]" sentence about the reader's health. No before-and-after of a body. No picture that implies an endorsement (no doctor holding the product). A generated person is just a photograph and is never captioned as a customer.
+- 120 to 260 words, and the first 125 characters pick up the picture.
+- Every claim traces to the approved list. Nothing says the product cures, treats or reverses a condition.
+- No invented customer or expert. First person only for a real person who agreed.
+- No "you have" line about the reader, no before-and-after of a body, no doctor holding the product. A generated person is never captioned as a customer.
 - No price, discount or product page link in the story.
+- The page brief says who the page is from. Nothing passes as a news outlet.
 
 ## If something is missing
 Write `MISSING: <what>` instead of guessing.
-- No felt problem: recommend a direct product ad and stop.
-- No narrator who agreed: use the founder's voice with only facts on record, or the brand summarising customers.
-- No article page: say one must be built before the ad runs.
+- No moment of struggle: recommend a direct product ad and stop.
+- No narrator who agreed: the brand speaks, summing up what customers say.
+- No page that opens on the moment: say it must be built before the ad runs.
 
 ## Avoid
-- Starting from the picture type instead of the problem.
-- Sending clicks from strangers to a product page.
-- Letting the picture, the headline or the story pretend to be a person or outlet that does not exist.
+- Picking the picture before the push.
+- Explaining the picture in the picture.
+- Sending strangers straight to a product page.

@@ -1,7 +1,7 @@
 slug: edit-a-draft-so-it-sells
 renamed_from: copy-draft-edit-and-repair-pass
 name: "Edit a draft so it reads clean and sells"
-summary: "Your draft back with its best true details kept and only the lines that cost you sales fixed."
+summary: "Your draft read three ways, with only the lines that stop a reader fixed and every change logged."
 category: general
 type: skill
 role: check
@@ -15,5 +15,11 @@ outputs:
 uses: [stop-your-copy-sounding-like-ai, know-if-your-copy-is-ready]
 origin: rebuilt
 source_ids: [CES-022]
-old_name: copy-craft
-version: 1.0.0
+version: 2.0.0
+credits:
+  - {title: "How Users Read on the Web", by: "Jakob Nielsen, Nielsen Norman Group", url: "https://www.nngroup.com/articles/how-users-read-on-the-web/", used: "Most readers scan; concise, scannable, objective text tests better (the skim and doubt reads)"}
+  - {title: "F-Shaped Pattern of Reading on the Web", by: "Kara Pernice, Nielsen Norman Group", url: "https://www.nngroup.com/articles/f-shaped-pattern-reading-web-content/", used: "Put the point first in each block; subheads that say something"}
+  - {title: "Scrolling and Attention", by: "Therese Fessenden, Nielsen Norman Group", url: "https://www.nngroup.com/articles/scrolling-and-attention/", used: "Fix from the top first, where attention is highest"}
+  - {title: "The Adweek Copywriting Handbook", by: "Joseph Sugarman", url: "https://en.wikipedia.org/wiki/Joseph_Sugarman", used: "Each sentence must make the next one read (the slide read)"}
+  - {title: "The Elements of Style", by: "William Strunk Jr.", url: "https://en.wikipedia.org/wiki/The_Elements_of_Style", used: "Omit needless words; active voice; positive form"}
+  - {title: "Flesch-Kincaid readability tests", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Flesch%E2%80%93Kincaid_readability_tests", used: "Reading grade measured before and after"}

@@ -1,63 +1,69 @@
 new_slug: get-ad-ideas-that-each-test-something-new
 name: "Ad ideas that each test something new"
-summary: "Give it your past ads and what you can prove. You get new ideas from the gaps, each with a short brief."
+summary: "Give it your buyers, your proof and your recent ads. You get new ideas, each with the question its test will answer."
 job: plan-ad-tests
 
 headline: "Ad ideas that each test something new"
-subhead: Give it your buyers, your proof and the ads you've already run. It maps which buyer and message you've covered, picks ideas from the gaps your proof can back, and returns a ready brief line for each, marked as a guess until you have results.
+subhead: Give it your buyers, the proof you hold and the ads you've already run. It finds the buying moments your ads have missed, pairs each with proof you can show, and returns a brief for each idea with the question its result will answer.
 
 explain: |
-  Ask for five ad ideas and you usually get one idea five times: the same message in new colours or with a reworded first line. Testing those teaches you little, because nothing real changed between them.
+  Ask for five ad ideas and you often get one idea five times: the same message in new colours or with a reworded first line. Testing those teaches you little, because nothing real changed between them.
 
-  This skill plans from a grid. One side is the buyer and their situation. The second is how much they already know about the problem and about you. The third is the theme, one of seven, such as the problem moment, a customer story, a fair comparison or a demonstration. It marks which cells your recent ads already fill, picks untested cells your proof can support, and drops themes you can't back (no founder story on file means no founder idea). Each idea comes back with its first line, picture, proof, offer and call to action.
+  This skill treats every idea as a test. It starts from buying moments, the situations that send someone looking, such as "the shaker is in the sink again" or "packing the kids' bags at 7 am". It sorts each moment by how much the buyer already knows and maps where your recent ads sit. Then it fills the gaps with proof you hold, such as a demo, a customer's words, a sourced number, a fair side by side or your guarantee. Each idea comes with the question it answers ("if this wins, we learn ___") and a five-link check: who it's for, what they gain, the proof, the risk removed and the next step.
 
 when:
   - Your last batch of ads all felt like the same ad.
   - You're about to brief a designer and want each ad to test one clear thing.
-  - You have results from a few ads and want the next ideas to cover what you haven't tried.
+  - You have results from a few ads and want the next round to teach you something new.
 
 you_give:
   - Your facts and proof, your real offer, and the page the ad sends people to
-  - Your buyers, with the moment they need you and their own words
+  - Your buyers, the moments they reach for you, and their own words
   - The ads you ran recently, with results if you have them (optional)
   - How many ideas you want, and the ad format and shape
 you_get:
-  - A short coverage grid showing what's covered, chosen and skipped
-  - The ideas, each with buyer, what they know, theme and a brief line
+  - A list of buying moments, each with its source
+  - A coverage map showing what your ads cover, what's chosen and what's skipped
+  - The ideas, each with its test question, a five-link check and a brief line
   - A "guess" or "measured" label on every idea
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste your brand facts, claims and offer, and describe each buyer in a line or two.
+  - Paste some reviews. Buying moments are best found in customers' own words.
   - List the ads you've run lately, one line each, with results if you have them.
   - Say how many ideas you want and the format, for example "3 ideas, Facebook image ads, 4:5".
-  - Check the skipped list. If a theme was dropped for lack of proof, that's proof worth collecting.
+  - Read the test questions first. Make the ideas whose answers would change what you do next.
 
 how_it_works:
-  - title: Builds the grid
-    text: Lays out buyer, what they already know, and theme, then marks which cells your recent ads cover.
-  - title: Keeps themes you can back
-    text: Uses only the seven themes your proof supports, and treats a new colour or a reworded line as the same idea.
-  - title: Tests each idea in four beats
-    text: Checks for a real moment of need, how it feels, a reason to believe and the change the buyer expects, without forcing all four into the ad copy.
+  - title: Finds buying moments
+    text: Uses seven prompts (why, when, where, while doing what, with whom, with what else, how they feel) to list the situations that send buyers looking.
+  - title: Sorts by what buyers know
+    text: Places each moment as new to the problem, shopping for a fix, or already knows your brand.
+  - title: Lists your proof
+    text: Checks which of six kinds of proof you hold, from a demo to your guarantee. Proof you don't have can't carry an idea.
+  - title: Maps your recent ads
+    text: Shows which moments your ads already cover. A new colour or a reworded line counts as the same idea.
+  - title: Names the test question
+    text: Each idea says what you'd learn if it wins. Two ideas that answer the same question are one idea.
+  - title: Checks five links
+    text: Who it's for, what they gain, the proof, the risk removed and the next step. It fixes the weakest link first.
   - title: Ranks without scores
-    text: Orders ideas by fit to the buyer, strength of proof, freshness and how easy they are to make. It invents no ROI numbers.
-  - title: Writes the brief lines
-    text: Gives each idea its first line and picture, the limits of the promise, the proof, the doubt it answers, the offer, the action and the format.
-  - title: Labels guesses
-    text: Marks every idea as a guess unless you already have a measured result for it.
+    text: Orders ideas by how much the answer would change your next decision, then proof, then cost to make. It invents no ROI numbers.
 
 output_shape: |
-  COVERAGE
-  Covered
-    <buyer> | <what they know> | <theme>   <which recent ad>
-  Chosen (untested)
-    <buyer> | <what they know> | <theme>
-  Skipped
-    <theme>: <why your proof can't carry it>
+  MOMENTS
+    <moment>   <source, or "inferred">
 
-  IDEA <n>  <buyer> | <what they know> | <theme>
-  Four beats: <moment> / <feeling> / <proof> / <change expected>
+  COVERAGE
+  Covered    <moment> | <knows> | <proof used>   <which recent ads>
+  Chosen     <moment> | <knows> | <proof kind>
+  Skipped    <cell>: <the proof that's missing>
+
+  IDEA <n>  <moment> | <knows> | <proof kind>
+  Test: if this wins, we learn <...>
+  Links: who <carried by> / gain <...> / proof <...> / risk <...> /
+         step <...>   (strong, thin or missing)
   First line + picture: "<first line>" <what the picture shows>
   Promise limit: <what the ad must never say>
   Proof: <source>. Doubt answered: <the doubt>
@@ -72,58 +78,58 @@ example:
     [the skill]
 
     Facts: Sprout brand file (60+ ingredients, 21 vitamins and minerals,
-    6 g prebiotic fiber per pack, vegan, Low Sugar or Sugar-Free,
-    allowed and risky claims, 30-day money-back on the first order).
-    Offer: $29.99 first box with the text sign-up, then $49.99 every
-    4 weeks. Destination: the main product page.
-    Buyers: the quitter who wants to stick, the gut-fix seeker, the
-    busy parent, the price doubter (from the brand file).
+    6 g prebiotic fiber per pack, vegan, Low Sugar or Sugar-Free, the
+    absorption study, fine and risky claims, 30-day money-back on the
+    first order). Offer: $29.99 first box with the text sign-up, then
+    $49.99 every 4 weeks. Destination: the main product page.
+    Buyers: the quitter, the gut-fix seeker, the busy parent, the price
+    doubter (from the brand file).
     Reviews: reviews.md, 20 reviews.
-    Recent ads (live now, no results in the ad library): "Sprout is too
-    expensive" 61% off, "Don't Pay Full Price", "Trusted by 1M+",
-    "Fix the Hot Girl Tummy", "Struggling to Get Enough Fiber?",
-    "Nutrition for Healthy Hair", "Support Muscle While You Lose
-    Weight", "The Daily Nutrition Every Runner Forgets", "One Step I
-    Never Skip", "Fiber Kids Won't Fight", "Methylfolate, Not Folic Acid".
+    Recent ads (ad library, no results): the 15 headlines in ads.md.
     Ideas wanted: 3. Format: Facebook image ad, 4:5.
   output: |
-    COVERAGE
-    Covered
-      Price doubter | knows the product | offer, no theme   61% off x2, 1M+
-      Gut-fix       | knows the problem | problem moment    Hot Girl Tummy, Fiber?
-      Any           | knows the problem | identity          hair, runner, weight loss
-      Quitter       | knows the problem | identity (habit)  One Step I Never Skip
-      Parent (kids) | knows the problem | problem moment    Fiber Kids Won't Fight
-      Parent (kids) | knows the fixes   | fair comparison   Methylfolate
-    Chosen (untested)
-      Quitter       | knows the fixes   | fair comparison
-      Gut-fix       | knows the fixes   | customer story
-      Parent (self) | knows the product | demonstration
-    Skipped
-      Founder story: none on file.
-      Myth correction: no supported myth. "Most fiber supplements have
-      only 5g" has no source.
+    MOMENTS (4 of 9 shown)
+      While: rinsing a gritty shaker again          R3, R6
+      How they feel: scared a new pill will upset
+        their stomach                               brand file doubt
+      When: the school run, nothing for herself     R15
+      With what: a shelf of separate gummy bottles  R5
 
-    IDEA 1  Quitter | knows the fixes | fair comparison
-    Four beats: the shaker in the sink again / guilty about the half tub
-      / review 3 ("$94 a month ... gritty/chalky") / a daily habit that
-      needs no water
+    COVERAGE
+    Covered  price doubt | knows the brand | money off  ads 1-5
+             gut pain | new to the problem | none      ad 6
+             identity (hair, runner, weight) | new | none   ads 8-10
+             kids, picky eater | shopping | label fact  ads 14, 15
+    Chosen   shaker in the sink | shopping | side by side
+             scared of the stomach | shopping | customer's words
+             school run, for herself | knows the brand | showing it work
+    Skipped  why it's made this way: no maker's story on file.
+             A number with a source: the absorption study is on file
+             and no recent ad uses it. Top pick for the next run.
+
+    IDEA 1  shaker in the sink | shopping for a fix | side by side
+    Test: if this wins, we learn powder quitters answer the switch
+      story better than the money-off ads.
+    Links: who (the shaker, in the picture) strong / gain (headline)
+      strong / proof (the table) strong / risk (30-day money-back in
+      the caption) thin / step (Shop now) strong
     First line + picture: "Quit your greens powder? Same habit, no
-      shaker." Two columns: a powder tub and shaker against a pouch
-      and a torn daily pack. Rows: powder and water / tear a pack;
-      about $79 a month / $49.99 every 4 weeks; 90-day guarantee /
-      30 days, first order only (the row where the powder wins).
+      shaker." Two columns: a powder tub and shaker against a pouch and
+      a torn daily pack. Rows: mix with water / tear a pack; about $79
+      a month / $49.99 every 4 weeks; 90-day guarantee / 30 days, first
+      order only (the row where the powder wins).
     Promise limit: never "replaces your powder". Minerals are about 25%
       of daily value.
     Proof: brand file prices, review 3. Doubt answered: "A gummy can't
-      hold enough" with 21 vitamins and minerals, 6 g fiber per pack.
+      hold enough", with 21 vitamins and minerals and 6 g fiber.
     Offer: $29.99 first box with text sign-up, renews at $49.99.
     Action: Shop now, to the product page. Image, 4:5. Label: guess.
 
-    IDEA 2  Gut-fix seeker | knows the fixes | customer story
-    Four beats: tried fiber powders and probiotics / scared of making it
-      worse / review 8 ("do their job, but not aggressively") / to
-      feel normal
+    IDEA 2  scared of the stomach | shopping for a fix | customer's words
+    Test: if this wins, we learn a gentle promise beats the "fix"
+      promise of ad 6 for gut buyers.
+    Links: who (headline) strong / gain strong / proof (review 8)
+      strong / risk (Low Sugar named) strong / step strong
     First line + picture: "Gentle was the whole point." Review 8 as a
       quote card over a torn pack and a handful of green bears.
     Promise limit: one buyer's story. "Supports digestion and gut
@@ -133,14 +139,16 @@ example:
     Offer: 30-day money-back on the first order. Action: Shop now.
     Image, 4:5. Label: guess.
 
-    IDEA 3  Busy parent (for themselves) | knows the product | demonstration
-    Four beats: keys in hand, kids in the car / no time for herself /
-      review 15 / one pack eaten on the way out
+    IDEA 3  school run, for herself | knows the brand | showing it work
+    Test: if this wins, we learn parents who buy Kids will add a pouch
+      for themselves.
+    Links: who (keys, school bags) strong / gain (headline) strong /
+      proof (the three panels) strong / risk missing, fixed with
+      "Buy 2 Save $5" in the caption / step strong
     First line + picture: "Rip. Tip. Out the door." Three panels: pack
       torn straight across the top, gummies into a palm, car door shut.
     Promise limit: easy to take. No energy or "fills the gaps" claim.
-    Proof: review 15. Doubt answered: "Two subscriptions is too much"
-      with "Buy 2 Save $5" for an adult plus a kid.
+    Proof: review 15. Doubt answered: "Two subscriptions is too much."
     Offer: Buy 2 Save $5. Action: Shop now. Image, 4:5. Label: guess.
 
     MISSING: verified-buyer status for reviews 3, 8 and 15.
@@ -148,39 +156,41 @@ example:
       Idea 1 goes live.
 
 tweaks:
+  - what: Reviews
+    how: Paste more customer words and the list of buying moments grows. Moments found in reviews beat moments a writer imagines.
   - what: Recent ads
-    how: The more of your past ads you list, the better it avoids repeats. Add results and it can mark ideas that build on a measured win as "measured" instead of "guess".
-  - what: Buyers
-    how: Add a new buyer and the grid gets a new row of cells to fill. Splitting one buyer by situation (a parent buying for the kids, the same parent buying for herself) opens cells your ads have never touched.
+    how: The more past ads you list, the better it avoids repeats. Add results and ideas that build on a measured win get "measured" instead of "guess".
   - what: Number of ideas
-    how: Ask for exactly what you'll make. It returns that count, so asking for ten when you'll make three just adds ideas you'll never test.
+    how: Ask for exactly what you'll make. It returns that count, so asking for ten when you'll make three adds ideas you'll never test.
   - what: Variants
     how: Ask for variants of one idea and it states what stays fixed and the one thing each variant changes.
 
 judge:
-  - No two ideas share both the same buyer and the same theme.
+  - Every buying moment cites a review, a ticket or your brand file, or says "inferred".
+  - No two ideas share a moment and a proof kind, or answer the same test question.
   - None of the ideas is a recolour or a reworded first line of a recent ad.
   - Every proof named is something you supplied. Check one review number against your file.
-  - Each idea promises no more than its proof supports, and a fair comparison shows at least one row where the other option wins.
-  - Ideas without a measured result say "guess".
+  - Each idea promises no more than its proof supports, and a side by side shows at least one row where the other option wins.
 
 test:
-  - Run it with your last ten ads listed and check the "Covered" rows. If it files two ads you know are different into one cell, or misses an ad, fix the one-line descriptions and run it again.
-  - Run it twice on the same input. The chosen cells should mostly match. If they change every time, give it fewer buyers or say which buyer matters most this month.
-  - Hide one idea you already tested and know the result of, then see whether the grid picks that cell. If it does, compare its brief line with what you actually ran.
-  - Read the "Skipped" list. Every skipped theme should name the proof that's missing. If it skipped nothing on a thin brand file, it's guessing; ask it to show the proof behind each idea.
+  - Run it with your last ten ads listed and check the "Covered" rows. If it files two ads you know are different into one cell, fix their one-line descriptions and run it again.
+  - Run it twice on the same input. The chosen cells should mostly match. If they change every time, say which buyer matters most this month.
+  - Read each test question aloud. If you can't say what you'd do differently after a win, ask it to replace that idea.
+  - Read the "Skipped" list. Every skipped cell should name the proof that's missing. If it skipped nothing on a thin brand file, it's guessing.
 
 improve:
-  - Paste your buyers and your allowed claims into "What you need" in the skill file, so every run starts from the same grid rows.
-  - If some themes never fit your business (no founder story, no comparison you can make fairly), delete them from step 2 so they stop showing up as skipped.
-  - Add a fixed line to step 5 with your standing offer and destination page, so the brief lines never invent one.
-  - After each test, write the winning and losing cells into your brand file, then add them to "Recent ads" so the next run marks them "measured".
+  - Paste your buyers and your allowed claims into "What you need" in the skill file, so every run starts from the same facts.
+  - Add your own proof kinds to step 3 if you hold one we don't list, such as a lab report or a press review.
+  - Add a fixed line to the brief fields with your standing offer and destination page, so ideas never invent one.
+  - After each test, write the answer to its test question in your brand file, then list it under "Recent ads" so the next run builds on it.
   - Pair it with a skill that turns a chosen idea into a full brief and versions a designer can build.
 
 terms:
-  - term: Theme
-    meaning: Where the idea comes from, such as the problem moment, a customer story or a fair comparison.
-  - term: Four beats
-    meaning: The moment of need, how it feels, the reason to believe and the change the buyer expects.
-  - term: Fair comparison
-    meaning: A side-by-side with the other option that includes at least one row where the other option wins.
+  - term: Buying moment
+    meaning: The situation that sends someone looking for a product like yours, such as a rushed morning or a gritty shaker in the sink.
+  - term: Proof kind
+    meaning: What carries the idea's argument, such as a demo, a customer's words, a sourced number or your guarantee.
+  - term: Five links
+    meaning: Who it's for, what they gain, the proof, the risk removed and the next step. An ad is as strong as its weakest link.
+  - term: Test question
+    meaning: What you would learn if the ad wins. It keeps each test from repeating another.

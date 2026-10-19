@@ -1,7 +1,7 @@
 slug: turn-your-products-hidden-process-into-3d-clips
 renamed_from: cgi-mechanism-explainer-video-ad-director
 name: "Turn your product's hidden process into 3D clips"
-summary: "Finds one honest hidden process, offers story options, then writes the beats and prompts for a 3D lesson."
+summary: "Finds one honest hidden process, offers story options, then plans a 3D explainer that dives in and back out."
 category: general
 boards: [ecommerce]
 type: skill
@@ -20,5 +20,10 @@ uses: [get-a-3d-how-it-works-ad-script]
 example: explainer
 origin: rebuilt
 source_ids: [CES-152]
-old_name: zack-d-films-ads
-version: 1.0.0
+old_name: 3D how-it-works explainer video prompts
+version: 2.0.0
+credits:
+  - {title: "Powers of Ten (film)", by: "Wikipedia, on Charles and Ray Eames (1977)", url: "https://en.wikipedia.org/wiki/Powers_of_Ten_(film)", used: "Starting at human size and moving down through scale in one continuous move, then back"}
+  - {title: "Communications Toolkit: And, But, Therefore Statement", by: "SESYNC, after Randy Olson", url: "https://www.sesync.org/resources/communications-toolkit-and-therefore-statement", used: "A chain that needs a snag link and a product link"}
+  - {title: "Mayer's 12 Principles of Multimedia Learning", by: "Dartmouth, summarising Richard E. Mayer, Multimedia Learning", url: "https://services.dartmouth.edu/TDClient/1806/Portal/KB/PrintArticle?ID=171655", used: "Colour-coded parts as signals, one sentence per picture, cutting extras"}
+  - {title: "Sora 2: Prompting Guide", by: "OpenAI Cookbook", url: "https://developers.openai.com/cookbook/examples/sora/sora2_prompting_guide", used: "Rerun, simplify, then change one thing"}

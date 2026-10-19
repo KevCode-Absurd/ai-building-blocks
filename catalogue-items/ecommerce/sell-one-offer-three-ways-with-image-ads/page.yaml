@@ -1,77 +1,74 @@
 new_slug: sell-one-offer-three-ways-with-image-ads
 name: "Sell one offer three ways with image ads"
-summary: "Give it your offer, photos and reviews. You get image ads for the deal, the proof and the product, in two sizes."
+summary: "Give it your offer and photos. You get ads for the price, the safety net and why now."
 job: make-image-ads
 
 headline: "Sell one offer three ways with image ads"
-subhead: Give it your offer's exact terms, your product photos, reviews and facts. It plans the offer three ways (the deal, a customer's proof, the product itself) in feed and story sizes, with the offer written once as a single line you can swap.
+subhead: Give it your offer's exact terms, your product photos and reviews. It plans one ad for each thing shoppers check (the real price, the safety net, the reason to start now) in feed and story sizes, with the terms in one offer block you can swap.
 
 explain: |
-  When an offer runs, most shops make one ad and crop it into every size. Everyone sees the same argument, even though the person who wants a deal and the person who doubts the quality need different reasons. And when the price changes, every ad has to be remade by hand.
+  Before they buy, people who know your product check an offer in three places. What does it really cost, now and later? What happens if I don't like it? Why start today? Most shops make one offer ad and crop it into every size, so every shopper gets the same answer to one of those questions, and you never learn which one was holding them back.
 
-  This skill plans each offer three ways. The deal ad states the offer plainly for people who already know you. The proof ad lets one real review carry the frame for people who doubt it's worth it. The product ad explains why it is worth full price, for people new to you. Each comes in 4:5 for the feed and 9:16 for stories, each laid out for its own shape. The offer's numbers and dates sit in one line of 12 words or fewer, identical on every ad, so changing the offer means editing that line only.
+  This skill plans one ad per question. The price ad sets the offer block large. The safety-net ad leads with your guarantee or cancel terms in your site's words. The third ad gives a real reason to start now, or, if there isn't one, shows what's included and adds no urgency at all. The terms sit in one offer block that reads the same on every ad, and savings only compare with prices you really charged.
 
 when:
   - You're about to run a sale, bundle or standing offer and need ads ready in every size.
-  - Your offer ads all look the same and you can't tell which reason to buy is working.
+  - Your offer ads all look the same and you can't tell which part of the offer people care about.
   - Your prices change often and you're tired of remaking every ad.
 
 you_give:
-  - The offer in its own words, with price, terms, start and end dates and any real limit
+  - The offer in your site's words, with the price, what it renews at, who qualifies and any dates
+  - Your guarantee, returns or cancel terms, word for word
   - The products in the offer, with real photos
-  - Real reviews, word for word, for the proof ads
-  - Product facts (what's in it, how it's made) for the product ads
+  - Real reviews and product facts (optional)
   - Your colours and typefaces (optional)
 you_get:
-  - One offer line of 12 words or fewer, with its exact word count, for every ad
-  - Six ads per product (3 ways x 2 sizes), each with layout, colours, picture and every line of text with its source
-  - A side-by-side thumbnail test, so you know the three ads differ
-  - A note on what to change when the offer changes
+  - One offer block, the same on every ad, with where each line came from
+  - Six ads per product (3 ways x 2 sizes), each with layout, colours, photo and every line with its source
+  - A contact-sheet test, so you know the three ads look different
+  - What to change when the offer changes
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Paste the offer exactly as your shop states it, with start and end dates. If there's no end date, say so.
-  - List the photos you actually have, one line each. Don't describe photos you plan to take.
-  - Paste your reviews and your product facts or approved claims.
-  - Read the MISSING lines first, then hand the plan to whoever makes the images.
-  - When the offer changes, edit the offer line on every ad and keep the pictures.
+  - Paste the offer exactly as your shop states it, with any end date. If there's no end date, say so.
+  - Paste your guarantee and cancel terms word for word.
+  - List the photos you actually have, one line each.
+  - Read the MISSING and NOT ADDED lines first, then hand the plan to whoever makes the images.
+  - When the offer changes, edit the offer block on every ad and keep the pictures.
 
 how_it_works:
-  - title: Writes three arguments
-    text: Plans the deal for people who know you, the proof for people who doubt the quality, and the product for people new to you.
+  - title: Splits the offer in three
+    text: The real price now and later, the safety net, and a true reason to start now. With no true reason, the third ad shows what's included.
+  - title: Writes the offer block
+    text: Up to three short lines in your site's words, identical on every ad and the only place a price or offer date appears.
   - title: Counts the set
-    text: Works out 3 arguments x products or colours x 2 sizes, one set per product. Forty versions of one argument still count as one ad.
+    text: 3 ways x 2 sizes x each variant with its own photo.
   - title: Lays out each size
-    text: Plans 4:5 and 9:16 separately for their own shape. Neither is cropped from the other.
-  - title: Writes the offer line
-    text: Puts the offer's numbers and dates in one line of 12 words or fewer, in the offer's own words, identical on every ad. No other text repeats them.
-  - title: Tests the thumbnails
-    text: Pictures the three ads side by side at 300 px wide. If you can't name each one's argument without reading, they get different layouts and colours.
+    text: 4:5 for the feed and 9:16 for stories, each for its own shape, with words kept clear of the app's buttons.
+  - title: Tests the contact sheet
+    text: Pictures the three side by side at stamp size. If you can't say which question each answers, it changes their looks.
   - title: Checks proof and numbers
-    text: Uses review counts, star ratings and callouts only where your facts hold them, and flags reviews it can't verify.
+    text: Uses savings, ratings and review counts only where your facts hold them, and flags unverified reviews.
 
 output_shape: |
-  OFFER LINE (role: offer, identical on all <n> ads)
-  "<the offer in its own words>"
-  <word count> words. <where the words came from>
+  OFFER BLOCK (role: offer, identical on all <n> ads)
+  "<line 1>" / "<line 2>" / "<line 3>"
+  <word count>. <where each line came from>
 
-  MISSING  <end date, photos, reviews or facts not on file>
-  NOT ADDED  <numbers or urgency left out, and why>
+  MISSING     <dates, earlier prices, photos, reviews not on file>
+  NOT ADDED   <savings or urgency left out, and why>
 
-  AD <n>  <Deal | Proof | Product>, <4:5 | 9:16> (<who it's for>)
+  AD <n>  <Price | Safety net | Start now | What's included>, <4:5 | 9:16>
     Layout    <how the frame is arranged>
     Ground    <background colour>, text <colour>
     Picture   <which real photo, and how it's used>
     Headline  <line>   (<source>)
     Support   <line>   (<source>)
-    Offer     the offer line, <large | chip | small>
-  AD <n+1>  <same argument, other size, laid out for its own shape>
+    Offer     the offer block, <large | small>
+  AD <n+1>  <same way, other size, laid out for its own shape>
 
-  300 PX TEST
-  <can each argument be named without reading? pass or fail>
-
-  WHEN THE OFFER CHANGES
-  <edit the offer line only, keep the pictures>
+  CONTACT SHEET   <can each be told apart at stamp size? pass or fail>
+  WHEN THE OFFER CHANGES   <edit the offer block only>
 
 example:
   business: sprout
@@ -83,115 +80,109 @@ example:
     Under the button: "Renews at $49.99 each 4 weeks."
     Footer: "Offer assumes customer has received and uses promotional
     SMS discount reserved for new customers only."
-    Start: running now. End: none ("Not just for a week but
-    indefinitely"). Limit: none.
+    Plan box: "Pause Or Cancel Any Time. 30-Day Money-Back Guarantee."
+    FAQ: "This policy applies only to your initial purchase."
+    End: none ("Not just for a week but indefinitely"). Limit: none.
 
     Product: Sprout Original (Adults), Low Sugar, 28 daily packs.
     Photos on file: the pouch on a soft green gradient; gummies poured
     into a hand.
-
-    Reviews: all 20 (pasted)
-    Product facts: brand file, fine-to-repeat claims (pasted)
+    Reviews: all 20 (pasted). Product facts: brand file, fine-to-repeat.
     Brand look: forest green #00582D, warm cream #FFF7DF, sunflower
-    yellow #FFCC2E, plum #581E5A. Work Sans bold. Bright, sunny photos.
+    yellow #FFCC2E, plum #581E5A. Work Sans bold.
   output: |
-    OFFER LINE (role: offer, identical on all 6 ads)
-    "Subs Now Start at $29.99. Renews at $49.99 each 4 weeks."
-    11 words. Both sentences word for word from the product page.
+    OFFER BLOCK (role: offer, identical on all 6 ads)
+    "Subs Now Start at $29.99." / "Renews at $49.99 each 4 weeks." /
+    "With text sign-up, new customers only."
+    17 words. Lines 1 and 2 word for word from the product page. Line 3
+    shortens the footer's condition, with no number in it.
 
-    MISSING  end date. It's framed as permanent, so no ad says "ends",
-             "last chance" or "limited". No urgency anywhere.
-    MISSING  whether $29.99 also applies to Sugar-Free. Not shown, so
-             this set is Low Sugar only: 3 ways x 2 sizes = 6.
-    CONDITION  The $29.99 needs the text sign-up. Every ad carries a
-             small-print line with no number in it: "With text sign-up,
-             new customers only."
-    NOT ADDED  a percentage. The site shows 49, 52, 55, 58 and 61%, so
-             no ad says "% off".
+    MISSING     end date. It's framed as permanent, so there's no
+                reason to start now; ad 5 shows what's included.
+    MISSING     whether $29.99 applies to Sugar-Free. This set is Low
+                Sugar only: 3 ways x 2 sizes = 6.
+    NOT ADDED   a saving. The site shows 49% to 61% off at once, and
+                the struck-through $66.65 is the one-time price, so no
+                ad says "% off" or "save".
 
-    AD 1  Deal, 4:5 (people who already know Sprout)
-      Layout    offer line large and centred, pouch below
+    AD 1  Price, 4:5
+      Layout    offer block large and centred, pouch below
       Ground    plum #581E5A, text cream #FFF7DF
       Picture   the gradient pouch photo, pouch cut out, closed
-      Headline  Our birthday price cut   (names the kind of offer only)
-      Support   28 daily packs in every pouch   (product page FAQ)
-      Offer     the offer line, large, small print under it
-    AD 2  Deal, 9:16. Laid out tall: headline in the top third, offer
-          line at the centre, pouch low. Not cropped from AD 1.
+      Headline  Same Sprout. New Lower Price.   (product page)
+      Offer     the offer block, large
+    AD 2  Price, 9:16. Headline in the upper middle, block at centre,
+          pouch low but above the bottom third. Not cropped from AD 1.
 
-    AD 3  Proof, 4:5 (people who doubt a subscription is worth it)
-      Layout    one review fills the frame, offer as a small chip
+    AD 3  Safety net, 4:5
+      Layout    the guarantee line large, one review below it
       Ground    warm cream #FFF7DF, text forest green
       Picture   no person. Pouch cut-out, small, bottom right
+      Headline  30-Day Money-Back Guarantee.   (plan box)
+      Support   "This policy applies only to your initial purchase."
+                (FAQ, small, right under the headline)
       Review    "I hate subscriptions because I feel like they are a
                 trap so I canceled it before the gummies even arrived.
                 We quickly decided to resubscribe because we love
                 [Sprout] so much!"   (review 17, cut at a sentence)
-      Credit    "Sprout customer" only. The review has no name and is
-                not marked verified. Flag before paid use.
-      Offer     the offer line, small chip
-    AD 4  Proof, 9:16. Review in larger type over two thirds of the
-          height, chip and pouch at the foot.
+      Credit    "Sprout customer" only. Not marked verified: flag
+                before paid use.
+      Offer     the offer block, small, at the foot
+    AD 4  Safety net, 9:16. Headline and review stacked in the middle
+          band, block above the bottom third.
 
-    AD 5  Product, 4:5 (people new to Sprout)
-      Layout    gummies-in-hand photo on the right, three numbered
-                callouts on the left
+    AD 5  What's included, 4:5
+      Layout    gummies-in-hand photo right, three numbered facts left
       Ground    forest green #00582D, numbers in yellow #FFCC2E
-      Headline  We made daily nutrition, like, ridiculously easy.
-                (the brand's own line)
-      1  60+ ingredients, 21 vitamins and minerals, 6 g fiber in one
-         pack   (fine-to-repeat claim)
+      Headline  28 daily packs in every pouch   (product page FAQ)
+      1  60+ ingredients, 21 vitamins and minerals, 6 g fiber per pack
       2  Third-party tested for 70 pesticides and 4 heavy metals
-         (product page)
-      3  Vegan, with no synthetic dyes or sweeteners   (science page)
-      Offer     the offer line, small, at the foot. Never the headline.
-    AD 6  Product, 9:16. Callouts stacked under the photo, one per row.
+      3  Vegan, with no synthetic dyes or sweeteners
+      Offer     the offer block, small, at the foot
+    AD 6  What's included, 9:16. Facts stacked under the photo.
 
-    300 PX TEST (on this plan; repeat on the made images)
-      Deal: plum block, one big line. Proof: cream, big quote marks,
-      a paragraph. Product: green, a hand, numbers 1 2 3 in yellow.
-      Each can be named without reading. Pass.
-
-    WHEN THE OFFER CHANGES
-      Edit the offer line once and paste it on all 6 ads. Keep every
-      picture. If the new offer has a real end date, it goes inside
-      that line, still 12 words or fewer.
+    CONTACT SHEET   Price: plum, one big block. Safety net: cream, a
+      big headline and a paragraph. Included: green, a hand, 1 2 3 in
+      yellow. Each can be named without reading. Pass on this plan;
+      repeat on the made images.
+    WHEN THE OFFER CHANGES   Edit the offer block once and paste it on
+      all 6. If a real end date arrives, ad 5 can become a start-now ad.
 
 tweaks:
   - what: The end date
-    how: Give a real last day and the deal ad can say so, inside the offer line only. Without one, the plan writes no urgency at all.
+    how: Give a real last day and the third ad becomes a start-now ad, with the date inside the offer block only. Without one, the set adds no urgency at all.
+  - what: An earlier price
+    how: Give a price you really charged and when, and the price ad can show the saving. Without it, no ad says "save" or "% off".
   - what: Photos per variant
-    how: Add a real photo for each flavour or version and you get a set per variant (Low Sugar and Sugar-Free would make 12 ads). The plan never invents a photo you don't have.
+    how: Add a real photo for each flavour or version and you get a set for each. Low Sugar and Sugar-Free would make 12 ads.
   - what: The review
-    how: Name a review number to force a choice, or let it pick. Pick one that speaks to price or doubt, because the proof ad is for people unsure it's worth it.
-  - what: Brand look
-    how: Give your colours and font names and each argument gets its own ground and colour. Without them, it can only describe layouts.
+    how: Name a review number for the safety-net ad, or let it pick. A review that admits a worry about subscriptions or taste works best there.
 
 judge:
-  - The offer line is identical on every ad, 12 words or fewer, and the count shown matches.
-  - No headline or support line repeats a price, saving or date from the offer.
-  - The review on the proof ad is word for word with its number, and an unverified reviewer is flagged.
-  - The product ad's three callouts each trace to your facts panel or approved claims.
+  - The offer block is identical on every ad, and the word count shown matches.
+  - No headline or support line repeats a price or offer date from the block.
+  - Any saving compares with a price you really charged.
   - Nothing says "ends soon" or "limited" unless your offer has a real date or count.
-  - The 9:16 version is described as its own layout, not "same as 4:5, cropped".
+  - The review on the safety-net ad is word for word, and an unverified reviewer is flagged.
+  - Each 9:16 is described as its own layout, not "same as 4:5, cropped".
 
 test:
-  - Run it on an offer you ran before. Compare its offer line with what your old ads said. If your old ads stated the offer in different words on different sizes, this is the fix; if its line is wrong, your pasted terms are.
-  - Change the price in your input and run it again. Only the offer line should change. If a headline or callout changes too, a number leaked out of the offer line.
+  - Run it on an offer you ran before. Compare its offer block with what your old ads said in each size.
+  - Change the price in your input and run it again. Only the offer block should change. If a headline changes too, a number leaked out of the block.
   - Run it with no end date and check every ad for "ends", "last chance", "limited" or "today only". There should be none.
-  - Make the three 4:5 ads, shrink them to thumbnails side by side and ask someone to say what each one argues. If two look alike, ask for new layouts.
+  - Make the three 4:5 ads, shrink them side by side and ask someone which question each answers. If two look alike, ask for new layouts.
 
 improve:
-  - Write your standing offer, renewal price and any small-print condition into "What you need" in the skill file, word for word, so the offer line never drifts.
-  - If your site shows several discount numbers, write the one that's live into the skill and ban the rest, so no ad quotes a number your page contradicts.
-  - Add your brand's photo rules (how the pack opens, what's never shown torn) to step 3, so every layout uses the product the right way.
-  - Once one argument wins, save it in your brand file and run more opening lines on that argument only, not more crops.
-  - Pair it with a skill that checks a finished ad before you spend, and with one that checks it against Meta's ad rules.
+  - Write your standing offer, renewal price and qualifying condition into "What you need", word for word, so the offer block never drifts.
+  - If your site shows several discount numbers, write the live one into the skill and ban the rest.
+  - Add your photo rules (how the pack opens, what's never shown torn) to step 5.
+  - Once one way wins, save it in your brand file and make new openings on that way only, not more crops.
+  - Pair it with a skill that checks a finished ad before you spend, and one that checks it against Meta's ad rules.
 
 terms:
   - term: 4:5 and 9:16
     meaning: Image shapes. 4:5 is a tall rectangle for the feed; 9:16 fills a phone screen for stories and reels.
-  - term: Offer line
-    meaning: The one piece of text on each ad that carries the price, saving and dates, so you can change it in one place.
-  - term: Chip
-    meaning: A small rounded label on an image, like a tag.
+  - term: Offer block
+    meaning: The one piece of text on each ad that carries the price and its terms, so you can change it in one place.
+  - term: Safety net
+    meaning: What protects the buyer if it doesn't work out, such as a guarantee, free returns or the right to cancel.

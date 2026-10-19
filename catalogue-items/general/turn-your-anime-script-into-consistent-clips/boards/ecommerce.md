@@ -1,9 +1,9 @@
 # Turn your anime script into consistent clips: for online stores
 
-Extra things to give it: a photo of the pack front, the product out of the pack, how it's opened and used, the current offer, and your "never show" list.
+Extra things to give it: a photo of the pack front, the product out of the pack, a photo of it being opened, the current offer, and your "never show" list.
 
-- Draw the product with its true shape, proportions, colours and label from the photo. The drawing style never redesigns the pack.
-- Show use only the way the brand states it ("tear the top, tip into water"). Put those steps in the beat where the hero uses it.
-- A metaphor for how it works (a grey tower of chores, a spark of light) is fine. Don't draw a change in someone's body, an ingredient doing something the claims don't state, or a result the brand has no evidence for.
-- In the payoff shot, keep the pack front facing the viewer, with room beside it for an offer line added in editing.
-- Offers, prices and discount wording are on-screen text added later from the current offer. The hero doesn't draw or say them.
+- The product sheet copies the pack from its photo. The drawing look can simplify shading, but it never changes the shape, the colours or the words on the pack.
+- Put the opening and using step in the shot where the hero uses it, exactly as the brand does it ("tear across the top, tip into your palm").
+- Make the payoff pose a hand holding the pack, front to camera, with clear space beside it for the offer line you add in editing.
+- A visual joke about the old way (a towering tub, a pile of bottles) is fine. A drawn change in someone's body, or an ingredient doing something the claims don't say, is not.
+- Prices and discounts are on-screen text from the current offer. The hero never says them and the picture never shows them.

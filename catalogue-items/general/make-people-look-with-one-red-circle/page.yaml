@@ -1,75 +1,62 @@
 new_slug: make-people-look-with-one-red-circle
 name: "A photo with one red circle that makes people look"
-summary: "Give it your ad and the flaw it describes. You get a prompt for a plain photo with one rough red circle."
+summary: "Give it your ad and its flaw. You get a plain photo prompt and one rough mark."
 job: make-image-ads
 
 headline: "A photo with one red circle that makes people look"
-subhead: Give it your story ad and the flaw it describes. It briefs a clean candid photo of that flaw, then one rough red circle or arrow drawn as if with a finger, plus up to four handwritten words from your copy.
+subhead: Give it your story ad and the flaw it describes. It briefs a plain phone photo of that flaw at its real size, then one rough circle or arrow in the colour that stands out most, plus up to three of your buyer's words.
 
 explain: |
-  People mark up photos before sending them to a friend: a red circle round the crease, an arrow at the gap. A red mark says "look here" before the reader has decided to look, and it makes your picture feel shared rather than designed. This picture type copies that habit for one flaw a camera can see on a garment, an object or a room.
+  People mark up photos before they send them: a circle round the stain, an arrow at the crack. That mark tells the eye where to land before the reader has decided to look. It works because it's the one thing in the picture unlike everything else, so a second mark weakens the first.
 
-  It briefs the photo first as a normal snapshot, with the flaw shown at its real size. Then, as a separate instruction, it adds one uneven red circle or one short arrow, and if you want, up to four words in the same red, lifted from your copy. One mark only, because two marks turn it into a diagram. It never circles a part of someone's body as the flaw, and never adds a second photo with the flaw gone.
+  This skill briefs the photo first, with the flaw at its real size and the camera where your buyer stands when they notice it. Then it picks one mark (a circle for an area, an arrow for a line) and the colour least present in the photo, so the mark stands apart. It suggests drawing the mark yourself in a phone editor, because image tools draw neat circles and misspell notes. It never marks a body.
 
 when:
-  - Your story is about one flaw a camera can see (a crease, a gap, a worn hinge, a box of pills nobody took).
-  - You're running to cold traffic (people who don't know you) and need the eye to land in the right place fast.
-  - Your plain snapshot ad gets seen but people don't know what to look at.
+  - Your story is about one flaw a camera can see, like a split seam, a stain or a box of pills nobody took.
+  - You're showing ads to people who don't know you and need the eye to land in the right place fast.
+  - Your plain photo ads get seen, but people don't know what to look at.
 
 you_give:
   - Your approved story ad and the flaw it describes
-  - How your buyer describes the flaw, in their words (optional)
+  - How your buyers describe the flaw, in their words (optional)
 you_get:
-  - The flaw and where it sits in the frame
-  - The mark (circle or arrow), its colour and position
-  - Up to four handwritten words, or none
-  - A 60 to 120 word image prompt, ready to paste
+  - The flaw, its real size and where it sits in the frame
+  - The mark, its colour and why, and an optional note of up to three words
+  - A 60 to 120 word prompt for the photo alone
+  - How to add the mark by hand, or a fallback prompt line
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Paste your story ad underneath. Make sure it names the flaw and where it is.
-  - Add your buyer's own phrase for the flaw if you have one, from reviews or messages.
-  - Paste the image prompt into your image tool. If the circle comes out neat and perfect, ask again for "rough, drawn with a finger".
-  - Read the flags. The circle points at something, so check your story's first lines explain why.
+  - Paste your story ad. Make sure it names the flaw and where it is.
+  - Add your buyers' own phrase for the flaw if you have one, from reviews or messages.
+  - Make the photo from the prompt, then draw the mark on it in your phone's photo editor.
+  - Show it to someone for two seconds. If they can't say what was marked, ask for a closer framing.
 
 how_it_works:
-  - title: Sets the ground rules
-    text: Square, looks taken on a phone, no logo, price, button, brand colour or product, and no face.
+  - title: Sets the house rules
+    text: Square, looks taken on a phone, no logo, price, button or brand colour, and no product unless asked.
   - title: Names the flaw
-    text: Says what the flaw is and exactly where, such as a crease across the back of a shirt or six full days in a pill box.
+    text: Says what it is, its real size and where it sits, such as six full days in a pill box about a hand long.
   - title: Briefs the photo first
-    text: Describes a clean candid shot with the flaw at its real size, before any mark is added.
-  - title: Adds one mark
-    text: One uneven red circle, slightly open, or one short arrow, as if drawn with a finger on a phone screen.
-  - title: Adds a short note, or none
-    text: Up to four words in the same red, in the buyer's words, quoted exactly from your copy.
+    text: Shoots from where your buyer stands when they notice it, with no mark in the prompt.
+  - title: Picks one mark
+    text: A circle for an area, an arrow for a line or an edge. One only, rough, as if drawn with a fingertip.
+  - title: Picks the colour
+    text: The colour least present in the photo, so the mark is the one thing that stands apart. Red suits most rooms.
+  - title: Adds a note, or none
+    text: Up to three of your buyer's words, or a time or count from your story, quoted exactly.
 
 output_shape: |
-  SCENE
-  <one sentence: what someone scrolling would say they saw>
-
-  WHERE AND WHEN
-  <place, time of day, what is within reach>
-
-  THE FLAW
-  <what it is, its real size, where it sits in the frame>
-
-  THE MARK
-  <one rough red circle or arrow, and where>
-
-  WORDS ON THE IMAGE
-  <none, or up to 4 words lifted from your copy>
-  BLANK VERSION
-  <the same photo and mark with no words>
-
-  HEADLINE UNDER THE IMAGE
-  <"Why your ... keeps coming back" or "Stop blaming ... Look at ...">
-
-  FLAGS
-  <whether the note was lifted; what the first lines must explain>
-
-  IMAGE PROMPT
-  <60 to 120 words, ready to paste>
+  SCENE              <what someone scrolling would say they saw>
+  WHERE AND WHEN     <place, time, what is within reach, camera spot>
+  THE FLAW           <what it is, real size, where in the frame>
+  THE MARK           <circle | arrow>, <colour and why>, <position>
+  WORDS ON THE IMAGE <none, or up to 3 words and their source>
+  BLANK VERSION      <with mark, no words; with neither>
+  LINE UNDER IMAGE   <words> (<characters>)
+  FLAGS              <notes written for the image, inferred details>
+  IMAGE PROMPT       <60 to 120 words, the photo alone>
+  MARK STEP          <how to draw it by hand, or a fallback line>
 
 example:
   business: sprout
@@ -87,88 +74,80 @@ example:
 
     Buyer: the quitter who wants to stick, 28 to 45.
   output: |
-    SCENE
-    A weekly pill organiser on a counter, six days still full,
-    circled in red.
-
-    WHERE AND WHEN
-    A kitchen counter, Sunday evening, overhead kitchen light.
-    Within reach: a glass of water, a phone, the edge of a fruit
-    bowl.
-
-    THE FLAW
-    A plain seven-day plastic pill organiser. The first compartment
-    is open and empty; the other six are closed and full of tablets,
-    seen through clear lids. Shown at its real size, about a hand
-    long, across the middle of the frame.
-
-    THE MARK
-    One uneven red circle, slightly open, as if drawn with a finger
-    on the phone, around the six full compartments.
-
-    WORDS ON THE IMAGE
-    "still full" (2 words, lifted from the story's first line),
-    handwritten in the same red beside the circle.
-
-    BLANK VERSION
-    The same photo and circle with no words.
-
-    HEADLINE UNDER THE IMAGE
-    Stop blaming your willpower. Look at the routine.
-
-    FLAGS
-    Note lifted from the copy.
-    The organiser is plain and generic, with no readable day letters.
-    Watch the copy. Review 1 says it's "the one thing I've been able
-    to stick to" for one person. Don't promise every buyer will stick
-    with it. Survey numbers need "of surveyed users".
-
-    IMAGE PROMPT
-    Square 1:1 phone photo looking down at a plain seven-day plastic
-    pill organiser on a kitchen counter on a Sunday evening, under
-    the kitchen light. The first compartment is open and empty; the
-    other six are closed and full of tablets, seen through clear
-    lids. A glass of water and a phone sit at the edges. Slight tilt,
-    ordinary light, a little grain, no retouching. One rough, uneven
-    red circle, slightly open, as if drawn with a finger, around the
-    six full compartments, with the words "still full" handwritten
-    in the same red beside it, spelled exactly. No readable letters
-    on the lids, no logo, no brand name, no product, no person, no
-    second mark.
+    SCENE              A weekly pill organiser on a counter, six days
+                       still full, circled in red.
+    WHERE AND WHEN     Kitchen counter, Sunday evening, overhead light.
+                       Camera: looking down from standing, as when you
+                       open it to refill. Within reach: a glass of
+                       water, a phone, the edge of a fruit bowl.
+    THE FLAW           A plain clear seven-day organiser. The first lid
+                       is open and the box is empty; the other six are
+                       shut and full of tablets. Real size, about a hand
+                       long, set left of centre.
+    THE MARK           One rough red circle, a little open at the top,
+                       around the six full boxes. Red, because the scene
+                       is white counter, clear plastic and pale tablets.
+    WORDS ON THE IMAGE "still full" (2 words, from the story's first
+                       line), in the same red, right of the circle.
+    BLANK VERSION      The circle with no words; the plain photo.
+    LINE UNDER IMAGE   Six of seven, still full. (25, plain caption)
+    FLAGS              Inferred: the glass, phone and fruit bowl.
+                       Keep day letters off the lids so no real
+                       organiser brand shows. In the copy, review 1
+                       says it's "the one thing I've been able to stick
+                       to" for one person. Don't promise every buyer
+                       will stick with it.
+    IMAGE PROMPT       Square 1:1 phone photo looking down at a plain
+                       clear seven-day pill organiser on a white
+                       kitchen counter on a Sunday evening, under the
+                       kitchen light. The first box is open and empty;
+                       the other six are shut and full of pale tablets.
+                       The organiser sits left of centre with bare
+                       counter around it. A glass of water and a phone
+                       at the edges, a fruit bowl cut off by the frame.
+                       Slight tilt, a little grain, no retouching. No
+                       letters on the lids, no logo, no brand name, no
+                       product, no person, no text, no marks.
+    MARK STEP          Open the photo in your phone's editor, pick red,
+                       draw one quick circle round the six full boxes
+                       with a fingertip, then write "still full" beside
+                       it. If the image tool must draw it, add: "One
+                       rough, uneven red circle, slightly open, around
+                       the six full boxes."
 
 tweaks:
   - what: Circle or arrow
-    how: An arrow works for a thin flaw (a crack, a seam). A circle works for an area (a gap, six full days). Ask for the one that fits, never both.
+    how: An arrow suits a thin flaw like a crack or a seam. A circle suits an area like a stain or a row of full boxes. Ask for the one that fits, never both.
   - what: The note
-    how: Turn it off and keep the circle alone if your copy has no short phrase for the flaw. Four words is the limit before image tools start misspelling.
-  - what: How big the flaw looks
-    how: Say its real size, like "about a hand long". If the result exaggerates it, ask again with that size, since an exaggerated flaw reads as a trick.
-  - what: Where the photo is taken from
-    how: Ask for "looking down from standing" or "from the doorway". The viewpoint should be where your buyer would stand when they notice it.
+    how: Turn it off if your copy has no short phrase for the flaw. Three words is the limit before the note starts to read like a label.
+  - what: The mark's colour
+    how: If your scene is red or warm, ask for yellow or white. The point is the colour nothing else in the photo shares.
+  - what: Where the camera stands
+    how: Ask for "looking down from standing" or "from the doorway". The view should be where your buyer stands when they notice it.
 
 judge:
-  - There's exactly one mark. Two marks make a diagram.
-  - The flaw is shown at the size your story or research describes, not bigger.
-  - The mark is on a garment, object or room, never on a part of someone's body.
-  - The circle looks drawn by a finger, not a neat vector shape or a brand-coloured arrow.
+  - There's exactly one mark.
+  - The flaw is shown at the size your story gives, not bigger.
+  - The mark is on a thing or a room, never on a body.
+  - The circle looks drawn with a finger, not a neat shape or a brand-coloured arrow.
   - There's no second photo with the flaw fixed, and no product.
 
 test:
-  - Show the picture to someone for two seconds, then hide it. Ask what was circled. If they can't say, the flaw is too small or the photo too busy.
-  - Run it on a story where the flaw is on the body. It should stop and send you to another picture type, not circle the body.
-  - Run it twice on the same story. The flaw and the mark should match both times.
-  - Test the circle alone against the circle with words on the same photo. Keep whichever stops more of the right people.
+  - Show the picture to someone for two seconds, then hide it. Ask what was marked. If they can't say, the flaw is too small or the photo too busy.
+  - Run it on a story where the flaw is on the body. It should stop and send you to the visible-symptom skill.
+  - Run it twice on the same story. The flaw, the mark and its colour should match both times.
+  - Test the mark alone against the mark with a note on the same photo. Keep whichever brings more of the right people to the page.
 
 improve:
-  - Add your buyers' exact words for the flaw to the brand file section, so the note comes from them. Reviews are the best source.
-  - Add your brand's never-shown list (body parts, mess, rivals' shapes) to the ground rules in step 1.
-  - Set your preferred mark in step 4 (circle or arrow) if one works better for your product, so every run starts there.
-  - If the flaw is on the body itself, use the visible-symptom skill without a mark, or the everyday snapshot skill.
+  - Add your buyers' exact words for common flaws to your brand file, so the note comes from them. Reviews are the best source.
+  - Add your brand's never-shown list to the house rules, so the photo never includes those things.
+  - Set your usual mark in step 4 if one always works better for your product.
+  - Pair it with a story ad skill, so the story's first line explains what the mark points at.
 
 terms:
-  - term: Cold traffic
-    meaning: People who have never heard of your business before seeing the ad.
   - term: Story ad
-    meaning: An ad whose main text tells one person's story in their own words, like a post from a friend.
-  - term: Headline under the image
-    meaning: The bold line under the picture in a Facebook or Instagram ad.
+    meaning: An ad whose main text tells one person's story, like a post from a friend.
+  - term: Line under the image
+    meaning: The bold headline under the picture in a Facebook or Instagram ad.
+  - term: Blank version
+    meaning: The same picture without its words, so you can change them later.

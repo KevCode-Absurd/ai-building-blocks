@@ -1,7 +1,7 @@
 slug: find-ad-ideas-competitors-all-miss
 renamed_from: competitor-ad-teardown-brief
 name: "Find the ad ideas your competitors all miss"
-summary: "What competitor ads keep repeating, the gaps nobody covers, and notes on making your own version."
+summary: "Where competitor ads crowd and where nobody is, checked against what buyers say, with briefs for the gaps you can fill."
 category: general
 boards: [ecommerce]
 type: skill
@@ -23,5 +23,10 @@ outputs:
 uses: [learn-from-competitor-ads-sorted-by-type]
 origin: rebuilt
 source_ids: [CES-038]
-old_name: foreplay-creative-strategy
-version: 1.0.0
+old_name: competitor ad gap finder
+version: 2.0.0
+credits:
+  - {title: "Ad Library", by: "Meta Help Center", url: "https://www.facebook.com/help/259468828226154", used: "what the public library shows, and that ordinary ads show no spend or results"}
+  - {title: "About the Learning Phase", by: "Meta Business Help Center", url: "https://www.facebook.com/business/help/112167992830700", used: "7-day learning windows, behind the 30-day line for new ads"}
+  - {title: "Building Distinctive Brand Assets", by: "Jenni Romaniuk", url: "https://marketingscience.info/building-distinctive-brand-assets/", used: "the cover-the-logo check on each card"}
+  - {title: "How many words do we read per minute? A review and meta-analysis of reading rate", by: "Marc Brysbaert", url: "https://doi.org/10.1016/j.jml.2019.104047", used: "238 words a minute, so the 7-word headline in each brief"}

@@ -1,73 +1,74 @@
 new_slug: get-overhead-portraits-that-still-look-human
 name: "Top-down portraits where faces still look human"
-summary: "Give it a short brief and a photo. You get one image prompt for a striking overhead portrait that looks real."
+summary: "Give it a short brief and a photo. You get one image prompt for a bold overhead portrait that looks real."
 job: make-image-ads
 
 headline: "Top-down portraits where faces still look human"
-subhead: Give it a short brief and, if you have them, a photo of the person and your product. It writes one prompt for an adult looking up into an extra-wide lens held just above their face, keeping their identity, skin and your product's label true.
+subhead: Give it a short brief and, if you have them, photos of the person and your product. It picks a strength (gentle, strong or extreme) by how close the camera is, places the light so the camera doesn't shade the face, and writes one prompt that keeps the person, skin and label true.
 
 explain: |
-  A portrait taken from right above someone's head, with a very wide lens a hand's length from the face, makes the eyes and forehead big and the chin small, with the shoulders falling away below. It's a popular look for beauty, fashion and creator-style ads because it stops the scroll. AI image tools usually get it wrong. They give you an ordinary eye-level headshot, a round fisheye bubble, a swollen face or waxy, airbrushed skin.
+  A portrait taken from right above someone, with a wide lens close to the face, makes the forehead and eyes big and the chin small, with the shoulders falling away. It stops the scroll, which is why beauty, fashion and creator-style ads use it. AI image tools usually miss. You get an ordinary eye-level headshot, a round fisheye bubble, a face swollen all over, or waxy skin.
 
-  This skill writes the prompt in a fixed order: the camera position, the distance and lens, the face shape you want, the skin and light, the setting, then a short list of things to avoid. Each photo you attach gets one job, so the camera reference sets only the angle, and an identity photo sets only who the person is. It changes the camera, not the person's body, and never implies a skin result.
+  This skill works from how a real camera behaves. The stretch comes from distance: the closer the camera, the bigger whatever is nearest. So you pick a strength by camera distance, and the prompt says which parts of the face are nearer and which are further. It puts the light behind the camera, because a camera right above a face blocks the light from above. And if a product appears, it rests against the cheek, since held toward the lens it would look too big.
 
 when:
   - You want a bold, close portrait for a beauty, fashion or creator-style ad or social post.
-  - Your image tool keeps giving you a plain headshot or a distorted fisheye face when you ask for this look.
-  - You want to show a small product held beside the face, such as a lipstick or a phone case.
+  - Your image tool keeps giving you a plain headshot or a fisheye bubble when you ask for this look.
+  - You want to show a small product beside the face, such as a lipstick or a pouch.
 
 you_give:
-  - A short brief (who, setting, mood, size, whether words or a product appear)
-  - A photo of this camera angle to copy (optional)
+  - A short brief (who, setting, mood, frame shape, whether words or a product appear)
   - A photo of the approved person or character (optional)
   - A photo of your product (optional)
+  - A photo of this camera angle to copy (optional)
   - The exact words, if any go on the image (optional)
 you_get:
   - One prompt paragraph, ready to paste
-  - A list of which photo controls what
-  - For an edit, a one-line change instruction
+  - The role of each photo you attached
+  - For an edit, a one-line change and a list of what stays the same
   - If your chat makes images, the picture with a pass or fail line for each check
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Write a two-line brief, for example "woman in her 50s, home kitchen, relaxed, 4:5, no words, holding our product".
-  - Attach the photos you have and say what each one is (camera angle, the person, the product).
-  - Paste the prompt into your image tool and check the face, eyes and hands at full size.
-  - To change one thing later, say "change only the hair colour" and attach the approved image.
+  - Write a two-line brief, such as "woman in her 50s, lying on a sofa, relaxed, 4:5, no words, holding our product".
+  - Attach the photos you have and say what each one is (the person, the product, the camera angle).
+  - Say gentle, strong or extreme if you know; strong is the default.
+  - Paste the prompt into your image tool and check the face, eyes, light and label at full size.
 
 how_it_works:
-  - title: Gives each photo one job
-    text: The camera photo sets the angle and face size only; the identity photo sets who the person is; the product photo sets the real product. With no identity photo, it invents a fictional adult and says so.
-  - title: Composes for the shape
-    text: Aims for the whole head and chin in frame, the face filling about three quarters of a tall frame, the body receding below, with no stretched anatomy.
+  - title: Gives each photo one role
+    text: The person photo sets who it is, the product photo sets the real product, and a camera photo sets only the angle and face size. With no person photo, it describes a new made-up adult.
+  - title: Picks a strength
+    text: Gentle (about 50 to 60 cm away), strong (30 to 40 cm) or extreme (about 20 cm), always with a lens that keeps straight lines straight.
+  - title: Places the light
+    text: Behind or beside the camera, angled down at the upturned face, so the camera doesn't cast a shadow on it.
   - title: Writes the prompt in order
-    text: What it is, distance and lens, face shape, skin and light, setting and clothes, then the things to avoid, stated once.
+    text: What it is, the camera, what the perspective does to the face, the light, the skin, the setting, then the product and any words.
   - title: Places the product
-    text: If a product appears, it's held at its real size with a believable grip, label readable and away from the mouth.
-  - title: Adds words carefully
-    text: Only your approved words, on a quiet area away from eyes, mouth and label. Never an invented testimonial.
+    text: Rested against the cheek at face height, so it shows at its true size with the label facing the lens.
   - title: Changes one thing at a time
-    text: For an edit, it alters only the named element and keeps identity, angle, light and crop fixed.
-  - title: Checks the result
-    text: Overhead angle, face tapering to the chin, sharp eyes, believable shoulders, the right person and the exact words. If no image was made, it says so.
+    text: For an edit, it names the one change and lists everything that stays the same.
+  - title: Fixes what went wrong
+    text: A table of common faults, each with one fix, such as moving the light when the face comes out dark.
 
 output_shape: |
   PROMPT
-  <one paragraph: photoreal overhead portrait, camera straight above,
-  adult looking up into the lens; distance and lens; face shape; skin
-  and light; setting, clothes, expression; product and grip if shown;
-  words or "no added words"; things to avoid, once>
+  <one paragraph: photo from directly above, adult looking up;
+  strength (distance, lens feel, rectilinear); what the perspective
+  does; light; skin; setting, clothes, expression; product at face
+  height if shown; words or "no added words"; what you want, said
+  positively>
 
-  REFERENCES USED
-  <camera photo: angle and face size only | identity photo: the
-  person | product photo: the real product | none, and what that means>
+  IMAGE ROLES
+  <Image 1: the person | Image 2: the product | Image 3: camera
+  position only | none, and what that means>
 
   NOT RUN
   <any step that couldn't be done, such as no image made>
 
   CHECKS (only if an image was made)
-  Overhead angle: <pass/fail>   Face tapers to chin: <pass/fail>
-  Eyes sharp: <...>   Identity: <...>   Label: <...>   Words: <...>
+  Angle / perspective / light / identity / product / words:
+  <pass or fail, with the fix>
   MISSING: <identity photo | product photo | approved words>
 
 example:
@@ -87,79 +88,77 @@ example:
     No identity photo. No camera reference photo.
   output: |
     PROMPT
-    A photoreal overhead portrait, the camera directly above her head,
-    an adult woman in her thirties lying on her back on a picnic
-    blanket, looking straight up into the lens, the lens centred on the
-    bridge of her nose between the brows. Extremely close, about 25 cm
-    from the face, a straight-line (not fisheye) ultra-wide lens of
-    about 14 mm full-frame equivalent. Broad forehead and eye line, nose
-    toward the lens, cheeks narrowing to a small chin, shoulders and
-    body receding strongly into the blanket. Whole head and chin in
-    frame, hairline near the top edge, the face about 80% of the frame's
-    width. Fine, uneven skin texture and soft facial hair, her own
-    slight asymmetry, a gentle sheen with texture visible underneath.
-    Bright, soft sunlight filtered through leaves; sharp eyes with
-    believable reflections of light. A relaxed, easy smile, a casual
-    t-shirt. In her right hand, beside her lower cheek, the glossy deep
-    green Sprout stand-up foil pouch from Image 1, held upright at a
-    size a hand really holds, closed at its resealable top, label
-    facing the lens and clear of her mouth: big yellow wordmark, yellow
-    bear face top right, "28 Daily Packs" at the bottom, exactly as in
-    Image 1. No added words. Not an eye-level headshot, not a round
-    fisheye, not an evenly swollen face, not cartoon eyes, not waxy
-    smoothing, no repeating pore pattern, no harsh sharpening halos.
+    A photo taken from directly above an adult woman in her thirties
+    lying on her back on a checked picnic blanket in a sunny park,
+    looking straight up into the lens. The camera is about 35 cm above
+    her face with a rectilinear 20 mm full-frame lens feel, so straight
+    lines stay straight. Her forehead and eyes are nearest the lens and
+    largest, her face narrows to a smaller chin, and her shoulders
+    shrink away onto the blanket. Her hair spreads on the blanket around
+    her head. Soft sunlight comes from just behind the camera, angled
+    down onto her face, lighting her forehead and cheekbones with a
+    small shadow under the nose and catchlights high in both eyes. Her
+    skin shows fine pores, small soft hairs and her own slight
+    asymmetry, with a light natural sheen. A relaxed, easy smile, a
+    plain cotton t-shirt. Her right hand rests the glossy deep green
+    Sprout stand-up foil pouch from Image 1 against her lower cheek, at
+    face height, closed at its resealable top, label facing the lens
+    and clear of her mouth: big yellow wordmark, yellow bear face top
+    right, "28 Daily Packs" at the bottom, exactly as in Image 1. Whole
+    head and chin in frame, tall 4:5 frame. No added words. Her face is
+    in proportion for this distance and her eyes are sharp.
 
-    REFERENCES USED
+    IMAGE ROLES
     Image 1, product photo: the real pouch.
-    No identity photo: she is a new fictional adult. Never call her a
+    No identity photo: she is a new made-up adult. Never call her a
     customer.
     No camera reference: the angle comes from the words above.
 
     NOT RUN
     No image was made here. Paste the prompt into your image tool, then
-    check: camera above the head, face narrowing to the chin, sharp
-    eyes, the wordmark and "28 Daily Packs" unchanged, the pouch clear
-    of her mouth.
+    check: camera above the face, face narrowing to the chin, no shadow
+    on the face, the wordmark and "28 Daily Packs" unchanged, the pouch
+    clear of her mouth.
 
-    MISSING: the pouch's real size. Without it the grip says "a size a
-    hand really holds"; check it against the real pouch.
-    Note: nothing in the image suggests better skin or hair. Keep it
-    that way if you add words later.
+    MISSING: the pouch's real size. Resting it at face height keeps its
+    size believable; check it against the real pouch.
+    Strength: strong (the default). Ask for gentle if you want her
+    shoulders and more of the blanket in frame.
 
 tweaks:
-  - what: The size
-    how: Say 4:5, 9:16 or 1:1. In a tall frame the face fills more of the height; in a square it narrows. It recomposes for each shape instead of stretching the face.
-  - what: An identity photo
-    how: Attach an approved photo of your model or character and the prompt keeps their face, skin tone, marks, age, hair and build. Without one, you get a new fictional adult.
+  - what: The strength
+    how: Gentle reads as a playful selfie with shoulders in frame. Strong is the classic look. Extreme fills the frame with the face. Only the distance and lens lines change.
+  - what: The frame shape
+    how: Say 4:5, 9:16 or 1:1. A tall frame shows more body below the face; a square shows less. It recomposes for each shape instead of stretching the face.
+  - what: A person photo
+    how: Attach an approved photo of your model or character and the prompt keeps their face, skin tone, marks, age, hair and build.
   - what: The light
-    how: The default is soft window light. Ask for "warm lamp" or "bright daylight" and only the light line changes.
-  - what: Words on the image
-    how: Add your exact headline. If the frame is tight, it uses fewer lines of text rather than shrinking the face.
+    how: Ask for "window light from behind the camera" or "warm lamp behind the lens". Only the light line changes, and it stays behind the camera.
 
 judge:
-  - The camera is clearly above the head, not at eye level.
-  - The face is big at the top and narrows to the chin, without looking swollen or like a round fisheye.
-  - Skin has fine, uneven texture, not a waxy finish or a repeating pore pattern.
-  - The person is an adult, and nothing suggests a before-and-after or a skin result.
-  - Any product has the right label, shape and colour, held at a size a hand can hold.
+  - The camera is clearly above the face, not at eye level.
+  - The face is big at the top and narrows to the chin, without a bubble or an evenly swollen face.
+  - The face is lit, with no shadow from the camera.
+  - Skin has fine, uneven texture, not a waxy finish or a repeating pattern.
+  - Any product has the right label, shape and colour, at a size that looks real.
 
 test:
-  - Run it with a reference photo you know was shot from straight above. The prompt's camera line should say above the head, a hand's length away. If it says eye level, the reference wasn't given its job.
-  - Make two images from the same prompt. Both should show the face big at the top and narrowing to the chin. If one comes back as a round fisheye bubble, strengthen that one line and try again.
-  - With an identity photo attached, put the result beside it. Check face shape, skin tone, marks and hair. If the person changed, make the identity photo's job line stricter.
-  - Zoom into the skin at full size. Look for a waxy finish or a repeating pore pattern, and change one skin detail per try.
+  - Make the same prompt at gentle and at extreme. The extreme one should show a bigger forehead and less body. If they look alike, the distance line isn't reaching the tool; move it earlier in the prompt.
+  - Check the straight lines in the setting, such as the blanket's checks. If they curve into a bubble, add the rectilinear line again.
+  - With a person photo attached, put the result beside it. Check face shape, skin tone, marks and hair. If the person changed, make that image's role line stricter.
+  - Zoom into the skin at full size. If it looks waxy or stamped, cut the skin line down to one plain sentence and try again.
 
 improve:
-  - Add your usual light and the settings you allow to step 3 of the skill file, so these portraits sit with the rest of your ads.
-  - Keep one approved identity photo per character and name it in step 1, so the same person appears in every ad.
-  - "If you show a product, write how it's held in real life into step 4 (for Sprout: a daily pack torn across the top, gummies in the open palm), with the label facing out."
-  - Add your claims rules to the avoid list. For skincare or supplements, ban any before-and-after and any skin result.
+  - Write your usual strength and frame shape into step 2 of the skill file, so every portrait matches.
+  - Keep one approved person photo per character and name it in step 1, so the same person appears in every ad.
+  - "If you show a product, write how it's held in real life into step 6 (for Sprout: the pouch closed at its resealable top, rested against the cheek)."
+  - Add your claims rules to the avoid list. For skincare or supplements, ban any before and after and any skin result.
   - Pair it with the skill that turns an approved image plan into a prompt when the portrait carries a headline, and the one that makes an approved image bigger for the final export.
 
 terms:
-  - term: Ultra-wide lens
-    meaning: A lens that sees a very wide area, so things close to it look much bigger than things further away.
-  - term: Identity photo
-    meaning: An approved photo of the person or character, attached so the AI keeps their face the same.
-  - term: Fisheye
-    meaning: A lens that bends straight lines into a round bubble. This look is wide but should not look like that.
+  - term: Rectilinear lens
+    meaning: A wide lens that keeps straight lines straight, unlike a fisheye, which bends them into a curve.
+  - term: Catchlight
+    meaning: The small bright reflection of the light in a person's eyes.
+  - term: Perspective
+    meaning: How things nearer the camera look bigger than things further away. The closer the camera, the stronger it gets.

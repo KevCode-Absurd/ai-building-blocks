@@ -1,10 +1,10 @@
 # Knitted wool video shots: for online stores
 
-## Also give it
-A photo of the pack front, every label line with its colour, how it's used, and how big the pack is next to a doll.
+## Give it as well
+A clean front photo of the pack, its biggest label lines with their colours, how big it is next to the doll, and how it's used.
 
-## What changes
-- Knit the pack like everything else, but keep the label exact. State each line ("a tall teal knitted tin with a clean label reading COCOA in cream letters").
-- Pet products, adult goods for parents, home and gifts suit this warm look. Keep faces a step back and use close shots of hands and product for detail.
-- Example how-it-works close-up for a cushion: a cross-section of three knitted layers with a glowing knitted ripple moving down through them, no people.
-- The offer and price are on-screen text added in editing, from your current offer.
+## What changes for stores
+- Make the crocheted pack first and hold it next to the real one. Put large logo areas in intarsia (blocks of colour) and keep small print for the real label laid over in editing.
+- Show use as your own steps, one gesture per clip (a crocheted hand tipping the pack).
+- Pet products, home goods, gifts and awkward health subjects suit this warm world. Keep faces at full or medium shot and use close-ups for hands and the product.
+- Price and offer go on as on-screen text in editing, from the offer that is live that day.

@@ -1,7 +1,7 @@
 slug: get-catchy-song-ad-script-that-sells
 renamed_from: song-ad-script-format-rules
 name: "Get a catchy song ad script that sells"
-summary: "An original song ad with a chorus about what your customer gets, and every sung claim backed."
+summary: "An original short song ad with a rhymed hook about what your customer gets, laid out bar by bar, and every sung claim backed."
 category: general
 boards: [ecommerce]
 type: skill
@@ -17,5 +17,14 @@ uses: []
 example: song
 origin: rebuilt
 source_ids: [CES-121]
-old_name: script-format-song
-version: 1.0.0
+old_name: song ad script rules
+version: 2.0.0
+credits:
+  - {title: "Memory in a Jingle Jungle: Music as a Mnemonic Device in Communicating Advertising Slogans", by: "Richard F. Yalch, Journal of Applied Psychology, 1991", url: "https://doi.org/10.1037/0021-9010.76.2.268", used: "Slogans set to music are recalled better, for putting the reason to buy in the hook"}
+  - {title: "Memory for music: Effect of melody on recall of text", by: "Wanda T. Wallace, Journal of Experimental Psychology: Learning, Memory, and Cognition, 1994", url: "https://doi.org/10.1037/0278-7393.20.6.1471", used: "A simple melody that repeats helps people keep the words, for the same-tune hook"}
+  - {title: "Effects of Music on Memory for Text", by: "Purnell-Webb and Speelman, Perceptual and Motor Skills, 2008", url: "https://journals.sagepub.com/doi/10.2466/pms.106.3.927-957", used: "Rhythm and a familiar tune aid recall, for putting key words on the beat"}
+  - {title: "Birds of a feather flock conjointly (?): Rhyme as reason in aphorisms", by: "Matthew S. McGlone and Jessica Tofighbakhsh, Psychological Science, 2000", url: "https://pubmed.ncbi.nlm.nih.gov/11228916/", used: "Rhymed lines feel truer, so rhyme carries outcomes and approved lines only"}
+  - {title: "Dissecting an Earworm: Melodic Features and Song Popularity Predict Involuntary Musical Imagery", by: "Kelly Jakubowski, Sebastian Finkel, Lauren Stewart and Daniel Müllensiefen", url: "https://research.gold.ac.uk/19405", used: "Faster tempo, a common melodic shape and one unusual jump, for the hook tune"}
+  - {title: "The recall and recognition of sonic logos", by: "Sebastian Silas, Daniel Müllensiefen and colleagues, Cambridge Centre for Music and Science", url: "https://cms.mus.cam.ac.uk/publications/silas-sonic-logo-memory/", used: "Simpler tunes are easier to sing back, for the short sung brand tag"}
+  - {title: "The Differential Role of Characteristics of Music on High- and Low-Involvement Consumers' Processing of Ads", by: "Deborah J. MacInnis and C. Whan Park, Journal of Consumer Research, 1991", url: "https://ideas.repec.org/a/oup/jconrs/v18y1991i2p161-73.html", used: "Music that fits the message matters, for choosing the sound by fit"}
+  - {title: "YouTube video ad creative: the ABCDs", by: "Think with Google", url: "https://business.google.com/us/think/future-of-marketing/youtube-video-ad-creative/", used: "Win attention and show the brand early, for singing from bar 1 and showing the pack within 5 seconds"}

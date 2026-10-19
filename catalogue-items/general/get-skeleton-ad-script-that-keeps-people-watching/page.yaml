@@ -1,75 +1,74 @@
 new_slug: get-skeleton-ad-script-that-keeps-people-watching
 name: "A funny skeleton ad that keeps people watching"
-summary: "Give it your product and the habit it replaces. You get a funny \"what happens if\" script with a cartoon skeleton."
+summary: "Name the habit you replace. You get a funny skeleton script that climbs four steps to your product."
 job: make-video-ads
 
 headline: "A funny skeleton ad that keeps people watching"
-subhead: Give it your product, the old habit it replaces and your approved claims. It writes an open question, a ladder of steps that each go further than the last (Day 1, Day 30, Tub 9), and a payoff, lived by one cartoon skeleton standing in for the viewer.
+subhead: Give it your product, the old habit it replaces and your approved claims. It finds the one thing that grows, asks an open question, and climbs four rungs to a silly peak, lived by a cartoon skeleton. Then your product lands once.
 
 explain: |
-  Some selling ideas are about time passing or things piling up: what a habit does after a year, or how far the old way stretches before it breaks. A camera can't film that. A cartoon skeleton can live it in 30 seconds, and an open question ("What happens if you keep doing this?") holds the viewer until the answer.
+  Some selling ideas are about things building up: the tubs you gave up on, the mess a small problem makes over a year. A camera can't film that in 30 seconds. A cartoon skeleton can, and an open question ("How many tubs can one cupboard hold?") keeps people watching until the answer.
 
-  This skill picks the kind of ladder your product fits (keep using it, the cost of doing nothing, the old way stretched too far), writes the question, then writes each step as one line, one shot and one marker. It keeps the skeleton the same friendly character, never speaking, in one place that changes a little each step. A step with a number or timed result must come from your approved claims; silly exaggeration is free. It writes a video script, or a still of up to three panels.
+  This skill builds the script like a comedy sketch. It finds the "game", the one thing that grows, and picks how each step is counted on screen: a count, a distance, a crowd or, only with proof, a time. Then it climbs four rungs, from true to life to the place giving up. Every rung changes one thing in one place, so the climb reads with the sound off. Any number tied to a result must come from your approved claims. Silly exaggeration is free.
 
 when:
   - Your product replaces a habit or a pile of old things, and you want to show where the old way ends up.
-  - You need an ad for people who don't yet think they have a problem, and a straight product ad would be skipped.
+  - You need an ad for people who don't yet think they have a problem, and a straight product ad would get skipped.
   - You want something funny and visual that still keeps every claim honest.
 
 you_give:
-  - Your product, who it's for, how much they already know, and the length you want
-  - What it replaces (the old habit or old things) and how it's used
-  - Your approved claims, including any time points you can back, and your offer
-  - Video or still image
-  - The skeleton's look, plain, dressed, x-ray or toy-like (optional, plain by default)
+  - Your product, who it's for, how much they already know, and the length (15, 25 or 35 seconds, or a still)
+  - The old habit or old things it replaces, and how your product is used
+  - Your approved claims, any time points you can back with a source, and your offer
+  - Review lines about the old way (optional)
+  - A signature item for the skeleton, like a cap or scarf (optional)
 you_get:
-  - The question, the kind of ladder, and why it fits your product
-  - A line-by-line script with narration, on-screen markers and picture notes
-  - A clip plan for a video tool, or a layout and image prompt for a still
-  - A list of every claim and marker, with where it came from
+  - The game in one sentence, what grows, how it's counted, and why it fits
+  - A script table with each rung's label, narration, picture beats and seconds
+  - A timing map with the word count, or a still with every word and an image prompt
+  - A claims list showing which labels are free and which need a source
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste your product facts and approved claims underneath. Your brand file works.
   - Write the old habit your product replaces, in your customers' words if you have them.
-  - Say "video, 30 seconds" or "still, one image" and who the ad is for.
-  - Check the claims list at the end. Any step with a number should point to a claim you hold.
+  - Say the length ("video, 25 seconds" or "still") and who the ad is for.
+  - Check the claims list. Any rung with a number tied to a result should point to a claim you hold.
   - Take the script to the skill that turns a skeleton script into shots, to make it.
 
 how_it_works:
   - title: Checks the fit
-    text: Confirms the idea is about time, amounts or stages piling up, which suits people who don't yet see a problem. A result on a body is never the subject.
-  - title: Picks the ladder
-    text: Chooses from keep using it, the cost of doing nothing, the old way stretched too far, or the product somewhere unexpected, and whether it ends in triumph or catastrophe.
+    text: Confirms the idea is about something building up, which suits people who don't see the problem yet. A change in a body is never the subject.
+  - title: Finds the game
+    text: Writes "the more X, the more Y grows" in one line, and picks whether it runs without your product (a pile-up) or with it (a win).
+  - title: Picks what grows
+    text: A pile, a space, a crowd or how far the effect reaches. Then a label for each rung, preferring counts over times.
   - title: Writes the question
-    text: Asks about the viewer's habit or old way, not the product, so the payoff answers it.
-  - title: Builds the steps
-    text: Writes 3 to 7 steps, each with a marker (Day 1, 5, Stage 3) and one idea, each going further than the last.
-  - title: Checks every step
-    text: Allows a number or timed result only if it's in your claims. Silly exaggeration is free; a medical outcome or a named competitor never is.
+    text: One open question about the viewer's habit, under 10 words, that the last rung answers.
+  - title: Climbs four rungs
+    text: True to life, a bit much, silly, then the peak. Only one thing changes each time, in one place.
   - title: Lands the product once
-    text: Brings the product in on one clean line, either at the start (triumph) or just after the worst step (catastrophe).
-  - title: Writes the video or still rules
-    text: One calm narrator, one place, one skeleton. For a still, one late step or a strip of up to three panels, 20 words in all.
+    text: Right after the peak, or in the first rung if the ad runs with your product. Then the offer, with exact terms on screen.
+  - title: Checks every claim
+    text: Allows a result, time or count claim only if it's approved. Plain labels and silly exaggeration are free.
 
 output_shape: |
-  QUESTION  "<open question about the viewer's habit or old way>"
-  LADDER    <kind of ladder>. Runs on <time, quantity or stage>.
-            <Triumph or catastrophe> payoff: <what the payoff shows>
-  WHY       <why this ladder fits the product>
+  GAME      The more <habit>, the more <thing you can see> grows.
+  RUNS      <without it / with it>   GROWS <pile / space / crowd / reach>
+  LABEL     <count / distance / crowd / time>
+  WHY       <one line>
 
-  <n>  "<narration line, opening on its marker>"
-       screen: <marker in capitals, or none>
-       picture: <the place at this step, plus the skeleton's one action>
-  (one row per step, then the product line and the close)
+  QUESTION  "<open question about the viewer's habit>"
 
-  PAYOFF  <which line answers the question, where the product lands>
+  #  label   narration                 picture (wind-up, change, reaction)   s
+  <one row per rung, then the turn, the claim line and the close>
 
-  CLIP PLAN (<words>, <seconds>)
-  Clip <n>: <lines> (<words>)
+  ON SCREEN (close)  <exact offer terms>
 
-  CLAIMS AND MARKERS
-  <marker or claim>   <free, or approved claim and its source>
+  TIMING  <words> spoken words (target <target>), about <seconds> s
+
+  CLAIMS
+  <label or claim>   <free, or approved claim and its source>
   Not used: <claims left out, and why>
   MISSING: <facts it needed and didn't get>
 
@@ -78,13 +77,13 @@ example:
   input: |
     [the skill]
 
-    Media: video, about 30 seconds
+    Length: video, 25 seconds
     Product: Sprout daily greens gummies. A pouch of 28 daily packs;
     tear one pack and eat the small handful of gummies inside.
     No water, no mixing, no shaker.
     Buyer: the quitter who wants to stick, 28 to 45. Has quit greens
     powders and pill stacks. Knows the problem, not the fix.
-    Old way it replaces: a half-used tub of greens powder and a shaker.
+    Old way: a half-used tub of greens powder and a shaker.
     Reviews: "the drink was definitely gritty/chalky", "not having to
     clean a shaker bottle".
     Approved claims: "60+ ingredients, 21 vitamins & minerals, and 6g
@@ -97,113 +96,104 @@ example:
     gummies pour from the top into a palm; the pouch opens only at its
     resealable top.
     Voice: playful, cheeky, short lines. "Rip. Tip. Enjoy."
-    Skeleton look: plain
   output: |
-    QUESTION  "How many half-used powder tubs can one cupboard take?"
-    LADDER    How far the old way stretches before it breaks. Runs on
-              quantity. Catastrophe payoff: the cupboard gives up.
-    WHY       Sprout replaces a tub and a shaker, and reviewers name the
-              powder as the thing they quit. No time points are held,
-              so the markers are tub counts with no result attached.
+    GAME      The more powder tubs you give up on, the fuller the
+              cupboard gets.
+    RUNS      without it   GROWS space (one kitchen cupboard)
+    LABEL     count (tubs)
+    WHY       Sprout replaces the tub and the shaker, and reviewers name
+              the chalky powder as what they quit. No time points are
+              held, so the labels are tub counts with no result.
 
-    1  "How many half-used powder tubs can one cupboard take?"
-       screen: none
-       picture: a sunny kitchen. One long cupboard shelf, a row of
-       identical greens-powder tubs end to end, more than fit. The
-       skeleton stands at the first tub, shaker bottle in hand.
-    2  "Tub 1. Two scoops, then the chalky sludge wins."
-       screen: TUB 1
-       picture: the skeleton shakes, squints at the green sludge, sets
-       tub 1 back with its lid half on.
-    3  "Tub 4. The shaker grows a green ring you can't scrub out."
-       screen: TUB 4
-       picture: four tubs open. It holds the shaker up to the window,
-       eyes narrowed at the ring.
-    4  "Tub 9. The shelf starts to bow."
-       screen: TUB 9
-       picture: nine tubs open and abandoned. The shelf sags in the
-       middle. Eyes wide.
-    5  "Tub 15. The cupboard door won't shut."
-       screen: TUB 15
-       picture: wide. Every tub open, shelf bowed, the door swings back
-       open each time the skeleton pushes it. Hold.
-    6  "Or you skip the tub. Rip. Tip. Enjoy."
-       screen: none
-       picture: cut. It turns to the counter, where the green pouch
-       stands open at its resealable top, and tears one daily pack
-       straight across the top edge.
-    7  "Sprout. 60+ ingredients, 21 vitamins and minerals and 6 g of
-       fiber, in a handful of gummies."
-       screen: none
-       picture: close. Green gummy bears pour from the torn top into
-       the skeleton's palm.
-    8  "First order, $29.99 with the text sign-up. Not for you? Money
-       back within 30 days, first order only."
-       screen: $29.99 first order with SMS sign-up. Renews at $49.99
-       every 4 weeks.
-       picture: hold on the pouch and the torn pack, cupboard behind.
+    QUESTION  "How many half-used tubs can one cupboard hold?"
 
-    PAYOFF  Line 5 answers the question. The product lands once, on
-            lines 6 and 7, straight after the worst step.
+    #  label   narration                          picture                  s
+    Q  none    "How many half-used tubs can one   wide: a sunny kitchen,   0-3.5
+               cupboard hold?"                    one open cupboard, a
+                                                  row of identical tubs
+                                                  end to end, sealed. The
+                                                  pouch small on the far
+                                                  counter.
+    1  TUB 1   "Tub one. Two scoops, then the     lifts the scoop; tub 1   3.5-7.5
+               chalky taste wins."                goes back, lid half on;
+                                                  eyes squint, shoulders
+                                                  drop
+    2  TUB 5   "Tub five. The shelf starts to     reaches for tub 5; five  7.5-10.5
+               bend."                             tubs open, shelf dips;
+                                                  eyes flick to the dip
+    3  TUB 12  "Tub twelve. The door needs a hip  pushes the door; twelve  10.5-14
+               to shut."                          open, shelf sags, door
+                                                  springs back; it leans
+                                                  in with one hip
+    4  TUB 20  "Tub twenty. The cupboard gives    steps back; the shelf    14-18.5
+               up."                               folds and tubs slide to  (held)
+                                                  the floor; eyes wide,
+                                                  arms full
+    T  none    "Or skip the tub. Rip. Tip.        turns to the counter,    18.5-21.5
+               Enjoy."                            tears one daily pack
+                                                  straight across its top
+    C  none    "Sprout gummies. Sixty-plus        close: green gummy bears 21.5-24.5
+               ingredients in one daily pack."    pour from the torn top
+                                                  into its palm
+    O  offer   "First order, $29.99 with text     hold: pouch and pack     24.5-27
+               sign-up."                          front on, cupboard behind
 
-    CLIP PLAN (calm narrator, 87 words, 33 to 36 seconds)
-    Clip 1: lines 1 and 2 (18 words)
-    Clip 2: lines 3 and 4 (18 words)
-    Clip 3: line 5 alone, held (6 words)
-    Clip 4: line 6 (8 words)
-    Clip 5: line 7 (17 words)
-    Clip 6: line 8 (18 words)
-    Between steps the skeleton holds its pose, light sweeps the kitchen
-    once, and the shelf settles one step on. No tub walks in.
+    ON SCREEN (close)  $29.99 first order with SMS sign-up. Renews at
+    $49.99 every 4 weeks. 30-day money back, first order only.
 
-    CLAIMS AND MARKERS
-    Tub 1, 4, 9, 15        counts with no result: free
-    "chalky sludge", ring  the old way, from reviews: free
-    Bowing shelf, door     plain exaggeration: free
-    "60+ ingredients, 21 vitamins and minerals and 6 g of fiber"
+    TIMING  59 spoken words (target 55, within 10%), about 27 s with
+    the beats after each label. Each rung joins the next on a match
+    cut: same camera, skeleton on the same spot, only the tubs moved on.
+
+    CLAIMS
+    Tub 1, 5, 12, 20      counts with no result: free
+    "chalky taste"         the old way, from a review: free
+    Bent shelf, door       plain exaggeration: free
+    "Sixty-plus ingredients in one daily pack"
                            approved claim, brand file
     $29.99, $49.99         price page; the SMS condition and the
-                           renewal are on screen, not hidden
+                           renewal are on screen, in full
     Money back             FAQ: 30 days, first order only
-    Not used: "supports digestion". It needs its own ladder, and the
-    tubs story is about quitting, not the gut.
+    Not used: "supports digestion". It would need its own game; this
+    one is about quitting, not the gut.
     MISSING: nothing for this script.
 
 tweaks:
-  - what: Video or still
-    how: For a still, ask for "one late step" for people who don't see the problem yet, or "a strip of three" for people comparing options. A still allows 20 words in all, including markers.
-  - what: The kind of ladder
-    how: If your product gets better with use and you can back the time points ("Day 30, the leather softens"), ask for a triumph ladder. If it replaces a pile of things, ask for a quantity ladder (1, 5, 25).
-  - what: The skeleton's look
-    how: Plain is a bare cartoon skeleton. Dressed puts it in clothes, good for things people wear. X-ray shows the inside only when how it works is about the body and you've stated it. Toy-like suits a playful brand.
-  - what: Time points
-    how: Paste any time points you can back ("most customers notice X by week 2", with its source). Without them, every marker stays a plain time or count with no result.
+  - what: Which way it runs
+    how: Without your product, the old way piles up and the peak is a mess people enjoy watching. With it, the good effect spreads. Choose "with it" only if you can back every rung that shows a result.
+  - what: What grows on screen
+    how: Ask for a pile, a space, a crowd or reach. A crowd suits things people notice, like a scent or a bag. A space suits things that protect or maintain.
+  - what: The label on each rung
+    how: Counts, distances and crowd sizes are free. A time label like "Week 3" next to a result reads as a promise, so give a sourced time point or keep the result off it.
+  - what: Length
+    how: 15 seconds drops rung 2 and keeps about 30 words. 35 seconds gives each rung more room at about 75 words. A still shows one frame, or two panels for buyers comparing options.
+  - what: The skeleton
+    how: Give it one signature item it wears in every ad, like a cap or scarf, so people start to know it. Or dress it for the place.
 
 judge:
-  - The question is about the viewer's habit, not your product, and the payoff answers it.
-  - Each step goes further than the one before in one thing you can see.
-  - Any number or "by Day X" result points to a claim you actually hold.
-  - The skeleton never speaks and never gets healthier bones. Only its situation changes.
-  - Everything happens in one place. No new room for each step.
-  - The product appears once, on one line or two in a row, and the ad doesn't stop to start selling.
+  - The question is about the viewer's habit, not your product, and the last rung answers it.
+  - Each rung goes one step further on the same thing, and nothing else changes.
+  - Any number or time tied to a result points to a claim you actually hold.
+  - The skeleton never speaks and its bones never change. Only its situation does.
+  - The product shows up once, after the peak or in the first rung, and the ad never stops to sell midway.
 
 test:
-  - Run it on a product where you know there are no time points you can back. Every marker should come back as a plain time or count with no result next to it.
-  - Run the same brief twice. The ladder type should stay the same; if it flips between triumph and catastrophe, say which one you want in the brief.
-  - Read the steps out of order to a colleague and ask them to put them back. If they can't, the steps don't build.
-  - Watch for the product. If it shows up on more than one stretch of the script, ask it to land the product once and run it again.
+  - Run it on a product with no time points you can back. Every label should come back as a count, distance or crowd, with no result next to it.
+  - Read the four rungs out of order to a colleague and ask them to put them back. If they can't, the climb isn't steep enough.
+  - Run the same brief twice. The game sentence should stay close; if it jumps to a new idea, write the old habit more exactly in your brief.
+  - Time yourself reading the script aloud at an easy pace. A 25-second script should take 23 to 28 seconds.
 
 improve:
   - Add the habit your buyers quit, in their own words, to "What you need" in the skill file, so every run starts from the real old way.
-  - Paste your approved claims and any time points you can back into the claims step, so it can build a triumph ladder when you have proof.
-  - Write your brand's product-showing rules (how the pack opens, what never appears) into the video rules, so picture notes get them right first time.
-  - Save the question that wins into your brand file, then test three new questions on the same ladder.
+  - Write your product-showing rules (how the pack opens, what never appears) into the video section, so picture notes get them right first time.
+  - Pick one signature item for your skeleton and write it into "The skeleton", so it becomes a character people know across ads.
+  - Save the question that wins in your brand file, then test new questions on the same game.
   - Pair it with the skill that turns a skeleton script into shots and prompts for your image and video tools.
 
 terms:
-  - term: Ladder
-    meaning: A row of steps, each with a marker like Day 1 or Tub 9, where each step goes further than the last.
-  - term: Marker
-    meaning: The label on each step (a time, a count or a stage), added as on-screen text later.
-  - term: Problem aware
-    meaning: The buyer knows they have the problem but doesn't yet know what fixes it.
+  - term: Game
+    meaning: The one unusual thing in a comedy bit that keeps coming back bigger. Here, the thing that grows each rung.
+  - term: Rung
+    meaning: One step of the climb. Each rung has a label, one narrated line and one picture.
+  - term: Match cut
+    meaning: A cut between two shots framed the same way, so only the thing that changed stands out.

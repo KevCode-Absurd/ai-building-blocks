@@ -4,78 +4,76 @@ summary: "Give it your script and product photo. You get image and clip prompts 
 job: make-video-ads
 
 headline: "Turn your skeleton ad script into video clips"
-subhead: Give it a skeleton ad script and a real photo of your product. It fixes one look for the skeleton and one place, maps every step to a shot, and writes the image prompts and video prompts in the order you make them.
+subhead: Give it a skeleton ad script and a real photo of your product. It builds three reference images, fixes one camera for every step, and writes a still and a short clip prompt per step, plus an edit plan for labels and the offer.
 
 explain: |
-  AI video tools forget everything between shots. Ask for "a cartoon skeleton" six times and you get six different skeletons, a calendar with garbled numbers on the wall, and a product with the wrong label. The ad stops making sense with the sound off, because each step no longer looks like it went further than the last.
+  AI video tools forget everything between shots. Ask for "a cartoon skeleton" six times and you get six skeletons, a cupboard that moves, a calendar with garbled numbers and a pack with the wrong label. Then the climb stops making sense with the sound off.
 
-  This skill locks the things that must not change: one fixed sentence describing the skeleton, one place, the product from its photo. It makes a character picture first, then one starting image per shot, then the video prompts, each with a guard line (no talking, no text, same skeleton, real speed). It plans where the step markers and the offer go as text added in editing, never inside the picture. It turns a script into shot-by-shot instructions for a video tool; it does not write the script.
+  This skill makes the parts that must not change first: a three-view sheet of the skeleton, the place at its first step, and the product from its photo. Every shot is built from those, never from the last shot. One camera framing is used for every step, so each step joins the next on a match cut and only the growing thing moves. Each clip covers one step in 3 to 5 seconds, with the motion written as three beats. Labels and the offer are added in editing, never asked of the video tool.
 
 when:
-  - You have a skeleton "what happens if" script and need to make it with an AI image and video tool.
+  - You have a skeleton "what happens if" script and need to make it with AI image and video tools.
   - Earlier tries gave you a different skeleton in every shot, or words and numbers baked into the picture.
-  - You need to hand someone a clear plan of every shot, in order, before spending money on video credits.
+  - You want a clear plan of every shot, in order, before you spend money on video credits.
 
 you_give:
-  - The script, line by line (the question, the steps, the payoff)
-  - A real photo of your product, plus its main benefit, how it's used and what it replaces
-  - Any claims with numbers or times, with their source
-  - Your brand colors, voice and whether you use music (optional)
-  - The clip lengths your video tool accepts (optional, about 10 seconds by default)
+  - The script, line by line (the question, the steps with their labels, the turn, the close)
+  - A real photo of your product, how it's used and how it must be shown
+  - Your brand colours and whether you use music (optional)
+  - Your image and video tools, their clip lengths and how many reference images they take (optional)
 you_get:
-  - The skeleton's look and a fixed character sentence to paste into every prompt
-  - A step-by-step shot map showing the place, props and marker at each step
-  - Prompts for the character picture, each shot's starting image and each video clip
-  - A list of the markers and captions to add in editing, with timings
+  - Prompts for three reference images, each with its job
+  - Fixed lines for the skeleton, the look and the plain surfaces, to paste into every prompt
+  - A shot map with one fixed camera for every step, plus a still and a clip prompt per shot
+  - An edit plan with the labels, the offer and their timings
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste your skeleton script underneath and attach the product photo.
-  - Add your brand colors and say whether your brand uses music.
-  - Make the character picture first and approve it before any other image.
-  - Make each shot's starting image with the character picture attached, then the video clips in order.
-  - Add the markers and offer as text in your editor. Never ask the video tool to write them.
+  - Make the three reference images first and approve them before any shot.
+  - Make each still with the references attached, then each clip from its still.
+  - Record the narration, cut the clips to it, and add the labels and offer as text in your editor.
 
 how_it_works:
-  - title: Picks one look
-    text: Chooses bare, dressed, x-ray or toy-like, writes it into one character sentence, and never changes the wording between shots.
-  - title: Fixes the skeleton
-    text: Makes one character picture first and attaches it to every image. The skeleton never speaks, and its bones never improve. Only its situation changes.
-  - title: Fixes the world
-    text: Sets one place where the whole ladder happens. Reaction characters, if any, are made-up adults who don't speak. Nothing in the place carries words.
-  - title: Maps the ladder
-    text: Writes one row per line with the situation, the place at that step, props and the marker. Varies the framing from wide to close.
-  - title: Writes the images
-    text: One starting image per shot, built from the character picture and the product photo, never from the previous shot's output.
-  - title: Writes the clips
-    text: Either clips that continue in one place, or one image per step cut to the recorded narration, each with a guard against talking and text.
+  - title: Reads the script
+    text: Notes what grows, each step's label, the one place and where the product enters. It flags a script that changes place between steps.
+  - title: Builds the references
+    text: A three-view skeleton sheet, the place at its first step and the product from its photo. Each is named by its job in every prompt.
+  - title: Writes the fixed lines
+    text: One line for the skeleton, one for the look (style, three to five colours, the light) and one describing plain, unmarked surfaces.
+  - title: Fixes one camera
+    text: Every step uses the same framing, so steps join on a match cut. Close-ups go between steps.
+  - title: Maps and writes the stills
+    text: One row and one still per shot, with the growing thing described in shares (half the shelf), since image tools miscount.
+  - title: Writes short clips
+    text: One step per clip, 3 to 5 seconds, motion in three counted beats, one camera instruction and a hold line.
   - title: Plans the edit
-    text: Lists the markers, captions and offer to lay over the finished clips, timed to the narration.
+    text: Narration first, then labels, the held peak, music cues if the brand uses music, and the exact offer on the last shot.
 
 output_shape: |
-  LOOK  <bare, dressed, x-ray or mascot>
-  CHARACTER (paste unchanged into every image prompt)
-  <one fixed sentence describing the skeleton>
-  STYLE  <one fixed sentence: image style, place, colors, light>
-  WORLD  <the one place, its props, any reaction characters>
+  REFERENCES
+  Image 1 (skeleton): <three-view sheet prompt>
+  Image 2 (place at step 1): <empty set prompt>
+  Image 3 (product): <from its photo>
+
+  CHARACTER  <fixed skeleton line>
+  LOOK       <style, 3 to 5 colours, light source>
+  CLEAN      <plain surfaces, said positively>
+
+  STEP CAMERA  <one framing used for every step>
 
   SHOT MAP
-  # | feeling (eyes, pose) | place at this step | marker
-  <one row per script line>
-  Framing: <wide, medium or close for each shot>
+  # | label | what grows, at this step | camera | beats | seconds
+  <one row per shot>
 
-  CHARACTER PICTURE  <the skeleton alone, front on, plain background>
-  STILL, SHOT <n>  (attach: <what each attached image is for>)
-  [CHARACTER] [STYLE] SHOT: <framing; one action; the place; props;
-  product from its photo, sized against the hand>. No text anywhere.
+  STILL <n>  (attach: <images and their jobs>)
+  [CHARACTER] [LOOK] SHOT: <camera; action; place; props; product>. [CLEAN]
 
-  CLIPS
-  Clip <letter>  shots <n-n>  <start-end seconds>
-  Shot <n> (<seconds>, "<line>"): <motion, camera, cut>
-  GUARD (every clip): <fixed guard line>
+  CLIP <n>  start frame: still <n>, <seconds>
+  Beat 1 <...>. Beat 2 <...>. Beat 3 <...>. Camera: <one instruction>.
+  HOLD: <fixed hold line>   SOUND: <if your tool makes sound>
 
-  ADD IN EDITING  <marker or caption> at <seconds>
-  MISSING: <facts it needed and didn't get>
+  EDIT PLAN  <label or offer> at <seconds> | music cues | MISSING
 
 example:
   business: sprout
@@ -83,133 +81,122 @@ example:
     [the skill]
 
     Script (from the skeleton ad script skill):
-    1 "How many half-used powder tubs can one cupboard take?"
-    2 "Tub 1. Two scoops, then the chalky sludge wins."
-    3 "Tub 4. The shaker grows a green ring you can't scrub out."
-    4 "Tub 9. The shelf starts to bow."
-    5 "Tub 15. The cupboard door won't shut."
-    6 "Or you skip the tub. Rip. Tip. Enjoy."
-    7 "Sprout. 60+ ingredients, 21 vitamins and minerals and 6 g of
-      fiber, in a handful of gummies."
-    8 "First order, $29.99 with the text sign-up. Not for you? Money
-      back within 30 days, first order only."
+    Q "How many half-used tubs can one cupboard hold?"
+    1 TUB 1 "Tub one. Two scoops, then the chalky taste wins."
+    2 TUB 5 "Tub five. The shelf starts to bend."
+    3 TUB 12 "Tub twelve. The door needs a hip to shut."
+    4 TUB 20 "Tub twenty. The cupboard gives up."
+    T "Or skip the tub. Rip. Tip. Enjoy."
+    C "Sprout gummies. Sixty-plus ingredients in one daily pack."
+    O "First order, $29.99 with text sign-up."
 
     Product: Sprout greens gummies. Photos attached: pouch front, one
     daily pack. Pouch: glossy deep green foil, big yellow wordmark,
-    yellow bear face top right. Gummies: small opaque deep-green
-    bears, soft matte, about thumbnail height.
+    yellow bear face top right. Gummies: small opaque deep-green bears.
     Show it right: pack torn straight across its top edge only;
     gummies pour from the top into a palm; the pouch opens only at its
     resealable top, never torn.
-    Colors: forest green #00582D, warm cream #FFF7DF, sunflower
-    yellow #FFCC2E. Photos bright, sunny, candy-like. Never clinical.
+    Colours: forest green #00582D, warm cream #FFF7DF, sunflower
+    yellow #FFCC2E. Bright, sunny, candy-like. Never clinical.
+    Tools: 5-second clips, 3 reference images. Music: not stated.
   output: |
-    LOOK  bare
-    CHARACTER (paste unchanged into every image prompt)
-    A tall, lanky adult cartoon skeleton, ivory bones with real bone
-    detail (not toy-smooth, not chibi, not scary), big expressive
-    cartoon eyes with white sclera and dark pupils in the sockets,
-    no clothing.
-    STYLE  Cinematic 3D animated image in a photoreal sunny kitchen,
-    warm color grade in forest green, warm cream and sunflower
-    yellow, bright soft morning light.
-    WORLD  One kitchen: a long open cupboard shelf holding a row of
-    identical plain white powder tubs with no labels, a shaker bottle,
-    a window, a counter. The Sprout pouch sits closed at the far end
-    of the counter from shot 1, small in frame. No reaction characters.
+    REFERENCES
+    Image 1 (skeleton): [CHARACTER]. Three views on one sheet: front,
+    three-quarter, side. Standing, arms relaxed. Plain mid-grey
+    background, even light.
+    Image 2 (kitchen at step 1): [LOOK]. Wide from a kitchen doorway at
+    chest height. One open wall cupboard with a long straight shelf, a
+    row of identical sealed tubs end to end, a shaker bottle on the
+    counter, a window on the left. [CLEAN]
+    Image 3 (product): the Sprout pouch and one daily pack from the
+    attached photos, printing unchanged, on plain cream.
+
+    CHARACTER  A lanky adult cartoon skeleton, warm ivory bones with a
+    soft matte finish, big round cartoon eyes set in the sockets,
+    white with dark pupils, no clothes.
+    LOOK  Cinematic 3D animated image, warm cream, forest green and
+    sunflower yellow, soft morning light from a window on the left.
+    CLEAN  Plain white tubs with plain lids, blank cupboard doors and
+    walls.
+
+    STEP CAMERA  Wide from the doorway at chest height, skeleton
+    standing at the cupboard's left end. Used for Q and steps 1 to 4.
 
     SHOT MAP
-    # | feeling (eyes, pose)     | place at this step          | marker
-    1 | relaxed, shaker in hand  | tubs sealed, shelf straight | none
-    2 | squinting at the shaker  | tub 1 open, lid half on     | TUB 1
-    3 | eyes narrowed, at window | four tubs open              | TUB 4
-    4 | eyes wide, leans back    | nine open, shelf sags       | TUB 9
-    5 | frozen, pushing the door | all open, door swings open  | TUB 15
-    6 | eyes soften, turns       | pouch open at its top       | none
-    7 | (close on the palm)      | gummies pour from the pack  | none
-    8 | leans on counter, calm   | pouch and torn pack, front  | offer
-    Framing: 1 wide, 2 medium, 3 medium at the window, 4 wide, 5 wide,
-    6 medium, 7 close, 8 wide hero shot.
+    # | label  | the cupboard at this step         | camera | s
+    Q | none   | all sealed, shelf straight        | step   | 0-3.5
+    1 | TUB 1  | first tub open, lid half on       | step   | 3.5-7.5
+    2 | TUB 5  | a quarter of the row open, dips   | step   | 7.5-10.5
+    3 | TUB 12 | over half open, door springs back | step   | 10.5-14
+    4 | TUB 20 | all open, shelf folded, tubs on   | step   | 14-18.5
+      |        | the floor                         |        |
+    T | none   | skeleton at the counter, pouch    | medium | 18.5-21.5
+    C | none   | palm, gummies pouring             | close  | 21.5-24.5
+    O | offer  | pouch and pack front on           | wide   | 24.5-27
 
-    CHARACTER PICTURE
-    [CHARACTER]. Standing alone, full body, front on, plain light grey
-    background, even light. No text anywhere.
+    STILL 3  (attach: image 1 = the skeleton, image 2 = the kitchen)
+    [CHARACTER] [LOOK] SHOT: wide from the doorway at chest height; the
+    skeleton presses the cupboard door with one hip, eyes narrowed;
+    more than half the row of tubs open, the shelf sagging in the
+    middle; the door pushed half shut. [CLEAN]
 
-    STILL, SHOT 1  (attach: character picture = the skeleton)
-    [CHARACTER] [STYLE] SHOT: wide from the kitchen doorway; the
-    skeleton stands at the first tub, shaker bottle raised mid-shake,
-    eyes relaxed; a long shelf of sealed plain white tubs runs past the
-    edge of frame; the green pouch small at the far end of the counter.
-    No text, signs, labels or numerals anywhere.
+    CLIP 3  start frame: still 3, 3.5 s
+    Beat 1 the skeleton leans its hip into the door. Beat 2 the door
+    springs back open. Beat 3 its eyes go wide and its shoulders drop.
+    Camera: locked off.
+    HOLD: Same skeleton as image 1. Bones stay joined and rigid. Jaw
+    stays closed. Real-time speed. Surfaces stay plain.
+    SOUND: quiet kitchen room tone, a creak from the shelf.
 
-    STILL, SHOT 6  (attach: character picture; pouch photo and pack
-    photo = the product, keep their printing exactly)
-    [CHARACTER] [STYLE] SHOT: medium; the skeleton at the counter,
-    turned from the cupboard, tearing one daily pack straight across
-    its top edge with both hands, eyes soft; the pouch stands behind,
-    open only at its resealable top. No text except the product's own
-    printing.
+    CLIP T  start frame: still T, 3 s (attach image 3 = the product)
+    Beat 1 the skeleton turns from the cupboard to the counter. Beat 2
+    it tears one daily pack straight across its top edge. Beat 3 it
+    looks up, eyes soft. Camera: slow push in. HOLD and SOUND as above.
 
-    CLIPS (one image per shot, cut to the narration)
-    Record the narration first, in one take. Timings below are
-    estimates at a calm pace until you have it.
-    Clip A  shots 1-2  0.0-7.2 s
-    Clip B  shots 3-4  7.2-14.4 s
-    Clip C  shot 5     14.4-18.3 s, held
-    Clip D  shots 6-7  18.3-28.3 s
-    Clip E  shot 8     28.3-35.5 s
-    Shot 7 (6.8 s, while the narrator says "Sprout. 60+ ingredients
-    ... in a handful of gummies."): image 7 is the start frame. Green
-    gummy bears pour from the torn top of the pack into the skeleton's
-    open palm. Camera: still. Then hard cut to shot 8.
-    GUARD (every clip): silent clip, no dialogue, narration or music.
-    The jaw forms no words. Same skeleton as the character picture.
-    Bones stay joined and rigid. Real speed. No text.
-
-    ADD IN EDITING
-    TUB 1 at 3.6 s | TUB 4 at 7.2 s | TUB 9 at 12.0 s | TUB 15 at
-    14.4 s | "$29.99 first order with SMS sign-up. Renews at $49.99
-    every 4 weeks." over shot 8 from 28.3 s
-    MISSING: the daily pack's measurements, so shot 6 sizes it from
-    the photo. MISSING: whether Sprout uses music, so none is planned.
-    (cut for length: the full run also had stills for shots 2 to 5,
-    7 and 8, and clip prompts for every shot)
+    EDIT PLAN (times are estimates until the narration is recorded)
+    TUB 1 at 3.5 s | TUB 5 at 7.5 s | TUB 12 at 10.5 s | TUB 20 at
+    14 s, held to 18.5 s | offer text from 24.5 s: "$29.99 first order
+    with SMS sign-up. Renews at $49.99 every 4 weeks. 30-day money
+    back, first order only."
+    MISSING: whether Sprout uses music, so none is planned.
+    MISSING: the daily pack's size, so shot T sizes it from the photo.
+    (cut for length: the full run also had stills Q, 1, 2, 4, C and O,
+    and clips for every shot)
 
 tweaks:
-  - what: The look
-    how: Bare suits most ideas. Ask for dressed when you sell something people wear, x-ray only when your stated "how it works" is about the inside of the body, and toy-like only for a playful brand.
-  - what: How the clips are built
-    how: '"One place, clips that continue" chains each clip from the last frame of the one before and suits one place that slowly changes. "One image per step" gives you more control and cuts to recorded narration.'
+  - what: The step camera
+    how: Name the framing you want, like "wide from the doorway". Keep it the same for every step, or the climb stops reading with the sound off.
   - what: Clip length
-    how: Give the longest clip your tool makes. It groups one or two steps per clip to fit, and always gives the payoff its own clip.
-  - what: Reaction characters
-    how: Ask for flatmates, coworkers or neighbors who react from recoil to awe. They are made-up adults described by role and clothes, and they never speak.
+    how: Give the shortest clip your tool makes well, often 4 or 5 seconds. One step per clip keeps the tool on task. Tools that take timed prompts can hold two steps.
+  - what: The skeleton's signature item
+    how: Add a cap or scarf to the character line and the reference sheet. It then appears, unchanged, in every shot and every future ad.
+  - what: Sound
+    how: If your video tool makes sound, keep the sound line to room tone and small prop noises. The narration and any music go on in editing.
 
 judge:
-  - With the sound off, you can follow the ladder and each step looks further along than the last.
+  - Every step is framed the same way, and only the growing thing changes between them.
   - The skeleton has the same eyes, bones and proportions in every image.
   - No calendar, clock, sign or number appears inside any picture.
-  - The product matches its photo, label and all, and is opened the way your brand shows it.
-  - It reads as friendly and silly, never as horror.
-  - Every prompt starts with the same character sentence, word for word.
+  - The product matches its photo, label and all, and opens the way your brand shows it.
+  - Every prompt starts with the same character and look lines, word for word.
 
 test:
-  - Make only the character picture and two stills (the first shot and the product shot). If the skeleton differs between them, fix the character sentence before you spend credits on clips.
-  - Run the same script twice. The shot map should keep the same place and the same number of shots; if the place changes, add your setting to the input.
-  - Show the stills, in order and with no sound, to someone who hasn't read the script. Ask what is happening. If they can't follow the ladder, the steps aren't going far enough.
+  - Make the three references and the stills for step 1 and the peak. If the skeleton or the cupboard differs between them, fix the fixed lines before you spend credits on clips.
+  - Flick between the step stills like a flipbook. Only the growing thing should move.
+  - Show the stills, in order and with no sound, to someone who hasn't read the script. Ask what's happening. If they can't follow the climb, the steps aren't far enough apart.
   - Check every product shot against your real packaging, including how it opens. Any mismatch is a reason to stop before making video.
 
 improve:
-  - Write your fixed style sentence (your colors, light and setting) into step 1 of the skill file, so every skeleton ad you make looks like one brand.
-  - Add your product-showing rules to step 4 (how the pack opens, what is never shown, real size against a hand), so it never has to guess.
-  - Note whether your brand uses music in "What you need", so the join step plans it or leaves it out.
-  - Save the approved character picture with your brand files and attach it to every run, so the skeleton stays the same across ads.
-  - Pair it with the skill that writes a skeleton "what happens if" script, if you don't have a script yet.
+  - Write your fixed look line (your colours, light and style) into step 3 of the skill file, so every skeleton ad looks like one brand.
+  - Save the approved skeleton sheet with your brand files and attach it as image 1 every time.
+  - Add your product-showing rules to step 2, so the product reference is right first time.
+  - Add your tools' clip lengths and reference limits to "What you need", so the plan fits without you saying it each time.
+  - Pair it with the skill that writes a skeleton "what happens if" script, if you don't have one yet.
 
 terms:
-  - term: Character picture
-    meaning: One image of the skeleton alone, front on, plain background, attached to every later image so it stays the same.
+  - term: Reference image
+    meaning: An image you attach to a prompt so the tool copies a character, place or product from it.
   - term: Start frame
     meaning: The image a video clip begins from. The video tool animates forward from it.
-  - term: Guard line
-    meaning: A fixed sentence added to every video prompt that stops common mistakes, like talking or text.
+  - term: Match cut
+    meaning: A cut between two shots framed the same way, so only the thing that changed stands out.

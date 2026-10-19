@@ -177,7 +177,7 @@ improve:
 works_best_with:
   tools:
     - {name: "Any good chat AI", why: "Claude, ChatGPT and Gemini all read the rule table well; what matters is pasting the ad exactly as it will run."}
-    - {name: "Meta Ads Manager", why: "Its rejection notice and Account Quality page name the policy Meta applied, so you can test the skill against real decisions."}
+    - {name: "Meta Ads Manager", why: "Its rejection notice and Business Support Home give the reason for each rejected ad, so you can test the skill against real decisions."}
   inputs:
     - "Your product page text and the checkout price, so the offer and relevance checks are complete"
     - "Your proof-and-claims.md, so pending and banned claims are caught as well as Meta's rules"

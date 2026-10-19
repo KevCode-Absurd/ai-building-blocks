@@ -172,8 +172,8 @@ improve:
 
 works_best_with:
   tools:
-    - {name: "Nano Banana Pro", why: "Built for brand consistency and handles words and layout well, which suits images with short lines on them."}
-    - {name: "GPT Image 2.5", why: "Lets you point at one word or part on an image and fix it, which suits the one-change remake rule."}
+    - {name: "Nano Banana", why: "Built for brand consistency and handles words and layout well, which suits images with short lines on them."}
+    - {name: "GPT Image", why: "Lets you point at one word or part on an image and fix it, which suits the one-change remake rule."}
     - {name: "Shopify", why: "Lets you add alt text to each product image in the admin, so the alt lines go straight in."}
   inputs:
     - "For worn products, the model's height and size, so the scale image can state them"

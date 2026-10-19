@@ -148,8 +148,8 @@ improve:
 works_best_with:
   tools:
     - {name: "Canva", why: "Sets the note as real text on a plain screen, so no word is misspelt and you can change it in seconds."}
-    - {name: "Figma", why: "Same job with finer control over the status bar, margins and crop, and the frame can be saved as a template."}
-    - {name: "GPT Image 2.5", why: "The fallback if you'd rather generate the screen. It renders short quoted text well, but check every word."}
+    - {name: "Figma", why: "Same job with finer control over the status bar, margins and crop, and the frame can be copied for the next one."}
+    - {name: "GPT Image", why: "The fallback if you'd rather generate the screen. It renders short quoted text well, but check every word."}
   inputs:
     - "A real note a customer agreed to share, with personal details removed, so the shape and wording are true"
     - "Five reviews about restarting or forgetting, so the lines use your buyers' words"

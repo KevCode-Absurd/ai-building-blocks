@@ -196,8 +196,8 @@ improve:
 works_best_with:
   tools:
     - {name: "Claude", why: "Holds the brand file, every review number and five steps of work in one run."}
-    - {name: "GPT Image 2.5", why: "Takes several product photos as references and keeps short headline words readable."}
-    - {name: "Nano Banana Pro", why: "Takes many reference photos at once and handles shiny packs such as foil pouches."}
+    - {name: "GPT Image", why: "Takes several product photos as references and keeps short headline words readable."}
+    - {name: "Nano Banana", why: "Takes many reference photos at once and handles shiny packs such as foil pouches."}
     - {name: "Meta Ads Manager", why: "Its preview shows where the text above the image and the headline get cut off."}
   inputs:
     - "Full-size photos of your pack from the front and in use, so the prompts can attach the real product"

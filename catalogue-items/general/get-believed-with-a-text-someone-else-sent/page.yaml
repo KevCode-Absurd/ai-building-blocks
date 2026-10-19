@@ -1,52 +1,55 @@
 new_slug: get-believed-with-a-text-someone-else-sent
-name: "A text-message picture where someone close spots the problem"
-summary: "Give it your story ad. You get two to five short texts that end unanswered, and a screenshot prompt."
+name: "A chat picture where someone close spots the problem"
+summary: "Give it your story ad. You get a text or family chat left unanswered, plus a screenshot prompt."
 job: make-image-ads
 
-headline: "A text-message picture where someone close spots the problem"
-subhead: Give it your story ad. It casts the partner, sister or friend who noticed, writes two to five short texts that end on an unanswered question, and briefs a plain screenshot with no real app's look.
+headline: "A chat picture where someone close spots the problem"
+subhead: Give it your story ad. It picks a one-to-one text or a family group chat, casts the partner, sister or relatives who noticed, writes a short thread that leaves the narrator on the spot, and briefs a plain screenshot with no real app's look.
 
 explain: |
-  A problem someone else points out is harder to wave away. "It's been open since January" from a partner says more than any line the brand could write. And people read a text thread in a feed before they've decided to.
+  A problem someone else points out is harder to wave away. "It's been open since January" from a partner says more than any line the brand could write. When the whole family piles on in a group chat, it's harder still. And people read a message thread in a feed before they've decided to.
 
-  This skill casts the other person as the one who notices: the push seen from outside, or a habit they question. The narrator admits, dodges or jokes, and the thread ends open, so the story has to answer it. Messages stay under about 12 words, so the whole thread reads in one look on a phone. The screen uses plain bubbles in neutral tones, a first name or an initial, and no real app's colours, ticks or contact photos. It suggests typing the messages into a design tool, so every word stays exact.
+  This skill reads your story and picks the thread that fits: a one-to-one text when one person noticed, or a group chat with up to three senders when the family all know. The others notice; the narrator admits, dodges or says nothing, and the thread ends open, so the story has to answer it. Messages stay under about 12 words, so the chat reads in one look on a phone. The screen uses plain bubbles, made-up names and no real app's colours, ticks or faces. It suggests typing the messages into a design tool, so every word stays exact.
 
 when:
   - Your story has a partner, relative or friend who noticed the problem or the workaround.
-  - Your story quotes a text exchange, or could without adding a fact.
+  - The problem is something a family jokes about or keeps noticing in each other.
   - You want a picture with words that still reads like a normal post.
 
 you_give:
-  - Your approved story ad, with the second person and what they noticed
-  - How your buyer texts, if you know (optional)
+  - Your approved story ad, with the other people in it and what they noticed
+  - How your buyer texts, and whether their family uses group chats (optional)
 you_get:
-  - Who the other person is and what they noticed
-  - Two to five messages in order, with who sent each
+  - One-to-one or group, with who each person is and what they noticed
+  - Two to six messages in order, with who sent each
   - A blank version and the line under the picture
   - A 60 to 120 word image prompt, and how to make it exact
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste your story ad. If it quotes the texts, those exact words are used.
+  - Say "group chat" or "one-to-one" if you already know which you want. Otherwise it picks from the story.
   - Type the messages into plain bubbles in a design tool, or paste the prompt into your image tool.
-  - Read every message in the result letter by letter. One wrong letter looks fake.
-  - Read the flags. Any message written for the image needs a second look before it runs.
+  - Read every message and name letter by letter, then read the flags. Any message written for the image needs a second look before it runs.
 
 how_it_works:
   - title: Sets the house rules
-    text: Square, a plain screenshot, no logo, price, product or real app look, no notification banners or unread counts.
-  - title: Casts the other person
-    text: Who they are to the narrator, with a made-up first name or an initial.
+    text: Square, a plain screenshot, no logo, price, product or real app look, made-up names and no faces as contact photos.
+  - title: Picks the thread
+    text: A one-to-one text when one person noticed, or a group chat when the family or friends all know.
+  - title: Casts the people
+    text: Who each person is to the narrator, a made-up first name or initial, and a group name a real family would use.
   - title: Finds what they noticed
     text: The bad moment seen from outside, or a habit they question, in your story's words.
   - title: Keeps it short
-    text: Two to five messages, each under about 12 words, so it reads in one look.
+    text: Two to five messages one-to-one, four to six in a group, each under about 12 words.
   - title: Ends it open
-    text: A last question nobody answered, so your story's first line has something to pick up.
+    text: A question to the narrator left hanging, so your story's first line has something to pick up.
 
 output_shape: |
   SCENE             <what someone scrolling would say they saw>
-  WHO AND WHEN      <the other person, name or initial, time on screen>
+  THREAD            <one-to-one | group>, <fit: yes | inferred>
+  WHO AND WHEN      <each person, name or initial, group name, time>
   WHAT THEY NOTICED <one line, and where in the story>
   MESSAGES          <sender>: "<text>", in order
   BLANK VERSION     <the screen with empty bubbles>
@@ -78,6 +81,8 @@ example:
   output: |
     SCENE             A text thread where someone asks if the green
                       tub in the cupboard is still theirs.
+    THREAD            One-to-one. One person noticed, and the story
+                      quotes the thread.
     WHO AND WHEN      The narrator's partner, "Sam". 7:42 pm.
     WHAT THEY NOTICED The tub open since January and barely used
                       (story, the thread).
@@ -111,47 +116,50 @@ example:
                       design tool and export a square image.
 
 tweaks:
+  - what: One-to-one or group
+    how: Ask for a group chat when your story has family who all know, such as a brother counting the bottles in the cupboard. It names the group, adds up to two more senders and lets the narrator stay silent.
   - what: Who notices
     how: Name the person in your story who'd really say it, a partner, a sister, a flatmate or a coworker. The closer they are, the more the text stings.
   - what: How it ends
     how: Ask for "ends on the narrator's reply" if your story's first line answers that reply instead of a question.
   - what: How they text
-    how: Tell it if your buyers write in full sentences or with capitals. Lower case suits younger buyers, not everyone.
-  - what: Fewer messages
-    how: Ask for two or three when your buyers scroll fast. One sharp question and one reply can be enough.
+    how: Tell it if your buyers write in full sentences, with capitals, with nicknames or in another language. Lower case suits younger buyers, not everyone.
 
 judge:
-  - The other person notices the problem. Neither person sells.
-  - It's two to five messages, each readable on a phone without zooming.
-  - The thread ends open, and your story's first line picks it up.
+  - The others notice the problem. Nobody sells or cheers.
+  - It's two to six messages, each readable on a phone without zooming, with three senders at most.
+  - The thread ends with the narrator on the spot, and your story's first line picks it up.
   - Every message is from your story, or flagged as written for the image.
-  - The screen looks like no real app, with no face as a contact photo.
+  - Every name is made up, and the screen looks like no real app, with no face as a contact photo.
 
 test:
   - Give it a story that quotes a thread. The messages should match word for word, in order.
+  - Give it a story where the whole family teases the narrator. It should pick a group chat, not a one-to-one text.
   - Give it a story with no second person. It should send you to the phone note or the snapshot.
   - Look at the finished picture at arm's length on your phone. If you can't read it, ask for fewer messages.
-  - Run it against a snapshot of the same moment. Keep whichever brings more readers to the offer.
 
 improve:
-  - Add how your buyers text (lower case, emoji or not, long or short) to your brand file.
+  - Add how your buyers text and talk to family (lower case, nicknames, emoji or not, language) to your brand file.
   - Quote the thread in your story word for word. Then the picture copies the story and needs no extra check.
-  - Keep one bubble style for all your thread ads, built once in your design tool.
-  - Pair it with a story ad skill, so the first line answers the unanswered message.
+  - Keep one bubble style for all your chat ads, built once in your design tool, with a group version beside it.
+  - Pair it with a story ad skill, so the first line answers the message left hanging.
 
 works_best_with:
   tools:
-    - {name: "Figma", why: "You type each message into plain bubbles yourself, so every word is exact and the look copies no app."}
-    - {name: "Nano Banana Pro", why: "Google recommends its Gemini 3 Pro Image model for accurate text, if you'd rather generate the screenshot."}
-    - {name: "Any good chat AI", why: "Writing short, true-sounding texts from a story is something Claude, ChatGPT and Gemini all do well."}
+    - {name: "Figma", why: "You type each message and name into plain bubbles yourself, so every word is exact and the look copies no app."}
+    - {name: "Nano Banana", why: "Google recommends it for accurate text, if you'd rather generate the screenshot."}
+    - {name: "Any good chat AI", why: "Writing short, true-sounding texts and family banter from a story is something Claude, ChatGPT and Gemini all do well."}
   inputs:
-    - "Real texts your customers have shared about the problem, with permission, so the thread sounds like them"
+    - "Real texts or comments where buyers mention what a partner or family says about the problem, with permission, so the thread sounds like them"
     - "Your buyer's age range and how they text, so the case, length and slang fit"
-    - "A blank bubble layout you've built once, so every thread ad looks the same and needs only new words"
+    - "Which chat apps your market uses most, so the plain layout still feels familiar"
+    - "A blank bubble layout you've built once, so every chat ad looks the same and needs only new words"
 
 terms:
   - term: Thread
-    meaning: A run of text messages between two people, shown as a screenshot.
+    meaning: A run of text messages, shown as a screenshot.
+  - term: Group chat
+    meaning: A message thread shared by a family or a group of friends.
   - term: Blank version
     meaning: The same picture with empty bubbles, so you can change the words later.
   - term: Line under the image

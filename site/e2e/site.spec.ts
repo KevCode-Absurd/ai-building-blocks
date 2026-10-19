@@ -118,6 +118,26 @@ test("picking a function, a job and filters narrow the library; the choice is ke
   await expect(page.getByText("Nothing matches that yet")).toBeVisible();
 });
 
+test("create ads: image ads and video ads sit apart, and a page links to the same look in the other format", async ({ page }) => {
+  await page.goto("/?fn=video#library"); // the old function link lands on Create ads
+  await expect(page.getByTestId("fn-ads")).toHaveAttribute("aria-pressed", "true");
+  await expect(page.getByTestId("fn-ads")).toContainText("Create ads");
+  await page.getByTestId("job-make-image-ads").click();
+  await expect(cards(page).first().locator(".type")).toHaveText("Image ad");
+  const types = await cards(page).locator(".type").allInnerTexts();
+  expect(new Set(types)).toEqual(new Set(["Image ad"]));
+  await page.getByTestId("job-make-video-ads").click();
+  await expect(cards(page).first().locator(".type")).toHaveText("Video ad");
+  // A video script page says it makes video, and links to its image twin; the twin links back.
+  await page.goto("/skills/get-watercolor-ad-script-that-sells");
+  const note = page.getByTestId("format-note");
+  await expect(note).toContainText("Video ad");
+  await note.getByTestId("twin-link").click();
+  await expect(page).toHaveURL(/\/skills\/show-whats-inside-in-one-watercolor-image-ad$/);
+  await expect(page.getByTestId("format-note")).toContainText("Image ad");
+  await expect(page.getByTestId("twin-link")).toHaveAttribute("href", "/skills/get-watercolor-ad-script-that-sells");
+});
+
 test("a card opens the block's own page, with the outcome, a real example and the steps", async ({ page }) => {
   await page.goto("/#library");
   const card = cards(page).filter({ has: page.locator(`[data-slug="${MODEL}"]`) }).or(page.locator(`[data-slug="${MODEL}"]`)).first();

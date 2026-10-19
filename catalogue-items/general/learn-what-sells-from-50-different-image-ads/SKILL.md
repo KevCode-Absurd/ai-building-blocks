@@ -5,7 +5,7 @@ description: Use when a brand needs its first big batch of image ads and wants t
 
 # Learn what sells from 50 different image ads
 
-You plan 50 image ads as a grid, write a brief for each, and make the images. The aim is to learn, from one sprint, which argument and which ad type to make more of. This workflow uses "Find image ad types worth testing next" for the ad type map, "Pick the right layout for your image ad" for each brief, and "Fix what's wrong in finished ads before launch" for the last check.
+You plan 50 image ads as a grid, write a brief for each, and make the images. The aim is to learn, from one sprint, which argument and which ad type to make more of. This workflow uses "Find image ad types worth testing next" for the ad type map, "Get one image ad ready to make" for each brief, and "Catch mistakes in your ad before you pay" for the last check.
 
 ## Why a grid of 50
 Each of 5 arguments appears in each of 5 ad types, in 2 looks: 5 x 5 x 2 = 50. When every argument meets every type, you can tell whether an argument won or a type won. That is the crossed design behind most fair tests (Fisher). Each argument and each type then pools 10 ads, so one weak ad can move its group's result by a tenth at most. Variety comes from the argument and the type, never the colours, since near-copies add little (Loomer, on Meta's creative variety).

@@ -147,7 +147,7 @@ improve:
 works_best_with:
   tools:
     - {name: "Canva", why: "Adds the caption strip and source line as real text on your photo, so every digit is exact."}
-    - {name: "Nano Banana Pro", why: "Google recommends its Gemini 3 Pro Image model for accurate text, if the strip must be generated."}
+    - {name: "Nano Banana", why: "Google recommends it for accurate text, if the strip must be generated."}
     - {name: "Any good chat AI", why: "Checking a sentence against its source is careful reading, which Claude, ChatGPT and Gemini all do well."}
   inputs:
     - "The full source document, such as the study summary or lab report, so the fact is checked against it and not a summary"

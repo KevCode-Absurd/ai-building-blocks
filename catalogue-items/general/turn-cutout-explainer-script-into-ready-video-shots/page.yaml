@@ -185,9 +185,9 @@ improve:
 
 works_best_with:
   tools:
-    - {name: "Nano Banana 2.1", why: "Takes up to 14 reference images, so every piece and frame matches your sheets."}
-    - {name: "Veo 3.1", why: "Starts each clip from your approved frame and can end on a second one, in 8-second clips."}
-    - {name: "ElevenLabs Eleven v4", why: "Reads the narration with tags for pauses and pace, from a voice you design by description."}
+    - {name: "Nano Banana", why: "Takes up to 14 reference images, so every piece and frame matches your sheets."}
+    - {name: "Veo", why: "Starts each clip from your approved frame and can end on a second one, in 8-second clips."}
+    - {name: "ElevenLabs", why: "Reads the narration with tags for pauses and pace, from a voice you design by description."}
     - {name: "CapCut", why: "Lets you add the words, numbers and captions as their own layers after the clips are made."}
   inputs:
     - "Product photos on a plain background, so each piece cuts out cleanly"

@@ -174,8 +174,8 @@ improve:
 works_best_with:
   tools:
     - {name: "Claude", why: "Keeps every spoken fact tied to your list and counts the words in each clip."}
-    - {name: "Kling 4.0", why: "Makes long clips with cuts and speech for more than one person, so a clip can hold a few turns."}
-    - {name: "Veo 3.1", why: "Speaks quoted lines for a named speaker, so each turn comes from the right mouth."}
+    - {name: "Kling", why: "Makes clips up to 15 seconds with several shots and lines for more than one speaker, so a clip can hold a few turns."}
+    - {name: "Veo", why: "Speaks quoted lines for a named speaker, so each turn comes from the right mouth."}
   inputs:
     - "A recorded sales or support call, used with permission, so the turns sound like your buyers really talk"
     - "A voice note of how your brand name is said, so neither speaker gets it wrong"

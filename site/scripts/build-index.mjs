@@ -87,6 +87,8 @@ for (const category of ["general", "ecommerce", "orchestrators"]) {
       version: String(item.version ?? "1.0.0"),
       words: skill.split(/\s+/).length,
       addon: hasAddon,
+      // The same look in the other format: a video block's image twin, or the other way round.
+      twin: item.twin ?? null,
       files,
       added: fs.statSync(yamlPath).mtime.toISOString().slice(0, 10),
     });
@@ -98,6 +100,14 @@ const bySlug = Object.fromEntries(blocks.map((b) => [b.slug, b]));
 for (const b of blocks) b.usedIn = 0;
 for (const b of blocks) for (const u of new Set([...b.uses, ...b.steps.map((s) => s.uses)])) if (bySlug[u] && u !== b.slug) bySlug[u].usedIn++;
 for (const b of blocks) for (const u of [...b.uses, ...b.steps.map((s) => s.uses)]) if (!bySlug[u]) problems.push(`${b.slug}: uses unknown block "${u}"`);
+
+// A twin is named on one side only; fill in the other side and check both exist.
+for (const b of blocks) if (b.twin) {
+  const t = bySlug[b.twin];
+  if (!t) { problems.push(`${b.slug}: twin "${b.twin}" isn't a block`); b.twin = null; continue; }
+  if (t.twin && t.twin !== b.slug) problems.push(`${t.slug}: has two twins (${t.twin}, ${b.slug})`);
+  t.twin = b.slug;
+}
 
 const usedTypes = new Set(blocks.flatMap((b) => [...b.inputs, ...b.outputs].map((p) => p.type)));
 const portTypes = Object.fromEntries([...usedTypes].sort().map((t) => [t, typeDesc[t] ?? null]));

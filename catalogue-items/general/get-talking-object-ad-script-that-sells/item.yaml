@@ -8,6 +8,7 @@ type: skill
 role: make
 job: video
 level: intermediate
+twin: say-what-buyers-wont-in-a-talking-object-image-ad
 inputs:
   - {type: brief, required: true}
   - {type: voc_reviews, required: false}

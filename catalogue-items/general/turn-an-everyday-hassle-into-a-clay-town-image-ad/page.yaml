@@ -185,7 +185,7 @@ improve:
 
 works_best_with:
   tools:
-    - {name: "Nano Banana 2.1", why: "Works from your product photos as references, so the clay pack keeps its true shape."}
+    - {name: "Nano Banana", why: "Works from your product photos as references, so the clay pack keeps its true shape."}
     - {name: "Any good chat AI", why: "Claude, ChatGPT and Gemini all follow this skill well, so use the one you already have."}
   inputs:
     - "Photos of a real place your buyers share, like a school gate, so the set feels known"

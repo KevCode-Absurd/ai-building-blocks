@@ -177,8 +177,8 @@ improve:
 
 works_best_with:
   tools:
-    - {name: "GPT Image 2.5", why: "Follows long scene prompts closely and keeps an empty space where you asked for one."}
-    - {name: "Nano Banana Pro", why: "Works from your product photos as references, so the pack keeps its true shape and label."}
+    - {name: "GPT Image", why: "Follows long scene prompts closely and keeps an empty space where you asked for one."}
+    - {name: "Nano Banana", why: "Works from your product photos as references, so the pack keeps its true shape and label."}
     - {name: "Any good chat AI", why: "Claude, ChatGPT and Gemini all follow this skill well, so use the one you already have."}
   inputs:
     - "Review lines that name an object in the buyer's home, so the narrator is one your buyers already picture"

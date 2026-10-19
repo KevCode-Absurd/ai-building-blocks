@@ -153,7 +153,7 @@ improve:
   - Add three to five real customer quotes to step 4, marked "use these words first". Most fixes come from there.
   - Add two lines from your best ads under step 5 as the voice done right, so it knows what on-voice looks like for you.
   - If you mostly check other people's live ads, change the default mode in "What you need" from fix to report.
-  - Each time it catches a word your writers keep using, add that word to the never-say list in 00-start-here.md. Run "Get an ad where every line sells" first, since this check only changes wording.
+  - Each time it catches a word your writers keep using, add that word to the never-say list in 00-start-here.md. Run "Fix the lines in your draft that lose sales" first, since this check only changes wording.
 
 works_best_with:
   tools:

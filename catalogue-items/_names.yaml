@@ -107,7 +107,7 @@ M17:
   - {id: CES-003, old: "ad-reference-exact", new: get-your-best-ad-in-a-new-format, level: skill, status: proposed}
   - {id: CES-014, old: "buyer-led-selling", new: buyer-led-selling-principles, level: skill, status: proposed}
   - {id: CES-023, old: "copy-floor", new: keep-clever-lines-from-beating-clear-ones, level: prompt, status: proposed}
-  - {id: CES-024, old: "copy-principles", new: get-an-ad-where-every-line-sells, level: skill, status: proposed}
+  - {id: CES-024, old: "copy-principles", new: edit-a-draft-so-it-sells, level: skill, status: proposed}
   - {id: CES-025, old: "creative-lessons", new: stop-paying-for-the-same-ai-mistake-twice, level: knowledge, status: proposed}
   - {id: CES-044, old: "image-ad-copy", new: static-ad-copy-planner, level: skill, status: proposed}
   - {id: CES-046, old: "image-prompt-craft", new: image-prompt-writer, level: skill, status: proposed}

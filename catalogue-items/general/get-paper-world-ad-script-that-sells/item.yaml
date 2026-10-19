@@ -8,6 +8,7 @@ type: skill
 role: make
 job: video
 level: intermediate
+twin: turn-a-daily-problem-into-a-paper-craft-image-ad
 inputs:
   - {type: brief, required: true}
   - {type: brand_brain, required: true}

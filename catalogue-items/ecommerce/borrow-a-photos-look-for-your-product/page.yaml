@@ -176,8 +176,8 @@ improve:
 
 works_best_with:
   tools:
-    - {name: "Nano Banana Pro", why: "Takes up to 3 style reference images apart from the product photos, so the look and the product stay separate."}
-    - {name: "GPT Image 2.5", why: "Keeps the product closer to your photo than older versions while it takes the light from a second image."}
+    - {name: "Nano Banana", why: "Takes up to 3 style reference images apart from the product photos, so the look and the product stay separate."}
+    - {name: "GPT Image", why: "Keeps the product close to your photo while it takes the light from a second image."}
   inputs:
     - "Two or three photos with the same look, so the reading picks what they share"
     - "Your brand's past photos, so the finish stays in your colours"

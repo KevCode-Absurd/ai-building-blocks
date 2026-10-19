@@ -180,9 +180,9 @@ improve:
 
 works_best_with:
   tools:
-    - {name: "Nano Banana 2.1", why: "Takes up to 14 reference images and keeps up to four characters the same, so your sheets and frames match."}
-    - {name: "Kling 4.0", why: "Takes up to 10 keyframes in one clip, so the key poses you planned can be set ahead."}
-    - {name: "Gemini Omni Flash", why: "Lets you fix one thing in a clip by asking, while the rest of the shot stays the same."}
+    - {name: "Nano Banana", why: "Takes up to 14 reference images and keeps up to four characters the same, so your sheets and frames match."}
+    - {name: "Kling", why: "Can start on your first frame and end on your last frame, so the key poses you planned are set ahead."}
+    - {name: "Gemini", why: "Lets you fix one thing in a clip by asking, while the rest of the shot stays the same."}
   inputs:
     - "Flat pack art or full-size app screens, so the product sheet matches the real thing"
     - "A short description of each speaker's voice (pitch, pace, accent), so voices stay the same in every clip"

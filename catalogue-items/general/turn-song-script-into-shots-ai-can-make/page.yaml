@@ -182,10 +182,10 @@ improve:
 
 works_best_with:
   tools:
-    - {name: "Suno v5.5", why: "Has a style box and a lyrics box that reads section tags like [Verse]. Songs you download on a paid plan can run in ads."}
-    - {name: "Eleven Music v2.5", why: "Can build a song from a section-by-section plan, and its paid plans are cleared for commercial use."}
-    - {name: "Nano Banana 2.1", why: "Takes up to 14 reference images and keeps up to four characters the same, so your sheets and frames match."}
-    - {name: "Kling 4.0", why: "Takes up to 10 reference images in one job, so figures and product stay the same from shot to shot."}
+    - {name: "Suno", why: "Has a style box and a lyrics box that reads section tags like [Verse]. Songs you download on a paid plan can run in ads."}
+    - {name: "Eleven Music", why: "Can build a song from a section-by-section plan, and its paid plans are cleared for commercial use."}
+    - {name: "Nano Banana", why: "Takes up to 14 reference images and keeps up to four characters the same, so your sheets and frames match."}
+    - {name: "Kling", why: "Takes up to 7 reference images in one video job, so figures and product stay the same from shot to shot."}
   inputs:
     - "The finished song file and its BPM, so the bar grid is timed to the real take"
     - "A voice memo of the hook sung by anyone, so the music tool gets the tune"

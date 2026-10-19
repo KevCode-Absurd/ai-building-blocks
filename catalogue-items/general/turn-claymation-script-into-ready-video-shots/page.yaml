@@ -187,9 +187,9 @@ improve:
 
 works_best_with:
   tools:
-    - {name: "Nano Banana 2.1", why: "Takes many reference images at once, so the character, set and product sheets match."}
-    - {name: "Veo 3.1", why: "Takes a first and a last frame, so the one morph starts and ends exactly where you planned."}
-    - {name: "Kling 4.0", why: "Takes several reference images in one job, so the character and product hold from shot to shot."}
+    - {name: "Nano Banana", why: "Takes many reference images at once, so the character, set and product sheets match."}
+    - {name: "Veo", why: "Takes a first and a last frame, so the one morph starts and ends exactly where you planned."}
+    - {name: "Kling", why: "Takes several reference images in one job, so the character and product hold from shot to shot."}
     - {name: "ElevenLabs", why: "Reads the narration at a steady pace you can time the clips to."}
   inputs:
     - "The flat label artwork, so a clay prop's printed label carries every line correctly"

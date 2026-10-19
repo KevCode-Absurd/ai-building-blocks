@@ -167,8 +167,8 @@ improve:
 works_best_with:
   tools:
     - {name: "Any good chat AI", why: "Writing the opening and demo to these rules works well in any strong chat AI."}
-    - {name: "Veo 3.1", why: "Makes 4 to 8 second clips with matching sound, and can aim at an end frame you give it."}
-    - {name: "Nano Banana Pro", why: "Makes the product sheet and start frames from your photos, so the pack looks right before any clip."}
+    - {name: "Veo", why: "Makes 4 to 8 second clips with matching sound, and can aim at an end frame you give it."}
+    - {name: "Nano Banana", why: "Makes the product sheet and start frames from your photos, so the pack looks right before any clip."}
   inputs:
     - "A phone video of the product being opened and used in real time, so the motion and its sound are true, not inferred"
     - "A close photo of the product out of its pack, so its colour and texture in the opening are right"

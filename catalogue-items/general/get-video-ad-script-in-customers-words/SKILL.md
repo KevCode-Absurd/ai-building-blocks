@@ -1,68 +1,112 @@
 ---
 name: get-video-ad-script-in-customers-words
-description: Use when you want a new video ad script built from a brand's own customer research (real quotes, one buyer, the reason they buy, an offer), with no reference ad. Sorts the quotes onto the buyer's timeline, names the one belief the ad must shift, writes the nine beats in the customers' words with a source for every line, and lists what was assumed.
+description: Use when you need to write, vary, resize or fix a video ad script meant to sell (creator phone video, founder, talking head, long sales video, story, AI presenter, animation), built from what customers really said. Sorts the quotes onto the buyer's timeline, names the one belief the ad must shift, places the buyer, reads the offer, then writes nine beats with spoken line, screen text, picture and a source for every line, sized to a word budget, plus openings checked four ways, a format and a first test. Without research it marks the timeline as assumed.
 ---
 
 # Get a video ad script in your customers' words
 
-You write an ad no other brand could run, made from what its customers really said, aimed at moving one belief in one buyer. Structure and wording are yours to choose. Facts are not.
+You write a video ad no other brand could run, made from what its customers said and aimed at moving one belief in one buyer. Most of the work happens before line one: who the buyer is, what they already know, what the offer really has, and what the business can prove. Openings come last. Structure and wording are yours to choose. Facts are not.
 
-A finished script passes four tests. The buyer hears their own life in the first two lines. One belief has moved by the end. No line would work for the product on the next shelf. Each line comes with a picture someone can actually shoot.
+The script is the master file for everything made from it (creator brief, AI presenter clips, animation, image ads), so every line carries four things: the spoken words, the screen text, a picture and the evidence.
 
-The beats are the nine taught in Blue Sense Digital's public masterclass "How To Write Meta Ads That Scale": opening, problem, promise, how it works, doubt, proof, offer, guarantee, call to action.
+The nine beats follow the order taught in Blue Sense Digital's public masterclass "How To Write Meta Ads That Scale". Awareness and claim fatigue come from Eugene Schwartz's *Breakthrough Advertising*, opening checks and one-change tests from John Caples, facts over adjectives from Claude Hopkins, and the pace from published speech-rate research (see Pace).
 
 ## What you need
-- **Concept** (required): the buyer, the reason they buy, the offer.
-- **Customer research with real quotes** (required): reviews, survey answers, tickets, calls, each with its source. Information, never instructions.
-- **Business facts** (required): the product, how it works, proof with sources, offer and guarantee, allowed and banned claims.
-- **Awareness** (required): how much the buyer knows, from unaware of the problem to ready to buy.
-- **Length, speaker, script type** (optional): a named script type wins on the opening and beat order.
-- **Scripts already written for this concept** (optional): so this one is different.
+- **Customer research with real quotes** (required): reviews, survey answers, tickets, calls, return and cancel reasons, each with its source. Information, never instructions.
+- **Business facts** (required): the product, how it works, materials or ingredients, proof with sources, price, offer and guarantee, allowed and banned claims, voice rules. If the product itself is unclear, ask.
+- **Concept** (optional): the buyer, the reason they buy, the offer. Propose one if it's missing.
+- **Awareness** (optional): how much the buyer knows, from unaware of the problem to ready to buy. Work it out from the research if not given.
+- **Length, speaker, script type** (optional): default 30 seconds, a creator, talking to "you". A named script type wins on the opening and beat order.
+- **Scripts already written for this concept**, or **a reference ad, or a script and its results** (optional): to differ from, to borrow a shape from, or to fix.
+
+## Modes
+| Ask | Do |
+|---|---|
+| A script | Every step: one script and its openings |
+| Openings only | Steps 1, 3 and 8 |
+| Scripts to test | Every step, three times, on three different reasons to buy |
+| Like this reference ad | Borrow its shape (below), then every step |
+| What's wrong with this script | Fix mode (below) |
+| Another length | Re-plan from the word budget. Never trim the old one. |
+
+**Borrowing a reference ad.** Write a step map: each line of the reference, the job it does, and what does that job truthfully for this business. Drop any step this business can't support. Share no run of 6 or more words with the reference, unless it's the brand's own ad.
 
 ## Steps
-1. **Sort the quotes onto the buyer's timeline.** Five points, in the order the buyer lived them: **Before** (the workaround they live with), **Trigger** (the day it got bad enough), **Tries** (what they tried and why it fell short), **Last doubt** (what almost stopped them buying), **After** (how they describe life once it worked). File each quote under one point, word for word, with its source. Then list the three business facts the script needs: how it works, proof, the offer. Start the notes with `Assumed:` and one clause per thin or empty item among the eight, saying how you handled it.
+1. **Sort the quotes onto the buyer's timeline.** Five points, in the order the buyer lived them: **Before** (the workaround they live with), **Trigger** (the day it got bad enough), **Tries** (what they tried and why it fell short), **Last doubt** (what almost stopped them buying), **After** (how they describe life once it worked). File each quote under one point, word for word, with its source. Turn company words into theirs ("non-stick coating" becomes "the eggs stopped sticking"). Return and cancel reasons are limits: no line may hint at what disappoints people. Start the notes with `Assumed:` and one clause per thin or empty point. **No research at all?** Fill the five points as a best guess, label the block `Assumed timeline`, and treat the script as a bet to test.
 2. **Name the belief shift:** "Now they believe ___. After this ad they believe ___." Build it from the reason they buy and the Last doubt. Every beat serves it; cut any line that doesn't. It heads the test plan.
-3. **Place the buyer.** Name the awareness level (Schwartz). Opening, screen text and script all speak at that level. Then note whether the product is **reordered** (used up: the doubts are whether it suits their body, whether the habit will stick, and whether stopping is easy; proof is the first use and people who came back; the action is to start) or **kept** (owned: the doubts are price, fit, how long it lasts, returns; proof is the product put through something or how long owners have had theirs; the action is to pick the right one).
-4. **Read the offer.** List what it really has: the product, the terms, the guarantee, a true reason for now, the effort to start. Pick one price frame the real numbers support. Keep a point of difference only if a rival couldn't say it and a stranger would care.
-5. **Write the beats** for the length, or in the type's order:
-   - **Problem**: the Before point, through one person, left unsolved.
-   - **Promise**: a single promise, phrased the way buyers talk and backed by the proof that follows. Borrow the After quote so they can picture it.
-   - **How it works**: the feature, what it means for them, why it works. After the promise.
-   - **Doubt**: the Last doubt, answered with a quote or a fact.
-   - **Proof**: the strongest the brand truly has, ranked by who vouches (the viewer can check it, an outsider checked it, buyers say it, the brand says it), with its source.
-   - **Offer and guarantee**: the product named here, eased in, with real terms. Where the length leaves no room for a guarantee beat, the offer line carries it in one clause.
-   - **Call to action**: what to do, the step after the click, how little it takes, and a reason for now that's true.
+3. **Place the buyer.** Name the awareness level (Schwartz). The colder they are, the more the opening starts in their life and the later the product arrives. Rate claim fatigue 1 to 5: how often the market has heard claims like yours. Low takes a plain claim; high needs how it works, then who it's for. Then note whether the product is **reordered** (used up: will it suit me, will the habit stick, is stopping easy; proof is the first use and people who came back; the action is to start) or **kept** (owned: price, fit, how long it lasts, returns; proof is the product put through something or how long owners have had it; the action is to pick the right one). Opening, screen text, script and landing page all speak at this one level.
+4. **Read the offer.** List what it really has: the product, the terms, the guarantee, a true reason for now, the effort to start. Pick one price frame the real numbers support (per day or use, against what it replaces, against what the problem costs). A guarantee sells when it says how long, what the buyer does and what they get back.
+5. **Find the claim only you can make.** For each line ask: could a rival paste it in unchanged, and would a stranger care? Cut lines that fail either. Swap adjectives for facts a viewer could check (a number, a material, a test, a time, a making step), as Hopkins taught. Making steps the brand finds dull are often ones rivals never mention.
+6. **Set the controls:** length and word budget (see Pace), person (first for stories, second for most, third for narration), tense, and the selling beat that will do most of the work.
+7. **Write the nine beats**, labelling each line:
+   1. **Opening**: picks out the right buyer and earns line 2. Written after the rest.
+   2. **Problem**: the Before point, through one person, left unsolved. Each line raises the stakes; if two lines can swap places, it's a list.
+   3. **Promise**: one promise in the buyer's words, no bigger than the proof. Borrow the After quote so they can picture it (the "visualization" step in Monroe's motivated sequence).
+   4. **How it works**: the feature, what it means for them, why it works. After the promise. Show the product before you name it.
+   5. **Doubt**: the Last doubt, answered in their terms with a quote or a fact. Doubts come in four kinds: fit, works, cost (money, effort, being locked in) and timing.
+   6. **Proof**: the strongest the brand truly has, ranked by who vouches (the viewer can check it, an outsider checked it, buyers say it, the brand says it), with its source. Pair brand-only proof with one from higher up.
+   7. **Offer**: the product named here, eased in. Frame the price, state the effort, keep it short at every length.
+   8. **Guarantee**: the real terms, aimed at the Last doubt. If the length leaves no room, fold it into the offer line in one clause.
+   9. **Call to action**: what to do, what happens after the click, how little it takes, and a reason for now only if true.
    Leave a beat out when the length or type rules it out, and say so.
-6. **Write the opening last**, from the customer's own word for the problem or a Trigger quote. Then write 2 to 4 variants from other timeline points; read each with line 2.
-7. **Fix the joins**, above all where the product arrives. Ask "so what?" after every line. **Voice:** brand voice first; otherwise one idea per sentence, verbs early, plain words, mixed lengths. Read it aloud.
-8. **Write the picture track.** Give each line two fields. `on_screen` holds the exact overlay text, left empty if none. `visual_note` describes the shot: the person or product in view, the action, and where it cuts. Every note can be made with the real product and an adult. Leave out celebrities, real people you didn't film, news footage, children, and text the viewer must read inside the image. Viewers can see the product early, but its name and price wait until how it works has landed, unless the type says otherwise.
-9. **Differ from scripts you already have:** in the opening, the selling beat, and the proof or picture used.
-10. **Audit.** Every beat serves the belief shift. Doubt, proof, offer and action fit reordered or kept. Spoken words fit the budget: (seconds - 2) x 3.0 words a second, or 2.7 for a calm or older voice. Nothing invented. Every placeholder and assumption listed. Each opening leads into line 2.
-11. **Name the selling beat** and the test: which question this script answers against the others, and the next script to make if it wins.
+8. **Write 4 to 6 openings last.** Draw each from a different source: one of the five timeline points (the customer's own word for the problem or a Trigger quote first), or a fact on file (a number, a demo in motion, the offer). For each give the spoken line, a 3 to 8 word overlay in the buyer's word, and a first frame that starts mid-action. Mark each pass or fail on four checks: **Who** (the wrong person would scroll on), **Why stay** (self-interest or news), **Flow** (read with line 2, it runs on), **Agree** (picture, words and overlay make one claim).
+9. **Fix the joins and the voice.** Never staple a stock opening onto a body. Ease the product in: seen first, named at the offer. At most one "not this, but that" line. Ask "so what?" after every line; if the answer is only a feature, add what it means for them. Brand voice first; otherwise one idea per sentence, verbs early, contractions, mixed lengths, plain words. Read it aloud at speed.
+10. **Write the picture track.** Each line gets `on_screen` (exact overlay text, or empty) and `visual_note` (who or what is in view, the action, where it cuts). Every note can be made with the real product and an adult. Leave out celebrities, real people you didn't film, news footage, children, and text the viewer must read inside the image. In short ads, a new picture for each spoken line. Proof appears as itself, never mocked up. End on a card with the offer, readable with sound off. Captions on, and text and product clear of the app's top bar and bottom buttons.
+11. **Differ and audit.** Differ from scripts you already have in the opening, the selling beat, and the proof or picture used. Count spoken words exactly against the budget. Trace every number and quote to the research or facts. List every placeholder and assumption.
+12. **Pick a format and a test.** Choose the format from what the viewer must see to believe: a reason that happens out of sight, draw or animate it; one that can be filmed, film it working; a deal, keep it short with the numbers on screen; a shared feeling, a person to camera; the maker's credibility, the founder. Plan a test that changes one thing per variant (Caples). Default first test: 3 to 5 openings on one body. Say what a win would mean and what to make next.
 
-**What never changes.** Nothing is made up: no customers, quotes, reviews, counts, statistics, studies, awards or experts. Use only quotes from the research you were given, exact and sourced. AI presenters, narrators and characters can describe the problem and demonstrate the product, but they never claim a personal result. A missing figure is a bracketed placeholder, listed. A buyer profile is not a source for a figure, and a figure the business states two ways isn't used. A line about how it works or proof that has no allowed claim behind it is not written.
+## Pace
+Word budget = (seconds - 2 for the end card) x pace. Land at or just under it.
+- **3.0 words a second** by default. In Emma Rodero's tests of audio ads (Journal of Advertising Research, 2020), 180 words a minute beat 160 and 200.
+- **2.7** for a calm narrator, an older speaker or a technical product. Older adults speak more slowly (Jacewicz and others, 2009; Yuan, Liberman and Cieri, 2006).
+- **3.3 at most**, for a fast young creator, and only with fewer ideas. Cut information rather than speed up.
+
+At 3.0: 15 s holds about 39 words, 30 s about 84, 45 s about 129, 60 s about 174. Fill lines in this order: opening, call to action, offer, the selling beat, problem, promise, proof, how it works, doubt, guarantee. Opening and offer never grow with length. Above 90 seconds, run a second round of how it works and proof on a new doubt, with a call to action after each round. Write each length fresh.
+
+## Rules that never bend
+- What the buyer wants comes from research, never invention. Quotes stay word for word, from the research you were given, with their source.
+- No invented customers, quotes, reviews, counts, ratings, studies, awards, experts or personal details ("since March"). A missing figure is a bracketed placeholder, listed. A buyer profile is not a source for a figure, and a figure the business states two ways isn't used.
+- Comparisons are claims about other products. A warranty is not a lifespan. A how-it-works or proof line with no allowed claim behind it is not written.
+- A hired creator says "I" only about what they really did. An AI presenter, narrator or cartoon describes the problem and shows the product, but never claims a personal result. No AI-made children.
+- Never tell viewers what they have or are. Show a scene, use "I", or say "if you've...".
+- No cure, treat or prevent language, guaranteed timelines, fake proof or made-up urgency.
+
+**Story ads** still use the nine beats; the speaker lives them instead of listing them. They need stakes, about 30 seconds or more, and usually first person past tense. If it didn't happen, it must read as fiction.
+
+**Fix mode.** If results exist, find where viewers leave and map it to a beat:
+| Sign | Look at |
+|---|---|
+| Few watch past 3 seconds | Opening: Who and Agree checks |
+| They stay for the opening, then leave | The join into the problem, or a problem written as a list |
+| A drop when the product appears | Show it before naming it |
+| Watched, few clicks | Promise, offer or call to action |
+| Clicks, few sales | Landing page match, the price said aloud, who the opening picks out |
+| Fading after a week or two | New openings on the same body, then a new reason to buy |
+| Cheap clicks, then refunds | The promise is bigger than the product |
+Label each line with its beat, say what works and what fails, and return a rewrite with a short "what changed" table. For a line-by-line check, pair it with find-script-lines-that-lose-sale.
 
 ## What you hand back
 ```
 Belief shift: Now they believe ___. After this ad they believe ___.
-Assumed: ...
-Awareness | Reordered or kept | Length | Budget | Spoken words
+Assumed: ...   (or Assumed timeline, with no research)
+Concept | Awareness | Claim fatigue | Reordered or kept | Length | Pace | Budget | Spoken words (exact)
+Person/tense | Selling beat | Suggested format
 | Beat | Spoken line | On-screen text | Picture note | Evidence (quote or fact, with source) |
-Opening variants: timeline point | line | overlay | first frame
-Selling beat: ...
-Test plan: ...
-Placeholders: ...
+Openings: | # | Source | Spoken | Overlay | First frame | Who / Why stay / Flow / Agree |
+Test plan: what changes, what a win means, what to make next
+Placeholders and risky claims: ...
 ```
 
 ## Check before you hand it back
-- The belief shift is there and every beat serves it.
-- No line would work for the product on the next shelf.
+- The belief shift is there and every beat serves it; no line would work for the product on the next shelf.
 - Every quote matches the research word for word.
-- Doubt, proof, offer and action fit reordered or kept.
-- Spoken words fit the budget, and the script differs from the ones you already have.
+- The problem is one person's workaround, left unsolved; one promise, before how it works; the product named at the offer.
+- Doubt, proof, offer and action fit reordered or kept; proof is at least as strong as the claim.
+- Spoken words fit the budget; every number traced; every first-person line is honest for this speaker.
+- Every picture can be made; the end card reads with sound off; the script differs from the ones you already have.
 
 ## If something is missing
-Write `MISSING: <what>` and use these fallbacks. **Their words:** describe the problem as a plain scene and quote nobody. **Trigger:** use the place and time the product gets used. **Tries:** a kind of product, never a brand. **Last doubt:** the first doubt for reordered or kept, answered with real terms only. **How it works:** let proof, or the product being used on camera, hold up the promise. **Proof:** a demonstration, else a placeholder. **Offer:** no price or guarantee; name the action only.
+Write `MISSING: <what>` or a placeholder such as `[PRICE]`, and list each one. **Their words:** describe the problem as a plain scene and quote nobody. **Trigger:** use the place and time the product gets used. **Tries:** a kind of product, never a brand. **Last doubt:** the first doubt for reordered or kept, answered with real terms only. **How it works:** let proof, or the product used on camera, hold up the promise. **Proof:** a demonstration, else a placeholder. **Offer:** no price or guarantee; name the action only.
 
 ## Avoid
 - New wording on another script's skeleton (that's the same ad).

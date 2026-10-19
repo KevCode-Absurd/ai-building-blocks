@@ -66,8 +66,9 @@ export function planFromGoal(c: Catalogue, goal: string): Plan | null {
   if (target.b.role !== "check") {
     const made = new Set(target.b.outputs.map((p) => p.type).filter((t) => !["brief", "brand_brain", "plan"].includes(t)));
     const check = pool
-      .filter((b) => b.role === "check" && b.task !== "set-up-ai" && !picked.includes(b.slug) && b.inputs.some((p) => p.required && made.has(p.type)))
-      .sort((x, y) => y.usedIn - x.usedIn)[0];
+      .filter((b) => b.role === "check" && b.task !== "set-up-ai" && !picked.includes(b.slug) && b.inputs.some((p) => made.has(p.type)))
+      // A check built for this kind of work (it needs it) beats one that can also read it.
+      .sort((x, y) => Number(y.inputs.some((p) => p.required && made.has(p.type))) - Number(x.inputs.some((p) => p.required && made.has(p.type))) || y.usedIn - x.usedIn)[0];
     if (check) add(check);
   }
   return { slugs: picked, name, from: { target: target.b } };

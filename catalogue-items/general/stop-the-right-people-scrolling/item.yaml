@@ -10,14 +10,18 @@ level: intermediate
 inputs:
   - {type: brief, required: true}
   - {type: brand_brain, required: false}
+  - {type: ad_copy, required: false}
 outputs:
   - {type: hooks}
-uses: [know-who-youre-writing-for, get-openings-that-each-try-something-different]
+uses: [know-who-youre-writing-for]
 origin: rebuilt
-source_ids: [CES-022]
-version: 2.0.0
+source_ids: [CES-022, CES-043]
+version: 3.0.0
 credits:
   - {title: "Tested Advertising Methods", by: "John Caples", url: "https://en.wikipedia.org/wiki/John_Caples", used: "Headlines that select the reader; self-interest, news and curiosity, with curiosity weakest alone"}
-  - {title: "Breakthrough Advertising", by: "Eugene Schwartz", url: "https://en.wikipedia.org/wiki/Eugene_Schwartz", used: "What the opening must name at each awareness level"}
+  - {title: "Breakthrough Advertising", by: "Eugene M. Schwartz", url: "https://breakthroughadvertisingbook.com/", used: "The five stages of buyer awareness: what the opening must name and which moves fit each"}
   - {title: "Confessions of an Advertising Man", by: "David Ogilvy", url: "https://en.wikipedia.org/wiki/Confessions_of_an_Advertising_Man", used: "Far more people read the headline than the body, so it must carry the promise"}
   - {title: "Facebook's 11 Tips for Better Video Ads", by: "Matt G. Southern, Search Engine Journal", url: "https://www.searchenginejournal.com/facebooks-11-tips-for-better-video-ads/416559/", used: "Design for sound off, movement early, brand early, one message"}
+  - {title: "Creative best practices for performance ads", by: "TikTok Ads Help Center", url: "https://ads.tiktok.com/help/article/creative-best-practices", used: "Main point in the first 3 seconds; test creatives that differ a lot"}
+  - {title: "The Science of the Hook: How to Supercharge Your Reels Performance", by: "Meta for Business", url: "https://www.facebook.com/business/news/the-science-of-the-hook-how-to-supercharge-your-reels-performance", used: "Value promise, statement of intent and question hooks, folded into the gain and gap moves"}
+  - {title: "The psychology of curiosity: A review and reinterpretation", by: "George Loewenstein (Psychological Bulletin, 1994)", url: "https://doi.org/10.1037/0033-2909.116.1.75", used: "Curiosity as an information gap, so every gap hook must be closed by the ad"}

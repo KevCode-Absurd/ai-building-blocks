@@ -182,9 +182,9 @@ improve:
 
 works_best_with:
   tools:
-    - {name: "Veo 3.1", why: "Takes up to three reference images and speaks quoted lines with matching sound in each clip."}
-    - {name: "Kling 4.0", why: "Reuses a saved character made from your reference photos, so the face holds across clips."}
-    - {name: "GPT Image 2.5", why: "Makes the sheets and start frames from your product photo and keeps its label words readable."}
+    - {name: "Veo", why: "Takes up to three reference images and speaks quoted lines with matching sound in each clip."}
+    - {name: "Kling", why: "Reuses a saved character made from your reference photos, so the face holds across clips."}
+    - {name: "GPT Image", why: "Makes the sheets and start frames from your product photo and keeps its label words readable."}
     - {name: "ElevenLabs", why: "Records one steady voice for the whole monologue when the video tool's voice drifts."}
   inputs:
     - "A photo of the real old object (the shaker, the kettle) from the front and side, so the character looks like the thing buyers own"

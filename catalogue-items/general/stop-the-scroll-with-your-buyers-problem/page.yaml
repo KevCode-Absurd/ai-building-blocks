@@ -178,8 +178,8 @@ improve:
 
 works_best_with:
   tools:
-    - {name: "GPT Image 2.5", why: "Keeps your real product closer to its reference photo than older versions, and sets short headlines better."}
-    - {name: "Nano Banana Pro", why: "Takes up to 6 product photos and is Google's pick for brand consistency, so the product and colours stay true."}
+    - {name: "GPT Image", why: "Keeps your real product close to its reference photo, and sets short headlines better."}
+    - {name: "Nano Banana", why: "Takes up to 6 product photos and is Google's pick for brand consistency, so the product and colours stay true."}
   inputs:
     - "Two or three of your ads that people ignored, so the twist avoids looking like them"
     - "A photo of the real moment from your team or a customer (with permission), so the scene has the one exact detail"

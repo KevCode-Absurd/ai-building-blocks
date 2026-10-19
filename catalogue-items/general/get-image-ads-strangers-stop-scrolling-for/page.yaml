@@ -201,8 +201,8 @@ improve:
 works_best_with:
   tools:
     - {name: "Claude", why: "Keeps track of a long workflow with stops, and holds every fact and source you gave it."}
-    - {name: "GPT Image 2.5", why: "Follows detailed scene prompts and takes several product reference photos at once."}
-    - {name: "Nano Banana Pro", why: "Good with many reference images and with lighting on shiny packs."}
+    - {name: "GPT Image", why: "Follows detailed scene prompts and takes several product reference photos at once."}
+    - {name: "Nano Banana", why: "Good with many reference images and with lighting on shiny packs."}
     - {name: "Figma", why: "Sets real type over each picture and keeps the batch in one file."}
   inputs:
     - "Support tickets or survey answers, so more insights reach the three-buyer bar"

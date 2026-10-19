@@ -167,8 +167,8 @@ improve:
 works_best_with:
   tools:
     - {name: "Any good chat AI", why: "Pasting snippets and running the conflict check works the same in any strong chat AI."}
-    - {name: "GPT Image 2.5", why: "Follows long, structured briefs closely, so each pasted snippet shows up in the picture."}
-    - {name: "Nano Banana Pro", why: "Takes several reference images at once, which the closeness and product choices often need."}
+    - {name: "GPT Image", why: "Follows long, structured briefs closely, so each pasted snippet shows up in the picture."}
+    - {name: "Nano Banana", why: "Takes several reference images at once, which the closeness and product choices often need."}
   inputs:
     - "Three of your own past ads as images, so the brand closeness choices have something to match"
     - "A real product photo in use, so the product choices never need a guess"

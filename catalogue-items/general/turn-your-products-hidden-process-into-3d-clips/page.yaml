@@ -175,9 +175,9 @@ improve:
 
 works_best_with:
   tools:
-    - {name: "Nano Banana 2.1", why: "Takes up to 14 reference images, so your parts sheet and frames keep the same colours and shapes."}
-    - {name: "Veo 3.1", why: "Takes a first and a last frame, so the dive starts and ends exactly where you planned."}
-    - {name: "ElevenLabs Eleven v4", why: "Reads the narration with tags for pauses and pace, in a voice you designed or licensed."}
+    - {name: "Nano Banana", why: "Takes up to 14 reference images, so your parts sheet and frames keep the same colours and shapes."}
+    - {name: "Veo", why: "Takes a first and a last frame, so the dive starts and ends exactly where you planned."}
+    - {name: "ElevenLabs", why: "Reads the narration with tags for pauses and pace, in a voice you designed or licensed."}
   inputs:
     - "Diagrams or microscope images from your supplier or a published study, so the 3D parts match the real thing"
     - "How each hard word is said, from your supplier or a dictionary, so the voice gets it right"

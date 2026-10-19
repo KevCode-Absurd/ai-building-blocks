@@ -7,7 +7,7 @@ classes:
   C3_top:     {use: "long multi-input reasoning: scripts, strategy, audits", candidates: [claude-opus-5-5, gpt-top], price_per_mtok: TBD}
   C4_routed:  {use: "workflows and agents: a top model plans, cheaper models run the repeated steps", candidates: per_step}
 media:
-  image_generation:     {candidates: ["named per item after testing (Creative Engine uses GPT Image and Nano Banana Pro)"]}
+  image_generation:     {candidates: ["named per item after testing (Creative Engine uses GPT Image and Nano Banana)"]}
   video_generation:     {candidates: ["named per item after testing (Creative Engine uses Seedance)"]}
   video_understanding:  {candidates: ["Gemini family (ad breakdowns)"]}
 # No router (decided 2026-10-18): direct accounts with Anthropic, OpenAI, Google and DeepSeek.

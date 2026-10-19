@@ -1,7 +1,7 @@
 slug: get-video-ad-script-in-customers-words
 renamed_from: video-ad-script-from-customer-research
 name: "Get a video ad script in your customers' words"
-summary: "A video ad script built from what your customers said, sorted onto the buyer's timeline, that shifts one belief in one buyer."
+summary: "A video ad script built from what your customers said, beat by beat to a word budget, every line traced to a source, or a fix for one that isn't working."
 category: general
 boards: [ecommerce]
 type: skill
@@ -12,7 +12,7 @@ inputs:
   - type: voc_reviews
     required: true
   - type: persona
-    required: true
+    required: false
   - type: product_data
     required: true
   - type: offer
@@ -25,11 +25,16 @@ outputs:
   - {type: script}
 uses: [find-script-lines-that-lose-sale, get-different-video-ads-from-same-research, get-script-presenter-can-say-without-stumbling]
 origin: rebuilt
-source_ids: [CES-128]
+source_ids: [CES-128, CES-145, CES-146]
 old_name: video script from customer research
-version: 2.0.0
+version: 3.0.0
 credits:
   - {title: "How To Write Meta Ads That Scale: Copywriting Masterclass", by: "Blue Sense Digital", url: "https://www.youtube.com/watch?v=LoL1w-k9Mgg", used: "The nine beats and their order"}
-  - {title: "Breakthrough Advertising (1966)", by: "Eugene M. Schwartz", url: "https://openlibrary.org/works/OL2625224W", used: "Placing the buyer by how much they know"}
+  - {title: "Breakthrough Advertising (1966)", by: "Eugene M. Schwartz", url: "https://openlibrary.org/works/OL2625224W", used: "Placing the buyer by how much they know, and claim fatigue"}
+  - {title: "Tested Advertising Methods (1932)", by: "John Caples", url: "https://openlibrary.org/works/OL3350190W", used: "Openings that pick out the reader; testing one change at a time"}
+  - {title: "My Life in Advertising and Scientific Advertising", by: "Claude C. Hopkins", url: "https://openlibrary.org/works/OL2702313W", used: "Specific facts over adjectives; telling the making steps rivals never mention"}
   - {title: "Monroe's motivated sequence", by: "Wikipedia, after Alan H. Monroe", url: "https://en.wikipedia.org/wiki/Monroe%27s_motivated_sequence", used: "Using the After quote so the buyer can picture the result"}
-  - {title: "Do Your Ads Talk Too Fast to Your Audio Audience? (Journal of Advertising Research, 2020)", by: "Emma Rodero", url: "https://thearf.org/access-knowledge-2/publications/journal-of-advertising-research/do-your-ads-talk-too-fast-to-your-audio-audience-how-speech-rates-of-audio-commercials-influence-cognitive-and-physiological-outcomes/", used: "The 3 words a second word budget"}
+  - {title: "Do Your Ads Talk Too Fast to Your Audio Audience? (Journal of Advertising Research, 2020)", by: "Emma Rodero", url: "https://thearf.org/access-knowledge-2/publications/journal-of-advertising-research/do-your-ads-talk-too-fast-to-your-audio-audience-how-speech-rates-of-audio-commercials-influence-cognitive-and-physiological-outcomes/", used: "Default pace of 3 words a second and the 3.3 ceiling"}
+  - {title: "Articulation rate across dialect, age, and gender (2009)", by: "Ewa Jacewicz, Robert A. Fox, Caitlin O'Neill and Joseph Salmons", url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC2790192", used: "The slower 2.7 pace for older and calm speakers"}
+  - {title: "Towards an integrated understanding of speaking rate in conversation (2006)", by: "Jiahong Yuan, Mark Liberman and Christopher Cieri", url: "https://www.isca-archive.org/interspeech_2006/yuan06_interspeech.html", used: "Older speakers talk more slowly"}
+  - {title: "About text overlays and the safe zone for ads in Stories and Reels", by: "Meta Business Help Center", url: "https://www.facebook.com/business/help/980593475366490", used: "Keeping text clear of the app's buttons and labels"}

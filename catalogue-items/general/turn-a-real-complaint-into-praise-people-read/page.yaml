@@ -155,7 +155,7 @@ works_best_with:
   tools:
     - {name: "Claude", why: "Sorts a long paste of reviews against the test and quotes the one it picks word for word."}
     - {name: "Canva", why: "Sets the card as real text, so the review stays exact and the stars are the ones you place."}
-    - {name: "Figma", why: "Same job with finer control, and the card saves as a template for the next review."}
+    - {name: "Figma", why: "Same job with finer control, and the card can be saved as a component for the next review."}
   inputs:
     - "An export of every review with stars, dates and source, so nothing is pasted from memory"
     - "A record of which customers agreed to ad use and how they may be named"

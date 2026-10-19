@@ -165,7 +165,7 @@ improve:
 works_best_with:
   tools:
     - {name: "Any good chat AI", why: "Choosing the picture is reading and judgement, which Claude, ChatGPT and Gemini all handle well."}
-    - {name: "Nano Banana Pro", why: "Google's image model, which Google recommends for accurate words in a picture, as notes and chats need."}
+    - {name: "Nano Banana", why: "Google's image model, which Google recommends for accurate words in a picture, as notes and chats need."}
     - {name: "Meta Ads Manager", why: "Its A/B test shows the chosen picture and the runner-up to separate groups under the same story."}
   inputs:
     - "Five to ten customer quotes about the moment the problem bites, so the picture starts from their words"

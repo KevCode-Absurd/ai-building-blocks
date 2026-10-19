@@ -84,7 +84,7 @@ example:
     - Layout: headline band at the top, pouch centre-left, three points
       in the right third
     - Sizes: 1:1 and 4:5
-    - Tool: GPT Image 2.5
+    - Tool: GPT Image
 
     Photos: 1 = the pouch, front on. 2 = gummies in an open hand.
     Product facts: glossy deep green stand-up foil pouch, big yellow
@@ -96,7 +96,7 @@ example:
     yellow #FFCC2E. Type: bold plain sans for headings, medium for body.
   output: |
     SETTINGS (set in the tool, not in the prompt)
-    Model: GPT Image 2.5 · Ratio: 1:1 first, then 4:5 as its own image
+    Model: GPT Image · Ratio: 1:1 first, then 4:5 as its own image
     Quality: high (small text on the image)
     Photos attached, in this order: 1 = pouch, 2 = gummies in hand
 
@@ -185,10 +185,10 @@ improve:
 
 works_best_with:
   tools:
-    - {name: "GPT Image 2.5", why: "Reads numbered photos and quoted words closely, and edits one part while keeping the rest."}
-    - {name: "Nano Banana Pro", why: "Takes several product and people photos at once, and Google suggests it for finished images with text."}
-    - {name: "Ideogram 4.5", why: "Places several blocks of text where you say, and its paid editor fixes one misspelled word without a new image."}
-    - {name: "FLUX.2", why: "Matches hex colour codes tied to each object, which helps when brand colours must be exact."}
+    - {name: "GPT Image", why: "Reads numbered photos and quoted words closely, and edits one part while keeping the rest."}
+    - {name: "Nano Banana", why: "Takes several product and people photos at once, and Google suggests it for finished images with text."}
+    - {name: "Ideogram", why: "Lets you set each block of text and where it goes, and on paid plans you can fix one wrong word without a new image."}
+    - {name: "FLUX", why: "Matches hex colour codes tied to each object, which helps when brand colours must be exact."}
   inputs:
     - "A plain-background photo of the product, front on and at least 2000 pixels wide, so the label is copied, not guessed"
     - "Your logo as a clean PNG or SVG file, to attach as artwork or add after"

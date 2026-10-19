@@ -8,6 +8,7 @@ type: skill
 role: make
 job: video
 level: intermediate
+twin: turn-an-everyday-hassle-into-a-clay-town-image-ad
 inputs:
   - {type: brief, required: true}
   - {type: brand_brain, required: true}

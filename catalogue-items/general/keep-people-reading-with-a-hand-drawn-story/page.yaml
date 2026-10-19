@@ -135,7 +135,7 @@ improve:
 
 works_best_with:
   tools:
-    - {name: "Nano Banana Pro", why: "Google recommends its Gemini 3 Pro Image model for sequential art such as comic panels."}
+    - {name: "Nano Banana", why: "Google recommends it for sequential art such as comic panels."}
     - {name: "Pen, paper and your phone camera", why: "A drawing you or a paid illustrator make, shot on a table, looks the most like a real notebook page."}
     - {name: "Any good chat AI", why: "Planning the panels is reading the story closely, which Claude, ChatGPT and Gemini all do well."}
   inputs:

@@ -183,7 +183,7 @@ works_best_with:
   tools:
     - {name: "Any good chat AI", why: "Writing an editor-style headline and checking it against your page works in any strong chat AI."}
     - {name: "Figma", why: "Sets the headline and list as real type over the image, so every word is spelled right."}
-    - {name: "GPT Image 2.5", why: "Handles several lines of text in a layout well, if you'd rather generate the list card."}
+    - {name: "GPT Image", why: "Handles several lines of text in a layout well, if you'd rather generate the list card."}
   inputs:
     - "The full text of your landing page from the top, so the page check is real"
     - "One test result or outside check you can name, such as a lab test, so the main text has proof to carry"

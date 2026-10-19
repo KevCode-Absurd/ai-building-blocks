@@ -178,8 +178,8 @@ improve:
 
 works_best_with:
   tools:
-    - {name: "Veo 3.1", why: "Follows timed shot lines inside one 8-second prompt and can aim at an end frame you give it."}
-    - {name: "Kling 4.0", why: "Takes several shots in one generation from a shot list, keeping the same person across the cuts."}
+    - {name: "Veo", why: "Follows timed shot lines inside one 8-second prompt and can aim at an end frame you give it."}
+    - {name: "Kling", why: "Takes several shots in one generation from a shot list, keeping the same person across the cuts."}
     - {name: "Any good chat AI", why: "Writing the clip plan and shot tables to these rules works well in any strong chat AI."}
   inputs:
     - "Photos of the places your brand films in, so the film plan uses rooms that look like yours"

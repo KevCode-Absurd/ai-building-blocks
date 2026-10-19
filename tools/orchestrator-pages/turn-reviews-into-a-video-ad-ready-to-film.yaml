@@ -175,8 +175,8 @@ improve:
 works_best_with:
   tools:
     - {name: "Claude", why: "Holds the brand file, every review number and seven steps of work in one run."}
-    - {name: "Nano Banana Pro", why: "Makes the reference images, sheets and storyboard frames from your product photos."}
-    - {name: "Veo 3.1", why: "Starts a clip from an approved frame and follows timed shot lines inside one 8-second prompt."}
+    - {name: "Nano Banana", why: "Makes the reference images, sheets and storyboard frames from your product photos."}
+    - {name: "Veo", why: "Starts a clip from an approved frame and follows timed shot lines inside one 8-second prompt."}
     - {name: "Meta Ads Manager", why: "Sets the 18+ age and countries the rules check asks for, and previews the ad in Reels and Stories."}
   inputs:
     - "Support emails, survey answers or call notes as well as reviews, so a reason can count as a pattern across more than one source"

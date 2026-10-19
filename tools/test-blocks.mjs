@@ -2,14 +2,26 @@
 // numbers and quotes that aren't in Sprout's files, and a different model grades the result against the
 // block's own judge list. Workflows run step by step, each step reading the earlier steps' work.
 //
-//   node tools/test-blocks.mjs run    [--only a,b] [--direct]   run blocks (a batch, or direct calls with --direct)
-//   node tools/test-blocks.mjs judge  [--only a,b] [--direct]   grade the runs that have no grade yet
+//   node tools/test-blocks.mjs run    [--only a,b] [--direct]   run the blocks that are new or changed since their last run
+//   node tools/test-blocks.mjs judge  [--only a,b] [--direct]   grade the runs that have no current grade
 //   node tools/test-blocks.mjs flows  [--only a,b]              run and grade the ready workflows, step by step
-//   node tools/test-blocks.mjs status                           what's run, graded, passed and spent
+//   node tools/test-blocks.mjs status [--fails]                 what's run, changed, graded, passed and spent
 //   node tools/test-blocks.mjs report                           write each block's tests/ files, mark item.yaml, write the report
+//   node tools/test-blocks.mjs stamp  --at <git-rev>            give old runs a fingerprint from the commit they ran on
+//   node tools/test-blocks.mjs plan   [--only a,b]              what run and judge would send, and a rough price, without sending
 //
 // Options: --label <name> keeps runs apart (default: today's date). --wait polls a submitted batch until it ends.
+// --again redoes everything picked. --strong grades every pick with the strong judge.
+//
+// Saving tokens:
+// - A block runs again only when what the writer sees changed (skill, add-on, references, example input, files).
+// - Sprout's files sit in a cached system block, so blocks given the same files share the cache.
+// - Easy runs (short output, short judge list, few code-check flags) go to the light judge. A light fail is
+//   graded again by the strong judge on the next `judge`, so a fail always has a strong judge behind it.
+// - The writer hands back only the skill's output; the judge keeps evidence and notes short.
 // Only ANTHROPIC_API_KEY is read from ../.env, by name. Run state stays in runs/block-tests/<label>/ (git-ignored).
+import crypto from "node:crypto";
+import { execFileSync } from "node:child_process";
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
@@ -25,11 +37,15 @@ const FLOW_PAGES = path.join(here, "orchestrator-pages");
 // The writer and the judge are different models (docs/planning/05_PRODUCTION_PRINCIPLES.md: never grade with the model that wrote it).
 const WRITER = { model: "claude-opus-5-5", effort: "medium" };
 const JUDGE = { model: "claude-fable-5-1", effort: "high" };
+const LIGHT_JUDGE = { model: "claude-sonnet-5-5", effort: "medium" };
 // $ per million tokens: input, output, cache read, cache write (5-minute). Batches are half price.
 const PRICE = {
   "claude-opus-5-5": [4, 20, 0.2, 5],
   "claude-fable-5-1": [10, 50, 0.25, 12.5],
+  "claude-sonnet-5-5": [2, 10, 0.2, 2.5],
 };
+// A run is easy enough for the light judge when all of these hold.
+const EASY = { maxOutputChars: 12000, maxJudgeItems: 8, maxCodeFlags: 5 };
 
 const args = process.argv.slice(2);
 const cmd = args[0];
@@ -52,7 +68,10 @@ function loadKey() {
 }
 
 // ---------- the catalogue ----------
-const read = (p) => fs.readFileSync(p, "utf8").replace(/\r\n/g, "\n");
+// Files are read through `src`, so `stamp` can read a block as it was at an older commit.
+const disk = { read: (p) => fs.readFileSync(p, "utf8"), exists: (p) => fs.existsSync(p), list: (p) => fs.readdirSync(p) };
+let src = disk;
+const read = (p) => src.read(p).replace(/\r\n/g, "\n");
 const yaml = (p) => YAML.parse(read(p));
 
 function blocks() {
@@ -91,27 +110,41 @@ const attach = (files) => files.map((f) => `<file name="sprout/${f}">\n${sproutT
 function skillText(b) {
   let s = read(path.join(b.dir, "SKILL.md")).trim();
   const board = path.join(b.dir, "boards/ecommerce.md");
-  if (fs.existsSync(board)) s += `\n\n---\n\n# Online-store add-on\n\n${read(board).trim()}`;
+  if (src.exists(board)) s += `\n\n---\n\n# Online-store add-on\n\n${read(board).trim()}`;
   const refs = path.join(b.dir, "references");
-  if (fs.existsSync(refs)) for (const f of fs.readdirSync(refs).sort()) s += `\n\n---\n\n# Reference: ${f}\n\n${read(path.join(refs, f)).trim()}`;
+  if (src.exists(refs)) for (const f of src.list(refs).sort()) s += `\n\n---\n\n# Reference: ${f}\n\n${read(path.join(refs, f)).trim()}`;
   return s;
 }
 
-const SYSTEM_WRAP = (skill) => `You are running a skill the user installed. Follow it exactly: its steps, its rules and its output format.\n\n<skill>\n${skill}\n</skill>`;
+const SYSTEM_WRAP = (skill) => `You are running a skill the user installed. Follow it exactly: its steps, its rules and its output format. Hand back only what its output format asks for: no preamble, no recap of the steps, no closing offer.\n\n<skill>\n${skill}\n</skill>`;
 
 function exampleInput(b) {
   return (b.page.example?.input || "").replace(/^\[the (skill|handoff pack)\][^\n]*\n?/, "").trim();
 }
 
+const sha = (...parts) => crypto.createHash("sha256").update(parts.join("\u0000")).digest("hex").slice(0, 16);
+/** Everything the writer sees for this block. When it changes, the block needs a new run. */
+const runPrint = (b) => sha(WRITER.model, WRITER.effort, skillText(b), exampleInput(b), filesFor(exampleInput(b)).join(","));
+/** What the judge grades against, on top of the run. When it changes, the run needs a new grade. */
+const gradePrint = (b, run) => sha(run.fp || run.at, b.page.judge?.join("\n") || "", b.page.output_shape || "");
+
+/** The attached files go first, in a cached system block, so blocks given the same files share one cache. */
+function writerSystem(files, skill) {
+  const sys = [];
+  if (files.length) sys.push({ type: "text", text: `The user attached these files for this run:\n\n${attach(files)}`, cache_control: { type: "ephemeral" } });
+  sys.push({ type: "text", text: SYSTEM_WRAP(skill) });
+  return sys;
+}
+
 function runRequest(b) {
   const input = exampleInput(b);
   const files = filesFor(input);
-  const user = files.length ? `${input}\n\nHere are the files:\n\n${attach(files)}` : input;
+  const user = files.length ? `${input}\n\n(The files are attached above: ${files.map((f) => `sprout/${f}`).join(", ")}.)` : input;
   return {
     model: WRITER.model,
     max_tokens: 32000,
     output_config: { effort: WRITER.effort },
-    system: SYSTEM_WRAP(skillText(b)),
+    system: writerSystem(files, skillText(b)),
     messages: [{ role: "user", content: user }],
   };
 }
@@ -167,7 +200,9 @@ Grade strictly and fairly:
 6. safety: anything that could mislead a buyer or break ad rules (fake news, fake reviews, health claims beyond the approved ones, a made-up person presented as real) that the output doesn't flag. Empty if none.
 7. verdict "pass" only if every criterion is met, nothing is invented, the shape is followed and safety is empty. Otherwise "fail".
 8. summary: two plain sentences on how good the result is for the business owner.
-9. fix: if it failed, the smallest change to the SKILL text that would stop it happening again (name the step or rule). Empty if it passed.`;
+9. fix: if it failed, the smallest change to the SKILL text that would stop it happening again (name the step or rule). Empty if it passed.
+
+Keep it short: each evidence is one quote or note of 25 words or fewer, each why is one line, the fix is one or two sentences.`;
 
 function judgeSystem() {
   return [
@@ -175,9 +210,19 @@ function judgeSystem() {
   ];
 }
 
+/** Light judge for easy runs; the strong judge for the rest, for workflows, with --strong, and after a light fail. */
+function judgeFor(b, run, checks) {
+  const prev = load(gradeFile(b.slug));
+  if (flag("strong") || b.flow || (prev?.tier === "light" && prev.verdict !== "pass")) return { ...JUDGE, tier: "strong" };
+  const easy = run.output.length <= EASY.maxOutputChars && (b.page.judge || []).length <= EASY.maxJudgeItems
+    && checks.flags.length <= EASY.maxCodeFlags && !checks.missingHeads.length && run.stop_reason === "end_turn";
+  return easy ? { ...LIGHT_JUDGE, tier: "light" } : { ...JUDGE, tier: "strong" };
+}
+
 function judgeRequest(b, run, extra = "") {
   const input = run.input;
   const checks = codeChecks(b, input, run.output);
+  const j = judgeFor(b, run, checks);
   const judge = (b.page.judge || []).map((j, i) => `${i + 1}. ${j}`).join("\n") || "(none listed: grade against the skill's own checks)";
   const user = `<block name="${b.page.name || b.item.name}" slug="${b.slug}" role="${b.item.role}">
 <skill>
@@ -207,9 +252,9 @@ ${run.output}
 
 Grade this run.`;
   return {
-    model: JUDGE.model,
+    model: j.model,
     max_tokens: 16000,
-    output_config: { effort: JUDGE.effort, format: { type: "json_schema", schema: JUDGE_SCHEMA } },
+    output_config: { effort: j.effort, format: { type: "json_schema", schema: JUDGE_SCHEMA } },
     system: judgeSystem(),
     messages: [{ role: "user", content: user }],
   };
@@ -229,11 +274,13 @@ function cost(model, u, batch) {
 
 const textOf = (msg) => msg.content.filter((c) => c.type === "text").map((c) => c.text).join("\n").trim();
 
+// The model is taken from the reply, so a batch collected later is priced by the model that really ran.
 function recordRun(b, req, msg, batch) {
+  const model = msg.model || req.model;
   save(runFile(b.slug), {
-    slug: b.slug, group: b.group, model: req.model, effort: req.output_config.effort, batch,
+    slug: b.slug, group: b.group, model, effort: req.output_config.effort, batch, fp: runPrint(b), usd_before: spentBefore(runFile(b.slug)),
     at: new Date().toISOString(), input: req.messages[0].content, files: filesFor(exampleInput(b)),
-    stop_reason: msg.stop_reason, output: textOf(msg), usage: msg.usage, usd: cost(req.model, msg.usage, batch),
+    stop_reason: msg.stop_reason, output: textOf(msg), usage: msg.usage, usd: cost(model, msg.usage, batch),
   });
 }
 
@@ -242,8 +289,13 @@ function recordGrade(b, req, msg, batch) {
   try { g = JSON.parse(textOf(msg)); } catch { g = { verdict: "error", summary: `Judge reply wasn't JSON (stop: ${msg.stop_reason}).`, raw: textOf(msg).slice(0, 2000) }; }
   const run = load(runFile(b.slug));
   g.checks = codeChecks(b, run.input, run.output);
-  save(gradeFile(b.slug), { slug: b.slug, model: req.model, batch, at: new Date().toISOString(), stop_reason: msg.stop_reason, usage: msg.usage, usd: cost(req.model, msg.usage, batch), ...g });
+  const model = msg.model || req.model;
+  const tier = model === LIGHT_JUDGE.model ? "light" : "strong";
+  save(gradeFile(b.slug), { slug: b.slug, model, tier, batch, fp: gradePrint(b, run), usd_before: spentBefore(gradeFile(b.slug)), at: new Date().toISOString(), stop_reason: msg.stop_reason, usage: msg.usage, usd: cost(model, msg.usage, batch), ...g });
 }
+
+/** A replaced run or grade still cost money, so its spend carries forward into `usd_before`. */
+const spentBefore = (f) => { const p = load(f); return p ? +((p.usd || 0) + (p.usd_before || 0)).toFixed(4) : 0; };
 
 // ---------- calling ----------
 let client;
@@ -296,6 +348,8 @@ async function runBatch(kind, list, build, record) {
 }
 
 // ---------- workflows: each step runs its own block on the start input plus the earlier steps' work ----------
+/** A workflow needs a new run when its start input, its steps or any step's block changed. */
+const flowPrint = (f, bySlug) => sha(exampleInput(f), JSON.stringify(f.item.steps || []), ...(f.item.steps || []).map((s) => (bySlug.get(s.uses) ? runPrint(bySlug.get(s.uses)) : s.uses)));
 async function runFlow(f, all) {
   const bySlug = new Map(all.map((b) => [b.slug, b]));
   const start = exampleInput(f);
@@ -305,15 +359,15 @@ async function runFlow(f, all) {
     const b = bySlug.get(s.uses);
     if (!b) { steps.push({ step: i + 1, slug: s.uses, error: "block not found" }); break; }
     const prior = steps.map((p) => `<step n="${p.step}" block="${p.slug}">\n${p.output}\n</step>`).join("\n\n");
-    const user = `This is step ${i + 1} of ${f.item.steps.length} in the workflow "${f.item.name}". This step: ${s.note}\n\nWhat I gave the workflow at the start:\n${start}${files.length ? `\n\n${attach(files)}` : ""}${prior ? `\n\nThe work from the earlier steps:\n\n${prior}` : ""}`;
-    const req = { model: WRITER.model, max_tokens: 32000, output_config: { effort: WRITER.effort }, system: SYSTEM_WRAP(skillText(b)), messages: [{ role: "user", content: user }] };
+    const user = `This is step ${i + 1} of ${f.item.steps.length} in the workflow "${f.item.name}". This step: ${s.note}\n\nWhat I gave the workflow at the start:\n${start}${files.length ? `\n\n(The files are attached above: ${files.map((x) => `sprout/${x}`).join(", ")}.)` : ""}${prior ? `\n\nThe work from the earlier steps:\n\n${prior}` : ""}`;
+    const req = { model: WRITER.model, max_tokens: 32000, output_config: { effort: WRITER.effort }, system: writerSystem(files, skillText(b)), messages: [{ role: "user", content: user }] };
     const msg = await call(req);
     steps.push({ step: i + 1, slug: b.slug, stop_reason: msg.stop_reason, output: textOf(msg), usage: msg.usage, usd: cost(req.model, msg.usage, false) });
     console.log(`  ${f.slug}: step ${i + 1} ${b.slug} (${msg.stop_reason})`);
     if (msg.stop_reason !== "end_turn") break;
   }
   const output = steps.map((p) => `## Step ${p.step}: ${p.slug}\n\n${p.output || p.error}`).join("\n\n");
-  const run = { slug: f.slug, group: f.group, model: WRITER.model, effort: WRITER.effort, batch: false, at: new Date().toISOString(), input: `${start}${files.length ? `\n\n${attach(files)}` : ""}`, files, stop_reason: steps.at(-1)?.stop_reason, steps, output, usage: {}, usd: +steps.reduce((a, p) => a + (p.usd || 0), 0).toFixed(4) };
+  const run = { slug: f.slug, group: f.group, model: WRITER.model, effort: WRITER.effort, batch: false, fp: flowPrint(f, bySlug), usd_before: spentBefore(runFile(f.slug)), at: new Date().toISOString(), input: `${start}${files.length ? `\n\n${attach(files)}` : ""}`, files, stop_reason: steps.at(-1)?.stop_reason, steps, output, usage: {}, usd: +steps.reduce((a, p) => a + (p.usd || 0), 0).toFixed(4) };
   save(runFile(f.slug), run);
   const extra = `<workflow_note>This is a ready workflow. The output is every step's work in order. Also check that each step used the earlier steps' work and that the steps agree with each other.</workflow_note>`;
   const req = judgeRequest(f, run, extra);
@@ -380,44 +434,103 @@ function markItem(b, run, g) {
   fs.writeFileSync(f, (body + block).replace(/\n/g, eol));
 }
 
+/** Does this block need a new run, or its run a new grade? Old runs with no fingerprint count as current (see `stamp`). */
+const runStale = (b, r) => !r || (r.fp && r.fp !== (b.flow ? flowPrint(b, new Map(blocks().map((x) => [x.slug, x]))) : runPrint(b)));
+const gradeStale = (b, r, g) => !g || (g.fp && g.fp !== gradePrint(b, r)) || (g.tier === "light" && g.verdict !== "pass");
+
 function status() {
   const all = blocks();
-  let runs = 0, grades = 0, pass = 0, usd = 0;
+  let runs = 0, grades = 0, pass = 0, usd = 0, changed = 0, light = 0;
   const fails = [];
   for (const b of all) {
     const r = load(runFile(b.slug)), g = load(gradeFile(b.slug));
-    if (r) { runs++; usd += r.usd; }
-    if (g) { grades++; usd += g.usd; if (g.verdict === "pass") pass++; else fails.push(`${b.slug}: ${g.verdict}${g.invented?.length ? `, ${g.invented.length} invented` : ""}`); }
+    if (r) { runs++; usd += r.usd + (r.usd_before || 0); if (runStale(b, r)) changed++; }
+    if (g) {
+      grades++; usd += g.usd + (g.usd_before || 0);
+      if (g.tier === "light") light++;
+      if (g.verdict === "pass") pass++; else fails.push(`${b.slug}: ${g.verdict}${g.tier === "light" ? " (light judge, strong judge next)" : ""}${g.invented?.length ? `, ${g.invented.length} invented` : ""}`);
+    }
   }
-  console.log(`${all.length} blocks. Run ${runs}, graded ${grades}, passed ${pass}. Spent about $${usd.toFixed(2)} (label ${LABEL}).`);
+  console.log(`${all.length} blocks. Run ${runs} (${changed} changed since), graded ${grades} (${light} by the light judge), passed ${pass}. Spent about $${usd.toFixed(2)} (label ${LABEL}).`);
   if (flag("fails")) fails.forEach((f) => console.log("  " + f));
+}
+
+/** Give runs that have no fingerprint the one their block had at a commit, so `run` can tell what changed since. */
+function stamp(rev) {
+  const repo = ROOT;
+  const now = blocks();
+  const rel = (p) => path.relative(repo, p).split(path.sep).join("/");
+  const git = (...a) => execFileSync("git", ["-C", repo, ...a], { encoding: "utf8", maxBuffer: 64 << 20 });
+  const tree = new Set(git("ls-tree", "-r", "--name-only", rev).split("\n").filter(Boolean));
+  const dirs = new Set([...tree].flatMap((f) => f.split("/").slice(0, -1).map((_, i, a) => a.slice(0, i + 1).join("/"))));
+  src = {
+    read: (p) => git("show", `${rev}:${rel(p)}`),
+    exists: (p) => tree.has(rel(p)) || dirs.has(rel(p)),
+    list: (p) => [...new Set([...tree].filter((f) => f.startsWith(rel(p) + "/")).map((f) => f.slice(rel(p).length + 1).split("/")[0]))],
+  };
+  let n = 0, gone = 0;
+  for (const b of now) {
+    const f = runFile(b.slug), r = load(f);
+    if (!r || r.fp || b.flow) continue;
+    if (!src.exists(path.join(b.dir, "SKILL.md"))) { gone++; continue; }
+    const page = path.join(b.dir, "page.yaml");
+    r.fp = runPrint({ ...b, page: src.exists(page) ? YAML.parse(read(page)) : {} });
+    r.fp_from = rev;
+    save(f, r); n++;
+  }
+  src = disk;
+  console.log(`Stamped ${n} runs from ${rev}${gone ? `; ${gone} blocks weren't in that commit` : ""}.`);
+}
+
+/** What `run` and `judge` would send now, with a rough price from this label's own past runs and grades. */
+function plan() {
+  const all = blocks().filter((b) => !b.flow);
+  const runs = all.map((b) => load(runFile(b.slug))).filter(Boolean), grades = all.map((b) => load(gradeFile(b.slug))).filter(Boolean);
+  const avg = (xs, d) => (xs.length ? xs.reduce((a, x) => a + x.usd, 0) / xs.length : d);
+  const toRun = pick(all).filter((b) => flag("again") || runStale(b, load(runFile(b.slug))));
+  const toJudge = pick(all).filter((b) => { const r = load(runFile(b.slug)); return r && !runStale(b, r) && (flag("again") || gradeStale(b, r, load(gradeFile(b.slug)))); });
+  const tiers = toJudge.map((b) => { const r = load(runFile(b.slug)); return judgeFor(b, r, codeChecks(b, r.input, r.output)).tier; });
+  const light = tiers.filter((t) => t === "light").length, strong = tiers.length - light;
+  // A label with nothing done yet is priced from every label's past batch runs and grades.
+  const past = (sub) => fs.readdirSync(path.join(ROOT, "runs/block-tests")).flatMap((l) => { const d = path.join(ROOT, "runs/block-tests", l, sub); return fs.existsSync(d) ? fs.readdirSync(d).map((f) => load(path.join(d, f))) : []; });
+  const perRun = avg(runs.filter((r) => r.batch), avg(past("runs").filter((r) => r.batch && !r.steps), 0));
+  const perStrong = avg(grades.filter((g) => g.tier !== "light" && g.batch), avg(past("grades").filter((g) => g.tier !== "light"), 0) / 2);
+  const perLight = perStrong * (PRICE[LIGHT_JUDGE.model][1] / PRICE[JUDGE.model][1]);
+  const list = toRun.map((b) => `\n  ${b.slug}`).join("");
+  console.log(`run: ${toRun.length} blocks, about $${(toRun.length * perRun).toFixed(2)} as a batch${list}`);
+  console.log(`judge: ${toJudge.length} runs (${light} light, ${strong} strong), about $${(light * perLight + strong * perStrong).toFixed(2)} as a batch`);
+  console.log("Blocks that run again need grading after, so add their grades to the run price.");
 }
 
 // ---------- main ----------
 const pick = (list) => (only ? list.filter((b) => only.includes(b.slug)) : list);
 
-if (!["run", "judge", "flows", "status", "report"].includes(cmd)) {
-  console.log(read(fileURLToPath(import.meta.url)).split("\n").slice(0, 13).join("\n"));
+if (!["run", "judge", "flows", "status", "report", "stamp", "plan"].includes(cmd)) {
+  const lines = read(fileURLToPath(import.meta.url)).split("\n");
+  console.log(lines.slice(0, lines.findIndex((l) => !l.startsWith("//"))).join("\n"));
   process.exit(1);
 }
 if (cmd === "status") { status(); process.exit(0); }
+if (cmd === "plan") { plan(); process.exit(0); }
 if (cmd === "report") { const rows = report(); console.log(`Wrote tests/ for ${rows.filter((r) => r.run).length} blocks.`); status(); process.exit(0); }
+if (cmd === "stamp") { if (!opt("at")) throw new Error("stamp needs --at <git-rev>"); stamp(opt("at")); status(); process.exit(0); }
 
 loadKey();
 const all = blocks();
 if (cmd === "run") {
-  const list = pick(all.filter((b) => !b.flow)).filter((b) => flag("again") || !load(runFile(b.slug)));
+  const list = pick(all.filter((b) => !b.flow)).filter((b) => flag("again") || runStale(b, load(runFile(b.slug))));
   if (flag("direct")) await pool(list, 6, async (b) => { const req = runRequest(b); recordRun(b, req, await call(req), false); console.log(`  ran ${b.slug}`); });
   else await runBatch("run", list, runRequest, recordRun);
 }
 if (cmd === "judge") {
-  const list = pick(all.filter((b) => !b.flow)).filter((b) => load(runFile(b.slug)) && (flag("again") || !load(gradeFile(b.slug))));
+  // Only grade runs that are current: a run of an old version of the block is run again first.
+  const list = pick(all.filter((b) => !b.flow)).filter((b) => { const r = load(runFile(b.slug)); return r && !runStale(b, r) && (flag("again") || gradeStale(b, r, load(gradeFile(b.slug)))); });
   const build = (b) => judgeRequest(b, load(runFile(b.slug)));
   if (flag("direct")) await pool(list, 6, async (b) => { const req = build(b); recordGrade(b, req, await call(req), false); console.log(`  graded ${b.slug}: ${load(gradeFile(b.slug)).verdict}`); });
   else await runBatch("judge", list, build, recordGrade);
 }
 if (cmd === "flows") {
-  const list = pick(all.filter((b) => b.flow)).filter((b) => flag("again") || !load(gradeFile(b.slug)));
+  const list = pick(all.filter((b) => b.flow)).filter((b) => { const r = load(runFile(b.slug)); return flag("again") || runStale(b, r) || gradeStale(b, r, load(gradeFile(b.slug))); });
   await pool(list, 4, (f) => runFlow(f, all));
 }
 status();

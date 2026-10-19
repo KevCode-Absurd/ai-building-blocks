@@ -7,6 +7,6 @@
 ## Extra rules for a store
 - For physical goods, an argument a rival can't copy usually rests on its materials, the way it works, the thing it replaces, or its guarantee.
 - Things that get used up (food, supplements, skincare) are bought on a quick decision, so lean on The moment and In use. Things bought once (cookware, luggage, furniture) are weighed up, so give more of the batch to Old way, new way and Look inside: cost per year of use, fit, materials, what happens if it's wrong.
-- People comparing or ready to buy need other ads. Run "Pick the right layout for your image ad" for them, one type per ad, each with its proof. A batch for ready buyers can be mostly "Why now?" types.
+- People comparing or ready to buy need other ads. Run "Get one image ad ready to make" for them, one type per ad, each with its proof. A batch for ready buyers can be mostly "Why now?" types.
 - A made-up quote or deadline is worse than no ad. If the proof isn't there, make the nearest honest type.
 - If the layout shows more variants than you sell, repeat the real one or show fewer, scaled to a common height.

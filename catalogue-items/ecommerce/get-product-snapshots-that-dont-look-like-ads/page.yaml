@@ -180,9 +180,9 @@ improve:
 
 works_best_with:
   tools:
-    - {name: "GPT Image 2.5", why: "Follows long scene descriptions well, and its thinking mode plans the frame before it draws."}
-    - {name: "Nano Banana 2.1", why: "Takes up to 10 object photos and holds the product steady across follow-up edits."}
-    - {name: "Veo 3.1", why: "For the optional short clip. It can start from your approved frame and add sound if you want it."}
+    - {name: "GPT Image", why: "Follows long scene descriptions well, and its thinking mode plans the frame before it draws."}
+    - {name: "Nano Banana", why: "Takes up to 10 object photos and holds the product steady across follow-up edits."}
+    - {name: "Veo", why: "For the optional short clip. It can start from your approved frame and add sound if you want it."}
   inputs:
     - "Real flash photos from one of your own events, so the light and grain look true"
     - "Photos of the real food, drinks or things at the occasion, so the props are ones the product goes with"

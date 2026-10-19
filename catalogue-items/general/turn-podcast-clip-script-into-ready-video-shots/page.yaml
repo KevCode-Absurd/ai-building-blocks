@@ -194,10 +194,10 @@ improve:
 
 works_best_with:
   tools:
-    - {name: "Veo 3.1", why: "Speaks quoted lines for a named speaker and keeps faces from up to three reference images."}
-    - {name: "Kling 4.0", why: "Reuses saved characters made from your reference pictures, so both faces hold across clips."}
+    - {name: "Veo", why: "Speaks quoted lines for a named speaker and keeps faces from up to three reference images."}
+    - {name: "Kling", why: "Reuses saved characters made from your reference pictures, so both faces hold across clips."}
     - {name: "ElevenLabs", why: "Records two clearly different voices once, so they never swap between clips."}
-    - {name: "Nano Banana Pro", why: "Makes the reference images, sheets and opening frame with real-looking skin and cloth."}
+    - {name: "Nano Banana", why: "Makes the reference images, sheets and opening frame with real-looking skin and cloth."}
   inputs:
     - "A photo of a real room in your buyer's world, so the set feels like where they live"
     - "Short voice samples or descriptions you like for each part, so the voices fit your brand"

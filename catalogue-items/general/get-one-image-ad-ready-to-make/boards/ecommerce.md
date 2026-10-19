@@ -25,6 +25,8 @@ If the store shows the same offer two ways (two discount figures, two star ratin
 - As the effort it takes ("one pack, no shaker"), when effort is the real cost.
 
 ## Pictures that suit products
+- For shoppers who know you (an offer): the product as the picture, one proof as the second read, the price or bundle as the third.
+- For shoppers who don't (a problem-led plain post): the thing they put up with as the picture, the product small or left out.
 - The material or part that does the work, shot close.
 - The pack opening and the product coming out, the way the store says it opens.
 - The usual way next to this one, shown with objects (a tub and shaker against a single pack).

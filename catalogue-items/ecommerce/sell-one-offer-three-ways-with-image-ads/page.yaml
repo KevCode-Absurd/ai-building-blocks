@@ -181,9 +181,9 @@ improve:
 
 works_best_with:
   tools:
-    - {name: "GPT Image 2.5", why: "Sets short price lines better than older models, and you can point at one wrong digit to fix it."}
-    - {name: "Nano Banana Pro", why: "Takes up to 3 style references and is built for brand consistency, so each of the three looks stays on brand."}
-    - {name: "Meta Ads Manager", why: "Its placement previews show where the app's buttons cover a 9:16 ad, so you can check the offer block stays clear."}
+    - {name: "GPT Image", why: "Sets short price lines better than older models, and you can point at one wrong digit to fix it."}
+    - {name: "Nano Banana", why: "Takes up to 3 style references and is built for brand consistency, so each of the three looks stays on brand."}
+    - {name: "Meta Ads Manager", why: "Its safe zone guardrail marks where the app's buttons may cover a 9:16 ad, so you can check the offer block stays clear."}
   inputs:
     - "Screenshots of the offer on your live site, so every line is checked against what shoppers will see"
     - "Your past prices with the dates you charged them, so a saving is only shown when it's real"

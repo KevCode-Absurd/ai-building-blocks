@@ -168,7 +168,7 @@ works_best_with:
     - {name: "Any good chat AI", why: "Claude, ChatGPT and Gemini all follow this skill well, so use the one you already have."}
     - {name: "Google Sheets", why: "Holds the creator list, the tracking table and the box budget in one sheet you can share."}
     - {name: "TikTok One Creator Marketplace", why: "TikTok's own place to find creators, filter them and see their recent posts, with no scraping."}
-    - {name: "Meta Partnership Ads Hub", why: "Lets you send a creator a request and run their post as an ad from your account."}
+    - {name: "Meta Creator Marketing Hub", why: "Lets you send a creator a partnership request, then run their posts as ads from your account."}
   inputs:
     - "Audience screenshots each creator shares with you, so the fit check uses real numbers"
     - "A photo of the box and what goes in it, so the card fits the space"

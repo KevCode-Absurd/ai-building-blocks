@@ -1,168 +1,206 @@
 new_slug: catch-mistakes-in-your-ad-before-you-pay
 name: "Catch mistakes in your ad before you pay"
-summary: "Give it your finished ad. You get what should stop launch, what's worth a look, and what to check on a phone."
+summary: "Give it your finished ad. You get the mistakes that should stop launch, each fix, and a verdict."
 job: check-ads
 
 headline: "Catch mistakes in your ad before you pay"
-subhead: Give it the finished ad with its words, button and your live offer. It walks the ad the way a viewer meets it on a phone, flags wrong facts and hidden words as stop-ship, points to anything worth a second look with the exact line, and lists what only you can judge.
+subhead: Give it the finished ad with its words, who it's for and your live offer. It walks the ad the way a viewer meets it on a phone and checks every fact. You get stop-ship fixes, things worth a look, phone checks and a verdict.
 
 explain: |
-  Most ad mistakes are small and cheap to fix before launch: words hidden under the app's buttons, a price that no longer matches the shop, a picture that says something different from the headline, a button with no clear next step. Once the ad is live, the same mistakes cost you money to find.
+  Most ad mistakes are small and cheap to fix before launch. Think of a price that no longer matches the shop, a claim you can't back, or words hidden under the app's buttons. Once the ad is live, the same mistakes cost you money to find.
 
-  This skill is that last look. It goes through the ad in the order a viewer meets it: the file and where it runs, the first second with the sound off, the middle, the end, then the facts. A short stop-ship list holds the mistakes that should stop a launch, like a wrong price or words in the zone the app covers. "Worth a look" comes with the number or quote that triggered it. "For a person" is what needs your eyes on a real phone. It gives no score and never blocks a launch. You decide.
+  This skill is that last look. It goes through the ad in the order a viewer meets it. First the file, then the first second with the sound off, the middle and the end. Then it reads the ad as your buyer, link by link, and checks every fact, the product, your logo and your font. Stop-ship holds the few mistakes that should stop a launch. Worth a look holds the rest, each with the quote behind it and the smallest fix. For a person is what needs your eyes on a real phone. You get a verdict, but no score. You decide.
 
 when:
-  - You're about to approve an ad from a designer, an editor or an AI tool.
+  - You're about to approve an ad or a batch from a designer, an editor or an AI tool.
   - An ad looks fine on your laptop and you haven't seen it on a phone yet.
-  - You've made a few versions of one ad and want to know if they really differ.
+  - You have a storyboard, or a few versions of one ad, and want to know they hold up.
 
 you_give:
-  - The finished ad, as a video with its script or an image at full size
+  - The finished ad, as an image at full size, a video with its script, or a storyboard
   - Its main text, headline, button and where it will run
-  - Your live offer and approved claims, from your brand file (recommended)
-  - The one message it should carry, or the ad it came from (optional)
+  - Your live offer, approved claims and proof, from your brand file (recommended)
+  - Your logo, font and real product photos (recommended)
+  - Who the ad is for, and the rest of the batch (optional)
 you_get:
-  - A stop-ship list of wrong facts, hidden or misspelt words and the wrong shape, each with its fix
-  - A worth-a-look list, each item with the number or quote behind it
+  - A stop-ship list of wrong facts, wrong product, wrong logo or font, hidden or misspelt words and wrong size, each with its fix
+  - A worth-a-look list with the number or quote behind each item, including the weakest of five links in the ad's argument
   - The things to check yourself on a phone
-  - The ad's message in one sentence and one next action
+  - A verdict of approve, fix or remake, and one next action
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Attach the image at full size, or the video's key frames and its script with timings.
-  - Paste the main text, headline and button exactly as they'll run, name where it runs, and attach offers.md and proof-and-claims.md.
-  - Fix the stop-ship list first, then read "worth a look", then open the ad on your own phone for "for a person".
-  - For Facebook and Instagram, also run the Meta ad rules check. This list doesn't cover policy.
+  - Attach the image at full size, or the video's key frames or storyboard with the script and timings.
+  - Paste the main text, headline and button exactly as they'll run, and name where it runs and who it's for.
+  - Attach your brand file, or at least your offer, your claims list, your logo and your font.
+  - Fix the stop-ship list first, then read worth a look, then open the ad on your own phone for "for a person".
+  - For Facebook and Instagram, also run "Keep Facebook from blocking your ads". This check doesn't cover policy.
 
 how_it_works:
   - title: Checks the file fits
     text: Shape and size for where it runs, Meta's safe zones on tall video (top 14%, bottom 35%, 6% each side), text lengths and captions.
   - title: Looks at the first second
-    text: With the sound off, is something already happening, can you see the product or brand, and can the words be read in about two seconds?
+    text: With the sound off, is something happening, can you see the product, and can the words be read in about two seconds? A plain box pasted over the art gets flagged.
   - title: Reads the middle
-    text: Finds the one message, notes the longest shot, flags words that add no fact, and checks the picture agrees with the words.
+    text: Finds the one message and flags words that add no fact. On a storyboard, it checks the person, product and props stay the same and the script fits the time.
   - title: Checks the end
     text: One clear next step that matches the button, and whether the video still lands with the last three seconds cut.
+  - title: Reads it as your buyer
+    text: Marks five links strong, thin or missing (who, gain, proof, risk, step), names what carries each, and fixes the weakest first.
   - title: Checks the facts
-    text: Price, offer, claims and the product's look against your brand file. A wrong one goes on the stop-ship list.
-  - title: Gives one next step
-    text: Approve, change one named thing, or hold.
+    text: Every claim, number, quote, price and date against your proof, the product piece by piece, and your real logo and font. Anything it can't confirm is labelled.
+  - title: Checks the versions
+    text: Each version should change one nameable thing. In a batch, it names any two ads that are the same idea.
+  - title: Gives a verdict
+    text: Approve, fix the named things or remake, then the one thing to do next.
 
 output_shape: |
   AD: <name> (<shape>, <where it runs>)
+  For: <buyer>
+  Message: <the ad's one message in one sentence>
 
   STOP-SHIP
-  - <the mistake, quote or spot> . Fix: <change>
+  - <the mistake, with its quote or spot, and why it fails>
+    Fix: <smallest change>
 
   WORTH A LOOK
-  - <the issue, with the number or quote that triggered it> . Try: <change>
+  - Five links: who / gain / proof / risk / step: <strong, thin or missing>
+  - Weakest, <link>: <why> Fix: <change>
+  - <the issue, with the number or quote behind it> Fix: <change>
 
   FOR A PERSON
-  - <what to look at yourself, on a real phone>
+  - <what to look at on a real phone, or what is not confirmed>
 
-  MESSAGE IN ONE SENTENCE
-  <the ad's one message>
-  <for video: the "cut the last three seconds" result>
+  VERDICT
+  <approve | fix: the named things | remake>
+  <for a batch: a note on variety>
 
   NEXT ACTION
-  <approve | change one named thing | hold>
+  <the one thing to do now>
 
 example:
   business: sprout
   input: |
     [the skill]
 
-    Where it runs: Instagram feed. Image ad, 4:5.
-    Picture (described): the green pouch on a soft green gradient,
-    gummies scattered in front.
-    On-image words: "Trusted by 1M+: Take 61% OFF" / chips: "21
-      Vitamins", "4 Free Gifts", "61% Off"
-    Main text (live Sprout ad words): Big news: your first order of
-      Sprout just got a lot more affordable. $29.99 for your first
-      order, that's less than $1.10/day for 60+ whole-food ingredients,
-      21 vitamins & minerals, and gut-supporting probiotics in one
-      daily gummy pack. $20 off your first order. +$5 off for every
-      extra person. Third-party tested. Online-exclusive offer. Shop
-      Sprout.
-    Headline field: Trusted by 1M+: Take 61% OFF
+    Ad: "Hot girl tummy" still. Instagram feed, 4:5, 1440 x 1800.
+    Picture (image not attached, described): a woman on a sofa, hand
+      on her stomach, smiling. She was made with an AI image tool.
+      She holds a daily pack torn open at the corner. The green pouch
+      with a white Sugar-Free burst sits on the table. Wordmark top
+      left.
+    On-image words, in a white box over the bottom third, in a
+      rounded handwritten font: "Fix the Hot Girl Tummy" / chips:
+      "6g Fiber", "21 Vitamins", "61% Off"
+    Main text (a live Sprout ad's words): Feeling off in your gut
+      lately? Sprout supports digestion with 6g of fiber, prebiotics,
+      and daily vitamins to help keep your gut balanced without
+      powders or prep.
+    Headline field: Fix the Hot Girl Tummy
     Button: Shop now
-    Facts: the Sprout brand file (offers.md, proof-and-claims.md).
+    For: the gut-fix seeker, new to Sprout.
+    Facts and marks: the Sprout brand file (offers, approved and risky
+      claims, look, "show it right" rules). Work Sans bold on file.
+      No logo file.
   output: |
-    AD: Trusted by 1M+ still (4:5, Instagram feed)
+    AD: Hot girl tummy still (4:5, 1440 x 1800, Instagram feed)
+    For: the gut-fix seeker, new to Sprout
+    Message: Sprout fixes a bloated tummy, and it's 61% off. That's
+    two jobs: gut help and price.
 
     STOP-SHIP
-    - "gut-supporting probiotics" in the main text. The ingredient list
-      in offers.md has prebiotic fiber and no probiotics.
-      Fix: "prebiotic fiber".
-    - "61% Off" on the image and headline. The live product page says
-      52% in the bar and "up to 55%" in the badge.
-      Fix: use the discount live at checkout, everywhere.
-    - "21 Vitamins" on the chip. The fact is 21 vitamins and minerals.
-      Fix: "21 vitamins & minerals".
+    - "Fix" in the headline field and on the image. It's on the risky
+      list; the brand's own rule is "supports". The smiling hand on
+      her stomach makes the same promise.
+      Fix: "Support for the Hot Girl Tummy".
+    - "61% Off" chip. The product page shows 52% in the bar and "up
+      to 55%" in the badge. Fix: the discount live at checkout, or
+      drop the chip (see below).
+    - "21 Vitamins" chip. The fact is 21 vitamins and minerals.
+      Fix: "21 Vitamins & Minerals".
+    - The daily pack is torn at the corner. Sprout packs tear straight
+      across the top, never a corner. Fix: tear it across the top,
+      gummies pouring into her palm.
+    - Rounded handwritten font. The brand file names Work Sans bold
+      for headings. Fix: set the words in Work Sans bold.
 
     WORTH A LOOK
-    - Four deals in one ad: 61% off, $29.99 first order, $20 off, +$5
-      per extra person. A reader can't tell which is the offer. Try:
-      keep one.
-    - "1M+" is pending in proof-and-claims.md (no source on file). Try:
-      lead with a fact that's approved until the source arrives.
-    - "Less than $1.10/day" is the first box only; it renews at $49.99.
-      Try: add the renewal price.
-    - The headline field repeats the on-image line word for word. Try:
-      use it for the renewal price or the guarantee.
-    - "just got a lot more affordable" adds no fact. Try: "$29.99 for
-      your first box".
-    - 13 words on the image, three chips. Fine for a still, but the
-      eye has four places to go.
+    - Five links: who strong (the slang, "Feeling off in your gut
+      lately?") / gain thin (carried by "Fix", which has to go) /
+      proof missing / risk missing / step strong ("Shop now").
+    - Weakest, risk: her main doubt is "Will this upset my stomach
+      more?", and the pouch shows Sugar-Free. Its sugar alcohols upset
+      some stomachs. Fix: show the Low Sugar pouch, and add "30-day
+      money-back guarantee on your first order" to the main text.
+    - Proof: nothing on the ad. Fix: "67% of surveyed users had
+      better, more regular digestion" (brand survey of 3,000+).
+    - Gain: Fix: one buyer's words, exactly as written: "Feel lighter,
+      less bloated and overall good." (retailer review)
+    - 11 words on the image: a headline and three chips. Fix: drop
+      "61% Off". Price is a different ad for a different buyer.
+    - The words sit in a white box over the bottom third. Fix: move
+      them into the empty space above her, or add a soft outline.
+    - The woman is AI-made. Fine as a model. Never caption or quote
+      her as a customer; that would be a fake testimonial.
+    - Main text is 162 characters, so "without powders or prep" falls
+      after "more". The first 125 still work alone.
 
     FOR A PERSON
-    - Open the image at 100% and read every word letter by letter.
-      MISSING: the image file. Only a description was given.
-    - Where does your eye land first, the 61% or the pouch?
-    - On your phone, does the first 125 characters of main text make
-      sense before "more"?
+    - MISSING: the image file. Open it at 100% and read every word
+      letter by letter.
+    - MISSING: a logo file. Check the wordmark is Sprout's real one,
+      not a lookalike.
+    - Not confirmed: "help keep your gut balanced". The approved line
+      is "supports digestion and gut health".
+    - Where does your eye land first: her face, or the pouch?
+    - MISSING: the link. Check "Shop now" opens the Low Sugar page.
 
-    MESSAGE IN ONE SENTENCE
-    Lots of people trust Sprout, and it's 61% off right now.
+    VERDICT
+    Fix these: the word "Fix", the discount, the vitamin count, the
+    torn pack and the font. Then add the risk line and the Low Sugar
+    pouch. One ad, so no batch note. The angle is rare for Sprout:
+    2 of its 40 newest ads are about gut health.
 
     NEXT ACTION
-    Hold. Fix the three stop-ship lines, then run the Meta rules check
-    (supplement ads need 18+).
+    Make the five stop-ship fixes, then run "Keep Facebook from
+    blocking your ads" on the new words.
 
 tweaks:
   - what: Your facts
-    how: Attach offers.md and proof-and-claims.md. Then claims like "probiotics" in the example are caught against your own facts, not just flagged as something to check.
-  - what: The ad it came from
-    how: Add the earlier version and it says whether the new one is clearer or weaker, and why.
+    how: Attach your brand file with the live offer and approved claims. Then lines like "Fix" and "61% Off" in the example are caught against your own facts, not just flagged as something to check.
+  - what: Who it's for
+    how: Name the buyer. The same ad can pass for a returning customer and fail for someone new. A new buyer needs more on who and proof.
+  - what: Your logo, font and product photos
+    how: Attach them and the brand check runs for real. Without them, logo and font move to "for a person".
+  - what: Video or storyboard
+    how: Give the script with seconds and the frames in order. It checks the person, product and props match shot to shot, and tests the ad with the last three seconds cut.
   - what: Several versions
-    how: Paste all of them. It checks that each one changes one nameable thing (the reason to buy, the buyer, the format, the opening) and flags sets of more than four.
-  - what: Video
-    how: Give the script with seconds and the shot list. It notes the longest shot and tests whether the ad still lands with the last three seconds cut.
+    how: Paste the whole batch. It checks that each one changes one nameable thing and names any two that are the same idea.
 
 judge:
-  - Every item quotes the line, gives the number or names the spot.
-  - The stop-ship list holds only facts, hidden or misspelt words and the wrong shape, never taste.
-  - Nothing is marked as checked that only a person on a phone could judge.
-  - There's no score, and the next action is one thing.
-  - It doesn't use results numbers like click rate. Those only exist after the ad runs.
+  - Every item quotes the line, gives the number or names the spot, with a fix.
+  - The stop-ship list holds only wrong facts, wrong product, wrong logo or font, hidden or misspelt words and wrong size, never taste.
+  - The five links are marked and the weakest one has a fix.
+  - Nothing it couldn't confirm is passed, and nothing only a person on a phone could judge is marked as checked.
+  - No fix covers the art with a plain box, and there's no score or click-rate guess.
 
 test:
-  - Run it on an ad where you found a mistake after launch. The mistake should land on the stop-ship or worth-a-look list. If it doesn't, attach the fact it would need, such as your live offer.
+  - Run it on an ad where you found a mistake after launch. The mistake should land on stop-ship or worth a look. If it doesn't, attach the fact it would need, such as your live offer.
   - Plant one mistake on purpose, such as a price that doesn't match your page. It should appear under stop-ship with the exact quote.
-  - Run it twice on the same ad. The stop-ship list and the next action should match.
+  - Run it twice on the same ad. The stop-ship list, the weakest link and the verdict should match.
   - Go through "for a person" on your own phone. If you find a problem it didn't list, add that check to the skill file.
 
 improve:
-  - Keep your brand file current. The facts check is only as good as offers.md and proof-and-claims.md on the day you run it.
-  - Add your own red flags to step 5, such as a discount you no longer run or a pack design you retired.
-  - If you only make image ads, delete the video lines in steps 2 to 4 so the lists stay short.
+  - Keep your brand file current. The facts check is only as good as your offer and claims list on the day you run it.
+  - Add your own red flags to step 6, such as a discount you no longer run, a retired pack design or how your product opens.
+  - If you only make image ads, delete the video and storyboard lines in steps 2 to 4 so the lists stay short.
   - Save the mistakes it catches in the mistakes list from "Stop paying for the same AI mistake twice", so the next ad avoids them from the start.
-  - Pair it with the Meta ad rules check, and with the skill that reviews a whole batch of finished image ads.
+  - Pair it with "Keep Facebook from blocking your ads" before you publish.
 
 works_best_with:
   tools:
     - {name: "Claude", why: "Reads full-size images closely, so it can spell-check the words in the picture and spot the safe zones."}
-    - {name: "Meta Ads Manager", why: "Its ad preview shows the ad in each placement with the app's buttons on top, so you see what gets covered."}
+    - {name: "Meta Ads Manager", why: "Its safe zone guardrail marks the area the app's buttons and labels won't cover, so you see what might get hidden."}
   inputs:
     - "The image at full size or the real video file, not a description, so the words in the picture can be checked"
     - "A screenshot of your checkout showing today's price, so the offer check uses what buyers really pay"
@@ -176,5 +214,7 @@ terms:
     meaning: The part of a tall video the app doesn't cover with its name, buttons and caption.
   - term: Stop-ship
     meaning: A mistake that should be fixed before the ad goes live, such as a wrong price or a false claim.
+  - term: Five links
+    meaning: Who it's for, what they gain, the proof, the risk removed and the next step. An ad is as strong as its weakest link.
   - term: Main text
     meaning: The words above the image in a Facebook or Instagram ad.

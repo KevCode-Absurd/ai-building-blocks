@@ -6,6 +6,7 @@ Collections, 5 to 10 product pages, shipping and returns, the size guide or the 
 ## Extra things to give it
 - Store data: best sellers by revenue, repeat purchase rate, and products that get visits but don't sell.
 - A review export from any reviews app, or a paste of the reviews page.
+- Product sheets, supplier specs, the label or packaging photos, each labelled and dated. Where one disagrees with the product page (a pack size, an ingredient, a price), keep both, tagged `[disputed]`.
 - Email results: top subject lines, which automatic emails are on, list size.
 - Product photos from the store's own product pages or product feed, one folder per product, named in the order they appear. Leave out non-products (gift cards, shipping protection). If the photos can't be fetched, ask the person to add them.
 
@@ -32,3 +33,4 @@ Sort plain photos (no text, badges or collage) into five jobs: pack front, out o
 ## Extra checks
 - The main product and every best seller have Looks like, Pack and How it's used written from photos, and at least two photo jobs filled.
 - Every policy line quotes the site, or is tagged `[unknown]`.
+- An image-work slice for a product carries its Looks like, Pack, How it's used and Never show lines, the filled photo jobs, and the pack's printed words exactly as seen in the photos.

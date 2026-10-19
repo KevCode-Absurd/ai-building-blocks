@@ -8,6 +8,7 @@ type: skill
 role: render
 job: video
 level: advanced
+twin: turn-your-best-ad-into-a-still-or-carousel
 inputs:
   - {type: script, required: true}
   - {type: product_data, required: false}

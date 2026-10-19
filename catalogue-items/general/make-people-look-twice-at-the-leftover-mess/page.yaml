@@ -134,8 +134,8 @@ improve:
 
 works_best_with:
   tools:
-    - {name: "Nano Banana Pro", why: "Follows named light and camera terms, such as 'harsh on-camera flash, from above'."}
-    - {name: "GPT Image 2.5", why: "Follows detailed placement, so the residue and the cut-off container sit where you describe them."}
+    - {name: "Nano Banana", why: "Follows named light and camera terms, such as 'harsh on-camera flash, from above'."}
+    - {name: "GPT Image", why: "Follows detailed placement, so the residue and the cut-off container sit where you describe them."}
   inputs:
     - "A real phone photo of the mess from your own home or a customer who agreed, so the image tool can match its texture"
     - "Reviews that mention the mess with an amount, such as 'every morning' or 'a handful', so the amount is honest"

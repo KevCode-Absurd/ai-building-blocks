@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState, type CSSProperties, type KeyboardEvent as ReactKeyEvent, type ReactNode } from "react";
 import { B8, ICONS } from "./lib/pixel";
 import { useScrollTyped, useSeen, useTyped } from "./lib/typing";
-import { type Block, kindInfo, pathOf, taskOf } from "./lib/data";
+import { type Block, formatOf, kindInfo, pathOf, taskOf } from "./lib/data";
 import { Link } from "./lib/router";
 import { kits, useStore } from "./lib/store";
 
@@ -101,13 +101,14 @@ function Decode({ text, round }: { text: string; round: number }) {
 
 export function BlockCard({ b }: { b: Block }) {
   const kind = kindInfo(b);
+  const fmt = formatOf(b);
   const [round, setRound] = useState(0);
   const wake = () => setRound((r) => r + 1);
   const view = b.category === "orchestrator" ? `View the ${b.steps.length} steps` : `View the ${kind.name.toLowerCase()}`;
   return (
     <Link to={pathOf(b)} className="card" data-testid="block-card" data-slug={b.slug} data-kind={kind.id} onMouseEnter={wake} onFocus={wake}
       style={{ "--pat": `var(--pat-${taskOf(b).id})` } as CSSProperties}>
-      <span className="meta"><span className="kind">{kind.name}</span><span className="type">{taskOf(b).name}</span></span>
+      <span className="meta"><span className="kind">{kind.name}</span><span className="type">{fmt ? (fmt === "image" ? "Image ad" : "Video ad") : taskOf(b).name}</span></span>
       <span className="nm">{b.name}</span>
       <Peek text={b.summary} round={round} />
       <span className="view"><Decode text={view} round={round} /><ArrowIcon size={12} /></span>

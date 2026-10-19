@@ -188,9 +188,9 @@ improve:
 
 works_best_with:
   tools:
-    - {name: "Veo 3.1", why: "Speaks quoted lines in a phone-like look and keeps the presenter from reference images."}
-    - {name: "Kling 4.0", why: "Reuses a saved presenter made from your pictures, so the face holds across clips."}
-    - {name: "Nano Banana Pro", why: "Makes the reference images, sheets and start frames with real skin and room light."}
+    - {name: "Veo", why: "Speaks quoted lines in a phone-like look and keeps the presenter from reference images."}
+    - {name: "Kling", why: "Reuses a saved presenter made from your pictures, so the face holds across clips."}
+    - {name: "Nano Banana", why: "Makes the reference images, sheets and start frames with real skin and room light."}
     - {name: "ElevenLabs", why: "Records one steady voice for the whole script if the video tool's voice drifts."}
   inputs:
     - "A phone photo of a real room like your buyer's, so the room sheet describes a place that exists"

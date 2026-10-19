@@ -149,7 +149,7 @@ improve:
 works_best_with:
   tools:
     - {name: "Google Sheets", why: "Builds the real chart from your story's numbers, so every figure in the photo is true."}
-    - {name: "Nano Banana Pro", why: "Google's image model, which Google recommends for accurate text, so dates and labels come out right."}
+    - {name: "Nano Banana", why: "Google's image model, which Google recommends for accurate text, so dates and labels come out right."}
     - {name: "Your phone's photo editor", why: "Drawing the mark yourself looks rough and human, which image tools rarely manage."}
   inputs:
     - "A screenshot of the real reading your buyers mention, with personal details removed, so the layout looks right"

@@ -199,7 +199,7 @@ improve:
 works_best_with:
   tools:
     - {name: "Claude", why: "Keeps your offer terms, the ad's words and four steps of work straight in one run."}
-    - {name: "Figma", why: "Turns the chosen design direction into phone and desktop frames your builder can follow."}
+    - {name: "Figma", why: "Holds the chosen design direction as phone and desktop frames your builder can follow."}
     - {name: "PageSpeed Insights", why: "Free Google check of a built page for phone speed, contrast and tap target problems."}
   inputs:
     - "A phone screenshot of the ad as it runs, so the first screen can match its picture as well as its words"

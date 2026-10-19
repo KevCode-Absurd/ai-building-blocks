@@ -139,8 +139,8 @@ improve:
 works_best_with:
   tools:
     - {name: "Canva", why: "Sets each reminder and time as real text on a plain screen, so no digit gets swapped."}
-    - {name: "Figma", why: "Finer control over card spacing and the crop, and the screen saves as a reusable template."}
-    - {name: "GPT Image 2.5", why: "The fallback if you want the screen generated. It handles short quoted text well, but check every time."}
+    - {name: "Figma", why: "Finer control over card spacing and the crop, and the screen can be saved as a component to reuse."}
+    - {name: "GPT Image", why: "The fallback if you want the screen generated. It handles short quoted text well, but check every time."}
   inputs:
     - "The times your buyers say the routine slips, from reviews or support emails, so the clock is believable"
     - "A plain wallpaper colour that's never your brand colour, so the screen never looks like your ad"

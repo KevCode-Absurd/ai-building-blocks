@@ -1,58 +1,62 @@
 new_slug: stop-strangers-scrolling-with-a-story-ad
 name: "A story-style ad strangers stop to read"
-summary: "Give it your customers' words about the problem. You get a picture idea and a short story ad."
+summary: "Give it your customers' words about the problem. You get a picture idea and an honest story ad."
 job: write-ad-copy
 
 headline: "A story-style ad strangers stop to read"
-subhead: Give it your customers' own words and the claims you may make. It finds the moment the old way stopped working, picks a picture of that moment, writes a 120 to 260 word story, and says what the page it opens must start with.
+subhead: Give it your customers' own words and the claims you may make. It finds the moment the old way stopped working, picks an honest narrator and a picture of that moment, writes the story at the length you need, and says what the page must open on.
 
 explain: |
   People scrolling at night aren't shopping. They skip anything that looks like an ad in a fraction of a second. A picture of a moment they've lived through, like a shelf of supplements they gave up on, gets the look a product photo never gets.
 
-  This skill builds that kind of ad in three checks. Stop: the picture is unexpected and about the problem. Sort: people with the problem see themselves, and nobody is told what they have. Follow: the story's first line picks up the picture, and the page opens on the same moment. The story moves the way people switch: the moment it got too much, what they kept doing, why they doubted new things, and what's different here.
+  This skill builds that kind of ad in three checks. Stop: the picture is unexpected and about the problem. Sort: people with the problem see themselves, and nobody is told what they have. Follow: the first line picks up the picture, and the page opens on the same moment. Before it writes, it settles who may honestly tell the story and picks a shape from what your reviews show. The story then moves the way people switch: the moment, the habit, the doubt, and what's different here.
 
 when:
   - You want to reach people who have never heard of you, and your product ads only reach people who already know you.
   - Your reviews keep describing the same moment, and you want an ad built on it.
-  - You have a page that teaches the problem before it sells, or you're about to build one.
+  - You want a long post-style ad, but nobody real has agreed to tell their story.
 
 you_give:
   - Customer words about the problem (reviews, emails, call notes), with where each came from
-  - Your product facts, the claims you may make and what you never say
-  - Who the buyer is and what they use now (optional)
-  - Who may tell the story, such as the founder or a customer who agreed (optional)
-  - The page the click will open (optional)
+  - Your product facts, proof, the claims you may make and what you never say
+  - Who may tell the story, such as the founder or a customer who agreed in writing (optional)
+  - The page the click will open, and the length you want (optional)
 you_get:
   - A pass or fail on whether the problem can carry a story ad
+  - The narrator, the story shape and the quotes it rests on
   - A picture plan with a starter image prompt, and the story with its exact word count
-  - The line under the picture, and what the page's first screen must say
-  - Flags on quotes and inferred lines, plus two tests to run
+  - Two other openings, the line under the picture, what the page must say, and two tests
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste five or so reviews that describe the problem, each with its number or source.
-  - Paste your product facts and your approved and banned claims.
-  - Say who may narrate. If nobody has agreed, leave it out and the brand tells the story.
+  - Paste your product facts, your proof and your approved and banned claims.
+  - Say who may narrate and where the click goes. If nobody has agreed, leave it out and the brand tells the story.
+  - Ask for short, standard or long. Short is the default for strangers in a feed.
   - Read the page line. If it says the page is missing, build that page before you spend on the ad.
 
 how_it_works:
   - title: Finds the push
-    text: Looks for the moment in your reviews when the old way stopped being bearable. With no such moment, it stops and suggests a direct product ad.
-  - title: Finds the evidence
-    text: Asks whether the problem leaves a trace in a place, on a thing, on the body, in words, or nowhere safe to photograph, and picks the matching picture skill.
-  - title: Checks stop and sort
-    text: The picture must look out of place in a feed, and someone with the problem must know what it's about with no caption.
+    text: Looks for the moment in your reviews when the old way stopped being bearable. With no such moment, or a deal-led idea, it suggests a direct ad.
+  - title: Picks the narrator
+    text: A real customer who agreed, the founder, the brand retelling what customers said, or "you". Nobody made up ever speaks.
+  - title: Picks the shape
+    text: Reads your quotes for a pattern, such as several failed fixes or a slow habit. That pattern decides where the story turns.
+  - title: Finds the picture
+    text: Asks where the problem leaves a trace, picks the matching picture skill, and checks the picture would pass for a real post.
   - title: Writes the story
-    text: 120 to 260 words in four parts (the moment, the habit, the doubt, what's different), with the first 125 characters picking up the picture.
-  - title: Writes the line under it
-    text: A short caption line of about 27 characters that never names the product or the reader's health.
-  - title: Sets where the click goes
-    text: Says what the page's first screen must repeat, so the click feels like the next page of the same story.
+    text: Push, habit, doubt and pull, with proof from your facts. The first 125 characters pick up the picture.
+  - title: Closes by destination
+    text: A teaching page gets one quiet line and no price. Only a product page for warm buyers gets the offer, once, in your words.
+  - title: Adds the extras
+    text: Writes the line under the picture, two other openings and what the page's first screen must repeat.
   - title: Plans the tests
     text: Two pictures against one story first, then a second opening on the winner.
 
 output_shape: |
   PUSH       <pass or fail, with the buyer's words and source>
+  NARRATOR   <who tells it, and why>
+  SHAPE      <shape, and the quotes it rests on>
 
   PICTURE
   Trace:     <place | thing | body | words | nowhere safe | moment>
@@ -61,12 +65,13 @@ output_shape: |
   Wonder:    <what it makes people ask>
   Starter prompt: <40 to 80 words>
 
-  STORY  (opener: <type> / narrator: <who> / <word count> words)
-  <push> <habit> <doubt> <pull> <one line to the page>
+  STORY  (opener: <type> / <length> / <word count> words)
+  <push> <habit> <doubt> <pull> <close for the destination>
 
   LINE UNDER THE PICTURE   <words> (<caption line>, <characters>)
+  OTHER OPENINGS  1. <first line> / <line under>  2. <first line> / <line under>
   PAGE      <what the first screen must say, or MISSING>
-  FLAGS     <permissions, inferred lines, claims used>
+  FLAGS     <permissions, inferred lines, claims used, left out>
   TESTS     1. <two pictures, one story>  2. <second opening>
 
 example:
@@ -75,7 +80,7 @@ example:
     [the skill]
 
     Buyer: the gut-fix seeker, 25 to 55, mostly women. Bloating and
-    irregularity. Uses now: fiber powders and probiotics.
+    irregularity. Has tried fiber powders and probiotics.
 
     Customer words:
     7. "My bowel movements are normal for the 1st time in 15 years!"
@@ -91,12 +96,17 @@ example:
     "of surveyed users": "67% ... experienced better, more regular
     digestion."
     Never: "fix", treats IBS, a result in a set time.
-    Narrator: nobody has agreed. Destination page: none yet.
+    Narrator: nobody has agreed. Destination: a teaching page, not
+    built yet. Length: short.
   output: |
     PUSH       Pass, but thin. Buyers name the problem ("problems with
                regularity", 9; "less bloated", 10) and the fixes they
                tried, not one dated moment. The shelf of old fixes is
                the moment they'd recognise.
+    NARRATOR   The brand, retelling what customers said. No one has
+               agreed to speak in first person.
+    SHAPE      Down and back up: the buyer note names several fixes
+               tried (powders, probiotics); 8 and 10 carry the turn.
 
     PICTURE
     Trace:     on a thing (what's left over)
@@ -104,14 +114,14 @@ example:
     Scene:     an open kitchen cupboard, one shelf holding a fiber
                powder tub, a bottle of capsules and a bag of prunes
     Wonder:    why does one shelf hold three fixes for one stomach?
-    Starter prompt: Square 1:1 phone photo into an open kitchen
-    cupboard at eye level, evening kitchen light. One shelf: a plain
-    tub of fiber powder with a crusted scoop, an unbranded bottle of
-    capsules, a half-empty bag of prunes clipped shut. Slight tilt, a
-    little grain, a rice jar and mugs at the edges. No logos, no
-    readable labels, no product, no person, no text.
+    Starter prompt: Square phone photo into an open kitchen cupboard
+    at eye level, evening light. One shelf: a plain fiber powder tub
+    with a crusted scoop, an unbranded bottle of capsules, a half-empty
+    bag of prunes clipped shut. Slight tilt, a little grain, mugs at
+    the edges. No logos, no readable labels, no product, no person, no
+    text.
 
-    STORY  (opener: describe the frame / narrator: the brand / 197 words)
+    STORY  (opener: describe the frame / short / 197 words)
     There's a shelf like this in a lot of our customers' kitchens. A
     tub of fiber powder with the scoop crusted inside. A bottle of
     probiotic capsules. A bag of prunes, clipped shut.
@@ -121,67 +131,71 @@ example:
     sometimes for years.
 
     The shelf makes sense. Everyone says eat more fiber, so you buy
-    the powder. Then the capsules, in case it's the gut bacteria.
-    Then the prunes. Each one asks for its own step every day, and the
-    steps slip the moment a week gets busy.
+    the powder. Then the capsules, in case it's the gut bacteria. Then
+    the prunes. Each one asks for its own step every day, and the steps
+    slip the moment a week gets busy.
 
     So when something new turns up, it's fair to think: another tub
     I'll stop taking.
 
     Here's what's different. Sprout puts 6 g of prebiotic fiber into
-    one small pack of gummies. You tear the top and eat them. No
-    water, no mixing, nothing to wash. One customer said the
-    prebiotics "do their job, but not aggressively". Another said they
-    "feel lighter, less bloated and overall good". In our survey, 67%
-    of surveyed users experienced better, more regular digestion.
+    one small pack of gummies. You tear the top and eat them. No water,
+    no mixing, nothing to wash. One customer said the prebiotics "do
+    their job, but not aggressively". Another said they "feel lighter,
+    less bloated and overall good". In our survey, 67% of surveyed
+    users experienced better, more regular digestion.
 
     We wrote up what we've learned about fiber people keep taking.
     It's on one page, below.
 
     LINE UNDER THE PICTURE   One stomach. Three fixes. (plain caption, 25)
-    PAGE      MISSING: a page that opens on the same shelf and the
-              line "There's a shelf like this...". It explains why gut
-              fixes don't stick, signed by the Sprout team. Product and
-              offer near the end. Point sensitive stomachs to Low Sugar.
+    OTHER OPENINGS
+    1. "Most gut shelves we hear about started with one tub of powder."
+       (date opener, inferred) / Tub, capsules, prunes. (22)
+    2. "'Feel lighter, less bloated and overall good.' One customer
+       wrote that." (quote opener) / Shelf out. One pack in. (23)
+    PAGE      MISSING: a page that opens on the same shelf and the line
+              "There's a shelf like this...", signed by the Sprout team.
+              It explains why gut fixes don't stick; product and offer
+              near the end. Point sensitive stomachs to Low Sugar.
     FLAGS     Reviews 8 and 10 aren't marked verified: get permission
               before quoting them in paid ads. Review 8 is cut before
               it mentions IBS. Inferred: the prunes, the busy week.
-              Review 7 left out: in a story for strangers it reads as
-              a promise.
+              Left out: review 7, which reads as a promise to strangers.
     TESTS     1. This shelf against keep-people-reading-with-a-hand-
-              drawn-story, same story.
-              2. Winner with a date opener: "Most shelves we hear
-              about started with one tub in January." (inferred)
+              drawn-story, same story. 2. Winner with opening 1.
 
 tweaks:
   - what: The customer words you paste
-    how: The story borrows their phrases, so the reviews set its voice. Paste powder quitters' reviews and you get a story about the shaker in the sink, with a different picture.
+    how: The story borrows their phrases and its shape comes from their pattern. Paste powder quitters' reviews and you get a story about the shaker in the sink, with a different picture.
   - what: Who narrates
-    how: A founder with facts on record gets a first-person story. Leave it out and the brand speaks, summing up what customers say. It never invents a customer or an expert.
+    how: A customer with written permission or a founder gets a first-person story. Leave it out and the brand speaks, quoting customers word for word. It never invents a customer or an expert.
+  - what: Where the click goes
+    how: A teaching page keeps price out of the story. Name a product page for buyers who know the problem, and the close gives your offer and guarantee once.
+  - what: The length
+    how: Short (120 to 260 words) for a quick read in the feed. Standard adds a second scene, and long adds what's in it and why. Longer stories never repeat a point.
   - what: The picture trace
     how: Name a trace (a place, a thing, words) if you already know what stops your buyers. The first line is then written to pick up that picture.
-  - what: The length
-    how: Ask for about 120 words for a quick read, or up to 260 when the doubt needs answering in full. It stays inside that range.
 
 judge:
   - Cover the product name. The picture and the first line should still make sense.
   - The first 125 characters pick up what the picture makes people wonder.
   - Every quoted phrase matches a review word for word. Check two against your reviews page.
-  - No price, discount or product page link appears in the story.
-  - Nothing says the product treats a condition or works in a set time.
-  - The word count shown is between 120 and 260. Paste the story into a word counter to confirm.
+  - Nobody speaks in first person unless they're real and agreed.
+  - For a teaching page, no price, discount or product page link appears in the story.
+  - The word count fits the length you asked for. Paste the story into a word counter to confirm.
 
 test:
   - Run it on the problem your most reviews talk about. The push should pass and the picture should be something a buyer would recognise.
   - Run it on a product people buy only for its looks. It should fail the push and suggest a direct product ad.
-  - Run it twice on the same reviews. The trace and the wonder line should match, and every quote must still match a review.
+  - Run it twice on the same reviews. The narrator, shape and wonder line should match, and every quote must still match a review.
   - Show the story and your current best ad to someone who doesn't know your brand. Ask which one they'd keep reading, without saying which is new.
 
 improve:
-  - Write your approved claims and never-say list into "What you need" in the skill file, so you don't paste them each time.
-  - If a founder or customer agreed to tell their story, add the facts on record about them under "Who may narrate".
-  - Delete the traces in step 2 your business can't show, so it only picks pictures you can make.
-  - When a picture and opening win, save them in your brand file and name them in your next run.
+  - Write your approved claims, proof and never-say list into "What you need" in the skill file, so you don't paste them each time.
+  - If a founder or customer agreed in writing to tell their story, add the facts on record about them under "Who may narrate".
+  - Delete the traces in step 4 your business can't show, so it only picks pictures you can make.
+  - When a picture, shape and opening win, save them in your brand file and name them in your next run.
   - Pair it with a skill that writes the page the click goes to, and run the finished ad through the Facebook ad rules check.
 
 works_best_with:
@@ -190,13 +204,16 @@ works_best_with:
     - {name: "Meta Ads Manager", why: "Its placement previews show where your text is cut at 'See more', so you can check the first line."}
   inputs:
     - "Support tickets or call notes as well as reviews, so you find the moment the old way broke"
+    - "Written permission from any customer whose story you'd like told in their own words"
     - "Your last few story ads and how many readers reached the page, so the two tests start from what you know"
     - "A phone screenshot of the page's first screen, so the page brief matches what's live"
 
 terms:
   - term: Story ad
-    meaning: An ad made to look like a normal post, with a picture and a short story under it instead of a product pitch.
+    meaning: An ad made to look like a normal post, with a picture and a story under it instead of a product pitch.
   - term: Push
     meaning: The moment the old way stopped being bearable for the buyer. It's what makes people start looking for something new.
+  - term: Story shape
+    meaning: The pattern a story follows, such as several failed fixes before one that worked. It decides where the story turns.
   - term: See more
     meaning: The link Facebook and Instagram add when the main text is long. Only the first line or two show before it.

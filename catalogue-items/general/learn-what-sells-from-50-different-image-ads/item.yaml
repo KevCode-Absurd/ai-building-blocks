@@ -16,7 +16,7 @@ inputs:
 outputs:
   - {type: plan}
   - {type: static_ads}
-uses: [find-image-ad-types-worth-testing-next, pick-the-right-layout-for-your-image-ad, fix-whats-wrong-in-finished-ads-before-launch]
+uses: [find-image-ad-types-worth-testing-next, get-one-image-ad-ready-to-make, catch-mistakes-in-your-ad-before-you-pay]
 example: sprint
 origin: rebuilt
 source_ids: [CES-041]

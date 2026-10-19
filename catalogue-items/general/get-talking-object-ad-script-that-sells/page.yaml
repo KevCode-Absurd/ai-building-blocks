@@ -181,7 +181,7 @@ improve:
 works_best_with:
   tools:
     - {name: "Any good chat AI", why: "Writing a short first-person monologue to these rules works well in any strong chat AI."}
-    - {name: "Veo 3.1", why: "Speaks the object's quoted lines with matching room sound when the clips are made."}
+    - {name: "Veo", why: "Speaks the object's quoted lines with matching room sound when the clips are made."}
   inputs:
     - "Review lines that name an object in the buyer's home, so the narrator is one your buyers already picture"
     - "A phone photo of the real spot where the problem happens, so the room and light in the picture notes are true"

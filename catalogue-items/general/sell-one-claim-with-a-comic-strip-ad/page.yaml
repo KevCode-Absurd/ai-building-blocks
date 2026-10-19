@@ -169,9 +169,9 @@ improve:
 
 works_best_with:
   tools:
-    - {name: "Nano Banana 2.1", why: "Follows a panel grid well and takes your product photo as a reference for the drawn pack."}
-    - {name: "GPT Image 2.5", why: "Follows a detailed panel layout closely and lets you fix one panel without redrawing the rest."}
-    - {name: "Canva", why: "Sets captions in your own typeface and places your product photo in the fourth cell, so no lettering is left to the AI."}
+    - {name: "Nano Banana", why: "Follows a panel grid well and takes your product photo as a reference for the drawn pack."}
+    - {name: "GPT Image", why: "Follows a detailed panel layout closely and lets you fix one panel without redrawing the rest."}
+    - {name: "Canva", why: "Sets captions as real text and places your product photo in the fourth cell, so no lettering is left to the AI."}
   inputs:
     - "Five to ten buyer phrases from reviews about the old routine, so the captions sound like them"
     - "A photo of the product out of its pack and in a hand, so the drawn product matches its real size"

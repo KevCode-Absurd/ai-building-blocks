@@ -179,8 +179,8 @@ improve:
 
 works_best_with:
   tools:
-    - {name: "Ideogram 4.5", why: "Known for clear text in images, and this version is built for precise edits when a letter comes out wrong."}
-    - {name: "GPT Image 2.5", why: "Lets you mark one word on the finished ad and fix it, instead of making the ad again from the brief."}
+    - {name: "Ideogram", why: "Is made for text in images, and on paid plans you can fix one wrong letter without starting over."}
+    - {name: "GPT Image", why: "Lets you mark one word on the finished ad and fix it, instead of making the ad again from the brief."}
     - {name: "Meta Ads Manager", why: "Its previews show how the headline and main text are cut in each placement, so you can check the 27 characters."}
   inputs:
     - "A review export with dates and ratings from your store or review app, so each quote's source can be checked later"

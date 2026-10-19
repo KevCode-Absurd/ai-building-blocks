@@ -137,8 +137,8 @@ improve:
 
 works_best_with:
   tools:
-    - {name: "GPT Image 2.5", why: "Follows long, specific scene descriptions, which an unusual pairing like pens in a shaker needs."}
-    - {name: "Nano Banana Pro", why: "Follows named light and lens terms, which keeps an odd object looking like an ordinary phone photo."}
+    - {name: "GPT Image", why: "Follows long, specific scene descriptions, which an unusual pairing like pens in a shaker needs."}
+    - {name: "Nano Banana", why: "Follows named light and lens terms, which keeps an odd object looking like an ordinary phone photo."}
   inputs:
     - "A real photo of the odd thing if you or a customer has one, so the image tool can match it"
     - "Two or three reviews that mention what buyers did with the old thing, so the mismatch is one they lived"

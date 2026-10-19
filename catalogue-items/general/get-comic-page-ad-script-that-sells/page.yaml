@@ -174,7 +174,7 @@ improve:
 works_best_with:
   tools:
     - {name: "Any good chat AI", why: "The panel list is plain writing, so Claude, ChatGPT or Gemini all handle it well when you paste the skill."}
-    - {name: "Canva", why: "Sets captions in your own typeface and places your product photo as the last panel, so no lettering is left to the AI."}
+    - {name: "Canva", why: "Sets captions as real text and places your product photo as the last panel, so no lettering is left to the AI."}
   inputs:
     - "Five to ten buyer phrases from reviews about the old routine, so the captions sound like them"
     - "A photo of the product out of its pack and in a hand, so the drawn product matches its real size"

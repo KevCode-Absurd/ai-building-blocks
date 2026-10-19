@@ -184,7 +184,7 @@ improve:
 works_best_with:
   tools:
     - {name: "Claude", why: "Holds a long design system and section plan in one chat, and can turn the chosen direction into a working page to preview."}
-    - {name: "Figma Make", why: "Turns the build brief into an editable design, so you can compare directions before anyone codes."}
+    - {name: "Figma Make", why: "Turns the build brief into a working prototype you can tweak, so you can compare directions before anyone codes."}
     - {name: "WebAIM Contrast Checker", why: "A free check of each text and background pair in your colours, before and after the page is built."}
   inputs:
     - "Your colours as hex codes, each with its job, and your font files or names"

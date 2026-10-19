@@ -178,9 +178,9 @@ improve:
 
 works_best_with:
   tools:
-    - {name: "Veo 3.1", why: "Makes the motion between a start frame and an end frame you give it, with matching sound."}
-    - {name: "Kling 4.0", why: "Follows the motion from a start frame closely, which helps when testing several openings."}
-    - {name: "Nano Banana Pro", why: "Makes the product sheet and the start and end frames from your photos with real-looking light."}
+    - {name: "Veo", why: "Makes the motion between a start frame and an end frame you give it, with matching sound."}
+    - {name: "Kling", why: "Starts each clip from the start frame you choose, which helps when testing several openings."}
+    - {name: "Nano Banana", why: "Makes the product sheet and the start and end frames from your photos with real-looking light."}
   inputs:
     - "A still of your ad's first frame, so the end frame can match its place and light exactly"
     - "A phone clip of the product being opened or poured, so the motion and its timing come from real life"

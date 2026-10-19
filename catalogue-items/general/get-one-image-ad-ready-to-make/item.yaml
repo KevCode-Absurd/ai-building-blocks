@@ -1,7 +1,7 @@
 slug: get-one-image-ad-ready-to-make
 renamed_from: static-ad-copy-and-layout-planner
 name: "Get one image ad ready to make"
-summary: "One image ad planned end to end, from the one thing it argues to the feed copy and an image prompt."
+summary: "One image ad planned end to end: the one thing it argues, the ad type and layout, the words and an image prompt."
 category: general
 boards: [ecommerce]
 type: skill
@@ -17,15 +17,21 @@ inputs:
     required: true
   - type: angle_library
     required: false
+  - type: script
+    required: false
+  - type: brief
+    required: false
+  - type: product_photos
+    required: false
 outputs:
   - {type: ad_copy}
   - {type: image_prompt}
-uses: [get-headlines-strangers-understand-at-a-glance, get-an-ad-where-every-line-sells]
+uses: [get-headlines-strangers-understand-at-a-glance, edit-a-draft-so-it-sells, find-image-ad-types-worth-testing-next]
 example: ad-layout
 origin: rebuilt
-source_ids: [CES-044, CES-045]
-old_name: image ad copy and layout planner
-version: 2.0.0
+source_ids: [CES-044, CES-045, CES-122, CES-087]
+old_name: image ad copy, layout and reading order planner
+version: 3.0.0
 credits:
   - {title: "Facebook Feed image ad specs", by: "Meta Ads Guide", url: "https://www.facebook.com/business/ads-guide/update/image/facebook-feed", used: "4:5 at 1440 x 1800, 50 to 150 characters of main text, 27-character headline"}
   - {title: "Instagram Feed image ad specs", by: "Meta Ads Guide", url: "https://www.facebook.com/business/ads-guide/update/image/instagram-feed", used: "125 characters of main text and a 40-character headline"}
@@ -37,3 +43,9 @@ credits:
   - {title: "Nano Banana Pro", by: "Google", url: "https://blog.google/technology/ai/nano-banana-pro/", used: "up to 14 reference images and legible text, for the image prompt"}
   - {title: "gpt-image-2 model page", by: "OpenAI", url: "https://developers.openai.com/api/docs/models/gpt-image-2", used: "image inputs and part edits, for the image prompt"}
   - {title: "Advertising FAQ's: A Guide for Small Business", by: "Federal Trade Commission", url: "https://www.ftc.gov/business-guidance/resources/advertising-faqs-guide-small-business", used: "claims need objective proof; endorsements must be honest; comparisons must be true"}
+  - {title: "Attention Capture and Transfer in Advertising: Brand, Pictorial, and Text-Size Effects", by: "Rik Pieters and Michel Wedel, Journal of Marketing", url: "https://doi.org/10.1509/jmkg.68.2.36.27794", used: "The picture draws the eye whatever its size; text needs size, so the reading order"}
+  - {title: "How many words do we read per minute? A review and meta-analysis of reading rate", by: "Marc Brysbaert", url: "https://doi.org/10.1016/j.jml.2019.104047", used: "238 words a minute, so the 7-word headline"}
+  - {title: "The magical number 4 in short-term memory", by: "Nelson Cowan", url: "https://pubmed.ncbi.nlm.nih.gov/11515286/", used: "about 4 things held at once, so a headline plus 3 other things to read"}
+  - {title: "Meta Andromeda and Creative Diversification: 7 Examples Explained", by: "Jon Loomer", url: "https://www.jonloomer.com/meta-andromeda-creative-diversification/", used: "near-copies add little, so ads in a batch differ in type or argument"}
+  - {title: "How To Write Meta Ads That Scale: Copywriting Masterclass", by: "Blue Sense Digital", url: "https://www.youtube.com/watch?v=LoL1w-k9Mgg", used: "Keeping a script's argument in order in the feed copy"}
+  - {title: "Typography, Human Interface Guidelines", by: "Apple", url: "https://developer.apple.com/design/human-interface-guidelines/typography", used: "11 pt smallest readable size, so the type floor"}

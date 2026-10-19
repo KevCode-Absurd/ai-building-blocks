@@ -175,8 +175,8 @@ improve:
 
 works_best_with:
   tools:
-    - {name: "Nano Banana Pro", why: "Takes several product photos plus up to 3 style references, and is Google's pick for brand consistency."}
-    - {name: "GPT Image 2.5", why: "Keeps the product closer to your photos than older versions, and lets you point at one detail to fix it."}
+    - {name: "Nano Banana", why: "Takes several product photos plus up to 3 style references, and is Google's pick for brand consistency."}
+    - {name: "GPT Image", why: "Keeps the product close to your photos, and lets you point at one detail to fix it."}
   inputs:
     - "A flat, straight-on photo of the label, so printed words can be checked letter by letter"
     - "Product photos past customers liked, so the look starts from what already works for you"

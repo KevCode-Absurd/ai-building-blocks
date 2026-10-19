@@ -205,7 +205,7 @@ improve:
 works_best_with:
   tools:
     - {name: "Claude", why: "Keeps every review number and quote straight across four steps and a long story."}
-    - {name: "Nano Banana Pro", why: "Draws words in a picture accurately, which a note or message picture needs."}
+    - {name: "Nano Banana", why: "Draws words in a picture accurately, which a note or message picture needs."}
     - {name: "Meta Ads Manager", why: "Sets the 18+ age and countries the rules check asks for, and previews the ad in the feed."}
   inputs:
     - "Three-star reviews and cancel reasons, so the doubt part uses real words"

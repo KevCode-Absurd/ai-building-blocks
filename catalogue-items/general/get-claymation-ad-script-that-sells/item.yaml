@@ -8,6 +8,7 @@ type: skill
 role: make
 job: video
 level: intermediate
+twin: show-what-your-product-changes-in-a-clay-scene
 inputs:
   - {type: brief, required: true}
   - {type: brand_brain, required: true}

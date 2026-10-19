@@ -157,8 +157,8 @@ improve:
 
 works_best_with:
   tools:
-    - {name: "Nano Banana Pro", why: "Takes up to 5 character references, so the approved person still looks like themselves from above."}
-    - {name: "GPT Image 2.5", why: "Holds small edits across several rounds, which suits 'change only the hair' requests."}
+    - {name: "Nano Banana", why: "Takes up to 5 character references, so the approved person still looks like themselves from above."}
+    - {name: "GPT Image", why: "Holds small edits across several rounds, which suits 'change only the hair' requests."}
   inputs:
     - "Several photos of the approved person from different angles, so the face holds at close range"
     - "A photo of the real surface (a bed, a rug, grass), so the hair and texture around the head look real"

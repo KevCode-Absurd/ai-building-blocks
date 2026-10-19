@@ -152,8 +152,8 @@ improve:
 
 works_best_with:
   tools:
-    - {name: "GPT Image 2.5", why: "Follows detailed placement of small objects on a table, and keeps print soft when you ask."}
-    - {name: "Nano Banana Pro", why: "Follows named light such as 'overhead kitchen light, early evening' for a calm, ordinary scene."}
+    - {name: "GPT Image", why: "Follows detailed placement of small objects on a table, and keeps print soft when you ask."}
+    - {name: "Nano Banana", why: "Follows named light such as 'overhead kitchen light, early evening' for a calm, ordinary scene."}
     - {name: "Any good chat AI", why: "The gate and the brief work the same in any strong chat AI."}
   inputs:
     - "Support emails or reviews where buyers describe what they're afraid of, so the fear is theirs and sourced"

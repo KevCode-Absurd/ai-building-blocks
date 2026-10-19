@@ -143,7 +143,7 @@ improve:
 works_best_with:
   tools:
     - {name: "Your phone camera and a marker", why: "A note you write and photograph yourself looks real because it is, and costs nothing."}
-    - {name: "Nano Banana Pro", why: "Google recommends its Gemini 3 Pro Image model for accurate text, so a generated note is more likely to be spelled right."}
+    - {name: "Nano Banana", why: "Google recommends it for accurate text, so a generated note is more likely to be spelled right."}
     - {name: "Your phone's photo editor", why: "Lets you write the words by hand on a photo with a blank note, if the image tool misspells them."}
   inputs:
     - "Photos of notes customers have really stuck up, shared with permission, so the words and places are theirs"

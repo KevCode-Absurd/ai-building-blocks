@@ -9,6 +9,7 @@
 - A studio shot can't tell you how the product looks held, worn or on a table. An In use ad needs a photo of real use.
 - Put each generated image beside its reference photo and zoom in before it passes. Same product, or it fails.
 - The offer type uses the live offer, word for word. With no live offer, pick another type.
+- A comparison layout sets your product against the usual kind of thing, unbranded. A row you can't fill for both sides, from a source, in the same unit, is dropped, never left blank or crossed out. Rival prices and guarantees carry the date you checked them.
 - Press and award layouts need a placement you hold. Otherwise switch to Their words or Look inside.
 
 ## Limits

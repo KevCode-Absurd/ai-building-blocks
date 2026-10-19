@@ -1,65 +1,71 @@
 new_slug: stop-image-tools-redrawing-your-product-and-words
 name: "Stop image tools changing your product and words"
-summary: "Give it your approved ad plan and photos. You get one short prompt that keeps your product and words exact."
+summary: "Give it your approved ad and photos. You get a prompt that keeps your product and words exact."
 job: make-image-ads
 
 headline: "Stop image tools changing your product and words"
-subhead: Give it the approved scene, layout and words for one ad, plus your product facts and reference photos. It sorts the brief into keep, translate and drop, names each photo's role, and writes the prompt in five blocks with your product's details repeated word for word.
+subhead: Give it the approved scene, layout and words for one ad, plus your product facts and photos. It gives each photo a role, plans the light, camera and hands, writes the prompt with your product's details word for word, then checks the first image against your photos.
 
 explain: |
-  By the time an ad is approved, the brief around it is long: research notes, rejected versions, three ways to say "bright", and a brand file the image tool doesn't need. Paste all of that in and the tool drifts. It mixes in the rejected idea, misses the rule in paragraph six, or swaps your pack for an easier one to draw.
+  Describe your product to an image tool and you get something close to it, but wrong: the wrong colour, a hand over the name, a pack that opens where it doesn't. By the time an ad is approved, the brief around it is long too, and the tool drifts. It mixes in the rejected idea, misses the rule in paragraph six, or swaps your pack for an easier one to draw.
 
-  This skill follows what the model makers' own guides advise. It sorts the brief into what to keep, what to translate into things a camera can see, and what to drop. It names every attached photo's role in one line. It writes the prompt in five blocks with the most important first: use and shape, the subject with your product's lock lines word for word, the place, the camera and light, and the exact words in quotes. It ends with one line saying what must not change, and it fits the wording to the model you use.
+  This prompt follows what the model makers' own guides advise. It sorts the brief into what to keep, what to turn into things a camera can see, and what to drop. It gives every photo one role and fixes the few lock lines that describe your product. It plans the light, a real camera position, which hand holds what, and the words. The prompt runs in five blocks with the most important first and ends with one line saying what must not change. Then you make one image, check it against your photos on six lines, and fix one thing at a time.
 
 when:
   - You have an approved ad and need the prompt for your image tool or an automated pipeline.
+  - Your AI images keep getting the product slightly wrong, and you're paying to redo them.
   - Your prompts have grown long and the images keep picking up old or rejected ideas.
-  - Your tool has a length limit and you need the prompt to fit without losing anything important.
 
 you_give:
   - The approved scene, layout and image shape (not the rejected ideas)
   - Your product facts, ideally the lock lines from your truth sheet
-  - Reference photos, each with what it's for
+  - Product photos, each with what it's for
   - The approved words, with where they sit and which is biggest (optional)
-  - Which image tool you use and any length limit (optional)
+  - Which image tool you use, its limits, and your mistakes list (optional)
 you_get:
   - One prompt in five blocks plus a keep line, with its character count
-  - A one-line role for every attached image
+  - A one-line role for every attached photo
+  - A six-line check for the first image, with failure notes for your mistakes list
   - A list of what was left out, and a MISSING line for any fact it needed
 
 how_to_use:
-  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Start a chat with the prompt. Open it if you added it to your AI, or copy it and paste it in.
   - Paste the approved ad, the exact words and the product facts. Rejected versions can stay in; they'll be dropped.
-  - Attach your reference photos and say what each one is for.
-  - Say which image tool you use and the image shape, such as 4:5.
-  - Paste the prompt into your image tool. For a fix, attach the picture and name the one change.
+  - Attach your product photos and say what each one is for.
+  - Say which image tool you use, the image shape and any length limit, such as "GPT Image, 4:5, 1,000 characters".
+  - Make one image only. Run the six checks on it, then ask for one fix at a time until it passes.
 
 how_it_works:
   - title: Sorts the brief
-    text: Keep the approved scene, words, product facts and rules. Translate labels like "premium" into things a camera sees. Drop notes and rejected ideas.
-  - title: Names each image's role
+    text: Keeps the approved scene, words, product facts and rules. Turns labels like "premium" into things a camera sees. Drops notes and rejected ideas.
+  - title: Gives each photo a role
     text: The real product, the logo, a person to keep, a scene to match, a layout for structure only, or a style for light only.
+  - title: Fixes the lock lines
+    text: Three to five short phrases for the details a model gets wrong first, repeated word for word in every prompt.
+  - title: Plans what's visible
+    text: Only actions your facts allow, light that matches the scene, a real camera position, which hand holds what, and approved words only.
   - title: Writes five blocks
-    text: Use and shape, the subject with your lock lines, place and layout, camera and light, then the exact words in quotes.
-  - title: Adds the keep line
-    text: One line at the end saying the product stays exactly as in the photo, with the lock lines repeated.
-  - title: Says what it wants
-    text: Writes "a plain unlabelled tub" instead of "no logo", since some models ignore or flip a "no".
+    text: Use and shape, the subject with your lock lines, place and layout, camera and light, the exact words in quotes, then a keep line.
   - title: Fits the model
-    text: Full sentences for chat-based tools, subject first and no negatives for FLUX.2, and never cuts a lock line to fit a limit.
+    text: Full sentences for chat-based tools, subject first and no negatives for FLUX, and never cuts a lock line to fit a limit.
+  - title: Checks and fixes
+    text: Six pass-or-fail lines against your photos on the first image, then one change at a time with everything else kept.
 
 output_shape: |
   PROMPT (<characters>)
   1 Use and shape:   <...>
   2 Subject:         <product, action, lock lines, size, hands>
   3 Place:           <where, what's around, layout>
-  4 Camera, light:   <distance, angle, lens, light, finish>
+  4 Camera, light:   <position, distance, light direction, finish>
   5 Words:           "<exact words>", <place, size, look, colour>
   Keep:              <product exactly as Image n: lock lines>
 
   IMAGES     Image 1 = <role>; Image 2 = <role>; ...
   LEFT OUT   <what was dropped and why>
-  MISSING    <image role | product fact | approved words>
+  CHECK THE FIRST IMAGE (pass or fail)
+  [ ] <product, words, action, hands, light, camera>
+  FAILURE NOTE  Asked: <...>. Got: <...>.
+  MISSING    <photo role | product fact | approved words | price>
 
 example:
   business: sprout
@@ -70,7 +76,7 @@ example:
     a daily pack across the top and pours the gummies into the other
     palm. The Sprout Original pouch stands behind, label to camera.
     Approved text: "Rip. Tip. Enjoy." top left, forest green #00582D.
-    Size: 4:5. Tool: GPT Image 2.5. Prompt limit: 1,000 characters.
+    Size: 4:5. Tool: GPT Image. Prompt limit: 1,000 characters.
 
     Images: 1 = adult pouch, front on. 2 = a daily pack, torn across
     the top. 3 = layout sketch (headline box says "HEADLINE HERE").
@@ -86,24 +92,26 @@ example:
     tried "Tear. Pour. Done." Make it pop, really bright, vibrant,
     super bright and fun.
   output: |
-    PROMPT (947 characters)
+    PROMPT (995 characters)
     1 Use and shape:  A 4:5 photo for a social ad.
     2 Subject:        An adult's left hand holds the daily pack from
-                      Image 2, torn straight across the top only, and
-                      tips a small handful of small opaque deep-green
-                      bears, soft matte, into the right palm. Behind
-                      it stands the closed pouch from Image 1, label to
-                      camera: glossy deep green stand-up foil pouch;
-                      big yellow wordmark, yellow bear face top right;
-                      "28 Daily Packs" at the bottom.
+                      Image 2 by its lower half, torn straight across
+                      the top only, and tips a small handful of small
+                      opaque deep-green bears, soft matte, into the
+                      right palm. Fingers stay clear of the print.
+                      Behind, the closed pouch from Image 1 stands on
+                      the counter, label to camera: glossy deep green
+                      stand-up foil pouch; big yellow wordmark, yellow
+                      bear face top right; "28 Daily Packs" at the
+                      bottom.
     3 Place:          A white kitchen counter. Hands lower middle,
                       pouch behind at right, clear space top left.
                       Image 3 sets the structure only.
-    4 Camera, light:  Eye level, close. Bright window sun, warm and
-                      saturated, glossy foil catching the light,
-                      cheerful and candy-like.
-    5 Words:          "Rip. Tip. Enjoy." once, top left, bold rounded
-                      sans-serif, colour #00582D.
+    4 Camera, light:  Counter height, about 40 cm away. Bright window
+                      sun from the left, soft contact shadows, warm
+                      saturated colour.
+    5 Words:          "Rip. Tip. Enjoy." top left, bold sans-serif,
+                      colour #00582D.
     Keep:             Keep both packs exactly as in Images 1 and 2,
                       label as printed: glossy deep green stand-up foil
                       pouch; big yellow wordmark, yellow bear face top
@@ -115,50 +123,68 @@ example:
                only.
     LEFT OUT   The shaker version and "Tear. Pour. Done." (rejected),
                "HEADLINE HERE" (placeholder), "pop, vibrant, super
-               bright" (translated into warm saturated morning sun),
-               "never clinical" (covered by the counter and sun).
+               bright, fun" (turned into window sun and warm saturated
+               colour), "never clinical" (covered by the counter and
+               sun). Cut to fit 1,000: "cheerful", a second mention of
+               the foil's shine.
+
+    CHECK THE FIRST IMAGE (pass or fail)
+    [ ] Pouch and daily pack match Images 1 and 2: shape, green,
+        yellow wordmark, bear face, "28 Daily Packs"
+    [ ] Only "Rip. Tip. Enjoy." and the packs' print, spelt right
+    [ ] Daily pack torn straight across the top, gummies coming out
+        there; pouch closed
+    [ ] Two whole hands, a grip a real hand can make, no finger on
+        the print
+    [ ] Sun from the left, shadows under the hands and pouch, pouch
+        standing on the counter
+    [ ] Camera at counter height, close
+    FAILURE NOTE  One line per failure for the mistakes list.
+                  Asked: <what the prompt said>. Got: <what came back>.
+
     MISSING    How many gummies are in an adult pack. Kept as "a small
-               handful", with no count.
+               handful", with no count. Price per image: not given.
 
 tweaks:
   - what: Words added later
     how: Say the words will go on in a design tool. Block 5 then asks for clear empty space where they'll go, and no words.
   - what: A length limit
     how: Give your tool's limit. It cuts leftovers first and never a lock line, a word or a rule. If it still won't fit, it says so.
-  - what: A set of ads
-    how: Run it for each ad in a set. The lock lines repeat in the same words every time, so the pack doesn't drift between images.
+  - what: Your mistakes list
+    how: Paste it in. Each old failure becomes a rule in the right step, such as "no finger on the label" under hands.
   - what: A fix
-    how: Attach the approved picture and name the one thing to change. The prompt asks for that change, repeats the keep line and keeps everything else the same.
+    how: Attach the last good picture and name the one thing to change. The prompt asks for that change, repeats the keep line and keeps everything else the same.
 
 judge:
   - Every attached photo has one stated role.
   - Your lock lines appear word for word, and the pack hasn't been swapped or simplified.
   - Approved words appear once, in quotes, with their place, or the prompt asks for clear space.
   - No rejected idea, research note or placeholder made it into the prompt.
-  - The prompt says what it wants, with no pile of "no" lines.
+  - The camera is a real position, and the hands say which one holds what.
+  - Anything it couldn't know is marked MISSING, and the product is shown closed until you answer.
 
 test:
   - Paste your full brief, rejected versions and all. Search the prompt for any word from a rejected version. If one is there, it leaked.
   - Run it twice on the same approved ad. The subject block and keep line should match word for word.
-  - Give it your tool's length limit and check what was cut. Lock lines and rules should survive; repeated adjectives should go.
-  - Make the image and compare the pack with your real photo at full size, checking colour, quantity and how it opens.
+  - Leave out how your product opens. It should write MISSING and keep the product closed, not guess an opening.
+  - Make the image and run the six checks with your real photo beside it at full size. If it passes a line you'd fail, add that rule to your mistakes list.
 
 improve:
   - Keep your product's lock lines in your brand file, so every prompt in a set uses the same words.
   - Add how the product opens and is held to your lock lines (for Sprout, the daily pack tears straight across the top), so it's never guessed.
-  - Write your usual image tool and its limit into "What you need", so it fits that tool every time.
-  - Pair it with the truth sheet skill, which writes the lock lines, and with the skill that finds flaws in finished image ads before launch.
+  - Write your usual image tool, its limits and its price per image into "What you need", so it fits that tool every time.
+  - Pair it with the truth sheet skill, which writes the lock lines, and with the skill that turns each failure note into a rule.
 
 works_best_with:
   tools:
-    - {name: "GPT Image 2.5", why: "Takes several labelled reference images and follows exact quoted words for headlines."}
-    - {name: "Nano Banana Pro", why: "Mixes many reference images and is Google's pick for assets where the text must be right."}
-    - {name: "FLUX.2", why: "Gives tight control when the prompt leads with the subject and ties each hex colour to one object."}
+    - {name: "GPT Image", why: "Takes several labelled reference images and follows exact quoted words for headlines and labels."}
+    - {name: "Nano Banana", why: "Mixes many reference images and keeps the pack's shape across new scenes."}
+    - {name: "FLUX", why: "Gives tight control when the prompt leads with the subject and ties each hex colour to one object."}
   inputs:
     - "The lock lines from your truth sheet, so the product's details repeat word for word"
-    - "A sharp front-on photo of the real pack and one of it in use, labelled by role"
+    - "Five plain photos (front as sold, out of the pack, in a hand, in use, close-up), labelled by role"
     - "Your exact brand colours as hex codes and the name of your headline font"
-    - "The approved picture from the last round, so a fix starts from it"
+    - "Your mistakes list from past AI jobs, so known faults are planned out from the start"
 
 terms:
   - term: Reference photo
@@ -167,3 +193,5 @@ terms:
     meaning: The few visible product details every prompt repeats word for word, so the product doesn't drift.
   - term: Placeholder
     meaning: Stand-in text in a layout sketch, such as "HEADLINE HERE", that marks where real words will go.
+  - term: Upscale
+    meaning: Making a finished image bigger and sharper without changing what's in it.

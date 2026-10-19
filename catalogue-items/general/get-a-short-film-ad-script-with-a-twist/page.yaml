@@ -173,7 +173,7 @@ improve:
 works_best_with:
   tools:
     - {name: "Claude", why: "Keeps shot lengths adding up to your total and every line labelled across a long shot table."}
-    - {name: "Kling 4.0", why: "Makes long clips with several cuts and spoken lines, so a whole beat can be one clip."}
+    - {name: "Kling", why: "Makes clips up to 15 seconds with several shots and spoken lines, so a whole beat can be one clip."}
   inputs:
     - "Photos of the product from the front, side and top, so the payoff shot shows the real pack"
     - "Objects from your buyer's old way, such as the tub they gave up on, so the script has something to plant"

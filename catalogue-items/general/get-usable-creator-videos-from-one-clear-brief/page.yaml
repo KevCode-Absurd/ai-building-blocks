@@ -17,7 +17,7 @@ when:
   - You want to be sure nobody is asked to claim a result they didn't have.
 
 you_give:
-  - The approved script (the openings chosen, talking points, the proof moment, facts allowed, the pointer line)
+  - The approved script (the openings chosen, talking points, the proof moment, facts allowed, the hand-off line)
   - What you need delivered (length, shape, raw files, deadline, how it will be used)
   - How the product is opened, held and used
   - Words and claims they must never say
@@ -83,7 +83,7 @@ example:
     B "If your greens powder lives at the back of the cupboard, watch
        this."
     Talking points: what you took before | one pack, the label, tear,
-    tip | what you noticed | pointer: first order $29.99 with the text
+    tip | what you noticed | hand-off: first order $29.99 with the text
     sign-up, then $49.99 every 4 weeks.
     Proof moment: the pack's label held to the lens.
     Facts allowed: 21 vitamins and minerals and 6 g of fiber in one
@@ -160,7 +160,7 @@ tweaks:
   - what: Delivery needs
     how: Give the length, shape (9:16, 4:5), deadline and how it will be used. Anything missing becomes a [CONFIRM] at the top, and the skill never borrows numbers from another brief.
   - what: Your voice
-    how: Paste your brand voice and it adjusts the wording of the openings and the pointer, while still telling the creator to use their own words.
+    how: Paste your brand voice and it adjusts the wording of the openings and the hand-off, while still telling the creator to use their own words.
 
 judge:
   - Every spoken line in the brief is from the approved script or is a [blank] for their own detail.
@@ -181,7 +181,7 @@ improve:
   - Add your standard usage terms and channels to step 1 once you've agreed them, so [CONFIRM] lines only appear when something is new.
   - Keep your never-say list in your brand file and paste it in every time. Add any line creators tell you they wouldn't say.
   - Ask the creator to film both openings, so one shoot gives you two ads to test.
-  - Pair it with the skill that writes the approved phone video script first.
+  - Pair it with the skill that writes the approved selfie-style script first.
 
 works_best_with:
   tools:
@@ -189,7 +189,7 @@ works_best_with:
   inputs:
     - "A sample video you like, with notes on what to match (light, framing), so the creator sees the target"
     - "Links to the creator's own past videos, so the brief fits how they already film"
-    - "The offer code and pointer line exactly as they will appear, so nothing is misread"
+    - "The offer code and hand-off line exactly as they will appear, so nothing is misread"
 
 terms:
   - term: Talking point

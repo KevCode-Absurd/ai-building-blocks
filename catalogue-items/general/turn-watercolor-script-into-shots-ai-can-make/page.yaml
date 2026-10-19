@@ -179,10 +179,10 @@ improve:
 
 works_best_with:
   tools:
-    - {name: "Nano Banana 2.1", why: "Takes up to 14 reference images and keeps up to four characters the same, so your sheets and frames match."}
-    - {name: "Veo 3.1", why: "Starts each clip from your approved frame and can end on a second frame, in 8-second clips."}
-    - {name: "Kling 4.0", why: "Takes up to 10 reference images in one job, so figures and product stay the same from shot to shot."}
-    - {name: "ElevenLabs Eleven v4", why: "Reads the narration in a stock voice from its library, with tags for pauses and pace."}
+    - {name: "Nano Banana", why: "Takes up to 14 reference images and keeps up to four characters the same, so your sheets and frames match."}
+    - {name: "Veo", why: "Starts each clip from your approved frame and can end on a second frame, in 8-second clips."}
+    - {name: "Kling", why: "Takes up to 7 reference images in one video job, so figures and product stay the same from shot to shot."}
+    - {name: "ElevenLabs", why: "Reads the narration in a stock voice from its library, with tags for pauses and pace."}
   inputs:
     - "A scan of a real watercolor you like, attached as a style reference, so edges and paper look painted"
     - "The flat label artwork, so the label you put back in editing matches the pack exactly"

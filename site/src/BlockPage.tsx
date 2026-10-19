@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import { ArrowIcon, BlockCard, KitMenu } from "./ui";
-import { type Catalogue, type Page, cap, kindInfo, kindOf, loadPage, loadSkillText, neighbours, pathOf, taskOf, testedOn, wireSteps } from "./lib/data";
+import { type Catalogue, type Page, cap, formatOf, kindInfo, kindOf, loadPage, loadSkillText, neighbours, pathOf, taskOf, testedOn, wireSteps } from "./lib/data";
 import { markViewed } from "./lib/store";
 import { buildHandoffZip, download, finalOutputs, needsOf, orderFlow, zipName } from "./lib/handoff";
 import { businessText, getBusiness, hasBusiness, useBusiness, withBusiness } from "./lib/business";
@@ -127,6 +127,8 @@ export default function BlockPage({ c, slug, toast, toBuilder }: Props) {
 
   const kind = kindInfo(b);
   const task = taskOf(b);
+  const format = formatOf(b);
+  const twin = b.twin ? c.bySlug[b.twin] : null;
   const isFlow = kindOf(b) === "workflow" && b.steps.length > 0;
   const p = page ?? null;
   const give = p?.you_give?.length ? p.you_give : b.inputs.map((x) => x.type.replace(/_/g, " "));
@@ -175,6 +177,14 @@ export default function BlockPage({ c, slug, toast, toBuilder }: Props) {
         <p className="bp-kicker"><span className="kind">{kind.name}</span><Link to={`/?job=${task.id}#library`}>{task.name}</Link></p>
         <h1 className="bp-h1">{p?.headline || b.name}</h1>
         <p className="bp-sub">{p?.subhead || b.summary}</p>
+        {format && (
+          <p className="bp-format" data-testid="format-note">
+            <span className={`fmt fmt-${format}`}>{format === "image" ? "Image ad" : "Video ad"}</span>
+            {twin && formatOf(twin) && formatOf(twin) !== format
+              ? <>Want {format === "image" ? "a video" : "an image ad"} in the same look? <Link to={pathOf(twin)} data-testid="twin-link">{twin.name}</Link></>
+              : <>{format === "image" ? "Makes one still image ad, not a video." : "Makes a video ad, not a still."}</>}
+          </p>
+        )}
         <div className="bp-actions">
           {isFlow ? (
             <>

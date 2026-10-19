@@ -19,14 +19,17 @@ inputs:
     required: false
   - type: image_prompt
     required: false
+  - {type: brand_brain, required: false}
 outputs:
   - {type: audit_report}
 uses: [keep-facebook-from-blocking-your-ads]
 origin: rebuilt
-source_ids: [CES-026]
+source_ids: [CES-026, CES-085]
 old_name: creative-qa
-version: 2.0.0
+version: 2.1.0
 credits:
   - {title: "Instagram Reels video ads specs", by: "Meta Ads Guide", url: "https://www.facebook.com/business/ads-guide/update/video/instagram-reels", used: "9:16 size and the 14%, 35% and 6% safe zones"}
   - {title: "Instagram Feed image ads specs", by: "Meta Ads Guide", url: "https://www.facebook.com/business/ads-guide/update/image/instagram-feed", used: "4:5 size and the main text and headline lengths"}
   - {title: "The Checklist Manifesto: How to Get Things Right", by: "Atul Gawande", url: "https://atulgawande.com/book/the-checklist-manifesto/", used: "A short list of stop-ship items kept apart from the rest"}
+  - {title: "Federal Trade Commission Announces Final Rule Banning Fake Reviews and Testimonials", by: "US Federal Trade Commission", url: "https://www.ftc.gov/news-events/news/press-releases/2024/08/federal-trade-commission-announces-final-rule-banning-fake-reviews-testimonials", used: "Reviews and testimonials from people who don't exist, including AI-made ones, fail the facts check"}
+  - {title: "Meta Andromeda and Creative Diversification: 7 Examples Explained", by: "Jon Loomer", url: "https://www.jonloomer.com/meta-andromeda-creative-diversification/", used: "The versions check: near-identical visuals add little"}

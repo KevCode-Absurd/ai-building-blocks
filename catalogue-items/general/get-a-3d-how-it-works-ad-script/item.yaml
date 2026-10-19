@@ -8,6 +8,7 @@ type: skill
 role: make
 job: video
 level: advanced
+twin: show-how-your-product-works-in-a-3d-cutaway
 inputs:
   - {type: brief, required: true}
   - {type: brand_brain, required: true}

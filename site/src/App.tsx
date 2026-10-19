@@ -1,6 +1,6 @@
 import { Suspense, lazy, useCallback, useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import { ArrowIcon, BlockCard, Drawer, Logo, PixelIcon, SearchIcon, Select, ThemeToggle, Toast } from "./ui";
-import { type Block, type Catalogue, type Kind, BUSINESSES, FUNCTIONS, KINDS, LEVELS, TASKS, cap, functionsOf, kindOf, pathOf, taskOf, useCatalogue } from "./lib/data";
+import { type Block, type Catalogue, type Kind, BUSINESSES, FUNCTIONS, FUNCTION_MOVED, KINDS, LEVELS, TASKS, cap, functionsOf, kindOf, pathOf, taskOf, useCatalogue } from "./lib/data";
 import { kits, queueForCanvas, useStore } from "./lib/store";
 import { Link, navigate, setSearch, useLocation } from "./lib/router";
 import { BusinessDrawer, openBusiness, useBusinessOpener } from "./Business";
@@ -69,7 +69,8 @@ function Library({ c }: { c: Catalogue }) {
   const { search } = useLocation();
   const [f, setF] = useState<Filters>(() => {
     const task = TASKS.some((t) => t.id === search.get("job")) ? search.get("job")! : "";
-    const fn = FUNCTIONS.find((x) => x.id === search.get("fn"))?.id ?? (task ? FUNCTIONS.find((x) => x.tasks.includes(task))!.id : "");
+    const fnId = FUNCTION_MOVED[search.get("fn") ?? ""] ?? search.get("fn");
+    const fn = FUNCTIONS.find((x) => x.id === fnId)?.id ?? (task ? FUNCTIONS.find((x) => x.tasks.includes(task))!.id : "");
     const kind = KINDS.some((k) => k.id === search.get("kind")) ? (search.get("kind") as Kind) : "all";
     return { ...NONE, q: search.get("q") ?? "", fn, task, kind, level: search.get("level") ?? "", biz: search.get("biz") ?? "" };
   });

@@ -81,7 +81,7 @@ If the block has one, rewrite it in plain language too. It's the "For online sto
 
 ## item.yaml
 
-Don't edit its names or ports by hand. One field is written here on purpose: `credits`, a list of `{title, by, url, used}` for the public sources the block was built from (videos, articles, books, docs). It shows on the page as **Built with ideas from**. Never credit or name Ecommerce OS or a paid course; Blue Sense Digital's public masterclass is the one course-type source credited. The build reads `name`, `summary` and `job` from page.yaml, and the folder rename is done afterwards by `tools/apply-renames.mjs`.
+Don't edit its names or ports by hand. One field is written here on purpose: `credits`, a list of `{title, by, url, used}` for the public sources the block was built from (videos, articles, books, docs). It shows on the page as **Built with ideas from**. A second field, `twin`, names the block that makes the same look in the other format (a video script block names its image block). It is written on one side only; the build fills in the other, and the page shows "Image ad" or "Video ad" with a link to the twin. Never credit or name Ecommerce OS or a paid course; Blue Sense Digital's public masterclass is the one course-type source credited. The build reads `name`, `summary` and `job` from page.yaml, and the folder rename is done afterwards by `tools/apply-renames.mjs`.
 
 ## Writing it
 

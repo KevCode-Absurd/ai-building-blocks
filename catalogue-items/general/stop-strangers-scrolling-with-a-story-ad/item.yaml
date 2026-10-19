@@ -19,15 +19,19 @@ inputs:
     required: false
   - type: plan
     required: false
+  - type: brief
+    required: false
+  - type: brand_brain
+    required: false
 outputs:
   - {type: ad_copy}
   - {type: image_prompt}
 uses: [get-story-ads-read-with-the-right-picture, find-the-story-ad-worth-writing-first]
 example: native
 origin: rebuilt
-source_ids: [CES-048]
+source_ids: [CES-048, CES-053, CES-115]
 old_name: story ad for cold audiences
-version: 2.0.0
+version: 2.1.0
 credits:
   - {title: "Banner Blindness Revisited: Users Dodge Ads on Mobile and Desktop", by: "Kara Pernice, Nielsen Norman Group", url: "https://www.nngroup.com/articles/banner-blindness-old-and-new-findings/", used: "Why ad-looking pictures get skipped"}
   - {title: "The Role of Expectancy and Relevancy in Memory for Verbal and Visual Information: What Is Incongruency?", by: "Susan Heckler and Terry Childers, Journal of Consumer Research", url: "https://doi.org/10.1086/209275", used: "The stop check: unexpected and relevant together"}
@@ -37,3 +41,7 @@ credits:
   - {title: "Facebook Ads Guide: image ad specs", by: "Meta", url: "https://www.facebook.com/business/ads-guide/update/image", used: "27-character headline"}
   - {title: "How many words do we read per minute? A review and meta-analysis of reading rate", by: "Marc Brysbaert, Journal of Memory and Language", url: "https://doi.org/10.1016/j.jml.2019.104047", used: "Story length of about a minute's reading"}
   - {title: "Native Advertising: A Guide for Businesses", by: "US Federal Trade Commission", url: "https://www.ftc.gov/business-guidance/resources/native-advertising-guide-businesses", used: "Never posing as a publisher; the page shows who it's from"}
+  - {title: "Guides Concerning the Use of Endorsements and Testimonials in Advertising (16 CFR Part 255)", by: "US Federal Trade Commission", url: "https://www.law.cornell.edu/cfr/text/16/part-255", used: "A testimonial reflects a real person's real experience, so no made-up narrator"}
+  - {title: "Rule on the Use of Consumer Reviews and Testimonials, 16 CFR 465.2", by: "US Federal Trade Commission (2024)", url: "https://www.law.cornell.edu/cfr/text/16/465.2", used: "No testimony for someone who doesn't exist or didn't have the experience"}
+  - {title: "The role of transportation in the persuasiveness of public narratives", by: "Melanie C. Green and Timothy C. Brock, Journal of Personality and Social Psychology (2000)", url: "https://doi.org/10.1037/0022-3514.79.5.701", used: "Readers carried into a story are persuaded by it, so open on a moment and keep one voice to the end"}
+  - {title: "The emotional arcs of stories are dominated by six basic shapes", by: "Andrew J. Reagan, Lewis Mitchell, Dilan Kiley, Christopher M. Danforth and Peter Sheridan Dodds", url: "https://arxiv.org/abs/1606.07772", used: "Basic rise and fall shapes behind the five story shapes"}

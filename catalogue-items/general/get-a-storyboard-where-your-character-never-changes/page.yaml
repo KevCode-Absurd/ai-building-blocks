@@ -194,9 +194,9 @@ improve:
 
 works_best_with:
   tools:
-    - {name: "Nano Banana Pro", why: "Takes several character references at once, so sheets and frames keep the same face."}
-    - {name: "Kling 4.0", why: "Takes up to 10 images of the same person to keep them steady across scenes."}
-    - {name: "Veo 3.1", why: "Can start from a chosen frame and set the last frame, which helps cuts between shots match."}
+    - {name: "Nano Banana", why: "Takes several character references at once, so sheets and frames keep the same face."}
+    - {name: "Kling", why: "Its image model takes up to 10 pictures of the same person, so they stay steady across frames."}
+    - {name: "Veo", why: "Can start from a chosen frame and set the last frame, which helps cuts between shots match."}
   inputs:
     - "A voice recording of the script at real speed, so each shot's timing matches the read"
     - "A photo or sketch of each place from above, so the set sheet's layout and light are real"

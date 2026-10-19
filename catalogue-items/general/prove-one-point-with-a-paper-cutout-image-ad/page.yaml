@@ -161,8 +161,8 @@ improve:
 
 works_best_with:
   tools:
-    - {name: "Nano Banana 2.1", why: "Works from your product photo as a reference, so the cutout keeps your real pack."}
-    - {name: "GPT Image 2.5", why: "Lets you point at one piece to fix it without remaking the rest of the collage."}
+    - {name: "Nano Banana", why: "Works from your product photo as a reference, so the cutout keeps your real pack."}
+    - {name: "GPT Image", why: "Lets you point at one piece to fix it without remaking the rest of the collage."}
     - {name: "Canva or Figma", why: "Set the headline and labels in your brand fonts on top of the image, so every letter is exact."}
   inputs:
     - "Product photos on a plain background, so the cutout is clean"

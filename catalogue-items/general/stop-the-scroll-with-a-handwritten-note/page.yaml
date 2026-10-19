@@ -151,7 +151,7 @@ improve:
 works_best_with:
   tools:
     - {name: "Any phone camera", why: "Photographing a note you really wrote gets every letter right and looks like a post, because it is one."}
-    - {name: "GPT Image 2.5", why: "The fallback when you can't write it yourself. It renders short quoted text better than older models, but still check each letter."}
+    - {name: "GPT Image", why: "The fallback when you can't write it yourself. It renders short quoted text better than older models, but still check each letter."}
   inputs:
     - "The pen and paper the brief names, such as a used envelope or a notebook page, so the photo looks lived in"
     - "Five reviews in your buyers' own words, so any written line sounds like them"

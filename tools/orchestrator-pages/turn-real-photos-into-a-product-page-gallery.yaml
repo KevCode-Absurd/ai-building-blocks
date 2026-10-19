@@ -194,8 +194,8 @@ improve:
 works_best_with:
   tools:
     - {name: "Claude", why: "Keeps track of a long run with two stops for your OK, and holds every fact and source."}
-    - {name: "Nano Banana Pro", why: "Takes many reference photos at once and handles shiny packs such as foil pouches."}
-    - {name: "GPT Image 2.5", why: "Lets you point at one word or part of an image and fix it, which suits the one-change remake rule."}
+    - {name: "Nano Banana", why: "Takes many reference photos at once and handles shiny packs such as foil pouches."}
+    - {name: "GPT Image", why: "Lets you point at one word or part of an image and fix it, which suits the one-change remake rule."}
     - {name: "Figma", why: "Sets ingredient panels and small print as real type, so no word gets redrawn."}
   inputs:
     - "A photo of one daily pack, or one unit, whole and opened, so the how-to-use image can be made"

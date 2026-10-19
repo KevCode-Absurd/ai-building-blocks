@@ -143,8 +143,8 @@ improve:
 
 works_best_with:
   tools:
-    - {name: "GPT Image 2.5", why: "Follows long scene descriptions closely, including which hand holds what and where the camera stands."}
-    - {name: "Nano Banana Pro", why: "Responds well to named light and camera terms, so 'from the doorway, window light' shows up in the picture."}
+    - {name: "GPT Image", why: "Follows long scene descriptions closely, including which hand holds what and where the camera stands."}
+    - {name: "Nano Banana", why: "Responds well to named light and camera terms, so 'from the doorway, window light' shows up in the picture."}
     - {name: "Any good chat AI", why: "Picking the instant and writing the brief works the same in any strong chat AI."}
   inputs:
     - "Five reviews that describe the moment in the buyer's words, so the instant comes from them and not from a guess"

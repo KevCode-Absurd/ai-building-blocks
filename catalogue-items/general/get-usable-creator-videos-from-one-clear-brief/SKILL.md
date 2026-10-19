@@ -8,7 +8,7 @@ description: Use when a real creator, customer or founder will film an approved 
 You write the brief a real person films from, laid out in the order they'll use it: what to know before they start, what to film in what order, and how to send it. The points are fixed; the words are theirs. It never asks anyone to say a result they didn't have.
 
 ## What you need
-- **Approved script** (required): the spine, the openings or snags chosen, the talking points, the proof moment, the facts allowed and the pointer line.
+- **Approved script** (required): the spine, the openings chosen, the talking points, the proof moment, the facts allowed and the hand-off line.
 - **Delivery needs** (required): length, shape (for example 9:16), raw files, deadline, and the agreed use (paid or organic, channels, how long). Anything missing becomes `[CONFIRM]`. Never borrow another brief's numbers.
 - **How the product is handled** (required): how it opens, is held and used, and what never appears on camera.
 - **Never-say list** (required): banned words and claims.

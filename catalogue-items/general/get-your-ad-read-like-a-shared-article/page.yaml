@@ -152,8 +152,8 @@ improve:
 
 works_best_with:
   tools:
-    - {name: "GPT Image 2.5", why: "Spells a short line on a photo better than older models, and you can point at one wrong word to fix it."}
-    - {name: "Nano Banana 2.1", why: "Google's main image model, with better text on images and steady results across follow-up edits."}
+    - {name: "GPT Image", why: "Spells a short line on a photo better than older models, and you can point at one wrong word to fix it."}
+    - {name: "Nano Banana", why: "Google's main image model, with better text on images and steady results across follow-up edits."}
   inputs:
     - "A phone screenshot of your page's first screen, so the scent check compares what buyers see"
     - "Two or three real photos of the room where the problem happens, so the scene looks like your buyers' homes"

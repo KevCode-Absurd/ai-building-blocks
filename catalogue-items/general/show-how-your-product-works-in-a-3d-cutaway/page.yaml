@@ -162,8 +162,8 @@ improve:
 
 works_best_with:
   tools:
-    - {name: "Nano Banana 2.1", why: "Follows a detailed scene description well and keeps the parts' colours steady across retries."}
-    - {name: "GPT Image 2.5", why: "Lets you point at one part to fix it without remaking the rest of the cutaway."}
+    - {name: "Nano Banana", why: "Follows a detailed scene description well and keeps the parts' colours steady across retries."}
+    - {name: "GPT Image", why: "Lets you point at one part to fix it without remaking the rest of the cutaway."}
     - {name: "Canva or Figma", why: "Sets the headline, callout labels and your product photo on top, so every word is exact."}
   inputs:
     - "Diagrams or microscope images from your supplier or a published study, so the parts look like the real thing"

@@ -1,70 +1,77 @@
 new_slug: get-selfie-style-ad-script-that-sounds-human
 name: "A selfie-style ad that sounds like a real person"
-summary: "Give it your buyer's doubt and your claims. You get a timed phone-style script that answers the doubt honestly."
+summary: "Give it your buyer's doubt and your facts. You get a timed phone-style script, a shot list and two other openings."
 job: make-video-ads
 
 headline: "A selfie-style ad that sounds like a real person"
-subhead: Give it your buyer's doubt, your facts and who will be on camera. You get a 15 to 60 second script in five timed beats, where every claim has a source, plus a note on who should carry it.
+subhead: Give it your buyer's doubt, your product facts and who will be on camera. You get a 15 to 60 second script in five timed beats, with a source for every claim, a shot list, two other openings and a note on who should carry it.
 
 explain: |
   A video that looks filmed on someone's phone gets watched like a friend's post. Then one line gives it away. A hype word, three numbers in a row, or a pack held up beside a grin, and people scroll on. If the person on screen was made by AI, a line like "this worked for me" is also untrue, and ad rules say a fake customer must be labelled as one.
 
-  So this skill decides who is talking before it writes anything. A real creator speaks for themselves, with blanks left for the details only they know. An AI presenter talks to "you", shares what they've noticed, or quotes real customers word for word. Then it writes five beats: a hook, the doubt, the product shown in a hand, a result that claims less than it could, and a friendly hand-off. One detail carries the ad, and the word count is set to fit the length.
+  So this skill decides who is talking before it writes anything. Then it writes the story in one line: what was going on, the snag that got in the way, and what they did. It opens on that snag and spends most of the time on the product in a hand, in the order it's really used, with one fact you can see, like the label held to the lens. The length comes from the real use steps and a word count, so it's never squeezed or padded. You also get a shot list, delivery notes and two other ways in to test.
 
 when:
   - You want an ad that feels like a post, filmed by a creator or made with an AI presenter.
-  - Your buyers have one doubt that seeing the product in a hand can settle.
-  - You want a script that a made-up AI presenter can say without pretending to be a customer.
+  - Your current phone-style ads sound read, not said.
+  - Your buyers have one doubt, such as "is this just candy?", that seeing the product in a hand can settle.
 
 you_give:
-  - Why people buy and how much your buyer knows already
-  - Real creator or AI presenter, and the length
+  - Why people buy, how much your buyer knows already, and the length if you have one
+  - Who is on camera (a real creator, a founder or customer on their own footage, or an AI presenter)
   - Your buyer's doubt, their moment and their own words, with quotes and sources
-  - How the product opens and is used, and any result you can see
-  - Your approved and banned claims, never-say list and current offer
+  - How the product opens and is used, step by step, its handling rules and any result you can see
+  - Your approved and banned claims, never-say list and the offer exactly as you state it
 you_get:
-  - A five-beat script with what's said, on-screen text and a picture note for each beat
-  - The one detail that carries the ad, its source, and a word count that fits the length
-  - A cast note on who should carry the ad, and why
-  - Every claim, number and quote listed with its source, plus the AI label line
+  - The story in one line, then a five-beat script with what's said, on-screen text and a picture note per beat
+  - The one detail that carries the ad, the length worked out from the steps, and a word count that fits it
+  - A shot list saying which hand holds what, delivery notes and two other openings
+  - A cast note on who should carry the ad and where the script goes next, plus every claim with its source
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Paste your product facts, claims and a few real reviews.
-  - Say what you want, for example "video, 30 seconds, AI presenter".
+  - Paste your product facts, how it's used step by step, your claims and a few real reviews.
+  - Say who will be on camera and the length, for example "AI presenter, about 30 seconds".
   - Name the doubt to answer, in your buyer's words if you have them.
-  - Read beat 4 again. It should claim less than your facts allow.
-  - Take the script and cast note to "Turn your selfie-style script into video clips". It takes it from there, from the presenter to the finished clips.
+  - Read it aloud standing up, at speaking pace. Rewrite any line you stumble on, and check beat 4 claims less than your facts allow.
+  - For an AI presenter, take the script and cast note to "Turn your selfie-style script into consistent clips". For a real creator, turn it into a filming brief with "Get the creator videos you asked for, first time".
 
 how_it_works:
   - title: Checks a phone video fits
     text: One person with a phone is good at a shared problem and a product shown in a hand. It says so when your point can't be seen.
   - title: Settles who is speaking
     text: A real creator gets blanks for their own details. An AI presenter talks to "you" and never claims a result.
-  - title: Picks one detail
-    text: One number, time or size from your facts carries the ad. Price and offer terms don't count.
+  - title: Writes the story in one line
+    text: '"Situation, but snag, so what they did." No snag, no script.'
+  - title: Picks one detail you can see
+    text: One number, time or size from your facts carries the ad, and the viewer sees it, like the label held to the lens.
+  - title: Sets the length
+    text: About 4 seconds per real use step plus time for the rest, checked against 2.5 words a second.
   - title: Writes five beats
-    text: A hook that names the topic fast, the doubt, the product in use, an honest result and a hand-off.
-  - title: Times the words
-    text: About 2.5 words a second, so 30 seconds holds about 70 words.
-  - title: Plans the pictures
-    text: Tall frame, real room light, the product in hand before it's named, and a new view every few seconds.
-  - title: Writes the cast note
-    text: Says who should carry the ad and why, so the clips skill can turn it into a presenter or a real creator can film it.
+    text: The snag as the hook, the doubt, the product in use, an honest result and a friendly hand-off.
+  - title: Plans the shots
+    text: Tall frame, room light, the product in hand before it's named, and which hand holds what in every shot.
+  - title: Adds openings and the cast note
+    text: Two other ways in, how to say it, and who should carry the ad, so the right next skill can make it.
 
 output_shape: |
-  Beat | Says | On screen | Picture
-  1 HOOK | "<mid-thought, no brand name>" | <short text> | <how it's filmed>
-  2 DOUBT | "<the buyer's doubt>" | ... | ...
-  3 SHOW [DEMO] | "<the product in use>" | ... | <one action per cut>
-  4 HONEST RESULT | "<less than the facts allow>" | <source> | ...
-  5 HAND-OFF | "<what to do next>" | <offer as it is> | ...
+  SPINE  <situation>, but <snag>, so <what they did>
+
+  Beat | Time | Says | On screen | Picture
+  1 HOOK | <s> | "<the snag, mid-thought>" | <short text> | <how it's filmed>
+  2 DOUBT | <s> | "<the buyer's doubt>" | ... | ...
+  3 SHOW [DEMO] | <s> | "<the product in use>" | <the anchor> | <one action per cut>
+  4 HONEST RESULT | <s> | "<less than the facts allow>" | <source> | ...
+  5 HAND-OFF | <s> | "<where, plus one thing to know>" | <offer as it is> | ...
   (real creator: [blanks] for their own details)
 
-  ANCHOR  <the one detail>, from <source>
-  WORDS  <count>, about <seconds> at 2.5 words a second
+  ANCHOR  <the one detail>, from <source>; seen as <proof moment>
+  LENGTH  <steps> hand steps, about <seconds>; WORDS <count>
   DISCLOSURE  <AI label and on-screen line, if any>
-  CAST NOTE  <real creator or AI presenter, who fits the buyer, and why>
+  SHOT LIST  <time> <one action, which hand holds what>
+  HOW TO SAY IT  <tone, pace, place, clothes, phone, face>
+  OTHER OPENINGS  <way in>: "<line>"
+  CAST NOTE  <who carries it, why, and the next skill>
 
   CLAIMS, NUMBERS AND QUOTES
   <item>   <source>
@@ -83,105 +90,137 @@ example:
     Moment: the kitchen on a weekday morning, about to leave.
     Quote: "[Sprout] has been the one thing I've been able to stick
     to." (review, brand site)
-    Product: one daily pack, torn straight across the top, a small
-    handful of green gummies tipped into a palm. No water, no
-    mixing, no shaker. No visible result.
+    Product: pouch of 28 daily packs, opens at its resealable top.
+    Take one pack, tear it straight across the top, tip the small
+    handful of green gummies into a palm, eat. No water, no mixing.
+    No visible result.
     Approved: "60+ ingredients, 21 vitamins & minerals, and 6g
-    fiber" per pack. Minerals about 25% of daily value.
+    fiber" per pack.
     Never say: fix, "everything you need", energy or immunity
     results, weight loss.
     Offer: $29.99 first order with text sign-up, renews at $49.99
     every 4 weeks.
   output: |
-    Beat | Says | On screen | Picture
-    1 HOOK | "Quick question. How full is the greens tub at the back
-      of your cupboard?" | How full is your greens tub? | Arm's-length
-      selfie, kitchen, window light from the left. Coat half on.
-    2 DOUBT | "You've probably figured a few gummies can't do what a
-      scoop of powder does." | - | Cut closer on "gummies". The
-      green pouch already in her free hand, still sealed.
-    3 SHOW [DEMO] | "Here's the daily pack. Tear it across the top,
-      tip it out. Twenty-one vitamins and minerals in that handful.
-      No water, no shaker to wash." | 21 vitamins & minerals per
-      pack | Phone propped on the counter, looking down. One pack out
-      of the pouch, torn across the top, gummies tipped into her
-      palm. Then very close on the palm.
-    4 HONEST RESULT | "One customer put it like this. 'The one thing
-      I've been able to stick to.'" | "The one thing I've been able
-      to stick to." Customer review, brand site | Back to selfie,
-      gummies in hand, a small shrug.
-    5 HAND-OFF | "It's on their site. First order's twenty-nine
-      ninety-nine if you sign up by text." | $29.99 first order with
-      text sign-up. Renews at $49.99 every 4 weeks. | She eats the
-      gummies and picks up her keys.
+    SPINE  You bought a greens tub to keep the habit, but it ended up
+    at the back of the cupboard, so here's a daily pack you tear and
+    eat.
 
-    ANCHOR  21 vitamins and minerals, from the product page. The 60+
-    ingredients and 6 g of fiber stay out, so one detail carries it.
-    WORDS  82, about 33 seconds at 2.5 words a second.
+    Beat | Time | Says | On screen | Picture
+    1 HOOK | 0-5 s | "How full is the greens tub at the back of your
+      cupboard?" | How full is your greens tub? | Arm's-length selfie,
+      kitchen, window light from the left. Coat half on.
+    2 DOUBT | 5-10 s | "You probably figure a few gummies can't do what
+      a scoop does." | - | Cut closer on "gummies". A daily pack comes
+      up into frame.
+    3 SHOW [DEMO] | 10-21 s | "This is one day. One pack. Twenty-one
+      vitamins and minerals. Tear the top, tip it out. No water, no
+      shaker." | 21 vitamins & minerals per pack | Phone propped on
+      the counter, looking down. Pack to the lens, then torn across
+      the top, gummies tipped into her palm.
+    4 HONEST RESULT | 21-26 s | "One customer called it 'the one
+      thing I've been able to stick to.'" | "The one thing I've been
+      able to stick to." Customer review, brand site | Mid shot,
+      gummies in her palm, a small shrug.
+    5 HAND-OFF | 26-33 s | "It's on their site. First order's
+      twenty-nine ninety-nine with their text sign-up, then forty-nine
+      ninety-nine every four weeks." | $29.99 first order with text
+      sign-up. Renews at $49.99 every 4 weeks. | She eats the gummies
+      and picks up her keys.
+
+    ANCHOR  21 vitamins and minerals, from the approved claim. Seen as
+    the pack's label held to the lens. The 60+ ingredients and 6 g
+    fiber stay out, so one detail carries it.
+    LENGTH  5 real steps came to 40 s. To fit about 30, the pouch
+    opening is dropped (the pack is already in hand) and eating moves
+    to the hand-off: 3 hand steps, 33 s. WORDS 75, about 30 s spoken,
+    with pauses for the tear.
     DISCLOSURE  Platform AI label on. Small "AI presenter" line on
     screen through beat 1.
-    CAST NOTE  An AI presenter: a made-up woman in her early 30s, coat
-    half on, filming in her own kitchen before work. She matches the
-    quitter who wants to stick (28 to 45, office job) and the morning
-    rush in the hook. Plain clothes, no logos. Next: the selfie-style
-    clips skill makes her avatar card.
+
+    SHOT LIST
+    0-5 s    selfie; right hand holds the phone, left holds the pouch
+             low, sealed
+    5-10 s   closer; left hand lifts one daily pack into frame
+    10-14 s  propped, from above; left hand holds the pack to the
+             lens, label readable, on "Twenty-one"
+    14-17 s  both hands tear it straight across the top
+    17-21 s  left hand tips the gummies into the right palm, close
+    21-26 s  mid shot; gummies in the right palm
+    26-33 s  she eats them; left hand picks up her keys
+
+    HOW TO SAY IT  Warm, a little wry, unhurried. Kitchen before work,
+    plain top, no logos. Eyebrows up on "cupboard". A small shrug at
+    the quote. The phone switches once, from hand to counter, at the
+    Show cut.
+
+    OTHER OPENINGS (each read with "This is one day. One pack.")
+    The doubt: "Think a gummy can't hold much? Look at the label."
+    The situation: "Weekday morning, coat on, no time to mix a shake."
+
+    CAST NOTE  An AI presenter: a made-up woman in her early 30s,
+    filming in her own kitchen before work. She matches the quitter who
+    wants to stick and the morning rush in the hook. Next: the
+    selfie-style clips skill makes her avatar card.
 
     CLAIMS, NUMBERS AND QUOTES
-    21 vitamins and minerals per pack    approved claim, product page
+    21 vitamins and minerals per pack    approved claim
     No water, no shaker                  how it's used, brand file
-    "The one thing I've been able to
-    stick to."                           review, brand site, exact
+    "the one thing I've been able to
+    stick to"                            review, brand site, exact
     $29.99, $49.99, text sign-up         price page
-    The doubt is answered by what's shown. Nothing says it replaces
-    a powder, and with minerals at about 25%, nothing says
-    "everything you need".
+    Nothing says it replaces a powder or holds "everything you need".
     She never says she takes it, feels better or saw a result.
     MISSING: nothing for this script.
 
 tweaks:
-  - what: Real creator or AI presenter
-    how: Switch to "real creator" and the beats move to "I", with blanks like "[when you noticed]" for their own true details.
+  - what: Who is on camera
+    how: Switch to "real creator" and the beats move to "I", with blanks like "[when you noticed]" for their own true details. A founder or customer speaks only on their own footage.
   - what: Length
-    how: Ask for 20 to 30 seconds for a routine or small discovery, 45 seconds or more to talk a doubt through. A shorter version is written fresh, not squeezed.
+    how: Give no length and the use steps set it, about 4 seconds a step. Give a length and it tells you which steps it dropped to fit. A shorter version is written fresh, never squeezed.
   - what: The doubt
-    how: Name a different doubt ("isn't this just candy?") and the Doubt and Show beats change to answer it with what's shown.
-  - what: Hook options
-    how: Ask for three hooks. Each comes in a different way, such as the situation, a question or the product in use, on the same body.
+    how: Name a different doubt ("isn't this just candy?") and the spine, the Doubt beat and the proof moment change to answer it with what's shown.
+  - what: Handling rules
+    how: Paste how the product may be held, opened and shown. If it's display only, the Show beat becomes the sealed product on a surface, label to camera.
 
 judge:
-  - The hook has no greeting and no brand name, and you can tell the topic in the first few seconds.
-  - There's one number or detail in the spoken lines, it's in your facts, and every quote has a source.
-  - Beat 4 claims less than your facts allow.
-  - The word count fits the length, at about 70 words for 30 seconds.
-  - Nothing sounds like stock ad talk ("obsessed", "life-changing", "buy now").
-  - The cast note says who carries the ad and why. An AI presenter is a made-up adult who never claims a result or a story of their own.
+  - Read it aloud. It sounds said, and no line would suit a polished advert's voice-over.
+  - The story line has a real "but", and the hook opens on it with no greeting and no brand name.
+  - There's one number or detail in the spoken lines, it's in your facts, and you can see it on screen.
+  - The Show beat is the longest, and you could follow it with the sound off.
+  - Every first-person line is something the speaker could truthfully say, or a blank for them.
+  - The word count fits the length, about 70 words for 30 seconds.
 
 test:
-  - Count the numbers in the spoken lines, leaving out price. You should find one.
-  - Run it once as "AI presenter" and once as "real creator". Only the creator version should have blanks and "I" lines.
+  - Leave out who the buyer is. It should stop and ask, because it writes no script without one.
+  - Run it once as "AI presenter" and once as "real creator" on the same facts. Only the creator version should have blanks and "I" lines.
+  - Count the use steps in the shot list. The length should be close to 4 seconds a step plus about 20 for the rest, or say which steps it dropped.
   - Give it no customer quote. Beat 4 should become an observation, with nothing in quotation marks.
-  - Read it aloud with a timer. It should land within a few seconds of the length you asked for.
 
 improve:
-  - Paste your buyers' own nouns from reviews into "Buyer's words" in the skill file, so the Doubt beat sounds like them.
-  - Add your brand's pet phrases to the hype list in step 5, so they get caught too.
-  - Write how your product opens and what must never show into step 7.
-  - Keep the hook that wins in your brand file, then test new hooks on the same body.
+  - Write your product's handling rules and what must never show into "What you need", so every shot list opens and holds it the right way.
+  - Paste your buyers' own nouns from reviews into "Buyer's words", and save the snags that work to your brand file.
+  - Add your brand's pet phrases and banned words to the hype list in step 7, so they get caught too.
+  - Let a real creator change any line they wouldn't say, as long as they keep the point, and note what they changed.
+  - Pair it with "Turn your selfie-style script into consistent clips" for an AI presenter, or "Get the creator videos you asked for, first time" for a real person.
 
 works_best_with:
   tools:
     - {name: "Claude", why: "Keeps the speaker rules and the one-detail limit in view across a long brief."}
-    - {name: "Veo 3.1", why: "Turns a start frame of your AI presenter into short talking clips with the lips matched to the line."}
+    - {name: "Veo", why: "Turns a start frame of your AI presenter into short talking clips with the lips matched to the line."}
   inputs:
     - "Support emails or return reasons, so the doubt comes from more than reviews"
     - "A phone clip of someone opening and using the product, so the Show beat follows the real steps"
-    - "The first three seconds of your best ad so far, so new hooks have something to beat"
-    - "For a real creator, their own notes on how they used it, so the blanks fill with true details"
+    - "A voice memo of the speaker telling the story off the cuff, so the script keeps how they talk"
+    - "The first three seconds of your best ad so far, so new openings have something to beat"
 
 terms:
   - term: Hook
     meaning: The first few seconds, which decide whether people keep watching.
+  - term: Spine
+    meaning: The one-line story behind the script. What was going on, what got in the way, and what they did.
   - term: Anchor
-    meaning: The one number, time or size that carries the ad.
+    meaning: The one number, time or size that carries the ad, also seen on screen.
+  - term: Proof moment
+    meaning: One thing the viewer can see that backs the anchor, such as the label held to the lens.
   - term: AI presenter
     meaning: A made-up adult made with a video tool. Not a customer, so they can't claim a result.

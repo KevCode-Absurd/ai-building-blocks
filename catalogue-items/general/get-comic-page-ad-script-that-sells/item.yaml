@@ -8,6 +8,7 @@ type: skill
 role: make
 job: video
 level: intermediate
+twin: sell-one-claim-with-a-comic-strip-ad
 inputs:
   - {type: brief, required: true}
   - {type: brand_brain, required: true}

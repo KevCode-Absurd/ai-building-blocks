@@ -184,7 +184,7 @@ improve:
 works_best_with:
   tools:
     - {name: "Claude", why: "Keeps every word of the original in order across a long remake and counts them back."}
-    - {name: "Veo 3.1", why: "Rebuilds shots as 9:16 video from a start frame, so the setting and product carry over."}
+    - {name: "Veo", why: "Rebuilds shots as 9:16 video from a start frame, so the setting and product carry over."}
     - {name: "Meta Ads Manager", why: "Its preview shows the remake in each placement before you spend."}
   inputs:
     - "The original ad file itself, not just its words, so each new shot matches its setting and framing"

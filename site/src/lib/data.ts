@@ -25,6 +25,8 @@ export type Block = {
   addon: boolean;
   /** Extra files in the skill's folder, like references/types.md or LICENSE. */
   files: string[];
+  /** The same look in the other format (image or video), if the library has it. */
+  twin: string | null;
   added: string;
   usedIn: number;
   task: string;
@@ -156,13 +158,17 @@ export function loadPage(slug: string): Promise<Page | null> {
 export const FUNCTIONS: { id: string; name: string; line: string; tasks: string[] }[] = [
   { id: "copywriter", name: "Write copy that sells", line: "Ads, landing pages and offers", tasks: ["write-ad-copy", "write-landing-page", "make-offer"] },
   { id: "media-buyer", name: "Run Meta ads", line: "Plan tests, get ads approved, read the results", tasks: ["plan-ad-tests", "check-ads", "read-ad-results", "study-competitors"] },
-  { id: "designer", name: "Make images", line: "Image ads and product photos", tasks: ["make-image-ads", "product-photos"] },
-  { id: "video", name: "Make video ads", line: "Scripts, shot lists and edits", tasks: ["make-video-ads"] },
+  { id: "ads", name: "Create ads", line: "Image ads and video ads, each with its own skills", tasks: ["make-image-ads", "make-video-ads"] },
+  { id: "photos", name: "Make product photos", line: "Photos for your product pages", tasks: ["product-photos"] },
   { id: "cro", name: "Turn visitors into buyers", line: "Check your landing pages and fix what loses sales", tasks: ["audit-landing-page", "write-landing-page"] },
   { id: "strategist", name: "Know your market", line: "Your customers, your brand and your rivals", tasks: ["understand-customers", "brand-file", "study-competitors", "make-offer"] },
   { id: "social", name: "Grow on social", line: "Posts that build an audience", tasks: ["grow-social"] },
   { id: "founder", name: "Set up AI for your business", line: "Your brand file and AI, set up once for every job", tasks: ["set-up-ai", "brand-file"] },
 ];
+/** Old links to the two functions that became "Create ads". */
+export const FUNCTION_MOVED: Record<string, string> = { designer: "ads", video: "ads" };
+/** Image or video: the two kinds of ad a block can make. Every ad-making block makes one, never both. */
+export const formatOf = (b: Block): "image" | "video" | null => (b.task === "make-image-ads" ? "image" : b.task === "make-video-ads" ? "video" : null);
 export const functionsOf = (b: Block) => FUNCTIONS.filter((f) => f.tasks.includes(b.task));
 
 /** Which businesses a block suits. Most work for any business; some are only for shops selling physical products. */

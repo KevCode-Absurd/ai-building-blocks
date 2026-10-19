@@ -12,13 +12,14 @@ inputs:
   - {type: web_page, required: true}
   - {type: voc_reviews, required: false}
   - {type: performance_sheet, required: false}
+  - {type: product_data, required: false}
 outputs:
   - {type: brand_brain}
 uses: []
 origin: rebuilt
-source_ids: [CES-010]
+source_ids: [CES-010, CES-082]
 old_name: brand knowledge folder from a website
-version: 2.0.0
+version: 2.1.0
 credits:
   - {title: "Obviously Awesome: How to Nail Product Positioning so Customers Get It, Buy It, Love It", by: "April Dunford", url: "https://www.aprildunford.com/books", used: "Positioning parts in business.md and the options buyers weigh in market.md"}
   - {title: "The Four Dimensions of Tone of Voice", by: "Kate Moran, Nielsen Norman Group", url: "https://www.nngroup.com/articles/tone-of-voice-dimensions/", used: "The four voice scales in voice-and-look.md"}
@@ -27,3 +28,4 @@ credits:
   - {title: "How Claude remembers your project", by: "Anthropic, Claude Code docs", url: "https://code.claude.com/docs/en/memory", used: "Keep the always-loaded file short, specific and grouped under headings"}
   - {title: "Projects in ChatGPT", by: "OpenAI Help Center", url: "https://help.openai.com/en/articles/10169521-projects-in-chatgpt", used: "Project instructions and reference files in ChatGPT"}
   - {title: "Upload Google Docs and other file types to Gem instructions", by: "Google Workspace Updates", url: "https://workspaceupdates.googleblog.com/2024/11/upload-google-docs-and-other-file-types-to-gems.html", used: "Gem file limits, and which uploads update themselves"}
+  - {title: "Effective context engineering for AI agents", by: "Anthropic Applied AI team", url: "https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents", used: "Give each next step only the smallest slice of facts it needs"}

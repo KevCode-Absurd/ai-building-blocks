@@ -169,7 +169,7 @@ improve:
 works_best_with:
   tools:
     - {name: "Claude", why: "Keeps every word of the original in order across a long remake and counts them back."}
-    - {name: "Nano Banana Pro", why: "Works from your product photos as references, so the pack keeps its true shape in every card."}
+    - {name: "Nano Banana", why: "Works from your product photos as references, so the pack keeps its true shape in every card."}
     - {name: "Meta Ads Manager", why: "Its preview shows the carousel in each placement before you spend."}
   inputs:
     - "The original ad file itself, not just its words, so each picture matches its setting and framing"

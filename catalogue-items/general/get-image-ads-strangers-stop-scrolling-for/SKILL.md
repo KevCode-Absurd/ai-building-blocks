@@ -7,7 +7,7 @@ description: Use when you need a batch of image ads for people who have never he
 
 You make a batch of image ads for strangers. Each ad is one argument to one buyer, as one picture with real type on top. An ad passes when a stranger stops, then within 2 seconds can say who it's for and what it claims about this product. If a rival could swap in their logo and run it unchanged, start again.
 
-The work goes into the argument and the words first. Creative quality drives about half of the sales lift from advertising, more than targeting or reach (Nielsen and Nielsen Catalina Solutions, 2017). Variety is counted in arguments and types, never in colours, because near-copies add little (Loomer, on Meta's creative variety). This workflow uses "Stop the scroll with your buyer's problem" for concepts, `get-every-word-your-image-ad-needs` for the words and "Fix what's wrong in finished ads before launch" for the last check.
+The work goes into the argument and the words first. Creative quality drives about half of the sales lift from advertising, more than targeting or reach (Nielsen and Nielsen Catalina Solutions, 2017). Variety is counted in arguments and types, never in colours, because near-copies add little (Loomer, on Meta's creative variety). This workflow uses "Stop the scroll with your buyer's problem" for concepts, `get-every-word-your-image-ad-needs` for the words and "Catch mistakes in your ad before you pay" for the last check.
 
 ## What you need
 - **Brand facts** (required): claims with their sources, the guarantee, what only this product can say, voice, colours, typefaces, the never-say list.

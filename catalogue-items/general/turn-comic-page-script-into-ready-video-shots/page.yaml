@@ -176,8 +176,8 @@ improve:
 
 works_best_with:
   tools:
-    - {name: "Nano Banana 2.1", why: "Takes up to 14 reference images and keeps up to four characters the same, so your sheets and panels match."}
-    - {name: "Veo 3.1", why: "Starts each clip from your approved panel still and can make sound with it, in 8-second clips."}
+    - {name: "Nano Banana", why: "Takes up to 14 reference images and keeps up to four characters the same, so your sheets and panels match."}
+    - {name: "Veo", why: "Starts each clip from your approved panel still and can make sound with it, in 8-second clips."}
     - {name: "CapCut", why: "Lets you add the words, numbers and captions as their own layers after the clips are made."}
   inputs:
     - "Your lettering font file, so captions match your brand"

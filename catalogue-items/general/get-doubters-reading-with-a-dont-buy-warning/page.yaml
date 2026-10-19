@@ -147,7 +147,7 @@ improve:
 works_best_with:
   tools:
     - {name: "Your phone camera and a marker", why: "A card you write and prop up yourself looks real because it is, and nothing needs checking."}
-    - {name: "Nano Banana Pro", why: "Google recommends its Gemini 3 Pro Image model for accurate text, so a generated card is more likely to be spelled right."}
+    - {name: "Nano Banana", why: "Google recommends it for accurate text, so a generated card is more likely to be spelled right."}
     - {name: "Any good chat AI", why: "Turning a story into one line of advice is close reading, which Claude, ChatGPT and Gemini all do well."}
   inputs:
     - "Complaints from reviews about the kind of product your buyers used before, so the warning names a real letdown"

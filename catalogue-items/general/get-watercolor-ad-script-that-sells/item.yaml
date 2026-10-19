@@ -8,6 +8,7 @@ type: skill
 role: make
 job: video
 level: intermediate
+twin: show-whats-inside-in-one-watercolor-image-ad
 inputs:
   - {type: brief, required: true}
   - {type: brand_brain, required: true}

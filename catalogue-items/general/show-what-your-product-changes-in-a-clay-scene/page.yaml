@@ -168,8 +168,8 @@ improve:
 
 works_best_with:
   tools:
-    - {name: "Nano Banana 2.1", why: "Takes your product photo as a reference and keeps the clay finish steady across retries."}
-    - {name: "GPT Image 2.5", why: "Lets you point at one part of the set to fix it without remaking the rest."}
+    - {name: "Nano Banana", why: "Takes your product photo as a reference and keeps the clay finish steady across retries."}
+    - {name: "GPT Image", why: "Lets you point at one part of the set to fix it without remaking the rest."}
     - {name: "Canva or Figma", why: "Sets the headline and small line in your brand fonts on top, so every letter is exact."}
   inputs:
     - "The flat label artwork, so a clay prop's printed label carries every line correctly"

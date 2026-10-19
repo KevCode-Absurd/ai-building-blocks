@@ -166,7 +166,7 @@ improve:
 
 works_best_with:
   tools:
-    - {name: "Meta Ad Library", why: "The public place to save competitor ads with their library ID and start date, browsed by hand."}
+    - {name: "Meta Ad Library", why: "The public place to find competitor ads with their library ID and start date, browsed by hand."}
     - {name: "Claude", why: "Holds dozens of ad cards, your reviews and your claims rules in one long run."}
     - {name: "Google Sheets", why: "Keeps the board by library ID and counts types per brand, so the map is easy to check."}
   inputs:

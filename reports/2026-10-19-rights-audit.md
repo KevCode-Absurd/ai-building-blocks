@@ -5,6 +5,62 @@
 
 This isn't legal advice. The plan already says a lawyer reads the rules once before anything paid or before creator uploads (`docs/planning/08_INTAKE_ENGINE.md`). This audit is what that lawyer should see.
 
+## Update, 19 Oct (after rebuilds)
+
+**Short answer now:** the rebuild is done on paper. All 72 C and D blocks are now `origin: rebuilt` with credits to public sources, and no block credits Ecommerce OS or a paid course. Two things stay open: the four nine-beat script blocks still keep Blue Sense Digital's beat order (credited, not reshaped), and the 10 new image blocks were checked against Creative Engine only, not against the course originals. Everything below was counted by script from the item.yaml files and `git log --stat -5` (commits `49c5081`, `6e8c782`, `b75b43d`, `0f35013`). The tables further down are the morning audit, kept as history.
+
+### Where the library stands
+
+| | Morning audit | Now |
+|---|---:|---:|
+| Blocks (general / ecommerce) | 166 | 176 (162 / 14) |
+| Workflow pages | 7 | 7 |
+| `origin: rebuilt` | 103 | 126 |
+| `origin: own` | 63 | 50 |
+| C and D blocks still not rebuilt | 72 | 0 |
+| Blocks with a `credits:` list | 0 | 174 |
+
+- **The 72 C and D blocks.** All 72 are `rebuilt` (50 at version 2.0.0, 22 at 2.1.0) and each has at least one credit. Commit `49c5081` rebuilt them in 10 families from public sources and reports every one under 1% shared 8-word runs, with no shared run of 12 words or more.
+- **16 blocks moved from `own` to `rebuilt`** in the second pass (`6e8c782`). Among them are the four nine-beat blocks (`find-script-lines-that-lose-sale`, `get-different-video-ads-from-same-research`, `get-video-ad-script-in-customers-words`, `get-video-ad-script-that-sells`), which settles the label half of decision 2. The other 12 were graded A this morning but still followed a course list or threshold. The commit message says "about 30"; the labels show 16.
+- **Labels match the sources.** No block marked `own` points to a Creative Engine skill whose rights are `course` or `purchased`. By source rights: 96 rebuilt from course, 10 from purchased, 2 from course and own, 18 rebuilt from our own skills, and 50 own from own.
+- **`old_name`.** 136 blocks carry one, and none names Foreplay, Zack D Films, WhatsApp, Starpop or AI CMO any more. That smaller fix is done.
+
+### Credits
+
+- **722 credit entries on 174 blocks** (median 4 per block, 4.5 for rebuilt blocks), pointing at 288 different links. Every entry has a title, author, link and what it was used for. The two blocks with no credits are both our own work: `get-your-best-ad-in-a-new-format` and `know-which-ad-format-your-script-needs`.
+- **Who gets credited.** Most links go to Wikipedia (116), journal DOIs (56), Meta's help and ads guide pages (53), Nielsen Norman Group (43), the FTC (33), Open Library (20) and W3C (19).
+- **Banned credits: none.** A script searched every title, author, link and use for Ecommerce OS, AI CMO, Starpop, Copy Machine, AI Operator, Nuova Era, Nu Reach, @davidaistar, "playbook" and "course", and found 0. The same names also appear nowhere in `catalogue-items/`, the workflow pages or `site/src`.
+- **Blue Sense Digital, 12 credits on 12 blocks.** It is the only course-style source credited, because both talks are free on YouTube.
+  - *How To Write Meta Ads That Scale: Copywriting Masterclass* (one video) on 6 blocks: the four nine-beat script blocks, plus `make-an-image-ad-people-get-at-a-glance` and `make-each-carousel-card-earn-the-next-swipe`, which follow its order of argument.
+  - *eCommerce CRO masterclass* on the 6 page blocks built from it (`b75b43d`): `answer-doubts-that-stop-customers-buying`, `find-what-stops-visitors-buying-30-quick-checks`, `finish-the-sale-your-ad-started`, `give-shoppers-reasons-to-switch-to-you`, `know-if-you-have-enough-visitors-to-test`, `win-over-strangers-with-article-style-page`. Each says what was used, and three say the idea was rebuilt in our own words.
+- **Books.** *Great Leads* (Masterson and Forde) is now credited on `open-sales-copy-the-way-buyers-need`, so that part of decision 4 is done. `know-if-your-copy-is-ready` was rebuilt and no longer credits Forde.
+
+### Image blocks split from video blocks (`0f35013`)
+
+Video script blocks no longer make stills. 10 new image blocks make the still as a real ad, so image blocks now number 47 and video blocks 57. The same commit changed 44 existing item.yaml files and, by its message, rebuilt 21 video blocks on the shared avatar, sheet, storyboard and video stages.
+
+| New image block | Origin | Source | Source rights | Credits | vs CE (share / longest run) |
+|---|---|---|---|---:|---|
+| `make-an-awkward-subject-gentle-in-a-knitted-image-ad` | rebuilt | CES-127 | course | 7 | 0.0% / 0 |
+| `prove-one-point-with-a-paper-cutout-image-ad` | rebuilt | CES-111 | course | 5 | 0.0% / 0 |
+| `say-what-buyers-wont-in-a-talking-object-image-ad` | own | CES-123 | own | 5 | 0.1% / 8 |
+| `sell-one-claim-with-a-comic-strip-ad` | rebuilt | CES-112 | own | 6 | 0.2% / 9 |
+| `show-how-your-product-works-in-a-3d-cutaway` | rebuilt | CES-113 | own | 5 | 0.0% / 0 |
+| `show-what-your-product-changes-in-a-clay-scene` | own | CES-110 | own | 5 | 0.2% / 10 |
+| `show-whats-inside-in-one-watercolor-image-ad` | rebuilt | CES-126 | course | 7 | 0.0% / 0 |
+| `turn-a-daily-problem-into-a-paper-craft-image-ad` | rebuilt | CES-117 | course | 7 | 0.0% / 0 |
+| `turn-an-everyday-hassle-into-a-clay-town-image-ad` | rebuilt | CES-109 | course | 6 | 0.0% / 0 |
+| `turn-your-best-ad-into-a-still-or-carousel` | own | CES-003 | own | 4 | 0.0% / 0 |
+
+All 10 are version 1.0.0. The overlap was run the same way as the morning audit (8-word runs of the whole block folder against its Creative Engine skill folder, read-only). The five built from Starpop looks (CES-109, 111, 117, 126, 127) share nothing with the Creative Engine wording, but nobody has yet checked their structure against the Starpop originals.
+
+### Still open
+
+1. **The nine-beat blocks.** They are labelled and credited correctly, but they still keep Blue Sense's nine beats in its order. That is fine if Kevin accepts a credited public talk as the base. If not, decision 2's rebuild around our own script shape is still to do.
+2. **The CRO credit link.** All 6 CRO credits link to the Blue Sense YouTube channel, not to the video. Point each one at the exact talk, so a reader can check what was used.
+3. **Structure check on the 10 new image blocks.** Run the morning's structure read (count, order, coined terms, thresholds) for the five built from course-rights sources before launch.
+4. **NOTICE.md** lists only the open-licence adaptations. That is right, since credits now show on each page, but the notice could say so in one line.
+
 ## How it was checked
 
 1. **Wording.** Every block (SKILL.md, the online-store add-on and references) was compared with its Creative Engine source and with the course original behind it, as runs of 8 words. Two numbers are reported: the share of the block's 8-word runs found in the original, and the longest shared run.

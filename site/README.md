@@ -21,3 +21,7 @@ npm run test:e2e   # Playwright end-to-end tests (uses the installed Chrome; PW_
 | `e2e/site.spec.ts` | End-to-end tests: hero, no brands or jargon, theme, navigation, type tabs, search and filters, drawer, kits, builder, handoff zip, phone width |
 
 The page shows no brand names or brand pictures (decided 18 Oct).
+
+## Deploy
+
+Live at https://useaiblocks.com on Cloudflare Pages (free), built from `main` on every push. Pages project settings: root directory `site`, build command `npm run build`, output directory `dist`; Node comes from `site/.nvmrc`. Cloudflare serves `index.html` for any path the site doesn't have, so links like `/blocks/<slug>` open the app; that's why the build makes no `404.html`.

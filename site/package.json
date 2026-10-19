@@ -6,7 +6,7 @@
   "scripts": {
     "index": "node scripts/build-index.mjs",
     "dev": "npm run index && vite",
-    "build": "npm run index && tsc -b && vite build && node scripts/spa-fallback.mjs",
+    "build": "npm run index && tsc -b && vite build",
     "preview": "vite preview",
     "test:e2e": "playwright test"
   },

@@ -105,6 +105,20 @@ for (const b of blocks) if (b.twin) {
   t.twin = b.slug;
 }
 
+// One finished picture for a visual skill (catalogue-items/example-images.yaml, files in public/examples/).
+const looksFile = path.join(ROOT, "example-images.yaml");
+if (fs.existsSync(looksFile)) {
+  const looks = YAML.parse(fs.readFileSync(looksFile, "utf8"));
+  for (const [slug, name] of Object.entries(looks.blocks ?? {})) {
+    const img = looks.images?.[name];
+    const file = `public/examples/${name}.webp`;
+    if (!bySlug[slug]) problems.push(`example-images: "${slug}" isn't a block`);
+    else if (!img?.alt) problems.push(`example-images: "${name}" has no alt text`);
+    else if (!fs.existsSync(file)) problems.push(`example-images: ${file} is missing`);
+    else bySlug[slug].look = { src: `/examples/${name}.webp`, alt: img.alt };
+  }
+}
+
 const usedTypes = new Set(blocks.flatMap((b) => [...b.inputs, ...b.outputs].map((p) => p.type)));
 const portTypes = Object.fromEntries([...usedTypes].sort().map((t) => [t, typeDesc[t] ?? null]));
 

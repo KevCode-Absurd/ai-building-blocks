@@ -11,6 +11,17 @@ You write the brief and image prompt for one calm, ordinary object that would ar
 
 **Not for:** fears about illness, injury or the body. Use `empty-room-image-ad-maker` to show how daily life changed instead.
 
+<!-- making-it -->
+## Making the picture
+
+You write the prompt. You can't draw the picture unless this chat has an image tool connected. Say that once, in one line, before you start, so nobody waits for a picture that won't come. At the end, tell them how to finish it:
+- **ChatGPT or Gemini:** paste the image prompt into a chat and ask for the picture. ChatGPT uses GPT Image, Gemini uses Nano Banana. Free plans have tight daily limits. Codex on a paid ChatGPT plan can make it too.
+- **Higgsfield:** paste the prompt into its image tool, or connect Higgsfield to Claude so Claude makes it there.
+- **Claude Code:** with an OpenAI or Google key saved as `OPENAI_API_KEY` or `GEMINI_API_KEY`, offer to send the prompt to that image API and save the file. Keys: platform.openai.com/api-keys (OpenAI) or aistudio.google.com/apikey (Google). OpenAI or Google bills each picture.
+
+If an image tool is connected, offer to make the picture with it, and ask before you spend credits.
+<!-- /making-it -->
+
 ## House rules for post-like pictures
 - Square 1:1, or 4:5 if it runs only in the Feed. It looks captured on a phone by a person: everyday light, the room's normal mess, nothing retouched.
 - No logo, brand name, price, button, badge, brand colour or designed layout.

@@ -12,6 +12,17 @@ You plan one still image ad that settles one doubt with paper cutouts: your prod
 - **Brand facts** (required), from the brand file: what the product replaces, what it's made of, how it works, how it's used; every figure the brand can prove, with its source; approved and banned claims; colours and typefaces; the offer with its terms.
 - **Product photos** (optional, but needed before any image is made): front, side, top, out of the pack, with the label sharp. Read attached photos directly, and ask for the photos rather than a description. With only a description, say what you couldn't check.
 
+<!-- making-it -->
+## Making the picture
+
+You write the prompt. You can't draw the picture unless this chat has an image tool connected. Say that once, in one line, before you start, so nobody waits for a picture that won't come. At the end, tell them how to finish it:
+- **ChatGPT or Gemini:** paste the image prompt into a chat and ask for the picture. ChatGPT uses GPT Image, Gemini uses Nano Banana. Free plans have tight daily limits. Codex on a paid ChatGPT plan can make it too.
+- **Higgsfield:** paste the prompt into its image tool, or connect Higgsfield to Claude so Claude makes it there.
+- **Claude Code:** with an OpenAI or Google key saved as `OPENAI_API_KEY` or `GEMINI_API_KEY`, offer to send the prompt to that image API and save the file. Keys: platform.openai.com/api-keys (OpenAI) or aistudio.google.com/apikey (Google). OpenAI or Google bills each picture.
+
+If an image tool is connected, offer to make the picture with it, and ask before you spend credits.
+<!-- /making-it -->
+
 ## Steps
 1. **Check it fits.** A paper cutout still is good at one thing: proving one claim with one picture. It suits "it takes fewer steps", "it's made of", "it replaces", "it fits" and "it works by". It's weak for a mood, a claim that needs a real customer's word, or an ad that is only a price. Say so if that's the job.
 2. **Write the point as one sentence:** "You [do this] and [expect that], but [the hidden snag], therefore [the product]." If it needs two "buts", it's two ads.

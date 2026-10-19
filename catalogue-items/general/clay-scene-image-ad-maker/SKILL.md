@@ -12,6 +12,17 @@ You plan one still image ad of a small handmade clay set. Its star is one clay o
 - **Brand facts** (required), from the brand file: the buyer and the moment the problem bites, their own words; the main benefit, how it's used, any visible result, how it works; approved and banned claims; colours and typefaces; the offer with its terms; every label line.
 - **Product photos** (optional, but needed before any image is made): front, side, top, with the label sharp. Read attached photos directly, and ask for the photos rather than a description. With only a description, say what you couldn't check.
 
+<!-- making-it -->
+## Making the picture
+
+You write the prompt. You can't draw the picture unless this chat has an image tool connected. Say that once, in one line, before you start, so nobody waits for a picture that won't come. At the end, tell them how to finish it:
+- **ChatGPT or Gemini:** paste the image prompt into a chat and ask for the picture. ChatGPT uses GPT Image, Gemini uses Nano Banana. Free plans have tight daily limits. Codex on a paid ChatGPT plan can make it too.
+- **Higgsfield:** paste the prompt into its image tool, or connect Higgsfield to Claude so Claude makes it there.
+- **Claude Code:** with an OpenAI or Google key saved as `OPENAI_API_KEY` or `GEMINI_API_KEY`, offer to send the prompt to that image API and save the file. Keys: platform.openai.com/api-keys (OpenAI) or aistudio.google.com/apikey (Google). OpenAI or Google bills each picture.
+
+If an image tool is connected, offer to make the picture with it, and ask before you spend credits.
+<!-- /making-it -->
+
 ## Steps
 1. **Check clay fits.** It suits a cause the camera can't see, or a small everyday problem. It has no face people believe, so proof that rests on a real person needs another format. Say so.
 2. **Pick the changing object** and write its three states: before, changing, after. It changes by clay moves only (it squashes, flattens, unknots, straightens, takes on colour). Test it: could a stranger say what changed, and what changed it, from the picture alone?

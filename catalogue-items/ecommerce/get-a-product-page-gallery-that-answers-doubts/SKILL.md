@@ -15,6 +15,17 @@ A workflow that takes one product from "the gallery is weak" to a numbered, chec
 - **Customer words** (optional): reviews, return reasons, support and pre-sale questions, survey answers, ad comments.
 - **Marketplace gallery?** (optional).
 
+<!-- making-it -->
+## Making the picture
+
+You write the prompt. You can't draw the picture unless this chat has an image tool connected. Say that once, in one line, before you start, so nobody waits for a picture that won't come. At the end, tell them how to finish it:
+- **ChatGPT or Gemini:** paste the image prompt into a chat and ask for the picture. ChatGPT uses GPT Image, Gemini uses Nano Banana. Free plans have tight daily limits. Codex on a paid ChatGPT plan can make it too.
+- **Higgsfield:** paste the prompt into its image tool, or connect Higgsfield to Claude so Claude makes it there.
+- **Claude Code:** with an OpenAI or Google key saved as `OPENAI_API_KEY` or `GEMINI_API_KEY`, offer to send the prompt to that image API and save the file. Keys: platform.openai.com/api-keys (OpenAI) or aistudio.google.com/apikey (Google). OpenAI or Google bills each picture.
+
+If an image tool is connected, offer to make the picture with it, and ask before you spend credits.
+<!-- /making-it -->
+
 ## Steps
 1. **Facts and photos.** Run `product-image-spec-writer` ("Product image spec writer"). Every blank becomes a question for the brand and a likely gap.
 2. **Read the current gallery on a phone, in order,** as the strip of thumbnails a shopper swipes. Use only images that really show there. A product feed or a scrape of the page also picks up old uploads, badges, other products and page art; if you can't match a capture to the live gallery, set it aside and ask for the files. One row per image: its job, the question it answers, and a verdict (keep, fix or drop). Then list the question families from `product-page-gallery-planner` that no image answers. Two images on one job is a finding.

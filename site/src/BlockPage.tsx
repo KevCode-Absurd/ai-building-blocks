@@ -1,6 +1,8 @@
 import { useEffect, useMemo, useRef, useState, type ReactNode } from "react";
+import Comments from "./Comments";
+import { Look, MakeIt, MakeNote, makeTitle } from "./MakeIt";
 import { ArrowIcon, BlockCard, KitMenu } from "./ui";
-import { type Catalogue, type Page, cap, formatOf, kindInfo, kindOf, loadPage, loadSkillText, neighbours, pathOf, taskOf, wireSteps } from "./lib/data";
+import { type Catalogue, type Page, cap, formatOf, kindInfo, rendersOf, kindOf, loadPage, loadSkillText, neighbours, pathOf, taskOf, wireSteps } from "./lib/data";
 import { markViewed } from "./lib/store";
 import { buildHandoffZip, download, finalOutputs, needsOf, orderFlow, zipName } from "./lib/handoff";
 import { businessText, getBusiness, hasBusiness, useBusiness, withBusiness } from "./lib/business";
@@ -129,6 +131,8 @@ export default function BlockPage({ c, slug, toast, toBuilder }: Props) {
   const kind = kindInfo(b);
   const task = taskOf(b);
   const format = formatOf(b);
+  const renders = rendersOf(b);
+  const oldNames = Object.entries(c.renamed ?? {}).filter(([, to]) => to === b.slug).map(([from]) => from);
   const twin = b.twin ? c.bySlug[b.twin] : null;
   const isFlow = kindOf(b) === "workflow" && b.steps.length > 0;
   const p = page ?? null;
@@ -159,6 +163,7 @@ export default function BlockPage({ c, slug, toast, toBuilder }: Props) {
     ["io", "What you give it, what you get", true],
     ["steps", "The steps", isFlow],
     ["install", "Add it to your AI", !isFlow],
+    ["make", renders === "video" ? "Make the video" : "Make the picture", !!renders],
     ["use", "How to use it", has(p?.how_to_use)],
     ["most", "What changes the result most", has(p?.tweaks)],
     ["test", "Test it", has(p?.judge) || has(p?.test)],
@@ -170,6 +175,7 @@ export default function BlockPage({ c, slug, toast, toBuilder }: Props) {
 
   return (
     <main className="bp" data-testid="block-page" data-slug={b.slug}>
+      <Comments key={b.slug} slug={b.slug} name={b.name} also={oldNames} toast={toast} />
       {adding && <AddToFlow c={c} slug={b.slug} onClose={() => setAdding(false)} toast={toast} />}
       {dl && dlOrder && <DownloadDialog name={dl.name} zip={zipName(dl.name)} needs={needsOf(c, dlOrder)} finals={finalOutputs(c, dl, dlOrder)} onDownload={getPack} onClose={() => setDl(null)} />}
       <header className="wrap bp-hero">
@@ -188,6 +194,7 @@ export default function BlockPage({ c, slug, toast, toBuilder }: Props) {
               : <>{format === "image" ? "Makes one still image ad, not a video." : "Makes a video ad, not a still."}</>}
           </p>
         )}
+        {renders && <MakeNote kind={renders} />}
         <div className="bp-actions">
           {isFlow ? (
             <>
@@ -211,6 +218,7 @@ export default function BlockPage({ c, slug, toast, toBuilder }: Props) {
         <nav className="bp-toc" aria-label="On this page">
           <p>On this page</p>
           {toc.filter(([, , show]) => show).map(([id, label]) => <a key={id} href={`#${id}`}>{label}</a>)}
+          <a href="#comments" data-testid="toc-comments">Questions and comments</a>
         </nav>
 
         <div className="bp-main">
@@ -239,6 +247,7 @@ export default function BlockPage({ c, slug, toast, toBuilder }: Props) {
               <div><h3>You give it</h3><ul>{give.map((x, i) => <li key={i}>{txt(x)}</li>)}</ul></div>
               <div><h3>You get</h3><ul>{get.map((x, i) => <li key={i}>{txt(x)}</li>)}</ul></div>
             </div>
+            <Look b={b} kind={renders} />
             {p?.output_shape && <><p className="bp-note">Every run hands back the same parts, filled in for you:</p><Code name="the-shape.txt" text={p.output_shape} toast={toast} /></>}
           </Section>
 
@@ -266,6 +275,14 @@ export default function BlockPage({ c, slug, toast, toBuilder }: Props) {
           {!isFlow && (
             <Section id="install" title="Add it to your AI once, then start it by name" lead="It takes about two minutes, once. Pick the AI you use.">
               <Install b={b} skill={skill} toast={toast} />
+            </Section>
+          )}
+
+          {renders && (
+            <Section id="make" title={makeTitle(renders)} lead={renders === "image"
+              ? "Claude writes the prompt but can't draw it. Finish it in a tool you already have."
+              : "Claude writes the prompts but can't make video. Finish it in a tool you already have."}>
+              <MakeIt kind={renders} />
             </Section>
           )}
 

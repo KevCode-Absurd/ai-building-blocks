@@ -159,7 +159,7 @@ test("a card opens the block's own page, with the outcome, a real example and th
   const order = await bp.locator(".bp-main > section[id]").evaluateAll((els) => els.map((e) => e.id));
   expect(order.slice(0, 3)).toEqual(["what", "io", "install"]);
   expect(order.indexOf("example")).toBeGreaterThan(order.indexOf("test"));
-  expect(await bp.locator(".bp-toc a").evaluateAll((els) => els.map((e) => e.getAttribute("href")))).toEqual(order.map((id) => `#${id}`));
+  expect(await bp.locator(".bp-toc a").evaluateAll((els) => els.map((e) => e.getAttribute("href")))).toEqual([...order.map((id) => `#${id}`), "#comments"]);
   await expect(bp.getByText("Extra steps for online stores")).toHaveCount(0);
   await expect(bp.locator(".prose").first()).not.toContainText("name: ");
   await page.getByRole("link", { name: /Library/ }).first().click();
@@ -692,4 +692,54 @@ test("anyone can ask for a skill tailored to their work, and it becomes an email
   await page.goto("/");
   await page.getByTestId("tailor-footer").click();
   await expect(page.getByTestId("tailor-skill")).toHaveValue("");
+});
+
+test("a picture skill says what turns its prompt into a picture, and shows a finished one", async ({ page }) => {
+  await page.goto("/skills/paper-craft-image-ad-maker");
+  await expect(page.getByTestId("make-note")).toContainText("ChatGPT, Gemini, Higgsfield or an API key");
+  await page.getByTestId("make-note").getByRole("link", { name: "What you need" }).click();
+  const make = page.locator("#make");
+  await expect(make.getByRole("heading", { name: "Turn the prompt into a picture" })).toBeVisible();
+  for (const who of ["You use ChatGPT", "You use Gemini", "You use Higgsfield", "You only have Claude or Claude Code"]) await expect(make.getByText(who)).toBeVisible();
+  await expect(make.getByRole("link", { name: "Get an OpenAI key" })).toHaveAttribute("href", "https://platform.openai.com/api-keys");
+  await expect(make.getByRole("link", { name: "Get a Google key" })).toHaveAttribute("href", "https://aistudio.google.com/apikey");
+  const img = page.getByTestId("look").locator("img");
+  await img.scrollIntoViewIfNeeded();
+  await expect(img).toHaveAttribute("alt", /Paper-craft ad/);
+  await expect.poll(() => img.evaluate((i: HTMLImageElement) => i.naturalWidth)).toBeGreaterThan(0);
+  // The skill file says it too, so Claude tells people up front.
+  await expect(page.locator(".skill-file")).toContainText("Making the picture");
+  // Video skills point to video tools; text skills have none of this.
+  await page.goto("/skills/skeleton-video-clip-prompt-writer");
+  await expect(page.getByTestId("make-note")).toContainText("Higgsfield, a paid Gemini plan or an API key");
+  await expect(page.locator("#make")).toContainText("Seedance, Kling or Veo");
+  await page.goto("/skills/fact-based-ad-copy-writer");
+  await expect(page.getByTestId("block-page")).toBeVisible();
+  await expect(page.getByTestId("make-note")).toHaveCount(0);
+  await expect(page.locator("#make")).toHaveCount(0);
+});
+
+test("every skill has questions and comments on the side, kept on that skill", async ({ page }) => {
+  const q = `Does it work with phone photos? ${Date.now()}`;
+  await page.goto("/skills/knitted-wool-image-ad-maker");
+  await page.getByTestId("comments-open").click();
+  const panel = page.getByTestId("comments");
+  await panel.getByTestId("comment-body").fill(q);
+  await panel.getByTestId("comment-name").fill("Sam");
+  await panel.getByTestId("comment-post").click();
+  const mine = panel.getByTestId("comment").filter({ hasText: q });
+  await expect(mine).toContainText("Sam");
+  // The team answers, and the answer is marked.
+  await page.evaluate(() => localStorage.setItem("abb:team-token", "dev-team-token"));
+  await page.reload();
+  await page.getByTestId("comments-open").click();
+  await panel.getByTestId("comment").filter({ hasText: q }).getByTestId("comment-reply").click();
+  await panel.getByTestId("reply-form").locator("textarea").fill("Yes, if the label is sharp.");
+  await panel.getByTestId("reply-form").getByTestId("comment-post").click();
+  await expect(panel.getByTestId("comment").filter({ hasText: "Yes, if the label is sharp." })).toContainText("Answer from us");
+  await expect(page.getByTestId("comments-count")).not.toHaveText("0");
+  // Another skill doesn't show it.
+  await page.goto("/skills/watercolor-image-ad-maker#comments");
+  await expect(page.getByTestId("comments")).toBeVisible();
+  await expect(page.getByTestId("comment").filter({ hasText: q })).toHaveCount(0);
 });

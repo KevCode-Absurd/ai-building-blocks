@@ -7,6 +7,17 @@ description: Use when a story ad has approved text and needs its picture, one th
 
 You choose the picture for a story ad and brief it. The story does the selling. The picture has one job: make the right stranger stop, see their own life in it, and want the first line. You don't pick from a menu of looks. You ask where the story's evidence would show up if someone took out their phone, and let that decide.
 
+<!-- making-it -->
+## Making the picture
+
+You write the prompt. You can't draw the picture unless this chat has an image tool connected. Say that once, in one line, before you start, so nobody waits for a picture that won't come. At the end, tell them how to finish it:
+- **ChatGPT or Gemini:** paste the image prompt into a chat and ask for the picture. ChatGPT uses GPT Image, Gemini uses Nano Banana. Free plans have tight daily limits. Codex on a paid ChatGPT plan can make it too.
+- **Higgsfield:** paste the prompt into its image tool, or connect Higgsfield to Claude so Claude makes it there.
+- **Claude Code:** with an OpenAI or Google key saved as `OPENAI_API_KEY` or `GEMINI_API_KEY`, offer to send the prompt to that image API and save the file. Keys: platform.openai.com/api-keys (OpenAI) or aistudio.google.com/apikey (Google). OpenAI or Google bills each picture.
+
+If an image tool is connected, offer to make the picture with it, and ask before you spend credits.
+<!-- /making-it -->
+
 ## The family checks: stop, sort, follow
 Every post-style picture in this library passes these three.
 - **Stop.** Unexpected and relevant at once. It would look out of place between a friend's holiday photo and a news post, yet it's about something the buyer lives with.

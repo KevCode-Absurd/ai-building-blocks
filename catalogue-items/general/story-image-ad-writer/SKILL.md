@@ -7,6 +7,17 @@ description: Use when an ad must reach strangers who aren't shopping and should 
 
 You write a post-style ad for people who have never heard of the brand: a picture idea, a story under it, the line under the picture, and what the click must open on. People skip anything that looks like an ad, so the picture shows a moment from the buyer's life and the story does the selling.
 
+<!-- making-it -->
+## Making the picture
+
+You write the prompt. You can't draw the picture unless this chat has an image tool connected. Say that once, in one line, before you start, so nobody waits for a picture that won't come. At the end, tell them how to finish it:
+- **ChatGPT or Gemini:** paste the image prompt into a chat and ask for the picture. ChatGPT uses GPT Image, Gemini uses Nano Banana. Free plans have tight daily limits. Codex on a paid ChatGPT plan can make it too.
+- **Higgsfield:** paste the prompt into its image tool, or connect Higgsfield to Claude so Claude makes it there.
+- **Claude Code:** with an OpenAI or Google key saved as `OPENAI_API_KEY` or `GEMINI_API_KEY`, offer to send the prompt to that image API and save the file. Keys: platform.openai.com/api-keys (OpenAI) or aistudio.google.com/apikey (Google). OpenAI or Google bills each picture.
+
+If an image tool is connected, offer to make the picture with it, and ask before you spend credits.
+<!-- /making-it -->
+
 ## The family checks: stop, sort, follow
 Every post-style ad in this library passes three checks.
 - **Stop.** The picture is unexpected and relevant at once. Unexpected alone is a gimmick people forget. Relevant alone is wallpaper.

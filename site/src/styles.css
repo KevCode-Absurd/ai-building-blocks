@@ -736,3 +736,48 @@ body.globe-dragging, body.globe-dragging * { user-select: none !important; -webk
 @media (prefers-reduced-motion: reduce) { .run-out { animation: none; } }
 .step-list .node-out { position: static; width: auto; margin: 8px 0 4px 42px; }
 .sp-sample { margin: 6px 0 0; padding: 10px 12px; max-height: 220px; overflow: auto; border: 1px solid var(--line-2); border-radius: 8px; background: var(--bg-2); font: 400 11.5px/1.55 var(--mono); white-space: pre-wrap; word-break: break-word; }
+
+/* Visual skills: what finishes the job (MakeIt.tsx) */
+.bp-needs { margin: 14px 0 0; max-width: 62ch; font-size: 15px; line-height: 1.55; color: var(--text-2); padding: 10px 14px; border: 1px dashed var(--line-2); border-radius: 8px; }
+.bp-needs a { color: var(--text); text-decoration: underline; text-underline-offset: 3px; white-space: nowrap; }
+.make-list { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.make-list li { border: 1px solid var(--line); border-radius: 8px; padding: 18px 20px; background: var(--panel); }
+.make-list b { display: block; font-size: 15px; margin-bottom: 6px; }
+.make-list p { margin: 0; color: var(--text-2); font-size: 15px; line-height: 1.55; }
+.make-list code { font: 500 13px var(--mono); }
+.make-links { display: flex; flex-wrap: wrap; gap: 6px 16px; margin-top: 10px !important; }
+.make-links a { color: var(--text); text-decoration: underline; text-underline-offset: 3px; font-size: 14px; }
+@media (max-width: 640px) { .make-list { grid-template-columns: 1fr; } }
+.look { margin: 0 0 28px; }
+.look h3 { font-size: 15px; font-weight: 600; margin: 0 0 10px; }
+.look img { display: block; width: 100%; max-width: 420px; height: auto; border-radius: 8px; border: 1px solid var(--line); background: var(--panel-2); }
+.look.wide img { max-width: 100%; }
+.look figcaption { margin-top: 8px; font-size: 13px; color: var(--muted); }
+
+/* Questions and comments, on the side of every skill page (Comments.tsx) */
+.cm-tab { position: fixed; z-index: 40; right: 0; top: 50%; transform: translateY(-50%); writing-mode: vertical-rl; display: flex; align-items: center; gap: 8px;
+  padding: 14px 9px; border: 1px solid var(--line-2); border-right: 0; border-radius: 8px 0 0 8px; background: var(--panel); color: var(--text); font: 600 14px var(--sans); cursor: pointer; box-shadow: var(--shadow); }
+.cm-tab:hover { background: var(--panel-2); }
+.cm-tab b { writing-mode: horizontal-tb; min-width: 22px; padding: 2px 6px; border-radius: 999px; background: var(--btn); color: var(--btn-text); font: 600 12px var(--mono); text-align: center; }
+@media (max-width: 640px) { .cm-tab { top: auto; bottom: 16px; right: 16px; transform: none; writing-mode: horizontal-tb; border: 1px solid var(--line-2); border-radius: 999px; padding: 10px 16px; } }
+.cm .small { color: var(--muted); }
+.cm-form { display: grid; gap: 8px; margin: 18px 0 8px; }
+.cm-form.reply { margin: 6px 0 4px 18px; }
+.cm-form textarea, .cm-name { width: 100%; box-sizing: border-box; font: 400 15px/1.5 var(--sans); color: var(--text); background: var(--bg); border: 1px solid var(--line-2); border-radius: 8px; padding: 10px 12px; resize: vertical; }
+.cm-row { display: flex; gap: 8px; align-items: center; }
+.cm-name { flex: 1; padding: 7px 10px; }
+.cm-row .small { flex: 1; }
+.cm-trap { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
+.cm-error { margin: 0; color: var(--warn); font-size: 14px; }
+.cm-note { color: var(--muted); font-size: 15px; margin: 18px 0; }
+.cm-list { display: grid; gap: 14px; margin-top: 18px; }
+.cm-thread { border-top: 1px solid var(--line); padding-top: 14px; }
+.cm-one + .cm-one { margin: 10px 0 0 18px; padding-left: 12px; border-left: 2px solid var(--line-2); }
+.cm-one.team { border-left-color: var(--ok); }
+.cm-meta { margin: 0 0 4px; display: flex; flex-wrap: wrap; gap: 4px 10px; align-items: baseline; font-size: 13px; color: var(--muted); }
+.cm-meta b { color: var(--text); font-size: 14px; }
+.cm-badge { color: var(--ok); font-weight: 600; }
+.cm-body { margin: 0; white-space: pre-wrap; overflow-wrap: anywhere; font-size: 15px; line-height: 1.55; color: var(--text-2); }
+.cm-acts { margin: 4px 0 0; display: flex; gap: 14px; font-size: 13px; }
+.cm-foot { margin-top: 28px; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }

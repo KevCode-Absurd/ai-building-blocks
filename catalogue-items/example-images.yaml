@@ -1,0 +1,69 @@
+# One finished picture per visual skill, so people see what the prompt turns into before they run it.
+# Files live in site/public/examples/. They come from our own ad library (images we made with prompts like these,
+# for the example business Sprout), picked so no brand name shows. In the storyboard the product pack is painted plain.
+# build-index adds each block's picture to blocks.json as `look`; the block page shows it under "What you get".
+images:
+  paper-craft: { alt: "Paper-craft ad: a woman made of cut and folded paper reads a blank instruction book on a paper sofa." }
+  knitted-wool: { alt: "Knitted-wool ad: a crocheted woman on her bed holds up jeans that no longer fit." }
+  clay-before-after: { alt: "Clay ad, the after half: tiny clay workers clear a full sink while a clay woman walks off with her mug." }
+  clay-figure: { alt: "Clay ad: a small clay man waits beside a clay hourglass that has nearly run out." }
+  watercolor: { alt: "Watercolor ad: a woman sits on her bed, bloated, with the headline 'When the bloat picks your outfit'." }
+  comic-panels: { alt: "Comic ad in two panels: vegetables come back untouched, then a calmer evening with a drink." }
+  talking-object: { alt: "Talking-object ad: a coffee mug with a worried painted face sits full on a kitchen counter." }
+  phone-note: { alt: "Phone-note ad: a phone on a bed showing a short private note about feeling bloated." }
+  chat-screenshot: { alt: "Chat ad: a text thread with a photo of a half-eaten waffle and a skipped breakfast." }
+  handwritten-note: { alt: "Handwritten-note ad: a note taped to a fridge reads 'I get full after a few bites now.'" }
+  sticky-notes-selfie: { alt: "Selfie-style picture: a woman beside a wall of sticky notes that read 'I've started this habit so many times.'" }
+  problem-moment: { alt: "Problem-moment snapshot: a woman leaving home in a rush looks back at a messy kitchen." }
+  empty-room: { alt: "Empty-room photo: an evening kitchen table with a pushed-away plate and a tipped-over cup." }
+  leftover-mess: { alt: "Close-up mess photo: a half-eaten plate seen from above, with keys and papers beside it." }
+  quiet-plate: { alt: "Quiet photo: a child's plate comes back with the vegetables still on it." }
+  bottle-wall: { alt: "Ad: a woman in her kitchen looks up at a floor-to-ceiling wall of supplement bottles." }
+  cup-tower: { alt: "One-twist ad: an impossible tower of mismatched cups stands on a picnic blanket." }
+  overhead-portrait: { alt: "Overhead portrait: a woman on the floor with coffee looks up at the camera, keys and bag beside her." }
+  skeleton: { alt: "Skeleton ad, a first frame: a skeleton on a toilet scrolls its phone beside a tower of books." }
+  podcast: { alt: "Podcast-style picture, a first frame: two hosts at a table with microphones and a 'My day' list." }
+  short-film: { alt: "Short-film still, a first frame: a woman with two grocery bags as a subway train rushes past." }
+  character-sheet: { alt: "Character sheet: the same woman from the front, three-quarter, side and full length, used to keep her the same in every clip." }
+  storyboard: { alt: "Storyboard: 12 panels of one creator talking to camera in her kitchen. The product pack is painted plain." }
+  story-pictures: { alt: "Four story-ad pictures: a rushed exit, a pushed-away plate, a private phone note and a half-eaten meal." }
+  ad-grid: { alt: "Nine image ads in different looks: paper craft, knitted wool, watercolor, a talking mug, a handwritten note, clay, a phone note and a chat." }
+
+blocks:
+  paper-craft-image-ad-maker: paper-craft
+  paper-craft-video-clip-prompt-writer: paper-craft
+  knitted-wool-image-ad-maker: knitted-wool
+  knitted-wool-video-clip-prompt-writer: knitted-wool
+  clay-scene-image-ad-maker: clay-before-after
+  claymation-video-clip-prompt-writer: clay-figure
+  watercolor-image-ad-maker: watercolor
+  watercolor-video-clip-prompt-writer: watercolor
+  motion-comic-video-clip-prompt-writer: comic-panels
+  talking-object-image-ad-maker: talking-object
+  talking-object-video-clip-prompt-writer: talking-object
+  phone-note-screenshot-image-ad-maker: phone-note
+  story-image-ad-writer: phone-note
+  chat-screenshot-image-ad-maker: chat-screenshot
+  handwritten-note-image-ad-maker: handwritten-note
+  word-perfect-image-prompt-writer: handwritten-note
+  sticky-note-image-ad-maker: sticky-notes-selfie
+  selfie-style-video-clip-prompt-writer: sticky-notes-selfie
+  problem-moment-image-ad-maker: problem-moment
+  empty-room-image-ad-maker: empty-room
+  leftover-mess-image-ad-maker: leftover-mess
+  feared-outcome-image-ad-maker: quiet-plate
+  tried-before-products-image-ad-maker: bottle-wall
+  visual-twist-image-ad-maker: cup-tower
+  overhead-portrait-image-prompt-writer: overhead-portrait
+  skeleton-video-clip-prompt-writer: skeleton
+  podcast-style-video-clip-prompt-writer: podcast
+  short-film-video-clip-prompt-writer: short-film
+  spoken-video-ad-opening-writer: character-sheet
+  video-avatar-and-storyboard-planner: storyboard
+  video-ad-shot-list-maker: storyboard
+  turn-reviews-into-a-video-ad-ready-to-film: storyboard
+  story-ad-image-picker: story-pictures
+  turn-your-reviews-into-image-ads-buyers-believe: story-pictures
+  get-an-ad-strangers-read-built-from-reviews: story-pictures
+  learn-what-sells-from-50-different-image-ads: ad-grid
+  get-image-ads-strangers-stop-scrolling-for: ad-grid

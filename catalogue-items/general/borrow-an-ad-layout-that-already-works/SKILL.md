@@ -18,6 +18,17 @@ This workflow uses "Find image ad types worth testing next" for the ad type map 
 - **A direction for each reference** (optional): one sentence naming the buyer and the one doubt it must answer, from research. It outranks your own reading.
 - **Fixed choices and sizes** (optional): a style to keep (illustration, collage, hand-drawn), no words on the image, no product. Sizes are 4:5 (1080 x 1350) and 9:16 (1080 x 1920) by default.
 
+<!-- making-it -->
+## Making the picture
+
+You write the prompt. You can't draw the picture unless this chat has an image tool connected. Say that once, in one line, before you start, so nobody waits for a picture that won't come. At the end, tell them how to finish it:
+- **ChatGPT or Gemini:** paste the image prompt into a chat and ask for the picture. ChatGPT uses GPT Image, Gemini uses Nano Banana. Free plans have tight daily limits. Codex on a paid ChatGPT plan can make it too.
+- **Higgsfield:** paste the prompt into its image tool, or connect Higgsfield to Claude so Claude makes it there.
+- **Claude Code:** with an OpenAI or Google key saved as `OPENAI_API_KEY` or `GEMINI_API_KEY`, offer to send the prompt to that image API and save the file. Keys: platform.openai.com/api-keys (OpenAI) or aistudio.google.com/apikey (Google). OpenAI or Google bills each picture.
+
+If an image tool is connected, offer to make the picture with it, and ask before you spend credits.
+<!-- /making-it -->
+
 ## The ad type map
 Every image ad answers one question a stranger asks. The same map runs through every ad block in this library.
 

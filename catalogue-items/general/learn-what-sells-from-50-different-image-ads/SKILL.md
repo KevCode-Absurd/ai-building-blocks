@@ -7,6 +7,17 @@ description: Use when a brand needs its first big batch of image ads and wants t
 
 You plan 50 image ads as a grid, write a brief for each, and make the images. The aim is to learn, from one sprint, which argument and which ad type to make more of. This workflow uses "Find image ad types worth testing next" for the ad type map, "Single image ad planner" for each brief, and "Pre-launch ad checker" for the last check.
 
+<!-- making-it -->
+## Making the picture
+
+You write the prompt. You can't draw the picture unless this chat has an image tool connected. Say that once, in one line, before you start, so nobody waits for a picture that won't come. At the end, tell them how to finish it:
+- **ChatGPT or Gemini:** paste the image prompt into a chat and ask for the picture. ChatGPT uses GPT Image, Gemini uses Nano Banana. Free plans have tight daily limits. Codex on a paid ChatGPT plan can make it too.
+- **Higgsfield:** paste the prompt into its image tool, or connect Higgsfield to Claude so Claude makes it there.
+- **Claude Code:** with an OpenAI or Google key saved as `OPENAI_API_KEY` or `GEMINI_API_KEY`, offer to send the prompt to that image API and save the file. Keys: platform.openai.com/api-keys (OpenAI) or aistudio.google.com/apikey (Google). OpenAI or Google bills each picture.
+
+If an image tool is connected, offer to make the picture with it, and ask before you spend credits.
+<!-- /making-it -->
+
 ## Why a grid of 50
 Each of 5 arguments appears in each of 5 ad types, in 2 looks: 5 x 5 x 2 = 50. When every argument meets every type, you can tell whether an argument won or a type won. That is the crossed design behind most fair tests (Fisher). Each argument and each type then pools 10 ads, so one weak ad can move its group's result by a tenth at most. Variety comes from the argument and the type, never the colours, since near-copies add little (Loomer, on Meta's creative variety).
 

@@ -14,6 +14,17 @@ A workflow that turns phone photos of one product into a planned shoot: 8 to 12 
 - **Where the photos go, and in which sizes** (required): product page (1:1), feed (4:5), stories (9:16), banners and email headers (3:2).
 - **Reference photos** (optional): photos whose look the person likes.
 
+<!-- making-it -->
+## Making the picture
+
+You write the prompt. You can't draw the picture unless this chat has an image tool connected. Say that once, in one line, before you start, so nobody waits for a picture that won't come. At the end, tell them how to finish it:
+- **ChatGPT or Gemini:** paste the image prompt into a chat and ask for the picture. ChatGPT uses GPT Image, Gemini uses Nano Banana. Free plans have tight daily limits. Codex on a paid ChatGPT plan can make it too.
+- **Higgsfield:** paste the prompt into its image tool, or connect Higgsfield to Claude so Claude makes it there.
+- **Claude Code:** with an OpenAI or Google key saved as `OPENAI_API_KEY` or `GEMINI_API_KEY`, offer to send the prompt to that image API and save the file. Keys: platform.openai.com/api-keys (OpenAI) or aistudio.google.com/apikey (Google). OpenAI or Google bills each picture.
+
+If an image tool is connected, offer to make the picture with it, and ask before you spend credits.
+<!-- /making-it -->
+
 ## Steps
 1. **Brief.** One product, one variant. Make only the sizes named.
 2. **Truth sheet.** Run `product-image-spec-writer` ("Product image spec writer"). If no photo shows this exact variant, stop and ask for one. No in-use photo, no in-use shot: ask for one, or leave those shots out and say so.

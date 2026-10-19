@@ -12,6 +12,17 @@ You plan one still image ad: a 3D cutaway that slices into the place where the p
 - **Brand facts** (required), from the brand file: how the product works, each step with its source; what it's made of; how it's used; approved claims with sources; banned claims; what buyers assume; colours and typefaces; the offer with its terms.
 - **Product photos** (optional, but needed before any image is made): front and side, with the label sharp. Read attached photos directly, and ask for the photos rather than a description. With only a description, say what you couldn't check.
 
+<!-- making-it -->
+## Making the picture
+
+You write the prompt. You can't draw the picture unless this chat has an image tool connected. Say that once, in one line, before you start, so nobody waits for a picture that won't come. At the end, tell them how to finish it:
+- **ChatGPT or Gemini:** paste the image prompt into a chat and ask for the picture. ChatGPT uses GPT Image, Gemini uses Nano Banana. Free plans have tight daily limits. Codex on a paid ChatGPT plan can make it too.
+- **Higgsfield:** paste the prompt into its image tool, or connect Higgsfield to Claude so Claude makes it there.
+- **Claude Code:** with an OpenAI or Google key saved as `OPENAI_API_KEY` or `GEMINI_API_KEY`, offer to send the prompt to that image API and save the file. Keys: platform.openai.com/api-keys (OpenAI) or aistudio.google.com/apikey (Google). OpenAI or Google bills each picture.
+
+If an image tool is connected, offer to make the picture with it, and ask before you spend credits.
+<!-- /making-it -->
+
 ## Steps
 1. **Run three tests.** Use this format only if all three pass, and say which failed if one does.
    - Hidden: you can't photograph it at normal size. If you can, a real photo is stronger and cheaper.

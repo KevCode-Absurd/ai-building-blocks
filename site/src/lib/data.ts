@@ -30,6 +30,8 @@ export type Block = {
   usedIn: number;
   task: string;
   headline: string;
+  /** One finished picture made with a prompt like this block's, for visual blocks that have one. */
+  look?: { src: string; alt: string };
 };
 /** The full page for one block, loaded when its page opens. */
 export type Page = {
@@ -168,5 +170,11 @@ export const FUNCTIONS: { id: string; name: string; line: string; tasks: string[
 export const FUNCTION_MOVED: Record<string, string> = { designer: "ads", video: "ads" };
 /** Image or video: the two kinds of ad a block can make. Every ad-making block makes one, never both. */
 export const formatOf = (b: Block): "image" | "video" | null => (b.task === "make-image-ads" ? "image" : b.task === "make-video-ads" ? "video" : null);
+const VIDEO_OUT = new Set(["video_prompt", "video_ads"]);
+const IMAGE_OUT = new Set(["image_prompt", "avatar_sheet", "static_ads", "photo_set", "pdp_images", "upscaled_image"]);
+/** What a block needs a picture or video tool for, since Claude writes prompts but can't draw.
+ *  Same rule as tools/add-making-it.mjs, which adds the matching note to the SKILL.md. */
+export const rendersOf = (b: Block): "image" | "video" | null =>
+  b.outputs.some((o) => VIDEO_OUT.has(o.type)) ? "video" : b.outputs.some((o) => IMAGE_OUT.has(o.type)) ? "image" : null;
 export const functionsOf = (b: Block) => FUNCTIONS.filter((f) => f.tasks.includes(b.task));
 

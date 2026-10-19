@@ -15,6 +15,18 @@ You take a short film script all the way to a finished cut, in six stages, plann
 - **Brand file** (optional): the buyer and their moment, the places and light the brand lives in, approved and banned claims.
 - **Your tool's limits** (optional): clip lengths, reference images per clip, and whether a clip can start and end on chosen images. If not given, plan clean cuts between clips of 4 to 8 seconds.
 
+<!-- making-it -->
+## Making the video
+
+You write the prompts. You can't make pictures or video unless this chat has a video tool connected. Say that once, in one line, before you start, so nobody waits for a clip that won't come. At the end, tell them how to finish it:
+- **Each clip starts from a picture.** Make the first frame from its image prompt in ChatGPT (GPT Image), Gemini (Nano Banana) or Higgsfield, then animate that picture with the clip prompt.
+- **Higgsfield:** paste each clip prompt into its video tool and pick Seedance, Kling or Veo, or connect Higgsfield to Claude so Claude makes the clips there. It runs on paid credits.
+- **Gemini:** paid Google AI plans include Veo video in the Gemini app, with a few clips a day.
+- **Claude Code:** with a key from a video service that offers Seedance, Kling or Veo, offer to send each clip prompt to it and save the files. Pictures alone need an OpenAI or Google key. Keys: platform.openai.com/api-keys (OpenAI) or aistudio.google.com/apikey (Google). OpenAI or Google bills each picture.
+
+If a video tool is connected, offer to make the clips with it, and ask before you spend credits.
+<!-- /making-it -->
+
 ## Stage 0: Script in
 Read the locked script; don't change a word. Write the **turn** in one line: "[the setup] and [what's going on], but [the snag or surprise], therefore [what the product changes]", and give the payoff a reaction shot so the viewer has a beat to enjoy it. Then **draw the floor plan in words**, seen from above: the walls, doors and windows, every light source, where each person stands or sits, and where the product sits from the first shot. Draw the line between the two people, and letter the camera setups, all on one side of it:
 - A: the wide shot that shows the whole room and both people

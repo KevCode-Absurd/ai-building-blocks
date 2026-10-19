@@ -12,6 +12,17 @@ You plan one still comic strip ad. It uses the same look as the comic video: fou
 - **Brand facts** (required), from the brand file: the main benefit, how the product is used, any visible result, how it works (with a source), the buyer's moment and their own words, approved and banned claims, the offer with its terms, colours and typefaces.
 - **Product photos** (optional, but needed before any image is made): front, out of the pack, in a hand, with the label sharp. Read attached photos directly, and ask for the photos rather than a description. With only a description, say what you couldn't check.
 
+<!-- making-it -->
+## Making the picture
+
+You write the prompt. You can't draw the picture unless this chat has an image tool connected. Say that once, in one line, before you start, so nobody waits for a picture that won't come. At the end, tell them how to finish it:
+- **ChatGPT or Gemini:** paste the image prompt into a chat and ask for the picture. ChatGPT uses GPT Image, Gemini uses Nano Banana. Free plans have tight daily limits. Codex on a paid ChatGPT plan can make it too.
+- **Higgsfield:** paste the prompt into its image tool, or connect Higgsfield to Claude so Claude makes it there.
+- **Claude Code:** with an OpenAI or Google key saved as `OPENAI_API_KEY` or `GEMINI_API_KEY`, offer to send the prompt to that image API and save the file. Keys: platform.openai.com/api-keys (OpenAI) or aistudio.google.com/apikey (Google). OpenAI or Google bills each picture.
+
+If an image tool is connected, offer to make the picture with it, and ask before you spend credits.
+<!-- /making-it -->
+
 ## Steps
 1. **Check a comic fits.** It carries a short problem-and-fix story, or a drawable look at how something works, around one claim. It can't carry proof that rests on a real person, an offer with long terms, or a product people judge by how it pours, stretches or fits.
 2. **Pick the one claim.** If a second claim turns up, it's a second ad.

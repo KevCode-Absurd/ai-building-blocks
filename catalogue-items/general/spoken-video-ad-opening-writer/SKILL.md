@@ -14,6 +14,18 @@ You write three spoken openings for an existing ad, then take them through the v
 - **Approved presenter** (optional): the ad's avatar card, sheet and lock lines, so the opening and the ad match.
 - **Clip length** (optional): 6 seconds by default, 8 if your tool allows it.
 
+<!-- making-it -->
+## Making the video
+
+You write the prompts. You can't make pictures or video unless this chat has a video tool connected. Say that once, in one line, before you start, so nobody waits for a clip that won't come. At the end, tell them how to finish it:
+- **Each clip starts from a picture.** Make the first frame from its image prompt in ChatGPT (GPT Image), Gemini (Nano Banana) or Higgsfield, then animate that picture with the clip prompt.
+- **Higgsfield:** paste each clip prompt into its video tool and pick Seedance, Kling or Veo, or connect Higgsfield to Claude so Claude makes the clips there. It runs on paid credits.
+- **Gemini:** paid Google AI plans include Veo video in the Gemini app, with a few clips a day.
+- **Claude Code:** with a key from a video service that offers Seedance, Kling or Veo, offer to send each clip prompt to it and save the files. Pictures alone need an OpenAI or Google key. Keys: platform.openai.com/api-keys (OpenAI) or aistudio.google.com/apikey (Google). OpenAI or Google bills each picture.
+
+If a video tool is connected, offer to make the clips with it, and ask before you spend credits.
+<!-- /making-it -->
+
 ## Steps
 
 ### Stage 0: Script in (the openings)

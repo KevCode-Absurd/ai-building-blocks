@@ -79,6 +79,10 @@ Every skill and prompt ends with a score out of 100, so any input gets an output
 
 When a skill needs a picture or video, ask the person to attach it: the AI can see images. A written description is only the fallback for an AI that can't take files, and then say what couldn't be checked.
 
+Claude writes image and video prompts but can't draw them. Every skill that hands back an image prompt, a video prompt or finished pictures gets a "Making the picture" (or "Making the video") section after "What you need": it says so in one line before the work starts, then names what finishes the job (ChatGPT, Gemini, Higgsfield, or an OpenAI or Google key in Claude Code). Don't write it by hand. Run `node tools/add-making-it.mjs` after `npm --prefix site run index`; it decides from the block's outputs, and the page shows the matching "Turn the prompt into a picture" section by the same rule.
+
+A visual skill can show one finished picture under "What you get". Add the image to `site/public/examples/` (webp, about 720 px wide, no brand names showing) and map it in `catalogue-items/example-images.yaml`, with alt text that says what's in it. Only use a picture that really matches what the skill makes.
+
 ## boards/ecommerce.md
 
 Not shipped or shown any more (2026-10-19). Every skill is a base skill for anyone. These notes are raw material for the online-store versions we build later, so leave them as they are. Put nothing in SKILL.md or page.yaml that only works for one industry: give examples from more than one field.

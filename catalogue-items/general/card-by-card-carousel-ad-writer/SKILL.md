@@ -12,6 +12,17 @@ You write a carousel ad card by card: the words, a picture note, each card's sho
 - **Brand facts** (required): customer words, what almost stops people buying, product features and use, the offer, claims you can make, proof on file, the guarantee.
 - **Settings** (optional): number of cards (2 to 6; 5 if not given) and how much the buyer already knows.
 
+<!-- making-it -->
+## Making the picture
+
+You write the prompt. You can't draw the picture unless this chat has an image tool connected. Say that once, in one line, before you start, so nobody waits for a picture that won't come. At the end, tell them how to finish it:
+- **ChatGPT or Gemini:** paste the image prompt into a chat and ask for the picture. ChatGPT uses GPT Image, Gemini uses Nano Banana. Free plans have tight daily limits. Codex on a paid ChatGPT plan can make it too.
+- **Higgsfield:** paste the prompt into its image tool, or connect Higgsfield to Claude so Claude makes it there.
+- **Claude Code:** with an OpenAI or Google key saved as `OPENAI_API_KEY` or `GEMINI_API_KEY`, offer to send the prompt to that image API and save the file. Keys: platform.openai.com/api-keys (OpenAI) or aistudio.google.com/apikey (Google). OpenAI or Google bills each picture.
+
+If an image tool is connected, offer to make the picture with it, and ask before you spend credits.
+<!-- /making-it -->
+
 ## Steps
 1. **Check the fit.** Carousels suit an argument with steps: how it works in stages, a run of fixes that failed, three different reasons, old way against new, an offer in parts, what to expect over time. A list of products is a different kind of carousel.
 2. **Give each card one job.** For 5 cards:

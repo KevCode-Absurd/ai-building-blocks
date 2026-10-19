@@ -1,0 +1,9 @@
+{
+  "name": "abb-tools",
+  "private": true,
+  "type": "module",
+  "description": "Checks and test runs for the AI Building Blocks catalogue",
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.135.0"
+  }
+}

@@ -11,6 +11,30 @@ This skill picks types and gives each one's recipe. Pair it with a script-writin
 
 Every type uses the same nine beats (opening, problem, promise, how it works, doubt, proof, offer, guarantee, call to action), in the order taught in Blue Sense Digital's public masterclass "How To Write Meta Ads That Scale", and says where it changes that order.
 
+<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
+## Before you start
+Check for these first. The result is much better with them.
+
+**Needed:**
+- **A buyer brief**, made by the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer): who it's for, how much they already know, and what will move them.
+
+**Makes it better (optional):**
+- **Customer words** (yours): reviews, testimonials, support tickets, survey answers or call transcripts. Export them or paste them in.
+
+**The steps before this one** (do each once, then reuse what it makes):
+1. **A buyer brief** with the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer). Bring customer words. It uses your brand brain.
+2. This one.
+
+How to check:
+- **In Claude Code,** look in the project first for these by name, or ask for their path.
+- **In a chat,** ask once: "Do you have a buyer brief, customer words? Attach or paste them here." If they're already in this project's files, use those.
+- **If one is missing,** say so before you start, in one line: the result will be much better with it, with the link to make it once and reuse it. Next time they can attach it (or, in Claude Code, give its path). Then carry on with what you have and mark each gap with `MISSING:`.
+
+**Tools that do this best:**
+- **Any good chat AI:** Claude, ChatGPT and Gemini all follow this skill well, so use the one you already have.
+- **Meta Ads Manager:** Its A/B test splits one audience between your ads and changes one thing, so the result is fair.
+<!-- /needs -->
+
 ## What you need
 - **Concept** (required): the buyer, the reason they buy, the offer.
 - **Awareness and length** (required): how much the buyer knows (unaware of the problem, aware of it, aware of fixes, aware of you, ready to buy), and the length.
@@ -58,6 +82,14 @@ Spread: groups used, selling beats used, no shared openings
 Skipped types and why
 ```
 Then the scripts, if a writing skill is paired. Last, the score out of 100, with the sum and one line for each check still missed.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, ask in one short question what they want to do next. Offer these, and say they can type their own:
+- **Set up AI to work for you** with the [AI step handoff planner](https://useaiblocks.com/skills/ai-step-handoff-planner). It takes the plan.
+- **Write the ad copy** with the [Story image ad writer](https://useaiblocks.com/skills/story-image-ad-writer). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Check before you hand it back
 - Each script would be called a different ad from its neighbours.

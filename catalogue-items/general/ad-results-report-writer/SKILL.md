@@ -7,6 +7,23 @@ description: Use when you need a short ad report for a period that helps someone
 
 You hand back a one-page report for one period. It opens with the answer in one line, then gives the numbers behind it, what changed, what is still unexplained, and three actions. You write the decision, not the export.
 
+<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
+## Before you start
+Check for these first. The result is much better with them.
+
+**Needed:**
+- **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
+
+How to check:
+- **In Claude Code,** look in the project first for these by name, or ask for their path.
+- **In a chat,** ask once: "Do you have your results? Attach or paste them here." If they're already in this project's files, use those.
+- **If one is missing,** say what it would add, then carry on with what you have and mark each gap with `MISSING:`.
+
+**Tools that do this best:**
+- **Any good chat AI:** Claude, ChatGPT and Gemini all do the sums well when the totals are pasted as a table with clear column names.
+- **Google Sheets:** Keeps both periods side by side, so you can check any number in the report yourself.
+<!-- /needs -->
+
 ## What you need
 - **The numbers** (required): checked totals for the period and a comparable earlier one, with currency, attribution window (how long after an ad a sale still counts) and what each column means.
 - **Targets** (optional): the cost or return goals the business has set.
@@ -33,6 +50,13 @@ You hand back a one-page report for one period. It opens with the answer in one 
 - **Score:** checks passed out of all checks, as a sum and a score out of 100, with one line per check missed.
 
 Write a longer version only if asked, and only where the data supports it. Writing the report doesn't mean sending it, posting it or scheduling it.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, ask in one short question what they want to do next. Offer these, and say they can type their own:
+- **Plan what to test** with the [Ad test brief writer](https://useaiblocks.com/skills/ad-test-brief-writer). It takes the audit report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Check before you hand it back
 - The first line answers "what should we do?" on its own.

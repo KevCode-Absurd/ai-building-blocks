@@ -7,6 +7,30 @@ description: Use when finished product page gallery images need a pass or fail b
 
 You check finished gallery images in three passes, from far to close: the set as a strip of thumbnails, each image at phone size, then each image zoomed in beside the real product. Every fault gets a severity and the smallest fix.
 
+<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
+## Before you start
+Check for these first. The result is much better with them.
+
+**Needed:**
+- **Pdp images** (yours): finished product page gallery images with QA notes.
+- **A gallery plan**, made by the [Product page gallery planner](https://useaiblocks.com/skills/product-page-gallery-planner): the planned pictures of a product page, one job each.
+- **Product photos** (yours): clear photos of the real product, from more than one angle. Attach them.
+
+**The steps before this one** (do each once, then reuse what it makes):
+1. **Brand brain** with the [Website brand file builder](https://useaiblocks.com/skills/website-brand-file-builder). Bring your website, customer words (optional), your results (optional).
+2. **A gallery plan** with the [Product page gallery planner](https://useaiblocks.com/skills/product-page-gallery-planner). Bring product photos, customer words (optional). It uses your brand brain and a product truth sheet.
+3. This one.
+
+How to check:
+- **In Claude Code,** look in the project first for these by name, or ask for their path.
+- **In a chat,** ask once: "Do you have pdp images, a gallery plan, product photos? Attach or paste them here." If they're already in this project's files, use those.
+- **If one is missing,** say so before you start, in one line: the result will be much better with it, with the link to make it once and reuse it. Next time they can attach it (or, in Claude Code, give its path). Then carry on with what you have and mark each gap with `MISSING:`.
+
+**Tools that do this best:**
+- **Any good chat AI:** Any current chat AI that reads images can run the checks. Attach each file at full size, then zoom in yourself too.
+- **Google Merchant Center:** Its Diagnostics page flags product images that break Google's rules, such as promo text or a missing AI label.
+<!-- /needs -->
+
 ## What you need
 - **Finished images** (required): the image files at full size, in every shape that will be uploaded. Read each attached image directly, and ask for the files rather than a description.
 - **The plan** (required): each image's job, its message in one line, and its exact words with the source of each.
@@ -51,6 +75,13 @@ The score measures how ready the set is to upload. Start at 100. Take off 40 for
 
 ## What you hand back
 A verdict per image (PASS, or FAIL with its fault lines), then the set verdict (S1 to S4), then the score now and after the fixes with its sum, then every check not run and why. An image not seen at full size is a FAIL marked "not inspected".
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, ask in one short question what they want to do next. Offer these, and say they can type their own:
+- **Plan what to test** with the [Ad test brief writer](https://useaiblocks.com/skills/ad-test-brief-writer). It takes the audit report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 Write `MISSING: <image file | plan | real photo | brand facts>`. A check you couldn't run is listed as not run, never as passed.

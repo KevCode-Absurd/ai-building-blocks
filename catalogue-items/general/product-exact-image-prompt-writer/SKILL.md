@@ -7,6 +7,39 @@ description: Use when one ad's scene, layout and words are approved and you need
 
 You turn one approved ad into one image prompt, then check what comes back. An image tool told about a product in words draws its own version of it. Long briefs make it worse: the tool picks up a rejected idea, misses a rule buried in a paragraph, or swaps your pack for an easier one. The model makers' own guides agree on the fix. Say what each attached photo is for, put the most important things first, describe what you want rather than what you don't, quote exact words, and repeat what must not change every time.
 
+<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
+## Before you start
+Check for these first. The result is much better with them.
+
+**Needed:**
+- **A buyer brief**, made by the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer): who it's for, how much they already know, and what will move them.
+
+**Makes it better (optional):**
+- **Brand brain**, made by the [Website brand file builder](https://useaiblocks.com/skills/website-brand-file-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
+- **Product photos** (yours): clear photos of the real product, from more than one angle. Attach them.
+- **Ad copy**, made by the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer): the headline and text of the ad.
+- **Your lessons**, made by the [AI mistake rule writer](https://useaiblocks.com/skills/ai-mistake-rule-writer): what past ads taught you: what worked, what failed and why.
+
+**The steps before this one** (do each once, then reuse what it makes):
+1. **Brand brain** with the [Website brand file builder](https://useaiblocks.com/skills/website-brand-file-builder). Bring your website, customer words (optional), your results (optional).
+2. **A buyer brief** with the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer). Bring customer words. It uses your brand brain.
+3. **Ad copy** with the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer). It uses your brand brain and a buyer brief.
+4. **Your lessons** with the [AI mistake rule writer](https://useaiblocks.com/skills/ai-mistake-rule-writer). Bring your notes (optional). It uses your brand brain.
+5. This one.
+
+**From the brand brain, read:** `00-start-here.md`, `voice-and-look.md`, `offers.md`, `proof-and-claims.md`. Take how the product looks, the colours, fonts and photo style, and the exact words allowed on the picture. Leave out review quotes and research notes. Source notes and rejected ideas never go into the result.
+
+How to check:
+- **In Claude Code,** look in the project first. A brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name, or ask for their path.
+- **In a chat,** ask once: "Do you have a buyer brief, your brand brain, product photos? Attach or paste them here." If they're already in this project's files, use those.
+- **If one is missing,** say so before you start, in one line: the result will be much better with it, with the link to make it once and reuse it. Next time they can attach it (or, in Claude Code, give its path). Then carry on with what you have and mark each gap with `MISSING:`.
+
+**Tools that do this best:**
+- **GPT Image:** Takes several labelled reference images and follows exact quoted words for headlines and labels.
+- **Nano Banana:** Mixes many reference images and keeps the pack's shape across new scenes.
+- **FLUX:** Gives tight control when the prompt leads with the subject and ties each hex colour to one object.
+<!-- /needs -->
+
 ## What you need
 - **The approved ad** (required): the chosen scene, layout and image shape. Not the alternatives.
 - **Product facts** (required): the truth sheet's lock lines if you have them, or the exact item, pack, colours, quantity, size, and how it opens and is used.
@@ -71,6 +104,13 @@ For a clip, approve this still first and hand it to the video steps as the start
 4. **Check:** the six lines, to run on the first image, then pass or fail per line once you have it, with the failure notes.
 5. **Missing:** any fact or photo it needed and didn't have.
 6. **Score:** the prompt's score out of 100 and, once you have the first image, the image's score, each with one line per check missed.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, ask in one short question what they want to do next. Offer these, and say they can type their own:
+- **Check it before it goes live** with the [Pre-launch ad checker](https://useaiblocks.com/skills/pre-launch-ad-checker). It takes the image prompt.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Check before you hand it back
 - Every attached photo has one role, and none is described beyond what it shows.

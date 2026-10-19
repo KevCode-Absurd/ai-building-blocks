@@ -7,6 +7,32 @@ description: Use before making any product photo, ad or product page image with 
 
 Image models redraw products. Given a gap, they fill it with the typical product of your category: a jar where you sell a pouch, a lid you don't have, a label in new letters. You close the gaps first, in writing. The truth sheet borrows its shape from a factory tech pack, the spec sheet makers use so every sample comes out the same: what it is, what it's made of, what's printed on it, how it goes together. Every later plan, prompt and check is held to it.
 
+<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
+## Before you start
+Check for these first. The result is much better with them.
+
+**Needed:**
+- **Product photos** (yours): clear photos of the real product, from more than one angle. Attach them.
+
+**Makes it better (optional):**
+- **Brand brain** (its products part), made by the [Website brand file builder](https://useaiblocks.com/skills/website-brand-file-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
+
+**The steps before this one** (do each once, then reuse what it makes):
+1. **Brand brain** with the [Website brand file builder](https://useaiblocks.com/skills/website-brand-file-builder). Bring your website, customer words (optional), your results (optional).
+2. This one.
+
+**From the brand brain, read:** `00-start-here.md`, `voice-and-look.md`, `offers.md`, `proof-and-claims.md`. Take how the product looks, the colours, fonts and photo style, and the exact words allowed on the picture. Leave out review quotes and research notes. Source notes and rejected ideas never go into the result.
+
+How to check:
+- **In Claude Code,** look in the project first. A brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name, or ask for their path.
+- **In a chat,** ask once: "Do you have product photos, your brand brain? Attach or paste them here." If they're already in this project's files, use those.
+- **If one is missing,** say so before you start, in one line: the result will be much better with it, with the link to make it once and reuse it. Next time they can attach it (or, in Claude Code, give its path). Then carry on with what you have and mark each gap with `MISSING:`.
+
+**Tools that do this best:**
+- **Claude:** Reads several product photos at full size and quotes printed words line by line with the photo they came from.
+- **Google Sheets:** Keeps one row per variant, so the sheet and its lock lines are easy to find and update.
+<!-- /needs -->
+
 ## What you need
 - **Product and variant** (required): named the way the brand names it, with the exact size, colour, flavour or finish.
 - **Real photos** (required): every photo of that exact variant you have, ideally one of it in use. Read each attached photo directly, and ask for the photos rather than a description. A described photo can't be checked, so every line it would source says `MISSING`.
@@ -33,6 +59,13 @@ Image models redraw products. Given a gap, they fill it with the typical product
 
 ## What you hand back
 The photo check, the sheet in seven parts with a source on every line, the lock lines, the blocked shots, the one photo to ask for next, and the score with one line per check still missed.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, ask in one short question what they want to do next. Offer these, and say they can type their own:
+- **Make product photos** with the [Product page gallery planner](https://useaiblocks.com/skills/product-page-gallery-planner). It takes the product truth sheet.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Check before you hand it back
 - Every line has a source: a photo, a fact, or `MISSING`.

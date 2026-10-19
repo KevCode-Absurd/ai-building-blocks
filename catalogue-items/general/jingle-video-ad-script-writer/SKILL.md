@@ -7,6 +7,32 @@ description: Use when an ad should be an original short song over animated pictu
 
 You write a 6, 15 or 30 second song ad. The lyric is the script, laid out bar by bar with a picture for each line and a sound brief for a music tool. People should come away humming the hook, and the hook should say what they get. You end with the script and a cast note; the song shots skill makes the music and the video from there.
 
+<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
+## Before you start
+Check for these first. The result is much better with them.
+
+**Needed:**
+- **Brand brain**, made by the [Website brand file builder](https://useaiblocks.com/skills/website-brand-file-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
+- **A buyer brief**, made by the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer): who it's for, how much they already know, and what will move them.
+
+**The steps before this one** (do each once, then reuse what it makes):
+1. **Brand brain** with the [Website brand file builder](https://useaiblocks.com/skills/website-brand-file-builder). Bring your website, customer words (optional), your results (optional).
+2. **A buyer brief** with the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer). Bring customer words. It uses your brand brain.
+3. This one.
+
+**From the brand brain, read:** `00-start-here.md`, `offers.md`, `customers.md`, `proof-and-claims.md`, `voice-and-look.md`. Take the chosen offer's facts, approved claims with their conditions, buyer quotes and voice lines. Source notes and rejected ideas never go into the result.
+
+How to check:
+- **In Claude Code,** look in the project first. A brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name, or ask for their path.
+- **In a chat,** ask once: "Do you have your brand brain, a buyer brief? Attach or paste them here." If they're already in this project's files, use those.
+- **If one is missing,** say so before you start, in one line: the result will be much better with it, with the link to make it once and reuse it. Next time they can attach it (or, in Claude Code, give its path). Then carry on with what you have and mark each gap with `MISSING:`.
+
+**Tools that do this best:**
+- **Any good chat AI:** Claude, ChatGPT and Gemini all follow this skill well, so use the one you already have.
+- **Suno:** Has a style box and a lyrics box that reads section tags like [Verse]. Songs you download on a paid plan can run in ads.
+- **Eleven Music:** Can build a song from a section-by-section plan, and its paid plans are cleared for commercial use.
+<!-- /needs -->
+
 ## What you need
 - **Brief** (required): why people buy, how much the buyer already knows, the length (6, 15 or 30 seconds).
 - **Buyer** (required): who they are and the moment the product fits into (a school run, a late shift, a Sunday reset).
@@ -59,6 +85,15 @@ You write a 6, 15 or 30 second song ad. The lyric is the script, laid out bar by
 - A claims list: every line with a claim, brand line or number, and its source.
 - The cast note: the voice and who is on screen, and why.
 - The score out of 100, with the sum and one line for each check still missed.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, ask in one short question what they want to do next. Offer these, and say they can type their own:
+- **Check it before it goes live** with the [Meta ads compliance checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the video ad script.
+- **Make video ads** with the [Ad script format finder](https://useaiblocks.com/skills/ad-script-format-finder). It takes the video ad script.
+- **Make image ads** with the [Image ad remake planner](https://useaiblocks.com/skills/image-ad-remake-planner). It takes the video ad script.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Check before you hand it back
 - The hook is sung in bar 1, and comes back the planned number of times on the same tune.

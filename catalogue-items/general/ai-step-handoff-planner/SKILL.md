@@ -7,6 +7,20 @@ description: Use when designing or tightening a chain of AI steps for creative w
 
 You plan what each step in a chain of AI steps is sent and what it hands on. Each step should get the smallest set of facts that lets it do its job well, and nothing it needs may be lost on the way. A smaller bundle only counts as better if every fact the step depends on survives.
 
+<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
+## Before you start
+Check for these first. The result is much better with them.
+
+How to check:
+- **In Claude Code,** look in the project first for these by name, or ask for their path.
+- **In a chat,** ask once: "Do you have ? Attach or paste them here." If they're already in this project's files, use those.
+- **If one is missing,** say what it would add, then carry on with what you have and mark each gap with `MISSING:`.
+
+**Tools that do this best:**
+- **Claude Code:** Can run the chain as files and code, save every step's request and reply, and do the counts in code.
+- **Claude:** Follows long handoff cards closely and returns work in the fixed shape you ask for.
+<!-- /needs -->
+
 ## What you need
 - **The chain** (required): the steps in order and what each one should produce.
 - **Current bundles** (optional): what each step is sent today, with measured tokens or cost if known.
@@ -40,6 +54,13 @@ You plan what each step in a chain of AI steps is sent and what it hands on. Eac
 4. The run rules: what to save, retry caps, budget, where to resume.
 5. Shortfalls and trade-offs, if any.
 6. The score: checks passed out of all checks, as a sum and a score out of 100, with one line per check missed.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, ask in one short question what they want to do next. Offer these, and say they can type their own:
+- **Write the ad copy** with the [Story image ad writer](https://useaiblocks.com/skills/story-image-ad-writer). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Check before you hand it back
 - Every claim travels as a whole card, with its limits.

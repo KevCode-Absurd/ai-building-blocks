@@ -47,7 +47,10 @@ for (const b of blocks) {
     const [title, lead, ...rest] = SECTION[kind];
     const last = rest.pop();
     const block = [START, title, "", lead, ...rest, "", last, END].join(nl);
-    const at = next.search(/^## (?!What you need)/m); // first section after "What you need"
+    // The first section after "What you need" ("Before you start", written by add-needs.mjs, sits before it).
+    const need = next.search(/^## What you need/m);
+    const after = need === -1 ? -1 : next.slice(need + 3).search(/^## /m);
+    const at = need === -1 ? next.search(/^## (?!Before you start)/m) : after === -1 ? -1 : need + 3 + after;
     next = at === -1 ? `${next.trimEnd()}${nl}${nl}${block}${nl}` : `${next.slice(0, at)}${block}${nl}${nl}${next.slice(at)}`;
     kinds[kind]++;
   }

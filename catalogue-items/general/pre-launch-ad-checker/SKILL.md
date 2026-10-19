@@ -7,6 +7,36 @@ description: Use on a finished image or video ad, storyboard, or ad plan and pro
 
 You give one page per ad: a short **stop-ship** list, a list **worth a look**, the few things **for a person** to check on a real phone, then a **verdict** and a **next action**. Each flaw names its spot, why it fails and the smallest fix, and a readiness score shows how much needs fixing. You advise; you never block a decision.
 
+<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
+## Before you start
+Check for these first. The result is much better with them.
+
+**Makes it better (optional):**
+- **Brand brain**, made by the [Website brand file builder](https://useaiblocks.com/skills/website-brand-file-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
+- **Your video ads** (yours): the video ads, attached or linked.
+- **Your image ads** (yours): the image ads, attached as pictures.
+- **A video ad script**, made by the [Customer quote video ad script writer](https://useaiblocks.com/skills/customer-quote-video-ad-script-writer): the script, beat by beat, with on-screen text.
+- **Ad copy**, made by the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer): the headline and text of the ad.
+- **Image prompt** (yours): a render-ready image prompt plus the reference roles it uses.
+
+**The steps before this one** (do each once, then reuse what it makes):
+1. **Brand brain** with the [Website brand file builder](https://useaiblocks.com/skills/website-brand-file-builder). Bring your website, customer words (optional), your results (optional).
+2. **A video ad script** with the [Customer quote video ad script writer](https://useaiblocks.com/skills/customer-quote-video-ad-script-writer). Bring customer words. It uses your brand brain and your offer and buying reasons.
+3. **Ad copy** with the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer). It uses your brand brain and a buyer brief.
+4. This one.
+
+**From the brand brain, read:** `00-start-here.md`, `proof-and-claims.md`, `offers.md`, `voice-and-look.md`. Take the claims list with each claim's status, the offer terms word for word, and the voice rules. Source notes and rejected ideas never go into the result.
+
+How to check:
+- **In Claude Code,** look in the project first. A brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name, or ask for their path.
+- **In a chat,** ask once: "Do you have your brand brain, your video ads, your image ads? Attach or paste them here." If they're already in this project's files, use those.
+- **If one is missing,** say so before you start, in one line: the result will be much better with it, with the link to make it once and reuse it. Next time they can attach it (or, in Claude Code, give its path). Then carry on with what you have and mark each gap with `MISSING:`.
+
+**Tools that do this best:**
+- **Claude:** Reads full-size images closely, so it can spell-check the words in the picture and spot the safe zones.
+- **Meta Ads Manager:** Its safe zone guardrail marks the area the app's buttons and labels won't cover, so you see what might get hidden.
+<!-- /needs -->
+
 ## What you need
 - **The ad** (required): the image at full size, the video's key frames or storyboard with script and timings, or the ad plan and image prompt. Plus every word that runs with it (main text, headline, button) and where it runs. Read the attached image or frames directly, and ask for them rather than a description.
 - **The facts** (recommended): live price, offer and dates, approved claims and their proof (reviews word for word), from `offers.md` and `proof-and-claims.md` in the brand file.
@@ -77,6 +107,13 @@ Each version should differ in one nameable thing: the reason to buy, the buyer, 
 - **Readiness score:** now and with the fixes made, each with its sum.
 - **Verdict:** approve, fix (name the things) or remake. For a batch, a note on variety.
 - **Next action:** the one thing to do now.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, ask in one short question what they want to do next. Offer these, and say they can type their own:
+- **Plan what to test** with the [Ad test brief writer](https://useaiblocks.com/skills/ad-test-brief-writer). It takes the audit report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Check before you hand it back
 - Every item gives the quote, number or spot, and a fix that keeps the art.

@@ -7,6 +7,30 @@ description: Use when you want a still portrait of an adult seen from directly a
 
 You write a ready-to-paste image prompt (and the image, if you can make one) for an adult looking straight up into a camera held close above their face. The stretch comes from perspective, not from changing the person. It never implies a result from a product.
 
+<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
+## Before you start
+Check for these first. The result is much better with them.
+
+**Needed:**
+- **A buyer brief**, made by the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer): who it's for, how much they already know, and what will move them.
+
+**Makes it better (optional):**
+- **Product photos** (yours): clear photos of the real product, from more than one angle. Attach them.
+
+**The steps before this one** (do each once, then reuse what it makes):
+1. **A buyer brief** with the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer). Bring customer words. It uses your brand brain.
+2. This one.
+
+How to check:
+- **In Claude Code,** look in the project first for these by name, or ask for their path.
+- **In a chat,** ask once: "Do you have a buyer brief, product photos? Attach or paste them here." If they're already in this project's files, use those.
+- **If one is missing,** say so before you start, in one line: the result will be much better with it, with the link to make it once and reuse it. Next time they can attach it (or, in Claude Code, give its path). Then carry on with what you have and mark each gap with `MISSING:`.
+
+**Tools that do this best:**
+- **Nano Banana:** Takes up to 5 character references, so the approved person still looks like themselves from above.
+- **GPT Image:** Holds small edits across several rounds, which suits 'change only the hair' requests.
+<!-- /needs -->
+
 ## What you need
 - **Brief** (required): who, setting, mood, frame shape, whether a product or words appear.
 - **Identity photo** (optional): an approved model or character. It controls face, skin tone, marks, age, hair and build.
@@ -65,6 +89,13 @@ If an image tool is connected, offer to make the picture with it, and ask before
 
 ## What you hand back
 One prompt paragraph (for an edit, a one-line change plus the keep list), the image roles used, and, if an image was made, a pass or fail line for angle, perspective, light, identity, product and words. Then the score out of 100, with its sum, what it judged (image or prompt) and one line per check missed.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, ask in one short question what they want to do next. Offer these, and say they can type their own:
+- **Check it before it goes live** with the [Pre-launch ad checker](https://useaiblocks.com/skills/pre-launch-ad-checker). It takes the image prompt.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Check before you hand it back
 - The camera is clearly above the face, and the chosen strength shows.

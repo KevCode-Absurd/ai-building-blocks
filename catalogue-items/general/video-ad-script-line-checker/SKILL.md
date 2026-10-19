@@ -7,6 +7,26 @@ description: Use when you want a video ad script checked line by line before fil
 
 A set of checks for video ad scripts that sell, for any product. They describe; they don't dictate. Load only the groups the task needs.
 
+<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
+## Before you start
+Check for these first. The result is much better with them.
+
+**Makes it better (optional):**
+- **A video ad script**, made by the [Customer quote video ad script writer](https://useaiblocks.com/skills/customer-quote-video-ad-script-writer): the script, beat by beat, with on-screen text.
+
+**The steps before this one** (do each once, then reuse what it makes):
+1. **A video ad script** with the [Customer quote video ad script writer](https://useaiblocks.com/skills/customer-quote-video-ad-script-writer). Bring customer words. It uses your brand brain and your offer and buying reasons.
+2. This one.
+
+How to check:
+- **In Claude Code,** look in the project first for these by name, or ask for their path.
+- **In a chat,** ask once: "Do you have a video ad script? Attach or paste them here." If they're already in this project's files, use those.
+- **If one is missing,** say so before you start, in one line: the result will be much better with it, with the link to make it once and reuse it. Next time they can attach it (or, in Claude Code, give its path). Then carry on with what you have and mark each gap with `MISSING:`.
+
+**Tools that do this best:**
+- **Any good chat AI:** Claude, ChatGPT and Gemini all follow this skill well, so use the one you already have.
+<!-- /needs -->
+
 ## What you need
 - **Script** (required): the script you're judging or writing, one line per row if possible.
 - **Business facts** (optional): product facts, allowed claims, brand voice. Without them, fixes that need a fact are marked MISSING.
@@ -33,6 +53,13 @@ A set of checks for video ad scripts that sell, for any product. They describe; 
 
 ## What you hand back
 Used to judge: one block per weak line (`line | check | what's wrong | fix`), then missing beats, the word count against budget, a list of MISSING facts, and the score now and after the fixes, each with its sum. Used as a guide: no separate review; the script follows the checks, and the score comes at the end.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, ask in one short question what they want to do next. Offer these, and say they can type their own:
+- **Plan what to test** with the [Ad test brief writer](https://useaiblocks.com/skills/ad-test-brief-writer). It takes the audit report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Check before you hand it back
 - Every check you cite exists in the reference, and the reason matches it.

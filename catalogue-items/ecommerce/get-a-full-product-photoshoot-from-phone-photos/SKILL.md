@@ -7,6 +7,33 @@ description: Use when a store needs a set of photos of one real product for its 
 
 A workflow that turns phone photos of one product into a planned shoot: 8 to 12 photos, each with a job, in every size you use. It plans like a studio does. Shots first, then the light for each one, then the references. The product in every photo is the one a buyer receives, and no words are added.
 
+<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
+## Before you start
+Check for these first. The result is much better with them.
+
+**Needed:**
+- **Brand brain**, made by the [Website brand file builder](https://useaiblocks.com/skills/website-brand-file-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
+- **Product photos** (yours): clear photos of the real product, from more than one angle. Attach them.
+
+**Makes it better (optional):**
+- **Reference ads** (yours): ads you like and want to learn from, as screenshots or links.
+
+**The steps before this one** (do each once, then reuse what it makes):
+1. **Brand brain** with the [Website brand file builder](https://useaiblocks.com/skills/website-brand-file-builder). Bring your website, customer words (optional), your results (optional).
+2. This one.
+
+**From the brand brain, read:** `00-start-here.md`, `voice-and-look.md`, `offers.md`, `proof-and-claims.md`. Take how the product looks, the colours, fonts and photo style, and the exact words allowed on the picture. Leave out review quotes and research notes. Source notes and rejected ideas never go into the result.
+
+How to check:
+- **In Claude Code,** look in the project first. A brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name, or ask for their path.
+- **In a chat,** ask once: "Do you have your brand brain, product photos, reference ads? Attach or paste them here." If they're already in this project's files, use those.
+- **If one is missing,** say so before you start, in one line: the result will be much better with it, with the link to make it once and reuse it. Next time they can attach it (or, in Claude Code, give its path). Then carry on with what you have and mark each gap with `MISSING:`.
+
+**Tools that do this best:**
+- **Nano Banana:** Takes several product photos plus up to 3 style references, and is Google's pick for brand consistency.
+- **GPT Image:** Keeps the product close to your photos, and lets you point at one detail to fix it.
+<!-- /needs -->
+
 ## What you need
 - **Product and variant** (required), named as the brand names it.
 - **Real product photos** (required): the exact variant, including one in use if any shot shows use.
@@ -57,6 +84,17 @@ If an image tool is connected, offer to make the picture with it, and ask before
 3. The plan for each shot.
 4. Every approved size, named `<nn>_<job>_<size>`, marked as made with AI and kept apart from the real photos.
 5. A pass or fail line per file.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, ask in one short question what they want to do next. Offer these, and say they can type their own:
+- **Make product photos** with the [Product image spec writer](https://useaiblocks.com/skills/product-image-spec-writer). It takes the product photos.
+- **Make image ads** with the [Three-way offer image ad planner](https://useaiblocks.com/skills/three-way-offer-image-ad-planner). It takes the product photos.
+- **Make video ads** with the [Video avatar and storyboard planner](https://useaiblocks.com/skills/video-avatar-and-storyboard-planner). It takes the product photos.
+- **Study competitor ads** with the [Copy an ad layout that works, using your product](https://useaiblocks.com/workflows/borrow-an-ad-layout-that-already-works). It takes the product photos.
+- **Plan what to test** with the [Learn what sells from 50 different image ads](https://useaiblocks.com/workflows/learn-what-sells-from-50-different-image-ads). It takes the product photos.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Check before you hand it back
 - Every photo has a job, and no two share job, distance and angle.

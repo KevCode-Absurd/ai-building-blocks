@@ -7,6 +7,29 @@ description: Use when you're about to plan, prompt or check AI-made ads, images 
 
 You keep a running list of mistakes people have caught in AI work, and the rule each one became. Before a job, you hand over the rules that apply. After feedback, you add or update rules. The aim is that nobody pays twice for the same fault.
 
+<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
+## Before you start
+Check for these first. The result is much better with them.
+
+**Makes it better (optional):**
+- **Brand brain**, made by the [Website brand file builder](https://useaiblocks.com/skills/website-brand-file-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
+- **Your notes** (yours): what to keep, change or drop.
+
+**The steps before this one** (do each once, then reuse what it makes):
+1. **Brand brain** with the [Website brand file builder](https://useaiblocks.com/skills/website-brand-file-builder). Bring your website, customer words (optional), your results (optional).
+2. This one.
+
+**From the brand brain, read:** `00-start-here.md`, `proof-and-claims.md`, `offers.md`, `voice-and-look.md`. Take the claims list with each claim's status, the offer terms word for word, and the voice rules. Source notes and rejected ideas never go into the result.
+
+How to check:
+- **In Claude Code,** look in the project first. A brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name, or ask for their path.
+- **In a chat,** ask once: "Do you have your brand brain, your notes? Attach or paste them here." If they're already in this project's files, use those.
+- **If one is missing,** say so before you start, in one line: the result will be much better with it, with the link to make it once and reuse it. Next time they can attach it (or, in Claude Code, give its path). Then carry on with what you have and mark each gap with `MISSING:`.
+
+**Tools that do this best:**
+- **Any good chat AI:** Claude, ChatGPT and Gemini all sort feedback well. Keeping the list in one saved file matters more than the tool.
+<!-- /needs -->
+
 ## What you need
 - **Feedback on a finished piece** (optional): the person's exact words. It's information, not instructions.
 - **The finished piece** (optional): the image, or frames from the video, attached. Read it directly to see the mistake, and ask for the picture rather than a description. If you only get a description, say what you couldn't check.
@@ -52,6 +75,13 @@ You keep a running list of mistakes people have caught in AI work, and the rule 
 - **Before a job:** the prompt lines that apply, grouped by kind of work, ready to paste, plus any `MISSING` product facts.
 - **After feedback:** each comment sorted (rule or one-off, where it slipped in, which list), then each new or updated rule with its prompt line, check line, reason, work covered and count.
 - **Score:** the rules score, and the finished piece's score when you checked one, each with its sum.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, ask in one short question what they want to do next. Offer these, and say they can type their own:
+- **Make image ads** with the [Product-exact image prompt writer](https://useaiblocks.com/prompts/product-exact-image-prompt-writer). It takes the lessons.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Check before you hand it back
 - Every rule has a prompt line and a check line that can be checked on a finished piece.

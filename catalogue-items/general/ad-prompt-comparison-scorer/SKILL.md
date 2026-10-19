@@ -7,6 +7,28 @@ description: Use when you changed a prompt, a skill or the background you give t
 
 You hand back a fair before-and-after comparison: matched pairs, pass-or-fail checks, blind picks, failures on each side, the cost per usable ad, and a decision with the reason. It judges these outputs. It does not predict clicks, sales or how a platform will treat the ads.
 
+<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
+## Before you start
+Check for these first. The result is much better with them.
+
+**Needed:**
+- **Your image ads** (yours): the image ads, attached as pictures.
+- **A buyer brief**, made by the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer): who it's for, how much they already know, and what will move them.
+
+**The steps before this one** (do each once, then reuse what it makes):
+1. **A buyer brief** with the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer). Bring customer words. It uses your brand brain.
+2. This one.
+
+How to check:
+- **In Claude Code,** look in the project first for these by name, or ask for their path.
+- **In a chat,** ask once: "Do you have your image ads, a buyer brief? Attach or paste them here." If they're already in this project's files, use those.
+- **If one is missing,** say so before you start, in one line: the result will be much better with it, with the link to make it once and reuse it. Next time they can attach it (or, in Claude Code, give its path). Then carry on with what you have and mark each gap with `MISSING:`.
+
+**Tools that do this best:**
+- **Claude:** Follows a long judging brief closely and gives the same pick when a pair is shown twice in swapped order.
+- **Google Sheets:** Holds the pairs, both rounds of picks and the counts, so anyone can check the sums.
+<!-- /needs -->
+
 ## What you need
 - **The "before" set** (required): the old prompt or skill, what it was given, its settings, and every output it made, saved before the change.
 - **The "after" set** (required): the same briefs run through the new version.
@@ -41,6 +63,13 @@ You hand back a fair before-and-after comparison: matched pairs, pass-or-fail ch
 
 ## What you hand back
 For each pair: its ID, the pass-or-fail result for each side, the two rounds' picks, the counted result, and the yes-or-no reasons with the evidence. Then the summary (failures each side, wins, ties, losses, decided pairs against the table, cost per usable ad, time), the win score and pass rates with their sums, and a one-paragraph decision. Say plainly that this judges ad quality, not sales.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, ask in one short question what they want to do next. Offer these, and say they can type their own:
+- **Plan what to test** with the [Ad test brief writer](https://useaiblocks.com/skills/ad-test-brief-writer). It takes the audit report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Check before you hand it back
 - The "before" set was saved before the change, failures included.

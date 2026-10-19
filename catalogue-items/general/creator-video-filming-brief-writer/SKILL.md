@@ -7,6 +7,30 @@ description: Use when a real creator, customer or founder will film an approved 
 
 You write the brief a real person films from, laid out in the order they'll use it: what to know before they start, what to film in what order, and how to send it. The points are fixed; the words are theirs. It never asks anyone to say a result they didn't have.
 
+<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
+## Before you start
+Check for these first. The result is much better with them.
+
+**Needed:**
+- **Brand brain** (its products part), made by the [Website brand file builder](https://useaiblocks.com/skills/website-brand-file-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
+- **A video ad script**, made by the [Customer quote video ad script writer](https://useaiblocks.com/skills/customer-quote-video-ad-script-writer): the script, beat by beat, with on-screen text.
+
+**The steps before this one** (do each once, then reuse what it makes):
+1. **Brand brain** with the [Website brand file builder](https://useaiblocks.com/skills/website-brand-file-builder). Bring your website, customer words (optional), your results (optional).
+2. **A video ad script** with the [Customer quote video ad script writer](https://useaiblocks.com/skills/customer-quote-video-ad-script-writer). Bring customer words. It uses your brand brain and your offer and buying reasons.
+3. This one.
+
+**From the brand brain, read:** `00-start-here.md`, `offers.md`, `customers.md`, `proof-and-claims.md`, `voice-and-look.md`. Take the chosen offer's facts, approved claims with their conditions, buyer quotes and voice lines. Source notes and rejected ideas never go into the result.
+
+How to check:
+- **In Claude Code,** look in the project first. A brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name, or ask for their path.
+- **In a chat,** ask once: "Do you have your brand brain, a video ad script? Attach or paste them here." If they're already in this project's files, use those.
+- **If one is missing,** say so before you start, in one line: the result will be much better with it, with the link to make it once and reuse it. Next time they can attach it (or, in Claude Code, give its path). Then carry on with what you have and mark each gap with `MISSING:`.
+
+**Tools that do this best:**
+- **Any good chat AI:** Claude, ChatGPT and Gemini all follow this skill well, so use the one you already have.
+<!-- /needs -->
+
 ## What you need
 - **Approved script** (required): the spine, the openings chosen, the talking points, the proof moment, the facts allowed and the hand-off line.
 - **Delivery needs** (required): length, shape (for example 9:16), raw files, deadline, and the agreed use (paid or organic, channels, how long). Anything missing becomes `[CONFIRM]`. Never borrow another brief's numbers.
@@ -31,6 +55,17 @@ You write the brief a real person films from, laid out in the order they'll use 
 
 ## What you hand back
 A brief in this order: Before you start; The idea; Run order (test clip, talk takes, hands takes, openings, room sound); Must and maybe; Sending. Then, for you and not the creator, the score out of 100 with its sum and one line for each check still missed.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, ask in one short question what they want to do next. Offer these, and say they can type their own:
+- **Make video ads** with the [Video ad script type planner](https://useaiblocks.com/skills/video-ad-script-type-planner). It takes the buyer brief.
+- **Write the ad copy** with the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer). It takes the buyer brief.
+- **Make image ads** with the [Image ad brief settings writer](https://useaiblocks.com/prompts/image-ad-brief-settings-writer). It takes the buyer brief.
+- **Set up AI to work for you** with the [Ad prompt comparison scorer](https://useaiblocks.com/skills/ad-prompt-comparison-scorer). It takes the buyer brief.
+- **Write the landing page** with the [Proof-backed sales copy writer](https://useaiblocks.com/skills/proof-backed-sales-copy-writer). It takes the buyer brief.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Check before you hand it back
 - Every spoken line is in the approved script or is a bracketed blank.

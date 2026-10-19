@@ -28,7 +28,8 @@ const asPorts = (list) =>
 // Markdown is turned into HTML here, at build time, so the site ships no Markdown library.
 // Raw HTML in a file is escaped: files are data, never markup we trust.
 const md = new Marked({ gfm: true, renderer: { html: ({ text }) => text.replace(/&/g, "&amp;").replace(/</g, "&lt;") } });
-const bodyOf = (t) => t.replace(/\r\n?/g, "\n").replace(/^---\n[\s\S]*?\n---\n?/, "");
+// The skill file as shown on the page: no frontmatter, and no <!-- markers --> the section tools leave.
+const bodyOf = (t) => t.replace(/\r\n?/g, "\n").replace(/^---\n[\s\S]*?\n---\n?/, "").replace(/^<!--[\s\S]*?-->\n?/gm, "");
 
 const blocks = [];
 const problems = [];
@@ -117,6 +118,17 @@ if (fs.existsSync(looksFile)) {
     else if (!fs.existsSync(file)) problems.push(`example-images: ${file} is missing`);
     else bySlug[slug].look = { src: `/examples/${name}.webp`, alt: img.alt };
   }
+}
+
+// What each block needs first, the steps before it and the paths after it (tools/lib/needs.mjs), on its page.
+const { planOf } = await import("../../tools/lib/needs.mjs");
+const describe = (t) => ({ label: t.replace(/_/g, " ").replace(/^./, (c) => c.toUpperCase()), what: (typeDesc[t] ?? t).replace(/\.$/, "").replace(/^./, (c) => c.toLowerCase()) });
+for (const b of blocks) {
+  const f = path.join(OUT_PAGES, `${b.slug}.json`);
+  if (!fs.existsSync(f)) continue;
+  const pageData = JSON.parse(fs.readFileSync(f, "utf8"));
+  pageData.plan = planOf(b, bySlug, blocks, describe);
+  fs.writeFileSync(f, JSON.stringify(pageData));
 }
 
 const usedTypes = new Set(blocks.flatMap((b) => [...b.inputs, ...b.outputs].map((p) => p.type)));

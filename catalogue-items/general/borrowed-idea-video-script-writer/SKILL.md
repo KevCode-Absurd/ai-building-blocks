@@ -7,6 +7,36 @@ description: Use when you have a real ad you admire (the ad, its library ID or l
 
 One idea crosses over: the move that made a viewer believe or care. The reference's order, length, lines, claims, people, shots and sound stay behind, since copyright protects how a thing is said and leaves the idea free. For its skeleton, use `borrowed-structure-video-script-writer`.
 
+<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
+## Before you start
+Check for these first. The result is much better with them.
+
+**Needed:**
+- **Brand brain** (its products part), made by the [Website brand file builder](https://useaiblocks.com/skills/website-brand-file-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
+- **Ad breakdowns**, made by the [Competitor ad gap finder](https://useaiblocks.com/skills/competitor-ad-gap-finder): what each reference ad does: opening, angle, format, offer and proof.
+- **Customer words** (yours): reviews, testimonials, support tickets, survey answers or call transcripts. Export them or paste them in.
+
+**Makes it better (optional):**
+- **A buyer brief**, made by the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer): who it's for, how much they already know, and what will move them.
+
+**The steps before this one** (do each once, then reuse what it makes):
+1. **Brand brain** with the [Website brand file builder](https://useaiblocks.com/skills/website-brand-file-builder). Bring your website, customer words (optional), your results (optional).
+2. **Ad breakdowns** with the [Competitor ad gap finder](https://useaiblocks.com/skills/competitor-ad-gap-finder). Bring reference ads, competitors (optional). It uses your brand brain and a shortlist.
+3. **A buyer brief** with the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer). Bring customer words. It uses your brand brain.
+4. This one.
+
+**From the brand brain, read:** `00-start-here.md`, `market.md`, `business.md`, `customers.md`. Take the options buyers weigh, the competitor table and the open ground. Source notes and rejected ideas never go into the result.
+
+How to check:
+- **In Claude Code,** look in the project first. A brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name, or ask for their path.
+- **In a chat,** ask once: "Do you have your brand brain, ad breakdowns, customer words? Attach or paste them here." If they're already in this project's files, use those.
+- **If one is missing,** say so before you start, in one line: the result will be much better with it, with the link to make it once and reuse it. Next time they can attach it (or, in Claude Code, give its path). Then carry on with what you have and mark each gap with `MISSING:`.
+
+**Tools that do this best:**
+- **Meta Ad Library:** The free public place to see a real ad and note its ID and start date, browsed by hand.
+- **Any good chat AI:** The job is careful reading and writing from your facts, which any strong chat AI handles.
+<!-- /needs -->
+
 ## What you need
 - **A real reference ad** (required): its screenshot, video or words as written, with the source, or a breakdown card of it from `competitor-ad-gap-finder`. Read an attached screenshot or video frames directly, and ask for the picture rather than a description of it. Notes about a brand ("science-first", "creator videos") don't count.
 - **Customer research with real quotes and product facts** (required): proof with sources, offer, guarantee, allowed and banned claims, buyer stage.
@@ -52,6 +82,15 @@ MISSING
 SCORE
 <passed>/8 checks = <score> out of 100 | Missed: <each check still missed, or "none">
 ```
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, ask in one short question what they want to do next. Offer these, and say they can type their own:
+- **Check it before it goes live** with the [Meta ads compliance checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the video ad script.
+- **Make video ads** with the [Ad script format finder](https://useaiblocks.com/skills/ad-script-format-finder). It takes the video ad script.
+- **Make image ads** with the [Image ad remake planner](https://useaiblocks.com/skills/image-ad-remake-planner). It takes the video ad script.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Check before you hand it back
 - REFERENCE names a real ad; the idea works for another category and shapes one or two named parts.

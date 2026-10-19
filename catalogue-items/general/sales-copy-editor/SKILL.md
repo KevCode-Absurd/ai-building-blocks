@@ -7,6 +7,35 @@ description: Use when a draft ad, page, email or script needs an editor's read. 
 
 Most people skim, some read every line, and the ones about to pay check every claim. This edit finds what the draft promises, reads it as each of those readers, fixes only where one of them would stop, and logs every change with its reason.
 
+<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
+## Before you start
+Check for these first. The result is much better with them.
+
+**Needed:**
+- **A draft** (yours): the ad, page, email or script you want checked or improved.
+
+**Makes it better (optional):**
+- **Brand brain**, made by the [Website brand file builder](https://useaiblocks.com/skills/website-brand-file-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
+- **Ad copy**, made by the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer): the headline and text of the ad.
+
+**The steps before this one** (do each once, then reuse what it makes):
+1. **Brand brain** with the [Website brand file builder](https://useaiblocks.com/skills/website-brand-file-builder). Bring your website, customer words (optional), your results (optional).
+2. **Ad copy** with the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer). It uses your brand brain and a buyer brief.
+3. This one.
+
+**From the brand brain, read:** `00-start-here.md`, `proof-and-claims.md`, `offers.md`, `voice-and-look.md`. Take the claims list with each claim's status, the offer terms word for word, and the voice rules. Source notes and rejected ideas never go into the result.
+
+How to check:
+- **In Claude Code,** look in the project first. A brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name, or ask for their path.
+- **In a chat,** ask once: "Do you have a draft, your brand brain, ad copy? Attach or paste them here." If they're already in this project's files, use those.
+- **If one is missing,** say so before you start, in one line: the result will be much better with it, with the link to make it once and reuse it. Next time they can attach it (or, in Claude Code, give its path). Then carry on with what you have and mark each gap with `MISSING:`.
+
+**Tools that do this best:**
+- **Any good chat AI:** Any current chat AI can follow the reads. Give it the facts list so it adds nothing.
+- **Hemingway Editor:** Gives a reading grade and marks hard sentences, so you can check the before and after numbers yourself.
+- **Meta Ads Manager:** Its ad preview shows where your main text gets cut at See more, so you can check the opening.
+<!-- /needs -->
+
 ## What you need
 - **The draft** (required): each part named (headline, body, button; for an ad, image words, main text, headline or script lines).
 - **Facts** (required): product details, approved claims, proof, price and offer terms, the guarantee as written, and claims the brand must never make. No edit may go beyond them.
@@ -57,6 +86,13 @@ MISSING: <facts a fix needed>
 Verdict: wording problem, or a weak reason to buy that no edit can fix
 Score: before <passed>/<checks> = <score>, after <passed>/<checks> = <score> | Still failed: <list>
 ```
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, ask in one short question what they want to do next. Offer these, and say they can type their own:
+- **Plan what to test** with the [Ad test brief writer](https://useaiblocks.com/skills/ad-test-brief-writer). It takes the audit report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Check before you hand it back
 - Nothing in the locked list was reworded or dropped, and every specific is still there.

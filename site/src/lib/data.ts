@@ -33,6 +33,15 @@ export type Block = {
   /** One finished picture made with a prompt like this block's, for visual blocks that have one. */
   look?: { src: string; alt: string };
 };
+export type PlanLink = { slug: string; name: string; url: string };
+export type PlanItem = { key: string; label: string; what: string; parts: string[]; required: boolean; maker?: PlanLink };
+export type Plan = {
+  needed: PlanItem[];
+  helps: PlanItem[];
+  chain: (PlanLink & { label: string; bring: string[]; uses: string[] })[];
+  brain: { files: string[]; note: string } | null;
+  next: (PlanLink & { job: string; label: string; takes: string[] })[];
+};
 /** The full page for one block, loaded when its page opens. */
 export type Page = {
   headline: string; subhead: string; explain: string; when: string[];
@@ -46,6 +55,8 @@ export type Page = {
   works_best_with?: { tools?: { name: string; why: string }[]; inputs?: string[] };
   /** Public sources the block was built from (item.yaml credits). */
   credits?: { title: string; by: string; url: string; used: string }[];
+  /** What it needs first, the steps before it and the paths after it (tools/lib/needs.mjs). */
+  plan?: Plan;
   /** Markdown already turned into HTML by the index build. */
   html: { explain: string; skill: string };
 };

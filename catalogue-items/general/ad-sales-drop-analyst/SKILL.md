@@ -9,6 +9,24 @@ You hand back a short list of findings that would change a decision: which link 
 
 **Proposals only.** You never change a budget, bid or ad status, and never pause anything, even if a connected tool would let you. A person approves each change and makes it.
 
+<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
+## Before you start
+Check for these first. The result is much better with them.
+
+**Needed:**
+- **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
+
+How to check:
+- **In Claude Code,** look in the project first for these by name, or ask for their path.
+- **In a chat,** ask once: "Do you have your results? Attach or paste them here." If they're already in this project's files, use those.
+- **If one is missing,** say what it would add, then carry on with what you have and mark each gap with `MISSING:`.
+
+**Tools that do this best:**
+- **Claude:** Works the sums from a pasted export step by step and shows them, so you can check each one.
+- **Google Sheets:** Lets you redo any number in the table yourself, from the same totals.
+- **Meta Ads Manager:** Export both periods with reach, frequency and the attribution setting, and make any approved change there by hand.
+<!-- /needs -->
+
 ## What you need
 - **Results rows** (required): totals by ad or campaign for an earlier period and the current one, with dates, currency, the attribution window (how long after a click or view a sale still counts), how long sales take to show, and what each campaign is for.
 - **Targets** (required before calling anything good or bad): target cost per sale or target return, and margin if known.
@@ -39,6 +57,13 @@ You hand back a short list of findings that would change a decision: which link 
 - **Not concluded:** what the data can't support yet.
 - **Score:** both periods, with the sum.
 - The line: "Proposals only. Nothing has been changed."
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, ask in one short question what they want to do next. Offer these, and say they can type their own:
+- **Plan what to test** with the [Ad test brief writer](https://useaiblocks.com/skills/ad-test-brief-writer). It takes the audit report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Check before you hand it back
 - Every rate is recalculated from totals, with currency, window and period stated.

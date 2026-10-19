@@ -7,6 +7,32 @@ description: Use when a video ad should look like one person talking to their ph
 
 You write a 15 to 60 second script for one person talking to their phone. It should pass as a post from a person until the last line, and every claim in it must hold up. People tell stories in three moves: this was going on, but something got in the way, so I did this. Weak scripts skip the middle and list features. This one opens on the snag and spends most of its time on the product in someone's hands.
 
+<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
+## Before you start
+Check for these first. The result is much better with them.
+
+**Needed:**
+- **Brand brain** (its buyers and products part), made by the [Website brand file builder](https://useaiblocks.com/skills/website-brand-file-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
+- **A buyer brief**, made by the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer): who it's for, how much they already know, and what will move them.
+- **Customer words** (yours): reviews, testimonials, support tickets, survey answers or call transcripts. Export them or paste them in.
+
+**The steps before this one** (do each once, then reuse what it makes):
+1. **Brand brain** with the [Website brand file builder](https://useaiblocks.com/skills/website-brand-file-builder). Bring your website, customer words (optional), your results (optional).
+2. **A buyer brief** with the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer). Bring customer words. It uses your brand brain.
+3. This one.
+
+**From the brand brain, read:** `00-start-here.md`, `offers.md`, `customers.md`, `proof-and-claims.md`, `voice-and-look.md`. Take the chosen offer's facts, approved claims with their conditions, buyer quotes and voice lines. Source notes and rejected ideas never go into the result.
+
+How to check:
+- **In Claude Code,** look in the project first. A brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name, or ask for their path.
+- **In a chat,** ask once: "Do you have your brand brain, a buyer brief, customer words? Attach or paste them here." If they're already in this project's files, use those.
+- **If one is missing,** say so before you start, in one line: the result will be much better with it, with the link to make it once and reuse it. Next time they can attach it (or, in Claude Code, give its path). Then carry on with what you have and mark each gap with `MISSING:`.
+
+**Tools that do this best:**
+- **Claude:** Keeps the speaker rules and the one-detail limit in view across a long brief.
+- **Veo:** Turns a start frame of your AI presenter into short talking clips with the lips matched to the line.
+<!-- /needs -->
+
 ## What you need
 - **Brief** (required): why people buy, how much the buyer knows already, the length if you have one.
 - **Who is on camera** (required): `real creator` (has used the product), `founder, customer or expert` (on their own footage), or `AI presenter` (made up).
@@ -44,6 +70,15 @@ You write a 15 to 60 second script for one person talking to their phone. It sho
 - The cast note and where it goes next.
 - A list of every claim, number and quote with its source, and every blank or gap.
 - The score out of 100, with the sum and one line for each check still missed.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, ask in one short question what they want to do next. Offer these, and say they can type their own:
+- **Check it before it goes live** with the [Meta ads compliance checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the video ad script.
+- **Make video ads** with the [Ad script format finder](https://useaiblocks.com/skills/ad-script-format-finder). It takes the video ad script.
+- **Make image ads** with the [Image ad remake planner](https://useaiblocks.com/skills/image-ad-remake-planner). It takes the video ad script.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Check before you hand it back
 - The spine has a real "but", and the hook opens on it with no brand name and no greeting.

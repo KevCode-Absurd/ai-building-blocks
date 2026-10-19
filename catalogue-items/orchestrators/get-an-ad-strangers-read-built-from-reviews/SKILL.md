@@ -9,6 +9,39 @@ A 120 to 260 word story ad that reads like a normal post, with its picture plan 
 
 You run 4 skills one after another. Each skill's result is saved and passed to the next, and each step's own checks run before you move on.
 
+<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
+## Before you start
+Check for these first. The result is much better with them.
+
+**Needed:**
+- **Brand brain** (its products and buyers part), made by the [Website brand file builder](https://useaiblocks.com/skills/website-brand-file-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
+- **Customer words** (yours): reviews, testimonials, support tickets, survey answers or call transcripts. Export them or paste them in.
+
+**Makes it better (optional):**
+- **Your page** (yours): the landing page's link, or its text and a screenshot.
+- **A buyer brief**, made by the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer): who it's for, how much they already know, and what will move them.
+- **A video ad script**, made by the [Customer quote video ad script writer](https://useaiblocks.com/skills/customer-quote-video-ad-script-writer): the script, beat by beat, with on-screen text.
+- **Your image ads** (yours): the image ads, attached as pictures.
+
+**The steps before this one** (do each once, then reuse what it makes):
+1. **Brand brain** with the [Website brand file builder](https://useaiblocks.com/skills/website-brand-file-builder). Bring your website, customer words (optional), your results (optional).
+2. **A buyer brief** with the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer). Bring customer words. It uses your brand brain.
+3. **A video ad script** with the [Customer quote video ad script writer](https://useaiblocks.com/skills/customer-quote-video-ad-script-writer). Bring customer words. It uses your brand brain and your offer and buying reasons.
+4. This one.
+
+**From the brand brain, read:** `00-start-here.md`, `voice-and-look.md`, `offers.md`, `proof-and-claims.md`. Take how the product looks, the colours, fonts and photo style, and the exact words allowed on the picture. Leave out review quotes and research notes. Source notes and rejected ideas never go into the result.
+
+How to check:
+- **In Claude Code,** look in the project first. A brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name, or ask for their path.
+- **In a chat,** ask once: "Do you have your brand brain, customer words, your page? Attach or paste them here." If they're already in this project's files, use those.
+- **If one is missing,** say so before you start, in one line: the result will be much better with it, with the link to make it once and reuse it. Next time they can attach it (or, in Claude Code, give its path). Then carry on with what you have and mark each gap with `MISSING:`.
+
+**Tools that do this best:**
+- **Claude:** Keeps every review number and quote straight across four steps and a long story.
+- **Nano Banana:** Draws words in a picture accurately, which a note or message picture needs.
+- **Meta Ads Manager:** Sets the 18+ age and countries the rules check asks for, and previews the ad in the feed.
+<!-- /needs -->
+
 ## What you need
 - **Customer reviews** (required): reviews, survey answers or support emails, copied as written and numbered.
 - **Product facts** (required): what it is, what's in it, price, and the claims you may and may not make.
@@ -43,6 +76,14 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 
 ## What you hand back
 Four step files plus the summary. The last files hold the image prompt and the ad rules report, with the story and the test plan before them.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, ask in one short question what they want to do next. Offer these, and say they can type their own:
+- **Check it before it goes live** with the [Pre-launch ad checker](https://useaiblocks.com/skills/pre-launch-ad-checker). It takes the image prompt.
+- **Plan what to test** with the [Ad test brief writer](https://useaiblocks.com/skills/ad-test-brief-writer). It takes the audit report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Check before you hand it back
 - Each step passed its own checks, or the run stopped at the step that failed and says why.

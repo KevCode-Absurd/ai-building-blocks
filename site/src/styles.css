@@ -781,3 +781,19 @@ body.globe-dragging, body.globe-dragging * { user-select: none !important; -webk
 .cm-acts { margin: 4px 0 0; display: flex; gap: 14px; font-size: 13px; }
 .cm-foot { margin-top: 28px; }
 .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+
+/* Before you start / What to do next (Needs.tsx) */
+.needs { list-style: none; margin: 0 0 22px; padding: 0; }
+.needs li { padding: 12px 0; border-top: 1px solid var(--line); color: var(--text-2); }
+.needs li:last-child { border-bottom: 1px solid var(--line); }
+.needs a, .chain a { text-decoration: underline; text-underline-offset: 3px; text-decoration-color: var(--line-2); }
+.needs a:hover, .chain a:hover { text-decoration-color: currentColor; }
+.need-what { display: block; font-size: 14px; color: var(--muted); margin-top: 3px; }
+.chain { margin-bottom: 26px; }
+.chain li.here { color: var(--text); }
+.next-list { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 12px; }
+.next-one { display: flex; flex-direction: column; gap: 4px; height: 100%; padding: 14px 16px; border: 1px solid var(--line); border-radius: 10px; background: var(--panel); transition: transform 0.12s, box-shadow 0.12s, border-color 0.12s; }
+.next-one:hover { transform: translate(-3px, -3px); box-shadow: var(--hard); border-color: var(--text); }
+.next-one:focus-visible { outline: 2px solid var(--text); outline-offset: 3px; }
+.next-job { font: 500 12px var(--mono); color: var(--muted); }
+@media (prefers-reduced-motion: reduce) { .next-one { transition: none; } .next-one:hover { transform: none; } }

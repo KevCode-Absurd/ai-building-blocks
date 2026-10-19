@@ -7,6 +7,31 @@ description: Use when you have six or more of your own ads with measured results
 
 You find what your best ads share that your worst ads don't, then plan new ads for a product the owner names. Each new ad keeps those traits and changes one thing, so its result teaches something. Two tests: a regular of the brand would mistake a new ad for one of its own, and each new ad tries something the winners never did.
 
+<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
+## Before you start
+Check for these first. The result is much better with them.
+
+**Needed:**
+- **Brand brain** (its products part), made by the [Website brand file builder](https://useaiblocks.com/skills/website-brand-file-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
+- **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
+
+**The steps before this one** (do each once, then reuse what it makes):
+1. **Brand brain** with the [Website brand file builder](https://useaiblocks.com/skills/website-brand-file-builder). Bring your website, customer words (optional), your results (optional).
+2. This one.
+
+**From the brand brain, read:** `00-start-here.md`, `offers.md`, `customers.md`, `proof-and-claims.md`, `voice-and-look.md`. Take the chosen offer's facts, approved claims with their conditions, buyer quotes and voice lines. Source notes and rejected ideas never go into the result.
+
+How to check:
+- **In Claude Code,** look in the project first. A brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name, or ask for their path.
+- **In a chat,** ask once: "Do you have your brand brain, your results? Attach or paste them here." If they're already in this project's files, use those.
+- **If one is missing,** say so before you start, in one line: the result will be much better with it, with the link to make it once and reuse it. Next time they can attach it (or, in Claude Code, give its path). Then carry on with what you have and mark each gap with `MISSING:`.
+
+**Tools that do this best:**
+- **Meta Ads Manager:** Exports spend, purchases and dates per ad, so the ranking matches your account.
+- **Google Sheets:** Ranks the ads and splits them into thirds, so you can check its counts.
+- **Any good chat AI:** Reading traits works in any strong chat AI that can look at ad images.
+<!-- /needs -->
+
 ## What you need
 - **Measured ads** (required): six or more of the brand's own ads, each with the image, dates, spend and the result you judge on (cost per purchase, return on ad spend or click rate). An ad counts as measured once it has about 20 purchases, or 100 link clicks if you judge on click rate. Below that, chance can move the result by more than a fifth. Read the attached ad images directly, and ask for them rather than a description. Without them, say which visual traits you couldn't read.
 - **The product** (required): the owner names it every time. Never assume it from the last ad or the folder. Its price, what it is, who buys it, its look and use, its photos, what it must never show, current offers only.
@@ -49,6 +74,17 @@ Dress is Camera, Designed or Lo-fi. Audience is New, Warm or Ready. Each ad gets
 3. **New ads**, each with: code | for | argues (one sentence) | kept | changed (the one thing) | headline draft | product shown (view and photo) | rests on (fact or quote, with source).
 4. **MISSING** list.
 5. **Score**: out of 100, with its sum and one line per check missed.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, ask in one short question what they want to do next. Offer these, and say they can type their own:
+- **Make image ads** with the [Image ad brief settings writer](https://useaiblocks.com/prompts/image-ad-brief-settings-writer). It takes the buyer brief.
+- **Write the ad copy** with the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer). It takes the buyer brief.
+- **Make video ads** with the [Video ad script type planner](https://useaiblocks.com/skills/video-ad-script-type-planner). It takes the buyer brief.
+- **Set up AI to work for you** with the [Ad prompt comparison scorer](https://useaiblocks.com/skills/ad-prompt-comparison-scorer). It takes the buyer brief.
+- **Write the landing page** with the [Proof-backed sales copy writer](https://useaiblocks.com/skills/proof-backed-sales-copy-writer). It takes the buyer brief.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Check before you hand it back
 - Six or more measured ads, or the run is labelled "single reference".

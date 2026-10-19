@@ -7,6 +7,32 @@ description: Use when an image ad's picture and type are decided and you need th
 
 You write the words that finish a chosen picture: the headline and support line on the image, then the main text, the headline under the image, the description and the button. Each field does one job. Together they make one point and never repeat each other.
 
+<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
+## Before you start
+Check for these first. The result is much better with them.
+
+**Needed:**
+- **A buyer brief**, made by the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer): who it's for, how much they already know, and what will move them.
+
+**Makes it better (optional):**
+- **Your offer**, made by the [Hidden offer finder](https://useaiblocks.com/prompts/hidden-offer-finder): what you sell and the real terms: price, trial, guarantee, delivery.
+- **Customer words** (yours): reviews, testimonials, support tickets, survey answers or call transcripts. Export them or paste them in.
+
+**The steps before this one** (do each once, then reuse what it makes):
+1. **A buyer brief** with the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer). Bring customer words. It uses your brand brain.
+2. **Your offer** with the [Hidden offer finder](https://useaiblocks.com/prompts/hidden-offer-finder). It uses your brand brain.
+3. This one.
+
+How to check:
+- **In Claude Code,** look in the project first for these by name, or ask for their path.
+- **In a chat,** ask once: "Do you have a buyer brief, your offer, customer words? Attach or paste them here." If they're already in this project's files, use those.
+- **If one is missing,** say so before you start, in one line: the result will be much better with it, with the link to make it once and reuse it. Next time they can attach it (or, in Claude Code, give its path). Then carry on with what you have and mark each gap with `MISSING:`.
+
+**Tools that do this best:**
+- **Any good chat AI:** Writing to field limits from your proof works well in any strong chat AI.
+- **Meta Ads Manager:** Its ad preview shows where the main text and headline get cut off on each placement.
+<!-- /needs -->
+
 ## What you need
 - **The picture and its code** (required): the picture itself, or a mockup if it isn't made yet, and its `type · dress · audience` from the shared ad type map. Read the attached picture directly, and ask for it rather than a description. Take a description only if no picture can be attached, and then say the headline-and-picture check was made against words, not the image. If there is no code, work it out from the picture and say so.
 - **How much the buyer knows** (required): New, Warm or Ready. If you know it more finely, use Schwartz's stages: unaware and problem-aware are New, solution-aware and product-aware are Warm, most aware is Ready.
@@ -56,6 +82,16 @@ You write the words that finish a chosen picture: the headline and support line 
 
 ## What you hand back
 For each version: headline on the image, support line, main text, headline under the image, description, button, each within its limit and with its count. A note line names the code, what the buyer knows and the appeal each version tests. Then the story, if asked. Last, the score: checks passed out of all checks, as a sum and a score out of 100, with one line per check missed.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, ask in one short question what they want to do next. Offer these, and say they can type their own:
+- **Check it before it goes live** with the [Meta ads compliance checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the ad copy.
+- **Write the ad copy** with the [Ad first line writer and scorer](https://useaiblocks.com/skills/ad-first-line-writer-and-scorer). It takes the ad copy.
+- **Make image ads** with the [Article headline image ad maker](https://useaiblocks.com/skills/article-headline-image-ad-maker). It takes the ad copy.
+- **Write the landing page** with the [Ad-matched landing page writer](https://useaiblocks.com/skills/ad-matched-landing-page-writer). It takes the ad copy.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Check before you hand it back
 - The headline and the picture make the same point.

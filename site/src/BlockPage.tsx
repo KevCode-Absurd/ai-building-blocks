@@ -1,8 +1,8 @@
-import { useEffect, useMemo, useRef, useState, type ReactNode } from "react";
+import { useEffect, useRef, useState, type ReactNode } from "react";
 import Comments from "./Comments";
 import { Look, MakeIt, MakeNote, makeTitle } from "./MakeIt";
-import { ArrowIcon, BlockCard, KitMenu } from "./ui";
-import { type Catalogue, type Page, cap, formatOf, kindInfo, rendersOf, kindOf, loadPage, loadSkillText, neighbours, pathOf, taskOf, wireSteps } from "./lib/data";
+import { ArrowIcon, KitMenu } from "./ui";
+import { type Catalogue, type Page, cap, formatOf, kindInfo, rendersOf, kindOf, loadPage, loadSkillText, pathOf, taskOf, wireSteps } from "./lib/data";
 import { markViewed } from "./lib/store";
 import { buildHandoffZip, download, finalOutputs, needsOf, orderFlow, zipName } from "./lib/handoff";
 import { businessText, getBusiness, hasBusiness, useBusiness, withBusiness } from "./lib/business";
@@ -13,6 +13,7 @@ import type { Flow } from "./lib/store";
 import { Link } from "./lib/router";
 import AddToFlow from "./AddToFlow";
 import Install from "./Install";
+import { Before, Next } from "./Needs";
 import { useSeen, useTyped } from "./lib/typing";
 
 // A list item that YAML read as a small map ("Check: this") still shows as text.
@@ -116,7 +117,6 @@ export default function BlockPage({ c, slug, toast, toBuilder }: Props) {
     markViewed(slug);
   }, [slug]);
   useEffect(() => { document.title = `${b?.name ?? "Not found"} · AI Blocks`; return () => { document.title = "AI Blocks · Making humanity AI native"; }; }, [b]);
-  const near = useMemo(() => (b ? neighbours(c, b) : null), [c, b]);
 
   if (!b) {
     return (
@@ -161,6 +161,7 @@ export default function BlockPage({ c, slug, toast, toBuilder }: Props) {
   const toc: [string, string, boolean][] = [
     ["what", "What it does", !!p?.explain],
     ["io", "What you give it, what you get", true],
+    ["before", "Before you start", !!p?.plan && (has(p.plan.needed) || has(p.plan.helps))],
     ["steps", "The steps", isFlow],
     ["install", "Add it to your AI", !isFlow],
     ["make", renders === "video" ? "Make the video" : "Make the picture", !!renders],
@@ -171,7 +172,8 @@ export default function BlockPage({ c, slug, toast, toBuilder }: Props) {
     ["improve", "Make it fit your work", has(p?.improve)],
     ["example", "See it work", !!p?.example],
     ["file", isFlow ? "The workflow file" : "The skill file", true],
-    ["with", "Run before and after", !isFlow && !!near && (near.before.length > 0 || near.after.length > 0)],  ];
+    ["next", "What to do next", has(p?.plan?.next)],
+  ];
 
   return (
     <main className="bp" data-testid="block-page" data-slug={b.slug}>
@@ -250,6 +252,12 @@ export default function BlockPage({ c, slug, toast, toBuilder }: Props) {
             <Look b={b} kind={renders} />
             {p?.output_shape && <><p className="bp-note">Every run hands back the same parts, filled in for you:</p><Code name="the-shape.txt" text={p.output_shape} toast={toast} /></>}
           </Section>
+
+          {p?.plan && (has(p.plan.needed) || has(p.plan.helps)) && (
+            <Section id="before" title="Before you start" lead="Have these ready. The result is much better with them.">
+              <Before plan={p.plan} />
+            </Section>
+          )}
 
           {isFlow && (
             <Section id="steps" title="The steps" lead="Each step is a skill. It saves its result, and the next step picks it up.">
@@ -368,10 +376,9 @@ export default function BlockPage({ c, slug, toast, toBuilder }: Props) {
             </details>
           </Section>
 
-          {!isFlow && near && (near.before.length > 0 || near.after.length > 0) && (
-            <Section id="with" title="Run before and after" wide>
-              {near.before.length > 0 && <><h3 className="with-h">Run one of these first</h3><div className="grid">{near.before.slice(0, 3).map((x) => <BlockCard key={x.slug} b={x} />)}</div></>}
-              {near.after.length > 0 && <><h3 className="with-h">Then pass the result to</h3><div className="grid">{near.after.slice(0, 3).map((x) => <BlockCard key={x.slug} b={x} />)}</div></>}
+          {has(p?.plan?.next) && (
+            <Section id="next" title="What to do next" lead="When it's done, the skill asks what you want to do next and offers these. You can also ask for something else.">
+              <Next plan={p!.plan!} />
             </Section>
           )}
         </div>

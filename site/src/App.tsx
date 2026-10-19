@@ -1,3 +1,4 @@
+import { spaceKey, spaces } from "./lib/space";
 import { Suspense, lazy, useCallback, useDeferredValue, useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import { ArrowIcon, BlockCard, Drawer, Logo, PixelIcon, SearchIcon, Select, ThemeToggle, Toast } from "./ui";
 import { type Block, type Catalogue, type Kind, FUNCTIONS, FUNCTION_MOVED, KINDS, LEVELS, TASKS, cap, functionsOf, kindOf, pathOf, taskOf, useCatalogue } from "./lib/data";
@@ -30,12 +31,14 @@ const PAGES = {
   guide: () => import("./HowItWorks"),
   tools: () => import("./tools/ToolsPage"),
   apps: () => import("./apps/AppsPage"),
+  space: () => import("./space/SpacePage"),
   builder: () => import("./Builder"),
 };
 const BlockPage = lazy(PAGES.block);
 const HowItWorks = lazy(PAGES.guide);
 const ToolsPage = lazy(PAGES.tools);
 const AppsPage = lazy(PAGES.apps);
+const SpacePage = lazy(PAGES.space);
 /**
  * An in-page link (#install) scrolls smoothly, and a page loading in the background can cut that scroll short.
  * Once it has had time to land, finish the jump if the target still isn't on screen.
@@ -89,6 +92,7 @@ function Header({ onKits }: { onKits: () => void }) {
           <Link to="/#build">Builder</Link>
           <Link to="/tools">Tools</Link>
           <Link to="/apps">Apps</Link>
+          <Link to="/space" data-testid="nav-space">My space</Link>
         </nav>
         <div className="header-end">
           <button className="btn btn-ghost btn-sm" onClick={openBusiness} data-testid="open-business"><span>About me</span>{biz && <span className="dot" aria-label="filled in" />}</button>
@@ -214,8 +218,13 @@ function Library({ c }: { c: Catalogue }) {
   );
 }
 
-function KitsDrawer({ c, onClose, toBuilder }: { c: Catalogue; onClose: () => void; toBuilder: (s: string[], n?: string) => void }) {
+function KitsDrawer({ c, onClose, toBuilder, toast }: { c: Catalogue; onClose: () => void; toBuilder: (s: string[], n?: string) => void; toast: (m: string) => void }) {
   const all = useStore((s) => s.kits);
+  const kitToSpace = async (k: { id: string; name: string; slugs: string[] }) => {
+    if (!spaceKey()) { onClose(); navigate("/space"); return; }
+    try { await spaces.add({ kind: "kit", title: k.name, summary: `${k.slugs.length} blocks`, data: { slugs: k.slugs, localId: k.id } }); toast(`Saved “${k.name}” to your space`); }
+    catch (e) { toast(e instanceof Error ? e.message : "That didn't save. Try again."); }
+  };
   const [name, setName] = useState("");
   return (
     <Drawer label="My kits" top={<span className="mono">saved in this browser</span>} onClose={onClose}>
@@ -231,6 +240,7 @@ function KitsDrawer({ c, onClose, toBuilder }: { c: Catalogue; onClose: () => vo
           <div className="kit-head">
             <input value={k.name} onChange={(e) => kits.rename(k.id, e.target.value)} aria-label="Kit name" />
             <button className="btn btn-primary btn-sm" disabled={!k.slugs.length} onClick={() => toBuilder(k.slugs, k.name)}>Open in the builder</button>
+            <button className="btn btn-ghost btn-sm" disabled={!k.slugs.length} onClick={() => kitToSpace(k)} data-testid="kit-to-space">Save to my space</button>
             <button className="btn btn-ghost btn-sm" onClick={() => { if (confirm(`Delete the kit "${k.name}"? Everything in it stays in the library.`)) kits.remove(k.id); }}>Delete</button>
           </div>
           <div className="kit-items">
@@ -347,6 +357,8 @@ export default function App() {
         <Suspense fallback={<main className="wrap bp-hero"><p className="small">Loading…</p></main>}><ToolsPage path={path} toast={setToast} /></Suspense>
       ) : path === "/apps" || path.startsWith("/apps/") ? (
         <Suspense fallback={<main className="wrap bp-hero"><p className="small">Loading…</p></main>}><AppsPage path={path} toast={setToast} /></Suspense>
+      ) : path === "/space" || path === "/people" || path.startsWith("/s/") ? (
+        <Suspense fallback={<main className="wrap bp-hero"><p className="small">Loading…</p></main>}><SpacePage path={path} c={c} toast={setToast} /></Suspense>
       ) : path === "/how-it-works" ? (
         <Suspense fallback={<main className="wrap bp-hero"><p className="small">Loading…</p></main>}><HowItWorks toast={setToast} /></Suspense>
       ) : pageSlug ? (
@@ -361,6 +373,8 @@ export default function App() {
             <Link to="/tools">Mini tools</Link>
             <Link to="/apps">Apps</Link>
             <Link to="/apps/starter-pack">App starter pack</Link>
+            <Link to="/space">My space</Link>
+            <Link to="/people">From people</Link>
             <Link to="/how-it-works">How it works</Link>
             <button className="link-btn" onClick={() => openTailor()} data-testid="tailor-footer">Get a skill tailored for you</button>
           </nav>
@@ -368,7 +382,7 @@ export default function App() {
       </footer>
       {bizOpen && <BusinessDrawer onClose={closeBiz} toast={setToast} />}
       {tailor !== null && <TailorDrawer skill={tailor} onClose={closeTailor} toast={setToast} />}
-      {c && kitsOpen && <KitsDrawer c={c} onClose={closeKits} toBuilder={toBuilder} />}
+      {c && kitsOpen && <KitsDrawer c={c} onClose={closeKits} toBuilder={toBuilder} toast={setToast} />}
       <Toast message={toast} onDone={clearToast} />
     </>
   );

@@ -9,6 +9,21 @@ You get a library of short, fixed snippets. Each setting (such as "how hard it s
 
 The snippets for pictures describe what to make before they say what to leave out. The image model makers' guides (Google, Black Forest Labs) advise this, because some models ignore a "no" or draw the thing it names.
 
+<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
+## Before you start
+Check for these first. The result is much better with them.
+
+How to check:
+- **In Claude Code,** look in the project first for these by name, or ask for their path.
+- **In a chat,** ask once: "Do you have ? Attach or paste them here." If they're already in this project's files, use those.
+- **If one is missing,** say what it would add, then carry on with what you have and mark each gap with `MISSING:`.
+
+**Tools that do this best:**
+- **Any good chat AI:** Pasting snippets and running the conflict check works the same in any strong chat AI.
+- **GPT Image:** Follows long, structured briefs closely, so each pasted snippet shows up in the picture.
+- **Nano Banana:** Takes several reference images at once, which the closeness and product choices often need.
+<!-- /needs -->
+
 ## What you need
 - **Brief** (required): the piece being made.
 - **Choices** (required): one per setting you want to control. A setting you skip adds nothing.
@@ -95,6 +110,17 @@ The snippets for pictures describe what to make before they say what to leave ou
 
 ## What you hand back
 The brief, the always-on rules and the chosen snippets, each pasted whole. Then one conflict-check line, a `MISSING:` line for any material a choice needs, and the score with one line per check missed. Nothing else.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, ask in one short question what they want to do next. Offer these, and say they can type their own:
+- **Make image ads** with the [Overhead portrait image prompt writer](https://useaiblocks.com/prompts/overhead-portrait-image-prompt-writer). It takes the buyer brief.
+- **Write the ad copy** with the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer). It takes the buyer brief.
+- **Make video ads** with the [Video ad script type planner](https://useaiblocks.com/skills/video-ad-script-type-planner). It takes the buyer brief.
+- **Set up AI to work for you** with the [Ad prompt comparison scorer](https://useaiblocks.com/skills/ad-prompt-comparison-scorer). It takes the buyer brief.
+- **Write the landing page** with the [Proof-backed sales copy writer](https://useaiblocks.com/skills/proof-backed-sales-copy-writer). It takes the buyer brief.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Check before you hand it back
 - One choice per setting, each snippet pasted whole.

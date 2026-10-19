@@ -9,6 +9,30 @@ You take one true process the product takes part in all the way to a finished 3D
 
 **Stop for approval after stages 1, 3 and 4.** Never skip a stage, and never start the next one until the user approves.
 
+<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
+## Before you start
+Check for these first. The result is much better with them.
+
+**Needed:**
+- **Brand brain** (its products part), made by the [Website brand file builder](https://useaiblocks.com/skills/website-brand-file-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
+
+**The steps before this one** (do each once, then reuse what it makes):
+1. **Brand brain** with the [Website brand file builder](https://useaiblocks.com/skills/website-brand-file-builder). Bring your website, customer words (optional), your results (optional).
+2. This one.
+
+**From the brand brain, read:** `00-start-here.md`, `voice-and-look.md`, `offers.md`, `proof-and-claims.md`. Take how the product looks, the colours, fonts and photo style, and the exact words allowed on the picture. Leave out review quotes and research notes. Source notes and rejected ideas never go into the result.
+
+How to check:
+- **In Claude Code,** look in the project first. A brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name, or ask for their path.
+- **In a chat,** ask once: "Do you have your brand brain? Attach or paste them here." If they're already in this project's files, use those.
+- **If one is missing,** say so before you start, in one line: the result will be much better with it, with the link to make it once and reuse it. Next time they can attach it (or, in Claude Code, give its path). Then carry on with what you have and mark each gap with `MISSING:`.
+
+**Tools that do this best:**
+- **Nano Banana:** Takes up to 14 reference images, so your parts sheet and frames keep the same colours and shapes.
+- **Veo:** Takes a first and a last frame, so the dive starts and ends exactly where you planned.
+- **ElevenLabs:** Reads the narration with tags for pauses and pace, in a voice you designed or licensed.
+<!-- /needs -->
+
 ## What you need
 - **The product** (required): name, clean photos (front, side, top, out of the pack), every label line, what it's made of, how it works (each step with a source), how it's used. Read attached photos directly, and ask for photos rather than a description. If only a description comes, say the product sheet can't be checked against the real pack.
 - **Brand file** (required): claims with sources, banned claims, what buyers assume, colours and font, a voice the brand has the right to use, how the name and hard words are said.
@@ -68,6 +92,15 @@ Before the final hand-back, check the run against the 6 checks under "Check befo
 5. **Storyboard**: frame prompts and shot cards (stage 4).
 6. **Clip prompts** and the **edit list**: voice brief with spellings by sound, caption list, cuts, offer, safe zones, retake notes (stage 5).
 7. **Score:** out of 100, with one line per check still missed.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, ask in one short question what they want to do next. Offer these, and say they can type their own:
+- **Check it before it goes live** with the [Meta ads compliance checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the video ad script.
+- **Make video ads** with the [Ad script format finder](https://useaiblocks.com/skills/ad-script-format-finder). It takes the video ad script.
+- **Make image ads** with the [Image ad remake planner](https://useaiblocks.com/skills/image-ad-remake-planner). It takes the video ad script.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Check before you hand it back
 - You stopped after stages 1, 3 and 4 (and after the story options, if you wrote them).

@@ -157,7 +157,8 @@ test("a card opens the block's own page, with the outcome, a real example and th
   for (const id of ["what", "io", "use", "most", "test", "improve", "file"]) await expect(bp.locator(`#${id}`)).toBeVisible();
   // What it does comes first, then what goes in and out, then adding it to your AI. A real run comes near the end.
   const order = await bp.locator(".bp-main > section[id]").evaluateAll((els) => els.map((e) => e.id));
-  expect(order.slice(0, 3)).toEqual(["what", "io", "install"]);
+  // "Before you start" (what to have ready, and the steps before this one) sits between what goes in and adding it.
+  expect(order.slice(0, 4)).toEqual(["what", "io", "before", "install"]);
   expect(order.indexOf("example")).toBeGreaterThan(order.indexOf("test"));
   expect(await bp.locator(".bp-toc a").evaluateAll((els) => els.map((e) => e.getAttribute("href")))).toEqual([...order.map((id) => `#${id}`), "#comments"]);
   await expect(bp.getByText("Extra steps for online stores")).toHaveCount(0);

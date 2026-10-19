@@ -9,6 +9,35 @@ Page copy that carries on from your ad, three on-brand design directions and a 3
 
 You run 4 skills one after another. Each skill's result is saved and passed to the next, and each step's own checks run before you move on.
 
+<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
+## Before you start
+Check for these first. The result is much better with them.
+
+**Needed:**
+- **Your website** (yours): the link to your site or the page.
+- **Your offer**, made by the [Hidden offer finder](https://useaiblocks.com/prompts/hidden-offer-finder): what you sell and the real terms: price, trial, guarantee, delivery.
+
+**Makes it better (optional):**
+- **Customer words** (yours): reviews, testimonials, support tickets, survey answers or call transcripts. Export them or paste them in.
+- **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
+- **Ad copy**, made by the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer): the headline and text of the ad.
+
+**The steps before this one** (do each once, then reuse what it makes):
+1. **Your offer** with the [Hidden offer finder](https://useaiblocks.com/prompts/hidden-offer-finder). It uses your brand brain.
+2. **Ad copy** with the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer). It uses your brand brain and a buyer brief.
+3. This one.
+
+How to check:
+- **In Claude Code,** look in the project first for these by name, or ask for their path.
+- **In a chat,** ask once: "Do you have your website, your offer, customer words? Attach or paste them here." If they're already in this project's files, use those.
+- **If one is missing,** say so before you start, in one line: the result will be much better with it, with the link to make it once and reuse it. Next time they can attach it (or, in Claude Code, give its path). Then carry on with what you have and mark each gap with `MISSING:`.
+
+**Tools that do this best:**
+- **Claude:** Keeps your offer terms, the ad's words and four steps of work straight in one run.
+- **Figma:** Holds the chosen design direction as phone and desktop frames your builder can follow.
+- **PageSpeed Insights:** Free Google check of a built page for phone speed, contrast and tap target problems.
+<!-- /needs -->
+
 ## What you need
 - **Your website (a link or saved pages)** (required): your site's address, or its product and about pages saved as text.
 - **Offer** (required): price, any subscription or bundle, and the exact guarantee terms.
@@ -34,6 +63,14 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 
 ## What you hand back
 Four step files plus the summary. The last files hold the design plan and the review, with the brand file and the page copy before them.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, ask in one short question what they want to do next. Offer these, and say they can type their own:
+- **Write the landing page** with the [Shopify landing page builder](https://useaiblocks.com/skills/shopify-landing-page-builder). It takes the design direction.
+- **Plan what to test** with the [Ad test brief writer](https://useaiblocks.com/skills/ad-test-brief-writer). It takes the audit report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Check before you hand it back
 - Each step passed its own checks, or the run stopped at the step that failed and says why.

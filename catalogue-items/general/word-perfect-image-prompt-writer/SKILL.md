@@ -9,6 +9,34 @@ The plan has already decided what the image says. Your job is to brief the image
 
 Current image models read a prompt the way a photographer and a designer read a brief: whole sentences, the important things first, each photo with a clear purpose. Write for that reader.
 
+<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
+## Before you start
+Check for these first. The result is much better with them.
+
+**Needed:**
+- **Image plan** (yours): what an image should show and say, before any prompt is written.
+
+**Makes it better (optional):**
+- **Brand brain** (its products part), made by the [Website brand file builder](https://useaiblocks.com/skills/website-brand-file-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
+
+**The steps before this one** (do each once, then reuse what it makes):
+1. **Brand brain** with the [Website brand file builder](https://useaiblocks.com/skills/website-brand-file-builder). Bring your website, customer words (optional), your results (optional).
+2. This one.
+
+**From the brand brain, read:** `00-start-here.md`, `voice-and-look.md`, `offers.md`, `proof-and-claims.md`. Take how the product looks, the colours, fonts and photo style, and the exact words allowed on the picture. Leave out review quotes and research notes. Source notes and rejected ideas never go into the result.
+
+How to check:
+- **In Claude Code,** look in the project first. A brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name, or ask for their path.
+- **In a chat,** ask once: "Do you have image plan, your brand brain? Attach or paste them here." If they're already in this project's files, use those.
+- **If one is missing,** say so before you start, in one line: the result will be much better with it, with the link to make it once and reuse it. Next time they can attach it (or, in Claude Code, give its path). Then carry on with what you have and mark each gap with `MISSING:`.
+
+**Tools that do this best:**
+- **GPT Image:** Reads numbered photos and quoted words closely, and edits one part while keeping the rest.
+- **Nano Banana:** Takes several product and people photos at once, and Google suggests it for finished images with text.
+- **Ideogram:** Lets you set each block of text and where it goes, and on paid plans you can fix one wrong word without a new image.
+- **FLUX:** Matches hex colour codes tied to each object, which helps when brand colours must be exact.
+<!-- /needs -->
+
 ## What you need
 - **The approved plan** (required): kind of image and where it will run, exact words (or "no words"), subject, scene, layout, sizes.
 - **Reference photos** (optional): each with what it is for. The product photos decide what the product looks like. Read attached photos directly, and ask for the photo rather than a description of the product.
@@ -92,6 +120,13 @@ MISSING: {anything the plan didn't settle}
 MATCH SCORE
 {passed} / 6 checks x 100 = {score}. Missed: {one line each}
 ```
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, ask in one short question what they want to do next. Offer these, and say they can type their own:
+- **Check it before it goes live** with the [Pre-launch ad checker](https://useaiblocks.com/skills/pre-launch-ad-checker). It takes the image prompt.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Fix table
 | What came back wrong | Fix it with |

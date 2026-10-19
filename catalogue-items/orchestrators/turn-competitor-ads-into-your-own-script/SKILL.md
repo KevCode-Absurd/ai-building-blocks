@@ -9,6 +9,40 @@ An original script that borrows one idea from competitor ads you saved, in your 
 
 You run 5 skills one after another. Each skill's result is saved and passed to the next, and each step's own checks run before you move on.
 
+<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
+## Before you start
+Check for these first. The result is much better with them.
+
+**Needed:**
+- **Brand brain** (its products part), made by the [Website brand file builder](https://useaiblocks.com/skills/website-brand-file-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
+- **Reference ads** (yours): ads you like and want to learn from, as screenshots or links.
+- **Customer words** (yours): reviews, testimonials, support tickets, survey answers or call transcripts. Export them or paste them in.
+- **Ad copy**, made by the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer): the headline and text of the ad.
+
+**Makes it better (optional):**
+- **Competitors** (yours): the brands buyers compare you with.
+- **Your image ads** (yours): the image ads, attached as pictures.
+- **Your page** (yours): the landing page's link, or its text and a screenshot.
+
+**The steps before this one** (do each once, then reuse what it makes):
+1. **Brand brain** with the [Website brand file builder](https://useaiblocks.com/skills/website-brand-file-builder). Bring your website, customer words (optional), your results (optional).
+2. **A buyer brief** with the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer). Bring customer words. It uses your brand brain.
+3. **Ad copy** with the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer). It uses your brand brain and a buyer brief.
+4. This one.
+
+**From the brand brain, read:** `00-start-here.md`, `market.md`, `business.md`, `customers.md`. Take the options buyers weigh, the competitor table and the open ground. Source notes and rejected ideas never go into the result.
+
+How to check:
+- **In Claude Code,** look in the project first. A brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name, or ask for their path.
+- **In a chat,** ask once: "Do you have your brand brain, reference ads, customer words? Attach or paste them here." If they're already in this project's files, use those.
+- **If one is missing,** say so before you start, in one line: the result will be much better with it, with the link to make it once and reuse it. Next time they can attach it (or, in Claude Code, give its path). Then carry on with what you have and mark each gap with `MISSING:`.
+
+**Tools that do this best:**
+- **Meta Ad Library:** The public place to find competitor ads with their library ID and start date, browsed by hand.
+- **Claude:** Holds dozens of ad cards, your reviews and your claims rules in one long run.
+- **Google Sheets:** Keeps the board by library ID and counts types per brand, so the map is easy to check.
+<!-- /needs -->
+
 ## What you need
 - **Ads you collected from other brands** (required): for each ad, its library ID, the brand, its start date, its words and a screenshot or the first frames. Saved by hand from the public Meta Ad Library; no scraping, no logins.
 - **Brand file** (required): your brand file, or the website it can be built from.
@@ -37,6 +71,16 @@ The most common stop is at step 1: notes or descriptions of competitors are not 
 
 ## What you hand back
 Five step files plus the summary. The last files hold the script and the ad rules report. A run that stopped at step 1 hands back the board, what to collect and the summary.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, ask in one short question what they want to do next. Offer these, and say they can type their own:
+- **Check it before it goes live** with the [Meta ads compliance checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the video ad script.
+- **Make video ads** with the [Ad script format finder](https://useaiblocks.com/skills/ad-script-format-finder). It takes the video ad script.
+- **Make image ads** with the [Image ad remake planner](https://useaiblocks.com/skills/image-ad-remake-planner). It takes the video ad script.
+- **Plan what to test** with the [Ad test brief writer](https://useaiblocks.com/skills/ad-test-brief-writer). It takes the audit report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Check before you hand it back
 - Each step passed its own checks, or the run stopped at the step that failed and says why.

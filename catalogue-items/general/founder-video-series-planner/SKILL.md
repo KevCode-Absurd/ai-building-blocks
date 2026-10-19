@@ -7,6 +7,29 @@ description: Use when a founder or owner should post trust-building videos as th
 
 You plan a weekly series in which the founder answers one real question a buyer has asked. Answering the questions buyers already ask, including price and problems, earns more trust than any polished brand post. Every week shows something on camera, because a founder who shows the work is easier to believe than one who describes it.
 
+<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
+## Before you start
+Check for these first. The result is much better with them.
+
+**Needed:**
+- **Brand brain** (its buyers part), made by the [Website brand file builder](https://useaiblocks.com/skills/website-brand-file-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
+
+**The steps before this one** (do each once, then reuse what it makes):
+1. **Brand brain** with the [Website brand file builder](https://useaiblocks.com/skills/website-brand-file-builder). Bring your website, customer words (optional), your results (optional).
+2. This one.
+
+**From the brand brain, read:** `00-start-here.md`, `offers.md`, `customers.md`, `proof-and-claims.md`, `voice-and-look.md`. Take the chosen offer's facts, approved claims with their conditions, buyer quotes and voice lines. Source notes and rejected ideas never go into the result.
+
+How to check:
+- **In Claude Code,** look in the project first. A brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name, or ask for their path.
+- **In a chat,** ask once: "Do you have your brand brain? Attach or paste them here." If they're already in this project's files, use those.
+- **If one is missing,** say so before you start, in one line: the result will be much better with it, with the link to make it once and reuse it. Next time they can attach it (or, in Claude Code, give its path). Then carry on with what you have and mark each gap with `MISSING:`.
+
+**Tools that do this best:**
+- **Any good chat AI:** Claude, ChatGPT and Gemini all follow this skill well, so use the one you already have.
+- **CapCut:** Adds captions from the speech and lets you correct them by hand, on a phone or a computer.
+<!-- /needs -->
+
 ## What you need
 - **Business facts** (required): what it makes, who it's for, the founder's name and role, the claims it can back, words it never uses.
 - **Real buyer questions** (required): from reviews, support emails, DMs, comments or sales calls. Ten at the least, in the buyer's own words.
@@ -45,6 +68,17 @@ You plan a weekly series in which the founder answers one real question a buyer 
 4. **Three cuts** for week 1.
 5. **MISSING:** facts only the founder can supply.
 6. **Score:** out of 100, with its sum and one line per check missed.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, ask in one short question what they want to do next. Offer these, and say they can type their own:
+- **Write the ad copy** with the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer). It takes the buyer brief.
+- **Make image ads** with the [Image ad brief settings writer](https://useaiblocks.com/prompts/image-ad-brief-settings-writer). It takes the buyer brief.
+- **Make video ads** with the [Video ad script type planner](https://useaiblocks.com/skills/video-ad-script-type-planner). It takes the buyer brief.
+- **Set up AI to work for you** with the [AI step handoff planner](https://useaiblocks.com/skills/ai-step-handoff-planner). It takes the plan.
+- **Write the landing page** with the [Proof-backed sales copy writer](https://useaiblocks.com/skills/proof-backed-sales-copy-writer). It takes the buyer brief.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Check before you hand it back
 - Every number is in the facts or is a bracketed question.

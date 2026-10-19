@@ -7,6 +7,32 @@ description: Use when you're looking for what stops shoppers on an online store 
 
 You hand back an evidence table for one store page or flow: what was seen, where, what it might mean for a shopper, the change or test it suggests, and what is still unknown. This is a check of the page's design and words, not a test purchase.
 
+<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
+## Before you start
+Check for these first. The result is much better with them.
+
+**Needed:**
+- **Store capture** (yours): saved evidence from a storefront visit: screenshots, page text and what was observed, with dates.
+
+**Makes it better (optional):**
+- **Brand brain**, made by the [Website brand file builder](https://useaiblocks.com/skills/website-brand-file-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
+
+**The steps before this one** (do each once, then reuse what it makes):
+1. **Brand brain** with the [Website brand file builder](https://useaiblocks.com/skills/website-brand-file-builder). Bring your website, customer words (optional), your results (optional).
+2. This one.
+
+**From the brand brain, read:** `00-start-here.md`, `proof-and-claims.md`, `offers.md`, `voice-and-look.md`. Take the claims list with each claim's status, the offer terms word for word, and the voice rules. Source notes and rejected ideas never go into the result.
+
+How to check:
+- **In Claude Code,** look in the project first. A brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name, or ask for their path.
+- **In a chat,** ask once: "Do you have store capture, your brand brain? Attach or paste them here." If they're already in this project's files, use those.
+- **If one is missing,** say so before you start, in one line: the result will be much better with it, with the link to make it once and reuse it. Next time they can attach it (or, in Claude Code, give its path). Then carry on with what you have and mark each gap with `MISSING:`.
+
+**Tools that do this best:**
+- **Any good chat AI that reads images:** It can tie each observation to a spot in your screenshots, which the evidence table depends on.
+- **Chrome DevTools device mode:** Shows the page at a phone's width and saves a full-length screenshot, with the screen size known.
+<!-- /needs -->
+
 ## What you need
 - **Captures** (required): screenshots on phone and desktop (a real phone, or a browser's device mode with a full-length capture), the page's visible text, and if available a list of its visible controls (buttons, pickers, drop-downs). Each capture needs an ID, the page address, the date, the screen size and, where possible, the section it shows. If you reuse a saved capture, give its date and don't call it a new live look. Read attached screenshots directly, and ask for them rather than a description. If you only get text, say what you couldn't check.
 - **The shopper's question** (required): what the shopper must understand or do on this page. For example: choose an option, judge fit, understand the total price, trust a claim, find the next step.
@@ -34,6 +60,13 @@ An evidence table with these columns:
 | What was seen | Capture ID, address, date, screen size, section | What it might mean for a shopper | Proposed test or change | Still unknown |
 
 Then: **Task clarity score** (now and with the changes made, each with its sum), **What the captures couldn't show**, **Tests needed** (what must be tried in a normal browser), and **Next 3 steps**.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, ask in one short question what they want to do next. Offer these, and say they can type their own:
+- **Plan what to test** with the [Ad test brief writer](https://useaiblocks.com/skills/ad-test-brief-writer). It takes the audit report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Check before you hand it back
 - Every observation has a capture ID, address, date, screen size and section.

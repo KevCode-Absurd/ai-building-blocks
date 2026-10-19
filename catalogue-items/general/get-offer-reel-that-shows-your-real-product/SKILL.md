@@ -7,6 +7,35 @@ description: Use when you need a 10 to 20 second launch, offer, "3 reasons", bun
 
 You build a short reel as code that can draw any single frame on request, then render it to video in every shape needed. Music and sound effects are made in code too. Nothing is generated: the product is the avatar, and it comes from the brand's photos exactly, so the pack, label and colours can't drift and a re-render costs nothing. This is the wrong tool for a demo (that needs footage) or a story (that needs a person). Stop for approval after stages 1, 3 and 4.
 
+<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
+## Before you start
+Check for these first. The result is much better with them.
+
+**Needed:**
+- **Brand brain** (its products part), made by the [Website brand file builder](https://useaiblocks.com/skills/website-brand-file-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
+- **A video ad script**, made by the [Customer quote video ad script writer](https://useaiblocks.com/skills/customer-quote-video-ad-script-writer): the script, beat by beat, with on-screen text.
+
+**Makes it better (optional):**
+- **Your offer**, made by the [Hidden offer finder](https://useaiblocks.com/prompts/hidden-offer-finder): what you sell and the real terms: price, trial, guarantee, delivery.
+- **Product photos** (yours): clear photos of the real product, from more than one angle. Attach them.
+
+**The steps before this one** (do each once, then reuse what it makes):
+1. **Brand brain** with the [Website brand file builder](https://useaiblocks.com/skills/website-brand-file-builder). Bring your website, customer words (optional), your results (optional).
+2. **A video ad script** with the [Customer quote video ad script writer](https://useaiblocks.com/skills/customer-quote-video-ad-script-writer). Bring customer words. It uses your brand brain and your offer and buying reasons.
+3. **Your offer** with the [Hidden offer finder](https://useaiblocks.com/prompts/hidden-offer-finder). It uses your brand brain.
+4. This one.
+
+**From the brand brain, read:** `00-start-here.md`, `voice-and-look.md`, `offers.md`, `proof-and-claims.md`. Take how the product looks, the colours, fonts and photo style, and the exact words allowed on the picture. Leave out review quotes and research notes. Source notes and rejected ideas never go into the result.
+
+How to check:
+- **In Claude Code,** look in the project first. A brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name, or ask for their path.
+- **In a chat,** ask once: "Do you have your brand brain, a video ad script, your offer? Attach or paste them here." If they're already in this project's files, use those.
+- **If one is missing,** say so before you start, in one line: the result will be much better with it, with the link to make it once and reuse it. Next time they can attach it (or, in Claude Code, give its path). Then carry on with what you have and mark each gap with `MISSING:`.
+
+**Tools that do this best:**
+- **Claude Code with Remotion:** Remotion draws each frame from code, and its agent skills let Claude Code build, render and re-check the reel on your computer.
+<!-- /needs -->
+
 ## What you need
 - **The reel's job** (required): launching something, selling an offer, giving "3 reasons", showing a bundle, or closing another ad.
 - **Real product photos** (required): at minimum the front on a clean background; also out of the pack, in a hand and in use where they exist. For software, real screenshots. Never drawn or generated.
@@ -90,6 +119,14 @@ One file per stage:
 4. **The product sheet, style guide and lock lines.**
 5. **The storyboard:** beat grid and approved shot list, with claim sources.
 6. **The film's code, the review log and the final renders** in each shape, with loudness and a score summary.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, ask in one short question what they want to do next. Offer these, and say they can type their own:
+- **Check it before it goes live** with the [Pre-launch ad checker](https://useaiblocks.com/skills/pre-launch-ad-checker). It takes the video ads.
+- **Make video ads** with the [Brand-font video caption maker](https://useaiblocks.com/skills/brand-font-video-caption-maker). It takes the video ads.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Check before you hand it back
 - Each approval came before the next stage; nothing was built before APPROVED.

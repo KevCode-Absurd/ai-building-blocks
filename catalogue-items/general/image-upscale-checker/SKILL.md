@@ -13,6 +13,24 @@ Modern upscalers come in two kinds, and the choice matters more than any prompt:
 
 An approved image starts with a faithful upscaler. A generative one is a second choice, at its lowest creative setting, and only with the checks below.
 
+<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
+## Before you start
+Check for these first. The result is much better with them.
+
+**Needed:**
+- **An approved picture** (yours): the picture you've chosen to use.
+
+How to check:
+- **In Claude Code,** look in the project first for these by name, or ask for their path.
+- **In a chat,** ask once: "Do you have an approved picture? Attach or paste them here." If they're already in this project's files, use those.
+- **If one is missing,** say what it would add, then carry on with what you have and mark each gap with `MISSING:`.
+
+**Tools that do this best:**
+- **Topaz Gigapixel:** Lets you choose a faithful model, including one made for text and logos, and turn face recovery down or off.
+- **Magnific:** Offers a Precision upscaler with plain sharpen and grain sliders, apart from its Creative one.
+- **GIMP:** Free editor whose Difference layer mode shows any change between the original and the result.
+<!-- /needs -->
+
 ## What you need
 - **Approved image** (required): the original file, at its best quality (a PNG or the first export, not a screenshot). Read the attached original and each returned file directly. Never accept a description in place of either.
 - **Target** (required): the size needed and what it's for (print, banner, video start frame).

@@ -7,6 +7,34 @@ description: Use when a landing page's copy and offer are settled and you need a
 
 You give three genuinely different design directions for the same page, one chosen design system with named roles, and (when a built page is supplied) a separate visual review and technical review with fixes tied to specific sections.
 
+<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
+## Before you start
+Check for these first. The result is much better with them.
+
+**Needed:**
+- **Brand brain**, made by the [Website brand file builder](https://useaiblocks.com/skills/website-brand-file-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
+- **Your page** (yours): the landing page's link, or its text and a screenshot.
+
+**Makes it better (optional):**
+- **Customer words** (yours): reviews, testimonials, support tickets, survey answers or call transcripts. Export them or paste them in.
+
+**The steps before this one** (do each once, then reuse what it makes):
+1. **Brand brain** with the [Website brand file builder](https://useaiblocks.com/skills/website-brand-file-builder). Bring your website, customer words (optional), your results (optional).
+2. This one.
+
+**From the brand brain, read:** `00-start-here.md`, `offers.md`, `customers.md`, `proof-and-claims.md`, `voice-and-look.md`. Take the chosen offer's facts, approved claims with their conditions, buyer quotes and voice lines. Source notes and rejected ideas never go into the result.
+
+How to check:
+- **In Claude Code,** look in the project first. A brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name, or ask for their path.
+- **In a chat,** ask once: "Do you have your brand brain, your page, customer words? Attach or paste them here." If they're already in this project's files, use those.
+- **If one is missing,** say so before you start, in one line: the result will be much better with it, with the link to make it once and reuse it. Next time they can attach it (or, in Claude Code, give its path). Then carry on with what you have and mark each gap with `MISSING:`.
+
+**Tools that do this best:**
+- **Claude:** Holds a long design system and section plan in one chat, and can turn the chosen direction into a working page to preview.
+- **Figma Make:** Turns the build brief into a working prototype you can tweak, so you can compare directions before anyone codes.
+- **WebAIM Contrast Checker:** A free check of each text and background pair in your colours, before and after the page is built.
+<!-- /needs -->
+
 ## What you need
 - **Brand look** (required): colours with their jobs, fonts, voice, logo, product photos. Read attached photos and screenshots directly, and ask for them rather than descriptions. From a brand file, read the look (colours, type, photo style), voice and claims list. Keep the fonts and colours supplied; don't swap them because a style guide prefers others.
 - **The page's case** (required): the copy or brief, the buyer, the ad's promise, the offer, the facts.
@@ -35,6 +63,13 @@ You give three genuinely different design directions for the same page, one chos
 - **Build brief**: for the direction picked, or for direction A if none is picked yet.
 - **Review (if applicable)**: visual findings and technical findings in separate lists, each with section, screen size and fix, plus what couldn't be checked.
 - **Score**: the plan's score, and the built page's score if reviewed, each with its sum and one line per check missed.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, ask in one short question what they want to do next. Offer these, and say they can type their own:
+- **Write the landing page** with the [Shopify landing page builder](https://useaiblocks.com/skills/shopify-landing-page-builder). It takes the design direction.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Check before you hand it back
 - All colours and fonts come from the supplied brand.

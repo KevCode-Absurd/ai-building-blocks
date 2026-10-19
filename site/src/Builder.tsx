@@ -1,3 +1,4 @@
+import { spaceKey, spaces } from "./lib/space";
 import { createContext, memo, useCallback, useContext, useEffect, useMemo, useRef, useState, type CSSProperties, type DragEvent } from "react";
 import {
   Background, BackgroundVariant, Handle, Panel, Position, ReactFlow, ReactFlowProvider, addEdge, useEdgesState, useNodesState, useReactFlow,
@@ -410,6 +411,15 @@ function Stage({ c, toast }: { c: Catalogue; toast: (m: string) => void }) {
       if ((e as Error).name !== "AbortError") window.prompt("Copy this link", url);
     }
   };
+  // Saves this workflow into the person's space (src/lib/space.ts), so their team sees it through the space link.
+  const toSpace = async () => {
+    if (!spaceKey()) { toast("Make your space first. It's free and takes one click."); window.location.assign("/space"); return; }
+    const title = name.trim() || "Untitled workflow";
+    try {
+      await spaces.add({ kind: "workflow", title, summary: `${nodes.length} steps`, data: { name: title, nodes: flow.nodes, edges: flow.edges, localId: flowId } });
+      toast(`Saved “${title}” to your space`);
+    } catch (e) { toast(e instanceof Error ? e.message : "That didn't save. Try again."); }
+  };
   const exportPack = async () => {
     const r = await buildHandoffZip(c, flow, getBusiness());
     if ("error" in r) { toast(r.error); return false; }
@@ -453,6 +463,7 @@ function Stage({ c, toast }: { c: Catalogue; toast: (m: string) => void }) {
                   </select>
                 )}
                 <button className="btn btn-ghost btn-sm" onClick={share} disabled={!nodes.length} data-testid="share-flow">Share</button>
+                <button className="btn btn-ghost btn-sm" onClick={toSpace} disabled={!nodes.length} data-testid="flow-to-space">Save to my space</button>
                 <button className="btn btn-ghost btn-sm" onClick={newFlow}>New</button>
                 {savedVersion && <button className="btn btn-ghost btn-sm" onClick={() => { if (confirm(`Delete "${name}"?`)) { flows.remove(flowId); newFlow(); } }}>Delete</button>}
               </div>

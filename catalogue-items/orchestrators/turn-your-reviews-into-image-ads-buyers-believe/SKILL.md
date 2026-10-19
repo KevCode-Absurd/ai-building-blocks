@@ -9,6 +9,41 @@ Image ads built on why your customers buy, with words, layout and image prompts,
 
 You run 5 skills one after another. Each skill's result is saved and passed to the next, and each step's own checks run before you move on.
 
+<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
+## Before you start
+Check for these first. The result is much better with them.
+
+**Needed:**
+- **Your website** (yours): the link to your site or the page.
+- **Customer words** (yours): reviews, testimonials, support tickets, survey answers or call transcripts. Export them or paste them in.
+- **A buyer brief**, made by the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer): who it's for, how much they already know, and what will move them.
+
+**Makes it better (optional):**
+- **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
+- **A video ad script**, made by the [Customer quote video ad script writer](https://useaiblocks.com/skills/customer-quote-video-ad-script-writer): the script, beat by beat, with on-screen text.
+- **Product photos** (yours): clear photos of the real product, from more than one angle. Attach them.
+- **Your lessons**, made by the [AI mistake rule writer](https://useaiblocks.com/skills/ai-mistake-rule-writer): what past ads taught you: what worked, what failed and why.
+- **Your video ads** (yours): the video ads, attached or linked.
+- **Your image ads** (yours): the image ads, attached as pictures.
+
+**The steps before this one** (do each once, then reuse what it makes):
+1. **A buyer brief** with the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer). Bring customer words. It uses your brand brain.
+2. **A video ad script** with the [Customer quote video ad script writer](https://useaiblocks.com/skills/customer-quote-video-ad-script-writer). Bring customer words. It uses your brand brain and your offer and buying reasons.
+3. **Your lessons** with the [AI mistake rule writer](https://useaiblocks.com/skills/ai-mistake-rule-writer). Bring your notes (optional). It uses your brand brain.
+4. This one.
+
+How to check:
+- **In Claude Code,** look in the project first for these by name, or ask for their path.
+- **In a chat,** ask once: "Do you have your website, customer words, a buyer brief? Attach or paste them here." If they're already in this project's files, use those.
+- **If one is missing,** say so before you start, in one line: the result will be much better with it, with the link to make it once and reuse it. Next time they can attach it (or, in Claude Code, give its path). Then carry on with what you have and mark each gap with `MISSING:`.
+
+**Tools that do this best:**
+- **Claude:** Holds the brand file, every review number and five steps of work in one run.
+- **GPT Image:** Takes several product photos as references and keeps short headline words readable.
+- **Nano Banana:** Takes many reference photos at once and handles shiny packs such as foil pouches.
+- **Meta Ads Manager:** Its preview shows where the text above the image and the headline get cut off.
+<!-- /needs -->
+
 ## What you need
 - **Your website (a link or saved pages)** (required): your site's address, or its product and about pages saved as text.
 - **Customer reviews** (required): reviews, survey answers or support emails, copied as written, each with a number or source.
@@ -45,6 +80,14 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 
 ## What you hand back
 Five step files plus the summary. The last files hold the image prompts and the check, with the brand file, reasons and ad plans before them.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, ask in one short question what they want to do next. Offer these, and say they can type their own:
+- **Check it before it goes live** with the [Pre-launch ad checker](https://useaiblocks.com/skills/pre-launch-ad-checker). It takes the image prompt.
+- **Plan what to test** with the [Ad test brief writer](https://useaiblocks.com/skills/ad-test-brief-writer). It takes the audit report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Check before you hand it back
 - Each step passed its own checks, or the run stopped at the step that failed and says why.

@@ -1,4 +1,15 @@
-# Item factory (planned, not built)
+# Tools
+
+## Built
+
+| Tool | Job |
+|---|---|
+| `lint-pages.mjs` | Checks every block page against `docs/PAGE-FORMAT.md` and `docs/WRITING.md` |
+| `reading-level.mjs` | Reading grade of every block page, one page, or any text (`--text`, `--file`). We keep it at grade 10 or below |
+| `readability.mjs` | The grade formula (Flesch-Kincaid) the two above and the site's tests share |
+| `apply-renames.mjs`, `make-orchestrators.mjs` | Rename block folders; build the ready workflows |
+
+## Item factory (planned, not built)
 
 TypeScript on Node, to match Creative Engine and the future Next.js site. See `docs/planning/06_BUILD_PLAN.md` §3 and `docs/planning/07_SOURCES_TO_SKILLS.md` §4.
 

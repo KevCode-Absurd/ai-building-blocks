@@ -114,3 +114,5 @@ Say exactly what happens: "Copy the skill", "Download the workflow", "Open in th
 ## Before it ships
 
 Run `CHECKLIST.md`. For a line-by-line edit, use the copy editing skill in the library ("Edit a draft so it reads clean and sells").
+
+Everything a visitor reads stays at a grade 10 reading level or below. The `plain-writing` skill (`.claude/skills/plain-writing/SKILL.md`) has the voice, the word swaps and the steps for importing a block. Check any text with `node tools/reading-level.mjs`.

@@ -23,7 +23,7 @@ type Props = { c: Catalogue; slug: string; toast: (m: string) => void; toBuilder
 
 /** A code window with a file name, line numbers and a copy button.
  *  With `typed`, the text writes itself out when it scrolls into view, like your AI answering, and can be replayed. */
-function Code({ name, text, toast, tall, typed }: { name: string; text: string; toast: (m: string) => void; tall?: boolean; typed?: boolean }) {
+export function Code({ name, text, toast, tall, typed }: { name: string; text: string; toast: (m: string) => void; tall?: boolean; typed?: boolean }) {
   const body = text.replace(/\n+$/, "");
   const lines = body.split("\n");
   const [ref, seen] = useSeen<HTMLElement>(0.25);
@@ -64,7 +64,7 @@ function Code({ name, text, toast, tall, typed }: { name: string; text: string; 
   );
 }
 
-function Section({ id, title, lead, children, wide }: { id: string; title: string; lead?: string; children: ReactNode; wide?: boolean }) {
+export function Section({ id, title, lead, children, wide }: { id: string; title: string; lead?: string; children: ReactNode; wide?: boolean }) {
   return (
     <section className={`bp-sec${wide ? " wide" : ""}`} id={id} aria-labelledby={`${id}-h`}>
       <h2 className="bp-h2" id={`${id}-h`}>{title}</h2>

@@ -7,6 +7,7 @@ import { Link, navigate, setSearch, useLocation } from "./lib/router";
 
 const Builder = lazy(() => import("./Builder")); // the canvas loads after the page is up
 const BlockPage = lazy(() => import("./BlockPage"));
+const HowItWorks = lazy(() => import("./HowItWorks"));
 
 // Shown first: things most people can use this week.
 const START_HERE = ["write-ads-people-believe", "turn-website-into-brand-file-for-ai", "find-why-customers-buy-in-their-words", "make-every-ad-sound-like-your-brand", "find-what-stops-visitors-buying-30-quick-checks", "get-video-ad-script-in-customers-words", "keep-facebook-from-blocking-your-ads"];
@@ -28,6 +29,7 @@ function Header({ onKits }: { onKits: () => void }) {
         <nav className="nav" aria-label="Sections">
           <Link to="/#library">Library</Link>
           <Link to="/#build">Builder</Link>
+          <Link to="/how-it-works">How it works</Link>
         </nav>
         <div className="header-end">
           <button className="btn btn-ghost btn-sm" onClick={onKits} data-testid="open-kits">My kits{kitCount > 0 && <span className="badge">{kitCount}</span>}</button>
@@ -213,6 +215,7 @@ function Home({ c, toast }: { c: Catalogue | null; toast: (m: string) => void })
             <Link to="/#library" className="btn btn-primary">Browse the blocks <ArrowIcon /></Link>
             <Link to="/#build" className="btn btn-dark">Build a workflow</Link>
           </div>
+          <Link to="/how-it-works" className="hero-more" data-testid="how-it-works-link">How it works <ArrowIcon size={12} /></Link>
         </div>
       </section>
 
@@ -260,7 +263,9 @@ export default function App() {
   return (
     <>
       <Header onKits={() => setKitsOpen(true)} />
-      {pageSlug ? (
+      {path === "/how-it-works" ? (
+        <Suspense fallback={<main className="wrap bp-hero"><p className="small">Loading…</p></main>}><HowItWorks toast={setToast} /></Suspense>
+      ) : pageSlug ? (
         c ? <Suspense fallback={<main className="wrap bp-hero"><p className="small">Loading…</p></main>}><BlockPage c={c} slug={pageSlug} toast={setToast} toBuilder={toBuilder} /></Suspense> : <main className="wrap bp-hero"><p className="small">Loading…</p></main>
       ) : (
         <Home c={c} toast={setToast} />

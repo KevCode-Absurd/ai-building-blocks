@@ -80,3 +80,12 @@ If the block has one, rewrite it in plain language too. It's the "For online sto
 ## item.yaml
 
 Don't edit it. The build reads `name`, `summary` and `job` from page.yaml, and the folder rename is done afterwards by `tools/apply-renames.mjs`.
+
+## Writing it
+
+Use the `plain-writing` skill (`.claude/skills/plain-writing/SKILL.md`): grade 10 reading level at most, the brand voice, and only claims the skill really makes. Then check the page:
+
+```
+node tools/lint-pages.mjs
+node tools/reading-level.mjs <slug>
+```

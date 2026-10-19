@@ -1,6 +1,7 @@
 import { expect, test, type Page } from "@playwright/test";
 import { unzipSync, strFromU8 } from "fflate";
 import fs from "node:fs";
+import { execFileSync } from "node:child_process";
 
 const errors = new WeakMap<Page, string[]>();
 test.beforeEach(async ({ page }) => {
@@ -17,13 +18,13 @@ const cards = (page: Page) => page.getByTestId("block-card");
 const MODEL = "write-ads-people-believe"; // the block with the finished model page
 const WORKFLOW = "turn-your-reviews-into-image-ads-buyers-believe";
 
-test("hero is the headline, the mono subhead and two buttons, over the globe", async ({ page }) => {
+test("hero is the headline, the mono subhead, two buttons and a how-it-works link, over the globe", async ({ page }) => {
   await page.goto("/");
   await expect(page.getByRole("heading", { level: 1 })).toHaveText("Making humanity AI native");
   await expect(page.locator(".hero .lede")).toContainText("Save hours every week");
   expect(await page.locator(".hero .lede").evaluate((el) => getComputedStyle(el).fontFamily)).toContain("JetBrains Mono");
-  await expect(page.locator(".hero").getByRole("link")).toHaveText(["Browse the blocks", "Build a workflow"]);
-  await expect(page.locator(".hero-in > *")).toHaveCount(3);
+  await expect(page.locator(".hero").getByRole("link")).toHaveText(["Browse the blocks", "Build a workflow", "How it works"]);
+  await expect(page.locator(".hero-in > *")).toHaveCount(4);
   const globe = page.getByTestId("globe");
   await expect(globe).toBeVisible();
   expect(await globe.evaluate((c: HTMLCanvasElement) => c.width > 0 && c.height > 0)).toBe(true);
@@ -323,8 +324,8 @@ test("a skill installs: the zip is a folder Claude can upload, and every AI has 
   await expect(page.getByTestId("install").getByRole("tab", { selected: true })).toHaveText("ChatGPT");
 });
 
-test("phone width: no sideways scroll on home or a block page @mobile", async ({ page }) => {
-  for (const url of ["/", `/prompts/${MODEL}`]) {
+test("phone width: no sideways scroll on home, a block page or the guide @mobile", async ({ page }) => {
+  for (const url of ["/", `/prompts/${MODEL}`, "/how-it-works"]) {
     await page.goto(url);
     await expect(page.getByRole("heading", { level: 1 })).toBeVisible();
     const overflow = await page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth);
@@ -476,4 +477,41 @@ test("phone width: the workflow is a numbered list you reorder with arrows @mobi
   await expect(builder.getByTestId("step-panel")).toContainText("It needs");
   const overflow = await page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth);
   expect(overflow).toBeLessThanOrEqual(0);
+});
+
+test("how it works: a plain guide to each kind and the builder, at grade 10 or below", async ({ page }, info) => {
+  await page.goto("/");
+  await page.getByTestId("how-it-works-link").click();
+  await expect(page).toHaveURL(/\/how-it-works$/);
+  const guide = page.getByTestId("how-it-works");
+  await expect(guide.getByRole("heading", { level: 1 })).toHaveText("How AI Building Blocks work");
+  await expect.poll(() => page.evaluate(() => scrollY)).toBe(0);
+  for (const h of ["A prompt:", "A skill:", "A workflow:", "An agent:", "An app:", "Which one to use", "Build a workflow in the builder", "Words you'll see"]) {
+    await expect(guide.getByRole("heading", { level: 2, name: new RegExp(`^${h}`) })).toBeVisible();
+  }
+  // Agents and apps are explained, and plainly marked as not in the library yet.
+  await expect(guide.locator("#agent")).toContainText("aren't in the library yet");
+  await expect(guide.locator("#app")).toContainText("aren't in the library yet");
+  // The contents links jump to their section.
+  await guide.locator(".bp-toc").getByRole("link", { name: "Using the builder" }).click();
+  await expect(guide.locator("#builder")).toBeInViewport();
+  // Reading level of everything a visitor reads, leaving out the example files.
+  const text = await guide.evaluate((el) => {
+    const skip = [...el.querySelectorAll<HTMLElement>("figure.code, .bp-toc")];
+    skip.forEach((x) => (x.style.display = "none"));
+    const t = (el as HTMLElement).innerText;
+    skip.forEach((x) => (x.style.display = ""));
+    return t;
+  });
+  // Graded by the same command the writing skill uses, so the site and the page checks agree.
+  const file = info.outputPath("how-it-works.txt");
+  fs.writeFileSync(file, text);
+  const out = execFileSync(process.execPath, ["tools/reading-level.mjs", "--file", file], { cwd: "..", encoding: "utf8" });
+  const g = Number(out.match(/grade (-?[\d.]+)/)![1]);
+  expect(g, `grade ${g}`).toBeLessThanOrEqual(10);
+  // It works from the header too, and on a fresh load of the address.
+  await page.goto("/how-it-works");
+  await expect(page.getByTestId("how-it-works")).toBeVisible();
+  await page.locator(".nav").getByRole("link", { name: "Library" }).click();
+  await expect(page).toHaveURL(/#library$/);
 });

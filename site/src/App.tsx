@@ -1,6 +1,5 @@
-import { Suspense, lazy, useCallback, useEffect, useMemo, useState } from "react";
+import { Suspense, lazy, useCallback, useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import { ArrowIcon, BlockCard, Drawer, Logo, PixelIcon, SearchIcon, Select, ThemeToggle, Toast } from "./ui";
-import Globe from "./Globe";
 import { type Block, type Catalogue, type Kind, BUSINESSES, FUNCTIONS, KINDS, LEVELS, TASKS, cap, functionsOf, kindOf, pathOf, taskOf, useCatalogue } from "./lib/data";
 import { kits, queueForCanvas, useStore } from "./lib/store";
 import { Link, navigate, setSearch, useLocation } from "./lib/router";
@@ -8,7 +7,23 @@ import { BusinessDrawer, openBusiness, useBusinessOpener } from "./Business";
 import { hasBusiness, useBusiness } from "./lib/business";
 import HomeGoal, { SEARCH } from "./HomeGoal";
 
-const Builder = lazy(() => import("./Builder")); // the canvas loads after the page is up
+const Builder = lazy(() => import("./Builder")); // the canvas loads only when someone scrolls near it
+const Globe = lazy(() => import("./Globe")); // drawn behind the hero, so the text never waits for it
+
+/** Draws its children only once the spot is close to the screen (or the link points at it). */
+function WhenNear({ id, children, fallback }: { id: string; children: ReactNode; fallback: ReactNode }) {
+  const ref = useRef<HTMLDivElement>(null);
+  const [near, setNear] = useState(() => location.hash === `#${id}`);
+  useEffect(() => {
+    if (near || !ref.current) return;
+    const io = new IntersectionObserver((e) => { if (e.some((x) => x.isIntersecting)) setNear(true); }, { rootMargin: "800px 0px" });
+    io.observe(ref.current);
+    const onHash = () => { if (location.hash === `#${id}`) setNear(true); };
+    addEventListener("hashchange", onHash);
+    return () => { io.disconnect(); removeEventListener("hashchange", onHash); };
+  }, [near, id]);
+  return near ? <>{children}</> : <div ref={ref}>{fallback}</div>;
+}
 const BlockPage = lazy(() => import("./BlockPage"));
 const HowItWorks = lazy(() => import("./HowItWorks"));
 
@@ -217,7 +232,7 @@ function Home({ c, toast, toBuilder }: { c: Catalogue | null; toast: (m: string)
   return (
     <main id="top">
       <section className="hero">
-        <Globe />
+        <Suspense fallback={null}><Globe /></Suspense>
         <div className="wrap hero-in">
           <h1 className="h1">Making humanity AI native</h1>
           <Typewriter text="Stop doing the work AI could do for you. Save hours every week, and spend them on the work only you can do. Or at the beach (we won't tell)." />
@@ -237,7 +252,7 @@ function Home({ c, toast, toBuilder }: { c: Catalogue | null; toast: (m: string)
           <h2 className="h2" id="build-h">Line up skills once, and your AI does the whole job</h2>
           <p className="lede">Add skills in the order they should run, or start from a ready workflow. Download one folder, upload it to Claude, ChatGPT or any AI that reads files, and it works through every step for you.</p>
         </div>
-        {c && <Suspense fallback={<div className="builder" />}><Builder c={c} toast={toast} /></Suspense>}
+        <WhenNear id="build" fallback={<div className="builder" />}>{c && <Suspense fallback={<div className="builder" />}><Builder c={c} toast={toast} /></Suspense>}</WhenNear>
       </section>
     </main>
   );

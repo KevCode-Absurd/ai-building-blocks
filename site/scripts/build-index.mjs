@@ -3,6 +3,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import YAML from "yaml";
+import { Marked } from "marked";
 
 const ROOT = path.resolve("../catalogue-items");
 const OUT_DATA = "public/data";
@@ -23,6 +24,11 @@ for (const group of Object.values(types)) for (const [id, t] of Object.entries(g
 
 const asPorts = (list) =>
   (list ?? []).map((p) => (typeof p === "string" ? { type: p, required: true } : { type: p.type, required: p.required !== false }));
+
+// Markdown is turned into HTML here, at build time, so the site ships no Markdown library.
+// Raw HTML in a file is escaped: files are data, never markup we trust.
+const md = new Marked({ gfm: true, renderer: { html: ({ text }) => text.replace(/&/g, "&amp;").replace(/</g, "&lt;") } });
+const bodyOf = (t) => t.replace(/\r\n?/g, "\n").replace(/^---\n[\s\S]*?\n---\n?/, "");
 
 const blocks = [];
 const problems = [];
@@ -53,6 +59,7 @@ for (const category of ["general", "ecommerce", "orchestrators"]) {
     if (pagePath) { try { page = YAML.parse(fs.readFileSync(pagePath, "utf8")); } catch (e) { problems.push(`${category}/${slug}: page: ${e.message.split(/\r?\n/)[0]}`); } }
     if (page) {
       const out = Object.fromEntries(PAGE_FIELDS.filter((f) => page[f] != null).map((f) => [f, page[f]]));
+      out.html = { explain: page.explain ? md.parse(String(page.explain)) : "", skill: md.parse(bodyOf(skill)), addon: hasAddon ? md.parse(bodyOf(fs.readFileSync(addon, "utf8"))) : "" };
       fs.writeFileSync(path.join(OUT_PAGES, `${slug}.json`), JSON.stringify(out));
     }
     blocks.push({
@@ -72,6 +79,8 @@ for (const category of ["general", "ecommerce", "orchestrators"]) {
       uses: item.uses ?? [],
       steps,
       origin: item.origin ?? "own",
+      // Last test run on the example business (tools/test-blocks.mjs). Only a pass is shown on the page.
+      tested: item.tested ? { on: String(item.tested.on), result: item.tested.result, business: item.tested.business ?? "sprout" } : null,
       version: String(item.version ?? "1.0.0"),
       words: skill.split(/\s+/).length,
       addon: hasAddon,

@@ -18,6 +18,8 @@ export type Block = {
   uses: string[];
   steps: { uses: string; note: string }[];
   origin: "own" | "rebuilt";
+  /** The last test run on the example business, if there was one. */
+  tested: { on: string; result: "pass" | "fail"; business: string } | null;
   version: string;
   words: number;
   addon: boolean;
@@ -37,6 +39,8 @@ export type Page = {
   example?: { business: string; input: string; output: string };
   tweaks: { what: string; how: string }[]; judge: string[]; test?: string[]; improve: string[];
   terms: { term: string; meaning: string }[];
+  /** Markdown already turned into HTML by the index build. */
+  html: { explain: string; skill: string; addon: string };
 };
 export type Catalogue = { built: string; portTypes: Record<string, string | null>; renamed: Record<string, string>; blocks: Block[]; bySlug: Record<string, Block> };
 
@@ -52,6 +56,8 @@ export const roleName = (r: Role) => ROLES.find((x) => x.id === r)?.name ?? r;
 
 export const LEVELS = ["beginner", "intermediate", "advanced", "expert"] as const;
 export const cap = (s: string) => s.charAt(0).toUpperCase() + s.slice(1);
+/** "2026-10-19" as "19 Oct 2026". */
+export const testedOn = (iso: string) => new Date(`${iso}T12:00:00Z`).toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric", timeZone: "UTC" });
 const PORT_NAMES: Record<string, string> = {
   voc_reviews: "Customer reviews", pdp_copy: "Product page copy", ad_copy: "Ad copy", brand_brain: "Brand file",
   competitor_set: "Competitor set", reference_set: "Reference ads", ad_breakdowns: "Ad breakdowns", image_prompt: "Image prompt",

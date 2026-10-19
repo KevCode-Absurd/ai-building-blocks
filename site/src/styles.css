@@ -201,8 +201,7 @@ code { font: 400 0.88em var(--mono); background: var(--raise); border-radius: 4p
 .composer textarea::placeholder { color: var(--faint); }
 .composer-bar { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; padding: 10px 12px 10px 16px; border-top: 1px solid var(--line); background: var(--bg-2); }
 .io { display: grid; grid-template-columns: minmax(0, 1fr) 32px minmax(0, 1fr); align-items: stretch; gap: 8px; margin-right: 4px; }
-.io-arrow { display: grid; place-items: center; color: var(--faint); }
-@media (max-width: 1180px) { .io { grid-template-columns: minmax(0, 1fr); } .io-arrow { transform: rotate(90deg); height: 28px; } }
+@media (max-width: 1180px) { .io { grid-template-columns: minmax(0, 1fr); } }
 .bp-sec .code + .code, .bp-note + .code { margin-top: 0; }
 
 .prose { color: var(--text-2); font-size: 15px; line-height: 1.65; overflow-wrap: anywhere; }

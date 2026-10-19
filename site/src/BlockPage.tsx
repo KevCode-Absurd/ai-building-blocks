@@ -1,7 +1,6 @@
 import { useEffect, useMemo, useRef, useState, type ReactNode } from "react";
-import { Marked } from "marked";
 import { ArrowIcon, BlockCard, KitMenu } from "./ui";
-import { type Catalogue, type Page, cap, kindInfo, kindOf, loadPage, loadSkillText, neighbours, pathOf, taskOf, wireSteps } from "./lib/data";
+import { type Catalogue, type Page, cap, kindInfo, kindOf, loadPage, loadSkillText, neighbours, pathOf, taskOf, testedOn, wireSteps } from "./lib/data";
 import { markViewed } from "./lib/store";
 import { buildHandoffZip, download, finalOutputs, needsOf, orderFlow, zipName } from "./lib/handoff";
 import { businessText, getBusiness, hasBusiness, useBusiness, withBusiness } from "./lib/business";
@@ -13,11 +12,8 @@ import AddToFlow from "./AddToFlow";
 import Install from "./Install";
 import { useSeen, useTyped } from "./lib/typing";
 
-// Skill text renders as Markdown with raw HTML escaped: files are data, never markup we trust.
-const md = new Marked({ gfm: true, renderer: { html: ({ text }) => text.replace(/&/g, "&amp;").replace(/</g, "&lt;") } });
 // A list item that YAML read as a small map ("Check: this") still shows as text.
 const txt = (x: unknown): string => (typeof x === "string" ? x : x && typeof x === "object" ? Object.entries(x as Record<string, unknown>).map(([k, v]) => (v == null ? k : `${k}: ${txt(v)}`)).join(" ") : String(x ?? ""));
-const stripFront = (t: string) => t.replace(/^---\n[\s\S]*?\n---\n?/, "");
 
 const BUSINESSES: Record<string, string> = {
   sprout: "A real run on Sprout, a US greens-gummy brand with its name changed. Built from its public website, ads and reviews.",
@@ -107,15 +103,13 @@ export default function BlockPage({ c, slug, toast, toBuilder }: Props) {
   const b = c.bySlug[slug];
   const [page, setPage] = useState<Page | null | undefined>(undefined);
   const [skill, setSkill] = useState<string | null>(null);
-  const [addon, setAddon] = useState<string | null>(null);
   const [adding, setAdding] = useState(false);
   const [dl, setDl] = useState<Flow | null>(null);
   const biz = hasBusiness(useBusiness());
   useEffect(() => {
-    setPage(undefined); setSkill(null); setAddon(null);
+    setPage(undefined); setSkill(null);
     loadPage(slug).then(setPage);
     loadSkillText(slug).then(setSkill);
-    loadSkillText(slug, "ecommerce.md").then(setAddon);
     markViewed(slug);
   }, [slug]);
   useEffect(() => { document.title = `${b?.name ?? "Not found"} · AI Building Blocks`; return () => { document.title = "AI Building Blocks · Making humanity AI native"; }; }, [b]);
@@ -196,7 +190,7 @@ export default function BlockPage({ c, slug, toast, toBuilder }: Props) {
           )}
         </div>
         <BusinessNote />
-        <p className="bp-file"><span>{b.name}</span><code>{b.slug}</code><span>{cap(b.level)}</span></p>
+        <p className="bp-file"><span>{b.name}</span><code>{b.slug}</code><span>{cap(b.level)}</span>{b.tested?.result === "pass" && <span data-testid="tested" title="Run on a real business's files and graded by a second AI against this page's checks">Tested {testedOn(b.tested.on)}</span>}</p>
       </header>
 
       <div className="wrap bp-body">
@@ -227,7 +221,7 @@ export default function BlockPage({ c, slug, toast, toBuilder }: Props) {
 
           {p?.explain && (
             <Section id="what" title="What it does">
-              <div className="prose big" dangerouslySetInnerHTML={{ __html: md.parse(p.explain) as string }} />
+              <div className="prose big" dangerouslySetInnerHTML={{ __html: p.html.explain }} />
               {has(p.when) && (
                 <div className="when-box">
                   <h3>Reach for it when</h3>
@@ -318,12 +312,12 @@ export default function BlockPage({ c, slug, toast, toBuilder }: Props) {
           <Section id="file" title={isFlow ? "The workflow file" : "The skill file"} lead={`This is what your AI follows. It's saved as ${b.slug}/SKILL.md, the name Claude, Claude Code and our workflows call it by.`}>
             <details className="skill-file" open={!p}>
               <summary>Read the full {isFlow ? "workflow" : "skill"}</summary>
-              {skill ? <div className="prose" dangerouslySetInnerHTML={{ __html: md.parse(stripFront(skill)) as string }} /> : <p className="small">Loading…</p>}
+              {p ? <div className="prose" dangerouslySetInnerHTML={{ __html: p.html.skill }} /> : skill ? <pre className="prose">{skill}</pre> : <p className="small">Loading…</p>}
             </details>
-            {addon && (
+            {p?.html.addon && (
               <details className="skill-file">
                 <summary>Extra steps for online stores</summary>
-                <div className="prose" dangerouslySetInnerHTML={{ __html: md.parse(stripFront(addon)) as string }} />
+                <div className="prose" dangerouslySetInnerHTML={{ __html: p.html.addon }} />
               </details>
             )}
           </Section>

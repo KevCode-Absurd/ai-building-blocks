@@ -24,8 +24,9 @@ A free library of AI building blocks for any business. Each block is a small, we
 6. **Canvas (workflow builder).** Drag blocks from a side panel onto a canvas, connect an output to an input, reorder, see when a connection's types don't match, save, and download the handoff pack. Persisted like kits.
 7. **Handoff pack export (deterministic).** A zip containing `HANDOFF.md`, `workflow.json` and `skills/<slug>/SKILL.md` for every block used. Rules in §6.
 8. **No brand examples on the site** (decided 18 Oct). Brand examples stay in test sets, not on the page.
+9. **Your own skills** (added 19 Oct, next). "Add your own skill" in My kits and the builder: drop in or paste a `SKILL.md`, pick what it needs and gives, and use it in kits and workflows next to ours, marked "Yours". It stays in this browser and is never run on the site. The handoff pack carries it and says we didn't test it. Spec: `docs/planning/11_YOUR_OWN_SKILLS.md` §1. Submitting a skill to the library comes after launch (same doc, §2).
 
-**Not in v0:** comments, votes, boards as communities, accounts on a server, running models on the site, the intake engine UI, mini tools, the course pages beyond an outline. They follow the final plan's timeline.
+**Not in v0:** skill submissions to the library, paid skills, comments, votes, boards as communities, accounts on a server, running models on the site, the intake engine UI, mini tools, the course pages beyond an outline. They follow the final plan's timeline.
 
 ## 4 · Building blocks: the parts and how they connect
 
@@ -127,7 +128,8 @@ Order is a topological sort of the graph, ties broken by canvas position (top to
 
 ## 7 · Technical approach
 
-- **Site:** Vite + React + TypeScript, static build, no server. Deploys to any static host.
+- **Site:** Vite + TypeScript, written in React and run on Preact (react is aliased to preact/compat, a fraction of the size), static build, no server. Deploys to any static host.
+- **Speed (19 Oct):** the home page loads about 68 kB in 6 requests. Markdown is turned into HTML when the index is built, so no Markdown library ships. The zip library loads only on download, the builder only when someone scrolls near it, and the globe after the text. Fonts are served from the site (Latin only, preloaded), and the library list is preloaded alongside the code.
 - **Data:** a build script reads `catalogue-items/**` and writes one `blocks.json` index plus per-block skill text, so the library loads fast.
 - **Persistence:** kits, canvases and recent items in `localStorage` behind one small storage module, so moving them to an account later changes one file.
 - **Zip:** built in the browser with a small zip library.

@@ -1,6 +1,7 @@
 // Builds the handoff pack from a saved workflow with plain code: same workflow in, same pack out.
 // PRD §6: HANDOFF.md, workflow.json, skills/<slug>/SKILL.md (+ boards/ecommerce.md), README.txt.
-import { strToU8, zipSync, type Zippable } from "fflate";
+// The zip library loads only when someone downloads.
+import type { Zippable } from "fflate";
 import { type Catalogue, loadSkillText, portLabel, taskOf } from "./data";
 import type { Flow, FlowNode } from "./store";
 import { type Business, businessText } from "./business";
@@ -142,6 +143,7 @@ export async function buildHandoffZip(c: Catalogue, flow: Flow, business: Busine
   if (!flow.nodes.length) return { error: "Add at least one block to the canvas first." };
   const order = orderFlow(flow);
   if (!order) return { error: "This workflow loops back on itself. Remove one connection so it runs from start to finish." };
+  const { strToU8, zipSync } = await import("fflate");
   const files: Zippable = {};
   const put = (p: string, text: string) => { files[p] = [strToU8(text), { mtime: FIXED_TIME }]; };
   const about = businessText(business);
@@ -176,6 +178,7 @@ export function download(blob: Blob, filename: string) {
 
 /** One skill as a folder Claude can install: <slug>/SKILL.md, plus its online-store steps and reference files. */
 export async function buildSkillZip(slug: string, skill: string, addon: boolean, files: string[]) {
+  const { strToU8, zipSync } = await import("fflate");
   const tree: Zippable = {};
   const store = addon ? await loadSkillText(slug, "ecommerce.md") : null;
   tree[`${slug}/SKILL.md`] = strToU8(store ? `${skill.trimEnd()}\n\n## For an online store\n\nIf the business sells products online, also follow \`ecommerce.md\` in this folder.\n` : skill);

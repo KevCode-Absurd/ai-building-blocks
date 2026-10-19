@@ -12,9 +12,15 @@
       document.documentElement.dataset.theme = "dark";
       try { if (localStorage.getItem("abb:theme") === "light") delete document.documentElement.dataset.theme; } catch (e) {}
     </script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400..700&family=JetBrains+Mono:wght@400..600&display=swap" rel="stylesheet" />
+    <!-- Fonts are served from this site (Latin letters only), so text never waits on another server. -->
+    <link rel="preload" href="/fonts/space-grotesk.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/jetbrains-mono.woff2" as="font" type="font/woff2" crossorigin />
+    <!-- The library list starts downloading alongside the code instead of after it. -->
+    <link rel="preload" href="/data/blocks.json" as="fetch" crossorigin />
+    <style>
+      @font-face { font-family: "Space Grotesk"; font-style: normal; font-weight: 300 700; font-display: swap; src: url(/fonts/space-grotesk.woff2) format("woff2"); }
+      @font-face { font-family: "JetBrains Mono"; font-style: normal; font-weight: 100 800; font-display: swap; src: url(/fonts/jetbrains-mono.woff2) format("woff2"); }
+    </style>
   </head>
   <body>
     <div id="root"></div>

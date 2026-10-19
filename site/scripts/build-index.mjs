@@ -116,6 +116,15 @@ const portTypes = Object.fromEntries([...usedTypes].sort().map((t) => [t, typeDe
 const renamedFile = path.join(ROOT, "renamed.json");
 const renamed = fs.existsSync(renamedFile) ? Object.fromEntries(Object.entries(JSON.parse(fs.readFileSync(renamedFile, "utf8"))).filter(([, to]) => blocks.some((b) => b.slug === to))) : {};
 fs.writeFileSync(path.join(OUT_DATA, "blocks.json"), JSON.stringify({ built: new Date().toISOString().slice(0, 10), portTypes, renamed, blocks }));
+// Every page, for search engines: the home page, each block, the mini tools and the apps.
+const SITE = "https://useaiblocks.com";
+const kindPath = (b) => (b.category === "orchestrator" || b.type === "workflow" || b.type === "routine" ? "workflows" : b.type === "prompt" ? "prompts" : "skills");
+const { TOOLS } = await import("../../mini-tools/index.mjs");
+const appSlugs = [...fs.readFileSync("src/apps/data.ts", "utf8").matchAll(/^    slug: "([a-z0-9-]+)",$/gm)].map((m) => m[1]);
+const urls = ["/", "/how-it-works", "/tools", ...TOOLS.map((t) => `/tools/${t.slug}`), "/apps", "/apps/starter-pack", ...appSlugs.map((s) => `/apps/${s}`), ...blocks.filter((b) => b.headline).map((b) => `/${kindPath(b)}/${b.slug}`)];
+fs.writeFileSync("public/sitemap.xml", `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.map((u) => `  <url><loc>${SITE}${u}</loc></url>`).join("\n")}\n</urlset>\n`);
+fs.writeFileSync("public/robots.txt", `User-agent: *\nAllow: /\n\nSitemap: ${SITE}/sitemap.xml\n`);
+console.log(`sitemap: ${urls.length} pages (${appSlugs.length} apps)`);
 console.log(`${blocks.filter((b) => b.headline).length} of ${blocks.length} have a page`);
 console.log(`${blocks.length} blocks (${blocks.filter((b) => b.category === "general").length} general, ${blocks.filter((b) => b.category === "ecommerce").length} ecommerce, ${blocks.filter((b) => b.category === "orchestrator").length} orchestrators)`);
 if (problems.length) console.log("Problems:\n  " + problems.join("\n  "));

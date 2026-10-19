@@ -513,14 +513,14 @@ test("how it works: a plain guide to each kind and the builder, at grade 10 or b
   await page.getByTestId("how-it-works-link").click();
   await expect(page).toHaveURL(/\/how-it-works$/);
   const guide = page.getByTestId("how-it-works");
-  await expect(guide.getByRole("heading", { level: 1 })).toHaveText("How AI Building Blocks work");
+  await expect(guide.getByRole("heading", { level: 1 })).toHaveText("How AI Blocks work");
   await expect.poll(() => page.evaluate(() => scrollY)).toBe(0);
-  for (const h of ["A prompt:", "A skill:", "A workflow:", "An agent:", "An app:", "Which one to use", "Build a workflow in the builder", "Words you'll see"]) {
+  for (const h of ["A prompt:", "A skill:", "A routine:", "A workflow:", "An agent:", "An app:", "Which one to use", "Build a workflow in the builder", "Words you'll see"]) {
     await expect(guide.getByRole("heading", { level: 2, name: new RegExp(`^${h}`) })).toBeVisible();
   }
-  // Agents and apps are explained, and plainly marked as not in the library yet.
+  // Agents are explained and plainly marked as not in the library yet; apps lead to the example apps.
   await expect(guide.locator("#agent")).toContainText("aren't in the library yet");
-  await expect(guide.locator("#app")).toContainText("aren't in the library yet");
+  await expect(guide.locator("#app")).toContainText("Take the tour of example apps");
   // The contents links jump to their section.
   await guide.locator(".bp-toc").getByRole("link", { name: "Using the builder" }).click();
   await expect(guide.locator("#builder")).toBeInViewport();

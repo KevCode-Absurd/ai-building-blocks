@@ -1,4 +1,4 @@
-/* AI Building Blocks. Light first, with a dark mode.
+/* AI Blocks (useaiblocks.com). Light first, with a dark mode.
    Monochrome, like an old computer that learned some manners: a mono face for anything the machine says
    (the subhead, file names, counts, step numbers), pinstriped title bars on code windows,
    and hard offset shadows when you pick something up. The one moving thing is the globe of 0s and 1s. */
@@ -634,7 +634,7 @@ body.globe-dragging, body.globe-dragging * { user-select: none !important; -webk
 .hero-more:hover svg { transform: translateX(3px); }
 
 /* How it works */
-.hiw-ladder { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 10px; align-items: end; }
+.hiw-ladder { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 10px; align-items: end; }
 .hiw-ladder a { display: flex; flex-direction: column; gap: 8px; min-height: calc(150px + var(--i) * 26px); padding: 16px; border: 1px solid var(--line-2); border-radius: 10px; background: var(--panel); color: var(--text); transition: transform 0.12s, box-shadow 0.12s, border-color 0.12s; }
 .hiw-ladder a:hover { transform: translate(-3px, -3px); box-shadow: var(--hard); border-color: var(--text); }
 .hiw-ladder b { font: 600 18px/1.2 var(--display); letter-spacing: -0.02em; }

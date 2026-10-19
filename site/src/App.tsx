@@ -27,6 +27,7 @@ function WhenNear({ id, children, fallback }: { id: string; children: ReactNode;
 const BlockPage = lazy(() => import("./BlockPage"));
 const HowItWorks = lazy(() => import("./HowItWorks"));
 const ToolsPage = lazy(() => import("./tools/ToolsPage")); // the mini tools load only when someone opens one
+const AppsPage = lazy(() => import("./apps/AppsPage")); // the app tours and the starter pack, likewise
 
 // Shown first: things most people can use this week.
 const START_HERE = ["write-ads-people-believe", "turn-website-into-brand-file-for-ai", "find-why-customers-buy-in-their-words", "make-every-ad-sound-like-your-brand", "find-what-stops-visitors-buying-30-quick-checks", "get-video-ad-script-in-customers-words", "keep-facebook-from-blocking-your-ads"];
@@ -45,11 +46,12 @@ function Header({ onKits }: { onKits: () => void }) {
   return (
     <header className={`header${scrolled ? " scrolled" : ""}`}>
       <div className="wrap header-in">
-        <Link to="/" className="brand" aria-label="AI Building Blocks, home"><Logo />AI Building Blocks</Link>
+        <Link to="/" className="brand" aria-label="AI Blocks, home"><Logo />AI Blocks</Link>
         <nav className="nav" aria-label="Sections">
           <Link to="/#library">Library</Link>
           <Link to="/#build">Builder</Link>
           <Link to="/tools">Tools</Link>
+          <Link to="/apps">Apps</Link>
           <Link to="/how-it-works">How it works</Link>
         </nav>
         <div className="header-end">
@@ -285,6 +287,14 @@ export default function App() {
     else if (here && pathOf(here) !== path) navigate(pathOf(here), { replace: true });
   }, [c, search, pageSlug, path]);
 
+  // One address per page for search engines and shared links.
+  useEffect(() => {
+    let link = document.querySelector<HTMLLinkElement>('link[rel="canonical"]');
+    if (!link) { link = document.createElement("link"); link.rel = "canonical"; document.head.appendChild(link); }
+    link.href = `https://useaiblocks.com${path}`;
+    document.querySelector('meta[property="og:url"]')?.setAttribute("content", link.href);
+  }, [path]);
+
   const toBuilder = useCallback((slugs: string[], asNew?: string) => {
     queueForCanvas(slugs, asNew);
     setKitsOpen(false);
@@ -297,6 +307,8 @@ export default function App() {
       <Header onKits={() => setKitsOpen(true)} />
       {path === "/tools" || path.startsWith("/tools/") ? (
         <Suspense fallback={<main className="wrap bp-hero"><p className="small">Loading…</p></main>}><ToolsPage path={path} toast={setToast} /></Suspense>
+      ) : path === "/apps" || path.startsWith("/apps/") ? (
+        <Suspense fallback={<main className="wrap bp-hero"><p className="small">Loading…</p></main>}><AppsPage path={path} c={c} toast={setToast} /></Suspense>
       ) : path === "/how-it-works" ? (
         <Suspense fallback={<main className="wrap bp-hero"><p className="small">Loading…</p></main>}><HowItWorks toast={setToast} /></Suspense>
       ) : pageSlug ? (
@@ -306,9 +318,11 @@ export default function App() {
       )}
       <footer className="footer">
         <div className="wrap footer-in">
-          <span>© 2026 AI Building Blocks</span>
+          <span>© 2026 AI Blocks · useaiblocks.com</span>
           <nav aria-label="More">
             <Link to="/tools">Mini tools</Link>
+            <Link to="/apps">Apps</Link>
+            <Link to="/apps/starter-pack">App starter pack</Link>
             <Link to="/how-it-works">How it works</Link>
           </nav>
         </div>

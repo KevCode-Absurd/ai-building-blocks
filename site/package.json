@@ -4,7 +4,7 @@
   "version": "0.1.0",
   "type": "module",
   "scripts": {
-    "index": "node scripts/build-index.mjs && node ../tools/build-mini-tool.mjs",
+    "index": "node scripts/build-index.mjs && node ../tools/build-mini-tool.mjs && node ../tools/check-masking.mjs",
     "dev": "npm run index && vite",
     "build": "npm run index && tsc -b && vite build",
     "preview": "vite preview",

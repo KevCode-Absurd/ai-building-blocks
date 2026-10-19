@@ -134,7 +134,7 @@
     }
   }
 
-  var credit = el("p", { "class": "credit" }, [el("a", { href: M.site + "/tools/" + T.slug, target: "_blank", rel: "noopener", text: T.name }), " · a free mini tool from AI Building Blocks"]);
+  var credit = el("p", { "class": "credit" }, [el("a", { href: M.site + "/tools/" + T.slug, target: "_blank", rel: "noopener", text: T.name }), " · a free mini tool from AI Blocks"]);
   var head = embed ? el("header", {}, [el("h1", { text: T.headline })]) : el("header", {}, [el("h1", { text: T.headline }), el("p", { "class": "sub", text: T.summary }), el("p", { "class": "small", text: "Works offline. Your numbers stay on this computer." })]);
   root.appendChild(head);
   root.appendChild(el("div", { "class": "cols" }, [form, out]));

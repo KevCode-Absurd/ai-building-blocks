@@ -8,9 +8,10 @@ import { Link } from "./lib/router";
 const KINDS: { id: string; n: number; name: string; line: string; here: boolean }[] = [
   { id: "prompt", n: 1, name: "Prompt", line: "One message. You paste it in and get one result.", here: true },
   { id: "skill", n: 2, name: "Skill", line: "Instructions you add to your AI once. It follows them every time.", here: true },
-  { id: "workflow", n: 3, name: "Workflow", line: "Several skills in order. Each one hands its work to the next.", here: true },
-  { id: "agent", n: 4, name: "Agent", line: "An AI that works through the steps on its own, using tools.", here: false },
-  { id: "app", n: 5, name: "App", line: "A finished tool with its own screen. Fill in a form, press a button.", here: false },
+  { id: "routine", n: 3, name: "Routine", line: "A skill or workflow that runs on a schedule, like every Monday at 9.", here: true },
+  { id: "workflow", n: 4, name: "Workflow", line: "Several skills in order. Each one hands its work to the next.", here: true },
+  { id: "agent", n: 5, name: "Agent", line: "An AI that works through the steps on its own, using tools. Optional.", here: false },
+  { id: "app", n: 6, name: "App", line: "A screen your team signs in to. Fill in a form, press a button.", here: true },
 ];
 
 const PROMPT = `Write 10 headlines for a Facebook ad.
@@ -46,6 +47,7 @@ const FOLDER: [string, string][] = [
 const CHOOSE: [string, string, string][] = [
   ["I need something once, right now", "Prompt", "prompt"],
   ["I do this job every week", "Skill", "skill"],
+  ["It should run by itself on a schedule", "Routine", "routine"],
   ["The job has several parts", "Workflow", "workflow"],
   ["I want it done while I do something else", "Agent", "agent"],
   ["My team should do it without learning AI", "App", "app"],
@@ -68,12 +70,13 @@ const Steps = ({ items }: { items: ReactNode[] }) => (
 const Box = ({ title, items }: { title: string; items: ReactNode[] }) => (
   <div className="when-box"><h3>{title}</h3><ul>{items.map((x, i) => <li key={i}>{x}</li>)}</ul></div>
 );
-const Status = ({ here }: { here: boolean }) => <span className={`hiw-status${here ? " here" : ""}`}>{here ? "In the library" : "Not in the library yet"}</span>;
+const Status = ({ here }: { here: boolean }) => <span className={`hiw-status${here ? " here" : ""}`}>{here ? "On this site" : "Not in the library yet"}</span>;
 
 const TOC: [string, string][] = [
-  ["kinds", "The five kinds"],
+  ["kinds", "The six kinds"],
   ["prompt", "Prompts"],
   ["skill", "Skills"],
+  ["routine", "Routines"],
   ["workflow", "Workflows"],
   ["agent", "Agents"],
   ["app", "Apps"],
@@ -84,14 +87,14 @@ const TOC: [string, string][] = [
 ];
 
 export default function HowItWorks({ toast }: { toast: (m: string) => void }) {
-  useEffect(() => { document.title = "How it works · AI Building Blocks"; return () => { document.title = "AI Building Blocks · Making humanity AI native"; }; }, []);
+  useEffect(() => { document.title = "How it works · AI Blocks"; return () => { document.title = "AI Blocks · Making humanity AI native"; }; }, []);
   return (
     <main className="bp hiw" data-testid="how-it-works">
       <header className="wrap bp-hero">
         <Link to="/" className="back"><span aria-hidden="true">←</span> Home</Link>
         <p className="bp-kicker"><span className="kind">Guide</span>About 6 minutes to read</p>
-        <h1 className="bp-h1">How AI Building Blocks work</h1>
-        <p className="bp-sub">Everything here is a set of written instructions for your AI. This guide explains the five kinds, how to use each one, and how to build a workflow, in plain words.</p>
+        <h1 className="bp-h1">How AI Blocks work</h1>
+        <p className="bp-sub">Everything here is a set of written instructions for your AI. This guide explains the six kinds, how to use each one, and how to build a workflow, in plain words.</p>
       </header>
       <div className="wrap bp-body">
         <nav className="bp-toc" aria-label="On this page">
@@ -99,7 +102,7 @@ export default function HowItWorks({ toast }: { toast: (m: string) => void }) {
           {TOC.map(([id, label]) => <a key={id} href={`#${id}`}>{label}</a>)}
         </nav>
         <div className="bp-main">
-          <Section id="kinds" title="Five kinds of instructions, from small to big" lead="Each one does more than the one before. Start with the smallest one that does your job." wide>
+          <Section id="kinds" title="Six kinds, from one message to an app" lead="Each one does more than the one before. Start with the smallest one that does your job." wide>
             <ol className="hiw-ladder">
               {KINDS.map((k) => (
                 <li key={k.id} style={{ "--i": k.n } as CSSProperties}>
@@ -154,6 +157,20 @@ export default function HowItWorks({ toast }: { toast: (m: string) => void }) {
             <Code name="SKILL.md" text={SKILL} toast={toast} />
           </Section>
 
+          <Section id="routine" title="A routine: a skill that runs on a schedule">
+            <div className="prose big">
+              <p>A routine is a skill or a workflow with a time or a trigger. “Every Monday at 9, read last week's ad results and tell me what to cut.” You set it up once, and it runs without you starting it.</p>
+            </div>
+            <h3 className="sub-h">Set one up</h3>
+            <Steps items={[
+              "Pick a skill or workflow that already works when you start it by hand.",
+              "Use your AI's scheduled tasks. Claude and ChatGPT both have them. In Claude Code, use a routine or your computer's scheduler.",
+              "Say when it runs, what it reads and where the result goes.",
+              "Read the first few results. Make the skill clearer before you stop checking.",
+            ]} />
+            <Box title="Keep it safe" items={["Start with routines that only read and report.", "Have it ask you before it sends, posts or spends anything."]} />
+          </Section>
+
           <Section id="workflow" title="A workflow: several skills, one after another">
             <div className="prose big">
               <p>A workflow runs skills in order. Each step saves its result and hands it to the next step. For example: teach your AI your brand, work out who you're writing for, write the ad, then check it against Meta's ad rules.</p>
@@ -196,8 +213,9 @@ export default function HowItWorks({ toast }: { toast: (m: string) => void }) {
             <div className="prose big">
               <p>An app puts a workflow behind a form and a button. You fill in your details, press the button, and get the result. There's no chat and no files to upload, so anyone on your team can use it.</p>
               <p>An app is worth it when many people do the same job the same way, many times. For a job you do now and then, a skill is enough.</p>
+              <p>An app doesn't need an agent. Most apps run fixed steps, with one AI call per button.</p>
             </div>
-            <p className="hiw-now"><Status here={false} /> Apps aren't in the library yet.</p>
+            <p className="hiw-now"><Status here /> <Link to="/apps">Take the tour of example apps</Link>, or <Link to="/apps/starter-pack">get the app starter pack</Link> to build your own.</p>
           </Section>
 
           <Section id="choose" title="Which one to use" lead="Start with the smallest one that does the job. You can always move up.">

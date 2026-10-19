@@ -112,7 +112,7 @@ export default function BlockPage({ c, slug, toast, toBuilder }: Props) {
     loadSkillText(slug).then(setSkill);
     markViewed(slug);
   }, [slug]);
-  useEffect(() => { document.title = `${b?.name ?? "Not found"} · AI Building Blocks`; return () => { document.title = "AI Building Blocks · Making humanity AI native"; }; }, [b]);
+  useEffect(() => { document.title = `${b?.name ?? "Not found"} · AI Blocks`; return () => { document.title = "AI Blocks · Making humanity AI native"; }; }, [b]);
   const near = useMemo(() => (b ? neighbours(c, b) : null), [c, b]);
 
   if (!b) {

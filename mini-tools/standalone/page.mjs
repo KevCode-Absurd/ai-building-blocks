@@ -45,7 +45,7 @@ export function buildHtml(tool, { engineSrc, uiSrc, site, embed = false }) {
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>${esc(tool.name)} · AI Building Blocks</title>
+<title>${esc(tool.name)} · AI Blocks</title>
 <meta name="description" content="${esc(tool.summary)}">
 <link rel="icon" href="${ICON}">
 ${embed ? "" : `<link rel="canonical" href="${esc(site)}/tools/${esc(tool.slug)}">\n`}<style>${CSS}</style>

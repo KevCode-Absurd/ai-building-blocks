@@ -47,7 +47,7 @@ export function layout(tool, opts = {}) {
   const text = (v, style) => ({ t: "s", v, style });
 
   add([text(tool.headline, "title")]);
-  add([text(`A free mini tool from AI Building Blocks. Use it online at ${opts.site ?? "https://useaiblocks.com"}/tools/${tool.slug}`)]);
+  add([text(`A free mini tool from AI Blocks. Use it online at ${opts.site ?? "https://useaiblocks.com"}/tools/${tool.slug}`)]);
   add([text("Example numbers are filled in. They aren't from any real business. Type your own in the yellow cells, and every answer below works itself out.")]);
   add([text("Every answer is a formula you can read and change. To open this in Google Sheets: File > Import > Upload, then pick this file.")]);
   add([]);

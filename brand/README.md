@@ -12,7 +12,7 @@ Read this folder before writing anything people will see: the site, a block's na
 
 ## What we are
 
-AI Building Blocks is the bridge between a job someone has to do and that job done. A person arrives with a task (write ad copy, fix a landing page, find out why ads stopped working). They leave with the result, made by an AI following one of our skills or workflows.
+AI Blocks (useaiblocks.com) is the bridge between a job someone has to do and that job done. A person arrives with a task (write ad copy, fix a landing page, find out why ads stopped working). They leave with the result, made by an AI following one of our skills or workflows.
 
 So we never sell the skill. We sell what's true after it runs: more sales from the same page, ads that don't get your account blocked, a script in your customers' own words.
 

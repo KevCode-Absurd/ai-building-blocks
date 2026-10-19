@@ -1,9 +1,9 @@
 ---
 name: plain-writing
-description: How to write every word a visitor reads on AI Building Blocks, in the brand's voice, at a grade 8 to 10 reading level or lower. Use when importing or adding a skill, prompt or workflow (its page.yaml name, headline, subhead, summary and page text), when writing or editing site copy, the How it works page, buttons, toasts or errors, and when asked to make anything here clearer, simpler or less jargon-heavy.
+description: How to write every word a visitor reads on AI Blocks (useaiblocks.com), in the brand's voice, at a grade 8 to 10 reading level or lower. Use when importing or adding a skill, prompt or workflow (its page.yaml name, headline, subhead, summary and page text), when writing or editing site copy, the How it works page, buttons, toasts or errors, and when asked to make anything here clearer, simpler or less jargon-heavy.
 ---
 
-# Plain writing for AI Building Blocks
+# Plain writing for AI Blocks
 
 Write so a busy owner who has never used AI for work understands it on one read. Clear and short beats clever. Every line must be true.
 

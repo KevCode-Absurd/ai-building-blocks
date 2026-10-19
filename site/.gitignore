@@ -6,3 +6,5 @@ public/mini-tools
 tsconfig.tsbuildinfo
 test-results
 playwright-report
+public/sitemap.xml
+public/robots.txt

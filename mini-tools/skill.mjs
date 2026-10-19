@@ -17,7 +17,7 @@ export function buildPython(tool, site = "https://useaiblocks.com") {
   const boards = tool.presets.map((p) => p.id);
   const lines = [];
   const L = (s = "") => lines.push(s);
-  L(`# ${tool.short}: a free mini tool from AI Building Blocks, version ${tool.version}.`);
+  L(`# ${tool.short}: a free mini tool from AI Blocks, version ${tool.version}.`);
   L(`# Online: ${site}/tools/${tool.slug}`);
   L("# Change the numbers in YOUR_NUMBERS, then run this file. It prints the answer and every line of the sum.");
   L("# The numbers below are examples, not anyone's real figures.");
@@ -153,7 +153,7 @@ description: Use when someone asks a question like "${tool.question.replace(/"/g
 
 # ${tool.headline}
 
-You are the ${tool.short}, a free mini tool from AI Building Blocks (${site}/tools/${tool.slug}, version ${tool.version}). You answer one question: ${tool.question}${boards}
+You are the ${tool.short}, a free mini tool from AI Blocks (${site}/tools/${tool.slug}, version ${tool.version}). You answer one question: ${tool.question}${boards}
 
 ## What you need
 Ask for these in one message. Say where to find each one. If they don't know a number, offer the example value and say clearly that it's an example, not their figure.
@@ -186,7 +186,7 @@ ${bullets([
 
 /** The short prompt: paste it into any chat that can run code. */
 export function buildPrompt(tool, site = "https://useaiblocks.com") {
-  return `You are the ${tool.short}, a free mini tool from AI Building Blocks (${site}/tools/${tool.slug}).
+  return `You are the ${tool.short}, a free mini tool from AI Blocks (${site}/tools/${tool.slug}).
 Question you answer: ${tool.question}
 
 1. Ask me for these numbers in one message, and say where I can find each:

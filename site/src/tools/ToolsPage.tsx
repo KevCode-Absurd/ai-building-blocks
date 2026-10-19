@@ -8,7 +8,7 @@ import { Link } from "../lib/router";
 import { pathOf, testedOn, useCatalogue } from "../lib/data";
 import { E, EXAMPLES, SITE, TOOLS, filesOf, saveSteps, shelfLabel, type Input, type Line, type Tool } from "./registry";
 
-const TITLE = "AI Building Blocks · Making humanity AI native";
+const TITLE = "AI Blocks · Making humanity AI native";
 const store = {
   get<T>(key: string, fallback: T): T { try { const v = localStorage.getItem(key); return v ? (JSON.parse(v) as T) : fallback; } catch { return fallback; } },
   set(key: string, v: unknown) { try { localStorage.setItem(key, JSON.stringify(v)); } catch { /* private mode: still works for this visit */ } },
@@ -120,7 +120,7 @@ function ToolPage({ tool, toast }: { tool: Tool; toast: (m: string) => void }) {
     io.observe(el);
     return () => io.disconnect();
   }, []);
-  useEffect(() => { document.title = `${tool.name} · AI Building Blocks`; return () => { document.title = TITLE; }; }, [tool]);
+  useEffect(() => { document.title = `${tool.name} · AI Blocks`; return () => { document.title = TITLE; }; }, [tool]);
   useEffect(() => { store.set(key, { preset, raw }); }, [key, preset, raw]);
   useEffect(() => { fetch(`${filesOf(tool.slug)}/prompt.txt`).then((r) => (r.ok ? r.text() : null)).then((t) => setPrompt(t && !t.trimStart().startsWith("<!doctype") ? t : null)).catch(() => setPrompt(null)); }, [tool]);
 
@@ -148,7 +148,7 @@ function ToolPage({ tool, toast }: { tool: Tool; toast: (m: string) => void }) {
     save(new Blob([bytes], { type: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" }), `${tool.slug}.xlsx`);
     toast("Spreadsheet downloaded");
   };
-  const embed = `<iframe src="${SITE}${files}/embed.html" title="${tool.name}" width="100%" height="760" style="border:0;max-width:100%" loading="lazy"></iframe>\n<p style="font-size:13px"><a href="${SITE}/tools/${tool.slug}">${tool.name}</a>, a free mini tool from AI Building Blocks</p>`;
+  const embed = `<iframe src="${SITE}${files}/embed.html" title="${tool.name}" width="100%" height="760" style="border:0;max-width:100%" loading="lazy"></iframe>\n<p style="font-size:13px"><a href="${SITE}/tools/${tool.slug}">${tool.name}</a>, a free mini tool from AI Blocks</p>`;
 
   return (
     <main className="bp mt" data-testid="tool-page">
@@ -275,7 +275,7 @@ function ToolPage({ tool, toast }: { tool: Tool; toast: (m: string) => void }) {
 }
 
 function ToolsIndex() {
-  useEffect(() => { document.title = "Free mini tools · AI Building Blocks"; return () => { document.title = TITLE; }; }, []);
+  useEffect(() => { document.title = "Free mini tools · AI Blocks"; return () => { document.title = TITLE; }; }, []);
   return (
     <main className="bp mt" data-testid="tools-index">
       <header className="wrap bp-hero">

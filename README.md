@@ -1,4 +1,6 @@
-# AI Building Blocks (working name)
+# AI Blocks (useaiblocks.com)
+
+**Apps (19 Oct):** `/apps` shows example apps as click-through tours (one client app with every detail replaced by Sprout, and Mercatura's three standalone apps plus the combined one), and the **app starter pack** in `app-starter/` turns skills and workflows into an app with sign-in and teams. PRD: `docs/APPS-PRD.md`. `node tools/check-masking.mjs` keeps the client app anonymous and runs with every build.
 
 A **free, evergreen library** of tested AI building blocks for any business. It isn't only skills: it has prompts, skills, routines, workflows, applications, and people's own agents and bots. Each comes ready-made and with a plain how-to guide for setting it up yourself. Every listing comes with:
 - a plain-words explanation and a real before and after

@@ -2,6 +2,8 @@
 
 **Status:** approved to build, 19 Oct 2026. Kevin asked for an Apps section, two example apps in Mercatura's look, and a starter pack that turns skills and workflows into a real app. This PRD covers what ships now and what comes later. `docs/PRD.md` still covers the library and the builder.
 
+> **Changed later on 19 Oct 2026:** the hand-drawn tours below were replaced by one finished example app, a saved copy of the real Mercatura app with its Grüns study data, at `/example-app/`. See `docs/EXAMPLE-APP.md`. The starter pack and the open-source app are unchanged. The sections on tours are kept as history.
+
 ## 1 · Why
 
 AI Blocks is a ladder. People start with one prompt and climb as far as their job needs:

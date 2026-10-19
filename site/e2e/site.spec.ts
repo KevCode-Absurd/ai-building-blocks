@@ -523,7 +523,7 @@ test("how it works: a plain guide to each kind and the builder, at grade 10 or b
   }
   // Agents are explained and plainly marked as not in the library yet; apps lead to the example apps.
   await expect(guide.locator("#agent")).toContainText("aren't in the library yet");
-  await expect(guide.locator("#app")).toContainText("Take the tour of example apps");
+  await expect(guide.locator("#app")).toContainText("Take the tour of a finished app");
   // The contents links jump to their section.
   await guide.locator(".bp-toc").getByRole("link", { name: "Using the builder" }).click();
   await expect(guide.locator("#builder")).toBeInViewport();

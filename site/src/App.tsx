@@ -325,7 +325,7 @@ export default function App() {
       {path === "/tools" || path.startsWith("/tools/") ? (
         <Suspense fallback={<main className="wrap bp-hero"><p className="small">Loading…</p></main>}><ToolsPage path={path} toast={setToast} /></Suspense>
       ) : path === "/apps" || path.startsWith("/apps/") ? (
-        <Suspense fallback={<main className="wrap bp-hero"><p className="small">Loading…</p></main>}><AppsPage path={path} c={c} toast={setToast} /></Suspense>
+        <Suspense fallback={<main className="wrap bp-hero"><p className="small">Loading…</p></main>}><AppsPage path={path} toast={setToast} /></Suspense>
       ) : path === "/how-it-works" ? (
         <Suspense fallback={<main className="wrap bp-hero"><p className="small">Loading…</p></main>}><HowItWorks toast={setToast} /></Suspense>
       ) : pageSlug ? (

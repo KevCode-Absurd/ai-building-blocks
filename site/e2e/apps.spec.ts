@@ -14,70 +14,63 @@ test.afterEach(async ({ page }) => {
   expect(errors.get(page), "no errors in the browser console").toEqual([]);
 });
 
-// Every app on the site, with how many screens its tour shows (site/src/apps/data.ts).
-const APPS: [string, number][] = [["mercatura-ads", 9], ["mercatura-creative-studio", 6], ["mercatura-landing-pages", 4], ["mercatura-seo", 4], ["mercatura", 4]];
+// The Next.js pages of the saved app fall back to loading the next saved page, and say so in the console.
+const EXPECTED = /tour: load the page|Falling back to browser navigation/;
 
-test("the header leads to Apps: the six-step ladder, five apps and the starter pack", async ({ page }) => {
+test("the header leads to Apps: one finished example app, the starter pack and the open-source app", async ({ page }) => {
   await page.goto("/");
   await page.locator(".nav").getByRole("link", { name: "Apps" }).click();
   const index = page.getByTestId("apps-index");
   await expect(index).toBeVisible();
   await expect(page).toHaveTitle("Apps · AI Blocks");
-  await expect(index.getByTestId("ladder").locator("li b")).toHaveText(["Prompt", "Skill", "Routine", "Workflow", "Agent", "App"]);
-  await expect(index.getByTestId("app-card")).toHaveCount(APPS.length);
-  for (const [slug] of APPS) await expect(index.locator(`[data-testid="app-card"][data-slug="${slug}"]`)).toBeVisible();
-  await expect(index.getByTestId("app-card").filter({ hasText: "Uses an agent" })).toHaveCount(0);
+  await expect(index.getByTestId("tour-open")).toHaveAttribute("href", "/example-app/");
+  await expect(index.getByTestId("tour-open")).toHaveAttribute("target", "_blank");
+  await expect(index.getByTestId("example-note")).toContainText("nothing runs");
+  await expect(index.getByTestId("app-area")).toHaveCount(9);
   await expect(index.locator(".ap-stages li")).toHaveCount(9);
+  await expect(index.getByTestId("repo-link")).toHaveAttribute("href", "https://github.com/KevCode-Absurd/mercatura-client-starter");
   await expect(page.locator(".footer").getByRole("link", { name: "App starter pack" })).toHaveAttribute("href", "/apps/starter-pack");
+  // Every picture on the page is there.
+  for (const src of await index.locator("img").evaluateAll((im) => im.map((i) => i.getAttribute("src")))) expect((await page.request.get(src!)).status(), src!).toBe(200);
 });
 
-for (const [slug, n] of APPS) {
-  test(`${slug}: the tour clicks through all ${n} screens, and the page says it uses no agents`, async ({ page }) => {
-    await page.goto(`/apps/${slug}`);
-    const app = page.getByTestId("app-page");
-    await expect(app).toHaveAttribute("data-slug", slug);
-    const tour = app.getByTestId("tour");
-    await expect(tour.getByTestId("tour-back")).toBeDisabled();
-    const seen = new Set<string>();
-    for (let i = 0; i < n; i++) {
-      await expect(tour.locator(".ap-count")).toHaveText(`Screen ${i + 1} of ${n}`);
-      seen.add((await tour.getByTestId("tour-screen").getAttribute("data-screen"))!);
-      await expect(tour.getByTestId("tour-screen").locator("h3, .mc-head h3").first()).toBeVisible();
-      if (i < n - 1) await tour.getByTestId("tour-next").click();
-    }
-    expect(seen.size, "every screen is different").toBe(n);
-    await expect(tour.getByTestId("tour-next")).toBeDisabled();
-    await tour.getByRole("tab").first().click();
-    await expect(tour.locator(".ap-count")).toHaveText(`Screen 1 of ${n}`);
-    await expect(app.getByTestId("agents-answer")).toBeVisible();
-    await expect(app.locator("#agents-h")).toHaveText("No, it doesn't use agents");
-    await expect(app.getByTestId("built-steps").locator("li").first()).toBeVisible();
-    // The blocks it's made of are real pages in the library.
-    const links = app.locator(".ap-blocks a");
-    await expect(links.first()).toBeVisible();
-    for (const href of await links.evaluateAll((as) => as.map((a) => a.getAttribute("href")))) expect(href).toMatch(/^\/(skills|prompts|workflows)\/[a-z0-9-]+$/);
-  });
-}
+test("every part of the app the page lists opens a saved screen", async ({ page }) => {
+  await page.goto("/apps");
+  const hrefs = await page.getByTestId("app-area").evaluateAll((as) => as.map((a) => a.getAttribute("href")!));
+  for (const h of hrefs) {
+    const r = await page.request.get(h.replace(/\/$/, ""));
+    expect(r.status(), h).toBe(200);
+    expect(await r.text(), h).toContain("/example-app/_tour/tour.js");
+  }
+});
 
-test("the client app says it's example data and shows only Sprout and rivals A to C", async ({ page }) => {
+test("the example app works with no server: screens open, links move between them, and nothing is made", async ({ page }) => {
+  const list = errors.get(page)!;
+  await page.goto("/example-app/");
+  await expect(page).toHaveTitle(/Creative Studio/);
+  await expect(page.locator("#tour-bar")).toContainText("Nothing here runs");
+  await expect(page.locator("#tour-bar a", { hasText: "Back to AI Blocks" })).toHaveAttribute("href", "/apps");
+  await page.locator('a[href="/example-app/references"]').first().click();
+  await expect(page).toHaveURL(/\/example-app\/references$/);
+  await expect(page.locator("main h1, main h2").first()).toBeVisible();
+  // Anything that would make or save something is stopped, with a note.
+  const status = await page.evaluate(() => fetch("/api/jobs", { method: "POST", body: "{}" }).then((r) => r.status));
+  expect(status).toBe(403);
+  await expect(page.locator("#tour-toast")).toContainText("Nothing is made, changed or saved here");
+  // A screen that isn't in the tour says so and links back.
+  const missing = await page.request.get("/example-app/not-a-screen");
+  expect(missing.status()).toBe(404);
+  expect(await missing.text()).toContain("This screen isn't in the tour");
+  errors.set(page, list.filter((e) => !EXPECTED.test(e)));
+});
+
+test("old tour pages lead to the Apps page", async ({ page }) => {
   await page.goto("/apps/mercatura-ads");
-  const app = page.getByTestId("app-page");
-  await expect(app.getByTestId("example-note")).toContainText("took out every name, product and number");
-  await expect(app.locator(".mc-badge")).toHaveText("Example data");
-  await expect(app.getByTestId("tour-screen")).toContainText("Sprout");
-  await app.getByRole("tab", { name: "Competitors" }).click();
-  await expect(app.getByTestId("tour-screen")).toContainText("Rival A");
-  // The repo's masking check passes: no word that could name the real client is in the app pages.
-  expect(execFileSync("node", ["../tools/check-masking.mjs"], { encoding: "utf8" })).toContain("files clean");
+  await expect(page.getByTestId("apps-index")).toBeVisible();
 });
 
-test("the Mercatura apps link to the open-source starter, and each standalone app points to the combined one", async ({ page }) => {
-  await page.goto("/apps/mercatura-landing-pages");
-  await expect(page.getByTestId("repo-link")).toHaveAttribute("href", "https://github.com/KevCode-Absurd/mercatura-client-starter");
-  await page.getByTestId("app-page").locator(".ap-example a").click();
-  const combined = page.getByTestId("app-page");
-  await expect(combined).toHaveAttribute("data-slug", "mercatura");
-  await expect(combined.locator("#parts [data-testid=app-card]")).toHaveCount(3);
+test("no word that could name the private client is in the app pages or the saved example app", async () => {
+  expect(execFileSync("node", ["../tools/check-masking.mjs"], { encoding: "utf8" })).toContain("files clean");
 });
 
 test("the starter pack downloads the same folder every time, with the prompt, the rules and nine stages", async ({ page }, info) => {
@@ -108,26 +101,24 @@ test("How it works has six kinds, with routines, and its app section leads to Ap
   await page.goto("/how-it-works");
   await expect(page.locator(".hiw-ladder li b")).toHaveText(["Prompt", "Skill", "Routine", "Workflow", "Agent", "App"]);
   await expect(page.locator("#routine")).toBeVisible();
-  await page.locator("#app").getByRole("link", { name: "Take the tour of example apps" }).click();
+  await page.locator("#app").getByRole("link", { name: "Take the tour of a finished app" }).click();
   await expect(page.getByTestId("apps-index")).toBeVisible();
 });
 
-test("every page has its own address on useaiblocks.com", async ({ page }) => {
-  await page.goto("/apps/mercatura-seo");
-  await expect(page.locator('link[rel="canonical"]')).toHaveAttribute("href", "https://useaiblocks.com/apps/mercatura-seo");
+test("every page has its own address on useaiblocks.com, and the saved app stays out of search", async ({ page }) => {
+  await page.goto("/apps/starter-pack");
+  await expect(page.locator('link[rel="canonical"]')).toHaveAttribute("href", "https://useaiblocks.com/apps/starter-pack");
   await expect(page.locator(".header .brand")).toHaveText("AI Blocks");
   await expect(page.locator(".footer")).toContainText("useaiblocks.com");
   const map = fs.readFileSync("public/sitemap.xml", "utf8");
-  for (const [slug] of APPS) expect(map).toContain(`<loc>https://useaiblocks.com/apps/${slug}</loc>`);
+  for (const p of ["/apps", "/apps/starter-pack"]) expect(map).toContain(`<loc>https://useaiblocks.com${p}</loc>`);
+  expect(map).not.toContain("example-app");
   expect(fs.readFileSync("public/robots.txt", "utf8")).toContain("Sitemap: https://useaiblocks.com/sitemap.xml");
+  expect(fs.readFileSync("public/example-app/index.html", "utf8")).toContain('<meta name="robots" content="noindex">');
 });
 
-test("@mobile the tour fits a phone: no sideways scroll, and Next still works", async ({ page }) => {
-  await page.goto("/apps/mercatura-ads");
-  const tour = page.getByTestId("tour");
-  for (let i = 0; i < 3; i++) {
-    expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1), "no sideways scroll").toBe(true);
-    await tour.getByTestId("tour-next").click();
-  }
-  await expect(tour.locator(".ap-count")).toHaveText("Screen 4 of 9");
+test("@mobile the Apps page fits a phone: no sideways scroll", async ({ page }) => {
+  await page.goto("/apps");
+  await expect(page.getByTestId("app-area").first()).toBeVisible();
+  expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1), "no sideways scroll").toBe(true);
 });

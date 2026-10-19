@@ -215,7 +215,7 @@ export default function HowItWorks({ toast }: { toast: (m: string) => void }) {
               <p>An app is worth it when many people do the same job the same way, many times. For a job you do now and then, a skill is enough.</p>
               <p>An app doesn't need an agent. Most apps run fixed steps, with one AI call per button.</p>
             </div>
-            <p className="hiw-now"><Status here /> <Link to="/apps">Take the tour of example apps</Link>, or <Link to="/apps/starter-pack">get the app starter pack</Link> to build your own.</p>
+            <p className="hiw-now"><Status here /> <Link to="/apps">Take the tour of a finished app</Link>, or <Link to="/apps/starter-pack">get the app starter pack</Link> to build your own.</p>
           </Section>
 
           <Section id="choose" title="Which one to use" lead="Start with the smallest one that does the job. You can always move up.">

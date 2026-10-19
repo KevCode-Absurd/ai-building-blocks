@@ -1,81 +1,81 @@
 new_slug: turn-cutout-explainer-script-into-ready-video-shots
 name: "Turn your paper-cutout script into video clips"
-summary: "Give it your script and product photos. You get piece, frame and clip prompts, plus the words to add when editing."
+summary: "Your script and photos become paper pieces, a layered storyboard, clip prompts and an edit list."
 job: make-video-ads
 
 headline: "Turn your paper-cutout script into video clips"
-subhead: Give it a one-point cutout script and your product photos. It lists every paper piece, makes the pieces before the scenes, and describes each frame as a stack of layers. Each move is timed to the word it proves, and you get a list of every word and figure to add in editing.
+subhead: Give it a one-point cutout script and your product photos. Your product cutout becomes the star. It makes every paper piece before any scene, draws a storyboard as stacks of paper layers, then times each move to the word it proves. It stops for your OK three times.
 
 explain: |
   A paper-cutout explainer looks handmade and clear: your product cut out, an arrow, a ring round the part that matters. Ask an AI video tool for it and you often get the opposite. Flat digital graphics, misspelled labels, paper bending like rubber, and your product redrawn a little differently in every scene.
 
-  This skill works like a cutout animator. It starts with a parts list, then makes each piece on its own, so your product cutout comes from its photo once and stays the same everywhere. Each frame is described as a stack of paper layers, back to front. Each move is rigged with a start and an end (a slide, a swap, a part swinging on its pin, a flap lifting, pieces landing one by one) and timed to land on its key word. The tool never writes a letter. Words, numbers and charts go in during editing, checked against your real figures.
+  This skill runs the whole process in six stages, the way a cutout animator works. It lists every piece the ad needs. Your product cutout is the avatar, so it writes a card for it and waits for your OK. Next come a product sheet, every other piece and the empty ground, with lock lines and paper rules. You approve those, then a storyboard where each frame is a stack of paper layers and each move has a start and an end. Only then does it write the clips, timed to the voice-over. Words and numbers go in during editing.
 
 when:
-  - You have a one-point explainer script and need prompts for an AI image and video tool.
+  - You have a one-point explainer script and want to make it with AI image and video tools.
   - Earlier attempts came out as flat digital graphics or with garbled text.
   - Your product looked slightly different in every scene.
 
 you_give:
-  - The script, ideally with a proof picture, key word and move for each line
-  - Your product photos and how the product works
+  - The script, ideally with a proof picture, key word and move for each line, and its cast note
+  - Your product photos (front, side, top, out of the pack) and how the product works
   - Any figures you want shown, with their sources
   - Your colours, typefaces and approved claims (optional)
 you_get:
-  - A parts list marking what you have, what to make and what's missing
-  - Prompts for each paper piece and the empty ground
-  - Still prompts as layer stacks, and clip prompts with moves timed to the voice-over
-  - An edit list of every word and number, with its source
+  - A parts list and an avatar card for your product cutout
+  - Test cutout prompts, then sheet prompts for the product, every piece and the ground, with lock lines
+  - A storyboard with one layer-stack frame and a rigged move per line
+  - Clip prompts timed to the voice-over, and an edit list of every word and number with its source
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Paste your script underneath, then attach your product photos.
-  - Add any figures you want charted, each with where it comes from.
-  - Make the pieces first, then the stills, and approve them.
-  - Make each clip from its approved still, with the narration timed.
-  - Add the words, numbers and charts in your editor, using the edit list.
+  - Paste your script, ideally from "Prove one point fast in a paper-cutout ad", then attach your product photos.
+  - Approve the avatar card for your product cutout, then make the test cutouts and pick one.
+  - Make and approve the sheets and lock lines, then the storyboard frames.
+  - Record the narration, make each clip from its approved frame, then add the words, numbers and charts in your editor from the edit list.
 
 how_it_works:
   - title: Lists every piece
     text: Product cutouts, other photos, paper shapes and the ground, each marked have, make or missing.
-  - title: Makes pieces before scenes
-    text: Each piece is its own image, so your product comes from its photo once and never gets redrawn.
-  - title: Stacks the layers
-    text: Each frame is written back to front, with a place and size for every piece.
-  - title: Rigs every move
-    text: Slide, swap, pivot on a pin, lift a flap or build up, each with a start and an end, and paper that stays flat and stiff.
-  - title: Times moves to words
-    text: Each move lands on the word it proves, and every clip ends with a short still hold.
-  - title: Leaves words for editing
-    text: Every word and figure is listed for your editor and checked against your sources.
+  - title: Makes your product the avatar
+    text: A card for the cutout (which photo, the edge, the shadow, what never changes), plus a made-up person only if a line needs one. It stops for your OK.
+  - title: Tests the cutout
+    text: Three or four versions in your paper kit, so you pick the edge and shadow you like.
+  - title: Builds the sheets
+    text: The product from three sides with its label exact, every other piece, the empty ground, and paper rules in every prompt. It stops for your OK.
+  - title: Draws the storyboard
+    text: Each frame as paper layers back to front, each move with a start and an end, checked so one frame ends where the next begins. It stops for your OK.
+  - title: Turns it into video
+    text: Narration first, then clips timed to land on each key word, then words and figures added in editing, checked against your sources.
 
 output_shape: |
-  PARTS LIST
-  <piece> | <from which photo, or made> | have / make / MISSING
-
-  PIECE <n>  <prompt for one piece on a plain background>
-  GROUND     <empty paper, filling the frame, flat from above>
-
-  STILL <line n>  Layers, back to front:
-    1 <ground>  2 <piece, place, size>  3 <product, place, size>
-    4 <signal, from where to where>
-    Attach: <piece image> = <its job>
-
-  CLIP <n> (<length>, from still <n>)
-  <s>-<s>  <move: start position > end position>  (lands on "<key word>")
-  Paper rules: <flat, stiff, one plane, pins, shadows, no morphing>
-  End: hold, all pieces at rest
-
-  EDIT LIST
-  <every on-screen word and number, with source>
-  MISSING: <...>
+  STAGE 0  PARTS LIST   <piece> | <from which photo, or made> |
+                        have / make / MISSING
+  STAGE 1  AVATAR CARD  <product photo, cut, size, narrator's voice,
+                        never change>             > STOP for approval
+  STAGE 2  TEST CUTOUTS <3 or 4 prompts>  Picked: <n>
+  STAGE 3  SHEETS       Product: <front, side, top, label words>
+                        Pieces: <one prompt each>  Ground: <prompt>
+           LOCK LINES   <paper kit, product, paper rules>
+                                                  > STOP for approval
+  STAGE 4  STORYBOARD
+           FRAME <line n>  Layers, back to front:
+             1 <ground>  2 <piece, place, size>  3 <product>
+             4 <signal>   Attach: <piece> = <its job>
+           Move: <slide / swap / pivot / flap / build-up>, start >
+           end, lands on "<key word>"
+                                                  > STOP for approval
+  STAGE 5  CLIP <n>     Start <frame>, end <frame>. <s>-<s> <move>.
+                        Hold at rest. [LOCK LINES]
+           EDIT LIST    <every word and number with source, captions,
+                        end card, safe zones>
 
 example:
   business: sprout
   input: |
     [the skill]
 
-    Script (20 s, from "Get a cutout explainer ad script that sells"):
+    Script (20 s, from "Prove one point fast in a paper-cutout ad"):
     1 "A greens powder takes four steps." key: four. Row of tub,
       scoop, glass, shaker. Build-up.
     2 "Then one more: rinsing the shaker." key: rinsing. Sink slides
@@ -87,51 +87,62 @@ example:
     5 "One tear a day." Pouch large and still, offer on screen.
     Paper kit: warm cream card, scissor-cut edges; signal sunflower
     #FFCC2E strip with one pointed end; old way in black and white.
+    Cast note: the product carries it; quick, dry narrator.
     Photos: pouch front, gummies in a hand. No single daily pack
     photo yet. Old-way photos: to be shot.
-    Type: Work Sans bold and medium. Clips: 8 seconds, 9:16.
+    Clips: 8 seconds, 9:16.
   output: |
-    PARTS LIST
+    STAGE 0  PARTS LIST
     Pouch cutout | pouch front photo | have
     Gummies-in-a-hand cutout | hand photo | have
     Daily pack cutout | single pack photo | MISSING
-    Tub, scoop, glass, shaker cutouts | to shoot, no brand marks |
-      MISSING
-    Paper sink | made: grey card, two layers | make
-    Signal strips x3 | made: sunflower card, one pointed end | make
-    Blank label strips x2 | made: cream card | make
-    Ground | made: warm cream card | make
+    Tub, scoop, glass, shaker | to shoot, no brand marks | MISSING
+    Paper sink | grey card, two layers | make
+    Signal strips x3, blank label strips x2, ground | card | make
 
-    PIECE (pouch)  The attached pouch photo cut out as a printed
-      photo on card, scissor-cut edge with a thin white margin,
-      visible card thickness, short soft shadow, plain grey
-      background. Shape, colours and printing unchanged.
-    GROUND  Warm cream card filling the frame, faint paper grain,
-      seen flat from above, even overhead light with no glare.
+    STAGE 1  AVATAR CARD
+    The product is the avatar: the pouch, cut from the pouch front
+    photo, scissor-cut edge with a thin white margin, visible card
+    thickness, short soft shadow; two thirds of the frame height in
+    line 5. No person. Narrator: a quick, dry adult voice. Never
+    change: shape, deep green, yellow wordmark, bear face, "28 Daily
+    Packs".
+    > STOP: approved.
 
-    STILL 1  Layers, back to front:
-      1 ground  2 tub, scoop, glass and shaker cutouts in a row
-      across the middle third, each about a fifth of the frame wide
-      3 one sunflower strip under the row, point at right
-      Attach: the four old-way cutouts = their shapes, in black and
-      white. No words appear; strips are blank.
+    STAGE 2  TEST CUTOUTS (4; one shown)
+    The attached pouch photo cut out as a printed photo on card,
+    scissor-cut edge, thin white margin, visible card thickness,
+    short soft shadow, plain grey background. Shape, colours and
+    printing unchanged. Picked: 2 (thinnest margin).
 
-    CLIP 1 (8 s, starts on the empty ground; still 1 is the frame
-    it builds to)
-    0.0-0.6 s  tub drops in at left, eases to a stop
-    0.6-1.2 s  scoop lands beside it
-    1.2-1.8 s  glass lands
-    1.8-2.4 s  shaker lands  (lands on "four" at 2.2 s)
-    2.4-3.0 s  sunflower strip slides in under the row
-    3.0-5.2 s  sink piece slides up under the shaker  (lands on
-               "rinsing" at 4.6 s)
-    5.2-8.0 s  hold, all pieces at rest
-    Paper rules: flat stiff card on one plane, shadows travel with
-    their pieces, photos stay photos, nothing bends or morphs.
+    STAGE 3  SHEETS
+    Product: cutout 2 from the front, side and top; label words as
+      printed: "Sprout", "28 Daily Packs".
+    Pieces: paper sink in grey card, two layers; sunflower strips;
+      blank cream strips. Old-way pieces wait for their photos.
+    Ground: warm cream card filling the frame, faint grain, flat from
+      above, even overhead light with no glare.
+    LOCK LINES: warm cream card, scissor-cut edges, visible thickness,
+      short soft shadows / the pouch as product sheet / flat stiff
+      card on one plane, shadows travel with their pieces, photos stay
+      photos, nothing bends or morphs.
+    > STOP: approved for lines 1, 2 and 5.
 
-    (cut for length: the full run also had stills 2 to 5 and clips
-    2 and 3, which wait for the daily pack photo)
+    STAGE 4  STORYBOARD (line 1 shown)
+    FRAME 1  Layers, back to front: 1 ground  2 tub, scoop, glass and
+      shaker in a row across the middle third, each a fifth of the
+      frame wide  3 one sunflower strip under the row, point at right.
+      Attach: the four old-way cutouts = shapes, black and white.
+    Move: build-up, one piece per beat, left to right, lands on
+      "four". Ends where frame 2 starts.
+    > STOP: approved.
 
+    STAGE 5  CLIP 1 (8 s, lines 1 and 2)  Start: the empty ground.
+      End: frame 2. 0.0-0.6 s tub drops in at left and eases to a
+      stop; 0.6-1.2 scoop; 1.2-1.8 glass; 1.8-2.4 shaker (on "four"
+      at 2.2 s); 2.4-3.0 strip slides in; 3.0-5.2 sink slides up
+      under the shaker (on "rinsing" at 4.6 s); 5.2-8.0 hold at rest.
+      [LOCK LINES]
     EDIT LIST
     4 STEPS, +1 RINSE, 1 STEP: counts of the pieces shown
     60+ INGREDIENTS. 6G FIBER: label claim
@@ -140,6 +151,9 @@ example:
     MISSING: the daily pack photo (lines 3 and 4) and the four
     old-way photos (line 1).
 
+    (cut for length: the full run also had the other test cutouts,
+    frames 2 to 5 and clip 2)
+
 tweaks:
   - what: Clip length
     how: Give your tool's clip length. At 8 seconds you fit two or three lines a clip; at 5 seconds, one or two.
@@ -147,33 +161,33 @@ tweaks:
     how: Name your paper and cut style up front, for example "kraft paper, torn edges". Every piece prompt repeats it.
   - what: Diagrams that move
     how: Mark the pin points on a diagram piece ("the lid hinge"). Its pivot is then rigged around that pin and nowhere else.
-  - what: Charts
-    how: Paste the figures with sources and say which line they prove. The layer stack sets the bar lengths; the numbers go in during editing.
+  - what: A person cutout
+    how: Say a line needs a person. It adds one made-up adult cutout with pinned joints to the avatar card and the sheets.
 
 judge:
+  - It stopped for your OK after the avatar card, the sheets and the storyboard.
   - Every piece in every layer stack appears on the parts list.
   - The product cutout is made once from its photo and reused.
   - No prompt asks the tool to write a letter or a number.
-  - Every move has a start, an end and a key word it lands on.
-  - Every figure in the edit list has a source.
+  - Every move has a start, an end and a key word it lands on, and every figure in the edit list has a source.
 
 test:
   - Run it on a script whose figures you know by heart. Every number in the edit list should match your source, and no prompt should ask the tool to write one.
-  - Make the product piece and two stills. The product should look identical in both.
+  - Make the product sheet and two frames. The product should look identical in both.
   - Play the narration with the clip timings beside it. Each move should land as its key word is said.
   - For each move, say out loud what it shows. If you can't, that line needs a different proof picture.
 
 improve:
-  - Write your paper kit into step 2 of the skill file, so every run uses the same paper and cut style.
-  - Keep your approved piece images in one folder and list them in "What you need", so step 1 marks them "have".
+  - Write your paper kit into the lock lines in stage 3 of the skill file, so every run uses the same paper and cut style.
+  - Keep your approved pieces in one folder and list them in "What you need", so stage 0 marks them "have".
   - Add your figures with their sources to your brand file. The edit list checks every number against them.
-  - Pair it with the skill that writes the cutout explainer script, so each line already has its proof picture and key word.
+  - Pair it with "Prove one point fast in a paper-cutout ad" first, so each line already has its proof picture and key word.
 
 works_best_with:
   tools:
-    - {name: "Nano Banana 2.1", why: "Takes up to 14 reference images and keeps up to four characters the same, so your reference stills match."}
-    - {name: "Veo 3.1", why: "Starts each clip from your approved still and can make sound with it, in 8-second clips."}
-    - {name: "ElevenLabs Eleven v4", why: "Reads the narration with tags for pauses and pace, and can use a voice cloned from your own recording."}
+    - {name: "Nano Banana 2.1", why: "Takes up to 14 reference images, so every piece and frame matches your sheets."}
+    - {name: "Veo 3.1", why: "Starts each clip from your approved frame and can end on a second one, in 8-second clips."}
+    - {name: "ElevenLabs Eleven v4", why: "Reads the narration with tags for pauses and pace, from a voice you design by description."}
     - {name: "CapCut", why: "Lets you add the words, numbers and captions as their own layers after the clips are made."}
   inputs:
     - "Product photos on a plain background, so each piece cuts out cleanly"
@@ -181,11 +195,13 @@ works_best_with:
     - "The final voice-over recording, so each move lands on its key word"
 
 terms:
+  - term: Avatar card
+    meaning: A short, fixed description of what carries the ad. Here it's usually your product cutout.
   - term: Parts list
     meaning: Every paper piece and photo the ad needs, listed before anything is made.
   - term: Layer stack
     meaning: A frame described as paper layers from back to front, with a place for each piece.
   - term: Pin
     meaning: The point a jointed paper part turns around, like a split pin in a card puppet.
-  - term: Cutout
-    meaning: A photo of your product with the background removed.
+  - term: Lock lines
+    meaning: Short lines for the paper, the product and the paper rules, pasted word for word into every prompt.

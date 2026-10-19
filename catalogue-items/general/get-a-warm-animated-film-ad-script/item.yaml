@@ -1,7 +1,7 @@
 slug: get-a-warm-animated-film-ad-script
 renamed_from: animated-film-ad-script-format-rules
 name: "Get a warm animated film ad script"
-summary: "A script or image brief in the look of a 3D animated feature film, with your real product."
+summary: "A video ad script in the look of a 3D animated feature film, with your real product and a cast note."
 category: general
 boards: [ecommerce]
 type: skill
@@ -13,13 +13,12 @@ inputs:
   - {type: brand_brain, required: true}
 outputs:
   - {type: script}
-  - {type: image_prompt}
 uses: []
 example: cinematic-3d
 origin: rebuilt
 source_ids: [CES-108]
 old_name: animated film ad script rules
-version: 2.0.0
+version: 2.1.0
 credits:
   - {title: "Communications Toolkit: And, But, Therefore Statement", by: "SESYNC, after Randy Olson", url: "https://www.sesync.org/resources/communications-toolkit-and-therefore-statement", used: "The And, But, Therefore story line"}
   - {title: "Pixar: 20 Years of Animation (audio guide on the colour script)", by: "The Museum of Modern Art", url: "https://www.moma.org/audio/playlist/192/2581", used: "Planning light and colour by story part, changing as the feeling changes"}

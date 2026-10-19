@@ -1,7 +1,7 @@
 slug: get-offer-reel-that-shows-your-real-product
 renamed_from: code-rendered-product-offer-reel
 name: "Get an offer reel that shows your real product"
-summary: "A 10 to 20 second offer reel built in code from your real photos and approved words."
+summary: "A 10 to 20 second offer reel built in code from your real photos and approved words, with the product as the avatar."
 category: general
 boards: [ecommerce]
 type: workflow
@@ -13,13 +13,14 @@ inputs:
   - {type: script, required: true}
   - {type: offer, required: false}
   - {type: brand_brain, required: true}
+  - {type: product_photos, required: false}
 outputs:
   - {type: video_ads}
 uses: []
 origin: own
 source_ids: [CES-052]
 old_name: motion-reel
-version: 1.1.0
+version: 2.0.0
 credits:
   - {title: "The core idea", by: "Remotion", url: "https://www.remotion.dev/docs/the-fundamentals", used: "A video as frames drawn from the current frame number, with set size, length and fps"}
   - {title: "Flickering", by: "Remotion", url: "https://www.remotion.dev/docs/flickering", used: "Frames that depend only on time, seeded randomness, no CSS animations"}

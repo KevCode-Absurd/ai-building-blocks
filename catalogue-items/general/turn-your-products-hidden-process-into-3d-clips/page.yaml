@@ -1,187 +1,196 @@
 new_slug: turn-your-products-hidden-process-into-3d-clips
 name: "Turn your 3D ad idea into video clips"
-summary: "Give it your product facts and sources. You get honest story options, then a 3D explainer plan, prompts and captions."
+summary: "Your 3D script or facts become a parts key, sheets, a storyboard and clips that dive in and out."
 job: make-video-ads
 
 headline: "Turn your 3D ad idea into video clips"
-subhead: Give it your product facts with sources and your claims list. It tests which hidden process is true and worth teaching, offers 2 or 3 story options and waits for your pick. Then it plans a 3D film that dives from an everyday moment into the process and back out.
+subhead: Give it a 3D how-it-works script, or your product facts with sources. It makes your product's working part the star, builds sheets for every part, draws a storyboard that dives in and back out, then writes the clips, voice and edit. It stops for your OK three times.
 
 explain: |
-  A short 3D explainer about something nobody can see (what an ingredient does, how a fabric handles sweat) can hold attention like a good science film. Most attempts fail one of two ways. They bend a claim to fit a dramatic picture, or the "lesson" is a sales pitch in disguise and viewers can tell.
+  A short 3D explainer about something nobody can see (what an ingredient does, how a fabric handles sweat) can hold attention like a good science film. Most attempts fail one of two ways. They bend a claim to fit a dramatic picture, or the parts change colour and shape from shot to shot until nobody can follow them.
 
-  This skill starts by testing the process. It writes each candidate as a short chain of links ("this meets that, that happens, so you get this") and marks every link as sourced, common knowledge or unsupported. A chain survives only if it's hidden from a camera, true at every link, and teaches something a viewer could sketch afterwards. Then it offers story options and stops so you can choose. The film it plans has four movements: the everyday moment, one long dive down to where the process happens, the chain link by link, and back out to the same moment. Your product appears at the link where it acts, and each part of the process keeps one colour all the way through.
+  This skill runs the whole process in six stages. With no script, it first tests which hidden process is true and worth teaching, offers 2 or 3 story options and waits for your pick. Then your product's working part becomes the avatar: each part of the process gets one name, colour and shape, and it waits for your OK. Next come sheets for every part, your product and each size of the world, plus lock lines. You approve those, then a storyboard with the one long dive. Only then does it write the clips, the voice and the edit.
 
 when:
-  - Your product's benefit is invisible and you want to know if there's an honest story to tell about it.
-  - You want to compare story options before paying for any video.
-  - You've picked a story option and need the stills, clips, captions and voice brief.
+  - Your product's benefit is invisible and you want an honest 3D film about how it works.
+  - You have a 3D how-it-works script and want to make it with AI image and video tools.
+  - Your earlier 3D clips changed the parts' colours or showed more than your claims allow.
 
 you_give:
-  - Your product, clean pack photos and how it's used
-  - How it works, step by step, each step with a source
+  - A 3D how-it-works script and its cast note, or your product facts with a source for each step
+  - Clean product photos (front, side, top) and every label line
   - Your approved and banned claims, and what buyers assume
   - Your colours, font and a voice you have the right to use (optional at first)
   - Your video tool's clip lengths (optional)
 you_get:
-  - Candidate chains with every link marked, and which survived
-  - Honesty notes, including anything a regulator might look at
-  - 2 or 3 story options to choose from, each a whole film in 80 words or fewer
-  - After you choose, a four-movement film plan, a colour key, still and clip prompts, captions and a voice brief
+  - With no script, tested chains and 2 or 3 story options to choose from
+  - Avatar cards for each part of the process, the product and any person, and reference render prompts
+  - Sheet prompts for the parts, the product and each size of the world, with lock lines
+  - A storyboard with the dive, clip prompts, a caption list, a voice brief and an edit list
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Paste your product facts, with the source for each claim, and your banned claims.
-  - Read the chains and honesty notes first. If nothing survives, it will tell you to use another format.
-  - Pick one story option and reply with its letter.
+  - Paste your script from "Show what your product does where no camera can see", or your product facts with sources and your banned claims.
+  - If it offers story options, pick one by its letter.
+  - Approve the avatar cards, pick the reference renders, then approve the sheets and lock lines and the storyboard.
   - If your product has claim rules (supplements, skincare), get the script checked before any picture is made.
 
 how_it_works:
-  - title: Runs three tests
-    text: Hidden from a camera, true at every link, and worth teaching even without your brand name.
-  - title: Writes candidate chains
-    text: Looks at the tiny, the surface and the structure, writes each process as 2 to 4 links, and marks every link.
-  - title: Sets honesty rules
-    text: 'Only "supports" or "helps". No body before and after, numbers only with sources.'
-  - title: Offers options, then stops
-    text: 2 or 3 whole-film options in 80 words or fewer, with risks flagged, and waits for your choice.
-  - title: Plans four movements
-    text: The everyday moment, one long dive down, the chain link by link, then back out to the same moment.
-  - title: Colour-codes the parts
-    text: Each part of the process keeps one colour and shape all the way through, so the eye can follow it.
-  - title: Stills, then clips
-    text: Approves the key stills first, then writes clips that start from them, with a voice a person has approved.
+  - title: Reads or builds the script
+    text: Tests a script you bring, or tests candidate chains, sets honesty rules and offers story options, then waits for your pick.
+  - title: Makes your product the avatar
+    text: Each part of the process gets one name, colour and shape, plus cards for the product and any person. It stops for your OK.
+  - title: Makes reference renders
+    text: Three or four renders of the working part and the product. You pick one of each.
+  - title: Builds the sheets
+    text: Every part from three angles at its true relative size, the product with its exact label, each size of the world, and lock lines. It stops for your OK.
+  - title: Draws the storyboard
+    text: The surface, the one long dive, each link and back out, checked so the parts key never changes. It stops for your OK.
+  - title: Turns it into video
+    text: An approved voice first, then clips that describe only the motion, captions with the key word marked, and the offer over the last shot.
 
 output_shape: |
-  CHAINS
-  <name>: <this> meets <that>, <that happens>, so you get <this>
-    Links: <sourced / common knowledge / unsupported, each>
-    Tests: hidden <y/n>  true <y/n>  teaches <y/n>   Kept or dropped
-
-  HONESTY NOTES
-  - <words, pictures and numbers to avoid, regulator flags>
-
-  STORY OPTIONS (pick one)
-  A "<name>": <moment, chain, snag, product's link, closing moment,
-     who it suits, 80 words or fewer>. Sources: <...>. Flags: <...>
-  B ...
-
-  STOPPED: waiting for your choice. After it: film plan by movement,
-  parts key, still and clip prompts, captions, voice brief.
+  STAGE 0  SCRIPT IN    <locked script, tests passed>, or CHAINS,
+                        HONESTY NOTES, STORY OPTIONS > STOP for choice
+  STAGE 1  AVATAR CARDS <part = name, colour, shape, motion, size>
+                        Product: <from photos>  Person: <or none>
+                        Voice: <one the brand may use>
+                                                 > STOP for approval
+  STAGE 2  REFERENCES   <3 or 4 renders each>  Picked: <n>
+  STAGE 3  SHEETS       Parts: <3 angles, relative size>
+                        Product: <front, side, top, label lines>
+                        Sizes: <surface room, small-size world>
+           LOCK LINES   <look per size, parts key, product>
+                                                 > STOP for approval
+  STAGE 4  STORYBOARD   <frame> | size | parts in frame | one mover |
+                        camera | narration | s
+                                                 > STOP for approval
+  STAGE 5  CLIPS        <start frame, end frame, motion only>
+           EDIT LIST    <voice brief, captions, cuts, offer, safe zones>
 
 example:
   business: sprout
   input: |
     [the skill]
 
-    Product: Sprout daily greens gummies. Pouch of 28 daily packs.
-    Tear a pack straight across the top, eat the gummies.
-    Facts and sources (sprout/brand.md):
-    - 1 pack: 60+ ingredients, 21 vitamins & minerals, 6 g prebiotic
-      fiber (a branded fiber blend, inulin listed). Label.
-    - Study 2025: 12 weeks, randomized, double-blind,
-      placebo-controlled, 120 healthy adults. Blood vitamin C +40.1%,
-      folate +20.5%. Science page.
-    - Methylfolate, not folic acid. Science page.
-    Approved: "Supports digestion and gut health". "Clinically tested
-    for nutrient absorption", with the study and its numbers.
-    Risky (brand file): "Gummies begin breaking down almost
-    immediately ... fast and efficient bioavailability" (no support).
-    "61% of Americans experience weekly digestive issues" (footnote
-    only says "Source").
-    Buyer assumptions: "A gummy can't hold enough to replace my
-    powder." Reviews: people quit gritty, chalky powders.
+    Script (29 s, from "Show what your product does where no camera
+    can see"): chain: 6 g prebiotic fiber meets the bacteria already
+    in your gut, they feed on it, so it supports digestion. Surface:
+    "Breakfast at seven. But who else is eating?" Dive: "Now smaller
+    than a grain of salt, inside you." Links: bacteria wait; no fiber
+    when the powder stays shut; "Sprout brings six grams of prebiotic
+    fiber, food for them."; "They feed, and that supports digestion
+    and gut health." Surface again: a daily pack torn at the door.
+    Parts key: bacteria = small soft blue spheres; fiber = thin yellow
+    strands; the gut = a plain cream tube.
+    Cast note: the fiber carries it; the woman appears only at human
+    size, silent; calm, warm narrator.
+    Photos: [pouch front] [daily pack in a hand]
+    Voice: the brand's own recorded narrator.
   output: |
-    CHAINS
-    1 Fiber as food: 6 g prebiotic fiber meets the bacteria already
-      in the gut, they feed on it, so it supports digestion.
-      Links: 6 g (label); bacteria feed on prebiotic fiber (common
-      knowledge, brand to confirm); "supports digestion" (approved).
-      Snag link: the fiber never arrives when the powder tub sits
-      unopened (reviews: people quit gritty powders).
-      Tests: hidden yes, true yes, teaches yes. KEPT.
-    2 Absorption: vitamin C from the pack passes into the blood, and
-      blood levels rose 40.1% in the study.
-      Links: study (sourced); gut to blood (common knowledge).
-      Tests: hidden yes, true yes, teaches no. The only new fact is
-      the study result, which is about the brand. DROPPED here; it
-      suits a cutout explainer with a two-bar chart.
-    3 Fast breakdown: the brand's own line has no support. DROPPED.
-    4 Methylfolate: a fact with no sourced chain of what it does. A
-      feature, not a process. DROPPED.
-    Only chain 1 survived, so both options use it with different
-    openings.
+    STAGE 0  SCRIPT IN  Tests pass (hidden, true with one link for the
+    brand to confirm, teaches). Supplements have claim rules: flagged
+    for the brand to read the script before any picture is made.
 
-    HONESTY NOTES
-    - Supplements have claim rules. The brand reads the script before
-      any picture is made.
-    - Say "supports digestion", never "fixes bloating".
-    - The "61%" figure has no source. Leave it out.
-    - The gut is a plain tube shape at the small size, never anatomy.
-    - Don't show energy or immunity. Nothing here tested them.
+    STAGE 1  AVATAR CARDS
+    Fiber (the avatar): "prebiotic fiber", thin yellow strands, drift
+      in slowly and settle; longer than a sphere is wide.
+    Gut bacteria: small soft blue spheres, gather calmly on the
+      strands; never faces, never teeth.
+    The gut: a plain cream tube with soft walls, never anatomy.
+    Product: the Sprout pouch and a daily pack, modelled from the
+      photos, closing shot only.
+    Person: a stylised 3D woman, late thirties, fully clothed, calm,
+      at human size only.
+    Voice: the brand's recorded narrator, calm and warm.
+    > STOP: approved.
 
-    STORY OPTIONS (pick one)
-    A "Who's eating breakfast?" Opens on a kitchen table at 7 am,
-      then asks who else is having breakfast. Dives into a plain
-      tube where tiny stylised bacteria wait. Snag: the fiber never
-      arrives, because the gritty powder stays in the cupboard. The
-      pack's fiber arrives (yellow strands); they feed. Back out:
-      she tears a pack at the door. Suits the gut-health buyer.
-      Sources: label, approved claim, common knowledge. Flag:
-      "supports" only; brand to confirm the feeding link.
-    B "The unopened tub". Opens on a full powder tub with dust on its
-      lid, then dives through the lid into the still, sealed powder.
-      Same chain from there, ending on a pack torn open instead.
-      Suits the powder quitter. Same sources and flags as A.
+    STAGE 2  REFERENCES (4 each; picked fiber 2, product 1, woman 3)
 
-    STOPPED: waiting for your choice of A or B. After it come the film
-    plan, parts key, still and clip prompts, captions and voice brief.
+    STAGE 3  SHEETS
+    Parts: yellow strand, blue sphere and a slice of the cream tube,
+      each from the front, side and three-quarter, side by side.
+    Product: pouch front, side, top; label lines "Sprout", "28 Daily
+      Packs" exact. Daily pack from the hand photo.
+    Sizes: a sunny kitchen table and front door at human size; the
+      inside of the cream tube with soft light and a little haze.
+    LOCK LINES: surface look: clean stylised 3D, warm morning light /
+      small-size look: clean 3D scientific illustration, soft light,
+      deep background, light haze, no letters or logos / [PARTS KEY] /
+      the pouch as the product sheet.
+    > STOP: approved.
+
+    STAGE 4  STORYBOARD (4 of 8 frames)
+    Surface | human size | none | her coffee steam | holds | line 1 | 4
+    Dive end | inside the tube | blue spheres on the wall | the camera
+      | one smooth move down from the surface frame | line 2 | 4
+    Link 3 | inside the tube | spheres, yellow strands | strands drift
+      in from above | holds | "Sprout brings six grams..." | 4
+    Surface again | human size | the pack | her hands tear it straight
+      across the top | holds | line 7 | 5
+    Continuity: blue, yellow and cream never change; "Sprout" is first
+      said at link 3; the door frame matches the opening kitchen.
+    > STOP: approved.
+
+    STAGE 5  CLIP 2 (dive, 4 s)  Start: the surface frame. End: the
+      deepest frame. One smooth continuous move down into the cream
+      tube. [LOCK LINES]
+    EDIT LIST: narration recorded and approved first; "prebiotic" spelt
+      "pree-bye-OT-ik" in the voice text only; captions word for word,
+      "fiber" in sunflower the first time; dissolve from the dive into
+      link 1, hard cuts elsewhere; offer over the last shot: "$29.99
+      first order with text sign-up. Renews at $49.99 every 4 weeks."
+
+    (cut for length: the full run also had the other frames, clips 1
+    and 3 to 8, and the full caption list)
 
 tweaks:
   - what: Your sources
     how: Add a source for each step of how it works. Links marked "common knowledge, brand to confirm" turn into sourced ones and more chains survive.
-  - what: Number of options
-    how: Ask for three if you have several processes worth testing. It still offers only chains that pass all three tests.
-  - what: Your script
-    how: Paste an existing script and it runs the tests on it, then builds the film plan from it instead of writing a new one.
+  - what: No script yet
+    how: Paste only your product facts. It tests the chains, offers 2 or 3 story options and waits for your pick before stage 1.
+  - what: A person or not
+    how: Say "no person" and the surface shots show only hands and the product. The parts carry the whole film.
   - what: Clip limits
-    how: Give your tool's real clip lengths and whether it can start on a chosen image. It keeps the dive as one move only if your tool can join clips cleanly.
+    how: Give your tool's real clip lengths and whether it takes start and end frames. It keeps the dive as one move only if your tool can join clips cleanly.
 
 judge:
-  - Every link in a kept chain is marked sourced or common knowledge, never assumed.
-  - At least one chain was dropped, and the reason names the test it failed.
-  - The honesty notes name the exact words and pictures to avoid for your product.
-  - It stops after the story options and waits for your choice.
-  - In the film plan, the product first appears at its own link.
+  - It stopped for your OK after the avatar cards, the sheets and the storyboard.
+  - Every link in the chain is marked sourced or common knowledge, never assumed.
+  - The parts key keeps the same name, colour and shape in every prompt.
+  - In the storyboard, the product first appears at its own link.
+  - The voice is one the brand recorded, hired or licensed, and a person approved the read.
 
 test:
-  - Look at the dropped chains. Each should name the test it failed. If every chain survives, your facts may be too thin to test.
+  - Give it product facts with no script. It should offer story options and stop before any avatar card.
   - Check each link in the kept chain against its source.
-  - Pick an option and check the film plan follows it, with the dive, the chain and the return to the same moment.
-  - Make the surface still, the deepest dive frame and the product's arrival before any clip. The parts key colours should match in all three.
+  - Make the parts sheet and two small-size frames. The colours and shapes should match in all three.
+  - Show the finished film to someone and ask them to draw the process in four boxes. Their boxes should match the chain.
 
 improve:
-  - Add your sourced chains to "What you need" in the skill file, so step 2 starts from them instead of hunting from scratch.
-  - If your product's process lives at a size not listed in step 2, add it with an example.
-  - Write the details of the voice you've recorded or licensed into step 8, so every video uses the same one.
-  - Save the chain, the option you chose and the parts key in your brand file.
-  - Pair it with a skill that writes only the 3D how-it-works script, when you need the words without the prompts.
+  - Add your sourced chains to "What you need" in the skill file, so stage 0 starts from them.
+  - Save the parts key, sheets and lock lines in your brand file, so a series of explainers looks the same.
+  - Write the details of the voice you've recorded or licensed into stage 1, so every video uses the same one.
+  - Pair it with "Show what your product does where no camera can see" when you want the script on its own first.
 
 works_best_with:
   tools:
-    - {name: "Nano Banana 2.1", why: "Takes up to 14 reference images and keeps up to four characters the same, so your reference stills match."}
-    - {name: "Veo 3.1", why: "Takes a first and a last frame, so a planned change starts and ends exactly where you want."}
-    - {name: "ElevenLabs Eleven v4", why: "Reads the narration with tags for pauses and pace, and can use a voice cloned from your own recording."}
+    - {name: "Nano Banana 2.1", why: "Takes up to 14 reference images, so your parts sheet and frames keep the same colours and shapes."}
+    - {name: "Veo 3.1", why: "Takes a first and a last frame, so the dive starts and ends exactly where you planned."}
+    - {name: "ElevenLabs Eleven v4", why: "Reads the narration with tags for pauses and pace, in a voice you designed or licensed."}
   inputs:
     - "Diagrams or microscope images from your supplier or a published study, so the 3D parts match the real thing"
     - "How each hard word is said, from your supplier or a dictionary, so the voice gets it right"
     - "The questions buyers ask about how it works, so the film answers a real one"
 
 terms:
+  - term: Avatar card
+    meaning: A short, fixed description of what carries the ad. Here it's usually your product's working part.
   - term: Chain
     meaning: How something works, written as 2 to 4 linked steps. This meets that, that happens, so you get this.
-  - term: Common knowledge
-    meaning: Something a school textbook would say, so it doesn't need the brand's own source.
   - term: Parts key
     meaning: A list giving each part of the process one colour and one shape, kept the same in every shot.
+  - term: Lock lines
+    meaning: Short lines for the look, the parts and the product, pasted word for word into every prompt.
   - term: Dissolve
     meaning: A soft fade from one clip into the next.

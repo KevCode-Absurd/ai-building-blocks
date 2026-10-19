@@ -4,7 +4,7 @@ summary: "Give it your selling idea and facts. You get a narrated clay ad script
 job: make-video-ads
 
 headline: "Show what your product does, in a clay animation ad"
-subhead: Give it your selling idea and product facts. It picks one clay object that stands for the problem, plans how it changes shape in view, and writes the narration and shots for one silent clay character on one small set, with your real product.
+subhead: Give it your selling idea and product facts. It picks one clay object that stands for the problem, plans how it changes shape in view, and writes the narration and shots for one silent clay character on one small set, with your real product and a note on who carries it.
 
 explain: |
   Some products work in ways a camera can't film. Vitamins your body absorbs, a coating inside a pan, a habit that slowly gets easier. Ads for these end up as someone talking about it, and people scroll past.
@@ -14,27 +14,27 @@ explain: |
 when:
   - Your product's benefit is real but invisible, and talking-head ads about it fall flat.
   - You want a gentle, eye-catching way to show a problem to people who haven't thought about it much yet.
-  - You need one image ad and a matching video from the same idea.
+  - You want a script your video tool can follow shot by shot, with one clay set that never changes.
 
 you_give:
   - The selling idea, or a script you already have
   - Your product facts, approved claims and claims you must never make
   - Who the buyer is and the moment the problem hits them
   - Your offer and guarantee, in their real terms (optional)
-  - Video or still, and the length (optional)
+  - The length (optional)
 you_get:
   - The changing object, with its before, changing and after states
   - One character sentence and a set plan with its finish, stand-ins and two palettes
   - A shot table with seconds, narration, picture, what moves and on-screen text
-  - Or, for a still, the layout, the exact words and an image prompt
+  - A cast note on who carries the ad, ready for the shots skill
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste your product facts and your approved and banned claims underneath.
   - Describe the buyer and the moment the problem bites, in one or two sentences.
-  - Say "video, 30 seconds" or "still", and paste your real offer terms if you want one.
+  - Say the length, such as "30 seconds", and paste your real offer terms if you want one.
   - Check the changing object first. If a stranger couldn't tell what changed with the sound off, ask for a different object.
-  - Take the script to "Turn your clay ad script into video clips" for the prompts.
+  - Take the script and cast note to "Turn your clay ad script into video clips". It takes it from there, with the avatar, sheets, storyboard and clips.
 
 how_it_works:
   - title: Checks clay fits
@@ -49,6 +49,8 @@ how_it_works:
     text: One small set, one finish (crisp, handled or rough), model-maker stand-ins, and your product with its real label.
   - title: Writes makeable shots
     text: Shots of 3 to 6 seconds, one thing moving in each, one clay morph at the swap at most.
+  - title: Writes the cast note
+    text: Who carries the ad, the clay character or the changing object, why, the narrator's voice and what never changes.
 
 output_shape: |
   FIT        <why clay suits this idea and buyer, or what to use instead>
@@ -70,6 +72,8 @@ output_shape: |
   - Claims used: <each claim and its source>
   - <anything left out on purpose, and why>
   - MISSING: <facts the script needed>
+
+  CAST NOTE  <who carries it, why, voice, what never changes>
 
 example:
   business: sprout
@@ -144,13 +148,19 @@ example:
     - MISSING: what a single daily pack looks like, needed before
       shots 4 and 5 can be made.
 
+    CAST NOTE  The clay man carries it, silent, with a narrator. The
+    powder quitter sees his own half-used tub in the tower beside
+    him, and the narrator keeps every claim out of a clay mouth.
+    Narrator: a warm, wry adult voice, unhurried. Never change: the
+    character sentence and the handled finish.
+
 tweaks:
   - what: The changing object
     how: Ask for three objects first, then the script for the clearest one. Pick the one a stranger would read on mute.
   - what: The finish
     how: Say crisp, handled or rough. Crisp suits premium and food brands, rough suits snacks, gifts and playful brands.
-  - what: Video or still
-    how: Say "still" to get one image showing the before state, or a split set with the problem greyed on the left and the after state in your colours.
+  - what: Want a still instead?
+    how: Use "Show what your product changes in a clay scene", which makes one clay image ad on this same set.
   - what: The length
     how: Under 20 seconds it drops the story and gives you problem, change, offer. At 60 seconds the problem can run up to 20 seconds.
 
@@ -171,13 +181,12 @@ improve:
   - Paste your approved and banned claims into "What you need" in the skill file, so every picture is checked against them.
   - Add your product's never-show rules to step 6. For Sprout, the pack is only ever torn straight across the top.
   - When a changing object works, save it with its three states in your brand file, so the next ad reuses it.
-  - Pair it with "Turn your clay ad script into video clips" for the still and clip prompts.
+  - Pair it with "Turn your clay ad script into video clips", which runs the avatar, sheets, storyboard and clips.
 
 works_best_with:
   tools:
     - {name: "Claude", why: "Follows long skill files closely and keeps every picture tied to a claim you gave it."}
     - {name: "ElevenLabs", why: "Reads the narration aloud in a steady voice, so you can check each line fits its seconds."}
-    - {name: "GPT Image 2.5", why: "Keeps short printed label lines readable in a still more often than most image models."}
   inputs:
     - "A photo of a single pack being opened, so the hands shots copy your real steps"
     - "Two or three reviews about the old routine, so the failed fixes are ones buyers really tried"

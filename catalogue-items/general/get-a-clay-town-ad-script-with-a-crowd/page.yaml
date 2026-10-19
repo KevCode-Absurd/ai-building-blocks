@@ -4,34 +4,36 @@ summary: "Give it your selling idea and brand details. You get a narrated script
 job: make-video-ads
 
 headline: "Turn an everyday hassle into a clay-world ad"
-subhead: Give it your selling idea and brand file. It finds a hassle a whole crowd shares, dresses a miniature clay set like a stop-motion studio would, and writes a narrated story in five movements where one lead gets out of it with your product.
+subhead: Give it your selling idea and brand file. It finds a hassle a whole crowd shares, dresses a miniature clay set like a stop-motion studio would, and writes a narrated video story in five movements where one lead gets out of it with your product, plus a cast note.
 
 explain: |
   Some problems are awkward to show with real people: a queue at the office sink, a packed train, the school-gate rush. In a handmade clay town they become funny and easy to watch, because everyone recognises the routine and nobody real is embarrassed.
 
   This skill builds the story on that shared hassle. The crowd does the routine, one lead hits a snag, swaps in your product, and steps out while everyone else carries on. It writes a set card the way a studio plans one: one scale, one finish, model-maker stand-ins for water and glass, studio light and shallow focus. Only one figure moves in each shot, as in real stop-motion. A narrator tells the story; no clay figure speaks or claims a result. Your product is sculpted under its real printed label, every word exact.
 
+  It ends with a cast note: the lead in full, the crowd, and why. The skill that turns a clay town script into clips takes it from there. Want a still instead? Use "Turn an everyday hassle into a clay-town image ad".
+
 when:
   - Your buyer's problem happens around other people (a commute, an office, a family dinner).
   - You want a playful, handmade-looking ad without hiring a cast or building a set.
-  - You want one image of a clay town with your buyer's hassle at its worst.
+  - You want a script ready to hand to an AI video process, with the lead and crowd already cast.
 
 you_give:
   - Your selling idea or an existing script
   - Your brand file, with the buyer's moment, who else is there, your product's shape, colours and label lines, and your approved claims
-  - Video or image, the length (20, 30 or 45 seconds), and how much the buyer already knows (optional)
+  - The length (20, 30 or 45 seconds) and how much the buyer already knows (optional)
 you_get:
-  - A set card (scale, finish, stand-ins, light, focus) and a cast sheet
+  - A set card (scale, finish, stand-ins, light, focus)
   - A line-by-line script in five movements, with the picture, who moves and the seconds
-  - Or an image brief with the moment, layout, every word and the image prompt
+  - A cast note with the lead in full, the crowd and why this lead carries it
   - Notes on what was inferred and what's missing
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste your selling idea and your brand file. Say where your buyer's hassle happens and who else is there.
   - Type out every line of your product's label. It won't invent label words.
-  - Say "video, 30 seconds" or "image".
-  - Take the script to "Turn your clay town script into handmade-looking clips" for the prompts.
+  - Say the length, such as "30 seconds".
+  - Take the script and cast note to "Turn your clay town script into handmade-looking clips". It runs the video process from there.
 
 how_it_works:
   - title: Checks the fit
@@ -40,8 +42,8 @@ how_it_works:
     text: Writes one line about what everyone at the place does, so the crowd has a routine to perform.
   - title: Dresses the set
     text: One scale, one finish level, stand-ins like clear gel for water, studio light and shallow focus.
-  - title: Casts the figures
-    text: A made-up adult lead written the same way every time, and a crowd built from a few varied base figures.
+  - title: Writes the cast note
+    text: A made-up adult lead written the same way every time, a crowd built from a few varied base figures, and why this lead carries it.
   - title: Writes five movements
     text: The routine, the snag, the swap, the ripple and the sign-off, with one mover per shot and at most one clay morph.
   - title: Holds the claims
@@ -53,8 +55,10 @@ output_shape: |
 
   SET CARD  Scale <...> | Finish <crisp / handled / rough>
             Stand-ins <...> | Light <...> | Focus <...>
+  CAST NOTE
   LEAD      <adult, build, clay skin colour, hair, clothes, signature item>
   CROWD     <3 or 4 base figures and how they vary>
+  WHY       <why this lead carries the ad>
 
   #  movement  narration          picture                  mover   s
   <one row per line>
@@ -63,8 +67,6 @@ output_shape: |
   NOTES
   - Inferred: <...>
   - MISSING: <anything the facts didn't give>
-
-  (For an image: set card, moment, layout, every word, image prompt)
 
 example:
   business: sprout
@@ -83,7 +85,7 @@ example:
     deep-green bears. Daily pack label words: not captured.
     Offer: first order $29.99 with text sign-up, renews at $49.99
     every 4 weeks.
-    Voice: playful, cheeky. Settings: video, 30 seconds.
+    Voice: playful, cheeky. Settings: 30 seconds.
   output: |
     FIT     The hassle happens in a queue, so a clay crowd suits it.
             Nothing here proves the product works; the claim line
@@ -96,12 +98,15 @@ example:
               Stand-ins: running water as clear gel, sludge as
               grey-green clay | Light: soft key from a window, a
               fill, bright morning | Focus: lead sharp, rest soft
+    CAST NOTE
     LEAD   Dev, a clay adult man, about 30, slim, warm brown clay
            skin, short black clay hair with comb grooves, a mustard
            knit jumper of real fabric, navy clay trousers, a lanyard.
     CROWD  Four base figures (tall, short, round, slight), varied by
            hair and office clothes; six in the queue, each face
            distinct.
+    WHY    One office worker late for a meeting makes the shared
+           queue personal; the crowd keeps it common.
 
     #  movement  narration                 picture             mover  s
     1  routine   "Every morning at nine,   wide: six workers   crowd  0-4.5
@@ -159,8 +164,8 @@ tweaks:
     how: Name the place and the routine (a train, a till queue, a school gate). The opening, the snag and the ripple are all built around it.
   - what: Length
     how: 20 seconds keeps the routine, the swap and the sign-off at about 45 words. 45 seconds gives the snag and the ripple more room at about 100.
-  - what: Video or image
-    how: Say "image" and you get one diorama view, with the lead sharp in front, the crowd behind and 15 words in all.
+  - what: The lead
+    how: Name the lead's job or day (a nurse on a night shift, a parent at the school gate) and the snag and the cast note are built around them.
   - what: How it works
     how: If your brand file says how the product works, the swap can show it in clay. Without it, there's no how-it-works moment.
 
@@ -182,12 +187,11 @@ improve:
   - Paste your label lines with their colours into "What you need", so the sculpted product is never guessed.
   - Add the shared places your buyers know to step 2 (for Sprout, an office kitchen or a school gate).
   - Save your lead's description in your brand file, so the same figure can come back in the next ad.
-  - Pair it with the skill that turns a clay town script into still and clip prompts. For one character on a single tabletop, use the single-character clay script instead.
+  - Pair it with the skill that turns a clay town script into clips, and with the clay-town image ad skill for a matching still. For one character on a single tabletop, use the single-character clay script instead.
 
 works_best_with:
   tools:
     - {name: "Any good chat AI", why: "Claude, ChatGPT and Gemini all follow this skill well, so use the one you already have."}
-    - {name: "Nano Banana 2.1", why: "For the still version, it can work from your product photo as a reference, so the pack looks right."}
   inputs:
     - "Photos of a real place your buyers share, like a school gate, so the set feels known"
     - "Photos of the product from the front, side and top, so the sculpted version is never guessed"

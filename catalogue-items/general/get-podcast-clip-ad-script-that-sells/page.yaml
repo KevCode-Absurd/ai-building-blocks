@@ -4,7 +4,7 @@ summary: "Give it the belief to change and your facts. You get a timed two-perso
 job: make-video-ads
 
 headline: "A podcast-style clip that changes one belief"
-subhead: Give it a doubt your buyers really hold and the facts you can stand behind. You get a 15 to 45 second talk between a doubting Host and an explaining Guest, timed to your clips, or one frame with its subtitle.
+subhead: Give it a doubt your buyers really hold and the facts you can stand behind. You get a 15 to 45 second talk between a doubting Host and an explaining Guest, timed to your clips, plus a note on who should play the two parts.
 
 explain: |
   Clips of two people talking at microphones get watched because they feel like overhearing a real talk. They go wrong when a "guest" in a studio says the product changed their life. That's a testimonial from someone who never used it, with a title nobody can check, and viewers hear the ad copy at once.
@@ -21,20 +21,20 @@ you_give:
   - Real customer doubts and words, with sources
   - Your product facts and a short reason it works
   - Every fact a speaker may say, your offer and banned claims
-  - Video or still
+  - The length you want (15 to 45 seconds)
 you_get:
   - A belief line and the way the argument moves
   - A line-by-line script for Host and Guest, with picture notes
   - A clip plan with the words in each clip, a muted opener and the end text
-  - Every fact said, with its source, and the disclosure line
+  - Every fact said, with its source, the disclosure line and a cast note
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste the doubt you want to answer, in your customers' own words.
   - Paste the facts a speaker may say, one per line, with sources.
-  - Say "video, 30 seconds" or "still".
+  - Say the length, for example "30 seconds".
   - Read it aloud with someone, one part each. Any line that sounds like ad copy goes back for a rewrite.
-  - For a video, take the script to "Turn your podcast clip script into ready-to-make video shots".
+  - Take the script and cast note to "Turn your podcast-style script into video clips". It takes it from there, from the cast to the finished clips.
 
 how_it_works:
   - title: Checks it fits
@@ -49,6 +49,8 @@ how_it_works:
     text: Problem then fix, discovery, or myth-bust, plus how the product enters the frame.
   - title: Counts the words
     text: About 2.5 words a second, two or three turns per clip, and no sentence split across clips.
+  - title: Writes the cast note
+    text: Says which two made-up adults should play Host and Guest, and why, so the clips skill can cast them.
 
 output_shape: |
   BELIEF  They think <...>. By the end they think <...>.
@@ -56,6 +58,7 @@ output_shape: |
   PRODUCT ENTRY  <on the table from frame 1, or noticed partway>
   MUTED OPENER  "<6 words or fewer>"
   DISCLOSURE  <Dramatization line, AI label if AI-made>
+  CAST NOTE  <two made-up adults, how they differ, the room, and why>
 
   Line | Speaker and words | On-screen text | Picture note
   1 | Host: "<doubt or reaction>" | <opener> | Host left, Guest right; <one action, one reaction>
@@ -132,6 +135,13 @@ example:
     Nobody says it replaces a powder. There's no claim on file for
     that, so the Guest gives the numbers and the viewer decides.
 
+    CAST NOTE  Two made-up adults, peers of the quitter who wants to
+    stick (28 to 45). A Host in his forties who sounds tired of
+    powders, and a younger Guest who reads labels. Make them differ in
+    age, hair, build and colour of top, at a plain table at home. No
+    host or show anyone knows, and nobody dressed as an expert.
+    Next: the podcast clips skill writes the two cast cards.
+
 tweaks:
   - what: The shape
     how: Ask for myth-bust when buyers hold a clear belief, discovery when a fact can surprise the Guest, or problem then fix when you have the problem in buyers' words.
@@ -139,8 +149,8 @@ tweaks:
     how: Ask for "noticed on the table" and the Host spots the pack partway and asks what it is. It's still never pulled from a bag.
   - what: The length
     how: 15 seconds is one clip of two or three turns. 45 seconds runs to three or four clips. Past 45 seconds, use another format.
-  - what: Still instead of video
-    how: Ask for a still. You get one frame caught mid-reaction, a subtitle of 10 words or fewer, and an image prompt.
+  - what: The buyer stage
+    how: Say how much your buyer knows. It suits buyers who know the problem or have heard every claim; for buyers who don't see a problem yet, it tells you to pick another format.
 
 judge:
   - The first line is a doubt or a reaction, never "welcome back".
@@ -165,7 +175,7 @@ works_best_with:
   tools:
     - {name: "Claude", why: "Keeps every spoken fact tied to your list and counts the words in each clip."}
     - {name: "Kling 4.0", why: "Makes long clips with cuts and speech for more than one person, so a clip can hold a few turns."}
-    - {name: "GPT Image 2.5", why: "Sets the subtitle words cleanly in the frame, so the still needs less fixing."}
+    - {name: "Veo 3.1", why: "Speaks quoted lines for a named speaker, so each turn comes from the right mouth."}
   inputs:
     - "A recorded sales or support call, used with permission, so the turns sound like your buyers really talk"
     - "A voice note of how your brand name is said, so neither speaker gets it wrong"

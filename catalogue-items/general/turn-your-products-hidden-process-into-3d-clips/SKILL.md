@@ -1,51 +1,63 @@
 ---
 name: turn-your-products-hidden-process-into-3d-clips
-description: Use when what a product does happens too small or too hidden to film, and you want a short narrated 3D explainer that zooms from an everyday moment into the process and back out. It tests candidate processes for honesty, offers 2 or 3 story options and stops for a choice, then builds the film in four movements (surface, dive, chain, surface again) with colour-coded parts, stills, clips, captions and a voice brief.
+description: Use when what a product does happens too small or too hidden to film, and you want a short narrated 3D explainer that zooms from an everyday moment into the process and back out. It runs the full video process in six stages (script in, avatar card, reference renders, sheets and lock lines, storyboard, clips and edit), stopping for your approval after the avatar card, the sheets and the storyboard. With no script, it first tests candidate processes for honesty and offers 2 or 3 story options. The product, or its active part, is usually the avatar, and every part keeps one colour and shape.
 ---
 
 # Turn your product's hidden process into 3D clips
 
-You find one true process the product takes part in, then plan a 3D explainer that starts at human size, dives down to where the process happens, walks through it one link at a time, and comes back out to the same moment. The product appears at the link where it acts, named there, and not before.
+You take one true process the product takes part in all the way to a finished 3D explainer, in six stages. The film starts at human size, dives down to where the process happens, walks through it one link at a time, and comes back out to the same moment. The product appears at the link where it acts, named there, and not before.
+
+**Stop for approval after stages 1, 3 and 4.** Never skip a stage, and never start the next one until the user approves.
 
 ## What you need
-- **The product** (required): name, clean photos of the pack and the product, what it's made of, how it works (each step with a source), how it's used.
+- **The product** (required): name, clean photos (front, side, top, out of the pack), every label line, what it's made of, how it works (each step with a source), how it's used.
 - **Brand file** (required): claims with sources, banned claims, what buyers assume, colours and font, a voice the brand has the right to use, how the name and hard words are said.
-- **Script** (optional): if one exists, test it and build from it.
+- **Script** (optional): the locked script and cast note from the 3D script skill.
 - **Your tool's limits** (optional): clip lengths, and whether a clip can start or end on a chosen image.
 
-## Steps
-1. **Run three tests.** Hidden: a camera can't see it at normal size (if it can, a filmed demo is stronger and cheaper). True: every link can be backed. Teaches: a viewer could sketch the process after one watch, and most of the film teaches something true without needing the brand's name. Fail any test and say so.
-2. **Write candidate chains.** Look at three sizes: the tiny (molecules, fibres, microbes), the surface (skin, fabric, a pan, a filter) and the structure (layers, seams, joints). Write each candidate as 2 to 4 links: "this meets that, that happens, so the buyer gets this". Mark every link: brand claim with source, common knowledge (a school textbook would say it), or unsupported. Cut a chain back to where its support ends. Keep a chain only if one link is the snag (what goes wrong or gets in the way) and another is where the product acts. Anything that won't form a chain is a feature, not a process.
-3. **Set the honesty rules for this product.**
-   - Verbs: keep to soft, true ones such as "helps", "supports" or "contains". Medical verbs (cure, treat, prevent, fix) stay out.
-   - Pictures: the product does no more than its verb. No damage vanishing, no body before and after. Show a body only as far as the claim names it; otherwise use a plain model shape. No clinic, white coat or illness.
-   - Numbers: only with a source, and with the study size where a study is quoted.
-   - Products with claim rules (supplements, skincare, anything for a condition): the brand reads the script before any picture is made.
-4. **Offer 2 or 3 story options, then stop.** Each is a whole film in 80 words or fewer: the everyday moment, the chain, the snag, the product's link, the closing moment, and who it suits. Options differ in their chain, their opening moment, or both. If only one chain survives, say so and vary the opening. List each option's sources and flag anything a regulator would look at. Wait for the choice.
-5. **Build the film in four movements.**
-   - Surface: the everyday moment at human size, ending on a question nobody can answer by looking.
-   - Dive: one continuous move down into the size where the process happens. Say the size in the narration ("now smaller than a grain of salt").
-   - Chain: one shot and one sentence per link. The snag link first, then the product's link, where the product enters and is named.
-   - Surface again: pull back out to the same moment, now going easier, product in hand.
-   Time it by links, not by a fixed share: about 4 seconds a link, 3 to 5 seconds each for the surface shots and the dive. Most films land at 20 to 40 seconds.
-6. **Colour-code the parts.** At the small size, every actor in the chain (the ingredient, the fibre, what gets in the way) gets one colour and one simple shape for the whole film, listed once in a parts key. Keep everything else neutral, so the eye follows the coloured parts. At human size, people are stylised 3D adults, fully clothed (say so in every crowd), simple and calm. The product is modelled from its photos; in the closing shot, attach the photo and type its label lines exactly. No letters, logos or numbers in the 3D world.
-7. **Camera.** The dive is the one long continuous move. Every other shot either holds or makes one slow move. Join the dive into the chain as one move; elsewhere use hard cuts or a short dissolve, so one bad clip spoils only itself.
-8. **Voice and captions.** Use only a voice the brand may use (one it recorded, hired or licensed). Never copy a creator's, channel's or celebrity's voice. In the text the voice reads, spell hard words by sound; captions keep the real spelling. A person listens to the whole read and approves it before any picture is paid for. Captions go in during editing, word for word, with the process's key word marked in the brand colour the first time it's said.
-9. **Stills first, then retake in order.** Make the surface still, the deepest frame of the dive, each link and the product's arrival. Check the parts key holds in every one. Clips start from approved stills. When one misses, rerun once, then simplify (hold the camera, one action), then change one instruction.
+## Stage 0: Script in
+With a locked script, read it, run the three tests on it and go on. Without one, build it here:
+1. **Three tests.** Hidden: a camera can't see it at normal size (if it can, a filmed demo is stronger and cheaper). True: every link can be backed. Teaches: a viewer could sketch the process after one watch, and most of the film teaches something true without the brand's name. Fail any test and say so.
+2. **Candidate chains.** Look at three sizes: the tiny (molecules, fibres, microbes), the surface (skin, fabric, a pan, a filter) and the structure (layers, seams, joints). Write each candidate as 2 to 4 links: "this meets that, that happens, so the buyer gets this". Mark every link: brand claim with source, common knowledge (a school textbook would say it), or unsupported. Cut a chain back to where its support ends. Keep it only if one link is the snag and another is where the product acts.
+3. **Honesty rules.** Soft, true verbs ("helps", "supports", "contains"), never cure, treat, prevent or fix. The product does no more on screen than its verb. No damage vanishing, no body before and after, no clinic, white coat or illness; show a body only as far as the claim names it, otherwise a plain model shape. Numbers only with a source and the study size. Products with claim rules (supplements, skincare): the brand reads the script before any picture is made.
+4. **Story options, then stop.** 2 or 3 whole films in 80 words or fewer each (the moment, the chain, the snag, the product's link, the closing moment, who it suits), with sources and regulator flags. Wait for the choice, then write the four movements: surface (ending on a question nobody can answer by looking), dive (one continuous move down, size said aloud), chain (one shot and one sentence per link, snag before the product's link), surface again (same moment, going easier, product in hand). About 4 seconds a link, 3 to 5 for the surface shots and the dive.
+
+## Stage 1: Pick the avatar (approval 1)
+Here the product, or its active part, usually carries the ad, so **the product is the avatar**. Write an **avatar card** for each actor in the chain, which together make the **parts key**: plain buyer's name, one colour, one simple shape, how it moves (drifts, gathers, locks on), its size against the others. Keep everything else neutral so the eye follows the coloured parts. Add a card for the product itself (modelled from its photos) and, only if the surface moment needs one, a stylised 3D adult: age range, look, fully clothed, calm, never a real person, an expert or a patient. Name the narrator's voice in plain words: one the brand recorded, hired or licensed, never cloned or copied from a creator or celebrity. **Stop. Show the cards and wait for approval.**
+
+## Stage 2: Avatar to image
+Write 3 or 4 reference render prompts for the product's active part and the product model, varied only in light or angle, plus the person if there is one. The user picks one of each.
+
+## Stage 3: Sheets and lock lines (approval 2)
+- **Parts sheet**: every part from the front, side and three-quarter, in its key colour and shape, side by side at their relative sizes.
+- **Product sheet** from the real photos: front, side and top, with every label line typed exactly, for the closing shot.
+- **Set sheet** for each size: the surface room at human size, and the small-size world (plain model shapes, soft light, a little haze for scale). No letters, logos or numbers inside the 3D world.
+- **Character sheet** (only with a person): front, three-quarter left and right, side and back, beside the product for size.
+Then write the **lock lines**, repeated word for word in every later prompt: the look line for each size, the parts key, and the product line. **Stop. Show the sheets and lock lines and wait for approval.**
+
+## Stage 4: Storyboard (approval 3)
+One frame per shot: the surface, the deepest frame of the dive, each link, the product's arrival and the surface again. Each shot card gives the size we're at, the parts in frame (by key colour), the one thing that moves, the camera (the dive is the one long continuous move; every other shot holds or makes one slow move), the narration line, seconds and sound. Then check continuity: the parts key holds in every frame, the dive starts on the surface frame and ends on the first link frame, the product's first appearance is at its own link, and the closing moment matches the opening one. **Stop. Show the storyboard and wait for approval.**
+
+## Stage 5: Storyboard to video
+1. **Voice first.** Record the narration in the approved voice. In the text the voice reads, spell hard words by sound; captions keep the real spelling. A person listens to the whole read and approves it before any picture is paid for. There's no lip-sync; the narrator stays off screen.
+2. **Clips.** Each approved frame starts its clip; the dive takes the surface frame as its start and the deepest frame as its end. The clip prompt describes only the motion, with the lock lines unchanged. Make 2 or 3 takes and pick one.
+3. **Edit.** Join the dive into the chain as one move; elsewhere use hard cuts or a short dissolve, so one bad clip spoils only itself. Captions word for word, with the process's key word in the brand colour the first time it's said. The offer is on-screen text over the closing shot, from current terms, never spoken. Keep words inside the app's safe zones.
+4. **Fixes.** Rerun the same prompt once. Then simplify (hold the camera, one action). Then change one instruction. A part changing colour: re-attach the parts sheet. Anatomy creeping in: name the plain model shape first in the prompt.
+5. **Final check** against the script and claims: a viewer could sketch the chain in four boxes, and no picture shows more than its line.
 
 ## What you hand back
-1. **Candidate chains** with every link marked, and which survived.
-2. **Honesty notes** for this product.
-3. **Story options** (2 or 3, 80 words or fewer each). Stop. After the choice:
-4. **Film plan** by movement, with narration and seconds.
-5. **Parts key** (colour and shape per actor) and the look lines for each size.
-6. **Still prompts**, **clip prompts**, **caption list** and **voice brief** (with spellings by sound).
+1. **Chains, honesty notes and story options** (stage 0, when no script came in). Stop for the choice.
+2. **Avatar cards** (the parts key, the product, any person) and the voice (stage 1).
+3. **Reference render prompts** (stage 2).
+4. **Sheet prompts and lock lines** (stage 3).
+5. **Storyboard**: frame prompts and shot cards (stage 4).
+6. **Clip prompts** and the **edit list**: voice brief with spellings by sound, caption list, cuts, offer, safe zones, retake notes (stage 5).
 
 ## Check before you hand it back
-- A viewer could sketch the chain in four boxes after one watch.
+- You stopped after stages 1, 3 and 4 (and after the story options, if you wrote them).
 - Every link and every picture traces to a source or common knowledge.
 - The product appears first at its own link.
-- The parts key never changes colour or shape.
+- The parts key never changes colour, shape or name.
 - No unsupported number, no body before and after.
 - The voice is one the brand may use, and a person approved it.
 
@@ -55,5 +67,4 @@ Write `MISSING: <what>`. No "how it works": ask, and never make one up. If no ch
 ## Avoid
 - Bending a claim to make a better picture.
 - Copying any person's, channel's or creator's look, voice, catchphrases or footage.
-- A lesson that exists only to set up the sale. If the teaching parts are thin, the film fails test 3.
 - See-through bodies or bare figures. Frame only the part the camera travels into.

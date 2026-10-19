@@ -1,0 +1,29 @@
+slug: turn-a-daily-problem-into-a-paper-craft-image-ad
+name: "Turn a daily problem into a paper-craft image ad"
+summary: "One paper-craft image ad built on a single flap, pop-up or fold, with your real label and a headline read at a glance."
+category: general
+boards: [ecommerce]
+type: skill
+role: make
+job: image
+level: intermediate
+inputs:
+  - {type: brief, required: true}
+  - {type: brand_brain, required: true}
+  - {type: product_photos, required: false}
+outputs:
+  - {type: image_prompt}
+  - {type: ad_copy}
+uses: []
+example: paper
+origin: rebuilt
+source_ids: [CES-117]
+version: 1.0.0
+credits:
+  - {title: "Pop-up book", by: "Wikipedia contributors", url: "https://en.wikipedia.org/wiki/Pop-up_book", used: "Pop-ups on a fold, pull-tabs, flaps and tunnel books"}
+  - {title: "Quilling", by: "Wikipedia contributors", url: "https://en.wikipedia.org/wiki/Quilling", used: "Rolled paper strips as a detail build"}
+  - {title: "Prompt and image attribute guide", by: "Google Cloud", url: "https://docs.cloud.google.com/vertex-ai/generative-ai/docs/image/img-gen-prompt-guide", used: "'Made of' material phrasing, short text in images, avoid lists as plain nouns"}
+  - {title: "How many words do we read per minute? A review and meta-analysis of reading rate", by: "Marc Brysbaert", url: "https://doi.org/10.1016/j.jml.2019.104047", used: "Reading speed behind the 7-word headline"}
+  - {title: "The magical number 4 in short-term memory", by: "Nelson Cowan", url: "https://pubmed.ncbi.nlm.nih.gov/11515286/", used: "A headline plus at most 3 other things to read"}
+  - {title: "Typography, Human Interface Guidelines", by: "Apple", url: "https://developer.apple.com/design/human-interface-guidelines/typography", used: "Smallest readable size on a phone, behind the 30 px floor"}
+  - {title: "Understanding Success Criterion 1.4.3: Contrast (Minimum)", by: "W3C Web Accessibility Initiative", url: "https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html", used: "The 4.5:1 contrast floor for words on the image"}

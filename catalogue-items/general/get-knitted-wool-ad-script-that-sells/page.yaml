@@ -4,12 +4,14 @@ summary: "Give it your brief, buyer and product facts. You get a narrated script
 job: make-video-ads
 
 headline: "Make an awkward subject gentle with a knitted ad"
-subhead: Give it your brief, buyer and approved claims. It picks what the key shot must show, the real yarn technique that shows it (knitting up, plying, joined squares), a fabric for every surface, and writes a 15 to 40 second script or one still.
+subhead: Give it your brief, buyer and approved claims. It picks what the key shot must show, the real yarn technique that shows it (knitting up, plying, joined squares), a fabric for every surface, and writes a 15 to 40 second script with a cast note.
 
 explain: |
   Some subjects are hard to watch on camera. Digestion, sleep, pests, grime. A small world of knitted and crocheted wool helps. It's warm and odd enough to stop a scroll, and it makes an awkward problem kind to look at. It also tempts you into pictures you can't back up, like a knot on a doll's tummy coming loose.
 
   This skill starts from the job. It asks what the turning shot must show (a reveal, something spreading, two things joining, parts adding up, a mood calming, or the product held still) and picks the yarn technique that does it. Plying twists strands into one yarn, so it suits two things becoming one. Joined crochet squares suit many parts adding up. It gives every surface a real fabric (garter ridges for a rug, rib for wood grain, felt for steam) and reads every yarn change as a sentence your claims must back.
+
+  It ends with a cast note: who carries the ad, and a plain sketch of the doll. The skill that turns a knitted script into shots takes it from there. Want a still instead? Use "Make an awkward subject gentle in a knitted image ad".
 
 when:
   - Your product deals with a subject people find awkward to look at.
@@ -18,23 +20,22 @@ when:
 
 you_give:
   - The reason someone buys, what the buyer knows, the selling idea and the length
-  - Video or still
   - Your product's shape, colors, biggest label lines and how it's used
   - Your buyer's look, their room and what they tried before
   - Your approved claims, banned claims and offer
 you_get:
   - A show plan with the yarn technique, the fabrics and the claim it implies
-  - A doll card and a room list, every object with its material and color
-  - A line-by-line script with one move per shot, or a still plan with an image prompt
-  - A list of every yarn change with its source, and the ones it rejected
+  - A room list, every object with its material and color
+  - A line-by-line script with one move per shot
+  - A list of every yarn change with its source, and a cast note with a sketch of the doll
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste your product facts, label lines and claims underneath.
   - Describe the buyer in two sentences, including what they'd look like as a doll.
-  - Say "video, 30 seconds" or "still".
+  - Say the length, such as "30 seconds".
   - Check that every object in the script has knitted, crocheted or felted in front of it. Anything without it will come out real.
-  - Take the script to the skill that turns a knitted script into video clips.
+  - Take the script and cast note to the skill that turns a knitted script into shots. It runs the video process from there.
 
 how_it_works:
   - title: Checks the fit
@@ -47,8 +48,10 @@ how_it_works:
     text: Stockinette for walls and clothes, garter for rugs, rib for wood grain, felt for steam, crochet for solid things.
   - title: Reads every change as a claim
     text: Writes the sentence each yarn change implies and keeps it only if your claims back it. Nothing shows a body getting better.
-  - title: Writes the video or still
-    text: One main doll on a reused card, one move per shot, 5 words or fewer over the turn, the offer over the still product.
+  - title: Writes the script
+    text: One main doll, one move per shot, 5 words or fewer over the turn, the offer over the still product.
+  - title: Writes the cast note
+    text: Picks a doll, hands only, or the product alone to carry the ad, says why, and sketches the doll.
 
 output_shape: |
   SHOW PLAN
@@ -57,7 +60,6 @@ output_shape: |
   Technique: <knitting up, plying, joined squares...>
   It implies: "<sentence>"  Source: <claim or fact>
 
-  DOLL CARD  <build, yarn hair, clothes with fabric and color>
   ROOM  <every object with its material and color>
 
   # | Narration | Picture | Move
@@ -69,6 +71,9 @@ output_shape: |
   CLAIMS SHOWN
   <change> = <source>
   Rejected: <change> (<why>)
+
+  CAST NOTE  <doll, hands only, or product alone>: <why>
+  Doll sketch: <age, build, hair, clothes with fabric and color>
   MISSING: <facts it needed>
 
 example:
@@ -76,7 +81,7 @@ example:
   input: |
     [the skill]
 
-    Video, about 30 seconds.
+    About 30 seconds.
     Selling idea: six grams of prebiotic fiber, in a gummy you'll
     actually eat.
     Buyer: the gut-fix seeker, woman, 25 to 55. Bloating and
@@ -105,9 +110,6 @@ example:
     and the approved claim. The six strands are a picture of the
     number, not a measure.
 
-    DOLL CARD  A crocheted woman about 40, medium build, shoulder-length
-    dark brown yarn hair in loose waves, a mustard stockinette jumper,
-    grey rib-knit trousers, embroidered eyes and brows.
     ROOM  Kitchen: cream stockinette walls, an oak-brown rib-knit
     counter, a pale blue crocheted glass, a white crocheted tub, a small
     brown crocheted bottle, a felted puff of steam from a teal
@@ -152,6 +154,13 @@ example:
       fixes digestion; the claim is "supports")
     Rejected: a glowing strand travelling into her body (the brand
       doesn't state how the fiber works)
+
+    CAST NOTE  One crocheted doll. The buyer's story (powders, then
+    pills, then the pack) lives in her mornings, so a doll carries it
+    kindly; the product arrives in her hands at line 5.
+    Doll sketch: a woman about 40, medium build, shoulder-length dark
+    brown yarn hair in loose waves, a mustard stockinette jumper, grey
+    rib-knit trousers, embroidered eyes and brows.
     MISSING: the color of "28 Daily Packs" on the pouch, and a photo of
     a single daily pack.
 
@@ -160,15 +169,15 @@ tweaks:
     how: Ask for reveal to knit the product into view, build to join squares for many ingredients, spread for something that fills a day, or hold for buyers who already know you.
   - what: Fabrics
     how: Name a surface and it picks the stitch (garter for a rug, cables for a tree, felt for steam). Say "chunky yarn" for big cosy stitches or "fine yarn" for more detail.
-  - what: Still
-    how: Ask for the problem in the doll's pose for people new to it, the turn caught halfway for people comparing fixes, or the product held large for people who know you.
+  - what: Who carries it
+    how: One doll when the problem lives in someone's day, hands only for a how-to, or the product alone for buyers who already know you.
   - what: Night scenes
     how: Say where the light comes from (a lamp, a phone) and it writes the source into each picture note.
 
 judge:
   - The show plan's implied sentence is something your claims let you say.
   - Every object in every picture note has a material word and a color.
-  - There is one main doll, described the same way every time, and no doll speaks.
+  - There is one main doll, sketched the same way every time, and no doll speaks.
   - No shot is a close-up of a face, and nothing shows a body getting better.
   - The product has its true shape and only real label words.
   - The narration fits the length at a calm pace, with 5 words or fewer over the turn.
@@ -176,21 +185,20 @@ judge:
 test:
   - Search the picture notes for any object without knitted, crocheted or felted. There should be none.
   - Ask for a knot loosening on the doll's tummy. The claim step should reject it and say why.
-  - Run it twice on the same brief. The doll card should come back the same in every line.
-  - Make one still from the plan before paying for video. If the label comes back wrong, cut it to the biggest line and plan an overlay.
+  - Run it twice on the same brief. The doll sketch should come back close, and the same in every line of one run.
+  - Read the cast note and ask whether a doll is needed at all. For a buyer who knows you, the product alone may carry it.
 
 improve:
   - Write your banned claims into step 4 of the skill file, so every yarn change is tested against them.
-  - If you run a series, save the doll card and room list in your brand file and paste them into every run.
+  - If you run a series, save the doll sketch and room list in your brand file and paste them into every run.
   - Add your house yarn thickness and colors to step 3, so every ad matches.
-  - Pair it with the skill that turns a knitted script into video clips.
+  - Pair it with the skill that turns a knitted script into shots, and with the knitted image ad skill for a matching still.
 
 works_best_with:
   tools:
     - {name: "Any good chat AI", why: "Claude, ChatGPT and Gemini all follow this skill well, so use the one you already have."}
-    - {name: "Nano Banana 2.1", why: "For the still version, it can work from your product photo as a reference, so the pack looks right."}
   inputs:
-    - "Photos of knitted or crocheted toys you like, so the doll card names stitches that exist"
+    - "Photos of knitted or crocheted toys you like, so the doll sketch names stitches that exist"
     - "Your brand colors matched to real yarn shades, so the room list uses colors a maker could buy"
     - "A photo of the product in a hand, so the knitted version keeps its true size"
 

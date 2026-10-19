@@ -1,0 +1,181 @@
+new_slug: show-how-your-product-works-in-a-3d-cutaway
+name: "Show how your product works in a 3D cutaway"
+summary: "One 3D cutaway image ad of the moment your product acts, with every part backed by a source."
+job: make-image-ads
+
+headline: "Show how your product works in a 3D cutaway"
+subhead: Give it how your product works, with a source for each step, and your claims list. It checks the process is hidden, true and worth teaching, freezes the moment your product acts, colour-codes every part, and hands back the image prompt, the words and the feed copy.
+
+explain: |
+  Some products do their work out of sight, so buyers doubt they do anything. One clear cutaway, as if you shrank down and sliced inside, can answer that in a glance. It's also where image ads overclaim most easily, because a picture of damage disappearing says more than any line of copy.
+
+  This skill tests the process first. It must be hidden from a camera, true at every step, and worth learning even without your brand name. It writes the process as a chain of 2 to 4 links, marks each one as sourced, common knowledge or unsupported, and freezes the one link where your product acts. Each part gets one name, colour and shape, the same as in your 3D video. The words pass image-ad rules: a headline of 7 words or fewer, at most three labels or lines, and type that reads on a phone.
+
+when:
+  - Your product's main benefit happens out of sight, and buyers doubt it does anything.
+  - You have a sourced fact about how it works that a product photo can't show.
+  - You made the 3D explainer video and want a still with the same parts and colours.
+
+you_give:
+  - The doubt you want to answer, or your selling idea
+  - How the product works, step by step, each step with a source
+  - Your approved and banned claims, and what buyers assume
+  - Your colours, typefaces and offer
+  - Product photos with a sharp label (optional at first, needed before you make the image)
+you_get:
+  - The three tests, the chain with every link marked, and the one link to freeze
+  - A parts key and honesty notes for your product
+  - The layout, the words on the image checked for size and contrast, and an image prompt
+  - Feed copy with a first line, headline and button
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste how your product works, step by step, with the source of each step.
+  - Paste your approved and banned claims. This format lives or dies on them.
+  - Read the tests and chain first. If a test fails, use a different format rather than stretch the claim.
+  - Make the image from the prompt, then add the headline, labels and your product photo in a design tool.
+
+how_it_works:
+  - title: Runs three tests
+    text: Hidden from a camera, true at every link, and worth learning even with your brand name covered.
+  - title: Writes the chain
+    text: The process as 2 to 4 links, each marked sourced, common knowledge or unsupported.
+  - title: Freezes one link
+    text: The moment your product acts, shown large. Never the whole chain as numbered steps.
+  - title: Sets honesty rules
+    text: Your approved verbs only, no picture that shows more than its line, numbers only with a source.
+  - title: Colour-codes the parts
+    text: Each part gets one name, colour and shape, the same as in your 3D video, and everything else stays quiet.
+  - title: Lays out and writes
+    text: 4:5 or 1:1, a headline of 7 words or fewer, at most three labels or lines, 30 px type, 4.5:1 contrast, an image prompt with no text in it, and feed copy.
+
+output_shape: |
+  TESTS        Hidden: <pass/fail, why>  True: <...>  Teaches: <...>
+  CHAIN        <this> meets <that>, <that happens>, so you get <this>
+               Links: <each marked sourced / common knowledge /
+               unsupported>
+  FROZEN LINK  <the moment the product acts>
+  PARTS KEY    <part = name, colour, shape>
+  HONESTY      <verbs, pictures and numbers to avoid>
+  LAYOUT       <4:5 or 1:1>, view: <cutaway, as if ...>, zone map in %
+  WORDS        Headline: "<7 words or fewer>" <size, colour, contrast>
+               Other: "<up to 3 labels or lines>"
+  IMAGE PROMPT <ready to paste, no text in the image>
+  FEED COPY    <first line, primary text, headline, button>
+  NOTES        <links to confirm, claims left out, MISSING>
+
+example:
+  business: sprout
+  input: |
+    [the skill]
+
+    Doubt: "Does a gummy even do anything?" (gut-fix seeker, brand
+    file).
+    Facts (sprout/brand.md):
+    - 1 pack: 60+ ingredients, 21 vitamins & minerals, 6 g prebiotic
+      fiber (a branded fiber blend, inulin listed). Label.
+    - Approved: "Supports digestion and gut health".
+    - Risky: "61% of Americans experience weekly digestive issues"
+      (footnote only says "Source").
+    Colours: deep forest #002C17, sunflower #FFCC2E, white.
+    Type: Work Sans bold and medium.
+    Offer: $29.99 first order with text sign-up, renews at $49.99
+    every 4 weeks.
+    Photos: [pouch front]
+  output: |
+    TESTS        Hidden: pass, fiber meeting gut bacteria can't be
+                 photographed. True: pass, with one link for the brand
+                 to confirm. Teaches: pass, "gut bacteria feed on
+                 fiber" is worth knowing without the brand.
+    CHAIN        6 g prebiotic fiber meets the bacteria already in your
+                 gut, they feed on it, so it supports digestion.
+                 Links: 6 g per pack (label); bacteria feed on
+                 prebiotic fiber (common knowledge, brand to confirm);
+                 "supports digestion and gut health" (approved).
+    FROZEN LINK  The yellow fiber strands arriving and the blue
+                 bacteria gathering on them.
+    PARTS KEY    prebiotic fiber = thin yellow strands; gut bacteria =
+                 small soft blue spheres; the gut = a plain cream tube,
+                 never anatomy.
+    HONESTY      "Supports digestion", never "fixes bloating". The 61%
+                 figure has no source, so it's out. Nothing about energy
+                 or immunity. Supplements have claim rules: the brand
+                 reads this plan before any image is made.
+    LAYOUT       4:5, 1080 x 1350, view: cutaway of the cream tube, as
+                 if 1 millimetre tall. Headline 0-15% / meeting point
+                 20-75%, left of centre / labels on the parts / pouch
+                 photo small, lower right, 80-97% / source line 97-100%.
+    WORDS        Headline: "6g of fiber to support digestion" Work Sans
+                 bold 72 px, white on deep forest, 15.3:1.
+                 Other: labels "Prebiotic fiber" (sunflower, 10.1:1) and
+                 "Gut bacteria" (white, 15.3:1), Work Sans medium 36 px,
+                 thin white callout lines; source line "Per pack, from
+                 the label", 30 px white. 3 other things to read.
+    IMAGE PROMPT  A clean 3D scientific illustration, 4:5, a cutaway
+      inside a plain cream tube with soft walls, seen as if 1
+      millimetre tall. Thin yellow strands drift in from the upper left
+      and settle; small soft blue spheres gather calmly along them,
+      left of centre. Soft light, deep forest green background beyond
+      the tube, a little haze for scale. A calm empty band at the top
+      and an empty corner at lower right. No anatomy, no people, no
+      clinic. No text, letters, numbers or logos anywhere.
+    FEED COPY    First line: Does a gummy do anything? Each pack brings
+                 6g of prebiotic fiber, food for your gut bacteria.
+                 Primary text: Sprout supports digestion and gut health.
+                 One pack a day, torn straight across the top. $29.99
+                 first order with text sign-up. Renews at $49.99 every
+                 4 weeks.
+                 Headline: Food for your gut (17 characters)
+                 Button: Shop now
+    NOTES        Confirm with the brand: "bacteria feed on prebiotic
+                 fiber". Left out: the vitamin C study (its own ad),
+                 the 61% figure, energy and immunity.
+
+tweaks:
+  - what: The frozen link
+    how: Ask for the snag link instead, such as the bacteria with nothing arriving, for buyers who haven't tried any fix yet.
+  - what: The view
+    how: Name the size you want ("as if inside one fibre of the fabric"). The parts key stays the same at any size.
+  - what: Your product in the frame
+    how: Say "no product" for a pure teaching image, or keep the real photo small at an edge for buyers who already know you.
+  - what: The size
+    how: Ask for 1:1 as well as 4:5. It redraws the zone map for each size instead of stretching one.
+
+judge:
+  - All three tests are answered, and every link is marked sourced or common knowledge.
+  - One link is frozen, never the whole chain as numbered steps.
+  - Each part keeps one name, colour and shape, and no picture shows more than the approved claim.
+  - The headline is 7 words or fewer, with at most 3 other things to read, each at 30 px or more and 4.5:1 contrast.
+  - The prompt asks for no text, people, anatomy or clinic.
+
+test:
+  - Give it a product whose result you can photograph, such as a stain lifting. It should say a real photo suits it better.
+  - Check every label and number against its source.
+  - Show the finished image to someone for two seconds and ask what the product does. Their answer should match the frozen link.
+  - Put it beside a frame from your 3D video. The parts should share colours, shapes and names.
+
+improve:
+  - Write how your product works as a sourced chain into "What you need" in the skill file, so step 2 starts from your facts.
+  - Save the parts key in your brand file, so your stills and 3D videos look like one family.
+  - Add your approved verbs and banned words to step 4, for example "supports" yes, "repairs" no.
+  - Pair it with "Show what your product does where no camera can see" when you want the video version too.
+
+works_best_with:
+  tools:
+    - {name: "Nano Banana 2.1", why: "Follows a detailed scene description well and keeps the parts' colours steady across retries."}
+    - {name: "GPT Image 2.5", why: "Lets you point at one part to fix it without remaking the rest of the cutaway."}
+    - {name: "Canva or Figma", why: "Sets the headline, callout labels and your product photo on top, so every word is exact."}
+  inputs:
+    - "Diagrams or microscope images from your supplier or a published study, so the parts look like the real thing"
+    - "The study or test report itself, so every label can name its real source"
+    - "Three or four buyer phrases about what they think happens inside, so the feed copy answers their real doubt"
+
+terms:
+  - term: Cutaway
+    meaning: A picture that slices through something to show what's happening inside it.
+  - term: Chain
+    meaning: How something works, written as 2 to 4 linked steps. This meets that, that happens, so you get this.
+  - term: Parts key
+    meaning: A list giving each part one name, colour and shape, kept the same in every image and video.
+  - term: Contrast
+    meaning: How much the words stand out from what's behind them. 4.5:1 is the usual floor for easy reading.

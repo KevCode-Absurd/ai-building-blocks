@@ -1,182 +1,207 @@
 new_slug: turn-your-animated-film-script-into-consistent-clips
 name: "Turn your animated-movie script into video clips"
-summary: "Give it your script and product photo. You get image and clip prompts with the same characters, light and look throughout."
+summary: "Your script and photos become an avatar, sheets, a storyboard and clips with steady faces and light."
 job: make-video-ads
 
 headline: "Turn your animated-movie script into video clips"
-subhead: Give it an approved script and your product photo with its exact label words. It plans the light for each part of the story, writes a casting card per character, then writes still prompts, clip prompts and cuts for your AI image and video tool.
+subhead: Give it an approved script and your product photos with their exact label words. It casts the character, makes reference images and sheets, plans the light for each part of the story, draws a storyboard, then writes the clips and the edit. It stops for your OK three times.
 
 explain: |
   The 3D animated-film look is easy to start and hard to hold. Over a few clips the faces turn toy-like, a character changes between shots, the light jumps around inside one moment, and the label on your pack turns to gibberish.
 
-  This skill holds the look by repeating three things without change. A light key for each part of the story, so every shot of the same moment is lit the same way. A casting card for each character, pasted in the same words every time. A short look line at the end of every prompt. Each shot is written in one fixed order (who, what they do, where, camera, light, look), and your product's photo and label words go into every shot it appears in. When a shot misses, it reruns, simplifies, then changes one thing.
+  This skill runs the whole process in six stages. It reads the script and gives each part of the story its own light. It writes an avatar card for the character and waits for your OK. It makes reference images, then a sheet with the character from every angle, a product sheet from your photos and a sheet for each room, plus lock lines pasted into every prompt. You approve those, then a storyboard with one frame per shot. Only then does it write clips that describe just the motion, the voice and the edit.
 
 when:
-  - You have a script written for the animated-feature look and need prompts for an AI tool.
+  - You have a script written for the animated-feature look and want to make it with AI tools.
   - Your animated clips keep drifting into a cartoon or changing the character.
   - Your product's label keeps coming out wrong in generated shots.
 
 you_give:
-  - The approved script and its scenes
-  - A real product photo and every line of label text
+  - The approved script and its scenes, and its cast note if it has one
+  - Real product photos (front, side, top) and every line of label text
   - How the product is used
   - The buyer's moment, your brand's light and approved claims (optional)
   - Your video tool's clip lengths and reference limits (optional)
 you_get:
-  - A light plan with one key per story part
-  - A look line and a casting card for each character
-  - A list of places, with a still prompt for each empty place
-  - Still prompts and clip prompts in a fixed order, with cuts planned
+  - An avatar card and 3 or 4 reference image prompts to pick from
+  - A light plan, sheet prompts for the character, product and rooms, and lock lines
+  - A storyboard with one frame and one shot card per shot
+  - Clip prompts and an edit list with cuts, captions, music and the end card
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Paste the approved script, ideally from "Get a warm animated film ad script".
-  - Attach your product photo and type out every line of the label.
-  - Make the casting stills and place stills first, then the first frame of each shot. Approve each before any clip.
-  - If a still misses, rerun the same prompt once before you change any words.
+  - Paste the approved script, ideally from "An ad that looks like an animated movie", and attach your product photos with every label line typed out.
+  - Approve or change the avatar card, then make the reference images and say which one you picked.
+  - Make and approve the sheets and lock lines, then make and approve the storyboard frames.
+  - Make each clip from its approved frame. If a take misses, rerun it once before you change any words.
 
 how_it_works:
-  - title: Plans the light first
-    text: One light key per part of the story, used word for word in every shot of that part.
-  - title: Writes a look line and casting cards
-    text: A short line for the render and a fixed description per character, never more than two people a shot.
-  - title: Lists the places
-    text: Each room with its fixed landmarks and where the light comes in, made once as an empty still.
-  - title: Writes shots in one order
-    text: Who, what they do in countable beats, where, camera, light key, then the look line.
-  - title: Keeps the product exact
-    text: Attaches the photo and types each label line with its colour, with a hand or mug for size.
-  - title: Plans cuts and retakes
-    text: Each join cuts on an action, a look, a close-up or a time change. Misses are rerun, simplified, then changed one thing at a time.
+  - title: Reads the script
+    text: Splits it into story parts, gives each part one light key, and writes one look line.
+  - title: Writes the avatar card
+    text: A made-up adult with age, build, face, hair, clothes, one item and voice, in fixed words. It stops for your OK.
+  - title: Makes reference images
+    text: Three or four images of the character in the look. You pick one.
+  - title: Builds the sheets
+    text: The character from five angles, the product with each label line and its colour, each room empty, and lock lines. It stops for your OK.
+  - title: Draws the storyboard
+    text: One frame per shot in a fixed order (who, action, place, camera, light, look), with countable beats and a continuity check. It stops for your OK.
+  - title: Turns it into video
+    text: Each frame starts its clip, the prompt says only the motion, then voice, cuts and the edit. Misses are rerun, simplified, then changed one thing at a time.
 
 output_shape: |
-  LIGHT PLAN
-  <part 1>: <source, colour, shadows>
-  <part 2>: <...>   <part 3>: <...>
-
-  LOOK     <one line, at the end of every prompt>
-  CASTING  <name>: <age, build, face, hair, clothes, item>
-  PLACES   <room, landmarks, where light enters>
-
-  STILL <n>  <subject>. <action>. <place>. <camera>. <light key>.
-             <look line>. Attach: <image> = <its job>
-
-  CLIP <n>   From still <n>. <action beats>. <camera move>.
-             Dialogue: <speaker>: <line>
-             Cut out: <on the action / on a look / insert / time cut>
+  STAGE 0  LIGHT PLAN   <part>: <source, colour, shadows> (one per part)
+           LOOK         <one line, at the end of every prompt>
+  STAGE 1  AVATAR CARD  <role, age, build, face, hair, clothes, item,
+           voice, never change>                  > STOP for approval
+  STAGE 2  REFERENCES   <3 or 4 prompts>  Picked: <n>
+  STAGE 3  SHEETS       Character: <5 angles, expressions, size>
+                        Product: <front, side, top, label lines>
+                        Rooms: <landmarks, where light enters>
+           LOCK LINES   <look, casting, product, light key>
+                                                 > STOP for approval
+  STAGE 4  STORYBOARD
+           FRAME <n>  <subject>. <action>. <place>. <camera>. <light
+                      key>. <look line>. Attach: <sheet> = <its job>
+           Card: <beats, focus, line (speaker), length, sound>
+           Continuity: <sides of frame, eyelines, hands, product state>
+                                                 > STOP for approval
+  STAGE 5  CLIP <n>   From frame <n>. <action beats>. <camera move>.
+                      Dialogue: <speaker>: <line>
+                      Cut out: <on the action / on a look / insert /
+                      time cut>
+           EDIT LIST  <order, captions, music, end card, safe zones>
 
 example:
   business: sprout
   input: |
     [the skill]
 
-    Script: the 28-second narrated script from "Get a warm animated
-    film ad script". Parts: And (hallway, lines 1 and 2), But
+    Script: the 28-second narrated script from "An ad that looks like
+    an animated movie". Parts: And (hallway, lines 1 and 2), But
     (kitchen, lines 3 and 4), Therefore (front door, lines 5 to 7).
     Light keys as given in the script.
-    Casting: a stylised animated woman, late thirties, slim, dark
-    curly hair tied up, rust jumper, canvas tote on her left
-    shoulder.
+    Cast note: the mum carries it, silent, with a narrator. Casting:
+    a stylised animated woman, late thirties, slim, dark curly hair
+    tied up, rust jumper, canvas tote on her left shoulder.
     Photos: [pouch front] [daily pack in a hand] [gummies in a palm]
     Pouch label: big yellow wordmark "Sprout" on glossy deep green,
     yellow bear face top right, "28 Daily Packs" at the bottom.
     Daily pack label words: not captured.
     Tool: 8-second clips, 2 reference images.
   output: |
-    LIGHT PLAN
+    STAGE 0  LIGHT PLAN
     And: soft grey daylight through the front-door glass, gentle
       shadows.
     But: flat overhead kitchen light, cool, busy shadows.
     Therefore: low warm sun through the open front door, long soft
       shadows.
+    LOOK  stylised 3D animated feature, real-looking light on designed
+      shapes, true fabric, wood and foil, shallow lens.
 
-    LOOK     stylised 3D animated feature, real-looking light on
-             designed shapes, true fabric, wood and foil, shallow lens.
-    CASTING  Mum: a stylised animated woman, late thirties, slim,
-             oval face, dark curly hair tied up, rust jumper, canvas
-             tote on her left shoulder.
-    PLACES   1 Hallway: front door at frame right with a glass panel,
-               a small table with a bowl by the door.
-             2 Kitchen: counter along the back wall, sink at left,
-               wall clock above the sink.
+    STAGE 1  AVATAR CARD
+    Mum: a stylised animated woman, late thirties, slim, oval face,
+    dark curly hair tied up, rust jumper, canvas tote on her left
+    shoulder. Silent; the narrator speaks. Never change: hair tied
+    up, the rust jumper, the tote on the left.
+    > STOP: approved.
 
-    STILL 3 (line 3, first frame)  Mum. Stands at the sink, eyes on
-      a used shaker lying in it, shoulders starting to drop. Kitchen,
-      a plain unlabelled tub of green powder on the counter. Medium
-      shot, eye level, focus on her face and the shaker. Flat
-      overhead kitchen light, cool, busy shadows. [LOOK]
-      Attach: casting still = face, hair and clothes only.
+    STAGE 2  REFERENCES (4 prompts; one shown)
+    Mum [as the card], standing, hands at her sides, neutral face,
+    plain light-grey background, soft even light. [LOOK]
+    Picked: 3.
 
-    CLIP 3 (5 s, line 3)  From still 3. Beats: her shoulders drop,
+    STAGE 3  SHEETS
+    Character: image 3 attached. Front, three-quarter left and right,
+      side, back; a tired breath out, a small smile; holding the
+      pouch, which reaches from her wrist to her elbow. [LOOK]
+    Product: pouch front attached = yellow "Sprout" wordmark on deep
+      green, bear face top right, "28 Daily Packs"; front, side, top.
+      Daily pack: shape and size from the hand photo, front turned
+      toward her palm (label words MISSING).
+    Rooms: 1 Hallway: front door at frame right with a glass panel,
+      a small table with a bowl by the door. 2 Kitchen: counter along
+      the back wall, sink at left, wall clock above the sink.
+    LOCK LINES: [LOOK] / [Mum as the card] / the Sprout pouch exactly
+      as the product sheet / the part's light key.
+    > STOP: approved.
+
+    STAGE 4  STORYBOARD (2 of 7 frames)
+    FRAME 3  Mum. Stands at the sink, eyes on a used shaker lying in
+      it, shoulders starting to drop. Kitchen, a plain unlabelled tub
+      of green powder on the counter. Medium shot, eye level, focus
+      on her face and the shaker. Flat overhead kitchen light, cool,
+      busy shadows. [LOOK] Attach: character sheet = face, hair and
+      clothes only.
+    Card: beats: shoulders drop, a breath out, two fingers nudge the
+      shaker aside. Narrator line 3. 5 s. Sound: a tap drip.
+    FRAME 7  Mum at the open door, the pouch in her left hand, front
+      to camera. Close on hand and pouch. Low warm sun, long soft
+      shadows. [LOOK] Attach: product sheet = label exactly.
+    Continuity: she walks screen right in every shot; the pouch is
+      always in her left hand; the daily pack is torn from frame 5 on.
+    > STOP: approved.
+
+    STAGE 5  CLIP 3 (5 s)  From frame 3. Beats: her shoulders drop,
       she breathes out, two fingers nudge the shaker aside. Camera
       holds still. Dialogue: Narrator: But the powder wants a scoop,
-      a shaker and a rinse.
-      Cut out: on the action (her hand reaches for her keys).
+      a shaker and a rinse. Cut out: on the action (her hand reaches
+      for her keys).
+    EDIT LIST: clips in line order; narrator voice designed from "warm
+      adult, quick but calm"; soft music from line 5; offer card over
+      frame 7 from current terms, inside the safe zone.
 
-    STILL 5 (line 5, first frame)  Mum. Her right hand lifts one
-      daily pack from the bowl by the door. Hallway, door open. Close
-      shot on her hand and the bowl, slightly high angle. Low warm
-      sun through the open front door, long soft shadows. [LOOK]
-      Attach: daily pack in a hand = shape, size and grip. Pack front
-      turned toward her palm (label words MISSING).
-
-    CLIP 7 (3 s, line 7)  From still 7. Beats: she turns the pouch
-      so its front faces camera, then holds. Camera holds still.
-      No dialogue. Attach: pouch front = yellow "Sprout" wordmark on
-      deep green, bear face top right, "28 Daily Packs".
-
-    (cut for length: the full run also had the casting and place
-    still prompts, stills and clips for lines 1, 2, 4 and 6, and a
-    cut list)
-
-    MISSING: the daily pack's own label words. Its front stays
-    turned away until they're supplied.
+    (cut for length: the full run also had the other reference
+    prompts, frames 1, 2 and 4 to 6, and clips for lines 1, 2 and 4
+    to 7)
 
 tweaks:
   - what: Light keys
     how: Name your brand's light ("bright and sunny, never gloomy") and the turn's key is built from it. The snag's key stays the least kind of the three.
   - what: Clip limits
-    how: Give your tool's clip lengths and reference slots. It splits long actions across clips and attaches only the images each shot needs.
+    how: Give your tool's clip lengths and reference slots. It splits long actions across clips and attaches only the sheets each shot needs.
   - what: Inside views
-    how: If your brand file says how the product works, it adds a cutaway with no people, showing only the parts you name.
+    how: If your brand file says how the product works, the storyboard adds a cutaway with no people, showing only the parts you name.
   - what: An animal lead
-    how: Say the lead is an animal and the casting card describes the animal, with "stylised animated" in front of it.
+    how: Say the lead is an animal and the avatar card describes the animal, with "stylised animated" in front of it.
 
 judge:
-  - Every shot in the same story part has the same light key, word for word.
-  - The look line and casting cards never change between prompts.
-  - No shot has more than two people in it.
-  - Every prompt with the product spells out each label line, or says MISSING.
+  - It stopped for your OK after the avatar card, the sheets and the storyboard.
+  - Every frame in the same story part has the same light key, word for word.
+  - The look line and casting card never change between prompts.
+  - No shot has more than two people, and every product shot spells out each label line or says MISSING.
   - No studio, film or character names anywhere.
 
 test:
-  - Line up the light keys across all still prompts. They should change only where the story part changes.
-  - Make the casting still and two shots from different parts. The character should match in both.
-  - Check every product shot for the attached photo and typed label words.
-  - Run one still prompt twice before rewriting it. If both come out toy-like, simplify the shot before blaming the words.
+  - Line up the light keys across all frame prompts. They should change only where the story part changes.
+  - Make the character sheet and two frames from different parts. The character should match in both.
+  - Check every product frame for the attached product sheet and typed label words.
+  - Run one frame prompt twice before rewriting it. If both come out toy-like, simplify the shot before blaming the words.
 
 improve:
-  - Once your look line works, paste it into step 2 of the skill file, so every ad starts from tested wording.
+  - Once your look line works, paste it into stage 0 of the skill file, so every ad starts from tested wording.
   - Add your label lines with their colours to "What you need".
-  - Save approved casting cards in your brand file and reuse them across ads.
-  - Pair it with a skill that writes an animated film ad script first, and one that adds captions in your brand font afterwards.
+  - Save approved avatar cards and character sheets in your brand file, so the next ad starts at stage 4.
+  - Pair it with "An ad that looks like an animated movie" first, and a captions skill in your brand font after.
 
 works_best_with:
   tools:
-    - {name: "Nano Banana 2.1", why: "Takes up to 14 reference images and keeps up to four characters the same, so your reference stills match."}
-    - {name: "Veo 3.1", why: "Starts each clip from your approved still and can make sound with it, in 8-second clips."}
+    - {name: "Nano Banana 2.1", why: "Takes up to 14 reference images and keeps up to four characters the same, so your sheets and frames match."}
+    - {name: "Veo 3.1", why: "Starts each clip from your approved frame and can make sound with it, in 8-second clips."}
     - {name: "Kling 4.0", why: "Takes up to 10 reference images in one job, so figures and product stay the same from shot to shot."}
     - {name: "Gemini Omni Flash", why: "Lets you fix one thing in a clip by asking, while the rest of the shot stays the same."}
   inputs:
-    - "Photos of a real room like the buyer's, so the places look lived in"
-    - "The flat label artwork, so the product reads right in every still"
-    - "A short voice note for each character (age, pace, accent), so voices stay the same in every clip"
+    - "Photos of a real room like the buyer's, so the rooms look lived in"
+    - "The flat label artwork, so the product reads right in every frame"
+    - "A short description of each voice (age, pace, accent), so voices stay the same in every clip"
 
 terms:
+  - term: Avatar card
+    meaning: A short, fixed description of who carries the ad, from their look to their voice, approved before any image is made.
   - term: Light key
     meaning: One line describing the light for a part of the story, used for every shot in that part.
-  - term: Casting card
-    meaning: A short, fixed description of a character, pasted the same way in every prompt.
+  - term: Lock lines
+    meaning: Short lines for the look, the character, the product and the light, pasted word for word into every prompt.
   - term: Insert
     meaning: A close-up of a detail, such as hands or the product, cut into a scene.
   - term: Cutaway

@@ -1,14 +1,14 @@
 ---
 name: get-skeleton-ad-script-that-keeps-people-watching
-description: Use when an ad should open on a "what happens if..." question and answer it like a comedy bit, with one friendly cartoon skeleton whose situation climbs four rungs, each a step sillier than the last. Finds the one thing that grows, picks how each rung is labelled, lands the product once and checks every counted or timed claim. Writes a narrated video of 15, 25 or 35 seconds, or one still.
+description: Use when an ad should open on a "what happens if..." question and answer it like a comedy bit, with one friendly cartoon skeleton whose situation climbs four rungs, each a step sillier than the last. Finds the one thing that grows, picks how each rung is labelled, lands the product once and checks every counted or timed claim. Writes a narrated video script of 15, 25 or 35 seconds, with a cast note for the video block.
 ---
 
 # Get a skeleton ad script that keeps people watching
 
-You write a short narrated script, or one still, built the way a sketch is built: one odd situation, pushed one step further each time until it tips over. A friendly cartoon skeleton lives it for the viewer. The open question keeps them watching; the peak answers it.
+You write a short narrated video script, built the way a sketch is built: one odd situation, pushed one step further each time until it tips over. A friendly cartoon skeleton lives it for the viewer. The open question keeps them watching; the peak answers it. You end with the script and a cast note; the skeleton shots skill makes the video from there.
 
 ## What you need
-- **Brief** (required): the product, the buyer, how much they already know, and the length (15, 25 or 35 seconds) or `still`.
+- **Brief** (required): the product, the buyer, how much they already know, and the length (15, 25 or 35 seconds).
 - **Product facts** (required): the main benefit, the old way it replaces, how it's used, and how it must be shown.
 - **Claims and offer** (required): approved claims, banned claims, any time points with their source, the offer and the guarantee.
 - **Buyer's words** (optional): review lines about the old way. They make rung 1 ring true.
@@ -21,7 +21,7 @@ You write a short narrated script, or one still, built the way a sketch is built
    - **Which way it runs.** `Without it`: the old way, or doing nothing, gets worse, and the payoff is a pile-up the viewer enjoys seeing coming. `With it`: the product's good effect spreads, and the payoff is a win. Use `with it` only if the brand holds a fact for every rung that shows a result.
    - **What grows on screen.** A pile (things stack up), a space (a shelf bows, a door won't shut), people (onlookers go from a glance to a queue) or reach (the effect travels from the desk to the office to the street). Pick the one that can grow in a single place.
    - **The label** that counts each rung on screen: count (`TUB 5`), distance (`NEXT DESK`), crowd (`6 PEOPLE`) or time (`WEEK 3`). Prefer the first three. A time label beside a result reads as a promise of when it will happen, so use time only with sourced time points, or with no result attached.
-3. **Write the question.** One open question about the viewer's habit, never the product, that the peak will answer. Specific beats broad: "How many half-used tubs can one cupboard hold?" beats "What if you kept using powders?" Under 10 words; 7 or fewer for a still.
+3. **Write the question.** One open question about the viewer's habit, never the product, that the peak will answer. Specific beats broad: "How many half-used tubs can one cupboard hold?" beats "What if you kept using powders?" Under 10 words.
 4. **Climb four rungs.** For each next rung ask "if that's true, what else is true?"
    - Rung 1 is true to life. The viewer nods.
    - Rung 2 is a bit much.
@@ -30,7 +30,8 @@ You write a short narrated script, or one still, built the way a sketch is built
    Each rung is one narrated line that opens on its label, said aloud, then one picture. Only the dial moves; nothing else changes. A 15-second ad drops rung 2. Never more than five rungs.
 5. **Turn once, then close.** The product lands on one line. `Without it`: straight after the peak ("Or you..."), as the skeleton swings round to face it. `With it`: in rung 1, and every later rung is its effect. Carry one approved claim at most, then the close: the offer as narration, with exact terms on screen.
 6. **Hold the claims.** A rung with a number tied to a result, a time by which something happens, or a health effect is a claim, and comes only from the approved claims. A label with no result is free. Plainly silly exaggeration is free. The pile-up is things, rooms and mess, never an illness and never a named rival. The skeleton's bones never change.
-7. **Write it as video or as a still** (below).
+7. **Write the video** (below).
+8. **Write the cast note** (below).
 
 ### Video
 - One calm narrator, "you", present tense, short lines. Nobody on screen speaks.
@@ -42,17 +43,14 @@ You write a short narrated script, or one still, built the way a sketch is built
 - Reaction figures (optional): made-up adults described by role and clothes. They stay silent and go from a glance, to a stare, to backing away.
 - No words, signs, clocks or calendars in the picture; labels are added in editing. No real people, children or known characters. Friendly, never horror: no decay, blood or dark scenes.
 
-### Still
-- One frame. For buyers who don't see the problem yet: the peak, with the product small at the edge or left out. For buyers who know the product: the turn, the product in the skeleton's hand, the offer underneath.
-- For buyers comparing options: two panels, rung 1 and the peak, same camera and the same skeleton.
-- Words: the question as the headline (7 words or fewer), one label per panel, and one foot line with the offer if there is one. 15 words in all. No speech bubble.
-- Write the image prompt in this order: camera, subject, action, place, look and light. The product comes from its photo, at true size against the skeleton's hand.
-
 ### The skeleton
 Default: a lanky adult cartoon skeleton, warm ivory bones with a soft matte finish, big round cartoon eyes set in the sockets, white with dark pupils, no clothes. Two options:
 - **Signature item:** one thing it wears in every ad (a cap, a scarf), so it becomes a character people know from ad to ad.
 - **Dressed for the place:** an outfit that fits the world, with skull and hands still showing.
 It is never shown inside a body and never drawn as a toy for children. Its jaw stays still. Feelings show in the eyes and the pose.
+
+### The cast note
+Say who carries the ad and why, in two or three lines: the skeleton (default, with a signature item, or dressed for the place) and any silent reaction figures, by role and clothes. Pick from the buyer and the place: a signature item for a series, dressed for the place when the world needs explaining. The video block turns this into the avatar card.
 
 ## What you hand back
 - The game sentence, the way it runs, what grows, the label type, and one line on why.
@@ -60,7 +58,7 @@ It is never shown inside a body and never drawn as a toy for children. Its jaw s
 - A script table: `# | label | narration | picture (wind-up, change, reaction) | seconds`.
 - The turn and close, with the on-screen offer.
 - A timing map with the word count against the target.
-- For a still: the layout, every word, and the image prompt.
+- The cast note: who carries the ad, and why.
 - A claims list: each label and claim, marked free or with its source.
 - `MISSING:` lines.
 
@@ -70,7 +68,8 @@ It is never shown inside a body and never drawn as a toy for children. Its jaw s
 - Read the rungs aloud out of order: a listener can put them back.
 - The product lands once.
 - Every result, time or count claim is approved, and no time label carries an unsourced result.
-- The word count is within 10% of the target. A still has 15 words or fewer.
+- The word count is within 10% of the target.
+- The cast note names the skeleton's look and gives its reason.
 
 ## If something is missing
 Write `MISSING: <what>`. No old way to replace: run it `with it`, or ask. No time points: use count, distance or crowd labels. No buyer words: build the world from the habit and mark it `inferred`.

@@ -1,11 +1,11 @@
 ---
 name: get-wordless-openings-people-watch-to-end
-description: Use when you need a 4 to 6 second wordless opening to put in front of an ad you already have, where the product, something it's made of, or the old way it replaces does one motion that visibly finishes (levels, fits, comes away whole, wipes clean, sorts). Writes a line-up of 2 or 3, then a start frame, an end frame and a clip prompt for each, for an AI image and video tool.
+description: Use when you need a 4 to 6 second wordless opening to put in front of an ad you already have, where the product, something it's made of, or the old way it replaces does one motion that visibly finishes (levels, fits, comes away whole, wipes clean, sorts). Writes a line-up of 2 or 3, then runs the video process with the product as the avatar (product card, product and set sheets, a start and end frame per opening, clip prompts) for an AI image and video tool.
 ---
 
 # Get wordless openings people watch to the end
 
-You write two or three openings, each built on a different finish, and the prompts to make them. An opening has one job: keep the right people watching long enough to reach the ad behind it. Judge each one on three moments: a first frame already in motion, a finish the eye waits for, and a last frame that hands over to the ad without a jump.
+You write two or three openings, each built on a different finish, and take them through the video process. There is no person: the product is the avatar. An opening has one job: keep the right people watching long enough to reach the ad behind it. Judge each one on three moments: a first frame already in motion, a finish the eye waits for, and a last frame that hands over to the ad without a jump. Stop for approval after stages 1, 3 and 4.
 
 ## What you need
 - **Product** (required): real photos labelled by what they show (pack front, product out of the pack, in a hand, a surface close-up), how it opens, pours or closes in the brand's words, its real motions and sounds, what it's made of, what it replaces.
@@ -14,38 +14,58 @@ You write two or three openings, each built on a different finish, and the promp
 - **Your tool** (optional): shortest clip length, and whether it can take a start and an end frame. Default: 4 seconds, start and end frames.
 
 ## Steps
-1. **Pick candidates by finish.** Use the same five finishes as the satisfying motion script skill:
+
+### Stage 0: Script in (the line-up)
+1. **Pick candidates by finish,** the same five finishes as the satisfying motion script skill:
    - **Level:** a pour or fill settles at its end (a glass to its etched line, a scoop levelled, a palm of gummies).
    - **Fit:** a part meets its place (a lid clicks, a cap stops on its thread, a zip closes end to end).
-   - **Release:** something comes away whole (a seal peeled in one piece, a loaf out of its tin, film off a new screen).
+   - **Release:** something comes away whole (a seal peeled in one piece, a loaf out of its tin).
    - **Smooth:** a surface gets done (one wipe leaves a clean stripe, water beads and runs off).
    - **Order:** mess becomes order (bolts sorted into a tray, four old gadgets swept aside and one set down).
-   Start from the product's real motions. A motion nobody described is one the tool will invent, so mark it "inferred". The thing in focus is the product out of its pack, something it's made of, or the old way; a sealed pack turning on a stand is a pack shot.
-2. **Shape the clip in thirds.** Frame 1 is already part done (the pour mid-air, the seal a third up). The first two thirds carry the motion toward its end, with the end kept in doubt (a glass full by second 1 wastes the clip). The finish lands in the last third, then everything holds still for the final half second with the product in view and its printing clear.
-3. **Choose the camera and look.** Locked by default. Overhead and locked for fills, sorts and spreads. A slow push in only if it stops when the motion does. Take the light, distance and focus from the ad's first frame, so a phone-filmed ad gets a phone-filmed opening. Leave out style words like dreamlike, epic, glossy, 3D or render, and any camera brand or film title.
-4. **Write the physics in plain words.** Put "real speed" once, near the top. Never write slow motion, time-lapse, sped up, frozen, bullet time or a frame rate, and say "a steady pour", not "a slow pour", which tools read as slow playback. Use plain verbs (pour, settle, roll, peel, click, slide, land), never explode, shatter, burst or crash. Say how the material behaves when it matters:
-   - thin liquid falls in a clear stream and levels at once; thick liquid folds down like a ribbon and takes its time to level
-   - powder drops with a little dust and lands as a cone; small solids tumble and stop
-   - fabric hangs by its weight; foam squashes and springs back
-   - hard parts keep their shape and click; a cap turns along its thread and stops
-   State any count that matters ("8 gummies").
-5. **Name the sound** on its own lines: `SFX:` the motion and its finish (a soft tap, the click), `Ambient noise:` the room. No music, no voice.
-6. **Show the line-up and wait for a yes.** 2 or 3 rows that differ by finish and by what's in focus, not by wording. Each row: the focus, the finish and what "done" looks like, the place and camera, the sound, the last frame, and one sentence on why this buyer would wait for the end. A row with no answer to that gets replaced. Ask once about the overlay.
-7. **Make two stills per approved row,** from the labelled photos:
-   - the **start frame**: the motion visibly part done, everything the motion uses already in frame, one subject that reads at thumbnail size;
-   - the **end frame**: the finished state, still, product in view, printing clear, in the place and light of the ad's first frame.
-   Keep the top seventh and bottom third of a 9:16 frame free of anything that matters, since the app covers them.
-8. **Make one clip,** at the shortest length, from both stills if your tool takes a first and last frame, or from the start frame and the prompt if not. Check: frame 1 already moving; the finish in the last third; nothing new after it; the last half second still; the last frame sits next to the ad's first frame without a jump; the sound is the motion's own, with no music or voice. Then make the rest.
-9. **Overlay,** added later on a copy, raw clip kept: up to 4 words that leave a question hanging ("Wait for it", "POV:", or a buyer's thought as it would begin). Never an offer, price, claim or call to action. In the brand font, just below the top safe margin, never over the thing in focus.
-10. **Deliver** each opening as the raw clip, the clip with overlay, its end frame as a picture, and one line on what it shows. Test the same ad with each opening in front, as separate ads.
+   Start from the product's real motions. A motion nobody described is one the tool will invent, so mark it "inferred". A sealed pack turning on a stand is a pack shot, not an opening.
+2. **Shape each in thirds.** Frame 1 is already part done (the pour mid-air, the seal a third up). The first two thirds carry the motion toward its end, with the end kept in doubt. The finish lands in the last third, then everything holds still for the final half second with the product in view and its printing clear.
+3. **Show the line-up and wait for a yes.** 2 or 3 rows that differ by finish and by what's in focus, not by wording: the focus, the finish and what "done" looks like, the place and camera, the sound, the last frame, and one sentence on why this buyer would wait for the end. A row with no answer to that gets replaced. Ask once about the overlay.
+
+### Stage 1: Pick the avatar (approval 1)
+The product is the avatar. Write the **product card:** the exact variant, the photos by job, how it opens and moves in the brand's words, and what never changes (shape, colour, label words, where it opens and where it never does).
+
+**Approval 1 of 3:** stop and show the product card.
+
+### Stage 2: Avatar to image
+Write 3 or 4 reference prompts of the product in the focus each row needs (out of the pack, a material close-up), from its labelled photos, in the light of the ad's first frame. The person picks one per row. Nothing inside the pack is drawn without a photo of it.
+
+### Stage 3: Product and set sheets (approval 2)
+- **Product sheet:** front, side, top, the label word for word, and each state the motion passes through (sealed, part open, open, empty).
+- **Set sheet:** the place, light, distance and focus of the ad's first frame, so a phone-filmed ad gets a phone-filmed opening. Camera locked by default; overhead and locked for fills, sorts and spreads; a slow push in only if it stops when the motion does.
+- **Lock lines:** the product line, the set line and a **material line** in plain words: thin liquid falls in a clear stream and levels at once; thick liquid folds like a ribbon and takes its time; powder drops with a little dust and lands as a cone; small solids tumble and stop; fabric hangs by its weight; foam squashes and springs back; hard parts keep their shape and click. State any count that matters ("8 gummies").
+
+**Approval 2 of 3:** stop and show the sheets and lock lines.
+
+### Stage 4: Storyboard (approval 3)
+Two frames and one shot card per approved row:
+- **Start frame:** the motion visibly part done, everything the motion uses already in frame, one subject that reads at thumbnail size.
+- **End frame:** the finished state, still, product in view, printing clear, in the place and light of the ad's first frame.
+- **Shot card:** camera, start state, the motion timed in thirds, the finish, the hold, the sound (`SFX:` the motion and its finish, `Ambient noise:` the room; no music, no voice).
+Keep the top seventh and bottom third of a 9:16 frame free of anything that matters, since the app covers them.
+
+**Approval 3 of 3:** stop and show both frames and the shot card for every row.
+
+### Stage 5: Storyboard to video
+1. **Clip prompt per row,** from both frames if your tool takes a first and last frame, or from the start frame if not: aspect, length, "real speed" once near the top, camera, start state, timed motion, finish, the hold, the material line, counts, the SFX and ambient lines, "no words, no one speaking". Never write slow motion, time-lapse, sped up, frozen or a frame rate; say "a steady pour", not "a slow pour". Use plain verbs (pour, settle, roll, peel, click, slide, land), never explode, shatter, burst or crash. Leave out style words like dreamlike, epic, glossy or render.
+2. **Make one clip at the shortest length and check it:** frame 1 already moving; the finish in the last third; nothing new after it; the last half second still; the last frame sits next to the ad's first frame without a jump; only the motion's own sound. Make two or three takes, pick one, then make the rest.
+3. **Overlay,** added in the edit on a copy, raw clip kept: up to 4 words that leave a question hanging ("Wait for it", "POV:"). Never an offer, price, claim or call to action. In the brand font, just below the top safe margin, never over the thing in focus.
+4. **Edit and deliver:** each opening joined to the same ad with a hard cut. Deliver the raw clip, the clip with overlay, its end frame as a picture, and one line on what it shows. Test each as a separate ad.
 
 ## What you hand back
 1. **Line-up** (2 or 3 rows), with inferred motions marked.
-2. **Start and end frame prompts** for each approved row, photos attached by job.
-3. **Clip prompt** per row: aspect, length, real speed, camera, start state, timed motion, finish, the hold, material behaviour, counts, SFX and ambient lines, "no words, no one speaking".
-4. **Overlay** (or none) and the **delivery list**.
+2. **Product card** and **reference image prompts**, with the picks.
+3. **Sheet prompts** and lock lines with the material line.
+4. **Storyboard:** start frame, end frame and shot card per row, photos attached by job.
+5. **Clip prompt** per row.
+6. **Edit list:** overlay (or none) and what to deliver.
 
 ## Check before you hand it back
+- Each approval came before the next stage.
 - "Real speed" appears once and no slow-motion or time-lapse word appears.
 - One motion with a visible finish; plain verbs only.
 - The end frame is still, product in view, printing clear, matching the ad's first frame.

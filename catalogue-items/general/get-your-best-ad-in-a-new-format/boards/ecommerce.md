@@ -7,4 +7,4 @@
 ## What changes
 - Rebuild the product from its own photos, with shape, colours and label kept, whatever the new look. Show it opening and being used as the store's facts say.
 - If the original names an offer that has ended or changed, flag it and leave the words as they are. The owner decides.
-- For carousels, keep the price and offer on the last card, with the call to action.
+- Keep the price and offer where the original had them, with the call to action.

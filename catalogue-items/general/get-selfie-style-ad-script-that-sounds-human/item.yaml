@@ -1,7 +1,7 @@
 slug: get-selfie-style-ad-script-that-sounds-human
 renamed_from: ugc-selfie-ad-script-format-rules
 name: "Get a selfie-style ad script that sounds human"
-summary: "A talking-to-phone ad script, or a posted-photo still, that reads as a person and stays honest."
+summary: "A talking-to-phone ad script that reads as a person and stays honest, with a note on who should carry it."
 category: general
 boards: [ecommerce]
 type: skill
@@ -14,13 +14,12 @@ inputs:
   - {type: brand_brain, required: true}
 outputs:
   - {type: script}
-  - {type: image_prompt}
 uses: []
 example: ugc
 origin: own
 source_ids: [CES-124]
 old_name: script-format-ugc
-version: 2.0.0
+version: 2.1.0
 credits:
   - {title: "Creative best practices for performance ads", by: "TikTok For Business", url: "https://ads.tiktok.com/help/article/creative-best-practices", used: "Say what the video is about in the first seconds; a native, person-led look"}
   - {title: "Unlock the potential of Reels: Best practices for creative success using Adobe Creative Cloud", by: "Meta, on the Adobe Blog", url: "https://blog.adobe.com/en/publish/2024/11/04/unlock-potential-reels-best-practices-for-creative-success-using-adobe-creative-cloud", used: "Tall 9:16 frame, sound on, key parts inside the safe zone"}

@@ -1,0 +1,26 @@
+slug: turn-your-best-ad-into-a-still-or-carousel
+name: "Turn your best ad into a still or carousel"
+summary: "An ad you already run, remade as one image or a swipe carousel, every word kept in order and read at a glance."
+category: general
+boards: [ecommerce]
+type: skill
+role: make
+job: image
+level: advanced
+inputs:
+  - {type: script, required: true}
+  - {type: brief, required: true}
+  - {type: brand_brain, required: true}
+  - {type: product_photos, required: false}
+outputs:
+  - {type: image_prompt}
+  - {type: ad_copy}
+uses: []
+origin: own
+source_ids: [CES-003]
+version: 1.0.0
+credits:
+  - {title: "How many words do we read per minute? A review and meta-analysis of reading rate", by: "Marc Brysbaert", url: "https://doi.org/10.1016/j.jml.2019.104047", used: "Reading speed behind the 7-word headline"}
+  - {title: "The magical number 4 in short-term memory", by: "Nelson Cowan", url: "https://pubmed.ncbi.nlm.nih.gov/11515286/", used: "A headline plus at most 3 other things to read"}
+  - {title: "Typography, Human Interface Guidelines", by: "Apple", url: "https://developer.apple.com/design/human-interface-guidelines/typography", used: "Smallest readable size on a phone, behind the 30 px floor"}
+  - {title: "Understanding Success Criterion 1.4.3: Contrast (Minimum)", by: "W3C Web Accessibility Initiative", url: "https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html", used: "The 4.5:1 contrast floor for words on the image"}

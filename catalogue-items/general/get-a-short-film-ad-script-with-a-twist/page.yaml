@@ -4,7 +4,7 @@ summary: "Give it your selling idea. You get a timed shot-by-shot script for a s
 job: make-video-ads
 
 headline: "A short film ad where your product is the twist"
-subhead: Give it your selling idea and your brand file. It writes the story's turn in one line, plants a detail early that the ending pays off, and hands back a timed shot table with labelled speakers, planned to your video tool's clip lengths.
+subhead: Give it your selling idea and your brand file. It writes the story's turn in one line, plants a detail early that the ending pays off, and hands back a timed shot table with labelled speakers and a note on who carries the ad.
 
 explain: |
   Film-style ads (a photo-real scene with actors, like a short film) can carry a feeling or a small joke better than any list of features. They usually go wrong in the writing. The product turns up as a logo card after the story ends, a character "reviews" it, or the shots look lovely and nothing happens.
@@ -25,13 +25,14 @@ you_get:
   - A cast list, each person described once
   - A timed shot table with event, camera, move, line and sound, clip joins marked
   - Notes on what was inferred, how the clips split and the text to add in editing
+  - A cast note on who carries the ad and how each person sounds, ready for the clips skill
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste your selling idea and your brand file.
   - Give the total and your tool's clip length, for example "20 seconds, 10-second clips".
   - Check the turn line. If the product isn't in the "therefore", ask for another version.
-  - Take the script to "Turn your short film script into consistent clips" for the prompts.
+  - Take the script and cast note to "Turn your short-film script into video clips". It takes it from there, with the avatars, sheets, storyboard and clips.
 
 how_it_works:
   - title: Checks the fit
@@ -46,6 +47,8 @@ how_it_works:
     text: One event, at most one camera move, where people look, and feelings written as things you can see.
   - title: Fits your tool
     text: Groups shots into clips of your tool's real length and checks the story reads with the sound off.
+  - title: Writes the cast note
+    text: Who carries the ad, why that suits your buyer, each voice in plain words, and what must never change.
 
 output_shape: |
   TURN  <setup> and <what's going on>, but <snag>, therefore
@@ -63,6 +66,8 @@ output_shape: |
 
   NOTES
   - Inferred: <...>  Clips: <...>  Text in editing: <...>
+
+  CAST NOTE  <who carries it, why, voices, what never changes>
 
 example:
   business: sprout
@@ -127,6 +132,13 @@ example:
       minerals. 6g fiber." Offer from current terms.
     - Clips: shots 1 to 4 make clip 1 (10 s), shots 5 to 7 make clip
       2 (10 s).
+
+    CAST NOTE  B carries it: the doubter whose question sets up the
+    joke, so the powder quitter watching sides with him. A answers
+    with the pack and three words. A: low, calm, a little dry. B:
+    sleepy, warm, slow. Narrator: friendly, unhurried. Never change:
+    A's glasses on her head, B's one sock, both on their own side of
+    the table.
 
 tweaks:
   - what: The kind of turn

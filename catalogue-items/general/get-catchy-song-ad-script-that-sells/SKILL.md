@@ -1,11 +1,11 @@
 ---
 name: get-catchy-song-ad-script-that-sells
-description: Use when an ad should be an original short song over animated pictures. Builds it the way memory research suggests jingles stick (a short rhymed hook about what the buyer gets, sung from the first bar and repeated on the same tune, the brand name in a short sung tag at the end), chooses the sound by fit with the buyer's moment, and lays the lyric on a bar grid for 6, 15 or 30 seconds. Video only.
+description: Use when an ad should be an original short song over animated pictures. Builds it the way memory research suggests jingles stick (a short rhymed hook about what the buyer gets, sung from the first bar and repeated on the same tune, the brand name in a short sung tag at the end), chooses the sound by fit with the buyer's moment, and lays the lyric on a bar grid for 6, 15 or 30 seconds. Video only; ends with a cast note for the video block.
 ---
 
 # Get a catchy song ad script that sells
 
-You write a 6, 15 or 30 second song ad. The lyric is the script, laid out bar by bar with a picture for each line and a sound brief for a music tool. People should come away humming the hook, and the hook should say what they get.
+You write a 6, 15 or 30 second song ad. The lyric is the script, laid out bar by bar with a picture for each line and a sound brief for a music tool. People should come away humming the hook, and the hook should say what they get. You end with the script and a cast note; the song shots skill makes the music and the video from there.
 
 ## What you need
 - **Brief** (required): why people buy, how much the buyer already knows, the length (6, 15 or 30 seconds).
@@ -47,7 +47,8 @@ You write a 6, 15 or 30 second song ad. The lyric is the script, laid out bar by
    - **Crowd on the tag:** the cast joins in for the last hook and the tag.
 7. **Hold the claims.** Setting a claim to music doesn't loosen the rules: what you couldn't say aloud, you can't sing. Numbers, timings, health effects and rivals come from the brand facts or stay out. When an approved fact won't scan, rework the words around it (or give it two bars) and leave the fact as written. Write sung numbers out as words. Obvious exaggeration and figures of speech need no source. Each picture stays within what its own line says.
 8. **Write a picture for every line.** One shot idea per bar line. The lead, if there is one, is an animated, made-up adult, never a child, a real person or a known character. One place holds everything the lyric names. Mark `ON CAMERA` on lines the lead sings to camera. On-screen text goes on the tag only: the offer and the call to action.
-9. **Write the sound brief** for the music tool: length, BPM and time signature, key (optional), voice, instruments, the arrangement in order ("start on the sung hook at 0 seconds, no intro; ... end on the sung tag with a clean stop"), then the lyric with section tags in square brackets (`[Hook]`, `[Verse]`, `[Lift]`, `[Tag]`).
+9. **Write the cast note.** Say who carries the ad and why, in two or three lines: the singer's voice (described, never an artist), and who is on screen (one animated lead, the cast joining on the tag, or the product alone with animated objects). Pick from the buyer's moment. The video block turns this into the avatar card.
+10. **Write the sound brief** for the music tool: length, BPM and time signature, key (optional), voice, instruments, the arrangement in order ("start on the sung hook at 0 seconds, no intro; ... end on the sung tag with a clean stop"), then the lyric with section tags in square brackets (`[Hook]`, `[Verse]`, `[Lift]`, `[Tag]`).
 
 ## What you hand back
 - The three hook drafts, the pick and why.
@@ -55,6 +56,7 @@ You write a 6, 15 or 30 second song ad. The lyric is the script, laid out bar by
 - The bar grid: `bars | section | lyric (syllables) | picture | ON CAMERA | on-screen text`.
 - The sound brief, ready to paste.
 - A claims list: every line with a claim, brand line or number, and its source.
+- The cast note: the voice and who is on screen, and why.
 
 ## Check before you hand it back
 - The hook is sung in bar 1, and comes back the planned number of times on the same tune.
@@ -63,6 +65,7 @@ You write a 6, 15 or 30 second song ad. The lyric is the script, laid out bar by
 - The bar count matches the length to within one bar.
 - Every number, time, health result or rival in the lyric is in the approved claims.
 - No artist or band is named. On-screen text is on the tag only.
+- The cast note names the voice and who is on screen, with a reason.
 
 ## If something is missing
 Write `MISSING: <what>`. No buyer moment: build it from how the product is used and mark it `inferred`. No word on music: ask whether the brand uses music before anything is made. No brand lines: write the hook from review words.

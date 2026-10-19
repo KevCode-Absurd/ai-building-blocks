@@ -440,7 +440,7 @@ test("preview runs the steps in order; undo, redo and tidy work", async ({ page 
 test("save a workflow, open it again, and share it by link", async ({ page, context, browser }) => {
   await context.grantPermissions(["clipboard-read", "clipboard-write"]);
   const builder = await planGoal(page, "video ads from my reviews");
-  await expect(builder.getByTestId("flow-node")).toHaveCount(6);
+  await expect(builder.getByTestId("flow-node")).toHaveCount(7);
   await expect(page.getByTestId("flow-status")).toContainText("not saved yet");
   await builder.getByTestId("save-flow").click();
   await expect(builder.getByTestId("save-flow")).toHaveText("Saved");
@@ -454,7 +454,7 @@ test("save a workflow, open it again, and share it by link", async ({ page, cont
   await expect(builder.getByTestId("flow-node")).toHaveCount(0);
   await builder.getByTestId("bar-more").click();
   await builder.getByTestId("saved-flows").selectOption({ label: "Sprout video ads" });
-  await expect(builder.getByTestId("flow-node")).toHaveCount(6);
+  await expect(builder.getByTestId("flow-node")).toHaveCount(7);
 
   await builder.getByTestId("bar-more").click();
   await builder.getByTestId("share-flow").click();
@@ -464,7 +464,7 @@ test("save a workflow, open it again, and share it by link", async ({ page, cont
   const other = await browser.newContext();
   const theirs = await other.newPage();
   await theirs.goto(link.replace(/^https?:\/\/[^/]+/, "http://localhost:5180"));
-  await expect(theirs.getByTestId("builder").getByTestId("flow-node")).toHaveCount(6);
+  await expect(theirs.getByTestId("builder").getByTestId("flow-node")).toHaveCount(7);
   await expect(theirs.locator(".flow-name")).toHaveValue("Sprout video ads");
   await expect(theirs.getByTestId("builder").locator(".react-flow__edge")).toHaveCount(await builder.locator(".react-flow__edge").count());
   await expect(theirs).not.toHaveURL(/flow=/);
@@ -602,7 +602,7 @@ test("home: say what you want done and get the steps, or the single skills that 
 test("laptop width: the builder bar stays on one line, and the step panel never covers Download", async ({ page }) => {
   await page.setViewportSize({ width: 1000, height: 800 });
   const builder = await planGoal(page, "video ads from my reviews");
-  await expect(builder.getByTestId("flow-node")).toHaveCount(6);
+  await expect(builder.getByTestId("flow-node")).toHaveCount(7);
   const bar = builder.locator(".stage-bar");
   const rows = await bar.evaluate((el) => new Set([...el.querySelectorAll("button, input, select")].filter((x) => (x as HTMLElement).offsetParent && x.getBoundingClientRect().width).map((x) => Math.round(x.getBoundingClientRect().top))).size);
   expect(rows, "one row of controls").toBe(1);

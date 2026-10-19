@@ -4,12 +4,12 @@ summary: "Give it how your product is used and one fact. You get a wordless open
 job: make-video-ads
 
 headline: "Stop the scroll with one satisfying product moment"
-subhead: Give it how your product looks and is used, one fact you can prove and your offer. It picks one real motion that ends in a clear finish (a fill, a click, a peel, a clean wipe, a sort) and writes a wordless opening of 4 to 6 seconds with a short narrated demo, or one frozen still.
+subhead: Give it how your product is used, one fact you can prove and your offer. It picks one real motion with a clear finish (a fill, a click, a peel, a clean wipe, a sort), writes a wordless 4 to 6 second opening and a short narrated demo, and casts your product as the star.
 
 explain: |
   People stop for a motion they can see coming to an end: a seal peeling off in one piece, a glass filling to its line, a lid clicking shut. Writers on these clips put it down to the "just right" feeling of things being finished and in order. Most attempts fall flat. The product spins on a turntable, nothing actually finishes, or the shot is slowed and splashed until it looks fake.
 
-  This skill starts from what using your product ends with, and sorts it into one of five finishes: level, fit, release, smooth or order. The opening shows that one motion at real speed, already under way, in the buyer's own room, with no face and no talking, and the finish lands in the last third. Then a plain narrated demo ties what they just watched to the buyer, shows one action, says one approved fact and ends on your offer. For an image ad it freezes the motion just before it finishes.
+  This skill starts from what using your product ends with, and sorts it into one of five finishes: level, fit, release, smooth or order. The opening shows that one motion at real speed, already under way, in the buyer's own room, with no face and no talking, and the finish lands in the last third. Then a plain narrated demo ties what they just watched to the buyer, shows one action, says one approved fact and ends on your offer. A cast note makes the product the avatar, so the video skills can build its sheets and storyboard.
 
 when:
   - Your product makes a motion worth watching when it's used (it pours, peels, clicks or fits).
@@ -26,15 +26,15 @@ you_get:
   - The fit, what's in focus and the finish, in three lines
   - A wordless opening with its overlay and an exact visual note
   - Demo lines with spoken words, on-screen text and visual notes
-  - Or a frozen-instant still with its line, layout and image prompt
+  - A cast note that makes the product the avatar for the video stages
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste how your product is used, step by step, and how it opens.
   - Add the one fact you want to prove and your offer in real terms.
-  - Say "video, 15 seconds" or "still".
+  - Say the length, for example "15 seconds".
   - Check the opening's visual note. It should name the motion already under way and what "done" looks like.
-  - Film it for real or make it with an AI video tool, at real speed.
+  - Film it for real with the shot list skill. For AI video, the storyboard skill builds the product sheet and storyboard, then the shot list skill makes the clips.
 
 how_it_works:
   - title: Checks it fits
@@ -49,8 +49,8 @@ how_it_works:
     text: One shot of 4 to 6 seconds, no speech, no cut, the finish in the last third, and an overlay of one to four words.
   - title: Writes the demo
     text: A line that ties the motion to the buyer, then start, action and end, one approved fact said once, and the offer.
-  - title: Or freezes a still
-    text: The instant just before the finish, with one short line and 14 words in all.
+  - title: Writes the cast note
+    text: Makes the product the avatar, names the place and light, and hands the script on to the video skills.
 
 output_shape: |
   FIT  <why it works for this product and buyer>
@@ -68,9 +68,7 @@ output_shape: |
   ... | "<one approved fact>" | <same> | ...
   Close | "<offer, 2 to 4 word call to action>" | <same> | ...
 
-  OR STILL
-  Instant: <just before or at the finish>  Line: "<6 words or fewer>"
-  Layout: <..>  Image prompt: <..>
+  CAST NOTE  <the product as avatar, any hand, place and light, and why>
 
   Inferred: <motions or sounds not in the facts>
   MISSING: <..>
@@ -131,13 +129,19 @@ example:
     MISSING: what a single daily pack looks like (colour, printing),
     needed before the opening can be filmed or made.
 
+    CAST NOTE  The product carries it: the gummies out of a daily pack,
+    one adult hand cropped at the wrist, a sunny kitchen counter. The
+    buyer knows Sprout, so the product itself is the draw. Next: the
+    storyboard skill builds the product and set sheets, then the shot
+    list skill makes the clips.
+
 tweaks:
   - what: What's in focus
     how: For people who know the problem but not you, ask to put the old way in focus (a tub and a shaker) instead of the product.
   - what: The finish
     how: Name the kind you want (level, fit, release, smooth or order). A product with two motions can give you two openings to test, one each.
-  - what: Video or still
-    how: Ask for a still. It freezes the instant just before the finish and adds one line of six words or fewer.
+  - what: Real shoot or AI video
+    how: Say which. A real shoot goes to the shot list skill for the camera list. AI video goes to the storyboard skill first, with the product as the avatar.
   - what: Length
     how: 15 seconds gives the opening plus two or three lines. 30 seconds gives five or six, with start, action and end in separate shots.
 
@@ -164,7 +168,7 @@ works_best_with:
   tools:
     - {name: "Any good chat AI", why: "Writing the opening and demo to these rules works well in any strong chat AI."}
     - {name: "Veo 3.1", why: "Makes 4 to 8 second clips with matching sound, and can aim at an end frame you give it."}
-    - {name: "Nano Banana Pro", why: "Makes crisp close-up stills of shiny packs and small things in motion for the still version."}
+    - {name: "Nano Banana Pro", why: "Makes the product sheet and start frames from your photos, so the pack looks right before any clip."}
   inputs:
     - "A phone video of the product being opened and used in real time, so the motion and its sound are true, not inferred"
     - "A close photo of the product out of its pack, so its colour and texture in the opening are right"

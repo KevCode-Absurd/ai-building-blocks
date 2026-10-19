@@ -1,72 +1,72 @@
 new_slug: turn-song-script-into-shots-ai-can-make
 name: "Turn your song ad script into video clips"
-summary: "Give it your song script and product photo. You get a music prompt, a storyboard on the beat and clip prompts."
+summary: "Give it your song script and product photos. You get every stage from avatar to edit, with the music made first."
 job: make-video-ads
 
 headline: "Turn your song ad script into video clips"
-subhead: Give it a bar-by-bar song script and a product photo. It writes the prompt for a music tool, times every shot to the song's bars, and writes image and video prompts that keep one animated lead and your product the same in every shot.
+subhead: Give it a bar-by-bar song script and product photos. It runs the whole video process, from avatar card and sheets to the music track, a storyboard cut on its bars, clip prompts and the edit, and stops for your approval three times.
 
 explain: |
   A song ad falls apart in the making. The music tool adds a long intro, the video cuts land between beats, the lead's face changes from shot to shot, and mouths move where nobody should be singing.
 
-  This skill uses the song as the clock. It writes a music prompt that starts singing at 0 seconds and ends on your sung brand tag, and has you pick the best of a few whole takes. Then it works out how long each bar lasts from the tempo, so every cut lands on a downbeat. The lead and the product are made as reference images first, and every shot is built from them. Each clip times its motion to the beat. Mouths move only on held notes, or where your tool can sync a mouth to the song. It writes the prompts; it does not make the music itself.
+  This skill runs the same six stages as every video block here, with one change for songs. It writes the lead's avatar card, turns it into an image, and makes a sheet of every angle, plus product and set sheets, with fixed lines for the lead and the look. Then, before any frame, it makes the music: a prompt that starts singing at 0 seconds and ends on your sung tag, a few whole takes, and a pick. The chosen take's bar grid sets the clock, so every cut in the storyboard lands on a downbeat. Clips time their motion to the beat, and mouths move only on held notes or where your tool can sync them. You approve the avatar, the sheets, and the track with its storyboard.
 
 when:
   - You have a song ad script laid out in bars and need to make the music and the animated video.
   - Earlier tries gave you cuts that missed the beat, or a singer who looked different in every shot.
-  - You want a clear plan before you spend credits on a music tool and a video tool.
+  - You want to approve each step before you spend credits on a music tool and a video tool.
 
 you_give:
-  - The song script, with the lyric in bars, the sound brief, the pictures and who sings
-  - A real product photo, how it's used and how it must be shown
+  - The song script, with the lyric in bars, the sound brief, the pictures, who sings and the cast note
+  - Real photos of your product's front, side and top, how it's used and how it must be shown
   - Your colours, and whether your brand uses music and animation (optional)
   - The music, image and video tools you'll use, and their clip lengths (optional)
 you_get:
-  - A music prompt in your tool's layout, and a rule for picking a take
-  - A bar grid with the start time of every section
-  - Fixed lines for the lead and the look, and three reference prompts
-  - A storyboard cut on the bars, plus still and clip prompts with a hold line
+  - An avatar card for the lead to approve, then reference image prompts and a pick
+  - Character, product and set sheets, with the lead and look lines locked
+  - A music prompt, a take rule and the bar grid, then a storyboard cut on the bars
+  - Clip prompts timed to the beat, lip-sync notes and an edit list
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Paste your song script and attach the product photo.
-  - Paste the music prompt into your music tool, make a few whole takes, and pick one.
-  - Tell the skill the take's tempo, or paste its word times if it drifted. It re-times the shots.
-  - Make the reference images, approve them, then make each still and clip in order.
+  - Paste your song script and attach the product photos.
+  - Approve the avatar card, make the reference images and pick one, then approve the sheets.
+  - Paste the music prompt into your music tool, make a few whole takes, and pick one. Tell the skill its tempo, or paste its word times if it drifted.
+  - Approve the storyboard against the track, then make each clip and cut the edit on the bar lines.
 
 how_it_works:
-  - title: Writes the music prompt
-    text: Length, tempo, key, voice, instruments and the arrangement in order, with singing from 0 seconds and the tag at the end.
-  - title: Fixes the clock
-    text: Works out the seconds per bar from the tempo and checks the chosen take against it. Real word times take over only if it drifts.
-  - title: Fixes the lead and look
-    text: One line for the animated lead, one for the look, and reference images for the lead, the place and the product.
-  - title: Plans the singing
-    text: An unseen singer by default. On-camera singing only on held notes, or with a tool that syncs a mouth to audio.
-  - title: Storyboards on the bars
-    text: Shots of one or two bars that cut on a downbeat, with the product on screen in the first 5 seconds.
-  - title: Writes stills and clips
-    text: Motion timed to the beat, one camera instruction per shot, and a hold line in every clip.
+  - title: Takes in the script
+    text: Reads the tempo, sections, hook repeats, tag, who sings and every sung claim.
+  - title: Picks the avatar
+    text: One animated adult lead, with the sung voice described by tone, never an artist. You approve it.
+  - title: Turns it into an image
+    text: Three or four reference images of the lead, and the pick.
+  - title: Makes sheets and lock lines
+    text: Every angle of the lead, the product from its photos, each place, and fixed lines for the lead and the look. You approve them.
+  - title: Makes the music, then storyboards
+    text: The music prompt, a few whole takes and a pick, the bar grid from that take, then shots of one or two bars that cut on a downbeat.
+  - title: Turns it into video
+    text: Clips timed to the beat with a hold line, lip-sync only on held notes or synced slices, then the edit on the bar lines.
 
 output_shape: |
-  MUSIC PROMPT  <one paragraph, or style box + lyrics box>
-  TAKE RULE     <make 3 to 5 whole takes, pick one, never join takes>
-
-  BAR GRID  <BPM>, <seconds> s a bar (<estimate or from the take>)
-  <section> bar <n> at <seconds> | ... | end <seconds>
-
-  LEAD  <fixed line>    LOOK  <fixed line>
-  REFERENCES  Image 1 <lead> | Image 2 <place> | Image 3 <product>
-
-  STORYBOARD
-  bars  seconds  lyric (start)  picture  singing?  framing
-  <one row per shot>
-
-  STILL <n>   [LOOK] SHOT: <framing; lead's action; place; product>
-  CLIP <n>    [00:00-00:0n] <motion on the beat; camera>
-              HOLD: <fixed hold line>
-
-  EDIT  cuts on bar lines | offer over the tag | MISSING
+  STAGE 0  SCRIPT IN   <BPM>, <sections and bars>, singer <...>, claims <...>
+  STAGE 1  AVATAR CARD (approve)
+           Role <...> | Age <...> | Look <...> | Clothes <...>
+           Item <...> | Voice <tone, never an artist> | Never changes <...>
+  STAGE 2  REFERENCE IMAGES  <prompt>  Make <3 or 4>. Pick: <which, why>
+  STAGE 3  SHEETS AND LOCK LINES (approve)
+           LEAD <line>  LOOK <line>
+           Character sheet <angles, actions, size>  Product sheet <views>
+           Set sheet <each place>
+  STAGE 4  MUSIC FIRST, THEN STORYBOARD (approve)
+           MUSIC PROMPT <one box, or style box + lyrics box>
+           TAKE RULE <3 to 5 whole takes, pick one, never join takes>
+           BAR GRID <BPM>, <s> a bar | <section> bar <n> at <s> | ...
+           F<n> [LOOK] SHOT: <framing; lead's action; place; product>
+           Card: <bars> | <s> | <lyric> | <picture> | <sing?> | <framing>
+  STAGE 5  CLIP <n>  [00:00-00:0n] <motion on the beat; camera> HOLD <...>
+           LIP-SYNC <shots, method>  EDIT <cuts on bar lines, offer over tag>
+           MISSING: <facts it needed>
 
 example:
   business: sprout
@@ -79,83 +79,77 @@ example:
     [Verse] Lunch box packed and the kettle's on / Keys in my hand
     and the morning's gone / That chalky shake? Still in the sink /
     No time to scrub, no time to think
-    [Hook] (same two lines)
-    [Lift] Twenty-one vitamins and minerals (2 bars) / Tastes like a
-    treat, works like a supplement (2 bars)
-    [Hook] (same two lines)  [Tag] Rip. Tip. Sprout.
+    [Hook] (same)  [Lift] Twenty-one vitamins and minerals (2 bars) /
+    Tastes like a treat, works like a supplement (2 bars)
+    [Hook] (same)  [Tag] Rip. Tip. Sprout.
     Sound: bright indie pop, warm female lead, handclaps, jangly
-    guitar. Singer: unseen. Pictures as in the script.
-    Product: Sprout pouch and one daily pack, photos attached. Pack
-    torn straight across its top edge; gummies pour from the top into
-    a palm; the pouch opens only at its resealable top.
-    Colours: forest green, warm cream, sunflower yellow. Bright, sunny.
-    Tools: one-box music tool; video clips up to 8 s with timed prompts.
+    guitar. Cast note: unseen singer; one animated adult woman, the
+    busy parent, on screen.
+    Photos attached: pouch front, side and top; one daily pack. Pack
+    torn straight across its top edge; the pouch opens only at its
+    resealable top. Colours: forest green, warm cream, sunflower.
+    Tools: one-box music tool; video clips up to 8 s with timed
+    prompts and an end frame; no mouth sync.
   output: |
-    MUSIC PROMPT  A 30-second bright indie pop song at 120 BPM in 4/4,
-    C major. Warm, bright female lead; two backing voices join the
-    last hook and the tag. Handclaps, jangly electric guitar, light
-    bass, simple drums. Vocals begin at 0 seconds with the hook, no
-    intro. Lighter drums in the verse, full band on the second hook,
-    claps and voice only in the lift, full band on the last hook. End
-    on the sung tag "Rip. Tip. Sprout." with a clean stop at 30
-    seconds. Lyrics: [Hook] ... [Tag], every word as written.
-    TAKE RULE  Make 4 whole takes and pick one. Never join sections
-    from different takes.
+    STAGE 0  SCRIPT IN  120 BPM, 15 bars, hook 3 times, tag at bar 15.
+    Singer unseen. Sung claim: bars 9-10; brand line: bars 11-12.
 
-    BAR GRID  120 BPM, 2 s a bar (estimate until the take is chosen)
-    Hook bar 1 at 0 | Verse bar 3 at 4 | Hook bar 7 at 12 | Lift bar 9
-    at 16 | Hook bar 13 at 24 | Tag bar 15 at 28 | end 30
+    STAGE 1  AVATAR CARD (approve)
+    Role: the parent getting out the door. Age: 30s. Look: tall
+    rounded build, curly dark ponytail, large expressive eyes.
+    Clothes: green jacket over a cream top. Item: yellow scarf. Props:
+    daily pack, keys, lunch box. Voice: warm, bright female lead,
+    unseen; no artist named. Never changes: ponytail, scarf, jacket.
 
+    STAGE 2  REFERENCE IMAGES
+    [LEAD draft] standing, front on, plain cream backdrop, 3D
+    animated-feature style. Make 4. Pick: the warmest smile, to match
+    the cheeky voice.
+
+    STAGE 3  SHEETS AND LOCK LINES (approve)
     LEAD  An animated adult woman, tall rounded build, curly dark
     ponytail, green jacket over a cream top, yellow scarf, large
     expressive eyes.
     LOOK  3D animated-feature style, simple rounded forms, forest
     green, warm cream and sunflower yellow, bright morning light from
     the front door.
-    REFERENCES  Image 1 the lead, front and three-quarter, plain cream
-    backdrop | Image 2 the hall and kitchen, empty | Image 3 the pouch
-    and a daily pack from their photos, printing unchanged
+    Character sheet: front, three-quarter left and right, side, back;
+    tearing a pack, lifting keys; the pouch about her forearm's
+    length. Product sheet: pouch front, side, top, printing unchanged.
+    Set sheets: the hall, the kitchen, the front path.
 
-    STORYBOARD
-    bars   s      lyric (start)       picture                 sing?
-    1      0-2    Rip it, tip it      tears a pack at the     no
-                                      door, pouch on the table
-    2      2-4    A handful           gummies tip into palm   no
-    3      4-6    Lunch box packed    lunch box snaps shut    no
-    4      6-8    Keys in my hand     lifts keys off the hook no
-    5-6    8-12   That chalky shake   shaker in the sink, she no
-                                      walks past
-    7-8    12-16  Rip it, tip it      eats the gummies, bag   no
-                                      on her shoulder
-    9-10   16-20  Twenty-one          pouch open at its top,  no
-                                      pack beside it
-    11-12  20-24  Tastes like a treat smiles, pulls the door  no
-                                      shut
-    13-14  24-28  Rip it, tip it      walks down the path     no
-    15     28-30  Rip. Tip. Sprout.   pouch front on          no
-    Framing: medium, close, close, medium, wide, medium, close,
-    medium, wide, close.
+    STAGE 4  MUSIC FIRST, THEN STORYBOARD (approve)
+    MUSIC PROMPT  A 30-second bright indie pop song at 120 BPM in 4/4,
+    C major. Warm, bright female lead; two backing voices join the
+    last hook and the tag. Handclaps, jangly electric guitar, light
+    bass, simple drums. Vocals begin at 0 seconds with the hook, no
+    intro. End on the sung tag "Rip. Tip. Sprout." with a clean stop
+    at 30 seconds. Lyrics: [Hook] ... [Tag], every word as written.
+    TAKE RULE  Make 4 whole takes, pick one, never join takes.
+    BAR GRID  2 s a bar. Hook bar 1 at 0 | Verse bar 3 at 4 | Hook bar
+    7 at 12 | Lift bar 9 at 16 | Hook bar 13 at 24 | Tag bar 15 at 28.
+    F1 [LOOK] SHOT: medium at the front door; [LEAD] tears one daily
+    pack straight across its top edge; the hall; the pouch on the
+    table.
+    Card 1: bar 1 | 0-2 | Rip it, tip it | tears the pack | no | medium
+    Card 2: bar 2 | 2-4 | A handful | gummies tip into palm | no | close
+    Continuity: her right hand tears and tips; the pouch never torn.
 
-    CLIP 1  (shots for bars 1 and 2; attach image 1 = the lead,
-    image 2 = the hall, image 3 = the product)
-    [00:00-00:02] Medium at the front door. On beat 1 she tears one
-    daily pack straight across its top edge; on beat 3 she looks
-    down at it. The pouch stands on the hall table. Camera: locked off.
-    [00:02-00:04] Close on her open palm. On beat 1 green gummy bears
-    tip from the torn top into it. Camera: slow push in.
-    HOLD: Same lead as image 1. Same product as image 3. Real-time
+    STAGE 5  CLIP 1 (bars 1-2, start F1, end F2)
+    [00:00-00:02] On beat 1 she tears the pack; on beat 3 she looks
+    down at it. Camera: locked off. [00:02-00:04] On beat 1 green
+    gummy bears tip from the torn top into her palm. Camera: slow push
+    in. HOLD: Same lead as image 1. Same product as image 3. Real-time
     speed. Surfaces stay plain. No music, voice or song made in this
-    clip. Mouth stays closed.
-
-    EDIT  Lay the chosen take; snap every cut to a bar line. Over bar
+    clip. Mouth stays closed. Takes: 3.
+    LIP-SYNC  None: the singer is unseen. Option: bar 14 ends on a
+    held "more"; start that shot mid-note, mouth open on "oh".
+    EDIT  Lay the chosen take, snap every cut to a bar line. Over bar
     15: "$29.99 first order with SMS sign-up. Renews at $49.99 every
-    4 weeks."
-    Option: bar 14 ends on a held "more". For one on-camera sung shot,
-    start it mid-note, mouth open on "oh", slow push in.
-    MISSING: whether Sprout uses music and animation in ads. Ask
-    before anyone makes the song.
-    (cut for length: the full run also had the still prompts and
-    clips 2 to 6)
+    4 weeks." Check music rights for the tool's plan.
+    MISSING: whether Sprout uses music and animation in ads.
+    (cut for length: the full run also had frames, cards and clips
+    for bars 3 to 15)
 
 tweaks:
   - what: Who sings
@@ -168,21 +162,21 @@ tweaks:
     how: Give the longest clip your tool makes well. Two shots of one or two bars each usually fit one clip.
 
 judge:
+  - It stopped for your approval after the avatar card, the sheets, and the track with its storyboard.
+  - The track was made before the storyboard, and every cut sits on a bar line of that take.
   - The music prompt starts singing at 0 seconds and ends on the sung tag.
-  - Every cut in the storyboard sits on a bar line.
-  - Your animated lead and your pack match their reference images in every shot.
-  - Mouths stay closed in every shot not marked as singing.
-  - The pack is on screen within the first 5 seconds.
+  - Your animated lead and your pack match their sheets in every shot.
+  - Mouths stay closed in every shot not marked as singing, and the pack is on screen within 5 seconds.
 
 test:
   - Make the song first and check its tempo. If the bars don't land every 2 seconds at 120 BPM, paste its word times and ask for a re-time.
-  - Make the lead sheet and two stills. Check the lead matches in both before you make any clips.
+  - Make the character sheet and two frames. Check the lead matches in both before you make any clips.
   - Watch the first clip against the song. Each motion should land on the beat the prompt names.
   - Watch the finished clips with the sound off. Each shot should show what its lyric line says.
 
 improve:
-  - Write your fixed look line and product-showing rules into step 3 of the skill file, so every song ad matches your other ads.
-  - Save your approved lead sheet in your brand file, so the same character can come back in the next song.
+  - Write your fixed look line and product-showing rules into stage 3 of the skill file, so every song ad matches your other ads.
+  - Save your approved character sheet in your brand file, so the same lead comes back and new songs start at stage 4.
   - Note your music tool's layout and your video tool's clip length in "What you need", so you don't repeat them.
   - Pair it with the skill that writes a song ad script, if you don't have one yet.
 
@@ -190,7 +184,7 @@ works_best_with:
   tools:
     - {name: "Suno v5.5", why: "Has a style box and a lyrics box that reads section tags like [Verse]. Songs you download on a paid plan can run in ads."}
     - {name: "Eleven Music v2.5", why: "Can build a song from a section-by-section plan, and its paid plans are cleared for commercial use."}
-    - {name: "Nano Banana 2.1", why: "Takes up to 14 reference images and keeps up to four characters the same, so your reference stills match."}
+    - {name: "Nano Banana 2.1", why: "Takes up to 14 reference images and keeps up to four characters the same, so your sheets and frames match."}
     - {name: "Kling 4.0", why: "Takes up to 10 reference images in one job, so figures and product stay the same from shot to shot."}
   inputs:
     - "The finished song file and its BPM, so the bar grid is timed to the real take"
@@ -198,9 +192,13 @@ works_best_with:
     - "Your brand font, for the words you add in editing"
 
 terms:
+  - term: Avatar card
+    meaning: A short description of who carries the ad (look, clothes, props, voice, what never changes). You approve it before any image is made.
   - term: Bar
     meaning: A group of beats in music, usually four. At 120 BPM one bar lasts 2 seconds.
   - term: Downbeat
     meaning: The first beat of a bar. Cuts feel right when they land on it.
   - term: Take
     meaning: One full version of the song made by the music tool. You make a few and pick the best.
+  - term: Lip-sync
+    meaning: Matching a singer's mouth to the sung words. Here it's used only on held notes or with a tool that syncs a mouth to audio.

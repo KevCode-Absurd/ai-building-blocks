@@ -1,7 +1,7 @@
 slug: get-wordless-openings-people-watch-to-end
 renamed_from: wordless-satisfying-hook-video-ad-director
 name: "Get wordless openings people watch to the end"
-summary: "Two or three four-second wordless openings where your product does one satisfying motion, with the prompts to make them."
+summary: "Two or three four-second wordless openings where your product does one satisfying motion, taken from product sheet to clip prompts."
 category: ecommerce
 type: skill
 role: render
@@ -11,15 +11,17 @@ inputs:
   - {type: product_data, required: true}
   - {type: video_ads, required: true}
   - {type: brand_brain, required: false}
+  - {type: product_photos, required: false}
 outputs:
   - {type: hooks}
   - {type: image_prompt}
   - {type: video_prompt}
+  - {type: edit_plan}
 uses: [get-satisfying-motion-ad-script-that-sells]
 example: satisfying
 origin: rebuilt
 source_ids: [CES-006]
-version: 2.0.0
+version: 2.1.0
 credits:
   - {title: "Introducing Veo 3.1 and new creative capabilities in the Gemini API", by: "Google for Developers", url: "https://developers.googleblog.com/en/introducing-veo-3-1-and-new-creative-controls-in-the-gemini-api", used: "Making a clip between a start frame and an end frame"}
   - {title: "Ultimate prompting guide for Veo 3.1", by: "Khulan Davaajav and Hussain Chinoy, Google Cloud", url: "https://cloud.google.com/blog/products/ai-machine-learning/ultimate-prompting-guide-for-veo-3-1", used: "SFX and ambient sound lines, describing what you want instead of what you don't"}

@@ -1,14 +1,14 @@
 ---
 name: get-talking-object-ad-script-that-sells
-description: Use when an ad should be narrated by one everyday object with a face, speaking in the first person about what it has seen in the buyer's home. Picks the object and where its face goes, sets one mood, and writes an 8 to 30 second monologue in four moves, or one still with a speech bubble, with every fact traced to the brand's claims.
+description: Use when an ad should be narrated by one everyday object with a face, speaking in the first person about what it has seen in the buyer's home. Picks the object and where its face goes, sets one mood, and writes an 8 to 30 second video monologue in four moves, with every fact traced to the brand's claims and a cast note for the clips skill.
 ---
 
 # Get a talking object ad script that sells
 
-You write a short monologue spoken by an object from the buyer's own home, or one still image of that object with a speech bubble. The object says the thing the buyer never says out loud. Viewers know at once it's a joke and not a testimonial, so it can be blunt where a person would sound preachy.
+You write a short video monologue spoken by an object from the buyer's own home. The object says the thing the buyer never says out loud. Viewers know at once it's a joke and not a testimonial, so it can be blunt where a person would sound preachy.
 
 ## What you need
-- **Brief** (required): the problem, how much the buyer already knows, video or still, the length.
+- **Brief** (required): the problem, how much the buyer already knows, the length.
 - **The buyer's moment** (required): the room, the time of day, what's within reach, what they tried before, any object customers name themselves in reviews.
 - **Product facts** (required): how it looks and is packed, how it's used, what it replaces, whether the result can be seen.
 - **Voice, claims and offer** (required): the brand's tone and how far a joke may go, the approved claims in their exact words, the current offer.
@@ -44,7 +44,7 @@ You write a short monologue spoken by an object from the buyer's own home, or on
    - It reports only what it could have seen or heard. No result inside a body, no how-it-works, no number that isn't in the claims, no price, no "buy".
    - One talking object per ad. A second narrator is a second ad.
 
-### Video
+### The video
 - **Four moves:**
   1. *The gripe:* the first line, with the feeling already on the face in frame 1.
   2. *The inside detail:* what only this object knows.
@@ -55,15 +55,12 @@ You write a short monologue spoken by an object from the buyer's own home, or on
 - **Picture notes:** one place, one light, the object described the same way every time. Cut between the face close, the whole object in its spot, its damage very close, and what it's looking at. Each note gives one expression as what the features do ("brows drop, eyes slide right"), one small movement (it leans, sags or turns its eyes; it doesn't walk), and "mouth moves with the words". No people in frame and no words in the picture.
 - **Offer:** on-screen text over the last shot, never spoken.
 
-### Still
-- One object in its real spot, one expression caught halfway through a feeling. It looks toward the product or away, and never smiles at the viewer.
-- The object fills about half the frame. The product stands at one edge, sharp, front to camera, at true size, where the object's eyes can reach it. For a buyer who doesn't see the problem yet, leave the product out and let the object stare at the empty space.
-- **Words:** one speech bubble with the landing line, 12 words or fewer, pointing at the mouth, readable on its own. At most one plain line naming the product (6 words or fewer) and a button only if there's an offer. 20 words in all.
-- **Image prompt:** a real photograph of the room, the object as a physical thing with a face formed from its own material (moulded, stitched, pressed in) at the spot its shape suggests. Name the material, colour, wear, exact place, and where the light comes from. Give the expression as feature positions. The product from its photo, printing intact, no face. The bubble: white, outlined thinly in a dark colour, its tail pointing at the mouth, its words in quotes, written once.
+### Cast note
+Who carries the ad and why, in three or four lines: the narrator, its material and damage, where its face goes, its mood and the voice that fits (age, pace, accent), and why this object suits this buyer. The clips skill turns it into the character card. Want a still instead? Use the talking object image ad skill (`say-what-buyers-wont-in-a-talking-object-image-ad`).
 
 ## What you hand back
-- **Video:** narrator and kind, the four tests in one line each, the mood, then each clip with its lines and picture notes, the turn marked, words and seconds per clip, and the on-screen offer.
-- **Still:** narrator, mood, expression, bubble line, small line, layout and a ready-to-paste image prompt.
+- Narrator and kind, the four tests in one line each, the mood, then each clip with its lines and picture notes, the turn marked, words and seconds per clip, and the on-screen offer.
+- The cast note.
 - **Facts the object states**, each with its source, and one line on what it doesn't claim.
 
 ## Check before you hand it back
@@ -72,7 +69,7 @@ You write a short monologue spoken by an object from the buyer's own home, or on
 - One object, one mood, a mild flaw, something at stake.
 - Nothing stated that the object couldn't have seen, and every fact matches the claims word for word.
 - The product keeps its real label, has no face, and arrives by a cut.
-- Still: bubble 12 words or fewer, 20 words in all.
+- The cast note names the narrator, its mood and its voice.
 
 ## If something is missing
 Write `MISSING: <what>`. No object in the research: ask what sits in the room when the problem happens; never invent the buyer's home. Result can't be seen, or nobody knows: use a witness. No humour limit given: use deadpan or sheepish.

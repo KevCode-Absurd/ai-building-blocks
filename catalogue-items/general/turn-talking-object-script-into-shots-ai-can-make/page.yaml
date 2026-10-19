@@ -1,15 +1,15 @@
 new_slug: turn-talking-object-script-into-shots-ai-can-make
 name: "Turn your talking-object script into video clips"
-summary: "Give it your script and product photo. You get reference pictures, start frames and timed clip prompts."
+summary: "Give it your script and product photo. You get the object's card, its sheet, a storyboard and timed clip prompts."
 job: make-video-ads
 
 headline: "Turn your talking-object script into video clips"
-subhead: Give it an 8 to 30 second talking object script and a front photo of your product. It writes one fixed character card and one set card, the reference pictures to approve first, and timed clip prompts with every line in quotes, so the face, voice and product stay the same.
+subhead: Give it an 8 to 30 second talking object script and a front photo of your product. It writes one fixed character card, makes reference images and a sheet with every angle, storyboards the clips, then writes timed clip prompts with every line in quotes. You approve the card, the sheets and the storyboard first.
 
 explain: |
   A talking object ad lives or dies on whether it stays the same object from clip to clip. Video tools drift. The face moves, an arm appears from nowhere, the mouth keeps going after the line ends, and the product grows a face of its own.
 
-  This skill locks the object down before anything moves. It writes one character card (material, damage, where the face sits, eyes, brows, mouth, limbs) and pastes it unchanged into every prompt. It sets the light from the script's mood and keeps it for every clip. You approve a character picture, the product photo and the set first, and attach them to every prompt. The turn clip gets its own start frame with your product already in place, so it never pops in. Each clip has timed beats with the line in quotes, the voice described the same way, and the room's sound. It doesn't write the script.
+  This skill runs the whole video process and locks the object down before anything moves. It writes one character card (material, damage, where the face sits, eyes, brows, mouth, limbs) and pastes it unchanged into every prompt. You pick one of a few reference images, then approve a sheet with every angle and the expressions the mood needs, your product from its photo, and the set with light chosen by the mood. The storyboard gives clip 1 and the turn clip their own start frames, so your product never pops in. Each clip prompt has timed beats with the line in quotes and the same voice. It doesn't write the script.
 
 when:
   - You have a talking object script and want to make it with an AI image and video tool.
@@ -22,53 +22,51 @@ you_give:
   - Your buyer's moment and humour limits (optional)
   - Your video tool, its clip lengths and whether it makes sound (optional, 8-second clips with sound by default)
 you_get:
-  - The narrator confirmed, or one replacement with the reason
-  - A fixed character card and a set card with light and look
-  - Prompts for the reference pictures and the start frames
-  - Timed clip prompts with quoted lines and sound, plus a voice line and edit notes
+  - The narrator confirmed, and a character card and voice line to approve
+  - Reference image prompts and sheet prompts for the object, product and set, with lock lines
+  - A storyboard with start frames and a shot card per clip
+  - Timed clip prompts, a fix table and edit notes
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste your script underneath and attach the product's front photo.
-  - Make the character picture first and check it at thumbnail size on your phone.
-  - Attach the approved pictures to every clip prompt, then make the clips in order.
-  - Join them with hard cuts and add captions and the offer in your editor.
+  - Approve the character card, make the reference images and pick one at thumbnail size on your phone.
+  - Approve the sheets, then the storyboard and its start frames.
+  - Make the clips in order, join them with hard cuts, and add captions and the offer in your editor.
 
 how_it_works:
   - title: Confirms who talks
     text: Keeps the script's narrator unless it's not really in that room, has no natural face spot, or could be mistaken for the product.
   - title: Writes the character card
-    text: Material, damage, where the face sits, eyes, brows, mouth and limbs, in one sentence that never changes. No limbs unless a line needs one.
-  - title: Sets light by mood
-    text: Flat and cool for sore, warm from the side for sheepish, dim for worried, even for deadpan. The same in every clip.
-  - title: Makes pictures first
-    text: The object alone in two views, your product from its photo and the empty set. You approve them before any clip.
+    text: Material, damage, where the face sits, eyes, brows, mouth and limbs, in one sentence that never changes. You approve it.
+  - title: Makes reference images
+    text: Three or four versions of the face on the object, in one look. You pick the one that reads in a second.
+  - title: Builds the sheets
+    text: Every angle and the mood's expressions, your product from its photo, and the set with light chosen by the mood. You approve them.
+  - title: Storyboards the clips
+    text: Start frames for clip 1 and the turn, and a shot card per clip with one expression change per beat. You approve the board.
   - title: Writes timed clips
-    text: Beats like [00:00-00:03], one expression change each, the line in quotes, the mouth closing when it ends, and the room's sound.
+    text: Beats like [00:00-00:03], the line in quotes, the mouth closing when it ends, and the room's sound.
   - title: Fixes misses
     text: A table of what to change when the face slides, an arm appears, the mouth won't stop or the voice drifts.
 
 output_shape: |
-  NARRATOR  <object>: confirmed (<why>) or replaced by <object>
-
-  CHARACTER CARD (paste unchanged)
-  <object and material; damage; face spot; eyes; brows; mouth; limbs>
-
-  SET CARD
-  Place: <one spot, product's place, 3 or 4 other things>
-  Light: <set by the mood>  Look: <one line>  Camera: <eye level, on a stand>
-
-  REFERENCE PICTURES  <character, two views> <product> <empty set>
-  START FRAMES  clip 1, and the turn clip with the product in place
-
-  CLIP <n> (<seconds>, starts on <start frame or last frame>)
-  Attach: <image n = job>
-  [00:00-00:03] <features, one movement>. <Object> says, in <voice>: "<line>"
-  End frame: <..>  Ambient noise: <..>  SFX: <..>
-
-  VOICE  <age, pace, two traits, accent>; route: <in the video tool or recorded>
-  EDIT NOTES  <hard cuts, captions, offer text>
-  MISSING: <facts it needed and didn't get>
+  STAGE 0  NARRATOR  <object>: confirmed (<why>) or replaced by <object>
+  STAGE 1  AVATAR CARD (approval 1)
+  CHARACTER CARD  <object and material; damage; face spot; eyes; brows;
+  mouth; limbs>   VOICE  <age, pace, two traits, accent>
+  STAGE 2  REFERENCE IMAGES  1-4 <prompt>  Look: <one line>  Picked: <n>
+  STAGE 3  SHEETS (approval 2)
+  Character: <views, expressions, beside the product>
+  Product: <from its photo, no face>  Set: <spot, objects, light by mood>
+  STAGE 4  STORYBOARD (approval 3)
+  START FRAMES  clip 1; the turn clip with the product in place
+  CLIP <n> (<seconds>)  [00:00-00:03] <features, movement> "<line>"
+  End frame: <..>
+  STAGE 5  CLIPS
+  Attach: <image n = job>  <lock lines> <timed beats> <sound>
+  EDIT NOTES  <hard cuts, captions, offer text, voice route>
+  MISSING: <..>
 
 example:
   business: sprout
@@ -83,120 +81,110 @@ example:
     "He tears a little pack, tips, and goes."
     Clip 3: "No water. No shaking. No me."
     "Turns out he never hated greens. He hated me."
-
+    Cast note: the shaker carries it; the man it talks about is never seen.
     Product: Sprout pouch, front photo attached, plus one daily pack.
     Glossy deep green foil, big yellow wordmark, yellow bear face top
-    right. Result can't be seen.
-    Show it right: pack torn straight across its top edge; the pouch
-    opens only at its resealable top, never torn.
-    Brand photos: bright, sunny, candy-like. Never clinical.
+    right. Show it right: pack torn straight across its top edge; the
+    pouch opens only at its resealable top, never torn.
     Tool: 8-second clips with sound, up to 3 reference images.
   output: |
-    NARRATOR  The shaker bottle: confirmed. Customers name it (review
-    6), it sits by the sink where the pouch now goes, and its flat
-    front is a natural face spot.
+    STAGE 0  NARRATOR  The shaker bottle: confirmed. Customers name it
+    (review 6), it sits by the sink where the pouch now goes, and its
+    flat front is a natural face spot.
 
-    CHARACTER CARD (paste unchanged)
-    A frosted white plastic shaker bottle with a grey flip-top lid, no
-    logo and no measuring marks; a dried green powder ring inside a
-    third of the way up and green crust on the lid hinge; the face on
-    the flat front above the ring; two round eyes moulded into the
-    plastic, droopy at rest; two short moulded brow ridges; a small
-    moulded mouth, turned down at rest; no arms, no legs.
-
-    SET CARD
-    Place: a kitchen counter by the sink in the morning: the shaker in
-    a drying rack, a kettle behind, a folded tea towel. Nothing with
-    words. No people in the room.
-    Light: warm morning light low from the left (sheepish).
-    Look: a real photograph, the face moulded into the shaker's own
-    plastic. Camera at the shaker's eye level, on a stand.
-
-    REFERENCE PICTURES
-    1 [CHARACTER CARD] Alone on a plain light grey ground, front on;
-      then the same at three-quarter view. Check at thumbnail size.
-    2 The Sprout pouch from its photo, closed at its resealable top.
-    3 [SET CARD] The counter and drying rack, empty.
-
-    START FRAMES
-    Clip 1: [SET CARD] [CHARACTER CARD] The shaker in the rack, brows
-    tilted up, eyes droopy, mouth open on the first word.
-    Clip 2: the same counter, now with the Sprout pouch standing at
-    the right of the rack, true size, label to camera, no face. The
-    shaker's eyes already turned toward it.
-
-    CLIP 1 (8 s, starts on the clip 1 start frame)
-    Attach: image 1 = the shaker, image 3 = the set.
-    Locked camera, the shaker in the rack, medium close.
-    [00:00-00:04] Brows stay tilted up. The shaker says, in an
-    earnest, slightly whiny man's voice in his thirties, quick then
-    trailing off, plain US accent: "I'm the shaker. He hasn't picked
-    me up in weeks." Mouth closes.
-    [00:04-00:08] Eyes roll down toward the ring inside. The shaker
-    says: "This green ring? That's the powder. It never scrubs out."
-    End frame: eyes down, mouth closed.
-    Ambient noise: a quiet kitchen, a kettle ticking as it cools.
-    SFX: a soft plastic creak.
-    CLIP 2 (8 s, starts on the clip 2 start frame)
-    Attach: image 1 = the shaker, image 2 = the pouch, image 3 = the
-    set.
-    [00:00-00:04] The shaker's eyes on the pouch. "Then a green pouch
-    moved onto the counter." [00:04-00:08] Eyes drop to a daily pack
-    lying beside the pouch, torn straight across the top, empty. "He
-    tears a little pack, tips, and goes." Mouth closes. The pouch
-    stays closed at its resealable top.
-    CLIP 3 (8 s, continues from clip 2's last frame)
-    [00:00-00:03] The shaker sags a little in the rack. "No water. No
-    shaking. No me." [00:03-00:08] Eyes widen, then the mouth settles
-    into a small, wobbly smile. "Turns out he never hated greens. He
-    hated me." End frame: the pouch fully in view, clear space above
-    it.
-
+    STAGE 1  AVATAR CARD (approval 1)
+    CHARACTER CARD  A frosted white plastic shaker bottle with a grey
+    flip-top lid, no logo and no measuring marks; a dried green powder
+    ring inside a third of the way up and green crust on the lid
+    hinge; the face on the flat front above the ring; two round eyes
+    moulded into the plastic, droopy at rest; two short moulded brow
+    ridges; a small moulded mouth, turned down at rest; no arms, no
+    legs.
     VOICE  Earnest, slightly whiny man in his thirties, quick then
-    trailing off, plain US accent. Route: in the video tool; if it
-    drifts by clip 3, record all six lines once and lip-sync.
+    trailing off, plain US accent.  [approved]
+
+    STAGE 2  REFERENCE IMAGES
+    Look: a real photograph, the face moulded into the shaker's own
+    plastic. 1-4 [CHARACTER CARD] alone on a plain light grey ground,
+    front on; 2 bigger eyes, 3 brows lower, 4 mouth a little wider.
+    Picked: 3. The sheepish brows read at thumbnail size.
+
+    STAGE 3  SHEETS (approval 2)
+    Character: front, three-quarter left and right, side, back;
+    sheepish brows, eyes sliding right, a small wobbly smile; beside
+    the pouch at true size, the pouch a little taller.
+    Product: the pouch from its photo, closed at its resealable top,
+    no face; one daily pack torn straight across the top, empty.
+    Set: a kitchen counter by the sink in the morning, the shaker in a
+    drying rack, a kettle behind, a folded tea towel. Nothing with
+    words. No people. Warm light low from the left (sheepish). Camera
+    at the shaker's eye level, on a stand.  [approved]
+
+    STAGE 4  STORYBOARD (approval 3)
+    START FRAMES  Clip 1: the shaker in the rack, brows tilted up, mouth
+    open on the first word. Clip 2: the same counter with the pouch at
+    the right of the rack, label to camera; the shaker's eyes already
+    on it.
+    CLIP 1 (8 s)  [00:00-00:04] brows tilted up: "I'm the shaker. He
+    hasn't picked me up in weeks." [00:04-00:08] eyes roll down to the
+    ring: "This green ring? That's the powder. It never scrubs out."
+    End frame: eyes down, mouth closed.
+    CLIP 2 (8 s, the turn)  eyes on the pouch, then down to the torn
+    empty pack. CLIP 3 (8 s)  sags a little; eyes widen; a small wobbly
+    smile on the last line. End frame: the pouch in view, space above.
+    [approved]
+
+    STAGE 5  CLIPS
+    CLIP 1  Attach: image 1 = the shaker, image 3 = the set. Locked
+    camera, medium close. [lock lines]. [00:00-00:04] Brows stay tilted
+    up. The shaker says, in an earnest, slightly whiny man's voice:
+    "I'm the shaker. He hasn't picked me up in weeks." Mouth closes.
+    [00:04-00:08] Eyes roll down toward the ring. The shaker says:
+    "This green ring? That's the powder. It never scrubs out." Ambient
+    noise: a quiet kitchen, a kettle ticking as it cools. SFX: a soft
+    plastic creak. (Clips 2 and 3 follow the same order.)
     EDIT NOTES  Hard cuts. Captions for every line. Over the last 2
     seconds: "First order $29.99 with SMS sign-up. Renews at $49.99
-    every 4 weeks." The shaker never says it.
-    MISSING: the buyer's accent. A plain US accent is assumed.
-    MISSING: whether Sprout uses music, so none is planned.
+    every 4 weeks." Voice in the tool; if it drifts by clip 3, record
+    all six lines once and lip-sync.
+    MISSING: the buyer's accent (plain US assumed); whether Sprout uses
+    music (none planned).
 
 tweaks:
   - what: Limbs
     how: By default the object has none. Ask for arms only if a line needs a gesture. You get two thin arms, and every extra part is one more thing that can drift.
   - what: The look
-    how: Ask for "a real photograph" for an object with a face moulded into its surface, or "a soft 3D animated look" for something rounder and more cartoon. Whichever you pick goes in every prompt.
+    how: Ask for "a real photograph" for an object with a face moulded into its surface, or "a soft 3D animated look" for something rounder. Whichever you pick goes in every prompt.
   - what: Voice route
-    how: If your video tool makes sound, the lines stay in the prompts. If not, or the voice changes between clips, record the whole monologue once in a voice tool and lip-sync each clip.
+    how: If your video tool makes sound, the lines stay in the prompts. If not, or the voice changes between clips, record the whole monologue once and lip-sync each clip.
   - what: Clip length
     how: Say your tool's lengths. At 8 seconds a clip holds about two short lines. A tool that makes 10 or 15 seconds can hold three, so fewer clips are needed.
 
 judge:
+  - The run stopped for your yes after the character card, the sheets and the storyboard.
   - Pause the first frame, muted, at thumbnail size. You can see the face and its feeling.
   - The face sits in the same spot in every clip, with the same eyes, brows and mouth.
   - The mouth moves only with the words and closes when each line ends.
   - The product's label matches its photo, it has no face, and it arrives by a cut at the turn.
-  - No letters appear on the object, and no limb appears that the card doesn't list.
   - The object never states a price, a result it couldn't see, or a sales pitch.
 
 test:
-  - Make the character picture and look at it at thumbnail size on your phone. If you can't see the face and its mood in a second, move the face spot before going further.
+  - Pick the reference image on your phone at thumbnail size. If you can't see the face and its mood in a second, move the face spot before going further.
   - Run the skill twice. The character card should come back almost word for word; if the material or face spot changes, lock your own card and paste it in.
   - Lay the end frames of clips 1 and 3 side by side. The eyes, brows and mouth should sit in the same place.
   - Check every frame for a second face, an extra limb or printing on the object. If you find one, use the matching fix from the skill's table.
 
 improve:
-  - Save your approved character card and character picture in your brand file, so a second ad with the same object starts from them.
-  - Write your product-showing rules into step 4 of the skill file (how the pack opens, what is never torn), so the product picture is right first time.
-  - Add your house voice description to step 6, so every object speaks in a voice your brand would use.
-  - Note whether your brand uses music in "What you need", so the sound line is settled.
+  - Save your approved character card, pick and sheet in your brand file, so a second ad with the same object starts at the storyboard.
+  - Write your product-showing rules into the product sheet step (how the pack opens, what is never torn), so the product is right first time.
+  - Add your house voice description to stage 1, so every object speaks in a voice your brand would use.
   - Pair it with the skill that writes a talking object script, if you don't have a script yet.
 
 works_best_with:
   tools:
     - {name: "Veo 3.1", why: "Takes up to three reference images and speaks quoted lines with matching sound in each clip."}
     - {name: "Kling 4.0", why: "Reuses a saved character made from your reference photos, so the face holds across clips."}
-    - {name: "GPT Image 2.5", why: "Makes the start frames from your product photo and keeps its label words readable."}
+    - {name: "GPT Image 2.5", why: "Makes the sheets and start frames from your product photo and keeps its label words readable."}
     - {name: "ElevenLabs", why: "Records one steady voice for the whole monologue when the video tool's voice drifts."}
   inputs:
     - "A photo of the real old object (the shaker, the kettle) from the front and side, so the character looks like the thing buyers own"
@@ -206,6 +194,8 @@ works_best_with:
 terms:
   - term: Character card
     meaning: One fixed description of the object, pasted word for word into every prompt so it stays the same.
+  - term: Character sheet
+    meaning: Pictures of the object from every angle, with the expressions its mood needs.
   - term: Start frame
     meaning: An approved still that a clip begins from. The turn clip gets its own so the product is already in place.
   - term: Lip-sync

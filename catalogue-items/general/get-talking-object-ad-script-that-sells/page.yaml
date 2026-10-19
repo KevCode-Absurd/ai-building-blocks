@@ -4,7 +4,7 @@ summary: "Give it your buyer's moment and product. You get an 8 to 30 second scr
 job: make-video-ads
 
 headline: "A funny ad told by an everyday object"
-subhead: Give it your buyer's moment, your product and your approved claims. It picks one object from the buyer's own home, puts its face where the shape already suggests one, sets one mood, and writes an 8 to 30 second monologue (or one image with a speech bubble) that ends on a line people repeat.
+subhead: Give it your buyer's moment, your product and your approved claims. It picks one object from the buyer's own home, puts its face where the shape already suggests one, sets one mood, and writes an 8 to 30 second video monologue that ends on a line people repeat, plus a cast note for the clips.
 
 explain: |
   Buyers rarely say their problem out loud, and an ad that says it for them can sound preachy. An object that was in the room says it better. The bedside lamp has seen the 1 am scrolling. The crusty shaker bottle knows it's been replaced. Nobody mistakes a talking shaker for a fake testimonial, so it can be blunt.
@@ -17,21 +17,21 @@ when:
   - You want a funny ad that makes no claim your facts can't back.
 
 you_give:
-  - The problem, how much the buyer already knows, video or still, and the length
+  - The problem, how much the buyer already knows, and the length
   - Your buyer's moment (the room, the time of day, what's in reach) and what they tried before
   - Your product's look and pack, what it replaces and whether the result can be seen
   - Your voice, how far a joke can go, your approved claims and your offer
 you_get:
   - The narrator, the four tests it passed, and its mood
   - The monologue clip by clip, with picture notes, the turn marked and words per clip
-  - Or, for a still, the expression, the speech bubble line and an image prompt
+  - A cast note on the narrator, its mood and its voice, for the clips skill
   - Every fact the object states, with its source
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste your product facts, approved claims and a few customer reviews underneath.
   - Describe where the problem happens, for example "at the kitchen sink, 7 am". Name any object your customers mention.
-  - Say "video, 20 seconds" or "still", and how dry or silly your humour can be.
+  - Say the length, for example "20 seconds", and how dry or silly your humour can be.
   - Read the last line to someone who hasn't seen the script. If they can't repeat it, ask for three more endings.
 
 how_it_works:
@@ -47,6 +47,8 @@ how_it_works:
     text: The gripe, the detail only it knows, the turn as your product appears by a cut, and a landing line a stranger could repeat.
   - title: Keeps it honest
     text: First person, never "you", and only what the object could have seen. The offer is on-screen text, never spoken.
+  - title: Writes the cast note
+    text: The narrator, its mood and its voice, and why it suits the buyer, so the clips skill can build it.
 
 output_shape: |
   NARRATOR  <object> (<witness, has-been or culprit>)
@@ -64,6 +66,8 @@ output_shape: |
   FACTS THE OBJECT STATES
   "<words>"   <source>
   Not claimed: <what it couldn't have seen>
+
+  CAST NOTE  <narrator, material and damage, face spot, mood, voice, and why>
 
 example:
   business: sprout
@@ -136,13 +140,20 @@ example:
     Not claimed: anything about his health, gut or energy. The shaker
     only reports what it saw.
 
+    CAST NOTE  The shaker carries it: frosted plastic, a dried green
+    ring inside, the face on the flat front above the ring. Sheepish,
+    with an earnest, slightly whiny man's voice in his thirties. It
+    suits the quitter who wants to stick, because the shaker is the
+    thing they gave up on. Next: the talking object clips skill writes
+    its character card.
+
 tweaks:
   - what: Who talks
     how: For buyers who don't see the problem yet, ask for a witness (the bedside lamp, the coat hook). For a visible problem, ask for the culprit (a limescale ring). Name an object from your reviews and it wins.
   - what: The mood
     how: Pick sore, sheepish, worried or deadpan. Deadpan suits dry brands, sheepish suits a gentle one, sore needs a brand that's happy to be loud.
-  - what: Video or still
-    how: For a still you get one expression, one speech bubble of 12 words or fewer and an image prompt, with 20 words in all on the image.
+  - what: A still instead
+    how: Want a still instead? Use "Say what buyers won't in a talking object image ad", which keeps the same narrators and moods in one picture with a speech bubble.
   - what: Length
     how: 8 seconds is one clip and a complete ad in three lines. 24 to 30 seconds gives three clips and room for the inside detail before the turn.
 
@@ -165,12 +176,12 @@ improve:
   - Write which moods your brand allows into step 4, so it never picks one you'd reject.
   - Add your product-showing rules (how the pack opens, what is never shown) to the video section, so picture notes get them right.
   - Save the landing lines that win in your brand file. They make good headlines elsewhere.
-  - Pair it with the skill that turns a talking object script into image and clip prompts.
+  - Pair it with "Turn your talking-object script into video clips", which takes the script and cast note from here to finished clips.
 
 works_best_with:
   tools:
     - {name: "Any good chat AI", why: "Writing a short first-person monologue to these rules works well in any strong chat AI."}
-    - {name: "GPT Image 2.5", why: "Prints the speech bubble's exact words cleanly when you make the still version."}
+    - {name: "Veo 3.1", why: "Speaks the object's quoted lines with matching room sound when the clips are made."}
   inputs:
     - "Review lines that name an object in the buyer's home, so the narrator is one your buyers already picture"
     - "A phone photo of the real spot where the problem happens, so the room and light in the picture notes are true"

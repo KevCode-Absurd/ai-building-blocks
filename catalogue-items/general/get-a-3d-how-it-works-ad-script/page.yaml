@@ -4,7 +4,7 @@ summary: "Give it your product facts and their sources. You get a 20 to 40 secon
 job: make-video-ads
 
 headline: "Show what your product does where no camera can see"
-subhead: Give it how your product works, with a source for each step. It checks the process is hidden, true and worth teaching, writes it as a short chain, then scripts a narrated 3D film that dives in from an everyday moment and comes back out. Or you get one cutaway image.
+subhead: Give it how your product works, with a source for each step. It checks the process is hidden, true and worth teaching, writes it as a short chain, then scripts a narrated 3D film that dives in from an everyday moment and comes back out, with a note on what carries it.
 
 explain: |
   Some products do their work out of sight. A fiber feeds the bacteria in your gut, a coating bakes onto hot steel, a weave pulls sweat away from skin. A short 3D film can show that, and people will watch it the way they watch a good science clip. It's also where ads overclaim most easily, because a picture of damage disappearing says more than any line of copy.
@@ -14,26 +14,26 @@ explain: |
 when:
   - Your product's main benefit happens out of sight, and buyers doubt it does anything.
   - You have a sourced fact about how it works that a normal ad can't show.
-  - You want one cutaway image that explains the key step at a glance.
+  - You want a script your 3D video tool can follow, with every part in one fixed colour.
 
 you_give:
   - Your selling idea
   - How the product works, step by step, each step with a source
   - Your approved and banned claims, and what buyers assume
-  - Video or image, and the length (optional)
+  - The length (optional)
 you_get:
   - The three tests, passed or failed, with a reason each
   - The chain, with every link marked and any dropped chains explained
   - A parts key giving each part one colour and shape
-  - A timed script with narration, picture and on-screen text for every line, or a cutaway image brief
+  - A timed script with narration, picture and on-screen text for every line, and a cast note
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste how your product works, step by step, with the source of each step (label, study, test report).
   - Paste your approved and banned claims. This format lives or dies on them.
-  - Say "video, 30 seconds" or "image".
+  - Say the length, such as "30 seconds".
   - Read the tests and the chain first. If a test fails, use a different format rather than stretch the claim.
-  - For the prompts, take the script to "Turn your 3D ad idea into video clips".
+  - Take the script and cast note to "Turn your 3D ad idea into video clips". It takes it from there, with the avatar, sheets, storyboard and clips.
 
 how_it_works:
   - title: Runs three tests
@@ -46,8 +46,8 @@ how_it_works:
     text: Each part of the process gets one plain name, one colour and one shape for the whole film.
   - title: Writes four parts
     text: The everyday moment, the dive, the chain one link at a time, then back up to the same moment, about 4 seconds a link.
-  - title: Or writes one image
-    text: A cutaway frozen at your product's link, with a headline and 2 or 3 labels, 20 words in all.
+  - title: Writes the cast note
+    text: Often your product or its active part is the avatar. The note says why, names the narrator's voice and what never changes.
 
 output_shape: |
   TESTS
@@ -70,6 +70,7 @@ output_shape: |
 
   SKETCH  <the chain as four boxes a viewer could draw>
   NOTES   <inferred links to confirm, claims left out>
+  CAST NOTE  <what carries it, why, voice, what never changes>
 
 example:
   business: sprout
@@ -149,9 +150,16 @@ example:
     - Left out: the vitamin C study (another ad), folate, the 61%
       figure, energy and immunity.
 
+    CAST NOTE  The fiber carries it: the yellow strands are the
+    avatar, with the blue bacteria as the supporting cast. The woman
+    appears only at human size, silent. The gut-fix seeker wants to
+    see what the fiber does, not a face. Narrator: calm, warm adult
+    voice, about 2.5 words a second. Never change: each part's colour,
+    shape and name from the parts key.
+
 tweaks:
-  - what: Video or image
-    how: Say "image" and you get one cutaway at your product's link, with a headline and 2 or 3 labels, instead of a script.
+  - what: Want a still instead?
+    how: Use "Show how your product works in a 3D cutaway", which makes one cutaway image ad with this same parts key.
   - what: Length
     how: Each link adds about 4 seconds. A 2-link chain makes a 20-second film. A 4-link chain fills about 30 to 40.
   - what: The opening moment
@@ -176,13 +184,12 @@ improve:
   - Write how your product works as a sourced chain into "What you need" in the skill file, so step 2 starts from your facts.
   - Add your approved verbs and banned words to step 3, for example "supports" yes, "repairs" no.
   - Save the parts key in your brand file, so every explainer uses the same colours and names.
-  - Pair it with "Turn your 3D ad idea into video clips" for the still and clip prompts.
+  - Pair it with "Turn your 3D ad idea into video clips", which runs the avatar, sheets, storyboard and clips.
 
 works_best_with:
   tools:
     - {name: "Claude", why: "Follows long skill files closely and keeps each link tied to the source you gave it."}
     - {name: "ElevenLabs", why: "Reads your draft aloud in a steady voice, so you can time each line before paying for pictures."}
-    - {name: "GPT Image 2.5", why: "Gets short labels and a headline right inside a cutaway image more often than most image models."}
   inputs:
     - "The study or test report itself, not just its headline number, so each link can name its real source and study size"
     - "Photos of the product from the front, the side and in use, so the closing shot matches the real thing"

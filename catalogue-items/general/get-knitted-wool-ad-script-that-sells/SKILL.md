@@ -1,15 +1,14 @@
 ---
 name: get-knitted-wool-ad-script-that-sells
-description: Use when an ad should be a narrated story (or one still) set in a small world made of knitted, crocheted and felted wool, often because the subject is awkward on camera. Picks what the turn must show, then the real yarn technique that shows it (knitting up, plying, joined squares, loosening), chooses a fabric for every surface, tests every yarn change as a claim, and writes the script or still plan.
+description: Use when an ad should be a narrated video story set in a small world made of knitted, crocheted and felted wool, often because the subject is awkward on camera. Picks what the turn must show, then the real yarn technique that shows it (knitting up, plying, joined squares, loosening), chooses a fabric for every surface, tests every yarn change as a claim, and writes the video script with a room list and a cast note for the video block. For one knitted still, use the knitted image ad skill instead.
 ---
 
 # Get a knitted wool ad script that sells
 
-You write a 15 to 40 second narrated script set in a small world of knitted, crocheted and felted wool, or a plan for one still. The ad turns on one yarn change, chosen for what the selling idea needs to show. Real knitting and crochet do the showing.
+You write a 15 to 40 second narrated video script set in a small world of knitted, crocheted and felted wool. The ad turns on one yarn change, chosen for what the selling idea needs to show. Real knitting and crochet do the showing. You end with the script and a cast note; the knitted wool shots skill makes the video from there.
 
 ## What you need
 - **Brief** (required): the reason someone buys, what the buyer already knows, the selling idea in one sentence, the length.
-- **Video or still** (required).
 - **Product facts** (required): shape, colours, the 1 to 3 biggest label lines, how it's used, how it works (only if the brand states it).
 - **Buyer** (required): rough age, look and clothes for the doll, the room where the problem happens, what they tried before, their own words.
 - **Claims and offer** (required): approved claims, banned claims, the offer with its terms.
@@ -45,6 +44,7 @@ Pick by what the surface is, and keep one yarn thickness for the whole world (ch
 - **Crochet** (denser, firmer, taller stitches): solid objects, dolls and the product.
 - **Felted wool** (soft fuzz, no stitches): steam, clouds, foam.
 - **Loose yarn and pom-poms:** hair, lines of water, a trail of movement.
+
 For blocks of colour such as a logo, use intarsia (each colour knitted as its own area). For busy patterns on jumpers or wallpaper, use Fair Isle.
 
 ### 4. Test every yarn change as a claim
@@ -52,16 +52,14 @@ For each change, write the sentence a viewer would take from it. Keep it only if
 
 ### 5. People and product
 - Dolls are made-up knitted or crocheted adults with embroidered or painted features. One main doll; a second only as hands or a back view. Never a child, a real or famous person, a customer, an expert or the founder. Dolls never speak or report a result.
-- Write each doll once as a short card (build, yarn hair colour and texture, clothes with fabric and colour) and reuse it word for word.
 - Show feelings with the whole pose: shoulders, head tilt, hands, then brows and mouth. One adjective alone gives a blank doll.
 - Frame dolls at full or medium shot. Save close-ups for hands and the product.
 - The product is crocheted at its true shape and colours. Only its 1 to 3 biggest label lines go on it, as intarsia or stitched lettering; the full label goes on in editing.
 
-### 6. Write it
-**Video**
+### 6. Write the script
 - One narrator, off screen, in the brand's voice, about the doll ("she") or to the viewer ("you").
 - Plan words by time: calm narration runs about 2.2 words a second, so 30 seconds is about 65 words.
-- Each line is one yarn picture. Put "knitted", "crocheted" or "felted" and a real colour on every object ("a teal knitted sofa", "a felted puff of steam"); an object without its material comes out real.
+- Each line is one yarn picture. Put "knitted", "crocheted" or "felted" and a real colour on every object ("a teal knitted sofa", "a felted puff of steam"); an object without its material comes out real. Keep a room list: every object with its material and colour.
 - One move per shot: a slow gesture or one camera move, at stop-motion pace. No running or falling.
 - The turn runs at least 2 seconds, with 5 narrated words or fewer over it (or none).
 - The product arrives inside the story, in the doll's hands, in the shot where the words reach it. Close with the offer as narration and on-screen text over the still product.
@@ -69,26 +67,24 @@ For each change, write the sentence a viewer would take from it. Keep it only if
 - Split into clips of the length your video tool makes (8 seconds if unknown), each sentence inside one clip.
 - No words in the scene except the product's biggest label lines.
 
-**Still**
-- One moment: the problem in the doll's pose, the turn caught halfway, or the product held large on a knitted surface.
-- Leave one calm stretch of plain knit, about a quarter of the frame, for the words.
-- Words go on in editing: a headline of 6 words or fewer, 15 words in all, a button only if there's an offer.
-- Give a ready image prompt in this order: subject and what it's doing, setting, the yarn (fabrics, thickness, colours), light, camera (eye level, full or medium shot, shallow focus), then the label lines in quotes. Name the material on every object. Describe what you want; if the tool has a separate "avoid" field, list plain nouns there (human skin, photograph, plastic toy, clay).
+### 7. Write the cast note
+Say who should carry the ad and why: one crocheted doll, hands only, or the product alone. For a doll, add a plain sketch (rough age, build, hair colour, clothes with fabric and colour) so the picture notes agree. The video block turns this into the avatar card, then locks the doll card in its character sheet.
 
 ## What you hand back
 1. **Show plan:** selling idea, show job, technique, fabrics, what changes, the sentence it implies and its source.
-2. **Doll card** and **room list** (every object with material and colour).
-3. **Video:** one row per line (narration, picture, the one move), the turn marked, word count, seconds and clip split. **Or still:** moment, calm area, headline, small line, image prompt.
+2. **Room list:** every object with material and colour.
+3. **Script:** one row per line (narration, picture, the one move), the turn marked, word count, seconds and clip split.
 4. **Claims shown:** each change and its source, plus changes you rejected and why.
-5. `MISSING:` lines for facts you needed.
+5. **Cast note:** who carries the ad, why, and the doll sketch.
+6. `MISSING:` lines for facts you needed.
 
 ## Check before you hand it back
 - One turn; its technique fits the show job; at most one yarn-made scene change.
 - Every object has a material word and a colour.
 - Every change has a backed sentence; nothing shows a body getting better.
-- One main doll, the same card every time; none speaks; no child or real person; no face close-ups.
+- One main doll, the same sketch every time; none speaks; no child or real person; no face close-ups.
 - The product has its true shape and only real label words.
-- Video: 5 words or fewer over the turn; total words fit the length. Still: 15 words or fewer.
+- 5 words or fewer over the turn; total words fit the length.
 
 ## If something is missing
 Write `MISSING: <what>`. No how-it-works facts: no how-it-works shot. No label lines: ask. No buyer look: ask, or mark the doll `inferred`.

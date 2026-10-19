@@ -1,7 +1,7 @@
 slug: get-comic-page-ad-script-that-sells
 renamed_from: comic-page-ad-script-format-rules
 name: "Get a comic page ad script that sells"
-summary: "A comic ad around one claim, as a full-screen panel list with named cuts and a closing photo panel, or one comic strip image."
+summary: "A comic video ad around one claim, as a full-screen panel list with named cuts, a closing photo panel and a cast note."
 category: general
 boards: [ecommerce]
 type: skill
@@ -13,13 +13,12 @@ inputs:
   - {type: brand_brain, required: true}
 outputs:
   - {type: script}
-  - {type: image_prompt}
 uses: []
 example: comic
 origin: rebuilt
 source_ids: [CES-112]
 old_name: comic ad script
-version: 2.0.0
+version: 2.1.0
 credits:
   - {title: "Understanding Comics: The Invisible Art (research starter)", by: "EBSCO, on Scott McCloud (1993)", url: "https://www.ebsco.com/research-starters/literature-and-writing/understanding-comics-invisible-art-scott-mccloud", used: "Closure in the gutter, the panel-to-panel transition types, simple faces readers see themselves in"}
   - {title: "Yonkoma", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/4koma", used: "The four movements of a four-panel strip (set, develop, turn, conclude) and the top-to-bottom stack"}

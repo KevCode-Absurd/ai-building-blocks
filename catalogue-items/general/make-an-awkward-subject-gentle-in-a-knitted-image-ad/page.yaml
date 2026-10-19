@@ -1,0 +1,196 @@
+new_slug: make-an-awkward-subject-gentle-in-a-knitted-image-ad
+name: "Make an awkward subject gentle in a knitted image ad"
+summary: "Give it your selling idea and product photos. You get a knitted-wool image prompt, the ad words and a layout."
+job: make-image-ads
+
+headline: "Make an awkward subject gentle in a knitted image ad"
+subhead: Give it your selling idea, brand file and product photos. It picks one moment and the yarn technique caught in it, gives every surface a real fabric, checks the picture against your claims, and hands back an image prompt, the words, a layout and the steps to put your real label on.
+
+explain: |
+  Some subjects are hard to show in a photo. Digestion, sleep, pests, grime. A small world of knitted and crocheted wool makes them kind to look at, and odd enough to stop a scroll. It also tempts you into pictures you can't back up, like a knot on a doll's tummy coming loose.
+
+  This skill plans one image. It picks the moment from what your buyer knows, then the show job the picture must do and the yarn technique caught halfway, like strands half plied into one yarn. It gives every surface a real fabric and puts a material word on every object, so nothing comes out real. It reads the picture as a sentence and keeps it only if your claims back it. Then it applies the image-ad rules: a headline of 7 words or fewer, at most 3 other things to read, big type on plain felt, strong contrast, feed sizes, and your real label laid on.
+
+when:
+  - Your product deals with a subject people find awkward to look at.
+  - You run a knitted-wool video and want a still that matches it.
+  - You want a soft, unusual image ad for people who don't know you yet.
+
+you_give:
+  - The reason someone buys, what the buyer knows and the selling idea
+  - Your brand file, with label text, the buyer's look, approved claims and offer
+  - Photos of your product's front, side and top (optional, needed if it appears)
+you_get:
+  - A moment plan with the yarn technique, the fabrics and the claim it implies
+  - A layout for 4:5 or 1:1, with a calm stretch of felt for the words
+  - The words on the image, an image prompt and the post words
+  - The edit step that lays your real label over the crocheted one
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your selling idea and brand file, and attach the product photos.
+  - Read the moment plan. If the implied sentence isn't something you can say, ask for another show job.
+  - Check every object in the prompt has knitted, crocheted or felted in front of it.
+  - Make the image, then lay the real label and the words on it in your editor.
+
+how_it_works:
+  - title: Checks the fit
+    text: Wool suits awkward subjects and simple product stories. It tells you to use a photo when proof, fit or taste is the point.
+  - title: Picks the moment
+    text: From what the buyer knows, then one of six show jobs and the yarn technique caught halfway.
+  - title: Sets the look
+    text: A fabric for every surface, one yarn thickness, soft side light, shallow focus, and a quarter of the frame as plain felt.
+  - title: Reads the picture as a claim
+    text: Writes the sentence the picture implies and keeps it only if your claims back it. Nothing shows a body getting better.
+  - title: Applies the image-ad rules
+    text: The glance test, a short headline, at most 3 other things to read, 30 px type, 4.5:1 contrast, 4:5 or 1:1.
+  - title: Writes the prompt and words
+    text: An image prompt with a material on every object, the words, the post words, and the real label laid on in editing.
+
+output_shape: |
+  MOMENT   <problem in the pose / change caught halfway / product held>
+  SHOW JOB <reveal, spread, join, build, calm, hold>, <technique>
+  FABRICS  <surface = fabric, ...>, <yarn thickness>
+  It implies: "<sentence>"  Source: <claim or fact>
+
+  LAYOUT   <4:5 or 1:1>, <pixels>
+  <0 to n %> <quiet area: words> | <n to n %> <picture> | <product spot>
+
+  WORDS ON THE IMAGE
+  Headline (<n> words): "<...>"
+  <up to 3 more>: "<...>"  Source: <...>
+
+  IMAGE PROMPT  <subject, setting, yarn, light, camera, "label lines">
+  AVOID FIELD   <plain nouns>
+
+  POST WORDS  Primary text <...> | Headline field <...> | Button <...>
+  EDIT STEP   <label overlay, word placement, contrast check>
+  CHECKS      <glance test, words, type, contrast, size>
+  MISSING: <facts it needed>
+
+example:
+  business: sprout
+  input: |
+    [the skill]
+
+    Selling idea: six grams of prebiotic fiber, in a gummy you'll
+    actually eat.
+    Buyer: the gut-fix seeker, woman, 25 to 55. Has tried fiber
+    powders and probiotics. Doubts: "Will this upset my stomach more?"
+    Runs in the Instagram feed.
+    Product: Sprout Low Sugar, pouch of 28 daily packs; 6 g prebiotic
+    fiber per pack. Pouch: glossy deep green, big yellow wordmark
+    "Sprout", yellow bear face top right, "28 Daily Packs" at the
+    bottom. Photos attached: front, side, top.
+    Approved: "Supports digestion and gut health." "60+ ingredients,
+    21 vitamins & minerals, and 6g fiber."
+    Never: "fix" the tummy, any result as a promise.
+    Brand note: point gut-sensitive buyers to Low Sugar.
+    Offer: $29.99 first order with text sign-up, renews at $49.99
+    every 4 weeks.
+  output: |
+    MOMENT   The change caught halfway: she has tried the fixes.
+    SHOW JOB Join, plying. Six leaf-green strands, loose at the left,
+             twisted into one thick yarn at the right that runs into a
+             crocheted daily pack.
+    FABRICS  counter = oak-brown rib knit, wall = cream felted wool,
+             pack and pouch = crochet; chunky yarn throughout.
+    It implies: "One pack holds 6 g of fiber." Source: product facts
+    and the approved claim. Six strands picture the number; they
+    aren't a measure.
+    Rejected: a knot on a doll's tummy coming loose (implies a fix;
+    the claim is "supports"). No doll: the yarn says it alone.
+
+    LAYOUT   4:5, 1080 x 1350
+    0-26 %   plain cream felted wall: headline and small line
+    26-88 %  the strands across the counter, plying left to right into
+             the pack; the crocheted pouch standing behind at right
+    88-100 % the counter's front edge, a solid forest green strip
+             added in editing: offer line
+
+    WORDS ON THE IMAGE
+    Headline (7 words): "Six grams of fiber. One small pack."
+    Small line: "Supports digestion and gut health."  Source: approved
+    claim, word for word
+    Offer line: "Low Sugar. $29.99 first order with text sign-up.
+    Renews at $49.99 every 4 weeks."  Source: offer terms, brand note
+    Type: headline 64 px and small line 36 px in forest green on cream
+    felt (about 8:1); offer 30 px in cream on the green strip.
+
+    IMAGE PROMPT
+    Close-up of six thin strands of leaf-green yarn lying across an
+    oak-brown rib-knit counter, loose and side by side at the left,
+    winding into one thick plied green yarn toward the right, where it
+    runs into a small deep-green crocheted daily pack. Behind it at
+    right stands a deep-green crocheted stand-up pouch, stuffed firm,
+    a yellow crocheted bear face top right. A plain cream felted wool
+    wall behind. A small handmade world made entirely of wool, one
+    chunky yarn throughout, colors kept to cream, oak brown, leaf
+    green, deep green and sunflower yellow. Soft window light from the
+    left, shallow focus. Camera at counter height, 4:5, the top quarter
+    plain felted wall. Label on the pouch: "Sprout" in yellow
+    intarsia; "28 Daily Packs" stitched small.
+    AVOID FIELD  human skin, photograph, plastic toy, clay, knitting
+    needles, hands of a maker, text
+
+    POST WORDS
+    Primary text: Done with gritty fiber powders? Sprout Low Sugar has
+    6 g prebiotic fiber in each daily pack of gummies.
+    Headline field: Fiber in a gummy you'll eat
+    Button: Shop now
+    EDIT STEP  Lay the real pouch, cut out from the front photo, over
+    the crocheted one at the same size. Add the green strip and set
+    the words. Check contrast on the finished image. For 1:1, recompose
+    with shorter strands; never crop the pouch.
+    CHECKS  Glance test: strands joining into one pack. Headline 7
+    words, 2 more things to read, type 30 px and up, 4.5:1 or more.
+    MISSING: a photo of a single daily pack, so the crocheted one
+    matches it.
+
+tweaks:
+  - what: The moment
+    how: The problem in the doll's pose suits people new to it. The change caught halfway suits people comparing fixes. The product held large suits people who know you.
+  - what: Doll or no doll
+    how: A doll at medium shot carries a feeling. Leave her out when the yarn change says it alone, as plying does.
+  - what: Fabrics
+    how: Name a surface and it picks the stitch (garter for a rug, cables for a tree, felt for steam). Say "chunky yarn" for big cosy stitches or "fine yarn" for more detail.
+  - what: Size
+    how: 4:5 is the default for feeds. Ask for 1:1 as well and it recomposes the picture, never stretching or cropping the product.
+
+judge:
+  - Shown for 2 seconds, someone can say what the product is and the one idea.
+  - The headline has 7 words or fewer, with at most 3 other things to read.
+  - Every object in the prompt has a material word and a real color.
+  - Nothing shows a body getting better, and no face is in close-up.
+  - The product matches your photos, with your real label laid over it.
+
+test:
+  - Search the prompt for any object without knitted, crocheted or felted. There should be none.
+  - Ask for a knot loosening on a doll's tummy. The claim step should reject it and say why.
+  - Run it twice on the same brief. The show job and the moment should stay close.
+  - Put the finished image next to your current best image ad at phone size. Ask which one people would rather look at.
+
+improve:
+  - Write your banned claims into step 4 of the skill file, so the picture is tested against them.
+  - Add your house yarn thickness and colors to step 3, so every knitted ad matches.
+  - Save the headline and moment that win in your brand file.
+  - Pair it with the knitted-wool video skills, so the still and the video share one world.
+
+works_best_with:
+  tools:
+    - {name: "Nano Banana 2.1", why: "Works from your product photos as references, so the crocheted pack keeps its true shape."}
+    - {name: "Any good chat AI", why: "Claude, ChatGPT and Gemini all follow this skill well, so use the one you already have."}
+  inputs:
+    - "Photos of knitted or crocheted toys you like, so the prompt names stitches that exist"
+    - "Your brand colors matched to real yarn shades, so the scene uses colors a maker could buy"
+    - "Your best current image ad, so you can test the knitted one against it"
+
+terms:
+  - term: Show job
+    meaning: What the picture has to show for the selling idea, such as a reveal or two things joining.
+  - term: Plying
+    meaning: Twisting two or more strands of yarn together into one thicker yarn.
+  - term: Quiet area
+    meaning: A calm part of the picture, here plain felt, kept free for the words.
+  - term: Glance test
+    meaning: Showing the ad for 2 seconds. If a stranger can say what it's for, it passes.

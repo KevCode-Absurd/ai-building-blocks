@@ -13,12 +13,11 @@ inputs:
   - {type: brand_brain, required: true}
 outputs:
   - {type: script}
-  - {type: image_prompt}
 uses: []
 example: wool
 origin: rebuilt
 source_ids: [CES-127]
-version: 2.0.0
+version: 2.1.0
 credits:
   - {title: "Knitting", by: "Wikipedia contributors", url: "https://en.wikipedia.org/wiki/Knitting", used: "How stockinette, garter, rib, seed stitch, cables, intarsia and Fair Isle look; yarn thickness and detail"}
   - {title: "Crochet", by: "Wikipedia contributors", url: "https://en.wikipedia.org/wiki/Crochet", used: "Denser, taller crochet stitches; squares worked in the round"}

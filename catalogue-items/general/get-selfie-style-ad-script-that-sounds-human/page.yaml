@@ -4,7 +4,7 @@ summary: "Give it your buyer's doubt and your claims. You get a timed phone-styl
 job: make-video-ads
 
 headline: "A selfie-style ad that sounds like a real person"
-subhead: Give it your buyer's doubt, your facts and who will be on camera. You get a 15 to 60 second script in five timed beats, or one still that looks like a posted phone photo, where every claim has a source.
+subhead: Give it your buyer's doubt, your facts and who will be on camera. You get a 15 to 60 second script in five timed beats, where every claim has a source, plus a note on who should carry it.
 
 explain: |
   A video that looks filmed on someone's phone gets watched like a friend's post. Then one line gives it away. A hype word, three numbers in a row, or a pack held up beside a grin, and people scroll on. If the person on screen was made by AI, a line like "this worked for me" is also untrue, and ad rules say a fake customer must be labelled as one.
@@ -14,18 +14,18 @@ explain: |
 when:
   - You want an ad that feels like a post, filmed by a creator or made with an AI presenter.
   - Your buyers have one doubt that seeing the product in a hand can settle.
-  - You need a still that looks like someone's phone photo, not a studio shot.
+  - You want a script that a made-up AI presenter can say without pretending to be a customer.
 
 you_give:
-  - Why people buy, how much your buyer knows already, and the length
-  - Video or still, and real creator or AI presenter
+  - Why people buy and how much your buyer knows already
+  - Real creator or AI presenter, and the length
   - Your buyer's doubt, their moment and their own words, with quotes and sources
   - How the product opens and is used, and any result you can see
   - Your approved and banned claims, never-say list and current offer
 you_get:
   - A five-beat script with what's said, on-screen text and a picture note for each beat
   - The one detail that carries the ad, its source, and a word count that fits the length
-  - Or, for a still, the caption, the moment, how it was taken and an image prompt
+  - A cast note on who should carry the ad, and why
   - Every claim, number and quote listed with its source, plus the AI label line
 
 how_to_use:
@@ -34,7 +34,7 @@ how_to_use:
   - Say what you want, for example "video, 30 seconds, AI presenter".
   - Name the doubt to answer, in your buyer's words if you have them.
   - Read beat 4 again. It should claim less than your facts allow.
-  - Take the script to "Turn your selfie-style script into consistent clips" for the video prompts.
+  - Take the script and cast note to "Turn your selfie-style script into video clips". It takes it from there, from the presenter to the finished clips.
 
 how_it_works:
   - title: Checks a phone video fits
@@ -49,6 +49,8 @@ how_it_works:
     text: About 2.5 words a second, so 30 seconds holds about 70 words.
   - title: Plans the pictures
     text: Tall frame, real room light, the product in hand before it's named, and a new view every few seconds.
+  - title: Writes the cast note
+    text: Says who should carry the ad and why, so the clips skill can turn it into a presenter or a real creator can film it.
 
 output_shape: |
   Beat | Says | On screen | Picture
@@ -62,6 +64,7 @@ output_shape: |
   ANCHOR  <the one detail>, from <source>
   WORDS  <count>, about <seconds> at 2.5 words a second
   DISCLOSURE  <AI label and on-screen line, if any>
+  CAST NOTE  <real creator or AI presenter, who fits the buyer, and why>
 
   CLAIMS, NUMBERS AND QUOTES
   <item>   <source>
@@ -117,6 +120,11 @@ example:
     WORDS  82, about 33 seconds at 2.5 words a second.
     DISCLOSURE  Platform AI label on. Small "AI presenter" line on
     screen through beat 1.
+    CAST NOTE  An AI presenter: a made-up woman in her early 30s, coat
+    half on, filming in her own kitchen before work. She matches the
+    quitter who wants to stick (28 to 45, office job) and the morning
+    rush in the hook. Plain clothes, no logos. Next: the selfie-style
+    clips skill makes her avatar card.
 
     CLAIMS, NUMBERS AND QUOTES
     21 vitamins and minerals per pack    approved claim, product page
@@ -133,8 +141,8 @@ example:
 tweaks:
   - what: Real creator or AI presenter
     how: Switch to "real creator" and the beats move to "I", with blanks like "[when you noticed]" for their own true details.
-  - what: Video or still
-    how: A still is one moment mid-use, taken as a selfie, mirror photo or look down at the hands, with one caption of 12 words or fewer.
+  - what: Length
+    how: Ask for 20 to 30 seconds for a routine or small discovery, 45 seconds or more to talk a doubt through. A shorter version is written fresh, not squeezed.
   - what: The doubt
     how: Name a different doubt ("isn't this just candy?") and the Doubt and Show beats change to answer it with what's shown.
   - what: Hook options
@@ -142,11 +150,11 @@ tweaks:
 
 judge:
   - The hook has no greeting and no brand name, and you can tell the topic in the first few seconds.
-  - There's one number or detail in the spoken lines, and it's in your facts.
-  - An AI presenter never claims a result or a story of their own, and every quote has a source.
+  - There's one number or detail in the spoken lines, it's in your facts, and every quote has a source.
   - Beat 4 claims less than your facts allow.
   - The word count fits the length, at about 70 words for 30 seconds.
   - Nothing sounds like stock ad talk ("obsessed", "life-changing", "buy now").
+  - The cast note says who carries the ad and why. An AI presenter is a made-up adult who never claims a result or a story of their own.
 
 test:
   - Count the numbers in the spoken lines, leaving out price. You should find one.

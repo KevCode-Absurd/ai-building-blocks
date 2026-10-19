@@ -1,39 +1,39 @@
 new_slug: get-comic-page-ad-script-that-sells
 name: "Tell your buyer's story in comic panels that sell"
-summary: "Give it your selling idea. You get a panel-by-panel comic ad script for vertical video, or one comic strip image."
+summary: "Give it your selling idea. You get a panel-by-panel comic ad script for vertical video, ending on your real product."
 job: make-video-ads
 
 headline: "Tell your buyer's story in comic panels that sell"
-subhead: Give it your selling idea and product facts. It picks one claim, shapes the story in four movements, and writes a panel list with a named cut into each panel, short captions and a closing photo of your real product. Or you get one comic strip image.
+subhead: Give it your selling idea and product facts. It picks one claim, shapes the story in four movements, and writes a panel list with a named cut into each panel, short captions, a closing photo of your real product and a note on who carries the ad.
 
 explain: |
   Comics suit phones. One panel at a time, with the story jumping forward in the gap between panels, where the reader fills in what happened. Most comic ads still fall apart. Too many tiny panels, captions nobody can read, and a drawn "customer" saying the product changed their life, which is a claim you can't back.
 
-  This skill writes a comic ad around one claim. The story moves in four steps taken from four-panel comic strips: set the buyer's moment, let it get harder, turn it with your product, then land in the same place, changed. For video, every panel fills the screen and every cut is named for what it does, such as the next step of an action or one moment slowed down for the reveal. The hero is drawn simple so viewers see themselves in them, and your product is drawn from its photo with no letters. Captions and narration are short enough to add in editing, and the last panel is your real product photo.
+  This skill writes a comic ad around one claim. The story moves in four steps taken from four-panel comic strips: set the buyer's moment, let it get harder, turn it with your product, then land in the same place, changed. Every panel fills the screen and every cut is named for what it does, such as the next step of an action or one moment slowed down for the reveal. The hero is drawn simple so viewers see themselves in them, and your product is drawn from its photo with no letters. Captions and narration are short enough to add in editing, and the last panel is your real product photo.
 
 when:
   - Your product fixes an everyday problem you can tell in a few panels.
   - You want a vertical video ad that looks handmade and still makes one clear point.
-  - You want a comic strip image ad and a matching video from the same idea.
+  - You want a script your video tool can follow panel by panel, with a hero who never changes.
 
 you_give:
   - The selling idea, or a script you already have
   - Your product facts, how it's used, and how it works
   - Your approved claims, banned claims and current offer
-  - Video or still, the length, and your lettering typeface (optional)
+  - The length and your lettering typeface (optional)
 you_get:
   - The one claim the comic acts out, with its source
   - A hero line and palette to reuse in every prompt
-  - For video, a panel list with movement, cut, motion, caption, narration and seconds
-  - For a still, the panel grid, captions in quotes and an image prompt
+  - A panel list with movement, cut, motion, caption, narration and seconds
+  - A cast note on who carries the ad, ready for the shots skill
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste your product facts, approved claims and offer underneath.
   - Say who the buyer is and the moment the problem bites, in a sentence.
-  - Say "video, 30 seconds" or "still".
+  - Say the length, such as "30 seconds".
   - Cover the captions and read only the drawings. If you can't tell what changed, ask for a clearer turn panel.
-  - For a video, take the panel list to "Turn your comic ad script into video clips".
+  - Take the panel list and cast note to "Turn your comic ad script into video clips". It takes it from there, with the avatar, sheets, storyboard and clips.
 
 how_it_works:
   - title: Checks a comic fits
@@ -48,6 +48,8 @@ how_it_works:
     text: A few clear features in the same words every time. The product is drawn from its photo, brightest in its panels, with no letters.
   - title: Writes words for editing
     text: Captions of 6 words or fewer and narration of 10 or fewer per panel, added in editing, then a photo panel of your real product.
+  - title: Writes the cast note
+    text: Who carries the ad, why that suits your buyer, the narrator's voice and what must never change about the hero.
 
 output_shape: |
   FIT     <why a comic suits this, or what to use instead>
@@ -60,13 +62,8 @@ output_shape: |
   ...
   <last> | land | subject to subject | PHOTO PANEL (set in editing) | none | <offer> | none | <n>
 
-  OR STILL
-  Grid: <3 or 4 equal panels, top to bottom>
-  Panel 1: <who, where, one large thing> Caption: "<...>"
-  Photo: <where the real product photo goes>
-  Image prompt: <ready to paste, no words in the image>
-
   NOTES   <buyer words used, claims left out, MISSING>
+  CAST NOTE  <who carries it, why, voice, what never changes>
 
 example:
   business: sprout
@@ -139,9 +136,15 @@ example:
     - MISSING: a photo of a single daily pack, so the drawn sachet
       matches the real one.
 
+    CAST NOTE  The drawn hero carries it, silent, with a narrator over
+    the panels. A simple face lets the powder quitter see themselves
+    in her, and a narrator keeps the claim out of a drawn mouth.
+    Narrator: a dry, friendly adult voice, quick. Never change: the
+    dark ponytail, the navy blazer, the gold hoops.
+
 tweaks:
-  - what: Video or still
-    how: Ask for "still" to get 3 or 4 equal panels read top to bottom, with your product photo beside the last one. Ask for "video" to get the full panel list.
+  - what: Want a still instead?
+    how: Use "Sell one claim with a comic strip ad", which makes one 3 or 4 panel image ad in this same look.
   - what: The number of panels
     how: Five drawn panels make a quick 20-second cut. Up to eight make a fuller story. The reveal panel always stays longest.
   - what: The turn
@@ -152,7 +155,7 @@ tweaks:
 judge:
   - Cover the captions. Can you still tell what was wrong and what changed?
   - Only one claim appears anywhere, including the cutaway labels.
-  - Every video panel has a named cut, and the reveal panel is the longest.
+  - Every panel has a named cut, and the reveal panel is the longest.
   - No drawn person says the product worked for them, and none is an expert or a child.
   - The ad ends on a photo panel of your real product, not a drawing of it.
 
@@ -160,18 +163,17 @@ test:
   - Give it two claims at once. It should pick one and tell you the second is a second ad.
   - Read the transition column. Most cuts should be "action to action" or "subject to subject", with one slowed reveal.
   - Run it twice on the same input. Both versions should keep the hero line word for word and every caption at 6 words or fewer.
-  - Show the still to someone on a phone for three seconds and ask what the product does. If they can't say, the turn panel is doing too little.
+  - Read only the drawn column to someone and ask what the product does. If they can't say, the turn panel is doing too little.
 
 improve:
   - Paste a few buyer phrases from your reviews into "What you need" in the skill file, so the captions use their words instead of ad lines.
   - Write your hero line and palette into step 5, so every comic ad in a series looks the same.
   - Add how your product works, with a source, to your brand file. Without it, step 7 drops the cutaway.
-  - Pair it with "Turn your comic ad script into video clips" for the panel stills and clip prompts.
+  - Pair it with "Turn your comic ad script into video clips", which runs the avatar, sheets, storyboard and clips.
 
 works_best_with:
   tools:
     - {name: "Any good chat AI", why: "The panel list is plain writing, so Claude, ChatGPT or Gemini all handle it well when you paste the skill."}
-    - {name: "GPT Image 2.5", why: "Follows a detailed panel layout closely, which helps when you make the still strip."}
     - {name: "Canva", why: "Sets captions in your own typeface and places your product photo as the last panel, so no lettering is left to the AI."}
   inputs:
     - "Five to ten buyer phrases from reviews about the old routine, so the captions sound like them"

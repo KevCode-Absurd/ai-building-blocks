@@ -1,0 +1,180 @@
+new_slug: prove-one-point-with-a-paper-cutout-image-ad
+name: "Prove one point with a paper cutout image ad"
+summary: "One paper cutout image ad that settles one doubt at a glance, with your real product."
+job: make-image-ads
+
+headline: "Prove one point with a paper cutout image ad"
+subhead: Give it the doubt you want to settle, your product facts and photos. It picks one proof picture from what your claim says, lays it out in paper cutouts with your real product, and hands back the image prompt, the words and the feed copy.
+
+explain: |
+  A paper cutout ad looks handmade, so it stands out in a feed of glossy photos. It goes wrong when it tries to say too much: five strips of features, a chart with no real numbers, and a product redrawn with a made-up label.
+
+  This skill keeps it to one point, written as one sentence with one "but". It picks the proof picture from the claim's verb. "Takes fewer steps" gets the old steps in a row beside your one product. "Replaces" puts your product in the old thing's spot. "Is made of" lays the parts out flat. One signal shows where to look. It then checks the words against image-ad rules: a headline of 7 words or fewer, at most three other things to read, big type and strong contrast. Your product comes from its real photo, never redrawn.
+
+when:
+  - You have one clear claim, such as fewer steps or what your product replaces, and want it seen in one look.
+  - You want an image ad that doesn't look like every other product photo in the feed.
+  - You liked the paper cutout video and want a still in the same look.
+
+you_give:
+  - The doubt you want to settle, or your selling idea
+  - Your product facts, what it replaces and how it works
+  - Your figures with sources, approved claims and banned claims
+  - Your colours, typefaces and offer
+  - Product photos with a sharp label (optional at first, needed before you make the image)
+you_get:
+  - Your point in one sentence and the one proof picture that shows it
+  - The paper kit, the layout and a zone map for 4:5 or 1:1
+  - The words on the image, checked for size and contrast, and a ready image prompt
+  - Feed copy with a first line, headline and button
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your product facts, figures, claims and colours underneath.
+  - Say the point you want to prove, or ask it to pick one from your facts.
+  - Make the image from the prompt with your product photo attached, then set the words in a design tool.
+  - Show it to someone for two seconds. If they can't say the point, ask for a simpler proof picture.
+
+how_it_works:
+  - title: Checks it fits
+    text: Good for proving one claim with one picture. It says so if your ad is a mood or only a price.
+  - title: Writes one point
+    text: What you do now, the snag, then the product, in one sentence with one "but".
+  - title: Picks the proof by the claim
+    text: Fewer steps, made of, replaces, fits or works by. Each gets its own kind of picture, frozen in one frame.
+  - title: Sets the paper kit
+    text: One paper and cut style, one signal colour and pointer, your product always in full colour from its photo.
+  - title: Lays out and checks words
+    text: 4:5 or 1:1, the proof large and off centre, a headline of 7 words or fewer, type of 30 px or more and contrast of 4.5:1.
+  - title: Writes the prompt and copy
+    text: A flat-from-above paper collage prompt with no text in it, and feed copy whose first line carries the point.
+
+output_shape: |
+  POINT      You <do this> and <expect that>, but <snag>,
+             therefore <product>.
+  VERB       <fewer steps / made of / replaces / fits / works by>
+  PROOF      <what the picture shows>
+
+  PAPER KIT  Material: <ground, cut style>  Signal: <colour, shape>
+             Photos: <product full colour; others one treatment>
+  LAYOUT     <4:5 or 1:1>, zone map top to bottom in %:
+             <headline> / <proof> / <labels> / <product> / <small line>
+  WORDS      Headline: "<7 words or fewer>" <size, colour, contrast>
+             Other: "<up to 3 items>"
+  IMAGE PROMPT  <ready to paste, no text in the image>
+  FEED COPY  First line: <...>  Headline: <27 characters or fewer>
+             Button: <...>
+  NOTES      <figure sources, MISSING>
+
+example:
+  business: sprout
+  input: |
+    [the skill]
+
+    Point: the powder routine has too many steps; a pack has one.
+    Buyer: has quit greens powders. Words: "gritty/chalky", "not having
+    to clean a shaker bottle". Old way: a half-used tub and a shaker.
+    Product: Sprout daily greens gummies. One daily pack, torn straight
+    across the top, gummies tipped into a palm.
+    Approved: "60+ ingredients, 21 vitamins & minerals, and 6g fiber"
+    in 1 pack.
+    Photos: pouch front, gummies in a hand.
+    Colours: cream #FFF7DF, deep forest #002C17, sunflower #FFCC2E.
+    Type: Work Sans bold and medium.
+    Offer: $29.99 first order with text sign-up, renews at $49.99
+    every 4 weeks.
+  output: |
+    POINT      You buy a greens powder and expect an easy daily habit,
+               but every glass takes a scoop, water, a shake and a
+               rinse, therefore Sprout puts it in one pack you tear.
+    VERB       takes fewer steps
+    PROOF      Four old-way objects in a row at the top (tub, scoop,
+               glass, shaker); below, the Sprout pouch alone, with
+               gummies in a hand beside it.
+
+    PAPER KIT  Material: warm cream card, scissor-cut edges, visible
+               thickness, soft short shadows.
+               Signal: one sunflower strip with a pointed end, aimed
+               at the pouch.
+               Photos: old-way objects black and white; the pouch and
+               hand in full colour.
+    LAYOUT     4:5, 1080 x 1350. Headline 0-16% / old-way row 18-40%
+               with label / pouch and hand 44-88% with label / 90-100%
+               clear cream.
+    WORDS      Headline: "Four steps, or one tear." Work Sans bold
+               84 px, deep forest on cream, 14.3:1.
+               Other: "4 STEPS" on a blank strip under the row and
+               "1 STEP" on the sunflower strip, Work Sans bold 44 px,
+               deep forest, 14.3:1 on cream and 10.1:1 on sunflower.
+               2 other things to read.
+    IMAGE PROMPT  A paper cutout collage photographed flat from above,
+      4:5, filling the frame. Warm cream card ground with faint grain.
+      Across the upper third, four black-and-white photo cutouts in a
+      row: a plain unlabelled powder tub, a scoop, a water glass, a
+      shaker, each with a scissor-cut edge, visible card thickness and
+      a soft short shadow, with a blank cream strip under them. Lower
+      centre, larger: the pouch from photo 1, cut out in full colour,
+      shape, colour and printing unchanged, and the hand from photo 2
+      beside it. One sunflower yellow paper strip with a pointed end
+      aims at the pouch. Even overhead light, no glare. A calm empty
+      band of cream at the top. No text, letters or numbers anywhere.
+    FEED COPY  First line: A greens powder takes a scoop, water, a
+               shake and a rinse. Sprout takes one tear.
+               Primary text: 60+ ingredients, 21 vitamins & minerals
+               and 6g fiber in one pack. $29.99 first order with text
+               sign-up. Renews at $49.99 every 4 weeks.
+               Headline: One tear a day (14 characters)
+               Button: Shop now
+    NOTES      60+, 21 and 6g are from the label claim. No chart.
+               Compared with "a greens powder", never a named brand.
+               MISSING: black-and-white photos of a plain tub, scoop,
+               glass and shaker, to shoot with no brand marks.
+
+tweaks:
+  - what: The claim
+    how: Ask for a specific verb, such as "it replaces" or "it's made of". Each gives a different proof picture in the same frame.
+  - what: Your figures
+    how: Paste counts or test results with their sources. With them you can get a chart cut to the real proportions. Without them, objects do the proving.
+  - what: The size
+    how: Ask for 1:1 as well as 4:5. It redraws the zone map for each size instead of stretching one.
+  - what: The paper kit
+    how: Name your paper, cut style and signal colour, or paste the kit from your cutout video so the two match.
+
+judge:
+  - You can say the point in one breath, and the proof picture fits the claim's verb.
+  - The headline is 7 words or fewer, with at most 3 other things to read.
+  - Every word is 30 px or larger on a 1080 px frame, with its contrast stated at 4.5:1 or more.
+  - There's one signal, and it points at the part that matters.
+  - The prompt asks for no text, and the product comes from your photo.
+
+test:
+  - Show the finished image to someone for two seconds, then hide it. They should be able to say the point in their own words.
+  - Shrink it to phone-feed size. The proof picture and your product should still read before the headline does.
+  - Ask for a chart without giving figures. It should leave the chart out or mark it MISSING, never invent bars.
+  - Run it twice on the same point. The proof picture may change, but the claim, the product and the word counts must hold.
+
+improve:
+  - Write your paper kit into step 4 of the skill file, so your stills and cutout videos look like one family.
+  - Add your measured figures, with sources, to your brand file, so charts become possible.
+  - Describe the old way you sell against in "What you need", so the before side never shows a real rival.
+  - Pair it with "Prove one point fast in a paper-cutout ad" when you want the video version too.
+
+works_best_with:
+  tools:
+    - {name: "Nano Banana 2.1", why: "Works from your product photo as a reference, so the cutout keeps your real pack."}
+    - {name: "GPT Image 2.5", why: "Lets you point at one piece to fix it without remaking the rest of the collage."}
+    - {name: "Canva or Figma", why: "Set the headline and labels in your brand fonts on top of the image, so every letter is exact."}
+  inputs:
+    - "Product photos on a plain background, so the cutout is clean"
+    - "Plain photos of the old way, with no brand marks, for the before side"
+    - "Your brand font files and colour codes, so the words match your other ads"
+
+terms:
+  - term: Cutout
+    meaning: A photo of your product with the background removed, printed and cut out like paper.
+  - term: Signal
+    meaning: The one arrow, ring or strip, in one colour, that shows the viewer where to look.
+  - term: Zone map
+    meaning: Where each part of the ad sits, top to bottom, as a share of the frame.
+  - term: Contrast
+    meaning: How much the words stand out from what's behind them. 4.5:1 is the usual floor for easy reading.

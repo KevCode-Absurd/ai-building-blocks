@@ -1,0 +1,194 @@
+new_slug: turn-a-daily-problem-into-a-paper-craft-image-ad
+name: "Turn a daily problem into a paper-craft image ad"
+summary: "Give it your selling idea and product photos. You get a paper-craft image prompt, the ad words and a layout."
+job: make-image-ads
+
+headline: "Turn a daily problem into a paper-craft image ad"
+subhead: Give it your selling idea, brand file and product photos. It picks one moment and the paper mechanism caught in it (a flap, a pop-up, a fold), checks the picture against your claims, and hands back an image prompt, the words, a layout and the steps to put your real label on.
+
+explain: |
+  A world of real cut paper makes a small everyday problem feel like a picture book, and a pack rising from a page feels like a gift. Ask an image tool for "paper" carelessly, though, and you get flat clip art, a craft model on a desk, or a mug that comes out real because nobody said it was card.
+
+  This skill plans one image. It picks the moment from what your buyer knows, then the show job the picture must do and the paper mechanism caught halfway, like a flap half lifted or a pop-up half risen. It sets how deep the paper is built, names the paper on every object and puts the camera inside the paper world. It reads the picture as a sentence and keeps it only if your claims back it. Then it applies the image-ad rules: a headline of 7 words or fewer, at most 3 other things to read, big type on plain card, strong contrast, feed sizes, and your real label laid on.
+
+when:
+  - Your product fixes a small everyday problem you can show in one picture.
+  - You run a paper-craft video and want a still that matches it.
+  - You want a reveal that feels like a gift, with your pack rising from the page.
+
+you_give:
+  - The reason someone buys, what the buyer knows and the selling idea
+  - Your brand file, with label text, how it's used, approved claims and offer
+  - Photos of your product's front, side and top (optional, needed if it appears)
+you_get:
+  - A moment plan with the paper mechanism, the build and the claim it implies
+  - A layout for 4:5 or 1:1, with a plain stretch of card for the words
+  - The words on the image, an image prompt and the post words
+  - The edit step that lays your real label over the card one
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your selling idea and brand file, and attach the product photos.
+  - Read the moment plan. If the implied sentence isn't something you can say, ask for another show job.
+  - Check every object in the prompt names its paper. Anything without it will come out real.
+  - Make the image, then lay the real label and the words on it in your editor.
+
+how_it_works:
+  - title: Checks the fit
+    text: Paper suits small everyday problems and gift-like reveals. It tells you to use a photo when proof or real texture is the point.
+  - title: Picks the moment
+    text: From what the buyer knows, then one of six show jobs and the paper mechanism caught halfway.
+  - title: Sets the look
+    text: The build, the paper types, one edge style, a low side light, and a quarter of the frame left as plain card.
+  - title: Reads the picture as a claim
+    text: Writes the sentence the picture implies and keeps it only if your claims back it.
+  - title: Applies the image-ad rules
+    text: The glance test, a short headline, at most 3 other things to read, 30 px type, 4.5:1 contrast, 4:5 or 1:1.
+  - title: Writes the prompt and words
+    text: An image prompt with the paper named on every object, the words, the post words, and the real label laid on in editing.
+
+output_shape: |
+  MOMENT   <problem / change caught halfway / product held>
+  SHOW JOB <reveal, spread, join, build, calm, hold>, <mechanism>
+  BUILD    <flat cut, layered...>, <paper types>, <edge>
+  It implies: "<sentence>"  Source: <claim or fact>
+
+  LAYOUT   <4:5 or 1:1>, <pixels>
+  <0 to n %> <quiet area: words> | <n to n %> <picture> | <product spot>
+
+  WORDS ON THE IMAGE
+  Headline (<n> words): "<...>"
+  <up to 3 more>: "<...>"  Source: <...>
+
+  IMAGE PROMPT  <subject, setting, paper, light, camera, "label lines">
+  AVOID FIELD   <plain nouns>
+
+  POST WORDS  Primary text <...> | Headline field <...> | Button <...>
+  EDIT STEP   <label overlay, word placement, contrast check>
+  CHECKS      <glance test, words, type, contrast, size>
+  MISSING: <facts it needed>
+
+example:
+  business: sprout
+  input: |
+    [the skill]
+
+    Selling idea: your own greens can ride along in the morning rush,
+    one pack at a time.
+    Buyer: the busy parent, 30 to 45. Knows the problem, not this fix.
+    Says: "So easy to grab and eat on my way to the billion things I
+    have to do as a mom." Runs in the Instagram feed.
+    Product: Sprout Low Sugar, pouch of 28 daily packs. Tear one pack
+    straight across the top. Pouch: glossy deep green, big yellow
+    wordmark "Sprout", yellow bear face top right, "28 Daily Packs" at
+    the bottom. Photos attached: front, side, top.
+    Approved: "60+ ingredients, 21 vitamins & minerals, and 6g fiber"
+    in 1 pack. Never say: fix, energy or immunity results, weight loss.
+    Colors: forest green #00582D, cream #FFF7DF, sunflower #FFCC2E.
+    Offer: $29.99 first order with text sign-up, renews at $49.99
+    every 4 weeks.
+  output: |
+    MOMENT   The change caught halfway: she knows the problem, not
+             this fix.
+    SHOW JOB Reveal, pop-up. A daily pack half risen from the fold of
+             her paper planner, its shadow on the page.
+    BUILD    Flat-cut hands on layered planes, one pop-up. Matte card
+             stock, kraft for the lunchboxes, scissor-cut edges.
+    It implies: "One pack fits into a packed morning." Source: the
+    directions ("grab a single pack daily") and the buyer's words.
+    Rejected: a flap lifting off a tired face to show a bright one
+    (implies an energy result, which is banned).
+
+    LAYOUT   4:5, 1080 x 1350
+    0-25 %   plain cream card: headline and small line
+    25-88 %  the open planner from over her shoulder, the pack half
+             risen in the fold; the card pouch standing lower right
+    88-100 % plain cream card strip: offer line
+
+    WORDS ON THE IMAGE
+    Headline (6 words): "Greens that fit a packed morning."
+    Small line: "60+ ingredients, 21 vitamins & minerals, and 6g fiber
+    in 1 pack."  Source: approved claim, word for word
+    Offer line: "$29.99 first order with text sign-up. Renews at
+    $49.99 every 4 weeks."  Source: offer terms
+    Type: headline 64 px, small line 34 px, offer 30 px, in forest
+    green on cream card (about 8:1).
+
+    IMAGE PROMPT
+    Two flat-cut paper hands of an adult, in blue card sleeves, hold
+    open a paper planner. Its right page is crowded with flat-cut card
+    icons (a bus, a laptop, a shopping bag, a kraft-paper lunchbox).
+    From the centre fold a green card daily pack stands half risen on
+    a parallel fold, its shadow on the page. A deep green card pouch
+    stands at lower right, a yellow card bear face top right. Set on a
+    cream card counter with forest green card cupboards behind, three
+    layered planes. Matte card stock in cream, forest green, sunflower
+    yellow and sky blue, clean scissor-cut edges, one low warm side
+    light so each layer casts a soft shadow. Camera over her shoulder
+    at her eye level, inside the paper scene, paper filling every edge;
+    4:5, the top quarter and a bottom strip plain cream card. Label on
+    the pouch: "Sprout" in large yellow letters; "28 Daily Packs".
+    AVOID FIELD  vector, 3D render, plastic, clay, desk, scissors,
+    maker's hands, text
+
+    POST WORDS
+    Primary text: So easy to grab on the way out. One Sprout pack: 60+
+    ingredients, 21 vitamins & minerals, and 6g fiber.
+    Headline field: Greens for the morning rush
+    Button: Shop now
+    EDIT STEP  Lay the real pouch, cut out from the front photo, over
+    the card one at the same size. Set the words on the plain card.
+    Check contrast on the finished image. For 1:1, recompose with the
+    planner smaller; never crop the pouch.
+    CHECKS  Glance test: a pack popping up in a busy planner. Headline
+    6 words, 2 more things to read, type 30 px and up, 4.5:1 or more.
+    No child shown; the lunchbox carries the family.
+    MISSING: a photo of a single daily pack, so the pop-up matches it.
+
+tweaks:
+  - what: The moment
+    how: The problem as the buyer lives it suits people new to it. The change caught halfway suits people comparing fixes. The product held large suits people who know you.
+  - what: How deep it's built
+    how: Flat cut suits gestures and comedy. Layered planes suit a rich, premium scene. Pop-up and fold suits reveals. Quilled detail suits ingredients and patterns.
+  - what: Busy labels
+    how: Ask for a printed photo of your real pack, cut out and set in the scene. Every word stays exact.
+  - what: Size
+    how: 4:5 is the default for feeds. Ask for 1:1 as well and it recomposes the picture, never stretching or cropping the product.
+
+judge:
+  - Shown for 2 seconds, someone can say what the product is and the one idea.
+  - The headline has 7 words or fewer, with at most 3 other things to read.
+  - Every object in the prompt names its paper or card, and the camera stands inside the scene.
+  - The implied sentence is something your claims let you say.
+  - The product matches your photos, with your real label laid over it.
+
+test:
+  - Search the prompt for any object without a paper word. There should be none.
+  - Ask for a flap that turns a tired face into a bright one. The claim step should reject it and say why.
+  - Run it twice on the same brief. The show job and the moment should stay close.
+  - Put the finished image next to your current best image ad at phone size. Ask which one someone understands first.
+
+improve:
+  - If one build suits your brand, write it into step 3 of the skill file so every paper ad in a series matches.
+  - Add your banned claims to step 4, so the picture is tested against them.
+  - Save the headline and moment that win in your brand file.
+  - Pair it with the paper-craft video skills, so the still and the video share one world.
+
+works_best_with:
+  tools:
+    - {name: "Nano Banana 2.1", why: "Works from your product photos as references, so the card pack keeps its true shape."}
+    - {name: "Any good chat AI", why: "Claude, ChatGPT and Gemini all follow this skill well, so use the one you already have."}
+  inputs:
+    - "Photos of a paper craft or pop-up book you like, so the build has a clear model"
+    - "The pack's flat artwork, so the card pack matches its real colors and shapes"
+    - "Your best current image ad, so you can test the paper one against it"
+
+terms:
+  - term: Show job
+    meaning: What the picture has to show for the selling idea, such as a reveal or many parts adding up.
+  - term: Pop-up
+    meaning: A paper piece fixed across a fold, so it stands up as the page opens.
+  - term: Quiet area
+    meaning: A calm part of the picture, here plain card, kept free for the words.
+  - term: Glance test
+    meaning: Showing the ad for 2 seconds. If a stranger can say what it's for, it passes.

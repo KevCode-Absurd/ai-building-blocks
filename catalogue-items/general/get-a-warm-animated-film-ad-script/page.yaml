@@ -4,7 +4,7 @@ summary: "Give it your selling idea. You get a timed script for an animated-movi
 job: make-video-ads
 
 headline: "An ad that looks like an animated movie"
-subhead: Give it your selling idea and your brand file. It writes the story in three parts with their own light, casts one made-up adult, and brings your product in with its real label. You get a timed script or a single image brief.
+subhead: Give it your selling idea and your brand file. It writes the story in three parts with their own light, casts one made-up adult, and brings your product in with its real label. You get a timed script and a note on who should carry it.
 
 explain: |
   The look of a 3D animated film (stylised people, real-looking light) makes an everyday problem warm and easy to watch. It goes wrong in familiar ways. The face goes blank, the light changes for no reason, or the story stops halfway so a sales speech can start.
@@ -13,25 +13,25 @@ explain: |
 
 when:
   - You want a story-led video ad without filming, and the problem is a moment your buyer knows.
-  - You want one image ad with a character caught in the problem, or just past it.
+  - You want a script your video tool can follow, with one character who never changes.
   - You need a close view of how your product works that a camera couldn't film.
 
 you_give:
   - Your selling idea or an existing script
   - Your brand file, with the buyer's moment, the product's label words and your approved claims
-  - Video or image, the length, and who speaks (optional)
+  - The length, and who speaks (optional)
 you_get:
   - The story in one line, in three parts
   - A light and colour key for each part, and a casting card
-  - A timed script table with speaker, words, picture, cut and seconds, or an image brief
-  - Notes on what was inferred and what's missing
+  - A timed script table with speaker, words, picture, cut and seconds
+  - Notes on what was inferred and missing, and a cast note on who carries the ad
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste your selling idea and your brand file underneath.
-  - Say "video, 30 seconds, narrator" or "image", depending on what you need.
+  - Say the length and who speaks, such as "30 seconds, narrator".
   - Check every spoken line against your approved claims before you make anything.
-  - Take the script to "Turn your animated film script into consistent clips" for the prompts.
+  - Take the script and cast note to "Turn your animated-movie script into video clips". It takes it from there, with the avatar, sheets, storyboard and clips.
 
 how_it_works:
   - title: Checks the fit
@@ -46,6 +46,8 @@ how_it_works:
     text: What they notice, what the body does, what they do next, plus one small habit.
   - title: Times the script
     text: About two words a second, one speaker at a time, the product at the turn, and every cut marked.
+  - title: Writes the cast note
+    text: Who carries the ad, why that suits your buyer, their voice and what must never change.
 
 output_shape: |
   STORY     <moment> and <what they do now>, but <snag>,
@@ -62,6 +64,8 @@ output_shape: |
   NOTES
   - Inferred: <...>
   - MISSING: <...>
+
+  CAST NOTE  <who carries it, why, voice, what never changes>
 
 example:
   business: sprout
@@ -130,9 +134,14 @@ example:
     - MISSING: the daily pack's own label words. Keep its front
       turned away in line 5 until they're supplied.
 
+    CAST NOTE  The mum on the casting card carries it, silent, with
+    a narrator. Busy parents see their own 7:40 rush in her, and a
+    narrator keeps the claim line exact and out of her mouth.
+    Narrator: a warm adult voice, quick but calm. Never change: the
+    curly hair tied up, the rust jumper, the tote on her left
+    shoulder.
+
 tweaks:
-  - what: Video or image
-    how: Say "image" and you get one frame (the snag or the turn), a headline of 7 words or fewer and an image prompt.
   - what: Who speaks
     how: A narrator suits a quiet story. One character speaking on camera feels closer, but still never claims a result.
   - what: Length
@@ -158,12 +167,11 @@ improve:
   - Add your approved and banned claims to step 6.
   - Add two or three buyer moments from your reviews to step 2, so the story starts in a room your buyers know.
   - Save a casting card you like in your brand file, so a series of ads has one face.
-  - Pair it with the skill that turns an animated film script into still and clip prompts.
+  - Pair it with "Turn your animated-movie script into video clips", which runs the avatar, sheets, storyboard and clips.
 
 works_best_with:
   tools:
     - {name: "Any good chat AI", why: "Claude, ChatGPT and Gemini all follow this skill well, so use the one you already have."}
-    - {name: "Nano Banana 2.1", why: "For the still version, it can work from your product photo as a reference, so the pack looks right."}
   inputs:
     - "Two or three buyer moments from your reviews, with the room and time of day"
     - "Photos of the product being opened, so every step in the script is true"

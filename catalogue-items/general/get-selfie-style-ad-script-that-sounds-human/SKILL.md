@@ -1,15 +1,14 @@
 ---
 name: get-selfie-style-ad-script-that-sounds-human
-description: Use when an ad should look like one person filming themselves on a phone (a real creator who has used the product, or a made-up AI presenter). Writes a timed five-beat script, or one still styled as a friend's phone snap, and settles first what that person may honestly say.
+description: Use when a video ad should look like one person filming themselves on a phone (a real creator who has used the product, or a made-up AI presenter). Settles first what that person may honestly say, then writes a timed five-beat script and a cast note on who should carry it, ready for the clips skill to make.
 ---
 
 # Get a selfie-style ad script that sounds human
 
-You write a 15 to 60 second script for one person talking to their phone, or one still that looks like a photo they posted. It should pass as a post from a person until the last line, and every claim in it must hold up.
+You write a 15 to 60 second script for one person talking to their phone. It should pass as a post from a person until the last line, and every claim in it must hold up. You hand over the script and a cast note; the selfie-style clips skill makes the video from there.
 
 ## What you need
 - **Brief** (required): why people buy, how much the buyer knows already, the length.
-- **Video or still** (required).
 - **Who is on camera** (required): `real creator` (has used the product) or `AI presenter` (made up).
 - **Buyer's words** (required): their biggest doubt, where they are when they'd use it, the nouns they use, quotes with sources.
 - **Product facts** (required): how it opens and is used, and what a result looks like, if anything shows.
@@ -31,19 +30,13 @@ You write a 15 to 60 second script for one person talking to their phone, or one
    5. **Hand-off:** what to do next, said the way you'd tell a friend where you got something. State the offer as it really is. No "buy now" and no deadline the offer doesn't have.
 5. **Make it sound spoken.** Contractions, short fragments, the buyer's own nouns, one moment of surprise or doubt. Cut hype ("obsessed", "life-changing", "game-changing", "revolutionary"). Test each line: if it would fit a glossy TV voice-over, rewrite it plainer.
 6. **Time it.** At a relaxed talking pace of about 2.5 words a second: 15 s holds about 35 words, 30 s about 70, 45 s about 105, 60 s about 140. A routine or a small discovery fits 20 to 30 seconds. Talking a doubt through, or telling a story, takes 45 seconds or longer. Write a shorter version fresh; don't squeeze the long one.
-7. **Write the picture track.** Tall 9:16, phone at arm's length or propped up, lit by whatever light the room has. The viewer sees the product in the hand before anyone names it. Something changes every 2 to 3 seconds: a closer cut, hands from above, the product up close, a second spot for the "before". Keep the face, product and any text out of the bottom third and the top strip, where the app's buttons sit. Subtitles of every spoken word are added in editing, because many people watch muted.
-
-### Still rules
-- **One moment, mid-use,** where and when the buyer really uses it (gummies tipping into a palm by the front door). Never a smiling face beside a pack.
-- **How it was taken:** pick one of an arm's-length selfie, a mirror photo, or a look down at their own hands. A little off-centre and tilted, all in focus.
-- **The product:** absent or small at the edge for buyers who don't see the problem yet; in hand with the front readable for buyers further along. It never covers the mouth.
-- **The room:** one ordinary lived-in place with two or three things that belong there. The person is an adult. Unless a real customer photo was given, they are made up and never called a customer.
-- **Words, as if the person typed them:** a single caption, 12 words at most, set in a simple bar like a story post or in white letters with a light drop shadow, placed on an empty patch clear of the face and the product. It's the hook as a thought or question, or a customer quote with who said it. Never a first-person result from an AI person. A second, smaller line is allowed for the anchor or the next step. Leave out buttons, logo blocks and the brand's headline font. The picture may carry no words, with the hook as the first line of the post text.
-- **Image prompt:** an unretouched phone photo in the room's own light, with the light named (window on the left). Real skin texture, slight asymmetry, creased fabric, the mild wide angle of a phone camera. Words to keep out of the prompt: cinematic, grain, bokeh, blurred background, dramatic light, colour grade, studio, flawless, perfect, beauty filter. Say how the phone is held and what the free hand does, with a grip a hand could really make. Let fingers hide naturally. A mirror photo needs the reflection, the camera's direction and reversed lettering. The product comes from its photo and opens only where it really opens. Give the caption in quotes, with its place, and say it appears once.
+7. **Write the picture notes.** Tall 9:16, phone at arm's length or propped up, lit by whatever light the room has. The viewer sees the product in the hand before anyone names it. Something changes every 2 to 3 seconds: a closer cut, hands from above, the product up close, a second spot for the "before". Keep the face, product and any text out of the bottom third and the top strip, where the app's buttons sit. Subtitles of every spoken word are added in editing, because many people watch muted.
+8. **Write the cast note.** Who should carry the ad, and why, in three or four lines: real creator or AI presenter; for an AI presenter, the kind of made-up adult that fits the buyer (age range, where they'd film, what they'd wear) and why; for a real creator, a casting and wardrobe note (who, plain clothes, the room they film in). The clips skill turns the AI presenter into an avatar card; a real creator films from the script with a real-camera shot list.
 
 ## What you hand back
-- **Video:** a table of `Beat | Says | On screen | Picture`, the `[DEMO]` line marked, hook options if asked, and blanks for a real creator. Then the anchor and its source, the spoken word count with seconds, and the disclosure line.
-- **Still:** the caption, the moment, how it was taken, and a ready-to-paste image prompt.
+- A table of `Beat | Says | On screen | Picture`, the `[DEMO]` line marked, hook options if asked, and blanks for a real creator.
+- The anchor and its source, the spoken word count with seconds, and the disclosure line.
+- The cast note.
 - A list of every claim, number and quote with its source.
 
 ## Check before you hand it back
@@ -52,8 +45,8 @@ You write a 15 to 60 second script for one person talking to their phone, or one
 - An AI presenter states no personal result or story; every quote has a source.
 - The honest result claims less than the facts allow.
 - Word count fits the length at about 2.5 words a second.
-- Video: the picture changes every few seconds and nothing sits in the button areas.
-- Still: caption of 12 words or fewer, no button or logo block, no posed model with a pack.
+- The picture changes every few seconds and nothing sits in the button areas.
+- The cast note says who carries it and why, and never casts a real person as an AI avatar.
 
 ## If something is missing
 Write `MISSING: <what>`. No quote on file: use an observation and put nothing in quotation marks. No "how it's used": the product is held, never opened. No visible result: claim nothing about what's seen. No number in the facts: anchor on a moment instead.
@@ -61,5 +54,4 @@ Write `MISSING: <what>`. No quote on file: use an observation and put nothing in
 ## Avoid
 - A posed product shot with a model.
 - A testimonial line beside an AI face.
-- Three blocks of text, or a caption in the brand's headline font.
 - A spotless, perfectly lit room that no real person films in.

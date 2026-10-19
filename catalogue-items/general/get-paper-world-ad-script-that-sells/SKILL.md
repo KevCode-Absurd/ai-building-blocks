@@ -1,15 +1,14 @@
 ---
 name: get-paper-world-ad-script-that-sells
-description: Use when an ad should be a narrated story (or one still) set in a world built from real cut and folded paper. Picks what the turn must show, then the real paper-craft mechanism that shows it (flap, pop-up, concertina, layers, quilling), chooses how deep the paper is built, tests every paper change as a claim, and writes the script or still plan.
+description: Use when an ad should be a narrated video story set in a world built from real cut and folded paper. Picks what the turn must show, then the real paper-craft mechanism that shows it (flap, pop-up, concertina, layers, quilling), chooses how deep the paper is built, tests every paper change as a claim, and writes the video script with a cast note for the video block. For one paper still, use the paper-craft image ad skill instead.
 ---
 
 # Get a paper world ad script that sells
 
-You write a 15 to 40 second narrated script set in a world of real cut and folded paper, or a plan for one still. The ad turns on one paper change, chosen for what the selling idea needs to show. Real paper-craft mechanisms do the showing.
+You write a 15 to 40 second narrated video script set in a world of real cut and folded paper. The ad turns on one paper change, chosen for what the selling idea needs to show. Real paper-craft mechanisms do the showing. You end with the script and a cast note; the paper world shots skill makes the video from there.
 
 ## What you need
 - **Brief** (required): the reason someone buys, what the buyer already knows, the selling idea in one sentence, the length.
-- **Video or still** (required).
 - **Product facts** (required if the product appears): shape, colours, the 1 to 3 biggest label lines, how it's used, how it works (only if the brand states it).
 - **Claims and offer** (required): approved claims, banned claims, the offer with its terms.
 - **Buyer** (optional): who they are, the moment they meet the problem, their own words.
@@ -51,8 +50,7 @@ For each change, write the sentence a viewer would take from it. Keep it only if
 - The product is cut and folded from card at its true shape and colours. Only its 1 to 3 biggest label lines are printed on it; the full label goes on in editing. For a busy label, use a printed photo of the real pack, cut out and set in the scene.
 - One main figure, a made-up paper adult. A second person only as paper hands or a back view. Never a child, a real or famous person, a customer, or the founder. Figures never speak or report a result.
 
-### 6. Write it
-**Video**
+### 6. Write the script
 - One narrator, off screen, in the brand's voice.
 - Plan words by time: calm narration runs about 2.2 words a second, so 30 seconds is about 65 words.
 - Each line is one paper picture. Name the paper on every object ("a kraft-paper lunchbox", "a tissue-paper steam curl"); an object without its material comes out real.
@@ -63,17 +61,15 @@ For each change, write the sentence a viewer would take from it. Keep it only if
 - Split into clips of the length your video tool makes (8 seconds if unknown), each sentence inside one clip.
 - No words in the scene except the product's biggest label lines.
 
-**Still**
-- One moment: the problem as the buyer lives it, the turn caught halfway (a flap half open), or the product held large.
-- Leave one quiet stretch of plain paper, about a quarter of the frame, for the words.
-- Words go on in editing: a headline of 6 words or fewer, 15 words in all, a button only if there's an offer.
-- Give a ready image prompt in this order: subject and what it's doing, setting, the paper (build, paper types, edge), light (one low side light so each layer casts a shadow), camera position, then the label lines in quotes. Name the paper on every object. Describe what you want; if the tool has a separate "avoid" field, list plain nouns there (vector, 3D render, plastic, clay, table, hands of a maker).
+### 7. Write the cast note
+Say who should carry the ad and why, in two or three lines: one flat-cut paper adult, paper hands only, or the product alone. Pick from the buyer and the script. A figure suits a problem that lives in someone's day; the product alone suits a gift-like reveal. The video block turns this into the avatar card.
 
 ## What you hand back
 1. **Show plan:** selling idea, show job, mechanism, build and paper, what changes, the sentence it implies and its source.
-2. **Video:** one row per line (narration, picture with paper named, camera position, the one move), the turn marked, word count, seconds and clip split. **Or still:** moment, quiet area, headline, small line, image prompt.
+2. **Script:** one row per line (narration, picture with paper named, camera position, the one move), the turn marked, word count, seconds and clip split.
 3. **Claims shown:** each change and its source, plus changes you rejected and why.
-4. `MISSING:` lines for facts you needed.
+4. **Cast note:** who carries the ad, and why.
+5. `MISSING:` lines for facts you needed.
 
 ## Check before you hand it back
 - One turn; its mechanism fits the show job; at most one paper-made scene change.
@@ -81,7 +77,8 @@ For each change, write the sentence a viewer would take from it. Keep it only if
 - Every change has a backed sentence; no body change.
 - The product has its true shape, colours and only real label words.
 - No speaking or testimonial figure; no child or real person.
-- Video: 5 words or fewer over the turn; total words fit the length. Still: 15 words or fewer.
+- 5 words or fewer over the turn; total words fit the length.
+- The cast note names one choice and gives its reason.
 
 ## If something is missing
 Write `MISSING: <what>`. No how-it-works facts: tell the problem and the product without a how-it-works shot. No label lines: ask. No buyer moment: pick one from the brief and mark it `inferred`.

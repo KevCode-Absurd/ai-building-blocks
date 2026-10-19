@@ -1,15 +1,14 @@
 ---
 name: get-watercolor-ad-script-that-sells
-description: Use when an ad should be a calm narrated story (or one still) in transparent watercolour, because the selling idea is something a camera films badly (what's inside, a scent, a mood, many parts adding up). Picks what the turn must show, then the real paint technique that shows it, tests every painted change as a claim, and writes the script or still plan.
+description: Use when an ad should be a calm narrated video in transparent watercolour, because the selling idea is something a camera films badly (what's inside, a scent, a mood, many parts adding up). Picks what the turn must show, then the real paint technique that shows it, tests every painted change as a claim, and writes the video script with a cast note for the video block. For one painted still, use the watercolor image ad skill instead.
 ---
 
 # Get a watercolor ad script that sells
 
-You write a 15 to 40 second narrated watercolour script, or a plan for one painted still. The ad turns on one painted change, chosen for what the selling idea needs to show. Real watercolour technique does the showing.
+You write a 15 to 40 second narrated watercolour video script. The ad turns on one painted change, chosen for what the selling idea needs to show. Real watercolour technique does the showing. You end with the script and a cast note; the watercolour shots skill makes the video from there.
 
 ## What you need
 - **Brief** (required): the reason someone buys, what the buyer already knows, the selling idea in one sentence, the length.
-- **Video or still** (required).
 - **Product facts** (required if the product appears): shape, colours, the 1 to 3 biggest label lines, what it's made of, how it works (only if the brand states it).
 - **Claims and offer** (required): approved claims, banned claims, the offer with its terms.
 - **Buyer** (optional): who they are, where and when they meet the problem, their own words.
@@ -48,8 +47,7 @@ For each change, write the sentence a viewer would take from it. Keep it only if
 - The product is painted at its true shape and colours with the crispest edges on the sheet. Only its 1 to 3 biggest label lines are painted; the full label goes on in editing from the real photo.
 - One figure at most, a made-up adult, loosely painted. A second person only as hands. Never a child, a real or famous person, a customer, or an artist's named style. Figures never speak or report a result.
 
-### 6. Write it
-**Video**
+### 6. Write the script
 - One calm narrator, off screen, in the brand's voice.
 - Plan words by time: calm narration runs about 2.2 words a second, so 30 seconds is about 65 words.
 - Each line is one painted picture. Write what is painted and what moves.
@@ -59,17 +57,15 @@ For each change, write the sentence a viewer would take from it. Keep it only if
 - Cut between shots by default. Split into clips of the length your video tool makes (8 seconds if unknown), with each sentence inside one clip.
 - No painted words except the product's biggest label lines.
 
-**Still**
-- One moment: the problem as the buyer lives it, the turn caught halfway, or the product held large.
-- Leave one quiet area of bare paper, about a quarter of the frame, for the words.
-- Words go on in editing, never painted: a headline of 6 words or fewer, 15 words in all, a button only if there's an offer.
-- Give a ready image prompt in this order: subject and what it's doing, setting, the paint (paper, technique, texture, colours), light, framing, then the label lines in quotes. Name "painted" or "watercolour" on every object. Describe what you want; if the tool has a separate "avoid" field, list plain nouns there (photo, 3D render, plastic, brush, hand, table).
+### 7. Write the cast note
+Say who should carry the ad and why, in two or three lines: one loosely painted figure, hands only, or the product alone. Pick from the buyer and the script. A figure helps when the problem lives in a person's day; hands only when the product needs holding; the product alone when the ad is about what's inside it. The video block turns this into the avatar card.
 
 ## What you hand back
 1. **Show plan:** selling idea, show job, technique, what changes, the sentence it implies and its source.
-2. **Video:** one row per line (narration, picture, what moves, colours), the turn marked, word count, seconds and clip split. **Or still:** moment, quiet area, headline, small line, image prompt.
+2. **Script:** one row per line (narration, picture, what moves, colours), the turn marked, word count, seconds and clip split.
 3. **Claims painted:** each change and its source, plus changes you rejected and why.
-4. `MISSING:` lines for facts you needed.
+4. **Cast note:** who carries the ad, and why.
+5. `MISSING:` lines for facts you needed.
 
 ## Check before you hand it back
 - One turn, and its show job matches the selling idea.
@@ -77,7 +73,8 @@ For each change, write the sentence a viewer would take from it. Keep it only if
 - No two opposite colours mixing in one shot.
 - The product has the crispest edges, true colours and only real label words.
 - No speaking or testimonial figure; no child or real person.
-- Video: 5 words or fewer over the turn; total words fit the length. Still: 15 words or fewer.
+- 5 words or fewer over the turn; total words fit the length.
+- The cast note names one choice and gives its reason.
 
 ## If something is missing
 Write `MISSING: <what>`. No ingredient list: don't paint ingredients; use Spread, Calm or Hold. No label lines: ask. No buyer moment: pick one from the brief and mark it `inferred`.

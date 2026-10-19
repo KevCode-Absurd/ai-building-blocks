@@ -13,13 +13,12 @@ inputs:
   - {type: brand_brain, required: true}
 outputs:
   - {type: script}
-  - {type: image_prompt}
 uses: []
 example: skeleton
 origin: rebuilt
 source_ids: [CES-120]
 old_name: skeleton what-happens-if script rules
-version: 2.0.0
+version: 2.1.0
 credits:
   - {title: "A quick guide to Game of the Scene", by: "Liam Brennan, Hoopla Impro", url: "https://www.hooplaimpro.com/quick-guide-game-of-scene", used: "The game: one unusual thing, explored then heightened step by step"}
   - {title: "The Psychology of Curiosity: A Review and Reinterpretation", by: "George Loewenstein, Psychological Bulletin, 1994", url: "https://doi.org/10.1037/0033-2909.116.1.75", used: "Curiosity as a specific gap the viewer wants closed, for the question"}

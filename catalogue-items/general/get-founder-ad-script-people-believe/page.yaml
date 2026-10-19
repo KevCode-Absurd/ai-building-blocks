@@ -9,7 +9,7 @@ subhead: Give it your founder's own words and your product facts. It picks one d
 explain: |
   Most founder ads sound alike. A founder smiles at the camera, tells the brand story and says the product is great. Viewers shrug, because anyone would say that about their own product.
 
-  What only a founder can tell is why the product is made this way, and what that choice cost. The cheaper material they turned down, the samples they threw out, the slow step they kept. This skill builds the whole ad on one of those decisions, picked because it answers a doubt your buyers really have. Every line comes from the founder's own answers or your brand facts. If those answers don't exist yet, it writes interview questions that draw out a clear, quotable answer, and never a made-up story. It never generates the founder's face or voice. You get a brief the real person films, or a still made from their real photo or a note in their words.
+  What only a founder can tell is why the product is made this way, and what that choice cost. The cheaper material they turned down, the samples they threw out, the slow step they kept. This skill builds the whole ad on one of those decisions, picked because it answers a doubt your buyers really have. Every line comes from the founder's own answers or your brand facts. If those answers don't exist yet, it writes interview questions that draw out a clear, quotable answer, and never a made-up story. It never generates the founder's face or voice. You get a brief the real person films, and a casting and wardrobe note for the shoot.
 
 when:
   - Your founder made real choices about the product that buyers don't know about.
@@ -21,13 +21,12 @@ you_give:
   - Your product facts, claims with sources, proof and guarantee
   - What makes your buyers hesitate, in their words
   - Footage or photos you already have (optional)
-  - Video or still, and the length (optional)
+  - The length, such as 30 or 60 seconds (optional)
 you_get:
   - A filming brief with each line's move, words and what to film
   - Two or three openings to record, each true for your founder
-  - Interview questions, if your founder's words are missing
-  - Or, for a still, the layout, the exact words and an image prompt
-  - Notes on the proof behind each claim, and any claims softened
+  - Interview questions, if your founder's words are missing, and notes on the proof behind each claim
+  - A casting and wardrobe note on who appears, where they film and what they wear
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
@@ -35,7 +34,7 @@ how_to_use:
   - Add your product facts, claims and guarantee.
   - Say the length, for example "60 seconds".
   - If you get interview questions back, have your founder answer them on camera, then run it again with the answers.
-  - Film the main part once, then record each opening it suggests.
+  - Film the main part once, then record each opening it suggests. For a full shot list for the shoot, take the brief to "A shot list that keeps your video ad moving".
 
 how_it_works:
   - title: Confirms the person
@@ -67,6 +66,7 @@ output_shape: |
   Questions for the founder: [<...>]
   Claims softened: <...>
   Proof behind each claim: <claim> = <test, count or quote>
+  CASTING AND WARDROBE  <who appears, in what role, where, what they wear>
   MISSING: <...>
 
 example:
@@ -149,13 +149,19 @@ example:
     - MISSING: founder name and role, their own words, any footage or
       photos of where Sprout is made or packed.
 
+    CASTING AND WARDROBE  The founder, as themselves, once their
+    answers are in. Not the paid athlete. Film where Sprout is packed,
+    in their usual work clothes, plain, no other brand's logo. In
+    reach: the study page and an open daily pack. No AI avatar and no
+    AI voice. Next: the shot list skill, for a real-camera shot list.
+
 tweaks:
   - what: The decision
     how: Name the decision you want told, for example "why we use the dearer ingredient". Otherwise it picks the one that best answers a buyer doubt.
   - what: The length
     how: 30 seconds tells the choice and what you get. 60 seconds adds the usual way, the cost and one proof. 2 to 3 minutes can carry two or three decisions.
-  - what: Still instead of video
-    how: Ask for a still. With a real photo it uses that photo untouched. Without one it plans a note on the workbench beside the product.
+  - what: A still instead
+    how: Want a still instead? Use "A handwritten-note photo people stop to read" with your founder's own words, beside the real product.
   - what: The interview
     how: Ask for "interview only" to get the questions and filming notes without a brief, for a shoot day.
 

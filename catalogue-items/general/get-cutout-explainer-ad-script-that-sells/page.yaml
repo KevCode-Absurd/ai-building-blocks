@@ -4,7 +4,7 @@ summary: "Give it your main point and facts. You get a 20 to 40 second script wi
 job: make-video-ads
 
 headline: "Prove one point fast in a paper-cutout ad"
-subhead: Give it your selling idea and product facts. It writes your point as one sentence, picks a proof picture for each line from what the line claims, and times each picture to land on the word it proves. You get a 20 to 40 second script or a single image.
+subhead: Give it your selling idea and product facts. It writes your point as one sentence, picks a proof picture for each line from what the line claims, and times each picture to land on the word it proves. You get a 20 to 40 second script and a note on what should carry it.
 
 explain: |
   Explainer ads often try to say everything. Five features, three charts, a paragraph on screen, and a viewer who has scrolled away before the point lands. Others show charts with no real numbers behind them.
@@ -21,20 +21,20 @@ you_give:
   - Your product facts, how it works, and what it replaces
   - Your figures with sources, approved claims and banned claims
   - Your colours, typefaces, offer and guarantee
-  - Video or still, and the length (optional)
+  - The length (optional)
 you_get:
   - Your point in one sentence and a small paper kit
   - A table of narration, key word, proof picture, signal and move for every line
-  - Or, for a still, the layout, the exact words and an image prompt
   - Notes on where each figure comes from, and anything MISSING
+  - A cast note on what carries the ad, ready for the shots skill
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste your product facts, figures and claims underneath.
   - Say what point you want to prove, or ask it to pick one from your facts.
-  - Say "video, 30 seconds" or "still".
+  - Say the length, such as "30 seconds".
   - Read the point first. If it has two snags, ask for two separate ads.
-  - For a video, take the script to "Turn your cutout explainer script into ready-to-make video shots".
+  - Take the script and cast note to "Turn your paper-cutout script into video clips". It takes it from there, with the product sheet, storyboard and clips.
 
 how_it_works:
   - title: Checks it fits
@@ -49,6 +49,8 @@ how_it_works:
     text: Each picture lands on the word it proves, with one signal and a few key words on screen.
   - title: Keeps proof honest
     text: No chart without your figures, no named rival, no body before and after, no real people.
+  - title: Writes the cast note
+    text: Usually your product cutout carries the ad, so it's the avatar. The note says why, and names the narrator's voice.
 
 output_shape: |
   POINT
@@ -66,6 +68,8 @@ output_shape: |
   NOTES
   - Figures: <each figure and its source, or "no chart">
   - MISSING: <what the ad needs>
+
+  CAST NOTE  <what carries it, why, narrator's voice, what never changes>
 
 example:
   business: sprout
@@ -128,6 +132,12 @@ example:
     - MISSING: black-and-white photos of a plain tub, scoop, glass and
       shaker (no brand marks), and a photo of a single daily pack.
 
+    CAST NOTE  The product carries it: the daily pack and pouch
+    cutouts are the avatar, and no person is needed, since the point
+    is a count of steps. Narrator: a quick, dry adult voice, off
+    screen. Never change: the cutouts come from the real photos, and
+    the paper kit above.
+
 tweaks:
   - what: The point
     how: Ask for a specific claim, for example "it replaces" or "it's made of". Each gives a different kind of proof picture.
@@ -135,8 +145,8 @@ tweaks:
     how: Paste test results, counts or measurements with their sources. With them you get a chart drawn to the real proportions. Without them, objects do the proving.
   - what: The paper kit
     how: Name the paper and cut style (brown kraft, torn edges) and the signal colour. It keeps to them all the way through.
-  - what: A still
-    how: Ask for a still and it picks the one line a picture can prove alone, with a headline of 7 words or fewer.
+  - what: Want a still instead?
+    how: Use "Prove one point with a paper cutout image ad", which makes one image ad in this same paper kit.
 
 judge:
   - You can say the point in one breath, and it has one "but".
@@ -155,12 +165,11 @@ improve:
   - Write your paper, cut style and signal colour into step 4 of the skill file, so every explainer in a series looks the same.
   - Add your measured figures, with sources, to your brand file. Charts make strong proof, and step 3 only allows them from real numbers.
   - Describe the old way you sell against in "What you need" (for Sprout, a powder tub and a shaker), so swaps never show a real rival.
-  - Pair it with the skill that turns a cutout explainer script into still and clip prompts for a video tool.
+  - Pair it with "Turn your paper-cutout script into video clips", which runs the product sheet, storyboard and clips.
 
 works_best_with:
   tools:
     - {name: "Any good chat AI", why: "Claude, ChatGPT and Gemini all follow this skill well, so use the one you already have."}
-    - {name: "Nano Banana 2.1", why: "For the still version, it can work from your product photo as a reference, so the pack looks right."}
   inputs:
     - "A photo of the old way you sell against, with no rival brand in view"
     - "Photos of real paper or card in your brand colors, so the paper kit names materials that exist"

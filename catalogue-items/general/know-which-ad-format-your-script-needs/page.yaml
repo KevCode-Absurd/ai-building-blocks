@@ -1,15 +1,15 @@
 new_slug: know-which-ad-format-your-script-needs
 name: "Pick the right format for your ad script"
-summary: "Paste a finished script. You get the formats that suit it, ranked, the style skill to use, and a length check."
+summary: "Paste a finished script. You get the formats that suit it, ranked, the skills that make it, and a length check."
 job: make-video-ads
 
 headline: "Pick the right format for your ad script"
-subhead: Paste a finished script. It finds the one part doing most of the persuading, says what that part needs (a face people believe, controlled order, sound, time), ranks the formats that can carry it, names the style skill to use next, and checks the length.
+subhead: Paste a finished script. It finds the one part doing most of the persuading, says what that part needs (a face people believe, controlled order, sound, time), ranks the formats that can carry it, names the skills that make it (video or still), and checks the length.
 
 explain: |
   Many ads fail because a good script was made in the wrong format. An explanation of something invisible gets filmed as a talking head. A story that needs to unfold in order becomes a single image. A script written to be heard runs in a feed where nobody has the sound on.
 
-  This skill reads your script, not your product page, and finds the part that carries it: how it works, proof, the offer or the problem. It then decides, for six properties (a face people believe, showing what a camera can't, controlled order, sound, time to hold attention, sounding like a person), whether the script must have it, would be helped by it, or doesn't need it, quoting the line that makes it so. Then it ranks the formats that can hold all the "musts", suggests blending two when different parts need different things, and points you to the style skill in the library that fits, from a talking object to a 3D how-it-works film. Last, it checks the length.
+  This skill reads your script, not your product page, and finds the part that carries it: how it works, proof, the offer or the problem. It then decides, for six properties (a face people believe, showing what a camera can't, controlled order, sound, time to hold attention, sounding like a person), whether the script must have it, would be helped by it, or doesn't need it, quoting the line that makes it so. Then it ranks the formats that can hold all the "musts", suggests blending two when different parts need different things, and names the skills that make it. A video route is a script skill, then the clips skill that runs the avatar, sheets, storyboard and clips. A still goes to an image skill in the same look. Last, it checks the length.
 
 when:
   - You have a finished script and you're deciding what to make it as.
@@ -25,7 +25,7 @@ you_get:
   - The part that carries the script, with the line that shows it
   - Six properties marked must, helps or no, each with a reason
   - Formats ranked, with a blend if two parts need different ones
-  - One to three style skills to use next, each tied to a must
+  - The skills that make it, as a script skill and its clips skill for video, or an image skill for a still
   - A length check, and where to add length for a longer test
 
 how_to_use:
@@ -44,8 +44,8 @@ how_it_works:
     text: Compares what a person to camera, animation, mixed video, long-text image ads, designed images and carousels can hold.
   - title: Suggests a blend
     text: If two parts need different formats, it recommends changing surface part way through.
-  - title: Names the style skill
-    text: Points to the library skill that fits, such as selfie-style for a doubt settled in hand, 3D for a hidden process, or cutout for a point proved muted.
+  - title: Names the skills that make it
+    text: For video, the script skill and then its clips skill, such as selfie-style for a doubt settled in hand. For a still, the image skill in the same look.
   - title: Checks the length
     text: Says whether the carrying part has room at this length, and where extra length should come from.
 
@@ -66,7 +66,7 @@ output_shape: |
   2 <format>: <reason>
   Blend: <if needed>
 
-  Style skills: <one to three, each tied to a must>
+  Make it with: <video: script skill, then clips skill> or <still: image skill>, each tied to a must
 
   Length: <fits?> <best length> <where to add length>
 
@@ -117,10 +117,12 @@ example:
     Not a single designed image: it can't hold the order line 3 needs.
     Blend: none needed; one part carries it.
 
-    Style skills: the satisfying motion ad (open on the one tear, then
-    a short demo), because proof you can watch is the must. Second,
-    the cutout explainer (one argument, a proof picture per line) if
-    you can't film.
+    Make it with: the satisfying motion script (open on the one tear,
+    then a short demo), because proof you can watch is the must. Then
+    the storyboard skill with the pack as the avatar, and the shot
+    list skill for the clips, or the shot list alone for a real shoot.
+    If you can't film: the cutout explainer script, then its clips
+    skill. For a still: the paper cutout image ad, one proof picture.
 
     Length: 20 s fits. A demonstration works at 15 s too, as opening
     and proof at once. For a longer test, add the objection the

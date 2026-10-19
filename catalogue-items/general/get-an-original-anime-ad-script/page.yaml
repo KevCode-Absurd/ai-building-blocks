@@ -4,7 +4,7 @@ summary: "Give it your selling idea. You get an original anime-style script with
 job: make-video-ads
 
 headline: "An anime-style ad where your product saves the day"
-subhead: Give it your selling idea and your brand file. It proposes one drawing look, designs one original adult hero, picks the one thing to exaggerate, and writes every shot as two key poses and a hold. Or you get one key image brief.
+subhead: Give it your selling idea and your brand file. It proposes one drawing look, designs one original adult hero, picks the one thing to exaggerate, writes every shot as two key poses and a hold, and says who should carry the ad.
 
 explain: |
   Hand-drawn anime can push things past real life. A chore can tower over the hero, a sigh can become a storm cloud, one quick tear of a pack can stretch into a moment. That makes it good for stopping a scroll. It also goes wrong easily: copied characters, a fight with no product in it, or a hero who "powers up" in a way that reads as a promised result.
@@ -19,19 +19,19 @@ when:
 you_give:
   - Your selling idea or an existing script
   - Your brand file, with the product's look and label words, the old way it replaces, and your approved claims
-  - Video, image or both, the length and your video tool's clip length (optional)
+  - The length and your video tool's clip length (optional)
 you_get:
   - A proposed look line, a hero sentence and the one thing the drawing exaggerates
   - The problem, turn and payoff poses the ad builds to
   - Shot cards with key poses, holds, what moves, words and sound
-  - Or, for an image, the pose, layout, exact words and an image prompt
+  - A cast note saying who carries the ad and why, ready for the clips skill
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste your selling idea and brand file. Include, in your buyer's words, the old way your product replaces.
-  - Say "video, 20 seconds" or "image", and your tool's clip length if you know it.
+  - Say the length, such as "20 seconds", and your tool's clip length if you know it.
   - Picture it with the sound off. If you can't name the old way, the change and the product's part, ask for a clearer turn pose.
-  - Take the shot cards to "Turn your anime ad script into video clips" for the prompts.
+  - Take the shot cards and cast note to "Turn your anime ad script into video clips". It takes it from there, with the avatar, sheets, storyboard and clips.
 
 how_it_works:
   - title: Checks the fit
@@ -46,6 +46,8 @@ how_it_works:
     text: The problem pose, the turn pose with the product in hand, and the payoff pose the ad ends on.
   - title: Writes shot cards
     text: A start pose, an end pose and a hold for each shot, what moves and what stays still, one speaker at a time.
+  - title: Writes the cast note
+    text: Who carries the ad, why that suits your buyer, their voice and what must never change.
 
 output_shape: |
   LOOK (proposed)  <line, shading, palette, backgrounds>
@@ -62,7 +64,7 @@ output_shape: |
   - Sound-off read: <old way, change, product's part>
   - <metaphors flagged, MISSING items>
 
-  (For an image: pose, layout, exact words in quotes, image prompt)
+  CAST NOTE  <who carries it, why, voice, what never changes>
 
 example:
   business: sprout
@@ -141,13 +143,18 @@ example:
     - MISSING: the daily pack's own label words. Shots 3 and 4 show
       its back until they're given.
 
+    CAST NOTE  The hero carries it, silent, with an off-screen
+    narrator. The powder quitter sees himself in a tired adult losing
+    a daily fight with a tub, and a silent hero keeps every word with
+    the brand. Narrator: a dry, friendly adult voice, unhurried. Never
+    change: the tuft over his left eye, the teal hoodie, facing screen
+    right toward the product.
+
 tweaks:
   - what: The exaggeration
     how: Name one ("exaggerate the feeling") or let it choose. Size suits a cluttered old routine, speed suits a product whose use is the fun part.
   - what: The look
     how: Change any dial, such as "thin line and painted backgrounds" for a calmer feel. It keeps one look for the whole ad.
-  - what: Video or image
-    how: An image gives you one key frame, the payoff pose for buyers who know you, the problem pose for those who don't.
   - what: Sound
     how: Say "no dialogue" and it tells the whole story in poses and on-screen text, which works with the sound off.
 
@@ -173,7 +180,6 @@ improve:
 works_best_with:
   tools:
     - {name: "Claude", why: "Follows long skill files closely and keeps the hero sentence word for word across every shot."}
-    - {name: "GPT Image 2.5", why: "Keeps label words readable when you make the single key image, more often than most image models."}
   inputs:
     - "A photo of the product being opened and used, so the hero's hands copy your real steps"
     - "Two or three buyer reactions to the old way (a groan, a joke), so the hero's feeling rings true"
@@ -187,5 +193,3 @@ terms:
     meaning: A short moment where the drawing stays still before the cut, often where the joke lands.
   - term: Payoff pose
     meaning: The picture the whole ad builds to, usually the hero with your product, front to camera.
-  - term: Key frame
-    meaning: A single drawn image of the most important moment, used as a still ad or as a reference for a clip.

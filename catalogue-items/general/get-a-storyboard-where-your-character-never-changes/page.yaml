@@ -1,198 +1,214 @@
 new_slug: get-a-storyboard-where-your-character-never-changes
 name: "A storyboard where your character never changes"
-summary: "Give it your character images, script and product photos. You get every shot planned, with framing and timing."
+summary: "Give it your script. You get an avatar, its sheet from every angle and a storyboard, each approved in turn."
 job: make-video-ads
 
 headline: "A storyboard where your character never changes"
-subhead: Give it your character's reference images, the approved script and your product photos. It locks the character in one fixed description, gives each shot one job, writes the moment to draw, the framing and the timing, and checks the script fits what's on screen.
+subhead: Give it your approved script and product photos. It picks the avatar who carries the ad, turns it into reference images, builds a sheet with every angle, and plans every shot. It stops for your yes after the avatar, the sheets and the storyboard.
 
 explain: |
-  A storyboard is a shot-by-shot plan of an ad, drawn or described before anything is filmed or generated. Two problems usually creep in. The character slowly changes from frame to frame (a different hairstyle, a new jacket), and shots get added because they look nice, not because they move the argument on.
+  AI video goes wrong when you jump straight from a script to clips. The character slowly changes between shots (a new hairstyle, a different jacket), the product grows a new label, and shots get added because they look nice, not because they sell.
 
-  This skill writes one identity line from your character's reference images (face, hair, marks, build, outfit) and repeats it word for word in every frame, the way animators keep a character on model with a model sheet. The first shot stops the scroll. Every shot after it carries one of five links (who it's for, what they gain, the proof, the risk removed, the next step), so a missing reason to believe shows up as a gap. It also checks the things film crews watch for: which way the character faces, where they look, and where each prop sits. Timing is checked against the script, and on-screen text stays exact and in your real font.
+  This skill runs the first four stages of making a video, the way animators work. First it picks the avatar from your buyer and script and writes it down as a card. Then it makes a few reference images and you pick one. From that image it builds a character sheet with every angle, plus a sheet for your product from real photos and one for each place. It writes lock lines that every later prompt repeats word for word. Last comes the storyboard: one frame per shot, each with one job, from stopping the scroll to the call to action, with continuity checked. You approve the avatar, the sheets and the board before anything moves.
 
 when:
-  - You have a chosen character and an approved script and need a storyboard before making the video.
-  - Your character keeps changing between frames and you want one fixed reference to work from.
-  - You want to check an ad has a clear opening, a reason to believe and a call to action before spending on it.
+  - You have an approved script and want to make it as AI video without the character drifting.
+  - Your AI clips keep changing the face, the outfit or the product between shots.
+  - You want to check the ad has a clear opening, a reason to believe and one call to action before you spend on clips.
 
 you_give:
-  - Your character's reference images (front, three-quarter, side, back, face and hands)
-  - The approved script or narration, with the buyer, their doubt and the call to action
-  - Product photos and your logo, if they appear
-  - Your brand voice and font
-  - How it's delivered, such as narrator or talking to camera (optional)
+  - The approved script, with the buyer, their doubt and the call to action
+  - Real product photos (front, side, top, in a hand)
+  - The look you want, such as phone video, live action or clay
+  - An avatar you already approved, to reuse (optional)
+  - Your brand voice, fonts and places (optional)
 you_get:
-  - One identity line to paste into every frame
-  - A numbered shot table with job, moment, cast, action, framing, setting, lines, on-screen text and timing
-  - A continuity note listing what stays fixed and what changes where
-  - A review of the character, the product and the five links
+  - An avatar card to approve (or a casting note if a real person films it)
+  - Reference image prompts and the sheet prompts for every angle, product and place
+  - Lock lines to paste into every later prompt
+  - A storyboard with one frame prompt and one shot card per shot
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Attach your character's reference images, and say which view each one is.
-  - Paste the approved script and say who the buyer is, their doubt, and what you want them to do.
-  - Attach product photos and name your font.
-  - Paste the identity line into every image or video prompt you make from the board.
+  - Paste the approved script and the cast note if you have one. Attach your product photos and say what each shows.
+  - Read the avatar card and reply yes, or ask for changes.
+  - Make the reference images, pick one, then make the sheets and approve them with the lock lines.
+  - Approve the storyboard, then take it to the clips skill for your look, or the shot list skill, for stage 5.
 
 how_it_works:
-  - title: Locks the character
-    text: Writes one identity line from the reference images only, and keeps it apart from what may change per shot.
+  - title: Checks the script
+    text: Lists the places, props and product states it needs, and sends back any line a made-up avatar can't honestly say.
+  - title: Picks the avatar
+    text: Offers two or three options from your buyer and script and writes the pick as a card. You approve it.
+  - title: Makes reference images
+    text: Three or four images of the avatar in your look, on a plain ground. You pick one.
+  - title: Builds the sheets
+    text: Every angle of the avatar, the expressions it needs, your product from real photos and each place. You approve them with the lock lines.
   - title: Gives every shot one job
-    text: The first shot stops the scroll. Each shot after carries who, gain, proof, risk or the next step, so a missing link shows up.
-  - title: Keeps the words exact
-    text: Doesn't rewrite approved lines, keeps product printing real, and puts on-screen text in your real font.
-  - title: Writes each frame
-    text: The moment to draw, who's there, one action, framing, setting, props and timing.
-  - title: Holds continuity
-    text: Keeps light, facing direction, eyelines and prop positions the same between neighbouring frames.
-  - title: Times and reviews
-    text: Reads each shot's lines against its time, keeps narration apart from on-camera lines, and reviews before anything is made.
+    text: The first shot stops the scroll. Each one after carries who, gain, proof, risk or the next step, so a missing link shows up.
+  - title: Writes the storyboard
+    text: A frame prompt and a shot card per shot, with continuity checked between neighbours. You approve the whole board.
 
 output_shape: |
-  IDENTITY LINE (paste into every frame)
-  <face, hair, marks, build, outfit, in a fixed order>
+  STAGE 0  SCRIPT IN
+  Places: <..>  Props: <..>  Product states: <..>  Sent back: <lines or none>
 
-  Shot | job | moment to draw | cast | action | framing |
-       setting and props | lines | on-screen text | timing
-  1    | stop | <...> | <character> | <one action> | <close/wide> |
-       <...> | "<words>" | "<exact text>" | <0-3 s>
-  <one row per shot>
+  STAGE 1  AVATAR CARD (approval 1)
+  Options: <two or three, one line each>
+  Pick: <role, age range, look, clothes, props, voice, never changes>
 
-  CONTINUITY
-  Fixed: <light, facing direction, room layout, product state>
-  Changes: <what changes, in which shot>
+  STAGE 2  REFERENCE IMAGES
+  1-4 <prompt each>  Picked: <n, and why>
 
-  REVIEW
-  Character: <...>  Product: <...>  Links: who / gain / proof / risk /
-  step, each with its shot or "gap"
-  MISSING: <anything not supplied>
+  STAGE 3  SHEETS (approval 2)
+  Character: <views, expressions, size beside the product>
+  Product: <views, label words, states>  Sets: <per place>
+  LOCK LINES  Identity: <..>  Product: <..>  Set: <..>
+
+  STAGE 4  STORYBOARD (approval 3)
+  <n> <job> <time> | <framing, camera> | <action start to end>
+      Line: "<..>"  On screen: "<..>"  Sound: <..>
+      Frame prompt: <lock lines, then the moment>
+  CONTINUITY  <what stays fixed, what changes where>
+  LINKS  who / gain / proof / risk / step, each with its shot or "gap"
+  MISSING: <..>
 
 example:
   business: sprout
   input: |
     [the skill]
 
-    Character: a made-up woman, about 38, shoulder-length dark brown
-    hair, brown eyes, light olive skin, a small mole on her left
-    cheek, mustard cardigan over a white tee, jeans.
-    [front] [three-quarter] [side] [face close-up] [hands]
-    Delivery: narrator voice-over. She doesn't speak.
-    Buyer: the busy parent. Doubt: "Is this just candy?"
-    Call to action: start a first order.
-    Approved narration:
+    Approved narration (22 s, voice-over, nobody speaks on camera):
     1 School run. Work bag. Breakfast for three.
     2 Your own nutrition? A handful of gummies now.
     3 One daily pack. Rip, tip, enjoy.
     4 60+ ingredients, 21 vitamins and minerals, 6 grams of fiber.
     5 Just grab and go.
-    On-screen end text: "First order $29.99 with text sign-up.
-    Renews at $49.99 every 4 weeks."
-    Product: [pouch front] [daily pack in a hand]. Tear the daily
-    pack straight across the top only.
-    Font: Work Sans Bold (headings), Work Sans Medium (body).
+    End text: "First order $29.99 with text sign-up. Renews at $49.99
+    every 4 weeks."
+    Cast note: a made-up busy parent, late 30s, seen but silent.
+    Buyer: the busy parent. Doubt: "Is this just candy?"
+    Photos: [pouch front] [daily pack in a hand]
+    Look: live action, bright and sunny, a real home.
+    Font: Work Sans Bold and Medium.
   output: |
-    IDENTITY LINE
-    Woman about 38, light olive skin, brown eyes, small mole on her
-    left cheek, shoulder-length dark brown hair, mustard cardigan over
-    a white tee, blue jeans.
+    STAGE 0  SCRIPT IN
+    Places: hallway, side table by the door. Props: school bag, work
+    bag, pouch, daily pack. Product states: pouch closed; pack sealed,
+    then torn across the top. Sent back: none, she never speaks.
 
-    1  STOP + WHO  0-3 s
-       Moment: hallway, a school bag on one shoulder, her work bag in
-       the other hand.  Action: turns towards the door.
-       Framing: medium, eye level.  Setting: front door at right,
-       window light from left.
-       VO: "School run. Work bag. Breakfast for three."
-    2  GAIN  3-7 s
-       Moment: she sets the work bag on a side table where a Sprout
-       pouch stands, label to camera.  Action: one hand reaches for
-       the pouch.  Framing: medium close.
-       VO: "Your own nutrition? A handful of gummies now."
-    3  PROOF (it works as shown)  7-11 s
-       Moment: her hands tear a daily pack straight across the top
-       edge and tip small deep-green gummies into her palm.
-       Framing: close on hands, matching the "in a hand" photo.
-       VO: "One daily pack. Rip, tip, enjoy."
-    4  PROOF (answers "just candy?")  11-16 s
-       Moment: the pouch on the side table, sharp, her open hand
-       with gummies soft beside it.  Framing: close on the pouch.
-       VO: "60+ ingredients, 21 vitamins and minerals, 6 grams of
-       fiber."  On screen: "60+ ingredients. 21 vitamins & minerals.
-       6 g fiber." (Work Sans Bold)
-    5  GAIN, paid off  16-18 s
-       Moment: she eats the gummies and opens the front door.
-       Framing: medium, from behind her shoulder, still moving
-       right to left as in shot 1.
-       VO: "Just grab and go."
-    6  STEP  18-22 s
-       Moment: held on the pouch on the side table, door open behind.
-       On screen: "First order $29.99 with text sign-up. Renews at
-       $49.99 every 4 weeks." (Work Sans Medium, in the empty space
-       above the pouch, no box)
+    STAGE 1  AVATAR CARD (approval 1)
+    Options: a) mum about 38, mustard cardigan; b) dad about 35, grey
+    hoodie; c) mum about 44, navy blazer.
+    Pick (a): a made-up busy parent on the school run, not a customer.
+    About 38, light olive skin, brown eyes, shoulder-length dark brown
+    hair, small mole on her left cheek. Mustard cardigan over a white
+    tee, blue jeans. Props: school bag, work bag. No voice on camera.
+    Never changes: face, mole, hair length, cardigan.
+    [approved: "yes, a"]
 
-    CONTINUITY
-    Fixed: identity line in shots 1, 2, 3 (hands, cardigan cuffs) and
-    5. Front door at right, window light from left. She moves right
-    to left throughout. The pouch stays on the side table from shot 2
-    on, label to camera.
-    Changes: the daily pack is torn in shot 3 and stays torn.
+    STAGE 2  REFERENCE IMAGES
+    1 [card] front, waist up, plain light grey ground, even light.
+    2 The same, hair tucked behind one ear.
+    3 The same, cardigan sleeves pushed up.
+    4 The same, a small half smile.
+    Picked: 3. Pushed-up sleeves keep her cuffs off the pack in shot 3.
 
-    REVIEW
-    Links: who (1), gain (2, 5), proof (3, 4), step (6).
-    Risk: gap. Nothing answers "is it safe to try?". Suggest adding
-    "30-day money-back on your first order" to the end text, which
-    needs your approval first.
-    She never claims a result; the narrator speaks only approved lines.
-    Character sameness: check again after the panels are drawn.
-    MISSING: the daily pack's own label words, so shot 3 frames it
-    from the side.
+    STAGE 3  SHEETS (approval 2)
+    Character: front, three-quarter left and right, side, back, face
+    and hands close; hurried and calm; holding the pouch at chest
+    height, sized from the hand photo.
+    Product: pouch front from its photo. Side and top: MISSING. States:
+    closed at its resealable top; daily pack sealed, then torn straight
+    across the top edge only.
+    Set: hallway from above, front door at right, window light from
+    the left, side table against the wall.
+    LOCK LINES
+    Identity: woman about 38, light olive skin, brown eyes, small mole
+    on her left cheek, shoulder-length dark brown hair, mustard
+    cardigan sleeves pushed up over a white tee, blue jeans.
+    Product: glossy deep green stand-up foil pouch, big yellow
+    wordmark, yellow bear face top right, "28 Daily Packs" at the
+    bottom, closed at its resealable top.
+    Set: hallway, front door at right, window light from the left.
+    [approved]
+
+    STAGE 4  STORYBOARD (approval 3)
+    1 STOP + WHO 0-3 s | medium, eye level, locked | she turns from the
+      coat hooks toward the door, school bag on one shoulder
+      Line: "School run. Work bag. Breakfast for three."
+    2 GAIN 3-7 s | medium close | she sets the work bag down by the
+      pouch on the side table; her right hand reaches for it
+      Line: "Your own nutrition? A handful of gummies now."
+    3 PROOF 7-11 s | close on hands, from above | she tears a daily
+      pack straight across the top and tips gummies into her palm
+      Line: "One daily pack. Rip, tip, enjoy."
+      Frame prompt: [identity] [product] [set]. From above, her hands
+      over the side table, the pack torn across its top edge, small
+      deep-green gummy bears sliding into her left palm.
+    4 PROOF 11-16 s | close on the pouch, her open palm soft beside it
+      On screen: "60+ ingredients. 21 vitamins & minerals. 6 g fiber."
+      (Work Sans Bold)
+    5 GAIN 16-18 s | medium, behind her shoulder | she eats the gummies
+      and opens the door, moving right to left as in shot 1
+      Line: "Just grab and go."
+    6 STEP 18-22 s | held on the pouch, door open behind
+      On screen: the end text, Work Sans Medium, above the pouch, no box.
+    CONTINUITY  Camera stays on the room side of the table. She moves
+    right to left. The pouch stands label to camera from shot 2. The
+    pack torn in shot 3 stays torn.
+    LINKS  who 1, gain 2 and 5, proof 3 and 4, step 6. Risk: gap.
+    Suggest "30-day money-back on your first order" in the end text,
+    after your approval.
+    MISSING: the daily pack's own label words; side and top pouch photos.
+    Next: the shot list skill for stage 5.
 
 tweaks:
-  - what: Delivery style
-    how: Switch from narrator to "talking to camera" and the shots change. Her lines get lip-sync timing and the framing tightens on her face.
-  - what: Length
-    how: Give a target ("15 seconds") and it merges shots while keeping the stop shot, one proof and one call to action.
+  - what: Real person or avatar
+    how: Say a real founder or creator will film it. You get a casting and wardrobe note and a real-camera shot list instead of an AI avatar.
+  - what: Product only
+    how: Say no one is on screen. The product becomes the avatar, and stages 2 and 3 become the product sheet and set sheets.
+  - what: An avatar you already have
+    how: Attach its approved sheet. The skill skips the options and reference images, and reuses its lock lines.
   - what: The buyer's doubt
     how: Name the doubt and the proof shot is built to answer it. A different doubt moves which fact goes on screen.
-  - what: Reference views
-    how: Add a hands view if the product is handled. Without it, the proof shot is the most likely place for the character to drift.
 
 judge:
-  - The identity line is word for word the same in every frame where she appears.
+  - The run stopped for your yes after the avatar card, the sheets and the storyboard.
+  - The identity line is word for word the same in every frame where the avatar appears.
+  - The character sheet has front, both three-quarters, side and back, plus the avatar beside the product.
   - There's one stop shot, every link has a shot or is flagged as a gap, and there's exactly one call to action.
-  - The narration in each shot fits its time when you read it aloud.
-  - The product is shown and handled the way your own photos show it.
-  - On-screen text matches your approved wording exactly, and the font is named.
+  - The product is shown and handled the way your photos and rules show it.
 
 test:
-  - Search the board for the identity line. It should appear, unchanged, in every frame with the character.
-  - Read the narration aloud with a timer. Each shot's words should fit its time.
-  - Take the fact line out of the script and run it again. The review should flag proof as a gap.
-  - Show the board to someone who hasn't read the script. They should be able to tell the story from the shots.
+  - Search the board for the identity line. It should appear, unchanged, in every frame with the avatar.
+  - Say "go on" before approving the avatar card. It should still stop and wait for your yes.
+  - Take the fact line out of the script and run it again. The links should flag proof as a gap.
+  - Run it with "our founder will film it". You should get a casting and wardrobe note and no AI avatar.
 
 improve:
-  - Paste your character's identity line and reference views into "What you need" in the skill file, so every board starts from the same person.
-  - If your team names shots differently, keep the five links but add your names beside them in step 2.
-  - Write your font names and on-screen text rules into step 3, so text is never left to the image tool.
-  - Pair it with a skill that writes ad copy from one true product fact for the narration, one that turns the board into clips, and one that adds captions in your brand font.
+  - Save your approved avatar card, sheets and lock lines in your brand file, so the next ad starts at stage 4.
+  - Write your product's handling rules into the product sheet step, so every frame shows it opening the right way.
+  - If your team names shots differently, keep the five links but add your names beside them in stage 4.
+  - Pair it with the shot list skill, or the clips skill for your look, which run stage 5 from this board.
 
 works_best_with:
   tools:
-    - {name: "Nano Banana Pro", why: "Takes up to 5 character references, so frames drawn from the storyboard keep the same face."}
-    - {name: "Kling 4.0", why: "Takes up to 10 images of the same person to keep them steady across scenes, and makes multi-shot clips."}
+    - {name: "Nano Banana Pro", why: "Takes several character references at once, so sheets and frames keep the same face."}
+    - {name: "Kling 4.0", why: "Takes up to 10 images of the same person to keep them steady across scenes."}
     - {name: "Veo 3.1", why: "Can start from a chosen frame and set the last frame, which helps cuts between shots match."}
   inputs:
     - "A voice recording of the script at real speed, so each shot's timing matches the read"
-    - "A photo or sketch of the set from above, so the room layout and light direction hold between shots"
-    - "Photos of each prop in each state (sealed, torn, empty), so the continuity note matches real objects"
+    - "A photo or sketch of each place from above, so the set sheet's layout and light are real"
+    - "Photos of each prop in each state (sealed, torn, empty), so the product sheet matches real objects"
 
 terms:
-  - term: Storyboard
-    meaning: A shot-by-shot plan of an ad, drawn or described before anything is filmed or generated.
-  - term: Identity line
-    meaning: One fixed description of the character, pasted word for word into every frame so they don't drift.
-  - term: Reference views
-    meaning: Images of the character from set angles (front, three-quarter, side, back, face, hands), used to keep them the same.
+  - term: Avatar
+    meaning: The made-up person, character or object that carries the ad. Never a real person.
+  - term: Character sheet
+    meaning: Pictures of the avatar from every angle (front, three-quarter, side, back) plus the expressions it needs.
+  - term: Lock lines
+    meaning: Fixed descriptions of the avatar, product and set, pasted word for word into every prompt so nothing drifts.
   - term: Five links
     meaning: Who it's for, what they gain, the proof, the risk removed and the next step. Each shot after the first carries one.
   - term: Continuity

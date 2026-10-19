@@ -1,74 +1,73 @@
 new_slug: turn-your-anime-script-into-consistent-clips
 name: "Turn your anime ad script into video clips"
-summary: "Give it your script and product photo. You get image and clip prompts that keep one hero and one drawing style."
+summary: "Your script and photos become an avatar, sheets, a storyboard and clip prompts for one steady anime ad."
 job: make-video-ads
 
 headline: "Turn your anime ad script into video clips"
-subhead: Give it an approved script and a real photo of your product. It sets the drawing look and makes reference sheets for the hero, the product and the place. Then it writes every shot as two key poses with a hold, ready for your AI video tool.
+subhead: Give it an approved script and real photos of your product. It picks the hero, makes reference images and sheets, draws a storyboard of key poses, then writes the clip prompts and the edit. It stops for your OK three times.
 
 explain: |
   AI video tools can draw good 2D animation one clip at a time. Across a whole ad, things drift. The hero's hair changes, the style slides toward 3D, the label on your pack melts, and every part of the body moves at once, so it stops looking hand-drawn.
 
-  This skill plans each shot the way TV anime is made. It picks the look with four settings (line, shading, palette, backgrounds) and repeats it word for word. It makes three reference sheets before any clip. Each shot is written as a starting pose, an end pose and a short hold, with a line saying what moves and what stays still. Fewer moving parts look more like anime and give the tool less to get wrong. When a shot fails, it reruns, simplifies, then changes one thing.
+  This skill runs the whole process in six stages. It reads the script, writes an avatar card for the hero and waits for your OK. It makes a few reference images, then a sheet with the hero from every angle, a product sheet from your photos and a set sheet, plus lock lines repeated in every prompt. You approve those, then a storyboard where each shot is a start pose, an end pose and a short hold, with only a few parts moving. Only then does it write the clips, the voice and the edit.
 
 when:
-  - You have an approved anime-style script and need prompts for an AI image and video tool.
+  - You have an approved anime-style script and want to make it with AI image and video tools.
   - Your animated clips keep changing the hero or the product between shots.
   - Your clips look like smooth 3D instead of hand-drawn animation.
 
 you_give:
-  - The approved script with its shots
-  - A real photo of your product, its pack or its app screen
+  - The approved script with its shots, and its cast note if it has one
+  - Real photos of your product (front, side, top, opened) and every label word
   - How the product is opened and used
   - Your tone, colours and approved claims (optional)
   - Your video tool's clip lengths and how many reference images it takes (optional)
 you_get:
-  - A look line and the one payoff picture the ad builds to
-  - Prompts for a hero sheet, a product sheet and a location sheet
-  - One shot card per shot, with key poses, a hold, what moves and how it cuts
-  - Retake notes for any shot that goes wrong
+  - An avatar card for the hero, and 3 or 4 reference image prompts to pick from
+  - Prompts for a character sheet from every angle, a product sheet and a set sheet, with lock lines
+  - A storyboard of frames and shot cards with key poses, holds and what moves
+  - Clip prompts and an edit list with cuts, captions, music and the end card
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Paste the approved script, ideally from "Get an original anime ad script".
-  - Attach a real product photo and say how the product is opened and used.
-  - Make the three sheets first and approve them before any clip.
-  - Make the clips in order. If one fails, paste what went wrong and ask for the retake.
+  - Paste the approved script, ideally from "Get an original anime ad script", and attach your product photos.
+  - Approve or change the avatar card. Then make the reference images and tell it which one you picked.
+  - Make the sheets and approve them with the lock lines, then make the storyboard frames and approve the board.
+  - Make the clips from the approved frames. If a take fails, paste what went wrong and ask for the fix.
 
 how_it_works:
-  - title: Sets the look with four dials
-    text: Line, shading, palette and backgrounds, chosen from your tone and written as one line used in every prompt.
-  - title: Names the payoff picture
-    text: The one image the ad builds to, with your product's front to camera.
-  - title: Makes three sheets
-    text: The hero from three sides with the expressions the script needs, the product from its photo, and the empty location.
-  - title: Writes each shot as key poses
-    text: A starting pose, an end pose and a hold, with a wind-up before big actions and a settle after.
-  - title: Moves only what matters
-    text: Each shot lists what moves and what holds still, the way TV anime saves motion.
-  - title: Keeps direction and plans cuts
-    text: The hero keeps facing the same way, and every cut follows an action, a look, a detail or a time jump.
-  - title: Checks, then retakes in order
-    text: Compares stills at thumbnail size, then reruns, simplifies and changes one thing at a time.
+  - title: Reads the script
+    text: Lists the shots, lines and claims, keeps the look line or sets the four dials, and names the payoff pose.
+  - title: Writes the avatar card
+    text: An original adult hero with a shape you'd know in silhouette, clothes, voice and what never changes. It stops for your OK.
+  - title: Makes reference images
+    text: Three or four images of the hero in the look. You pick one.
+  - title: Builds the sheets
+    text: The hero from five angles with the expressions the script needs, the product from your photos, each set empty, and lock lines. It stops for your OK.
+  - title: Draws the storyboard
+    text: One frame per shot, each a start pose, an end pose and a hold, with what moves and what holds. It checks facing and props, then stops for your OK.
+  - title: Turns it into video
+    text: Each frame starts its clip, the prompt says only the motion, then voice, cuts, captions and the end card. Failed takes are rerun, simplified, then fixed one thing at a time.
 
 output_shape: |
-  LOOK      <line, shading, palette, backgrounds, in words>
-  PAYOFF    <who holds what, facing where, product front to camera>
-
-  SHEETS
-  Hero:     <prompt>
-  Product:  <prompt>  Attach: <photo> = shape, colour, printing
-  Location: <prompt>
-
-  SHOT <n> · <length> · <size, angle, camera move>
-  Key A: <opening pose>  >  Key B: <end pose> · hold <time>
-  Moves: <parts>   Holds: <parts>
-  Words: <speaker>: "<exact line>"   Sound: <contact sounds>
-  Cut out: <on the action / on a look / to a detail / jump>
-  Attach: <sheet> = <what to take from it>
-
-  RETAKES
-  <shot>: rerun > simplify > change <one instruction>
+  STAGE 1  AVATAR CARD  <role, age, look, silhouette, clothes, voice,
+           never change>                         > STOP for approval
+  STAGE 2  REFERENCES   <3 or 4 prompts>  Picked: <n>
+  STAGE 3  SHEETS       Character: <5 angles, expressions, size>
+                        Product: <front, side, top, label lines>
+                        Set: <each place, no people, light marked>
+           LOCK LINES   <look, hero, product, set>  > STOP for approval
+  STAGE 4  STORYBOARD
+           Shot n · <length> · <size, angle, move>
+           Key A: <pose>  >  Key B: <pose> · hold <time>
+           Moves: <parts>  Holds: <parts>  Words: <speaker: line>
+           Continuity: <facing, eyelines, hands, product state>
+                                                 > STOP for approval
+  STAGE 5  CLIPS        Clip n: start <frame n>, end <Key B>, <motion
+                        only>, cut out <on the action / look / detail /
+                        jump>
+           EDIT LIST    <order, captions, music, end card, safe zones,
+                        retakes>
 
 example:
   business: sprout
@@ -76,116 +75,127 @@ example:
     [the skill]
 
     Script: the 20-second script from "Get an original anime ad
-    script". Narrator only. Shot 1: the hero glares at a towering tub
-    of powder. Shot 2: a scoop of powder puffs into his face. Shot 3:
-    he tears a daily pack across the top. Shot 4: gummies tip into
-    his palm. Shot 5: he heads out the door, pouch in hand.
+    script". Look (proposed): thick even marker outline, flat colour
+    with one shadow tone, full bright palette, flat graphic
+    backgrounds. Shot 1: the hero glares at a towering tub of powder.
+    Shot 2: a scoop of powder puffs into his face. Shot 3: he tears a
+    daily pack across the top. Shot 4: gummies tip into his palm.
+    Shot 5: he heads out the door, pouch in hand.
     Narration: "Same fight, every morning." / "Or skip the scoop." /
     "Rip. Tip. Enjoy."
-    Tone: light comedy. Hero: an original adult man, spiky black
-    hair, teal hoodie.
+    Cast note: the hero carries it, silent, with a narrator.
     Photos: [pouch front] [daily pack in a hand] [gummies in a palm]
+    Pouch: glossy deep green, big yellow wordmark, yellow bear face
+    top right, "28 Daily Packs". Daily pack words: not captured.
     Handling: tear the daily pack straight across the top only.
-    Tool: 8-second clips, up to 3 reference images.
+    Tool: 8-second clips, up to 3 reference images, takes an end frame.
   output: |
-    LOOK     thick even marker outline, flat colour with one shadow
-             tone, full bright palette, flat graphic backgrounds.
-    PAYOFF   the hero at the front door, facing screen right, the
-             pouch held at chest height, its front to camera.
+    STAGE 1  AVATAR CARD
+    Role: the silent hero; a narrator speaks over him. An original
+    adult man, early thirties, tall and lanky. Silhouette: spiky black
+    hair with one tuft over his left eye. Teal hoodie, sand trousers,
+    white trainers. Prop: none until the pack. Voice: none (narrator:
+    dry, friendly, unhurried). Never change: the tuft, the hoodie,
+    facing screen right toward the product.
+    > STOP: approved, with no changes.
 
-    SHEETS
-    Hero: an original adult man, tall and lanky, spiky black hair
-      with one tuft over his left eye, teal hoodie, sand trousers,
-      white trainers. Front, three-quarter and side views. Three
-      expressions: a glare, a startled blink, a small grin. [LOOK]
-      Plain light-grey background.
-    Product: the pouch and one daily pack drawn in [LOOK], front and
-      three-quarter. Attach: pouch front = shape, deep green colour,
-      yellow wordmark and bear face; daily pack in a hand = its size.
-    Location: a small kitchen, counter across the frame, window at
-      left as the only light, front door at the far right. No people.
+    STAGE 2  REFERENCES (4 prompts; one shown)
+    [LOOK] An original adult man, tall and lanky, spiky black hair
+    with one tuft over his left eye, teal hoodie, sand trousers, white
+    trainers, standing, arms crossed, plain light-grey background.
+    Picked: 2 (the clearest outline in black).
 
-    SHOT 1 · 3 s · wide, low angle, still camera
-    Key A: hero behind the counter, arms crossed, facing the tub
-      (screen right)  >  Key B: same, one eyebrow drops · hold 1 s
-    Moves: eyebrow, hoodie strings.  Holds: body, tub.
-    Words: Narrator: "Same fight, every morning."
-    Sound: a low hum from the fridge.
-    Cut out: on the action (he reaches for the scoop)
-    Attach: hero sheet = face, hair, clothes only; location sheet =
-      room and light. The tub is drawn three times his height.
+    STAGE 3  SHEETS
+    Character: picked image attached. Front, three-quarter left and
+      right, side, back; a glare, a startled blink, a small grin;
+      standing beside the pouch, which reaches his chest. [LOOK]
+    Product: pouch front attached = shape, deep green, yellow wordmark
+      "Sprout", bear face, "28 Daily Packs"; front, side, top. Daily
+      pack from its photo, front turned away (words MISSING).
+    Set: small kitchen, counter across the frame, window at left as
+      the only light, front door far right. No people.
+    LOCK LINES: [LOOK] / [HERO as the card] / the Sprout pouch exactly
+      as the product sheet / kitchen as the set sheet, window light
+      from the left.
+    > STOP: approved.
 
-    SHOT 3 · 2 s · close, eye level, still camera
-    Key A: both hands hold the daily pack at its top edge
-      >  Key B: the top is torn off in one pull · hold 0.5 s
-    Wind-up: hands pinch tighter before the pull.
-    Moves: hands, the torn strip.  Holds: the pack's front.
-    Words: Narrator: "Or skip the scoop."   Sound: one crisp tear.
-    Cut out: on the action (the pack tips)
-    Attach: product sheet = pack shape and print; daily pack in a
-      hand = grip.
+    STAGE 4  STORYBOARD (2 of 5 shots)
+    Shot 3 · 2 s · close, eye level, still camera
+    Key A: both hands pinch the daily pack's top edge  >  Key B: the
+      top torn off in one pull · hold 0.5 s. Wind-up: hands pinch
+      tighter.
+    Moves: hands, the torn strip.  Holds: the pack.
+    Words: Narrator: "Or skip the scoop."  Sound: one crisp tear.
+    Shot 5 · 3 s · medium, eye level, slow push in
+    Key A: steps through the door, facing screen right  >  Key B: the
+      payoff pose, pouch at chest height, front to camera · hold 1.5 s
+    Moves: legs, then hair settling.  Holds: the pouch.
+    Words: Narrator: "Rip. Tip. Enjoy."  Sound: door click.
+    Continuity: he faces screen right in every shot; the left hand
+      holds the pouch in shot 5; the pack is torn from shot 3 on.
+    > STOP: approved.
 
-    SHOT 5 · 3 s · medium, eye level, slow push in
-    Key A: hero steps through the door, facing screen right
-      >  Key B: the payoff pose · hold 1.5 s
-    Moves: legs, then hair settling after the stop.  Holds: the
-      pouch, front to camera.
-    Words: Narrator: "Rip. Tip. Enjoy."   Sound: door click.
-    Attach: hero sheet = design; pouch front = label exactly.
+    STAGE 5  CLIPS
+    Clip 2 (shots 3 and 4, 5 s): start = frame 3, end = frame 4. The
+      hands pull the top strip off in one quick move, then the pack
+      tips and small deep-green bears drop into his palm. Only the
+      hands, strip and bears move. Camera holds. [LOCK LINES]
+      Cut out: on the action (the bears land).
+    EDIT LIST: clips 1 to 3 in order; captions off; narration on a
+      designed voice; light music under it; end card with the pouch
+      and the offer from current terms, inside the safe zone.
 
-    (cut for length: the full run also had shots 2 and 4, and
-    clip groupings for 8-second clips)
-
-    RETAKES
-    None yet. If his tuft moves sides: rerun once, then add "tuft
-    over his left eye" to the shot's first line.
+    (cut for length: the full run also had shots 1, 2 and 4, clips 1
+    and 3, and the other three reference prompts)
 
 tweaks:
   - what: The look
-    how: Set any of the four dials yourself ("tapered brush line, black and greys with one green accent"). If you don't, it picks them from your tone and marks them "proposed".
+    how: Set any of the four dials yourself ("tapered brush line, black and greys with one green accent"). If you don't, it keeps the script's look or picks one from your tone and marks it "proposed".
   - what: Clip limits
-    how: Give your tool's real clip lengths and reference slots. It groups shot cards into clips that fit, instead of assuming long clips.
+    how: Give your tool's real clip lengths, reference slots and whether it takes an end frame. It groups shots into clips that fit and uses Key B as the end frame where it can.
   - what: Extra key poses
-    how: Ask for an extra pose still for any hard moment, such as a hand gripping the pack. A target picture fixes grips better than more words.
-  - what: Retakes
-    how: Paste the failed clip's problem ("the label blurs at 4 seconds"). You get the next step in the retake order, not a whole new prompt.
+    how: Ask for an extra frame for any hard moment, such as a hand gripping the pack. A target picture fixes grips better than more words.
+  - what: Fixes
+    how: Paste the failed take's problem ("the label blurs at 4 seconds"). You get the next step in the fix order, not a whole new prompt.
 
 judge:
-  - The look line and hero description are the same, word for word, in every prompt.
+  - It stopped for your OK after the avatar card, the sheets and the storyboard.
+  - The lock lines are the same, word for word, in every prompt.
   - Every shot card has two key poses, a hold, and a moves and holds line.
   - The hero faces the same way toward the product unless a turn is shown.
-  - The dialogue matches the script exactly.
-  - No artist, studio, show or character is named.
+  - The dialogue matches the script exactly, and no artist, studio, series or character is named.
 
 test:
-  - Make the three sheets and one clip. Compare the hero in the clip with the sheet before you make the rest.
+  - Make the character sheet and one clip. Compare the hero in the clip with the sheet before you make the rest.
   - Read the moves and holds lines. If most shots move everything, the ad will drift toward 3D.
   - Check every shot's facing direction. Any flip toward the product should have a turn or a close-up between.
-  - When a clip fails, paste the fault back in. You should get the next retake step, not a new prompt.
+  - When a clip fails, paste the fault back in. You should get the next fix step, not a new prompt.
 
 improve:
-  - Write your chosen dial settings into step 1 of the skill file, so every ad in a series has the same look.
+  - Write your chosen dial settings into stage 0 of the skill file, so every ad in a series has the same look.
+  - Save the approved avatar card, character sheet and lock lines in your brand file, so the next ad starts at stage 4.
   - Add your video tool's clip lengths and reference slots to "What you need".
-  - Keep a short list of the faults your tool keeps making and add it to step 9, so the checks look for those first.
-  - Save the approved hero sheet and look line in your brand file.
-  - Pair it with a skill that writes an original anime ad script, and one that adds captions in your brand font.
+  - Keep a short list of the faults your tool keeps making and add it to the fixes in stage 5.
+  - Pair it with "Get an original anime ad script" first, and a captions skill in your brand font after.
 
 works_best_with:
   tools:
-    - {name: "Nano Banana 2.1", why: "Takes up to 14 reference images and keeps up to four characters the same, so your reference stills match."}
+    - {name: "Nano Banana 2.1", why: "Takes up to 14 reference images and keeps up to four characters the same, so your sheets and frames match."}
     - {name: "Kling 4.0", why: "Takes up to 10 keyframes in one clip, so the key poses you planned can be set ahead."}
     - {name: "Gemini Omni Flash", why: "Lets you fix one thing in a clip by asking, while the rest of the shot stays the same."}
   inputs:
     - "Flat pack art or full-size app screens, so the product sheet matches the real thing"
-    - "A short voice note for each speaker (pitch, pace, accent), so voices stay the same in every clip"
+    - "A short description of each speaker's voice (pitch, pace, accent), so voices stay the same in every clip"
     - "Your own words for the look you want (line weight, color, light), so you never copy frames from a real show"
 
 terms:
+  - term: Avatar card
+    meaning: A short, fixed description of who carries the ad, from their look to their voice, approved before any image is made.
+  - term: Character sheet
+    meaning: One image of the hero from every side, with the faces and poses the script needs, used to keep them the same.
+  - term: Lock lines
+    meaning: Short lines for the look, the hero, the product and the set, pasted word for word into every prompt.
   - term: Key pose
     meaning: A drawing of the main position in a movement. Animators draw these first, then fill the motion between them.
   - term: Hold
     meaning: A moment where the picture stays still before the cut, so the viewer can read it.
-  - term: Reference sheet
-    meaning: An image made only to keep something the same across clips, such as the hero from three sides.
-  - term: Screen direction
-    meaning: Which way someone faces or moves across the screen. Keeping it the same stops viewers losing track.

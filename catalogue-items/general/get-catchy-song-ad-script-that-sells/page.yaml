@@ -11,6 +11,8 @@ explain: |
 
   This skill writes the hook first: 4 to 8 syllables about what the buyer gets, sung from the first bar and repeated on the same tune. It picks the sound from the buyer's moment (a morning rush wants a faster beat than a wind-down), lays every line on a bar grid so the length is right, and puts your brand name in a short sung tag at the end. A sung claim follows the same rules as a spoken one.
 
+  It ends with a cast note: the singer's voice and who is on screen, and why. The skill that turns a song script into shots makes the music first, then the video, from there.
+
 when:
   - Your product sells on a feeling (ease, relief, fun) and a catchy line would help people remember it.
   - Your spoken ads explain well, but nobody remembers them a day later.
@@ -26,14 +28,14 @@ you_get:
   - Three hook drafts, the pick and why
   - Two sound options and the pick, chosen by fit with the buyer's moment
   - The lyric on a bar grid, with a picture for every line
-  - A sound brief to paste into a music tool, and a claims list
+  - A sound brief for the music tool, a claims list and a cast note
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste your brand file or product facts and approved claims underneath.
   - Say who the buyer is, the moment the product fits into, the length, and whether your brand uses music.
   - Clap the beat and sing the hook. Check every sung claim against your claims list.
-  - Take it to the skill that turns a song script into shots, to get the clips made.
+  - Take the script and cast note to the skill that turns a song script into shots. It makes the music first, then runs the video process.
 
 how_it_works:
   - title: Checks the fit
@@ -48,6 +50,8 @@ how_it_works:
     text: Sings the hook from bar 1 and repeats it on the same tune, puts key words on the beat, and saves the brand name for the tag.
   - title: Checks the claims
     text: A sung line may claim no more than a spoken one. If a fact doesn't fit the rhythm, it changes the words around it, never the fact.
+  - title: Writes the cast note
+    text: Describes the singer's voice and who is on screen (one animated lead, the cast on the tag, or the product alone), and why.
 
 output_shape: |
   HOOK DRAFTS  1 "<...>"  2 "<...>"  3 "<...>"
@@ -67,6 +71,8 @@ output_shape: |
 
   CLAIMS IN THE LYRIC
   <line>  <approved claim, brand line, or plain figure of speech>
+
+  CAST NOTE  <voice>; <who is on screen>: <why>
   MISSING: <anything to confirm before the song is made>
 
 example:
@@ -152,6 +158,10 @@ example:
     Bar 5       "chalky" names the old way, no rival named
     Not sung: digestion, energy, any time to results. No child
     appears; the lunch box carries the school run.
+
+    CAST NOTE  Voice: warm, bright female lead, unseen. On screen: one
+    animated adult woman, the busy parent, in every shot. The song is
+    her morning, so one lead the buyer sees herself in carries it.
     MISSING: whether Sprout uses music in ads. Confirm before the
     song is made.
 
@@ -183,7 +193,7 @@ improve:
   - Fix your tag (the brand name and its 2 to 4 notes) in the skill file, and use the same one in every song ad.
   - Write your answer to "does the brand use music in ads?" into the skill file, so it stops asking.
   - Save the hook that wins to your brand file, and test a new verse against it next time.
-  - Pair it with the skill that turns a song script into shots, then check music rights before you pay to run it.
+  - Pair it with the skill that turns a song script into shots, which makes the music first, then check music rights before you pay to run it.
 
 works_best_with:
   tools:

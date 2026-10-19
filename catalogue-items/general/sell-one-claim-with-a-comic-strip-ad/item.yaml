@@ -1,0 +1,28 @@
+slug: sell-one-claim-with-a-comic-strip-ad
+name: "Sell one claim with a comic strip ad"
+summary: "One comic strip image ad: three drawn panels around one claim, then a photo panel of your real product."
+category: general
+boards: [ecommerce]
+type: skill
+role: make
+job: image
+level: intermediate
+inputs:
+  - {type: brief, required: true}
+  - {type: brand_brain, required: true}
+  - {type: product_photos, required: false}
+outputs:
+  - {type: image_prompt}
+  - {type: ad_copy}
+uses: []
+example: comic
+origin: rebuilt
+source_ids: [CES-112]
+version: 1.0.0
+credits:
+  - {title: "Understanding Comics: The Invisible Art (research starter)", by: "EBSCO, on Scott McCloud (1993)", url: "https://www.ebsco.com/research-starters/literature-and-writing/understanding-comics-invisible-art-scott-mccloud", used: "Closure in the gutter, simple faces readers see themselves in"}
+  - {title: "Yonkoma", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/4koma", used: "The four movements of a short strip (set, develop, turn, conclude)"}
+  - {title: "Manga iconography", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Manga_iconography", used: "Feelings drawn as shared symbols, such as the sweat drop"}
+  - {title: "The magical number 4 in short-term memory", by: "Nelson Cowan", url: "https://pubmed.ncbi.nlm.nih.gov/11515286/", used: "A headline plus at most 3 other things to read"}
+  - {title: "How many words do we read per minute? A review and meta-analysis of reading rate", by: "Marc Brysbaert", url: "https://doi.org/10.1016/j.jml.2019.104047", used: "Reading speed behind the 7-word headline"}
+  - {title: "Understanding Success Criterion 1.4.3: Contrast (Minimum)", by: "W3C Web Accessibility Initiative", url: "https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html", used: "The 4.5:1 contrast floor for captions and headline"}

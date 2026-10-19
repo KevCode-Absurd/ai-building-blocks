@@ -4,7 +4,7 @@ summary: "Give it your selling idea and product facts. You get a shot-by-shot sc
 job: make-video-ads
 
 headline: "Make your numbers and offer clear in a graphic ad"
-subhead: Give it your selling idea, product facts and brand colours. It lists every fact with its source, then gives each shot one fact with a picture and move that suit it. You get a shot table with exact words, hold times and build notes.
+subhead: Give it your selling idea, product facts and brand colours. It lists every fact with its source, then gives each shot one fact with a picture and move that suit it. You get a shot table with exact words, hold times, build notes and a note on what carries the ad.
 
 explain: |
   Graphic ads are good at what filmed ads find hard: what's inside, how many, what it costs, the steps to use it. They go wrong in two ways. Some cram icons, charts and a paragraph into one frame. Others show bars that don't match any real number, which is a claim you can't back.
@@ -14,7 +14,7 @@ explain: |
 when:
   - Your buyers already know the problem and want facts, contents or the offer.
   - You have real figures (a study, a count, a spec) and want them shown clearly.
-  - You want a matching video and image ad in your exact brand colours and fonts.
+  - You want a graphic video ad in your exact brand colours and fonts, built so no number comes out wrong.
 
 you_give:
   - The selling idea, or a script you already have
@@ -25,15 +25,15 @@ you_get:
   - A look card (frame, colour jobs, type, product, motion)
   - A fact sheet with the source of every number and term
   - A shot table with narration, picture and move, exact words and hold times
-  - Or a still with the layout, exact words and an image prompt
+  - A cast note naming your product as the avatar, the voice and what never changes
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste your product facts, offer terms, colours and fonts underneath.
   - Add any figures you want charted, each with where it comes from.
-  - Say "video, 20 seconds" or "still", and who the ad is for.
+  - Say the length, such as "20 seconds", and who the ad is for.
   - Check the fact sheet first. Every number on screen should be on it.
-  - For a video, take the script to "Turn your motion graphics script into ready-to-make video shots", or build it in an editor.
+  - Take the script and cast note to "Turn your graphic ad script into a finished video". It takes it from there, with the product sheet, storyboard and the build in code.
 
 how_it_works:
   - title: Checks it fits
@@ -48,6 +48,8 @@ how_it_works:
     text: Bars start at zero and match their numbers, with the source on screen. No named rivals.
   - title: Writes words to read twice
     text: One short line per shot, held long enough to read twice, with a note on how to build each shot.
+  - title: Writes the cast note
+    text: Your product is the avatar. The note names the cutout and views it needs, the narrator's voice and what never changes.
 
 output_shape: |
   FIT  <does a graphic ad suit this buyer, in one line>
@@ -66,6 +68,8 @@ output_shape: |
 
   NOTES
   Inferred: <...>  Left out: <fact, and why>  MISSING: <...>
+
+  CAST NOTE  <the product as the avatar, views needed, voice, never change>
 
 example:
   business: sprout
@@ -143,9 +147,15 @@ example:
     Inferred: nothing. The three lines in shots 2 to 4 use the
       label's words, not icons, so nothing reads as a new claim.
 
+    CAST NOTE  The pouch carries it: the product is the avatar, as the
+    front cutout in every shot. No person; this buyer wants facts, not
+    a face. Narrator: a clear, friendly adult voice, steady pace.
+    Never change: the cutout's shape and printing, and sunflower used
+    only as the highlight.
+
 tweaks:
-  - what: Video or still
-    how: Ask for a still to get one designed image with one fact, one picture and about 20 words.
+  - what: Want a still instead?
+    how: Use "Get one image ad ready to make", which plans one designed image ad from the same facts.
   - what: The kind of fact
     how: Point at the fact you want to lead with (a count, the steps, a result, the offer). The table in step 4 picks its picture and move.
   - what: How you'll build it
@@ -170,7 +180,7 @@ improve:
   - Write your look card into step 3 of the skill file, so you don't rebuild it for every ad.
   - Add your figures with sources to your brand file, so step 2 can fill the fact sheet without asking.
   - Write your full offer terms into "What you need", including what the price renews at.
-  - Pair it with the skill that turns a motion graphics script into ready-to-make shots, or build it straight in an editor.
+  - Pair it with "Turn your graphic ad script into a finished video", which runs the product sheet, storyboard and the build in code.
 
 works_best_with:
   tools:

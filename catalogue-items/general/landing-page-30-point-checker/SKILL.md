@@ -9,26 +9,26 @@ A buyer makes five stops on the way to paying. They arrive and check they're in 
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
-Check for these first. The result is much better with them.
+This skill runs on its own. What's below makes the result better, but none of it is required.
 
-**Needed:**
+**Works best with** (or they can paste their own instead):
 - **Your page** (yours): the landing page's link, or its text and a screenshot.
 
 **Makes it better (optional):**
-- **Brand brain**, made by the [Website brand file builder](https://useaiblocks.com/skills/website-brand-file-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
+- **Brand brain**, made by the [Website brand brain builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
 - **A design direction**, made by the [Landing page design planner](https://useaiblocks.com/skills/landing-page-design-planner): the page's type, colours and layout rules.
 
-**The steps before this one** (do each once, then reuse what it makes):
-1. **Brand brain** with the [Website brand file builder](https://useaiblocks.com/skills/website-brand-file-builder). Bring your website, customer words (optional), your results (optional).
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **Brand brain** with the [Website brand brain builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
 2. **A design direction** with the [Landing page design planner](https://useaiblocks.com/skills/landing-page-design-planner). Bring your page, customer words (optional). It uses your brand brain.
 3. This one.
 
 **From the brand brain, read:** `00-start-here.md`, `proof-and-claims.md`, `offers.md`, `voice-and-look.md`. Take the claims list with each claim's status, the offer terms word for word, and the voice rules. Source notes and rejected ideas never go into the result.
 
-How to check:
-- **In Claude Code,** look in the project first. A brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name, or ask for their path.
-- **In a chat,** ask once: "Do you have your page, your brand brain, a design direction? Attach or paste them here." If they're already in this project's files, use those.
-- **If one is missing,** say so before you start, in one line: the result will be much better with it, with the link to make it once and reuse it. Next time they can attach it (or, in Claude Code, give its path). Then carry on with what you have and mark each gap with `MISSING:`.
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In Claude Code, look in the project too: a brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name.
+2. **If something is missing, advise, don't block.** In one short message, say this skill works on its own and will be better with your page, your brand brain, a design direction. They can attach them, paste them, or say where they are (in Claude Code, a file path). Name the recommended steps above as a suggestion, with their links. Then ask: "Add them, or shall I go ahead with what you've given me?" If their message already says to go ahead, skip this and start.
+3. **When they say go ahead,** do the whole job with what you have. Mark each gap with `MISSING:` and never invent a fact to fill it. List the gaps at the end so they can fill them in later.
 
 **Tools that do this best:**
 - **Any good chat AI that reads images:** It can judge the first-screen and phone checks from your screenshots instead of guessing from text.
@@ -107,7 +107,7 @@ The checks score measures the share of checks the page passes. Score = checks ma
 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
-When you've handed it back, ask in one short question what they want to do next. Offer these, and say they can type their own:
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - **Plan what to test** with the [Ad test brief writer](https://useaiblocks.com/skills/ad-test-brief-writer). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
@@ -119,7 +119,7 @@ If they pick one and that skill is added here, carry straight on with what you j
 - The verdict names one stop, not a list.
 
 ## If something is missing
-Write `MISSING: <what>`. No ad: checks 1 to 3 are can't tell. No facts: say which numbers on the page need a source. No phone screenshots: checks 4 to 6 and 29 are judged from the text only, and say so.
+Write `MISSING: <what>`. No ad: checks 1 to 3 are can't tell. No facts: say which numbers on the page need a source. No phone screenshots, or screenshots named that you can't see: say so in one line, judge checks 4 to 6 and 29 from the text only, and never describe a screenshot you didn't see. Before you write MISSING for a fact, look for it in the page text, your facts and any attached file.
 
 ## Avoid
 - Giving the score without its sum, or presenting it as a sales forecast.

@@ -1,10 +1,10 @@
 new_slug: short-film-video-clip-prompt-writer
 name: "Short film video clip prompt writer"
-summary: "Paste your short-film script and attach product photos. Get steady clip prompts and a score out of 100."
+summary: "Paste your short-film script and attach product photos. Get steady clip prompts and an edit list."
 job: make-video-ads
 
 headline: "Short film video clip prompt writer"
-subhead: Give it an approved short-film script and real product photos. It draws a floor plan, casts each person, builds sheets and a storyboard with a prop log, and writes the clips, stopping three times for your OK. You get every prompt, an edit list and a score out of 100.
+subhead: Give it an approved short-film script and real product photos. It draws a floor plan, casts each person, builds sheets and a storyboard with a prop log, and writes the clips, stopping three times for your OK. You get the floor plan, every prompt and an edit list.
 
 explain: |
   AI video can now make photo-real people acting in a room. Across several angles it slips. Faces change, the window jumps to the other wall, two people seem to swap sides, a mug vanishes between shots, and the listener's mouth moves during someone else's line.
@@ -26,7 +26,7 @@ you_get:
   - Casting image prompts, then sheets, an establishing frame, a light recipe and lock lines
   - A storyboard with shot cards, dialogue blocks and a prop log
   - Clip prompts and an edit list with cuts, captions, sound and fixes
-  - A score out of 100 for the prompts, with one line for each check they missed
+  - Any check the prompts still miss, one line each
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
@@ -69,8 +69,7 @@ output_shape: |
                                                  > STOP for approval
   STAGE 5  CLIP <n>    From frame <n>. <motion only>. Cut out: <...>
            EDIT LIST   <order, captions, sound, end card, retakes>
-  SCORE  <n>/100 (<checks passed> of 7 checks)
-  Missed: <one line per check still missed>
+  CHECKS MISSED: <one line per check still missed, or none>
 
 example:
   business: sprout
@@ -160,7 +159,7 @@ tweaks:
     how: Give each voice's accent, pitch and pace. They go on the avatar cards and are reused in every clip.
 
 judge:
-  - It stopped for your OK after the avatar cards, the sheets and the storyboard.
+  - It stopped for your OK after the avatar cards, the sheets and the storyboard, unless you asked for every stage in one go.
   - Every camera position sits on one side of the line, or the crossing is planned.
   - The light recipe is the same, word for word, in every prompt for the scene.
   - Each shot card has one action and at most one camera move, and the prop log has no gaps.

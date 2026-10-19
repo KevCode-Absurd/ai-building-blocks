@@ -164,7 +164,7 @@ export default {
   compare: { input: "discount", label: "At other discounts", values: [10, 20, 30], outputs: ["salePrice", "profitSale", "extraSales"] },
   next: [
     { if: "profitSale <= 0", slug: "hidden-offer-finder", why: "Find an offer that doesn't cost you money on every order." },
-    { slug: "buyer-doubt-offer-builder", why: "Before you cut the price, try an offer that answers why buyers hold back." },
+    { slug: "offer-builder-that-answers-buyer-doubts", why: "Before you cut the price, try an offer that answers why buyers hold back." },
   ],
   sources: [
     { what: "Profit per order", how: "Price minus the costs of one order (goods, shipping, payment fees and ads). A standard contribution margin sum." },

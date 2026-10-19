@@ -1,7 +1,7 @@
 slug: chat-screenshot-image-ad-maker
 renamed_from: get-believed-with-a-text-someone-else-sent
 name: "Chat screenshot image ad maker"
-summary: "Paste your story ad. Get a chat screenshot image prompt, the messages and a score out of 100."
+summary: "Paste your story ad. Get the chat messages and a ready-to-paste screenshot image prompt."
 category: general
 boards: [ecommerce]
 type: skill
@@ -14,7 +14,7 @@ inputs:
   - {type: brand_brain, required: false}
 outputs:
   - {type: image_prompt}
-uses: [story-ad-image-picker]
+uses: [image-style-picker-for-story-ads]
 example: native
 origin: own
 source_ids: [CES-073, CES-074]

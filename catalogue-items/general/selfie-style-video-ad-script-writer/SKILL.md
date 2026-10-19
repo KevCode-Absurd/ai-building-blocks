@@ -1,6 +1,6 @@
 ---
 name: selfie-style-video-ad-script-writer
-description: Use when a video ad should look like one person talking to their phone (a real creator who has used the product, a founder or customer on their own footage, or a made-up AI presenter) and must sound said, not read. Settles first what that person may honestly say, writes the and-but-so spine, sizes the length from the real use steps and a word budget, then writes five timed beats with one anchor fact shown on screen, a shot list saying which hand holds what, delivery notes, two other openings and a cast note that hands it to the right next step. Scores the script out of 100 against its own checks.
+description: Use when a video ad should look like one person talking to their phone (a real creator who has used the product, a founder or customer on their own footage, or a made-up AI presenter) and must sound said, not read. Settles first what that person may honestly say, writes the and-but-so spine, sizes the length from the real use steps and a word budget, then writes five timed beats with one anchor fact shown on screen, a shot list saying which hand holds what, delivery notes, two other openings and a cast note that hands it to the right next step. Ends with any of its own checks the script still misses.
 ---
 
 # Selfie-style video ad script writer
@@ -9,24 +9,24 @@ You write a 15 to 60 second script for one person talking to their phone. It sho
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
-Check for these first. The result is much better with them.
+This skill runs on its own. What's below makes the result better, but none of it is required.
 
-**Needed:**
-- **Brand brain** (its buyers and products part), made by the [Website brand file builder](https://useaiblocks.com/skills/website-brand-file-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
+**Works best with** (or they can paste their own instead):
+- **Brand brain** (its buyers and products part), made by the [Website brand brain builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
 - **A buyer brief**, made by the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer): who it's for, how much they already know, and what will move them.
 - **Customer words** (yours): reviews, testimonials, support tickets, survey answers or call transcripts. Export them or paste them in.
 
-**The steps before this one** (do each once, then reuse what it makes):
-1. **Brand brain** with the [Website brand file builder](https://useaiblocks.com/skills/website-brand-file-builder). Bring your website, customer words (optional), your results (optional).
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **Brand brain** with the [Website brand brain builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
 2. **A buyer brief** with the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer). Bring customer words. It uses your brand brain.
 3. This one.
 
 **From the brand brain, read:** `00-start-here.md`, `offers.md`, `customers.md`, `proof-and-claims.md`, `voice-and-look.md`. Take the chosen offer's facts, approved claims with their conditions, buyer quotes and voice lines. Source notes and rejected ideas never go into the result.
 
-How to check:
-- **In Claude Code,** look in the project first. A brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name, or ask for their path.
-- **In a chat,** ask once: "Do you have your brand brain, a buyer brief, customer words? Attach or paste them here." If they're already in this project's files, use those.
-- **If one is missing,** say so before you start, in one line: the result will be much better with it, with the link to make it once and reuse it. Next time they can attach it (or, in Claude Code, give its path). Then carry on with what you have and mark each gap with `MISSING:`.
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In Claude Code, look in the project too: a brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name.
+2. **If something is missing, advise, don't block.** In one short message, say this skill works on its own and will be better with your brand brain, a buyer brief, customer words. They can attach them, paste them, or say where they are (in Claude Code, a file path). Name the recommended steps above as a suggestion, with their links. Then ask: "Add them, or shall I go ahead with what you've given me?" If their message already says to go ahead, skip this and start.
+3. **When they say go ahead,** do the whole job with what you have. Mark each gap with `MISSING:` and never invent a fact to fill it. List the gaps at the end so they can fill them in later.
 
 **Tools that do this best:**
 - **Claude:** Keeps the speaker rules and the one-detail limit in view across a long brief.
@@ -60,8 +60,8 @@ How to check:
 7. **Make it sound spoken, then say it.** Contractions, short fragments, the buyer's own nouns, one moment of surprise or doubt. Cut hype ("obsessed", "life-changing", "game-changing", "revolutionary"). Read it aloud standing up, at speaking pace, and rewrite any line you'd never text a friend or that would suit a glossy TV voice-over.
 8. **Write the picture notes and shot list.** Tall 9:16, phone at arm's length or propped up, lit by the room's own light. The viewer sees the product in the hand before anyone names it. Something changes every 2 to 3 seconds: a closer cut, hands from above, the product up close. For each beat give the time, one action, and which hand holds what. Keep the face, product and any text out of the bottom third and the top strip, where the app's buttons sit. Subtitles of every spoken word go on in editing. On-screen text never repeats the whole spoken sentence.
 9. **Add how to say it and two other openings.** How to say it: tone, pace, where they are, what they wear, how the phone is held, what the face does at the snag. Two other openings, each from a different doubt or way in (the situation, a question, the anchor, the product in use), each read aloud with the first Show line. Never one hook reworded.
-10. **Write the cast note.** Who carries the ad, and why, in three or four lines. AI presenter: the kind of made-up adult who fits the buyer (age range, where they'd film, what they'd wear); hand the script and note to the selfie-style clips skill (selfie-style-video-clip-prompt-writer), which runs the avatar, sheets, storyboard and clips. Real creator, founder or customer: a casting and wardrobe note and the room they film in; hand it to the filming brief skill (creator-video-filming-brief-writer). If the script runs long, cut the situation line first, then any line that repeats what the picture shows. Never cut the proof moment or the honest result.
-11. **Score it.** Run the checks in "Check before you hand it back" and fix any that fail. Then score the script: checks passed divided by checks, times 100, rounded (6 of 7 passed is 86). Show the score, the sum, and one line for each check still missed.
+10. **Write the cast note.** Who carries the ad, and why, in three or four lines. AI presenter: the kind of made-up adult who fits the buyer (age range, where they'd film, what they'd wear); hand the script and note to the selfie-style clips skill (selfie-style-video-clip-prompt-writer), which runs the avatar, sheets, storyboard and clips. Real creator, founder or customer: a casting and wardrobe note and the room they film in; hand it to the filming brief skill (creator-filming-brief-writer). If the script runs long, cut the situation line first, then any line that repeats what the picture shows. Never cut the proof moment or the honest result.
+11. **Run the checks.** Run the checks in "Check before you hand it back" and fix any that fail. Show `CHECKS MISSED: <one line each>`, or "none".
 
 ## What you hand back
 - The spine, then a table of `Beat | Time | Says | On screen | Picture`, the `[DEMO]` line and proof moment marked, with blanks for a real creator.
@@ -69,13 +69,13 @@ How to check:
 - The shot list (time, action, which hand holds what), how to say it, and two other openings.
 - The cast note and where it goes next.
 - A list of every claim, number and quote with its source, and every blank or gap.
-- The score out of 100, with the sum and one line for each check still missed.
+- The `CHECKS MISSED` line: one line for each check still missed, or "none".
 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
-When you've handed it back, ask in one short question what they want to do next. Offer these, and say they can type their own:
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - **Check it before it goes live** with the [Meta ads compliance checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the video ad script.
-- **Make video ads** with the [Ad script format finder](https://useaiblocks.com/skills/ad-script-format-finder). It takes the video ad script.
+- **Make video ads** with the [Ad script read-aloud editor](https://useaiblocks.com/skills/ad-script-read-aloud-editor). It takes the video ad script.
 - **Make image ads** with the [Image ad remake planner](https://useaiblocks.com/skills/image-ad-remake-planner). It takes the video ad script.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
@@ -90,7 +90,7 @@ If they pick one and that skill is added here, carry straight on with what you j
 - The cast note says who carries it and why, and never casts a real person as an AI avatar.
 
 ## If something is missing
-Write `MISSING: <what>` and ask. No buyer: no script. No quote on file: use an observation and put nothing in quotation marks. No "how it's used": the product is held, never opened. Display-only handling: the product sits sealed on a surface, label turned to camera. No visible result: claim nothing about what's seen. No number in the facts: anchor on a moment instead.
+Write `MISSING: <what>` and ask once, in one short message, then carry on. No buyer: write for the buyer the brief and facts point to, mark them `[inferred]`, and put no words in their mouth. No quote on file: use an observation and put nothing in quotation marks. No "how it's used": the product is held, never opened. Display-only handling: the product sits sealed on a surface, label turned to camera. No visible result: claim nothing about what's seen. No number in the facts: anchor on a moment instead.
 
 ## Avoid
 - A posed product shot with a model, or a spotless room no real person films in.

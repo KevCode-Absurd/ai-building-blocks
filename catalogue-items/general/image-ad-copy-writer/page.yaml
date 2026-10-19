@@ -1,10 +1,10 @@
 new_slug: image-ad-copy-writer
 name: "Image ad copy writer"
-summary: "Attach your ad image and offer. Get every word the ad needs and a score out of 100."
+summary: "Attach your ad image and offer. Get every word the ad needs, in versions that test different appeals."
 job: write-ad-copy
 
 headline: "Image ad copy writer"
-subhead: Attach the picture you've chosen, say who it's for, and paste your proof and offer terms. It gives each text field one job and writes versions that each test a different appeal. You get the words on the image, every field around it, and a score out of 100.
+subhead: Attach the picture you've chosen, say who it's for, and paste your proof and offer terms. It gives each text field one job and writes versions that each test a different appeal. You get the words on the image and every field around it.
 
 explain: |
   Once the picture for an image ad is chosen, the words around it often undo it. The main text repeats the headline on the image, the headline under the image argues something else, and the offer loses the small print it needs.
@@ -26,7 +26,6 @@ you_get:
   - For each version, the headline and support line on the image, main text, headline under the image, description and button, with counts
   - A note naming the ad type, what the buyer knows and the appeal each version tests
   - A story for the main text, if you asked for one
-  - A score out of 100 for how many of its own checks the words pass, with each miss named
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
@@ -48,8 +47,8 @@ how_it_works:
     text: No borrowed figures, quotes, guarantees or customer stories. A made-up person is never a testimonial.
   - title: Keeps to the limits
     text: Image headline of 7 words or fewer, main text that works before "See more", and every field counted.
-  - title: Scores the words
-    text: Goes through its own checks, such as headline and picture making one point, fixes what it can, and scores checks passed out of all checks, times 100.
+  - title: Checks the words
+    text: Goes through its own checks, such as headline and picture making one point, fixes what it can, and names any it still misses.
 
 output_shape: |
   VERSION <n>: <appeal it tests>
@@ -65,9 +64,8 @@ output_shape: |
   Buyer knows: <new | warm | ready>
   MISSING:     <offer terms, quote or source not supplied>
 
-  SCORE
-  <passed> of <all> checks = <score> out of 100
-  Missed: <one line per check still missed, or none>
+  CHECKS MISSED
+  <one line per check still missed, or none>
 
 example:
   business: sprout
@@ -82,7 +80,7 @@ example:
     Proof: 6 g prebiotic fiber per pack. Approved: "Supports
     digestion and gut health." Survey of 3,000+ customers: "67% of
     surveyed users experienced better, more regular digestion."
-    Reviews: all 20 (pasted below).
+    Reviews: all 20, in reviews.md (attached).
     Qualifier: Sugar-Free uses sugar alcohols, which upset some
     stomachs; point gut-sensitive buyers to Low Sugar.
     Offer: first box $29.99 with the text sign-up discount, then $49.99
@@ -96,8 +94,8 @@ example:
     On image, headline:   6 g prebiotic fiber, no shaker needed (7)
     On image, support:    Supports digestion and gut health.
     Main text:            Breakfast is one pack, torn across the top and
-                          eaten from your palm. That's 6 g of prebiotic
-                          fiber with nothing to stir. In a survey of
+                          eaten from your palm. That's your daily fiber
+                          with nothing to stir. In a survey of
                           3,000+ customers, 67% of surveyed users
                           experienced better, more regular digestion. If
                           your stomach is sensitive, start with Low Sugar
@@ -120,7 +118,7 @@ example:
                           with the text sign-up discount, then $49.99
                           every 4 weeks.
     Headline under image: 6 g of prebiotic fiber per pack (31)
-    Description:          From $29.99 with text sign-up (29)
+    Description:          $29.99 first box, text sign-up (30)
     Button:               Shop now
 
     NOTE
@@ -135,6 +133,9 @@ example:
     Left out: "Fix the Hot Girl Tummy" ("fix" goes past "supports"), and
     the reviews that describe personal results, which aren't a promise.
     MISSING: grams of sugar in Low Sugar.
+
+    CHECKS MISSED
+    none
 
 tweaks:
   - what: How much the buyer knows

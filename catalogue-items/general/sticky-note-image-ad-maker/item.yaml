@@ -1,7 +1,7 @@
 slug: sticky-note-image-ad-maker
 renamed_from: get-noticed-with-a-sticky-note-ad
 name: "Sticky-note image ad maker"
-summary: "Paste your story ad. Get a sticky-note photo brief, image prompt and a score out of 100."
+summary: "Paste your story ad. Get a sticky-note photo brief, an image prompt and a blank version."
 category: general
 boards: [ecommerce]
 type: skill
@@ -13,7 +13,7 @@ inputs:
   - {type: persona, required: false}
 outputs:
   - {type: image_prompt}
-uses: [story-ad-image-picker]
+uses: [image-style-picker-for-story-ads]
 example: native
 origin: own
 source_ids: [CES-071]

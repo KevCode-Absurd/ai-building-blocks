@@ -1,7 +1,7 @@
 slug: visual-twist-image-ad-maker
 renamed_from: stop-the-scroll-with-your-buyers-problem
 name: "Visual twist image ad maker"
-summary: "Paste a buyer's words. Get a one-twist image ad, its prompt and a score out of 100."
+summary: "Paste a buyer's words. Get a one-twist image ad, its words, layout and image prompt."
 category: general
 boards: [ecommerce]
 type: skill
@@ -15,7 +15,7 @@ inputs:
 outputs:
   - {type: image_prompt}
   - {type: ad_copy}
-uses: [product-exact-image-prompt-writer]
+uses: [accurate-product-image-ad-maker]
 example: ad-concept
 origin: rebuilt
 source_ids: [CES-135]

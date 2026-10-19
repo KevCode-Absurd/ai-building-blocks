@@ -1,10 +1,10 @@
 new_slug: ad-test-brief-writer
 name: "Ad test brief writer"
-summary: "Paste your brand file and results. Get three ideas, nine designer-ready versions and a score out of 100."
+summary: "Paste your brand file and results. Get three ideas, nine designer-ready versions and questions for the founder."
 job: plan-ad-tests
 
 headline: "Ad test brief writer"
-subhead: Give it your brand file and whatever ad results you have. It grades what the results prove, picks a plan, and writes three ideas aimed at different buyer doubts. You get nine versions spelled out for a designer and a score out of 100.
+subhead: Give it your brand file and whatever ad results you have. It grades what the results prove, picks a plan, and writes three ideas aimed at different buyer doubts. You get nine versions spelled out for a designer and any check it missed.
 
 explain: |
   Most ad briefs list a few headlines and leave the rest to the designer. The versions end up as the same ad reworded, and ad platforms tend to treat near-copies as one ad and spend on just one of them. So you test less than you think.
@@ -27,7 +27,7 @@ you_get:
   - Three ad ideas, each aimed at a different buyer doubt, with a filled-in thinking block
   - Nine versions with layout, headline, picture and what each one changes
   - A footer listing guesses and the questions to ask the founder
-  - A score out of 100 for the brief, with one line for each check it missed
+  - Any check the brief still misses, one line each
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
@@ -78,8 +78,7 @@ output_shape: |
     B ... C ...
 
   FOOTER  <lines rewritten, fields inferred, questions for the founder>
-  SCORE   <n>/100 (<checks passed> of 6 checks)
-          Missed: <one line per check still missed>
+  CHECKS MISSED  <one line per check still missed, or none>
 
 example:
   business: sprout

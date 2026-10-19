@@ -1,10 +1,10 @@
 new_slug: flash-snapshot-product-photo-maker
 name: "Flash snapshot product photo maker"
-summary: "Attach your product photos. Get 6 flash snapshot prompts from one occasion and a score out of 100."
+summary: "Attach your product photos. Get 6 flash snapshot prompts from one real occasion."
 job: product-photos
 
 headline: "Flash snapshot product photo maker"
-subhead: Attach your product photos and say who uses it and when. It sets three flash dials, plans six snapshots of one real occasion in time order, and writes one prompt per photo after your OK. You get the roll, the prompts and a score out of 100.
+subhead: Attach your product photos and say who uses it and when. It sets three flash dials, plans six snapshots of one real occasion in time order, and writes one prompt per photo after your OK. You get the roll, the prompts and a check log for each photo.
 
 explain: |
   Polished product photos look like ads, and people scroll past what looks like decoration. A snapshot from a real morning or evening, lit by a small camera's flash, reads as life instead. The risk is that AI pictures in this style drift. The product changes shape, people stare into the lens, hands hold things no hand could.
@@ -27,7 +27,7 @@ you_get:
   - A roll of frames from one occasion, for you to approve
   - One prompt per photo, written in a fixed order
   - A check log for each photo, with what was remade and why
-  - A score out of 100 for the roll, with one line for each check it missed
+  - Any check the roll still missed, one line each, or none
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
@@ -76,8 +76,8 @@ output_shape: |
   CHECK LOG
   <frame>: asked <...> / came back <...> / fix <...>
 
-  SCORE  <n>/100 (<checks passed> of 5 checks)
-  Missed: <one line per check still missed>
+  CHECKS MISSED
+  <one line per check still missed, or none>
 
 example:
   business: sprout

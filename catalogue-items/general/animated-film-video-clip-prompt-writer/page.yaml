@@ -1,10 +1,10 @@
 new_slug: animated-film-video-clip-prompt-writer
 name: "Animated film video clip prompt writer"
-summary: "Paste your animated-movie script and attach product photos. Get steady clip prompts and a score out of 100."
+summary: "Paste your animated-movie script and attach product photos. Get steady clip prompts and an edit list."
 job: make-video-ads
 
 headline: "Animated film video clip prompt writer"
-subhead: Give it an animated-movie ad script and product photos. It casts the character, plans the light for each story part, builds sheets and a storyboard, and writes the clips, stopping three times for your OK. You get every prompt, an edit list and a score out of 100.
+subhead: Give it an animated-movie ad script and product photos. It casts the character, plans the light for each story part, builds sheets and a storyboard, and writes the clips, stopping three times for your OK. You get every prompt and an edit list, with any check still missed.
 
 explain: |
   The 3D animated-film look is easy to start and hard to hold. Over a few clips the faces turn toy-like, a character changes between shots, the light jumps around inside one moment, and the label on your pack turns to gibberish.
@@ -27,7 +27,7 @@ you_get:
   - A light plan, sheet prompts for the character, product and rooms, and lock lines
   - A storyboard with one frame and one shot card per shot
   - Clip prompts and an edit list with cuts, captions, music and the end card
-  - A score out of 100 for the prompts, with one line for each check they missed
+  - One line for each of its checks the prompts still miss
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
@@ -72,8 +72,7 @@ output_shape: |
                       Cut out: <on the action / on a look / insert /
                       time cut>
            EDIT LIST  <order, captions, music, end card, safe zones>
-  SCORE  <n>/100 (<checks passed> of 7 checks)
-  Missed: <one line per check still missed>
+  CHECKS MISSED: <one line per check still missed, or none>
 
 example:
   business: sprout
@@ -169,7 +168,7 @@ tweaks:
     how: Say the lead is an animal and the avatar card describes the animal, with "stylised animated" in front of it.
 
 judge:
-  - It stopped for your OK after the avatar card, the sheets and the storyboard.
+  - It stopped for your OK after the avatar card, the sheets and the storyboard, or marked each one "(approve)" when you asked for every stage at once.
   - Every frame in the same story part has the same light key, word for word.
   - The look line and casting card never change between prompts.
   - No shot has more than two people, and every product shot spells out each label line or says MISSING.

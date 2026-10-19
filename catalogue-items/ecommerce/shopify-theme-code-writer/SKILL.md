@@ -1,6 +1,6 @@
 ---
 name: shopify-theme-code-writer
-description: Use when writing or editing Shopify theme code (.liquid sections, blocks, snippets, schema, translation keys, section CSS and JavaScript). Gives the structure, the traps and the checks that keep code installable and editable by the store owner. Ends with a score out of 100 for how many of its checks the code passes.
+description: Use when writing or editing Shopify theme code (.liquid sections, blocks, snippets, schema, translation keys, section CSS and JavaScript). Gives the structure, the traps and the checks that keep code installable and editable by the store owner. Ends with any of its checks the code still misses.
 ---
 
 # Shopify theme code writer
@@ -9,15 +9,15 @@ You write theme code that installs without errors, shows sensible controls in th
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
-Check for these first. The result is much better with them.
+This skill runs on its own. What's below makes the result better, but none of it is required.
 
 **Makes it better (optional):**
 - **Your page** (yours): the landing page's link, or its text and a screenshot.
 
-How to check:
-- **In Claude Code,** look in the project first for these by name, or ask for their path.
-- **In a chat,** ask once: "Do you have your page? Attach or paste them here." If they're already in this project's files, use those.
-- **If one is missing,** say what it would add, then carry on with what you have and mark each gap with `MISSING:`.
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In Claude Code, look in the project too for these by name.
+2. **If something is missing, advise, don't block.** In one short message, say this skill works on its own and will be better with your page. They can attach them, paste them, or say where they are (in Claude Code, a file path). Then ask: "Add them, or shall I go ahead with what you've given me?" If their message already says to go ahead, skip this and start.
+3. **When they say go ahead,** do the whole job with what you have. Mark each gap with `MISSING:` and never invent a fact to fill it. List the gaps at the end so they can fill them in later.
 
 **Tools that do this best:**
 - **Claude Code:** Edits your theme files in place and can run Shopify CLI to preview and check each change.
@@ -49,16 +49,16 @@ How to check:
 5. **Document snippets and blocks that are rendered directly** with a `{% doc %}` header: a one-line description, `@param {type} name - description` (square brackets mean optional), and an `@example`.
 6. **Translate fixed words.** Words written into the code (button labels, errors) use the `t` filter with nested snake_case keys (no more than three levels), in sentence case, with a matching entry in `locales/en.default.json`. Labels in the editor use `t:` keys backed by `en.default.schema.json`. Words the owner is meant to edit (headline, reasons, FAQ) live in section and block settings, with starting text in each setting's `default` or loaded in the template JSON, not in locale files.
 7. **Check before handing over.** Every `render` target exists; every `t` key exists; every schema is valid JSON; every image has `alt`; no price is typed in; the file works at phone width first. If you can run Theme Check (in Shopify CLI or Shopify's AI Toolkit), run it and fix every error; if not, say the files weren't checked.
-8. **Score it.** Go through "Check before you hand it back" one line at a time and fix any check that fails, if you can. Score = checks passed / all checks x 100, rounded. Show the sum, and one line for each check still missed and why. When editing a pasted file, score it as pasted and again after your changes. The score doesn't replace Theme Check or a test in the store.
+8. **Run the checks.** Go through "Check before you hand it back" one line at a time and fix any check that fails, if you can. Show `CHECKS MISSED: <one line each, and why>`, or "none". When editing a pasted file, also list the checks it failed as pasted, so the person sees what changed. The checks don't replace Theme Check or a test in the store.
 
 ## What you hand back
 - The files, each in a code block headed by its path (`sections/...`, `snippets/...`, `locales/...`).
 - A short list: what to upload, what the owner can edit, what was assumed.
-- The score: checks passed out of all checks, as a sum and a score out of 100 (before and after, when editing), with one line per check missed.
+- The `CHECKS MISSED` line, one line per check missed, or "none" (when editing, also the checks the pasted file failed).
 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
-When you've handed it back, ask in one short question what they want to do next. Offer these, and say they can type their own:
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - **Check it before it goes live** with the [Meta ads compliance checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the page.
 - **Write the landing page** with the [Shopify landing page builder](https://useaiblocks.com/skills/shopify-landing-page-builder). It takes the page.
 - **Check the landing page** with the [Landing page 30-point checker](https://useaiblocks.com/prompts/landing-page-30-point-checker). It takes the page.

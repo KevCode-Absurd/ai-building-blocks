@@ -1,7 +1,7 @@
 slug: single-image-ad-planner
 renamed_from: get-one-image-ad-ready-to-make
 name: "Single image ad planner"
-summary: "Paste your facts. Get the layout, image words, feed copy, a prompt and a score out of 100."
+summary: "Paste your facts. Get the layout, image words, feed copy and an image prompt."
 category: general
 boards: [ecommerce]
 type: skill

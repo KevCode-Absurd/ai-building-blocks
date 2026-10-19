@@ -9,27 +9,27 @@ A hook has one job: make the right person stop and read the next line. The teste
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
-Check for these first. The result is much better with them.
+This skill runs on its own. What's below makes the result better, but none of it is required.
 
-**Needed:**
+**Works best with** (or they can paste their own instead):
 - **A buyer brief**, made by the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer): who it's for, how much they already know, and what will move them.
 
 **Makes it better (optional):**
-- **Brand brain**, made by the [Website brand file builder](https://useaiblocks.com/skills/website-brand-file-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
+- **Brand brain**, made by the [Website brand brain builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
 - **Ad copy**, made by the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer): the headline and text of the ad.
 
-**The steps before this one** (do each once, then reuse what it makes):
-1. **Brand brain** with the [Website brand file builder](https://useaiblocks.com/skills/website-brand-file-builder). Bring your website, customer words (optional), your results (optional).
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **Brand brain** with the [Website brand brain builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
 2. **A buyer brief** with the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer). Bring customer words. It uses your brand brain.
 3. **Ad copy** with the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer). It uses your brand brain and a buyer brief.
 4. This one.
 
 **From the brand brain, read:** `00-start-here.md`, `offers.md`, `customers.md`, `proof-and-claims.md`, `voice-and-look.md`. Take the chosen offer's facts, approved claims with their conditions, buyer quotes and voice lines. Source notes and rejected ideas never go into the result.
 
-How to check:
-- **In Claude Code,** look in the project first. A brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name, or ask for their path.
-- **In a chat,** ask once: "Do you have a buyer brief, your brand brain, ad copy? Attach or paste them here." If they're already in this project's files, use those.
-- **If one is missing,** say so before you start, in one line: the result will be much better with it, with the link to make it once and reuse it. Next time they can attach it (or, in Claude Code, give its path). Then carry on with what you have and mark each gap with `MISSING:`.
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In Claude Code, look in the project too: a brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name.
+2. **If something is missing, advise, don't block.** In one short message, say this skill works on its own and will be better with a buyer brief, your brand brain, ad copy. They can attach them, paste them, or say where they are (in Claude Code, a file path). Name the recommended steps above as a suggestion, with their links. Then ask: "Add them, or shall I go ahead with what you've given me?" If their message already says to go ahead, skip this and start.
+3. **When they say go ahead,** do the whole job with what you have. Mark each gap with `MISSING:` and never invent a fact to fill it. List the gaps at the end so they can fill them in later.
 
 **Tools that do this best:**
 - **Any good chat AI:** Hooks are short and the checks are plain, so Claude, ChatGPT or Gemini all do this well.
@@ -38,9 +38,11 @@ How to check:
 <!-- /needs -->
 
 ## What you need
-- **A buyer brief** (required): who it's for, how aware they are, their moment, what they own, their doubts, their own words.
-- **Offer and proof** (required): what may be claimed. Numbers, review lines, real offer dates.
-- **Mode** (required): `write` (how many, which format) or `score` (paste the hooks).
+- **Who the buyer is** (needed): who it's for, how aware they are, their moment, what they own, their doubts, their own words. A few lines in your own words work. A brief from the Buyer brief writer gives a better start.
+- **Offer and proof** (needed): what may be claimed. Numbers, review lines, real offer dates.
+- **Mode**: `write` (how many, which format) or `score` (paste the hooks). Default: `write`, about ten hooks.
+
+If the buyer or the proof is missing, ask once, in one short message, for just those facts, or let them paste their own notes. Then carry on with what you have, skipping the forms that need what's missing and marking each gap `MISSING:`.
 - **Who speaks** (write mode): a real founder, customer or expert, or an AI-made presenter.
 - **The ad body or next line** (optional, but best): what follows the hook.
 - **Brand file** (optional): voice, claims the brand must never make.
@@ -72,11 +74,40 @@ Then the **honest gate:** any fact not in the proof, a claim the brand must neve
 Score every hook on the four checks, the ones you wrote too. Set score = points won / (4 x number of hooks) x 100, rounded. A hook that fails the honest gate counts 0. In score mode, give it for the hooks as pasted, then again with the fixes in. Show each sum. It measures the hooks against these checks, not how they will perform.
 
 ## What you hand back
-For `write`: each hook with its move and form, what it names, the speaker, what backs it, its next line, the on-screen version, for video the seen / read / heard layers, and what a win would tell you. Then SKIPPED, then the set score with its sum. For `score`: each hook with its four checks, the score out of 4, the gate, and a fix if under 3, then any buyer the set misses, then the set score as pasted and with the fixes, each with its sum.
+For `write`: the FLAG line first, then each hook with its move and form, what backs it, its next line, the on-screen version, for video what's seen first, and what a win would tell you. Then SKIPPED, then the set score with its sum. For `score`: each hook with its four checks, the score out of 4, the gate, and a fix if under 3, then any buyer the set misses, then the set score as pasted and with the fixes, each with its sum.
+
+Hand it back in exactly this layout, with these labels in this order (use the part for your mode, then SET SCORE):
+
+```
+Write mode:
+FLAG: <the moment or object that flags the buyer>
+<n>. "<the hook>"
+   <move> (<form>) | backed by: <the fact, or the ad line that closes the gap>
+   Next:   <the line that pays it off>
+   Screen: <7 words or fewer> | Seen: <the first frame, for video>
+   A win says: <what you'd learn if it wins>
+(about ten, at most three per move)
+
+SKIPPED
+<move or form>: MISSING <what it needed>
+
+Score mode:
+<n>. "<the hook>"
+   Flags <0/1>  Gain <0/1>  New <0/1>  Clear <0/1>  = <score>/4
+   Gate: <pass / fail, why>
+   Fix:  <one line, for any under 3>
+
+MISSED
+<buyers or moments no hook flags>
+
+SET SCORE (both modes)
+<points won>/<4 x hooks> = <score> out of 100 (<each hook's points, added>; gate failures count 0)
+With the fixes, score mode: <points>/<4 x hooks> = <score> out of 100
+```
 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
-When you've handed it back, ask in one short question what they want to do next. Offer these, and say they can type their own:
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - **Check it before it goes live** with the [Meta ads compliance checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the ad copy.
 - **Write the ad copy** with the [Sales copy editor](https://useaiblocks.com/skills/sales-copy-editor). It takes the ad copy.
 - **Make image ads** with the [Article headline image ad maker](https://useaiblocks.com/skills/article-headline-image-ad-maker). It takes the ad copy.
@@ -92,7 +123,7 @@ If they pick one and that skill is added here, carry straight on with what you j
 - No more than three hooks share a move.
 
 ## If something is missing
-Write `MISSING: <what>` and skip the forms that need it. Never fill a blank with a guess. With no next line, write `MISSING: next line` and score the hooks alone, with a warning. With no awareness level, write `MISSING: awareness` and score Flags against the buyer as described.
+Write `MISSING: <what>` and skip the forms that need it. Never fill a blank with a guess. Before you write MISSING, look for the fact in the brand file and the input; write it only when both lack it. When two facts on file might describe the same thing (a named tie-in flavour and a flavour description, say), never state that they differ or match. Write `MISSING: confirm <a> and <b> are the same` instead. With no next line, write `MISSING: next line` and score the hooks alone, with a warning. With no awareness level, write `MISSING: awareness` and score Flags against the buyer as described.
 
 ## Avoid
 - Odd for the sake of odd. The stop is won and the sale is lost.

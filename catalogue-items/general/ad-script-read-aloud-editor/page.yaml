@@ -1,10 +1,10 @@
 new_slug: ad-script-read-aloud-editor
 name: "Ad script read-aloud editor"
-summary: "Paste your script. Get every line that trips when spoken, fixed, and a score out of 100."
+summary: "Paste your script. Get every line that trips when spoken, fixed, with the rule it broke."
 job: make-video-ads
 
 headline: "Ad script read-aloud editor"
-subhead: Paste a script or ad text. It says every line the way it will be delivered and finds the ones that trip, run out of breath or sound like a slogan. You get each fix with the rule it broke, and a read-aloud score out of 100 before and after.
+subhead: Paste a script or ad text. It says every line the way it will be delivered and finds the ones that trip, run out of breath or sound like a slogan. You get each fix with the rule it broke, the lines it left alone, and any line still failing.
 
 explain: |
   A script can be right in every detail and still sound wrong. The presenter trips on a knotted sentence, gasps through a long one, or reads three fragments that sound like a robot. Viewers hear it at once, even if they couldn't say why.
@@ -25,7 +25,7 @@ you_get:
   - Each failing phrase, where it is and the rule it breaks
   - The full fixed text for each one
   - Flags for any claim or number that looks wrong, left as written
-  - A read-aloud score out of 100 before and after the fixes, for the share of sentences a presenter can say cleanly
+  - Any line a presenter still couldn't say cleanly after the fixes
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
@@ -62,9 +62,7 @@ output_shape: |
   FLAGS FOR THE CLAIMS CHECK (not changed)
   <claim, number or offer that looks wrong, and why>
 
-  SCORE  Before: <n>/100 (<passing> of <sentences> sentences pass)
-         After:  <n>/100 (<passing> of <sentences> sentences pass)
-  Still failing: <line, or none>
+  STILL FAILING: <line, or none>
 
 example:
   business: sprout
@@ -93,7 +91,7 @@ example:
     Failing phrase: "$29.99 for your first order, that's less than
       $1.10/day for 60+ whole-food ingredients..."
     Rule: two ideas in one sentence, joined by a comma
-    Fixed: "Your first order is $29.99. That's less than $1.10/day
+    Fixed: "💚 Your first order is $29.99. That's less than $1.10/day
       for 60+ whole-food ingredients, 21 vitamins & minerals, and
       gut-supporting probiotics in one daily gummy pack."
 
@@ -102,8 +100,8 @@ example:
     Failing phrase: "Third-party tested. Online-exclusive offer. Shop
       Sprout."
     Rule: a run of fragments
-    Fixed: "✅ Third-party tested. This offer is online only, so
-      shop Sprout."
+    Fixed: "✅ It's third-party tested. This offer is online only,
+      so shop Sprout."
 
     FIX 3
     Where: text 2
@@ -116,7 +114,9 @@ example:
 
     LEFT AS IS
     "Big news: your first order of Sprout just got a lot more
-    affordable." Plain and sayable. The 💚 and ✅ are the brand's own.
+    affordable." Plain and sayable. "✅ $20 off your first order ✅ +$5
+    off for every extra person": a list, each item whole after its mark.
+    The 💚 and all three ✅ marks are the brand's own, kept in place.
     "Feeling off in your gut lately?" Works as a question.
 
     FLAGS FOR THE CLAIMS CHECK (not changed)
@@ -125,6 +125,8 @@ example:
     - "less than $1.10/day": the product page says $1.07/day, and that
       is the first box only. It renews at $49.99 ($1.78/day).
     - "$29.99" needs the text sign-up discount; this text doesn't say so.
+
+    STILL FAILING: none
 
 tweaks:
   - what: Spoken or read

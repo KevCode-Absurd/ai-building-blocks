@@ -1,7 +1,7 @@
 slug: hidden-offer-finder
 renamed_from: find-offers-hiding-in-what-you-already-sell
 name: "Hidden offer finder"
-summary: "Paste your prices and deals. Get clashes flagged, new offers to try and a score out of 100."
+summary: "Paste your prices and deals. Get clashes flagged and new offers to try first."
 category: general
 boards: [ecommerce]
 type: prompt
@@ -13,7 +13,7 @@ inputs:
   - {type: persona, required: false}
 outputs:
   - {type: offer}
-uses: [buyer-doubt-offer-builder]
+uses: [offer-builder-that-answers-buyer-doubts]
 origin: own
 source_ids: [CES-079]
 old_name: offer-set

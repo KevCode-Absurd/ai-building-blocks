@@ -1,30 +1,30 @@
 ---
 name: spoken-video-ad-opening-writer
-description: Use when you need short talking openings (6 or 8 seconds) to put in front of an ad you already run. A made-up adult presenter says one line to a phone with the real product in frame from the first frame. Writes three openings that each make a different move, sizes every line to the clip, then runs the video process for them (presenter card, sheets, a storyboard frame per opening, clip prompts), reusing the ad's approved presenter where there is one. Scores the finished set out of 100 against its own checks.
+description: Use when you need short talking openings (6 or 8 seconds) to put in front of an ad you already run. A made-up adult presenter says one line to a phone with the real product in frame from the first frame. Writes three openings that each make a different move, sizes every line to the clip, then runs the video process for them (presenter card, sheets, a storyboard frame per opening, clip prompts), reusing the ad's approved presenter where there is one. Ends with any of its own checks the set still misses.
 ---
 
 # Spoken video ad opening writer
 
-You write three spoken openings for an existing ad, then take them through the video process with an AI-made presenter. An opening has one job: keep the right person watching long enough for the ad's first line. Three openings that differ a lot teach you more than ten that differ a little. Stop for approval after stages 1, 3 and 4.
+You write three spoken openings for an existing ad, then take them through the video process with an AI-made presenter. An opening has one job: keep the right person watching long enough for the ad's first line. Three openings that differ a lot teach you more than ten that differ a little. Stop for approval after stages 1, 3 and 4. If the person asked for every stage in one go, or gave approvals ahead, run them all and mark each checkpoint "(approve)".
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
-Check for these first. The result is much better with them.
+This skill runs on its own. What's below makes the result better, but none of it is required.
 
-**Needed:**
-- **Brand brain** (its products and buyers part), made by the [Website brand file builder](https://useaiblocks.com/skills/website-brand-file-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
+**Works best with** (or they can paste their own instead):
+- **Brand brain** (its products and buyers part), made by the [Website brand brain builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
 - **Your video ads** (yours): the video ads, attached or linked.
 
-**The steps before this one** (do each once, then reuse what it makes):
-1. **Brand brain** with the [Website brand file builder](https://useaiblocks.com/skills/website-brand-file-builder). Bring your website, customer words (optional), your results (optional).
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **Brand brain** with the [Website brand brain builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
 2. This one.
 
 **From the brand brain, read:** `00-start-here.md`, `voice-and-look.md`, `offers.md`, `proof-and-claims.md`. Take how the product looks, the colours, fonts and photo style, and the exact words allowed on the picture. Leave out review quotes and research notes. Source notes and rejected ideas never go into the result.
 
-How to check:
-- **In Claude Code,** look in the project first. A brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name, or ask for their path.
-- **In a chat,** ask once: "Do you have your brand brain, your video ads? Attach or paste them here." If they're already in this project's files, use those.
-- **If one is missing,** say so before you start, in one line: the result will be much better with it, with the link to make it once and reuse it. Next time they can attach it (or, in Claude Code, give its path). Then carry on with what you have and mark each gap with `MISSING:`.
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In Claude Code, look in the project too: a brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name.
+2. **If something is missing, advise, don't block.** In one short message, say this skill works on its own and will be better with your brand brain, your video ads. They can attach them, paste them, or say where they are (in Claude Code, a file path). Name the recommended steps above as a suggestion, with their links. Then ask: "Add them, or shall I go ahead with what you've given me?" If their message already says to go ahead, skip this and start.
+3. **When they say go ahead,** do the whole job with what you have. Mark each gap with `MISSING:` and never invent a fact to fill it. List the gaps at the end so they can fill them in later.
 
 **Tools that do this best:**
 - **Veo:** Makes speech and lip movement along with the picture, starting from your approved frame.
@@ -87,7 +87,7 @@ One opening frame and one shot card per opening:
 2. **Make one clip and check it before the rest:** every word said, lips in sync, the product matches its photo, the last second is still, and the last frame sits next to the ad's first frame without a jump. Make two or three takes and pick one.
 3. **Voice:** keep the ad's voice. If the tool's voice drifts from it, record the line and lip-sync.
 4. **Edit:** each opening joined to the same ad with a hard cut, captions in the ad's style, the AI label on. Deliver the raw clip, its last frame, the line and the move, and test each as a separate ad.
-5. **Score it.** Run the checks in "Check before you hand it back" and fix any that fail. Then score the openings: checks passed divided by checks, times 100, rounded (4 of 5 passed is 80). Show the score, the sum, and one line for each check still missed.
+5. **Run the checks.** Run the checks in "Check before you hand it back" and fix any that fail. Show `CHECKS MISSED: <one line each>`, or "none".
 
 ## What you hand back
 1. **Line-up** (move, line, words, dials, product, touch, paid off by), plus moves not used and why.
@@ -96,13 +96,13 @@ One opening frame and one shot card per opening:
 4. **Storyboard:** a frame prompt and a shot card per opening.
 5. **Clip prompts**, one per opening.
 6. **Edit list:** the joins, captions, AI label and what to deliver.
-7. **Score** out of 100, with the sum and one line for each check still missed.
+7. **CHECKS MISSED:** one line for each check still missed, or "none".
 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
-When you've handed it back, ask in one short question what they want to do next. Offer these, and say they can type their own:
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - **Check it before it goes live** with the [Meta ads compliance checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the ad copy.
-- **Make video ads** with the [Brand-font video caption maker](https://useaiblocks.com/skills/brand-font-video-caption-maker). It takes the video ads.
+- **Make video ads** with the [On-screen text planner for video ads](https://useaiblocks.com/skills/on-screen-text-planner-for-video-ads). It takes the video ads.
 - **Make image ads** with the [Article headline image ad maker](https://useaiblocks.com/skills/article-headline-image-ad-maker). It takes the ad copy.
 - **Write the ad copy** with the [Ad first line writer and scorer](https://useaiblocks.com/skills/ad-first-line-writer-and-scorer). It takes the ad copy.
 - **Write the landing page** with the [Ad-matched landing page writer](https://useaiblocks.com/skills/ad-matched-landing-page-writer). It takes the ad copy.
@@ -110,14 +110,14 @@ If they pick one and that skill is added here, carry straight on with what you j
 <!-- /next -->
 
 ## Check before you hand it back
-- Each approval came before the next stage.
+- Each approval came before the next stage, or was marked "(approve)" when every stage was asked for in one go.
 - Three different moves, each paid off by a named line in the ad, each within its word budget.
 - No personal result or story from the presenter; every fact is the brand's, word for word.
 - One opening matches the ad's first frame on both dials.
 - The product is in frame from the first frame.
 
 ## If something is missing
-Write `MISSING: <what>`. No product photo: no opening. No visible result: no promise preview. No sourced quote: no real-line proof. No real date: no timing.
+Write `MISSING: <what>`, ask once for what you can't work without, then carry on. No product photo: write the three openings, cards and storyboard with the product slot marked `MISSING: product photo`, and make no product sheet or clip until a real photo arrives. No visible result: no promise preview. No sourced quote: no real-line proof. No real date: no timing.
 
 ## Avoid
 - An AI look-alike of a real creator or any real person.

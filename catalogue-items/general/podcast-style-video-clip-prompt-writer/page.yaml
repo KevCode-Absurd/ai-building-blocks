@@ -1,10 +1,10 @@
 new_slug: podcast-style-video-clip-prompt-writer
 name: "Podcast-style video clip prompt writer"
-summary: "Paste your podcast-style script and attach a product photo. Get clip prompts and a score out of 100."
+summary: "Paste your podcast-style script and attach a product photo. Get cast cards, a storyboard and clip prompts."
 job: make-video-ads
 
 headline: "Podcast-style video clip prompt writer"
-subhead: Give it a Host-and-Guest script and a product photo. It casts two people nobody could mix up, builds sheets and a storyboard of timed turns, and writes the clip prompts, stopping three times for your OK. You get every prompt, finishing notes and a score out of 100.
+subhead: Give it a Host-and-Guest script and a product photo. It casts two people nobody could mix up, builds sheets and a storyboard of timed turns, and writes the clip prompts, stopping three times for your OK. You get every prompt and finishing notes with the disclosure line.
 
 explain: |
   AI video tools find two-person talk hard. The wrong mouth moves, voices swap between clips, the listener nods on a loop, the camera sways, and any sign or book on the set comes back misspelled. A made-up chat that looks real also needs to say it's a dramatization, because US ad rules ask for that when people who seem unscripted are actors.
@@ -26,7 +26,6 @@ you_get:
   - Reference image prompts, a cast picture and sheet prompts for both people, the product and the room
   - A storyboard with the opening frame and timed turns per clip
   - Clip prompts, a voice plan, finishing notes with the disclosure line, and a fix table
-  - A score out of 100 for the prompts, with one line for each check they missed
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
@@ -53,15 +52,15 @@ how_it_works:
 
 output_shape: |
   STAGE 0  SCRIPT CHECK  pass, or <lines to send back>
-  STAGE 1  CAST (approval 1)
+  STAGE 1  CAST (approval 1, or approved in advance)
   HOST (left): <age, build, skin, hair, glasses or beard, top, one mark>
   GUEST (right): <the same seven, each different>
   VOICES  Host: <..>  Guest: <..>
   STAGE 2  REFERENCE IMAGES  <1-4 each>  Picks: <..>  CAST PICTURE <prompt>
-  STAGE 3  SHEETS (approval 2)
+  STAGE 3  SHEETS (approval 2, or approved in advance)
   <views and expressions for each>  PRODUCT <views, label, height>
   ROOM <one line>  CAMERA <one line>  PRODUCT LINE <placement>
-  STAGE 4  STORYBOARD (approval 3)
+  STAGE 4  STORYBOARD (approval 3, or approved in advance)
   OPENING FRAME <prompt>
   CLIP <n> (<seconds>)  [00:00-00:03] <speaker>: "<line>" / <listener reaction>
   End frame: <..>
@@ -69,8 +68,7 @@ output_shape: |
   CLIP <n>  <attachments> <lock lines> <timed beats> <end frame> <sound>
   FINISHING NOTES  <cuts, captions, punch-in, disclosure, offer text, voice route>
   MISSING: <..>
-  SCORE  <n>/100 (<checks passed> of 6 checks)
-  Missed: <one line per check still missed>
+  CHECKS MISSED: <one line each, or none>
 
 example:
   business: sprout
@@ -97,11 +95,12 @@ example:
     Product: Sprout pouch, front photo attached; as tall as a mug and
     a half. Displayed, not handled.
     Tool: 10-second clips with speech, 3 reference images.
+    Approvals: all three given in advance. Run every stage in one go.
   output: |
     STAGE 0  SCRIPT CHECK  Pass. Every fact is on the facts list, the
     review is credited, nobody claims a result, the offer isn't spoken.
 
-    STAGE 1  CAST (approval 1)
+    STAGE 1  CAST (approved in advance)
     HOST (left): looks about 45, broad build, medium-brown skin, short
       grey-black hair, a trimmed beard, a navy crew-neck sweater, a
       silver watch.
@@ -110,7 +109,7 @@ example:
       cardigan, small hoop earrings.
     VOICES  Host: a man in his forties, low, slow, doubtful and warm,
     plain US accent. Guest: a woman about thirty, higher, quick,
-    bright and patient, plain US accent.  [approved]
+    bright and patient, plain US accent.  [approved in advance]
 
     STAGE 2  REFERENCE IMAGES
     Host 1-4 and Guest 1-4: [card], waist up, plain light wall, soft
@@ -118,7 +117,7 @@ example:
     Guest 1. Cast picture: the two picks side by side. At thumbnail
     size: plainly two people.
 
-    STAGE 3  SHEETS (approval 2)
+    STAGE 3  SHEETS (approved in advance)
     Host: front, three-quarter right, side, seated; doubtful, arms
     folded, one brow up. Guest: front, three-quarter left, side,
     seated; brows lifting, half smile.
@@ -132,9 +131,9 @@ example:
     each, below the chin.
     PRODUCT LINE  The pouch stands on the table between them, front to
     camera, nearer the lens than the microphones. Nobody touches it.
-    [approved]
+    [approved in advance]
 
-    STAGE 4  STORYBOARD (approval 3)
+    STAGE 4  STORYBOARD (approved in advance)
     OPENING FRAME  [ROOM] [CAMERA] [PRODUCT LINE]. The Host mid-word,
     one hand flat on the table; the Guest's brows already lifting.
     CLIP 1 (10 s)
@@ -147,7 +146,7 @@ example:
     CLIP 2 (10 s): the three numbers; the Host's eyes drop to the
     pouch; one brow up on "At full amounts?". End: arms unfolding.
     CLIP 3 (7 s): the Guest quotes the reviews; the Host glances at
-    the pouch. End: both still, pouch low in the middle.  [approved]
+    the pouch. End: both still, pouch low in the middle.  [approved in advance]
 
     STAGE 5  CLIPS
     CLIP 1  Attach: cast picture = the two people; pouch photo = the
@@ -164,6 +163,7 @@ example:
     every 4 weeks. 30-day money-back on your first order." Voices in
     the tool; if one drifts by clip 2, record both parts and lip-sync.
     MISSING: whether the brand uses music. None is planned.
+    CHECKS MISSED: none
 
 tweaks:
   - what: Clip length
@@ -176,7 +176,7 @@ tweaks:
     how: Attach the cast cards, picks and sheets from an earlier ad. The run reuses them and starts at the storyboard.
 
 judge:
-  - The run stopped for your yes after the cast cards, the sheets and the storyboard.
+  - The run stopped for your yes after the cast cards, the sheets and the storyboard, or marked each stop "approved in advance" if you gave the approvals up front.
   - Each line comes from the right mouth, and the listener's mouth stays closed.
   - The two people look clearly different and keep their sides in every clip.
   - The two voices stay apart and the same throughout.

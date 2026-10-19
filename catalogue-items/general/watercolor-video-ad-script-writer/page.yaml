@@ -1,10 +1,10 @@
 new_slug: watercolor-video-ad-script-writer
 name: "Watercolor video ad script writer"
-summary: "Paste your idea and product facts. Get a watercolor video script, cast note and score out of 100."
+summary: "Paste your idea and product facts. Get a timed watercolor video script and a cast note."
 job: make-video-ads
 
 headline: "Watercolor video ad script writer"
-subhead: Give it your selling idea, product facts and approved claims. It picks the real watercolor technique that shows what a camera can't, and tests every painted change as a claim. You get a 15 to 40 second script, a cast note and a score out of 100.
+subhead: Give it your selling idea, product facts and approved claims. It picks the real watercolor technique that shows what a camera can't, and tests every painted change as a claim. You get a 15 to 40 second script and a cast note.
 
 explain: |
   Some selling ideas are hard to film. Sixty ingredients in one pack. A scent filling a room. A tense evening going soft. Paint can show them, and a calm watercolor stands out in a loud feed. The risk is a pretty painting where nothing sells, or a spreading color that quietly promises more than you're allowed to say.
@@ -28,7 +28,7 @@ you_get:
   - A line-by-line script with picture notes, word counts and a clip split
   - A list of every painted change with its source, and the ones it rejected
   - A cast note saying who should carry the ad, and why
-  - A score out of 100 for how many of its own checks the script passes, with any it missed
+  - Any of its own checks the script still misses, one line each
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
@@ -75,8 +75,7 @@ output_shape: |
   CAST NOTE  <figure, hands only, or product alone>: <why>
   MISSING: <facts it needed>
 
-  SCORE  <n>/100 (<passed> of <total> checks passed)
-  Missed: <one line per check missed, or none>
+  CHECKS MISSED: <one line per check missed, or none>
 
 example:
   business: sprout

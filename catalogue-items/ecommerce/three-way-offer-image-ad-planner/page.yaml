@@ -1,10 +1,10 @@
 new_slug: three-way-offer-image-ad-planner
 name: "Three-way offer image ad planner"
-summary: "Paste your offer. Get three offer image ads, one offer block and a score out of 100."
+summary: "Paste your offer. Get three offer image ads in two sizes and one offer block."
 job: make-image-ads
 
 headline: "Three-way offer image ad planner"
-subhead: Give it your offer's exact terms, product photos and reviews. It plans one image ad for each thing buyers check (the real price, the safety net, the reason to start now) in feed and story sizes. You get the ad plans, one offer block and a score out of 100.
+subhead: Give it your offer's exact terms, product photos and reviews. It plans one image ad for each thing buyers check (the real price, the safety net, the reason to start now) in feed and story sizes. You get the ad plans and one offer block that reads the same on every ad.
 
 explain: |
   Before they buy, people who know your product check an offer in three places. What does it really cost, now and later? What happens if I don't like it? Why start today? Most sellers make one offer ad and crop it into every size, so every shopper gets the same answer to one of those questions, and you never learn which one was holding them back.
@@ -27,7 +27,7 @@ you_get:
   - Six ads per product (3 ways x 2 sizes), each with layout, colours, photo and every line with its source
   - A contact-sheet test, so you know the three ads look different
   - What to change when the offer changes
-  - A score out of 100 from the skill's five checks, with one line per check missed
+  - Any of the skill's five checks the set still misses, one line each
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
@@ -70,7 +70,7 @@ output_shape: |
 
   CONTACT SHEET   <can each be told apart at stamp size? pass or fail>
   WHEN THE OFFER CHANGES   <edit the offer block only>
-  SCORE   <n>/100 (<passed> of 5 checks) | missed: <one line each>
+  CHECKS MISSED   <one line each, or none>
 
 example:
   business: sprout

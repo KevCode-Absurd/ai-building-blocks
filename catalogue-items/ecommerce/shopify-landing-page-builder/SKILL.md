@@ -1,6 +1,6 @@
 ---
 name: shopify-landing-page-builder
-description: Use when a landing page (article-style, reasons-to-buy or product page) is written and you want it inside a Shopify store as an editable page. Produces one section file, one page template with the copy loaded in, an image list, and a score out of 100 for how many of its checks the files pass.
+description: Use when a landing page (article-style, reasons-to-buy or product page) is written and you want it inside a Shopify store as an editable page. Produces one section file, one page template with the copy loaded in, an image list, and any of its checks the files still miss.
 ---
 
 # Shopify landing page builder
@@ -9,26 +9,26 @@ You produce a section file, a JSON page template that loads the finished copy, a
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
-Check for these first. The result is much better with them.
+This skill runs on its own. What's below makes the result better, but none of it is required.
 
-**Needed:**
+**Works best with** (or they can paste their own instead):
 - **Your page** (yours): the landing page's link, or its text and a screenshot.
 
 **Makes it better (optional):**
-- **Brand brain** (its products part), made by the [Website brand file builder](https://useaiblocks.com/skills/website-brand-file-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
+- **Brand brain** (its products part), made by the [Website brand brain builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
 - **A design direction**, made by the [Landing page design planner](https://useaiblocks.com/skills/landing-page-design-planner): the page's type, colours and layout rules.
 
-**The steps before this one** (do each once, then reuse what it makes):
-1. **Brand brain** with the [Website brand file builder](https://useaiblocks.com/skills/website-brand-file-builder). Bring your website, customer words (optional), your results (optional).
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **Brand brain** with the [Website brand brain builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
 2. **A design direction** with the [Landing page design planner](https://useaiblocks.com/skills/landing-page-design-planner). Bring your page, customer words (optional). It uses your brand brain.
 3. This one.
 
 **From the brand brain, read:** `00-start-here.md`, `offers.md`, `customers.md`, `proof-and-claims.md`, `voice-and-look.md`. Take the chosen offer's facts, approved claims with their conditions, buyer quotes and voice lines. Source notes and rejected ideas never go into the result.
 
-How to check:
-- **In Claude Code,** look in the project first. A brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name, or ask for their path.
-- **In a chat,** ask once: "Do you have your page, your brand brain, a design direction? Attach or paste them here." If they're already in this project's files, use those.
-- **If one is missing,** say so before you start, in one line: the result will be much better with it, with the link to make it once and reuse it. Next time they can attach it (or, in Claude Code, give its path). Then carry on with what you have and mark each gap with `MISSING:`.
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In Claude Code, look in the project too: a brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name.
+2. **If something is missing, advise, don't block.** In one short message, say this skill works on its own and will be better with your page, your brand brain, a design direction. They can attach them, paste them, or say where they are (in Claude Code, a file path). Name the recommended steps above as a suggestion, with their links. Then ask: "Add them, or shall I go ahead with what you've given me?" If their message already says to go ahead, skip this and start.
+3. **When they say go ahead,** do the whole job with what you have. Mark each gap with `MISSING:` and never invent a fact to fill it. List the gaps at the end so they can fill them in later.
 
 **Tools that do this best:**
 - **Claude Code:** Works on your theme files directly and can run Shopify CLI to preview and check them.
@@ -58,18 +58,18 @@ How to check:
 9. **Styling.** Scope all CSS to the section. Colours chosen in settings go in a `{% style %}` tag, since `{% stylesheet %}` can't read Liquid. Build at phone width first.
 10. **Limits.** Shopify allows 25 sections in one JSON template and 50 blocks in one section, so a long page is one section with blocks, or a few sections. Theme code can't change checkout.
 11. **Check before handing over.** Run the files through Theme Check (in Shopify CLI or Shopify's AI Toolkit) if you can, and fix every error. Otherwise say they weren't checked.
-12. **Score it.** Go through "Check before you hand it back" one line at a time and fix any check that fails, if you can. Score = checks passed / all checks x 100, rounded. Show the sum, and one line for each check still missed and why. The score measures the files against their own checks; it doesn't replace a test order in the store.
+12. **Run the checks.** Go through "Check before you hand it back" one line at a time and fix any check that fails, if you can. Show `CHECKS MISSED: <one line each, and why>`, or "none". The checks don't replace a test order in the store.
 
 ## What you hand back
 1. File contents in code blocks, each headed by its path: the section, the template JSON, any snippet, any locale entries.
 2. **Image list**: slot, what it must show, suggested size.
 3. **Install steps** (6 lines): upload the files, create a page, choose the template, pick the product, upload images, preview on a phone.
 4. **MISSING list**: every fact slot left empty because the store doesn't hold it.
-5. **Score**: checks passed out of all checks, as a sum and a score out of 100, with one line per check missed.
+5. **CHECKS MISSED**: one line per check missed, or "none".
 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
-When you've handed it back, ask in one short question what they want to do next. Offer these, and say they can type their own:
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - **Check it before it goes live** with the [Meta ads compliance checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the page.
 - **Write the landing page** with the [Landing page design planner](https://useaiblocks.com/skills/landing-page-design-planner). It takes the page.
 - **Check the landing page** with the [Landing page 30-point checker](https://useaiblocks.com/prompts/landing-page-30-point-checker). It takes the page.

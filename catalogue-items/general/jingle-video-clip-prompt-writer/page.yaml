@@ -1,10 +1,10 @@
 new_slug: jingle-video-clip-prompt-writer
 name: "Jingle video clip prompt writer"
-summary: "Paste your song script and attach product photos. Get music, clip prompts and a score out of 100."
+summary: "Paste your song script and attach product photos. Get the music prompt and clip prompts cut on the beat."
 job: make-video-ads
 
 headline: "Jingle video clip prompt writer"
-subhead: Give it a bar-by-bar song script and product photos. It writes the lead's card and sheets, then the music prompt, then a storyboard and clip prompts cut on the beat, stopping three times for your OK. You get every prompt, an edit list and a score out of 100.
+subhead: Give it a bar-by-bar song script and product photos. It writes the lead's card and sheets, then the music prompt, then a storyboard and clip prompts cut on the beat, stopping three times for your OK. You get every prompt, lip-sync notes and an edit list.
 
 explain: |
   A song ad falls apart in the making. The music tool adds a long intro, the video cuts land between beats, the lead's face changes from shot to shot, and mouths move where nobody should be singing.
@@ -26,7 +26,6 @@ you_get:
   - Character, product and set sheets, with the lead and look lines locked
   - A music prompt, a take rule and the bar grid, then a storyboard cut on the bars
   - Clip prompts timed to the beat, lip-sync notes and an edit list
-  - A score out of 100 for the prompts, with one line for each check they missed
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
@@ -68,8 +67,7 @@ output_shape: |
   STAGE 5  CLIP <n>  [00:00-00:0n] <motion on the beat; camera> HOLD <...>
            LIP-SYNC <shots, method>  EDIT <cuts on bar lines, offer over tag>
            MISSING: <facts it needed>
-  SCORE  <n>/100 (<checks passed> of 6 checks)
-  Missed: <one line per check still missed>
+  CHECKS MISSED  <one line per check still missed, or none>
 
 example:
   business: sprout
@@ -93,6 +91,9 @@ example:
     resealable top. Colours: forest green, warm cream, sunflower.
     Tools: one-box music tool; video clips up to 8 s with timed
     prompts and an end frame; no mouth sync.
+    Brand file: attached (brand.md).
+    Approvals: take the avatar card and sheets as approved, and write
+    every stage now. I'll make the track and tell you if it drifts.
   output: |
     STAGE 0  SCRIPT IN  120 BPM, 15 bars, hook 3 times, tag at bar 15.
     Singer unseen. Sung claim: bars 9-10; brand line: bars 11-12.
@@ -151,6 +152,7 @@ example:
     15: "$29.99 first order with SMS sign-up. Renews at $49.99 every
     4 weeks." Check music rights for the tool's plan.
     MISSING: whether Sprout uses music and animation in ads.
+    CHECKS MISSED  none
     (cut for length: the full run also had frames, cards and clips
     for bars 3 to 15)
 
@@ -165,8 +167,8 @@ tweaks:
     how: Give the longest clip your tool makes well. Two shots of one or two bars each usually fit one clip.
 
 judge:
-  - It stopped for your approval after the avatar card, the sheets, and the track with its storyboard.
-  - The track was made before the storyboard, and every cut sits on a bar line of that take.
+  - It stopped for your approval after the avatar card, the sheets, and the track with its storyboard, unless you approved them ahead.
+  - The music prompt comes before the storyboard, and every cut sits on a bar line of the grid.
   - The music prompt starts singing at 0 seconds and ends on the sung tag.
   - Your animated lead and your pack match their sheets in every shot.
   - Mouths stay closed in every shot not marked as singing, and the pack is on screen within 5 seconds.

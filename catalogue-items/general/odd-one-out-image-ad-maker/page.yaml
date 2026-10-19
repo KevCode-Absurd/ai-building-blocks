@@ -1,10 +1,10 @@
 new_slug: odd-one-out-image-ad-maker
 name: "Odd-one-out image ad maker"
-summary: "Paste your story ad. Get a photo prompt of one odd thing and a score out of 100."
+summary: "Paste your story ad. Get a photo prompt of one odd thing and a caption."
 job: make-image-ads
 
 headline: "Odd-one-out image ad maker"
-subhead: Give it your story ad. It finds one ordinary thing in the first lines that doesn't fit, such as a thing in the wrong place, and checks the story explains it. You get a photo prompt of just that, a line under the image and a score out of 100.
+subhead: Give it your story ad. It finds one ordinary thing in the first lines that doesn't fit, such as a thing in the wrong place, and checks the story explains it. You get a photo prompt of just that and a line under the image.
 
 explain: |
   In a crowded market every ad shows the same pain: the same tired face, the same messy kitchen. Readers learn to skip it. This skill takes another route. It finds one small thing in your story that doesn't fit, like a shaker bottle full of pens, and makes the whole picture about it. People get curious when they notice a small gap they feel they could close, and the only way to close this one is to read.
@@ -25,7 +25,7 @@ you_get:
   - Where it sits, how close to shoot it and what surrounds it
   - A short line to run under the image that doesn't give the answer away
   - A 60 to 120 word image prompt, ready to paste
-  - A score out of 100 from the skill's five checks, with one line per check missed
+  - Any of the skill's five checks it still missed, one line each, or none
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
@@ -57,7 +57,7 @@ output_shape: |
   LINE UNDER IMAGE    <words> (<caption line>, <characters>)
   FLAGS               <lifted or written words; anything inferred>
   IMAGE PROMPT        <60 to 120 words, ready to paste>
-  SCORE               <n>/100 (<passed> of 5 checks) | missed: <one line each>
+  CHECKS MISSED       <one line each, or none>
 
 example:
   business: sprout

@@ -1,10 +1,10 @@
 new_slug: visual-twist-image-ad-maker
 name: "Visual twist image ad maker"
-summary: "Paste a buyer's words. Get a one-twist image ad, its prompt and a score out of 100."
+summary: "Paste a buyer's words. Get a one-twist image ad, its words, layout and image prompt."
 job: make-image-ads
 
 headline: "Visual twist image ad maker"
-subhead: Give it the problem in a buyer's words, your product facts, a product photo and your colours. It anchors the idea in a real moment and adds one twist that is both unexpected and relevant. You get the words, the layout, an image prompt and a score out of 100.
+subhead: Give it the problem in a buyer's words, your product facts, a product photo and your colours. It anchors the idea in a real moment and adds one twist that is both unexpected and relevant. You get the words, the layout and an image prompt ready to paste.
 
 explain: |
   Ask an image tool for an ad and you get a centred product, a floating headline and a pretty picture of the benefit. People scroll past it, because they've seen it a thousand times and nothing in it is about them.
@@ -27,7 +27,6 @@ you_get:
   - A headline with its job, a support line and the line under the image
   - Layout notes and how to draw the product from your photo
   - An image prompt ready to paste, plus a MISSING list
-  - A score out of 100 from the skill's five checks, with one line per check missed
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
@@ -74,7 +73,8 @@ output_shape: |
 
   MISSING:  <quote, photo or fact still needed>
   Not used: <options dropped, and why>
-  SCORE     <n>/100 (<passed> of 5 checks) | missed: <one line each>
+  CHECKS MISSED: <one line each, or none>
+  Still to do: <a check that needs a photo you couldn't see, or none>
 
 example:
   business: sprout
@@ -147,6 +147,8 @@ example:
     MISSING:  none.
     Not used: merged and swapped in, since side by side already lands.
               A news headline, since no new fact fits this thought.
+    CHECKS MISSED: none
+    Still to do: none
 
 tweaks:
   - what: The one thought

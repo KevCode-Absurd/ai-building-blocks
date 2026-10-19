@@ -1,10 +1,10 @@
 new_slug: leftover-mess-image-ad-maker
 name: "Leftover mess image ad maker"
-summary: "Paste your story ad. Get a close-up mess photo prompt, a caption and a score out of 100."
+summary: "Paste your story ad. Get a close-up mess photo prompt and a caption."
 job: make-image-ads
 
 headline: "Leftover mess image ad maker"
-subhead: Give it your story ad. It pins down what the problem leaves behind, its honest amount and where it was found, then frames it close like proof sent to a friend. You get the photo prompt, a line under the image and a score out of 100.
+subhead: Give it your story ad. It pins down what the problem leaves behind, its honest amount and where it was found, then frames it close like proof sent to a friend. You get the photo prompt and a line under the image.
 
 explain: |
   Many problems leave something you can see: shed hair, lint, limescale, spilled powder, a worn-out sole. Shot close, the way a friend sends proof, it takes a second look to work out what it is. People with the problem get there on that second look, and the story's first line confirms it. That small gap, opened and closed fast, is what makes people stop.
@@ -24,7 +24,7 @@ you_get:
   - How close to shoot it, from what angle, and with which light
   - A short line to run under the image
   - A 60 to 120 word image prompt, ready to paste
-  - A score out of 100 from the skill's six checks, with one line per check missed
+  - Any of the skill's six checks it still missed, one line each, or none
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
@@ -54,7 +54,7 @@ output_shape: |
   LINE UNDER IMAGE    <words> (<caption line>, <characters>)
   FLAGS               <the amount and its source, anything inferred>
   IMAGE PROMPT        <60 to 120 words, ready to paste>
-  SCORE               <n>/100 (<passed> of 6 checks) | missed: <one line each>
+  CHECKS MISSED       <one line each, or none>
 
 example:
   business: sprout

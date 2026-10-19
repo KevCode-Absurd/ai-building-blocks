@@ -17,9 +17,9 @@ inputs:
 outputs:
   - {type: design_direction}
   - {type: audit_report}
-uses: [website-brand-file-builder, ad-matched-landing-page-writer, landing-page-design-planner, landing-page-30-point-checker]
+uses: [website-brand-brain-builder, ad-matched-landing-page-writer, landing-page-design-planner, landing-page-30-point-checker]
 steps:
-  - {uses: website-brand-file-builder, note: "Read the site, tag every fact by where it came from, and write the eight brand files, with the offer, guarantee and claims word for word. For the one check-in: if the person isn't there to answer, list each fact to confirm as a MISSING line and carry on with tagged facts only."}
+  - {uses: website-brand-brain-builder, note: "Read the site, tag every fact by where it came from, and write the eight brand files, with the offer, guarantee and claims word for word. For the one check-in: if the person isn't there to answer, list each fact to confirm as a MISSING line and carry on with tagged facts only."}
   - {uses: ad-matched-landing-page-writer, note: "Use the brand file from step 1, the offer and the ad. Pin one buyer, one reason and one offer, then write the page: a first screen that carries the ad's main words, says what it is and shows the ad's offer first; the buyers' doubts, most common first, each answered in its own section; the full cost before the last button; questions and a close. List every empty field as MISSING."}
   - {uses: landing-page-design-planner, note: "Use the page copy from step 2 and the brand's own colours, fonts and photos. Set one design system, plan three directions that differ in first-screen layout and what the pictures do, and map every section for phone and desktop."}
   - {uses: landing-page-30-point-checker, note: "Review the step 2 page and the step 3 plan with the 30 yes-or-no checks at the five stops a buyer makes, quoting the page for every no and tagging it deal-breaker or drag, then list the first five fixes. Then close the run with a HAND-BACK SUMMARY: each step's file, any step not run and why, and every MISSING: line from all steps in one list."}

@@ -1,10 +1,10 @@
 new_slug: selling-points-writer
 name: "Selling points writer"
-summary: "Paste your features and buyer. Get selling points, unbacked claims and a score out of 100."
+summary: "Paste your features and buyer. Get selling points in buying order, and the claims that need proof."
 job: write-ad-copy
 
 headline: "Selling points writer"
-subhead: Paste your features with their sources, a note on your buyer and where the points will go. It climbs each feature only as far as your facts support. You get selling points that answer buyer questions, a needs-evidence list and a score out of 100.
+subhead: Paste your features with their sources, a note on your buyer and where the points will go. It climbs each feature only as far as your facts support. You get selling points that answer buyer questions, a needs-evidence list and the questions your facts can't answer yet.
 
 explain: |
   Most feature lists read like a spec sheet, such as "21 vitamins and minerals. 6 g fiber. Vegan." or "5,000 mAh. USB-C. 180 g." The buyer has to work out what each one means for them, and most won't. The opposite mistake is worse: turning "contains fiber" into "fixes your digestion", or "waterproof" into "lasts for years", with no proof.
@@ -25,7 +25,7 @@ you_get:
   - A numbered list of points, each tagged with the buyer question it answers, how far it climbs and its source
   - A "needs evidence" list of claims your facts don't support yet
   - Any buyer question your facts can't answer yet
-  - A score out of 100 for how many of its own checks the list passes, with each miss named
+  - Any of its own checks the list couldn't pass, named one per line
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
@@ -47,8 +47,8 @@ how_it_works:
     text: Writes each point as one plain sentence, payoff first, then checks the buyer wouldn't still ask "so what?".
   - title: Checks rivals and skims
     text: Cuts or sharpens any point a rival also claims, then skims the list fast and cuts any point the eye slides past.
-  - title: Scores the list
-    text: Goes through its own checks, such as every claim tracing to a fact, fixes what it can, and scores checks passed out of all checks, times 100.
+  - title: Checks the list
+    text: Goes through its own checks, such as every claim tracing to a fact and no bare features, fixes what it can, and names any it still misses.
 
 output_shape: |
   POINTS
@@ -63,9 +63,8 @@ output_shape: |
   UNANSWERED
   <buyer questions your facts can't answer yet>
 
-  SCORE
-  <passed> of <all> checks = <score> out of 100
-  Missed: <one line per check still missed, or none>
+  CHECKS MISSED
+  <one line per check still missed, or none>
 
 example:
   business: sprout
@@ -92,8 +91,9 @@ example:
     Competitors all say: "science-first", long ingredient lists
   output: |
     POINTS
-    1. One pack gives you 60+ ingredients, 21 vitamins and minerals, and
-       6 g of prebiotic fiber, in a small handful of gummies.
+    1. Your daily greens fit in one small handful of gummies: 60+
+       ingredients, 21 vitamins and minerals, and 6 g of prebiotic
+       fiber in each pack.
        (will it work? "can a gummy hold enough?" | fact | product page)
 
     2. It's clinically tested for nutrient absorption. In a 12-week
@@ -123,6 +123,9 @@ example:
     Is it worth it? "They are expensive" needs a price-per-day fact,
     which isn't in this list. Add it and it becomes point 4, with the
     guarantee last.
+
+    CHECKS MISSED
+    None.
 
 tweaks:
   - what: Where the points go

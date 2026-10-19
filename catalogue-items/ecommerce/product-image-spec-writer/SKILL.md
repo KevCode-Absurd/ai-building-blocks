@@ -1,6 +1,6 @@
 ---
 name: product-image-spec-writer
-description: Use before making any product photo, ad or product page image with AI. It checks your real photos of one exact variant, writes a one-page truth sheet in seven parts (identity, body, marks, build, use, never show, evidence) with a source on every line, picks the lock lines every prompt must repeat, and lists the shots that can't be made until a missing photo arrives. Ends with a score out of 100 against its checks.
+description: Use before making any product photo, ad or product page image with AI. It checks your real photos of one exact variant, writes a one-page truth sheet in seven parts (identity, body, marks, build, use, never show, evidence) with a source on every line, picks the lock lines every prompt must repeat, and lists the shots that can't be made until a missing photo arrives. Ends with any check it still missed.
 ---
 
 # Product image spec writer
@@ -9,24 +9,24 @@ Image models redraw products. Given a gap, they fill it with the typical product
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
-Check for these first. The result is much better with them.
+This skill runs on its own. What's below makes the result better, but none of it is required.
 
-**Needed:**
+**Works best with** (or they can paste their own instead):
 - **Product photos** (yours): clear photos of the real product, from more than one angle. Attach them.
 
 **Makes it better (optional):**
-- **Brand brain** (its products part), made by the [Website brand file builder](https://useaiblocks.com/skills/website-brand-file-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
+- **Brand brain** (its products part), made by the [Website brand brain builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
 
-**The steps before this one** (do each once, then reuse what it makes):
-1. **Brand brain** with the [Website brand file builder](https://useaiblocks.com/skills/website-brand-file-builder). Bring your website, customer words (optional), your results (optional).
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **Brand brain** with the [Website brand brain builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
 2. This one.
 
 **From the brand brain, read:** `00-start-here.md`, `voice-and-look.md`, `offers.md`, `proof-and-claims.md`. Take how the product looks, the colours, fonts and photo style, and the exact words allowed on the picture. Leave out review quotes and research notes. Source notes and rejected ideas never go into the result.
 
-How to check:
-- **In Claude Code,** look in the project first. A brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name, or ask for their path.
-- **In a chat,** ask once: "Do you have product photos, your brand brain? Attach or paste them here." If they're already in this project's files, use those.
-- **If one is missing,** say so before you start, in one line: the result will be much better with it, with the link to make it once and reuse it. Next time they can attach it (or, in Claude Code, give its path). Then carry on with what you have and mark each gap with `MISSING:`.
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In Claude Code, look in the project too: a brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name.
+2. **If something is missing, advise, don't block.** In one short message, say this skill works on its own and will be better with product photos, your brand brain. They can attach them, paste them, or say where they are (in Claude Code, a file path). Name the recommended steps above as a suggestion, with their links. Then ask: "Add them, or shall I go ahead with what you've given me?" If their message already says to go ahead, skip this and start.
+3. **When they say go ahead,** do the whole job with what you have. Mark each gap with `MISSING:` and never invent a fact to fill it. List the gaps at the end so they can fill them in later.
 
 **Tools that do this best:**
 - **Claude:** Reads several product photos at full size and quotes printed words line by line with the photo they came from.
@@ -55,14 +55,14 @@ How to check:
 3. **Pick 3 to 5 lock lines:** the visible details a model gets wrong first for this product. Write each as one short phrase. Every prompt repeats them word for word, because restating what must stay fixed is what holds a product steady across a set.
 4. **List the blocked shots.** For each gap, name the shots it blocks, using the jobs in `product-photo-shoot-planner` (identity, scale, use, substance, place, range, arrival, ad base). No back photo blocks any shot of the back.
 5. **Ask for one photo,** the one that unblocks the most shots, naming the angle, the background and why. A phone photo on a plain surface is fine.
-6. **Score it.** Check the sheet against the 5 checks under "Check before you hand it back". Fix any failed check you can, then check again. The score measures how well this truth sheet meets those checks: checks passed divided by 5, times 100, rounded. Show it as `SCORE <n>/100 (<passed> of 5 checks)`, with one line for each check still missed. The `MISSING` lines don't lower it; they are honest gaps.
+6. **Run the checks.** Check the sheet against the 5 checks under "Check before you hand it back". Fix any failed check you can, then check again. Show `CHECKS MISSED: <one line each>`, or "none". The `MISSING` lines aren't missed checks; they are honest gaps.
 
 ## What you hand back
-The photo check, the sheet in seven parts with a source on every line, the lock lines, the blocked shots, the one photo to ask for next, and the score with one line per check still missed.
+The photo check, the sheet in seven parts with a source on every line, the lock lines, the blocked shots, the one photo to ask for next, and the `CHECKS MISSED` line.
 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
-When you've handed it back, ask in one short question what they want to do next. Offer these, and say they can type their own:
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - **Make product photos** with the [Product page gallery planner](https://useaiblocks.com/skills/product-page-gallery-planner). It takes the product truth sheet.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
@@ -75,7 +75,7 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Every gap names the shots it blocks.
 
 ## If something is missing
-Write `MISSING: <line>` and add the shots it blocks. If no photo shows the exact variant, stop and ask for one. Never use a sibling, a lookalike or a drawing as a stand-in.
+Write `MISSING: <line>` and add the shots it blocks. If no photo shows the exact variant, ask once for one, then carry on: write the sheet from the facts you have and mark every line a photo would source `MISSING`. Never use a sibling, a lookalike or a drawing as a stand-in.
 
 ## Avoid
 - Judging from a thumbnail or a file name.

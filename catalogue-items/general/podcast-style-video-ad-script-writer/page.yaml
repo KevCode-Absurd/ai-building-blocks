@@ -1,10 +1,10 @@
 new_slug: podcast-style-video-ad-script-writer
 name: "Podcast-style video ad script writer"
-summary: "Paste the doubt and your facts. Get a two-person podcast-style video script and score out of 100."
+summary: "Paste the doubt and your facts. Get a two-person podcast-style video script, with every fact sourced."
 job: make-video-ads
 
 headline: "Podcast-style video ad script writer"
-subhead: Give it a doubt your buyers hold and the facts you can back. It writes a 15 to 45 second podcast-style talk where a doubting Host meets an explaining Guest, timed to your clips. You get the script, every fact's source, a cast note and a score out of 100.
+subhead: Give it a doubt your buyers hold and the facts you can back. It writes a 15 to 45 second podcast-style talk where a doubting Host meets an explaining Guest, timed to your clips. You get the script, every fact's source and a cast note.
 
 explain: |
   Clips of two people talking at microphones get watched because they feel like overhearing a real talk. They go wrong when a "guest" in a studio says the product changed their life. That's a testimonial from someone who never used it, with a title nobody can check, and viewers hear the ad copy at once.
@@ -28,7 +28,7 @@ you_get:
   - A line-by-line script for Host and Guest, with picture notes
   - A clip plan with the words in each clip, a muted opener and the end text
   - Every fact said, with its source, the disclosure line and a cast note
-  - A score out of 100 for how many of its own checks the script passes, with any it missed
+  - Any of its own checks the script still missed, one line each, or none
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
@@ -74,8 +74,7 @@ output_shape: |
   <fact> = <source>
   MISSING: <...>
 
-  SCORE  <n>/100 (<passed> of <total> checks passed)
-  Missed: <one line per check missed, or none>
+  CHECKS MISSED  <one line per check missed, or none>
 
 example:
   business: sprout

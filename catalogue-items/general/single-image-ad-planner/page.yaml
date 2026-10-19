@@ -1,10 +1,10 @@
 new_slug: single-image-ad-planner
 name: "Single image ad planner"
-summary: "Paste your facts. Get the layout, image words, feed copy, a prompt and a score out of 100."
+summary: "Paste your facts. Get the layout, image words, feed copy and an image prompt."
 job: make-image-ads
 
 headline: "Single image ad planner"
-subhead: Paste your facts and the buyer, or a script to turn into one image. It settles the one point the ad argues and the type your proof allows. You get the layout, image words, feed copy, an image prompt and a score out of 100.
+subhead: Paste your facts and the buyer, or a script to turn into one image. It settles the one point the ad argues and the type your proof allows. You get the layout, image words, feed copy and an image prompt.
 
 explain: |
   Many image ads try to say three things at once. The picture shows one idea, the words on it say another, and the text above repeats the headline. Others start from a layout someone liked and end up as a review ad with no real review in it. A stranger scrolls past without knowing what was on offer.
@@ -28,7 +28,7 @@ you_get:
   - A zone map in reading order, and the words on the image with a word count
   - Feed copy with three headlines, each with its character count
   - A prompt for an image model, and a list of every guess and gap
-  - A score out of 100 for the share of its five checks the plan passes, with each one missed
+  - Any of its five checks the plan still misses, one line each
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
@@ -83,8 +83,8 @@ output_shape: |
   ### Proof and gaps
   Sources | Against the batch | Inferred | MISSING | Check before launch
 
-  ### Score
-  <passed> / 5 checks x 100 = <score>   Missed: <one line each>
+  ### Checks missed
+  CHECKS MISSED: <one line each, or none>
 
 example:
   business: sprout

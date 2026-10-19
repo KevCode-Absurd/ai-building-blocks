@@ -1,10 +1,10 @@
 new_slug: ad-matched-landing-page-writer
 name: "Ad-matched landing page writer"
-summary: "Paste your ad, facts and reviews. Get a matching landing page and a score out of 100."
+summary: "Paste your ad, facts and reviews. Get landing page copy that picks up where the ad left off."
 job: write-landing-page
 
 headline: "Ad-matched landing page writer"
-subhead: Give it the ad, your product facts and offer, and real customer words if you have them. It opens the page where the ad left off and answers each doubt your customers raise. You get the page copy, with the full cost stated, and a score out of 100.
+subhead: Give it the ad, your product facts and offer, and real customer words if you have them. It opens the page where the ad left off and answers each doubt your customers raise. You get the page copy, with the full cost stated, and a list of facts still missing.
 
 explain: |
   People tap an ad because of one promise. Then the page opens with the product name, lists every benefit and hides the renewal price in small print. The promise they tapped for has gone, so they leave.
@@ -26,7 +26,7 @@ you_get:
   - A first screen built from the ad, and a list of your buyers' doubts with the section that answers each
   - Body sections with answer-first headings, a cost block, questions and a closing
   - A list of every field left empty because a fact was missing
-  - A score out of 100 for how many of its own checks the page passes, with each miss named
+  - Any of its own checks the page still misses, each named with the reason
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
@@ -50,8 +50,8 @@ how_it_works:
     text: Taste, contents and pausing for things used up. Fit, materials, returns and warranty for things kept, never a price per day.
   - title: Uses only real proof
     text: Quotes customers word for word and never writes a review, rating, count or deadline you didn't supply.
-  - title: Scores the page
-    text: Goes through its own checks, such as the full cost before the last button, fixes what it can, and scores checks passed out of all checks, times 100.
+  - title: Checks the page
+    text: Goes through its own checks, such as the full cost before the last button, fixes what it can, and names any check still missed.
 
 output_shape: |
   PAGE BRIEF
@@ -84,9 +84,8 @@ output_shape: |
   LEFT EMPTY
   MISSING: <each fact the page needed>
 
-  SCORE
-  <passed> of <all> checks = <score> out of 100
-  Missed: <one line per check still missed, or none>
+  CHECKS MISSED
+  <one line per check still missed, or none>
 
 example:
   business: sprout
@@ -99,8 +98,8 @@ example:
     base. Subscribe: $49.99 every 4 weeks. First box $29.99 only with the
     text sign-up discount. One-time $66.65. "Pause Or Cancel Any Time."
     30-day money-back guarantee, first order only. Ships within 24 hours,
-    arrives in 3-5 days on average. Shipping cost on one-time orders: not
-    stated. Survey (say "of surveyed users"): 95% take it at least 4-6x a
+    arrives in 3-5 days on average. Free shipping on the first order.
+    One-time orders say "No Free Shipping"; that cost is not stated. Survey (say "of surveyed users"): 95% take it at least 4-6x a
     week. Ratings on file disagree (4.8, 4.75, 4.74, 4.0). Sugar-Free uses
     sugar alcohols.
 
@@ -149,8 +148,9 @@ example:
 
     COST BLOCK
     First box $29.99 with the text sign-up discount, then $49.99 every
-    4 weeks. One-time: $66.65. Ships within 24 hours, arrives in 3 to 5
-    days on average. 30-day money-back guarantee, first order only.
+    4 weeks. One-time: $66.65. Free shipping on your first order; one-time
+    orders pay shipping (MISSING: the cost). Ships within 24 hours, arrives
+    in 3 to 5 days on average. 30-day money-back guarantee, first order only.
 
     QUESTIONS
     How do I cancel? MISSING: the steps, so this stays unanswered
@@ -166,6 +166,9 @@ example:
     MISSING: one agreed star rating and its source, so no rating line
     MISSING: a dated reason to buy now, so no deadline
 
+    CHECKS MISSED
+    none (the one-time shipping cost is marked MISSING, not guessed)
+
 tweaks:
   - what: The ad
     how: Paste a different ad and you get a different page. The headline, the first offer and the proof line all follow the ad's buyer and promise.
@@ -179,7 +182,7 @@ tweaks:
 judge:
   - The headline carries the ad's main words, and the first offer is the one the ad named.
   - Each body heading states an answer to a real doubt from your customer words.
-  - The renewal price, shipping, delivery time and returns terms all appear before the last button.
+  - The renewal price, shipping, delivery time and returns terms all appear before the last button. Any your facts don't give shows there as MISSING, never a guess.
   - Every price, number and timeframe on the page appears in your facts.
   - No rating, review count, badge or deadline appears that you didn't supply.
   - Buttons say the same thing all the way down the page.

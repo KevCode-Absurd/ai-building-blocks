@@ -1,6 +1,6 @@
 ---
 name: single-image-ad-planner
-description: Use when you need one image ad planned from start to finish, from your facts or from a script you want as a single image. It settles the one sentence the ad argues, the buyer and their question, the claim and its proof, the ad type your proof allows, the look and layout with a zone map, what the eye reads first, second and third, the words on the image, the feed copy fitted to Meta's current lengths, a prompt for an image model, and a score out of 100 against its checks.
+description: Use when you need one image ad planned from start to finish, from your facts or from a script you want as a single image. It settles the one sentence the ad argues, the buyer and their question, the claim and its proof, the ad type your proof allows, the look and layout with a zone map, what the eye reads first, second and third, the words on the image, the feed copy fitted to Meta's current lengths, a prompt for an image model, and any of its checks the plan still misses.
 ---
 
 # Single image ad planner
@@ -9,31 +9,31 @@ You plan one image ad that a designer or an image model can make without asking 
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
-Check for these first. The result is much better with them.
+This skill runs on its own. What's below makes the result better, but none of it is required.
 
-**Needed:**
-- **Brand brain** (its products part), made by the [Website brand file builder](https://useaiblocks.com/skills/website-brand-file-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
+**Works best with** (or they can paste their own instead):
+- **Brand brain** (its products part), made by the [Website brand brain builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
 
 **Makes it better (optional):**
 - **Customer words** (yours): reviews, testimonials, support tickets, survey answers or call transcripts. Export them or paste them in.
 - **Buying reasons**, made by the [Customer buying reasons finder](https://useaiblocks.com/skills/customer-buying-reasons-finder): why people buy, in their own words, ranked by how many said it.
-- **A video ad script**, made by the [Customer quote video ad script writer](https://useaiblocks.com/skills/customer-quote-video-ad-script-writer): the script, beat by beat, with on-screen text.
+- **A video ad script**, made by the [Video ad script writer from customer quotes](https://useaiblocks.com/skills/video-ad-script-writer-from-customer-quotes): the script, beat by beat, with on-screen text.
 - **A buyer brief**, made by the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer): who it's for, how much they already know, and what will move them.
 - **Product photos** (yours): clear photos of the real product, from more than one angle. Attach them.
 
-**The steps before this one** (do each once, then reuse what it makes):
-1. **Brand brain** with the [Website brand file builder](https://useaiblocks.com/skills/website-brand-file-builder). Bring your website, customer words (optional), your results (optional).
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **Brand brain** with the [Website brand brain builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
 2. **Buying reasons** with the [Customer buying reasons finder](https://useaiblocks.com/skills/customer-buying-reasons-finder). Bring customer words. It uses your brand brain.
-3. **A video ad script** with the [Customer quote video ad script writer](https://useaiblocks.com/skills/customer-quote-video-ad-script-writer). Bring customer words. It uses your brand brain and your offer and buying reasons.
+3. **A video ad script** with the [Video ad script writer from customer quotes](https://useaiblocks.com/skills/video-ad-script-writer-from-customer-quotes). Bring customer words. It uses your brand brain and your offer and buying reasons.
 4. **A buyer brief** with the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer). Bring customer words. It uses your brand brain.
 5. This one.
 
 **From the brand brain, read:** `00-start-here.md`, `voice-and-look.md`, `offers.md`, `proof-and-claims.md`. Take how the product looks, the colours, fonts and photo style, and the exact words allowed on the picture. Leave out review quotes and research notes. Source notes and rejected ideas never go into the result.
 
-How to check:
-- **In Claude Code,** look in the project first. A brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name, or ask for their path.
-- **In a chat,** ask once: "Do you have your brand brain, customer words, buying reasons? Attach or paste them here." If they're already in this project's files, use those.
-- **If one is missing,** say so before you start, in one line: the result will be much better with it, with the link to make it once and reuse it. Next time they can attach it (or, in Claude Code, give its path). Then carry on with what you have and mark each gap with `MISSING:`.
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In Claude Code, look in the project too: a brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name.
+2. **If something is missing, advise, don't block.** In one short message, say this skill works on its own and will be better with your brand brain, customer words, buying reasons. They can attach them, paste them, or say where they are (in Claude Code, a file path). Name the recommended steps above as a suggestion, with their links. Then ask: "Add them, or shall I go ahead with what you've given me?" If their message already says to go ahead, skip this and start.
+3. **When they say go ahead,** do the whole job with what you have. Mark each gap with `MISSING:` and never invent a fact to fill it. List the gaps at the end so they can fill them in later.
 
 **Tools that do this best:**
 - **Any good chat AI:** Planning one ad from your facts and counting characters works well in any strong chat AI.
@@ -56,8 +56,8 @@ How to check:
 <!-- making-it -->
 ## Making the picture
 
-You write the prompt. You can't draw the picture unless this chat has an image tool connected. Say that once, in one line, before you start, so nobody waits for a picture that won't come. At the end, tell them how to finish it:
-- **ChatGPT or Gemini:** paste the image prompt into a chat and ask for the picture. ChatGPT uses GPT Image, Gemini uses Nano Banana. Free plans have tight daily limits. Codex on a paid ChatGPT plan can make it too.
+If you can make images in this chat (ChatGPT and Gemini can), make the picture from your prompt once the prompt passes its checks, then check the picture against the same list and say what to fix. If you can't (Claude can't draw unless an image tool is connected), say that once, in one line, before you start, so nobody waits for a picture that won't come. Hand back the prompt, and at the end tell them how to finish it:
+- **ChatGPT or Gemini:** paste the image prompt into a chat and ask for the picture, or paste this whole skill there so it writes the prompt and makes the picture in one go. ChatGPT uses GPT Image, Gemini uses Nano Banana. Free plans have tight daily limits. Codex on a paid ChatGPT plan can make it too.
 - **Higgsfield:** paste the prompt into its image tool, or connect Higgsfield to Claude so Claude makes it there.
 - **Claude Code:** with an OpenAI or Google key saved as `OPENAI_API_KEY` or `GEMINI_API_KEY`, offer to send the prompt to that image API and save the file. Keys: platform.openai.com/api-keys (OpenAI) or aistudio.google.com/apikey (Google). OpenAI or Google bills each picture.
 
@@ -82,7 +82,7 @@ The same map runs through every image ad block in this library. Each type answer
 Dress: **Camera** (looks photographed), **Designed** (type, shapes, diagram, illustration or 3D), **Lo-fi** (looks like a plain post or a note a person made, always your own design, never a real app's screen). Audience: **New**, **Warm**, **Ready**. Code each ad `type · dress · audience`. Skeletons: Stack (words in one band, picture in the other), Split (two halves), Centre and labels, Full bleed and card (picture fills the frame, words on one solid card), Big type (the words are the picture).
 
 ## Steps
-1. **Write the argument first.** One sentence: "[This buyer] should [do this] because [one fact on file]." If you can't fill the last part from the facts, stop and list what's missing. From a script, pick the one step this image carries (an offer, one proof or one contrast). The rest goes into the feed copy, in the script's order.
+1. **Write the argument first.** One sentence: "[This buyer] should [do this] because [one fact on file]." If you can't fill the last part from the facts, ask once for the fact, and meanwhile argue the strongest thing the facts do hold, marking the gap `MISSING`. From a script, pick the one step this image carries (an offer, one proof or one contrast). The rest goes into the feed copy, in the script's order.
 2. **Place the buyer and find their question.** New: doesn't know they have the problem, or hasn't looked for a fix; ask "What is it?" or "Is it for me?", lead with a moment from their day, no product name or price on the image. Warm: comparing fixes; ask "Can I believe it?", lead with what's different. Ready: knows you and is deciding; ask "Why now?", lead with the last doubt answered or the offer as it stands. A named doubt always means "Can I believe it?". Without research, mark the buyer `inferred` and treat the ad as a test. Never write a quote nobody said.
 3. **Choose the claim.** List three to five facts that could fill the "because". Keep the one that is on file in words you can show, answers a doubt or want from the research, and that a rival couldn't say word for word. Make it specific: a number, a named part, a time, a plain cause. "6 g of fiber in one pack" beats "packed with fiber".
 4. **Say the offer in one breath.** What they get, what they pay today, what they pay after, what happens if it doesn't suit them, and what to do. A reason to act now only if one is true (a real end date, a real stock limit). Quote the guarantee with every condition. A price per day or per use needs both numbers from the facts.
@@ -104,7 +104,7 @@ Dress: **Camera** (looks photographed), **Designed** (type, shapes, diagram, ill
    The image headline, the first line and the headline under the image make the same claim, in different words.
 10. **Write the image prompt.** One paragraph: the size and scene (surface, light, angle, three to six props, any person); each reference photo by number and role ("photo 1 is the pouch; keep its shape, colour and label exactly"); what must not change (the product, its count, how it opens); the empty zone for the words. Ask for no text and set the type in a design tool. If the model draws text, give the exact words in quotes and check every letter.
 11. **Check your own work.** Blur the layout until words can't be read: the biggest shape is the picture, then the first read. Count every word and character. Trace every number to the facts. In a batch, no two ads share both a code and an argument; a new colour or dress alone doesn't make a new ad. Say a check was done only if you did it.
-12. **Score it.** Run "Before you hand it back" and fix any check that fails where you can. Score = checks passed / checks x 100, rounded. Show the sum, and one line for each check still missed.
+12. **Run the checks.** Run "Before you hand it back" and fix any check that fails where you can. Show `CHECKS MISSED: <one line each>`, or "none".
 
 ## Rules that don't bend
 - One ad, one buyer, one claim. A second point is a second ad.
@@ -147,14 +147,14 @@ Button: <button>
 ### Proof and gaps
 Sources | Inferred | Against the batch | MISSING | Check before launch
 
-### Score
-<passed> / 5 checks x 100 = <score>. Missed: <one line each>
+### Checks missed
+CHECKS MISSED: <one line each, or none>
 ```
 For more than one ad, change the claim or the type each time, not just the wording, and say what each one tests.
 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
-When you've handed it back, ask in one short question what they want to do next. Offer these, and say they can type their own:
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - **Check it before it goes live** with the [Meta ads compliance checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the ad copy.
 - **Make image ads** with the [Article headline image ad maker](https://useaiblocks.com/skills/article-headline-image-ad-maker). It takes the ad copy.
 - **Write the ad copy** with the [Ad first line writer and scorer](https://useaiblocks.com/skills/ad-first-line-writer-and-scorer). It takes the ad copy.

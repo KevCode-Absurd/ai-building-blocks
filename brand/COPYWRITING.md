@@ -96,16 +96,18 @@ For a line-by-line pass, run the copy editing skill after the draft.
 Kevin, 19 Oct 2026: think of each skill or prompt as someone you hire. Its name is the job title, so a stranger reads it and knows at once what they'd hire it for. "Meta ads compliance checker" is the model.
 
 - **Name = the job title.** What it works on, then the role: checker, writer, planner, finder, auditor, editor, scorer, maker. 2 to 6 words (7 at most), sentence case. Name the platform when the job is tied to one (Meta, Google, Shopify, TikTok). No colons, no internal jargon, no clever words. Similar skills share one spelling: "Clay town video ad script writer" and "Clay town video clip prompt writer". Image ads all end "image ad maker".
+- **It reads naturally (Kevin, 19 Oct 2026, later).** Say it out loud: it should sound like something a person would say, and make sense the moment you see it. Use the words people already use (hook, influencer, swipe file, AI slop), and say where the input comes from when that's the point: "Video ad script writer from customer quotes", "Website brand brain builder", "Anti-AI-slop copy editor". "Anime video clip prompt writer" is the bar.
 - **Headline = the name.** The page's big title is the same job title.
-- **Subhead = the job description.** Two or three short sentences: what you give it, what it does, what you get. Name the real outputs, and the score. 25 to 50 words.
-- **Summary (the card line) = the subhead squeezed:** "Paste X. Get Y, Z and a score out of 100." 18 words max.
+- **Subhead = the job description.** Two or three short sentences: what you give it, what it does, what you get. Name the real outputs, and the score if it has one. 25 to 50 words.
+- **Summary (the card line) = the subhead squeezed:** "Paste X. Get Y and Z." ("and a score out of 100" only for a skill that scores). 18 words max.
 - **General, never one industry.** Write for anyone: a job or a business, any field. Industry versions come later as their own skills.
+- **A score only where judging is the job.** Checkers, audits, scorers, comparisons and data analysis give a score out of 100. Writers, makers, planners, builders and editors don't: they run their checks, fix what fails and say any check they missed.
 - **True and logical.** Promise only what the skill really does. If the subhead says "a score", the skill must give one.
 
 | Vague | The job |
 |---|---|
 | Keep Facebook from blocking your ads | Meta ads compliance checker |
-| Make AI build the ad you pictured | Image ad brief settings writer |
+| Make AI build the ad you pictured | Image ad settings picker |
 | Write ads people believe | Fact-based ad copy writer |
 
 Workflows keep their own names for now.

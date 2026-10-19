@@ -1,10 +1,10 @@
 new_slug: 3d-cutaway-image-ad-maker
 name: "3D cutaway image ad maker"
-summary: "Paste how it works. Get a 3D cutaway image prompt, feed copy and a score out of 100."
+summary: "Paste how it works. Get a 3D cutaway image prompt, the words and feed copy."
 job: make-image-ads
 
 headline: "3D cutaway image ad maker"
-subhead: Give it how your product works, with a source for each step, and your claims. It checks the process is hidden, true and worth teaching, then freezes the moment your product acts. You get a colour-coded image prompt, the words, the feed copy and a score out of 100.
+subhead: Give it how your product works, with a source for each step, and your claims. It checks the process is hidden, true and worth teaching, then freezes the moment your product acts. You get a colour-coded image prompt, the words, the feed copy and any check it missed.
 
 explain: |
   Some products do their work out of sight, so buyers doubt they do anything. One clear cutaway, as if you shrank down and sliced inside, can answer that in a glance. It's also where image ads overclaim most easily, because a picture of damage disappearing says more than any line of copy.
@@ -27,7 +27,7 @@ you_get:
   - A parts key and honesty notes for your product
   - The layout, the words on the image checked for size and contrast, and an image prompt
   - Feed copy with a first line, headline and button
-  - A score out of 100 from the skill's five checks, with one line per check missed
+  - Any of the skill's five checks it couldn't meet, one line each
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
@@ -64,7 +64,7 @@ output_shape: |
   IMAGE PROMPT <ready to paste, no text in the image>
   FEED COPY    <first line, primary text, headline, button>
   NOTES        <links to confirm, claims left out, MISSING>
-  SCORE        <n>/100 (<passed> of 5 checks) | missed: <one line each>
+  CHECKS MISSED <one line each, or none>
 
 example:
   business: sprout

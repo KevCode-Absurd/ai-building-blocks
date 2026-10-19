@@ -1,10 +1,10 @@
 new_slug: product-image-spec-writer
 name: "Product image spec writer"
-summary: "Attach your product photos. Get a sourced truth sheet, lock lines and a score out of 100."
+summary: "Attach your product photos. Get a sourced truth sheet, lock lines and the next photo to take."
 job: product-photos
 
 headline: "Product image spec writer"
-subhead: Attach your real photos of one exact product variant. It keeps the photos you can trust, writes a seven-part truth sheet with a source on every line, and picks the lines every prompt repeats. You get the sheet, the next photo to take and a score out of 100.
+subhead: Attach your real photos of one exact product variant. It keeps the photos you can trust, writes a seven-part truth sheet with a source on every line, and picks the lines every prompt repeats. You get the sheet, the shots still blocked and the next photo to take.
 
 explain: |
   Image models redraw products. They swap a matte tub for a glossy one, invent a lid, re-letter the label or show the wrong flavour. Usually that happens because nobody wrote down what the product looks like, so the model filled the gaps with a typical product from your category.
@@ -25,7 +25,7 @@ you_get:
   - A one-page truth sheet in seven parts, with a source on every line
   - Three to five lock lines that every prompt repeats word for word
   - The shots that can't be made yet, and the one photo to take next
-  - A score out of 100 for the sheet, with one line for each check it missed
+  - Any check the sheet still missed, one line each
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
@@ -65,8 +65,7 @@ output_shape: |
   LOCK LINES   1. <...>  2. <...>  3. <...>
   BLOCKED      <gap>  ->  <shots it blocks>
   NEXT PHOTO   <the one photo, angle, background, why>
-  SCORE        <n>/100 (<checks passed> of 5 checks)
-               Missed: <one line per check still missed>
+  CHECKS MISSED  <one line per check still missed, or none>
 
 example:
   business: sprout
@@ -141,6 +140,8 @@ example:
     NEXT PHOTO   One daily pack torn straight across the top, held over
                  an open palm, on a plain light surface, the torn edge
                  sharp. It unblocks use, arrival and the ad base.
+
+    CHECKS MISSED  none
 
 tweaks:
   - what: The variant line

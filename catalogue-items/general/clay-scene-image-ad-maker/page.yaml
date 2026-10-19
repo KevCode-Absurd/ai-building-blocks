@@ -1,10 +1,10 @@
 new_slug: clay-scene-image-ad-maker
 name: "Clay scene image ad maker"
-summary: "Paste your selling idea. Get a clay before-and-after image prompt, feed copy and a score out of 100."
+summary: "Paste your selling idea. Get a clay before-and-after image prompt, the words and feed copy."
 job: make-image-ads
 
 headline: "Clay scene image ad maker"
-subhead: Give it your selling idea, product facts and photos. It picks one clay object that stands for the problem and builds a handmade set around it, showing the before and after in one frame. You get the image prompt, the words, the feed copy and a score out of 100.
+subhead: Give it your selling idea, product facts and photos. It picks one clay object that stands for the problem and builds a handmade set around it, showing the before and after in one frame. You get the image prompt, the words, the feed copy and any check it missed.
 
 explain: |
   A clay scene stops the thumb because it looks handmade and small, unlike every product photo around it. It goes wrong when there's nothing to read in it: a cute clay mascot beside the pack, a set crowded with moments, or a label sculpted into wobbly clay letters.
@@ -27,7 +27,7 @@ you_get:
   - The set plan, the character sentence and how the product appears
   - The layout, the words on the image checked for size and contrast, and an image prompt
   - Feed copy with a first line, headline and button
-  - A score out of 100 from the skill's five checks, with one line per check missed
+  - Any of the skill's five checks it couldn't meet, one line each
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
@@ -64,7 +64,7 @@ output_shape: |
   IMAGE PROMPT  <ready to paste, no text in the image>
   FEED COPY  <first line, primary text, headline, button>
   NOTES      <claims used and sources, MISSING>
-  SCORE      <n>/100 (<passed> of 5 checks) | missed: <one line each>
+  CHECKS MISSED  <one line each, or none>
 
 example:
   business: sprout

@@ -1,10 +1,10 @@
 new_slug: reference-style-product-photo-maker
 name: "Reference-style product photo maker"
-summary: "Attach your product and a photo you like. Get a matching prompt and a score out of 100."
+summary: "Attach your product and a photo you like. Get a matching prompt and ranked pictures."
 job: product-photos
 
 headline: "Reference-style product photo maker"
-subhead: Attach your product photos and one photo whose look you like. It reads that photo's light, camera and set, and moves them onto your real product. You get an image prompt, ranked pictures if your chat makes them, and a score out of 100.
+subhead: Attach your product photos and one photo whose look you like. It reads that photo's light, camera and set, and moves them onto your real product. You get an image prompt, and pictures ranked for where they'll go if your chat makes them.
 
 explain: |
   Most small brands have three or four pack shots and need dozens of pictures. Asking an AI for "a nice lifestyle photo" gets a generic scene and often a redrawn label. Copying the look of a photo you like works much better, as long as you take its light and camera and never its product, brand or people.
@@ -27,7 +27,7 @@ you_get:
   - A keep, swap or drop line for each part
   - The finished image prompt, ready to paste
   - If your chat can make images, the pictures ranked with a score out of 100, and a reject list
-  - If it can't, a score out of 100 for the prompt against its four checks
+  - If it can't, any of the four checks the prompt still missed
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
@@ -72,7 +72,7 @@ output_shape: |
   RANKED (only if your chat made pictures)
   1. <file>  <score>/100 for <feed ad | page or email>  <job>
   REJECTS: <file, gate failed>
-  SCORE (prompt only): <n>/100 (<checks passed> of 4 checks)
+  CHECKS MISSED (prompt only): <one line each, or none>
   MISSING: <...>
 
 example:

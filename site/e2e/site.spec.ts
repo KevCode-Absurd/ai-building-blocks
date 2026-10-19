@@ -36,7 +36,7 @@ test("no brands, no jargon labels, no business split, no agents", async ({ page 
   await page.goto("/");
   await expect(cards(page).first()).toBeVisible();
   const text = await page.locator("body").innerText();
-  for (const word of ["Grüns", "Gruns", "AG1", "IM8", "Gehna", "Nourish", "Digest", "Orchestrate", "Ecommerce", "Any business", "Agents", "brand brain"]) expect(text).not.toContain(word);
+  for (const word of ["Grüns", "Gruns", "AG1", "IM8", "Gehna", "Nourish", "Digest", "Orchestrate", "Ecommerce", "Any business", "Agents"]) expect(text).not.toContain(word);
   await expect(page.getByRole("button", { name: /^(Source|Digest|Make|Render|Check)\s*\d*$/ })).toHaveCount(0);
   await expect(page.locator("img")).toHaveCount(0);
 });
@@ -316,7 +316,7 @@ test("the workflow download is a complete, repeatable pack", async ({ page }, in
   expect(Buffer.compare(a.bytes, b.bytes), "same workflow, same bytes").toBe(0);
   const files = unzipSync(new Uint8Array(a.bytes));
   const names = Object.keys(files);
-  expect(names).toEqual(expect.arrayContaining(["HANDOFF.md", "workflow.json", "README.txt", "skills/product-exact-image-prompt-writer/SKILL.md"]));
+  expect(names).toEqual(expect.arrayContaining(["HANDOFF.md", "workflow.json", "README.txt", "skills/accurate-product-image-ad-maker/SKILL.md"]));
   expect(names, "no about-me file was given").not.toContain("about-me.md");
   expect(names.filter((n) => n.startsWith("skills/"))).toHaveLength(5);
   const handoff = strFromU8(files["HANDOFF.md"]);
@@ -325,26 +325,26 @@ test("the workflow download is a complete, repeatable pack", async ({ page }, in
   expect(handoff).toContain("Write `MISSING: <what>`");
   expect(handoff).not.toContain("Role:");
   const wf = JSON.parse(strFromU8(files["workflow.json"]));
-  expect(wf.steps.map((s: { skill: string }) => s.skill)[0]).toBe("website-brand-file-builder");
+  expect(wf.steps.map((s: { skill: string }) => s.skill)[0]).toBe("website-brand-brain-builder");
 });
 
 test("a skill installs: the zip is a folder Claude can upload, and every AI has its steps", async ({ page }, info) => {
-  await page.goto("/skills/video-ad-script-type-planner");
+  await page.goto("/skills/video-ad-script-type-picker");
   const bp = page.getByTestId("block-page");
   await bp.getByTestId("add-to-ai").click();
   const box = bp.getByTestId("install");
   await expect(box).toBeInViewport();
   await expect(box.getByRole("tab", { selected: true })).toHaveText("Claude");
   const [dl] = await Promise.all([page.waitForEvent("download"), box.getByTestId("install-zip").click()]);
-  expect(dl.suggestedFilename()).toBe("video-ad-script-type-planner.zip");
+  expect(dl.suggestedFilename()).toBe("video-ad-script-type-picker.zip");
   const path = info.outputPath(dl.suggestedFilename());
   await dl.saveAs(path);
   const files = unzipSync(new Uint8Array(fs.readFileSync(path)));
-  const skill = strFromU8(files["video-ad-script-type-planner/SKILL.md"]);
-  expect(skill).toMatch(/^---\nname: video-ad-script-type-planner\ndescription: /);
-  expect(Object.keys(files)).toContain("video-ad-script-type-planner/references/types.md");
+  const skill = strFromU8(files["video-ad-script-type-picker/SKILL.md"]);
+  expect(skill).toMatch(/^---\nname: video-ad-script-type-picker\ndescription: /);
+  expect(Object.keys(files)).toContain("video-ad-script-type-picker/references/types.md");
   await box.getByTestId("install-code").click();
-  await expect(box).toContainText("/video-ad-script-type-planner");
+  await expect(box).toContainText("/video-ad-script-type-picker");
   await box.getByTestId("install-chatgpt").click();
   await expect(box).toContainText(/characters/);
   // The choice is remembered on the next skill.
@@ -551,12 +551,12 @@ test("how it works: a plain guide to each kind and the builder, at grade 10 or b
 
 // ---- Five ways to make it easier: your business, a goal on the home page, a tidy builder bar, what to do after the download, results in the preview ----
 
-const BIZ = { name: "Sprout", sells: "Greens gummies in daily packs", buyer: "Adults who gave up on greens powders" };
+const BIZ = { name: "Sprout", sells: "Greens gummies in daily packs", buyer: "Adults who gave up on greens powders", more: "We ship to the US only.\nOur busy season is January." };
 const fillBusiness = async (page: Page) => {
   await page.getByTestId("open-business").click();
   const form = page.getByTestId("business-form");
   for (const [k, v] of Object.entries(BIZ)) await form.getByTestId(`biz-${k}`).fill(v);
-  await expect(form).toContainText("3 of 8 filled in");
+  await expect(form).toContainText("4 of 9 filled in");
   await form.getByTestId("biz-save").click();
   await expect(form).toHaveCount(0);
 };
@@ -580,6 +580,7 @@ test("about you: typed once, kept, and added to every copy and download", async 
   expect(copied).toContain("## About me and my work");
   expect(copied).toContain("- **Name:** Sprout");
   expect(copied).toContain("- **Who it's for:** Adults who gave up on greens powders");
+  expect(copied, "anything else keeps its own lines").toContain("**Anything else:**\n\nWe ship to the US only.\nOur busy season is January.");
   // The composer copies them too, even with nothing else typed.
   const box = page.getByTestId("composer");
   await expect(box).toContainText("for Sprout is added too");

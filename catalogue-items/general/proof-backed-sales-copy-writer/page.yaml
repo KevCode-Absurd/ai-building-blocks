@@ -1,10 +1,10 @@
 new_slug: proof-backed-sales-copy-writer
 name: "Proof-backed sales copy writer"
-summary: "Paste your opening and proof. Get the body and close, claims backed, and a score out of 100."
+summary: "Paste your opening and proof. Get the body and close, with proof beside every claim."
 job: write-landing-page
 
 headline: "Proof-backed sales copy writer"
-subhead: Give it the opening you have, a note on your buyer, and your facts, proof, offer and guarantee. It writes the body and close, with each claim's proof beside it. You get the finished text, a proof list and a score out of 100.
+subhead: Give it the opening you have, a note on your buyer, and your facts, proof, offer and guarantee. It writes the body and close, with each claim's proof beside it. You get the finished text, a proof list and any gaps left as placeholders.
 
 explain: |
   The opening of a sales page gets the attention, but the body and close make the sale, and that's where most pages go soft. Claims sit in one section and proof sits three scrolls away. The deal is vague, the guarantee loses its conditions, and the page ends on three buttons and a fake countdown.
@@ -25,8 +25,7 @@ you_give:
 you_get:
   - The body and close as finished text, within your length
   - A list of each claim and the proof placed beside it
-  - What it assumed, and any placeholders left for missing figures
-  - A score out of 100 for how many of its own checks the copy passes, with each miss named
+  - What it assumed, any placeholders left for missing figures, and any check it couldn't meet
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
@@ -50,8 +49,8 @@ how_it_works:
     text: Answers the main doubt, then gives one action named by what's behind it, and adds urgency only if it's true.
   - title: Closes the loop
     text: Comes back to what the opening promised, so the buyer can say in one sentence what they get.
-  - title: Scores the copy
-    text: Goes through its own checks, such as proof within one sentence of each claim, fixes what it can, and scores checks passed out of all checks, times 100.
+  - title: Checks the copy
+    text: Goes through its own checks, such as proof within one sentence of each claim and no number you didn't give, fixes what it can, and names any it missed.
 
 output_shape: |
   <the body and close as finished text, within your length>
@@ -66,9 +65,8 @@ output_shape: |
   PLACEHOLDERS
   <[gaps] left for figures you didn't supply>
 
-  SCORE
-  <passed> of <all> checks = <score> out of 100
-  Missed: <one line per check still missed, or none>
+  CHECKS MISSED
+  <one line per check still missed, or none>
 
 example:
   business: sprout
@@ -134,6 +132,9 @@ example:
     from the buyer note, not a source.
 
     PLACEHOLDERS
+    None.
+
+    CHECKS MISSED
     None.
 
 tweaks:

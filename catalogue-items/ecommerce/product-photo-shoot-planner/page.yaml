@@ -1,10 +1,10 @@
 new_slug: product-photo-shoot-planner
 name: "Product photo shoot planner"
-summary: "Attach your product photos and colours. Get 9 matching photo prompts and a score out of 100."
+summary: "Attach your product photos and colours. Get a style sheet and 9 matching photo prompts."
 job: product-photos
 
 headline: "Product photo shoot planner"
-subhead: Attach your product photos and give your brand colours. It writes one style sheet that every prompt repeats, then plans about 9 frames that each differ in job, distance or angle. You get a frame list, one prompt per frame and a score out of 100.
+subhead: Attach your product photos and give your brand colours. It writes one style sheet that every prompt repeats, then plans about 9 frames that each differ in job, distance or angle. You get the style sheet, a frame list and one prompt per frame.
 
 explain: |
   Product photos made one at a time rarely match. One is cool and bright, the next warm and dark, the props change, and side by side they look like five different brands. Photographers avoid this with a style guide: a few choices that never change across a shoot.
@@ -27,7 +27,7 @@ you_get:
   - A frame list, each with its job, distance, angle and what it shows
   - One prompt per frame, plus a check of the whole set side by side
   - An optional plan for a 6 to 8 second loop clip
-  - A score out of 100 for the set, with one line for each check it missed
+  - Any check the set still missed, one line each
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
@@ -74,8 +74,7 @@ output_shape: |
   SET CHECK
   <same product? same light and finish? no two alike?>
 
-  SCORE  <n>/100 (<checks passed> of 5 checks)
-  Missed: <one line per check still missed>
+  CHECKS MISSED: <one line per check still missed, or none>
 
 example:
   business: sprout

@@ -6,7 +6,7 @@ import { Link } from "./lib/router";
 const local = (url: string) => url.replace(/^https:\/\/useaiblocks\.com/, "");
 
 function Item({ i }: { i: PlanItem }) {
-  const part = i.parts.length && i.maker?.slug === "website-brand-file-builder" ? ` (its ${i.parts.join(" and ")} part)` : "";
+  const part = i.parts.length && i.maker?.slug === "website-brand-brain-builder" ? ` (its ${i.parts.join(" and ")} part)` : "";
   return (
     <li data-testid="need" data-key={i.key}>
       <b>{i.label}</b>{part}{i.maker ? <> · made by the <Link to={local(i.maker.url)}>{i.maker.name}</Link></> : <span className="small"> · yours</span>}
@@ -21,7 +21,7 @@ export function Before({ plan }: { plan: Plan }) {
     <>
       {chain.length > 0 && (
         <>
-          <h3 className="with-h">The steps before this one</h3>
+          <h3 className="with-h">Recommended steps before this one</h3>
           <ol className="num-list chain" data-testid="chain">
             {chain.map((s, n) => (
               <li key={s.slug}>
@@ -33,7 +33,7 @@ export function Before({ plan }: { plan: Plan }) {
           </ol>
         </>
       )}
-      {needed.length > 0 && <><h3 className="with-h">Needed</h3><ul className="needs">{needed.map((i) => <Item key={i.key} i={i} />)}</ul></>}
+      {needed.length > 0 && <><h3 className="with-h">Works best with</h3><ul className="needs">{needed.map((i) => <Item key={i.key} i={i} />)}</ul></>}
       {helps.length > 0 && <><h3 className="with-h">Makes it better</h3><ul className="needs">{helps.map((i) => <Item key={i.key} i={i} />)}</ul></>}
       {brain && <p className="bp-note" data-testid="brain-files">From your brand brain it reads {brain.files.map((f, n) => <span key={f}>{n ? ", " : ""}<code>{f}</code></span>)}.</p>}
       <p className="bp-note">The skill checks for each of these first. In Claude Code it looks in your project; in a chat it asks you to attach them. If one is missing, it says so, links to the skill that makes it, and carries on with what you have.</p>

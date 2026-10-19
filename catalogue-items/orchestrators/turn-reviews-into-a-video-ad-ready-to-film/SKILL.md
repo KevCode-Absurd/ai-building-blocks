@@ -11,9 +11,9 @@ You run 7 skills one after another. Each skill's result is saved and passed to t
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
-Check for these first. The result is much better with them.
+This skill runs on its own. What's below makes the result better, but none of it is required.
 
-**Needed:**
+**Works best with** (or they can paste their own instead):
 - **Your website** (yours): the link to your site or the page.
 - **Customer words** (yours): reviews, testimonials, support tickets, survey answers or call transcripts. Export them or paste them in.
 
@@ -25,15 +25,15 @@ Check for these first. The result is much better with them.
 - **Your image ads** (yours): the image ads, attached as pictures.
 - **Your page** (yours): the landing page's link, or its text and a screenshot.
 
-**The steps before this one** (do each once, then reuse what it makes):
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Your offer** with the [Hidden offer finder](https://useaiblocks.com/prompts/hidden-offer-finder). It uses your brand brain.
 2. **Ad copy** with the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer). It uses your brand brain and a buyer brief.
 3. This one.
 
-How to check:
-- **In Claude Code,** look in the project first for these by name, or ask for their path.
-- **In a chat,** ask once: "Do you have your website, customer words, your results? Attach or paste them here." If they're already in this project's files, use those.
-- **If one is missing,** say so before you start, in one line: the result will be much better with it, with the link to make it once and reuse it. Next time they can attach it (or, in Claude Code, give its path). Then carry on with what you have and mark each gap with `MISSING:`.
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In Claude Code, look in the project too for these by name.
+2. **If something is missing, advise, don't block.** In one short message, say this skill works on its own and will be better with your website, customer words, your results. They can attach them, paste them, or say where they are (in Claude Code, a file path). Name the recommended steps above as a suggestion, with their links. Then ask: "Add them, or shall I go ahead with what you've given me?" If their message already says to go ahead, skip this and start.
+3. **When they say go ahead,** do the whole job with what you have. Mark each gap with `MISSING:` and never invent a fact to fill it. List the gaps at the end so they can fill them in later.
 
 **Tools that do this best:**
 - **Claude:** Holds the brand file, every review number and seven steps of work in one run.
@@ -71,9 +71,9 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **A stop** (a required input is missing or a check fails): stop at that step. Later steps don't run, not even as drafts. Go straight to the hand-back summary.
 
 ## Steps
-1. **Build the brand file.** Use the skill `website-brand-file-builder`. It reads the site, tags every fact as confirmed, inferred, disputed or unknown, and hands on eight files: facts, offers, buyers, proof and claims, voice and look, market and log. Where the brand sells or ships is never filled in unless the site says so.
+1. **Build the brand file.** Use the skill `website-brand-brain-builder`. It reads the site, tags every fact as confirmed, inferred, disputed or unknown, and hands on eight files: facts, offers, buyers, proof and claims, voice and look, market and log. Where the brand sells or ships is never filled in unless the site says so.
 2. **Find why people buy.** Use the skill `customer-buying-reasons-finder`. Give it the reviews and the brand file from step 1. It copies out phrases word for word, tags each force (push, pull, anxiety, habit, result), counts separate people, and hands on the ranked forces map, what nearly stopped them, and a check-before-use list. A reason is a pattern only at 5 people across 2 kinds of source.
-3. **Write the script.** Use the skill `customer-quote-video-ad-script-writer`. Give it the buyer, the reasons from step 2 and the brand file. It sorts the quotes onto the buyer's timeline, names the belief shift, and hands on the beats (opening to call to action) with spoken line, on-screen text, picture note and evidence for each, inside a word budget for the length, plus opening variants, the test plan and the placeholders. Unverified quotes stay out of the paid ad.
+3. **Write the script.** Use the skill `video-ad-script-writer-from-customer-quotes`. Give it the buyer, the reasons from step 2 and the brand file. It sorts the quotes onto the buyer's timeline, names the belief shift, and hands on the beats (opening to call to action) with spoken line, on-screen text, picture note and evidence for each, inside a word budget for the length, plus opening variants, the test plan and the placeholders. Unverified quotes stay out of the paid ad.
 4. **Fix how it sounds.** Use the skill `ad-script-read-aloud-editor`. Give it the script from step 3. It fixes lines nobody would say aloud, without changing any claim, price or number. Hand on the fixes and the whole script with them made. This is the locked script: no later step changes its words.
 5. **Check the ad rules.** Use the skill `meta-ads-compliance-checker`. Give it the locked script, the on-screen words and the picture notes, before any image or clip is made. Every finding points to an exact line. Target countries and ages come only from the facts given; otherwise they are `MISSING`. A line marked "fix first" goes back to the person before step 6.
 6. **Avatar, sheets and storyboard.** Use the skill `video-avatar-and-storyboard-planner`. Give it the locked script, the product photos and the brand file. It runs stages 1 to 4 of the video process:
@@ -89,9 +89,9 @@ Seven step files plus the summary. The ad rules report sits right after the scri
 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
-When you've handed it back, ask in one short question what they want to do next. Offer these, and say they can type their own:
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - **Check it before it goes live** with the [Pre-launch ad checker](https://useaiblocks.com/skills/pre-launch-ad-checker). It takes the video ads.
-- **Make video ads** with the [Brand-font video caption maker](https://useaiblocks.com/skills/brand-font-video-caption-maker). It takes the video ads.
+- **Make video ads** with the [On-screen text planner for video ads](https://useaiblocks.com/skills/on-screen-text-planner-for-video-ads). It takes the video ads.
 - **Plan what to test** with the [Ad test brief writer](https://useaiblocks.com/skills/ad-test-brief-writer). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

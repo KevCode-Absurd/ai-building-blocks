@@ -1,10 +1,10 @@
 new_slug: motion-comic-video-ad-script-writer
 name: "Motion comic video ad script writer"
-summary: "Paste your idea and product facts. Get a motion-comic panel list, cast note and score out of 100."
+summary: "Paste your idea and product facts. Get a motion-comic panel list, captions and a cast note."
 job: make-video-ads
 
 headline: "Motion comic video ad script writer"
-subhead: Give it your selling idea and product facts. It picks one claim and writes a full-screen motion comic in four movements, with a cut into each panel and short captions, ending on your real product photo. You get a panel list, a cast note and a score out of 100.
+subhead: Give it your selling idea and product facts. It picks one claim and writes a full-screen motion comic in four movements, with a cut into each panel and short captions, ending on your real product photo. You get a panel list with captions and narration, and a cast note for the shots skill.
 
 explain: |
   Comics suit phones. One panel at a time, with the story jumping forward in the gap between panels, where the reader fills in what happened. Most comic ads still fall apart. Too many tiny panels, captions nobody can read, and a drawn "customer" saying the product changed their life, which is a claim you can't back.
@@ -27,7 +27,6 @@ you_get:
   - A hero line and palette to reuse in every prompt
   - A panel list with movement, cut, motion, caption, narration and seconds
   - A cast note on who carries the ad, ready for the shots skill
-  - A score out of 100 for how many of its own checks the script passes, with any it missed
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
@@ -67,8 +66,7 @@ output_shape: |
   NOTES   <buyer words used, claims left out, MISSING>
   CAST NOTE  <who carries it, why, voice, what never changes>
 
-  SCORE  <n>/100 (<passed> of <total> checks passed)
-  Missed: <one line per check missed, or none>
+  CHECKS MISSED: <one line each, or none>
 
 example:
   business: sprout
@@ -100,6 +98,8 @@ example:
     PALETTE black, cream, sky blue, warm grey, and the pack's deep
             green, which only the product wears.
 
+    Panel | movement | transition in | what's drawn | motion | caption
+      | narration | s
     1 | set | opens | the hero at the counter, a glass of green
         sludge raised, a sweat drop by her eye | the glass layer
         drifts forward | CHOKING ON POWDER AGAIN | "Every morning,
@@ -146,6 +146,8 @@ example:
     in her, and a narrator keeps the claim out of a drawn mouth.
     Narrator: a dry, friendly adult voice, quick. Never change: the
     dark ponytail, the navy blazer, the gold hoops.
+
+    CHECKS MISSED: none
 
 tweaks:
   - what: Want a still instead?

@@ -108,27 +108,27 @@ example:
     1 | doubt | screen 2 | "$29.99" beside "DISCOUNT AUTO-APPLIED"; the
         text sign-up condition is only in the footer
         Fix: the condition next to the price | Sev 4 | Ease high | Data: yes
-    2 | doubt | screen 2 | "Renews at $49.99" in small type under the button
-        Fix: both prices together in the plan box | Sev 3 | high | yes
-    3 | glance | screen 1 | "Superfood Gummies" / "revive whole body vitality"
+    2 | glance | screen 1 | "Superfood Gummies" / "revive whole body vitality"
         Fix: say what it is, greens, vitamins and fiber in one pack you
         eat | Sev 3 | high | yes
-    4 | doubt | screen 1 | "Supports immunity + stress relief", "Promotes
+    3 | doubt | screen 1 | "Supports immunity + stress relief", "Promotes
         mental clarity + energy"; the study measured 2 vitamins
         Fix: remove until a claims check backs them | Sev 3 | high | no
-    5 | doubt | screen 2 | "30-Day Money-Back Guarantee"; "applies only to
+    4 | skim | screens 1-2 | 52% in the bar, "up to 55%" on the badge, 55%
+        in the pop-up | Fix: one discount, stated in money | Sev 3 | med | no
+    5 | doubt | screen 2 | "Renews at $49.99" in small type under the button
+        Fix: both prices together in the plan box | Sev 3 | high | yes
+    6 | doubt | screen 2 | "30-Day Money-Back Guarantee"; "applies only to
         your initial purchase" is in the last FAQ
         Fix: "on your first order" beside the button | Sev 3 | high | no
-    6 | skim | screens 1-2 | 52% in the bar, "up to 55%" on the badge, 55%
-        in the pop-up | Fix: one discount, stated in money | Sev 3 | med | no
     7 | skim | screen 1 and bottom | 4.8 (100,000) at the top, 4.75 (109,639)
         in the widget | Fix: one rating with its source | Sev 2 | med | no
     8 | skim | bottom | reviews sit at the very end
         Fix: three reviews near the button | Sev 2 | med | yes
 
     QUICK WINS THIS WEEK
-    - Findings 1, 2 and 5: the full price and guarantee terms at the button
-    - Finding 4: pull the two unbacked claims
+    - Findings 1, 5 and 6: the full price and guarantee terms at the button
+    - Finding 3: pull the two unbacked claims
     - Remove "Limited Time Sale" (the price cut is "indefinitely")
 
     TESTS
@@ -137,6 +137,11 @@ example:
     - One-time purchase shown fairly, without "No First Order Discount":
       fewer subscription-wary buyers leave at the plan box
     Sample size can't be judged without analytics.
+
+    PAGE SCORE
+    Now: 100 - 25 (one sev 4) - 50 (five sev 3) - 8 (two sev 2) = 17
+    After the quick wins (findings 1, 3, 5, 6 fixed):
+    100 - 20 (two sev 3) - 8 (two sev 2) = 72
 
     WHAT THE PAGE CAN'T TELL US
     MISSING: the ad that sends most traffic, the phone first screen and

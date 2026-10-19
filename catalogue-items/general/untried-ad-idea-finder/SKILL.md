@@ -1,6 +1,6 @@
 ---
 name: untried-ad-idea-finder
-description: Use when a brand's ads feel stuck and you want to know what hasn't been tried. It maps past ads through five lenses (moment, value, buyer knowledge, opening, form), lists the proof on hand, ranks the five biggest gaps, and writes one new ad idea for each, with the question its test will answer and a five-link check. Ends with a score out of 100 against its checks. It is not a health check of an ad account.
+description: Use when a brand's ads feel stuck and you want to know what hasn't been tried. It maps past ads through five lenses (moment, value, buyer knowledge, opening, form), lists the proof on hand, ranks the five biggest gaps, and writes one new ad idea for each, with the question its test will answer and a five-link check. Ends with any check it still missed. It is not a health check of an ad account.
 ---
 
 # Untried ad idea finder
@@ -9,26 +9,26 @@ You hand back a gap map of a brand's ads and five new ideas, each one a test. Ev
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
-Check for these first. The result is much better with them.
+This skill runs on its own. What's below makes the result better, but none of it is required.
 
-**Needed:**
-- **Brand brain** (its buyers part), made by the [Website brand file builder](https://useaiblocks.com/skills/website-brand-file-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
+**Works best with** (or they can paste their own instead):
+- **Brand brain** (its buyers part), made by the [Website brand brain builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
 
 **Makes it better (optional):**
 - **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
 - **Reference ads** (yours): ads you like and want to learn from, as screenshots or links.
 - **Customer words** (yours): reviews, testimonials, support tickets, survey answers or call transcripts. Export them or paste them in.
 
-**The steps before this one** (do each once, then reuse what it makes):
-1. **Brand brain** with the [Website brand file builder](https://useaiblocks.com/skills/website-brand-file-builder). Bring your website, customer words (optional), your results (optional).
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **Brand brain** with the [Website brand brain builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
 2. This one.
 
 **From the brand brain, read:** `00-start-here.md`, `log.md`, `offers.md`, `customers.md`. Take what changed and when, the offers that ran, and who buys. Source notes and rejected ideas never go into the result.
 
-How to check:
-- **In Claude Code,** look in the project first. A brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name, or ask for their path.
-- **In a chat,** ask once: "Do you have your brand brain, your results, reference ads? Attach or paste them here." If they're already in this project's files, use those.
-- **If one is missing,** say so before you start, in one line: the result will be much better with it, with the link to make it once and reuse it. Next time they can attach it (or, in Claude Code, give its path). Then carry on with what you have and mark each gap with `MISSING:`.
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In Claude Code, look in the project too: a brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name.
+2. **If something is missing, advise, don't block.** In one short message, say this skill works on its own and will be better with your brand brain, your results, reference ads. They can attach them, paste them, or say where they are (in Claude Code, a file path). Name the recommended steps above as a suggestion, with their links. Then ask: "Add them, or shall I go ahead with what you've given me?" If their message already says to go ahead, skip this and start.
+3. **When they say go ahead,** do the whole job with what you have. Mark each gap with `MISSING:` and never invent a fact to fill it. List the gaps at the end so they can fill them in later.
 
 **Tools that do this best:**
 - **Meta Ads Manager:** An export by ad gives the 'measured' grade, with spend and results for each ad over the dates you pick.
@@ -65,25 +65,25 @@ How to check:
     - Label: "measured" only when a measured result sits behind this cell, otherwise "guess".
     Call something new or limited only if the recent changes say so.
 12. **Check the five links, then set the order.** In order: who (a stranger can tell whose moment it is), gain (what changes, in their words), proof (shown or sourced), risk (the doubt answered, or what makes yes safe), step (one action, one page). Mark each strong, thin or missing, and name what carries it (headline, picture, setting, caption or page). Who and gain must land in the first second. Fix the weakest link before you set the final order. A link still missing after the fix gets `MISSING: <what>`, and that idea moves below the ones that hold.
-13. **Score it.** Check the map and ideas against the 8 checks under "Check before you hand it back". Fix any failed check you can, then check again. The score measures how well this gap map meets those checks: checks passed divided by 8, times 100, rounded. Show it as `SCORE <n>/100 (<passed> of 8 checks)`, with one line for each check still missed.
+13. **Run the checks.** Check the map and ideas against the 8 checks under "Check before you hand it back". Fix any failed check you can, then check again. Show `CHECKS MISSED: <one line each>`, or "none".
 
 ## What you hand back
-A markdown file `ad-gap-map.md`: evidence line, record, proof on hand, the five lenses with the grid, ranked gaps, proof worth collecting, and the five ideas in final order, then the score with one line per check still missed. Then two sentences on the biggest gap and the first idea to make. Don't write to the brand file; the person decides what to record.
+A markdown file `ad-gap-map.md`: evidence line, record, proof on hand, the five lenses with the grid, ranked gaps, proof worth collecting, and the five ideas in final order, then the `CHECKS MISSED` line. Then two sentences on the biggest gap and the first idea to make. Don't write to the brand file; the person decides what to record.
 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
-When you've handed it back, ask in one short question what they want to do next. Offer these, and say they can type their own:
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - **Plan what to test** with the [Ad test brief writer](https://useaiblocks.com/skills/ad-test-brief-writer). It takes the audit report and buyer brief.
 - **Write the ad copy** with the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer). It takes the buyer brief.
-- **Make image ads** with the [Image ad brief settings writer](https://useaiblocks.com/prompts/image-ad-brief-settings-writer). It takes the buyer brief.
-- **Make video ads** with the [Video ad script type planner](https://useaiblocks.com/skills/video-ad-script-type-planner). It takes the buyer brief.
-- **Set up AI to work for you** with the [Ad prompt comparison scorer](https://useaiblocks.com/skills/ad-prompt-comparison-scorer). It takes the buyer brief.
+- **Make image ads** with the [Accurate product image ad maker](https://useaiblocks.com/prompts/accurate-product-image-ad-maker). It takes the buyer brief.
+- **Make video ads** with the [Video ad script type picker](https://useaiblocks.com/skills/video-ad-script-type-picker). It takes the buyer brief.
+- **Set up AI to work for you** with the [Old vs new ad prompt scorer](https://useaiblocks.com/skills/old-vs-new-ad-prompt-scorer). It takes the buyer brief.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
 ## Check before you hand it back
 - The first line grades the evidence.
-- Nothing is "measured" without numbers and dates. "Still running" is not a win. No invented ROI figures or performance scores; the only score is the checks score.
+- Nothing is "measured" without numbers and dates. "Still running" is not a win. No invented ROI figures or performance scores.
 - Every gap is "not run" or "not known, ask", never assumed.
 - Each idea fills one gap, differs from the others on two lenses or more, and answers its own test question. No two share both a moment and a proof kind.
 - Every proof named is on file with its source. Every moment has a source or says "inferred".

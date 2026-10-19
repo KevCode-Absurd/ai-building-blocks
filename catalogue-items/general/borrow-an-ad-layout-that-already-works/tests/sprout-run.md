@@ -190,7 +190,7 @@ Nothing gets built until the logo, typefaces and hand photo arrive.
 
 ## Finishing the picture
 
-The picture here is your own photo with its background removed, so it needs a cut-out rather than generation. If you later want a daily pack shot generated, it has to be anchored to a real pack photo. After approval I'll write that prompt for `product-exact-image-prompt-writer`. To use it:
+The picture here is your own photo with its background removed, so it needs a cut-out rather than generation. If you later want a daily pack shot generated, it has to be anchored to a real pack photo. After approval I'll write that prompt for `accurate-product-image-ad-maker`. To use it:
 
 - **ChatGPT or Gemini:** paste the prompt into a chat and ask for the image. ChatGPT uses GPT Image and Gemini uses Nano Banana. Free plans have tight daily limits.
 - **Higgsfield:** paste the prompt into its image tool, or connect Higgsfield to Claude.

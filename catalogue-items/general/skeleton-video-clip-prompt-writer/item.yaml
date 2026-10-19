@@ -1,7 +1,7 @@
 slug: skeleton-video-clip-prompt-writer
 renamed_from: turn-skeleton-script-into-shots-ai-can-make
 name: "Skeleton video clip prompt writer"
-summary: "Paste your skeleton ad script and attach product photos. Get clip prompts and a score out of 100."
+summary: "Paste your skeleton script and attach product photos. Get every image and clip prompt, plus an edit list."
 category: general
 boards: [ecommerce]
 type: skill

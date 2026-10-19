@@ -50,11 +50,15 @@ how_it_works:
 output_shape: |
   SHOPPER'S QUESTION: <what the shopper must do or understand>
 
-  What was seen        | Where (capture, address, date, screen, section)
-                       | What it might mean for a shopper
-                       | Change or test to try
-                       | Still unknown
-  <one row per observation>
+  CAPTURE NOTE  <which captures, and what in them is unconfirmed>
+
+  <n>. Seen:    <what was seen>
+     Where:   <capture ID, address, date, screen size, section>
+     Means:   <what it might mean for a shopper>
+     Try:     <change or test; what to keep; the number to watch>
+     Unknown: <what is still unknown>
+     Tag:     <blocks | slows | minor>
+  (one entry per observation)
 
   WHAT THE CAPTURES COULDN'T SHOW
   - <anything needing a click, choice, form or purchase>
@@ -63,8 +67,8 @@ output_shape: |
   - <test>
 
   TASK CLARITY SCORE
-  Now: 100 - <deductions> = <score>
-  With the changes made: <score>
+  Now: 100 - 25 x <blocks> - 10 x <slows> - 3 x <minor> = <score>
+  With the changes made: 100 - <deductions left> = <score>
 
   NEXT 3 STEPS
   1. <step>  2. <step>  3. <step>
@@ -87,6 +91,10 @@ example:
     first order only. Buyer doubt on file: "Will the price jump
     after the first order?"
   output: |
+    SHOPPER'S QUESTION: arriving from a "61% off" ad, can a shopper see
+    what they pay today, what it renews at and what the guarantee
+    covers, before tapping Start Now?
+
     CAPTURE NOTE
     C1 is page text only. Screen size: MISSING, so nothing below is
     confirmed for the phone layout. The default plan and the gallery
@@ -101,6 +109,7 @@ example:
        Try:     one number across ad, bar, badge and pop-up. Keep
                 $29.99 and $1.07/day. Watch: buy rate from ad clicks.
        Unknown: which number is the current one.
+       Tag:     slows
 
     2. Seen:    "$29.99" and "DISCOUNT AUTO-APPLIED". Only the footer
                 says the offer "assumes customer has received and
@@ -109,6 +118,7 @@ example:
        Means:   a shopper may expect $29.99 without signing up.
        Try:     "with text sign-up" next to $29.99.
        Unknown: what checkout charges without the sign-up.
+       Tag:     blocks (what they pay today is the question)
 
     3. Seen:    "Renews at $49.99 each 4 weeks" under the button,
                 while $1.07/day sits in the plan box.
@@ -118,14 +128,17 @@ example:
        Try:     the renewal price beside $29.99. Watch: refund and
                 cancel requests.
        Unknown: text sizes. Needs a screenshot.
+       Tag:     slows
 
     4. Seen:    plan box "30-Day Money-Back Guarantee". Last FAQ:
                 "This policy applies only to your initial purchase."
        Where:   C1, plan box, FAQ
        Means:   a buyer may think every box is covered.
        Try:     "30-day money-back guarantee on your first order".
+       Unknown: whether shoppers read the FAQ.
+       Tag:     slows
 
-    WHAT THE CAPTURE COULDN'T SHOW
+    WHAT THE CAPTURES COULDN'T SHOW
     - What fills the first phone screen (inferred in C1, not seen).
     - Which plan is selected on load (inferred in C1).
     - Whether Start Now works, and the checkout total.
@@ -136,6 +149,10 @@ example:
       discount shows and the checkout total with and without the
       text sign-up. Stop before paying.
     - Check which plan is selected when the page loads.
+
+    TASK CLARITY SCORE
+    Now: 100 - 25 x 1 - 10 x 3 - 3 x 0 = 45
+    With the changes made: 100 - 0 = 100. It says nothing about sales.
 
     NEXT 3 STEPS
     1. Take phone screenshots top to bottom, with date and screen size.

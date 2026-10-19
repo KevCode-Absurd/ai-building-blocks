@@ -1,10 +1,10 @@
 new_slug: video-ad-style-remake-planner
 name: "Video ad style remake planner"
-summary: "Paste your best ad. Get a video remake plan, every word kept, and a score out of 100."
+summary: "Paste your best ad. Get a video remake plan with every word kept, a shot table and a cast note."
 job: make-video-ads
 
 headline: "Video ad style remake planner"
-subhead: Give it an ad you already run and the new video style you want. It plans the remake shot by shot, keeps every word, and warns if the new style weakens the part that sells. You get a shot table, a cast note and a score out of 100.
+subhead: Give it an ad you already run and the new video style you want. It plans the remake shot by shot, keeps every word, and warns if the new style weakens the part that sells. You get a shot table, a cast note and a list of every change and flag.
 
 explain: |
   When an ad works, you want it in more places: the image ad as a short video, the live-action video as claymation or a tall 9:16 cut. Remaking it by hand usually means rewording it, and the rewording often drops the one line that was doing the selling.
@@ -27,7 +27,6 @@ you_get:
   - A slots table, with any slot that can't be filled flagged
   - A cast note naming who carries the remake and the clips skill that makes it
   - Notes on the beat that sells and its risk, timing changes, replacements and claim flags
-  - A score out of 100 for how many of its own checks the plan passes, with any it missed
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
@@ -75,8 +74,7 @@ output_shape: |
     Flag (left as is, you decide): <lines that break a claim rule>
     MISSING: <files or facts not on hand>
 
-  SCORE  <n>/100 (<passed> of <total> checks passed)
-  Missed: <one line per check missed, or none>
+  CHECKS MISSED: <one line each, or none>
 
 example:
   business: sprout
@@ -153,6 +151,8 @@ example:
       $49.99.
       MISSING: the P1 image file. Check its setting and framing
       against shot 1 before making the video.
+
+    CHECKS MISSED: none
 
 tweaks:
   - what: A still or carousel instead

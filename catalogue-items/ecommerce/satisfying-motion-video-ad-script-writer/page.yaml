@@ -1,10 +1,10 @@
 new_slug: satisfying-motion-video-ad-script-writer
 name: "Satisfying motion video ad script writer"
-summary: "Paste how your product is used. Get a satisfying-motion opening, demo script and score out of 100."
+summary: "Paste how your product is used. Get a satisfying-motion opening, a demo script and a cast note."
 job: make-video-ads
 
 headline: "Satisfying motion video ad script writer"
-subhead: Give it your product photo, how it's used and one fact you can prove. It picks one real motion with a clear finish, such as a fill, click or peel. You get a wordless opening, a short demo script, a cast note and a score out of 100.
+subhead: Give it your product photo, how it's used and one fact you can prove. It picks one real motion with a clear finish, such as a fill, click or peel. You get a wordless opening, a short demo script and a cast note for the video stages.
 
 explain: |
   People stop for a motion they can see coming to an end: a seal peeling off in one piece, a glass filling to its line, a lid clicking shut. Writers on these clips put it down to the "just right" feeling of things being finished and in order. Most attempts fall flat. The product spins on a turntable, nothing actually finishes, or the shot is slowed and splashed until it looks fake.
@@ -27,7 +27,6 @@ you_get:
   - A wordless opening with its overlay and an exact visual note
   - Demo lines with spoken words, on-screen text and visual notes
   - A cast note that makes the product the avatar for the video stages
-  - A score out of 100 for how many of its own checks the script passes, with any it missed
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
@@ -74,8 +73,7 @@ output_shape: |
   Inferred: <motions or sounds not in the facts>
   MISSING: <..>
 
-  SCORE  <n>/100 (<passed> of <total> checks passed)
-  Missed: <one line per check missed, or none>
+  CHECKS MISSED: <one line each, or none>
 
 example:
   business: sprout
@@ -115,8 +113,8 @@ example:
 
     DEMO
     Line | Spoken | On-screen | Visual note
-    2 | "That's the whole routine. One pack, straight into your hand."
-        | - | Same palm, same counter, from above
+    2 | "One pack, straight into your hand." | - | Same palm, same
+        counter, from above
     3 | "No water, no mixing, no shaker to wash." | - | The hand closes
         over the gummies; the counter beside it is bare
     4 | "One pack has 60-plus ingredients, 21 vitamins and minerals,
@@ -127,17 +125,19 @@ example:
         $49.99 every 4 weeks. Start your first pack | Pouch and an
         empty pack on the counter, still
 
+    CAST NOTE  The product carries it: the gummies out of a daily pack,
+    one adult hand cropped at the wrist, a sunny kitchen counter. The
+    buyer knows Sprout, so the product itself is the draw. Next: the
+    storyboard skill builds the product and set sheets, then the shot
+    list skill makes the clips.
+
     Inferred: the soft tap and the way the bears settle (not in the
     facts). The tear is shown already done, along the top, the only
     way the brand allows.
     MISSING: what a single daily pack looks like (colour, printing),
     needed before the opening can be filmed or made.
 
-    CAST NOTE  The product carries it: the gummies out of a daily pack,
-    one adult hand cropped at the wrist, a sunny kitchen counter. The
-    buyer knows Sprout, so the product itself is the draw. Next: the
-    storyboard skill builds the product and set sheets, then the shot
-    list skill makes the clips.
+    CHECKS MISSED: none
 
 tweaks:
   - what: What's in focus

@@ -1,7 +1,7 @@
 slug: sales-copy-editor
 renamed_from: edit-a-draft-so-it-sells
 name: "Sales copy editor"
-summary: "Paste a draft and facts. Get weak lines fixed and a score out of 100, before and after."
+summary: "Paste a draft and facts. Get weak lines fixed, each with its gain, and a one-line verdict."
 category: general
 boards: [ecommerce]
 type: skill
@@ -14,7 +14,7 @@ inputs:
   - {type: ad_copy, required: false}
 outputs:
   - {type: audit_report}
-uses: [ai-sounding-copy-editor, sales-copy-readiness-checker, clear-before-clever-copy-checker]
+uses: [anti-ai-slop-copy-editor, sales-copy-readiness-checker, clear-before-clever-copy-checker]
 origin: rebuilt
 source_ids: [CES-022, CES-024]
 version: 2.1.0

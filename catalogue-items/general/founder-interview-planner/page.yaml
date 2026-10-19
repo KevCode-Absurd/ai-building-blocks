@@ -1,0 +1,195 @@
+name: "Founder interview planner"
+new_slug: founder-interview-planner
+summary: "Attach your brand file. Get a ranked founder call plan, a written form, and every answer filed."
+job: brand-file
+
+headline: "Founder interview planner"
+subhead: Attach your brand file, then paste the founder's answers after the call. It turns every unknown and guess into a ranked question for the call or a written form. You get a call plan, each answer filed with its source and a one-page readback.
+
+explain: |
+  Your website, reviews and ad results show what buyers do and say. They can't show why the product is made the way it is, which claims you can prove, who may appear in an ad, or what the founder will never sign off. Writers and AI tools guess those things, and the guesses end up in ads.
+
+  This skill reads your brand file and turns every unknown, guess, clash and unproven claim into a question, tagged with the file its answer will fill. It ranks them so the call covers what blocks work today, like proof and permissions, and sends the facts and files ahead as a written form. On the call it asks about real moments, not habits, and follows every claim with "how do you know?". Afterwards each answer lands in the right file with the founder's name, the date and the question number. A founder's word never counts as proof, so a claim stays pending until its document is on file.
+
+when:
+  - You've built a brand file from your website and it's full of unknowns and guesses.
+  - A writer or agency keeps asking the founder the same questions one at a time.
+  - You're about to make ads with people, claims or footage and need to know what's allowed.
+
+you_give:
+  - Your brand file, read first
+  - The founder's answers, as call notes, a transcript or written replies (after the call)
+  - Gaps you've already spotted, such as a number that differs between two pages (optional)
+you_get:
+  - A ranked call plan of about 10 questions, each tied to the gap it fills
+  - A written form for facts and files, plus the documents to bring
+  - Every answer filed in the right brand file, tagged with founder, date and question number
+  - A one-page readback of what you heard, what's still needed and what was decided
+  - After the call, a count of how many gaps the answers closed
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Attach your brand file and ask for the call plan. Send the written form to the founder two days before the call.
+  - On the call, work down the ranked list. Leave anything not reached for the written form.
+  - After the call, paste the notes or transcript back in and ask it to file the answers.
+  - Send the readback to the founder and chase the documents it lists.
+
+how_it_works:
+  - title: Collects the gaps
+    text: Turns every unknown, inferred and disputed tag, and every pending claim, into a question tied to the file it will fill.
+  - title: Ranks them
+    text: Puts proof, permissions and the live offer first, because they block work today. Then the buyer and the voice. History comes last.
+  - title: Splits call from form
+    text: Keeps about 10 story and judgement questions for the call, and sends facts, lists and files ahead in writing.
+  - title: Asks for real moments
+    text: Asks about the last time something happened, follows each claim with "how do you know?", and asks for a sentence or photo when it gets an adjective.
+  - title: Files each answer
+    text: Puts every answer in the right file and section, such as offers.md or proof-and-claims.md, tagged with founder, date and question number.
+  - title: Closes the loop
+    text: Writes a one-page readback, logs the decisions and updates the two-sentence diagnosis in the start file.
+
+output_shape: |
+  BEFORE THE CALL
+  Quick checks (yes or no): <fact already confirmed, worth a recheck>
+  Call plan, in rank order:
+    Q<n> <question>  <- fills <gap tag> in <file>
+  Written form:
+    <question for a fact, list or file>  <- fills <gap tag> in <file>
+  Please bring: <documents, samples, photos>
+
+  AFTER THE CALL
+  <file>, <section>: <answer> [confirmed: founder, <date>, Q<n>]
+  Claims still pending: <claim> needs <document>
+  Rights on file: <who or what>, <where>, <how long>, <paid or unpaid>
+
+  READBACK
+  What we heard: <...>
+  Still needed: <documents, files, rights, questions>
+  Decisions: <...>
+  Not answered: <Q numbers>
+
+  CHECKS MISSED  <one line each, or none>
+  Gaps closed (after the call): <filed> of <collected>
+
+example:
+  business: sprout
+  input: |
+    [the skill]
+
+    Brand file: the Sprout folder built from the website, reviews and
+    ads (00-start-here.md to log.md).
+
+    Gaps it already shows:
+    - Star rating stated four ways [disputed]
+    - "21" and "over 20" vitamins and minerals [disputed]
+    - One ad says "probiotics"; the ingredient list has none
+    - Grams of sugar per pack [unknown: founder]
+
+    The call is next Tuesday. Make the call plan. No answers yet.
+  output: |
+    BEFORE THE CALL
+
+    Quick checks (yes or no)
+    - offers.md says 28 daily packs per pouch, about 20 g each. Right?
+    - offers.md quotes the FAQ: the 30-day guarantee "applies only to
+      your initial purchase". Is that the rule buyers should read first?
+
+    Call plan, in rank order
+    Q1  "1M+ customers" and "less than 1% use our guarantee": what's
+        the source and date for each, and can you send the file?
+        <- pending in proof-and-claims.md
+    Q2  "Supports immunity + stress relief": what backs it? The study
+        we have measured 2 vitamins.  <- pending in proof-and-claims.md
+    Q3  The ad says "gut-supporting probiotics". Is there a probiotic
+        in the product, or should that ad come down?
+        <- disputed in proof-and-claims.md
+    Q4  Which first-order discount is real? The site shows 52%, 55%,
+        49% and 58%, and ads say 61%.  <- disputed in offers.md
+    Q5  The paid former pro athlete on the site: where and for how
+        long may we use him?  <- unknown in proof-and-claims.md, rights
+    Q6  Cancelling is the loudest complaint on review sites. Walk me
+        through what a customer does to cancel.
+        <- inferred in customers.md, the price doubter
+    Q7  Tie-in flavours: what may we say and show about the partner?
+        <- unknown in proof-and-claims.md, rights
+    Q8  The week you decided on a gummy and not another powder: what
+        was going on?  <- unknown in business.md, story
+    Q9  Tell me about the last customer who surprised you.
+        <- founder's view for customers.md
+    Q10 What would make you pull an ad the same day?
+        <- house rules in 00-start-here.md
+
+    Written form
+    - Which star rating is right, where it comes from, and its date
+      <- disputed in proof-and-claims.md
+    - 21 vitamins and minerals, or "over 20"? Which page is wrong?
+      <- disputed in offers.md
+    - Grams of sugar per pack, Low Sugar and Sugar-Free
+      <- unknown: founder in offers.md
+    - The deepest discount you'd ever show, and the offers you never run
+      <- unknown in offers.md, policies
+    - Three ads you wish were yours, three you never want to look like
+      <- unknown in voice-and-look.md
+    - Which photos and videos are cleared for paid ads
+      <- unknown in proof-and-claims.md, rights
+
+    Please bring
+    - The 2025 study report and the latest batch test report
+    - The survey of 3,000+ customers, with its questions and dates
+    - Logo files and the name of the display font
+    - Three things you wrote yourself: an email, a post, a voice note
+
+    AFTER THE CALL
+    Paste your notes or transcript. Each answer will be filed as
+    [confirmed: founder, <date>, Q<n>], claims stay pending until
+    their file arrives, and you'll get a one-page readback.
+
+tweaks:
+  - what: The brand file you attach
+    how: The fuller it is, the shorter the call. A file built from the website and reviews first turns most questions into quick checks.
+  - what: Gaps you've spotted
+    how: List them ("two pages give different customer counts") and each one becomes a ranked question with its target file.
+  - what: Call or written only
+    how: Say "written only" if the founder can't do a call. The ranked list goes to the top of the form, and each question asks for an example in place of a follow-up.
+  - what: Online store add-on
+    how: For physical products it adds questions on how the product looks, how it's used and which five photos you need, so pictures and videos get the product right.
+
+judge:
+  - Nothing your brand file already confirms is asked as a fresh question.
+  - Every question says which gap it fills and which file the answer goes to.
+  - Every filed answer carries founder, date and question number, in the file the skill's table names.
+  - Beliefs are filed as story, not as claims. "We think it works because..." doesn't become a selling line.
+  - Rights are recorded with who, where, how long and paid or unpaid. No limits on file means no use.
+
+test:
+  - Before the call, compare the plan with your brand file. Anything already tagged confirmed should be a quick check, not a fresh question.
+  - Feed it one answer that's a belief ("we think people stay because it's so easy to use"). It should land in business.md as story, not in proof-and-claims.md as a claim.
+  - Give it an answer about who may appear in ads with no limits stated. It should record the right as incomplete and ask who, where and for how long.
+  - Open each brand file after filing. Every answer should sit in the section the table names, with its tag.
+
+improve:
+  - Cut the question bank to fit you. Delete groups that don't apply (people and rights if nobody will appear) and add ones your field needs, such as licences or safety tests.
+  - Change the ranking in step 2 if something else blocks your work first, such as stock or approvals.
+  - Save the founder's own writing samples in voice-and-look.md. Later skills learn the voice from those, not from adjectives.
+  - Run it again after each big launch. The new gaps in log.md become the next call plan.
+  - Pair it with the skill that builds the brand file from your website first, so the call fills gaps instead of starting from zero.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Claude, ChatGPT and Gemini all handle this well, as long as they can read all eight files at once."}
+    - {name: "Zoom or Google Meet transcripts", why: "A written transcript of the call means every answer is filed in the founder's exact words."}
+  inputs:
+    - "Your brand file's log.md with its open questions, so nothing that's already waiting gets missed"
+    - "Three things the founder wrote, like an email or a post, so the voice file learns from real lines"
+    - "Any rejected ads and the platform's reason, so the claims questions start from real problems"
+    - "Your last 20 reviews, so the founder's view of the buyer can be checked against real words"
+
+terms:
+  - term: Readback
+    meaning: A one-page note sent after the call that repeats what you heard, so the founder can correct it.
+  - term: Pending claim
+    meaning: Something the founder says is true but hasn't proven with a document yet. It stays out of ads until it's proven.
+  - term: Rights
+    meaning: Permission to use a person, photo, video or song in ads, with limits on where and for how long.
+  - term: Tag
+    meaning: The label on each fact in your brand file saying whether it's confirmed, inferred, disputed or unknown.

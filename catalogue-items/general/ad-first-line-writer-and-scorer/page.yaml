@@ -80,7 +80,7 @@ output_shape: |
   <buyers or moments no hook flags>
 
   SET SCORE (both modes)
-  <points won>/<4 x hooks> = <score> out of 100 (gate failures count 0)
+  <points won>/<4 x hooks> = <score> out of 100 (<each hook's points, added>; gate failures count 0)
   With the fixes, score mode: <points>/<4 x hooks> = <score> out of 100
 
 example:
@@ -179,6 +179,9 @@ example:
     News (the change): MISSING the date of "Subs Now Start at $29.99".
     Proof (the live test): MISSING unbroken footage. Timing: MISSING an
     end date. Founder, customer, expert: MISSING a real speaker.
+
+    SET SCORE
+    33/40 = 83 out of 100 (3+3+3+4+3+3+4+3+3+4; no gate failures)
 
 tweaks:
   - what: How much the buyer knows

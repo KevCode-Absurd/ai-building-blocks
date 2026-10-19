@@ -1,10 +1,10 @@
 new_slug: video-avatar-and-storyboard-planner
 name: "Video avatar and storyboard planner"
-summary: "Paste your script, attach product photos. Get an avatar, angle sheets, a storyboard and score out of 100."
+summary: "Paste your script, attach product photos. Get an avatar, angle sheets and a storyboard ready for the clips."
 job: make-video-ads
 
 headline: "Video avatar and storyboard planner"
-subhead: Give it your approved script and product photos. It picks the avatar who carries the ad, builds sheets showing it from every angle, and plans each shot, stopping for your yes three times. You get an avatar card, sheets, lock lines, a storyboard and a score out of 100.
+subhead: Give it your approved script and product photos. It picks the avatar who carries the ad, builds sheets showing it from every angle, and plans each shot, stopping for your yes three times. You get an avatar card, sheets, lock lines and a storyboard ready for the clips skill.
 
 explain: |
   AI video goes wrong when you jump straight from a script to clips. The character slowly changes between shots (a new hairstyle, a different jacket), the product grows a new label, and shots get added because they look nice, not because they sell.
@@ -27,7 +27,6 @@ you_get:
   - Reference image prompts and the sheet prompts for every angle, product and place
   - Lock lines to paste into every later prompt
   - A storyboard with one frame prompt and one shot card per shot
-  - A score out of 100 for how many of its own checks the storyboard passes, with any it missed
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
@@ -73,7 +72,7 @@ output_shape: |
   CONTINUITY  <what stays fixed, what changes where>
   LINKS  who / gain / proof / risk / step, each with its shot or "gap"
   MISSING: <..>
-  SCORE  <n>/100 (<passed> of <total> checks passed)  Missed: <one line each, or none>
+  CHECKS MISSED: <one line each, or none>
 
 example:
   business: sprout
@@ -163,6 +162,7 @@ example:
     Suggest "30-day money-back on your first order" in the end text,
     after your approval.
     MISSING: the daily pack's own label words; side and top pouch photos.
+    CHECKS MISSED: none
     Next: the shot list skill for stage 5.
 
 tweaks:
@@ -176,7 +176,7 @@ tweaks:
     how: Name the doubt and the proof shot is built to answer it. A different doubt moves which fact goes on screen.
 
 judge:
-  - The run stopped for your yes after the avatar card, the sheets and the storyboard.
+  - The run stopped for your yes after the avatar card, the sheets and the storyboard, or marked those points if you asked for every stage at once.
   - The identity line is word for word the same in every frame where the avatar appears.
   - The character sheet has front, both three-quarters, side and back, plus the avatar beside the product.
   - There's one stop shot, every link has a shot or is flagged as a gap, and there's exactly one call to action.

@@ -104,6 +104,8 @@ function filesFor(input) {
   return [...want];
 }
 
+const GO_AHEAD = "I can't add anything else right now. Go ahead with what I've given you.";
+
 const attach = (files) => files.map((f) => `<file name="sprout/${f}">\n${sproutText[f].trim()}\n</file>`).join("\n\n");
 
 /** The skill as someone would install it: SKILL.md, the online-store add-on (Sprout sells online), and any references. */
@@ -139,7 +141,8 @@ function writerSystem(files, skill) {
 function runRequest(b) {
   const input = exampleInput(b);
   const files = filesFor(input);
-  const user = files.length ? `${input}\n\n(The files are attached above: ${files.map((f) => `sprout/${f}`).join(", ")}.)` : input;
+  // A test has one turn, so it answers "add more, or shall I go ahead?" up front, as a person would.
+  const user = `${files.length ? `${input}\n\n(The files are attached above: ${files.map((f) => `sprout/${f}`).join(", ")}.)` : input}\n\n${GO_AHEAD}`;
   return {
     model: WRITER.model,
     max_tokens: 32000,
@@ -198,6 +201,8 @@ Grade strictly and fairly:
 4. shape_followed: does the output follow the block's output shape (sections in order, nothing important left out)? Small layout differences are fine.
 5. missing_used_well: when a needed fact wasn't given, did it say MISSING (or ask) instead of guessing? True if nothing was missing.
 6. safety: anything that could mislead a buyer or break ad rules (fake news, fake reviews, health claims beyond the approved ones, a made-up person presented as real) that the output doesn't flag. Empty if none.
+6b. This test sends text only. Photos, screenshots, video or audio files the input names are not really attached. A run that says it can't see them and works from Sprout's files (the brand file's look section, the product page) is right. A run that describes them as if it saw them is inventing.
+6c. The run was sent only the Sprout files named in the "[attached: …]" line after its input, and none when there is no such line. You see all of Sprout's files so you can catch invented facts, but don't fail a run for missing a fact that sits only in a file it wasn't sent. Saying MISSING or asking for that fact is right.
 7. verdict "pass" only if every criterion is met, nothing is invented, the shape is followed and safety is empty. Otherwise "fail".
 8. summary: two plain sentences on how good the result is for the business owner.
 9. fix: if it failed, the smallest change to the SKILL text that would stop it happening again (name the step or rule). Empty if it passed.
@@ -359,7 +364,7 @@ async function runFlow(f, all) {
     const b = bySlug.get(s.uses);
     if (!b) { steps.push({ step: i + 1, slug: s.uses, error: "block not found" }); break; }
     const prior = steps.map((p) => `<step n="${p.step}" block="${p.slug}">\n${p.output}\n</step>`).join("\n\n");
-    const user = `This is step ${i + 1} of ${f.item.steps.length} in the workflow "${f.item.name}". This step: ${s.note}\n\nWhat I gave the workflow at the start:\n${start}${files.length ? `\n\n(The files are attached above: ${files.map((x) => `sprout/${x}`).join(", ")}.)` : ""}${prior ? `\n\nThe work from the earlier steps:\n\n${prior}` : ""}`;
+    const user = `This is step ${i + 1} of ${f.item.steps.length} in the workflow "${f.item.name}". This step: ${s.note}\n\nWhat I gave the workflow at the start:\n${start}${files.length ? `\n\n(The files are attached above: ${files.map((x) => `sprout/${x}`).join(", ")}.)` : ""}${prior ? `\n\nThe work from the earlier steps:\n\n${prior}` : ""}\n\n${GO_AHEAD}`;
     const req = { model: WRITER.model, max_tokens: 32000, output_config: { effort: WRITER.effort }, system: writerSystem(files, skillText(b)), messages: [{ role: "user", content: user }] };
     const msg = await call(req);
     steps.push({ step: i + 1, slug: b.slug, stop_reason: msg.stop_reason, output: textOf(msg), usage: msg.usage, usd: cost(req.model, msg.usage, false) });

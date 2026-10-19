@@ -67,7 +67,7 @@ output_shape: |
 
   VOICE SCORE
   Now: <lines on voice> / <lines checked> x 100 = <score>
-  After the fixes: <score>
+  After the fixes: <lines on voice> / <lines checked> x 100 = <score>
 
 example:
   business: sprout
@@ -128,6 +128,10 @@ example:
     Line 3: product facts and numbers.
     Line 6: the brand's own line.
     Line 7: price and renewal terms.
+
+    VOICE SCORE
+    Now: 4 / 7 x 100 = 57
+    After the fixes: 7 / 7 x 100 = 100
 
 tweaks:
   - what: The mode

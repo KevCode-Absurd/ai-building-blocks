@@ -53,7 +53,7 @@ how_it_works:
 
 output_shape: |
   STAGE 0  BRIEF
-  Purpose: <...>  Words: <in order, with sources>  Offer: <as stated>
+  Purpose: <...>  Words: <in order, each with its source>  Offer: <as stated, with its limits>
   Length: <...>  Shapes: <...>  Music: <...>  Voice: <...>
   STAGE 1  PRODUCT CARD (approval 1)
   Variant: <...>  Photos: <job = file>  Never changes: <...>
@@ -66,8 +66,8 @@ output_shape: |
   Beats | Time | On-screen words | Photo | Motion | Sound | New on screen
   Sources: <claim, price, offer> = <where from>
   STOPPED: reply APPROVED to build.
-  STAGE 5  BUILD, REVIEW, RENDER
-  Review log: <round, scores, fixes>  Finals: <shape, length, loudness>
+  STAGE 5  BUILD, REVIEW, RENDER  <after APPROVED, in a coding agent:
+    review log (round, scores, fixes) and finals (shape, length, loudness)>
   MISSING: <anything blank>
 
 example:
@@ -89,6 +89,9 @@ example:
     at $49.99 each 4 weeks." Button text: "Start Now".
     Colours: cream #FFF7DF, deep forest #002C17, sunflower #FFCC2E.
     Fonts: Work Sans bold and medium, DM Mono.
+    Brand file: attached (brand.md).
+    Approvals: take the product card and sheets as approved. Stop at
+    the storyboard for my APPROVED.
   output: |
     STAGE 0  BRIEF
     Purpose: reasons reel, 17.5 s. Shapes: 9:16, 4:5. Music: code-made.
@@ -134,6 +137,8 @@ example:
     Sources: brand line; product page; label claim; product facts;
     2025 study; price box; button.
     STOPPED. Nothing is built until you reply APPROVED.
+    STAGE 5  BUILD, REVIEW, RENDER  Waiting for APPROVED. Then a coding
+    agent builds it, runs three or more review rounds and renders.
     MISSING: Work Sans and DM Mono font files; the logo file.
 
 tweaks:
@@ -147,11 +152,11 @@ tweaks:
     how: Share a reel whose rhythm you like. It takes the pacing and grammar only, never its words, pictures or music.
 
 judge:
-  - The run stopped for your yes on the product card, the sheets and the storyboard, and built nothing before APPROVED.
+  - The run stopped for your yes at each approval you hadn't already given (product card, sheets, storyboard), and built nothing before APPROVED.
   - The product is on screen in the first frame, and you know what it is by 2 seconds with the sound off.
   - Every word in the storyboard has a source next to it, and the full price terms are on screen.
   - Something new appears every 2 to 4 seconds, and the end card is 2 seconds or less.
-  - The review log shows at least three rounds and every score at 8 or more.
+  - The product card matches your brand file (variant, label words, how it opens), and any photo or file it can't see is asked for, never described.
 
 test:
   - Stop at the storyboard and check every word and price against your site. Each line should have a source next to it.

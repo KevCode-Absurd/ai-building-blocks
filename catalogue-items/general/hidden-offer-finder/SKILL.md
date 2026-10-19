@@ -1,6 +1,6 @@
 ---
 name: hidden-offer-finder
-description: Use when a brand is being set up, or when an ad needs an honest offer to close on. Quotes every deal the brand runs today and flags the ones that clash, takes stock of what the brand already owns (sizes, prices, guarantee, delivery, extras, past buyers), builds new offers only from that stock, picks three to try first, and scores the list out of 100 against its checks.
+description: Use when a brand is being set up, or when an ad needs an honest offer to close on. Quotes every deal the brand runs today and flags the ones that clash, takes stock of what the brand already owns (sizes, prices, guarantee, delivery, extras, past buyers), builds new offers only from that stock, picks three to try first, and lists any check it missed.
 ---
 
 # Hidden offer finder
@@ -9,21 +9,21 @@ Your job is a short, honest offer list that a script or ad can end on. An offer 
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
-Check for these first. The result is much better with them.
+This skill runs on its own. What's below makes the result better, but none of it is required.
 
-**Needed:**
-- **Brand brain** (its buyers part), made by the [Website brand file builder](https://useaiblocks.com/skills/website-brand-file-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
+**Works best with** (or they can paste their own instead):
+- **Brand brain** (its buyers part), made by the [Website brand brain builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
 
-**The steps before this one** (do each once, then reuse what it makes):
-1. **Brand brain** with the [Website brand file builder](https://useaiblocks.com/skills/website-brand-file-builder). Bring your website, customer words (optional), your results (optional).
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **Brand brain** with the [Website brand brain builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
 2. This one.
 
 **From the brand brain, read:** `00-start-here.md`, `offers.md`, `customers.md`, `proof-and-claims.md`, `voice-and-look.md`. Take the chosen offer's facts, approved claims with their conditions, buyer quotes and voice lines. Source notes and rejected ideas never go into the result.
 
-How to check:
-- **In Claude Code,** look in the project first. A brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name, or ask for their path.
-- **In a chat,** ask once: "Do you have your brand brain? Attach or paste them here." If they're already in this project's files, use those.
-- **If one is missing,** say so before you start, in one line: the result will be much better with it, with the link to make it once and reuse it. Next time they can attach it (or, in Claude Code, give its path). Then carry on with what you have and mark each gap with `MISSING:`.
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In Claude Code, look in the project too: a brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name.
+2. **If something is missing, advise, don't block.** In one short message, say this skill works on its own and will be better with your brand brain. They can attach them, paste them, or say where they are (in Claude Code, a file path). Name the recommended steps above as a suggestion, with their links. Then ask: "Add them, or shall I go ahead with what you've given me?" If their message already says to go ahead, skip this and start.
+3. **When they say go ahead,** do the whole job with what you have. Mark each gap with `MISSING:` and never invent a fact to fill it. List the gaps at the end so they can fill them in later.
 
 **Tools that do this best:**
 - **Any good chat AI:** This is careful reading and plain writing, so Claude, ChatGPT or Gemini all do it well with a full brand file.
@@ -68,7 +68,7 @@ How to check:
    - The guarantee is quoted word for word, limits included. A longer one is a proposal.
 7. **Write each offer three ways.** A name of two to four words a buyer could repeat. One sentence a customer would say to a friend, with one number at most. The exact terms in one or two sentences; a first-order price says what it becomes, in the same sentence.
 8. **Pick three to try first.** Rank proposals by how big a doubt they answer, how little they need arranging and how little they cost you. Give one line of reason each.
-9. **Score it.** Score the list against the seven checks under "Check before you hand it back": checks passed divided by 7, times 100, rounded. Fix any failed check first where you can. Then show "Score: <n>/100 (<passed> of 7 checks)", with one line per check still missed.
+9. **Check it.** Go through the seven checks under "Check before you hand it back" and fix any that fail where you can. List each check still missed under `CHECKS MISSED`, one line each, or write "none".
 
 ## What you hand back
 Sections in this order:
@@ -78,14 +78,14 @@ Sections in this order:
 4. `NEW`: numbered proposals with name, said simply, terms, for, stage, changes (more, surer, sooner, easier, cheaper to start), must arrange, costs you (or "unknown"), why.
 5. `TRY FIRST`: three offer numbers, one line each.
 6. `MISSING`: facts that would change the list.
-7. `SCORE`: out of 100, from the seven checks, with one line per check missed.
+7. `CHECKS MISSED`: one line per check still missed, or "none".
 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
-When you've handed it back, ask in one short question what they want to do next. Offer these, and say they can type their own:
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - **Write the landing page** with the [Ad-matched landing page writer](https://useaiblocks.com/skills/ad-matched-landing-page-writer). It takes the offer.
 - **Make image ads** with the [Three-way offer image ad planner](https://useaiblocks.com/skills/three-way-offer-image-ad-planner). It takes the offer.
-- **Make video ads** with the [Customer quote video ad script writer](https://useaiblocks.com/skills/customer-quote-video-ad-script-writer). It takes the offer.
+- **Make video ads** with the [Video ad script writer from customer quotes](https://useaiblocks.com/skills/video-ad-script-writer-from-customer-quotes). It takes the offer.
 - **Write the ad copy** with the [Image ad copy writer](https://useaiblocks.com/skills/image-ad-copy-writer). It takes the offer.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

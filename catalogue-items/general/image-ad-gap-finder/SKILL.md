@@ -9,18 +9,18 @@ You place every image ad the brand runs on one map, find the empty cells, use th
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
-Check for these first. The result is much better with them.
+This skill runs on its own. What's below makes the result better, but none of it is required.
 
-**Needed:**
+**Works best with** (or they can paste their own instead):
 - **Your image ads** (yours): the image ads, attached as pictures.
 
 **Makes it better (optional):**
 - **Customer words** (yours): reviews, testimonials, support tickets, survey answers or call transcripts. Export them or paste them in.
 
-How to check:
-- **In Claude Code,** look in the project first for these by name, or ask for their path.
-- **In a chat,** ask once: "Do you have your image ads, customer words? Attach or paste them here." If they're already in this project's files, use those.
-- **If one is missing,** say what it would add, then carry on with what you have and mark each gap with `MISSING:`.
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In Claude Code, look in the project too for these by name.
+2. **If something is missing, advise, don't block.** In one short message, say this skill works on its own and will be better with your image ads, customer words. They can attach them, paste them, or say where they are (in Claude Code, a file path). Then ask: "Add them, or shall I go ahead with what you've given me?" If their message already says to go ahead, skip this and start.
+3. **When they say go ahead,** do the whole job with what you have. Mark each gap with `MISSING:` and never invent a fact to fill it. List the gaps at the end so they can fill them in later.
 
 **Tools that do this best:**
 - **Meta Ads Manager:** Exports impressions, link clicks, purchases and spend per ad for the dates you pick.
@@ -73,12 +73,12 @@ Dress: **Camera** (looks photographed), **Designed** (type, shapes, diagram, ill
    - **Code**: type · dress · audience.
    - **Signal**: the row in step 4 that picked it, with the numbers.
    - **Picture**: what's in frame, so a stranger could set it up.
-   - **Words**: a headline of 7 words or fewer (a real quote may run to 12), plus at most 3 more things to read.
+   - **Words**: a headline of 7 words or fewer (a real quote may run to 12), plus at most 3 more things to read. Count the headline word by word and write the count in brackets after it, like `"<headline>" (6)`. A number with its unit, such as "40.1%" or "12 weeks", still counts each word. Over the limit: cut it before you go on.
    - **Proof**: the fact or quote it rests on, with its source.
    - **Read it by**: the measure, the read point (20 purchases or 100 clicks), and the win line: 25% better than the median, a little more than the chance swing at 20 purchases. Anything closer is a tie.
    - **Where it breaks**: the most likely way this ad fails.
 7. **Keep a cut-claims log.** Record each claim removed because it can't be backed. Later rounds start from the log and don't bring a cut claim back in other words.
-8. **Score it.** Check the grid and cards against the 4 checks under "Check before you hand it back". Fix any failed check you can, then check again. The score measures how well this plan meets those checks: checks passed divided by 4, times 100, rounded. Show it as `SCORE <n>/100 (<passed> of 4 checks)`, with one line for each check still missed.
+8. **Score it.** Check the grid and cards against the 4 checks under "Check before you hand it back". Fix any failed check you can, then check again. Before you score, recount every card's headline: one that runs over 7 words and isn't a real quote gets cut now. The score measures how well this plan meets those checks: checks passed divided by 4, times 100, rounded. Show it as `SCORE <n>/100 (<passed> of 4 checks)`, with one line for each check still missed.
 
 ## What you hand back
 1. The grid: ads per cell, ads per question, empty types.
@@ -87,14 +87,43 @@ Dress: **Camera** (looks photographed), **Designed** (type, shapes, diagram, ill
 4. The cut-claims log.
 5. The score out of 100, with one line per check still missed.
 
+Hand it back in exactly this layout, with these labels in this order:
+
+```
+GRID (<n> image ads)
+<question>  <type>   <ads>   <dress, or "not captured">
+Empty types: <list>
+
+SIGNALS  (median <click rate>, <buys per click>)
+<n> <what you see, with the numbers>  -> <stuck question>
+
+BUDGET
+<spend for 2 weeks> / (20 x <cost per purchase>) = <n> tests
+
+CARD <n>
+Code        <type · dress · audience>
+Signal      <row and numbers>
+Picture     <what's in frame>
+Words       "<headline>" (<words>) + <up to 3 items>
+Proof       <fact or quote, with source>
+Read it by  <measure, read point, win line>
+Breaks if   <the likely failure>
+
+CUT CLAIMS
+<ad>  <claim, and why>
+
+SCORE  <n>/100 (<checks passed> of 4 checks)
+Missed: <one line per check still missed>
+```
+
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
-When you've handed it back, ask in one short question what they want to do next. Offer these, and say they can type their own:
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - **Plan what to test** with the [Ad test brief writer](https://useaiblocks.com/skills/ad-test-brief-writer). It takes the buyer brief.
 - **Write the ad copy** with the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer). It takes the buyer brief.
-- **Make image ads** with the [Image ad brief settings writer](https://useaiblocks.com/prompts/image-ad-brief-settings-writer). It takes the buyer brief.
-- **Make video ads** with the [Video ad script type planner](https://useaiblocks.com/skills/video-ad-script-type-planner). It takes the buyer brief.
-- **Set up AI to work for you** with the [Ad prompt comparison scorer](https://useaiblocks.com/skills/ad-prompt-comparison-scorer). It takes the buyer brief.
+- **Make image ads** with the [Accurate product image ad maker](https://useaiblocks.com/prompts/accurate-product-image-ad-maker). It takes the buyer brief.
+- **Make video ads** with the [Video ad script type picker](https://useaiblocks.com/skills/video-ad-script-type-picker). It takes the buyer brief.
+- **Set up AI to work for you** with the [Old vs new ad prompt scorer](https://useaiblocks.com/skills/old-vs-new-ad-prompt-scorer). It takes the buyer brief.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

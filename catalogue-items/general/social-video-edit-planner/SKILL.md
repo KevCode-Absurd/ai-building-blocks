@@ -1,6 +1,6 @@
 ---
 name: social-video-edit-planner
-description: Use when a brand or creator wants an edit plan that turns its own footage (a founder talking, a how-to, a care step, packing or making) into one everyday social post, or several posts from a long recording. Plans the opening, cuts, extra shots, captions, sound, cover and export, checks them against platform rules, and scores the plan out of 100. For a paid ad, use the video ad edit plan.
+description: Use when a brand or creator wants an edit plan that turns its own footage (a founder talking, a how-to, a care step, packing or making) into one everyday social post, or several posts from a long recording. Plans the opening, cuts, extra shots, captions, sound, cover and export, checks them against platform rules, and names any check the plan still misses. For a paid ad, use the video ad edit plan.
 ---
 
 # Social video edit planner
@@ -9,24 +9,24 @@ You plan the edit of one unpaid post from footage the brand shot itself. It does
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
-Check for these first. The result is much better with them.
+This skill runs on its own. What's below makes the result better, but none of it is required.
 
-**Needed:**
+**Works best with** (or they can paste their own instead):
 - **Video clips** (yours): the clips you want to edit.
 
 **Makes it better (optional):**
-- **Brand brain**, made by the [Website brand file builder](https://useaiblocks.com/skills/website-brand-file-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
+- **Brand brain**, made by the [Website brand brain builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
 
-**The steps before this one** (do each once, then reuse what it makes):
-1. **Brand brain** with the [Website brand file builder](https://useaiblocks.com/skills/website-brand-file-builder). Bring your website, customer words (optional), your results (optional).
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **Brand brain** with the [Website brand brain builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
 2. This one.
 
 **From the brand brain, read:** `00-start-here.md`, `offers.md`, `customers.md`, `proof-and-claims.md`, `voice-and-look.md`. Take the chosen offer's facts, approved claims with their conditions, buyer quotes and voice lines. Source notes and rejected ideas never go into the result.
 
-How to check:
-- **In Claude Code,** look in the project first. A brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name, or ask for their path.
-- **In a chat,** ask once: "Do you have video clips, your brand brain? Attach or paste them here." If they're already in this project's files, use those.
-- **If one is missing,** say so before you start, in one line: the result will be much better with it, with the link to make it once and reuse it. Next time they can attach it (or, in Claude Code, give its path). Then carry on with what you have and mark each gap with `MISSING:`.
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In Claude Code, look in the project too: a brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name.
+2. **If something is missing, advise, don't block.** In one short message, say this skill works on its own and will be better with video clips, your brand brain. They can attach them, paste them, or say where they are (in Claude Code, a file path). Name the recommended steps above as a suggestion, with their links. Then ask: "Add them, or shall I go ahead with what you've given me?" If their message already says to go ahead, skip this and start.
+3. **When they say go ahead,** do the whole job with what you have. Mark each gap with `MISSING:` and never invent a fact to fill it. List the gaps at the end so they can fill them in later.
 
 **Tools that do this best:**
 - **Gemini:** Watches the clips you upload and points to moments by minute and second, so cut times come from the footage.
@@ -67,7 +67,7 @@ How to check:
 2. Export from copies. Keep each clip's shape, and watch any crop through the whole movement. Vertical: 9:16 at 1080 x 1920 or higher. Deliver a clean master and a captioned copy. The clean copy still shows burned-in words.
 3. Platform checks: no other app's watermark, no black bars, sound on, sharp on a phone, more than a slide of text. Instagram says it shows posts with these problems to fewer people.
 4. Watch the export on a phone with sound, then muted. Check the first frame, every join and the last second.
-5. **Score it.** Run "Check before you hand it back" and fix any check that fails where you can. Score = checks passed / checks x 100, rounded. Show the sum, and one line for each check still missed.
+5. **Run the checks.** Run "Check before you hand it back" and fix any check that fails where you can. Show `CHECKS MISSED: <one line each>`, or "none".
 
 ## One long recording, many posts
 Pick passages that stand alone, each with in and out times, opening line, what the viewer learns and ending. One starting with "this" must show or name the thing. Keep each warning with its step.
@@ -81,13 +81,13 @@ Pick passages that stand alone, each with in and out times, opening line, what t
 6. ENDING and DISCLOSURE.
 7. EXPORT: shape, size, length, files, checks.
 8. SAVE FOR ANOTHER POST, NOT USED and MISSING, where there are any.
-9. SCORE out of 100, with its sum and one line per check missed.
+9. CHECKS MISSED: one line per check missed, or "none".
 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
-When you've handed it back, ask in one short question what they want to do next. Offer these, and say they can type their own:
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - **Check it before it goes live** with the [Pre-launch ad checker](https://useaiblocks.com/skills/pre-launch-ad-checker). It takes the video ads.
-- **Make video ads** with the [Brand-font video caption maker](https://useaiblocks.com/skills/brand-font-video-caption-maker). It takes the video ads.
+- **Make video ads** with the [On-screen text planner for video ads](https://useaiblocks.com/skills/on-screen-text-planner-for-video-ads). It takes the video ads.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

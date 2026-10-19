@@ -109,10 +109,9 @@ example:
     personal attributes rule.
 
     COMPLIANCE SCORE
-
-    - Now: 100 − 40 (1 would reject) − 15 (1 needs a restriction) − 5 −
-      5 − 5 − 5 (4 warnings) = 25
-    - After the fixes: 100 − 0 = 100. This assumes 18+ is set and each
+    Now: 100 - 40 (1 would reject) - 15 (1 needs a restriction) - 5 -
+      5 - 5 - 5 (4 warnings) = 25
+    After the fixes: 100 - 0 = 100. This assumes 18+ is set and each
       MISSING item is filled with what the shop really charges and does.
       Every finding can be cleared.
 

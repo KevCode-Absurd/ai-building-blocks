@@ -1,6 +1,6 @@
 ---
 name: talking-object-video-ad-script-writer
-description: Use when an ad should be narrated by one everyday object with a face, speaking in the first person about what it has seen in the buyer's home. Picks the object and where its face goes, sets one mood, and writes an 8 to 30 second video monologue in four moves, with every fact traced to the brand's claims, a cast note for the clips skill and a score out of 100 against its own checks.
+description: Use when an ad should be narrated by one everyday object with a face, speaking in the first person about what it has seen in the buyer's home. Picks the object and where its face goes, sets one mood, and writes an 8 to 30 second video monologue in four moves, with every fact traced to the brand's claims, and a cast note for the clips skill, checked against its own list before it's handed back.
 ---
 
 # Talking object video ad script writer
@@ -9,26 +9,26 @@ You write a short video monologue spoken by an object from the buyer's own home.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
-Check for these first. The result is much better with them.
+This skill runs on its own. What's below makes the result better, but none of it is required.
 
-**Needed:**
-- **Brand brain**, made by the [Website brand file builder](https://useaiblocks.com/skills/website-brand-file-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
+**Works best with** (or they can paste their own instead):
+- **Brand brain**, made by the [Website brand brain builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
 - **A buyer brief**, made by the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer): who it's for, how much they already know, and what will move them.
 
 **Makes it better (optional):**
 - **Customer words** (yours): reviews, testimonials, support tickets, survey answers or call transcripts. Export them or paste them in.
 
-**The steps before this one** (do each once, then reuse what it makes):
-1. **Brand brain** with the [Website brand file builder](https://useaiblocks.com/skills/website-brand-file-builder). Bring your website, customer words (optional), your results (optional).
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **Brand brain** with the [Website brand brain builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
 2. **A buyer brief** with the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer). Bring customer words. It uses your brand brain.
 3. This one.
 
 **From the brand brain, read:** `00-start-here.md`, `offers.md`, `customers.md`, `proof-and-claims.md`, `voice-and-look.md`. Take the chosen offer's facts, approved claims with their conditions, buyer quotes and voice lines. Source notes and rejected ideas never go into the result.
 
-How to check:
-- **In Claude Code,** look in the project first. A brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name, or ask for their path.
-- **In a chat,** ask once: "Do you have your brand brain, a buyer brief, customer words? Attach or paste them here." If they're already in this project's files, use those.
-- **If one is missing,** say so before you start, in one line: the result will be much better with it, with the link to make it once and reuse it. Next time they can attach it (or, in Claude Code, give its path). Then carry on with what you have and mark each gap with `MISSING:`.
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In Claude Code, look in the project too: a brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name.
+2. **If something is missing, advise, don't block.** In one short message, say this skill works on its own and will be better with your brand brain, a buyer brief, customer words. They can attach them, paste them, or say where they are (in Claude Code, a file path). Name the recommended steps above as a suggestion, with their links. Then ask: "Add them, or shall I go ahead with what you've given me?" If their message already says to go ahead, skip this and start.
+3. **When they say go ahead,** do the whole job with what you have. Mark each gap with `MISSING:` and never invent a fact to fill it. List the gaps at the end so they can fill them in later.
 
 **Tools that do this best:**
 - **Any good chat AI:** Writing a short first-person monologue to these rules works well in any strong chat AI.
@@ -36,6 +36,8 @@ How to check:
 <!-- /needs -->
 
 ## What you need
+This skill runs on its own. If something marked required below is missing, ask once, in one short message, for only the few facts you can't work without, or let them paste their own version in plain words. Then carry on with what you have, and mark each gap `MISSING:` or `[inferred]`.
+
 - **Brief** (required): the problem, how much the buyer already knows, the length.
 - **The buyer's moment** (required): the room, the time of day, what's within reach, what they tried before, any object customers name themselves in reviews.
 - **Product facts** (required): how it looks and is packed, how it's used, what it replaces, whether the result can be seen.
@@ -87,20 +89,43 @@ How to check:
 ### Cast note
 Who carries the ad and why, in three or four lines: the narrator, its material and damage, where its face goes, its mood and the voice that fits (age, pace, accent), and why this object suits this buyer. The clips skill turns it into the character card. Want a still instead? Use the talking object image ad skill (`talking-object-image-ad-maker`).
 
-### Score it
-Run the checks in "Check before you hand it back" and fix any that fail. Then score the script: checks passed divided by checks, times 100, rounded (5 of 6 passed is 83). Show the score, the sum, and one line for each check still missed.
+### Check it
+Run the checks in "Check before you hand it back" and fix any that fail. List any check still missed under CHECKS MISSED, one line each, or write "none".
 
 ## What you hand back
 - Narrator and kind, the four tests in one line each, the mood, then each clip with its lines and picture notes, the turn marked, words and seconds per clip, and the on-screen offer.
 - The cast note.
 - **Facts the object states**, each with its source, and one line on what it doesn't claim.
-- The score out of 100, with the sum and one line for each check still missed.
+- Checks missed: one line for each check still missed, or none.
+
+Hand it back in exactly this layout, with these labels in this order. No other headings, tables or sections:
+```
+NARRATOR  <object> (<witness, has-been or culprit>)
+True: <evidence>  Readable: <shape, where the face goes>
+At stake: <what it could lose>  Fair: <beside the product, generic>
+State: <the damage you can see>
+
+MOOD  <sore, sheepish, worried or deadpan>, and why
+
+CLIP <n> (<move>, <seconds>, <words>)
+<n> "<first-person line>"
+  <picture note: framing, what the features do, one movement>
+(the turn clip opens on the product; offer as on-screen text)
+
+FACTS THE OBJECT STATES
+"<words>"   <source>
+Not claimed: <what it couldn't have seen>
+
+CAST NOTE  <narrator, material and damage, face spot, mood, voice, and why>
+
+CHECKS MISSED  <one line per check still missed, or none>
+```
 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
-When you've handed it back, ask in one short question what they want to do next. Offer these, and say they can type their own:
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - **Check it before it goes live** with the [Meta ads compliance checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the video ad script.
-- **Make video ads** with the [Ad script format finder](https://useaiblocks.com/skills/ad-script-format-finder). It takes the video ad script.
+- **Make video ads** with the [Ad script read-aloud editor](https://useaiblocks.com/skills/ad-script-read-aloud-editor). It takes the video ad script.
 - **Make image ads** with the [Image ad remake planner](https://useaiblocks.com/skills/image-ad-remake-planner). It takes the video ad script.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
@@ -112,9 +137,10 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Nothing stated that the object couldn't have seen, and every fact matches the claims word for word.
 - The product keeps its real label, has no face, and arrives by a cut.
 - The cast note names the narrator, its mood and its voice.
+- The hand-back follows the layout above, label for label.
 
 ## If something is missing
-Write `MISSING: <what>`. No object in the research: ask what sits in the room when the problem happens; never invent the buyer's home. Result can't be seen, or nobody knows: use a witness. No humour limit given: use deadpan or sheepish.
+Write `MISSING: <what>`. No object in the research: ask once what sits in the room when the problem happens. If no answer comes, use the likeliest object from the brief, mark it `[inferred]`, and say a real object from their reviews would be better. Result can't be seen, or nobody knows: use a witness. No humour limit given: use deadpan or sheepish.
 
 ## Avoid
 - A cheerful object in the first line, which leaves nothing to turn.

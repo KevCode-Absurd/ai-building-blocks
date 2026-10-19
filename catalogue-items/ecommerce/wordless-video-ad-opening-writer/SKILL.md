@@ -1,33 +1,35 @@
 ---
 name: wordless-video-ad-opening-writer
-description: Use when you need a 4 to 6 second wordless opening to put in front of an ad you already have, where the product, something it's made of, or the old way it replaces does one motion that visibly finishes (levels, fits, comes away whole, wipes clean, sorts). Writes a line-up of 2 or 3, then runs the video process with the product as the avatar (product card, product and set sheets, a start and end frame per opening, clip prompts) for an AI image and video tool. Scores the finished set out of 100 against its own checks.
+description: Use when you need a 4 to 6 second wordless opening to put in front of an ad you already have, where the product, something it's made of, or the old way it replaces does one motion that visibly finishes (levels, fits, comes away whole, wipes clean, sorts). Writes a line-up of 2 or 3, then runs the video process with the product as the avatar (product card, product and set sheets, a start and end frame per opening, clip prompts) for an AI image and video tool.
 ---
 
 # Wordless video ad opening writer
 
 You write two or three openings, each built on a different finish, and take them through the video process. There is no person: the product is the avatar. An opening has one job: keep the right people watching long enough to reach the ad behind it. Judge each one on three moments: a first frame already in motion, a finish the eye waits for, and a last frame that hands over to the ad without a jump. Stop for approval after stages 1, 3 and 4.
 
+**All stages at once.** If the person asks for every stage in one go, or already gives the approvals in their message, write stages 0 to 5 in one reply in the layout under "What you hand back": carry the strongest row through, mark each approval point "(approve)", and end by asking for their yes on each. If they change something at a point, redo the stages after it. At a normal stop, hand back the stages done so far in that same layout, then the stop question.
+
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
-Check for these first. The result is much better with them.
+This skill runs on its own. What's below makes the result better, but none of it is required.
 
-**Needed:**
-- **Brand brain** (its products part), made by the [Website brand file builder](https://useaiblocks.com/skills/website-brand-file-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
+**Works best with** (or they can paste their own instead):
+- **Brand brain** (its products part), made by the [Website brand brain builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
 - **Your video ads** (yours): the video ads, attached or linked.
 
 **Makes it better (optional):**
 - **Product photos** (yours): clear photos of the real product, from more than one angle. Attach them.
 
-**The steps before this one** (do each once, then reuse what it makes):
-1. **Brand brain** with the [Website brand file builder](https://useaiblocks.com/skills/website-brand-file-builder). Bring your website, customer words (optional), your results (optional).
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **Brand brain** with the [Website brand brain builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
 2. This one.
 
 **From the brand brain, read:** `00-start-here.md`, `voice-and-look.md`, `offers.md`, `proof-and-claims.md`. Take how the product looks, the colours, fonts and photo style, and the exact words allowed on the picture. Leave out review quotes and research notes. Source notes and rejected ideas never go into the result.
 
-How to check:
-- **In Claude Code,** look in the project first. A brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name, or ask for their path.
-- **In a chat,** ask once: "Do you have your brand brain, your video ads, product photos? Attach or paste them here." If they're already in this project's files, use those.
-- **If one is missing,** say so before you start, in one line: the result will be much better with it, with the link to make it once and reuse it. Next time they can attach it (or, in Claude Code, give its path). Then carry on with what you have and mark each gap with `MISSING:`.
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In Claude Code, look in the project too: a brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name.
+2. **If something is missing, advise, don't block.** In one short message, say this skill works on its own and will be better with your brand brain, your video ads, product photos. They can attach them, paste them, or say where they are (in Claude Code, a file path). Name the recommended steps above as a suggestion, with their links. Then ask: "Add them, or shall I go ahead with what you've given me?" If their message already says to go ahead, skip this and start.
+3. **When they say go ahead,** do the whole job with what you have. Mark each gap with `MISSING:` and never invent a fact to fill it. List the gaps at the end so they can fill them in later.
 
 **Tools that do this best:**
 - **Veo:** Makes the motion between a start frame and an end frame you give it, with matching sound.
@@ -36,8 +38,10 @@ How to check:
 <!-- /needs -->
 
 ## What you need
+This skill runs on its own. All it needs to start is the product and how it moves, in plain words; everything else below makes the result better. If something is missing, ask once in one short message for what you can't work without (or let them paste their own version), then carry on with what you have and mark each gap `MISSING:` or `[inferred]`.
+
 - **Product** (required): real photos labelled by what they show (pack front, product out of the pack, in a hand, a surface close-up), how it opens, pours or closes in the brand's words, its real motions and sounds, what it's made of, what it replaces. Read the attached photos directly, and ask for photos rather than a description.
-- **The ad it goes in front of** (required): its first frame, first line, place and light. If you only have a description, ask for a still of that first frame.
+- **The ad it goes in front of** (required): its first frame, first line, place and light. If you only have a description, ask for a still of that first frame. With no ad at all, plan the end frame in the product's own setting and mark the match to the ad as still to do.
 - **Brand file** (optional): places and light, on-screen text style, buyer words for the overlay, what never to show.
 - **Your tool** (optional): shortest clip length, and whether it can take a start and an end frame. Default: 4 seconds, start and end frames.
 
@@ -62,7 +66,7 @@ If a video tool is connected, offer to make the clips with it, and ask before yo
    - **Release:** something comes away whole (a seal peeled in one piece, a loaf out of its tin).
    - **Smooth:** a surface gets done (one wipe leaves a clean stripe, water beads and runs off).
    - **Order:** mess becomes order (bolts sorted into a tray, four old gadgets swept aside and one set down).
-   Start from the product's real motions. A motion nobody described is one the tool will invent, so mark it "inferred". A sealed pack turning on a stand is a pack shot, not an opening.
+   Start from the product's real motions. A motion nobody described is one the tool will invent, so mark it "inferred". A sealed pack turning on a stand is a pack shot, not an opening. Props come only from the product photos, the ad's first frame or the brand file; mark any other prop "inferred". "Why they'd wait" says what the motion makes the viewer want to see, never a fact about the buyer (what they own, what they did) the brand file doesn't give. Write the rows in the line-up layout even when photos are missing; a description is enough to plan from.
 2. **Shape each in thirds.** Frame 1 is already part done (the pour mid-air, the seal a third up). The first two thirds carry the motion toward its end, with the end kept in doubt. The finish lands in the last third, then everything holds still for the final half second with the product in view and its printing clear.
 3. **Show the line-up and wait for a yes.** 2 or 3 rows that differ by finish and by what's in focus, not by wording: the focus, the finish and what "done" looks like, the place and camera, the sound, the last frame, and one sentence on why this buyer would wait for the end. A row with no answer to that gets replaced. Ask once about the overlay.
 
@@ -95,7 +99,7 @@ Keep the top seventh and bottom third of a 9:16 frame free of anything that matt
 2. **Make one clip at the shortest length and check it:** frame 1 already moving; the finish in the last third; nothing new after it; the last half second still; the last frame sits next to the ad's first frame without a jump; only the motion's own sound. Make two or three takes, pick one, then make the rest.
 3. **Overlay,** added in the edit on a copy, raw clip kept: up to 4 words that leave a question hanging ("Wait for it", "POV:"). Never an offer, price, claim or call to action. In the brand font, just below the top safe margin, never over the thing in focus.
 4. **Edit and deliver:** each opening joined to the same ad with a hard cut. Deliver the raw clip, the clip with overlay, its end frame as a picture, and one line on what it shows. Test each as a separate ad.
-5. **Score it.** Run the checks in "Check before you hand it back" and fix any that fail. Then score the openings: checks passed divided by checks, times 100, rounded (5 of 6 passed is 83). Show the score, the sum, and one line for each check still missed.
+5. **Check it.** Run the checks in "Check before you hand it back" and fix any that fail. List any you couldn't fix on a `CHECKS MISSED:` line, or write "none".
 
 ## What you hand back
 1. **Line-up** (2 or 3 rows), with inferred motions marked.
@@ -104,13 +108,37 @@ Keep the top seventh and bottom third of a 9:16 frame free of anything that matt
 4. **Storyboard:** start frame, end frame and shot card per row, photos attached by job.
 5. **Clip prompt** per row.
 6. **Edit list:** overlay (or none) and what to deliver.
-7. **Score** out of 100, with the sum and one line for each check still missed.
+7. `CHECKS MISSED:` one line for each check you couldn't fix, or "none".
+
+Hand it back in exactly this layout, with these labels in this order (at a stop, end at the stage you stopped after):
+
+```
+STAGE 0  LINE-UP (approve one or more rows)
+<n> Focus: <..>  Finish: <kind>: <motion>. Done = <..>
+  Camera: <..>  Sound: <..>  Last frame: <..>
+  Why they'd wait: <one sentence>
+Inferred: <motions or props to confirm>
+STAGE 1  PRODUCT CARD (approval 1)  <variant, photos by job, never changes>
+STAGE 2  REFERENCE IMAGES  1-4 <prompt>  Picked: <n per row>
+STAGE 3  SHEETS (approval 2)
+Product: <views, label words, states>  Set: <the ad's place and light>
+LOCK LINES  <product> <set> <material>
+STAGE 4  STORYBOARD (approval 3)
+START FRAME (row <n>)  <motion part done>
+END FRAME (row <n>)  <finished, still, matching the ad's first frame>
+SHOT CARD  <camera, timed motion, finish, hold, SFX, ambient>
+STAGE 5  CLIP PROMPT (row <n>)
+<aspect>, <seconds>, real speed. <timed motion>. No words, no one speaking.
+OVERLAY  <1 to 4 words, or none>   DELIVER  <raw clip, overlay copy, end frame>
+MISSING: <..>
+CHECKS MISSED: <one line each, or none>
+```
 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
-When you've handed it back, ask in one short question what they want to do next. Offer these, and say they can type their own:
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - **Check it before it goes live** with the [Meta ads compliance checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the ad copy.
-- **Make video ads** with the [Brand-font video caption maker](https://useaiblocks.com/skills/brand-font-video-caption-maker). It takes the video ads.
+- **Make video ads** with the [On-screen text planner for video ads](https://useaiblocks.com/skills/on-screen-text-planner-for-video-ads). It takes the video ads.
 - **Make image ads** with the [Article headline image ad maker](https://useaiblocks.com/skills/article-headline-image-ad-maker). It takes the ad copy.
 - **Write the ad copy** with the [Ad first line writer and scorer](https://useaiblocks.com/skills/ad-first-line-writer-and-scorer). It takes the ad copy.
 - **Write the landing page** with the [Ad-matched landing page writer](https://useaiblocks.com/skills/ad-matched-landing-page-writer). It takes the ad copy.
@@ -118,7 +146,7 @@ If they pick one and that skill is added here, carry straight on with what you j
 <!-- /next -->
 
 ## Check before you hand it back
-- Each approval came before the next stage.
+- Each approval came before the next stage, or, when asked for every stage at once, each approval point is marked "(approve)" and the yeses are asked for.
 - "Real speed" appears once and no slow-motion or time-lapse word appears.
 - One motion with a visible finish; plain verbs only.
 - The end frame is still, product in view, printing clear, matching the ad's first frame.
@@ -126,7 +154,9 @@ If they pick one and that skill is added here, carry straight on with what you j
 - The product matches its photos, with nothing made up inside it.
 
 ## If something is missing
-Write `MISSING: <what>`. No out-of-pack photo: no opening that shows the product out of its pack. No use steps: ask before any opening that opens or pours. Motions unknown: propose them from how it's used, mark each "inferred", and ask the brand to confirm.
+Write `MISSING: <what>`. No out-of-pack photo: no opening that shows the product out of its pack. No use steps: ask once, plan openings that don't depend on them, and mark the rest `MISSING:`. Motions unknown: propose them from how it's used, mark each "inferred", and ask the brand to confirm.
+
+If photos or the ad's still are named but you can't see them, say so in one line. Take the product's look and label words from the brand file (or the input), mark the photo check as still to do, and never describe a photo you didn't see. A missing photo never stops the line-up. Before writing `MISSING:` for a fact, look for it in the brand file and the input; write it only when both lack it.
 
 ## Avoid
 - A camera move with no finish.

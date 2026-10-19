@@ -1,6 +1,6 @@
 ---
 name: founder-video-series-planner
-description: Use when a founder or owner should post trust-building videos as themselves. Builds a ten-week series where each video answers one real buyer question, across four threads (how it's made, why we chose it, who it's for, what we fixed), with something shown on camera every week, a filming setup, three cuts from each shoot, and a score out of 100 against its checks.
+description: Use when a founder or owner should post trust-building videos as themselves. Builds a ten-week series where each video answers one real buyer question, across four threads (how it's made, why we chose it, who it's for, what we fixed), with something shown on camera every week, a filming setup, three cuts from each shoot, and any check it missed.
 ---
 
 # Founder video series planner
@@ -9,21 +9,21 @@ You plan a weekly series in which the founder answers one real question a buyer 
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
-Check for these first. The result is much better with them.
+This skill runs on its own. What's below makes the result better, but none of it is required.
 
-**Needed:**
-- **Brand brain** (its buyers part), made by the [Website brand file builder](https://useaiblocks.com/skills/website-brand-file-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
+**Works best with** (or they can paste their own instead):
+- **Brand brain** (its buyers part), made by the [Website brand brain builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
 
-**The steps before this one** (do each once, then reuse what it makes):
-1. **Brand brain** with the [Website brand file builder](https://useaiblocks.com/skills/website-brand-file-builder). Bring your website, customer words (optional), your results (optional).
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **Brand brain** with the [Website brand brain builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
 2. This one.
 
 **From the brand brain, read:** `00-start-here.md`, `offers.md`, `customers.md`, `proof-and-claims.md`, `voice-and-look.md`. Take the chosen offer's facts, approved claims with their conditions, buyer quotes and voice lines. Source notes and rejected ideas never go into the result.
 
-How to check:
-- **In Claude Code,** look in the project first. A brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name, or ask for their path.
-- **In a chat,** ask once: "Do you have your brand brain? Attach or paste them here." If they're already in this project's files, use those.
-- **If one is missing,** say so before you start, in one line: the result will be much better with it, with the link to make it once and reuse it. Next time they can attach it (or, in Claude Code, give its path). Then carry on with what you have and mark each gap with `MISSING:`.
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In Claude Code, look in the project too: a brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name.
+2. **If something is missing, advise, don't block.** In one short message, say this skill works on its own and will be better with your brand brain. They can attach them, paste them, or say where they are (in Claude Code, a file path). Name the recommended steps above as a suggestion, with their links. Then ask: "Add them, or shall I go ahead with what you've given me?" If their message already says to go ahead, skip this and start.
+3. **When they say go ahead,** do the whole job with what you have. Mark each gap with `MISSING:` and never invent a fact to fill it. List the gaps at the end so they can fill them in later.
 
 **Tools that do this best:**
 - **Any good chat AI:** Claude, ChatGPT and Gemini all follow this skill well, so use the one you already have.
@@ -55,7 +55,7 @@ How to check:
    Length follows the answer, usually 30 to 60 seconds. Any fact the material doesn't hold (a year, a cost, a count) becomes a `[question for the founder]`. Never write a number for them.
 5. **Add the filming setup** (once).
 6. **Add the three cuts** for week 1.
-7. **Score it.** Run "Check before you hand it back" and fix any check that fails where you can. Score = checks passed / checks x 100, rounded. Show the sum, and one line for each check still missed.
+7. **Check it.** Run "Check before you hand it back" and fix any check that fails where you can. List each check still missed under `CHECKS MISSED`, one line each, or write "none".
 
 **Filming setup.** Phone upright (9:16), at eye height, propped. Face the light. Quiet room, phone or clip mic within arm's reach. Keep the face and any text out of the top and bottom sixth, where the app's buttons sit. Talk from three bullet points on a card, never a script. Do one practice run, then film. Add captions for people watching with the sound off.
 
@@ -67,15 +67,15 @@ How to check:
 3. **Filming setup.**
 4. **Three cuts** for week 1.
 5. **MISSING:** facts only the founder can supply.
-6. **Score:** out of 100, with its sum and one line per check missed.
+6. **Checks missed:** one line per check still missed, or "none".
 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
-When you've handed it back, ask in one short question what they want to do next. Offer these, and say they can type their own:
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - **Write the ad copy** with the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer). It takes the buyer brief.
-- **Make image ads** with the [Image ad brief settings writer](https://useaiblocks.com/prompts/image-ad-brief-settings-writer). It takes the buyer brief.
-- **Make video ads** with the [Video ad script type planner](https://useaiblocks.com/skills/video-ad-script-type-planner). It takes the buyer brief.
-- **Set up AI to work for you** with the [AI step handoff planner](https://useaiblocks.com/skills/ai-step-handoff-planner). It takes the plan.
+- **Make image ads** with the [Accurate product image ad maker](https://useaiblocks.com/prompts/accurate-product-image-ad-maker). It takes the buyer brief.
+- **Make video ads** with the [Video ad script type picker](https://useaiblocks.com/skills/video-ad-script-type-picker). It takes the buyer brief.
+- **Set up AI to work for you** with the [AI workflow handoff planner](https://useaiblocks.com/skills/ai-workflow-handoff-planner). It takes the plan.
 - **Write the landing page** with the [Proof-backed sales copy writer](https://useaiblocks.com/skills/proof-backed-sales-copy-writer). It takes the buyer brief.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

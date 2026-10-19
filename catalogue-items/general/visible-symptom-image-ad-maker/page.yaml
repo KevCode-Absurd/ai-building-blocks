@@ -1,10 +1,10 @@
 new_slug: visible-symptom-image-ad-maker
 name: "Visible symptom image ad maker"
-summary: "Paste your story ad. Get a body-safety check, a close-up photo prompt and a score out of 100."
+summary: "Paste your story ad. Get a body-safety check and a close-up photo prompt, or a safer idea."
 job: make-image-ads
 
 headline: "Visible symptom image ad maker"
-subhead: Give it your story ad. It runs a three-question body check first. If the sign passes, it briefs a close phone photo of the moment your buyer notices it. If not, it hands the idea to a safer picture. Either way you get a score out of 100.
+subhead: Give it your story ad. It runs a three-question body check first. If the sign passes, it briefs a close phone photo of the moment your buyer notices it. If not, it hands the idea to a safer picture, with the reason and a line idea.
 
 explain: |
   People notice problems on their own bodies at ordinary moments: dry knuckles at the sink, a sock line at bedtime. A photo of that moment stops the people who have it, and everyone else scrolls on. It's also the picture most likely to get an ad rejected, because platforms ban ads that hint at what a viewer has or make people feel bad about their bodies.
@@ -25,7 +25,6 @@ you_get:
   - The sign, the moment it's noticed and what's in view
   - A 60 to 120 word image prompt when it passes
   - A hand-off moment and line idea for a safer picture when it doesn't
-  - A score out of 100, from the brief against the skill's five checks when it passes, or the gate answers when it stops
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
@@ -60,12 +59,12 @@ output_shape: |
   LINE UNDER THE IMAGE  <words> (<characters>)
   FLAGS  <near the body limits, claims to watch>
   IMAGE PROMPT  <60 to 120 words>
-  SCORE  <n>/100 (<passed> of 5 checks) | missed: <one line each>
+  CHECKS MISSED: <one line each, or none>
 
   When it stops:
   WHY IT STOPS  <which answer failed>
-  HAND-OFF  <skill, the moment to show, a line idea>
-  GATE SCORE  <n>/100 (<answers passed> of 3; the photo needs all 3)
+  HAND-OFF  <skill, the moment to show, a line idea (<characters>)>
+  FLAGS  <claims to watch in the copy>
 
 example:
   business: sprout

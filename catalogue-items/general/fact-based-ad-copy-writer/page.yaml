@@ -1,10 +1,10 @@
 new_slug: fact-based-ad-copy-writer
 name: "Fact-based ad copy writer"
-summary: "Paste facts and buyer. Get an ad built on one real fact and a score out of 100."
+summary: "Paste facts and buyer. Get an ad built on one real fact, with the source of every line."
 job: write-ad-copy
 
 headline: "Fact-based ad copy writer"
-subhead: Give it your product facts and the buyer you want. It finds the one fact that answers that buyer's biggest doubt and builds the ad on it. You get the ad, the fact behind each line and a score out of 100.
+subhead: Give it your product facts and the buyer you want. It finds the one fact that answers that buyer's biggest doubt and builds the ad on it. You get the ad, an image note and the fact behind each line.
 
 explain: |
   Most ads fail for one of two reasons. They praise the product in words anyone could use ("premium", "high quality"), or they promise more than the product can back up. Readers have learned to discount both. What they believe is a specific fact, because it sounds like something the seller has checked.
@@ -26,7 +26,7 @@ you_get:
   - The finished ad copy in your format
   - A note on the image so the picture says the same thing
   - A list of which fact backs each line, and what's missing
-  - A score out of 100 for how many of its own checks the ad passes, with each miss named
+  - Any of its own checks the ad still misses, one line each
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
@@ -50,8 +50,8 @@ how_it_works:
     text: Cuts every line that doesn't help an interested buyer decide, and removes claims it can't back.
   - title: Shows its working
     text: Lists the reason chosen, the fact behind it and anything missing, so you can check it in a minute.
-  - title: Scores the ad
-    text: Goes through its own checks, such as every line tracing to a fact, fixes what it can, and scores checks passed out of all checks, times 100.
+  - title: Checks the ad
+    text: Goes through its own checks, such as every line tracing to a fact, fixes what it can, and names any check still missed.
 
 output_shape: |
   <AD COPY, in the format you asked for>
@@ -71,9 +71,7 @@ output_shape: |
   Not used:        <strong facts left out, and why>
   MISSING:         <proof you'd need for a stronger ad>
 
-  SCORE
-  <passed> of <all> checks = <score> out of 100
-  Missed: <one line per check still missed, or none>
+  CHECKS MISSED    <one line each, or none>
 
 example:
   business: sprout
@@ -125,6 +123,8 @@ example:
     MISSING:         a fair side-by-side with a powder's label.
                      Without it, "no chalky powder" is as far as
                      the ad can go
+
+    CHECKS MISSED    none
 
 tweaks:
   - what: The buyer

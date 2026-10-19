@@ -8,7 +8,7 @@
 // site/scripts/build-index.mjs (the same chain on each block page and in workflow packs).
 
 export const SITE = "https://useaiblocks.com";
-export const BRAND_BRAIN = "website-brand-file-builder";
+export const BRAND_BRAIN = "website-brand-brain-builder";
 
 /**
  * Each input, in plain words. `maker` is the block that makes it, when we have one; `part` says which part of the
@@ -23,15 +23,15 @@ export const INPUTS = {
   brief: { label: "A buyer brief", what: "who it's for, how much they already know, and what will move them", maker: "buyer-brief-writer" },
   angle_library: { label: "Buying reasons", what: "why people buy, in their own words, ranked by how many said it", maker: "customer-buying-reasons-finder" },
   ad_copy: { label: "Ad copy", what: "the headline and text of the ad", maker: "fact-based-ad-copy-writer" },
-  script: { label: "A video ad script", what: "the script, beat by beat, with on-screen text", maker: "customer-quote-video-ad-script-writer" },
+  script: { label: "A video ad script", what: "the script, beat by beat, with on-screen text", maker: "video-ad-script-writer-from-customer-quotes" },
   avatar_sheet: { label: "A character sheet", what: "pictures that keep one person looking the same in every shot", maker: "video-avatar-and-storyboard-planner" },
   shot_list: { label: "A shot list", what: "the video broken into shots, with timing and on-screen text", maker: "video-ad-shot-list-maker" },
   truth_sheet: { label: "A product truth sheet", what: "what the product really looks like, read from photos, so pictures stay accurate", maker: "product-image-spec-writer" },
   gallery_plan: { label: "A gallery plan", what: "the planned pictures of a product page, one job each", maker: "product-page-gallery-planner" },
   design_direction: { label: "A design direction", what: "the page's type, colours and layout rules", maker: "landing-page-design-planner" },
   ad_breakdowns: { label: "Ad breakdowns", what: "what each reference ad does: opening, angle, format, offer and proof", maker: "competitor-ad-gap-finder" },
-  shortlist: { label: "A shortlist", what: "the best few picked from a bigger set, with reasons", maker: "competitor-ad-study-board-builder" },
-  lessons_register: { label: "Your lessons", what: "what past ads taught you: what worked, what failed and why", maker: "ai-mistake-rule-writer" },
+  shortlist: { label: "A shortlist", what: "the best few picked from a bigger set, with reasons", maker: "competitor-ad-swipe-file-builder" },
+  lessons_register: { label: "Your lessons", what: "what past ads taught you: what worked, what failed and why", maker: "ai-image-and-video-fix-rule-writer" },
   copy_draft: { label: "A draft", what: "the ad, page, email or script you want checked or improved" },
   voc_reviews: { label: "Customer words", what: "reviews, testimonials, support tickets, survey answers or call transcripts. Export them or paste them in" },
   product_photos: { label: "Product photos", what: "clear photos of the real product, from more than one angle. Attach them" },
@@ -157,7 +157,7 @@ export const NEXT_JOB = {
   "grow-social": "Grow on social",
   "set-up-ai": "Set up AI to work for you",
 };
-const START_HERE = ["fact-based-ad-copy-writer", "website-brand-file-builder", "customer-buying-reasons-finder", "brand-voice-editor", "landing-page-30-point-checker", "customer-quote-video-ad-script-writer", "meta-ads-compliance-checker", "buyer-brief-writer", "hidden-offer-finder"];
+const START_HERE = ["fact-based-ad-copy-writer", "website-brand-brain-builder", "customer-buying-reasons-finder", "brand-voice-editor", "landing-page-30-point-checker", "video-ad-script-writer-from-customer-quotes", "meta-ads-compliance-checker", "buyer-brief-writer", "hidden-offer-finder"];
 
 /**
  * The paths from here: blocks that take what this block makes, one per job, best fit first. After something is made,
@@ -167,7 +167,7 @@ const LIKE = { hooks: "ad_copy", objection_map: "angle_library", photo_set: "pro
 
 /** Blocks that open many paths get a chosen list: the brand brain feeds almost everything. */
 const NEXT_CHOSEN = {
-  "website-brand-file-builder": ["customer-buying-reasons-finder", "fact-based-ad-copy-writer", "customer-quote-video-ad-script-writer", "hidden-offer-finder", "ad-matched-landing-page-writer", "founder-call-planner"],
+  "website-brand-brain-builder": ["customer-buying-reasons-finder", "fact-based-ad-copy-writer", "video-ad-script-writer-from-customer-quotes", "hidden-offer-finder", "ad-matched-landing-page-writer", "founder-interview-planner"],
 };
 
 export function nextOf(b, all, max = 5) {
@@ -215,11 +215,11 @@ export function beforeSection(plan, tools = [], nl = "\n") {
   const { needed, helps, chain, brain } = plan;
   const items = [...needed, ...helps];
   if (!items.length && !tools.length) return null;
-  const out = ["## Before you start", "Check for these first. The result is much better with them.", ""];
-  if (needed.length) out.push("**Needed:**", ...needed.map(itemLine), "");
+  const out = ["## Before you start", "This skill runs on its own. What's below makes the result better, but none of it is required.", ""];
+  if (needed.length) out.push("**Works best with** (or they can paste their own instead):", ...needed.map(itemLine), "");
   if (helps.length) out.push("**Makes it better (optional):**", ...helps.map(itemLine), "");
   if (chain.length) {
-    out.push("**The steps before this one** (do each once, then reuse what it makes):");
+    out.push("**Recommended steps before this one** (optional; do each once, then reuse what it makes):");
     chain.forEach((s, n) => {
       const bring = s.bring.length ? ` Bring ${s.bring.join(", ")}.` : "";
       const uses = s.uses.length ? ` It uses your ${s.uses.map(lower).join(" and ")}.` : "";
@@ -228,15 +228,13 @@ export function beforeSection(plan, tools = [], nl = "\n") {
     out.push(`${chain.length + 1}. This one.`, "");
   }
   if (brain) out.push(`**From the brand brain, read:** ${brain.files.map((f) => `\`${f}\``).join(", ")}. Take ${brain.note}. Source notes and rejected ideas never go into the result.`, "");
-  out.push("How to check:");
+  out.push("How to start:");
   out.push(brain
-    ? "- **In Claude Code,** look in the project first. A brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name, or ask for their path."
-    : "- **In Claude Code,** look in the project first for these by name, or ask for their path.");
+    ? "1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In Claude Code, look in the project too: a brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name."
+    : "1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In Claude Code, look in the project too for these by name.");
   const ask = items.slice(0, 3).map((i) => (i.key === BRAND_BRAIN ? "your brand brain" : lower(i.label)));
-  out.push(`- **In a chat,** ask once: "Do you have ${ask.join(", ")}? Attach or paste them here." If they're already in this project's files, use those.`);
-  out.push(items.some((i) => i.maker)
-    ? "- **If one is missing,** say so before you start, in one line: the result will be much better with it, with the link to make it once and reuse it. Next time they can attach it (or, in Claude Code, give its path). Then carry on with what you have and mark each gap with `MISSING:`."
-    : "- **If one is missing,** say what it would add, then carry on with what you have and mark each gap with `MISSING:`.");
+  out.push(`2. **If something is missing, advise, don't block.** In one short message, say this skill works on its own and will be better with ${ask.join(", ")}. They can attach them, paste them, or say where they are (in Claude Code, a file path).${items.some((i) => i.maker) || chain.length ? " Name the recommended steps above as a suggestion, with their links." : ""} Then ask: "Add them, or shall I go ahead with what you've given me?" If their message already says to go ahead, skip this and start.`);
+  out.push("3. **When they say go ahead,** do the whole job with what you have. Mark each gap with `MISSING:` and never invent a fact to fill it. List the gaps at the end so they can fill them in later.");
   if (tools.length) out.push("", "**Tools that do this best:**", ...tools.map((t) => `- **${t.name}:** ${t.why}`));
   return out.join(nl);
 }
@@ -247,7 +245,7 @@ export function afterSection(plan, nl = "\n") {
   const takes = (x) => [...new Set(x.takes)].join(" and ");
   return [
     "## After this",
-    "When you've handed it back, ask in one short question what they want to do next. Offer these, and say they can type their own:",
+    "When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:",
     ...plan.next.map((x) => `- **${x.label}** with the [${x.name}](${x.url}). It takes the ${takes(x)}.`),
     "If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.",
   ].join(nl);

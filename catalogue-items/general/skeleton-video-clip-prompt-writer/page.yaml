@@ -1,10 +1,10 @@
 new_slug: skeleton-video-clip-prompt-writer
 name: "Skeleton video clip prompt writer"
-summary: "Paste your skeleton ad script and attach product photos. Get clip prompts and a score out of 100."
+summary: "Paste your skeleton script and attach product photos. Get every image and clip prompt, plus an edit list."
 job: make-video-ads
 
 headline: "Skeleton video clip prompt writer"
-subhead: Give it a skeleton ad script and real product photos. It writes the skeleton's card, sheets, a storyboard on one fixed camera and short beat-counted clip prompts, stopping three times for your OK. You get every prompt, an edit list and a score out of 100.
+subhead: Give it a skeleton ad script and real product photos. It writes the skeleton's card, sheets, a storyboard on one fixed camera and short beat-counted clip prompts, with three points to OK before you make the next pictures. You get every prompt and an edit list.
 
 explain: |
   AI video tools forget everything between shots. Ask for "a cartoon skeleton" six times and you get six skeletons, a cupboard that moves, a calendar with garbled numbers and a pack with the wrong label. Then the climb stops making sense with the sound off.
@@ -26,7 +26,7 @@ you_get:
   - Character, product and set sheets, with the skeleton, look and clean lines locked
   - A storyboard on one fixed camera, with a frame prompt and a shot card per shot
   - A clip prompt per step and an edit list with the labels, offer and timings
-  - A score out of 100 for the prompts, with one line for each check they missed
+  - Any of its six checks the prompts couldn't pass, named one per line
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
@@ -68,8 +68,7 @@ output_shape: |
            Beat 3 <...> Camera <one> HOLD <line>  SOUND <if any>
            VOICE <...>  EDIT <labels and offer at <s>, music, safe zone>
            MISSING: <facts it needed>
-  SCORE  <n>/100 (<checks passed> of 6 checks)
-  Missed: <one line per check still missed>
+  CHECKS MISSED  <one line per check still missed, or none>
 
 example:
   business: sprout
@@ -150,6 +149,7 @@ example:
     money back, first order only." Times are estimates until the
     narration exists.
     MISSING: whether Sprout uses music, so none is planned.
+    CHECKS MISSED  none
     (cut for length: the full run also had frames and clips for Q, 1,
     2, 4, T, C and O)
 
@@ -164,7 +164,7 @@ tweaks:
     how: If your video tool makes sound, keep the sound line to room tone and small prop noises. The narration and any music go on in editing.
 
 judge:
-  - It stopped for your approval after the avatar card, the sheets and the storyboard.
+  - It marks a point to approve after the avatar card, the sheets and the storyboard, and says what to check before you make the next pictures.
   - Every step is framed the same way, and only the growing thing changes between them.
   - The skeleton has the same eyes, bones and proportions in every image.
   - No calendar, clock, sign or number appears inside any picture.

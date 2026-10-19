@@ -1,10 +1,10 @@
 new_slug: motion-graphics-video-ad-script-writer
 name: "Motion graphics video ad script writer"
-summary: "Paste your facts and offer. Get a motion-graphics video script, fact sheet and score out of 100."
+summary: "Paste your facts and offer. Get a motion-graphics video script and a sourced fact sheet."
 job: make-video-ads
 
 headline: "Motion graphics video ad script writer"
-subhead: Give it your idea, product facts, brand colours and a product photo. It lists every fact with its source, then gives each shot one fact with a picture and move to suit it. You get a look card, a shot table, a cast note and a score out of 100.
+subhead: Give it your idea, product facts, brand colours and a product photo. It lists every fact with its source, then gives each shot one fact with a picture and move to suit it. You get a look card, a shot table and a cast note.
 
 explain: |
   Graphic ads are good at what filmed ads find hard: what's inside, how many, what it costs, the steps to use it. They go wrong in two ways. Some cram icons, charts and a paragraph into one frame. Others show bars that don't match any real number, which is a claim you can't back.
@@ -26,7 +26,7 @@ you_get:
   - A fact sheet with the source of every number and term
   - A shot table with narration, picture and move, exact words and hold times
   - A cast note naming your product as the avatar, the voice and what never changes
-  - A score out of 100 for how many of its own checks the script passes, with any it missed
+  - Any of its own checks the script still missed, one line each, or none
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
@@ -72,8 +72,7 @@ output_shape: |
 
   CAST NOTE  <the product as the avatar, views needed, voice, never change>
 
-  SCORE  <n>/100 (<passed> of <total> checks passed)
-  Missed: <one line per check missed, or none>
+  CHECKS MISSED  <one line per check missed, or none>
 
 example:
   business: sprout

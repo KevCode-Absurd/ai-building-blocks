@@ -11,9 +11,9 @@ You run 4 skills one after another. Each skill's result is saved and passed to t
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
-Check for these first. The result is much better with them.
+This skill runs on its own. What's below makes the result better, but none of it is required.
 
-**Needed:**
+**Works best with** (or they can paste their own instead):
 - **Your website** (yours): the link to your site or the page.
 - **Your offer**, made by the [Hidden offer finder](https://useaiblocks.com/prompts/hidden-offer-finder): what you sell and the real terms: price, trial, guarantee, delivery.
 
@@ -22,15 +22,15 @@ Check for these first. The result is much better with them.
 - **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
 - **Ad copy**, made by the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer): the headline and text of the ad.
 
-**The steps before this one** (do each once, then reuse what it makes):
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Your offer** with the [Hidden offer finder](https://useaiblocks.com/prompts/hidden-offer-finder). It uses your brand brain.
 2. **Ad copy** with the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer). It uses your brand brain and a buyer brief.
 3. This one.
 
-How to check:
-- **In Claude Code,** look in the project first for these by name, or ask for their path.
-- **In a chat,** ask once: "Do you have your website, your offer, customer words? Attach or paste them here." If they're already in this project's files, use those.
-- **If one is missing,** say so before you start, in one line: the result will be much better with it, with the link to make it once and reuse it. Next time they can attach it (or, in Claude Code, give its path). Then carry on with what you have and mark each gap with `MISSING:`.
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In Claude Code, look in the project too for these by name.
+2. **If something is missing, advise, don't block.** In one short message, say this skill works on its own and will be better with your website, your offer, customer words. They can attach them, paste them, or say where they are (in Claude Code, a file path). Name the recommended steps above as a suggestion, with their links. Then ask: "Add them, or shall I go ahead with what you've given me?" If their message already says to go ahead, skip this and start.
+3. **When they say go ahead,** do the whole job with what you have. Mark each gap with `MISSING:` and never invent a fact to fill it. List the gaps at the end so they can fill them in later.
 
 **Tools that do this best:**
 - **Claude:** Keeps your offer terms, the ad's words and four steps of work straight in one run.
@@ -55,7 +55,7 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **A stop** (a required input is missing or a check fails): stop at that step. Later steps don't run, not even as drafts. Go straight to the hand-back summary.
 
 ## Steps
-1. **Build the brand file.** Use the skill `website-brand-file-builder`. It reads the site, tags every fact as confirmed, inferred, disputed or unknown, and hands on eight files, with the offer, guarantee and claims list word for word.
+1. **Build the brand file.** Use the skill `website-brand-brain-builder`. It reads the site, tags every fact as confirmed, inferred, disputed or unknown, and hands on eight files, with the offer, guarantee and claims list word for word.
 2. **Write the page.** Use the skill `ad-matched-landing-page-writer`. Give it the brand file from step 1, the offer and the ad. It pins one buyer, one reason and one offer, then hands on the page brief, a first screen that carries the ad's main words, says what it is and shows the ad's offer first, the doubt list (most common first), one answer-first section per doubt, a cost block before the last button, questions, a close, and every empty field as `MISSING`.
 3. **Plan the design.** Use the skill `landing-page-design-planner`. Give it the brand file from step 1 and the page from step 2. It sets one design system from the brand's own colours, fonts and photos, and hands on three directions that differ in first-screen layout and what the pictures do, plus a section plan for phone and desktop.
 4. **Review the page.** Use the skill `landing-page-30-point-checker`. Give it the page from step 2, the design plan from step 3 and the brand file. It runs 30 yes-or-no checks at the five stops a buyer makes (arrive, understand, believe, commit, fine print), quotes the page for every no, tags each one deal-breaker or drag, counts the no's by stop, and lists the first five fixes.
@@ -66,7 +66,7 @@ Four step files plus the summary. The last files hold the design plan and the re
 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
-When you've handed it back, ask in one short question what they want to do next. Offer these, and say they can type their own:
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - **Write the landing page** with the [Shopify landing page builder](https://useaiblocks.com/skills/shopify-landing-page-builder). It takes the design direction.
 - **Plan what to test** with the [Ad test brief writer](https://useaiblocks.com/skills/ad-test-brief-writer). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.

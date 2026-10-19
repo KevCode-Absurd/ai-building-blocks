@@ -1,10 +1,10 @@
 new_slug: complaint-review-image-ad-maker
 name: "Complaint review image ad maker"
-summary: "Paste your reviews. Get a review card whose grumble proves it works, and a score out of 100."
+summary: "Paste your reviews. Get a review card whose grumble proves it works, or a clear stop."
 job: make-image-ads
 
 headline: "Complaint review image ad maker"
-subhead: Give it your real reviews and your story ad. It keeps only a review whose grumble would vanish if the product stopped working, and copies it word for word with its real stars. You get a plain review card brief and a score out of 100, or a clear stop.
+subhead: Give it your real reviews and your story ad. It keeps only a review whose grumble would vanish if the product stopped working, and copies it word for word with its real stars. You get a plain review card brief, or a clear stop.
 
 explain: |
   People read bad reviews first, and perfect praise reads as too good to be true. Review research has found buying peaks just below a perfect rating, because a small flaw makes the rest believable. The best flaw is one that only happens because the product works, like "my partner keeps eating mine". The reader stops for the grumble and finds the reason to buy inside it.
@@ -26,7 +26,7 @@ you_get:
   - The winning review's words, stars, name and date, exactly as allowed
   - A blank card and a short line to run under the image
   - How to build the card with exact words, or a clear MISSING and what to use instead
-  - A score out of 100, from the card against the skill's five checks, or the share of reviews that passed when none can be used
+  - Any of the skill's five checks the card still missed, one line each, or none
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
@@ -60,11 +60,10 @@ output_shape: |
   LINE UNDER IMAGE  <words> (<caption line>, <characters>)
   FLAGS             <permission, anything to check>
   HOW TO MAKE IT    <design-tool build, or a 60 to 120 word prompt>
-  SCORE             <n>/100 (<passed> of 5 checks) | missed: <one line each>
+  CHECKS MISSED     <one line each, or none>
 
   When none passes:
   RESULT, MISSING lines, USE INSTEAD, WATCH FOR
-  SCORE   <reviews passed> of <reviews given> = <n>/100
 
 example:
   business: sprout

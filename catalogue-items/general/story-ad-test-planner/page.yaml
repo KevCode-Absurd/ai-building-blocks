@@ -1,10 +1,10 @@
 new_slug: story-ad-test-planner
 name: "Story ad test planner"
-summary: "Paste your facts and reviews. Get a fit verdict, four story tests and a score out of 100."
+summary: "Paste your facts and reviews. Get a fit verdict, an honest narrator and four story tests."
 job: plan-ad-tests
 
 headline: "Story ad test planner"
-subhead: Paste your product facts and numbered customer reviews. It checks whether a story ad suits the product, picks the problem to lead with and why buyers switch, then names an honest narrator. You get a setup sheet, four stories to test and a score out of 100.
+subhead: Paste your product facts and numbered customer reviews. It checks whether a story ad suits the product, picks the problem to lead with and why buyers switch, then names an honest narrator. You get a setup sheet and four stories to test.
 
 explain: |
   A story ad is an everyday-looking picture with a short story under it, posted like a normal post. It works when readers see their own experience in it. That needs buyers who have tried other fixes and dropped them. It also needs a narrator who is real.
@@ -28,7 +28,7 @@ you_get:
   - The lead problem, with why people switch, in buyers' exact words and review numbers
   - The narrator, the page the click opens, and a four-row test plan
   - What a person must check, how to read results, and every gap in one list
-  - A score out of 100 for the sheet, with one line for each check it missed
+  - Any check the sheet still missed, one line each
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
@@ -79,8 +79,7 @@ output_shape: |
   READING RESULTS  <the rules>
   A PERSON CHECKS  <list>
   MISSING  <every gap, in one list>
-  SCORE  <n>/100 (<checks passed> of 6 checks)
-  Missed: <one line per check still missed>
+  CHECKS MISSED: <one line per check still missed, or none>
 
 example:
   business: sprout

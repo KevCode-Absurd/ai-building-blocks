@@ -1,10 +1,10 @@
 new_slug: claymation-video-clip-prompt-writer
 name: "Claymation video clip prompt writer"
-summary: "Paste your clay script and attach product photos. Get matching clip prompts and a score out of 100."
+summary: "Paste your clay script and attach product photos. Get matching clip prompts and an edit list."
 job: make-video-ads
 
 headline: "Claymation video clip prompt writer"
-subhead: Give it a claymation ad script and photos of your product. It fixes one clay character, set and product, then builds reference images, sheets, a storyboard and stop-motion clip prompts, stopping three times for your OK. You get every prompt, an edit list and a score out of 100.
+subhead: Give it a claymation ad script and photos of your product. It fixes one clay character, set and product, then builds reference images, sheets, a storyboard and stop-motion clip prompts, stopping three times for your OK. You get every prompt, an edit list and any check it missed.
 
 explain: |
   AI video tools drift. The character's hair changes between clips, clay turns into shiny plastic, your label gets redrawn with wrong letters, and the one change the ad depends on happens off screen. You end up paying for the same clip again and again.
@@ -26,7 +26,7 @@ you_get:
   - Reference image prompts, then sheets for the character, product and set, with lock lines
   - A storyboard with one still, one mover and counted beats per shot, and the morph's frame pair
   - Clip prompts and an edit list, with a fix list for each take
-  - A score out of 100 for the prompts, with one line for each check they missed
+  - Any check the prompts couldn't meet, one line each
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
@@ -69,8 +69,7 @@ output_shape: |
   STAGE 5  CLIP <n> (<s>)  Attach: <image = job>. Motion line. Beats.
                            Camera. Hold line. Sound.
            EDIT LIST  <order, offer text, safe zones, fixes>
-  SCORE  <n>/100 (<checks passed> of 6 checks)
-  Missed: <one line per check still missed>
+  CHECKS MISSED: <one line per check still missed, or none>
 
 example:
   business: sprout
@@ -170,7 +169,7 @@ tweaks:
     how: Paste the things your brand never shows (a body changing, a pack opened the wrong way). It writes them out of every prompt and describes what to show instead.
 
 judge:
-  - It stopped for your OK after the avatar card, the sheets and the storyboard.
+  - It stopped for your OK after the avatar card, the sheets and the storyboard, or marked each "(approve)" if you asked for every stage at once.
   - The lock lines appear word for word in every still and clip prompt.
   - Each clip has one mover and one camera instruction, and there is at most one morph, made from a first and last frame.
   - The product follows its one product line in every shot, with the label exactly as printed.

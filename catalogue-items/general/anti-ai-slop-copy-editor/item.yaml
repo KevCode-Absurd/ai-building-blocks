@@ -1,0 +1,27 @@
+slug: anti-ai-slop-copy-editor
+renamed_from: ai-sounding-copy-editor
+name: "Anti-AI-slop copy editor"
+summary: "Paste your copy. Get each machine-sounding line fixed, the full rewrite and a score out of 100."
+category: general
+type: skill
+role: check
+job: copy
+level: beginner
+inputs:
+  - {type: copy_draft, required: true}
+outputs:
+  - {type: audit_report}
+uses: [ad-script-read-aloud-editor]
+origin: rebuilt
+source_ids: [CES-022]
+version: 2.0.0
+credits:
+  - {title: "Wikipedia:Signs of AI writing", by: "Wikipedia editors", url: "https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing", used: "Most of the 16 signs, the families they sit in, and the list of things that don't prove AI on their own"}
+  - {title: "How Users Read on the Web", by: "Jakob Nielsen, Nielsen Norman Group", url: "https://www.nngroup.com/articles/how-users-read-on-the-web/", used: "Promotional language makes readers filter for the facts (sign 2)"}
+  - {title: "Politics and the English Language", by: "George Orwell", url: "https://en.wikipedia.org/wiki/Politics_and_the_English_Language", used: "Prefer the short, plain word to the stock phrase"}
+tested:
+  on: 2026-10-19
+  business: sprout
+  model: claude-opus-5-5
+  judge: claude-sonnet-5-5
+  result: fail

@@ -1,10 +1,10 @@
 new_slug: empty-room-image-ad-maker
 name: "Empty room image ad maker"
-summary: "Paste your story ad. Get an empty-room photo prompt, its caption line and a score out of 100."
+summary: "Paste your story ad. Get an empty-room photo prompt and its caption line."
 job: make-image-ads
 
 headline: "Empty room image ad maker"
-subhead: Give it your story ad. It picks the room where the change shows and casts three objects that show what the problem left, what tells the hour and where the person should be. You get the photo prompt, the line under the image and a score out of 100.
+subhead: Give it your story ad. It picks the room where the change shows and casts three objects that show what the problem left, what tells the hour and where the person should be. You get the photo prompt and the line under the image.
 
 explain: |
   Some problems change how people live more than how they look: sleep, rushed mornings, a routine that slips. A sad face at a window is a cliché and reads as an ad. A room just after someone left it works better, because readers fill in the missing person, and the person they picture is themselves.
@@ -25,7 +25,7 @@ you_get:
   - The trace, the clock and the gap, with where the camera stands
   - The line under the image, and flags on anything taken from the story alone
   - A 60 to 120 word image prompt, ready to paste
-  - A score out of 100 from the skill's five checks, with one line per check missed
+  - Any of the skill's five checks still missed, one line each
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
@@ -50,6 +50,7 @@ output_shape: |
   SCENE              <what someone scrolling would say they saw>
   ROOM AND HOUR      <room, time, light>
   THE TRACE          <what the problem left behind>
+  EXTRA TRACE        <one more, or none>
   THE CLOCK          <what tells the hour>
   THE GAP            <where the person should be>
   CAMERA             <where it stands, and why>
@@ -58,7 +59,7 @@ output_shape: |
   LINE UNDER IMAGE   <words> (<characters>)
   FLAGS              <objects from the story alone, and their source>
   IMAGE PROMPT       <60 to 120 words, ready to paste>
-  SCORE              <n>/100 (<passed> of 5 checks) | missed: <one line each>
+  CHECKS MISSED      <one line each, or none>
 
 example:
   business: sprout
@@ -83,8 +84,9 @@ example:
                        place.
     ROOM AND HOUR      Family kitchen, about 8:15am, bright low sun
                        through the window, lights off.
-    THE TRACE          At one place: a full mug of coffee gone cold,
-                       and a plate with a slice of toast, one bite out.
+    THE TRACE          At one place: a full mug of coffee gone cold.
+    EXTRA TRACE        Beside it, a plate with a slice of toast, one
+                       bite out.
     THE CLOCK          A lunchbox lid left on the counter, its box gone,
                        with the low morning sun across the table.
     THE GAP            The chair at that place pushed back at an angle,
@@ -113,6 +115,7 @@ example:
                        hair tie, a school letter and a charger cable on
                        the table. Lived-in, unstyled. No person, no
                        children, no logo, no product, no text.
+    CHECKS MISSED      none
 
 tweaks:
   - what: Which room
@@ -134,7 +137,7 @@ judge:
 test:
   - Show the picture to someone who fits your buyer and ask what happened in this room this morning. If they can tell the story back, the objects work.
   - Run it twice on the same story. The room and the three roles should stay the same.
-  - Run it on a story with no changed room. It should send you to the everyday snapshot instead of inventing one.
+  - Run it on a story with no changed room. It should ask once, then carry on with the room marked [inferred] and suggest the everyday snapshot.
   - Test it against a snapshot with a person in it. Some buyers respond to the empty room, some to a face.
 
 improve:

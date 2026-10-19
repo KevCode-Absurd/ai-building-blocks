@@ -1,10 +1,10 @@
 new_slug: motion-graphics-video-build-planner
 name: "Motion graphics video build planner"
-summary: "Paste your graphic script and attach cutouts. Get an exact build plan and a score out of 100."
+summary: "Paste your graphic script and attach cutouts. Get an exact build plan and a text table with sources."
 job: make-video-ads
 
 headline: "Motion graphics video build planner"
-subhead: Give it a motion graphics script and product cutouts. It checks every number, draws a style frame per shot, and plans the build in code or an editor, stopping three times for your OK. You get the build plan, a text table with sources and a score out of 100.
+subhead: Give it a motion graphics script and product cutouts. It checks every number, draws a style frame per shot, and plans the build in code or an editor, stopping three times for your OK. You get the build plan and a text table with sources.
 
 explain: |
   Graphic ads live on exact numbers, and AI video tools still misspell words, invent figures and redraw labels. So this skill never asks a video model for text, a chart or your product. Every word, number, bar and the product photo is built as a live layer in code or an editor, so it comes out exactly as the script wrote it.
@@ -26,7 +26,7 @@ you_get:
   - Test frames for the cutout, then a product sheet and a theme of colours, fonts and moves
   - A storyboard of style frames, each with a build sheet timed in frames
   - A Remotion scene list or editor layer list, background prompts if wanted, and a text table with sources
-  - A score out of 100 for the prompts, with one line for each check they missed
+  - Any check the build plan still missed, one line each, or none
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
@@ -67,8 +67,7 @@ output_shape: |
            BACKGROUNDS   <wordless prompts, or none>
            TEXT TABLE    <shot | text | start-end | source>
            EDIT LIST     <voice, music, end card, preview render>
-  SCORE  <n>/100 (<checks passed> of 6 checks)
-  Missed: <one line per check still missed>
+  CHECKS MISSED  <one line per check still missed, or none>
 
 example:
   business: sprout
@@ -165,14 +164,14 @@ tweaks:
     how: Ask for 4:5 or 1:1 as well. It resets the canvas and safe area and moves the layers, keeping every word and number the same.
 
 judge:
-  - It stopped for your OK after the product card, the theme and the storyboard.
+  - It stopped for your OK after the product card, the theme and the storyboard, unless you asked for every stage in one go.
   - No word, number, chart or product is asked of a video model.
   - Every number on screen matches the fact sheet, with its source in the text table.
   - Bars are drawn from their numbers, to scale from one zero line.
   - Text holds still for its full hold time and sits inside the safe area, and the product cutout looks the same in every shot.
 
 test:
-  - Give it a script with a number that has no source. The script check should stop and name it.
+  - Give it a script with a number that has no source. The script check should name it and keep that number off screen.
   - Measure the two bars in the render. Their heights should keep the same ratio as their numbers.
   - Pause on each shot at phone size. Every line should read twice before it leaves.
   - Read the text table against your offer terms, character by character. The renewal price should never be missing from a shot that shows the first-order price.

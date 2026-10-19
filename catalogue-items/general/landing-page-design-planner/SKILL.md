@@ -1,6 +1,6 @@
 ---
 name: landing-page-design-planner
-description: Use when a landing page's copy and offer are settled and you need a design plan that fits your brand (what stands out, images, type, layout, phone first), or when you need to review a built page's design and readability. Never invents offers, proof or brand files. Ends with a score out of 100 for the plan, and one for a built page under review.
+description: Use when a landing page's copy and offer are settled and you need a design plan that fits your brand (what stands out, images, type, layout, phone first), or when you need to review a built page's design and readability. Never invents offers, proof or brand files. Ends with any check it missed.
 ---
 
 # Landing page design planner
@@ -9,25 +9,25 @@ You give three genuinely different design directions for the same page, one chos
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
-Check for these first. The result is much better with them.
+This skill runs on its own. What's below makes the result better, but none of it is required.
 
-**Needed:**
-- **Brand brain**, made by the [Website brand file builder](https://useaiblocks.com/skills/website-brand-file-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
+**Works best with** (or they can paste their own instead):
+- **Brand brain**, made by the [Website brand brain builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
 - **Your page** (yours): the landing page's link, or its text and a screenshot.
 
 **Makes it better (optional):**
 - **Customer words** (yours): reviews, testimonials, support tickets, survey answers or call transcripts. Export them or paste them in.
 
-**The steps before this one** (do each once, then reuse what it makes):
-1. **Brand brain** with the [Website brand file builder](https://useaiblocks.com/skills/website-brand-file-builder). Bring your website, customer words (optional), your results (optional).
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **Brand brain** with the [Website brand brain builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
 2. This one.
 
 **From the brand brain, read:** `00-start-here.md`, `offers.md`, `customers.md`, `proof-and-claims.md`, `voice-and-look.md`. Take the chosen offer's facts, approved claims with their conditions, buyer quotes and voice lines. Source notes and rejected ideas never go into the result.
 
-How to check:
-- **In Claude Code,** look in the project first. A brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name, or ask for their path.
-- **In a chat,** ask once: "Do you have your brand brain, your page, customer words? Attach or paste them here." If they're already in this project's files, use those.
-- **If one is missing,** say so before you start, in one line: the result will be much better with it, with the link to make it once and reuse it. Next time they can attach it (or, in Claude Code, give its path). Then carry on with what you have and mark each gap with `MISSING:`.
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In Claude Code, look in the project too: a brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name.
+2. **If something is missing, advise, don't block.** In one short message, say this skill works on its own and will be better with your brand brain, your page, customer words. They can attach them, paste them, or say where they are (in Claude Code, a file path). Name the recommended steps above as a suggestion, with their links. Then ask: "Add them, or shall I go ahead with what you've given me?" If their message already says to go ahead, skip this and start.
+3. **When they say go ahead,** do the whole job with what you have. Mark each gap with `MISSING:` and never invent a fact to fill it. List the gaps at the end so they can fill them in later.
 
 **Tools that do this best:**
 - **Claude:** Holds a long design system and section plan in one chat, and can turn the chosen direction into a working page to preview.
@@ -54,7 +54,7 @@ How to check:
    - *Technical:* check for content spilling off the screen at 320 px wide, fonts that didn't load, tiny text, text contrast (4.5:1 for normal text, 3:1 for large text and for button edges and icons), cut-off text, buttons with no name for screen readers, tap targets (24 px is the floor, aim for about 44 px on buying and fold-out controls), keyboard order and visible focus, zoom to 200%, and reduced motion. Contrast over photos or gradients needs a visual check; say so rather than passing it. A checklist pass isn't a full accessibility certificate.
 8. **Write a build brief for the chosen direction.** One short block someone can paste into a design or build tool: the page's job, the design system values, the section plan in order with each section's phone layout, the real images to use, and the terms that must stay visible. List the facts as given; the tool adds nothing.
 9. **Fix the section that owns the problem.** Fix one section or one shared rule, keep the rest, and recheck the affected screen sizes. A new offer or a change of strategy is a new decision about scope.
-10. **Score it.** For the plan, go through "Check before you hand it back", fix any check that fails, and score = checks passed / all checks x 100, rounded. For a built page, also score the page: the ten technical checks in step 7 it passes / those you could run x 100, rounded, with the unchecked ones listed apart. Show each sum and one line per check missed.
+10. **Check it.** Go through "Check before you hand it back" and fix any check that fails. List each check still missed under `CHECKS MISSED`, one line each, or write "none". For a built page, the technical findings and the list of what couldn't be checked are the result; give no number.
 
 ## What you hand back
 - **Design system**: colours and their jobs, font roles, main visual move, layout rules, line length, motion, accessibility.
@@ -62,11 +62,11 @@ How to check:
 - **Section plan**: one row per section, with its buyer question, layout and image.
 - **Build brief**: for the direction picked, or for direction A if none is picked yet.
 - **Review (if applicable)**: visual findings and technical findings in separate lists, each with section, screen size and fix, plus what couldn't be checked.
-- **Score**: the plan's score, and the built page's score if reviewed, each with its sum and one line per check missed.
+- **Checks missed**: one line per check still missed, or "none".
 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
-When you've handed it back, ask in one short question what they want to do next. Offer these, and say they can type their own:
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - **Write the landing page** with the [Shopify landing page builder](https://useaiblocks.com/skills/shopify-landing-page-builder). It takes the design direction.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

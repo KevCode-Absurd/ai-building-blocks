@@ -1,10 +1,10 @@
 new_slug: sticky-note-image-ad-maker
 name: "Sticky-note image ad maker"
-summary: "Paste your story ad. Get a sticky-note photo brief, image prompt and a score out of 100."
+summary: "Paste your story ad. Get a sticky-note photo brief, an image prompt and a blank version."
 job: make-image-ads
 
 headline: "Sticky-note image ad maker"
-subhead: Paste your story ad. It finds the rule the old way forced on your buyer, writes it in two to eight handwritten words, and sticks it on the thing it's about. You get the image prompt, a blank version and a score out of 100.
+subhead: Paste your story ad. It finds the rule the old way forced on your buyer, writes it in two to eight handwritten words, and sticks it on the thing it's about. You get the photo brief, the image prompt and a blank version.
 
 explain: |
   People only stick up a note like "eggs: OTHER pan" or "CANCEL before the 14th" when the old way keeps letting them down. The note is the habit in a few words, and where it's stuck tells you the rest. Anyone who has written the same kind of rule knows the story before they read the ad. Handwritten notes also get noticed: in one well-known study, a request written on a sticky note got far more people to reply than the same request printed in the letter.
@@ -24,7 +24,7 @@ you_get:
   - The thing it's stuck on and what's nearby
   - A blank version and the line under the picture
   - A 60 to 120 word image prompt, and the easiest honest way to make it
-  - A score out of 100 for the share of its six checks the brief passes, with each one missed
+  - Any of its six checks the brief still misses, one line each
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
@@ -57,7 +57,7 @@ output_shape: |
   FLAGS             <words written for the image, anything inferred>
   IMAGE PROMPT      <60 to 120 words, the words in quotes once>
   HOW TO MAKE IT    <real note | generated | blank plus handwriting>
-  SCORE             <passed> / 6 checks x 100 = <score>, missed: <one line each>
+  CHECKS MISSED     <one line each, or none>
 
 example:
   business: sprout

@@ -1,10 +1,10 @@
 new_slug: motion-comic-video-clip-prompt-writer
 name: "Motion comic video clip prompt writer"
-summary: "Paste your comic script and attach product photos. Get panel clip prompts and a score out of 100."
+summary: "Paste your comic script and attach product photos. Get panel clip prompts and an edit list."
 job: make-video-ads
 
 headline: "Motion comic video clip prompt writer"
-subhead: Give it a comic ad script and product photos. It draws one simple hero, builds sheets and a storyboard, and writes one clip per panel, stopping three times for your OK. You get every prompt, an edit list and a score out of 100.
+subhead: Give it a comic ad script and product photos. It draws one simple hero, builds sheets and a storyboard, and writes one clip per panel, stopping three times for your OK. You get every prompt and an edit list.
 
 explain: |
   Comics are built for phones. One panel at a time, read top to bottom, with the story jumping forward in the gap between panels. AI video tools spoil the look in familiar ways. They draw letters as scribble, puff flat ink into 3D, change the hero between shots, and redraw your label.
@@ -26,7 +26,7 @@ you_get:
   - Reference image prompts, then sheet prompts for the hero, product and places, with lock lines
   - A storyboard with one panel still and one card per panel
   - One clip prompt per panel, and an edit list for captions, narration, sound and the photo panel
-  - A score out of 100 for the prompts, with one line for each check they missed
+  - Any check the prompts still missed, one line each, or none
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
@@ -70,8 +70,7 @@ output_shape: |
                            Ink stays flat 2D. No words appear.
            EDIT LIST   <captions, narration, sound, photo panel,
                        offer, safe zones>
-  SCORE  <n>/100 (<checks passed> of 7 checks)
-  Missed: <one line per check still missed>
+  CHECKS MISSED  <one line per check still missed, or none>
 
 example:
   business: sprout
@@ -159,7 +158,7 @@ tweaks:
     how: Give your brand colours. The ink keeps black plus 3 or 4 flat colours, and your product stays the brightest.
 
 judge:
-  - It stopped for your OK after the avatar card, the sheets and the storyboard.
+  - It stopped for your OK after the avatar card, the sheets and the storyboard, unless you asked for every stage in one go.
   - Every panel has a named transition, and the reveal panel is the longest.
   - The lock lines are the same, word for word, in every prompt.
   - No prompt asks the tool to draw words or numbers, and each clip has one kind of motion.

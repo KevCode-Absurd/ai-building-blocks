@@ -1,10 +1,10 @@
 new_slug: feared-outcome-image-ad-maker
 name: "Feared outcome image ad maker"
-summary: "Paste your story ad and buyers' fear. Get a quiet photo prompt and a score out of 100."
+summary: "Paste your story ad and buyers' fear. Get a quiet photo prompt and the step to offer."
 job: make-image-ads
 
 headline: "Feared outcome image ad maker"
-subhead: Give it your story ad, the fear your buyers name themselves and the step your story offers. It checks all three hold and shows the fear as one quiet piece of paperwork lying where post lands. You get the photo prompt and a score out of 100.
+subhead: Give it your story ad, the fear your buyers name themselves and the step your story offers. It checks all three hold and shows the fear as one quiet piece of paperwork lying where post lands. You get the photo prompt, the line under the image and the step your copy must offer.
 
 explain: |
   Many buyers act only when they picture where a problem is heading. Research on fear in messages has found the same thing for decades: fear moves people when they can also see a step they can take. Show the fear with no way out and they look away. So this skill shows the threat quietly in the picture, and leaves the step to the story underneath.
@@ -26,7 +26,7 @@ you_get:
   - The one object, what it stands for and where it lands
   - A short line to run under the image, and the step the copy must carry
   - A 60 to 120 word image prompt, ready to paste
-  - A score out of 100, from the brief against the skill's six checks when it passes, or the gate when it stops
+  - Any of the skill's six checks still missed, or the gate part that failed when it stops
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
@@ -61,7 +61,7 @@ output_shape: |
   STEP FOR THE COPY   <what the first lines must offer>
   FLAGS               <what the copy must not promise, anything inferred>
   IMAGE PROMPT        <60 to 120 words, ready to paste>
-  SCORE               <n>/100 (<passed> of 6 checks, or of 3 gate parts) | missed: <one line each>
+  CHECKS MISSED       <one line each, or none>
 
 example:
   business: sprout
@@ -122,6 +122,7 @@ example:
                         unreadable. Ordinary room light, a little
                         grain, unstyled, calm. Plain unbranded paper
                         only.
+    CHECKS MISSED       none
 
 tweaks:
   - what: The object
@@ -142,7 +143,7 @@ judge:
 
 test:
   - Run it on a fear you've heard from customers many times. The object should be the one they'd name first. If it isn't, add their exact words to the input.
-  - Give it a story with a fear and no step. It should stop and send the story back.
+  - Give it a story with a fear and no step. It should ask once for the step, carry on with it marked MISSING, and say the picture can't run until the story offers one.
   - Give it a fear about health. It should stop and hand you to the empty-room picture.
   - Test it against a snapshot of today's problem with the same story. Some buyers respond to now, some to later.
 

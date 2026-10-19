@@ -1,10 +1,10 @@
 new_slug: problem-moment-image-ad-maker
 name: "Problem moment image ad maker"
-summary: "Paste your story ad. Get a snapshot prompt of the problem moment and a score out of 100."
+summary: "Paste your story ad. Get a phone-photo image prompt of the problem moment and a caption line."
 job: make-image-ads
 
 headline: "Problem moment image ad maker"
-subhead: Give it your story ad. It finds the half second where the problem is plainest, decides who was holding the phone and casts a made-up adult to live it. You get a plain phone photo prompt, a line under the image and a score out of 100.
+subhead: Give it your story ad. It finds the half second where the problem is plainest, decides who was holding the phone and casts a made-up adult to live it. You get a plain phone photo prompt, a line under the image and flags for anything it guessed.
 
 explain: |
   Most image ads look like ads: a product on a clean background, a price, a button. People scroll past them on reflex. This skill makes the picture for a story ad look like a photo someone took in the middle of an ordinary morning, so the right buyer knows the moment before deciding it's an ad.
@@ -25,7 +25,6 @@ you_get:
   - A short line to run under the image
   - A 60 to 120 word image prompt, ready to paste into your image tool
   - Flags for anything it had to guess
-  - A score out of 100 from the skill's six checks, with one line per check missed
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
@@ -58,7 +57,7 @@ output_shape: |
   LINE UNDER IMAGE    <words> (<caption line>, <characters>)
   FLAGS               <anything inferred, what stays out of frame>
   IMAGE PROMPT        <60 to 120 words, ready to paste>
-  SCORE               <n>/100 (<passed> of 6 checks) | missed: <one line each>
+  CHECKS MISSED       <one line each, or none>
 
 example:
   business: sprout
@@ -113,6 +112,7 @@ example:
                         fridge door cut off at the left edge, a little
                         grain, unretouched. His face is turned away.
                         Plain unlabelled objects only, no text.
+    CHECKS MISSED       none
 
 tweaks:
   - what: The instant

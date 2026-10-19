@@ -1,6 +1,6 @@
 ---
 name: article-headline-image-ad-maker
-description: Use when a story ad's picture should carry the same headline as the page it opens, set on a candid photo of the same moment, so the click feels like turning a page. Cuts the page's headline to 7 words, briefs the photo, checks the ad and page match on words, scene and promise, and gives a score out of 100.
+description: Use when a story ad's picture should carry the same headline as the page it opens, set on a candid photo of the same moment, so the click feels like turning a page. Cuts the page's headline to 7 words, briefs the photo, checks the ad and page match on words, scene and promise, and writes the image prompt.
 ---
 
 # Article headline image ad maker
@@ -20,27 +20,27 @@ You write the brief and image prompt for a candid photo carrying one line: the h
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
-Check for these first. The result is much better with them.
+This skill runs on its own. What's below makes the result better, but none of it is required.
 
-**Needed:**
+**Works best with** (or they can paste their own instead):
 - **Ad copy**, made by the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer): the headline and text of the ad.
 
 **Makes it better (optional):**
-- **Brand brain** (its buyers part), made by the [Website brand file builder](https://useaiblocks.com/skills/website-brand-file-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
+- **Brand brain** (its buyers part), made by the [Website brand brain builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
 - **Your page** (yours): the landing page's link, or its text and a screenshot.
 
-**The steps before this one** (do each once, then reuse what it makes):
-1. **Brand brain** with the [Website brand file builder](https://useaiblocks.com/skills/website-brand-file-builder). Bring your website, customer words (optional), your results (optional).
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **Brand brain** with the [Website brand brain builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
 2. **A buyer brief** with the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer). Bring customer words. It uses your brand brain.
 3. **Ad copy** with the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer). It uses your brand brain and a buyer brief.
 4. This one.
 
 **From the brand brain, read:** `00-start-here.md`, `voice-and-look.md`, `offers.md`, `proof-and-claims.md`. Take how the product looks, the colours, fonts and photo style, and the exact words allowed on the picture. Leave out review quotes and research notes. Source notes and rejected ideas never go into the result.
 
-How to check:
-- **In Claude Code,** look in the project first. A brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name, or ask for their path.
-- **In a chat,** ask once: "Do you have ad copy, your brand brain, your page? Attach or paste them here." If they're already in this project's files, use those.
-- **If one is missing,** say so before you start, in one line: the result will be much better with it, with the link to make it once and reuse it. Next time they can attach it (or, in Claude Code, give its path). Then carry on with what you have and mark each gap with `MISSING:`.
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In Claude Code, look in the project too: a brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name.
+2. **If something is missing, advise, don't block.** In one short message, say this skill works on its own and will be better with ad copy, your brand brain, your page. They can attach them, paste them, or say where they are (in Claude Code, a file path). Name the recommended steps above as a suggestion, with their links. Then ask: "Add them, or shall I go ahead with what you've given me?" If their message already says to go ahead, skip this and start.
+3. **When they say go ahead,** do the whole job with what you have. Mark each gap with `MISSING:` and never invent a fact to fill it. List the gaps at the end so they can fill them in later.
 
 **Tools that do this best:**
 - **GPT Image:** Spells a short line on a photo better than older models, and you can point at one wrong word to fix it.
@@ -55,8 +55,8 @@ How to check:
 <!-- making-it -->
 ## Making the picture
 
-You write the prompt. You can't draw the picture unless this chat has an image tool connected. Say that once, in one line, before you start, so nobody waits for a picture that won't come. At the end, tell them how to finish it:
-- **ChatGPT or Gemini:** paste the image prompt into a chat and ask for the picture. ChatGPT uses GPT Image, Gemini uses Nano Banana. Free plans have tight daily limits. Codex on a paid ChatGPT plan can make it too.
+If you can make images in this chat (ChatGPT and Gemini can), make the picture from your prompt once the prompt passes its checks, then check the picture against the same list and say what to fix. If you can't (Claude can't draw unless an image tool is connected), say that once, in one line, before you start, so nobody waits for a picture that won't come. Hand back the prompt, and at the end tell them how to finish it:
+- **ChatGPT or Gemini:** paste the image prompt into a chat and ask for the picture, or paste this whole skill there so it writes the prompt and makes the picture in one go. ChatGPT uses GPT Image, Gemini uses Nano Banana. Free plans have tight daily limits. Codex on a paid ChatGPT plan can make it too.
 - **Higgsfield:** paste the prompt into its image tool, or connect Higgsfield to Claude so Claude makes it there.
 - **Claude Code:** with an OpenAI or Google key saved as `OPENAI_API_KEY` or `GEMINI_API_KEY`, offer to send the prompt to that image API and save the file. Keys: platform.openai.com/api-keys (OpenAI) or aistudio.google.com/apikey (Google). OpenAI or Google bills each picture.
 
@@ -71,7 +71,7 @@ If an image tool is connected, offer to make the picture with it, and ask before
 5. **Set the type.** One line, plain heavy sans-serif, sentence case, dark on light or light on dark, big enough to read at arm's length. Never script, never the brand's font. No masthead, outlet name, byline or date.
 6. **Write the line under the image:** a different caption line, about 27 characters, so the two lines don't repeat.
 7. **Run the scent check.** Compare the ad with the page's first screen on three things: the words, the scene and the promise. Mark each one as a match, or say what to change.
-8. **Score it.** Run "Check before you hand it back" and fix any check that fails where you can. Score = (scent matches + checks passed) / 8 x 100, rounded: three scent items plus five checks. Show the sum, and one line for each one missed.
+8. **Run the checks.** Run "Check before you hand it back" and fix any check that fails where you can. List any check still missed on a `CHECKS MISSED:` line, one line each, or write "none". Scent items that don't match stay in the scent check, each with its fix.
 
 ## What you hand back
 1. **Scene**: what someone scrolling would say they saw.
@@ -83,11 +83,11 @@ If an image tool is connected, offer to make the picture with it, and ask before
 7. **Line under the image**: the words and character count.
 8. **Scent check**: words, scene, promise, each a match or a fix.
 9. **Image prompt**: 60 to 120 words, ready to paste. The line appears once, in quotes, spelled exactly.
-10. **Score**: out of 100, with its sum and one line per item missed.
+10. **CHECKS MISSED**: one line per check still missed, or "none".
 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
-When you've handed it back, ask in one short question what they want to do next. Offer these, and say they can type their own:
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - **Check it before it goes live** with the [Pre-launch ad checker](https://useaiblocks.com/skills/pre-launch-ad-checker). It takes the image prompt.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

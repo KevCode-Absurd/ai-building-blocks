@@ -1,10 +1,10 @@
 new_slug: ad-results-report-writer
 name: "Ad results report writer"
-summary: "Paste two periods of ad totals. Get the answer, three ranked actions and a score out of 100."
+summary: "Paste two periods of ad totals. Get the one-line answer, what changed and three ranked actions."
 job: read-ad-results
 
 headline: "Ad results report writer"
-subhead: Paste this period's ad totals and the period before. It recalculates every number from the totals and writes a one-page report. You get the answer in one line, the main changes, one open worry, three ranked actions and a score out of 100.
+subhead: Paste this period's ad totals and the period before. It recalculates every number from the totals and writes a one-page report. You get the answer in one line, the main changes, one open worry and three ranked actions, each with an owner.
 
 explain: |
   Most ad reports are the export with a chart on top. Every number is there and nobody knows what to do. Some reports also average percentages across rows, which gives wrong answers, or credit the ads for a sales jump that came from a restock.
@@ -26,7 +26,7 @@ you_get:
   - The answer in one line, at the top
   - A table of the main numbers, this period against last, with the change
   - Two to four changes that matter, one unresolved worry, and three ranked actions, with budget changes marked for approval
-  - A score out of 100 for how many of its own checks the report passes, with each miss named
+  - Any of its own checks the report still misses, each named
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
@@ -46,8 +46,8 @@ how_it_works:
     text: One line the reader could act on alone, then the support in order of weight.
   - title: Picks three actions
     text: Ranked by money at stake, each tied to a number, with an owner and a check. Anything touching a budget, bid or ad status is marked needs approval.
-  - title: Scores the report
-    text: Goes through its own checks, fixes what it can, and scores checks passed out of all checks, times 100. Any check still missed gets one line.
+  - title: Checks the report
+    text: Goes through its own checks and fixes what it can. Any check still missed gets one line.
 
 output_shape: |
   THE ANSWER
@@ -72,9 +72,8 @@ output_shape: |
   2. <action> ...
   3. <action> ...
 
-  SCORE
-  <passed> of <all> checks passed = <score> out of 100
-  Missed: <one line per check still missed, or none>
+  CHECKS MISSED
+  <one line per check still missed, or none>
 
 example:
   business: sprout

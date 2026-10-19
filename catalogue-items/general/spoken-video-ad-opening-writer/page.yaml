@@ -1,10 +1,10 @@
 new_slug: spoken-video-ad-opening-writer
 name: "Spoken video ad opening writer"
-summary: "Paste your ad, attach product photos. Get three spoken openings, clip prompts and a score out of 100."
+summary: "Paste your ad, attach product photos. Get three spoken openings, a storyboard and clip prompts."
 job: make-video-ads
 
 headline: "Spoken video ad opening writer"
-subhead: Give it the ad you already run, your product photos and your buyer. It writes three spoken 6-second openings that each keep people watching a different way, with your yes at each stage. You get a presenter, storyboard, clip prompts and a score out of 100.
+subhead: Give it the ad you already run, your product photos and your buyer. It writes three spoken 6-second openings that each keep people watching a different way, with your yes at each stage. You get a presenter, storyboard, clip prompts and an edit list.
 
 explain: |
   Most people see only the first few seconds of an ad. If the opening doesn't hold them, the rest never gets seen. Writing a whole new ad to fix that is slow. Putting a new opening in front of the ad you have, and testing it, is fast.
@@ -27,7 +27,7 @@ you_get:
   - The presenter card and sheet, reused or new, with lock lines
   - A storyboard with one frame and one shot card per opening
   - A clip prompt per opening, checks and an edit list
-  - A score out of 100 for how many of its own checks the openings pass, with any they missed
+  - Any of its own checks the openings still miss, one line each
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
@@ -69,8 +69,7 @@ output_shape: |
   EDIT  <joins, captions, AI label, deliver list>
   MISSING: <facts it needed and didn't get>
 
-  SCORE  <n>/100 (<passed> of <total> checks passed)
-  Missed: <one line per check missed, or none>
+  CHECKS MISSED: <one line per check missed, or none>
 
 example:
   business: sprout
@@ -159,7 +158,7 @@ tweaks:
 judge:
   - The three openings make three different moves, each within its word budget.
   - None starts with a greeting, "so" or your brand name, and each flows into your ad's first line.
-  - The run stopped for your yes on the line-up, the presenter, the sheet and the storyboard.
+  - The run stopped for your yes on the line-up, the presenter, the sheet and the storyboard, unless you asked for every stage in one go.
   - The presenter never says "I tried it", "this worked for me" or a personal story.
   - Every fact is your brand's, word for word.
   - The product is in frame from the first frame.

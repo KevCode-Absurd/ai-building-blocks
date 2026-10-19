@@ -1,10 +1,10 @@
 new_slug: clay-town-video-clip-prompt-writer
 name: "Clay town video clip prompt writer"
-summary: "Paste your clay-town script and attach product photos. Get stop-motion clip prompts and a score out of 100."
+summary: "Paste your clay-town script and attach product photos. Get stop-motion image and clip prompts, stage by stage."
 job: make-video-ads
 
 headline: "Clay town video clip prompt writer"
-subhead: Give it a narrated clay-town script and product photos. It casts a lead and crowd, builds sheets and a storyboard with one mover per shot, and writes stop-motion clips, stopping three times for your OK. You get every prompt, an edit list and a score out of 100.
+subhead: Give it a narrated clay-town script and product photos. It casts a lead and crowd, builds sheets and a storyboard with one mover per shot, and writes stop-motion clips, stopping three times for your OK. You get every prompt and an edit list.
 
 explain: |
   AI tools can make convincing clay animation, but they slip out of it easily. Faces drift between shots, a crowd turns to mush when everyone moves at once, water comes out photo-real, and the label on your clay pack reads as nonsense.
@@ -27,7 +27,7 @@ you_get:
   - Character, crowd, product and set sheets, with the set bible and lead line locked
   - A storyboard with a frame, a shot card and a planned scene change for every shot
   - Clip prompts with stop-motion timing and one mover, and an edit list
-  - A score out of 100 for the prompts, with one line for each check they missed
+  - Any of its own checks the prompts still miss, one line each
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
@@ -69,8 +69,7 @@ output_shape: |
            [MOTION] Beat 1 <...> Beat 2 <...> Camera <one> [HOLD]
            VOICE <...>  EDIT <order, captions, end card, safe zone>
            MISSING: <anything the inputs didn't give>
-  SCORE  <n>/100 (<checks passed> of 6 checks)
-  Missed: <one line per check still missed>
+  CHECKS MISSED  <one line each, or none>
 
 example:
   business: sprout
@@ -93,6 +92,7 @@ example:
     Daily pack label words: not captured.
     Colours: forest green #00582D, warm cream #FFF7DF, sunflower
     yellow #FFCC2E. Tool: 5-second clips, first and last frame: yes.
+    Approvals: run all six stages in one go. I'll review the marked stops.
   output: |
     STAGE 0  SCRIPT IN  Places: kitchen, desk. Movers: crowd in 1,
     hands in 2, Dev in 3 and 4, the shaker in 5. Morph: shot 5.
@@ -153,8 +153,11 @@ example:
     sign-up. Renews at $49.99 every 4 weeks.
     MISSING: the daily pack's label words. It is shown from its top
     edge in shots 5 and 6 until they're supplied.
+    CHECKS MISSED  none
     (cut for length: the full run also had frames, cards and clips
-    for shots 1, 2, 4 and 6 to 10)
+    for shots 1, 2, 4 and 6 to 10, with the lock lines and LEAD line
+    pasted in full where this shows [SET], [LIGHT], [PALETTE], [LENS]
+    and [LEAD])
 
 tweaks:
   - what: The finish
@@ -167,7 +170,7 @@ tweaks:
     how: Give the shortest clip your tool makes well. Clips of 2 to 5 seconds with one action hold the clay look far better than long ones.
 
 judge:
-  - It stopped for your approval after the avatar card, the sheets and the storyboard.
+  - It stopped for your approval after the avatar card, the sheets and the storyboard, or marked those three stops if you asked for one go.
   - The set, light, palette and lens lines are word for word the same in every prompt.
   - The lead's full description appears wherever they do.
   - Every shot card names one mover, and everyone else holds still.

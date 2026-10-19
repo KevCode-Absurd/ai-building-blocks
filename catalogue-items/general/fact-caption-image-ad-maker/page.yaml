@@ -1,10 +1,10 @@
 new_slug: fact-caption-image-ad-maker
 name: "Fact caption image ad maker"
-summary: "Paste your story ad and sourced fact. Get the caption, image prompt and a score out of 100."
+summary: "Paste your story ad and sourced fact. Get the caption, source line and image prompt."
 job: make-image-ads
 
 headline: "Fact caption image ad maker"
-subhead: Paste your story ad and the one fact it turns on, with its source. It checks the fact against the source and keeps its exact number. You get a caption, a source line, a phone photo prompt and a score out of 100.
+subhead: Paste your story ad and the one fact it turns on, with its source. It checks the fact against the source and keeps its exact number. You get a caption, a source line and a phone photo prompt.
 
 explain: |
   A specific number over an everyday photo makes people stop to read it. A short line saying where the number comes from is what makes them believe it. Together they work like a photo someone captioned before sharing it.
@@ -25,11 +25,11 @@ you_get:
   - The caption and source line, exactly as they'll appear
   - The strip's place, colour and typeface, and a blank version
   - A 60 to 120 word photo prompt and the line under the picture
-  - A score out of 100 for the share of its six checks the brief passes, with each one missed
+  - Any of its six checks the brief still missed, one line each, or none
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Paste your story ad, then the fact and its source. Without a source, it stops.
+  - Paste your story ad, then the fact and its source. Without a source, it asks once, then points you to another picture.
   - Make the photo from the prompt, then add the strip in your phone editor or a design tool.
   - Check the number in the finished picture digit by digit against the source.
   - Have a person check the fact before the ad runs, and make sure the page shows the full source.
@@ -57,7 +57,7 @@ output_shape: |
   LINE UNDER IMAGE  <words> (<which line>, <characters>)
   FLAGS             <a person checks the fact, plus anything else>
   IMAGE PROMPT      <60 to 120 words for the photo>
-  SCORE             <passed> / 6 checks x 100 = <score>, missed: <one line each>
+  CHECKS MISSED     <one line each, or none>
 
 example:
   business: sprout
@@ -135,7 +135,7 @@ judge:
   - It's flagged for a person to check before it runs.
 
 test:
-  - Give it a fact with no source. It should stop and send you to another picture.
+  - Give it a fact with no source. It should ask once for the source, then send you to another picture.
   - Give it a rounded number, like "about 40%", next to a source that says 40.1%. It should use 40.1%.
   - Zoom into the finished picture. Check every digit and the source line against the study.
   - Run it with the source line against the same picture without it. Keep whichever brings more readers to the offer.

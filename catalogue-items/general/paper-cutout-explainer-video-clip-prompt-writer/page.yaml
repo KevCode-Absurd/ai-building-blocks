@@ -1,10 +1,10 @@
 new_slug: paper-cutout-explainer-video-clip-prompt-writer
 name: "Paper cutout explainer video clip prompt writer"
-summary: "Paste your cutout script and attach product photos. Get timed clip prompts and a score out of 100."
+summary: "Paste your cutout script and attach product photos. Get timed clip prompts and an edit list."
 job: make-video-ads
 
 headline: "Paper cutout explainer video clip prompt writer"
-subhead: Give it a one-point cutout explainer script and product photos. It makes every paper piece first, builds a storyboard of layered frames, and times each move to the word it proves, stopping three times for your OK. You get every prompt, an edit list and a score out of 100.
+subhead: Give it a one-point cutout explainer script and product photos. It makes every paper piece first, builds a storyboard of layered frames, and times each move to the word it proves, stopping three times for your OK. You get every prompt and an edit list.
 
 explain: |
   A paper-cutout explainer looks handmade and clear: your product cut out, an arrow, a ring round the part that matters. Ask an AI video tool for it and you often get the opposite. Flat digital graphics, misspelled labels, paper bending like rubber, and your product redrawn a little differently in every scene.
@@ -26,7 +26,7 @@ you_get:
   - Test cutout prompts, then sheet prompts for the product, every piece and the ground, with lock lines
   - A storyboard with one layer-stack frame and a rigged move per line
   - Clip prompts timed to the voice-over, and an edit list of every word and number with its source
-  - A score out of 100 for the prompts, with one line for each check they missed
+  - Any check the prompts still missed, one line each, or none
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
@@ -70,8 +70,7 @@ output_shape: |
                         Hold at rest. [LOCK LINES]
            EDIT LIST    <every word and number with source, captions,
                         end card, safe zones>
-  SCORE  <n>/100 (<checks passed> of 7 checks)
-  Missed: <one line per check still missed>
+  CHECKS MISSED  <one line per check still missed, or none>
 
 example:
   business: sprout
@@ -168,7 +167,7 @@ tweaks:
     how: Say a line needs a person. It adds one made-up adult cutout with pinned joints to the avatar card and the sheets.
 
 judge:
-  - It stopped for your OK after the avatar card, the sheets and the storyboard.
+  - It stopped for your OK after the avatar card, the sheets and the storyboard, unless you asked for every stage in one go.
   - Every piece in every layer stack appears on the parts list.
   - The product cutout is made once from its photo and reused.
   - No prompt asks the tool to write a letter or a number.

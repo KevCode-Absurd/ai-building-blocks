@@ -1,10 +1,10 @@
 new_slug: knitted-wool-video-ad-script-writer
 name: "Knitted wool video ad script writer"
-summary: "Paste your brief and product facts. Get a knitted-wool video script, cast note and score out of 100."
+summary: "Paste your brief and product facts. Get a knitted-wool video script, a room list and a cast note."
 job: make-video-ads
 
 headline: "Knitted wool video ad script writer"
-subhead: Give it your brief, buyer and approved claims. It picks the real yarn technique that shows your point, gives every surface a fabric and tests every yarn change as a claim. You get a 15 to 40 second knitted-world script, a cast note and a score out of 100.
+subhead: Give it your brief, buyer and approved claims. It picks the real yarn technique that shows your point, gives every surface a fabric and tests every yarn change as a claim. You get a 15 to 40 second knitted-world script, a room list and a cast note.
 
 explain: |
   Some subjects are hard to watch on camera. Digestion, sleep, pests, grime. A small world of knitted and crocheted wool helps. It's warm and odd enough to stop a scroll, and it makes an awkward problem kind to look at. It also tempts you into pictures you can't back up, like a knot on a doll's tummy coming loose.
@@ -28,7 +28,6 @@ you_get:
   - A room list, every object with its material and color
   - A line-by-line script with one move per shot
   - A list of every yarn change with its source, and a cast note with a sketch of the doll
-  - A score out of 100 for how many of its own checks the script passes, with any it missed
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
@@ -77,8 +76,7 @@ output_shape: |
   Doll sketch: <age, build, hair, clothes with fabric and color>
   MISSING: <facts it needed>
 
-  SCORE  <n>/100 (<passed> of <total> checks passed)
-  Missed: <one line per check missed, or none>
+  CHECKS MISSED  <one line per check missed, or none>
 
 example:
   business: sprout
@@ -119,24 +117,28 @@ example:
     brown crocheted bottle, a felted puff of steam from a teal
     crocheted kettle. One chunky yarn throughout.
 
-    1 | "Fiber powder. Gritty, every single morning." | She stirs the
-        pale blue crocheted glass at the counter; grey felted clumps
-        float on top. Shoulders hunched, head turned away, mouth pulled
+    1 | "Fiber powder. Gritty, every single morning." | The crocheted
+        doll in her mustard jumper stirs the pale blue crocheted glass
+        at the oak-brown rib-knit counter; grey felted clumps float on
+        top. Shoulders hunched, head turned away, mouth pulled
         down. | One slow stir.
     2 | "Then the probiotic pills she kept forgetting." | The brown
-        crocheted bottle sits behind the tub; she glances at it and
-        looks away. | She turns her head.
+        crocheted bottle sits behind the white crocheted tub; the
+        crocheted doll glances at it and looks away. | She turns her
+        head.
     3 | "Here's six grams of fiber, the easy way." | Close: six thin
-        strands of leaf-green yarn lie side by side on the counter. |
+        strands of leaf-green yarn lie side by side on the oak-brown
+        rib-knit counter. |
         Locked-off camera.
-    4 | "Six strands. One pack." | THE TURN: plying. The six strands
-        twist together into one thick green yarn that runs into a
+    4 | "Six strands. One pack." | THE TURN: plying. The six leaf-green
+        strands twist together into one thick leaf-green yarn that runs into a
         deep-green crocheted daily pack. | About 3 seconds, 4 words.
-    5 | "Rip. Tip. Enjoy." | Hands close: she tears the crocheted pack
+    5 | "Rip. Tip. Enjoy." | Close on the doll's crocheted hands at her
+        mustard cuffs: she tears the deep-green crocheted pack
         straight across the top; small deep-green crocheted bears tip
         into her palm. | The tear.
-    6 | "Sprout supports digestion and gut health." | The crocheted
-        pouch on the counter, "Sprout" in yellow intarsia, a yellow
+    6 | "Sprout supports digestion and gut health." | The deep-green
+        crocheted pouch on the oak-brown rib-knit counter, "Sprout" in yellow intarsia, a yellow
         crocheted bear face top right, "28 Daily Packs" stitched at the
         bottom. | Slow dolly in.
     7 | "Try Low Sugar. First order $29.99 with text sign-up." | Same,
@@ -167,6 +169,7 @@ example:
     rib-knit trousers, embroidered eyes and brows.
     MISSING: the color of "28 Daily Packs" on the pouch, and a photo of
     a single daily pack.
+    CHECKS MISSED  none
 
 tweaks:
   - what: The show job

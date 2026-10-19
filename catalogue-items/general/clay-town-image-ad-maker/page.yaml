@@ -1,10 +1,10 @@
 new_slug: clay-town-image-ad-maker
 name: "Clay town image ad maker"
-summary: "Paste your idea, attach photos. Get a clay-town image prompt, ad words and a score out of 100."
+summary: "Paste your idea, attach photos. Get a clay-town image prompt, the ad words and a layout."
 job: make-image-ads
 
 headline: "Clay town image ad maker"
-subhead: Give it your selling idea, brand file and product photos. It finds a hassle a whole crowd shares, picks one moment with one lead and dresses the clay set like a stop-motion studio. You get an image prompt, the ad words, a layout and a score out of 100.
+subhead: Give it your selling idea, brand file and product photos. It finds a hassle a whole crowd shares, picks one moment with one lead and dresses the clay set like a stop-motion studio. You get an image prompt, the ad words, a layout and any check it missed.
 
 explain: |
   Some problems are awkward to show with real people: a queue at the office sink, a packed train, the school-gate rush. In a handmade clay town they become funny and easy to look at, because everyone knows the routine and nobody real is embarrassed. The risk is a busy frame nobody can read in a glance, and a clay pack whose label reads as nonsense.
@@ -25,7 +25,7 @@ you_get:
   - A set card, the lead written in full and the crowd
   - A layout for 4:5 or 1:1, the words on the image, an image prompt and the post words
   - The edit step that lays your real label over the clay one
-  - A score out of 100 from the skill's six checks, with one line per check missed
+  - Any of the skill's six checks it couldn't meet, one line each
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
@@ -67,7 +67,7 @@ output_shape: |
   AVOID FIELD   <plain nouns>
   POST WORDS  Primary text <...> | Headline field <...> | Button <...>
   EDIT STEP   <label overlay, word placement, contrast check>
-  SCORE       <n>/100 (<passed> of 6 checks) | missed: <one line each>
+  CHECKS MISSED  <one line each, or none>
   MISSING: <facts it needed>
 
 example:

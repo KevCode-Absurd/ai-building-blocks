@@ -1,0 +1,28 @@
+slug: conversational-video-ad-script-writer
+renamed_from: conversational-ad-writer
+name: "Conversational video ad script writer"
+summary: "Paste your buyer and brand file. Get a natural-sounding ad built only on your facts."
+category: general
+type: skill
+role: make
+job: copy
+level: intermediate
+inputs:
+  - {type: brief, required: true}
+  - {type: brand_brain, required: true}
+outputs:
+  - {type: script}
+uses: [ad-angle-planner]
+origin: own
+source_ids: [CES-002]
+old_name: ad writing principles
+version: 1.1.0
+credits:
+  - {title: "The Four Dimensions of Tone of Voice", by: "Kate Moran, Nielsen Norman Group", url: "https://www.nngroup.com/articles/tone-of-voice-dimensions/", used: "Casual, conversational writing reads as friendlier, so the ad is said the way a person talks"}
+  - {title: "The role of transportation in the persuasiveness of public narratives", by: "Melanie C. Green and Timothy C. Brock, Journal of Personality and Social Psychology (2000)", url: "https://doi.org/10.1037/0022-3514.79.5.701", used: "One story the reader is carried into, with no point where the selling shows"}
+tested:
+  on: 2026-10-19
+  business: sprout
+  model: claude-opus-5-5
+  judge: claude-sonnet-5-5
+  result: fail

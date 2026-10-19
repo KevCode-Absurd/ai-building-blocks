@@ -27,7 +27,7 @@ export function BusinessDrawer({ onClose, toast }: { onClose: () => void; toast:
             <span>{f.label}</span>
             {f.id === "name" || f.id === "site"
               ? <input value={form[f.id] ?? ""} onChange={(e) => setForm({ ...form, [f.id]: e.target.value })} placeholder={f.hint} data-testid={`biz-${f.id}`} />
-              : <textarea rows={2} value={form[f.id] ?? ""} onChange={(e) => setForm({ ...form, [f.id]: e.target.value })} placeholder={f.hint} data-testid={`biz-${f.id}`} />}
+              : <textarea rows={f.id === "more" ? 4 : 2} value={form[f.id] ?? ""} onChange={(e) => setForm({ ...form, [f.id]: e.target.value })} placeholder={f.hint} data-testid={`biz-${f.id}`} />}
           </label>
         ))}
         <div className="biz-bar">

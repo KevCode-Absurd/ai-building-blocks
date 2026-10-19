@@ -1,7 +1,7 @@
 slug: tracker-chart-image-ad-maker
 renamed_from: get-a-second-look-with-a-test-result-photo
 name: "Tracker chart image ad maker"
-summary: "Paste your story ad and claims. Get a tracker-photo image prompt and a score out of 100."
+summary: "Paste your story ad and claims. Get a tracker-photo image prompt, one mark and the line under it."
 category: general
 boards: [ecommerce]
 type: skill
@@ -14,7 +14,7 @@ inputs:
   - {type: persona, required: false}
 outputs:
   - {type: image_prompt}
-uses: [story-ad-image-picker]
+uses: [image-style-picker-for-story-ads]
 example: native
 origin: rebuilt
 source_ids: [CES-066]

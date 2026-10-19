@@ -1,10 +1,10 @@
 new_slug: animated-film-video-ad-script-writer
 name: "Animated film video ad script writer"
-summary: "Paste your idea and brand file. Get an animated-film video script, cast note and score out of 100."
+summary: "Paste your idea and brand file. Get a timed animated-film video script and a cast note."
 job: make-video-ads
 
 headline: "Animated film video ad script writer"
-subhead: Give it your selling idea and brand file. It writes a three-part story in the look of a 3D animated film, casts one made-up adult and brings in your real product. You get a timed script, a cast note and a score out of 100.
+subhead: Give it your selling idea and brand file. It writes a three-part story in the look of a 3D animated film, casts one made-up adult and brings in your real product. You get a timed script, a cast note and any check it missed.
 
 explain: |
   The look of a 3D animated film (stylised people, real-looking light) makes an everyday problem warm and easy to watch. It goes wrong in familiar ways. The face goes blank, the light changes for no reason, or the story stops halfway so a sales speech can start.
@@ -25,7 +25,7 @@ you_get:
   - A light and colour key for each part, and a casting card
   - A timed script table with speaker, words, picture, cut and seconds
   - Notes on what was inferred and missing, and a cast note on who carries the ad
-  - A score out of 100 for how many of its own checks the script passes, with any it missed
+  - Any of its own checks the script still misses, one line each
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
@@ -68,8 +68,7 @@ output_shape: |
 
   CAST NOTE  <who carries it, why, voice, what never changes>
 
-  SCORE  <n>/100 (<passed> of <total> checks passed)
-  Missed: <one line per check missed, or none>
+  CHECKS MISSED: <one line per check missed, or none>
 
 example:
   business: sprout

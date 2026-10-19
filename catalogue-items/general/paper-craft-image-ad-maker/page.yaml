@@ -1,10 +1,10 @@
 new_slug: paper-craft-image-ad-maker
 name: "Paper craft image ad maker"
-summary: "Paste your idea, attach photos. Get a paper-craft image prompt, ad words and a score out of 100."
+summary: "Paste your idea, attach photos. Get a paper-craft image prompt, a layout and the ad words."
 job: make-image-ads
 
 headline: "Paper craft image ad maker"
-subhead: Give it your selling idea, brand file and product photos. It picks one moment and the paper fold caught in it, such as a flap or pop-up, and checks the picture against your claims. You get an image prompt, the ad words, a layout and a score out of 100.
+subhead: Give it your selling idea, brand file and product photos. It picks one moment and the paper fold caught in it, such as a flap or pop-up, and checks the picture against your claims. You get an image prompt, the ad words, a layout and the edit step for your real label.
 
 explain: |
   A world of real cut paper makes a small everyday problem feel like a picture book, and a pack rising from a page feels like a gift. Ask an image tool for "paper" carelessly, though, and you get flat clip art, a craft model on a desk, or a mug that comes out real because nobody said it was card.
@@ -25,7 +25,6 @@ you_get:
   - A layout for 4:5 or 1:1, with a plain stretch of card for the words
   - The words on the image, an image prompt and the post words
   - The edit step that lays your real label over the card one
-  - A score out of 100 from the skill's six checks, with one line per check missed
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
@@ -67,7 +66,7 @@ output_shape: |
   POST WORDS  Primary text <...> | Headline field <...> | Button <...>
   EDIT STEP   <label overlay, word placement, contrast check>
   CHECKS      <glance test, words, type, contrast, size>
-  SCORE       <n>/100 (<passed> of 6 checks) | missed: <one line each>
+  CHECKS MISSED: <one line each, or none>
   MISSING: <facts it needed>
 
 example:
@@ -111,15 +110,15 @@ example:
     Headline (6 words): "Greens that fit a packed morning."
     Small line: "60+ ingredients, 21 vitamins & minerals, and 6g fiber
     in 1 pack."  Source: approved claim, word for word
-    Offer line: "$29.99 first order with text sign-up. Renews at
-    $49.99 every 4 weeks."  Source: offer terms
+    Offer line: "$29.99 first order with text sign-up, then $49.99
+    every 4 weeks."  Source: offer terms
     Type: headline 64 px, small line 34 px, offer 30 px, in forest
     green on cream card (about 8:1).
 
     IMAGE PROMPT
     Two flat-cut paper hands of an adult, in blue card sleeves, hold
-    open a paper planner. Its right page is crowded with flat-cut card
-    icons (a bus, a laptop, a shopping bag, a kraft-paper lunchbox).
+    open a paper planner. Its right page holds three flat-cut card
+    icons (a bus, a laptop, a kraft-paper lunchbox).
     From the centre fold a green card daily pack stands half risen on
     a parallel fold, its shadow on the page. A deep green card pouch
     stands at lower right, a yellow card bear face top right. Set on a
@@ -145,6 +144,7 @@ example:
     CHECKS  Glance test: a pack popping up in a busy planner. Headline
     6 words, 2 more things to read, type 30 px and up, 4.5:1 or more.
     No child shown; the lunchbox carries the family.
+    CHECKS MISSED: none
     MISSING: a photo of a single daily pack, so the pop-up matches it.
 
 tweaks:

@@ -1,10 +1,10 @@
 new_slug: hidden-offer-finder
 name: "Hidden offer finder"
-summary: "Paste your prices and deals. Get clashes flagged, new offers to try and a score out of 100."
+summary: "Paste your prices and deals. Get clashes flagged and new offers to try first."
 job: make-offer
 
 headline: "Hidden offer finder"
-subhead: Give it your brand file. It quotes every deal you run today, flags any that clash and builds new offers only from what you already have, like sizes, prices and your guarantee. You get your live offers, new ones, three to try first and a score out of 100.
+subhead: Give it your brand file. It quotes every deal you run today, flags any that clash and builds new offers only from what you already have, like sizes, prices and your guarantee. You get your live offers, new ones and three to try first.
 
 explain: |
   Ask most businesses for their offers and you hear about money off, again and again. An offer is the whole deal: what the buyer gets, what they pay, and what makes yes feel safe today. A trial pack, the guarantee said up front or one box for the whole family can each do that job better than a bigger discount.
@@ -26,7 +26,7 @@ you_get:
   - A short list of what you already own that could become an offer
   - New offers, each with plain terms, the buyer it suits and what you'd need to set up
   - Three offers to try first, with the reason for each
-  - A score out of 100 from the prompt's seven checks, with one line per check missed
+  - Any of the prompt's seven checks it still missed, one line each, or none
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
@@ -79,7 +79,7 @@ output_shape: |
 
   MISSING: <facts that would change the list>
 
-  SCORE  <n>/100 (<passed> of 7 checks) | missed: <one line each>
+  CHECKS MISSED  <one line each, or none>
 
 example:
   business: sprout

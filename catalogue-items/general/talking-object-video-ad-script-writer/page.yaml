@@ -1,10 +1,10 @@
 new_slug: talking-object-video-ad-script-writer
 name: "Talking object video ad script writer"
-summary: "Paste your buyer's moment and product. Get a talking-object video script, cast note and score out of 100."
+summary: "Paste your buyer's moment and product. Get a talking-object video script and a cast note."
 job: make-video-ads
 
 headline: "Talking object video ad script writer"
-subhead: Give it your buyer's moment, your product and your approved claims. It picks one object from the buyer's home to speak and writes an 8 to 30 second monologue that ends on a line people repeat. You get the script, a cast note and a score out of 100.
+subhead: Give it your buyer's moment, your product and your approved claims. It picks one object from the buyer's home to speak and writes an 8 to 30 second monologue that ends on a line people repeat. You get the script clip by clip, a cast note and every fact it states, with its source.
 
 explain: |
   Buyers rarely say their problem out loud, and an ad that says it for them can sound preachy. An object that was in the room says it better. The bedside lamp has seen the 1 am scrolling. The crusty shaker bottle knows it's been replaced. Nobody mistakes a talking shaker for a fake testimonial, so it can be blunt.
@@ -26,7 +26,7 @@ you_get:
   - The monologue clip by clip, with picture notes, the turn marked and words per clip
   - A cast note on the narrator, its mood and its voice, for the clips skill
   - Every fact the object states, with its source
-  - A score out of 100 for how many of its own checks the script passes, with any it missed
+  - Any of its own checks it couldn't pass, named one per line
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
@@ -70,8 +70,7 @@ output_shape: |
 
   CAST NOTE  <narrator, material and damage, face spot, mood, voice, and why>
 
-  SCORE  <n>/100 (<passed> of <total> checks passed)
-  Missed: <one line per check missed, or none>
+  CHECKS MISSED  <one line per check still missed, or none>
 
 example:
   business: sprout
@@ -150,6 +149,8 @@ example:
     suits the quitter who wants to stick, because the shaker is the
     thing they gave up on. Next: the talking object clips skill writes
     its character card.
+
+    CHECKS MISSED  none
 
 tweaks:
   - what: Who talks

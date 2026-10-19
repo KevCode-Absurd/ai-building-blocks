@@ -1,6 +1,6 @@
 ---
 name: story-ad-test-planner
-description: Use before writing a story ad (an everyday-looking picture with a short story under it) to decide if the product suits one, which customer problem to lead with and why people switch, who may tell the story, where the click goes, and which stories to test. Ends with a score out of 100 against its checks.
+description: Use before writing a story ad (an everyday-looking picture with a short story under it) to decide if the product suits one, which customer problem to lead with and why people switch, who may tell the story, where the click goes, and which stories to test. Ends with any check it still missed.
 ---
 
 # Story ad test planner
@@ -9,25 +9,25 @@ You make the setup sheet for a story ad, and write no ad copy. A story ad pairs 
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
-Check for these first. The result is much better with them.
+This skill runs on its own. What's below makes the result better, but none of it is required.
 
-**Needed:**
-- **Brand brain** (its products and buyers part), made by the [Website brand file builder](https://useaiblocks.com/skills/website-brand-file-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
+**Works best with** (or they can paste their own instead):
+- **Brand brain** (its products and buyers part), made by the [Website brand brain builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
 - **Customer words** (yours): reviews, testimonials, support tickets, survey answers or call transcripts. Export them or paste them in.
 
 **Makes it better (optional):**
 - **Your page** (yours): the landing page's link, or its text and a screenshot.
 
-**The steps before this one** (do each once, then reuse what it makes):
-1. **Brand brain** with the [Website brand file builder](https://useaiblocks.com/skills/website-brand-file-builder). Bring your website, customer words (optional), your results (optional).
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **Brand brain** with the [Website brand brain builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
 2. This one.
 
 **From the brand brain, read:** `00-start-here.md`, `log.md`, `offers.md`, `customers.md`. Take what changed and when, the offers that ran, and who buys. Source notes and rejected ideas never go into the result.
 
-How to check:
-- **In Claude Code,** look in the project first. A brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name, or ask for their path.
-- **In a chat,** ask once: "Do you have your brand brain, customer words, your page? Attach or paste them here." If they're already in this project's files, use those.
-- **If one is missing,** say so before you start, in one line: the result will be much better with it, with the link to make it once and reuse it. Next time they can attach it (or, in Claude Code, give its path). Then carry on with what you have and mark each gap with `MISSING:`.
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In Claude Code, look in the project too: a brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name.
+2. **If something is missing, advise, don't block.** In one short message, say this skill works on its own and will be better with your brand brain, customer words, your page. They can attach them, paste them, or say where they are (in Claude Code, a file path). Name the recommended steps above as a suggestion, with their links. Then ask: "Add them, or shall I go ahead with what you've given me?" If their message already says to go ahead, skip this and start.
+3. **When they say go ahead,** do the whole job with what you have. Mark each gap with `MISSING:` and never invent a fact to fill it. List the gaps at the end so they can fill them in later.
 
 **Tools that do this best:**
 - **Any good chat AI:** Sorting and counting reviews works well in any current chat AI, as long as all the reviews fit in one chat.
@@ -63,7 +63,7 @@ How to check:
    Never invent a person, a first name or a "customer" voice. Public reviews may be quoted word for word as "one customer wrote", unnamed, and each one goes on the review list. If nobody is cleared, the brand speaks.
 7. **Say where the click goes.** A stranger should land on an article-style page from the brand that opens on the same moment, not on a product page. If none exists, write `MISSING: an article-style page` and say it must be built before the ad runs.
 8. **Plan the test.** Four stories on the lead problem. Each row differs by a lot on three things: which force opens it, which trace the picture shows, and the opener (the scene in the picture, a date or count, or a real quote). Distinct ads let the ad system find different people. Add a fifth row only if the budget allows.
-9. **Score it.** Check the sheet against the 6 checks under "Check before you hand it back". Fix any failed check you can, then check again. The score measures how well this sheet meets those checks: checks passed divided by 6, times 100, rounded. Show it as `SCORE <n>/100 (<passed> of 6 checks)`, with one line for each check still missed.
+9. **Run the checks.** Check the sheet against the 6 checks under "Check before you hand it back". Fix any failed check you can, then check again. Show `CHECKS MISSED: <one line each>`, or "none".
 
 ## What you hand back
 Use these headings, in this order:
@@ -78,12 +78,12 @@ Use these headings, in this order:
 9. **READING RESULTS**: the rules below.
 10. **A PERSON CHECKS**: what someone must look at before anything runs.
 11. **MISSING**: every `MISSING:` line from above, in one list, so nobody has to hunt.
-12. **SCORE**: out of 100, with one line per check still missed.
+12. **CHECKS MISSED**: one line per check still missed, or "none".
 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
-When you've handed it back, ask in one short question what they want to do next. Offer these, and say they can type their own:
-- **Set up AI to work for you** with the [AI step handoff planner](https://useaiblocks.com/skills/ai-step-handoff-planner). It takes the plan.
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Set up AI to work for you** with the [AI workflow handoff planner](https://useaiblocks.com/skills/ai-workflow-handoff-planner). It takes the plan.
 - **Write the ad copy** with the [Story image ad writer](https://useaiblocks.com/skills/story-image-ad-writer). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
@@ -96,15 +96,15 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Build on a winner: keep its opening force and trace, and change the opener.
 
 ## Check before you hand it back
-- The fit names a real switch history with review numbers, or the sheet stops at "doesn't suit".
+- The fit names a real switch history with review numbers (or is marked `[inferred]` when no customer words came), or the sheet stops at "doesn't suit".
 - Counts in the table match the review numbers listed.
 - Every quote is word for word and numbered. Unknowns say `MISSING`, never a guess.
 - The narrator is one of the four, and no invented person appears anywhere.
 - The test rows differ on all three of force, trace and opener.
-- The sheet ends with the MISSING list, then the score.
+- The sheet ends with the MISSING list, then the `CHECKS MISSED` line.
 
 ## If something is missing
-- No customer words: there is nothing to tell back. Ask for them and stop.
+- No customer words: ask once for them (reviews, support emails or notes in their own words). If none come, carry on from the product facts: mark the fit, the problems and the switch reasons `[inferred]`, put review counts as `MISSING`, quote no one, and say the stories need real customer words before they run.
 - No one cleared: the brand speaks.
 
 ## Avoid

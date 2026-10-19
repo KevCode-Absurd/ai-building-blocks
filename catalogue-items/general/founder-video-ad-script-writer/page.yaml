@@ -1,10 +1,10 @@
 new_slug: founder-video-ad-script-writer
 name: "Founder video ad script writer"
-summary: "Paste your founder's words. Get a filming brief on one real decision and a score out of 100."
+summary: "Paste your founder's words. Get a filming brief on one real decision, or interview questions first."
 job: make-video-ads
 
 headline: "Founder video ad script writer"
-subhead: Give it your founder's own words and product facts, or get interview questions first. It tells one real decision behind the product as the easy road, the road taken and what it cost. You get a filming brief, openings to record and a score out of 100.
+subhead: Give it your founder's own words and product facts, or get interview questions first. It tells one real decision behind the product as the easy road, the road taken and what it cost. You get a filming brief, openings to record and a casting note.
 
 explain: |
   Most founder ads sound alike. A founder smiles at the camera, tells the brand story and says the product is great. Viewers shrug, because anyone would say that about their own product.
@@ -27,7 +27,6 @@ you_get:
   - Two or three openings to record, each true for your founder
   - Interview questions, if your founder's words are missing, and notes on the proof behind each claim
   - A casting and wardrobe note on who appears, where they film and what they wear
-  - A score out of 100 for how many of its own checks the brief passes, with any it missed
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
@@ -70,8 +69,7 @@ output_shape: |
   CASTING AND WARDROBE  <who appears, in what role, where, what they wear>
   MISSING: <...>
 
-  SCORE  <n>/100 (<passed> of <total> checks passed)
-  Missed: <one line per check missed, or none>
+  CHECKS MISSED  <one line per check missed, or none>
 
 example:
   business: sprout
@@ -171,14 +169,14 @@ tweaks:
 
 judge:
   - The ad tells one decision, and you learn something you didn't know about the product.
-  - The cost of the decision is said plainly.
+  - The cost of the decision is said plainly. With no founder words yet, it's a clear bracketed question for the founder, never a made-up cost.
   - Every fact traces to the founder's words or your brand file. Anything else is a bracketed question.
   - No line has the founder calling the product "great" or "the best".
   - Every shot is tagged, and none needs a generated person.
   - Each founder claim has a test, a count or a quote beside it, or has been toned down.
 
 test:
-  - Run it with no founder material. It should say the ad can't be made yet and give you interview questions, never a made-up story.
+  - Run it with no founder material. It should say the ad can't be filmed until your founder agrees, and still give you interview questions and the brief's shape, never a made-up story.
   - Check the questions. None should be answerable with yes or no.
   - Run it on a decision you know the full story of. Anything you can't trace to your founder should be a bracketed question.
   - Read the brief to your founder. Mark any line they wouldn't say in their own words, and rerun with their version.

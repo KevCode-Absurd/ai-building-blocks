@@ -1,10 +1,10 @@
 new_slug: short-film-video-ad-script-writer
 name: "Short film video ad script writer"
-summary: "Paste your idea and brand file. Get a twist short-film script, cast note and score out of 100."
+summary: "Paste your idea and brand file. Get a twist short-film script, timed shot table and cast note."
 job: make-video-ads
 
 headline: "Short film video ad script writer"
-subhead: Give it your selling idea and brand file. It writes a short live-action-style story where your product causes the twist, with a detail planted early that the ending pays off. You get a timed shot table, a cast note and a score out of 100.
+subhead: Give it your selling idea and brand file. It writes a short live-action-style story where your product causes the twist, with a detail planted early that the ending pays off. You get a timed shot table, notes for the edit and a cast note.
 
 explain: |
   Film-style ads (a photo-real scene with actors, like a short film) can carry a feeling or a small joke better than any list of features. They usually go wrong in the writing. The product turns up as a logo card after the story ends, a character "reviews" it, or the shots look lovely and nothing happens.
@@ -26,7 +26,7 @@ you_get:
   - A timed shot table with event, camera, move, line and sound, clip joins marked
   - Notes on what was inferred, how the clips split and the text to add in editing
   - A cast note on who carries the ad and how each person sounds, ready for the clips skill
-  - A score out of 100 for how many of its own checks the script passes, with any it missed
+  - Any of its own checks the script couldn't pass, named one per line
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
@@ -70,8 +70,7 @@ output_shape: |
 
   CAST NOTE  <who carries it, why, voices, what never changes>
 
-  SCORE  <n>/100 (<passed> of <total> checks passed)
-  Missed: <one line per check missed, or none>
+  CHECKS MISSED  <one line per check still missed, or none>
 
 example:
   business: sprout
@@ -113,29 +112,31 @@ example:
     3  3 s   A tears a daily pack straight across the top.
              Close on her hands and the pack, label up. No move.
              Character A: "Pack day."   Sound: the tear.
-    4  2 s   B takes the pack from her hand. Single on B, medium.
-             No move. His eyes go from the pack to A; one eyebrow lifts.
+    4  2 s   B takes the pack from her hand. Single on B, medium,
+             his eyes on A. No move.   Sound: foil crinkle.
     ---- clip join (deliberate cut) ----
-    5  4 s   B tips the gummies into his palm and eats them.
-             Close on his hand, then hold. No move.
-             Character B: "Same as yesterday?"   Sound: room tone.
-    6  3 s   A finally looks up. Over B's shoulder onto A. No move.
+    5  2 s   B tips the gummies into his palm.
+             Close on his hand. No move.
+             Character B: "Same as yesterday?"   Sound: soft patter.
+    6  2 s   B eats the gummies, eyes on A. Single on B, medium
+             close. No move.   Sound: room tone.
+    7  3 s   A finally looks up. Over B's shoulder onto A. No move.
              Character A: "Same as every day."
-    7  3 s   B slides the tub further back. The pouch sits in front,
-             label to camera. Wide, slow pull back, ends with both in
-             frame and the pouch centred. Held.
+    8  3 s   B slides the tub further back, leaving the pouch in
+             front, label to camera. Wide, slow pull back, ends with
+             both in frame and the pouch centred.
              Narrator: "One pack a day. Rip. Tip. Enjoy."
 
     NOTES
     - Inferred: the couple and the kitchen come from the headline,
       not from the buyer profiles.
     - Sound off: the turn shows in shot 3, the pack handed over where
-      an answer should be. Captions carry the three lines.
-    - Nobody claims a result. B's eyebrow is curiosity, not proof.
-    - Text in editing, over shot 7: "60+ ingredients. 21 vitamins &
+      an answer should be. Captions carry every line.
+    - Nobody claims a result. B's look is curiosity, not proof.
+    - Text in editing, over shot 8: "60+ ingredients. 21 vitamins &
       minerals. 6g fiber." Offer from current terms.
-    - Clips: shots 1 to 4 make clip 1 (10 s), shots 5 to 7 make clip
-      2 (10 s).
+    - Clips: shots 1 to 4 make clip 1 (3+2+3+2 = 10 s), shots 5 to 8
+      make clip 2 (2+2+3+3 = 10 s).
 
     CAST NOTE  B carries it: the doubter whose question sets up the
     joke, so the powder quitter watching sides with him. A answers
@@ -143,6 +144,8 @@ example:
     sleepy, warm, slow. Narrator: friendly, unhurried. Never change:
     A's glasses on her head, B's one sock, both on their own side of
     the table.
+
+    CHECKS MISSED  none
 
 tweaks:
   - what: The kind of turn

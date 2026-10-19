@@ -1,10 +1,10 @@
 new_slug: landing-page-design-planner
 name: "Landing page design planner"
-summary: "Paste your page copy, colours and fonts. Get three on-brand designs and a score out of 100."
+summary: "Paste your page copy, colours and fonts. Get three on-brand designs and a build brief."
 job: write-landing-page
 
 headline: "Landing page design planner"
-subhead: Give it your page copy and your brand's colours, fonts and photos. It sets one design system and plans three directions that differ in layout and what the pictures do. You get a section plan, a build brief, a review if you send screenshots, and a score out of 100.
+subhead: Give it your page copy and your brand's colours, fonts and photos. It sets one design system and plans three directions that differ in layout and what the pictures do. You get a section plan, a build brief, and a review if you send screenshots.
 
 explain: |
   When you ask for page designs, you often get three versions of the same layout in three colours. Or your fonts get swapped and the delivery terms hidden to make it look cleaner.
@@ -26,7 +26,7 @@ you_get:
   - Three design directions, each with its first screen, image job and section order
   - A section plan with one row per section, for phone and desktop, and a build brief you can paste into a design tool
   - If you sent screenshots, design and technical findings with a fix for each
-  - A score out of 100 for the plan against its own checks, and for a built page, the share of technical checks it passes
+  - Any of its own checks the plan still missed, one line each, or none
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
@@ -50,8 +50,8 @@ how_it_works:
     text: Body text starts at 16 px. Delivery, returns and subscription details stay visible on phones.
   - title: Reviews a built page
     text: Does one visual pass and one technical pass (contrast, tiny text, tap targets, zoom), each finding tied to a section and screen size.
-  - title: Scores the work
-    text: Scores the plan as checks passed out of all checks, times 100. A built page also gets a score, the technical checks it passed out of those that could be run.
+  - title: Checks the work
+    text: Runs its own checks on the plan and fixes what fails. Any check it still missed is listed, one line each.
 
 output_shape: |
   DESIGN SYSTEM
@@ -79,10 +79,8 @@ output_shape: |
   Technical: <section>, <screen size>: <what's wrong> . <fix>
   Not checked: <what couldn't be verified>
 
-  SCORE
-  Plan: <passed> of <all> checks = <score> out of 100
-  Built page: <passed> of <run> technical checks = <score> out of 100
-  Missed: <one line per check missed, or none>
+  CHECKS MISSED
+  <one line per check missed, or none>
 
 example:
   business: sprout
@@ -187,7 +185,7 @@ improve:
   - Replace the example directions in step 3 with kinds that suit your brand, for example a recipe-card layout for a food brand.
   - Add the terms you must always show to step 6 (renewal price, delivery time), so no direction hides them.
   - Save the direction you choose to the look section of your brand file, so later pages match it.
-  - Pair it with "Ad-matched landing page writer" for the copy first, and "Borrowed-layout landing page planner" when you have a reference page.
+  - Pair it with "Ad-matched landing page writer" for the copy first, and "Competitor landing page layout planner" when you have a reference page.
 
 works_best_with:
   tools:

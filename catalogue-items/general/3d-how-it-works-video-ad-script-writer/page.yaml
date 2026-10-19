@@ -1,10 +1,10 @@
 new_slug: 3d-how-it-works-video-ad-script-writer
 name: "3D how-it-works video ad script writer"
-summary: "Paste how it works. Get a 3D explainer video script and a score out of 100."
+summary: "Paste how it works. Get a timed 3D explainer video script and a cast note."
 job: make-video-ads
 
 headline: "3D how-it-works video ad script writer"
-subhead: Give it how your product works, with a source for each step. It checks the process is hidden, true and worth teaching, then scripts a narrated 3D film that dives in from an everyday moment. You get a timed script, a cast note and a score out of 100.
+subhead: Give it how your product works, with a source for each step. It checks the process is hidden, true and worth teaching, then scripts a narrated 3D film that dives in from an everyday moment. You get a timed script, a cast note and any check it missed.
 
 explain: |
   Some products do their work out of sight. A fiber feeds the bacteria in your gut, a coating bakes onto hot steel, a weave pulls sweat away from skin. A short 3D film can show that, and people will watch it the way they watch a good science clip. It's also where ads overclaim most easily, because a picture of damage disappearing says more than any line of copy.
@@ -26,7 +26,7 @@ you_get:
   - The chain, with every link marked and any dropped chains explained
   - A parts key giving each part one colour and shape
   - A timed script with narration, picture and on-screen text for every line, and a cast note
-  - A score out of 100 from the skill's six checks, with one line per check missed
+  - Any of the skill's six checks it couldn't meet, one line each
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
@@ -72,7 +72,7 @@ output_shape: |
   SKETCH  <the chain as four boxes a viewer could draw>
   NOTES   <inferred links to confirm, claims left out>
   CAST NOTE  <what carries it, why, voice, what never changes>
-  SCORE      <n>/100 (<passed> of 6 checks) | missed: <one line each>
+  CHECKS MISSED  <one line each, or none>
 
 example:
   business: sprout

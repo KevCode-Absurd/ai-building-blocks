@@ -1,7 +1,7 @@
 slug: tried-before-products-image-ad-maker
 renamed_from: get-recognised-with-the-old-things-that-failed
 name: "Tried-before products image ad maker"
-summary: "Paste your story ad. Get an image prompt of abandoned things and a score out of 100."
+summary: "Paste your story ad. Get an image prompt of what your buyer gave up on, and its caption."
 category: general
 boards: [ecommerce]
 type: skill
@@ -13,7 +13,7 @@ inputs:
   - {type: persona, required: false}
 outputs:
   - {type: image_prompt}
-uses: [story-ad-image-picker]
+uses: [image-style-picker-for-story-ads]
 example: native
 origin: own
 source_ids: [CES-075]

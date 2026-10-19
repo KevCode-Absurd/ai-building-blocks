@@ -1,10 +1,10 @@
 new_slug: paper-craft-video-ad-script-writer
 name: "Paper craft video ad script writer"
-summary: "Paste your brief and product facts. Get a paper-craft video script, cast note and score out of 100."
+summary: "Paste your brief and product facts. Get a paper-craft video script and a cast note."
 job: make-video-ads
 
 headline: "Paper craft video ad script writer"
-subhead: Give it your brief, product facts and approved claims. It picks the real paper mechanism that shows your point, like a flap or pop-up, and tests every paper change as a claim. You get a 15 to 40 second paper-craft script, a cast note and a score out of 100.
+subhead: Give it your brief, product facts and approved claims. It picks the real paper mechanism that shows your point, like a flap or pop-up, and tests every paper change as a claim. You get a 15 to 40 second paper-craft script and a cast note for the video.
 
 explain: |
   A world of real paper makes a small everyday problem feel like a picture book, and a pop-up that rises as a page turns feels like opening a gift. Ask an AI tool for "paper" carelessly, though, and you get flat clip art, a craft model sitting on a desk, or a coffee cup that comes out as a real cup because nobody said it was card.
@@ -28,7 +28,7 @@ you_get:
   - A line-by-line script with the paper named in every picture, camera spots and one move per shot
   - A list of every paper change with its source, and the ones it rejected
   - A cast note saying who should carry the ad, and why
-  - A score out of 100 for how many of its own checks the script passes, with any it missed
+  - Any of its own checks the script still missed, one line each, or none
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
@@ -75,8 +75,7 @@ output_shape: |
   CAST NOTE  <figure, hands only, or product alone>: <why>
   MISSING: <facts it needed>
 
-  SCORE  <n>/100 (<passed> of <total> checks passed)
-  Missed: <one line per check missed, or none>
+  CHECKS MISSED  <one line per check missed, or none>
 
 example:
   business: sprout

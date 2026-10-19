@@ -1,0 +1,166 @@
+name: "Ad angle planner"
+new_slug: ad-angle-planner
+summary: "Name your ad's buyer. Get a short brief on how it opens, argues and asks."
+job: write-ad-copy
+
+headline: "Ad angle planner"
+subhead: Tell it who the ad is for, how aware they are and what your market has heard. It picks one awareness level and one market stage. You get a brief under 200 words on how the ad opens, argues and asks, and why.
+
+explain: |
+  The same ad can't work for someone who has never thought about the problem and someone one click from buying. The first needs a story and no price. The second needs the offer, said plainly, and little else. Most ads land in between and suit neither.
+
+  This skill uses two classic readings from Eugene Schwartz. The first is how aware the buyer is, from unaware to most aware. The second is how much the market has already heard, from a promise nobody has made to promises nobody believes. For the level, it sets five things: the first words, when the product enters, how firmly the ad asks, the length, and what usually goes wrong. For the stage, it sets how the ad argues. You paste the brief into your writer's brief. An ad written from it should open, bring in the product and ask differently from one written for the level next door.
+
+when:
+  - You're briefing a writer, or an AI, and want the ad to fit the buyer you're aiming at.
+  - You're making ads for strangers and for past visitors, and want them to differ properly.
+  - Your ads keep pitching too early, or keep explaining a product the buyer already knows.
+
+you_give:
+  - The ad idea, who it's for, the reason they'd buy and the format
+  - How aware the buyer is, from "Buyer brief writer" (optional; it judges it if you don't)
+  - What your market has already heard, or what competitors promise (optional)
+  - Your brand file, with the buyer's main doubt, proof and offer terms (optional)
+you_get:
+  - A paste-ready brief of under 200 words for one level and one stage
+  - The first words, when the product enters, the ask, the length and how to argue, filled in for your buyer
+  - What usually goes wrong at this level
+  - One line saying why, with anything assumed labelled
+  - Any of its own checks the brief still misses, each named
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Describe the ad idea and the buyer in two or three sentences.
+  - Paste the awareness level and market stage from your buyer brief, if you have one.
+  - Paste the buyer's main doubt and your offer terms from your brand file.
+  - Copy the brief it returns into your writer's brief, word for word.
+
+how_it_works:
+  - title: Picks the level
+    text: One of five awareness levels, chosen by what the buyer knows today, not what you'd like them to know.
+  - title: Picks the stage
+    text: One of five market stages, from a fresh promise to promises nobody believes.
+  - title: Sets the shape
+    text: The first words, when the product enters, how firmly to ask, and the length, from the level's row.
+  - title: Sets the argument
+    text: State it plainly, make it more exact, show how it works, show a better how, or lead with the buyer.
+  - title: Fills the blanks
+    text: Adds the buyer's starting situation, their doubt and the one offer term, from your idea and facts.
+  - title: Says why
+    text: One line on the level and stage chosen, with anything assumed labelled.
+  - title: Checks the brief
+    text: Goes through its own checks, such as one level only and no offer for unaware buyers, fixes what it can, and names any check still missed.
+
+output_shape: |
+  LEVEL <name> (<what the buyer knows>)
+  MARKET STAGE <1 to 5> (<what the market has heard>)
+
+  - First words: <filled in for your buyer>
+  - Product enters: <when, and how>
+  - Ask: <how firmly, and which offer term>
+  - Length: <compared with the level next door>
+  - Argue: <the stage's argument, filled in from your facts>
+  - Usually goes wrong: <the slip to avoid>
+
+  WHY
+  <level and stage chosen, the reason, and anything assumed>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+example:
+  business: sprout
+  input: |
+    [the skill]
+
+    Ad idea: an image ad for people who know Sprout, maybe from a store
+    shelf, and think it costs too much. Reason to buy: the real price
+    per day. Format: Facebook image ad.
+    Their doubts: "Which discount is real?" / "Will the price jump after
+    the first order?" / "I hate subscriptions because I feel like they
+    are a trap."
+    From the buyer brief: product aware. Market stage 3, every greens
+    brand promises nutrients.
+
+    Brand file:
+    - First box $29.99 ($1.07/day), text sign-up discount needed
+    - Renews at $49.99 every 4 weeks ($1.78/day). One-time $66.65
+      ($2.38/day)
+    - "Pause Or Cancel Any Time" (the site's own words)
+    - 30-day money-back guarantee, first order only
+    - Ads say 61% off; the site shows 52%, 55%, 49% or 58%
+  output: |
+    LEVEL Product aware (they know Sprout and aren't sure yet)
+    MARKET STAGE 3 (every greens brand promises nutrients)
+
+    - First words: start from the doubt, "Will the price jump after the
+      first order?"
+    - Product enters: named in the first line. Don't explain what it is.
+    - Ask: direct. Remove the risk the way the offer does: pause or
+      cancel any time, and a 30-day money-back guarantee on the first
+      order only.
+    - Length: shorter than an ad for someone who's never heard of
+      Sprout.
+    - Argue: show how the price works, step by step. $29.99 for the
+      first box with the text sign-up discount ($1.07 a day), then
+      $49.99 every 4 weeks ($1.78 a day), against $66.65 bought once
+      ($2.38 a day).
+    - Usually goes wrong: also answering "which discount is real?" and
+      "is it worth it?" in the same ad.
+
+    WHY
+    Product aware, because the buyer knows Sprout and the doubt is about
+    its price. Stage 3, so the ad shows how the price works instead of
+    claiming it's cheap. Don't quote a percentage off. With 61% in the
+    ads and 49% to 58% on the site, any percentage feeds the "which
+    discount is real?" doubt.
+
+    CHECKS MISSED
+    none
+
+tweaks:
+  - what: The level
+    how: Name it yourself if you know it. An ad for people who visited your page but didn't buy is usually product aware or most aware. An ad for strangers is usually unaware or problem aware.
+  - what: The market stage
+    how: If every competitor makes the same claim, it's stage 3 or 4, so the ad shows how. If buyers have stopped believing claims and explanations, it's stage 5, so the ad leads with the buyer.
+  - what: The buyer's doubt
+    how: Product-aware ads are built on one doubt. Give it the real one from your reviews. Without it, the skill assumes one and labels it.
+  - what: When to skip it
+    how: Don't use it when you're copying the structure of an ad you're remaking. It's for ads that choose their own shape.
+
+judge:
+  - Exactly one level and one market stage are named.
+  - An ad written from the brief would open, bring in the product and ask differently from an ad for the level next door.
+  - A stage 2 brief uses only numbers your brand states.
+  - There's no offer at the unaware level, and at most one offer term for problem-aware and most-aware buyers.
+  - Anything assumed is labelled as assumed.
+
+test:
+  - Run it for an ad you know worked. The level it picks should match who the ad was for. If not, check what you told it the buyer knows.
+  - Make briefs for two neighbouring levels and write an ad from each. The ads should open, bring in the product and ask differently. If they look alike, the level was wrong.
+  - Run it twice with the same idea. It should pick the same level and stage. If it changes, your buyer fits two levels, so pick one yourself.
+  - Check any stage 2 brief for numbers. Every number should be one your brand states.
+
+improve:
+  - Write your usual level and market stage into "What you need" in the skill file, so it stops falling back to defaults.
+  - Add what every competitor already claims, so the market stage is judged from evidence.
+  - Delete the rows you never write for, such as most aware if you never show ads to past visitors, to keep the brief short.
+  - Save each brief that produced a winning ad to your brand file, with the buyer it was for.
+  - Run "Buyer brief writer" first, then "Sales copy opening writer" for the opening line, and "Conversational video ad script writer" to write the ad.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Filling a short brief from your buyer notes works well in any strong chat AI with this skill."}
+    - {name: "Meta Ad Library", why: "Browsing what competitors run, by hand, shows what your market has already heard."}
+  inputs:
+    - "The buyer brief from \"Buyer brief writer\", so the level and stage come from evidence"
+    - "Five competitor ads or their main promises, so the market stage is judged, not guessed"
+    - "Your buyers' main doubt in their own words, so the first words aim at the real one"
+
+terms:
+  - term: Awareness level
+    meaning: How much the buyer already knows, from not knowing the problem exists to ready to buy.
+  - term: Market stage
+    meaning: How much the market has already heard this kind of promise, from never to so often nobody believes it.
+  - term: Offer term
+    meaning: One detail of the deal, such as the starting price, a free trial or a money-back guarantee.

@@ -1,10 +1,10 @@
 new_slug: untried-ad-idea-finder
 name: "Untried ad idea finder"
-summary: "Paste your past ads and brand file. Get five untried ad ideas and a score out of 100."
+summary: "Paste your past ads and brand file. Get a gap map and five untried ad ideas to test."
 job: plan-ad-tests
 
 headline: "Untried ad idea finder"
-subhead: Give it your past ads and your brand file. It maps every ad through five lenses, ranks the five biggest gaps and writes one idea per gap, each a test. You get a gap map, five ideas and a score out of 100.
+subhead: Give it your past ads and your brand file. It maps every ad through five lenses, ranks the five biggest gaps and writes one idea per gap, each a test. You get a gap map, five ideas and the proof worth collecting.
 
 explain: |
   When ads stop working, most teams make more of the same: a new colour, a new headline, the same opening shot. The account fills up with near-copies while whole areas stay empty. A buying moment nobody speaks to. A reason to buy nobody leads with. Proof you hold that no ad has used.
@@ -27,7 +27,7 @@ you_get:
   - Five lenses and a list of your proof, showing what's covered, thin or open
   - The five biggest gaps, ranked, plus the proof worth collecting
   - Five ad ideas, each with its test question, a five-link check, headlines and an opening
-  - A score out of 100 for the map, with one line for each check it missed
+  - Any check the map still missed, one line each
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
@@ -79,8 +79,7 @@ output_shape: |
   Links: who / gain / proof / risk / step (strong, thin, missing). Label: <guess / measured>
   (ideas B to E in the same layout)
 
-  SCORE  <n>/100 (<checks passed> of 8 checks)
-  Missed: <one line per check still missed>
+  CHECKS MISSED: <one line per check still missed, or none>
 
 example:
   business: sprout

@@ -1,7 +1,7 @@
 slug: article-headline-image-ad-maker
 renamed_from: get-your-ad-read-like-a-shared-article
 name: "Article headline image ad maker"
-summary: "Paste your ad and page headline. Get a matching image prompt and a score out of 100."
+summary: "Paste your ad and page headline. Get a matching image prompt and a check that ad and page match."
 category: general
 boards: [ecommerce]
 type: skill
@@ -14,7 +14,7 @@ inputs:
   - {type: persona, required: false}
 outputs:
   - {type: image_prompt}
-uses: [story-ad-image-picker]
+uses: [image-style-picker-for-story-ads]
 example: native
 origin: rebuilt
 source_ids: [CES-064]

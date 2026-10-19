@@ -1,10 +1,10 @@
 new_slug: video-ad-edit-planner
 name: "Video ad edit planner"
-summary: "List your clips and script. Get a timed cut list, captions and a score out of 100."
+summary: "List your clips and script. Get a timed cut list, caption windows, a sound plan and exports."
 job: make-video-ads
 
 headline: "Video ad edit planner"
-subhead: List your clips, attach screenshots from each, and paste your approved script and offer. It sorts the usable moments, times every cut and caption to the real speech, and plans the sound. You get a cut list, caption windows, the shots still missing and a score out of 100.
+subhead: List your clips, attach screenshots from each, and paste your approved script and offer. It sorts the usable moments, times every cut and caption to the real speech, and plans the sound. You get a cut list, caption windows, a sound plan, export settings and the shots still missing.
 
 explain: |
   Raw footage rarely cuts itself into an ad. The founder's best line is buried after a long pause, the product shot covers the label, a caption repeats a number the automatic transcript misheard, and the music track was only cleared for organic posts. Editors also add things that don't belong: a countdown, "link in bio", a discount nobody approved.
@@ -28,7 +28,7 @@ you_get:
   - Caption windows timed to the kept speech, with transcript checks
   - A sound plan and the close, using only approved terms
   - Export settings per shape, and a list of shots you still need
-  - A score out of 100 for the plan, with one line for each check it missed
+  - Any of its six checks the plan couldn't pass, named one per line
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
@@ -54,8 +54,8 @@ how_it_works:
     text: Voice first, real sound effects, music only if cleared for paid use. Ends on one action with the approved offer.
   - title: Sets the exports
     text: Each shape with a clean and a captioned copy, as a browser-playable MP4, to review before it runs.
-  - title: Scores the plan
-    text: Checks the plan against its six checks, fixes what it can, and scores it as checks passed out of six, times 100.
+  - title: Checks the plan
+    text: Checks the plan against its six checks, fixes what it can, and names any it still misses.
 
 output_shape: |
   CUT LIST (<version>)
@@ -72,9 +72,8 @@ output_shape: |
   SOUND  Voice: <..> Effects: <..> Music: <source and clearance>
   CLOSE  <the approved action, offer and destination>
   EXPORT <shapes, clean and captioned copies, file settings>
-  GAPS   MISSING: <shots or clearances needed>
-  SCORE  <n>/100 (<checks passed> of 6 checks)
-         Missed: <one line per check still missed>
+  GAPS   MISSING: <shots, times or clearances needed>
+  CHECKS MISSED  <one line per check still missed, or none>
 
 example:
   business: sprout
@@ -154,6 +153,8 @@ example:
     MISSING: a verdict take. Her only verdict was the cut "fixed" line.
     Ask her to re-film one small, plain line with no health result.
     This is a plan. Nothing is rendered yet.
+
+    CHECKS MISSED  none
 
 tweaks:
   - what: A new opening on an old ad

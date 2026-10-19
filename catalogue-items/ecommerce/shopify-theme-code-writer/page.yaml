@@ -1,10 +1,10 @@
 new_slug: shopify-theme-code-writer
 name: "Shopify theme code writer"
-summary: "Name the section you need and your theme. Get installable code and a score out of 100."
+summary: "Name the section you need and your theme. Get installable code and what to upload."
 job: write-landing-page
 
 headline: "Shopify theme code writer"
-subhead: Describe the section, block or snippet you need, or paste the file to fix, and name your theme. It writes the code to Shopify's current rules, with editable words kept in settings. You get the files, what to upload and a score out of 100.
+subhead: Describe the section, block or snippet you need, or paste the file to fix, and name your theme. It writes the code to Shopify's current rules, with editable words kept in settings. You get the files, what to upload and any check still missed.
 
 explain: |
   Shopify theme code breaks in small, annoying ways. A schema with one bad comma won't save. An old image filter quietly stops working. A price typed into the code is wrong the day you change it. A headline written into the code can't be edited without a developer.
@@ -23,7 +23,7 @@ you_give:
 you_get:
   - The files, each in a code block with its path
   - A short list of what to upload, what the owner can edit, and what was assumed
-  - A score out of 100 for how many of its own checks the code passes, given before and after when you paste a file to fix
+  - Any of its own checks the code still misses, plus the checks a pasted file failed before the fix
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
@@ -47,8 +47,8 @@ how_it_works:
     text: Fixed labels go through translation keys. Words the owner should change live in settings, not in the code.
   - title: Checks before handing over
     text: Every render target, translation key and schema checks out, every image has alt text, no price is typed in, and Theme Check runs if it can.
-  - title: Scores the code
-    text: Scores checks passed out of all checks, times 100. A file you pasted to fix gets a score as it was and again after the changes.
+  - title: Checks the code
+    text: Goes through its own checks, fixes what it can and names any still missed. A file you pasted to fix also gets a list of the checks it failed as it was.
 
 output_shape: |
   sections/<name>.liquid        (or blocks/ or snippets/)
@@ -65,10 +65,9 @@ output_shape: |
   NOTES
   Upload: <files>   Owner can edit: <settings>   Assumed: <theme facts>
 
-  SCORE
-  <passed> of <all> checks = <score> out of 100
-  (editing a file: before <score>, after <score>)
-  Missed: <one line per check still missed, or none>
+  CHECKS MISSED
+  <one line per check still missed, or none>
+  (editing a file: also the checks it failed as pasted)
 
 example:
   business: sprout

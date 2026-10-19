@@ -1,10 +1,10 @@
 new_slug: talking-object-image-ad-maker
 name: "Talking object image ad maker"
-summary: "Paste your buyer's moment. Get a talking object image prompt, ad words and a score out of 100."
+summary: "Paste your buyer's moment. Get a talking object image prompt, the bubble line and the ad words."
 job: make-image-ads
 
 headline: "Talking object image ad maker"
-subhead: Give it your buyer's moment, brand file and product photos. It picks one object from the buyer's home, tests it and gives it one feeling and a speech bubble of 7 words or fewer. You get an image prompt, the ad words, a layout and a score out of 100.
+subhead: Give it your buyer's moment, brand file and product photos. It picks one object from the buyer's home, tests it and gives it one feeling and a speech bubble of 7 words or fewer. You get an image prompt, the ad words, a layout and the edit step that adds your real pack.
 
 explain: |
   Buyers rarely say their problem out loud, and an ad that says it for them can sound preachy. An object that was in the room says it better. The crusty shaker knows it's been replaced. The bedside lamp has seen the 1 am scrolling. Nobody mistakes a talking shaker for a fake testimonial, so it can be blunt and funny.
@@ -25,7 +25,7 @@ you_get:
   - A layout for 4:5 or 1:1, with space kept for the bubble and the small lines
   - The bubble line, the other words on the image, an image prompt and the post words
   - The edit step that adds the bubble and lays your real pack over the picture
-  - A score out of 100 from the skill's six checks, with one line per check missed
+  - Any of its six checks it couldn't pass, named one per line
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
@@ -68,7 +68,7 @@ output_shape: |
 
   POST WORDS  Primary text <...> | Headline field <...> | Button <...>
   EDIT STEP   <bubble, real pack overlay, word placement, contrast check>
-  SCORE       <n>/100 (<passed> of 6 checks) | missed: <one line each>
+  CHECKS MISSED  <one line per check still missed, or none>
   MISSING: <facts it needed>
 
 example:
@@ -144,8 +144,7 @@ example:
     the mouth. Lay the real pouch, cut out from the front photo, over
     the one in the picture. Set the name and offer lines on the cream
     strip. Check contrast on the finished image.
-    CHECKS  Glance test: an old shaker sulking at a new pouch. Bubble
-    7 words, 2 more things to read, type 30 px and up.
+    CHECKS MISSED  none
     MISSING: nothing for this ad.
 
 tweaks:

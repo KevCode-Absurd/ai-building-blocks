@@ -1,10 +1,10 @@
 new_slug: circled-flaw-image-ad-maker
 name: "Circled flaw image ad maker"
-summary: "Paste your story ad. Get a flaw photo prompt, its mark and a score out of 100."
+summary: "Paste your story ad. Get a flaw photo prompt and the one rough mark to draw on it."
 job: make-image-ads
 
 headline: "Circled flaw image ad maker"
-subhead: Give it your story ad and the flaw it describes. It briefs a plain phone photo of that flaw at its real size, then one rough circle or arrow in the colour that stands out most. You get the photo prompt, the mark step and a score out of 100.
+subhead: Give it your story ad and the flaw it describes. It briefs a plain phone photo of that flaw at its real size, then one rough circle or arrow in the colour that stands out most. You get the photo prompt, the mark step and the line under the image.
 
 explain: |
   People mark up photos before they send them: a circle round the stain, an arrow at the crack. That mark tells the eye where to land before the reader has decided to look. It works because it's the one thing in the picture unlike everything else, so a second mark weakens the first.
@@ -24,7 +24,7 @@ you_get:
   - The mark, its colour and why, and an optional note of up to three words
   - A 60 to 120 word prompt for the photo alone
   - How to add the mark by hand, or a fallback prompt line
-  - A score out of 100 from the skill's five checks, with one line per check missed
+  - Any of the skill's five checks still missed, one line each
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
@@ -58,7 +58,7 @@ output_shape: |
   FLAGS              <notes written for the image, inferred details>
   IMAGE PROMPT       <60 to 120 words, the photo alone>
   MARK STEP          <how to draw it by hand, or a fallback line>
-  SCORE              <n>/100 (<passed> of 5 checks) | missed: <one line each>
+  CHECKS MISSED      <one line each, or none>
 
 example:
   business: sprout
@@ -116,6 +116,7 @@ example:
                        it. If the image tool must draw it, add: "One
                        rough, uneven red circle, slightly open, around
                        the six full boxes."
+    CHECKS MISSED      none
 
 tweaks:
   - what: Circle or arrow

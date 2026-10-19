@@ -1,10 +1,10 @@
 new_slug: sales-copy-editor
 name: "Sales copy editor"
-summary: "Paste a draft and facts. Get weak lines fixed and a score out of 100, before and after."
+summary: "Paste a draft and facts. Get weak lines fixed, each with its gain, and a one-line verdict."
 job: write-ad-copy
 
 headline: "Sales copy editor"
-subhead: Paste an ad, page or email and the facts it may use. It reads the draft as a skimmer, a line-by-line reader and a doubter, and fixes only where one would stop. You get each fix with its gain, and a score out of 100 before and after.
+subhead: Paste an ad, page or email and the facts it may use. It reads the draft as a skimmer, a line-by-line reader and a doubter, and fixes only where one would stop. You get each fix with its gain, the claims to check and a one-line verdict.
 
 explain: |
   Edits often make copy worse. The odd true detail gets cut because it sounds informal, or the whole piece gets rewritten and loses its voice. Meanwhile the real gaps stay: no clear promise, praise words with no fact behind them, a price with its renewal hidden.
@@ -28,7 +28,7 @@ you_get:
   - The word count, reading grade and longest sentence, before and after
   - A ledger of changes, each with the check that found it and what it gains
   - Claims to send to a claims check, missing facts, and a one-line verdict
-  - A score out of 100 on six checks (ten for an ad), before and after the edit, with each check still failed named
+  - Any of its six checks (ten for an ad) the edited draft still misses, one line each
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
@@ -55,8 +55,8 @@ how_it_works:
     text: Makes the plainest fix for each stop, top first, and logs the gain. No gain means no change.
   - title: Measures again
     text: Re-reads around each change, then gives the new word count and reading grade.
-  - title: Scores before and after
-    text: Checks six things, such as one clear promise and every praise word backed by a fact, plus four more for an ad. The score is checks passed out of all checks, times 100, before and after.
+  - title: Checks the edit
+    text: Checks six things, such as one clear promise and every praise word backed by a fact, plus four more for an ad. It names any check the edited draft still misses.
 
 output_shape: |
   LOCKED
@@ -86,10 +86,8 @@ output_shape: |
   VERDICT
   <a wording problem, or a weak reason to buy no edit can fix>
 
-  SCORE
-  Before: <passed>/<checks> = <score> out of 100
-  After:  <passed>/<checks> = <score> out of 100
-  Still failed: <one line per check, or none>
+  CHECKS MISSED
+  <one line per check, or none>
 
 example:
   business: sprout
@@ -215,7 +213,7 @@ improve:
   - If your copy always has the same parts, list them in step 1 (for example "headline, main text, button").
   - Set your own reading grade target in step 2. Add your platform's limits to step 7, such as "main text before See more under 125 characters".
   - When the same MISSING fact comes up twice, find it and save it to your brand file. Save the specifics it protects there too.
-  - If an AI tool wrote the draft, run "AI-sounding copy editor" first. Finish with "Sales copy readiness checker".
+  - If an AI tool wrote the draft, run "Anti-AI-slop copy editor" first. Finish with "Sales copy readiness checker".
 
 works_best_with:
   tools:

@@ -65,8 +65,8 @@ output_shape: |
   S3 order:        <pass/fail>
   S4 first image:  <pass/fail, which rules>
 
-  SCORE  <n>/100 now (100 - 40 x <Stops> - 15 x <Fixes> - 5 x <Polish>)
-         <n>/100 after the fixes
+  SCORE  <n>/100 now (100 - 40 x <Stops> - 15 x <Fixes> - 5 x <Polish> = <n>)
+         <n>/100 after the fixes (<on the checks run, if any were not run>)
 
   NOT RUN
   <check, and what's needed to run it>
@@ -134,6 +134,9 @@ example:
     S3 order: pass, the files follow the plan's numbers
     S1 one object and S4 first image: not run (need the files, and
       image 01)
+
+    SCORE  0/100 now (100 - 40 x 3 - 15 x 1 - 5 x 0 = -35, so 0)
+           100/100 after the fixes, on the checks run only
 
     NOT RUN
     Pass 2 (glance, readable, crop): needs each file at phone size

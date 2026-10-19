@@ -1,7 +1,7 @@
 slug: claymation-video-clip-prompt-writer
 renamed_from: turn-claymation-script-into-ready-video-shots
 name: "Claymation video clip prompt writer"
-summary: "Paste your clay script and attach product photos. Get matching clip prompts and a score out of 100."
+summary: "Paste your clay script and attach product photos. Get matching clip prompts and an edit list."
 category: general
 boards: [ecommerce]
 type: skill

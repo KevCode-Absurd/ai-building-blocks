@@ -1,10 +1,10 @@
 new_slug: video-ad-script-point-of-view-editor
 name: "Video ad script point-of-view editor"
-summary: "Paste a working script. Get it in a new voice, facts kept, plus a score out of 100."
+summary: "Paste a working script. Get it in a new voice, with every fact, line and length kept."
 job: make-video-ads
 
 headline: "Video ad script point-of-view editor"
-subhead: Give it a script you trust, and say who tells it (I, you or she) and when (past, present or future). It moves only the voice, keeping every fact, line and length. You get the new script, moved openings, notes on lines it kept and a score out of 100.
+subhead: Give it a script you trust, and say who tells it (I, you or she) and when (past, present or future). It moves only the voice, keeping every fact, line and length. You get the new script, moved openings and notes on lines it kept.
 
 explain: |
   A new ad from scratch is slow, and a new idea is a new risk. Yet "I did this" and "you do this" land as two different ads, for viewers and for the ad platform. Retelling a script you already trust costs less than any other route to more ads.
@@ -26,7 +26,7 @@ you_get:
   - The same script in the new voice, every line in its old place
   - Opening variants and on-screen text moved the same way
   - Notes on each line kept in the old voice, and why
-  - A score out of 100 for how many of its own checks the script passes, with any it missed
+  - Any of its own checks the script still misses, one line each
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
@@ -67,8 +67,7 @@ output_shape: |
   Length:    <any line more than 10% off its old length>
   MISSING:   <anything it needed and didn't get>
 
-  SCORE  <n>/100 (<passed> of <total> checks passed)
-  Missed: <one line per check missed, or none>
+  CHECKS MISSED: <one line per check missed, or none>
 
 example:
   business: sprout

@@ -1,15 +1,15 @@
 new_slug: video-ad-shot-list-maker
 name: "Video ad shot list maker"
-summary: "Paste your script and storyboard. Get timed shots, clip prompts, an edit list and score out of 100."
+summary: "Paste your script and storyboard. Get timed shots, clip prompts and an edit list."
 job: make-video-ads
 
 headline: "Video ad shot list maker"
-subhead: Give it your approved script, storyboard and product photos. It times the script into clips and writes 3 to 8 shots per clip, each with a size, camera position, one move and one action. You get shot tables, clip prompts, an edit list and a score out of 100.
+subhead: Give it your approved script, storyboard and product photos. It times the script into clips and writes 3 to 8 shots per clip, each with a size, camera position, one move and one action. You get shot tables to approve, start and end frames, clip prompts and an edit list.
 
 explain: |
   Ask an AI video tool for "a woman making a drink while she talks" and you get one long, flat shot: same distance, same angle, a face that only looks, a product that appears from nowhere halfway through. Viewers scroll past a picture that doesn't change, and the tool fills empty seconds with invented movement.
 
-  This skill runs the last stage of making a video, after your avatar, sheets and storyboard are approved. If they're missing for an AI video, it stops and sends you to the storyboard skill, so no face gets invented inside a clip. Then it plans each clip like a director. It opens mid-action, and at every cut it moves the camera at least 30 degrees and changes the shot size, because changing only one reads as a jump. Each shot has one action, and the product comes in by a cut when the words reach it. Once you approve the shot tables, it writes the start and end frames, clip prompts that describe only the motion, the voice plan and the edit list.
+  This skill runs the last stage of making a video, after your avatar, sheets and storyboard are approved. If they're missing for an AI video, it asks once, then writes its own lock lines for you to approve and uses them word for word, so no face gets made up fresh inside a clip. Then it plans each clip like a director. It opens mid-action, and at every cut it moves the camera at least 30 degrees and changes the shot size, because changing only one reads as a jump. Each shot has one action, and the product comes in by a cut when the words reach it. It marks the shot tables for you to approve before you make any clip, and writes the start and end frames, clip prompts that describe only the motion, the voice plan and the edit list.
 
 when:
   - Your storyboard is approved and you need clips that don't look like one long static shot.
@@ -27,7 +27,7 @@ you_get:
   - A shot table per clip with timings, size, camera position, move and one action, for your approval
   - Start and end frame prompts and clip prompts that describe only the motion
   - A voice plan and an edit list with captions, music and the end card
-  - A score out of 100 for how many of its own checks the shot list passes, with any it missed
+  - Any of its own checks the shot list couldn't pass, named one per line
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
@@ -38,7 +38,7 @@ how_to_use:
 
 how_it_works:
   - title: Checks what came in
-    text: Uses your approved avatar, sheets and lock lines. For AI video without them it stops; for a real shoot it writes a casting and wardrobe note.
+    text: Uses your approved avatar, sheets and lock lines. For AI video without them it writes its own for you to approve; for a real shoot it writes a casting and wardrobe note.
   - title: Times the words
     text: Counts the words at a calm, normal or brisk pace and splits the script into clips at sentence ends.
   - title: Plans each clip
@@ -55,9 +55,9 @@ how_it_works:
 output_shape: |
   STAGES 1-3  CAST IN
   Lock lines: <identity, product, set, from the approved sheets>
-  (or: casting and wardrobe note, or product sheet, for your yes)
+  (or: casting and wardrobe note, or product sheet, marked approve)
 
-  STAGE 4  CLIP PLAN (approval 3)
+  STAGE 4  CLIP PLAN (approve)
   Clip <n>: "<lines>" <words>, <pace>, <seconds>
   FILM PLAN  Main place: <..>  Cuts to: <..>  Cast: <..>
   <n>  <start-end>  <size> | <camera position> | <move, where it stops>
@@ -72,8 +72,7 @@ output_shape: |
   EDIT LIST  <order, cuts, captions, music, end card, safe areas>
   MISSING: <..>
 
-  SCORE  <n>/100 (<passed> of <total> checks passed)
-  Missed: <one line per check missed, or none>
+  CHECKS MISSED  <one line per check still missed, or none>
 
 example:
   business: sprout
@@ -98,7 +97,7 @@ example:
     STAGES 1-3  CAST IN
     Lock lines as approved. Nothing written here, so no new approval.
 
-    STAGE 4  CLIP PLAN (approval 3)
+    STAGE 4  CLIP PLAN (approve)
     Clip 1: 22 words, brisk (3.0 a second) = 7.3 s, plus 0.7 s on the
     last shot. Fits one 8-second clip.
     FILM PLAN  Main place: kitchen counter. Cuts to: the hallway.
@@ -128,7 +127,7 @@ example:
     beside it. The shaker is in the sink.
     Checks: 4 sizes, 5 positions, every cut changes both. Tear and
     tip split across shots 2 and 3. Nothing appears mid-shot.
-    [approved]
+    Approve: check the tables before you make the clip.
 
     STAGE 5  CLIPS AND EDIT
     Start frame: the storyboard frame. End frame: [identity] at the
@@ -150,9 +149,11 @@ example:
     final clip, clear of the app's covered areas.
     MISSING: nothing for this clip.
 
+    CHECKS MISSED  none
+
 tweaks:
   - what: AI video or a real shoot
-    how: For AI video it needs your approved sheets and lock lines first. For a real shoot it writes a casting and wardrobe note, and the shot tables become the crew's list.
+    how: For AI video it works best from your approved sheets and lock lines; without them it writes its own for you to approve. For a real shoot it writes a casting and wardrobe note, and the shot tables become the crew's list.
   - what: Live action or a made world
     how: Live action gets 3 to 5 shots in 8 seconds, none under 1 second. A made world (animation, clay, paper) allows 4 to 8, none under half a second.
   - what: Pace
@@ -161,7 +162,7 @@ tweaks:
     how: Say your clip length and whether the tool takes timed shots in one prompt and a start and end frame. The clip prompts follow what it can do.
 
 judge:
-  - It used your approved lock lines, or stopped and asked for them, and never made up a face inside a clip.
+  - It used your approved lock lines, or asked once and wrote its own marked inferred, and the same lines appear word for word in every clip.
   - Shot 1 is already mid-action. No walking in, sitting down or hello.
   - Every cut changes both the camera angle and how close it is.
   - Each shot has one action, described as what moves, and the product appears only when the words reach it.
@@ -169,7 +170,7 @@ judge:
   - The shot times add up to what the words need at the stated pace, within 10%.
 
 test:
-  - Give it a script with no storyboard or sheets and ask for AI video. It should stop and send you to the storyboard skill.
+  - Give it a script with no storyboard or sheets and ask for AI video. It should ask once, then write its own lock lines marked inferred, and suggest the storyboard skill.
   - Give it a line with two moves in it ("tear it and tip it out"). The shot table should split them into two shots.
   - Read the voice line aloud with a timer at your speaker's pace. Your time and its total should be within 10%.
   - Make only clip 1 in your video tool. If it adds movement or objects you didn't ask for, tighten the "fills frame" and "objects" lines before making the rest.

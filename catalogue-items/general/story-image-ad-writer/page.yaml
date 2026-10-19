@@ -1,10 +1,10 @@
 new_slug: story-image-ad-writer
 name: "Story image ad writer"
-summary: "Paste customer quotes. Get a story ad, a picture plan and a score out of 100."
+summary: "Paste customer quotes. Get a story ad, a picture plan, two other openings and a test plan."
 job: write-ad-copy
 
 headline: "Story image ad writer"
-subhead: Give it your customers' own words about the problem and the claims you may make. It finds the moment the old way stopped working and picks an honest narrator and picture. You get the story, a picture plan, other openings and a score out of 100.
+subhead: Give it your customers' own words about the problem and the claims you may make. It finds the moment the old way stopped working and picks an honest narrator and picture. You get the story, a picture plan, two other openings and two tests to run.
 
 explain: |
   People scrolling at night aren't shopping. They skip anything that looks like an ad in a fraction of a second. A picture of a moment they've lived through, like a shelf of supplements they gave up on or a drawer of chargers that never fit, gets the look a product photo never gets.
@@ -26,7 +26,7 @@ you_get:
   - The narrator, the story shape and the quotes it rests on
   - A picture plan with a starter image prompt, and the story with its exact word count
   - Two other openings, the line under the picture, what the page must say, and two tests
-  - A score out of 100 for how many of its own checks the ad passes, with each miss named
+  - Any of its own checks it couldn't pass, named one per line
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
@@ -38,7 +38,7 @@ how_to_use:
 
 how_it_works:
   - title: Finds the push
-    text: Looks for the moment in your reviews when the old way stopped being bearable. With no such moment, or a deal-led idea, it suggests a direct ad.
+    text: Looks for the moment in your reviews when the old way stopped being bearable. With no clear moment it builds on the problem or the fixes tried, and marks it thin. With no problem at all, or a deal-led idea, it suggests a direct ad.
   - title: Picks the narrator
     text: A real customer who agreed, the founder, the brand retelling what customers said, or "you". Nobody made up ever speaks.
   - title: Picks the shape
@@ -53,8 +53,8 @@ how_it_works:
     text: Writes the line under the picture, two other openings and what the page's first screen must repeat.
   - title: Plans the tests
     text: Two pictures against one story first, then a second opening on the winner.
-  - title: Scores the ad
-    text: Goes through its own checks, such as no invented customer and no price on a teaching page, fixes what it can, and scores checks passed out of all checks, times 100.
+  - title: Checks the ad
+    text: Goes through its own checks, such as no invented customer and no price on a teaching page, fixes what it can, and names any it still misses.
 
 output_shape: |
   PUSH       <pass or fail, with the buyer's words and source>
@@ -76,8 +76,7 @@ output_shape: |
   PAGE      <what the first screen must say, or MISSING>
   FLAGS     <permissions, inferred lines, claims used, left out>
   TESTS     1. <two pictures, one story>  2. <second opening>
-  SCORE     <passed> of <all> checks = <score> out of 100
-            Missed: <one line per check still missed, or none>
+  CHECKS MISSED  <one line per check still missed, or none>
 
 example:
   business: sprout
@@ -126,8 +125,8 @@ example:
     the edges. No logos, no readable labels, no product, no person, no
     text.
 
-    STORY  (opener: describe the frame / short / 197 words)
-    There's a shelf like this in a lot of our customers' kitchens. A
+    STORY  (opener: describe the frame / short / 202 words)
+    Maybe there's a shelf like this in your kitchen. A
     tub of fiber powder with the scoop crusted inside. A bottle of
     probiotic capsules. A bag of prunes, clipped shut.
 
@@ -169,6 +168,7 @@ example:
               Left out: review 7, which reads as a promise to strangers.
     TESTS     1. This shelf against keep-people-reading-with-a-hand-
               drawn-story, same story. 2. Winner with opening 1.
+    CHECKS MISSED  none
 
 tweaks:
   - what: The customer words you paste

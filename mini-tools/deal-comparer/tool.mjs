@@ -89,7 +89,7 @@ export default {
     [{ text: "Credit next time costs you {creditCost}. The same money off now costs {cashCost}." }],
     [{ if: "MIN(dealProfit, flatProfit, deepProfit, giftProfit) < 0", text: "Some of these deals lose money on every order. Each loss is marked in the working below." }],
   ],
-  next: [{ slug: "buyer-doubt-offer-builder", why: "Turn the deal that wins into an offer that answers why buyers hold back." }],
+  next: [{ slug: "offer-builder-that-answers-buyer-doubts", why: "Turn the deal that wins into an offer that answers why buyers hold back." }],
   sources: [
     { what: "A deal as a discount", how: "1 − what they pay ÷ full price of every item. Plain arithmetic." },
     { what: "Profit on each deal", how: "What the customer pays minus goods, shipping, payment fees and anything given away. The standard contribution sum." },

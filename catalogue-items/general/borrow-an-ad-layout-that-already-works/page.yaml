@@ -37,7 +37,7 @@ how_to_use:
 
 how_it_works:
   - title: Checks what you have
-    text: Looks for your logo file, typefaces, photos and quotable figures, and stops on anything missing.
+    text: Looks for your logo file, typefaces, photos and quotable figures, asks once for anything missing, and marks each gap.
   - title: Names the ad type
     text: Uses a skill that finds the image ad types you're missing to place the reference on a map of nine types, from a product shot to a customer quote.
   - title: Reads the layout
@@ -162,7 +162,8 @@ example:
     - The pouch is never shown torn. Only a daily pack, across its top.
 
     STOP  WAITING FOR YOU. Send the logo file and photo files, and
-    approve this plan. Nothing is built until then.
+    approve this plan. Say "build it" to go ahead now with the
+    logo and photo slots marked MISSING.
 
 tweaks:
   - what: The direction line

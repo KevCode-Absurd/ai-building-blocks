@@ -1,10 +1,10 @@
 new_slug: watercolor-video-clip-prompt-writer
 name: "Watercolor video clip prompt writer"
-summary: "Paste your watercolor script and attach product photos. Get painted clip prompts and a score out of 100."
+summary: "Paste your watercolor script and photos. Get every painted image and clip prompt, plus an edit list."
 job: make-video-ads
 
 headline: "Watercolor video clip prompt writer"
-subhead: Give it a narrated watercolor ad script and product photos. It writes an avatar card, sheets, a storyboard and clip prompts that describe only what the paint does, stopping three times for your OK. You get every prompt, an edit list and a score out of 100.
+subhead: Give it a narrated watercolor ad script and product photos. It writes an avatar card, sheets, a storyboard and clip prompts that describe only what the paint does, stopping three times for your OK. You get every prompt and an edit list.
 
 explain: |
   AI video tools lose watercolor fast. Paint swirls through every frame. The result looks like a photo with a filter. A brush and a hand wander in because the prompt said "brush". The figure changes from shot to shot, and the label on your pack gets misspelled.
@@ -26,7 +26,6 @@ you_get:
   - Character, product and set sheets, with the lock lines every prompt repeats
   - A storyboard with a frame prompt and a shot card for every shot
   - Clip prompts that describe only the paint change, and an edit list
-  - A score out of 100 for the prompts, with one line for each check they missed
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
@@ -68,8 +67,7 @@ output_shape: |
            Camera <one move>  0 to <n> s <...>  Fixed <...>  End <...>
            VOICE <...>  EDIT <order, captions, overlay, end card, safe zone>
            MISSING: <facts it needed>
-  SCORE  <n>/100 (<checks passed> of 7 checks)
-  Missed: <one line per check still missed>
+  CHECKS MISSED: <one line each, or none>
 
 example:
   business: sprout
@@ -91,6 +89,7 @@ example:
     bear face top right, "28 Daily Packs" at the bottom. Pack torn
     straight across the top only. Video tool: 8-second clips, takes an
     end frame, no sound.
+    Write every stage in one go; I'll approve at the marked points.
   output: |
     STAGE 0  SCRIPT IN  Turn: build, glazing. Starts on the pale kale
     leaf at line 4, stops settled before line 5, never crosses the
@@ -160,7 +159,7 @@ tweaks:
     how: Give its clip length and say if it takes an end frame or makes sound. The timed steps, the turn's end frame and the sound line change to fit.
 
 judge:
-  - It stopped for your approval after the avatar card, the sheets and the storyboard.
+  - It stopped for your approval after the avatar card, the sheets and the storyboard, or marked those three points if you asked for every stage at once.
   - The material sentence and lock lines are word for word the same in every image prompt.
   - Each clip prompt names one camera move and at most one paint change.
   - The turn is written as what wet paint does, never as a brush at work.

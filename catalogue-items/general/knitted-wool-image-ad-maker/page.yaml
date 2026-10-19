@@ -1,10 +1,10 @@
 new_slug: knitted-wool-image-ad-maker
 name: "Knitted wool image ad maker"
-summary: "Paste your idea, attach photos. Get a knitted-wool image prompt, ad words and a score out of 100."
+summary: "Paste your idea, attach photos. Get a knitted-wool image prompt, the ad words and a layout."
 job: make-image-ads
 
 headline: "Knitted wool image ad maker"
-subhead: Give it your selling idea, brand file and product photos. It picks one moment caught in yarn, gives every surface a real fabric and checks the picture against your claims. You get an image prompt, the ad words, a layout and a score out of 100.
+subhead: Give it your selling idea, brand file and product photos. It picks one moment caught in yarn, gives every surface a real fabric and checks the picture against your claims. You get an image prompt, the ad words, a layout and the edit step.
 
 explain: |
   Some subjects are hard to show in a photo. Digestion, sleep, pests, grime. A small world of knitted and crocheted wool makes them kind to look at, and odd enough to stop a scroll. It also tempts you into pictures you can't back up, like a knot on a doll's tummy coming loose.
@@ -25,7 +25,6 @@ you_get:
   - A layout for 4:5 or 1:1, with a calm stretch of felt for the words
   - The words on the image, an image prompt and the post words
   - The edit step that lays your real label over the crocheted one
-  - A score out of 100 from the skill's six checks, with one line per check missed
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
@@ -67,7 +66,7 @@ output_shape: |
   POST WORDS  Primary text <...> | Headline field <...> | Button <...>
   EDIT STEP   <label overlay, word placement, contrast check>
   CHECKS      <glance test, words, type, contrast, size>
-  SCORE       <n>/100 (<passed> of 6 checks) | missed: <one line each>
+  CHECKS MISSED <one line each, or none>
   MISSING: <facts it needed>
 
 example:
@@ -90,6 +89,7 @@ example:
     Brand note: point gut-sensitive buyers to Low Sugar.
     Offer: $29.99 first order with text sign-up, renews at $49.99
     every 4 weeks.
+    Brand file: attached (brand.md).
   output: |
     MOMENT   The change caught halfway: she has tried the fixes.
     SHOW JOB Join, plying. Six leaf-green strands, loose at the left,
@@ -146,6 +146,7 @@ example:
     with shorter strands; never crop the pouch.
     CHECKS  Glance test: strands joining into one pack. Headline 7
     words, 2 more things to read, type 30 px and up, 4.5:1 or more.
+    CHECKS MISSED  none
     MISSING: a photo of a single daily pack, so the crocheted one
     matches it.
 
@@ -164,7 +165,7 @@ judge:
   - The headline has 7 words or fewer, with at most 3 other things to read.
   - Every object in the prompt has a material word and a real color.
   - Nothing shows a body getting better, and no face is in close-up.
-  - The product matches your photos, with your real label laid over it.
+  - The product matches your photos (or your brand file's description, when the photos can't be seen), with your real label laid over it.
 
 test:
   - Search the prompt for any object without knitted, crocheted or felted. There should be none.

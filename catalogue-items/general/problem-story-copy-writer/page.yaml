@@ -1,10 +1,10 @@
 new_slug: problem-story-copy-writer
 name: "Problem story copy writer"
-summary: "Paste your buyer and product facts. Get a problem story, product last, and a score out of 100."
+summary: "Paste your buyer and product facts. Get a long problem story with your product arriving last."
 job: write-ad-copy
 
 headline: "Problem story copy writer"
-subhead: Give it a note on your buyer, the real cause of their problem, your product facts and a length. It writes a story that falls through every fix they tried, then rises with your product. You get the story, its shape and a score out of 100.
+subhead: Give it a note on your buyer, the real cause of their problem, your product facts and a length. It writes a story that falls through every fix they tried, then rises with your product. You get the story, its shape and a list of anything it assumed.
 
 explain: |
   People who don't know their problem has an answer won't read a sales pitch. They'll read a story about themselves. Research on stories shows why: readers who get carried into one, picturing it and feeling it, come out agreeing with it, unless something jolts them out first. An early pitch is that jolt. So most copy for these buyers fails twice. It gives one line of problem, then jumps to the product.
@@ -26,8 +26,7 @@ you_get:
   - The finished story in paragraphs, with no headings or lists
   - A shape line listing each drop, the low point and where your product first appears
   - A line saying which cause was used and where it came from, or that none was
-  - A line listing anything assumed
-  - A score out of 100 for how many of its own checks the story passes, with each miss named
+  - A line listing anything assumed, and any of its checks it couldn't meet
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
@@ -51,8 +50,8 @@ how_it_works:
     text: Returns to the opening moment, changed, then gives one next step.
   - title: Reads for false notes
     text: Cuts any line that sounds like an ad before the turn, and any detail buyers wouldn't recognise.
-  - title: Scores the story
-    text: Goes through its own checks, such as no product before the turn and no made-up figures, fixes what it can, and scores checks passed out of all checks, times 100.
+  - title: Checks the story
+    text: Goes through its own checks, such as no product before the turn and no made-up times or figures, fixes what it can, and names any it missed.
 
 output_shape: |
   <the story, in paragraphs of 2 to 5 whole sentences, no headings>
@@ -61,11 +60,8 @@ output_shape: |
               at <n>% of words>
   Cause used: <the source fact, quoted, or "none, stayed with what
               the person notices">
-  Assumed:    <anything inferred>
-
-  SCORE
-  <passed> of <all> checks = <score> out of 100
-  Missed: <one line per check still missed, or none>
+  Assumed:    <anything inferred, and any illustrative detail>
+  CHECKS MISSED: <one line per check still missed, or none>
 
 example:
   business: sprout
@@ -84,7 +80,7 @@ example:
     Offer: first Kids box from $24.99
     Length: 300 to 350 words
   output: |
-    It's ten past seven on a school morning, and last night's broccoli
+    It's early on a school morning, and last night's broccoli
     is still on a plate by the sink. You scrape it into the bin while
     the toast goes on, and you tell yourself that tonight will be
     different.
@@ -97,11 +93,11 @@ example:
     So you tried the green options made for kids. There was a powder
     you could stir into juice, until they tasted it and the juice went
     down the sink. There was a chewable from the supermarket that came
-    back out half eaten. Each one looked like the answer for about a
-    week, and then the fight moved somewhere else.
+    back out half eaten. Each one looked like the answer for a while,
+    and then the fight moved somewhere else.
 
     And dinner becomes the part of the day you dread. Every night is a
-    small negotiation, and by seven you're too tired to win it, so the
+    small negotiation, and by evening you're too tired to win it, so the
     plate comes back with the green bits lined up along the edge.
 
     What you notice, after a while, is that they'll eat almost anything
@@ -112,12 +108,12 @@ example:
     strawberry gummies for the day, and your first thought is that it
     must be candy. You check the back, and it's free from synthetic
     dyes. The first morning you tear the pack across the top and tip
-    the gummies into a small hand, and they're gone before the toast
-    is. One parent who wrote to us put it this way: "They think it's a
-    treat."
+    the gummies into a small hand while the toast goes on. One parent
+    put it this way: "They think it's a treat."
 
-    There might still be broccoli on the plate tonight. But the morning
-    isn't a fight anymore. If that sounds like your kitchen, start with
+    There might still be broccoli on the plate tonight. But the green
+    part of the day is one small pack. If that sounds like your
+    kitchen, start with
     one pouch of Sprout Kids, from $24.99 for your first box, and see
     how the first week goes.
 
@@ -131,8 +127,10 @@ example:
                 MISSING: real cause
     Assumed:    the juice powder and the supermarket chewable are
                 illustrations; the review only says "all of the 'green'
-                options". MISSING: grams of sugar per pack, so "is the
-                sugar okay?" is left unanswered.
+                options". The broccoli, toast, sauce and smoothies are
+                illustrative scene details. MISSING: grams of sugar per
+                pack, so "is the sugar okay?" is left unanswered.
+    CHECKS MISSED: none
 
 tweaks:
   - what: The cause

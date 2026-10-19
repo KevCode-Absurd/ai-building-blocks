@@ -1,10 +1,10 @@
 new_slug: tracker-chart-image-ad-maker
 name: "Tracker chart image ad maker"
-summary: "Paste your story ad and claims. Get a tracker-photo image prompt and a score out of 100."
+summary: "Paste your story ad and claims. Get a tracker-photo image prompt, one mark and the line under it."
 job: make-image-ads
 
 headline: "Tracker chart image ad maker"
-subhead: Paste your story ad and the claims you can back. It checks the chart, calendar or test strip is one your buyer reads at home, then briefs a phone photo with one rough mark. You get the image prompt, the line under it and a score out of 100.
+subhead: Paste your story ad and the claims you can back. It checks the chart, calendar or test strip is one your buyer reads at home, then briefs a phone photo with one rough mark. You get the image prompt, the line under it and how to add the mark by hand.
 
 explain: |
   People who track something stare at the same screens: a sleep chart, a habit calendar, a test strip held to its colour card. A photo of that reading, with one rough mark on the part that matters, makes them look twice. They have seen that exact gap or dip on their own phone.
@@ -25,11 +25,11 @@ you_get:
   - The reading, the one part that tells the story, and the mark
   - Each readable number and where it came from
   - A 60 to 120 word photo prompt, plus how to add the mark by hand
-  - A score out of 100 for the share of its six checks the brief passes, with each one missed
+  - Any of its six checks the brief couldn't pass, named one per line
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Paste your story ad and your claims list. Without sources, it stops.
+  - Paste your story ad and your claims list. Without a source for what the story says about the reading, it asks once, then hands back only the gate and what's missing.
   - If you can, build the real chart yourself from the story's numbers and photograph it on a second phone.
   - Otherwise make the photo from the prompt, then draw the mark in your phone's photo editor.
   - Have a person check the claims behind the reading before the ad runs.
@@ -57,7 +57,7 @@ output_shape: |
   FLAGS             <claims behind the reading, with sources>
   IMAGE PROMPT      <60 to 120 words, the photo alone>
   MARK STEP         <by hand, or one fallback prompt line>
-  SCORE             <passed> / 6 checks x 100 = <score>, missed: <one line each>
+  CHECKS MISSED     <one line per check still missed, or none>
 
 example:
   business: sprout
@@ -118,6 +118,7 @@ example:
                       31st. Fallback line: "One rough, uneven red
                       circle round the empty days from the 9th to the
                       31st."
+    CHECKS MISSED     none
 
 tweaks:
   - what: Build the real chart
@@ -137,8 +138,8 @@ judge:
   - The app or sheet looks generic, with no real app's icon or colours.
 
 test:
-  - Give it a story about an X-ray or a lab report. It should stop and send you to a safer picture.
-  - Give it a reading with no claim behind it on your list. It should write MISSING and stop.
+  - Give it a story about an X-ray or a lab report. It should fail the gate and point you to a safer picture.
+  - Give it a reading with no claim behind it on your list. It should ask once for the source, then write MISSING and brief no proof picture.
   - Zoom into the finished picture. If any number you didn't give is readable, ask for it blurred.
   - Run the marked photo against the same photo with no mark. Keep whichever brings more readers to the offer.
 

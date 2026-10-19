@@ -1,10 +1,10 @@
 new_slug: dont-buy-warning-image-ad-maker
 name: "Don't-buy warning image ad maker"
-summary: "Paste your story ad. Get a hand-made warning card image prompt and a score out of 100."
+summary: "Paste your story ad. Get a hand-made warning card image prompt and a blank version."
 job: make-image-ads
 
 headline: "Don't-buy warning image ad maker"
-subhead: Paste your story ad, the kind of product that failed and why. It writes your narrator's warning in three to nine words on a hand-made card propped against the old thing. You get the image prompt, a blank version and a score out of 100.
+subhead: Paste your story ad, the kind of product that failed and why. It writes your narrator's warning in three to nine words on a hand-made card propped against the old thing. You get the image prompt, a blank version and the line under the image.
 
 explain: |
   Buyers who were let down before expect the next thing to be the same. An ad that tells them not to buy is the last thing they expect, and ads that admit a downside tend to be believed more than ads that only praise. So doubters read on to find out why.
@@ -25,7 +25,7 @@ you_get:
   - Three to nine words, exactly as they'll appear on the card
   - The card, the old thing it leans on, and a blank version
   - A 60 to 120 word image prompt and the line under the picture
-  - A score out of 100 for the share of its six checks the brief passes, with each one missed
+  - Any of its six checks the brief still misses, one line each
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
@@ -58,7 +58,7 @@ output_shape: |
   LINE UNDER IMAGE  <words> (<which line>, <characters>)
   FLAGS             <words written for the image, claims to keep in the story>
   IMAGE PROMPT      <60 to 120 words, the words in quotes once>
-  SCORE             <passed> / 6 checks x 100 = <score>, missed: <one line each>
+  CHECKS MISSED     <one line each, or none>
 
 example:
   business: sprout
@@ -116,6 +116,7 @@ example:
                       edge. Slight tilt, a little grain, unstyled. No
                       logo, no readable label, no brand name, no
                       person, no product.
+    CHECKS MISSED     none
 
 tweaks:
   - what: Stop or check
@@ -135,7 +136,7 @@ judge:
   - The old thing in the frame is generic, with its label turned away.
 
 test:
-  - Give it a story where the reason has no source. It should stop and say what's missing.
+  - Give it a story where the reason has no source. It should ask once, carry on with the reason marked MISSING, and flag that the picture can't run until it's backed.
   - Give it a story that names a rival brand. The card and the photo should show only the kind.
   - Show the picture to a buyer who was let down before. If they ask "why not?", it's working.
   - Run a stop against a check on the same story. Keep whichever brings more readers to the offer.

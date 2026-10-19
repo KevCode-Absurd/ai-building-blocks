@@ -69,7 +69,7 @@ function useIdlePrefetch() {
 }
 
 // Shown first: things most people can use this week.
-const START_HERE = ["fact-based-ad-copy-writer", "website-brand-file-builder", "customer-buying-reasons-finder", "brand-voice-editor", "landing-page-30-point-checker", "customer-quote-video-ad-script-writer", "meta-ads-compliance-checker"];
+const START_HERE = ["fact-based-ad-copy-writer", "website-brand-brain-builder", "customer-buying-reasons-finder", "brand-voice-editor", "landing-page-30-point-checker", "video-ad-script-writer-from-customer-quotes", "meta-ads-compliance-checker"];
 const PAGE = 12;
 const KIND_PATHS: Record<string, Kind> = Object.fromEntries(KINDS.map((k) => [k.path, k.id]));
 

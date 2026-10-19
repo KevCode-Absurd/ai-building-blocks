@@ -1,7 +1,7 @@
 slug: story-image-ad-writer
 renamed_from: stop-strangers-scrolling-with-a-story-ad
 name: "Story image ad writer"
-summary: "Paste customer quotes. Get a story ad, a picture plan and a score out of 100."
+summary: "Paste customer quotes. Get a story ad, a picture plan, two other openings and a test plan."
 category: general
 boards: [ecommerce]
 type: skill
@@ -26,7 +26,7 @@ inputs:
 outputs:
   - {type: ad_copy}
   - {type: image_prompt}
-uses: [story-ad-image-picker, story-ad-test-planner]
+uses: [image-style-picker-for-story-ads, story-ad-test-planner]
 example: native
 origin: rebuilt
 source_ids: [CES-048, CES-053, CES-115]

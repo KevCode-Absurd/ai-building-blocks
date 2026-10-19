@@ -11,6 +11,7 @@ export const FIELDS = [
   { id: "voice", label: "How you sound", md: "How I sound", hint: "Friendly and plain. A little funny. Never preachy about health" },
   { id: "site", label: "Website or profile", md: "Website", hint: "sprout.example" },
   { id: "avoid", label: "Anything your AI should never say", md: "Never say", hint: "No promises to cure or treat anything. No “detox”" },
+  { id: "more", label: "Anything else your AI should know", md: "Anything else", hint: "We ship to the US and Canada only. Our busy season is January. I post on Instagram and TikTok, not Facebook" },
 ] as const;
 export type FieldId = (typeof FIELDS)[number]["id"];
 export type Business = Partial<Record<FieldId, string>>;
@@ -35,9 +36,11 @@ export const hasBusiness = (b: Business) => Object.values(b).some((v) => v && v.
 
 /** The details as a short Markdown section an AI reads before it starts. Empty when nothing is filled in. */
 export function businessText(b: Business): string {
-  const rows = FIELDS.filter((f) => b[f.id]?.trim()).map((f) => `- **${f.md}:** ${b[f.id]!.trim().replace(/\s*\n\s*/g, " ")}`);
-  if (!rows.length) return "";
-  return ["## About me and my work", "", "Use these details. Don't ask me again for anything listed here.", "", ...rows, ""].join("\n");
+  const rows = FIELDS.filter((f) => f.id !== "more" && b[f.id]?.trim()).map((f) => `- **${f.md}:** ${b[f.id]!.trim().replace(/\s*\n\s*/g, " ")}`);
+  // "Anything else" can run to several lines, so it keeps its line breaks under its own label.
+  const more = b.more?.trim() ? ["", "**Anything else:**", "", b.more.trim().replace(/\r\n?/g, "\n")] : [];
+  if (!rows.length && !more.length) return "";
+  return ["## About me and my work", "", "Use these details. Don't ask me again for anything listed here.", "", ...rows, ...more, ""].join("\n");
 }
 
 /** A skill with the about-me file after it, ready to paste into a chat. */

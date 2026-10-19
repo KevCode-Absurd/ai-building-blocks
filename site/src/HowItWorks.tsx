@@ -176,7 +176,7 @@ export default function HowItWorks({ toast }: { toast: (m: string) => void }) {
               <p>A workflow runs skills in order. Each step saves its result and hands it to the next step. For example: teach your AI your brand, work out who you're writing for, write the ad, then check it against Meta's ad rules.</p>
             </div>
             <div className="hiw-flow" aria-label="An example workflow">
-              {[["Website brand file builder", "brand file"], ["Buyer brief writer", "brief"], ["Fact-based ad copy writer", "ad copy"], ["Meta ads compliance checker", ""]].map(([step, carry], i) => (
+              {[["Website brand brain builder", "brand file"], ["Buyer brief writer", "brief"], ["Fact-based ad copy writer", "ad copy"], ["Meta ads compliance checker", ""]].map(([step, carry], i) => (
                 <div className="hiw-flow-step" key={step}>
                   <span className="hiw-flow-box"><span className="hiw-n">{i + 1}</span>{step}</span>
                   {carry && <span className="hiw-carry">{carry}</span>}

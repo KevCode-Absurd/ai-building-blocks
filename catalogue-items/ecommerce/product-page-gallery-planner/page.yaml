@@ -1,10 +1,10 @@
 new_slug: product-page-gallery-planner
 name: "Product page gallery planner"
-summary: "Attach your product photos and facts. Get an 8-image gallery plan and a score out of 100."
+summary: "Attach your product photos and facts. Get an 8-image gallery plan with sourced words and a gaps list."
 job: product-photos
 
 headline: "Product page gallery planner"
-subhead: Give it your product facts, reviews and photos. It scores the questions shoppers ask, keeps the ones a picture answers best, and plans each image with its message and sourced words. You get a score table, image cards, a gaps list and a score out of 100.
+subhead: Give it your product facts, reviews and photos. It scores the questions shoppers ask, keeps the ones a picture answers best, and plans each image with its message and sourced words. You get a score table, image cards and a gaps list.
 
 explain: |
   Most product page galleries are five versions of the same pack shot. They answer "what is it" and leave shoppers guessing how big it is, how to use it and what happens if they don't like it. Shoppers go to the images first, and many try to judge size from them, so a missing size image costs sales.
@@ -26,7 +26,6 @@ you_get:
   - A score table showing why each image made the cut, or didn't
   - One card per image in upload order (question, message, photo, layout, words with sources)
   - A gaps list of every missing fact and photo, and which image waits on each
-  - A score out of 100 for the plan, with one line for each check it missed
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
@@ -71,8 +70,7 @@ output_shape: |
   GAPS
   NEED: <fact or photo> -> <which image waits on it>
 
-  SCORE  <n>/100 (<checks passed> of 6 checks)
-  Missed: <one line per check still missed>
+  CHECKS MISSED: <one line each, or none>
 
 example:
   business: sprout
@@ -98,7 +96,7 @@ example:
   output: |
     KIND: goes in or on the body
 
-    SCORES  (asked + picture wins + proof)
+    SCORES  (asked + picture wins + proof = total)
     Main          2+2+2 = 6  -> slot 01
     Made of       2+1+2 = 5  -> slot 02 (biggest doubt)
     Cost per use  2+1+2 = 5  -> slot 03 (answers "price jump?")
@@ -131,8 +129,9 @@ example:
     question: Is this just candy?
     message:  Tested for absorption in a real study
     words:    "Clinically tested for nutrient absorption" / "Vitamin C
-              +40.1%" / "Folate +20.5%" / small print "2025 study, 12
-              weeks, 120 healthy adults" (source: science page)
+              +40.1%" / "Folate +20.5%" / small print "2025
+              placebo-controlled study, 12 weeks, 120 healthy adults"
+              (source: science page)
     proof:    have
     watch:    the study measured two vitamins in the blood. No energy
               or immunity claims
@@ -148,6 +147,8 @@ example:
       109,639) -> voices
     NEED: pouch in a hand -> a stronger scale image
     Six images now. Fill the first gap and steps and what arrives join.
+
+    CHECKS MISSED: none
 
 tweaks:
   - what: The biggest doubt

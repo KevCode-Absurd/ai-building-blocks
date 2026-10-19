@@ -1,10 +1,10 @@
 new_slug: social-video-edit-planner
 name: "Social video edit planner"
-summary: "Attach clips and the post's idea. Get a timed cut list, captions and a score out of 100."
+summary: "Attach clips and the post's idea. Get a timed cut list, captions, a cover and export checks."
 job: grow-social
 
 headline: "Social video edit planner"
-subhead: Attach your clips or key frames, a transcript if you have one, and the one idea the post should land. It plans the opening, cuts, captions, cover and export. You get a timed cut list, words to confirm, export checks and a score out of 100.
+subhead: Attach your clips or key frames, a transcript if you have one, and the one idea the post should land. It plans the opening, cuts, captions, cover and export. You get a timed cut list, words to confirm and export checks.
 
 explain: |
   Most brands sit on hours of their own footage: a founder talking, a how-to, orders being packed, a peek behind the scenes. Turning it into posts takes time. The quick fix is to dress it up like an ad, with fast zooms, music over the words and a "shop now" at the end. A good everyday post needs less. It needs one idea, a first line that makes sense on its own, and captions that say what was really said.
@@ -28,7 +28,7 @@ you_get:
   - Extra shots, each with the line it covers, or the shot still to film
   - A list of words to confirm against the recording before captions go on
   - The cover, post caption, ending, and export settings with the checks to run
-  - A score out of 100 for the share of its six checks the plan passes, with each one missed
+  - Any of its six checks the plan still misses, one line each
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
@@ -69,7 +69,7 @@ output_shape: |
   sound, first frame, joins, last second, phone with sound and muted>
   SAVE FOR ANOTHER POST: <times and idea>   NOT USED: <clip and why>
   MISSING: <...>
-  SCORE: <passed> / 6 checks x 100 = <score>   Missed: <one line each>
+  CHECKS MISSED: <one line each, or none>
 
 example:
   business: sprout

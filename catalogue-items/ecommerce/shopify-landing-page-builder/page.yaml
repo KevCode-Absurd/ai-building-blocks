@@ -1,10 +1,10 @@
 new_slug: shopify-landing-page-builder
 name: "Shopify landing page builder"
-summary: "Paste your page copy and theme. Get Shopify files, install steps and a score out of 100."
+summary: "Paste your page copy and theme. Get Shopify files with your copy loaded in, and install steps."
 job: write-landing-page
 
 headline: "Shopify landing page builder"
-subhead: Give it your finished page copy, your product's handle and your theme. It writes a section file and a page template with your copy loaded in. You get the files, an image list, six install steps and a score out of 100.
+subhead: Give it your finished page copy, your product's handle and your theme. It writes a section file and a page template with your copy loaded in. You get the files, an image list and six install steps.
 
 explain: |
   You've written a good landing page, and now it has to live in your Shopify store. Pasting it into a basic page loses the layout. Hiring a developer for one page is slow. And hand-built pages often have prices typed into the code, which go wrong the day you change a price.
@@ -25,7 +25,7 @@ you_get:
   - A section file and a page template, each in a code block with its file path
   - A list of images to upload, with what each must show and its size
   - Six install steps, and a MISSING list of anything left empty
-  - A score out of 100 for how many of its own checks the files pass, with each miss named
+  - Any of its own checks the files still miss, each one named
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
@@ -49,8 +49,8 @@ how_it_works:
     text: Uses your reviews app's block or real quotes, with no default rating. Article-style pages get an "Advertisement" label that can't be switched off.
   - title: Styles and checks it
     text: Scopes the styles to the section, sizes images with alt text, builds for phone width first, and runs Shopify's Theme Check if it can.
-  - title: Scores the files
-    text: Goes through its own checks, such as valid JSON and no typed prices, fixes what it can, and scores checks passed out of all checks, times 100.
+  - title: Checks the files
+    text: Goes through its own checks, such as valid JSON and no typed prices, fixes what it can, and names any check still missed.
 
 output_shape: |
   sections/<page-name>.liquid
@@ -74,9 +74,8 @@ output_shape: |
   MISSING
   <each fact slot left empty because the store doesn't hold it>
 
-  SCORE
-  <passed> of <all> checks = <score> out of 100
-  Missed: <one line per check still missed, or none>
+  CHECKS MISSED
+  <one line per check still missed, or none>
 
 example:
   business: sprout

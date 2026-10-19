@@ -1,10 +1,10 @@
 new_slug: selfie-style-video-ad-script-writer
 name: "Selfie-style video ad script writer"
-summary: "Paste your buyer's doubt and facts. Get a selfie-style video script, shot list and score out of 100."
+summary: "Paste your buyer's doubt and facts. Get a selfie-style video script, shot list and two other openings."
 job: make-video-ads
 
 headline: "Selfie-style video ad script writer"
-subhead: Give it your buyer's doubt, product facts and who will be on camera. It writes a 15 to 60 second phone-style script in five timed beats, with every claim sourced. You get the script, a shot list, two other openings, a cast note and a score out of 100.
+subhead: Give it your buyer's doubt, product facts and who will be on camera. It writes a 15 to 60 second phone-style script in five timed beats, with every claim sourced. You get the script, a shot list, two other openings and a cast note.
 
 explain: |
   A video that looks filmed on someone's phone gets watched like a friend's post. Then one line gives it away. A hype word, three numbers in a row, or a pack held up beside a grin, and people scroll on. If the person on screen was made by AI, a line like "this worked for me" is also untrue, and ad rules say a fake customer must be labelled as one.
@@ -27,7 +27,7 @@ you_get:
   - The one detail that carries the ad, the length worked out from the steps, and a word count that fits it
   - A shot list saying which hand holds what, delivery notes and two other openings
   - A cast note on who should carry the ad and where the script goes next, plus every claim with its source
-  - A score out of 100 for how many of its own checks the script passes, with any it missed
+  - Any of its own checks the script still misses, one line each
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
@@ -35,7 +35,7 @@ how_to_use:
   - Say who will be on camera and the length, for example "AI presenter, about 30 seconds".
   - Name the doubt to answer, in your buyer's words if you have them.
   - Read it aloud standing up, at speaking pace. Rewrite any line you stumble on, and check beat 4 claims less than your facts allow.
-  - For an AI presenter, take the script and cast note to "Turn your selfie-style script into consistent clips". For a real creator, turn it into a filming brief with "Creator video filming brief writer".
+  - For an AI presenter, take the script and cast note to "Turn your selfie-style script into consistent clips". For a real creator, turn it into a filming brief with "Creator filming brief writer".
 
 how_it_works:
   - title: Checks a phone video fits
@@ -78,8 +78,7 @@ output_shape: |
   <item>   <source>
   MISSING: <what it needed and didn't get>
 
-  SCORE  <n>/100 (<passed> of <total> checks passed)
-  Missed: <one line per check missed, or none>
+  CHECKS MISSED: <one line per check missed, or none>
 
 example:
   business: sprout
@@ -195,7 +194,7 @@ judge:
   - The word count fits the length, about 70 words for 30 seconds.
 
 test:
-  - Leave out who the buyer is. It should stop and ask, because it writes no script without one.
+  - Leave out who the buyer is. It should ask once, then carry on with the buyer marked inferred and MISSING marks where your facts run out.
   - Run it once as "AI presenter" and once as "real creator" on the same facts. Only the creator version should have blanks and "I" lines.
   - Count the use steps in the shot list. The length should be close to 4 seconds a step plus about 20 for the rest, or say which steps it dropped.
   - Give it no customer quote. Beat 4 should become an observation, with nothing in quotation marks.
@@ -205,7 +204,7 @@ improve:
   - Paste your buyers' own nouns from reviews into "Buyer's words", and save the snags that work to your brand file.
   - Add your brand's pet phrases and banned words to the hype list in step 7, so they get caught too.
   - Let a real creator change any line they wouldn't say, as long as they keep the point, and note what they changed.
-  - Pair it with "Turn your selfie-style script into consistent clips" for an AI presenter, or "Creator video filming brief writer" for a real person.
+  - Pair it with "Turn your selfie-style script into consistent clips" for an AI presenter, or "Creator filming brief writer" for a real person.
 
 works_best_with:
   tools:

@@ -1,0 +1,28 @@
+slug: ai-workflow-handoff-planner
+renamed_from: ai-step-handoff-planner
+name: "AI workflow handoff planner"
+summary: "List your AI steps. Get handoff cards, claim cards and run rules that keep every fact whole."
+category: general
+type: skill
+role: orchestrate
+job: ops
+level: expert
+inputs:
+  - {type: plan, required: true}
+outputs:
+  - {type: plan}
+uses: []
+origin: rebuilt
+source_ids: [CES-091]
+old_name: stage context packet design
+version: 2.0.0
+credits:
+  - {title: "Effective context engineering for AI agents", by: "Anthropic Applied AI team", url: "https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents", used: "The smallest set of facts per step, and references fetched when needed"}
+  - {title: "Prompt caching", by: "Anthropic, Claude Docs", url: "https://platform.claude.com/docs/en/build-with-claude/prompt-caching", used: "Stable content first, changing content last"}
+  - {title: "AI Engineering: Building Applications with Foundation Models", by: "Chip Huyen", url: "https://www.oreilly.com/library/view/ai-engineering/9781098166298/", used: "Fixed output shapes between steps, and logging every step"}
+tested:
+  on: 2026-10-19
+  business: sprout
+  model: claude-opus-5-5
+  judge: claude-fable-5-1
+  result: pass

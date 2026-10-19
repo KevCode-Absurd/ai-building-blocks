@@ -45,7 +45,7 @@ blocks:
   story-image-ad-writer: phone-note
   chat-screenshot-image-ad-maker: chat-screenshot
   handwritten-note-image-ad-maker: handwritten-note
-  word-perfect-image-prompt-writer: handwritten-note
+  image-ad-maker-with-exact-text: handwritten-note
   sticky-note-image-ad-maker: sticky-notes-selfie
   selfie-style-video-clip-prompt-writer: sticky-notes-selfie
   problem-moment-image-ad-maker: problem-moment
@@ -54,7 +54,7 @@ blocks:
   feared-outcome-image-ad-maker: quiet-plate
   tried-before-products-image-ad-maker: bottle-wall
   visual-twist-image-ad-maker: cup-tower
-  overhead-portrait-image-prompt-writer: overhead-portrait
+  overhead-portrait-image-maker: overhead-portrait
   skeleton-video-clip-prompt-writer: skeleton
   podcast-style-video-clip-prompt-writer: podcast
   short-film-video-clip-prompt-writer: short-film
@@ -62,7 +62,7 @@ blocks:
   video-avatar-and-storyboard-planner: storyboard
   video-ad-shot-list-maker: storyboard
   turn-reviews-into-a-video-ad-ready-to-film: storyboard
-  story-ad-image-picker: story-pictures
+  image-style-picker-for-story-ads: story-pictures
   turn-your-reviews-into-image-ads-buyers-believe: story-pictures
   get-an-ad-strangers-read-built-from-reviews: story-pictures
   learn-what-sells-from-50-different-image-ads: ad-grid

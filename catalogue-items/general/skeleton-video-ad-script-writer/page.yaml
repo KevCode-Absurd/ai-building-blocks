@@ -1,10 +1,10 @@
 new_slug: skeleton-video-ad-script-writer
 name: "Skeleton video ad script writer"
-summary: "Name the habit you replace. Get a skeleton comedy video script, claims list and score out of 100."
+summary: "Name the habit you replace. Get a skeleton comedy video script, claims list and cast note."
 job: make-video-ads
 
 headline: "Skeleton video ad script writer"
-subhead: Give it your product, the old habit it replaces and your approved claims. It asks one open question and climbs four ever-sillier steps with a cartoon skeleton, then your product lands once. You get a timed script, a claims list, a cast note and a score out of 100.
+subhead: Give it your product, the old habit it replaces and your approved claims. It asks one open question and climbs four ever-sillier steps with a cartoon skeleton, then your product lands once. You get a timed script, a claims list and a cast note.
 
 explain: |
   Some selling ideas are about things building up: the tubs you gave up on, the mess a small problem makes over a year. A camera can't film that in 30 seconds. A cartoon skeleton can, and an open question ("How many tubs can one cupboard hold?") keeps people watching until the answer.
@@ -29,7 +29,7 @@ you_get:
   - A script table with each rung's label, narration, picture beats and seconds
   - A timing map with the word count, and a claims list showing which labels are free
   - A cast note on how the skeleton should look, and why
-  - A score out of 100 for how many of its own checks the script passes, with any it missed
+  - Any of its own checks the script still misses, one line each
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
@@ -79,8 +79,7 @@ output_shape: |
   CAST NOTE  <skeleton look, onlookers>: <why>
   MISSING: <facts it needed and didn't get>
 
-  SCORE  <n>/100 (<passed> of <total> checks passed)
-  Missed: <one line per check missed, or none>
+  CHECKS MISSED: <one line per check missed, or none>
 
 example:
   business: sprout

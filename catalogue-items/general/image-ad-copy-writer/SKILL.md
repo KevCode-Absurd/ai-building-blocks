@@ -1,6 +1,6 @@
 ---
 name: image-ad-copy-writer
-description: Use when an image ad's picture and type are decided and you need the words on the image plus every text field around it. Each field gets one job, the first line follows the ad's type on the shared map, and versions differ by the appeal they test. Ends with a score out of 100 for how many of its checks the words pass.
+description: Use when an image ad's picture and type are decided and you need the words on the image plus every text field around it. Each field gets one job, the first line follows the ad's type on the shared map, and versions differ by the appeal they test. Runs its checks before handing back.
 ---
 
 # Image ad copy writer
@@ -9,24 +9,24 @@ You write the words that finish a chosen picture: the headline and support line 
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
-Check for these first. The result is much better with them.
+This skill runs on its own. What's below makes the result better, but none of it is required.
 
-**Needed:**
+**Works best with** (or they can paste their own instead):
 - **A buyer brief**, made by the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer): who it's for, how much they already know, and what will move them.
 
 **Makes it better (optional):**
 - **Your offer**, made by the [Hidden offer finder](https://useaiblocks.com/prompts/hidden-offer-finder): what you sell and the real terms: price, trial, guarantee, delivery.
 - **Customer words** (yours): reviews, testimonials, support tickets, survey answers or call transcripts. Export them or paste them in.
 
-**The steps before this one** (do each once, then reuse what it makes):
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **A buyer brief** with the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer). Bring customer words. It uses your brand brain.
 2. **Your offer** with the [Hidden offer finder](https://useaiblocks.com/prompts/hidden-offer-finder). It uses your brand brain.
 3. This one.
 
-How to check:
-- **In Claude Code,** look in the project first for these by name, or ask for their path.
-- **In a chat,** ask once: "Do you have a buyer brief, your offer, customer words? Attach or paste them here." If they're already in this project's files, use those.
-- **If one is missing,** say so before you start, in one line: the result will be much better with it, with the link to make it once and reuse it. Next time they can attach it (or, in Claude Code, give its path). Then carry on with what you have and mark each gap with `MISSING:`.
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In Claude Code, look in the project too for these by name.
+2. **If something is missing, advise, don't block.** In one short message, say this skill works on its own and will be better with a buyer brief, your offer, customer words. They can attach them, paste them, or say where they are (in Claude Code, a file path). Name the recommended steps above as a suggestion, with their links. Then ask: "Add them, or shall I go ahead with what you've given me?" If their message already says to go ahead, skip this and start.
+3. **When they say go ahead,** do the whole job with what you have. Mark each gap with `MISSING:` and never invent a fact to fill it. List the gaps at the end so they can fill them in later.
 
 **Tools that do this best:**
 - **Any good chat AI:** Writing to field limits from your proof works well in any strong chat AI.
@@ -75,17 +75,39 @@ How to check:
    - **Curiosity**: an honest gap that the ad itself closes. No bait.
    - **Their words**: a phrase buyers use in reviews, kept as they say it.
    When testing words, keep the picture, product, offer and point the same. A natural sentence beats a forced fragment.
-5. **Use only real proof.** No figures, comparisons, credentials, quotes or guarantees taken from examples. No made-up customer and no invented history (first try, a friend's tip, failed treatments, personal results). Without a real, sourced quote, write as the brand, or in "If your mornings start with..." form. A founder speaks in first person only with a named person and their own facts. Offer terms are exact, with every condition kept.
+5. **Use only real proof.** No figures, comparisons, credentials, quotes or guarantees taken from examples. No made-up customer and no invented history (first try, a friend's tip, failed treatments, personal results). Without a real, sourced quote, write as the brand, or in "If your mornings start with..." form. A founder speaks in first person only with a named person and their own facts. Offer terms are exact, with every condition kept. Every time the offer or guarantee appears, in any field or version, it carries its limit (such as "first order only" or "with text sign-up"). Never say what other products or a whole category do or fail to do unless the proof says it; name the old way by how it feels to use, not by a result.
 6. **Write a story in the main text, only if allowed.** One reader, one problem, one tense. Open on the picture's moment, then what they tried and why it fell short, then the product as one option, described by its checked facts, then the offer terms, then a next step. Short paragraphs, each adding something new. Explain a cause only where the proof supports it. The story ends on a step the reader could take, never on a result achieved.
-7. **Score it.** Go through "Check before you hand it back" one line at a time and fix any check that fails, if you can. Score = checks passed / all checks x 100, rounded. Show the sum, and one line for each check still missed and why. The score measures the words against these checks, not how the ad will do.
+7. **Run the checks.** Go through "Check before you hand it back" one line at a time and fix any check that fails, if you can. List any check still missed, and why, on a `CHECKS MISSED:` line, or write "none".
 8. **Hand back only the fields and versions asked for.**
 
 ## What you hand back
-For each version: headline on the image, support line, main text, headline under the image, description, button, each within its limit and with its count. A note line names the code, what the buyer knows and the appeal each version tests. Then the story, if asked. Last, the score: checks passed out of all checks, as a sum and a score out of 100, with one line per check missed.
+For each version: headline on the image, support line, main text, headline under the image, description, button, each within its limit and with its count. A note line names the code, what the buyer knows and the appeal each version tests. Then the story, if asked. Last, a `CHECKS MISSED:` line, one line per check still missed, or none.
+
+Count words and characters one by one, exactly, before you write the count. A headline over 7 words (12 for a real quote) fails and gets cut. Be honest: a check you can't pass goes on the CHECKS MISSED line.
+
+Hand it back in exactly this layout, with these labels in this order:
+
+```
+VERSION <n>: <appeal it tests>
+On image, headline:   <7 words or fewer> (<words>)
+On image, support:    <one line, or none>
+Main text:            <first line stands alone above "See more">
+Headline under image: <40 characters or fewer> (<characters>)
+Description:          <within the limit>
+Button:               <the action>
+
+NOTE
+Code:        <type · dress · audience>
+Buyer knows: <new | warm | ready>
+MISSING:     <offer terms, quote or source not supplied>
+
+CHECKS MISSED
+<one line per check still missed, or none>
+```
 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
-When you've handed it back, ask in one short question what they want to do next. Offer these, and say they can type their own:
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - **Check it before it goes live** with the [Meta ads compliance checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the ad copy.
 - **Write the ad copy** with the [Ad first line writer and scorer](https://useaiblocks.com/skills/ad-first-line-writer-and-scorer). It takes the ad copy.
 - **Make image ads** with the [Article headline image ad maker](https://useaiblocks.com/skills/article-headline-image-ad-maker). It takes the ad copy.
@@ -102,7 +124,7 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Every field reads clearly to a 13-year-old and keeps the brand's voice.
 
 ## If something is missing
-Write `MISSING: <offer terms | quote | source>` and write around it. Never fill the gap with a likely-sounding number.
+Before you write MISSING, look for the fact in the input and in every attached or pasted file (reviews, brand file, product page). Write `MISSING: <offer terms | quote | source>` only when none of them has it, and write around it. Never fill the gap with a likely-sounding number. If the picture is named but you can't see it, say so in one line, work from the written description, and say the headline-and-picture check was made against words, not the image.
 
 ## Avoid
 - The image's words repeated in the main text.

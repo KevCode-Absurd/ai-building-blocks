@@ -1,10 +1,10 @@
 new_slug: long-form-video-ad-script-writer
 name: "Long-form video ad script writer"
-summary: "Paste research and proof. Get a 1 to 10 minute narrated script and score out of 100."
+summary: "Paste research and proof. Get a 1 to 10 minute narrated script with a picture for every line."
 job: make-video-ads
 
 headline: "Long-form video ad script writer"
-subhead: Give it your customer research, product facts and the proof you hold. It sets the length from what you can back, from 1 to 10 minutes, and writes narration that teaches in rounds. You get a timed script with a picture note per line and a score out of 100.
+subhead: Give it your customer research, product facts and the proof you hold. It sets the length from what you can back, from 1 to 10 minutes, and writes narration that teaches in rounds. You get a timed script with a picture note per line and notes on what would add a round.
 
 explain: |
   Long video ads (often called video sales letters) can sell to people who have never heard of you, because there's time to teach. Most fail because they're a short ad stretched out. The same claim comes back three times, the adjectives pile up, the only ask comes at minute eight, and a "results by day 30" promise has nothing behind it.
@@ -26,8 +26,7 @@ you_get:
   - A stock list of problems, explanations, doubts and proof, with the rounds and length they support
   - A timed table of narration, on-screen text and a picture note for every line
   - The rounds, the product's arrival, each proof and each ask marked
-  - Notes on what would add another round
-  - A score out of 100 for how many of its own checks the script passes, with any it missed
+  - Notes on what would add another round, and any of its checks it couldn't meet
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
@@ -72,8 +71,7 @@ output_shape: |
   NOTES
   <what would add a round, MISSING items>
 
-  SCORE  <n>/100 (<passed> of <total> checks passed)
-  Missed: <one line per check missed, or none>
+  CHECKS MISSED: <one line each, or none>
 
 example:
   business: sprout
@@ -161,7 +159,8 @@ example:
       photo: the pouch
 
     (cut for length: round 2, from 1:05 to about 3:00, starts from
-    what round 1 left open, the bloating. It covers why fiber powders
+    what round 1 left open, digestion, named in the approved claim's
+    words rather than as a bloating fix. It covers why fiber powders
     get dropped too, the 6 g of prebiotic fiber with "supports
     digestion and gut health", the survey's 67% line marked "of
     surveyed users", and the testing. Then the full offer and the

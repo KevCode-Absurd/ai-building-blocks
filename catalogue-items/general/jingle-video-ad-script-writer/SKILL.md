@@ -1,6 +1,6 @@
 ---
 name: jingle-video-ad-script-writer
-description: Use when an ad should be an original short song over animated pictures. Builds it the way memory research suggests jingles stick (a short rhymed hook about what the buyer gets, sung from the first bar and repeated on the same tune, the brand name in a short sung tag at the end), chooses the sound by fit with the buyer's moment, and lays the lyric on a bar grid for 6, 15 or 30 seconds. Video only; ends with a cast note for the video block and a score out of 100 against its own checks.
+description: Use when an ad should be an original short song over animated pictures. Builds it the way memory research suggests jingles stick (a short rhymed hook about what the buyer gets, sung from the first bar and repeated on the same tune, the brand name in a short sung tag at the end), chooses the sound by fit with the buyer's moment, and lays the lyric on a bar grid for 6, 15 or 30 seconds. Video only; ends with a cast note for the video block and any of its own checks it missed.
 ---
 
 # Jingle video ad script writer
@@ -9,23 +9,23 @@ You write a 6, 15 or 30 second song ad. The lyric is the script, laid out bar by
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
-Check for these first. The result is much better with them.
+This skill runs on its own. What's below makes the result better, but none of it is required.
 
-**Needed:**
-- **Brand brain**, made by the [Website brand file builder](https://useaiblocks.com/skills/website-brand-file-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
+**Works best with** (or they can paste their own instead):
+- **Brand brain**, made by the [Website brand brain builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
 - **A buyer brief**, made by the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer): who it's for, how much they already know, and what will move them.
 
-**The steps before this one** (do each once, then reuse what it makes):
-1. **Brand brain** with the [Website brand file builder](https://useaiblocks.com/skills/website-brand-file-builder). Bring your website, customer words (optional), your results (optional).
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **Brand brain** with the [Website brand brain builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
 2. **A buyer brief** with the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer). Bring customer words. It uses your brand brain.
 3. This one.
 
 **From the brand brain, read:** `00-start-here.md`, `offers.md`, `customers.md`, `proof-and-claims.md`, `voice-and-look.md`. Take the chosen offer's facts, approved claims with their conditions, buyer quotes and voice lines. Source notes and rejected ideas never go into the result.
 
-How to check:
-- **In Claude Code,** look in the project first. A brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name, or ask for their path.
-- **In a chat,** ask once: "Do you have your brand brain, a buyer brief? Attach or paste them here." If they're already in this project's files, use those.
-- **If one is missing,** say so before you start, in one line: the result will be much better with it, with the link to make it once and reuse it. Next time they can attach it (or, in Claude Code, give its path). Then carry on with what you have and mark each gap with `MISSING:`.
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In Claude Code, look in the project too: a brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name.
+2. **If something is missing, advise, don't block.** In one short message, say this skill works on its own and will be better with your brand brain, a buyer brief. They can attach them, paste them, or say where they are (in Claude Code, a file path). Name the recommended steps above as a suggestion, with their links. Then ask: "Add them, or shall I go ahead with what you've given me?" If their message already says to go ahead, skip this and start.
+3. **When they say go ahead,** do the whole job with what you have. Mark each gap with `MISSING:` and never invent a fact to fill it. List the gaps at the end so they can fill them in later.
 
 **Tools that do this best:**
 - **Any good chat AI:** Claude, ChatGPT and Gemini all follow this skill well, so use the one you already have.
@@ -75,7 +75,7 @@ How to check:
 8. **Write a picture for every line.** One shot idea per bar line. The lead, if there is one, is an animated, made-up adult, never a child, a real person or a known character. One place holds everything the lyric names. Mark `ON CAMERA` on lines the lead sings to camera. On-screen text goes on the tag only: the offer and the call to action.
 9. **Write the cast note.** Say who carries the ad and why, in two or three lines: the singer's voice (described, never an artist), and who is on screen (one animated lead, the cast joining on the tag, or the product alone with animated objects). Pick from the buyer's moment. The video block turns this into the avatar card.
 10. **Write the sound brief** for the music tool: length, BPM and time signature, key (optional), voice, instruments, the arrangement in order ("start on the sung hook at 0 seconds, no intro; ... end on the sung tag with a clean stop"), then the lyric with section tags in square brackets (`[Hook]`, `[Verse]`, `[Lift]`, `[Tag]`).
-11. **Score it.** Run the checks in "Check before you hand it back" and fix any that fail. Then score the script: checks passed divided by checks, times 100, rounded (6 of 7 passed is 86). Show the score, the sum, and one line for each check still missed.
+11. **Check it.** Run the checks in "Check before you hand it back" and fix any that fail. List each check still missed under `CHECKS MISSED`, one line each, or write "none".
 
 ## What you hand back
 - The three hook drafts, the pick and why.
@@ -84,13 +84,13 @@ How to check:
 - The sound brief, ready to paste.
 - A claims list: every line with a claim, brand line or number, and its source.
 - The cast note: the voice and who is on screen, and why.
-- The score out of 100, with the sum and one line for each check still missed.
+- `CHECKS MISSED`: one line for each check still missed, or "none".
 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
-When you've handed it back, ask in one short question what they want to do next. Offer these, and say they can type their own:
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - **Check it before it goes live** with the [Meta ads compliance checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the video ad script.
-- **Make video ads** with the [Ad script format finder](https://useaiblocks.com/skills/ad-script-format-finder). It takes the video ad script.
+- **Make video ads** with the [Ad script read-aloud editor](https://useaiblocks.com/skills/ad-script-read-aloud-editor). It takes the video ad script.
 - **Make image ads** with the [Image ad remake planner](https://useaiblocks.com/skills/image-ad-remake-planner). It takes the video ad script.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
@@ -105,7 +105,7 @@ If they pick one and that skill is added here, carry straight on with what you j
 - The cast note names the voice and who is on screen, with a reason.
 
 ## If something is missing
-Write `MISSING: <what>`. No buyer moment: build it from how the product is used and mark it `inferred`. No word on music: ask whether the brand uses music before anything is made. No brand lines: write the hook from review words.
+Write `MISSING: <what>`. No buyer moment: build it from how the product is used and mark it `inferred`. No word on music: ask once whether the brand uses music. With no answer, write the script and mark `MISSING: the brand's OK to use music` before anything is made. No brand lines: write the hook from review words.
 
 ## Avoid
 - The brand name as the hook.

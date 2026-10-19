@@ -1,10 +1,10 @@
 new_slug: talking-object-video-clip-prompt-writer
 name: "Talking object video clip prompt writer"
-summary: "Paste your talking-object script and attach a product photo. Get clip prompts and a score out of 100."
+summary: "Paste your talking-object script and attach a product photo. Get a character card, clip prompts and edit notes."
 job: make-video-ads
 
 headline: "Talking object video clip prompt writer"
-subhead: Give it a talking object script and a product photo. It writes one fixed character card, builds sheets and a storyboard, and writes timed clip prompts with every line in quotes, stopping three times for your OK. You get every prompt, edit notes and a score out of 100.
+subhead: Give it a talking object script and a product photo. It writes one fixed character card, builds sheets and a storyboard, and writes timed clip prompts with every line in quotes, stopping three times for your OK. You get the character card, every prompt and edit notes.
 
 explain: |
   A talking object ad lives or dies on whether it stays the same object from clip to clip. Video tools drift. The face moves, an arm appears from nowhere, the mouth keeps going after the line ends, and the product grows a face of its own.
@@ -26,7 +26,7 @@ you_get:
   - Reference image prompts and sheet prompts for the object, product and set, with lock lines
   - A storyboard with start frames and a shot card per clip
   - Timed clip prompts, a fix table and edit notes
-  - A score out of 100 for the prompts, with one line for each check they missed
+  - Any check the prompts still miss, one line each
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
@@ -68,8 +68,7 @@ output_shape: |
   Attach: <image n = job>  <lock lines> <timed beats> <sound>
   EDIT NOTES  <hard cuts, captions, offer text, voice route>
   MISSING: <..>
-  SCORE  <n>/100 (<checks passed> of 6 checks)
-  Missed: <one line per check still missed>
+  CHECKS MISSED: <one line per check still missed, or none>
 
 example:
   business: sprout
@@ -164,7 +163,7 @@ tweaks:
     how: Say your tool's lengths. At 8 seconds a clip holds about two short lines. A tool that makes 10 or 15 seconds can hold three, so fewer clips are needed.
 
 judge:
-  - The run stopped for your yes after the character card, the sheets and the storyboard.
+  - The run stopped for your yes after the character card, the sheets and the storyboard, unless you asked for every stage in one go.
   - Pause the first frame, muted, at thumbnail size. You can see the face and its feeling.
   - The face sits in the same spot in every clip, with the same eyes, brows and mouth.
   - The mouth moves only with the words and closes when each line ends.

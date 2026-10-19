@@ -1,10 +1,10 @@
 new_slug: handwritten-note-image-ad-maker
 name: "Handwritten note image ad maker"
-summary: "Paste your story ad. Get a handwritten note, how to photograph it and a score out of 100."
+summary: "Paste your story ad. Get a handwritten note in their words and how to photograph it."
 job: make-image-ads
 
 headline: "Handwritten note image ad maker"
-subhead: Give it your story ad. It decides who the note was written for, lifts 5 to 20 of the narrator's words and sets the paper and the place. You get the note, how to write and photograph it yourself, and a score out of 100.
+subhead: Give it your story ad. It decides who the note was written for, lifts 5 to 20 of the narrator's words and sets the paper and the place. You get the note, and how to write and photograph it yourself.
 
 explain: |
   Handwriting is rare in a feed and looks like personal effort, so people read it before they decide whether to. Research on handwritten notes backs this up: a short note in someone's own hand gets far more people to act than the same words in print. This picture is a photo of a few handwritten lines: a list on the back of an envelope, a note on the fridge, an old note found in a drawer.
@@ -25,7 +25,7 @@ you_get:
   - The note's words, line by line, exactly as they'll appear
   - A blank version and a short line to run under the image
   - How to make it by hand, or an image prompt if you can't
-  - A score out of 100 from the skill's six checks, with one line per check missed
+  - Any of the skill's six checks it still missed, one line each, or none
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
@@ -57,7 +57,7 @@ output_shape: |
   LINE UNDER IMAGE    <words> (<caption line>, <characters>)
   FLAGS               <lifted or written for the image; words to check>
   HOW TO MAKE IT      <by hand, or a 60 to 120 word image prompt>
-  SCORE               <n>/100 (<passed> of 6 checks) | missed: <one line each>
+  CHECKS MISSED       <one line each, or none>
 
 example:
   business: sprout

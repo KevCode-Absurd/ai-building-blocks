@@ -1,10 +1,10 @@
 new_slug: image-ad-remake-planner
 name: "Image ad remake planner"
-summary: "Paste your best ad. Get a carousel or still, words unchanged, and a score out of 100."
+summary: "Paste your best ad. Get a carousel or still with image prompts, every word unchanged and in order."
 job: make-image-ads
 
 headline: "Image ad remake planner"
-subhead: Give it your best ad, with screenshots of its shots, your brand file and product photos. It puts every line on an image or in the post text, in order, and flags lines too long instead of cutting them. You get image prompts, cards and a score out of 100.
+subhead: Give it your best ad, with screenshots of its shots, your brand file and product photos. It puts every line on an image or in the post text, in order, and flags lines too long instead of cutting them. You get image prompts, the cards and the post words.
 
 explain: |
   When a video ad works, you want it in the feed as an image too, or as a carousel people swipe. Remaking it by hand usually means rewording it, and the rewording often drops the one line that was doing the selling. Cramming every word onto one picture loses the glance.
@@ -26,7 +26,7 @@ you_get:
   - A layout and a card or slot table, with every line placed and any over-long line flagged
   - An image prompt per image or card, and the post words
   - The edit step that lays your real pack on, and a word count against the original
-  - A score out of 100 from the skill's five checks, with one line per check missed
+  - Any check it couldn't pass, one line each
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
@@ -67,7 +67,7 @@ output_shape: |
   POST WORDS  <the original post text, unchanged, or MISSING>
   EDIT STEP   <real pack overlay, word placement, contrast check>
   NOTES  Word check: <n> of <n>, in order. Flags: <...>  MISSING: <...>
-  SCORE  <n>/100 (<passed> of 5 checks) | missed: <one line each>
+  CHECKS MISSED  <one line each, or none>
 
 example:
   business: sprout
@@ -89,6 +89,7 @@ example:
     yellow bear face top right. Photos: pouch front, daily pack in a
     hand. The daily pack tears straight across its top edge only.
     Colors: deep forest #002C17, warm cream #FFF7DF. Font: Work Sans.
+    Brand file: attached (brand.md).
   output: |
     LAID OUT
       E1 line 1 "Greens powder takes a scoop, water and a shaker." problem
@@ -138,6 +139,7 @@ example:
     cards 1 and 4 run past 7 words; you decide whether to keep them or
     move them to the post text. MISSING: the daily pack's own label
     words, so card 3 frames it from the side.
+    CHECKS MISSED  none
 
 tweaks:
   - what: Still or carousel

@@ -1,0 +1,28 @@
+slug: ad-angle-planner
+renamed_from: ad-opening-and-argument-planner
+name: "Ad angle planner"
+summary: "Name your ad's buyer. Get a short brief on how it opens, argues and asks."
+category: general
+boards: [ecommerce]
+type: skill
+role: make
+job: copy
+level: intermediate
+inputs:
+  - {type: brief, required: true}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: brief}
+uses: [buyer-brief-writer, sales-copy-opening-writer]
+origin: rebuilt
+source_ids: [CES-015]
+old_name: buyer stage ad brief
+version: 2.0.0
+credits:
+  - {title: "Breakthrough Advertising", by: "Eugene Schwartz", url: "https://en.wikipedia.org/wiki/Eugene_Schwartz", used: "The five awareness levels and the five stages of what a market has heard, and how each changes the argument"}
+tested:
+  on: 2026-10-19
+  business: sprout
+  model: claude-opus-5-5
+  judge: claude-sonnet-5-5
+  result: fail

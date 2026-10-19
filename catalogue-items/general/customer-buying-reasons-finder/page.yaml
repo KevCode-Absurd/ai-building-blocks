@@ -153,6 +153,10 @@ example:
     change this map. MISSING: dates
     per review. This can't tell you why people who didn't buy said no.
 
+    SCORE
+    4 of 4 checks = 100 out of 100
+    Missed: none
+
 tweaks:
   - what: Which sources
     how: Add support tickets and call notes, not just five-star reviews. Anxieties live in mixed reviews and tickets, and those make the best FAQ and doubt-answering ads.

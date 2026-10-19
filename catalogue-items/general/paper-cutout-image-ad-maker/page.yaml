@@ -1,10 +1,10 @@
 new_slug: paper-cutout-image-ad-maker
 name: "Paper cutout image ad maker"
-summary: "Paste your claim and photos. Get a cutout image prompt, feed copy and a score out of 100."
+summary: "Paste your claim and photos. Get a paper cutout image prompt and the feed copy."
 job: make-image-ads
 
 headline: "Paper cutout image ad maker"
-subhead: Give it the doubt to settle, your product facts and photos. It picks one proof picture that fits your claim and lays it out in paper cutouts around your real product. You get the image prompt, the words on the image, the feed copy and a score out of 100.
+subhead: Give it the doubt to settle, your product facts and photos. It picks one proof picture that fits your claim and lays it out in paper cutouts around your real product. You get the image prompt, the words on the image and the feed copy.
 
 explain: |
   A paper cutout ad looks handmade, so it stands out in a feed of glossy photos. It goes wrong when it tries to say too much: five strips of features, a chart with no real numbers, and a product redrawn with a made-up label.
@@ -21,13 +21,13 @@ you_give:
   - Your product facts, what it replaces and how it works
   - Your figures with sources, approved claims and banned claims
   - Your colours, typefaces and offer
-  - Product photos with a sharp label, attached (optional at first, needed before you make the image)
+  - Product photos with a sharp label, attached (optional; without them the product slot stays empty)
 you_get:
   - Your point in one sentence and the one proof picture that shows it
   - The paper kit, the layout and a zone map for 4:5 or 1:1
   - The words on the image, checked for size and contrast, and a ready image prompt
   - Feed copy with a first line, headline and button
-  - A score out of 100 from the skill's six checks, with one line per check missed
+  - Any of the skill's six checks it still missed, one line each, or none
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
@@ -66,7 +66,7 @@ output_shape: |
   FEED COPY  First line: <...>  Headline: <27 characters or fewer>
              Button: <...>
   NOTES      <figure sources, MISSING>
-  SCORE      <n>/100 (<passed> of 6 checks) | missed: <one line each>
+  CHECKS MISSED  <one line each, or none>
 
 example:
   business: sprout

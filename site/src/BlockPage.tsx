@@ -254,7 +254,7 @@ export default function BlockPage({ c, slug, toast, toBuilder }: Props) {
           </Section>
 
           {p?.plan && (has(p.plan.needed) || has(p.plan.helps)) && (
-            <Section id="before" title="Before you start" lead="Have these ready. The result is much better with them.">
+            <Section id="before" title="Before you start" lead="It runs on its own. These make the result better, and none is required.">
               <Before plan={p.plan} />
             </Section>
           )}

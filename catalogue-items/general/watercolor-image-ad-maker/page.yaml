@@ -1,10 +1,10 @@
 new_slug: watercolor-image-ad-maker
 name: "Watercolor image ad maker"
-summary: "Paste your idea, attach photos. Get a watercolor image prompt, ad words and a score out of 100."
+summary: "Paste your idea, attach photos. Get a watercolor image prompt, a layout and the ad words."
 job: make-image-ads
 
 headline: "Watercolor image ad maker"
-subhead: Give it your selling idea, brand file and product photos. It picks one moment and the paint technique caught in it, then checks the picture against your claims. You get a watercolor image prompt, the ad words, a layout and a score out of 100.
+subhead: Give it your selling idea, brand file and product photos. It picks one moment and the paint technique caught in it, then checks the picture against your claims. You get a watercolor image prompt, the ad words and a layout.
 
 explain: |
   A photo can't show sixty ingredients in one pack, or a scent filling a room. A watercolor can, and a calm painting stands out in a loud feed. The risk is a lovely picture nobody can read in a glance, with a pack whose label the image tool has spelled wrong.
@@ -25,7 +25,6 @@ you_get:
   - A layout for 4:5 or 1:1, with a quiet area of bare paper for the words
   - The words on the image, an image prompt and the post words
   - The edit step that lays your real label over the painted one
-  - A score out of 100 from the skill's six checks, with one line per check missed
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
@@ -66,7 +65,7 @@ output_shape: |
   POST WORDS  Primary text <...> | Headline field <...> | Button <...>
   EDIT STEP   <label overlay, word placement, contrast check>
   CHECKS      <glance test, words, type, contrast, size>
-  SCORE       <n>/100 (<passed> of 6 checks) | missed: <one line each>
+  CHECKS MISSED: <one line each, or none>
   MISSING: <facts it needed>
 
 example:
@@ -144,6 +143,7 @@ example:
     never crop the pouch.
     CHECKS  Glance test: greens stacking into one pack. Headline 6
     words, 2 more things to read, type 30 px and up, 4.5:1 or more.
+    CHECKS MISSED: none
     MISSING: nothing for this ad.
 
 tweaks:

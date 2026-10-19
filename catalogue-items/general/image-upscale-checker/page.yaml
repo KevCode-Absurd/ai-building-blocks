@@ -63,16 +63,16 @@ output_shape: |
   and change nothing in it. Keep exactly: <...>
   Allowed: <...>   Not allowed: <...>
 
-  RESULT:     <file>, <width> x <height> px, ratio kept: <yes/no>
-  DIFFERENCE CHECK: <what showed up bright>
+  RESULT:     <file>, <width> x <height> px, ratio kept: <yes/no>, or not reviewed
+  DIFFERENCE CHECK: <what showed up bright, or what to look for>
   REVIEW
-  Words and logos    <pass | fail | needs a person>, <change>
+  Words and logos    <pass | fail | needs a person | not reviewed>, <change>
   Faces              <...>
   Hands              <...>
   Product            <...>
   Texture and edges  <...>
-  FIDELITY SCORE: <passed> / <counted> x 100 = <score>
-  Tries used: <n> of <n>   Verdict: <accepted | original returned, why>
+  FIDELITY SCORE: <passed> / <counted> x 100 = <score>, or not scored yet
+  Tries used: <n> of <n>   Verdict: <accepted | original returned, why | waiting for the file>
 
 example:
   business: sprout
@@ -104,28 +104,27 @@ example:
 
     PROMPT: not needed. This model takes no prompt.
 
-    WHEN THE FILE COMES BACK
-    1. Size: the file's details must read 2160 x 2700 px. Padded,
-       cropped or stretched fails.
-    2. Difference check: resize the original to 2160 x 2700 in an
-       editor with layers, put it under the result, set the top layer
-       to Difference. Look for bright areas on the fingers, the tear
-       line and the pouch printing.
-    3. At 100%, area by area:
-       Words and logos    "28 Daily Packs", the wordmark and the bear
-                          face, letter by letter and line by line
-       Faces              none in this image
-       Hands              five fingers on each hand; same grip; nails
-                          unchanged
-       Product            tear still straight across the top edge;
-                          pouch outline and foil crinkles
-       Texture and edges  gummy edges, no halo along the pouch, palm
-                          skin not smoothed
-    4. If anything changed: try 2 from the original with sharpening
-       and noise reduction lower; try 3 is a plain bicubic resize.
-
-    RESULT: not run yet. Attach the returned file and I'll fill in the
-    review. Until then it is marked "not reviewed".
+    RESULT:     not reviewed. Attach the returned file and I will
+                fill this in. Its details must read 2160 x 2700 px;
+                padded, cropped or stretched fails.
+    DIFFERENCE CHECK: not run yet. Resize the original to 2160 x 2700
+                in an editor with layers, put it under the result, set
+                the top layer to Difference. Look for bright areas on
+                the fingers, the tear line and the pouch printing.
+    REVIEW
+    Words and logos    not reviewed. Read "28 Daily Packs", the
+                       wordmark and the bear face letter by letter
+    Faces              none in this image
+    Hands              not reviewed. Five fingers on each hand, same
+                       grip, nails unchanged
+    Product            not reviewed. Tear still straight across the
+                       top edge, pouch outline and foil crinkles
+    Texture and edges  not reviewed. Gummy edges, no halo along the
+                       pouch, palm skin not smoothed
+    FIDELITY SCORE: not scored yet: no returned file
+    Tries used: 0 of 3   Verdict: waiting for the file. If anything
+    changed, try 2 starts from the original with sharpening and noise
+    reduction lower; try 3 is a plain bicubic resize.
 
 tweaks:
   - what: What it's for
@@ -138,9 +137,9 @@ tweaks:
     how: Allow more or fewer. Each try starts from the untouched original and moves one step closer to a plain resize.
 
 judge:
-  - The report gives the returned file's real pixel size, and it matches the target and the original's ratio.
+  - The report gives the returned file's real pixel size, matching the target and the original's ratio. Before a file comes back, it gives the exact target size and says the size check waits for the file.
   - The kind of upscaler fits what's in the picture, and a faithful model was tried first.
-  - Every printed word and logo was read letter by letter, or put back from the design file or artwork.
+  - Every printed word and logo was read letter by letter, or put back from the design file or artwork. Before a file comes back, the plan says which of the two each word and logo gets.
   - A difference check was done, or the report says why it couldn't be.
   - Nothing is marked "pass" that wasn't compared. Unseen areas say "needs a person".
   - The original file is still there, unchanged.

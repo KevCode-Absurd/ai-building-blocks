@@ -1,6 +1,6 @@
 ---
 name: video-ad-script-point-of-view-editor
-description: Use when you want more versions of a script that already works or is approved, by changing only who tells it (I, you, she, he or they) and when it happens (past, present or future). The argument, facts, order and line lengths stay the same, and lines that can't move honestly are kept and explained. Scores the new version out of 100 against its own checks.
+description: Use when you want more versions of a script that already works or is approved, by changing only who tells it (I, you, she, he or they) and when it happens (past, present or future). The argument, facts, order and line lengths stay the same, and lines that can't move honestly are kept and explained. Ends with any of its own checks the new version still misses.
 ---
 
 # Video ad script point-of-view editor
@@ -9,12 +9,12 @@ A viewer hears "I gave up on the tub" and "you gave up on the tub" as two differ
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
-Check for these first. The result is much better with them.
+This skill runs on its own. What's below makes the result better, but none of it is required.
 
-How to check:
-- **In Claude Code,** look in the project first for these by name, or ask for their path.
-- **In a chat,** ask once: "Do you have ? Attach or paste them here." If they're already in this project's files, use those.
-- **If one is missing,** say what it would add, then carry on with what you have and mark each gap with `MISSING:`.
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In Claude Code, look in the project too for these by name.
+2. **If something is missing, advise, don't block.** In one short message, say this skill works on its own and will be better with . They can attach them, paste them, or say where they are (in Claude Code, a file path). Then ask: "Add them, or shall I go ahead with what you've given me?" If their message already says to go ahead, skip this and start.
+3. **When they say go ahead,** do the whole job with what you have. Mark each gap with `MISSING:` and never invent a fact to fill it. List the gaps at the end so they can fill them in later.
 
 **Tools that do this best:**
 - **Any good chat AI:** Moving a script into a new voice while holding every fact works well in any strong chat AI.
@@ -45,17 +45,17 @@ Ads may not present a testimonial from someone who doesn't exist or never used t
 - **Into "you":** say what the viewer does or has already tried. Never tell them they have a condition, and never promise a result the original only reported.
 - **Into the future:** turn a result into what the product is designed to do, or into what buyers reported. Never a forecast about this viewer.
 
-## Score it
-Run the checks in "Check before you hand it back" and fix any that fail. Then score the new version: checks passed divided by checks, times 100, rounded (3 of 4 passed is 75). Show the score, the sum, and one line for each check still missed.
+## Run the checks
+Run the checks in "Check before you hand it back" and fix any that fail. Show `CHECKS MISSED: <one line each>`, or "none".
 
 ## What you hand back
-Every line, kept in its place, with its new spoken words, on-screen text and picture note. The opening variants, moved. Notes on every line kept in the old voice and why, and every line where honesty limited the move. Last, the score out of 100, with the sum and one line for each check still missed.
+Every line, kept in its place, with its new spoken words, on-screen text and picture note. The opening variants, moved. Notes on every line kept in the old voice and why, and every line where honesty limited the move. Last, the `CHECKS MISSED` line: one line for each check still missed, or "none".
 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
-When you've handed it back, ask in one short question what they want to do next. Offer these, and say they can type their own:
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - **Check it before it goes live** with the [Meta ads compliance checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the video ad script.
-- **Make video ads** with the [Ad script format finder](https://useaiblocks.com/skills/ad-script-format-finder). It takes the video ad script.
+- **Make video ads** with the [Ad script read-aloud editor](https://useaiblocks.com/skills/ad-script-read-aloud-editor). It takes the video ad script.
 - **Make image ads** with the [Image ad remake planner](https://useaiblocks.com/skills/image-ad-remake-planner). It takes the video ad script.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

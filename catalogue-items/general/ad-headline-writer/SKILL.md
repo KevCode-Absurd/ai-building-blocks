@@ -1,6 +1,6 @@
 ---
 name: ad-headline-writer
-description: Use when you need headlines, headline-field lines or the words on an ad image, each one understood in a single glance. Sets what the line may say from how aware the buyer is, picks each line's way in from the material you actually hold (a gain, an exact fact, news, the buyer's words, the buyer's question), and checks every line against its character limit and a glance test. Ends with a score out of 100 for how many of its checks the set passes.
+description: Use when you need headlines, headline-field lines or the words on an ad image, each one understood in a single glance. Sets what the line may say from how aware the buyer is, picks each line's way in from the material you actually hold (a gain, an exact fact, news, the buyer's words, the buyer's question), and checks every line against its character limit and a glance test. Ends with any of its checks the set still misses.
 ---
 
 # Ad headline writer
@@ -9,23 +9,23 @@ Most people read the headline and nothing else, so it has to pick out its reader
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
-Check for these first. The result is much better with them.
+This skill runs on its own. What's below makes the result better, but none of it is required.
 
-**Needed:**
-- **Brand brain** (its products part), made by the [Website brand file builder](https://useaiblocks.com/skills/website-brand-file-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
+**Works best with** (or they can paste their own instead):
+- **Brand brain** (its products part), made by the [Website brand brain builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
 - **A buyer brief**, made by the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer): who it's for, how much they already know, and what will move them.
 
-**The steps before this one** (do each once, then reuse what it makes):
-1. **Brand brain** with the [Website brand file builder](https://useaiblocks.com/skills/website-brand-file-builder). Bring your website, customer words (optional), your results (optional).
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **Brand brain** with the [Website brand brain builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
 2. **A buyer brief** with the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer). Bring customer words. It uses your brand brain.
 3. This one.
 
 **From the brand brain, read:** `00-start-here.md`, `offers.md`, `customers.md`, `proof-and-claims.md`, `voice-and-look.md`. Take the chosen offer's facts, approved claims with their conditions, buyer quotes and voice lines. Source notes and rejected ideas never go into the result.
 
-How to check:
-- **In Claude Code,** look in the project first. A brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name, or ask for their path.
-- **In a chat,** ask once: "Do you have your brand brain, a buyer brief? Attach or paste them here." If they're already in this project's files, use those.
-- **If one is missing,** say so before you start, in one line: the result will be much better with it, with the link to make it once and reuse it. Next time they can attach it (or, in Claude Code, give its path). Then carry on with what you have and mark each gap with `MISSING:`.
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In Claude Code, look in the project too: a brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name.
+2. **If something is missing, advise, don't block.** In one short message, say this skill works on its own and will be better with your brand brain, a buyer brief. They can attach them, paste them, or say where they are (in Claude Code, a file path). Name the recommended steps above as a suggestion, with their links. Then ask: "Add them, or shall I go ahead with what you've given me?" If their message already says to go ahead, skip this and start.
+3. **When they say go ahead,** do the whole job with what you have. Mark each gap with `MISSING:` and never invent a fact to fill it. List the gaps at the end so they can fill them in later.
 
 **Tools that do this best:**
 - **Any good chat AI:** Short lines built from your facts come out well in any strong chat AI with this skill.
@@ -33,7 +33,7 @@ How to check:
 <!-- /needs -->
 
 ## What you need
-- **A buyer brief** (required): how aware they are, the one thing they want, their main doubt. If you don't have one, run "Buyer brief writer" first.
+- **A buyer brief** (required): how aware they are, the one thing they want, their main doubt. A few lines in their own words work too. The Buyer brief writer gives a better starting point.
 - **Offer and facts** (required): the benefit, the proof you may use, any dated news, the price and terms if relevant.
 - **Count and limits** (required): how many lines, the character limit and where each line appears.
 - **The picture** (optional): for words on an image. Read an attached picture directly, and ask for it rather than a description. With only a description, say that step 5 was checked against words, not the image.
@@ -58,14 +58,14 @@ How to check:
 5. **On a picture,** the words add what the picture can't show. They never label what's already visible. A price, amount or button label can be a short phrase.
 6. **Run the glance test** on every line: under its limit; no word a stranger would look up; a stranger could say in their own words what's on offer and who it's for. Rewrite or drop any line that fails.
 7. **Mark the line to test first:** the one whose way in rests on the strongest material for this buyer's doubt.
-8. **Score it.** Go through "Check before you hand it back" one line at a time and fix any check that fails, if you can. Score = checks passed / all checks x 100, rounded. Show the sum, and one line for each check still missed and why. The score measures the set against its own checks, not how the lines will perform.
+8. **Check it.** Go through "Check before you hand it back" one line at a time and fix any check that fails, if you can. Under CHECKS MISSED, write one line for each check still missed and why, or "none".
 
 ## What you hand back
-The level and what it allows. Then a numbered list: the line, its way in, who it's aimed at, its character count, and the glance test result. Then the line to test first, the ways in skipped for lack of material, and `MISSING:` lines. Last, the score: checks passed out of all checks, as a sum and a score out of 100, with one line per check missed.
+The level and what it allows. Then a numbered list: the line, its way in, who it's aimed at, its character count, and the glance test result. Then the line to test first, the ways in skipped for lack of material, and `MISSING:` lines. Last, CHECKS MISSED: one line per check still missed, or "none".
 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
-When you've handed it back, ask in one short question what they want to do next. Offer these, and say they can type their own:
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - **Check it before it goes live** with the [Meta ads compliance checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the ad copy.
 - **Write the ad copy** with the [Ad first line writer and scorer](https://useaiblocks.com/skills/ad-first-line-writer-and-scorer). It takes the ad copy.
 - **Make image ads** with the [Article headline image ad maker](https://useaiblocks.com/skills/article-headline-image-ad-maker). It takes the ad copy.

@@ -1,10 +1,10 @@
 new_slug: clay-town-video-ad-script-writer
 name: "Clay town video ad script writer"
-summary: "Paste your idea and brand file. Get a clay-town video script, cast note and score out of 100."
+summary: "Paste your idea and brand file. Get a clay-town video script, set card and cast note."
 job: make-video-ads
 
 headline: "Clay town video ad script writer"
-subhead: Give it your selling idea and brand file. It writes a narrated clay-animation video around a hassle a whole crowd shares, where one lead gets out of it with your product. You get a set card, a timed five-part script, a cast note and a score out of 100.
+subhead: Give it your selling idea and brand file. It writes a narrated clay-animation video around a hassle a whole crowd shares, where one lead gets out of it with your product. You get a set card, a timed five-part script and a cast note for the video step.
 
 explain: |
   Some problems are awkward to show with real people: a queue at the office sink, a packed train, the school-gate rush. In a handmade clay town they become funny and easy to watch, because everyone recognises the routine and nobody real is embarrassed.
@@ -28,7 +28,7 @@ you_get:
   - A line-by-line script in five movements, with the picture, who moves and the seconds
   - A cast note with the lead in full, the crowd and why this lead carries it
   - Notes on what was inferred and what's missing
-  - A score out of 100 for how many of its own checks the script passes, with any it missed
+  - Any of its own checks the script still misses, one line each
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
@@ -70,8 +70,7 @@ output_shape: |
   - Inferred: <...>
   - MISSING: <anything the facts didn't give>
 
-  SCORE  <n>/100 (<passed> of <total> checks passed)
-  Missed: <one line per check missed, or none>
+  CHECKS MISSED  <one line each, or none>
 
 example:
   business: sprout
@@ -161,6 +160,9 @@ example:
       from the buyer's office job, not the brand file.
     - MISSING: the daily pack's label words. In lines 5 and 6 the
       pack is seen from its top edge, so no label shows.
+    CHECKS MISSED  none
+    (cut for length: in the full run, each row with Dev repeats his
+    LEAD line word for word; here it's shortened to "Dev".)
 
 tweaks:
   - what: The finish

@@ -1,10 +1,10 @@
 new_slug: claymation-video-ad-script-writer
 name: "Claymation video ad script writer"
-summary: "Paste your idea and product facts. Get a claymation video script, cast note and score out of 100."
+summary: "Paste your idea and product facts. Get a claymation video shot table and a cast note."
 job: make-video-ads
 
 headline: "Claymation video ad script writer"
-subhead: Give it your selling idea and product facts. It picks one clay object that changes shape on camera to show the problem or the fix, and writes the narration and shots for one silent clay character. You get a shot table, a cast note and a score out of 100.
+subhead: Give it your selling idea and product facts. It picks one clay object that changes shape on camera to show the problem or the fix, and writes the narration and shots for one silent clay character. You get a shot table, a cast note and any check it missed.
 
 explain: |
   Some products work in ways a camera can't film. Vitamins your body absorbs, a coating inside a pan, a habit that slowly gets easier. Ads for these end up as someone talking about it, and people scroll past.
@@ -28,7 +28,7 @@ you_get:
   - One character sentence and a set plan with its finish, stand-ins and two palettes
   - A shot table with seconds, narration, picture, what moves and on-screen text
   - A cast note on who carries the ad, ready for the shots skill
-  - A score out of 100 for how many of its own checks the script passes, with any it missed
+  - Any of its own checks the script still misses, one line each
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
@@ -77,8 +77,7 @@ output_shape: |
 
   CAST NOTE  <who carries it, why, voice, what never changes>
 
-  SCORE  <n>/100 (<passed> of <total> checks passed)
-  Missed: <one line per check missed, or none>
+  CHECKS MISSED: <one line per check missed, or none>
 
 example:
   business: sprout

@@ -1,10 +1,10 @@
 new_slug: knitted-wool-video-clip-prompt-writer
 name: "Knitted wool video clip prompt writer"
-summary: "Paste your knitted script and attach product photos. Get wool clip prompts and a score out of 100."
+summary: "Paste your knitted script and attach product photos. Get sheets, a storyboard and wool clip prompts."
 job: make-video-ads
 
 headline: "Knitted wool video clip prompt writer"
-subhead: Give it a narrated knitted-wool script and product photos. It writes a doll card, sheets, a storyboard and clip prompts where yarn moves only as yarn can, stopping three times for your OK. You get every prompt, an edit list and a score out of 100.
+subhead: Give it a narrated knitted-wool script and product photos. It writes a doll card, sheets, a storyboard and clip prompts where yarn moves only as yarn can, stopping three times for your OK. You get every prompt and an edit list.
 
 explain: |
   A knitted-wool ad goes wrong in small ways that add up. A real person turns up standing in a wool room. The doll's hair changes from shot to shot. A kettle comes out in steel because nobody said it was crocheted. Stitches smear as the clip plays, and the label on your pack is misspelled.
@@ -26,7 +26,6 @@ you_get:
   - Doll, product and room sheets, with the doll card and material sentence locked
   - A storyboard with a frame prompt and a shot card for every shot
   - Clip prompts where yarn moves only as yarn can, and an edit list
-  - A score out of 100 for the prompts, with one line for each check they missed
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
@@ -69,8 +68,7 @@ output_shape: |
            [MOTION] Camera <one move>  0 to <n> s <...>  Fixed <...>
            VOICE <...>  EDIT <order, captions, overlay, end card, safe zone>
            MISSING: <facts it needed>
-  SCORE  <n>/100 (<checks passed> of 6 checks)
-  Missed: <one line per check still missed>
+  CHECKS MISSED  <one line per check still missed, or none>
 
 example:
   business: sprout
@@ -92,6 +90,9 @@ example:
     yellow, a yellow bear face top right, "28 Daily Packs" at the
     bottom. Tear only straight across the top.
     Video tool: 8-second clips, takes an end frame, no sound.
+    Brand file: attached (brand.md).
+    Approvals: take the avatar card and sheets as approved, and write
+    every stage now.
   output: |
     STAGE 0  SCRIPT IN  Turn: join, plying. Starts with six loose
     strands at line 3, ends with one yarn running into the pack at
@@ -154,6 +155,7 @@ example:
     $49.99 every 4 weeks. Check line 6 says "supports", as approved.
     MISSING: the color of "28 Daily Packs", and a single daily pack
     photo for F3 and the tear.
+    CHECKS MISSED  none
     (cut for length: the full run also had F1, F2, F5, F6 and clips 1,
     3 and 4)
 
@@ -168,7 +170,7 @@ tweaks:
     how: Give its clip length and say if it takes an end frame or makes sound. The timed steps, the turn's end frame and the sound line change to fit.
 
 judge:
-  - It stopped for your approval after the avatar card, the sheets and the storyboard.
+  - It stopped for your approval after the avatar card, the sheets and the storyboard, unless you approved them ahead.
   - The material sentence is word for word the same in every prompt, and the doll card in every frame she's in.
   - Every object in every prompt names its material and a real color.
   - Each clip has one camera move and one yarn change, written as yarn behaves.

@@ -1,7 +1,7 @@
 slug: jingle-video-clip-prompt-writer
 renamed_from: turn-song-script-into-shots-ai-can-make
 name: "Jingle video clip prompt writer"
-summary: "Paste your song script and attach product photos. Get music, clip prompts and a score out of 100."
+summary: "Paste your song script and attach product photos. Get the music prompt and clip prompts cut on the beat."
 category: general
 boards: [ecommerce]
 type: skill

@@ -119,7 +119,7 @@ test("a public item shows on From people, and a private one never does", async (
 test("kits from this browser and workflows from the builder go into the space and open again in the builder", async ({ page }) => {
   // A kit saved only in this browser.
   await page.addInitScript(() => {
-    if (!localStorage.getItem("abb:v1")) localStorage.setItem("abb:v1", JSON.stringify({ kits: [{ id: "k1", name: "Launch kit", slugs: ["meta-ads-compliance-checker", "website-brand-file-builder"], updated: 1 }], flows: [], recent: [], currentFlow: null, draft: null }));
+    if (!localStorage.getItem("abb:v1")) localStorage.setItem("abb:v1", JSON.stringify({ kits: [{ id: "k1", name: "Launch kit", slugs: ["meta-ads-compliance-checker", "website-brand-brain-builder"], updated: 1 }], flows: [], recent: [], currentFlow: null, draft: null }));
   });
   await makeSpace(page, "Builder test");
   await expect(page.getByTestId("bring-in")).toContainText("1 kit");
@@ -142,8 +142,9 @@ test("kits from this browser and workflows from the builder go into the space an
 test("every skill says what to have first, links the steps before it, and offers what to do next", async ({ page }) => {
   await page.goto("/prompts/fact-based-ad-copy-writer");
   const before = page.locator("#before");
-  await expect(before).toContainText("The steps before this one");
-  await expect(before.getByTestId("chain").getByRole("link", { name: "Website brand file builder" })).toHaveAttribute("href", "/skills/website-brand-file-builder");
+  await expect(before).toContainText("Recommended steps before this one");
+  await expect(before).toContainText("It runs on its own");
+  await expect(before.getByTestId("chain").getByRole("link", { name: "Website brand brain builder" })).toHaveAttribute("href", "/skills/website-brand-brain-builder");
   await expect(before.getByTestId("brain-files")).toContainText("proof-and-claims.md");
   const next = page.getByTestId("next");
   await expect(next).toContainText("Check it before it goes live");
@@ -152,10 +153,12 @@ test("every skill says what to have first, links the steps before it, and offers
   // The skill file itself carries the same, with full links, and asks what's next at the end.
   const file = await (await page.request.get("/skills/fact-based-ad-copy-writer/SKILL.md")).text();
   expect(file).toContain("## Before you start");
-  expect(file).toContain("https://useaiblocks.com/skills/website-brand-file-builder");
-  expect(file).toContain("look in the project first");
+  expect(file).toContain("https://useaiblocks.com/skills/website-brand-brain-builder");
+  expect(file).toContain("**Look first.**");
+  expect(file).toContain("shall I go ahead with what you've given me?");
+  expect(file).toContain("This skill runs on its own");
   expect(file).toContain("## After this");
-  expect(file).toContain("ask in one short question what they want to do next");
+  expect(file).toContain("suggest what they could do next");
 });
 
 test("@mobile My space fits a phone: no sideways scroll", async ({ page }) => {

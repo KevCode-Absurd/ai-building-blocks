@@ -1,7 +1,7 @@
 slug: story-ad-test-planner
 renamed_from: find-the-story-ad-worth-writing-first
 name: "Story ad test planner"
-summary: "Paste your facts and reviews. Get a fit verdict, four story tests and a score out of 100."
+summary: "Paste your facts and reviews. Get a fit verdict, an honest narrator and four story tests."
 category: general
 boards: [ecommerce]
 type: skill
@@ -15,7 +15,7 @@ inputs:
   - {type: landing_page, required: false}
 outputs:
   - {type: plan}
-uses: [story-ad-image-picker]
+uses: [image-style-picker-for-story-ads]
 example: native
 origin: own
 source_ids: [CES-076]

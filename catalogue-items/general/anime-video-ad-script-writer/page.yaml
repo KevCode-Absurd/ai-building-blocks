@@ -1,10 +1,10 @@
 new_slug: anime-video-ad-script-writer
 name: "Anime video ad script writer"
-summary: "Paste your idea and brand file. Get anime-style video shot cards, cast note and score out of 100."
+summary: "Paste your idea and brand file. Get anime-style video shot cards and a cast note."
 job: make-video-ads
 
 headline: "Anime video ad script writer"
-subhead: Give it your selling idea and brand file. It designs one original adult hero for an anime-style video, picks one thing the drawing exaggerates, and writes every shot as two key poses and a hold. You get shot cards, a cast note and a score out of 100.
+subhead: Give it your selling idea and brand file. It designs one original adult hero for an anime-style video, picks one thing the drawing exaggerates, and writes every shot as two key poses and a hold. You get shot cards, a cast note and any check it missed.
 
 explain: |
   Hand-drawn anime can push things past real life. A chore can tower over the hero, a sigh can become a storm cloud, one quick tear of a pack can stretch into a moment. That makes it good for stopping a scroll. It also goes wrong easily: copied characters, a fight with no product in it, or a hero who "powers up" in a way that reads as a promised result.
@@ -25,7 +25,7 @@ you_get:
   - The problem, turn and payoff poses the ad builds to
   - Shot cards with key poses, holds, what moves, words and sound
   - A cast note saying who carries the ad and why, ready for the clips skill
-  - A score out of 100 for how many of its own checks the script passes, with any it missed
+  - Any of its own checks the script still misses, one line each
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
@@ -67,8 +67,7 @@ output_shape: |
 
   CAST NOTE  <who carries it, why, voice, what never changes>
 
-  SCORE  <n>/100 (<passed> of <total> checks passed)
-  Missed: <one line per check missed, or none>
+  CHECKS MISSED: <one line per check missed, or none>
 
 example:
   business: sprout

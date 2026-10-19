@@ -1,6 +1,6 @@
 ---
 name: skeleton-video-ad-script-writer
-description: Use when an ad should open on a "what happens if..." question and answer it like a comedy bit, with one friendly cartoon skeleton whose situation climbs four rungs, each a step sillier than the last. Finds the one thing that grows, picks how each rung is labelled, lands the product once and checks every counted or timed claim. Writes a narrated video script of 15, 25 or 35 seconds, with a cast note for the video block and a score out of 100 against its own checks.
+description: Use when an ad should open on a "what happens if..." question and answer it like a comedy bit, with one friendly cartoon skeleton whose situation climbs four rungs, each a step sillier than the last. Finds the one thing that grows, picks how each rung is labelled, lands the product once and checks every counted or timed claim. Writes a narrated video script of 15, 25 or 35 seconds, with a cast note for the video block and any of its own checks it still missed.
 ---
 
 # Skeleton video ad script writer
@@ -9,23 +9,23 @@ You write a short narrated video script, built the way a sketch is built: one od
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
-Check for these first. The result is much better with them.
+This skill runs on its own. What's below makes the result better, but none of it is required.
 
-**Needed:**
-- **Brand brain**, made by the [Website brand file builder](https://useaiblocks.com/skills/website-brand-file-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
+**Works best with** (or they can paste their own instead):
+- **Brand brain**, made by the [Website brand brain builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
 - **A buyer brief**, made by the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer): who it's for, how much they already know, and what will move them.
 
-**The steps before this one** (do each once, then reuse what it makes):
-1. **Brand brain** with the [Website brand file builder](https://useaiblocks.com/skills/website-brand-file-builder). Bring your website, customer words (optional), your results (optional).
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **Brand brain** with the [Website brand brain builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
 2. **A buyer brief** with the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer). Bring customer words. It uses your brand brain.
 3. This one.
 
 **From the brand brain, read:** `00-start-here.md`, `offers.md`, `customers.md`, `proof-and-claims.md`, `voice-and-look.md`. Take the chosen offer's facts, approved claims with their conditions, buyer quotes and voice lines. Source notes and rejected ideas never go into the result.
 
-How to check:
-- **In Claude Code,** look in the project first. A brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name, or ask for their path.
-- **In a chat,** ask once: "Do you have your brand brain, a buyer brief? Attach or paste them here." If they're already in this project's files, use those.
-- **If one is missing,** say so before you start, in one line: the result will be much better with it, with the link to make it once and reuse it. Next time they can attach it (or, in Claude Code, give its path). Then carry on with what you have and mark each gap with `MISSING:`.
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In Claude Code, look in the project too: a brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name.
+2. **If something is missing, advise, don't block.** In one short message, say this skill works on its own and will be better with your brand brain, a buyer brief. They can attach them, paste them, or say where they are (in Claude Code, a file path). Name the recommended steps above as a suggestion, with their links. Then ask: "Add them, or shall I go ahead with what you've given me?" If their message already says to go ahead, skip this and start.
+3. **When they say go ahead,** do the whole job with what you have. Mark each gap with `MISSING:` and never invent a fact to fill it. List the gaps at the end so they can fill them in later.
 
 **Tools that do this best:**
 - **Any good chat AI:** Claude, ChatGPT and Gemini all follow this skill well, so use the one you already have.
@@ -56,7 +56,7 @@ How to check:
 6. **Hold the claims.** A rung with a number tied to a result, a time by which something happens, or a health effect is a claim, and comes only from the approved claims. A label with no result is free. Plainly silly exaggeration is free. The pile-up is things, rooms and mess, never an illness and never a named rival. The skeleton's bones never change.
 7. **Write the video** (below).
 8. **Write the cast note** (below).
-9. **Score it.** Run the checks in "Check before you hand it back" and fix any that fail. Then score the script: checks passed divided by checks, times 100, rounded (6 of 7 passed is 86). Show the score, the sum, and one line for each check still missed.
+9. **Run the checks.** Run the checks in "Check before you hand it back" and fix any that fail. Show `CHECKS MISSED: <one line each>`, or "none".
 
 ### Video
 - One calm narrator, "you", present tense, short lines. Nobody on screen speaks.
@@ -86,13 +86,13 @@ Say who carries the ad and why, in two or three lines: the skeleton (default, wi
 - The cast note: who carries the ad, and why.
 - A claims list: each label and claim, marked free or with its source.
 - `MISSING:` lines.
-- The score out of 100, with the sum and one line for each check still missed.
+- The `CHECKS MISSED` line: one line for each check still missed, or "none".
 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
-When you've handed it back, ask in one short question what they want to do next. Offer these, and say they can type their own:
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - **Check it before it goes live** with the [Meta ads compliance checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the video ad script.
-- **Make video ads** with the [Ad script format finder](https://useaiblocks.com/skills/ad-script-format-finder). It takes the video ad script.
+- **Make video ads** with the [Ad script read-aloud editor](https://useaiblocks.com/skills/ad-script-read-aloud-editor). It takes the video ad script.
 - **Make image ads** with the [Image ad remake planner](https://useaiblocks.com/skills/image-ad-remake-planner). It takes the video ad script.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

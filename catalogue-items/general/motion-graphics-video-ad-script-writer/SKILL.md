@@ -1,6 +1,6 @@
 ---
 name: motion-graphics-video-ad-script-writer
-description: Use when you want a flat animated graphic video ad (moving numbers, lists, steps, a chart or an offer around a photo of the real product). Starts from a sheet of sourced facts, picks each shot's picture and move from the kind of fact it shows, keeps every word and number exact, and ends with a cast note for the build skill and a score out of 100 against its own checks.
+description: Use when you want a flat animated graphic video ad (moving numbers, lists, steps, a chart or an offer around a photo of the real product). Starts from a sheet of sourced facts, picks each shot's picture and move from the kind of fact it shows, keeps every word and number exact, and ends with a cast note for the build skill and any of its own checks it missed.
 ---
 
 # Motion graphics video ad script writer
@@ -9,23 +9,23 @@ You plan a graphic ad where shapes, numbers and words move around a photo of the
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
-Check for these first. The result is much better with them.
+This skill runs on its own. What's below makes the result better, but none of it is required.
 
-**Needed:**
-- **Brand brain**, made by the [Website brand file builder](https://useaiblocks.com/skills/website-brand-file-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
+**Works best with** (or they can paste their own instead):
+- **Brand brain**, made by the [Website brand brain builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
 - **A buyer brief**, made by the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer): who it's for, how much they already know, and what will move them.
 
-**The steps before this one** (do each once, then reuse what it makes):
-1. **Brand brain** with the [Website brand file builder](https://useaiblocks.com/skills/website-brand-file-builder). Bring your website, customer words (optional), your results (optional).
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **Brand brain** with the [Website brand brain builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
 2. **A buyer brief** with the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer). Bring customer words. It uses your brand brain.
 3. This one.
 
 **From the brand brain, read:** `00-start-here.md`, `offers.md`, `customers.md`, `proof-and-claims.md`, `voice-and-look.md`. Take the chosen offer's facts, approved claims with their conditions, buyer quotes and voice lines. Source notes and rejected ideas never go into the result.
 
-How to check:
-- **In Claude Code,** look in the project first. A brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name, or ask for their path.
-- **In a chat,** ask once: "Do you have your brand brain, a buyer brief? Attach or paste them here." If they're already in this project's files, use those.
-- **If one is missing,** say so before you start, in one line: the result will be much better with it, with the link to make it once and reuse it. Next time they can attach it (or, in Claude Code, give its path). Then carry on with what you have and mark each gap with `MISSING:`.
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In Claude Code, look in the project too: a brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name.
+2. **If something is missing, advise, don't block.** In one short message, say this skill works on its own and will be better with your brand brain, a buyer brief. They can attach them, paste them, or say where they are (in Claude Code, a file path). Name the recommended steps above as a suggestion, with their links. Then ask: "Add them, or shall I go ahead with what you've given me?" If their message already says to go ahead, skip this and start.
+3. **When they say go ahead,** do the whole job with what you have. Mark each gap with `MISSING:` and never invent a fact to fill it. List the gaps at the end so they can fill them in later.
 
 **Tools that do this best:**
 - **Any good chat AI:** Writing the fact sheet and shot table from your facts works well in any strong chat AI.
@@ -69,7 +69,7 @@ How to check:
    - Close on the product and the full offer, said and shown the same way.
    - Add a build note to each shot. In an editor or a code tool (the best route), every word and number is set as live text. With a video model, ask only for wordless backgrounds and moving shapes, and set all text, numbers and the logo on top afterwards.
 7. **Write the cast note.** Two or three lines for the build skill. In a graphic ad the product carries it, so the product is the avatar: say which cutout and views it needs, why it suits this buyer, the narrator's voice in plain words, and what must never change (the cutout's shape and printing, the highlight colour's one job).
-8. **Score it.** Run the checks in "Check before you hand it back" and fix any that fail. Then score the script: checks passed divided by checks, times 100, rounded (5 of 6 passed is 83). Show the score, the sum, and one line for each check still missed.
+8. **Check it.** Run the checks in "Check before you hand it back" and fix any that fail. List each check still missed under `CHECKS MISSED`, one line each, or write "none".
 
 ## What you hand back
 1. **Fit**: one line on whether a graphic ad suits this buyer.
@@ -78,13 +78,13 @@ How to check:
 4. **Shot table**: `# | fact | narration | picture and move | on-screen text (characters) | hold | build note`.
 5. **Notes**: anything inferred, any fact left out and why, and `MISSING:` items.
 6. **Cast note**: the product as the avatar, the voice, what never changes.
-7. **Score** out of 100, with the sum and one line for each check still missed.
+7. **Checks missed**: one line for each check still missed, or "none".
 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
-When you've handed it back, ask in one short question what they want to do next. Offer these, and say they can type their own:
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - **Check it before it goes live** with the [Meta ads compliance checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the video ad script.
-- **Make video ads** with the [Ad script format finder](https://useaiblocks.com/skills/ad-script-format-finder). It takes the video ad script.
+- **Make video ads** with the [Ad script read-aloud editor](https://useaiblocks.com/skills/ad-script-read-aloud-editor). It takes the video ad script.
 - **Make image ads** with the [Image ad remake planner](https://useaiblocks.com/skills/image-ad-remake-planner). It takes the video ad script.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

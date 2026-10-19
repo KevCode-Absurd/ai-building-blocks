@@ -1,6 +1,6 @@
 ---
 name: ad-script-read-aloud-editor
-description: Use when a finished script or long ad text needs to sound right when said aloud, before the brand voice and claims checks. Fixes how lines sound (whole sentences, one idea each, verbs early, plain words, contractions, one breath per sentence) and never what they say. Gives a read-aloud score out of 100 before and after the fixes.
+description: Use when a finished script or long ad text needs to sound right when said aloud, before the brand voice and claims checks. Fixes how lines sound (whole sentences, one idea each, verbs early, plain words, contractions, one breath per sentence) and never what they say. Ends with any line still failing.
 ---
 
 # Ad script read-aloud editor
@@ -9,12 +9,12 @@ Getting the message right and getting the sound right are separate jobs. A scrip
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
-Check for these first. The result is much better with them.
+This skill runs on its own. What's below makes the result better, but none of it is required.
 
-How to check:
-- **In Claude Code,** look in the project first for these by name, or ask for their path.
-- **In a chat,** ask once: "Do you have ? Attach or paste them here." If they're already in this project's files, use those.
-- **If one is missing,** say what it would add, then carry on with what you have and mark each gap with `MISSING:`.
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In Claude Code, look in the project too for these by name.
+2. **If something is missing, advise, don't block.** In one short message, say this skill works on its own and will be better with . They can attach them, paste them, or say where they are (in Claude Code, a file path). Then ask: "Add them, or shall I go ahead with what you've given me?" If their message already says to go ahead, skip this and start.
+3. **When they say go ahead,** do the whole job with what you have. Mark each gap with `MISSING:` and never invent a fact to fill it. List the gaps at the end so they can fill them in later.
 
 **Tools that do this best:**
 - **Any good chat AI:** Finding lines that trip and fixing only the sound works well in any strong chat AI.
@@ -56,18 +56,36 @@ How to check:
 4. **Strip habits that sound machine-made**: verbs left uncontracted; the "it's not X, it's Y" turn used twice or more; long dashes; rhetorical questions stacked up; strings of fragments for drama; "No X. No Y. No Z." runs; clipped add-ons ("Yes, really."); three adjectives in a row; ad words nobody says out loud ("must-have", "level up your", "transform your", "say goodbye to"); filler openers ("Let's be honest", "Real talk").
 5. **For read text**, the breath test relaxes. Aim for short paragraphs of two to five whole sentences that run on like someone telling a story. No stacks of one-line paragraphs and no fragment alone on a line. Repeating a phrase once for weight is fine; three lines that start with the same word is a habit to fix. A headline is a plain sentence or phrase.
 
-**Never change**: what any line means; a claim, figure, price, term of the offer, guarantee, product name or [placeholder]; the order of lines and parts; who it speaks to or its tense; any plain line that already does its job (leave it without extra rhythm or flair); a word, rhythm or emoji the brand's own lines use, as long as a person would still say the line. Don't shorten anything except to split a breathless line into two whole sentences. Don't add sentences.
+**Never change**: what any line means; a claim, figure, price, term of the offer, guarantee, product name or [placeholder]; the order of lines and parts; who it speaks to or its tense; any plain line that already does its job (leave it without extra rhythm or flair); a word, rhythm or emoji the brand's own lines use, as long as a person would still say the line; the emojis and list marks (✅, 💚, bullets) in the text itself, each kept in its place, so a fixed line still carries the mark it started with. If a list item reads as a fragment, make it a whole phrase after its mark; never delete the mark. Don't shorten anything except to split a breathless line into two whole sentences. Don't add sentences.
 
-6. **Score it.** Count the sentences. A sentence passes if a presenter can say it cleanly: it breaks none of the five rules in step 2 and has none of the habits in step 4. The score is passing sentences divided by all sentences, times 100, rounded. Give it before your fixes and after them, each with its sum (18 of 24 is 75, then 23 of 24 is 96), and name any line still failing.
+6. **Read it once more.** A sentence passes if a presenter can say it cleanly: it breaks none of the five rules in step 2 and has none of the habits in step 4. Name any line still failing after your fixes, or write "none".
 
 ## What you hand back
-For each part that needs work: its location, the precise words at fault, the rule it breaks, and the full fixed text. A good script usually needs zero to five fixes. If almost every line fails, fix the worst few and say the script needs a rewrite for voice. If a claim, number or offer looks wrong, list it as a flag for the claims check and leave it as written. End with the read-aloud score before and after, each with its sum, and any line still failing.
+For each part that needs work: its location, the precise words at fault, the rule it breaks, and the full fixed text. A good script usually needs zero to five fixes. If almost every line fails, fix the worst few and say the script needs a rewrite for voice. Then LEFT AS IS, always: the lines that already work, and every brand phrase and emoji you kept. If a claim, number or offer looks wrong, list it as a flag for the claims check and leave it as written. End with any line still failing.
+
+Hand it back in exactly this layout, with these labels in this order:
+
+```
+FIX <n>
+Where: <line or field>
+Failing phrase: "<exact words>"
+Rule: <which rule it breaks>
+Fixed: "<full fixed text>"
+
+LEFT AS IS
+<lines that already work, and brand phrases kept>
+
+FLAGS FOR THE CLAIMS CHECK (not changed)
+<claim, number or offer that looks wrong, and why>
+
+STILL FAILING: <line, or none>
+```
 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
-When you've handed it back, ask in one short question what they want to do next. Offer these, and say they can type their own:
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - **Check it before it goes live** with the [Meta ads compliance checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the video ad script.
-- **Make video ads** with the [Ad script format finder](https://useaiblocks.com/skills/ad-script-format-finder). It takes the video ad script.
+- **Make video ads** with the [Video ad script point-of-view editor](https://useaiblocks.com/skills/video-ad-script-point-of-view-editor). It takes the video ad script.
 - **Make image ads** with the [Image ad remake planner](https://useaiblocks.com/skills/image-ad-remake-planner). It takes the video ad script.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
@@ -77,6 +95,7 @@ If they pick one and that skill is added here, carry straight on with what you j
 - No meaning, claim or number moved.
 - Contractions are in; no machine-made habits are left.
 - Who it speaks to, and its tense, are as they were.
+- Every emoji and list mark in the original is still there, and LEFT AS IS names the brand phrases and emojis kept.
 
 ## If something is missing
 Write `MISSING: audience level` and work to grade 7, with no technical terms.

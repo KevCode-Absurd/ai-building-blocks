@@ -1,7 +1,7 @@
 slug: motion-graphics-video-build-planner
 renamed_from: turn-motion-graphics-script-into-ready-video-shots
 name: "Motion graphics video build planner"
-summary: "Paste your graphic script and attach cutouts. Get an exact build plan and a score out of 100."
+summary: "Paste your graphic script and attach cutouts. Get an exact build plan and a text table with sources."
 category: general
 boards: [ecommerce]
 type: skill

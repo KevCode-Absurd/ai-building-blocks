@@ -1,10 +1,10 @@
 new_slug: sales-copy-opening-writer
 name: "Sales copy opening writer"
-summary: "Paste your buyer, offer and proof. Get two openings to test and a score out of 100."
+summary: "Paste your buyer, offer and proof. Get two openings to test, from neighbouring lead types."
 job: write-ad-copy
 
 headline: "Sales copy opening writer"
-subhead: Give it a brief on your buyer, your offer and the proof you can use. It picks one of six classic lead types for how aware the buyer is. You get two openings to test, from neighbouring leads, and a score out of 100.
+subhead: Give it a brief on your buyer, your offer and the proof you can use. It picks one of six classic lead types for how aware the buyer is. You get two openings to test, from neighbouring leads, and the promise your close must keep.
 
 explain: |
   The opening decides whether anyone reads the rest. Most writers open the same way every time, or test two versions of the same opening reworded. When one wins, nobody learns anything.
@@ -26,7 +26,7 @@ you_get:
   - Opening A, with the lead it uses and why it fits
   - Opening B, from the next lead along the scale, with the reason for the step
   - The promise the close must keep, and any lead skipped for lack of proof
-  - A score out of 100 for how many of its own checks the openings pass, with each miss named
+  - Any of its own checks the openings couldn't pass, named one per line
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
@@ -46,8 +46,8 @@ how_it_works:
     text: Steps one lead toward indirect if the market has heard the promise often, or toward direct if it's fresh.
   - title: Sets the close
     text: Names the promise the close must keep, so the piece ends where its opening pointed.
-  - title: Scores the openings
-    text: Goes through its own checks, such as two different leads and no fact you didn't supply, fixes what it can, and scores checks passed out of all checks, times 100.
+  - title: Checks the openings
+    text: Goes through its own checks, such as two different leads, no fact you didn't supply and every offer with its limit, fixes what it can, and names any it still misses.
 
 output_shape: |
   BUYER: <awareness>, market <fresh / heard it often>
@@ -64,9 +64,8 @@ output_shape: |
   SKIPPED
   <any lead you lacked the material for>
 
-  SCORE
-  <passed> of <all> checks = <score> out of 100
-  Missed: <one line per check still missed, or none>
+  CHECKS MISSED
+  <one line per check still missed and why, or none>
 
 example:
   business: sprout
@@ -91,8 +90,8 @@ example:
     OPENING A: promise. A product-aware buyer who hasn't decided needs
     the biggest benefit you can back.
     Your greens, vitamins and fiber in one pack a day, for $1.78 a day
-    after your first box. Each pack has 60+ ingredients, 21 vitamins and
-    minerals, and 6 g of fiber.
+    on subscription after your first box. Each pack has 60+ ingredients,
+    21 vitamins and minerals, and 6 g of fiber.
 
     OPENING B: problem-solution, one step indirect, because every greens
     brand makes the same nutrients promise.
@@ -107,6 +106,9 @@ example:
 
     SKIPPED
     Secret: no little-known, checkable fact in the proof given.
+
+    CHECKS MISSED
+    None.
 
 tweaks:
   - what: How aware the buyer is
@@ -137,7 +139,7 @@ improve:
   - Write what your competitors promise into the skill file, so step 4 steps the same way each time.
   - Add a real, checkable fact to your brand file if you want the secret lead available.
   - Save each winning opening to your brand file, with the buyer it worked for.
-  - Run "Know who you're writing for before you start" first, and pair it with "Finish your sales page with proof and one ask" to write the rest.
+  - For a stronger start, run "Know who you're writing for before you start" first (a few plain lines about your buyer also work), and pair it with "Finish your sales page with proof and one ask" to write the rest.
 
 works_best_with:
   tools:

@@ -1,10 +1,10 @@
 new_slug: wordless-video-ad-opening-writer
 name: "Wordless video ad opening writer"
-summary: "Attach product photos. Get 2 or 3 wordless openings, clip prompts and a score out of 100."
+summary: "Attach product photos. Get 2 or 3 wordless openings, start and end frames, and clip prompts."
 job: make-video-ads
 
 headline: "Wordless video ad opening writer"
-subhead: Give it your product photos, how it moves and the ad it will open. It plans 2 or 3 wordless openings, each a motion with a clear finish like a fill, click or peel. You get product sheets, start and end frames, clip prompts and a score out of 100.
+subhead: Give it your product photos, how it moves and the ad it will open. It plans 2 or 3 wordless openings, each a motion with a clear finish like a fill, click or peel. You get product sheets, start and end frames, and clip prompts.
 
 explain: |
   The first seconds of an ad decide whether anyone sees the rest. A motion with a finish holds the eye: a glass filling to its line, a seal peeling off in one piece, a lid clicking shut. People wait for the end. A product slowly turning on a stand doesn't do this, because nothing finishes.
@@ -27,7 +27,6 @@ you_get:
   - A product card, product and set sheets, and lock lines that spell out how the material moves
   - A start frame, an end frame and a shot card for each opening you approve
   - A clip prompt for each, a suggested overlay (or none) and a delivery list
-  - A score out of 100 for how many of its own checks the openings pass, with any they missed
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
@@ -69,9 +68,7 @@ output_shape: |
   <aspect>, <seconds>, real speed. <timed motion>. No words, no one speaking.
   OVERLAY  <1 to 4 words, or none>   DELIVER  <raw clip, overlay copy, end frame>
   MISSING: <..>
-
-  SCORE  <n>/100 (<passed> of <total> checks passed)
-  Missed: <one line per check missed, or none>
+  CHECKS MISSED: <one line each, or none>
 
 example:
   business: sprout
@@ -93,8 +90,9 @@ example:
     man at a kitchen counter, morning window light from the left,
     holding a half-used powder tub.
     Tool: 4-second clips, takes a start and an end frame.
+    Write every stage in one go; I'll approve at the marked points.
   output: |
-    STAGE 0  LINE-UP
+    STAGE 0  LINE-UP (approve one or more rows)
     1 Focus: the gummies, out of the pack
       Finish: level: gummies pour from the torn top of a daily pack
       into an open palm. Done = the last gummy lands, the pack empty.
@@ -107,13 +105,13 @@ example:
       close, at counter height. Why they'd wait: a half tear wants
       finishing.
     Inferred: both motions come from "tear, tip, eat" and the
-    handling notes.  [row 1 approved]
+    handling notes. Row 1 carried on.  (approve)
 
     STAGE 1  PRODUCT CARD (approval 1)
     Adult greens gummies. Photos: pouch front, daily pack, gummies in
     a palm, gummy close-up. Never changes: the pack tears straight
     across its top edge only; the pouch opens only at its resealable
-    top; gummies are small opaque deep-green bears.  [approved]
+    top; gummies are small opaque deep-green bears.  (approve)
 
     STAGE 2  REFERENCE IMAGES
     1-3 the gummies tipping from a torn daily pack, from the pack and
@@ -124,7 +122,7 @@ example:
     torn across the top, empty. Side and top views: MISSING.
     Set: the ad's kitchen counter, overhead, window light from the left.
     LOCK LINES  Material: small soft solids tumble and stop. Count: not
-    on file, so none given.  [approved]
+    on file, so none given.  (approve)
 
     STAGE 4  STORYBOARD (approval 3)
     START FRAME (row 1)  Overhead on the counter. A daily pack torn
@@ -135,7 +133,7 @@ example:
     green bears in the palm, still; the empty pack above it.
     SHOT CARD  Locked overhead. 0-2.5 s gummies tumble and stop; 2.5-3.5
     s the last one drops; 3.5-4 s nothing moves. SFX: a soft patter,
-    a faint foil crinkle. Ambient noise: a quiet kitchen.  [approved]
+    a faint foil crinkle. Ambient noise: a quiet kitchen.  (approve)
 
     STAGE 5  CLIP PROMPT (row 1)
     9:16, 4 seconds, real speed. Camera: overhead, locked. The daily
@@ -148,6 +146,7 @@ example:
     DELIVER  raw clip, the overlay copy, the end frame, one line.
     MISSING: how many gummies are in one pack; Sprout's real motions
     and sounds, written down.
+    CHECKS MISSED: none
 
 tweaks:
   - what: The finish
@@ -160,7 +159,7 @@ tweaks:
     how: 4 seconds suits most motions; ask for 6 if the motion needs it. The finish is kept in doubt until late either way.
 
 judge:
-  - The run stopped for your yes on the line-up, the product card, the sheets and the storyboard.
+  - The run stopped for your yes on the line-up, the product card, the sheets and the storyboard, or marked those points if you asked for every stage at once.
   - The first frame already shows the motion part done, at thumbnail size.
   - The finish lands in the last third, and nothing new happens after it.
   - The end frame is still and sits next to your ad's first frame without a jump in place or light.
@@ -168,7 +167,7 @@ judge:
   - No words in the picture and nobody talking.
 
 test:
-  - Give it a product with no out-of-pack photo. It should refuse any opening that shows the product out of its pack and say MISSING, not guess what's inside.
+  - Give it a product with no out-of-pack photo. It should leave out any opening that shows the product out of its pack, plan the others and say MISSING, not guess what's inside.
   - Search each clip prompt for "slow", "time-lapse", "explode" or a frame rate. Any of these changes how the tool plays it back.
   - Make one clip and scrub to the last half second. Nothing should move; if it does, end the motion earlier in the prompt and remake it.
   - Put the end frame next to your ad's first frame. If the place or light jumps, change the set sheet before making the batch.

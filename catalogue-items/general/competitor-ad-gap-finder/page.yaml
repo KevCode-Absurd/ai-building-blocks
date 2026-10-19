@@ -73,7 +73,7 @@ output_shape: |
   CLICHES   "<claim, word for word>" (<advertisers>)
   BUYERS    <want or doubt> (<n> reviewers) | <ads that speak to it>
   GAPS AND BRIEFS
-  <n> <gap> <why: map or buyers> <proof on file>
+  <n> <gap> <why: map or buyers> <proof on file, or CANDIDATE: proof needed>
       Code / Picture / Headline / Proof / Read it by / Avoid
   LIMITS    <what wasn't seen>
   SCORE     <passed> of <all> checks = <score> out of 100
@@ -126,7 +126,8 @@ example:
     The occasion     | 1 | Kids flavour launches only
     Dress: not seen for any ad.
 
-    AD CARDS (text only: first frame, look and logo check not seen)
+    AD CARDS (text only: first frame, look and logo check not seen;
+    library ID and start date not shown for any ad)
     #1   Code The offer · ?   Answers why now?
          Claim "'Sprout is too expensive': here's 61% off to prove
          otherwise"   Proof none   Offer 61% off   15+ copies live
@@ -169,6 +170,9 @@ example:
 
     LIMITS
     No creative seen, no start dates, one advertiser only.
+    SCORE     4 of 5 checks = 80 out of 100
+              Missed: no gap has proof on file yet; all three are
+              candidates until your facts and reviews arrive.
 
 tweaks:
   - what: What the work is for
@@ -184,7 +188,7 @@ judge:
   - Every card has a library ID, an advertiser and a start date, or "not shown".
   - Claims are quoted word for word, from the ad itself, not the caption.
   - The words "winner" and "profitable" never describe a competitor's ad.
-  - Each gap names both its reason (the map or the buyers) and the proof that fills it.
+  - Each gap names both its reason (the map or the buyers) and the proof that fills it, or is marked a candidate with the exact proof it still needs.
   - The briefs use your facts and claims only, with none of their words, people or footage.
 
 test:

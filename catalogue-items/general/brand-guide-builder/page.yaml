@@ -1,10 +1,10 @@
 new_slug: brand-guide-builder
 name: "Brand guide builder"
-summary: "Attach your brand file. Get a printable brand guide, a values file and a score out of 100."
+summary: "Attach your brand file. Get a printable brand guide and a values file to paste into any tool."
 job: brand-file
 
 headline: "Brand guide builder"
-subhead: Attach your brand file, plus logo rules and site styles if you have them. It builds a printable guide with a one-page quick sheet and only readable colour pairs. You get the guide, a copy-paste values file and a score out of 100 against its checks.
+subhead: Attach your brand file, plus logo rules and site styles if you have them. It builds a printable guide with a one-page quick sheet and only readable colour pairs. You get the guide, a copy-paste values file and a list of gaps to fill.
 
 explain: |
   When a new designer, editor or freelancer starts, they need your colours, fonts, voice and photo rules. Usually they get a logo file and a vague "keep it clean". Then the work comes back in the wrong green, with a stock photo, yellow text nobody can read and a tagline you'd never say.
@@ -25,18 +25,18 @@ you_get:
   - A contrast table showing which text colours can sit on which backgrounds
   - A tokens file with every colour, font and rule, plus CSS variables and a design tokens block
   - A two-line note on what was left out and which colour pairs fail for text
-  - A score out of 100 for the share of its seven checks the guide passes, with each one missed
+  - Any of its seven checks the guide still misses, each named
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in. A tool that can write and preview files works best.
-  - Attach your brand file. Colours and fonts are the minimum; without both it stops and asks you to finish the brand file first.
+  - Attach your brand file. Colours and fonts are the minimum; if either is missing, it asks you for them, then carries on and marks the gaps.
   - Add your logo rules and, for web work, your site's colour variables and button styles.
   - Open the HTML file in a browser and print to PDF with margins set to none.
   - Check "Not yet captured" on the quick sheet and fill those gaps in your brand file.
 
 how_it_works:
   - title: Checks the minimum
-    text: Needs colours with hex codes and at least one font. Any other topic with nothing on file is left out and listed as a gap.
+    text: Needs colours with hex codes and at least one font, and asks for them if they're missing. Any other topic with nothing on file is left out and listed as a gap.
   - title: Writes the reasons
     text: One or two sentences per topic from your brand file, such as each colour's job and which font is for headings.
   - title: Checks colour pairs
@@ -71,7 +71,7 @@ output_shape: |
 
   NOTE  Left out: <page>, because <missing what>. Fails for text: <pair>
 
-  SCORE  <passed> / 7 checks x 100 = <score>   Missed: <one line each>
+  CHECKS MISSED  <one line each, or none>
 
 example:
   business: sprout
@@ -142,6 +142,8 @@ example:
     NOTE
     Left out: Logo (no rules on file) and Web parts (not a web build).
     Fails for text: sunflower on cream.
+
+    CHECKS MISSED  none
 
 tweaks:
   - what: Web build or not

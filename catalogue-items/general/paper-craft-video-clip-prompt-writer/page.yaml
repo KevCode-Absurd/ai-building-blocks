@@ -1,10 +1,10 @@
 new_slug: paper-craft-video-clip-prompt-writer
 name: "Paper craft video clip prompt writer"
-summary: "Paste your paper-craft script and attach product photos. Get cut-paper clip prompts and a score out of 100."
+summary: "Paste your paper-craft script and attach product photos. Get cut-paper image and clip prompts and an edit list."
 job: make-video-ads
 
 headline: "Paper craft video clip prompt writer"
-subhead: Give it a narrated paper-craft script and product photos. It writes an avatar card, sheets, a storyboard and clip prompts where paper moves only as paper can, stopping three times for your OK. You get every prompt, an edit list and a score out of 100.
+subhead: Give it a narrated paper-craft script and product photos. It writes an avatar card, sheets, a storyboard and clip prompts where paper moves only as paper can, stopping three times for your OK. You get every prompt and an edit list for putting the video together.
 
 explain: |
   Paper ads break in familiar ways once an AI video tool gets them. The scene turns into flat clip art. It shows up as a craft model on a desk instead of a world you're inside. The paper woman looks different in every shot, paper bends like rubber, and your label gets redrawn wrong.
@@ -26,7 +26,6 @@ you_get:
   - Character, product and set sheets, with the material and motion sentences locked
   - A storyboard with a frame prompt, a camera spot and a shot card for every shot
   - Clip prompts where paper moves only as paper can, and an edit list
-  - A score out of 100 for the prompts, with one line for each check they missed
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
@@ -52,16 +51,16 @@ how_it_works:
 output_shape: |
   STAGE 0  SCRIPT IN   Turn: <show job>, <mechanism>. Starts <where>,
            ends <where>. Paper scene change: <one, or none>
-  STAGE 1  AVATAR CARD (approve)
+  STAGE 1  AVATAR CARD (approve, or approved in advance)
            Role <...> | Age <...> | Look <...> | Clothes <...>
            Props <...> | Voice <...> | Never changes <...>
   STAGE 2  REFERENCE IMAGES  <prompt>  Make <3 or 4>. Pick: <which, why>
-  STAGE 3  SHEETS AND LOCK LINES (approve)
+  STAGE 3  SHEETS AND LOCK LINES (approve, or approved in advance)
            MATERIAL <sentence>  MOTION <sentence>
            FIGURE <line>  PRODUCT <line>
            Character sheet <angles, gestures, size>  Product sheet <views>
            Set sheet <each place, empty, camera spot>
-  STAGE 4  STORYBOARD (approve)
+  STAGE 4  STORYBOARD (approve, or approved in advance)
            F<n> <frame prompt with [MATERIAL]>  Camera <spot inside>
            Card <n>: <framing> | <camera> | <action> | "<line>" | <s> | <sound>
            Continuity <180° line, hands, product state>
@@ -69,8 +68,7 @@ output_shape: |
            [MOTION] Camera <one move>  0 to <n> s <...>  Fixed <...>
            VOICE <...>  EDIT <order, captions, overlay, end card, safe zone>
            MISSING: <facts it needed>
-  SCORE  <n>/100 (<checks passed> of 6 checks)
-  Missed: <one line per check still missed>
+  CHECKS MISSED: <one line each, or none>
 
 example:
   business: sprout
@@ -80,23 +78,29 @@ example:
     Script (from the paper world script skill), about 30 s.
     Show plan: reveal, pop-up. Flat-cut figure on layered planes,
     matte card, kraft lunchboxes, scissor-cut edges.
+    1 "Lunchboxes. Permission slip. One missing shoe." Card kitchen.
+    2 "Your own vitamins? Still on the shelf." Card shelf, plain tub.
     3 "So put them where your day already goes." Paper planner.
     4 "One pack, right there." THE TURN: the page turns, the daily
       pack stands up from the fold.
     5 "Rip. Tip. Enjoy." Paper hands tear the pack across the top.
-    (lines 1-2 kitchen and shelf, 6-7 pouch on a car seat and offer)
+    6 "Sixty-plus ingredients, twenty-one vitamins and minerals, six
+      grams of fiber." The pouch on a card car seat.
+    7 "First order $29.99 with the text sign-up." Held. On screen:
+      renews at $49.99 every 4 weeks.
     Cast note: one flat-cut paper woman, an invented adult about 40.
     Photos attached: pouch front, side and top. Label: "Sprout" in
     yellow, a yellow bear face top right, "28 Daily Packs" at the
     bottom. Gummies: small deep-green bears. Tear only across the top.
     Colors: forest green #00582D, cream #FFF7DF, sunflower #FFCC2E.
     Video tool: 8-second clips, takes an end frame, no sound.
+    Approvals: all three given in advance. Run every stage in one go.
   output: |
     STAGE 0  SCRIPT IN  Turn: reveal, pop-up. Starts on the open
     planner at line 3, ends with the pack upright in the fold. Paper
     scene change: none; the page turn is the turn itself.
 
-    STAGE 1  AVATAR CARD (approve)
+    STAGE 1  AVATAR CARD (approved in advance)
     Role: a parent in a packed morning, lines 1 to 5. Age: about 40.
     Look: flat-cut cream card face, two black dot eyes, short dark
     brown card hair. Clothes: blue card jumper, grey card trousers.
@@ -109,7 +113,7 @@ example:
     as on the card, against plain cream card. [draft MATERIAL]. Make
     4. Pick: the one whose pins show clearly, so gestures read.
 
-    STAGE 3  SHEETS AND LOCK LINES (approve)
+    STAGE 3  SHEETS AND LOCK LINES (approved in advance)
     MATERIAL  A world built from real paper: flat-cut figures pinned at
     the joints, set on three layered planes, matte card stock in cream,
     forest green, sunflower yellow and sky blue, kraft paper for boxes,
@@ -128,7 +132,7 @@ example:
     Pouch sheet: front, side, top, from the photos. Sets: the kitchen
     (camera at her eye level), the car seat (camera at seat height).
 
-    STAGE 4  STORYBOARD (approve)
+    STAGE 4  STORYBOARD (approved in advance)
     F3 (lines 3-4) [WOMAN]'s pinned hands hold an open paper planner,
     the right page crowded with flat-cut icons (a bus, a laptop, a
     shopping bag), the kitchen layers behind. [MATERIAL]. Camera: over
@@ -153,6 +157,7 @@ example:
     MISSING: a photo of a single daily pack for the pop-up and the tear.
     (cut for length: the full run also had F1, F2, F5, F6 and clips 1,
     3 and 4)
+    CHECKS MISSED: none
 
 tweaks:
   - what: Who carries it
@@ -165,7 +170,7 @@ tweaks:
     how: Ask for the cut-out photo version of your pack on the product sheet. It keeps every word exact without asking the image tool to spell them.
 
 judge:
-  - It stopped for your approval after the avatar card, the sheets and the storyboard.
+  - It stopped for your approval after the avatar card, the sheets and the storyboard, or marked each stop "approved in advance" if you gave the approvals up front.
   - The material and motion sentences are word for word the same in every prompt.
   - Every frame names a camera spot inside the scene, and every object names its paper or card.
   - Each clip has one camera move and one paper change, written as paper moves.

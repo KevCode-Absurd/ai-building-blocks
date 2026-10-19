@@ -155,6 +155,11 @@ example:
     4 Full price and renewal together in the plan box (check 19)
     5 "On your first order" beside the guarantee line (check 22)
 
+    CHECKS SCORE
+    Now: 9 / (9 + 14) x 100 = 39   (7 can't tell left out)
+    With the five fixes made: 15 / 23 x 100 = 65
+    Deal-breakers left: none
+
     CAN'T TELL
     Checks 2, 6, 10 and 29: phone screenshots from top to bottom.
     Check 18: the footer. Check 24: checkout up to payment.
@@ -176,7 +181,7 @@ judge:
   - Checks it couldn't see are marked can't tell, never yes.
   - The verdict names one stop, not a list.
   - No fix adds a rating, count, price, offer or deadline you didn't supply.
-  - There's no score or percentage. The counts show where trouble clusters, nothing more.
+  - The checks score shows its sum (yes out of yes plus no), says how many checks were left out, and is never sold as a sales forecast.
 
 test:
   - Run it on an old version of a page you've since fixed. The problems you fixed should come back as no's.

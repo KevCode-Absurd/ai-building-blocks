@@ -1,6 +1,6 @@
 ---
 name: paper-craft-video-ad-script-writer
-description: Use when an ad should be a narrated video story set in a world built from real cut and folded paper. Picks what the turn must show, then the real paper-craft mechanism that shows it (flap, pop-up, concertina, layers, quilling), chooses how deep the paper is built, tests every paper change as a claim, and writes the video script with a cast note for the video block, then scores it out of 100 against its own checks. For one paper still, use the paper-craft image ad skill instead.
+description: Use when an ad should be a narrated video story set in a world built from real cut and folded paper. Picks what the turn must show, then the real paper-craft mechanism that shows it (flap, pop-up, concertina, layers, quilling), chooses how deep the paper is built, tests every paper change as a claim, and writes the video script with a cast note for the video block, then lists any of its own checks it missed. For one paper still, use the paper-craft image ad skill instead.
 ---
 
 # Paper craft video ad script writer
@@ -9,23 +9,23 @@ You write a 15 to 40 second narrated video script set in a world of real cut and
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
-Check for these first. The result is much better with them.
+This skill runs on its own. What's below makes the result better, but none of it is required.
 
-**Needed:**
-- **Brand brain**, made by the [Website brand file builder](https://useaiblocks.com/skills/website-brand-file-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
+**Works best with** (or they can paste their own instead):
+- **Brand brain**, made by the [Website brand brain builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
 - **A buyer brief**, made by the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer): who it's for, how much they already know, and what will move them.
 
-**The steps before this one** (do each once, then reuse what it makes):
-1. **Brand brain** with the [Website brand file builder](https://useaiblocks.com/skills/website-brand-file-builder). Bring your website, customer words (optional), your results (optional).
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **Brand brain** with the [Website brand brain builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
 2. **A buyer brief** with the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer). Bring customer words. It uses your brand brain.
 3. This one.
 
 **From the brand brain, read:** `00-start-here.md`, `offers.md`, `customers.md`, `proof-and-claims.md`, `voice-and-look.md`. Take the chosen offer's facts, approved claims with their conditions, buyer quotes and voice lines. Source notes and rejected ideas never go into the result.
 
-How to check:
-- **In Claude Code,** look in the project first. A brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name, or ask for their path.
-- **In a chat,** ask once: "Do you have your brand brain, a buyer brief? Attach or paste them here." If they're already in this project's files, use those.
-- **If one is missing,** say so before you start, in one line: the result will be much better with it, with the link to make it once and reuse it. Next time they can attach it (or, in Claude Code, give its path). Then carry on with what you have and mark each gap with `MISSING:`.
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In Claude Code, look in the project too: a brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name.
+2. **If something is missing, advise, don't block.** In one short message, say this skill works on its own and will be better with your brand brain, a buyer brief. They can attach them, paste them, or say where they are (in Claude Code, a file path). Name the recommended steps above as a suggestion, with their links. Then ask: "Add them, or shall I go ahead with what you've given me?" If their message already says to go ahead, skip this and start.
+3. **When they say go ahead,** do the whole job with what you have. Mark each gap with `MISSING:` and never invent a fact to fill it. List the gaps at the end so they can fill them in later.
 
 **Tools that do this best:**
 - **Any good chat AI:** Claude, ChatGPT and Gemini all follow this skill well, so use the one you already have.
@@ -89,8 +89,8 @@ For each change, write the sentence a viewer would take from it. Keep it only if
 ### 7. Write the cast note
 Say who should carry the ad and why, in two or three lines: one flat-cut paper adult, paper hands only, or the product alone. Pick from the buyer and the script. A figure suits a problem that lives in someone's day; the product alone suits a gift-like reveal. The video block turns this into the avatar card.
 
-### 8. Score it
-Run the checks in "Check before you hand it back" and fix any that fail. Then score the script: checks passed divided by checks, times 100, rounded (6 of 7 passed is 86). Show the score, the sum, and one line for each check still missed.
+### 8. Check it
+Run the checks in "Check before you hand it back" and fix any that fail. List each check still missed under `CHECKS MISSED`, one line each, or write "none".
 
 ## What you hand back
 1. **Show plan:** selling idea, show job, mechanism, build and paper, what changes, the sentence it implies and its source.
@@ -98,13 +98,13 @@ Run the checks in "Check before you hand it back" and fix any that fail. Then sc
 3. **Claims shown:** each change and its source, plus changes you rejected and why.
 4. **Cast note:** who carries the ad, and why.
 5. `MISSING:` lines for facts you needed.
-6. **Score** out of 100, with the sum and one line for each check still missed.
+6. **Checks missed**: one line for each check still missed, or "none".
 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
-When you've handed it back, ask in one short question what they want to do next. Offer these, and say they can type their own:
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - **Check it before it goes live** with the [Meta ads compliance checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the video ad script.
-- **Make video ads** with the [Ad script format finder](https://useaiblocks.com/skills/ad-script-format-finder). It takes the video ad script.
+- **Make video ads** with the [Ad script read-aloud editor](https://useaiblocks.com/skills/ad-script-read-aloud-editor). It takes the video ad script.
 - **Make image ads** with the [Image ad remake planner](https://useaiblocks.com/skills/image-ad-remake-planner). It takes the video ad script.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
@@ -119,4 +119,4 @@ If they pick one and that skill is added here, carry straight on with what you j
 - The cast note names one choice and gives its reason.
 
 ## If something is missing
-Write `MISSING: <what>`. No how-it-works facts: tell the problem and the product without a how-it-works shot. No label lines: ask. No buyer moment: pick one from the brief and mark it `inferred`.
+Write `MISSING: <what>`. No how-it-works facts: tell the problem and the product without a how-it-works shot. No label lines: ask once, then carry on with the label shown but unread, marked `MISSING: label lines`. No buyer moment: pick one from the brief and mark it `inferred`.

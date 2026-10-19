@@ -1,10 +1,10 @@
 new_slug: selfie-style-video-clip-prompt-writer
 name: "Selfie-style video clip prompt writer"
-summary: "Paste your selfie-style script and attach product photos. Get phone-style clip prompts and a score out of 100."
+summary: "Paste your selfie-style script and attach product photos. Get phone-style clip prompts and an edit list."
 job: make-video-ads
 
 headline: "Selfie-style video clip prompt writer"
-subhead: Give it an approved selfie-style script and real product photos. It designs one made-up AI presenter, builds sheets and a storyboard with one action per clip, and writes phone-style clip prompts, stopping three times for your OK. You get every prompt, an edit list and a score out of 100.
+subhead: Give it an approved selfie-style script and real product photos. It designs one made-up AI presenter, builds sheets and a storyboard with one action per clip, and writes phone-style clip prompts, stopping three times for your OK. You get the presenter card, every prompt and an edit list.
 
 explain: |
   Videos that look filmed by someone on their phone often stop people scrolling, because they look like a normal post. Made with AI, they usually fall apart: the presenter's face changes between clips, the product grows a new label, an extra phone appears in a hand, or the whole thing looks like a glossy film.
@@ -27,7 +27,7 @@ you_get:
   - Sheet prompts for every angle, your product and the room, with lock lines
   - A storyboard with a frame and a shot card per clip
   - Clip prompts, a fix table and an edit list with the AI label
-  - A score out of 100 for the prompts, with one line for each check they missed
+  - Any check the prompts still miss, one line each
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
@@ -71,8 +71,7 @@ output_shape: |
   <product>. <face and eyes>. <light>. Ambient noise: <..> SFX: <..>
   EDIT  <hard cuts, captions, AI label, disclosure line, final check>
   MISSING: <..>
-  SCORE  <n>/100 (<checks passed> of 6 checks)
-  Missed: <one line per check still missed>
+  CHECKS MISSED: <one line per check still missed, or none>
 
 example:
   business: sprout
@@ -170,7 +169,7 @@ tweaks:
     how: Name the room (bathroom, kitchen, car) and the sound line changes to match it. The product's own sound only plays when it happens.
 
 judge:
-  - The run stopped for your yes after the presenter card, the sheets and the storyboard.
+  - The run stopped for your yes after the presenter card, the sheets and the storyboard, unless you asked for every stage in one go.
   - The presenter looks the same in every clip, and the room and light don't change.
   - Every scripted word is said, unchanged, and nobody claims a result they couldn't have had.
   - The product looks like its photos and opens only the brand's way.

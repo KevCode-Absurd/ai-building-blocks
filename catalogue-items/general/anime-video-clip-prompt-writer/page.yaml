@@ -1,10 +1,10 @@
 new_slug: anime-video-clip-prompt-writer
 name: "Anime video clip prompt writer"
-summary: "Paste your anime script and attach product photos. Get hand-drawn clip prompts and a score out of 100."
+summary: "Paste your anime script and attach product photos. Get hand-drawn clip prompts and an edit list."
 job: make-video-ads
 
 headline: "Anime video clip prompt writer"
-subhead: Give it an approved anime-style ad script and real product photos. It writes the hero's card, builds sheets and a storyboard of key poses and holds, and writes the clip prompts, stopping three times for your OK. You get every prompt, an edit list and a score out of 100.
+subhead: Give it an approved anime-style ad script and real product photos. It writes the hero's card, builds sheets and a storyboard of key poses and holds, and writes the clip prompts, stopping three times for your OK. You get every prompt and an edit list, with any check still missed.
 
 explain: |
   AI video tools can draw good 2D animation one clip at a time. Across a whole ad, things drift. The hero's hair changes, the style slides toward 3D, the label on your pack melts, and every part of the body moves at once, so it stops looking hand-drawn.
@@ -27,7 +27,7 @@ you_get:
   - Prompts for a character sheet from every angle, a product sheet and a set sheet, with lock lines
   - A storyboard of frames and shot cards with key poses, holds and what moves
   - Clip prompts and an edit list with cuts, captions, music and the end card
-  - A score out of 100 for the prompts, with one line for each check they missed
+  - One line for each of its checks the prompts still miss
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
@@ -69,8 +69,7 @@ output_shape: |
                         jump>
            EDIT LIST    <order, captions, music, end card, safe zones,
                         retakes>
-  SCORE  <n>/100 (<checks passed> of 7 checks)
-  Missed: <one line per check still missed>
+  CHECKS MISSED: <one line per check still missed, or none>
 
 example:
   business: sprout
@@ -162,7 +161,7 @@ tweaks:
     how: Paste the failed take's problem ("the label blurs at 4 seconds"). You get the next step in the fix order, not a whole new prompt.
 
 judge:
-  - It stopped for your OK after the avatar card, the sheets and the storyboard.
+  - It stopped for your OK after the avatar card, the sheets and the storyboard, or marked each one "(approve)" when you asked for every stage at once.
   - The lock lines are the same, word for word, in every prompt.
   - Every shot card has two key poses, a hold, and a moves and holds line.
   - The hero faces the same way toward the product unless a turn is shown.

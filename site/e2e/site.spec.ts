@@ -18,13 +18,14 @@ const cards = (page: Page) => page.getByTestId("block-card");
 const MODEL = "write-ads-people-believe"; // the block with the finished model page
 const WORKFLOW = "turn-your-reviews-into-image-ads-buyers-believe";
 
-test("hero is the headline, the mono subhead, two buttons and a how-it-works link, over the globe", async ({ page }) => {
+test("hero is the headline, the mono subhead, a goal box, two buttons and a how-it-works link, over the globe", async ({ page }) => {
   await page.goto("/");
   await expect(page.getByRole("heading", { level: 1 })).toHaveText("Making humanity AI native");
   await expect(page.locator(".hero .lede")).toContainText("Save hours every week");
   expect(await page.locator(".hero .lede").evaluate((el) => getComputedStyle(el).fontFamily)).toContain("JetBrains Mono");
   await expect(page.locator(".hero").getByRole("link")).toHaveText(["Browse the blocks", "Build a workflow", "How it works"]);
-  await expect(page.locator(".hero-in > *")).toHaveCount(4);
+  await expect(page.locator(".hero-in > *")).toHaveCount(5);
+  await expect(page.locator(".hero-in > *").nth(2)).toHaveAttribute("data-testid", "home-goal");
   const globe = page.getByTestId("globe");
   await expect(globe).toBeVisible();
   expect(await globe.evaluate((c: HTMLCanvasElement) => c.width > 0 && c.height > 0)).toBe(true);
@@ -278,7 +279,9 @@ test("paste your details once, copy the skill with them", async ({ page, context
 test("the workflow download is a complete, repeatable pack", async ({ page }, info) => {
   await page.goto(`/workflows/${WORKFLOW}`);
   const grab = async () => {
-    const [dl] = await Promise.all([page.waitForEvent("download"), page.getByTestId("block-page").getByTestId("download-handoff").click()]);
+    await page.getByTestId("block-page").getByTestId("download-handoff").click();
+    const [dl] = await Promise.all([page.waitForEvent("download"), page.getByTestId("needs-download").click()]);
+    await page.getByTestId("next-done").click();
     const path = info.outputPath(`${Date.now()}-${dl.suggestedFilename()}`);
     await dl.saveAs(path);
     return { name: dl.suggestedFilename(), bytes: fs.readFileSync(path) };
@@ -290,6 +293,7 @@ test("the workflow download is a complete, repeatable pack", async ({ page }, in
   const files = unzipSync(new Uint8Array(a.bytes));
   const names = Object.keys(files);
   expect(names).toEqual(expect.arrayContaining(["HANDOFF.md", "workflow.json", "README.txt", "skills/stop-image-tools-redrawing-your-product-and-words/SKILL.md"]));
+  expect(names, "no business details were given").not.toContain("my-business.md");
   expect(names.filter((n) => n.startsWith("skills/"))).toHaveLength(5);
   const handoff = strFromU8(files["HANDOFF.md"]);
   expect(handoff).toContain("## Before you start");
@@ -397,6 +401,7 @@ test("click a step to see what it needs and gives back; the download lists what 
   await expect(needs.getByTestId("needs-required").locator("li").first()).toBeVisible();
   const [dl] = await Promise.all([page.waitForEvent("download"), needs.getByTestId("needs-download").click()]);
   expect(dl.suggestedFilename()).toBe("write-ad-copy-handoff.zip");
+  await expect(needs.getByTestId("next-steps")).toBeVisible();
 });
 
 test("preview runs the steps in order; undo, redo and tidy work", async ({ page }) => {
@@ -443,11 +448,15 @@ test("save a workflow, open it again, and share it by link", async ({ page, cont
   await expect(builder.getByTestId("save-flow")).toHaveText("Save");
   await expect(page.getByTestId("flow-status")).toContainText("changes not saved");
   await builder.getByTestId("save-flow").click();
+  // Less-used actions sit under More when the canvas is narrower than the full bar.
+  await builder.getByTestId("bar-more").click();
   await builder.getByRole("button", { name: "New", exact: true }).click();
   await expect(builder.getByTestId("flow-node")).toHaveCount(0);
+  await builder.getByTestId("bar-more").click();
   await builder.getByTestId("saved-flows").selectOption({ label: "Sprout video ads" });
   await expect(builder.getByTestId("flow-node")).toHaveCount(6);
 
+  await builder.getByTestId("bar-more").click();
   await builder.getByTestId("share-flow").click();
   const link = await page.evaluate(() => navigator.clipboard.readText());
   expect(link).toMatch(/\/\?flow=[\w-]+#build$/);
@@ -514,4 +523,147 @@ test("how it works: a plain guide to each kind and the builder, at grade 10 or b
   await expect(page.getByTestId("how-it-works")).toBeVisible();
   await page.locator(".nav").getByRole("link", { name: "Library" }).click();
   await expect(page).toHaveURL(/#library$/);
+});
+
+// ---- Five ways to make it easier: your business, a goal on the home page, a tidy builder bar, what to do after the download, results in the preview ----
+
+const BIZ = { name: "Sprout", sells: "Greens gummies in daily packs", buyer: "Adults who gave up on greens powders" };
+const fillBusiness = async (page: Page) => {
+  await page.getByTestId("open-business").click();
+  const form = page.getByTestId("business-form");
+  for (const [k, v] of Object.entries(BIZ)) await form.getByTestId(`biz-${k}`).fill(v);
+  await expect(form).toContainText("3 of 8 filled in");
+  await form.getByTestId("biz-save").click();
+  await expect(form).toHaveCount(0);
+};
+
+test("your business: typed once, kept, and added to every copy and download", async ({ page, context }, info) => {
+  await context.grantPermissions(["clipboard-read", "clipboard-write"]);
+  await page.goto(`/prompts/${MODEL}`);
+  await expect(page.getByTestId("business-note")).toContainText("Add your business details once");
+  await page.getByTestId("business-add").click();
+  await expect(page.getByTestId("business-form")).toBeVisible();
+  await page.keyboard.press("Escape");
+  await fillBusiness(page);
+  await expect(page.getByTestId("open-business").locator(".dot")).toBeVisible();
+  await page.reload();
+  await expect(page.getByTestId("business-note")).toContainText("for Sprout");
+
+  // The skill copies with the details after it.
+  await page.getByTestId("copy-skill").click();
+  const copied = (await page.evaluate(() => navigator.clipboard.readText())).replace(/\r\n/g, "\n");
+  expect(copied).toMatch(/^---\nname: /);
+  expect(copied).toContain("## About my business");
+  expect(copied).toContain("- **Business name:** Sprout");
+  expect(copied).toContain("- **Who buys it:** Adults who gave up on greens powders");
+  // The composer copies them too, even with nothing else typed.
+  const box = page.getByTestId("composer");
+  await expect(box).toContainText("for Sprout are added too");
+  await box.getByTestId("composer-copy").click();
+  expect(await page.evaluate(() => navigator.clipboard.readText())).toContain("- **What you sell, and the price:** Greens gummies in daily packs");
+
+  // A workflow download carries them in my-business.md, and HANDOFF.md says to read it first.
+  await page.goto(`/workflows/${WORKFLOW}`);
+  await page.getByTestId("block-page").getByTestId("download-handoff").click();
+  await expect(page.getByTestId("needs")).toContainText("Your business details go in the folder too");
+  const [dl] = await Promise.all([page.waitForEvent("download"), page.getByTestId("needs-download").click()]);
+  const path = info.outputPath(dl.suggestedFilename());
+  await dl.saveAs(path);
+  const files = unzipSync(new Uint8Array(fs.readFileSync(path)));
+  expect(strFromU8(files["my-business.md"])).toContain("- **Business name:** Sprout");
+  expect(strFromU8(files["HANDOFF.md"])).toContain("Read `my-business.md` first");
+  expect(strFromU8(files["README.txt"])).toContain("my-business.md");
+});
+
+test("home: say what you want done and get the steps, or the single skills that do one part", async ({ page }) => {
+  await page.goto("/");
+  const goal = page.getByTestId("home-goal");
+  await goal.getByTestId("home-goal-input").fill("a landing page for my best ad");
+  await goal.getByTestId("home-goal-go").click();
+  const out = goal.getByTestId("home-goal-result");
+  await expect(out).toContainText("A ready workflow does this in 4 steps");
+  await expect(out.locator(".hgoal-steps li")).toHaveCount(4);
+  await expect(out.locator(".hgoal-one li").first()).toBeVisible();
+  await out.getByTestId("home-goal-build").click();
+  await expect(page).toHaveURL(/#build$/);
+  await expect(page.getByTestId("builder").getByTestId("flow-node")).toHaveCount(4);
+  await expect(page.locator(".flow-name")).toHaveValue("A landing page that matches your best ad");
+
+  // Nothing behind a goal: it says so, and the library search is one click away.
+  await page.goto("/");
+  await goal.getByTestId("home-goal-input").fill("zzz qqq");
+  await goal.getByTestId("home-goal-go").click();
+  await expect(out).toContainText("Nothing does that yet");
+  await out.getByRole("button", { name: /Search the library for/ }).click();
+  await expect(page.getByTestId("library-search")).toHaveValue("zzz qqq");
+  await expect(page.getByTestId("result-count")).toHaveText("0 results");
+});
+
+test("laptop width: the builder bar stays on one line, and the step panel never covers Download", async ({ page }) => {
+  await page.setViewportSize({ width: 1000, height: 800 });
+  const builder = await planGoal(page, "video ads from my reviews");
+  await expect(builder.getByTestId("flow-node")).toHaveCount(6);
+  const bar = builder.locator(".stage-bar");
+  const rows = await bar.evaluate((el) => new Set([...el.querySelectorAll("button, input, select")].filter((x) => (x as HTMLElement).offsetParent && x.getBoundingClientRect().width).map((x) => Math.round(x.getBoundingClientRect().top))).size);
+  expect(rows, "one row of controls").toBe(1);
+  await expect(builder.getByTestId("share-flow")).toBeHidden();
+  await builder.getByTestId("bar-more").click();
+  await expect(builder.getByTestId("share-flow")).toBeVisible();
+  await page.keyboard.press("Escape");
+  await expect(builder.getByTestId("share-flow")).toBeHidden();
+  await builder.getByTestId("flow-node").nth(2).click();
+  const panel = await builder.getByTestId("step-panel").boundingBox();
+  const download = await builder.getByTestId("download-handoff").boundingBox();
+  expect(panel!.y).toBeGreaterThanOrEqual(download!.y + download!.height);
+});
+
+test("after the download: how to run it in your AI, the first message to paste, and what comes back", async ({ page, context }) => {
+  await context.grantPermissions(["clipboard-read", "clipboard-write"]);
+  const builder = await planGoal(page, "a landing page for my best ad");
+  await builder.getByTestId("download-handoff").click();
+  const dlg = page.getByTestId("needs");
+  await expect(dlg).toContainText("Add your business details first");
+  await Promise.all([page.waitForEvent("download"), dlg.getByTestId("needs-download").click()]);
+  const next = dlg.getByTestId("next-steps");
+  await expect(next).toContainText("a-landing-page-for-my-best-ad-handoff.zip");
+  await expect(next.getByRole("tab", { selected: true })).toHaveText("Claude");
+  await expect(next).toContainText("attach HANDOFF.md");
+  await next.getByTestId("next-code").click();
+  await expect(next).toContainText("type claude");
+  await expect(next).toContainText("outputs");
+  await next.getByTestId("copy-first-message").click();
+  expect(await page.evaluate(() => navigator.clipboard.readText())).toBe("Follow HANDOFF.md step by step. Start with “Before you start”, and ask me for anything that's missing.");
+  // What comes back is the page and its designs, not only the check at the end.
+  await expect(next.getByTestId("next-finals")).toContainText("Landing page");
+  await expect(next.getByTestId("next-finals")).toContainText("Audit report");
+  await next.getByTestId("next-done").click();
+  await expect(dlg).toHaveCount(0);
+  // The AI you picked is remembered, here and on skill pages.
+  await page.goto(`/prompts/${MODEL}`);
+  await expect(page.getByTestId("install").getByRole("tab", { selected: true })).toHaveText("Claude Code");
+});
+
+test("preview shows a few lines of what each step made in a real run, and the step panel shows more", async ({ page }) => {
+  const builder = await planGoal(page, "a landing page for my best ad");
+  await builder.getByTestId("preview").click();
+  const sample = builder.getByTestId("step-sample");
+  await expect(sample).toContainText("step 1: what it made for Sprout");
+  await expect(sample).toContainText("Sprout");
+  await expect(sample).toContainText("step 2: what it made for Sprout", { timeout: 6000 });
+  await expect(sample).toContainText("PAGE BRIEF");
+  // Readable size: it sits outside the zoomed canvas.
+  expect(await sample.evaluate((el) => !el.closest(".react-flow__viewport") && parseFloat(getComputedStyle(el.querySelector("pre")!).fontSize))).toBeGreaterThanOrEqual(12);
+  await builder.getByTestId("preview").click();
+  await expect(sample).toHaveCount(0);
+  await builder.getByTestId("flow-node").first().click();
+  await expect(builder.getByTestId("panel-sample")).toContainText("Sprout");
+});
+
+test("phone width: the header fits, and the step list shows each result as it runs @mobile", async ({ page }) => {
+  await page.goto("/");
+  const right = await page.getByTestId("theme-toggle").evaluate((el) => el.getBoundingClientRect().right - innerWidth);
+  expect(right).toBeLessThanOrEqual(0);
+  const builder = await planGoal(page, "a landing page for my best ad");
+  await builder.getByTestId("preview").click();
+  await expect(builder.getByTestId("step-list").getByTestId("step-sample")).toContainText("what it made for Sprout");
 });

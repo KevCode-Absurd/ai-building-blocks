@@ -3,6 +3,7 @@
 import { strToU8, zipSync, type Zippable } from "fflate";
 import { type Catalogue, loadSkillText, portLabel, taskOf } from "./data";
 import type { Flow, FlowNode } from "./store";
+import { type Business, businessText } from "./business";
 
 export type Ordered = { node: FlowNode; step: number; from: number[] };
 
@@ -37,6 +38,7 @@ export function typeMismatches(c: Catalogue, flow: Flow) {
   }).map((e) => e.id);
 }
 
+export const zipName = (name: string) => `${safeName(name)}-handoff.zip`;
 const safeName = (s: string) => s.trim().toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "") || "workflow";
 
 /** Something the person has to provide, because no earlier connected step makes it. */
@@ -61,7 +63,7 @@ export function needsOf(c: Catalogue, order: Ordered[]): Need[] {
     .map(([type, n]) => ({ type, label: portLabel(type), about: c.portTypes[type] ?? null, ...n }));
 }
 
-export function handoffMarkdown(c: Catalogue, flow: Flow, order: Ordered[]): string {
+export function handoffMarkdown(c: Catalogue, flow: Flow, order: Ordered[], withBusiness = false): string {
   const L: string[] = [];
   const blockOf = (o: Ordered) => c.bySlug[o.node.slug];
   const last = order.filter((o) => !flow.edges.some((e) => e.from === o.node.id));
@@ -74,6 +76,7 @@ export function handoffMarkdown(c: Catalogue, flow: Flow, order: Ordered[]): str
   const prepare = needsOf(c, order).map((n) =>
     `- **${n.label}**${n.required ? "" : " (optional)"}, for step${n.steps.length > 1 ? "s" : ""} ${n.steps.join(", ")}${n.about ? `: ${n.about}` : ""}`);
   L.push("## Before you start", "");
+  if (withBusiness) L.push("Read `my-business.md` first. It has the person's business details: use them in every step, and don't ask again for anything it lists.", "");
   L.push(prepare.length ? "Ask the person for these, or confirm where they are. Don't start a step whose required inputs are missing." : "Nothing needs preparing: every input comes from an earlier step.");
   if (prepare.length) L.push("", ...prepare);
   L.push("");
@@ -116,19 +119,41 @@ export function workflowJson(c: Catalogue, flow: Flow, order: Ordered[]) {
 
 const FIXED_TIME = new Date("2026-01-01T00:00:00Z"); // fixed dates keep the zip byte-for-byte repeatable
 
-export async function buildHandoffZip(c: Catalogue, flow: Flow): Promise<{ blob: Blob; filename: string } | { error: string }> {
+/** What the workflow hands back at the end: the outputs of its last steps. When a last step is a check,
+ *  the work it checked comes back too, since that's what the person came for. */
+export function finalOutputs(c: Catalogue, flow: Flow, order: Ordered[]) {
+  const byId = Object.fromEntries(order.map((o) => [o.node.id, o.node]));
+  const types: string[] = [];
+  for (const o of order.filter((x) => !flow.edges.some((e) => e.from === x.node.id))) {
+    const b = c.bySlug[o.node.slug];
+    if (!b) continue;
+    if (b.role === "check") {
+      const reads = new Set(b.inputs.map((p) => p.type));
+      for (const e of flow.edges.filter((x) => x.to === o.node.id)) {
+        for (const p of c.bySlug[byId[e.from]?.slug]?.outputs ?? []) if (reads.has(p.type) && p.type !== "brand_brain") types.push(p.type);
+      }
+    }
+    types.push(...b.outputs.map((p) => p.type));
+  }
+  return [...new Set(types.map(portLabel))];
+}
+
+export async function buildHandoffZip(c: Catalogue, flow: Flow, business: Business = {}): Promise<{ blob: Blob; filename: string } | { error: string }> {
   if (!flow.nodes.length) return { error: "Add at least one block to the canvas first." };
   const order = orderFlow(flow);
   if (!order) return { error: "This workflow loops back on itself. Remove one connection so it runs from start to finish." };
   const files: Zippable = {};
   const put = (p: string, text: string) => { files[p] = [strToU8(text), { mtime: FIXED_TIME }]; };
-  put("HANDOFF.md", handoffMarkdown(c, flow, order));
+  const about = businessText(business);
+  put("HANDOFF.md", handoffMarkdown(c, flow, order, !!about));
+  if (about) put("my-business.md", about);
   put("workflow.json", JSON.stringify(workflowJson(c, flow, order), null, 2) + "\n");
   put("README.txt", [
     `${flow.name}: a handoff pack from AI Building Blocks.`,
     "1. Upload this whole folder to your AI: Claude (a Project, Claude Code or Cowork), ChatGPT, or any AI agent that can read files.",
     "2. Say: \"Follow HANDOFF.md step by step.\"",
-    "3. Have the inputs listed under \"Before you start\" ready.", "",
+    "3. Have the inputs listed under \"Before you start\" ready.",
+    ...(about ? ["Your business details are in my-business.md. Change that file to change what every step knows about you."] : []), "",
   ].join("\n"));
   for (const slug of [...new Set(order.map((o) => o.node.slug))].sort()) {
     const skill = await loadSkillText(slug);
@@ -139,7 +164,7 @@ export async function buildHandoffZip(c: Catalogue, flow: Flow): Promise<{ blob:
     }
   }
   const zipped = zipSync(files, { level: 6 });
-  return { blob: new Blob([zipped], { type: "application/zip" }), filename: `${safeName(flow.name)}-handoff.zip` };
+  return { blob: new Blob([zipped], { type: "application/zip" }), filename: zipName(flow.name) };
 }
 
 export function download(blob: Blob, filename: string) {

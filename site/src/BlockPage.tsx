@@ -3,7 +3,11 @@ import { Marked } from "marked";
 import { ArrowIcon, BlockCard, KitMenu } from "./ui";
 import { type Catalogue, type Page, cap, kindInfo, kindOf, loadPage, loadSkillText, neighbours, pathOf, taskOf, wireSteps } from "./lib/data";
 import { markViewed } from "./lib/store";
-import { buildHandoffZip, download } from "./lib/handoff";
+import { buildHandoffZip, download, finalOutputs, needsOf, orderFlow, zipName } from "./lib/handoff";
+import { businessText, getBusiness, hasBusiness, useBusiness, withBusiness } from "./lib/business";
+import { BusinessNote, openBusiness } from "./Business";
+import { DownloadDialog } from "./DownloadDialog";
+import type { Flow } from "./lib/store";
 import { Link } from "./lib/router";
 import AddToFlow from "./AddToFlow";
 import Install from "./Install";
@@ -79,19 +83,21 @@ function Composer({ slug, skill, give, toast }: { slug: string; skill: string | 
   const key = `abb:draft:${slug}`;
   const [text, setText] = useState(() => { try { return localStorage.getItem(key) ?? ""; } catch { return ""; } });
   useEffect(() => { try { if (text) localStorage.setItem(key, text); else localStorage.removeItem(key); } catch { /* private mode */ } }, [key, text]);
+  const biz = useBusiness();
+  const about = businessText(biz);
   const copy = async () => {
     if (!skill) return;
-    await navigator.clipboard.writeText(`${skill.trim()}\n\n---\n\n${text.trim()}\n`).catch(() => {});
+    await navigator.clipboard.writeText(`${skill.trim()}\n\n---\n\n${[about, text.trim()].filter(Boolean).join("\n")}\n`).catch(() => {});
     toast("Copied the skill with your details. Paste it into your AI.");
   };
   return (
     <div className="composer" data-testid="composer">
       <label htmlFor="composer-text">Your details</label>
       <textarea id="composer-text" value={text} onChange={(e) => setText(e.target.value)} rows={7} spellCheck
-        placeholder={`Paste what it needs:\n${give.map((g) => `- ${g}`).join("\n")}`} />
+        placeholder={`${about ? "Your business details are already added. Paste the rest it needs" : "Paste what it needs"}:\n${give.map((g) => `- ${g}`).join("\n")}`} />
       <div className="composer-bar">
-        <span className="small">{text.trim() ? `${text.trim().split(/\s+/).length} words, saved in this browser` : "Nothing leaves your browser until you paste it into your AI."}</span>
-        <button className="btn btn-primary btn-sm" disabled={!skill || !text.trim()} onClick={copy}>Copy the skill with my details</button>
+        <span className="small">{about ? <>Your business details{biz.name ? ` for ${biz.name}` : ""} are added too. <button className="link-btn" onClick={openBusiness}>Change them</button></> : text.trim() ? `${text.trim().split(/\s+/).length} words, saved in this browser` : "Nothing leaves your browser until you paste it into your AI."}</span>
+        <button className="btn btn-primary btn-sm" disabled={!skill || (!text.trim() && !about)} onClick={copy} data-testid="composer-copy">Copy the skill with my details</button>
       </div>
     </div>
   );
@@ -103,6 +109,8 @@ export default function BlockPage({ c, slug, toast, toBuilder }: Props) {
   const [skill, setSkill] = useState<string | null>(null);
   const [addon, setAddon] = useState<string | null>(null);
   const [adding, setAdding] = useState(false);
+  const [dl, setDl] = useState<Flow | null>(null);
+  const biz = hasBusiness(useBusiness());
   useEffect(() => {
     setPage(undefined); setSkill(null); setAddon(null);
     loadPage(slug).then(setPage);
@@ -129,13 +137,24 @@ export default function BlockPage({ c, slug, toast, toBuilder }: Props) {
   const p = page ?? null;
   const give = p?.you_give?.length ? p.you_give : b.inputs.map((x) => x.type.replace(/_/g, " "));
   const get = p?.you_get?.length ? p.you_get : b.outputs.map((x) => x.type.replace(/_/g, " "));
-  const handoff = async () => {
+  const handoff = () => {
     const nodes = b.steps.map((s, i) => ({ id: `s${i + 1}`, slug: s.uses, x: i * 300, y: 0 }));
     const edges = wireSteps(c, b.steps.map((s) => s.uses)).map(([a, z], i) => ({ id: `e${i}`, from: nodes[a].id, to: nodes[z].id }));
-    const r = await buildHandoffZip(c, { id: b.slug, name: b.name, updated: 0, nodes, edges });
-    if ("error" in r) toast(r.error); else { download(r.blob, r.filename); toast("Downloaded. Upload the folder to your AI and say “Follow HANDOFF.md”."); }
+    setDl({ id: b.slug, name: b.name, updated: 0, nodes, edges });
   };
-  const copySkill = async () => { if (skill) { await navigator.clipboard.writeText(skill).catch(() => {}); toast("Skill copied. Paste it into your AI."); } };
+  const dlOrder = dl ? orderFlow(dl) : null;
+  const getPack = async () => {
+    if (!dl) return false;
+    const r = await buildHandoffZip(c, dl, getBusiness());
+    if ("error" in r) { toast(r.error); return false; }
+    download(r.blob, r.filename);
+    return true;
+  };
+  const copySkill = async () => {
+    if (!skill) return;
+    await navigator.clipboard.writeText(withBusiness(skill, getBusiness())).catch(() => {});
+    toast(biz ? "Skill copied with your business details. Paste it into your AI." : "Skill copied. Paste it into your AI.");
+  };
 
   const has = (x?: unknown[]) => !!x && x.length > 0;
   const toc: [string, string, boolean][] = [
@@ -155,6 +174,7 @@ export default function BlockPage({ c, slug, toast, toBuilder }: Props) {
   return (
     <main className="bp" data-testid="block-page" data-slug={b.slug}>
       {adding && <AddToFlow c={c} slug={b.slug} onClose={() => setAdding(false)} toast={toast} />}
+      {dl && dlOrder && <DownloadDialog name={dl.name} zip={zipName(dl.name)} needs={needsOf(c, dlOrder)} finals={finalOutputs(c, dl, dlOrder)} onDownload={getPack} onClose={() => setDl(null)} />}
       <header className="wrap bp-hero">
         <Link to="/#library" className="back"><span aria-hidden="true">←</span> Library</Link>
         <p className="bp-kicker"><span className="kind">{kind.name}</span><Link to={`/?job=${task.id}#library`}>{task.name}</Link></p>
@@ -169,12 +189,13 @@ export default function BlockPage({ c, slug, toast, toBuilder }: Props) {
           ) : (
             <>
               <a href="#install" className="btn btn-primary" data-testid="add-to-ai">Add it to your AI</a>
-              <button className="btn btn-dark" disabled={!skill} onClick={copySkill}>Copy the skill</button>
+              <button className="btn btn-dark" disabled={!skill} onClick={copySkill} data-testid="copy-skill">Copy the skill</button>
               <KitMenu slug={b.slug} onChange={toast} />
               <button className="btn btn-dark" onClick={() => setAdding(true)} data-testid="add-to-workflow">Add to a workflow</button>
             </>
           )}
         </div>
+        <BusinessNote />
         <p className="bp-file"><span>{b.name}</span><code>{b.slug}</code><span>{cap(b.level)}</span></p>
       </header>
 

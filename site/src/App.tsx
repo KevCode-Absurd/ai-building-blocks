@@ -4,6 +4,9 @@ import Globe from "./Globe";
 import { type Block, type Catalogue, type Kind, BUSINESSES, FUNCTIONS, KINDS, LEVELS, TASKS, cap, functionsOf, kindOf, pathOf, taskOf, useCatalogue } from "./lib/data";
 import { kits, queueForCanvas, useStore } from "./lib/store";
 import { Link, navigate, setSearch, useLocation } from "./lib/router";
+import { BusinessDrawer, openBusiness, useBusinessOpener } from "./Business";
+import { hasBusiness, useBusiness } from "./lib/business";
+import HomeGoal, { SEARCH } from "./HomeGoal";
 
 const Builder = lazy(() => import("./Builder")); // the canvas loads after the page is up
 const BlockPage = lazy(() => import("./BlockPage"));
@@ -17,6 +20,7 @@ const KIND_PATHS: Record<string, Kind> = Object.fromEntries(KINDS.map((k) => [k.
 function Header({ onKits }: { onKits: () => void }) {
   const [scrolled, setScrolled] = useState(false);
   const kitCount = useStore((s) => s.kits.length);
+  const biz = hasBusiness(useBusiness());
   useEffect(() => {
     const on = () => setScrolled(window.scrollY > 8);
     on(); window.addEventListener("scroll", on, { passive: true });
@@ -32,7 +36,8 @@ function Header({ onKits }: { onKits: () => void }) {
           <Link to="/how-it-works">How it works</Link>
         </nav>
         <div className="header-end">
-          <button className="btn btn-ghost btn-sm" onClick={onKits} data-testid="open-kits">My kits{kitCount > 0 && <span className="badge">{kitCount}</span>}</button>
+          <button className="btn btn-ghost btn-sm" onClick={openBusiness} data-testid="open-business"><span className="wide-only">My business</span><span className="narrow-only">Business</span>{biz && <span className="dot" aria-label="filled in" />}</button>
+          <button className="btn btn-ghost btn-sm" onClick={onKits} data-testid="open-kits"><span className="wide-only">My kits</span><span className="narrow-only">Kits</span>{kitCount > 0 && <span className="badge">{kitCount}</span>}</button>
           <ThemeToggle />
         </div>
       </div>
@@ -53,6 +58,11 @@ function Library({ c }: { c: Catalogue }) {
   });
   const set = (patch: Partial<Filters>) => setF((x) => ({ ...x, ...patch }));
   const [limit, setLimit] = useState(PAGE);
+  useEffect(() => {
+    const on = (e: Event) => setF({ ...NONE, q: String((e as CustomEvent).detail ?? "") });
+    window.addEventListener(SEARCH, on);
+    return () => window.removeEventListener(SEARCH, on);
+  }, []);
   // Press / anywhere to jump to the search box.
   useEffect(() => {
     const on = (e: KeyboardEvent) => {
@@ -197,7 +207,7 @@ function Typewriter({ text }: { text: string }) {
   );
 }
 
-function Home({ c, toast }: { c: Catalogue | null; toast: (m: string) => void }) {
+function Home({ c, toast, toBuilder }: { c: Catalogue | null; toast: (m: string) => void; toBuilder: (slugs: string[], asNew?: string) => void }) {
   // A link like /#library opened fresh: jump there once the library has drawn.
   useEffect(() => {
     if (!c || !location.hash) return;
@@ -211,6 +221,7 @@ function Home({ c, toast }: { c: Catalogue | null; toast: (m: string) => void })
         <div className="wrap hero-in">
           <h1 className="h1">Making humanity AI native</h1>
           <Typewriter text="Stop doing the work AI could do for you. Save hours every week, and spend them on the work only you can do. Or at the beach (we won't tell)." />
+          <HomeGoal c={c} toBuilder={toBuilder} />
           <div className="hero-actions">
             <Link to="/#library" className="btn btn-primary">Browse the blocks <ArrowIcon /></Link>
             <Link to="/#build" className="btn btn-dark">Build a workflow</Link>
@@ -236,6 +247,9 @@ export default function App() {
   const c = useCatalogue();
   const { path, search } = useLocation();
   const [kitsOpen, setKitsOpen] = useState(false);
+  const [bizOpen, setBizOpen] = useState(false);
+  const closeBiz = useCallback(() => setBizOpen(false), []);
+  useBusinessOpener(useCallback(() => { setKitsOpen(false); setBizOpen(true); }, []));
   const [toast, setToast] = useState<string | null>(null);
   const clearToast = useCallback(() => setToast(null), []);
   const closeKits = useCallback(() => setKitsOpen(false), []);
@@ -268,13 +282,14 @@ export default function App() {
       ) : pageSlug ? (
         c ? <Suspense fallback={<main className="wrap bp-hero"><p className="small">Loading…</p></main>}><BlockPage c={c} slug={pageSlug} toast={setToast} toBuilder={toBuilder} /></Suspense> : <main className="wrap bp-hero"><p className="small">Loading…</p></main>
       ) : (
-        <Home c={c} toast={setToast} />
+        <Home c={c} toast={setToast} toBuilder={toBuilder} />
       )}
       <footer className="footer">
         <div className="wrap footer-in">
           <span>© 2026 AI Building Blocks</span>
         </div>
       </footer>
+      {bizOpen && <BusinessDrawer onClose={closeBiz} toast={setToast} />}
       {c && kitsOpen && <KitsDrawer c={c} onClose={closeKits} toBuilder={toBuilder} />}
       <Toast message={toast} onDone={clearToast} />
     </>

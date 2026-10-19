@@ -2,13 +2,35 @@
 // the "what you'll need" list, starting from a goal, and the step list phones get instead of the canvas.
 import { memo, useEffect, useRef, useState, type CSSProperties, type FormEvent } from "react";
 import { BaseEdge, EdgeLabelRenderer, getSmoothStepPath, type Edge, type EdgeProps } from "@xyflow/react";
-import { type Catalogue, KINDS, kindOf, pathOf, portLabel, taskOf } from "./lib/data";
-import type { Need, Ordered } from "./lib/handoff";
+import { type Catalogue, type Page, KINDS, kindOf, loadPage, pathOf, portLabel, taskOf } from "./lib/data";
+import { useTyped } from "./lib/typing";
+import type { Ordered } from "./lib/handoff";
 import { passLabel, passes } from "./lib/plan";
+import { GOAL_EXAMPLES } from "./lib/goal";
 import type { Flow } from "./lib/store";
 
-/** How long each step lights up for in a preview, in seconds. */
-export const STEP_S = 1.2;
+/** How long each step lights up for in a preview, in seconds: long enough to read a few lines of its result. */
+export const STEP_S = 2.4;
+
+/** The first few lines of a real run's result, for showing on a step. */
+export function sampleOf(output: string | undefined, lines = 5): string {
+  if (!output) return "";
+  const rows = output.replace(/\r/g, "").split("\n");
+  while (rows.length && !rows[0].trim()) rows.shift();
+  const cut = rows.slice(0, lines);
+  return cut.join("\n").trimEnd() + (rows.length > lines ? "\n…" : "");
+}
+
+/** A step's result writing itself out, the way your AI would answer. */
+export function Sample({ text, name, step }: { text: string; name: string; step?: number }) {
+  const { n } = useTyped(text, true, STEP_S * 650);
+  return (
+    <figure className={`node-out${step ? " run-out" : ""}`} aria-label={`What ${name} made in a real run`} data-testid="step-sample">
+      <figcaption>{step ? `step ${step}: what it made for Sprout` : "what it made for Sprout"}</figcaption>
+      <pre>{text.slice(0, n)}<span className="cursor" /></pre>
+    </figure>
+  );
+}
 const BITS = ["0", "1", "1", "0", "1", "0"];
 
 export type FlowEdgeData = { label?: string; mismatch?: boolean; run?: number; delay?: number };
@@ -40,6 +62,8 @@ export function StepPanel({ c, flow, order, nodeId, onClose, onRemove }: {
   const b = node && c.bySlug[node.slug];
   const ref = useRef<HTMLElement>(null);
   useEffect(() => { ref.current?.focus(); }, [nodeId]);
+  const [page, setPage] = useState<Page | null>(null);
+  useEffect(() => { setPage(null); if (node) loadPage(node.slug).then(setPage); }, [node?.slug]); // eslint-disable-line react-hooks/exhaustive-deps
   useEffect(() => {
     const esc = (e: KeyboardEvent) => { if (e.key === "Escape") onClose(); };
     window.addEventListener("keydown", esc);
@@ -88,6 +112,12 @@ export function StepPanel({ c, flow, order, nodeId, onClose, onRemove }: {
               );
             })}
           </ul>
+          {page?.example?.output && (
+            <>
+              <h4 className="sp-h">What it made in a real run</h4>
+              <pre className="sp-sample" data-testid="panel-sample">{sampleOf(page.example.output, 9)}</pre>
+            </>
+          )}
           <div className="sp-actions">
             <a className="btn btn-ghost btn-sm" href={pathOf(b)} target="_blank" rel="noreferrer">Open its page</a>
             <button className="btn btn-ghost btn-sm" onClick={() => { onRemove(node.id); onClose(); }}>Remove the step</button>
@@ -99,42 +129,6 @@ export function StepPanel({ c, flow, order, nodeId, onClose, onRemove }: {
   );
 }
 
-/** Before the download: one list of everything the steps ask the person for. */
-export function NeedsDialog({ name, needs, onDownload, onClose }: { name: string; needs: Need[]; onDownload: () => void; onClose: () => void }) {
-  const ref = useRef<HTMLDialogElement>(null);
-  const [got, setGot] = useState<Set<string>>(new Set());
-  useEffect(() => { const d = ref.current; if (d && !d.open) d.showModal(); }, []);
-  const must = needs.filter((n) => n.required), may = needs.filter((n) => !n.required);
-  const item = (n: Need) => (
-    <li key={n.type}>
-      <label>
-        <input type="checkbox" checked={got.has(n.type)} onChange={() => setGot((s) => { const x = new Set(s); if (x.has(n.type)) x.delete(n.type); else x.add(n.type); return x; })} />
-        <span><b>{n.label}</b><small>{n.about ? `${n.about} ` : ""}For step{n.steps.length > 1 ? "s" : ""} {n.steps.join(", ")}.</small></span>
-      </label>
-    </li>
-  );
-  return (
-    <dialog className="atf needs" ref={ref} onClose={onClose} onClick={(e) => { if (e.target === ref.current) ref.current?.close(); }} aria-labelledby="needs-h" data-testid="needs">
-      <div className="atf-top">
-        <h2 className="atf-title" id="needs-h">What you'll need for “{name}”</h2>
-        <button className="icon-btn" onClick={() => ref.current?.close()} aria-label="Close">×</button>
-      </div>
-      <div className="atf-body">
-        {needs.length === 0
-          ? <p className="atf-lead">Nothing to gather. Every step works from your request or an earlier step's result.</p>
-          : <p className="atf-lead">Gather these once, before you start. Your AI asks for each one at the step that uses it, and writes MISSING where something isn't there.</p>}
-        {must.length > 0 && <><h3 className="atf-h">Have these ready</h3><ul className="needs-list" data-testid="needs-required">{must.map(item)}</ul></>}
-        {may.length > 0 && <><h3 className="atf-h">These make it better, if you have them</h3><ul className="needs-list">{may.map(item)}</ul></>}
-        <div className="atf-foot">
-          <span className="small">{needs.length ? `${got.size} of ${needs.length} ready` : "Ready to go"}</span>
-          <button className="btn btn-primary" onClick={() => { onDownload(); ref.current?.close(); }} data-testid="needs-download">Download the workflow</button>
-        </div>
-      </div>
-    </dialog>
-  );
-}
-
-export const GOAL_EXAMPLES = ["a landing page for my best ad", "video ads from my reviews", "find why my ads stopped selling"];
 
 /** Type what you want at the end; the builder lays out the steps. */
 export function GoalBox({ onPlan, big }: { onPlan: (goal: string) => boolean; big?: boolean }) {
@@ -156,8 +150,8 @@ export function GoalBox({ onPlan, big }: { onPlan: (goal: string) => boolean; bi
 }
 
 /** Phones: the workflow as a numbered list, with arrows to reorder, instead of boxes to drag. */
-export function StepList({ c, order, run, onOpen, onMove, onRemove }: {
-  c: Catalogue; order: Ordered[]; run: number; onOpen: (id: string) => void; onMove: (from: number, to: number) => void; onRemove: (id: string) => void;
+export function StepList({ c, order, run, live, samples, onOpen, onMove, onRemove }: {
+  c: Catalogue; order: Ordered[]; run: number; live: number; samples: Record<string, string>; onOpen: (id: string) => void; onMove: (from: number, to: number) => void; onRemove: (id: string) => void;
 }) {
   return (
     <ol className="step-list" data-testid="step-list">
@@ -185,6 +179,7 @@ export function StepList({ c, order, run, onOpen, onMove, onRemove }: {
                 <button className="icon-btn" onClick={() => onRemove(o.node.id)} aria-label={`Remove ${b?.name ?? "step"}`}>×</button>
               </span>
             </div>
+            {live === o.step && samples[o.node.slug] && b && <Sample text={samples[o.node.slug]} name={b.name} />}
           </li>
         );
       })}

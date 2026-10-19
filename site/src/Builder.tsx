@@ -5,14 +5,16 @@ import {
 } from "@xyflow/react";
 import "@xyflow/react/dist/base.css";
 import { SearchIcon } from "./ui";
-import { type Block, type Catalogue, KINDS, TASKS, kindOf, portLabel, taskOf, wireSteps } from "./lib/data";
+import { type Block, type Catalogue, KINDS, TASKS, kindOf, loadPage, portLabel, taskOf, wireSteps } from "./lib/data";
 import { suggestNext } from "./lib/suggest";
 import { type Flow, QUEUED, flows, takeQueued, uid, useStore } from "./lib/store";
-import { buildHandoffZip, download, needsOf, orderFlow, typeMismatches } from "./lib/handoff";
+import { buildHandoffZip, download, finalOutputs, needsOf, orderFlow, typeMismatches, zipName } from "./lib/handoff";
+import { getBusiness } from "./lib/business";
+import { DownloadDialog } from "./DownloadDialog";
 import { flowFrom, passLabel, planFromGoal, shareUrl, tidy, unpackFlow } from "./lib/plan";
 import { applySteps } from "./lib/flowEdit";
 import { setSearch } from "./lib/router";
-import { FlowEdge, type FlowEdgeT, GoalBox, NeedsDialog, STEP_S, StepList, StepPanel } from "./BuilderParts";
+import { FlowEdge, type FlowEdgeT, GoalBox, STEP_S, Sample, StepList, StepPanel, sampleOf } from "./BuilderParts";
 
 type NodeData = { slug: string; ecommerce?: boolean; step?: number; run?: number; delay?: number };
 type BlockNode = Node<NodeData, "block">;
@@ -181,6 +183,16 @@ function Stage({ c, toast }: { c: Catalogue; toast: (m: string) => void }) {
   const box = useRef<HTMLDivElement>(null);
   const [inspect, setInspect] = useState<string | null>(null);
   const [needsOpen, setNeedsOpen] = useState(false);
+  const [more, setMore] = useState(false);
+  const moreRef = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    if (!more) return;
+    const off = (e: Event) => { if (!moreRef.current?.contains(e.target as Element)) setMore(false); };
+    const esc = (e: KeyboardEvent) => { if (e.key === "Escape") setMore(false); };
+    document.addEventListener("pointerdown", off);
+    window.addEventListener("keydown", esc);
+    return () => { document.removeEventListener("pointerdown", off); window.removeEventListener("keydown", esc); };
+  }, [more]);
 
   useEffect(() => {
     if (!shareCode) return;
@@ -308,16 +320,20 @@ function Stage({ c, toast }: { c: Catalogue; toast: (m: string) => void }) {
   // Preview: each step lights up in run order, and 0s and 1s carry its result along the connections.
   const [run, setRun] = useState(0);
   const [runStep, setRunStep] = useState(0);
+  const [samples, setSamples] = useState<Record<string, string>>({});
   const timers = useRef<number[]>([]);
   const stopRun = () => { timers.current.forEach(clearTimeout); timers.current = []; setRun(0); setRunStep(0); };
   useEffect(() => stopRun, []);
-  const preview = () => {
+  const preview = async () => {
     if (run) { stopRun(); return; }
     if (!order?.length) { toast(order ? "Add a step first." : "This workflow loops back on itself. Remove one connection first."); return; }
     setInspect(null);
+    // Each step shows a few lines of what it made in a real run, so you see what you'd get.
+    const pages = await Promise.all(order.map((o) => loadPage(o.node.slug)));
+    setSamples(Object.fromEntries(order.map((o, i) => [o.node.slug, sampleOf(pages[i]?.example?.output)])));
     setRun(Date.now()); setRunStep(1);
     order.forEach((_, i) => { if (i) timers.current.push(window.setTimeout(() => setRunStep(i + 1), i * STEP_S * 1000)); });
-    timers.current.push(window.setTimeout(() => { stopRun(); toast("That's the order your AI runs it in. Each step saves its result and hands it to the next."); }, (order.length * STEP_S + 0.4) * 1000));
+    timers.current.push(window.setTimeout(() => { stopRun(); toast("That's the order your AI runs it in, with a real result from each step. Each one hands its work to the next."); }, (order.length * STEP_S + 0.4) * 1000));
   };
 
   const anchorNode = nodes.find((n) => n.selected) ?? nodes[nodes.length - 1];
@@ -329,6 +345,8 @@ function Stage({ c, toast }: { c: Catalogue; toast: (m: string) => void }) {
     const want = { step, run: run || undefined, delay: run && step ? (step - 1) * STEP_S : undefined };
     return n.data.step === want.step && n.data.run === want.run && n.data.delay === want.delay ? n : { ...n, data: { ...n.data, ...want } };
   }), [nodes, stepOf, run]);
+  const liveNode = run && order ? order[runStep - 1]?.node : undefined;
+  const liveSample = liveNode ? samples[liveNode.slug] : "";
   const viewEdges = useMemo(() => {
     const slugOf = Object.fromEntries(nodes.map((n) => [n.id, n.data.slug]));
     return edges.map((e): FlowEdgeT => ({
@@ -393,13 +411,14 @@ function Stage({ c, toast }: { c: Catalogue; toast: (m: string) => void }) {
     }
   };
   const exportPack = async () => {
-    const r = await buildHandoffZip(c, flow);
-    if ("error" in r) { toast(r.error); return; }
+    const r = await buildHandoffZip(c, flow, getBusiness());
+    if ("error" in r) { toast(r.error); return false; }
     download(r.blob, r.filename);
-    toast("Downloaded. Upload the folder to your AI and say \"Follow HANDOFF.md\".");
+    return true;
   };
   const askDownload = () => { if (!order) { toast("This workflow loops back on itself. Remove one connection so it runs from start to finish."); return; } setNeedsOpen(true); };
   const needs = useMemo(() => (needsOpen && order ? needsOf(c, order) : []), [c, needsOpen, order]);
+  const finals = useMemo(() => (needsOpen && order ? finalOutputs(c, flow, order) : []), [c, needsOpen, flow, order]);
 
   const status = run && order
     ? { warn: false, text: `Step ${runStep} of ${order.length}: ${c.bySlug[order[runStep - 1]?.node.slug]?.name ?? ""}` }
@@ -422,17 +441,22 @@ function Stage({ c, toast }: { c: Catalogue; toast: (m: string) => void }) {
         <div className="stage" onDragOver={(e) => { e.preventDefault(); e.dataTransfer.dropEffect = "move"; }} onDrop={onDrop}>
           <div className="stage-bar">
             <input className="flow-name" value={name} onChange={(e) => setName(e.target.value)} aria-label="Workflow name" />
-            {saved.length > 0 && (
-              <select className="select" value={savedVersion ? flowId : ""} onChange={(e) => openFlow(e.target.value)} aria-label="Open a saved workflow" data-testid="saved-flows">
-                <option value="" disabled>Saved workflows</option>
-                {saved.map((f) => <option key={f.id} value={f.id}>{f.name}</option>)}
-              </select>
-            )}
             <span className="spacer" />
             <button className="btn btn-ghost btn-sm" onClick={save} disabled={!nodes.length || isSaved} data-testid="save-flow">{isSaved ? "Saved" : "Save"}</button>
-            <button className="btn btn-ghost btn-sm" onClick={share} disabled={!nodes.length} data-testid="share-flow">Share</button>
-            <button className="btn btn-ghost btn-sm" onClick={newFlow}>New</button>
-            {savedVersion && <button className="btn btn-ghost btn-sm" onClick={() => { if (confirm(`Delete "${name}"?`)) { flows.remove(flowId); newFlow(); } }}>Delete</button>}
+            <div className="bar-more" ref={moreRef}>
+              <button className="btn btn-ghost btn-sm bar-more-btn" aria-expanded={more} aria-haspopup="true" onClick={() => setMore(!more)} data-testid="bar-more">More</button>
+              <div className={`bar-extra${more ? " open" : ""}`} onClick={(e) => { if ((e.target as HTMLElement).closest("button")) setMore(false); }}>
+                {saved.length > 0 && (
+                  <select className="select" value={savedVersion ? flowId : ""} onChange={(e) => { openFlow(e.target.value); setMore(false); }} aria-label="Open a saved workflow" data-testid="saved-flows">
+                    <option value="" disabled>Saved workflows</option>
+                    {saved.map((f) => <option key={f.id} value={f.id}>{f.name}</option>)}
+                  </select>
+                )}
+                <button className="btn btn-ghost btn-sm" onClick={share} disabled={!nodes.length} data-testid="share-flow">Share</button>
+                <button className="btn btn-ghost btn-sm" onClick={newFlow}>New</button>
+                {savedVersion && <button className="btn btn-ghost btn-sm" onClick={() => { if (confirm(`Delete "${name}"?`)) { flows.remove(flowId); newFlow(); } }}>Delete</button>}
+              </div>
+            </div>
             <button className="btn btn-primary btn-sm" onClick={askDownload} disabled={!nodes.length} data-testid="download-handoff">Download the workflow</button>
           </div>
           {narrow ? (
@@ -444,7 +468,7 @@ function Stage({ c, toast }: { c: Catalogue; toast: (m: string) => void }) {
                   <span className="small">Steps run top to bottom. Use the arrows to reorder.</span>
                 </div>
               )}
-              {nodes.length ? <StepList c={c} order={listOrder} run={run} onOpen={setInspect} onMove={moveStep} onRemove={actions.remove} /> : (
+              {nodes.length ? <StepList c={c} order={listOrder} run={run} live={run ? runStep : 0} samples={samples} onOpen={setInspect} onMove={moveStep} onRemove={actions.remove} /> : (
                 <div className="list-empty"><GoalBox onPlan={planGoal} big /><p className="small">Or press + on a suggestion above, or pick a ready workflow.</p></div>
               )}
               {bottom}
@@ -469,13 +493,14 @@ function Stage({ c, toast }: { c: Catalogue; toast: (m: string) => void }) {
                   </div>
                 </div>
               )}
+              {liveNode && liveSample && <Sample key={runStep} text={liveSample} name={c.bySlug[liveNode.slug]?.name ?? ""} step={runStep} />}
               {bottom}
             </>
           )}
           {inspect && <StepPanel c={c} flow={flow} order={order} nodeId={inspect} onClose={() => setInspect(null)} onRemove={actions.remove} />}
         </div>
       </div>
-      {needsOpen && <NeedsDialog name={name} needs={needs} onDownload={exportPack} onClose={() => setNeedsOpen(false)} />}
+      {needsOpen && <DownloadDialog name={name} zip={zipName(name)} needs={needs} finals={finals} onDownload={exportPack} onClose={() => setNeedsOpen(false)} />}
     </NodeActions.Provider>
   );
 }

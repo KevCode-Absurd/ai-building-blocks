@@ -163,7 +163,7 @@ export const FUNCTIONS: { id: string; name: string; line: string; tasks: string[
   { id: "cro", name: "Turn visitors into buyers", line: "Check your landing pages and fix what loses sales", tasks: ["audit-landing-page", "write-landing-page"] },
   { id: "strategist", name: "Know your market", line: "Your customers, your brand and your rivals", tasks: ["understand-customers", "brand-file", "study-competitors", "make-offer"] },
   { id: "social", name: "Grow on social", line: "Posts that build an audience", tasks: ["grow-social"] },
-  { id: "founder", name: "Set up AI for your business", line: "Your brand file and AI, set up once for every job", tasks: ["set-up-ai", "brand-file"] },
+  { id: "founder", name: "Set up AI for your work", line: "Your brand file and AI, set up once for every job", tasks: ["set-up-ai", "brand-file"] },
 ];
 /** Old links to the two functions that became "Create ads". */
 export const FUNCTION_MOVED: Record<string, string> = { designer: "ads", video: "ads" };
@@ -171,8 +171,8 @@ export const FUNCTION_MOVED: Record<string, string> = { designer: "ads", video: 
 export const formatOf = (b: Block): "image" | "video" | null => (b.task === "make-image-ads" ? "image" : b.task === "make-video-ads" ? "video" : null);
 export const functionsOf = (b: Block) => FUNCTIONS.filter((f) => f.tasks.includes(b.task));
 
-/** Which businesses a block suits. Most work for any business; some are only for shops selling physical products. */
+/** Who a block suits. Most work for anyone, at a job or in a business; some are only for shops selling physical products. */
 export const BUSINESSES: { id: string; name: string; test: (b: Block) => boolean }[] = [
-  { id: "any", name: "Works for any business", test: (b) => b.category !== "ecommerce" },
+  { id: "any", name: "Anyone", test: (b) => b.category !== "ecommerce" },
   { id: "store", name: "Online stores", test: (b) => b.category === "ecommerce" || b.addon },
 ];

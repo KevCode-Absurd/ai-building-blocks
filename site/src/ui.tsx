@@ -1,7 +1,7 @@
-import { useEffect, useRef, useState, type CSSProperties, type KeyboardEvent as ReactKeyEvent, type ReactNode } from "react";
+import { memo, useEffect, useRef, useState, type CSSProperties, type KeyboardEvent as ReactKeyEvent, type ReactNode } from "react";
 import { B8, ICONS } from "./lib/pixel";
 import { useScrollTyped, useSeen, useTyped } from "./lib/typing";
-import { type Block, formatOf, kindInfo, pathOf, taskOf } from "./lib/data";
+import { type Block, formatOf, kindInfo, loadPage, pathOf, taskOf } from "./lib/data";
 import { Link } from "./lib/router";
 import { kits, useStore } from "./lib/store";
 
@@ -99,11 +99,13 @@ function Decode({ text, round }: { text: string; round: number }) {
   return <span className="decode"><span className="visually-hidden">{text}</span><span aria-hidden="true">{shown}</span></span>;
 }
 
-export function BlockCard({ b }: { b: Block }) {
+// Memoised: typing in the search box redraws the list, not every card in it.
+export const BlockCard = memo(function BlockCard({ b }: { b: Block }) {
   const kind = kindInfo(b);
   const fmt = formatOf(b);
   const [round, setRound] = useState(0);
-  const wake = () => setRound((r) => r + 1);
+  // Pointing at a card starts fetching its page, so the click opens it without a wait.
+  const wake = () => { setRound((r) => r + 1); void loadPage(b.slug); };
   const view = b.category === "orchestrator" ? `View the ${b.steps.length} steps` : `View the ${kind.name.toLowerCase()}`;
   return (
     <Link to={pathOf(b)} className="card" data-testid="block-card" data-slug={b.slug} data-kind={kind.id} onMouseEnter={wake} onFocus={wake}
@@ -114,7 +116,7 @@ export function BlockCard({ b }: { b: Block }) {
       <span className="view"><Decode text={view} round={round} /><ArrowIcon size={12} /></span>
     </Link>
   );
-}
+});
 
 export function Toast({ message, onDone }: { message: string | null; onDone: () => void }) {
   useEffect(() => { if (message) { const t = setTimeout(onDone, 2600); return () => clearTimeout(t); } }, [message, onDone]);

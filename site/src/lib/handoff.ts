@@ -77,7 +77,7 @@ export function handoffMarkdown(c: Catalogue, flow: Flow, order: Ordered[], with
   const prepare = needsOf(c, order).map((n) =>
     `- **${n.label}**${n.required ? "" : " (optional)"}, for step${n.steps.length > 1 ? "s" : ""} ${n.steps.join(", ")}${n.about ? `: ${n.about}` : ""}`);
   L.push("## Before you start", "");
-  if (withBusiness) L.push("Read `my-business.md` first. It has the person's business details: use them in every step, and don't ask again for anything it lists.", "");
+  if (withBusiness) L.push("Read `about-me.md` first. It says who the person is and what they do: use it in every step, and don't ask again for anything it lists.", "");
   L.push(prepare.length ? "Ask the person for these, or confirm where they are. Don't start a step whose required inputs are missing." : "Nothing needs preparing: every input comes from an earlier step.");
   if (prepare.length) L.push("", ...prepare);
   L.push("");
@@ -148,14 +148,14 @@ export async function buildHandoffZip(c: Catalogue, flow: Flow, business: Busine
   const put = (p: string, text: string) => { files[p] = [strToU8(text), { mtime: FIXED_TIME }]; };
   const about = businessText(business);
   put("HANDOFF.md", handoffMarkdown(c, flow, order, !!about));
-  if (about) put("my-business.md", about);
+  if (about) put("about-me.md", about);
   put("workflow.json", JSON.stringify(workflowJson(c, flow, order), null, 2) + "\n");
   put("README.txt", [
     `${flow.name}: a handoff pack from AI Blocks (useaiblocks.com).`,
     "1. Upload this whole folder to your AI: Claude (a Project, Claude Code or Cowork), ChatGPT, or any AI agent that can read files.",
     "2. Say: \"Follow HANDOFF.md step by step.\"",
     "3. Have the inputs listed under \"Before you start\" ready.",
-    ...(about ? ["Your business details are in my-business.md. Change that file to change what every step knows about you."] : []), "",
+    ...(about ? ["Your details are in about-me.md. Change that file to change what every step knows about you."] : []), "",
   ].join("\n"));
   for (const slug of [...new Set(order.map((o) => o.node.slug))].sort()) {
     const skill = await loadSkillText(slug);

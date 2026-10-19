@@ -111,7 +111,7 @@
 .mc-chip.warn { background: var(--m-warn-bg); color: var(--m-warn); }
 .mc-chip.bad { background: var(--m-bad-bg); color: var(--m-bad); }
 .mc-chip.blue { background: var(--m-accent); color: var(--m-primary); }
-.mc-btn { display: inline-flex; align-items: center; height: 28px; padding: 0 12px; border-radius: 8px; background: var(--m-primary); color: var(--m-on-primary); font-size: 12px; font-weight: 600; white-space: nowrap; }
+.mc-btn { cursor: pointer; display: inline-flex; align-items: center; height: 28px; padding: 0 12px; border-radius: 8px; background: var(--m-primary); color: var(--m-on-primary); font-size: 12px; font-weight: 600; white-space: nowrap; }
 .mc-btn.mc-ghost { background: transparent; color: var(--m-fg); box-shadow: inset 0 0 0 1px var(--m-rule); }
 .mc-link { color: var(--m-primary); font-weight: 600; margin-left: auto; }
 .mc-box { width: 12px; height: 12px; border: 1px solid var(--m-rule); border-radius: 3px; display: inline-block; }

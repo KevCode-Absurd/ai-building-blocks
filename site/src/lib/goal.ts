@@ -73,18 +73,3 @@ export function planFromGoal(c: Catalogue, goal: string): Plan | null {
   }
   return { slugs: picked, name, from: { target: target.b } };
 }
-
-/** The blocks whose names and descriptions best match the goal, best first. Weak matches, under half the best score, are left out. */
-export function matchBlocks(c: Catalogue, goal: string, n = 3): Block[] {
-  const toks = tokens(goal);
-  if (!toks.length) return [];
-  const topical = toks.filter((t) => !GENERIC.has(t));
-  const ranked = c.blocks
-    .map((b) => {
-      const text = `${b.name} ${b.headline} ${b.summary} ${b.outputs.map((p) => portLabel(p.type)).join(" ")} ${taskOf(b).name}`;
-      return { b, s: hits(toks, b.name) * 3 + hits(toks, text) + b.usedIn * 0.02, about: hits(topical, text) };
-    })
-    .filter((x) => x.s >= Math.min(2, toks.length) && (!topical.length || x.about > 0))
-    .sort((x, y) => y.s - x.s || x.b.name.localeCompare(y.b.name));
-  return ranked.filter((x) => x.s >= ranked[0].s * 0.5).slice(0, n).map((x) => x.b);
-}

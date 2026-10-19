@@ -90,9 +90,9 @@ function Composer({ slug, skill, give, toast }: { slug: string; skill: string | 
     <div className="composer" data-testid="composer">
       <label htmlFor="composer-text">Your details</label>
       <textarea id="composer-text" value={text} onChange={(e) => setText(e.target.value)} rows={7} spellCheck
-        placeholder={`${about ? "Your business details are already added. Paste the rest it needs" : "Paste what it needs"}:\n${give.map((g) => `- ${g}`).join("\n")}`} />
+        placeholder={`${about ? "Your about-me file is already added. Paste the rest it needs" : "Paste what it needs"}:\n${give.map((g) => `- ${g}`).join("\n")}`} />
       <div className="composer-bar">
-        <span className="small">{about ? <>Your business details{biz.name ? ` for ${biz.name}` : ""} are added too. <button className="link-btn" onClick={openBusiness}>Change them</button></> : text.trim() ? `${text.trim().split(/\s+/).length} words, saved in this browser` : "Nothing leaves your browser until you paste it into your AI."}</span>
+        <span className="small">{about ? <>Your about-me file{biz.name ? ` for ${biz.name}` : ""} is added too. <button className="link-btn" onClick={openBusiness}>Change it</button></> : text.trim() ? `${text.trim().split(/\s+/).length} words, saved in this browser` : "Nothing leaves your browser until you paste it into your AI."}</span>
         <button className="btn btn-primary btn-sm" disabled={!skill || (!text.trim() && !about)} onClick={copy} data-testid="composer-copy">Copy the skill with my details</button>
       </div>
     </div>
@@ -149,7 +149,7 @@ export default function BlockPage({ c, slug, toast, toBuilder }: Props) {
   const copySkill = async () => {
     if (!skill) return;
     await navigator.clipboard.writeText(withBusiness(skill, getBusiness())).catch(() => {});
-    toast(biz ? "Skill copied with your business details. Paste it into your AI." : "Skill copied. Paste it into your AI.");
+    toast(biz ? "Skill copied with your about-me file. Paste it into your AI." : "Skill copied. Paste it into your AI.");
   };
 
   const has = (x?: unknown[]) => !!x && x.length > 0;
@@ -163,7 +163,7 @@ export default function BlockPage({ c, slug, toast, toBuilder }: Props) {
     ["most", "What changes the result most", has(p?.tweaks)],
     ["test", "Test it", has(p?.judge) || has(p?.test)],
     ["best", "Works best with", has(p?.works_best_with?.tools) || has(p?.works_best_with?.inputs)],
-    ["improve", "Improve it for your business", has(p?.improve)],
+    ["improve", "Make it fit your work", has(p?.improve)],
     ["file", isFlow ? "The workflow file" : "The skill file", true],
     ["with", "Run before and after", !isFlow && !!near && (near.before.length > 0 || near.after.length > 0)],
   ];
@@ -218,7 +218,7 @@ export default function BlockPage({ c, slug, toast, toBuilder }: Props) {
               <Code name="what-you-get.txt" text={p.example.output} toast={toast} tall typed />
               <details className="went-in">
                 <summary>See what went in</summary>
-                <p className="bp-note">This is what was pasted after the skill. Swap in your own details and you get the same kind of result for your business.</p>
+                <p className="bp-note">This is what was pasted after the skill. Swap in your own details and you get the same kind of result for your own work.</p>
                 <Code name="what-went-in.txt" text={p.example.input} toast={toast} />
               </details>
             </Section>
@@ -253,7 +253,7 @@ export default function BlockPage({ c, slug, toast, toBuilder }: Props) {
               <div><h3>You give it</h3><ul>{give.map((x, i) => <li key={i}>{txt(x)}</li>)}</ul></div>
               <div><h3>You get</h3><ul>{get.map((x, i) => <li key={i}>{txt(x)}</li>)}</ul></div>
             </div>
-            {p?.output_shape && <><p className="bp-note">Every run hands back the same parts, filled in for your business:</p><Code name="the-shape.txt" text={p.output_shape} toast={toast} /></>}
+            {p?.output_shape && <><p className="bp-note">Every run hands back the same parts, filled in for you:</p><Code name="the-shape.txt" text={p.output_shape} toast={toast} /></>}
           </Section>
 
           {isFlow && (
@@ -300,7 +300,7 @@ export default function BlockPage({ c, slug, toast, toBuilder }: Props) {
               )}
               {has(p?.test) && (
                 <>
-                  <h3 className="sub-h">Try it on your business before you rely on it</h3>
+                  <h3 className="sub-h">Try it on your own work before you rely on it</h3>
                   <ol className="num-list">{p!.test!.map((s, i) => <li key={i}><span className="n">{i + 1}</span><span>{txt(s)}</span></li>)}</ol>
                 </>
               )}
@@ -322,7 +322,7 @@ export default function BlockPage({ c, slug, toast, toBuilder }: Props) {
           )}
 
           {has(p?.improve) && (
-            <Section id="improve" title="Improve it for your business" lead="The skill is a plain text file. Change it once and every run after that fits you better.">
+            <Section id="improve" title="Make it fit your work" lead="The skill is a plain text file. Change it once and every run after that fits you better.">
               <ul className="plain-list">{p!.improve.map((j, i) => <li key={i}>{txt(j)}</li>)}</ul>
             </Section>
           )}

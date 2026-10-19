@@ -3,13 +3,13 @@ import { Drawer } from "./ui";
 import { FIELDS, type Business, businessText, getBusiness, hasBusiness, setBusiness, useBusiness } from "./lib/business";
 
 const OPEN = "abb:business-open";
-/** Opens the business details from anywhere on the site. */
+/** Opens the about-me file from anywhere on the site. */
 export const openBusiness = () => window.dispatchEvent(new Event(OPEN));
 export function useBusinessOpener(open: () => void) {
   useEffect(() => { window.addEventListener(OPEN, open); return () => window.removeEventListener(OPEN, open); }, [open]);
 }
 
-/** Type your business details once. Every skill you copy and every workflow you download carries them. */
+/** Type a short file about you and your work once. Every skill you copy and every workflow you download carries them. */
 export function BusinessDrawer({ onClose, toast }: { onClose: () => void; toast: (m: string) => void }) {
   const [form, setForm] = useState<Business>(() => getBusiness());
   // Saved as you type, a moment after you stop.
@@ -18,10 +18,10 @@ export function BusinessDrawer({ onClose, toast }: { onClose: () => void; toast:
   const text = businessText(form);
   const filled = FIELDS.filter((f) => form[f.id]?.trim()).length;
   return (
-    <Drawer label="Your business" top={<span className="mono">saved in this browser only</span>} onClose={close}>
-      <form className="biz" onSubmit={(e) => { e.preventDefault(); close(); toast(filled ? "Saved. Every copy and download now includes your details." : "Nothing saved yet."); }} data-testid="business-form">
-        <h2 className="title" style={{ marginTop: 0 }}>Your business</h2>
-        <p className="small biz-lead">Fill this in once. Every skill you copy and every workflow you download comes with these details, so your AI doesn't have to ask. Skip anything you don't know yet.</p>
+    <Drawer label="About you" top={<span className="mono">saved in this browser only</span>} onClose={close}>
+      <form className="biz" onSubmit={(e) => { e.preventDefault(); close(); toast(filled ? "Saved. Every copy and download now includes your about-me file." : "Nothing saved yet."); }} data-testid="business-form">
+        <h2 className="title" style={{ marginTop: 0 }}>About you and your work</h2>
+        <p className="small biz-lead">A short file your AI reads before every job. It works whether you have a job, run a business, or both. Fill in what fits and skip the rest. Every skill you copy and every workflow you download comes with it, so your AI doesn't have to ask.</p>
         {FIELDS.map((f) => (
           <label key={f.id} className="biz-field">
             <span>{f.label}</span>
@@ -32,7 +32,7 @@ export function BusinessDrawer({ onClose, toast }: { onClose: () => void; toast:
         ))}
         <div className="biz-bar">
           <span className="small">{filled ? `${filled} of ${FIELDS.length} filled in` : "The grey text is an example. Write your own."}</span>
-          {filled > 0 && <button type="button" className="btn btn-ghost btn-sm" onClick={() => { if (confirm("Clear all your business details?")) setForm({}); }}>Clear</button>}
+          {filled > 0 && <button type="button" className="btn btn-ghost btn-sm" onClick={() => { if (confirm("Clear everything in your about-me file?")) setForm({}); }}>Clear</button>}
           <button className="btn btn-primary btn-sm" data-testid="biz-save">Done</button>
         </div>
         {text && (
@@ -52,8 +52,8 @@ export function BusinessNote() {
   return (
     <p className="biz-note" data-testid="business-note">
       {hasBusiness(b)
-        ? <>Copies and downloads include your details{b.name ? ` for ${b.name}` : ""}. <button className="link-btn" onClick={openBusiness}>Change them</button></>
-        : <>Add your business details once, and every copy includes them. <button className="link-btn" onClick={openBusiness} data-testid="business-add">Add them</button></>}
+        ? <>Copies and downloads include your about-me file{b.name ? ` for ${b.name}` : ""}. <button className="link-btn" onClick={openBusiness}>Change them</button></>
+        : <>Add a short file about you and your work once, and every copy includes it. <button className="link-btn" onClick={openBusiness} data-testid="business-add">Add it</button></>}
     </p>
   );
 }

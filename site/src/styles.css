@@ -49,6 +49,9 @@ code { font: 400 0.88em var(--mono); background: var(--raise); border-radius: 4p
 .mono { font-family: var(--mono); }
 
 /* Buttons */
+/* Anything you can click shows the hand. Zero specificity, so a rule like "grab" on the builder still wins. */
+:where(a[href], button, summary, select, label:has(> input[type="checkbox"], > input[type="radio"]), input[type="checkbox"], input[type="radio"], [role="button"], [role="tab"], [role="option"], [role="menuitem"]) { cursor: pointer; }
+:where(button, select, input, [role="button"], [role="tab"], [role="option"]):is(:disabled, [aria-disabled="true"]) { cursor: not-allowed; }
 .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; height: 44px; padding: 0 20px; border-radius: 999px; border: 0; cursor: pointer; font-size: 14.5px; font-weight: 500; white-space: nowrap; transition: background 0.15s, color 0.15s, box-shadow 0.15s, opacity 0.15s, transform 0.15s; }
 .btn svg { transition: transform 0.15s; }
 .btn:hover:not(:disabled) { transform: translateY(-2px); }
@@ -60,6 +63,8 @@ code { font: 400 0.88em var(--mono); background: var(--raise); border-radius: 4p
 .btn-dark:hover:not(:disabled) { background: var(--text); color: var(--bg); box-shadow: 3px 3px 0 var(--line-2); }
 .btn-ghost { background: transparent; color: var(--muted); }
 .btn-ghost:hover { color: var(--text); background: var(--btn-2); }
+.btn-line { background: transparent; color: var(--text); box-shadow: inset 0 0 0 1.5px var(--line-2); }
+.btn-line:hover:not(:disabled) { box-shadow: inset 0 0 0 1.5px var(--text), 3px 3px 0 var(--text); }
 .btn-sm { height: 36px; padding: 0 14px; font-size: 13.5px; }
 .btn:disabled { opacity: 0.4; cursor: not-allowed; }
 .icon-btn { display: inline-grid; place-items: center; width: 36px; height: 36px; border-radius: 999px; border: 0; background: transparent; color: var(--muted); cursor: pointer; flex: none; }
@@ -74,6 +79,8 @@ code { font: 400 0.88em var(--mono); background: var(--raise); border-radius: 4p
 .nav { display: flex; gap: 4px; }
 .nav a { padding: 7px 12px; border-radius: 999px; font-size: 14px; color: var(--muted); transition: color 0.15s, background 0.15s; }
 .nav a:hover { color: var(--text); }
+.nav a.nav-hiw { color: var(--text); box-shadow: inset 0 0 0 1px var(--line-2); }
+.nav a.nav-hiw:hover { box-shadow: inset 0 0 0 1px var(--text); }
 .header-end { margin-left: auto; display: flex; align-items: center; gap: 6px; }
 .badge { min-width: 18px; height: 18px; padding: 0 5px; border-radius: 999px; background: var(--text); color: var(--bg); font: 600 11px var(--mono); display: inline-grid; place-items: center; margin-left: 6px; }
 @media (max-width: 860px) { .nav { display: none; } }
@@ -627,11 +634,6 @@ body.globe-dragging, body.globe-dragging * { user-select: none !important; -webk
 }
 .stage-bar .btn-primary { margin-left: auto; }
 
-/* The small "How it works" link under the hero buttons */
-.hero-more { display: flex; align-items: center; gap: 6px; width: fit-content; margin: 22px auto 0; padding: 4px 2px; font: 500 13px var(--mono); color: var(--muted); text-decoration: underline; text-decoration-color: var(--line-2); text-underline-offset: 4px; transition: color 0.15s; }
-.hero-more:hover { color: var(--text); text-decoration-color: currentColor; }
-.hero-more svg { transition: transform 0.15s; }
-.hero-more:hover svg { transform: translateX(3px); }
 
 /* How it works */
 .hiw-ladder { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 10px; align-items: end; }
@@ -668,7 +670,7 @@ body.globe-dragging, body.globe-dragging * { user-select: none !important; -webk
 .hiw .when-box li { margin-bottom: 6px; }
 .hiw-end { margin: 48px 0 0; }
 
-/* Header: short labels on phones, and a mark once your business details are in */
+/* Header: short labels on phones, and a mark once your about-me file is filled in */
 .narrow-only { display: none; }
 @media (max-width: 560px) {
   .wide-only { display: none; } .narrow-only { display: inline; }
@@ -678,7 +680,7 @@ body.globe-dragging, body.globe-dragging * { user-select: none !important; -webk
 @media (max-width: 380px) { .brand { font-size: 12.5px; } .brand svg { width: 20px; height: 20px; } }
 .dot { display: inline-block; width: 7px; height: 7px; margin-left: 7px; border-radius: 1px; background: var(--text); }
 
-/* Your business: typed once, added to every copy and download */
+/* About you: typed once, added to every copy and download */
 .biz { display: grid; gap: 14px; }
 .biz-lead { margin: -4px 0 6px; }
 .biz-field { display: grid; gap: 6px; font-size: 14px; color: var(--muted); }
@@ -693,35 +695,6 @@ body.globe-dragging, body.globe-dragging * { user-select: none !important; -webk
 .biz-preview pre { margin: 10px 0 0; padding: 12px 14px; border: 1px solid var(--line-2); border-radius: 8px; background: var(--bg-2); font: 400 12.5px/1.6 var(--mono); white-space: pre-wrap; word-break: break-word; }
 .biz-note { margin: 18px 0 0; font-size: 14px; color: var(--muted); }
 .biz-in { margin: 4px 0 0; }
-
-/* Home: say what you want done */
-.hgoal { margin: 34px auto 0; max-width: 640px; text-align: left; }
-.hgoal-form { display: flex; gap: 8px; padding: 6px; background: var(--panel); border: 1.5px solid var(--text); border-radius: 12px; box-shadow: var(--hard); }
-.hgoal-form input { flex: 1; min-width: 0; height: 44px; border: 0; outline: 0; background: none; padding: 0 12px; font: 400 16px var(--sans); color: var(--text); }
-.hgoal-form input::placeholder { color: var(--faint); }
-.hgoal-form .btn { flex: none; height: 44px; }
-.hgoal-eg { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; margin-top: 12px; }
-.hgoal-eg .chip { height: 32px; font-size: 13.5px; background: color-mix(in srgb, var(--panel) 80%, transparent); }
-.hgoal-out { margin-top: 10px; padding: 16px 18px; display: grid; gap: 18px; background: var(--panel); border: 1px solid var(--line-2); border-radius: 12px; box-shadow: var(--shadow); animation: atf-in 0.18s cubic-bezier(0.2, 0.7, 0.2, 1); }
-@media (prefers-reduced-motion: reduce) { .hgoal-out { animation: none; } }
-.hgoal-h { margin: 0 0 10px; font: 500 13px var(--mono); color: var(--muted); }
-.hgoal-steps { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
-.hgoal-steps li { display: flex; align-items: center; gap: 10px; font-size: 15px; }
-.hgoal-steps .n { display: grid; place-items: center; flex: none; width: 24px; height: 24px; border-radius: 999px; border: 1px solid var(--line-2); font: 500 11.5px var(--mono); }
-.hgoal-steps a { font-weight: 500; }
-.hgoal-steps a:hover { text-decoration: underline; text-underline-offset: 3px; }
-.hgoal-acts { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
-.hgoal-one ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
-.hgoal-one a { display: flex; align-items: center; gap: 10px; padding: 9px 12px; border: 1px solid var(--line); border-radius: 8px; font-size: 14.5px; transition: border-color 0.12s, transform 0.12s, box-shadow 0.12s; }
-.hgoal-one a:hover { border-color: var(--text); box-shadow: 2px 2px 0 var(--text); transform: translate(-1px, -1px); }
-.hgoal-nm { flex: 1; min-width: 0; }
-.hgoal-miss { margin: 0; color: var(--text-2); }
-.hgoal-foot { margin: 0; display: flex; flex-wrap: wrap; gap: 6px 18px; font-size: 13.5px; }
-.hgoal + .hero-actions { margin-top: 28px; }
-@media (max-width: 520px) {
-  .hgoal-form { flex-direction: column; }
-  .hgoal-form .btn { width: 100%; justify-content: center; }
-}
 
 /* After the download: how to run the folder */
 .atf-body > * { flex-shrink: 0; }

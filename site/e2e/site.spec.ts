@@ -18,14 +18,15 @@ const cards = (page: Page) => page.getByTestId("block-card");
 const MODEL = "write-ads-people-believe"; // the block with the finished model page
 const WORKFLOW = "turn-your-reviews-into-image-ads-buyers-believe";
 
-test("hero is the headline, the mono subhead, a goal box, two buttons and a how-it-works link, over the globe", async ({ page }) => {
+test("hero is the headline, the mono subhead, and three buttons (the last is How it works), over the globe", async ({ page }) => {
   await page.goto("/");
   await expect(page.getByRole("heading", { level: 1 })).toHaveText("Making humanity AI native");
   await expect(page.locator(".hero .lede")).toContainText("Save hours every week");
   expect(await page.locator(".hero .lede").evaluate((el) => getComputedStyle(el).fontFamily)).toContain("JetBrains Mono");
   await expect(page.locator(".hero").getByRole("link")).toHaveText(["Browse the blocks", "Build a workflow", "How it works"]);
-  await expect(page.locator(".hero-in > *")).toHaveCount(5);
-  await expect(page.locator(".hero-in > *").nth(2)).toHaveAttribute("data-testid", "home-goal");
+  await expect(page.locator(".hero-in > *")).toHaveCount(3);
+  await expect(page.locator(".nav a").first()).toHaveText("How it works");
+  await expect(page.getByTestId("home-goal")).toHaveCount(0);
   const globe = page.getByTestId("globe");
   await expect(globe).toBeVisible();
   expect(await globe.evaluate((c: HTMLCanvasElement) => c.width > 0 && c.height > 0)).toBe(true);
@@ -313,7 +314,7 @@ test("the workflow download is a complete, repeatable pack", async ({ page }, in
   const files = unzipSync(new Uint8Array(a.bytes));
   const names = Object.keys(files);
   expect(names).toEqual(expect.arrayContaining(["HANDOFF.md", "workflow.json", "README.txt", "skills/stop-image-tools-redrawing-your-product-and-words/SKILL.md"]));
-  expect(names, "no business details were given").not.toContain("my-business.md");
+  expect(names, "no about-me file was given").not.toContain("about-me.md");
   expect(names.filter((n) => n.startsWith("skills/"))).toHaveLength(5);
   const handoff = strFromU8(files["HANDOFF.md"]);
   expect(handoff).toContain("## Before you start");
@@ -557,10 +558,10 @@ const fillBusiness = async (page: Page) => {
   await expect(form).toHaveCount(0);
 };
 
-test("your business: typed once, kept, and added to every copy and download", async ({ page, context }, info) => {
+test("about you: typed once, kept, and added to every copy and download", async ({ page, context }, info) => {
   await context.grantPermissions(["clipboard-read", "clipboard-write"]);
   await page.goto(`/prompts/${MODEL}`);
-  await expect(page.getByTestId("business-note")).toContainText("Add your business details once");
+  await expect(page.getByTestId("business-note")).toContainText("Add a short file about you and your work once");
   await page.getByTestId("business-add").click();
   await expect(page.getByTestId("business-form")).toBeVisible();
   await page.keyboard.press("Escape");
@@ -573,50 +574,26 @@ test("your business: typed once, kept, and added to every copy and download", as
   await page.getByTestId("copy-skill").click();
   const copied = (await page.evaluate(() => navigator.clipboard.readText())).replace(/\r\n/g, "\n");
   expect(copied).toMatch(/^---\nname: /);
-  expect(copied).toContain("## About my business");
-  expect(copied).toContain("- **Business name:** Sprout");
-  expect(copied).toContain("- **Who buys it:** Adults who gave up on greens powders");
+  expect(copied).toContain("## About me and my work");
+  expect(copied).toContain("- **Name:** Sprout");
+  expect(copied).toContain("- **Who it's for:** Adults who gave up on greens powders");
   // The composer copies them too, even with nothing else typed.
   const box = page.getByTestId("composer");
-  await expect(box).toContainText("for Sprout are added too");
+  await expect(box).toContainText("for Sprout is added too");
   await box.getByTestId("composer-copy").click();
-  expect(await page.evaluate(() => navigator.clipboard.readText())).toContain("- **What you sell, and the price:** Greens gummies in daily packs");
+  expect(await page.evaluate(() => navigator.clipboard.readText())).toContain("- **What I do or sell:** Greens gummies in daily packs");
 
-  // A workflow download carries them in my-business.md, and HANDOFF.md says to read it first.
+  // A workflow download carries them in about-me.md, and HANDOFF.md says to read it first.
   await page.goto(`/workflows/${WORKFLOW}`);
   await page.getByTestId("block-page").getByTestId("download-handoff").click();
-  await expect(page.getByTestId("needs")).toContainText("Your business details go in the folder too");
+  await expect(page.getByTestId("needs")).toContainText("Your about-me file goes in the folder too");
   const [dl] = await Promise.all([page.waitForEvent("download"), page.getByTestId("needs-download").click()]);
   const path = info.outputPath(dl.suggestedFilename());
   await dl.saveAs(path);
   const files = unzipSync(new Uint8Array(fs.readFileSync(path)));
-  expect(strFromU8(files["my-business.md"])).toContain("- **Business name:** Sprout");
-  expect(strFromU8(files["HANDOFF.md"])).toContain("Read `my-business.md` first");
-  expect(strFromU8(files["README.txt"])).toContain("my-business.md");
-});
-
-test("home: say what you want done and get the steps, or the single skills that do one part", async ({ page }) => {
-  await page.goto("/");
-  const goal = page.getByTestId("home-goal");
-  await goal.getByTestId("home-goal-input").fill("a landing page for my best ad");
-  await goal.getByTestId("home-goal-go").click();
-  const out = goal.getByTestId("home-goal-result");
-  await expect(out).toContainText("A ready workflow does this in 4 steps");
-  await expect(out.locator(".hgoal-steps li")).toHaveCount(4);
-  await expect(out.locator(".hgoal-one li").first()).toBeVisible();
-  await out.getByTestId("home-goal-build").click();
-  await expect(page).toHaveURL(/#build$/);
-  await expect(page.getByTestId("builder").getByTestId("flow-node")).toHaveCount(4);
-  await expect(page.locator(".flow-name")).toHaveValue("A landing page that matches your best ad");
-
-  // Nothing behind a goal: it says so, and the library search is one click away.
-  await page.goto("/");
-  await goal.getByTestId("home-goal-input").fill("zzz qqq");
-  await goal.getByTestId("home-goal-go").click();
-  await expect(out).toContainText("Nothing does that yet");
-  await out.getByRole("button", { name: /Search the library for/ }).click();
-  await expect(page.getByTestId("library-search")).toHaveValue("zzz qqq");
-  await expect(page.getByTestId("result-count")).toHaveText("0 results");
+  expect(strFromU8(files["about-me.md"])).toContain("- **Name:** Sprout");
+  expect(strFromU8(files["HANDOFF.md"])).toContain("Read `about-me.md` first");
+  expect(strFromU8(files["README.txt"])).toContain("about-me.md");
 });
 
 test("laptop width: the builder bar stays on one line, and the step panel never covers Download", async ({ page }) => {
@@ -642,7 +619,7 @@ test("after the download: how to run it in your AI, the first message to paste, 
   const builder = await planGoal(page, "a landing page for my best ad");
   await builder.getByTestId("download-handoff").click();
   const dlg = page.getByTestId("needs");
-  await expect(dlg).toContainText("Add your business details first");
+  await expect(dlg).toContainText("Add a short file about you first");
   await Promise.all([page.waitForEvent("download"), dlg.getByTestId("needs-download").click()]);
   const next = dlg.getByTestId("next-steps");
   await expect(next).toContainText("a-landing-page-for-my-best-ad-handoff.zip");

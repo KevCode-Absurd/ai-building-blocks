@@ -16,7 +16,7 @@ type Ai = (typeof AIS)[number]["id"];
 const KEY = "abb:install-tab"; // the same choice as on skill pages: pick your AI once
 
 function steps(ai: Ai, zip: string, biz: boolean): ReactNode[] {
-  const files = <><b>HANDOFF.md</b>{biz && <>, <b>my-business.md</b></>} and the SKILL.md files in the <b>skills</b> folder</>;
+  const files = <><b>HANDOFF.md</b>{biz && <>, <b>about-me.md</b></>} and the SKILL.md files in the <b>skills</b> folder</>;
   switch (ai) {
     case "claude": return [
       <>Unzip <b>{zip}</b>.</>,
@@ -78,7 +78,7 @@ export function DownloadDialog({ name, zip, needs, finals, onDownload, onClose }
             : <p className="atf-lead">Gather these once, before you start. Your AI asks for each one at the step that uses it, and writes MISSING where something isn't there.</p>}
           {must.length > 0 && <><h3 className="atf-h">Have these ready</h3><ul className="needs-list" data-testid="needs-required">{must.map(item)}</ul></>}
           {may.length > 0 && <><h3 className="atf-h">These make it better, if you have them</h3><ul className="needs-list">{may.map(item)}</ul></>}
-          <p className="small biz-in">{biz ? "Your business details go in the folder too, so your AI won't ask for them." : <>Add <button className="link-btn" onClick={() => { close(); openBusiness(); }} data-testid="needs-add-business">your business details</button> first, and they go in the folder so your AI asks you less.</>}</p>
+          <p className="small biz-in">{biz ? "Your about-me file goes in the folder too, so your AI won't ask for it." : <>Add <button className="link-btn" onClick={() => { close(); openBusiness(); }} data-testid="needs-add-business">a short file about you</button> first, and it goes in the folder so your AI asks you less.</>}</p>
           <div className="atf-foot">
             <span className="small">{needs.length ? `${got.size} of ${needs.length} ready` : "Ready to go"}</span>
             <button className="btn btn-primary" onClick={go} data-testid="needs-download">Download the workflow</button>

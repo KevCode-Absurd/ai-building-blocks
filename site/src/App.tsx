@@ -1,11 +1,10 @@
-import { Suspense, lazy, useCallback, useEffect, useMemo, useRef, useState, type ReactNode } from "react";
+import { Suspense, lazy, useCallback, useDeferredValue, useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import { ArrowIcon, BlockCard, Drawer, Logo, PixelIcon, SearchIcon, Select, ThemeToggle, Toast } from "./ui";
 import { type Block, type Catalogue, type Kind, BUSINESSES, FUNCTIONS, FUNCTION_MOVED, KINDS, LEVELS, TASKS, cap, functionsOf, kindOf, pathOf, taskOf, useCatalogue } from "./lib/data";
 import { kits, queueForCanvas, useStore } from "./lib/store";
 import { Link, navigate, setSearch, useLocation } from "./lib/router";
 import { BusinessDrawer, openBusiness, useBusinessOpener } from "./Business";
 import { hasBusiness, useBusiness } from "./lib/business";
-import HomeGoal, { SEARCH } from "./HomeGoal";
 
 const Builder = lazy(() => import("./Builder")); // the canvas loads only when someone scrolls near it
 const Globe = lazy(() => import("./Globe")); // drawn behind the hero, so the text never waits for it
@@ -24,10 +23,26 @@ function WhenNear({ id, children, fallback }: { id: string; children: ReactNode;
   }, [near, id]);
   return near ? <>{children}</> : <div ref={ref}>{fallback}</div>;
 }
-const BlockPage = lazy(() => import("./BlockPage"));
-const HowItWorks = lazy(() => import("./HowItWorks"));
-const ToolsPage = lazy(() => import("./tools/ToolsPage")); // the mini tools load only when someone opens one
-const AppsPage = lazy(() => import("./apps/AppsPage")); // the app tours and the starter pack, likewise
+// The other pages load after the home page has drawn, while the browser is idle, so a click opens them at once.
+const PAGES = {
+  block: () => import("./BlockPage"),
+  guide: () => import("./HowItWorks"),
+  tools: () => import("./tools/ToolsPage"),
+  apps: () => import("./apps/AppsPage"),
+  builder: () => import("./Builder"),
+};
+const BlockPage = lazy(PAGES.block);
+const HowItWorks = lazy(PAGES.guide);
+const ToolsPage = lazy(PAGES.tools);
+const AppsPage = lazy(PAGES.apps);
+function useIdlePrefetch() {
+  useEffect(() => {
+    const idle = window.requestIdleCallback ?? ((f: () => void) => window.setTimeout(f, 1200));
+    const stop = window.cancelIdleCallback ?? window.clearTimeout;
+    const id = idle(() => Object.values(PAGES).forEach((load) => load().catch(() => {})), { timeout: 4000 });
+    return () => stop(id);
+  }, []);
+}
 
 // Shown first: things most people can use this week.
 const START_HERE = ["write-ads-people-believe", "turn-website-into-brand-file-for-ai", "find-why-customers-buy-in-their-words", "make-every-ad-sound-like-your-brand", "find-what-stops-visitors-buying-30-quick-checks", "get-video-ad-script-in-customers-words", "keep-facebook-from-blocking-your-ads"];
@@ -48,14 +63,14 @@ function Header({ onKits }: { onKits: () => void }) {
       <div className="wrap header-in">
         <Link to="/" className="brand" aria-label="AI Blocks, home"><Logo />AI Blocks</Link>
         <nav className="nav" aria-label="Sections">
+          <Link to="/how-it-works" className="nav-hiw">How it works</Link>
           <Link to="/#library">Library</Link>
           <Link to="/#build">Builder</Link>
           <Link to="/tools">Tools</Link>
           <Link to="/apps">Apps</Link>
-          <Link to="/how-it-works">How it works</Link>
         </nav>
         <div className="header-end">
-          <button className="btn btn-ghost btn-sm" onClick={openBusiness} data-testid="open-business"><span className="wide-only">My business</span><span className="narrow-only">Business</span>{biz && <span className="dot" aria-label="filled in" />}</button>
+          <button className="btn btn-ghost btn-sm" onClick={openBusiness} data-testid="open-business"><span>About me</span>{biz && <span className="dot" aria-label="filled in" />}</button>
           <button className="btn btn-ghost btn-sm" onClick={onKits} data-testid="open-kits"><span className="wide-only">My kits</span><span className="narrow-only">Kits</span>{kitCount > 0 && <span className="badge">{kitCount}</span>}</button>
           <ThemeToggle />
         </div>
@@ -78,11 +93,6 @@ function Library({ c }: { c: Catalogue }) {
   });
   const set = (patch: Partial<Filters>) => setF((x) => ({ ...x, ...patch }));
   const [limit, setLimit] = useState(PAGE);
-  useEffect(() => {
-    const on = (e: Event) => setF({ ...NONE, q: String((e as CustomEvent).detail ?? "") });
-    window.addEventListener(SEARCH, on);
-    return () => window.removeEventListener(SEARCH, on);
-  }, []);
   // Press / anywhere to jump to the search box.
   useEffect(() => {
     const on = (e: KeyboardEvent) => {
@@ -98,8 +108,11 @@ function Library({ c }: { c: Catalogue }) {
   useEffect(() => { setLimit(PAGE); setSearch({ q: f.q, fn: f.fn, job: f.task, kind: f.kind === "all" ? "" : f.kind, level: f.level, biz: f.biz }); }, [f]);
 
   // Every count reflects all the other choices, so a zero is never a surprise.
-  const words = f.q.toLowerCase().split(/\s+/).filter(Boolean);
-  const hay = (b: Block) => `${b.name} ${b.slug} ${b.summary} ${b.headline} ${taskOf(b).name} ${functionsOf(b).map((x) => x.name).join(" ")}`.toLowerCase().replace(/[_-]/g, " ");
+  // The list and the counts follow the typing a beat behind, so the search box never waits on them.
+  const df = useDeferredValue(f);
+  const words = df.q.toLowerCase().split(/\s+/).filter(Boolean);
+  const hays = useMemo(() => new Map(c.blocks.map((b) => [b.slug, `${b.name} ${b.slug} ${b.summary} ${b.headline} ${taskOf(b).name} ${functionsOf(b).map((x) => x.name).join(" ")}`.toLowerCase().replace(/[_-]/g, " ")])), [c]);
+  const hay = (b: Block) => hays.get(b.slug)!;
   const tests: Record<keyof Filters, (b: Block, v: string) => boolean> = {
     q: (b) => words.every((w) => hay(b).includes(w)),
     fn: (b, v) => !v || functionsOf(b).some((x) => x.id === v),
@@ -109,12 +122,15 @@ function Library({ c }: { c: Catalogue }) {
     biz: (b, v) => !v || !!BUSINESSES.find((x) => x.id === v)?.test(b),
   };
   const keys = Object.keys(tests) as (keyof Filters)[];
+  // Counts are worked out once per settled search, not on every redraw.
+  const counted = useMemo(() => new Map<string, number>(), [c, df]); // eslint-disable-line react-hooks/exhaustive-deps
   const count = (over: Partial<Filters>) => {
-    const g = { ...f, ...over };
-    return c.blocks.filter((b) => keys.every((k) => tests[k](b, g[k] as string))).length;
+    const key = JSON.stringify(over);
+    if (!counted.has(key)) { const g = { ...df, ...over }; counted.set(key, c.blocks.filter((b) => keys.every((k) => tests[k](b, g[k] as string))).length); }
+    return counted.get(key)!;
   };
   const order = (a: Block, b: Block) => Number(START_HERE.includes(b.slug)) - Number(START_HERE.includes(a.slug)) || Number(!!b.headline) - Number(!!a.headline) || KINDS.findIndex((k) => k.id === kindOf(a)) - KINDS.findIndex((k) => k.id === kindOf(b)) || a.name.localeCompare(b.name);
-  const results = useMemo(() => c.blocks.filter((b) => keys.every((k) => tests[k](b, f[k] as string))).sort(order), [c, f]); // eslint-disable-line react-hooks/exhaustive-deps
+  const results = useMemo(() => c.blocks.filter((b) => keys.every((k) => tests[k](b, df[k] as string))).sort(order), [c, df]); // eslint-disable-line react-hooks/exhaustive-deps
   const filtered = JSON.stringify(f) !== JSON.stringify(NONE);
   const clear = () => setF(NONE);
   const fn = FUNCTIONS.find((x) => x.id === f.fn);
@@ -123,7 +139,7 @@ function Library({ c }: { c: Catalogue }) {
 
   return (
     <section className="section wrap" id="library" aria-label="Library">
-      <label className="search big"><SearchIcon /><span className="visually-hidden">Search</span><input value={f.q} onChange={(e) => set({ q: e.target.value })} placeholder="What do you want to get done? Try “ad copy” or “landing page”" data-testid="library-search" /><kbd className="kbd" aria-hidden="true">/</kbd></label>
+      <label className="search big"><SearchIcon /><span className="visually-hidden">Search</span><input value={f.q} onChange={(e) => set({ q: e.target.value })} placeholder="What do you want to get done?" data-testid="library-search" /><kbd className="kbd" aria-hidden="true">/</kbd></label>
 
       <h2 className="fn-h">Pick the work you do, or want done</h2>
       <div className="fns" role="group" aria-label="Pick the work">
@@ -158,8 +174,8 @@ function Library({ c }: { c: Catalogue }) {
           ))}
         </div>
         <div className="filters">
-          <Select label="Business" value={f.biz} onChange={(v) => set({ biz: v })} testId="filter-biz"
-            options={[{ value: "", label: "Any", count: count({ biz: "" }) }, ...BUSINESSES.map((x) => ({ value: x.id, label: x.name, count: count({ biz: x.id }) }))]} />
+          <Select label="Made for" value={f.biz} onChange={(v) => set({ biz: v })} testId="filter-biz"
+            options={[{ value: "", label: "All", count: count({ biz: "" }) }, ...BUSINESSES.map((x) => ({ value: x.id, label: x.name, count: count({ biz: x.id }) }))]} />
           <Select label="Level" value={f.level} onChange={(v) => set({ level: v })} testId="filter-level"
             options={[{ value: "", label: "Any", count: count({ level: "" }) }, ...LEVELS.map((l) => ({ value: l, label: cap(l), count: count({ level: l }) }))]} />
         </div>
@@ -227,7 +243,7 @@ function Typewriter({ text }: { text: string }) {
   );
 }
 
-function Home({ c, toast, toBuilder }: { c: Catalogue | null; toast: (m: string) => void; toBuilder: (slugs: string[], asNew?: string) => void }) {
+function Home({ c, toast }: { c: Catalogue | null; toast: (m: string) => void }) {
   // A link like /#library opened fresh: jump there once the library has drawn.
   useEffect(() => {
     if (!c || !location.hash) return;
@@ -241,12 +257,11 @@ function Home({ c, toast, toBuilder }: { c: Catalogue | null; toast: (m: string)
         <div className="wrap hero-in">
           <h1 className="h1">Making humanity AI native</h1>
           <Typewriter text="Stop doing the work AI could do for you. Save hours every week, and spend them on the work only you can do. Or at the beach (we won't tell)." />
-          <HomeGoal c={c} toBuilder={toBuilder} />
           <div className="hero-actions">
             <Link to="/#library" className="btn btn-primary">Browse the blocks <ArrowIcon /></Link>
             <Link to="/#build" className="btn btn-dark">Build a workflow</Link>
+            <Link to="/how-it-works" className="btn btn-line" data-testid="how-it-works-link">How it works</Link>
           </div>
-          <Link to="/how-it-works" className="hero-more" data-testid="how-it-works-link">How it works <ArrowIcon size={12} /></Link>
         </div>
       </section>
 
@@ -265,6 +280,7 @@ function Home({ c, toast, toBuilder }: { c: Catalogue | null; toast: (m: string)
 
 export default function App() {
   const c = useCatalogue();
+  useIdlePrefetch();
   const { path, search } = useLocation();
   const [kitsOpen, setKitsOpen] = useState(false);
   const [bizOpen, setBizOpen] = useState(false);
@@ -314,7 +330,7 @@ export default function App() {
       ) : pageSlug ? (
         c ? <Suspense fallback={<main className="wrap bp-hero"><p className="small">Loading…</p></main>}><BlockPage c={c} slug={pageSlug} toast={setToast} toBuilder={toBuilder} /></Suspense> : <main className="wrap bp-hero"><p className="small">Loading…</p></main>
       ) : (
-        <Home c={c} toast={setToast} toBuilder={toBuilder} />
+        <Home c={c} toast={setToast} />
       )}
       <footer className="footer">
         <div className="wrap footer-in">

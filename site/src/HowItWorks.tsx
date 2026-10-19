@@ -54,7 +54,7 @@ const CHOOSE: [string, string, string][] = [
 ];
 
 const WORDS: [string, string][] = [
-  ["Brand file", "A short file about your business: what you sell, your prices, how you talk. Your AI reads it before each job."],
+  ["Brand file", "A short file about you or your business: what you do, who it's for, how you talk. Your AI reads it before each job."],
   ["SKILL.md", "The file a skill lives in. It's plain text, so you can read it and change it."],
   ["HANDOFF.md", "The plan inside a downloaded workflow. Your AI follows it step by step."],
   ["Step", "One skill inside a workflow."],

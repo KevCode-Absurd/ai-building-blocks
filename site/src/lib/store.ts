@@ -3,11 +3,18 @@
 import { useSyncExternalStore } from "react";
 
 export type Kit = { id: string; name: string; slugs: string[]; updated: number };
-/** role and notes are the person's own instructions for one step ("Act as my investor"); they travel with the download. */
-export type FlowNode = { id: string; slug: string; x: number; y: number; ecommerce?: boolean; role?: string; notes?: string };
+/** role and notes are the person's own instructions for one step ("Act as my investor"); they travel with the download.
+ *  mind is a mind's slug: the step's skill decides what to make, and that mind's method and voice shape how (MINDS-PRD §6e). */
+export type FlowNode = { id: string; slug: string; x: number; y: number; ecommerce?: boolean; role?: string; notes?: string; mind?: string };
 export type FlowEdge = { id: string; from: string; to: string; fromPort?: string; toPort?: string };
-/** The Start node holds the goal and notes for every step. The End node shows once the workflow is saved (ended). */
-export type Flow = { id: string; name: string; nodes: FlowNode[]; edges: FlowEdge[]; updated: number; goal?: string; notes?: string; ended?: boolean };
+/** A team council: the person on top, up to six minds below. "split" gives each part of the job to the best-suited mind and
+ *  merges the parts; "together" has every mind take the whole job and argue it out to one agreed answer. */
+export type TeamMode = "split" | "together";
+export type Team = { minds: string[]; mode: TeamMode };
+export const TEAM_MAX = 6;
+/** The Start node holds the goal and notes for every step, plus the overseer (one mind who checks every step) and the team.
+ *  The End node shows once the workflow is saved (ended). */
+export type Flow = { id: string; name: string; nodes: FlowNode[]; edges: FlowEdge[]; updated: number; goal?: string; notes?: string; ended?: boolean; overseer?: string; team?: Team };
 /** `flows` are the workflows the person saved; `draft` is what the builder has open right now, kept as they work. */
 type State = { kits: Kit[]; flows: Flow[]; recent: string[]; currentFlow: string | null; draft: Flow | null };
 

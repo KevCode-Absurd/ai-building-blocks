@@ -228,9 +228,9 @@ Kevin, 20 Oct: the point of a mind is "basically hiring them". For example, hiri
   The after version won 48 of 70 head to head, lost 6 and tied 16. Bernbach gained no new sources and still won 6 of 7, so the playbook alone moves the score. Voice gained least, so the thin-voice minds get a further pass.
 - **Cost rule (Kevin, 20 Oct):** no Claude API credits. Tests and judging run as subagents on the subscription. Each job gets the cheapest model that does it well: Haiku for checks and sweeps, Sonnet for writing, research and judging, and Opus only for design work.
 
-## 6e · Later: minds on steps, overseers and team councils (Kevin, 20 Oct)
+## 6e · Minds on steps, overseers and team councils (Kevin, 20 Oct)
 
-Not built yet. This is the next builder round, after 6b.
+Built on 20 Oct. The logic is in `site/src/lib/crew.ts`, the panels are in `BuilderParts.tsx` (step panel and Start panel), and the pack is built in `lib/handoff.ts`.
 
 - **A mind on any step.** Assign a person to a step: the copy step written like Claude Hopkins, the prompt designed by a great prompt writer, the script by Shakespeare. The step's skill does the job, and the mind's playbook and voice shape how it's done. Steps connect as they do now.
 - **An overseer for a whole workflow.** One mind sits above the workflow, checks each step's output against its method and sends weak work back once before it moves on.
@@ -238,6 +238,21 @@ Not built yet. This is the next builder round, after 6b.
   - **Split by expertise.** The task is broken into parts, each part goes to the mind best suited to it, and one final answer pulls the parts together.
   - **Decide together.** Every mind gets the whole task, they argue it among themselves (the current Advisory council rounds) and hand you one agreed output.
 - **In the pack.** The assigned mind, the overseer and the council mode go into `workflow.json` and `HANDOFF.md`, and the mind's folder ships with the step, so it still works in any chat.
+
+**How it works in the builder:**
+
+- **Step panel, "Done the way of":** type a mind's name, or tap one of the minds suggested for that kind of job. The step then shows the mind's face and "Done like X".
+- **Start panel, "Overseer":** one mind who checks every step.
+- **Start panel, "Your team":** up to six minds, with a toggle between Split by expertise and Decide together.
+  - **Split:** every step without its own mind goes to the team member whose areas fit it best. Ties go to whoever has fewer steps, then to the order you listed them. A mind you pick for a step always wins.
+  - **Together:** the steps run first, then the team argues the result out with `advisory-council`.
+  - **Team only:** a workflow can be just a team with a goal and no steps. In split mode the AI splits the task itself.
+- **The pack:** `HANDOFF.md` gets "Minds on steps", "Your team" and "Overseer" sections. Each step also says who does it.
+  - `workflow.json` gets `overseer`, `team` (with `mode`, `minds` and `council_skill`), and for each step `mind` and `mind_from` (`you` or `team`).
+  - Each mind ships as `skills/<mind>/SKILL.md`, and the step's own SKILL.md names its mind at the top.
+- **Share links:** they carry all three.
+- **Tests:** two e2e tests in `site/e2e/site.spec.ts`, "minds in a workflow".
+- **Not done yet:** on /minds, a button that opens the people you've seated as a team, not as steps.
 
 ## 7 · Build order
 

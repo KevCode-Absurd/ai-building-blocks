@@ -9,20 +9,22 @@ import { SearchIcon } from "./ui";
 import { type Block, type Catalogue, KINDS, TASKS, kindOf, loadPage, portLabel, taskOf, wireSteps } from "./lib/data";
 import PixelFace from "./PixelFace";
 import { suggestNext } from "./lib/suggest";
-import { type Flow, QUEUED, flows, takeQueued, uid, useStore } from "./lib/store";
+import { type Flow, type Team, QUEUED, flows, takeQueued, uid, useStore } from "./lib/store";
+import { leadsOf, mindName } from "./lib/crew";
 import { buildHandoffZip, download, finalOutputs, needsOf, orderFlow, typeMismatches, zipName } from "./lib/handoff";
 import { getBusiness } from "./lib/business";
 import { DownloadDialog } from "./DownloadDialog";
 import { flowFrom, passLabel, planFromGoal, shareUrl, tidy, unpackFlow } from "./lib/plan";
 import { applySteps } from "./lib/flowEdit";
 import { setSearch } from "./lib/router";
-import { EndPanel, FlowEdge, type FlowEdgeT, GoalBox, STEP_S, Sample, StartPanel, StepList, StepPanel, sampleOf } from "./BuilderParts";
+import { EndPanel, FlowEdge, type FlowEdgeT, GoalBox, STEP_S, Sample, StartPanel, type StartPatch, StepList, StepPanel, sampleOf } from "./BuilderParts";
 
-type NodeData = { slug: string; ecommerce?: boolean; step?: number; run?: number; delay?: number; role?: string; notes?: string };
+/** mind is the one you picked for the step; lead is who actually leads it (yours, or your team's pick), worked out each time. */
+type NodeData = { slug: string; ecommerce?: boolean; step?: number; run?: number; delay?: number; role?: string; notes?: string; mind?: string; lead?: string; leadTeam?: boolean };
 type BlockNode = Node<NodeData, "block">;
 // Start and End aren't steps. They're drawn from the steps each time, so they can't be dragged off, deleted or saved wrong.
 const START = "__start", END = "__end";
-type EndData = { which: "start" | "end"; line: string };
+type EndData = { which: "start" | "end"; line: string; crew?: string };
 type EndNode = Node<EndData, "terminal">;
 const TerminalView = memo(function TerminalView({ data }: NodeProps<EndNode>) {
   const start = data.which === "start";
@@ -31,6 +33,7 @@ const TerminalView = memo(function TerminalView({ data }: NodeProps<EndNode>) {
       {!start && <Handle type="target" position={Position.Left} isConnectable={false} />}
       <b>{start ? "Start" : "End"}</b>
       <span>{data.line}</span>
+      {data.crew && <span className="t-crew" data-testid="start-crew">{data.crew}</span>}
       {start && <Handle type="source" position={Position.Right} isConnectable={false} />}
     </div>
   );
@@ -47,6 +50,9 @@ const BlockNodeView = memo(function BlockNodeView({ id, data }: NodeProps<BlockN
       <Handle type="target" position={Position.Left} />
       <div className="top">{b ? <span className="kind">{KINDS.find((k) => k.id === kindOf(b))!.name}</span> : <span className="small">Missing block</span>}<span className="step-n">{data.step ? `Step ${data.step}` : ""}</span></div>
       <div className="nm">{b?.type === "mind" && <PixelFace face={b.face} area={b.area} slug={b.slug} size={28} className="node-face" />}{b?.name ?? data.slug}</div>
+      {data.lead && c?.bySlug[data.lead] && (
+        <div className="node-mind" data-testid="node-mind"><PixelFace face={c.bySlug[data.lead].face} area={c.bySlug[data.lead].area} slug={data.lead} size={16} />Done like {mindName(c, data.lead)}{data.leadTeam ? " (team)" : ""}</div>
+      )}
       {(data.role || data.notes) && <div className="node-role" data-testid="node-role">{data.role ? `Role: ${data.role}` : "Has your notes"}</div>}
       {b && (
         <div className="io">
@@ -94,17 +100,19 @@ function ViewControls({ full, onFull, edit, onTidy }: { full: boolean; onFull: (
 }
 
 const fromFlow = (f: Pick<Flow, "nodes" | "edges">) => ({
-  nodes: f.nodes.map((n): BlockNode => ({ id: n.id, type: "block", position: { x: n.x, y: n.y }, data: { slug: n.slug, ecommerce: n.ecommerce, role: n.role, notes: n.notes } })),
+  nodes: f.nodes.map((n): BlockNode => ({ id: n.id, type: "block", position: { x: n.x, y: n.y }, data: { slug: n.slug, ecommerce: n.ecommerce, role: n.role, notes: n.notes, mind: n.mind } })),
   edges: f.edges.map((e): FlowEdgeT => ({ id: e.id, source: e.from, target: e.to, type: "flow" })),
 });
-type Ends = { goal: string; notes: string; ended: boolean };
+type Ends = { goal: string; notes: string; ended: boolean; overseer?: string; team?: Team };
+const endsOf = (f: Flow | null): Ends => ({ goal: f?.goal ?? "", notes: f?.notes ?? "", ended: !!f?.ended, overseer: f?.overseer, team: f?.team });
 const toFlow = (id: string, name: string, nodes: BlockNode[], edges: FlowEdgeT[], ends: Ends): Flow => ({
   id, name, updated: 0,
-  nodes: nodes.map((n) => ({ id: n.id, slug: n.data.slug, x: Math.round(n.position.x), y: Math.round(n.position.y), ...(n.data.ecommerce ? { ecommerce: true } : {}), ...(n.data.role ? { role: n.data.role } : {}), ...(n.data.notes ? { notes: n.data.notes } : {}) })),
+  nodes: nodes.map((n) => ({ id: n.id, slug: n.data.slug, x: Math.round(n.position.x), y: Math.round(n.position.y), ...(n.data.ecommerce ? { ecommerce: true } : {}), ...(n.data.role ? { role: n.data.role } : {}), ...(n.data.notes ? { notes: n.data.notes } : {}), ...(n.data.mind ? { mind: n.data.mind } : {}) })),
   edges: edges.map((e) => ({ id: e.id, from: e.source, to: e.target })),
   ...(ends.goal ? { goal: ends.goal } : {}), ...(ends.notes ? { notes: ends.notes } : {}), ...(ends.ended ? { ended: true } : {}),
+  ...(ends.overseer ? { overseer: ends.overseer } : {}), ...(ends.team?.minds.length ? { team: ends.team } : {}),
 });
-const shape = (f: Flow) => JSON.stringify([f.name, f.goal ?? "", f.notes ?? "", f.nodes.map((n) => [n.id, n.slug, n.x, n.y, !!n.ecommerce, n.role ?? "", n.notes ?? ""]), f.edges.map((e) => [e.from, e.to])]);
+const shape = (f: Flow) => JSON.stringify([f.name, f.goal ?? "", f.notes ?? "", f.overseer ?? "", f.team ?? null, f.nodes.map((n) => [n.id, n.slug, n.x, n.y, !!n.ecommerce, n.role ?? "", n.notes ?? "", n.mind ?? ""]), f.edges.map((e) => [e.from, e.to])]);
 const sameFlow = (a: Flow, b: Flow) => shape(a) === shape(b);
 function chain(c: Catalogue, slugs: string[], start = { x: 40, y: 110 }) {
   const nodes: BlockNode[] = slugs.map((slug, i) => ({ id: uid(), type: "block", position: { x: start.x + (i % 3) * 360, y: start.y + Math.floor(i / 3) * 190 }, data: { slug } }));
@@ -194,7 +202,7 @@ function Stage({ c, toast }: { c: Catalogue; toast: (m: string) => void }) {
   const initial = useMemo(() => shared ?? flows.draft(), [shared]);
   const [flowId, setFlowId] = useState(initial?.id ?? uid());
   const [name, setName] = useState(initial?.name ?? "Untitled workflow");
-  const [ends, setEnds] = useState<Ends>({ goal: initial?.goal ?? "", notes: initial?.notes ?? "", ended: !!initial?.ended });
+  const [ends, setEnds] = useState<Ends>(endsOf(initial));
   const start = useMemo(() => (initial ? fromFlow(initial) : { nodes: [], edges: [] }), [initial]);
   const [nodes, setNodes, onNodesChange] = useNodesState<BlockNode>(start.nodes);
   const [edges, setEdges, onEdgesChange] = useEdgesState<FlowEdgeT>(start.edges);
@@ -246,7 +254,7 @@ function Stage({ c, toast }: { c: Catalogue; toast: (m: string) => void }) {
     setFull(true); refit();
   };
 
-  const load = (f: Flow) => { const g = fromFlow(f); setFlowId(f.id); setName(f.name); setEnds({ goal: f.goal ?? "", notes: f.notes ?? "", ended: !!f.ended }); setNodes(g.nodes); setEdges(g.edges); setInspect(null); refit(); };
+  const load = (f: Flow) => { const g = fromFlow(f); setFlowId(f.id); setName(f.name); setEnds(endsOf(f)); setNodes(g.nodes); setEdges(g.edges); setInspect(null); refit(); };
 
   // Blocks, workflows and kits sent here from anywhere on the page.
   useEffect(() => {
@@ -256,7 +264,7 @@ function Stage({ c, toast }: { c: Catalogue; toast: (m: string) => void }) {
       if (!known.length) return;
       if (q.name) {
         const g = chain(c, known);
-        setFlowId(uid()); setName(q.name); setEnds({ goal: "", notes: "", ended: false }); setNodes(g.nodes); setEdges(g.edges);
+        setFlowId(uid()); setName(q.name); setEnds(endsOf(null)); setNodes(g.nodes); setEdges(g.edges);
       } else {
         const maxY = nodesRef.current.reduce((m, n) => Math.max(m, n.position.y), -80);
         const added = chain(c, known, { x: 40, y: maxY + 190 });
@@ -289,6 +297,8 @@ function Stage({ c, toast }: { c: Catalogue; toast: (m: string) => void }) {
     return () => { window.removeEventListener("pagehide", flush); flush(); };
   }, []);
   // Saving adds the End node, wired to every last step.
+  const teamSize = ends.team?.minds.length ?? 0;
+  const canRun = nodes.length > 0 || teamSize > 0;
   const save = () => { flows.save({ ...flow, name: name.trim() || "Untitled workflow", ended: true }); setEnds((e) => ({ ...e, ended: true })); toast(`Saved “${name.trim() || "Untitled workflow"}”. Open it again from Saved workflows.`); };
 
   // Undo and redo: a snapshot of the steps and connections once each change settles.
@@ -363,11 +373,14 @@ function Stage({ c, toast }: { c: Catalogue; toast: (m: string) => void }) {
   const anchor = anchorNode?.data.slug ?? null;
   const inFlow = useMemo(() => new Set(nodes.map((n) => n.data.slug)), [nodes]);
   const stepOf = useMemo(() => Object.fromEntries((order ?? []).map((o) => [o.node.id, o.step])), [order]);
+  const leads = useMemo(() => (order ? leadsOf(c, flow, order) : {}), [c, flow, order]);
   const viewNodes = useMemo(() => nodes.map((n) => {
     const step = stepOf[n.id];
-    const want = { step, run: run || undefined, delay: run && step ? (step - 1) * STEP_S : undefined };
-    return n.data.step === want.step && n.data.run === want.run && n.data.delay === want.delay ? n : { ...n, data: { ...n.data, ...want } };
-  }), [nodes, stepOf, run]);
+    const lead = step ? leads[step] : undefined;
+    const want = { step, run: run || undefined, delay: run && step ? (step - 1) * STEP_S : undefined, lead: lead?.mind, leadTeam: lead?.from === "team" || undefined };
+    return n.data.step === want.step && n.data.run === want.run && n.data.delay === want.delay && n.data.lead === want.lead && n.data.leadTeam === want.leadTeam ? n : { ...n, data: { ...n.data, ...want } };
+  }), [nodes, stepOf, run, leads]);
+  const crewLine = [teamSize ? `Team of ${teamSize}` : "", ends.overseer ? `Overseer: ${mindName(c, ends.overseer)}` : ""].filter(Boolean).join(". ");
   const finalsNow = useMemo(() => (order ? finalOutputs(c, flow, order) : []), [c, flow, order]);
   const showEnd = ends.ended && nodes.length > 0;
   // React Flow measures every node it draws; Start and End aren't in the saved nodes, so their sizes are kept here.
@@ -379,12 +392,12 @@ function Stage({ c, toast }: { c: Catalogue; toast: (m: string) => void }) {
     const goal = ends.goal.trim();
     const start: EndNode = { id: START, type: "terminal", draggable: false, deletable: false, connectable: false, measured: termSize[START],
       position: { x: (xs.length ? Math.min(...xs) : 240) - 220, y: avgY(nodes.filter((n) => !into.has(n.id))) + 18 },
-      data: { which: "start", line: goal ? (goal.length > 42 ? `${goal.slice(0, 40)}…` : goal) : "Say what it's for" } };
+      data: { which: "start", line: goal ? (goal.length > 42 ? `${goal.slice(0, 40)}…` : goal) : "Say what it's for", crew: crewLine || undefined } };
     const end: EndNode = { id: END, type: "terminal", draggable: false, deletable: false, connectable: false, measured: termSize[END],
       position: { x: Math.max(...xs, 0) + 320, y: avgY(nodes.filter((n) => !outOf.has(n.id))) + 18 },
       data: { which: "end", line: finalsNow.length ? `Hands back ${finalsNow.length} thing${finalsNow.length > 1 ? "s" : ""}` : "What you get" } };
     return [start, ...viewNodes, ...(showEnd ? [end] : [])];
-  }, [nodes, edges, viewNodes, ends.goal, showEnd, finalsNow, termSize]);
+  }, [nodes, edges, viewNodes, ends.goal, showEnd, finalsNow, termSize, crewLine]);
   const liveNode = run && order ? order[runStep - 1]?.node : undefined;
   const liveSample = liveNode ? samples[liveNode.slug] : "";
   const viewEdges = useMemo(() => {
@@ -437,7 +450,7 @@ function Stage({ c, toast }: { c: Catalogue; toast: (m: string) => void }) {
     setNodes(fromFlow(t).nodes.map((n) => ({ ...n, selected: nodes.find((x) => x.id === n.id)?.selected })));
     refit();
   };
-  const setNotes = useCallback((id: string, patch: { role?: string; notes?: string }) => {
+  const setNotes = useCallback((id: string, patch: { role?: string; notes?: string; mind?: string }) => {
     setNodes((ns) => ns.map((n) => (n.id === id ? { ...n, data: { ...n.data, ...patch } } : n)));
   }, [setNodes]);
   const actions = useMemo(() => ({
@@ -451,7 +464,7 @@ function Stage({ c, toast }: { c: Catalogue; toast: (m: string) => void }) {
     const g = fromFlow(applySteps(c, flow, name, steps, true));
     setNodes(g.nodes); setEdges(g.edges);
   };
-  const newFlow = () => { stopRun(); setFlowId(uid()); setName("Untitled workflow"); setEnds({ goal: "", notes: "", ended: false }); setNodes([]); setEdges([]); setInspect(null); flows.open(null); };
+  const newFlow = () => { stopRun(); setFlowId(uid()); setName("Untitled workflow"); setEnds(endsOf(null)); setNodes([]); setEdges([]); setInspect(null); flows.open(null); };
   const openFlow = (id: string) => { const f = flows.get(id); if (!f) return; stopRun(); load(f); flows.open(f.id); };
   const share = async () => {
     const url = shareUrl({ ...flow, name: name.trim() || "Shared workflow" });
@@ -504,7 +517,7 @@ function Stage({ c, toast }: { c: Catalogue; toast: (m: string) => void }) {
           <div className="stage-bar">
             <input className="flow-name" value={name} onChange={(e) => setName(e.target.value)} aria-label="Workflow name" />
             <span className="spacer" />
-            <button className="btn btn-ghost btn-sm" onClick={save} disabled={!nodes.length || isSaved} data-testid="save-flow">{isSaved ? "Saved" : "Save"}</button>
+            <button className="btn btn-ghost btn-sm" onClick={save} disabled={!canRun || isSaved} data-testid="save-flow">{isSaved ? "Saved" : "Save"}</button>
             <div className="bar-more" ref={moreRef}>
               <button className="btn btn-ghost btn-sm bar-more-btn" aria-expanded={more} aria-haspopup="true" onClick={() => setMore(!more)} data-testid="bar-more">More</button>
               <div className={`bar-extra${more ? " open" : ""}`} onClick={(e) => { if ((e.target as HTMLElement).closest("button")) setMore(false); }}>
@@ -520,7 +533,7 @@ function Stage({ c, toast }: { c: Catalogue; toast: (m: string) => void }) {
                 {savedVersion && <button className="btn btn-ghost btn-sm" onClick={() => { if (confirm(`Delete "${name}"?`)) { flows.remove(flowId); newFlow(); } }}>Delete</button>}
               </div>
             </div>
-            <button className="btn btn-primary btn-sm" onClick={askDownload} disabled={!nodes.length} data-testid="download-handoff">Download the workflow</button>
+            <button className="btn btn-primary btn-sm" onClick={askDownload} disabled={!canRun} data-testid="download-handoff">Download the workflow</button>
           </div>
           {narrow ? (
             <div className="stage-list">
@@ -531,9 +544,9 @@ function Stage({ c, toast }: { c: Catalogue; toast: (m: string) => void }) {
                   <span className="small">Steps run top to bottom. Use the arrows to reorder.</span>
                 </div>
               )}
-              <button className="sl-end" onClick={() => setInspect(START)} data-testid="list-start"><b>Start</b><small>{ends.goal.trim() || "Tap to say what it's for"}</small></button>
-              {nodes.length ? <StepList c={c} order={listOrder} run={run} live={run ? runStep : 0} samples={samples} onOpen={setInspect} onMove={moveStep} onRemove={actions.remove} /> : (
-                <div className="list-empty"><GoalBox onPlan={planGoal} big /><p className="small">Or press + on a suggestion above, or pick a ready workflow.</p></div>
+              <button className="sl-end" onClick={() => setInspect(START)} data-testid="list-start"><b>Start</b><small>{ends.goal.trim() || "Tap to say what it's for"}{crewLine ? `. ${crewLine}` : ""}</small></button>
+              {nodes.length ? <StepList c={c} order={listOrder} leads={leads} run={run} live={run ? runStep : 0} samples={samples} onOpen={setInspect} onMove={moveStep} onRemove={actions.remove} /> : (
+                <div className="list-empty"><GoalBox onPlan={planGoal} big /><p className="small">Or press + on a suggestion above, or pick a ready workflow.</p><button className="link-btn" onClick={() => setInspect(START)} data-testid="empty-team">Or hand the whole job to a team of minds</button></div>
               )}
               {showEnd && <button className="sl-end" onClick={() => setInspect(END)} data-testid="list-end"><b>End</b><small>{finalsNow.length ? `Hands back ${finalsNow.join(", ").toLowerCase()}` : "What you get"}</small></button>}
               {bottom}
@@ -553,12 +566,13 @@ function Stage({ c, toast }: { c: Catalogue; toast: (m: string) => void }) {
                 <Background variant={BackgroundVariant.Dots} gap={22} size={1.2} />
                 <ViewControls full={full} onFull={toggleFull} edit={edit} onTidy={tidyUp} />
               </ReactFlow>
-              {!nodes.length && (
+              {!nodes.length && inspect !== START && (
                 <div className="stage-empty">
                   <div>
                     <h3 className="h3">Say what you want, and get the steps</h3>
                     <GoalBox onPlan={planGoal} big />
                     <p className="small">Or drag a block here, press + on a suggestion, or start from a ready workflow on the left.</p>
+                    <button className="link-btn" onClick={() => setInspect(START)} data-testid="empty-team">{teamSize ? `Your team of ${teamSize} is set. Open Start to change it` : "Or hand the whole job to a team of minds"}</button>
                   </div>
                 </div>
               )}
@@ -566,7 +580,7 @@ function Stage({ c, toast }: { c: Catalogue; toast: (m: string) => void }) {
               {bottom}
             </>
           )}
-          {inspect === START ? <StartPanel goal={ends.goal} notes={ends.notes} onChange={(p) => setEnds((e) => ({ ...e, ...p }))} onClose={() => setInspect(null)} />
+          {inspect === START ? <StartPanel c={c} goal={ends.goal} notes={ends.notes} overseer={ends.overseer ?? ""} team={ends.team} onChange={(p: StartPatch) => setEnds((e) => ({ ...e, ...p }))} onClose={() => setInspect(null)} />
             : inspect === END ? <EndPanel finals={finalsNow} onClose={() => setInspect(null)} />
             : inspect && <StepPanel c={c} flow={flow} order={order} nodeId={inspect} onClose={() => setInspect(null)} onRemove={actions.remove} onNotes={setNotes} />}
         </div>

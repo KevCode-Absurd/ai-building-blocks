@@ -1,13 +1,57 @@
 // The pieces around the builder's canvas: connections that say what they carry, the step panel,
 // the "what you'll need" list, starting from a goal, and the step list phones get instead of the canvas.
-import { memo, useEffect, useRef, useState, type CSSProperties, type FormEvent } from "react";
+import { memo, useEffect, useMemo, useRef, useState, type CSSProperties, type FormEvent } from "react";
 import { BaseEdge, EdgeLabelRenderer, getSmoothStepPath, type Edge, type EdgeProps } from "@xyflow/react";
 import { type Catalogue, type Page, KINDS, kindOf, loadPage, pathOf, portLabel, taskOf } from "./lib/data";
 import { useTyped } from "./lib/typing";
 import type { Ordered } from "./lib/handoff";
 import { passLabel, passes } from "./lib/plan";
 import { GOAL_EXAMPLES } from "./lib/goal";
-import type { Flow } from "./lib/store";
+import { type Flow, type Team, TEAM_MAX } from "./lib/store";
+import { type Lead, leadsOf, mindName, mindsIn, suggestMinds } from "./lib/crew";
+import PixelFace from "./PixelFace";
+
+type NotesPatch = { role?: string; notes?: string; mind?: string };
+
+/** Pick a mind by typing their name. Once picked, it shows their face and name, with a way to change it. */
+export function MindPick({ c, value, onPick, label, placeholder, exclude = [], testid }: {
+  c: Catalogue; value: string | null; onPick: (slug: string | null) => void; label: string; placeholder: string; exclude?: string[]; testid: string;
+}) {
+  const [q, setQ] = useState("");
+  const all = useMemo(() => mindsIn(c), [c]);
+  const picked = value ? c.bySlug[value] : null;
+  if (picked) {
+    return (
+      <div className="mind-picked" data-testid={`${testid}-picked`}>
+        <PixelFace face={picked.face} area={picked.area} slug={picked.slug} size={28} />
+        <span><b>{mindName(c, picked.slug)}</b><small>{picked.seats?.[0] ?? ""}</small></span>
+        <button type="button" className="link-btn" onClick={() => onPick(null)} data-testid={`${testid}-clear`}>Remove</button>
+      </div>
+    );
+  }
+  const find = (v: string) => { const t = v.trim().toLowerCase(); return all.find((m) => !exclude.includes(m.slug) && (m.name.toLowerCase() === t || mindName(c, m.slug).toLowerCase() === t)); };
+  const list = `minds-${testid}`;
+  return (
+    <label className="sp-field">
+      <span>{label}</span>
+      <input list={list} value={q} placeholder={placeholder} data-testid={testid}
+        onChange={(e) => { const m = find(e.target.value); if (m) { onPick(m.slug); setQ(""); } else setQ(e.target.value); }} />
+      <datalist id={list}>{all.filter((m) => !exclude.includes(m.slug)).map((m) => <option key={m.slug} value={mindName(c, m.slug)} />)}</datalist>
+    </label>
+  );
+}
+
+/** A face and a name for a mind already on the team. */
+function Member({ c, slug, onRemove }: { c: Catalogue; slug: string; onRemove: () => void }) {
+  const m = c.bySlug[slug];
+  return (
+    <li data-testid="team-member" data-slug={slug}>
+      {m && <PixelFace face={m.face} area={m.area} slug={slug} size={24} />}
+      <b>{mindName(c, slug)}</b>
+      <button type="button" className="icon-btn" onClick={onRemove} aria-label={`Take ${mindName(c, slug)} off the team`}>×</button>
+    </li>
+  );
+}
 
 /** How long each step lights up for in a preview, in seconds: long enough to read a few lines of its result. */
 export const STEP_S = 2.4;
@@ -56,7 +100,7 @@ export const FlowEdge = memo(function FlowEdge({ id, sourceX, sourceY, targetX, 
 
 /** What one step needs and gives back, and where each comes from or goes. */
 /** The person's own instructions for one step: a role and free notes. They go into the download (lib/handoff.ts withNotes). */
-function StepNotes({ id, role, notes, seats, onNotes }: { id: string; role: string; notes: string; seats: string[]; onNotes: (id: string, patch: { role?: string; notes?: string }) => void }) {
+function StepNotes({ id, role, notes, seats, onNotes }: { id: string; role: string; notes: string; seats: string[]; onNotes: (id: string, patch: NotesPatch) => void }) {
   const list = `seats-${id}`;
   return (
     <div className="sp-notes" data-testid="step-notes">
@@ -79,7 +123,47 @@ function StepNotes({ id, role, notes, seats, onNotes }: { id: string; role: stri
 }
 
 /** The Start node: what the whole workflow is for, and notes every step should follow. */
-export function StartPanel({ goal, notes, onChange, onClose }: { goal: string; notes: string; onChange: (patch: { goal?: string; notes?: string }) => void; onClose: () => void }) {
+export type StartPatch = { goal?: string; notes?: string; overseer?: string; team?: Team };
+const MODES: { id: Team["mode"]; name: string; line: string }[] = [
+  { id: "split", name: "Split by expertise", line: "Each part of the job goes to the mind best suited to it. Their parts are merged into one final answer." },
+  { id: "together", name: "Decide together", line: "Every mind takes the whole job. They argue it out and hand back one agreed answer." },
+];
+
+/** The minds working on the whole workflow: one overseer who checks every step, and a team of up to six below you. */
+function Crew({ c, overseer, team, onChange }: { c: Catalogue; overseer: string; team: Team | undefined; onChange: (p: StartPatch) => void }) {
+  const minds = team?.minds ?? [];
+  const mode = team?.mode ?? "split";
+  const setTeam = (next: string[], m = mode) => onChange({ team: next.length ? { minds: next, mode: m } : undefined });
+  return (
+    <>
+      <div className="sp-crew" data-testid="overseer">
+        <h4 className="sp-h">Overseer</h4>
+        <p className="small">Optional. One mind checks every step against their own standards and sends weak work back once.</p>
+        <MindPick c={c} value={overseer || null} onPick={(s) => onChange({ overseer: s ?? undefined })} label="Mind" placeholder="For example: David Ogilvy" testid="overseer-input" />
+      </div>
+      <div className="sp-crew" data-testid="team">
+        <h4 className="sp-h">Your team</h4>
+        <p className="small">Optional. You sit on top with the final say. Add up to {TEAM_MAX} minds below you.</p>
+        {minds.length > 0 && <ul className="team-list">{minds.map((s) => <Member key={s} c={c} slug={s} onRemove={() => setTeam(minds.filter((x) => x !== s))} />)}</ul>}
+        {minds.length < TEAM_MAX
+          ? <MindPick c={c} value={null} exclude={minds} onPick={(s) => s && setTeam([...minds, s])} label={minds.length ? "Add another" : "Add a mind"} placeholder="For example: Ratan Tata" testid="team-input" />
+          : <p className="small">That's a full team of {TEAM_MAX}.</p>}
+        {minds.length > 0 && (
+          <>
+            <div className="seg team-mode" role="group" aria-label="How the team works">
+              {MODES.map((m) => <button key={m.id} type="button" aria-pressed={mode === m.id} onClick={() => setTeam(minds, m.id)} data-testid={`team-${m.id}`}>{m.name}</button>)}
+            </div>
+            <p className="small" data-testid="team-mode-line">{MODES.find((m) => m.id === mode)!.line}</p>
+          </>
+        )}
+      </div>
+    </>
+  );
+}
+
+export function StartPanel({ c, goal, notes, overseer, team, onChange, onClose }: {
+  c: Catalogue; goal: string; notes: string; overseer: string; team: Team | undefined; onChange: (patch: StartPatch) => void; onClose: () => void;
+}) {
   const ref = useRef<HTMLElement>(null);
   useEffect(() => { ref.current?.focus(); }, []);
   return (
@@ -96,6 +180,7 @@ export function StartPanel({ goal, notes, onChange, onClose }: { goal: string; n
           <span>Notes for every step</span>
           <textarea value={notes} maxLength={2000} rows={3} placeholder="For example: We sell to small gyms. Keep every answer short." onChange={(e) => onChange({ notes: e.target.value })} data-testid="start-notes" />
         </label>
+        <Crew c={c} overseer={overseer} team={team} onChange={onChange} />
       </div>
     </aside>
   );
@@ -120,7 +205,7 @@ export function EndPanel({ finals, onClose }: { finals: string[]; onClose: () =>
 
 export function StepPanel({ c, flow, order, nodeId, onClose, onRemove, onNotes }: {
   c: Catalogue; flow: Flow; order: Ordered[] | null; nodeId: string; onClose: () => void; onRemove: (id: string) => void;
-  onNotes: (id: string, patch: { role?: string; notes?: string }) => void;
+  onNotes: (id: string, patch: NotesPatch) => void;
 }) {
   const node = flow.nodes.find((n) => n.id === nodeId);
   const b = node && c.bySlug[node.slug];
@@ -176,6 +261,7 @@ export function StepPanel({ c, flow, order, nodeId, onClose, onRemove, onNotes }
               );
             })}
           </ul>
+          {b.type !== "mind" && <StepMind c={c} flow={flow} order={order} nodeId={node.id} onNotes={onNotes} />}
           <StepNotes id={node.id} role={node.role ?? ""} notes={node.notes ?? ""} seats={b.seats ?? []} onNotes={onNotes} />
           {page?.output_shape && (
             <>
@@ -194,6 +280,26 @@ export function StepPanel({ c, flow, order, nodeId, onClose, onRemove, onNotes }
   );
 }
 
+
+/** Hand one step to a mind: the step's skill decides what to make, and the mind's method and voice decide how. */
+function StepMind({ c, flow, order, nodeId, onNotes }: { c: Catalogue; flow: Flow; order: Ordered[] | null; nodeId: string; onNotes: (id: string, patch: NotesPatch) => void }) {
+  const node = flow.nodes.find((n) => n.id === nodeId)!;
+  const b = c.bySlug[node.slug];
+  const step = order?.find((o) => o.node.id === nodeId)?.step;
+  const lead = step && order ? leadsOf(c, flow, order)[step] : undefined;
+  const ideas = useMemo(() => suggestMinds(c, b), [c, b]);
+  return (
+    <div className="sp-crew" data-testid="step-mind">
+      <h4 className="sp-h">Done the way of</h4>
+      <p className="small">Optional. Pick a mind, and this step is done with their method and voice. Their skill goes in the download.</p>
+      <MindPick c={c} value={node.mind ?? null} onPick={(s) => onNotes(node.id, { mind: s ?? undefined })} label="Mind" placeholder="For example: Claude Hopkins" testid="step-mind-input" />
+      {!node.mind && lead?.from === "team" && <p className="small" data-testid="team-lead">Your team gives this step to <b>{mindName(c, lead.mind)}</b>. Pick someone here to change that.</p>}
+      {!node.mind && ideas.length > 0 && (
+        <div className="sp-seats">{ideas.map((m) => <button key={m.slug} type="button" className="chip" onClick={() => onNotes(node.id, { mind: m.slug })} data-testid="mind-idea">{mindName(c, m.slug)}</button>)}</div>
+      )}
+    </div>
+  );
+}
 
 /** Type what you want at the end; the builder lays out the steps. */
 export function GoalBox({ onPlan, big }: { onPlan: (goal: string) => boolean; big?: boolean }) {
@@ -215,8 +321,8 @@ export function GoalBox({ onPlan, big }: { onPlan: (goal: string) => boolean; bi
 }
 
 /** Phones: the workflow as a numbered list, with arrows to reorder, instead of boxes to drag. */
-export function StepList({ c, order, run, live, samples, onOpen, onMove, onRemove }: {
-  c: Catalogue; order: Ordered[]; run: number; live: number; samples: Record<string, string>; onOpen: (id: string) => void; onMove: (from: number, to: number) => void; onRemove: (id: string) => void;
+export function StepList({ c, order, leads = {}, run, live, samples, onOpen, onMove, onRemove }: {
+  c: Catalogue; order: Ordered[]; leads?: Record<number, Lead>; run: number; live: number; samples: Record<string, string>; onOpen: (id: string) => void; onMove: (from: number, to: number) => void; onRemove: (id: string) => void;
 }) {
   return (
     <ol className="step-list" data-testid="step-list">
@@ -236,7 +342,7 @@ export function StepList({ c, order, run, live, samples, onOpen, onMove, onRemov
               <span className="sl-n">{o.step}</span>
               <button className="sl-txt" onClick={() => onOpen(o.node.id)} data-testid="step-open">
                 <b>{b?.name ?? o.node.slug}</b>
-                <small>{o.node.role ? `Role: ${o.node.role}` : b ? `${taskOf(b).name}. Tap to see what it needs or add notes` : "No longer in the library"}</small>
+                <small>{leads[o.step] ? `Done like ${mindName(c, leads[o.step].mind)}${o.node.role ? `, as ${o.node.role}` : ""}` : o.node.role ? `Role: ${o.node.role}` : b ? `${taskOf(b).name}. Tap to see what it needs or add notes` : "No longer in the library"}</small>
               </button>
               <span className="sl-ctl">
                 <button className="icon-btn" onClick={() => onMove(i, i - 1)} disabled={i === 0} aria-label={`Move ${b?.name ?? "step"} up`} data-testid="step-up">↑</button>

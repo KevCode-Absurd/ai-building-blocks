@@ -808,3 +808,74 @@ test("minds: every person on the roster has a black and white pixel face, and se
   await page.goto(`/minds/${slug}`);
   await expect(page.locator("svg.bp-face")).toBeVisible();
 });
+
+test("minds in a workflow: a mind on a step, an overseer and a split team all reach the pack", async ({ page }, info) => {
+  const builder = await planGoal(page, "a landing page for my best ad");
+  const n = await builder.getByTestId("flow-node").count();
+  expect(n).toBeGreaterThan(1);
+
+  // A mind on one step: type their name and their face shows on the step.
+  await builder.getByTestId("flow-node").first().click();
+  const panel = builder.getByTestId("step-panel");
+  await panel.getByTestId("step-mind-input").fill("Claude Hopkins");
+  await expect(panel.getByTestId("step-mind-input-picked")).toContainText("Claude Hopkins");
+  await expect(builder.getByTestId("node-mind").first()).toHaveText("Done like Claude Hopkins");
+
+  // An overseer and a team of two, split by expertise, set on Start.
+  await builder.getByTestId("flow-start").click();
+  const start = builder.getByTestId("start-panel");
+  await start.getByTestId("start-goal").fill("A page that sells the bundle");
+  await start.getByTestId("overseer-input").fill("David Ogilvy");
+  await expect(start.getByTestId("overseer-input-picked")).toContainText("David Ogilvy");
+  await start.getByTestId("team-input").fill("John Caples");
+  await start.getByTestId("team-input").fill("Dieter Rams");
+  await expect(start.getByTestId("team-member")).toHaveCount(2);
+  await expect(start.getByTestId("team-split")).toHaveAttribute("aria-pressed", "true");
+  await expect(builder.getByTestId("start-crew")).toHaveText("Team of 2. Overseer: David Ogilvy");
+  // Every other step now has a lead from the team.
+  await expect(builder.getByTestId("node-mind")).toHaveCount(n);
+
+  await builder.getByTestId("download-handoff").click();
+  const [dl] = await Promise.all([page.waitForEvent("download"), page.getByTestId("needs-download").click()]);
+  const path = info.outputPath(dl.suggestedFilename());
+  await dl.saveAs(path);
+  const files = unzipSync(new Uint8Array(fs.readFileSync(path)));
+  const handoff = strFromU8(files["HANDOFF.md"]);
+  expect(handoff).toContain("## Your team");
+  expect(handoff).toContain("split by expertise");
+  expect(handoff).toContain("## Overseer");
+  expect(handoff).toContain("- **Done the way of:** Claude Hopkins. Read `skills/claude-hopkins/SKILL.md`");
+  expect(handoff).toContain("(from your team)");
+  const wf = JSON.parse(strFromU8(files["workflow.json"]));
+  expect(wf.overseer).toBe("david-ogilvy");
+  expect(wf.team).toEqual({ mode: "split", minds: ["john-caples", "dieter-rams"], council_skill: null });
+  expect(wf.steps[0].mind).toBe("claude-hopkins");
+  expect(wf.steps[0].mind_from).toBe("you");
+  expect(wf.steps.slice(1).every((s: { mind_from: string }) => s.mind_from === "team")).toBe(true);
+  for (const m of ["claude-hopkins", "david-ogilvy", "john-caples", "dieter-rams"]) expect(files[`skills/${m}/SKILL.md`], m).toBeTruthy();
+  expect(strFromU8(files[`skills/${wf.steps[0].skill}/SKILL.md`])).toContain("- **Done the way of:** Claude Hopkins.");
+});
+
+test("minds in a workflow: a team that decides together can take a job with no steps", async ({ page }, info) => {
+  await page.goto("/#build");
+  const builder = page.getByTestId("builder");
+  await builder.getByTestId("empty-team").click();
+  const start = builder.getByTestId("start-panel");
+  await start.getByTestId("start-goal").fill("Should we open a second shop?");
+  for (const m of ["Ratan Tata", "Warren Buffett", "Steve Jobs"]) await start.getByTestId("team-input").fill(m);
+  await start.getByTestId("team-together").click();
+  await expect(start.getByTestId("team-mode-line")).toContainText("argue it out");
+  await builder.getByTestId("download-handoff").click();
+  const [dl] = await Promise.all([page.waitForEvent("download"), page.getByTestId("needs-download").click()]);
+  const path = info.outputPath(dl.suggestedFilename());
+  await dl.saveAs(path);
+  const files = unzipSync(new Uint8Array(fs.readFileSync(path)));
+  const handoff = strFromU8(files["HANDOFF.md"]);
+  expect(handoff).toContain("decide together");
+  expect(handoff).toContain("skills/advisory-council/SKILL.md");
+  const wf = JSON.parse(strFromU8(files["workflow.json"]));
+  expect(wf.steps).toEqual([]);
+  expect(wf.team.mode).toBe("together");
+  expect(wf.team.minds).toEqual(["ratan-tata", "warren-buffett", "steve-jobs"]);
+  for (const s of ["ratan-tata", "warren-buffett", "steve-jobs", "advisory-council"]) expect(files[`skills/${s}/SKILL.md`], s).toBeTruthy();
+});

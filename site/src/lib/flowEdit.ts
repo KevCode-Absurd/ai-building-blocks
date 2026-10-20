@@ -29,8 +29,8 @@ export function applySteps(c: Catalogue, base: Flow | null, name: string, steps:
   const old = base ? Object.fromEntries(base.nodes.map((n) => [n.id, n])) : {};
   const rewire = !base || reordered || isAutoWired(c, base);
   if (rewire) {
-    const nodes: FlowNode[] = steps.map((s, i) => ({ id: s.id, slug: s.slug, ecommerce: old[s.id]?.ecommerce, role: old[s.id]?.role, notes: old[s.id]?.notes, ...grid(i) }));
-    return { id: base?.id ?? uid(), name, updated: Date.now(), nodes, edges: autoEdges(c, steps), goal: base?.goal, notes: base?.notes, ended: base?.ended };
+    const nodes: FlowNode[] = steps.map((s, i) => ({ id: s.id, slug: s.slug, ecommerce: old[s.id]?.ecommerce, role: old[s.id]?.role, notes: old[s.id]?.notes, mind: old[s.id]?.mind, ...grid(i) }));
+    return { id: base?.id ?? uid(), name, updated: Date.now(), nodes, edges: autoEdges(c, steps), goal: base?.goal, notes: base?.notes, ended: base?.ended, overseer: base?.overseer, team: base?.team };
   }
   // Hand-made connections: keep them, close the gap where a step was removed, hang new steps after the one above.
   const keep = new Set(steps.filter((s) => old[s.id]).map((s) => s.id));

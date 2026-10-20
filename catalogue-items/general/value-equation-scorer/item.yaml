@@ -1,0 +1,27 @@
+slug: value-equation-scorer
+name: Value equation scorer
+summary: Paste your offer. Get a 1 to 10 score on outcome, likelihood, delay and effort, the weakest driver and the cheapest fix.
+category: general
+type: skill
+role: check
+job: analysis
+level: intermediate
+inputs:
+  - type: offer
+    required: true
+  - type: persona
+    required: false
+  - type: voc_reviews
+    required: false
+outputs:
+  - type: audit_report
+uses: []
+origin: rebuilt
+version: 1.0.0
+minds:
+  - alex-hormozi
+credits:
+  - title: "$100M Offers: How To Make Offers So Good People Feel Stupid Saying No"
+    by: Alex Hormozi
+    url: https://shop.acquisition.com/products/100m-offers-hardcover
+    used: "The value equation: dream outcome and perceived likelihood on top, time delay and effort and sacrifice below, raising the top and cutting the bottom, and fixing how it feels as well as how it works"

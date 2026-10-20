@@ -1,0 +1,24 @@
+slug: lead-cost-and-friction-planner
+name: Lead cost and friction planner
+summary: Paste your campaign numbers. Get cost per qualified lead, the friction to add one step at a time and a stop rule.
+category: general
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: plan
+    required: true
+  - type: performance_sheet
+    required: false
+outputs:
+  - type: plan
+uses: []
+origin: rebuilt
+version: 1.0.0
+minds:
+  - alex-hormozi
+credits:
+  - title: "The New Secret Chapter: How to Make Money (draft chapter, Section A: Attract)"
+    by: Alex Hormozi
+    used: Comparing campaigns by qualified leads per dollar, the cost of giving a first step away, the five kinds of friction that raise lead quality while cutting volume, and finding the sweet spot

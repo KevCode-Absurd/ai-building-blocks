@@ -12,7 +12,7 @@ outputs:
   - {type: plan}
 origin: rebuilt
 version: 1.0.0
-minds: [richard-branson, ratan-tata]
+minds: [richard-branson, ratan-tata, jeff-bezos]
 credits:
   - {title: "Losing My Virginity", by: "Richard Branson", url: "https://en.wikipedia.org/wiki/Losing_My_Virginity", used: "Protecting the main business when trying something bold, using a smaller first version, a licence, a partner or a separate company"}
   - {title: "Oral History of Ratan Tata", by: "Interviewed by Uday Kapoor, Mumbai, 2017", used: "Checking a bold move against what the group cannot afford to lose, and listening to people near the customer"}

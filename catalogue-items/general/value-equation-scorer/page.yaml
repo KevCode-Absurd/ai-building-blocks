@@ -1,0 +1,101 @@
+new_slug: value-equation-scorer
+name: Value equation scorer
+summary: Paste your offer. Get a 1 to 10 score on outcome, likelihood, delay and effort, the weakest driver and the cheapest fix.
+job: make-offer
+thinking: medium
+thinking_why: It judges an offer from the buyer's side with a fixed rubric. Evidence in the buyer's words keeps it honest.
+headline: Value equation scorer
+subhead: Give it your offer. It scores the four parts of value as a buyer would see them, works out a relative index, finds the weakest part, and lists the cheapest changes that would raise it, including changes to how it feels, not only how it works.
+explain: |-
+  Buyers put a price on four things: how much they want the result, how sure they are they will get it, how long it takes, and how much effort it costs them. Most owners work on the first two because making a bigger claim is easy. The last two are harder to copy, and they are where rivals rarely compete.
+
+  This skill scores all four with a plain rubric, as the buyer sees them and not as you know them. It divides the top two by the bottom two to get an index you can compare before and after a change. Then it looks for the cheapest fix, including cheap ones that change what the buyer believes, such as showing the wait or the steps. A buyer pays for the time and effort they see, not the ones you know about.
+when:
+  - Your offer is fine but not selling and you cannot say why.
+  - You have three ways to improve an offer and want to know which first.
+  - You are about to raise the price and want to know what to add.
+you_give:
+  - "Your offer: what is included, price, terms, how it is sold"
+  - Your buyer (optional)
+  - Reviews or call notes in the buyer's words (optional)
+you_get:
+  - A 1 to 10 score on each of the four parts, with the reason and the evidence
+  - A relative index for the offer today
+  - The weakest part and the three cheapest fixes, with cost
+  - The index after the best fix, and where to say it so the buyer sees it
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste the offer exactly as a buyer would see it on your page or in your pitch.
+  - Add reviews so scores rest on real words.
+  - Pick the fix with the best gain for its cost, then rescore after you change the offer.
+how_it_works:
+  - title: Restates the claim
+    text: Writes the offer as one sentence the buyer would repeat.
+  - title: Scores four parts
+    text: Outcome, likelihood, delay and effort, each 1 to 10 from a rubric, with evidence.
+  - title: Works out an index
+    text: Outcome times likelihood, divided by delay times effort, for comparing versions.
+  - title: Finds the weakest
+    text: Names the part dragging the index down and whether rivals work on it.
+  - title: Prices the fixes
+    text: Lists three fixes for it, marks cost, and tests that the buyer would see each one.
+output_shape: |-
+  THE CLAIM
+  <one sentence>
+
+  SCORES
+  Outcome <n> | Likelihood <n> | Delay <n> (10 = very long) | Effort <n> (10 = very hard)
+  Each with reason and evidence
+
+  INDEX
+  (O x L) / (D x E) = <number>
+
+  WEAKEST PART
+  <part, why, do rivals work on it>
+
+  CHEAPEST FIXES
+  1. <fix> | cost | new score
+  2. ... 3. ...
+
+  AFTER THE BEST FIX
+  <new index, where the buyer will see it>
+
+  MISSING
+  <gaps>
+
+  CHECKS MISSED
+  <one line per check missed, or none>
+tweaks:
+  - what: Whose view
+    how: Say which buyer it is. A buyer who has tried before scores likelihood lower than a first-timer.
+  - what: How much evidence
+    how: Reviews let it quote real doubts. Without them scores are marked as estimates.
+  - what: Fix budget
+    how: Say how much time or money you can spend. Fixes above it are shown but not chosen.
+judge:
+  - Each score has a reason a buyer could agree with.
+  - Delay and effort are scored as costs, where 10 is bad.
+  - The index sum is shown and correct.
+  - The fixes are cheap and tied to the weakest part.
+  - Each fix says where the buyer will see it before buying.
+test:
+  - "Score two offers you know: a strong one and a weak one. The index should rank them correctly."
+  - Redo the sum by hand. It should match.
+  - Make a fix and rescore. The index should rise by about what the new scores say.
+improve:
+  - Score every new offer before you launch it.
+  - Keep the scores and compare to results, so you learn what your buyers care about most.
+  - Add the fixes that worked to your own checklist.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: This is text and number work that any strong chat AI does well with the skill.
+  inputs:
+    - Reviews and call notes
+    - The full offer page or pitch
+    - Results from earlier versions of the offer
+terms:
+  - term: Index
+    meaning: Outcome times likelihood, divided by delay times effort. A relative number for comparing versions, not a prediction.
+  - term: Perceived
+    meaning: What the buyer believes before buying. A gain they cannot see does not count.

@@ -1,0 +1,25 @@
+slug: offer-name-writer
+name: Offer name writer
+summary: Paste your offer and buyer. Get ten names built from five parts, three to test and a plan for renaming it.
+category: general
+type: skill
+role: make
+job: copy
+level: intermediate
+inputs:
+  - type: offer
+    required: true
+  - type: persona
+    required: false
+outputs:
+  - type: shortlist
+uses: []
+origin: rebuilt
+version: 1.0.0
+minds:
+  - alex-hormozi
+credits:
+  - title: "$100M Offers: How To Make Offers So Good People Feel Stupid Saying No"
+    by: Alex Hormozi
+    url: https://shop.acquisition.com/products/100m-offers-hardcover
+    used: A five-part formula for naming an offer (a reason why, the avatar, the goal, a time interval, a container word), naming sub-items, testing names, and the order in which to refresh a tired offer

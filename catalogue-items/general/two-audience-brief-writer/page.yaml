@@ -1,0 +1,118 @@
+new_slug: two-audience-brief-writer
+name: "Two-audience brief writer"
+summary: "Paste your project and its audience. Get a brief with two audiences, two ways to fail and a promise to each."
+job: write-and-tell-stories
+thinking: medium
+thinking_why: "It weighs two groups against each other, but the steps and tests are fixed."
+
+headline: "A brief that serves the expert and the newcomer at the same time"
+subhead: "Tell it what you are making and who it is for. It describes the knowledgeable few and the casual many, names the two ways the work can fail, and writes one promise to each. You get a brief you can hand to a writer, a designer or yourself."
+
+explain: |
+  Most work is aimed at one reader and misses the other. Write for experts and a beginner gets lost by the second paragraph. Write for beginners and the experts decide you have nothing new. The usual fix is to aim at the middle, which gives you a bland piece that pleases nobody.
+
+  This skill sets the target before anything is drafted. It describes both groups by what they notice and what loses them, then names the two ends to stay away from: so plain that an expert yawns, and so dense that only an expert follows. It writes a test for each end that you can run on a draft, and a promise for each group: what a newcomer gets on the first pass with no help, and what an expert finds on a closer look. The overlap, usually a clear main idea, is named so the draft can lean on it.
+
+when:
+  - "You are making a talk, article, product page, course or song and your audience ranges from beginners to experts."
+  - "Feedback pulls you both ways: one person says it is too basic, another says it is too hard."
+  - "You are briefing a writer or designer and want one page that says who it has to satisfy and how."
+
+you_give:
+  - "What you are making, in a sentence, and where people will meet it (page, stage, feed, shelf)"
+  - "Who the experts are and who the newcomers are, as best you know (names, comments or past reactions help)"
+  - "Length, format and any limits"
+  - "A buyer or audience note from earlier work (optional)"
+you_get:
+  - "A description of each audience: what they notice, what they need and what loses them"
+  - "Two failure ends, each with a test you can run on a draft"
+  - "One promise to the newcomer and one to the expert"
+  - "The shared ground the draft can stand on, and a list of what is missing"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Say what you are making and who will meet it. Paste real comments from both kinds of people if you have them."
+  - "Read the two failure tests. If either does not match how your field works, say so and ask for a rewrite."
+  - "Pass the brief to the next step: your drafts, or the Deliverer fit planner if someone else will present the work."
+
+how_it_works:
+  - title: "Pins the piece down"
+    text: "Writes what it is, where it will be met and the one idea it exists to deliver."
+  - title: "Describes the expert"
+    text: "What they already know, what they spot, what they have seen too often and what would make them stop reading."
+  - title: "Describes the newcomer"
+    text: "What they know, what they need explained, how long they will give it and what loses them."
+  - title: "Names the two ways to fail"
+    text: "Too plain and too dense, each with a test a real person can run."
+  - title: "Writes a promise to each"
+    text: "What the newcomer enjoys alone on the first pass, and what the expert finds on the second."
+  - title: "Finds the shared ground"
+    text: "The things both groups want, such as a clear main idea, and what may go to one group only."
+  - title: "Checks the brief"
+    text: "Runs its own checks and names any it missed."
+
+output_shape: |
+  THE PIECE
+  <what it is, where it is met, the one idea>
+
+  THE EXPERT
+  Knows: <...>  Notices: <...>  Has seen too often: <...>  Stops reading if: <...>
+
+  THE NEWCOMER
+  Knows: <...>  Needs explained: <...>  Time they will give: <...>  Lost if: <...>
+
+  TWO WAYS TO FAIL
+  Too plain: <sign> | Test: <question to ask of a draft>
+  Too dense: <sign> | Test: <question to ask of a draft>
+
+  THE PROMISES
+  Newcomer, first pass: <one line>
+  Expert, second look: <one line>
+
+  SHARED GROUND
+  <what both want, and what may go to one group only>
+
+  MISSING
+  <facts about either group that you would need>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: "Real people"
+    how: "Name two real people, one from each group. The descriptions stay specific instead of generic."
+  - what: "Where they meet it"
+    how: "Say if it is read alone, heard live or skimmed. A talk and a page need different tests."
+  - what: "Which group matters more"
+    how: "If one group pays or decides, say so. It still writes both promises, but marks the lead."
+
+judge:
+  - "Each group has at least one thing it notices or is lost by that the other does not."
+  - "Both failure ends come with a test a person could run on a draft."
+  - "The two promises are different from each other and each is one line."
+  - "The brief does not ask for a blend that gives neither group anything."
+
+test:
+  - "Run it on a piece you have already made. See if the failure tests would have caught what readers complained about."
+  - "Give the brief to a friend and ask them to describe the expert and the newcomer back. They should match what you meant."
+  - "Run it twice. The promises should stay close in meaning even if the wording changes."
+
+improve:
+  - "Add the exact words experts use for what bores them, so the failure test matches how they talk."
+  - "After each real audience reaction, update the promises with what each group actually said."
+  - "Pair it with the Layered draft writer to turn the brief into a draft."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "This is reading, sorting and writing, which any strong chat AI does well with this skill."}
+    - {name: "Comments and reviews from both kinds of people", why: "Real words from an expert and a beginner make the two descriptions sharper than guesses."}
+  inputs:
+    - "A buyer or audience note, so the newcomer is a real person"
+    - "Past comments on your earlier work"
+    - "The length and format you are limited to"
+
+terms:
+  - term: "Failure end"
+    meaning: "One of the two ways work goes wrong for a mixed audience: too plain or too dense."
+  - term: "Shared ground"
+    meaning: "What both groups want from the piece, such as a clear main idea."

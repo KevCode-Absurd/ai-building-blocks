@@ -15,7 +15,7 @@ outputs:
   - {type: plan}
 origin: rebuilt
 version: 1.0.0
-minds: [seth-godin]
+minds: [seth-godin, alex-hormozi]
 credits:
   - {title: "About Seth", by: "Seth Godin", url: "https://seths.blog/about/", used: "Background on his work on serving a specific group"}
   - {title: "Seth Godin", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Seth_Godin", used: "Background on his books and the smallest viable audience idea"}

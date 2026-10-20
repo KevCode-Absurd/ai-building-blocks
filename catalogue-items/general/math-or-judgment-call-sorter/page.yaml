@@ -1,0 +1,115 @@
+new_slug: math-or-judgment-call-sorter
+name: Math or judgment call sorter
+summary: Paste a decision and your numbers. Get it sorted as a math or judgment call, with the next step.
+job: think-and-decide
+thinking: high
+thinking_why: It has to judge whether the numbers can really settle a choice, and what they cannot see.
+headline: Math or judgment call sorter
+subhead: Paste a decision, your options and the numbers you have. It tests whether your own history can settle the choice. If yes, it sets up the model. If no, it writes your judgment down, states what the short-term math says against it and names what the math cannot see. You get a clear path either way.
+explain: |
+  Some decisions have a right answer you can calculate, such as how much stock to hold. Others cannot be calculated because the effect shows up over years, or you have no history to measure. Teams often pretend the second kind is the first, or let the loudest voice settle the first kind.
+
+  This skill tests three things: do you have history on the main inputs, will the effect show within a quarter, and would everyone accept one best answer from a model. If all three are yes, it builds the model. If any is no, it asks you to write the judgment, shows the short-term math that argues against it and names what the math cannot see. It adds a date and a signal to check the judgment later.
+when:
+  - A team argues about a choice and nobody agrees on what would settle it.
+  - The numbers say one thing and your instinct says another, for example on price.
+  - You are about to build a model for a decision that no model can settle.
+you_give:
+  - The decision and the options
+  - The numbers and history you have, with the period they cover
+  - The outcome you care about and over what time (optional)
+you_get:
+  - The decision sorted as math or judgment, with the three-test result
+  - "For a math call: the model set-up and the input that would flip the answer"
+  - "For a judgment call: a written judgment, the math against it and what the math cannot see"
+  - A review date and a signal
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Describe the decision, the options and the numbers you have.
+  - Say how far ahead the outcome matters.
+  - Read the three-test result. If you disagree, say which test and why.
+  - Follow the next step. Put the review date in your calendar.
+how_it_works:
+  - title: States the decision
+    text: Options, the outcome you care about and the time that matters.
+  - title: Lists measurable inputs
+    text: What your own history can tell you, with source and period.
+  - title: Runs three tests
+    text: History, speed of effect and agreement on one best answer.
+  - title: Checks for a safe experiment
+    text: A test that does not commit you to the decision.
+  - title: Builds the model or the judgment
+    text: A sensitivity check for math calls, a written judgment for the rest.
+  - title: Names what math cannot see
+    text: The long-run effects the short-term numbers miss.
+  - title: Sets the review
+    text: A date, a signal and what you will do if the signal is bad.
+output_shape: |
+  DECISION
+  <options, outcome, time horizon>
+
+  THREE TESTS
+  History: <yes/no>  Effect within a quarter: <yes/no>  One answer all accept: <yes/no>
+
+  SORTED AS: MATH / JUDGMENT
+
+  IF MATH
+  Model: <inputs, formula, result>
+  Flips if: <the input that changes the answer>
+
+  IF JUDGMENT
+  My judgment: <paragraph>
+  The short-term math says: <figures>
+  What the math cannot see: <effects over years>
+  Wrong if: <what would show it>
+
+  SAFE EXPERIMENT
+  <a test that does not commit you, or "none">
+
+  REVIEW
+  <date | signal | action if bad>
+
+  MISSING
+  <gaps>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+tweaks:
+  - what: How long the effect takes
+    how: Say when you expect the result. Effects beyond a quarter push the choice toward judgment.
+  - what: The history you have
+    how: Give the period and the source. Three months of data is not the same as three years.
+  - what: The options
+    how: List all of them, including doing nothing.
+  - what: Who disagrees
+    how: Name them. The skill will say whose argument is a math argument and whose is a judgment.
+judge:
+  - All three tests have a yes or no with a reason.
+  - A judgment call includes the math that argues against it.
+  - It names at least one thing the math cannot see.
+  - A math call names the input that would flip the answer.
+  - The review has a date and a signal.
+test:
+  - Run it on a past decision you now know the result of. See whether the sort would have been right.
+  - Run it on a price change. The short-term math should argue against a cut.
+  - Run it twice. The sort should stay the same.
+  - Ask two colleagues to state what would settle the choice. Compare.
+improve:
+  - Add your own history, such as past tests, to the input.
+  - Add your rule of thumb for how long effects take in your field.
+  - Keep a log of judgment calls and their results.
+  - Pair it with "Decision evidence bar setter" for how much evidence to gather.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: Weighing tests and writing a judgment is text work any strong chat AI does well with this skill.
+  inputs:
+    - Past sales, cost or usage numbers
+    - Results of earlier tests
+    - A note on how long effects take in your market
+    - What customers have said about the change
+terms:
+  - term: Judgment call
+    meaning: A decision made on reasoning and experience because the numbers cannot settle it.
+  - term: Elasticity
+    meaning: How much demand moves when the price moves.

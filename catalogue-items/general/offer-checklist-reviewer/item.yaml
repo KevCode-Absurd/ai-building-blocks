@@ -15,6 +15,6 @@ outputs:
   - {type: plan}
 origin: rebuilt
 version: 1.0.0
-minds: [gary-bencivenga]
+minds: [gary-bencivenga, alex-hormozi]
 credits:
   - {title: "Gary Bencivenga's Marketing Bullets", by: "Gary Bencivenga", used: "The offer checklist: one thing per ad, a believable reason for a deal, a deluxe version, discount framing, a longer guarantee, repeat options, honest limits, and testing the offer as hard as the headline"}

@@ -1,0 +1,124 @@
+new_slug: job-exit-plan-writer
+name: "Job exit plan writer"
+summary: "Paste your job, notice terms and first clients. Get a notice letter, a talking order and income lined up for three months."
+job: think-and-decide
+thinking: medium
+thinking_why: "It follows a fixed plan but must read the situation to set the order of conversations."
+
+headline: "Leave a job in an order that keeps the door open and the money coming"
+subhead: "Tell it your job, your notice terms and the work you have lined up. It decides what would have kept you, drafts a short notice, sets the order of conversations, lists what you owe and what you are owed, and checks the first three months of income. You get a leaving plan and a letter."
+
+explain: |
+  Leaving a job is rarely clean. People hand in notice in anger, tell the wrong person first, or leave with no work lined up and call it courage. Both cost them: references, goodwill, money, and sometimes the trust of the people who rely on them.
+
+  This skill puts the order right. It asks what would have kept you and, if it is a reasonable ask, tells you to say it once, calmly, before you decide. It drafts a notice with dates and one line of thanks and no complaints, because the letter may outlive your mood. It sets who hears first: the people who depend on you, then whoever vouches for you, then your manager, then the team. It lists what to hand back and what you are owed, in writing. It checks that signed or paid work covers at least half the floor for three months and your cash meets the target, and it prepares lines for the case where the other side turns nasty. It is not legal advice; check your contract and local law.
+
+when:
+  - "You have decided to leave a steady job and want to do it cleanly."
+  - "You are being treated badly and are tempted to walk out in the middle of an argument."
+  - "You are not sure if you have enough lined up to hand in notice."
+
+you_give:
+  - "Your role, your notice terms and what you are owed"
+  - "The plan from the earlier steps: floor, fees, first clients, cash"
+  - "Who relies on you or would be hurt by your leaving"
+  - "What has gone wrong at work, in a few lines"
+you_get:
+  - "A what-would-keep-me line, or a decision that nothing would"
+  - "A short notice letter"
+  - "The order of conversations, with a line for each"
+  - "A hand-back and what-I'm-owed list"
+  - "A three-month income check against a readiness rule"
+  - "Lines for the day the other side turns nasty"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Paste the plan and the facts of the job. Say honestly what has gone wrong."
+  - "Do not send the letter yet. Run the readiness check first. If it fails, close the gap before you hand in notice."
+  - "Check the notice terms with your contract or a local adviser."
+
+how_it_works:
+  - title: "Asks what would keep you"
+    text: "Names the pay, treatment or role that would change your answer, and whether to say it once."
+  - title: "Drafts the notice"
+    text: "Dates, role, last day, one line of thanks and an offer to hand over."
+  - title: "Orders the conversations"
+    text: "People who rely on you first, then your reference-giver, your manager, then the team."
+  - title: "Lists the hand-back"
+    text: "Property, files, passwords and what you are owed, in writing."
+  - title: "Checks readiness"
+    text: "Signed or paid work covering half the floor for three months, and the cash target met."
+  - title: "Writes the hard-day lines"
+    text: "What to say, and how to leave the room, if the other side attacks."
+  - title: "Keeps the door open"
+    text: "A short farewell message and a contact list for the first quarter."
+
+output_shape: |
+  WHAT WOULD KEEP ME
+  <the one change, and whether to say it once, or "nothing would">
+
+  READINESS CHECK
+  Floor: <amount>  Half the floor: <amount>  Signed or paid for months 1, 2 and 3: <amount>, <amount>, <amount>
+  Cash target met: yes / no
+  Verdict: ready / not yet, and what closes the gap
+
+  NOTICE LETTER
+  <the letter>
+
+  ORDER OF CONVERSATIONS
+  1. <who> | When | What to say
+  2. ...
+
+  HAND-BACK AND OWED
+  <list>
+
+  IF IT TURNS NASTY
+  <three lines>
+
+  FIRST QUARTER
+  <income lined up, week by week>
+
+  MISSING
+  <what you would need>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: "How it went wrong"
+    how: "Say if it is pay, treatment or the work itself. The what-would-keep-me line follows."
+  - what: "Who relies on you"
+    how: "Name them. They go first in the order of conversations."
+  - what: "Contract terms"
+    how: "Paste the notice and non-compete clauses. The plan marks what to check with an adviser."
+
+judge:
+  - "The notice letter has dates, one line of thanks and no complaints."
+  - "The people who rely on you are told before the employer."
+  - "The readiness verdict is based on signed or paid work, not hoped-for work."
+  - "Everything owed and everything to hand back is listed."
+
+test:
+  - "Read the letter as your manager would. It should give no reason to argue."
+  - "Check the readiness percentage against the earlier floor report."
+  - "Role-play the nasty-day lines with a friend."
+
+improve:
+  - "Update the readiness check every week until you hand in notice."
+  - "Keep a copy of the letter and every reply in one folder."
+  - "After you leave, add a line on what you would change next time."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "This is reading, sorting and writing, which any strong chat AI does well with this skill."}
+    - {name: "Your contract and a local adviser", why: "Notice periods and non-compete rules vary by place and contract."}
+  inputs:
+    - "The plan from the Lean-year cash rules writer"
+    - "The floor report from the Independent income floor calculator"
+    - "A list of signed or paid work for the first quarter"
+
+terms:
+  - term: "Readiness rule"
+    meaning: "Notice goes in when signed or paid work covers at least half the floor for three months and the cash target is met."
+  - term: "Hand-back"
+    meaning: "Everything of the employer's you must return, and everything of yours you may keep."

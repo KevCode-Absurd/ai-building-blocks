@@ -1,0 +1,117 @@
+new_slug: cash-versus-earnings-checker
+name: Cash versus earnings checker
+summary: Paste your profit and cash figures. Get free cash flow beside earnings, what growth costs and a score out of 100.
+job: money-and-investing
+thinking: high
+thinking_why: It does several linked sums and judges whether growth pays for itself.
+headline: Cash versus earnings checker
+subhead: Paste several years of profit, depreciation, working capital, capital spending and share or owner counts. It works out free cash flow, sets it beside earnings, tests whether growth pays back and gives a cash cover score out of 100 with the working shown. It is a method for analysing a business, not personal financial advice.
+explain: |
+  Profit can rise for years while cash drains away. Every new machine, shop or system costs money before it earns, and the profit line spreads that cost over many years. A business that grows fast on borrowed or diluted money can look great on paper and be worth less each year.
+
+  This skill works out the cash. It takes operating cash flow and subtracts capital spending to get free cash flow, then compares it with earnings over the same years. It tests whether the growth spending pays back inside the useful life of what you bought, and what has happened to the number of shares or owners' stakes. Four tests, 25 points each, give a score with the working shown.
+when:
+  - Profit is growing but cash in the bank is not.
+  - You are planning to spend heavily on growth and want to see if it pays back.
+  - You are writing to owners or partners and want to show the cash view next to profit.
+you_give:
+  - Three or more years of earnings, depreciation, changes in working capital and capital spending
+  - Share or owner counts for the same years
+  - Planned growth spending (optional)
+you_get:
+  - Free cash flow for each year
+  - Free cash flow beside earnings
+  - A payback test on growth spending
+  - A cash per share or per owner view
+  - A score out of 100 and what it means
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your figures by year. Mark any you are unsure of.
+  - Add the useful life of your main assets, and the share or owner counts.
+  - Read the four tests, not only the score.
+  - Use the findings in your next letter or review.
+how_it_works:
+  - title: Collects the figures
+    text: Earnings, depreciation, working capital and capital spending by year.
+  - title: Works out free cash flow
+    text: Operating cash flow minus capital spending.
+  - title: Compares with earnings
+    text: How much of each year's earnings turned into cash.
+  - title: Tests growth payback
+    text: Whether growth spending returns cash within the life of the asset.
+  - title: Counts shares or owners
+    text: The change in the number of shares or stakes, and cash per share.
+  - title: Scores four tests
+    text: 25 points each, with the working shown.
+  - title: Marks missing figures
+    text: Says what is missing and what the cash view changes.
+output_shape: |
+  FIGURES BY YEAR
+  <year | earnings | depreciation | working capital | capital spending | shares or owners>
+
+  FREE CASH FLOW
+  <year | operating cash flow | capital spending | free cash flow>
+
+  TESTS
+  1. Free cash flow positive (25): <n> because <reason>
+  2. Cash conversion, free cash flow over earnings (25): <n> because <ratio>
+  3. Growth pays back inside asset life (25): <n> because <years>
+  4. Owners' share, change per year (25): <n> because <percent>
+
+  SCORE: <n>/100 (<what it measures>)
+
+  WHAT GROWTH IS COSTING
+  <plain summary>
+
+  SCORE AFTER FIXES
+  <n>/100 and which changes were assumed
+
+  MISSING
+  <gaps>
+
+  NOT FINANCIAL ADVICE
+  <one line>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+tweaks:
+  - what: Years of data
+    how: Give three to five years. One year hides the trend.
+  - what: Useful life of assets
+    how: State it for shops, machines and software. The payback test needs it.
+  - what: Share or owner counts
+    how: Include new stakes, options and partners as well as sales of shares.
+  - what: Growth plans
+    how: Add planned spending to see if the plan pays back.
+judge:
+  - Free cash flow is worked out for every year given.
+  - Earnings and cash are shown side by side.
+  - The payback test uses the life of the assets.
+  - The score shows four parts and a total.
+  - Missing figures are listed, not guessed.
+test:
+  - Run it on a year you know well and check the cash against your bank.
+  - Run it on a growing year. Growth spending should show in the payback test.
+  - Change one figure and see which test moves.
+  - Compare with your accountant's cash flow statement.
+improve:
+  - Add your cost of money to the input, so payback can be compared with it.
+  - Add seasonal swings in working capital.
+  - Track the score each year in your review.
+  - Pair it with "Value created tally builder" for the whole picture.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: Doing linked sums on a few years of figures is work any strong chat AI does well with this skill, if you check the arithmetic.
+  inputs:
+    - The cash flow statement
+    - Asset list with useful lives
+    - Loan terms
+    - Growth plan with costs
+terms:
+  - term: Free cash flow
+    meaning: Cash from running the business minus cash spent on assets such as machines, shops and software.
+  - term: Depreciation
+    meaning: The cost of an asset spread over its useful life. It reduces profit but is not cash going out.
+  - term: Working capital
+    meaning: Money tied up in stock and unpaid bills, less what you owe suppliers.

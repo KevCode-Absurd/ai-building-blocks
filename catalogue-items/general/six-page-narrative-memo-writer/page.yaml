@@ -1,0 +1,115 @@
+new_slug: six-page-narrative-memo-writer
+name: Six-page narrative memo writer
+summary: Paste your release and questions. Get a six-page memo in full sentences and a realistic writing schedule.
+job: speak-and-persuade
+thinking: high
+thinking_why: It builds an argument from several inputs and has to choose what stays and what goes.
+headline: Six-page narrative memo writer
+subhead: "Paste your press release, its questions and any numbers. It writes a narrative memo of up to six pages in full sentences: the decision, the story, the numbers, the risks and the plan if it fails. It also gives a realistic schedule for drafts, feedback and a fresh edit."
+explain: |
+  Slides let weak thinking hide behind bullets. Full sentences make you connect the facts, so gaps show. A memo read in silence at the start of a meeting also means everyone has the same facts before they talk.
+
+  This skill turns the release and questions into a memo with a plain order: the decision, why now, the customer story, how it works, what it costs, what you do not know, the risks and the plan if it fails. It sets a writing schedule too, because a good memo takes a week or more of drafts, comments, time away and a fresh edit. The memo belongs to the team, so no author's name goes on it.
+when:
+  - You have a proposal and slides, and the meeting always turns into a debate about facts.
+  - You need your team to read the same thing before they talk.
+  - You want to see whether your argument holds in full sentences.
+you_give:
+  - Your press release and the answered questions
+  - The decision you want, and the date
+  - Numbers you can back (optional)
+you_get:
+  - A memo of up to six pages in full sentences
+  - The decision and the ask on page one
+  - A list of what you do not know
+  - A schedule for drafts, feedback and a fresh edit
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste the release, the questions and the numbers.
+  - State the decision you want and who decides.
+  - Read the memo aloud to find sentences that do not connect.
+  - Follow the schedule, then run "Narrative memo checker".
+how_it_works:
+  - title: Opens with the decision
+    text: Puts the ask, the date and why it matters now on page one.
+  - title: Tells the customer story
+    text: Uses a specific customer case, not an average.
+  - title: Explains how it works
+    text: Plain sentences on the idea, the steps and the cost.
+  - title: Gives numbers and gaps
+    text: The figures that matter and a clear list of unknowns.
+  - title: States risks and fallback
+    text: What could go wrong and what you will do if it does.
+  - title: Sets the schedule
+    text: A week or more for drafts, feedback, a break and a fresh edit.
+  - title: Keeps it the team's
+    text: Leaves the author's name off.
+output_shape: |
+  THE DECISION
+  <ask, who decides, date, why now>
+
+  THE CUSTOMER AND THE NEED
+  <one specific case>
+
+  THE IDEA AND HOW IT WORKS
+  <full sentences>
+
+  WHAT IT COSTS AND WHAT IT PAYS
+  <numbers, with assumptions>
+
+  WHAT WE DO NOT KNOW
+  <gaps, ranked>
+
+  RISKS AND THE FALLBACK
+  <what could go wrong, what we do then>
+
+  NEXT STEPS
+  <owner, step, date>
+
+  WRITING SCHEDULE
+  <draft | share for comments | two days away | fresh edit | read in silence>
+
+  MISSING
+  <gaps>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+tweaks:
+  - what: The decision
+    how: State exactly what you need approved. A vague ask makes a vague memo.
+  - what: The customer case
+    how: Use one real person or account. A case carries more than a statistic.
+  - what: The numbers
+    how: Add assumptions beside each. Readers will question the ones they cannot see.
+  - what: The schedule
+    how: Give your real deadline. The skill will say if it is too short for a good memo.
+judge:
+  - Page one tells a reader what is being asked and why now.
+  - There are no slide-style bullet lists in the body.
+  - The unknowns are stated plainly.
+  - The risks include what you will do if it fails.
+  - The memo is six pages or fewer.
+test:
+  - Ask a colleague to read it cold and say the ask back in one sentence.
+  - Read it aloud. Mark every sentence that does not follow the last.
+  - Compare it to your slide deck. See what the memo forced you to say.
+  - Follow the schedule once and note how long it really took.
+improve:
+  - Add your team's usual sections to the order, such as legal or hiring.
+  - Add examples of memos your team found clear.
+  - Save the memo template in your project notes.
+  - Pair it with "Narrative memo checker" before the meeting.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: Building a long, connected argument from several inputs is text work a strong chat AI does well with this skill.
+  inputs:
+    - The need statement
+    - Cost and revenue figures
+    - Customer interview notes
+    - A past memo your team found clear
+terms:
+  - term: Narrative memo
+    meaning: A document written in full sentences that tells the case in order, instead of bullet points on slides.
+  - term: Silent read
+    meaning: Everyone reads the memo at the start of the meeting, in silence, before any discussion.

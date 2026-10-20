@@ -1,0 +1,116 @@
+new_slug: overstuffed-draft-cutter
+name: "Overstuffed draft cutter"
+summary: "Paste your draft. Get the one main idea named, what fights it cut, and a list of every cut with its reason."
+job: write-and-tell-stories
+thinking: medium
+thinking_why: "It judges which ideas compete, but the scoring and the cut rules are fixed."
+
+headline: "Cut a good draft down to its one main idea"
+subhead: "Paste a draft that feels like too much. It counts the ideas, names the one that matters, scores every other idea against it, and cuts what competes. You get a shorter draft, every cut with its reason, and a parking list for good ideas that belong somewhere else."
+
+explain: |
+  Most overlong drafts are not bad. They hold several good ideas that argue with each other. A reader cannot tell which one to carry away, so they carry none. Cutting a bad sentence is easy. Cutting a good idea from the draft is where the work is.
+
+  This skill starts by counting. It lists every idea, example and joke, and writes the main idea in one sentence. Each item then gets a score: it serves the main idea, it supports it, it competes with it, or it is unrelated. Competing and unrelated items go, even when they are good. Supporting items are cut to one example each. The ending is checked so that the best moment is the last thing the reader meets. Nothing new is added. You get the shorter draft and a ranked list of what to put back if you disagree.
+
+when:
+  - "A draft has grown and you cannot say what it is really about."
+  - "Readers say it is good but long, or good but hard to follow."
+  - "You are over the length limit and need to know what to lose first."
+
+you_give:
+  - "The draft"
+  - "The brief or the main idea, if you have it (optional)"
+  - "Your target length (optional)"
+  - "Any part you will not cut (optional)"
+you_get:
+  - "The main idea in one sentence"
+  - "A numbered inventory of ideas, each scored"
+  - "The cut draft, with before and after word counts"
+  - "A cut list with the reason for each, and a parking list for ideas that belong elsewhere"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Paste the draft. Say the main idea if you know it, and name anything that must stay."
+  - "Read the cut list. If you disagree with a cut, use the put-back order at the end."
+  - "Send the cut draft on for a test with real readers."
+
+how_it_works:
+  - title: "Counts the ideas"
+    text: "A numbered list of every idea, example, joke and aside with its word count."
+  - title: "Names the main idea"
+    text: "One sentence. If you gave one, it uses yours."
+  - title: "Scores each item"
+    text: "Serves, supports, competes or unrelated."
+  - title: "Cuts what competes"
+    text: "Competing and unrelated items go. Supporting items shrink to one example."
+  - title: "Fixes the ending"
+    text: "Moves the best moment to the end and removes whatever follows it."
+  - title: "Repairs only the joins"
+    text: "Adds no new content, only the words needed to join what is left."
+  - title: "Reports the cuts"
+    text: "Every cut with its reason, a parking list and the order to put things back."
+
+output_shape: |
+  MAIN IDEA
+  <one sentence>
+
+  INVENTORY
+  <n>. <idea> | <words> | Serves / Supports / Competes / Unrelated
+
+  CUT DRAFT
+  <the shorter draft>
+
+  NUMBERS
+  Before: <words>  After: <words>  Cut: <percent>
+
+  CUTS
+  <n>. <what was cut> | Why: <reason>
+
+  PARKING LIST
+  <good ideas that belong in another piece>
+
+  PUT BACK FIRST
+  <the cuts to restore, in order, if you disagree>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: "Target length"
+    how: "Give a number of words or minutes. It cuts to that, not just to a percentage."
+  - what: "Protected parts"
+    how: "Name sections that must stay. They are scored but not cut, and the cuts around them are bigger."
+  - what: "Who reads it"
+    how: "Say if the readers are experts, newcomers or both. A newcomer piece cuts more asides."
+
+judge:
+  - "The main idea fits in one sentence."
+  - "No remaining item scores 'competes' or 'unrelated'."
+  - "Every cut has a reason and nothing new was added."
+  - "The last thing in the draft is the strongest moment, not a summary."
+
+test:
+  - "Run it on a draft you already trimmed by hand. See if it finds anything you missed."
+  - "Give the cut draft and the original to a reader and ask which is easier to follow."
+  - "Run it twice. The main idea and the biggest cuts should stay the same."
+
+improve:
+  - "Keep the parking list. It is a start for your next piece."
+  - "Tell it which kinds of detail your readers love, so it keeps those and cuts others."
+  - "Run it again after you test the draft with real readers."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "This is reading, sorting and writing, which any strong chat AI does well with this skill."}
+    - {name: "A word counter or the AI's own count", why: "Before and after counts show whether the cut was big enough."}
+  inputs:
+    - "A draft from the Layered draft writer"
+    - "A brief that states the main idea"
+    - "A hard length limit"
+
+terms:
+  - term: "Main idea"
+    meaning: "The one point the reader should carry away."
+  - term: "Parking list"
+    meaning: "Good ideas cut from this piece that may fit another."

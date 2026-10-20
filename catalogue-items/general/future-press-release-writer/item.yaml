@@ -1,0 +1,28 @@
+slug: future-press-release-writer
+name: Future press release writer
+summary: Paste your need statement. Get a one-page press release written as if the product launched today.
+category: general
+type: skill
+role: make
+job: copy
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: copy_draft
+origin: rebuilt
+version: 1.0.0
+minds:
+  - jeff-bezos
+credits:
+  - title: 2008 letter to shareholders
+    by: Jeff Bezos
+    used: Starting with the customer and working backwards, and letting the vision stand even when it needs new skills
+  - title: Working Backwards
+    by: Werner Vogels, All Things Distributed (2006)
+    url: https://www.allthingsdistributed.com/2006/11/working_backwards.html
+    used: The habit of writing the press release before any build, to say plainly why the product should exist
+  - title: 2012 letter to shareholders
+    by: Jeff Bezos
+    used: Doing the things that delight customers before a rival forces you to

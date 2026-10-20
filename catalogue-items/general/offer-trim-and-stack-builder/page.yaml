@@ -1,0 +1,97 @@
+new_slug: offer-trim-and-stack-builder
+name: Offer trim and stack builder
+summary: Paste your delivery options and promises. Get a trimmed offer of named bundles, each with a value, and a total.
+job: make-offer
+thinking: high
+thinking_why: It weighs cost against value across many items and must keep every buyer problem answered. Give it your strongest model.
+headline: Offer trim and stack builder
+subhead: Give it the buyer's promises and the rated delivery options. It cuts what costs a lot for little value, keeps what is cheap or worth the cost, makes sure every problem still has an answer, and groups the rest into named bundles with a value and a total.
+explain: |-
+  A long list of ideas is not an offer. If you do all of it you will burn out or lose money. If you cut by feel you may drop the one thing that would have closed the sale.
+
+  This skill cuts by a rule. It sorts every option by cost to you and value to the buyer, drops the expensive and weak ones first, then the cheap and weak ones, and keeps the rest. It then checks that no buyer problem has been left without an answer. What is left is grouped into bundles, one per problem, each with a name that states a benefit and a value you can defend. The total tells you how far above the price the stack sits.
+when:
+  - You have far more ideas than you can deliver.
+  - You are not sure which parts of your offer the buyer values.
+  - Your price feels too high next to what the buyer sees you do.
+you_give:
+  - Promises from Buyer problem list builder
+  - Rated delivery options from Delivery option generator
+  - Your planned price and cost per buyer (optional)
+  - Product facts (optional)
+you_get:
+  - Every option marked cut or keep, with the reason
+  - A check that each problem still has an answer
+  - Named bundles, each with a stated value and the pieces underneath
+  - Total value, price, cost per buyer and the ratio
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste the promises and the rated options. Add your planned price.
+  - Fix any value figure that looks too high to you. A value you cannot defend hurts the offer.
+  - Take the result to Value equation scorer, then to Pricing decision planner.
+how_it_works:
+  - title: Cuts by a rule
+    text: High cost and low value goes first, then low cost and low value.
+  - title: Favours build-once assets
+    text: Where a tool or recording gives most of the value, it replaces a live item.
+  - title: Protects every problem
+    text: If a problem has no kept answer, it brings back the cheapest option.
+  - title: Bundles by problem
+    text: Names each bundle with the benefit it gives, with the pieces listed under it.
+  - title: Values and totals
+    text: Gives each bundle a value with its basis, then compares the total to the price.
+output_shape: |-
+  CUT AND KEEP
+  Option | cost | value | verdict | reason
+
+  PROBLEM CHECK
+  <each promise and the kept option that answers it>
+
+  THE STACK
+  Bundle name (benefit) | what is inside | value | basis
+
+  NUMBERS
+  Total value | price | ratio | cost to deliver per buyer | margin
+
+  DONE BY HAND AT FIRST
+  <pieces you do live until sales justify an asset>
+
+  MISSING
+  <gaps>
+
+  CHECKS MISSED
+  <one line per check missed, or none>
+tweaks:
+  - what: What counts as high cost
+    how: Set a line, such as more than one hour of your time per buyer or more than 5 percent of the price in cash. The default is that.
+  - what: First-run or scaled
+    how: For a first offer, keep more by-hand pieces and over-deliver. For a scaled offer, move them into assets.
+  - what: Value basis
+    how: Tell it how you would value things, such as what the buyer pays elsewhere or hours saved at their rate.
+judge:
+  - Every cut has a reason in cost and value terms.
+  - Every buyer problem still has a kept answer.
+  - Each bundle name states a benefit, not a feature.
+  - Each value has a basis, and none is padded.
+  - The ratio of total value to price is shown.
+test:
+  - Run it on a list you already trimmed by hand. It should keep most of what you kept and explain the rest.
+  - Remove the answer to one problem. It should catch the gap.
+  - "Check the numbers by hand: total value, ratio and margin should add up."
+improve:
+  - Move by-hand pieces into assets once you have sold the offer ten times.
+  - Keep a list of values that buyers accepted and ones they questioned.
+  - Add a bundle each time a new objection appears in sales calls.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: This is text and number work that any strong chat AI does well with the skill.
+  inputs:
+    - Rated options from Delivery option generator
+    - Your real cost per buyer
+    - Prices of what buyers pay for the same pieces elsewhere
+terms:
+  - term: Stack
+    meaning: The set of bundles that make up the offer, shown with their values and a total.
+  - term: Value ratio
+    meaning: Total stated value divided by the price. It shows how big the gap between what the buyer gets and what they pay is.

@@ -1,0 +1,123 @@
+new_slug: lean-year-cash-rules-writer
+name: "Lean-year cash rules writer"
+summary: "Paste your plan and monthly numbers. Get a cash buffer, who to ask early and a clear request to send."
+job: think-and-decide
+thinking: medium
+thinking_why: "It sets rules from your numbers and writes a request, with little open judgement."
+
+headline: "Rules for thin months, written before you are in one"
+subhead: "Tell it your plan and your monthly numbers. It sizes a cash buffer, sets the point where you start acting, lists who to ask for help and how many times, and writes a request that states the sum, the repayment date and what it lets you do. You get a one-page set of rules."
+
+explain: |
+  Independent income is lumpy. A month with no payment is not a surprise to plan for; it is certain to come. The common mistake is to wait until the rent is due and then ask one friend for whatever is needed, again and again, with repayment promised from money that has not arrived.
+
+  This skill writes the rules while things are calm. It sizes a buffer from your floor. It sets a yellow line and a red line, so you act on cost cuts and extra work early and ask for help before it is urgent. It lists more than one source of help, with one ask each until the earlier one is repaid. The request it writes has an exact amount, a repayment date taken from money already due, a plan B if that money fails, and a promise to report in two weeks. It also sets a rule to tell the people who rely on you the number every month. It is a planning aid, not personal financial advice.
+
+when:
+  - "You are about to go independent and want rules ready for a bad month."
+  - "You have already borrowed more than once from the same person and are not sure how to stop."
+  - "Your income swings and you want to know when to act and when to ask."
+
+you_give:
+  - "Your plan and monthly floor, from the earlier steps or in your own words"
+  - "Your cash on hand and any debts"
+  - "Who could help: family, friends, a bank, a client who could pay early"
+  - "Fixed costs you could cut, and how fast"
+you_get:
+  - "A buffer target in months, and the yellow and red lines"
+  - "What to do at each line, in order"
+  - "A helper list with a limit for each person"
+  - "A request you can send, with every part filled"
+  - "A repayment rule and a monthly report rule"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Paste your plan, floor and cash. List who could help."
+  - "Save the rules where you will see them in a bad month, not in a folder you never open."
+  - "Share the red-line rule with the person who relies on you."
+
+how_it_works:
+  - title: "Sizes the buffer"
+    text: "Three to six months of the floor, six if income is lumpy or one client is over 40%."
+  - title: "Sets the lines"
+    text: "Yellow at under three months or two months below the floor; red at under one and a half."
+  - title: "Lists the actions"
+    text: "Cut fixed costs, chase work and ask clients to pay early at yellow; ask for help at red or sooner."
+  - title: "Maps the helpers"
+    text: "At least three sources, one ask each until repaid."
+  - title: "Writes the request"
+    text: "Amount, term, purpose, repayment source, plan B and a report date."
+  - title: "Sets the repayment rule"
+    text: "Repay before any new ask and before extras."
+  - title: "Sets the honesty rule"
+    text: "Tell the people who rely on you the number monthly."
+
+output_shape: |
+  BUFFER
+  Floor: <amount>  Target: <months>  Amount: <amount>  Why: <reason>
+
+  LINES AND ACTIONS
+  Yellow when: <...>  Do: 1. ... 2. ...
+  Red when: <...>  Do: 1. ... 2. ...
+
+  COSTS I CAN CUT
+  <item> | Saves: <amount> | In: <days>
+
+  WHO I CAN ASK
+  <person or source> | Limit: <one ask until repaid, or a number> | Best for: <...>
+
+  THE REQUEST
+  To: <who>  Amount: <exact>  For how long: <...>  What it is for: <...>
+  Repaid from: <money already due, with date>  If that fails: <plan B>
+  I will report on: <date>
+
+  REPAYMENT RULE
+  <...>
+
+  MONTHLY REPORT
+  <who hears the number, and when>
+
+  MISSING
+  <figures you need>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: "Your risk"
+    how: "Say if one client pays most of your income. The buffer goes to six months."
+  - what: "Dependants"
+    how: "Say who relies on you. The red line moves up and the report rule names them."
+  - what: "Source of help"
+    how: "A bank, a client or a friend each need a different request. Name which."
+
+judge:
+  - "The buffer is stated in months and in money."
+  - "The yellow line is set before the red line, and each has actions."
+  - "The helper list has at least three sources, each with a limit."
+  - "The request has an exact amount, a repayment date from money already due and a plan B."
+
+test:
+  - "Send the request to a friend and ask if it answers every question they would have."
+  - "Check the repayment source. Is the money already invoiced or signed? If it is only hoped for, rewrite."
+  - "Run it with a lower cash figure and see the lines move."
+
+improve:
+  - "Update the buffer after each quarter's real income."
+  - "Add the actual cost cuts you made, with dates, so next time the list is proven."
+  - "Pair it with the Ruin risk stress tester when you change the plan."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "This is reading, sorting and writing, which any strong chat AI does well with this skill."}
+    - {name: "A spreadsheet or banking app", why: "A live view of cash on hand keeps the lines honest."}
+  inputs:
+    - "A report from the Independent income floor calculator"
+    - "A list of people and places that could help"
+    - "Your bank balance and any debts"
+
+terms:
+  - term: "Buffer"
+    meaning: "Cash set aside to cover the floor while income is low or late."
+  - term: "Yellow and red lines"
+    meaning: "The cash levels at which you act, and at which you ask for help."

@@ -1,0 +1,25 @@
+slug: niche-price-ladder-builder
+name: Niche price ladder builder
+summary: Paste your offer and its going price. Get it rewritten for narrower buyers, each with a price and a size check.
+category: general
+type: skill
+role: make
+job: strategy
+level: intermediate
+inputs:
+  - type: shortlist
+    required: true
+  - type: offer
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: rebuilt
+version: 1.0.0
+minds:
+  - alex-hormozi
+credits:
+  - title: "$100M Offers: How To Make Offers So Good People Feel Stupid Saying No"
+    by: Alex Hormozi
+    url: https://shop.acquisition.com/products/100m-offers-hardcover
+    used: Narrowing an offer to a more specific buyer in steps, rewriting the promise for that buyer, and the way a narrower fit lets the same core work carry a much higher price

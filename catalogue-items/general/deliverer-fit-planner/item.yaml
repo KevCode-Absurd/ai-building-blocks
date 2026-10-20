@@ -1,0 +1,17 @@
+slug: deliverer-fit-planner
+name: "Deliverer fit planner"
+summary: "Paste your brief and who will present it. Get what suits them, what to avoid and where to put the showpiece."
+category: general
+type: skill
+role: make
+job: strategy
+level: intermediate
+inputs:
+  - {type: brief, required: true}
+outputs:
+  - {type: plan}
+origin: rebuilt
+version: 1.0.0
+minds: [wolfgang-amadeus-mozart]
+credits:
+  - {title: "The Letters of Wolfgang Amadeus Mozart (1769-1791), Volume II", by: "Wolfgang Amadeus Mozart, collected by Ludwig Nohl, translated by Lady Wallace", url: "https://archive.org/details/lettersofwolfgan02moza", used: "Shaping each part to the voice and skill of the person who will perform it, giving the showpiece to their strength, and changing words that do not sit well for them"}

@@ -1,0 +1,108 @@
+new_slug: value-created-tally-builder
+name: Value created tally builder
+summary: List who you serve and your figures. Get a cautious value tally for each group and your weakest link.
+job: plan-strategy
+thinking: high
+thinking_why: It builds several estimates with stated assumptions and has to judge where the numbers are weak.
+headline: Value created tally builder
+subhead: List the groups you serve and the figures you have. It picks one measure per group, builds a cautious estimate with each assumption written beside it, values customers on one thing only, adds up the total and names the group you serve least well. The tally is a way to think, not an audit.
+explain: |
+  A business that only takes is on the way out, even if it looks well now. The test is whether each group you deal with comes out ahead: owners, staff, partners or sellers and customers. Most teams only know the owner's number.
+
+  This skill builds a number for each group, using the figure that works as the bottom line of that group's dealings with you. Owners get net income. Staff get pay and benefits. Partners get their profit from you. Customers get one measure, such as time saved or cost cut, with a conservative price on it. Each estimate carries its assumptions in plain words. The tally ends with the group you serve least well and one change.
+when:
+  - You want to show a wider view than profit in your letter or review.
+  - You suspect one group, such as staff or partners, is getting too little.
+  - You are asked what good your business does.
+you_give:
+  - The groups you deal with
+  - "Figures for each: net income, pay, partner profit, customer savings or time (whatever you have)"
+  - Customer behaviour, such as time per purchase (optional)
+you_get:
+  - One bottom-line figure per group
+  - The assumption beside each
+  - A customer estimate on one measure
+  - A total and the weakest estimate
+  - The group you serve least well and one change
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - List the groups and the figures you have for each.
+  - Say what you think each group gains from dealing with you.
+  - Read the assumptions first. Change any that are too generous.
+  - Use the table and the weakest-link note in your letter.
+how_it_works:
+  - title: Lists the groups
+    text: Owners, staff, partners or sellers and customers.
+  - title: Picks one measure each
+    text: The figure that works as that group's bottom line.
+  - title: Builds cautious estimates
+    text: Each with its assumption written beside it.
+  - title: Values customers on one thing
+    text: Time saved or cost cut, with a low price on it.
+  - title: Adds the total
+    text: And notes where the number is weakest.
+  - title: Finds the weakest link
+    text: The group you serve least well and one change.
+output_shape: |
+  GROUPS AND MEASURES
+  <group | measure | figure | assumption>
+
+  CUSTOMER ESTIMATE
+  <measure | per-person sum | number of people | total>
+
+  TOTAL
+  <sum, and the share each group holds>
+
+  WEAKEST NUMBERS
+  <figure | why it is weak | error range>
+
+  LEAST WELL SERVED
+  <group | evidence | one change>
+
+  NOT AN AUDIT
+  <one line>
+
+  MISSING
+  <gaps>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+tweaks:
+  - what: The measure for customers
+    how: "Choose one: time saved, cost cut or a result they value. One measure keeps the estimate honest."
+  - what: The value per hour
+    how: Use a low figure. A cautious number is easier to defend.
+  - what: Staff figure
+    how: Use pay and benefits. If you know the gap above their next-best job, add it as a note.
+  - what: Groups you add
+    how: Add suppliers or the local community if they matter to you.
+judge:
+  - Every group has one measure and one figure.
+  - Every figure carries a plain assumption.
+  - Customers are valued on one thing only.
+  - The weakest numbers are named with a range.
+  - The least well served group has a proposed change.
+test:
+  - Ask a person from one group if the figure matches what they feel.
+  - Halve the customer estimate. Does the tally still look fine?
+  - Run it twice. The weakest numbers should stay the same.
+  - Compare it to your last review. See what it adds.
+improve:
+  - Add your own numbers for time saved or cost cut from customer studies.
+  - Add a staff survey score to the least-well-served test.
+  - Update the tally each year and track the change.
+  - Pair it with "Annual letter writer" to put it in your letter.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: Building cautious estimates with stated assumptions is text and number work any strong chat AI does well with this skill.
+  inputs:
+    - Customer survey results
+    - Partner or seller profit data
+    - Pay and benefits totals
+    - Time-saving studies
+terms:
+  - term: Value created
+    meaning: What a group gains from dealing with you, measured as that group's bottom line.
+  - term: Error bars
+    meaning: The range an estimate could reasonably fall in.

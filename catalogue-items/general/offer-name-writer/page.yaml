@@ -1,0 +1,100 @@
+new_slug: offer-name-writer
+name: Offer name writer
+summary: Paste your offer and buyer. Get ten names built from five parts, three to test and a plan for renaming it.
+job: make-offer
+thinking: low
+thinking_why: It follows a fixed naming formula and writes short options. Judging the best names is yours.
+headline: Offer name writer
+subhead: "Give it your offer and who it is for. It builds ten names from five parts: why now, who it is for, the goal, the time, and a word that says it is a bundle. It marks three to test and gives you the order to refresh the name when it tires."
+explain: |-
+  A good offer with a dull name gets passed over. "Float tank session" and "Six-week stress release challenge" can be the same thing. Only one says who it is for, what it gives and how long it takes.
+
+  This skill builds names with a five-part formula. Each part has a job: a reason the offer exists, the group it is for, the result they get, how long it takes, and a container word that says it is a bundle. It uses three to five parts per name so the name stays short. It also names bonuses and sub-items, sets up a test, and gives the order for refreshing an offer that has tired: change the pictures first, then the words, then the name, and the core last.
+when:
+  - Your offer has no name or a generic one.
+  - Your ads have stopped working but the offer has not changed.
+  - You want to test a few wrappers for the same offer.
+you_give:
+  - "Your offer: what is in it and the result"
+  - Your buyer (optional)
+  - Rules from the ad platform or your field on time and result claims (optional)
+you_get:
+  - Ten names with the parts marked
+  - Three to test, with the reason
+  - Names for the main bonuses
+  - A test plan and a refresh order
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste the offer and the buyer in a sentence each.
+  - Read the ten names out loud and cross out any you cannot say in one breath.
+  - Run the three picks in ads or posts and keep the winner as the control.
+how_it_works:
+  - title: Gives a reason why
+    text: "A believable reason for the offer: a season, an opening, an anniversary."
+  - title: Calls out the buyer
+    text: Names who it is for, as local or specific as you can.
+  - title: States the goal
+    text: The result in a word or short phrase.
+  - title: Adds time and a container
+    text: How long, and a word like challenge, blueprint or sprint.
+  - title: Plans tests and refreshes
+    text: Which names to test and the order of changes when it tires.
+output_shape: |-
+  THE PARTS
+  Reason why | Avatar | Goal | Interval | Container (options for each)
+
+  TEN NAMES
+  1. <name> | parts used
+  ...
+
+  THREE TO TEST
+  <names and why>
+
+  BONUS AND ITEM NAMES
+  <short names>
+
+  TEST PLAN
+  <how to run it, what to watch>
+
+  REFRESH ORDER
+  <what to change, in order>
+
+  MISSING
+  <gaps>
+
+  CHECKS MISSED
+  <one line per check missed, or none>
+tweaks:
+  - what: Local or national
+    how: A local seller should name the neighbourhood. A national one names the role or situation.
+  - what: Time claims
+    how: If your ad platform restricts time and result claims, ask for first-step versions, such as the first sale in 10 days.
+  - what: Tone
+    how: Tell it if you want playful, plain or premium.
+judge:
+  - Each name uses three to five of the parts.
+  - Each can be said in one breath.
+  - The avatar part names a group, not everyone.
+  - No name makes a claim your platform or field restricts.
+  - There is a test plan with a control.
+test:
+  - Show the names to someone in your target group. They should pick the one that sounds made for them.
+  - Run three names for a week with the same budget and compare responses.
+  - Check that renaming does not require changing what you deliver.
+improve:
+  - Use the winner as the control and test one new name at a time.
+  - Keep a list of names tried and results.
+  - Rename sub-items with the same pattern.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: This is text and number work that any strong chat AI does well with the skill.
+  inputs:
+    - Words your buyers use for the result
+    - Your ad platform's rules
+    - The list of past names and their results
+terms:
+  - term: Container word
+    meaning: A word that tells people the offer is a bundle, such as challenge, blueprint, sprint or reset.
+  - term: Wrapper
+    meaning: The name and framing around an offer that can change while the core stays the same.

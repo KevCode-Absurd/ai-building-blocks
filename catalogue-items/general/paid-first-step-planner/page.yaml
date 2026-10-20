@@ -1,0 +1,102 @@
+new_slug: paid-first-step-planner
+name: Paid first step planner
+summary: Paste your offer and lead plan. Get a cheap first piece, a booked second meeting and the upsell to your main offer.
+job: make-offer
+thinking: medium
+thinking_why: It designs a short sequence and checks it with a sum. The steps are fixed and the choices depend on your offer.
+headline: Paid first step planner
+subhead: Give it your offer and chosen route. It picks one small piece to sell at a deep discount, plans how to take a card and book the second meeting at the same time, sets a fee for missing it, and writes the upsell to your main offer.
+explain: |-
+  A discount on your whole offer teaches buyers to wait for deals. A discount on one small piece does something else. It costs little, brings people in who expect to pay, and gets a card on file. The buyer then shows up to a meeting where you show them problems they did not know they had, and the main offer is the natural next step.
+
+  This skill builds that two-step sale. It picks the piece, sets the price, plans the booking so the second meeting is set when the first is paid for, adds a fee for no-shows, and writes the follow-up. It treats the people who buy the discount as qualified leads, not as customers, and it tells you what to watch to be sure it works.
+when:
+  - You want paying leads who actually show up.
+  - Free sign-ups do not book or attend.
+  - You cannot run free offers where you sell.
+you_give:
+  - Your main offer and price
+  - The route and friction plan from earlier steps
+  - What a first meeting or piece could include
+you_get:
+  - The piece to discount and its price
+  - The booking sequence with the card taken and the second meeting set
+  - The no-show fee wording
+  - The upsell plan and the numbers to watch
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste the main offer and say what in it could stand alone.
+  - Walk through the sequence as a buyer and fix any step that feels pushy.
+  - Track show rate, second-meeting rate and main-offer rate for a month.
+how_it_works:
+  - title: Picks the piece
+    text: A standalone part of the offer, never the core.
+  - title: Sets the price
+    text: A deep cut or a token price, with a limit of once per person.
+  - title: Sets the sequence
+    text: Opt-in, call, card taken, first meeting booked, second meeting booked.
+  - title: Adds a no-show fee
+    text: Clear wording agreed at booking.
+  - title: Plans the upsell
+    text: The first meeting shows the problem, the second presents the main offer.
+output_shape: |-
+  THE PIECE
+  <what, normal price, discount price, limit>
+
+  WHY IT WORKS FOR YOU
+  <test: sells alone, shows a problem, leads to the main offer>
+
+  THE SEQUENCE
+  1. ... 2. ... 3. ...
+
+  NO-SHOW FEE
+  <wording, amount, when agreed>
+
+  THE FIRST MEETING
+  <what it delivers, what it reveals>
+
+  THE UPSELL
+  <what is said, what is offered, card on file>
+
+  NUMBERS TO WATCH
+  <show rate, second-meeting rate, main-offer rate, cash vs cost>
+
+  MISSING
+  <gaps>
+
+  CHECKS MISSED
+  <one line per check missed, or none>
+tweaks:
+  - what: How well buyers know your price
+    how: A discount only works when buyers know the usual price. If they do not, show the usual price first.
+  - what: Fee level
+    how: Set the no-show fee at a level that matters but is fair. Say what you can enforce.
+  - what: Meeting length
+    how: Shorter first meetings suit lower prices.
+judge:
+  - The discounted piece is not the core offer.
+  - The card is taken and the second meeting is booked in the same step.
+  - The no-show fee is clear and agreed in advance.
+  - The first meeting delivers value on its own.
+  - Discount buyers are tracked as leads.
+test:
+  - Walk a friend through the sequence. They should know what they pay, when they meet and what happens if they miss.
+  - Run 20 buyers. Compare show rate to your free sign-up show rate.
+  - Check cash from the discount against the cost of the ads. It should cover only part.
+improve:
+  - Raise the discount price if show and buy rates hold.
+  - Add a reminder the day before.
+  - Use what you learn in the first meeting to open the second.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: This is text and number work that any strong chat AI does well with the skill.
+  inputs:
+    - Your main offer and stack
+    - Show rates from earlier free offers
+    - A script for the second meeting
+terms:
+  - term: Two-step sale
+    meaning: A cheap first step that gets a card and a booked second meeting where the main offer is presented.
+  - term: No-show fee
+    meaning: A charge agreed in advance if the buyer misses the booked meeting.

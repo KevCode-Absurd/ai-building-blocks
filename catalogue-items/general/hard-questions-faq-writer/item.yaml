@@ -1,0 +1,28 @@
+slug: hard-questions-faq-writer
+name: Hard questions FAQ writer
+summary: Paste your press release. Get the hard questions customers and your team will ask, answered and graded.
+category: general
+type: skill
+role: make
+job: copy
+level: intermediate
+inputs:
+  - type: copy_draft
+    required: true
+  - type: brief
+    required: false
+outputs:
+  - type: copy_draft
+origin: rebuilt
+version: 1.0.0
+minds:
+  - jeff-bezos
+credits:
+  - title: Working Backwards
+    by: Werner Vogels, All Things Distributed (2006)
+    url: https://www.allthingsdistributed.com/2006/11/working_backwards.html
+    used: Pairing the press release with a list of likely questions and answers to expose weak spots early
+  - title: 2016 letter to shareholders
+    by: Jeff Bezos
+    url: https://www.aboutamazon.com/news/company-news/2016-letter-to-shareholders
+    used: Using research to find blind spots, not to replace understanding the customer

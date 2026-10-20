@@ -14,7 +14,7 @@ outputs:
   - {type: plan, required: true}
 origin: rebuilt
 version: 1.0.0
-minds: [eric-ries, bill-gates]
+minds: [eric-ries, bill-gates, jeff-bezos]
 credits:
   - {title: "Why vanity metrics are dangerous", by: "Eric Ries", url: "https://www.startuplessonslearned.com/", used: "Replacing totals with per-customer rates, splitting by group and tying numbers to action"}
   - {title: "2013 Annual Letter: Measuring Progress", by: "Bill Gates, Gates Foundation", used: "Setting a clear goal, picking what to measure and checking the data behind it"}

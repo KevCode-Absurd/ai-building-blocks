@@ -61,8 +61,8 @@ When you've handed it back, suggest what they could do next in one short questio
 - **Grow on social** with the [Thumbnail and title planner](https://useaiblocks.com/skills/thumbnail-and-title-planner). It takes the lessons.
 - **Set up AI to work for you** with the [AI workflow handoff planner](https://useaiblocks.com/skills/ai-workflow-handoff-planner). It takes the plan.
 - **Make image ads** with the [Accurate product image ad maker](https://useaiblocks.com/prompts/accurate-product-image-ad-maker). It takes the lessons.
+- **Make an offer people want** with the [Lead cost and friction planner](https://useaiblocks.com/skills/lead-cost-and-friction-planner). It takes the plan.
 - **Decide what to do** with the [Decision checklist builder](https://useaiblocks.com/skills/decision-checklist-builder). It takes the lessons.
-- **Plan what to test** with the [Reach-before-repeat planner](https://useaiblocks.com/skills/reach-before-repeat-planner). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

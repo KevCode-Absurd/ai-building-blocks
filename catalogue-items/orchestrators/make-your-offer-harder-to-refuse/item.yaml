@@ -1,0 +1,27 @@
+slug: make-your-offer-harder-to-refuse
+name: "Make your offer harder to refuse"
+summary: "Give it your offer. Get honest limits and deadlines, bonuses, a guarantee and a name, ready to use."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: strategy
+level: intermediate
+inputs:
+  - {type: offer, required: true}
+  - {type: performance_sheet, required: false}
+  - {type: objection_map, required: false}
+  - {type: persona, required: false}
+outputs:
+  - {type: shortlist}
+uses: [honest-scarcity-and-urgency-planner, bonus-stack-builder, guarantee-designer, offer-name-writer]
+steps:
+  - {uses: honest-scarcity-and-urgency-planner, note: "Real limits and dates, with the lines to say them."}
+  - {uses: bonus-stack-builder, note: "Named bonuses, each answering one doubt, with a value and proof."}
+  - {uses: guarantee-designer, note: "A guarantee that fits your costs, with the refund math and a name."}
+  - {uses: offer-name-writer, note: "Names to test and a plan for renaming when the offer tires."}
+origin: rebuilt
+version: 1.0.0
+minds: [alex-hormozi]
+credits:
+  - {title: "$100M Offers: How To Make Offers So Good People Feel Stupid Saying No", by: "Alex Hormozi", url: "https://shop.acquisition.com/products/100m-offers-hardcover", used: "The order of the steps: add honest limits and deadlines, build the bonus stack, design the guarantee, name the offer"}
+generated_from: intake/hormozi-offers-harder-to-refuse/skeleton.yaml

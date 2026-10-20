@@ -114,8 +114,8 @@ When you've handed it back, suggest what they could do next in one short questio
 - **Check it before it goes live** with the [Meta ads compliance checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the image ads.
 - **Plan what to test** with the [Image ad gap finder](https://useaiblocks.com/skills/image-ad-gap-finder). It takes the image ads.
 - **Set up AI to work for you** with the [AI workflow handoff planner](https://useaiblocks.com/skills/ai-workflow-handoff-planner). It takes the plan.
+- **Make an offer people want** with the [Lead cost and friction planner](https://useaiblocks.com/skills/lead-cost-and-friction-planner). It takes the plan.
 - **Write the ad copy** with the [Story image ad writer](https://useaiblocks.com/skills/story-image-ad-writer). It takes the plan.
-- **Understand your buyers** with the [Customer discovery interview planner](https://useaiblocks.com/skills/customer-discovery-interview-planner). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

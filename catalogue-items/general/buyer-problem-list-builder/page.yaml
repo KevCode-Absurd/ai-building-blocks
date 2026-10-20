@@ -1,0 +1,94 @@
+new_slug: buyer-problem-list-builder
+name: Buyer problem list builder
+summary: Paste your buyer and product. Get every problem they face from start to result, each turned into a promise.
+job: make-offer
+thinking: medium
+thinking_why: It has to think of many problems a buyer has, but the method is fixed and every line can be checked against buyer words.
+headline: Buyer problem list builder
+subhead: Give it your buyer and what you sell. It writes the result the buyer wants as a place they arrive, lists each stage between now and that place, and finds every reason they might stall or quit. Each problem becomes a promise you could make.
+explain: |-
+  Most offers answer two or three problems and ignore the rest. The buyer still holds the rest in their head, and one unanswered doubt is enough to stop a sale. So a short list of problems makes a thin offer.
+
+  This skill makes the list long on purpose. It follows the buyer through the stages they must go through, and at each stage asks four questions: is it worth it, will it work for me, is it hard, and will it take too long. Every answer is a problem, and every problem is turned into a promise that starts with how to. The list is the raw material for the rest of the offer.
+when:
+  - You are building a new offer and only know a few of the buyer's problems.
+  - Buyers say "I need to think about it" and you cannot say what they are thinking about.
+  - Your offer sells the thing you make, not the result the buyer wants.
+you_give:
+  - "Your buyer: a persona, or a plain description"
+  - What you sell and what it does (optional)
+  - Reviews, call notes or survey answers in the buyer's words (optional)
+  - Your brand file (optional)
+you_get:
+  - The result written as a place the buyer arrives
+  - Stages from today to that place, in order
+  - Thirty or more problems sorted under the four value drivers
+  - A promise for each problem, with the buyer words behind it or a mark that it is a guess
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your buyer description and what you sell. Add reviews or call notes if you have them.
+  - Read the stage list and fix any stage that is out of order or missing.
+  - Cross out any problem that no buyer would ever raise, then take the list to Delivery option generator.
+how_it_works:
+  - title: Names the place they arrive
+    text: Writes the result as a scene in the buyer's words, with no product noun in it.
+  - title: Lists the stages
+    text: Puts what the buyer must do in order, including the step just before they find you and the one right after the result.
+  - title: Asks four questions per stage
+    text: Worth it, will it work for me, is it hard or confusing, will it take too long.
+  - title: Uses buyer words first
+    text: Quotes reviews and notes. Where there are none, the line is marked as a guess.
+  - title: Turns each into a promise
+    text: Reverses the problem into a how-to line that names the end result.
+output_shape: |-
+  THE PLACE THEY ARRIVE
+  <one or two sentences, buyer's words>
+
+  STAGES
+  1. <stage> ... 8. <stage>
+
+  PROBLEMS AND PROMISES
+  Stage | Problem (buyer's view) | Driver | Promise | Evidence (quote or GUESS)
+
+  COUNT
+  <problems by driver, total>
+
+  MISSING
+  <what would sharpen the list>
+
+  CHECKS MISSED
+  <one line per check missed, or none>
+tweaks:
+  - what: How far the stages go
+    how: Say whether to stop at the first result or go on to what they need next. The list gets longer and more useful when you include the next need.
+  - what: Buyer words
+    how: Paste real quotes. A list built on quotes holds up better than one built on guesses, and the evidence column shows which is which.
+  - what: One buyer or several
+    how: Run it once per buyer type. A first-time buyer and a repeat buyer have different problems.
+judge:
+  - The place they arrive has no product in it.
+  - Each stage has at least one problem under every one of the four drivers.
+  - Every problem is written from the buyer's side, not as a feature you lack.
+  - Each promise names a result, not an activity.
+  - The evidence column separates quotes from guesses.
+test:
+  - Give it a buyer you know well. You should recognise most problems and learn at least five new ones.
+  - Count the problems. Under fifteen means the stages are too coarse.
+  - Show three problems to a real buyer and ask which are true.
+improve:
+  - Add the new problems that real buyers raise in sales calls.
+  - Keep the list and rerun it each time the product changes.
+  - Mark the problems that came up most in reviews so later steps keep them.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: This is text and number work that any strong chat AI does well with the skill.
+  inputs:
+    - A persona from Best customer finder or your own notes
+    - Reviews or call notes in the buyer's words
+    - Your product facts
+terms:
+  - term: Value drivers
+    meaning: "The four things that decide how much a buyer values an offer: the outcome, how likely it is, how long it takes and how much effort it costs."
+  - term: Promise
+    meaning: A how-to line that answers one problem and names the result the buyer gets.

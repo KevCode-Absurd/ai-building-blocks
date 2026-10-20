@@ -1,0 +1,29 @@
+slug: buyer-problem-list-builder
+name: Buyer problem list builder
+summary: Paste your buyer and product. Get every problem they face from start to result, each turned into a promise.
+category: general
+type: skill
+role: make
+job: research
+level: intermediate
+inputs:
+  - type: persona
+    required: true
+  - type: product_data
+    required: false
+  - type: voc_reviews
+    required: false
+  - type: brand_brain
+    required: false
+outputs:
+  - type: objection_map
+uses: []
+origin: rebuilt
+version: 1.0.0
+minds:
+  - alex-hormozi
+credits:
+  - title: "$100M Offers: How To Make Offers So Good People Feel Stupid Saying No"
+    by: Alex Hormozi
+    url: https://shop.acquisition.com/products/100m-offers-hardcover
+    used: Writing the result as a place, listing what the buyer must do in order, the four kinds of reason a buyer fails or quits, and turning each problem into a how-to promise

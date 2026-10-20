@@ -50,9 +50,9 @@ The list of guesses with evidence. The risk ranking. The talk plan per guess (wh
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - **Understand your buyers** with the [Switch story mapper](https://useaiblocks.com/skills/switch-story-mapper). It takes the plan.
 - **Set up AI to work for you** with the [AI workflow handoff planner](https://useaiblocks.com/skills/ai-workflow-handoff-planner). It takes the plan.
+- **Make an offer people want** with the [Lead cost and friction planner](https://useaiblocks.com/skills/lead-cost-and-friction-planner). It takes the plan.
 - **Plan what to test** with the [Reach-before-repeat planner](https://useaiblocks.com/skills/reach-before-repeat-planner). It takes the plan.
 - **Write the ad copy** with the [Story image ad writer](https://useaiblocks.com/skills/story-image-ad-writer). It takes the plan.
-- **Read your ad results** with the [Ad recall and pull calculator](https://useaiblocks.com/skills/ad-recall-and-pull-calculator). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

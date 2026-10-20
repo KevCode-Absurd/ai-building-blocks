@@ -62,6 +62,7 @@ Customer value with its sum. Cost to win with its sum. The ratio and a pass or f
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - **Sell it** with the [Franchise and reseller terms writer](https://useaiblocks.com/skills/partner-deal-terms-writer). It takes the audit report.
 - **Lead the team** with the [Blame-free review agenda writer](https://useaiblocks.com/skills/blame-free-review-agenda-writer). It takes the audit report.
+- **Say it to the room** with the [Annual letter writer](https://useaiblocks.com/skills/annual-letter-writer). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

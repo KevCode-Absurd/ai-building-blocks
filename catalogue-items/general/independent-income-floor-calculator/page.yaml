@@ -1,0 +1,119 @@
+new_slug: independent-income-floor-calculator
+name: "Independent income floor calculator"
+summary: "Paste your costs and ways to earn. Get a monthly income floor, the steady streams and what a sick month costs."
+job: think-and-decide
+thinking: medium
+thinking_why: "The sums are fixed, but sorting streams into steady and extra takes judgement."
+
+headline: "Know the monthly income you need before you leave a salary"
+subhead: "Paste what you spend, what your employer covers and the ways you could earn on your own. It builds a monthly floor, sorts each income stream into steady or extra, works out how many clients the floor needs, and sizes the cash for a month you cannot work. You get a one-page report."
+
+explain: |
+  A salary hides costs. Health cover, a pension, a desk, software and a steady payday all come with it. Leave and you pay for each one yourself, and tax is not taken off before the money reaches you. Many people compare their old pay with their hoped-for income and miss all of that.
+
+  This skill builds the number from the other end. It starts with a quiet-life month, adds what the employer was covering, adds a tax share, and gives you a gross floor. It then sorts every way you could earn into steady (repeats monthly and has been known for three months or more) and extra (one-off, seasonal, hoped for). Only steady income counts toward the floor, and streams with no contract are counted at four fifths of their usual size, since clients pause. The gap is turned into a number of clients. The report ends by asking what happens in a month you cannot work, and how much cash you need to wait for the first payments. It is a planning aid, not personal financial advice.
+
+when:
+  - "You are thinking of leaving a job to work for yourself and need to know if the sums hold."
+  - "You already freelance and your income swings so much you cannot plan."
+  - "Someone asks how many clients you need and you only have a guess."
+
+you_give:
+  - "What you spend in a lean month and in a comfortable one"
+  - "What your job covers that you would pay for yourself: health cover, pension, equipment, space"
+  - "Every way you could earn: the amount, how regular, whether there is a contract, how fast it is paid"
+  - "Your tax rate or a rough figure (optional)"
+  - "What you would charge a new client (optional)"
+you_get:
+  - "Your monthly floor, in the lean and the comfortable version"
+  - "Each income stream sorted steady or extra, with the amount counted"
+  - "The gap, and how many clients it takes to close it"
+  - "The hole in a month you cannot work, and the cash to cover it"
+  - "A list of what is missing"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Paste your numbers as they are, with gaps. It marks what it cannot work out."
+  - "Check the steady and extra sort. Move a stream if you know better."
+  - "Take the report to the Client fee and cap setter."
+
+how_it_works:
+  - title: "Builds the quiet-life month"
+    text: "Your leanest comfortable month, then the comfortable one."
+  - title: "Prices what the job gave you"
+    text: "Health cover, pension, tools and space, each with a monthly cost."
+  - title: "Adds a tax share"
+    text: "Turns the cost into the gross income you need to earn."
+  - title: "Sorts the streams"
+    text: "Steady, seasonal or extra, with a count of 80% for streams without a contract."
+  - title: "Finds the gap"
+    text: "Floor minus steady income, then clients needed at your fee."
+  - title: "Tests a sick month"
+    text: "What keeps paying when you cannot work, and the hole that leaves."
+  - title: "Sizes the cash"
+    text: "Cover for slow first payments plus two sick months."
+
+output_shape: |
+  FLOOR
+  Lean month: <amount>  Employer extras: <amount>  Tax share: <percent>
+  Gross floor (lean): <amount>  Gross floor (comfortable): <amount>
+
+  STREAMS
+  <stream> | <amount> | Steady / Seasonal / Extra | Counted: <amount>
+  Steady income counted: <amount>
+
+  GAP AND CLIENTS
+  Gap: <amount>  Fee per client: <amount>  Clients needed: <number, rounded up>
+
+  SICK MONTH
+  Income that continues: <amount>  Hole: <amount>
+
+  CASH BEFORE LEAVING
+  Slow-payment cover: <amount>  Two sick months: <amount>  Total: <amount>
+
+  MISSING
+  <figures you need>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: "Currency and tax"
+    how: "Name your currency and give your tax rate. Without a rate it asks you to check one with a local adviser."
+  - what: "Benefits"
+    how: "If a partner's job covers health or housing, say so. The employer extras shrink."
+  - what: "Comfort level"
+    how: "Give both a lean and a comfortable month. The floor comes out for each."
+
+judge:
+  - "The floor includes the costs the employer used to cover."
+  - "Each stream is marked steady or extra, and only steady streams count toward the floor."
+  - "Streams with no contract are counted at four fifths."
+  - "The sick-month hole and the cash needed are both stated as numbers."
+
+test:
+  - "Run it with last year's real figures and check that the floor matches your actual lean months."
+  - "Change one stream to zero and see how many clients the gap now needs."
+  - "Ask it for the same case twice. The floor and the client count should match."
+
+improve:
+  - "Update the streams every quarter with what really arrived and when."
+  - "Add the real invoice delay of each client so the slow-payment cover is exact."
+  - "Pair it with the Client fee and cap setter to turn the gap into a fee and a client limit."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "This is reading, sorting and writing, which any strong chat AI does well with this skill."}
+    - {name: "A spreadsheet", why: "Your bank statements for three months are the best source for the lean-month figure."}
+  inputs:
+    - "Three months of bank statements"
+    - "A list of current clients and what each pays"
+    - "Your employment terms: what the job covers"
+
+terms:
+  - term: "Floor"
+    meaning: "The gross income you need each month to cover costs and tax."
+  - term: "Steady stream"
+    meaning: "Income that repeats monthly and has been known for at least three months."
+  - term: "Sick-month hole"
+    meaning: "The floor minus whatever keeps paying when you cannot work."

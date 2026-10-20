@@ -7,6 +7,8 @@ description: Use when your marketing pitches or hints but gets few replies, or l
 
 Someone with a costly problem often wants facts before they want a seller. An offer of useful information gives them a reason to reply without the pressure of a pitch, and each reply tells you who is looking. This skill picks that information, defines a reply you can count, writes the ask, and sets who follows up and when. For people who reply but do not buy, use "Almost-buyer follow-up writer".
 
+Use [Front-end offer picker](https://useaiblocks.com/skills/front-end-offer-picker) instead when you have not yet decided between a premium, free or discount first step.
+
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
 This skill runs on its own. What's below makes the result better, but none of it is required.
@@ -54,7 +56,7 @@ The costly problem. The offer: name, format, why they want it. What counts as a 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Make an offer people want** with the [Value ladder planner](https://useaiblocks.com/skills/value-ladder-planner). It takes the offer.
+- **Make an offer people want** with the [Bonus stack builder](https://useaiblocks.com/skills/bonus-stack-builder). It takes the offer and plan.
 - **Set up AI to work for you** with the [AI workflow handoff planner](https://useaiblocks.com/skills/ai-workflow-handoff-planner). It takes the plan.
 - **Sell it** with the [Stranger first-message writer](https://useaiblocks.com/skills/stranger-first-message-writer). It takes the plan and offer.
 - **Write the landing page** with the [Ad-matched landing page writer](https://useaiblocks.com/skills/ad-matched-landing-page-writer). It takes the offer.

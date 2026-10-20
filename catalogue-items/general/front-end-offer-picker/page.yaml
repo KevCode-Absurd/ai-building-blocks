@@ -1,0 +1,100 @@
+new_slug: front-end-offer-picker
+name: Front-end offer picker
+summary: Paste your offer and lead numbers. Get a pick of premium, free or discount first step, with the reason and tests.
+job: make-offer
+thinking: medium
+thinking_why: It weighs several facts about your business against three routes and gives a reasoned pick. The scoring is fixed.
+headline: Front-end offer picker
+subhead: Give it your offer and what you know about your lead volume, costs, cash and market. It scores a premium, free and discount first step against your facts, picks one, says what must be true for it to work and when to move to premium.
+explain: |-
+  If too few people respond to your offer, the usual fix is a better ad. Often the better fix is a different way in. A premium offer on its own gives the best buyers, but it costs the most to reach them and takes the longest to pay back. A free first step brings the most leads at the lowest cost. A deep discount on one piece collects a little cash and books the next meeting.
+
+  This skill compares the three on your facts: how many leads you can handle, what a lead costs, how long you can wait to break even, how well buyers understand what you sell, any rules on free offers where you sell, and how much proof you have. It gives a pick, what must be true for it to work, and when to move on to a higher-priced start.
+when:
+  - Too few people respond to your offer.
+  - Your cost to win a customer is higher than you can afford.
+  - You are entering a new market with no proof yet.
+you_give:
+  - Your offer and price
+  - Lead volume, cost per lead and per sale, close rate (optional)
+  - Cash you can spend while you learn (optional)
+  - Your market and any rules on free offers
+you_get:
+  - A score for premium, free and discount against your facts
+  - The pick, with the reason and what must be true
+  - How to move to a higher-priced start later
+  - Two tests to run first
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste the offer and whatever lead and cost numbers you have.
+  - Say how much cash you could spend while you learn and what limits your volume.
+  - Take the pick to Lead cost and friction planner.
+how_it_works:
+  - title: Gathers your facts
+    text: Volume, cost, cash, trust, rules, how well buyers know your type of offer.
+  - title: Lays out the three routes
+    text: Pros, cons and when each fits.
+  - title: Scores each
+    text: Against your facts, 0 to 3 per fact.
+  - title: Picks one
+    text: Says what must be true and what would change the pick.
+  - title: Plans the move up
+    text: When and how to go to premium once you have proof.
+output_shape: |-
+  YOUR FACTS
+  Volume | cost per lead | cost per sale | cash and time to break even | proof | how well buyers know this offer | rules on free
+
+  SCORES
+  Route | fact-by-fact scores | total
+
+  THE PICK
+  <route> | why | what must be true
+
+  WHAT WOULD CHANGE IT
+  <facts that flip the pick>
+
+  MOVING UP
+  <when and how to go to premium>
+
+  FIRST TESTS
+  <two tests with a win rule>
+
+  MISSING
+  <gaps>
+
+  CHECKS MISSED
+  <one line per check missed, or none>
+tweaks:
+  - what: Your cash
+    how: State how long you can wait to break even. Less cash pushes the pick toward free or discount.
+  - what: Your sales process
+    how: A weak sales process makes premium risky. Say how tight yours is.
+  - what: Rules
+    how: Name any rules on free offers in your country or field.
+judge:
+  - The pick follows from the scores, not from a preference.
+  - Each fact is stated or marked as missing.
+  - The reason names what must be true.
+  - There is a plan to move to premium.
+  - The tests have a win rule.
+test:
+  - Give it a case with lots of cash and strong proof. It should lean premium.
+  - Give it a case with no proof and little cash. It should lean free or discount.
+  - Check that rules on free offers move the pick toward discount.
+improve:
+  - Rerun it each time proof or cash changes.
+  - Keep the numbers from your tests for the next run.
+  - "Layer the offers: premium works as the second offer after a free first step."
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: This is text and number work that any strong chat AI does well with the skill.
+  inputs:
+    - A sheet of lead and sales numbers
+    - Reviews or testimonials you hold
+    - Your cost to give the first step away
+terms:
+  - term: Front end
+    meaning: The first offer a new buyer sees.
+  - term: Premium offer
+    meaning: The main offer sold at full price on its own.

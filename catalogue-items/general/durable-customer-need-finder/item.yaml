@@ -1,0 +1,27 @@
+slug: durable-customer-need-finder
+name: Durable customer need finder
+summary: Describe your idea and who it is for. Get the customer need behind it, a ten-year test and the skills gap.
+category: general
+type: skill
+role: make
+job: research
+level: intermediate
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: brief
+origin: rebuilt
+version: 1.0.0
+minds:
+  - jeff-bezos
+credits:
+  - title: 2008 letter to shareholders
+    by: Jeff Bezos
+    used: Working backwards from a customer need versus starting from the skills you have, and the test that a need should still hold in ten years
+  - title: 2014 letter to shareholders
+    by: Jeff Bezos
+    used: "The four marks of a business worth backing: customers love it, it can grow large, it can earn good returns and it can last"
+  - title: 2018 letter to shareholders
+    by: Jeff Bezos
+    used: Listening to customers and also inventing for needs they do not know to ask for

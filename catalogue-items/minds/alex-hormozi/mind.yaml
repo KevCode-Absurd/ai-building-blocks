@@ -21,7 +21,7 @@ seats:
   - {seat: "Lead flow", asks: "How many new people saw this offer this week, and what would double that?"}
   - {seat: "Cash and the money model", asks: "What do we sell next, after the first yes, so each customer is worth more?"}
 pairs_with: [jeff-bezos, russell-brunson, robert-cialdini, chris-voss, david-ogilvy]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "Acquisition.com home page", by: "Acquisition.com (Alex and Leila Hormozi)", url: "https://www.acquisition.com/", kind: own-words}
   - {n: 2, title: "$100M Offers: How To Make Offers So Good People Feel Stupid Saying No (book page)", by: "Alex Hormozi / Acquisition.com", url: "https://shop.acquisition.com/products/100m-offers-hardcover", kind: own-words}
@@ -35,6 +35,8 @@ sources:
   - {n: 10, title: "Making Money is a Game (Here's the Cheat Code), The Game ep. 921 (episode summary, 10 July 2025)", by: "Podcast Insider", url: "https://podcast-insider.on-forge.com/blog/the-game-with-alex-hormozi/making-money-is-a-game-heres-the-cheat-code-ep-921", kind: secondary}
   - {n: 11, title: "$100M Offers, The Lost Chapter: Your First Avatar (official sample, 2021)", by: "Alex Hormozi / Acquisition.com", url: "https://acquisition.com/hubfs/The_Lost_Chapter-Your_First_Avatar.pdf", kind: own-words}
   - {n: 12, title: "Acquisition.com Offer Creation Course (training outline)", by: "Acquisition.com", url: "https://www.acquisition.com/training", kind: reference}
+  - {n: 13, title: "$100M Offers: How To Make Offers So Good People Feel Stupid Saying No (full book, 2021)", by: "Alex Hormozi", kind: own-words}
+  - {n: 14, title: "The New Secret Chapter: How to Make Money (draft chapter, Section A: Attract; year not printed, about 2025)", by: "Alex Hormozi", kind: own-words}
 tests:
   - {kind: use, prompt: "I sell a $300 one-off website check-up for small businesses. Turn it into an offer with a name, bonuses and a guarantee."}
   - {kind: use, prompt: "Write three short posts I can share for free that lead people to book a call for my tutoring service."}

@@ -1,0 +1,104 @@
+new_slug: narrative-memo-checker
+name: Narrative memo checker
+summary: Paste your memo. Get a score out of 100, the weak spots and the three fixes that matter most.
+job: speak-and-persuade
+thinking: medium
+thinking_why: It judges clarity and proof against a fixed list of checks.
+headline: Narrative memo checker
+subhead: "Paste your memo. It reads it cold, says what it asks for, then checks six things: the ask, full sentences, proof, risks, a first page that stands alone and length. You get a score out of 100, each weak spot and the three fixes that matter most."
+explain: |
+  Most weak memos are not badly written. They are written too fast, or they hide the ask. A reader can feel the difference, but few writers can say what it is.
+
+  This skill reads the memo the way a busy colleague would. It first states the ask in one sentence. If it cannot, that is the first problem. It then checks six things, each worth points: a clear ask, full sentences, proof for claims, risks and a fallback, a first page that works alone, and fit to six pages. The score says how many of the six it met. It lists the three fixes that would add the most.
+when:
+  - Your memo is due and you want a cold read before the meeting.
+  - A memo keeps getting questions the writer thought were answered.
+  - You want to teach your team what a clear memo looks like.
+you_give:
+  - The memo, as full text
+  - The meeting and the decision (optional)
+  - Who will read it (optional)
+you_get:
+  - The ask, in one sentence, as a cold reader sees it
+  - A score out of 100 and how it was worked out
+  - Each weak spot with the line it came from
+  - The three fixes that matter most
+  - A second score after the fixes
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste the full memo.
+  - Say who decides and by when, if it is not in the memo.
+  - Read the cold ask first. If it is wrong, the memo is unclear.
+  - Make the three fixes and run it again.
+how_it_works:
+  - title: Reads it cold
+    text: States the ask in one sentence, as a new reader would.
+  - title: Checks six areas
+    text: Ask, full sentences, proof, risks, page one and length.
+  - title: Scores the memo
+    text: Points for each area, with the working shown.
+  - title: Quotes the weak spots
+    text: Each problem with the line it comes from.
+  - title: Picks three fixes
+    text: The three changes that add the most points.
+  - title: Scores again
+    text: Applies the fixes where it can and gives a second score.
+output_shape: |
+  COLD ASK
+  <the ask in one sentence, or "could not tell">
+
+  SCORE: <n>/100
+  Ask clear <n>/20 | Full sentences <n>/15 | Proof <n>/25 | Risks and fallback <n>/20 | Page one alone <n>/10 | Length <n>/10
+
+  WEAK SPOTS
+  <area | line | problem>
+
+  THREE FIXES
+  1. <fix> | adds about <n> points
+  2. ...
+  3. ...
+
+  SCORE AFTER FIXES: <n>/100
+
+  MISSING
+  <what would help>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+tweaks:
+  - what: The full memo
+    how: Paste all of it. A checker needs the whole argument.
+  - what: The decision
+    how: Say what the reader is meant to decide. It checks the ask against that.
+  - what: The reader
+    how: Say who reads it. A memo for finance needs different proof than one for design.
+  - what: Length
+    how: Say your page limit if it is not six.
+judge:
+  - The cold ask matches what you meant.
+  - Each weak spot names a line.
+  - The score shows its working.
+  - The three fixes are specific.
+  - The second score changes only if the fixes were made.
+test:
+  - Run it on a memo that went badly. See if it finds what the room asked about.
+  - Run it on one that went well. It should score high.
+  - Run it twice. The cold ask should stay the same.
+  - Ask a colleague to state the ask. Compare.
+improve:
+  - Add your team's own checks to the list, such as legal sign-off.
+  - Change the points to match what matters most to your readers.
+  - Save scored memos so you can see your team's progress.
+  - Pair it with "Six-page narrative memo writer" for a rewrite.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: Reading a memo against a fixed checklist is text work any strong chat AI does well with this skill.
+  inputs:
+    - The meeting purpose
+    - A past memo that went well
+    - Your team's page limit
+    - Questions the room asked last time
+terms:
+  - term: Cold read
+    meaning: Reading with no background, the way a busy colleague would at the start of a meeting.

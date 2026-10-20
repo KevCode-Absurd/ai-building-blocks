@@ -1,0 +1,110 @@
+new_slug: layered-draft-writer
+name: "Layered draft writer"
+summary: "Paste your two-audience brief. Get a draft with a plain surface anyone enjoys and marked touches only experts catch."
+job: write-and-tell-stories
+thinking: high
+thinking_why: "It balances two goals at once and has to judge each line as surface or depth."
+
+headline: "A draft anyone can enjoy, with a few touches only experts will catch"
+subhead: "Give it the brief for a mixed audience. It writes the plain surface first, adds a small number of deeper touches that never block it, keeps strong feeling easy to take, and marks which lines are which. You get a draft and a map of the depth."
+
+explain: |
+  Writing for two audiences usually produces one of two things: a simple draft with nothing for the expert, or a clever draft the beginner abandons. The way through is layers. The top layer has to work alone. The deeper layer has to be optional.
+
+  This skill writes the surface first, so that the main idea survives a single pass and can be repeated by someone who has never met the subject. Then it adds a few deeper touches, such as a precise detail, a quiet callback or a twist on a convention. Each one must pass a removal test (the draft still works without it) and a block test (a newcomer reading past it loses nothing). If the piece needs strong feeling, anger or grief, it writes the feeling fully but keeps the shape pleasant to take in. Every line is tagged, so you can see the layers.
+
+when:
+  - "You have a brief for a mixed audience and need the first draft."
+  - "Your last draft was either too basic for the experts or too heavy for everyone else."
+  - "You want to add substance to a simple piece without making it harder to follow."
+
+you_give:
+  - "A brief from the Two-audience brief writer, or the same facts in your own words"
+  - "The facts, claims, examples and material you want to use"
+  - "A fit plan for the person who delivers it (optional)"
+  - "Length and format"
+you_get:
+  - "A full draft with a plain surface"
+  - "A depth map listing each deeper touch and what an expert would notice"
+  - "A feeling check if the piece carries strong emotion"
+  - "A list of what is missing"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Paste the brief and your material. If a fit plan exists, paste that too."
+  - "Read the draft first without the tags, as a newcomer would. Then read the depth map."
+  - "Hand the draft to the Overstuffed draft cutter before you show anyone."
+
+how_it_works:
+  - title: "Writes the main idea first"
+    text: "One sentence the whole draft serves and that survives one pass."
+  - title: "Builds the surface"
+    text: "Plain sentences, terms explained at first use, a line or image people can repeat."
+  - title: "Adds the depth"
+    text: "Three to five touches per thousand words, each tested for removal and blocking."
+  - title: "Handles strong feeling"
+    text: "Writes anger or grief fully but keeps the rhythm and the shape easy to follow."
+  - title: "Tags every line"
+    text: "Surface or depth, so you can see the layers and cut a layer if needed."
+  - title: "Checks the ratio"
+    text: "At least four fifths of the words must work for a newcomer."
+  - title: "Checks the draft"
+    text: "Runs its own checks and names any it missed."
+
+output_shape: |
+  MAIN IDEA
+  <one sentence>
+
+  DRAFT
+  <the full draft, with [S] after surface passages and [D] after depth touches>
+
+  DEPTH MAP
+  <n>. <the touch> | What an expert notices: <...> | Removed, the draft still works because: <...>
+
+  FEELING CHECK
+  <where the piece carries strong feeling and how it stays easy to take, or "no strong feeling">
+
+  MISSING
+  <facts or material you needed and did not have>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: "Depth level"
+    how: "Say 'light' for two touches per thousand words or 'rich' for five. The default is three."
+  - what: "Format"
+    how: "A talk, an article and a product page place depth differently. Name yours."
+  - what: "Voice"
+    how: "Paste a sample of your own writing and the surface follows it."
+
+judge:
+  - "A newcomer can say the main idea after reading the surface once."
+  - "Each depth touch has a stated reason an expert would notice it."
+  - "Taking out every depth touch leaves a draft that still works."
+  - "Strong feeling is shown in full and does not make the piece hard to follow."
+
+test:
+  - "Strip out the [D] passages and read what is left to someone new to the subject. They should lose nothing."
+  - "Read the full draft to an expert and ask which touches they spotted without being told."
+  - "Count the words tagged [S]. They should be at least four fifths of the total."
+
+improve:
+  - "Give it a list of what your experts already find tired, so it avoids those depth touches."
+  - "Keep a file of depth touches that experts noticed and reuse the kinds that worked."
+  - "Run the Overstuffed draft cutter right after, since layers invite extra material."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "This is reading, sorting and writing, which any strong chat AI does well with this skill."}
+    - {name: "A voice recorder or read-aloud tool", why: "Hearing the surface read aloud shows whether a newcomer would follow it."}
+  inputs:
+    - "A brief from the Two-audience brief writer"
+    - "A fit plan from the Deliverer fit planner"
+    - "Your real material: facts, examples, quotes you have the right to use"
+
+terms:
+  - term: "Surface"
+    meaning: "The layer anyone can follow on one pass, with no help."
+  - term: "Depth touch"
+    meaning: "A small detail or twist that rewards a second look and does not block the first."

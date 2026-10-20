@@ -1,0 +1,121 @@
+new_slug: client-fee-and-cap-setter
+name: "Client fee and cap setter"
+summary: "Paste your floor and what others charge. Get a fee, billing terms and a client cap that covers your costs."
+job: think-and-decide
+thinking: medium
+thinking_why: "The sums are fixed, but choosing a position against others' prices takes judgement."
+
+headline: "Set a fee and a client limit that cover your costs"
+subhead: "Tell it your income floor and what others in your field charge. It sets your fee on purpose above the middle, turns that into the number of clients you need, caps your clients so you keep time for your own work, and writes the billing terms. You get a fee card and a plan."
+
+explain: |
+  Most people pick a fee by looking at what others charge and going slightly under, then take every client who says yes. The result is a full diary at a price that barely covers costs, and no time left for the work only you can do.
+
+  This skill works from your floor. It collects three to five real prices from your field, picks a position in the top third with a stated reason, and shows the client count each candidate fee needs. It then sets a cap: the number you need plus one, never more than 60% of your working hours. Billing terms follow: by the month, paid on a fixed day, due whether or not the client uses the time, with a pause and cancellation rule. The discount rule is fixed in advance. A lower price for the same service tells the next client what your work is worth. It is a planning aid, not personal financial advice.
+
+when:
+  - "You are about to start taking clients and need a fee and a limit."
+  - "You take every client who asks and have no time for your own work."
+  - "Clients pause, skip or pay late, and you bill by the session."
+
+you_give:
+  - "Your income floor and the gap, from the Independent income floor calculator or your own figures"
+  - "Three to five real prices charged by people doing similar work"
+  - "Hours you can work in a month, and hours a client takes"
+  - "What makes your work worth more than the middle: results, name, scarcity"
+you_get:
+  - "A fee with the reason for its position"
+  - "Three candidate fees and the clients each needs"
+  - "A client cap with the hours sum behind it"
+  - "Billing terms in a few lines, and a discount rule"
+  - "A short answer to 'why do you cost more than others?'"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Paste the floor report and the prices you found. Give your hours."
+  - "Read the fee reason aloud. If you cannot say it with a straight face, change the position."
+  - "Take the plan to First customers by hand planner, and use the fee card when you quote."
+
+how_it_works:
+  - title: "Reads the floor and the market"
+    text: "The gap to cover and three to five real prices."
+  - title: "Chooses a position"
+    text: "In the top third of the real prices, with a reason you can state."
+  - title: "Counts clients per fee"
+    text: "Clients needed at three candidate fees, rounded up."
+  - title: "Sets the cap"
+    text: "Clients needed plus one, never above 60% of your working hours."
+  - title: "Writes the terms"
+    text: "Monthly billing, a fixed pay day, due whether or not they use it, a pause rule."
+  - title: "Fixes the discount rule"
+    text: "What you may trade for a discount and what you never cut."
+  - title: "Writes the answer"
+    text: "A two-sentence reply to why you cost more."
+
+output_shape: |
+  PRICES FOUND
+  <price> | <who or where> (3 to 5)
+  Middle: <amount>  Top third starts: <amount>
+
+  FEES COMPARED
+  <fee> | Clients needed: <n> | Hours each: <h> | Per hour: <amount>
+
+  CHOSEN FEE
+  <fee> because <reason>
+
+  CAP
+  Clients needed: <n> + 1 spare = <n>. Hours: <clients x hours> of <available> (<percent>)
+
+  BILLING TERMS
+  1. <...>
+
+  DISCOUNT RULE
+  <...>
+
+  WHY YOU COST MORE
+  <two sentences>
+
+  MISSING
+  <figures you need>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: "Fee unit"
+    how: "Say if you bill by the hour, month or project. The terms and the sums follow."
+  - what: "Room to grow"
+    how: "Say if you plan to add clients later. It sets a ramp with dates instead of one cap."
+  - what: "Launch rate"
+    how: "Say if you want a lower rate for the first three clients. It adds an end date so it does not stick."
+
+judge:
+  - "The prices come from real sources, not guesses, or are marked missing."
+  - "The chosen fee is in the top third and has a stated reason."
+  - "The cap does not use more than 60% of working hours."
+  - "Billing terms cover a fixed pay day, use-it-or-lose-it time and a pause rule."
+
+test:
+  - "Say the fee and the reason to a friend who knows your field. Check they do not flinch at the reason."
+  - "Work the cap sum by hand. It should match."
+  - "Run it with a lower floor and see the fee and cap change in the way you expect."
+
+improve:
+  - "Update the prices every six months with real quotes."
+  - "Record which clients accepted the fee without a fight, and tighten your position if it is always easy."
+  - "Pair it with the Independent income floor calculator whenever your costs change."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "This is reading, sorting and writing, which any strong chat AI does well with this skill."}
+    - {name: "A spreadsheet or calculator", why: "A quick check of the client and hours sums keeps the cap honest."}
+  inputs:
+    - "A report from the Independent income floor calculator"
+    - "Three to five real prices from your field"
+    - "Your working hours per month"
+
+terms:
+  - term: "Cap"
+    meaning: "The most clients you will take at one time."
+  - term: "Going rate"
+    meaning: "What similar people in your field really charge, not what you hope they charge."

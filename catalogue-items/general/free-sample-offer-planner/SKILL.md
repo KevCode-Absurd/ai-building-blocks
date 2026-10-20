@@ -7,6 +7,8 @@ description: Use when you want to let people try a product free before they buy.
 
 A sample works when it reaches the right people and its cost is capped. This skill plans the offer, who gets it, how they claim it and what a customer will cost, before you spend. It plans the offer. It does not send samples or promise results.
 
+Use [Front-end offer picker](https://useaiblocks.com/skills/front-end-offer-picker) instead when you have not yet decided between a premium, free or discount first step.
+
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
 This skill runs on its own. What's below makes the result better, but none of it is required.
@@ -61,7 +63,7 @@ The sample and why. The offer words. Who gets it, the limit and how they claim i
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Make an offer people want** with the [Value ladder planner](https://useaiblocks.com/skills/value-ladder-planner). It takes the offer.
+- **Make an offer people want** with the [Bonus stack builder](https://useaiblocks.com/skills/bonus-stack-builder). It takes the offer and plan.
 - **Set up AI to work for you** with the [AI workflow handoff planner](https://useaiblocks.com/skills/ai-workflow-handoff-planner). It takes the plan.
 - **Sell it** with the [Stranger first-message writer](https://useaiblocks.com/skills/stranger-first-message-writer). It takes the plan and offer.
 - **Write the landing page** with the [Ad-matched landing page writer](https://useaiblocks.com/skills/ad-matched-landing-page-writer). It takes the offer.

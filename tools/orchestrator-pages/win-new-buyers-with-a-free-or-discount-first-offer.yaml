@@ -1,0 +1,85 @@
+new_slug: win-new-buyers-with-a-free-or-discount-first-offer
+name: Win new buyers with a free or discount first offer
+summary: Give it your offer and lead numbers. Get a free or discount first step, lead rules and the offers that follow.
+job: make-offer
+thinking: high
+thinking_why: It runs five skills in a row and does cost sums on your lead numbers. Give it your strongest model.
+headline: Win new buyers with a free or discount first offer
+subhead: Give it your offer and what you know about your leads. It picks a premium, free or discount first step, works out the cost per qualified lead, adds just enough friction to keep quality up, designs a paid first step if you need one, and plans what buyers buy next.
+explain: |
+  If too few people respond, a better ad may not be the fix. People who would never respond to a full-price offer may respond to a free first step or a deep discount on one small piece. The risk is a pile of leads who never buy, or a discount that teaches buyers to wait for deals.
+
+  The steps manage that risk. First it compares premium, free and discount on your facts and picks one. Then it counts qualified leads per dollar, including what each lead costs you to handle, and adds friction one lever at a time. If the pick is a discount, it designs a two-step sale with a card taken and a second meeting booked. Last it plans what buyers buy next and a small test with the win rule written first. The order follows the draft chapter on free and discount promotions by Alex Hormozi.
+when:
+  - Too few people respond to your offer.
+  - Your cost to win a customer is higher than you can afford.
+  - You are entering a market where you have no proof yet.
+  - Free sign-ups do not book or show up.
+you_give:
+  - Your offer and price
+  - Your lead numbers, such as spend, leads, how many qualify and how many buy (optional)
+  - Cash you can spend while you learn
+  - Time it takes to handle one lead
+  - Any rules on free offers where you sell
+you_get:
+  - A pick of premium, free or discount first step, with the reason and what must be true
+  - Cost per qualified lead, with handling cost, and the friction to add one step at a time
+  - A cheap first piece, a booked second meeting and a no-show fee, if you choose discount
+  - A ladder of what buyers buy next
+  - A small test with a win rule written before you start
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Share your offer and whatever lead numbers you have. Missing numbers are marked, not invented.
+  - If it picks free, skip the paid first step. If it picks discount, run it.
+  - Run the test for the time it sets and compare to the win rule before you scale.
+how_it_works:
+  - title: Choose premium, free or discount
+    text: Scores the three routes against your volume, cost, cash, proof and rules, and picks one with what must be true.
+  - title: Set the cost and the friction
+    text: Counts qualified leads per dollar with handling cost, diagnoses a weak response and adds friction one lever at a time with a stop rule.
+  - title: Plan the small paid first step
+    text: Picks a standalone piece to discount, takes the card and books the second meeting, and sets a no-show fee.
+  - title: Plan what buyers buy next
+    text: Maps the offers that follow the first step, from the main offer to a higher and a smaller step.
+  - title: Test it small
+    text: Sets a small test with a budget, a time and a win rule written before it starts.
+output_shape: |-
+  STEP 1: THE FIRST STEP
+    Facts | scores | the pick | what must be true | moving up later
+
+  STEP 2: LEAD COST AND FRICTION
+    Campaign sums with handling cost | friction plan | stop rule | qualifier line
+
+  STEP 3: THE PAID FIRST STEP (if you chose discount)
+    The piece and price | sequence | no-show fee | first meeting | upsell | numbers to watch
+
+  STEP 4: WHAT BUYERS BUY NEXT
+    The ladder from first step to top tier
+
+  STEP 5: THE SMALL TEST
+    Budget and time | win numbers | roll out or stop rule
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: Your cash and how long you can wait to break even
+    how: Less cash pushes the pick toward free or discount. State both.
+  - what: Time to handle one lead
+    how: It can flip which campaign is cheaper per buyer. Give minutes and hourly cost.
+  - what: Rules on free offers
+    how: Where free is restricted, the pick leans to discount. Name your country or field.
+judge:
+  - The pick follows from the score table, not from a preference.
+  - Handling cost is counted in the lead sums.
+  - Friction is added one lever at a time with a measurement period.
+  - The discounted piece is never the core offer.
+  - Every number is yours or labelled as an example.
+test:
+  - Redo the lead-cost sums by hand. They should match.
+  - Walk a friend through the paid first step. They should know what they pay, when they meet and what a miss costs.
+  - After the test, check the result against the win rule you wrote first.
+improve:
+  - Keep a log of each friction lever and its effect.
+  - Move to premium once you have proof, using the free or discount buyers as your testimonials.
+  - Rerun step 1 whenever your cash or proof changes.

@@ -1,0 +1,113 @@
+new_slug: disagree-and-commit-note-writer
+name: Disagree-and-commit note writer
+summary: Paste a decision and who disagrees. Get the dissent on record, who decides and a note that commits the team.
+job: lead-people
+thinking: medium
+thinking_why: It separates two kinds of disagreement, but the note format and steps are fixed.
+headline: Disagree-and-commit note writer
+subhead: Paste the decision and each person's view. It writes each dissent in one honest line, tests whether it is a real difference of view or a clash of aims, names who decides and writes the commit line each person will say. You get a short note that closes the debate and records the doubts.
+explain: |
+  Debate has to end. When it does not, the default winner is whoever has the most stamina. A team that cannot disagree and then act together either argues forever or complies in silence and drags its feet.
+
+  This skill writes the dissent down in one fair line per person. It tests whether the disagreement is about what will happen (a difference of view) or about what to aim for (a clash of aims). Differences of view are settled by asking people to gamble with you and commit. Clashes of aims need a decision from above, quickly. The note names the owner, the review date and the signal that would show the decision is wrong.
+when:
+  - A decision has been argued in three meetings with no end.
+  - One person keeps reopening a call after it was made.
+  - You are the boss and you disagree with a call your team wants to make.
+you_give:
+  - The decision and the options
+  - Each person's view and reason, in a line or two
+  - Who owns the decision and any deadline
+you_get:
+  - One honest line of dissent per person
+  - A sort of each dissent as view or aims
+  - Who decides, if the aims clash, and what to bring them
+  - The commit line each person says back
+  - A short note for the team
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste the decision and each person's view.
+  - Say who owns the decision.
+  - Check each dissent line with the person it names.
+  - Send the note, then hold the review date.
+how_it_works:
+  - title: Records each dissent
+    text: "One fair line per person: what they fear will go wrong, and why."
+  - title: Sorts view from aims
+    text: Same goal with different guesses, or different goals.
+  - title: Escalates a clash of aims
+    text: Names who decides, what each side brings and a 48 hour limit.
+  - title: Asks for the gamble
+    text: For a difference of view, asks the dissenter to commit.
+  - title: Applies it to the boss
+    text: If the boss disagrees, the boss writes a dissent and commits too.
+  - title: Writes the commit lines
+    text: What each person will do, in their own voice.
+  - title: Drafts the team note
+    text: Decision, owner, review date, signal and dissents on record.
+output_shape: |
+  DECISION
+  <decision | owner | review date>
+
+  DISSENT ON RECORD
+  <name | what they think will go wrong | why>
+
+  VIEW OR AIMS
+  <name | view / aims | test result>
+
+  ESCALATE (only if aims clash)
+  <who decides | what each side brings | by when>
+
+  COMMIT LINES
+  <name: "I disagree because ... I will ... fully ... we look at ... on ...">
+
+  SIGNAL THAT IT IS WRONG
+  <what we would see, and when>
+
+  NOTE TO THE TEAM
+  <short note>
+
+  MISSING
+  <gaps>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+tweaks:
+  - what: Each person's reason
+    how: Give a line or two each. A fair dissent needs the real reason, not just the position.
+  - what: Who owns the decision
+    how: Name one person. If no one owns it, say so and the skill will flag it.
+  - what: The review date
+    how: Pick a date when the first signal will be visible.
+  - what: The tone of the team
+    how: Say if people have felt unheard. The note will say that the doubts were recorded.
+judge:
+  - Each dissent is one fair line the person would accept.
+  - Every dissent is sorted as view or aims, with the test.
+  - A clash of aims goes to a named decider with a time limit.
+  - The commit lines say what the person will do, not just agree.
+  - The note names a signal and a review date.
+test:
+  - Show each person their dissent line. Ask if it is fair.
+  - Run it on a past decision that dragged. See if it finds a clash of aims.
+  - Run it with the boss as a dissenter. The boss should get a commit line too.
+  - Hold the review date. Compare the signal with what happened.
+improve:
+  - Add your team's way of escalating, such as a named tie-breaker.
+  - Add the phrases your team uses for committing.
+  - Keep a log of dissents and who was right.
+  - Pair it with "Decision evidence bar setter" before the call.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: Writing fair summaries of views and a short team note is text work any strong chat AI does well with this skill.
+  inputs:
+    - Meeting notes where the views were argued
+    - The decision deadline
+    - Past decisions the same people disagreed on
+    - The cost of delay
+terms:
+  - term: Disagree and commit
+    meaning: You state that you disagree, then back the decision fully once it is made.
+  - term: Misalignment
+    meaning: A clash of aims or priorities that more talk will not fix.

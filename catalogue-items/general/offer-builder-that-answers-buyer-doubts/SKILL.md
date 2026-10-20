@@ -7,6 +7,8 @@ description: Use when you need an offer that persuades one specific buyer and st
 
 You build up to three offers, each around a named buyer and the doubt that holds them back, with the terms, the wording and a profit check. The idea underneath is a value sum: buyers value an offer more when the result is bigger and more certain, and when it comes sooner and with less effort. Price is one more lever, and usually the last one to pull.
 
+Use [Offer trim and stack builder](https://useaiblocks.com/skills/offer-trim-and-stack-builder) instead when you already have many delivery options and need them cut to the ones worth keeping and grouped into named bundles.
+
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
 This skill runs on its own. What's below makes the result better, but none of it is required.
@@ -76,7 +78,7 @@ For each offer (up to three, each on a different lever):
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Make an offer people want** with the [Value ladder planner](https://useaiblocks.com/skills/value-ladder-planner). It takes the offer.
+- **Make an offer people want** with the [Commodity trap checker](https://useaiblocks.com/skills/commodity-trap-checker). It takes the offer.
 - **Write the landing page** with the [Ad-matched landing page writer](https://useaiblocks.com/skills/ad-matched-landing-page-writer). It takes the offer.
 - **Make image ads** with the [Three-way offer image ad planner](https://useaiblocks.com/skills/three-way-offer-image-ad-planner). It takes the offer.
 - **Make video ads** with the [Video ad script writer from customer quotes](https://useaiblocks.com/skills/video-ad-script-writer-from-customer-quotes). It takes the offer.

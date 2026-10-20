@@ -1,0 +1,121 @@
+new_slug: deliverer-fit-planner
+name: "Deliverer fit planner"
+summary: "Paste your brief and who will present it. Get what suits them, what to avoid and where to put the showpiece."
+job: speak-and-persuade
+thinking: medium
+thinking_why: "It judges what suits a person from limited evidence, but the table and checks are fixed."
+
+headline: "Shape the piece to the person who has to deliver it"
+subhead: "Tell it what the piece is and who will speak, play, sing, present or read it. It lists what that person does well and what trips them, places the showpiece where they are strongest, and marks lines to swap. You get a fit plan, section by section."
+
+explain: |
+  A good script in the wrong mouth falls flat. A fast talker given long pauses sounds lost. A quiet expert given a jokey opening looks uneasy. Most people write the piece first and then ask the deliverer to cope.
+
+  This skill goes the other way round. It starts from the person: how they pace, which words they stumble on, how they handle emotion, how long they can hold the room. It builds a table of strengths and strains, then decides where each part of the piece goes. The moment people will remember goes where the deliverer is strongest. The hard parts are kept plain. Lines the person cannot carry are swapped, not left for rehearsal to fix. If you are the deliverer, it asks you three questions and does the same for you.
+
+when:
+  - "Someone other than you will present, read or perform what you are writing."
+  - "You are writing your own talk and want it to sound like you, not like a template."
+  - "A script keeps feeling stiff when the real person delivers it."
+
+you_give:
+  - "The brief or a short description of the piece"
+  - "Who will deliver it and how: stage, video, phone call, page, song"
+  - "What you know about them: a recording, how they speak, what they do well, what trips them (optional but best)"
+  - "The draft, if there is one (optional)"
+you_get:
+  - "A strengths and strains table for the deliverer"
+  - "Where the showpiece goes and why"
+  - "Which parts to keep plain, and lines to swap with the replacement"
+  - "A rehearsal check to run, with what to mark"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Paste the brief and say who delivers the piece. If you have a recording or a transcript of them speaking, paste it."
+  - "If you are the deliverer, answer its three questions about how you talk."
+  - "Use the plan when you write or edit the draft, then run the rehearsal check with the real person."
+
+how_it_works:
+  - title: "Reads the deliverer"
+    text: "From a sample if you have one, from your description if not, and says which it used."
+  - title: "Builds a fit table"
+    text: "Pace, range, vocabulary, humour, handling of feeling, memory load and stamina, each marked strength or strain."
+  - title: "Places the showpiece"
+    text: "Puts the best moment where the person is strongest and away from the nervous first and tired last minute."
+  - title: "Keeps the hard parts plain"
+    text: "Gives difficult passages simple wording and a steady rhythm."
+  - title: "Swaps lines"
+    text: "Replaces words and phrases the person trips on, with the new wording."
+  - title: "Writes a rehearsal check"
+    text: "Read it aloud with the person and mark every hesitation, then fix those."
+  - title: "Checks the plan"
+    text: "Runs its own checks and names any it missed."
+
+output_shape: |
+  THE DELIVERER
+  <who, how they deliver it, what the evidence was>
+
+  FIT TABLE
+  Pace: strength | strain: <...>
+  Range and register: <...>
+  Vocabulary: <...>
+  Humour: <...>
+  Feeling: <...>
+  Memory and length: <...>
+
+  SHOWPIECE
+  <which moment, where it goes, why this person>
+
+  PLAIN PARTS
+  <passages to keep simple and how>
+
+  SWAPS
+  <n>. Was: <line>  Now: <line>  Why: <reason>
+
+  REHEARSAL CHECK
+  <what to run, what to mark>
+
+  MISSING
+  <what you would need to know about the person>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: "Evidence"
+    how: "A recording or transcript of the person beats any description. Say if you have one."
+  - what: "The setting"
+    how: "Live, recorded or written. A shaky voice matters less on a page and more on a stage."
+  - what: "Several deliverers"
+    how: "Name each one. It writes a fit table per person and says who takes which part."
+
+judge:
+  - "Every strength in the table is used at least once in the plan."
+  - "No hard passage sits in the first or last fifth of the piece, unless the plan says why."
+  - "Each swap shows the old line, the new line and the reason."
+  - "Nothing in the table is invented. Guesses are marked as guesses."
+
+test:
+  - "Give it a deliverer you know well and check the table against what you would say yourself."
+  - "Have the person read the swapped lines aloud. They should trip less than on the originals."
+  - "Run it with a recording and without. The table should change in ways you can point to."
+
+improve:
+  - "After each rehearsal, add the lines the person stumbled on so the swaps list grows."
+  - "Keep one fit table per regular speaker and reuse it."
+  - "Pair it with the Layered draft writer so the draft is written with the fit plan in hand."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "This is reading, sorting and writing, which any strong chat AI does well with this skill."}
+    - {name: "A phone voice recorder", why: "A two-minute recording of the person speaking naturally gives the plan real evidence to work from."}
+  inputs:
+    - "A brief from the Two-audience brief writer"
+    - "A recording or transcript of the deliverer"
+    - "The draft, if there is one"
+
+terms:
+  - term: "Showpiece"
+    meaning: "The one moment you want people to remember and repeat."
+  - term: "Strain"
+    meaning: "Something that makes this person's delivery harder, such as a long list or a tongue-twisting word."

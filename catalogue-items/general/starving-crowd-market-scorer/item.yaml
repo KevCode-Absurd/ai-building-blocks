@@ -1,0 +1,27 @@
+slug: starving-crowd-market-scorer
+name: Starving crowd market scorer
+summary: Paste the markets you could serve. Get each scored on pain, money, reach and growth, and the one to commit to.
+category: general
+type: skill
+role: make
+job: strategy
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: audit_report
+    required: false
+  - type: persona
+    required: false
+outputs:
+  - type: shortlist
+uses: []
+origin: rebuilt
+version: 1.0.0
+minds:
+  - alex-hormozi
+credits:
+  - title: "$100M Offers: How To Make Offers So Good People Feel Stupid Saying No"
+    by: Alex Hormozi
+    url: https://shop.acquisition.com/products/100m-offers-hardcover
+    used: The four things to look for in a market (pain, money to spend, easy to reach, growing), the order of importance of market, offer and pitch, and committing to one market long enough to learn

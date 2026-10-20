@@ -1,0 +1,63 @@
+# Workflow skeleton for $100M Offers, chapters 6 and 8 to 10 (docs/INTAKE.md). Our words; the book stays in mind-sources/ (local only).
+id: hormozi-offers-from-problems
+source:
+  title: "$100M Offers: How To Make Offers So Good People Feel Stupid Saying No"
+  by: "Alex Hormozi"
+  url: "https://shop.acquisition.com/products/100m-offers-hardcover"
+  kind: book
+  rights: ideas-only
+  year: 2021
+minds: [alex-hormozi]
+workflow:
+  slug: build-an-offer-from-your-buyers-problems
+  name: "Build an offer from your buyer's problems"
+  summary: "Give it your product and buyer. Get every problem they face turned into a stacked, scored, priced offer."
+  when: "your product sells like everyone else's and you want a bundle that is hard to compare and easy to say yes to."
+  job: make-offer
+  level: intermediate
+steps:
+  - name: List every problem and its solution
+    skill: buyer-problem-list-builder
+    job: research
+    task: make-offer
+    from: "Chapters 8 and 9, the thought process and problems and solutions"
+    method: ["Write the result the buyer wants as the place they arrive, not the thing you sell", "List what they must do in order, then every reason they might fail or quit at each step", "Sort the reasons under the four value drivers so none are missed", "Turn each problem into a how-to promise by reversing it"]
+    inputs: [persona, product_data!, voc_reviews!, brand_brain!]
+    outputs: [objection_map]
+    note: "A long list of problems, each turned into a solution you could promise."
+  - name: Find ways to deliver each solution
+    skill: delivery-option-generator
+    job: strategy
+    task: make-offer
+    from: "Chapter 10, step 4, delivery vehicles and the cheat codes"
+    method: ["For each solution list many ways to deliver it, from one-to-one to one-to-many", "Vary attention, effort asked of the buyer, medium, speed and format", "Run the ten-times and one-tenth price tests to break the default", "Rate each way on cost to you and value to the buyer"]
+    inputs: [objection_map, product_data!]
+    outputs: [shortlist]
+    note: "Many ways to deliver each solution, rated for cost and value."
+  - name: Trim and stack the offer
+    skill: offer-trim-and-stack-builder
+    job: strategy
+    task: make-offer
+    from: "Chapter 10, step 5, trim and stack"
+    method: ["Cut the high cost, low value ways first, then the low cost, low value ones", "Keep low cost, high value and high cost, high value ways", "Prefer one-to-many assets that cost once and sell many times", "Group what is left into named bundles, one per problem, each with a stated value", "Total the stack and compare it to the price you plan"]
+    inputs: [objection_map, shortlist, product_data!]
+    outputs: [offer]
+    note: "The kept ways grouped into named bundles with a value on each."
+  - name: Score the offer on the four value drivers
+    skill: value-equation-scorer
+    job: analysis
+    task: make-offer
+    from: "Chapter 6, the value equation"
+    method: ["Rate dream outcome, likelihood, time delay and effort as the buyer would see them", "Find the weakest driver and the one cheapest to improve", "Look for a change that improves how it feels without costing much", "Check that every claimed gain is something the buyer would notice"]
+    inputs: [offer, persona!, voc_reviews!]
+    outputs: [audit_report]
+    note: "A score on each driver and the fix with the best return."
+  - name: Set the price from the value
+    skill: pricing-decision-planner
+    job: strategy
+    task: make-offer
+    from: "Chapters 5 and 6, charge what it is worth"
+    method: ["Estimate what the result is worth to the buyer in money or time", "Set the price as a small slice of that worth, well above your cost", "Check the gap between price and value stays large", "Write what to say about the price and what to add before raising it"]
+    inputs: [offer, audit_report, plan!, performance_sheet!]
+    outputs: [offer, plan]
+    note: "A price set from the value, with the reason the buyer will accept it."

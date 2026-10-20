@@ -1,0 +1,112 @@
+new_slug: annual-letter-writer
+name: Annual letter writer
+summary: Paste your principles, metrics and results. Get a plain letter to your team or owners with the year's honest numbers.
+job: speak-and-persuade
+thinking: high
+thinking_why: It joins several inputs into one honest narrative and has to choose what to lead with.
+headline: Annual letter writer
+subhead: "Paste your principles, metrics, cash view, value tally and the year's results. It writes a plain letter to your team, partners or owners: the result and bad news first, then promises, metrics, cash, value, mistakes and what you will do and stop. You get a draft of 700 to 1,200 words."
+explain: |
+  An annual letter is the one time a year you explain your thinking in full sentences. Done well, it builds trust: readers see how you decide, not only what happened. Done badly, it is a list of wins with the bad news buried.
+
+  This skill opens with the result that matters and any bad news. It restates your promises, shows the input metrics and what moved, adds the cash view and the value tally, and names each mistake with its cost and what changed. It says what you will do next year and what you will stop. It closes with thanks and a line that ties back to your first letter, plus a few direct questions for the reader to ask of their own work.
+when:
+  - You write a year-end or half-year letter to your team, partners or owners.
+  - You have principles, metrics and results but no story that joins them.
+  - You want to tell the bad news in a way people trust.
+you_give:
+  - Your long-term principles
+  - The year's results, metrics and mistakes
+  - The cash view and value tally if you have them (optional)
+  - Who the letter is for
+you_get:
+  - A letter of 700 to 1,200 words
+  - The result and bad news first
+  - Promises, metrics, cash and value in one story
+  - Mistakes with cost and change
+  - What you will do and stop next year
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your principles and the year's results. Add the metrics, cash view and tally if you have them.
+  - Say who the letter is for and how formal it should be.
+  - Read the first paragraph. If the main point is not clear, fix the input and run it again.
+  - Send the draft to two readers before it goes out.
+how_it_works:
+  - title: Opens with result and bad news
+    text: The thing that matters most and the thing that went worst.
+  - title: Restates the promises
+    text: What has not changed in how you decide.
+  - title: Shows the inputs
+    text: The input metrics and what moved.
+  - title: Shows cash and value
+    text: The cash view and the value tally, in plain words.
+  - title: Owns the mistakes
+    text: Each with its cost and what changed.
+  - title: Looks ahead
+    text: What you will do next year and what you will stop.
+  - title: Closes warmly
+    text: Thanks, a line back to your first letter and a few direct questions.
+output_shape: |
+  OPENING
+  <result that matters, and the bad news>
+
+  WHAT HAS NOT CHANGED
+  <promises in plain words>
+
+  WHAT MOVED
+  <input metrics and the output check>
+
+  THE CASH AND THE VALUE
+  <plain summary>
+
+  WHAT WENT WRONG
+  <mistake | cost | what changed>
+
+  NEXT YEAR
+  <what we will do | what we will stop>
+
+  CLOSING
+  <thanks | line back to the first letter | three questions for the reader>
+
+  MISSING
+  <gaps>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+tweaks:
+  - what: The reader
+    how: Say if it is for staff, partners or owners. The detail and tone shift.
+  - what: The bad news
+    how: Give it in full. A letter with soft bad news loses trust.
+  - what: Length
+    how: Set a word limit. Shorter letters get read.
+  - what: Your first letter
+    how: Paste it or its key line. The closing ties back to it.
+judge:
+  - The first paragraph states the result and the bad news.
+  - Each promise is restated in plain words.
+  - Each mistake has a cost and a change.
+  - The letter says what you will stop.
+  - The numbers match the figures you gave.
+test:
+  - Ask a reader to say the letter's main point after the first paragraph.
+  - Check every number against your sources.
+  - Run it twice. The opening should stay the same.
+  - Compare it to last year's letter. See what is new.
+improve:
+  - Add your voice notes to the skill, so the letter sounds like you.
+  - Add the phrases you want to repeat each year.
+  - Keep a file of past letters so each year builds on the last.
+  - Pair it with "Narrative memo checker" to check clarity.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: Joining several inputs into one clear letter is text work any strong chat AI does well with this skill.
+  inputs:
+    - Last year's letter
+    - The long-term principles
+    - The input metric plan
+    - The value tally and cash view
+terms:
+  - term: Letter to owners
+    meaning: A yearly letter to those who back the business, explaining how it decides as well as how it did.

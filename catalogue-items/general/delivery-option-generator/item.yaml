@@ -1,0 +1,25 @@
+slug: delivery-option-generator
+name: Delivery option generator
+summary: Paste your buyer's problems and promises. Get many ways to deliver each one, rated for your cost and their value.
+category: general
+type: skill
+role: make
+job: strategy
+level: intermediate
+inputs:
+  - type: objection_map
+    required: true
+  - type: product_data
+    required: false
+outputs:
+  - type: shortlist
+uses: []
+origin: rebuilt
+version: 1.0.0
+minds:
+  - alex-hormozi
+credits:
+  - title: "$100M Offers: How To Make Offers So Good People Feel Stupid Saying No"
+    by: Alex Hormozi
+    url: https://shop.acquisition.com/products/100m-offers-hardcover
+    used: Listing many ways to deliver each solution by how many people you serve at once, the choices that vary a delivery, and the ten-times and one-tenth price tests

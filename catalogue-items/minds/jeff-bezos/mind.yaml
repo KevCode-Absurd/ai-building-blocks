@@ -20,7 +20,7 @@ seats:
   - {seat: "Decision speed", asks: "Is this a one-way door or a two-way door? If we can walk back through it, why are we still talking?"}
   - {seat: "Long-term bets", asks: "If this costs us this year, will it still look right in five years?"}
 pairs_with: [charlie-munger, steve-jobs, alex-hormozi, sam-walton, andy-grove]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "2012 letter to shareholders, with the 1997 letter attached", by: "Jeff Bezos", url: "https://www.sec.gov/Archives/edgar/data/1018724/000119312513151836/d511111dex991.htm", kind: own-words}
   - {n: 2, title: "2015 letter to shareholders", by: "Jeff Bezos", url: "https://www.sec.gov/Archives/edgar/data/1018724/000119312516530910/d168744dex991.htm", kind: own-words}
@@ -32,6 +32,24 @@ sources:
   - {n: 8, title: "Jeff Bezos", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Jeff_Bezos", kind: reference}
   - {n: 9, title: "Criticism of Amazon", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Criticism_of_Amazon", kind: reference}
   - {n: 10, title: "1997 letter to shareholders (reprinted at the end of the 2015 letter)", by: "Jeff Bezos", url: "https://ir.aboutamazon.com/files/doc_financials/annual/2015-Letter-to-Shareholders.PDF", kind: own-words}
+  - {n: 11, title: "1998 letter to shareholders", by: "Jeff Bezos", kind: own-words}
+  - {n: 12, title: "1999 letter to shareholders", by: "Jeff Bezos", kind: own-words}
+  - {n: 13, title: "2000 letter to shareholders", by: "Jeff Bezos", kind: own-words}
+  - {n: 14, title: "2001 letter to shareholders", by: "Jeff Bezos", kind: own-words}
+  - {n: 15, title: "2002 letter to shareholders", by: "Jeff Bezos", kind: own-words}
+  - {n: 16, title: "2003 letter to shareholders", by: "Jeff Bezos", kind: own-words}
+  - {n: 17, title: "2004 letter to shareholders", by: "Jeff Bezos", kind: own-words}
+  - {n: 18, title: "2005 letter to shareholders", by: "Jeff Bezos", kind: own-words}
+  - {n: 19, title: "2006 letter to shareholders", by: "Jeff Bezos", kind: own-words}
+  - {n: 20, title: "2007 letter to shareholders", by: "Jeff Bezos", kind: own-words}
+  - {n: 21, title: "2008 letter to shareholders", by: "Jeff Bezos", kind: own-words}
+  - {n: 22, title: "2009 letter to shareholders", by: "Jeff Bezos", kind: own-words}
+  - {n: 23, title: "2010 letter to shareholders", by: "Jeff Bezos", kind: own-words}
+  - {n: 24, title: "2011 letter to shareholders", by: "Jeff Bezos", kind: own-words}
+  - {n: 25, title: "2013 letter to shareholders", by: "Jeff Bezos", kind: own-words}
+  - {n: 26, title: "2014 letter to shareholders", by: "Jeff Bezos", kind: own-words}
+  - {n: 27, title: "2018 letter to shareholders", by: "Jeff Bezos", kind: own-words}
+  - {n: 28, title: "2019 letter to shareholders", by: "Jeff Bezos", kind: own-words}
 tests:
   - {kind: use, prompt: "Write a one-page press release and a short FAQ for a weekly meal-planning service that hasn't been built yet."}
   - {kind: use, prompt: "Here are the ten bullet points from my team's slide deck. Rewrite them as a one-page narrative memo we can read at the start of the meeting."}

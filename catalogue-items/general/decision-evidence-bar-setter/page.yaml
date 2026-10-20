@@ -1,0 +1,117 @@
+new_slug: decision-evidence-bar-setter
+name: Decision evidence bar setter
+summary: Paste a decision and what you know. Get how much evidence is enough, what to get next and a date to decide.
+job: think-and-decide
+thinking: medium
+thinking_why: It weighs facts and costs, but the steps and the arithmetic are fixed.
+headline: Decision evidence bar setter
+subhead: Paste a decision and what you know about it. It lists what you wish you knew, weights each fact, works out how much of the useful information you already have and sets the bar for deciding. You get a decide now or wait call, the one fact worth getting and a date to stop collecting.
+explain: |
+  Most slow decisions are not slow because the choice is hard. They are slow because nobody said how much evidence is enough, so the team keeps asking for more. Waiting has a cost too, and it is often larger than the cost of being wrong on a choice you can fix.
+
+  This skill makes the bar explicit. It lists the facts you wish you had and weights each by how much it could change the choice. It works out the share of that weight you already hold. It then sets the bar by the type of decision, compares the cost of being wrong with the cost of waiting, and checks how fast you would spot and fix a bad call. It ends with a decision date and the one cheap fact worth getting first.
+when:
+  - A team keeps asking for more data before it will decide.
+  - You are about to commit and want to know if you know enough.
+  - A choice has dragged on and each week of waiting is costing something.
+you_give:
+  - The decision, and whether it can be undone
+  - What you know now and what you wish you knew
+  - What waiting costs per week (optional)
+you_get:
+  - A weighted list of facts, marked known, partly known or unknown
+  - Your information share as a percent
+  - The bar for this decision
+  - A decide now or wait verdict with the reasoning
+  - The one fact to get first and a call date
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Describe the decision and say if it can be undone.
+  - List what you know and what you wish you knew.
+  - Say what each week of delay costs, if you can.
+  - Set the call date in your calendar and tell the team.
+how_it_works:
+  - title: Confirms the door
+    text: Checks whether the choice can be undone, and how easily.
+  - title: Lists and weights facts
+    text: Gives each fact a weight of 1 to 3 by how far it could change the choice.
+  - title: Works out the share
+    text: Known weight divided by total weight.
+  - title: Sets the bar
+    text: About 70 percent for reversible choices, higher for one-way choices.
+  - title: Compares wrong and slow
+    text: Cost of being wrong against the cost of waiting.
+  - title: Checks recovery speed
+    text: How soon you would know, and how fast you could fix it.
+  - title: Sets the call date
+    text: A stop date and the one fact worth getting before it.
+output_shape: |
+  DECISION AND DOOR
+  <decision | reversible? | cost to undo>
+
+  FACTS I WISH I HAD
+  <fact | weight 1-3 | known / partly / unknown | cost to learn>
+
+  INFORMATION SHARE
+  <known weight> of <total weight> = <n>%
+
+  THE BAR
+  <n>% because <reason>
+
+  WRONG VS SLOW
+  Cost of being wrong x chance: <figure>
+  Cost of waiting: <figure per week x weeks>
+
+  RECOVERY
+  <how soon you would know, how fast you could fix>
+
+  VERDICT: DECIDE NOW / WAIT UNTIL <date>
+  <reasoning>
+
+  GET FIRST
+  <the one fact>   WOULD CHANGE THE CALL: <fact>
+
+  MISSING
+  <gaps>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+tweaks:
+  - what: Whether it can be undone
+    how: State the cost and time to reverse. A cheap, quick reversal lowers the bar.
+  - what: The weights
+    how: Give a weight of 3 only to facts that could flip the choice.
+  - what: The cost of waiting
+    how: "Add a figure per week if you can: lost sales, idle staff, rival moves."
+  - what: How soon you will know
+    how: Say when the first sign will appear after you decide.
+judge:
+  - Each fact has a weight and a reason.
+  - The share is shown as a sum, not a feeling.
+  - The bar differs for reversible and one-way choices.
+  - The verdict compares waiting with being wrong.
+  - A call date is set.
+test:
+  - Run it on a decision that stalled. See if it shows you already had enough.
+  - Run it on a decision you rushed. The bar should have been higher.
+  - Run it twice. The share should stay within a few points.
+  - Share the verdict with your team and ask who disagrees and why.
+improve:
+  - Add your usual bar for common decisions, such as hiring or pricing.
+  - Add a list of facts you always want before a certain type of choice.
+  - Keep a log of calls and how they turned out.
+  - Pair it with "Disagree-and-commit note writer" to close the decision.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: Weighting facts and doing the share sum is text work any strong chat AI does well with this skill.
+  inputs:
+    - Cost of delay per week
+    - How long a reversal would take
+    - Results of past similar decisions
+    - Who has the missing facts
+terms:
+  - term: Information share
+    meaning: The weight of the facts you hold divided by the weight of all the facts you wish you had.
+  - term: One-way choice
+    meaning: A decision that is hard or impossible to undo.

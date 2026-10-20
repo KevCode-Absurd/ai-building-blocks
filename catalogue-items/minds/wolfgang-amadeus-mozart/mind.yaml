@@ -21,7 +21,7 @@ seats:
   - {seat: "Please the ear", asks: "However strong the feeling, does it still please the people listening?"}
 pairs_with: [ludwig-van-beethoven, william-shakespeare, quincy-jones, ar-rahman, leonardo-da-vinci]
 last_checked: 2026-10-21
-thin_record: "His letters survive and are public domain, but only volume 1 (1769 to 1780) is in a free English edition on Gutenberg; later years come through Krehbiel's 1905 selection and sourced fragments."
+thin_record: "His letters survive and are public domain, and both volumes of the 1866 English edition are now used, but the record is mostly letters to family and friends. Much of the later Vienna story comes through the editor's notes, which are marked, and through Krehbiel's 1905 selection."
 sources:
   - {n: 1, title: "Wolfgang Amadeus Mozart", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Wolfgang_Amadeus_Mozart", kind: reference}
   - {n: 2, title: "The Letters of Wolfgang Amadeus Mozart, Volume 1, 1769 to 1780 (edited by Ludwig Nohl, translated by Lady Wallace, 1866; Project Gutenberg eBook #5307)", by: "Wolfgang Amadeus Mozart", url: "https://www.gutenberg.org/ebooks/5307", kind: own-words}
@@ -29,6 +29,7 @@ sources:
   - {n: 4, title: "Requiem (Mozart)", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Requiem_(Mozart)", kind: reference}
   - {n: 5, title: "Leopold Mozart", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Leopold_Mozart", kind: reference}
   - {n: 6, title: "Wolfgang Amadeus Mozart (sourced statements from his letters, with dates)", by: "Wolfgang Amadeus Mozart, compiled by Wikiquote", url: "https://en.wikiquote.org/wiki/Wolfgang_Amadeus_Mozart", kind: own-words}
+  - {n: 7, title: "The Letters of Wolfgang Amadeus Mozart (1769-1791), Volume II (collected by Ludwig Nohl, translated by Lady Wallace, 1866; the Vienna years from March 1781)", by: "Wolfgang Amadeus Mozart", url: "https://archive.org/details/lettersofwolfgan02moza", kind: own-words}
 tests:
   - {kind: use, prompt: "Write a short, catchy four-line tune idea (described in words: rhythm, rise and fall, where it repeats) for a children's bedtime app, and say why each choice works."}
   - {kind: use, prompt: "I'm writing a best-man speech. My brother is nervous and speaks slowly. Shape the speech around how he talks."}

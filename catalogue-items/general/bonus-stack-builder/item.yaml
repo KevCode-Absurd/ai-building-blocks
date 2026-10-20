@@ -1,0 +1,27 @@
+slug: bonus-stack-builder
+name: Bonus stack builder
+summary: Paste your offer and the doubts buyers have. Get named bonuses that each answer one doubt, with a value and proof.
+category: general
+type: skill
+role: make
+job: strategy
+level: intermediate
+inputs:
+  - type: offer
+    required: true
+  - type: plan
+    required: true
+  - type: objection_map
+    required: false
+outputs:
+  - type: offer
+uses: []
+origin: rebuilt
+version: 1.0.0
+minds:
+  - alex-hormozi
+credits:
+  - title: "$100M Offers: How To Make Offers So Good People Feel Stupid Saying No"
+    by: Alex Hormozi
+    url: https://shop.acquisition.com/products/100m-offers-hardcover
+    used: Using bonuses instead of discounts, matching each bonus to a doubt, preferring tools and checklists, the five-part way to present a bonus, valuing each one, and partner bonuses

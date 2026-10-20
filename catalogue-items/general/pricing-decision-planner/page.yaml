@@ -1,32 +1,34 @@
 new_slug: pricing-decision-planner
 name: "Pricing decision planner"
-summary: "Paste your product, its costs and what rivals charge. Get three test prices, the number to watch and the one you pick."
+summary: "Paste your product, costs and the buyer's gain. Get three test prices, your pick and a plan to raise it."
 job: make-offer
 thinking: high
 thinking_why: "It estimates sales and total profit at several prices from thin data, so a bad guess changes the answer."
 
 headline: "Pricing decision planner"
-subhead: Give it your product, its costs and what rivals charge. It judges the value to the buyer, sets three prices that could each work, and estimates sales and total profit at each. You get a comparison, the price with the highest total profit, an owner for the decision and a review date.
+subhead: Give it your product, its costs and what the result is worth to the buyer. It sets three prices from that worth and estimates total profit at each. You get the best price, a gap check, a plan to raise a live price, an owner and a review date.
 
 explain: |
   Many prices are set by adding a margin to cost or by copying a rival. Both skip the question that matters: what is this worth to the buyer, and at which price does the business earn the most in total, not per item.
 
-  This skill judges the true value to the buyer, not the cost alone. It does not copy rivals. It sets three prices that could each work, estimates sales at each and works out the total profit. It picks the price with the highest total profit and checks the buyer would still be happy at it. It names one leader to own the choice, and sets a date to review sales and margin.
+  This skill sums the true value to the buyer, not the cost alone. It does not copy rivals. It sets three prices as a share of that worth, estimates sales at each and works out the total profit. It picks the price with the highest total profit, checks the gap between price and worth stays wide, and checks the buyer would still be happy at it. If a price is already live, it plans the raise: add value first, then give a dated notice. It names one leader to own the choice, and sets a date to review sales and margin.
 
 when:
   - You are launching something and have no idea what to charge.
   - Your price came from cost plus a margin, or from a rival, and you are unsure it is right.
   - You are thinking of a price rise or cut.
+  - You discount to close and want a better way.
 
 you_give:
   - Your product, your costs per unit and your fixed costs
-  - What rivals charge (optional)
+  - What rivals charge (optional, used only as a floor check)
   - What buyers say about value, price and alternatives (optional)
   - Your sales so far at today's price (optional)
 you_get:
-  - A statement of the value to the buyer
+  - What the result is worth to the buyer, with the sums
   - Three prices that could each work, with sales and total profit estimated at each
-  - The price with the highest total profit and a buyer check
+  - The price with the highest total profit, the gap to the worth and a buyer check
+  - A plan to raise a price that is already live
   - A named owner and a review date
 
 how_to_use:
@@ -37,16 +39,20 @@ how_to_use:
   - Put the review date in your calendar.
 
 how_it_works:
-  - title: Judges the buyer's value
-    text: Writes what the product is worth to the buyer from their side, not from your cost.
+  - title: Sums the buyer's value
+    text: Adds up what the result is worth to the buyer from their side, not from your cost, and takes the lowest sound figure.
   - title: Sets three prices
-    text: Chooses three prices that could each work, without copying a rival.
+    text: Chooses three prices inside a band of the buyer's worth, without copying a rival.
   - title: Estimates sales at each
     text: Estimates sales at each price and marks every guess.
   - title: Works out total profit
     text: Multiplies the margin by the sales to find the total profit at each price.
   - title: Finds the best
     text: Picks the price with the highest total profit.
+  - title: Checks the gap
+    text: Worth divided by price should stay at 3 or more, with the price well above your cost.
+  - title: Plans a raise
+    text: For a live price, adds value first and gives a dated notice.
   - title: Checks the buyer
     text: Checks that the buyer would still be glad to buy at that price.
   - title: Names the owner
@@ -58,7 +64,7 @@ how_it_works:
 
 output_shape: |
   VALUE TO THE BUYER
-  <what they gain, in their terms, with evidence or MISSING>
+  Route | sum | figure   (lowest sound figure: <number>)
 
   COSTS
   Per unit: <figure> | Fixed: <figure>
@@ -70,7 +76,10 @@ output_shape: |
   <price C> | ...
 
   THE PICK
-  <price> because <highest total profit> | Buyer check: <their words or MISSING>
+  <price> because <highest total profit> | Gap: <worth / price> | Multiple of cost: <n> | Buyer check: <their words or MISSING>
+
+  IF A PRICE IS LIVE
+  <what to add first, the dated notice, who keeps the old price>
 
   THE NUMBER TO WATCH
   <sales and margin figure to track>
@@ -112,6 +121,7 @@ improve:
   - Add price rules you must keep, such as a floor or a price ending.
   - Save each review result to your notes.
   - Pair it with "Value proposition builder" to write the reason for the price.
+  - Run Value equation scorer first and paste its report, so the worth rests on the weakest driver.
 
 works_best_with:
   tools:
@@ -125,5 +135,7 @@ works_best_with:
 terms:
   - term: Total profit
     meaning: The margin on one item times the number sold, not the margin per item alone.
+  - term: Gap
+    meaning: What the result is worth to the buyer divided by the price. A high gap keeps the deal a good one.
   - term: Buyer check
     meaning: A test that the buyer is still glad to pay the price.

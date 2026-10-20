@@ -1,0 +1,26 @@
+slug: cash-versus-earnings-checker
+name: Cash versus earnings checker
+summary: Paste your profit and cash figures. Get free cash flow beside earnings, what growth costs and a score out of 100.
+category: general
+type: skill
+role: check
+job: analysis
+level: advanced
+inputs:
+  - type: performance_sheet
+    required: true
+  - type: plan
+    required: false
+outputs:
+  - type: audit_report
+origin: rebuilt
+version: 1.0.0
+minds:
+  - jeff-bezos
+credits:
+  - title: 2004 letter to shareholders
+    by: Jeff Bezos
+    used: Free cash flow per share as the measure to drive, why growing earnings can destroy value when growth needs more capital than it returns, and why EBITDA can mislead
+  - title: 2001 letter to shareholders
+    by: Jeff Bezos
+    used: "The reason to look at cash: a share is a claim on future cash, so cash per share and the share count matter"

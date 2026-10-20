@@ -1,0 +1,30 @@
+slug: input-metric-picker
+name: Input metric picker
+summary: Paste the numbers you report. Get the inputs you control, a proxy test for each and one output to check them.
+category: general
+type: skill
+role: make
+job: analysis
+level: intermediate
+inputs:
+  - type: performance_sheet
+    required: true
+  - type: copy_draft
+    required: false
+outputs:
+  - type: plan
+origin: rebuilt
+version: 1.0.0
+minds:
+  - jeff-bezos
+credits:
+  - title: 2009 letter to shareholders
+    by: Jeff Bezos
+    used: Focusing on controllable inputs rather than financial outputs, and counting how a year's goals split between customers and profit terms
+  - title: 2013 letter to shareholders
+    by: Jeff Bezos
+    used: Telling input metrics, such as selection, from output metrics, such as streams and new customers
+  - title: 2016 letter to shareholders
+    by: Jeff Bezos
+    url: https://www.aboutamazon.com/news/company-news/2016-letter-to-shareholders
+    used: Process and surveys becoming proxies for the result they were meant to serve

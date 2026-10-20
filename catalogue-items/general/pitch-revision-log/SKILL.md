@@ -50,7 +50,7 @@ The doubt log. Fix now and fix later. The revised pitch. Slides kept and cut wit
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Say it to the room** with the [Hardest objections answer writer](https://useaiblocks.com/skills/hardest-objections-answer-writer). It takes the draft.
+- **Say it to the room** with the [Annual letter writer](https://useaiblocks.com/skills/annual-letter-writer). It takes the draft.
 - **Make image ads** with the [Accurate product image ad maker](https://useaiblocks.com/prompts/accurate-product-image-ad-maker). It takes the lessons.
 - **Lead the team** with the [Order-to-request rewriter](https://useaiblocks.com/skills/order-to-request-rewriter). It takes the draft.
 - **Decide what to do** with the [Decision checklist builder](https://useaiblocks.com/skills/decision-checklist-builder). It takes the lessons.

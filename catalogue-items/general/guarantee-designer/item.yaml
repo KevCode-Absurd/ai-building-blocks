@@ -1,0 +1,28 @@
+slug: guarantee-designer
+name: Guarantee designer
+summary: Paste your offer and costs. Get a guarantee that fits your risk, with the refund sums and a name.
+category: general
+type: skill
+role: make
+job: strategy
+level: advanced
+inputs:
+  - type: offer
+    required: true
+  - type: plan
+    required: false
+  - type: performance_sheet
+    required: false
+outputs:
+  - type: offer
+  - type: plan
+uses: []
+origin: rebuilt
+version: 1.0.0
+minds:
+  - alex-hormozi
+credits:
+  - title: "$100M Offers: How To Make Offers So Good People Feel Stupid Saying No"
+    by: Alex Hormozi
+    url: https://shop.acquisition.com/products/100m-offers-hardcover
+    used: Reversing the buyer's risk, the four kinds of guarantee, the many forms of conditional guarantee, stacking guarantees, naming a guarantee, and doing the refund sum before deciding

@@ -1,0 +1,104 @@
+new_slug: guarantee-designer
+name: Guarantee designer
+summary: Paste your offer and costs. Get a guarantee that fits your risk, with the refund sums and a name.
+job: make-offer
+thinking: high
+thinking_why: It must compare several guarantee types against your costs and run the sums. Give it your strongest model.
+headline: Guarantee designer
+subhead: Give it your offer, price and what it costs to deliver. It picks the buyer's biggest fear, chooses a guarantee type that fits your ticket size and costs, writes it in an if-then form, runs the refund sums and gives it a name.
+explain: |-
+  The biggest reason people do not buy is risk: the fear of paying and not getting the result. A guarantee takes that risk from the buyer and puts it on you. A strong one can lift sales a lot, even when it leads to some refunds.
+
+  This skill designs one that you can afford. It starts with the buyer's main fear and offers four kinds: no conditions, conditions tied to actions, all sales final with a reason, and pay-on-result. It writes the guarantee in a form with an if and an or what, so it is not weak. Then it runs the refund sums on your numbers, including the cost you have already spent on a buyer who asks for money back. Conditions tied to the actions that cause success also screen for buyers who will do the work.
+when:
+  - Buyers say they are not sure it will work for them.
+  - You offer a generic 30-day refund and it does little.
+  - You want a guarantee but fear refunds.
+you_give:
+  - Your offer, price and what it costs you to deliver
+  - Your refund rate and current sales (optional)
+  - The actions a buyer must take to get the result
+  - Rules on claims in your field (optional)
+you_get:
+  - The buyer's top fears, ranked
+  - The guarantee type that fits, with the reason
+  - The guarantee written in an if-then form, with options for the remedy
+  - Refund sums on your numbers and the sales lift needed to break even
+  - Three names for it, and a note on rules and limits
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste the offer, price and cost to deliver.
+  - List the actions a buyer must take for the result to happen.
+  - Check the sums, then run the guarantee for a month and watch refunds and sales.
+how_it_works:
+  - title: Finds the fear
+    text: Ranks what buyers worry about when they pay.
+  - title: Chooses the type
+    text: By ticket size, cost to deliver and how measurable the result is.
+  - title: Writes it with teeth
+    text: If you do not get this result in this time having done these actions, we do this.
+  - title: Runs the sums
+    text: Net sales and net money before and after, with delivery cost on refunds.
+  - title: Names and checks
+    text: Three names, and a check against rules and your ability to deliver.
+output_shape: |-
+  BUYER FEARS
+  1. ... 2. ... 3. ...
+
+  TYPE AND WHY
+  <no condition, conditional, all sales final or pay on result>
+
+  THE GUARANTEE
+  If you <actions> and do not <result> within <time>, we <remedy>.
+
+  OPTIONS FOR THE REMEDY
+  <3 to 5 choices>
+
+  REFUND SUMS
+  <before and after, net sales, net money, break-even lift>
+
+  NAMES
+  <3>
+
+  LIMITS AND RULES
+  <what to check locally>
+
+  MISSING
+  <gaps>
+
+  CHECKS MISSED
+  <one line per check missed, or none>
+tweaks:
+  - what: Ticket size
+    how: Low-ticket consumer offers suit broad guarantees. High-ticket or business offers suit specific ones.
+  - what: How measurable the result is
+    how: If you can measure it, pay-on-result is possible. If not, tie the guarantee to actions.
+  - what: Appetite for risk
+    how: Say whether you can afford to refund and still have spent the delivery cost.
+judge:
+  - The guarantee has an if, a time and an or what.
+  - The type fits the ticket size and delivery cost.
+  - The refund sums include delivery cost on refunded buyers.
+  - Conditions are actions that cause the result.
+  - A rules note is included and no result is promised that you cannot support.
+test:
+  - Redo the sums by hand. Net money before and after should match.
+  - Give the guarantee to a buyer who is unsure. They should be able to say what they would do to qualify.
+  - Track refunds for a month and compare them to the sums.
+improve:
+  - Start with a service or pay-on-result guarantee, and loosen it only once you know refunds stay low.
+  - Tie each guarantee to the one action that best predicts success.
+  - Revisit the sums quarterly.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: This is text and number work that any strong chat AI does well with the skill.
+  inputs:
+    - Your refund history
+    - The cost to deliver per buyer
+    - The actions that past successful buyers took
+terms:
+  - term: Conditional guarantee
+    meaning: A guarantee that applies if the buyer takes stated actions and does not get the result.
+  - term: Break-even lift
+    meaning: How much sales must rise to cover a higher refund rate.

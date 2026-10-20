@@ -1,0 +1,26 @@
+slug: write-an-annual-letter-that-sets-long-term-priorities
+name: "Write an annual letter with long-term priorities and metrics"
+summary: "Paste your year's numbers. Get principles, input metrics, a cash check, a value tally and a draft letter."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: analysis
+level: advanced
+inputs:
+  - {type: question, required: true}
+  - {type: performance_sheet, required: true}
+outputs:
+  - {type: copy_draft}
+uses: [long-term-principles-writer, input-metric-picker, cash-versus-earnings-checker, value-created-tally-builder, annual-letter-writer]
+steps:
+  - {uses: long-term-principles-writer, note: "A short list of promises that explain how you will choose."}
+  - {uses: input-metric-picker, note: "Controllable inputs, one check output and a proxy test for each."}
+  - {uses: cash-versus-earnings-checker, note: "Free cash flow next to earnings, with what growth costs."}
+  - {uses: value-created-tally-builder, note: "A value figure for each group, with assumptions and the weakest link."}
+  - {uses: annual-letter-writer, note: "A letter that carries the principles, metrics, cash view and tally."}
+origin: rebuilt
+version: 1.0.0
+minds: [jeff-bezos]
+credits:
+  - {title: "Letters to shareholders, 1997 to 2020", by: "Jeff Bezos", used: "The order of the steps: write the long-term principles, pick the input metrics that matter, check the cash behind the earnings, tally the value you create, write the letter"}
+generated_from: intake/bezos-letters-annual-letter/skeleton.yaml

@@ -1,0 +1,96 @@
+new_slug: niche-price-ladder-builder
+name: Niche price ladder builder
+summary: Paste your offer and its going price. Get it rewritten for narrower buyers, each with a price and a size check.
+job: make-offer
+thinking: medium
+thinking_why: It rewrites the same offer for several levels and sizes each. The sums are small but the buyer wording needs care.
+headline: Niche price ladder builder
+subhead: Give it the broad version of your offer and the market you picked. It narrows the buyer in steps, rewrites the promise in that buyer's own terms, estimates what one result is worth at each level and checks that you can still reach enough buyers.
+explain: |-
+  A general offer sells at a general price. The same core, sold to a narrow group with a name that fits them, can sell for many times more. The narrower buyer sees it as made for them and the result is worth more to them.
+
+  This skill builds the ladder. It starts with the broad offer and its going price, then narrows by role, situation and setting. At each step it rewrites the promise in the buyer's words, estimates what one result is worth to that buyer, and sets a price band. It then checks whether you can reach enough of that group to hit your target. The answer is the narrowest level that passes.
+when:
+  - You sell to everyone and your price is stuck at the going rate.
+  - Your offer reads as generic.
+  - You are unsure how narrow is too narrow.
+you_give:
+  - Your offer in broad form, with its going price
+  - The market you chose, or a shortlist from Starving crowd market scorer
+  - The number of buyers you need (optional)
+you_get:
+  - A ladder of four or five narrower versions of the offer, each with a rewritten promise and name
+  - What one result is worth at each level, and a price band
+  - A reach check for each level
+  - The narrowest level that passes, and who it is not for
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste the broad offer and its price, plus the market you picked.
+  - Say how many sales a month you need.
+  - Take the plan to Pricing decision planner for the final price.
+how_it_works:
+  - title: Starts broad
+    text: Writes the generic version and what buyers pay for it today.
+  - title: Narrows in steps
+    text: Role, situation or trigger, setting, and place if you sell locally.
+  - title: Rewrites the promise
+    text: In the narrower buyer's words, with a problem only they have.
+  - title: Estimates worth
+    text: One result's value to that buyer, with the basis, and a price band near a tenth of it.
+  - title: Checks reach
+    text: Counts the buyers you can reach and compares to what you need.
+output_shape: |-
+  BROAD VERSION
+  <promise> | going price: <number or MISSING>
+
+  THE LADDER
+  Level | buyer | promise in their words | worth of one result | price band | buyers I can reach
+
+  REACH CHECK
+  <buyers needed = sales target / take rate; reach vs need>
+
+  THE PICK
+  <narrowest level that passes> | who it is not for
+
+  GROW LATER
+  <the next level up, and the sign to move>
+
+  MISSING
+  <gaps>
+
+  CHECKS MISSED
+  <one line per check missed, or none>
+tweaks:
+  - what: Take rate
+    how: Give your usual share of reached buyers who buy. The default is 2 percent and is labelled.
+  - what: Local or online
+    how: For local sellers, the last level is the neighbourhood. For online sellers it is a setting or a tool they use.
+  - what: Number of levels
+    how: Ask for more levels if you are far from a specific buyer.
+judge:
+  - Each level is a group a person would name themselves as.
+  - Every promise uses words from that group, and one problem only they have.
+  - The worth figure at each level shows its basis.
+  - The reach check uses a take rate and a sales target.
+  - The pick is the narrowest level that still passes.
+test:
+  - Show the narrowest promise to someone in that group. They should say it is for them.
+  - Redo the reach sum by hand.
+  - Check that the price rises with the worth, not just with the narrowness.
+improve:
+  - Collect the exact words your best buyers use and put them into the promise.
+  - Test the second narrowest level in an ad to see if it beats the pick.
+  - Revisit the ladder when you pass your reach limit.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: This is text and number work that any strong chat AI does well with the skill.
+  inputs:
+    - Shortlist from Starving crowd market scorer
+    - Reviews that show how this group talks
+    - Numbers on group size
+terms:
+  - term: Niche
+    meaning: A group narrow enough that your offer reads as made for them.
+  - term: Take rate
+    meaning: The share of people you reach who buy.

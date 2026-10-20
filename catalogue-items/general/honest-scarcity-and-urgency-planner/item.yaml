@@ -1,0 +1,25 @@
+slug: honest-scarcity-and-urgency-planner
+name: Honest scarcity and urgency planner
+summary: Paste your offer and what you can handle. Get real limits and dates, plus the lines to say them.
+category: general
+type: skill
+role: make
+job: strategy
+level: intermediate
+inputs:
+  - type: offer
+    required: true
+  - type: performance_sheet
+    required: false
+outputs:
+  - type: plan
+uses: []
+origin: rebuilt
+version: 1.0.0
+minds:
+  - alex-hormozi
+credits:
+  - title: "$100M Offers: How To Make Offers So Good People Feel Stupid Saying No"
+    by: Alex Hormozi
+    url: https://shop.acquisition.com/products/100m-offers-hardcover
+    used: Scarcity as a limit on quantity and urgency as a limit on time, the types of each that stay honest, keeping supply under demand so rounds sell out, and writing the limit into every channel

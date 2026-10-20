@@ -12,7 +12,7 @@ outputs:
   - {type: plan}
 origin: rebuilt
 version: 1.0.0
-minds: [jay-abraham]
+minds: [jay-abraham, alex-hormozi]
 credits:
   - {title: "Study notes on Jay Abraham", by: "Jay Abraham", used: "Valuing a customer over their whole time with you, and setting how much to spend to win one"}
   - {title: "The Copywriter Club podcast, episode 100, with Jay Abraham", by: "Kira Hug and Rob Marsh, with Jay Abraham", used: "Looking at back-end sales and repeat steps that raise what a customer is worth"}

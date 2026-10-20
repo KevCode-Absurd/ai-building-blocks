@@ -1,0 +1,22 @@
+slug: narrative-memo-checker
+name: Narrative memo checker
+summary: Paste your memo. Get a score out of 100, the weak spots and the three fixes that matter most.
+category: general
+type: skill
+role: check
+job: analysis
+level: intermediate
+inputs:
+  - type: copy_draft
+    required: true
+outputs:
+  - type: audit_report
+origin: rebuilt
+version: 1.0.0
+minds:
+  - jeff-bezos
+credits:
+  - title: 2017 letter to shareholders
+    by: Jeff Bezos
+    url: https://www.aboutamazon.com/news/company-news/2017-letter-to-shareholders
+    used: The idea that readers know a great memo when they see it, and that most weak memos come from wrong expectations about the work involved

@@ -1,0 +1,26 @@
+slug: math-or-judgment-call-sorter
+name: Math or judgment call sorter
+summary: Paste a decision and your numbers. Get it sorted as a math or judgment call, with the next step.
+category: general
+type: skill
+role: make
+job: analysis
+level: intermediate
+inputs:
+  - type: plan
+    required: true
+  - type: question
+    required: false
+outputs:
+  - type: plan
+origin: rebuilt
+version: 1.0.0
+minds:
+  - jeff-bezos
+credits:
+  - title: 2005 letter to shareholders
+    by: Jeff Bezos
+    used: Splitting decisions into those that math can settle and those that need judgment, and making a price cut by judgment against the short-term math
+  - title: 2003 letter to shareholders
+    by: Jeff Bezos
+    used: Making customer experience choices for the long term even when they cost sales in the short term

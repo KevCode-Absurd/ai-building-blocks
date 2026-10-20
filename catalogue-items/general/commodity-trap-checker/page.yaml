@@ -1,0 +1,99 @@
+new_slug: commodity-trap-checker
+name: Commodity trap checker
+summary: Paste your offer and the options buyers compare it with. Get a verdict on price comparison and the first thing to change.
+job: make-offer
+thinking: medium
+thinking_why: It compares your offer with others on fixed rows and does a short sum. It needs the buyer's view, so reviews help.
+headline: Commodity trap checker
+subhead: Give it your offer and the options your buyers compare it with. It lines them up row by row, counts the differences a buyer can see in seconds, runs the price-war sum and tells you which one row to change first.
+explain: |-
+  If a buyer looks at two sellers and thinks they are the same, they buy the cheaper one. That is what makes something a commodity, and it is a view in the buyer's head, not a fact about your work. Two businesses can do the same work, and one still looks unlike anything else.
+
+  This skill tests the view. It lists what a buyer sees next to you, marks each row as same or different, and counts only the differences a buyer could spot in under half a minute. Then it works out what a price war would cost you in margin. It ends with the one row where a change would break the comparison, with a lean toward the rows rivals rarely touch: speed, effort asked of the buyer and risk.
+when:
+  - Buyers keep asking for a discount or quote you against someone cheaper.
+  - Your page reads like everyone else's in your field.
+  - You are about to cut your price to win business.
+you_give:
+  - "Your offer: what is included, price, terms, how you sell it"
+  - The options a buyer might compare you with, or let it find the common ones (optional)
+  - Reviews or sales call notes (optional)
+you_get:
+  - A side-by-side of you and each alternative, row by row
+  - A count of differences a buyer can see quickly, and a verdict
+  - The price-war sum for your numbers
+  - The first row to change and what it would cost
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your offer and the names or pages of two to four alternatives, including doing it themselves.
+  - Add reviews that say why buyers chose you, or what else they looked at.
+  - Pick the row to change and take it to Offer trim and stack builder or Value equation scorer.
+how_it_works:
+  - title: Lines up the options
+    text: Puts you beside two to five alternatives, including doing nothing.
+  - title: Marks each row
+    text: Contents, result, proof, time, effort, risk, how it is sold, price, name.
+  - title: Counts seen differences
+    text: Only rows a buyer could spot in under half a minute count.
+  - title: Runs the price-war sum
+    text: Shows how much margin is left if you match a cut.
+  - title: Picks the row to change
+    text: Leans toward time, effort and risk, which rivals copy least.
+output_shape: |-
+  THE OPTIONS
+  <you and each alternative>
+
+  SIDE BY SIDE
+  Row | you | option A | option B | same or different | seen in 30 seconds?
+
+  VERDICT
+  Visible differences: <n> | Commodity, weak or distinct
+
+  WHAT THEY WILL COMPARE
+  <the thing buyers fall back on>
+
+  PRICE WAR SUM
+  <price, cost, margin, margin after a cut, units needed>
+
+  FIRST ROW TO CHANGE
+  <row, change, cost, why rivals will not copy it fast>
+
+  MISSING
+  <gaps>
+
+  CHECKS MISSED
+  <one line per check missed, or none>
+tweaks:
+  - what: Which alternatives
+    how: Name the ones your buyers really mention. A rival you never meet in a sale is the wrong comparison.
+  - what: Your numbers
+    how: Give price and cost per sale. Without them the price-war sum uses a 40 percent margin and says so.
+  - what: Buyer type
+    how: A buyer with a budget cares about different rows than one under time pressure.
+judge:
+  - Each row is something a buyer sees, not something you know.
+  - Only differences seen in 30 seconds are counted.
+  - The price-war sum is shown with the numbers used.
+  - The row to change is one you can change in a month.
+  - It says what buyers fall back on when nothing differs.
+test:
+  - Cover the names on your page and a rival's. The verdict should match whether a friend could tell which is which.
+  - Redo the price-war sum by hand. It should match.
+  - Change the row it names and check again. The count should rise by one.
+improve:
+  - Run it each quarter, since rivals copy.
+  - Add real buyer words about why they picked you.
+  - Keep the rows you changed and what happened to take rate.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: This is text and number work that any strong chat AI does well with the skill.
+  inputs:
+    - Reviews that say why buyers chose you
+    - Pages of two or three rivals
+    - Your price and cost per sale
+terms:
+  - term: Commodity
+    meaning: Something buyers see as the same wherever they buy it, so they choose on price.
+  - term: Price war
+    meaning: Rivals cutting price to win the same buyers until margins are thin for all of them.

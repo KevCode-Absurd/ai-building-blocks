@@ -1,0 +1,101 @@
+new_slug: lead-cost-and-friction-planner
+name: Lead cost and friction planner
+summary: Paste your campaign numbers. Get cost per qualified lead, the friction to add one step at a time and a stop rule.
+job: make-offer
+thinking: medium
+thinking_why: It does cost sums and picks friction levers in order. The sums are fixed and the choices follow from your numbers.
+headline: Lead cost and friction planner
+subhead: Give it your route and campaign numbers. It compares campaigns by cost per qualified lead including what it costs you to handle each one, then adds friction one lever at a time, with a stop rule, and writes the qualifier line to use everywhere.
+explain: |-
+  A free or cheap first step brings many leads, and some of them are poor. Counting leads misleads you. A campaign with fewer, better leads can cost less per buyer. A campaign with more leads can cost more once you count the time to handle each one.
+
+  This skill compares campaigns by qualified leads per dollar and adds your handling cost. If the numbers say you need better leads, it adds friction one lever at a time: stated qualifiers, the amount and type of information asked, the number of steps, required viewing and the length of the ad. It sets a stop rule so you add just enough, and writes one qualifier line to repeat at every touchpoint. It also tells you what to check when a free offer does not get a response.
+when:
+  - You have plenty of leads and few buyers.
+  - Your team is swamped by leads who do not buy.
+  - You are deciding between a campaign with many leads and one with fewer.
+you_give:
+  - Your chosen route and what the first step costs you to give
+  - "Numbers for one or two campaigns: spend, leads, share that qualify"
+  - Your time or staff cost to handle one lead
+  - Your lead form and steps (optional)
+you_get:
+  - Cost per qualified lead for each campaign, with and without handling cost
+  - A diagnosis if few people respond
+  - The friction levers in the order to try, one at a time
+  - A stop rule and the qualifier line to repeat
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste spend, leads and the share that qualify for each campaign.
+  - Add how long a lead takes to handle and what that time costs.
+  - Add one lever at a time and measure for the same period each time.
+how_it_works:
+  - title: Counts qualified leads
+    text: Spend divided by qualified leads, not total leads.
+  - title: Adds handling cost
+    text: Staff or owner time on each lead, which can flip the answer.
+  - title: Diagnoses low response
+    text: Wrong thing, no belief or wrong audience.
+  - title: Adds friction in order
+    text: Qualifiers, information asked, steps, required viewing, length.
+  - title: Sets a stop rule
+    text: Stop when quality rises but volume still covers what you can handle.
+output_shape: |-
+  CAMPAIGN SUMS
+  Campaign | spend | leads | qualified | handling cost | total cost | cost per qualified lead
+
+  WHICH WINS
+  <with and without handling>
+
+  IF RESPONSE IS LOW
+  <which of three causes, and how to check>
+
+  FRICTION PLAN
+  Lever 1 | change | expected effect | measure for <period>
+  Lever 2 ...
+
+  STOP RULE
+  <when to stop adding>
+
+  QUALIFIER LINE
+  <exact wording and where it goes>
+
+  MISSING
+  <gaps>
+
+  CHECKS MISSED
+  <one line per check missed, or none>
+tweaks:
+  - what: Handling cost
+    how: Give the minutes per lead and the hourly cost. It decides whether more leads are worth it.
+  - what: How many leads you can handle
+    how: State the weekly limit so the stop rule fits it.
+  - what: Which levers you can use
+    how: Say which ones your tools allow.
+judge:
+  - The cost sums show their inputs and are correct.
+  - Handling cost is included and its effect on the answer is stated.
+  - Levers are added one at a time with a measurement period.
+  - A stop rule is stated in numbers.
+  - The qualifier line is the same wording everywhere.
+test:
+  - Redo the sums by hand. They should match.
+  - Add one lever and compare qualified leads per week with the week before.
+  - Check that the qualifier line appears in the ad, the page and the form.
+improve:
+  - Keep a log of each lever and its effect.
+  - Retest every quarter as your market changes.
+  - Move forced viewing to later steps if it costs too many leads at the start.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: This is text and number work that any strong chat AI does well with the skill.
+  inputs:
+    - Campaign reports with spend and leads
+    - A count of leads that became buyers
+    - Time spent per lead
+terms:
+  - term: Qualified lead
+    meaning: A lead who meets the basic conditions to buy from you.
+  - term: Friction
+    meaning: Anything that makes a lead do more before they reach you, such as extra questions or steps.

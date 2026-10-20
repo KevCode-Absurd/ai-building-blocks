@@ -1,0 +1,114 @@
+new_slug: future-press-release-writer
+name: Future press release writer
+summary: Paste your need statement. Get a one-page press release written as if the product launched today.
+job: write-landing-page
+thinking: medium
+thinking_why: It chooses what to lead with and what to cut, but the format is fixed.
+headline: Future press release writer
+subhead: "Paste your need statement. It writes a one-page press release as if the product launched today: a headline, what the customer gets, the problem, a customer quote, a team quote, the price and how to start. Every claim you cannot yet back is marked."
+explain: |
+  A press release written before you build is a test. If you cannot say in plain words why a customer would care, the product is not ready. Writing for the customer also cuts features that exist only because a rival has them.
+
+  This skill writes the release the way a customer would read it. It leads with the benefit, tells the problem in the customer's terms and adds a quote from a customer and one from the team. It gives the price and how to start. Where the release says something you cannot yet prove, it adds a MISSING note, so the weak spots show up while changing them is cheap.
+when:
+  - You have an idea and want to see if it holds up when written for a customer.
+  - Your team agrees on features but cannot say why anyone will care.
+  - You need a one-page picture of the product before you spend.
+you_give:
+  - A need statement, or your idea and who it is for
+  - The price and how a customer would start (optional)
+  - Facts you can already back, such as numbers or tests (optional)
+you_get:
+  - A headline and one-sentence summary
+  - The problem and the better way, in customer words
+  - A customer quote and a team quote
+  - Price, how to start and what is new
+  - MISSING notes on every claim you cannot back
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste the need statement from "Durable customer need finder", or describe your idea and who it is for.
+  - Add the price and facts you can back, if you know them.
+  - Read the release as a customer. Mark any line you would not believe.
+  - Take the release to "Hard questions FAQ writer".
+how_it_works:
+  - title: Picks the reader
+    text: Writes for the customer, not the press, in plain words.
+  - title: Writes the headline
+    text: Leads with what the customer gets and one sentence that backs it.
+  - title: Tells the problem
+    text: Describes it in the customer's terms and how life gets better.
+  - title: Adds two quotes
+    text: One from a customer and one from the team, written as plain speech.
+  - title: Gives price and start
+    text: States what it costs, how to begin and what is new.
+  - title: Cuts rival-driven features
+    text: Removes anything that is there only because a competitor has it.
+  - title: Marks the gaps
+    text: Adds MISSING to every claim without proof.
+output_shape: |
+  HEADLINE
+  <what the customer gets>
+
+  SUMMARY
+  <one sentence>
+
+  THE PROBLEM
+  <in the customer's terms>
+
+  THE BETTER WAY
+  <how life changes>
+
+  CUSTOMER QUOTE
+  <plain speech, marked as imagined until real>
+
+  TEAM QUOTE
+  <why you built it>
+
+  PRICE AND HOW TO START
+  <facts>
+
+  CUT FROM THE RELEASE
+  <features dropped and why>
+
+  MISSING
+  <claims without proof>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+tweaks:
+  - what: The customer
+    how: Name one type of person. A release written for everyone reads like it is for no one.
+  - what: The price
+    how: Include it, even a guess. A release without a price hides the hardest question.
+  - what: Facts you can back
+    how: Paste numbers, tests or quotes you have. They replace MISSING notes.
+  - what: Length
+    how: Ask for one page. A longer release usually means unclear thinking.
+judge:
+  - A customer could read the headline and know what they get.
+  - The problem is in the customer's words, not yours.
+  - The customer quote is plain speech and is marked as imagined.
+  - Nothing in the release exists only because a rival has it.
+  - Each claim without proof carries a MISSING note.
+test:
+  - Read the release to someone who fits the customer. Ask what they would do next.
+  - Cut the release to its headline and summary. Do they still want it?
+  - Run it twice. The headline benefit should stay the same.
+  - Compare it to your current pitch. See what the release left out.
+improve:
+  - Add your brand voice rules to the skill, so the release sounds like you.
+  - Add a line on the proof you are able to show, such as tests or pilot numbers.
+  - Save the released version in your project notes and update it after each change of plan.
+  - Pair it with "Hard questions FAQ writer" for the next step.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: Drafting plain customer-facing text is work any strong chat AI does well with this skill.
+  inputs:
+    - A need statement from the Durable customer need finder
+    - Your price and costs
+    - Early feedback from real customers
+    - Your brand voice notes
+terms:
+  - term: Press release
+    meaning: A short announcement of something new, written for the people it helps.

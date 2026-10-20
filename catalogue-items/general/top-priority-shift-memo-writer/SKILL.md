@@ -7,6 +7,8 @@ description: Use when a change in your market or work makes the current plan wro
 
 When the ground moves, a team needs three things in one page: what changed, what now comes first, and what each person does next. This skill writes that memo in your voice from your facts. It is for a change in a market, a technology, a rule or a customer habit, in any kind of business or team.
 
+Use [Six-page narrative memo writer](https://useaiblocks.com/skills/six-page-narrative-memo-writer) instead when you need a decision on a proposal, not a change of direction announced to your leaders.
+
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
 This skill runs on its own. What's below makes the result better, but none of it is required.
@@ -51,7 +53,7 @@ The memo, ready to send. `MISSING:` lines for anything the person must fill in. 
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - **Lead the team** with the [Order-to-request rewriter](https://useaiblocks.com/skills/order-to-request-rewriter). It takes the draft.
-- **Say it to the room** with the [Hardest objections answer writer](https://useaiblocks.com/skills/hardest-objections-answer-writer). It takes the draft.
+- **Say it to the room** with the [Annual letter writer](https://useaiblocks.com/skills/annual-letter-writer). It takes the draft.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

@@ -1,0 +1,26 @@
+slug: front-end-offer-picker
+name: Front-end offer picker
+summary: Paste your offer and lead numbers. Get a pick of premium, free or discount first step, with the reason and tests.
+category: general
+type: skill
+role: make
+job: strategy
+level: intermediate
+inputs:
+  - type: offer
+    required: true
+  - type: performance_sheet
+    required: false
+  - type: question
+    required: false
+outputs:
+  - type: plan
+uses: []
+origin: rebuilt
+version: 1.0.0
+minds:
+  - alex-hormozi
+credits:
+  - title: "The New Secret Chapter: How to Make Money (draft chapter, Section A: Attract)"
+    by: Alex Hormozi
+    used: The three ways to open a sale (premium, free, discount), the pros and cons of each, when each fits, and starting with free or discount in a new market before moving to premium

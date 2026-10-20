@@ -1,0 +1,117 @@
+new_slug: durable-customer-need-finder
+name: Durable customer need finder
+summary: Describe your idea and who it is for. Get the customer need behind it, a ten-year test and the skills gap.
+job: understand-customers
+thinking: medium
+thinking_why: It weighs evidence about a need and judges what will last, but the questions are fixed.
+headline: Durable customer need finder
+subhead: Describe your idea and who you think wants it. It finds the customer and the need behind the idea, tests whether the need will still hold in ten years, lists the skills it takes to serve it and checks four marks of a business worth building. You get a short need statement with the gaps marked.
+explain: |
+  An idea written down as a product is easy to love and hard to test. The same idea written as a need a customer has is easier to judge: you can ask whether it is real, whether it will last and whether you can serve it.
+
+  This skill puts the customer first. It names who has the need in their own words, then asks whether anyone could want the opposite in ten years. It separates what customers ask for from what their workarounds show. It lists the skills the need demands and marks the ones you lack, so the plan grows to fit the need rather than shrinking to fit what you do today. It ends with four checks and a short need statement.
+when:
+  - You have an idea and can only describe it as a product or a feature.
+  - You are unsure whether a need is real or just a trend.
+  - Your plan keeps shrinking to fit what your team already knows how to do.
+you_give:
+  - Your idea in a sentence, and who you think it is for
+  - Any customer words you have, such as reviews, emails or call notes (optional)
+  - What your team can already do well (optional)
+you_get:
+  - The customer and the need, in their words
+  - The ten-year test result
+  - A list of the skills the need demands, marked have, can learn or must hire
+  - Four marks checked with evidence
+  - A need statement of about 100 words
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Describe the idea and who it is for. Paste any real customer words you have.
+  - List what your team is good at, so the skills gap can be marked.
+  - Read the need statement. If it does not sound like something a customer would say, fix it and run again.
+  - Take the statement to "Future press release writer".
+how_it_works:
+  - title: Names the customer
+    text: Picks one type of person and the job they are trying to get done, in their words.
+  - title: Writes the need as a result
+    text: Turns the idea into the result they want, with no product in the sentence.
+  - title: Runs the ten-year test
+    text: Asks whether anyone would want the opposite in ten years. If yes, it is a fashion, not a need.
+  - title: Splits asked from unasked
+    text: Lists what customers request now and what their workarounds show they have not said.
+  - title: Maps the skills gap
+    text: Lists what serving the need takes and marks each item as have, can learn or must hire.
+  - title: Checks four marks
+    text: Love, size, returns and staying power, each with evidence or a MISSING note.
+  - title: Writes the need statement
+    text: About 100 words, with the biggest unknown and a cheap way to learn it.
+output_shape: |
+  CUSTOMER
+  <who, where they are, the job they are trying to get done>
+
+  THE NEED, AS A RESULT
+  <one sentence with no product in it>
+
+  TEN-YEAR TEST
+  <could they want the opposite? answer and reason>
+
+  ASKED VS UNASKED
+  Asked: <requests and complaints>
+  Shown by workarounds: <what they do instead>
+
+  SKILLS THE NEED DEMANDS
+  <skill | have / can learn / must hire>
+
+  FOUR MARKS
+  Loved: <evidence>  Large: <evidence>  Returns: <evidence>  Lasting: <evidence>
+
+  NEED STATEMENT
+  <about 100 words>
+
+  BIGGEST UNKNOWN
+  <the unknown and the cheapest way to learn it>
+
+  MISSING
+  <gaps>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+tweaks:
+  - what: How specific the customer is
+    how: A named type of person with a place and a routine gives a sharper need than a whole market.
+  - what: Real customer words
+    how: Pasted reviews, emails or call notes make the need sound like them and show the workarounds.
+  - what: The skills you list
+    how: Be honest about weak spots. The gap list is only useful if it shows what you cannot do yet.
+  - what: The ten-year question
+    how: Name the opposite you are testing, such as higher cost, less choice or slower service.
+judge:
+  - The need sentence has no product in it.
+  - The ten-year test names a specific opposite and says why it would not hold.
+  - At least one need is shown by what customers do, not by what they said.
+  - The skills gap lists at least one thing you cannot do yet.
+  - Each of the four marks has evidence or a MISSING note.
+test:
+  - Run it on an idea you already built. See if the need statement matches why customers actually bought.
+  - Run it on a trend you doubt. The ten-year test should flag it.
+  - Run it twice with the same input. The need sentence should stay close.
+  - Show the statement to a customer and ask if it sounds right.
+improve:
+  - Add the words your customers use for the problem, so the statement sounds like them.
+  - Add the unasked needs you already know about to the input.
+  - Keep the statement in your project notes and update it after each batch of customer talks.
+  - Pair it with "Future press release writer" for the next step.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: Weighing a need against the ten-year test is text work any strong chat AI does well with this skill.
+  inputs:
+    - Customer reviews or support emails
+    - Notes from customer calls
+    - A list of your team's strongest skills
+    - Sales or usage numbers that show repeat use
+terms:
+  - term: Working backwards
+    meaning: Starting from what the customer needs and then working out what to build, instead of starting from what you can already do.
+  - term: Workaround
+    meaning: A patch customers use today because nothing solves the problem well. It shows a need they may not name.

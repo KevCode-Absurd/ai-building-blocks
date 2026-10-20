@@ -1,0 +1,113 @@
+new_slug: input-metric-picker
+name: Input metric picker
+summary: Paste the numbers you report. Get the inputs you control, a proxy test for each and one output to check them.
+job: plan-strategy
+thinking: high
+thinking_why: It traces cause from outputs back to inputs and judges which metrics stand in for the real goal.
+headline: Input metric picker
+subhead: Paste the numbers you report. It lists the outputs, finds the inputs you control that cause each, picks three to six that touch the customer, tests each for proxy risk and keeps one output as a check. You get a short metric plan with an owner, target and review date for each input.
+explain: |
+  Profit, revenue and growth are results. You cannot work on them directly. You can work on the things that cause them: how many items are in stock, how fast you reply, how long customers wait, what the price is. Teams that watch only the results find out too late and argue about blame.
+
+  This skill traces each reported output back to its causes and picks the few inputs that matter most to the customer. It then tests each one: could this number rise while the real goal falls? If yes, it is a proxy, and the skill adds a guard. It keeps one output as a check on whether the inputs were the right ones, and gives each input an owner, a target and a review date.
+when:
+  - Your reports show results but nobody knows what to do about them.
+  - You suspect a metric is being gamed or has stopped meaning what it did.
+  - You are setting goals for next year and want them to be about things you control.
+you_give:
+  - The numbers you report, with periods
+  - Your goals for the year (optional)
+  - The long-term principles, if you have them (optional)
+you_get:
+  - Outputs listed and traced to inputs
+  - Three to six input metrics that touch the customer
+  - A proxy test for each, with a guard where needed
+  - One output kept as a check
+  - An owner, target and review date for each input
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste the numbers you report now, and your goals if you have them.
+  - Say what a good year looks like for your customer.
+  - Read the proxy tests. Change any metric you could game.
+  - Put the owners and dates into your plan.
+how_it_works:
+  - title: Lists the outputs
+    text: Everything you report that is a result, not a cause.
+  - title: Traces the inputs
+    text: The things you control that cause each output.
+  - title: Picks three to six
+    text: The inputs that touch the customer directly.
+  - title: Runs the proxy test
+    text: Could it rise while the real goal falls?
+  - title: Adds guards
+    text: A second number or rule that stops a proxy being gamed.
+  - title: Keeps one output
+    text: A result that tells you if the inputs were right.
+  - title: Assigns ownership
+    text: An owner, a target and a review date for each input.
+output_shape: |
+  OUTPUTS TODAY
+  <output | period | value>
+
+  INPUTS THAT CAUSE THEM
+  <output | inputs you control>
+
+  CHOSEN INPUTS (3 to 6)
+  1. <input> | customer effect | owner | target | review date
+  2. ...
+
+  PROXY TEST
+  <input | could it rise while the goal falls? | guard>
+
+  OUTPUT KEPT AS A CHECK
+  <output | what it tells us>
+
+  GOAL SPLIT
+  <share of goals on inputs, outputs, mixed>
+
+  MISSING
+  <gaps>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+tweaks:
+  - what: What the customer values
+    how: Name two or three things. Inputs are chosen to move those.
+  - what: Your reporting period
+    how: Give weekly or monthly numbers. Inputs often change faster than results.
+  - what: Your goals
+    how: Paste them. The skill counts how many name inputs and how many only name outputs.
+  - what: Who owns what
+    how: Name teams. Every input needs one owner.
+judge:
+  - Each chosen input is something a team controls.
+  - Each input has a clear effect on the customer.
+  - The proxy test names how each could be gamed.
+  - One output is kept, and it is not profit alone.
+  - Every input has an owner, a target and a date.
+test:
+  - Check each input against last year's results. Did it move before the output did?
+  - Ask a team that owns an input to try to game it. See if the guard holds.
+  - Run it twice. The chosen inputs should overlap.
+  - Count your current goals. See how many name inputs.
+improve:
+  - Add the inputs you already watch to the input.
+  - Add customer complaints as a source of inputs.
+  - Review the chosen inputs every quarter and swap any that stop working.
+  - Pair it with "Cash versus earnings checker" for the financial view.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: Tracing causes from a table of results is text and number work any strong chat AI does well with this skill.
+  inputs:
+    - Your goals for the year
+    - Customer complaint themes
+    - Time series of key numbers
+    - Your long-term principles
+terms:
+  - term: Input metric
+    meaning: A number for something you control that causes a result, such as how long customers wait.
+  - term: Output metric
+    meaning: A number for a result, such as sales or profit.
+  - term: Proxy
+    meaning: A stand-in for the real goal that can rise while the goal falls.

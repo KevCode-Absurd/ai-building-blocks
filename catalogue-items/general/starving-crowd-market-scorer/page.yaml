@@ -1,0 +1,100 @@
+new_slug: starving-crowd-market-scorer
+name: Starving crowd market scorer
+summary: Paste the markets you could serve. Get each scored on pain, money, reach and growth, and the one to commit to.
+job: make-offer
+thinking: medium
+thinking_why: It scores each market on a fixed scale using what you tell it, then picks one. Real evidence on size and growth improves it.
+headline: Starving crowd market scorer
+subhead: Give it what you can do and the groups you could serve. It scores each on how much pain they feel, whether they can pay, whether you can reach them and whether the group is growing. Then it picks one and sets how long you commit before you review.
+explain: |-
+  A good offer in a bad market loses to a poor offer in a hungry one. The market comes first, then the offer, then how well you pitch. Yet most owners pick a market by what they know, or take whoever answers.
+
+  This skill picks on four checks. Do they feel real pain, do they have money, can you reach them without hunting, and are there more of them each year or fewer? A zero on pain, money or growth rules a market out. It also says how much your offer has to carry given the market, and asks you to commit to one pick for a set number of tries, since hopping from market to market resets what you have learned.
+when:
+  - You could sell to anyone and are not sure whom to aim at.
+  - Your offer is good but nothing is selling.
+  - You keep switching target groups.
+you_give:
+  - What you can do and what you know
+  - The groups you could serve, or let it propose some
+  - Your value or commodity findings (optional)
+  - A buyer profile (optional)
+you_get:
+  - A scored table of markets on pain, money, reach and growth
+  - Which markets are ruled out and why
+  - How strong your offer needs to be for the pick
+  - One market to commit to, three places to reach it, and the first test
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste what you can do and the groups you are weighing, with any numbers you have on size and growth.
+  - Check the evidence for each score. Fix any you know to be wrong.
+  - Take the pick to Niche price ladder builder.
+how_it_works:
+  - title: Starts from the three big wants
+    text: Health, wealth and relationships, then looks for a narrower group inside one.
+  - title: Scores four checks
+    text: Pain, money, reach and growth, 0 to 3 each, with evidence.
+  - title: Rules out
+    text: A zero on pain, money or growth means out.
+  - title: Applies the order
+    text: Market, then offer, then pitch, to say how strong the offer must be.
+  - title: Sets the commitment
+    text: A number of tries before review, and the only reasons to leave sooner.
+output_shape: |-
+  CANDIDATES
+  Market | the big want it sits in
+
+  SCORES
+  Market | Pain | Money | Reach | Growth | Total /12 | Evidence | Verdict
+
+  RULED OUT
+  <market, the zero, why>
+
+  WHAT THE OFFER MUST CARRY
+  <great, normal or bad market and what that asks of the offer>
+
+  THE PICK
+  <market> | three places to reach them this week | first test
+
+  COMMITMENT
+  <number of tries, the only reasons to leave early>
+
+  MISSING
+  <gaps>
+
+  CHECKS MISSED
+  <one line per check missed, or none>
+tweaks:
+  - what: Evidence
+    how: Give numbers on group size and direction. Without them growth is marked as an estimate.
+  - what: Your edge
+    how: Say what you know that others in that group do not. Ties are broken on it.
+  - what: How many tries
+    how: Say how many offers or tests you can afford. The commitment is sized to it.
+judge:
+  - Each score has evidence or an estimate label.
+  - A zero in pain, money or growth rules a market out.
+  - Reach lists three real places, not a general channel.
+  - The pick has a stated number of tries.
+  - It says what the offer must carry in this market.
+test:
+  - Give it one market you know is bad (shrinking, no money). It should rule it out.
+  - Rerun with the same facts. Totals should not move by more than one point.
+  - Check the three places to reach. You should be able to visit each this week.
+improve:
+  - Update growth figures every six months.
+  - Keep a log of tries and results in the chosen market.
+  - Add the places your best buyers came from.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: This is text and number work that any strong chat AI does well with the skill.
+  inputs:
+    - Industry size and trend figures
+    - Where your current buyers come from
+    - Findings from Commodity trap checker
+terms:
+  - term: Starving crowd
+    meaning: A group with a painful problem, money to spend, a way to reach them and a market that is growing.
+  - term: Commit
+    meaning: Stay with one market for a set number of tries before deciding it does not work.

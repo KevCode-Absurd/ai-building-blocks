@@ -57,7 +57,7 @@ The lever map with statuses. The removed list with reasons. The added levers wit
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Say it to the room** with the [Hardest objections answer writer](https://useaiblocks.com/skills/hardest-objections-answer-writer). It takes the draft.
+- **Say it to the room** with the [Annual letter writer](https://useaiblocks.com/skills/annual-letter-writer). It takes the draft and audit report.
 - **Lead the team** with the [Blame-free review agenda writer](https://useaiblocks.com/skills/blame-free-review-agenda-writer). It takes the audit report.
 - **Sell it** with the [Franchise and reseller terms writer](https://useaiblocks.com/skills/partner-deal-terms-writer). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.

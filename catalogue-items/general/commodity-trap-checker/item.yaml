@@ -1,0 +1,27 @@
+slug: commodity-trap-checker
+name: Commodity trap checker
+summary: Paste your offer and the options buyers compare it with. Get a verdict on price comparison and the first thing to change.
+category: general
+type: skill
+role: check
+job: analysis
+level: intermediate
+inputs:
+  - type: offer
+    required: true
+  - type: competitor_set
+    required: false
+  - type: voc_reviews
+    required: false
+outputs:
+  - type: audit_report
+uses: []
+origin: rebuilt
+version: 1.0.0
+minds:
+  - alex-hormozi
+credits:
+  - title: "$100M Offers: How To Make Offers So Good People Feel Stupid Saying No"
+    by: Alex Hormozi
+    url: https://shop.acquisition.com/products/100m-offers-hardcover
+    used: "The commodity problem: when buyers see sellers as the same they pick the cheapest, how a price war eats margin, and why a distinct offer lets the buyer weigh value instead of price"

@@ -1,0 +1,54 @@
+# Workflow skeleton for $100M Offers, chapters 3 to 5 (docs/INTAKE.md). Our words; the book stays in mind-sources/ (local only).
+id: hormozi-offers-market-and-price
+source:
+  title: "$100M Offers: How To Make Offers So Good People Feel Stupid Saying No"
+  by: "Alex Hormozi"
+  url: "https://shop.acquisition.com/products/100m-offers-hardcover"
+  kind: book
+  rights: ideas-only
+  year: 2021
+minds: [alex-hormozi]
+workflow:
+  slug: pick-a-market-worth-selling-to-and-the-price-to-charge
+  name: "Pick a market worth selling to and its price"
+  summary: "Give it your offer and who might buy. Get the best narrow market and a price that fits what it is worth."
+  when: "you compete on price, or you sell to anyone who will pay and want a market that can afford more."
+  job: make-offer
+  level: intermediate
+steps:
+  - name: Check whether buyers can compare you on price
+    skill: commodity-trap-checker
+    job: analysis
+    task: make-offer
+    from: "Chapter 3, the commodity problem"
+    method: ["List what a buyer sees when they put you next to the other options", "Mark each thing the same or different", "Say what they will compare if nothing differs, which is price", "Work out what a price war costs you in margin and in the kind of customer you attract", "Name the first thing to change so the comparison breaks"]
+    inputs: [offer, competitor_set!, voc_reviews!]
+    outputs: [audit_report]
+    note: "Whether you are a commodity, what gives it away and where to break the comparison."
+  - name: Score the markets you could serve
+    skill: starving-crowd-market-scorer
+    job: strategy
+    task: make-offer
+    from: "Chapter 4, a starving crowd"
+    method: ["List the markets you could serve in health, wealth or relationships terms", "Score each on pain, money, how easy they are to reach and whether they are growing", "Apply the rule that the market matters more than the offer, which matters more than the pitch", "Reject any market that fails on growth or money", "Pick one and commit to it for a set number of offers"]
+    inputs: [question, audit_report!, persona!]
+    outputs: [shortlist]
+    note: "A scored list of markets and the one to commit to."
+  - name: Narrow the audience and price each level
+    skill: niche-price-ladder-builder
+    job: strategy
+    task: make-offer
+    from: "Chapter 4, riches are in the niches"
+    method: ["Start with the broad version of the offer and its going price", "Narrow the buyer step by step to a role, a situation and a setting", "Rewrite the promise for each step in that buyer's own terms", "Estimate what one result is worth to each narrower buyer", "Pick the narrowest level you can still reach and fill"]
+    inputs: [shortlist, offer]
+    outputs: [plan]
+    note: "The offer rewritten for narrower and narrower buyers, with a price for each."
+  - name: Set the price from the value
+    skill: pricing-decision-planner
+    job: strategy
+    task: make-offer
+    from: "Chapter 5, charge what it is worth"
+    method: ["Estimate what the result is worth to the buyer in money or time", "Set the price as a small slice of that worth, well above your cost", "Check the gap between price and value stays large", "Write what to say about the price and what to add before raising it"]
+    inputs: [offer, audit_report, plan!, performance_sheet!]
+    outputs: [offer, plan]
+    note: "A price set from the value of the narrow market, with the reason it holds."

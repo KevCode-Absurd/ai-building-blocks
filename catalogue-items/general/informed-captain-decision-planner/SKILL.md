@@ -7,6 +7,8 @@ description: Use when a big decision needs one owner and a fair hearing for the 
 
 A big decision needs one owner and honest disagreement before the call, then everyone behind it after. This skill names the owner, collects the strongest objections in writing, sets the meeting rules and the dates, and does not use a vote. It plans the process. The captain still makes the choice. For a risky choice, add "Bold bet downside checker".
 
+Use [Decision evidence bar setter](https://useaiblocks.com/skills/decision-evidence-bar-setter) instead when the argument is about whether you know enough yet, not about who decides.
+
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
 This skill runs on its own. What's below makes the result better, but none of it is required.
@@ -49,9 +51,9 @@ The decision and why now. The captain and why. Who knows most. Who disagrees, ma
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Lead the team** with the [Long-term partner screener](https://useaiblocks.com/skills/long-term-partner-screener). It takes the plan.
-- **Sell it** with the [Disagreement calming line writer](https://useaiblocks.com/skills/disagreement-calming-line-writer). It takes the plan.
+- **Lead the team** with the [Disagree-and-commit note writer](https://useaiblocks.com/skills/disagree-and-commit-note-writer). It takes the plan.
 - **Say it to the room** with the [Honest appreciation note writer](https://useaiblocks.com/skills/honest-appreciation-note-writer). It takes the plan.
+- **Sell it** with the [Disagreement calming line writer](https://useaiblocks.com/skills/disagreement-calming-line-writer). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

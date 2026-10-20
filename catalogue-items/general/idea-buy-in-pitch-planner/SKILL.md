@@ -69,7 +69,7 @@ When you've handed it back, suggest what they could do next in one short questio
 - **Say it to the room** with the [Honest appreciation note writer](https://useaiblocks.com/skills/honest-appreciation-note-writer). It takes the plan.
 - **Make video ads** with the [Ad script read-aloud editor](https://useaiblocks.com/skills/ad-script-read-aloud-editor). It takes the video ad script.
 - **Make image ads** with the [Image ad remake planner](https://useaiblocks.com/skills/image-ad-remake-planner). It takes the video ad script.
-- **Sell it** with the [Disagreement calming line writer](https://useaiblocks.com/skills/disagreement-calming-line-writer). It takes the plan.
+- **Lead the team** with the [Disagree-and-commit note writer](https://useaiblocks.com/skills/disagree-and-commit-note-writer). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

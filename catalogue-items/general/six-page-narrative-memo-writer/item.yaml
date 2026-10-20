@@ -1,0 +1,28 @@
+slug: six-page-narrative-memo-writer
+name: Six-page narrative memo writer
+summary: Paste your release and questions. Get a six-page memo in full sentences and a realistic writing schedule.
+category: general
+type: skill
+role: make
+job: copy
+level: intermediate
+inputs:
+  - type: copy_draft
+    required: true
+  - type: brief
+    required: false
+outputs:
+  - type: copy_draft
+origin: rebuilt
+version: 1.0.0
+minds:
+  - jeff-bezos
+credits:
+  - title: 2017 letter to shareholders
+    by: Jeff Bezos
+    url: https://www.aboutamazon.com/news/company-news/2017-letter-to-shareholders
+    used: Narratively structured six-page memos read in silence at the start of a meeting, the idea that a great memo takes a week or more, and the team-owned byline
+  - title: 2016 letter to shareholders
+    by: Jeff Bezos
+    url: https://www.aboutamazon.com/news/company-news/2016-letter-to-shareholders
+    used: Understanding a customer through stories and cases rather than averages

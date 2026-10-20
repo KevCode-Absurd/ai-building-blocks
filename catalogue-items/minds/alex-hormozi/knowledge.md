@@ -1,115 +1,106 @@
 # Alex Hormozi: what he knew and believed
 
-Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
+Built from public sources, last checked 2026-10-21. Claims cite the sources in mind.yaml as [S1].
 
-Alex Hormozi is alive and still publishing, so his views can change. The one piece of his own long writing we hold in full is an eight-page official sample from *$100M Offers*, the "Lost Chapter" on finding your first customer type [S11]. The rest of the book is not in our folder; the offer ideas below come from his book pages, interviews and the Acquisition.com course outline [S12]. What follows comes from his book pages (books published 2021 to 2025), his company's site, two long interviews from around 2022, a 2025 podcast summary, and outside coverage up to February 2026. Read each view as "as of" those dates. Many numbers about his businesses come from Hormozi's own company and have not been checked by an outside auditor [S9]. We say so where it matters.
+Alex Hormozi is alive and still publishing, so his views can change. We now hold two long pieces of his own writing in full: the whole of *$100M Offers* (2021) [S13] and a draft chapter on free and discount promotions that he gave out before *$100M Money Models* [S14]. The chapter does not print a year; we place it around 2025 because it calls itself the start of the series finale. Earlier we held only an eight-page sample of the book, the "Lost Chapter" [S11]. The rest of what follows comes from his book pages, interviews around 2022, a 2025 podcast summary and outside coverage up to February 2026. Read each view as "as of" those dates. Most numbers about his businesses are his own claims and have not been checked by an outsider [S9].
 
 ## In one paragraph
 
-Hormozi teaches that most businesses have two problems: not enough customers and not enough cash left at the end of the month [S2]. His answer starts with the offer. If the deal is good enough, selling gets easier, and you can charge more [S2][S5]. He breaks value into four parts and tells you to raise two and shrink two [S5]. Once the offer works, he turns to leads: how to get more people to see it, first by your own effort, then through others [S3]. His third book adds the "money model," a planned run of offers that brings in cash early and makes each customer worth more [S10]. He built these ideas running gyms, then licensing his gym system, and now runs an investment firm, Acquisition.com, with his wife Leila [S1][S6].
+Hormozi teaches that most owners have two problems: too few customers and too little cash left at month's end [S13]. A business can grow only by getting more customers, getting each to spend more, or getting each to buy more often [S13]. His answer starts with the offer, because a good offer lets you charge more and be compared with nothing [S13]. He builds it in order: pick a market with pain and money, list every problem a buyer has, solve each one, cut the list by cost and value, price it from the value, then add limits, bonuses, a guarantee and a name [S13]. His later work asks how to get people to see the offer [S3] and what to sell next [S10]. He built these ideas running gyms, then licensing his gym system, and now runs an investment firm, Acquisition.com, with his wife Leila [S1][S6].
 
 ## Core ideas
 
-### Start with the offer
+### Start with the offer, and don't be a commodity
 
-In his telling, a business grows in only three ways: more leads, higher prices, or more purchases from each customer [S2]. Of these, the offer comes first, because a weak offer makes every lead harder to close [S2]. His first book's subtitle sums up the goal: make offers so good people feel stupid saying no [S2].
+An offer is the goods, how you take payment, and the terms; it is the first thing a new customer meets [S13]. If a buyer looks at you and a rival and thinks they are the same, you have been commoditized, and the cheaper one wins [S13]. Markets then push prices down until margins only keep the lights on [S13]. His fix is an offer that cannot be compared with anything else, so the buyer chooses between you and nothing. He calls it selling in a category of one [S13]. The work you do can be identical; only the view the buyer forms changes [S13].
 
-How he applied it: he says that, using this method, his business went from losing money to earning $36 for every $1 spent, over about four years [S2]. That figure is his own claim.
+The Acquisition.com offer course follows the same order: choose a market, decide what the outcome is worth, check the value equation, build the core offer, add bonuses and a guarantee, then scarcity, urgency and a name [S12].
+
+How he applied it: he shows a services firm that swapped a retainer for a pay-for-results offer with a guarantee, and says it got 2.5 times the replies, 2.5 times the closes and a price four times higher, for 22.4 times more cash up front (his figures, rounded for illustration) [S13].
+
+### Charge what it is worth
+
+Price is not a way to get the most customers; the aim is the most money [S13]. He says lowering price is the easy way to widen the gap between value and price and is usually wrong, because you can only fall to zero but can rise without limit [S13]. Pricing by copying rivals puts you where margins have already vanished [S13]. He lays out a virtuous cycle of price: a lower price lowers the buyer's investment, perceived value and results, attracts worse buyers and starves your margin; a higher price does the reverse and pays for better service [S13]. A price that stings a little keeps buyers engaged, and those who pay most pay most attention [S13]. He warns that none of this works unless you deliver, so first earn conviction by doing the work many times [S13]. His rule is to raise price only after you have raised value, so the buyer still gets a bargain [S13]. When closing, add bonuses instead of cutting the core price [S13].
+
+How he applied it: he entered a market where rivals charged $500 a month, and a single high-price rival $5,000, by charging $16,000 for a 16-week programme; he says that was three times the top price [S13].
+
+### Pick a starving crowd
+
+Demand has to exist: you channel it, you don't create it [S13]. He looks for four things in a market: massive pain, purchasing power, ease of targeting and growth [S13]. Pain sets the price you can charge, and he teaches that the pain is the pitch, since stating a prospect's pain well makes them feel understood [S13]. Money must be real: a resume service for people without jobs fails however good it is [S13]. Reach must be easy: groups with associations, lists or channels [S13]. Growth is a tailwind; shrinking markets are a headwind [S13]. Health, wealth and relationships are the three needs that never go away; he looks for a smaller, growing group inside one [S13]. The order of importance is market, then offer, then persuasion [S13]. After picking, commit: hopping from market to market resets the learning, and he says an offer that fails means the offer is weak, not that you are [S13]. Narrower is worth more: an example in the book shows the same product priced at $19 for everyone and at about $1,000 to $2,000 for a tightly defined buyer [S13]. Under about $10 million a year he advises narrowing, not broadening [S13].
 
 ### The value equation
 
-Hormozi rates an offer on four things [S5]:
+Hormozi rates an offer on four things [S13]. Dream outcome: how much the buyer wants the result. Perceived likelihood: how sure they are they will get it. Time delay: how long until the result. Effort and sacrifice: what the buyer must do or give up. Raise the first two, cut the last two [S13]. It is written as a division because if the bottom reaches zero, the value is unlimited [S13]. Beginners work on the top, where claims are easy to copy; the strongest firms work on the bottom [S13]. Everything is about perception: a dotted-line map of train arrivals in a metro raised rider satisfaction more than faster trains, he says, so fix how it feels as well as how it works [S13]. He teaches a fast early win to keep buyers going, that fast beats free, and that done-for-you is worth more than do-it-yourself because it cuts effort and raises belief [S13]. When two products serve the same want, the dream outcome cancels out, and the other three explain the price gap [S13].
 
-1. **Dream outcome.** How much the buyer wants the result.
-2. **Perceived likelihood.** How sure the buyer is that they'll get it. Proof, testimonials and guarantees raise this.
-3. **Time delay.** How long until the result shows up. Shorter is worth more.
-4. **Effort and sacrifice.** What the buyer has to do or give up. Less is worth more.
+### Problems, solutions, delivery and the trim
 
-Raise the first two, cut the last two [S5]. He points out that most businesses only work on the first two. The last two, speed and ease, are harder for rivals to copy [S5].
+Building the offer has five steps [S13]. First write the dream outcome as a place, not a product. Then list problems in the order a buyer meets them, thinking about what happens just before and just after use, and use the four value drivers to prompt more; he counts 32 to 64 problems for a typical offer [S13]. Third, turn each problem into a how-to solution by reversing it. Fourth, list every way to deliver each solution, grouped by how many people you serve at once (one to one, small group, one to many), and varied by effort asked of the buyer, live medium, recorded format, reply speed, and two tests: what you would do for ten times the price, and how you would still win at a tenth [S13]. Fifth, trim and stack: cut high cost with low value, then low cost with low value, keep the rest, prefer one-to-many assets you build once, and bundle what remains under benefit names with a stated value [S13]. He insists on solving every problem, because a single unsolved one can lose the sale, and his story of making an eating-out guide to close one buyer turned into a standing asset [S13]. He also says to start by over-delivering to get demand, then use cash flow to make it efficient: create flow, monetize flow, then add friction [S13].
 
-How he applied it: his book pairs the equation with tools for cutting delivery cost while adding value, and for choosing the cheapest way to deliver the same result [S2].
+### Scarcity, urgency and bonuses
 
-### Charge more, and deserve it
+All of marketing moves the supply and demand curve: raise demand, cut perceived supply [S13]. Desire comes from not having something, so selling a little fewer than you could keeps people hungry; the longer you delay the ask, the bigger the ask you can make [S13]. Scarcity is a limit on quantity: a cap on total clients, new clients per week, cohort size, a limited batch, or limited bonuses; always sell out and announce it [S13]. He says the most honest form is to say how full you are [S13]. Urgency is a limit on time: cohort start dates, promotion end dates renamed by season, deadlines on a price or bonus, and offers that expire; his rule is that the dates must be real [S13]. He says the last hours of a launch can bring up to half or more of sales [S13]. Bonuses stack value instead of cutting price: each answers a specific doubt, has a benefit name, a purpose, proof and a price tag, and tools and checklists beat extra training; bonuses can come from other businesses in exchange for exposure to your buyers [S13]. In a one-to-one sale, ask first, then reveal bonuses after a yes, or bring the bonus that matches the doubt if they hesitate [S13].
 
-He argues that racing to the lowest price is a trap. When buyers can't tell sellers apart, they pick the cheapest, and everyone's margins shrink [S5]. His way out is to be different enough that a buyer stops comparing, then add value until the higher price makes sense [S5]. A higher price also lets you spend more on delivering results, and buyers who pay more tend to be more committed [S5].
+### Guarantees and names
 
-How he applied it: he describes a company in his portfolio that raised prices by 50% and tripled its profit within three months [S5]. The book frames this as becoming a "category of one," serving a smaller market for more money, and a "virtuous cycle of price" [S2].
+Risk is the main objection, so reversing it is the fastest way to lift conversion [S13]. He sorts guarantees into four kinds: unconditional, conditional, all sales final with a reason, and pay-on-performance [S13]. Each has the form: if you don't get X in Y time, we do Z [S13]. He does the refund sum rather than fear it: if sales rise by 30 percent and refunds double from 5 to 10 percent, net sales still rise about 23 percent [S13]. Conditions tied to what makes buyers succeed keep refunds down and screen out people who only buy for the guarantee [S13]. A guarantee cannot rescue a weak product or sales team [S13]. Naming is the last layer: reason why, avatar, goal, time interval and container word, which he abbreviates MAGIC, using three to five of the five parts [S13]. Offers tire, so he renames the wrapper without changing the core. The order of change is images, then body copy, then headline, then duration, then the free or discount piece, and only last the structure [S13].
 
-### Find your best customers first (the lost chapter)
+### Find your best customers
 
-In this sample chapter he starts with a story from 2019. A speaker who had worked at a large software investment firm explained how that firm judged a company: score each customer by how long they stay and how much they pay, then buy the company if there is a vein of valuable customers it under-serves [S11]. After buying, the firm cut the channels that brought low-value customers and doubled down on those that brought the best ones [S11]. Hormozi called it the 80/20 rule "on steroids" and made it part of his firm's method for speeding up value [S11].
+In the Lost Chapter he describes copying a software investor's method of scoring customers by how long they stay and how much they pay [S11]. His four steps: survey customers; sort and keep the top 20 percent; find the three to five things they share; act by speaking only to that customer and rebuilding the way they bought [S11]. At Gym Launch the best customers shared a lease, an employee, a revenue floor and a client count, and most had consumed at least two long pieces of content before buying [S11]. These are his figures.
 
-His four steps: (1) survey customers on who they are, their numbers before and now, what they wanted, and how they bought (the trigger, what they read or watched, who referred them); (2) sort by who you like most, who spent most and who stayed longest, and keep the top 20% only; (3) read the answers and find the fewest things the best customers share, usually three to five; (4) act, by speaking to that customer in your ads and turning others away, and by rebuilding the buying path your best customers took [S11].
+### Free and discount first steps, leads and the money model
 
-How he applied it: at Gym Launch the best customers shared a lease, at least one employee, a monthly revenue floor and a minimum client count [S11]. About 78% of top customers had consumed at least two long pieces of content before buying, so every lead then got two such pieces, and sales staff hand-picked two or three more [S11]. He says he looked at a rival serving the same gym owners with the same sales count and found it earned 70 times less profit, because it took anyone with a card [S11]. These are his own figures.
-
-### Pick the right market
-
-An offer only works in a market that wants it. He looks for buyers with a painful problem, money to spend, and a market that is growing rather than shrinking [S5]. He calls the best case a "starving crowd": people hungry for what you sell [S5].
-
-### Make the offer hard to refuse
-
-Once the core is right, he adds layers: scarcity, urgency, bonuses, guarantees and a clear name [S2]. Guarantees matter most to him because they move risk from the buyer to the seller, which raises the buyer's belief that they'll get the result [S5]. His book lists several types of guarantee with examples, plus a formula for naming offers [S2]. The Acquisition.com offer course lays the order out as: choose a market, decide what the outcome is worth, check the value equation, build the core offer, add bonuses and a guarantee, then scarcity, urgency and a name [S12]. The same outline says price affects how many customers you get, how much each buys, and how often they return [S12]. A later reviewer noted that his own sales pages avoid fake countdown timers and made-up scarcity [S9].
-
-### Leads: people who know you and people who don't
-
-His second book assumes you already have a good offer and asks who will buy it [S3]. He splits possible buyers into people who already know you and people who don't. Then he combines that with two ways of reaching them: one person at a time, or many at once [S3]. That gives four basic ways to get leads: reach out to people you know, post free content for people who know you, reach out to strangers, and pay for ads to reach strangers [S3].
-
-How he applied it: the book gives a three-part model for content (hook, retain, reward), a six-part framework for ads, and a one-page advertising plan [S3]. He credits direct referrals with about 30% of his sales and shows seven ways to ask for them [S3].
-
-### Leverage: get others to bring leads
-
-After you can get leads yourself, the next step is getting other people to do it: customers who refer, affiliates, partner businesses and staff [S3]. In interviews he put it as a rule: output equals how much you do times the leverage behind it. Leverage beats working longer hours [S5]. He also says the jump from very good to elite, built by doing many reps, pays far more than people expect [S5].
-
-How he applied it: early on he moved from running gyms himself to licensing his gym model to other owners. He says this let him grow faster than opening more locations [S6].
-
-### The money model
-
-His third book, out in August 2025, is about what you sell and in what order [S7][S10]. A money model is a planned series of offers built to bring in cash up front and raise how much each customer is worth over time, while keeping the cost of getting customers low [S10]. Summaries of his podcast name four kinds of offer in the series: attraction offers, upsells, downsells and continuity offers [S10]. His point is that many businesses spend to get a customer without collecting enough cash early to cover it, which strains them. A better model lets you outspend rivals on ads [S10].
-
-How he applied it: he describes his gyms, where the cost of getting a member was high until he added upsells and other offers that changed the numbers [S10].
+In the draft chapter he says that in a new market he starts with a free or heavily discounted offer, because he lacks proof, wants testimonials, needs conviction to close the first sales, and finds referrals come easily [S14]. He compares three ways to open: premium (simple, qualified buyers, costly and slow), free (most leads, cheapest leads, too many leads to handle) and discount of 50 percent or more on a piece, not the core (cash up front, buyers expect to pay, fewer no-shows, a card on file for a two-step sale) [S14]. He reports four split tests of free against premium in ten markets each, with the same close rate and lead cost down by five times or more (his claim) [S14]. Friction raises lead quality and cuts volume: qualifiers, heavier questions, extra steps, forced viewing and longer ads [S14]. He compares campaigns by qualified leads per dollar [S14]. His second book gives four ways to get leads: reach out to people who know you, post for them, reach out to strangers, and pay for ads [S3]. His third book adds the money model, a planned run of attraction offers, upsells, downsells and continuity offers [S10].
 
 ## How he decides
 
-- Fix the offer before you spend on leads [S2][S3].
-- Judge any change by the four parts of value. Which one does it move? [S5]
-- Know which customers are worth most before you spend on more leads. Survey, sort, find what the top 20% share [S11].
+- Fix the offer before you spend on leads [S13][S3].
+- Pick a market first. A great market beats a great offer, which beats great persuasion [S13].
+- Judge any change by the four parts of value. Which one does it move? [S13]
+- If buyers compare you on price, change the offer until they can't [S13].
+- Solve every problem a buyer believes they have, even the awkward one [S13].
+- Price from the worth of the result, not from rivals [S13].
+- Use honest limits and real dates. He rejects fake counters [S13].
+- Do the sums before you fear a refund policy or a free offer [S13][S14].
 - Quality over quantity: more leads from looser qualifying costs more than it earns [S11].
-- If buyers compare you on price, change the offer until they can't [S5].
-- Choose markets with pain, money and growth [S5].
-- Do the boring basics in volume. He built his sales skill by running a very high number of one-on-one sales talks [S6].
-- Learn from people who have already done it. He sought out experts early in his career [S6].
-- It's fine to leave money on the table to get a better deal done [S6].
-- Give up a good option to take a great one [S6].
-- Cut commitments down to a few priorities. He says a focus coach helped him do this [S6].
+- In a new market, start free or discounted, get proof, then raise the price [S14].
+- Do the boring basics in volume and learn from people who have done it [S6].
 
 ## Real decisions
 
-### Copying an investor's customer scoring
-In 2019, at a table of software owners, he heard how a large software investor scored customers by tenure and spend and then cut the channels that brought poor ones [S11]. His reaction was to wonder how to apply it across his own portfolio, and it became a pillar of his firm's method [S11].
+### Turning a 21-day fly-in into a teaching programme
+When gym owners asked for help, he flew to each gym for 21 days, paid for his own travel and ads, worked the leads, sold for them, and kept the up-front cash. The owner risked only a refundable $500 deposit [S13]. He says he could sell about $100,000 a month this way, and grew to a team of eight [S13]. The travel wore on him, so he taught owners to do it themselves. His reason: he could charge about a third as much but help hundreds of gyms a month, from his own bed [S13]. The promise stayed the same (fill your gym in 30 days). The how and the what changed [S13]. He says he later sold the programme to more than 4,000 gyms [S13].
 
-### Surveying Gym Launch customers and narrowing the avatar
-He and his team surveyed customers, sorted for the top spenders, listed what they shared, and then rewrote ads and pages to state the requirements plainly, talking only to the best customers' problems [S11]. His reasoning: you repel the bad customers and attract the good ones [S11].
+### Pricing at three times the top rival
+He entered a market where low-price rivals charged $500 a month and one high-price rival $5,000 [S13]. He priced a 16-week done-with-you programme at $16,000 and then sold 35 percent of buyers a three-year, $42,000-a-year agreement [S13]. His stated reason: he wanted to be the premium leader and create allure, and he had conviction because a survey of 158 gyms showed gains after 11 months [S13]. These figures are his own.
 
-### Putting two long pieces of content in every buyer journey
-After finding that most top customers had read or watched at least two long pieces before buying, he injected two into each lead's path and raised overall content output [S11]. He says they were real value-in-advance, not disguised sales pitches [S11].
+### Solving the one objection
+A sale he badly needed was slipping because a prospect ate out every day, and his programme forbade eating out [S13]. He offered an eating-out guide on the spot and closed. He then built the guide and similar templates for every objection, and says later buyers had no single objection left [S13].
 
-### Refusing to cut qualification steps for volume
-Rivals copied the journey but panicked and cut steps for more leads. He says each time his team removed a qualification step, lead volume rose and money fell [S11]. He then merged marketing and sales into one acquisition department so neither could blame the other [S11].
+### Turning down $50,000 for a day
+After he spoke at an event, two people each offered him $50,000 for a day of his time. He declined, because his business was making more than that in profit each day and he did not want the distraction [S13]. He says it taught him that the person who needs the deal less holds the upper hand, a principle he calls one of his best pricing and negotiating rules [S13]. Years later he took equity in firms instead of charging day rates [S13].
+
+### Starting a new market with a free offer
+After a 2016 conference talk, over 100 gym-adjacent owners asked for help [S14]. He had never sold a course. His first offer was to fly out, spend his own money on marketing, work and close the leads, keep the cash, and show them how to sell and fulfil, all free [S14]. He did it for 33 gyms in 18 months, calls it his first million outside his own gyms, and says free made it easy to sell [S14].
+
+### Moving to free fronts after split tests
+He and his team ran four split tests of free against non-free front-end offers, each in ten markets [S14]. His account: close rates and ticket size were the same, but lead cost fell by five times or more with free [S14]. He then taught free fronts with friction added to protect lead quality [S14].
 
 ### Paying more to acquire a better customer
 His stated rule: he would rather pay $5,000 to acquire $45,000 than pay $1,000 to acquire $5,000, though the first costs five times as much [S11]. The context was a lifetime value of $45,000 and up for his customers, against about $6,000 to $8,000 at a typical rival [S11]. Those are his claims.
 
-### Walking through a possible stake in a rival
-He once considered buying a stake in a business-services company in his own market. He spent a morning on the owner's numbers and found equal sales but far lower profit [S11].
+### Refusing to cut qualification steps for volume
+Rivals copied the journey but panicked and cut steps for more leads. He says each time his team removed a qualification step, lead volume rose and money fell [S11]. He then merged marketing and sales into one acquisition department so neither could blame the other [S11].
 
 ## Where he stood
 
-**Is it better to be cheap?** No. Competing on price is a downward spiral. Deliver more and charge more [S5].
+**Is it better to be cheap?** No. Competing on price is a downward spiral. Deliver more and charge more [S13][S5].
 
-**What should a new business fix first?** The offer, then the leads. His books come in that order on purpose [S2][S3].
+**What should a new business fix first?** The market, then the offer, then the leads [S13][S3].
 
-**How do you grow without a big ad budget?** Start with people who know you and free content, then add paid ads and other people's help as you can afford it [S3].
+**Is free a trap?** Not if you do the sums and add friction. He calls free the most powerful offer and says that if he had one offer to make, it would be free [S14].
+
+**Should you discount the core?** No. Add bonuses, or discount a small piece [S13][S14].
 
 **Is patience worth it?** He talks about measuring success over long time spans and says you only need to be right once [S6].
 
@@ -123,12 +114,12 @@ He once considered buying a stake in a business-services company in his own mark
 - Gym Launch and Prestige Labs were sold to a private equity buyer for $46.2 million in 2021. A software company he co-founded, ALAN, was bought in an all-stock deal the same year [S1].
 - Co-founded Acquisition.com with Leila Hormozi. It takes stakes in established businesses and offers education, much of it free [S1][S6][S8].
 - The company says its portfolio earns more than $250 million a year [S1]. This is self-reported [S9].
-- Published *$100M Offers*, *$100M Leads* (2023) and *$100M Money Models* (2025) [S2][S3][S4]. Sales claims differ by page: the shop pages say over 800,000 copies for each of the first two, and the home page says over a million [S1][S2][S3].
+- Published *$100M Offers* (2021), *$100M Leads* (2023) and *$100M Money Models* (2025) [S13][S3][S4]. Sales claims differ by page: the shop pages say over 800,000 copies for each of the first two, and the home page says over a million [S1][S2][S3].
 - *$100M Money Models* set the Guinness World Record for fastest-selling non-fiction book: 2,917,443 units in a single-day launch in Las Vegas in August 2025 [S7].
 
 ## Where he was wrong or criticised
 
-- **Big numbers, self-reported.** His portfolio revenue and many results are his own figures and are not audited [S9]. His company also states that its results are not typical and that it does not track typical student results [S1].
+- **Big numbers, self-reported.** His portfolio revenue and many results are his own figures and are not audited [S9]. The book itself says its numbers are theoretical and for illustration [S13]. His company also states that its results are not typical [S1].
 - **How the record was counted.** The record launch sold a bundle of about $6,000 that included 200 books, and the count included every printed copy in those bundles. So the total reflects copies sent out, not individual buyers [S8].
 - **Too neat.** One reviewer argues his frameworks make building a business look more like a formula than it is, and play down luck, timing and uncertainty [S9].
 - **Not for day one.** The same reviewer says his advice helps people who already have a product and customers more than people starting from nothing [S9].
@@ -140,14 +131,15 @@ The same reviewer also praised his free material as valuable and his track recor
 
 - He thinks in offers and cash. Brand, taste and long-term trust get less space. Pair him with someone like David Ogilvy or Jeff Bezos.
 - His examples lean on service businesses and gyms. Check how the advice fits a product with long sales cycles or strict rules.
-- Scarcity and urgency can tip into pressure if used carelessly. He warns against fake versions, and a council should too [S9].
+- Scarcity and urgency can tip into pressure if used carelessly. He says to keep them real, and a council should too [S13][S9].
+- Guarantees and free offers can fail where claims are regulated or margins are thin. He does not cover local law, so check it.
 - Big claims need checking. Ask for the numbers behind a result before you copy it.
 - The leads model assumes you can do a high volume of outreach. That costs time many people don't have.
 
 ## Short phrases on the record
 
-- "Make Offers So Good People Feel Stupid Saying No" (subtitle of *$100M Offers*) [S2]
-- "Everyone wants a bargain, but it doesn't mean cheap." (interview, around 2022) [S5]
-- "it's okay to leave money on the table" (interview) [S6]
-- "you only need to be right once" (interview) [S6]
-- "More of the high profit customers. Fewer low profit customers." (Lost Chapter) [S11]
+- "Make Offers So Good People Feel Stupid Saying No" (subtitle of *$100M Offers*) [S2][S13]
+- "The pain is the pitch." (his saying for sales teams) [S13]
+- "Create flow. Monetize flow. Then add friction." (his mantra for building a business) [S13]
+- "The longer the runway, the bigger the plane that can take off." (on delaying the ask) [S13]
+- "The only thing that beats “free” is “fast.”" (on speed) [S13]

@@ -1,0 +1,26 @@
+slug: decision-evidence-bar-setter
+name: Decision evidence bar setter
+summary: Paste a decision and what you know. Get how much evidence is enough, what to get next and a date to decide.
+category: general
+type: skill
+role: make
+job: strategy
+level: intermediate
+inputs:
+  - type: plan
+    required: true
+outputs:
+  - type: plan
+origin: rebuilt
+version: 1.0.0
+minds:
+  - jeff-bezos
+credits:
+  - title: 2016 letter to shareholders
+    by: Jeff Bezos
+    url: https://www.aboutamazon.com/news/company-news/2016-letter-to-shareholders
+    used: Deciding with about seventy percent of the information you wish you had, the cost of being slow and the value of correcting bad calls quickly
+  - title: 2015 letter to shareholders
+    by: Jeff Bezos
+    url: https://www.sec.gov/Archives/edgar/data/1018724/000119312516530910/d168744dex991.htm
+    used: One-way and two-way doors as the reason the evidence bar should differ

@@ -7,6 +7,8 @@ description: Use when a choice is stuck, too slow or too quick. Asks what would 
 
 Not every decision needs the same care. Some can be tried and undone cheaply. Others cannot. Teams that treat them all alike go too slow on the first kind and too fast on the second. This skill sorts a choice by how easily it can be reversed, matches the process to that, and writes the call down so people can commit. It works for any business, team or personal choice.
 
+Use [Decision evidence bar setter](https://useaiblocks.com/skills/decision-evidence-bar-setter) instead when the team keeps asking for more data and you need to know how much evidence is enough and when to decide.
+
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
 This skill runs on its own. What's below makes the result better, but none of it is required.

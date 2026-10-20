@@ -1,0 +1,119 @@
+new_slug: expert-and-newcomer-test-planner
+name: "Expert and newcomer test planner"
+summary: "Paste your draft. Get who to try it on, the questions to ask each, and a pass line for both."
+job: write-and-tell-stories
+thinking: low
+thinking_why: "It follows a fixed test design with little judgement."
+
+headline: "A simple test for whether experts and newcomers both enjoy your draft"
+subhead: "Paste a draft and say who the two groups are. It picks who to try it on, writes the same few questions for each, lists what to watch for without asking, and sets a pass line for each group before you start. You get a one-page test you can run this week."
+
+explain: |
+  Asking a friend "what did you think?" gets you kind words from someone who wants you to feel good. A better test uses two kinds of people, asks them to do something before they give an opinion, and decides what counts as a pass before the answers arrive.
+
+  This skill designs that test. It picks one expert and one newcomer (more if you can), tells you to keep them apart, and gives each the same setup with no explanation first. It lists what to watch without asking: where they lean in, laugh, look away or reread. The questions come straight after, before any discussion. The newcomer is asked to say the point in a sentence and to name what they remember. The expert is asked what they noticed that most people would miss and what felt borrowed. The pass lines are fixed first, so you cannot move them to suit the result.
+
+when:
+  - "You have a draft for a mixed audience and want proof it works for both groups."
+  - "Feedback from friends has been warm and useless."
+  - "You can show the piece to a few people this week and want to get the most from it."
+
+you_give:
+  - "The draft"
+  - "Who counts as an expert and who counts as a newcomer for this piece"
+  - "Where and how it will be seen: read, heard or watched"
+  - "The main idea and the promise to each group, if you have them (optional)"
+you_get:
+  - "Who to pick and how to keep the two groups apart"
+  - "A setup script with nothing explained in advance"
+  - "A watch list of what to note without asking"
+  - "Questions for each group, and a pass line for each"
+  - "A record sheet to fill in"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Paste the draft and say who the two groups are and how the piece will be shown."
+  - "Run the test with one expert and one newcomer, each alone. Fill in the record sheet."
+  - "Paste your notes into the Reader feedback sorter."
+
+how_it_works:
+  - title: "Picks the people"
+    text: "One expert and one newcomer at least, who are not close friends, seen alone and in the same way."
+  - title: "Writes the setup"
+    text: "How to show the piece with no preface, one pass only."
+  - title: "Lists what to watch"
+    text: "Where they lean in, laugh, drift, reread or ask a question."
+  - title: "Writes the questions"
+    text: "The same short set for each group, asked straight after and before any talk."
+  - title: "Sets the pass lines"
+    text: "What counts as a pass for each group, written before the test."
+  - title: "Gives a record sheet"
+    text: "One page per person so the notes can be sorted later."
+  - title: "Checks the test"
+    text: "Runs its own checks and names any it missed."
+
+output_shape: |
+  WHO TO PICK
+  Expert: <what makes them one, what to avoid>
+  Newcomer: <what makes them one, what to avoid>
+
+  SETUP
+  <how to show the piece, with no preface>
+
+  WATCH LIST
+  <what to note without asking, with a time or place>
+
+  QUESTIONS FOR THE NEWCOMER
+  1. <...>
+
+  QUESTIONS FOR THE EXPERT
+  1. <...>
+
+  PASS LINES
+  Newcomer passes if: <...>
+  Expert passes if: <...>
+
+  RECORD SHEET
+  <fields for each person>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: "How many people"
+    how: "Two is the minimum. Four (two of each) is better and lets a pass mean three of four."
+  - what: "Format"
+    how: "Say if the piece is read silently, heard or watched. The watch list changes."
+  - what: "Remote testing"
+    how: "If you cannot be in the room, it swaps watching for a short recorded call."
+
+judge:
+  - "The expert and the newcomer are tested separately."
+  - "Nothing about the piece is explained before it is shown."
+  - "Each pass line is a clear yes or no."
+  - "The questions are about what they did and remember, not whether they liked it."
+
+test:
+  - "Run it with two people and see if the pass lines were easy to score."
+  - "Check that the newcomer's one-sentence answer could be compared with your main idea."
+  - "Run the same test on the next draft. The pass lines should stay fixed so you can compare."
+
+improve:
+  - "Keep the record sheets and compare drafts."
+  - "Add one question for anything you are afraid to ask."
+  - "After the test, send the notes to the Reader feedback sorter for a ranked rewrite list."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "This is reading, sorting and writing, which any strong chat AI does well with this skill."}
+    - {name: "A voice recorder", why: "With permission, a recording of their answers is easier to quote than your own notes."}
+  inputs:
+    - "A draft from the Overstuffed draft cutter"
+    - "The brief with the promise to each group"
+    - "Two or four willing people who are not close friends"
+
+terms:
+  - term: "Pass line"
+    meaning: "A fixed result, written before the test, that decides pass or fail."
+  - term: "Watch list"
+    meaning: "Things you note about what a person does, without asking them."

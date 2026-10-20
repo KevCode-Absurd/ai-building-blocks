@@ -61,8 +61,8 @@ When you've handed it back, suggest what they could do next in one short questio
 - **Check it before it goes live** with the [Anti-AI-slop copy editor](https://useaiblocks.com/skills/anti-ai-slop-copy-editor). It takes the draft.
 - **Write the ad copy** with the [Sales copy editor](https://useaiblocks.com/skills/sales-copy-editor). It takes the draft.
 - **Read your ad results** with the [Recall and pull survey planner](https://useaiblocks.com/skills/recall-and-pull-survey-planner). It takes the draft.
+- **Understand your buyers** with the [Hard questions FAQ writer](https://useaiblocks.com/skills/hard-questions-faq-writer). It takes the draft.
 - **Grow on social** with the [Shareable content checker](https://useaiblocks.com/skills/shareable-content-checker). It takes the draft.
-- **Plan what to test** with the [Split-run test planner](https://useaiblocks.com/skills/split-run-test-planner). It takes the draft.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

@@ -1,0 +1,78 @@
+new_slug: make-your-offer-harder-to-refuse
+name: Make your offer harder to refuse
+summary: Give it your offer. Get honest limits and deadlines, bonuses, a guarantee and a name, ready to use.
+job: make-offer
+thinking: high
+thinking_why: It runs four skills in a row, and the guarantee step does refund sums. Give it your strongest model.
+headline: Make your offer harder to refuse
+subhead: Give it an offer that is sound but not selling fast enough. It sets real limits and dates, builds bonuses that each answer a buyer doubt, designs a guarantee you can afford with the refund sums, and gives the offer a name to test.
+explain: |
+  A sound offer can still sit unsold. Buyers wait because nothing says why now. They doubt because nothing takes the risk off them. They skim past because the name says nothing. The usual reaction is to cut the price, which teaches buyers to wait for deals and cuts your margin.
+
+  The steps add what is missing without touching the price. First it sets honest limits and dates from what you can really handle. Then it builds bonuses that each answer one doubt. It designs a guarantee that moves the risk to you, with the refund sums on your numbers. Last it names the offer with five parts and gives a plan for renaming it when it tires. The order follows Alex Hormozi's $100M Offers.
+when:
+  - Your offer is sound but buyers wait, doubt it or ignore it.
+  - You are tempted to cut the price to close.
+  - You want urgency and a guarantee without fake timers or a refund disaster.
+you_give:
+  - Your offer, price and how it is delivered
+  - How many buyers you can serve well at once
+  - Your cost to deliver per buyer
+  - The doubts you hear from buyers (optional)
+  - Sales and refund numbers (optional)
+you_get:
+  - A real cap and a real date, with the lines for your page, ads, email and calls
+  - Five to eight bonuses, each named, valued and matched to a doubt
+  - A guarantee in an if-then form, with refund sums and three names
+  - Ten offer names to choose from, three to test and a plan for renaming it
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Tell it how many buyers you can serve well. It will not write a limit you cannot keep.
+  - List the objections you hear in sales calls. Each becomes a bonus.
+  - Check the refund sums before you publish the guarantee.
+how_it_works:
+  - title: Add honest limits and deadlines
+    text: Sets a cap from your real capacity and a date you will keep, keeps supply a little under demand and writes the lines for each channel.
+  - title: Build the bonus stack
+    text: Matches one bonus to each doubt, names it with a benefit, gives proof and a value, and sets the order to reveal them.
+  - title: Design the guarantee
+    text: Picks a guarantee type that fits your costs, writes it with an if and an or what, and runs the refund sums.
+  - title: Name the offer
+    text: Builds names from five parts, picks three to test and gives the order to change things when the offer tires.
+output_shape: |-
+  STEP 1: LIMITS AND DEADLINES
+    Capacity and sum | scarcity rule | urgency rule | lines per channel | honesty check
+
+  STEP 2: BONUSES
+    Doubts | each bonus with name, proof and value | totals | reveal order
+
+  STEP 3: GUARANTEE
+    Buyer fears | the guarantee | refund sums | three names | rules note
+
+  STEP 4: NAMES
+    Ten names with parts marked | three to test | refresh order
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: How you deliver
+    how: A class or cohort suits fixed dates. An ongoing service suits a weekly cap. Say which, so step 1 picks the right type.
+  - what: Your cost to deliver
+    how: Step 3 includes it in the refund sums. Without it the sums use a stated assumption.
+  - what: Rules on ads and claims
+    how: Tell it your platform or field, so names and guarantees avoid restricted claims.
+judge:
+  - Every cap and date is one you can keep, and no timer or count is fake.
+  - Every bonus answers one named doubt and has a value with a basis.
+  - The guarantee has an if, a time and an or what, and the sums include delivery cost on refunds.
+  - Names use three to five parts and can be said in one breath.
+  - No step discounts the core offer.
+test:
+  - Check every number and date in the lines against your calendar and list.
+  - Take three real objections from your calls. Each should be answered by a bonus.
+  - Redo the refund sums by hand. Net money before and after should match.
+improve:
+  - Record every workshop and call. Keep them in a vault of reusable bonuses.
+  - Cut the cap a little next round if you did not sell out.
+  - Test a new name against the winning one, one at a time.

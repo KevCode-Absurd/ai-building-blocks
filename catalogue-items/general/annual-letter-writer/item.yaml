@@ -1,0 +1,32 @@
+slug: annual-letter-writer
+name: Annual letter writer
+summary: Paste your principles, metrics and results. Get a plain letter to your team or owners with the year's honest numbers.
+category: general
+type: skill
+role: make
+job: copy
+level: advanced
+inputs:
+  - type: copy_draft
+    required: true
+  - type: plan
+    required: false
+  - type: audit_report
+    required: false
+outputs:
+  - type: copy_draft
+origin: rebuilt
+version: 1.0.0
+minds:
+  - jeff-bezos
+credits:
+  - title: Letters to shareholders, 1997 to 2020
+    by: Jeff Bezos
+    used: "The shape of the annual letter: results first, the long-term list of promises, honest accounts of mistakes, reasoning shared, thanks and a line that ties back to the first letter"
+  - title: 2000 letter to shareholders
+    by: Jeff Bezos
+    used: Opening with the bad news in plain words and then listing the real progress
+  - title: 2016 letter to shareholders
+    by: Jeff Bezos
+    url: https://www.aboutamazon.com/news/company-news/2016-letter-to-shareholders
+    used: Closing a teaching letter with direct questions for the reader to ask of their own work

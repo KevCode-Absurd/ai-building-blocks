@@ -1,0 +1,24 @@
+slug: paid-first-step-planner
+name: Paid first step planner
+summary: Paste your offer and lead plan. Get a cheap first piece, a booked second meeting and the upsell to your main offer.
+category: general
+type: skill
+role: make
+job: strategy
+level: intermediate
+inputs:
+  - type: plan
+    required: true
+  - type: offer
+    required: true
+outputs:
+  - type: offer
+uses: []
+origin: rebuilt
+version: 1.0.0
+minds:
+  - alex-hormozi
+credits:
+  - title: "The New Secret Chapter: How to Make Money (draft chapter, Section A: Attract)"
+    by: Alex Hormozi
+    used: The deep discount on one piece of the offer, the two-step sale with a card taken up front and a second meeting booked, charging a fee for no-shows, and treating discount buyers as qualified leads

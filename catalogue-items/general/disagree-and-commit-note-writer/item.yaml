@@ -1,0 +1,22 @@
+slug: disagree-and-commit-note-writer
+name: Disagree-and-commit note writer
+summary: Paste a decision and who disagrees. Get the dissent on record, who decides and a note that commits the team.
+category: general
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: plan
+    required: true
+outputs:
+  - type: copy_draft
+origin: rebuilt
+version: 1.0.0
+minds:
+  - jeff-bezos
+credits:
+  - title: 2016 letter to shareholders
+    by: Jeff Bezos
+    url: https://www.aboutamazon.com/news/company-news/2016-letter-to-shareholders
+    used: Saying "disagree and commit" to save time, applying it to the boss too, and escalating true misalignment instead of letting stamina decide

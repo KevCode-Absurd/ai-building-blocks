@@ -1,0 +1,101 @@
+new_slug: hard-questions-faq-writer
+name: Hard questions FAQ writer
+summary: Paste your press release. Get the hard questions customers and your team will ask, answered and graded.
+job: understand-customers
+thinking: high
+thinking_why: It has to think of the questions people would ask and judge which answers are weak.
+headline: Hard questions FAQ writer
+subhead: Paste your press release. It lists the questions a sceptical customer would ask, then the ones your team, finance and support would ask, answers each in plain words and marks every answer as known, a guess or a gap. You get an FAQ and a ranked gap list.
+explain: |
+  A good release can hide weak thinking. The questions are where the weak spots show. A customer asks about price, trust and what happens if it fails. Your own team asks about cost, delivery and who does the work. Writing the answers before you build means the gaps cost an hour, not a quarter.
+
+  This skill asks each set of questions in turn. It answers each in two or three sentences and marks the answer: known, a guess or a gap. It ranks the gaps by how much they could change the plan, and rewrites any release claim the answers expose as weak.
+when:
+  - You have a press release and want to find what it hides.
+  - Your team keeps raising worries one at a time and you want them all on one page.
+  - You want to know which gaps could change the plan before you build.
+you_give:
+  - Your press release or one-page description
+  - The need statement (optional)
+  - Facts you already have on cost, timing and delivery (optional)
+you_get:
+  - Customer questions with answers
+  - Team questions with answers
+  - Each answer marked known, guess or gap
+  - The gaps ranked by how much they could change the plan
+  - A release with weak claims fixed
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your press release.
+  - Add facts on cost, timing and delivery if you have them.
+  - Read the gap list first. Pick the one that could change the plan most.
+  - Take the FAQ and release to "Six-page narrative memo writer".
+how_it_works:
+  - title: Asks as a sceptical customer
+    text: Questions on price, trust, switching and what happens if it fails.
+  - title: Asks as your own team
+    text: Questions on cost, delivery, support, risk and who does the work.
+  - title: Answers briefly
+    text: Two or three plain sentences for each question.
+  - title: Grades each answer
+    text: Known, guess or gap.
+  - title: Ranks the gaps
+    text: By how much each could change the plan.
+  - title: Fixes the release
+    text: Rewrites any claim the answers show to be weak.
+output_shape: |
+  CUSTOMER QUESTIONS
+  <n>. Q: <question>  A: <answer>  [known / guess / gap]
+
+  TEAM QUESTIONS
+  <n>. Q: <question>  A: <answer>  [known / guess / gap]
+
+  GAPS, RANKED
+  1. <gap> | Could change: <what>
+  2. ...
+
+  RELEASE CHANGES
+  <claim | change>
+
+  MISSING
+  <facts that would close the gaps>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+tweaks:
+  - what: Who asks
+    how: "Name the real people: your finance lead, your support team, your best customer. The questions get sharper."
+  - what: Facts on cost and delivery
+    how: Real numbers turn guesses into known answers.
+  - what: How many questions
+    how: Ask for 8 to 12 per group. More hides the gaps that matter.
+  - what: Your biggest fear
+    how: Name it. It goes to the top of the list.
+judge:
+  - Some customer questions are uncomfortable, such as price or trust.
+  - Answers are two or three sentences, not essays.
+  - At least one answer is marked gap, or the skill says why none were found.
+  - Gaps are ranked by what they could change, not by length.
+  - At least one release claim changed.
+test:
+  - Give the FAQ to someone who fits the customer. Ask what they would still want to know.
+  - Hold back a hard question you worry about. See if the skill finds it.
+  - Run it twice. The top gaps should stay close.
+  - Compare gaps to what your team already worries about.
+improve:
+  - Add the questions customers asked you in past launches.
+  - Add your team's usual objections to the skill file.
+  - Keep the gap list in your project notes and tick them off as you learn.
+  - Pair it with "Six-page narrative memo writer" for the next step.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: Listing questions and grading answers is text work any strong chat AI does well with this skill.
+  inputs:
+    - Real questions from customers or sales calls
+    - Cost and delivery figures
+    - Support ticket themes
+    - Notes from your last launch
+terms:
+  - term: FAQ
+    meaning: A list of frequently asked questions with short answers. Here it is written before launch.

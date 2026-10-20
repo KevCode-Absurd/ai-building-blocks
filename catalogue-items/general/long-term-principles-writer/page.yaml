@@ -1,0 +1,106 @@
+new_slug: long-term-principles-writer
+name: Long-term principles writer
+summary: Describe your business and its hard trade-offs. Get a short list of plain promises on how you will choose.
+job: plan-strategy
+thinking: medium
+thinking_why: It turns your trade-offs into promises and tests each, but the format is fixed.
+headline: Long-term principles writer
+subhead: Describe your business, who you answer to and the choices where the short and long term pull apart. It turns each into one plain promise that names its cost, covers seven areas and drops any promise you would break in a bad year. You get a list of eight promises or fewer.
+explain: |
+  A team that has not said how it will choose will decide each hard case from scratch, under pressure, and usually in favour of this quarter. A short list of promises, written in advance, tells your team and your owners what to expect and gives you something to be held to.
+
+  This skill finds the forks where short and long pull apart. It writes a promise for each, and every promise must name its cost: if keeping it costs nothing, it is a slogan. It covers customers, time horizon, how you measure, failure and bold bets, cash and cost, people, and how you will explain your reasoning. It ends with a plain statement that this is your approach, not the only right one.
+when:
+  - You are writing to your team or owners and want to say how you will decide.
+  - Your team keeps trading long-term trust for a short-term number.
+  - A new leader or investor asks what you stand for.
+you_give:
+  - Your business and who you answer to
+  - Past hard choices where the short and long term pulled apart (optional)
+  - What you would not do even in a bad year (optional)
+you_get:
+  - Up to eight plain promises
+  - The cost each one names
+  - The seven areas covered or marked missing
+  - A line on how you will explain bold choices
+  - A short note that this is your way
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Describe your business and who you answer to.
+  - List two or three choices where you gave up something today for later, or wish you had.
+  - "Read each promise and ask: would I keep this in my worst year?"
+  - Take the list to "Annual letter writer".
+how_it_works:
+  - title: Finds the forks
+    text: The places where short and long term pull apart.
+  - title: Writes a promise for each
+    text: One plain sentence starting with what you will do.
+  - title: Names the cost
+    text: What each promise may cost you in the short term.
+  - title: Covers seven areas
+    text: Customers, time, measures, failure, cash, people and sharing reasoning.
+  - title: Adds the reasoning promise
+    text: How you will explain bold choices to those who back you.
+  - title: Runs the bad-year test
+    text: Drops any promise you would not keep.
+  - title: States it is yours
+    text: A line that this is your approach, not the only right one.
+output_shape: |
+  FORKS
+  <short-term pull | long-term pull>
+
+  PROMISES
+  1. We will <do>, even when <pressure>. Cost: <what it may cost>
+  2. ...
+
+  AREAS COVERED
+  Customers | Time | Measures | Failure | Cash and cost | People | Sharing reasoning
+
+  DROPPED
+  <promise | why it would not survive a bad year>
+
+  OUR WAY
+  <one or two sentences>
+
+  MISSING
+  <gaps>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+tweaks:
+  - what: The forks you give
+    how: Real past choices make the promises sharper than general values.
+  - what: Who you answer to
+    how: Owners, partners, staff and customers need different promises. Say who reads this.
+  - what: Your worst year
+    how: Describe it. The skill uses it for the bad-year test.
+  - what: How many
+    how: Eight or fewer. More are rarely kept.
+judge:
+  - Each promise starts with what you will do.
+  - Each promise names a cost.
+  - At least one promise would be unpopular in a bad quarter.
+  - The seven areas are covered or marked missing.
+  - The list says this is your way, not the only one.
+test:
+  - Check each promise against a choice you made last year. Did you keep it?
+  - Read the list to a colleague. Ask which one they doubt.
+  - Run it twice. The costs should stay close.
+  - Hold the list up in your next hard decision.
+improve:
+  - Add your industry's usual short-term pressures to the input.
+  - Add promises you already keep without having written them.
+  - Revisit the list each year and note which ones cost you.
+  - Pair it with "Input metric picker" to measure the promises.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: Turning trade-offs into plain promises is text work any strong chat AI does well with this skill.
+  inputs:
+    - Past decisions you regret
+    - Your budget limits
+    - What your best customers say they value
+    - What your staff are promised today
+terms:
+  - term: Promise
+    meaning: A plain statement of what you will do when forced to choose, with its cost named.

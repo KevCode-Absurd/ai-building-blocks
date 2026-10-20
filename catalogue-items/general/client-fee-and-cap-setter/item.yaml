@@ -1,0 +1,19 @@
+slug: client-fee-and-cap-setter
+name: "Client fee and cap setter"
+summary: "Paste your floor and what others charge. Get a fee, billing terms and a client cap that covers your costs."
+category: general
+type: skill
+role: make
+job: strategy
+level: intermediate
+inputs:
+  - {type: question, required: true}
+  - {type: audit_report, required: false}
+outputs:
+  - {type: offer}
+  - {type: plan}
+origin: rebuilt
+version: 1.0.0
+minds: [wolfgang-amadeus-mozart]
+credits:
+  - {title: "The Letters of Wolfgang Amadeus Mozart (1769-1791), Volume II", by: "Wolfgang Amadeus Mozart, collected by Ludwig Nohl, translated by Lady Wallace", url: "https://archive.org/details/lettersofwolfgan02moza", used: "Taking fewer pupils at a higher rate, billing by the month because pupils pause lessons, holding back at first so as not to join the common crowd, and refusing to cut the rate"}

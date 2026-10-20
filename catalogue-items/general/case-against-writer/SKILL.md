@@ -47,7 +47,7 @@ The position and reasons, each marked fact, guess or value. The opponent. The th
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Decide what to do** with the [Many-field model checklist runner](https://useaiblocks.com/skills/mental-model-checklist-runner). It takes the plan.
+- **Decide what to do** with the [Decision evidence bar setter](https://useaiblocks.com/skills/decision-evidence-bar-setter). It takes the plan.
 - **Plan your strategy** with the [Buying habit stack designer](https://useaiblocks.com/skills/buying-habit-stack-designer). It takes the plan.
 - **Check the money** with the [Bond type and maturity chooser](https://useaiblocks.com/skills/bond-type-and-maturity-chooser). It takes the plan.
 - **Test the idea with real people** with the [Smallest test picker](https://useaiblocks.com/skills/smallest-test-picker). It takes the plan.

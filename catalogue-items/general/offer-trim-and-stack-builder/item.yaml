@@ -1,0 +1,27 @@
+slug: offer-trim-and-stack-builder
+name: Offer trim and stack builder
+summary: Paste your delivery options and promises. Get a trimmed offer of named bundles, each with a value, and a total.
+category: general
+type: skill
+role: make
+job: strategy
+level: intermediate
+inputs:
+  - type: objection_map
+    required: true
+  - type: shortlist
+    required: true
+  - type: product_data
+    required: false
+outputs:
+  - type: offer
+uses: []
+origin: rebuilt
+version: 1.0.0
+minds:
+  - alex-hormozi
+credits:
+  - title: "$100M Offers: How To Make Offers So Good People Feel Stupid Saying No"
+    by: Alex Hormozi
+    url: https://shop.acquisition.com/products/100m-offers-hardcover
+    used: Cutting high-cost low-value items first, keeping what is cheap or worth the cost, favouring one-to-many assets, solving every problem, and grouping what is left into named bundles with a stated value

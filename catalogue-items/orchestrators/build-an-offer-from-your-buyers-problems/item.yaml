@@ -1,0 +1,31 @@
+slug: build-an-offer-from-your-buyers-problems
+name: "Build an offer from your buyer's problems"
+summary: "Give it your product and buyer. Get every problem they face turned into a stacked, scored, priced offer."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: strategy
+level: intermediate
+inputs:
+  - {type: persona, required: true}
+  - {type: product_data, required: false}
+  - {type: voc_reviews, required: false}
+  - {type: brand_brain, required: false}
+  - {type: plan, required: false}
+  - {type: performance_sheet, required: false}
+outputs:
+  - {type: offer}
+  - {type: plan}
+uses: [buyer-problem-list-builder, delivery-option-generator, offer-trim-and-stack-builder, value-equation-scorer, pricing-decision-planner]
+steps:
+  - {uses: buyer-problem-list-builder, note: "A long list of problems, each turned into a solution you could promise."}
+  - {uses: delivery-option-generator, note: "Many ways to deliver each solution, rated for cost and value."}
+  - {uses: offer-trim-and-stack-builder, note: "The kept ways grouped into named bundles with a value on each."}
+  - {uses: value-equation-scorer, note: "A score on each driver and the fix with the best return."}
+  - {uses: pricing-decision-planner, note: "A price set from the value, with the reason the buyer will accept it."}
+origin: rebuilt
+version: 1.0.0
+minds: [alex-hormozi]
+credits:
+  - {title: "$100M Offers: How To Make Offers So Good People Feel Stupid Saying No", by: "Alex Hormozi", url: "https://shop.acquisition.com/products/100m-offers-hardcover", used: "The order of the steps: list every problem and its solution, find ways to deliver each solution, trim and stack the offer, score the offer on the four value drivers, set the price from the value"}
+generated_from: intake/hormozi-offers-from-problems/skeleton.yaml

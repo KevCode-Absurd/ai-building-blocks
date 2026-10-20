@@ -71,8 +71,8 @@ When you've handed it back, suggest what they could do next in one short questio
 - **Make image ads** with the [Accurate product image ad maker](https://useaiblocks.com/prompts/accurate-product-image-ad-maker). It takes the buyer brief.
 - **Write the ad copy** with the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer). It takes the buyer brief.
 - **Make video ads** with the [Video ad script type picker](https://useaiblocks.com/skills/video-ad-script-type-picker). It takes the buyer brief.
-- **Set up AI to work for you** with the [Old vs new ad prompt scorer](https://useaiblocks.com/skills/old-vs-new-ad-prompt-scorer). It takes the buyer brief.
 - **Write the landing page** with the [Proof-backed sales copy writer](https://useaiblocks.com/skills/proof-backed-sales-copy-writer). It takes the buyer brief.
+- **Set up AI to work for you** with the [Old vs new ad prompt scorer](https://useaiblocks.com/skills/old-vs-new-ad-prompt-scorer). It takes the buyer brief.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

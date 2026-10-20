@@ -1,0 +1,53 @@
+# Workflow skeleton for Jeff Bezos's shareholder letters 1997 to 2020 (docs/INTAKE.md). Our words; the source stays in mind-sources/ (local only).
+id: bezos-letters-fast-decisions
+source:
+  title: "Letters to shareholders, 1997 to 2020"
+  by: "Jeff Bezos"
+  kind: letter
+  rights: ideas-only
+minds: [jeff-bezos]
+workflow:
+  slug: make-a-fast-committed-decision-with-the-right-evidence
+  name: "Make a fast, committed decision with the right evidence"
+  summary: "Paste a choice you keep debating. Get its door type, how much evidence is enough, and a note that commits the team."
+  when: "a decision is taking too long, and you want to know how much evidence it needs and how to close it."
+  job: think-and-decide
+  level: intermediate
+steps:
+  - name: "Sort the decision by reversibility"
+    skill: reversible-decision-sorter
+    job: strategy
+    task: think-and-decide
+    from: "2015 letter, one-way and two-way doors"
+    method: ["State the choice and who it touches", "Ask what would be hard to undo and what reversing costs", "Sort it as one-way or two-way", "Match the process: slow and wide for one-way, one person or a small group for two-way", "Name an owner, a small trial and a review date for two-way", "List what you still need to know for one-way"]
+    inputs: [question]
+    outputs: [plan]
+    note: "A door type and the process that fits it."
+  - name: "Decide whether math or judgment settles it"
+    skill: math-or-judgment-call-sorter
+    job: analysis
+    task: think-and-decide
+    from: "2005 letter, math-based and judgment-based decisions"
+    method: ["List the inputs you can measure from your own history", "Ask if an experiment is possible, cheap and not the same as deciding", "If the numbers can settle it, run the model and let judgment be a junior partner", "If not, write the judgment down in one paragraph", "Write what the short-term math says against it, and what it cannot see", "Set the date and the signal that will show if the judgment was right"]
+    inputs: [plan, question!]
+    outputs: [plan]
+    note: "Either a model to run, or a written judgment with the math against it stated."
+  - name: "Set the evidence bar"
+    skill: decision-evidence-bar-setter
+    job: strategy
+    task: think-and-decide
+    from: "2016 letter, deciding with about seventy percent of the information"
+    method: ["List what you know, what you wish you knew and what each gap would cost to close", "Estimate your confidence as a share of what you wish you knew", "Set the bar: two-way doors at about seventy percent, one-way doors higher", "Estimate the cost of being wrong against the cost of waiting", "Check how fast you can spot and fix a bad call", "Write the call date and the one fact that would change it"]
+    inputs: [plan]
+    outputs: [plan]
+    note: "A clear bar for enough evidence, and a date to stop collecting it."
+  - name: "Write the disagree-and-commit note"
+    skill: disagree-and-commit-note-writer
+    job: ops
+    task: lead-people
+    from: "2016 letter, disagree and commit, and escalating misalignment"
+    method: ["Write each dissent in one honest line, with the person's name and reason", "Check whether it is a real disagreement of view or a deeper clash of aims", "If aims clash, name who decides and escalate now", "Write the decision, the owner and the review date", "Write the commit line each dissenter will say back", "Draft the short note that goes to the team"]
+    inputs: [plan]
+    outputs: [copy_draft]
+    note: "The call, the dissent on record and a clear commit."
+  - pause: "Act on the call and look again on the review date."

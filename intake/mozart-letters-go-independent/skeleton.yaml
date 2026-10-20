@@ -1,0 +1,81 @@
+# Workflow skeleton from Mozart's Vienna letters, volume 2 (docs/INTAKE.md). Our words; the letters stay in mind-sources/ (local only).
+id: mozart-letters-go-independent
+source:
+  title: "The Letters of Wolfgang Amadeus Mozart (1769-1791), Volume II"
+  by: "Wolfgang Amadeus Mozart, collected by Ludwig Nohl, translated by Lady Wallace"
+  url: "https://archive.org/details/lettersofwolfgan02moza"
+  kind: letter
+  rights: public-domain
+  year: 1866
+minds: [wolfgang-amadeus-mozart]
+workflow:
+  slug: leave-a-steady-job-and-earn-from-your-own-work
+  name: "Leave a steady job and earn from your own work"
+  summary: "Give it your job, pay and skills. Get an income floor, fees, a safety plan and a way to leave."
+  when: "you are thinking of leaving a steady employer to live on your own clients, sales or commissions."
+  job: think-and-decide
+  level: intermediate
+steps:
+  - name: Work out the monthly income you need
+    skill: independent-income-floor-calculator
+    job: analysis
+    task: think-and-decide
+    from: "Letters 186 and 188 (January and February 1782), his sums for a quiet life on four pupils, plus what he would count as extras; letters 143 to 145 on what the salary cost him"
+    method: ["Add up what you truly need each month, including a quiet-life version", "List every income stream and mark each one steady or a bonus", "Work out how many paying clients or sales the steady streams need", "Say what happens to the income in a month you cannot work"]
+    inputs: [question]
+    outputs: [audit_report, question]
+    note: "A monthly floor, the steady streams that cover it and what stops if you are ill."
+  - name: Set your fees and how many clients to take
+    skill: client-fee-and-cap-setter
+    job: strategy
+    task: think-and-decide
+    from: "Letters 154 and 186 (May 1781 and January 1782), fewer pupils at a higher rate, paid by the month whether they come or not"
+    method: ["Set the fee above the going rate on purpose and say why", "Bill by the month or the block, not by single sessions", "Cap clients at the number your floor needs, plus one", "Decide in advance when you will refuse a discount"]
+    inputs: [question, audit_report!]
+    outputs: [offer, plan]
+    note: "A fee, billing terms and a client cap that cover the floor."
+  - name: Win your first paying clients before you leave
+    skill: first-customers-by-hand-planner
+    job: strategy
+    task: think-and-decide
+    from: "Letters 141 to 156 (March to June 1781), pupils and patrons found in his first weeks in Vienna"
+    method: ["List who already knows your work", "Win them one by one, in person", "Learn what they paid for", "Turn the lessons into the next ask"]
+    inputs: [persona!, brief!, question!]
+    outputs: [plan, lessons_register]
+    note: "A hand-won first client plan, using the question from step one."
+  - name: Stress-test the plan
+    skill: ruin-risk-stress-tester
+    job: analysis
+    task: think-and-decide
+    from: "Letters 186 and 254, the lines on illness and on a patron who may not pay"
+    method: ["Find the one outcome that ruins the plan", "Cap the downside", "Make the plan survive it"]
+    inputs: [plan]
+    outputs: [audit_report, plan]
+    note: "The worst case for the plan and a version that survives it."
+  - name: Write your rules for thin months
+    skill: lean-year-cash-rules-writer
+    job: ops
+    task: think-and-decide
+    from: "Letters 246, 247, 254, 255 and 257 (1788 to 1790), his requests to a friend for loans and what he would do differently"
+    method: ["Set a cash buffer and the month you start using it", "Name who to ask for help and ask while there is still time", "Write the ask with the amount, the date you repay and what it lets you do", "Set rules for never hiding a debt and repaying first"]
+    inputs: [plan, audit_report!]
+    outputs: [plan]
+    note: "A cash buffer, a trigger, who to ask early and how."
+  - name: Plan the talk with the people who rely on you
+    skill: buy-in-conversation-planner
+    job: strategy
+    task: think-and-decide
+    from: "Letters 150 to 156 (May 1781), the exchange with his father about leaving"
+    method: ["Start from what the other person wants", "Answer the fear behind the objection", "Offer a check-in date"]
+    inputs: [question, persona!]
+    outputs: [plan, objection_map]
+    note: "A plan for the talk with family or partners before you hand in notice."
+  - name: Plan how you leave
+    skill: job-exit-plan-writer
+    job: ops
+    task: think-and-decide
+    from: "Letters 148 to 157 (May to June 1781), the break with the Archbishop and the weeks after"
+    method: ["Decide your leaving terms before the last row", "Write the notice in your own hand", "Keep every exchange calm and in writing", "Hold a door open and line up income for the first quarter"]
+    inputs: [plan, question!]
+    outputs: [plan]
+    note: "The notice, the order of conversations and the first-quarter income to line up."

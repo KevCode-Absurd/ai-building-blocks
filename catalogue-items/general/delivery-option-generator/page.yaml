@@ -1,0 +1,91 @@
+new_slug: delivery-option-generator
+name: Delivery option generator
+summary: Paste your buyer's problems and promises. Get many ways to deliver each one, rated for your cost and their value.
+job: make-offer
+thinking: medium
+thinking_why: It needs many different ideas, then a plain rating of each. The ideas are open, the rating rules are fixed.
+headline: Delivery option generator
+subhead: Give it the list of buyer problems and promises. For each one it writes many ways you could deliver it, from one-to-one to one-to-many, rates each on what it costs you and what it is worth to the buyer, and marks the best few.
+explain: |-
+  Most owners pick the first way they thought of to solve a problem, and it is usually the one they already do. That way may cost a lot and be worth little. Better ways sit one or two ideas further out.
+
+  This skill forces the further ideas. It changes one thing at a time: how many people you serve at once, how much work you ask of the buyer, the medium, the format and how fast you reply. It then asks what you would add if the price were ten times higher, and how you would still deliver if it were a tenth. Each option gets a cost and a value rating so the next step can cut with a rule instead of a feeling.
+when:
+  - You have a list of buyer problems and one default way to solve each.
+  - Your delivery costs too much time for what the buyer values.
+  - You want to turn a service into something that sells many times from one build.
+you_give:
+  - The buyer problems and promises from Buyer problem list builder, or your own list
+  - Your product facts (optional)
+  - What you can and cannot deliver, such as hours per week (optional)
+you_get:
+  - Five to ten delivery options for each promise, in three groups by size of audience
+  - A rating on cost to you and the value drivers each option moves
+  - The best two or three options per promise marked as candidates
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste the problems and promises. Say how many hours a week you could give.
+  - Skim the stretch options. Keep any that make you think, even if you would not do them.
+  - Take the shortlist to Offer trim and stack builder.
+how_it_works:
+  - title: Groups by audience size
+    text: One-to-one, small group and one-to-many, so you see which ones scale.
+  - title: Varies one thing at a time
+    text: Attention, effort asked of the buyer, medium, format and reply speed.
+  - title: Runs the price tests
+    text: What you would add at ten times the price, and how you would still deliver at a tenth.
+  - title: Rates cost and value
+    text: Build hours, hours per buyer, cash cost, and which value driver each option moves.
+  - title: Marks the best
+    text: Picks the highest value per unit of cost for each promise.
+output_shape: |-
+  FOR EACH PROMISE
+  <promise>
+    One to one: <option> | effort: DIY, with them or for them | build hours | hours per buyer | cash | drivers moved
+    Small group: ...
+    One to many: ...
+    Stretch: <options you would not do today>
+    Candidates: <best 2 or 3 and why>
+
+  SHORTLIST
+  <all candidates in one table>
+
+  MISSING
+  <gaps>
+
+  CHECKS MISSED
+  <one line per check missed, or none>
+tweaks:
+  - what: Your limits
+    how: Say how many hours a week, what tools you have and what you refuse to do. Options that break a limit are marked and kept as stretch ideas.
+  - what: Which promises to push hardest on
+    how: Name the two or three that matter most. Those get ten options each.
+  - what: Build time
+    how: Tell it how many hours you could spend building something once. Asset ideas are sized to fit.
+judge:
+  - Each promise has options in all three audience groups.
+  - At least three options per promise would not have been your first idea.
+  - Every option has a cost and a driver, not just a name.
+  - The tests at ten times and a tenth are both used.
+  - Candidates are picked by value for cost, not by how interesting they sound.
+test:
+  - Give it one promise you already deliver. The default way should appear, and at least three other ways.
+  - Check the one-to-many options. Each should cost most of its hours up front and little per buyer.
+  - Pick one candidate and say how you would start it this week. If you cannot, the option is too vague.
+improve:
+  - Keep a vault of assets you build and reuse them in later offers.
+  - Add the delivery options your best customers praise.
+  - Rerun it when your prices change.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: This is text and number work that any strong chat AI does well with the skill.
+  inputs:
+    - Problems and promises from Buyer problem list builder
+    - A list of tools and assets you already have
+    - Your weekly hours
+terms:
+  - term: One-to-many
+    meaning: A way of delivering that costs the same however many buyers use it, such as a recording, a template or a tool.
+  - term: Stretch option
+    meaning: An idea you may never use, written down to push your thinking past the default.

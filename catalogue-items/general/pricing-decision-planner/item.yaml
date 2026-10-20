@@ -1,6 +1,6 @@
 slug: pricing-decision-planner
 name: "Pricing decision planner"
-summary: "Paste your product, its costs and what rivals charge. Get three test prices, the number to watch and the one you pick."
+summary: "Paste your product, costs and the buyer's gain. Get three test prices, your pick and a plan to raise it."
 category: general
 type: skill
 role: make
@@ -11,12 +11,17 @@ inputs:
   - {type: product_data, required: true}
   - {type: competitor_set, required: false}
   - {type: voc_reviews, required: false}
+  - {type: offer, required: false}
+  - {type: audit_report, required: false}
+  - {type: plan, required: false}
+  - {type: performance_sheet, required: false}
 outputs:
   - {type: plan}
   - {type: offer}
 origin: rebuilt
-version: 1.0.0
-minds: [kazuo-inamori]
+version: 1.1.0
+minds: [kazuo-inamori, alex-hormozi]
 credits:
   - {title: "Pricing Is Management", by: "Kazuo Inamori", used: "Setting a price from the true value to the buyer, finding the price with the highest total profit, and making the top leader own the decision"}
   - {title: "Kazuo Inamori study notes", by: "Kazuo Inamori (as summarised in the mind file)", used: "Not copying rivals, checking that the buyer is still happy at the price, and reviewing sales and margin on a set date"}
+  - {title: "$100M Offers: How To Make Offers So Good People Feel Stupid Saying No", by: "Alex Hormozi", url: "https://shop.acquisition.com/products/100m-offers-hardcover", used: "Pricing from what the result is worth to the buyer, a price band as a share of that worth, a wide gap between price and worth, rival prices as a floor check only, and adding value before raising a price"}

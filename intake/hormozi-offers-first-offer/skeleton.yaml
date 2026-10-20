@@ -1,0 +1,62 @@
+# Workflow skeleton for The New Secret Chapter, Section A: Attract (docs/INTAKE.md). Our words; the chapter stays in mind-sources/ (local only).
+id: hormozi-offers-first-offer
+source:
+  title: "The New Secret Chapter: How to Make Money (Section A: Attract, free and discount promotions)"
+  by: "Alex Hormozi"
+  kind: other
+  rights: ideas-only
+  year: 2025
+minds: [alex-hormozi]
+workflow:
+  slug: win-new-buyers-with-a-free-or-discount-first-offer
+  name: "Win new buyers with a free or discount first offer"
+  summary: "Give it your offer and lead numbers. Get a free or discount first step, lead rules and the offers that follow."
+  when: "too few people respond to your offer and you want a first step that brings in buyers who pay later."
+  job: make-offer
+  level: intermediate
+steps:
+  - name: Choose premium, free or discount
+    skill: front-end-offer-picker
+    job: strategy
+    task: make-offer
+    from: "Section A, premium, free and discount promotions"
+    method: ["Check your volume, cost to get a lead and how much cash you hold", "Check how well buyers understand what you sell and any rules on free offers", "Score premium, free and discount against those facts", "Pick one and say what must be true for it to work", "Plan to move to premium once you have results to show"]
+    inputs: [offer, performance_sheet!, question!]
+    outputs: [plan]
+    note: "A pick of premium, free or discount, with the reason and the tests."
+  - name: Set the cost and the friction
+    skill: lead-cost-and-friction-planner
+    job: ops
+    task: make-offer
+    from: "Section A, free promotions and the friction list"
+    method: ["Compare campaigns by qualified leads per dollar, not total leads", "Check the cost of giving the first step away", "Add friction one lever at a time: qualifiers, questions, steps, required viewing, ad length", "Stop adding when quality rises but sales volume still pays", "Write the repeated qualifier line for every touchpoint"]
+    inputs: [plan, performance_sheet!]
+    outputs: [plan]
+    note: "The lead math and the exact friction to add."
+  - name: Plan the small paid first step
+    skill: paid-first-step-planner
+    job: strategy
+    task: make-offer
+    from: "Section A, discount promotions and the two-step sale"
+    method: ["Pick a small piece of the offer to sell cheap, never the core", "Take a card and book the second meeting at the same time", "Set a fee for missing it", "Plan the follow-up that sells the main offer", "Treat buyers as qualified leads, not bargain hunters"]
+    inputs: [plan, offer]
+    outputs: [offer]
+    note: "The cheap first piece, the booked second meeting and the upsell."
+  - name: Plan what buyers buy next
+    skill: value-ladder-planner
+    job: strategy
+    task: make-offer
+    from: "Section A, layering offers"
+    method: ["Map the free or cheap first step to the main offer", "Add a higher step for buyers who want the best result", "Add a smaller step for buyers who say no", "Say what makes a buyer ready for the next step"]
+    inputs: [offer, persona!, performance_sheet!]
+    outputs: [plan, offer]
+    note: "The offers that come after the first step."
+  - name: Test it small
+    skill: small-test-and-rollout-planner
+    job: strategy
+    task: make-offer
+    from: "Section A, benchmark and improve"
+    method: ["Set a small test with a budget and a time", "Write the numbers that count as a win before you start", "Write the rule for rolling out or stopping"]
+    inputs: [offer, performance_sheet!, question!]
+    outputs: [plan]
+    note: "A small test with a win rule written first."

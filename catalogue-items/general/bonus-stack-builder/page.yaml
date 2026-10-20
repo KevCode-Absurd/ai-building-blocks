@@ -1,0 +1,96 @@
+new_slug: bonus-stack-builder
+name: Bonus stack builder
+summary: Paste your offer and the doubts buyers have. Get named bonuses that each answer one doubt, with a value and proof.
+job: make-offer
+thinking: medium
+thinking_why: It matches each doubt to a bonus and writes short copy for each. The rules are fixed.
+headline: Bonus stack builder
+subhead: Give it your offer and the doubts that stop buyers. It matches one bonus to each doubt, names it with a benefit, says what it is, how you made it and why it works, puts a value on it and shows how to reveal it. It can also line up partner bonuses.
+explain: |-
+  When a buyer hesitates, most owners cut the price. That teaches buyers your price is open to talk, and it cuts your margin. A better move is to add something. The price stays, and the value grows.
+
+  This skill builds the bonuses. Each one answers a single doubt the buyer has about whether they can succeed. It prefers tools, checklists and templates over more training, because they cost the buyer less time. It names each with a benefit, writes five lines to present it, and adds a value with a reason. It also covers other businesses' services you can bundle in, and the order in which to reveal bonuses in a one-to-one sale.
+when:
+  - Buyers like your offer and still hesitate.
+  - You are tempted to discount to close.
+  - You have useful things you made and never mention.
+you_give:
+  - Your offer, with price
+  - The limits and dates from Honest scarcity and urgency planner
+  - The doubts from Buyer problem list builder (optional), or tell it what buyers say
+you_get:
+  - Five to eight bonuses, each matched to one doubt
+  - A name, a five-line presentation and a value with a basis for each
+  - Which bonuses carry a limit or a deadline
+  - Partner bonus ideas and the order to reveal bonuses
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your offer and the doubts you hear in sales calls.
+  - "Tell it what you already own that could be a bonus: templates, recordings, tools."
+  - Use the reveal order in your next sale and note which bonus closes.
+how_it_works:
+  - title: Starts from doubts
+    text: Lists the reasons a buyer says maybe, from your notes.
+  - title: Matches a bonus to each
+    text: One bonus per doubt, each proving it wrong or solving the next problem early.
+  - title: Prefers tools
+    text: Checklists, templates and scripts over more hours of teaching.
+  - title: Presents each in five lines
+    text: Link to their issue, what it is, how you found or made it, how it helps, proof.
+  - title: Values and orders
+    text: A value with a reason, then the order to reveal them.
+output_shape: |-
+  DOUBTS
+  <the 5 to 8 doubts>
+
+  BONUSES
+  Name (with benefit) | answers doubt | what it is | how it was made | how it helps (faster, easier or less effort) | proof | value and basis | limit or deadline
+
+  TOTALS
+  <core value, bonus value>
+
+  PARTNER IDEAS
+  <businesses, what they give, what they get>
+
+  HOW TO REVEAL
+  <one-to-one order, page order>
+
+  MISSING
+  <gaps>
+
+  CHECKS MISSED
+  <one line per check missed, or none>
+tweaks:
+  - what: What you already own
+    how: Say what you can reuse. A bonus built from recordings or templates you have costs nothing new.
+  - what: Buyer's time
+    how: Say how much time your buyer has. Short tools beat long courses for busy buyers.
+  - what: Selling style
+    how: One-to-one, page or webinar changes the reveal order.
+judge:
+  - Every bonus answers one named doubt.
+  - Names state a benefit.
+  - Each bonus has proof and a value with a basis.
+  - At least half the bonuses are tools, checklists or templates.
+  - No bonus replaces a price cut on the core.
+test:
+  - Take three real objections from your calls. Each should be answered by a bonus.
+  - Redo the totals by hand.
+  - Offer the reveal order in a sale and track which bonus is mentioned by the buyer after.
+improve:
+  - Record every workshop and call, and keep a vault of reusable bonuses.
+  - Retire bonuses that nobody mentions.
+  - Add a bonus for each new doubt that shows up.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: This is text and number work that any strong chat AI does well with the skill.
+  inputs:
+    - Doubts from sales calls or from Buyer problem list builder
+    - Your vault of templates and recordings
+    - Prices of similar items elsewhere
+terms:
+  - term: Bonus
+    meaning: An extra included with the core offer to answer a doubt, with its own name and value.
+  - term: Value basis
+    meaning: The reason a bonus is worth the figure given, such as hours saved or what it costs elsewhere.

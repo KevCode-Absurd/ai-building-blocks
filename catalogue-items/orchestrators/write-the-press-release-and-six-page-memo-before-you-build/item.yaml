@@ -1,0 +1,25 @@
+slug: write-the-press-release-and-six-page-memo-before-you-build
+name: "Write the press release and six-page memo before you build"
+summary: "Paste your idea. Get a future press release, the hard questions, a six-page memo and a check of that memo."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: copy
+level: intermediate
+inputs:
+  - {type: question, required: true}
+outputs:
+  - {type: audit_report}
+uses: [durable-customer-need-finder, future-press-release-writer, hard-questions-faq-writer, six-page-narrative-memo-writer, narrative-memo-checker]
+steps:
+  - {uses: durable-customer-need-finder, note: "A customer, a durable need and the skills gap, before any idea is written down."}
+  - {uses: future-press-release-writer, note: "One page a customer would read, built from the need statement."}
+  - {uses: hard-questions-faq-writer, note: "The press release plus its questions, with every weak answer marked."}
+  - {uses: six-page-narrative-memo-writer, note: "A narrative memo your team can read in silence, with a realistic writing schedule."}
+  - {uses: narrative-memo-checker, note: "A score, the weak spots and the three fixes before the meeting."}
+origin: rebuilt
+version: 1.0.0
+minds: [jeff-bezos]
+credits:
+  - {title: "Letters to shareholders, 1997 to 2020", by: "Jeff Bezos", used: "The order of the steps: find the customer need that will last, write the future press release, write the hard questions and answers, write the six-page memo, check the memo before the meeting"}
+generated_from: intake/bezos-letters-working-backwards/skeleton.yaml

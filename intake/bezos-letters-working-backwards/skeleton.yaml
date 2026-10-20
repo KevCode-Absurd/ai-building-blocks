@@ -1,0 +1,62 @@
+# Workflow skeleton for Jeff Bezos's shareholder letters 1997 to 2020 (docs/INTAKE.md). Our words; the source stays in mind-sources/ (local only).
+id: bezos-letters-working-backwards
+source:
+  title: "Letters to shareholders, 1997 to 2020"
+  by: "Jeff Bezos"
+  kind: letter
+  rights: ideas-only
+minds: [jeff-bezos]
+workflow:
+  slug: write-the-press-release-and-six-page-memo-before-you-build
+  name: "Write the press release and six-page memo before you build"
+  summary: "Paste your idea. Get a future press release, the hard questions, a six-page memo and a check of that memo."
+  when: "you have an idea for a product or project and want to test it on paper before you spend on it."
+  job: build-product
+  level: intermediate
+steps:
+  - name: "Find the customer need that will last"
+    skill: durable-customer-need-finder
+    job: research
+    task: understand-customers
+    from: "2008 and 2016 letters, working backwards and customer obsession; 2014 letter, the four marks of a dreamy business"
+    method: ["Name the customer and the need in their words, not your product", "Test whether the need will still hold in ten years (would anyone want higher prices, less choice or slower service?)", "Separate what customers ask for from what they do not yet know to ask for", "List the skills the need demands that you do not have, and say which you will learn or hire", "Check four marks: customers love it, it can grow large, it can earn good returns, it can last for decades", "Write a one-paragraph need statement with what is still unknown marked"]
+    inputs: [question]
+    outputs: [brief]
+    note: "A customer, a durable need and the skills gap, before any idea is written down."
+  - name: "Write the future press release"
+    skill: future-press-release-writer
+    job: copy
+    task: write-landing-page
+    from: "2008 letter on working backwards; the press-release habit as described by Werner Vogels in 2006"
+    method: ["Write it as if the product launched today, for the customer, in plain words", "Open with a headline and one sentence that says what the customer gets", "Say the problem in the customer's terms and how life is better", "Add one quote from a customer and one from the team", "Give the price, how to start and what is new", "Cut any feature that exists only because a rival has it", "Mark every claim you cannot yet back with MISSING"]
+    inputs: [brief]
+    outputs: [copy_draft]
+    note: "One page a customer would read, built from the need statement."
+  - name: "Write the hard questions and answers"
+    skill: hard-questions-faq-writer
+    job: copy
+    task: understand-customers
+    from: "2008 and 2016 letters, work from the customer and test your view against blind spots"
+    method: ["List the questions a sceptical customer would ask", "List the questions your own team, finance and support would ask", "Answer each in two or three plain sentences", "Mark each answer as known, a guess or a gap", "Rank the gaps by how much they could change the plan", "Rewrite the press release where an answer exposes a weak claim"]
+    inputs: [copy_draft, brief!]
+    outputs: [copy_draft]
+    note: "The press release plus its questions, with every weak answer marked."
+  - name: "Write the six-page memo"
+    skill: six-page-narrative-memo-writer
+    job: copy
+    task: speak-and-persuade
+    from: "2017 letter, six-page narratives and realistic scope"
+    method: ["Turn the press release and questions into full sentences, with no slides or bullets", "Open with the decision and why it matters now", "Tell the story: customer, problem, idea, how it works, what it costs", "Give the numbers that matter and what you do not know", "State the risks and what you would do if it fails", "Keep it to six pages and plan a week or more of drafts, feedback and a fresh edit", "Leave the author's name off; it is the team's memo"]
+    inputs: [copy_draft, brief!]
+    outputs: [copy_draft]
+    note: "A narrative memo your team can read in silence, with a realistic writing schedule."
+  - pause: "Share the memo with colleagues who will improve it, set it aside for two days, then edit it with a fresh mind."
+  - name: "Check the memo before the meeting"
+    skill: narrative-memo-checker
+    job: analysis
+    task: speak-and-persuade
+    from: "2017 letter, recognising what good looks like"
+    method: ["Read it cold and say in one sentence what it asks for", "Check it is full sentences that argue, with no slide-style bullets", "Check each claim has a number, a case or a MISSING note", "Check the risks and the downside are stated", "Check the first page works alone", "Score the memo out of 100 and list the three fixes that matter most"]
+    inputs: [copy_draft]
+    outputs: [audit_report]
+    note: "A score, the weak spots and the three fixes before the meeting."

@@ -7,6 +7,8 @@ description: Use when a team needs one clear idea of what it sells. Writes a mem
 
 Teams drift into selling the feature list, but customers shop for what the product helps them become. This skill writes a team memo that names the outcome, who users become after three months and a clearly invented example user. It boils the memo to one line the team can repeat.
 
+Use [Six-page narrative memo writer](https://useaiblocks.com/skills/six-page-narrative-memo-writer) instead when you need a decision on a proposal, with the ask on page one.
+
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
 This skill runs on its own. What's below makes the result better, but none of it is required.

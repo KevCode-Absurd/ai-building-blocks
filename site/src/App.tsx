@@ -89,6 +89,18 @@ function Header({ onKits }: { onKits: () => void }) {
   const [scrolled, setScrolled] = useState(false);
   const kitCount = useStore((s) => s.kits.length);
   const biz = hasBusiness(useBusiness());
+  // Phones get the sections behind a Menu button; it closes again on every page change.
+  const [menu, setMenu] = useState(false);
+  const { path } = useLocation();
+  const [more, setMore] = useState(false);
+  useEffect(() => { setMenu(false); setMore(false); }, [path]);
+  useEffect(() => {
+    if (!more) return;
+    const off = () => setMore(false);
+    const esc = (e: KeyboardEvent) => e.key === "Escape" && setMore(false);
+    document.addEventListener("click", off); document.addEventListener("keydown", esc);
+    return () => { document.removeEventListener("click", off); document.removeEventListener("keydown", esc); };
+  }, [more]);
   useEffect(() => {
     const on = () => setScrolled(window.scrollY > 8);
     on(); window.addEventListener("scroll", on, { passive: true });
@@ -98,20 +110,26 @@ function Header({ onKits }: { onKits: () => void }) {
     <header className={`header${scrolled ? " scrolled" : ""}`}>
       <div className="wrap header-in">
         <Link to="/" className="brand" aria-label="AI Blocks, home"><Logo />AI Blocks</Link>
-        <nav className="nav" aria-label="Sections">
-          <Link to="/how-it-works" className="nav-hiw">How it works</Link>
+        <nav className={`nav${menu ? " open" : ""}`} id="site-nav" aria-label="Sections" onClick={() => setMenu(false)}>
+          <Link to="/how-it-works">How it works</Link>
           <Link to="/#library">Library</Link>
           <Link to="/#build">Builder</Link>
           <Link to="/minds" data-testid="nav-minds">Minds</Link>
           <Link to="/tools">Tools</Link>
-          <Link to="/from-a-source" data-testid="nav-intake">From a source</Link>
           <Link to="/apps">Apps</Link>
-          <Link to="/space" data-testid="nav-space">My space</Link>
+          <span className={`nav-more${more ? " open" : ""}`} onClick={(e) => e.stopPropagation()}>
+            <button type="button" className="nav-more-btn" aria-expanded={more} aria-controls="nav-more-list" onClick={() => setMore((m) => !m)} data-testid="nav-more">More <span aria-hidden="true">▾</span></button>
+            <span className="nav-more-list" id="nav-more-list" onClick={() => { setMore(false); setMenu(false); }}>
+              <Link to="/from-a-source" data-testid="nav-intake">From a source</Link>
+              <Link to="/space" data-testid="nav-space">My space</Link>
+            </span>
+          </span>
         </nav>
         <div className="header-end">
           <button className="btn btn-ghost btn-sm" onClick={openBusiness} data-testid="open-business"><span>About me</span>{biz && <span className="dot" aria-label="filled in" />}</button>
           <button className="btn btn-ghost btn-sm" onClick={onKits} data-testid="open-kits"><span className="wide-only">My kits</span><span className="narrow-only">Kits</span>{kitCount > 0 && <span className="badge">{kitCount}</span>}</button>
           <ThemeToggle />
+          <button className="btn btn-ghost btn-sm menu-btn" aria-expanded={menu} aria-controls="site-nav" onClick={() => setMenu((m) => !m)} data-testid="menu-btn">{menu ? "Close" : "Menu"}</button>
         </div>
       </div>
     </header>
@@ -314,7 +332,6 @@ function Home({ c, toast }: { c: Catalogue | null; toast: (m: string) => void })
           <div className="hero-actions">
             <Link to="/#library" className="btn btn-primary">Browse the blocks <ArrowIcon /></Link>
             <Link to="/#build" className="btn btn-dark">Build a workflow</Link>
-            <Link to="/how-it-works" className="btn btn-line" data-testid="how-it-works-link">How it works</Link>
           </div>
         </div>
       </section>

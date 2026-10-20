@@ -18,12 +18,12 @@ const cards = (page: Page) => page.getByTestId("block-card");
 const MODEL = "fact-based-ad-copy-writer"; // the block with the finished model page
 const WORKFLOW = "turn-your-reviews-into-image-ads-buyers-believe";
 
-test("hero is the headline, the mono subhead, and three buttons (the last is How it works), over the globe", async ({ page }) => {
+test("hero is the headline, the mono subhead, and two buttons, How it works a plain nav link, over the globe", async ({ page }) => {
   await page.goto("/");
   await expect(page.getByRole("heading", { level: 1 })).toHaveText("Making humanity AI native");
   await expect(page.locator(".hero .lede")).toContainText("Save hours every week");
   expect(await page.locator(".hero .lede").evaluate((el) => getComputedStyle(el).fontFamily)).toContain("JetBrains Mono");
-  await expect(page.locator(".hero").getByRole("link")).toHaveText(["Browse the blocks", "Build a workflow", "How it works"]);
+  await expect(page.locator(".hero").getByRole("link")).toHaveText(["Browse the blocks", "Build a workflow"]);
   await expect(page.locator(".hero-in > *")).toHaveCount(3);
   await expect(page.locator(".nav a").first()).toHaveText("How it works");
   await expect(page.getByTestId("home-goal")).toHaveCount(0);
@@ -519,7 +519,7 @@ test("phone width: the workflow is a numbered list you reorder with arrows @mobi
 
 test("how it works: a plain guide to each kind and the builder, at grade 10 or below", async ({ page }, info) => {
   await page.goto("/");
-  await page.getByTestId("how-it-works-link").click();
+  await page.locator(".nav").getByRole("link", { name: "How it works" }).click();
   await expect(page).toHaveURL(/\/how-it-works$/);
   const guide = page.getByTestId("how-it-works");
   await expect(guide.getByRole("heading", { level: 1 })).toHaveText("How AI Blocks work");

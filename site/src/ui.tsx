@@ -8,13 +8,58 @@ import PixelFace from "./PixelFace";
 import { kits, useStore } from "./lib/store";
 
 /** The mark: a 3 by 3 grid of blocks, like bits. Solid on the corners and centre, faint between. */
-export function Logo() {
+function Mark() {
   const on = [[2, 2], [16, 2], [9, 9], [2, 16], [16, 16]];
   const dim = [[9, 2], [2, 9], [16, 9], [9, 16]];
   return (
-    <svg viewBox="0 0 24 24" aria-hidden="true" className="logo">
+    <>
       {on.map(([x, y]) => <rect key={`${x}${y}`} x={x} y={y} width="6" height="6" fill="currentColor" />)}
       {dim.map(([x, y]) => <rect key={`${x}${y}`} x={x} y={y} width="6" height="6" fill="currentColor" opacity="0.32" />)}
+    </>
+  );
+}
+
+// What the blocks build, on a 6 by 6 grid, top row first. Each one goes up from the bottom, a block at a time.
+const BUILDS: string[][] = [
+  ["..##..", ".####.", "######", ".####.", ".#.##.", ".#.##."], // house
+  ["..##..", ".####.", ".#..#.", ".####.", "######", "#.##.#"], // rocket
+  ["..##..", ".####.", "######", ".####.", "..##..", "..##.."], // tree
+  [".####.", "#.##.#", "######", ".####.", ".#..#.", ".#..#."], // robot
+  [".#..#.", "######", "######", ".####.", "..##..", "......"], // heart
+  ["#.#..#", "######", ".####.", ".#..#.", ".####.", ".####."], // castle
+];
+const cellsOf = (rows: string[]) => {
+  const out: [number, number][] = [];
+  for (let y = rows.length - 1; y >= 0; y--) for (let x = 0; x < 6; x++) if (rows[y][x] === "#") out.push([x, y]);
+  return out;
+};
+const BUILT = BUILDS.map(cellsOf);
+
+/** The logo. It shows the mark, then stacks blocks into a house, a rocket, a tree, a robot, a heart and a castle,
+ *  and comes back to the mark. Still for anyone who asks for reduced motion. */
+export function Logo() {
+  const [frame, setFrame] = useState({ build: -1, n: 0, clearing: false });
+  useEffect(() => {
+    if (window.matchMedia?.("(prefers-reduced-motion: reduce)").matches) return;
+    let t: number;
+    const step = (f: typeof frame) => {
+      setFrame(f);
+      let next: typeof frame, wait: number;
+      if (f.build === -1) { next = { build: 0, n: 0, clearing: false }; wait = 3200; }
+      else if (f.clearing) { next = { build: f.build + 1 < BUILT.length ? f.build + 1 : -1, n: 0, clearing: false }; wait = 380; }
+      else if (f.n < BUILT[f.build].length) { next = { ...f, n: f.n + 1 }; wait = 70; }
+      else { next = { ...f, clearing: true }; wait = 1500; }
+      t = window.setTimeout(() => step(next), wait);
+    };
+    step({ build: -1, n: 0, clearing: false });
+    return () => window.clearTimeout(t);
+  }, []);
+  const { build, n, clearing } = frame;
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true" className={`logo${build >= 0 ? " building" : ""}${clearing ? " clearing" : ""}`} data-testid="logo">
+      {build < 0 ? <Mark /> : BUILT[build].slice(0, n).map(([x, y]) => (
+        <rect key={`${build}-${x}-${y}`} className="drop" x={x * 4 + 0.3} y={y * 4 + 0.3} width="3.4" height="3.4" fill="currentColor" />
+      ))}
     </svg>
   );
 }

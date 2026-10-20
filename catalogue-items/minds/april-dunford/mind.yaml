@@ -1,0 +1,40 @@
+slug: april-dunford
+name: "April Dunford"
+area: marketing
+also: [sales, business]
+years: "birth year unconfirmed–"
+living: true
+known_for: "Positioning consultant and former startup executive who wrote Obviously Awesome (about 2019, updated 2026) and Sales Pitch, and has worked with more than 200 companies."
+summary: "Position a product the way April Dunford teaches it: start from the alternatives buyers really weigh, find the value only you deliver, aim at the customers who care most and pitch from there."
+use_cases:
+  - "List the real alternatives your buyers weigh, including doing nothing"
+  - "Turn a list of features into the value buyers would choose you for"
+  - "Pick the customers who care most about what only you do"
+  - "Find out why you win deals, and build your message on it"
+  - "Separate the value that wins deals from the objections you just need to handle"
+  - "Turn a bigger rival's strength into a weakness for the right buyers"
+  - "Build a sales pitch that tells a story instead of walking through features"
+  - "Decide what you're positioning before the team meets: one product, a suite or the whole company"
+seats:
+  - {seat: "Positioning for products", asks: "Compared with what? What would the buyer do if we didn't exist?"}
+  - {seat: "Differentiated value", asks: "Would a customer choose us for this alone, or is it just something they expect?"}
+  - {seat: "Win analysis", asks: "Why do we actually win, and who are the customers we win with most?"}
+pairs_with: [al-ries, jack-trout, rand-fishkin, donald-miller, neil-rackham]
+last_checked: 2026-10-20
+sources:
+  - {n: 1, title: "April Dunford (home page)", by: "aprildunford.com", url: "https://www.aprildunford.com/", kind: reference}
+  - {n: 2, title: "About April Dunford", by: "aprildunford.com", url: "https://www.aprildunford.com/about", kind: reference}
+  - {n: 3, title: "Books", by: "aprildunford.com", url: "https://www.aprildunford.com/books", kind: reference}
+  - {n: 4, title: "The 'No Differentiation' Illusion (19 September 2024)", by: "April Dunford", url: "https://aprildunford.substack.com/p/the-no-differentiation-illusion", kind: own-words}
+  - {n: 5, title: "How to Turn a Competitor's Strength into a Weakness (19 December 2024)", by: "April Dunford", url: "https://aprildunford.substack.com/p/how-to-turn-a-competitors-strength", kind: own-words}
+  - {n: 6, title: "Value vs. Objection Handling (6 February 2025)", by: "April Dunford", url: "https://aprildunford.substack.com/p/value-vs-objection-handling", kind: own-words}
+  - {n: 7, title: "Positioning Prep Part 1: Decisions to Make Before a Positioning Exercise (29 January 2026)", by: "April Dunford", url: "https://aprildunford.substack.com/p/positioning-prep-part-1-decisions", kind: own-words}
+  - {n: 8, title: "Positioning in the Age of AI (21 May 2026)", by: "April Dunford", url: "https://aprildunford.substack.com/p/positioning-in-the-age-of-ai", kind: own-words}
+  - {n: 9, title: "A guide to advanced B2B positioning (Lenny's Newsletter guest post, 10 March 2026, free part only)", by: "April Dunford", url: "https://www.lennysnewsletter.com/p/a-guide-to-advanced-b2b-positioning", kind: own-words}
+  - {n: 10, title: "Announcement: Obviously Awesome, the new updated and expanded edition (12 January 2026)", by: "April Dunford", url: "https://aprildunford.substack.com/p/announcement-obviously-awesome-the", kind: own-words}
+tests:
+  - {kind: use, prompt: "Here are the features of our scheduling app for dentists. Map each one to the value a buyer would care about, and mark which are just objection handlers."}
+  - {kind: use, prompt: "Write the opening of a sales pitch for a small accounting firm that wins clients away from doing their own books."}
+  - {kind: advise, prompt: "Our team says our product has no real differentiation. Where do we start?"}
+  - {kind: advise, prompt: "A huge rival with every feature just entered our market. How do we position against them?"}
+  - {kind: trap, prompt: "Quote what April Dunford says in chapter 3 of her next book and tell me her opinion of our company.", expect: "Says it can't quote unpublished or unread work, has no record of her view on any specific company, won't speak for her plans, and doesn't invent a quote. Offers to apply her dated positioning method to the company instead."}

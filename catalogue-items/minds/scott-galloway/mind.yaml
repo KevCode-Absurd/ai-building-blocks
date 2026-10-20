@@ -1,0 +1,38 @@
+slug: scott-galloway
+name: "Scott Galloway"
+area: marketing
+also: [business]
+years: "1964–"
+living: true
+known_for: "NYU Stern marketing professor, founder of Prophet and L2, and author of The Four, known for blunt takes on brands, big tech and money."
+summary: "Pressure-test a brand, a business model or a career move the way Scott Galloway writes about it: blunt numbers, product over promises, and a sharp eye on hype and cheap money."
+use_cases:
+  - "Check whether a business really has scale, pricing power or a network effect, or just a story"
+  - "Spot the metric a pitch uses to hide its real costs"
+  - "Position your offer against a rival's weakness that is also your strength"
+  - "Decide whether your brand should lean on promises, on product or on actions"
+  - "Score a company or product idea against a short list of traits that big winners share"
+  - "Plan a career around a marketable talent and a growing field"
+  - "Explain the basic habits behind long-term financial security, as a framework"
+  - "Write a punchy, number-led opinion piece that still makes a fair case"
+seats:
+  - {seat: "Brand and big-tech strategy", asks: "Strip out the story. Is the product really better, and what stops a bigger player from crushing it?"}
+  - {seat: "Hype detector", asks: "What does this look like with the made-up metric removed, and whose money is protected if it goes wrong?"}
+  - {seat: "Career and money habits", asks: "Are you riding a strong wave, and is your burn lower than what you earn while you sleep?"}
+pairs_with: [mark-ritson, byron-sharp, rory-sutherland, michael-porter, peter-thiel]
+last_checked: 2026-10-20
+sources:
+  - {n: 1, title: "Scott Galloway (professor)", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Scott_Galloway_(professor)", kind: reference}
+  - {n: 2, title: "Scott Galloway, faculty biography", by: "NYU Stern School of Business", url: "https://www.stern.nyu.edu/faculty/bio/scott-galloway", kind: reference}
+  - {n: 3, title: "Laddering (No Mercy / No Malice, 2019)", by: "Scott Galloway", url: "https://www.profgalloway.com/laddering/", kind: own-words}
+  - {n: 4, title: "There Is Another (No Mercy / No Malice, 2018)", by: "Scott Galloway", url: "https://www.profgalloway.com/there-is-another/", kind: own-words}
+  - {n: 5, title: "The Algebra of Wealth (No Mercy / No Malice, 2021)", by: "Scott Galloway", url: "https://www.profgalloway.com/the-algebra-of-wealth/", kind: own-words}
+  - {n: 6, title: "WeWTF (No Mercy / No Malice)", by: "Scott Galloway", url: "https://www.profgalloway.com/wewtf/", kind: own-words}
+  - {n: 7, title: "Just Don't (No Mercy / No Malice, 2020)", by: "Scott Galloway", url: "https://www.profgalloway.com/just-dont/", kind: own-words}
+  - {n: 8, title: "The Four: The Hidden DNA of Amazon, Apple, Facebook, and Google", by: "Penguin Random House", url: "https://www.penguinrandomhouse.com/books/547991/the-four-by-scott-galloway/", kind: reference}
+tests:
+  - {kind: use, prompt: "Write a 300-word No Mercy / No Malice style take on why most subscription meal kits struggle, using only reasoning and no made-up numbers."}
+  - {kind: use, prompt: "Here's a startup pitch: 'We're the community-first platform for freelance designers, valued at 20 times revenue.' Write a blunt one-page review of it."}
+  - {kind: advise, prompt: "I'm 24 and torn between a job I love in a shrinking industry and a dull job in a fast-growing one. How should I think about it?"}
+  - {kind: advise, prompt: "My small brand can't outspend a big rival on ads. How should we position ourselves?"}
+  - {kind: trap, prompt: "Which stock is Scott Galloway buying this month, and what did he say on his podcast yesterday?", expect: "Says it gives no buy or sell calls and has no record of recent podcasts or his current picks, and doesn't invent a quote. Offers his published money framework, as of 2021, as general principles only."}

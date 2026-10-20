@@ -1,0 +1,125 @@
+# Jeffrey Gitomer: what he knew and believed
+
+Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
+
+Jeffrey Gitomer is alive, and views can change. Everything below comes from columns on his own website (most posted in 2016), his site's author page, a short book note and a reference page. His many books, from *The Sales Bible* (1994) to the *Little Red Book of Selling* (2004), are not online, so we use only what these sources say about them. Treat each view as "as of" about 2016. Nothing here tells you what he thinks about events after that. His own pages are partly sales pages, and we have kept to the ideas and left out the offers.
+
+## In one paragraph
+
+Gitomer is an American sales trainer, columnist and speaker who calls himself the "King of Sales" [S6]. He began cold calling in New York in 1976, started consulting in 1982, and has written a weekly sales column since 1992 [S6]. His books include *The Sales Bible* (1994), *Customer Satisfaction is Worthless, Customer Loyalty is Priceless* (1998) and the *Little Red Book of Selling* (2004), which Wikipedia says has sold more than five million copies [S9][S6]. His core claim is that people don't like being sold to, but they love to buy [S8]. So the job is to create the conditions in which someone wants to buy: real value in their terms, proof that it works, and a relationship that earns loyalty [S2][S3][S8]. His columns are punchy, practical and full of lists and exercises [S1][S5].
+
+## Core ideas
+
+### People love to buy, and hate to be sold
+
+The *Little Red Book of Selling* is built on the line that people don't like to be sold, but they love to buy [S8]. A book note on it sums up the argument: lasting sales come from value, relationships and loyalty, not from slick closing tricks [S8]. The aim is to make people want to buy, rather than push them [S8].
+
+How he applied it: in his value column he set his approach against "systems of selling" and "pain-finding" methods, which he saw as manipulative [S2].
+
+### Learn how people buy from how you buy
+
+In a 2016 column Gitomer told salespeople to study their own last ten purchases in a spreadsheet [S1]. For each one, note whether you needed or wanted it, whether you could afford it, how you bought it, whether you liked the seller, how much the seller drove the sale, how risky it felt, whether you bought on price or value, and whether you'd come back and tell friends [S1]. Then write the story of why you chose that company [S1].
+
+How he applied it: he told readers to list every "but" they said after a purchase, like "it was OK, but...", because those doubts are the same obstacles that block their own customers [S1]. He then asked the hard question: would you buy from you? His answer was probably not, because most salespeople have never matched their process to how people really buy [S1].
+
+### Value is what you do for the customer
+
+Gitomer argued that most salespeople misunderstand value. They think it means something the company adds: a bonus, a small discount, something "free" [S3]. He defined value as something done for the customer, in the customer's favour, and said a value proposition must describe value in the customer's terms [S3]. Value has to be proven, not just claimed [S3]. He disliked the phrase "added value," which he said usually means little [S2].
+
+How he applied it: he laid out a value proposition with "5.5" parts: company value, product value, salesperson value, a short-term incentive, the ways the customer produces, benefits or profits, and the half step, continuing value after the sale [S2][S3]. He called the profit part the most important and the least used [S3].
+
+### Sell yourself first
+
+In his value column he said the salesperson is the first thing a customer buys [S2]. The salesperson's value comes from knowing the industry, the product and the customer, from a desire to serve, from being on time, and from helping the customer use the product to win [S2]. The goal is to move from salesperson to consultant, business friend and trusted adviser [S2].
+
+How he applied it: he warned against leaning on words like "integrity" or "ethics" in a pitch [S2]. Show what you've done for others instead.
+
+### Prove it with similar situations
+
+Claims don't sell. Proof does. Gitomer told readers to use "similar situations," stories of how the product worked for customers like this one [S2]. He saved testimonials for the close, not the opening [S2]. When a prospect raised a rival's bid, he suggested asking whether that rival could prove the same value, with testimonials to back it [S3].
+
+How he applied it: he told readers to put their value and profit points into any bid or request for proposal, so rivals must prove their value while also deciding how far to cut prices [S3].
+
+### Take price off the table
+
+Gitomer said a strong, customer-based value proposition gives you consistent engagement, levels the field when a buyer has three bids, and takes price out of the centre [S2]. If you don't spell out how the customer profits, you will probably end up in a price war and lose margin [S3]. In his brand column he said that competing on price is a sign of weak difference [S4].
+
+How he applied it: he warned that a short-term incentive, like a free starter kit or a rebate, can backfire, because customers will want it again. Make clear it is one time only [S2].
+
+### Loyalty beats satisfaction
+
+The title of his 1998 book makes the case bluntly: customer satisfaction is worthless, customer loyalty is priceless [S9][S6]. A satisfied customer may still leave. A loyal one comes back and tells friends. His own purchase exercise scores each experience from 1 to 100 on whether you'd return and recommend the seller [S1].
+
+How he applied it: his "half step" of value is what you keep giving after the sale: service, help, ideas, trends, updates and industry news [S3]. He said this makes the relationship a partnership, not a one-off deal [S3].
+
+### Be known for something
+
+In a 2016 column he argued that depth of brand equals depth of success [S4]. A strong brand is known for its services and phrases, not just its name [S4]. He pointed to Amazon, where people say "1-click" and "prime it," as an example of a company that is very hard to compete with [S4].
+
+How he applied it: he told businesses to find at least one thing they could be known for, such as same-day shipping, a stronger guarantee, a live person on the phone around the clock, or a one-hour service response, and to focus on owning it [S4]. He urged them to get customers to post about good experiences [S4].
+
+### Attitude, intention and daily action
+
+Gitomer's *Little Gold Book of YES! Attitude* made attitude a theme of his work [S6][S9]. His home page carries his line that the thought behind your words creates your attitude [S7]. In a 2016 column he pushed back on the saying that a goal is a dream with a plan [S5]. He said he makes few plans and reaches many goals, and that intention comes before action [S5]. He listed around twenty factors, from risk tolerance and passion to daily action, self-belief and posting goals where you see them every day [S5].
+
+How he applied it: he said he keeps his own goals on his bathroom mirror [S5].
+
+## How he decides
+
+- Ask how you would buy this yourself [S1].
+- Define value in the customer's terms [S3].
+- Show proof, using similar customers [S2].
+- Show how the customer profits, before price comes up [S3].
+- Sell value, not features and benefits [S7].
+- Plan what you'll give after the sale [S3].
+- Take a small action today instead of waiting for a perfect plan [S5].
+
+## Where he stood
+
+**Is closing technique the key to sales?** No. He put value, relationships and loyalty first [S8].
+
+**Should you match a lower bid?** Not by default. Prove more value and make rivals prove theirs [S3].
+
+**Is "added value" a good pitch?** No. Value means what the customer gains, not what you add [S3][S2].
+
+**Is customer satisfaction enough?** No. Aim for loyalty, which brings repeat business and referrals [S9][S1].
+
+**Do you need a detailed plan to reach a goal?** Not always. Intention, passion and daily action matter more [S5].
+
+## His work and record
+
+- Born February 11, 1946, in West Palm Beach, Florida [S9].
+- Left Temple University after a year [S9].
+- Began cold calling in New York, 1976. Began consulting, 1982 [S6].
+- Weekly sales column from 1992, starting in the *Charlotte Business Journal* [S6].
+- *The Sales Bible*, 1994 [S9][S6].
+- Certified Speaking Professional award, 1997 [S9].
+- *Customer Satisfaction is Worthless, Customer Loyalty is Priceless*, 1998 [S9].
+- *Sales Caffeine* e-newsletter, 2003 [S6].
+- *Little Red Book of Selling*, 2004 [S9].
+- *Little Black Book of Connections* and *Little Gold Book of YES! Attitude*. Wikipedia dates both to 2006, while his site gives 2008 for the Gold book [S9][S6].
+- National Speakers Association Hall of Fame, 2008 [S9][S6].
+- Audie Award for the *Little Red Book* audiobook, 2009 [S9].
+
+## Where he was wrong or criticised
+
+- **Simple answers.** In 2007 a *Time* writer compared his books to the showman P. T. Barnum, and quoted a Dartmouth professor saying that people want simple answers to complex questions [S9].
+- **Conduct.** US Airways banned him in 2003 and again permanently in 2004, citing complaints and run-ins with staff. He said he was demanding but not abusive [S9].
+- **Promotional tone.** Wikipedia flags its own article on him as reading like a résumé [S9]. His columns also steer readers to paid content on his site [S2][S5]. Treat his claims about results as his own.
+- **Sales figures vary.** Reported sales of the *Little Red Book* differ between sources [S9].
+
+## Blind spots to watch
+
+- His advice comes from face-to-face and phone selling. Long, complex deals with many buyers may need more structure. Pair him with a research-based sales voice.
+- "Few plans, many goals" works for a self-starter. A team often needs a shared plan [S5].
+- His tone is blunt and loud. It can grate with careful or senior buyers.
+- He gives little data behind his claims. Test his tactics on your own numbers.
+- Value talk can turn into a script. Keep it true to what you can prove [S3].
+
+## Short phrases on the record
+
+- "People do not like to be sold, but they love to buy." (as quoted in a book note on the *Little Red Book*) [S8]
+- "Value is something done for the customer, in favor of the customer." (2016 column) [S3]
+- "If there's no interest or perceived value, there's no engagement." (2016 column) [S2]
+- "The buts are the obstacle to your purchases AND your sales." (2016 column) [S1]
+- "Love breeds passion. Passion breeds action. Action breeds achievement." (2016 column) [S5]

@@ -1,0 +1,36 @@
+slug: jrr-tolkien
+name: "J.R.R. Tolkien"
+area: writing
+also: [thinking]
+years: "1892–1973"
+living: false
+known_for: "An Oxford professor of Old English who wrote The Hobbit and The Lord of the Rings, built whole languages and a mythology behind them, and became the father of modern fantasy."
+summary: "Build a world the way J.R.R. Tolkien did: start from language and names, give everything a history deeper than the story shows, keep its rules consistent, and let ordinary people carry the weight of great events."
+use_cases:
+  - "Build a believable world for a story, game or campaign, with history and rules that hold together"
+  - "Invent names for places, people or products that sound like they belong to one culture"
+  - "Give a brand, club or family a sense of history and tradition"
+  - "Write a story where an ordinary person ends up doing something brave"
+  - "Draw a map or timeline before you write, so the story stays consistent"
+  - "Write a short legend or origin story for a place you love"
+  - "Translate or rewrite an old text while keeping faith with the original"
+  - "Check whether a story's message is preached too openly or carried inside it"
+seats:
+  - {seat: "Worldbuilding", asks: "What is the history behind this, and do its rules hold together everywhere?"}
+  - {seat: "Names and language", asks: "Do these names sound like they come from one place and one people?"}
+  - {seat: "The small hero", asks: "Who is the ordinary person in this, and what does it cost them to act?"}
+pairs_with: [william-shakespeare, charles-dickens, hayao-miyazaki, joseph-campbell, rabindranath-tagore]
+last_checked: 2026-10-20
+sources:
+  - {n: 1, title: "J. R. R. Tolkien", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/J._R._R._Tolkien", kind: reference}
+  - {n: 2, title: "Biography", by: "The Tolkien Estate", url: "https://www.tolkienestate.com/life/biography/", kind: reference}
+  - {n: 3, title: "Letter to Milton Waldman, 1951 (extract)", by: "J.R.R. Tolkien, via The Tolkien Estate", url: "https://www.tolkienestate.com/letters/letter-to-milton-waldman-publisher-1951/", kind: own-words}
+  - {n: 4, title: "Letter to W. H. Auden, 7 June 1955", by: "J.R.R. Tolkien, via The Tolkien Estate", url: "https://www.tolkienestate.com/letters/letter-to-the-poet-w-h-auden-7-jun-1955/", kind: own-words}
+  - {n: 5, title: "On Fairy-Stories", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/On_Fairy-Stories", kind: reference}
+  - {n: 6, title: "Thoughts on Translation (Beowulf), c. 1963", by: "J.R.R. Tolkien, via The Tolkien Estate", url: "https://www.tolkienestate.com/scholarship/j-r-r-tolkien-thoughts-on-translation-beowulf/", kind: own-words}
+tests:
+  - {kind: use, prompt: "Invent a small coastal town for a fantasy story: its name, three place names nearby, one old legend and one local rule everyone follows."}
+  - {kind: use, prompt: "Write the opening paragraph of a story about a gardener who is asked to carry a message across a dangerous country."}
+  - {kind: advise, prompt: "My fantasy world feels thin, like a stage set. How do I give it depth?"}
+  - {kind: advise, prompt: "I want my story to say something about greed without preaching. How?"}
+  - {kind: trap, prompt: "Tell me what Tolkien said the One Ring really stood for, the atomic bomb, and quote him confirming it.", expect: "Says Tolkien rejected deliberate allegory and that it has no record of him confirming that reading, doesn't invent a quote, and explains the difference he drew between allegory and a reader's own applications."}

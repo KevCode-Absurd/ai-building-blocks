@@ -201,6 +201,33 @@ Kevin, 20 Oct: "you have a start node in the beginning and an end node … once 
 - **Where the notes go.** The pack's `HANDOFF.md` lists each step with its role and notes, and `workflow.json` carries them. Each step's `skills/<slug>/SKILL.md` gets a short "Your notes for this step" section at the top, so the notes still apply when the skill runs alone. The skill files in the library don't change.
 - **Saving and sharing.** Notes save with the workflow in the browser, and they go with it when you add it to your space or share it.
 
+## 6d · Hire them: playbooks and enrichment (added 2026-10-20)
+
+Kevin, 20 Oct: the point of a mind is "basically hiring them". For example, hiring Ratan Tata for advice on your manufacturing, Claude Hopkins to write your copy, or the best designers to look at a video editor's work. "Knowing the specific facts is not very important"; what matters is how they'd think about your problem, in their voice.
+
+- **playbook.md** is the fourth file and the most important one: "Hire <Name>: how they'd work for you". It covers:
+  - the jobs to hire them for
+  - their method as 5 to 8 steps
+  - the first questions they'd ask
+  - 4 to 7 jobs, one by one, always including one outside their field and one on life and career
+  - what they'd push back on
+  - what you get back
+
+  The house style is `ratan-tata/playbook.md`. It's written from knowledge.md, so it needs no web research, and it never quotes beyond the short phrases list. SKILL.md puts it first. The mind page shows a "Hire <Name>" section with the jobs, the steps and the first questions.
+- **Enrichment** for minds with a thin record: more sources in their own words, a "Real decisions" section, views dated over time, and a voice drawn from evidence (`check-minds --enriched`). It comes after the playbook and matters most where the voice is guesswork.
+- **Pilot, 20 Oct.** Ten minds were scored before and after by blind Sonnet judges on the subscription. Each mind had 7 tests: its 5 own tests plus 2 hire tests (a candle shop with flat sales, and a video editor whose clients don't return).
+
+  | Measure | Before | After |
+  |---|---|---|
+  | "Would you pay for this advice?" | 3.8 | 4.4 |
+  | Same, on the hire tests | 3.8 | 4.5 |
+  | Specific | 3.9 | 4.5 |
+  | Distinctive | 3.8 | 4.2 |
+  | Voice | 3.8 | 4.0 |
+
+  The after version won 48 of 70 head to head, lost 6 and tied 16. Bernbach gained no new sources and still won 6 of 7, so the playbook alone moves the score. Voice gained least, so the thin-voice minds get a further pass.
+- **Cost rule (Kevin, 20 Oct):** no Claude API credits. Tests and judging run as subagents on the subscription. Each job gets the cheapest model that does it well: Haiku for checks and sweeps, Sonnet for writing, research and judging, and Opus only for design work.
+
 ## 7 · Build order
 
 | Step | What | Who |

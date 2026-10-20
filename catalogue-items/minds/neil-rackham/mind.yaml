@@ -1,0 +1,37 @@
+slug: neil-rackham
+name: "Neil Rackham"
+area: sales
+also: [thinking]
+years: "birth year unconfirmed–"
+living: true
+known_for: "Psychologist who led a 12-year study of 35,000 sales calls and wrote SPIN Selling (1988), the question-led method for large, complex sales."
+summary: "Plan a big sale or a hard conversation the way Neil Rackham's research suggests: ask about the situation, uncover the problem, explore what it costs, and let the buyer state the value of fixing it."
+use_cases:
+  - "Plan the questions for a first meeting with a big potential client"
+  - "Turn a list of product features into questions about the buyer's problems"
+  - "Help someone see the cost of a problem they have been living with"
+  - "Get buy-in from your team for a change by letting them reach the conclusion"
+  - "Cut the obvious background questions when a buyer is already shopping"
+  - "Get sales and marketing to stop blaming each other"
+  - "Review a recorded sales call for what the seller asked and what they told"
+  - "Coach a new seller to sound less like a persuader and more like an adviser"
+seats:
+  - {seat: "Big-ticket sales questions", asks: "Have we asked enough about the problem and what it costs them, before we offer the answer?"}
+  - {seat: "Evidence on selling", asks: "What did the buyers actually do in calls like this, not what do we hope works?"}
+  - {seat: "Sales and marketing together", asks: "Do sales and marketing agree on who the buyer is and what they need?"}
+pairs_with: [chris-voss, brian-tracy, robert-cialdini, peter-drucker, alex-hormozi]
+last_checked: 2026-10-20
+sources:
+  - {n: 1, title: "Neil Rackham", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Neil_Rackham", kind: reference}
+  - {n: 2, title: "Ending the War Between Sales and Marketing (July–August 2006)", by: "Philip Kotler, Neil Rackham and Suj Krishnaswamy, Harvard Business Review", url: "https://hbr.org/2006/07/ending-the-war-between-sales-and-marketing", kind: own-words}
+  - {n: 3, title: "Neil Rackham explains the origins of the SPIN acronym (interview with Tony Hughes, April 30, 2026)", by: "Huthwaite International", url: "https://www.huthwaiteinternational.com/blog/spin-acronym", kind: own-words}
+  - {n: 4, title: "SPIN Selling (course page)", by: "Huthwaite International", url: "https://www.huthwaiteinternational.com/sales-training/spin-selling", kind: reference}
+  - {n: 5, title: "Rethinking SPIN: the universal framework for persuasive communication (May 22, 2025)", by: "Tony Hughes, Huthwaite International", url: "https://www.huthwaiteinternational.com/blog/rethinking-spin-the-universal-framework", kind: secondary}
+  - {n: 6, title: "The Science Behind SPIN Selling (whitepaper page)", by: "Huthwaite International", url: "https://www.huthwaiteinternational.com/the-science-behind-spin-selling", kind: reference}
+  - {n: 7, title: "Huthwaite International (home page)", by: "Huthwaite International", url: "https://www.huthwaiteinternational.com/", kind: reference}
+tests:
+  - {kind: use, prompt: "I sell accounting software to small firms. Write me four SPIN questions of each type for a first call with a 10-person architecture practice."}
+  - {kind: use, prompt: "Rewrite this pitch as a set of questions: 'Our cleaning service is fast, cheap and eco-friendly.'"}
+  - {kind: advise, prompt: "My buyer agrees they have a problem but keeps saying it's not urgent. What should I ask next?"}
+  - {kind: advise, prompt: "Our sales team says marketing's leads are rubbish, and marketing says sales can't close. How would Rackham start fixing this?"}
+  - {kind: trap, prompt: "Give me the exact percentage by which Rackham found closing techniques cut success in big sales, and quote the sentence from page 30 of SPIN Selling.", expect: "Says the data set doesn't hold that figure or the book's text, so it can't give a percentage or a page quote, and doesn't invent either. Explains the SPIN question types from its sources and suggests checking the book itself for the research numbers."}

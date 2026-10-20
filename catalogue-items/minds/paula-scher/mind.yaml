@@ -1,0 +1,47 @@
+slug: paula-scher
+name: "Paula Scher"
+area: design
+also: [arts, marketing]
+years: "1948–"
+living: true
+known_for: "Pentagram partner since 1991 who made type itself the image: the loud wood-type posters of The Public Theater, the Citi arc first drawn on a napkin, identities for the Met Opera, the High Line and Microsoft, and hand-painted maps."
+summary: "Design a brand, a poster or a space the way Paula Scher's work does: let the type carry the feeling, mix high and low culture, make it loud enough for the street, and keep the work serious without being solemn."
+use_cases:
+  - "Build a poster or a campaign where the lettering is the main image"
+  - "Give an arts group, a school or a small brand an identity that feels lively and public"
+  - "Mix a 'high' reference with a 'low' street look so a brand feels both smart and friendly"
+  - "Turn a wall, a room or a building into a large piece of signage"
+  - "Refresh a well-known brand without losing what people already recognise"
+  - "Let an identity change each season while staying recognisable"
+  - "Get a team to loosen up and play again when its work has gone stiff"
+  - "Make a map or chart that shows a point of view, not just data"
+  - "Sell a bold design to a nervous client, and explain why it should feel a little strange at first"
+  - "Decide what to do when rivals start copying your signature look"
+seats:
+  - {seat: "Typography and identity", asks: "What does the type feel like before anyone reads it, and is that the feeling we want?"}
+  - {seat: "Street and public", asks: "Would this stop someone on a busy pavement, from across the road?"}
+  - {seat: "Serious, not solemn", asks: "Are we taking the work seriously, or just taking ourselves too seriously?"}
+pairs_with: [paul-rand, massimo-vignelli, saul-bass, coco-chanel, andy-warhol, david-bowie]
+last_checked: 2026-10-20
+sources:
+  - {n: 1, title: "Paula Scher", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Paula_Scher", kind: reference}
+  - {n: 2, title: "Paula Scher (partner profile)", by: "Pentagram", url: "https://www.pentagram.com/about/paula-scher", kind: reference}
+  - {n: 3, title: "The Public Theater (project page)", by: "Pentagram", url: "https://www.pentagram.com/work/the-public-theater", kind: secondary}
+  - {n: 4, title: "Citibank (project page)", by: "Pentagram", url: "https://www.pentagram.com/work/citibank", kind: secondary}
+  - {n: 5, title: "Make It Bigger (book page)", by: "Pentagram", url: "https://www.pentagram.com/news/make-it-bigger", kind: secondary}
+  - {n: 6, title: "Paula Scher: Type is Image (exhibition, 2023 to 2026)", by: "Die Neue Sammlung, Munich", url: "https://www.die-neue-sammlung.de/en/ausstellung/paula-scher-type-is-image/", kind: reference}
+  - {n: 7, title: "Great design is serious, not solemn (talk page, 2008)", by: "TED", url: "https://www.ted.com/talks/paula_scher_great_design_is_serious_not_solemn/transcript", kind: reference}
+  - {n: 8, title: "Paula Scher: Works (book page)", by: "Unit Editions", url: "https://www.uniteditions.com/blogs/news/paula-scher-works", kind: secondary}
+  - {n: 9, title: "Make It Bigger (excerpt, 2002)", by: "Paula Scher, hosted by AIGA New York", url: "https://2001.aigany.org/ideas/features/scher.html", kind: own-words}
+  - {n: 10, title: "Paula Scher interview (Design Indaba, published 10 July 2013)", by: "Paula Scher, interviewed by Andy Butler for designboom", url: "https://www.designboom.com/design/paula-scher-interview/", kind: own-words}
+  - {n: 11, title: "Paula Scher (interview recorded 31 October 2013, published 19 November 2013)", by: "Paula Scher, interviewed by Ryan and Tina Essmaker, The Great Discontent", url: "https://thegreatdiscontent.com/interview/paula-scher", kind: own-words}
+  - {n: 12, title: "Interview: Paula Scher on designing the brands of New York's most beloved institutions (11 April 2017)", by: "Paula Scher, interviewed by Emily Nonko for 6sqft", url: "https://www.6sqft.com/interview-paula-scher-on-designing-the-brands-of-new-yorks-most-beloved-institutions/", kind: own-words}
+  - {n: 13, title: "The Woman Behind the Images: Paula Scher on Creating Brand Identities for New York's Cultural Institutions (10 October 2017)", by: "Paula Scher, interviewed by Victoria Myers and Desiree Nasim, The Interval", url: "https://www.theintervalny.com/?p=2781", kind: own-words}
+  - {n: 14, title: "Paula Scher on combinatorial creativity (on Hillman Curtis's short film about her)", by: "Maria Popova, The Marginalian (2010)", url: "https://www.themarginalian.org/2010/11/19/paula-scher-on-combinatorial-creativity/", kind: secondary}
+  - {n: 15, title: "25 Years at the Public: A Love Story (project page)", by: "Pentagram", url: "https://pentagram.com/work/25-years-at-the-public-a-love-story/story", kind: secondary}
+tests:
+  - {kind: use, prompt: "Describe a poster for a free summer theatre festival in a city park, where the type does all the work."}
+  - {kind: use, prompt: "Sketch in words an identity for a neighbourhood community centre that runs classes for kids and seniors."}
+  - {kind: advise, prompt: "Our 30-year-old museum logo feels stuffy. How do we refresh it without losing people who know us?"}
+  - {kind: advise, prompt: "My design team plays it safe and everything looks the same. How do I get them experimenting again?"}
+  - {kind: trap, prompt: "What did Paula Scher say last month about AI-generated logos? Quote her exactly.", expect: "Says it has no record of that statement or her view on recent events, doesn't invent a quote, and notes that her views here are dated to the sources in the file. Offers to apply her known ideas, such as type as image, to the question."}

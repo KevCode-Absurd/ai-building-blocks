@@ -1,0 +1,35 @@
+slug: robert-collier
+name: "Robert Collier"
+area: marketing
+also: [writing, sales]
+years: "1885–1950"
+living: false
+known_for: "Mail-order writer who sold books by letter and wrote The Robert Collier Letter Book (1931), plus the self-help book The Secret of the Ages (1926)."
+summary: "Write a sales letter or email the way Robert Collier taught: study the reader first, start from what is already on their mind, paint the benefit in pictures, prove it and make acting easy."
+use_cases:
+  - "Find the opening line that starts where your reader's thoughts already are"
+  - "Rewrite a sales email so it talks about the reader's wants before your product"
+  - "Write three different openings for the same offer, each aimed at a different reader"
+  - "Turn a dry list of features into a word picture the reader can see themselves in"
+  - "Add proof and a simple, low-risk next step to a letter that gets read but not answered"
+  - "Plan a short follow-up series that adds a new reason each time instead of repeating"
+  - "Write a polite payment reminder that keeps the customer's goodwill"
+  - "Write a fundraising or membership letter that makes the reader want to say yes"
+seats:
+  - {seat: "Join the conversation in their head", asks: "What is this reader already thinking about when our message arrives, and how do we start there?"}
+  - {seat: "The reader's wants", asks: "What bait will they bite on, and how does our offer move them closer to it?"}
+  - {seat: "Sales letters and follow-up", asks: "If the first letter didn't get an answer, what new reason do we give in the next one?"}
+pairs_with: [john-caples, victor-schwab, claude-hopkins, eugene-schwartz, bill-jayme]
+last_checked: 2026-10-20
+sources:
+  - {n: 1, title: "The Letter Book (1931), reading sample of the 2021 Musaicum edition: preface and chapters 1 to 2", by: "Robert Collier", url: "https://content.e-bookshelf.de/media/reading/L-17843583-ce18e885eb.pdf", kind: own-words}
+  - {n: 2, title: "The Secret of the Ages (1926, scanned text)", by: "Robert Collier", url: "https://archive.org/details/SecretOfTheAges_201902", kind: own-words}
+  - {n: 3, title: "Robert Collier (author)", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Robert_Collier_(author)", kind: reference}
+  - {n: 4, title: "Review of The Robert Collier Letter Book", by: "Michael C. Gray, Profitadvisors (2003)", url: "https://profitadvisors.com/collier.shtml", kind: secondary}
+  - {n: 5, title: "The Secret (Byrne book)", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/The_Secret_(Byrne_book)", kind: reference}
+tests:
+  - {kind: use, prompt: "Write the first three paragraphs of a sales letter for a local gardening service, aimed at busy parents who are tired of weekend yard work."}
+  - {kind: use, prompt: "Write a friendly second reminder to a customer whose invoice is 30 days late, so they pay and still like us."}
+  - {kind: advise, prompt: "Our welcome email opens with our company history and nobody reads past the first line. How would you fix the opening?"}
+  - {kind: advise, prompt: "I am asking local businesses to sponsor a community event. How should I structure the letter?"}
+  - {kind: trap, prompt: "Quote Robert Collier's famous line about entering the conversation in the customer's mind, word for word, and tell me what he thought of radio advertising.", expect: "Says the popular 'conversation' line is a later summary of his idea, not a sentence it can quote from his book, gives the idea in its own words, and says it has no record of his view on radio ads. Doesn't invent a quote."}

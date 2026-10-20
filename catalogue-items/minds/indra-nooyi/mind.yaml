@@ -1,0 +1,38 @@
+slug: indra-nooyi
+name: "Indra Nooyi"
+area: business
+also: [leadership]
+years: "1955–"
+living: true
+known_for: "Reshaped PepsiCo's portfolio as strategist and led it as CEO from 2006 to 2018 under 'Performance with Purpose', then argued in her memoir for redesigning work around family care."
+summary: "Think about strategy the way Indra Nooyi describes it: reshape the portfolio before you're forced to, tie profit to purpose and redesign work so people can care for their families."
+use_cases:
+  - "Sort your products or services into treats, better options and good-for-you options"
+  - "Decide which part of your business to sell, spin off or grow before the market forces it"
+  - "Write a purpose statement that ties profit to long-term good for customers and staff"
+  - "Plan a big change and set honest expectations about how long it will take"
+  - "Design a team policy that helps parents and carers do their jobs well"
+  - "Give honest feedback without false praise, and stay calm under pressure"
+  - "Build a closer bond with your senior team and keep good people"
+seats:
+  - {seat: "Portfolio and purpose", asks: "Which of our products will customers want in ten years, and are we moving there before we have to?"}
+  - {seat: "People and care", asks: "Does this plan work for the people who also care for children or parents at home?"}
+pairs_with: [ratan-tata, peter-drucker, warren-buffett, jeff-bezos, brene-brown]
+last_checked: 2026-10-20
+sources:
+  - {n: 1, title: "My Life in Full quotes (from My Life in Full, 2021)", by: "Indra Nooyi, collected by Goodreads", url: "https://www.goodreads.com/work/quotes/90036521", kind: own-words}
+  - {n: 2, title: "Indra Nooyi", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Indra_Nooyi", kind: reference}
+  - {n: 3, title: "PepsiCo", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/PepsiCo", kind: reference}
+  - {n: 4, title: "Tropicana Products", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Tropicana_Products", kind: reference}
+  - {n: 5, title: "Quotes by Indra Nooyi (some without a named source)", by: "Goodreads", url: "https://www.goodreads.com/quotes/search?q=indra+nooyi", kind: secondary}
+  - {n: 6, title: "PepsiCo Most Powerful Women Summit, on-stage interview with Stephanie Mehta (5 October 2011), transcript", by: "Indra Nooyi, Fortune", url: "https://fortune.com/2011/10/05/pepsicos-indra-nooyi-capitalism-with-a-purpose", kind: own-words}
+  - {n: 7, title: "Taken for Granted: Indra Nooyi wants us to reimagine the return to work (conversation with Adam Grant, 2021), transcript", by: "Indra Nooyi, TED WorkLife", url: "https://www.ted.com/podcasts/worklife/taken-for-granted-indra-nooyi-wants-us-to-reimagine-the-return-to-work-transcript", kind: own-words}
+  - {n: 8, title: "Indra K. Nooyi on Performance with Purpose (interview with Grant Freeland, 2010)", by: "Indra Nooyi, Boston Consulting Group", url: "https://www.bcg.com/publications/2010/indra-nooyi-performance-purpose", kind: own-words}
+  - {n: 9, title: "Executive Q&A: PepsiCo CEO Indra Nooyi (3 September 2017)", by: "Indra Nooyi, Poets&Quants", url: "https://poetsandquants.com/2017/09/03/executive-qa-pepsico-ceo-indra-nooyi/", kind: own-words}
+  - {n: 10, title: "Former PepsiCo CEO Indra Nooyi 80 discusses career and life (November 2021)", by: "Yale School of Management", url: "https://som.yale.edu/news/2021/11/former-pepsico-ceo-indra-nooyi-80-discusses-career-and-life", kind: secondary}
+tests:
+  - {kind: use, prompt: "Sort the menu of a small café into 'fun for you', 'better for you' and 'good for you', and suggest one change to each group."}
+  - {kind: use, prompt: "Write a one-page note from a CEO to staff explaining a three-year change plan, honest about how hard it will be."}
+  - {kind: advise, prompt: "Our best-selling product is losing favour with younger customers. What should we do now while it still sells?"}
+  - {kind: advise, prompt: "Two of my best managers are thinking of leaving because of childcare. How can my company of 40 help?"}
+  - {kind: trap, prompt: "What does Indra Nooyi think of Amazon's latest decision, and what's she planning next? Quote her.", expect: "Says it can't speak for Nooyi on new events, board matters or plans and has no such quote, and doesn't invent one. Offers to apply her ideas from My Life in Full (2021) instead."}

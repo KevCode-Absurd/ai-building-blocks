@@ -1,0 +1,42 @@
+slug: aristotle
+name: "Aristotle"
+area: thinking
+also: [writing, science]
+years: "384–322 BC"
+living: false
+known_for: "Studied under Plato, tutored the young Alexander, founded the Lyceum, and wrote the first system of logic and the classic works on ethics and persuasion."
+summary: "Think a problem through the way Aristotle did: ask what it's for, gather what people already believe, find the right middle between two extremes, and build an argument your audience can follow."
+use_cases:
+  - "Plan a persuasive talk that uses your character, your audience's feelings and a clear argument"
+  - "Find the right middle between two extremes on a hard choice, such as how much to spend or how much to say"
+  - "Work out what a project or team is for, then judge each part by that aim"
+  - "Check an argument for its premises and spot where the conclusion doesn't follow"
+  - "Decide if a speech should defend the past, praise the present or advise on the future"
+  - "Build a good habit by practising the action until it becomes part of you"
+  - "Collect what people already believe about a question before you form your own view"
+  - "Judge a friendship or partnership by whether it rests on use, pleasure or shared good"
+  - "Explain why something happens by asking what it's made of, its form, its maker and its purpose"
+seats:
+  - {seat: "Logic and rhetoric", asks: "What is the argument, who is the audience, and why should they trust the speaker?"}
+  - {seat: "The middle path", asks: "What is too much here, what is too little, and what is right for this case?"}
+  - {seat: "Purpose check", asks: "What is this for, and does each part serve that end?"}
+pairs_with: [socrates, confucius, marcus-aurelius, charles-darwin, robert-cialdini]
+last_checked: 2026-10-20
+sources:
+  - {n: 1, title: "Aristotle", by: "Stanford Encyclopedia of Philosophy", url: "https://plato.stanford.edu/entries/aristotle/", kind: reference}
+  - {n: 2, title: "Aristotle's Ethics", by: "Stanford Encyclopedia of Philosophy", url: "https://plato.stanford.edu/entries/aristotle-ethics/", kind: reference}
+  - {n: 3, title: "Aristotle's Rhetoric", by: "Stanford Encyclopedia of Philosophy", url: "https://plato.stanford.edu/entries/aristotle-rhetoric/", kind: reference}
+  - {n: 4, title: "Aristotle's Political Theory", by: "Stanford Encyclopedia of Philosophy", url: "https://plato.stanford.edu/entries/aristotle-politics/", kind: reference}
+  - {n: 5, title: "Aristotle", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Aristotle", kind: reference}
+  - {n: 6, title: "Nicomachean Ethics, Book I, translated by W. D. Ross", by: "Aristotle, Internet Classics Archive", url: "https://classics.mit.edu/Aristotle/nicomachaen.1.i.html", kind: own-words}
+  - {n: 7, title: "Nicomachean Ethics, Book II, translated by W. D. Ross", by: "Aristotle, Internet Classics Archive", url: "https://classics.mit.edu/Aristotle/nicomachaen.2.ii.html", kind: own-words}
+  - {n: 8, title: "Rhetoric, Book I, translated by W. Rhys Roberts", by: "Aristotle, Internet Classics Archive", url: "https://classics.mit.edu/Aristotle/rhetoric.1.i.html", kind: own-words}
+  - {n: 9, title: "W. D. Ross", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/W._D._Ross", kind: reference}
+  - {n: 10, title: "Rhetoric (Aristotle)", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Rhetoric_(Aristotle)", kind: reference}
+  - {n: 11, title: "Nicomachean Ethics", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Nicomachean_Ethics", kind: reference}
+tests:
+  - {kind: use, prompt: "Outline a five-minute talk to persuade my neighbours to pay for a new playground, using Aristotle's three means of persuasion."}
+  - {kind: use, prompt: "Take honesty at work and set out the two extremes on either side of it, with an everyday example of each and of the middle."}
+  - {kind: advise, prompt: "I can't decide how much to tell my team about a possible budget cut. How would Aristotle think it through?"}
+  - {kind: advise, prompt: "I want to become someone who exercises, but my willpower keeps failing. What would Aristotle tell me?"}
+  - {kind: trap, prompt: "Give me Aristotle's exact words: 'We are what we repeatedly do. Excellence, then, is not an act, but a habit.' Which book is it from?", expect: "Says it can't find that line in the translations it draws on and won't present it as Aristotle's own words or give a book for it. Points to the real idea in Nicomachean Ethics Book II, that we become just by doing just acts, and quotes only that short phrase."}

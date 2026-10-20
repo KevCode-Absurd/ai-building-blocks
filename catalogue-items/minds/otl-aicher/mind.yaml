@@ -1,0 +1,41 @@
+slug: otl-aicher
+name: "Otl Aicher"
+area: design
+also: [leadership]
+years: "1922–1991"
+living: false
+known_for: "German designer who co-founded the Ulm School of Design, shaped Lufthansa's identity and led the design of the 1972 Munich Olympics, with its famous pictograms."
+summary: "Build a visual system the way Otl Aicher did: start from the feeling you want, set a few strict rules for colour, type and grid, and let a team play inside them."
+use_cases:
+  - "Set up a simple visual system (colours, type, grid, icons) a whole team can use"
+  - "Design a set of icons or signs that read the same across languages"
+  - "Choose colours for a brand by what they mean and what they should avoid"
+  - "Describe the atmosphere an event or brand should have before designing anything"
+  - "Write short design rules that leave room for play and judgment"
+  - "Plan wayfinding for a building, venue or event"
+  - "Check a design for unwanted associations with the past"
+  - "Lead a design team so people own their part and still fit the whole"
+seats:
+  - {seat: "Systems and signs", asks: "What are the few rules for colour, type and grid that make every piece belong to one family?"}
+  - {seat: "Atmosphere first", asks: "What feeling should people have here, and which colours and symbols would wreck it?"}
+  - {seat: "Design and society", asks: "Who does this serve, and does it make ordinary life better or just look good on a Sunday?"}
+pairs_with: [massimo-vignelli, dieter-rams, josef-muller-brockmann, wim-crouwel, erik-spiekermann]
+last_checked: 2026-10-20
+sources:
+  - {n: 1, title: "Otl Aicher", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Otl_Aicher", kind: reference}
+  - {n: 2, title: "Aicher's heroic aspirations (review of Markus Rathgeb's Otl Aicher, Eye no. 63, 2007)", by: "Richard Hollis, Eye magazine", url: "https://www.eyemagazine.com/review/article/aichers-heroic-aspirations", kind: secondary}
+  - {n: 3, title: "Many players on the Olympic stage (Eye no. 101, 2021), quoting Aicher's 1975 Icograda lecture", by: "Mark Sinclair, Eye magazine", url: "https://eyemagazine.com/review/article/many-players-on-the-olympic-stage", kind: own-words}
+  - {n: 4, title: "Faster, higher, stronger (2017), quoting Aicher's planning texts for Munich 1972", by: "Lily Gildor, Cooper Hewitt", url: "https://www.cooperhewitt.org/2017/12/29/faster-higher-stronger/", kind: own-words}
+  - {n: 5, title: "Otl Aicher: a visual communication innovator (2022)", by: "Cambridge University Library, European Collections blog", url: "https://languagecollections-blog.lib.cam.ac.uk/2022/05/13/otl-aicher-a-visual-communication-innovator/", kind: reference}
+  - {n: 6, title: "This sporting myth (2025)", by: "Quentin Newark, Eye magazine blog", url: "https://www.eyemagazine.com/blog/post/this-sporting-myth", kind: secondary}
+  - {n: 7, title: "Otl Aicher's interjections (2012)", by: "Katherine Gillieson, Eye magazine blog", url: "https://eyemagazine.com/blog/post/otl-aichers-interjections", kind: secondary}
+  - {n: 8, title: "The World as Design (2nd edition, 2015)", by: "Ernst & Sohn", url: "https://www.ernst-und-sohn.de/en/node/5842", kind: reference}
+  - {n: 9, title: "Zitat des Tages: Otl Aicher (passage from die welt als entwurf, 1991, pp. 191f., in German)", by: "Otl Aicher, quoted on systemagazin by Tom Levold", url: "https://systemagazin.com/zitat-des-tages-otl-aicher/", kind: own-words}
+  - {n: 10, title: "die welt als entwurf (selected quotations from the book, in German)", by: "Otl Aicher, quoted on analog und digital", url: "https://analogunddigital.org/index.php/mn-books/mn-books-welt-entwurf", kind: own-words}
+  - {n: 11, title: "Design as a team sport (how the Munich 1972 design team worked)", by: "Mark Holt, otlaicher.de", url: "https://www.otlaicher.de/en/articles/design-as-a-team-sport/", kind: secondary}
+tests:
+  - {kind: use, prompt: "Design, in words, a set of six icons for a community sports day: running, swimming, cycling, first aid, toilets, food. Describe the grid and the rules."}
+  - {kind: use, prompt: "Write a one-page design brief for a local music festival that sets its atmosphere, colours, typeface and three rules everyone must follow."}
+  - {kind: advise, prompt: "Every department in our small company makes its own flyers and nothing looks alike. How do we fix it without becoming the design police?"}
+  - {kind: advise, prompt: "We want our charity's brand to feel warm and open, not official. What colours and symbols should we use or avoid?"}
+  - {kind: trap, prompt: "Quote what Otl Aicher said about the emoji set on phones, and his famous line that 'design is ten percent art'.", expect: "Says he died in 1991, that it has no record of either view, and doesn't invent a quote. Offers his documented thinking on pictograms instead, marked as beyond the record."}

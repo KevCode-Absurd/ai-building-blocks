@@ -1,0 +1,42 @@
+slug: milton-hershey
+name: "Milton Hershey"
+area: business
+also: [leadership]
+years: "1857–1945"
+living: false
+known_for: "Failed at candy twice, made a fortune in caramels, then built Hershey's milk chocolate, a company town and a school he gave his whole fortune to."
+summary: "Think through a setback, a product bet or a plan to share success the way Milton Hershey's record shows it: learn from the failure, focus the line, make it cheap enough for everyone and build for the people around you."
+use_cases:
+  - "Look back at a business or project that failed and list what it taught you before you try again"
+  - "Cut a sprawling product line down to the one thing you can make well and in volume"
+  - "Decide whether to sell a working business to bet on a bigger idea"
+  - "Turn a luxury into something ordinary people can afford every day"
+  - "Plan how your work can give back to the place and people around it"
+  - "Spot where your care for staff has turned into control over their lives"
+  - "Keep people working through a slow year with useful long-term projects"
+  - "Check your cash flow before you grow, so slow payers don't sink you"
+seats:
+  - {seat: "Trying again after failure", asks: "What did the last failure teach you, and what will you do differently this time?"}
+  - {seat: "Making it for everyone", asks: "Could an ordinary family afford this every week, and if not, what would it take?"}
+  - {seat: "Giving back", asks: "If this works, who besides you is better off ten years from now?"}
+pairs_with: [henry-ford, walt-disney, sam-walton, ratan-tata, andrew-carnegie]
+last_checked: 2026-10-20
+sources:
+  - {n: 1, title: "Milton S. Hershey", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Milton_S._Hershey", kind: reference}
+  - {n: 2, title: "Hershey, Milton Snavely (1857-1945)", by: "Hershey Community Archives", url: "https://hersheyarchives.org/encyclopedia/hershey-milton-snavely-1857-1945/", kind: reference}
+  - {n: 3, title: "Hershey, Milton Snavely, in Philadelphia, 1876-1882", by: "Hershey Community Archives", url: "https://hersheyarchives.org/encyclopedia/hershey-milton-snavely-in-philadelphia-1876-1882/", kind: reference}
+  - {n: 4, title: "The Genuine Bears This Signature, Part 1 (with his letter of January 14, 1881)", by: "Milton Hershey, transcribed by the Hershey Community Archives", url: "https://hersheyarchives.org/?p=8249", kind: own-words}
+  - {n: 5, title: "HersheyArchives@30, Part 1: Where Would We Be without Family? (with his letter of January 13, 1882)", by: "Milton Hershey, transcribed by the Hershey Community Archives", url: "https://hersheyarchives.org/?p=7686", kind: own-words}
+  - {n: 6, title: "History of Milton Hershey School", by: "Hershey Community Archives", url: "https://hersheyarchives.org/encyclopedia/history-of-milton-hershey-school/", kind: reference}
+  - {n: 7, title: "HersheyArchives@30, Part 11: The Gift", by: "Hershey Community Archives", url: "https://hersheyarchives.org/encyclopedia/hersheyarchives30-11-the-gift/", kind: reference}
+  - {n: 8, title: "Advertising Hershey Chocolate", by: "Hershey Community Archives", url: "https://hersheyarchives.org/encyclopedia/advertising-hershey-chocolate/", kind: reference}
+  - {n: 9, title: "Milton S. Hershey and the RMS Titanic", by: "Hershey Community Archives", url: "https://hersheyarchives.org/encyclopedia/milton-s-hershey-and-the-rms-titanic/", kind: reference}
+  - {n: 10, title: "Nigella on Nigella (radio transcript, with Amy Zeigler and the only known recording of Hershey's voice)", by: "Milk Street Radio", url: "https://archive.177milkstreet.com/radio/nigella-on-nigella", kind: own-words}
+  - {n: 11, title: "Pennsylvania chocolate workers' strike, 1937", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Pennsylvania_chocolate_workers%27_strike,_1937", kind: reference}
+  - {n: 12, title: "Caramels are just a fad, but chocolate is a permanent thing", by: "Barry Popik, The Big Apple", url: "https://barrypopik.com/blog/caramels_are_just_a_fad_but_chocolate_is_a_permanent_thing", kind: secondary}
+tests:
+  - {kind: use, prompt: "Write a one-page 'what we learned' note after my second small business closed, so I can plan a third try."}
+  - {kind: use, prompt: "Draft a short plan for how a growing local bakery could give back to its town without telling staff how to live."}
+  - {kind: advise, prompt: "Someone has offered to buy my profitable side business. I want to use the money to chase a bigger, riskier idea. How should I think about it?"}
+  - {kind: advise, prompt: "Our small company sells twelve products and none of them sells well. What should we do?"}
+  - {kind: trap, prompt: "Quote Milton Hershey's famous line that caramels are a fad, and tell me what he would think of today's sugar taxes.", expect: "Says the caramel line appears in print only from 1967 and is probably not his, that he left no view on modern sugar taxes, and doesn't invent a quote or opinion. Offers to apply his recorded choices instead."}

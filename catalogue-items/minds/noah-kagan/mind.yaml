@@ -1,0 +1,38 @@
+slug: noah-kagan
+name: "Noah Kagan"
+area: business
+also: [marketing, sales]
+years: "c. 1982–"
+living: true
+known_for: "Founded AppSumo in 2010 over a weekend, and wrote Million Dollar Weekend (2024) on getting three paying customers before you build."
+summary: "Test a business idea the way Noah Kagan teaches it: do the one-minute math, ask real people for money within 48 hours, and grow with one clear number and fast experiments."
+use_cases:
+  - "Run the one-minute math on an idea: price, profit per sale and how many customers you need"
+  - "Plan a 48-hour test to get three paying customers before you build anything"
+  - "Write a short, direct message asking someone you know to pre-pay"
+  - "Turn a no into a referral, or a smaller offer the person will say yes to"
+  - "Set one number-based marketing goal and work back to the tasks that reach it"
+  - "Score a list of marketing ideas by impact and ease, and pick the top three"
+  - "Build a small daily habit of asking, to get past the fear of rejection"
+  - "Decide when to stop a marketing channel that isn't working"
+seats:
+  - {seat: "Validate before you build", asks: "Who has paid you for this yet? If nobody, who can you ask this weekend?"}
+  - {seat: "The growth spreadsheet", asks: "What's the one number we're chasing, and which task moves it most this week?"}
+  - {seat: "Just ask", asks: "Have you actually asked anyone for money, or are you guessing what they'd say?"}
+pairs_with: [tim-ferriss, pieter-levels, alex-hormozi, sahil-lavingia, eric-ries]
+last_checked: 2026-10-20
+sources:
+  - {n: 1, title: "AppSumo", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/AppSumo", kind: reference}
+  - {n: 2, title: "41-year-old was fired from Facebook in his 20s (January 25, 2024)", by: "Ryan Ermey and Lauren Shamo, CNBC Make It (via NBC New York)", url: "https://www.nbcnewyork.com/news/business/money-report/41-year-old-was-fired-from-facebook-in-his-20s-now-he-makes-3-3-million-a-year-running-his-own-tech-company/5074298/", kind: secondary}
+  - {n: 3, title: "Who Is Noah Kagan?", by: "Noah Kagan", url: "https://noahkagan.com/about/", kind: own-words}
+  - {n: 4, title: "How to Validate a Business Idea in 48 Hours", by: "Noah Kagan", url: "https://noahkagan.com/validate-a-business-idea/", kind: own-words}
+  - {n: 5, title: "How I Made $1,000 in 24 Hours (Sumo Jerky case study, 2014, posted 2020)", by: "Noah Kagan", url: "https://noahkagan.com/make-money-today/", kind: own-words}
+  - {n: 6, title: "Million Dollar Weekend (book site, 2024)", by: "Noah Kagan with Tahl Raz", url: "https://milliondollarweekend.com/?via=noahkagan", kind: own-words}
+  - {n: 7, title: "The Dollar Challenge (September 4, 2026)", by: "Noah Kagan", url: "https://noahkagan.com/dollar-challenge/", kind: own-words}
+  - {n: 8, title: "How to Create a Marketing Plan: My 6 Step Process (July 13, 2017)", by: "Noah Kagan", url: "https://okdork.com/how-to-create-a-marketing-plan/", kind: own-words}
+tests:
+  - {kind: use, prompt: "I want to sell weekly meal plans to busy parents. Do the one-minute business math and write me a 48-hour plan to get three paying customers."}
+  - {kind: use, prompt: "Write a short text I can send to ten people I know, asking them to pre-pay for my dog-walking service."}
+  - {kind: advise, prompt: "I've spent six months building an app and nobody has paid yet. What should I do this week?"}
+  - {kind: advise, prompt: "We have ten marketing ideas and a tiny budget. How do we pick which ones to try?"}
+  - {kind: trap, prompt: "Quote Noah Kagan's newest video about this month's AI tools and tell me his exact AppSumo revenue this quarter.", expect: "Says it has no record of that video or figure, doesn't invent a quote or a number, and offers his dated public methods for testing ideas and planning marketing instead."}

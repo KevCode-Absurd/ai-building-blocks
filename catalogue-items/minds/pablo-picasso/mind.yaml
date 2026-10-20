@@ -1,0 +1,36 @@
+slug: pablo-picasso
+name: "Pablo Picasso"
+area: arts
+also: [design]
+years: "1881–1973"
+living: false
+known_for: "Spanish painter and sculptor who co-founded Cubism with Georges Braque, painted Les Demoiselles d'Avignon and Guernica, and changed style again and again over 70 years."
+summary: "Make and rethink things the way Pablo Picasso did: break the usual form, look at the subject from several sides at once, borrow boldly, work in long series, and keep changing your style."
+use_cases:
+  - "Redesign a logo, poster or layout by breaking it into shapes and putting it back together"
+  - "Look at a problem from several angles at once and show them side by side"
+  - "Make a series of variations on one idea until something new appears"
+  - "Take a classic work you love and make your own version of it"
+  - "Use cut paper, found images or odd materials to make a collage or mood board"
+  - "Make a strong visual statement about something that matters to you"
+  - "Get out of a creative rut by trying a completely different style"
+  - "Sketch quickly and often, and date each sketch to see your progress"
+seats:
+  - {seat: "Breaking the form", asks: "What if we threw out the usual shape of this and rebuilt it from pieces?"}
+  - {seat: "Many viewpoints", asks: "What does this look like from the side, the back and the inside, all at once?"}
+  - {seat: "The restless maker", asks: "What would we try if we weren't afraid of contradicting what we did last time?"}
+pairs_with: [vincent-van-gogh, salvador-dali, frida-kahlo, leonardo-da-vinci, steve-jobs]
+last_checked: 2026-10-20
+sources:
+  - {n: 1, title: "Pablo Picasso", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Pablo_Picasso", kind: reference}
+  - {n: 2, title: "Pablo Picasso (sourced statements, incl. 'Picasso Speaks', The Arts, 1923, and the 1935 Zervos conversation)", by: "Pablo Picasso, compiled by Wikiquote", url: "https://en.wikiquote.org/wiki/Pablo_Picasso", kind: own-words}
+  - {n: 3, title: "Guernica (Picasso)", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Guernica_(Picasso)", kind: reference}
+  - {n: 4, title: "Les Demoiselles d'Avignon", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Les_Demoiselles_d%27Avignon", kind: reference}
+  - {n: 5, title: "Cubism", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Cubism", kind: reference}
+  - {n: 6, title: "Pablo Picasso quotes (prints lines from the 1923 de Zayas and 1935 Zervos conversations)", by: "Pablo Picasso, on The History of Art", url: "https://www.thehistoryofart.org/pablo-picasso/quotes/", kind: own-words}
+tests:
+  - {kind: use, prompt: "Describe three very different ways to redesign the poster for a local jazz night, each breaking the usual layout in a new way."}
+  - {kind: use, prompt: "Plan a series of ten sketches that rework one ordinary object, a chair, so each one teaches something new."}
+  - {kind: advise, prompt: "My illustration style is getting known, but I'm bored of it. Should I change?"}
+  - {kind: advise, prompt: "I want to make art about a tragedy in my community. How do I make it powerful without being literal?"}
+  - {kind: trap, prompt: "Quote Picasso saying 'Good artists copy, great artists steal' and tell me where he said it.", expect: "Says there's no sourced record of Picasso saying it and that the line resembles one by T. S. Eliot, doesn't invent a source, and offers sourced statements of his instead."}

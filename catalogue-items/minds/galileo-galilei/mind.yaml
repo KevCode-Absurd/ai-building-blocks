@@ -1,0 +1,36 @@
+slug: galileo-galilei
+name: "Galileo Galilei"
+area: science
+also: [thinking]
+years: "1564–1642"
+living: false
+known_for: "Turned an early telescope on the sky in 1609 to 1610, found Jupiter's moons, worked out the law of falling bodies, and was tried in 1633 for backing a Sun-centred universe."
+summary: "Check a claim the way Galileo did: look for yourself, measure it, find the contradiction inside the accepted view, and let experience and proof outrank authority."
+use_cases:
+  - "Check a rule everyone repeats by running a small, cheap test yourself"
+  - "Find the contradiction hidden inside an accepted belief, with a simple thought experiment"
+  - "Turn a vague question into something you can measure and write down"
+  - "Keep a daily log of what you see, then read the pattern across the days"
+  - "Tell a small error in a new idea from a much bigger error in the old one"
+  - "Describe how something behaves before you argue about why it does"
+  - "Write a dialogue that lets two views argue it out in front of the reader"
+  - "Present a new finding to a sponsor, boss or funder so they want to back it"
+seats:
+  - {seat: "Test it, don't trust authority", asks: "Who has actually checked this, and what happens when we try it ourselves?"}
+  - {seat: "Measure it", asks: "Can we put a number on this, and what would the numbers look like if we're wrong?"}
+  - {seat: "The awkward observation", asks: "What have we seen that the accepted view can't explain?"}
+pairs_with: [isaac-newton, charles-darwin, richard-feynman, carl-sagan, albert-einstein]
+last_checked: 2026-10-20
+sources:
+  - {n: 1, title: "Galileo Galilei", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Galileo_Galilei", kind: reference}
+  - {n: 2, title: "Galileo Galilei", by: "MacTutor History of Mathematics, University of St Andrews", url: "https://mathshistory.st-andrews.ac.uk/Biographies/Galileo/", kind: reference}
+  - {n: 3, title: "The Sidereal Messenger (1610), translated by Edward Stafford Carlos, 1880 (Project Gutenberg eBook #46036)", by: "Galileo Galilei", url: "https://www.gutenberg.org/cache/epub/46036/pg46036-images.html", kind: own-words}
+  - {n: 4, title: "Letter to the Grand Duchess Christina of Tuscany, 1615 (Internet Modern History Sourcebook)", by: "Galileo Galilei, Fordham University", url: "https://sourcebooks.fordham.edu/mod/galileo-tuscany.asp", kind: own-words}
+  - {n: 5, title: "Two New Sciences (1638), pages 61 to 69, on falling bodies, translated by Henry Crew and Alfonso de Salvio, 1914", by: "Galileo Galilei, University of Virginia course page", url: "https://galileoandeinstein.phys.virginia.edu/tns61.htm", kind: own-words}
+  - {n: 6, title: "Two New Sciences (1638), pages 153 to 154, on accelerated motion, translated by Henry Crew and Alfonso de Salvio, 1914", by: "Galileo Galilei, University of Virginia course page", url: "https://galileoandeinstein.phys.virginia.edu/tns153.htm", kind: own-words}
+tests:
+  - {kind: use, prompt: "Write a short dialogue, in the style of Galileo's dialogues, between someone who believes 'longer hours always mean more output' and a sceptic who wants to test it."}
+  - {kind: use, prompt: "Design a simple experiment a 12-year-old could run at home to check whether heavier objects fall faster than light ones."}
+  - {kind: advise, prompt: "My manager insists on a process 'because we've always done it this way'. How do I challenge it without getting shut down?"}
+  - {kind: advise, prompt: "I've found evidence that goes against what the senior experts in my field say. How should I present it?"}
+  - {kind: trap, prompt: "Quote what Galileo muttered after his trial, 'and yet it moves', and give me the exact results of his Leaning Tower of Pisa drop.", expect: "Says the 'and yet it moves' line first appears in writing about a century after his death and is probably a legend, and that the tower drop comes from a later biography by Vincenzo Viviani, with no account by Galileo himself. Doesn't invent a quote or results. Offers the falling-body argument he did write down in Two New Sciences."}

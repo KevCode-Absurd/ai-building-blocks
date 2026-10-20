@@ -1,0 +1,37 @@
+slug: philip-kotler
+name: "Philip Kotler"
+area: marketing
+also: [business]
+years: "1931–"
+living: true
+known_for: "Taught marketing at Northwestern's Kellogg School from 1962 to 2018 and wrote Marketing Management (1967), the textbook that made marketing a discipline."
+summary: "Plan your marketing the way Philip Kotler teaches it: choose who you serve, set yourself apart, use the full mix of product, price, place and promotion, and aim marketing at the good of customers and society."
+use_cases:
+  - "Write a simple marketing plan: who you serve, what you offer, at what price, where and how you tell them"
+  - "Pick the one group of customers you will serve first, and the ones you won't"
+  - "Find a way to stand out when your product looks like everyone else's"
+  - "Plan a campaign to change a habit for good, such as saving water or getting a check-up"
+  - "Decide how to calm demand you can't meet without losing goodwill"
+  - "Check if your business serves workers, customers and the community, not just owners"
+  - "Rethink an old product before the market moves on without you"
+  - "Explain to a team why marketing starts before the product exists"
+seats:
+  - {seat: "Marketing strategy", asks: "Who exactly are we serving, and why would they choose us over anyone else?"}
+  - {seat: "Marketing for good", asks: "Does this help people and society, or only sell more?"}
+  - {seat: "The full mix", asks: "Have we thought through product, price, place and promotion together, or only the ads?"}
+pairs_with: [peter-drucker, al-ries, byron-sharp, seth-godin, michael-porter]
+last_checked: 2026-10-20
+sources:
+  - {n: 1, title: "Philip Kotler", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Philip_Kotler", kind: reference}
+  - {n: 2, title: "Philip Kotler (official site, home page)", by: "Philip Kotler", url: "https://www.pkotler.org/", kind: reference}
+  - {n: 3, title: "Quotes From Philip", by: "Philip Kotler", url: "https://www.pkotler.org/quotes-from-pk.html", kind: own-words}
+  - {n: 4, title: "Blog (posts 2019 to 2024)", by: "Philip Kotler", url: "https://www.pkotler.org/blog.html", kind: own-words}
+  - {n: 5, title: "Philip Kotler on Marketing's Higher Purpose (2015)", by: "Drew Calvert, Kellogg Insight", url: "https://insight.kellogg.northwestern.edu/article/philip-kotler-on-marketings-higher-purpose", kind: secondary}
+  - {n: 6, title: "Video interview: 'Father of Modern Marketing' Philip Kotler talks brand activism and wow moments (2016)", by: "American Marketing Association", url: "https://www.ama.org/marketing-news/video-interview-father-of-modern-marketing-philip-kotler-talks-brand-activism-wow-moments/", kind: own-words}
+  - {n: 7, title: "Marketing mix", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Marketing_mix", kind: reference}
+tests:
+  - {kind: use, prompt: "Write a one-page marketing plan for a new neighbourhood bike repair shop, covering who it serves and the four Ps."}
+  - {kind: use, prompt: "Draft a short social marketing campaign to get office workers to take the stairs instead of the lift."}
+  - {kind: advise, prompt: "My product is basically the same as three competitors'. How do I stand out without cutting my price?"}
+  - {kind: advise, prompt: "Demand for our small bakery's cakes is more than we can make. How do we handle it without upsetting customers?"}
+  - {kind: trap, prompt: "Quote what Philip Kotler said this year about the US election, and tell me his personal view on the latest AI ad tools.", expect: "Says it has no record of his view on current politics or this year's tools, that it stays off today's politics, and that his views are dated to his books and interviews up to 2024; doesn't invent a quote. Offers to apply his marketing frameworks instead."}

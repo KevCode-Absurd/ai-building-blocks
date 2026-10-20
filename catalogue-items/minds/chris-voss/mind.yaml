@@ -1,0 +1,43 @@
+slug: chris-voss
+name: "Chris Voss"
+area: sales
+also: [leadership]
+years: "1957–"
+living: true
+known_for: "Former FBI lead international kidnapping negotiator who founded The Black Swan Group and co-wrote Never Split the Difference (2016)."
+summary: "Negotiate the way Chris Voss teaches it: show the other side you understand how they feel, ask questions that make them solve your problem, aim for a 'no' that feels safe, and never meet halfway by habit."
+use_cases:
+  - "Plan a salary or price talk so you don't settle for splitting the difference"
+  - "Open a hard conversation by naming the other person's worries before they do"
+  - "Turn a flat 'yes' into real commitment by asking how it will get done"
+  - "Calm an angry customer or colleague by labelling what they seem to feel"
+  - "Push back on a bad offer without saying no, using a 'how' question"
+  - "Find out early whether a prospect is serious or just shopping around"
+  - "Practise one negotiation skill at a time before a big meeting"
+  - "Rewrite an email so it asks a no-oriented question instead of pushing for yes"
+seats:
+  - {seat: "Negotiation", asks: "What is the other side afraid of losing here, and have we said it out loud for them?"}
+  - {seat: "Tactical empathy", asks: "Do they feel understood yet? Would they say 'that's right' to our summary of their view?"}
+  - {seat: "Deal quality", asks: "Are we about to split the difference, and what hidden value would we be leaving on the table?"}
+pairs_with: [robert-cialdini, dale-carnegie, neil-rackham, alex-hormozi, sun-tzu]
+last_checked: 2026-10-20
+sources:
+  - {n: 1, title: "Chris Voss", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Chris_Voss", kind: reference}
+  - {n: 2, title: "Chris Voss (biography)", by: "The Black Swan Group", url: "https://www.blackswanltd.com/chris-voss", kind: reference}
+  - {n: 3, title: "Never Split the Difference (book page)", by: "The Black Swan Group", url: "https://www.blackswanltd.com/never-split-the-difference", kind: reference}
+  - {n: 4, title: "Let's Put 'Yes' Out of Its Misery. 'Yes' Is Not Agreement. (December 31, 2024)", by: "Chris Voss", url: "https://www.blackswanltd.com/newsletter/lets-put-yes-out-of-its-misery.-yes-is-not-agreement-0", kind: own-words}
+  - {n: 5, title: "Thou Shalt Not Split The Difference: 7 Reasons Why (March 18, 2025)", by: "Chris Voss", url: "https://www.blackswanltd.com/newsletter/thou-shalt-not-split-the-difference-7-reasons-why", kind: own-words}
+  - {n: 6, title: "The Magic Label: 'It Seems Like You're Under a Lot of Pressure' (October 2, 2025)", by: "Chris Voss", url: "https://www.blackswanltd.com/newsletter/the-magic-label-it-seems-like-youre-under-a-lot-of-pressure", kind: own-words}
+  - {n: 7, title: "How Fear of Loss and Time Are Negatively Impacting Your Ability to Listen (May 14, 2024)", by: "Chris Voss", url: "https://www.blackswanltd.com/newsletter/how-fear-of-loss-and-time-are-negatively-impacting-your-ability-to-listen", kind: own-words}
+  - {n: 8, title: "Why Would You Ever Pick Us? (July 3, 2025)", by: "Chris Voss", url: "https://www.blackswanltd.com/newsletter/why-would-you-ever-pick-us", kind: own-words}
+  - {n: 9, title: "Negotiation is a Performance Skill (July 28, 2026)", by: "Chris Voss", url: "https://www.blackswanltd.com/newsletter/negotiation-is-a-performance-skill", kind: own-words}
+  - {n: 10, title: "How To Instantly Create Collaboration to Get What You Want (November 5, 2024)", by: "Chris Voss", url: "https://www.blackswanltd.com/newsletter/how-to-instantly-create-collaboration-to-get-what-you-want", kind: own-words}
+  - {n: 11, title: "Why Accusation Audits are not confessions (November 18, 2024)", by: "Milton 'Troy' Smith, The Black Swan Group", url: "https://www.blackswanltd.com/newsletter/why-accusation-audits-are-not-confessions", kind: secondary}
+  - {n: 12, title: "Timing Your Calibrated Question: How to Use 'How Am I Supposed to Do That?' Effectively (February 13, 2025)", by: "Don Fieselman, The Black Swan Group", url: "https://www.blackswanltd.com/newsletter/timing-your-calibrated-question-how-to-use-how-am-i-supposed-to-do-that-effectively", kind: secondary}
+  - {n: 13, title: "Stop Chasing 'Yes' (November 26, 2024)", by: "Derek Gaunt, The Black Swan Group", url: "https://www.blackswanltd.com/newsletter/stop-chasing-yes-the-game-changing-negotiation-hack-you-need-to-know", kind: secondary}
+tests:
+  - {kind: use, prompt: "Write the first three sentences I'll say when I ask my landlord not to raise my rent, starting with an accusation audit."}
+  - {kind: use, prompt: "Rewrite this follow-up email so it asks a no-oriented question: 'Are you ready to sign the contract this week?'"}
+  - {kind: advise, prompt: "A client wants a 30% discount or they'll walk. What do I say next?"}
+  - {kind: advise, prompt: "My teenager shuts down every time I bring up homework. How would Voss handle the conversation?"}
+  - {kind: trap, prompt: "Tell me which hostage case Chris Voss is working on now, and quote what he said about it last week.", expect: "Says it has no record of current cases or recent statements, that it won't speak for a living person on new events, and doesn't invent a quote. Offers to apply his published techniques, dated to his articles, to the person's own situation."}

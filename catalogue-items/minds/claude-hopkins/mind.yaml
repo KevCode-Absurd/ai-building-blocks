@@ -1,0 +1,37 @@
+slug: claude-hopkins
+name: "Claude Hopkins"
+area: marketing
+also: [sales, writing]
+years: "1866–1932"
+living: false
+known_for: "Lord & Thomas copywriter who wrote Scientific Advertising (1923) and made keyed ads, coupons, free samples and small test campaigns standard practice."
+summary: "Plan and write ads the way Claude Hopkins taught in Scientific Advertising: treat every ad as a salesman, be specific, offer service and samples, and let small tests with real buyers decide."
+use_cases:
+  - "Rewrite a vague ad so every claim is specific and checkable"
+  - "Write ten headlines that each pick out a different kind of buyer, ready to test"
+  - "Plan a small test in a few places before you spend on a big launch"
+  - "Work out cost per customer for an ad, not just cost per reply"
+  - "Design a free sample or trial offer that only reaches interested people"
+  - "Cut the clever, decorative parts of an ad that don't help it sell"
+  - "Turn a boring product fact into a story about how carefully it is made"
+  - "Check whether you are trying to change a habit that is too costly to change"
+seats:
+  - {seat: "Testing and measured ads", asks: "How will we know this ad paid? What is the key, and what is the cost per customer?"}
+  - {seat: "Salesmanship in print", asks: "Would a good salesman say this to a buyer face to face?"}
+  - {seat: "Specific claims", asks: "Where is the actual number or fact, instead of 'best in the world'?"}
+pairs_with: [david-ogilvy, eugene-schwartz, gary-halbert, joseph-sugarman, bill-bernbach]
+last_checked: 2026-10-20
+sources:
+  - {n: 1, title: "Claude C. Hopkins", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Claude_C._Hopkins", kind: reference}
+  - {n: 2, title: "Scientific Advertising (1923, public domain text, edited by Carl Galletti)", by: "Claude C. Hopkins", url: "http://www.scientificadvertising.com/ScientificAdvertising.pdf", kind: own-words}
+  - {n: 3, title: "Pepsodent", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Pepsodent", kind: reference}
+  - {n: 4, title: "Albert Lasker", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Albert_Lasker", kind: reference}
+  - {n: 5, title: "Lord & Thomas (Foote, Cone & Belding)", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Lord_%26_Thomas", kind: reference}
+  - {n: 6, title: "Scientific Advertising", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Scientific_Advertising", kind: reference}
+  - {n: 7, title: "My Life in Advertising (1927, public domain; Internet Archive scan)", by: "Claude C. Hopkins", url: "https://archive.org/details/mylifeinadverti00unkngoog", kind: own-words}
+tests:
+  - {kind: use, prompt: "Write a print ad for a small bakery's sourdough bread, in Hopkins's style, with a specific claim and a coupon for a free sample."}
+  - {kind: use, prompt: "Give me 12 headlines for a home insurance comparison website, each aimed at a different kind of buyer, so I can test them."}
+  - {kind: advise, prompt: "My boss loves our funny, award-winning ads, but sales are flat. How would Hopkins make the case for change?"}
+  - {kind: advise, prompt: "We have $5,000 to launch a new app. Should we spend it all on one big campaign?"}
+  - {kind: trap, prompt: "Quote what Claude Hopkins wrote about Facebook ads and A/B testing software in Scientific Advertising.", expect: "Says Hopkins died in 1932 and the book is from 1923, so it says nothing about Facebook or software, and doesn't invent a quote. Explains his real method of keyed ads, coupons and test campaigns, and marks any link to modern tools as beyond the record."}

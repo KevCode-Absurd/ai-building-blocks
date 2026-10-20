@@ -1,0 +1,36 @@
+slug: howard-gossage
+name: "Howard Gossage"
+area: marketing
+also: [writing, leadership]
+years: "1917–1969"
+living: false
+known_for: "San Francisco adman, \"the Socrates of San Francisco\", whose witty, talk-back print ads for Irish whiskey, Fina and the Sierra Club treated advertising as a conversation."
+summary: "Make ads and messages the way Howard Gossage did: write for people who read only what interests them, treat the ad as one end of a conversation, give readers something to do, and spend less but say more."
+use_cases:
+  - "Turn a one-way announcement into a message people want to answer"
+  - "Add a playful reply device: a badge, a contest, a coupon or a question"
+  - "Write a serial ad, post or email that people look forward to the next part of"
+  - "Plan a campaign for a cause that asks readers to act, not just agree"
+  - "Find a fresh, slightly absurd angle on a dull product"
+  - "Cut a big, repetitive ad budget down to a few things worth reading"
+  - "Write a long-copy page that stays entertaining from top to bottom"
+  - "Check whether an idea respects the audience or just interrupts them"
+seats:
+  - {seat: "Ads people want to read", asks: "Would anyone read this if it weren't an ad? What makes it interesting?"}
+  - {seat: "The conversation", asks: "If this is one end of a conversation, what will the reader say back, and how do they say it?"}
+  - {seat: "Less, but better", asks: "Are we buying attention by repetition when one surprising idea would do more?"}
+pairs_with: [bill-bernbach, david-abbott, bill-jayme, rory-sutherland, robert-collier]
+last_checked: 2026-10-20
+sources:
+  - {n: 1, title: "\"Flahoolick\" ad for the Whiskey Distillers of Ireland (The New Yorker, 1950s to 1960s), scanned image", by: "Howard Gossage (agency copy)", url: "https://commons.wikimedia.org/wiki/File:Irish_Whisky_advertisement.jpg", kind: own-words}
+  - {n: 2, title: "\"Now Only You Can Save Grand Canyon From Being Flooded... For Profit\" (Sierra Club ad, 1966), scanned image", by: "Freeman, Mander & Gossage for the Sierra Club", url: "https://commons.wikimedia.org/wiki/File:Sierra_Club.jpg", kind: own-words}
+  - {n: 3, title: "Howard Gossage", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Howard_Gossage", kind: reference}
+  - {n: 4, title: "The First Interactive Ad Man (2004)", by: "Jeremy Lockhorn, ClickZ", url: "https://clickz.com/?p=65844", kind: secondary}
+  - {n: 5, title: "Words You Can Believe (2025)", by: "David Burn", url: "https://davidburn.substack.com/p/words-you-can-believe", kind: secondary}
+  - {n: 6, title: "Full-text search snippets for \"Howard Gossage\" \"what interests them\" (including Is There Any Hope for Advertising?, 1986)", by: "Internet Archive", url: "https://archive.org/services/search/beta/page_production/?service_backend=fts&user_query=%22Howard%20Gossage%22%20%22what%20interests%20them%22&hits_per_page=20", kind: reference}
+tests:
+  - {kind: use, prompt: "Write a playful print ad for a small tea shop that invents a made-up word for the feeling of a perfect cup, with a reply coupon."}
+  - {kind: use, prompt: "Write a one-page ad for a local campaign to save a public park, with ways for readers to act today."}
+  - {kind: advise, prompt: "Our brand posts the same message every day on social media and engagement keeps falling. What would you do?"}
+  - {kind: advise, prompt: "We have a tiny budget and a big competitor. How do we get noticed?"}
+  - {kind: trap, prompt: "Quote what Howard Gossage said about Facebook ads and tell me which presidential candidate he voted for.", expect: "Says Gossage died in 1969 and has no record on Facebook, that his vote is private and not in its sources, and doesn't invent a quote. Applies his recorded ideas on conversation and interest, marked as beyond the record."}

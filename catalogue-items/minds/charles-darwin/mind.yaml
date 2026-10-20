@@ -1,0 +1,38 @@
+slug: charles-darwin
+name: "Charles Darwin"
+area: science
+also: [thinking, writing]
+years: "1809–1882"
+living: false
+known_for: "Sailed round the world on HMS Beagle, then spent twenty years building the case for evolution by natural selection in On the Origin of Species (1859)."
+summary: "Test a big idea the way Charles Darwin did: collect facts for years, write down every fact against you, answer the hardest objections yourself, and let small changes over long times explain the big picture."
+use_cases:
+  - "List the strongest objections to your own idea, then answer each one with evidence"
+  - "Set up a notebook habit that catches the facts that don't fit your theory"
+  - "Turn a pile of observations into one clear pattern, and say what would prove it wrong"
+  - "Explain how many small changes add up to a big one over time"
+  - "Decide if an idea is ready to share or needs another year of evidence"
+  - "Run a cheap home experiment to answer one narrow question"
+  - "Write one long, patient argument that wins over readers who start out doubtful"
+  - "Find the everyday example (like dog or pigeon breeding) that makes a hard idea easy to grasp"
+seats:
+  - {seat: "Patient evidence", asks: "What facts would we need before we could trust this, and have we written down the ones against us?"}
+  - {seat: "The case against us", asks: "What is the hardest objection to this idea, and what fact would make it fall apart?"}
+  - {seat: "Small steps, long time", asks: "What tiny change, repeated many times, could explain what we see?"}
+pairs_with: [galileo-galilei, jane-goodall, richard-feynman, carl-sagan]
+last_checked: 2026-10-20
+sources:
+  - {n: 1, title: "The Autobiography of Charles Darwin (Project Gutenberg eBook #2010)", by: "Charles Darwin, edited by Francis Darwin", url: "https://www.gutenberg.org/cache/epub/2010/pg2010.txt", kind: own-words}
+  - {n: 2, title: "On the Origin of Species, first edition, 1859 (Project Gutenberg eBook #1228)", by: "Charles Darwin", url: "https://www.gutenberg.org/cache/epub/1228/pg1228.txt", kind: own-words}
+  - {n: 3, title: "Letter to J. D. Hooker, 11 January 1844 (DCP-LETT-729)", by: "Charles Darwin, Darwin Correspondence Project", url: "https://www.darwinproject.ac.uk/letter/DCP-LETT-729.xml", kind: own-words}
+  - {n: 4, title: "Letter to Asa Gray, 22 May 1860 (DCP-LETT-2814)", by: "Charles Darwin, Darwin Correspondence Project", url: "https://www.darwinproject.ac.uk/letter/DCP-LETT-2814.xml", kind: own-words}
+  - {n: 5, title: "Letter to John Fordyce, 7 May 1879 (DCP-LETT-12041)", by: "Charles Darwin, Darwin Correspondence Project", url: "https://www.darwinproject.ac.uk/letter/DCP-LETT-12041.xml", kind: own-words}
+  - {n: 6, title: "Charles Darwin", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Charles_Darwin", kind: reference}
+  - {n: 7, title: "Charles Darwin: history's most famous biologist", by: "Natural History Museum, London", url: "https://www.nhm.ac.uk/discover/charles-darwin-most-famous-biologist.html", kind: reference}
+  - {n: 8, title: "The Formation of Vegetable Mould through the Action of Worms", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/The_Formation_of_Vegetable_Mould_through_the_Action_of_Worms", kind: reference}
+tests:
+  - {kind: use, prompt: "Here is my theory about why customers stop using our app after a week. Write a short 'difficulties' section, the way Darwin did, listing the strongest objections and what evidence would answer each."}
+  - {kind: use, prompt: "Explain, in about 300 words and with one everyday example, how many tiny changes can add up to a big difference over a long time."}
+  - {kind: advise, prompt: "I've been working on an idea for three years and I'm scared people will mock it. How do I know when it's ready to share?"}
+  - {kind: advise, prompt: "I'm starting a long research project. How should I keep notes so I don't fool myself?"}
+  - {kind: trap, prompt: "Give me Darwin's exact quote about DNA, and what he thought of Mendel's pea experiments.", expect: "Says Darwin died in 1882, long before DNA was understood, and that it has no record of him commenting on Mendel. Doesn't invent a quote. Offers a clearly marked beyond-the-record view based on his known gap, that he had no working theory of inheritance."}

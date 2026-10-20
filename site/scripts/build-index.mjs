@@ -120,16 +120,26 @@ for (const r of roster.minds) {
     const text = rest.join(" ").replace(/\[S\d+\]/g, "").replace(/\s+/g, " ").trim();
     return { title: title.trim(), text: (text.match(/^.*?[.!?](\s|$)/)?.[0] ?? text).trim() };
   }).filter((x) => x.title);
+  // How to hire them (playbook.md): the jobs, their method as steps, and the questions they ask first.
+  const playbook = fs.existsSync(path.join(folder, "playbook.md")) ? fs.readFileSync(path.join(folder, "playbook.md"), "utf8").replace(/\r\n?/g, "\n") : "";
+  const pbPart = (re) => (playbook.split(/^## /m).find((x) => re.test(x)) ?? "").split("\n").slice(1);
+  const boldItem = (l) => { const x = l.replace(/^\s*(?:[-*]|\d+\.)\s+/, "").match(/^\*\*(.+?)\*\*:?\s*(.*)$/); return x ? { title: x[1].replace(/[.:]$/, ""), text: x[2].trim().replace(/^[a-z]/, (c) => c.toUpperCase()) } : null; };
+  const hire = playbook ? {
+    jobs: pbPart(/^What to hire/).filter((l) => /^\s*-/.test(l)).map(boldItem).filter(Boolean),
+    steps: pbPart(/^How .+ take on your problem/).filter((l) => /^\d+\./.test(l)).map(boldItem).filter(Boolean),
+    questions: pbPart(/^First questions/).filter((l) => /^\s*-/.test(l)).map((l) => l.replace(/^\s*-\s+/, "").trim()),
+  } : undefined;
   const page = {
     headline: m.name,
     subhead: m.summary,
     explain: `${m.known_for}\n\nThis is an AI playing ${first} from public work: ${m.sources.length} public sources, listed below, written into a data set of what they knew and believed and a profile of how they think and talk. It isn't ${first}, and ${first} hasn't endorsed it.${m.living ? ` ${first} is alive, so views can change; it was last checked on ${String(m.last_checked).slice(0, 10)}.` : ""}`,
     when: m.use_cases,
     you_give: ["Your task or question", "Your facts, numbers or draft (optional; it asks once if they matter)", "A role for them, such as \"my investor\" (optional)"],
-    you_get: [`The answer or the work, in ${first}'s voice, using their ideas by name`, "Anything that goes beyond their public record, marked", "One suggested next step"],
+    you_get: [`Your problem worked on the way ${first} would: their questions, their method, their push-back`, `The answer or the work, in ${first}'s voice, using their ideas by name`, "Anything that goes beyond their public record, marked", "One suggested next step"],
     how_to_use: ["Add the skill to your AI, or copy it and paste it into a chat.", `Ask your question or give the task, such as "${m.use_cases[0]}".`, "Paste the facts that matter.", `To hear ${first} argue with other minds, put them on an advisory council.`],
     output_shape: `<the answer or the piece of work, in ${first}'s voice>\n  <the recommendation, or the work itself, first>\n  <the reasoning, using ${first}'s ideas by name>\n  <[beyond the record] wherever it goes past what they said or did>\n\nMISSING: <facts you didn't give, or none>\nNEXT: <one suggested next step>`,
     ideas,
+    hire,
     seats: m.seats,
     pairs: (m.pairs_with ?? []).filter((s) => roster.minds.some((x) => x.slug === s)),
     credits: m.sources.filter((s) => s.title).map((s) => ({ title: String(s.title), by: s.by ? String(s.by) : "", url: s.url && /^https?:\/\//.test(s.url) ? String(s.url) : "", used: "" })),

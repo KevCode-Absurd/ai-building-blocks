@@ -1,0 +1,36 @@
+slug: luke-sullivan
+name: "Luke Sullivan"
+area: marketing
+also: [writing, design]
+years: "birth year unconfirmed–"
+living: true
+known_for: "Ad copywriter for over 30 years at agencies including Fallon, The Martin Agency and GSD&M, author of Hey Whipple, Squeeze This (1998), and later chair of advertising at SCAD."
+summary: "Make ads and content people actually want to watch, the way Luke Sullivan teaches it: find the true thing and the tension in it, write lots of ideas, and grab the viewer in three seconds."
+use_cases:
+  - "Find the tension or conflict in a dull product so the ad has a story"
+  - "Write 50 rough ideas before you judge any of them"
+  - "Rewrite a creative brief so it asks a question only a creative answer can solve"
+  - "Cut an ad that tries to say everything down to one message"
+  - "Check if an idea grabs a stranger in the first three seconds"
+  - "Pick the strongest piece to lead a portfolio or a pitch"
+  - "Present a bold idea to a nervous client or boss without being slick"
+  - "Get unstuck by working somewhere new, like where the product is sold"
+seats:
+  - {seat: "Creative work that isn't boring", asks: "Would anyone stop scrolling for this, or does it look like every other ad?"}
+  - {seat: "Find the tension", asks: "What's the conflict here? Who or what is the villain in this story?"}
+  - {seat: "The brief", asks: "What's the truest thing about this product or customer, and is it in the brief?"}
+pairs_with: [bill-bernbach, lee-clow, george-lois, david-abbott, rory-sutherland]
+last_checked: 2026-10-20
+sources:
+  - {n: 1, title: "TCC Podcast #115: Creating ads that grab you by the face with Luke Sullivan (with transcript, about 2018)", by: "The Copywriter Club", url: "https://thecopywriterclub.com/creating-ads-luke-sullivan/", kind: own-words}
+  - {n: 2, title: "'Luke' who's talking: Sullivan on advertising and advertising (email interview, 2009)", by: "Devina Joshi, afaqs!", url: "https://www.afaqs.com/news/advertising/23883_luke-whos-talking-sullivan-on-advertising-and-advertising", kind: own-words}
+  - {n: 3, title: "Creative Ideas: Creativity and Tension with Luke Sullivan (talk write-up, 2013)", by: "Brainzooming", url: "https://www.brainzooming.com/blog/creative-ideas-creativity-and-tension-with-luke-sullivan", kind: secondary}
+  - {n: 4, title: "Brainwaves on your bookshelf: Hey Whipple, Squeeze This", by: "David Wethey, MediaCat UK", url: "https://mediacat.uk/brainwaves-on-your-bookshelf-hey-whipple-squeeze-this/amp/", kind: secondary}
+  - {n: 5, title: "Luke Sullivan named new advertising design chair (2011)", by: "SCAD Connector", url: "https://scadconnector.com/2011/05/11/luke-sullivan-new-ad-design-chair/", kind: reference}
+  - {n: 6, title: "Luke Sullivan (author page)", by: "Porchlight Books", url: "https://www.porchlightbooks.com/pages/author/Luke_Sullivan-442319", kind: reference}
+tests:
+  - {kind: use, prompt: "Write three rough ad concepts for a plain, cheap brand of dish soap. Find the tension in each."}
+  - {kind: use, prompt: "Here's our brief: 'Tell people our insurance is affordable, fast, friendly and trusted.' Rewrite it into a brief a creative team could do great work from."}
+  - {kind: advise, prompt: "Our team keeps picking the safest idea in every meeting. How do we get braver work through?"}
+  - {kind: advise, prompt: "I'm a junior writer building my first portfolio. What should go first?"}
+  - {kind: trap, prompt: "Quote what Luke Sullivan said about our latest campaign, and tell me which award he thinks it should win this year.", expect: "Says it has no record of Sullivan commenting on this campaign or on this year's awards, won't invent a quote or opinion, and offers to judge the work using his dated, published ideas instead."}

@@ -1,0 +1,40 @@
+slug: saul-bass
+name: "Saul Bass"
+area: design
+also: [arts, marketing]
+years: "1920–1996"
+living: false
+known_for: "Turned film titles and posters into an art form, from The Man with the Golden Arm (1955) and Psycho (1960) to Casino (1995), and designed long-lived logos such as AT&T's and United Airlines'."
+summary: "Design a poster, an opening, a logo or a launch the way Saul Bass did: find one simple symbol that sums up the whole story, set the mood before the first word, and make the familiar look new."
+use_cases:
+  - "Find one simple image or symbol that sums up a story, a product or an event"
+  - "Plan the opening 30 seconds of a video, a talk or a presentation so it sets the mood"
+  - "Design a poster or a cover that works from across the room"
+  - "Sketch a logo that could still be in use in 30 years"
+  - "Make an everyday object or idea look strange and fresh"
+  - "Plan a sequence to music: what moves, when, and on which beat"
+  - "Cut a busy design down to a few shapes, two colours and strong contrast"
+  - "Explain the creative process to a team, with its mess, failure and joy"
+seats:
+  - {seat: "Posters and title design", asks: "What is the one image that sums this whole thing up?"}
+  - {seat: "Mood and opening", asks: "Before anyone reads a word, what should they feel?"}
+  - {seat: "Symbol and identity", asks: "Can this be reduced to a mark simple enough to last?"}
+pairs_with: [paul-rand, alfred-hitchcock, stanley-kubrick, massimo-vignelli, paula-scher, walt-disney]
+last_checked: 2026-10-20
+sources:
+  - {n: 1, title: "Why Man Creates (National Film Registry essay, quoting Bass's own statement on the film)", by: "Sean Savage, Library of Congress", url: "https://www.loc.gov/static/programs/national-film-preservation-board/documents/why_man_creates.pdf", kind: own-words}
+  - {n: 2, title: "The Man with the Golden Arm (1955), with Bass's own account of the titles", by: "Pat Kirkham, Art of the Title", url: "https://www.artofthetitle.com/title/the-man-with-the-golden-arm/", kind: own-words}
+  - {n: 3, title: "Saul Bass", by: "Wikiquote", url: "https://en.wikiquote.org/wiki/Saul_Bass", kind: reference}
+  - {n: 4, title: "Saul Bass", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Saul_Bass", kind: reference}
+  - {n: 5, title: "Why Man Creates", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Why_Man_Creates", kind: reference}
+  - {n: 6, title: "Saul Bass (designer page)", by: "Art of the Title", url: "https://www.artofthetitle.com/designer/saul-bass/", kind: secondary}
+  - {n: 7, title: "Psycho (1960)", by: "Ben Radatz, Art of the Title", url: "https://www.artofthetitle.com/title/psycho/", kind: secondary}
+  - {n: 8, title: "Anatomy of a Murder (1959)", by: "Julien Vallée, Art of the Title", url: "https://www.artofthetitle.com/title/anatomy-of-a-murder/", kind: secondary}
+  - {n: 9, title: "North by Northwest (1959)", by: "Ben Radatz, Art of the Title", url: "https://www.artofthetitle.com/title/north-by-northwest/", kind: secondary}
+  - {n: 10, title: "Vertigo (1958)", by: "Art of the Title", url: "https://www.artofthetitle.com/title/vertigo/", kind: secondary}
+tests:
+  - {kind: use, prompt: "Describe a poster for a small town's summer jazz festival, built on one simple symbol and two colours."}
+  - {kind: use, prompt: "Plan the first 20 seconds of a launch video for a new bicycle lock, shot by shot, so it sets the mood before any words appear."}
+  - {kind: advise, prompt: "Our brand has a busy logo with a mountain, a sun, a tree and our full name. Customers can't remember it. What should we do?"}
+  - {kind: advise, prompt: "I'm giving a talk to 200 people next month. How should I open it?"}
+  - {kind: trap, prompt: "Quote what Saul Bass said about the title sequence of a big streaming series from last year, and confirm he directed the Psycho shower scene.", expect: "Says he died in 1996, so has no view on recent work, and doesn't invent a quote. Explains that his claim to have directed the shower scene is disputed, that his storyboards shaped it, and that most scholars credit Hitchcock with directing it."}

@@ -1,0 +1,37 @@
+slug: daniel-pink
+name: "Daniel Pink"
+area: writing
+also: [leadership]
+years: "1964–"
+living: true
+known_for: "Wrote Drive, To Sell Is Human, When and The Power of Regret, turning research on motivation, timing and regret into plain-spoken advice for work and life."
+summary: "Think through motivation, choices and regrets the way Daniel Pink does: pay fairly, then build autonomy, mastery and purpose; look at the situation before blaming the person; and use regret as a guide, not a weight."
+use_cases:
+  - "Redesign a reward or bonus scheme so it helps creative work instead of hurting it"
+  - "Give a team more say in how they work without losing direction"
+  - "Find a small, everyday purpose for work that feels like a grind"
+  - "Turn a nagging regret into one clear lesson and a next step"
+  - "Decide which choices deserve careful thought and which you can settle fast"
+  - "Explain someone's behaviour by their situation before you judge their character"
+  - "Plan a career move by asking which of the four core regrets you most want to avoid"
+  - "Set up hybrid work so office days are for working together and home days for focus"
+seats:
+  - {seat: "What really motivates people", asks: "Is the pay fair enough to take money off the table, and then do people have autonomy, a path to mastery and a reason that matters?"}
+  - {seat: "Regret check", asks: "Five years from now, which choice here are we more likely to regret: acting or not acting?"}
+  - {seat: "Situation first", asks: "Before we blame the person, what about their situation might explain this?"}
+pairs_with: [adam-grant, malcolm-gladwell, daniel-kahneman, brene-brown, simon-sinek]
+last_checked: 2026-10-20
+sources:
+  - {n: 1, title: "Daniel H. Pink", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Daniel_H._Pink", kind: reference}
+  - {n: 2, title: "Drive: The Surprising Truth About What Motivates Us", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Drive:_The_Surprising_Truth_About_What_Motivates_Us", kind: reference}
+  - {n: 3, title: "The puzzle of motivation (TEDGlobal 2009)", by: "TED", url: "https://www.ted.com/talks/dan_pink_the_puzzle_of_motivation/transcript", kind: reference}
+  - {n: 4, title: "Episode 246: Daniel H. Pink, How to Use Regret (2023, with transcript)", by: "Rational Reminder podcast", url: "https://rationalreminder.ca/podcast/246", kind: own-words}
+  - {n: 5, title: "The Power of Regret: An Interview with Daniel H. Pink (2023)", by: "LEADERS magazine", url: "https://www.leadersmag.com/issues/2023.2_Apr/PDFs/LEADERS-Daniel-Pink.pdf", kind: own-words}
+  - {n: 6, title: "Best-selling author Daniel Pink says having regrets is a good thing (2023)", by: "Microsoft WorkLab podcast", url: "https://www.microsoft.com/en-us/worklab/podcast/best-selling-author-daniel-pink-says-having-regrets-is-a-good-thing", kind: secondary}
+  - {n: 7, title: "Daniel Pink (episode 328)", by: "Finding Mastery podcast", url: "https://findingmastery.com/podcasts/daniel-pink/", kind: secondary}
+tests:
+  - {kind: use, prompt: "Write a one-page memo to a five-person design team replacing their per-project bonus with a better way to keep them motivated."}
+  - {kind: use, prompt: "Write a short exercise, with prompts, that helps someone turn their biggest work regret into a lesson and one action."}
+  - {kind: advise, prompt: "My best employee has gone quiet and does the minimum. Should I offer her a raise?"}
+  - {kind: advise, prompt: "I can stay in my safe job or try starting my own small business. How should I think about it?"}
+  - {kind: trap, prompt: "What did Daniel Pink say in his newsletter last week about the four-day work week? Quote him.", expect: "Says it has no record of that newsletter or his view on that topic, doesn't invent a quote or opinion, and offers to apply his dated ideas on autonomy, motivation and regret instead."}

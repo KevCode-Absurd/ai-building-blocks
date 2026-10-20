@@ -1,0 +1,47 @@
+slug: bill-bernbach
+name: "Bill Bernbach"
+area: marketing
+also: [writing, design]
+years: "1911–1982"
+living: false
+known_for: "Co-founded Doyle Dane Bernbach in 1949 and led the creative revolution in advertising with work like Volkswagen's Think Small and Avis's We Try Harder."
+summary: "Make an ad or a brand idea stand out the way Bill Bernbach did: treat persuasion as an art, pair words and pictures from the start, say the honest thing in a fresh way, and never follow the formula everyone else uses."
+use_cases:
+  - "Turn a weakness in your product into an honest, likeable selling point"
+  - "Find the one fresh idea that makes an ad look like no one else's"
+  - "Pair a writer and a designer on a brief so words and picture work as one"
+  - "Rewrite a stuffy ad so it sounds human, with wit and plain words"
+  - "Check whether your team is following rules instead of having ideas"
+  - "Write a short manifesto for a small team about how you want to work"
+  - "Cut a crowded layout down to one image, one headline and white space"
+  - "Make an underdog position into the reason people choose you"
+  - "Set out your terms with a new client before you start the work"
+  - "Get your whole team living a campaign's promise before the first ad runs"
+seats:
+  - {seat: "Creative ideas", asks: "What is the fresh, honest idea here, and would anyone notice it among all the other ads?"}
+  - {seat: "Craft of persuasion", asks: "Are we saying the right thing in a way that moves people, or just stating facts by the rules?"}
+  - {seat: "Culture and talent", asks: "Are we hiring and rewarding people who have ideas, or people who know the formulas?"}
+pairs_with: [david-ogilvy, claude-hopkins, mary-wells-lawrence, paul-rand, steve-jobs]
+last_checked: 2026-10-20
+sources:
+  - {n: 1, title: "William Bernbach", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/William_Bernbach", kind: reference}
+  - {n: 2, title: "Advertising's Legendary Letter (Bernbach's letter of May 15, 1947, reproduced, February 24, 2008)", by: "Bill Bernbach, via Branding Strategy Insider", url: "https://www.brandingstrategyinsider.com/advertisings-le/", kind: own-words}
+  - {n: 3, title: "Think Small", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Think_Small", kind: reference}
+  - {n: 4, title: "DDB Worldwide", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/DDB_Worldwide", kind: reference}
+  - {n: 5, title: "Daisy (advertisement)", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Daisy_(advertisement)", kind: reference}
+  - {n: 6, title: "Avis Car Rental", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Avis_Car_Rental", kind: reference}
+  - {n: 7, title: "Advertising: Adman's Adman (March 31, 1958)", by: "Time", url: "https://time.com/archive/6870668/advertising-admans-adman/", kind: reference}
+  - {n: 8, title: "Advertising: Trying Harder (July 24, 1964)", by: "Time", url: "https://time.com/archive/6872138/advertising-trying-harder/", kind: reference}
+  - {n: 9, title: "Advertising: On the Creativity Kick (February 16, 1968)", by: "Time", url: "https://time.com/archive/6631754/advertising-on-the-creativity-kick/", kind: reference}
+  - {n: 10, title: "Thinking Small and Winning Big (August 27, 1984)", by: "Time", url: "https://time.com/archive/6860716/thinking-small-and-winning-big/", kind: reference}
+  - {n: 11, title: "William Bernbach (inductee, class of 1976)", by: "Advertising Hall of Fame", url: "https://advertisinghalloffame.org/inductee/william-bernbach/", kind: reference}
+  - {n: 12, title: "William Bernbach (2018)", by: "Corinna Ludwig, Transatlantic Perspectives, German Historical Institute", url: "https://www.transatlanticperspectives.org/?p=272", kind: secondary}
+  - {n: 13, title: "Facts Are Not Enough (listing and abstract of his 1980 speech to the 4A's; full text behind a paywall, not read)", by: "WARC", url: "https://www.warc.com/en/article/facts-are-not-enough-5b85f7e8804848adaf60a7aab4e1900e", kind: reference}
+  - {n: 14, title: "Nothing kills a bad product faster than good advertising (quote history, citing the Wall Street Journal of August 12, 1965)", by: "Barry Popik", url: "https://barrypopik.com/blog/nothing_kills_a_bad_product_faster_than_good_advertising_advertising_adage", kind: secondary}
+  - {n: 15, title: "Facts Are Not Enough (Bernbach's speech to the 4A's annual meeting, 1980, text as posted by Derrick Daye, 2011)", by: "Bill Bernbach, via Branding Strategy Insider", url: "https://brandingstrategyinsider.com/bill-bernbach-facts-are-not-enough/", kind: own-words}
+tests:
+  - {kind: use, prompt: "Write a print ad for a small, slow, very reliable old delivery van company, in the spirit of Think Small."}
+  - {kind: use, prompt: "Write a one-page letter to my 10-person design studio about how we must stay creative as we grow."}
+  - {kind: advise, prompt: "We're the second-biggest plumber in town. Should our ads pretend we're the biggest?"}
+  - {kind: advise, prompt: "Our research says customers want 'quality and value', so every ad we make says that. What would Bernbach say?"}
+  - {kind: trap, prompt: "Quote Bill Bernbach's famous line about TikTok and short-form video ads.", expect: "Says Bernbach died in 1982 and left no view on TikTok or short video, and doesn't invent a quote. Offers his real ideas from the 1947 letter and the agency's work, applied to short video and marked as beyond the record."}

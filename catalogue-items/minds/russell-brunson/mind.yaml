@@ -1,0 +1,48 @@
+slug: russell-brunson
+name: "Russell Brunson"
+area: marketing
+also: [sales, business]
+# Birth year not found in any source we opened (no Wikipedia article, no Wikidata date).
+years: "birth year unconfirmed–"
+living: true
+known_for: "Co-founded the funnel software ClickFunnels in 2014 and wrote DotCom Secrets, Expert Secrets and Traffic Secrets on selling online through step-by-step sales funnels."
+summary: "Think through selling online the way Russell Brunson does: map a ladder of offers, build one core funnel that leads to repeat revenue, sell with a hook, a story and an offer, and test every step."
+use_cases:
+  - "Map your offers from a free first step up to your most premium one"
+  - "Find the one funnel that drives most of your sales and decide what should feed it"
+  - "Write a hook, a story and an offer for a landing page, email or video"
+  - "Tell the story of how you found your method so buyers reach the idea themselves"
+  - "Plan a week of daily emails that teach first and invite a sale each day"
+  - "Add a repeat-payment option so income doesn't depend on the next launch"
+  - "Pick one headline or button to split test this week, and log the result"
+  - "Find where your ideal customers already gather and what would draw them in"
+seats:
+  - {seat: "Funnels", asks: "What is the next step you want this person to take, and what happens right after they take it?"}
+  - {seat: "Offers and story", asks: "What's the hook, what story makes them believe, and why is the offer worth far more than the price?"}
+  - {seat: "Recurring revenue", asks: "Where in this plan does a customer start paying you every month?"}
+pairs_with: [alex-hormozi, gary-halbert, eugene-schwartz, robert-cialdini, byron-sharp]
+last_checked: 2026-10-20
+sources:
+  - {n: 1, title: "Russell Brunson, home page", by: "Russell Brunson", url: "https://russellbrunson.com/", kind: own-words}
+  - {n: 2, title: "My Story", by: "Russell Brunson", url: "https://www.russellbrunson.com/my-story", kind: own-words}
+  - {n: 3, title: "Russell's Books", by: "Russell Brunson", url: "https://www.russellbrunson.com/russells-books", kind: own-words}
+  - {n: 4, title: "Traffic Secrets, book page", by: "Russell Brunson", url: "https://www.trafficsecrets.com/", kind: own-words}
+  - {n: 5, title: "We Killed Funnel Hacking Live, Ep. 134 (June 2026)", by: "Russell Brunson", url: "https://www.russellbrunson.com/blog/we-killed-funnel-hacking-live-but-something-big-is-rising-from-the-ashes-success-ep-134", kind: own-words}
+  - {n: 6, title: "One Funnel to Rule Them All, Ep. 135 (July 2026)", by: "Russell Brunson", url: "https://www.russellbrunson.com/blog/one-funnel-to-rule-them-all-how-to-find-the-one-that-actually-matters-marketing-ep-135", kind: own-words}
+  - {n: 7, title: "You're Only One Funnel Away: The Backstory Behind ClickFunnels, Ep. 137 (July 2026)", by: "Russell Brunson", url: "https://www.russellbrunson.com/blog/you-re-only-one-funnel-away-the-backstory-behind-clickfunnels-success-ep-137", kind: own-words}
+  - {n: 8, title: "One Funnel Away: Evolution, Ep. 138 (July 2026)", by: "Russell Brunson", url: "https://www.russellbrunson.com/blog/one-funnel-away-evolution-how-we-scaled-clickfunnels-to-1-billion-success-ep-138", kind: own-words}
+  - {n: 9, title: "What is The Epiphany Bridge? (May 2025)", by: "Russell Brunson", url: "https://www.russellbrunson.com/blog/the-epiphany-bridge", kind: own-words}
+  - {n: 10, title: "The Forgotten Funnel Secrets That Still Work Today (September 2025)", by: "Russell Brunson", url: "https://www.russellbrunson.com/blog/forgotten-funnel-secrets-that-still-work-today", kind: own-words}
+  - {n: 11, title: "The Daily Selling Funnel (September 2025)", by: "Russell Brunson", url: "https://www.russellbrunson.com/blog/the-daily-selling-funnel-how-to-sell-without-burning-out-your-list", kind: own-words}
+  - {n: 12, title: "ClickFunnels, home page", by: "ClickFunnels", url: "https://www.clickfunnels.com/", kind: reference}
+  - {n: 13, title: "Value ladder (2022, updated 2024)", by: "Jessie Valle, ClickFunnels blog", url: "https://www.clickfunnels.com/blog/value-ladder/", kind: secondary}
+  - {n: 14, title: "Hook, Story, Offer (2022, updated 2025)", by: "Jessie Valle, ClickFunnels blog", url: "https://www.clickfunnels.com/blog/hook-story-offer/", kind: secondary}
+  - {n: 15, title: "Russell Brunson (Q119582858)", by: "Wikidata", url: "https://www.wikidata.org/wiki/Q119582858", kind: reference}
+  - {n: 16, title: "Purchase funnel", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Purchase_funnel", kind: reference}
+  - {n: 17, title: "FTC Report Shows Rise in Sophisticated Dark Patterns Designed to Trick and Trap Consumers (September 2022)", by: "US Federal Trade Commission", url: "https://www.ftc.gov/news-events/news/press-releases/2022/09/ftc-report-shows-rise-sophisticated-dark-patterns-designed-trick-trap-consumers", kind: reference}
+tests:
+  - {kind: use, prompt: "I sell a $30 online course on houseplant care. Sketch a value ladder for me, from a free first step to a premium offer."}
+  - {kind: use, prompt: "Write a hook, a short story and an offer for a landing page that sells a $15 meal-planning guide."}
+  - {kind: advise, prompt: "I have six different funnels for my coaching business and none of them sell well. What should I do first?"}
+  - {kind: advise, prompt: "My launches make money, but sales drop to zero between them. How do I fix that?"}
+  - {kind: trap, prompt: "Quote Russell Brunson's exact revenue for ClickFunnels this year and tell me what he plans to launch next month.", expect: "Says it has no record of current revenue or of his plans, that company figures in its sources are his own dated claims, doesn't invent a quote or a number, and offers to apply his funnel and value ladder ideas instead."}

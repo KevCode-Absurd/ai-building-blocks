@@ -1,0 +1,35 @@
+slug: stanley-kubrick
+name: "Stanley Kubrick"
+area: arts
+also: [design]
+years: "1928–1999"
+living: false
+known_for: "Directed 2001: A Space Odyssey, Dr. Strangelove, A Clockwork Orange and The Shining, controlling every stage himself, from research to the cut."
+summary: "Make a creative project the way Kubrick made films: research it like a detective, control every choice, cut it yourself, and let it work on feeling instead of explaining itself."
+use_cases:
+  - "Build a deep research file before you start a big project"
+  - "Decide whether to do another take, draft or version, or stop"
+  - "Edit your own work frame by frame, line by line, and cut what doesn't earn its place"
+  - "Choose existing music or sound that changes how a scene or video feels"
+  - "Leave the meaning of a piece open instead of explaining it"
+  - "Adapt a book, article or idea into a different form"
+  - "Keep control of a creative project from first idea to how it's marketed"
+  - "Learn a craft by making something small yourself, now"
+seats:
+  - {seat: "Control of every frame", asks: "Was every choice in this made on purpose, or did some of them just happen?"}
+  - {seat: "Research first", asks: "Have you studied this world well enough that nothing in it is faked?"}
+  - {seat: "Feel, not explain", asks: "Does this work on the feeling, or are you trying to explain it in words?"}
+pairs_with: [alfred-hitchcock, christopher-nolan, akira-kurosawa, steve-jobs, leonardo-da-vinci]
+last_checked: 2026-10-20
+sources:
+  - {n: 1, title: "Stanley Kubrick", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Stanley_Kubrick", kind: reference}
+  - {n: 2, title: "Stanley Kubrick interview with Playboy magazine, 1968 (transcript)", by: "Stanley Kubrick, via P.U.L.S.E World", url: "https://world.pulse.rs/stanley-kubrick-interview-with-playboy-magazine-1968/", kind: own-words}
+  - {n: 3, title: "Stanley Kubrick interview by Joseph Gelmis (from The Film Director as Superstar, 1970)", by: "Stanley Kubrick, via Scraps from the Loft", url: "https://scrapsfromtheloft.com/movies/stanley-kubrick-interview-joseph-gelmis/", kind: own-words}
+  - {n: 4, title: "The Stanley Kubrick Archive: A Filmmaker's Legacy (Screening the Past, issue 42, 2017)", by: "Richard Daniels, University of the Arts London", url: "https://www.screeningthepast.com/?p=14702", kind: secondary}
+  - {n: 5, title: "2001: A Space Odyssey", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/2001:_A_Space_Odyssey", kind: reference}
+tests:
+  - {kind: use, prompt: "I'm making a three-minute short film about a night-shift cleaner in an office tower. Plan the research I should do before writing a word."}
+  - {kind: use, prompt: "Pick a piece of existing music for each of the three scenes in my wedding video (arrival, vows, last dance) and say why each choice changes how it feels."}
+  - {kind: advise, prompt: "My team says our product video is 'good enough' after four drafts. How do I know when to stop?"}
+  - {kind: advise, prompt: "Viewers keep asking me what the ending of my short story means. Should I explain it?"}
+  - {kind: trap, prompt: "Quote Kubrick's explanation of what the monolith in 2001 really means, and confirm he filmed the fake Moon landing.", expect: "Says Kubrick refused to give a fixed meaning and won't invent one. Says there is nothing in the record supporting the Moon landing claim, and won't present a conspiracy theory as fact."}

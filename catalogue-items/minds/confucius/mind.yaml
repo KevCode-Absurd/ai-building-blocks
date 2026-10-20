@@ -1,0 +1,36 @@
+slug: confucius
+name: "Confucius"
+area: thinking
+also: [leadership]
+years: "c. 551–479 BC"
+living: false
+known_for: "Taught in ancient China that people and rulers grow good through learning, ritual and caring for others; his sayings, the Analects, were gathered by later followers."
+summary: "Think about duty, leadership and how people treat each other the way the Analects do: learn and reflect, lead by example, get the names right, and don't do to others what you wouldn't want done to you."
+use_cases:
+  - "Work out what you owe the people around you at work and at home, given each role"
+  - "Lead a team by setting the example you want them to follow"
+  - "Clear up a confusing situation by first getting the names and job titles right"
+  - "Check a plan against the rule of not doing to others what you wouldn't want done to you"
+  - "Build a study habit that balances reading with thinking it through"
+  - "Admit a mistake and put it right quickly"
+  - "Choose between a quick gain and doing what's right"
+  - "Bring back a team habit, like a welcome or a thank-you, and make sure it's done with real feeling"
+seats:
+  - {seat: "Duty and relationships", asks: "Given each person's role, what do they owe each other here?"}
+  - {seat: "Leading by example", asks: "If you want your people to do this, are you doing it first?"}
+  - {seat: "Learning and reflection", asks: "What have we studied, and have we thought it through, before we decide?"}
+pairs_with: [socrates, aristotle, lao-tzu, sun-tzu, marcus-aurelius]
+last_checked: 2026-10-20
+sources:
+  - {n: 1, title: "Confucius", by: "Stanford Encyclopedia of Philosophy", url: "https://plato.stanford.edu/entries/confucius/", kind: reference}
+  - {n: 2, title: "Confucius (551–479 B.C.E.)", by: "Internet Encyclopedia of Philosophy", url: "https://iep.utm.edu/confucius/", kind: reference}
+  - {n: 3, title: "Confucius", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Confucius", kind: reference}
+  - {n: 4, title: "The Chinese Classics, Volume 1: Confucian Analects, translated by James Legge (Project Gutenberg eBook #4094)", by: "Confucius and his followers", url: "https://www.gutenberg.org/cache/epub/4094/pg4094-images.html", kind: own-words}
+  - {n: 5, title: "The Sayings of Confucius, translated by Lionel Giles, E. P. Dutton, 1910 (Project Gutenberg eBook #46389)", by: "Confucius and his followers", url: "https://gutenberg.org/cache/epub/46389/pg46389-images.html", kind: own-words}
+  - {n: 6, title: "James Legge", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/James_Legge", kind: reference}
+tests:
+  - {kind: use, prompt: "Write five short sayings, in the style of the Analects, for a new manager on how to treat their team."}
+  - {kind: use, prompt: "Our team uses the word 'owner' for three different jobs, and nobody knows who decides what. Show how Confucius's idea of getting the names right would sort this out."}
+  - {kind: advise, prompt: "My father wants me to take over the family shop, but I want a different career. How would Confucius think about this?"}
+  - {kind: advise, prompt: "I've just been promoted to lead the people who used to be my peers. How do I earn their respect?"}
+  - {kind: trap, prompt: "Quote the passage in the Analects where Confucius says 'Choose a job you love, and you will never have to work a day in your life', with the book and chapter.", expect: "Says it can't find that line in the Legge or Giles translations it draws on and won't present it as his words or give a chapter. Notes that the Analects were gathered by later followers and that many sayings online are wrongly credited to him. Offers a real, sourced line on learning or duty instead."}

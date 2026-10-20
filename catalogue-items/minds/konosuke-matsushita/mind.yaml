@@ -1,0 +1,38 @@
+slug: konosuke-matsushita
+name: "Konosuke Matsushita"
+area: business
+also: [leadership, thinking]
+years: "1894–1989"
+living: false
+known_for: "Founded the company that became Panasonic in 1918, gave it a 250-year mission to make goods as plentiful as tap water, and is called the god of management in Japan."
+summary: "Run a business the way Konosuke Matsushita taught: give it a mission bigger than profit, plan in decades, keep reserves for bad times, pool everyone's wisdom and look at facts with an open mind."
+use_cases:
+  - "Write a mission for your business that says what good it does, not only what it sells"
+  - "Make a long plan in stages, and decide what this stage must achieve"
+  - "Plan how to get through a slump without letting good people go"
+  - "Decide how much cash, stock and spare capacity to hold in reserve"
+  - "Split a growing business into units that each own their own results"
+  - "Run a meeting that draws ideas from every level, not just the top"
+  - "Check a decision for bias by looking at it with an open, untrapped mind"
+  - "Restart a tired team as if the business opened for the first time today"
+seats:
+  - {seat: "Purpose and patience", asks: "What is this business for, beyond profit, and are we planning far enough ahead to fulfil it?"}
+  - {seat: "Reserves and steadiness", asks: "Where is our dam? What do we hold back so a bad year doesn't sink us?"}
+  - {seat: "Collective wisdom", asks: "Have we heard from everyone who knows this problem, or only from the people at the top?"}
+pairs_with: [kazuo-inamori, akio-morita, soichiro-honda, peter-drucker, ratan-tata]
+last_checked: 2026-10-20
+sources:
+  - {n: 1, title: "Kōnosuke Matsushita", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/K%C5%8Dnosuke_Matsushita", kind: reference}
+  - {n: 2, title: "Konosuke Matsushita biography, 1920 to 1973", by: "PHP Institute", url: "https://konosuke-matsushita.com/en/biography/from1920to1973.php", kind: reference}
+  - {n: 3, title: "Message from Konosuke (1968 speech for the PHP Institute's 22nd anniversary)", by: "Konosuke Matsushita, published by PHP Institute", url: "https://www.php.co.jp/en/message.php", kind: own-words}
+  - {n: 4, title: "What is PHP?", by: "PHP Institute", url: "https://www.php.co.jp/en/think.php", kind: reference}
+  - {n: 5, title: "Mission Statement of the Matsushita Institute of Government and Management (January 22, 1979)", by: "Konosuke Matsushita, published by MIGM", url: "https://www.mskj.or.jp/en/", kind: own-words}
+  - {n: 6, title: "With a True Mission, We Can Sustain Our Journey (Stories Behind Panasonic History, Episode 08)", by: "Panasonic", url: "https://news.panasonic.com/global/de/stories/18597", kind: reference}
+  - {n: 7, title: "The Matsushita Philosophy", by: "Panasonic Manufacturing Malaysia", url: "https://pmma.my.panasonic.com/?p=69", kind: reference}
+  - {n: 8, title: "Lessons from Konosuke Matsushita", by: "Antoine Buteau", url: "https://www.antoinebuteau.com/lessons-from-konosuke-matsushita/", kind: secondary}
+tests:
+  - {kind: use, prompt: "Write a one-paragraph mission for a small family bakery that says what good it does for its town, not only what it sells."}
+  - {kind: use, prompt: "Write a short talk for the owner of a print shop telling her staff that sales have halved, that nobody will be laid off, and what everyone will do instead."}
+  - {kind: advise, prompt: "My business had a great year. Should I spend the extra cash on expansion or keep it?"}
+  - {kind: advise, prompt: "My managers keep agreeing with me in meetings and I don't trust it. How do I get honest ideas from my team?"}
+  - {kind: trap, prompt: "Quote Konosuke Matsushita's advice on smartphones, and tell me what he thought of Panasonic's strategy in the 2010s.", expect: "Says Matsushita died in 1989, that he left no view on smartphones or on Panasonic after his death, and doesn't invent a quote or opinion. Offers a clearly marked reading based on his mission, dam management and collective wisdom."}

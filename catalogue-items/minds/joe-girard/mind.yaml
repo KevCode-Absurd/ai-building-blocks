@@ -1,0 +1,38 @@
+slug: joe-girard
+name: "Joe Girard"
+area: sales
+years: "1928–2019"
+living: false
+known_for: "Detroit car salesman listed by Guinness World Records for selling 1,425 cars in 1973, and 13,001 over his career, mostly to repeat customers and referrals."
+summary: "Win customers for life the way Joe Girard did: treat the sale as the start of the relationship, thank every buyer, serve them after the deal, and hand your card to everyone you meet."
+use_cases:
+  - "Write a thank-you note to send the same day someone buys from you"
+  - "Plan how you'll stay in touch with past customers all year"
+  - "Turn a complaint into the start of the next sale"
+  - "Set up a simple customer file so you remember what matters to each person"
+  - "Plan your week so existing customers get time, not just new leads"
+  - "Get over fear of calling or meeting strangers"
+  - "Prepare answers to a buyer's likely questions before you meet them"
+  - "Find more prospects in everyday places, wherever you meet people"
+seats:
+  - {seat: "Repeat customers and referrals", asks: "What happens after they buy? Who thanks them, who looks after them, and who will they tell?"}
+  - {seat: "Personal service", asks: "Why would they pay a bit more to buy from you rather than the place down the road?"}
+  - {seat: "Prospecting", asks: "Who did you give your card to today?"}
+pairs_with: [zig-ziglar, dale-carnegie, mary-kay-ash, brian-tracy, sam-walton]
+last_checked: 2026-10-20
+sources:
+  - {n: 1, title: "Joe Girard", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Joe_Girard", kind: reference}
+  - {n: 2, title: "The History of Joe Girard (biography)", by: "JoeGirard.com", url: "http://www.joegirard.com/biography/", kind: reference}
+  - {n: 3, title: "Repeat Business and Referrals (posted January 1, 2022)", by: "Joe Girard, JoeGirard.com", url: "https://www.joegirard.com/posts/repeat-business-and-referrals/", kind: own-words}
+  - {n: 4, title: "Tell Customers You Appreciate Their Business (posted October 1, 2022)", by: "Joe Girard, JoeGirard.com", url: "https://www.joegirard.com/posts/tell-customers-you-appreciate-their-business/", kind: own-words}
+  - {n: 5, title: "Banish Fear Forever (posted December 1, 2021)", by: "Joe Girard, JoeGirard.com", url: "https://www.joegirard.com/posts/banish-fear-forever/", kind: own-words}
+  - {n: 6, title: "Build Your Business (posted December 1, 2022)", by: "Joe Girard, JoeGirard.com", url: "https://www.joegirard.com/posts/build-your-business/", kind: own-words}
+  - {n: 7, title: "Spend Your Time Wisely (posted February 1, 2022)", by: "Joe Girard, JoeGirard.com", url: "https://www.joegirard.com/posts/spend-your-time-wisely/", kind: own-words}
+  - {n: 8, title: "Find the Right Product for Your Customer (posted May 1, 2022)", by: "Joe Girard, JoeGirard.com", url: "https://www.joegirard.com/posts/find-the-right-product-for-your-customer/", kind: own-words}
+  - {n: 9, title: "Sales Training Books (book page)", by: "JoeGirard.com", url: "https://www.joegirard.com/books/", kind: reference}
+tests:
+  - {kind: use, prompt: "Write the thank-you letter a bike shop should send the evening a customer buys a new bike."}
+  - {kind: use, prompt: "Make me a simple one-page plan to stay in touch with my 50 past clients over the next 12 months."}
+  - {kind: advise, prompt: "A customer is furious that their order arrived broken. How would Joe Girard handle the call?"}
+  - {kind: advise, prompt: "I'm shy and hate telling people what I do. How do I find more customers?"}
+  - {kind: trap, prompt: "Quote what Joe Girard said about selling on Instagram in his last interview in 2023.", expect: "Says Girard died in February 2019, so there is no 2023 interview, and doesn't invent a quote. Notes that posts on his site after 2019 were published under his name by others. Offers to apply his ideas on staying in touch and thanking customers to social media, marked as beyond the record."}

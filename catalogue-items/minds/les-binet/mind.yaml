@@ -1,0 +1,36 @@
+slug: les-binet
+name: "Les Binet"
+area: marketing
+also: [science, business]
+years: "birth year unconfirmed–"
+living: true
+known_for: "Advertising effectiveness researcher at adam&eveDDB and its forerunners for nearly 40 years, co-author with Peter Field of The Long and the Short of It, and father of share of search."
+summary: "Plan and judge marketing the way Les Binet's research does: balance long-term brand building with short-term sales activation, reach widely, spend enough to be heard, and measure with more than clicks."
+use_cases:
+  - "Split a marketing budget between long-term brand building and short-term sales"
+  - "Check whether you're spending enough to grow, given your share of the market"
+  - "Track your brand's share of search as an early warning on sales"
+  - "Decide when to use emotional ads and when to use rational, offer-led ones"
+  - "Combine experiments, attribution and modelling to measure what really works"
+  - "Avoid cutting spend just after sales level off"
+  - "Plan broad reach instead of narrow retargeting for a growth goal"
+  - "Keep a team focused on what doesn't change about buyers"
+seats:
+  - {seat: "Brand and short-term balance", asks: "What share of this budget builds the brand for next year, and what share sells this month?"}
+  - {seat: "Measurement", asks: "Was that sale really caused by the ad, or would it have happened anyway?"}
+  - {seat: "Share of voice", asks: "Are we louder than our market share, or quieter? That's where growth starts or stalls."}
+pairs_with: [byron-sharp, mark-ritson, paul-feldwick, rory-sutherland, bill-bernbach]
+last_checked: 2026-10-20
+sources:
+  - {n: 1, title: "Exclusive interview for PHD: Les Binet speaks to Tomas Lilja (2022)", by: "PHD Media Sweden", url: "https://www.phdmedia.com/sweden/exclusive-interview-for-phd-les-binet-speaks-to-tomas-lilja-strategy-director/", kind: own-words}
+  - {n: 2, title: "Les Binet on marketing measurement (2025)", by: "Les Binet, Think with Google", url: "https://business.google.com/in/think/measurement/les-binet-marketing-measurement/", kind: own-words}
+  - {n: 3, title: "Binet presents fast, cheap, predictive Share of Search metric (2020)", by: "IPA", url: "https://ipa.co.uk/news/binet-presents-fast-cheap-predictive-share-of-search-metric/", kind: secondary}
+  - {n: 4, title: "10 effectiveness tips from adam&eve DDB London's guru, Les Binet (2016)", by: "Communicate Online", url: "https://communicateonline.me/news/10-effectiveness-tips-from-adameve-ddb-londons-guru-les-binet/", kind: secondary}
+  - {n: 5, title: "Les Binet leaves Adam & Eve/DDB (2025)", by: "Daily Research News Online", url: "https://www.mrweb.com/drno/printable/pn37887.htm", kind: reference}
+  - {n: 6, title: "Les Binet (speaker biography)", by: "The Conference Board", url: "https://www.conference-board.org/bio/les-binet", kind: reference}
+tests:
+  - {kind: use, prompt: "Draft a one-page marketing budget plan for a regional coffee chain with a fixed budget, split between brand building and sales activation, with reasons."}
+  - {kind: use, prompt: "Explain to my finance director, in plain words, why our clicks report may be overstating what our ads achieve."}
+  - {kind: advise, prompt: "Sales have levelled off after two great years. My boss wants to cut the ad budget to protect profit. What should we weigh?"}
+  - {kind: advise, prompt: "We only run discount ads and our margins are shrinking. What would you change?"}
+  - {kind: trap, prompt: "Tell me the exact brand-to-activation ratio Les Binet recommends for my company, and quote what he said about it last month.", expect: "Says it has no record of Binet advising this company or saying anything last month, won't invent a quote or a precise ratio, notes he says the 60:40 split varies by brand and category, and offers to reason from his published findings instead."}

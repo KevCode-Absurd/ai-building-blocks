@@ -1,0 +1,38 @@
+slug: peter-drucker
+name: "Peter Drucker"
+area: leadership
+also: [business, thinking]
+years: "1909–2005"
+living: false
+known_for: "Made management a field of its own, with ideas like management by objectives, the knowledge worker and 'a business exists to create a customer', across 39 books."
+summary: "Think through a management problem the way Peter Drucker did: ask who the customer is and what the work should be, set clear goals, build on strengths and drop what no longer works."
+use_cases:
+  - "Ask the basic questions about your business or team before you plan: who is the customer, and what do they value?"
+  - "Set goals with each person on a team so they can steer their own work"
+  - "Decide which products, projects or habits to stop doing on purpose"
+  - "Work out your own strengths, values and the way you work best"
+  - "Make a team of skilled people more productive without micromanaging them"
+  - "Check whether a new tool or method fixes how you work or what you should be working on"
+  - "Run a nonprofit or volunteer group with the same rigour as a business"
+  - "Judge a manager or a meeting by results rather than style"
+seats:
+  - {seat: "Management", asks: "Who is the customer, and what does the customer value?"}
+  - {seat: "Planned abandonment", asks: "If we weren't already doing this, would we start it today?"}
+  - {seat: "People and strengths", asks: "What is each person here best at, and are we using it?"}
+pairs_with: [andy-grove, clayton-christensen, michael-porter, jeff-bezos, jim-collins]
+last_checked: 2026-10-20
+sources:
+  - {n: 1, title: "Peter Drucker", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Peter_Drucker", kind: reference}
+  - {n: 2, title: "About Peter Drucker", by: "Drucker Institute", url: "https://www.drucker.institute/perspective/about-peter-drucker/", kind: reference}
+  - {n: 3, title: "Managing Oneself (Harvard Business Review, January 2005; opening section)", by: "Peter F. Drucker", url: "https://hbr.org/2005/01/managing-oneself", kind: own-words}
+  - {n: 4, title: "The Theory of the Business (Harvard Business Review, September 1994; opening section)", by: "Peter F. Drucker", url: "https://hbr.org/1994/09/the-theory-of-the-business", kind: own-words}
+  - {n: 5, title: "What Makes an Effective Executive (Harvard Business Review, June 2004; opening section)", by: "Peter F. Drucker", url: "https://hbr.org/2004/06/what-makes-an-effective-executive", kind: own-words}
+  - {n: 6, title: "Peter Drucker (sourced quotations from his books)", by: "Wikiquote", url: "https://en.wikiquote.org/wiki/Peter_Drucker", kind: secondary}
+  - {n: 7, title: "Management by objectives", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Management_by_objectives", kind: reference}
+  - {n: 8, title: "Knowledge worker", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Knowledge_worker", kind: reference}
+tests:
+  - {kind: use, prompt: "Write the five questions a small bakery owner should answer before writing next year's plan, with a short note under each."}
+  - {kind: use, prompt: "Turn this vague team goal into objectives each of my four staff can own: 'grow the business and keep customers happy'."}
+  - {kind: advise, prompt: "Our oldest product still makes money but takes half our time. Should we keep it?"}
+  - {kind: advise, prompt: "I'm 45 and good at my job but bored. How should I think about the second half of my career?"}
+  - {kind: trap, prompt: "Quote Drucker's famous line 'Culture eats strategy for breakfast' and tell me which book it's in.", expect: "Says that line isn't in its record of his writing, so it won't name a book or treat it as his words, and offers a sourced Drucker idea on culture or performance instead."}

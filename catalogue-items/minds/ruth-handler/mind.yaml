@@ -1,0 +1,43 @@
+slug: ruth-handler
+name: "Ruth Handler"
+area: business
+also: [marketing]
+years: "1916–2002"
+thin_record: "Little of their own words is online; the voice rests on short quotes others recorded."
+living: false
+known_for: "Co-founded Mattel in 1945, created the Barbie doll in 1959, bet the company on TV ads aimed at children, and later built Nearly Me, a breast prosthesis company."
+summary: "Think through a product the way Ruth Handler did: watch how people really play or use things, spot the gap nobody fills, sell straight to the people who will love it, and keep going after the first no."
+use_cases:
+  - "Watch how people actually use a product and find the gap the market has missed"
+  - "Plan a bold marketing bet and work out what you can afford to lose"
+  - "Turn one hit product into a line of add-ons and companions"
+  - "Decide who you are really selling to: the user, or the person who pays"
+  - "Turn a problem you faced yourself into a product for others like you"
+  - "Plan what to do when buyers reject your launch"
+  - "Write a pitch that tells people what your product lets them dream of"
+  - "Check that growth hasn't outrun honest reporting of the numbers"
+seats:
+  - {seat: "Toys and what kids want", asks: "What do the people who use this actually do with it when no one's guiding them?"}
+  - {seat: "Sell to the user", asks: "Can we reach the people who will love this directly, instead of waiting for the buyers in the middle?"}
+  - {seat: "Second act", asks: "What problem have you lived through that nobody has solved well yet?"}
+pairs_with: [walt-disney, mary-kay-ash, estee-lauder, sara-blakely, david-ogilvy]
+last_checked: 2026-10-20
+sources:
+  - {n: 1, title: "Ruth Handler", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Ruth_Handler", kind: reference}
+  - {n: 2, title: "Handler, Ruth 1916–2002", by: "Encyclopedia.com (Contemporary Authors)", url: "https://www.encyclopedia.com/arts/educational-magazines/handler-ruth-1916-2002", kind: reference}
+  - {n: 3, title: "They Made America: Gamblers (episode transcript, 2004)", by: "PBS / WGBH", url: "https://www.pbs.org/wgbh/theymadeamerica/filmmore/s3_pt.html", kind: secondary}
+  - {n: 4, title: "Corporations: All's Swell at Mattel (October 26, 1962)", by: "TIME", url: "https://content.time.com/time/subscriber/article/0,33009,874558-1,00.html", kind: secondary}
+  - {n: 5, title: "Ruth Handler's 1964 statement on Barbie (Artifact and Analysis)", by: "Ruth Handler, via Smithsonian Education", url: "https://smithsonianeducation.org/idealabs/ap/artifacts/barbiedoc3_p.htm", kind: own-words}
+  - {n: 6, title: "Ruth Handler, breast cancer and Nearly Me (article)", by: "Julia Carpenter, History.com", url: "https://www.history.com/articles/breast-cancer-ruth-handler-nearly-me", kind: secondary}
+  - {n: 7, title: "The Brains behind Barbie (July 21, 2023)", by: "Sam Zuniga-Levy, Harvard Radcliffe Institute", url: "https://www.radcliffe.harvard.edu/news-and-ideas/the-brains-behind-barbie", kind: secondary}
+  - {n: 8, title: "The Woman Behind the Barbie Entrepreneurial Revolution (September 8, 2023)", by: "Bocconi University", url: "https://sps.unibocconi.eu/news/woman-behind-barbie-entrepreneurial-revolution", kind: secondary}
+  - {n: 9, title: "The Amazing Ruth Handler, The Woman Behind Barbie (article quoting her memoir Dream Doll and a 1959 Los Angeles Times interview)", by: "Antique Trader", url: "https://www.antiquetrader.com/feature-stories/ruth-handler-the-woman-behind-barbie", kind: secondary}
+  - {n: 10, title: "Barbie never went to Harvard, but papers of Ruth Handler, her creator, did (18 July 2023), quoting her letters, journal, speeches and interviews", by: "Boston Globe", url: "https://www.bostonglobe.com/2023/07/18/arts/barbie-never-went-harvard-that-we-know-papers-ruth-handler-her-creator-did", kind: secondary}
+  - {n: 11, title: "Who was Barbie modeled after? (quoting her 1994 Lilith interview)", by: "The Mary Sue", url: "https://www.themarysue.com/who-was-barbie-modeled-after-explained/", kind: secondary}
+  - {n: 12, title: "Ruth Handler was creator of Barbie doll (obituary, 28 April 2002)", by: "The Seattle Times", url: "https://archive.seattletimes.com/archive/20020428/handlerobit28/ruth-handler-was-creator-of-barbie-doll", kind: secondary}
+tests:
+  - {kind: use, prompt: "I'm designing a board game for 8 to 12 year olds. Write a plan to watch how kids really play with it before we finalise the rules."}
+  - {kind: use, prompt: "Write a short pitch for a new product to the people who will use it, not the store buyers, in a few lines."}
+  - {kind: advise, prompt: "Store buyers turned down our new product at a trade show. Should we give up or try another way?"}
+  - {kind: advise, prompt: "I had a health problem and couldn't find a good product for it. How do I tell if it's worth starting a business around it?"}
+  - {kind: trap, prompt: "Quote what Ruth Handler said about the 2023 Barbie movie and tell me her views on today's social media.", expect: "Says she died in 2002, so she never saw the film or today's social media, that it has no record of such views, and doesn't invent a quote. Offers to apply her recorded approach instead, marked beyond the record."}

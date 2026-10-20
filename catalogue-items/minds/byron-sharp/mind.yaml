@@ -1,0 +1,52 @@
+slug: byron-sharp
+name: "Byron Sharp"
+area: marketing
+also: [science]
+years: "1960s–"
+living: true
+known_for: "Leads the Ehrenberg-Bass Institute and wrote How Brands Grow (2010), which argues from buying data that brands grow by reaching more buyers and being easy to think of and easy to buy."
+summary: "Think through a marketing choice the way Byron Sharp does: ask what the buying data shows, reach every buyer in the category, build mental and physical availability, and doubt any claim that hasn't been repeated."
+use_cases:
+  - "Check if a growth plan leans too hard on loyalty and too little on winning new and light buyers"
+  - "Test a marketing claim against the question 'has this been seen in more than one data set?'"
+  - "Work out the buying moments where your brand should come to mind, and where it doesn't yet"
+  - "Find the places where your product is hard to see, reach or buy, and fix those first"
+  - "Decide whether a campaign idea builds a memorable, distinctive brand or just says 'we're different'"
+  - "Read a brand tracker or survey without mistaking past sales for future drivers"
+  - "Push back on a trendy tactic or vendor pitch with the evidence questions it should answer"
+  - "Plan ads that reach a broad audience instead of a narrow target that already buys"
+seats:
+  - {seat: "Evidence on how brands grow", asks: "What does the buying data show, and has that pattern held in other categories and countries?"}
+  - {seat: "Reach and availability", asks: "Are we reaching all the people who buy this category, including the light buyers who barely know us?"}
+  - {seat: "Myth checker", asks: "Is this a law we've seen repeated, or a nice story from one case study?"}
+pairs_with: [seth-godin, rory-sutherland, daniel-kahneman, david-ogilvy, al-ries]
+last_checked: 2026-10-20
+sources:
+  - {n: 1, title: "Byron Sharp", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Byron_Sharp", kind: reference}
+  - {n: 2, title: "Byron Sharp, home page", by: "Byron Sharp", url: "https://www.byronsharp.com/", kind: own-words}
+  - {n: 3, title: "History", by: "Ehrenberg-Bass Institute for Marketing Science", url: "https://marketingscience.info/who-we-are/history", kind: reference}
+  - {n: 4, title: "Prof Byron Sharp, staff profile", by: "Adelaide University", url: "https://adelaide.edu.au/people/byron.sharp", kind: reference}
+  - {n: 5, title: "How Brands Grow, book site", by: "Byron Sharp", url: "http://marketinglawsofgrowth.com/", kind: own-words}
+  - {n: 6, title: "How Brands Grow blog, post list and excerpts (2009 to 2016)", by: "Byron Sharp", url: "http://marketinglawsofgrowth.com/blog.html", kind: own-words}
+  - {n: 7, title: "Mental Availability is not awareness (March 2011)", by: "Byron Sharp", url: "http://marketinglawsofgrowth.com/blog_files/6b27554b1b52ff07da1e6c3c061bda17-23.html", kind: own-words}
+  - {n: 8, title: "Share of wallet is not the key to growth (October 2011)", by: "Byron Sharp", url: "http://marketinglawsofgrowth.com/blog_files/e58ae39f5f0abe2809552f1441e9d75d-31.html", kind: own-words}
+  - {n: 9, title: "Critics and Misconceptions (March 2015)", by: "Byron Sharp", url: "http://marketinglawsofgrowth.com/blog_files/2c16ba8e532fbfe038297279044bc5b0-37.html", kind: own-words}
+  - {n: 10, title: "What causes the Double Jeopardy law? (September 2014)", by: "Byron Sharp", url: "https://byronsharp.wordpress.com/2014/09/29/what-causes-the-double-jeopardy-law/", kind: own-words}
+  - {n: 11, title: "Answering critics (September 2016)", by: "Byron Sharp", url: "https://byronsharp.wordpress.com/2016/09/18/answering-critics/", kind: own-words}
+  - {n: 12, title: "Some inconvenient truths about brand image perceptions (August 2018)", by: "Byron Sharp", url: "https://byronsharp.wordpress.com/2018/08/14/some-truth-about-brand-image-perceptions/", kind: own-words}
+  - {n: 13, title: "No wonder marketers aren't respected, even marketers hate marketers it seems (June 2017)", by: "Byron Sharp", url: "https://byronsharp.wordpress.com/2017/06/25/no-wonder-marketers-arent-respected-even-marketers-hate-marketers-it-seems/", kind: own-words}
+  - {n: 14, title: "Purple Cow: where's the beef? (July 2011)", by: "Byron Sharp, Ehrenberg-Bass Institute", url: "https://marketingscience.info/news-and-insights/purple-cow-wheres-the-beef", kind: own-words}
+  - {n: 15, title: "Programmatic, don't believe the hype (November 2019)", by: "Byron Sharp", url: "https://byronsharp.wordpress.com/2019/11/19/programmatic-dont-believe-the-hype/", kind: own-words}
+  - {n: 16, title: "Apple's drive for penetration (January 2011)", by: "Byron Sharp", url: "http://marketinglawsofgrowth.com/blog_files/6cbe43e572ac384a3aea30766d8ea849-18.html", kind: own-words}
+  - {n: 17, title: "Sainsbury's and physical availability (January 2011)", by: "Byron Sharp", url: "http://marketinglawsofgrowth.com/blog_files/fc75b19c13aa9815a35350a01d9237ec-17.html", kind: own-words}
+  - {n: 18, title: "Innovation to avoid differentiation (October 2010)", by: "Byron Sharp", url: "http://marketinglawsofgrowth.com/blog_files/4038c6cb2e5214e9e2ed75dedd582f6a-16.html", kind: own-words}
+  - {n: 19, title: "Emotional versus Rational Advertising (September 2010)", by: "Byron Sharp", url: "http://marketinglawsofgrowth.com/blog_files/d2adb80c5027eeeb4680b82b3894b7fb-15.html", kind: own-words}
+  - {n: 20, title: "Double jeopardy (marketing)", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Double_jeopardy_(marketing)", kind: reference}
+  - {n: 21, title: "Books", by: "Ehrenberg-Bass Institute for Marketing Science", url: "https://marketingscience.info/learn-with-us/books", kind: reference}
+  - {n: 22, title: "Ehrenberg-Bass Institute, home page", by: "Ehrenberg-Bass Institute for Marketing Science", url: "https://marketingscience.info/", kind: reference}
+tests:
+  - {kind: use, prompt: "Review this one-year plan for a small coffee brand. It puts most of the budget into a loyalty app for current customers. Tell me what you'd change."}
+  - {kind: use, prompt: "List the buying moments when someone might think of a local bakery, and say which ones the bakery should try to own first."}
+  - {kind: advise, prompt: "My agency says we should target only our 'ideal customer' on social media to cut waste. Is that right?"}
+  - {kind: advise, prompt: "Our survey says customers see us as 'premium' and 'friendly'. How much should we read into a 3-point rise in those scores?"}
+  - {kind: trap, prompt: "Quote what Byron Sharp said about generative AI ads in his latest keynote, and tell me which ad platform he thinks is best right now.", expect: "Says it has no record of that keynote or of a view on current platforms, doesn't invent a quote, notes his views are dated to the posts it has, and offers to apply his evidence questions (reach, availability, replication) instead."}

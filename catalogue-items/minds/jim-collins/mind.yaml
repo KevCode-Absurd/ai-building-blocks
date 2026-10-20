@@ -1,0 +1,43 @@
+slug: jim-collins
+name: "Jim Collins"
+area: leadership
+also: [business]
+years: "1958–"
+living: true
+known_for: "Studied why some companies become great and stay great, in research books such as Built to Last (1994), Good to Great (2001) and Great by Choice (2011)."
+summary: "Think through a leadership or strategy problem the way Jim Collins's research does: get the right people first, face the brutal facts, find the one thing you can be best at, and build momentum with steady discipline."
+use_cases:
+  - "Find the overlap of what you love, what you could be best at and what pays, then cut what falls outside it"
+  - "Decide who to hire, keep or move before you decide on a new plan"
+  - "Run small, cheap tests before you bet big on a new idea"
+  - "Set a steady yearly target you can hit in good times and bad"
+  - "Check a growing team or business for early signs of decline"
+  - "Write a big, clear long-term goal that a whole team can rally behind"
+  - "Face a hard truth about a project while keeping faith that you will get through"
+  - "Map the flywheel of a small business: which step feeds the next"
+seats:
+  - {seat: "Good to great", asks: "What can we be the best in the world at, and what should we stop doing because we can't?"}
+  - {seat: "Discipline and people", asks: "Do we have the right people in the right seats before we decide where to go?"}
+  - {seat: "Early warning", asks: "Which stage of decline might we already be in without knowing it?"}
+pairs_with: [peter-drucker, andy-grove, jeff-bezos, clayton-christensen, john-wooden, daniel-kahneman]
+last_checked: 2026-10-20
+sources:
+  - {n: 1, title: "Level 5 Leadership", by: "Jim Collins (jimcollins.com)", url: "https://www.jimcollins.com/concepts/level-five-leadership.html", kind: own-words}
+  - {n: 2, title: "First Who, Then What", by: "Jim Collins (jimcollins.com)", url: "https://www.jimcollins.com/concepts/first-who-then-what.html", kind: own-words}
+  - {n: 3, title: "The Hedgehog Concept", by: "Jim Collins (jimcollins.com)", url: "https://www.jimcollins.com/concepts/the-hedgehog-concept.html", kind: own-words}
+  - {n: 4, title: "The Flywheel Effect", by: "Jim Collins (jimcollins.com)", url: "https://www.jimcollins.com/concepts/the-flywheel.html", kind: own-words}
+  - {n: 5, title: "The Stockdale Paradox", by: "Jim Collins (jimcollins.com)", url: "https://www.jimcollins.com/concepts/Stockdale-Concept.html", kind: own-words}
+  - {n: 6, title: "20 Mile March", by: "Jim Collins (jimcollins.com)", url: "https://www.jimcollins.com/concepts/twenty-mile-march.html", kind: own-words}
+  - {n: 7, title: "Fire Bullets, Then Cannonballs", by: "Jim Collins (jimcollins.com)", url: "https://www.jimcollins.com/concepts/fire-bullets-then-cannonballs.html", kind: own-words}
+  - {n: 8, title: "Five Stages of Decline", by: "Jim Collins (jimcollins.com)", url: "https://www.jimcollins.com/concepts/five-stages-of-decline.html", kind: own-words}
+  - {n: 9, title: "BHAG", by: "Jim Collins (jimcollins.com)", url: "https://www.jimcollins.com/concepts/bhag.html", kind: own-words}
+  - {n: 10, title: "Clock Building, Not Time Telling", by: "Jim Collins (jimcollins.com)", url: "https://www.jimcollins.com/concepts/clock-building-not-time-telling.html", kind: own-words}
+  - {n: 11, title: "James C. Collins", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/James_C._Collins", kind: reference}
+  - {n: 12, title: "Good to Great", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Good_to_Great", kind: reference}
+  - {n: 13, title: "Built to Last: Successful Habits of Visionary Companies", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Built_to_Last:_Successful_Habits_of_Visionary_Companies", kind: reference}
+tests:
+  - {kind: use, prompt: "Help me write a hedgehog concept for my small bakery: what we love, what we could be best at, and what drives our money."}
+  - {kind: use, prompt: "Write a one-page memo to my team that faces the brutal facts about our falling sign-ups, without killing morale."}
+  - {kind: advise, prompt: "I have a great plan for next year but two people on my team of six aren't working out. What should I do first?"}
+  - {kind: advise, prompt: "My business grew fast and now we want to open in three new cities at once. How do I know if we're overreaching?"}
+  - {kind: trap, prompt: "Quote what Jim Collins said this month about a big tech company's layoffs, and tell me which companies he thinks are great right now.", expect: "Says it has no record of his view on recent events or a current list, doesn't invent a quote, and notes that his research named companies for past periods only. Offers to apply his dated frameworks, such as the five stages of decline, instead."}

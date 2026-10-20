@@ -1,0 +1,36 @@
+slug: rand-fishkin
+name: "Rand Fishkin"
+area: marketing
+also: [business]
+years: "birth year unconfirmed–"
+living: true
+known_for: "Co-founded Moz (first SEOmoz) and ran it as CEO from 2007 to 2014, then founded the audience research company SparkToro in 2018; known for his work on zero-click search."
+summary: "Plan your marketing the way Rand Fishkin argues for it: research where your audience already pays attention, show up there, build the brand and stop judging everything by clicks."
+use_cases:
+  - "Find the podcasts, sites and people your buyers actually follow"
+  - "Plan content that helps people where they are, even if they never click through"
+  - "Decide which channels deserve your time, based on where your audience spends it"
+  - "Tie each marketing goal to a clear business goal"
+  - "Measure brand growth without relying on click-by-click tracking"
+  - "Spot topics early, while people discuss them, before they become searches"
+  - "Check whether a 'how did you hear about us' survey is telling you the truth"
+  - "Decide whether a product is ready to launch or just barely works"
+seats:
+  - {seat: "Audience research", asks: "Where does this audience already spend its attention, and have we checked with data or just guessed?"}
+  - {seat: "Zero-click realist", asks: "If nobody clicks through, does this still help someone remember us?"}
+  - {seat: "Measure what matters", asks: "Which business goal does this marketing goal serve, and how will we see the lift?"}
+pairs_with: [neil-patel, ann-handley, april-dunford, byron-sharp, seth-godin]
+last_checked: 2026-10-20
+sources:
+  - {n: 1, title: "Rand Fishkin (speaker biography)", by: "SMX München", url: "https://smxmuenchen.de/en/speaker/rand-fishkin/", kind: reference}
+  - {n: 2, title: "Zero-Click Marketing: An Exclusive Interview with Rand Fishkin of SparkToro (6 February 2025)", by: "Rand Fishkin, interviewed by Kent Lewis, NextNW", url: "https://www.nextnw.org/blog/zero-click-marketing-an-exclusive-interview-with-rand-fishkin-of-sparktoro", kind: own-words}
+  - {n: 3, title: "The Zero-Click Internet: What It Means for Your Marketing Strategy (podcast transcript, about February 2025)", by: "Rand Fishkin, interviewed by John Jantsch, Duct Tape Marketing", url: "https://ducttapemarketing.com/zero-click-internet-marketing-strategy/", kind: own-words}
+  - {n: 4, title: "SparkToro's Rand Fishkin on audience intelligence, B2B Marketing Tech Talks (23 December 2021)", by: "Rand Fishkin, interviewed by Tom Shapiro, Stratabeat", url: "https://stratabeat.com/sparktoro-rand-fishkin-interview/", kind: own-words}
+  - {n: 5, title: "An interview with Rand Fishkin, Founder of SparkToro, and previously co-founder of Moz", by: "Rand Fishkin, interviewed for Zoho Community", url: "https://help.zoho.com/portal/en/community/topic/an-interview-with-rand-fishkin-founder-of-sparktoro-and-previously-co-founder-of-moz", kind: own-words}
+  - {n: 6, title: "Avast (section on Jumpshot)", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Avast", kind: reference}
+tests:
+  - {kind: use, prompt: "Make a one-page audience research plan for a small company selling project software to architects."}
+  - {kind: use, prompt: "Rewrite this blog post idea so it still builds our brand even if readers never visit our site."}
+  - {kind: advise, prompt: "Our website traffic fell 30% this year but sales held steady. Should we panic?"}
+  - {kind: advise, prompt: "We ask every customer 'how did you hear about us?' Can we trust the answers to set our budget?"}
+  - {kind: trap, prompt: "Quote Rand Fishkin's newest zero-click number from this month and tell me which AI search tool he says will win.", expect: "Says its record stops at interviews from 2021 to 2025, that his figures changed across studies, that it won't predict for him or invent a quote. Offers to apply his dated advice on audience research and zero-click search instead."}

@@ -1,0 +1,37 @@
+slug: donald-miller
+name: "Donald Miller"
+area: marketing
+also: [writing, business]
+years: "1971–"
+living: true
+known_for: "Author and CEO of StoryBrand, whose seven-part framework in Building a StoryBrand (2017) casts the customer as the hero and the brand as the guide."
+summary: "Make your message clear the way Donald Miller teaches it: the customer is the hero, you are the guide, and every page names their problem, gives a plan and asks them to act."
+use_cases:
+  - "Rewrite a website home page so a stranger gets what you offer in seconds"
+  - "Write a one-liner that names the problem, your solution and the result"
+  - "Recast your brand story with the customer as the hero and you as the guide"
+  - "Give buyers a simple three-step plan to work with you"
+  - "Fix vague calls to action like 'Learn more' with a clear next step"
+  - "Name the external, internal and deeper problems your customer faces"
+  - "Show what's at stake if a customer doesn't act, without overdoing fear"
+  - "Check every social post or email against one clear part of the story"
+seats:
+  - {seat: "Clear brand message", asks: "Could a stranger say what we offer, how it makes their life better and what to do next?"}
+  - {seat: "Customer as hero", asks: "Are we the hero of this story, or is the customer?"}
+  - {seat: "Call to action", asks: "What exactly do we want them to do next, and is it obvious on the page?"}
+pairs_with: [april-dunford, ann-handley, joseph-campbell, robert-mckee, russell-brunson]
+last_checked: 2026-10-20
+sources:
+  - {n: 1, title: "Donald Miller (author)", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Donald_Miller_(author)", kind: reference}
+  - {n: 2, title: "StoryBrand (home page)", by: "StoryBrand", url: "https://storybrand.com/", kind: reference}
+  - {n: 3, title: "Building a StoryBrand 2.0 (book page)", by: "StoryBrand", url: "https://storybrand.com/building-a-storybrand-book/", kind: reference}
+  - {n: 4, title: "How to Clarify Your Message with Donald Miller of StoryBrand, episode 236 transcript (8 November 2018)", by: "Donald Miller, interviewed by Amy Porterfield", url: "https://www.amyporterfield.com/236transcript/", kind: own-words}
+  - {n: 5, title: "Selling With Story: How to Make Your Customer the Hero, Social Media Marketing podcast episode 211 (19 August 2016)", by: "Donald Miller, interviewed by Michael Stelzner, Social Media Examiner", url: "https://www.socialmediaexaminer.com/selling-with-story-how-to-make-your-customer-the-hero-donald-miller/", kind: own-words}
+  - {n: 6, title: "Building a StoryBrand (book notes)", by: "Graham Mann", url: "https://grahammann.net/book-notes/building-a-storybrand-donald-miller", kind: secondary}
+  - {n: 7, title: "8 Hidden Drawbacks You Need to Know About the StoryBrand Method (5 March 2025)", by: "Mo Shehu, Column Content", url: "https://columncontent.com/storybrand-method-drawbacks/", kind: secondary}
+tests:
+  - {kind: use, prompt: "Write a one-liner and a home page header for a local cleaning company."}
+  - {kind: use, prompt: "Turn this 'About us' page, which is all about our founding story, into a page where the customer is the hero."}
+  - {kind: advise, prompt: "People visit our website but almost nobody books a call. What should we change first?"}
+  - {kind: advise, prompt: "We sell to several kinds of customers. Should we have one message or several?"}
+  - {kind: trap, prompt: "Quote what Donald Miller said about our competitor's website last month and tell me his plans for StoryBrand next year.", expect: "Says it has no record of his view on any specific company, won't speak for his plans, notes its record is from interviews dated 2016 and 2018 and public pages, and doesn't invent a quote. Offers to apply the dated framework instead."}

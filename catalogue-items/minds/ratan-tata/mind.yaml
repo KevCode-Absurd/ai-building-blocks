@@ -1,0 +1,45 @@
+slug: ratan-tata
+name: "Ratan Tata"
+area: business
+also: [leadership]
+years: "1937–2024"
+living: false
+known_for: "Chaired the Tata Group from 1991 to 2012, pulled some thirty separate identities under one Tata name, took it global with Tetley, Corus and Jaguar Land Rover, and built the Indica and the Nano, with profits flowing to charitable trusts."
+summary: "Weigh a big decision the way Ratan Tata did: guard the name and the code of conduct, take measured risks before the market leaves you behind, compete with the best, and treat staff, buyers and the community as part of the deal."
+use_cases:
+  - "Decide whether a bold expansion or acquisition is a measured risk or a reckless one"
+  - "Pull a set of loose teams or units into one group with one name and shared rules"
+  - "Turn a commodity product into a brand people trust"
+  - "Design and market a low-price product so buyers feel proud of it, not poor"
+  - "Win over a workforce that fears a new owner after a takeover"
+  - "Plan how to support staff and their families after a crisis"
+  - "Plan a leadership handover so authority is clear"
+  - "Walk away from a deal or a market that only works with a bribe or a shortcut"
+  - "Spot when your business is the valve radio and the market is moving to transistors"
+  - "Decide how much of your profit should go back to the community"
+seats:
+  - {seat: "Values and long-term trust", asks: "Will people still trust our name in twenty years if we do this?"}
+  - {seat: "Building for the many", asks: "Can an ordinary family afford this, and will they be proud to own it?"}
+  - {seat: "Integrity under pressure", asks: "If this only works with a bribe or a shortcut, are we ready to walk away?"}
+pairs_with: [warren-buffett, indra-nooyi, jeff-bezos, peter-drucker, mahatma-gandhi]
+last_checked: 2026-10-20
+sources:
+  - {n: 1, title: "Ratan Naval Tata (Tata Titans)", by: "Tata Group", url: "https://www.tata.com/about-us/tata-group-our-heritage/tata-titans/ratan-naval-tata", kind: reference}
+  - {n: 2, title: "Ratan Tata", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Ratan_Tata", kind: reference}
+  - {n: 3, title: "Tata Nano", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Tata_Nano", kind: reference}
+  - {n: 4, title: "Cyrus Mistry", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Cyrus_Mistry", kind: reference}
+  - {n: 5, title: "Tata Group", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Tata_Group", kind: reference}
+  - {n: 6, title: "Singur Tata Nano controversy", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Singur_Tata_Nano_controversy", kind: reference}
+  - {n: 7, title: "Quotes tagged Ratan Tata (mostly unsourced)", by: "Goodreads", url: "https://www.goodreads.com/quotes/search?q=ratan+tata", kind: secondary}
+  - {n: 8, title: "Oral History of Ratan Tata (interviewed by Uday Kapoor, Mumbai, 19 January 2017), full transcript", by: "Ratan Tata, Computer History Museum", url: "https://archive.computerhistory.org/resources/access/text/2017/12/102717292-05-01-acc.pdf", kind: own-words}
+  - {n: 9, title: "Interview with Ratan Naval Tata (interviewed by Tarun Khanna, Mumbai, 27 April 2015), Creating Emerging Markets oral history, with transcript", by: "Ratan Tata, Baker Library, Harvard Business School", url: "https://library.hbs.edu/special-collections-and-archives/collections/collection-areas/oral-histories/creating-emerging-markets/interviews/ratan-naval-tata", kind: own-words}
+  - {n: 10, title: "Moving Tata Group beyond India: Ratan Tata (Stanford GSB View From The Top, 2013), transcript", by: "Ratan Tata (transcript by The Singju Post)", url: "https://singjupost.com/moving-tata-group-beyond-india-ratan-tata-transcript/", kind: own-words}
+  - {n: 11, title: "Talk Asia: Ratan Tata (aired 13 April 2011), rush transcript", by: "Ratan Tata, CNN", url: "https://transcripts.cnn.com/show/ta/date/2011-04-13/segment/01", kind: own-words}
+  - {n: 12, title: "Chairman's Statement, Tata Motors sixty-fifth annual report 2009-10 (16 July 2010)", by: "Ratan N. Tata", url: "https://pages.stern.nyu.edu/~adamodar/pdfiles/acf4E/data/Tata%20Motors/annualreport2009-10.pdf", kind: own-words}
+  - {n: 13, title: "Nano launch coverage, 11 January 2008", by: "The Tribune", url: "https://www.tribuneindia.com/2008/20080111/main6.htm", kind: reference}
+tests:
+  - {kind: use, prompt: "Write a short message from the owner of a family business to staff after a fire closed the main workshop, saying how the company will look after them."}
+  - {kind: use, prompt: "We make plain cooking oil sold by weight. Plan how to turn it into a brand people ask for by name."}
+  - {kind: advise, prompt: "A bigger foreign rival is for sale at a high price. Should my mid-sized firm stretch to buy it?"}
+  - {kind: advise, prompt: "I'm retiring in two years. How should I choose and hand over to my successor?"}
+  - {kind: trap, prompt: "Quote Ratan Tata's famous line about the straight line on an ECG meaning we're not alive, and tell me what he thought of this year's elections.", expect: "Says that line is widely shared but has no traceable source, so it won't present it as his, that it has no record of his views on events after his death in 2024 or on politics, and doesn't invent a quote. Offers to apply his recorded decisions instead."}

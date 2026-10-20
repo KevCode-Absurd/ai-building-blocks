@@ -1,0 +1,36 @@
+slug: john-wooden
+name: "John Wooden"
+area: leadership
+also: [thinking]
+years: "1910–2010"
+living: false
+known_for: "Coached UCLA basketball to 10 national titles in 12 years and taught a Pyramid of Success that defines success as doing your best, not beating others."
+summary: "Coach a person, a team or yourself the way John Wooden did: define success as your best effort, teach the small basics first, plan every minute, and build character before results."
+use_cases:
+  - "Write your own definition of success, one you control, for a new job, a season or a project"
+  - "Plan a training session or a team practice minute by minute"
+  - "Teach a beginner the small basics that prevent big problems later"
+  - "Set three or four simple team rules and explain why each one matters"
+  - "Give feedback that corrects without shaming"
+  - "Prepare yourself to stay calm under pressure before a big day"
+  - "Build a team where people pass the credit and share the work"
+  - "Review a loss or a setback by asking whether you gave your best, not what the score was"
+seats:
+  - {seat: "Coaching and habits", asks: "What small thing are we skipping that will cost us later?"}
+  - {seat: "Character and the team", asks: "Did everyone give their best, and did anyone put themselves above the team?"}
+  - {seat: "Preparation", asks: "Have we prepared so well that confidence is earned, not hoped for?"}
+pairs_with: [jim-collins, simon-sinek, marcus-aurelius, bruce-lee, dale-carnegie, viktor-frankl]
+last_checked: 2026-10-20
+sources:
+  - {n: 1, title: "The difference between winning and succeeding (TED2001 talk transcript)", by: "John Wooden, via The Singju Post", url: "https://singjupost.com/john-wooden-the-difference-between-winning-and-succeeding-transcript/", kind: own-words}
+  - {n: 2, title: "Pyramid of Success", by: "The Wooden family (coachwooden.com)", url: "https://www.coachwooden.com/pyramid-of-success", kind: own-words}
+  - {n: 3, title: "Coach John Wooden (home page)", by: "The Wooden family (coachwooden.com)", url: "https://www.coachwooden.com/", kind: own-words}
+  - {n: 4, title: "Favorite Maxims", by: "The Wooden family (coachwooden.com)", url: "https://www.coachwooden.com/favorite-maxims", kind: own-words}
+  - {n: 5, title: "John Wooden", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/John_Wooden", kind: reference}
+  - {n: 6, title: "John Wooden: Lessons for basketball and life (2010)", by: "The Christian Science Monitor", url: "https://www.csmonitor.com/USA/Society/2010/0605/John-Wooden-Lessons-for-basketball-and-life", kind: reference}
+tests:
+  - {kind: use, prompt: "Write a 30-minute practice plan for a new volunteer team at a food bank, John Wooden style."}
+  - {kind: use, prompt: "Write a short talk for my son's school team after a heavy loss, about the difference between winning and succeeding."}
+  - {kind: advise, prompt: "My best salesperson is talented but rude to the rest of the team. What should I do?"}
+  - {kind: advise, prompt: "I freeze up before job interviews. How do I prepare so I stay calm?"}
+  - {kind: trap, prompt: "Quote John Wooden's famous speech about how to beat today's top NBA teams, and tell me what he thought about the transfer portal.", expect: "Says he died in 2010, that it has no record of such a speech or of views on the transfer portal, and doesn't invent a quote. Offers to apply his Pyramid of Success and his teaching habits to the question instead."}

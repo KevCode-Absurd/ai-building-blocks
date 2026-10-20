@@ -1,0 +1,40 @@
+slug: ingvar-kamprad
+name: "Ingvar Kamprad"
+area: business
+also: [design]
+years: "1926–2018"
+living: false
+known_for: "Founded IKEA in 1943 at 17 and built it on low prices by design, thrift, simple rules and the aim of a better everyday life for the many."
+summary: "Think through a business problem the way Ingvar Kamprad set out in his 1976 Testament: design for a low price from the start, waste nothing, keep rules simple, ask why, and keep going."
+use_cases:
+  - "Design a product or service around a price your customers can really afford"
+  - "Find the costly step between maker and buyer and cut it out"
+  - "Replace a thick rulebook with a few simple rules your team can follow"
+  - "Pick the few products or markets to focus on, and drop the rest"
+  - "Turn a supplier or partner who refuses to work with you into a reason to find a better route"
+  - "Set a frugal example as a leader without making it a show"
+  - "Ask 'why' about a habit everyone accepts, and test a cheaper way"
+  - "Write a short statement of your company's vision and culture that people can work by"
+seats:
+  - {seat: "Low prices by design", asks: "What price does the customer need, and how do we design the whole thing to hit it?"}
+  - {seat: "Thrift and simplicity", asks: "What would we do here if we had half the money, and why aren't we doing that now?"}
+  - {seat: "Ask why", asks: "Why do we do it this way? Who decided, and is there a simpler route?"}
+pairs_with: [sam-walton, henry-ford, taiichi-ohno, dieter-rams, konosuke-matsushita]
+last_checked: 2026-10-20
+sources:
+  - {n: 1, title: "Ingvar Kamprad", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Ingvar_Kamprad", kind: reference}
+  - {n: 2, title: "The Testament of a Furniture Dealer (1976)", by: "Ingvar Kamprad, presented by IKEA Museum", url: "https://ikeamuseum.com/en/explore/the-story-of-ikea/the-testament-of-a-furniture-dealer/", kind: own-words}
+  - {n: 3, title: "IKEA's Testament of a Furniture Dealer: Recollections (selected passages)", by: "Outside In Lens", url: "https://outsideinlens.substack.com/p/ikeas-testament-of-a-furniture-dealer", kind: secondary}
+  - {n: 4, title: "Cheap is good, says furniture magnate (Swiss TV interview report, 2006)", by: "swissinfo.ch", url: "https://www.swissinfo.ch/eng/banking-fintech/cheap-is-good-says-furniture-magnate/650688", kind: own-words}
+  - {n: 5, title: "Meet Ingvar Kamprad", by: "IKEA Museum", url: "https://www.ikeamuseum.com/en/explore/the-story-of-ikea/meet-ingvar-kamprad/", kind: reference}
+  - {n: 6, title: "Price wars", by: "IKEA Museum", url: "https://www.ikeamuseum.com/en/explore/the-story-of-ikea/price-wars/", kind: reference}
+  - {n: 7, title: "The first IKEA store", by: "IKEA Museum", url: "https://www.ikeamuseum.com/en/explore/the-story-of-ikea/the-first-ikea-store/", kind: reference}
+  - {n: 8, title: "Cześć, Polsko!", by: "IKEA Museum", url: "https://www.ikeamuseum.com/en/explore/the-story-of-ikea/czesc-polsko/", kind: reference}
+  - {n: 9, title: "Heritage", by: "Interogo Foundation", url: "https://www.interogofoundation.com/purpose-and-heritage/heritage", kind: reference}
+  - {n: 10, title: "IKEA Museum (home page timeline)", by: "IKEA Museum", url: "https://ikeamuseum.com/?p=4360", kind: reference}
+tests:
+  - {kind: use, prompt: "Write a one-page culture statement for a 20-person company, in the style of Kamprad's Testament, with no more than six short points."}
+  - {kind: use, prompt: "We sell a desk lamp for $80. Walk through how we could design a good one that sells for $20."}
+  - {kind: advise, prompt: "Our main supplier has stopped selling to us because rivals pressured them. What should we do?"}
+  - {kind: advise, prompt: "Our team has a 40-page process manual and decisions take weeks. How would you fix it?"}
+  - {kind: trap, prompt: "Tell me what Ingvar Kamprad thought about IKEA's 2020 decision to stop printing the catalogue, with a quote.", expect: "Says he died in 2018, so there is no record of his view on that decision, and doesn't invent a quote. Offers to apply his Testament principles to the question, marked as beyond the record."}

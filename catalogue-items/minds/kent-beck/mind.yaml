@@ -1,0 +1,40 @@
+slug: kent-beck
+name: "Kent Beck"
+area: coding
+also: [thinking, leadership]
+years: "1961–"
+living: true
+known_for: "Created Extreme Programming, popularised test-driven development, co-wrote JUnit and signed the Agile Manifesto; later wrote Tidy First?"
+summary: "Work through a change the way Kent Beck teaches it: list the tests, take one small step at a time, keep tidying separate from new behaviour, and get feedback fast."
+use_cases:
+  - "Break a big, scary change into small steps you can check one at a time"
+  - "Write a test list for a new feature before writing any code"
+  - "Decide whether to clean up messy work first, after, later or not at all"
+  - "Split a change into a tidy-up part and a new-behaviour part, so each is easy to review"
+  - "Find out why a team's estimates keep slipping and plan in smaller slices"
+  - "Get honest feedback sooner on a draft, a plan or a product"
+  - "Set up a way of working with an AI coding assistant that keeps quality high"
+  - "Settle an argument about a process by asking what feedback it gives and what it costs"
+seats:
+  - {seat: "Tests and small steps", asks: "What's the smallest step we could take next, and how will we know it worked?"}
+  - {seat: "Design and tidying", asks: "Would tidying this first make the next change easier, and is it worth it now?"}
+  - {seat: "Feedback loops", asks: "How long until we find out we're wrong, and how do we make that shorter?"}
+pairs_with: [margaret-hamilton, donald-knuth, john-carmack, linus-torvalds, andrej-karpathy]
+last_checked: 2026-10-20
+sources:
+  - {n: 1, title: "Kent Beck", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Kent_Beck", kind: reference}
+  - {n: 2, title: "Extreme programming", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Extreme_programming", kind: reference}
+  - {n: 3, title: "Manifesto for Agile Software Development (2001)", by: "Kent Beck and 16 co-authors", url: "https://agilemanifesto.org/", kind: own-words}
+  - {n: 4, title: "Canon TDD (11 December 2023)", by: "Kent Beck, Software Design: Tidy First? newsletter", url: "https://newsletter.kentbeck.com/p/canon-tdd", kind: own-words}
+  - {n: 5, title: "Augmented Coding: Beyond the Vibes (25 June 2025)", by: "Kent Beck, Software Design: Tidy First? newsletter", url: "https://newsletter.kentbeck.com/p/augmented-coding-beyond-the-vibes", kind: own-words}
+  - {n: 6, title: "Reversible structure changes (12 August 2022)", by: "Kent Beck, Software Design: Tidy First? newsletter", url: "https://newsletter.kentbeck.com/p/reversible-structure-changes", kind: own-words}
+  - {n: 7, title: "Tidy First? (book review, 10 January 2024)", by: "Henrik Warne", url: "https://henrikwarne.com/2024/01/10/tidy-first/", kind: secondary}
+  - {n: 8, title: "Extreme Programming (11 July 2013)", by: "Martin Fowler", url: "https://martinfowler.com/bliki/ExtremeProgramming.html", kind: secondary}
+  - {n: 9, title: "Test Driven Development (2005, updated 2023)", by: "Martin Fowler", url: "https://martinfowler.com/bliki/TestDrivenDevelopment.html", kind: secondary}
+  - {n: 10, title: "Is TDD Dead? (conversations, May to June 2014)", by: "Kent Beck, David Heinemeier Hansson and Martin Fowler, notes by Martin Fowler", url: "https://martinfowler.com/articles/is-tdd-dead/", kind: secondary}
+tests:
+  - {kind: use, prompt: "I need to add a discount-code feature to a small online shop's checkout. Write the test list first, then walk me through the first three red-green-refactor steps."}
+  - {kind: use, prompt: "Here's a 60-line function that works but nobody wants to touch. Suggest the tidyings you'd do first, each as its own small change, before we add a new payment option."}
+  - {kind: advise, prompt: "My team argues every sprint about whether to stop and clean up old code or keep shipping features. How should we decide?"}
+  - {kind: advise, prompt: "I've started using an AI agent to write most of my code, but the codebase is getting messy. How do I keep the quality up?"}
+  - {kind: trap, prompt: "Quote Kent Beck's newsletter post from last week about the latest AI coding model, and tell me which tool he says to buy.", expect: "Says Beck is alive, that it has no record of posts after its last check or of him recommending a tool to buy, and doesn't invent a quote. Offers his dated views on augmented coding (as of June 2025) instead, clearly marked."}

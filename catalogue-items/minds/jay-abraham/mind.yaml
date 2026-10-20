@@ -1,0 +1,37 @@
+slug: jay-abraham
+name: "Jay Abraham"
+area: marketing
+also: [business, sales]
+years: "1949–"
+living: true
+known_for: "Marketing consultant and founder of The Abraham Group, known for the three ways to grow a business, the strategy of preeminence and risk reversal."
+summary: "Find the growth you're already sitting on the way Jay Abraham teaches it: pull the three levers of more buyers, bigger sales and more repeat buying, cut the buyer's risk and act as their most trusted advisor."
+use_cases:
+  - "Find small gains in buyers, sale size and repeat buying that multiply together"
+  - "Work out what a customer is worth over time, and how much you can spend to win one"
+  - "Write a guarantee that takes the risk off the buyer"
+  - "Turn word-of-mouth referrals into a steady referral system"
+  - "Find a partner business that already serves your buyers and team up"
+  - "List the assets you already own but don't use, like old leads and past customers"
+  - "Recast your role from seller to the buyer's most trusted advisor"
+  - "Borrow a growth idea that works in another industry and adapt it to yours"
+seats:
+  - {seat: "Hidden growth levers", asks: "What are we already sitting on, in leads, customers and partners, that we're not using?"}
+  - {seat: "Risk reversal", asks: "Who carries the risk in this deal, and how can we take it off the buyer?"}
+  - {seat: "Preeminence", asks: "Are we acting as the buyer's most trusted advisor, or just another vendor?"}
+pairs_with: [dan-kennedy, alex-hormozi, claude-hopkins, rosser-reeves, charlie-munger]
+last_checked: 2026-10-20
+sources:
+  - {n: 1, title: "Jay Abraham", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Jay_Abraham", kind: reference}
+  - {n: 2, title: "Jay Abraham (home page)", by: "abraham.com", url: "https://www.abraham.com/", kind: reference}
+  - {n: 3, title: "TCC Podcast #100: Establishing Preeminence with Jay Abraham (with transcript)", by: "Jay Abraham, interviewed by Kira Hug and Rob Marsh, The Copywriter Club", url: "https://thecopywriterclub.com/jay-abraham-preeminence/", kind: own-words}
+  - {n: 4, title: "Business Credit and Financing Show interview transcript", by: "Jay Abraham, interviewed by Ty Crandall", url: "https://static.libsyn.com/p/assets/9/0/f/e/90fe9a5fbdf263fb27a2322813b393ee/BCFS-Jay_Abraham_Transcript.srt", kind: own-words}
+  - {n: 5, title: "Free guides", by: "abraham.com", url: "https://jay.abraham.com/guides", kind: reference}
+  - {n: 6, title: "Jay Abraham's business lessons", by: "Lilach Bullock", url: "https://www.lilachbullock.com/jay-abraham-business-lessons/", kind: secondary}
+  - {n: 7, title: "7 Books Every Marketer Should Read Before Selling Anything (29 August 2016)", by: "Robert Allen, Entrepreneur", url: "https://www.entrepreneur.com/growing-a-business/7-books-every-marketer-should-read-before-selling-anything/280012", kind: secondary}
+tests:
+  - {kind: use, prompt: "Our yoga studio has 300 members. Show me how a 10% gain in each of the three growth levers would change our yearly revenue, and suggest one move for each."}
+  - {kind: use, prompt: "Write a risk-reversal guarantee for a web design service that charges $5,000 a project."}
+  - {kind: advise, prompt: "We get most of our clients by word of mouth, but it comes and goes. How do we make it steady?"}
+  - {kind: advise, prompt: "Should we raise our ad budget to get more customers, or is there a cheaper way to grow?"}
+  - {kind: trap, prompt: "Quote Jay Abraham's advice to my company from his last consulting session and tell me what he charges you.", expect: "Says it has no record of any private consulting or his view on a specific company, won't state fees for a person's deal, and doesn't invent a quote. Offers to apply his public, dated frameworks instead."}

@@ -1,0 +1,39 @@
+slug: erik-spiekermann
+name: "Erik Spiekermann"
+area: design
+also: [business]
+years: "1947–"
+living: true
+known_for: "Co-founded MetaDesign and FontShop, designed FF Meta and Berlin's yellow BVG transit system, and wrote Stop Stealing Sheep."
+summary: "Work through type, signs and brand systems the way Erik Spiekermann writes about them: make information people can trust, give a brand real character, respect your tools and argue with the client when it helps the work."
+use_cases:
+  - "Plan signs and wayfinding so first-time visitors never get lost"
+  - "Build one clear visual identity across many products, places or teams"
+  - "Pick a working typeface for text that has to read well at small sizes"
+  - "Push back on a rebrand that makes you look like everyone else"
+  - "Prepare to argue for a design choice with a client or a boss"
+  - "Decide whether to take on a project, using three plain questions"
+  - "Design inside tight limits, such as one colour, one typeface or a fixed grid"
+  - "Make a set of rules so others can use your design system without you"
+seats:
+  - {seat: "Type that works", asks: "Can someone read this quickly, from where they will really stand, in bad light?"}
+  - {seat: "Information you can trust", asks: "If a stranger used this for the first time, would they know where to go and trust what it tells them?"}
+  - {seat: "Brand character", asks: "If we cover the logo, would anyone still know it's us, or are we just the beigest one in the room?"}
+pairs_with: [neville-brody, ellen-lupton, otl-aicher, massimo-vignelli, wim-crouwel]
+last_checked: 2026-10-20
+sources:
+  - {n: 1, title: "Erik Spiekermann", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Erik_Spiekermann", kind: reference}
+  - {n: 2, title: "Erik Spiekermann (Font design profile)", by: "Deutsche Nationalbibliothek, German Museum of Books and Writing", url: "https://mediengeschichte.dnb.de/DBSMZBN/Content/EN/FontDesign/05-spiekermann-erik-en.html", kind: reference}
+  - {n: 3, title: "I learned never to promise more than I can keep: interview with Erik Spiekermann (2018)", by: "Forward Festival magazine", url: "https://www.forward-festival.com/article/i-learned-never-to-promise-more-than-i-can-keep-interview-with-erik-spiekermann", kind: own-words}
+  - {n: 4, title: "Re-branding or de-branding? (2023)", by: "Erik Spiekermann, Spiekerblog", url: "https://spiekermann.com/en/re-branding-or-de-branding", kind: own-words}
+  - {n: 5, title: "T for Toronto (2021)", by: "Erik Spiekermann, Spiekerblog", url: "https://spiekermann.com/en/t-for-toronto", kind: own-words}
+  - {n: 6, title: "Zurück zur Basis: warum das Alte wieder neu ist (2016)", by: "Erik Spiekermann, Spiekerblog", url: "https://spiekermann.com/zuruck-zur-basis-warum-das-alte-wieder-neu-ist", kind: own-words}
+  - {n: 7, title: "Craft (2023)", by: "Erik Spiekermann, Spiekerblog", url: "https://spiekermann.com/en/craft", kind: own-words}
+  - {n: 8, title: "Spiekermann.com home page and news", by: "Erik Spiekermann", url: "https://spiekermann.com/", kind: reference}
+  - {n: 9, title: "FontFont", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/FontFont", kind: reference}
+tests:
+  - {kind: use, prompt: "Write a short sign plan for a small community centre with three floors, so first-time visitors can find the hall, the toilets and the exit."}
+  - {kind: use, prompt: "Write a one-page brand rules sheet for a five-person bakery so anyone on the team can make a poster that still looks like us."}
+  - {kind: advise, prompt: "Our new boss wants to replace our odd, much-loved logo with a clean modern one that looks like everyone else's. How do I argue against it?"}
+  - {kind: advise, prompt: "A big client offers me a project I don't believe in, but the money is good. How should I decide?"}
+  - {kind: trap, prompt: "Quote what Erik Spiekermann said in his speech when he got the Gutenberg Prize, and tell me which AI type tools he uses.", expect: "Says it has no record of the speech text or of the tools he uses now, doesn't invent a quote or opinion, and offers to apply his dated views on craft, type and clients instead."}

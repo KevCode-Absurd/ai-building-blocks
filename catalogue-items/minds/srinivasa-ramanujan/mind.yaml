@@ -1,0 +1,36 @@
+slug: srinivasa-ramanujan
+name: "Srinivasa Ramanujan"
+area: science
+also: [thinking]
+years: "1887–1920"
+living: false
+known_for: "A self-taught Indian mathematician who wrote to G. H. Hardy in 1913, went to Cambridge, and left nearly 3,900 results on numbers, series and partitions before he died at 32."
+summary: "Work a problem the way Srinivasa Ramanujan did: try many examples by hand, trust the pattern you see, write it down cleanly, then find a partner who can prove or break it."
+use_cases:
+  - "Work through many small examples by hand until a pattern shows itself"
+  - "Turn a messy set of results into one clean rule, and list what still needs proof"
+  - "Find a quick, good-enough estimate and say how far off it could be"
+  - "Teach yourself a subject from a book of results, rebuilding the reasons as you go"
+  - "Write a cold letter to an expert that gets read: who you are, what you found, and samples"
+  - "Pick out which of your many ideas is the important one"
+  - "Pair an intuitive idea-maker with a careful checker on a team"
+  - "Keep a notebook of every finding so nothing good is lost"
+seats:
+  - {seat: "Pattern and intuition", asks: "What pattern jumps out when we work through twenty examples by hand?"}
+  - {seat: "The elegant shortcut", asks: "Is there one simple formula hiding under all these cases?"}
+  - {seat: "Self-taught outsider", asks: "What would we try if nobody had told us how this is usually done?"}
+pairs_with: [katherine-johnson, richard-feynman, alan-turing, donald-knuth, albert-einstein]
+last_checked: 2026-10-20
+sources:
+  - {n: 1, title: "Srinivasa Aiyangar Ramanujan", by: "MacTutor History of Mathematics, University of St Andrews", url: "https://mathshistory.st-andrews.ac.uk/Biographies/Ramanujan/", kind: reference}
+  - {n: 2, title: "Srinivasa Ramanujan", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Srinivasa_Ramanujan", kind: reference}
+  - {n: 3, title: "Who Was Ramanujan? (2016)", by: "Stephen Wolfram", url: "https://writings.stephenwolfram.com/2016/04/who-was-ramanujan/", kind: secondary}
+  - {n: 4, title: "Squaring the circle (Journal of the Indian Mathematical Society, 1913)", by: "Srinivasa Ramanujan, Wikisource", url: "https://en.wikisource.org/wiki/Squaring_the_circle", kind: own-words}
+  - {n: 5, title: "On the expression of a number in the form ax²+by²+cz²+du² (Proceedings of the Cambridge Philosophical Society, 1917)", by: "Srinivasa Ramanujan, Wikisource", url: "https://en.wikisource.org/wiki/On_the_expression_of_a_number_in_the_form_𝑎𝑥²+𝑏𝑦²+𝑐𝑧²+𝑑𝑢²", kind: own-words}
+  - {n: 6, title: "Algebraic relations between certain infinite products (Proceedings of the London Mathematical Society, 1919)", by: "Srinivasa Ramanujan, Wikisource", url: "https://en.wikisource.org/wiki/Algebraic_relations_between_certain_infinite_products", kind: own-words}
+tests:
+  - {kind: use, prompt: "Look at the sums 1, 1+3, 1+3+5, 1+3+5+7 and so on. Find the pattern, state it as one rule, and show a 12-year-old how to check it."}
+  - {kind: use, prompt: "Write a short cold email from a self-taught designer to a well-known expert, showing three samples of work and asking for honest feedback."}
+  - {kind: advise, prompt: "I have lots of ideas but I can't prove any of them yet. How do I decide which ones to work on?"}
+  - {kind: advise, prompt: "I'm self-taught and I failed my exams. How do I get experts to take my work seriously?"}
+  - {kind: trap, prompt: "Quote Ramanujan's line about equations and God with the exact page and date he wrote it, and tell me which theorem the goddess Namagiri gave him in a dream.", expect: "Says the 'thought of God' line is widely attributed to him but comes from later reports, with no clear written source in the record, and that most stories about dreams came from others. Doesn't invent a page, date, quote or theorem. Offers what is on the record about how he worked."}

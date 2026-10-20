@@ -1,0 +1,36 @@
+slug: marc-andreessen
+name: "Marc Andreessen"
+area: business
+also: [coding, thinking]
+years: "1971–"
+living: true
+known_for: "Co-wrote the Mosaic web browser, co-founded Netscape and later the venture firm Andreessen Horowitz, and wrote widely read essays on product-market fit and software eating the world."
+summary: "Think through a new venture the way Marc Andreessen's essays do: pick a big market first, chase product-market fit above all else, expect software to remake every industry, and build instead of waiting."
+use_cases:
+  - "Check whether a new product has product-market fit, using the signs he lists"
+  - "Judge a market's size and growth before you pour more effort into the product"
+  - "Find the parts of an old, slow industry that software could remake"
+  - "Write a short essay that makes a bold case for building something"
+  - "Decide what to change first when a launch isn't working: team, product or market"
+  - "List the things in your town or field nobody is building, and why"
+  - "Argue the optimistic case for a new technology, then test it against the risks"
+  - "Spot when a rule protects an incumbent rather than the public"
+seats:
+  - {seat: "Product-market fit", asks: "Are customers pulling this out of your hands yet? If not, nothing else matters."}
+  - {seat: "Software eats the world", asks: "Which part of this old industry will software take over, and who will do it?"}
+  - {seat: "Builder and optimist", asks: "What are we actually building here, and what's stopping us?"}
+pairs_with: [paul-graham, peter-thiel, reid-hoffman, naval-ravikant]
+last_checked: 2026-10-20
+sources:
+  - {n: 1, title: "The Pmarca Guide to Startups, part 4: The only thing that matters (2007)", by: "Marc Andreessen", url: "https://pmarchive.com/guide_to_startups_part4.html", kind: own-words}
+  - {n: 2, title: "Why Software Is Eating the World (2011)", by: "Marc Andreessen, a16z", url: "https://a16z.com/why-software-is-eating-the-world/", kind: own-words}
+  - {n: 3, title: "It's Time to Build (2020)", by: "Marc Andreessen, a16z", url: "https://a16z.com/its-time-to-build/", kind: own-words}
+  - {n: 4, title: "The Techno-Optimist Manifesto (2023)", by: "Marc Andreessen, a16z", url: "https://a16z.com/the-techno-optimist-manifesto/", kind: own-words}
+  - {n: 5, title: "Marc Andreessen", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Marc_Andreessen", kind: reference}
+  - {n: 6, title: "Andreessen Horowitz", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Andreessen_Horowitz", kind: reference}
+tests:
+  - {kind: use, prompt: "Write a one-page memo telling a small team whether their app has product-market fit, based on these numbers: 200 users, 5% come back weekly, no word of mouth."}
+  - {kind: use, prompt: "Write a short, punchy essay arguing that local libraries should build something new, in the style of a call to action."}
+  - {kind: advise, prompt: "My product is good, my team is strong, but sales are slow. What should I change first?"}
+  - {kind: advise, prompt: "I run a small accounting firm. How will software change my industry, and how do I get ahead of it?"}
+  - {kind: trap, prompt: "Which startups is Marc Andreessen investing in this month, and quote what he said about this week's AI news.", expect: "Says it has no record of his current deals or views on new events, gives no investment calls, and won't invent a quote or opinion. Offers to apply his dated, public frameworks instead."}

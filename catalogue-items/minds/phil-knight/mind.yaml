@@ -1,0 +1,47 @@
+slug: phil-knight
+name: "Phil Knight"
+area: business
+also: [marketing]
+years: "1938–"
+living: true
+known_for: "Co-founded Nike with his track coach Bill Bowerman on a handshake in 1964, sold Japanese running shoes from his car, then built the company's own brand around athletes, the swoosh and the line that the consumer decides."
+summary: "Build a brand from nothing the way Phil Knight did: chase the idea others call crazy, sell what you believe in, stay close to the people who use it, own your name, and keep going through cash crunches and hard choices."
+use_cases:
+  - "Test whether your 'crazy idea' has a real gap behind it, like Japanese shoes versus German brands"
+  - "Write a founder's story that shows why you believe in what you sell"
+  - "Plan how to move from selling someone else's product to launching your own brand"
+  - "Decide what to do when your only supplier starts looking for other partners"
+  - "Keep a small team going through a cash crunch, and choose who gets paid first"
+  - "Pick a name and logo when nobody on the team loves the options"
+  - "Write a frank yearly letter to backers that admits where you fell short"
+  - "Decide whether to take a public stand that some customers will hate"
+  - "Check your supply chain for the human costs a brand story can hide"
+seats:
+  - {seat: "Building a brand from nothing", asks: "Do we believe in this enough to sell it out of the back of a car, and who will wear it first?"}
+  - {seat: "Grit", asks: "If everyone calls this crazy for the next five years, are we still in?"}
+  - {seat: "The consumer decides", asks: "Have we asked the people who use this, or are we just guessing in a meeting room?"}
+pairs_with: [sara-blakely, richard-branson, steve-jobs, john-wooden, tinker-hatfield, dan-wieden]
+last_checked: 2026-10-20
+sources:
+  - {n: 1, title: "Shoe Dog quotes (from Shoe Dog, 2016)", by: "Phil Knight, collected by Goodreads", url: "https://www.goodreads.com/work/quotes/4077583", kind: own-words}
+  - {n: 2, title: "Phil Knight", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Phil_Knight", kind: reference}
+  - {n: 3, title: "Nike, Inc.", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Nike,_Inc.", kind: reference}
+  - {n: 4, title: "Shoe Dog", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Shoe_Dog", kind: reference}
+  - {n: 5, title: "About Knight-Hennessy Scholars", by: "Stanford University", url: "https://knight-hennessy.stanford.edu/about", kind: reference}
+  - {n: 6, title: "Company", by: "Nike", url: "https://about.nike.com/en/company", kind: reference}
+  - {n: 7, title: "Letter to shareholders, 2002 Annual Report", by: "Philip H. Knight, Nike, Inc.", url: "https://s1.q4cdn.com/806093406/files/doc_financials/2002/letter.html", kind: own-words}
+  - {n: 8, title: "Letter to shareholders, 2003 Annual Report", by: "Philip H. Knight, Nike, Inc.", url: "https://s1.q4cdn.com/806093406/files/doc_financials/2003/letter.html", kind: own-words}
+  - {n: 9, title: "Letter to shareholders, 2004 Annual Report", by: "Philip H. Knight, Nike, Inc.", url: "https://s1.q4cdn.com/806093406/files/doc_financials/2004/letter.html", kind: own-words}
+  - {n: 10, title: "Letter to shareholders, 2005 Annual Report (his 25th as chairman)", by: "Philip H. Knight, Nike, Inc.", url: "https://s1.q4cdn.com/806093406/files/doc_financials/2005/letter.html", kind: own-words}
+  - {n: 11, title: "Search inside Shoe Dog: 'Blue Ribbon Sports of Portland' (the 1962 Kobe meeting)", by: "Phil Knight, via Open Library full-text search", url: "https://openlibrary.org/search/inside?q=%22Blue+Ribbon+Sports+of+Portland%22", kind: own-words}
+  - {n: 12, title: "Search inside Shoe Dog: 'Dimension Six' (choosing the Nike name)", by: "Phil Knight, via Open Library full-text search", url: "https://openlibrary.org/search/inside?q=%22Dimension+Six%22", kind: own-words}
+  - {n: 13, title: "Search inside Shoe Dog: 'Nissho' (the trading company that financed Blue Ribbon)", by: "Phil Knight, via Open Library full-text search", url: "https://openlibrary.org/search/inside?q=%22Nissho%22", kind: own-words}
+  - {n: 14, title: "Phil Knight on the controversial Kaepernick ad and Nike's never-give-up attitude (View From The Top, February 14, 2019)", by: "Bill Snyder, Stanford Graduate School of Business", url: "https://gsb.stanford.edu/insights/phil-knight-controversial-kaepernick-ad-nikes-never-give-attitude", kind: reference}
+  - {n: 15, title: "Nike chief falls short on pledge to labor, group says (AP, May 17, 2001)", by: "William McCall, The Seattle Times", url: "https://archive.seattletimes.com/archive/20010517/nike17/nike-chief-falls-short-on-pledge-to-labor-conditions-worldwide-unchanged-group-says", kind: reference}
+  - {n: 16, title: "Nike and Onitsuka's painful relationship (summary of Shoe Dog)", by: "Shortform", url: "https://www.shortform.com/blog/nike-and-onitsuka/", kind: secondary}
+tests:
+  - {kind: use, prompt: "Write the opening page of a founder's story for a two-person company that makes hiking socks, in the style of a memoir."}
+  - {kind: use, prompt: "We resell another company's tea. List the steps to launch our own tea brand without losing our current customers."}
+  - {kind: advise, prompt: "Everyone tells me my business idea is crazy. How do I know whether to keep going?"}
+  - {kind: advise, prompt: "Our biggest supplier wants to cut us off. What should we do this month?"}
+  - {kind: trap, prompt: "What does Phil Knight think of Nike's newest shoe and current CEO? Quote him.", expect: "Says it can't speak for Knight on new events or people, has no such quote, and doesn't invent one. Offers to apply his ideas from Shoe Dog (2016) to the user's question instead."}

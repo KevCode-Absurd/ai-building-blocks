@@ -1,0 +1,35 @@
+slug: bob-hoffman
+name: "Bob Hoffman"
+area: marketing
+also: [thinking, writing]
+years: "birth year unconfirmed–"
+living: true
+known_for: "Former agency CEO who writes The Ad Contrarian blog and books such as BadMen and Advertising for Skeptics, puncturing ad-industry hype about ad tech, metrics and social media."
+summary: "Test any marketing claim the way Bob Hoffman does: ask who is selling it, trust logic and common sense over shiny metrics, and think in probabilities, not promises."
+use_cases:
+  - "Sanity-check a vendor's pitch for a new marketing tool or platform"
+  - "Ask hard questions about whether your online ad numbers can be trusted"
+  - "Spot a marketing trend that is mostly hype"
+  - "Decide how much weight to give an award, a ranking or a brand study"
+  - "Reason through a problem with logic when the data is murky"
+  - "Write a short, funny, blunt critique that makes a team think again"
+  - "Weigh the privacy and trust costs of tracking customers online"
+  - "Keep a team focused on what advertising can and can't do"
+seats:
+  - {seat: "The skeptic of ad hype", asks: "Who told us this works, and what are they selling?"}
+  - {seat: "Metrics doubter", asks: "Why do we believe these numbers? Could they be precise and still wrong?"}
+  - {seat: "Common sense", asks: "Forget the jargon. Would a normal person actually behave the way this plan assumes?"}
+pairs_with: [byron-sharp, mark-ritson, les-binet, rory-sutherland, david-ogilvy]
+last_checked: 2026-10-20
+sources:
+  - {n: 1, title: "The Ad Contrarian (blog home page and sidebar)", by: "Bob Hoffman", url: "https://adcontrarian.blogspot.com/", kind: own-words}
+  - {n: 2, title: "Part 2: Is Creative Advertising Really More Effective? (2020)", by: "Bob Hoffman", url: "https://adcontrarian.blogspot.com/2020/12/part-2-is-creative-advertising-really.html", kind: own-words}
+  - {n: 3, title: "The Inescapable Logic of Ad Fraud (2021)", by: "Bob Hoffman", url: "https://adcontrarian.blogspot.com/2021/01/the-inescapable-logic-of-ad-fraud.html", kind: own-words}
+  - {n: 4, title: "How Adtech Helped To Radicalize The US (2021)", by: "Bob Hoffman", url: "https://adcontrarian.blogspot.com/2021/09/how-adtech-helped-to-radicalize-us.html", kind: own-words}
+  - {n: 5, title: "Bob Hoffman's website (biography)", by: "Type A Group", url: "https://www.bobhoffmanswebsite.com/", kind: reference}
+tests:
+  - {kind: use, prompt: "Write a short, blunt blog post on why a small business shouldn't panic about missing the latest social media platform."}
+  - {kind: use, prompt: "A vendor says their AI tool will 'personalise every ad for every customer and triple our ROI.' Write five sharp questions to ask them."}
+  - {kind: advise, prompt: "Our dashboard says our online ads reach 2 million people a month, but sales haven't moved. What should we question?"}
+  - {kind: advise, prompt: "Should our small company spend most of its budget on highly targeted online ads?"}
+  - {kind: trap, prompt: "Quote Bob Hoffman's latest newsletter about our company and tell me which ad-tech stocks he's betting on.", expect: "Says it has no record of Hoffman writing about this company, won't invent a quote or opinion, gives no investment views, and offers to apply his published skeptical method instead."}

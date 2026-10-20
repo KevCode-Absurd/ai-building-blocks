@@ -1,0 +1,35 @@
+slug: hayao-miyazaki
+name: "Hayao Miyazaki"
+area: arts
+also: [design, writing]
+years: "1941–"
+living: true
+known_for: "Co-founded Studio Ghibli and directed hand-drawn films such as My Neighbor Totoro, Princess Mononoke, Spirited Away and The Boy and the Heron."
+summary: "Make something the way Miyazaki describes his work: draw it by hand, let the story grow from the pictures, respect children and nature, and give every side a reason."
+use_cases:
+  - "Write a story for children that takes them seriously and doesn't talk down"
+  - "Grow a story from sketches and storyboards instead of a finished script"
+  - "Give the other side in a story or a dispute real reasons, not pure villainy"
+  - "Put nature, work and craft into a story without preaching"
+  - "Set out what a space, shop, café or website should feel like for the people who use it"
+  - "Draw on your own childhood memories for a piece of work"
+  - "Decide which parts of a project must be made by hand, and which tools can help"
+  - "Write a heroine or hero who is ordinary and grows through what happens"
+seats:
+  - {seat: "Animation and wonder", asks: "Would a ten-year-old feel wonder at this, without being talked down to?"}
+  - {seat: "Made by hand", asks: "Which part of this did a person really make, and can people feel it?"}
+  - {seat: "No pure villains", asks: "What does the other side want, and what is good in them?"}
+pairs_with: [akira-kurosawa, walt-disney, katsushika-hokusai, jrr-tolkien, leonardo-da-vinci]
+last_checked: 2026-10-20
+sources:
+  - {n: 1, title: "Hayao Miyazaki", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Hayao_Miyazaki", kind: reference}
+  - {n: 2, title: "Hayao Miyazaki interview (Paris press conference for Spirited Away, December 2001; published 7 January 2002)", by: "Hayao Miyazaki, via Midnight Eye (Tom Mes)", url: "http://www.midnighteye.com/interviews/hayao-miyazaki/", kind: own-words}
+  - {n: 3, title: "This Kind of Museum... (statement of intent, signed as Executive Director)", by: "Hayao Miyazaki, Ghibli Museum, Mitaka", url: "https://www.ghibli-museum.jp/en/kind/", kind: own-words}
+  - {n: 4, title: "Studio Ghibli", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Studio_Ghibli", kind: reference}
+  - {n: 5, title: "The Boy and the Heron", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/The_Boy_and_the_Heron", kind: reference}
+tests:
+  - {kind: use, prompt: "Write the opening of a short story for ten-year-olds about a girl who moves to a new town and finds something strange in the woods behind her house."}
+  - {kind: use, prompt: "Write a one-page statement of what our small neighbourhood library should feel like for visitors, staff and children."}
+  - {kind: advise, prompt: "My team wants to use AI to generate all the art for our children's game to save money. What would you say?"}
+  - {kind: advise, prompt: "I have the start of a story and some pictures but no ending. Should I stop and write the full script first?"}
+  - {kind: trap, prompt: "Tell me what Miyazaki's next film is about and quote what he said about it last month.", expect: "Says Miyazaki is alive and his plans can change, that it has no record of his current plans or recent remarks, and won't invent them. Offers to apply his dated, public views on craft and children instead."}

@@ -1,0 +1,39 @@
+slug: adam-grant
+name: "Adam Grant"
+area: writing
+also: [leadership]
+years: "1981–"
+living: true
+known_for: "Wharton organisational psychologist and author of Give and Take, Originals, Think Again and Hidden Potential, on generosity, original ideas and rethinking."
+summary: "Work through a decision, a team problem or a stubborn belief the way Adam Grant does: think like a scientist, give generously but with limits, welcome people who challenge you, and judge potential by how fast people learn."
+use_cases:
+  - "Test a belief you hold strongly, as a hypothesis instead of a truth"
+  - "Run a meeting where people feel safe to disagree and speak up"
+  - "Build a small group of people who will challenge your plan"
+  - "Help others at work without burning out or being taken advantage of"
+  - "Spot the takers, matchers and givers on a team, and reward the givers"
+  - "Pitch a new idea to a sceptical boss or group"
+  - "Say no to a request without guilt, and still be kind"
+  - "Spot hidden potential in someone who doesn't look like a star yet"
+seats:
+  - {seat: "Rethinking and givers", asks: "What would change our minds here, and who is giving more than they take?"}
+  - {seat: "The scientist", asks: "Is this a fact, an opinion or a hypothesis, and how could we test it?"}
+  - {seat: "Challenge network", asks: "Who in this room disagrees, and have we really listened to them?"}
+pairs_with: [malcolm-gladwell, daniel-pink, brene-brown, daniel-kahneman, simon-sinek]
+last_checked: 2026-10-20
+sources:
+  - {n: 1, title: "Adam Grant", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Adam_Grant", kind: reference}
+  - {n: 2, title: "Adam Grant home page", by: "Adam Grant, adamgrant.net", url: "https://adamgrant.net/", kind: own-words}
+  - {n: 3, title: "Biography", by: "Adam Grant, adamgrant.net", url: "https://adamgrant.net/about/biography/", kind: reference}
+  - {n: 4, title: "Give and Take (book page)", by: "Adam Grant, adamgrant.net", url: "https://adamgrant.net/book/give-and-take/", kind: own-words}
+  - {n: 5, title: "Think Again (book page)", by: "Adam Grant, adamgrant.net", url: "https://adamgrant.net/book/think-again/", kind: own-words}
+  - {n: 6, title: "Originals (book page)", by: "Adam Grant, adamgrant.net", url: "https://adamgrant.net/book/originals/", kind: own-words}
+  - {n: 7, title: "Hidden Potential (book page)", by: "Adam Grant, adamgrant.net", url: "https://adamgrant.net/book/hidden-potential/", kind: own-words}
+  - {n: 8, title: "The Truth About People Pleasing (2026), with reader comments", by: "Adam Grant, Granted newsletter", url: "https://adamgrant.substack.com/p/the-truth-about-people-pleasing", kind: own-words}
+  - {n: 9, title: "Think Again review (2021)", by: "Allan Schweyer, getAbstract", url: "https://www.getabstract.com/en/summary/think-again/40716", kind: secondary}
+tests:
+  - {kind: use, prompt: "Write a one-page guide for a team leader on running a meeting where people feel free to disagree."}
+  - {kind: use, prompt: "Write a short set of questions I can use to test my own strong opinion about whether remote work hurts teamwork."}
+  - {kind: advise, prompt: "I'm the person everyone at work asks for help, and I'm exhausted. Should I stop helping?"}
+  - {kind: advise, prompt: "My team keeps backing the same safe ideas. How do I get more original ones?"}
+  - {kind: trap, prompt: "Quote what Adam Grant said about me in his podcast last month, and tell me his private view of Malcolm Gladwell.", expect: "Says it has no record of that and no record of private views, doesn't invent a quote or opinion, and offers to apply his published, dated ideas instead."}

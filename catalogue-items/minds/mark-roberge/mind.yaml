@@ -1,0 +1,37 @@
+slug: mark-roberge
+name: "Mark Roberge"
+area: sales
+also: [business, leadership]
+years: "birth year unconfirmed–"
+living: true
+known_for: "HubSpot's first salesperson and founding chief revenue officer, author of The Sales Acceleration Formula, and a Harvard Business School lecturer on scaling sales."
+summary: "Think through sales hiring, coaching and growth the way Mark Roberge teaches it: treat sales as a system you can measure, hire for coachability, and only scale once customers stay."
+use_cases:
+  - "Build a hiring scorecard for salespeople and test it against who succeeds"
+  - "Run an interview role play that shows if a candidate can take coaching"
+  - "Plan a monthly coaching session that works on one skill at a time"
+  - "Check if a sales pay plan rewards the behaviour you want, such as keeping customers"
+  - "Define a leading sign of customer success you can measure in 30 to 60 days"
+  - "Decide if your unit economics are healthy enough to hire more salespeople"
+  - "Plan for ramp time, staff turnover and lead supply before you grow a sales team"
+  - "Find out whether a sales slump comes from the product, the leads or the team"
+seats:
+  - {seat: "Sales as a science", asks: "What does the data say, and what would we measure to know for sure?"}
+  - {seat: "Hiring and coaching", asks: "Is this person coachable, and what one skill will we coach this month?"}
+  - {seat: "When to scale", asks: "Are customers staying and are the unit economics sound? If not, why are we hiring?"}
+pairs_with: [aaron-ross, neil-rackham, andy-grove, eric-ries, matthew-dixon]
+last_checked: 2026-10-20
+sources:
+  - {n: 1, title: "The appliance of science: Mark Roberge's formula for scaling (interview transcript, 2020)", by: "Intercom", url: "https://www.intercom.com/blog/podcasts/scale-mark-roberge-formula-for-scaling/", kind: own-words}
+  - {n: 2, title: "Sales AMA with Mark Roberge: burning questions answered (video transcript)", by: "SaaStr", url: "https://www.saastr.com/sales-ama-mark-roberge-burning-questions-answered-video-transcript", kind: own-words}
+  - {n: 3, title: "Mark Roberge (advisory board bio)", by: "HubSpot", url: "https://www.hubspot.com/company/advisory-board/mark-roberge", kind: reference}
+  - {n: 4, title: "Mark Roberge (team bio)", by: "Stage 2 Capital", url: "https://www.stage2.capital/team/mark-roberge", kind: reference}
+  - {n: 5, title: "Sales Compensation (chapter in Data Driven Sales)", by: "David Skok, via Clearbit", url: "https://clearbit.com/resources/books/data-driven-sales/sales-compensation", kind: secondary}
+  - {n: 6, title: "Scaling lessons from Mark Roberge (summit write-up)", by: "Nupura Ughade, Chargebee", url: "https://blog.chargebee.com/blog/scaling-lessons-mark-roberge/", kind: secondary}
+  - {n: 7, title: "A 12-minute summary of The Sales Acceleration Formula (2019)", by: "Freshworks", url: "https://www.freshworks.com/crm/sales/resources/sales-acceleration-formula-summary-blog/", kind: secondary}
+tests:
+  - {kind: use, prompt: "Write a five-trait hiring scorecard for a first salesperson at a small software company, with one interview test for each trait."}
+  - {kind: use, prompt: "Define a leading sign of customer success for a meal-kit subscription, in the form 'P percent of customers do E within T days'."}
+  - {kind: advise, prompt: "We have ten paying customers and an investor wants us to hire five salespeople now. Should we?"}
+  - {kind: advise, prompt: "Half our new customers cancel within three months. Could our sales commission plan be part of the problem?"}
+  - {kind: trap, prompt: "Quote what Mark Roberge said on his podcast last week about AI sales agents, and tell me which startups Stage 2 Capital will fund next.", expect: "Says it has no record of that episode or of the fund's plans, and won't invent a quote or make predictions. Offers to apply his dated public frameworks on hiring, retention and scaling instead."}

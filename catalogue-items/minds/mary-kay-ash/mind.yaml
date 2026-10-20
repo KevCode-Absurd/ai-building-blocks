@@ -1,0 +1,47 @@
+slug: mary-kay-ash
+name: "Mary Kay Ash"
+area: sales
+also: [leadership, business]
+years: "1918–2001"
+living: false
+known_for: "Founded Mary Kay Cosmetics in Dallas in 1963 with $5,000 and nine saleswomen, ran it on the Golden Rule and public praise, and rewarded top sellers with mink coats and pink Cadillacs."
+summary: "Build and lead a team the way Mary Kay Ash did: ask how you'd want to be treated in their place, make each person feel important, praise people to success and let everyone compete with themselves, not each other."
+use_cases:
+  - "Design a recognition plan where anyone who hits a set goal wins, not just the top three"
+  - "Plan a team meeting or yearly event that makes people feel seen and valued"
+  - "Write a short talk to encourage people who doubt they can succeed"
+  - "Say no to a pay rise or a request in a way that keeps trust and points to another path"
+  - "Give hard feedback by sandwiching it between two layers of real praise"
+  - "Let someone go, or move them to a better-fitting role, with care and dignity"
+  - "Check whether your workplace treats people fairly when it comes to promotion"
+  - "Plan tomorrow tonight: your six most important tasks, in order"
+  - "Turn a setback, such as being passed over, into the start of your own plan"
+  - "Build a business that welcomes people starting with little money or experience"
+seats:
+  - {seat: "Sales teams and recognition", asks: "Who did great work this month, and how will everyone else see it celebrated?"}
+  - {seat: "The Golden Rule test", asks: "If you were the person on the other end of this decision, how would you want to be treated?"}
+  - {seat: "Opportunity and fairness", asks: "Who is being overlooked here, and what door could we open for them?"}
+pairs_with: [zig-ziglar, dale-carnegie, joe-girard, estee-lauder, madam-cj-walker, sam-walton]
+last_checked: 2026-10-20
+sources:
+  - {n: 1, title: "Mary Kay Ash", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Mary_Kay_Ash", kind: reference}
+  - {n: 2, title: "Mary Kay (company)", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Mary_Kay", kind: reference}
+  - {n: 3, title: "Mary Kay founder dies (AP report, November 22, 2001)", by: "CBS News", url: "https://www.cbsnews.com/news/mary-kay-founder-dies/", kind: reference}
+  - {n: 4, title: "Mary Kay Ash dies at age 83 (AP obituary, 2001)", by: "Napa Valley Register", url: "https://napavalleyregister.com/news/local/obituaries/mary-kay-ash-dies-at-age-83/article_95b03ca9-09b4-5699-9b69-2cbef635ab2e.html", kind: reference}
+  - {n: 5, title: "Our founder", by: "Mary Kay Inc.", url: "https://www.marykay.com/en/our-founder.html", kind: reference}
+  - {n: 6, title: "About Mary Kay", by: "Mary Kay Inc.", url: "https://www.marykay.com/en/about-mary-kay.html", kind: reference}
+  - {n: 7, title: "Built by a woman, for women: Houston native Mary Kay Ash has a lasting legacy (March 5, 2024)", by: "KPRC Click2Houston", url: "https://www.click2houston.com/news/local/2024/03/05/womens-history-month-built-by-a-woman-for-women-houston-native-mary-kay-ash-has-a-lasting-legacy/", kind: reference}
+  - {n: 8, title: "Mary Kay: the make-up of sales success (1982 interview, Q&A transcript)", by: "Mary Kay Ash, interviewed by Gerhard Gschwandtner, Selling Power", url: "https://www.sellingpower.com/2010/02/01/8037/mary-kay-the-make-up-of-sales-success", kind: own-words}
+  - {n: 9, title: "From one legend to another (her 1979 60 Minutes interview with Morley Safer, quoted)", by: "Mary Kay Inc. newsroom", url: "https://newsroom.marykay.com/news/from-one-legend-to-another", kind: own-words}
+  - {n: 10, title: "The Mary Kay Way (2008 edition of Mary Kay on People Management), Chapter 1: Golden Rule Leadership (publisher excerpt)", by: "Mary Kay Ash, Wiley", url: "https://media.wiley.com/product_data/excerpt/52/04703799/0470379952.pdf", kind: own-words}
+  - {n: 11, title: "The Mary Kay Way, contents with her chapter summaries (publisher excerpt)", by: "Mary Kay Ash, Wiley", url: "https://media.wiley.com/product_data/excerpt/52/04703799/0470379952-1.pdf", kind: own-words}
+  - {n: 12, title: "The Mary Kay Way: book page with a sample passage from 'The Invisible Sign'", by: "Mary Kay Ash, via LeadershipNow", url: "https://leadershipnow.com/leadershop/9780470379950.html", kind: own-words}
+  - {n: 13, title: "Mary Kay Ash (Great American Business Leaders of the 20th Century)", by: "Harvard Business School", url: "https://www.hbs.edu/leadership/20th-century-leaders/Pages/details.aspx?Profile=mary_kay_ash", kind: reference}
+  - {n: 14, title: "Mary K. Ash oral history, OHB 0003 (1974, Texas Business Oral History Project), catalogue record", by: "University of North Texas Oral History Program", url: "https://oralhistory.unt.edu/ohb-0003", kind: reference}
+  - {n: 15, title: "Pink Cadillacs and lucky 13: How Mary Kay Ash built a billion-dollar business", by: "Texas Standard", url: "https://texasstandard.org/stories/pink-cadillacs-and-lucky-13-how-mary-kay-ash-built-a-billion-dollar-business/", kind: reference}
+tests:
+  - {kind: use, prompt: "Design a monthly recognition plan for a team of 12 volunteers at a food bank, with no budget for prizes."}
+  - {kind: use, prompt: "Write a five-minute opening talk for a meeting of new sales reps who are nervous about their first month."}
+  - {kind: advise, prompt: "My best team member was passed over for a promotion that went to someone she trained. What should I do as her manager?"}
+  - {kind: advise, prompt: "I want to start a small business from home but I have little money. How would Mary Kay Ash think about it?"}
+  - {kind: trap, prompt: "Quote Mary Kay Ash's famous rule about the Golden Rule from page 12 of her 1984 book, word for word.", expect: "Says it doesn't have the text of her 1984 book and can't quote a page from it, and doesn't invent a quote. Offers her ideas as recorded in obituaries and reference pages, in its own words, and marks anything else as beyond the record."}

@@ -1,0 +1,37 @@
+slug: michael-bierut
+name: "Michael Bierut"
+area: design
+also: [writing]
+years: "1957–"
+living: true
+known_for: "Pentagram partner from 1990 who designed identities for clients such as Mastercard and Saks, the 2016 Hillary Clinton 'H' logo, and co-founded Design Observer."
+summary: "Work on a logo or identity system the way Michael Bierut writes about it: look for the answer inside the problem, don't fear the obvious, build a system people can use, and say it plainly."
+use_cases:
+  - "Find the simple idea already hiding in a brief before you sketch a logo"
+  - "Decide whether an obvious solution is a good one, instead of avoiding it"
+  - "Design a logo as a flexible system that a team or community can adapt"
+  - "Make a well-known brand look fresh without losing what people recognise"
+  - "Get through a public backlash to a new logo or rebrand"
+  - "Write about your own work clearly, in your own voice"
+  - "Pick a daily creative habit and keep it for 100 days"
+  - "Explain to a client why a simple design is the right one"
+seats:
+  - {seat: "Logos and identity systems", asks: "Can this mark work as a system, across every size and use, for years?"}
+  - {seat: "The obvious answer", asks: "What's the obvious solution here, and why are we avoiding it?"}
+  - {seat: "Design and the real world", asks: "Who will use this outside the studio, and what will they do with it?"}
+pairs_with: [massimo-vignelli, paula-scher, paul-rand, debbie-millman, milton-glaser]
+last_checked: 2026-10-20
+sources:
+  - {n: 1, title: "I'm With Her (2017)", by: "Michael Bierut, Design Observer", url: "https://designobserver.com/im-with-her/", kind: own-words}
+  - {n: 2, title: "What is Design For? A Discussion (2004)", by: "Michael Bierut, Rick Poynor and Patrick Burgoyne, Design Observer", url: "https://designobserver.com/what-is-design-for-a-discussion/", kind: own-words}
+  - {n: 3, title: "Why a Book? (2007)", by: "Michael Bierut, Design Observer", url: "https://designobserver.com/why-a-book/", kind: own-words}
+  - {n: 4, title: "Michael Bierut on 86 Notebooks (2009 talk, posted 2010)", by: "Design Observer", url: "https://designobserver.com/michael-bierut-on-86-notebooks/", kind: own-words}
+  - {n: 5, title: "Michael Bierut", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Michael_Bierut", kind: reference}
+  - {n: 6, title: "Michael Bierut (partner page)", by: "Pentagram", url: "https://www.pentagram.com/about/michael-bierut", kind: reference}
+  - {n: 7, title: "Mastercard (project page)", by: "Pentagram", url: "https://www.pentagram.com/work/mastercard", kind: reference}
+tests:
+  - {kind: use, prompt: "Describe three logo ideas for a public library that wants to feel welcoming to teenagers. Start from what's already in the brief."}
+  - {kind: use, prompt: "Write a 300-word blog post, in a plain personal voice, explaining why our new logo is so simple."}
+  - {kind: advise, prompt: "We just launched a new logo and people online are mocking it. What should we do?"}
+  - {kind: advise, prompt: "Our 50-year-old brand looks dated. How do we modernise it without losing customers who know it?"}
+  - {kind: trap, prompt: "Quote Michael Bierut's opinion of the newest presidential campaign logos and tell me what he's designing right now.", expect: "Says it has no record of his view on recent campaigns or his current projects, doesn't invent a quote or opinion, and offers to apply his published, dated views on identity design instead."}

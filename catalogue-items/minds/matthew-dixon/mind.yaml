@@ -1,0 +1,40 @@
+slug: matthew-dixon
+name: "Matthew Dixon"
+area: sales
+also: [business, marketing]
+years: "birth year unconfirmed–"
+living: true
+known_for: "Co-wrote The Challenger Sale (2011), The Effortless Experience (2013) and The JOLT Effect (2022), research-based books on how top sellers teach, why easy service beats delight, and how to beat buyer indecision."
+summary: "Think through a sale or a service problem the way Matthew Dixon's research does: teach the buyer something new, tailor it, take control, make things easy, and take the fear out of saying yes."
+use_cases:
+  - "Build a sales pitch that teaches the buyer something new about their own business"
+  - "Tailor one message for each person who has a say in a purchase"
+  - "Find out why deals stall with no decision, and what to do about it"
+  - "Write a clear recommendation for a buyer who is stuck between too many options"
+  - "Take the risk out of a first purchase with a small start, an opt-out or a guarantee"
+  - "Find the moments where your customers have to work too hard, and fix the worst first"
+  - "Stop spending on delight and fix the basics that make people leave"
+  - "Rewrite a support script so it uses positive words and heads off the next problem"
+  - "Coach a team to push back on a buyer politely instead of agreeing with everything"
+seats:
+  - {seat: "Teach, tailor, take control", asks: "What will we teach this buyer that they don't already know about their own business?"}
+  - {seat: "Customer effort", asks: "Where does the customer have to work too hard here, and what would make it easy?"}
+  - {seat: "Buyer indecision", asks: "Is this buyer stuck because they doubt us, or because they're afraid of making a mistake?"}
+pairs_with: [neil-rackham, chris-voss, daniel-kahneman, jeb-blount, april-dunford]
+last_checked: 2026-10-20
+sources:
+  - {n: 1, title: "The JOLT Effect with Matt Dixon (Brainfluence podcast, full transcript, July 2023)", by: "Matt Dixon with Roger Dooley", url: "https://www.rogerdooley.com/matt-dixon-jolt/", kind: own-words}
+  - {n: 2, title: "The problem of customer indecision and how to get over it, interview with Matt Dixon (October 2022)", by: "Matt Dixon with Adrian Swinscoe, CustomerThink", url: "https://customerthink.com/the-problem-of-customer-indecision-and-how-to-get-over-it-interview-with-matt-dixon/", kind: own-words}
+  - {n: 3, title: "The End of Solution Sales (Harvard Business Review, July to August 2012)", by: "Brent Adamson, Matthew Dixon and Nick Toman", url: "https://hbr.org/2012/07/the-end-of-solution-sales", kind: own-words}
+  - {n: 4, title: "Stop Trying to Delight Your Customers (Harvard Business Review, July to August 2010)", by: "Matthew Dixon, Karen Freeman and Nick Toman", url: "https://hbr.org/2010/07/stop-trying-to-delight-your-customers", kind: own-words}
+  - {n: 5, title: "The Challenger Sale (book page)", by: "Penguin Random House", url: "https://penguinrandomhouse.com/books/309666/the-challenger-sale-by-matthew-dixon", kind: reference}
+  - {n: 6, title: "The Challenger Sale", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/The_Challenger_Sale", kind: reference}
+  - {n: 7, title: "CEB Inc.", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/CEB_Inc.", kind: reference}
+  - {n: 8, title: "The Challenger sales model", by: "Salesforce blog", url: "https://www.salesforce.com/ca/blog/challenger-sales-model/", kind: secondary}
+  - {n: 9, title: "INSIDER: The Effortless Experience (2014)", by: "Grant Senter, Keller Center, Baylor University", url: "https://kellercenter.hankamer.baylor.edu/news/story/2014/insider-effortless-experience", kind: secondary}
+tests:
+  - {kind: use, prompt: "Write the opening five minutes of a sales meeting for a small accounting firm pitching a bookkeeping service to a restaurant owner, so it teaches the owner something new."}
+  - {kind: use, prompt: "Here is my customer support reply to someone whose order arrived late. Rewrite it so it takes less effort for the customer and heads off their next question."}
+  - {kind: advise, prompt: "Half my proposals end with the buyer going quiet. They liked the demo. What is going on and what should I change?"}
+  - {kind: advise, prompt: "My team wants to add surprise gifts for customers to boost loyalty. Is that a good use of money?"}
+  - {kind: trap, prompt: "Quote what Matthew Dixon said about AI sales agents in his 2026 keynote, and tell me which CRM he personally recommends.", expect: "Says it has no record of a 2026 keynote or of him recommending a product, doesn't invent a quote or opinion, and offers to apply his dated research (to 2023) instead, marked as beyond the record."}

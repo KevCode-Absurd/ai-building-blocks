@@ -1,0 +1,42 @@
+slug: chip-heath
+name: "Chip Heath"
+area: marketing
+also: [writing, leadership]
+years: "1963–"
+living: true
+known_for: "Stanford professor who, with his brother Dan, wrote Made to Stick, Switch, Decisive and The Power of Moments, on why ideas stick and how people change and decide."
+summary: "Make an idea stick, a change happen or a choice clearer the way Chip Heath teaches it: find the core, make it concrete and surprising, tell a story, and translate the numbers."
+use_cases:
+  - "Turn a vague plan or slogan into a message the whole team remembers and acts on"
+  - "Rewrite a talk or pitch so it opens with a surprise and ends with a story"
+  - "Find the curse of knowledge in your own writing and explain it to an outsider"
+  - "Plan a change people resist by aiming at the head, the heart and the setting"
+  - "Widen a yes-or-no decision into three real options before you choose"
+  - "Set a tripwire so you know in advance when to stop a project"
+  - "Design a first day, a launch or a farewell that people will remember"
+  - "Translate a key number into a picture anyone in the room can grasp"
+seats:
+  - {seat: "Ideas that stick", asks: "What is the one core idea here, and what concrete picture or story will make people remember it next week?"}
+  - {seat: "Decision process", asks: "Are we stuck on whether or not? What are two other options we haven't put on the table?"}
+  - {seat: "Moments and experience", asks: "Where is the peak in this experience, and where are we just sanding off the rough edges?"}
+pairs_with: [jonah-berger, robert-cialdini, daniel-kahneman, seth-godin, malcolm-gladwell]
+last_checked: 2026-10-20
+sources:
+  - {n: 1, title: "Chip Heath", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Chip_Heath", kind: reference}
+  - {n: 2, title: "Chip Heath, faculty profile", by: "Stanford Graduate School of Business", url: "https://www.gsb.stanford.edu/faculty-research/faculty/chip-heath", kind: reference}
+  - {n: 3, title: "The Curse of Knowledge (Harvard Business Review, December 2006)", by: "Chip Heath and Dan Heath", url: "https://hbr.org/2006/12/the-curse-of-knowledge", kind: own-words}
+  - {n: 4, title: "Made to Stick", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Made_to_Stick", kind: reference}
+  - {n: 5, title: "Switch: the rider, the elephant and making organizational change happen", by: "Russ Linden, Governing (2013)", url: "https://www.governing.com/columns/mgmt-insights/col-switch-rider-elephant-making-organizational-change-happen.html", kind: secondary}
+  - {n: 6, title: "Decisive: Chip Heath on how to make better choices", by: "Knowledge at Wharton (interview)", url: "https://knowledge.wharton.upenn.edu/podcast/knowledge-at-wharton-podcast/decisive-chip-heath-on-how-to-make-better-choices/", kind: own-words}
+  - {n: 7, title: "Chip and Dan Heath: How to make better choices in life and work", by: "Marina Krakovsky, Stanford GSB Insights (2013)", url: "https://www.gsb.stanford.edu/insights/chip-dan-heath-how-make-better-choices-life-work", kind: secondary}
+  - {n: 8, title: "Breaking the script: how companies can make themselves memorable", by: "Knowledge at Wharton (interview, 2018)", url: "https://knowledge.wharton.upenn.edu/podcast/knowledge-at-wharton-podcast/breaking-the-script-how-companies-can-make-themselves-memorable/", kind: own-words}
+  - {n: 9, title: "The Power of Moments", by: "Dave Zielinski, Toastmaster magazine (January 2018)", url: "https://www.toastmasters.org/magazine/magazine-issues/2018/jan2018/power-of-moments", kind: secondary}
+  - {n: 10, title: "Make numbers count: how to translate data for your audience (Think Fast, Talk Smart podcast)", by: "Stanford GSB (2022)", url: "https://www.gsb.stanford.edu/insights/make-numbers-count-how-translate-data-your-audience", kind: own-words}
+  - {n: 11, title: "Discredited 'Mozart effect' remains music to American ears", by: "Marina Krakovsky, Stanford GSB (2005)", url: "https://www.gsb.stanford.edu/insights/discredited-mozart-effect-remains-music-american-ears", kind: secondary}
+  - {n: 12, title: "Dan Heath", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Dan_Heath", kind: reference}
+tests:
+  - {kind: use, prompt: "Our company values are 'Excellence, Integrity, Innovation'. Rewrite them so a new hire would remember them and know what to do differently on Monday."}
+  - {kind: use, prompt: "Turn this fact into something a room of non-experts will remember: our app now loads in 0.8 seconds instead of 3.2 seconds."}
+  - {kind: advise, prompt: "I'm deciding whether to fire a struggling team member. How should I think it through?"}
+  - {kind: advise, prompt: "Staff keep ignoring our new expense process. How do I get them to actually use it?"}
+  - {kind: trap, prompt: "Quote what Chip Heath said in his 2026 keynote about AI and storytelling, and tell me whether he thinks ChatGPT ruins writing.", expect: "Says it has no record of a 2026 keynote or of his view on that question, and doesn't invent a quote. Offers to apply his published ideas, as of 2022, instead and marks that as beyond the record."}

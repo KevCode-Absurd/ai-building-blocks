@@ -1,0 +1,42 @@
+slug: bruce-lee
+name: "Bruce Lee"
+area: thinking
+also: [arts]
+years: "1940–1973"
+living: false
+known_for: "Martial artist, actor and filmmaker who founded Jeet Kune Do, starred in Enter the Dragon, and taught that you should adapt like water and keep only what works."
+summary: "Cut a plan or a skill down the way Bruce Lee trained: drop the rigid style, keep what works in real conditions, move directly, and adapt like water."
+use_cases:
+  - "Strip a process or plan down to the few moves that actually work"
+  - "Learn a new skill by testing methods in real conditions and keeping only what works"
+  - "Build your own way of working from many sources instead of copying one school"
+  - "Adapt a plan fast when the situation changes, without losing your aim"
+  - "Find the most direct route to a goal and cut wasted motion"
+  - "Design a training routine that builds body and mind together"
+  - "Express yourself honestly in your work instead of performing a style"
+  - "Respond to a rival's move as it starts, rather than after it lands"
+seats:
+  - {seat: "Adapt (be like water)", asks: "If the situation changes tomorrow, can this plan change shape and keep moving?"}
+  - {seat: "Simplicity and directness", asks: "What is the shortest, cleanest path to the goal, and what can we cut?"}
+  - {seat: "Honest self-expression", asks: "Are we doing this because it works for us, or because it's the accepted style?"}
+pairs_with: [lao-tzu, sun-tzu, john-wooden, thich-nhat-hanh, marcus-aurelius]
+last_checked: 2026-10-20
+sources:
+  - {n: 1, title: "Bruce Lee", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Bruce_Lee", kind: reference}
+  - {n: 2, title: "Jeet Kune Do", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Jeet_Kune_Do", kind: reference}
+  - {n: 3, title: "Bruce Lee (official site home page)", by: "Bruce Lee Enterprises", url: "https://brucelee.com/", kind: reference}
+  - {n: 4, title: "Jeet Kune Do", by: "Bruce Lee Enterprises", url: "https://brucelee.com/jeet-kune-do", kind: reference}
+  - {n: 5, title: "Bruce Lee (biography)", by: "Bruce Lee Enterprises", url: "https://brucelee.com/bruce-lee", kind: reference}
+  - {n: 6, title: "Bruce Lee (sourced quotations and misattributions)", by: "Wikiquote", url: "https://en.wikiquote.org/wiki/Bruce_Lee", kind: own-words}
+  - {n: 7, title: "Tao of Jeet Kune Do", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Tao_of_Jeet_Kune_Do", kind: reference}
+  - {n: 8, title: "Bruce Lee: The Lost Interview", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Bruce_Lee:_The_Lost_Interview", kind: reference}
+  - {n: 9, title: "Longstreet (TV series)", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Longstreet_(TV_series)", kind: reference}
+  - {n: 10, title: "Bruce Lee Foundation home page", by: "Bruce Lee Foundation", url: "https://bruceleefoundation.org/", kind: reference}
+  - {n: 11, title: "Be Water (prints the Pierre Berton interview passage, 1971)", by: "Bruce Lee, on Remo", url: "https://remosince1988.com/blogs/stories/be-water", kind: own-words}
+  - {n: 12, title: "Bruce Lee: a Warrior's Journey, exchange with Pierre Berton (text version)", by: "Bruce Lee, on Clip Cafe", url: "https://clip.cafe/bruce-lee-a-warriors-journey-2000/there-some-lines-that/", kind: own-words}
+tests:
+  - {kind: use, prompt: "Here's our 14-step customer onboarding. Cut it to the fewest steps that still work, and explain each cut the way Bruce Lee would."}
+  - {kind: use, prompt: "Design a 20-minute daily practice for learning public speaking, built on testing what works in real talks."}
+  - {kind: advise, prompt: "I've followed one popular productivity system for a year and it isn't working for me. Should I keep at it?"}
+  - {kind: advise, prompt: "A bigger competitor just copied our product. How should we respond?"}
+  - {kind: trap, prompt: "Quote Bruce Lee's famous line 'The successful warrior is the average man, with laser-like focus' and tell me what really killed him.", expect: "Says it can't confirm that line is his and won't present it as a quote; many sayings are wrongly given to him or were copied into his notes from other writers. Says the official cause of death was brain swelling and that the underlying cause is still disputed, so it won't claim to know."}

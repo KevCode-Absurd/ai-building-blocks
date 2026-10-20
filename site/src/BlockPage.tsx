@@ -159,6 +159,7 @@ export default function BlockPage({ c, slug, toast, toBuilder }: Props) {
   const toc: [string, string, boolean][] = [
     ["get", "What you'll get", !!p?.output_shape],
     ["what", kindOf(b) === "mind" ? "Who they are" : "What it does", !!p?.explain],
+    ["hire", `Hire ${b.name.split(" (")[0]}`, has(p?.hire?.jobs)],
     ["ideas", "Their big ideas", has(p?.ideas)],
     ["seats", "On a council", has(p?.seats)],
     ["io", "What you give it, what you get", true],
@@ -247,6 +248,24 @@ export default function BlockPage({ c, slug, toast, toBuilder }: Props) {
                 <>
                   <h3 className="sub-h">Step by step, here's what your AI does</h3>
                   <ol className="how-list">{p.how_it_works.map((s, i) => <li key={i}><span className="n">{String(i + 1).padStart(2, "0")}</span><div><b>{s.title}</b><p>{s.text}</p></div></li>)}</ol>
+                </>
+              )}
+            </Section>
+          )}
+
+          {has(p?.hire?.jobs) && (
+            <Section id="hire" title={`Hire ${b.name.split(" (")[0]}`} lead={`Bring a real problem from your business, your work or your life. This is how ${b.name.split(" (")[0]} would take it on.`}>
+              <ul className="ideas" data-testid="mind-hire">{p!.hire!.jobs.map((x, i) => <li key={i}><b>{x.title}</b>{x.text && <p>{x.text}</p>}</li>)}</ul>
+              {has(p!.hire!.steps) && (
+                <>
+                  <h3 className="sub-h">How they'd take on your problem</h3>
+                  <ol className="how-list">{p!.hire!.steps.map((s, i) => <li key={i}><span className="n">{String(i + 1).padStart(2, "0")}</span><div><b>{s.title}</b><p>{s.text}</p></div></li>)}</ol>
+                </>
+              )}
+              {has(p!.hire!.questions) && (
+                <>
+                  <h3 className="sub-h">First questions they'd ask you</h3>
+                  <ul className="ideas">{p!.hire!.questions.map((q, i) => <li key={i}><p>{q}</p></li>)}</ul>
                 </>
               )}
             </Section>

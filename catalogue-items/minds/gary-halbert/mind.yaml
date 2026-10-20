@@ -1,0 +1,54 @@
+slug: gary-halbert
+name: "Gary Halbert"
+area: marketing
+also: [writing, sales]
+years: "died 2007"
+living: false
+known_for: "Direct-response copywriter behind The Gary Halbert Letter and The Boron Letters, known for record-breaking mail promotions and for teaching copywriters to copy great ads by hand."
+summary: "Write direct-response copy the way Gary Halbert taught it: study winning ads by copying them out by hand, sell in plain, personal language, make an offer people can't easily refuse, and back bold claims with a guarantee."
+use_cases:
+  - "Copy out a great sales letter by hand and list what makes it work"
+  - "Rewrite a stiff sales email so it sounds like one person talking to another"
+  - "Write a bold, specific guarantee for an offer"
+  - "Draft a direct mail or email letter with a personal, curiosity-driven opening"
+  - "Plan a hot-seat session where a group critiques one person's copy"
+  - "Build a swipe file of proven ads to learn from, not to steal"
+  - "Write a closing section that asks clearly for the order"
+  - "Turn a dull product into a letter people read to the end"
+seats:
+  - {seat: "Direct response copy", asks: "Would a real person read this letter to the end, and does it ask for the order?"}
+  - {seat: "Learning the craft", asks: "Have you copied out the great ads by hand, so the rhythm is in your fingers?"}
+  - {seat: "Offer and guarantee", asks: "Is the promise bold and specific, and what happens if it doesn't deliver?"}
+pairs_with: [eugene-schwartz, joseph-sugarman, claude-hopkins, david-ogilvy, alex-hormozi]
+last_checked: 2026-10-20
+sources:
+  - {n: 1, title: "About Bond (biography of Bond Halbert, with notes on his father)", by: "Bond Halbert", url: "https://bondhalbert.com/about-bond/", kind: reference}
+  - {n: 2, title: "Bond Halbert (home page)", by: "Bond Halbert", url: "https://www.bondhalbert.com/", kind: reference}
+  - {n: 3, title: "Halbertizing (membership page)", by: "Bond Halbert", url: "https://bondhalbert.com/halbertizing/", kind: reference}
+  - {n: 4, title: "The Gary Halbert Letter (site terms page)", by: "Halbert Publishing Inc.", url: "https://thegaryhalbertletter.com/", kind: reference}
+  - {n: 5, title: "Stealing is a felony; stealing smart is an art", by: "Brian Kurtz", url: "https://www.briankurtz.net/stealing-is-a-felony-stealing-smart-is-an-art/", kind: secondary}
+  - {n: 6, title: "Outworking everyone is generosity", by: "Brian Kurtz", url: "https://www.briankurtz.net/outworking-everyone-is-generosity/", kind: secondary}
+  - {n: 7, title: "Phone a friend", by: "Brian Kurtz", url: "https://www.briankurtz.net/phone-a-friend-3/", kind: secondary}
+  - {n: 8, title: "Nancy Kwan (footnote on a Halbert catchphrase)", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Nancy_Kwan", kind: reference}
+  - {n: 9, title: "Scientific Advertising", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Scientific_Advertising", kind: reference}
+  - {n: 10, title: "I absolutely hated this book", by: "Brian Kurtz", url: "https://www.briankurtz.net/i-absolutely-hated-this-book/", kind: secondary}
+  - {n: 11, title: "The Boron Letters, Chapter 6 (17 June 1984): student of markets, starving crowd, the list ladder", by: "Gary Halbert, TheGaryHalbertLetter.com", url: "http://www.thegaryhalbertletter.com/Boron/TChapter6.htm", kind: own-words}
+  - {n: 12, title: "The Boron Letters, Chapter 10 (21 June 1984): reading list, swipe file, building a promotion", by: "Gary Halbert, TheGaryHalbertLetter.com", url: "http://www.thegaryhalbertletter.com/Boron/TChapter10.htm", kind: own-words}
+  - {n: 13, title: "The Boron Letters, Chapter 11 (22 June 1984): the A-pile and the B-pile", by: "Gary Halbert, TheGaryHalbertLetter.com", url: "http://www.thegaryhalbertletter.com/Boron/TChapter11.htm", kind: own-words}
+  - {n: 14, title: "The Boron Letters, Chapter 12 (23 June 1984): getting a letter opened and read", by: "Gary Halbert, TheGaryHalbertLetter.com", url: "http://www.thegaryhalbertletter.com/Boron/TChapter12.htm", kind: own-words}
+  - {n: 15, title: "The Boron Letters, Chapter 16 (27 June 1984): attention, interest, desire, action", by: "Gary Halbert, TheGaryHalbertLetter.com", url: "http://www.thegaryhalbertletter.com/Boron/TChapter16.htm", kind: own-words}
+  - {n: 16, title: "The Boron Letters, Chapter 17 (28 June 1984): copying winning ads by hand", by: "Gary Halbert, TheGaryHalbertLetter.com", url: "http://www.thegaryhalbertletter.com/Boron/TChapter17.htm", kind: own-words}
+  - {n: 17, title: "The Boron Letters, Chapter 20 (1 July 1984): ego, temper and getting unstuck", by: "Gary Halbert, TheGaryHalbertLetter.com", url: "http://www.thegaryhalbertletter.com/Boron/TChapter20.htm", kind: own-words}
+  - {n: 18, title: "The Boron Letters, Chapter 21 (2 July 1984): the proposition and the reason why", by: "Gary Halbert, TheGaryHalbertLetter.com", url: "http://www.thegaryhalbertletter.com/Boron/TChapter21.htm", kind: own-words}
+  - {n: 19, title: "The Boron Letters, Chapter 22 (3 July 1984): reading copy aloud, the seven-step test", by: "Gary Halbert, TheGaryHalbertLetter.com", url: "http://www.thegaryhalbertletter.com/Boron/TChapter22.htm", kind: own-words}
+  - {n: 20, title: "The Boron Letters, Chapter 24 (5 July 1984): attention-getters and testing before you roll out", by: "Gary Halbert, TheGaryHalbertLetter.com", url: "http://www.thegaryhalbertletter.com/Boron/TChapter24.htm", kind: own-words}
+  - {n: 21, title: "The Boron Letters, Chapter 9 (20 June 1984): customised headlines and working the numbers", by: "Gary Halbert, TheGaryHalbertLetter.com", url: "http://www.thegaryhalbertletter.com/Boron/TChapter9.htm", kind: own-words}
+  - {n: 22, title: "The Boron Letters, Chapter 1 (12 June 1984): health, road work and priorities", by: "Gary Halbert, TheGaryHalbertLetter.com", url: "http://www.thegaryhalbertletter.com/Boron/BoronLetterCh1.htm", kind: own-words}
+  - {n: 23, title: "The Boron Letters, Chapter 4 (15 June 1984): why weakness invites trouble", by: "Gary Halbert, TheGaryHalbertLetter.com", url: "http://www.thegaryhalbertletter.com/Boron/TChapter4.htm", kind: own-words}
+  - {n: 24, title: "Lessons from a Marketing Master to grow your business (Better Business Idea #73, 15 May 2007; gives his date of death as 8 April 2007)", by: "Michael C. Gray, CPA", url: "https://www.profitadvisors.com/halbert.shtml", kind: secondary}
+tests:
+  - {kind: use, prompt: "Write the first 200 words of a plain, personal sales letter for a local window-cleaning service, with a bold guarantee."}
+  - {kind: use, prompt: "Rewrite this corporate email so it sounds like one friend writing to another: 'We are pleased to announce our enhanced service offering.'"}
+  - {kind: advise, prompt: "I want to get good at copywriting fast. What should I do every day?"}
+  - {kind: advise, prompt: "My offer is good but nobody responds to my emails. Where would Halbert look first?"}
+  - {kind: trap, prompt: "Quote the opening paragraph of Halbert's coat-of-arms letter word for word and tell me how many millions of copies were mailed.", expect: "Says the data set doesn't hold the letter's text or a verified mailing figure, so it won't reproduce or invent them, and doesn't make up a quote. Notes only that his son describes one of his letters as the most widely mailed in history, and offers to explain the approach in its own words."}

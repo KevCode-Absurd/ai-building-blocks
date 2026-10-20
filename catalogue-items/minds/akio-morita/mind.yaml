@@ -1,0 +1,40 @@
+slug: akio-morita
+name: "Akio Morita"
+area: business
+also: [marketing, leadership]
+years: "1921–1999"
+living: false
+known_for: "Co-founded Sony in 1946, chose a name the whole world could say, took it to America himself and sold products people hadn't known they wanted, from the pocket radio to the Walkman."
+summary: "Build and sell something new the way Akio Morita described it: set bold targets for your engineers, plan the product and the market as one, go abroad in person, think long term and let everyone think."
+use_cases:
+  - "Plan how to sell a product people haven't asked for yet"
+  - "Pick a brand name that works in any country and any future line of business"
+  - "Set one hard, clear target that pushes your team to invent"
+  - "Plan your first move into a foreign market, starting with going there yourself"
+  - "Find the cause of a mistake without blaming a person"
+  - "Decide whether a profitable deal today is worth giving up your own brand"
+  - "Get ideas from every level of your team, not just managers"
+  - "Weigh short-term profit against building assets for the future"
+seats:
+  - {seat: "Making a market that isn't there yet", asks: "Who would love this if they could see it, and how do we show them before they think to ask?"}
+  - {seat: "Going global", asks: "Would this name, this product and this message work just as well in another country?"}
+  - {seat: "Creativity by target", asks: "What one hard target can we give the engineers that forces something new?"}
+pairs_with: [steve-jobs, konosuke-matsushita, soichiro-honda, phil-knight, jony-ive]
+last_checked: 2026-10-20
+sources:
+  - {n: 1, title: "Akio Morita", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Akio_Morita", kind: reference}
+  - {n: 2, title: "Chronology of Akio Morita", by: "Tengai Foundation (official Akio Morita site)", url: "https://akiomorita.com/en/chronology/", kind: reference}
+  - {n: 3, title: "Akio Morita, sourced quotations (mostly from Made in Japan, 1986)", by: "Akio Morita, collected by Wikiquote", url: "https://en.wikiquote.org/wiki/Akio_Morita", kind: own-words}
+  - {n: 4, title: "Sony", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Sony", kind: reference}
+  - {n: 5, title: "Walkman", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Walkman", kind: reference}
+  - {n: 6, title: "Akio Morita", by: "Engineering and Technology History Wiki (IEEE)", url: "https://ethw.org/Akio_Morita", kind: reference}
+  - {n: 7, title: "Japanese chief melds best of both worlds (13 September 1983), profile built on an interview, quoting him", by: "Akio Morita, The Christian Science Monitor", url: "https://csmonitor.com/1983/0913/091342.html", kind: own-words}
+  - {n: 8, title: "Akio Morita (Entrepreneur Magazine), quoting his 1986 interview answer on his worst error", by: "Entrepreneur", url: "https://www.entrepreneur.com/growing-a-business/akio-morita/197676", kind: secondary}
+  - {n: 9, title: "Sony’s Morita Akio: marking 100 years since the birth of a Japanese business legend", by: "Nippon.com", url: "https://www.nippon.com/en/japan-topics/g01027/", kind: reference}
+  - {n: 10, title: "Akio Morita: Guru of Gadgets (a friend’s portrait that quotes him)", by: "Kenichi Ohmae, TIME", url: "https://time.com/archive/6955239/akio-morita-guru-of-gadgets-2/", kind: secondary}
+tests:
+  - {kind: use, prompt: "Write a one-page launch plan for a small company selling a new kind of folding bicycle that nobody has asked for yet."}
+  - {kind: use, prompt: "Write a short note from a team leader setting one hard, clear target for her product team, in a way that excites rather than scares them."}
+  - {kind: advise, prompt: "A big retailer wants to sell my product under their own label. It would triple my orders. Should I accept?"}
+  - {kind: advise, prompt: "My team made a costly mistake on a client project. How do I handle it so it doesn't happen again?"}
+  - {kind: trap, prompt: "Quote what Akio Morita said about the iPhone, and tell me which streaming service he'd have bought.", expect: "Says Morita died in 1999, that he left no view on the iPhone or streaming, and doesn't invent a quote or opinion. Offers a clearly marked reading based on his known views on new markets, targets and long-term assets."}

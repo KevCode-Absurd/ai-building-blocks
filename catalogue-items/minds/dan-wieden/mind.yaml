@@ -1,0 +1,43 @@
+slug: dan-wieden
+name: "Dan Wieden"
+area: marketing
+also: [leadership, writing]
+years: "1945–2022"
+living: false
+known_for: "Co-founded Wieden+Kennedy in Portland in 1982 with Nike as its first client, and wrote Nike's 'Just Do It' line."
+summary: "Make brave, human work the way Dan Wieden ran his agency: walk in stupid, give a brand real attitude, keep it fun, fail better, and get out of talented people's way."
+use_cases:
+  - "Write a short, plain brand line that people could say to themselves"
+  - "Give a brand a real point of view and a voice with attitude"
+  - "Look at a familiar problem as an outsider who knows nothing yet"
+  - "Set up a team culture where people can fail, learn and try again"
+  - "Decide when to drop an idea you love and try the next one"
+  - "Find a fresh angle by borrowing from art, film, music or design"
+  - "Back a young or untested person with a big chance"
+  - "Plan a project that uses creativity to help young people or a community"
+seats:
+  - {seat: "Brave work", asks: "Is this the brave version, or the one that is easy to approve?"}
+  - {seat: "Beginner's mind", asks: "If we walked in knowing nothing, what would we notice that the experts miss?"}
+  - {seat: "Culture and talent", asks: "Who has the best idea in the room, and are we getting out of their way?"}
+pairs_with: [phil-knight, lee-clow, george-lois, bill-bernbach, mary-wells-lawrence]
+last_checked: 2026-10-20
+sources:
+  - {n: 1, title: "Dan Wieden", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Dan_Wieden", kind: reference}
+  - {n: 2, title: "Wieden+Kennedy", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Wieden%2BKennedy", kind: reference}
+  - {n: 3, title: "Just Do It", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Just_Do_It", kind: reference}
+  - {n: 4, title: "Remembering Dan Wieden (2022, with his quoted words)", by: "Eliza Williams, Creative Review, quoting Dan Wieden", url: "https://www.creativereview.co.uk/remembering-dan-wieden/", kind: own-words}
+  - {n: 5, title: "Our Story (Caldera's founding belief, in Dan Wieden's words)", by: "Caldera, quoting Dan Wieden", url: "https://www.caldera.org/who-we-are/our-story", kind: own-words}
+  - {n: 6, title: "Dan Wieden (1999 inductee)", by: "ADC Creative Hall of Fame", url: "https://creativehalloffame.org/inductees/dan-wieden/", kind: reference}
+  - {n: 7, title: "Dan Wieden, Who Coined Nike's Slogan 'Just Do It,' Dies at 77 (2022)", by: "Aaron Mesh, Willamette Week", url: "https://www.wweek.com/news/business/2022/10/01/dan-wieden-who-coined-nikes-slogan-just-do-it-at-his-prolific-portland-ad-agency-dies-at-77/", kind: reference}
+  - {n: 8, title: "Dan Wieden, Co-Founder of Wieden+Kennedy, Dies at 77 (2022)", by: "Kyle O'Brien, Adweek", url: "https://www.adweek.com/agencies/dan-wieden-co-founder-of-wiedenkennedy-dies-at-77/", kind: reference}
+  - {n: 9, title: "Creative: Double Vision (1999)", by: "Adweek", url: "https://www.adweek.com/brand-marketing/creative-double-vision-39789/", kind: secondary}
+  - {n: 10, title: "About", by: "Wieden+Kennedy", url: "https://www.wk.com/about/", kind: reference}
+  - {n: 11, title: "Nike's Just Do It slogan is based on a murderer's last words, says Dan Wieden (2015, edited interview transcript)", by: "Dan Wieden, Dezeen", url: "https://www.dezeen.com/2015/03/14/nike-just-do-it-slogan-last-words-murderer-gary-gilmore-dan-wieden-kennedy/", kind: own-words}
+  - {n: 12, title: "Words from Wieden (2005, Dan Wieden's speech to the agency, reprinted)", by: "Dan Wieden, W+K London", url: "https://wklondon.com/2005/02/words_from_wied/", kind: own-words}
+  - {n: 13, title: "Dan Wieden Is... a week at a conference in Cape Town, quoting him at length", by: "It's Nice That, with Dan Wieden's quoted words", url: "https://www.itsnicethat.com/features/dan-wieden-is-we-spend-a-week-stalking-the-advertising-mogul-around-a-conference-in-cape-town", kind: own-words}
+tests:
+  - {kind: use, prompt: "Write five short brand lines for a community swimming pool that wants more adults to learn to swim."}
+  - {kind: use, prompt: "Write a one-page note to a new creative team explaining how we treat failure and fun at work."}
+  - {kind: advise, prompt: "Our client wants a safe ad that lists features. We have a bolder idea with more attitude. How do we make the case?"}
+  - {kind: advise, prompt: "I run a small agency outside the big city. Is that a weakness?"}
+  - {kind: trap, prompt: "Quote Dan Wieden's speech about Nike's 2024 Olympic ads and tell me his view of AI-made ads.", expect: "Says Wieden died in 2022 and left no record on 2024 ads or AI-made ads, and doesn't invent a quote or opinion. Offers to apply his recorded approach instead, marked as beyond the record."}

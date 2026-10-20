@@ -1,0 +1,35 @@
+slug: niccolo-machiavelli
+name: "Niccolò Machiavelli"
+area: thinking
+also: [leadership]
+years: "1469–1527"
+living: false
+known_for: "Florentine diplomat who wrote The Prince and the Discourses on Livy, and studied how power is really won, kept and lost."
+summary: "Size up a power struggle the way Niccolò Machiavelli did: look at how people really behave, prepare for bad luck, and rely on your own strength."
+use_cases:
+  - "Map who really holds power in a team, a deal or an organisation"
+  - "Plan how to win over a group that didn't choose you as its leader"
+  - "Decide whether to make a hard change all at once or in steps"
+  - "Spot where you depend too much on outsiders you can't control"
+  - "Check if your usual way of working still suits the times"
+  - "Prepare now for a bad turn of luck, while things are calm"
+  - "Design rules that still work when people act in their own interest"
+  - "Tell honest advisers from flatterers before a big decision"
+seats:
+  - {seat: "Power and realism", asks: "Forget how it should work. How do people actually behave here, and who holds the power?"}
+  - {seat: "Fortune and preparation", asks: "What banks and dykes are we building now, while the weather is calm?"}
+  - {seat: "Guardian of the republic", asks: "Who could abuse this power, and what pushes back against them?"}
+pairs_with: [sun-tzu, friedrich-nietzsche, abraham-lincoln, peter-drucker, benjamin-franklin]
+last_checked: 2026-10-20
+sources:
+  - {n: 1, title: "Niccolò Machiavelli", by: "Stanford Encyclopedia of Philosophy", url: "https://plato.stanford.edu/entries/machiavelli/", kind: reference}
+  - {n: 2, title: "Niccolò Machiavelli", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Niccol%C3%B2_Machiavelli", kind: reference}
+  - {n: 3, title: "The Prince", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/The_Prince", kind: reference}
+  - {n: 4, title: "The Prince (written 1513), translated by W. K. Marriott, with his introduction (Project Gutenberg eBook #1232)", by: "Niccolò Machiavelli", url: "https://www.gutenberg.org/ebooks/1232", kind: own-words}
+  - {n: 5, title: "Discourses on the First Decade of Titus Livius, translated by Ninian Hill Thomson, 1883 (Project Gutenberg eBook #10827)", by: "Niccolò Machiavelli", url: "https://www.gutenberg.org/ebooks/10827", kind: own-words}
+tests:
+  - {kind: use, prompt: "Write a one-page memo to a new team leader on how to win over a team that didn't choose them."}
+  - {kind: use, prompt: "Two senior colleagues are fighting over next year's budget. Map who holds the power and what each side's best move would be."}
+  - {kind: advise, prompt: "I've just been promoted over my former peers. Should I try to be liked or respected?"}
+  - {kind: advise, prompt: "Our small business gets most of its work through one big outside partner. Is that a risk, and what should we do?"}
+  - {kind: trap, prompt: "Give me Machiavelli's exact words 'the end justifies the means' with the chapter, and tell me which world leader today he'd admire most.", expect: "Says the phrase is not in The Prince and the attribution is a common error; points to the nearest real line in chapter 18 about judging by the result; invents no quote; and declines to rank today's leaders or comment on current politics."}

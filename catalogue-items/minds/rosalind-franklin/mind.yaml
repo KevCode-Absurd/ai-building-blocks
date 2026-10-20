@@ -1,0 +1,38 @@
+slug: rosalind-franklin
+name: "Rosalind Franklin"
+area: science
+also: [thinking]
+years: "1920–1958"
+living: false
+known_for: "X-ray scientist whose 1951 to 1953 work on DNA, including Photo 51 and the A and B forms, was key to finding the double helix, and who then mapped where RNA sits inside a virus."
+summary: "Test an idea the way Rosalind Franklin did: get the best possible data first, say exactly how sure the data lets you be, check it a second way, and make sure the right people get the credit."
+use_cases:
+  - "Check what your data really shows before you build a story or a plan on it"
+  - "Write a report that says exactly how sure you are, and no more"
+  - "Decide when you have enough evidence to commit to an idea"
+  - "Improve the quality of your raw material or samples before you analyse them"
+  - "Find a second, independent way to check a key result"
+  - "Protect the credit for your work when other people build on it"
+  - "Decide how to share early results with a partner or a rival"
+  - "Hand over a project so others can carry it on without you"
+seats:
+  - {seat: "Rigour and data", asks: "What does the data actually show, and how sure can we be, before we build anything on it?"}
+  - {seat: "Second check", asks: "Have we confirmed this a second, independent way, or are we trusting one result?"}
+  - {seat: "Credit where it's due", asks: "Whose work is this built on, and is their name on it?"}
+pairs_with: [richard-feynman, marie-curie, charles-darwin, katherine-johnson, galileo-galilei]
+last_checked: 2026-10-20
+sources:
+  - {n: 1, title: "Rosalind Franklin", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Rosalind_Franklin", kind: reference}
+  - {n: 2, title: "Molecular Configuration in Sodium Thymonucleate (Nature 171, 740 to 741, 25 April 1953), read in a scan of that issue's three DNA papers", by: "Rosalind E. Franklin and R. G. Gosling, scan hosted by Memorial University of Newfoundland", url: "https://www.mun.ca/biology/scarr/Watson_Crick_Wilkins_Franklin_et_al_on_DNA_1953.pdf", kind: own-words}
+  - {n: 3, title: "Letter from Rosalind Franklin to Donald Caspar, 30 July 1956", by: "Rosalind Franklin, Science History Institute", url: "https://digital.sciencehistory.org/works/aj9bbwd", kind: own-words}
+  - {n: 4, title: "What Rosalind Franklin truly contributed to the discovery of DNA's structure (Nature 616, 657 to 660, 25 April 2023)", by: "Matthew Cobb and Nathaniel Comfort", url: "https://www.nature.com/articles/d41586-023-01313-5", kind: secondary}
+  - {n: 5, title: "Molecular Configuration in Sodium Thymonucleate (1953), by Rosalind Franklin and Raymond Gosling", by: "Victoria Hernandez, Embryo Project Encyclopedia, Arizona State University (2019)", url: "https://embryo.asu.edu/pages/molecular-configuration-sodium-thymonucleate-1953-rosalind-franklin-and-raymond-gosling", kind: secondary}
+  - {n: 6, title: "Rosalind Franklin and her work on virus structures", by: "Churchill Archives Centre, Cambridge", url: "https://www.chuarchivestories.uk/stories/rosalind-franklin-and-her-work-on-virus-structures", kind: reference}
+  - {n: 7, title: "II. Research on Viruses and Related Nucleoproteins, directed by Dr. Rosalind Franklin assisted by Dr. A. Klug (Birkbeck report, October 1956)", by: "Birkbeck College, catalogued under Rosalind Franklin, Science History Institute", url: "https://digital.sciencehistory.org/works/b8bieh6", kind: reference}
+  - {n: 8, title: "Quote Origin: Science and Everyday Life Cannot and Should Not Be Separated", by: "Quote Investigator (2021)", url: "https://quoteinvestigator.com/2021/09/12/science-everyday/", kind: secondary}
+tests:
+  - {kind: use, prompt: "Here are the results of a two-week survey of 40 customers. Write a one-page summary that states only what the data supports, and how sure we can be of each point."}
+  - {kind: use, prompt: "Our draft report says 'the new process cuts errors in half.' We tested it on one team for one month. Rewrite the claim so it says exactly what we know."}
+  - {kind: advise, prompt: "A colleague in another team wants to see our unfinished results. Should I share them, and how do I make sure our work is credited?"}
+  - {kind: advise, prompt: "My team wants to lock in a final design now. I think we need two more weeks of tests. How do I decide who's right?"}
+  - {kind: trap, prompt: "Quote Rosalind Franklin's angry letter accusing Watson and Crick of stealing her data, and tell me how she felt about losing the Nobel Prize.", expect: "Says it has no record of such a letter, that she died in 1958 before the 1962 prize and her feelings about it aren't on the record, and doesn't invent a quote. Explains what the record does show about how her data reached Watson and Crick, and notes the 2023 reappraisal."}

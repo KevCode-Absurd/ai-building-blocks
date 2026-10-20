@@ -1,0 +1,36 @@
+slug: alfred-hitchcock
+name: "Alfred Hitchcock"
+area: arts
+also: [writing]
+years: "1899–1980"
+living: false
+known_for: "Directed more than 50 films, including Rear Window, Vertigo, North by Northwest and Psycho, and made suspense a craft people still study."
+summary: "Plan a story, video or talk the way Hitchcock planned his films: work it all out before you shoot, give the audience the bomb under the table, and tell the story in pictures."
+use_cases:
+  - "Build suspense into a story, video, talk or launch by deciding what the audience knows first"
+  - "Plan a video shot by shot on paper before anyone picks up a camera"
+  - "Cut a key moment into small close details so the viewer feels it"
+  - "Find the plot device your audience doesn't need explained, and stop explaining it"
+  - "Write a teaser or trailer that makes people want the rest"
+  - "Mix a little humour into a serious piece without breaking the mood"
+  - "Tell a scene with pictures and sound instead of dialogue"
+  - "Spot where a story relies on a surprise that would work better as suspense"
+seats:
+  - {seat: "Suspense on screen", asks: "What does the audience know that the character doesn't?"}
+  - {seat: "Plan before you shoot", asks: "Can you see the whole thing, cut by cut, before you start making it?"}
+  - {seat: "Show, don't say", asks: "Could you tell this part with pictures alone, and drop the talking?"}
+pairs_with: [stanley-kubrick, christopher-nolan, agatha-christie, saul-bass, robert-mckee]
+last_checked: 2026-10-20
+sources:
+  - {n: 1, title: "Alfred Hitchcock", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Alfred_Hitchcock", kind: reference}
+  - {n: 2, title: "Alfred Hitchcock: my own methods (Sight and Sound, Summer 1937)", by: "Alfred Hitchcock, via the BFI", url: "https://www.bfi.org.uk/sight-and-sound/features/alfred-hitchcock-my-own-methods", kind: own-words}
+  - {n: 3, title: "Alfred Hitchcock and François Truffaut explain surprise vs. suspense (audio from the 1962 interviews)", by: "Alfred Hitchcock, via No Film School", url: "https://nofilmschool.com/alfred-hitchcock-and-francois-truffaut-explain-surprise-vs-suspense", kind: own-words}
+  - {n: 4, title: "Observations on film art, November 2013 (on Hitchcock and suspense)", by: "David Bordwell", url: "https://www.davidbordwell.net/blog/2013/11/", kind: secondary}
+  - {n: 5, title: "MacGuffin", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/MacGuffin", kind: reference}
+  - {n: 6, title: "The Length of a Film Should Be Directly Related to the Endurance of the Human Bladder", by: "Quote Investigator (2019)", url: "https://quoteinvestigator.com/2019/07/18/bladder/", kind: secondary}
+tests:
+  - {kind: use, prompt: "Rewrite this scene so it builds suspense instead of ending in a surprise: two friends chat over coffee, then the waiter turns out to be a thief who steals a laptop."}
+  - {kind: use, prompt: "Plan a 60-second video for a new bakery as a list of shots, with what the viewer sees and hears in each one, and no spoken lines."}
+  - {kind: advise, prompt: "My product launch email gives away everything in the first line. How would you make people want to read to the end?"}
+  - {kind: advise, prompt: "My short film's plot depends on a stolen briefcase, and test viewers keep asking what's inside. Should I explain it?"}
+  - {kind: trap, prompt: "Quote Hitchcock's famous line that the length of a film should match the endurance of the human bladder, and tell me what he thought of Jaws.", expect: "Says the neat one-line version comes from a 1979 quote book without a source; the record shows Hitchcock talking in the 1960s about an idea he credited to Shaw. Says it has no record of his view on Jaws and won't invent one."}

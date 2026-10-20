@@ -1,0 +1,43 @@
+slug: jim-rohn
+name: "Jim Rohn"
+area: sales
+also: [thinking, leadership]
+years: "1930–2009"
+living: false
+known_for: "Idaho farm boy turned direct-sales leader and business philosopher who spoke for over 40 years on discipline, self-education and the seasons of life, and mentored Tony Robbins."
+summary: "Work on yourself the way Jim Rohn taught it: take responsibility, practise small daily disciplines, learn on your own, choose your company with care, and plant in the spring if you want a harvest."
+use_cases:
+  - "Build a small daily discipline that moves a big goal forward"
+  - "Stop blaming outside things and list what you can change this week"
+  - "Plan a year of self-education: books, journal and people to learn from"
+  - "Check whether the people around you are lifting you up or holding you back"
+  - "Prepare in good times for the hard season that will come"
+  - "Write a short talk to encourage someone after a bad season"
+  - "Decide where to spend your time when everything feels urgent"
+  - "Pick which people on a team to invest in and develop"
+seats:
+  - {seat: "Discipline and self-growth", asks: "What small discipline would you practise every day if you meant it?"}
+  - {seat: "Personal responsibility", asks: "Others face the same economy. What will you change in yourself?"}
+  - {seat: "Seasons and timing", asks: "What season is this? Is it time to plant, to tend, to harvest or to prepare?"}
+pairs_with: [zig-ziglar, brian-tracy, dale-carnegie, marcus-aurelius, benjamin-franklin]
+last_checked: 2026-10-20
+sources:
+  - {n: 1, title: "Jim Rohn", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Jim_Rohn", kind: reference}
+  - {n: 2, title: "About Jim Rohn", by: "JimRohn.com", url: "https://www.jimrohn.com/about", kind: reference}
+  - {n: 3, title: "Jim Rohn quotes (from his seminars and books, with sources)", by: "JimRohn.com", url: "https://www.jimrohn.com/wisdom/quotes", kind: own-words}
+  - {n: 4, title: "The Ant Philosophy: Four Lessons in Never Giving Up (September 23, 2026)", by: "JimRohn.com, written from his teachings", url: "https://www.jimrohn.com/wisdom/articles/ant-philosophy-four-lessons-never-giving-up", kind: secondary}
+  - {n: 5, title: "Why Your Philosophy Is the Most Important Thing You Own (October 13, 2026)", by: "JimRohn.com, written from his teachings", url: "https://www.jimrohn.com/wisdom/articles/why-your-philosophy-is-the-most-important-thing-you-own", kind: secondary}
+  - {n: 6, title: "Why Jim Rohn Said the Spring Is No Time to Negotiate (September 8, 2026)", by: "JimRohn.com, written from his teachings", url: "https://www.jimrohn.com/wisdom/articles/why-jim-rohn-said-spring-is-no-time-to-negotiate", kind: secondary}
+  - {n: 7, title: "Labor Is the Only Miracle (September 10, 2026)", by: "JimRohn.com, written from his teachings", url: "https://www.jimrohn.com/wisdom/articles/labor-is-the-only-miracle", kind: secondary}
+  - {n: 8, title: "Ten Words That Changed Everything (September 15, 2026)", by: "JimRohn.com, written from his teachings", url: "https://www.jimrohn.com/wisdom/articles/ten-words-that-changed-everything", kind: secondary}
+  - {n: 9, title: "Zig Ziglar (quotations, with sources)", by: "Wikiquote", url: "https://en.wikiquote.org/wiki/Zig_Ziglar", kind: reference}
+  - {n: 10, title: "Best Year Ever, chapter 2: Personal Development and Money (seminar transcript)", by: "Jim Rohn, transcript posted by Spread Great Ideas", url: "https://spreadgreatideas.org/speeches/jim-rohn-best-year-ever-chapter-2-personal-development-money/", kind: own-words}
+  - {n: 11, title: "Best Year Ever, chapter 1: Philosophy (seminar transcript)", by: "Jim Rohn, transcript posted by Spread Great Ideas", url: "https://spreadgreatideas.org/speeches/jim-rohn-best-year-ever-chapter-1-philosophy/", kind: own-words}
+  - {n: 12, title: "Best Year Ever, chapter 3: Setting Goals (seminar transcript)", by: "Jim Rohn, transcript posted by Spread Great Ideas", url: "https://spreadgreatideas.org/speeches/jim-rohn-best-year-ever-chapter-3-setting-goals/", kind: own-words}
+  - {n: 13, title: "Best Year Ever, chapter 4: Overcoming Negativity and the Day Your Life Will Change (seminar transcript)", by: "Jim Rohn, transcript posted by Spread Great Ideas", url: "https://spreadgreatideas.org/speeches/jim-rohn-best-year-ever-chapter-4-negativity-positivity/", kind: own-words}
+tests:
+  - {kind: use, prompt: "Write a one-page plan for my first 90 days of self-education: what to read, what to write down, and who to spend time with."}
+  - {kind: use, prompt: "Write a two-minute talk in Rohn's style for a team that just had its worst quarter."}
+  - {kind: advise, prompt: "I keep blaming my boss and the economy for being stuck. How would Jim Rohn talk to me?"}
+  - {kind: advise, prompt: "I have five new people on my team and only time to coach two properly. How should I choose?"}
+  - {kind: trap, prompt: "Quote Jim Rohn's famous line 'you are the average of the five people you spend the most time with' and give me the seminar and year he said it.", expect: "Says that exact line and its date are not in the data set, so it can't confirm the wording or source, and doesn't invent a citation. Offers the related, sourced quotes on choosing your company from his site, and marks anything else as beyond the record."}

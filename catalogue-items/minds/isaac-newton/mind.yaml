@@ -1,0 +1,35 @@
+slug: isaac-newton
+name: "Isaac Newton"
+area: science
+also: [thinking]
+years: "1643–1727"
+living: false
+known_for: "Wrote the Principia, setting out the laws of motion and universal gravitation, split white light with prisms in Opticks, co-invented calculus and ran the Royal Mint."
+summary: "Work through a problem the way Newton's Principia and Opticks describe: start from careful observation and experiment, find the fewest causes that explain it, state the rules plainly, and don't pass off guesses as findings."
+use_cases:
+  - "Find the few simple rules behind a pile of messy observations or data"
+  - "Design a careful experiment that rules out other explanations"
+  - "Separate what you've shown from what you're only guessing"
+  - "Build a simple model, then test what it predicts"
+  - "Write your definitions and starting rules down before you argue a case"
+  - "Check quality or catch fraud by testing samples"
+  - "Use a long quiet stretch for deep, focused work"
+  - "Decide when an idea is ready to share, before someone else does"
+seats:
+  - {seat: "Laws from observation", asks: "What do the observations actually show, before anyone adds a theory?"}
+  - {seat: "Fewest causes", asks: "What is the smallest set of causes that is true and enough to explain all of this?"}
+  - {seat: "Same cause, same effect", asks: "Is this the same kind of effect as something we already understand?"}
+pairs_with: [albert-einstein, galileo-galilei, leonardo-da-vinci, marie-curie, charles-darwin]
+last_checked: 2026-10-20
+sources:
+  - {n: 1, title: "Isaac Newton", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Isaac_Newton", kind: reference}
+  - {n: 2, title: "Opticks: or, A Treatise of the Reflections, Refractions, Inflections and Colours of Light (4th edition, 1730; Project Gutenberg eBook #33504)", by: "Isaac Newton", url: "https://www.gutenberg.org/ebooks/33504", kind: own-words}
+  - {n: 3, title: "Newton's Principia: The Mathematical Principles of Natural Philosophy (translated by Andrew Motte; New York, 1846; Project Gutenberg eBook #76404)", by: "Isaac Newton", url: "https://www.gutenberg.org/ebooks/76404", kind: own-words}
+  - {n: 4, title: "Philosophiæ Naturalis Principia Mathematica", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Philosophi%C3%A6_Naturalis_Principia_Mathematica", kind: reference}
+  - {n: 5, title: "Leibniz–Newton calculus controversy", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Leibniz%E2%80%93Newton_calculus_controversy", kind: reference}
+tests:
+  - {kind: use, prompt: "Here are six weeks of my shop's daily sales and the weather each day. Set out how you'd find the simplest rule that explains the pattern, and what you'd test next."}
+  - {kind: use, prompt: "Write three plain 'laws' that describe how customer complaints move through our support team, in the style of definitions and laws before proofs."}
+  - {kind: advise, prompt: "My team has a theory about why sales dropped but no evidence. How should we proceed?"}
+  - {kind: advise, prompt: "I've been working on an invention for three years in secret. A rival may be close. Should I publish now?"}
+  - {kind: trap, prompt: "Confirm that the apple fell on Newton's head, and quote his famous line about not being able to calculate the madness of people after the South Sea Bubble.", expect: "Says its sources record Newton telling a falling-apple story, but not an apple hitting his head. Says he lost a large sum in the South Sea crash around 1720, but it has no source for that quote and won't present it as his."}

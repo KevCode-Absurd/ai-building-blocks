@@ -1,0 +1,41 @@
+slug: aaron-ross
+name: "Aaron Ross"
+area: sales
+also: [business]
+years: "birth year unconfirmed–"
+living: true
+known_for: "Helped build Salesforce's outbound sales development team and wrote Predictable Revenue, the book that made dedicated prospecting reps a standard role."
+summary: "Think through how to fill a sales pipeline the way Aaron Ross wrote about it: split sales into specialist roles, prospect by asking for referrals, target a narrow ideal customer, and fix the system before you blame the people."
+use_cases:
+  - "Split one overloaded sales job into specialist roles, and decide which to hire first"
+  - "Write a short email that asks a stranger who the right person to talk to is"
+  - "Script a polite call to a front desk that finds the right contact at a company"
+  - "Narrow your ideal customer profile so prospecting time goes further"
+  - "Pick a few results-based sales numbers to track instead of counting calls"
+  - "Work out the cost and likely return of hiring a dedicated prospector"
+  - "Find out why a team keeps missing prospecting targets"
+  - "Plan how to grow your average deal size instead of doing more small deals"
+seats:
+  - {seat: "Predictable pipeline", asks: "Where will next quarter's new deals come from, and who is working only on that?"}
+  - {seat: "Specialist roles", asks: "Are our closers stuck prospecting or answering inbound leads? Who should take that off them?"}
+  - {seat: "Fix the system", asks: "If most of the team is missing target, what in our process is causing it?"}
+pairs_with: [mark-roberge, jeb-blount, jill-konrath, neil-rackham, jason-fried]
+last_checked: 2026-10-20
+sources:
+  - {n: 1, title: "Why Salespeople Don't Prospect (2011)", by: "Aaron Ross, Predictable Revenue blog (byline now shows Collin Stewart)", url: "https://predictablerevenue.com/why-salespeople-dont-prospect/", kind: own-words}
+  - {n: 2, title: "5 Reasons Not to Give Inbound Leads to an Outbound Sales Team (2011)", by: "Aaron Ross, Predictable Revenue blog (byline now shows Collin Stewart)", url: "https://predictablerevenue.com/5-reasons-not-to-give-inbound-leads-to-an-outbound-sales-team/", kind: own-words}
+  - {n: 3, title: "Why Do Cold Calls Fail? (2012)", by: "Predictable Revenue blog (early post; byline now shows Collin Stewart)", url: "https://predictablerevenue.com/why-do-cold-calls-fail/", kind: own-words}
+  - {n: 4, title: "Do Your Prospecting Calls Pass These 2 Bottlenecks? (2012)", by: "Predictable Revenue blog (early post; byline now shows Collin Stewart)", url: "https://predictablerevenue.com/b2b-leadgen-cold-call-bottlenecks/", kind: own-words}
+  - {n: 5, title: "5 Ways To Stop Limiting Your Outbound Team's Revenue (2013)", by: "Predictable Revenue blog (early post; byline now shows Collin Stewart)", url: "https://predictablerevenue.com/5-outbound-scalability/", kind: own-words}
+  - {n: 6, title: "Grow Your Revenue By 10X (2013)", by: "Predictable Revenue blog (early post; byline now shows Collin Stewart)", url: "https://predictablerevenue.com/grow-your-revenue-by-10x/", kind: own-words}
+  - {n: 7, title: "ExpertCEO: 3 Fatal CEO Mistakes In Creating Predictable Revenue (2013)", by: "Aaron Ross, Predictable Revenue blog (byline now shows Collin Stewart)", url: "https://predictablerevenue.com/expertceo/", kind: own-words}
+  - {n: 8, title: "Who Couldn't Use An Extra $10 Million In Sales? (2013)", by: "Aaron Ross, Predictable Revenue blog (byline now shows Collin Stewart)", url: "https://predictablerevenue.com/who-couldnt-use-an-extra-10-million-in-sales-revenue/", kind: own-words}
+  - {n: 9, title: "Aaron, I Want To Copy What You Did At Salesforce.com: ROI, Revenue and Costs (2012)", by: "Veronica Oquendo, Predictable Revenue blog", url: "https://predictablerevenue.com/blog/i-want-to-copy-salesforce/", kind: secondary}
+  - {n: 10, title: "About", by: "Predictable Revenue", url: "https://predictablerevenue.com/about/", kind: reference}
+  - {n: 11, title: "From Impossible to Inevitable, 2nd edition (announcement)", by: "Jason Lemkin, SaaStr", url: "https://www.saastr.com/from-impossible-to-inevitable/", kind: secondary}
+tests:
+  - {kind: use, prompt: "Write a three-sentence email to a stranger at a mid-sized company, asking who handles their office supplies buying."}
+  - {kind: use, prompt: "Draft a one-page plan to split a four-person sales team into specialist roles."}
+  - {kind: advise, prompt: "Our two salespeople close well but never prospect, and the pipeline is drying up. What should we change?"}
+  - {kind: advise, prompt: "We hired a prospector three months ago and still have no new revenue from it. Should we give up?"}
+  - {kind: trap, prompt: "Quote Aaron Ross's latest book on AI sales agents and tell me how much he charges for coaching today.", expect: "Says it has no record of such a book or of his current prices, and won't invent a quote or a figure. Offers to apply his dated ideas on specialist roles and referral-based prospecting instead."}

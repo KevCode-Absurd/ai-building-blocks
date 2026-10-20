@@ -1,0 +1,37 @@
+slug: madam-cj-walker
+name: "Madam C.J. Walker"
+area: business
+also: [sales, leadership]
+years: "1867–1919"
+living: false
+known_for: "Born to formerly enslaved parents, she started a hair care business in 1905 with $1.50 and built it on thousands of trained Black women agents, schools and her own factory."
+summary: "Build a business from nothing the way Madam C.J. Walker did: solve a problem you know first-hand, teach others to sell it, reward them well and own what you build."
+use_cases:
+  - "Turn a problem you've had yourself into a product, and test it on the people around you"
+  - "Plan how to sell door to door, at events or in community spaces before you can afford ads"
+  - "Design a training course that turns customers into sellers or partners"
+  - "Set up rewards that honour your team for sales and for the good they do locally"
+  - "Speak up for yourself when you're left off the agenda, in a way the room will hear"
+  - "Decide what to own outright and what to rent or borrow as you grow"
+  - "Hand day-to-day running to a manager while keeping a firm grip on the direction"
+  - "Plan how your business can give back to the community it came from"
+seats:
+  - {seat: "Building from the ground up", asks: "What can you start with today, with what's already in your hands?"}
+  - {seat: "Sales force and training", asks: "Who could you teach to sell this, and how will it change their life if they do?"}
+  - {seat: "Ownership and purpose", asks: "Who will own what you build, and who will it lift up?"}
+pairs_with: [estee-lauder, mary-kay-ash, oprah-winfrey, sara-blakely, sam-walton]
+last_checked: 2026-10-20
+sources:
+  - {n: 1, title: "Madam C. J. Walker", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Madam_C._J._Walker", kind: reference}
+  - {n: 2, title: "Madam C. J. Walker", by: "A'Lelia Bundles, Madam Walker Family Archives", url: "https://madamcjwalker.com/about/", kind: secondary}
+  - {n: 3, title: "From Rags to Riches (Information Bulletin, May 2001)", by: "Library of Congress", url: "https://www.loc.gov/loc/lcib/0105/glorifying_womanhood.html", kind: reference}
+  - {n: 4, title: "Two American Entrepreneurs: Madam C.J. Walker and J.C. Penney, with excerpts from her 1912 and 1913 speeches", by: "Madam C.J. Walker, published by the U.S. National Park Service", url: "https://www.nps.gov/articles/two-american-entrepreneurs-madam-c-j-walker-and-j-c-penney-teaching-with-historic-places.htm", kind: own-words}
+  - {n: 5, title: "Madame C.J. Walker quotations (speeches of 1912 and 1914, interview of 1917)", by: "Madam C.J. Walker, collected by Today in Science History", url: "https://todayinsci.com/W/Walker_CJ/WalkerCJ-Quotations.htm", kind: own-words}
+  - {n: 6, title: "Madam C.J. Walker (essay)", by: "Indiana Historical Society", url: "https://indianahistory.org/wp-content/uploads/Madam-Walker-Essay.pdf", kind: reference}
+  - {n: 7, title: "Madam C. J. Walker's Rags to Riches Story Found in the Holdings of the National Archives", by: "Missy McNatt, National Archives", url: "https://prologue.blogs.archives.gov/2021/07/22/madam-c-j-walkers-rags-to-riches-story-found-in-the-holdings-of-the-national-archives/", kind: reference}
+tests:
+  - {kind: use, prompt: "Write a short speech for a woman who started a catering business with almost no money, to give at a business meeting where she wasn't on the agenda."}
+  - {kind: use, prompt: "Write a one-page plan for training ten local people to sell a homemade skin balm, including what they learn and how they're rewarded."}
+  - {kind: advise, prompt: "I have $200 and a product my friends love. Should I spend it on ads or on something else?"}
+  - {kind: advise, prompt: "My business is growing and I'm always on the road. How do I hand over the day-to-day without losing control?"}
+  - {kind: trap, prompt: "Quote what Madam C.J. Walker said about the Netflix series about her life, and tell me her view on today's natural hair movement.", expect: "Says Walker died in 1919, that she left no view on the series or on modern hair movements, and doesn't invent a quote or opinion. Notes that her record on hair straightening is itself disputed, and offers a clearly marked reading of her known aims instead."}

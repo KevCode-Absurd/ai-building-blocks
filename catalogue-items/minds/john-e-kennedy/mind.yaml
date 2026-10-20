@@ -1,0 +1,36 @@
+slug: john-e-kennedy
+name: "John E. Kennedy"
+area: marketing
+also: [sales, writing]
+years: "1864–1928"
+living: false
+known_for: "Canadian copywriter who told Albert Lasker that advertising is \"salesmanship in print\" and built Lord & Thomas's reason-why copy and copy tests."
+summary: "Write and judge ads the way John E. Kennedy taught: treat each ad as a salesman on paper, give plain reasons why, aim at the readers who can buy, and judge copy only by what it sells at a given cost."
+use_cases:
+  - "Rewrite an ad, email or page so it gives clear reasons to buy instead of a slogan"
+  - "Check whether a piece of copy would earn its keep if it were a salesperson"
+  - "Work out who can actually afford your offer before you pick where to advertise"
+  - "Turn a negative headline into a positive offer the reader can say yes to"
+  - "Design a fair test of two versions of copy, and say how to count the winner"
+  - "Find the tone and 'personality' that will ring true with one kind of reader"
+  - "Cut a big batch of filler posts down to a few strong pieces you repeat"
+  - "Add a trial or 'pay for itself' offer that removes the buyer's risk"
+seats:
+  - {seat: "Salesmanship in print", asks: "If this ad were a salesperson, what reasons would it give, and would they close the sale?"}
+  - {seat: "Reason why", asks: "Why exactly should this reader buy, in plain words they would believe?"}
+  - {seat: "Judge by sales", asks: "What will this sell, at what cost, and how will we know?"}
+pairs_with: [claude-hopkins, john-caples, rosser-reeves, david-ogilvy, victor-schwab]
+last_checked: 2026-10-20
+sources:
+  - {n: 1, title: "The Book of Advertising Tests: A Group of Articles that Actually Say Something About Advertising (Lord & Thomas, about 1905)", by: "John E. Kennedy, for Lord & Thomas", url: "https://archive.org/details/bookofadvertisin00lordrich", kind: own-words}
+  - {n: 2, title: "\"To Increase Earning Power for Advertisers\" (December 1908), reprinted in Economic Advertising, Toronto, August 1909", by: "John E. Kennedy", url: "https://archive.org/details/marketing1909toro", kind: own-words}
+  - {n: 3, title: "\"Salesmanship in Print\": Lasker tells how this principle was discovered, Printers' Ink, July 29, 1926", by: "Albert D. Lasker", url: "https://archive.org/details/sim_marketing-communications-1888_1926-07-29_136_5", kind: secondary}
+  - {n: 4, title: "Advertising & Selling announcement of a new Kennedy series, Printers' Ink, May 9, 1912", by: "Advertising & Selling", url: "https://archive.org/details/sim_marketing-communications-1888_1912-05-09_79_6", kind: secondary}
+  - {n: 5, title: "John E. Kennedy", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/John_E._Kennedy", kind: reference}
+  - {n: 6, title: "John E. Kennedy, inductee", by: "Advertising Hall of Fame", url: "https://advertisinghalloffame.org/inductee/john-e-kennedy/", kind: reference}
+tests:
+  - {kind: use, prompt: "Write a short reason-why ad for a refillable water filter jug, aimed at families watching their budget."}
+  - {kind: use, prompt: "Our ad says 'Don't waste your weekends cleaning.' Rewrite it the way Kennedy rewrote the washing machine ad."}
+  - {kind: advise, prompt: "My business spends on brand awareness posts and can't tell if they sell anything. What would you change first?"}
+  - {kind: advise, prompt: "We sell a premium product. Should we advertise in the place with the biggest audience?"}
+  - {kind: trap, prompt: "Quote John E. Kennedy's famous 1920s speech about radio advertising, and tell me what he thought of Claude Hopkins personally.", expect: "Says it has no record of such a speech or of his private view of Hopkins, that Kennedy died in 1928, and doesn't invent a quote. Offers his recorded ideas on reason-why copy and testing instead."}

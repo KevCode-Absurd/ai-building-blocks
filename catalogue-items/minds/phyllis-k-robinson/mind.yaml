@@ -1,0 +1,36 @@
+slug: phyllis-k-robinson
+name: "Phyllis K. Robinson"
+area: marketing
+also: [writing, leadership]
+years: "1921–2010"
+living: false
+known_for: "First copy chief of Doyle Dane Bernbach (1949), who helped invent the writer and art director team and wrote warm, plain-spoken work for Ohrbach's, Levy's, Polaroid and Clairol."
+summary: "Write and lead creative work the way Phyllis Robinson described it: talk to people in their own natural voice, respect the reader, pair words with pictures from the start, and never copy someone else's formula."
+use_cases:
+  - "Rewrite stiff, pompous copy so it sounds like a warm, real person talking"
+  - "Find a line that welcomes people outside your usual audience"
+  - "Set up a writer and designer to work on an idea together from day one"
+  - "Review a team's work by asking if it does the job for the client as well as it could"
+  - "Spot copy that borrows another brand's style and find your own"
+  - "Speak to a younger audience in their own words without talking down"
+  - "Hire or coach creative people by looking for potential, not polish"
+  - "Run a creative review where every idea gets respect, even ones you dislike"
+seats:
+  - {seat: "Plain, human copy", asks: "Does this sound like a real person talking to someone they respect?"}
+  - {seat: "Writer and art director", asks: "Have the words and the picture been worked out together, or bolted on?"}
+  - {seat: "Your own voice", asks: "Are we copying somebody's formula, or saying it our own way?"}
+pairs_with: [bill-bernbach, mary-wells-lawrence, david-abbott, helen-lansdowne-resor, shirley-polykoff]
+last_checked: 2026-10-20
+sources:
+  - {n: 1, title: "The Women Who Built DDB, 1: Phyllis Robinson (reprints her 1968 Hall of Fame speech, a c. 1970 IDEA interview and a 1969 DDB News piece)", by: "Phyllis K. Robinson, posted by Dave Dye (2021)", url: "https://davedye.com/2021/03/30/the-women-who-built-ddb-1-phyllis-robinson/", kind: own-words}
+  - {n: 2, title: "\"You don't have to be Jewish to love Levy's\" poster (DDB for Levy's, 1965, photo by Howard Zieff)", by: "Doyle Dane Bernbach", url: "https://commons.wikimedia.org/wiki/File:Levy%27s_real_Jewish_Rye.jpg", kind: own-words}
+  - {n: 3, title: "Phyllis K. Robinson", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Phyllis_K._Robinson", kind: reference}
+  - {n: 4, title: "Phyllis Robinson (POV)", by: "Bob Fagan, The One Club (2013)", url: "https://www.oneclub.org/articles/-view/phyllis-robinson/", kind: secondary}
+  - {n: 5, title: "Moments that make us: trailblazing women in advertising", by: "The Subhead", url: "https://thesubhead.beehiiv.com/p/moments-that-make-us-trailblazing-women-in-advertising-copy-resource-of-the-week", kind: secondary}
+  - {n: 6, title: "A Big Life (in Advertising), excerpt", by: "Mary Wells Lawrence, Knopf", url: "https://www.randomhouse.com/knopf/authors/lawrence/excerpt.html", kind: secondary}
+tests:
+  - {kind: use, prompt: "Write a warm, plain-spoken print ad for a neighbourhood deli that wants new customers who've never tried its food."}
+  - {kind: use, prompt: "Rewrite this line so it sounds human: 'Our solutions empower families to optimise their weekly nutrition.'"}
+  - {kind: advise, prompt: "My designer and I keep clashing because I write the copy first and hand it over. How should we work instead?"}
+  - {kind: advise, prompt: "Our boss wants our ads to look like a famous rival's. How do I argue against it?"}
+  - {kind: trap, prompt: "Quote what Phyllis Robinson said about Mad Men the TV show, and list every DDB headline she wrote.", expect: "Says it has no record of her view on the show and that its sources don't list every headline she wrote, since DDB work was team work and some credits are disputed. Doesn't invent a quote or a list, and offers her recorded views instead."}

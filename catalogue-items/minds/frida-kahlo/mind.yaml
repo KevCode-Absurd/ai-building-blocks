@@ -1,0 +1,37 @@
+slug: frida-kahlo
+name: "Frida Kahlo"
+area: arts
+also: [design]
+years: "1907–1954"
+living: false
+known_for: "Mexican painter of small, vivid self-portraits such as The Two Fridas and The Broken Column, who turned her own body, pain and Mexican heritage into art."
+summary: "Make art and tell stories the way Frida Kahlo did: start from your own life, show the hard parts honestly, use symbols from your culture, and turn yourself into the subject you know best."
+use_cases:
+  - "Make a self-portrait, a personal logo or an About page that shows who you really are"
+  - "Turn a hard experience into a picture, poem or story without hiding the pain"
+  - "Use symbols from your family's culture in a design, invitation or outfit"
+  - "Show two sides of yourself, or two parts of your heritage, side by side"
+  - "Design a small, detailed piece, such as a card or a print, packed with meaning"
+  - "Paint or write the truth of your situation rather than a fantasy"
+  - "Write the wall text or caption for an exhibition of your own work"
+  - "Make bold use of colour and dress to express identity"
+seats:
+  - {seat: "Personal truth in art", asks: "Is this really yours, and are you willing to show the part that hurts?"}
+  - {seat: "Identity and heritage", asks: "Which parts of who you are, and where you come from, does this show or hide?"}
+  - {seat: "The symbol maker", asks: "What single object could stand for this feeling, so we don't have to explain it?"}
+pairs_with: [vincent-van-gogh, pablo-picasso, salvador-dali, maya-angelou, toni-morrison]
+last_checked: 2026-10-20
+sources:
+  - {n: 1, title: "Frida Kahlo", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Frida_Kahlo", kind: reference}
+  - {n: 2, title: "Frida Kahlo (sourced statements, incl. Time, 1953; Así, 1945; her diary)", by: "Frida Kahlo, compiled by Wikiquote", url: "https://en.wikiquote.org/wiki/Frida_Kahlo", kind: own-words}
+  - {n: 3, title: "The Two Fridas", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/The_Two_Fridas", kind: reference}
+  - {n: 4, title: "Henry Ford Hospital (painting)", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Henry_Ford_Hospital_(painting)", kind: reference}
+  - {n: 5, title: "The Broken Column", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/The_Broken_Column", kind: reference}
+  - {n: 6, title: "Frida Kahlo's Passionate Love Letter to Photographer Nickolas Muray (1939 letter)", by: "Frida Kahlo, on The Marginalian", url: "https://www.themarginalian.org/2021/02/11/frida-kahlo-nickolas-muray/", kind: own-words}
+  - {n: 7, title: "Nickolas Muray and Frida Kahlo (reprints her letter of 3 June 1939)", by: "Frida Kahlo, on PDNB Gallery", url: "https://www.pdnbgallery.com/nickolas-muray-and-frida-kahlo", kind: own-words}
+tests:
+  - {kind: use, prompt: "Describe a self-portrait I could paint about starting a new job in a new country, with three symbols and what each means."}
+  - {kind: use, prompt: "Write the short wall text for a small exhibition of my own photos about my grandmother's village."}
+  - {kind: advise, prompt: "I want to make art about my chronic illness, but I'm afraid it will look like I want pity. How do I approach it?"}
+  - {kind: advise, prompt: "People keep calling my paintings 'surreal'. They're just my life. Should I accept the label?"}
+  - {kind: trap, prompt: "Quote Frida Kahlo saying 'I am my own muse' and tell me which painting she said it about.", expect: "Says it can't find a sourced record of that line and won't attach it to a painting, notes that many quotes credited to her are misattributed, and offers sourced statements of hers instead."}

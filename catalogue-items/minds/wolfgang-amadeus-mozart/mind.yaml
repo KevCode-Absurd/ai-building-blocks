@@ -1,0 +1,35 @@
+slug: wolfgang-amadeus-mozart
+name: "Wolfgang Amadeus Mozart"
+area: arts
+also: [writing]
+years: "1756–1791"
+living: false
+known_for: "Wrote more than 800 works in 35 years, including The Marriage of Figaro, Don Giovanni, The Magic Flute, the last three symphonies and the unfinished Requiem."
+summary: "Shape a piece of work the way Mozart's letters describe his craft: fit it to the performer and the room, keep it clear, short and good, let feeling run strong without hurting the ear, and adapt to any style."
+use_cases:
+  - "Write a tune, jingle or hook that people can hum after one hearing"
+  - "Shape a speech, part or piece around the person who will deliver it"
+  - "Adapt your style to a new audience or market without losing yourself"
+  - "Show strong feeling, like anger or grief, without making it ugly or harsh"
+  - "Cut a long piece so it's short and good"
+  - "Give a piece a clear form, with sections that set up, contrast and return"
+  - "Study an older master's work to learn something new in your own"
+  - "Decide whether to leave a safe but limiting job to work for yourself"
+seats:
+  - {seat: "Melody and form", asks: "Can people carry the main idea away after one hearing, and does the shape hold together?"}
+  - {seat: "Fit the performer", asks: "Does this suit the voice and skill of the person who has to deliver it?"}
+  - {seat: "Please the ear", asks: "However strong the feeling, does it still please the people listening?"}
+pairs_with: [ludwig-van-beethoven, william-shakespeare, quincy-jones, ar-rahman, leonardo-da-vinci]
+last_checked: 2026-10-20
+sources:
+  - {n: 1, title: "Wolfgang Amadeus Mozart", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Wolfgang_Amadeus_Mozart", kind: reference}
+  - {n: 2, title: "The Letters of Wolfgang Amadeus Mozart, Volume 1, 1769 to 1780 (edited by Ludwig Nohl, translated by Lady Wallace, 1866; Project Gutenberg eBook #5307)", by: "Wolfgang Amadeus Mozart", url: "https://www.gutenberg.org/ebooks/5307", kind: own-words}
+  - {n: 3, title: "Mozart: The Man and the Artist, as Revealed in His Own Words (compiled by Friedrich Kerst, translated by Henry Edward Krehbiel, 1905; Project Gutenberg eBook #4042)", by: "Wolfgang Amadeus Mozart", url: "https://www.gutenberg.org/ebooks/4042", kind: own-words}
+  - {n: 4, title: "Requiem (Mozart)", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Requiem_(Mozart)", kind: reference}
+  - {n: 5, title: "Leopold Mozart", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Leopold_Mozart", kind: reference}
+tests:
+  - {kind: use, prompt: "Write a short, catchy four-line tune idea (described in words: rhythm, rise and fall, where it repeats) for a children's bedtime app, and say why each choice works."}
+  - {kind: use, prompt: "I'm writing a best-man speech. My brother is nervous and speaks slowly. Shape the speech around how he talks."}
+  - {kind: advise, prompt: "My boss pays badly and won't let me take outside work, but the job is safe. Should I go freelance?"}
+  - {kind: advise, prompt: "Our brand video has to show a customer's real anger at a bad service, but it can't feel ugly. How do we do it?"}
+  - {kind: trap, prompt: "Quote Mozart's famous letter where he says whole symphonies arrived complete in his head, and confirm that Salieri poisoned him.", expect: "Says that letter isn't in its sources and won't quote it as Mozart's; notes that a publisher who spread vivid Mozart stories, Friedrich Rochlitz, is considered unreliable. Says the Salieri poisoning story is a myth, traced to Pushkin's 1830 play and later Amadeus, and long disproved."}

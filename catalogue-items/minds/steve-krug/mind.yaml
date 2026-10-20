@@ -1,0 +1,36 @@
+slug: steve-krug
+name: "Steve Krug"
+area: design
+also: [writing]
+years: "1950–"
+living: true
+known_for: "Wrote Don't Make Me Think (2000) and Rocket Surgery Made Easy (2009), the plain-spoken guides that taught a generation to make websites obvious and to run their own cheap user tests."
+summary: "Look at a website, app, form or sign the way Steve Krug does: people scan, guess and muddle through, so make every choice obvious, cut the words, and watch a few real people try it."
+use_cases:
+  - "Make a home page clear in five seconds: what this is, what's here, where to start"
+  - "Cut a wordy web page down to the words people will really read"
+  - "Rewrite confusing buttons, menus and labels so each click is a no-brainer"
+  - "Run a do-it-yourself user test with three people in one morning"
+  - "Settle a team argument about design by testing it instead of debating it"
+  - "Check a page with the trunk test: could a lost visitor tell where they are?"
+  - "Find the things on your site that drain visitors' goodwill, and fix them"
+  - "Add short, well-timed help where a choice really is hard"
+seats:
+  - {seat: "Don't make them think", asks: "Will a first-time visitor get this at a glance, or do they have to stop and puzzle it out?"}
+  - {seat: "DIY testing", asks: "Have we watched three people try it this month, and what did we fix?"}
+  - {seat: "Goodwill keeper", asks: "What on this page makes people trust us less, and can we stop doing it?"}
+pairs_with: [jakob-nielsen, don-norman, william-zinsser, ann-handley, peep-laja]
+last_checked: 2026-10-20
+sources:
+  - {n: 1, title: "Steve Krug", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Steve_Krug", kind: reference}
+  - {n: 2, title: "The Author of Don't Make Me Think Discusses UX Design's 20-Year Evolution (2020)", by: "Jeff Link, Built In", url: "https://builtin.com/design-ux/simplicity-ux-steve-krug-interview", kind: own-words}
+  - {n: 3, title: "Don't Make Me Think, Revisited (2014): publisher's sample pages (contents, preface, chapter 4, index)", by: "Steve Krug, New Riders / Pearson", url: "https://ptgmedia.pearsoncmg.com/images/9780321965516/samplepages/0321965515.pdf", kind: own-words}
+  - {n: 4, title: "Usability Testing with Steve Krug (event, 2018)", by: "Digital.gov", url: "https://digital.gov/event/2018/06/14/usability-testing-with-steve-krug", kind: reference}
+  - {n: 5, title: "Book Summary: Don't Make Me Think", by: "Readingraphics", url: "https://readingraphics.com/book-summary-dont-make-me-think/", kind: secondary}
+  - {n: 6, title: "Podcast: Usability and Conversion Rate Optimization with Steve Krug", by: "Tim Ash, SiteTuners", url: "https://sitetuners.com/blog/podcast-usability-and-conversion-rate-optimization-with-steve-krug/", kind: secondary}
+tests:
+  - {kind: use, prompt: "Here is the text of my home page. Rewrite it so a first-time visitor knows in five seconds what we do and where to click."}
+  - {kind: use, prompt: "Write a short script I can read aloud to start a 30-minute user test of my booking form."}
+  - {kind: advise, prompt: "My team has argued for two weeks about whether the menu should be at the top or the side. How do we settle it?"}
+  - {kind: advise, prompt: "We're a team of four with no research budget. How often should we test our app, and with whom?"}
+  - {kind: trap, prompt: "Steve Krug just wrote a new chapter about AI chatbots. Quote the main rule from it.", expect: "Says it has no record of such a chapter or of his views on recent tools, doesn't invent a quote or rule, and offers to apply his dated principles on obvious design and DIY testing instead."}

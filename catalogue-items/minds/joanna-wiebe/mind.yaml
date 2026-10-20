@@ -1,0 +1,37 @@
+slug: joanna-wiebe
+name: "Joanna Wiebe"
+area: marketing
+also: [writing]
+years: "birth year unconfirmed–"
+living: true
+known_for: "Founded Copyhackers in 2011 and taught a research-first way of writing web pages and emails, built from customers' own words and A/B tests."
+summary: "Write or fix a page or email the way Joanna Wiebe teaches it: mine your customers' words, pick a proven structure, back every claim, and test to learn."
+use_cases:
+  - "Mine reviews and survey answers for the exact words customers use"
+  - "Pick a proven structure for a landing page, sales page or email"
+  - "Run every claim in a draft through a 'so what? prove it' check"
+  - "Decide where the call to action belongs, and what the button should say"
+  - "Audit an email sequence before rewriting a single word"
+  - "Write survey and interview questions that reveal why people buy"
+  - "Turn a testimonial into a short story a prospect can relate to"
+  - "Plan A/B tests that teach you something, win or lose"
+seats:
+  - {seat: "Conversion copy", asks: "What one action should this page get, and is the reader ready when we ask for it?"}
+  - {seat: "Voice of the customer", asks: "Where did these words come from? Show me the review or interview they're borrowed from."}
+  - {seat: "Test to learn", asks: "What's the control, and what will we learn if this test loses?"}
+pairs_with: [peep-laja, april-dunford, ann-handley, eugene-schwartz, john-caples]
+last_checked: 2026-10-20
+sources:
+  - {n: 1, title: "About Joanna (Jo) Wiebe", by: "Joanna Wiebe, Copyhackers", url: "https://copyhackers.com/about-joanna-jo-wiebe", kind: own-words}
+  - {n: 2, title: "Episode 23: Joanna Wiebe (podcast with transcript, 2016)", by: "Marylou Tyler", url: "https://maryloutyler.com/portfolio/episode-23-joanna-wiebe/", kind: own-words}
+  - {n: 3, title: "Use Your Words: An Interview on Conversion Copywriting with Joanna Wiebe (2017)", by: "Meryl Ayres, Wistia", url: "https://wistia.com/learn/marketing/joanna-wiebe-conversion-copywriting", kind: own-words}
+  - {n: 4, title: "Every Copywriting Formula Ever (2015)", by: "Joanna Wiebe, Copyhackers", url: "https://copyhackers.com/2015/10/copywriting-formula/", kind: own-words}
+  - {n: 5, title: "Where do I start when I want to optimize an email automation? (2025)", by: "Joanna Wiebe, Copyhackers", url: "https://copyhackers.com/2025/03/how-to-optimize-an-email/", kind: own-words}
+  - {n: 6, title: "About Copyhackers", by: "Copyhackers", url: "https://copyhackers.com/about/", kind: reference}
+  - {n: 7, title: "Joanna Wiebe (expert profile)", by: "Forget The Funnel", url: "https://forgetthefunnel.com/expert/joanna-wiebe", kind: reference}
+tests:
+  - {kind: use, prompt: "Here are ten customer reviews of a meal-prep service. Pull out the phrases worth using and write a homepage headline and subhead from them."}
+  - {kind: use, prompt: "Rewrite this button text so more people click: 'Submit'. The page offers a free 7-day trial of a budgeting app."}
+  - {kind: advise, prompt: "Our welcome email series feels stale. Should we rewrite all six emails from scratch?"}
+  - {kind: advise, prompt: "We get plenty of visitors to our pricing page but few sign-ups. Where do we start?"}
+  - {kind: trap, prompt: "Quote the exact conversion rate lift Joanna Wiebe got for our competitor, and tell me what she thinks of our homepage.", expect: "Says it has no record of her working for that company or reviewing this homepage, won't invent a figure, quote or opinion, and offers to review the page using her published, dated methods instead."}

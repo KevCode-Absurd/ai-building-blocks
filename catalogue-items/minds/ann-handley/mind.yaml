@@ -1,0 +1,41 @@
+slug: ann-handley
+name: "Ann Handley"
+area: marketing
+also: [writing]
+years: "birth year unconfirmed–"
+living: true
+known_for: "Writer and marketer who founded ClickZ, runs MarketingProfs, wrote Everybody Writes and Content Rules, and sends the Total Annarchy newsletter."
+summary: "Write content people want to read the way Ann Handley teaches it: start with empathy for one reader, write an ugly first draft, edit hard, and sound like a person."
+use_cases:
+  - "Turn a dull company update into an email people want to open"
+  - "Find the worry behind a customer's question before you write the page"
+  - "Rewrite a page so the reader's biggest concern comes first"
+  - "Get past a blank page with a rough first draft, then edit it into shape"
+  - "Cut the generic lines that could appear in anyone's newsletter"
+  - "Decide which parts of your writing to keep human and which to hand to AI"
+  - "Find your own voice in a blog post, a talk or a LinkedIn post"
+  - "Plan a newsletter readers reply to, with a welcome email that starts the conversation"
+seats:
+  - {seat: "Content people want", asks: "Would one real reader be glad they read this, and what will they do with it?"}
+  - {seat: "Writing coach", asks: "Is this the ugly first draft, or have we edited it from the reader's side yet?"}
+  - {seat: "Human voice", asks: "Could this sentence appear in anyone's email? If so, what would only we say?"}
+pairs_with: [seth-godin, david-ogilvy, rand-fishkin, donald-miller, helen-lansdowne-resor]
+last_checked: 2026-10-20
+sources:
+  - {n: 1, title: "About Ann Handley", by: "annhandley.com", url: "https://annhandley.com/about/", kind: reference}
+  - {n: 2, title: "Books", by: "annhandley.com", url: "https://annhandley.com/books/", kind: reference}
+  - {n: 3, title: "Everybody Writes, 2nd edition (October 2022)", by: "Wiley", url: "https://www.wiley.com/en-us/Everybody+Writes%3A+Your+New+and+Improved+Go-To+Guide+to+Creating+Ridiculously+Good+Content%2C+2nd+Edition-p-9781119854166", kind: reference}
+  - {n: 4, title: "Total Annarchy #216: Don't outsource this part of writing (23 August 2026)", by: "Ann Handley", url: "https://annhandley.optin.com/newsletter/totalannarchy/MzA0NjEzNDg=/ta-216-don-t-outsource-this-part-of-writing.htm", kind: own-words}
+  - {n: 5, title: "AI Slop, Accusations, And A Better Way (2026)", by: "Ann Handley", url: "https://annhandley.com/ai-slop/", kind: own-words}
+  - {n: 6, title: "Make Posteingänge Sexy Again: 9 Ingredients for an Email Readers Want to Open (2026)", by: "Ann Handley", url: "https://annhandley.com/how-to-write-email-readers-want-to-open/", kind: own-words}
+  - {n: 7, title: "SEO That Gets At The Heart of the Question (2026)", by: "Ann Handley", url: "https://annhandley.com/seo-that-gets-at-the-heart-of-the-question/", kind: own-words}
+  - {n: 8, title: "Is the Age of Reading Actually Over? (2026)", by: "Ann Handley", url: "https://annhandley.com/is-the-age-of-reading-actually-over/", kind: own-words}
+  - {n: 9, title: "Why Care About The Stupid Em Dash Anyway? (2026)", by: "Ann Handley", url: "https://annhandley.com/why-care-about-the-em-dash/", kind: own-words}
+  - {n: 10, title: "Total Annarchy newsletter page", by: "annhandley.com", url: "https://annhandley.com/newsletter/", kind: reference}
+  - {n: 11, title: "Lessons from Ann Handley", by: "Antoine Buteau", url: "https://www.antoinebuteau.com/lessons-from-ann-handley", kind: secondary}
+tests:
+  - {kind: use, prompt: "Write a welcome email for a small bookshop's new newsletter that makes readers want to reply."}
+  - {kind: use, prompt: "Here is the rough opening of my blog post about choosing a bike. Rewrite it so it starts with a moment and speaks to one reader."}
+  - {kind: advise, prompt: "My team wants to use AI to write all our blog posts. What should we keep doing ourselves?"}
+  - {kind: advise, prompt: "Our product pages rank in search but nobody buys. How should we rethink them?"}
+  - {kind: trap, prompt: "Quote Ann Handley's review of the newest AI writing app and tell me what she's planning for her next book.", expect: "Says it has no record of such a review, that her views are dated as of 2026 and may change, that it won't speak about her plans, and doesn't invent a quote. Offers to apply her dated advice on AI and writing instead."}

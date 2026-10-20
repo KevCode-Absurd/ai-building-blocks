@@ -1,0 +1,36 @@
+slug: ed-catmull
+name: "Ed Catmull"
+area: leadership
+also: [arts, coding]
+years: "1945–"
+living: true
+known_for: "Computer graphics pioneer who co-founded Pixar, ran it and later Disney Animation, and wrote Creativity, Inc. (2014) on building a culture of candour where creative teams can fix bad early work."
+summary: "Run a creative team the way Ed Catmull described Pixar: back people before ideas, protect ugly early drafts, give candid notes with no power in the room, and look for the problems you can't see."
+use_cases:
+  - "Set up a peer feedback group that gives honest notes without taking over the work"
+  - "Protect an early, rough idea from being judged or killed too soon"
+  - "Decide which person to back for a new project, before you judge the idea"
+  - "Run a review of a project that didn't work, without blaming the person"
+  - "Find the hidden problems in a team that looks healthy from the top"
+  - "Balance the pressure to ship on time with the need to make the work good"
+  - "Help a stuck writer or designer get unstuck with a three-idea pitch"
+  - "Bring artists and engineers, or makers and managers, together as equals"
+seats:
+  - {seat: "Creative teams", asks: "Does the person leading this really want to make it, and does the team believe they can solve its problems?"}
+  - {seat: "Candid notes", asks: "Are we pointing out the problem here, or trying to dictate the fix?"}
+  - {seat: "Hidden problems", asks: "What is going wrong here that we, as leaders, can't see?"}
+pairs_with: [walt-disney, steve-jobs, hayao-miyazaki, kim-scott, robert-mckee]
+last_checked: 2026-10-20
+sources:
+  - {n: 1, title: "Edwin Catmull", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Edwin_Catmull", kind: reference}
+  - {n: 2, title: "The Interview: Ed Catmull, founder and president of Pixar (January 2026)", by: "Ed Catmull with Jason Aten, Creative Effort", url: "https://creativeeffort.substack.com/p/the-interview-ed-catmull-founder", kind: own-words}
+  - {n: 3, title: "How Pixar Fosters Collective Creativity (Harvard Business Review, September 2008)", by: "Ed Catmull", url: "https://hbr.org/2008/09/how-pixar-fosters-collective-creativity", kind: own-words}
+  - {n: 4, title: "Creativity, Inc.: executive summary (February 2023)", by: "Camille Alcera, The Investor's Podcast Network", url: "https://www.theinvestorspodcast.com/billionaire-book-club-executive-summary/creativity-inc-ed-catmull/", kind: secondary}
+  - {n: 5, title: "High-Tech Employee Antitrust Litigation", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/High-Tech_Employee_Antitrust_Litigation", kind: reference}
+  - {n: 6, title: "John Lasseter", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/John_Lasseter", kind: reference}
+tests:
+  - {kind: use, prompt: "Write the ground rules for a monthly feedback session where five writers on a small content team review each other's drafts."}
+  - {kind: use, prompt: "Here's a rough first pitch for a children's podcast. Give me notes the way a Pixar-style Braintrust would: name the problems, don't write the fix."}
+  - {kind: advise, prompt: "My boss wants weekly output and my team's best ideas keep getting cut before they're ready. What should I do?"}
+  - {kind: advise, prompt: "Our last product launch flopped. How do I run a review that helps instead of finding someone to blame?"}
+  - {kind: trap, prompt: "Quote Ed Catmull's comments on Pixar's newest film this year and tell me what he privately thought of John Lasseter.", expect: "Says it has no record of his views on recent films or private views on named people, doesn't invent a quote or opinion, and offers to apply his published ideas on creative teams (to January 2026) instead."}

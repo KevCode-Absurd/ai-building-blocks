@@ -1,0 +1,140 @@
+# Coco Chanel: what she knew and believed
+
+Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
+
+A note on method: Chanel left no essays or books of her own. Her words survive in interviews and in memoirs by others, and she often told glamorised, changing versions of her own life, so her statements about herself are unreliable [S1]. We could not open a transcript or full text of any interview with her. Her voice comes from a Wikiquote page whose lines are each tied to a named book or interview, such as Marcel Haedrich’s 1971 book and a 1957 *LIFE* piece [S2], a review that quotes Paul Morand’s notes of her talk in 1946 [S7], and a trace of her 1965 *McCall’s* interview [S8]. These are lines chosen and translated by others, so treat wording as approximate. Many sayings credited to her online have no good source. This data set leans on what she did, as recorded by Wikipedia and the Victoria and Albert Museum [S1][S3][S4][S5][S6]. Her wartime record is serious and partly disputed. We set out what the sources say and mark what is contested.
+
+## In one paragraph
+
+Gabrielle "Coco" Chanel was born in Saumur in 1883, spent part of her childhood in an orphanage at Aubazine, where she learned to sew, and died in Paris in 1971 [S1]. She began as a milliner in Paris in 1910, opened shops in Deauville (1913) and Biarritz (1915), and became a couturière in 1919 [S1]. She made clothes for movement and comfort, turning plain jersey into fashion, borrowing from menswear and moving women away from corsets [S1][S3]. Her signatures became a short list everyone knows: Chanel No. 5 (1921), the tweed suit, the little black dress, costume pearls, the two-tone shoe and the quilted 2.55 bag [S1][S4]. She closed her house in 1939, spent the war in occupied Paris, where her conduct remains controversial, and reopened in 1954 at the age of about 70 [S1]. Her method was to edit hard, keep the line simple and repeat a few recognisable ideas until they became the brand [S4].
+
+## Core ideas
+
+### Comfort and freedom of movement
+
+Chanel rejected the corsets and bustles of the time and made clothes women could move in, which was rare in womenswear then [S1][S3]. She draped garments directly on the body, studied how fabric fell, and had models move so she could cut away whatever restricted them [S3].
+
+How she applied it: her tweed suits used soft, cardigan-style jackets that let wearers move freely, and her 1954 suit needed no restrictive underwear, a practical answer to Dior's New Look [S3][S4].
+
+### Turn a humble material into luxury
+
+She took jersey, a cheap knit used mostly for underwear and men's sportswear, and made it fashionable womenswear from the 1910s [S1][S3][S4]. *Vogue* wrote in 1916 that her art resided in jersey [S4]. She also used tweed for city suits and cotton for evening wear, in place of the usual silk satin and velvet [S3].
+
+How she applied it: by 1915 her jersey suits were so common at Deauville that a newspaper called them almost a uniform [S3].
+
+### Borrow from somewhere else
+
+Chanel repeatedly took ideas from men's clothes and adapted them for women [S3]. In the 1930s she promoted wide-leg evening pyjamas and trousers with long jackets [S3]. The V&A also notes how much she drew on Britain [S5].
+
+How to use it: look at what another group or field already wears, uses or does well, and ask what it would look like adapted for your audience.
+
+### A simple line, with restrained detail
+
+She kept the overall line central and let detail appear in small touches: trims, matching stitching, a few sequins [S3]. She presented black as modern and chic, not only for mourning [S4]. In 1926 American *Vogue* showed her black day dress and predicted it would be the frock all the world would wear [S4]. Wikiquote records her line, from a 1971 memoir by Marcel Haedrich, that fashion is architecture, a matter of proportions [S2].
+
+### A few signature pieces, repeated
+
+The V&A credits her lasting status to a small set of signature pieces refined over 60 years [S4]. Jersey, black, No. 5, the interlocking-C logo, the tweed suit, the 2.55 bag, the beige-and-black slingback and costume jewellery each became part of a recognisable house style [S4]. She raised fake pearls and motifs like lions and stars into staples [S4].
+
+How she applied it: the interlocking Cs first appeared on the stopper of the No. 5 bottle and became the brand's shorthand [S4].
+
+### The name as the brand
+
+Chanel No. 5, launched on 5 May 1921, was an early case of a designer stretching a name beyond clothes [S1][S6]. She chose sample number five from those made by perfumer Ernest Beaux, and wanted a modern scent, not one that smelled of a single flower [S6]. She described it as a woman's perfume with the scent of a woman, and wanted a plain bottle in place of ornate crystal [S6].
+
+How she applied it: in 1924 she licensed her name to Parfums Chanel, owned 70% by Pierre and Paul Wertheimer and 20% by Théophile Bader of Galeries Lafayette, keeping 10% for herself [S6]. She later spent more than twenty years fighting to regain control [S6].
+
+### Style over fashion
+
+In her 1965 *McCall’s* interview, as traced by Quote Investigator, she said real style should spread beyond elite circles into ordinary life. Fashion, by contrast, is a few playful ideas made to be thrown away and replaced in the next collection, and true style lasts because it keeps renewing itself [S8]. She used the French word *mode*, and it is unclear whether she spoke French or English [S8]. Wikiquote records her telling *LIFE* in 1957 that fashion is made to become unfashionable [S2]. A later source credits her with the line that fashion fades and only style remains [S2]. The idea fits her work: a few lasting pieces outlived each season's trends [S4].
+
+### Come back on your own terms
+
+After closing in 1939 and spending years in Switzerland after the war, she reopened her house in Paris in 1954, with funding from Pierre Wertheimer [S1]. Her practical suit found its market as an alternative to the stiff, corseted post-war look [S3]. *Vogue* later called it the world's prettiest uniform [S3].
+
+## How she decides
+
+- Ask if a person can move and live in it [S1][S3].
+- Cut what restricts or distracts [S3].
+- Look for a humble material that can be made desirable [S3][S4].
+- Borrow from menswear, sportswear or another country [S3].
+- Keep the line simple. Put detail in small touches [S3].
+- Repeat a few signatures until they become the brand [S4].
+- Put your name on more than one kind of product [S1][S6].
+
+## Real decisions
+
+### Making jersey the fabric of a house
+
+She took a cheap knit used for underwear and sportswear and made it fashionable womenswear from the 1910s. By 1915 her jersey suits were close to a uniform at Deauville [S1][S3][S4].
+
+### Putting women in black
+
+*Vogue* showed her black day dress in 1926 and predicted every woman would wear it [S4]. A review of Morand’s notes has her saying, in blunt words, that she would dress women in black. It also has her saying she was shocked by gaudy, revived colours [S7]. In another remark she said black and white hold every colour [S2].
+
+### Choosing sample number five and a plain bottle
+
+She picked the fifth of the scent samples Ernest Beaux made, wanted a modern scent that did not smell of one flower, and asked for a plain bottle in place of ornate crystal [S6].
+
+### Licensing her name, then fighting for it
+
+In 1924 she licensed her name to Parfums Chanel and kept 10% [S6]. She later spent more than twenty years trying to regain control, and a 1947 settlement gave her about 2% of worldwide sales [S6].
+
+### Closing in 1939 and coming back at about seventy
+
+She closed the house in 1939 and reopened in 1954 with funding from Pierre Wertheimer [S1]. Her practical suit needed no restrictive underwear and found its market against the stiff, corseted New Look [S3][S4].
+
+### Doing without ornament
+
+She kept the line central and let detail show in small touches [S3]. Of jewellery, the review of Morand has her saying a beautiful gem can look artificial and that fixating on stones is pointless, like wearing a cheque round your neck [S7].
+
+## Where she stood
+
+**What should clothes do for women?** Let them move freely and live practical lives [S1][S3].
+
+**Is fashion the same as style?** No. In her reported view, fashion passes and style lasts [S2].
+
+**Should luxury use cheap materials?** Yes, if the cut and idea make them chic. Jersey proved it [S4].
+
+**What makes a scent modern?** Something abstract that smells of a woman, not of one flower (as reported for No. 5) [S6].
+
+## Her work and record
+
+- Born 19 August 1883 in Saumur, France. Died 10 January 1971 in Paris [S1].
+- Licensed as a milliner in 1910, with a Paris boutique at 21 rue Cambon [S1].
+- Opened a Deauville boutique in 1913 selling casual sportswear in jersey, and a Biarritz house in 1915 [S1].
+- Registered as a couturière in 1919, at 31 rue Cambon [S1].
+- Launched Chanel No. 5 on 5 May 1921 [S6].
+- Introduced the tweed suit around 1923 [S1].
+- Little black dress shown in American *Vogue* in 1926 [S1][S4].
+- Expanded into costume jewellery in the 1930s [S1].
+- Closed her couture house in 1939 [S1].
+- Reopened in 1954 [S1] and launched the quilted 2.55 bag in 1955 [S4].
+- Her house was the subject of a major V&A exhibition, 2023 to 2024 [S5].
+
+## Where she was wrong or criticised
+
+- **Life under the occupation.** Chanel stayed in Paris during the German occupation, living at the Hôtel Ritz, which housed German staff, and had a relationship with Baron Hans Günther von Dincklage, a German diplomat and intelligence officer [S1].
+- **The perfume company.** In 1941 she petitioned German officials to take control of Parfums Chanel, arguing it was still Jewish property. The Jewish Wertheimer family had already passed control to a non-Jewish businessman [S1][S6]. She later sued them, and a 1947 settlement gave her about 2% of worldwide sales [S6].
+- **Intelligence files.** Historian Hal Vaughan, using declassified documents, linked her to German intelligence and to a 1943 plan to carry a peace message to Churchill. A French police file listed her under the agent reference F-7124 [S1]. Serge Klarsfeld cautioned that an agent number alone doesn't prove personal involvement, and the Chanel company disputes the espionage claims [S1]. Treat the details as disputed.
+- **After liberation.** A French committee questioned her in 1944 and released her for lack of documented evidence. Claims that Churchill intervened are speculation [S1].
+- **Antisemitism.** Vaughan called her a vicious antisemite. Biographers note she shared antisemitic views common in her social circle [S1].
+- **A disputed Resistance claim.** A card found in 2023 by biographer Justine Picardie suggested Resistance membership. Historian Guillaume Pollack disputed it, noting apparent alterations and no witness evidence [S1].
+
+## Blind spots to watch
+
+- Her taste was built for the women of her class and time. Check who you are designing for now.
+- She relied on instinct and her own authority. Test ideas with the people who will wear or use them.
+- Her personal statements are unreliable and her record is morally troubling. Use her design lessons, not her as a role model.
+- A strong personal brand can overshadow the work and the team behind it.
+- Many "Chanel quotes" online are invented. Use only those in this file.
+
+## Short phrases on the record
+
+Each is reported by others, with the source shown. None is from her own writing.
+
+- "Fashion is made to become unfashionable." (*LIFE*, 1957, via Wikiquote) [S2]
+- "Fashion is architecture. It is a matter of proportions." (Haedrich, 1971, via Wikiquote) [S2]
+- "In order to be irreplaceable one must always be different." (Haedrich, 1971, via Wikiquote) [S2]
+- "A woman's perfume, with the scent of a woman." (on No. 5, as reported) [S6]
+- "Fashion fades, only style remains the same." (late attribution, 1994, via Wikiquote) [S2]

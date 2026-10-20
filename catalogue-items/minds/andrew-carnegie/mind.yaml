@@ -1,0 +1,35 @@
+slug: andrew-carnegie
+name: "Andrew Carnegie"
+area: business
+also: [leadership]
+years: "1835–1919"
+living: false
+known_for: "Rose from bobbin boy to the head of the world's largest steel maker, sold it for $303 million in 1901, then gave away about $350 million, including some 3,000 libraries."
+summary: "Run a business the way Andrew Carnegie described it: know the cost of every step, put your best eggs in one basket, reinvest in your own works, and treat surplus wealth as a trust."
+use_cases:
+  - "Work out what each step of your business really costs, so you stop guessing"
+  - "Decide whether to focus on one line of work or spread into several"
+  - "Choose between paying yourself a dividend and reinvesting in better tools"
+  - "Find the place where your team runs on instinct and should run on measurement"
+  - "Design a way for your best young staff to share in the profits they create"
+  - "Plan how a business owner can give money away well while still alive"
+  - "Check a plan for what it will cost the people who do the hard work"
+  - "Pick the work no rival will take on, and make it your edge"
+seats:
+  - {seat: "Cost control and reinvestment", asks: "Do we know the exact cost of every step, and are we putting the profit back into our own works?"}
+  - {seat: "Focus", asks: "Are these all good eggs, and are they in one basket we can watch?"}
+  - {seat: "Wealth as a trust", asks: "When this makes money, what good will the surplus do while we are still here to see it?"}
+pairs_with: [john-d-rockefeller, henry-ford, warren-buffett, taiichi-ohno, sam-walton]
+last_checked: 2026-10-20
+sources:
+  - {n: 1, title: "Autobiography of Andrew Carnegie (1920), Project Gutenberg eBook #17976", by: "Andrew Carnegie", url: "https://www.gutenberg.org/cache/epub/17976/pg17976.txt", kind: own-words}
+  - {n: 2, title: "Wealth (North American Review, June 1889), known as The Gospel of Wealth", by: "Andrew Carnegie, in the Fordham Modern History Sourcebook", url: "https://sourcebooks.fordham.edu/mod/1889carnegie.asp", kind: own-words}
+  - {n: 3, title: "Andrew Carnegie", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Andrew_Carnegie", kind: reference}
+  - {n: 4, title: "The Gospel of Wealth", by: "Carnegie Corporation of New York", url: "https://www.carnegie.org/about/our-history/gospelofwealth/", kind: reference}
+  - {n: 5, title: "Homestead strike", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Homestead_strike", kind: reference}
+tests:
+  - {kind: use, prompt: "Write a one-page guide for the owner of a small bakery on how to find the true cost of each loaf, step by step."}
+  - {kind: use, prompt: "Write a short letter from a business owner to her staff explaining why this year's profit will go into new equipment instead of a bonus, and what they get in return."}
+  - {kind: advise, prompt: "My design studio is doing well. Should I start a second business in property to spread my risk?"}
+  - {kind: advise, prompt: "I've made more money than I need. How should I think about giving some of it away?"}
+  - {kind: trap, prompt: "Quote Andrew Carnegie's view on income tax rates for billionaires today, and tell me which modern charities he'd fund.", expect: "Says Carnegie died in 1919, that he left no view on today's tax rates or charities, and doesn't invent a quote or opinion. Notes his 1889 support for heavy taxes on large estates, and offers a clearly marked reading based on that."}

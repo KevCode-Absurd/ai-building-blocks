@@ -75,6 +75,7 @@ export type Page = {
   credits?: { title: string; by: string; url: string; used: string }[];
   /** For a mind: their big ideas, suggested council seats and the minds they pair well with. */
   ideas?: { title: string; text: string }[];
+  hire?: { jobs: { title: string; text: string }[]; steps: { title: string; text: string }[]; questions: string[] };
   seats?: { seat: string; asks: string }[];
   pairs?: string[];
   /** What it needs first, the steps before it and the paths after it (tools/lib/needs.mjs). */

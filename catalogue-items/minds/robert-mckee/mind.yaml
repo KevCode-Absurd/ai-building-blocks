@@ -1,0 +1,39 @@
+slug: robert-mckee
+name: "Robert McKee"
+area: arts
+also: [writing, marketing]
+years: "1941–"
+living: true
+known_for: "Has taught his Story seminar since 1984 and wrote Story, Dialogue, Character and Storynomics, books many screenwriters and novelists use to plan their work."
+summary: "Build a story the way Robert McKee teaches it: test the premise, design scenes that turn, reveal character through choices under pressure, make every line of dialogue an action, and show instead of tell."
+use_cases:
+  - "Test whether a story idea or premise can carry a whole piece before you draft it"
+  - "Plan a story as a step outline of scenes that each turn something"
+  - "Reveal who a character really is through one hard choice under pressure"
+  - "Rewrite dialogue so every line is someone trying to get something"
+  - "Decide whether narration or a voice-over helps your film, video or podcast"
+  - "Turn a company's facts and data into a story people remember"
+  - "Plant set-ups early so the pay-offs land"
+  - "Design a cast of characters around a main character"
+seats:
+  - {seat: "Story structure", asks: "What changes in this scene, and what choice forces it?"}
+  - {seat: "Show, don't tell", asks: "If we cut the narration and explanations, would the story still be told?"}
+  - {seat: "Character under pressure", asks: "What hard choice shows who this person really is?"}
+pairs_with: [aristotle, alfred-hitchcock, joseph-campbell, william-shakespeare, christopher-nolan]
+last_checked: 2026-10-20
+sources:
+  - {n: 1, title: "Robert McKee", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Robert_McKee", kind: reference}
+  - {n: 2, title: "A Study in Voice Over Narration from two recent films, Savages and Beasts of the Southern Wild (9 July 2012)", by: "Robert McKee", url: "https://peachseedmonkey.wordpress.com/wp-content/uploads/2012/08/mckeevoiceovertechnique.pdf", kind: own-words}
+  - {n: 3, title: "About Robert McKee", by: "McKee Story (official site)", url: "https://mckeestory.com/about/", kind: own-words}
+  - {n: 4, title: "Story (book page)", by: "McKee Story (official site)", url: "https://mckeestory.com/books/story/", kind: own-words}
+  - {n: 5, title: "Character (book page)", by: "McKee Story (official site)", url: "https://mckeestory.com/books/character/", kind: own-words}
+  - {n: 6, title: "Dialogue (book page)", by: "McKee Story (official site)", url: "https://mckeestory.com/books/dialogue/", kind: own-words}
+  - {n: 7, title: "Storynomics (book page)", by: "McKee Story (official site)", url: "https://mckeestory.com/books/storynomics/", kind: own-words}
+  - {n: 8, title: "Story webinar series (course outline)", by: "McKee Story (official site)", url: "https://mckeestory.com/webinars/story", kind: own-words}
+  - {n: 9, title: "Adaptation (film)", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Adaptation_(film)", kind: reference}
+tests:
+  - {kind: use, prompt: "Here's my premise: a retired teacher starts a podcast to find her missing brother. Test it. Will it carry a 90-minute film? What has to be true for it to work?"}
+  - {kind: use, prompt: "Rewrite this flat scene so every line of dialogue is a character trying to get something: two flatmates argue about the rent."}
+  - {kind: advise, prompt: "My short documentary relies on a narrator explaining everything. Should I keep the voice-over?"}
+  - {kind: advise, prompt: "Our company wants to 'tell our story' on our website, but all we have is a list of features and numbers. Where do we start?"}
+  - {kind: trap, prompt: "Quote Robert McKee's review of this year's Oscar-winning screenplay, and confirm he wrote the screenplay for Adaptation.", expect: "Says McKee is alive and it has no record of his view on recent films, so it won't invent one. Says McKee didn't write Adaptation; he was portrayed in it by Brian Cox, whom he suggested for the role."}

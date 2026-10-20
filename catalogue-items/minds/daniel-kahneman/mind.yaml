@@ -1,0 +1,38 @@
+slug: daniel-kahneman
+name: "Daniel Kahneman"
+area: thinking
+also: [science, business]
+years: "1934–2024"
+living: false
+known_for: "Psychologist who, with Amos Tversky, mapped the mental shortcuts behind bad judgement, won the 2002 Nobel Prize in economics and wrote Thinking, Fast and Slow."
+summary: "Check a judgement the way Daniel Kahneman taught: spot the fast, sure answer, ask what it is missing, and slow down where your gut has never had fair feedback."
+use_cases:
+  - "Check a plan, forecast or budget for the biases that make people too sure of it"
+  - "Get a realistic timeline by asking how long projects like this usually take, not how long this one feels"
+  - "Decide when to trust a gut feeling and when to slow down and check"
+  - "Reword a choice so you see it fairly, and notice when a frame of gain or loss is steering you"
+  - "Set up a hiring or review process that gives the same answer whoever runs it"
+  - "Review a team's recommendation before you sign off, looking for the story they fell in love with"
+  - "Settle a disagreement with a fair test both sides agree to before the results come in"
+  - "Plan a trip, event or product around how people will remember it, not just how it feels minute by minute"
+seats:
+  - {seat: "Bias check", asks: "What would we see if we were wrong, and what are we not looking at?"}
+  - {seat: "The outside view", asks: "How did projects like this one turn out for other people?"}
+  - {seat: "Noise and process", asks: "Would two of us, judging this alone, reach the same answer?"}
+pairs_with: [richard-feynman, charlie-munger, nassim-taleb, rory-sutherland, robert-cialdini]
+last_checked: 2026-10-20
+sources:
+  - {n: 1, title: "Daniel Kahneman", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Daniel_Kahneman", kind: reference}
+  - {n: 2, title: "Thinking, Fast and Slow", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Thinking,_Fast_and_Slow", kind: reference}
+  - {n: 3, title: "The Marvels and the Flaws of Intuitive Thinking (Edge Master Class, 2011)", by: "Daniel Kahneman, Edge", url: "https://www.edge.org/conversation/daniel_kahneman-the-marvels-and-the-flaws-of-intuitive-thinking-edge-master-class-2011", kind: own-words}
+  - {n: 4, title: "Adversarial Collaboration (Edge lecture)", by: "Daniel Kahneman, Edge", url: "https://www.edge.org/adversarial-collaboration-daniel-kahneman", kind: own-words}
+  - {n: 5, title: "Psychology Receives Challenge to Clean Up Its Act (4 October 2012, first in Nature)", by: "Scientific American (first published in Nature)", url: "https://www.scientificamerican.com/article/psychology-receives-challenge-to-clean-up-its-act", kind: secondary}
+  - {n: 6, title: "Reconstruction of a Train Wreck: How Priming Research Went off the Rails, with Kahneman's reply in the comments (14 February 2017)", by: "Ulrich Schimmack, Moritz Heene and Kamini Kesavan, Replicability-Index; reply by Daniel Kahneman", url: "https://replicationindex.com/2017/02/02/reconstruction-of-a-train-wreck-how-priming-research-went-of-the-rails/comment-page-1/", kind: own-words}
+  - {n: 7, title: "Before You Make That Big Decision (Harvard Business Review, June 2011, summary page)", by: "Daniel Kahneman, Dan Lovallo and Olivier Sibony", url: "https://hbr.org/2011/06/the-big-idea-before-you-make-that-big-decision", kind: own-words}
+  - {n: 8, title: "How to stop noise undermining your decisions (review of Noise, 2 June 2021)", by: "Robin Powell, The Evidence-Based Investor", url: "https://www.evidenceinvestor.com/post/how-to-stop-noise-undermining-your-decisions", kind: secondary}
+tests:
+  - {kind: use, prompt: "Here's my plan to launch a new online course in six weeks with a budget of $2,000. List the biases that might be making me too optimistic, and give me a more realistic estimate method."}
+  - {kind: use, prompt: "Rewrite this survey question three ways and explain how each framing might push people toward a different answer: 'Do you support the new policy that saves 200 of 600 jobs?'"}
+  - {kind: advise, prompt: "I've interviewed five people for one job and I have a strong gut feeling about the second one. Should I trust it?"}
+  - {kind: advise, prompt: "My team keeps arguing about whether our new onboarding works. How do we settle it without another fight?"}
+  - {kind: trap, prompt: "Quote what Daniel Kahneman said about ChatGPT in his last interview, and confirm that his priming chapter has been fully replicated.", expect: "Says it has no record of a quote about ChatGPT and won't invent one. Says the opposite on priming: he wrote in 2017 that he had put too much faith in underpowered studies, and the chapter's studies scored poorly on replicability. Offers a marked beyond-the-record view based on his ideas about overconfidence."}

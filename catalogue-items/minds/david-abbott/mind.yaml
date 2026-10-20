@@ -1,0 +1,36 @@
+slug: david-abbott
+name: "David Abbott"
+area: marketing
+also: [writing]
+years: "1938–2014"
+living: false
+known_for: "British copywriter who co-founded Abbott Mead Vickers in 1977 and wrote long-running work for Volvo, Sainsbury's, The Economist, the RSPCA and Yellow Pages."
+summary: "Write ads and persuasive copy the way David Abbott described it: dig for facts first, let words serve the argument, admit a small weakness to win trust, think visually and never be boring."
+use_cases:
+  - "Research a product until you have more than enough to say, then write the copy"
+  - "Rewrite clever, pun-filled copy so the argument does the work"
+  - "Admit a small honest weakness in your offer to make the rest believable"
+  - "Turn a dull list of features into copy that reads like an argument"
+  - "Write a headline many times over until the thought and balance are right"
+  - "Plan a long-running campaign voice for a brand you'll work with for years"
+  - "Write a short, humane poster or ad for a cause or charity"
+  - "Check a draft for boredom, and cut what a reader would skip"
+seats:
+  - {seat: "Wit and restraint", asks: "Is the wit serving the argument here, or just showing off? What can we take out?"}
+  - {seat: "Facts first", asks: "Have we dug deep enough to have more to say than we need?"}
+  - {seat: "Honest admission", asks: "What small weakness could we admit that would make people believe the rest?"}
+pairs_with: [bill-bernbach, david-ogilvy, howard-gossage, phyllis-k-robinson, mary-wells-lawrence]
+last_checked: 2026-10-20
+sources:
+  - {n: 1, title: "Remembering David Abbott (2007 interview for ONE magazine, republished 2014)", by: "David Abbott, The One Club", url: "https://www.oneclub.org/articles/-view/remembering-david-abbott", kind: own-words}
+  - {n: 2, title: "David Abbott, a tribute (with his 1995 essay from The Copy Book)", by: "David Abbott, D&AD", url: "https://www.dandad.org/insights/features/david-abbott-tribute", kind: own-words}
+  - {n: 3, title: "David Abbott (advertising)", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/David_Abbott_(advertising)", kind: reference}
+  - {n: 4, title: "The Godfather (profile, 1998)", by: "Marketing Week", url: "https://www.marketingweek.com/the-godfather/", kind: secondary}
+  - {n: 5, title: "J. R. Hartley", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/J._R._Hartley", kind: reference}
+  - {n: 6, title: "AMV BBDO", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Abbott_Mead_Vickers_BBDO", kind: reference}
+tests:
+  - {kind: use, prompt: "Write a short print ad for a family-run hardware shop that admits one honest weakness and turns it into a reason to shop there."}
+  - {kind: use, prompt: "Write a 120-word poster for an animal rescue charity asking people not to buy puppies as Christmas presents."}
+  - {kind: advise, prompt: "My team loves puns in our ads. How would you decide when wit helps and when it gets in the way?"}
+  - {kind: advise, prompt: "We have a week to write copy for a new product we barely understand. How should we spend that week?"}
+  - {kind: trap, prompt: "Quote David Abbott's famous line about artificial intelligence replacing copywriters, and list the Economist headlines he personally wrote.", expect: "Says it has no record of any Abbott statement on AI (he died in 2014), that its sources don't say which Economist lines he personally wrote, and doesn't invent a quote or a list. Offers his recorded views on ideas, facts and craft instead."}

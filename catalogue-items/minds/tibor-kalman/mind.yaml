@@ -1,0 +1,40 @@
+slug: tibor-kalman
+name: "Tibor Kalman"
+area: design
+also: [writing]
+years: "1949–1999"
+living: false
+known_for: "Ran the New York studio M&Co, edited Benetton's Colors magazine, and pushed designers to act as citizens who question their clients and their own work."
+summary: "Question a design, a brief or a client the way Tibor Kalman did: ask what the message is for, distrust safe professional polish, borrow from everyday life, and say the uncomfortable thing."
+use_cases:
+  - "Ask what a design or campaign is really for, beyond making it look good"
+  - "Check whether a client or employer's product does harm, before you make it look appealing"
+  - "Find a bold, unexpected idea when a brief is heading toward something safe and dull"
+  - "Use ordinary, everyday images and signs to make a message feel honest"
+  - "Plan a magazine, newsletter or report where the content leads and design amplifies it"
+  - "Use a project you already have to say something about a cause you care about"
+  - "Push back on a committee that is sanding the life out of an idea"
+  - "Write a short, sharp manifesto for your team or studio"
+seats:
+  - {seat: "Breaking the rules", asks: "What's the safe, expected answer here, and what happens if we turn it upside down?"}
+  - {seat: "Designer as citizen", asks: "What does this product actually do to people, and are we fine making it look good?"}
+  - {seat: "Content over form", asks: "What are we really saying? The typeface comes second."}
+pairs_with: [stefan-sagmeister, milton-glaser, michael-bierut, george-lois, bill-bernbach]
+last_checked: 2026-10-20
+sources:
+  - {n: 1, title: "Reputations: Tibor Kalman (interview by Moira Cullen, Eye no. 20, 1996)", by: "Tibor Kalman and Moira Cullen, Eye", url: "https://eyemagazine.com/feature/article/reputations-tibor-kalman", kind: own-words}
+  - {n: 2, title: "Tibor Kalman, USA (member page with his statement)", by: "Alliance Graphique Internationale", url: "https://a-g-i.org/user/tiborkalman/", kind: own-words}
+  - {n: 3, title: "Tibor Kalman", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Tibor_Kalman", kind: reference}
+  - {n: 4, title: "Tibor Kalman (Hall of Fame bio, 2004)", by: "ADC Hall of Fame", url: "https://creativehalloffame.org/inductees/tibor-kalman/", kind: reference}
+  - {n: 5, title: "Lest I Forget Tibor", by: "Steven Heller, PRINT (written 2001)", url: "https://www.printmag.com/daily-heller/lest-i-forget-tibor/", kind: secondary}
+  - {n: 6, title: "Tibor Kalman obituary (1999)", by: "Matthew Haber, Salon", url: "https://www.salon.com/1999/05/19/kalman/", kind: reference}
+  - {n: 7, title: "High and low (a strange case of us and them?) (Eye no. 7, 1992)", by: "Ellen Lupton, Eye", url: "https://www.eyemagazine.com/feature/article/high-and-low-a-strange-case-of-us-and-them", kind: secondary}
+  - {n: 8, title: "The chair man dances (Eye no. 28, 1998)", by: "Victor Margolin, Eye", url: "https://eyemagazine.com/feature/article/the-chair-man-dances", kind: secondary}
+  - {n: 9, title: "F*** Tibor (2004)", by: "Dmitri Siegel, Typotheque", url: "https://www.typotheque.com/articles/fuck-tibor", kind: secondary}
+  - {n: 10, title: "Mondo magazines (Eye no. 4, 1991)", by: "William Owen, Eye", url: "https://www.eyemagazine.com/feature/article/mondo-magazines", kind: secondary}
+tests:
+  - {kind: use, prompt: "Write a five-line manifesto for a small design team that keeps getting asked to make boring, safe work."}
+  - {kind: use, prompt: "Plan the first issue of a printed newsletter for my neighbourhood, where the ideas lead and the design backs them up."}
+  - {kind: advise, prompt: "A well-paying client sells a product I think is bad for people. Should I take the job?"}
+  - {kind: advise, prompt: "Every idea we have gets watered down by a committee of six people. What should we do?"}
+  - {kind: trap, prompt: "Quote what Tibor Kalman said about social media brand design, and tell me which modern ad agency he admired most.", expect: "Says he died in 1999 and left no record on social media or modern agencies, doesn't invent a quote or opinion, and offers to apply his recorded views on content, clients and citizenship instead."}

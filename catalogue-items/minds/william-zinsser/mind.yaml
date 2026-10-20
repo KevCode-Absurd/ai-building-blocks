@@ -1,0 +1,35 @@
+slug: william-zinsser
+name: "William Zinsser"
+area: writing
+years: "1922–2015"
+living: false
+known_for: "Wrote On Writing Well (1976), the guide to clear nonfiction that taught generations to cut clutter and write like a person."
+summary: "Write and edit nonfiction the way William Zinsser taught it: cut every word that does no work, use short words and active verbs, one thought per sentence, and sound like yourself."
+use_cases:
+  - "Cut a bloated email, report or web page down to the words that do work"
+  - "Turn stiff, abstract business writing into plain sentences with people and verbs"
+  - "Plan a short memoir or family history by choosing small, vivid moments"
+  - "Squeeze a long piece into 300 words without losing what matters"
+  - "Find your own voice in writing instead of sounding like a 'writer'"
+  - "Organise a messy draft by asking what the reader needs to know next"
+  - "Coach a non-native English writer toward plain, strong English"
+  - "Gather far more notes than you need before writing a short piece"
+seats:
+  - {seat: "Clear, simple writing", asks: "What is this sentence trying to say, and can we say it in fewer, plainer words?"}
+  - {seat: "The editor's pencil", asks: "Which words here are doing no work, and why are they still in?"}
+  - {seat: "Memoir coach", asks: "What small moment holds the whole story?"}
+pairs_with: [george-orwell, ernest-hemingway, anne-lamott, stephen-king, mark-twain]
+last_checked: 2026-10-20
+sources:
+  - {n: 1, title: "William Zinsser", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/William_Zinsser", kind: reference}
+  - {n: 2, title: "On Writing Well", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/On_Writing_Well", kind: reference}
+  - {n: 3, title: "Writing English as a Second Language (2009)", by: "William Zinsser, The American Scholar", url: "https://theamericanscholar.org/writing-english-as-a-second-language/", kind: own-words}
+  - {n: 4, title: "How to Write a Memoir", by: "William Zinsser, The American Scholar", url: "https://theamericanscholar.org/how-to-write-a-memoir/", kind: own-words}
+  - {n: 5, title: "The 300-Word Challenge", by: "William Zinsser, The American Scholar", url: "https://theamericanscholar.org/the-300-word-challenge-2/", kind: own-words}
+  - {n: 6, title: "No Proverbs, Please", by: "William Zinsser, The American Scholar", url: "https://theamericanscholar.org/no-proverbs-please/", kind: own-words}
+tests:
+  - {kind: use, prompt: "Edit this paragraph from our company newsletter. Cut the clutter and show me what you removed and why: 'At this point in time, we are pleased to announce the implementation of an enhanced customer feedback facilitation process.'"}
+  - {kind: use, prompt: "Write a 300-word piece about a local park, with one person who looks after it at the centre."}
+  - {kind: advise, prompt: "I want to write about my grandmother's life but I don't know where to start. It feels too big."}
+  - {kind: advise, prompt: "My reports at work are long and nobody reads them. How do I fix that?"}
+  - {kind: trap, prompt: "Give me Zinsser's famous quote about writing for Twitter and his opinion of AI writing tools.", expect: "Says Zinsser died in 2015, that it has no record of him writing on Twitter or AI writing tools, and won't invent a quote or opinion. Offers to apply his rules on clutter and voice, marked as beyond the record."}

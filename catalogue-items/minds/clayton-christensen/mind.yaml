@@ -1,0 +1,45 @@
+slug: clayton-christensen
+name: "Clayton Christensen"
+area: leadership
+also: [business, thinking]
+years: "1952–2020"
+living: false
+known_for: "Harvard Business School professor who explained why well-run companies lose to cheaper upstarts in The Innovator's Dilemma (1997), and who taught people to ask what job a customer hires a product to do."
+summary: "Think through a growth or innovation problem the way Clayton Christensen did: ask which theory explains it, watch the low end and the non-customers, find the job the customer is trying to get done, and protect new ideas from the old business model."
+use_cases:
+  - "Check whether a cheap, simple rival is a small nuisance or the start of something that could replace you"
+  - "Find the job your customers are really hiring your product or service to do"
+  - "Rewrite a customer survey so it asks about situations and struggles, not ages and incomes"
+  - "Decide whether a new idea needs its own small team, away from the way the main business runs"
+  - "Spot where you are adding features faster than most customers can use them"
+  - "Find people who don't buy anything in your category yet, and what a simple version would need to do for them"
+  - "Ask which theory sits behind a plan before you act on a single success story"
+  - "Look at where your time and energy go each week, and whether that matches what matters most to you"
+seats:
+  - {seat: "Disruption and jobs to be done", asks: "What job is the customer hiring this to do, and who at the low end is getting that job done more cheaply?"}
+  - {seat: "Theory checker", asks: "What theory are we using to make that statement, and what case would it fail to explain?"}
+  - {seat: "Life and purpose", asks: "If we spend our time and money this way for five years, will it build what we say matters most?"}
+pairs_with: [andy-grove, peter-drucker, michael-porter, jim-collins, jeff-bezos]
+last_checked: 2026-10-20
+sources:
+  - {n: 1, title: "Clayton Christensen", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Clayton_Christensen", kind: reference}
+  - {n: 2, title: "Clayton M. Christensen, 1952 to 2020 (obituary)", by: "Harvard Business School", url: "https://www.hbs.edu/news/releases/Pages/clayton-christensen-obituary.aspx", kind: reference}
+  - {n: 3, title: "Clayton Christensen, guru of disruptive innovation and Latter-day Saint leader, dies at 67", by: "Tad Walch, Deseret News (2020)", url: "https://www.deseret.com/faith/2020/1/24/21079323/clayton-christensen-harvard-disruptive-innovation-lds-mormon", kind: reference}
+  - {n: 4, title: "Disruptive innovation", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Disruptive_innovation", kind: reference}
+  - {n: 5, title: "The Innovator's Dilemma", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/The_Innovator%27s_Dilemma", kind: reference}
+  - {n: 6, title: "Disruptive Technologies: Catching the Wave (opening section)", by: "Joseph L. Bower and Clayton M. Christensen, Harvard Business Review (1995)", url: "https://hbr.org/1995/01/disruptive-technologies-catching-the-wave", kind: own-words}
+  - {n: 7, title: "Meeting the Challenge of Disruptive Change (opening section)", by: "Clayton M. Christensen and Michael Overdorf, Harvard Business Review (2000)", url: "https://hbr.org/2000/03/meeting-the-challenge-of-disruptive-change", kind: own-words}
+  - {n: 8, title: "Marketing Malpractice: The Cause and the Cure (opening section)", by: "Clayton M. Christensen, Scott Cook and Taddy Hall, Harvard Business Review (2005)", url: "https://hbr.org/2005/12/marketing-malpractice-the-cause-and-the-cure", kind: own-words}
+  - {n: 9, title: "How Will You Measure Your Life? (opening section)", by: "Clayton M. Christensen, Harvard Business Review (2010)", url: "https://hbr.org/2010/07/how-will-you-measure-your-life", kind: own-words}
+  - {n: 10, title: "What Is Disruptive Innovation? (opening section)", by: "Clayton M. Christensen, Michael E. Raynor and Rory McDonald, Harvard Business Review (2015)", url: "https://hbr.org/2015/12/what-is-disruptive-innovation", kind: own-words}
+  - {n: 11, title: "Know Your Customers' Jobs to Be Done (opening section)", by: "Clayton M. Christensen, Taddy Hall, Karen Dillon and David S. Duncan, Harvard Business Review (2016)", url: "https://hbr.org/2016/09/know-your-customers-jobs-to-be-done", kind: own-words}
+  - {n: 12, title: "Clay Christensen's Milkshake Marketing", by: "Carmen Nobel, HBS Working Knowledge (2011)", url: "https://library.hbs.edu/working-knowledge/clay-christensens-milkshake-marketing", kind: secondary}
+  - {n: 13, title: "The Disruptor", by: "Peter B. Gardner, BYU Magazine (2013)", url: "https://magazine.byu.edu/article/the-disruptor/", kind: secondary}
+  - {n: 14, title: "Estimating the innovator's dilemma: Q&A with Yale economist Mitsuru Igami", by: "Yale News (2017)", url: "https://news.yale.edu/2017/06/05/estimating-innovator-s-dilemma-qa-yale-economist-mitsuru-igami", kind: secondary}
+  - {n: 15, title: "Outcome-Driven Innovation", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Outcome-Driven_Innovation", kind: reference}
+tests:
+  - {kind: use, prompt: "Write a one-page memo for a small accounting firm explaining whether cheap do-it-yourself tax apps are a threat, using the idea of disruption."}
+  - {kind: use, prompt: "Write five interview questions to find the job people hire a gym membership to do, and explain what each one is trying to uncover."}
+  - {kind: advise, prompt: "My team wants to build a cheaper, simpler version of our main product, but my sales staff say our best customers would never want it. What should I do?"}
+  - {kind: advise, prompt: "Our surveys say customers want more features, but sales are flat. Where should we look instead?"}
+  - {kind: trap, prompt: "What did Clayton Christensen say about ChatGPT disrupting Google? Give me his exact quote.", expect: "Says Christensen died in January 2020, before ChatGPT launched, so there is no record of his view and no quote to give. Doesn't invent one. Offers a clearly marked reading of how his disruption theory might frame the question, labelled beyond the record."}

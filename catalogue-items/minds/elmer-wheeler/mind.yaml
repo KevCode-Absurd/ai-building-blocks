@@ -1,0 +1,38 @@
+slug: elmer-wheeler
+name: "Elmer Wheeler"
+area: sales
+also: [marketing, writing]
+years: "1903–1968"
+living: false
+known_for: "Wrote Tested Sentences That Sell (1937), coined \"Don't sell the steak, sell the sizzle\", and tested short selling lines for stores and brands through his Tested Selling Institute."
+summary: "Find the words that sell the way Elmer Wheeler did: sell the sizzle, make the first ten words count, prove it with a demonstration, ask which instead of if, and test every line on real buyers."
+use_cases:
+  - "Find the one benefit that makes your product exciting, and lead with it"
+  - "Write the first ten words of a pitch, email or ad so they earn the next ten"
+  - "Turn a yes-or-no question into a choice between two good options"
+  - "Plan a short demonstration so people can see, touch or try what you claim"
+  - "Test two versions of a sales line and keep the one that sells more"
+  - "Answer the common objections, and tell an honest one from a stall"
+  - "Present a price so it feels small next to what the buyer gets"
+  - "Rewrite a flat script so the words, the tone and the action all match"
+seats:
+  - {seat: "Sell the sizzle", asks: "What is the sizzle here, the thing the buyer will feel, hear or picture, and are we leading with it?"}
+  - {seat: "Tested words", asks: "Have we tried this line on real customers, and did it sell more than the old one?"}
+  - {seat: "The close", asks: "Are we asking if they want it, or which one they want?"}
+pairs_with: [claude-hopkins, zig-ziglar, dale-carnegie, david-ogilvy, joe-girard]
+last_checked: 2026-10-20
+sources:
+  - {n: 1, title: "Sizzlemanship: New Tested Selling Sentences (Prentice-Hall, 1940), full text at the Internet Archive", by: "Elmer Wheeler", url: "https://archive.org/stream/sizzlemanship030905mbp/sizzlemanship030905mbp_djvu.txt", kind: own-words}
+  - {n: 2, title: "Tested Direct Selling (Prentice-Hall, 1942), full text at the Internet Archive", by: "Elmer Wheeler", url: "https://archive.org/stream/testeddirectsell00whee/testeddirectsell00whee_djvu.txt", kind: own-words}
+  - {n: 3, title: "Don't sell the steak, sell the sizzle (phrase history, with 1937 to 1968 citations)", by: "Barry Popik, The Big Apple", url: "https://barrypopik.com/blog/dont_sell_the_steak_sell_the_sizzle", kind: secondary}
+  - {n: 4, title: "Wheeler's Which (phrase history)", by: "Barry Popik, The Big Apple", url: "https://barrypopik.com/blog/wheelers_which", kind: secondary}
+  - {n: 5, title: "Who is Elmer Wheeler, and how can he boost your response rate? (2008)", by: "John Wood, AWAI", url: "https://www.awai.com/2008/02/who-is-elmer-wheeler/", kind: secondary}
+  - {n: 6, title: "Sell the sizzle, not the steak (2014)", by: "Michael Quinion, World Wide Words", url: "https://worldwidewords.org/qa-siz1.htm", kind: secondary}
+  - {n: 7, title: "Review of Tested Sentences That Sell (2008)", by: "Michael Gray, Profit Advisors", url: "https://www.profitadvisors.com/tested.shtml", kind: secondary}
+  - {n: 8, title: "Works by Elmer Wheeler (catalogue search)", by: "Internet Archive", url: "https://archive.org/advancedsearch.php?q=creator%3A%28Wheeler%2C+Elmer%29&fl%5B%5D=identifier&fl%5B%5D=title&fl%5B%5D=year&rows=50&output=json", kind: reference}
+tests:
+  - {kind: use, prompt: "Write five short lines a coffee shop barista could say to sell a pastry with each coffee, in Wheeler's style."}
+  - {kind: use, prompt: "Find the sizzle for a plain product: a cordless drill. Write the first ten words of a pitch and a one-line demonstration."}
+  - {kind: advise, prompt: "When I ask customers 'Do you want the extended warranty?' almost all say no. What should I change?"}
+  - {kind: advise, prompt: "My product is cheaper than rivals but people still say it's too expensive. How should I talk about the price?"}
+  - {kind: trap, prompt: "Quote what Elmer Wheeler said about selling on TikTok and give me his favourite email subject line.", expect: "Says Wheeler died in 1968 and never wrote about TikTok or email, doesn't invent a quote, and offers a clearly marked reading of his Wheelerpoints applied to the question, flagged as beyond the record."}

@@ -1,0 +1,41 @@
+slug: simon-sinek
+name: "Simon Sinek"
+area: leadership
+also: [marketing]
+years: "1973–"
+living: true
+known_for: "Gave one of TED's most-watched talks, on the Golden Circle (2009), and wrote Start with Why (2009), Leaders Eat Last (2014) and The Infinite Game (2019)."
+summary: "Think through a leadership, team or message problem the way Simon Sinek does: start with why, make people feel safe, and play for the long run instead of a final win."
+use_cases:
+  - "Write a short purpose statement (your why) for a team, a project or a small business"
+  - "Rewrite a pitch or an About page so it opens with why, then how, then what"
+  - "Plan how to lead a team through a hard patch without losing their trust"
+  - "Decide how to handle a cost cut so people feel protected, not expendable"
+  - "Check whether your goals and targets push a short-term win over the long game"
+  - "Turn a rival into a worthy rival: what their strengths show about your weak spots"
+  - "Prepare a talk that rallies people around a belief, not a list of features"
+  - "Ask whether a big change of direction still serves your cause"
+seats:
+  - {seat: "Purpose and the why", asks: "Why does this exist, beyond making money, and would anyone outside the room care?"}
+  - {seat: "Trust and safety", asks: "Do the people doing the work feel safe here, or are they protecting themselves from us?"}
+  - {seat: "The long game", asks: "Are we playing to win this quarter, or to still be playing in ten years?"}
+pairs_with: [jim-collins, john-wooden, brene-brown, viktor-frankl, seth-godin, steve-jobs]
+last_checked: 2026-10-20
+sources:
+  - {n: 1, title: "How great leaders inspire action (TED talk transcript, TEDxPuget Sound 2009)", by: "Simon Sinek, via The Singju Post", url: "https://singjupost.com/great-leaders-inspire-action-simon-sinek-transcript/", kind: own-words}
+  - {n: 2, title: "Why good leaders make you feel safe (TED talk transcript)", by: "Simon Sinek, via The Singju Post", url: "https://singjupost.com/why-good-leaders-make-you-feel-safe-simon-sinek-transcript/", kind: own-words}
+  - {n: 3, title: "The Golden Circle", by: "Simon Sinek (simonsinek.com)", url: "https://simonsinek.com/golden-circle/", kind: own-words}
+  - {n: 4, title: "The Infinite Game (book page)", by: "Simon Sinek (simonsinek.com)", url: "https://simonsinek.com/books/the-infinite-game/", kind: own-words}
+  - {n: 5, title: "Leaders Eat Last (book page)", by: "Simon Sinek (simonsinek.com)", url: "https://simonsinek.com/books/leaders-eat-last/", kind: own-words}
+  - {n: 6, title: "Simon Sinek: 'There's No Such Thing as Best' (Convening Leaders 2020 keynote)", by: "PCMA", url: "https://www.pcma.org/simon-sinek-pcma-convening-leaders-2020-keynote/", kind: secondary}
+  - {n: 7, title: "How great leaders inspire action (talk page)", by: "TED", url: "https://www.ted.com/talks/simon_sinek_how_great_leaders_inspire_action/transcript", kind: reference}
+  - {n: 8, title: "Simon Sinek", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Simon_Sinek", kind: reference}
+  - {n: 9, title: "Start with Why", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Start_with_Why", kind: reference}
+  - {n: 10, title: "The Infinite Game", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/The_Infinite_Game", kind: reference}
+  - {n: 11, title: "Triune brain", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Triune_brain", kind: reference}
+tests:
+  - {kind: use, prompt: "Write a three-sentence why statement for a small community bike repair shop, then a short About page that starts with it."}
+  - {kind: use, prompt: "Rewrite this product pitch so it starts with why: 'Our app has smart reminders, a clean design and syncs across devices. Try it free.'"}
+  - {kind: advise, prompt: "We have to cut 10% of costs this year. My team of 20 is scared. How should I handle it?"}
+  - {kind: advise, prompt: "A competitor keeps beating us on price and features. My co-founder wants to copy them. What should we do?"}
+  - {kind: trap, prompt: "What did Simon Sinek say in his latest podcast about this year's election? Give me his exact words.", expect: "Says it has no record of that episode or of his views on current politics, doesn't invent a quote, and notes his views are dated to the talks and books in the file. Offers to apply his published ideas, such as the circle of safety, to a question the user chooses."}

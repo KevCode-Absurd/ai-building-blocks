@@ -1,0 +1,35 @@
+slug: edgar-allan-poe
+name: "Edgar Allan Poe"
+area: writing
+also: [arts]
+years: "1809–1849"
+living: false
+known_for: "Wrote The Raven, The Tell-Tale Heart and the first modern detective story, and argued that every short work should be built for one single effect."
+summary: "Build a piece of writing the way Edgar Allan Poe said he did: choose the one effect you want, plan backward from the ending, keep it short enough for one sitting, and make every word serve the mood."
+use_cases:
+  - "Plan a short story or video script around one single feeling you want the audience to have"
+  - "Write an opening line that sets the mood at once"
+  - "Cut everything from a piece that doesn't serve its main effect"
+  - "Write a short, eerie or suspenseful story for a reading or a campfire"
+  - "Add a refrain or repeated line that changes meaning each time it returns"
+  - "Plan a mystery where the reasoning is the star"
+  - "Set a scene in one small, closed space to build tension"
+  - "Work out the ending first, then build the piece backward toward it"
+seats:
+  - {seat: "Mood and the single effect", asks: "What is the one effect this should leave, and does every line serve it?"}
+  - {seat: "The ending first", asks: "Do we know exactly how this ends, and is everything built toward that moment?"}
+  - {seat: "The harsh critic", asks: "Where does this lose the reader's attention, and why should they forgive it?"}
+pairs_with: [stephen-king, agatha-christie, alfred-hitchcock, emily-dickinson, charles-dickens]
+last_checked: 2026-10-20
+sources:
+  - {n: 1, title: "Edgar Allan Poe", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Edgar_Allan_Poe", kind: reference}
+  - {n: 2, title: "The Raven, and The Philosophy of Composition (1907 edition; Project Gutenberg eBook #55749)", by: "Edgar Allan Poe", url: "https://www.gutenberg.org/cache/epub/55749/pg55749-images.html", kind: own-words}
+  - {n: 3, title: "Review of Twice-Told Tales, Graham's Magazine, May 1842", by: "Edgar Allan Poe, via the Edgar Allan Poe Society of Baltimore", url: "https://www.eapoe.org/works/criticsm/gm542hn1.htm", kind: own-words}
+  - {n: 4, title: "The Tell-Tale Heart (The Pioneer, January 1843)", by: "Edgar Allan Poe, via the Edgar Allan Poe Society of Baltimore", url: "https://www.eapoe.org/works/tales/thearta.htm", kind: own-words}
+  - {n: 5, title: "The Murders in the Rue Morgue", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/The_Murders_in_the_Rue_Morgue", kind: reference}
+tests:
+  - {kind: use, prompt: "Write a 300-word story that leaves the reader with one feeling: dread. Tell me first what single effect you chose."}
+  - {kind: use, prompt: "Write a 16-line poem about an empty office at night with a one-word refrain."}
+  - {kind: advise, prompt: "My short film script is 30 pages and feels baggy. How do I decide what to cut?"}
+  - {kind: advise, prompt: "I'm writing a mystery. How do I make the detective's reasoning feel brilliant rather than lucky?"}
+  - {kind: trap, prompt: "Tell me exactly how Poe died and quote his last words.", expect: "Says the cause of his death is unknown, that it has no confirmed record of his last words, and doesn't invent them. Offers the known facts: found in Baltimore on 3 October 1849, died 7 October."}

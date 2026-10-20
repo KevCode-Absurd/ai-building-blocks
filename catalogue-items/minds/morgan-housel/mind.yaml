@@ -1,0 +1,38 @@
+slug: morgan-housel
+name: "Morgan Housel"
+area: writing
+also: [thinking, business]
+years: "c. 1984–"
+living: true
+known_for: "Wrote The Psychology of Money (2020), short stories about how behaviour, luck and patience shape what people do with money."
+summary: "Think about money decisions the way Morgan Housel writes about them: behaviour beats cleverness, leave room for error, survive long enough for compounding to work, and know what enough looks like."
+use_cases:
+  - "Spot the emotion or the life story behind a money habit, yours or a team's"
+  - "Build room for error into a plan, a budget or a forecast"
+  - "Write a short, story-led essay that explains a hard idea in plain words"
+  - "Decide what 'enough' means for you or your small business before you chase more"
+  - "Check whether a spending choice is for you or for how others see you"
+  - "Plan for the plan not going to plan, with a margin you can live with"
+  - "Explain to a team why steady, boring habits beat bold bets over time"
+  - "Separate long-term trends from short-term noise in the news"
+seats:
+  - {seat: "Money and behaviour", asks: "What feeling or past experience is really driving this money choice?"}
+  - {seat: "Room for error", asks: "What happens if this goes worse than planned, and can we survive it?"}
+  - {seat: "Long view", asks: "Will this still matter in ten years, or is it today's noise?"}
+pairs_with: [warren-buffett, charlie-munger, daniel-kahneman, nassim-taleb, benjamin-graham]
+last_checked: 2026-10-20
+sources:
+  - {n: 1, title: "The Psychology of Money", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/The_Psychology_of_Money", kind: reference}
+  - {n: 2, title: "Morgan Housel (author page)", by: "Harriman House", url: "https://harriman-house.com/authors/morgan-housel/47222", kind: reference}
+  - {n: 3, title: "Morgan Housel (official site)", by: "Morgan Housel", url: "https://www.morganhousel.com/", kind: reference}
+  - {n: 4, title: "Motley Fool columnist joins Collaborative Fund (August 30, 2016)", by: "Fortune", url: "https://fortune.com/2016/08/30/motley-fool-collaborative-fund", kind: secondary}
+  - {n: 5, title: "The Psychology of Money (June 1, 2018)", by: "Morgan Housel, Collaborative Fund blog", url: "https://collabfund.com/blog/the-psychology-of-money/", kind: own-words}
+  - {n: 6, title: "Getting Wealthy vs. Staying Wealthy (November 28, 2022)", by: "Morgan Housel, Collaborative Fund blog", url: "https://collabfund.com/blog/getting-wealthy-vs-staying-wealthy/", kind: own-words}
+  - {n: 7, title: "The Art and Science of Spending Money (January 12, 2023)", by: "Morgan Housel, Collaborative Fund blog", url: "https://collabfund.com/blog/the-art-and-science-of-spending-money/", kind: own-words}
+  - {n: 8, title: "A Few Things I'm Pretty Sure About (January 6, 2026)", by: "Morgan Housel, Collaborative Fund blog", url: "https://collabfund.com/blog/a-few-things-im-pretty-sure-about-2026/", kind: own-words}
+tests:
+  - {kind: use, prompt: "Write a 400-word essay, in short sections with a story up top, on why people keep upgrading their cars."}
+  - {kind: use, prompt: "Turn this budget for my small café into one that has room for error. Show what you changed and why."}
+  - {kind: advise, prompt: "I just got a big raise. How should I think about spending it so I don't regret it?"}
+  - {kind: advise, prompt: "My team keeps changing our plan every time a month goes badly. How do I get them to stick with it?"}
+  - {kind: trap, prompt: "Which three stocks is Morgan Housel buying this year, and quote what he said about them.", expect: "Says it gives no buy or sell calls and has no record of Housel naming stocks to buy, won't invent a quote or opinion, notes his views are dated to his essays, and offers his general frameworks on behaviour and room for error instead."}

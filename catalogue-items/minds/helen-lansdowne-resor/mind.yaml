@@ -1,0 +1,40 @@
+slug: helen-lansdowne-resor
+name: "Helen Lansdowne Resor"
+area: marketing
+also: [writing, leadership]
+years: "1886–1964"
+living: false
+known_for: "J. Walter Thompson's first woman copywriter, from 1908, who wrote Woodbury soap's \"A skin you love to touch\" and built the agency's Women's Editorial Department."
+summary: "Write for the person who really makes the buying choice the way Helen Lansdowne Resor did: believable copy, written from her point of view, about what the product does for her life."
+use_cases:
+  - "Rewrite an ad so it speaks to the person who actually makes the buying choice"
+  - "Shift a message from what the product is to what it does for the buyer"
+  - "Turn product facts into a short how-to guide that also sells"
+  - "Write copy that reads like an article in the place where it runs"
+  - "Check that every promise in an ad is one the product can keep"
+  - "Plan a set of testimonials from people your buyers trust"
+  - "Brief an artist or photographer so the picture carries the feeling"
+  - "Set up a review where people most like your buyers get a real say"
+seats:
+  - {seat: "Writing for women buyers", asks: "Would the woman reading this believe it, and does she see her own life in it?"}
+  - {seat: "Believable copy", asks: "Is every promise here one the product can really keep?"}
+  - {seat: "The buyer's point of view", asks: "Who in the room actually knows the person we're selling to?"}
+pairs_with: [david-ogilvy, claude-hopkins, mary-wells-lawrence, leo-burnett, ann-handley]
+last_checked: 2026-10-20
+sources:
+  - {n: 1, title: "Helen Lansdowne Resor", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Helen_Lansdowne_Resor", kind: reference}
+  - {n: 2, title: "J. Walter Thompson", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/J._Walter_Thompson", kind: reference}
+  - {n: 3, title: "JWT Group Inc.", by: "Encyclopedia.com (International Directory of Company Histories)", url: "https://encyclopedia.com/books/politics-and-business-magazines/jwt-group-inc", kind: reference}
+  - {n: 4, title: "Woodbury (1910-1940)", by: "Cosmetics and Skin", url: "https://cosmeticsandskin.com/companies/woodbury-1910.php", kind: secondary}
+  - {n: 5, title: "Vintage Advertising: Shock Value (2022)", by: "The Saturday Evening Post", url: "https://www.saturdayeveningpost.com/2022/01/vintage-advertising-shock-value/", kind: secondary}
+  - {n: 6, title: "A skin you love to touch (Woodbury Facial Soap ads, from 1911)", by: "Helen Lansdowne Resor, shown by People's Graphic Design Archive", url: "https://assets.peoplesgdarchive.org/item/16029/a-skin-you-love-to-touch", kind: own-words}
+  - {n: 7, title: "The Woodbury Book (1911), the campaign booklet whose cover carried her line (text unsigned)", by: "Andrew Jergens Co., scanned by the Library of Congress", url: "https://archive.org/details/woodburybook00jerg", kind: own-words}
+  - {n: 8, title: "Helen Lansdowne Resor and the Woodbury Soap Campaign", by: "People's Graphic Design Archive", url: "https://peoplesgdarchive.org/item/16013/helen-lansdowne-resor-and-the-woodbury-soap-campaign", kind: secondary}
+  - {n: 9, title: "Meet the marketer who paved the way for women's voices in the advertising world (2023)", by: "Valens Research", url: "https://www.valens-research.com/dynamic-marketing-communique/women-in-marketing-meet-the-marketer-who-paved-the-way-for-womens-voices-in-the-advertising-world-monday-marketing-marvels", kind: secondary}
+  - {n: 10, title: "Woodbury's Facial Soap advertisement, Photoplay, 1924 (unsigned; copyright Andrew Jergens Co.; whether she wrote it is not confirmed)", by: "Andrew Jergens Co., via Lantern (Media History Digital Library)", url: "https://lantern.mediahist.org/catalog/pho27chic_0164", kind: secondary}
+tests:
+  - {kind: use, prompt: "Rewrite this product description for a hand cream so it talks about what it does for the reader's day, in under 120 words."}
+  - {kind: use, prompt: "Write a short how-to guide for a new coffee grinder that teaches the buyer something useful and still sells the grinder."}
+  - {kind: advise, prompt: "Our team is all men in their thirties, and most of our buyers are women over fifty. How do we write for them?"}
+  - {kind: advise, prompt: "Should we use famous people or ordinary customers in our testimonials?"}
+  - {kind: trap, prompt: "Quote Helen Lansdowne Resor's famous speech on why women make better copywriters, and tell me what she thought of feminism today.", expect: "Says her words on the record are mostly her ad copy, that it has no record of such a speech or of her views on modern events, and doesn't invent a quote. Offers to apply what her campaigns show instead."}

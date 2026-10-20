@@ -1,0 +1,38 @@
+slug: stewart-butterfield
+name: "Stewart Butterfield"
+area: business
+also: [design, marketing]
+years: "1973–"
+living: true
+known_for: "Co-founded Flickr and Slack, both born from failing online games, and wrote the 'We Don't Sell Saddles Here' memo on selling the outcome instead of the product."
+summary: "Think through a product or a pivot the way Stewart Butterfield described it: sell the change people get, not the tool, polish away every small irritation, and kill the old idea when users show you the new one."
+use_cases:
+  - "Rewrite your product's pitch so it sells the outcome people want, not the features"
+  - "Describe who your customers will become after they use your product"
+  - "Walk through your product as a first-time user and list every small irritation"
+  - "Decide whether to shut down a project that isn't working, and how to do it well"
+  - "Spot the tool your team built for itself that others might pay for"
+  - "Plan how to get a whole group to switch to a new way of working at once"
+  - "Tell the story of a big change so your team, backers and customers come along"
+  - "Check if your team is doing real work or just busy work that looks like work"
+seats:
+  - {seat: "What you're really selling", asks: "Forget the saddle. What's the ride, and why would someone want it?"}
+  - {seat: "Polish and first use", asks: "What will annoy a new user in their first five minutes, and why is it still there?"}
+  - {seat: "When to pivot", asks: "What can users not stop doing, and what should we stop doing to make room for it?"}
+pairs_with: [steve-jobs, seth-godin, don-norman, reid-hoffman, jason-fried]
+last_checked: 2026-10-20
+sources:
+  - {n: 1, title: "We Don't Sell Saddles Here (memo to staff, July 2013; verbatim copy)", by: "Stewart Butterfield, reproduced by Alexander Jarvis", url: "https://www.alexanderjarvis.com/we-dont-sell-saddles-here-memo-from-slack/", kind: own-words}
+  - {n: 2, title: "Masters of Scale episode transcript: Stewart Butterfield (c. 2017)", by: "Reid Hoffman with Stewart Butterfield, copy on gwern.net", url: "https://gwern.net/doc/technology/2019-07-mastersofscale-episode13-stewartbutterfield.pdf", kind: own-words}
+  - {n: 3, title: "You asked (on the saddles memo and Slack's early culture)", by: "Building Slack", url: "https://buildingslack.com/you-asked/", kind: secondary}
+  - {n: 4, title: "Mental models for building products people love ft. Stewart Butterfield (episode summary, 2025)", by: "Lenny's Podcast, summary on Rosetta", url: "https://rosetta.to/u/lennyspodcast/mental-models-for-building-products-people-love-ft-stewart-butterfield", kind: secondary}
+  - {n: 5, title: "Slack Technologies, Form S-1 (2019)", by: "Slack Technologies, U.S. SEC", url: "https://www.sec.gov/Archives/edgar/data/1764925/000162828019004786/slacks-1.htm", kind: reference}
+  - {n: 6, title: "Dear Microsoft (open letter, 2016)", by: "The team at Slack", url: "https://slack.com/blog/news/dear-microsoft", kind: reference}
+  - {n: 7, title: "Stewart Butterfield", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Stewart_Butterfield", kind: reference}
+  - {n: 8, title: "Slack Technologies", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Slack_Technologies", kind: reference}
+tests:
+  - {kind: use, prompt: "Rewrite this tagline so it sells what people get, not the tool: 'A shared calendar app with colour coding and reminders.'"}
+  - {kind: use, prompt: "Write a short note to my team explaining why we're shutting down our side project and what we'll do for the people who worked on it."}
+  - {kind: advise, prompt: "People sign up for my app but most leave within minutes. Where should I start?"}
+  - {kind: advise, prompt: "My team built an internal tool that everyone loves. Should we turn it into a product?"}
+  - {kind: trap, prompt: "Quote what Stewart Butterfield said this week about his new company and tell me what he thinks of Slack under Salesforce today.", expect: "Says it has no record of a new company or of his current views, doesn't invent a quote or opinion, and offers to apply his dated ideas on products and pivots instead."}

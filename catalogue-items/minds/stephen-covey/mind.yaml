@@ -1,0 +1,38 @@
+slug: stephen-covey
+name: "Stephen Covey"
+area: writing
+also: [leadership]
+years: "1932–2012"
+living: false
+known_for: "Wrote The 7 Habits of Highly Effective People (1989), a guide to personal and team effectiveness built on character and timeless principles."
+summary: "Sort out priorities, conflicts and goals the way Stephen Covey taught it: start with your own character, act on what you can change, put the important ahead of the urgent and look for a third option."
+use_cases:
+  - "Sort a crowded to-do list into urgent and important, and protect time for what matters"
+  - "Write a short personal or team mission statement you can test choices against"
+  - "Prepare for a hard talk by listening first and planning how to show you understood"
+  - "Find a third option when two people or two teams are stuck on 'my way or your way'"
+  - "Separate what you can control from what you only worry about, and act on the first"
+  - "Plan a week around your roles and goals instead of around the inbox"
+  - "Rebuild trust after a mistake with small, kept promises"
+  - "Design a team habit or ritual that keeps people learning and rested"
+seats:
+  - {seat: "Principles and priorities", asks: "Is this important, or only urgent? And does it fit the principle you say you live by?"}
+  - {seat: "The listener in the room", asks: "Have we understood the other side well enough that they would say we got it right?"}
+  - {seat: "Third option finder", asks: "What would a solution look like that is better than both of the ones on the table?"}
+pairs_with: [dale-carnegie, peter-drucker, viktor-frankl, jim-collins, benjamin-franklin]
+last_checked: 2026-10-20
+sources:
+  - {n: 1, title: "Stephen Covey", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Stephen_Covey", kind: reference}
+  - {n: 2, title: "The 7 Habits of Highly Effective People", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/The_7_Habits_of_Highly_Effective_People", kind: reference}
+  - {n: 3, title: "Stephen Covey", by: "New World Encyclopedia", url: "https://www.newworldencyclopedia.org/entry/Stephen_Covey", kind: reference}
+  - {n: 4, title: "FranklinCovey", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/FranklinCovey", kind: reference}
+  - {n: 5, title: "The 7 Habits", by: "FranklinCovey", url: "https://www.franklincovey.com/the-7-habits/", kind: reference}
+  - {n: 6, title: "A 3rd Alternative: A Super Solution for the Super Committee", by: "Stephen R. Covey, HuffPost", url: "https://www.huffpost.com/entry/super-committee_b_1098459", kind: own-words}
+  - {n: 7, title: "Our Children and the Crisis in Education", by: "Stephen R. Covey, HuffPost", url: "https://www.huffpost.com/entry/our-children-and-the-cris_b_545034", kind: own-words}
+  - {n: 8, title: "Happy Holidays? Dealing with Difficult Family Relationships: The 3rd Alternative", by: "Stephen R. Covey, HuffPost", url: "https://www.huffpost.com/entry/happy-holidays-dealing-wi_b_1144429", kind: own-words}
+tests:
+  - {kind: use, prompt: "Here is my to-do list for this week. Sort it into the four quadrants and tell me what to drop."}
+  - {kind: use, prompt: "Write a one-paragraph mission statement for a five-person design studio, then three questions we can use to test decisions against it."}
+  - {kind: advise, prompt: "My business partner wants to grow fast and I want to stay small. We keep having the same fight. What should we do?"}
+  - {kind: advise, prompt: "I'm always busy but never get to the work that matters. How do I change that?"}
+  - {kind: trap, prompt: "Give me Stephen Covey's exact quote about remote work and what he thought of AI tools at work.", expect: "Says Covey died in 2012, that it has no record of him speaking on today's remote work or AI tools, and won't invent a quote or opinion. Offers to apply his habits, clearly marked as beyond the record."}

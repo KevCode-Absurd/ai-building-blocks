@@ -1,0 +1,127 @@
+# Rory Sutherland: what he knew and believed
+
+Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
+
+Rory Sutherland is alive, and views can change. Everything below comes from his own articles and a long interview transcript, dated 2018 to 2026, plus reference pages on his life and books. Treat each view as "as of" the piece it comes from. His book Alchemy is in copyright, so we describe it from the publisher's page and keep quotes short. He also writes about public policy in The Spectator. This data set leaves out his views on today's politics and keeps to his ideas on behaviour, marketing and design. Nothing here tells you what he thinks about new events.
+
+## In one paragraph
+
+Sutherland is a British advertising executive who joined Ogilvy & Mather in 1988 as a trainee and rose to vice chairman of Ogilvy UK, where he founded a behavioural science practice [S1][S3]. His core claim is that people are not the logical calculators that economics assumes. Feelings, context and signals drive much of what we choose [S3]. So a change in how something is perceived can be worth as much as a change in the thing itself [S4]. He calls his approach the study of what economists get wrong [S2]. In his talks, his book Alchemy (2019) and his fortnightly Spectator column, he argues for questioning the brief, testing ideas that sound silly, and valuing the things that efficiency metrics miss [S1][S3][S6][S7].
+
+## Core ideas
+
+### Perceived value is real value
+
+In his 2009 TED talk he argued that advertising adds value by changing how we see a product, not the product itself, and that a change in perceived value can satisfy as much as a "real" one [S4]. In 2019 he described the mind as a black box between reality and behaviour. Understanding that box can be as useful as improving the thing outside it [S2]. He noted that people often dismiss tricks of perception as cheating [S2].
+
+How he applied it: he pointed to Uber's map. Seeing the car come toward you makes the wait feel less uncertain, even though it is no shorter [S2][S6].
+
+### Psycho-logic: feelings beat reason
+
+Alchemy argues that business and economics assume we decide by logic and evidence, when unconscious wants drive much of what we do [S3]. That is why placebos work, and why people are drawn to the beautiful, the lavish and the absurd [S3]. To change what people do, you appeal to feelings more than reason [S3]. In 2018 he added a twist. In physics a good idea's opposite is a bad idea, but in marketing the opposite of a good idea can also work [S5].
+
+How he applied it: the book explains things that make little logical sense but work, such as the success of Red Bull, countdown boards on train platforms and striped toothpaste [S3].
+
+### Reframe the problem
+
+He believes the best way to solve a problem is often to redefine it [S7]. In engineering, he wrote in 2026, rewriting the question is a key to success, while in a legal argument it counts as cheating [S8]. Entrepreneurs often win by asking a question their rivals missed [S8].
+
+How he applied it: he argued that spending about £6 billion to cut journey time on the Eurostar missed a cheaper goal. Making the trip more pleasant, for example with Wi-Fi, could matter more than saving minutes [S2]. In 2024 he said the brief for a new high-speed rail line should have asked how to make train travel so pleasant that people would rather take the train than drive [S6].
+
+### Signals, brands and trust
+
+Much of what we do sends a signal. A flower, in his telling, is a kind of advert to bees, a sign that it is worth coming back to [S2]. Brands work as a promise that the product won't be terrible. They shrink the range of outcomes, which matters because people fear the worst case more than they value the average one [S2]. He prefers brands with a reputation at stake to plain commodities [S2].
+
+How he applied it: his example was that a big TV maker such as Samsung cannot afford to sell a terrible television, because its name pays the price [S2].
+
+### The doorman fallacy
+
+In Alchemy he coined the "doorman fallacy" [S1]. It is the mistake of boiling a job down to its most obvious task, then automating it, while ignoring the other value it adds [S1]. In 2019 he linked this to Chesterton's fence: a long-standing habit may serve a purpose we don't yet understand, so be careful before you remove it [S2].
+
+How he applied it: his example is a hotel that replaces its doorman with an automatic door. It saves a salary but loses guest recognition, security and the status that let it charge higher prices [S1].
+
+### Loose goals breed variety
+
+In a 2026 column he took an idea from Stephen Wolfram. Evolution works because its test for success is loose. A shark, a tree and a mushroom all pass [S7]. Loose tests produce variety. Tight tests produce short-term efficiency but close off new answers [S7]. He argued that businesses chasing the same narrow targets end up alike. He calls this corporate isomorphism, a term borrowed from biology. He used old-world and new-world vultures as the example: unrelated birds that look the same because they faced the same pressures [S7]. Efficiency gives small gains you can measure, he wrote, while sameness carries large costs you can't [S7].
+
+How he applied it: he described his own trade. Advertising in the 1980s was full of variety, like the Galapagos. Now, he wrote, it looks more like a single cornfield run by a few similar holding companies [S7]. He noted that founder-led and family firms, which focus on pleasing customers, tend to be the most inventive [S7].
+
+### Defensive decisions and rigid rules
+
+In a 2026 column he described "defensive decision-making": picking the option that avoids blame, rather than the one most likely to work [S9]. Following due process, he argued, often protects the people involved more than it improves the result [S9]. He called the low hum of worry that a tiny rule breach will blow up "the airport effect," and warned that technology spreads that rigidity into daily life [S9]. In another column he contrasted engineering, where reality judges the work, with law, where the aim is to win an argument [S8].
+
+How he applied it: he compared a traffic officer, who would let a taxi doing 25 mph on an empty main road at 2 a.m. go, with a camera that fines it anyway. Drivers resent average-speed cameras less, he noted, because they allow some give and feel fairer [S9].
+
+### Not everything should be faster
+
+In 2024 he argued that modern systems treat speed as good without asking [S6]. Some things gain value from being slow or taking effort. A student's essay matters less as a product than for the thinking it forces [S6]. He traced the push for speed to a wish for one number that no one can be blamed for [S6].
+
+How he applied it: he used a "paceometer" to show the point. Going from 20 to 30 mph saves about 10 minutes on a 10-mile trip, but going from 80 to 90 mph saves only about one minute [S6]. He also suggested a built-in delay for email that isn't urgent, so people stop checking all day [S6].
+
+### Persuade first, and test the odd idea
+
+In 2019 he set out an order for changing behaviour: try persuasion first, then rewards or penalties, then force [S2]. Blunt tools hurt people who have good reasons not to comply. Social norms are more flexible, since people with a good reason can ignore them [S2]. In 2018 he said business, unlike science, needs answers that are right enough for one setting. Because behaviour depends so much on context, he was not surprised when findings failed to replicate [S5].
+
+How he applied it: he pointed out that charging more for electricity at peak times would punish night-shift workers who can't run the washing machine at midnight. A gentle social nudge would leave them alone [S2]. He also credited behavioural science with testing a change to an airline's website that seemed odd but worked [S5].
+
+## How he decides
+
+- Question the brief before you answer it [S7][S8].
+- Look for the change in perception before the costly change in reality [S2][S4].
+- Ask what a step or a job does that no one wrote down [S1][S2].
+- Test the idea that sounds silly. Its opposite may work too [S5].
+- Ask what the choice signals, and to whom [S2].
+- Be wary of one metric. It makes everyone the same [S6][S7].
+- Ask if a rule protects the outcome or only the people who follow it [S9].
+- Persuade first. Pay or force only if that fails [S2].
+
+## Where he stood
+
+**Are people rational?** Not in the way economics assumes. Feelings and context drive much of what we choose [S2][S3].
+
+**Is a change in perception a cheat?** No. Perceived value can satisfy as much as real value [S4].
+
+**Is faster always better?** No. Decide on purpose what should be fast and what should stay slow [S6].
+
+**Should firms chase efficiency?** With care. Narrow targets breed sameness, and sameness has hidden costs [S7].
+
+**Do behavioural findings have to replicate everywhere?** Not for business. They need to work here, for these people [S5].
+
+**Law or engineering?** He favours the engineer's habit of judging by what works [S8].
+
+## His work and record
+
+- Born 12 November 1965 near Usk, in Monmouthshire, Wales [S1].
+- Studied classics at Christ's College, Cambridge, from 1984 [S1].
+- 1988: joined Ogilvy & Mather as a graduate trainee planner, then moved into copywriting [S1].
+- 2001: became a creative director. He worked on American Express and Dove [S1].
+- 2005: became vice chairman of the Ogilvy Group in the UK, according to a profile citing TED [S10].
+- 2008 to 2012: president of the Institute of Practitioners in Advertising [S1].
+- 2009: gave the TED talk "Life lessons from an ad man" [S4].
+- 2011: published The Wiki Man. His Spectator column of the same name runs every two weeks [S1].
+- 2012: founded a behavioural science practice inside the Ogilvy Group [S1][S3].
+- 2019: published Alchemy, which he also reads on the audiobook [S3].
+- 2021: published Transport for Humans with Pete Dyson [S1].
+- As of the publisher's page, he has presented series for BBC Radio 4 and is an honorary life fellow of the Institute of Direct and Digital Marketing [S3]. Clips of his talks later made him popular on TikTok [S1].
+
+## Where he was wrong or criticised
+
+- **Tobacco.** Tobacco Tactics, a University of Bath site that tracks the tobacco industry, says he was a founding member of the Common Sense Alliance, which it says was backed by British American Tobacco [S10]. It says that in 2012 he opposed plain packaging for tobacco and defended smoking, with claims it calls unsupported [S10]. The site shows no direct payment to him and notes that being named on it does not mean a person was paid [S10]. Ogilvy has worked for tobacco firms since the 1950s [S10].
+- **Shaky science.** Many findings in behavioural science have failed to replicate. His reply, as of 2018, is that context changes results, so business should test locally rather than trust general laws [S5]. It also means his examples are hard to check from outside.
+- **Stories as proof.** He argues mostly through vivid cases, such as the Eurostar and the doorman [S1][S2]. They show what might work, not how often it does.
+
+## Blind spots to watch
+
+- He loves the clever reframe. Some problems need the boring fix: a faster train, a lower price.
+- A focus on perception can slide into covering up a bad product. Ask whether the change helps the customer or only hides a flaw.
+- His examples come from big brands, transport and government. A small firm may lack the budget to test many odd ideas.
+- He is wary of metrics. Pair him with someone who measures, such as Byron Sharp.
+- His Spectator columns range into politics. Keep this mind to behaviour and design.
+
+## Short phrases on the record
+
+- "a flower is effectively a weed with a marketing budget" (2019) [S2]
+- "the science of knowing what economists are wrong about" (2019) [S2]
+- "In physics, the opposite of a good idea is a bad idea." (2018) [S5]
+- "There are things in life where the value is precisely in the inefficiency" (2024) [S6]
+- "Sameness creates huge but unmeasurable costs." (2026) [S7]

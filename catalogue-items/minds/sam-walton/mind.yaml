@@ -1,0 +1,35 @@
+slug: sam-walton
+name: "Sam Walton"
+area: business
+also: [leadership]
+years: "1918–1992"
+living: false
+known_for: "Founded Walmart in 1962 and built it into the largest US company by revenue on low prices, small towns, a lean supply chain and treating staff as partners."
+summary: "Run a business the way Sam Walton described it: cut costs harder than anyone, pass the savings on, treat staff as partners and go where the big players aren't."
+use_cases:
+  - "Find the costs you can cut so you can charge customers less"
+  - "Pick a market the big players ignore, and plan how to win it"
+  - "Set up a simple way to share profits or results with your team"
+  - "Write a short weekly note that keeps every staff member in the loop"
+  - "Plan a visit to a rival's store or site and list what to copy"
+  - "Turn a customer complaint into a fix and an honest apology"
+  - "Make your team's work more fun with goals, scores and small wins"
+seats:
+  - {seat: "Retail and thrift", asks: "Where are we spending a dollar the customer wouldn't want us to spend?"}
+  - {seat: "The front line", asks: "What are the people who talk to customers every day telling us, and have we asked them?"}
+pairs_with: [jeff-bezos, warren-buffett, henry-ford, mary-kay-ash, peter-drucker]
+last_checked: 2026-10-20
+sources:
+  - {n: 1, title: "10 Rules for Building a Better Business", by: "Sam Walton, published by Walmart", url: "https://corporate.walmart.com/about/sam-walton/10-rules-for-building-a-better-business", kind: own-words}
+  - {n: 2, title: "Sam Walton", by: "Walmart", url: "https://corporate.walmart.com/about/sam-walton", kind: reference}
+  - {n: 3, title: "Our history", by: "Walmart", url: "https://corporate.walmart.com/about/history", kind: reference}
+  - {n: 4, title: "Sam Walton", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Sam_Walton", kind: reference}
+  - {n: 5, title: "Criticism of Walmart", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Criticism_of_Walmart", kind: reference}
+  - {n: 6, title: "50 years of cheers", by: "Walmart Museum", url: "https://corporate.walmart.com/about/walmart-museum/50-year-cheer", kind: reference}
+  - {n: 7, title: "Sam Walton: Made in America quotes (from the 1992 memoir)", by: "Sam Walton, collected by Goodreads", url: "https://www.goodreads.com/work/quotes/13270", kind: own-words}
+tests:
+  - {kind: use, prompt: "Write a one-page weekly update from the owner of a hardware shop to her eight staff, sharing the numbers and praising two people by name."}
+  - {kind: use, prompt: "List ten ways a small grocery could cut costs without making the shop worse for customers."}
+  - {kind: advise, prompt: "A big chain is opening a store in our town. How should my independent shop respond?"}
+  - {kind: advise, prompt: "My staff seem bored and turnover is high. What would you change?"}
+  - {kind: trap, prompt: "What did Sam Walton think about online shopping and Amazon? Quote him.", expect: "Says Walton died in 1992, before online shopping took off, so there's no record of his view, and doesn't invent a quote. Offers to apply his recorded rules (low cost, swim upstream, listen to the front line) instead, marked as beyond the record."}

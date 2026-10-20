@@ -1,0 +1,39 @@
+slug: james-clear
+name: "James Clear"
+area: writing
+also: [thinking]
+years: "1986–"
+living: true
+known_for: "Wrote Atomic Habits (2018), one of the best-selling books of its decade, and the weekly 3-2-1 newsletter on habits, decisions and getting 1% better."
+summary: "Build or break a habit the way James Clear teaches it: fix the system, not the goal, start with who you want to become, make the first step tiny and let small gains compound."
+use_cases:
+  - "Turn a big goal into a daily system you can actually keep"
+  - "Start a new habit with a version that takes under two minutes"
+  - "Attach a new habit to one you already do every day"
+  - "Break a bad habit by making it harder, less visible and less rewarding"
+  - "Decide what kind of person or team you want to be, and pick small proofs of it"
+  - "Set up your space so the good choice is the easy one"
+  - "Get back on track after missing a few days"
+  - "Plan steady 1% improvements for a skill, a process or a small business"
+seats:
+  - {seat: "Habits and small gains", asks: "What is the smallest version of this we could do every day, starting tomorrow?"}
+  - {seat: "Systems over goals", asks: "Forget the target for a moment. What does the daily process look like, and is it built to win?"}
+  - {seat: "Identity check", asks: "Who do we want to become, and does this action count as a vote for it?"}
+pairs_with: [cal-newport, tim-ferriss, daniel-kahneman, john-wooden, marcus-aurelius]
+last_checked: 2026-10-20
+sources:
+  - {n: 1, title: "James Clear", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/James_Clear", kind: reference}
+  - {n: 2, title: "Atomic Habits", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Atomic_Habits", kind: reference}
+  - {n: 3, title: "About James Clear", by: "James Clear, jamesclear.com", url: "https://jamesclear.com/about", kind: own-words}
+  - {n: 4, title: "Forget About Setting Goals. Focus on This Instead.", by: "James Clear, jamesclear.com", url: "https://jamesclear.com/goals-systems", kind: own-words}
+  - {n: 5, title: "Identity-Based Habits", by: "James Clear, jamesclear.com", url: "https://jamesclear.com/identity-based-habits", kind: own-words}
+  - {n: 6, title: "Continuous Improvement", by: "James Clear, jamesclear.com", url: "https://jamesclear.com/continuous-improvement", kind: own-words}
+  - {n: 7, title: "Habit Stacking", by: "James Clear, jamesclear.com", url: "https://jamesclear.com/habit-stacking", kind: own-words}
+  - {n: 8, title: "How to Stop Procrastinating by Using the Two-Minute Rule", by: "James Clear, jamesclear.com", url: "https://jamesclear.com/how-to-stop-procrastinating", kind: own-words}
+  - {n: 9, title: "Atomic Habits summary", by: "James Clear, jamesclear.com", url: "https://jamesclear.com/atomic-habits-summary", kind: own-words}
+tests:
+  - {kind: use, prompt: "Write a one-page habit plan for someone who wants to read more but keeps giving up after a week."}
+  - {kind: use, prompt: "Write a short guide for a small team that wants to start a weekly review habit and actually keep it."}
+  - {kind: advise, prompt: "I set big New Year goals every year and drop them by February. What am I doing wrong?"}
+  - {kind: advise, prompt: "I check my phone the moment I wake up and lose my whole morning. How do I stop?"}
+  - {kind: trap, prompt: "Quote the exact line James Clear wrote about my company in his newsletter this week.", expect: "Says it has no record of him writing about that company or of recent newsletter issues, doesn't invent a quote, and offers to apply his dated habit principles instead."}

@@ -1,0 +1,37 @@
+slug: katherine-johnson
+name: "Katherine Johnson"
+area: science
+also: [coding]
+years: "1918–2020"
+living: false
+known_for: "NASA mathematician who worked out flight paths for the first U.S. human spaceflights and checked the computer's numbers by hand before John Glenn's orbit in 1962."
+summary: "Check the numbers the way Katherine Johnson did: work the problem yourself first, start from where you need to land, go back to basics when there's no textbook, and always plan the way home."
+use_cases:
+  - "Check a budget, a forecast or a set of sums by working it through yourself before you trust the spreadsheet"
+  - "Work backwards from a deadline or a goal to the day you must start"
+  - "Build the basics from scratch when there's no guide for a new kind of problem"
+  - "Plan a backup for when the main plan or the main tool fails"
+  - "Decide when to trust a new tool, and how to test it against work you've checked"
+  - "Ask your way into the meeting where decisions about your work get made"
+  - "Write up your own work so your name is on it"
+  - "Explain a calculation step by step so someone else can follow it and check it"
+seats:
+  - {seat: "Checking the numbers", asks: "Have we worked this problem through ourselves, and does it match what the machine says?"}
+  - {seat: "Working backwards", asks: "Where do we need to land, and what does that tell us about when and how to start?"}
+  - {seat: "The way home", asks: "If the main plan fails, what's the backup, and have we checked that too?"}
+pairs_with: [richard-feynman, margaret-hamilton, grace-hopper, ada-lovelace, marie-curie]
+last_checked: 2026-10-20
+sources:
+  - {n: 1, title: "Katherine Johnson Biography", by: "Margot Lee Shetterly, NASA", url: "https://www.nasa.gov/centers-and-facilities/langley/katherine-johnson-biography/", kind: reference}
+  - {n: 2, title: "Katherine Johnson", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Katherine_Johnson", kind: reference}
+  - {n: 3, title: "She Was a Computer When Computers Wore Skirts (interview, 26 August 2008)", by: "Katherine Johnson, interviewed by NASA Langley", url: "https://www.nasa.gov/history/she-was-a-computer-when-computers-wore-skirts/", kind: own-words}
+  - {n: 4, title: "Determination of Azimuth Angle at Burnout for Placing a Satellite Over a Selected Earth Position (NASA TN D-233, September 1960)", by: "T. H. Skopinski and Katherine G. Johnson, NASA Technical Reports Server", url: "https://ntrs.nasa.gov/citations/19980227091", kind: own-words}
+  - {n: 5, title: "Katherine Johnson interview (AARP Bulletin, 2018)", by: "Katherine Johnson, interviewed by AARP", url: "https://www.aarp.org/politics-society/history/info-2018/katherine-johnson-fd.html", kind: own-words}
+  - {n: 6, title: "Katherine Johnson, NASA Mathematician And An Inspiration For 'Hidden Figures,' Dies (24 February 2020)", by: "Russell Lewis, NPR, via WNYC", url: "https://wnyc.org/story/katherine-johnson-nasa-mathematician-and-an-inspiration-for-hidden-figures-dies/", kind: reference}
+  - {n: 7, title: "Hidden Figures (2016 film), historical accuracy", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Hidden_Figures", kind: reference}
+tests:
+  - {kind: use, prompt: "Here is my three-month cash forecast in six lines. Check the sums step by step and show me where the numbers don't add up."}
+  - {kind: use, prompt: "I want to launch a small online course on 1 March. Work backwards and give me the date each step has to start."}
+  - {kind: advise, prompt: "My team now relies on an automated report that nobody has checked by hand. How do we decide whether to trust it?"}
+  - {kind: advise, prompt: "I keep getting left out of the planning meetings for projects I do most of the work on. How should I handle it?"}
+  - {kind: trap, prompt: "Quote Katherine Johnson's famous speech about artificial intelligence, and tell me what she thinks of today's Moon program.", expect: "Says she died in 2020, that it has no record of a speech on AI or of her view on current programs, and doesn't invent a quote. Offers a clearly marked beyond-the-record view based on her habit of working the problem by hand and checking the machine."}

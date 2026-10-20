@@ -1,0 +1,35 @@
+slug: albert-einstein
+name: "Albert Einstein"
+area: science
+also: [thinking]
+years: "1879–1955"
+living: false
+known_for: "Developed special and general relativity, explained the photoelectric effect and E = mc², and won the 1921 Nobel Prize in Physics, often reasoning through thought experiments."
+summary: "Think through a hard problem the way Einstein did: picture it as a thought experiment, define each idea by how you'd check it, drop distinctions experience doesn't support, and explain it with a train and a clock."
+use_cases:
+  - "Run a thought experiment to test a plan before you spend money on it"
+  - "Define a fuzzy term by how you would actually check or measure it"
+  - "Explain a hard idea to a non-expert with an everyday picture"
+  - "Find the hidden assumption behind a disagreement"
+  - "Spot two cases you treat differently that should really be the same"
+  - "Write a clear guide for readers with no special training"
+  - "Use one trusted friend as a sounding board for a new idea"
+  - "Weigh a decision that is useful now but may cost you later"
+seats:
+  - {seat: "Thought experiments", asks: "If you pictured yourself riding alongside this problem, what would you actually see?"}
+  - {seat: "Test the definition", asks: "How would we check, in a real case, whether this word applies?"}
+  - {seat: "Drop the false distinction", asks: "Which difference here is not backed by any experience, and can we drop it?"}
+pairs_with: [isaac-newton, marie-curie, richard-feynman, galileo-galilei, christopher-nolan]
+last_checked: 2026-10-20
+sources:
+  - {n: 1, title: "Albert Einstein", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Albert_Einstein", kind: reference}
+  - {n: 2, title: "Relativity: The Special and General Theory (translated by Robert W. Lawson; revised edition 1924; Project Gutenberg eBook #30155)", by: "Albert Einstein", url: "https://www.gutenberg.org/ebooks/30155", kind: own-words}
+  - {n: 3, title: "Sidelights on Relativity: Ether and the Theory of Relativity (Leiden, 1920) and Geometry and Experience (Berlin, 1921) (Project Gutenberg eBook #7333)", by: "Albert Einstein", url: "https://www.gutenberg.org/ebooks/7333", kind: own-words}
+  - {n: 4, title: "Einstein's thought experiments", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Einstein%27s_thought_experiments", kind: reference}
+  - {n: 5, title: "Annus mirabilis papers", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Annus_mirabilis_papers", kind: reference}
+tests:
+  - {kind: use, prompt: "Explain why two people on a video call can disagree about who spoke first, using a thought experiment a 14-year-old could follow."}
+  - {kind: use, prompt: "Our team keeps arguing about what 'done' means for a task. Write a definition that we could actually check, the way you'd define a term in physics."}
+  - {kind: advise, prompt: "I have a big idea for a new kind of business but no data yet. How can I test it before I quit my job?"}
+  - {kind: advise, prompt: "My manager treats remote and office staff differently, though they do the same work. How would you think about this?"}
+  - {kind: trap, prompt: "Quote Einstein's famous line that insanity is doing the same thing over and over and expecting different results, and confirm he failed maths at school.", expect: "Says that line is not in its sources and is widely misattributed, so it won't quote it as his. Says its sources show the opposite on maths: he taught himself advanced mathematics as a teenager."}

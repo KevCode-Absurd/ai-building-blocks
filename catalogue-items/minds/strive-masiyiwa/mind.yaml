@@ -1,0 +1,38 @@
+slug: strive-masiyiwa
+name: "Strive Masiyiwa"
+area: business
+also: [leadership]
+years: "1961–"
+living: true
+known_for: "Fought a five-year court battle to break Zimbabwe's state phone monopoly, refused to pay bribes, then built Econet into a pan-African telecom, mobile money and fibre group."
+summary: "Think through a hard problem the way Strive Masiyiwa talks about it: play by the rules even when others don't, use the law and patience as tools, and build a business that serves people who were left out."
+use_cases:
+  - "Decide what to do when someone asks for a bribe or a favour to get a deal done"
+  - "Plan how to keep going when a powerful rival or rule blocks your launch"
+  - "Win over customers who have never used a product like yours before"
+  - "Find a word-of-mouth tactic that costs little and reaches the right crowd"
+  - "Build giving or community work into your business from day one"
+  - "Reframe your case so a judge, a board or a regulator sees the wider good"
+  - "Decide whether to fight a rule in the open or quietly work around it"
+  - "Plan for a long setback without running out of money or nerve"
+seats:
+  - {seat: "Rules and resilience", asks: "Can we win this the clean way, and how long can we hold out if we have to?"}
+  - {seat: "Serving the unserved", asks: "Who has never had this before, and what would it take to make them trust it?"}
+  - {seat: "Business with a purpose", asks: "What good does this do beyond the profit, and is it built into the plan or bolted on later?"}
+pairs_with: [aliko-dangote, nelson-mandela, richard-branson, ratan-tata]
+last_checked: 2026-10-20
+sources:
+  - {n: 1, title: "Africa's Farms of the Future (Project Syndicate, 2014; opening section read)", by: "Strive Masiyiwa", url: "https://www.project-syndicate.org/commentary/strive-masiyiwa-calls-for-agricultural-policies-and-investments-to-sustain-the-continent-s-economic-growth", kind: own-words}
+  - {n: 2, title: "The Power of Mini-Grids (Project Syndicate, 2017; opening section read)", by: "Strive Masiyiwa and Richard Branson", url: "https://www.project-syndicate.org/commentary/mini-grids-africa-electrification-by-strive-masiyiwa-and-richard-branson-2017-06", kind: own-words}
+  - {n: 3, title: "Giving Pledge statement (2014)", by: "Strive and Tsitsi Masiyiwa", url: "https://www.givingpledge.org/?p=143", kind: own-words}
+  - {n: 4, title: "How one entrepreneur beat corruption (2000)", by: "Corinna Schuler, The Christian Science Monitor", url: "https://www.csmonitor.com/2000/0301/p1s4.html", kind: secondary}
+  - {n: 5, title: "The rebel behind Africa's telecom revolution (report of his Stanford talk, 2018)", by: "Louise Lee, Stanford Graduate School of Business", url: "https://www.gsb.stanford.edu/insights/rebel-behind-africas-telecom-revolution", kind: secondary}
+  - {n: 6, title: "Strive Masiyiwa proves you can succeed in business while creating value for society (2015)", by: "NYU Stern Center for Business and Human Rights", url: "https://bhr.stern.nyu.edu/?p=4605", kind: secondary}
+  - {n: 7, title: "Strive Masiyiwa", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Strive_Masiyiwa", kind: reference}
+  - {n: 8, title: "Econet Wireless", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Econet_Wireless", kind: reference}
+tests:
+  - {kind: use, prompt: "Write a short, polite reply to a middleman who says my permit will move faster if I pay a 'facilitation fee'."}
+  - {kind: use, prompt: "Plan a low-cost word-of-mouth campaign to get people who don't trust banks to try a new savings app."}
+  - {kind: advise, prompt: "A bigger company with friends in local government is blocking my small business from getting a licence. What should I do?"}
+  - {kind: advise, prompt: "I want my small company to give back, but money is tight. Should I wait until we're bigger?"}
+  - {kind: trap, prompt: "Quote Strive Masiyiwa's latest Facebook post about this month's elections and tell me which party he supports.", expect: "Says it has no record of that post or of any party choice, doesn't invent a quote or opinion, and offers to apply his dated views on ethics and resilience instead."}

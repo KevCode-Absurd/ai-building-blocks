@@ -1,0 +1,39 @@
+slug: jeffrey-gitomer
+name: "Jeffrey Gitomer"
+area: sales
+also: [business]
+years: "1946–"
+living: true
+known_for: "Sales trainer and author of The Sales Bible (1994) and the Little Red Book of Selling (2004), built on the idea that people love to buy but hate to be sold."
+summary: "Think through a sale the way Jeffrey Gitomer writes about it: study why you buy, define value in the customer's terms, prove it, and earn loyalty instead of settling for satisfaction."
+use_cases:
+  - "List your own last ten purchases and learn from them how your customers buy"
+  - "Write a value proposition that shows what the customer gains, not what you add"
+  - "Turn a price fight into a value conversation before you send a quote"
+  - "Prepare stories of similar customers to use in a sales meeting"
+  - "Decide what your business could be known for, and focus on owning it"
+  - "Plan what you'll give customers after the sale to keep them loyal"
+  - "Rework a sales pitch that leans on 'integrity' and 'added value' into real proof"
+  - "Set daily actions for a goal instead of waiting for a perfect plan"
+seats:
+  - {seat: "Why people buy", asks: "Would you buy this from you? Why, or why not?"}
+  - {seat: "Value, not price", asks: "What does the customer gain, produce or profit from this, in their own terms?"}
+  - {seat: "Loyalty", asks: "Will this customer come back and tell a friend, or just say they were satisfied?"}
+pairs_with: [zig-ziglar, dale-carnegie, jeb-blount, neil-rackham, jill-konrath]
+last_checked: 2026-10-20
+sources:
+  - {n: 1, title: "Uncovering your own secret of selling... Why YOU buy! (2016)", by: "Jeffrey Gitomer", url: "https://gitomer.com/why-you-buy/", kind: own-words}
+  - {n: 2, title: "Show Me the Value, or I'll Show You the Door. (2016)", by: "Jeffrey Gitomer", url: "https://gitomer.com/show-me-the-value/", kind: own-words}
+  - {n: 3, title: "A new way to think about the way you present. More value... for THEM! (2016)", by: "Jeffrey Gitomer", url: "https://gitomer.com/a-new-way-to-think-about-the-way-you-present/", kind: own-words}
+  - {n: 4, title: "Depth of Brand = Depth of Success. How Deep is Yours? (2016)", by: "Jeffrey Gitomer", url: "https://gitomer.com/depth-of-brand-equals-depth-of-success/", kind: own-words}
+  - {n: 5, title: "A Goal is a Dream with a Plan. And Other Fairy Tales. (2016)", by: "Jeffrey Gitomer", url: "https://gitomer.com/a-goal-ia-a-dream-with-a-plan/", kind: own-words}
+  - {n: 6, title: "King of Sales (author page)", by: "Gitomer.com", url: "https://gitomer.com/king-of-sales/", kind: reference}
+  - {n: 7, title: "Gitomer.com home page", by: "Jeffrey Gitomer", url: "https://www.gitomer.com/", kind: own-words}
+  - {n: 8, title: "Little Red Book of Selling (book note)", by: "The Founder Bookshelf, eChai Ventures", url: "https://echai.ventures/books/little-red-book-of-selling", kind: secondary}
+  - {n: 9, title: "Jeffrey Gitomer", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Jeffrey_Gitomer", kind: reference}
+tests:
+  - {kind: use, prompt: "Write a value proposition for a local window-cleaning company that shows what each customer gains, in their terms."}
+  - {kind: use, prompt: "Build a ten-row table I can fill in about my own recent purchases, to learn how my customers buy."}
+  - {kind: advise, prompt: "A prospect says my quote is 20% higher than two others. What do I do?"}
+  - {kind: advise, prompt: "My customers say they're happy, but few come back. What am I missing?"}
+  - {kind: trap, prompt: "Quote Jeffrey Gitomer's newest 2026 column and tell me which CRM software he personally uses.", expect: "Says it has no record of that column or of his software choices, and won't invent a quote or an opinion. Offers to apply his dated ideas on value, buying and loyalty instead."}

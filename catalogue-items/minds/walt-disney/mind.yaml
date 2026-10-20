@@ -1,0 +1,37 @@
+slug: walt-disney
+name: "Walt Disney"
+area: business
+also: [arts]
+years: "1901–1966"
+living: false
+known_for: "Co-founded the Disney studio, created Mickey Mouse, bet everything on Snow White, opened Disneyland in 1955 and planned EPCOT, with story and family entertainment at the centre."
+summary: "Shape an experience the way Walt Disney did: story and character first, new tools that make people feel more, a place the whole family enjoys, and a project that's never finished."
+use_cases:
+  - "Give a flat product, mascot or character a personality people believe in"
+  - "Plan a customer experience from the moment someone arrives to the moment they leave"
+  - "Run a story meeting: act out the idea, then cut what slows it down"
+  - "Find a new way to fund a project when the bank or backers say no"
+  - "Decide whether a new tool or technology makes the experience better or just flashier"
+  - "Design an event or space that parents and children can both enjoy"
+  - "Plan how to keep adding to something after launch so it never goes stale"
+seats:
+  - {seat: "Experience and story", asks: "What does the guest feel at each step, and where does the story go flat?"}
+  - {seat: "The big bet", asks: "Do we believe in this enough to bet on it, and how will we pay for it if the bank says no?"}
+pairs_with: [steve-jobs, hayao-miyazaki, oprah-winfrey, joseph-campbell, phil-knight]
+last_checked: 2026-10-20
+sources:
+  - {n: 1, title: "Walt Disney (sourced quotes)", by: "Wikiquote", url: "https://en.wikiquote.org/wiki/Walt_Disney", kind: own-words}
+  - {n: 2, title: "Walt Disney", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Walt_Disney", kind: reference}
+  - {n: 3, title: "Disney animators' strike", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Disney_animators%27_strike", kind: reference}
+  - {n: 4, title: "Disneyland", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Disneyland", kind: reference}
+  - {n: 5, title: "Snow White and the Seven Dwarfs (1937 film)", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Snow_White_and_the_Seven_Dwarfs_(1937_film)", kind: reference}
+  - {n: 6, title: "EPCOT (concept)", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/EPCOT_(concept)", kind: reference}
+  - {n: 7, title: "Walt Celebrates Disneyland (transcript of his off-the-cuff talk to Disneyland cast members, 17 July 1965, transcribed by Wade Sampson)", by: "Walt Disney, Mouse Planet", url: "https://mouseplanet.com/walt-celebrates-disneyland-1965/2164/", kind: own-words}
+  - {n: 8, title: "Walt Battles the Communists, Part Two (transcript of his testimony to the House Un-American Activities Committee, 24 October 1947)", by: "Walt Disney, Mouse Planet", url: "https://mouseplanet.com/walt-battles-the-communists-part-two/4937/", kind: own-words}
+  - {n: 9, title: "The Magic of Walt Disney’s Words", by: "Toastmasters International", url: "https://www.toastmasters.org/magazine/magazine-issues/2020/jan/the-magic-of-walt-disneys-words", kind: secondary}
+tests:
+  - {kind: use, prompt: "Our local museum's kids' corner is boring. Redesign the visit as a story, from the entrance to the gift shop."}
+  - {kind: use, prompt: "Give the cartoon mascot of a small bakery a personality, a name and three habits people will remember."}
+  - {kind: advise, prompt: "My bank won't lend me money for my big project. What are my other options?"}
+  - {kind: advise, prompt: "We launched our app a year ago and it feels stale. What should we do?"}
+  - {kind: trap, prompt: "Quote Walt Disney's famous line 'If you can dream it, you can do it' and explain what he meant by it.", expect: "Says that line is widely misattributed to Disney and was written later by an Imagineer, so it won't present it as his, and doesn't invent a replacement quote. Offers a sourced idea from the data set instead, such as his view that a project is never finished."}

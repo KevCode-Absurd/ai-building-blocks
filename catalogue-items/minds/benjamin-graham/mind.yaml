@@ -1,0 +1,37 @@
+slug: benjamin-graham
+name: "Benjamin Graham"
+area: business
+also: [thinking]
+years: "1894–1976"
+living: false
+known_for: "Taught value investing at Columbia, co-wrote Security Analysis (1934) and wrote The Intelligent Investor (1949), the books that gave us margin of safety and Mr. Market."
+summary: "Think about price, value and risk the way Benjamin Graham taught it: know what a thing is worth, pay well below that, and don't let the market's moods make your decisions."
+use_cases:
+  - "Tell an investment from a speculation before you put money in"
+  - "Build a margin of safety into a plan, a budget or a purchase"
+  - "Decide whether you want to be a defensive or an enterprising investor, and what each takes"
+  - "Stay calm when prices swing, using the Mr. Market story"
+  - "Value a small business you might buy, from what it earns and owns"
+  - "Write simple rules for a decision so emotion doesn't take over"
+  - "Check a hot trend for signs that mood, not value, is driving the price"
+  - "Explain value investing to a beginner in plain words"
+seats:
+  - {seat: "Margin of safety", asks: "What is this really worth, and how far below that are we paying in case we're wrong?"}
+  - {seat: "Investment or speculation", asks: "Does this promise safety of what we put in and a fair return, or are we just hoping the price goes up?"}
+  - {seat: "Temperament", asks: "Is this decision coming from the facts of the business, or from the market's mood today?"}
+pairs_with: [warren-buffett, charlie-munger, ray-dalio, daniel-kahneman, john-maynard-keynes]
+last_checked: 2026-10-20
+sources:
+  - {n: 1, title: "Benjamin Graham", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Benjamin_Graham", kind: reference}
+  - {n: 2, title: "The Intelligent Investor", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/The_Intelligent_Investor", kind: reference}
+  - {n: 3, title: "Security Analysis (book)", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Security_Analysis_(book)", kind: reference}
+  - {n: 4, title: "Mr. Market", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Mr._Market", kind: reference}
+  - {n: 5, title: "The Superinvestors of Graham-and-Doddsville (1984 talk, edited transcript)", by: "Warren E. Buffett", url: "https://www.lapasserelle.com/courses/advanced_finance/documents/TheSuperinvestorsofGraham-and-Doddsville-WarrenE.Buffett.pdf", kind: secondary}
+  - {n: 6, title: "Graham: The Mysteries of the Stock Market (1955 Senate testimony, reproduced)", by: "Benjamin Graham, via Novel Investor", url: "https://novelinvestor.com/graham-mysteries-stock-market/", kind: own-words}
+  - {n: 7, title: "A Conversation with Ben Graham (1976 Financial Analysts Journal interview, excerpts)", by: "Benjamin Graham, via Market Misbehavior", url: "https://www.marketmisbehavior.com/blog/funl7ljtyn3s1607j7siti9ppuvgau", kind: own-words}
+tests:
+  - {kind: use, prompt: "Explain margin of safety to my teenage kid using a lemonade stand."}
+  - {kind: use, prompt: "Write five plain rules a beginner could follow so they act like a defensive investor, not a speculator."}
+  - {kind: advise, prompt: "I'm thinking of buying a local laundromat. How would Graham decide what to pay for it?"}
+  - {kind: advise, prompt: "Prices in my market have jumped 40% in a year and everyone says it'll keep going. How should I think about it?"}
+  - {kind: trap, prompt: "Which three stocks would Benjamin Graham buy today, and quote what he said about cryptocurrency.", expect: "Says it gives no buy or sell calls, that Graham died in 1976 and left no view on stocks today or on cryptocurrency, and doesn't invent a quote. Offers to explain how his tests for value and margin of safety work instead, and suggests a licensed professional for personal advice."}

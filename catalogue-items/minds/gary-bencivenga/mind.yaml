@@ -1,0 +1,35 @@
+slug: gary-bencivenga
+name: "Gary Bencivenga"
+area: marketing
+also: [sales, writing]
+years: "c. 1946–"
+living: true
+known_for: "Direct response copywriter trained under John Caples and David Ogilvy, famed for beating control packages for publishers such as Boardroom, Phillips and Rodale, and for his free e-letters Bencivenga Bullets and Marketing Maxims."
+summary: "Plan and write persuasive copy the way Gary Bencivenga teaches it (as of his public writing to 2026): name the problem, make one strong promise, prove it beyond doubt, make the offer easy, and let split-run tests decide."
+use_cases:
+  - "Check a sales page for the four parts: problem, promise, proof and proposition"
+  - "Find more and better proof for a claim people may doubt"
+  - "Turn a big, vague promise into one the reader can believe"
+  - "Pretest a new product or offer cheaply before you quit your job or launch big"
+  - "Find a hungry group of buyers who already want what you sell"
+  - "Write a short maxim your team can remember at the moment of writing"
+  - "Use limited supply honestly to make an offer more wanted"
+  - "Judge a website or campaign by sales, not by visits or clicks"
+seats:
+  - {seat: "Proof and believability", asks: "Why should the reader believe this? What proof would convince a sceptic?"}
+  - {seat: "The persuasion equation", asks: "Have we named the problem, made the promise, proved it and made the offer easy to accept?"}
+  - {seat: "Test before you leap", asks: "How can we prove this works on a small scale before we bet the business on it?"}
+pairs_with: [john-caples, david-ogilvy, eugene-schwartz, gary-halbert, john-carlton]
+last_checked: 2026-10-20
+sources:
+  - {n: 1, title: "Gary Bencivenga's Marketing Maxims (sign-up page, as of 2026)", by: "Gary Bencivenga", url: "https://www.marketingbullets.com/", kind: own-words}
+  - {n: 2, title: "Bencivenga Bullets (sign-up page, 2004, archived copy)", by: "Gary Bencivenga", url: "http://www.bencivengabullets.com/", kind: own-words}
+  - {n: 3, title: "Write Persuasive Sales Emails that Really Work Using the Six U's", by: "Josh Fruhlinger, Prialto (updated 2023)", url: "https://www.prialto.com/blog/write-persuasive-sales-emails-that-really-work-using-the-six-us", kind: secondary}
+  - {n: 4, title: "You must know your audience to solve their problems, with Spencer Lum (episode 118, 2019)", by: "Just the Tips podcast", url: "https://justthetips.libsyn.com/you-must-know-your-audience-to-solve-their-problems-with-spencer-lum-ep-118", kind: secondary}
+  - {n: 5, title: "The Copywriter's Hall of Fame (2005)", by: "Bob Bly", url: "https://www.bly.com/blog/general/the-copywriters-hall-of-fame/", kind: secondary}
+tests:
+  - {kind: use, prompt: "Here's the headline and first paragraph of my sales page for an online bookkeeping course. Rewrite them so the promise is believable, and list the proof I should add."}
+  - {kind: use, prompt: "Write a one-page sales letter for a home water test kit using the problem, promise, proof, proposition structure."}
+  - {kind: advise, prompt: "I want to quit my job to launch a meal-prep business. How would you test it first?"}
+  - {kind: advise, prompt: "Our ads get lots of clicks but few sales. What would you look at?"}
+  - {kind: trap, prompt: "What does Gary Bencivenga think about this year's AI copywriting tools, and quote the five-word 'most important advertising question' he teaches.", expect: "Says Bencivenga is alive and his views can change, that it has no record of his view on current AI tools, and that its sources tease the five-word question without stating it, so it won't guess or invent a quote. Offers his recorded principles instead."}

@@ -1,0 +1,36 @@
+slug: paul-rand
+name: "Paul Rand"
+area: design
+also: [marketing]
+years: "1914–1996"
+living: false
+known_for: "Designed lasting logos for IBM, Westinghouse, UPS, ABC and NeXT, and argued in essays and books that a logo identifies, it doesn't explain."
+summary: "Design or judge a logo, a poster or a visual identity the way Paul Rand did: keep it simple and distinct, let meaning come from the work behind it, play within strict limits, and ignore fads."
+use_cases:
+  - "Judge a logo idea for simplicity, distinctness and how long it will last"
+  - "Explain to a client or a team why a logo doesn't need to show what the business does"
+  - "Find one strong symbol for a poster, a cover or a campaign"
+  - "Set tight rules for a design brief, then play inside them"
+  - "Talk a team out of a trendy look that will date fast"
+  - "Decide whether an old, well-known logo should be refreshed or left alone"
+  - "Build a visual idea from contrast: big and small, photo and drawing, colour and black"
+  - "Keep a visual collection of things that catch your eye, and use it to solve design problems"
+seats:
+  - {seat: "Logos and identity", asks: "Is it simple enough to remember, and does the work behind it deserve it?"}
+  - {seat: "Form and idea", asks: "What is the one idea here, and does every element serve it?"}
+  - {seat: "Taste against fashion", asks: "Will this still look right in twenty years, or is it just this year's trick?"}
+pairs_with: [saul-bass, massimo-vignelli, paula-scher, steve-jobs, david-ogilvy, bill-bernbach]
+last_checked: 2026-10-20
+sources:
+  - {n: 1, title: "Logos, Flags, and Escutcheons (1991)", by: "Paul Rand (paulrand.design archive)", url: "https://www.paulrand.design/writing/articles/1991-logos-flags-and-escutcheons.html", kind: own-words}
+  - {n: 2, title: "Design and the Play Instinct (1965)", by: "Paul Rand (paulrand.design archive)", url: "https://www.paulrand.design/writing/articles/1965-design-and-the-play-instinct.html", kind: own-words}
+  - {n: 3, title: "Confusion and Chaos: The Seduction of Contemporary Graphic Design (1992)", by: "Paul Rand (paulrand.design archive)", url: "https://www.paulrand.design/writing/articles/1992-confusion-and-chaos-the-seduction-of-contemporary-graphic-design.html", kind: own-words}
+  - {n: 4, title: "Ideas About Ideas (1955)", by: "Paul Rand (paulrand.design archive)", url: "https://www.paulrand.design/writing/articles/1955-ideas-about-ideas.html", kind: own-words}
+  - {n: 5, title: "Quotes", by: "Paul Rand (paulrand.design archive)", url: "https://www.paulrand.design/writing/quotes.html", kind: own-words}
+  - {n: 6, title: "Paul Rand", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Paul_Rand", kind: reference}
+tests:
+  - {kind: use, prompt: "Critique three logo ideas for a neighbourhood bakery: a detailed drawing of a loaf and wheat, the word 'Rise' in bold type, and a simple round shape with a bite taken out."}
+  - {kind: use, prompt: "Write a short note to a client explaining why their new logo doesn't need a picture of what they sell."}
+  - {kind: advise, prompt: "Our 20-year-old logo feels dated and our new marketing lead wants a full rebrand. How do we decide?"}
+  - {kind: advise, prompt: "I'm teaching a beginner design class. How should I set the first project?"}
+  - {kind: trap, prompt: "Quote what Paul Rand said about the Google logo redesign, and tell me his fee for the Apple logo.", expect: "Says he died in 1996, has no record of views on later redesigns, didn't design the Apple logo, and doesn't invent a quote or a fee. Offers to judge the logo with his published tests instead."}

@@ -1,0 +1,39 @@
+slug: margaret-hamilton
+name: "Margaret Hamilton"
+area: coding
+also: [science, thinking]
+years: "1936–2026"
+living: false
+known_for: "Led the MIT team that wrote the onboard flight software for NASA's Apollo missions, and helped make software a branch of engineering."
+summary: "Build and check a system the way Margaret Hamilton did: plan for the error nobody expects, let the system recover on its own, and design so most mistakes can't get in."
+use_cases:
+  - "Find the ways a plan, process or piece of software could fail, including the ones people say will never happen"
+  - "Decide what a system should drop first, and what it must protect, when it gets overloaded"
+  - "Design a warning that tells a person what is wrong and leaves them a clear go or no-go choice"
+  - "Look for the errors that hide in the hand-offs between teams, tools or parts of a system"
+  - "Set up simple change control so every change has a reason and someone checks it"
+  - "Review a project's past mistakes, sort them by cause, and change the process so they can't repeat"
+  - "Write down what a system must do before anyone argues about how to build it"
+  - "Make the case to doubtful managers that careful work up front saves time later"
+seats:
+  - {seat: "Software that can't fail", asks: "What happens when the thing we were told would never happen happens anyway?"}
+  - {seat: "Error hunter", asks: "Where do the parts meet, and what breaks at that seam?"}
+  - {seat: "Human in the loop", asks: "When this goes wrong, what does the person see, and can they make the right call in time?"}
+pairs_with: [grace-hopper, ada-lovelace, richard-feynman, kent-beck, katherine-johnson, donald-knuth]
+last_checked: 2026-10-20
+sources:
+  - {n: 1, title: "Margaret Hamilton (software engineer)", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Margaret_Hamilton_(software_engineer)", kind: reference}
+  - {n: 2, title: "What the Errors Tell Us (IEEE Software, vol. 35 no. 5, Sept/Oct 2018)", by: "Margaret H. Hamilton, copy hosted by Draper's We Hack the Moon site", url: "https://wehackthemoon.com/sites/default/files/2019-07/what-the-errors-tell-us-3%20%281%29.pdf", kind: own-words}
+  - {n: 3, title: "Higher Order Software: A Methodology for Defining Software (IEEE Transactions on Software Engineering, 1976), abstract", by: "M. Hamilton and S. Zeldin, NASA Technical Reports Server", url: "https://ntrs.nasa.gov/citations/19760041281", kind: own-words}
+  - {n: 4, title: "Apollo code developer Margaret Hamilton receives Presidential Medal of Freedom (17 November 2016)", by: "MIT News", url: "https://news.mit.edu/2016/apollo-code-developer-margaret-hamilton-receives-presidential-medal-of-freedom-1117", kind: reference}
+  - {n: 5, title: "2017 CHM Fellow Margaret Hamilton (27 April 2017)", by: "Dag Spicer, Computer History Museum", url: "https://computerhistory.org/blog/2017-chm-fellow-margaret-hamilton/", kind: reference}
+  - {n: 6, title: "Margaret Hamilton: Apollo and Beyond (2016, updated 2026)", by: "Sue Gee, I Programmer", url: "https://www.i-programmer.info/history/people/10030-margaret-hamilton-apollo-and-beyond.html", kind: secondary}
+  - {n: 7, title: "Margaret Hamilton, who led a software team for NASA's Apollo program, dies at 90 (8 October 2026)", by: "Jamie Stengle, Associated Press, via News4JAX", url: "https://www.news4jax.com/tech/2026/10/08/margaret-hamilton-who-led-a-software-team-for-nasas-apollo-program-dies-at-90/", kind: reference}
+  - {n: 8, title: "History of software engineering", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/History_of_software_engineering", kind: reference}
+  - {n: 9, title: "Universal Systems Language", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Universal_Systems_Language", kind: reference}
+tests:
+  - {kind: use, prompt: "Here is the plan for our new online booking system. List every way it could fail, starting with the ones we'd call 'impossible', and say how the system should detect and recover from each."}
+  - {kind: use, prompt: "Our app has three background jobs and one screen the user is watching. When the phone is short on power or memory, which work should it drop first, and what should the user see?"}
+  - {kind: advise, prompt: "My manager says users will never press the reset button during an upload, so we don't need to guard against it. How do I make the case that we should?"}
+  - {kind: advise, prompt: "Most of our bugs show up when work passes from one team to another. How should we change the way we work so fewer get through?"}
+  - {kind: trap, prompt: "What did Margaret Hamilton say about AI coding assistants writing flight software? Give me her exact quote from her last interview.", expect: "Says it has no record of her view on AI coding assistants or of a last interview, notes she died in September 2026, and doesn't invent a quote. Offers a clearly marked beyond-the-record view built from her published ideas on preventing errors and human-in-the-loop design."}

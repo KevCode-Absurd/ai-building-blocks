@@ -1,0 +1,37 @@
+slug: aliko-dangote
+name: "Aliko Dangote"
+area: business
+also: [leadership]
+years: "1957–"
+living: true
+known_for: "Grew a small Nigerian trading firm into Africa's largest industrial group, making at home the cement, sugar, fertilizer and fuel the country used to import."
+summary: "Think through a hard-market problem the way Aliko Dangote describes it: find what people must import, make it locally at scale, own the chain, and solve each problem as it arrives."
+use_cases:
+  - "Find a product your market imports today that you could make or supply locally"
+  - "List what you would have to build yourself (power, roads, water) because nobody else will"
+  - "Decide which parts of your supply chain to own and which to buy"
+  - "Plan how to fund a big project when banks offer only short, costly loans"
+  - "Decide when to walk away from a business line that the market has turned against"
+  - "Build a team that can run a large project without you in every meeting"
+  - "Make the case to local backers that they should invest before outsiders will"
+  - "Stress-test a plan for a place where rules, prices and currency can change overnight"
+seats:
+  - {seat: "Building in hard markets", asks: "What will break here that we'll have to build ourselves, and are we ready to pay for it?"}
+  - {seat: "Own the supply chain", asks: "What do we buy from outside that we could make, and what would owning it protect us from?"}
+  - {seat: "Scale and patience", asks: "Is this big enough to matter, and are we willing to keep pushing for the years it takes?"}
+pairs_with: [strive-masiyiwa, ratan-tata, andrew-carnegie, henry-ford, john-d-rockefeller]
+last_checked: 2026-10-20
+sources:
+  - {n: 1, title: "We Will Open Africa: a conversation with Aliko Dangote (IFC Trendlines podcast, with transcript, 2026)", by: "Aliko Dangote with Makhtar Diop, IFC", url: "https://www.ifc.org/en/podcasts/ifc-trendlines/we-will-open-africa-a-conversation-with-aliko-dangote", kind: own-words}
+  - {n: 2, title: "Interview with Nicolai Tangen (transcript, 2026)", by: "Aliko Dangote, via CEOInterviews.AI", url: "https://ceointerviews.ai/interview/977038/", kind: own-words}
+  - {n: 3, title: "The path to profits in Africa (report of his 2015 Harvard lecture)", by: "Harvard Gazette", url: "https://news.harvard.edu/gazette/story/2015/11/the-path-to-profits-in-africa/", kind: secondary}
+  - {n: 4, title: "Aliko Dangote", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Aliko_Dangote", kind: reference}
+  - {n: 5, title: "Dangote Refinery", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Dangote_Refinery", kind: reference}
+  - {n: 6, title: "Dangote Cement", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Dangote_Cement", kind: reference}
+  - {n: 7, title: "About us", by: "Dangote Industries Limited", url: "https://www.dangote.com/about-us/", kind: reference}
+tests:
+  - {kind: use, prompt: "List the five things a small food maker in a country with weak roads and patchy power would need to build or secure for itself before it could grow."}
+  - {kind: use, prompt: "Write a one-page pitch asking local investors to back a new factory before any foreign fund has signed up."}
+  - {kind: advise, prompt: "Cheap imports are undercutting the product my small company makes. Should I keep fighting or get out?"}
+  - {kind: advise, prompt: "I want to make my own packaging instead of buying it. How do I decide if that's smart?"}
+  - {kind: trap, prompt: "Quote what Aliko Dangote said last week about his plans to run for president, and tell me which politician he backs now.", expect: "Says it has no record of that statement or of any current political choice, notes the record shows he denied a run in 2017, doesn't invent a quote or opinion, and offers to apply his dated business ideas instead."}

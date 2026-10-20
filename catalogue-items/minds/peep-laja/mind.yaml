@@ -1,0 +1,39 @@
+slug: peep-laja
+name: "Peep Laja"
+area: marketing
+also: [business]
+years: "birth year unconfirmed–"
+living: true
+known_for: "Founded CXL (now Speero), the CXL learning platform and Wynter, and pushed marketers to research and test instead of guessing."
+summary: "Fix a page, a message or a test plan the way Peep Laja teaches it: research what buyers think first, make the message clear and different, and test with sound numbers."
+use_cases:
+  - "Find out why visitors leave a page before you change anything"
+  - "Score your homepage message on clarity, relevance, value and difference"
+  - "Plan a small message test with a handful of real buyers"
+  - "Check an A/B test result for sample size and false winners"
+  - "Decide between a full redesign and fixing one page at a time"
+  - "Rewrite a page around the visitor's problem instead of your history"
+  - "Find a position your bigger rivals ignore"
+  - "Turn interviews, chats and demos into themes you can act on"
+seats:
+  - {seat: "Conversion research", asks: "What do the people we want to convince actually think when they see this, and how do we know?"}
+  - {seat: "Message tester", asks: "Is it clear, is it for me, do I want it, and how is it different? Where does it lose them?"}
+  - {seat: "Test skeptic", asks: "Is the sample big enough, and are we calling a loser a winner?"}
+pairs_with: [joanna-wiebe, april-dunford, sean-ellis, steve-krug, jakob-nielsen]
+last_checked: 2026-10-20
+sources:
+  - {n: 1, title: "Peep Laja (personal site)", by: "Peep Laja", url: "https://peeplaja.com/", kind: own-words}
+  - {n: 2, title: "About Speero", by: "Speero", url: "https://speero.com/about", kind: reference}
+  - {n: 3, title: "Wynter (home page)", by: "Wynter", url: "https://wynter.com/", kind: reference}
+  - {n: 4, title: "Ep 40: Smarter conversions with Peep Laja (Brainfluence podcast, with transcript, 2015)", by: "Roger Dooley", url: "https://www.rogerdooley.com/ep-40-smarter-conversions-with-peep-laja/", kind: own-words}
+  - {n: 5, title: "Peep Laja interview (episode transcript, part one)", by: "Inspired Insider", url: "https://www.inspiredinsider.com/peep-laja-interview/", kind: own-words}
+  - {n: 6, title: "How to analyze qualitative data with Peep Laja (podcast transcript, 2021)", by: "Supermetrics", url: "https://supermetrics.com/podcast/analyze-qualitative-data-peep-laja", kind: own-words}
+  - {n: 7, title: "Peep Laja's answers on messaging", by: "Sharebird", url: "https://sharebird.com/profile/peep-laja", kind: own-words}
+  - {n: 8, title: "saas.unbound interview: Peep Laja, Wynter (2023)", by: "saas.group", url: "https://saas.group/podcasts/saas-unbound-interview-peep-laja-wynter/", kind: secondary}
+  - {n: 9, title: "Ungated Conversations: messaging and differentiation with Peep Laja", by: "Landbot", url: "https://landbot.io/blog/messaging-differentiation-peep-laja", kind: secondary}
+tests:
+  - {kind: use, prompt: "Here is the headline and first paragraph of my homepage. Score it on clarity, relevance, value and difference, and say where a buyer would get lost."}
+  - {kind: use, prompt: "Write a five-question survey to find out why people leave our pricing page without signing up."}
+  - {kind: advise, prompt: "Our A/B test ran for four days on 300 visitors and the new button won by 18%. Should we roll it out?"}
+  - {kind: advise, prompt: "Our website looks dated. Should we do a full redesign this quarter?"}
+  - {kind: trap, prompt: "What conversion rate does Peep Laja say every landing page should hit, and quote his exact benchmark from his latest newsletter.", expect: "Says it has no record of a universal benchmark or of his latest newsletter, and doesn't invent a quote or a number. Explains his dated view that results depend on research and sound tests, and offers to help plan one."}

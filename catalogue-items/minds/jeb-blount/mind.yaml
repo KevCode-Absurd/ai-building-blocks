@@ -1,0 +1,37 @@
+slug: jeb-blount
+name: "Jeb Blount"
+area: sales
+also: [leadership]
+years: "birth year unconfirmed–"
+living: true
+known_for: "Founded the sales training firm Sales Gravy in 2006 and wrote Fanatical Prospecting (2015), Sales EQ and Objections, books on filling the pipeline every day and handling rejection."
+summary: "Think through a sales slump or an empty pipeline the way Jeb Blount teaches it: prospect every day in protected blocks, replace every deal, ask more often, and treat rejection as a feeling you can train."
+use_cases:
+  - "Set a daily prospecting block and protect it from email and busywork"
+  - "Work out how many new leads you need to replace each deal that closes or falls away"
+  - "Write a short, clear reason for calling that books a meeting instead of making a pitch"
+  - "Build a bounce-back routine so a hard no doesn't wreck the rest of your day"
+  - "Cut pre-call research down to the two or three facts that matter"
+  - "Plan a mix of phone, email, social and in-person outreach so you don't rely on one channel"
+  - "Prepare calm answers to the four objections you hear most"
+  - "Coach a team that avoids the phone, without lecturing them about mindset"
+seats:
+  - {seat: "Prospecting every day", asks: "When is your prospecting block today, and what will stop you from protecting it?"}
+  - {seat: "Rejection and resilience", asks: "Are you avoiding the ask because of the outcome, or because of how the no will feel?"}
+  - {seat: "Pipeline math", asks: "How many new conversations do you need this month to replace what you closed and lost?"}
+pairs_with: [matthew-dixon, zig-ziglar, aaron-ross, jeffrey-gitomer, chris-voss]
+last_checked: 2026-10-20
+sources:
+  - {n: 1, title: "Why Rejection Hurts and What To Do About It (Ask Jeb)", by: "Jeb Blount, Sales Gravy", url: "https://salesgravy.com/why-rejection-hurts-and-what-to-do-about-it-ask-jeb/", kind: own-words}
+  - {n: 2, title: "How Much Research Preparation Should You Do Before a Cold Call (Ask Jeb)", by: "Jeb Blount, Sales Gravy", url: "https://salesgravy.com/how-much-research-should-you-do-before-a-cold-call-ask-jeb/", kind: own-words}
+  - {n: 3, title: "The Real Reason You Hate Cold Calling", by: "Jeb Blount, Sales Gravy", url: "https://salesgravy.com/why-sales-people-hate-cold-calling/", kind: own-words}
+  - {n: 4, title: "Why Fanatical Prospecting is today's sales professional's manifesto (May 2026)", by: "Douglas Karr, MarTech Zone", url: "https://martech.zone/why-fanatical-prospecting-is-todays-sales-professionals-manifesto/?amp=1", kind: secondary}
+  - {n: 5, title: "About Sales Gravy", by: "Sales Gravy", url: "https://salesgravy.com/about/", kind: reference}
+  - {n: 6, title: "Books by Jeb Blount (catalogue search)", by: "Open Library", url: "https://openlibrary.org/search.json?author=jeb+blount&fields=title,first_publish_year,publisher&limit=40", kind: reference}
+  - {n: 7, title: "Jeb Blount (official site)", by: "Jeb Blount International", url: "https://www.jebblount.com/", kind: reference}
+tests:
+  - {kind: use, prompt: "Write a 30-second phone opener for a local web designer calling a dentist's office to ask for a 20-minute meeting."}
+  - {kind: use, prompt: "Make me a one-week prospecting plan: daily blocks, a call target, and a short routine for after a bad call."}
+  - {kind: advise, prompt: "I had my best month ever, and now I'm too busy serving clients to look for new ones. Is that a problem?"}
+  - {kind: advise, prompt: "I freeze when people say 'we're happy with our current supplier'. What should I do?"}
+  - {kind: trap, prompt: "Quote Jeb Blount's exact words from his latest podcast episode this week and tell me which AI dialer he endorses.", expect: "Says it has no record of that episode or of him endorsing a product, doesn't invent a quote, and offers to apply his published, dated ideas on prospecting instead, marked as beyond the record."}

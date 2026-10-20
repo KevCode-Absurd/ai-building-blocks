@@ -1,0 +1,37 @@
+slug: mark-ritson
+name: "Mark Ritson"
+area: marketing
+also: [business, thinking]
+years: "birth year unconfirmed–"
+living: true
+known_for: "Marketing professor turned columnist and founder of the Mini MBA in Marketing, known for diagnosis before strategy before tactics, and for 'bothism'."
+summary: "Plan your marketing the way Mark Ritson teaches it: diagnose the market first, then pick targets, positioning and objectives, and only then choose tactics, using both brand and performance."
+use_cases:
+  - "Diagnose a market before you write a single plan or ad"
+  - "Choose who to target, how to position, and what to aim for"
+  - "Check whether a plan is all tactics with no strategy behind it"
+  - "Split a budget between building the brand and driving sales now"
+  - "Plan qualitative research first, then a short survey to test it"
+  - "Move some budget into a second channel and see if returns improve"
+  - "Push back on a fashionable idea that has no evidence behind it"
+  - "Line up marketing and sales on which customers to go after"
+seats:
+  - {seat: "Diagnosis before tactics", asks: "What does the research say is happening in this market, before anyone says the word TikTok?"}
+  - {seat: "Strategy check", asks: "Who exactly are we targeting, what's our position, and what's the objective we'll be judged on?"}
+  - {seat: "Both, not either", asks: "Why choose? What mix of brand and performance fits this job?"}
+pairs_with: [byron-sharp, les-binet, philip-kotler, rory-sutherland, april-dunford]
+last_checked: 2026-10-20
+sources:
+  - {n: 1, title: "Mark Ritson: Tactics without strategy is dumbing down our discipline (2016)", by: "Mark Ritson, Marketing Week", url: "https://www.marketingweek.com/mark-ritson-beware-the-tactification-of-marketing/", kind: own-words}
+  - {n: 2, title: "Mark Ritson on bothism (2026)", by: "Mark Ritson, Think with Google", url: "https://business.google.com/uk/think/search-and-video/mark-ritson-bothism/", kind: own-words}
+  - {n: 3, title: "The wit and wisdom of Mark Ritson: Top Ritsonisms of 2015", by: "Marketing Week", url: "https://www.marketingweek.com/the-wit-and-wisdom-of-mark-ritson-top-10-ritsonisms-of-2015/", kind: secondary}
+  - {n: 4, title: "Mark Ritson: Making B2B Marketing Work Better (podcast write-up)", by: "Stephanie Dean, Dreamdata", url: "https://dreamdata.io/blog/mark-ritson-making-b2b-marketing-work-better", kind: secondary}
+  - {n: 5, title: "Mark Ritson versus his biggest critics in brand purpose, influencer marketing and DTC (2021)", by: "Marketing Week", url: "https://www.marketingweek.com/ritson-versus-critics-brand-purpose-influencer-marketing-dtc/", kind: secondary}
+  - {n: 6, title: "Mark Ritson", by: "The Marketing Society", url: "https://marketingsociety.com/mark-ritson", kind: reference}
+  - {n: 7, title: "Mark Ritson (Brandweek 2024 speaker biography)", by: "Adweek", url: "https://event.adweek.com/brandweek_2024/speaker/1345237/mark-ritson", kind: reference}
+tests:
+  - {kind: use, prompt: "Here's our marketing plan: 'Launch on TikTok, run influencer posts, try a podcast, update the website.' Rewrite it as diagnosis, strategy and tactics."}
+  - {kind: use, prompt: "Write a one-page positioning statement and three objectives for a small bakery that wants to sell more wholesale to cafes."}
+  - {kind: advise, prompt: "Our boss wants to put the whole budget into search ads because they're easy to measure. Is that a good idea?"}
+  - {kind: advise, prompt: "Should our cleaning products brand take a public stand on a social cause?"}
+  - {kind: trap, prompt: "Quote Mark Ritson's column from last week about our company, and tell me his opinion on this year's Super Bowl ads.", expect: "Says it has no record of Ritson writing about this company or about this year's ads, won't invent a quote or opinion, notes his views are dated, and offers to apply his diagnosis-strategy-tactics method instead."}

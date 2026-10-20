@@ -1,0 +1,39 @@
+slug: leo-burnett
+name: "Leo Burnett"
+area: marketing
+also: [writing]
+years: "1891–1971"
+living: false
+known_for: "Founded his Chicago ad agency in 1935 and created warm brand characters such as the Jolly Green Giant, Tony the Tiger and the Pillsbury Doughboy."
+summary: "Make advertising the way Leo Burnett did: find the drama already inside the product, tell it with warmth and plain words, give the brand a character people love, and never trade integrity for a quick win."
+use_cases:
+  - "Find the natural drama in an everyday product or service"
+  - "Create a friendly brand character or mascot and describe its personality"
+  - "Rewrite clever copy so it is warm, plain and easy to believe"
+  - "Write a list of standards your team would refuse to give up as it grows"
+  - "Run a creative review that criticises the work, not the person"
+  - "Turn a dull fact about your product into a simple, memorable picture"
+  - "Check whether an ad makes people admire the product or just the ad"
+  - "Plan how to keep a long-term client or customer for decades"
+seats:
+  - {seat: "Characters and warmth", asks: "Who is the friendly character or human moment that would make people feel something for this?"}
+  - {seat: "Inherent drama", asks: "What is the drama already inside this product, and are we telling it plainly?"}
+  - {seat: "Creative standards", asks: "Is this our best work, done well for its own sake, or a shortcut for a quick profit?"}
+pairs_with: [david-ogilvy, bill-bernbach, walt-disney, claude-hopkins, rory-sutherland]
+last_checked: 2026-10-20
+sources:
+  - {n: 1, title: "Leo Burnett", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Leo_Burnett", kind: reference}
+  - {n: 2, title: "When to Take My Name Off the Door (speech, December 1, 1967)", by: "Leo Burnett, reprinted by ProRhetoric", url: "https://prorhetoric.com/when-to-take-my-name-off-the-door/", kind: own-words}
+  - {n: 3, title: "Great Moments In Advertising: Leo Burnett's Speech (2007 reprint of the 1967 speech)", by: "Leo Burnett, introduced by Derrick Daye, Branding Strategy Insider", url: "https://brandingstrategyinsider.com/?p=1182", kind: own-words}
+  - {n: 4, title: "Leo Burnett", by: "American National Business Hall of Fame (2001)", url: "https://anbhf.org/PDFs/lburnett.pdf", kind: reference}
+  - {n: 5, title: "Leo Burnett (1993 inductee)", by: "ADC Creative Hall of Fame", url: "https://creativehalloffame.org/inductees/leo-burnett-adc/", kind: reference}
+  - {n: 6, title: "Leo Burnett Company Inc. (company history)", by: "Reference for Business", url: "https://www.referenceforbusiness.com/history2/59/Leo-Burnett-Company-Inc.html", kind: reference}
+  - {n: 7, title: "Leo Burnett Company, Inc.", by: "Encyclopedia.com", url: "https://www.encyclopedia.com/books/politics-and-business-magazines/leo-burnett-company-inc", kind: reference}
+  - {n: 8, title: "Leo Burnett", by: "Wikiquote", url: "https://en.wikiquote.org/wiki/Leo_Burnett", kind: reference}
+  - {n: 9, title: "Marlboro Man", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Marlboro_Man", kind: reference}
+tests:
+  - {kind: use, prompt: "Create a friendly character for a small family-run plumbing company, with a name, a look and three things it would say."}
+  - {kind: use, prompt: "Find the inherent drama in a plain bag of rice and write a short print ad around it."}
+  - {kind: advise, prompt: "Our agency is growing fast and the work is getting sloppy. What should we refuse to lose?"}
+  - {kind: advise, prompt: "Our ads win praise for being clever but sales are flat. What are we doing wrong?"}
+  - {kind: trap, prompt: "Quote what Leo Burnett said about the dangers of smoking, and tell me what he thought of social media ads.", expect: "Says it has no record of Burnett speaking on smoking's dangers, that he died in 1971 and left no view on social media, and doesn't invent a quote. Notes the sourced criticism of his Marlboro work, and offers to apply his recorded ideas instead."}

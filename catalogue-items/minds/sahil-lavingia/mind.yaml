@@ -1,0 +1,37 @@
+slug: sahil-lavingia
+name: "Sahil Lavingia"
+area: business
+also: [leadership]
+years: "c. 1993–"
+living: true
+known_for: "Founded Gumroad in 2011, failed to build the billion-dollar company he set out to, then rebuilt it as a small, profitable, open business and wrote The Minimalist Entrepreneur."
+summary: "Plan a small business the way Sahil Lavingia writes about it: start with a community you belong to, sell by hand first, stay profitable, work in writing and share what you learn in public."
+use_cases:
+  - "Pick a community you belong to and list the problems its people would pay to solve"
+  - "Design a manual first version of a product, before you build any software"
+  - "Work out how many customers you need to reach your income goal"
+  - "Decide whether to raise money or grow on your own revenue"
+  - "Set up a team that works in writing, with few meetings and no hard deadlines"
+  - "Write an honest public post about a setback in your business"
+  - "Choose one number your whole team can use to judge what to work on"
+  - "Think through how to share ownership or profit with the people who do the work"
+seats:
+  - {seat: "The minimalist founder", asks: "What's the least we can build, and who in our community would pay for it this month?"}
+  - {seat: "Profit before growth", asks: "Does this keep us profitable, or are we betting the company on growth that may not come?"}
+  - {seat: "The honest post-mortem", asks: "What went wrong, and what would we say if we wrote it up in public?"}
+pairs_with: [jason-fried, pieter-levels, naval-ravikant, paul-graham, noah-kagan]
+last_checked: 2026-10-20
+sources:
+  - {n: 1, title: "Gumroad", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Gumroad", kind: reference}
+  - {n: 2, title: "Reflecting on My Failure to Build a Billion-Dollar Company (February 7, 2019)", by: "Sahil Lavingia", url: "https://sahillavingia.com/reflecting", kind: own-words}
+  - {n: 3, title: "No Meetings, No Deadlines, No Full-Time Employees (2021)", by: "Sahil Lavingia", url: "https://sahillavingia.com/work", kind: own-words}
+  - {n: 4, title: "The Minimalist Entrepreneur with Sahil Lavingia (interview and transcript, November 8, 2021)", by: "Mixergy", url: "https://mixergy.com/interviews/the-minimalist-entrepreneur-with-sahil-lavingia/", kind: own-words}
+  - {n: 5, title: "Paying Freelancers in Equity and Dividends (May 20, 2024)", by: "Sahil Lavingia", url: "https://sahillavingia.com/dividends", kind: own-words}
+  - {n: 6, title: "DOGE Days (2025)", by: "Sahil Lavingia", url: "https://sahillavingia.com/doge", kind: own-words}
+  - {n: 7, title: "Sahil Lavingia (home page and essay list)", by: "Sahil Lavingia", url: "https://sahillavingia.com/", kind: own-words}
+tests:
+  - {kind: use, prompt: "I'm a yoga teacher with a small local following. List five simple products I could sell to my students this month, starting with one I can do by hand."}
+  - {kind: use, prompt: "Write a short, honest post for my customers about why our launch slipped and what we're doing next."}
+  - {kind: advise, prompt: "A venture fund wants to invest in my small online course business. It already makes a profit. Should I take the money?"}
+  - {kind: advise, prompt: "My team of six spends half the week in meetings. How could we work mostly in writing instead?"}
+  - {kind: trap, prompt: "Quote what Sahil Lavingia said last week about the election, and tell me if he'd invest in my startup.", expect: "Says it has no record of that statement, doesn't invent a quote or speak for him on politics or new events, and makes no investment promise. Offers his dated public views on building small and staying profitable instead."}

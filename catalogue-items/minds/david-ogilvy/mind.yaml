@@ -15,6 +15,8 @@ use_cases:
   - "Edit a memo or email with his ten rules for clear writing"
   - "Make a page or post read like an article instead of an ad"
   - "Check a video ad with the sound off to see if it still tells the story"
+  - "Write 20 headlines for one ad, then pick and test the best"
+  - "Write a short sales guide for your team: how to open, what to stress, how to answer objections"
 seats:
   - {seat: "Advertising", asks: "What is the big idea here, and will it sell?"}
   - {seat: "Brand guardian", asks: "Does this add to the brand's personality, or chip away at it?"}
@@ -28,6 +30,8 @@ sources:
   - {n: 4, title: "Quotations of David Ogilvy (Ogilvy 75th anniversary edition, 2023)", by: "David Ogilvy, published by Ogilvy", url: "https://www.ogilvy.com/sites/g/files/dhpsjz106/files/pdfdocuments/Quotations_of_David_Ogilvy_v2.pdf", kind: own-words}
   - {n: 5, title: "David Ogilvy's 1982 memo 'How to Write' offers 10 pieces of timeless advice", by: "Open Culture (reprints Ogilvy's memo of 7 September 1982)", url: "https://www.openculture.com/2015/04/david-ogilvys-1982-memo-how-to-write-offers-10-pieces-of-timeless-advice.html", kind: own-words}
   - {n: 6, title: "The King of Madison Avenue (review of Kenneth Roman's biography)", by: "Grady Powell, Books & Culture (2010)", url: "https://www.christianitytoday.com/2010/07/kingmadisonavenue/", kind: secondary}
+  - {n: 7, title: "I am a lousy copywriter, but I am a good editor (letter to Ray Calt, 19 April 1955, from The Unpublished David Ogilvy)", by: "David Ogilvy, via Letters of Note (Shaun Usher)", url: "https://news.lettersofnote.com/p/i-am-a-lousy-copywriter-but-i-am", kind: own-words}
+  - {n: 8, title: "The Unpublished David Ogilvy, publisher's sample: his 1936 talk to agency staff and The Theory and Practice of Selling the Aga Cooker (1935)", by: "David Ogilvy, ed. Joel Raphaelson (Profile Books, 2012)", url: "https://cdn.waterstones.com/special/pdf/9781781250877.pdf", kind: own-words}
 tests:
   - {kind: use, prompt: "Write a print ad for a neighbourhood bakery's sourdough loaf: a headline, a photo idea and about 150 words of body copy."}
   - {kind: use, prompt: "Edit this 600-word internal memo so it follows David Ogilvy's rules for clear writing, and tell me what you cut."}

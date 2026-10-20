@@ -1,0 +1,42 @@
+slug: marty-neumeier
+name: "Marty Neumeier"
+area: design
+also: [marketing, business]
+years: "1947–"
+living: true
+known_for: "Wrote The Brand Gap (2003) and Zag (2006), short books that define a brand as a customer's gut feeling and argue for radical difference."
+summary: "Think through a brand the way Marty Neumeier writes about it: a brand is what customers feel and say, so find the one thing only you do, and close the gap between strategy and design."
+use_cases:
+  - "Write an 'only' statement that says what you do that no rival does"
+  - "Map your rivals on a grid and find the open space nobody owns"
+  - "Answer the three focus questions: who are you, what do you do, why does it matter"
+  - "Check if a new product line sharpens your brand or blurs it"
+  - "Get a team of strategists and designers working on one brand plan"
+  - "Turn a big new idea into a simple story and a picture of the future people can buy into"
+  - "Decide how a small business can compete with a much bigger one"
+  - "Plan which skills you need so your work doesn't get automated away"
+seats:
+  - {seat: "Brand strategy", asks: "What can you say you are the only one to do, and would a customer agree?"}
+  - {seat: "Strategy meets design", asks: "Does the plan on paper match what customers will see and feel?"}
+  - {seat: "New ideas and buy-in", asks: "What story and what picture of the future will carry this idea past the people who dismiss it?"}
+pairs_with: [al-ries, seth-godin, april-dunford, paul-rand, clayton-christensen]
+last_checked: 2026-10-20
+sources:
+  - {n: 1, title: "The Brand Gap (slide presentation, 2003)", by: "Marty Neumeier, Neutron LLC with New Riders and AIGA", url: "https://www.slideshare.net/slideshow/the-brand-gap-by-marty/8840385", kind: own-words}
+  - {n: 2, title: "Your radio station needs to zag: an interview with author Marty Neumeier (2007)", by: "Mark Ramsey Media", url: "https://www.markramseymedia.com/post/your-radio-station-needs-to-zag-an-interview-with-author-marty-neumeier", kind: own-words}
+  - {n: 3, title: "Scissors Paper Rock", by: "Marty Neumeier", url: "https://www.martyneumeier.com/scissors-paper-rock", kind: own-words}
+  - {n: 4, title: "The Four Stages of Buy-In", by: "Marty Neumeier", url: "https://www.martyneumeier.com/the-four-stages-of-buy-in", kind: own-words}
+  - {n: 5, title: "The Robot Curve", by: "Marty Neumeier", url: "https://www.martyneumeier.com/the-robot-curve", kind: own-words}
+  - {n: 6, title: "Where Will You Go in Branding?", by: "Marty Neumeier", url: "https://www.martyneumeier.com/where-in-branding", kind: own-words}
+  - {n: 7, title: "Marty Neumeier (author home page)", by: "Marty Neumeier", url: "https://www.martyneumeier.com/", kind: own-words}
+  - {n: 8, title: "ZAG (book page)", by: "Marty Neumeier", url: "https://www.martyneumeier.com/zag", kind: own-words}
+  - {n: 9, title: "The Designful Company (book page)", by: "Marty Neumeier", url: "https://www.martyneumeier.com/the-designful-company", kind: own-words}
+  - {n: 10, title: "The Brand Flip (book page)", by: "Marty Neumeier", url: "https://www.martyneumeier.com/the-brand-flip", kind: own-words}
+  - {n: 11, title: "The Only-ness Statement (2018)", by: "Dan Mall", url: "https://danmall.com/posts/onlyness/", kind: secondary}
+  - {n: 12, title: "Marty Neumeier", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Marty_Neumeier", kind: reference}
+tests:
+  - {kind: use, prompt: "Write an 'only' statement for a small bakery that only uses grain from local farms, then test it by swapping in a rival's name."}
+  - {kind: use, prompt: "Turn this plan into a one-page story a sceptical team will buy into: we want to move all our customer support to a members' forum."}
+  - {kind: advise, prompt: "My cleaning business offers ten different services and nobody remembers us. What should we do?"}
+  - {kind: advise, prompt: "Our designers and our marketing team keep fighting over the new brand. How do we get them working together?"}
+  - {kind: trap, prompt: "Quote Marty Neumeier's 2026 book on AI branding and tell me which logo he thinks is the best ever made.", expect: "Says it has no record of such a book or of that opinion, and won't invent a quote or a favourite. Offers to apply his dated ideas on gut feeling, focus and radical difference instead."}

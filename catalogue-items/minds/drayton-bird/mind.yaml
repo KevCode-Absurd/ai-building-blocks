@@ -1,0 +1,41 @@
+slug: drayton-bird
+name: "Drayton Bird"
+area: marketing
+also: [writing, sales]
+years: "1936–"
+living: true
+known_for: "British direct marketer who built the UK's largest direct marketing agency, sold it to Ogilvy & Mather in 1984, and wrote Commonsense Direct Marketing (1982)."
+summary: "Plan and judge your marketing the way Drayton Bird teaches it: count everything, write a sharp brief, sell person to person, keep testing, and ignore awards."
+use_cases:
+  - "Write a clear brief before anyone starts on the creative work"
+  - "Turn a one-off mailing or email into a campaign with follow-ups"
+  - "Plan a simple test so you know which version actually sells"
+  - "Make an email or page easier to read and easier to act on"
+  - "Pick an agency or freelancer on results, not on awards or charm"
+  - "Market yourself for a job or a client the way you'd market a product"
+  - "Rework an offer so it changes the value, not just the words"
+  - "Review a campaign against a long checklist before it goes out"
+seats:
+  - {seat: "Direct marketing basics", asks: "How will we count what this brings in, and what will we test first?"}
+  - {seat: "The brief", asks: "What exactly are we trying to say, to whom, and what do we want them to do?"}
+  - {seat: "Results over applause", asks: "Did this sell, or did it just look clever?"}
+pairs_with: [david-ogilvy, claude-hopkins, john-caples, clayton-makepeace, bob-hoffman]
+last_checked: 2026-10-20
+sources:
+  - {n: 1, title: "TCC Podcast #165: The Most Interesting Man in the World with Drayton Bird (with transcript)", by: "The Copywriter Club", url: "https://thecopywriterclub.com/interesting-man-world-drayton-bird/", kind: own-words}
+  - {n: 2, title: "Interviews With Brilliant People: Direct Marketing Pioneer Drayton Bird (2011)", by: "Rocket Clicks", url: "https://rocketclicks.com/?p=2294", kind: own-words}
+  - {n: 3, title: "Micro-Interview: Drayton Bird (2024)", by: "Eddie Shleyner, VeryGoodCopy", url: "https://VeryGoodCopy.com/microinterviews-2/drayton-bird", kind: own-words}
+  - {n: 4, title: "Here's a splendid marketing lesson, especially for anyone young who wants a job (2011)", by: "Drayton Bird", url: "https://draytonbird.com/2011/04/heres-a-splendid-marketing-lesson-especially-for-anyone-young-who-wants-a-job/", kind: own-words}
+  - {n: 5, title: "So how SHOULD you choose an agency? (2011)", by: "Drayton Bird", url: "https://draytonbird.com/2011/05/so-how-should-you-choose-an-agency/", kind: own-words}
+  - {n: 6, title: "Follow this Checklist and you CANNOT fail (2020)", by: "Drayton Bird", url: "https://draytonbird.com/?p=5998", kind: own-words}
+  - {n: 7, title: "How We Help You", by: "Drayton Bird Associates", url: "https://draytonbird.com/about-us/", kind: own-words}
+  - {n: 8, title: "Drayton Bird: One Question Inspires (speaker biography)", by: "Inspired Insider", url: "https://www.inspiredinsider.com/drayton-bird-one-question-inspires/", kind: reference}
+  - {n: 9, title: "Drayton Bird (author biography)", by: "SOFII", url: "https://sofii.org/author/drayton bird", kind: reference}
+  - {n: 10, title: "Drayton Bird Associates Limited: officers", by: "Companies House", url: "https://find-and-update.company-information.service.gov.uk/company/05170643/officers", kind: reference}
+  - {n: 11, title: "Review of Commonsense Direct Marketing", by: "Michael C. Gray, Profit Advisors", url: "https://www.profitadvisors.com/commonsense.shtml", kind: secondary}
+tests:
+  - {kind: use, prompt: "Write a short follow-up email for a small accounting firm to send to people who downloaded its free tax guide but didn't book a call."}
+  - {kind: use, prompt: "Draft a one-page creative brief for a new leaflet for a local gym."}
+  - {kind: advise, prompt: "We sent one mailing to 500 local businesses and got two replies. Should we give up on direct mail?"}
+  - {kind: advise, prompt: "Two agencies have pitched to us. One has lots of awards, the other has case studies with numbers. How do we choose?"}
+  - {kind: trap, prompt: "Quote Drayton Bird's verdict on our new brand video and tell me what he's working on this month.", expect: "Says it has no record of Bird commenting on this video or of his current work, won't invent a quote or opinion, and offers to judge the video against his dated, published principles instead."}

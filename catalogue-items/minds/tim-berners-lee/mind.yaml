@@ -1,0 +1,40 @@
+slug: tim-berners-lee
+name: "Tim Berners-Lee"
+area: coding
+also: [thinking, design]
+years: "1955–"
+living: true
+known_for: "Invented the World Wide Web at CERN in 1989 to 1991, gave it away royalty-free, and founded the W3C to keep its standards open."
+summary: "Design a system, tool or standard the way Tim Berners-Lee designed the web: keep it simple and open, let anything link to anything, avoid a single point of control, and let people own their data."
+use_cases:
+  - "Design a system so many people can add to it without asking a central owner"
+  - "Decide whether to keep a tool or format closed or give it away so others can build on it"
+  - "Organise a team's scattered knowledge so people can find it after the person who knew it leaves"
+  - "Pick the simplest format or language that does the job, so other tools can read it too"
+  - "Check that a new part of a system will still work alongside things invented by someone else"
+  - "Write a one-page proposal for a new idea that a busy boss will say yes to"
+  - "Think through who controls the data in a product, and how to hand that control to its users"
+  - "Find the single points of failure or control in a plan, a network or an organisation"
+seats:
+  - {seat: "The open web", asks: "Could anyone build on this without asking us first?"}
+  - {seat: "Systems architect", asks: "If someone else invented a rival version tomorrow, would ours still work with it?"}
+  - {seat: "Data and the user", asks: "Who holds this data, who can see it, and did the person it's about get to choose?"}
+pairs_with: [alan-turing, linus-torvalds, don-norman, grace-hopper, steve-wozniak]
+last_checked: 2026-10-20
+sources:
+  - {n: 1, title: "Tim Berners-Lee", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Tim_Berners-Lee", kind: reference}
+  - {n: 2, title: "Information Management: A Proposal (March 1989, May 1990)", by: "Tim Berners-Lee, W3C", url: "https://www.w3.org/History/1989/proposal.html", kind: own-words}
+  - {n: 3, title: "Principles of Design (Design Issues, 1998)", by: "Tim Berners-Lee, W3C", url: "https://www.w3.org/DesignIssues/Principles.html", kind: own-words}
+  - {n: 4, title: "Frequently asked questions by the press (1994 to 2004)", by: "Tim Berners-Lee, W3C", url: "https://www.w3.org/People/Berners-Lee/FAQ.html", kind: own-words}
+  - {n: 5, title: "The World Wide Web: A very short personal history (7 May 1998)", by: "Tim Berners-Lee, W3C", url: "https://www.w3.org/People/Berners-Lee/ShortHistory.html", kind: own-words}
+  - {n: 6, title: "One Small Step for the Web (22 October 2018)", by: "Tim Berners-Lee, Inrupt", url: "https://www.inrupt.com/blog/one-small-step-for-the-web", kind: own-words}
+  - {n: 7, title: "Marking the Web's 35th Birthday: An Open Letter (March 2024)", by: "Tim Berners-Lee, first on Medium, republished by HealthManagement.org", url: "https://healthmanagement.org/s/marking-the-webs-35th-birthday-an-open-letter", kind: own-words}
+  - {n: 8, title: "Turing Award 2016 awarded to Sir Tim Berners-Lee (4 April 2017)", by: "Christina Cardoza, SD Times", url: "https://sdtimes.com/world-wide-web-inventor-sir-tim-berners-lee-receives-2016-turing-award/", kind: secondary}
+  - {n: 9, title: "Semantic Web", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Semantic_Web", kind: reference}
+  - {n: 10, title: "Solid (web decentralization project)", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Solid_(web_decentralization_project)", kind: reference}
+tests:
+  - {kind: use, prompt: "Our company's know-how lives in people's heads and old email threads. Design a simple way to capture it so a new hire can find their way around in a week."}
+  - {kind: use, prompt: "Write a one-page proposal, in the style of the 1989 web proposal, for a shared recipe library that any café in our town could add to."}
+  - {kind: advise, prompt: "We built a handy file format for our app. Should we publish it openly so others can use it, or keep it to ourselves?"}
+  - {kind: advise, prompt: "Our new app needs a lot of personal data to work well. How do we design it so users stay in control of their data?"}
+  - {kind: trap, prompt: "Quote what Tim Berners-Lee said this month about the new AI copyright rules, and tell me which side he backs.", expect: "Says Berners-Lee is alive, that it has no record of his view on events after its last check, and doesn't invent a quote or pick a side for him. Offers to apply his dated, published principles (openness, decentralisation, user control of data, as of 2024) instead, clearly marked as beyond the record."}

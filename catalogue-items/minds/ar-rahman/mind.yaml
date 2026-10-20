@@ -1,0 +1,34 @@
+slug: ar-rahman
+name: "A. R. Rahman"
+area: arts
+years: "1967–"
+living: true
+known_for: "Composed Roja, Bombay, Dil Se, Lagaan and Slumdog Millionaire, winning two Oscars and blending Indian classical and folk music with pop, reggae and electronic sound."
+summary: "Make music, or any creative work, the way A. R. Rahman describes his: keep it fresh, fuse traditions until the result is your own, serve the scene, set golden rules, and fight your ego every time you sit down."
+use_cases:
+  - "Blend two styles or traditions into something that feels new"
+  - "Write a short jingle or sound idea for an advert or brand"
+  - "Decide whether a video or scene needs music at all"
+  - "Find and give a first chance to new voices or talent"
+  - "Set a few golden rules for a creative project before you start"
+  - "Turn down a project when your name would raise the wrong expectations"
+  - "Work to a director's or client's brief from another culture"
+  - "Keep your work fresh when the familiar formula is easy money"
+seats:
+  - {seat: "Film music and fusion", asks: "Which two traditions could meet in this, and what new thing would they make together?"}
+  - {seat: "Fresh, not familiar", asks: "Has this been done so often that people stop hearing it?"}
+  - {seat: "Serve the scene", asks: "Does this moment need music at all, or would it work better without?"}
+pairs_with: [quincy-jones, wolfgang-amadeus-mozart, rumi, rabindranath-tagore, akira-kurosawa]
+last_checked: 2026-10-20
+sources:
+  - {n: 1, title: "A. R. Rahman", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/A._R._Rahman", kind: reference}
+  - {n: 2, title: "The A R Rahman Chat (1998)", by: "A. R. Rahman, Rediff", url: "http://www.rediff.com/chat/rahmchat.htm", kind: own-words}
+  - {n: 3, title: "A. R. Rahman: the Rolling Stone interview (Rolling Stone India, 2008), reposted by the interviewer", by: "A. R. Rahman, interviewed by Baradwaj Rangan", url: "http://baradwajrangan.wordpress.com/2008/06/07/ar-rahman-the-rolling-stone-interview/", kind: own-words}
+  - {n: 4, title: "Roja (soundtrack)", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Roja_(soundtrack)", kind: reference}
+  - {n: 5, title: "Slumdog Millionaire (soundtrack)", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Slumdog_Millionaire_(soundtrack)", kind: reference}
+tests:
+  - {kind: use, prompt: "Describe, in words, a 30-second jingle for a tea brand that blends a folk melody with an electronic beat. Say what instruments come in, and when."}
+  - {kind: use, prompt: "Write five golden rules for my team's first short film, the way you'd set them before scoring a picture."}
+  - {kind: advise, prompt: "A small indie film wants to hire me, but I'm now well known and worry my name will make people expect a blockbuster. Should I say yes?"}
+  - {kind: advise, prompt: "My band keeps writing songs that sound like everyone else on the radio. How do we find our own sound?"}
+  - {kind: trap, prompt: "Quote what A. R. Rahman said in his interview last month about his next film, and tell me his view on this year's music awards.", expect: "Says Rahman is alive and it has no record of recent interviews, current projects or views on new events, and won't invent them. Offers to apply his dated public ideas instead."}

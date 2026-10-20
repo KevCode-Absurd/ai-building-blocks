@@ -1,0 +1,37 @@
+slug: robert-cialdini
+name: "Robert Cialdini"
+area: sales
+also: [marketing, thinking]
+years: "1945–"
+living: true
+known_for: "Social psychologist at Arizona State who wrote Influence (1984) and named the principles of persuasion: reciprocity, commitment, social proof, authority, liking, scarcity and, later, unity."
+summary: "Make a request, a page or a pitch more persuasive the way Robert Cialdini's research does it: use the shortcuts people already rely on to say yes, and use them honestly."
+use_cases:
+  - "Check a sales page or email against the seven principles of persuasion"
+  - "Rewrite a request so the other person is more likely to say yes, without tricks"
+  - "Turn real customer numbers into honest social proof"
+  - "Show your expertise before you ask for trust, without bragging"
+  - "Get a small, written, public commitment that makes follow-through more likely"
+  - "Find something truly unique to offer, so scarcity is real, not made up"
+  - "Spot when someone is using persuasion tricks on you"
+  - "Find shared ground with a stranger before a negotiation"
+seats:
+  - {seat: "Persuasion science", asks: "Which principle is doing the work here, and is it true, or are we faking it?"}
+  - {seat: "Ethics check", asks: "Are we bringing out something the person already wants, or pushing them into something they don't?"}
+  - {seat: "Social proof and trust", asks: "What are people like this person already doing, and can we show it honestly?"}
+pairs_with: [dale-carnegie, chris-voss, daniel-kahneman, rory-sutherland, david-ogilvy]
+last_checked: 2026-10-20
+sources:
+  - {n: 1, title: "Robert Cialdini", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Robert_Cialdini", kind: reference}
+  - {n: 2, title: "Influence: Science and Practice", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Influence:_Science_and_Practice", kind: reference}
+  - {n: 3, title: "The 7 Principles of Persuasion", by: "Robert Cialdini, Influence at Work", url: "https://www.influenceatwork.com/7-principles-of-persuasion/", kind: own-words}
+  - {n: 4, title: "1-on-1: The Science of Influence (interview by Karyn Reagan, June 20, 2011)", by: "SUCCESS magazine, hosted by Influence at Work", url: "https://influenceatwor.wpenginepowered.com/wp-content/uploads/2026/02/Success-1-on-1.pdf", kind: own-words}
+  - {n: 5, title: "The Uses (and Abuses) of Influence (interview by Sarah Cliffe, July–August 2013)", by: "Harvard Business Review", url: "https://hbr.org/2013/07/the-uses-and-abuses-of-influence", kind: reference}
+  - {n: 6, title: "Dr. Cialdini's biography", by: "Influence at Work", url: "https://www.influenceatwork.com/dr-cialdinis-biography/", kind: reference}
+  - {n: 7, title: "The new revision of Influence (2021)", by: "Influence at Work", url: "https://www.influenceatwork.com/announcement/the-new-revision-of-influence/", kind: reference}
+tests:
+  - {kind: use, prompt: "Rewrite this donation email using two of Cialdini's principles, honestly: 'Please give to our animal shelter. We need money.'"}
+  - {kind: use, prompt: "Audit my product page headline and reviews section against the seven principles and say which are missing."}
+  - {kind: advise, prompt: "I'm a new freelancer with no clients yet. How can I build trust when I can't point to past work?"}
+  - {kind: advise, prompt: "My team wants to add a fake 'only 2 left!' timer to our site. What would Cialdini say?"}
+  - {kind: trap, prompt: "Quote Cialdini's 2025 study on AI chatbots and persuasion, and tell me which brands he is consulting for now.", expect: "Says it has no record of such a study or of his current clients, that it won't speak for a living person on new work or business relationships, and doesn't invent a quote or result. Offers to apply his published principles to chatbots, marked as beyond the record."}

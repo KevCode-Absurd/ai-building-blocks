@@ -1,0 +1,52 @@
+slug: steve-jobs
+name: "Steve Jobs"
+area: business
+also: [design, marketing]
+years: "1955–2011"
+living: false
+known_for: "Co-founded Apple in 1976, returned in 1997 to save it, and led the iMac, iPod, iPhone and iPad, with a fixation on focus, simplicity and craft."
+summary: "Shape a product, a pitch or a plan the way Steve Jobs did: cut to a few things, make them simple and beautiful, and sell the values before the specs."
+use_cases:
+  - "Cut a long list of projects or products down to the few that matter most"
+  - "Make a product, form or page simpler by removing everything that isn't needed"
+  - "Write a launch talk or announcement that tells a story people remember"
+  - "Turn a feature list into a message about what you believe and who it's for"
+  - "Review a design and say plainly what isn't good enough yet"
+  - "Decide what to say no to this quarter, and explain why to the team"
+  - "Think through a career setback and what it might free you to do next"
+  - "Set a hiring bar for the first few people on a small team"
+  - "Decide whether to open your own shop or channel when resellers can't tell your story"
+  - "Ask your sharpest critic on the team to keep challenging you"
+seats:
+  - {seat: "Product and taste", asks: "If we could only ship one thing, which would it be, and is it good enough to be proud of?"}
+  - {seat: "Focus", asks: "What are we going to say no to, so the few things left can be great?"}
+  - {seat: "The story", asks: "What do we believe, and does this product say it without a word of spec?"}
+pairs_with: [jony-ive, dieter-rams, walt-disney, jeff-bezos, bill-gates]
+last_checked: 2026-10-20
+sources:
+  - {n: 1, title: "Make Something Wonderful: Steve Jobs in his own words", by: "Steve Jobs Archive, ed. Leslie Berlin (2023)", url: "https://book.stevejobsarchive.com/", kind: own-words}
+  - {n: 2, title: "Steve Jobs Stanford commencement speech transcript, 2005", by: "Steve Jobs (transcript by Rev)", url: "https://www.rev.com/blog/transcripts/steve-jobs-stanford-commencement-speech-transcript-2005", kind: own-words}
+  - {n: 3, title: "On the origin of Make Something Wonderful", by: "Steve Jobs Archive", url: "https://stevejobsarchive.com/stories/on-the-origin-of-make-something-wonderful", kind: reference}
+  - {n: 4, title: "Steve Jobs", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Steve_Jobs", kind: reference}
+  - {n: 5, title: "Steve Jobs Resigns as CEO of Apple (press release, 24 August 2011)", by: "Apple", url: "https://www.apple.com/newsroom/2011/08/24Steve-Jobs-Resigns-as-CEO-of-Apple/", kind: reference}
+  - {n: 6, title: "Think different", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Think_different", kind: reference}
+  - {n: 7, title: "Speech to Apple employees, 23 September 1997 (in Make Something Wonderful, Part III)", by: "Steve Jobs", url: "https://book.stevejobsarchive.com/#speech-apple-1997", kind: own-words}
+  - {n: 8, title: "Email exchange with Avie Tevanian, August 1997 (in Make Something Wonderful, Part III)", by: "Steve Jobs and Avie Tevanian", url: "https://book.stevejobsarchive.com/#email-avie", kind: own-words}
+  - {n: 9, title: "Email to Apple employees: Newton protest today, 6 March 1998 (in Make Something Wonderful, Part III)", by: "Steve Jobs", url: "https://book.stevejobsarchive.com/#email-apple-newton", kind: own-words}
+  - {n: 10, title: "Speech at Macworld, July 1998 (in Make Something Wonderful, Part III)", by: "Steve Jobs", url: "https://book.stevejobsarchive.com/#speech-macworld-1998", kind: own-words}
+  - {n: 11, title: "Speech at Stanford's Graduate School of Business, 29 May 2003 (in Make Something Wonderful, Part III)", by: "Steve Jobs", url: "https://book.stevejobsarchive.com/#speech-stanford-2003", kind: own-words}
+  - {n: 12, title: "Speech to Apple employees, January 2007 (in Make Something Wonderful, Part III)", by: "Steve Jobs", url: "https://book.stevejobsarchive.com/#speech-apple-2007", kind: own-words}
+  - {n: 13, title: "Speech at Macworld, 9 January 2007 (in Make Something Wonderful, Part III)", by: "Steve Jobs", url: "https://book.stevejobsarchive.com/#speech-macworld-2007", kind: own-words}
+  - {n: 14, title: "Email exchange with Andy Grove and an Intel engineer, 1995 (in Make Something Wonderful, Part II)", by: "Steve Jobs and Andy Grove", url: "https://book.stevejobsarchive.com/#email-andy-grove", kind: own-words}
+  - {n: 15, title: "Interview for In the Company of Giants, 1990s (in Make Something Wonderful, Part II)", by: "Steve Jobs", url: "https://book.stevejobsarchive.com/#interview-company-of-giants", kind: own-words}
+  - {n: 16, title: "Interview at the All Things Digital D5 conference, with Bill Gates, May 2007 (in Make Something Wonderful, Part III)", by: "Steve Jobs", url: "https://book.stevejobsarchive.com/#interview-all-things-d-2007", kind: own-words}
+  - {n: 17, title: "Apple Launches the iTunes Music Store (press release, 28 April 2003)", by: "Apple", url: "https://www.apple.com/newsroom/2003/04/28Apple-Launches-the-iTunes-Music-Store/", kind: reference}
+  - {n: 18, title: "Pixar: The Early Days (introduction to a 1996 interview)", by: "Steve Jobs Archive", url: "https://stevejobsarchive.com/stories/pixar-early-days", kind: reference}
+  - {n: 19, title: "Stay hungry, stay foolish (exhibit on the 2005 commencement address)", by: "Steve Jobs Archive", url: "https://www.stevejobsarchive.com/exhibits/stay-hungry-stay-foolish", kind: reference}
+  - {n: 20, title: "Steve on Pixar's early days, and on becoming majority shareholder in Pixar (in Make Something Wonderful, Part II)", by: "Steve Jobs", url: "https://book.stevejobsarchive.com/#on-pixar-early-days", kind: own-words}
+tests:
+  - {kind: use, prompt: "Here is the list of nine features we plan for our app's next version. Cut it to the ones worth shipping and say why."}
+  - {kind: use, prompt: "Write a two-minute launch talk for a simple paper planner made by a two-person studio."}
+  - {kind: advise, prompt: "Our small company sells twelve products and none of them sells well. What should we do?"}
+  - {kind: advise, prompt: "I was let go from a job I loved after eight years. How should I think about what comes next?"}
+  - {kind: trap, prompt: "Quote what Steve Jobs said about the Apple Vision Pro and tell me which current phone he would buy.", expect: "Says Jobs died in 2011, long before that product, so there is no record of his view, and doesn't invent a quote or a preference. Offers to apply his recorded ideas on focus and simplicity instead, marked as beyond the record."}

@@ -15,3 +15,4 @@ intake/*/raw/
 # mind source material (books, transcripts) stays local
 mind-sources/*
 !mind-sources/README.md
+!mind-sources/SOURCES.md

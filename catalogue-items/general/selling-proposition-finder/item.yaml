@@ -1,0 +1,20 @@
+slug: selling-proposition-finder
+name: "Selling proposition finder"
+summary: "Paste your product facts and rivals. Get three to five one-sentence selling claims to build an ad on, ranked by pull."
+category: general
+type: skill
+role: make
+job: strategy
+level: intermediate
+inputs:
+  - {type: product_data, required: true}
+  - {type: audit_report, required: false}
+  - {type: competitor_set, required: false}
+outputs:
+  - {type: angle_library, required: true}
+  - {type: copy_draft, required: true}
+origin: rebuilt
+version: 1.0.0
+minds: [rosser-reeves, claude-hopkins]
+credits:
+  - {title: "Reality in Advertising", by: "Rosser Reeves, 1961", used: "The sentence frame for a selling claim, the three roads to one (a real difference, a changed product, a true fact nobody else says), and the rule that a difference too small for buyers to notice does harm"}

@@ -1,6 +1,6 @@
 new_slug: cross-over-copy-test-planner
 name: "Cross-over copy test planner"
-summary: "Paste two versions of copy and where they will run. Get a fair keyed test that swaps places, plus a winner rule."
+summary: "Paste two versions and the different places they will run. Get a plan that swaps places halfway and compares cost per sale."
 job: plan-ad-tests
 thinking: high
 thinking_why: "It has to design a fair test across places and control the things that could skew the result."

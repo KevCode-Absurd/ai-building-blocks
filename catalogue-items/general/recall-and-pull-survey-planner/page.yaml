@@ -1,0 +1,127 @@
+new_slug: recall-and-pull-survey-planner
+name: "Recall and pull survey planner"
+summary: "Paste your ad and your buyers. Get a short survey that shows who remembers it and whether they buy more."
+job: read-ad-results
+thinking: medium
+thinking_why: "The design follows a fixed pattern, but it has to fit the questions and sample to your product and audience."
+
+headline: "A short survey that shows whether your ad does anything, apart from everything else that moves sales"
+subhead: "Give it your ad and your likely buyers. It writes the few questions, tells you how many people to ask and how to score their answers. The result separates people who remember your ad from those who do not, so you can see whether the first group buys more."
+
+explain: |
+  Sales go up and down for many reasons: price, stock, season, a rival's deal. So sales alone cannot tell you whether the ad is working.
+
+  This survey splits your buyers into two groups. One group can say, correctly, what your ad says. The other cannot. You then compare how many in each group buy your product. If the group that knows the ad buys at a higher rate, the ad is pulling people over. If the rates match, the ad is not helping. If the first group buys less, the ad may be driving people away. The skill writes the questions, the sample size, the scoring rule for vague answers and the sheet to record answers on.
+
+when:
+  - "Sales moved and you cannot tell whether the ad had anything to do with it."
+  - "You want to know if people remember your ad before you decide to change it."
+  - "You have a small budget and need a cheap way to judge an ad."
+
+you_give:
+  - "Your ad or the claim it makes"
+  - "Who might buy your product, and how you can reach some of them"
+  - "How often people buy (optional)"
+you_get:
+  - "The questions, in order"
+  - "How many people to ask in each group"
+  - "A scoring rule for answers that are vague or wrong"
+  - "An answer sheet ready to fill in"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Paste your ad and say who buys and how you can reach people."
+  - "Ask the questions exactly as written, in order, to at least the number it gives."
+  - "Take the filled-in sheet to the Ad recall and pull calculator."
+
+how_it_works:
+  - title: "Sets the target answer"
+    text: "Writes the claim you want people to say, and the near-miss answers it could be mistaken for."
+  - title: "Picks who to ask"
+    text: "Defines the group, with a screening question, and leaves out staff and friends."
+  - title: "Writes the questions"
+    text: "Asks what they remember, then what they say it said, then what they buy. Never hints at the answer."
+  - title: "Sets the scoring rule"
+    text: "Decides in advance what counts as knowing the ad."
+  - title: "Sizes the sample"
+    text: "Works out how many to ask so the group that knows the ad has enough people."
+  - title: "Builds the answer sheet"
+    text: "Gives the columns to fill in, ready for the calculator."
+  - title: "Sets the repeat"
+    text: "Says when to ask again with the same questions."
+
+output_shape: |
+  TARGET ANSWER
+  <the claim in the words you hope people use>
+  Near misses: <answers that sound close but do not count>
+
+  WHO TO ASK
+  <group> | screening question: <...> | how to reach: <...>
+
+  QUESTIONS (ask in this order)
+  1. <what ads or messages have you seen lately for this kind of product>
+  2. <have you seen this ad>
+  3. <what did it say>
+  4. <which of these have you bought in the last <period>>
+
+  SCORING
+  Knows the ad: <rule>   Does not: <rule>
+
+  HOW MANY
+  Expected recall <x%> -> ask <n> people to get about 100 in the knows group.
+
+  ANSWER SHEET
+  id | date | what they said (word for word) | knows (Y/N) | buys (Y/N) | other brands bought
+
+  WHEN TO REPEAT
+  <date, same questions>
+
+  MISSING
+  <what would sharpen the plan>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: "Reach"
+    how: "Say how you can reach buyers: your customer list, a shop counter, a panel, social media. The sample plan fits it."
+  - what: "Buying period"
+    how: "Say how often people buy. The question uses a time window that fits."
+  - what: "A rival ad"
+    how: "Add a rival's ad to ask about the same way, to compare recall."
+  - what: "Budget"
+    how: "Say how many people you can reach. It tells you if the plan is too small to trust."
+
+judge:
+  - "The questions never name the claim or hint at it."
+  - "Recall questions come before buying questions."
+  - "The scoring rule says what counts before any answer is read."
+  - "The sample size is worked out from expected recall."
+  - "The answer sheet has every column the calculator needs."
+
+test:
+  - "Ask five friends the questions out loud. Check the order and wording feel natural."
+  - "Score ten made-up answers with the rule. Two people should agree on most."
+  - "Run a first wave with your small list and see what the recall rate looks like."
+  - "Take the answers to the Ad recall and pull calculator."
+
+improve:
+  - "Repeat the survey each six months with the same questions."
+  - "Add a rival's ad to compare recall and pull."
+  - "Record which channel each person saw the ad in."
+  - "Keep the sheets in one place so waves can be compared."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Writing neutral questions and scoring rules is text work any strong chat AI does well with this skill."}
+    - {name: "A free survey form", why: "Collects word-for-word answers in a sheet, ready for the calculator."}
+  inputs:
+    - "Your ad or the claim it makes"
+    - "Your customer list, to reach buyers"
+    - "A rival ad, to compare recall"
+
+terms:
+  - term: Recall
+    meaning: "The share of people who can say, correctly, what your ad says."
+  - term: Pull
+    meaning: "How many more people in the group that knows the ad buy, compared with the group that does not."

@@ -1,0 +1,19 @@
+slug: headline-cover-test-ranker
+name: "Headline cover test ranker"
+summary: "Paste your headline list. Get each one read alone, scored on five rules and cut to the best three."
+category: general
+type: skill
+role: check
+job: copy
+level: beginner
+inputs:
+  - {type: hooks, required: true}
+  - {type: persona, required: false}
+outputs:
+  - {type: shortlist}
+  - {type: audit_report}
+origin: rebuilt
+version: 1.0.0
+minds: [john-caples]
+credits:
+  - {title: "Tested Advertising Methods, fifth edition (1997)", by: "John Caples, revised by Fred E. Hahn", used: "Judging a headline with the copy covered, five rules for headlines, the dead, too-clever, meaningless and mere-statement headlines, and trying headlines on outsiders who are not told what is being sold"}

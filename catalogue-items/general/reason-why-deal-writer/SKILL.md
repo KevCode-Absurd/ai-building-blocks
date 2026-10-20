@@ -61,8 +61,8 @@ When you've handed it back, suggest what they could do next in one short questio
 - **Check it before it goes live** with the [Anti-AI-slop copy editor](https://useaiblocks.com/skills/anti-ai-slop-copy-editor). It takes the draft.
 - **Make an offer people want** with the [Value ladder planner](https://useaiblocks.com/skills/value-ladder-planner). It takes the offer.
 - **Write the ad copy** with the [Sales copy editor](https://useaiblocks.com/skills/sales-copy-editor). It takes the draft.
+- **Read your ad results** with the [Coupon and form fixer](https://useaiblocks.com/skills/coupon-and-form-fixer). It takes the offer and draft.
 - **Write the landing page** with the [Ad-matched landing page writer](https://useaiblocks.com/skills/ad-matched-landing-page-writer). It takes the offer.
-- **Make image ads** with the [Three-way offer image ad planner](https://useaiblocks.com/skills/three-way-offer-image-ad-planner). It takes the offer.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

@@ -1,0 +1,123 @@
+new_slug: network-effect-claim-tester
+name: "Network effect claim tester"
+summary: "Paste your claim that more users make it better. Get a test of its effect on price or cost, and a call."
+job: plan-strategy
+thinking: medium
+thinking_why: "The test is a fixed list of questions, but it needs careful reading of your numbers to avoid counting a big user base as a network effect."
+
+headline: "Find out if your network effect is a real edge or just a big user count"
+subhead: Describe your product and why you think more users make it better. It tests who gains, how much, whether it changes your price or cost, and whether a rival can still start from nothing. You get a call of real network power, a useful feature or no network effect.
+
+explain: |
+  Many products get a little better with more users, so the claim is easy to make. Few of them turn that into a lasting edge. A list of members, a busy forum or a large audience is not enough. The test is whether the extra users change what customers will pay, what it costs you to serve them, or how many leave.
+
+  This skill asks the questions in order. Who is on each side? What does one more user add for the others? Does that gain flatten at a small number? Is the network local or global? Can users also be on a rival network at no cost? Most important, can you point to a number: higher price, lower cost or lower churn in the bigger group? If you cannot, the skill says so and names the cheapest way to find out.
+
+when:
+  - You or a co-founder say you have a network effect and nobody has checked it against numbers.
+  - You are building community features and want to know if they will protect your margins.
+  - You are judging a rival's claim that its large audience makes it hard to beat.
+
+you_give:
+  - What the product does and who uses it
+  - Why you think more users make it better
+  - Any numbers that compare small groups with large ones (optional)
+you_get:
+  - Who gains from each extra user, and how
+  - A check on whether the gain levels off at a small number
+  - A test of price, cost and churn between small and large groups
+  - A call of network power, useful feature or no network effect
+  - The cheapest next test, if the numbers are missing
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Describe the product and the claim in your own words, for example what a new member gets from the 1,000th member.
+  - Paste any figures that compare small and large groups, such as retention by group size or prices by region.
+  - Read the call first. If it says no, read the cheapest next test.
+  - If the call is real network power, take it to "Seven powers scorecard builder".
+
+how_it_works:
+  - title: Maps the sides
+    text: Names who uses the product and who gains from whom, such as buyers and sellers, or members and members.
+  - title: Checks the gain per user
+    text: Asks what one more user adds, and the number at which that stops growing.
+  - title: Checks reach
+    text: Finds out if the network is local to a city or a group, or global.
+  - title: Checks multi-homing
+    text: Asks if users can also be on a rival at no cost.
+  - title: Tests the money link
+    text: Looks for a number showing higher price, lower cost or lower churn in larger groups.
+  - title: Calls it
+    text: Real network power, useful feature or no network effect.
+  - title: Checks itself
+    text: Runs its own checks and names any it missed.
+
+output_shape: |
+  THE NETWORK
+  Sides: <who> | One more user adds: <what, for whom>
+
+  WHERE THE GAIN STOPS
+  <the number at which it levels off, or MISSING>
+
+  REACH AND ESCAPE
+  Local or global: <> | Users on a rival too: <yes / no / unknown>
+
+  THE MONEY LINK
+  Price: <small vs large group> | Cost: <> | Churn: <>
+  Size of the effect: <big enough to matter / small / unknown>
+
+  CALL
+  <network power / useful feature / no network effect> | Why: <>
+
+  CHEAPEST NEXT TEST
+  <a test using data you already have, with a pass line>
+
+  MISSING
+  <facts that would change the call>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: Group data
+    how: Retention, price or cost by group size, city or cohort is the best evidence you can give it.
+  - what: A rival
+    how: Name the rival network. The multi-homing check depends on it.
+  - what: What a new user gets on day one
+    how: Describe it. If a new user gets nothing until others join, the start-up problem is part of the call.
+  - what: How you earn from the network
+    how: Say how users turn into revenue. A network that cannot earn gives no power.
+
+judge:
+  - Both sides of the network are named.
+  - The call rests on a price, cost or churn number, or says MISSING.
+  - The limit where the gain levels off is addressed.
+  - The multi-homing check is answered.
+  - The call is not based on the user count alone.
+
+test:
+  - Give it a product with a large audience and no data on price or retention. The call should be no better than "useful feature".
+  - Give it a marketplace with higher fill rates in larger cities. It should find the local effect and say it is local.
+  - Run it twice on the same facts. The call should stay the same.
+
+improve:
+  - Add retention by group size once you have it, then rerun.
+  - Test the claim again after you add a new feature or enter a new city.
+  - Add what the rival offers for free to the multi-homing check.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Applying a fixed list of questions to your claim is reasoning work any strong chat AI does well."}
+    - {name: "A spreadsheet of retention or prices by group", why: "It turns the money link from a guess into a number."}
+  inputs:
+    - "Retention or churn by group size"
+    - "Prices or fees by city or segment"
+    - "A description of a rival network"
+
+terms:
+  - term: Network effect
+    meaning: The product becomes more valuable to each user as more people use it.
+  - term: Multi-homing
+    meaning: Users being on more than one competing network at the same time, so none of them is locked in.
+  - term: Material
+    meaning: Big enough to change your price, cost or margin.

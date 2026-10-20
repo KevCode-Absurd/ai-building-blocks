@@ -1,0 +1,25 @@
+slug: buyer-wants-finder
+name: Lead want picker
+summary: "Paste your product facts. Get one buyer want to lead with, its reward, the facts behind it and what not to claim."
+category: general
+type: skill
+role: make
+job: strategy
+level: beginner
+inputs:
+  - type: product_data
+    required: true
+  - type: persona
+    required: false
+  - type: voc_reviews
+    required: false
+outputs:
+  - type: brief
+origin: rebuilt
+version: 1.0.0
+minds:
+  - victor-schwab
+credits:
+  - title: How to Write a Good Advertisement (a book summary)
+    by: Victor O. Schwab
+    used: Seeing the product as both maker and buyer, the four groups of wants (gain, be, do, save), and the warning against mistaking your own taste for the buyer's

@@ -1,0 +1,123 @@
+new_slug: candid-line-writer
+name: "Candid line writer"
+summary: "Paste the word you chose to own and a flaw buyers see. Get three short admit-then-turn lines that set up your word."
+job: write-ad-copy
+thinking: medium
+thinking_why: "It tests flaws against fixed rules and then writes short lines, which needs care with wording but not deep analysis."
+
+headline: "Turn a flaw buyers already see into the line that sets up your word"
+subhead: "Paste the word you chose and what buyers say against you. It finds a flaw that many buyers already believe, checks it is quickly agreed and safe to admit, and writes three lines that admit it plainly and turn to your word in a few words."
+
+explain: |
+  Buyers distrust claims. They trust an admission. When a brand states a weakness buyers already see, they believe it at once, relax, and listen to what comes next. A positive claim has to be proved. A negative one does not.
+
+  The method is a flaw, then a turn. The flaw must be widely seen and agreed in a second, or buyers get confused. The turn must come at once and must follow from the flaw, so the admission sets up your word. The skill finds the flaw in your material, checks it, and drops any that touch safety or law. It writes three lines with different tones. It also rules out the common mistakes: softening the flaw, apologising and piling up admissions.
+
+  This skill is for brand lines about the word you own. For a single ad built on a product weakness, use "Flaw-first ad writer".
+
+when:
+  - Your message is true but buyers don't believe it.
+  - You are second, new or small and everyone knows it.
+  - Your name, price, size or look is a known weak point.
+  - You have picked a word and need a line that sets it up.
+
+you_give:
+  - The word you chose to own, such as the pick from "Ownable word picker"
+  - Customer words, returns or rival jabs that show flaws (optional)
+  - Your brand facts and tone (optional)
+you_get:
+  - A list of flaws buyers already see, with sources
+  - The flaw whose turn leads to your word
+  - Three admit-then-turn lines
+  - Where to use each line, and how to test it
+  - What not to say
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your word and a few reviews, returns or rival jabs that show the flaw.
+  - Read the three lines aloud to five buyers. They should nod at the flaw and accept the turn.
+  - Use the best line as an opener on your homepage, deck or sales call.
+
+how_it_works:
+  - title: Lists the flaws
+    text: Finds flaws in reviews, returns, rival claims and obvious facts, each with a source.
+  - title: Tests each flaw
+    text: Is it widely seen, agreed in a second, and safe to admit?
+  - title: Finds the turn
+    text: Looks for a flaw that logically leads to your word in one step.
+  - title: Writes three lines
+    text: A plain admit-then-turn, a lighter one and one for a second-place or small brand.
+  - title: Rules out the common faults
+    text: No softening, no apology, one flaw per line.
+  - title: Plans the test
+    text: Says where to use each line and how to test it with five buyers.
+
+output_shape: |
+  FLAWS BUYERS ALREADY SEE
+  <flaw> | Source: <review, return, rival, fact> | Seen widely: <y/n> | Agreed in a second: <y/n> | Safe to admit: <y/n>
+
+  THE FLAW THAT LEADS TO YOUR WORD
+  <flaw> -> <word> | Chain: <flaw means ..., so ...> | Steps: <1>
+
+  THREE LINES
+  1. <admit> / <turn> | Tone: plain
+  2. <admit> / <turn> | Tone: light
+  3. <admit> / <turn> | Tone: for a smaller or second brand
+
+  WHERE TO USE EACH
+  <line> | Place: <headline, first sentence, sales opener>
+
+  TEST
+  Say to five buyers. Pass if <four nod at the flaw and accept the turn>.
+
+  DO NOT SAY
+  <phrases that soften, deny or apologise>
+
+  MISSING
+  <flaws or proof you did not have>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: Flaw sources
+    how: Give reviews, return reasons and what rivals say about you. Do not give your own guess of a flaw.
+  - what: Tone
+    how: Say if you want dry, warm or plain. It picks the version order.
+  - what: Limits
+    how: List flaws you cannot mention for legal or safety reasons.
+  - what: Where it will appear
+    how: A headline needs fewer words than a sales call. Say which.
+
+judge:
+  - The flaw is widely seen and agreed in a second.
+  - The turn comes within the same line and ends on your word.
+  - The chain from flaw to word has one step.
+  - No line softens, denies or apologises.
+  - No flaw touches safety or law.
+
+test:
+  - Say each line to five buyers. Watch whether they nod at the flaw first.
+  - Ask them what they think the brand stands for after hearing it. It should be your word.
+  - Show the lines to a sales person. They should be able to say it without wincing.
+  - Run it twice. The flaw and the word should stay the same.
+
+improve:
+  - Add every new complaint to your flaw list, so you always have a fresh one.
+  - Keep the lines that tested best in your brand file.
+  - Add the buyer's own phrase for the flaw so the line sounds like them.
+  - Pair it with "Flaw-first ad writer" when a single ad needs the same turn.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Testing flaws and writing short lines is text work any strong chat AI does with this skill."}
+  inputs:
+    - "Reviews, return reasons and support tickets"
+    - "The word from Ownable word picker"
+    - "What rivals say about you in their ads"
+
+terms:
+  - term: Candor
+    meaning: Admitting a negative first, so buyers lower their guard and believe the positive that follows.
+  - term: Turn
+    meaning: The short phrase that moves from the flaw to the benefit it leads to.

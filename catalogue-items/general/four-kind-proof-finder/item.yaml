@@ -1,0 +1,25 @@
+slug: four-kind-proof-finder
+name: Four-kind proof finder
+summary: Paste your ad brief and product facts. Get each claim paired with its strongest proof, and the claims that have none.
+category: general
+type: skill
+role: source
+job: research
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: product_data
+    required: true
+  - type: voc_reviews
+    required: false
+outputs:
+  - type: objection_map
+origin: rebuilt
+version: 1.0.0
+minds:
+  - victor-schwab
+credits:
+  - title: How to Write a Good Advertisement (a book summary)
+    by: Victor O. Schwab
+    used: The four kinds of proof (how it is made, what it has done, what others say, what the reader can try) and the rules for making facts believable

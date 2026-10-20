@@ -1,0 +1,111 @@
+new_slug: belief-ladder-builder
+name: "Belief ladder builder"
+summary: "Paste a draft with a big claim. Get the claims reordered into small accepted steps, each scored, and a redraft."
+job: write-ad-copy
+thinking: high
+thinking_why: "It has to judge how readily a doubtful reader accepts each claim and rebuild the order. Use your strongest model."
+
+headline: "Make a hard-to-believe claim believable by changing its order"
+subhead: Give it a draft with a big claim. It finds what your reader already believes that the claim runs against, scores each claim for how readily a doubter accepts it, and rebuilds the order as a ladder of small steps. Each step asks for one point more belief than the one before.
+
+explain: |
+  Readers do not weigh a claim by itself. They weigh it against what they believe and what they just read. A bold claim at the top is often thrown out. The same claim ten lines down, after several things the reader agreed with, is accepted.
+
+  This skill treats that as a sum. It scores each claim from 1 (thrown out cold) to 5 (accepted at once). A ladder starts at a 5 that is true, drops no more than one point per step and ends on the big claim. It picks a tool for each step, such as a question most readers answer yes to, a short list of the reader's own situation, a gentle challenge to a belief that holds only sometimes, or a short chain of reasoning. Then it redrafts, changing the order and adding only the linking text.
+
+when:
+  - Readers drop out right where you make your biggest claim.
+  - Your headline promise sounds too good to be true.
+  - You sell something that asks the reader to change a belief, such as "I could never do this".
+
+you_give:
+  - A draft with its big claim
+  - What your reader believes about this kind of product, about themselves and about sellers like you (optional, from a brief or customer words)
+
+you_get:
+  - The goal claim and the beliefs it runs against
+  - "A ladder: each step, the tool used, its score and the jump from the one before"
+  - The draft reordered with only linking text added
+  - The missing facts, rung by rung
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your draft. Add customer words or a brief if you have them.
+  - Read the scores. If you think a claim is easier or harder to believe, change the score and ask it to rebuild.
+  - Read the redraft aloud. Every step should feel like a small nod.
+
+how_it_works:
+  - title: Finds the goal claim
+    text: Lists every claim and marks the one that, if rejected, makes the rest worthless.
+  - title: Maps the beliefs
+    text: Writes what the reader believes about the product, about themselves and about sellers like you.
+  - title: Scores each claim
+    text: Rates from 1 to 5 how readily a doubtful reader would accept it with nothing before it.
+  - title: Builds the ladder
+    text: Starts at a true 5, drops at most one point a step and ends on the goal claim.
+  - title: Picks the tools
+    text: A yes-question, a situation list, a gentle challenge, logic words or a short chain of reasoning, each only where it fits.
+  - title: Redrafts
+    text: Moves claims down to where they are prepared and adds only linking text.
+
+output_shape: |
+  GOAL CLAIM
+  <the claim> | Runs against: <beliefs>
+
+  LADDER
+  Rung | Statement | Tool | Score | Jump from the one before
+  1 | <...> | <...> | 5 | -
+  ...
+  n | <goal claim> | <...> | <1-2> | <+1>
+
+  REDRAFT
+  <the copy in the new order, linking text marked>
+
+  MISSING
+  <facts or beliefs a rung would need>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: Reader beliefs
+    how: Paste real customer words about doubts. Without them it works from the draft only and says so.
+  - what: How long a ladder
+    how: A big gap between the first rung and the goal claim needs more rungs. A short page may need only three. Say which you want.
+  - what: Voice
+    how: Tell it to keep your voice. It adds the least new text it can.
+
+judge:
+  - The first rung is true and scores 5.
+  - No rung jumps two points or more.
+  - Every rung is backed by a fact in the draft, the brief or common knowledge.
+  - The goal claim is the last rung.
+  - The redraft adds no new claim.
+
+test:
+  - Give it a draft where you know readers drop out at one claim. The ladder should place that claim low in the order.
+  - Read each rung to someone who does not know the product and ask if they accept it. The first rungs should get an easy yes.
+  - Run it twice on the same draft. The goal claim and the order should be close.
+  - Compare the redraft with the original on a small test, with the same headline and offer.
+
+improve:
+  - Keep a list of beliefs your buyers hold, with their words, and paste it in each time.
+  - Save the ladders that worked, so a new product in the same field starts from them.
+  - Pair it with "Claim and proof matcher" so each rung also has proof beside it.
+  - Add the logic words you do not want, such as "obviously", to the "Avoid" list in the skill file.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Scoring and reordering claims works well in any strong chat AI with this skill."}
+  inputs:
+    - "Customer objections and doubts in their own words"
+    - "The facts that back each claim"
+    - "A draft with the biggest claim already in it"
+
+terms:
+  - term: Goal claim
+    meaning: The claim that, if rejected, makes the rest of the copy worthless.
+  - term: Rung
+    meaning: One statement in the ladder, scored for how readily a doubtful reader accepts it.
+  - term: Jump
+    meaning: The drop in score from one rung to the next. It should never be two points or more.

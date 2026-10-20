@@ -20,7 +20,7 @@ seats:
   - {seat: "Honest numbers", asks: "Is this a vanity number, or does it tell us what caused the change and what to do next?"}
   - {seat: "Pivot or persevere", asks: "Based on what we've learned so far, do we keep going or change course?"}
 pairs_with: [steve-blank, taiichi-ohno, kent-beck, clayton-christensen, marty-cagan]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "Eric Ries", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Eric_Ries", kind: reference}
   - {n: 2, title: "Lean startup", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Lean_startup", kind: reference}
@@ -29,6 +29,7 @@ sources:
   - {n: 5, title: "Minimum Viable Product: a guide (August 3, 2009)", by: "Eric Ries, Startup Lessons Learned", url: "http://www.startuplessonslearned.com/2009/08/minimum-viable-product-guide.html", kind: own-words}
   - {n: 6, title: "Why vanity metrics are dangerous (December 23, 2009)", by: "Eric Ries, Startup Lessons Learned", url: "http://www.startuplessonslearned.com/2009/12/why-vanity-metrics-are-dangerous.html", kind: own-words}
   - {n: 7, title: "The Lean Startup: Principles", by: "The Lean Startup (Eric Ries)", url: "https://theleanstartup.com/principles", kind: own-words}
+  - {n: 8, title: "The Lean Startup: How Today's Entrepreneurs Use Continuous Innovation to Create Radically Successful Businesses (2011)", by: "Eric Ries", kind: own-words}
 tests:
   - {kind: use, prompt: "Here's my plan for a paid newsletter for local gardeners. List the guesses it rests on, riskiest first, and design a one-week test for the riskiest one."}
   - {kind: use, prompt: "Our monthly report shows total page views and total sign-ups. Rewrite it with numbers we could actually act on."}

@@ -32,6 +32,7 @@ sources:
   - {n: 8, title: "How To Write A Good Advertisement by Victor Schwab (summary of his five steps)", by: "Nate Shivar", url: "https://www.nateshivar.com/?p=7698", kind: secondary}
   - {n: 9, title: "Victor Schwab Ad #7: How To Win Friends And Influence People", by: "Info Marketing Blog", url: "https://infomarketingblog.com/victor-schwab-ad-7-how-to-win-friends-and-influence-people/", kind: secondary}
   - {n: 10, title: "In 1958 A Marketing Legend Revealed These Secrets For Creating Powerful Headlines", by: "Marketing Insider Group", url: "https://marketinginsidergroup.com/content-marketing/1958-marketing-legend-revealed-secrets-creating-powerful-headlines/", kind: secondary}
+  - {n: 11, title: "How to Write a Good Advertisement (a book summary of the 1962 edition)", by: "Victor O. Schwab (chapter summary by a third party)", kind: secondary}
 tests:
   - {kind: use, prompt: "Write 12 headlines for a home budgeting app: six that promise a gain and six that warn of a loss. Mark the two you would split-test first."}
   - {kind: use, prompt: "Here is my sales page headline: 'Quality You Can Trust'. Rewrite it three ways, then write the first paragraph for your favourite."}

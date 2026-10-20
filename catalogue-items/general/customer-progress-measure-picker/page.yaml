@@ -1,0 +1,110 @@
+new_slug: customer-progress-measure-picker
+name: Customer progress measure picker
+summary: Paste the numbers you track and your job spec. Get which ones miss the customer and three measures of progress to use.
+job: plan-strategy
+thinking: high
+thinking_why: It judges what each number really describes and finds ways teams could game a measure. Give it your strongest model.
+headline: Measure whether your customers are getting their job done
+subhead: Paste the numbers you track and your job spec. It shows which numbers miss the customer, writes three to five measures of progress and checks each for gaming.
+explain: |-
+  Sales, clicks and conversion rates are easy to count, so teams watch them. They tell you how many bought. They do not tell you if the job got done.
+
+  This skill sorts what you track by what it describes: your product, a customer type, your costs, a rival or the customer's progress. It checks each number against three traps. The number is loud because the system produces it. It rewards selling more to the same people. Or it was chosen because it confirms what the team already thinks. Then it writes three to five measures of progress taken from the promises in your job spec, including one for repeat use, and checks each for ways to game it.
+when:
+  - Your reports are full of figures and nobody can say if customers got what they came for.
+  - You count purchases or sign-ups and cannot tell if people use the thing.
+  - Teams hit their numbers and customers still complain.
+you_give:
+  - The numbers and reports you track now
+  - A job spec (optional but best)
+  - How data is collected today (optional)
+you_get:
+  - Each number tagged and checked against three data traps
+  - Three to five measures of customer progress, each with formula, source and owner
+  - A repeat-use measure
+  - A gaming check and a guard for each measure
+  - A list of numbers to stop reviewing every week
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste what you track and your job spec.
+  - Read the tags. Check that they match your view of each number.
+  - Take the measures to your team and agree an owner for each.
+how_it_works:
+  - title: Tags every number
+    text: Product, customer type, costs, a rival or customer progress.
+  - title: Runs three traps
+    text: Loud data, surface growth and data that confirms what you believe.
+  - title: Lists the promises
+    text: What must be true for the customer if the job is done.
+  - title: Drafts measures
+    text: One or two for each promise, in terms the customer would recognise.
+  - title: Adds repeat use
+    text: A measure of whether people come back to it, not only whether they bought.
+  - title: Checks for gaming
+    text: How the number could rise without helping the customer, and a guard.
+  - title: Names owners
+    text: One person and one action per measure.
+  - title: Demotes the rest
+    text: Which numbers to stop reviewing weekly.
+output_shape: |-
+  WHAT YOU TRACK
+  <number> | Tag: <product, customer type, costs, rival or progress> | Trap 1: <pass or flag> | Trap 2: <pass or flag> | Trap 3: <pass or flag>
+  Count by tag: <n each> | Read: <one line>
+
+  PROMISES IN THE JOB
+  <sentence a customer would agree with>
+
+  MEASURES (3 TO 5)
+  <name> | Promise: <which> | Formula or question: <text> | Source: <log, survey item or sample> | Collected by: <who> | Rhythm: <how often> | Target: <figure or MISSING> | Defect: <rule>
+    Gaming risk: <text> | Guard: <text> | Owner: <person> | If it moves the wrong way: <action>
+
+  REPEAT USE
+  <measure or gap>
+
+  STOP REVIEWING WEEKLY
+  <up to three numbers> | Why: <text>
+
+  MISSING
+  <gaps>
+
+  CHECKS MISSED
+  <one line per check missed, or none>
+tweaks:
+  - what: Your list of numbers
+    how: Include every report your team looks at, even the dull ones. The dull ones often make the most noise.
+  - what: The job spec
+    how: With one, the measures follow the job. Without one, they are drafts.
+  - what: How much you can collect
+    how: Say whether you can run a short survey. It decides which measures are practical.
+judge:
+  - Every number is tagged and trap-checked.
+  - Measures trace to promises in the job.
+  - A repeat-use measure is present.
+  - Each measure has a guard against gaming.
+  - Estimates are labelled.
+test:
+  - Give it a list of ten numbers with no customer progress. It should say so and write measures from the job spec.
+  - Give it a satisfaction score as the only measure. It should flag it as a feeling about the purchase.
+  - Ask for a measure that is easy to game. It should add a pair that stops it.
+improve:
+  - Review the measures each quarter and drop any that nobody acts on.
+  - Add the measures to your weekly meeting as the first item.
+  - Pair this with "Job experience mapper" so every moment has an owner and a measure.
+  - Compare with "Vanity metric fixer" for the numbers you share with others.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: Tagging numbers and drafting measures is text work any strong chat AI does with this skill.
+    - name: A short survey tool
+      why: Some measures of progress, such as would do it again, can only come from asking.
+  inputs:
+    - Your current dashboard or weekly report
+    - A job spec from the Job spec writer
+    - Support and returns data
+terms:
+  - term: Customer progress measure
+    meaning: A number that shows whether the customer got the job done, such as time saved or a task they no longer do.
+  - term: Loud data
+    meaning: Numbers that the system produces on its own and that pull attention to themselves.
+  - term: Surface growth
+    meaning: Growth from selling more products to the same people, instead of doing the core job better.

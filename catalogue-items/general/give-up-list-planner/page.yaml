@@ -1,0 +1,128 @@
+new_slug: give-up-list-planner
+name: "Give-up list planner"
+summary: "Paste your chosen word and what you sell. Get what to cut against that word, one target and a rule against drift."
+job: plan-strategy
+thinking: medium
+thinking_why: "It sorts every product and customer group against one word and sets rules, which needs judgment but follows fixed steps."
+
+headline: "Decide what to give up so your one word gets heard"
+subhead: "Paste the word you chose and a list of what you sell and who you sell to. It marks each item as feeding, neutral or diluting the word, cuts the product line, picks one target to aim at and writes a rule that stops the position drifting."
+
+explain: |
+  Owning a word costs something. Every product, customer group and message that doesn't serve the word blurs it. The usual instinct is to add: more products for more people, and a new message each budget round. The method here is the opposite. You give up three things: part of the product line, part of the market you aim at, and the habit of changing your position.
+
+  The skill sorts everything you sell against the word and shows the revenue each item brings. It cuts what dilutes the word and parks what is neutral and small. It separates the target (the type of person whose character you want the brand to take) from the market (everyone who will buy anyway). It then writes a rule against changing the position at budget time, with answers ready for the pressures that cause drift: a new boss, a growth target, a hot new channel.
+
+when:
+  - You have picked a word and your range still says many things.
+  - You sell to several groups and your message tries to please all.
+  - A new product, boss or target pulls you off your position.
+  - Your position changes every budget cycle.
+
+you_give:
+  - The word you chose, such as the pick from "Ownable word picker"
+  - A list of your products, offers, groups and channels
+  - Revenue or sales by item (optional)
+  - Your current plan (optional)
+you_get:
+  - Each item marked feeding, neutral or diluting
+  - A cut list in order, with dates
+  - One target, separate from the whole market
+  - A rule against changing the position
+  - Three questions to ask of every new idea
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your word and a plain list of what you sell and to whom, with revenue if you have it.
+  - Read the cut list with whoever owns each product. Agree dates.
+  - Pin the rule and the three questions where your team makes budget decisions.
+
+how_it_works:
+  - title: Lists everything
+    text: Products, sizes, offers, customer groups, messages and channels in one list.
+  - title: Marks each item
+    text: Feeds the word, neutral or dilutes it, with a reason and the revenue share.
+  - title: Cuts the product line
+    text: Cuts what dilutes, parks what is neutral and small, and keeps what feeds.
+  - title: Separates target and market
+    text: Picks one target and notes who else will buy without being aimed at.
+  - title: Writes the no-change rule
+    text: Sets a hold period for the position and what may change inside it.
+  - title: Plans for the pressures
+    text: Writes answers for the new boss, the growth target and the hot channel.
+  - title: Writes three questions
+    text: A test to run on any future product or move.
+
+output_shape: |
+  EVERYTHING YOU SELL OR SAY
+  <item> | Kind: <product, group, message, channel> | Revenue share: <% or MISSING> | Feeds the word: <feeds, neutral, dilutes> | Why: <line>
+
+  CUT LIST
+  <item> | Cut, park or move to its own name | By <date> | Money or time freed: <amount or MISSING>
+
+  TARGET AND MARKET
+  Target: <the type of person> | Why this character: <line>
+  Others who will buy anyway: <group> | Do not aim ads at them
+
+  THE NO-CHANGE RULE
+  Hold the word until <date or condition>. Execution may change. The word may not.
+
+  PRESSURES AND ANSWERS
+  <pressure> | Answer: <line>
+
+  THREE QUESTIONS FOR ANY NEW IDEA
+  1. Does it feed the word?
+  2. Would the word still be true with it?
+  3. Could it have a separate name?
+
+  MISSING
+  <figures that would change a cut>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: Revenue by item
+    how: Give units or revenue. Without it, cuts are by fit only and marked as such.
+  - what: Fixed contracts
+    how: List products you cannot drop soon. They go to "move to own name" or a dated exit.
+  - what: Who decides
+    how: Name the person who can cut. A list without an owner stalls.
+  - what: The next budget date
+    how: The rule is timed to it, so say when it is.
+
+judge:
+  - Every item has a feed, neutral or dilute mark and a reason.
+  - Cuts follow the marks, and the rest is parked with a date.
+  - The target is narrower than the market and is a type of person.
+  - The rule says what may change and what may not.
+  - Each pressure has a prepared answer.
+
+test:
+  - Check that the kept items all fit under the one word without a second sentence.
+  - Ask the person who owns a cut item what they would lose. If it is only prestige, the cut stands.
+  - Run it twice. The cut list should stay close.
+  - Show the target statement to sales. They should be able to name three customers who fit.
+
+improve:
+  - Add margin by item, so cuts include profit and not only revenue.
+  - Add the pressures your company really faces, so the answers fit.
+  - Review the rule at each budget date.
+  - Pair it with "Brand name stretch checker" for any new product you still want.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Sorting a list against one word and writing rules is text work any strong chat AI does with this skill."}
+    - {name: "A spreadsheet", why: "Revenue by item lines up best in a sheet before you paste it in."}
+  inputs:
+    - "Your word from Ownable word picker"
+    - "Sales by product and by customer group"
+    - "Your last two plans, to see where the message changed"
+
+terms:
+  - term: Target
+    meaning: The type of person your marketing is aimed at, whose character the brand takes on.
+  - term: Market
+    meaning: Everyone who will actually buy, which is wider than the target.
+  - term: Dilute
+    meaning: To make the word mean less by adding things that don't serve it.

@@ -1,0 +1,23 @@
+slug: switch-story-mapper
+name: Switch story mapper
+summary: Paste interview notes from recent buyers. Get each buying story mapped, the four forces marked and the patterns across them.
+category: general
+type: skill
+role: check
+job: analysis
+level: advanced
+inputs:
+  - type: voc_reviews
+    required: true
+  - type: plan
+    required: false
+outputs:
+  - type: audit_report
+origin: rebuilt
+version: 1.0.0
+minds:
+  - clayton-christensen
+credits:
+  - title: Competing Against Luck
+    by: Clayton M. Christensen, Taddy Hall, Karen Dillon and David S. Duncan (2016)
+    used: Storyboarding a customer's struggle, the forces that push toward change and the forces that hold back (habit and anxiety), what must be fired for a product to be hired, the first and later hire, and clustering stories instead of slicing them into categories

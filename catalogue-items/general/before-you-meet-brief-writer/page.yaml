@@ -1,0 +1,127 @@
+new_slug: before-you-meet-brief-writer
+name: "Before-you-meet brief writer"
+summary: "Name who you will meet and why. Get what they care about, what to admire and one question only they can answer."
+job: speak-and-persuade
+thinking: medium
+thinking_why: "It must read public material and judge what a person cares about, but the steps are fixed."
+
+headline: "Before-you-meet brief writer"
+subhead: "Give it a person and why you are meeting. It reads what you can find about their work and interests and notes the people around them. It picks two things you can honestly admire and writes one question only they can answer. You get a one-page brief."
+
+explain: |
+  Most people walk into a first meeting with their own pitch ready and nothing prepared about the other person. The talk then circles around what you want, and the person leaves with no sense of being seen.
+
+  This skill prepares the other half. It gathers public facts about what the person does and cares about, and keeps the source of each. It finds what they come back to again and again, which is usually what they treasure. It notes the people who stand near them, such as an assistant or a team lead, who deserve the same care. It picks two honest things to admire, finds real common ground, and writes the one question only they can answer. It also sets the size of your ask, so you ask for advice before you ask for a favour.
+
+when:
+  - "You are about to meet someone senior, new or hard to reach."
+  - "You have a networking event and one person you want to speak to."
+  - "You are going into a first sales call and want to start from their interests."
+
+you_give:
+  - "The person's name and role"
+  - "Why you are meeting and what you hope for"
+  - "Links or text about them, such as a profile, talks or posts (optional)"
+  - "What you have in common, if you know (optional)"
+you_get:
+  - "What they care about, ranked, with sources"
+  - "The people around them and how to greet them"
+  - "Two honest things to admire"
+  - "The common ground, and one question only they can answer"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Give their name, role and the reason for the meeting."
+  - "Paste anything public you have found about them."
+  - "Read the brief once more the evening before."
+  - "Take it to \"Get-them-talking conversation planner\"."
+
+how_it_works:
+  - title: "Sets your goal"
+    text: "States why you are meeting and what a small good result is."
+  - title: "Gathers public facts"
+    text: "Work, talks, causes and groups, each with its source."
+  - title: "Finds what they treasure"
+    text: "The topics they return to, ranked."
+  - title: "Notes the people around them"
+    text: "Names and roles of those who matter."
+  - title: "Picks honest admirations"
+    text: "Two specific points you could say with nothing to gain."
+  - title: "Finds common ground"
+    text: "One true overlap, or says there is none."
+  - title: "Writes the one question"
+    text: "A question only they can answer, that costs them little."
+  - title: "Sets the size of the ask"
+    text: "Advice before a favour, and a favour before a sale."
+
+output_shape: |
+  WHO AND WHY
+  <person, role, your aim, a good small result>
+
+  WHAT THEY CARE ABOUT
+  1. <topic> (source: <where>)
+
+  THE PEOPLE AROUND THEM
+  <name, role, how to greet>
+
+  TWO THINGS TO ADMIRE
+  1. <specific point about their work or choice>
+
+  COMMON GROUND
+  <overlap, or none>
+
+  THE ONE QUESTION
+  <question only they can answer>
+
+  THE SIZE OF YOUR ASK
+  <advice, favour or sale, and why>
+
+  MISSING
+  <what you could not find>
+
+  CHECKS MISSED
+  <one line per check missed, or none>
+
+tweaks:
+  - what: "What you can paste"
+    how: "Paste their bio, a talk summary or recent posts. Real text gives better topics than a name alone."
+  - what: "Why you are meeting"
+    how: "A clear reason lets the brief pick the right question."
+  - what: "Your fallback"
+    how: "Say what you will do if they say no. It keeps the ask honest."
+  - what: "Who else will be there"
+    how: "Name any assistant or host. The brief adds a greeting for them."
+
+judge:
+  - "Every fact on the brief has a source."
+  - "The admirations are specific and true."
+  - "The question can only be answered by this person."
+  - "The ask is small enough for a first meeting."
+  - "Nothing came from private or leaked information."
+
+test:
+  - "Run it on someone you know well and check if it names what they love."
+  - "Run it on a public figure and see if the question could be asked of anyone else."
+  - "Run it twice. The top topics should stay close."
+  - "Use it in a real meeting and note whether the question lit them up."
+
+improve:
+  - "Add how you usually research people, so the sources match your habits."
+  - "Add a short list of your own interests, so common ground is easy to spot."
+  - "Save the briefs in one folder by person."
+  - "Pair it with \"Contact memory card writer\" for after the meeting."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Sorting public notes into topics and a question is text work any strong chat AI does well."}
+    - {name: "A professional profile page or the person's own site", why: "Their own words are the best source of what they care about."}
+  inputs:
+    - "The person's own website, talk or interview"
+    - "The event's guest list"
+    - "A mutual contact who can add a line"
+
+terms:
+  - term: "Common ground"
+    meaning: "A real overlap with the person, such as a place, a field or a problem."
+  - term: "Size of the ask"
+    meaning: "How much you ask for. Advice is smaller than a favour, and a favour is smaller than a sale."

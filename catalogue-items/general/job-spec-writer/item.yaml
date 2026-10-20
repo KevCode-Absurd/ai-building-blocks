@@ -1,0 +1,23 @@
+slug: job-spec-writer
+name: Job spec writer
+summary: Paste your watch notes and leads. Get one job written as a situation, with its practical, social and emotional sides.
+category: general
+type: skill
+role: make
+job: research
+level: intermediate
+inputs:
+  - type: shortlist
+    required: true
+  - type: voc_reviews
+    required: false
+outputs:
+  - type: brief
+origin: rebuilt
+version: 1.0.0
+minds:
+  - clayton-christensen
+credits:
+  - title: Competing Against Luck
+    by: Clayton M. Christensen, Taddy Hall, Karen Dillon and David S. Duncan (2016)
+    used: The definition of a job as progress in a circumstance, its practical, social and emotional sides, the observation questions, the difference between a job and a need or life theme, and the job spec as a blueprint with trade-offs and obstacles

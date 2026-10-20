@@ -1,0 +1,131 @@
+new_slug: other-person-view-mapper
+name: "Other person's view mapper"
+summary: "Describe the person and the matter. Get their side only: what they want, why they act so and how they save face."
+job: sell-and-negotiate
+thinking: medium
+thinking_why: "It has to judge motives fairly and tell known facts from guesses, but the shape of the answer is fixed."
+
+headline: "Other person's view mapper"
+subhead: "Give it the person and the matter between you. It writes what they want in their own words, the fair reason they act as they do, what they gain or lose, and how they could keep their pride. You get a one-page view from their side."
+
+explain: |
+  Most of us plan a hard talk from our own side. We know what we want and what we will say, and we assume the other person is simply in the way. They then defend themselves, and the talk goes nowhere.
+
+  This skill turns the picture round before you plan anything. It lists what the person wants in this matter, marks each line as known or a guess, and writes the honest reason a fair person in their place would act the same way. It names what they stand to gain and lose and finds the point where they are right. Then it works out how they could change their mind without looking foolish. Every guess comes with a question you can ask to check it.
+
+when:
+  - "You are about to ask someone for something and do not know what they care about."
+  - "Someone is acting in a way that annoys you and you want to know why before you speak."
+  - "You are stuck in a dispute where both sides think they are right."
+
+you_give:
+  - "The person, and your relationship to them"
+  - "The matter in a few lines, with what happened so far"
+  - "What you want from them"
+  - "Anything they have said or done that shows what they care about (optional)"
+you_get:
+  - "What they want, in their words, each line marked known or guess"
+  - "The fair reason they act as they do, and where they are right"
+  - "What they gain and lose, and how they could keep their pride"
+  - "Questions to ask them to check the guesses"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Describe the person and what is going on. Include a real quote or action if you have one."
+  - "Say what you would like to happen."
+  - "Read the view back. Cross out any line you cannot say about them without a sneer."
+  - "Take the result to a planner such as \"Buy-in conversation planner\"."
+
+how_it_works:
+  - title: "Writes the matter"
+    text: "States your request and what has happened so far, in facts only."
+  - title: "Lists their wants"
+    text: "Three to five wants in the matter, practical and personal, each marked known or guess."
+  - title: "Finds their reason"
+    text: "Writes why a fair person in their place would do the same, or marks it missing."
+  - title: "Finds where they are right"
+    text: "Names at least one point in their view that is true."
+  - title: "Weighs gain and loss"
+    text: "What they gain or lose if they agree, and if they refuse."
+  - title: "Protects their pride"
+    text: "Picks one way to let them change course without losing face."
+  - title: "Writes a true sympathy line"
+    text: "A line you could say sincerely, or a note that you cannot yet."
+  - title: "Checks the view"
+    text: "Runs its own checks and names any it missed."
+
+output_shape: |
+  THE MATTER
+  <your request and the facts so far>
+
+  WHAT THEY WANT
+  1. <want, in their words> (KNOWN or GUESS)
+
+  WHY THEY ACT AS THEY DO
+  <the fair reason> (KNOWN or GUESS)
+
+  WHERE THEY ARE RIGHT
+  <a true point in their view>
+
+  WHAT THEY GAIN AND LOSE
+  If they agree: <gain> | <loss>
+  If they refuse: <gain> | <loss>
+
+  HOW THEY KEEP THEIR PRIDE
+  <one way out>
+
+  A TRUE SYMPATHY LINE
+  <line you could say, or: none yet>
+
+  ASK THEM
+  <questions that test the guesses>
+
+  MISSING
+  <what you do not know>
+
+  CHECKS MISSED
+  <one line per check missed, or none>
+
+tweaks:
+  - what: "What they have said"
+    how: "Quote their words if you can. A real quote beats a guess and gets the wants right."
+  - what: "How well you know them"
+    how: "Say if you have met once or for years. A stranger gets more guesses and more questions."
+  - what: "What is at stake for them"
+    how: "Name any deadline, boss or cost they face. It often explains more than their character does."
+  - what: "Your goal"
+    how: "State it in one line. The view then finds the gains that match it."
+
+judge:
+  - "Each want is in the person's own terms, not yours."
+  - "Known and guess are marked on every line."
+  - "The reason for their behaviour is one a fair person would accept."
+  - "It names at least one point where they are right."
+  - "The sympathy line is true, or it says none yet."
+
+test:
+  - "Run it on a person you know well. Ask them if the wants sound right."
+  - "Run it on someone you dislike. See if it still finds a fair reason."
+  - "Run it twice. The wants should stay close even if the wording changes."
+  - "Use one of the questions in a real talk and see if it corrects a guess."
+
+improve:
+  - "Add your notes on this person from past talks, so fewer lines are guesses."
+  - "Add words they use for the matter, so the view sounds like them."
+  - "Keep a short file per person and update it after each talk."
+  - "Pair it with \"Buy-in conversation planner\" when you will speak to them soon."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Weighing motives and sorting known from guessed facts is text work any strong chat AI does well."}
+    - {name: "A notes app", why: "Keep one note per person so each view builds on the last."}
+  inputs:
+    - "Past emails or messages from the person"
+    - "What others say they care about"
+    - "The deadline or pressure they are under"
+
+terms:
+  - term: "Save face"
+    meaning: "To leave someone a way to change course without feeling shamed or beaten."
+  - term: "Known and guess"
+    meaning: "Known means they said it or did it. Guess means you inferred it and should check."

@@ -1,0 +1,89 @@
+new_slug: keyed-ad-results-log-keeper
+name: Keyed ad results log keeper
+summary: Paste what an ad did. Get a log entry that records its key, conditions and results, and what to try next.
+job: read-ad-results
+thinking: low
+thinking_why: It fills in a fixed log template from the numbers you give it.
+headline: Keyed ad results log keeper
+subhead: Give it the results of an ad and its details. It writes a log entry with the ad's key, conditions, counts and cost, says what the result shows and what it does not, and names the next thing to try. You get a log you can keep adding to.
+explain: |-
+  Ads that are not recorded teach nothing. Without a record you repeat mistakes, forget what worked, and argue about taste instead of results.
+
+  This skill writes a log entry for each ad: the key that traces replies, the offer, the headline, where it ran and under what conditions, and what it brought. It states what the result shows and what it does not, counts only large gaps as real, and records failures as well as wins. Over time the log becomes your own book of what works for your buyers.
+when:
+  - You run ads and cannot say which one worked best last year.
+  - Your team debates ads on taste.
+  - You change too much between ads to learn anything.
+you_give:
+  - The results report for the ad or test
+  - The ad and offer (optional)
+  - "Conditions: dates, place, size, season, anything unusual"
+you_get:
+  - A log entry with a fixed set of fields
+  - A plain reading of what the result shows and what it does not
+  - A note on whether the gap is large enough to count
+  - The next thing to try, and the idea to keep running
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste the results and the ad details.
+  - Add the entry to your log.
+  - Read the log before you write the next ad.
+how_it_works:
+  - title: Fixed fields
+    text: Key, version, date, where, size, cost, offer, headline.
+  - title: Conditions
+    text: Season, news, weather and anything else unusual.
+  - title: Results
+    text: Replies, qualified leads, sales and cost per sale.
+  - title: Reading
+    text: What the result shows, what it does not, and whether the gap is big enough to count.
+  - title: Next step
+    text: The next change to test and the idea to keep running.
+output_shape: |-
+  LOG ENTRY
+  Key: <code> | Version: <name> | Date: <dates>
+  Where: <medium, position> | Size or format: <> | Cost: <>
+  Offer: <> | Headline: <>
+  Conditions: <season, news, weather, other>
+  Results: replies <> | qualified <> | sales <> | cost per sale <>
+  Compared with: <older entry or control> | gap: <percent> | counts: <yes or no>
+  Shows: <>
+  Does not show: <>
+  Keep running: <idea>
+  Try next: <one change>
+
+  MISSING
+  <numbers needed>
+
+  CHECKS MISSED
+  <one line each, or none>
+tweaks:
+  - what: Gap size
+    how: Set your own line for a gap that counts. The default is a difference of more than 15 percent.
+  - what: Log place
+    how: Say where you keep the log, such as a sheet, so the entry fits its columns.
+judge:
+  - Every field is filled or marked MISSING.
+  - The reading says what the result does not show.
+  - A gap under the line is not called a win.
+  - One next change is named.
+test:
+  - Read an old entry and see if you can tell why that ad worked.
+  - Check the gap sum by hand.
+  - Look for entries that record failures as well as wins.
+improve:
+  - Add a column for the buyer or list used.
+  - Tag entries by idea, so you can see which ideas win most.
+  - Review the log every quarter.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: The work is sorting and writing from facts you supply, which any strong chat AI does well with this skill.
+  inputs:
+    - The results report from the Ad results report writer
+    - Your past log entries, to compare
+terms:
+  - term: Key
+    meaning: A code on an ad or form that shows which version a reply came from.
+  - term: Negative knowledge
+    meaning: What you learn does not work, which is worth recording as much as what does.

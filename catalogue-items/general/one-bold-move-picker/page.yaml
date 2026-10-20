@@ -1,0 +1,131 @@
+new_slug: one-bold-move-picker
+name: "One bold move picker"
+summary: "Paste your plan and rivals. Get one move to back, what to stop, the money it needs and a pass test."
+job: plan-strategy
+thinking: high
+thinking_why: "It has to compare rivals' weak spots and judge which one move beats the rest, so deeper thinking gives a sharper pick."
+
+headline: "Back the one move that can win, and stop the rest"
+subhead: "Paste your plan, your fix list from earlier checks if you have one, and your rivals. It finds where each rival is least ready, scores your candidate moves, picks one and writes the stop list, the money it needs, an owner and a pass test with a date."
+
+explain: |
+  Plans usually grow into a list of small efforts, each done well. The idea behind this skill is that in any given situation only one move produces a big result, and it is usually aimed where the rival does not expect you. Spreading the same money over ten moves makes each too weak to reach the buyer's mind.
+
+  The skill scores each candidate on four yes or no tests: does it hit a real rival weakness, does it feed the one idea you own, would the rival fail to expect or copy it within a year, and can you say it to a buyer in one sentence. It picks the winner, turns every other move into a park or cut, and checks that something you already sell isn't blocking it. It prices the move, names an owner who stays near customers, and sets a pass or fail test with a date, so a failed move is dropped early and not rescued.
+
+when:
+  - Your plan has many moves and each gets a thin slice of money.
+  - You are chasing a bigger rival and can't tell where to hit.
+  - A fix list from a review has more items than you can do.
+  - You keep adding campaigns instead of choosing one.
+
+you_give:
+  - Your plan or list of candidate moves
+  - Your rivals and what each is known for (optional)
+  - A fix list from "Marketing plan law checker" (optional)
+  - Your budget, if you know it
+you_get:
+  - Where each rival is least ready
+  - A score for each candidate move on four tests
+  - The one move to back, in one sentence
+  - A stop list with the money it frees
+  - A budget check, an owner and a pass or fail test with a date
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste the plan, and the fix list from an earlier check if you have one.
+  - Add your rivals and your budget. If you don't know the budget, say so.
+  - Share the one-sentence move with a few buyers before you commit.
+  - Hold the owner to the pass test on its date.
+
+how_it_works:
+  - title: Collects the candidates
+    text: Lists every move in the plan and in the fix list.
+  - title: Finds rival weak spots
+    text: For each rival, finds where its strength stops it, and where it has said it will not go.
+  - title: Scores four tests
+    text: Hits a weakness, feeds your one idea, is unexpected, and can be said in one sentence.
+  - title: Picks one
+    text: Chooses the highest score and says why it beats the second.
+  - title: Writes the stop list
+    text: Marks every other move park or cut and adds up the money that frees.
+  - title: Checks the blocker
+    text: Looks for something you sell or say today that would confuse the move.
+  - title: Prices and owns it
+    text: Compares money needed with money you have, names an owner and sets a test with a date.
+  - title: Checks itself
+    text: Runs its own checks and names any it missed.
+
+output_shape: |
+  WHERE EACH RIVAL IS LEAST READY
+  <rival> | Its strength: <x> | What that stops it doing: <y> | Evidence: <source or guess>
+
+  CANDIDATE MOVES
+  <move> | Hits weak spot: <yes/no> | Feeds your idea: <yes/no> | Unexpected: <yes/no> | One sentence: <yes/no> | Score: <n of 4>
+
+  THE ONE MOVE
+  <the move in one sentence a buyer would understand> | Why it beats the next: <line>
+
+  STOP LIST
+  <move> | Park or cut | Frees: <amount or MISSING>
+
+  THE BLOCKER
+  <what you sell or say today that would confuse the move> | Step back: <what to drop> | Step forward: <the move>
+
+  MONEY
+  Needed: <amount and how it was priced> | Available: <amount> | Ratio: <n> | If under 0.5, narrow by: <market, place or channel>
+
+  OWNER AND FRONT LINE
+  <name or role> | Visits customers or shops <how often>
+
+  PASS OR FAIL TEST
+  By <date>: <measure and threshold> | If it fails: <drop or change, not rescue>
+
+  MISSING
+  <facts that would change the pick>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: Candidate moves
+    how: List real options, including ones you dislike. A short list of three or four works better than a long one.
+  - what: Rival weak spots
+    how: Give the words buyers use about each rival. A weakness with no source is marked as a guess.
+  - what: Your idea
+    how: State the one word or idea you own or want to own. The feed test needs it.
+  - what: Budget
+    how: Give a number or a range. A real number lets the ratio test run.
+
+judge:
+  - Exactly one move is picked, and the rest are parked or cut.
+  - The rival weak spot comes from the rival's strength, with a source or a marked guess.
+  - The move fits in one sentence a buyer would understand.
+  - The money is priced from quotes or marked MISSING, not guessed.
+  - The owner is close to customers, and the test has a date and a threshold.
+
+test:
+  - Run it on a plan with eight moves. Check it names one and cuts or parks seven.
+  - Give it a plan where one move blocks another. See if it finds the blocker.
+  - Read the one-sentence move to three buyers. They should repeat it back.
+  - Run it twice. The picked move should stay the same or close.
+
+improve:
+  - Add a list of moves rivals have already tried, so it doesn't pick a stale one.
+  - Add your last three failed moves and why, so the unexpected test learns from them.
+  - Set a standing review date, so the test is not forgotten.
+  - Pair it with "Long-run effects checker" before you commit money.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Comparing rivals and scoring moves is text work any strong chat AI does with this skill."}
+  inputs:
+    - "Rival websites, reviews and ads"
+    - "Your fix list from a plan check"
+    - "Quotes for press support and paid media"
+
+terms:
+  - term: Stop list
+    meaning: The moves you decide not to do now, and the money that decision frees.
+  - term: Front line
+    meaning: The places where customers meet your product, such as shops, calls and delivery.

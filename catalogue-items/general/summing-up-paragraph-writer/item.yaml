@@ -1,0 +1,23 @@
+slug: summing-up-paragraph-writer
+name: Summing-up paragraph writer
+summary: Paste your ad draft. Get a short section that pictures the gain, sums up the case and gives a reason to act.
+category: general
+type: skill
+role: make
+job: copy
+level: intermediate
+inputs:
+  - type: ad_copy
+    required: true
+  - type: objection_map
+    required: false
+outputs:
+  - type: copy_draft
+origin: rebuilt
+version: 1.0.0
+minds:
+  - victor-schwab
+credits:
+  - title: How to Write a Good Advertisement (a book summary)
+    by: Victor O. Schwab
+    used: "The stretch between proof and the ask: picture the benefit in daily life, sum up, give a reason to act now, put value before price, and add a small extra touch"

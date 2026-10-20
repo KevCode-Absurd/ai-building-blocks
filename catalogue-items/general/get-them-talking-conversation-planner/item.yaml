@@ -1,0 +1,18 @@
+slug: get-them-talking-conversation-planner
+name: "Get-them-talking conversation planner"
+summary: "Paste your brief on the person. Get a warm start, questions they enjoy answering and where to stop and listen."
+category: general
+type: skill
+role: make
+job: strategy
+level: beginner
+inputs:
+  - {type: persona, required: true}
+  - {type: question, required: false}
+outputs:
+  - {type: plan}
+origin: rebuilt
+version: 1.0.0
+minds: [dale-carnegie, joe-girard]
+credits:
+  - {title: "How to Win Friends and Influence People (1981 revised edition), Part Two chapters 2 to 6", by: "Dale Carnegie", used: "Greet with a real smile and the person's name, listen without interrupting, ask questions they will enjoy answering, talk in terms of their interests and make them feel important sincerely"}

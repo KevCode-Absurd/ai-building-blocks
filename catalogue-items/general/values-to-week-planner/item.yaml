@@ -12,7 +12,7 @@ outputs:
   - {type: plan}
 origin: rebuilt
 version: 1.0.0
-minds: [cal-newport]
+minds: [cal-newport, stephen-covey]
 credits:
   - {title: "Study notes on Cal Newport, Tim Ferriss Show episode 568", by: "Cal Newport", used: "Planning from a short statement of roles and values down to quarter, week and day; protected blocks for hard work; fixed times to check messages"}
   - {title: "Digital Minimalism", by: "Cal Newport", used: "Choosing tools and habits by the values they serve, and judging a pace by what it produces over months"}

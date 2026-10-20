@@ -1,0 +1,18 @@
+slug: market-mood-reader
+name: "Market mood reader"
+summary: "Paste your holdings and how prices moved. Get each move sorted as business or mood, and a take, ignore or wait read."
+category: general
+type: skill
+role: check
+job: analysis
+level: intermediate
+inputs:
+  - {type: question, required: true}
+outputs:
+  - {type: audit_report}
+origin: rebuilt
+version: 1.0.0
+minds: [benjamin-graham, warren-buffett]
+credits:
+  - {title: "The Intelligent Investor (revised edition, 2003)", by: "Benjamin Graham, with commentary by Jason Zweig", used: "The partner who names a new price every day, the split between pricing and timing, the rule not to buy after a big rise or sell after a big drop, and why price movement matters only as a chance to buy or sell sensibly"}
+  - {title: "Security Analysis: Principles and Technique, second edition (1940)", by: "Benjamin Graham and David L. Dodd", used: "The market as a voting machine and not a weighing machine"}

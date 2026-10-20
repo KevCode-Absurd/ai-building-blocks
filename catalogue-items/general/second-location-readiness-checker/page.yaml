@@ -1,0 +1,116 @@
+new_slug: second-location-readiness-checker
+name: "Second location readiness checker"
+summary: "Paste your manual and trial notes. Get the gaps a newcomer found, a profit-without-you check and what to fix before opening."
+job: plan-strategy
+thinking: medium
+thinking_why: "It sorts trial notes into gaps and runs a short list of checks with your numbers. The checks are fixed, so a mid-range model does it well."
+
+headline: "Find out if your business runs without you before you open the next one"
+subhead: Paste your manual and what you saw when a newcomer ran a shift. It turns every stop and question into a gap in the manual, checks the first location makes money without you on site, and checks the next site, supplies and person. You get a ready or not yet call and a fix list.
+
+explain: |
+  A second location that copies only what you do from memory will copy your good days. It will miss the dozens of small things you do without noticing. A trial with a real newcomer is the cheapest way to find them.
+
+  This skill takes the trial notes and sorts each stop, question and guess into a gap: a missing step, an unclear number, a missing tool, or a judgment only you can make. It then checks the three things that decide whether a copy can work: whether the first location makes money when you are not there, whether a second site and its supplies can be arranged on the same terms, and whether there is one named person who can run it. It ends with ready or not yet, and the fixes in order.
+
+when:
+  - You are about to open a second location, sign a partner or hire a manager to run your business.
+  - A newcomer just ran a shift from your manual and you have notes on where they struggled.
+  - Your first location is busy but you are not sure it earns money when you are not there.
+
+you_give:
+  - Your manual, standards sheet or job cards
+  - Notes from a newcomer's trial shift, showing where they stopped, asked or guessed
+  - How the first location performs when you are away (optional)
+you_get:
+  - Each trial note sorted into a gap, with the fix
+  - A check that the first location earns without you on site
+  - A check on the second site, supplies and who runs it
+  - A call of ready or not yet, and a fix list in order
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste the manual and your trial notes exactly as you wrote them.
+  - Add figures for takings and costs in a week you were away, if you have them.
+  - Name the second site and who would run it, even if it is only an idea.
+  - Fix the gaps in order, then run the trial again with a different person.
+
+how_it_works:
+  - title: Sorts the trial notes
+    text: Each stop is a missing step, an unclear number, a missing tool or a judgment call only you can make.
+  - title: Checks it runs without you
+    text: Looks at takings, costs and complaints in a week you were away.
+  - title: Checks the site and supplies
+    text: Asks if the same inputs can be bought on the same terms and the site fits the layout.
+  - title: Checks the person
+    text: Asks who runs it, how they were trained, and who checks their work.
+  - title: Calls it
+    text: Ready, ready with fixes or not yet, with the fixes in order.
+  - title: Checks itself
+    text: Runs its own checks and names any it missed.
+
+output_shape: |
+  TRIAL GAPS
+  <note> | Type: <missing step / unclear number / missing tool / judgment call> | Fix: <>
+
+  RUNS WITHOUT YOU?
+  Takings and cost in a week you were away: <numbers or MISSING> | Complaints or redo: <> | Call: <yes / partly / no / unknown>
+
+  SECOND SITE, SUPPLIES, PERSON
+  Site: <> | Supplies on the same terms: <> | Named person: <> | Trained by: <> | Checked by: <>
+
+  CALL
+  <ready / ready with fixes / not yet> | Why: <>
+
+  FIX LIST IN ORDER
+  1. <> 2. <> 3. <>
+
+  MISSING
+  <facts that would change the call>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: Your trial notes
+    how: Write them straight after the shift. Include small things like "asked where the spare box is".
+  - what: A week you were away
+    how: Give takings and costs. Without them the first check stays unknown.
+  - what: The second site
+    how: Say how it differs from the first in size, layout and supply route.
+  - what: Who runs it
+    how: Name a real person and what they have done so far. A role title is not enough.
+
+judge:
+  - Every trial note appears as a gap with a fix.
+  - The without-you check uses numbers from a week you were away, or says MISSING.
+  - The call names a person, not only a role.
+  - The fix list is in order of what blocks opening.
+  - No fact is invented.
+
+test:
+  - Give it notes with five stops. It should return five gaps.
+  - Give it a business that has never run without you. The first check should say unknown.
+  - Run it twice on the same input. The call should be the same.
+
+improve:
+  - Run the trial with a second newcomer after you fix the gaps. The list should shrink.
+  - Keep each trial's gap list. Repeated gaps point to a weak part of the manual.
+  - Rerun the check after your first month at the second location, using its real numbers.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Sorting notes into gaps and running a fixed list of checks is reasoning work any strong chat AI does well."}
+    - {name: "Your till or sales report", why: "Takings for a week you were away turn the first check into a number."}
+  inputs:
+    - "A manual from Operations manual writer"
+    - "Takings and costs for a week you were away"
+    - "A list of the second site's differences"
+
+terms:
+  - term: Trial gap
+    meaning: A place where a newcomer stopped, asked or guessed, which shows something missing from the manual.
+  - term: Runs without you
+    meaning: The location earns what it should and meets its standards when the owner is not there.
+  - term: Judgment call
+    meaning: A decision only the owner can make today, which needs a rule written down before it can be copied.

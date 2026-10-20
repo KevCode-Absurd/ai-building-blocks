@@ -1,0 +1,122 @@
+new_slug: reader-feedback-sorter
+name: "Reader feedback sorter"
+summary: "Paste what several readers said. Get what to fix, what to leave alone and a ranked rewrite list."
+job: write-and-tell-stories
+thinking: medium
+thinking_why: "It sorts notes by fixed rules but must judge what a note means."
+
+headline: "Turn many readers' notes into one ranked list of what to change"
+subhead: "Paste what each reader said, with their names or labels. It groups the notes by place in the draft, counts who raised what, fixes what most readers raise, leaves splits alone and gives a ranked rewrite list."
+
+explain: |
+  When six people read your draft, you get six sets of opinions. Some agree, some clash, some are only a mood. Acting on every one of them makes a muddle. Acting on none wastes the readers.
+
+  This skill applies a few plain rules. If most of your readers raise the same problem, it is a problem and you fix it. If readers split, one loving a thing and another disliking it, it is a wash, and the writer decides. A fact a reader caught is checked and fixed. Your ideal reader counts the most, because you are writing for them. Notes too vague to act on, such as I liked the feel, are set aside with a question to ask. The result is one ranked list for the next draft.
+
+when:
+  - "You have notes from several readers and they conflict."
+  - "You are not sure which comments to act on."
+  - "You want a clear list before the second draft."
+
+you_give:
+  - "Each reader's notes, labelled by reader"
+  - "Which reader is your ideal reader"
+  - "Your draft, or its scene list (optional)"
+  - "Anything you already plan to change (optional)"
+you_get:
+  - "All the notes in one list by place in the draft"
+  - "A count of how many readers raised each point"
+  - "Agreed problems, washes and fact catches, kept apart"
+  - "A ranked rewrite list and questions to ask readers who were vague"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Paste each reader's notes under their label. Say which is your ideal reader."
+  - "Paste the draft or a scene list so notes can be tied to places."
+  - "Read the washes. They are yours to decide."
+  - "Start the rewrite from the top of the ranked list."
+
+how_it_works:
+  - title: "Splits the notes"
+    text: "Breaks each reader's notes into single points."
+  - title: "Places each point"
+    text: "Ties each point to a place in the draft and a type."
+  - title: "Counts the readers"
+    text: "Counts how many readers raised each point."
+  - title: "Applies the rules"
+    text: "Marks agreed problems, splits and fact catches."
+  - title: "Weights the ideal reader"
+    text: "Raises the ideal reader's single notes above other single notes."
+  - title: "Sets aside the vague"
+    text: "Lists notes that cannot be acted on and a follow-up question."
+  - title: "Ranks the list"
+    text: "Orders the rewrite list by weight."
+
+output_shape: |
+  READERS
+  <label> | ideal reader y/n
+
+  NOTES BY PLACE
+  <place> | type | readers who raised it (<n> of <N>) | what they said
+
+  AGREED PROBLEMS (fix)
+  <point> | <n> of <N> readers | suggested change
+
+  WASHES (writer decides)
+  <point> | for: <readers> | against: <readers> | note
+
+  FACT CATCHES (check)
+  <fact> | who | what to verify
+
+  IDEAL READER ONLY
+  <point> | why it counts
+
+  TOO VAGUE
+  <note> | question to ask
+
+  RANKED REWRITE LIST
+  1. <...>
+
+  CHECKS MISSED
+  <one line per check missed, or none>
+
+tweaks:
+  - what: "Number of readers"
+    how: "The rules change with the count. With one or two readers, every point is a maybe."
+  - what: "Your ideal reader"
+    how: "Say which reader is your ideal reader. Their solo notes rank above other single notes."
+  - what: "The draft"
+    how: "Paste the draft or a scene list so notes tie to places."
+  - what: "What you will not change"
+    how: "Name anything you have decided to keep. It still reports a point but marks it as decided."
+
+judge:
+  - "Every note appears once in the list."
+  - "Every agreed problem shows the count of readers."
+  - "Washes show both sides."
+  - "Fact catches say what to verify."
+  - "The ranked list starts with the agreed problems."
+
+test:
+  - "Give it three notes that say the same thing and one that conflicts. The three should come out as an agreed problem and the other as a single note."
+  - "Give it a split on the ending. It should come out as a wash."
+  - "Give it a vague note. It should come back with a follow-up question."
+
+improve:
+  - "Keep the notes and the sorted list for each draft. You will see which readers are most useful."
+  - "Add a line on how much weight each reader's taste has with you."
+  - "Run the cold re-read marker on the next draft and compare."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Sorting and counting notes is text work any strong chat AI does well."}
+    - {name: "A shared document", why: "Comments in the draft are easier to tie to places than a loose email."}
+  inputs:
+    - "The draft or a scene list"
+    - "Which readers know the subject well"
+
+terms:
+  - term: "Wash"
+    meaning: "A split where some readers like a thing and others do not. The writer decides."
+  - term: "Fact catch"
+    meaning: "A reader spotting something factually wrong."

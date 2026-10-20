@@ -1,0 +1,18 @@
+slug: bargain-group-rules-writer
+name: "Bargain group rules writer"
+summary: "Paste your bargain candidates. Get group size, caps, an exit rule and a scorecard that judges the method, not one stock."
+category: general
+type: skill
+role: make
+job: strategy
+level: advanced
+inputs:
+  - {type: audit_report, required: true}
+outputs:
+  - {type: plan}
+origin: rebuilt
+version: 1.0.0
+minds: [benjamin-graham]
+credits:
+  - {title: "The Intelligent Investor (revised edition, 2003)", by: "Benjamin Graham, with commentary by Jason Zweig", used: "Diversification as the partner of the margin of safety, the idea that an enterprising approach is worth the effort only if it adds a few points a year to the stock part, and results from a group of bargains judged as a whole"}
+  - {title: "Papers of 1974 to 1976 on portfolios, efficient markets and common stock groups (as compiled in Common Sense Investing)", by: "Benjamin Graham", used: "Setting a gain target and a time limit when buying a group of cheap stocks"}

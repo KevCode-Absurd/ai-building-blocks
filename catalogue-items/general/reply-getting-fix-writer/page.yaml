@@ -1,0 +1,116 @@
+new_slug: reply-getting-fix-writer
+name: "Reply-getting fix writer"
+summary: "Paste your ad and its diagnosis. Get a fixed version with a stronger headline, a clear offer and an easy reply."
+job: write-ad-copy
+thinking: medium
+thinking_why: "It rewrites to a diagnosis and must resist changing more than the causes call for."
+
+headline: "A fixed version of your ad that changes only what the diagnosis found"
+subhead: Give it your ad and the ranked causes of its weak response. It fixes the top three, one change for each, and leaves the rest alone so a test can show what worked. You get the fixed ad, a change list beside each cause and a key for the new version.
+
+explain: |
+  When an ad does not work, it is tempting to rewrite everything. Then the new ad works or it does not, and you cannot say why. A good fix changes only what was broken and keeps what was fine.
+
+  This skill takes the diagnosis and fixes up to three causes. If the headline was the problem, it moves the winning buying reason into it. If the offer was hidden, it puts it in the headline or a subhead and describes it so it is wanted. If the reply was hard, it makes it one clear ask with more than one way to respond. If claims were vague, it swaps in facts and figures from what you supplied. It adds a deadline only if one is real. You get the fixed ad, the change list and a new key.
+
+when:
+  - You have a diagnosis of a weak ad and want a fixed version.
+  - Your rewrites change everything and you cannot tell what helped.
+  - Your offer or reply path is hard to find.
+
+you_give:
+  - The ad to fix
+  - The diagnosis, with the ranked causes
+  - A pattern from your winners (optional)
+  - Your offer and conditions (optional)
+you_get:
+  - The fixed ad in full
+  - A change list with each change beside the cause it answers
+  - A list of what was not touched and why
+  - A new key for the fixed version
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste the ad and the diagnosis.
+  - Add your offer, price and any real deadline.
+  - Check every figure in the fixed ad against your facts.
+  - Run it against the old ad with "Split-run test planner".
+
+how_it_works:
+  - title: Takes the top causes
+    text: Fixes up to three causes and lists the rest as not touched, so the test stays clean.
+  - title: Fixes the headline
+    text: Moves the winning buying reason into it and adds a figure if the facts allow.
+  - title: Fixes the offer
+    text: Puts it in the headline or a subhead, mentions it early and late and describes it so it is wanted.
+  - title: Makes the reply easy
+    text: One clear ask, more than one way to respond, the contact detail twice and a line that nothing is owed if true.
+  - title: Swaps vague for specific
+    text: Replaces vague claims with facts and figures you gave it, or marks them missing.
+  - title: Lists the changes
+    text: Shows each change beside its cause and gives the fixed version a new key.
+
+output_shape: |
+  FIXED AD
+  <the full ad>
+
+  CHANGES
+  <cause | change>
+
+  KEPT
+  <what was fine and left alone>
+
+  NOT TOUCHED
+  <cause | why left>
+
+  KEY
+  Old: <code>  New: <code>
+
+  MISSING
+  <list>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: How many causes
+    how: Say if you want only one fixed, so the test is cleaner.
+  - what: Real deadlines
+    how: Give any true deadline or supply limit. Without one, none is added.
+  - what: Reply paths
+    how: List the ways people can reply today. It builds on them.
+  - what: Limits
+    how: Give length, tone and legal lines the ad must keep.
+
+judge:
+  - Every change answers a cause in the diagnosis.
+  - No cause outside the top three was touched.
+  - Every figure comes from what you gave it.
+  - The offer is in the headline or a subhead and in the reply area.
+  - The fixed ad has its own key.
+
+test:
+  - Run the fixed ad against the old one, with one difference, and compare replies.
+  - Check each change against the diagnosis. There should be none without a cause.
+  - Give it a diagnosis with no real deadline. It should add none.
+  - Check three figures against your facts.
+
+improve:
+  - Add your legal lines and house rules to "Keep the rest".
+  - Add your best reply paths to step 4.
+  - Save each fix, its cause and its test result to your file of lessons.
+  - Pair it with "Sales copy readiness checker" before you send.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Rewriting to a short list of causes is text work any strong chat AI handles with this skill."}
+  inputs:
+    - "The diagnosis from Ad pull diagnoser"
+    - "A pattern from Winners and losers ad comparer"
+    - "Your exact offer, with price and any real deadline"
+
+terms:
+  - term: Reply path
+    meaning: The steps a reader takes to respond, such as a button, a coupon or a phone number.
+  - term: Key
+    meaning: A code on an ad that lets you trace every reply back to it.

@@ -1,0 +1,23 @@
+slug: five-part-ad-checker
+name: Five-part ad checker
+summary: Paste your finished ad. Get a pass or fail on its five jobs, a score out of 100 and ranked fixes.
+category: general
+type: skill
+role: check
+job: copy
+level: intermediate
+inputs:
+  - type: ad_copy
+    required: true
+  - type: brief
+    required: false
+outputs:
+  - type: audit_report
+origin: rebuilt
+version: 1.0.0
+minds:
+  - victor-schwab
+credits:
+  - title: How to Write a Good Advertisement (a book summary)
+    by: Victor O. Schwab
+    used: The five fundamentals of an ad (attention, advantage, proof, persuasion, action), the eight milestones to a sale, and the rules for copy length

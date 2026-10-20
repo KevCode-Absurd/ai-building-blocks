@@ -62,7 +62,7 @@ When you've handed it back, suggest what they could do next in one short questio
 - **Make image ads** with the [Image ad maker from customer quotes](https://useaiblocks.com/skills/image-ad-maker-from-customer-quotes). It takes the buying reasons.
 - **Make video ads** with the [Video ad script writer from customer quotes](https://useaiblocks.com/skills/video-ad-script-writer-from-customer-quotes). It takes the buying reasons.
 - **Understand your buyers** with the [Dominant emotion finder](https://useaiblocks.com/skills/dominant-emotion-finder). It takes the buying reasons.
-- **Make an offer people want** with the [Offer checklist reviewer](https://useaiblocks.com/skills/offer-checklist-reviewer). It takes the buying reasons.
+- **Write the ad copy** with the [Typed headline batch writer](https://useaiblocks.com/skills/typed-headline-batch-writer). It takes the buying reasons.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

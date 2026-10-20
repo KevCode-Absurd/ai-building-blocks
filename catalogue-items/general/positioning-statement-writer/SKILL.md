@@ -51,10 +51,10 @@ The ladders. What each rival owns. The weak spot. The category to lead. The one 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Plan your strategy** with the [Launch task force planner](https://useaiblocks.com/skills/launch-task-force-planner). It takes the buyer brief and plan.
+- **Plan your strategy** with the [Customer progress measure picker](https://useaiblocks.com/skills/customer-progress-measure-picker). It takes the plan and buyer brief.
+- **Check the money** with the [Bond type and maturity chooser](https://useaiblocks.com/skills/bond-type-and-maturity-chooser). It takes the plan.
 - **Test the idea with real people** with the [Business model guess tester](https://useaiblocks.com/skills/business-model-guess-tester). It takes the buyer brief.
 - **Decide what to do** with the [Case-against writer](https://useaiblocks.com/skills/case-against-writer). It takes the plan.
-- **Check the money** with the [Price drop rules writer](https://useaiblocks.com/skills/price-drop-rules-writer). It takes the plan.
 - **Shape the product** with the [Feature request screener](https://useaiblocks.com/skills/feature-request-screener). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

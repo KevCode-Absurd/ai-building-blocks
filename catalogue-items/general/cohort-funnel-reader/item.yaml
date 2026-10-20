@@ -1,0 +1,25 @@
+slug: cohort-funnel-reader
+name: Cohort funnel reader
+summary: Paste results by join date. Get each group's path, which changes moved which rates, and whether the report holds up.
+category: general
+type: skill
+role: check
+job: analysis
+level: advanced
+inputs:
+  - type: performance_sheet
+    required: true
+  - type: plan
+    required: false
+outputs:
+  - type: audit_report
+    required: true
+origin: rebuilt
+version: 1.0.0
+minds:
+  - eric-ries
+credits:
+  - title: "The Lean Startup: how today's entrepreneurs use continuous innovation to create radically successful businesses"
+    by: Eric Ries
+    url: https://theleanstartup.com/
+    used: "Cohort analysis, split tests to show cause and effect, spotting a rate that does not move despite effort, and the three tests of a good metric: actionable, accessible and auditable"

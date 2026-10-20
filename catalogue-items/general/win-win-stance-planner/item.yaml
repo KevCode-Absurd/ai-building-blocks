@@ -1,0 +1,18 @@
+slug: win-win-stance-planner
+name: "Win-win stance planner"
+summary: "Describe a deal or dispute. Get your likely stance, what a win is for each side, and where you walk away."
+category: general
+type: skill
+role: make
+job: strategy
+level: intermediate
+inputs:
+  - {type: question, required: true}
+outputs:
+  - {type: plan}
+  - {type: question}
+origin: rebuilt
+version: 1.0.0
+minds: [stephen-covey]
+credits:
+  - {title: "The 7 Habits of Highly Effective People (25th anniversary edition)", by: "Stephen R. Covey", used: "Habit 4: six ways of dealing with people (win-win, win-lose, lose-win, lose-lose, win, and win-win or no deal), courage balanced with consideration, the abundance view, the no-deal option, and the five parts a win-win rests on"}

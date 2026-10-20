@@ -1,0 +1,123 @@
+new_slug: order-to-request-rewriter
+name: "Order-to-request rewriter"
+summary: "Paste a message full of orders. Get each turned into a question or request with their gain and an easy first step."
+job: lead-people
+thinking: medium
+thinking_why: "It must judge which lines are orders and what gain is real, but the rewrite steps are fixed."
+
+headline: "Order-to-request rewriter"
+subhead: "Paste a message, note or script with orders in it. It marks every command and blame line, then rewrites each as a question or a request with the person's gain, a good name to live up to and a small first step. You get the rewritten message."
+
+explain: |
+  A brisk order gets the job done once and costs you the goodwill. The person obeys, resents it and does only what was asked. Orders also hide the reason, so people cannot use their own judgement to help.
+
+  This skill finds every order and blame line in your draft and rewrites each in a way that invites the person in. Where it fits, the line becomes a question that asks for their way of doing it. Otherwise it becomes a request with the reason and the gain for them. It adds a good name you can truthfully give them and shrinks the job to a first step. Where it is real, it leaves them a choice or a role. The message still says exactly what you need and by when.
+
+when:
+  - "You are about to send a message that is mostly instructions."
+  - "A team keeps doing the bare minimum when you tell them what to do."
+  - "You need someone to do a chore they dislike."
+
+you_give:
+  - "The draft, with every order in it"
+  - "Notes on the person from \"Behaviour and fix notes writer\" (optional)"
+  - "What you need done and by when"
+  - "What they care about (optional)"
+you_get:
+  - "The rewritten message, with a question or request in place of each order"
+  - "A list of what changed in each line and why"
+  - "The gain for them that each line uses, and where it came from"
+  - "A check that the ask is still clear"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Paste your draft as it is, orders and all."
+  - "Add what the person cares about and anything true you can say about their work."
+  - "Read the new version aloud. Change any line that is a hidden order."
+  - "Send it or say it, and keep the changed lines for next time."
+
+how_it_works:
+  - title: "Marks the orders"
+    text: "Numbers every command, \"always\" or \"never\", accusing question and public call-out."
+  - title: "Finds their gain"
+    text: "Picks a true gain for the person behind each line, or marks it missing."
+  - title: "Writes the question"
+    text: "Turns a task order into a question that asks for their way."
+  - title: "Gives a good name"
+    text: "Adds a true statement of the quality you expect from them."
+  - title: "Makes it look easy"
+    text: "Shrinks the task to a clear first step, with help if offered."
+  - title: "Offers a choice or role"
+    text: "Adds a real choice of timing or method, or ownership."
+  - title: "Keeps the ask clear"
+    text: "Makes sure the message still says what and when."
+  - title: "Checks the rewrite"
+    text: "Runs its own checks and names any it missed."
+
+output_shape: |
+  THE REWRITTEN MESSAGE
+  <the full message>
+
+  WHAT CHANGED
+  1. Was: <order>
+     Now: <question or request>
+     Their gain: <gain> (source: <where it came from>)
+
+  GOOD NAME USED
+  <the true quality named, and the evidence>
+
+  THE FIRST STEP
+  <the small step, and any help offered>
+
+  STILL CLEAR?
+  Need: <what>   By: <when>
+
+  MISSING
+  <what you do not know>
+
+  CHECKS MISSED
+  <one line per check missed, or none>
+
+tweaks:
+  - what: "What they care about"
+    how: "Say what they value. It gives each request a real gain instead of a made-up one."
+  - what: "What is fixed"
+    how: "Tell it which parts cannot change, such as a deadline. It will keep them clear and flexible elsewhere."
+  - what: "The setting"
+    how: "Say if it is an email, a chat or a talk. A chat message needs fewer lines."
+  - what: "Your tone"
+    how: "Paste a message you like. It will match your voice."
+
+judge:
+  - "No line is an order dressed as a question."
+  - "Each request names a gain that is true for them."
+  - "The good name is something you really believe."
+  - "The first step is small and clear."
+  - "The message still says what you need and by when."
+
+test:
+  - "Run it on a message you sent that got a cold reply. Compare how it reads."
+  - "Read the new version to someone who plays the receiver. Ask if they feel pushed."
+  - "Run it twice. The gains should stay close."
+  - "Send it and see if the work comes back better than your last request."
+
+improve:
+  - "Add a list of what each person on your team cares about."
+  - "Add your team's standard phrases, so the rewrite sounds like you."
+  - "Save the changes that worked, with the person, for next time."
+  - "Pair it with \"Small win praise planner\" to follow up."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Rewriting text in a set tone is work any strong chat AI does well."}
+    - {name: "Your email or chat app", why: "Read the draft where it will be seen, so the length and tone fit."}
+  inputs:
+    - "Notes on the person's interests and strengths"
+    - "A fixed deadline or standard"
+    - "A past message they answered well"
+
+terms:
+  - term: "Hidden order"
+    meaning: "An instruction worded as a question, where \"no\" is not a real answer."
+  - term: "Good name"
+    meaning: "A true quality you name in a person, which they then try to live up to."

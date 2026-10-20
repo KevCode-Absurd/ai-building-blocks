@@ -1,0 +1,125 @@
+new_slug: partner-deal-terms-writer
+name: "Franchise and reseller terms writer"
+summary: "Paste your offer and the partner's profit sum. Get a one-page term sheet for people who run your business: duties, fees, exits."
+job: sell-and-negotiate
+thinking: high
+thinking_why: "Terms have to line up with the partner's profit sum, protect your name and stay fair, and a gap here is costly. Give it your strongest model, then have a lawyer read the result."
+
+headline: "A one-page term sheet for a partner or franchise deal, built on the partner's profit"
+subhead: Paste your offer and the partner's profit sum. It writes what each side gives, the standards the partner keeps, the fees, how changes are agreed in writing and how either side leaves. You get a term sheet to take to a lawyer. It is not legal advice.
+
+explain: |
+  Most partner deals fail in the same few places. The partner makes too little. The standards are vague, so each partner does it differently. Changes are agreed in a chat and later disputed. Or there is no clean way out when it is not working.
+
+  This skill writes the terms to close those gaps. It sells one location or territory at a time, so you keep control of how each runs. It lists what you give (training, site help, supplies guidance, support), what the partner gives (money, hours, standards, reports), and which standards are fixed and which are local. It puts every fee in one table that matches the partner's profit sum. It requires every change to the deal to be signed. It writes how either side can leave, what happens to stock and to the name, and the first review date.
+
+when:
+  - You are about to offer a franchise, reseller, licence or distribution deal.
+  - A handshake deal has gone wrong, or may, and you want it written down clearly.
+  - You want a partner to run your business in a new place under your name.
+
+you_give:
+  - What you offer the partner and the fees you plan to charge
+  - The partner's profit sum, or the result from "Partner profit tester"
+  - The standards your name depends on (optional)
+you_get:
+  - A one-page term sheet in plain words
+  - Who gives what, in two columns
+  - Fixed and local standards, with who may change what
+  - Fees in one table that matches the profit sum
+  - Exit rules, a first review date and a list of points a lawyer must check
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your offer and the profit sum. If the sum shows the deal is thin or unfair, fix the fees first.
+  - Add your standards sheet if you have one, so the terms point to it.
+  - Read the lawyer list at the end. Take the term sheet and that list to a lawyer before you sign anything.
+  - Give the term sheet to the partner as your first offer, and note what they change.
+
+how_it_works:
+  - title: Sets the unit
+    text: One location, territory or product line per deal, so each partner's results can be seen and fixed on their own.
+  - title: Lists who gives what
+    text: Your side (training, support, access to the name, supply guidance) against theirs (money, time, standards, reports).
+  - title: Anchors the standards
+    text: Points to your written standards, marks what is fixed and what the partner may change locally.
+  - title: Puts fees in one table
+    text: Every fee and required purchase, matched to the profit sum, so there is no hidden second fee.
+  - title: Requires changes in writing
+    text: No change to the deal, the standards or the territory counts unless both sides sign it.
+  - title: Writes the exits
+    text: How either side leaves, what happens to stock, equipment and the name, and when the deal is first reviewed.
+  - title: Checks itself
+    text: Runs its own checks and names any it missed.
+
+output_shape: |
+  THE DEAL IN TWO LINES
+  <who, what, where, for how long>
+
+  WHO GIVES WHAT
+  You give: <> | Partner gives: <>
+
+  STANDARDS
+  Fixed: <> | Local choice: <> | How a local idea becomes a standard: <>
+
+  FEES AND REQUIRED PURCHASES
+  <fee> | <amount or share> | When due | Matches the profit sum: <yes / no>
+
+  CHANGES
+  Any change to the deal, standards or territory is valid only if both sides sign it.
+
+  EXITS AND REVIEW
+  Partner leaves: <> | You end it: <what counts as cause, notice> | Stock, equipment, name: <> | First review: <date>
+
+  FOR A LAWYER TO CHECK
+  <points to check in your country>
+
+  MISSING
+  <terms you must still decide>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: The profit sum
+    how: Paste it. If the sum shows a thin or unfair deal, the skill changes the fee table and says why.
+  - what: Your standards
+    how: Paste your standards sheet or manual. The terms then name the documents.
+  - what: Your country
+    how: Say where the partner will work. Franchise and agency law differs, and the lawyer list is set to it.
+  - what: How much you will support
+    how: List the training and visits you can really give. The terms promise only that.
+
+judge:
+  - Every fee in the table matches the profit sum.
+  - Both sides' duties are listed, not only the partner's.
+  - A signed-change rule is present.
+  - Exit rules cover stock, equipment and the name.
+  - The sheet says it is not legal advice and lists points for a lawyer.
+
+test:
+  - Give it a profit sum that is thin. The fee table should change or flag the problem.
+  - Remove the standards. It should mark MISSING and ask for them, not invent any.
+  - Run it twice on the same input. The structure and fees should be the same.
+
+improve:
+  - After three months with the first partner, list each term they questioned and rewrite it in plainer words.
+  - Add a clause per problem that actually occurs.
+  - Rerun when you change a fee, so the sheet and the profit sum stay in line.
+
+works_best_with:
+  tools:
+    - {name: "A lawyer who knows franchise or agency law in your country", why: "This skill writes a term sheet, not a contract. A lawyer turns it into one."}
+    - {name: "Any good chat AI", why: "Laying out terms in plain words from your inputs is writing work any strong chat AI does well."}
+  inputs:
+    - "The partner's profit sum"
+    - "Your standards sheet or manual"
+    - "Your country and the partner's"
+
+terms:
+  - term: Term sheet
+    meaning: A short plain-words summary of the main terms of a deal, used before a contract is written.
+  - term: Fixed and local
+    meaning: Fixed standards are the same everywhere. Local ones are the part a partner may adjust to their area.
+  - term: For cause
+    meaning: A reason you may end the deal early, such as repeated failure to meet a named standard after a warning.

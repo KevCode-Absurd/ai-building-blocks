@@ -1,0 +1,25 @@
+slug: job-hunting-spot-finder
+name: Job hunting spot finder
+summary: Tell it what you sell. Get ranked leads for unmet jobs and what to go and watch for each.
+category: general
+type: skill
+role: source
+job: research
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: product_data
+    required: false
+  - type: voc_reviews
+    required: false
+outputs:
+  - type: shortlist
+origin: rebuilt
+version: 1.0.0
+minds:
+  - clayton-christensen
+credits:
+  - title: Competing Against Luck
+    by: Clayton M. Christensen, Taddy Hall, Karen Dillon and David S. Duncan (2016)
+    used: "Five places to look for jobs customers need done: your own life, people who buy nothing, workarounds, jobs people avoid, and unusual uses; plus looking at the social and emotional side as well as the practical one"

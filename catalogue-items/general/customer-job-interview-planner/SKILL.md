@@ -5,7 +5,7 @@ description: Use when buyer profiles do not explain why people buy, or you want 
 
 # Customer job interview planner
 
-Two buyers who look alike may buy for different reasons, and two who look different may buy for the same one. The reason is a job in a situation. This skill plans how to see that job: by watching where people buy, by asking buyers as they leave, and by talking to people who recently switched. For the wording of each question, use "Customer interview question writer".
+Two buyers who look alike may buy for different reasons, and two who look different may buy for the same one. The reason is a job in a situation. This skill plans how to see that job: by watching where people buy, by asking buyers as they leave, and by talking to people who recently switched. For the wording of each question, use "Customer interview question writer". For a full timeline script for interviewing recent buyers, use "Buying story interview guide".
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
@@ -61,8 +61,9 @@ The frame. The observation day with its log sheet and slots. The exit questions 
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - **Understand your buyers** with the [Customer discovery interview planner](https://useaiblocks.com/skills/customer-discovery-interview-planner). It takes the plan.
 - **Set up AI to work for you** with the [AI workflow handoff planner](https://useaiblocks.com/skills/ai-workflow-handoff-planner). It takes the plan.
+- **Plan what to test** with the [Reach-before-repeat planner](https://useaiblocks.com/skills/reach-before-repeat-planner). It takes the plan.
 - **Write the ad copy** with the [Story image ad writer](https://useaiblocks.com/skills/story-image-ad-writer). It takes the plan.
-- **Read your ad results** with the [Online media buy auditor](https://useaiblocks.com/skills/online-media-buy-auditor). It takes the plan.
+- **Read your ad results** with the [Ad recall and pull calculator](https://useaiblocks.com/skills/ad-recall-and-pull-calculator). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

@@ -1,0 +1,110 @@
+new_slug: holding-value-change-checker
+name: "Holding value change checker"
+summary: "Paste a holding and why you bought it. Get what changed in the business and a keep, watch or weak mark."
+job: money-and-investing
+thinking: medium
+thinking_why: "It compares then and now on business facts and writes a mark. The care is in keeping the price out of the verdict."
+
+headline: "Find out if a holding fell because the business got worse or only because the crowd got nervous"
+subhead: "Paste what you hold, what you paid, why you bought and what the business reports now. It lists what changed in profit, debt, shares and rivals, asks if you would buy it today with the price hidden, and marks it keep, watch or weak. A method of analysis, not personal financial advice."
+
+explain: |
+  A fall in price is a fact about the crowd. A fall in profit or a jump in debt is a fact about the business. The two are easy to confuse when the screen is red.
+
+  This skill follows the owner's view. It records why you bought and what you assumed, then lists what the business reports now: profit over five years, debt, dividends, share count and rivals. It asks you to say, with the price hidden, whether you would buy the same business today. The old lesson is that businesses change in quality over the years, more often for the worse, so each holding needs a hard look now and then, not a daily stare. It writes a mark per holding and a short plan for each weaker one. It never says to buy or sell.
+
+when:
+  - A holding has fallen and you do not know if the business is to blame.
+  - You bought a few years ago and have not looked at the business since.
+  - You want to hold on to winners and weak holdings for good reasons, not hope.
+
+you_give:
+  - The holding, what you paid and when
+  - Why you bought it and what you assumed then
+  - The last five years of profit, debt, dividends and share count
+  - What you know about its rivals and customers now
+
+you_get:
+  - A then-and-now table of facts
+  - A would-you-buy-today answer with the price hidden
+  - A mark of keep, watch or weak
+  - A short plan for each weaker holding
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste the holding, your purchase reasons and the latest figures.
+  - Answer the would-you-buy-today question before you look at the price.
+  - Take the plan to "Price drop rules writer".
+
+how_it_works:
+  - title: Records the case at purchase
+    text: Writes down why you bought, what you assumed and what would make you wrong.
+  - title: Lists what changed
+    text: Compares profit, debt, dividends, share count and competition then and now.
+  - title: Hides the price
+    text: Asks if you would buy the same business today, with the price kept out of the answer.
+  - title: Marks the holding
+    text: Marks it keep, watch or weak from the facts alone.
+  - title: Plans for the weak ones
+    text: Writes what the business must show, and by when, for each weaker holding.
+
+output_shape: |
+  <HOLDING> | Bought <date> at <price> | Reason: <...> | Assumptions: <...>
+  THEN AND NOW
+  Profit: <then> -> <now> | Debt: <then> -> <now> | Dividend: <then> -> <now>
+  Shares outstanding: <then> -> <now> | Rivals or customers: <what changed>
+  WOULD I BUY IT TODAY, PRICE HIDDEN: <yes / no / unsure> because <...>
+  MARK: <KEEP / WATCH / WEAK>
+  FOR A WATCH OR WEAK MARK
+  What it must show: <facts> | By when: <date> | What a worse result means: <...>
+
+  ACROSS YOUR HOLDINGS
+  Keep <n> | Watch <n> | Weak <n>
+
+  MISSING
+  <list>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: Review window
+    how: Pick the period to compare, such as five years or since purchase. A longer window hides a recent turn.
+  - what: Dilution
+    how: Say if the company issued many new shares. It checks profit per share and not just total profit.
+  - what: Small holding
+    how: Say if the holding is a small share of your money. It shortens the review.
+
+judge:
+  - The then-and-now table uses figures, not impressions.
+  - The would-you-buy answer was given with the price hidden.
+  - The mark follows from the facts and not from the price move.
+  - Each watch or weak holding has a stated test and a date.
+  - Nothing names a stock to buy or sell.
+
+test:
+  - Give it a fall with profit up and debt flat. It should mark it keep.
+  - Give it a holding with profit down a third and debt doubled. It should mark it weak.
+  - Ask it to decide from the price chart. It should refuse and ask for business facts.
+  - Run it twice on the same inputs. The marks should match.
+
+improve:
+  - Redo the check each year on the same day, with the same table.
+  - Keep your purchase reasons from the start so you cannot change them after a fall.
+  - Pair it with "Market mood reader" before each big decision.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Comparing then-and-now figures and writing a mark is text work any strong chat AI does well with this skill."}
+    - {name: "Company annual reports", why: "Profit, debt and share count come from there."}
+  inputs:
+    - "Your purchase notes, written when you bought"
+    - "The last five years of reported profit, debt and shares"
+
+terms:
+  - term: Dilution
+    meaning: A rise in the number of shares, which shrinks each share's part of the profit.
+  - term: Owner's view
+    meaning: Judging a holding by what the business earns and owns, as if you owned part of it privately.
+  - term: Weak mark
+    meaning: A mark given when the facts of the business have worsened enough that the original case may no longer hold.

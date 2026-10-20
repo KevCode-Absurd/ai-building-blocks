@@ -1,0 +1,20 @@
+slug: counter-positioning-finder
+name: "Counter-positioning finder"
+summary: "Paste your market leader and your idea. Get a new business model the leader would lose money by copying, with the sum."
+category: general
+type: skill
+role: make
+job: strategy
+level: advanced
+inputs:
+  - {type: question, required: true}
+  - {type: audit_report, required: false}
+outputs:
+  - {type: audit_report, required: true}
+origin: rebuilt
+version: 1.0.0
+minds: [hamilton-helmer]
+credits:
+  - {title: "7 Powers: The Foundations of Business Strategy (a book summary)", by: "Hamilton Helmer, as summarised by a third party", used: "The idea of a better model that a leader will not copy because of what it would cost its existing business, and the examples of a rental chain and a streaming newcomer"}
+  - {title: "Strategic Power: a conversation with Hamilton Helmer and Chenyi Shi", by: "Hamilton Helmer", used: "Why the leader holds back, and the limit that it gives no protection against other newcomers using the same model"}
+  - {title: "Foreword to 7 Powers", by: "Reed Hastings", url: "https://7powers.com/foreword/", used: "Big firms often fail by acting rationally, not for lack of vision"}

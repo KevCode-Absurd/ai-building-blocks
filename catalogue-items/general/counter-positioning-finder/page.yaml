@@ -1,0 +1,124 @@
+new_slug: counter-positioning-finder
+name: "Counter-positioning finder"
+summary: "Paste your market leader and your idea. Get a new business model the leader would lose money by copying, with the sum."
+job: plan-strategy
+thinking: high
+thinking_why: "It builds a loss-and-gain sum for a rival from limited facts and has to avoid calling any cheaper offer a strategy. Give it your strongest model."
+
+headline: "A way to win that the market leader loses money by copying"
+subhead: Tell it who leads your market and how they earn their money. It designs a model that is better for some buyers, works out what the leader would give up by copying it, and tests the other ways the leader could answer. You get the model, the sum and a call.
+
+explain: |
+  Big firms usually see a better model coming. They hold back because copying it would hurt what already pays them. A rental chain that earns from late fees does not rush to sell a subscription. A seller with a large sales team does not rush to sell direct online at a lower price.
+
+  This skill makes that holding back explicit. It writes how the leader earns, designs your model, then does the sum: what the leader's existing business loses if it copies, against what it gains. If the loss is bigger than the gain, the leader has a rational reason not to follow. It then checks the leader's other moves, such as a separate unit, a price cut or a purchase of you. It ends with a warning: this edge protects you from the leader, not from other newcomers who copy the same model.
+
+when:
+  - A larger rival dominates your market and you cannot beat it by being a little better.
+  - You are choosing a price model, sales route or product design and want one the leader would find costly to match.
+  - You have a new model and want to know if the leader will copy it the moment it works.
+
+you_give:
+  - Who the market leader is and how it earns its money
+  - Your idea for doing the job differently
+  - Any numbers on the leader's revenue mix, prices and channels (optional)
+you_get:
+  - How the leader earns, in a short table
+  - Your model, and which buyers it is better for
+  - A sum of what the leader would lose and gain by copying
+  - The leader's other moves, each with a likely result
+  - A call of strong, weak or not counter-positioning, with the first-year path
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Name the leader and say how you think it earns, where the profit is and who it depends on.
+  - Describe your model in a few lines, covering what you charge, how you sell and what you leave out.
+  - Check the sum with real figures if you can find them, like the leader's price list or channel mix.
+  - Bring the result to "Ten-year durability checker" and "Power build-order planner".
+
+how_it_works:
+  - title: Writes how the leader earns
+    text: Splits the leader's money into lines, by customer, price, channel and partner, and marks which lines depend on the current model.
+  - title: Designs your model
+    text: States what is different, which buyers it is better for, and why it can be cheaper or worth more to them.
+  - title: Does the copy sum
+    text: Compares what the leader loses from its existing customers and partners with what it gains from new ones.
+  - title: Names the reason it holds back
+    text: Hurts its cash line, upsets partners it relies on, or clashes with how its people are paid and judged.
+  - title: Tests the leader's other moves
+    text: A separate unit, a price cut, a purchase of you or a late copy, each with a likely result.
+  - title: Calls it
+    text: Strong, weak or not counter-positioning, and what to build while the window is open.
+  - title: Checks itself
+    text: Runs its own checks and names any it missed.
+
+output_shape: |
+  HOW THE LEADER EARNS
+  <line> | share of revenue <>% | depends on <customers / partners / habit>
+
+  YOUR MODEL
+  <what is different> | Better for: <buyers> | Why: <cost or value gain, with a number or MISSING>
+
+  THE COPY SUM
+  Leader loses if it copies: <revenue exposed> x <margin> = <>
+  Leader gains if it copies: <new buyers> x <margin> = <>
+  Net: <loss bigger / gain bigger / unknown>
+
+  WHY IT HOLDS BACK
+  <cash line / partners / people and pay>
+
+  OTHER MOVES
+  Separate unit: <>  Price cut: <>  Buy you: <>  Late copy: <>
+
+  CALL
+  <strong / weak / not counter-positioning> | First-year path: <> | Limit: does not stop other newcomers
+
+  MISSING
+  <facts that would firm up the sum>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: The leader's figures
+    how: Published price lists, channel mix and revenue split make the sum a number. Without them the call stays weak.
+  - what: Your cost advantage
+    how: Say what your model saves per sale. It tells the sum whether you can undercut or only match.
+  - what: Several leaders
+    how: Name each one. A model that traps one leader can be easy for another.
+  - what: How the leader's staff are paid
+    how: Say if its sales team or partners earn commission on the current model. That is often the real barrier.
+
+judge:
+  - The model is better for named buyers, not just cheaper or different.
+  - The sum uses a number for revenue at risk, or says MISSING.
+  - The reason the leader holds back is a cost to its existing business, not a lack of skill.
+  - At least three other leader moves are tested.
+  - The call says the edge does not stop other newcomers.
+
+test:
+  - Give it a model that only cuts price. It should say a leader can match a price cut and call it weak.
+  - Give it a leader with one main revenue line and a model that attacks that line. The sum should show a large loss.
+  - Run it twice on the same facts. The call should stay the same.
+
+improve:
+  - Replace estimates in the sum with the leader's real figures as you find them.
+  - Rerun after the leader changes its pricing or channels.
+  - Add a note on who else could copy the model, and when.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Building a loss-and-gain sum for a rival from a few facts is reasoning work any strong chat AI does well."}
+    - {name: "The leader's public price lists and annual reports", why: "They give the revenue split the sum needs."}
+  inputs:
+    - "A gap map from Competitor white space mapper"
+    - "The leader's pricing and channel mix"
+    - "Your own cost per sale"
+
+terms:
+  - term: Counter-positioning
+    meaning: A better business model that the market leader does not copy because copying would hurt its existing business.
+  - term: Incumbent
+    meaning: The established firm that leads the market now.
+  - term: Copy sum
+    meaning: What the leader would lose from its current customers and partners, set against what it would gain from new ones.

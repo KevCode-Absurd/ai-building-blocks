@@ -1,6 +1,6 @@
 slug: post-sale-follow-up-planner
 name: "Post-sale follow-up planner"
-summary: "Paste what you sell and a customer's details. Get a thank-you note, a contact schedule and what to record about the buyer."
+summary: "Paste what you sell and a customer's details. Get a thank-you note and a plan to keep them: schedule, records, referral ask."
 category: general
 type: skill
 role: make
@@ -13,7 +13,7 @@ outputs:
   - {type: copy_draft}
 origin: rebuilt
 version: 1.0.0
-minds: [joe-girard]
+minds: [joe-girard, dale-carnegie]
 credits:
   - {title: "Tell Customers You Appreciate Their Business (public page)", by: "Joe Girard", used: "A personal thank-you after the sale and an open invitation to call"}
   - {title: "Repeat Business and Referrals (public page)", by: "Joe Girard", used: "Keeping notes on each buyer, contact over time and asking for referrals once service is felt"}

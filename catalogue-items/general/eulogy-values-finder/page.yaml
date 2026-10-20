@@ -1,0 +1,100 @@
+new_slug: eulogy-values-finder
+name: "Eulogy values finder"
+summary: "Say where you are in life. Get the five values you most want remembered for, and which you are not living yet."
+job: think-and-decide
+thinking: medium
+thinking_why: "It sorts what you write and spots patterns and gaps, but the steps are fixed and the facts come from you."
+headline: "Eulogy values finder"
+subhead: "Tell it your stage in life. It asks what four people close to you would say on a day long from now, finds what repeats, checks each against the last thirty days, and ranks your top five. You get a list of values and contributions with the gap to close."
+explain: |
+  Goals set too early point at the wrong thing. You can chase a promotion for years and then notice that nobody who matters would mention it. The fastest way to find what you value is to start from the end and work back.
+
+  This skill asks you to picture four speakers: someone from your family, a friend, a colleague and a person from a group you belong to. You say what you would want each to say. It pulls out the ideas that repeat, splits them into who you want to be and what you want to do, and scores each one against a real example from the last month. Then it ranks the five that matter most and shows the biggest gap.
+when:
+  - You are busy all the time and cannot say what it is for.
+  - You are about to write a mission statement and want real material for it.
+  - A change of job, move or life stage has made your old goals feel wrong.
+you_give:
+  - Your age or stage in life, and what is on your mind
+  - A day to picture, such as retirement or a memorial (optional)
+  - Anything you already know you value (optional)
+  - Honest examples from the last thirty days when asked
+you_get:
+  - What each of four speakers would say, in your words
+  - Two lists, one of who you want to be and one of what you want to do
+  - Your top five, each with its evidence, a score for how you live it now and a next step for this month
+  - The one gap that matters most
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Say your stage in life and pick the day you want to picture. If the memorial feels too heavy, ask for the one-more-year version.
+  - Answer for each of the four speakers. Give a moment, not a title.
+  - Give one real example from the last month for each value when it asks.
+  - Take the top five to "Roles and long-term goals mapper".
+how_it_works:
+  - title: Sets the scene
+    text: Picks the day and the four speakers, or a gentler one-more-year frame.
+  - title: Gets the sentences
+    text: Takes three sentences per speaker and asks for a moment behind any title or award.
+  - title: Marks the repeats
+    text: Underlines ideas that appear more than once and sorts them into being and doing.
+  - title: Scores against now
+    text: Asks for a real example from the last thirty days and scores each item from 0 to 3.
+  - title: Finds the gaps
+    text: Lists what you call vital but live rarely, and notes strengths you forgot to mention.
+  - title: Ranks the top five
+    text: Chooses by regret and gap size, with the evidence and one step for this month.
+  - title: Checks itself
+    text: Runs its own checks and names any it missed.
+output_shape: |
+  FRAME
+  <memorial, anniversary, retirement or one more year>
+  WHAT THEY WOULD SAY
+  Family: <three sentences>
+  Friend: <three sentences>
+  Colleague: <three sentences>
+  Group: <three sentences>
+  BEING: <list>   DOING: <list>
+  YOUR TOP FIVE
+  1. <value or contribution> | Said by: <speaker, words> | Now: <0 to 3> because <example> | This month: <step>
+  2. ...
+  BIGGEST GAP
+  <the item, the score and why it matters>
+  MISSING
+  <what would sharpen the list>
+  CHECKS MISSED
+  <one line per check still missed, or none>
+tweaks:
+  - what: The day you picture
+    how: A retirement party gives work values. A fiftieth anniversary gives family values. Run it twice for a fuller list.
+  - what: Detail in your answers
+    how: Say what you did for the person, not what you were. A specific act gives the skill something to rank.
+  - what: Honest examples
+    how: Give the last thirty days, not your best year. The gap list is only as honest as the examples.
+  - what: The speakers
+    how: Swap in people who know you in the part of life you want to change.
+judge:
+  - Every speaker has at least one specific act or moment, not only a title.
+  - Each of the top five traces to words you gave.
+  - Each score has a real example from the last thirty days.
+  - At least one gap is named and it stings a little.
+  - Nothing is on the list that you did not say.
+test:
+  - Run it once and then again a week later. The top five should overlap by at least three.
+  - Show the list to someone close to you. Ask which items they would have guessed.
+  - Compare the top five with how you spent last week. Note any value with no hours behind it.
+improve:
+  - Add the roles you play to the input, so the speakers match your real circles.
+  - Save the top five in your about-me file and bring them to the next skill.
+  - Re-run it each year or after a big change.
+  - Pair it with "Roles and long-term goals mapper" and "Personal mission statement writer".
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Sorting sentences and asking follow-up questions is text work any strong chat AI does well."}
+    - {name: "A notebook", why: "Writing the four speeches by hand slows you down enough to say something true."}
+  inputs:
+    - "A list of the roles you play"
+    - "Notes from a time you felt proud or ashamed"
+    - "Your calendar for the last month, to check the scores"
+terms:
+  - term: Being and doing
+    meaning: Being is character, such as fair or patient. Doing is what you contribute, such as teach or build.

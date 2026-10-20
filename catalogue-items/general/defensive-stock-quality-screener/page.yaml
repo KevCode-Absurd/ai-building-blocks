@@ -1,0 +1,111 @@
+new_slug: defensive-stock-quality-screener
+name: "Defensive stock quality screener"
+summary: "Paste a company's ten-year figures. Get it passed or failed on size, strength, profit record, dividends and growth."
+job: money-and-investing
+thinking: medium
+thinking_why: "The tests are fixed and the sums are small. The care is in reading each figure from the pasted data without filling gaps."
+
+headline: "Cut a list of companies down to the ones solid enough for a patient, hands-off investor"
+subhead: "Paste ten years of figures for each company: sales, assets, debts, profit per share and dividends. It tests size, financial strength, an unbroken profit record, a long dividend record and a minimum of growth, and shows the figure behind every pass and fail. A method of analysis, not personal financial advice."
+
+explain: |
+  A plain investor wants companies that are large, financially strong and steady. They do not need to be exciting. Most companies fail at least one of these tests, and that is the point: the screen cuts a long list down before you read a single story about the business.
+
+  This skill runs five quality tests, in the form Benjamin Graham set them in the 1972 edition of The Intelligent Investor. Size is set above a floor that you choose in today's money. Strength is current assets of at least twice current liabilities and long-term debt no more than working capital, with a different test for utilities. Profit must show in each of ten years. Dividends must be unbroken for twenty years. Profit per share must have grown by at least a third over ten years, using three-year averages at each end. Each result is pass, fail or unknown, with the figure beside it. It names no company to buy.
+
+when:
+  - You have a list of large companies and want to cut it before you study any of them.
+  - You want to hold a few sound businesses for many years with little fuss.
+  - A friend or a tip named a company and you want to test it against plain rules first.
+
+you_give:
+  - Ten years of figures for each company, pasted from its reports or a data site
+  - Sales or total assets, current assets and liabilities, long-term debt
+  - Profit per share by year and dividends per share by year
+  - A size floor in today's money, if you have a view
+
+you_get:
+  - A pass, fail or unknown on each of the five tests
+  - The figure behind each result, with the sum shown
+  - A list of companies that passed all five
+  - A list of what is still unknown and where to find it
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste the figures, one company at a time or as a table.
+  - Say which are utilities, banks or insurers, since those use different tests.
+  - Take the survivors to "Earnings padding detector".
+
+how_it_works:
+  - title: Sets a size floor
+    text: Checks sales or assets against a floor in today's money, which you set or it proposes and marks as a choice.
+  - title: Tests financial strength
+    text: Checks that current assets are at least double current liabilities and long-term debt does not top working capital.
+  - title: Tests the profit record
+    text: Looks for a profit in each of ten years.
+  - title: Tests the dividend record
+    text: Looks for a dividend paid without a break for twenty years.
+  - title: Tests growth
+    text: Compares the average of the first three years with the average of the last three, and wants at least a third more.
+
+output_shape: |
+  COMPANY: <name>  (type: industrial / utility / other)
+
+  1 SIZE: <pass / fail / unknown> | Figure: <...> | Floor: <...> (your choice)
+  2 STRENGTH: <pass / fail / unknown> | Current ratio <x> | Debt vs working capital <...>
+  3 PROFIT RECORD: <pass / fail / unknown> | Years with a loss: <list or none>
+  4 DIVIDENDS: <pass / fail / unknown> | Unbroken since <year>
+  5 GROWTH: <pass / fail / unknown> | First 3-yr average <a> | Last 3-yr average <b> | Rise <n>%
+
+  RESULT: <PASSES ALL FIVE / FAILS ON: list / UNKNOWN ON: list>
+
+  LIST
+  Passed all five: <names> | Failed: <names with test> | Unknown: <names with gap>
+
+  MISSING
+  <list>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: Size floor
+    how: Set your own floor in sales or assets. The original figures were set in 1972 money and are far too small today.
+  - what: Other types
+    how: Say if a company is a utility, a bank or an insurer. Utilities use debt against stock equity, and banks and insurers get only a note, not a pass.
+  - what: Stricter growth
+    how: Ask for a higher minimum than a third if you want a more selective list.
+
+judge:
+  - Each result shows the figure and the sum.
+  - Growth is measured with three-year averages at each end, not single years.
+  - Unknown is used when a figure is missing, never a guess.
+  - A utility is tested on debt against equity, not on the current ratio.
+  - Nothing says to buy or sell a named company.
+
+test:
+  - Give it a company with one loss year in ten. It should fail it on the profit record.
+  - Give it only five years of figures. It should mark the ten-year tests unknown.
+  - Give it a utility. It should skip the current ratio and test debt against equity.
+  - Run it twice on the same figures. The results should match.
+
+improve:
+  - Keep a log of the lists you build and what the group did over time.
+  - Rerun the screen each year on the same companies to see who drops out.
+  - Share the figures with a friend and ask if they reach the same results.
+
+works_best_with:
+  tools:
+    - {name: "A free company data site or annual reports", why: "The tests need ten years of figures, and the filings are the source."}
+    - {name: "A spreadsheet", why: "A table with a row per company and a column per test makes the group easy to see."}
+  inputs:
+    - "Ten years of profit and dividend per share"
+    - "The latest balance sheet"
+
+terms:
+  - term: Current ratio
+    meaning: Current assets divided by current liabilities. It shows if a company can pay its short-term bills.
+  - term: Working capital
+    meaning: Current assets less current liabilities.
+  - term: Three-year average
+    meaning: The mean of three years of profit, used so a single odd year cannot swing a result.

@@ -1,0 +1,87 @@
+new_slug: run-a-project-review-where-people-tell-the-truth
+name: Run a project review where people tell the truth
+summary: Name a finished project. Get prep, an agenda that keeps blame out, and the lessons turned into rules for next time.
+job: lead-people
+thinking: medium
+thinking_why: It follows a fixed process but must choose formats, themes and rules that fit your team.
+headline: Run a review of a finished project that teaches the team and blames no one
+subhead: Name a project that just ended. It plans the prep with a form asking each person for five things to do again and five never again, sorts the answers and your numbers into themes, writes a timed agenda with wording rules, and turns each lesson into a rule for next time.
+explain: |
+  Most project reviews fail before the meeting starts. People are tired, they want to move on and they do not want to reopen an old argument. Ed Catmull's account of Pixar's reviews says much of the value comes from the preparing. It forces each person to think before they speak.
+
+  This workflow builds that preparation. It picks a format that differs from your last one, since people learn to game a repeated format. It asks for two short lists, because honesty is easier when good and bad sit side by side. It sets numbers beside the lists, and treats the numbers as one way of seeing, not as the answer. Then it writes an agenda that asks what caused something and never whose fault it was, sets aside time for old hurts, and ends with the lessons as rules the next team can check.
+when:
+  - A project has just ended, well or badly, and you want the team to learn without blame.
+  - Your last review turned into polite thanks or an argument.
+  - You want the lessons to reach people who were not on the project.
+you_give:
+  - The project, its dates and the people by role
+  - The format of your last review and any records you keep (optional)
+  - After the prep, each person's two lists and the numbers
+  - After the meeting, what was said and decided
+you_get:
+  - A prep plan with a fresh format, a two-list form, numbers to pull and who will hear the lessons
+  - Themes from the lists with counts, contested items shown side by side and each theme beside your numbers
+  - A timed agenda with wording rules, facilitator lines, a slot for old hurts and questions for the next project
+  - Each lesson written as a rule with its root cause, ready to check next time
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Send the form from step 1 and collect the lists and numbers. Bring them to step 2.
+  - Hold the review using the agenda, then bring what was said and decided to the last step.
+how_it_works:
+  - title: Plans the prep
+    text: Picks why you are reviewing, a format that differs from the last one, the two-list form, the numbers to pull and the people who will hear the lessons.
+  - title: Sorts the answers
+    text: Groups the lists into themes, shows contested items side by side and sets each theme beside your numbers as a question.
+  - title: Challenges first conclusions
+    text: Asks what in the process, not the result, supports each claim and lists what no one can see.
+  - title: Writes a blame-free agenda
+    text: Times each theme, has the person closest tell it in the first person, adds wording rules and facilitator lines, and sets a slot for old hurts.
+  - title: Turns lessons into rules
+    text: Finds the root cause of each problem and writes a rule the next team can check.
+output_shape: |-
+  STEP 1: THE PREP
+    project | reasons | format | two-list form | numbers with owners | who hears the lessons | meeting rules
+
+  (Pause: collect the lists and the numbers.)
+
+  STEP 2: THE THEMES
+    who answered | themes with counts | contested | themes and numbers
+    first conclusions to challenge | what cannot be seen | old hurts | top five for the room
+
+  STEP 3: THE AGENDA
+    room | timed agenda | wording rules | facilitator lines | old hurts slot | questions for next project | the record
+
+  (Pause: hold the review.)
+
+  STEP 4: THE RULES
+    lesson | root cause | rule | how to check it next time
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: The last review's format
+    how: Say what you did last time. Step 1 picks one that differs, so the answers are not rehearsed.
+  - what: Your numbers
+    how: Give each figure with its definition. Step 2 sets themes beside them as questions.
+  - what: Who attends
+    how: Give roles. If one person's views set the tone, step 3 writes a speaking order for them.
+  - what: How painful the project was
+    how: Say so. Step 3 will give old hurts more time and cut the number of themes.
+judge:
+  - The format differs from the last review, or the last format is marked missing.
+  - Every theme shows counts on both lists, and contested themes show both views.
+  - The wording rules replace whose fault with what caused it.
+  - The times add up to the meeting length and a facilitator other than the project lead is named.
+  - Each lesson ends as a rule that can be checked.
+test:
+  - Run it on a project that went well. The form should still ask for five things not to do again.
+  - Add a number that seems to match a theme. Step 2 should write a question, not a conclusion.
+  - Give step 3 a thirty-minute meeting and eight themes. It should move some to a written follow-up.
+  - At the next project's start, read the rules aloud and see if people recognise them.
+improve:
+  - Keep the lists and rules from each review. After a year you will see which lessons keep coming back.
+  - Rotate the facilitator.
+  - Add the questions for the next project to the kickoff checklist of every new project.
+  - Run only step 1 and step 3 for a small project, and skip the numbers.

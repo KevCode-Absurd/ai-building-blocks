@@ -1,0 +1,111 @@
+new_slug: typed-headline-batch-writer
+name: "Typed headline batch writer"
+summary: "Paste your top buying reasons. Get twenty or more headlines labelled self-interest, news or curiosity, each with a believable detail."
+job: write-ad-copy
+thinking: low
+thinking_why: "It follows fixed shapes and labels. Judgement comes later, in the ranking step."
+
+headline: "Twenty headlines, sorted by type, with a real detail in each"
+subhead: Give it your chosen buying reasons and your facts. It writes headlines in three tested types, ties every curiosity line to a promise and adds a figure wherever your facts allow. You get a numbered list, each line labelled by type and reason.
+
+explain: |
+  One headline is a guess. Twenty headlines, sorted by what each one does for the reader, is a choice. Most weak headlines fail in the same few ways: they promise nothing, they puzzle the reader with nothing inside the puzzle, or they state a fact the reader already knows.
+
+  This skill writes in three types. Self-interest lines offer the reader something they want. News lines announce something that is truly new. Curiosity lines make the reader wonder, but only with a promise inside. It leans on self-interest because that type does most of the work. Each line carries a detail from your facts, such as a time, a count or a price, because specific claims are easier to believe. Anything you have no material for is marked MISSING and left out.
+
+when:
+  - You need a headline for an ad, email, page or mailing and have only one or two ideas.
+  - Your headlines read as clever but nobody can say what they offer.
+  - You want a sorted list to cross out and test, not a single line to take on trust.
+
+you_give:
+  - Your top buying reasons, ideally from "What you really sell finder"
+  - Your product facts, with figures, times, counts and dates
+  - Your offer, price and any deadline (optional)
+you_get:
+  - At least twenty numbered headlines
+  - For each, its type, the buying reason it serves and the detail it uses
+  - A count by type and the lines cut with a reason
+  - MISSING notes for any news or figures it could not use
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your buying reasons and your product facts.
+  - Add anything that is new, with its date, so the news lines can run.
+  - Read the list with the copy hidden. Cross out any line you cannot explain to a stranger.
+  - Take the rest to "Headline cover test ranker".
+
+how_it_works:
+  - title: Pulls the details
+    text: Lists every figure, time, count, date and price in your facts, so lines use real parts.
+  - title: Writes self-interest first
+    text: Offers a gain in words the reader would use, with shapes such as how to, in a set time, or for a set price.
+  - title: Adds news only if it is true
+    text: Writes news lines when something is truly new and dated. Otherwise it says so and writes none.
+  - title: Ties curiosity to a promise
+    text: Every curiosity line carries a gain, so the headline still says something to a reader who sees nothing else.
+  - title: Cuts and labels
+    text: Removes dead, too-clever and could-be-anything lines, then labels each remaining line by type and reason.
+
+output_shape: |
+  HEADLINES
+  <n>. <headline>
+     Type: <self-interest / news / curiosity>  Reason: <buying reason>
+     Detail: <figure, time or fact used, or none>
+
+  COUNT BY TYPE
+  Self-interest <n> | News <n> | Curiosity <n>
+
+  CUT
+  <headline | why>
+
+  MISSING
+  <news, figures or proof that were not supplied>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: How many lines
+    how: Ask for thirty if you have five or more buying reasons. Ask for twelve for a quick round.
+  - what: News
+    how: Give anything new with its date. Without it, no news lines are written.
+  - what: Length
+    how: Say your limit, such as a subject line of 50 characters. Lines are trimmed by meaning, not by dropping small words.
+  - what: Tone
+    how: Say if your brand uses a plain, warm or dry voice. The wording follows it.
+
+judge:
+  - At least twenty lines, mostly self-interest.
+  - Every news line rests on something true and dated that you gave it.
+  - No curiosity line is a bare puzzle.
+  - Every number and detail comes from your facts.
+  - No two lines say the same thing.
+
+test:
+  - Cover your current headline and read five of the new ones aloud to a stranger. Ask what each one offers.
+  - Run it twice on the same input. The types should be similar and the lines mostly different.
+  - Give it a product with nothing new. It should write no news lines and say why.
+  - Check three figures in the list against your facts.
+
+improve:
+  - Add headlines that have won for you, with their type, to step 3 as shapes to use.
+  - Add words your brand never uses to the "Avoid" list.
+  - Save each tested winner with its type and result so you can see which type wins for your buyers.
+  - Pair it with "What you really sell finder" first so the reasons are chosen, not guessed.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Writing and labelling many short lines is something any strong chat AI does well with this skill."}
+  inputs:
+    - "The ranked buying reasons from What you really sell finder"
+    - "A page of exact facts: amounts, times, counts, dates"
+    - "Any new feature or price with the date it started"
+
+terms:
+  - term: Self-interest headline
+    meaning: A headline that offers the reader something they want.
+  - term: News headline
+    meaning: A headline that announces something truly new, such as a product, use or price.
+  - term: Curiosity headline
+    meaning: A headline that makes the reader wonder. It works best with a promise or news inside it.

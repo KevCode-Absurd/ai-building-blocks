@@ -1,6 +1,6 @@
 slug: vanity-metric-fixer
 name: "Vanity metric fixer"
-summary: "Paste the numbers you report. Get which are vanity, and per-customer numbers that show cause."
+summary: "Paste the numbers you report. Get which are vanity, per-customer numbers that show cause, and the one number to track."
 category: general
 type: skill
 role: check

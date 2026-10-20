@@ -1,0 +1,23 @@
+slug: call-to-action-writer
+name: Call-to-action writer
+summary: Paste your ad and offer. Get a clear ask with a real reason to act now and the barriers removed.
+category: general
+type: skill
+role: make
+job: copy
+level: beginner
+inputs:
+  - type: copy_draft
+    required: true
+  - type: offer
+    required: false
+outputs:
+  - type: ad_copy
+origin: rebuilt
+version: 1.0.0
+minds:
+  - victor-schwab
+credits:
+  - title: How to Write a Good Advertisement (a book summary)
+    by: Victor O. Schwab
+    used: The three kinds of ask (go and buy, do something, reply), the ways to get action now, guarantees as barrier removers, and the fallacy of 'sometime'

@@ -1,0 +1,116 @@
+new_slug: good-note-sharpener
+name: "Good note sharpener"
+summary: "Paste raw comments on your work. Get each rewritten as a note on the problem, with fixes kept as examples."
+job: lead-people
+thinking: medium
+thinking_why: "It sorts and rewrites each comment by fixed rules, but it has to judge what problem sits behind a fix."
+
+headline: "Turn vague or bossy feedback into notes you can act on"
+subhead: Paste the comments you got. It sorts each one, rewrites it as a specific problem with its place in the work, keeps any fix as a marked example, merges repeats and tells you which reviewer to ask for more.
+
+explain: |
+  Raw feedback is usually a feeling ("boring"), an order ("cut the middle") or a judgment of you ("you always rush"). None of those tells you what is wrong. The owner ends up fighting the reviewer, or following a fix for a problem nobody named.
+
+  This skill uses a plain test for a good note. It says what is wrong, missing or unclear. It points at a place. It makes no demand. A fix may come along, but only as an example. It rewrites every comment to pass that test, asks the reviewer for the place when it is missing, and never invents one.
+
+when:
+  - You got a pile of comments and do not know which ones to act on.
+  - Your reviewers give orders or fixes, and you want the problems behind them.
+  - You are about to share notes with someone and want them to be about the work, not the person.
+
+you_give:
+  - The raw comments, with who said each one if you know
+  - The draft, plan or work they are about (optional)
+  - One line on what you are trying to do (optional)
+you_get:
+  - Each comment rewritten as a problem note with its place and what the reader lost
+  - Fixes kept on their own line, marked as examples only
+  - Repeats merged and counted
+  - A list of questions to send back to reviewers, and a list of comments that were about you, not the work
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste every comment as it came, including the harsh ones. Add the work if you can.
+  - Read the notes in order. Send the reviewer questions back to the people who gave the vague comments.
+  - Bring the finished notes to "Problem root cause tracer".
+
+how_it_works:
+  - title: Sorts every comment
+    text: Marks each as a problem, fix, order, feeling, comment on the person or praise.
+  - title: Finds the problem behind a fix
+    text: Asks what the reviewer must have seen, writes that as the note and keeps the fix as an example.
+  - title: Gives feelings a place
+    text: Finds where in the work the reaction happened, or asks the reviewer instead of guessing.
+  - title: Removes the orders
+    text: Drops "must" and "need to" and says what is not working.
+  - title: Merges and counts
+    text: Joins notes about the same place and records how many people raised it.
+  - title: Marks the timing
+    text: Says whether each note can still be acted on.
+  - title: Checks itself
+    text: Runs its own checks and names any it missed.
+
+output_shape: |
+  NOTES
+  <n>. Problem: <one sentence about the work>
+     Where: <place> | Reader lost: <what> | Raised by: <count>
+     Example only: <fix, if one was offered>
+
+  WHAT WORKS
+  <specific praise, as exact as the problems>
+
+  NOT ABOUT THE WORK
+  <comments about the person, listed apart>
+
+  QUESTIONS FOR REVIEWERS
+  <where? what did you expect?>
+
+  MISSING
+  <what would sharpen the notes>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: The work itself
+    how: Paste it. Notes point at real places only when the work is there to read.
+  - what: Who said each comment
+    how: Add names or roles. It lets the skill count how many people raised a point.
+  - what: What you are trying to do
+    how: One line helps it tell a real problem from a taste difference.
+  - what: How harsh the comments are
+    how: Paste them untouched. Harsh notes often hide a real problem.
+
+judge:
+  - Every note is about the work and names a place or asks for one.
+  - No note contains an order such as "must" or "need to".
+  - Every fix is on its own line marked as an example.
+  - Nothing was added that no reviewer said.
+  - A note raised by only one person was kept.
+
+test:
+  - Paste five comments you disagree with. See if each turns into a problem you can at least understand.
+  - Paste "just cut the middle". It should ask what problem made the reviewer say it.
+  - Leave the work out. Notes should carry a missing-place line, not an invented place.
+  - Run it twice. The sorting should stay the same even if the wording changes.
+
+improve:
+  - Keep a list of the vague words your reviewers use, and add them so they are caught each time.
+  - Give reviewers the note form before the session so they write in it themselves.
+  - Pair it with "Peer feedback session planner" so the session gives sharper comments to begin with.
+  - Send the merged notes back to the group so they can see which ones landed.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Sorting and rewriting comments is text work any strong chat AI does well with this skill."}
+    - {name: "A shared document", why: "Reviewers can add their answers to the questions beside each note."}
+  inputs:
+    - "The work the comments are about, so notes point at real places"
+    - "A session plan from the Peer feedback session planner, so the speaking order and note rule are known"
+    - "The names or roles of the reviewers, so repeats can be counted"
+
+terms:
+  - term: Good note
+    meaning: A comment that says what is wrong, missing or unclear, points at a place and makes no demand.
+  - term: Example only
+    meaning: A fix offered to show the problem, which the owner is free to ignore.

@@ -1,0 +1,19 @@
+slug: claim-demonstration-planner
+name: "Claim demonstration planner"
+summary: "Paste your claim and product facts. Get a short script where every spoken line has a picture showing the same thing."
+category: general
+type: skill
+role: make
+job: video
+level: intermediate
+inputs:
+  - {type: audit_report, required: true}
+  - {type: product_data, required: true}
+  - {type: copy_draft, required: false}
+outputs:
+  - {type: script, required: true}
+origin: rebuilt
+version: 1.0.0
+minds: [rosser-reeves]
+credits:
+  - {title: "Reality in Advertising", by: "Rosser Reeves, 1961", used: "Locking the picture to the spoken words, finding one picture that shows the claim (even for a benefit nobody can see), keeping presenters who add nothing off screen, and building the rest of the ad around that picture"}

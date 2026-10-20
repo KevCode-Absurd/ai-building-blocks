@@ -1,0 +1,105 @@
+new_slug: urgent-versus-important-sorter
+name: "Urgent versus important sorter"
+summary: "Paste your task list with rough hours. Get four boxes, your real time split, and what to drop, hand off and protect."
+job: plan-strategy
+thinking: medium
+thinking_why: "It sorts items by two fixed questions and does simple sums, so a mid-level model is enough."
+headline: "Urgent versus important sorter"
+subhead: "Paste what is on your plate, with rough hours, and say what matters to you. It sorts each item into four boxes by urgent and important, works out your time split, and finds where time for the important work can come from. You get a sorted plate, two polite refusals and a brief for your week."
+explain: |
+  Urgent jobs push on you, so they win. A message, a call or a request from someone else gets answered first. The important work, such as planning, health or building a relationship, has no deadline, so it waits. Months later you are busy and behind on the things you care about.
+
+  This skill asks what important means to you, then sorts each item with two questions: is it important, and is it urgent? It counts the hours in each box, traces each crisis back to the work that would have prevented it, and finds where time for the important work can come from. That time can only come from the urgent but unimportant jobs and from escape, so it marks each as drop, hand off, batch or shrink, and writes the first two refusals.
+when:
+  - Your day is full of small jobs and the big one never gets started.
+  - You feel busy and behind and cannot say why.
+  - You are about to plan the week and want to know what to clear first.
+you_give:
+  - Your task list or last week's calendar, with rough hours per item
+  - What matters to you, as roles, goals or values (optional but helps)
+  - Anything you should do but never get to (optional)
+you_get:
+  - Each item in one of four boxes, with hours
+  - The share of your hours in each box, and what the pattern says
+  - Each crisis traced back to the work that would have prevented it
+  - A move for each low-value item, two polite refusals and a brief for planning the week
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your task list or calendar. Add rough hours and say what matters to you.
+  - Read the shares. Check them against what you guessed before you read them.
+  - Pick the handoffs and the refusals. Send the handoffs to "Results agreement writer".
+  - Take the week brief to "Values-to-week planner".
+how_it_works:
+  - title: Lists the plate
+    text: One line per item with hours, estimates marked as such.
+  - title: Defines important
+    text: Takes your roles, goals or values as the test, not its own view.
+  - title: Sorts with two questions
+    text: Important first, then urgent, into four boxes.
+  - title: Counts the split
+    text: Shares of your hours in each box, compared with your guess.
+  - title: Traces the crises
+    text: Asks what important work would have kept each crisis from happening.
+  - title: Names the important list
+    text: Pulls out the important, not-urgent work, including the one thing that would make a large difference.
+  - title: Finds the time
+    text: Marks each lower-value item drop, hand off, batch or shrink.
+  - title: Writes the refusals and brief
+    text: Two short, kind noes and a brief for the week.
+output_shape: |
+  THE FOUR BOXES
+  I (urgent, important): <item, hours>
+  II (important, not urgent): <item, hours>
+  III (urgent, not important): <item, hours>
+  IV (neither): <item, hours>
+  YOUR SPLIT
+  I <n>%  II <n>%  III <n>%  IV <n>% | Pattern: <what it shows>
+  CRISES TRACED
+  <crisis> <- <work in Box II that would have prevented it>
+  BOX II LIST
+  <items> | The one thing: <answer>
+  WHERE THE TIME COMES FROM
+  <item> -> drop / hand off to <who> / batch / shrink
+  TWO REFUSALS
+  <short, kind no> | Protecting: <the yes>
+  WEEK BRIEF
+  Roles and goals: <list> | Book first: <list> | Hours freed: <n> | Hand off: <list> | Re-sort on: <date>
+  MISSING
+  <what would sharpen the sort>
+  CHECKS MISSED
+  <one line per check still missed, or none>
+tweaks:
+  - what: Your definition of important
+    how: Name two or three roles or goals first. Without them the sort will be your guess, not yours.
+  - what: Hours
+    how: Use last week's calendar or a three-day log. Guessed hours make the shares wrong.
+  - what: Splitting mixed items
+    how: A meeting can be half Box II and half Box III. Say so and give the hours for each part.
+  - what: Recent crises
+    how: List what blew up this month. The tracing step needs them.
+judge:
+  - Important is defined from your own roles, goals or values.
+  - Every item is in one box, or split with the hours divided.
+  - The shares add to 100 percent.
+  - Each crisis has a prevention idea.
+  - The time for important work comes from Boxes III and IV.
+test:
+  - Estimate your own split before you run it, then compare. The gap is the lesson.
+  - Run it on last week and on next week's list. Boxes should shift toward II.
+  - Send the first refusal. See if it feels honest.
+improve:
+  - Add your standing roles and goals to the skill file so you do not retype them.
+  - Add your own typical Box III items, such as a weekly status meeting.
+  - Re-sort on the date in the brief and keep the shares in a note.
+  - Pair it with "Results agreement writer" for handoffs and "Values-to-week planner" for the week.
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Sorting items and adding up hours is text work any strong chat AI does well."}
+    - {name: "Your calendar app", why: "Last week's real events give honest hours."}
+  inputs:
+    - "A roles-and-goals map from Roles and long-term goals mapper"
+    - "A three-day time log"
+    - "A list of this month's crises"
+terms:
+  - term: Box II
+    meaning: Work that matters but has no deadline, such as planning, health, learning and building relationships.

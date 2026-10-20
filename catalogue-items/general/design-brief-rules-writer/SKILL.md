@@ -59,7 +59,7 @@ Core facts. Audience, client and the change. The need. The one idea. The limits.
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - **Design it** with the [Brand mark system planner](https://useaiblocks.com/skills/brand-mark-system-planner). It takes the buyer brief.
-- **Tell it as a story** with the [Storyboard-first story builder](https://useaiblocks.com/skills/storyboard-first-story-builder). It takes the buyer brief.
+- **Tell it as a story** with the [Scene detail picker](https://useaiblocks.com/skills/scene-detail-picker). It takes the buyer brief.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

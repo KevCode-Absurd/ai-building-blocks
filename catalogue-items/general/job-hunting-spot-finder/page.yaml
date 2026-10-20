@@ -1,0 +1,112 @@
+new_slug: job-hunting-spot-finder
+name: Job hunting spot finder
+summary: Tell it what you sell. Get ranked leads for unmet jobs and what to go and watch for each.
+job: understand-customers
+thinking: medium
+thinking_why: It sorts many small clues into leads and scores them by a fixed rule. A mid-range model does this well.
+headline: Find where your customers are struggling and nobody is helping
+subhead: Tell it what you sell and who buys. It searches five places for unmet jobs, scores each lead by the evidence behind it and tells you what to go and watch for the top three.
+explain: |-
+  Asking buyers what they want tends to give you small changes to what you already make. Real openings sit elsewhere. People who buy nothing. Fixes they built themselves. Tasks they hate. Odd ways they use what you sell.
+
+  This skill searches those five places. It writes each lead as a person in a moment, scores how much proof backs it and how much it costs them, and keeps unproven ideas on a separate list. Then it plans a visit: where to go, what to watch and the first question to ask.
+when:
+  - Growth feels stuck and every idea is a tweak to what you already sell.
+  - You have customer words but no list of leads.
+  - You want to know who you are not serving and why.
+you_give:
+  - What you sell and who buys it
+  - Your question, such as where growth could come from
+  - Product facts (optional)
+  - Reviews, support emails or returns notes, word for word (optional)
+you_get:
+  - Leads from five places, each written as a person in a moment
+  - An evidence score and a struggle score for each, and a ranking
+  - A separate list of hunches that need watching first
+  - "A visit plan for the top three: where, when, what to watch and the first question"
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Say what you sell, who buys it and what you want to learn.
+  - Paste any customer words as they are.
+  - Take the visit plan out and watch. Write what you see in people's own words.
+  - Bring the notes to "Job spec writer".
+how_it_works:
+  - title: Searches your own life
+    text: Starts with moments where you struggled, because a problem you feel is often shared.
+  - title: Looks at non-buyers
+    text: Finds who buys nothing and what they do instead, including doing nothing.
+  - title: Reads for workarounds
+    text: Spots fixes people built themselves and what each one costs them.
+  - title: Finds avoided tasks
+    text: Lists what people dread or hand off, written as "I do not want to".
+  - title: Counts unusual uses
+    text: Looks for uses you did not plan and counts how many separate people show each.
+  - title: Scores the leads
+    text: Multiplies evidence by struggle, so a proven pain beats an exciting idea.
+  - title: Plans the watch
+    text: Gives a place, time, what to watch for and an opening question for each top lead.
+  - title: Checks itself
+    text: Runs its own checks and names any it missed.
+output_shape: |-
+  THE QUESTION
+  <who you serve, what you sell, what you want to learn>
+
+  RANKED LEADS
+  1. <person> in <circumstance> | Place: <own life, non-buyers, workaround, avoided task or unusual use>
+     Evidence: <0 to 3> | Struggle: <0 to 3> | Score: <n>
+     What they do now: <fix and cost> | Emotional side: <words or MISSING>
+  2. ...
+
+  HUNCH LIST
+  <leads with no evidence yet>
+
+  WATCH PLAN (TOP THREE)
+  <lead> | Where: <place> | When: <time> | Watch for: <behaviours> | First question: The last time ...
+
+  NOT SEARCHED
+  <place> | <reason>
+
+  MISSING
+  <gaps>
+
+  CHECKS MISSED
+  <one line per check missed, or none>
+tweaks:
+  - what: Your own stories
+    how: Give two or three real moments of struggle. They start the hunt and are often the best leads.
+  - what: Customer words
+    how: Paste them untouched. Summaries hide the odd uses and workarounds this skill looks for.
+  - what: Who is easy to reach
+    how: Say who you can visit this week. Ties are broken in favour of people you can reach.
+judge:
+  - Each lead is a person in a moment, not a group or a need.
+  - Each lead names its source place and its evidence.
+  - Hunches are kept apart and ranked lower.
+  - The visit plan says what to watch, not only where to go.
+  - Nothing is invented.
+test:
+  - Give it ten reviews where two people describe the same home-made fix. It should count them as two people and rate the lead 2 on evidence.
+  - Give it only your own story. Every lead should land on the hunch list.
+  - Run it twice on the same input. The top three leads should stay the same.
+improve:
+  - Add leads you have already watched, with what you saw, and run it again.
+  - Add refund and return reasons, which often show unusual uses.
+  - Keep the hunch list and clear it as you watch.
+  - Pair it with "Customer watching plan" for the visit itself.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: Sorting clues into leads and scoring them is text work any strong chat AI does with this skill.
+    - name: A notebook
+      why: You need to write what you see in people's own words during the visit.
+  inputs:
+    - Reviews, support emails and returns notes
+    - Photos customers sent in
+    - A list of people you can visit this week
+terms:
+  - term: Job
+    meaning: The progress a person is trying to make in one particular moment.
+  - term: Workaround
+    meaning: A fix people build themselves because nothing on offer fits.
+  - term: Non-buyer
+    meaning: Someone who has the problem and buys nothing for it, from you or anyone else.

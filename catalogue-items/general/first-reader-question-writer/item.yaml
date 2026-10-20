@@ -1,0 +1,18 @@
+slug: first-reader-question-writer
+name: "First reader question writer"
+summary: "Paste your draft. Get your ideal reader named and a short question sheet to send with it."
+category: general
+type: skill
+role: make
+job: research
+level: beginner
+inputs:
+  - {type: copy_draft, required: true}
+  - {type: plan, required: false}
+outputs:
+  - {type: plan}
+origin: rebuilt
+version: 1.0.0
+minds: [stephen-king]
+credits:
+  - {title: "On Writing: A Memoir of the Craft", by: "Stephen King", used: "Having one ideal reader in mind, showing a draft to a handful of readers after the door opens, asking where they got bored or lost, and keeping readers quiet about it until asked"}

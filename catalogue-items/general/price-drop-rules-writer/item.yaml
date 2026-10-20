@@ -14,6 +14,6 @@ outputs:
   - {type: plan}
 origin: rebuilt
 version: 1.0.0
-minds: [warren-buffett, charlie-munger]
+minds: [warren-buffett, charlie-munger, benjamin-graham]
 credits:
   - {title: "The Warren Buffett Way, Second Edition (2005)", by: "Robert G. Hagstrom", used: "The temperament test of whether you could watch holdings fall by half without panic, Mr. Market as a partner whose mood you may ignore, looking at prices less often, and the common mind traps of loss pain, overreaction to recent news, overconfidence and mental accounts"}

@@ -1,0 +1,25 @@
+slug: growth-engine-finder
+name: Growth engine finder
+summary: Describe how customers arrive and your rates. Get your growth engine, its key rate and a sum showing where you stand.
+category: general
+type: skill
+role: make
+job: analysis
+level: advanced
+inputs:
+  - type: question
+    required: true
+  - type: plan
+    required: false
+outputs:
+  - type: plan
+    required: true
+origin: rebuilt
+version: 1.0.0
+minds:
+  - eric-ries
+credits:
+  - title: "The Lean Startup: how today's entrepreneurs use continuous innovation to create radically successful businesses"
+    by: Eric Ries
+    url: https://theleanstartup.com/
+    used: The three engines of growth (sticky, viral, paid), the rate that drives each, the compounding sums, focusing on one engine at a time, and the point where an engine runs out

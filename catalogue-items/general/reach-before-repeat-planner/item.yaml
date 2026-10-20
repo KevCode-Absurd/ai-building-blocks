@@ -1,0 +1,18 @@
+slug: reach-before-repeat-planner
+name: "Reach-before-repeat planner"
+summary: "Paste your channels and budget. Get a plan that reaches more different people first and repeats only after."
+category: general
+type: skill
+role: make
+job: strategy
+level: intermediate
+inputs:
+  - {type: plan, required: true}
+  - {type: performance_sheet, required: false}
+outputs:
+  - {type: plan, required: true}
+origin: rebuilt
+version: 1.0.0
+minds: [rosser-reeves]
+credits:
+  - {title: "Reality in Advertising", by: "Rosser Reeves, 1961", used: "Buying dispersion: reaching more different people before adding repeats for a mass-market product, the rule of reaching most of the audience before adding frequency, and the check that the ad must deliver its claim first"}

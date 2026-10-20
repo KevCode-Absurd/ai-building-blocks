@@ -1,0 +1,28 @@
+slug: get-headlines-sorted-by-tested-type-and-the-three-to-test
+name: "Get headlines sorted by type and the three worth testing"
+summary: "Give it your product and buyer. Get headlines sorted by type, ranked with a cover test, and a keyed test plan."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: copy
+level: beginner
+inputs:
+  - {type: product_data, required: true}
+  - {type: offer, required: true}
+  - {type: persona, required: false}
+  - {type: voc_reviews, required: false}
+outputs:
+  - {type: plan}
+  - {type: shortlist}
+uses: [what-you-really-sell-finder, typed-headline-batch-writer, headline-cover-test-ranker, keyed-headline-test-planner]
+steps:
+  - {uses: what-you-really-sell-finder, note: "The appeal goes in the headline, so it has to be chosen first."}
+  - {uses: typed-headline-batch-writer, note: "Twenty or more headlines, each labelled with its type and appeal."}
+  - {uses: headline-cover-test-ranker, note: "Cuts the long list to three that pass the stranger test."}
+  - {uses: keyed-headline-test-planner, note: "Turns the three into a keyed test with a winner rule."}
+origin: rebuilt
+version: 1.0.0
+minds: [john-caples, victor-schwab]
+credits:
+  - {title: "Tested Advertising Methods, fifth edition", by: "John Caples, revised by Fred E. Hahn", used: "The order of the steps: pick the buying reason to lead with, write headlines in the tested types, rank them with the cover test, plan a small keyed test of the best three"}
+generated_from: intake/tested-ads-headlines/skeleton.yaml

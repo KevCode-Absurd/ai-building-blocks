@@ -15,6 +15,6 @@ outputs:
   - {type: ad_copy}
 origin: rebuilt
 version: 1.0.0
-minds: [bill-bernbach]
+minds: [bill-bernbach, eugene-schwartz]
 credits:
   - {title: "Facts Are Not Enough (speech and related pieces)", by: "Bill Bernbach", used: "Keeping the researched claim and finding a fresh way to say it, the swap test against the flat version, and making the picture and words carry one point"}

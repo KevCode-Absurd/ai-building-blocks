@@ -1,0 +1,25 @@
+slug: learning-milestone-planner
+name: Learning milestone planner
+summary: Paste your plan. Get the rates you hope for, the starting rates to measure and dated milestones that count learning, not output.
+category: general
+type: skill
+role: make
+job: strategy
+level: advanced
+inputs:
+  - type: plan
+    required: true
+  - type: question
+    required: false
+outputs:
+  - type: plan
+    required: true
+origin: rebuilt
+version: 1.0.0
+minds:
+  - eric-ries
+credits:
+  - title: "The Lean Startup: how today's entrepreneurs use continuous innovation to create radically successful businesses"
+    by: Eric Ries
+    url: https://theleanstartup.com/
+    used: "Innovation accounting: a model of the hoped-for business, a measured baseline, tuning toward the target, learning milestones, and holding a team to account for learning"

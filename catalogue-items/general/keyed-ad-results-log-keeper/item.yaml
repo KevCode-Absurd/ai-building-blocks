@@ -1,0 +1,25 @@
+slug: keyed-ad-results-log-keeper
+name: Keyed ad results log keeper
+summary: Paste what an ad did. Get a log entry that records its key, conditions and results, and what to try next.
+category: general
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: audit_report
+    required: true
+  - type: copy_draft
+    required: false
+  - type: offer
+    required: false
+outputs:
+  - type: lessons_register
+origin: rebuilt
+version: 1.0.0
+minds:
+  - victor-schwab
+credits:
+  - title: How to Write a Good Advertisement (a book summary)
+    by: Victor O. Schwab
+    used: Keeping a record of every ad's results, judging by action and sales, valuing negative as well as positive findings, and counting only large differences

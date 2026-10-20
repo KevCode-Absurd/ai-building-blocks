@@ -1,0 +1,19 @@
+slug: ten-percent-cutter
+name: "Ten percent cutter"
+summary: "Paste your draft. Get it cut to 90% of its length, with a log of every cut and a story check."
+category: general
+type: skill
+role: compress
+job: copy
+level: intermediate
+inputs:
+  - {type: copy_draft, required: true}
+  - {type: plan, required: false}
+outputs:
+  - {type: copy_draft}
+  - {type: audit_report}
+origin: rebuilt
+version: 1.0.0
+minds: [stephen-king, william-zinsser]
+credits:
+  - {title: "On Writing: A Memoir of the Craft", by: "Stephen King", used: "The rewrite formula of second draft equals first draft minus ten percent, cutting needless words, obvious stage direction and clumsy back story, and keeping early the things that matter late"}

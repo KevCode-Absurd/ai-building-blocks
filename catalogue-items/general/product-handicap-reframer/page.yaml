@@ -1,0 +1,122 @@
+new_slug: product-handicap-reframer
+name: "Product handicap reframer"
+summary: "Paste your facts and the trait buyers dislike. Get a true new definition that turns it into a reason to buy."
+job: write-ad-copy
+thinking: high
+thinking_why: "It tests four ways of reframing against the facts and must reject any that would mislead. Use your strongest model."
+
+headline: "Turn the trait that puts buyers off into a reason to buy"
+subhead: Give it your product facts and the thing buyers dislike, whether that is the price, the smell, the setup or a narrow audience. It tests four ways to redefine it, keeps only one that is true, and writes the new definition and the passage that carries it.
+
+explain: |
+  Many products have a built-in handicap. A strong smell. A high price. A setup that looks hard. An audience that seems too small. Buyers react to it before they read your pitch, so a better pitch does not help.
+
+  This skill names the handicap in the buyer's own words, sorts it into one of four kinds and tests the fix that matches. A turn-off can sometimes be shown as evidence of a strength. A complex product can be cut down to the one thing the buyer does and gets. A narrow product can be tied to a bigger concern the buyer already has. A dear product can be compared in a fair way, with the sum shown. Each fix has to pass a truth test. If none does, the skill says so and suggests leading with another strength.
+
+when:
+  - Buyers back away from something about your product before they read the benefits.
+  - You sell something dearer than the alternatives and cannot lower the price.
+  - Your product is hard to explain or seems made for too few people.
+
+you_give:
+  - A brief with the buyer, the want and what rivals say
+  - "Product facts: price, what it does, how it is used, what buyers dislike"
+  - Any good thing that comes with the trait (optional, but it makes the best fix possible)
+
+you_get:
+  - The handicap in the buyer's words and which of four kinds it is
+  - A test result for each fix tried, pass or fail
+  - A one-line new definition and a 60 to 120 word passage that carries it
+  - A passage on a rival the buyer is loyal to, if one applies
+  - A truth test result
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your brief and product facts. Add what buyers say about the trait, word for word.
+  - Read the test results. If no fix passes, take the suggestion to lead with a different strength.
+  - Show the passage to someone who has not heard of you. Ask whether they would feel misled when the product arrived.
+
+how_it_works:
+  - title: Names the handicap
+    text: Uses the buyer's own words and sorts it into turn-off, too complex, too narrow or too dear.
+  - title: Tests the fix
+    text: Turn it into proof, cut it down, tie it to a bigger concern or reset the price sum. Writes the result either way.
+  - title: Keeps what is true
+    text: Chooses the fix that is true and makes the biggest difference, or says no honest fix exists.
+  - title: Writes the definition
+    text: One line that makes the handicap part of the case for the product.
+  - title: Writes the passage
+    text: Names the old view fairly, gives the new one and shows the true link.
+  - title: Handles a loyal rival
+    text: Where buyers are loyal to a rival, writes a passage showing where their way falls short, from facts only.
+  - title: Runs the truth test
+    text: Checks the buyer would not feel misled when they open the box.
+
+output_shape: |
+  THE HANDICAP
+  <in the buyer's words> | Kind: <turn-off / too complex / too narrow / too dear>
+
+  FIXES TRIED
+  <fix | test | pass or fail | why>
+
+  NEW DEFINITION
+  <one line>
+
+  THE PASSAGE
+  <60 to 120 words>
+
+  IF A RIVAL IS LOVED
+  <40 to 80 words from facts, or none>
+
+  TRUTH TEST
+  <pass, or what was cut back>
+
+  MISSING
+  <...>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: Buyer's words
+    how: Paste reviews or objections about the trait word for word. Without them it marks the handicap's wording as missing.
+  - what: Price sum
+    how: Give price, number of uses, days it lasts and the cost of the usual alternative. Without them it cannot reset the price comparison.
+  - what: Rival
+    how: Name the rival and give facts about how they differ. Without facts it skips the rival passage.
+
+judge:
+  - The handicap is in the buyer's words or marked missing.
+  - Every fix tried has a written test result.
+  - The chosen frame is true of the product and of what the buyer gets.
+  - Any price sum shows its numbers and divides correctly.
+  - No claim about a rival goes beyond a fact you gave it.
+
+test:
+  - Give it a product with a known handicap that a rival has already reframed. See whether it finds the same fix.
+  - Remove the good thing that comes with the trait and run it again. It should report that no honest fix exists, not invent one.
+  - Show the new definition to a buyer and ask what they expect to find in the box.
+  - Re-do the price sum yourself with a calculator.
+
+improve:
+  - Keep a list of handicaps buyers raise, with their words, and paste it in each time.
+  - Save every frame that worked, with its test result.
+  - Pair it with "How-it-works copy writer" so the new frame has a reason behind it.
+  - Add words you would never use to describe a rival to the "Avoid" list in the skill file.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Testing four fixes against facts and writing the winner works well in any strong chat AI with this skill."}
+    - {name: "A calculator", why: "Check the price sum yourself before the frame goes live."}
+  inputs:
+    - "Reviews and questions that mention the trait"
+    - "Price, number of uses and the cost of the usual alternative"
+    - "Any real benefit that comes with the trait"
+
+terms:
+  - term: Handicap
+    meaning: A trait of the product that puts buyers off before they read your pitch.
+  - term: Redefinition
+    meaning: Giving the product a new, true meaning that turns the handicap into part of the case for it.
+  - term: Truth test
+    meaning: Checking the buyer would not feel misled when the product arrives.

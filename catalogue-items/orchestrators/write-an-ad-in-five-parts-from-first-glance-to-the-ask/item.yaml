@@ -1,0 +1,31 @@
+slug: write-an-ad-in-five-parts-from-first-glance-to-the-ask
+name: "Write an ad in five parts, from hook to ask"
+summary: "Give it your product facts. Get an ad that grabs attention, shows a gain, proves it, sums up and asks for action."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: copy
+level: intermediate
+inputs:
+  - {type: product_data, required: true}
+  - {type: persona, required: false}
+  - {type: voc_reviews, required: false}
+  - {type: offer, required: false}
+outputs:
+  - {type: audit_report}
+uses: [buyer-wants-finder, ad-headline-writer, headline-promise-checker, four-kind-proof-finder, proof-backed-sales-copy-writer, summing-up-paragraph-writer, call-to-action-writer, five-part-ad-checker]
+steps:
+  - {uses: buyer-wants-finder, note: "The one want to lead with, and the reward it promises."}
+  - {uses: ad-headline-writer, note: "Headlines for the chosen want."}
+  - {uses: headline-promise-checker, note: "Keeps only a headline that picks its reader and promises a reward."}
+  - {uses: four-kind-proof-finder, note: "Each claim paired with the strongest proof, and the claims left bare."}
+  - {uses: proof-backed-sales-copy-writer, note: "The body that pays off the headline and backs it up."}
+  - {uses: summing-up-paragraph-writer, note: "The short stretch between proof and ask that breaks inertia."}
+  - {uses: call-to-action-writer, note: "A clear ask with a real reason to act now."}
+  - {uses: five-part-ad-checker, note: "Pass or fail on attention, advantage, proof, persuasion and action."}
+origin: rebuilt
+version: 1.0.0
+minds: [victor-schwab]
+credits:
+  - {title: "How to Write a Good Advertisement (a book summary)", by: "Victor O. Schwab", used: "The order of the steps: find what the reader wants, write the headlines, check the headline promise, gather the proof, write the body with proof beside each claim, sum up and move the reader, ask for the action, check all five parts"}
+generated_from: intake/good-ad-five-fundamentals/skeleton.yaml

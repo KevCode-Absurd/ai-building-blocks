@@ -413,7 +413,8 @@ test("start from a goal: the steps are laid out, and each connection says what i
 
 test("click a step to see what it needs and gives back; the download lists what to gather first", async ({ page }) => {
   const builder = await planGoal(page, "write ad copy");
-  await expect(builder.getByTestId("flow-node")).toHaveCount(5);
+  // The goal picks whichever ad workflow fits best, so read its length instead of fixing it.
+  await expect(builder.getByTestId("flow-node").nth(2)).toBeVisible();
   await builder.getByTestId("flow-node").nth(1).click();
   const panel = builder.getByTestId("step-panel");
   await expect(panel).toContainText("It needs");
@@ -434,24 +435,25 @@ test("click a step to see what it needs and gives back; the download lists what 
 test("preview runs the steps in order; undo, redo and tidy work", async ({ page }) => {
   const builder = await planGoal(page, "write ad copy");
   await builder.getByTestId("preview").click();
-  await expect(page.getByTestId("flow-status")).toContainText("Step 1 of 5");
-  await expect(page.getByTestId("flow-status")).toContainText("Step 2 of 5");
+  const steps = await builder.getByTestId("flow-node").count();
+  await expect(page.getByTestId("flow-status")).toContainText(`Step 1 of ${steps}`);
+  await expect(page.getByTestId("flow-status")).toContainText(`Step 2 of ${steps}`);
   await expect(builder.locator(".bits span").first()).toBeAttached();
   await builder.getByTestId("preview").click(); // Stop
-  await expect(page.getByTestId("flow-status")).toContainText("runs in 5 steps");
+  await expect(page.getByTestId("flow-status")).toContainText(`runs in ${steps} steps`);
 
   // Remove a step, undo it with the keyboard, redo it with the button.
   await builder.getByTestId("flow-node").last().click();
   await page.keyboard.press("Delete");
-  await expect(builder.getByTestId("flow-node")).toHaveCount(4);
+  await expect(builder.getByTestId("flow-node")).toHaveCount(steps - 1);
   await page.keyboard.press("Control+z");
-  await expect(builder.getByTestId("flow-node")).toHaveCount(5);
+  await expect(builder.getByTestId("flow-node")).toHaveCount(steps);
   await builder.getByTestId("view-redo").click();
-  await expect(builder.getByTestId("flow-node")).toHaveCount(4);
+  await expect(builder.getByTestId("flow-node")).toHaveCount(steps - 1);
   await page.keyboard.press("Control+Shift+z");
-  await expect(builder.getByTestId("flow-node")).toHaveCount(4);
+  await expect(builder.getByTestId("flow-node")).toHaveCount(steps - 1);
   await builder.getByTestId("view-undo").click();
-  await expect(builder.getByTestId("flow-node")).toHaveCount(5);
+  await expect(builder.getByTestId("flow-node")).toHaveCount(steps);
 
   // Drag a step out of line, then tidy puts it back in its column.
   const node = builder.locator(".react-flow__node-block").first();
@@ -501,12 +503,12 @@ test("save a workflow, open it again, and share it by link", async ({ page, cont
 test("phone width: the workflow is a numbered list you reorder with arrows @mobile", async ({ page }) => {
   const builder = await planGoal(page, "write ad copy");
   const list = builder.getByTestId("step-list");
-  await expect(list.locator("li")).toHaveCount(5);
+  await expect(list.locator("li").nth(4)).toBeVisible();
   await expect(builder.locator(".react-flow")).toHaveCount(0);
   const slugs = () => list.locator("li").evaluateAll((els) => els.map((e) => e.getAttribute("data-slug")));
   const start = await slugs();
   await list.locator("li").nth(2).getByTestId("step-down").click();
-  expect(await slugs()).toEqual([start[0], start[1], start[3], start[2], start[4]]);
+  expect(await slugs()).toEqual([start[0], start[1], start[3], start[2], ...start.slice(4)]);
   await builder.getByTestId("view-undo").click();
   await expect.poll(slugs).toEqual(start);
   await list.locator("li").nth(1).getByTestId("step-open").click();

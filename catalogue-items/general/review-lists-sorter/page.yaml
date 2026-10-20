@@ -1,0 +1,127 @@
+new_slug: review-lists-sorter
+name: "Review lists sorter"
+summary: "Paste everyone's do-again and never-again lists. Get themes, who raised them and what your numbers show."
+job: lead-people
+thinking: medium
+thinking_why: "It groups and counts by clear rules, but it has to judge which themes matter and challenge weak conclusions."
+
+headline: "Turn a stack of project review lists into themes you can discuss"
+subhead: Paste each person's do-again and never-again lists, and the numbers if you have them. It groups the items into themes, counts who raised each, finds the ones that split the team, sets them beside the numbers and asks what nobody can see yet.
+
+explain: |
+  After a project, ten lists of five items is a pile of overlapping remarks. Read quickly, it is easy to see only what fits the story you already believe: we did well, so it was all good, or we failed, so it was all bad.
+
+  This skill finds the themes in the team's own words and counts who raised each one. A theme on both lists is marked contested, and both views are shown. It sets each theme beside your numbers and writes the match as a question, not a verdict. It challenges first conclusions, lists what cannot be seen and moves personal hurts to a separate list.
+
+when:
+  - You collected lists after a project and need to see what they add up to.
+  - You are about to run a review and want the main themes ready.
+  - You suspect the team is reading the result into every comment.
+
+you_give:
+  - Each person's do-again and never-again lists
+  - The numbers pulled for the review, with their definitions (optional)
+  - The prep plan, if you have one (optional)
+you_get:
+  - Five to eight themes with counts on each list
+  - Contested themes shown side by side
+  - Each theme beside the numbers, written as a question
+  - Challenges to first conclusions, and what cannot be seen
+  - A neutral list of old hurts and two questions for each top theme
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste the lists as they were written. Add the numbers and what each one means.
+  - Read the contested themes first. Bring the top five to the review.
+  - Take the result to "Blame-free review agenda writer".
+
+how_it_works:
+  - title: Makes one sheet
+    text: Lists every item with its source list, keeping names only for counting.
+  - title: Finds the themes
+    text: Groups items in the team's words and counts people on each list.
+  - title: Flags contested themes
+    text: Shows items that appear on both lists side by side with no winner.
+  - title: Pairs with numbers
+    text: Sets each theme beside a figure and writes the match as a question.
+  - title: Challenges first conclusions
+    text: Asks what in the process, not the result, supports each claim.
+  - title: Marks what is hidden
+    text: Lists who did not speak, what no one measured and causes outside the project.
+  - title: Checks itself
+    text: Runs its own checks and names any it missed.
+
+output_shape: |
+  WHO ANSWERED
+  <asked | returned> | Silent roles: <list>
+
+  THEMES
+  <theme> | Do again: <n people> | Never again: <n people>
+
+  CONTESTED
+  <theme> | View A | View B
+
+  THEMES AND NUMBERS
+  <theme> | The number says <x>; the lists say <y> | Question: <...>
+
+  FIRST CONCLUSIONS TO CHALLENGE
+  <claim> | What in the process supports it? Could luck explain it?
+
+  WHAT CANNOT BE SEEN
+  <three lines>
+
+  OLD HURTS, IN NEUTRAL WORDS
+  <list, no names>
+
+  TOP FIVE FOR THE ROOM
+  <theme> | What caused it? What should the next project ask?
+
+  MISSING
+  <facts that would settle a theme>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: Names
+    how: Say if the team agreed to be named. By default the output shows none.
+  - what: The numbers
+    how: Give each figure with its definition so the match is fair.
+  - what: Number of themes
+    how: Ask for fewer if the team is small. Five to eight suits most.
+  - what: The result of the project
+    how: Say how it ended. The skill uses it to check whether the result is colouring the reading.
+
+judge:
+  - The count of who answered is stated and silent roles are listed.
+  - Themes use the team's words with counts on both lists.
+  - Contested themes show both views and no winner.
+  - Number links are written as questions.
+  - Names are not shown unless the team agreed.
+
+test:
+  - Give it lists where one practice appears on both. It should mark it contested.
+  - Give it a number that seems to match a theme. It should write a question, not a conclusion.
+  - Leave out one role's lists. It should name the silence.
+  - Run it twice. The themes should stay close even if the wording changes.
+
+improve:
+  - Keep the themes from each review and note which come back each time.
+  - Add the numbers your team trusts to the usual set.
+  - Ask quiet roles for their lists again if they did not return one.
+  - Pair it with "Project review prep planner" so the next lists are better formed.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Grouping and counting free text is work any strong chat AI does well with this skill."}
+    - {name: "A shared spreadsheet", why: "The numbers and the themes can sit side by side."}
+  inputs:
+    - "The two-list answers from every person on the project"
+    - "A plan from the Project review prep planner, with the numbers and their definitions"
+    - "How the project ended, in one line"
+
+terms:
+  - term: Contested theme
+    meaning: A practice that some people would repeat and others would never repeat.
+  - term: First conclusion
+    meaning: A quick verdict that the result proves the process was right or wrong, before the process has been checked.

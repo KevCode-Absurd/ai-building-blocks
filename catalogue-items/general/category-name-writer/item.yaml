@@ -1,0 +1,19 @@
+slug: category-name-writer
+name: "Category name writer"
+summary: "Paste your chosen category. Get a plain name for it, brand names that can become its word and a category pitch."
+category: general
+type: skill
+role: make
+job: copy
+level: intermediate
+inputs:
+  - {type: shortlist, required: true}
+  - {type: product_data, required: false}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: plan}
+origin: rebuilt
+version: 1.0.0
+minds: [al-ries, jack-trout]
+credits:
+  - {title: "The 22 Immutable Laws of Marketing", by: "Al Ries and Jack Trout", used: "Promoting the category before the brand when you are first, choosing a brand name that can become the word for the whole category, simple memorable names, and letting others use the word"}

@@ -1,0 +1,117 @@
+new_slug: find-why-an-ad-is-not-pulling-and-fix-it
+name: "Find why an ad is not pulling and fix it"
+summary: "Give it an ad that gets no replies. Get likely causes in order, a fixed version and a test to prove it."
+job: check-ads
+thinking: high
+thinking_why: "It weighs causes on thin evidence, rewrites to them and plans a fair test. Give it your strongest model."
+
+headline: "The likely cause of a weak ad, a fix that changes only that, and a proof test"
+subhead: "Give it an ad that is seen but not answered, and your results. It checks in order whether the ad is counted, what the headline says alone, the appeal, the claims, the offer and the reply path. Then it writes a fixed version and plans a test against the old one."
+
+explain: |
+  When an ad does not get replies, the usual move is to change the picture or start again. That is the costly way, and you still will not know what the problem was. Most weak ads fail in the same few places: a headline that offers nothing, the wrong reason to buy, claims too vague or too big to believe, a hidden offer, or a reply that is hard to make.
+
+  This workflow goes through those in the order they tend to matter, and ranks the causes by how likely and how cheap to fix. If you have results for several ads, it lays them side by side to find what your winners share. It then writes a fixed version that changes only what the diagnosis called for, checks it is ready to send, and plans a split test of old against new, so the fix has to prove itself. The method follows John Caples's Tested Advertising Methods.
+
+when:
+  - An ad, email or page is seen but not answered and you want to know what to change first.
+  - You have a list of ideas for what is wrong and no order to try them in.
+  - You want to fix the cheapest likely cause before you redesign anything.
+
+you_give:
+  - The ad as the reader sees it, including the reply path
+  - Results for the ad, and for your other ads if you have them
+  - Your offer and what a reply means (optional)
+you_get:
+  - A finding on each of seven checks, with the evidence, and causes ranked by likelihood and cost
+  - What your winners share, found from your own results
+  - A fixed version with a change list beside each cause, and a new key
+  - A ready-to-send check with a ship, fix or rewrite call
+  - A split-run test plan of old against new
+
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Give it the ad and your results. Add the results for your other ads if you have them.
+  - It works step by step and saves each result. Read the ranked causes before the fixed ad.
+  - Run the test it plans, then read the result with "Test two ads head to head and read the winner".
+
+how_it_works:
+  - title: Find the likely cause
+    text: "Checks the ad is counted, reads the headline alone, then checks the appeal, belief, offer, reply path and place. Ranks causes by likelihood and cost."
+  - title: Compare your winners with your losers
+    text: "Ranks your ads on a fair number, fills in a checklist for each and finds what the winners share. Checks the pattern is not just a place or season."
+  - title: Write the fixed ad
+    text: "Fixes the top three causes with one change each and keeps the rest. Moves the winning reason into the headline, puts the offer where it is seen, makes the reply easy and swaps vague words for facts."
+  - title: Check the fixed ad is ready
+    text: "Checks the opening names the reader and their gain, claims are specific and believable and the next step is clear. Gives a ship, fix or rewrite call."
+  - title: Plan the test of old against new
+    text: "Runs old and fixed at the same time with a code on each, a reply target and a winner rule set before launch."
+
+output_shape: |-
+  STEP 1: LIKELY CAUSES
+    Stranger sentence: <this offers ___ to ___>
+    Ranked: <cause | likelihood | cost to fix | fix>
+
+  STEP 2: WINNERS AND LOSERS
+    What winners share: <quality | winners n of m | losers n of m>
+    Rule to test: <...>
+
+  STEP 3: FIXED AD
+    <the full ad>
+    Changes: <cause | change> | Not touched: <...> | New key: <...>
+
+  STEP 4: READY CHECK
+    Call: <ship / fix / rewrite> | Score: <n of 100> | Three fixes: <...>
+
+  STEP 5: TEST PLAN
+    One difference: <...> | Codes: <old, new> | Winner rule: <...> | Read date: <...>
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+
+tweaks:
+  - what: Results
+    how: Add the results for your other ads in the same place. Steps 1 and 2 use them to rule out place and season.
+  - what: What counts as a reply
+    how: Say if it is a click, a call or a sale, so every step counts the same thing.
+  - what: How much you can change
+    how: Say if the headline, the offer or the media is locked. The fix works within it.
+  - what: Fewer than five ads
+    how: Step 2 says the set is too thin. The workflow carries on with step 3 from the diagnosis alone.
+
+judge:
+  - The headline was judged with the copy covered, before any other check.
+  - Every cause quotes the line or number it rests on.
+  - Every change in the fixed ad answers a cause in the diagnosis.
+  - The fixed ad has its own key, and the old ad keeps its code.
+  - The test changes only what the diagnosis said and sets the winner rule first.
+
+test:
+  - Give it an ad you know failed. Check its top cause matches what you later learned.
+  - Check each change in the fixed ad against the diagnosis. None should lack a cause.
+  - Run the old ad and the fixed ad together and compare replies by code.
+  - Run it twice. The top cause and the changes should be nearly the same.
+
+improve:
+  - Keep each diagnosis, what you fixed and the later result in one file of lessons.
+  - Add the checks your market needs, such as a legal line, to step 1.
+  - Re-run step 2 each quarter with new ads added.
+  - Save the winner as your control and run new ideas against it.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Reading, weighing causes and rewriting are text jobs a strong chat AI does well in one run."}
+    - {name: "Your ad platform or email tool", why: "Exports replies by ad and runs the split test."}
+  inputs:
+    - "Results for the same ad in other places"
+    - "Results for your other ads, with their text"
+    - "The exact code or link tag on each ad"
+
+terms:
+  - term: Pull
+    meaning: How many replies an ad brings for its audience or cost.
+  - term: Reply path
+    meaning: The steps a reader takes to respond, such as a button, a coupon or a phone number.
+  - term: Key
+    meaning: A code on an ad that lets you trace every reply back to it.

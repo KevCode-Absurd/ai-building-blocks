@@ -1,0 +1,116 @@
+new_slug: early-or-broken-checker
+name: "Early or broken checker"
+summary: "Describe an unfinished project. Get a call: keep protecting it, change the approach, change the lead or stop."
+job: lead-people
+thinking: high
+thinking_why: "It weighs weak signs of progress and morale and has to make a call that can cost a team its project. Give it your strongest model."
+
+headline: "Tell if your rough project is early or truly stuck"
+subhead: Describe the project, who leads it and what changed between its versions. It judges the work against its own past, checks whether notes are moving it, asks whether the team still believes it can be fixed, and gives a call with a date to look again.
+
+explain: |
+  Everything original starts out ugly. If you judge it against finished work, you kill ideas that only needed time. But some projects are not early. They are stuck, and every month of waiting costs more. From the outside the two look the same.
+
+  This skill separates them with four checks. Is it better than its own last version? Did the last round of notes change anything? Do the people working on it still believe the problems can be solved? Is hurry, and not the idea, causing the rough state? It then gives one of four calls: keep protecting, change the approach, change the lead and keep the idea, or stop.
+
+when:
+  - You can't tell if a rough project needs patience or a hard decision.
+  - Your team keeps getting notes, but the work comes back much the same.
+  - Someone senior wants to cut a new idea because it looks bad today.
+
+you_give:
+  - What the project is, who leads it and how long it has run
+  - The rounds so far, with dates and what changed (strongly better)
+  - A pressure map from "Incentive checker" (optional)
+  - What it costs to carry on (optional)
+you_get:
+  - The project's timeline, judged against its own versions
+  - A result for the notes test and a read on whether the team still believes
+  - A call with its evidence, a date to look again and what would flip it
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste the description and list each version or review with its date.
+  - If it asks, put one private question to each team member and bring back the answers.
+  - Bring the result to "New idea protection planner" if the call is keep protecting.
+
+how_it_works:
+  - title: Builds the timeline
+    text: Lists each version and review with what changed between them.
+  - title: Compares to its own past
+    text: Asks if each version is clearer, more convincing and more itself than the last.
+  - title: Runs the notes test
+    text: Checks what changed after each round of notes.
+  - title: Checks belief
+    text: Reads whether the team still believes the problems can be solved, or asks you to find out.
+  - title: Checks for hurry
+    text: Notes whether a deadline or sales target is making the work look worse than it is.
+  - title: Makes the call
+    text: Picks keep protecting, change the approach, change the lead or stop, with a date and a flip condition.
+  - title: Checks itself
+    text: Runs its own checks and names any it missed.
+
+output_shape: |
+  TIMELINE
+  <date> | <version or review> | <what changed>
+
+  CHECKS
+  Against its own past: <better / flat / worse>
+  Notes test: <what changed after each round>
+  Belief of the team: <healthy / unhealthy / MISSING>
+  Hurry: <is the schedule making it look worse>
+  Cost: <of carrying on, of stopping>
+
+  THE CALL
+  <keep protecting / change the approach / change the lead / stop>
+  Evidence: <lines> | Look again: <date> | Flips if: <what>
+
+  MISSING
+  <what would settle it>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: Version history
+    how: Give dates and a line for each version. Three or more points let it judge the trend.
+  - what: How the team feels
+    how: Add what people have said, or ask for the private question to put to each person.
+  - what: Cost of the next stage
+    how: Say whether the next stage is cheap exploring or an expensive commitment.
+  - what: Who leads
+    how: Say how long they have led and what they have said about the problems.
+
+judge:
+  - The project was compared with its own earlier versions, not finished work.
+  - The notes test says what changed after each round.
+  - The team's belief is addressed with evidence or a missing line.
+  - The call is one of the four options with a date and a flip condition.
+  - Nothing was invented about the team or the rounds.
+
+test:
+  - Give it a project you know recovered. It should call early or change approach, not stop.
+  - Give it one that came back unchanged for three rounds. It should flag the notes test.
+  - Leave out the version history. It should mark it missing and ask for it.
+  - Ask the private question to a few team members, then rerun and see if the call moves.
+
+improve:
+  - Run it at every review for a long project, not only when you doubt it.
+  - Keep each call and its flip condition in a log and check which flips happened.
+  - Add the warning signs your team shows before it stalls.
+  - Share the call with the lead before the team so they can answer it.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Weighing signs and making a reasoned call is text work any strong chat AI does well with this skill."}
+    - {name: "A project log", why: "Dated versions and review notes let it judge the trend."}
+  inputs:
+    - "A pressure map from the Incentive checker"
+    - "Notes from earlier review sessions, to run the notes test"
+    - "Private answers from team members on whether they still believe"
+
+terms:
+  - term: Early
+    meaning: Rough because it is new, and still improving against its own past.
+  - term: Stuck
+    meaning: Not improving across rounds, or the people on it have lost belief that the problems can be solved.

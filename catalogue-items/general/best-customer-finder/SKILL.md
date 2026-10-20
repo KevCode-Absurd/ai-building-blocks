@@ -59,7 +59,7 @@ The data summary. The top group. The shared traits with counts. The profile and 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Understand your buyers** with the [Audience hangout finder](https://useaiblocks.com/skills/audience-hangout-finder). It takes the brand brain.
+- **Understand your buyers** with the [Job spec writer](https://useaiblocks.com/skills/job-spec-writer). It takes the shortlist.
 - **Make image ads** with the [Feared outcome image ad maker](https://useaiblocks.com/skills/feared-outcome-image-ad-maker). It takes the brand brain.
 - **Make an offer people want** with the [Hidden offer finder](https://useaiblocks.com/prompts/hidden-offer-finder). It takes the brand brain.
 - **Plan what to test** with the [Learn what sells from 50 different image ads](https://useaiblocks.com/workflows/learn-what-sells-from-50-different-image-ads). It takes the brand brain.

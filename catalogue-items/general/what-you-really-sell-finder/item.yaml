@@ -1,6 +1,6 @@
 slug: what-you-really-sell-finder
 name: "What you really sell finder"
-summary: "Paste your product and buyer. Get a long list of what you are really selling, and the best three as test angles."
+summary: "Paste your product and buyer. Get ten or more reasons to buy, scored, and the best three as test angles."
 category: general
 type: skill
 role: make
@@ -15,6 +15,7 @@ outputs:
   - {type: plan}
 origin: rebuilt
 version: 1.0.0
-minds: [gary-bencivenga]
+minds: [gary-bencivenga, john-caples]
 credits:
   - {title: "Gary Bencivenga's Marketing Bullets", by: "Gary Bencivenga", used: "Asking what you are really selling and listing many answers, pushing from the thing to the result, and testing the strongest as separate angles"}
+  - {title: "Tested Advertising Methods, fifth edition (1997)", by: "John Caples, revised by Fred E. Hahn", used: "The right appeal can matter more than any other choice, it must be about the buyer's gain, it must fit the product and be believable, and it belongs in the headline. The expanded list of basic appeals is Hahn's revision."}

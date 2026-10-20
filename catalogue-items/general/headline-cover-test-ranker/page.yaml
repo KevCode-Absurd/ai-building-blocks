@@ -1,0 +1,115 @@
+new_slug: headline-cover-test-ranker
+name: "Headline cover test ranker"
+summary: "Paste your headline list. Get each one read alone, scored on five rules and cut to the best three."
+job: write-ad-copy
+thinking: medium
+thinking_why: "It judges each line against fixed rules, so it needs care but not deep reasoning."
+
+headline: "Your headline list cut to three, judged the way a reader meets them"
+subhead: Give it a list of headlines or subject lines. It hides the copy and reads each line alone, writes what a stranger would think it offers, and scores it on five rules. You get the lines that fail outright, a ranking, and three picks that differ enough to test.
+
+explain: |
+  Judges of headlines usually read the copy first. Readers do not. A headline that only makes sense after the copy is a headline most people will never get past. When a group picks a favourite, it is often the clever one, and the clever one often loses when real replies are counted.
+
+  This skill reads each headline alone. It writes the one sentence a stranger would give: what this offers, and to whom. It then scores five rules: does it offer the reader something, does it announce real news, does any curiosity carry a promise, is it hopeful, and is any quick-and-easy claim small enough to believe. It cuts dead, too-clever, meaningless and plain-fact lines even if they score well. The three it keeps come from different types or reasons, so a test can tell them apart.
+
+when:
+  - You have a long list of headlines or subject lines and need to narrow it.
+  - A group is arguing over a favourite and nobody can say why.
+  - You suspect your best-liked headline says nothing to a stranger.
+
+you_give:
+  - Your list of headlines, subject lines or hooks
+  - Who the reader is, in a line (optional)
+  - What a few outsiders said about the list (optional)
+you_get:
+  - For each line, what a stranger would think it offers
+  - A score on five rules, with a reason for each
+  - The lines cut outright and the rule each broke
+  - Three picks that differ, and how to run an outside read
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your headline list as it is.
+  - Say who the reader is in one line.
+  - Show the three picks to people who do not know your product, ask which they would read on, and keep their ticks private from each other.
+  - Take the three to "Keyed headline test planner".
+
+how_it_works:
+  - title: Covers everything
+    text: Reads each line with no copy, picture or story. It is judged the way a passing reader would see it.
+  - title: Writes the stranger sentence
+    text: States what a stranger would think the line offers and to whom. If it cannot, the line is marked unclear.
+  - title: Scores five rules
+    text: Reader gain, real news, curiosity with a promise, a positive tone, and quick-and-easy that is still believable.
+  - title: Cuts the weak kinds
+    text: Dead, too-clever, meaningless, mere-statement and hard-to-grasp lines go, whatever their score.
+  - title: Picks three that differ
+    text: Takes the top line, then the best of a different type or reason, then a third, so the test can show a difference.
+
+output_shape: |
+  READ ALONE
+  <n>. <headline>
+     A stranger would think: <this offers ___ to ___ / unclear>
+     Rules: gain <0-1> | news <0-1> | curiosity+promise <0-1> | positive <0-1> | quick+believable <0-1>
+     Total: <n>  Fails: <dead / too smart / meaningless / mere statement / hard to grasp / none>
+
+  THE THREE
+  1. <headline>  Why: <one line>
+  2. <headline>  Why different: <type or reason>
+  3. <headline>  Why different: <type or reason>
+
+  CUT
+  <headline | rule broken>
+
+  OUTSIDE READ
+  <what strangers said, or how to run it>
+
+  MISSING
+  <anything the ranking could not judge>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: The reader
+    how: Name them by what they do or want. The gain score is judged against them.
+  - what: How many to keep
+    how: Ask for two if you have little room to test, or five for a larger audience.
+  - what: Tie-break
+    how: Say if you prefer figures or plain words when two lines tie.
+  - what: Where it appears
+    how: Say if the line shows in an inbox, an ad or a page top, so length and context are counted.
+
+judge:
+  - Every line was scored without the copy.
+  - Each score has a one-line reason.
+  - Dead, too-clever, meaningless and plain-fact lines were cut.
+  - The three picks differ in type or reason.
+  - Nobody's liking for a line was used as a reason.
+
+test:
+  - Give it a headline that lost a past test. Check it scored low or was cut.
+  - Give it a headline that won. Check it made the three.
+  - Cover the list and read two lines aloud to a friend. Ask what each offers. Compare with the stranger sentence.
+  - Run it twice. The cut list should be nearly the same.
+
+improve:
+  - Add headline types that always fail in your market to step 4.
+  - Keep a list of headlines that lost, with the rule they broke, and add it to the cut check.
+  - Record each outside read with the later test result, to see whether tick counts matched replies.
+  - Add your own reader words to step 2 so the stranger sentence uses them.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Reading, scoring and ranking lines is text work a strong chat AI does well with this skill."}
+  inputs:
+    - "The list from Typed headline batch writer"
+    - "Your reader in one line"
+    - "Three people who do not know your product, for the outside read"
+
+terms:
+  - term: Cover test
+    meaning: Reading a headline alone, with the copy hidden, to see what a passing reader would take from it.
+  - term: Outside read
+    meaning: Showing a list to people who do not know the product and asking what they would read on.

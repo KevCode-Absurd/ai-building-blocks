@@ -1,0 +1,18 @@
+slug: trust-deposit-planner
+name: "Trust deposit planner"
+summary: "Name a relationship that matters. Get where trust stands and two small deposits to make before a hard talk."
+category: general
+type: skill
+role: make
+job: strategy
+level: beginner
+inputs:
+  - {type: question, required: true}
+  - {type: plan, required: false}
+outputs:
+  - {type: plan}
+origin: rebuilt
+version: 1.0.0
+minds: [stephen-covey]
+credits:
+  - {title: "The 7 Habits of Highly Effective People (25th anniversary edition)", by: "Stephen R. Covey", used: "Habit 4: trust as a balance built by deposits and drawn down by withdrawals, the six major deposits, why a deposit counts only if the other person sees it as one, and why repair takes time"}

@@ -1,0 +1,18 @@
+slug: good-note-sharpener
+name: "Good note sharpener"
+summary: "Paste raw comments on your work. Get each rewritten as a note on the problem, with fixes kept as examples."
+category: general
+type: skill
+role: make
+job: copy
+level: intermediate
+inputs:
+  - {type: feedback_notes, required: true}
+  - {type: copy_draft, required: false}
+outputs:
+  - {type: feedback_notes}
+origin: rebuilt
+version: 1.0.0
+minds: [ed-catmull]
+credits:
+  - {title: "Creativity, Inc.", by: "Ed Catmull with Amy Wallace, Random House, 2014", used: "What makes a good note: it says what is wrong, missing, unclear or makes no sense, it comes in time to act on, it is specific, it makes no demand, and any fix is offered only as an example"}

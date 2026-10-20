@@ -1,0 +1,125 @@
+new_slug: disagreement-calming-line-writer
+name: "Disagreement calming line writer"
+summary: "Paste the point you expect them to dispute. Get short lines for pushback that keep the person while you hold your view."
+job: sell-and-negotiate
+thinking: medium
+thinking_why: "It must judge tone and what is true on both sides, but the moves are fixed."
+
+headline: "Disagreement calming line writer"
+subhead: "Give it the plan for a talk and the points they may dispute. It writes short lines for each moment the talk could turn: a flat no, anger, a charge that you are wrong. You get lines to say and a rule for when to pause."
+
+explain: |
+  Most arguments are lost by the first reply. When someone says you are wrong, the natural move is to defend and prove. They then defend and prove back, and the winner loses the person.
+
+  This skill writes your replies ahead of time, so you do not have to find them while your heart is racing. For each likely moment it gives a first line that welcomes the disagreement, a line that shows you heard them, a line that agrees with what is true, and, where you erred, a quick admission with no excuse. It rewrites any phrase that tells them they are wrong. It adds a line for taking time to think and sets a rule for when to pause. Every line has to be true, so it never fakes an agreement.
+
+when:
+  - "You are about to talk to someone who may tell you that you are wrong."
+  - "You have an angry email in your inbox and want to reply without fuel."
+  - "A meeting keeps turning into a fight over who is right."
+
+you_give:
+  - "The plan or notes for the talk"
+  - "The points they are likely to dispute (optional)"
+  - "Anything you got wrong that they may raise"
+  - "Whether it is spoken or written"
+you_get:
+  - "A line for each moment the talk could turn"
+  - "A rewrite of any phrase that says they are wrong"
+  - "A true admission, if you erred, in one sentence"
+  - "A rule for when to pause, and a line to do it"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Paste your plan and the points they may dispute."
+  - "Say what you got wrong, if anything."
+  - "Read each line aloud. Cut any that you would say with a sneer."
+  - "Keep the lines to hand, or write the reply and wait a day before sending."
+
+how_it_works:
+  - title: "Lists the moments"
+    text: "Names up to five points where the talk could turn."
+  - title: "Welcomes the disagreement"
+    text: "A first line that thanks them for saying it."
+  - title: "Shows you heard"
+    text: "A line that repeats their point in their words, after they finish."
+  - title: "Agrees where true"
+    text: "A line that agrees with what is right in their point."
+  - title: "Admits your part"
+    text: "A quick, full admission with no excuse, or none if nothing applies."
+  - title: "Removes you-are-wrong lines"
+    text: "Rewrites phrases that tell them they are wrong or open with proof."
+  - title: "Buys time"
+    text: "A line to promise to think it over, thank them and name a time."
+  - title: "Checks the lines"
+    text: "Runs its own checks and names any it missed."
+
+output_shape: |
+  MOMENTS THE TALK COULD TURN
+  1. <what they might say>
+
+  FOR EACH MOMENT
+  Welcome: <line>
+  Show you heard: <line>
+  Agree where true: <line>
+  Own your part: <line, or none>
+  Hold your view gently: <line>
+
+  LINES TO REPLACE
+  Was: <phrase that says they are wrong>   Now: <rewrite>
+
+  TO TAKE TIME
+  <line to promise to think and name a time>
+
+  PAUSE RULE
+  <when to stop, and the line to do it>
+
+  MISSING
+  <what you do not know>
+
+  CHECKS MISSED
+  <one line per check missed, or none>
+
+tweaks:
+  - what: "What you got wrong"
+    how: "Name every mistake you can think of. The skill turns each into a one-sentence admission."
+  - what: "How angry they are"
+    how: "Say if they are calm, irritated or furious. It changes how long you should listen first."
+  - what: "The channel"
+    how: "Say if it is a call, a meeting or an email. For email it adds a rule to wait a day before you send."
+  - what: "Your real limit"
+    how: "State what you cannot give up. The lines hold it without pushing."
+
+judge:
+  - "No line says or hints that they are wrong."
+  - "Every line is true. You could say each one honestly."
+  - "Your admission is quick, full and has no excuse."
+  - "There is a line for taking time, with a named time."
+  - "A line holds your real view without pushing."
+
+test:
+  - "Run it on a past argument and compare the lines to what you said."
+  - "Say the lines to a friend who plays the other side. Notice which ones get a softer reply."
+  - "Run it twice. The agreement lines should stay true both times."
+  - "Use one line in a real talk and note how they responded."
+
+improve:
+  - "Add the phrases that set you off, so the skill replaces them."
+  - "Add your standard apology line, so the admission matches your voice."
+  - "Keep a list of lines that worked and with whom."
+  - "Pair it with \"Yes-ladder question writer\" for the questions before a no."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Rewriting a reply in a calm, honest tone is text work any strong chat AI does well."}
+    - {name: "Your email drafts folder", why: "Save the reply as a draft and read it again the next day."}
+  inputs:
+    - "The other person's last message, pasted as it is"
+    - "A list of your past mistakes on this matter"
+    - "A deadline for the decision"
+
+terms:
+  - term: "Pause rule"
+    meaning: "A fixed point at which you stop and set a later time to talk."
+  - term: "Own your part"
+    meaning: "To admit what you did wrong before the other person points it out."

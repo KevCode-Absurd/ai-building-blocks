@@ -5,7 +5,7 @@ description: Use when you have two versions of copy and need to find the better 
 
 # Cross-over copy test planner
 
-When two versions run in different places, the place can decide the result. This skill plans a cross-over test: equal spend, a key for every version, a swap for the second round, and sales counted, not only replies. It plans the test and reads your counts. It never invents numbers.
+When two versions run in different places, the place can decide the result. This skill plans a cross-over test: equal spend, a key for every version, a swap for the second round, and sales counted, not only replies. It plans the test and reads your counts. It never invents numbers. If both versions can run at the same time to matched halves of one audience, use "Split-run test planner" instead.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
@@ -62,9 +62,9 @@ The two halves with reasons. The plan for round one and the swap. The keys. The 
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - **Plan what to test** with the [Ad test brief writer](https://useaiblocks.com/skills/ad-test-brief-writer). It takes the audit report.
 - **Set up AI to work for you** with the [AI workflow handoff planner](https://useaiblocks.com/skills/ai-workflow-handoff-planner). It takes the plan.
+- **Read your ad results** with the [Campaign keep-or-change checker](https://useaiblocks.com/skills/campaign-keep-or-change-checker). It takes the audit report.
+- **Understand your buyers** with the [Switch friction remover](https://useaiblocks.com/skills/switch-friction-remover). It takes the audit report.
 - **Write the ad copy** with the [Story image ad writer](https://useaiblocks.com/skills/story-image-ad-writer). It takes the plan.
-- **Understand your buyers** with the [Customer discovery interview planner](https://useaiblocks.com/skills/customer-discovery-interview-planner). It takes the plan.
-- **Read your ad results** with the [Online media buy auditor](https://useaiblocks.com/skills/online-media-buy-auditor). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

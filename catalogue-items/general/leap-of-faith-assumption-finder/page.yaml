@@ -1,0 +1,112 @@
+new_slug: leap-of-faith-assumption-finder
+name: Leap-of-faith assumption finder
+summary: Paste your plan. Get the few guesses it stands on, each with a number, ranked so you test the riskiest first.
+job: test-an-idea
+thinking: medium
+thinking_why: It rewrites claims and ranks risk, but the steps are fixed and the facts come from your plan.
+headline: Leap-of-faith assumption finder
+subhead: Paste your plan for a product, service or project. It turns comparisons into plain claims, splits the plan into a value guess and a growth guess, puts a number on each guess and ranks them. You get a short list with the riskiest on top.
+explain: |-
+  Most plans are 90 percent routine and 10 percent hope. The trouble is that the hope is hidden inside lines like "it worked for them, so it will work for us", and the team spends months on the routine part.
+
+  This skill pulls the hope out. It rewrites each comparison as facts about your own customers, drops what is already known, and attaches a number to what is left, such as "10 in 100 visitors sign up". Then it ranks the guesses by how much of the plan falls if each is wrong and how little evidence you hold. You see which belief to test first and who to test it on.
+when:
+  - You have a plan and a sense that something in it is a bet, but you cannot say which part.
+  - Your pitch leans on "we are like X, but for Y".
+  - You are about to spend months building and want to know what you are really assuming.
+you_give:
+  - "Your plan: what, for whom, how they find it, what you get back"
+  - Your biggest worry (optional)
+you_get:
+  - Your comparisons rewritten as plain claims
+  - A value guess and a growth guess
+  - A ranked list of guesses, each with a number
+  - The group to test on first
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your plan as it stands, comparisons included.
+  - Check each number it proposes against your plan and fix the ones that are wrong.
+  - Take the top guess to the Smallest test picker.
+how_it_works:
+  - title: Strips comparisons
+    text: Rewrites each into plain facts about your customers.
+  - title: Splits value and growth
+    text: One guess about benefit, one about how people find it.
+  - title: Lists what each needs
+    text: Labels each belief known, checked or unchecked.
+  - title: Drops known facts
+    text: Keeps only what nobody has checked.
+  - title: Adds numbers
+    text: Each guess gets the figure that must hold.
+  - title: Ranks the list
+    text: Damage if wrong, times how little you know.
+  - title: Picks the test group
+    text: People who feel the need most.
+output_shape: |-
+  PLAIN FACTS
+  <each comparison, restated>
+
+  VALUE GUESS
+  <sentence with number>
+
+  GROWTH GUESS
+  <sentence with number>
+
+  RANKED GUESSES
+  1. <guess with number> | damage <1-3> | evidence <1-3> | score <n>
+  2. ...
+
+  RISKIEST
+  <guess and why>
+
+  TEST ON FIRST
+  <who, where to find ten of them>
+
+  MISSING
+  <gaps>
+
+  CHECKS MISSED
+  <lines or none>
+tweaks:
+  - what: Numbers in your plan
+    how: Paste your forecast or spreadsheet. Guesses get your own figures, not placeholders.
+  - what: The comparison you lean on
+    how: Name the business you are copying. The skill can say which of its facts may not carry over.
+  - what: Your worst worry
+    how: Say what you fear. It often points to the riskiest guess.
+  - what: Who you can reach
+    how: Say who you can talk to this week. It shapes the test group.
+judge:
+  - The riskiest guess is one the whole plan depends on.
+  - Each guess has a number a stranger could check.
+  - No guess is a fact everyone already agrees on.
+  - There is one value guess and one growth guess.
+  - The test group is a narrow set of people, not "everyone".
+test:
+  - Run it on a past project that failed. See if it names the belief that sank it.
+  - Run it twice on the same plan. The top two guesses should stay the same.
+  - Show the list to someone who knows the customers and ask which guess they doubt most.
+  - After your first test, check whether the top guess was the one that surprised you.
+improve:
+  - Add the beliefs that sank earlier projects to step 3 so they are always checked.
+  - Add your usual figures (sign-up rates, repeat rates) so placeholders are closer.
+  - Keep the ranked list in your project notes and rerun after each test.
+  - Pair it with the Smallest test picker, then the MVP experiment planner.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: Rewriting claims and ranking risk is text work.
+    - name: A spreadsheet
+      why: Keeps the ranked list and your numbers in one place.
+  inputs:
+    - Your forecast or business plan
+    - Notes from talks with customers
+    - Past results from similar launches
+    - A list of people you could reach this week
+terms:
+  - term: Leap-of-faith assumption
+    meaning: A belief the whole plan depends on that nobody has checked yet.
+  - term: Value guess
+    meaning: The belief that people get a real benefit once they use it.
+  - term: Growth guess
+    meaning: The belief about how new customers will find it and keep arriving.

@@ -1,0 +1,18 @@
+slug: small-win-praise-planner
+name: "Small win praise planner"
+summary: "Describe the change you want from someone. Get what counts as a win, the exact praise to give and when."
+category: general
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - {type: question, required: true}
+  - {type: feedback_notes, required: false}
+outputs:
+  - {type: plan}
+origin: rebuilt
+version: 1.0.0
+minds: [dale-carnegie, abraham-lincoln]
+credits:
+  - {title: "How to Win Friends and Influence People (1981 revised edition), Part Four chapters 6 and 7", by: "Dale Carnegie", used: "Praise the slightest improvement and every improvement, praise specific things so it reads as sincere, and give people a good name to live up to"}

@@ -1,0 +1,82 @@
+new_slug: find-the-riskiest-guess-in-your-plan-and-test-it
+name: Find the riskiest guess in your plan and test it
+summary: Paste your plan. Get the guesses it rests on as numbers, the smallest test for the riskiest and pass lines set first.
+job: test-an-idea
+thinking: high
+thinking_why: It ranks risk across a whole plan and designs a test from it. Give it your strongest model.
+headline: Know which guess could sink your plan, and the cheapest way to test it
+subhead: Paste your plan for a product, service or project. It turns it into a short list of numbered guesses, ranks them by what breaks if each is wrong, picks the cheapest kind of test for the top one and sets the pass and fail lines before you start.
+explain: |
+  Most plans are mostly routine, with a few bets hidden inside lines like "it worked for them, so it will work for us". Teams spend months on the routine part and meet the bet last, when it is costly to be wrong.
+
+  This workflow follows the method Eric Ries teaches in The Lean Startup. It pulls the bets out and writes each as a plain sentence with a number. It ranks them by damage if wrong and how little you know. It then picks the smallest form of test for the top bet, from a sign-up page to doing the work by hand for one customer, and sets pass, fail and in-between numbers before the test runs.
+when:
+  - You have a plan and sense that part of it is a bet, but cannot say which part.
+  - You are about to spend months building and want proof of the shakiest part first.
+  - Your last test left you with praise and no facts.
+you_give:
+  - "Your plan (what you make, for whom, how they find it and what you expect back)"
+  - Your biggest worry (optional)
+  - What you can spend and who you can reach this week (optional)
+you_get:
+  - The guesses your plan rests on, each with a number, ranked, with the riskiest named
+  - The cheapest kind of test for the top guess, who to try it on and what to leave out
+  - Pass, fail and in-between numbers set before the run
+  - A run plan and a rule for what to do on a pass, a fail or a middle result
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Paste your plan as it stands, comparisons and all. Say what worries you most.
+  - Agree the pass numbers before you run the test, then bring back the results.
+how_it_works:
+  - title: Finds the guesses
+    text: Rewrites comparisons as plain facts, splits the plan into a value guess and a growth guess, adds a number to each and ranks them.
+  - title: Picks the smallest test
+    text: Names the behaviour that counts as yes, picks the cheapest test form, chooses early adopters and cuts everything that does not feed the answer.
+  - title: Sets the numbers and the next move
+    text: Writes pass, fail and middle numbers first, plans the run one group at a time and writes what to do on each result.
+output_shape: |-
+  STEP 1: THE GUESSES
+    Plain facts | value guess | growth guess
+    Ranked guesses | number | damage | evidence | score
+    Riskiest | test on first
+
+  STEP 2: THE SMALLEST TEST
+    Yes means | form and runner-up | cost and blind spot
+    Try it on | keep list | leave out | the ask | fail line
+
+  STEP 3: NUMBERS AND NEXT MOVE
+    Pass | fail | middle | sample | time
+    Run plan by group | how results are read
+    Rule: pass, fail, middle | stop after <n> tests
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: Your plan's numbers
+    how: Paste your forecast or sheet. Guesses carry your own figures, not placeholders.
+  - what: The comparison you lean on
+    how: Name the business you are copying. The first step says which of its facts may not carry over.
+  - what: What you can spend and who you can reach
+    how: Give days, money and a real group. They decide which test form comes out on top.
+judge:
+  - The riskiest guess is one the whole plan depends on.
+  - Each guess has a number a stranger could check.
+  - The test costs far less than building the product.
+  - The pass number is something people do, and it was set before the test.
+  - The rule covers a pass, a fail and a middle result.
+test:
+  - Run it on a past project that failed. See if the top guess is the one that sank it.
+  - Run it twice on the same plan. The top two guesses and the test form should match.
+  - Stop after step 1 and show the list to someone who knows your customers. Ask which guess they doubt most.
+improve:
+  - Add the beliefs that sank earlier projects, so every run checks them.
+  - Add your usual channel costs and sign-up rates so placeholders are closer to real.
+  - After the test, keep its result with the guess it answered, and rerun from step 1 with the next guess.
+terms:
+  - term: Value guess
+    meaning: The belief that people get a real benefit once they use it.
+  - term: Growth guess
+    meaning: The belief about how new customers will find it and keep arriving.
+  - term: Early adopter
+    meaning: A customer who feels the need sharply and will use a rough first version.

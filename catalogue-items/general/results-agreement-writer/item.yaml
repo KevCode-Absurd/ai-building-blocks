@@ -1,0 +1,19 @@
+slug: results-agreement-writer
+name: "Results agreement writer"
+summary: "Describe a job to hand off or a deal to settle. Get a one-page agreement on results, limits, help, review and consequences."
+category: general
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - {type: question, required: true}
+  - {type: plan, required: false}
+  - {type: audit_report, required: false}
+outputs:
+  - {type: plan}
+origin: rebuilt
+version: 1.0.0
+minds: [stephen-covey]
+credits:
+  - {title: "The 7 Habits of Highly Effective People (25th anniversary edition)", by: "Stephen R. Covey", used: "Habits 3 and 4: handing over a job by results and not methods, with five parts to agree up front (desired results, guidelines, resources, accountability, consequences), and the same five parts for win-win agreements between two sides"}

@@ -54,8 +54,8 @@ The vision. Every request with its repeat count. Cost lists for repeats. The vis
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Plan your strategy** with the [Category name writer](https://useaiblocks.com/skills/category-name-writer). It takes the shortlist.
 - **Decide what to do** with the [Findings and guesses separator](https://useaiblocks.com/skills/findings-and-guesses-separator). It takes the draft.
-- **Plan your strategy** with the [Market expansion sequencer](https://useaiblocks.com/skills/market-expansion-sequencer). It takes the shortlist.
 - **Test the idea with real people** with the [Customer conversation request writer](https://useaiblocks.com/skills/customer-conversation-request-writer). It takes the shortlist.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

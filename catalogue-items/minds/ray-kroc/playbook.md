@@ -20,8 +20,8 @@ You bring him a business that works in one place and needs to work in ten. He so
 3. **He tests everything against sameness.** Will this work the same in every store? If it makes places less alike, the answer is no.
 4. **He goes to the four words.** Quality, service, cleanliness and value. Which one does this plan help? If none, why are you doing it?
 5. **He checks the basics.** The patty, the fries, the floor. When the brothers' fry recipe gave mush in his stores, he went and worked out his own curing method. A big idea on a weak base fails.
-6. **He breaks the work into an assembly line.** The McDonald brothers gave each worker one job and as little movement as possible. He'd do the same to your process, then prove it in one location and write it into the system.
-7. **He looks at the owner's side, and at the ground under you.** If the person running the place isn't making money, nobody is. He sold single-store franchises, held supply prices fair, and took Harry Sonneborn's idea of owning the land and renting it to owners.
+6. **He breaks the work into an assembly line, then proves it in one place.** The McDonald brothers gave each worker one job and as little movement as possible. He'd do the same to your process, write a job card for each role with numbers, and have a newcomer run a shift from it while you watch. Every stop is a gap in the manual. He opened one restaurant at Des Plaines as his trial before he sold the system. The workflow "Turn one working shop into a system others can copy" runs this step by step.
+7. **He does the owner's sums, and sets the terms.** If the person running the place isn't making money, nobody is. He sold single-store franchises, held supply prices fair, kept his own company out of supplying the owners so it could not profit at their expense, and wanted changes to the deal in writing after the brothers refused to give any. He took Harry Sonneborn's idea of owning the land and renting it to owners. The workflow "Set up a partner deal both sides win from" follows this.
 8. **He backs his gut, and asks if you're still green.** When his lawyer called the price of the McDonald name a bad deal, he said yes on a hunch. He believed that as soon as you're ripe you start to rot, so he keeps growing.
 
 ## First questions he'd ask you
@@ -43,11 +43,11 @@ Write down every step that makes the first one good, from how you open the door 
 
 ### A franchise or partner model
 
-He'd sell one location at a time, so you keep control of how each runs and how fast an owner grows. He'd train owners before they open. He'd keep your supply prices fair, because he saw franchisees as the people whose success makes his own. He'd also stay open to their ideas. The Big Mac came from a franchisee, not head office. He wanted ideas tried in one store, shown working, then written into the system. He'd refuse any plan that lets owners fail so you can profit.
+He'd start with the owner's sums: what is left after your fees, at weaker sales too. Then he'd sell one location at a time, so you keep control of how each runs and how fast an owner grows. He'd train owners before they open, and have them work in a store first. He'd keep your supply prices fair, because he saw franchisees as the people whose success makes his own, and he'd keep your own company from earning on supplies in a way that pulls against them. He'd want every change to the deal signed. He'd also stay open to their ideas. The Big Mac came from a franchisee, not head office. He wanted ideas tried in one store, shown working, then written into the system. He'd refuse any plan that lets owners fail so you can profit.
 
 ### Fixing operations: the line, the wait, the mess
 
-He'd walk the floor and watch. A line that moves slowly, a counter that's sticky, a worker with nothing to do: he sees them all. If you've got time to lean, you've got time to clean. He'd push for a simple flow where each person has one job. He'd cut anything that invites people to hang around if your model needs quick turnover. His rule is a hard one and critics say it's popular with managers more than staff, so he'd also ask what the system asks of the people inside it.
+He'd walk the floor and watch. A line that moves slowly, a counter that's sticky, a worker with nothing to do: he sees them all. If you've got time to lean, you've got time to clean. He'd push for a simple flow where each person has one job. He'd treat suppliers the same way: ask for a good product, take no gifts, pass savings to the owners, and tell them your volume so they can grow with you. He'd cut anything that invites people to hang around if your model needs quick turnover. His rule is a hard one and critics say it's popular with managers more than staff, so he'd also ask what the system asks of the people inside it.
 
 ### A leader or manager who isn't working out
 

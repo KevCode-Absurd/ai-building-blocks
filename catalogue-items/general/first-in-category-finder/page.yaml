@@ -1,0 +1,122 @@
+new_slug: first-in-category-finder
+name: "First-in-category finder"
+summary: "Paste your market map and product. Get ranked categories you could lead, each tested for rivals, size and timing."
+job: plan-strategy
+thinking: high
+thinking_why: "It splits a market many ways and judges each branch on four tests, so deeper thinking finds categories a quick pass would miss."
+
+headline: "Find a category you can be first in, instead of fighting a leader"
+subhead: "Paste your map of rivals and what you sell. It asks 'first what?', splits the market by buyer, use, price, channel and kind, and tests each branch for being different, open, big enough and timely. You get the top one or two categories to lead."
+
+explain: |
+  If a rival got into the buyer's mind first, being better rarely moves them. The way out is to be first at something else: a narrower or newer kind of product that has no leader yet. Buyers are wary of brand claims, but they are curious about what is new, so a new category gets a hearing that a better brand does not.
+
+  This skill starts by throwing out "better than" and asking "first what?". It then cuts the market in several ways to make candidate branches. Each branch gets four tests: would a buyer see it as a different kind of thing, has no one already claimed it, is it big enough to matter, and is the timing right. A branch that is only a bad idea you like also fails, such as a product the buyer won't pay for. It ranks the branches and keeps one or two, and says so plainly if none pass.
+
+when:
+  - A rival leads your market and you can't win by being better.
+  - You are third or lower and attacking the leaders is not working.
+  - You have a product that does not fit any existing kind.
+  - You want to name a space before a rival does.
+
+you_give:
+  - A map of who holds what in your market, such as the output of "Competitor white space mapper"
+  - Your product facts (optional)
+  - Your brand facts (optional)
+you_get:
+  - A list of candidate categories made by splitting the market
+  - A score on four tests for each
+  - The top one or two, each as "the first ___ for ___"
+  - What would make you drop each
+  - Gaps you need to fill before you commit
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your market map and a short description of what you sell.
+  - Check the open test yourself with a quick search. If a rival already uses the word, the branch is taken.
+  - Take the top category into "Category name writer".
+
+how_it_works:
+  - title: Asks first what
+    text: Drops "better than" and writes the product's claim as "the first ___ for ___".
+  - title: Splits the market
+    text: Cuts by buyer, use, price, channel, size, kind and attitude to make eight to twelve branches.
+  - title: Tests each branch
+    text: Different in buyers' eyes, open, big enough, and well timed.
+  - title: Checks the idea is real
+    text: Asks who pays and whether anyone wants the branch, not only you.
+  - title: Considers joining a bigger ladder
+    text: Compares leading a tiny category with being the alternative on a large one.
+  - title: Ranks and keeps two
+    text: Drops any branch that fails on different or open, and ranks the rest.
+  - title: Says when none pass
+    text: If nothing passes, says so and points to the opposite-of-the-leader route instead.
+
+output_shape: |
+  FIRST WHAT?
+  The claim you had: <better than ...> | The claim now: The first <kind> for <who>
+
+  CANDIDATE BRANCHES
+  <branch> | Cuts used: <buyer, use, price ...>
+
+  THE FOUR TESTS
+  <branch> | Different: <0-2> | Open: <0-2> | Big enough: <0-2> | Timing: <0-2> | Total: <n of 8> | Who pays: <line>
+
+  THE TOP CATEGORIES
+  1. The first <kind> for <who> | Why it wins: <line> | Drop it if: <condition>
+  2. ...
+
+  OR JOIN A BIGGER LADDER
+  <the larger category, and the alternative position you could hold>
+
+  MISSING
+  <facts to check before you commit>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: Your market map
+    how: Give who holds what, in buyer words. Without it, the open test is marked as a guess.
+  - what: Cuts to try
+    how: Name the cuts you care about, such as price tier or how it is sold. It always tries buyer, use and channel.
+  - what: How much money you can wait with
+    how: Say how long your cash lasts. It sets the timing test.
+  - what: Buyers you can ask
+    how: Give three people to ask whether the branch is a different kind of thing.
+
+judge:
+  - The claim is written as "the first ___ for ___" and not as "better than".
+  - Each branch has all four scores, and the totals add up.
+  - A branch that fails on different or open is dropped.
+  - Each top category says who pays and what would make you drop it.
+  - The skill says plainly if nothing passes.
+
+test:
+  - Run it on a market you know well. Check that a branch you know to be taken fails the open test.
+  - Ask three buyers to describe the top branch without hearing your product. See if they call it a different kind of thing.
+  - Run it twice. The top category should stay close.
+  - Give it a market with an obvious leader and see if it finds a branch the leader can't cover well.
+
+improve:
+  - Add the time your market took to split before, so the timing test has a reference.
+  - Add search and review data to the open test.
+  - Save the chosen category as part of your brand file.
+  - Follow it with "Category name writer" and "Publicity-first launch planner".
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Splitting a market and scoring branches is text work any strong chat AI does with this skill."}
+    - {name: "A web search", why: "A quick search shows whether a rival already claims the branch."}
+  inputs:
+    - "A map of rivals and what each holds"
+    - "Customer words from reviews"
+    - "Search results for the branch's name"
+
+terms:
+  - term: Category
+    meaning: The kind of product a buyer puts you in, such as "sparkling tea" or "budget gym".
+  - term: Branch
+    meaning: A narrower kind that a category splits into, such as "sugar-free" inside "sparkling tea".
+  - term: Ladder
+    meaning: The ranking of brands a buyer holds in mind for one kind of product.

@@ -1,0 +1,118 @@
+new_slug: writing-log-reviewer
+name: "Writing log reviewer"
+summary: "Paste your plan and your daily log. Get days hit, pace, finish date, a score out of 100 and one change."
+job: write-and-tell-stories
+thinking: low
+thinking_why: "It is sums over a log and a fixed rule for the call."
+
+headline: "See if your writing habit is holding, and change one thing"
+subhead: "Paste your word-count plan and your daily log. It adds up the days you hit the count, projects your finish date, finds the pattern in the days you missed, scores the habit out of 100 and gives one change for next week."
+
+explain: |
+  A writing habit usually fails in the second or third week, and nobody notices until it is over. The log is there to show it early. The numbers are simple: how many days you hit your count, how many words you wrote, and what pace that gives you. They tell you if you will finish and when.
+
+  This skill reads the log against the plan. It counts days hit and missed, works out your average on the days you wrote, and projects the date you will finish at that pace. It looks for a pattern in the missed days: the same weekday, a late start, a day after a short day. Then it gives one change and a plain call on the count: keep it, lower it or raise it. The score is the share of planned days you hit, so you can see it move from week to week.
+
+when:
+  - "You have written to a count for a week or two."
+  - "You missed some days and do not know if it matters."
+  - "You want to know if you will make your date."
+
+you_give:
+  - "Your plan with the daily count, days a week and finish date"
+  - "Your log: date, start time and words for each day"
+  - "Anything that got in the way (optional)"
+  - "The total words you want to reach (optional)"
+you_get:
+  - "Days hit, partial and missed, with total words"
+  - "Your pace and the finish date it projects"
+  - "The pattern in the missed days"
+  - "A score out of 100 with the sum, one change and a keep, lower or raise call"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Paste the plan from the daily word quota planner."
+  - "Paste your log, one line a day: date, start time, words."
+  - "Include the days you wrote nothing."
+  - "Make the change it names and run it again in a week."
+
+how_it_works:
+  - title: "Reads the plan"
+    text: "Takes the count, the writing days and the finish date."
+  - title: "Counts the days"
+    text: "Sorts logged days into hit, partial and missed."
+  - title: "Works out the pace"
+    text: "Adds the words and averages them over the days written."
+  - title: "Projects the finish"
+    text: "Divides the words left by the pace to get a date."
+  - title: "Finds the pattern"
+    text: "Looks at which days were missed and what came before."
+  - title: "Scores the habit"
+    text: "Works out days hit over planned days, as a percent."
+  - title: "Gives the call"
+    text: "Picks one change and keep, lower or raise."
+
+output_shape: |
+  THE SUMS
+  Planned writing days so far: <n> | Hit: <n> | Partial: <n> | Missed: <n>
+  Words written: <n> | Average per day written: <n> | Plan: <count> a day
+  Words left: <n> | At this pace: <days> | Finish date: <date> | Plan date: <date> | <ahead / behind by n days>
+
+  THE PATTERN
+  <what the missed days have in common>
+
+  SCORE: <n> / 100
+  <days hit> / <planned days> x 100 = <n>
+
+  THE CALL
+  <keep / lower to n / raise to n> | rule used: <...>
+
+  THE ONE CHANGE
+  <a single change for next week>
+
+  UPDATED PLAN
+  <the new count, finish date and routine line>
+
+  CHECKS MISSED
+  <one line per check missed, or none>
+
+tweaks:
+  - what: "The log"
+    how: "Include days you wrote nothing. A log that shows only good days hides the pattern."
+  - what: "Start times"
+    how: "Add start times. A late start is the most common cause of a miss."
+  - what: "Partial days"
+    how: "Say what counts as a partial day. By default it is a day with at least a quarter of the count."
+  - what: "The total"
+    how: "Give your target length so it can project the finish date."
+
+judge:
+  - "The day counts add up to the number of planned days."
+  - "The average uses only days written."
+  - "The finish date follows from the words left and the pace."
+  - "The call matches the rule it names."
+  - "The change is one thing, not a list."
+
+test:
+  - "Give it a log with 8 hits out of 12 planned days. The score should be 67."
+  - "Give it a log with no misses. It should say hold or raise."
+  - "Give it a log with every Friday missed. The pattern should say Fridays."
+
+improve:
+  - "Keep each week's score in one place so you see the trend."
+  - "Add your reasons for each miss. Reasons make the pattern easier to read."
+  - "Run the daily word quota planner again whenever the call is to change the count."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Adding up a log and projecting a date is plain text work."}
+    - {name: "A spreadsheet", why: "Keep the log in columns. Pasting a column of dates, times and words is the easiest input."}
+  inputs:
+    - "Your target length"
+    - "A line on why each missed day was missed"
+
+terms:
+  - term: "Hit"
+    meaning: "A day when you reached your daily count."
+  - term: "Partial"
+    meaning: "A day when you wrote some, but less than the count."

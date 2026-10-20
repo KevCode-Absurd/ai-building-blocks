@@ -1,0 +1,49 @@
+# Workflow skeleton for The 22 Immutable Laws of Marketing, plan check (docs/INTAKE.md). Our words; the book stays in mind-sources/ (local only).
+id: immutable-laws-check-a-plan
+source:
+  title: "The 22 Immutable Laws of Marketing"
+  by: "Al Ries and Jack Trout"
+  kind: book
+  rights: ideas-only
+  year: 1993
+minds: [al-ries, jack-trout]
+workflow:
+  slug: check-your-marketing-plan-against-the-laws-that-decide-who-wins
+  name: "Check your plan against the laws that decide who wins"
+  summary: "Paste your marketing plan. Get the laws it breaks, a name check, a short versus long-term check and one move to make."
+  when: "you have a marketing plan or launch idea and want it attacked before you spend on it."
+  job: plan-strategy
+  level: intermediate
+steps:
+  - name: Check the plan against the laws
+    skill: marketing-plan-law-checker
+    job: analysis
+    from: "Chapters 1 to 15 and 22, the laws taken in order"
+    method: ["Say what the plan is first in, in the buyer's mind, and what rung it holds", "Test it against the laws of leadership, category, mind and perception: does it lean on being better, or on a place in the mind", "Test it against focus, exclusivity, line extension and sacrifice: one word, a word nobody else holds, one product line, one target", "Find the rung strategy that fits: leader defends, second place goes opposite, third place narrows", "Mark each law pass, warn or fail with the line of the plan that shows it, then score out of 100"]
+    inputs: [plan, brand_brain!, competitor_set!]
+    outputs: [audit_report, plan]
+    note: "Every law the plan breaks, with the line that breaks it, a score and a fix list."
+  - name: Check the name stretch
+    skill: brand-name-stretch-checker
+    job: analysis
+    from: "Chapters 10 and 12, division and line extension"
+    method: ["Say in one word what the brand name means to buyers", "Describe the new product and what it would mean alone", "Ask if it fits the meaning or blurs it, and whether the category is splitting", "If it needs its own meaning, plan a new name", "State what happens to the core product if the stretch fails"]
+    inputs: [brand_brain, product_data, plan!, competitor_set!]
+    outputs: [plan, audit_report]
+    note: "A call on the name for any new product in the plan. Reads the fix list from the step before."
+  - name: Check short-term gains against long-term costs
+    skill: long-run-effects-checker
+    job: analysis
+    from: "Chapters 11, 17, 20 and 21, perspective, unpredictability, hype and acceleration"
+    method: ["List each tactic in the plan and its short-term and long-term effect", "Mark sales, coupons and extensions as likely to help now and cost later", "Tell a fad from a trend: loud and fast, or quiet and slow", "Check that no part of the plan rests on a forecast or on press excitement", "Plan to dampen a fad so it lasts longer, and to ride a trend"]
+    inputs: [plan, audit_report!]
+    outputs: [audit_report]
+    note: "Which tactics pay now and cost later, and whether you are riding a fad or a trend."
+  - name: Pick the one bold move
+    skill: one-bold-move-picker
+    job: strategy
+    from: "Chapters 16 and 22, singularity and resources"
+    method: ["Find the one place the rival is weakest or least ready", "Drop every other move that does not feed it", "Check the move is unexpected and fits the word you own", "Check you can fund getting it into the buyer's mind", "Set an owner who is close to the front line, a date and a pass or fail test"]
+    inputs: [plan, audit_report!, competitor_set!]
+    outputs: [plan]
+    note: "One move to back, what to stop doing, the money it needs and how you will know it worked."

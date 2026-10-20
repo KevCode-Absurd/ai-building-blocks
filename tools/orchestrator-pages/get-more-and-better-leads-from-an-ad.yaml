@@ -1,0 +1,114 @@
+new_slug: get-more-and-better-leads-from-an-ad
+name: "Get more and better leads from an ad"
+summary: "Give it your ad and lead results. Get raise-or-cut fixes, a better form, and a record of what each ad pulled."
+job: read-ad-results
+thinking: high
+thinking_why: "It works through sums, offer changes and a pause for real results. Give it your strongest model."
+
+headline: "More replies, or better ones: fix the offer and the form"
+subhead: "Give it your ad, your offer and your reply numbers. It works out whether you need more replies or better ones, changes the offer to match, fixes the coupon or form, and after your ad has run, reads the results and logs them."
+
+explain: |
+  More replies is not always better. Some ads bring a crowd of curious people who never buy, and each one costs time to follow up. Others bring too few. The fix is opposite in each case, so you have to know which problem you have first.
+
+  This workflow follows the order in a third-party summary of Victor Schwab's How to Write a Good Advertisement. It counts replies, good leads and sales and works out the real cost per sale. It then picks three changes to the reply offer, from a list to raise replies or a list to cut weak ones. Next it fixes the coupon or form so it sells the offer and asks only what you need. Then you run the ad with a code on each version. Afterwards it reads the results and logs each ad so the next one starts from what worked. The source is a summary, so treat its detail as second-hand.
+
+when:
+  - Your ad brings replies, but too few, or too many that never buy.
+  - Your sales team complains about weak leads.
+  - Your form is a bare box and people do not finish it.
+
+you_give:
+  - Your reply offer, meaning what a reply gets the person
+  - "Numbers for each ad: cost, replies, good leads, sales"
+  - Your current coupon or form
+  - What it costs you to follow up one reply (optional)
+
+you_get:
+  - "A call: raise the number of replies, raise their quality, or fix the ad first"
+  - Three changes to the offer, from one list, with what each should do
+  - A rewritten coupon or form with a field table and a code
+  - A short results report after your run
+  - A log entry for each ad, with what to keep and what to try next
+
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Give it your numbers, your offer and your form. It works through the first three steps and then stops.
+  - Run the ad with a code on each version. Come back with the results and it finishes the last two steps.
+
+how_it_works:
+  - title: Find out which problem you have
+    text: "Counts replies, good leads and sales for each ad, adds follow-up cost, and calls raise the number, raise the quality, or fix the ad first."
+  - title: Tune the reply offer
+    text: "Follows the raise list or the cut list and picks three changes your facts allow, then rewrites the offer."
+  - title: Fix the coupon or form
+    text: "Checks the form against ten rules, sells the offer inside it, sets the fields to match the call and adds a code."
+  - title: Run the ad
+    text: "You run each version with its own code for long enough to collect enough replies."
+  - title: Read the results and log them
+    text: "Compares the two periods, gives a one-line answer with three actions, and writes a log entry for each ad."
+
+output_shape: |-
+  STEP 1: THE CALL
+    Funnel by ad, cost per sale, call, outside factors
+
+  STEP 2: THE NEW OFFER
+    Three changes, new wording, what is left alone
+
+  STEP 3: THE FORM
+    Rule check, rewritten form, field table, code
+
+  PAUSE: RUN THE AD WITH A CODE ON EACH VERSION
+
+  STEP 4: THE RESULTS
+    One-line answer, what changed, three actions
+
+  STEP 5: THE LOG ENTRY
+    Key, conditions, results, what it shows and does not show, next change
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+
+tweaks:
+  - what: Your definition of a good lead
+    how: Write it in one line, such as "asked for a quote and gave a budget". The call depends on it.
+  - what: Your follow-up cost
+    how: Give the cost to handle one reply. It can make the ad with fewer replies the cheaper one.
+  - what: How long to run
+    how: Run until each version has enough replies to compare. Tiny numbers are only hints.
+
+judge:
+  - The cost per sale can be redone by hand from your numbers.
+  - The three offer changes all come from one list.
+  - Every field in the form has a reason, and the form carries a code.
+  - A gap under 15 percent is not called a win.
+  - Nothing promised in the offer or the form is untrue.
+
+test:
+  - Redo the cost per sale for one ad by hand and check the call.
+  - Run the old and new form with different codes and compare replies and sales.
+  - Ask someone to fill in the new form and time them.
+  - Read the log entry a month later and see if you can tell why the ad worked.
+
+improve:
+  - Keep every log entry in one sheet and review it each quarter.
+  - Change one thing at a time after the first round so each result can be read.
+  - Add a column for the list or page the ad ran on.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "The sums and the rewriting are text work any strong chat AI does with these skills."}
+    - {name: "A spreadsheet", why: "Holds the log and lets you redo the sums yourself."}
+  inputs:
+    - "Reply, good-lead and sales counts for each coded ad"
+    - "Your current coupon or form, as it ran"
+    - "Your offer terms, written exactly"
+
+terms:
+  - term: Raise list
+    meaning: Ways to make a reply offer more appealing and easier to see.
+  - term: Cut list
+    meaning: Ways to make a reply offer plainer so only serious people reply.
+  - term: Key code
+    meaning: A mark on each ad or form that shows which version a reply came from.

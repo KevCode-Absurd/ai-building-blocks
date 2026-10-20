@@ -12,7 +12,7 @@ outputs:
   - {type: plan, required: true}
 origin: rebuilt
 version: 1.0.0
-minds: [stephen-covey, brene-brown]
+minds: [stephen-covey, brene-brown, dale-carnegie]
 credits:
   - {title: "Happy Holidays? Dealing with Difficult Family Relationships: The 3rd Alternative", by: "Stephen R. Covey, HuffPost", url: "https://www.huffpost.com/entry/happy-holidays-dealing-wi_b_1144429", used: "Listening until the other person feels understood, then seeking a third option"}
   - {title: "The 7 Habits of Highly Effective People", by: "Stephen R. Covey, FranklinCovey", url: "https://www.franklincovey.com/the-7-habits/", used: "Seek first to understand, then to be understood"}

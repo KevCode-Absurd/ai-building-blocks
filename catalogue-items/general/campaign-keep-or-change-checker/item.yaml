@@ -1,0 +1,19 @@
+slug: campaign-keep-or-change-checker
+name: "Campaign keep-or-change checker"
+summary: "Paste your ad history and recall and pull results. Get a keep, fix or replace call, with the cost of starting over."
+category: general
+type: skill
+role: check
+job: strategy
+level: intermediate
+inputs:
+  - {type: audit_report, required: true}
+  - {type: performance_sheet, required: false}
+  - {type: brief, required: false}
+outputs:
+  - {type: plan, required: true}
+origin: rebuilt
+version: 1.0.0
+minds: [rosser-reeves]
+credits:
+  - {title: "Reality in Advertising", by: "Rosser Reeves, 1961", used: "Why changing a working campaign costs what stopping the money costs, the test that a campaign cannot be worn out if most people have never heard it, the few real reasons to change, and checking that a new version carries the same claim to as many people"}

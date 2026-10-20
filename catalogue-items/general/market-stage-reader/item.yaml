@@ -1,0 +1,19 @@
+slug: market-stage-reader
+name: "Market stage reader"
+summary: "Paste your product facts and rival claims. Get what buyers know, how worn claims are and what a headline may say."
+category: general
+type: skill
+role: check
+job: analysis
+level: intermediate
+inputs:
+  - {type: product_data, required: true}
+  - {type: voc_reviews, required: false}
+  - {type: competitor_set, required: false}
+outputs:
+  - {type: brief}
+origin: rebuilt
+version: 1.0.0
+minds: [eugene-schwartz]
+credits:
+  - {title: "Breakthrough Advertising (a book summary)", by: "Eugene Schwartz (1966), as retold in a third-party chapter summary", url: "https://breakthroughadvertisingbook.com/", used: "The idea that buyers sit at different levels of awareness and that a market tires of claims in a set order, each stage calling for a different move"}

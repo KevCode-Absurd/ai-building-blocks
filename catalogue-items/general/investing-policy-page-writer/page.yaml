@@ -1,0 +1,125 @@
+new_slug: investing-policy-page-writer
+name: "Investing policy page writer"
+summary: "Paste your type, split and bond choice. Get one page with your plan, what you won't do and a review date."
+job: money-and-investing
+thinking: low
+thinking_why: "It gathers decisions you already made onto one page and adds fixed rules. A fast model does this well."
+
+headline: "Put your whole investing plan on one page you can read in a panic"
+subhead: "Paste your investor type, your stock and bond split and your bond choice. It writes the plan on one page with the rebalancing rule, a fair expectation after tax and inflation, a list of things you will not do, a rule for taking advice and a date to review. A method of analysis, not personal financial advice."
+
+explain: |
+  A plan in your head disappears when prices move. A plan on one page can be read, argued with and kept.
+
+  This skill collects the choices you made in the earlier steps and fixes what is usually left out. It writes what you expect after tax and inflation, and what a bad year can look like. It lists what you will not do, such as forecasting the market or borrowing to buy. It sets a rule for taking advice, since advice is the place most plans are broken. It keeps a small, separate place for risky bets, if you want one, so they cannot touch the plan. It gives no buy or sell calls.
+
+when:
+  - You have decided your split and want it written down before you put money in.
+  - You keep changing your plan every time prices move.
+  - Someone else manages part of your money and you want one page to hold them to.
+
+you_give:
+  - Your investor type, split and rebalancing rule
+  - Your bond choice, from "Bond type and maturity chooser" (optional)
+  - Whether you want a small separate account for risky bets
+  - Who advises you, if anyone
+
+you_get:
+  - A one-page policy in plain words
+  - A fair expectation after tax and inflation, with a bad-year picture
+  - A list of things you will not do
+  - A rule for taking advice
+  - A review date
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your split, type and bond choice.
+  - Say whether you want a small separate account for risky bets, and how much.
+  - Print the page and keep it where you look at your accounts.
+
+how_it_works:
+  - title: Gathers your choices
+    text: Puts your type, split, bond choice and rebalancing rule in the first half of the page.
+  - title: Sets expectations
+    text: Writes a plain expectation after tax and inflation and shows what a bad year looks like in money.
+  - title: Lists what you will not do
+    text: Writes the rules against forecasting, borrowing to buy and chasing a hot area.
+  - title: Sets the advice rule
+    text: States what you ask any adviser and what makes you walk away.
+  - title: Fences off risky bets
+    text: Sets a small, separate account for them, if you want one, and keeps it out of the plan.
+  - title: Sets the review
+    text: Fixes a date and the only reasons to change the page.
+
+output_shape: |
+  MY INVESTING POLICY
+  Type: <...> | Date written: <...>
+
+  WHAT I HOLD
+  Stocks <n>% (range <lo to hi>) | Bonds <n>% | Kind of bonds: <...>
+
+  HOW I KEEP IT
+  Rebalance when: <trigger> | By: <move> | Using: <new money / selling>
+
+  WHAT I EXPECT
+  After tax and inflation: <plain note> | A bad year in money: <n to n>
+
+  WHAT I WILL NOT DO
+  <list>
+
+  RISKY BETS (OPTIONAL)
+  Separate account up to <n>% | Never from the plan | Expect to lose it
+
+  ADVICE RULE
+  I ask any adviser: <questions> | I walk away if: <signs>
+
+  REVIEW
+  Next review: <date> | Only reasons to change this page: <list>
+
+  MISSING
+  <list>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: Separate account for risky bets
+    how: Say how much you want in it and why. It sets a cap and keeps the plan clean.
+  - what: Shared policy
+    how: Say if two people share the money. Each adds a line, and the page notes who decides what.
+  - what: Your adviser
+    how: Paste what your adviser has promised. It checks the promise against the advice rule.
+
+judge:
+  - Every choice on the page came from the earlier steps or the person's answers.
+  - The expectation is stated after tax and inflation and promises no figure for gain.
+  - The not-to-do list names forecasting and borrowing to buy.
+  - The advice rule has questions and walk-away signs.
+  - Nothing names a security to buy or sell.
+
+test:
+  - Give it a split with no rebalancing rule. It should mark the rule MISSING and offer to build one.
+  - Tell it your adviser promises to beat the market. It should flag that as a walk-away sign.
+  - Ask for a page with 100% in one company. It should refuse the page and say why.
+  - Run it twice on the same inputs. The page should match.
+
+improve:
+  - Review the page on its date, after a big fall and after a big change in your life.
+  - Keep each old version and note why you changed it.
+  - Ask someone you trust to read it and say what is unclear.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Gathering decisions onto one page is text work any strong chat AI does well with this skill."}
+    - {name: "A printed page or a note on your phone", why: "A policy only works if you can see it when you want to break it."}
+  inputs:
+    - "The verdict from the investor type sorter"
+    - "The split and rebalancing rule"
+
+terms:
+  - term: Investing policy
+    meaning: A short written plan that says what you hold, how you keep it and what you will not do.
+  - term: Rebalancing
+    meaning: Selling a little of what has grown and buying what has shrunk so the split goes back to your plan.
+  - term: Separate account
+    meaning: A small pot of money kept apart for risky bets, so losing it cannot touch your main plan.

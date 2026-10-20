@@ -1,0 +1,125 @@
+new_slug: ad-recall-and-pull-calculator
+name: "Ad recall and pull calculator"
+summary: "Paste your survey answers. Get recall, buyers in each group, the pull as a number and what it means."
+job: read-ad-results
+thinking: low
+thinking_why: "The sums are fixed. The only judgment is scoring vague answers and reading the pattern."
+
+headline: "Your ad's recall and pull, worked out from your survey answers"
+subhead: "Paste the filled-in answer sheet from your survey. It scores who knows the ad, works out how many in each group buy, subtracts to find the pull, checks whether the gap is bigger than chance, and says which of four patterns you have."
+
+explain: |
+  Two numbers tell you most of what an ad is doing. Recall is the share of people who can say what the ad says. Pull is how many more of those people buy than the people who cannot.
+
+  This skill does the sums. It scores the word-for-word answers against your rule, counts the groups, and subtracts. It also works out a rough margin, so a gap that is only noise is not read as a result. It then says which pattern you have: few people hear it but it works on those who do; many hear it but it does not move them; people who remember it buy less; or it is working. Each pattern has a different next step.
+
+when:
+  - "You have survey answers and no idea how to turn them into a decision."
+  - "Sales are muddy and you want a number for what the ad adds."
+  - "People talk about your ad, and you want to know if it sells."
+
+you_give:
+  - "The answer sheet: what each person said, whether they buy, and who they are"
+  - "The scoring rule from the survey plan, if you have it"
+  - "Results from an earlier wave or a rival ad (optional)"
+you_get:
+  - "Recall as a share of everyone asked"
+  - "The buying rate in each group and the pull"
+  - "A rough margin, and whether the gap is bigger than it"
+  - "Which of four patterns it is, and the next step"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Paste the answer sheet, with what each person said word for word, and your scoring rule."
+  - "Read the pattern and the caution before the number."
+  - "Take the result to the Campaign keep-or-change checker."
+
+how_it_works:
+  - title: "Checks the sheet"
+    text: "Counts the rows and finds any that are missing the group or the buying answer."
+  - title: "Scores the answers"
+    text: "Marks each person as knowing the ad or not, using your rule."
+  - title: "Works out recall"
+    text: "People who know the ad divided by everyone asked."
+  - title: "Works out the buying rates"
+    text: "The share who buy in each group, and the difference between them."
+  - title: "Checks the margin"
+    text: "Estimates the error in each rate and whether the gap is larger than it."
+  - title: "Reads the pattern"
+    text: "Names which of four patterns the numbers show."
+  - title: "Adds the caution"
+    text: "Warns that people who already buy may notice the ad more, so pull is a signal, not proof."
+
+output_shape: |
+  COUNTS
+  Asked: <n> | knows the ad: <n> | does not: <n> | unscored: <n>
+
+  RECALL
+  <knows / asked as %>
+
+  BUYING
+  Knows the ad: <buyers / n = %>   Does not: <buyers / n = %>
+  PULL: <difference in points>  (extra buyers per 100 who know the ad)
+
+  MARGIN
+  Rough error: knows <± pts>, does not <± pts>, gap <± pts> -> larger than chance: yes or no
+
+  PATTERN
+  <low recall and good pull | high recall and no pull | pull below zero | working>
+  Next step: <...>
+
+  WHAT THEY SAID INSTEAD
+  <top near-miss answers with counts>
+
+  CAUTION
+  <one or two lines>
+
+  MISSING
+  <what would sharpen the result>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: "Scoring rule"
+    how: "Paste the rule from the survey plan. Without it the skill uses a plain default and says so."
+  - what: "Who bought before"
+    how: "If you know who were customers before the ad ran, add a column. It lets the skill split new buyers from old."
+  - what: "Earlier wave"
+    how: "Paste last wave's numbers to see whether recall and pull moved."
+  - what: "A rival ad"
+    how: "Include the same answers about a rival ad to compare recall."
+
+judge:
+  - "The counts add up to the number asked."
+  - "The pull is the difference of two rates, shown with both."
+  - "The margin is shown and the gap is judged against it."
+  - "The pattern matches the numbers."
+  - "The caution about existing buyers is present."
+
+test:
+  - "Redo the sums by hand on the first twenty rows."
+  - "Score twenty answers separately and compare with the skill's marks."
+  - "Change one borderline answer and see whether the pattern changes."
+  - "Compare with your next wave."
+
+improve:
+  - "Keep the sheets from every wave in one folder."
+  - "Add a column for where each person saw the ad."
+  - "Add a column for how long each person has bought from you."
+  - "Pair it with the Campaign keep-or-change checker."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Scoring answers and doing small sums is something any strong chat AI does well with this skill."}
+    - {name: "A spreadsheet", why: "Lets you check the counts and rates yourself."}
+  inputs:
+    - "The plan from the Recall and pull survey planner"
+    - "The filled-in answer sheet"
+    - "Earlier waves, to see movement"
+
+terms:
+  - term: Recall
+    meaning: "The share of everyone asked who can say what the ad says."
+  - term: Pull
+    meaning: "The buying rate of people who know the ad minus the buying rate of people who do not."

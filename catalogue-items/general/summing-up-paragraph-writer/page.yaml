@@ -1,0 +1,96 @@
+new_slug: summing-up-paragraph-writer
+name: Summing-up paragraph writer
+summary: Paste your ad draft. Get a short section that pictures the gain, sums up the case and gives a reason to act.
+job: write-ad-copy
+thinking: medium
+thinking_why: It chooses what to sum up and which reason to act is real, but the order is fixed.
+headline: Summing-up paragraph writer
+subhead: Give it your ad draft with its proof. It picks the few points that matter, pictures the gain in the reader's ordinary day, puts value before price and adds one true reason to act now. You get a short section that sits between your proof and your ask.
+explain: |-
+  A reader can be convinced and still do nothing. Many ads go straight from proof to a button, and the reader's habit of doing nothing wins.
+
+  This skill writes the stretch in between. It sums up the case in a few short sentences, shows how the gain will look in the reader's own week, and gives one honest reason to move now. It also puts the value before the price, so the number lands after the reader has seen what they get. If you have a list of remaining doubts, it answers the biggest one.
+when:
+  - Your ad has a headline, a body and a button but nothing in between.
+  - People read your ad, agree, and do not act.
+  - Your price comes before the reader has seen the value.
+you_give:
+  - Your ad draft with headline, body and proof
+  - A proof map or list of reader doubts (optional)
+  - What waiting costs the reader or what acting gains them, if you know
+you_get:
+  - A short summing-up section ready to place before your ask
+  - The picture of the gain, built from your facts
+  - One reason to act now, marked gain or loss
+  - A line that answers the biggest doubt left
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your draft. Add the proof map if you made one.
+  - Place the new section between the last proof and the ask.
+  - Read the draft aloud from the headline to the ask and fix any jump.
+how_it_works:
+  - title: Picks the main points
+    text: Chooses the three or four points the case rests on.
+  - title: Pictures the gain
+    text: Describes one ordinary moment where the reader has the benefit, using your facts.
+  - title: Sums up
+    text: Restates the points in short sentences that get shorter toward the end.
+  - title: Value before price
+    text: Puts what the reader gets ahead of what it costs.
+  - title: Reason to act
+    text: Adds one real reason to act now, framed as a gain or a loss avoided.
+  - title: Answers the last doubt
+    text: Handles the strongest doubt left for the hardest-to-convince reader.
+output_shape: |-
+  MAIN POINTS
+  1. ...
+  2. ...
+  3. ...
+
+  SUMMING-UP SECTION
+  <the section, ready to paste>
+
+  PICTURE USED
+  <the moment, and the fact behind it>
+
+  REASON TO ACT
+  <gain or loss> | real because: <fact>
+
+  SMALL EXTRA
+  <a true extra, or none>
+
+  MISSING
+  <what is needed>
+
+  CHECKS MISSED
+  <one line each, or none>
+tweaks:
+  - what: Gain or loss
+    how: Say which framing fits. A loss reason works when waiting truly costs something.
+  - what: Length
+    how: A cheap item may need two sentences. A costly one may need several paragraphs.
+judge:
+  - The section adds no new claim without a fact.
+  - The picture is one specific moment, not a list.
+  - The price comes after the value.
+  - The reason to act is real.
+test:
+  - Read only the summing-up section to someone. Ask if they can say what they would get.
+  - Place it in the ad and check the flow from proof to ask.
+  - Key two versions of the ad, with and without it, and compare replies.
+improve:
+  - Add a customer's own words to the picture once you have them.
+  - Test a gain version against a loss version.
+  - Keep the shortest version that still moves people.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: The work is sorting and writing from facts you supply, which any strong chat AI does well with this skill.
+  inputs:
+    - A proof map from the Four-kind proof finder
+    - Real customer quotes
+terms:
+  - term: Inertia
+    meaning: The reader's habit of doing nothing, even when they agree.
+  - term: Summing up
+    meaning: A short restatement of the case that moves the reader toward the ask.

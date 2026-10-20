@@ -1,0 +1,63 @@
+# Workflow skeleton for The Intelligent Investor, revised edition (docs/INTAKE.md). Our words; the book stays in mind-sources/ (local only).
+# Method analysis only. Not personal financial advice. Names no security to buy or sell.
+id: intelligent-investor-defensive-screen
+source:
+  title: "The Intelligent Investor (revised edition, with commentary by Jason Zweig)"
+  by: "Benjamin Graham"
+  kind: book
+  rights: ideas-only
+  year: 2003
+minds: [benjamin-graham, warren-buffett]
+workflow:
+  slug: screen-stocks-with-a-defensive-investors-seven-tests
+  name: "Screen stocks with a defensive investor's seven tests"
+  summary: "Paste company figures. Get each company passed or failed on seven tests, with the price sums shown, and a short list."
+  when: "you want a safe, plain list of large companies to hold for years and want rules to cut the list down before you look at any story."
+  job: money-and-investing
+  level: advanced
+steps:
+  - name: Test each company for size, strength, record and growth
+    skill: defensive-stock-quality-screener
+    job: analysis
+    task: money-and-investing
+    from: "Chapter 14, the first five of seven tests, and Chapter 5, the four rules for the stock part"
+    method: ["Check size: sales or assets above a floor you set for today's money", "Check financial strength: current assets at least twice current liabilities and long-term debt no more than working capital", "Check ten years of profit with no loss year, and a long unbroken dividend record", "Check that profit per share grew by at least a third over ten years, using three-year averages at each end"]
+    inputs: [source_text]
+    outputs: [audit_report]
+    note: "A pass, fail or unknown on each quality test for each company, with the figure behind it."
+  - name: Check the per-share earnings for traps
+    skill: earnings-padding-detector
+    job: analysis
+    task: money-and-investing
+    from: "Chapter 12, things to consider about per-share earnings"
+    method: ["Do not take a single year's profit seriously", "Compare the figure with and without special charges and with shares that could be created from conversion", "Find charges taken early that lift later profit", "Restate earnings and give a clean, adjusted or avoid call"]
+    inputs: [audit_report, source_text!]
+    outputs: [audit_report]
+    note: "Restates the profit figures the price tests will use."
+  - name: Test the price against a ceiling
+    skill: defensive-price-ceiling-tester
+    job: analysis
+    task: money-and-investing
+    from: "Chapter 14, tests six and seven, and Chapter 5, rule four"
+    method: ["Divide price by average profit over the last three years and set a ceiling", "Divide price by book value per share and set a ceiling", "Multiply the two and check the product against a combined ceiling", "Compare the profit yield with the yield on safe bonds"]
+    inputs: [audit_report, source_text!]
+    outputs: [audit_report]
+    note: "A price pass or fail with the sums shown, so a high-flying name is cut for its price, not its story."
+  - name: Build the list and keep it spread
+    skill: defensive-stock-list-builder
+    job: strategy
+    task: money-and-investing
+    from: "Chapters 5 and 14, ten to thirty issues, the cross-section alternative and the yearly check"
+    method: ["Keep only the companies that passed every test", "Spread across ten to thirty names and across industries, with no one name large", "Offer the plain alternative of buying a broad cross-section through a low-cost fund", "Set a yearly review date and the only reasons to change the list"]
+    inputs: [audit_report]
+    outputs: [plan]
+    note: "A short list, how many names to hold and the date to look again."
+  - name: Write the rules for sitting still
+    skill: sit-still-rule-writer
+    job: ops
+    task: money-and-investing
+    from: "Chapter 5, portfolio changes and dollar-cost averaging, and Chapter 8"
+    method: ["Write the facts that must stay true for each holding", "Cross out weak reasons to act, such as a price drop or a headline", "Fix when you look and what you may do", "Keep only the reasons that survive"]
+    inputs: [plan, audit_report!]
+    outputs: [plan]
+    note: "The list becomes a holding plan with the only reasons to act."

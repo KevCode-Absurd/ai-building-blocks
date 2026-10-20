@@ -1,0 +1,17 @@
+slug: eulogy-values-finder
+name: "Eulogy values finder"
+summary: "Say where you are in life. Get the five values you most want remembered for, and which you are not living yet."
+category: general
+type: skill
+role: make
+job: strategy
+level: beginner
+inputs:
+  - {type: question, required: true}
+outputs:
+  - {type: shortlist}
+origin: rebuilt
+version: 1.0.0
+minds: [stephen-covey]
+credits:
+  - {title: "The 7 Habits of Highly Effective People (25th anniversary edition)", by: "Stephen R. Covey", used: "Habit 2: picturing your own funeral or a distant day when four people speak about you, to find what you would want said, then writing it down and checking it against how you live now"}

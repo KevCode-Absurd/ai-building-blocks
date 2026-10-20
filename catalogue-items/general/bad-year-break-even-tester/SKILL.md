@@ -52,7 +52,7 @@ The earnings base. The list of events with LIKELY, POSSIBLE, UNLIKELY or UNKNOWN
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Check the money** with the [Business tenet scorecard writer](https://useaiblocks.com/skills/business-tenet-scorecard-writer). It takes the audit report.
+- **Check the money** with the [Bargain group rules writer](https://useaiblocks.com/skills/bargain-group-rules-writer). It takes the audit report.
 - **Plan your strategy** with the [Brand and sales budget splitter](https://useaiblocks.com/skills/brand-and-sales-budget-splitter). It takes the audit report.
 - **Decide what to do** with the [Checklist upkeep planner](https://useaiblocks.com/skills/checklist-upkeep-planner). It takes the audit report.
 - **Test the idea with real people** with the [Seven-question startup scorer](https://useaiblocks.com/skills/seven-question-startup-scorer). It takes the audit report.

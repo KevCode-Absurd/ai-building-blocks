@@ -66,10 +66,10 @@ The idea and the ask. The four stages with a planned answer for each. The story.
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - **Check it before it goes live** with the [Meta ads compliance checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the video ad script.
-- **Say it to the room** with the [Hardest objections answer writer](https://useaiblocks.com/skills/hardest-objections-answer-writer). It takes the plan.
+- **Say it to the room** with the [Honest appreciation note writer](https://useaiblocks.com/skills/honest-appreciation-note-writer). It takes the plan.
 - **Make video ads** with the [Ad script read-aloud editor](https://useaiblocks.com/skills/ad-script-read-aloud-editor). It takes the video ad script.
 - **Make image ads** with the [Image ad remake planner](https://useaiblocks.com/skills/image-ad-remake-planner). It takes the video ad script.
-- **Sell it** with the [Reason-to-join pitch writer](https://useaiblocks.com/skills/reason-to-join-pitch-writer). It takes the plan.
+- **Sell it** with the [Disagreement calming line writer](https://useaiblocks.com/skills/disagreement-calming-line-writer). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

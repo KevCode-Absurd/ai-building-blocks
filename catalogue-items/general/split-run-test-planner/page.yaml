@@ -1,0 +1,128 @@
+new_slug: split-run-test-planner
+name: "Split-run test planner"
+summary: "Paste two versions to run together on matched halves of one audience. Get one change, a key on each, a winner rule."
+job: plan-ad-tests
+thinking: medium
+thinking_why: "It spots hidden second changes and sizes the test, but the rules are fixed."
+
+headline: "A fair head-to-head test of two ads, with the winner rule written first"
+subhead: Give it two versions of an ad, email or page. It finds every difference, narrows the test to one, and plans the even split, the key on each version and how many replies you need. You get a test plan with a winner rule and a read date.
+
+explain: |
+  Most tests of two ads are not fair. One ran on Monday and the other on a rainy Friday. One sat at the top of the page. One was sent to your best customers. When a gap shows up, nobody can say whether the ad caused it.
+
+  A split-run test removes those excuses. Both versions go out at the same moment to matched halves of the same audience, so only the thing you changed is left to explain a gap. This skill finds the one difference, lists what must stay equal, picks a way to split, and gives each version a code that never moves. It sizes the test to about a hundred replies per version, and it writes the winner rule before you launch, so you cannot move the goalposts afterwards. For many versions, it plans rounds or a control.
+
+when:
+  - You have two ads, emails or pages and want to know which gets more replies.
+  - A past test gave a result nobody trusted.
+  - You want to try a new version without risking the whole budget.
+
+you_give:
+  - The two versions
+  - The offer and reply path, if they are not in the versions
+  - Past reply rates for the same channel (optional)
+you_get:
+  - The one difference being tested
+  - What must stay equal and how the audience is split
+  - A code for each version
+  - The audience size needed, with the sum shown
+  - A winner rule with a read date, plus a plan for more than two versions
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste both versions in full.
+  - Say how many people you can send each to, and your usual reply rate.
+  - Set the keys it gives you in your tools before launch.
+  - Read the result with "Split-run result reader" on the date it names.
+
+how_it_works:
+  - title: Finds the single difference
+    text: Compares the versions line by line. More than one change means it splits the test, so a gap has one cause.
+  - title: Holds the rest equal
+    text: Lists offer, price, size, time, audience and position that must match.
+  - title: Picks the split
+    text: Random halves for email, the platform's even split for pages and ads, swapped places for print.
+  - title: Keys each version
+    text: Gives each version a code that stays with it and changes if the version changes, even slightly.
+  - title: Sizes the test
+    text: Aims for about a hundred replies per version and shows the audience sum.
+  - title: Sets the rule first
+    text: Writes what decides the winner, how big a gap counts and when you will look.
+
+output_shape: |
+  THE ONE DIFFERENCE
+  <what changes between the versions>
+
+  HELD EQUAL
+  <offer | price | size | time | audience | position>
+
+  SPLIT
+  <how halves are made>
+
+  KEYS
+  A: <code>   B: <code>   (a changed version gets a new code)
+
+  SIZE
+  <target replies per version> / <usual reply rate> = <audience per version>
+
+  WINNER RULE
+  <the number that decides | the gap that counts | read on <date> | if the gap is small: <action>>
+
+  MORE THAN TWO
+  <rounds or control plan>
+
+  TRAPS AND HOW THEY ARE AVOIDED
+  <list>
+
+  MISSING
+  <list>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: Reply rate
+    how: Give your real rate for this channel. If you do not know it, the plan shows a range.
+  - what: Audience size
+    how: If you cannot reach the size needed, say so. It will plan a longer run or a bigger difference to test.
+  - what: Number of versions
+    how: Tell it if you have more than two. It will pick rounds or a control.
+  - what: What counts as a reply
+    how: Say if it is a click, a form, a call or a sale, so the winner rule counts the right thing.
+
+judge:
+  - Only one thing differs, or the test is split into more than one.
+  - Both versions run at the same time to matched halves.
+  - Each version has its own code that changes when the version does.
+  - The audience sum is shown.
+  - The winner rule has a read date and was written before launch.
+
+test:
+  - Give it two versions that differ in three ways. It should split the test.
+  - "Check the keys: could you tell which version brought each reply?"
+  - Run a test and read it on the date given. Check the rule gave you an answer or a clear next step.
+  - Run it with no reply rate. It should show a range and ask.
+
+improve:
+  - Add your channels' usual reply rates so the sum is exact.
+  - Add the codes your tools use, such as link tags or form fields, to step 4.
+  - Keep a record of control ads and their reply rates, one per channel.
+  - Pair it with "Test reply offer planner" so the offer brings enough replies.
+
+works_best_with:
+  tools:
+    - {name: "Your email tool or ad platform", why: "Most have an even split option that does the halves for you."}
+    - {name: "A spreadsheet", why: "Holds the keys, counts and read dates for every test in one place."}
+  inputs:
+    - "Your usual reply rate for each channel"
+    - "The size of the list or audience for each version"
+    - "A past test, so the plan can compare with it"
+
+terms:
+  - term: Split-run test
+    meaning: A test where each version goes to a matched half of the same audience at the same time.
+  - term: Key
+    meaning: A code on each version that lets you trace every reply back to it.
+  - term: Control
+    meaning: The version you keep as a yardstick and run every new version against.

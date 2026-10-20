@@ -12,6 +12,6 @@ outputs:
   - {type: audit_report}
 origin: rebuilt
 version: 1.0.0
-minds: [david-ogilvy]
+minds: [david-ogilvy, rosser-reeves]
 credits:
   - {title: "Quotations of David Ogilvy", by: "David Ogilvy, 2023 collection", used: "Judging a commercial with the sound off, showing the claim on screen, opening on a striking picture of the problem or product, and selling before entertaining"}

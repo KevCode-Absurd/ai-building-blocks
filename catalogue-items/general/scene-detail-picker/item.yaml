@@ -1,0 +1,17 @@
+slug: scene-detail-picker
+name: "Scene detail picker"
+summary: "Paste your story's key places. Get a few first-to-mind details for each, one fresh comparison and what to leave out."
+category: general
+type: skill
+role: make
+job: creative
+level: beginner
+inputs:
+  - {type: brief, required: true}
+outputs:
+  - {type: plan}
+origin: rebuilt
+version: 1.0.0
+minds: [stephen-king, anne-lamott]
+credits:
+  - {title: "On Writing: A Memoir of the Craft", by: "Stephen King", used: "Picking a few details from a quick all-senses recall that stand for the whole place, favouring place and texture over faces and clothes, one fresh comparison, and leaving the rest to the reader"}

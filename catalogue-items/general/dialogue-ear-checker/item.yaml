@@ -1,0 +1,18 @@
+slug: dialogue-ear-checker
+name: "Dialogue ear checker"
+summary: "Paste your scene. Get each line of talk tested, the worst fixed and a score out of 100."
+category: general
+type: skill
+role: check
+job: analysis
+level: intermediate
+inputs:
+  - {type: copy_draft, required: true}
+outputs:
+  - {type: copy_draft}
+  - {type: audit_report}
+origin: rebuilt
+version: 1.0.0
+minds: [stephen-king]
+credits:
+  - {title: "On Writing: A Memoir of the Craft", by: "Stephen King", used: "Judging dialogue by whether people would say it, whether the speakers sound different, whether talk shows character, plain said tags, and letting each character swear or not as they really would"}

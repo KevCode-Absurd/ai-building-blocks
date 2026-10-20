@@ -1,0 +1,23 @@
+slug: customer-progress-measure-picker
+name: Customer progress measure picker
+summary: Paste the numbers you track and your job spec. Get which ones miss the customer and three measures of progress to use.
+category: general
+type: skill
+role: check
+job: analysis
+level: advanced
+inputs:
+  - type: plan
+    required: true
+  - type: brief
+    required: false
+outputs:
+  - type: plan
+origin: rebuilt
+version: 1.0.0
+minds:
+  - clayton-christensen
+credits:
+  - title: Competing Against Luck
+    by: Clayton M. Christensen, Taddy Hall, Karen Dillon and David S. Duncan (2016)
+    used: Measuring the customer's benefit instead of internal efficiency, the three traps in the data a growing company relies on (loud operating data, growth by selling more to the same people, and data that confirms current beliefs), and why a count of purchases does not show the job was done

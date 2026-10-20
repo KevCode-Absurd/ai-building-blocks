@@ -1,0 +1,49 @@
+# Workflow skeleton for Competing Against Luck, part 3: design the experience, name and measures around the job (docs/INTAKE.md). Our words; the book stays in mind-sources/ (local only).
+id: jobs-to-be-done-experience
+source:
+  title: "Competing Against Luck"
+  by: "Clayton M. Christensen, Taddy Hall, Karen Dillon and David S. Duncan"
+  kind: book
+  rights: ideas-only
+  year: 2016
+minds: [clayton-christensen]
+workflow:
+  slug: design-the-experience-name-and-measures-around-the-job
+  name: "Design the experience, name and measures around your customer's job"
+  summary: "Give it your job spec. Get the key moments, features to keep, a name for the job and measures of progress."
+  when: "you know the job but your product, features or reports still follow your org chart, not the customer's progress."
+  job: plan-strategy
+  level: advanced
+steps:
+  - name: Map the moments and remove the obstacles
+    skill: job-experience-mapper
+    job: strategy
+    from: "Chapter 6, Building Your Resume, and Chapter 7, integrating around a job"
+    method: ["Split the customer's path into moments: before buying, buying, first use, later use", "For each moment, write the obstacle or worry in the way", "Design the experience that removes it, and say who in your company owns it", "Test whether the full cost of the struggle justifies a premium", "Mark the moments rivals could copy and the ones tied to your processes"]
+    inputs: [brief, audit_report!, voc_reviews!]
+    outputs: [audit_report, plan]
+    note: "A moment-by-moment list of obstacles and the experience that clears each one."
+  - name: Cut features that do not serve the job
+    skill: feature-cutting-planner
+    job: strategy
+    from: "Chapters 8 and 9, the feature chase and the job as a compass"
+    method: ["Take the full feature wish list", "Keep what serves the job in the circumstance", "Cut or merge the rest", "Leave the product easy to explain"]
+    inputs: [audit_report, question, product_data!]
+    outputs: [plan]
+    note: "Uses the job as the filter for a long list of customer requests."
+  - name: Name the product after the job
+    skill: job-name-picker
+    job: copy
+    from: "Chapter 6, purpose brand"
+    method: ["Write the job in six words or fewer as the customer would say it", "Draft names that say the job, not the maker or the category", "Test each by asking what a stranger would hire it for", "Check it does not suggest jobs you do not do", "Write a line that says who it is not for"]
+    inputs: [brief, plan!, product_data!]
+    outputs: [copy_draft]
+    note: "Names that tell the customer what to hire."
+  - name: Pick the measures that show progress
+    skill: customer-progress-measure-picker
+    job: analysis
+    from: "Chapters 7, 8 and 9, what gets measured and the three fallacies of data"
+    method: ["List what you track now and what job each number serves", "Check each against the three data traps: loud operating data, growth by adding products, data that confirms what you believe", "Write three measures of customer progress, such as time saved or would-do-it-again", "Say how each will be gathered, by whom and how often", "Add a check on repeat use, not only on buying"]
+    inputs: [plan, brief!]
+    outputs: [plan]
+    note: "Replaces easy numbers with a few that show the job is getting done."

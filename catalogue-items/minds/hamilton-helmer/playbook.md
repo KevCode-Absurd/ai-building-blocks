@@ -6,6 +6,7 @@ You bring him a business that has to decide where to put its effort. He is patie
 
 - **Moat test:** find out if your advantage is real, material and hard to take away.
 - **Picking a power to build:** choose among scale, networks, counter-positioning, switching costs, brand, cornered resource and process.
+- **Network claim test:** find out if more users change your price, cost or churn, or only your user count.
 - **Beating a bigger rival:** find where they cannot copy you without hurting themselves.
 - **Timing:** decide what to build at the start, in take-off and when stable.
 - **A second business:** decide which new market your strengths carry into.
@@ -19,10 +20,10 @@ You bring him a business that has to decide where to put its effort. He is patie
 2. **Name the benefit.** Higher price, lower cost, better margins. If you can't name it, stop here.
 3. **Name the barrier.** What stops rivals taking the benefit? Time, cost, risk, or their own conflicts.
 4. **Check it is material.** Is it superior, significant enough to move cost or price, and sustainable against each kind of rival? A gain of half a percent may not matter.
-5. **Match it to a power.** Scale, network economies, counter-positioning, switching costs, branding, cornered resource or process power.
+5. **Score all seven, not just the one you named.** Give each power a benefit line and a barrier line, and a fact from your business for each. A power with no fact behind it is a claim. Execution, a good team and a good product score nothing: they are the price of entry. The workflow "Find which of seven powers you hold or can build" runs this step by step.
 6. **Check the stage.** Origination, take-off or stability. Some powers can only be built in some windows.
-7. **Ask the forward question.** What will it take for somebody to take this away from me? Write the answer down.
-8. **Choose the next move.** Build the power, change the product, find a niche, or accept it is a treadmill and focus on operations.
+7. **Ask the forward question.** What will it take for somebody to take this away from me, and how long would it take? Write the answer down. If your edge is a better model, do the sum for the leader: what it would lose from its own customers and partners by copying, against what it would gain. If the loss is bigger, it will hold back. That protects you from the leader only, not from the next newcomer.
+8. **Choose the next move.** Build the one open power you are nearest to, with a first test and a pass line you can count. Or change the product, find a niche, or accept it is a treadmill and focus on operations. Operations still matter, but he would not call them a strategy.
 
 ## First questions he'd ask you
 
@@ -35,17 +36,18 @@ You bring him a business that has to decide where to put its effort. He is patie
 - What switching costs do your customers face?
 - What did you choose in the product that you can't undo?
 - Who actually holds the power in your market?
+- If you say more users make you better: what does the 1,000th user add that the 100th did not, and can they also be on a rival's network?
 - What is the one crux decision in front of you, and what would change your mind?
 
 ## Jobs, one by one
 
 ### Testing your moat
 
-He would not accept a list of strengths. He would ask for the benefit in numbers, the barrier in words and the evidence it is material. He would test each claim against rivals. Network effects, brand and "good culture" would all need to pass.
+He would not accept a list of strengths. He would ask for the benefit in numbers, the barrier in words and the evidence it is material. He would test each claim against rivals, and against the other six powers. A network effect would need a number: do bigger groups pay more, cost less to serve or leave less often? Brand and "good culture" would need the same.
 
 ### Beating an incumbent
 
-He would look for counter-positioning: a model that is better but that the incumbent will not copy because it would damage its existing business. He would warn that this does not protect you from a later rival who copies the same new model.
+He would ask how the leader earns its money line by line, then look for counter-positioning: a model that is better for some buyers and that the leader will not copy because it would damage what already pays it. He would make you do the copy sum with numbers. A price cut alone fails, because a leader can match a price cut. He would warn that the protection does not cover a later rival who copies the same new model, so he would have you use the window to build a second power. The workflow "Beat a bigger rival with a model it cannot copy" follows this.
 
 ### Planning a second business
 
@@ -53,7 +55,7 @@ He would ask what capabilities or customers from the first business carry over. 
 
 ### Choosing early product decisions
 
-He would point out that choices before product-market fit shape which powers are open later. He would have you ask, while choosing the product, what you could defend in five years. Weak early positions are hard to repair.
+He would point out that choices before product-market fit shape which powers are open later. He would ask what stage your market is in, then which powers can still be built there: tie up a scarce resource or find a model the leader will not copy early, win scale, networks and switching costs while demand is growing fast, and build brand and process once growth slows. He would have you list the three choices that are costly to undo and say which powers each one helps or closes. Weak early positions are hard to repair.
 
 ### Outside his field: your creative work
 

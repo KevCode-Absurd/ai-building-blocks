@@ -1,0 +1,128 @@
+new_slug: marketing-plan-law-checker
+name: "Marketing plan law checker"
+summary: "Paste your marketing plan. Get each law it breaks, the line that breaks it, a score and a fix list."
+job: plan-strategy
+thinking: high
+thinking_why: "It has to read a plan against thirteen tests and judge each one from what the plan really says, so more thinking time finds more faults."
+
+headline: "Find the marketing laws your plan breaks before you spend on it"
+subhead: "Paste your marketing plan, and your rivals if you have them. It tests the plan against thirteen rules about the buyer's mind: being first, owning one word, product lines, targets and money. You get a verdict on each, the plan line behind it, a score out of 100 and a fix list."
+
+explain: |
+  Most plans assume the better product wins. The rules this skill uses start from the opposite view: buyers keep a short ranking in their heads for each kind of product, they rarely change it, and the plan has to fit that ranking. A plan can be well made, well funded and still push against it.
+
+  This skill reads the plan first and says what it is first in, and which rung it holds. Then it runs the thirteen tests one at a time: leadership, category, mind, perception, focus, exclusivity, ladder, duality, opposite, division, line extension, sacrifice and resources. Each gets pass, warn, fail or not applicable, with the line of your plan that shows it. It adds a strategy that fits your rung, and a fix list in order of damage. A fail is a question to answer, not a doom call. Leaders can break some of these rules. Smaller players mostly can't.
+
+when:
+  - You have a launch or marketing plan and want it attacked before you spend.
+  - Your plan says "better quality" or "more choice" and little else.
+  - You plan to put your name on a new product or a new customer group.
+  - You are second or third in your market and the plan copies the leader.
+
+you_give:
+  - Your marketing plan, as rough as it is
+  - Your main rivals and what each is known for (optional)
+  - Your brand facts, such as name, products and buyers (optional)
+you_get:
+  - What the plan is first in, and the rung it holds
+  - A pass, warn or fail on each of the thirteen tests, with the plan line behind it
+  - A score out of 100
+  - The strategy that fits your rung
+  - A fix list in order of damage, and what to keep
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste the plan. Add your rivals and what buyers say about each, if you have it.
+  - Read the fails first. For each one, check the plan line it quotes and decide if the skill read it right.
+  - Take the fix list to your team. Then run "Brand name stretch checker" on any new product, and "One bold move picker" to choose what to back.
+
+how_it_works:
+  - title: Reads the plan
+    text: Says in one line what you sell, to whom, what is new and where the money goes.
+  - title: Places you in the buyer's mind
+    text: Asks "first what?" and finds the rung you hold in each category a buyer would use.
+  - title: Runs thirteen tests
+    text: Marks each law pass, warn, fail or not applicable, and quotes the plan line behind it.
+  - title: Scores the plan
+    text: Gives one point for a pass, half for a warn, none for a fail, and works out a score out of 100.
+  - title: Picks the strategy for your rung
+    text: A leader defends, a number two goes opposite, a number three narrows or makes a new category.
+  - title: Writes the fix list
+    text: Orders fixes by damage, each one tied to a law and a change to the plan.
+  - title: Checks itself
+    text: Runs its own checks and names any it missed.
+
+output_shape: |
+  THE PLAN IN ONE LINE
+  <what, for whom, what is new, where the money goes>
+
+  WHERE YOU SIT
+  First in: <what, or "nothing yet"> | Rung: <top, second, third, none> | Evidence: <source or guess>
+
+  THE THIRTEEN TESTS
+  <law> | Verdict: <pass, warn, fail, n/a> | Plan line: "<quote>" | Why: <one line>
+  ...
+
+  SCORE
+  <points> of <applicable tests> = <n> out of 100
+
+  THE STRATEGY FOR YOUR RUNG
+  <what a leader, second or third does here, and what the plan does instead>
+
+  FIX LIST, WORST FIRST
+  1. <change to the plan> | Fixes: <law> | Cost of ignoring it: <line>
+  ...
+
+  KEEP
+  <what in the plan already fits>
+
+  MISSING
+  <facts that would change a verdict>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: How much of the plan you paste
+    how: Paste the actual plan, not a summary. Verdicts quote your lines, so vague input gives vague verdicts.
+  - what: Rivals and their reputations
+    how: Give the words buyers use for each rival. Without them, the exclusivity and ladder tests are marked as guesses.
+  - what: Your size
+    how: Say if you are a leader, a challenger or a small player. A leader can break some rules that a small firm cannot.
+  - what: New products in the plan
+    how: List every new product, name and customer group. The line extension and sacrifice tests need them.
+
+judge:
+  - Every verdict quotes a line from your plan, not a general remark.
+  - The score can be rebuilt from the verdicts, and tests that don't apply are left out.
+  - It says what you are first in, or says plainly that you are first in nothing.
+  - The strategy fits the rung you hold.
+  - The fix list is ordered, and each fix changes something concrete in the plan.
+
+test:
+  - Run it on a plan that failed before. Check it flags the cause you know about.
+  - Run it on the same plan twice. The fails should stay the same even if the wording changes.
+  - Give it a plan for a clear market leader. Several tests should come back not applicable or pass.
+  - Ask three people to say in one line what the plan stands for. Compare with what the skill says you are first in.
+
+improve:
+  - Add your market's usual leaders so the ladder test starts from facts.
+  - Save the fix list and run the skill again after each change.
+  - Add a line on what your boss or board will resist, so the fix list leads with the fixes you can win.
+  - Pair it with "Long-run effects checker" for sales, coupons and fads.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Reading a plan and judging each line against a test is text work any strong chat AI does with this skill."}
+  inputs:
+    - "Your plan as written"
+    - "Reviews that show how buyers describe you and your rivals"
+    - "Last year's spend by channel"
+
+terms:
+  - term: Rung
+    meaning: A place on the buyer's mental ranking for a kind of product, such as first choice or second choice.
+  - term: Line extension
+    meaning: Putting a known brand name on a new product in a different kind of product.
+  - term: Category
+    meaning: The kind of product a buyer puts you in, such as "sparkling tea" or "budget gym".

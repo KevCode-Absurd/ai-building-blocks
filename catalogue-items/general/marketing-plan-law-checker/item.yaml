@@ -1,0 +1,20 @@
+slug: marketing-plan-law-checker
+name: "Marketing plan law checker"
+summary: "Paste your marketing plan. Get each law it breaks, the line that breaks it, a score and a fix list."
+category: general
+type: skill
+role: check
+job: analysis
+level: intermediate
+inputs:
+  - {type: plan, required: true}
+  - {type: brand_brain, required: false}
+  - {type: competitor_set, required: false}
+outputs:
+  - {type: audit_report}
+  - {type: plan}
+origin: rebuilt
+version: 1.0.0
+minds: [al-ries, jack-trout]
+credits:
+  - {title: "The 22 Immutable Laws of Marketing", by: "Al Ries and Jack Trout", used: "The laws of leadership, category, mind, perception, focus, exclusivity, ladder, duality, opposite, division, line extension, sacrifice and resources, turned into pass, warn or fail tests, and the rule that the right strategy depends on the rung you hold"}

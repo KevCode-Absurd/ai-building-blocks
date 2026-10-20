@@ -1,0 +1,54 @@
+# Workflow skeleton for How to Win Friends and Influence People, Part Four (docs/INTAKE.md). Our words; the book stays in mind-sources/ (local only).
+id: win-friends-change-behaviour
+source:
+  title: "How to Win Friends and Influence People (1981 revised edition)"
+  by: "Dale Carnegie"
+  kind: book
+  rights: ideas-only
+  year: 1981
+minds: [dale-carnegie, abraham-lincoln]
+workflow:
+  slug: give-criticism-that-changes-behaviour-without-resentment
+  name: "Give criticism that changes behaviour without resentment"
+  summary: "Describe the person and the problem. Get a message with true praise, an easy fix and a plan to praise progress."
+  when: "someone's work or conduct has to change and you want them to act on it, not defend themselves."
+  job: lead-people
+  level: intermediate
+steps:
+  - name: Get the behaviour and the fix clear
+    skill: behaviour-and-fix-notes-writer
+    job: research
+    task: lead-people
+    from: "Part One chapter 2, Part Three chapter 8 and Part Four chapters 1 and 8"
+    method: ["Name one behaviour anyone could watch, and the result you want instead", "Give the honest reason they might act this way", "List what they do well that is true and specific", "Pick the smallest fix and why it is easy"]
+    inputs: [question]
+    outputs: [feedback_notes]
+    note: "One watchable behaviour, the result you want, what is good in their work and the smallest fix."
+  - name: Write the message
+    skill: hard-feedback-message-writer
+    job: copy
+    task: lead-people
+    from: "Part Four chapters 1 to 3 and 5"
+    method: ["Begin with praise that is true and specific", "Point at the mistake indirectly", "Talk about your own mistakes first", "Let them save face"]
+    inputs: [question, feedback_notes!]
+    outputs: [copy_draft]
+    note: "A short message with true praise, one change asked for, and a way out that keeps their pride."
+  - name: Turn orders into requests
+    skill: order-to-request-rewriter
+    job: copy
+    task: lead-people
+    from: "Part Four chapters 4, 7, 8 and 9"
+    method: ["Replace each order with a question", "Show what they gain from doing it", "Give them a good name to live up to", "Make the fix look small and easy"]
+    inputs: [copy_draft, feedback_notes!]
+    outputs: [copy_draft]
+    note: "Every order in the draft becomes a question or a request with a gain for them."
+  - pause: "Say or send it. Then watch for the first small improvement."
+  - name: Praise the progress
+    skill: small-win-praise-planner
+    job: ops
+    task: lead-people
+    from: "Part Four chapter 6, spurring people on"
+    method: ["Name what counts as a small win", "Write the praise for each one, with a detail only you would notice", "Choose when and where to say it", "Keep the good name you gave them in view"]
+    inputs: [question, feedback_notes!]
+    outputs: [plan]
+    note: "A plan to notice and praise each step in the right direction, in specific words."

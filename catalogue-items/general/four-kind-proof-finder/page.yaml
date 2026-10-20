@@ -1,0 +1,88 @@
+new_slug: four-kind-proof-finder
+name: Four-kind proof finder
+summary: Paste your ad brief and product facts. Get each claim paired with its strongest proof, and the claims that have none.
+job: write-ad-copy
+thinking: medium
+thinking_why: It matches claims to evidence and ranks it, but each kind of proof has fixed tests.
+headline: Four-kind proof finder
+subhead: Give it the claims your ad will make and your product facts. It looks for proof in four places, ranks what it finds by how believable it is, and pairs each claim with the strongest piece. You get a proof map, and a list of claims that have nothing behind them yet.
+explain: |-
+  Readers distrust ads. They also need a reason to defend a purchase that started with a feeling. Proof does both jobs, and the more believable the facts, the better the ad tends to do.
+
+  This skill looks for proof in four places: how the thing is made, what it has done for real users, what others say about it, and what the reader can test for themselves. It prefers facts that are specific and checkable, often stated modestly. It also says what to do with a claim that has no proof: cut it, shrink it, or add a test offer so the reader can find out.
+when:
+  - You have the claims for an ad but do not know which ones you can back.
+  - Your ad is mostly adjectives and you want facts beside each claim.
+  - Readers say they do not believe the ad.
+you_give:
+  - The ad brief or the list of claims you want to make
+  - "Your product facts: materials, process, results, awards, guarantees"
+  - Customer reviews, testimonials or test results, with source and date (optional)
+you_get:
+  - Each claim paired with its strongest proof and the kind of proof it is
+  - The doubt a reader is likely to have about each claim
+  - Claims with no proof, each marked cut, shrink or test offer
+  - A note on where in the ad each proof should sit
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste the brief and your product facts.
+  - Add real reviews and results with where they came from.
+  - Use the proof map when you write the body, and cut what has no proof.
+how_it_works:
+  - title: Claim list
+    text: Pulls every claim out of the brief, one per line.
+  - title: Four searches
+    text: Looks for each claim in construction, performance, testimony and test evidence.
+  - title: Credibility test
+    text: Prefers proof that is specific, checkable and modest.
+  - title: Pairing
+    text: Matches each claim to its strongest piece of proof and states the reader's likely doubt.
+  - title: Bare claims
+    text: Marks any claim with no proof as cut, shrink or add a test offer.
+output_shape: |-
+  CLAIM | DOUBT | STRONGEST PROOF | KIND | WHERE IT GOES
+  <claim> | <doubt> | <proof> | construction, performance, testimony or test | <headline, body, near the ask>
+
+  BARE CLAIMS
+  <claim> | cut, shrink or add a test offer
+
+  THE ONE PROOF TO USE EARLY
+  <proof>
+
+  MISSING
+  <proof to collect>
+
+  CHECKS MISSED
+  <one line each, or none>
+tweaks:
+  - what: Reader doubt
+    how: Say what your reader doubts most. The proof is matched to that doubt first.
+  - what: Local proof
+    how: Give a customer's town or job. Personal, local testimony tends to be more believable.
+judge:
+  - Every claim has a proof or a bare-claim mark.
+  - Each proof names its kind.
+  - "Each proof is specific: a number, a name, a date or a thing the reader can try."
+  - No proof is invented.
+test:
+  - Hand the proof map to someone who has not seen the ad and ask which claim they would still doubt.
+  - Write the body with the map and check that each claim has proof beside it.
+  - Run it twice and compare the bare-claims list.
+improve:
+  - Collect one new piece of performance proof each month.
+  - Turn bare claims into test offers (a trial or a guarantee) where you can.
+  - Pair with "Claim and proof matcher" once the copy is written.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: The work is sorting and writing from facts you supply, which any strong chat AI does well with this skill.
+  inputs:
+    - Real customer results with dates
+    - Your guarantee wording exactly as offered
+terms:
+  - term: Construction evidence
+    meaning: "Proof from how the product is made: materials, process and the maker's record."
+  - term: Performance evidence
+    meaning: Proof from what it has done for real users.
+  - term: Test evidence
+    meaning: "A way for the reader to try before they commit: a guarantee, sample or trial."

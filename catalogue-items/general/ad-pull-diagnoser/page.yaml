@@ -1,0 +1,121 @@
+new_slug: ad-pull-diagnoser
+name: "Ad pull diagnoser"
+summary: "Paste an ad that gets few replies. Get causes ranked by likelihood and cost to fix, starting with the headline."
+job: check-ads
+thinking: high
+thinking_why: "It weighs several possible causes against thin evidence, so it benefits from your strongest model."
+
+headline: "Why your ad is not getting replies, ranked from most likely to least"
+subhead: Give it the ad, your results and where it ran. It checks in order whether the ad is counted, what the headline says alone, whether the appeal is right and believable, whether the offer is clear, and whether the place or size is the problem. You get the causes ranked, cheapest fix first.
+
+explain: |
+  When an ad does not pull, the usual response is to change the picture, the colour or the whole campaign. Those are costly changes, and they are rarely the cause. Most weak ads fail in the same few places. The headline offers nothing. The reason to buy is wrong for the product. The claim is too big to believe or too vague to picture. The offer is hidden or the reply is hard to make.
+
+  This skill checks those in the order they tend to matter. It starts by checking the ad is counted at all, since an ad nobody can trace is a guess. Then it reads the headline alone, as a stranger would. It checks the appeal, the claims, the offer and the reply path, and only then asks about the place, the time and the size. Each finding quotes the line or number it rests on. The causes come back ranked by how likely they are and how cheap to fix.
+
+when:
+  - An ad, email or page is seen but not answered and you do not know what to change.
+  - You have a list of ideas for what is wrong and need an order.
+  - You want to fix the cheapest likely cause first, before a redesign.
+
+you_give:
+  - The ad as the reader sees it
+  - "Results by ad: audience, replies, sales, spend (optional)"
+  - Where, when and how big it ran (optional)
+you_get:
+  - What a stranger would say the headline offers
+  - A finding for each of seven checks, marked fine, suspect or broken, with its evidence
+  - Causes ranked by likelihood and cost to fix
+  - What it could not judge and what would settle it
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste the whole ad, including the reply path.
+  - Paste your results and say where and when it ran.
+  - Fix the top cause first and change nothing else.
+  - Take the fixed version to "Reply-getting fix writer" or run a split test against the old one.
+
+how_it_works:
+  - title: Checks it is counted
+    text: Looks for a key on the ad and a log of replies by key. Without one, the diagnosis is marked a guess.
+  - title: Reads the headline alone
+    text: Covers the rest and writes what a stranger would think the ad offers and to whom.
+  - title: Checks appeal and belief
+    text: Names the reason to buy and checks it fits, sits in the headline and is backed by a figure a reader could picture.
+  - title: Checks offer and reply path
+    text: Looks for the offer in the headline or subhead, a plain way to reply and one clear ask.
+  - title: Checks place, time and size
+    text: Only if results exist, and only where the data shows a mismatch.
+  - title: Ranks the causes
+    text: Orders by likelihood, then cost, and groups causes that share a fix.
+
+output_shape: |
+  STRANGER SENTENCE
+  This offers <___> to <___> / unclear
+
+  FINDINGS
+  1. Counted: <fine / suspect / broken> | <evidence>
+  2. Headline alone: <...> | <evidence>
+  3. Appeal: <...> | <evidence>
+  4. Believable and specific: <...> | <evidence>
+  5. Offer and reply path: <...> | <evidence>
+  6. Length: <...> | <evidence>
+  7. Place, time, size: <...> | <evidence>
+
+  RANKED CAUSES
+  <n>. <cause> | likelihood <h/m/l> | cost to fix <l/m/h> | fix: <one line>
+
+  COULD NOT JUDGE
+  <what | what would settle it>
+
+  MISSING
+  <list>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: Results
+    how: Add any other ads you ran in the same place with their counts. It uses them in step 7.
+  - what: What counts as a reply
+    how: Say if it is a click, a call or a sale, so step 1 knows what to look for.
+  - what: How much you can change
+    how: Say if the headline, the offer or the media is locked. It ranks the changes you can make.
+  - what: Audience
+    how: Describe who it was sent to. The headline is read against them.
+
+judge:
+  - The headline was judged with the copy covered.
+  - Every finding quotes a line or number.
+  - Causes are ranked by likelihood, then cost.
+  - Nothing is blamed without evidence.
+  - Key and counting are checked first.
+
+test:
+  - Give it an ad you know failed and check its top cause matches what you later learned.
+  - Give it one that worked. It should find few broken checks.
+  - Fix the top cause only and run a split test against the old ad.
+  - Run it twice. The top cause should be the same.
+
+improve:
+  - Add the checks your market needs, such as a legal line or a price claim.
+  - Keep each diagnosis and what you fixed, with the later result.
+  - Add your usual reply rate per channel so step 7 can compare.
+  - Pair it with "Winners and losers ad comparer" when you have several ads to compare.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Reading an ad and weighing causes is text work any strong chat AI does with this skill."}
+    - {name: "Your ad platform or email tool", why: "Exports replies by ad for the results input."}
+  inputs:
+    - "Results for the same ad in other places"
+    - "Results for your other ads in the same place"
+    - "The exact key or link tag used on each ad"
+
+terms:
+  - term: Pull
+    meaning: How many replies an ad brings for its audience or cost.
+  - term: Key
+    meaning: A code on an ad that lets you trace every reply back to it.
+  - term: Reply path
+    meaning: The steps a reader takes to respond, such as a button, a coupon or a phone number.

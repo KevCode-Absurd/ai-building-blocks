@@ -35,6 +35,7 @@ sources:
   - {n: 11, title: "I Am Legend: Rosser Reeves", by: "AgencySpy, Adweek", url: "https://www.adweek.com/agencyspy/i-am-legend-rosser-reeves/", kind: secondary}
   - {n: 12, title: "Rosser Reeves (inductee page)", by: "Advertising Hall of Fame", url: "https://advertisinghalloffame.org/inductee/rosser-reeves/", kind: reference}
   - {n: 13, title: "Haygood podcast: The Anti-Christ of Advertising", by: "Journalism History", url: "https://journalism-history.org/2019/11/19/haygood-podcast-the-anti-christ-of-advertising/", kind: secondary}
+  - {n: 14, title: "Reality in Advertising (1961)", by: "Rosser Reeves", kind: own-words}
 tests:
   - {kind: use, prompt: "Write three one-line selling propositions for a reusable water bottle, each built on a different benefit, and say which one you'd run."}
   - {kind: use, prompt: "Script a 30-second ad for a stain remover that proves its main claim with a demonstration."}

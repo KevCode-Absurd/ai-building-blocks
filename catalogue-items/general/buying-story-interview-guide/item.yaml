@@ -1,0 +1,25 @@
+slug: buying-story-interview-guide
+name: Buying story interview guide
+summary: "Name what you sell. Get a timeline interview script for five to eight recent buyers, from first thought to first use."
+category: general
+type: skill
+role: make
+job: research
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: product_data
+    required: false
+  - type: voc_reviews
+    required: false
+outputs:
+  - type: plan
+origin: rebuilt
+version: 1.0.0
+minds:
+  - clayton-christensen
+credits:
+  - title: Competing Against Luck
+    by: Clayton M. Christensen, Taddy Hall, Karen Dillon and David S. Duncan (2016)
+    used: "The timeline interview: rebuilding the buying story from the first thought to first use, asking about the day and the surroundings rather than reasons, probing what was used before and what was dropped, and keeping a beginner's mind"

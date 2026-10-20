@@ -1,0 +1,18 @@
+slug: holding-value-change-checker
+name: "Holding value change checker"
+summary: "Paste a holding and why you bought it. Get what changed in the business and a keep, watch or weak mark."
+category: general
+type: skill
+role: check
+job: analysis
+level: intermediate
+inputs:
+  - {type: audit_report, required: true}
+  - {type: question, required: false}
+outputs:
+  - {type: plan}
+origin: rebuilt
+version: 1.0.0
+minds: [benjamin-graham, warren-buffett]
+credits:
+  - {title: "The Intelligent Investor (revised edition, 2003)", by: "Benjamin Graham, with commentary by Jason Zweig", used: "Valuing a holding as a part-owner of a business, the grocery chain case that shows both the market's errors and how businesses change in quality over time, and the advice to give a holding a hard look from time to time and not to watch it like a hawk"}

@@ -1,0 +1,120 @@
+new_slug: job-experience-mapper
+name: Job experience mapper
+summary: Paste your job spec. Get the moments from first look to later use, each worry and the fix.
+job: plan-strategy
+thinking: high
+thinking_why: It links a job spec to many moments, judges today's experience from thin evidence and designs changes across teams. Give it your strongest model.
+headline: Design what happens around your product so your customer's job gets done
+subhead: Paste your job spec. It maps the moments from first look to later use, finds the worry at each one, rates today's experience and designs the changes that clear them, with an owner for each.
+explain: |-
+  A product can be good and still not get hired, or get hired once and never again. The gap is usually in the moments around it: judging if it is right, getting it, setting it up, using it a second time, what happens when something goes wrong.
+
+  This skill takes one job spec and maps those moments. For each it writes the worry, rates today's experience from evidence and designs the experience that clears it, plus the change you need inside the company to deliver it. It names one owner per moment, tests whether a premium price is justified by the struggle you remove and marks which parts rivals cannot easily copy.
+when:
+  - Your product is good but customers stall, return it or do not use it twice.
+  - Each team does its part and the customer still struggles.
+  - Rivals match your features and price, and you want something harder to copy.
+you_give:
+  - A job spec for one circumstance
+  - A switch story map (optional)
+  - Reviews, complaints and support emails (optional)
+you_get:
+  - A map of the moments from first look to later use
+  - The worry at each moment and a rating of today's experience
+  - A designed experience for each weak moment, with an owner
+  - A plan for the proof moment
+  - A premium test and a hard-to-copy list
+  - The top three changes for the next ninety days
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste the job spec. Add any story map and customer words.
+  - Check each rating against what you know. Correct any that are wrong.
+  - Give each change to its named owner.
+  - Take the plan to "Feature cutting planner" and "Customer progress measure picker".
+how_it_works:
+  - title: Lists the moments
+    text: From first look to later use, including when things go wrong.
+  - title: Finds the worry
+    text: What the person does, fears, feels and who might see them at each moment.
+  - title: Rates today
+    text: Good, patchy, bad or unknown, with the evidence, and notes any workaround.
+  - title: Designs the experience
+    text: A sentence from the customer's side and the change inside that makes it true.
+  - title: Plans the proof
+    text: How a new buyer can tell you suit their job.
+  - title: Names owners
+    text: One person and one measure for each moment, and flags the gaps.
+  - title: Tests the premium
+    text: Compares your price with the cost of the customer's struggle.
+  - title: Ranks the changes
+    text: Severity times reach, with a first step for the top three.
+output_shape: |-
+  JOB
+  When <situation>, I want to <progress>, so I can <result>.
+
+  MOMENTS
+  <moment> | Person does: <text> | Worry: <text> | Feels: <text> | Seen by: <who> | Source: <spec, map, words or guess>
+    Today: <good, patchy, bad or unknown> | Evidence: <text> | Workaround: <text or none>
+
+  DESIGNED EXPERIENCE
+  <moment> | Customer says: <sentence> | Inside change: <step, person, data or rule> | Owner: <person>
+
+  PROOF MOMENT
+  <how a new buyer tells you suit their job>
+
+  UNOWNED MOMENTS
+  <list>
+
+  PREMIUM TEST
+  Cost of struggle today: <figures or MISSING> | Your price: <figure> | Premium justified: <yes, no or unknown, and why>
+
+  HARD TO COPY
+  <experiences tied to your processes>
+
+  TOP THREE
+  <change> | Score: <n> | Owner | First step | Measure
+
+  MISSING
+  <gaps>
+
+  CHECKS MISSED
+  <one line per check missed, or none>
+tweaks:
+  - what: The job spec
+    how: One circumstance at a time. A mixed spec gives a muddled map.
+  - what: Customer words
+    how: Complaints are the best evidence for ratings. Paste them untouched.
+  - what: Your price and costs
+    how: Add them so the premium test uses real figures.
+judge:
+  - The map covers use after buying.
+  - Every rating has evidence.
+  - Each fix names what changes inside.
+  - Every moment has one owner or is flagged.
+  - The premium test rests on the customer's cost, not your hope.
+test:
+  - Give it a spec where reviews complain about set-up. The set-up moment should rate bad with a quote.
+  - Give it no price. The premium test should say MISSING.
+  - Run it twice. The top three changes should stay close.
+improve:
+  - Rerun it when new complaints or reviews come in.
+  - Review the unowned list each quarter.
+  - Add a map for each job spec you write.
+  - Pair it with "Job rival mapper" to see which moments rivals could copy.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: Mapping moments and designing changes is text work any strong chat AI does with this skill.
+    - name: A whiteboard or slide
+      why: The moments table is easier to review with your team when drawn out.
+  inputs:
+    - A job spec from the Job spec writer
+    - A switch story map
+    - Support tickets and returns reasons
+terms:
+  - term: Moment
+    meaning: One step in the customer's path, such as judging if it is right or the first use.
+  - term: Proof moment
+    meaning: The point where a new buyer decides if you suit their job.
+  - term: Owner
+    meaning: The one person answerable for how a moment goes for the customer.

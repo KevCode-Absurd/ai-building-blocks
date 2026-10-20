@@ -1,0 +1,18 @@
+slug: defensive-price-ceiling-tester
+name: "Defensive price ceiling tester"
+summary: "Paste a company's earnings, book value and share price. Get a pass or fail on three price ceilings, with every sum shown."
+category: general
+type: skill
+role: check
+job: analysis
+level: advanced
+inputs:
+  - {type: audit_report, required: true}
+  - {type: source_text, required: false}
+outputs:
+  - {type: audit_report}
+origin: rebuilt
+version: 1.0.0
+minds: [benjamin-graham, warren-buffett]
+credits:
+  - {title: "The Intelligent Investor (revised edition, 2003)", by: "Benjamin Graham, with commentary by Jason Zweig", used: "The price ceilings for a defensive buyer: a limit on price against three-year average earnings, a limit on price against book value, the combined product limit, the seven-year and one-year earnings ceilings, the comparison of earnings yield with bond yield, and the reasoning for excluding stocks priced on hope"}

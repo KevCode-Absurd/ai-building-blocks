@@ -1,0 +1,25 @@
+slug: inquiry-problem-diagnoser
+name: Inquiry problem diagnoser
+summary: Paste your ad results. Get a call on whether you need more leads or better ones, with the sums.
+category: general
+type: skill
+role: check
+job: analysis
+level: intermediate
+inputs:
+  - type: offer
+    required: true
+  - type: performance_sheet
+    required: false
+  - type: copy_draft
+    required: false
+outputs:
+  - type: audit_report
+origin: rebuilt
+version: 1.0.0
+minds:
+  - victor-schwab
+credits:
+  - title: How to Write a Good Advertisement (a book summary)
+    by: Victor O. Schwab
+    used: The two goals for reply ads (raise inquiries, cut low-quality inquiries) and the outside factors that change response (size, colour, timing, page position, news, weather)

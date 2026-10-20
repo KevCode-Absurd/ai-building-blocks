@@ -1,0 +1,131 @@
+new_slug: contact-memory-card-writer
+name: "Contact memory card writer"
+summary: "Paste your notes from a first meeting. Get a one-page card with name, facts, promises and the next contact date."
+job: speak-and-persuade
+thinking: low
+thinking_why: "It sorts notes into a fixed card and sets dates. Little judgement is needed beyond what to leave out."
+
+headline: "Contact memory card writer"
+subhead: "Paste your notes from a first meeting. It sorts them into a one-page card with the name as spelled, what they care about, what you promised and why you will make the next contact. You get a card to keep and a date for the next touch."
+
+explain: |
+  We forget most of what we hear within a day, and a person can tell when we have forgotten them. A name said wrong, a missed promise or a blank when they mention their daughter's game costs more trust than most mistakes.
+
+  This skill turns rough notes into a card you can read in thirty seconds before the next contact. It puts the exact name first, then the facts the person chose to share, what they asked for and what you promised with dates. It leaves out private matters you should not keep. It sets the next touch with a reason that is about them. It adds a question you can ask next time about something they told you.
+
+when:
+  - "You just met someone and your notes are a mess."
+  - "You meet many people and cannot keep track of what each told you."
+  - "You owe someone a follow-up and want it to be about them."
+
+you_give:
+  - "Your notes from the meeting, as rough as they are"
+  - "A brief on the person (optional)"
+  - "The date and place you met"
+  - "What you promised (include it in your notes)"
+you_get:
+  - "A card with the exact name, role and how they like to be addressed"
+  - "Facts they shared, grouped, with private items left out"
+  - "A list of promises with dates and owners"
+  - "The next touch, with a reason that is about them"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Paste your notes within a day of the meeting."
+  - "Add the date, the place and anything you promised."
+  - "Save the card in a sheet or notes app, one card per person."
+  - "Read the card before you contact them again."
+
+how_it_works:
+  - title: "Fixes the name"
+    text: "The exact spelling, how to say it and how they like to be addressed."
+  - title: "Records facts"
+    text: "Work, interests, people, and things they are proud of."
+  - title: "Leaves out the private"
+    text: "Drops sensitive matters you do not need to keep."
+  - title: "Lists promises"
+    text: "What you owe, by when, and who does it."
+  - title: "Notes asks and gaps"
+    text: "What they asked for or lacked, so you can help."
+  - title: "Sets the next touch"
+    text: "A date and a reason that is about them."
+  - title: "Sets dates"
+    text: "Birthdays or events they shared, for your calendar."
+  - title: "Checks the card"
+    text: "Runs its own checks and names any it missed."
+
+output_shape: |
+  NAME
+  Full name: <as spelled>   Say it: <note>   Address as: <how>   Role: <role>
+
+  MET
+  <date, place, who introduced>
+
+  WHAT THEY SHARED
+  Work: <...>   Interests: <...>   People: <...>   Proud of: <...>
+
+  WHAT THEY ASKED FOR OR LACKED
+  <...>
+
+  PROMISES
+  1. <what> | By: <date> | Owner: <you or them>
+
+  NEXT TOUCH
+  Date: <date>   Reason about them: <reason>
+  Question for next time: <a follow-up on something they told you>
+
+  DATES FOR YOUR CALENDAR
+  <birthday or event, if they shared it>
+
+  LEFT OUT ON PURPOSE
+  <sensitive items not kept>
+
+  MISSING
+  <what to check next time>
+
+  CHECKS MISSED
+  <one line per check missed, or none>
+
+tweaks:
+  - what: "Your notes"
+    how: "Include every detail, even small ones. The skill sorts them and leaves out the private."
+  - what: "How often you want to touch"
+    how: "Say if you want monthly, quarterly or yearly. The card sets the dates."
+  - what: "Why you met"
+    how: "A business or a personal reason changes what the next touch looks like."
+  - what: "Where you keep cards"
+    how: "Say if you use a sheet or notes app, and it formats the card to fit."
+
+judge:
+  - "The name is spelled exactly, or marked to check."
+  - "Promises have dates and owners."
+  - "Nothing sensitive is kept without a reason."
+  - "The next touch has a reason that is about them."
+  - "You could read the card in thirty seconds."
+
+test:
+  - "Run it on notes from a past meeting and see if you would have remembered the promise."
+  - "Hand the card to a colleague and ask if they could greet the person well."
+  - "Run it twice. The facts should match."
+  - "Use the card before your next contact and note how they react."
+
+improve:
+  - "Add fields that matter in your work, such as their other suppliers or their budget cycle."
+  - "Add a monthly review of cards due for a touch."
+  - "Move the cards to your contact tool, one field per heading."
+  - "Pair it with \"Honest appreciation note writer\" for the follow-up."
+
+works_best_with:
+  tools:
+    - {name: "A spreadsheet or notes app", why: "One row or note per person, easy to search before a contact."}
+    - {name: "Your calendar", why: "Set the dates and the next-touch reminder there."}
+  inputs:
+    - "A photo of the business card"
+    - "The event name and who else was there"
+    - "A link to their profile"
+
+terms:
+  - term: "Touch"
+    meaning: "Any contact you make with a person, such as a note, a call or a shared article."
+  - term: "Next-touch reason"
+    meaning: "A reason to get in touch that is about them, not about your needs."

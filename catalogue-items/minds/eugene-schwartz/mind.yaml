@@ -36,6 +36,7 @@ sources:
   - {n: 11, title: "The Lost Secrets of Breakthrough Advertising (transcript of a lecture to Phillips Publishing, October 8, 1993, with staff questions; e-book edition with added foreword and headings)", by: "Eugene Schwartz", url: "", kind: own-words}
   - {n: 12, title: "Eugene Schwartz Interview: The Creators (profile from The Capitalist Reporter, about 1975, built on an interview with him; reprinted online)", by: "Eugene Schwartz, interviewed for The Capitalist Reporter; reprint on Info Marketing Blog", url: "https://infomarketingblog.com/eugene-schwartz-interview-the-creators-1975/", kind: own-words}
   - {n: 13, title: "Rules of Great Copywriting from My Mentor Eugene Schwartz (a copywriter's summary of eight rules from a 1993 interview)", by: "Write Direction", url: "https://writedirection.com/rules-of-great-copywriting-from-eugene-schwartz/", kind: secondary}
+  - {n: 14, title: "Breakthrough Advertising (a book summary)", by: "A third-party chapter-by-chapter summary of Eugene Schwartz, Breakthrough Advertising (1966)", kind: secondary}
 tests:
   - {kind: use, prompt: "I sell a course that teaches parents to cook quick healthy dinners. Name the mass desire it taps, then write five headlines that channel it."}
   - {kind: use, prompt: "Rewrite this headline for buyers who have seen every weight-loss promise already: 'Lose 10 pounds fast!'"}

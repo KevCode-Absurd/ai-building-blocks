@@ -1,0 +1,18 @@
+slug: honest-appreciation-note-writer
+name: "Honest appreciation note writer"
+summary: "Paste what you valued about someone. Get one short thank-you note with one specific, true appreciation and no ask."
+category: general
+type: skill
+role: make
+job: copy
+level: beginner
+inputs:
+  - {type: plan, required: true}
+  - {type: persona, required: false}
+outputs:
+  - {type: copy_draft}
+origin: rebuilt
+version: 1.0.0
+minds: [dale-carnegie, joe-girard]
+credits:
+  - {title: "How to Win Friends and Influence People (1981 revised edition), Part One chapter 2 and Part Two chapter 6", by: "Dale Carnegie", used: "Give honest, specific appreciation from the heart in place of flattery, and make the other person feel important sincerely"}

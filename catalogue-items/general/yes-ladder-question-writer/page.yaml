@@ -1,0 +1,125 @@
+new_slug: yes-ladder-question-writer
+name: "Yes-ladder question writer"
+summary: "Paste your request and plan. Get four to seven questions in order, each with an honest yes, ending at your ask."
+job: sell-and-negotiate
+thinking: medium
+thinking_why: "It must order claims so each follows from the last and test each for an honest yes, but the method is fixed."
+
+headline: "Yes-ladder question writer"
+subhead: "Give it your request and a plan or list of their doubts. It finds what you both already hold true, orders it into four to seven short questions, and ends at your ask. You get the questions, the order and a move for each no."
+
+explain: |
+  Most requests open with the point you disagree on. The other person says no early, and a spoken no is hard to take back because they feel they must stay consistent. Everything after that is uphill.
+
+  This skill builds a short ladder of questions instead. It starts from a point you both hold, such as a shared goal, a standard or a fact they have already stated. Each question is small and has an honest yes, and each follows from the one before. The last rung is your request or the obvious next step. It also tests that every question is fair, so the ladder never tricks the person. If they say no, you step back one rung and ask what they see.
+
+when:
+  - "You are about to ask for a change and expect an early no."
+  - "You are in a sales or support talk where the other person starts from a flat refusal."
+  - "You want to lead a meeting to a decision without making a speech."
+
+you_give:
+  - "Your request in one line"
+  - "A plan from \"Buy-in conversation planner\", or your own notes on what they want"
+  - "Their likely doubts (optional)"
+you_get:
+  - "A ladder of four to seven questions in order, each with the yes it expects"
+  - "The shared point it starts from, and why it is safe"
+  - "A move for each no, and a stopping line"
+  - "A fairness check on every rung"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Paste your request and the plan or notes."
+  - "Read the questions aloud. Change any that sound like a trap."
+  - "Take the ladder to the talk, and leave it on the page if you can ask the questions in your own words."
+  - "After the talk, note which rung got a no."
+
+how_it_works:
+  - title: "Finds the end point"
+    text: "States the request and what they must already believe for it to feel natural."
+  - title: "Collects shared ground"
+    text: "Lists facts, goals and standards you both hold, with where each came from."
+  - title: "Orders the rungs"
+    text: "Puts them in a line where each question follows from the one before."
+  - title: "Writes the questions"
+    text: "Four to seven short questions, each with an honest yes."
+  - title: "Tests for fairness"
+    text: "Removes any question that leads or hides a trap."
+  - title: "Plans for a no"
+    text: "Writes what to ask and where to step back when a no appears."
+  - title: "Adds a stopping line"
+    text: "Lets them say the last step themselves."
+  - title: "Checks the ladder"
+    text: "Runs its own checks and names any it missed."
+
+output_shape: |
+  THE REQUEST
+  <what you want, and what must be true for it to feel natural>
+
+  THE STARTING POINT
+  <shared ground and why it is safe>
+
+  THE LADDER
+  1. <question> | Expected yes: <what they agree to>
+  2. ...
+  (4 to 7 rungs; the last is the request or the next step)
+
+  IF THEY SAY NO
+  Rung <n>: <what to ask, where to step back>
+
+  WHERE TO STOP
+  <the line, and how they can say the last step themselves>
+
+  FAIRNESS CHECK
+  <one line per rung: honest yes or removed>
+
+  MISSING
+  <what you do not know>
+
+  CHECKS MISSED
+  <one line per check missed, or none>
+
+tweaks:
+  - what: "The starting point"
+    how: "Tell it a fact or goal they have already said out loud. That is the safest first rung."
+  - what: "The size of the ask"
+    how: "A smaller ask needs fewer rungs. Say if the ask is large or risky."
+  - what: "How they feel now"
+    how: "Say if they are angry or guarded. The first rungs then stay wider and softer."
+  - what: "Spoken or written"
+    how: "Say if the ladder is for a call, a meeting or an email. Written ladders are shorter."
+
+judge:
+  - "The first question cannot draw a no."
+  - "Every question has an honest yes for this person."
+  - "Each rung follows from the one before it."
+  - "The last rung is the request or the obvious next step."
+  - "You would be happy for them to read the whole ladder."
+
+test:
+  - "Run it on a request you lost before. See if you can spot the rung where the first no came."
+  - "Read the ladder to a friend who plays the other side. Watch for any rung that gets a hesitant yes."
+  - "Run it twice. The starting point should stay the same."
+  - "Use it in a real talk and mark where you had to step back."
+
+improve:
+  - "Add facts that your industry treats as settled, so first rungs are ready."
+  - "Add the phrases your customers or team use, so the questions sound natural."
+  - "Save ladders that worked, with the request, so you can reuse the shape."
+  - "Pair it with \"Disagreement calming line writer\" for the moments when a rung fails."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Ordering claims and wording short questions is text work any strong chat AI does well."}
+    - {name: "An index card", why: "Put the ladder on one card so you can glance at it in the room."}
+  inputs:
+    - "The other person's own words on the matter"
+    - "A shared goal written down by both sides"
+    - "A standard, rule or number both accept"
+
+terms:
+  - term: "Rung"
+    meaning: "One question in the ladder, small enough to answer yes to."
+  - term: "Socratic method"
+    meaning: "Leading someone to a conclusion by asking questions they agree with."

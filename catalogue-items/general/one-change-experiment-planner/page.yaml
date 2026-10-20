@@ -1,6 +1,6 @@
 new_slug: one-change-experiment-planner
 name: "One-change experiment planner"
-summary: "Describe what you want to test. Get a plan that changes one thing at a time and says what each result means."
+summary: "Describe any idea or number to test. Get a plan that changes one thing at a time and says what results mean."
 job: test-an-idea
 thinking: medium
 thinking_why: "It weighs which factor to test and what each result means, but the steps are fixed."

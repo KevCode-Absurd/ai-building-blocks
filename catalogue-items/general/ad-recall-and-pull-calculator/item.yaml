@@ -1,0 +1,18 @@
+slug: ad-recall-and-pull-calculator
+name: "Ad recall and pull calculator"
+summary: "Paste your survey answers. Get recall, buyers in each group, the pull as a number and what it means."
+category: general
+type: skill
+role: check
+job: analysis
+level: intermediate
+inputs:
+  - {type: voc_reviews, required: true}
+  - {type: plan, required: false}
+outputs:
+  - {type: audit_report, required: true}
+origin: rebuilt
+version: 1.0.0
+minds: [rosser-reeves]
+credits:
+  - {title: "Reality in Advertising", by: "Rosser Reeves, 1961", used: "Penetration (the share who can say what the ad says), usage pull (the extra buyers among them, found by subtraction) and the four ways the two numbers can come out, including pull of zero or below"}

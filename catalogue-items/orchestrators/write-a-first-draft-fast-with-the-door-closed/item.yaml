@@ -1,0 +1,25 @@
+slug: write-a-first-draft-fast-with-the-door-closed
+name: "Write a first draft fast with the door closed"
+summary: "Tell it your idea. Get a what-if situation, a daily word plan, scene details and a first draft written without an outline."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: creative
+level: beginner
+inputs:
+  - {type: question, required: true}
+  - {type: plan, required: false}
+outputs:
+  - {type: copy_draft}
+uses: [what-if-situation-finder, daily-word-quota-planner, scene-detail-picker, unplotted-first-draft-writer]
+steps:
+  - {uses: what-if-situation-finder, note: "One what-if situation, with the people stuck in it and no plot."}
+  - {uses: daily-word-quota-planner, note: "A word count, a finish date and a closed-door routine you can keep."}
+  - {uses: scene-detail-picker, note: "A short detail sheet for each place, so the draft stays in the story."}
+  - {uses: unplotted-first-draft-writer, note: "Today's pages in order, plus the facts sheet to carry into tomorrow."}
+origin: rebuilt
+version: 1.0.0
+minds: [stephen-king, anne-lamott]
+credits:
+  - {title: "On Writing: A Memoir of the Craft", by: "Stephen King", used: "The order of the steps: find the situation, set the daily word quota, pick the scene details, write the draft without an outline"}
+generated_from: intake/on-writing-first-draft-door-closed/skeleton.yaml

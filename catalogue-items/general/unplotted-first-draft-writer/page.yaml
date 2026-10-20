@@ -1,0 +1,116 @@
+new_slug: unplotted-first-draft-writer
+name: "Unplotted first-draft writer"
+summary: "Paste your situation and word count. Get today's pages written in order, a facts sheet and tomorrow's first question."
+job: write-and-tell-stories
+thinking: high
+thinking_why: "It writes real prose and must keep the people consistent without an outline."
+
+headline: "Get today's pages of your first draft, written without an outline"
+subhead: "Paste your situation, the detail sheet and your daily word count. It writes the day's pages in order by asking what these people would really do next. You get the pages, a facts sheet to carry forward and tomorrow's first question."
+
+explain: |
+  Planning every turn before you write tends to make a stiff story. The writer knows where it ends, and so do the people, and nothing surprises anyone. A different way is to start with the situation and see what happens, the way a reader would.
+
+  This skill writes that way. It starts from your situation and flat sketches of the people. At each turn it asks one question: what would these people really do next? It writes that, in order, in plain words, and keeps going to the day's word count. It does not look back or fix anything. It also keeps a facts sheet of names, ages, places and promises made on the page, so the next day's pages do not contradict the last. The first draft is allowed to be rough. The second draft is where it gets fixed.
+
+when:
+  - "You have a situation and keep postponing the first scene."
+  - "You write a page and then rewrite it all week."
+  - "You want a draft that surprises you."
+
+you_give:
+  - "Your situation and the people"
+  - "The detail sheet from the scene detail picker (optional)"
+  - "The day's word count, or it will use 1,000"
+  - "Yesterday's facts sheet and last paragraph, from day two on"
+you_get:
+  - "The day's pages, in order, ending at the count"
+  - "A facts sheet of names, ages, places and promises on the page"
+  - "Tomorrow's first question"
+  - "A line saying what you did not touch"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "On day one, paste your situation and, if you have it, the detail sheet and your daily count."
+  - "Read the pages once, then close them. Do not edit."
+  - "Save the facts sheet. On day two, paste it with the last paragraph and ask it to go on."
+  - "Keep going until the story ends by itself."
+
+how_it_works:
+  - title: "Starts from the situation"
+    text: "Opens the first scene where the situation closes on the people."
+  - title: "Asks what is next"
+    text: "At each turn writes what these people would really do."
+  - title: "Writes it plainly"
+    text: "Uses plain words, said for dialogue and concrete details."
+  - title: "Keeps a facts sheet"
+    text: "Notes names, ages, places and promises made on the page."
+  - title: "Stops on the count"
+    text: "Ends the day's pages at the word count, at a clean beat."
+  - title: "Sets up tomorrow"
+    text: "Writes the first question for the next session."
+  - title: "Leaves it rough"
+    text: "Does not revise, summarise or plan ahead."
+
+output_shape: |
+  DAY <n> PAGES
+  <the draft, in order, ending near <count> words>
+
+  FACTS SHEET
+  People: <name | age | job | one fact on the page>
+  Places: <place | one fact on the page>
+  Promises and objects: <anything introduced that must pay off>
+  Time: <where we are in time>
+
+  WHERE IT STOPPED
+  <one line>
+
+  TOMORROW'S FIRST QUESTION
+  <what the next scene has to answer>
+
+  WORD COUNT
+  <approximate>
+
+  CHECKS MISSED
+  <one line per check missed, or none>
+
+tweaks:
+  - what: "Daily count"
+    how: "Give your count. The pages end near it, at the next clean beat."
+  - what: "Point of view"
+    how: "Say first person or third. It keeps to one for the whole draft."
+  - what: "Voice sample"
+    how: "Paste a paragraph of your own so the pages sound like you."
+  - what: "Tone"
+    how: "Say how dark or light it should run. Without it, the tone follows the situation."
+
+judge:
+  - "Every event follows from what these people would do, not from an outline."
+  - "Dialogue tags are said, with no adverbs on them."
+  - "The facts sheet lists everything the pages named."
+  - "Nothing is repeated or summarised from earlier days."
+  - "The pages end at the word count."
+
+test:
+  - "Run it on a situation and read the first page. You should want to know what happens next."
+  - "Run day two with the facts sheet. Check no name, age or place changed."
+  - "Run the same situation twice. The stories should differ, because there is no fixed plan."
+
+improve:
+  - "Add a paragraph of your own writing as a voice sample."
+  - "Add facts you already know about the people, such as ages and jobs, so the sheet starts full."
+  - "When the draft is done, rest it, then use the cold re-read marker."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Writing in order and keeping a facts sheet is plain text work."}
+    - {name: "A file or notebook", why: "Keep each day's pages and the facts sheet in one file so day two starts from the right place."}
+  inputs:
+    - "A paragraph of your own writing"
+    - "Facts you already know about the people"
+
+terms:
+  - term: "Unplotted"
+    meaning: "Written without an outline. The next event comes from what the people would do."
+  - term: "Facts sheet"
+    meaning: "A short list of names, ages, places and promises that the draft has already stated."

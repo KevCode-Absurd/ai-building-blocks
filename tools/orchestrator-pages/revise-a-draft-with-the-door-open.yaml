@@ -1,0 +1,123 @@
+new_slug: revise-a-draft-with-the-door-open
+name: Revise a draft with the door open
+summary: Paste a rested draft. Get its holes marked, its meaning found, a cut of 10%, plain wording and a reader plan.
+job: write-and-tell-stories
+thinking: high
+thinking_why: It reads a whole draft closely, cuts it, tests the talk and sorts reader notes across seven steps. Give it your strongest model.
+
+headline: A second draft that is shorter, clearer and tested on real readers
+subhead: Paste a draft that has rested for a few weeks. It marks every hole, finds what the story is about, cuts a tenth, swaps timid words for plain ones and checks the talk. Then it plans your reader questions and sorts what they say.
+
+explain: |
+  A first draft is written for yourself. A second draft is written for readers, and it is where most of the improvement happens. The trouble is knowing what to change. A fresh read shows the holes, and readers show what you cannot see, but their notes clash.
+
+  This workflow runs the second draft in order. It reads the rested draft cold and lists what is wrong. It finds what the story is really about, then cuts a tenth with a log so nothing is lost by accident. It swaps timid wording for plain words and tests each line of dialogue by ear. Then it writes the questions to send your readers, and after they answer, sorts the notes into what to fix, what to leave and what to check. The method comes from Stephen King's book On Writing.
+
+when:
+  - You have a finished first draft that has rested for a few weeks.
+  - Your draft feels long and you do not know what to cut.
+  - You have readers' notes that disagree.
+
+you_give:
+  - Your finished draft, rested for about six weeks if you can
+  - Facts the story must keep, such as ages or dates (optional)
+  - Who you are writing for (optional)
+  - Your readers' notes, when they come back
+
+you_get:
+  - A page-by-page list of mistakes, out-of-character acts and big holes, with a score out of 100
+  - What the story is about and the scenes to add, sharpen or cut
+  - The draft cut to 90% of its length, with a log, plain wording and a dialogue score
+  - A question sheet for your readers and, later, a ranked rewrite list from their notes
+
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Paste your draft. It works step by step and saves each result.
+  - When it reaches the pause, send the draft and the question sheet to four to eight readers, including your ideal reader.
+  - Come back with their notes and run the last step.
+
+how_it_works:
+  - title: Re-read it cold
+    text: Reads the whole draft in one pass and marks every page that needs a change, with a score out of 100.
+  - title: Find what it is about
+    text: Counts what recurs, writes three readings and picks the best supported, with the scenes to add or cut.
+  - title: Cut ten percent
+    text: Cuts the draft to 90% of its length in passes and logs every cut.
+  - title: Clean up timid wording
+    text: Swaps adverbs, passive verbs and dressed-up words for plain ones, and said for fancy tags.
+  - title: Check how the talk sounds
+    text: Tests every line of dialogue by ear, fixes the worst and gives a score out of 100.
+  - title: Plan what to ask your readers
+    text: Names your ideal reader and writes a one-page question sheet to send with the draft.
+  - title: Sort what readers said
+    text: Groups readers' notes, marks agreed problems, washes and fact catches, and ranks the rewrite list.
+
+output_shape: |-
+  STEP 1: COLD RE-READ
+    Pages to change | Out-of-character acts | Big holes | Flailing | Score out of 100
+
+  STEP 2: WHAT IT IS ABOUT
+    What recurs | Three readings | The pick | Add, sharpen, cut
+
+  STEP 3: THE CUT
+    Words in and out | Cut log by pass | Kept on purpose | Story check
+
+  STEP 4: PLAIN WORDING
+    Changes with reasons | Adverbs kept and why
+
+  STEP 5: THE TALK
+    Failing lines and fixes | Voice check | Score out of 100
+
+  STEP 6: READER QUESTIONS
+    Ideal reader | Questions for every reader | Questions for your doubts | Note to send
+
+  STEP 7: READERS' NOTES SORTED
+    Agreed problems | Washes | Fact catches | Ranked rewrite list
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+
+tweaks:
+  - what: How long the draft rested
+    how: Say how long. A draft read the next day hides its holes, and the report will say so.
+  - what: Your ideal reader
+    how: Name one real person you are writing for. Their solo notes then count for more when readers disagree.
+  - what: Facts to keep
+    how: Paste the ages, dates and names that must stay fixed so the cold read can test them.
+  - what: Long drafts
+    how: For a book, run one act at a time and give a one-line summary of the rest.
+
+judge:
+  - Every problem names a page or scene, and the score sums re-add.
+  - The reading of what the story is about is a tension, not a moral.
+  - The new word count is at or below 90% of the old, and the cut log adds up.
+  - Dialogue fixes keep each speaker's voice.
+  - Readers' notes appear once each, and splits are left alone.
+
+test:
+  - Plant two mistakes in a draft, such as a changed name and a person acting out of character. Step 1 should find both.
+  - Check the cut by hand. A 4,000-word piece should land at 3,600 words or fewer.
+  - Run step 7 on three notes that agree and one that conflicts. The three should come out as an agreed problem.
+
+improve:
+  - Keep the holes and the cut logs from each draft. You will see the mistakes you make most.
+  - Add a list of words you overuse, so the cut finds them first.
+  - Run steps 1 and 3 again on the next draft and compare the scores.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Keeps all seven steps in one thread, so each builds on the last."}
+    - {name: "A shared document", why: "Readers can comment on the draft itself, so notes are tied to the place."}
+  inputs:
+    - "A one-line summary of each act, for a long draft"
+    - "The facts the story must keep"
+    - "A list of readers and what each is good at spotting"
+
+terms:
+  - term: Door open
+    meaning: The stage of the second draft when other people read the work.
+  - term: Ideal reader
+    meaning: The one person you write for and most want to move.
+  - term: Wash
+    meaning: A split where some readers like a thing and others do not. The writer decides.

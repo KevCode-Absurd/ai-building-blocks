@@ -1,0 +1,88 @@
+new_slug: find-the-one-claim-that-sells-and-show-it-working
+name: Find the one claim that sells and show it working
+summary: Give it your product and rivals. Get one tested selling claim, a demonstration that proves it and a check for distractions.
+job: write-ad-copy
+thinking: high
+thinking_why: It has to judge which differences a buyer would notice and which claims rivals leave open. Give it your strongest model.
+headline: Find the one claim buyers will remember, then prove it on screen
+subhead: Give it your product facts and what rivals say. It checks you have a difference worth claiming, drafts claims from three roads, tests the best one, and plans a demonstration where every line you say is shown. After ten people see it, it finds what stole their attention.
+explain: |
+  Rosser Reeves ran the Ted Bates agency on one rule: an ad should make one promise to the buyer that rivals do not make, strong enough to bring in new buyers. Most ads fail it. They praise the product, say five things or show a pretty picture that has nothing to do with the words.
+
+  This workflow follows his method in order. It first checks that your product has a difference a buyer could notice, or that you could make one. It drafts claims from three places: a real difference, a product change, and a true fact every rival has but none says. It tests the best claim on three tests. It then writes a short demonstration with each spoken line locked to a picture of the same thing. You show the result to ten people and bring their answers back, and it counts how many repeated your claim and what took the rest.
+when:
+  - Your ads say many things, or your product looks the same as its rivals.
+  - You need one claim buyers will remember and act on.
+  - People like your ad but cannot say what it promises.
+you_give:
+  - Your product facts, with what it does, how it is made and how it is used
+  - What rivals say in their ads or on their pages (optional)
+  - Customer words, such as reviews (optional)
+  - After the pause, what ten viewers said the ad said, word for word
+you_get:
+  - A verdict on whether your product has a difference buyers could notice
+  - Three to five claims, one sentence each, ranked, with the weak ones struck out
+  - A pass or fail on the top claim against three tests, with fixes
+  - A script table matching every spoken line to a picture that shows it
+  - A playback count, what stole the rest, and what to cut
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Paste your product facts and any rival ads. Ask it to run the first four steps.
+  - Show the script or a rough cut to ten people who have not seen it. Ask only what it said, and write their words down.
+  - Bring the answers back for the last step.
+how_it_works:
+  - title: Checks you have something real to say
+    text: Gives a verdict on whether the product has a difference a buyer could notice, or needs work first.
+  - title: Drafts the candidate claims
+    text: Writes three to five claims in the form buy this and get this benefit, from three roads, and strikes the weak ones.
+  - title: Tests the best claim
+    text: Passes or fails the top claim on being a real offer, unique and strong enough to move many buyers.
+  - title: Plans the demonstration
+    text: Finds something to watch that proves the claim and locks every spoken line to a picture of the same thing.
+  - title: Checks nothing steals attention
+    text: Counts how many viewers repeated the claim, finds the second claim or picture that took the rest and lists the cuts.
+output_shape: |-
+  STEP 1: CHECK YOU HAVE SOMETHING REAL TO SAY
+    Differences a buyer could notice | too small | claim, change the product, or find an unsaid fact
+
+  STEP 2: DRAFT THE CANDIDATE CLAIMS
+    Claims with road and score | struck claims | top claim
+
+  STEP 3: TEST THE BEST CLAIM
+    Claim | offer, uniqueness, pull | score | fixes
+
+  STEP 4: PLAN THE DEMONSTRATION
+    Claim line | demonstration | script table, say and show | cuts
+
+  PAUSE
+    Show it to ten people and write down what each says it said.
+
+  STEP 5: CHECK NOTHING STEALS ATTENTION FROM THE CLAIM
+    Playback count | what took the rest | cut list | retest
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: Rival material
+    how: Paste what two or three rivals really say. Without it, the uniqueness tests are marked MISSING.
+  - what: What you can film
+    how: Say what you can show and test. The demonstration is built from it.
+  - what: How many viewers you ask
+    how: Ten gives a rough read. Thirty or more is steadier.
+  - what: Length
+    how: Say 15, 30 or 60 seconds. A shorter ad drops supporting lines first, never the demonstration.
+judge:
+  - The top claim names one benefit a buyer could notice in use.
+  - Each step used the result of the step before.
+  - Every spoken line in the script has a picture of the same thing.
+  - The playback count was taken from real viewers, not guessed.
+  - No step invented a fact to fill a gap.
+test:
+  - Show the final claim to five buyers of this kind of product. Ask what they expect to get. Their answers should match the benefit.
+  - Mute the demonstration and show it to three people. Ask what it promises.
+  - Run it twice on the same facts. The top claim should stay close.
+improve:
+  - Keep the struck claims so your team stops proposing them.
+  - Add test results to the product facts, so more claims pass the notice test.
+  - After the ad runs, use the recall and pull workflow to see whether it sells.

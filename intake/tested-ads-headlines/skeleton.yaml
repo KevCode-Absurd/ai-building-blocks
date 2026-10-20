@@ -1,0 +1,53 @@
+# Workflow skeleton for Tested Advertising Methods, fifth edition (docs/INTAKE.md). Our words; the book stays in mind-sources/ (local only).
+id: tested-ads-headlines
+source:
+  title: "Tested Advertising Methods, fifth edition"
+  by: "John Caples, revised by Fred E. Hahn"
+  kind: book
+  rights: ideas-only
+  year: 1997
+minds: [john-caples, victor-schwab]
+workflow:
+  slug: get-headlines-sorted-by-tested-type-and-the-three-to-test
+  name: "Get headlines sorted by type and the three worth testing"
+  summary: "Give it your product and buyer. Get headlines sorted by type, ranked with a cover test, and a keyed test plan."
+  when: "you need a headline for an ad, email or page and want a long list sorted and narrowed before you spend on a test."
+  job: write-ad-copy
+  level: beginner
+steps:
+  - name: Pick the buying reason to lead with
+    skill: what-you-really-sell-finder
+    job: strategy
+    task: write-ad-copy
+    from: "Chapters 1 and 6, finding the right appeal"
+    method: ["List the basic reasons a person buys this kind of thing: gain, money, fear, pride, duty, ease, popularity, a bargain", "Check each against the product and the buyer, and drop any that only help the seller", "Look for a reason that has already won for similar products before inventing one", "Rank the survivors and keep the top three as test appeals"]
+    inputs: [product_data, persona!, voc_reviews!]
+    outputs: [angle_library]
+    note: "The appeal goes in the headline, so it has to be chosen first."
+  - name: Write headlines in the tested types
+    skill: typed-headline-batch-writer
+    job: copy
+    task: write-ad-copy
+    from: "Chapters 3, 4 and 5, the headline types and thirty-five formulas"
+    method: ["Write several headlines for each appeal in three types: self-interest, news and curiosity", "Use the formula lists as a springboard, for example How to, Introducing, a date, a price, a question", "Put a believable figure or detail into as many as you can", "Label each with its type and mark curiosity lines that carry no promise"]
+    inputs: [angle_library, product_data!, offer!]
+    outputs: [hooks]
+    note: "Twenty or more headlines, each labelled with its type and appeal."
+  - name: Rank them with the cover test
+    skill: headline-cover-test-ranker
+    job: copy
+    task: write-ad-copy
+    from: "Chapters 2 to 4, the headline tests and the five rules"
+    method: ["Read each headline alone with the copy covered and say what a stranger would gain", "Score it on the five rules: self-interest, news, curiosity with a promise, positive, quick and easy but believable", "Drop the dead, too-clever, meaningless and mere-fact headlines", "Keep the three best from different types or appeals"]
+    inputs: [hooks, persona!]
+    outputs: [shortlist, audit_report]
+    note: "Cuts the long list to three that pass the stranger test."
+  - name: Plan a small keyed test of the best three
+    skill: keyed-headline-test-planner
+    job: research
+    task: plan-ad-tests
+    from: "Chapter 1 and chapter 18, key numbers and small tests"
+    method: ["Give each headline its own key", "Run the three on a small scale before the big spend", "Count replies, not opinions", "Pick the winner by a rule set in advance"]
+    inputs: [hooks, offer]
+    outputs: [plan, shortlist]
+    note: "Turns the three into a keyed test with a winner rule."

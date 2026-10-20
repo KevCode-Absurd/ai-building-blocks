@@ -1,0 +1,19 @@
+slug: desire-section-writer
+name: "Desire section writer"
+summary: "Paste your buyer brief and product facts. Get copy that sharpens the want, using only moves your facts can back."
+category: general
+type: skill
+role: make
+job: copy
+level: advanced
+inputs:
+  - {type: brief, required: true}
+  - {type: product_data, required: true}
+  - {type: ad_copy, required: false}
+outputs:
+  - {type: copy_draft}
+origin: rebuilt
+version: 1.0.0
+minds: [eugene-schwartz]
+credits:
+  - {title: "Breakthrough Advertising (a book summary)", by: "Eugene Schwartz (1966), as retold in a third-party chapter summary", url: "https://breakthroughadvertisingbook.com/", used: "The idea that copy sharpens a want that already exists, and the thirteen ways to intensify it, from detail and product in action to the guarantee as a final summary"}

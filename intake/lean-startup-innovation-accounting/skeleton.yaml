@@ -1,0 +1,63 @@
+# Workflow skeleton for The Lean Startup, book (docs/INTAKE.md). Our words; the book stays in mind-sources/ (local only).
+id: lean-startup-innovation-accounting
+source:
+  title: "The Lean Startup"
+  by: "Eric Ries"
+  kind: book
+  rights: ideas-only
+  year: 2011
+minds: [eric-ries]
+workflow:
+  slug: measure-real-progress-and-decide-to-pivot-or-persevere
+  name: "Measure real progress and decide to pivot or persevere"
+  summary: "Paste your plan and your numbers. Get honest progress measures by customer group and a dated pivot or persevere call."
+  when: "you have run a first test or launched, your totals are rising, and you cannot tell if your work is making a difference."
+  job: plan-strategy
+  level: advanced
+steps:
+  - name: Pick the growth engine to watch
+    skill: growth-engine-finder
+    job: analysis
+    task: plan-strategy
+    from: "Chapter 10, Grow"
+    method: ["Decide whether growth comes from keeping customers, from customers bringing others, or from buying them", "Write the one rate that drives that engine", "Do the sum that shows whether it grows, stalls or shrinks", "List the numbers that do not matter for this engine and drop them"]
+    inputs: [question, plan!]
+    outputs: [plan]
+    note: "The one growth engine and the one rate that drives it, with a sum showing where you stand."
+  - name: Set the baseline, the target and the milestones
+    skill: learning-milestone-planner
+    job: strategy
+    task: plan-strategy
+    from: "Chapter 7, Measure"
+    method: ["Write the model of the business you hope for as a few rates", "Pick the first test that gives the true starting figure for each rate", "Name the one rate each planned change should move", "Set dated learning milestones: baseline, move toward the target, decision"]
+    inputs: [plan, question!]
+    outputs: [plan]
+    note: "The hoped-for rates, the starting rates to measure and the dated milestones. Reads the engine from the step before."
+  - pause: "Run the first test or launch. Export results for each month or week that customers joined."
+  - name: Turn totals into rates per customer group
+    skill: vanity-metric-fixer
+    job: analysis
+    task: think-and-decide
+    from: "Chapter 7, actionable metrics"
+    method: ["List the numbers you report each week", "Mark totals that only grow", "Replace each with a per-customer or per-group rate", "Split by group and release"]
+    inputs: [performance_sheet, plan!, question!]
+    outputs: [plan]
+    note: "Which numbers are vanity, and the per-group rates to use instead. Reads the milestones from step two."
+  - name: Read whether your changes moved the rates
+    skill: cohort-funnel-reader
+    job: analysis
+    task: plan-strategy
+    from: "Chapter 7, cohorts, split tests and the three A's"
+    method: ["Lay out each group of customers in its own row and each step of their path as a column", "Compare each row with the one before and with the target", "Check that each change was tested against a group that did not get it", "Test the report: can anyone act on it, understand it and trace it to real customers"]
+    inputs: [performance_sheet, plan]
+    outputs: [audit_report]
+    note: "Which changes moved which rates, which did nothing, and how far each rate is from its target."
+  - name: Make the pivot or persevere call
+    skill: pivot-or-persevere-decider
+    job: strategy
+    task: plan-strategy
+    from: "Chapter 8, Pivot (or Persevere)"
+    method: ["Set progress against the milestones over time, not just the last period", "Look for the signs of stuck: tuning gains shrinking, growth coming from the old engine", "Name the pivot type that fits what customers told you", "Write the new guess, the test that checks it and the date of the next decision"]
+    inputs: [audit_report, plan!]
+    outputs: [audit_report]
+    note: "Persevere or pivot, the evidence for it, the kind of pivot, and a dated next review."

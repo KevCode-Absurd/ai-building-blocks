@@ -1,0 +1,90 @@
+new_slug: five-part-ad-checker
+name: Five-part ad checker
+summary: Paste your finished ad. Get a pass or fail on its five jobs, a score out of 100 and ranked fixes.
+job: check-ads
+thinking: medium
+thinking_why: It judges each part against fixed pass lines, with some judgement on length and flow.
+headline: Five-part ad checker
+subhead: Give it a finished ad. It finds the five parts, tests each against a pass line, judges whether the length fits the job, and ranks the fixes. You get a score out of 100 and a list of what to change first.
+explain: |-
+  A good ad has five jobs. It catches attention, shows a gain, proves it, moves the reader to take it and asks for action. Ads often do three or four and skip the rest. A missing part is easy to miss because the parts that are there read well.
+
+  This skill marks where each part sits, tests it against a pass line, and gives each part 20 points. It also judges length by the job: a cheap impulse item can be short, and a costly item needs room to explain. It ranks fixes with the earliest failure first, because a weak headline spoils everything after it.
+when:
+  - You have a finished ad and want to know what is missing before it runs.
+  - Your ad reads well and still does not pull.
+  - You are reviewing someone else's ad.
+you_give:
+  - "The finished ad: headline, body, proof, ask"
+  - The brief or the offer (optional)
+  - Where and how it will run (optional)
+you_get:
+  - A pass or fail on each of the five parts, with the quoted text
+  - A score out of 100
+  - A verdict on length for this product
+  - Fixes in the order that pays
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste the whole ad.
+  - Add the brief or the offer if you have them.
+  - Fix the first failing part, then run it again.
+how_it_works:
+  - title: Marks the five parts
+    text: Quotes where each part sits in the ad.
+  - title: Tests each part
+    text: Checks each against a fixed pass line, worth 20 points.
+  - title: Judges the length
+    text: Asks whether the ad is as long as the product and price need.
+  - title: Ranks the fixes
+    text: Puts the earliest failing part first.
+output_shape: |-
+  PART | QUOTE | PASS OR FAIL | POINTS (of 20) | FIX
+  Attention | ... 
+  Advantage | ...
+  Proof | ...
+  Persuasion | ...
+  Action | ...
+
+  SCORE: <n> out of 100
+
+  LENGTH
+  <too short, right or too long> | why
+
+  FIX ORDER
+  1. ...
+
+  MISSING
+  <facts needed>
+
+  CHECKS MISSED
+  <one line each, or none>
+tweaks:
+  - what: Price and product type
+    how: Say what it costs and how much it needs explaining. Length is judged against this.
+  - what: Medium
+    how: Say where the ad runs. A printed coupon and a social post need different asks.
+judge:
+  - Every pass or fail quotes the ad.
+  - Each part has its own pass line applied.
+  - The fix list starts with the earliest failure.
+  - The length verdict gives a reason.
+test:
+  - Run it on an ad you know pulled well. It should pass most parts.
+  - Run it on an ad that failed. See which part it flags.
+  - Fix the top item and run it again.
+improve:
+  - Keep a score sheet for every ad you run, next to its results.
+  - Use the fail notes to build your own checklist.
+  - Pair with the Headline promise checker for a deeper look at part one.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: The work is sorting and writing from facts you supply, which any strong chat AI does well with this skill.
+  inputs:
+    - The brief the ad was written from
+    - Results from past ads for comparison
+terms:
+  - term: Five fundamentals
+    meaning: Attention, advantage, proof, persuasion and action.
+  - term: Pass line
+    meaning: The test a part must meet to earn its points.

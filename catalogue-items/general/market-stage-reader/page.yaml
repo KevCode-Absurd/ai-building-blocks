@@ -1,0 +1,123 @@
+new_slug: market-stage-reader
+name: "Market stage reader"
+summary: "Paste your product facts and rival claims. Get what buyers know, how worn claims are and what a headline may say."
+job: understand-customers
+thinking: medium
+thinking_why: "It has to weigh mixed evidence and decide between two stages. A mid-size model does it well."
+
+headline: "Know what your buyers already know before you write the headline"
+subhead: Give it your product facts, your rivals' claims and any customer words. It names the want your market already has, places your buyers on a five-step awareness scale and your market on a five-step claim-fatigue scale. You get a short brief that says what a headline may and may not do.
+
+explain: |
+  A headline that works on someone who already wants your product fails on someone who has never thought about the problem. A claim that was fresh three years ago may now be the one every rival makes. Most copy ignores both facts and just says what the writer likes.
+
+  This skill starts from the want buyers already have, because copy can point a want at your product but cannot make one. It then places your buyers on a scale from ready to buy down to unaware, using the quotes and phrases you give it. It lists the claims in your market oldest first and tags each as a plain claim, a bigger claim, a new reason it works, a better version of that reason, or no claim at all. The latest kind buyers have met in numbers sets the stage. The brief that comes out lists what a headline may say and what it may not.
+
+when:
+  - Your headline gets ignored or doubted, and you do not know if buyers know too little or have heard too much.
+  - You are entering a market where rivals all say the same thing.
+  - You want one clear read of your buyers before several people write copy.
+
+you_give:
+  - Your product facts, including what it does for the buyer and its price
+  - Rival claims, pasted from their ads, pages or packs (optional)
+  - Customer words, such as reviews or support emails, word for word (optional)
+
+you_get:
+  - The want your buyers already have, scored for urgency, staying power and size
+  - Where your buyers sit on the awareness scale, with evidence, a main place and a backup
+  - A claim timeline and the claim-fatigue stage it points to
+  - A MAY and MAY NOT list for the headline, and what would change the call
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your product facts. Add rival claims and customer words if you have them.
+  - Read the claim timeline first and fix any claim that is tagged wrongly.
+  - Hand the brief to the "Ad headline writer".
+
+how_it_works:
+  - title: Finds the want
+    text: Names the want buyers already have in their words and scores it for urgency, staying power and size.
+  - title: Places the buyers
+    text: Puts them on a five-step awareness scale from ready to buy to unaware, with a quote or phrase behind each call.
+  - title: Builds the claim timeline
+    text: Lists the market's claims oldest first and tags each as plain, bigger, new reason, better reason or identity.
+  - title: Sets the stage
+    text: The latest kind of claim buyers have met in numbers sets the claim-fatigue stage. When it sits between two, it takes the later one.
+  - title: Writes what you may say
+    text: A MAY and MAY NOT list for the headline, from the two places it found.
+  - title: Checks itself
+    text: Goes through its own checks, fixes what it can and names any it missed.
+
+output_shape: |
+  THE WANT
+  <one sentence in the buyers' words> | Does: <what the product does for it>
+  Urgent <1-3> | Lasting <1-3> | Wide <1-3> | Evidence: <...>
+
+  AWARENESS
+  Main place: <ready / doubtful / solution-aware / need-aware / unaware>
+  Backup place: <...>
+  Evidence: <quote or phrase for each> | Shares: <ranges, or MISSING>
+
+  CLAIM TIMELINE
+  <oldest to newest: who | claim | tag>
+
+  CLAIM-FATIGUE STAGE
+  <1 to 5> | Why: <the latest kind of claim buyers have met>
+
+  A HEADLINE MAY / MAY NOT
+  MAY: <...>
+  MAY NOT: <...>
+
+  WHAT WOULD CHANGE THE CALL
+  <...>
+
+  MISSING
+  <...>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: Rival claims
+    how: Paste at least five real lines from rival ads or pages. Without them the stage call stays open and only the awareness read is given.
+  - what: Customer words
+    how: Reviews and support emails show what buyers already know. Paste them word for word so each awareness call has a quote behind it.
+  - what: Two buyer groups
+    how: If two groups sit at very different places, run it twice, once for each, and write a headline for each.
+
+judge:
+  - The want is one buyers already hold, not one the product hopes to create.
+  - Every awareness call and claim tag points to something you gave it.
+  - The claim-fatigue stage follows from the timeline.
+  - MAY and MAY NOT are different lists, and every item in them can be used by a writer.
+  - Missing information is marked, never guessed.
+
+test:
+  - Give it the facts and rival claims for a product where you already know a winning headline. Check that the stage fits what that headline did.
+  - Run it twice on the same input. The stages should match. Wording can differ.
+  - Show the timeline to someone who knows your market. Ask whether any claim is tagged wrongly.
+  - Remove the rival claims and run it again. It should mark the stage as open, not make one up.
+
+improve:
+  - Save each stage call with the date and the claims behind it. Markets move, so re-read it every few months.
+  - Add your own past headlines and their results to the input, so it can say which stage they were written for.
+  - Add a note of claims your market is not allowed to make, so MAY never lists one.
+  - Feed the brief into "Ad headline writer" for a full set.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Sorting evidence into scales works well in any strong chat AI with this skill."}
+    - {name: "Meta Ad Library or a search engine", why: "Both show the claims your rivals are running right now, which the claim timeline needs."}
+  inputs:
+    - "Ten to twenty reviews in your buyers' own words"
+    - "Five to ten rival headlines or page openings, with the year if you know it"
+    - "Search phrases people use to find your kind of product"
+
+terms:
+  - term: Awareness
+    meaning: How much a buyer already knows, from not seeing a problem at all to knowing your product and being ready to buy.
+  - term: Claim fatigue
+    meaning: How many times buyers have heard your kind of promise, and in what form, so that the same words no longer work.
+  - term: Claim timeline
+    meaning: The claims in a market, listed oldest first and tagged by kind.

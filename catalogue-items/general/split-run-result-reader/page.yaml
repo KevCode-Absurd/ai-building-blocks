@@ -1,0 +1,124 @@
+new_slug: split-run-result-reader
+name: "Split-run result reader"
+summary: "Paste counts for two versions. Get the percentage gap, a luck check, a keep, rerun or stop call and a lesson."
+job: read-ad-results
+thinking: medium
+thinking_why: "The sums are fixed, but the call depends on judging whether the test stayed fair."
+
+headline: "A plain call on which version won, and whether to trust it"
+subhead: Give it the audience, replies, sales and spend for each version. It works out how much better the leader is, checks the gap against luck and asks whether the test stayed fair. You get a keep, rerun or stop call, the cost per reply and per sale, and a record of what it taught.
+
+explain: |
+  A test ends with a few numbers, and it is easy to see what you hoped to see. Ten more replies on one side feels like a win. It may only be noise. A version can win on replies and lose on sales if the item people replied to was free.
+
+  This skill states the gap the way an ad buyer would: version A pulled 30 percent more than B. It then checks that gap against the size of the counts, looks at whether the test stayed fair, follows replies through to sales, and works out cost per reply and per sale. It ends with one call: keep, rerun or stop. It writes what the test taught into a record you can reuse, and it names the next test in the order that usually pays most.
+
+when:
+  - A test of two ads, emails or pages has finished and you have the counts.
+  - You are not sure whether the gap you see is real.
+  - You keep running tests and forgetting what each one taught.
+
+you_give:
+  - Audience, replies, sales and spend for each version
+  - The test plan, if you have it (optional)
+  - Notes on anything odd that happened (optional)
+you_get:
+  - A table of both versions and the gap as a percentage
+  - A luck check with the sum shown
+  - Sales per hundred replies and cost per reply and per sale
+  - A keep, rerun or stop call with its reason
+  - A record of what the test taught, and the next test to run
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste the counts for each version, or attach your export.
+  - Paste the test plan if you have it, and note anything odd.
+  - Save the lesson record to your file of past tests.
+  - Run the next test it names.
+
+how_it_works:
+  - title: Sets out the table
+    text: One row for each version, with audience, replies, rate, sales and spend. Blanks are marked missing.
+  - title: States the gap as a percentage
+    text: The difference divided by the lower count. 130 against 100 is 30 percent better.
+  - title: Checks it against luck
+    text: Adds the two counts, takes the square root and asks whether the gap is more than twice that.
+  - title: Checks fairness and sales
+    text: Looks for anything that broke the test and follows replies through to sales and cost.
+  - title: Makes the call and the record
+    text: Keep, rerun or stop, then a reusable note and the next test.
+
+output_shape: |
+  TABLE
+  <key | audience | replies | rate | sales | spend>
+
+  THE GAP
+  <leader> is <n> percent better on <replies / sales>.
+  Luck check: <gap> vs <2 x square root of total> -> <likely real / borderline / too small>
+
+  WAS IT FAIR
+  <what matched, what broke>
+
+  COST
+  Per reply: <A> / <B>  Per sale: <A> / <B>
+
+  THE CALL
+  <keep / rerun / stop> because <reason>
+
+  WHAT IT TAUGHT
+  <difference | result | date | audience | one sentence on why>
+
+  NEXT TEST
+  <what to test next>
+
+  MISSING
+  <list>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: What counts as a reply
+    how: Say if it is a click, a form or a call, so the rate means the same in both rows.
+  - what: Sales data
+    how: Add sales when they arrive. Run the skill again with them.
+  - what: Unequal audiences
+    how: Give both audience sizes. It then compares rates and says the luck check is rough.
+  - what: Your threshold
+    how: Say if you want a bigger gap than twice the square root before you act on it.
+
+judge:
+  - The gap is a percentage of the lower version.
+  - The luck check shows its sum.
+  - Fairness was compared with the plan.
+  - A small test is not called a win.
+  - The call is keep, rerun or stop, with a reason.
+
+test:
+  - Give it two equal counts. It should call it level.
+  - Give it a large gap on 20 total replies. It should say the test is too small.
+  - Give it a version with more replies and far fewer sales. It should warn about free-item replies.
+  - Repeat a test and see whether the call stays the same.
+
+improve:
+  - Keep all lesson records in one file, one line per test, and read it before planning the next.
+  - Add your usual sales delay so it knows when sales are complete.
+  - Add a note for each channel on how much noise is normal.
+  - Pair it with "Split-run test planner" so every test starts with a winner rule.
+
+works_best_with:
+  tools:
+    - {name: "A spreadsheet", why: "Holds the counts and gives the audience and reply sums."}
+    - {name: "Your email tool or ad platform", why: "Exports counts by version key."}
+  inputs:
+    - "The test plan from Split-run test planner"
+    - "Counts by key, with spend and sales"
+    - "Your file of past test records"
+
+terms:
+  - term: Percent better
+    meaning: The gap between two counts divided by the lower one. 130 against 100 is 30 percent better.
+  - term: Luck check
+    meaning: A rough test that the gap is bigger than chance, using the size of the counts.
+  - term: Control
+    meaning: The version you keep as a yardstick and run each new version against.

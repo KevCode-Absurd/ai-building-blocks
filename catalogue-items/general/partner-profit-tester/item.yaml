@@ -1,0 +1,20 @@
+slug: partner-profit-tester
+name: "Partner profit tester"
+summary: "Paste your offer, fees and partner costs. Get what the partner keeps, at forecast and weaker sales, and a call."
+category: general
+type: skill
+role: check
+job: analysis
+level: intermediate
+inputs:
+  - {type: question, required: true}
+  - {type: plan, required: false}
+outputs:
+  - {type: audit_report, required: true}
+origin: rebuilt
+version: 1.0.0
+minds: [ray-kroc]
+credits:
+  - {title: "Grinding It Out: The Making of McDonald's (a book summary)", by: "Ray Kroc with Robert Anderson, as summarised by a third party", used: "The view that a franchisor does well only if the operator makes money, and the account of operators who held out through thin early years"}
+  - {title: "Grinding It Out: The Making of McDonald's (1977), quotations", by: "Ray Kroc with Robert Anderson, collected by Goodreads", url: "https://www.goodreads.com/work/quotes/487021-grinding-it-out-the-making-of-mcdonald-s", used: "The rule of loyalty resting on a fair, square deal where the operator makes money"}
+  - {title: "Ray Kroc (entries from Leading American Businesses, Gale Encyclopedia of U.S. Economic History and Encyclopedia of World Biography)", by: "Encyclopedia.com", url: "https://www.encyclopedia.com/people/social-sciences-and-law/business-leaders/ray-kroc", used: "Single-location deals and fair supply prices as ways to keep the operator's profit"}

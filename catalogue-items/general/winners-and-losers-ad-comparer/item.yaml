@@ -1,0 +1,19 @@
+slug: winners-and-losers-ad-comparer
+name: "Winners and losers ad comparer"
+summary: "Paste your ads with their replies. Get them ranked, a checklist of what differs and what your winners share."
+category: general
+type: skill
+role: check
+job: analysis
+level: intermediate
+inputs:
+  - {type: performance_sheet, required: true}
+  - {type: audit_report, required: false}
+  - {type: ad_copy, required: false}
+outputs:
+  - {type: lessons_register}
+origin: rebuilt
+version: 1.0.0
+minds: [john-caples]
+credits:
+  - {title: "Tested Advertising Methods, fifth edition (1997)", by: "John Caples, revised by Fred E. Hahn", used: "Marking each ad with its replies, laying them out in order of merit, noting every difference in headline, appeal, picture, copy, offer, size, medium and position, and finding the quality all the winners share. Eleven ads in one year split into two groups by the appeal in their headlines."}

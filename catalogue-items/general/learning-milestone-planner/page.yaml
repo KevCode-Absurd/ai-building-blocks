@@ -1,0 +1,109 @@
+new_slug: learning-milestone-planner
+name: Learning milestone planner
+summary: Paste your plan. Get the rates you hope for, the starting rates to measure and dated milestones that count learning, not output.
+job: plan-strategy
+thinking: medium
+thinking_why: It builds a rate model and a dated plan from fixed steps, but needs judgment on which rates matter.
+headline: Learning milestone planner
+subhead: Paste your plan. It writes the business you hope for as a chain of rates, plans the first test that gives the true starting figures, ties each change to one rate and sets three dated milestones. You get a progress plan that measures learning.
+explain: |-
+  Early on, ordinary milestones do harm. A team can hit every date, ship every feature and still be building something nobody wants. Revenue is too small to show anything, and each person has a story about why the numbers rose.
+
+  This skill sets a different kind of milestone. First the true starting rates from a small test, however poor. Then proof that each change moves the rate it was meant to. Then a dated meeting where you decide to continue or change course. You write your prediction before the data arrives, so nobody can claim afterwards that the result is what they expected.
+when:
+  - You have a new product or project with little revenue and need to show it is on track.
+  - Your team reports on features shipped and no one can say if customers care.
+  - A boss or investor asks how you will know it is working.
+you_give:
+  - Your plan with the figures you hope for
+  - Who you report to (optional)
+you_get:
+  - Your hoped-for business as a chain of rates
+  - The test that gives your true starting rates
+  - Each change tied to one rate
+  - Three dated milestones with predictions
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your plan and any figures you hoped for.
+  - Agree the three dates with the people you report to.
+  - Write the predictions down and keep them where the team can see them.
+how_it_works:
+  - title: Writes the rate chain
+    text: From first contact to the result you want.
+  - title: Plans the starting test
+    text: Which test gives which rate.
+  - title: Ties changes to rates
+    text: One target move per change.
+  - title: Sets three milestones
+    text: Baseline, tune and decide, with dates.
+  - title: Records predictions
+    text: Written before the data.
+  - title: Plans the report
+    text: One page, and a follow-up on every miss.
+output_shape: |-
+  RATE CHAIN
+  <step> -> <step>: hoped <x%> | basis <plan | guess>
+
+  STARTING TEST
+  <test> | measures <rates> | on <group> | needs <n> people at each step
+
+  CHANGES AND TARGET RATES
+  <change> -> raise <rate> from <a> to <b>
+  Not now: <changes with no target>
+
+  MILESTONES
+  Baseline by <date>: predict <figures>
+  Tune by <date>: <rate> from <a> to <b>, predict <figure>
+  Decide on <date>: meeting with <who>
+
+  REPORT
+  <who, how often, which rates> | on a miss: <action>
+
+  MISSING
+  <gaps>
+
+  CHECKS MISSED
+  <lines or none>
+tweaks:
+  - what: Your hoped-for figures
+    how: Paste your forecast. Placeholders are marked as guesses, but real targets are better.
+  - what: How many customers you can reach
+    how: A smaller reach means a longer baseline, and the plan says so.
+  - what: Your reporting rhythm
+    how: Say if your board meets monthly. The decision date should fit it.
+  - what: The changes you plan
+    how: List them. Each gets a target rate, and the rest go on the not-now list.
+judge:
+  - Every rate is a share of people, not a total.
+  - Each change has one target rate.
+  - The milestones have dates a stranger could check.
+  - The predictions were written before the data.
+  - The report says what to do after a miss.
+test:
+  - Run it on a project that already has data. See if the starting rates match what you know.
+  - Ask a teammate to pick one change and say which rate it should move.
+  - Run it twice. The rate chain should look the same.
+  - At the first milestone, compare your prediction with the result and note the gap.
+improve:
+  - Add your own funnel steps to step 1 so the chain fits your business.
+  - Add your usual reporting dates to step 4.
+  - Keep the predictions in a shared file and add the results beside them.
+  - Pair it with the Cohort funnel reader to check the rates once data arrives.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: Writing the rate chain and the milestone plan is text work.
+    - name: A spreadsheet
+      why: Holds the rate chain, predictions and later results side by side.
+  inputs:
+    - Your business plan or forecast
+    - Your growth engine and its key rate
+    - The dates of your next board or team reviews
+    - Any early test results
+terms:
+  - term: Learning milestone
+    meaning: A dated check that shows whether you learned something real about customers.
+  - term: Baseline
+    meaning: The true starting figure for a rate, measured with real customers.
+  - term: Tuning
+    meaning: Making changes to move a rate from its baseline toward the target.

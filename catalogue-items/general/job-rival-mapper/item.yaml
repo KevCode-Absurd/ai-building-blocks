@@ -1,0 +1,25 @@
+slug: job-rival-mapper
+name: Job rival mapper
+summary: Paste your job spec. Get every rival, including doing nothing, each with a short resume and what must be fired.
+category: general
+type: skill
+role: make
+job: research
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: competitor_set
+    required: false
+  - type: voc_reviews
+    required: false
+outputs:
+  - type: competitor_set
+origin: rebuilt
+version: 1.0.0
+minds:
+  - clayton-christensen
+credits:
+  - title: Competing Against Luck
+    by: Clayton M. Christensen, Taddy Hall, Karen Dillon and David S. Duncan (2016)
+    used: Seeing competition as everything hired for the same job in the same circumstance, the resume written for each rival, nonconsumption as a rival, and what a customer has to fire to hire a new solution

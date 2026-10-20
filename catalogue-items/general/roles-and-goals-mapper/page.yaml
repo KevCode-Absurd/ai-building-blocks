@@ -1,0 +1,96 @@
+new_slug: roles-and-goals-mapper
+name: "Roles and long-term goals mapper"
+summary: "List your roles. Get what you are about in each, one or two lasting results, and the role crowding out the rest."
+job: think-and-decide
+thinking: medium
+thinking_why: "It organises what you give it and checks balance against fixed rules, so a mid-level model is enough."
+headline: "Roles and long-term goals mapper"
+subhead: "Tell it what you do and who depends on you. It lists your roles, writes one line on what you are about in each, sets one or two results that last, and shows which role is crowding out the others. You get a role table you can plan a week from."
+explain: |
+  When you think about your life as one long to-do list, the loudest part wins. Work takes the evenings, and health, friends and learning wait for a quieter time that does not come. Splitting life into roles shows what each part needs.
+
+  This skill lists the roles you play, from your own health to your work to your community. It writes what you are about in each, ties each to a value, and sets one or two results you could name when done. It then compares the hours each role takes with how much it matters to you, names the role that is crowding out the others, and sets a date to look again.
+when:
+  - Work fills every hour and the rest of life gets what is left.
+  - You are about to write a mission statement and need the parts first.
+  - You start a new season, such as a new job, a baby or a move, and want to know where to invest.
+you_give:
+  - What you do, who depends on you and what is on your mind
+  - Your top values, for example from "Eulogy values finder" (optional)
+  - A rough picture of how you spend a week (optional)
+you_get:
+  - A table of your roles, each with what you are about, its guiding value and one or two results with a test
+  - A balance view with the role that is crowding out the others named
+  - Small results for body, mind, relationships and meaning
+  - A review date and the results to plan first
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Describe your situation in a paragraph. Paste your top values if you have them.
+  - Rank your roles by how much they matter, and say roughly how many hours each takes.
+  - Check each result. Cross out any you took on from someone else's wish.
+  - Take the table to "Personal mission statement writer".
+how_it_works:
+  - title: Lists the roles
+    text: Finds four to eight parts you play, merging or adding until the list is real.
+  - title: Writes what you are about
+    text: One sentence per role that a stranger could picture.
+  - title: Links to values
+    text: Ties each role to a value, and flags roles with no value or values with no role.
+  - title: Sets lasting results
+    text: One or two results per role, each with a test for when you have arrived.
+  - title: Checks the balance
+    text: Compares hours with importance and names the role that is crowding out the rest.
+  - title: Adds renewal
+    text: Makes sure your own role has a small result for body, mind, relationships and meaning.
+  - title: Dates the review
+    text: Sets a review in about six months and picks what to plan first.
+output_shape: |
+  ROLES
+  1. <role> | About: <one sentence> | Value: <value> | Results: <one or two, each with its test>
+  2. ...
+  BALANCE
+  <role> | hours now | importance | note
+  Crowding out the rest: <role>, which displaced <what>
+  RENEWAL
+  Body: <result or left out>   Mind: ...   Relationships: ...   Meaning: ...
+  REVIEW
+  <date> | Plan first: <results that matter but have no deadline>
+  MISSING
+  <what would sharpen the map>
+  CHECKS MISSED
+  <one line per check still missed, or none>
+tweaks:
+  - what: How many roles you list
+    how: Four to eight works. More than eight and the roles blur. Fewer than four and the map hides someone.
+  - what: Whether a goal is a result
+    how: Ask if you can name the day it is done. If not, rewrite it.
+  - what: Your values
+    how: Paste a ranked list. Without it the links to values are guesses.
+  - what: Honest hours
+    how: Give real hours, not wished-for hours. The balance view depends on them.
+judge:
+  - Every role has an "about" line that you could act on tomorrow.
+  - Every goal names the day it is done, not an activity.
+  - You recognise the crowding role without being told.
+  - No goal is there only because someone else wants it.
+  - Your own role has a goal.
+test:
+  - Run it and show the table to someone who knows you well. Ask what is missing.
+  - Compare the hours column with your calendar from last month.
+  - Run it again in six months and see what moved.
+improve:
+  - Add your real roles to the skill file, so it stops asking for them.
+  - Save the map in your about-me file for the weekly planner.
+  - Add a rule of your own, such as one result per role in the next year.
+  - Pair it with "Eulogy values finder" before and "Personal mission statement writer" after.
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Sorting roles and checking goal wording is text work any strong chat AI does well."}
+    - {name: "A spreadsheet or notes app", why: "Keeps the role table where you can see it when you plan the week."}
+  inputs:
+    - "A ranked values list from Eulogy values finder"
+    - "Your calendar from the last month"
+    - "A note on what others expect from you in each role"
+terms:
+  - term: Result
+    meaning: Something you can name when it is done, as opposed to an activity you keep doing.

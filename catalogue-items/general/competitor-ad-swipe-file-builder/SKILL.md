@@ -114,6 +114,8 @@ CHECKS MISSED
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - **Study competitor ads** with the [Competitor ad gap finder](https://useaiblocks.com/skills/competitor-ad-gap-finder). It takes the shortlist.
+- **Write the ad copy** with the [Candid line writer](https://useaiblocks.com/skills/candid-line-writer). It takes the shortlist.
+- **Understand your buyers** with the [Job spec writer](https://useaiblocks.com/skills/job-spec-writer). It takes the shortlist.
 - **Make an offer people want** with the [Reason-why deal writer](https://useaiblocks.com/skills/reason-why-deal-writer). It takes the shortlist.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

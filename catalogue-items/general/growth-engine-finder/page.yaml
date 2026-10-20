@@ -1,0 +1,117 @@
+new_slug: growth-engine-finder
+name: Growth engine finder
+summary: Describe how customers arrive and your rates. Get your growth engine, its key rate and a sum showing where you stand.
+job: plan-strategy
+thinking: medium
+thinking_why: It picks one of three models and does short sums, but needs care with missing figures.
+headline: Growth engine finder
+subhead: Describe how your customers arrive and what you know about your rates. It picks sticky, viral or paid growth, does the sum with your figures and names the one rate to watch. You get a verdict and a short list of numbers you can stop reporting.
+explain: |-
+  Growth talks go in circles because everyone points at a different number. Marketing wants more traffic, the product team wants better features, and finance wants lower costs. Usually only one of those matters for how your business really grows.
+
+  This skill decides which of three engines drives you: customers who stay, customers who bring others, or customers you pay to win. Each has its own sum. If you add 30 customers per 100 each month and lose 28, you grow 2 percent, not 30. It does that sum with your figures, names the one rate to watch, drops the rest and tells you how to spot the engine running out.
+when:
+  - Growth has stalled and the team disagrees about why.
+  - You are about to spend on ads, features or referrals and want to know which would matter.
+  - Your weekly report has twenty numbers and no one acts on them.
+you_give:
+  - How your recent customers arrived and whether they stayed
+  - Your rates, if you have them (optional)
+  - Your plan (optional)
+you_get:
+  - The engine that drives your growth
+  - A sum with your figures and a verdict
+  - The one rate to watch
+  - A list of numbers to drop
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Describe where your last twenty customers came from and whether they stayed.
+  - Paste your monthly figures if you have them.
+  - Put the one rate on the wall and review it on the date the skill gives you.
+how_it_works:
+  - title: Picks the engine
+    text: Sticky, viral or paid, from how customers arrive.
+  - title: Writes the one rate
+    text: The figure that drives that engine.
+  - title: Does the sum
+    text: With your numbers, gaps left open.
+  - title: Gives a verdict
+    text: Grows, stalls or shrinks, and the biggest lever.
+  - title: Names what to watch
+    text: And what to drop from the report.
+  - title: Checks the value
+    text: Whether people get a real benefit.
+  - title: Notes the run-out sign
+    text: And a date to check again.
+output_shape: |-
+  ENGINE
+  <sticky | viral | paid> because <reason>
+  Parked: <others>
+
+  THE SUM
+  <formula with your figures>
+  Verdict: <grows | stalls | shrinks> by <rate> per <period>
+  Biggest lever: <figure>
+
+  WATCH THIS ONE
+  <rate> | counted as <how> | owner <name> | look every <rhythm>
+
+  DROP FROM THE WEEKLY VIEW
+  <figures>
+
+  VALUE CHECK
+  <what shows people get a benefit>
+
+  RUNS OUT WHEN
+  <sign> | review on <date>
+
+  MISSING
+  <gaps>
+
+  CHECKS MISSED
+  <lines or none>
+tweaks:
+  - what: Monthly figures
+    how: Real counts of gained and lost customers make the verdict firm instead of a range.
+  - what: The cost of winning a customer
+    how: "Add all of it: ads, staff time, shop rent. A low figure flatters the paid engine."
+  - what: What a customer is worth
+    how: Use value after the cost of serving them, over their whole time with you.
+  - what: How people hear of you
+    how: Tell it the actual route. Guesses push the pick to the wrong engine.
+judge:
+  - Only one engine is chosen.
+  - The sum uses your numbers, with gaps shown.
+  - The verdict says by how much per period.
+  - The one rate is a rate, not a running total.
+  - It names at least one number to stop reporting.
+test:
+  - Run it on a business you know well. See if the engine matches how it grows.
+  - Run it with a low and a high guess for a missing figure. Check whether the verdict flips.
+  - Show the one rate to a teammate and ask what they would do if it fell.
+  - Check the rate again next month and see if the engine pick still holds.
+improve:
+  - Add your own period (week or month) and units to step 2 so sums come out in your terms.
+  - Add the figures you already track so the drop list is specific.
+  - Save each month's rate in a sheet to watch the trend, not the level.
+  - Pair it with the Learning milestone planner to set targets for the rate.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: Choosing an engine and doing the sums is text and arithmetic.
+    - name: A spreadsheet
+      why: Keeps monthly rates and shows the trend.
+  inputs:
+    - Customer counts gained and lost per month
+    - Invitation or referral counts
+    - Cost of winning a customer, in full
+    - Revenue per customer after costs
+terms:
+  - term: Sticky growth
+    meaning: Growth that comes from keeping customers coming back faster than you lose them.
+  - term: Viral growth
+    meaning: Growth where each customer brings others by simply using the product.
+  - term: Paid growth
+    meaning: Growth where you spend money to win each customer and reinvest the margin.
+  - term: Churn
+    meaning: The share of customers who leave in a period.

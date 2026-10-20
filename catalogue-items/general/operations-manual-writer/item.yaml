@@ -1,0 +1,20 @@
+slug: operations-manual-writer
+name: "Operations manual writer"
+summary: "Paste your standards sheet. Get a job card for each role, a missed-standard rule and a day-one trial sheet."
+category: general
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - {type: plan, required: true}
+  - {type: question, required: false}
+outputs:
+  - {type: plan, required: true}
+origin: rebuilt
+version: 1.0.0
+minds: [ray-kroc]
+credits:
+  - {title: "Grinding It Out: The Making of McDonald's (a book summary)", by: "Ray Kroc with Robert Anderson, as summarised by a third party", used: "The first restaurant as a prototype, the operations role, training operators at a school, and small fixes like separating two kinds of preparation"}
+  - {title: "Grinding It Out: The Making of McDonald's (1977), quotations", by: "Ray Kroc with Robert Anderson, collected by Goodreads", url: "https://www.goodreads.com/work/quotes/487021-grinding-it-out-the-making-of-mcdonald-s", used: "Working from the part to the whole, and perfecting every basic before scaling"}
+  - {title: "Book review: Grinding It Out, the Making of McDonald's", by: "J M Finn", url: "https://www.jmfinn.com/our-thinking/book-review-grinding-it-out-making-mcdonalds/", used: "The route an applicant took: work in a store, then train, before opening"}

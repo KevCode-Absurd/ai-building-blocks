@@ -1,0 +1,26 @@
+slug: job-experience-mapper
+name: Job experience mapper
+summary: Paste your job spec. Get the moments from first look to later use, each worry and the fix.
+category: general
+type: skill
+role: make
+job: strategy
+level: advanced
+inputs:
+  - type: brief
+    required: true
+  - type: audit_report
+    required: false
+  - type: voc_reviews
+    required: false
+outputs:
+  - type: audit_report
+  - type: plan
+origin: rebuilt
+version: 1.0.0
+minds:
+  - clayton-christensen
+credits:
+  - title: Competing Against Luck
+    by: Clayton M. Christensen, Taddy Hall, Karen Dillon and David S. Duncan (2016)
+    used: Designing the experiences of buying and using that complete the job, removing the obstacles in the way, treating a product as a service, building the proof that a product is right for the job, a premium price justified by the cost of the struggle, and integrating processes around the job with a named owner

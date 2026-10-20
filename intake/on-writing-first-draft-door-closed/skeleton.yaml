@@ -1,0 +1,50 @@
+# Workflow skeleton from On Writing: A Memoir of the Craft (docs/INTAKE.md). Our words; the book stays in mind-sources/ (local only).
+id: on-writing-first-draft-door-closed
+source:
+  title: "On Writing: A Memoir of the Craft"
+  by: "Stephen King"
+  kind: book
+  rights: ideas-only
+  year: 2000
+minds: [stephen-king, anne-lamott]
+workflow:
+  slug: write-a-first-draft-fast-with-the-door-closed
+  name: "Write a first draft fast with the door closed"
+  summary: "Tell it your idea. Get a what-if situation, a daily word plan, scene details and a first draft written without an outline."
+  when: "you have an idea for a story, book or long piece and want to get a whole first draft down before doubt sets in."
+  job: write-and-tell-stories
+  level: beginner
+steps:
+  - name: Find the situation
+    skill: what-if-situation-finder
+    job: strategy
+    from: "The 'On Writing' section: a story starts as a situation, put as a what-if question"
+    method: ["Write the two ordinary things that bumped into each other to make the idea", "Turn them into one what-if question with a person or two stuck in it", "Write three versions and keep the one you can say in a single sentence", "Describe the people as flat sketches and leave out the plot", "List what you do not know yet and mark it as something the story will tell you"]
+    inputs: [question]
+    outputs: [brief]
+    note: "One what-if situation, with the people stuck in it and no plot."
+  - name: Set the daily word quota
+    skill: daily-word-quota-planner
+    job: ops
+    from: "The 'On Writing' section: a door that shuts, a fixed time, a word goal, a draft finished in a season"
+    method: ["Pick the length of the finished draft and the days you can write", "Divide it into a daily word count that you can hit on a bad day", "Work out the finish date and check it fits in about three months", "Set the room, the closed door, the start time and the rule that you stop when the count is met", "Say who sees nothing until the draft is done"]
+    inputs: [question, brief!, plan!]
+    outputs: [plan]
+    note: "A word count, a finish date and a closed-door routine you can keep."
+  - name: Pick the scene details
+    skill: scene-detail-picker
+    job: creative
+    from: "The 'On Writing' section on description: a few first-to-mind details stand for the whole place"
+    method: ["List the places the first scenes happen", "For each place, call it up in your head with all five senses and write the first four things that come", "Keep place and texture, and drop faces, clothes and long lists", "Add one fresh comparison per place and drop any you have heard before", "Mark what to leave to the reader"]
+    inputs: [brief]
+    outputs: [plan]
+    note: "A short detail sheet for each place, so the draft stays in the story."
+  - name: Write the draft without an outline
+    skill: unplotted-first-draft-writer
+    job: creative
+    from: "The 'On Writing' section: dig the story out in order, let the people choose, keep a facts sheet, write fast"
+    method: ["Start from the situation and the flat sketches and write the first scene", "At each turn ask what these people would really do next and write that", "Keep a facts sheet of names, ages, places and promises made on the page", "Stop at the day's word count and note the first question for tomorrow", "Do not look back or fix anything until the whole story is down"]
+    inputs: [brief, plan!]
+    outputs: [copy_draft]
+    note: "Today's pages in order, plus the facts sheet to carry into tomorrow."
+  - pause: "Repeat the draft step each day with your facts sheet until the draft is done. Keep the door shut and show nobody. Then put it in a drawer for six weeks and run the revise workflow."

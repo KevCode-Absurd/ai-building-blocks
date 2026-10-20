@@ -1,0 +1,122 @@
+new_slug: smallest-test-picker
+name: Smallest test picker
+summary: Paste your ranked guesses. Get the cheapest test for the top one, who to try it on and what to cut.
+job: test-an-idea
+thinking: medium
+thinking_why: It matches a guess to a test form and a cut list, using fixed rules.
+headline: Smallest test picker
+subhead: Paste your ranked guesses, or your plan and your biggest worry. It names the behaviour that counts as yes, picks the cheapest test form, chooses early adopters and lists what to leave out. You get a one-page test choice with a fail line.
+explain: |-
+  A first test goes wrong in two ways. It is too big, so you build for months before anyone reacts. Or it is too small, so nobody has to act and you learn nothing. Either way you spend effort that taught you nothing.
+
+  This skill starts from one guess and the behaviour that would prove it, such as a pre-order or a second visit. It then picks the cheapest form that can produce that behaviour, from a plain sign-up page to doing the work by hand for one customer. It names who to try it on, cuts every extra, and sets the fail line before you start.
+when:
+  - You know your riskiest guess and need the cheapest way to test it.
+  - You are about to build a first version and suspect it is too much.
+  - Your last test was a survey or a chat and left you with praise but no facts.
+you_give:
+  - Your ranked guesses, or your plan and worry
+  - What you can spend and who you can reach (optional)
+you_get:
+  - The behaviour that would count as yes
+  - A test form, a runner-up and their costs
+  - The early adopters to try it on
+  - A cut list and a fail line
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste the ranked guesses from the Leap-of-faith assumption finder.
+  - Say how many days and how much money you can spend.
+  - Take the chosen form to the MVP experiment planner to set the pass numbers.
+how_it_works:
+  - title: Takes the top guess
+    text: Writes it as one sentence with a number.
+  - title: Names the yes
+    text: A behaviour, not praise.
+  - title: Picks the form
+    text: Smoke test, demo film, hand-delivered, human behind the screen, one feature or split test.
+  - title: Chooses early adopters
+    text: People who feel the need most.
+  - title: Cuts the extras
+    text: Keeps only what feeds the answer.
+  - title: Plans the ask
+    text: Money or a real commitment.
+  - title: Sets the fail line
+    text: And plans calls to learn why.
+output_shape: |-
+  GUESS
+  <sentence with number>
+
+  YES MEANS
+  <behaviour and how many people>
+
+  TEST FORM
+  Pick: <form> | cost <days, money> | cannot tell you <x>
+  Runner-up: <form> | cost <x> | cannot tell you <x>
+
+  TRY IT ON
+  <group, how to reach this week>
+
+  BUILD
+  <keep list>
+  LEAVE OUT
+  <cut list>
+
+  THE ASK
+  <commitment>
+
+  FAIL LINE
+  <result and what you do next>
+
+  FOLLOW-UP CALLS
+  <who, what to ask>
+
+  MISSING
+  <gaps>
+
+  CHECKS MISSED
+  <lines or none>
+tweaks:
+  - what: Your budget in days and money
+    how: A smaller limit pushes the pick toward a plain page or a hand-delivered version.
+  - what: How hard it is to explain
+    how: If people struggle to picture it, say so. A short demo film moves up the list.
+  - what: Whether a product already exists
+    how: If it does, say so. A split test becomes the pick.
+  - what: Who you can reach
+    how: Name a real group. Vague groups give weak tests.
+judge:
+  - The yes is a behaviour, with a number of people.
+  - The test form is far cheaper than the full product.
+  - The cut list removes things you wanted to build.
+  - There is a fail line that would change what you do.
+  - The test group is narrow and reachable this week.
+test:
+  - Run it on a test you ran before. See if it would have picked something cheaper.
+  - Run it twice. The chosen form should stay the same or move one step.
+  - Show the cut list to a teammate. Ask what they would hate to lose.
+  - After the test, check whether the fail line was fair.
+improve:
+  - Add the forms of test you can build in a day to the ladder in step 3.
+  - Add your channel costs so the days and money figures are tighter.
+  - Save each test's result next to its form to learn which forms mislead you.
+  - Pair it with the Leap-of-faith assumption finder before it and the MVP experiment planner after it.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: Choosing a form and writing the cut list is text work.
+    - name: A one-page site builder such as Carrd
+      why: Makes a sign-up or pre-order page in an afternoon.
+    - name: A screen recorder
+      why: Records a short demo film without extra software.
+  inputs:
+    - Your ranked guess list
+    - Notes from talks with early customers
+    - Your channel costs
+    - A short list of people you can reach this week
+terms:
+  - term: Early adopter
+    meaning: A customer who feels the need sharply and will use a rough first version.
+  - term: Smoke test
+    meaning: An offer shown to real people before anything is built, to see who signs up.
+  - term: Minimum viable product
+    meaning: The version that lets you learn the most about customers with the least work.

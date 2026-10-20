@@ -1,0 +1,82 @@
+new_slug: choose-your-investing-style-and-your-stock-and-bond-split
+name: Choose your investing style and your stock and bond split
+summary: Tell it your time, skill and nerve. Get your investor type, a stock and bond split with rules, and a one-page policy.
+job: money-and-investing
+thinking: medium
+thinking_why: It runs four short skills in a row. The sums are small, and the care is in matching the plan to the person. A mid-level model is enough.
+headline: Set how you will invest, and how much goes in stocks and bonds, before you put money in
+subhead: Answer questions about your time, skill and how you acted in the last big fall. It sorts you as a defensive or enterprising investor, sets a stock and bond split with a rule to keep it, picks the kind of bonds, and writes the lot on one page. A method of analysis, not personal financial advice.
+explain: |
+  Most people pick an investing approach by accident. A friend's tip, a hot year or a scare sets it. Then they change it again at the next scare.
+
+  This workflow follows the plain path in The Intelligent Investor by Benjamin Graham. The return you can fairly aim for depends on the effort you will really bring, not on the risk you take. So it starts by sorting you as a defensive investor (safety and little bother) or an enterprising one (real research). It then sets a split between stocks and bonds inside a quarter-to-three-quarters range, starting at half and half, with a rule that restores the split when prices move it. It picks the bond kind with two small sums, one for tax and one for price swing, and puts the plan on one page with what you will not do. It names no fund and no security.
+when:
+  - You are starting to invest and want a plan before you put money in.
+  - You keep changing your approach every time prices move.
+  - You hold some stocks and bonds and have never written down why.
+you_give:
+  - Hours a month you can give to money, and what you do with them
+  - Your skill at reading a company's accounts, and your tax rate
+  - What you did in the last big fall in prices
+  - How much you plan to invest, and money you need within five years
+you_get:
+  - Your type as a defensive or enterprising investor, with the reasons
+  - A stock and bond split with a range and a rebalancing rule
+  - A bond choice by tax, length and safety
+  - A one-page policy with what you will not do and a review date
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Answer with what you actually did, not what you wish you had done. It works step by step and saves each result.
+  - Print the last page and read it again on the review date.
+how_it_works:
+  - title: Sorts you
+    text: Counts your real hours, tests your skill and your nerve, and places you on the defensive or enterprising path.
+  - title: Sets the split
+    text: Starts at half and half, moves inside a quarter to three quarters only for reasons from your answers, and writes the rule that restores the split.
+  - title: Picks the bonds
+    text: Does the tax sum and the price-swing sum, ranks safe kinds first and keeps high-yield bonds out.
+  - title: Writes the policy
+    text: Puts the plan on one page with a fair expectation after tax and inflation, a not-to-do list and a rule for taking advice.
+output_shape: |-
+  STEP 1: YOUR TYPE
+    Type: <DEFENSIVE / ENTERPRISING / NEITHER YET> | Why, ranked: <list> | Paths to skip: <list>
+
+  STEP 2: YOUR SPLIT
+    Stocks <n>% | Bonds <n>% | Range <lo to hi> | Rebalance when <trigger> by <move>
+
+  STEP 3: YOUR BONDS
+    Tax pick: <...> | Length pick: <...> | Ranked kinds: <list> | Kept out: <list>
+
+  STEP 4: YOUR POLICY
+    One page: what I hold, how I keep it, what I expect, what I will not do, advice rule, review date
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: Money you need soon
+    how: List it with the date. It is taken out of the split and kept in cash or very short, safe holdings.
+  - what: A partner
+    how: Say if you invest together. Each of you is sorted, and the split has to fit the more nervous one.
+  - what: A small pot for risky bets
+    how: Say how much you want to keep apart. It is capped and kept away from the plan.
+judge:
+  - Each step used the result of the step before.
+  - The type follows from your answers, and each answer is quoted.
+  - Stocks sit between a quarter and three quarters, with a reason.
+  - Nothing names a fund, bond or company, and nothing forecasts the market.
+test:
+  - Say you sold in the last fall and have little time. It should say defensive and keep stocks near or below half.
+  - Say you want 90% in one company. It should refuse the split and say why.
+  - Run it twice on the same answers. The type and split should match.
+improve:
+  - Reread the policy once a year and after any big fall.
+  - After a rebalancing, write down whether you kept to the rule.
+  - Move to "Screen stocks with a defensive investor's seven tests" when you want to pick stocks.
+terms:
+  - term: Defensive investor
+    meaning: A person who wants safety and freedom from bother, and holds a plain mix of bonds and sound stocks.
+  - term: Enterprising investor
+    meaning: A person who will do real research and starts from the same plain base.
+  - term: Rebalancing
+    meaning: Selling a little of what has grown and buying what has shrunk so the split goes back to your plan.

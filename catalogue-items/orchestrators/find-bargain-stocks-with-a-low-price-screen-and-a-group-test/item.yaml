@@ -1,0 +1,24 @@
+slug: find-bargain-stocks-with-a-low-price-screen-and-a-group-test
+name: "Find bargain stocks with a screen and a group test"
+summary: "Paste a table of listed companies. Get the cheap ones that pass five safety tests, their asset floor and the group rules."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: analysis
+level: advanced
+inputs:
+  - {type: source_text, required: true}
+outputs:
+  - {type: plan}
+uses: [enterprising-bargain-screener, asset-floor-estimator, price-versus-value-gap-judge, bargain-group-rules-writer]
+steps:
+  - {uses: enterprising-bargain-screener, note: "A short list from a long table, with the failed test beside each cut."}
+  - {uses: asset-floor-estimator, note: "What each company would fetch if it stopped, set beside the price."}
+  - {uses: price-versus-value-gap-judge, note: "A margin of safety verdict for each survivor."}
+  - {uses: bargain-group-rules-writer, note: "A group plan with size limits, an exit rule and a scorecard to judge the method."}
+origin: rebuilt
+version: 1.0.0
+minds: [benjamin-graham]
+credits:
+  - {title: "The Intelligent Investor (revised edition, with commentary by Jason Zweig)", by: "Benjamin Graham", used: "The order of the steps: screen for cheap stocks that pass five safety tests, find the asset floor for each survivor, judge the gap for each one, set the group rules before you buy"}
+generated_from: intake/intelligent-investor-enterprising-screen/skeleton.yaml

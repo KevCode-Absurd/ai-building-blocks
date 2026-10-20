@@ -1,0 +1,122 @@
+new_slug: power-stage-build-planner
+name: "Power build-order planner"
+summary: "Paste your power test and market facts. Get your stage, the powers still open and a first test."
+job: plan-strategy
+thinking: high
+thinking_why: "It has to judge the stage of a market from thin signs and then choose between powers. A weaker model tends to pick the most famous power instead of the one still open."
+
+headline: "Build the lasting edge your market still lets you build"
+subhead: Paste your power test or scorecard and a few facts about your market. It says whether your market is starting, taking off or settled, which of the seven powers can still be built there, and which product choices would close the others. You get one power to build first and a test for it.
+
+explain: |
+  Not every power can be built at every time. A cornered resource is easiest to win before a market takes off, because nobody knows yet what it is worth. Scale, network and switching costs are won while demand is growing fast. A brand, or a way of working that rivals cannot copy, needs years of steady delivery, so it is built once growth slows. Trying to build a brand in a market that is just forming wastes money, and waiting to lock in suppliers until the market is settled means paying a high price.
+
+  This skill finds your stage from signs you can check, such as how fast demand is growing and who your main rival is. It lists which powers are open, picks the nearest one, and writes a first test with a clear pass line. It also lists three product choices you made early that make some powers easier and others impossible.
+
+when:
+  - You know your edge is thin and want to choose which one to build next.
+  - You are about to spend on brand, scale or a platform and want to know if the timing is right.
+  - You are choosing a product design and want to know which long-run edges it will allow or rule out.
+
+you_give:
+  - A power test or scorecard for your business
+  - How fast demand in your market is growing, and who your rivals are
+  - Your early product, supplier and customer choices that are hard to undo
+you_get:
+  - Your market stage and the signs behind the call
+  - A table of the seven powers, each open, narrowing or closed at your stage
+  - The one power to build first, with a first test, a pass line and a six-month check
+  - Three early choices and the powers each one helps or closes
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your power test or scorecard, then add market growth figures if you have them.
+  - Name the choices that would be costly to undo, such as your main supplier or your price model.
+  - Run the first test it writes and come back with the result.
+  - If the answer is a counter-positioning idea, check it with "Counter-positioning finder" first.
+
+how_it_works:
+  - title: Finds your stage
+    text: Uses the speed of demand growth, the number of serious rivals and who your main competitor is.
+  - title: Marks the open powers
+    text: Cornered resource and counter-positioning early, scale, network and switching costs in take-off, brand and process once the market settles.
+  - title: Names the main rival
+    text: At the start it is often the old way of doing things, then direct competitors, then suppliers and partners.
+  - title: Picks the nearest power
+    text: Chooses the open power your business is closest to, using your scorecard.
+  - title: Writes a first test
+    text: A small, dated test with a number that says build on, change or drop.
+  - title: Lists the locked-in choices
+    text: Shows which early choices help or close each power.
+  - title: Checks itself
+    text: Runs its own checks and names any it missed.
+
+output_shape: |
+  YOUR STAGE
+  <starting / taking off / settled> | Signs: <growth number, rivals, main rival> | Confidence: <low / medium / high>
+
+  POWERS AT THIS STAGE
+  Scale: <open / narrowing / closed> because <>
+  Network: ...
+  Counter-positioning: ...
+  Switching costs: ...
+  Brand: ...
+  Cornered resource: ...
+  Process: ...
+
+  BUILD FIRST
+  Power: <> | Why this one: <> | First test: <> | Pass line: <number> | Check in: <date>
+  If it fails: <what to do instead>
+
+  EARLY CHOICES THAT DECIDE THE REST
+  <choice> helps <power>, closes <power>
+
+  MISSING
+  <facts that would change the stage call>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: Market growth
+    how: Give year-on-year growth in the number of buyers or the spend. The stage call is much firmer with a number.
+  - what: Who the rivals are
+    how: Say whether your main rival is the old way of doing things, a direct competitor or a supplier or partner.
+  - what: Your scorecard
+    how: Paste the held and buildable lists from "Seven powers scorecard builder". It picks the nearest power from them.
+  - what: What you can spend
+    how: Give a budget and a time limit. The first test is sized to it.
+
+judge:
+  - The stage call points at at least two signs from your facts.
+  - Each power is marked open, narrowing or closed, with a reason.
+  - The power chosen is one your scorecard shows you are close to.
+  - The first test has a number as its pass line and a date.
+  - The early choices list names a real choice from your facts.
+
+test:
+  - Give it a market growing at over 40 percent a year and one growing at 2 percent. The stage calls should differ, and so should the open powers.
+  - Give it a plan to build a brand in a market that has just formed. It should say this is early and point to what is open.
+  - Run it twice on the same facts. The power to build first should stay the same.
+
+improve:
+  - Rerun when your market growth number changes by a lot.
+  - Add the result of the first test to the facts and ask for the next one.
+  - Keep a list of early choices and add to it each time you make a hard-to-undo decision.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Judging stage from thin signs and choosing among options is reasoning work any strong chat AI does well."}
+    - {name: "Industry reports or your own sales history", why: "A growth figure makes the stage call a number, not a feeling."}
+  inputs:
+    - "A scorecard from Seven powers scorecard builder"
+    - "Market or category growth figures"
+    - "A list of choices that would be hard to undo"
+
+terms:
+  - term: Stage
+    meaning: Where the market is in its life, either starting, taking off or settled. It decides which powers can still be built.
+  - term: Open power
+    meaning: A power that can still be built at your stage, at a cost you can afford.
+  - term: Locked-in choice
+    meaning: An early decision, such as a supplier, a price model or a customer group, that is expensive to reverse.

@@ -1,0 +1,53 @@
+# Workflow skeleton for Breakthrough Advertising (a book summary) (docs/INTAKE.md). Our words; the source stays in mind-sources/ (local only). A third-party summary, so claims are second-hand.
+id: breakthrough-ads-headline
+source:
+  title: "Breakthrough Advertising (a book summary)"
+  by: "Eugene Schwartz"
+  kind: book
+  rights: ideas-only
+  year: 1966
+minds: [eugene-schwartz]
+workflow:
+  slug: write-a-headline-that-fits-what-your-buyers-know
+  name: "Write a headline that fits what your buyers already know"
+  summary: "Give it your product and buyers. Get their awareness and claim fatigue read, stage-matched headlines, a promise check and a test plan."
+  when: "your headline gets ignored or doubted and you suspect buyers know more, or have heard more, than you assume."
+  job: write-ad-copy
+  level: intermediate
+steps:
+  - name: Read how aware and how jaded your buyers are
+    skill: market-stage-reader
+    job: analysis
+    task: understand-customers
+    from: "Chapters 3 and 4, awareness and market sophistication"
+    method: ["Name the one want the market already has, and the one thing your product does for it", "Place the buyers on the awareness scale, from knows you and wants you down to does not know it has the need", "Count who got there first and which claims, mechanisms and elaborations buyers have already met", "Place the market on the claim-fatigue scale and say what a headline may and may not do at that stage", "Write the stage call as a short brief with the evidence behind each call"]
+    inputs: [product_data, voc_reviews!, competitor_set!]
+    outputs: [brief]
+    note: "The want, the awareness stage, the claim-fatigue stage, and what a headline may say."
+  - name: Write the headlines for that stage
+    skill: ad-headline-writer
+    job: copy
+    task: write-ad-copy
+    from: "Chapters 3 to 5, headline by stage and verbalization"
+    method: ["Take the stage call and list what the headline must include and leave out", "Write one headline per allowed move, such as name the price, extend the claim, show how it works or echo the buyer", "Sharpen each with a number, a sense, a picture or a removed limit, but only from facts supplied", "Check each headline has one job, to get the next line read", "Mark the headline to test first and say why"]
+    inputs: [brief, product_data]
+    outputs: [ad_copy]
+    note: "Reads the stage brief from the step before and writes only the headline moves that stage allows."
+  - name: Check each headline promises something worth reading for
+    skill: headline-promise-checker
+    job: analysis
+    task: check-ads
+    from: "Chapter 3, the headline has one job"
+    method: ["Name the readers the headline should pick out", "Check that it promises a reward worth reading for", "Rewrite weak lines and list the changes"]
+    inputs: [ad_copy, offer!]
+    outputs: [audit_report, hooks]
+    note: "Reads the headlines from the step before."
+  - name: Plan a small test between very different headlines
+    skill: keyed-headline-test-planner
+    job: research
+    task: plan-ad-tests
+    from: "Chapter 11 and the book's focus on measured results"
+    method: ["Sort the headlines by appeal", "Pick two or three that differ in kind", "Key each version and set the winner rule before the test"]
+    inputs: [hooks, offer]
+    outputs: [plan, shortlist]
+    note: "Reads the checked hooks from the step before."

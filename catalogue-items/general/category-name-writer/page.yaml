@@ -1,0 +1,125 @@
+new_slug: category-name-writer
+name: "Category name writer"
+summary: "Paste your chosen category. Get a plain name for it, brand names that can become its word and a category pitch."
+job: plan-strategy
+thinking: medium
+thinking_why: "It writes and scores name options against fixed tests, which needs some creativity but a clear checklist."
+
+headline: "Name the new category and a brand that can become its word"
+subhead: "Paste the category you chose to lead. It writes the category in words a buyer would say, ten brand name options scored on seven tests, a short pitch for the category before the brand, and a plan to get others to use your word."
+
+explain: |
+  When you are first in a new kind of product, you have no direct rival. Buyers need to learn why anyone would buy one at all before they care which brand. So the pitch should sell the category first. The best outcome is a brand name so simple that people use it for the whole category, the way some names became the word for the thing itself.
+
+  This skill takes your top category and writes it as a plain phrase. It then writes ten brand names across three kinds and scores each on seven tests: short, easy to say on the phone, easy to spell, works as a word for the whole category, easy to remember beside rival names, not tied to an old category and clear to a first-time buyer. It writes the category pitch and a plan for getting reviewers, shops and customers to repeat your word. It does not do legal checks. Check the name in a trademark register before you commit.
+
+when:
+  - You have chosen a category to lead and need a name for it.
+  - Your brand name is tied to an older category and won't fit the new one.
+  - Buyers don't know why anyone would want this kind of product.
+  - You want the name to spread without paying for ads.
+
+you_give:
+  - The category you chose, as a ranked list or one line
+  - Your product facts (optional)
+  - Your brand facts, including any name you must keep (optional)
+you_get:
+  - The category in plain words
+  - Ten brand names scored on seven tests
+  - The top three, with a reason for each
+  - A category pitch in three lengths
+  - A plan for getting others to use your word
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste the category you chose, with a line on who it is for.
+  - Say aloud the top three names to a friend over the phone. They should be able to spell them.
+  - Search the top name in your trademark register and in a normal search before you commit.
+  - Take the plan into "Publicity-first launch planner".
+
+how_it_works:
+  - title: Writes the category plainly
+    text: Writes "a ___ for ___" in words a buyer would say aloud.
+  - title: Writes names
+    text: "Ten names in three kinds: short and simple, plain dictionary words, and descriptive with a twist."
+  - title: Scores seven tests
+    text: Short, easy to say, easy to spell, works as a generic, memorable, free of an old category and clear.
+  - title: Picks three
+    text: Keeps the top three and says what each wins and loses.
+  - title: Writes the category pitch
+    text: Sells the kind of product first, in a line, a sentence and a short paragraph.
+  - title: Plans who repeats the word
+    text: Lists reviewers, shops, early buyers and partners, and what to give them.
+  - title: Warns on limits
+    text: Flags that it does no legal or trademark check.
+
+output_shape: |
+  THE CATEGORY IN PLAIN WORDS
+  A <kind> for <who> | A buyer would say: "<phrase>"
+
+  TEN NAMES
+  <name> | Kind: <short, dictionary, descriptive> | Short: <y/n> | Say on phone: <y/n> | Spell: <y/n> | Generic: <y/n> | Memorable: <y/n> | Free of old category: <y/n> | Clear: <y/n> | Score: <n of 7>
+
+  THE TOP THREE
+  1. <name> | Wins: <line> | Loses: <line>
+
+  THE CATEGORY PITCH
+  One line: <...>
+  One sentence: <...>
+  Short paragraph: <...>
+
+  WHO REPEATS THE WORD
+  <person or group> | What you give them | What they say
+
+  BEFORE YOU COMMIT
+  Check a trademark register and a normal search. This skill does not do legal checks.
+
+  MISSING
+  <facts that would change the pick>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: Name you must keep
+    how: If your brand name is fixed, say so. The skill then tests it and writes the category name as a separate word.
+  - what: Markets and languages
+    how: List where you will sell. Names are checked for meaning and sound in each.
+  - what: Names you dislike
+    how: List names to avoid, so options don't repeat what you rejected.
+  - what: Tone
+    how: Say if you want playful or serious. It changes the option mix.
+
+judge:
+  - The category phrase is something a buyer would say aloud.
+  - Each name has all seven tests scored and the total adds up.
+  - At least one name could work as the word for the whole category.
+  - The pitch sells the category first, not the brand.
+  - The skill says it does no legal check.
+
+test:
+  - Say the top three names over the phone to a friend and ask them to write them down.
+  - Ask five buyers what each name makes them think of. Drop any that point to an old category.
+  - Run it twice. The top name should stay close.
+  - Say the pitch's one line to a stranger and ask them to say back what the product is.
+
+improve:
+  - Add your rivals' names so the memorable test compares real ones.
+  - Add the names you already use for older products, so the old category test is exact.
+  - Save the chosen name and category phrase in your brand file.
+  - Run "Positioning statement writer" once the name is set.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Writing and scoring names is text work any strong chat AI does with this skill."}
+    - {name: "A trademark register", why: "Only a register search can say whether the name is free to use."}
+  inputs:
+    - "The category list from First-in-category finder"
+    - "Rival and category names buyers use"
+    - "Words your buyers use in reviews"
+
+terms:
+  - term: Generic
+    meaning: A brand name that people use as the word for the whole kind of product.
+  - term: Category pitch
+    meaning: A short case for why anyone should buy this kind of product at all, before you argue for your brand.

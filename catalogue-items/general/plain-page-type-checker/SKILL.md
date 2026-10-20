@@ -62,7 +62,7 @@ The message. What the type says. The checks with values, verdicts and reasons. W
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - **Design it** with the [Logo strength tester](https://useaiblocks.com/skills/logo-strength-tester). It takes the design direction.
 - **Write the landing page** with the [Shopify landing page builder](https://useaiblocks.com/skills/shopify-landing-page-builder). It takes the design direction.
-- **Tell it as a story** with the [Page-turner scene drafter](https://useaiblocks.com/skills/page-turner-scene-drafter). It takes the audit report.
+- **Tell it as a story** with the [Hidden theme finder](https://useaiblocks.com/skills/hidden-theme-finder). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

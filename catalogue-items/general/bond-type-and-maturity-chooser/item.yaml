@@ -1,0 +1,19 @@
+slug: bond-type-and-maturity-chooser
+name: "Bond type and maturity chooser"
+summary: "Paste your split and tax rate. Get the bond kind that fits, taxable or tax-free, short or long, with the sums."
+category: general
+type: skill
+role: make
+job: analysis
+level: intermediate
+inputs:
+  - {type: plan, required: true}
+  - {type: question, required: false}
+outputs:
+  - {type: audit_report}
+origin: rebuilt
+version: 1.0.0
+minds: [benjamin-graham]
+credits:
+  - {title: "The Intelligent Investor (revised edition, 2003)", by: "Benjamin Graham, with commentary by Jason Zweig", used: "The bond half of a plain portfolio: taxable against tax-free as a sum, short against long by price swing, the ranking of safe kinds, why high-yield bonds are kept out, bank deposits in place of short bonds, and call dates"}
+  - {title: "Security Analysis: Principles and Technique, second edition (1940)", by: "Benjamin Graham and David L. Dodd", used: "The point that a bond bought above its call price can fall back to it"}

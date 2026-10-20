@@ -5,7 +5,7 @@ description: Use when someone wants a steady writing habit. Builds a daily sessi
 
 # Daily writing session planner
 
-Writing plans fail when the time is vague, the session never ends and every draft is judged as it is made. This skill builds a daily session with one place, a fixed end, a loose first draft and a rewrite on a later day. It also sets up an idea file and an hours log so you can see progress.
+Writing plans fail when the time is vague, the session never ends and every draft is judged as it is made. This skill builds a daily session with one place, a fixed end, a loose first draft and a rewrite on a later day. It also sets up an idea file and an hours log so you can see progress. To size one long first draft to a finish date, use "Daily word quota planner".
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
@@ -49,7 +49,7 @@ A one-page plan. The session (place, start, end, rule). The two passes (draft da
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Tell it as a story** with the [Page-pull scene checker](https://useaiblocks.com/skills/page-pull-scene-checker). It takes the draft and plan.
+- **Tell it as a story** with the [First reader question writer](https://useaiblocks.com/skills/first-reader-question-writer). It takes the draft and plan.
 - **Design it** with the [Error message rewriter](https://useaiblocks.com/skills/error-message-rewriter). It takes the draft.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

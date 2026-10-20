@@ -1,0 +1,123 @@
+new_slug: pivot-or-persevere-decider
+name: Pivot or persevere decider
+summary: Paste your progress and customer notes. Get a keep-going or change-course call, the type of change and a review date.
+job: plan-strategy
+thinking: high
+thinking_why: It weighs mixed evidence for a costly decision and must separate signal from hope.
+headline: Pivot or persevere decider
+subhead: Paste your progress reading against the targets, and your customer notes if you have them. It counts the signs of being stuck, works out how many test cycles you can still afford and names the kind of change that fits. You get a call and a dated review.
+explain: |-
+  This is the call most teams put off. The numbers are mixed, someone is always sure the next release will fix it, and changing course feels like admitting failure. Many wish afterwards they had decided sooner.
+
+  This skill sets progress against the milestones you wrote, over several groups of customers. It counts six signs of being stuck, works out how many more tests you can afford, and states a call with the facts for and against. If the call is to change course, it names which of ten kinds of change fits what customers said, what you keep, and the new guess to test. It gives a judgment, not a formula, and a date to review it.
+when:
+  - Your changes keep failing to move the key numbers.
+  - Your team is split between giving up and one more try.
+  - You are asked to justify another quarter of money or time.
+you_give:
+  - Your progress against targets, by customer group
+  - Notes from customers, including those who left (optional)
+  - Your money, time and test rhythm (optional)
+you_get:
+  - A call to keep going or change course, with facts for and against
+  - A count of stuck signs
+  - The kind of change that fits
+  - A new guess, a test and a review date
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste the Cohort funnel reader output, or your own table of rates against targets.
+  - Add notes from customers, especially those who left.
+  - Hold the review on the date it gives, with the people it lists.
+how_it_works:
+  - title: Gathers the evidence
+    text: Milestones, results and customer notes.
+  - title: Reads the trend
+    text: Over several groups, not one period.
+  - title: Counts stuck signs
+    text: Six yes or no questions with evidence.
+  - title: Does the runway sum
+    text: In test cycles left.
+  - title: Makes the call
+    text: With facts for, against and what would change it.
+  - title: Names the pivot
+    text: One of ten kinds, with what to keep.
+  - title: Sets the next review
+    text: Date, people and what each brings.
+output_shape: |-
+  EVIDENCE
+  <milestone> | predicted <x> | actual <x>
+
+  TREND
+  <rate>: start <a> | now <b> | target <c> | direction <up | flat | down>
+
+  STUCK SIGNS
+  <sign>: <yes | no> because <evidence>
+  Count: <n> of 6
+
+  RUNWAY
+  <money or time left> / <spend per month> / <months per cycle> = <cycles>
+  Target reached on <date> at current pace
+
+  CALL
+  <PERSEVERE | PIVOT>
+  For: <three facts>
+  Against: <one fact>
+  Would change my mind: <x>
+
+  IF PIVOT
+  Kind: <type> | evidence <x>
+  Keep: <x> | Drop: <x>
+  New guess: <sentence with number>
+  Smallest test: <x>
+
+  NEXT REVIEW
+  <date> | <attendees and what each brings>
+
+  MISSING
+  <gaps>
+
+  CHECKS MISSED
+  <lines or none>
+tweaks:
+  - what: Customer notes
+    how: Notes from people who left often say more than the numbers. Paste them.
+  - what: Money and time left
+    how: With these it counts test cycles. Without them it only reads the trend.
+  - what: How long a test cycle takes
+    how: Be honest. A long cycle means fewer chances to be wrong.
+  - what: Your milestones
+    how: Dated predictions let it measure the gap between hope and result.
+judge:
+  - The call is one line, with facts for and against.
+  - It uses several groups, not one good week.
+  - Each stuck sign has evidence behind it.
+  - The runway is counted in test cycles.
+  - A pivot names one kind and what you keep.
+test:
+  - Run it on a past decision whose outcome you know. See if the call would have been right.
+  - Run it twice on the same facts. The call should not change.
+  - Give the same facts to a teammate and compare calls before reading the skill's.
+  - At the review date, check whether the new guess was tested as planned.
+improve:
+  - Add your own stuck signs to step 3 from past stalled projects.
+  - Add the money and time rules your board uses to step 4.
+  - Keep a log of each call and what happened.
+  - Pair it with the Smallest test picker for the pivot's first test.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: Weighing evidence and writing a call is text work.
+    - name: A shared document
+      why: Keeps the evidence, the call and the review date where the team can see them.
+  inputs:
+    - The progress reading from the Cohort funnel reader
+    - Notes from customers who left
+    - Your money and time left
+    - Your milestone predictions
+terms:
+  - term: Pivot
+    meaning: A planned change to the product, customer, price or growth route that tests a new guess.
+  - term: Persevere
+    meaning: Keep going on the same plan because the rates are moving toward the target.
+  - term: Runway
+    meaning: How many more times you can test a guess before money or time run out.

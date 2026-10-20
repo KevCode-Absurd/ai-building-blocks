@@ -5,7 +5,7 @@ description: Use when you think you have a moat but cannot say what stops a riva
 
 # Business power tester
 
-A lasting edge needs two things: a benefit that rivals do not have, and a barrier that keeps them from taking it. This skill tests both, checks that the benefit is large enough to matter, and matches it to one of seven named powers. It does not give investment advice. If you are considering a new market, use "Second business picker" after this.
+A lasting edge needs two things: a benefit that rivals do not have, and a barrier that keeps them from taking it. This skill tests both, checks that the benefit is large enough to matter, and matches it to one of seven named powers. It does not give investment advice. To design a model a market leader would lose money by copying, use "Counter-positioning finder". If you are considering a new market, use "Second business picker" after this.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start

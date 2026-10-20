@@ -1,0 +1,117 @@
+new_slug: bond-type-and-maturity-chooser
+name: "Bond type and maturity chooser"
+summary: "Paste your split and tax rate. Get the bond kind that fits, taxable or tax-free, short or long, with the sums."
+job: money-and-investing
+thinking: medium
+thinking_why: "It does a few small sums and ranks choices by safety. The care is in not letting a higher yield override the safety order."
+
+headline: "Pick the kind of bond that fits you, and see the sum that proves it"
+subhead: "Paste your stock and bond split, your tax rate and how much price swing you can stand. It works out whether a taxable or a tax-free bond pays more after tax, picks short or long by how far the price can move, ranks the safe kinds first and keeps high-yield bonds out. A method of analysis, not personal financial advice."
+
+explain: |
+  The bond half of a plan looks dull and hides two traps. The first is tax: a higher headline yield can pay less after tax. The second is price: a long bond that is perfectly safe to be repaid can still fall a long way in price when interest rates rise.
+
+  This skill turns both into sums. It finds the tax rate at which a tax-free bond beats a taxable one, and it shows how far a bond of each length could move in price if rates change by a stated amount. It then ranks the safe kinds first, keeps high-yield bonds out of a plain plan, and notes where a bank deposit can stand in for a short bond. It also reminds you to check the call date. It names no bond or fund.
+
+when:
+  - You have set a stock and bond split and now need to say what kind of bonds the bond part holds.
+  - A bond pays more than the rest and you want to know what you give up for it.
+  - You are comparing a tax-free bond with a taxable one.
+
+you_give:
+  - Your stock and bond split, and the amount in bonds
+  - Your top tax rate on interest
+  - How far you could watch the bond part fall in price without selling
+  - Yields on the kinds you are comparing, if you know them
+
+you_get:
+  - A break-even tax rate and a taxable or tax-free pick
+  - A short or long pick, with the price swing at a stated change in rates
+  - A ranked list of safe kinds and a list of kinds to keep out
+  - Where a bank deposit can stand in
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your split from "Stock and bond split planner" and your tax rate.
+  - Give the yields you have seen. Mark any you are unsure of.
+  - Take the ranked list to a licensed adviser or your bank if you want to buy.
+
+how_it_works:
+  - title: Finds the tax break-even
+    text: Divides the tax-free yield by the taxable yield and takes it from one to get the tax rate at which they pay the same.
+  - title: Sets the length
+    text: Uses a rough price-swing sum to match the length of the bond to how much movement you can stand.
+  - title: Ranks by safety
+    text: Puts government, government-backed, high-grade tax-free and high-grade company bonds in order and gives the reason for the order.
+  - title: Keeps weak bonds out
+    text: Says why higher yield from weaker borrowers is the wrong trade for a plain plan.
+  - title: Checks the call date
+    text: Flags a bond that can be paid off early at less than you paid.
+
+output_shape: |
+  TAX SUM
+  Taxable <a>% | Tax-free <b>% | Break-even tax rate <c>% | Your rate <d>% | Pick: <taxable / tax-free>
+
+  LENGTH
+  Price swing you can stand: <n>% | Rate change tested: <x> points
+  Short (about <n> years): swing about <n>% | Long (about <n> years): swing about <n>% | Pick: <short / mixed / long>
+
+  RANKED FOR SAFETY
+  1 <kind> because <...> | 2 ... | 3 ...
+
+  KEEP OUT
+  <kind> because <...>
+
+  DEPOSIT IN PLACE OF A SHORT BOND
+  <when it fits, when it does not>
+
+  CALL DATE CHECK
+  <how to check, the risk>
+
+  MISSING
+  <list>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: A different change in rates
+    how: Say how far rates could move in your view and it reruns the price-swing sums.
+  - what: Several accounts
+    how: Say which account holds the bonds. Tax-sheltered accounts change the tax sum.
+  - what: Your own list of kinds
+    how: Paste the kinds you are being offered and it ranks those.
+
+judge:
+  - The tax sum shows both yields, the break-even and the pick.
+  - The length pick comes from a stated price-swing sum.
+  - The ranking puts safety before yield and gives a reason for each place.
+  - High-yield kinds are kept out with a reason.
+  - No bond, fund or company is named.
+
+test:
+  - Give it a 12% tax rate and a break-even of 30%. It should pick taxable.
+  - Ask it to rank a high-yield bond first. It should refuse and say why.
+  - Leave out the tax rate. It should show the break-even and mark the pick MISSING.
+  - Run it twice on the same facts. The sums should match.
+
+improve:
+  - Rerun it when rates move a lot or your tax rate changes.
+  - Keep a one-line note of each bond kind you hold and why.
+  - Pair it with "Investing policy page writer" so the bond choice goes on your page.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "A few small sums and a ranked list are text work any strong chat AI does well with this skill."}
+    - {name: "A bank or broker rate page", why: "Current yields come from there, and the skill works better with real figures."}
+  inputs:
+    - "Your top tax rate on interest"
+    - "Yields on the kinds you are comparing"
+
+terms:
+  - term: Maturity
+    meaning: The date a bond is paid back. A short bond is paid back soon, a long one in many years.
+  - term: Tax-free bond
+    meaning: A bond whose interest is not taxed, often issued by a state or town, that usually pays a lower rate than a taxable one.
+  - term: Call date
+    meaning: A date from which the borrower may pay a bond off early, usually at a set price.

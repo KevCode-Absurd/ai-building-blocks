@@ -1,0 +1,110 @@
+new_slug: job-rival-mapper
+name: Job rival mapper
+summary: Paste your job spec. Get every rival, including doing nothing, each with a short resume and what must be fired.
+job: understand-customers
+thinking: medium
+thinking_why: It widens a list of rivals and writes short comparisons from a spec. A mid-range model does this well if the spec is clear.
+headline: See who you really compete with for your customer's job
+subhead: Paste your job spec. It lists everything your customer could reach for, including doing nothing, writes a short resume for each and names what they have to stop doing to choose you.
+explain: |-
+  Your customer does not think in categories. In the moment they need something done, they pick from whatever is in reach: a rival brand, a product from another aisle, a friend, a homemade fix or nothing at all. If you compare yourself only with the usual names, you miss the rivals that matter most.
+
+  This skill works from one job spec. It lists rivals in five groups, writes a resume for each (how it does the job, where it fails, why people still pick it) and rates all of them, you included, on the practical, social and emotional sides. Then it names what must be fired for someone to hire you.
+when:
+  - You track competitors by category and sales still surprise you.
+  - Many people with the problem buy nothing, and you do not know why.
+  - You want to know what a customer gives up to switch to you.
+you_give:
+  - A job spec for one circumstance
+  - Your known rivals (optional)
+  - Reviews or notes that mention what else people tried (optional)
+you_get:
+  - At least eight rivals in five groups, including doing nothing
+  - A three-line resume and a rating on three sides for each
+  - What the customer must fire to choose you
+  - A note on the people who do nothing, and why
+  - A five-line read and the first rival to study
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste the job spec. Add any rivals and customer words you have.
+  - Check the rival list against what customers really said.
+  - Take the table to "Competitor white space mapper" to find where nobody is strong.
+how_it_works:
+  - title: Reads the spec
+    text: Keeps every rival tied to this person in this moment.
+  - title: Widens the list
+    text: "Five groups: direct rivals, other categories, services, homemade fixes and doing nothing."
+  - title: Writes resumes
+    text: How each does the job, where it fails and why people still pick it.
+  - title: Rates on three sides
+    text: Practical, social and emotional, for every rival and for you, from evidence.
+  - title: Names what is fired
+    text: The habit, belief or contract the customer must drop to switch.
+  - title: Counts non-buyers
+    text: Who does nothing and why, which is often the biggest group.
+  - title: Checks itself
+    text: Runs its own checks and names any it missed.
+output_shape: |-
+  JOB
+  When <situation>, I want to <progress>, so I can <result>.
+
+  RIVALS
+  Group | Name | From: <customers or guess>
+    Resume: Does the job by <how> | Fails because <where> | Picked because <why>
+    Ratings: practical <s/m/w> | social <s/m/w> | emotional <s/m/w>
+    Must be fired: <what>
+  (You are rated the same way, in the last row.)
+
+  DOING NOTHING
+  <who, why, rough size or MISSING>
+
+  ODD ONES OUT
+  <rivals from other aisles or industries>
+
+  THE READ
+  <five lines or fewer>
+
+  MISSING
+  <gaps>
+
+  CHECKS MISSED
+  <one line per check missed, or none>
+tweaks:
+  - what: The spec
+    how: A clear circumstance gives a sharper rival list. A vague spec gives the usual names.
+  - what: What customers said
+    how: Paste lines where people mention what else they tried. Those are the best source of rivals.
+  - what: Your own ratings
+    how: Give it facts about your product so your rating rests on evidence.
+judge:
+  - The list reaches outside your category.
+  - Doing nothing and a homemade fix are on it.
+  - Each rival has a resume and a fired item.
+  - Your ratings follow the same rule as everyone else's.
+  - Guesses are marked as guesses.
+test:
+  - Give it a job spec and your usual competitor list. It should add at least three names you did not give it.
+  - Ask it to rate you. It should lower any rating you give without evidence.
+  - Give it a job where nobody buys anything today. It should say doing nothing is the main rival.
+improve:
+  - Add new customer quotes about what else they tried and run it again.
+  - Redo it each year. Odd rivals move fast.
+  - Run it once per job spec, not once for the whole business.
+  - Pair it with "Job experience mapper" to see which moments rivals could copy.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: Listing rivals and writing short resumes is text work any strong chat AI does with this skill.
+    - name: A spreadsheet
+      why: The rival table is easier to sort and share in a spreadsheet.
+  inputs:
+    - A job spec from the Job spec writer
+    - Reviews that name other things people used
+    - Your price list and feature list
+terms:
+  - term: Resume
+    meaning: A short account of how a rival does the job, where it fails and why someone picks it.
+  - term: Fired
+    meaning: What a customer must stop using or doing to start using something new.
+  - term: Nonconsumption
+    meaning: Having the problem and buying nothing for it.

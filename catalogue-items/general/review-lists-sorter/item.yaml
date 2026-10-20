@@ -1,0 +1,18 @@
+slug: review-lists-sorter
+name: "Review lists sorter"
+summary: "Paste everyone's do-again and never-again lists. Get themes, who raised them and what your numbers show."
+category: general
+type: skill
+role: check
+job: analysis
+level: intermediate
+inputs:
+  - {type: feedback_notes, required: true}
+  - {type: plan, required: false}
+outputs:
+  - {type: audit_report}
+origin: rebuilt
+version: 1.0.0
+minds: [ed-catmull]
+credits:
+  - {title: "Creativity, Inc.", by: "Ed Catmull with Amy Wallace, Random House, 2014", used: "Two lists of five things to do again and not do again, neutral numbers as one way of seeing, the warning that first conclusions about success and failure are often wrong, and the limit of what can be measured"}

@@ -1,0 +1,19 @@
+slug: split-run-result-reader
+name: "Split-run result reader"
+summary: "Paste counts for two versions. Get the percentage gap, a luck check, a keep, rerun or stop call and a lesson."
+category: general
+type: skill
+role: check
+job: analysis
+level: intermediate
+inputs:
+  - {type: performance_sheet, required: true}
+  - {type: plan, required: false}
+outputs:
+  - {type: audit_report}
+  - {type: lessons_register}
+origin: rebuilt
+version: 1.0.0
+minds: [john-caples]
+credits:
+  - {title: "Tested Advertising Methods, fifth edition (1997)", by: "John Caples, revised by Fred E. Hahn", used: "Stating a split-run gap as a percentage, trusting replies as an early guide to sales except when a free item draws crowds, judging by cost per reply, repeating a test to double-check, and keeping a record card for every ad. The noise check in step 3 is ours."}

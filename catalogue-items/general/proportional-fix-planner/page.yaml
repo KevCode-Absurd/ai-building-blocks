@@ -1,0 +1,109 @@
+new_slug: proportional-fix-planner
+name: Proportional fix planner
+summary: Paste a chain of whys. Get a fix at each level, sized to the pain, with an owner, date and check.
+job: lead-people
+thinking: medium
+thinking_why: It sizes fixes against the pain using fixed rules, but needs care to keep the deep fixes from being dropped.
+headline: Proportional fix planner
+subhead: Paste the chain of whys for a failure, and how much it hurt if you know. It rates the pain, gives each level one fix sized to it, and adds an owner, a date and a check. You get a fix table and a plain-words write-up.
+explain: |-
+  After a failure, teams tend to do one of two things. They patch what they saw, and the same problem returns in a month. Or they plan a big rebuild that costs more than the failure did.
+
+  This skill spends in proportion. It rates how much the problem hurt, then gives every level of the chain of whys one fix, from repairing the symptom today to changing how people are taught or how work is set up. Small pain gets a small fix at each level, with the first hour of the deep one. If the problem comes back, the next review goes deeper. Every fix gets one owner, one date and a check.
+when:
+  - You have a root cause and need to decide what to fix and how much to spend.
+  - Someone has asked for a full rebuild after a small failure.
+  - Your fixes keep stopping at the surface.
+you_give:
+  - The chain of whys, from the Root cause finder or your own
+  - How much it hurt (optional)
+  - Your review plan (optional)
+you_get:
+  - One fix at each level of the chain
+  - Sizes matched to the pain
+  - An owner, a date and a check for each fix
+  - A plain-words write-up for the team
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your chain of whys and say how much the problem cost.
+  - Give each fix to the named owner and put the dates in the calendar.
+  - Send the write-up to everyone who was in the review.
+how_it_works:
+  - title: Lays out the chain
+    text: And rewrites any blame as a set-up fact.
+  - title: Rates the pain
+    text: Small, medium or large, with an effort total.
+  - title: Writes a fix per level
+    text: Symptom, mistake-proofing, and set-up.
+  - title: Sizes the fixes
+    text: Every level gets something.
+  - title: Assigns each fix
+    text: Owner, date, done-when and check.
+  - title: Sets the recurrence rule
+    text: Go one level deeper if it returns.
+  - title: Writes it up
+    text: In plain words, for everyone.
+output_shape: |-
+  CHAIN
+  1. <why> -> <answer>
+  ...
+
+  PAIN
+  <small | medium | large> because <facts>
+  Total effort: <hours or days>
+
+  FIXES
+  Level | Finding | Fix | Size | Owner | Date | Done when | Check
+
+  IF IT COMES BACK
+  <recurrence rule>
+
+  WRITE-UP
+  <what happened, the chain, the fixes, what we learned>
+
+  MISSING
+  <gaps>
+
+  CHECKS MISSED
+  <lines or none>
+tweaks:
+  - what: How much it hurt
+    how: Give customers affected, hours lost and cost. Without them it can only use a band.
+  - what: Hours available
+    how: Say how much time the team can spend. The sizes fit that.
+  - what: Who owns what
+    how: Name people. One owner per fix keeps fixes from stalling.
+  - what: How often it has happened
+    how: A repeat failure gets more depth at the deep levels.
+judge:
+  - Each level of the chain has a fix.
+  - No fix is a rebuild for a small problem.
+  - The deep levels are not empty.
+  - Each fix has one owner, a date and a check.
+  - The write-up names no person as the cause.
+test:
+  - Run it on a past failure and compare with what you did. Did the deep levels get a fix?
+  - Ask owners if their fix is clear enough to start tomorrow.
+  - Run it with a small and a large pain band and see if the sizes change sensibly.
+  - Check on the dates whether the problem has returned.
+improve:
+  - Add your usual levels (customer, process, training, management) to step 3.
+  - Add your effort limits per pain band to step 2.
+  - Keep a log of fixes and whether the problem returned.
+  - Pair it with the Five whys session planner and the Root cause finder.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: Pairing causes with fixes and writing the review is text work.
+    - name: A shared task list
+      why: Keeps owners, dates and checks visible until they are done.
+  inputs:
+    - The chain of whys with evidence
+    - Figures on customers affected and time lost
+    - The names of owners available
+    - Notes from earlier reviews of the same problem
+terms:
+  - term: Proportional investment
+    meaning: Spending more effort on a problem the more it hurts, and always starting with a small step.
+  - term: Recurrence rule
+    meaning: What you do if the same problem comes back after a fix.

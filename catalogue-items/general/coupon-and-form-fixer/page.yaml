@@ -1,0 +1,92 @@
+new_slug: coupon-and-form-fixer
+name: Coupon and form fixer
+summary: Paste your coupon or form and offer. Get a version that sells the offer and asks only what you need.
+job: read-ad-results
+thinking: low
+thinking_why: It applies a fixed list of checks and writes from your offer terms.
+headline: Coupon and form fixer
+subhead: "Give it your reply coupon or form and the offer. It checks the form against ten rules, rewrites the text so the offer is sold inside it, and cuts or adds fields to match what you want: more replies or better ones. You get a form ready to run with a code."
+explain: |-
+  The coupon or form is the last thing a reader sees before they reply. If it only says 'name, address, send', it has stopped selling at the moment it matters most.
+
+  This skill checks the form against a list of ten rules. A good one restates the offer, says what the person gets before what they must do, gives a reason to reply now, lists the benefits, offers a choice, and is easy to fill in. It also sets the fields to match your goal. To raise replies, it asks for as little as possible. To cut weak replies, it adds a question or two.
+when:
+  - Your form is a bare box with a button.
+  - People start the form and do not finish it.
+  - You get replies with missing or useless details.
+you_give:
+  - Your current coupon or form text and fields
+  - The offer with its exact terms
+  - Whether you want more replies or better ones
+you_get:
+  - A rewritten coupon or form
+  - "A field table: keep, drop or add, with the reason"
+  - A code to place on it for tracking
+  - A list of rules it passed and failed
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your form as it is, with the fields.
+  - Say whether you want more replies or better ones.
+  - Add the code to the form and run it.
+how_it_works:
+  - title: Ten rules
+    text: Checks the form against ten rules for selling inside a coupon.
+  - title: Sells the offer
+    text: Restates the offer and lists what the person gets.
+  - title: Fields
+    text: Keeps only the fields you will use, adding a question if you want to cut weak replies.
+  - title: Easy to fill
+    text: Checks room to write, field count and the way to send.
+  - title: Code
+    text: Adds a code so you can trace each reply.
+output_shape: |-
+  RULES
+  <rule> | pass or fail
+
+  REWRITTEN FORM
+  <headline of the form>
+  <what you get>
+  <what you do>
+  <reason to reply now, if real>
+  <fields>
+  <how to send>
+  <code>
+
+  FIELD TABLE
+  <field> | keep, drop or add | why
+
+  MISSING
+  <what is needed>
+
+  CHECKS MISSED
+  <one line each, or none>
+tweaks:
+  - what: Direction
+    how: Say more replies or better ones. It sets the field count.
+  - what: Channel
+    how: Say if the form is printed, on a page or in an email. Room to write and send steps change.
+judge:
+  - The form names what the person gets before what they must do.
+  - Every field has a reason.
+  - A reason to reply now appears only if it is real.
+  - A code is on the form.
+test:
+  - Ask someone to fill in the form and time them.
+  - Check each field against how you use it.
+  - Run old and new forms with different codes.
+improve:
+  - Remove any field nobody has used in the last 50 replies.
+  - Add a choice, such as two versions of the free item.
+  - Move to a shorter form for mobile.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: The work is sorting and writing from facts you supply, which any strong chat AI does well with this skill.
+  inputs:
+    - The offer with exact terms
+    - Past replies, to see which fields you used
+terms:
+  - term: Coupon
+    meaning: The part of an ad or page where the reader replies.
+  - term: Key code
+    meaning: A mark on each form or ad that shows which one a reply came from.

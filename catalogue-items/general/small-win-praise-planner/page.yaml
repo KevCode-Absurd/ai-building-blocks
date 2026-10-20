@@ -1,0 +1,131 @@
+new_slug: small-win-praise-planner
+name: "Small win praise planner"
+summary: "Describe the change you want from someone. Get what counts as a win, the exact praise to give and when."
+job: lead-people
+thinking: low
+thinking_why: "The steps are fixed. It mostly turns a goal into stages and writes honest, specific lines."
+
+headline: "Small win praise planner"
+subhead: "Give it the change you want from someone. It splits the change into stages, writes the specific praise for each, and picks when, where and how to say it. You get a short plan for the weeks after the hard talk."
+
+explain: |
+  After a hard conversation, most managers go quiet until the next mistake. The person sees only the criticism, and every small step in the right direction goes unnoticed. People repeat what gets noticed, and a step that nobody sees tends to fade.
+
+  This skill plans the follow-up. It splits the change into a first sign, a steady habit and the full change. For each stage it writes praise that names the exact thing and what it did for others. Each line has a detail only someone paying attention would know. It picks the setting, plans what to say after a slip, and sets a time to taper off. Praise you do not mean is struck out. It would sound false.
+
+when:
+  - "You have just asked someone to change and want it to stick."
+  - "A new hire is improving and nobody has told them."
+  - "You notice you only speak up when something goes wrong."
+
+you_give:
+  - "The change you want, and who from"
+  - "Notes on the person, such as the output of \"Behaviour and fix notes writer\" (optional)"
+  - "How and when you see their work"
+  - "Whether they like praise in private or in public (optional)"
+you_get:
+  - "Three stages of the change, from first sign to full habit"
+  - "Praise lines for each stage, with the detail to name"
+  - "When and where to say them, and what to do after a slip"
+  - "A date to taper and review"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Describe the change and how you will see their work."
+  - "Add anything you know about how they like praise."
+  - "Put the check dates in your calendar."
+  - "After the first win, say the line within a day."
+
+how_it_works:
+  - title: "Splits the change"
+    text: "Three stages: first sign, steady habit, full change."
+  - title: "Plans how you will notice"
+    text: "Where and when you will see each stage."
+  - title: "Writes the praise"
+    text: "Names the exact thing, its effect and one detail."
+  - title: "Chooses the setting"
+    text: "Private or public, and who is in the room."
+  - title: "Keeps the good name"
+    text: "A line that ties the praise to the quality they are growing."
+  - title: "Plans for a slip"
+    text: "What to say and not say when it slides back."
+  - title: "Tapers"
+    text: "When to move from frequent praise to occasional, and a review date."
+  - title: "Checks the plan"
+    text: "Runs its own checks and names any it missed."
+
+output_shape: |
+  THE CHANGE
+  <what you want, and from whom>
+
+  THE THREE STAGES
+  1. First sign: <what you will see>
+  2. Steady habit: <what you will see>
+  3. Full change: <what you will see>
+
+  HOW YOU WILL NOTICE
+  <where, when, how often>
+
+  THE PRAISE
+  Stage 1: <line> | Detail: <what only you would notice>
+  Stage 2: ...
+  Stage 3: ...
+
+  WHERE AND HOW
+  <private or public, written or spoken>
+
+  IF THEY SLIP
+  <what to say, what not to say>
+
+  TAPER AND REVIEW
+  <when, and what changes>
+
+  MISSING
+  <what you do not know>
+
+  CHECKS MISSED
+  <one line per check missed, or none>
+
+tweaks:
+  - what: "The change"
+    how: "Be specific about the first sign. \"Starts the report earlier\" is easier to spot than \"is more organised\"."
+  - what: "How they like praise"
+    how: "Say if they dislike public praise. The plan keeps it private."
+  - what: "How often you see their work"
+    how: "A daily view needs a different plan from a monthly one."
+  - what: "The good name"
+    how: "Tell it a true quality you want to name. It builds the lines around it."
+
+judge:
+  - "Each praise line names the exact thing, not just \"good job\"."
+  - "Each has a detail only a person paying attention would know."
+  - "You would mean every line."
+  - "The first sign is something you will really notice."
+  - "There is a kind plan for a slip."
+
+test:
+  - "Use the first line within a day of the first win and watch the reaction."
+  - "Ask a colleague if the lines sound like you."
+  - "Run it twice. The stages should stay close."
+  - "After a month, see whether the behaviour held."
+
+improve:
+  - "Add the names of the things you tend to notice, so the details fit."
+  - "Add a short list of private and public ways your team likes to be thanked."
+  - "Save the praise lines that worked, with the person."
+  - "Pair it with \"Recognition plan designer\" for a team-wide plan."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Writing specific, sincere lines from a short brief is text work any strong chat AI does well."}
+    - {name: "Your calendar", why: "Set the checks as repeating reminders so the praise does not lapse."}
+  inputs:
+    - "A short log of what you noticed each week"
+    - "The person's manager or peers' view"
+    - "Past thanks that landed well"
+
+terms:
+  - term: "Small win"
+    meaning: "A step in the right direction, even before the full change."
+  - term: "Taper"
+    meaning: "To praise less often once the habit holds."

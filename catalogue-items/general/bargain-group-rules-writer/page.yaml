@@ -1,0 +1,115 @@
+new_slug: bargain-group-rules-writer
+name: "Bargain group rules writer"
+summary: "Paste your bargain candidates. Get group size, caps, an exit rule and a scorecard that judges the method, not one stock."
+job: money-and-investing
+thinking: medium
+thinking_why: "It sets fixed rules and a scorecard from a short list. The care is in making the rules before any purchase."
+
+headline: "Set the rules for a group of cheap stocks before you buy any of them"
+subhead: "Paste the candidates that passed your tests and what you would put in. It sets how many to hold, a cap for any one name, a gain target and time limit, and a scorecard that judges the whole group against a plain fund. A method of analysis, not personal financial advice."
+
+explain: |
+  A margin of safety does not promise that any one stock works out. It promises that a group bought at real bargains does better than it does worse, the way an insurer cannot predict one death but can price a thousand.
+
+  This skill turns that into rules. It sets a group big enough that one failure cannot sink it, caps any one name, and fixes a gain target and a time limit before you buy, so that you do not make them up after a rise or a fall. It writes what you will do if the facts change. And it sets a scorecard: the group against a plain fund over the same dates, after costs and tax, with a simple pre-set test of whether the extra work paid. If it did not, the answer is to go back to the plain path. It names no company to buy.
+
+when:
+  - You have bargain candidates and are about to put money in.
+  - You bought a few cheap stocks and do not know how to judge the method.
+  - You want to know if the research you do beats a plain fund or only feels good.
+
+you_give:
+  - The candidates that passed your tests, with their margin of safety
+  - The money you would put in the group
+  - A plain fund to compare against, described, not named
+  - Your tax rate and trading costs, if you know them
+
+you_get:
+  - A group size and a cap for any one name
+  - A gain target, a time limit and an if-the-facts-change rule
+  - A scorecard with the dates and the test fixed in advance
+  - A decision rule for going back to the plain path
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste the candidates and the amount you plan to use.
+  - Choose the plain fund you will compare against, by type, and the dates.
+  - Write the rules down and keep them with your investing page.
+
+how_it_works:
+  - title: Sizes the group
+    text: Picks enough names that one failure cannot sink the group, and caps any one name.
+  - title: Sets the exit in advance
+    text: Fixes a gain target and a time limit before purchase, and a rule for when the facts change.
+  - title: Counts the costs
+    text: Puts trading cost and tax into the scorecard so the group is judged on what you keep.
+  - title: Sets the scorecard
+    text: Names the dates, the comparison and the result that would count as success or failure.
+  - title: Sets the way back
+    text: States what result sends you to the plain path.
+
+output_shape: |
+  GROUP
+  Candidates <n> | Group size <n> | Money in the group <n>
+  Cap for any one name <n>% | Cap for any one industry <n>%
+
+  EXIT RULES (set before buying)
+  Gain target <n>% | Time limit <n> years | If the facts change: <rule>
+
+  COSTS AND TAX
+  Trading cost per move <...> | Tax on gain <...> | Net return needed to beat the fund: <...>
+
+  SCORECARD
+  Start date <...> | Review dates <...> | Compare with: <plain fund type>
+  Success: group beats the fund by at least <n> points a year after costs and tax
+  Failure: group trails the fund, or beats it by less than <n> points
+
+  IF THE METHOD FAILS
+  <go back to the plain path / extend one review / change the screen> because <...>
+
+  MISSING
+  <list>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: Group size
+    how: Say how many names you can study. The skill sets the group as large as you can follow, with a floor.
+  - what: Gain target
+    how: Pick your own target and time limit. Both must be set before you buy.
+  - what: Review dates
+    how: Choose yearly or every two years. More frequent reviews tempt you to act on noise.
+
+judge:
+  - The group is large enough to pass the one-failure test.
+  - A cap is set for names and for industries.
+  - Gain target and time limit are set before purchase.
+  - The scorecard names dates, comparison, costs and a pass mark.
+  - Nothing names a company or fund to buy.
+
+test:
+  - Give it five candidates. It should say the group is too small and set a minimum.
+  - Ask it to set the exit after you see how the stocks do. It should refuse and explain why.
+  - Leave out costs and tax. It should mark the net test MISSING and show the gross one.
+  - Run it twice on the same inputs. The rules should match.
+
+improve:
+  - Score the group on the dates you fixed, not earlier.
+  - Keep the screen, the list and the rules together in one file.
+  - After the first review, write down what you would change in the screen, not in the scorecard.
+
+works_best_with:
+  tools:
+    - {name: "A spreadsheet", why: "A group with a cost, a date and a value per name is easiest to score in a sheet."}
+  inputs:
+    - "The survivors from the bargain screen"
+    - "Your trading costs and tax rate"
+
+terms:
+  - term: Margin of safety
+    meaning: The gap between what you think something is worth and what you pay. It protects you if your estimate is wrong.
+  - term: Group result
+    meaning: The return of a whole set of purchases taken together, which is how a bargain method should be judged.
+  - term: Exit rule
+    meaning: A rule for when to sell, set before buying so that it is not set by hope or fear later.

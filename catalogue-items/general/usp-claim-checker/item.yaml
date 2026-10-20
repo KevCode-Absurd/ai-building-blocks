@@ -1,6 +1,6 @@
 slug: usp-claim-checker
 name: "USP claim checker"
-summary: "Paste your ad or headline and product facts. Get a pass or fail on offer, uniqueness and pull, with fixes."
+summary: "Paste an ad and your product facts. Get a pass or fail on whether its one claim is real, unique and strong."
 category: general
 type: skill
 role: check
@@ -13,6 +13,6 @@ outputs:
   - {type: audit_report, required: true}
 origin: rebuilt
 version: 1.0.0
-minds: [rosser-reeves]
+minds: [rosser-reeves, eugene-schwartz]
 credits:
   - {title: "Three Requirements of a USP", by: "Rosser Reeves (as described in later writing about his book Reality in Advertising)", used: "The three tests for a selling proposition: a real offer, not made by rivals, and strong enough to move many people, plus the idea of proving it on screen"}

@@ -16,7 +16,7 @@ outputs:
   - {type: audit_report}
 origin: rebuilt
 version: 1.0.0
-minds: [al-ries]
+minds: [al-ries, jack-trout]
 credits:
   - {title: "The Positioning Era Cometh, Advertising Age articles, 1972", by: "Al Ries and Jack Trout", used: "A name holds one meaning in the buyer's mind, and stretching it over new products makes it mean less"}
   - {title: "Interview with Al Ries on Brands and Branding, August", by: "Al Ries", used: "Categories splitting into narrower branches, and new idea means new name"}

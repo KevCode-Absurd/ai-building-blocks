@@ -1,0 +1,18 @@
+slug: how-it-works-copy-writer
+name: "How-it-works copy writer"
+summary: "Paste a draft and product facts. Get a short cause-and-effect passage that makes the promise believable, with every link backed."
+category: general
+type: skill
+role: make
+job: copy
+level: intermediate
+inputs:
+  - {type: copy_draft, required: true}
+  - {type: product_data, required: true}
+outputs:
+  - {type: copy_draft}
+origin: rebuilt
+version: 1.0.0
+minds: [eugene-schwartz]
+credits:
+  - {title: "Breakthrough Advertising (a book summary)", by: "Eugene Schwartz (1966), as retold in a third-party chapter summary", url: "https://breakthroughadvertisingbook.com/", used: "Mechanization: answering how a product works, at three levels from a short phrase to the main selling point, and the shift to how-it-works claims in a market that has heard every promise"}

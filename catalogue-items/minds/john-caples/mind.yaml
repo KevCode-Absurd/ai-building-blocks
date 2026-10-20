@@ -30,6 +30,7 @@ sources:
   - {n: 6, title: "They Laughed When I Sat Down At the Piano (U.S. School of Music ad, Screenland, March 1926, scanned page)", by: "U.S. School of Music; attributed to John Caples by the Smithsonian finding aid", url: "https://archive.org/details/Screenland-1926-03-Vol-12-No-5", kind: own-words}
   - {n: 7, title: "John Caples (inductee, 1978)", by: "Advertising Hall of Fame", url: "https://advertisinghalloffame.org/inductee/john-caples/", kind: reference}
   - {n: 8, title: "John Caples, Author Of Famous Ad Line (obituary, 11 June 1990)", by: "The Seattle Times", url: "https://archive.seattletimes.com/archive/19900611/1076601/john-caples-author-of-famous-ad-line", kind: reference}
+  - {n: 9, title: "Tested Advertising Methods, fifth edition (1997), full text; the introduction on his life is by Gordon White", by: "John Caples, revised by Fred E. Hahn", kind: own-words}
 tests:
   - {kind: use, prompt: "Write 15 headlines for a weekend bread-baking class, labelled self-interest, news or curiosity, and mark the three you would test first."}
   - {kind: use, prompt: "Write a short ad in the style of 'They laughed when I sat down at the piano' for an online course that teaches adults to swim."}

@@ -1,0 +1,53 @@
+# Workflow skeleton for Breakthrough Advertising (a book summary) (docs/INTAKE.md). Our words; the source stays in mind-sources/ (local only). A third-party summary, so claims are second-hand.
+id: breakthrough-ads-handicap
+source:
+  title: "Breakthrough Advertising (a book summary)"
+  by: "Eugene Schwartz"
+  kind: book
+  rights: ideas-only
+  year: 1966
+minds: [eugene-schwartz]
+workflow:
+  slug: turn-a-product-flaw-or-a-crowded-market-into-a-reason-to-buy
+  name: "Make a flawed or copycat product worth buying"
+  summary: "Give it your product and its flaw. Get a stage read, a new frame, how it works and a claim check."
+  when: "your product has a built-in turn-off, or buyers have heard every rival say what you say."
+  job: write-ad-copy
+  level: advanced
+steps:
+  - name: Read how aware and how jaded your buyers are
+    skill: market-stage-reader
+    job: analysis
+    task: understand-customers
+    from: "Chapter 4, market sophistication"
+    method: ["Name the want and the thing the product does for it", "Place the buyers on the awareness scale", "Place the market on the claim-fatigue scale", "Write the stage call as a short brief"]
+    inputs: [product_data, voc_reviews!, competitor_set!]
+    outputs: [brief]
+    note: "The same stage read as the headline workflow, reused here."
+  - name: Give the product a new definition
+    skill: product-handicap-reframer
+    job: strategy
+    task: write-ad-copy
+    from: "Chapter 10, redefinition and concentration"
+    method: ["Name the handicap in the buyer's words: too complex, too narrow, too dear, or something that puts them off", "Test whether the handicap can be turned into proof of a benefit, simplified, made bigger in importance, or compared so the price looks fair", "Write the new definition in one line and the short passage that carries it", "Check that the new frame is true of the product and does not hide the flaw from the buyer", "Where a rival has the buyer's loyalty, write the passage that shows why their way falls short"]
+    inputs: [brief, product_data]
+    outputs: [copy_draft]
+    note: "Reads the stage brief and the product facts, and turns the main handicap into a reason to buy."
+  - name: Explain how it works so the new frame is believed
+    skill: how-it-works-copy-writer
+    job: copy
+    task: write-ad-copy
+    from: "Chapter 10, mechanization"
+    method: ["Decide how much the buyer understands", "State the mechanism in the buyer's terms", "Place it where the new frame needs backing"]
+    inputs: [copy_draft, product_data]
+    outputs: [copy_draft]
+    note: "Reads the reframed draft from the step before."
+  - name: Check the claim is yours and not a rival's
+    skill: usp-claim-checker
+    job: analysis
+    task: check-ads
+    from: "Chapter 4, being first or second"
+    method: ["Check the offer is stated", "Check only you can say it", "Check it is strong enough to pull"]
+    inputs: [copy_draft, product_data]
+    outputs: [audit_report]
+    note: "Checks the draft from the step before."

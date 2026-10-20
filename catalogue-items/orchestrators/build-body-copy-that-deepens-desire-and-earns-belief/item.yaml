@@ -1,0 +1,28 @@
+slug: build-body-copy-that-deepens-desire-and-earns-belief
+name: "Build body copy that deepens desire and earns belief"
+summary: "Give it your brief and product facts. Get body copy that sharpens the want, earns belief and shows how it works."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: copy
+level: advanced
+inputs:
+  - {type: brief, required: true}
+  - {type: product_data, required: true}
+  - {type: ad_copy, required: false}
+  - {type: offer, required: false}
+  - {type: voc_reviews, required: false}
+outputs:
+  - {type: audit_report}
+uses: [desire-section-writer, belief-ladder-builder, how-it-works-copy-writer, claim-and-proof-matcher]
+steps:
+  - {uses: desire-section-writer, note: "Builds the want from the brief and the product facts, picking only the moves that fit."}
+  - {uses: belief-ladder-builder, note: "Reads the draft from the step before and reorders it so every claim is prepared."}
+  - {uses: how-it-works-copy-writer, note: "Adds the reason why the promise holds, using the draft from the step before."}
+  - {uses: claim-and-proof-matcher, note: "Checks the finished body copy from the step before."}
+origin: rebuilt
+version: 1.0.0
+minds: [eugene-schwartz]
+credits:
+  - {title: "Breakthrough Advertising (a book summary)", by: "Eugene Schwartz", used: "The order of the steps: write the section that sharpens the want, build belief one acceptable step at a time, explain how it works so the promise is believed, match every claim to its proof"}
+generated_from: intake/breakthrough-ads-body/skeleton.yaml

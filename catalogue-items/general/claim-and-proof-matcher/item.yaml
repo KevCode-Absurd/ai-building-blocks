@@ -15,7 +15,7 @@ outputs:
   - {type: audit_report}
 origin: rebuilt
 version: 1.0.0
-minds: [gary-bencivenga, richard-feynman, milton-glaser]
+minds: [gary-bencivenga, richard-feynman, milton-glaser, eugene-schwartz, victor-schwab]
 credits:
   - {title: "Gary Bencivenga's Marketing Bullets", by: "Gary Bencivenga", used: "Pairing every claim with proof beside it, reading as a doubting reader, and shrinking the claim or adding real proof when the claim is bigger"}
   - {title: "Cargo Cult Science", by: "Richard Feynman, Caltech commencement address, 1974", url: "https://calteches.library.caltech.edu/51/2/CargoCult.htm", used: "Reporting what could make you wrong and not fooling yourself with proof that only agrees with you"}

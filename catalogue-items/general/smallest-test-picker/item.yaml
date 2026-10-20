@@ -1,0 +1,24 @@
+slug: smallest-test-picker
+name: Smallest test picker
+summary: Paste your ranked guesses. Get the cheapest test for the top one, who to try it on and what to cut.
+category: general
+type: skill
+role: make
+job: research
+level: intermediate
+inputs:
+  - type: plan
+    required: true
+outputs:
+  - type: plan
+    required: true
+origin: rebuilt
+version: 1.0.0
+minds:
+  - eric-ries
+  - steve-blank
+credits:
+  - title: "The Lean Startup: how today's entrepreneurs use continuous innovation to create radically successful businesses"
+    by: Eric Ries
+    url: https://theleanstartup.com/
+    used: The minimum viable product as the fastest route through one learning loop, its forms (smoke test, explainer video, hand-delivered service, human behind the screen), testing on early adopters, and cutting everything that does not feed the learning

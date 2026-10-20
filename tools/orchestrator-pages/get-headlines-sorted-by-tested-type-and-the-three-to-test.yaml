@@ -1,0 +1,110 @@
+new_slug: get-headlines-sorted-by-tested-type-and-the-three-to-test
+name: "Get headlines sorted by type and the three worth testing"
+summary: "Give it your product and buyer. Get headlines sorted by type, ranked with a cover test, and a keyed test plan."
+job: write-ad-copy
+thinking: high
+thinking_why: "It picks a buying reason, writes a long list, judges it and plans a test. Give it your strongest model."
+
+headline: "Twenty headlines, sorted by type and cut to the three worth testing"
+subhead: "Give it your product, your buyer and your offer. It picks the buying reason to lead with, writes twenty or more headlines labelled self-interest, news or curiosity, and reads each one alone as a stranger would. You get the best three and a keyed plan to test them."
+
+explain: |
+  Most headlines are written one at a time, and the first decent one gets used. The choice is made by whoever likes it most. Yet the reason you give a buyer, and the headline that carries it, usually matter more than anything else in an ad.
+
+  This workflow starts with the reason to buy, chosen from a list and checked for fit and belief. It then writes at least twenty headlines in three types: those that offer the reader something, those that announce real news, and those that make the reader curious with a promise inside. Each headline is read alone, with the copy hidden, and scored on five rules. Dead, too-clever and meaningless lines are cut. The three that remain differ from each other, and a keyed plan sets how to test them with a winner rule. The method follows John Caples's Tested Advertising Methods.
+
+when:
+  - You need a headline for an ad, email or page and want a long list sorted and narrowed before you spend on a test.
+  - Your headlines read as clever but nobody can say what they offer.
+  - You are arguing over a favourite and have no way to settle it.
+
+you_give:
+  - Your product facts, including amounts, times and dates
+  - Who your buyer is, and customer words if you have them (optional)
+  - Your offer and price (optional)
+you_get:
+  - Your top three buying reasons, each with the proof it needs
+  - Twenty or more headlines, each labelled by type and reason
+  - A ranking from a cover test, with the lines cut and why
+  - The best three and a keyed test plan with a winner rule
+
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Give it your product facts, your buyer and your offer.
+  - It works step by step and saves each result. Read the ranked list before the test plan.
+  - Show the three to people who do not know your product, then run the keyed test.
+
+how_it_works:
+  - title: Pick the buying reason to lead with
+    text: "Lists the basic reasons people buy, drops any that only help you, and scores the rest for fit, belief and evidence. Keeps three."
+  - title: Write headlines in the tested types
+    text: "Writes at least twenty headlines from those reasons as self-interest, news and curiosity lines, with a real detail in each and a promise inside every curiosity line."
+  - title: Rank them with the cover test
+    text: "Reads each headline alone, scores it on five rules and cuts the weak kinds. Keeps three that differ in type or reason."
+  - title: Plan a small keyed test of the best three
+    text: "Gives each of the three a code, a small run before the big spend and a winner rule set in advance."
+
+output_shape: |-
+  STEP 1: BUYING REASONS
+    Top three: <reason | where it goes | backed by>
+
+  STEP 2: HEADLINES
+    <n>. <headline> | Type: <self-interest / news / curiosity> | Reason: <...>
+
+  STEP 3: COVER TEST
+    A stranger would think: <...> | Scores: <five rules> | Cut: <rule broken>
+    The three: <headlines that differ in type or reason>
+
+  STEP 4: KEYED TEST PLAN
+    Codes: <one per headline> | Small run: <size and where>
+    Winner rule: <replies per cost, set in advance>
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+
+tweaks:
+  - what: Your facts
+    how: Give amounts, times and dates. Headlines with a real detail are easier to believe.
+  - what: Anything new
+    how: Give anything truly new, with its date. Without it, no news lines are written.
+  - what: Where it will run
+    how: Say if it is an inbox, an ad or a page top, so length and context are counted in the ranking.
+  - what: How many headlines
+    how: Ask for thirty if you have five or more buying reasons.
+
+judge:
+  - Every kept buying reason is about what the buyer gets, not your company.
+  - Self-interest lines are the largest group, and no curiosity line is a bare puzzle.
+  - Each headline was scored without the copy.
+  - The three picks differ in type or reason.
+  - Each of the three has its own code and the winner rule was set first.
+
+test:
+  - Cover your current headline and show a stranger three of the new ones. Ask what each offers.
+  - Run it twice on the same facts. The three buying reasons should be mostly the same.
+  - Give it a product with nothing new. It should write no news lines and say why.
+  - Run the keyed test and see whether the order of replies matches the ranking.
+
+improve:
+  - Save each winning headline with its type and result, and see which type wins for your buyers.
+  - Add headlines that lost, with the rule they broke, to the cut check.
+  - Re-run step 3 each round with the winner and two new challengers.
+  - Pair it with "Test two ads head to head and read the winner" to read a close result.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Sorting, scoring and planning are text jobs that a strong chat AI does well in one run."}
+    - {name: "Your email tool or ad platform", why: "Runs the small test with a code for each headline and reports replies."}
+  inputs:
+    - "Ten to twenty reviews in your buyers' own words"
+    - "Your past headlines with their results"
+    - "A page of exact facts: amounts, times, counts, dates"
+
+terms:
+  - term: Self-interest headline
+    meaning: A headline that offers the reader something they want.
+  - term: Cover test
+    meaning: Reading a headline alone, with the copy hidden, to see what a passing reader would take from it.
+  - term: Keyed test
+    meaning: A test where each version carries its own code, so every reply can be traced to the version that brought it.

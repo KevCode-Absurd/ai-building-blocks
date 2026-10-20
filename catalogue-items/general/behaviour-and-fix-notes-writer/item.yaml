@@ -1,0 +1,18 @@
+slug: behaviour-and-fix-notes-writer
+name: "Behaviour and fix notes writer"
+summary: "Describe what keeps going wrong and who does it. Get one watchable behaviour, their likely reason, true strengths and a small fix."
+category: general
+type: skill
+role: make
+job: analysis
+level: beginner
+inputs:
+  - {type: question, required: true}
+outputs:
+  - {type: feedback_notes}
+origin: rebuilt
+version: 1.0.0
+minds: [dale-carnegie, abraham-lincoln]
+credits:
+  - {title: "How to Win Friends and Influence People (1981 revised edition), Part Four chapters 1, 6, 7 and 8", by: "Dale Carnegie", used: "Find real praise first, understand why people act as they do, and make the fault look easy to fix"}
+  - {title: "Letter to Joseph Hooker, 26 April 1863", by: "Abraham Lincoln", used: "A model of naming real strengths before saying plainly what is not satisfactory"}

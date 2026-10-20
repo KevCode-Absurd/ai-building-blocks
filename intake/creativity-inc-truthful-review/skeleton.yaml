@@ -1,0 +1,55 @@
+# Workflow skeleton for Creativity, Inc. (docs/INTAKE.md). Our words; the book stays in mind-sources/ (local only).
+id: creativity-inc-truthful-review
+source:
+  title: "Creativity, Inc."
+  by: "Ed Catmull with Amy Wallace"
+  kind: book
+  rights: ideas-only
+  year: 2014
+minds: [ed-catmull]
+workflow:
+  slug: run-a-project-review-where-people-tell-the-truth
+  name: "Run a project review where people tell the truth"
+  summary: "Name a finished project. Get prep, an agenda that keeps blame out, and the lessons turned into rules for next time."
+  when: "a project has just ended, well or badly, and you want the team to learn without blame."
+  job: lead-people
+  level: intermediate
+steps:
+  - name: Plan the prep for the review
+    skill: project-review-prep-planner
+    job: ops
+    task: lead-people
+    from: "Chapter 10, Postmortems"
+    method: ["Pick a format that is different from the last review and narrow the topic if you can", "Ask everyone for two lists: five things to do again and five not to do again", "List the numbers worth pulling, such as rework rates, estimate against actual and unfinished handoffs", "Name who will hear the lessons even though they were not on the project"]
+    inputs: [question]
+    outputs: [plan]
+    note: "The form to send, the numbers to pull and the shape of the meeting, ready before anyone sits down."
+  - pause: "Send the form, gather the two lists from every person and pull the numbers."
+  - name: Sort the lists and numbers into themes
+    skill: review-lists-sorter
+    job: analysis
+    task: lead-people
+    from: "Chapter 10, Postmortems, lists and data"
+    method: ["Group the do-again and not-again items into themes and count how many people raised each", "Set each theme beside the numbers that agree or disagree", "Flag first conclusions that judge the result without checking the process", "Mark what the numbers cannot show"]
+    inputs: [feedback_notes, plan!]
+    outputs: [audit_report]
+    note: "Themes with who raised them, what the numbers say and what nobody can see yet."
+  - name: Write an agenda that keeps blame out
+    skill: blame-free-review-agenda-writer
+    job: ops
+    task: lead-people
+    from: "Chapter 6, whose fault was this, and Chapter 10, Postmortems"
+    method: ["Order the themes so the hard ones come when energy is high", "Give each a time limit and an owner who tells it in the first person", "Write the wording rules: what caused it, never whose fault", "Add a slot for old resentments and a close of questions for the next project"]
+    inputs: [audit_report, plan!]
+    outputs: [plan]
+    note: "A timed agenda with wording rules, a slot for old hurts and questions for the next project."
+  - pause: "Hold the review and write down what was said and decided."
+  - name: Turn each lesson into a rule for next time
+    skill: mistake-to-principle-writer
+    job: ops
+    task: lead-people
+    from: "Chapter 10, Postmortems, pay it forward"
+    method: ["Take each problem and find its root cause", "Write a rule you can check next time", "Keep the rule specific to what happened"]
+    inputs: [question]
+    outputs: [lessons_register]
+    note: "Each lesson written as a rule the next team can check."

@@ -1,0 +1,90 @@
+new_slug: call-to-action-writer
+name: Call-to-action writer
+summary: Paste your ad and offer. Get a clear ask with a real reason to act now and the barriers removed.
+job: write-ad-copy
+thinking: low
+thinking_why: It follows a fixed list of choices and writes from the offer terms you give it.
+headline: Call-to-action writer
+subhead: Give it your ad and your offer. It picks the kind of ask that fits, adds a reason to act now only where one is real, removes the barriers with a guarantee and plain steps, and writes the ask. You get two versions to choose from.
+explain: |-
+  Many ads are admired and bring no action because they never ask. The gap between reading and acting is inertia, and an ad that says 'sometime' gets 'never'.
+
+  This skill writes the ask. It picks the kind: go and buy, try something, or reply for more. It then looks at what could stop the reader and removes it with a guarantee, a free trial or a plain path. It adds urgency only when the facts supply a real date or limit, and says so when they do not.
+when:
+  - Your ad ends with a logo or a vague line like 'learn more'.
+  - People read your ad and do not click, call or reply.
+  - You are not sure whether to ask for a purchase or a smaller step.
+you_give:
+  - Your ad draft
+  - "Your offer: price, guarantee wording, trial or sample terms, dates and limits"
+  - "What the reader must do to act: link, phone, address, form"
+you_get:
+  - The kind of ask that fits and why
+  - Two versions of the ask in plain steps
+  - A reason to act now that is real, or a note that there is none
+  - A list of barriers and how each is removed
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste the draft and the offer with its exact terms.
+  - Pick one of the two asks and test the other.
+  - Check that every term in the ask matches your offer.
+how_it_works:
+  - title: Picks the ask
+    text: Chooses between go and buy, try it, or reply, based on price and trust.
+  - title: Finds a real reason now
+    text: Looks for a real date, limit, price rise, prompt-reply bonus or free trial.
+  - title: Removes barriers
+    text: Adds the guarantee as offered and a plain path to act.
+  - title: Writes two versions
+    text: One direct ask and one smaller step.
+output_shape: |-
+  KIND OF ASK
+  <go and buy, try it or reply> | why
+
+  REASON TO ACT NOW
+  <reason> | real because: <fact>, or: none in the facts
+
+  BARRIERS AND FIXES
+  <barrier> | <fix>
+
+  ASK, VERSION A
+  <text>
+
+  ASK, VERSION B (smaller step)
+  <text>
+
+  MISSING
+  <what is needed>
+
+  CHECKS MISSED
+  <one line each, or none>
+tweaks:
+  - what: Price
+    how: For a costly item, say a smaller first step is allowed. It writes the reply version first.
+  - what: Channel
+    how: Say where the ask appears. A button, a phone line and a printed form need different steps.
+judge:
+  - The ask names one action.
+  - The guarantee wording matches the offer.
+  - Urgency has a real date or limit behind it.
+  - The reader knows what happens after they act.
+test:
+  - Show the ask to someone and ask what they would do next.
+  - Check each term against your offer sheet.
+  - Key two versions and compare how many act.
+improve:
+  - Test a smaller first step against a direct purchase.
+  - Make the guarantee more generous if your costs allow.
+  - Put the ask in more than one place on a long page.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: The work is sorting and writing from facts you supply, which any strong chat AI does well with this skill.
+  inputs:
+    - Your offer sheet with exact terms
+    - The page or ad where the ask will appear
+terms:
+  - term: Ask
+    meaning: The line that tells the reader exactly what to do next.
+  - term: Fallacy of sometime
+    meaning: The belief that a reader who plans to act later will do so. Most do not.

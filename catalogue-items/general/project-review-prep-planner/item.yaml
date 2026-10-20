@@ -1,0 +1,17 @@
+slug: project-review-prep-planner
+name: "Project review prep planner"
+summary: "Name a finished project. Get prep: a fresh format, a two-list form, numbers to pull and who hears the lessons."
+category: general
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - {type: question, required: true}
+outputs:
+  - {type: plan}
+origin: rebuilt
+version: 1.0.0
+minds: [ed-catmull]
+credits:
+  - {title: "Creativity, Inc.", by: "Ed Catmull with Amy Wallace, Random House, 2014", used: "The reasons to review a finished project, preparation as most of the value, varying the format so people do not game it, the do-again and not-again lists, and using neutral numbers as one way of seeing"}

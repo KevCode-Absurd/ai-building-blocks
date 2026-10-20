@@ -1,0 +1,18 @@
+slug: revision-headline-planner
+name: "Revision headline planner"
+summary: "Paste the causes behind your notes. Get three to five headlines, what to blow up and keep, and a next-version plan."
+category: general
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - {type: audit_report, required: true}
+  - {type: plan, required: false}
+outputs:
+  - {type: plan}
+origin: rebuilt
+version: 1.0.0
+minds: [ed-catmull]
+credits:
+  - {title: "Creativity, Inc.", by: "Ed Catmull with Amy Wallace, Random House, 2014", used: "Boiling a long review into a few headlines, asking what to blow up and what the owner still loves, leaving the choices with the owner, and treating work that returns unchanged after notes as a warning sign"}

@@ -1,0 +1,116 @@
+new_slug: dialogue-ear-checker
+name: "Dialogue ear checker"
+summary: "Paste your scene. Get each line of talk tested, the worst fixed and a score out of 100."
+job: write-and-tell-stories
+thinking: high
+thinking_why: "It judges how talk sounds and must keep each speaker's voice."
+
+headline: "Make every line of dialogue sound like a person said it"
+subhead: "Paste a scene with dialogue. It tests every line four ways, marks the lines nobody would say, checks each speaker sounds different, fixes the worst lines and gives a score out of 100 with the sum shown."
+
+explain: |
+  Dialogue is where a reader decides whether the people are real. A line nobody would say jars the reader like a wrong note in a song. The usual causes are speeches that exist to tell the reader facts, characters who all sound alike, clichés from old movies, and cleaned-up language that no one in the room would use.
+
+  This skill tests each line the way your ear would, if you read it aloud. It asks four questions of every line: would a person say it, does this speaker sound different from the others, is it carrying facts for the reader and not for the listener, and does the tag or the swearing fit. The score is the share of lines that pass all four. It fixes the worst lines and leaves your voice and your story alone.
+
+when:
+  - "A reader said your characters all sound the same."
+  - "A scene feels stiff and you cannot say why."
+  - "You are not sure how far to go with rough language."
+
+you_give:
+  - "A scene with dialogue"
+  - "A line or two on each speaker: job, age, how they talk (optional)"
+  - "The setting and the time (optional)"
+  - "How rough the language should be (optional)"
+you_get:
+  - "A table of every line with four marks"
+  - "The lines nobody would say, rewritten"
+  - "A check that each speaker sounds different"
+  - "A score out of 100 with the sum"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Paste the scene. Keep the tags in."
+  - "Add a few words about each speaker so it can test their voice."
+  - "Read each fix aloud. Keep the ones that sound right to you."
+  - "Run it again after the fix."
+
+how_it_works:
+  - title: "Lists every line"
+    text: "Numbers each line of talk with its speaker."
+  - title: "Tests the ear"
+    text: "Marks whether a person would say it."
+  - title: "Tests the voice"
+    text: "Marks whether this speaker sounds like only this speaker."
+  - title: "Tests the job"
+    text: "Marks lines that exist to tell the reader facts."
+  - title: "Tests tags and language"
+    text: "Marks tags that are not said and language that does not fit the speaker."
+  - title: "Fixes the worst"
+    text: "Rewrites the failing lines in the speaker's voice."
+  - title: "Scores it"
+    text: "Counts passing lines into a score out of 100."
+
+output_shape: |
+  LINES
+  # | speaker | first words | would a person say it | distinct voice | not an info-dump | tag and language fit
+
+  FAILING LINES AND FIXES
+  #<n> | fails: <test> | was: <line> | now: <line> | why
+
+  VOICE CHECK
+  <speaker>: <one line on how they sound> | blends with <speaker> y/n
+
+  LANGUAGE
+  <where rough or clean language does not fit the speaker, and what fits>
+
+  SCORE: <n> / 100
+  <lines passing all four> / <total lines> x 100 = <n>
+
+  THE FIXED SCENE
+  <scene with the fixes in place>
+
+  CHECKS MISSED
+  <one line per check missed, or none>
+
+tweaks:
+  - what: "Speaker notes"
+    how: "Give each speaker a job and an age. Voices are easier to test when you know who is talking."
+  - what: "Setting and time"
+    how: "Say where and when. Slang and rhythm change with both."
+  - what: "Rough language"
+    how: "Say how rough the people really are. The check is about fit, not about how rough it is."
+  - what: "Reading aloud"
+    how: "Say if it will be read aloud, such as in an audiobook. Long names and tongue-twisters get flagged."
+
+judge:
+  - "Each failing line names which test it failed."
+  - "Fixes keep the speaker's voice."
+  - "Speeches that carry facts are cut or broken up."
+  - "The score sum re-adds."
+  - "Tags are said except where an exception is explained."
+
+test:
+  - "Run it on a scene from a novel you admire. The score should be high."
+  - "Run it on a scene where every person talks the same way. The voice check should flag it."
+  - "Read your own scene aloud first and mark lines that trip. Compare with the report."
+
+improve:
+  - "Add a page of how each of your main people talks, with three typical lines."
+  - "Keep a list of phrases you overuse in talk."
+  - "Pair it with the plain English editor for tags and adverbs."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Testing lines against four rules is text work any strong chat AI does well."}
+    - {name: "Your own voice", why: "Read each failing line aloud. Your ear is the final check."}
+  inputs:
+    - "Three typical lines for each speaker"
+    - "A real recording or note of how someone like this talks"
+
+terms:
+  - term: "Tag"
+    meaning: "The words that say who spoke, such as he said."
+  - term: "Info-dump"
+    meaning: "A speech where people tell each other what they both know, for the reader's sake."

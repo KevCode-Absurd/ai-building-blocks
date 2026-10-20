@@ -1,0 +1,108 @@
+new_slug: make-a-daily-writing-habit-that-lasts
+name: Make a daily writing habit that lasts
+summary: Tell it your hours. Get a daily word count, a reading plan, a restart rule and a weekly check on your log.
+job: write-and-tell-stories
+thinking: medium
+thinking_why: It is mostly sums and fixed rules across four steps, with a pause for you to write in between.
+
+headline: A daily writing habit with a word count you can keep
+subhead: Tell it what you write and the hours you have. It sets a small start and a restart rule, works out a daily word count and finish date, and plans your reading. After two weeks, paste your log and it tells you what to change.
+
+explain: |
+  Most writing habits fail in the second or third week. The goal was too big for a bad day, the finish line was vague, and one missed day turned into a month. Writers also say they have no time to read, even though reading is half of the job.
+
+  This workflow builds the habit in small, firm parts. It begins with a first step you can do on your worst day and a plan for restarting after a miss. It then sizes a daily word count to your real minutes and works out the date you will finish. It fits reading into the gaps in your week. After two weeks of writing, you give it your log, and it counts the days you hit, projects your finish date and names one change. The method comes from Stephen King's book On Writing.
+
+when:
+  - You want to write every day and have failed before.
+  - You say you want to write a book but have no plan for when.
+  - You want to read more and write more in the same week.
+
+you_give:
+  - What you write and the length you are aiming for
+  - The days and minutes you can write on a normal day and on your worst day
+  - A normal week, so it can find gaps for reading
+  - After two weeks, your log of date, start time and words for each day
+
+you_get:
+  - A small first step, a fixed cue and a restart rule
+  - A daily word count, a finish date and a closed-door routine
+  - A weekly reading schedule with the sums
+  - A review of your log with a score out of 100, the pattern in missed days and one change
+
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Give it your project, your hours and your week. It works step by step and saves each result.
+  - Write at the same time every day for two weeks. Log the date, the start time and the words, including the zero days.
+  - Come back with the log and run the last step.
+
+how_it_works:
+  - title: Plan the start and the restart
+    text: Shrinks the first step to something you can do on the worst day, ties it to a cue and plans the restart after a miss.
+  - title: Set the daily word quota
+    text: Sizes the daily count to your minutes, works out the finish date and sets the closed-door routine.
+  - title: Build a reading plan
+    text: Turns a yearly book goal into pages a day and fits reading into the gaps in your week.
+  - title: Review the log
+    text: Counts days hit, projects your finish date, finds the pattern in missed days and gives one change.
+
+output_shape: |-
+  STEP 1: START AND RESTART
+    First step | Cue | What gets in the way | Restart rule | Reward
+
+  STEP 2: DAILY WORD QUOTA
+    Daily count | Days needed | Finish date | Routine | Two-week table
+
+  STEP 3: READING PLAN
+    Pages and minutes a day | The week's schedule | The book mix | What to cut
+
+  STEP 4: LOG REVIEW
+    Days hit | Pace and finish date | Pattern | Score out of 100 | The call | One change
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+
+tweaks:
+  - what: Your worst day
+    how: Describe it honestly. The word count is sized to that day, not your best one.
+  - what: Your log
+    how: Include days you wrote nothing, and add start times. A late start is the most common cause of a miss.
+  - what: Your week
+    how: List every gap, such as queues, lunch and travel. The reading plan can only use gaps it knows about.
+  - what: Rest day
+    how: Say which day you rest. A fixed rest day protects the other days.
+
+judge:
+  - The daily count fits in the minutes you have, and the sums re-add.
+  - The restart rule says what to do the day after a miss.
+  - The reading schedule uses only gaps you named.
+  - The log review counts planned days, not calendar days.
+  - It gives one change, not a list.
+
+test:
+  - Check the sums by hand. 24 books of 300 pages is about 20 pages a day.
+  - Follow the plan for one week, then compare your real pace with the plan.
+  - Give the log review a log with every Friday missed. The pattern should say Fridays.
+
+improve:
+  - Keep each week's score in one place, so you can see the trend.
+  - After a month, give it your real words-per-hour so the time check is exact.
+  - When the draft is done, rest it and run the revise workflow.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "The sums, the plan and the review all run well in one thread."}
+    - {name: "A wall calendar", why: "Crossing off each day you hit the count shows your pace at a glance."}
+  inputs:
+    - "A past habit that failed, and where"
+    - "Your usual interruptions"
+    - "Your target length"
+
+terms:
+  - term: Quota
+    meaning: The word count you promise to write each day, set so you can hit it on a bad day.
+  - term: Pocket
+    meaning: A short gap in the day that can be used for reading.
+  - term: Hit
+    meaning: A day when you reached your daily count.

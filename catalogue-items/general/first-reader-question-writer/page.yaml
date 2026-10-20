@@ -1,0 +1,120 @@
+new_slug: first-reader-question-writer
+name: "First reader question writer"
+summary: "Paste your draft. Get your ideal reader named and a short question sheet to send with it."
+job: write-and-tell-stories
+thinking: low
+thinking_why: "It writes a short fixed kind of sheet from the draft."
+
+headline: "Ask your readers questions that get you real answers about your draft"
+subhead: "Paste your draft and say who you are writing for. It names your ideal reader, writes questions about where readers stopped, got lost or bored, adds one for each part you doubt, and gives a short sheet to send."
+
+explain: |
+  When you hand a draft to friends and ask what they think, you get kind noises. Nobody wants to hurt you, and they do not know what to look for. A few good questions fix that. They turn a general opinion into facts about where the draft worked and where it did not.
+
+  This skill builds the sheet. First it names your ideal reader: the one person you are writing for and most want to move, and what you want them to feel. Then it writes the questions every reader gets, such as where they put it down and what they did not follow. It adds one question for each part you doubt, a request to flag facts that look wrong, and a rule that readers say nothing until you ask. Short sheets get answered.
+
+when:
+  - "You are about to send a draft to friends and want better answers than it was fine."
+  - "You have a part you doubt and want to ask without leading."
+  - "You want to know where readers got bored."
+
+you_give:
+  - "Your draft"
+  - "Who you are writing it for"
+  - "The parts you doubt (optional)"
+  - "What you want a reader to feel at the end (optional)"
+you_get:
+  - "Your ideal reader, named in a line"
+  - "Five to eight questions for every reader"
+  - "One question for each part you doubt"
+  - "A short message to send with the draft and the rules for readers"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Paste the draft, or its first pages and a summary."
+  - "Say who you write for. If you cannot, it will ask."
+  - "Pick the readers: four to eight people who read the kind of thing you wrote."
+  - "Send the sheet with the draft. Ask them to mark where they stopped."
+
+how_it_works:
+  - title: "Names your ideal reader"
+    text: "Writes who you write for and what you want them to feel."
+  - title: "Writes the common questions"
+    text: "Where they stopped, got lost, got bored or stopped believing."
+  - title: "Adds your doubts"
+    text: "Writes one neutral question for each part you doubt."
+  - title: "Asks for fact catches"
+    text: "Asks readers to flag anything that looks wrong."
+  - title: "Sets the rules"
+    text: "Asks readers to keep quiet until you ask."
+  - title: "Writes the message"
+    text: "Writes a short note to send with the draft."
+  - title: "Checks itself"
+    text: "Names any check it missed."
+
+output_shape: |
+  YOUR IDEAL READER
+  <who> | what you want them to feel: <...>
+
+  QUESTIONS FOR EVERY READER
+  1. Mark the place where you first thought about putting it down.
+  2. <...>
+
+  QUESTIONS FOR THE PARTS YOU DOUBT
+  <part> | <neutral question>
+
+  FACT CHECK REQUEST
+  <one line>
+
+  RULES FOR READERS
+  <three lines>
+
+  NOTE TO SEND
+  <short message>
+
+  WHO TO ASK
+  <four to eight kinds of reader, including your ideal reader>
+
+  CHECKS MISSED
+  <one line per check missed, or none>
+
+tweaks:
+  - what: "Your ideal reader"
+    how: "Name one real person if you can. A real person gives a sharper picture than an audience."
+  - what: "Doubts"
+    how: "Name the parts you worry about. The questions stay neutral so they do not lead."
+  - what: "Length of the sheet"
+    how: "Say how long readers will tolerate. A short sheet gets answers. A long one gets none."
+  - what: "What you want to feel"
+    how: "Say what a reader should feel at the end: scared, moved, amused. It becomes the last question."
+
+judge:
+  - "Every question can be answered with something specific."
+  - "No question hints at the answer you want."
+  - "There is a question about where the reader stopped."
+  - "The sheet fits on one page."
+  - "The rules ask readers to hold their comments."
+
+test:
+  - "Send the sheet to two readers. Both should give you at least one place and one reason."
+  - "Compare the answers with a plain request for opinions. The sheet should give more usable notes."
+  - "Try it on a draft where you know of a weak scene. A reader should land on it."
+
+improve:
+  - "Add the questions that got the best answers to your standard sheet."
+  - "Keep a list of your readers and what each is good at spotting."
+  - "Pair it with the reader feedback sorter."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Writing a short question sheet is simple text work."}
+    - {name: "A shared document", why: "Let readers comment on the draft itself so notes are tied to the place."}
+  inputs:
+    - "A real person as your ideal reader"
+    - "A list of readers you could ask"
+
+terms:
+  - term: "Ideal reader"
+    meaning: "The one person you write for and most want to move."
+  - term: "First reader"
+    meaning: "Someone who reads the draft before the public does."

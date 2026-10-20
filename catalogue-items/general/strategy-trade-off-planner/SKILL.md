@@ -5,7 +5,7 @@ description: Use when you compete on the same things as everyone else, every new
 
 # Strategy trade-off planner
 
-Being better at the same things as your rivals is a race with no end. A position is different: you choose some things and refuse others, so a rival cannot copy you without giving something up. This skill picks that position, writes the refusals and checks that your daily activities support it. For reading the industry first, use "Five forces industry checker".
+Being better at the same things as your rivals is a race with no end. A position is different: you choose some things and refuse others, so a rival cannot copy you without giving something up. This skill picks that position, writes the refusals and checks that your daily activities support it. For reading the industry first, use "Five forces industry checker". Once you have one word to own, use "Give-up list planner" to cut what blurs it.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
@@ -56,10 +56,10 @@ Better versus different. The position and who it is for. Premium price or lower 
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - **Plan your strategy** with the [Buying habit stack designer](https://useaiblocks.com/skills/buying-habit-stack-designer). It takes the plan.
+- **Check the money** with the [Bond type and maturity chooser](https://useaiblocks.com/skills/bond-type-and-maturity-chooser). It takes the plan.
 - **Decide what to do** with the [Case-against writer](https://useaiblocks.com/skills/case-against-writer). It takes the plan.
-- **Check the money** with the [Price drop rules writer](https://useaiblocks.com/skills/price-drop-rules-writer). It takes the plan.
+- **Test the idea with real people** with the [Smallest test picker](https://useaiblocks.com/skills/smallest-test-picker). It takes the plan.
 - **Shape the product** with the [Feature request screener](https://useaiblocks.com/skills/feature-request-screener). It takes the plan.
-- **Test the idea with real people** with the [Market boundary checker](https://useaiblocks.com/skills/market-boundary-checker). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

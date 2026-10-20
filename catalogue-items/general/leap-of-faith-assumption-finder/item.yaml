@@ -1,0 +1,26 @@
+slug: leap-of-faith-assumption-finder
+name: Leap-of-faith assumption finder
+summary: Paste your plan. Get the few guesses it stands on, each with a number, ranked so you test the riskiest first.
+category: general
+type: skill
+role: make
+job: strategy
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: question
+    required: false
+outputs:
+  - type: plan
+    required: true
+origin: rebuilt
+version: 1.0.0
+minds:
+  - eric-ries
+  - steve-blank
+credits:
+  - title: "The Lean Startup: how today's entrepreneurs use continuous innovation to create radically successful businesses"
+    by: Eric Ries
+    url: https://theleanstartup.com/
+    used: Treating a plan as assumptions, the value guess and the growth guess, restating comparisons as plain facts, and ranking by what the plan depends on

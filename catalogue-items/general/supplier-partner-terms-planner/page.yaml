@@ -1,0 +1,120 @@
+new_slug: supplier-partner-terms-planner
+name: "Supplier partner terms planner"
+summary: "Paste what you buy and your growth plan. Get terms for your suppliers, with give-backs, shared savings and no side payments."
+job: sell-and-negotiate
+thinking: medium
+thinking_why: "It balances what you need from a supplier against what they need from you, using a fixed list of terms. A mid-range model does it well."
+
+headline: "Terms that make your suppliers grow with you, and keep partner costs fair"
+subhead: Paste what you buy, how much you will need as you grow, and what you pay now. It writes what you want from the supplier, what you give back, a rule against gifts and side payments, how savings reach your partners, and how you grow together. You get a supplier term plan.
+
+explain: |
+  A supplier you squeeze will cut corners or leave. A supplier you grow with will fix problems at no charge, bend in a crisis and make a better product for your needs.
+
+  This skill plans a supplier relationship with both sides in view. It starts from the product: exactly what you need, to what standard, in what volume, and how that will rise. It then lists what you give back: a forecast they can plan to, orderly payment, a longer contract as volume grows, and help to get started. It writes a rule against gifts and kickbacks, so the choice of supplier rests on product and price. It decides who gets the savings when your volume lowers their cost, and recommends passing them to your partners if you have partners. It ends with how you will work through a bad week, because the first crisis shows what the relationship is worth.
+
+when:
+  - You depend on one or two suppliers and have not talked about how both sides grow.
+  - Your partners or franchisees buy through you and you want their costs to stay fair.
+  - A supplier has hinted at gifts, favours or side payments.
+
+you_give:
+  - What you buy, to what standard, and how much now
+  - How much you expect to buy as you grow
+  - Any partner or franchisee costs that depend on these supplies (optional)
+you_get:
+  - A one-page list of what you need and what you give back
+  - A no gifts and no side payments rule, with the words to say it
+  - A savings rule that says who keeps the saving when volume lowers the cost
+  - A forecast and payment plan the supplier can rely on
+  - A plan for a bad week, and a yearly review
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your list of supplies and the standard each must meet.
+  - Add your growth forecast. If you have partners, add what they pay for each item.
+  - Take the plan to the supplier as an opening conversation, not a demand.
+  - Review it once a year with the numbers on both sides.
+
+how_it_works:
+  - title: Starts with the product
+    text: Writes exactly what you need, the standard, the volume and the delivery, so the conversation is about the product.
+  - title: Lists what you give back
+    text: A forecast they can plan to, payment on time, a longer contract as volume rises and help to start.
+  - title: Writes the no-gifts rule
+    text: A short plain statement of what you will not accept or give, and why it protects both sides.
+  - title: Decides who keeps the savings
+    text: When your volume lowers their cost, it states how much is passed to your partners and how much the supplier keeps.
+  - title: Plans for a bad week
+    text: What each side does in a crisis, such as a late shipment or a cash gap.
+  - title: Checks itself
+    text: Runs its own checks and names any it missed.
+
+output_shape: |
+  WHAT YOU NEED
+  <item> | Standard: <number> | Volume now: <> | Volume in a year: <> | Delivery: <>
+
+  WHAT YOU GIVE BACK
+  Forecast: <> | Payment: <days> | Contract length: <> | Help to start: <>
+
+  NO GIFTS OR SIDE PAYMENTS
+  <the rule in two sentences and how to say it>
+
+  WHO KEEPS THE SAVINGS
+  <split> | Passed to partners: <> | Kept by supplier: <> | Kept by you: <>
+
+  A BAD WEEK
+  Late shipment: <> | Cash gap: <> | Quality failure: <>
+
+  REVIEW
+  <date and the numbers both sides will look at>
+
+  MISSING
+  <facts you must supply>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: Standards
+    how: Give numbers. "100 percent beef" and "no more than a stated fat share" are standards. "Good quality" is not.
+  - what: Your partners' costs
+    how: List what partners pay per item, so the savings rule can be worked out in money.
+  - what: Switching options
+    how: Say if there are other suppliers. It decides how firm you can be and how long a contract you can offer.
+  - what: Cash
+    how: Say how long you can wait to be paid or how fast you can pay. It shapes the crisis plan.
+
+judge:
+  - The need list has a number or a named standard for every item.
+  - Each give-back is something you can really deliver.
+  - The no-gifts rule is plain and short.
+  - The savings rule names who keeps what.
+  - A bad-week plan is present.
+
+test:
+  - Give it a supplier list with no standards. Standards should show MISSING.
+  - Give it a plan with partners. The savings rule should state a split for partners.
+  - Run it twice on the same input. The structure and rules should be the same.
+
+improve:
+  - After the first crisis, add what worked and what did not to the bad-week plan.
+  - Review volumes and prices once a year with each supplier.
+  - Share the savings rule with your partners so they know how it works.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Laying out a balanced set of terms from your facts is reasoning and writing work any strong chat AI does well."}
+    - {name: "Your purchase records", why: "Real volumes and prices turn the savings rule into money."}
+  inputs:
+    - "A list of what you buy and your growth forecast"
+    - "What your partners pay per item"
+    - "Product standards"
+
+terms:
+  - term: Kickback
+    meaning: A payment or favour from a supplier to the person who chooses them, which pulls the choice away from product and price.
+  - term: Cost break
+    meaning: A lower price you win because you buy more, which you can keep or pass on.
+  - term: Bad-week plan
+    meaning: What each side does when a shipment is late, cash is short or quality fails.

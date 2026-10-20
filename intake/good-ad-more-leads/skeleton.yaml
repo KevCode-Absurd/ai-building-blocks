@@ -1,0 +1,58 @@
+# Workflow skeleton for How to Write a Good Advertisement (a book summary) (docs/INTAKE.md). Our words; the source stays in mind-sources/ (local only).
+id: good-ad-more-leads
+source:
+  title: "How to Write a Good Advertisement (a book summary)"
+  by: "Victor O. Schwab"
+  kind: book
+  rights: ideas-only
+  year: 1962
+minds: [victor-schwab]
+workflow:
+  slug: get-more-and-better-leads-from-an-ad
+  name: "Get more and better leads from an ad"
+  summary: "Give it your ad and lead results. Get raise-or-cut fixes, a better form, and a record of what each ad pulled."
+  when: "your ad brings replies but too few, or too many that never buy, and you want to fix the offer and the form."
+  job: read-ad-results
+  level: intermediate
+steps:
+  - name: Find out whether you need more leads or better ones
+    skill: inquiry-problem-diagnoser
+    job: analysis
+    from: "Chapter 7, how to get more inquiries"
+    method: ["Count inquiries, qualified leads and sales for each ad", "Work out cost per inquiry and cost per sale", "Say whether to raise the number or raise the quality", "List outside factors that may explain the result"]
+    inputs: [offer, performance_sheet!, copy_draft!]
+    outputs: [audit_report]
+    note: "A raise or cut call, with the numbers behind it."
+  - name: Tune the reply offer
+    skill: lead-offer-tuner
+    job: strategy
+    from: "Chapter 7, ten ways to raise and ten ways to cut inquiries"
+    method: ["Pick the list that matches the call", "Choose the three changes your facts allow", "Rewrite the offer and its placement in the ad", "Say what each change should do to the count"]
+    inputs: [audit_report, offer]
+    outputs: [offer]
+    note: "The reply offer, changed in the direction the numbers asked for."
+  - name: Fix the coupon or form
+    skill: coupon-and-form-fixer
+    job: copy
+    from: "Chapter 7, better coupons"
+    method: ["Sell the offer inside the coupon", "State what they get, then what they must do", "Add a reason to reply now", "Ask only what you will use", "Make it easy to fill in"]
+    inputs: [offer, copy_draft]
+    outputs: [copy_draft]
+    note: "A reply form that matches the offer and the direction."
+  - pause: "Run the ad with a code on each coupon or form for as long as it takes to collect enough replies."
+  - name: Read the results
+    skill: ad-results-report-writer
+    job: analysis
+    from: "Chapter 13, the hard-boiled attitude"
+    method: ["Compare the two periods", "Give the one-line answer", "List three ranked actions"]
+    inputs: [performance_sheet]
+    outputs: [audit_report]
+    note: "What changed, in one line, with actions."
+  - name: Record the result for next time
+    skill: keyed-ad-results-log-keeper
+    job: ops
+    from: "Chapters 7 and 13, keep records of every ad"
+    method: ["Log each ad's key, date, space, offer and outside conditions", "Log replies, qualified leads and sales", "Write what the result says and what it does not", "Name the next thing to try"]
+    inputs: [audit_report, copy_draft!, offer!]
+    outputs: [lessons_register]
+    note: "A log entry per ad so the next one starts from what worked."

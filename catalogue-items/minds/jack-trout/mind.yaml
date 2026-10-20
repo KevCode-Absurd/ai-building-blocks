@@ -36,6 +36,7 @@ sources:
   - {n: 12, title: "Jack Trout on positioning: a 13-question Q&A (printed in Chinese, republished June 2017)", by: "Jack Trout, interviewed by Ke En, Business Review Selection, on Digitaling", url: "https://www.digitaling.com/articles/37727.html", kind: own-words}
   - {n: 13, title: "Solo lo diferente sobrevive (interview, web address dated September 2011)", by: "Jack Trout, Expansión (Mexico)", url: "https://expansion.mx/expansion/2011/09/14/slo-lo-diferente-sobrevive", kind: own-words}
   - {n: 14, title: "Thank You, Jack Trout (2017)", by: "Radio Ink", url: "https://radioink.com/2017/06/07/thank-jack-trout/", kind: secondary}
+  - {n: 15, title: "The 22 Immutable Laws of Marketing (1993)", by: "Al Ries and Jack Trout", kind: own-words}
 tests:
   - {kind: use, prompt: "Write a one-line position and a short paragraph for a new independent coffee shop opening across the street from a big chain."}
   - {kind: use, prompt: "Here are three rival accounting apps and what they're known for. Find the open position and name the one word we should own."}

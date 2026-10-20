@@ -1,0 +1,119 @@
+new_slug: stock-and-bond-split-planner
+name: "Stock and bond split planner"
+summary: "Paste your investor type and money facts. Get a stock and bond split with a range, a rebalancing rule and the reasons."
+job: money-and-investing
+thinking: medium
+thinking_why: "The sums are small and fixed. The care is in matching the split to the person and keeping to a range instead of a single figure."
+
+headline: "Set how much goes in stocks and how much in bonds, with a rule to keep it there"
+subhead: "Paste your investor type and a few facts about your money and your nerve. It starts at an even split, moves within a quarter to three quarters in stocks only for reasons you can write down, and sets the rule that restores the split when prices move it. A method of analysis, not personal financial advice."
+
+explain: |
+  The split between stocks and bonds drives most of what you will feel in a market fall. It is also the one decision you can make calmly, in advance, and write down.
+
+  This skill follows a simple, old rule. Hold stocks between a quarter and three quarters of the invested money, with the other part in high-grade bonds. Start at half and half, since most people cannot say what the market will do. Move to the low end if you doubt the market level or could not stand a deep fall, and to the high end only if you are sure you could. When prices push the split five points off, sell a little of the one that grew and buy the other. It also checks what the bonds pay after tax and inflation. It names no fund or security.
+
+when:
+  - You are starting out and need a first split with a reason behind it.
+  - Your stock share has crept up in a rising market and you wonder what to do.
+  - You want a rule for when to rebalance so you stop deciding case by case.
+
+you_give:
+  - Your investor type, from "Defensive or enterprising investor sorter"
+  - How much you plan to invest, and money you need within five years
+  - What stocks and good bonds pay now, if you know it
+  - Your tax rate, if you know it
+
+you_get:
+  - A starting split, a range and the reason for where you sit in it
+  - A rebalancing rule with the trigger and the exact move
+  - A check of after-tax bond income against inflation
+  - A list of what would make you change the split
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your investor type and the facts on your money. Add what you can on yields and tax.
+  - Say honestly how you would feel if your stocks halved.
+  - Keep the split and the rule where you will see them when prices move.
+
+how_it_works:
+  - title: Sets money aside
+    text: Takes out money you need within five years, since that should not sit where prices can fall.
+  - title: Starts at even
+    text: Begins at half in stocks and half in bonds, and stays there unless a reason moves it.
+  - title: Places you in the range
+    text: Moves toward a quarter or three quarters in stocks, only for reasons from your own answers.
+  - title: Checks yields
+    text: Sets what stocks pay against what good bonds pay, and says what that comparison does and does not tell you.
+  - title: Writes the rebalancing rule
+    text: States the drift that triggers a move and the size of the move, with a worked sum.
+  - title: Tests the income against inflation
+    text: Works out bond income after tax and a stated yearly price rise.
+
+output_shape: |
+  MONEY IN THE SPLIT
+  Total <n> | Needed within five years, kept out <n> | In the split <n>
+
+  YOUR SPLIT
+  Stocks <n>% | Bonds <n>% | Range <25 to 75> | Why here: <reasons from your answers>
+
+  YIELD CHECK
+  Stocks pay <x>% | Good bonds pay <y>% | Ratio <z> | What it says: <...> | What it does not say: <...>
+
+  REBALANCING RULE
+  Trigger: stocks outside <lo to hi>% | Move: <exact amount> | Worked sum: <...>
+
+  INFLATION CHECK
+  Bond yield <a>% | After tax <b>% | Price rise assumed <c>% | Real yield <d>%
+
+  WHAT WOULD CHANGE THE SPLIT
+  <list of facts about you, never a forecast>
+
+  MISSING
+  <list>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: Your lean
+    how: Say whether you want to sit nearer the low or the high end and why. It tests the reason before using it.
+  - what: A different drift
+    how: Pick a trigger such as five or ten points, or a yearly date. A wide trigger means fewer trades.
+  - what: Tax account
+    how: Say if the money sits in a tax-sheltered account, since selling there may cost no tax.
+
+judge:
+  - The split sits between a quarter and three quarters in stocks, and the reason is from the person's answers.
+  - Money needed within five years is out of the split.
+  - The rebalancing rule has a trigger, a move and a worked sum.
+  - The inflation check shows its sums.
+  - Nothing names a fund or security, and nothing forecasts the market.
+
+test:
+  - Say you would sell if your stocks halved. It should place you at or near the low end.
+  - Give it a plan that wants 90% in stocks. It should refuse the range and say why.
+  - Leave out the yields. It should mark the yield check MISSING and still give the split.
+  - Run it twice on the same facts. The split and rule should match.
+
+improve:
+  - Reread the split once a year and after a big fall.
+  - After a rebalancing, write down what happened and whether you kept to the rule.
+  - Pair it with "Bond type and maturity chooser" for the bond half.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "A few sums and a written rule are text work any strong chat AI does well with this skill."}
+    - {name: "A spreadsheet", why: "A sheet that shows your split each quarter makes the five-point trigger easy to see."}
+  inputs:
+    - "Your investor type"
+    - "A list of money you need in the next five years"
+    - "Your account balances by stocks and bonds"
+
+terms:
+  - term: Rebalancing
+    meaning: Selling a little of what has grown and buying what has shrunk so the split goes back to your plan.
+  - term: High-grade bond
+    meaning: A loan to a very safe borrower, with a high credit rating, that pays interest on a fixed schedule.
+  - term: Real yield
+    meaning: What an investment pays after tax and after the loss of buying power from rising prices.

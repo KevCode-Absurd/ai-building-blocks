@@ -1,0 +1,17 @@
+slug: what-if-situation-finder
+name: "What-if situation finder"
+summary: "Paste your story idea. Get one what-if question, the people stuck in it and the unknowns to leave open."
+category: general
+type: skill
+role: make
+job: strategy
+level: beginner
+inputs:
+  - {type: question, required: true}
+outputs:
+  - {type: brief}
+origin: rebuilt
+version: 1.0.0
+minds: [stephen-king, anne-lamott]
+credits:
+  - {title: "On Writing: A Memoir of the Craft", by: "Stephen King", used: "Starting from a situation put as a what-if question, with flat first sketches of the people, and leaving the plot and the ending to be found while writing"}

@@ -1,0 +1,112 @@
+new_slug: scene-detail-picker
+name: "Scene detail picker"
+summary: "Paste your story's key places. Get a few first-to-mind details for each, one fresh comparison and what to leave out."
+job: write-and-tell-stories
+thinking: low
+thinking_why: "It follows a short fixed method for each place."
+
+headline: "Pick the few details that make a place feel real, then stop describing"
+subhead: "Give it your situation and the places your first scenes happen in. It runs a quick recall of each place across the five senses, keeps four details, adds a fresh comparison and lists what to skip so the scene stays about the story."
+
+explain: |
+  Description goes wrong in two ways. Too little leaves the reader nearsighted. Too much buries the story, and the reader puts the book down because it got boring. The fix is not a rule about length. It is picking details well.
+
+  This skill works on a place before you draft. It asks you to call the place up all at once, across the five senses, then writes down the first four things that come. First details tend to be the truest. It favours place and texture over faces and clothes, adds one fresh comparison if it can find one that is not a cliche, and lists what to skip. It also marks what the reader will fill in better than you could. You get a short sheet for each place to keep beside the draft.
+
+when:
+  - "Your drafts open with a paragraph of scenery that goes nowhere."
+  - "You are about to write a place you know only a little."
+  - "A reader said they could not picture where it happened."
+
+you_give:
+  - "Your situation or brief"
+  - "The places your first scenes happen in"
+  - "Places you know in real life that they resemble (optional)"
+  - "The mood you want in each place (optional)"
+you_get:
+  - "Four first-to-mind details for each place"
+  - "One fresh comparison for each place, or a note that none was good enough"
+  - "A skip list for each place"
+  - "A line saying what to leave to the reader"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Paste your situation, then list the places in order."
+  - "If a place is real, name it. It will use what is true about it and mark what it made up."
+  - "Keep the sheet beside you while you draft."
+  - "Use the details once each. Do not repeat them."
+
+how_it_works:
+  - title: "Lists the places"
+    text: "Takes the places your first scenes happen in."
+  - title: "Recalls each one"
+    text: "Calls up each place across the five senses."
+  - title: "Keeps four details"
+    text: "Picks the first four that come, favouring place and texture."
+  - title: "Trims the people"
+    text: "Drops faces, clothes and long lists."
+  - title: "Adds a comparison"
+    text: "Offers one fresh comparison, or none."
+  - title: "Writes a skip list"
+    text: "Names what to leave out of each place."
+  - title: "Leaves room"
+    text: "Marks what the reader will supply."
+
+output_shape: |
+  PLACE 1: <name>
+  Four details: <detail> | <detail> | <detail> | <detail>
+  Senses used: <list>
+  Fresh comparison: <the thing is like the other thing> | or: none good enough
+  Skip: <list>
+  Leave to the reader: <one line>
+  Made up, not known: <details it invented>
+
+  PLACE 2: <name>
+  <same>
+
+  A WORD ON LENGTH
+  <how many lines each place gets in the draft>
+
+  CHECKS MISSED
+  <one line per check missed, or none>
+
+tweaks:
+  - what: "Real places"
+    how: "Say which places you know. Recall from a real place gives details no one else would think of."
+  - what: "Mood"
+    how: "Say the mood. The same room feels different when someone is afraid in it."
+  - what: "Point of view"
+    how: "Say whose eyes it is. A baker notices different things than a bus driver."
+  - what: "Length"
+    how: "Say if the piece is short. A short piece gets two details for each place, not four."
+
+judge:
+  - "Each place has exactly four details."
+  - "At least two senses other than sight appear in the sheet."
+  - "The comparison is not one you have heard before."
+  - "The skip list names real temptations, such as clothes or the weather."
+  - "Invented details are marked as invented."
+
+test:
+  - "Run it on a place you know well. Check the four details are things you would also have named."
+  - "Run it on a cliche room such as a haunted house. The comparison should avoid the usual ones."
+  - "Draft one scene from the sheet. The place should be clear in under five lines."
+
+improve:
+  - "Add a list of comparisons you are tired of, and it will avoid them."
+  - "Keep a detail bank of real places you visit."
+  - "Use the sheet again in the second draft to check you did not over-describe."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "A short recall exercise per place is plain text work."}
+    - {name: "A pocket notebook", why: "Write down real details when you notice them. The best ones come from life."}
+  inputs:
+    - "A photo of a real place"
+    - "The character whose eyes we see through"
+
+terms:
+  - term: "Texture"
+    meaning: "How a place feels: the grit underfoot, a hum, a smell."
+  - term: "Fresh comparison"
+    meaning: "A comparison between two unlike things that the reader has not met before."

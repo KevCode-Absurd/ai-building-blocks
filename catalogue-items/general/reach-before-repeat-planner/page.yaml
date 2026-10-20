@@ -1,0 +1,124 @@
+new_slug: reach-before-repeat-planner
+name: "Reach-before-repeat planner"
+summary: "Paste your channels and budget. Get a plan that reaches more different people first and repeats only after."
+job: plan-ad-tests
+thinking: medium
+thinking_why: "The rule is fixed, but it needs real numbers on who each channel reaches, and some will be missing."
+
+headline: "Spend your ad budget on reaching new people before showing the ad to the same people again"
+subhead: "Give it your channels, costs, the people each one reaches and your buyer pool. It works out how much of the pool you reach now, ranks where the next dollar reaches the most new people, and tells you when repeats start to make sense."
+
+explain: |
+  An ad shown to the same thirty thousand people three times a week reaches fewer minds than an ad shown once to ninety thousand. For a product that many people buy, the first is a poor use of money, because the ad only works on those who have heard it.
+
+  This skill works from unique people, not views. It lists where you reach people, how many different people each place reaches, and what each costs. It works out what share of your likely buyers you reach now. It then ranks the next purchases by new people per unit of money, and only adds repeats once you reach most of the pool. It first checks that the ad is worth spreading: if it does not deliver its claim, more reach is money wasted. It also tells you when this rule does not suit your product.
+
+when:
+  - "You run your ad in one place a lot and want to know if you should spread it."
+  - "Your reports show impressions and frequency but not unique people."
+  - "You are about to spend more and want it to reach people who have not seen the ad."
+
+you_give:
+  - "Your channels and what you spend on each"
+  - "How many different people each one reaches, if you know"
+  - "How many people could buy your product"
+  - "A recall and pull report on the ad (advised)"
+you_get:
+  - "The share of your buyers you reach now"
+  - "A ranked list of where the next money reaches the most new people"
+  - "The point where repeats should start"
+  - "A check on whether the ad is ready to be spread"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Paste your channel list with spend and the unique people each one reaches."
+  - "Say how many people could buy. If unsure, give a range."
+  - "Ask the platforms for unique reach, not impressions, if you do not have it."
+
+how_it_works:
+  - title: "Checks the fit"
+    text: "Asks whether many people buy this product. If only a few do, it says this rule does not suit and why."
+  - title: "Checks the ad"
+    text: "Looks at recall and pull. If the ad does not deliver its claim, it stops and sends you to fix that first."
+  - title: "Counts unique people"
+    text: "Works from unique people reached, not impressions."
+  - title: "Works out coverage"
+    text: "Unique people reached divided by the pool of likely buyers."
+  - title: "Ranks the next money"
+    text: "Ranks channels by new people per unit of spend."
+  - title: "Sets the point for repeats"
+    text: "Holds repeats until you reach most of the pool, then adds them."
+  - title: "Plans the check"
+    text: "Says to survey again and compare recall with coverage."
+
+output_shape: |
+  FIT
+  <suits | does not suit> | why
+
+  AD READY?
+  Recall <x%>, pull <y> -> <ready | fix first>
+
+  WHERE YOU REACH NOW
+  <channel> | spend | unique people | cost per 1,000 unique
+
+  COVERAGE
+  <unique people reached> of <pool> = <%>  (overlap assumed: <...>)
+
+  NEXT MONEY, IN ORDER
+  1. <channel or placement> | new people per unit spend | why
+
+  WHEN TO ADD REPEATS
+  At <80-90%> coverage. Then: <how>
+
+  SANITY CHECK
+  Recall should track coverage. If recall is far below, the ad is not delivering.
+
+  MISSING
+  <what would sharpen the plan>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: "Pool size"
+    how: "Give a range if you are unsure. The plan shows how coverage changes at each end."
+  - what: "Overlap"
+    how: "If you know the audiences overlap, say how much. Without it the plan assumes some and states it."
+  - what: "Budget"
+    how: "Say the total you can spend. It stops the ranking at what you can afford."
+  - what: "A small product"
+    how: "Say if only a narrow group could ever buy. The plan then reaches that group by name and skips the spreading rule."
+
+judge:
+  - "The plan works from unique people, not views."
+  - "The fit and the ad check come before any spending advice."
+  - "Coverage is shown with its sum and the overlap assumption."
+  - "Repeats are held until most of the pool is reached."
+  - "Missing reach figures are marked, not guessed."
+
+test:
+  - "Move a small part of the spend to a new channel and compare unique reach."
+  - "Ask each platform for unique reach for the last month and compare with the plan."
+  - "Survey recall again after a quarter and compare with coverage."
+  - "Check the plan against your own best guess about the pool."
+
+improve:
+  - "Keep a sheet of unique reach by channel by month."
+  - "Add the cost of making a new version of the ad for a new channel."
+  - "Test one placement at a time."
+  - "Pair it with the Campaign keep-or-change checker."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Ranking and sums are work any strong chat AI does well with this skill."}
+    - {name: "Your ad platform's reach report", why: "Shows unique people reached rather than impressions."}
+  inputs:
+    - "The plan from the Campaign keep-or-change checker"
+    - "Unique reach by channel for a month"
+    - "An estimate of how many people could buy"
+
+terms:
+  - term: Unique reach
+    meaning: "The number of different people who saw the ad at least once."
+  - term: Frequency
+    meaning: "How many times the average person who saw the ad saw it."

@@ -1,0 +1,117 @@
+new_slug: operations-manual-writer
+name: "Operations manual writer"
+summary: "Paste your standards sheet. Get a job card for each role, a missed-standard rule and a day-one trial sheet."
+job: plan-strategy
+thinking: medium
+thinking_why: "It turns a standards sheet into ordered steps and has to keep numbers exact, but the format is fixed. A mid-range model does it well."
+
+headline: "A manual a stranger can follow on their first day"
+subhead: Paste your standards sheet and describe the roles in your business. It writes one job card per role in the order the work happens, with numbers, a rule for what to do when a standard is missed, and a trial sheet. You get a manual and a way to test it on a newcomer.
+
+explain: |
+  A business that works in your hands often does not work in anyone else's, because the know-how lives in your head. A standards sheet says what good looks like. A manual says how, step by step, for each person.
+
+  This skill takes your standards and writes a job card for each role: the steps in order, each with a number where one applies (a weight, a temperature, a time in minutes), and the check that tells the person it was done. It writes what to do when a standard is missed, so staff do not guess. It marks which parts are fixed and which a local owner may change. It ends with a trial sheet for someone who has never worked for you, with a column for each place they stop or ask. That trial is how you find out what is missing from the manual.
+
+when:
+  - You have written standards but no step-by-step instructions anyone else could follow.
+  - A new hire keeps asking you the same questions.
+  - You plan to open a second location, hire a manager or hand the business to a partner.
+
+you_give:
+  - Your standards sheet or a list of what good looks like
+  - The roles in your business and what each person does in a shift
+  - Anything that always goes wrong when you are away (optional)
+you_get:
+  - One job card per role, with ordered steps and numbers
+  - A missed-standard rule for each key standard
+  - A list of what is fixed and what a local owner may change
+  - A day-one trial sheet that records every place a newcomer stops
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your standards sheet, or use the result from "Repeatable standards sheet writer".
+  - List the roles and say what each person does from open to close.
+  - Print the trial sheet and give it to someone who has never worked for you. Watch and write down where they stop.
+  - Bring the trial notes to "Second location readiness checker".
+
+how_it_works:
+  - title: Splits the work by role
+    text: One person, one job. It lists the steps each role owns and moves any step where someone walks or waits to cut it.
+  - title: Writes steps in order
+    text: Each step starts with a verb, carries a number where one applies and ends with a check that it was done.
+  - title: Writes the missed-standard rule
+    text: For each key standard, it says what the person does when it is missed, such as redo, refund or call a lead.
+  - title: Marks fixed and local
+    text: Fixed means the same everywhere. Local is the part an owner may change, with a rule for how a good idea becomes a standard.
+  - title: Writes the trial sheet
+    text: A line for each step with space to record where the newcomer stopped, asked or guessed.
+  - title: Checks itself
+    text: Runs its own checks and names any it missed.
+
+output_shape: |
+  ROLES AND WHAT EACH OWNS
+  <role>: <steps owned>
+
+  JOB CARD: <role>
+  1. <verb> <thing> | Number: <weight / temperature / minutes> | Done when: <check>
+  2. ...
+
+  IF A STANDARD IS MISSED
+  <standard> -> <what the person does at once> | Who is told: <>
+
+  FIXED AND LOCAL
+  Fixed: <> | Local choice: <> | How a local idea becomes a standard: <>
+
+  DAY-ONE TRIAL SHEET
+  Step | Did it alone / needed help / guessed / stopped | What was unclear
+
+  MISSING
+  <numbers or steps you must still supply>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: Your numbers
+    how: Give real weights, temperatures, times and counts. Where you do not, the card shows MISSING in that spot.
+  - what: Roles
+    how: Name them the way staff do. A card for "front counter" reads better than one for "customer service associate".
+  - what: What goes wrong when you are away
+    how: Add it. It becomes the first missed-standard rule.
+  - what: Your trial person
+    how: Say how much they know. A true newcomer finds more gaps than a friend who has watched you work.
+
+judge:
+  - Every step starts with a verb and says when it is done.
+  - Numbers appear where a number applies, or say MISSING.
+  - Each key standard has a missed-standard rule.
+  - Fixed and local parts are marked.
+  - The trial sheet has a line for every step.
+
+test:
+  - Give it to a person who has never worked for you and watch one shift. Count the places they stop or ask. Each one is a gap to fix.
+  - Hide the manual's title and give a card to a second reader. They should be able to say what the role is.
+  - Run it twice on the same standards. The steps should be the same, even if the wording differs.
+
+improve:
+  - Fix every gap the trial finds and run the trial again with a different person.
+  - Add a photo or short video to any step the trial found unclear.
+  - Review each card after any change in suppliers, equipment or menu.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Turning a standards sheet into ordered steps is writing work any strong chat AI does well."}
+    - {name: "A phone camera", why: "A short photo of what done looks like settles most arguments about a step."}
+  inputs:
+    - "A standards sheet from Repeatable standards sheet writer"
+    - "Your opening and closing routines"
+    - "Photos of what done looks like"
+
+terms:
+  - term: Job card
+    meaning: A one-page list of the steps one role does, in order, with numbers and a check for each.
+  - term: Missed-standard rule
+    meaning: What a person does at once when a standard is not met, so they do not have to guess.
+  - term: Trial sheet
+    meaning: A sheet for watching a newcomer, with a line for every step to record where they stopped, asked or guessed.

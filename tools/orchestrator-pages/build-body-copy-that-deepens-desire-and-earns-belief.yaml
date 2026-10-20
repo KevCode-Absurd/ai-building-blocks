@@ -1,0 +1,111 @@
+new_slug: build-body-copy-that-deepens-desire-and-earns-belief
+name: "Build body copy that deepens desire and earns belief"
+summary: "Give it your brief and product facts. Get body copy that sharpens the want, earns belief and shows how it works."
+job: write-ad-copy
+thinking: high
+thinking_why: "It writes, reorders and checks long copy across four steps. Give it your strongest model."
+
+headline: "Body copy that makes buyers want it, believe it and see why it works"
+subhead: "Give it your buyer brief and product facts. It sharpens the one want your buyers already have, reorders the claims so each one is prepared, adds a clear reason the promise holds, and checks every claim has proof beside it."
+
+explain: |
+  A good headline gets the reader in. Then the copy has three jobs: make the want sharper, make the claims believable, and show why the promise could be true. Most copy does the first badly and skips the other two.
+
+  This workflow follows the order set out in a summary of Eugene Schwartz's Breakthrough Advertising. First it builds the want from several sides, using only moves your facts can back. Then it scores your claims for how readily a doubtful reader accepts them and rebuilds the order as a ladder of small steps. Next it adds a short cause-and-effect passage that explains how the product gets its result. Last it pairs each claim with proof and flags the ones that outrun it. The source is a third-party summary, so treat its detail as second-hand.
+
+when:
+  - Your headline gets read, but the copy underneath does not convince.
+  - Readers drop out at your biggest claim.
+  - Buyers like the idea but say the price is too high or ask how it can work.
+
+you_give:
+  - "Your brief: the buyer, the one want and how aware they are"
+  - Your product facts, with numbers and the proof you can use
+  - Your headline (optional)
+  - Your offer and customer words (optional)
+
+you_get:
+  - A section that sharpens the want, one labelled block per move
+  - The claims reordered as a ladder of small steps, each scored
+  - A passage that explains how it works, with each link backed
+  - A claim and proof report that flags what outruns the proof
+
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Give it your brief and product facts. Add your headline and customer words if you have them.
+  - It works step by step and saves each result. Read the ladder before you read the finished copy.
+
+how_it_works:
+  - title: Sharpen the want
+    text: "Fixes the one want and the one thing the product does for it. Keeps only the moves your facts support, such as the product in action or the problem in full, and writes a block for each."
+  - title: Build belief
+    text: "Scores each claim for how readily a doubtful reader accepts it, then reorders the draft so no claim asks for more than one point more belief than the one before."
+  - title: Show how it works
+    text: "Lists the reasons your facts give for the result and writes them as a chain of cause and effect, with no link that lacks a fact."
+  - title: Match claims to proof
+    text: "Pairs every claim in the finished copy with proof you hold and flags the claims that go further than the proof."
+
+output_shape: |-
+  STEP 1: THE WANT SECTION
+    Want and what it does: <...>
+    Moves kept / dropped: <...>
+    Blocks: <one per move, strongest last>
+
+  STEP 2: THE BELIEF LADDER
+    Goal claim: <...>
+    Ladder: <rung | tool | score | jump>
+    Redraft: <copy in the new order>
+
+  STEP 3: HOW IT WORKS
+    Chain: <because ... which ... so ...>
+    In place: <draft with the passage added>
+
+  STEP 4: CLAIMS AND PROOF
+    Each claim: <proof | gap | fix>
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+
+tweaks:
+  - what: Your brief
+    how: Name the one want and how aware your buyers are. Every step builds on that, so a vague brief gives vague copy.
+  - what: Your facts
+    how: Give exact figures, times and tests with their sources. Moves and links without a fact behind them are dropped.
+  - what: A market that has heard it all
+    how: If buyers have heard your promise many times, run the headline workflow first so the copy starts from a claim that is new to them.
+
+judge:
+  - The section serves one want and no block repeats another.
+  - The ladder starts at a true, widely accepted statement and never jumps two points of belief.
+  - Every link in the how-it-works passage is backed by a fact you gave it.
+  - Every claim in the final copy is paired with proof or flagged.
+  - Nothing is invented to fill a gap.
+
+test:
+  - Run it on copy that already converts. The moves it keeps should look like what that copy does.
+  - Stop after the ladder and read the new order to a stranger. Each step should get an easy nod.
+  - Compare the redrafted copy with the original in a small test, same headline and offer.
+  - Run it twice. The moves kept and the order of the ladder should be close.
+
+improve:
+  - Save your best moves, ladders and chains in your brand file, so a new product in the same field starts from them.
+  - Add customer doubts in their own words, so the ladder starts from what your buyers actually believe.
+  - After the run, test the finished copy against your control with the same headline.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Writing, scoring and checking copy in sequence works well in any strong chat AI."}
+    - {name: "An A/B test tool or your ad platform", why: "Shows whether the redrafted copy beats the original."}
+  inputs:
+    - "A buyer brief with the one want, from the Market stage reader"
+    - "Product facts with exact numbers and sources"
+    - "Customer reviews that show doubts and beliefs"
+
+terms:
+  - term: Goal claim
+    meaning: The claim that, if rejected, makes the rest of the copy worthless.
+  - term: Ladder
+    meaning: A run of statements that start with one the reader accepts at once and rise in small steps to the goal claim.
+  - term: Chain
+    meaning: A short run of cause and effect that explains how a product gets its result.

@@ -1,0 +1,119 @@
+new_slug: test-reply-offer-planner
+name: "Test reply offer planner"
+summary: "Paste your test plan and product. Get one reply offer, the same in both versions, that brings enough replies to count."
+job: plan-ad-tests
+thinking: medium
+thinking_why: "It weighs a trade-off between enough replies and real buyers, but follows fixed steps."
+
+headline: "A reply offer for your test that brings enough replies from real buyers"
+subhead: Give it your test plan and what you sell. It picks a small free or low-cost item to reply to, decides whether to show it or hide it, and screens out people who only want a freebie. You get the offer lines and a plan to raise the count if it falls short.
+
+explain: |
+  A test needs replies to count. If the thing people reply to is weak, you get ten replies a version and the result is luck. If it is too good, you get a crowd who wanted the free item and a winner that never sells.
+
+  This skill picks the reply offer on purpose. It starts from what a reply should predict, lists at least four small items you could give, and chooses the one that is closest to what you really sell. It decides whether to show the offer or tuck it into the last paragraph, adds a light screen when free draws the wrong people, and compares the expected replies with your target. If the count looks low, it raises it in a set order, from making it free to showing it more clearly. The offer stays identical in both versions.
+
+when:
+  - You are setting up a test of two ads or emails and do not know what to ask readers to do.
+  - Your last test gave too few replies to read.
+  - Free offers bring replies from people who never buy.
+
+you_give:
+  - Your test plan, or the two versions, audience size and reply target
+  - Your real offer and price (optional)
+  - What you could give away, such as a guide, sample or trial (optional)
+you_get:
+  - A chosen reply offer and a back-up, with the cost per piece
+  - A decision on shown or hidden, and a screen if one is needed
+  - Expected replies against your target, and the order of boosts if short
+  - The offer lines and a note on matching replies to buyers later
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste the test plan and say what you sell.
+  - List anything you already have that could be the reply item.
+  - Put the same offer lines in both versions, in the same place and size.
+  - Keep a note of which repliers go on to buy.
+
+how_it_works:
+  - title: States what a reply must predict
+    text: One line that says what a reply shows, so the offer is judged on that.
+  - title: Lists at least four options
+    text: Samples, guides, checklists, catalogues, trials, quotes and calls, each with its cost.
+  - title: Picks the closest fit
+    text: Chooses the item most like what you sell, so repliers look like buyers.
+  - title: Decides shown or hidden
+    text: Shown for many replies, hidden to learn if anyone read the copy or to avoid freebie hunters.
+  - title: Compares with the target
+    text: Raises a low count in a set order and trims a high one, without changing the offer mid-test.
+
+output_shape: |
+  AIM
+  A reply shows ___ and is likely to buy ___.
+
+  THE OFFER
+  Chosen: <item> | Cost per piece: <n> | Back-up: <item>
+  Shown or hidden: <choice> because <reason>
+  Screen: <none / small charge / one question / phone check>
+
+  EXPECTED AGAINST TARGET
+  <expected replies per version, as a range> vs <target>
+  If short, in order: <boosts>
+
+  OFFER LINES
+  Ad line: <...>  Reply form: <...>  Thank-you: <...>
+
+  MATCHING LATER
+  <how replies are tied to buyers>
+
+  MISSING
+  <list>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: What you can give
+    how: List real items you already have. It prefers these to making something new.
+  - what: Your budget per reply
+    how: Give a cost limit. Items above it are dropped.
+  - what: Who follows up
+    how: Say if a salesperson will call. A phone check is then added as a screen.
+  - what: Real offer
+    how: Give your real offer so the reply item can lead into it.
+
+judge:
+  - The offer is the same item, wording, size and place in both versions.
+  - The item is close to what you sell.
+  - Expected replies are compared with the target.
+  - Any free claim shows its conditions.
+  - Replies can be matched to buyers.
+
+test:
+  - Run the test and count the replies per version. Check you reached the target or the plan said why not.
+  - Follow the repliers and see how many bought, versus a random group.
+  - Compare a free item and a low-priced one on a small run, and check which brought buyers.
+  - Check both ads carry the same offer words and place.
+
+improve:
+  - Keep a list of reply items and their cost per reply and buyer share.
+  - Add items your market likes to step 2.
+  - Add boosts you can use in your tools to step 6.
+  - Record which items drew freebie hunters, and drop them.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Listing options and weighing them is text work any strong chat AI handles with this skill."}
+    - {name: "A spreadsheet", why: "Tracks replies, buyers and cost per piece for each item."}
+  inputs:
+    - "The plan from Split-run test planner"
+    - "Your price list and anything you can give away"
+    - "Results from past tests, if you have them"
+
+terms:
+  - term: Reply offer
+    meaning: The small thing a reader is invited to ask for in a test, such as a sample or a guide.
+  - term: Hidden offer
+    meaning: An offer placed in the last paragraph with no button or box, so only people who read the copy find it.
+  - term: Screen
+    meaning: A small step that filters out people who only want something free.

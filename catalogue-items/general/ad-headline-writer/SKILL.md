@@ -1,11 +1,11 @@
 ---
 name: ad-headline-writer
-description: Use when you need headlines, headline-field lines or the words on an ad image, each one understood in a single glance. Sets what the line may say from how aware the buyer is, picks each line's way in from the material you actually hold (a gain, an exact fact, news, the buyer's words, the buyer's question), and checks every line against its character limit and a glance test. Ends with any of its checks the set still misses.
+description: Use when you need headlines, headline-field lines or the words on an ad image, each one understood in a single glance. Sets what the line may say from how aware the buyer is, picks each line's way in from the material you actually hold (a gain, an exact fact, news, the buyer's words, the buyer's question), and checks every line against its character limit and a glance test. With a stage brief, also sets the move the market's claim fatigue calls for. Ends with any of its checks the set still misses.
 ---
 
 # Ad headline writer
 
-Most people read the headline and nothing else, so it has to pick out its reader and give them a reason in one look. This skill writes a set of lines that each do that, each with a different way in, and each built only from material you supplied. For the opening line of a video or post, use "Ad first line writer and scorer" instead; this one is for fixed fields and image words.
+Most people read the headline and nothing else, so it has to pick out its reader and give them a reason in one look. This skill writes a set of lines that each do that, each with a different way in, and each built only from material you supplied. When you also know how many rivals make the same claim, it adds the move that stage calls for, so a crowded market gets a different move, not a louder claim. For the opening line of a video or post, use "Ad first line writer and scorer" instead; this one is for fixed fields and image words.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
@@ -34,6 +34,7 @@ How to start:
 
 ## What you need
 - **A buyer brief** (required): how aware they are, the one thing they want, their main doubt. A few lines in their own words work too. The Buyer brief writer gives a better starting point.
+- **A stage brief** (optional): the awareness place, the claim-fatigue stage and the MAY and MAY NOT lists, from the "Market stage reader". When you give one, take the level and the limits from it.
 - **Offer and facts** (required): the benefit, the proof you may use, any dated news, the price and terms if relevant.
 - **Count and limits** (required): how many lines, the character limit and where each line appears.
 - **The picture** (optional): for words on an image. Read an attached picture directly, and ask for it rather than a description. With only a description, say that step 5 was checked against words, not the image.
@@ -46,22 +47,23 @@ How to start:
    - Solution aware: what's different about this way of solving it.
    - Product aware: their doubt answered, or proof they haven't seen.
    - Most aware: the deal and the true reason to act now.
-   When the buyer sits between two levels, write for the less aware one.
+   When the buyer sits between two levels, write for the less aware one. Product-aware and most-aware lines may carry the product name and a deal. Unaware lines carry no price, no product name and no direct claim.
+   **The claim-fatigue move** (only with a stage brief, or when you know how many rivals make the same claim): stage 1, say the plain claim. Stage 2, say it bigger, as far as it can honestly go. Stage 3, lead with a new how. Stage 4, make the how easier, faster or surer, or add a gain. Stage 5, speak to who the buyer is, not what the product does. Use at least two different moves, so a test can tell them apart.
 2. **List the material you hold** for each way in. A way in with no material is skipped and noted, never faked.
    - **Plain gain:** a benefit the facts support, said straight.
    - **Exact fact:** an amount, a material, a test result or a count, with what it means for the buyer.
    - **News:** something true and new, with a date (a new format, price or finding).
    - **Their words:** a customer's phrase, in quotation marks, only if supplied word for word.
    - **Their question:** the doubt they already have, asked their way and answered in the same line or the next. Only when the facts hold the answer.
-3. **Write one line per way in,** using different ways in until you reach the count. Each line is a sentence or phrase a person would say, picks out the reader by their situation (never by a label or a condition they have), and carries one idea.
+3. **Write one line per way in,** using different ways in until you reach the count. With a stage brief, write one line per allowed move too, and name the move. Each line is a sentence or phrase a person would say, picks out the reader by their situation (never by a label or a condition they have), and carries one idea. Sharpen a line with one thing from your facts only: an exact size, speed, count or percentage, a comparison with a number in it, a picture of the moment the result shows up, a sense (how it feels, tastes, sounds or looks), or a limit removed ("without ..."). Do not stack them.
 4. **Fit the space.** Count the characters. If a line won't fit, say a smaller thing. Never drop the small words to squeeze it in.
 5. **On a picture,** the words add what the picture can't show. They never label what's already visible. A price, amount or button label can be a short phrase.
-6. **Run the glance test** on every line: under its limit; no word a stranger would look up; a stranger could say in their own words what's on offer and who it's for. Rewrite or drop any line that fails.
+6. **Run the glance test** on every line: under its limit; no word a stranger would look up; a stranger could say in their own words what's on offer and who it's for. Also run the one-job test: does the line make the right reader want the next line, without trying to sell or prove the whole case? Rewrite or drop any line that fails. With a stage brief, drop any line that breaks its MAY NOT list.
 7. **Mark the line to test first:** the one whose way in rests on the strongest material for this buyer's doubt.
 8. **Check it.** Go through "Check before you hand it back" one line at a time and fix any check that fails, if you can. Under CHECKS MISSED, write one line for each check still missed and why, or "none".
 
 ## What you hand back
-The level and what it allows. Then a numbered list: the line, its way in, who it's aimed at, its character count, and the glance test result. Then the line to test first, the ways in skipped for lack of material, and `MISSING:` lines. Last, CHECKS MISSED: one line per check still missed, or "none".
+The level and what it allows. Then a numbered list: the line, its way in, who it's aimed at, its character count, and the glance test result. Then the move each line makes (with a stage brief), the line to test first, a second line that uses a different way in or move to test against it, the ways in skipped for lack of material, and `MISSING:` lines. Last, CHECKS MISSED: one line per check still missed, or "none".
 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
@@ -76,6 +78,7 @@ If they pick one and that skill is added here, carry straight on with what you j
 
 ## Check before you hand it back
 - No two lines use the same way in or make the same argument.
+- With a stage brief, no line breaks its MAY NOT list, and an unaware line has no price or product name.
 - Every number, date and quote comes from what was supplied.
 - Every question line is answered by a fact on file.
 - Every line fits its limit.

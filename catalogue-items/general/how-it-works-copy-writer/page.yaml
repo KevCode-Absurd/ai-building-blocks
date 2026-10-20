@@ -1,0 +1,115 @@
+new_slug: how-it-works-copy-writer
+name: "How-it-works copy writer"
+summary: "Paste a draft and product facts. Get a short cause-and-effect passage that makes the promise believable, with every link backed."
+job: write-ad-copy
+thinking: medium
+thinking_why: "It builds a short chain of reasoning from facts and checks each link. A mid-size model does it well."
+
+headline: "Make the promise believable by showing how it works"
+subhead: Give it your draft and your product facts. It finds the reasons your promise could be true, decides how much your buyer needs to hear, and writes a short chain of cause and effect with each link backed by a fact. If the facts can't explain it, it tells you.
+
+explain: |
+  When buyers have heard a promise many times, they stop asking what it does. They ask how it could. An answer that is clear and true makes an old promise believable again. An answer that is made up, or full of words nobody understands, does the opposite.
+
+  This skill lists every cause your facts give for the result, and tags each as a fact, something standard in your field or a gap. It then picks how much to say: a short phrase when buyers already know how this kind of product works, a passage when they need reasons, or a lead position when your way of doing it is the new thing. It writes a chain of at least two links, checks each one and puts the passage where the promise needs backing. A link with no fact behind it is never written.
+
+when:
+  - Readers like your promise but say "how?" or "sounds too good".
+  - Your rivals make the same claim and you do it differently.
+  - Your product has a real reason it works that your copy never explains.
+
+you_give:
+  - A draft with the main promise in it
+  - "Product facts: how it is made or done, what each part does, test results and standards in your field"
+
+you_get:
+  - The promise and the doubt a buyer would raise
+  - Every cause found, tagged fact, field or gap
+  - The level chosen (phrase, passage or lead) and why
+  - The how-it-works passage, in place in your draft
+  - What is missing, link by link
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your draft and your product facts. Include how it is made or done.
+  - Read the gaps list. Add any fact you can prove, and run it again.
+  - Check the passage with someone who does not know the product. They should say it back in their own words.
+
+how_it_works:
+  - title: States the doubt
+    text: Writes the promise and the question a doubtful buyer would ask.
+  - title: Gathers the causes
+    text: Lists every reason from your facts and tags each as a fact, a standard in the field or a gap.
+  - title: Chooses the level
+    text: A short phrase, a descriptive passage or the main selling point, based on what the buyer already understands.
+  - title: Builds the chain
+    text: At least two links, each true, each following the one before, each backed.
+  - title: Uses the buyer's terms
+    text: Swaps technical words for what the buyer would call it, with one name for the mechanism used every time.
+  - title: Places it
+    text: Puts the passage where the promise needs backing and ends on the result.
+
+output_shape: |
+  THE PROMISE AND THE DOUBT
+  <promise> | "How could that be true?" <doubt in the buyer's words>
+
+  CAUSES
+  <because X, Y happens> | FACT / FIELD / GAP
+
+  LEVEL
+  <1 phrase / 2 passage / 3 lead> because <reason>
+
+  THE CHAIN
+  Because ... which ... so ...
+
+  IN PLACE
+  <the draft with the passage added>
+
+  MISSING
+  <cause needed for link n>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: Facts
+    how: Give how it is made, what each part does and any test results. Without these it can only write a phrase.
+  - what: Level
+    how: Tell it if you want the how to lead. It does that when your way of doing it is the new thing in your market.
+  - what: Words
+    how: Add the terms your buyers use for the thing, so the passage uses their words.
+
+judge:
+  - Every link is backed by a fact you supplied or a standard in your field.
+  - There are at least two links, or it says the claim has only one.
+  - The passage ends on the promise's result.
+  - Technical words are explained or replaced.
+  - Nothing is claimed about how it works that the facts do not show.
+
+test:
+  - Give it a product you know well. Check that every link is true and in the facts.
+  - Remove the key fact and run it again. It should write less and mark the gap.
+  - Show the passage to a stranger and ask them to say how it works. They should get it in one pass.
+  - Compare the draft with and without the passage in a small test.
+
+improve:
+  - Save the plain name you give your mechanism and use it everywhere.
+  - Add test results and standards to your facts as you gather them. More links become possible.
+  - Pair it with "Claim and proof matcher" so the chain's facts sit beside the claims.
+  - Add words your field overuses to the "Avoid" list in the skill file.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Building and checking a short chain of reasoning works well in any strong chat AI with this skill."}
+  inputs:
+    - "How the product is made or done, in order"
+    - "Test results, standards or studies with sources"
+    - "The words your buyers use for the same thing"
+
+terms:
+  - term: Mechanism
+    meaning: The reason a product gets its result, written as a short chain of cause and effect.
+  - term: Link
+    meaning: One step in the chain, such as "because X, Y happens". Each needs a fact behind it.
+  - term: Level
+    meaning: How much explaining a buyer needs, from a short phrase to the main selling point.

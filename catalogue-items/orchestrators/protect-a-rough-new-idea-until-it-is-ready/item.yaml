@@ -1,0 +1,24 @@
+slug: protect-a-rough-new-idea-until-it-is-ready
+name: "Protect a rough new idea until it is ready"
+summary: "Describe your new idea and the pressure on it. Get a verdict on early or broken, and a plan that shields it."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: analysis
+level: intermediate
+inputs:
+  - {type: question, required: true}
+  - {type: plan, required: false}
+outputs:
+  - {type: plan}
+uses: [incentive-checker, early-or-broken-checker, new-idea-protection-planner]
+steps:
+  - {uses: incentive-checker, note: "Who pulls on the idea and where the pull has started to decide what the idea becomes."}
+  - {uses: early-or-broken-checker, note: "A verdict on whether the idea is ugly because it is new or stuck because it is wrong."}
+  - {uses: new-idea-protection-planner, note: "Who may see it, what they may ask, what time and money it gets and when protection ends."}
+origin: rebuilt
+version: 1.0.0
+minds: [ed-catmull]
+credits:
+  - {title: "Creativity, Inc.", by: "Ed Catmull with Amy Wallace", used: "The order of the steps: map who is pulling on the idea, decide if the idea is early or broken, write the plan that shields it"}
+generated_from: intake/creativity-inc-protect-the-new/skeleton.yaml

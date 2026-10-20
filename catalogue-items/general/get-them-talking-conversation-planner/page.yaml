@@ -1,0 +1,129 @@
+new_slug: get-them-talking-conversation-planner
+name: "Get-them-talking conversation planner"
+summary: "Paste your brief on the person. Get a warm start, questions they enjoy answering and where to stop and listen."
+job: speak-and-persuade
+thinking: medium
+thinking_why: "It must judge which questions will draw a person out and where to listen, but the plan shape is fixed."
+
+headline: "Get-them-talking conversation planner"
+subhead: "Give it a brief on the person you will meet. It plans the first ten seconds, writes questions they will enjoy answering, sets when to stay quiet and how to show you heard, and plans how to end while they want more. You get a one-page meeting plan."
+
+explain: |
+  Most people think a good conversation means being interesting. The person across from you is usually thinking about themselves, and they remember the people who showed an interest in them. Talking more rarely helps.
+
+  This skill plans the talk so that the other person does most of it. It plans the first ten seconds, including their name said right and a warm greeting you mean. It writes open questions in three layers: how they started, what they treasure and what is going on now. It sets listening rules and plans where to stay quiet. It also plans where to give a short sign that you heard, and chooses two true appreciations to say at the right moments. If you have an ask, it puts it in terms of what it does for them. It plans a close that ends while they still want more.
+
+when:
+  - "You are meeting a person who matters and want them to feel heard."
+  - "You are shy and dread small talk."
+  - "You are at a conference and want one good conversation, not ten thin ones."
+
+you_give:
+  - "A brief on the person, such as from \"Before-you-meet brief writer\""
+  - "Where and how long you will meet"
+  - "Your aim, if you have one (optional)"
+you_get:
+  - "A plan for the first ten seconds, including their name"
+  - "Six to eight open questions in three layers"
+  - "Listening rules and where to stay quiet"
+  - "Two true appreciation lines, and a close"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Paste the brief on the person."
+  - "Say how long you will have and where."
+  - "Read the plan once and pick three questions to carry in your head."
+  - "Write notes within an hour after the meeting."
+
+how_it_works:
+  - title: "Sets the feeling you want"
+    text: "How they should feel at the end, rather than what you will say."
+  - title: "Plans the first ten seconds"
+    text: "Name, greeting and a line that shows you are glad to meet."
+  - title: "Writes the questions"
+    text: "Open questions in three layers, with the best one early."
+  - title: "Plans the listening"
+    text: "Rules for not interrupting, short signs of attention and follow-ups."
+  - title: "Places two appreciations"
+    text: "Two true lines, and where to say them."
+  - title: "Talks in their terms"
+    text: "Puts any ask in terms of what it does for them."
+  - title: "Plans the close"
+    text: "Ends while they want more, with a promised next step."
+  - title: "Checks the plan"
+    text: "Runs its own checks and names any it missed."
+
+output_shape: |
+  HOW THEY SHOULD FEEL AT THE END
+  <heard, respected, curious>
+
+  THE FIRST TEN SECONDS
+  Name: <how to say it, spelling checked>
+  Greeting: <line>   Why you are glad: <true reason>
+
+  QUESTIONS (they talk, you listen)
+  Their start: <1 to 2 questions>
+  What they treasure: <2 to 3 questions>
+  Right now: <2 to 3 questions>
+
+  LISTENING RULES
+  <rules, and where to stay quiet>
+
+  TWO TRUE APPRECIATIONS
+  1. <line> | Say it when: <moment>
+
+  IF YOU HAVE AN ASK
+  <in terms of what it does for them, and when>
+
+  THE CLOSE
+  <thanks by name, one thing you will do, when you will be in touch>
+
+  MISSING
+  <what you do not know>
+
+  CHECKS MISSED
+  <one line per check missed, or none>
+
+tweaks:
+  - what: "The time you have"
+    how: "Ten minutes at a party needs fewer questions than an hour at lunch."
+  - what: "How well you know them"
+    how: "Strangers get more questions about their start. Old contacts get more about now."
+  - what: "Your nerves"
+    how: "Say if you tend to fill silence. The plan adds a rule for it."
+  - what: "Your ask"
+    how: "Say if you have one. If not, the plan skips that part."
+
+judge:
+  - "Their name is in the first ten seconds and spelled or said right."
+  - "No question can be answered yes or no."
+  - "The best question comes early."
+  - "The appreciations are true and specific."
+  - "The ask, if any, is stated in terms of what it does for them."
+
+test:
+  - "Read the questions aloud to a friend. See if they want to answer."
+  - "Use the plan once and note how much of the time they spoke."
+  - "Run it twice. The layers should stay."
+  - "After the meeting, check whether they remembered your name."
+
+improve:
+  - "Add your own opening lines, so the first ten seconds sound like you."
+  - "Add topics you can ask about with real interest."
+  - "Keep a card of your three best questions in your pocket."
+  - "Pair it with \"Contact memory card writer\" for the notes after."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Writing open questions from a short brief is text work any strong chat AI does well."}
+    - {name: "A pocket notebook", why: "Jot the name and two facts as soon as you walk away."}
+  inputs:
+    - "The person's own words on a topic"
+    - "The venue and who else will be there"
+    - "A mutual contact to mention"
+
+terms:
+  - term: "Open question"
+    meaning: "A question that needs more than yes or no."
+  - term: "Layer"
+    meaning: "A level of question: how they began, what they treasure, what is going on now."

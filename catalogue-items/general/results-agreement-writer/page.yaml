@@ -1,0 +1,103 @@
+new_slug: results-agreement-writer
+name: "Results agreement writer"
+summary: "Describe a job to hand off or a deal to settle. Get a one-page agreement on results, limits, help, review and consequences."
+job: lead-people
+thinking: medium
+thinking_why: "It turns your description into five fixed parts and scans for lines that tell people how to work."
+headline: "Results agreement writer"
+subhead: "Describe a job you want to hand off or a deal you want to settle. It writes a one-page agreement on the results wanted, the limits, the help on offer, how progress is judged and what follows. You get the agreement and a say-it-back card."
+explain: |
+  When you hand off a job by telling someone how to do it, you keep the worry. They follow your steps, and when it goes wrong they say they did what you said. When you agree on the result instead, they own the job. It takes more time at the start and saves much more later.
+
+  This skill writes that agreement in five parts: the results wanted, the guidelines, the resources, how and when progress is judged, and the consequences. It checks that results can be seen or counted, keeps the limits few, starts review with the owner judging their own work, and strips out any line that tells them how to work. For a deal between two sides, it adds an exit clause and a line on telling each other early about trouble.
+when:
+  - You are handing a job to a team member, a child, a contractor or a volunteer.
+  - Two sides are about to agree on a deal and want the same picture of success.
+  - A past handoff went wrong because nobody agreed what done meant.
+you_give:
+  - The job or deal, with what, who and when
+  - How experienced the owner is, or what the other side cares about (optional)
+  - A sorted list or a third option from earlier skills (optional)
+you_get:
+  - A one-page agreement with results, guidelines, resources, accountability and consequences
+  - A choice of how much structure fits the person
+  - An exit clause and a trust line for a two-sided deal
+  - A say-it-back card of five lines
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Describe the job or deal and name the people. Paste any earlier plan.
+  - Read the results line first. If you could not check it by looking, counting or reading, ask for a rewrite.
+  - Go through the agreement with the owner. Ask them to say it back using the card.
+  - Hold the review date. Offer help only the way you agreed.
+how_it_works:
+  - title: Picks the type
+    text: One person owns a job, or two sides share a deal, with the final say named.
+  - title: Writes results
+    text: What must be true by when, written so it can be checked.
+  - title: Sets guidelines
+    text: Only real limits, plus the traps you know of.
+  - title: Lists resources
+    text: People, money, tools, access and the rule for asking for help.
+  - title: Fixes accountability
+    text: Review dates, measures and self-review first.
+  - title: States consequences
+    text: Good and poor, in money, recognition, opportunity or responsibility.
+  - title: Fits the person
+    text: More structure for someone new, less for someone experienced.
+  - title: Adds two-sided clauses
+    text: An exit, and a rule for telling each other early about trouble.
+  - title: Scans for methods
+    text: Removes lines that tell the owner how to work, and writes the say-it-back card.
+output_shape: |
+  AGREEMENT
+  Type: <handoff or two-sided deal> | Final say: <who>
+  RESULTS: <what is true by when, how it will be checked>
+  GUIDELINES: <few real limits> | Known traps: <list>
+  RESOURCES: <people, money, tools, access> | Ask for help: <rule>
+  ACCOUNTABILITY: <dates, measure, who judges first>
+  CONSEQUENCES: <good> | <poor>
+  FIT: <new or experienced, and what changed>
+  EXIT AND TRUST (two-sided only): <clauses>
+  SAY-IT-BACK CARD
+  Result: ... Limits: ... Help: ... Review: ... Consequences: ...
+  MISSING
+  <what would finish the agreement>
+  CHECKS MISSED
+  <one line per check still missed, or none>
+tweaks:
+  - what: How you word the result
+    how: Describe what you would see, count or read. "Tidy" does not work. "Every file is in a named folder" does.
+  - what: Experience of the owner
+    how: Say how often they have done this. It decides how many limits and reviews to add.
+  - what: Consequences
+    how: Name at least one you can really give, such as more scope or a different role.
+  - what: Review dates
+    how: Pick dates you will keep. The owner reports first.
+judge:
+  - You can check every result by looking, counting or reading.
+  - No line says how to do the work unless it is a real limit.
+  - There are fewer than six guidelines.
+  - Both good and poor consequences are named.
+  - The owner can say the card back without notes.
+test:
+  - Give it a job you handed off badly. See which line would have prevented the problem.
+  - Ask the owner to rewrite the result in their own words and compare.
+  - Run it twice. The five parts should stay the same even if the wording changes.
+improve:
+  - Add your standing limits, such as budget caps and privacy rules, to the skill file.
+  - Save good agreements as templates for the same kind of job.
+  - Add a line on how you will take feedback from the owner after the first review.
+  - Pair it with "Urgent versus important sorter" before and "Values-to-week planner" after.
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Drafting and tightening a short agreement is text work any strong chat AI does well."}
+    - {name: "A shared document", why: "Both sides can read, edit and sign off the same page."}
+  inputs:
+    - "A sorted task list from Urgent versus important sorter"
+    - "A third option from Third option finder"
+    - "Notes on how the owner handled a past job"
+terms:
+  - term: Guidelines
+    meaning: The few limits the job must stay within, such as a budget, a rule or a value. They are not instructions for how to work.
+  - term: Accountability
+    meaning: When and how progress is judged, and who judges first.

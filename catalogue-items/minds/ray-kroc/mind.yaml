@@ -32,6 +32,7 @@ sources:
   - {n: 8, title: "Those business hunches are more than blind faith (Fortune, 23 April 1979; quotes Ray Kroc on the McDonald name deal)", by: "Fortune, via CIA Reading Room copy", url: "https://archive.org/details/cia-readingroom-document-cia-rdp96-00788r001700210012-9", kind: own-words}
   - {n: 9, title: "Book review: Grinding It Out, the Making of McDonald's", by: "J M Finn", url: "https://www.jmfinn.com/our-thinking/book-review-grinding-it-out-making-mcdonalds/", kind: secondary}
   - {n: 10, title: "Ray Kroc, who once sold paper cups by day... (obituary)", by: "UPI Archives, 14 January 1984", url: "https://www.upi.com/Archives/1984/01/14/Ray-Kroc-who-once-sold-paper-cups-by-day/8554442904400/", kind: secondary}
+  - {n: 11, title: "Grinding It Out (a book summary)", by: "Third-party chapter summary of Ray Kroc with Robert Anderson, Grinding It Out (1977)", kind: secondary}
 tests:
   - {kind: use, prompt: "Write a one-page opening checklist for a small coffee cart, so a new hire can set up and serve the same way the owner does."}
   - {kind: use, prompt: "Write the five rules a partner must follow to sell our handmade candles under our name in their own shop."}

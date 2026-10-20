@@ -1,0 +1,19 @@
+slug: ad-pull-diagnoser
+name: "Ad pull diagnoser"
+summary: "Paste an ad that gets few replies. Get causes ranked by likelihood and cost to fix, starting with the headline."
+category: general
+type: skill
+role: check
+job: analysis
+level: intermediate
+inputs:
+  - {type: ad_copy, required: true}
+  - {type: performance_sheet, required: false}
+  - {type: offer, required: false}
+outputs:
+  - {type: audit_report}
+origin: rebuilt
+version: 1.0.0
+minds: [john-caples]
+credits:
+  - {title: "Tested Advertising Methods, fifth edition (1997)", by: "John Caples, revised by Fred E. Hahn", used: "The order of suspects when an ad does not pull: whether it is keyed and counted, the headline read alone, the appeal, believability and specifics, the offer and reply path, and then medium, season, size and position"}

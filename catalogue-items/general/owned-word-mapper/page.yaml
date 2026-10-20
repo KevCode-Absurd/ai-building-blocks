@@ -1,0 +1,122 @@
+new_slug: owned-word-mapper
+name: "Owned word mapper"
+summary: "Paste your rivals and what buyers say. Get the word each rival owns, words nobody can own and the open ones."
+job: study-competitors
+thinking: medium
+thinking_why: "It reads rivals' lines and reviews to find one word each, and a wrong guess is easy to spot, so medium effort is enough."
+
+headline: "See which word every rival owns, and which words are still open"
+subhead: "Paste your rivals and what buyers say about them. It finds the one word buyers link to each rival, runs a word-association test, marks words as taken, claimed by everyone or open, and finds the attribute opposite to the leader's."
+
+explain: |
+  Strong brands own one word in the buyer's mind. Ask what a leader stands for and most people answer in one word. A word that one rival already holds is almost impossible to take, and attacking it often makes that rival's claim stronger. Some words, like quality or service, can't be owned by anyone because every rival claims them and none would say the opposite.
+
+  This skill gathers each rival's own words (taglines, headlines) and buyer words (reviews), and picks the word that appears most for each. It marks every word as taken, contested or open. It lists the claims every rival makes, which are empty. For the leader, it finds the opposite attribute that someone could hold. You get a table and a short list of open words to test in "Ownable word picker".
+
+when:
+  - You can't say in one word what your rivals stand for.
+  - You want to claim a word and need to know if a rival already has it.
+  - Research tells you what buyers want, and you suspect a rival already owns it.
+  - Every brand in your market sounds the same.
+
+you_give:
+  - Your rivals, with their taglines or homepage lines
+  - Customer words from reviews or surveys (optional)
+you_get:
+  - The one word buyers link to each rival, with how sure it is
+  - A word-association result for the category
+  - Each word marked taken, contested or open
+  - Empty claims everyone makes
+  - The opposite attribute to the leader's, and 3 open words to test
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste each rival's tagline and a few reviews that name them.
+  - Ask five people to say the first brand and word that come to mind for your category. Paste their answers if you can.
+  - Take the open words into "Ownable word picker".
+
+how_it_works:
+  - title: Collects signals
+    text: Gathers each rival's tagline, headline and the words buyers use for it.
+  - title: Finds one word per rival
+    text: Picks the word that comes up most, and says how sure it is.
+  - title: Runs a word-association test
+    text: Notes the first brand and first word buyers give for the category.
+  - title: Marks each word
+    text: Taken if one rival owns it, contested if two or more claim it, open if none does.
+  - title: Finds the empty claims
+    text: Lists words every rival claims and none would deny.
+  - title: Finds the opposite
+    text: Writes a real, wanted attribute opposite to the leader's.
+  - title: Lists open words
+    text: Gives three open words to test next.
+
+output_shape: |
+  WORD PER RIVAL
+  <rival> | Word: <one word> | Sure: <high, medium, low> | Signals: <tagline, review words>
+
+  WORD ASSOCIATION
+  For "<category>": first brand <x>, first word <y> | Source: <people asked or guess>
+
+  STATUS OF EACH WORD
+  <word> | Taken by <rival>, or Contested by <rivals>, or Open
+
+  EMPTY CLAIMS
+  <word> | Why nobody owns it: no rival would say the opposite
+
+  THE LEADER AND ITS OPPOSITE
+  Leader: <brand> | Owns: <word> | Opposite attribute: <word> | Wanted by: <who>
+
+  OPEN WORDS TO TEST
+  <word 1>, <word 2>, <word 3>
+
+  MISSING
+  <signals that would settle a doubt>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: Number of rivals
+    how: Give five to eight. Fewer misses the leader's second word.
+  - what: Buyer words
+    how: Reviews beat taglines. A word buyers use is a word they own.
+  - what: Ask-five test
+    how: Ask five people the first brand and first word for the category. It takes ten minutes and fixes guesses.
+  - what: Your own words
+    how: Give your own tagline too. If it is the same as a rival's, it shows up as contested.
+
+judge:
+  - Each rival has exactly one word, with signals behind it.
+  - Taken, contested and open are distinct and each word is in one group.
+  - "Every empty claim passes the test: no rival would say the opposite."
+  - The leader's opposite attribute is real and wanted by some buyers.
+  - Guesses are marked as guesses.
+
+test:
+  - Ask five people for the first brand and word for your category. Compare with the skill's result.
+  - Pick a word marked open and search for rivals using it in headlines.
+  - Run it twice. The words per rival should stay the same.
+  - Check that a word you know is taken does not show up as open.
+
+improve:
+  - Add reviews from each rival, not only yours.
+  - Re-run the map each year. A word can pass from one rival to another.
+  - Add the rivals' older taglines. A word held for years is stronger.
+  - Follow with "Ownable word picker".
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Reading lines and reviews to find a recurring word is text work any strong chat AI does with this skill."}
+  inputs:
+    - "Rival taglines, homepages and ad lines"
+    - "Reviews that name each rival"
+    - "Answers from five people to a word-association question"
+
+terms:
+  - term: Owned word
+    meaning: The one word buyers link to a brand, so that hearing the word brings the brand to mind.
+  - term: Empty claim
+    meaning: A claim every rival makes and none would deny, such as quality, so no one owns it.
+  - term: Word association test
+    meaning: Asking people for the first brand or word that comes to mind for a category.

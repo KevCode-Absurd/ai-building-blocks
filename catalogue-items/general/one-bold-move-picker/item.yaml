@@ -1,0 +1,19 @@
+slug: one-bold-move-picker
+name: "One bold move picker"
+summary: "Paste your plan and rivals. Get one move to back, what to stop, the money it needs and a pass test."
+category: general
+type: skill
+role: make
+job: strategy
+level: intermediate
+inputs:
+  - {type: plan, required: true}
+  - {type: audit_report, required: false}
+  - {type: competitor_set, required: false}
+outputs:
+  - {type: plan}
+origin: rebuilt
+version: 1.0.0
+minds: [al-ries, jack-trout]
+credits:
+  - {title: "The 22 Immutable Laws of Marketing", by: "Al Ries and Jack Trout", used: "The law of singularity (one move in each situation produces the result, found where the rival least expects it), the warning that managers must stay near the front line, the law of failure (cut losses early) and the law of resources (an idea needs money to reach the mind)"}

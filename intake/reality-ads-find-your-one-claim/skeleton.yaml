@@ -1,0 +1,63 @@
+# Workflow skeleton for Reality in Advertising, part 1 (docs/INTAKE.md). Our words; the book stays in mind-sources/ (local only).
+id: reality-ads-find-your-one-claim
+source:
+  title: "Reality in Advertising"
+  by: "Rosser Reeves"
+  kind: book
+  rights: ideas-only
+  year: 1961
+minds: [rosser-reeves, claude-hopkins]
+workflow:
+  slug: find-the-one-claim-that-sells-and-show-it-working
+  name: "Find the one claim that sells and show it working"
+  summary: "Give it your product and rivals. Get one tested selling claim, a demonstration that proves it and a check for distractions."
+  when: "your ads say many things, or your product looks the same as its rivals, and you need one claim buyers will remember and act on."
+  job: write-ad-copy
+  level: intermediate
+steps:
+  - name: Check you have something real to say
+    skill: product-differentiation-checker
+    job: strategy
+    task: write-ad-copy
+    from: "Chapters 15 and 16, the three roads and the deceptive differential"
+    method: ["List what the product does and what rivals do", "Mark each difference a buyer could notice in real use", "Drop differences too small to notice", "Say whether to claim it, change the product first, or find a claim nobody makes"]
+    inputs: [product_data, voc_reviews!, competitor_set!]
+    outputs: [audit_report]
+    note: "A verdict on whether the product has a difference a buyer can notice, or needs work first."
+  - name: Draft the candidate claims
+    skill: selling-proposition-finder
+    job: strategy
+    task: write-ad-copy
+    from: "Chapters 13, 15 and 16, the three parts of a USP and the three roads"
+    method: ["Fill in the sentence: buy this and you get this specific benefit", "Look for a real difference, a product change you could make, and a true fact every rival has but none says", "Throw out any claim built on a difference a buyer cannot see", "Rank the survivors by how many strangers it could move"]
+    inputs: [product_data, audit_report!, competitor_set!]
+    outputs: [angle_library, copy_draft]
+    note: "Three to five claims, one sentence each, from the three roads, with the weak ones struck out."
+  - name: Test the best claim
+    skill: usp-claim-checker
+    job: copy
+    task: write-ad-copy
+    from: "Chapter 13, the three tests"
+    method: ["Is it a proposition", "Is it unique or unclaimed", "Is it strong enough to move many buyers", "Does the product really deliver it"]
+    inputs: [copy_draft, product_data]
+    outputs: [audit_report]
+    note: "A pass or fail on the three tests for the top claim, with fixes."
+  - name: Plan the demonstration
+    skill: claim-demonstration-planner
+    job: video
+    task: make-video-ads
+    from: "Chapter 28, locking picture to words and finding a picture for the claim"
+    method: ["Say the claim in one spoken line", "Find one visible action that proves it, even for an invisible benefit", "Lock every spoken phrase to a picture of the same thing", "Cut any shot that does not carry the claim"]
+    inputs: [audit_report, product_data, copy_draft!]
+    outputs: [script]
+    note: "A short script where each spoken line has a picture that shows the same thing."
+  - pause: "Show the script or rough cut to ten people who have not seen it. Ask each: what did it say? Write their answers word for word."
+  - name: Check nothing steals attention from the claim
+    skill: ad-distraction-checker
+    job: analysis
+    task: check-ads
+    from: "Chapters 24, 26 and 27, the playback test and the two kinds of vampire"
+    method: ["Count how many of the ten repeat the claim", "Find any second claim or striking picture that people repeated instead", "Check each picture against the words spoken over it", "Cut or fix the shot or claim that drains the main one"]
+    inputs: [script, copy_draft!]
+    outputs: [audit_report]
+    note: "A count of how many people played back the claim, what stole the rest, and what to cut."

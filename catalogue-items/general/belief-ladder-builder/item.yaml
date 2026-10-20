@@ -1,0 +1,18 @@
+slug: belief-ladder-builder
+name: "Belief ladder builder"
+summary: "Paste a draft with a big claim. Get the claims reordered into small accepted steps, each scored, and a redraft."
+category: general
+type: skill
+role: make
+job: copy
+level: advanced
+inputs:
+  - {type: copy_draft, required: true}
+  - {type: brief, required: false}
+outputs:
+  - {type: copy_draft}
+origin: rebuilt
+version: 1.0.0
+minds: [eugene-schwartz]
+credits:
+  - {title: "Breakthrough Advertising (a book summary)", by: "Eugene Schwartz (1966), as retold in a third-party chapter summary", url: "https://breakthroughadvertisingbook.com/", used: "Gradualization: starting from statements the reader accepts at once and building a chain of small agreements to a claim they would have rejected cold"}

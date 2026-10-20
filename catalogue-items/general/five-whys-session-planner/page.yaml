@@ -1,0 +1,121 @@
+new_slug: five-whys-session-planner
+name: Five whys session planner
+summary: Describe a failure and your team. Get who must attend, a trigger rule, ground rules and a no-blame agenda.
+job: lead-people
+thinking: medium
+thinking_why: It sets up a meeting from fixed rules, but needs judgment about who to include and how to handle blame.
+headline: Five whys session planner
+subhead: Describe the failure, and your team if you can. It narrows the target, writes a trigger rule, lists who must attend, names a moderator and sets rules for keeping blame out. You get a one-page plan for the review, ready to send.
+explain: |-
+  Most post-mortems fail before they start. Too wide a target, the wrong people in the room, or a worry that someone will be blamed. Then the review gives a shallow answer or a scapegoat, and the problem comes back.
+
+  This skill sets up the review. It narrows the target to one class of failure and writes a trigger rule that needs no judgment. It lists everyone who must attend, including the person you would rather leave out. It names a moderator, sets two simple rules and gives a line for when blame starts. It ends with an agenda with minutes.
+when:
+  - Something broke or missed its date and you want to learn from it.
+  - Your last review ended with a person being blamed.
+  - The same kind of mistake keeps coming back.
+you_give:
+  - What went wrong, when, and who noticed
+  - Your team and how they get on (optional)
+you_get:
+  - One class of failure and a trigger rule
+  - A list of who must attend and why
+  - A moderator and ground rules
+  - A one-page agenda
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Describe the failure in a few lines and name the people involved.
+  - Send the attendee list and agenda before the meeting.
+  - Run the review with the Root cause finder, then the Proportional fix planner.
+how_it_works:
+  - title: Narrows the target
+    text: One class of failure, started where mistakes cost little.
+  - title: Writes the trigger rule
+    text: Simple, no judgment calls.
+  - title: Leaves old baggage
+    text: No backlog in the first reviews.
+  - title: Lists who attends
+    text: Everyone who found, fixed or built it.
+  - title: Names a moderator
+    text: With authority, and present.
+  - title: Sets ground rules
+    text: Two rules and a line for blame.
+  - title: Plans for low trust
+    text: A smaller start.
+  - title: Writes the agenda
+    text: With minutes and a parking list.
+output_shape: |-
+  FAILURE CLASS
+  <one line anyone could apply>
+
+  TRIGGER RULE
+  From <date>, every <event> gets a review within <days>.
+
+  WHO ATTENDS
+  <name or role> | reason <x>
+
+  MODERATOR
+  <name or role> | why <x>
+
+  GROUND RULES
+  1. Tolerate each mistake the first time.
+  2. Never the same mistake twice.
+  3. Look at the set-up, not the person.
+  When blame starts, say: <line>
+
+  IF TRUST IS LOW
+  <smaller start>
+
+  AGENDA
+  <minutes> <item>
+  Parking list: <x>
+  Bring: <items>
+
+  MISSING
+  <gaps>
+
+  CHECKS MISSED
+  <lines or none>
+tweaks:
+  - what: Who was involved
+    how: Name roles even if you do not know the people. Missing roles lead to missing facts.
+  - what: How often it happens
+    how: A frequent failure needs a narrower filter in the trigger rule.
+  - what: How safe people feel
+    how: Say honestly. Low trust gets a smaller, simpler start.
+  - what: How long you have
+    how: Give the minutes available. The agenda fits to them.
+judge:
+  - The failure class is one line with no judgment words.
+  - The room includes the people most likely to be blamed.
+  - A named moderator can make fixes happen.
+  - The blame line sounds like something your leader would say.
+  - The agenda has minutes.
+test:
+  - Check the trigger rule against last month's events. Would you have known which to review?
+  - Show the attendee list to someone who was there. Ask who is missing.
+  - Run one short review with the two simple rules only and see how it goes.
+  - After three reviews, ask the team whether blame came up and how it was handled.
+improve:
+  - Add your team's usual failures to step 1 so the class fits your work.
+  - Add your own blame line to step 6, in your own voice.
+  - Keep the agenda as a template and note what you changed each time.
+  - Pair it with the Root cause finder and the Proportional fix planner.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: Setting up the review and writing the agenda is text work.
+    - name: A shared calendar
+      why: Holds the review slot and the trigger rule.
+  inputs:
+    - A timeline of the failure
+    - Logs, messages or customer comments
+    - The org chart or a list of roles involved
+    - Notes from a past review
+terms:
+  - term: Five whys
+    meaning: Asking why about five times in a row to move from the symptom to a cause you can fix.
+  - term: Trigger rule
+    meaning: A fixed rule that starts a review every time a certain event happens.
+  - term: Moderator
+    meaning: The person who runs the review, rules on fixes and follows up.

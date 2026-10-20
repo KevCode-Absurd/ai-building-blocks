@@ -1,0 +1,126 @@
+new_slug: buying-story-interview-guide
+name: Buying story interview guide
+summary: "Name what you sell. Get a timeline interview script for five to eight recent buyers, from first thought to first use."
+job: understand-customers
+thinking: medium
+thinking_why: It follows a fixed interview order and writes questions to suit your product. A mid-range model does this well.
+headline: Interview recent buyers so you hear the whole story of why they switched
+subhead: Name what you sell and who bought lately. It plans a timeline interview from the first thought of changing to the first use, with the questions, the probes and the ones to avoid.
+explain: |-
+  Ask a buyer why they chose you and you get a tidy reason that is often wrong. Ask what happened on the day, where they were, what else was in the trolley, and the real story comes out. It usually starts long before the purchase.
+
+  This skill plans that kind of interview. It follows seven stops: the day they bought, the first thought, the event that made it urgent, looking around, deciding, the wait and first use, and what happened since. It adds probes for the social and emotional sides, questions about what they dropped, and a list of questions never to ask.
+when:
+  - You know people bought, but not what happened before they did.
+  - Your last round of interviews gave you praise and feature requests.
+  - Many people look at your product and never switch.
+you_give:
+  - What you sell and the purchase you want to understand
+  - A list of recent buyers, or a way to find them
+  - Product facts and customer words (optional)
+you_get:
+  - Who to talk to and a short request note
+  - An opening to set the frame
+  - Seven stops of timeline questions with probes
+  - Questions about what they used before and what they dropped
+  - Questions to avoid, with three of yours rewritten
+  - A plan for capturing exact words
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Say what you sell and who bought lately. Paste any draft questions.
+  - Book five to eight interviews and use the request note.
+  - Run them. Write the exact words with an ID and date.
+  - Bring the notes to "Switch story mapper".
+how_it_works:
+  - title: Sets the aim
+    text: One line on what you want to understand, plus the belief you must hold back.
+  - title: Picks the people
+    text: Five to eight recent buyers, no fans, plus an optional two who walked away.
+  - title: Frames the talk
+    text: An opening that asks for what happened, not what they think you want to hear.
+  - title: Follows the timeline
+    text: Seven stops from the day they bought back to the first thought, and on to later use.
+  - title: Probes feelings and people
+    text: Short follow-ups for the social and emotional sides.
+  - title: Asks what was dropped
+    text: What they used before and stopped after.
+  - title: Bans bad questions
+    text: Why, ratings, price guesses and ideal versions are out.
+  - title: Checks itself
+    text: Runs its own checks and names any it missed.
+output_shape: |-
+  AIM
+  <what you want to understand> | Belief to hold back: <text>
+
+  WHO
+  <five to eight recent buyers> | Optional: <two who walked away> | MISSING: <if no list>
+  Request note: <two or three lines>
+
+  OPENING
+  <what to say>
+
+  TIMELINE QUESTIONS
+  1. The day: ...
+  2. The first thought: ...
+  3. The event: ...
+  4. Looking around: ...
+  5. Deciding: ...
+  6. The wait and first use: ...
+  7. Since then: ...
+
+  PROBES
+  <five short follow-ups> | Silence rule: <text>
+
+  WHAT WAS DROPPED
+  <three questions>
+
+  DO NOT ASK
+  <list> | Your drafts rewritten: Was: ... Problem: ... Now: ...
+
+  RECORD
+  <how to capture words, what to log, when to write up>
+
+  MISSING
+  <gaps>
+
+  CHECKS MISSED
+  <one line per check missed, or none>
+tweaks:
+  - what: How recent
+    how: Three months is a good limit. Memory fades fast. For big purchases, six months can work.
+  - what: The purchase
+    how: "Be clear about which one: a first order, a move from a rival or a renewal."
+  - what: Your draft questions
+    how: Paste them untouched. Seeing the originals lets it explain what each one gets wrong.
+judge:
+  - All people on the list bought recently.
+  - The questions run in time order across the seven stops.
+  - No question asks why or asks for a rating.
+  - There are questions about what they used before and what they dropped.
+  - The record plan keeps exact words.
+test:
+  - Give it a draft question list. It should flag every "why", "would you" and rating question.
+  - Give it a customer list with a friend of yours on it. It should remove the friend.
+  - Run it twice. The seven stops should stay the same even when the wording changes.
+improve:
+  - After three interviews, bring the notes back and refine the questions for the next batch.
+  - Add a second group of people who walked away.
+  - Repeat the interviews each year and compare the stories.
+  - Pair it with "Customer job interview planner" for a day of watching buyers.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: Writing the question list and rewrites is text work any strong chat AI does with this skill.
+    - name: A voice recorder
+      why: Recording, with consent, keeps the exact words the next step depends on.
+  inputs:
+    - A list of recent buyers with order dates
+    - Reviews and support emails from those buyers
+    - Your draft interview questions
+terms:
+  - term: Timeline interview
+    meaning: An interview that rebuilds the story of a purchase in time order, from the first thought to later use.
+  - term: Probe
+    meaning: A short follow-up that keeps the person telling what happened.
+  - term: Beginner's mind
+    meaning: Listening without a ready answer in your head.

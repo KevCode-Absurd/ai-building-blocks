@@ -11,7 +11,7 @@ subhead: Give it a note on your buyer, your facts and how many lines you need. I
 explain: |
   Most people read the headline and nothing else, so it gets one look to pick out its reader and give them a reason. Headlines go wrong in a few predictable ways. They get clever and need decoding. They drop the small words to fit the space ("Gut health, sorted"). They label the reader ("busy mums") instead of describing their day. Or five lines make the same argument, so a test tells you nothing.
 
-  This skill first sets what a line may say for how aware the buyer is, from a moment in their day to the deal. Then it lists what you can actually back: a plain gain, an exact fact, something new and dated, a customer's own words, or the question buyers already ask. Each line uses a different way in. Any way in with nothing behind it is skipped, never faked. Every line is counted against its limit and has to pass a glance test.
+  This skill first sets what a line may say for how aware the buyer is, from a moment in their day to the deal. Then it lists what you can actually back: a plain gain, an exact fact, something new and dated, a customer's own words, or the question buyers already ask. Each line uses a different way in. If you give it a stage brief, it also writes the move that market calls for, such as say the claim plainly, say it bigger, give a new reason it works or speak to who the buyer is. Any way in with nothing behind it is skipped, never faked. Every line is counted against its limit and has to pass a glance test.
 
 when:
   - You need several headlines for an ad test, each trying a different argument.
@@ -20,6 +20,7 @@ when:
 
 you_give:
   - A note on the buyer, how aware they are, the one thing they want and their main doubt
+  - A stage brief from the "Market stage reader", if your market is crowded with the same claim (optional)
   - Your offer and facts, the proof you may use, any dated news, and the price if relevant
   - How many lines, their character limits and where they appear
   - The picture, for words on an image (attach it; your AI can see pictures) (optional)
@@ -27,7 +28,7 @@ you_give:
 you_get:
   - A numbered list of headlines or image lines, each with a different way in
   - For each, who it's aimed at, its character count and its glance test result
-  - The line to test first, and the ways in it skipped for lack of proof
+  - The line to test first, a second to test against it, and the ways in it skipped for lack of proof
   - Any of its own checks the set still misses, each named
 
 how_to_use:
@@ -44,12 +45,14 @@ how_it_works:
     text: A plain gain, an exact fact, dated news, a customer's words or the buyer's own question, each only if your material holds it.
   - title: One way in per line
     text: Each line uses a different way in, so no two lines make the same argument.
+  - title: Picks the move for a crowded market
+    text: With a stage brief, it adds the move the market's claim fatigue allows and uses at least two different moves, so a test can tell them apart.
   - title: Fits the space
     text: Counts the characters. If a line won't fit, it says a smaller thing rather than dropping the small words.
   - title: Fits the picture
     text: Image words add what the picture can't show, and never label what's already visible.
   - title: Runs the glance test
-    text: Under the limit, no word a stranger would look up, and the offer clear in one look. Lines that fail are rewritten or dropped.
+    text: Under the limit, no word a stranger would look up, the offer clear in one look, and the line only trying to get the next one read. Lines that fail are rewritten or dropped.
   - title: Checks the set
     text: Goes through its own checks, such as no two lines with the same way in, fixes what it can, and names any check it still missed.
 
@@ -162,7 +165,7 @@ improve:
   - Add your best customer quotes, word for word with their source, to "What you need", so the their-words way in can always run.
   - Add the words your brand never puts on an image to step 5.
   - Save each winning line, with its way in and the level it was aimed at, to your brand file.
-  - For a sharper set, start from a "Buyer brief writer" brief, and pair it with "Image ad copy writer" for the main text and description.
+  - For a crowded market, start from a "Market stage reader" brief. For a sharper set, start from a "Buyer brief writer" brief, and pair it with "Image ad copy writer" for the main text and description.
 
 works_best_with:
   tools:

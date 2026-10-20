@@ -1,0 +1,124 @@
+new_slug: long-run-effects-checker
+name: "Long-run effects checker"
+summary: "Paste your plan. Get each tactic's short-term and long-term effect, a fad or trend call and what to change."
+job: plan-strategy
+thinking: medium
+thinking_why: "It weighs each tactic over two time spans and does a small sum, but the tests are fixed."
+
+headline: "Find the tactics in your plan that pay now and cost you later"
+subhead: "Paste your marketing plan. It lists each tactic, such as sales, coupons, new products under your name and trend bets, and says what each does in 90 days and in two years. You get a sum for any discount, a fad or trend call and the changes to make."
+
+explain: |
+  Some marketing moves work in the short term and do the opposite later. A sale lifts sales this month and teaches buyers to wait for the next one. A new product under a known name adds sales now and blurs what the name means. Because the harm arrives slowly, quarterly numbers hide it.
+
+  This skill lists every tactic in the plan and writes both effects. For any discount it works out the sum: what you gained during, what you lost after, and whether the net is positive. It tells a fad from a trend, because a fad is loud and fast and a trend is quiet and slow, and a plan that treats a fad as a trend leaves you with costs you can't carry. It also finds forecasts hiding in the plan, and press excitement that has nothing to do with sales.
+
+when:
+  - Your plan leans on sales, coupons or limited offers to hit a number.
+  - A hot product or trend is pulling you to scale up fast.
+  - You are about to put your name on a new product because it will sell now.
+  - Your plan rests on a three-year forecast or on a wave of press.
+
+you_give:
+  - Your marketing plan
+  - Sales before, during and after any past discount (optional)
+  - Fixed costs you would add to meet new demand (optional)
+you_get:
+  - Each tactic with its short-term and long-term effect
+  - A net sum for each discount
+  - A fad or trend call for each bet, with how to dampen or ride it
+  - Forecasts in the plan, and what you do if each is wrong
+  - A list of changes
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste the plan. Add sales figures for the weeks before, during and after your last discount if you have them.
+  - Read the net sums first. A discount with a net below zero is a habit, not a growth tactic.
+  - Take the changes into your plan. Then run "One bold move picker" to choose what to back.
+
+how_it_works:
+  - title: Lists the tactics
+    text: Pulls out every discount, offer, new product, stunt, partnership and trend bet in the plan.
+  - title: Writes both effects
+    text: Says what each does in the next 90 days and over two years or more.
+  - title: Does the discount sum
+    text: Works out the gain during a sale and the dip after it, and shows the net.
+  - title: Calls fad or trend
+    text: Scores each bet on how loud, how fast and how new the need behind it is.
+  - title: Finds hidden forecasts
+    text: Marks every "the market will" and "nothing will change" in the plan, and asks for a rule for being wrong.
+  - title: Separates press from sales
+    text: Checks whether coverage is loud while sales and repeat buying are quiet.
+  - title: Writes the changes
+    text: Gives a short list of changes, each tied to a tactic.
+
+output_shape: |
+  TACTICS AND THEIR TWO EFFECTS
+  <tactic> | Next 90 days: <effect> | Two years on: <effect> | Reverses? <yes, no, partly>
+
+  DISCOUNT SUMS
+  <offer> | Before: <units, revenue> | During: <units, revenue> | After: <units, revenue> | Net: <+/-> | Call: <habit or growth>
+
+  FAD OR TREND
+  <bet> | Score: <n of 4> | Need behind it: <older than the product, or new> | Call: <fad, trend, unclear> | Do: <dampen or ride>
+
+  FORECASTS IN THE PLAN
+  <quote> | If wrong: <what you do> | Fixed cost at risk: <amount or MISSING>
+
+  PRESS VERSUS SALES
+  <coverage vs repeat buying, in a line each>
+
+  CHANGES
+  1. <change> | Tactic: <which> | Why: <effect>
+
+  MISSING
+  <figures that would settle a call>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: Past discount figures
+    how: Give weekly units before, during and after. If you only have totals, say so and it marks the sum as rough.
+  - what: Price and margin
+    how: Add your usual price and cost. A sum that ignores margin hides the real loss.
+  - what: Fixed costs
+    how: List staff, space and kit you would add to meet a spike. It decides how much a fad can cost you.
+  - what: Time you can wait
+    how: Say how many months your cash lasts. Slow trends need patience.
+
+judge:
+  - Every tactic has both a short-term and a long-term effect.
+  - The discount sum can be rebuilt from the figures given, and the net is shown.
+  - A fad or trend call comes with a reason, not a feeling.
+  - Each forecast has a rule for being wrong.
+  - Press coverage is compared with sales, not counted as a result.
+
+test:
+  - Run it on a plan with a regular sale. Check it works out the dip after.
+  - Give it a product that sold out in a month. See if it asks what need sits behind it.
+  - Run it twice. The fad and trend calls should stay close.
+  - Compare its net sums with your own spreadsheet. They should match.
+
+improve:
+  - "Keep a log of every discount: dates, units and price. The sum gets better with your own data."
+  - Add the usual life of a fad in your market to the fad test.
+  - Add a rule for the longest a discount may run.
+  - Pair it with "Marketing plan law checker" for the rest of the plan.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Listing tactics and doing the small sums is text work any strong chat AI does with this skill."}
+    - {name: "A spreadsheet", why: "Weekly sales before, during and after a discount are easiest to line up in a sheet."}
+  inputs:
+    - "Weekly sales for the last two discounts"
+    - "Your price, cost and margin"
+    - "Press coverage of your category over the last year"
+
+terms:
+  - term: Fad
+    meaning: A short-lived craze that rises and falls fast and gets a lot of attention.
+  - term: Trend
+    meaning: A slow, lasting change in what people want, often quiet at first.
+  - term: Dip after
+    meaning: The fall in sales after a discount ends, because buyers bought early or waited for the deal.

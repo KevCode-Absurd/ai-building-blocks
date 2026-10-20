@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-21. Claims cite the sources in mind.yaml as [S1].
 
-Hamilton Helmer is alive, and views can change. This data set comes from a 2025 podcast interview with a published transcript, his book's website (its synopsis and Reed Hastings's foreword), two detailed summaries of his book 7 Powers, and the site of the investment firm he co-founded. The book is under copyright and we did not read it directly, so its ideas come here through the author's site and those summaries. In October 2026 we tried to add more of his own words from the book site's podcast list (Acquired, Invest Like the Best, 20VC, NFX, Venrock), but those pages carry only summaries and no transcript text, so the 2025 conversation [S4] and the synopsis [S2] remain his only own-words sources. We added the firm's description of its approach [S9] and his author page [S10], and we re-read the 2025 conversation for method and voice. Treat each view as "as of" the year of its source. Our sources do not confirm his birth year or his early career, so we leave those out. He is an investor. This data set explains his framework only and gives no advice on buying or selling any stock.
+Hamilton Helmer is alive, and views can change. This data set comes from a 2025 podcast interview with a published transcript, his book's website (its synopsis and Reed Hastings's foreword), two detailed summaries of his book 7 Powers, and the site of the investment firm he co-founded. The book is under copyright and we did not read it directly, so its ideas come here through the author's site and those summaries. In October 2026 we added a third-party chapter summary of the book [S11]. It is thin and partly wrong: it names "structure" as the seventh power where the author names process power, and it says little about benefit, barrier or the stages, so we use it only for the per-power examples and routes, and the author's own pages stay the base. In October 2026 we tried to add more of his own words from the book site's podcast list (Acquired, Invest Like the Best, 20VC, NFX, Venrock), but those pages carry only summaries and no transcript text, so the 2025 conversation [S4] and the synopsis [S2] remain his only own-words sources. We added the firm's description of its approach [S9] and his author page [S10], and we re-read the 2025 conversation for method and voice. Treat each view as "as of" the year of its source. Our sources do not confirm his birth year or his early career, so we leave those out. He is an investor. This data set explains his framework only and gives no advice on buying or selling any stock.
 
 ## In one paragraph
 
@@ -66,6 +66,18 @@ Helmer's research on large US companies found that about half of their profits c
 
 How he applied it: he advises firms to exploit the power they already have before chasing a second act, and to start any new business from an existing advantage [S4].
 
+### What each power gives and what protects it
+
+A third-party chapter summary walks through the powers one at a time [S11]. Read it as second-hand and check it against the author's own pages [S2][S4].
+
+- Scale economies: the benefit is a lower cost per unit, as fixed costs such as research, marketing and plant spread over more units. Smaller rivals cannot spread them as far. The summary lists routes to scale as vertical integration, investment in technology and automation, acquisitions and new countries, and warns that growing too fast can bring complexity that cancels the gain [S11].
+- Network economies: the benefit is that the product gets more valuable as more people use it. The barrier is the self-reinforcing loop that follows, which a newcomer starts without. The summary says to win the first users by being excellent for them [S11]. Helmer himself says the effect rarely changes price or cost enough to matter [S4].
+- Counter-positioning: the benefit is a better model or technology. The barrier is that the leader cannot copy it without cost or damage to its own business. The summary's checklist is a clear, measurable difference, a real customer pain, speed to market, and something that is hard to copy fast [S11]. Its examples are Netflix against a store-based rental chain and Tesla against carmakers invested in petrol engines and dealers [S11].
+- Switching costs: the benefit is customers who stay even when a rival is a little better. The barrier is what leaving costs them in money, time, effort, data or feeling. The summary's examples are business software, telephone contracts and one maker's linked devices, and its ways to raise the cost are deep integration, bundles, communities, contracts and data that is hard to move [S11].
+- Branding: the benefit is trust that lasts and lets a firm earn more. The barrier is that it is built through steady delivery and consistent messaging over time. The summary adds that a brand must keep adapting while holding its core, and be tracked through awareness and loyalty [S11].
+- Cornered resource: the benefit is exclusive control of something scarce and valuable. The barrier is that others cannot get it or replace it. The summary's routes are exclusive deals, integration, acquisition and legal protection such as patents, and its example is a diamond seller that held most of the world's supply [S11].
+- Process power: the author names it as the seventh power [S5]. The summary swaps in a chapter on "structure", meaning channel control, patents and regional dominance, and has no process-power chapter, so lean on the author's pages for this one [S11].
+
 ## How he decides
 
 - Ask first: what is the benefit, and what is the barrier [S4]?
@@ -91,11 +103,10 @@ By 2009 Netflix had beaten Blockbuster, but DVD-by-mail was fading and much larg
 
 ### Moving Netflix from DVDs to streaming
 
-Netflix began with DVD rentals by mail and moved to streaming, a platform that needs both content and users [S4]. Helmer says the early work was on securing content and cutting sign-up friction across devices [S4]. He points to counter-positioning: rivals such as Blockbuster and cable-tied HBO could not easily copy streaming without harming their own core business [S4][S6]. He also warns that this protects the entrant only from incumbents with a conflicting model, not from later rivals who copy the same new model [S6].
+Netflix began with DVD rentals by mail and moved to streaming, a platform that needs both content and users [S4]. Helmer says the early work was on securing content and cutting sign-up friction across devices [S4]. He points to counter-positioning: rivals such as Blockbuster and cable-tied HBO could not easily copy streaming without harming their own core business [S4][S6]. He also warns that this protects the entrant only from incumbents with a conflicting model, not from later rivals who copy the same new model [S6]. He describes a leadership instruction that teams should disrupt the DVD business to move toward streaming, and credits Ted Sarandos's unpopular call to put originals first, because content is about half of Netflix's costs and originals let it partly integrate backward [S4]. The summary tells the other side: the rental chain, tied to its stores and late-fee model, could not pivot fast enough and went bankrupt [S11].
 
-### Telling teams to disrupt the old business
-
-He describes a leadership directive at Netflix that teams were expected to disrupt the DVD business to move toward streaming [S4]. He credits Ted Sarandos's intuition for putting originals first, even though it was unpopular, because content is about half of Netflix's costs and originals let it partly integrate backward [S4].
+### Building its own chargers and selling direct (Tesla, as a summary tells it)
+The summary describes Tesla choosing electric cars while established makers kept improving petrol engines. It adds Tesla's own charging network, software updates sent over the air and direct sales to buyers [S11]. The stated reason is a better buyer experience that carmakers, tied to petrol technology and dealerships, were slow to match [S11]. The summary also calls the charging network and exclusive battery know-how cornered resources [S11]. This is the summary's reading, not Helmer's own account, and we have no record of how he would score it.
 
 ### Why Bing could not beat Google
 
@@ -141,6 +152,7 @@ He reports research finding that around half of the profits of the S&P 100 came 
 - **Easier to see after the fact.** Many examples are famous winners. It is harder to spot power in real time, which he himself says is the leader's real task [S4].
 - **His own revisions.** By 2025 he described product-market fit as the first invention and building power as a second, separate one, a sharper split than early summaries suggest [S4][S5].
 - **Counter-positioning is not permanent.** It doesn't protect against other newcomers who copy the new model [S6].
+- **A thin summary.** The third-party chapter summary we added [S11] misnames the seventh power, leaves out the stages and gives only broad routes to each power, so it adds examples and no new views. Treat its claims as second-hand.
 - **An investor's lens.** His firm uses the framework to pick stocks, so his examples lean toward large public companies [S4][S7].
 
 ## Blind spots to watch

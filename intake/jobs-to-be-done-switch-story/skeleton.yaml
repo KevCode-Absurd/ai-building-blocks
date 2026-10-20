@@ -1,0 +1,42 @@
+# Workflow skeleton for Competing Against Luck, part 2: interview a recent buyer about the switch (docs/INTAKE.md). Our words; the book stays in mind-sources/ (local only).
+id: jobs-to-be-done-switch-story
+source:
+  title: "Competing Against Luck"
+  by: "Clayton M. Christensen, Taddy Hall, Karen Dillon and David S. Duncan"
+  kind: book
+  rights: ideas-only
+  year: 2016
+minds: [clayton-christensen]
+workflow:
+  slug: find-out-why-buyers-switched-and-what-held-others-back
+  name: "Find why buyers switched and what held others back"
+  summary: "Give it what you sell. Get a buying-story interview guide, mapped stories and a plan to ease what holds buyers back."
+  when: "people say they like your product but many do not switch, or you do not know what made the ones who did finally move."
+  job: understand-customers
+  level: intermediate
+steps:
+  - name: Plan the buying-story interviews
+    skill: buying-story-interview-guide
+    job: research
+    from: "Chapter 5, How to Hear What Your Customers Do Not Say"
+    method: ["Pick people who bought recently, so the story is still fresh", "Build the timeline from the first thought of changing to the first real use", "Ask about the day, the place, who was there and what else they bought, not why they chose", "Probe what they used before and what they tried between", "Ask what they stopped using or doing", "Ask about the first use and whether they used it again", "Keep the questions open and drop your own idea of the answer"]
+    inputs: [question, product_data!, voc_reviews!]
+    outputs: [plan]
+    note: "A guide to a timeline interview, not a list of questions about features."
+  - pause: "Run five to eight interviews. Record or write what was said in the person's own words, in order, with dates."
+  - name: Map each buying story
+    skill: switch-story-mapper
+    job: analysis
+    from: "Chapter 5, building customer stories and the forces that push and hold"
+    method: ["Write each interview as a short story: once upon a time, every day, one day, because of that, finally", "Mark the push of the situation and the pull of the new thing", "Mark the habit of the present and the anxiety about the new", "Name what had to be fired for the product to be hired", "Mark the big hire (buying) and the little hire (using it)", "Cluster stories that match, rather than slicing them into categories", "Write the questions the next interviews should answer"]
+    inputs: [voc_reviews, plan!]
+    outputs: [audit_report]
+    note: "Turns notes into stories, forces and patterns."
+  - name: Plan how to remove what holds buyers back
+    skill: switch-friction-remover
+    job: strategy
+    from: "Chapters 5 and 6, easing anxiety and removing obstacles"
+    method: ["List the habits and anxieties from the stories, ranked by how many people met them", "Match each to a change in how you sell, deliver or support", "Add a way to try before the big decision", "Add help with what the person has to get rid of", "Say who the product is not for, so the wrong buyer does not hire it", "Pick one small change to test first, with a signal that says it worked"]
+    inputs: [audit_report, question!]
+    outputs: [plan]
+    note: "Turns the held-back forces into changes you can test."

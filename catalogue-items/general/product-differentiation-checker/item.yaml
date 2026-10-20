@@ -1,6 +1,6 @@
 slug: product-differentiation-checker
 name: "Product differentiation checker"
-summary: "Paste your product facts and won and lost deals. Get a verdict on whether you are truly undifferentiated."
+summary: "Paste your product facts and won and lost deals. Get a verdict: truly the same as rivals, or only described badly."
 category: general
 type: skill
 role: check
@@ -14,6 +14,6 @@ outputs:
   - {type: audit_report}
 origin: rebuilt
 version: 1.0.0
-minds: [april-dunford]
+minds: [april-dunford, rosser-reeves]
 credits:
   - {title: "The No Differentiation Illusion", by: "April Dunford", url: "https://www.aprildunford.com/", used: "The four usual reasons a team believes it has nothing different, and the habit of starting from real shortlists, best-fit customers and why good customers chose you"}

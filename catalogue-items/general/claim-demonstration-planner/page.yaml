@@ -1,0 +1,118 @@
+new_slug: claim-demonstration-planner
+name: "Claim demonstration planner"
+summary: "Paste your claim and product facts. Get a short script where every spoken line has a picture showing the same thing."
+job: make-video-ads
+thinking: medium
+thinking_why: "The rules are fixed, but finding a picture that proves an invisible benefit takes judgment."
+
+headline: "A short ad script where every line you say is shown on screen"
+subhead: "Give it your claim and your product facts. It finds one thing a viewer can watch happen that proves the claim, then writes a short script where each spoken phrase is matched to a picture of the same thing. You get a table you can film from."
+
+explain: |
+  Most ads say the claim in words while the screen shows something else, such as a smiling person or a pretty product shot. Viewers remember the picture and lose the words.
+
+  This skill starts with the one line you want remembered. It looks for something a viewer can watch that proves it: a side-by-side, a stress test, a timer, a before and after in one shot. When the benefit cannot be seen, such as protection or freshness, it finds an honest visual stand-in and marks it as one. Then it writes the script as a table, so each spoken phrase sits next to the picture that shows it. Anything on screen that does not carry the claim is cut.
+
+when:
+  - "You have a claim and no idea how to show it in 30 seconds."
+  - "Your video ads show lifestyle shots while the voice talks about the product."
+  - "Your benefit is invisible, such as protection, freshness or safety, and you cannot film it."
+
+you_give:
+  - "Your claim, or a report that names it"
+  - "Your product facts and anything you can really demonstrate"
+  - "The length you want, 15 to 60 seconds (optional)"
+you_get:
+  - "The claim as one spoken line"
+  - "The demonstration, with what it needs to be filmed"
+  - "A script table, with time, spoken words and the picture for each"
+  - "A list of shots cut and why"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Paste the claim report from the USP claim checker and your product facts."
+  - "Say what you can film and what you cannot."
+  - "Film the demonstration first, before anything else in the script."
+
+how_it_works:
+  - title: "Says the claim out loud"
+    text: "Cuts the claim to one spoken line a viewer can repeat."
+  - title: "Finds something to watch"
+    text: "Picks a visible action that proves the claim: a side-by-side, a stress test, a timer or a before and after."
+  - title: "Handles the invisible"
+    text: "For benefits nobody can see, finds an honest stand-in and labels it."
+  - title: "Writes to a word budget"
+    text: "Fits the spoken words to the length, at about 2.5 words a second."
+  - title: "Locks picture to words"
+    text: "Every thing named in the audio appears on screen at that moment."
+  - title: "Keeps the presenter off screen"
+    text: "Uses a voice-over unless the person on screen is doing the demonstration."
+  - title: "Cuts the extras"
+    text: "Removes any shot that does not carry the claim and lists what it cut."
+
+output_shape: |
+  CLAIM LINE
+  <one spoken line>
+
+  THE DEMONSTRATION
+  <what the viewer watches happen>  |  needs: <props, setting, time>
+  Stand-in used: <none, or what it stands for and the label it needs>
+
+  SCRIPT
+  <seconds> | SAY: <words> | SHOW: <the picture of those words>
+
+  CUT
+  <shot or line removed> | why
+
+  TO FILM FIRST
+  <the demonstration shot>
+
+  MISSING
+  <what you need to confirm before filming>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: "Length"
+    how: "Say 15, 30 or 60 seconds. A shorter ad drops supporting lines first, never the demonstration."
+  - what: "What you can film"
+    how: "Name your props and setting. It builds the demonstration from what you have."
+  - what: "A comparison"
+    how: "If you want to compare with another product, say so and whether it is a major brand. The comparison must be true and fair."
+  - what: "Mood"
+    how: "Ask for a feeling around the demonstration. It adds it after the claim has its picture, never over it."
+
+judge:
+  - "The claim is one spoken line."
+  - "Each spoken phrase has a picture of the same thing."
+  - "The demonstration could really be done with this product."
+  - "A viewer who watched with the sound off would still see the claim."
+  - "Any stand-in picture is labelled as one."
+
+test:
+  - "Mute the audio and show it to three people. Ask what the ad is promising."
+  - "Cover the pictures and read only the words. The claim should still be clear."
+  - "Film the demonstration once on a phone before you plan more."
+  - "Run the script through the Ad distraction checker with ten viewers."
+
+improve:
+  - "Add your best real test or comparison to the product facts."
+  - "Add clips you already have, so the script uses them."
+  - "Keep a bank of demonstrations that worked."
+  - "Pair it with the Sound-off commercial checker."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Matching spoken lines to pictures is text work any strong chat AI does well with this skill."}
+    - {name: "A phone camera", why: "A demonstration filmed on a phone shows quickly whether it reads at a glance."}
+  inputs:
+    - "A report from the USP claim checker"
+    - "Product facts and proof you hold"
+    - "Photos or clips of the product in use"
+
+terms:
+  - term: Demonstration
+    meaning: "A picture or short action that shows the claim being true, not just stated."
+  - term: Stand-in picture
+    meaning: "An honest visual for a benefit nobody can see, such as an invisible shield, labelled as an illustration."

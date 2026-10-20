@@ -1,0 +1,108 @@
+new_slug: market-mood-reader
+name: "Market mood reader"
+summary: "Paste your holdings and how prices moved. Get each move sorted as business or mood, and a take, ignore or wait read."
+job: money-and-investing
+thinking: medium
+thinking_why: "It compares a price with your own written value and sorts the cause of a move. The care is in keeping the story out of the sort."
+
+headline: "Find out if a price move is the business changing or the crowd changing its mood"
+subhead: "Paste what you hold, what you think each is worth and how prices moved. It sorts each move into business change or mood, separates pricing from timing, and reads today's price as an offer to take, ignore or wait on. A method of analysis, not personal financial advice."
+
+explain: |
+  Picture a business partner who knocks on your door every day and names a price for your share. Some days the price is silly high. Other days it is silly low. You are never forced to deal, and you can set your own view of value from the business itself.
+
+  This skill uses that picture. For each holding it sets today's price beside the value you wrote down and asks whether the facts of the business changed or only the crowd's mood. It separates pricing, which is what you pay against what it is worth, from timing, which is guessing the next move and turns you into a speculator. It ends with a read on each price as an offer to take, ignore or wait on, and a plain rule: never buy right after a big rise or sell right after a big drop. It names no stock to buy or sell.
+
+when:
+  - Prices have swung and you do not know whether to act.
+  - A holding has fallen sharply and the news is loud.
+  - Prices have jumped and you feel pulled to buy more.
+
+you_give:
+  - What you hold and what each holding is worth in your own written view, with why
+  - How each price has moved and over what time
+  - What has happened in each business since you bought
+  - Money you need soon, if any
+
+you_get:
+  - Each move sorted as business change or mood
+  - Pricing versus timing for each of your reasons to act
+  - A read on each price as an offer to take, ignore or wait on
+  - Gaps where your own value is missing
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your holdings with your value for each and the reason for that value.
+  - List what changed in each business, using facts such as profit, debt and customers.
+  - Read the sort first and the offers second.
+
+how_it_works:
+  - title: Sets price beside value
+    text: Puts today's price next to the value you wrote down, as a gap in percent.
+  - title: Sorts the cause of the move
+    text: Marks a move as business change if profit, debt or customers changed, and mood if the facts did not.
+  - title: Splits pricing from timing
+    text: Marks each reason to act as pricing (the price against value) or timing (a guess about the market).
+  - title: Reads the offer
+    text: Calls the price an offer to take, ignore or wait on, and gives the reason.
+  - title: Applies the two-sided rule
+    text: Blocks a buy right after a big rise and a sale right after a big drop unless the facts have changed.
+
+output_shape: |
+  <HOLDING> | Price <p> | Your value range <lo to hi> | Gap <n>% under or over
+  What moved: <price change over time>
+  What changed in the business: <facts or none>
+  SORT: <BUSINESS CHANGE / MOOD / UNKNOWN>
+  Your reason to act: <...> -> <PRICING / TIMING>
+  OFFER: <TAKE / IGNORE / WAIT> because <reason>
+
+  ACROSS YOUR HOLDINGS
+  Mood moves: <n> | Business changes: <n> | Unknown: <n>
+  Rule check: <any buy right after a rise or sale right after a drop>
+
+  MISSING
+  <list>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: Time window
+    how: Say the period you care about, such as three months or a year. A move that is a mood over three months can be a trend over three years.
+  - what: Money you need soon
+    how: List it. Any money needed within five years is flagged as not suited to holdings that can fall.
+  - what: Only the market
+    how: Say if you want a read of the whole market and not single holdings. It uses an index level against your estimate of normal earnings.
+
+judge:
+  - Each move is sorted using business facts, not the news tone.
+  - Each reason to act is marked pricing or timing.
+  - An offer is called take only when the price is under the value range and the business is unchanged.
+  - A buy right after a big rise or sale right after a big drop is flagged.
+  - Nothing names a stock to buy or sell.
+
+test:
+  - Give it a holding with no written value. It should mark the gap MISSING and ask for one.
+  - Give it a fall with a new debt and falling profit. It should sort it as business change.
+  - Say "I will sell because the market looks weak." It should mark that as timing.
+  - Run it twice on the same inputs. The sorts should match.
+
+improve:
+  - Keep a log of each sort and what the business did over the next year.
+  - Update your value range each time the business reports.
+  - Pair it with "Holding value change checker" for the holdings marked business change.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Sorting a few moves by cause is text work any strong chat AI does well with this skill."}
+  inputs:
+    - "Your written value for each holding and why"
+    - "The last four reports from each company"
+
+terms:
+  - term: Pricing
+    meaning: Buying below what you think something is worth, or at least making sure you do not pay too much.
+  - term: Timing
+    meaning: Guessing which way the market will move next and buying or selling on that guess.
+  - term: Mr. Market
+    meaning: A picture of the share market as a moody partner who names a price every day. You may take the price or ignore it.

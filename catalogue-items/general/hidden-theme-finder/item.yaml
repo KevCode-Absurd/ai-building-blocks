@@ -1,0 +1,18 @@
+slug: hidden-theme-finder
+name: "Hidden theme finder"
+summary: "Paste a finished draft. Get what it seems to be about, and the scenes to add, sharpen or cut for it."
+category: general
+type: skill
+role: make
+job: strategy
+level: intermediate
+inputs:
+  - {type: copy_draft, required: true}
+  - {type: audit_report, required: false}
+outputs:
+  - {type: plan}
+origin: rebuilt
+version: 1.0.0
+minds: [stephen-king]
+credits:
+  - {title: "On Writing: A Memoir of the Craft", by: "Stephen King", used: "Finding the meaning in a finished draft by spotting what recurs, asking why the story was worth writing, picking one reading, and using the second draft to make it clearer, without starting from a message"}

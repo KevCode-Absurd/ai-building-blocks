@@ -1,0 +1,114 @@
+new_slug: enterprising-bargain-screener
+name: "Enterprising bargain screener"
+summary: "Paste a table of listed companies. Get the cheap ones that pass five safety tests, with the failed test beside every cut."
+job: money-and-investing
+thinking: medium
+thinking_why: "It runs fixed cuts down a long table. The care is in reading each cell as given and not filling gaps."
+
+headline: "Cut a long table of companies to the cheap ones that are still safe to study"
+subhead: "Paste a table with price, recent earnings, assets, debts, dividends and five years of profit. It keeps the cheapest by earnings, cuts any that fail five safety tests and writes the failed test beside each cut. What is left is a list to study, not to buy. A method of analysis, not personal financial advice."
+
+explain: |
+  Cheap stocks are cheap for a reason, and most of the reasons are good ones. A low price against earnings catches companies in trouble, with heavy debt, a loss last year or a dying business. The screen below keeps the first cut simple and then removes the ones that look unsafe.
+
+  This skill follows the method in The Intelligent Investor for the investor who will put in real work. First cut: a low price against the last twelve months of earnings. Then five tests: current assets at least one and a half times current liabilities and debt no more than net current assets, no loss in the last five years, some dividend now, earnings above those of a few years back, and price no more than 120% of tangible assets. There is no size floor, since small companies bought as a group can be safe enough. It also warns that second-quality names bought at random did worst of all. It names no company to buy.
+
+when:
+  - You have a table of listed companies and time to study the survivors.
+  - You want to find cheap stocks without buying the ones in trouble.
+  - You want a repeatable first cut that you can rerun each year.
+
+you_give:
+  - A table of companies with price and earnings for the last twelve months
+  - Current assets, current liabilities, long-term debt and tangible book value
+  - Dividend now, and profit for each of the last five years
+  - The multiple you want for the first cut, if you have one
+
+you_get:
+  - A short list that passes all five tests
+  - The failed test beside every company cut
+  - The share of the table that survived at each cut
+  - A list of what to study next for each survivor
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste the table, or send a file if your AI takes files. Check the column names with it.
+  - Choose a first-cut multiple, or let it pick one from the middle of the table and note why.
+  - Take the survivors to "Asset floor estimator".
+
+how_it_works:
+  - title: Makes the first cut
+    text: Keeps the companies priced at a low multiple of the last twelve months of profit.
+  - title: Tests financial condition
+    text: Needs current assets at one and a half times current liabilities and debt no more than net current assets.
+  - title: Tests the record
+    text: Needs no loss in five years and a dividend being paid now.
+  - title: Tests direction and price
+    text: Needs latest earnings above those of a few years earlier and price no more than 120% of tangible assets.
+  - title: Writes the failed test
+    text: Puts the first test each company failed beside its name.
+
+output_shape: |
+  FIRST CUT
+  Multiple used <x> | Table size <n> | Kept <n> (<n>%)
+
+  TESTS (industrial)
+  1 Current assets >= 1.5 x current liabilities, and debt <= net current assets
+  2 No loss in the last five years
+  3 Some dividend now
+  4 Latest earnings above earnings <n> years back
+  5 Price <= 120% of tangible assets per share
+
+  SURVIVORS
+  <company> | Multiple <x> | Tests passed 5 of 5 | Why it may be cheap: <neglect / setback / unknown>
+
+  CUT
+  <company> | Failed: <test> | Figure: <...>
+
+  MISSING
+  <list>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: Different first cut
+    how: Pick a different multiple, such as the lowest tenth of the table. A tighter cut gives a shorter list.
+  - what: Banks, insurers and utilities
+    how: Say which rows are not industrial. They use other tests, and the skill sets them aside.
+  - what: Quality rating
+    how: Add a column with a published earnings and dividend rating and it can drop those below average.
+
+judge:
+  - Every cut shows the first test failed and the figure.
+  - Missing cells are marked unknown and not filled.
+  - The first-cut multiple is stated.
+  - Survivors are called a list to study, not a list to buy.
+  - Nothing names a company to buy.
+
+test:
+  - Give it a company with a loss two years ago. It should cut it on test two.
+  - Give it a company with no dividend. It should cut it on test three.
+  - Give it a table with no debt column. It should mark test one unknown and say so.
+  - Run it twice on the same table. The survivors should match.
+
+improve:
+  - Rerun the screen each year on the whole table and note which names stay.
+  - Keep the first-cut multiple and the table date with each list.
+  - Track the survivors as one group with "Bargain group rules writer".
+
+works_best_with:
+  tools:
+    - {name: "A spreadsheet", why: "A table of companies is easiest to check and sort in a sheet."}
+    - {name: "A free company data site", why: "Price, earnings, assets and debt come from there, and the dates matter."}
+  inputs:
+    - "A table of listed companies with price, earnings and balance sheet columns"
+    - "Five years of profit for each company"
+
+terms:
+  - term: Net current assets
+    meaning: Cash, debts owed to the company and stock, less everything the company owes.
+  - term: Tangible assets
+    meaning: Things a company owns that are not goodwill or brand value, such as cash, stock, buildings and machines.
+  - term: Winnowing
+    meaning: Running a long list through simple cuts until a short list is left.

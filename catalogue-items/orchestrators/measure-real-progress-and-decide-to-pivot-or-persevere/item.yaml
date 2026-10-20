@@ -1,0 +1,27 @@
+slug: measure-real-progress-and-decide-to-pivot-or-persevere
+name: "Measure real progress and decide to pivot or persevere"
+summary: "Paste your plan and your numbers. Get honest progress measures by customer group and a dated pivot or persevere call."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: analysis
+level: advanced
+inputs:
+  - {type: question, required: true}
+  - {type: performance_sheet, required: true}
+  - {type: plan, required: false}
+outputs:
+  - {type: audit_report}
+uses: [growth-engine-finder, learning-milestone-planner, vanity-metric-fixer, cohort-funnel-reader, pivot-or-persevere-decider]
+steps:
+  - {uses: growth-engine-finder, note: "The one growth engine and the one rate that drives it, with a sum showing where you stand."}
+  - {uses: learning-milestone-planner, note: "The hoped-for rates, the starting rates to measure and the dated milestones. Reads the engine from the step before."}
+  - {uses: vanity-metric-fixer, note: "Which numbers are vanity, and the per-group rates to use instead. Reads the milestones from step two."}
+  - {uses: cohort-funnel-reader, note: "Which changes moved which rates, which did nothing, and how far each rate is from its target."}
+  - {uses: pivot-or-persevere-decider, note: "Persevere or pivot, the evidence for it, the kind of pivot, and a dated next review."}
+origin: rebuilt
+version: 1.0.0
+minds: [eric-ries]
+credits:
+  - {title: "The Lean Startup", by: "Eric Ries", used: "The order of the steps: pick the growth engine to watch, set the baseline, the target and the milestones, turn totals into rates per customer group, read whether your changes moved the rates, make the pivot or persevere call"}
+generated_from: intake/lean-startup-innovation-accounting/skeleton.yaml

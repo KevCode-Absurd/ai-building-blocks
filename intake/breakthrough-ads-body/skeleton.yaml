@@ -1,0 +1,53 @@
+# Workflow skeleton for Breakthrough Advertising (a book summary) (docs/INTAKE.md). Our words; the source stays in mind-sources/ (local only). A third-party summary, so claims are second-hand.
+id: breakthrough-ads-body
+source:
+  title: "Breakthrough Advertising (a book summary)"
+  by: "Eugene Schwartz"
+  kind: book
+  rights: ideas-only
+  year: 1966
+minds: [eugene-schwartz]
+workflow:
+  slug: build-body-copy-that-deepens-desire-and-earns-belief
+  name: "Build body copy that deepens desire and earns belief"
+  summary: "Give it your brief and product facts. Get body copy that sharpens the want, earns belief and shows how it works."
+  when: "your headline gets read but the copy underneath does not convince."
+  job: write-ad-copy
+  level: advanced
+steps:
+  - name: Write the section that sharpens the want
+    skill: desire-section-writer
+    job: copy
+    task: write-ad-copy
+    from: "Chapters 6 and 7, intensification"
+    method: ["Pick the one dominant want and the one thing the product does for it", "Choose which of the thirteen intensifying moves fit, such as detail, product in action, the reader inside the scene, a test they can picture, time, other actors, an expert, a comparison, the problem in full black, simplicity, metaphor, a catalogue of results and a guarantee as the final summary", "Draft each move as a short block with a fresh image, with no phrase the market already knows", "Order the blocks so the want grows and the last block is the strongest"]
+    inputs: [brief, product_data, ad_copy!]
+    outputs: [copy_draft]
+    note: "Builds the want from the brief and the product facts, picking only the moves that fit."
+  - name: Build belief one acceptable step at a time
+    skill: belief-ladder-builder
+    job: copy
+    task: write-ad-copy
+    from: "Chapter 9, gradualization"
+    method: ["List the beliefs the buyer holds that the big claim runs against", "Write the first statement the buyer will accept at once, then a chain of small agreements up to the big claim", "Use an inclusion question, a catalogue of the buyer's own situation, a challenge to a false belief, plain logic words and a proof step where each fits", "Move the claim that would be thrown out at the top down to where the chain has prepared it", "Check that no step asks for more belief than the one before it earned"]
+    inputs: [copy_draft, brief!]
+    outputs: [copy_draft]
+    note: "Reads the draft from the step before and reorders it so every claim is prepared."
+  - name: Explain how it works so the promise is believed
+    skill: how-it-works-copy-writer
+    job: copy
+    task: write-ad-copy
+    from: "Chapter 10, mechanization"
+    method: ["Decide how much the buyer already understands about how this kind of thing works", "State the mechanism in the buyer's terms, from the facts supplied", "Choose its level: a short phrase, descriptive proof, or the main selling point", "Place it where the promise needs backing and tie it to the want"]
+    inputs: [copy_draft, product_data]
+    outputs: [copy_draft]
+    note: "Adds the reason why the promise holds, using the draft from the step before."
+  - name: Match every claim to its proof
+    skill: claim-and-proof-matcher
+    job: analysis
+    task: check-ads
+    from: "Chapter 11, verification"
+    method: ["List every claim in the copy", "Pair each with proof you hold", "Flag claims that outrun proof and say how to fix them"]
+    inputs: [copy_draft, product_data!, offer!, voc_reviews!]
+    outputs: [audit_report]
+    note: "Checks the finished body copy from the step before."

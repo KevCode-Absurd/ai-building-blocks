@@ -1,0 +1,111 @@
+new_slug: defensive-price-ceiling-tester
+name: "Defensive price ceiling tester"
+summary: "Paste a company's earnings, book value and share price. Get a pass or fail on three price ceilings, with every sum shown."
+job: money-and-investing
+thinking: medium
+thinking_why: "The sums are fixed and small. The care is in using the cleaned earnings and not letting a good story soften a failed ceiling."
+
+headline: "Check whether a good company's price is too high for a careful buyer"
+subhead: "Paste the share price, the earnings per share for the last seven years and the book value per share. It tests price against three-year average earnings, price against book value, the two multiplied together and the earnings yield against safe bonds. It shows each sum and says plainly what was failed. A method of analysis, not personal financial advice."
+
+explain: |
+  A sound company can still be a poor purchase if the price is high enough. Most of the harm to careful buyers comes from paying a lot for a record that looks safe.
+
+  This skill gives a price ceiling in three forms, taken from The Intelligent Investor. Price should be no more than fifteen times the average earnings of the last three years, and no more than one and a half times book value. A cheap price on one can pay for a dearer price on the other, so the two multiplied must stay under twenty-two and a half. It also checks the earnings yield, which is average earnings over price, against what safe bonds pay. It shows why popular growth names usually fail these tests: the price has run far ahead of the profit. It never says buy or sell.
+
+when:
+  - A company passed the quality tests and you want to know if its price is sensible.
+  - A popular company seems to have a great record and you want to know how much you would pay for hope.
+  - You are comparing two companies and want one clear price test for both.
+
+you_give:
+  - The share price
+  - Earnings per share for the last seven years, cleaned if you have done that
+  - Book value per share
+  - What high-grade bonds pay now, if you know it
+
+you_get:
+  - A pass or fail on each of the three ceilings
+  - The sums behind each result
+  - The earnings yield against the bond yield
+  - A note on how far the price is from passing
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste the price and the earnings and book value figures.
+  - Use the restated earnings from "Earnings padding detector" if you have them.
+  - Read the failed ceilings first.
+
+how_it_works:
+  - title: Averages the earnings
+    text: Takes the last three years and the last seven years of earnings per share, and the latest year on its own.
+  - title: Tests price against earnings
+    text: Divides price by the three-year average and compares it with fifteen.
+  - title: Tests price against book value
+    text: Divides price by book value per share and compares it with one and a half.
+  - title: Tests the two together
+    text: Multiplies the two and compares it with twenty-two and a half, which lets a low earnings multiple pay for a higher book multiple.
+  - title: Compares yield with bonds
+    text: Divides average earnings by price and sets it beside the bond yield.
+
+output_shape: |
+  PRICE <p> | BOOK VALUE <b> | EARNINGS 3-yr avg <e3> | 7-yr avg <e7> | last year <e1>
+
+  1 PRICE / 3-YR EARNINGS: <x> | Ceiling 15 | <pass / fail>
+  2 PRICE / BOOK: <y> | Ceiling 1.5 | <pass / fail>
+  3 PRODUCT: <x times y = z> | Ceiling 22.5 | <pass / fail>
+  4 SEVEN-YEAR TEST: price / 7-yr avg = <n> | Ceiling 25 | <pass / fail> | Last year: <n> | Ceiling 20 | <pass / fail>
+  5 EARNINGS YIELD: <e3 / p>% | Safe bond yield: <b>% | <at or above / below>
+
+  RESULT: <PASSES THE PRICE TESTS / FAILS ON: list>
+
+  HOW FAR OFF
+  Price that would pass: <...>
+
+  MISSING
+  <list>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: A different ceiling
+    how: Ask for twelve times earnings or a lower product ceiling if you want a stricter test.
+  - what: Cleaned earnings
+    how: Paste restated earnings and say so. The ceilings should use cleaned figures, not reported ones.
+  - what: A business with large debt
+    how: Say if the company carries a lot of debt. Book value and earnings both look better than they are, and it flags the risk.
+
+judge:
+  - Each ceiling shows the sum and a pass or fail.
+  - Earnings are averaged over three years and seven years, never the last year alone.
+  - The product test is shown with both parts.
+  - A company that fails is told how far the price would need to fall to pass.
+  - Nothing says to buy or sell a named security.
+
+test:
+  - Give it price 60, three-year earnings average 3.00 and book value 20. It should fail the first ceiling (20 times) and the product.
+  - Give it only one year of earnings. It should mark the average tests unknown.
+  - Give it a company with a very low price against earnings and a book multiple of 2.4. It should pass on the product test if the earnings multiple is 9 or lower.
+  - Run it twice on the same figures. The results should match.
+
+improve:
+  - Keep a log of price ceiling results and the later price of each company, to see how the ceilings fared over time.
+  - Test the same company each year to see whether the price drifts toward the ceiling.
+  - Pair it with "Price versus value gap judge" for a full value check.
+
+works_best_with:
+  tools:
+    - {name: "A spreadsheet", why: "The sums are small, and a sheet with a row per company shows who passes."}
+    - {name: "Annual reports or a free data site", why: "Earnings per share and book value per share come from there."}
+  inputs:
+    - "Seven years of earnings per share"
+    - "Book value per share from the latest balance sheet"
+
+terms:
+  - term: Earnings yield
+    meaning: Average earnings divided by price. It is the flip side of the price to earnings multiple.
+  - term: Book value
+    meaning: What a company owns less everything it owes, per share, from its balance sheet.
+  - term: Price to earnings multiple
+    meaning: Share price divided by earnings per share. A multiple of 15 means you pay 15 for each 1 of yearly earnings.

@@ -1,0 +1,117 @@
+new_slug: cohort-funnel-reader
+name: Cohort funnel reader
+summary: Paste results by join date. Get each group's path, which changes moved which rates, and whether the report holds up.
+job: plan-strategy
+thinking: high
+thinking_why: It compares groups, weighs cause against coincidence and must not claim more than the data shows.
+headline: Cohort funnel reader
+subhead: Paste your results by join week or month, and your target rates if you have them. It lays out each group's path, marks what has too few people, checks which changes really moved a rate and tests the report itself. You get a plain reading and the next test.
+explain: |-
+  When you only track totals, every month looks like progress. More customers, more revenue, a line going up. But if each new group behaves like the last, your changes did nothing. The growth was coming from somewhere else.
+
+  This skill puts each group of customers on its own row and each step of their path in a column. It compares rows, asks whether a change was tested against a group that did not get it, and flags a rate that will not move. It also tests the report: can you act on it, can anyone understand it, and could you ring the customers behind it to check. The result is a short plain reading and a better next test.
+when:
+  - Your numbers rise but you cannot say whether your work caused it.
+  - You made a lot of changes and no rate moved.
+  - People in your team give different reasons for the same result.
+you_give:
+  - Counts by join week or month for each step of the customer path
+  - Your target rates and planned changes (optional)
+you_get:
+  - A table of each group's path
+  - Which changes moved which rates, and which are unproven
+  - Signs that you are stuck
+  - A pass or fail on whether the report can be trusted
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your export with one row per join week or month.
+  - Add the dates you released each change.
+  - Use the next-test design for your next change.
+how_it_works:
+  - title: Builds the group table
+    text: Shares of people, with group sizes.
+  - title: Marks thin cells
+    text: Too few people to read.
+  - title: Reads each step
+    text: Oldest to newest, against the target.
+  - title: Matches changes to moves
+    text: Proven or unproven.
+  - title: Finds stuck signs
+    text: Flat rates and rising totals.
+  - title: Tests the report
+    text: Actionable, accessible, auditable.
+  - title: Designs the next test
+    text: One difference, one named rate.
+output_shape: |-
+  GROUP TABLE
+  <group> (n=<size>) | <step 1 %> | <step 2 %> | ...
+  Thin cells: <list>
+
+  READING BY STEP
+  <step>: <start %> to <now %> (target <x%>)
+
+  CHANGES
+  <change, date> -> <rate> | proven (gap <x>) | unproven: no comparison group
+
+  STUCK SIGNS
+  <signs with figures>
+
+  THREE TESTS
+  Actionable: <pass | fail> because <x>
+  Accessible: <pass | fail> because <x>
+  Auditable: <pass | fail> because <x>
+
+  VERDICT
+  <rate>: <moved | flat | too few to tell>
+
+  NEXT TEST
+  <groups, difference, rate>
+
+  MISSING
+  <gaps>
+
+  CHECKS MISSED
+  <lines or none>
+tweaks:
+  - what: Counts by join date
+    how: Real counts for each step let it compute shares. Totals alone stop it at step 1.
+  - what: Release dates for changes
+    how: Without dates it cannot match changes to moves.
+  - what: Your target rates
+    how: They let it say how far each rate is from where you want it.
+  - what: How you define a step
+    how: Say what counts as first use or a return. Loose definitions blur the table.
+judge:
+  - Every cell is a share of people with a group size.
+  - It refuses to read thin cells.
+  - Changes are labelled proven or unproven.
+  - The three tests each have a reason.
+  - The next test has only one difference between groups.
+test:
+  - Run it on data where you know a change worked. See if it marks it proven.
+  - Run it on a quiet period. It should find no cause rather than invent one.
+  - Check three cells against raw records by hand.
+  - Run the next-test design and see if the result is clear.
+improve:
+  - Add your own path steps to step 1 so the columns match your business.
+  - Change the 30-person rule of thumb in step 2 if your numbers are larger.
+  - Add a standing list of outside events (holidays, press, price changes) to step 4.
+  - Pair it with the Pivot or persevere decider for the call.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: Reading a table and writing the verdict is text work.
+    - name: A spreadsheet or analytics tool
+      why: Builds the group table from an export.
+  inputs:
+    - Counts by join date for each step
+    - Dates of every release and campaign
+    - Your target rates
+    - Notes from customer calls
+terms:
+  - term: Cohort
+    meaning: A group of customers who joined in the same period.
+  - term: Split test
+    meaning: Showing two versions at the same time to similar groups and comparing what they do.
+  - term: Actionable metric
+    meaning: A number that shows cause and effect, so you know what to do next.

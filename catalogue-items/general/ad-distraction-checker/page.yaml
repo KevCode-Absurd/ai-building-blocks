@@ -1,0 +1,127 @@
+new_slug: ad-distraction-checker
+name: "Ad distraction checker"
+summary: "Paste your ad and what ten viewers said it said. Get the playback count, what stole their attention and what to cut."
+job: check-ads
+thinking: medium
+thinking_why: "The counts and thresholds are fixed, but sorting what viewers said into causes takes judgment."
+
+headline: "Find out what people took from your ad, and what stole it from your claim"
+subhead: "Show your ad to ten people, write down what each says it said, and paste the answers with the ad. It counts how many repeat your claim, finds the second claim or striking picture that took the rest, and lists what to cut."
+
+explain: |
+  An ad can be liked, remembered and still fail, because what people remember is not the claim. A second reason to buy, added to be safe, can pull attention from the first. A striking picture that has nothing to do with the words can do worse: people recall the picture and not the message.
+
+  This skill scores the playback. It counts how many viewers said your claim, in their own words, and sorts the rest into other claims, pictures, people and sounds. It then reads the ad line by line to match what is said with what is shown. It tells you which element took the biggest share and what to cut. It also tells you what this test cannot do: it shows whether the claim gets across, not whether the claim sells.
+
+when:
+  - "Your team loves an ad and nobody can say what it promises."
+  - "You added a second benefit to an ad that was working and recall dropped."
+  - "People remember the actor, the animal or the song, not the product."
+
+you_give:
+  - "Your ad: script, storyboard or layout"
+  - "The one claim it should get across"
+  - "What each viewer said when asked: what did that ad say? Word for word, ten people if you can"
+you_get:
+  - "A playback count and what it means"
+  - "What viewers remembered instead, sorted by cause"
+  - "Each line checked for picture that does not match its words"
+  - "A cut list in order of share stolen, and a retest plan"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Show the ad to ten people who have not seen it. Ask only: what did that ad say? Write their words down."
+  - "Paste the ad, the claim you meant, and all ten answers."
+  - "Make the cuts, then test again with ten new people."
+
+how_it_works:
+  - title: "Scores each answer"
+    text: "Marks each viewer as claim, part of the claim, another claim, a picture or person, or nothing."
+  - title: "Counts the playback"
+    text: "Works out the share who repeated the claim and rates it against fixed lines."
+  - title: "Finds the thief"
+    text: "Groups what else they remembered and names the biggest one."
+  - title: "Reads the ad for a second claim"
+    text: "Counts the claims and checks that each one holds up the main claim."
+  - title: "Matches words to pictures"
+    text: "Goes line by line and flags any picture that shows something other than the words."
+  - title: "Questions the presenter"
+    text: "Asks what a person on screen adds that the voice does not."
+  - title: "Orders the cuts"
+    text: "Lists fixes by share stolen and says what to retest."
+
+output_shape: |
+  CLAIM MEANT
+  <one sentence>
+
+  PLAYBACK
+  Said the claim: <n> of <total> (<%>) | partial: <n> | other claim: <n> | picture or person: <n> | nothing: <n>
+  Verdict: <strong, weak or will not be heard> | sample note
+
+  WHAT TOOK THE REST
+  1. <thing> | <n> viewers | type: <second claim, picture, person, sound, story>
+
+  SECOND CLAIMS
+  <claim> | holds up the main claim: yes or no | action
+
+  WORDS AGAINST PICTURES
+  <line> | said: <...> | shown: <...> | match or mismatch
+
+  CUT LIST
+  1. <element> | share stolen | fix
+
+  RETEST
+  <what to change, who to ask>
+
+  LIMIT OF THIS TEST
+  <one line>
+
+  MISSING
+  <what would sharpen the result>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: "How many viewers"
+    how: "Ten gives a rough read. Thirty or more gives a steadier one. With fewer than ten it marks every result as a hint."
+  - what: "Viewers"
+    how: "Use people who buy this kind of product and have not seen the ad. Staff and friends skew it."
+  - what: "How to ask"
+    how: "Ask only: what did that ad say? Do not hint at the claim. Write the answer word for word."
+  - what: "Which version"
+    how: "Test each version on a different ten people to compare. Do not show both to the same people."
+
+judge:
+  - "The claim meant is one sentence, written before the answers are read."
+  - "Each answer is sorted by what the viewer said, not what they might have meant."
+  - "The verdict uses the stated lines and notes the sample size."
+  - "Every cut names the share it should win back."
+  - "The report says what this test cannot show."
+
+test:
+  - "Run it on an ad you know works and one you know does not. The counts should differ."
+  - "Cut the biggest thief and retest with ten new people. The playback should rise."
+  - "Have a second person sort the same answers. Compare their sort with the skill's."
+  - "Compare the playback with your survey of recall and pull a few months later."
+
+improve:
+  - "Keep each ad's playback count in a sheet to see which kinds of ad carry a claim."
+  - "Add your own rule for what counts as partial."
+  - "Test every new ad before you spend on it."
+  - "Pair it with the Claim demonstration planner."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Sorting viewer answers into causes is text work any strong chat AI does well with this skill."}
+    - {name: "A shared sheet or notepad", why: "Keeping the ten answers verbatim in one place keeps the sort honest."}
+  inputs:
+    - "The script from the Claim demonstration planner"
+    - "Ten verbatim viewer answers"
+    - "The claim from the USP claim checker"
+
+terms:
+  - term: Playback
+    meaning: "What a viewer says an ad said, in their own words, after seeing it once."
+  - term: Second claim
+    meaning: "A reason to buy added to an ad that is not needed to support the main claim, and can pull attention from it."

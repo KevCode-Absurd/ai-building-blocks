@@ -1,0 +1,121 @@
+new_slug: honest-appreciation-note-writer
+name: "Honest appreciation note writer"
+summary: "Paste what you valued about someone. Get one short thank-you note with one specific, true appreciation and no ask."
+job: speak-and-persuade
+thinking: low
+thinking_why: "The shape is fixed. The work is choosing a true detail and cutting anything that sounds false."
+
+headline: "Honest appreciation note writer"
+subhead: "Give it your notes on the person and one thing you valued. It picks a true detail only a listener would know and says what it did for you. Then it writes a short note with no ask. You get a note ready to send."
+
+explain: |
+  Praise is cheap when it is vague. "Great to meet you, you were so inspiring" could be sent to anyone, and the person knows it. Flattery also tends to arrive with a request tucked behind it, which is why people mistrust praise.
+
+  This skill writes appreciation that cannot be mistaken for flattery. It picks one thing the person said, made or did, and states the exact detail, which proves you were listening. It says what it did for you or others. It removes any adjective you cannot back with an example, and it keeps the request out. Where you do have a request, it tells you to send it separately, later. The note is short, in your voice, and fits the channel.
+
+when:
+  - "You just had a good meeting and want to say thank you in a way that lands."
+  - "Someone on your team did something you want to recognise properly."
+  - "A supplier or a helper went out of their way and you want them to know."
+
+you_give:
+  - "Your notes on the person, such as a contact card"
+  - "The one thing you valued, in a sentence or two"
+  - "How you will send it: handwritten, email or message"
+  - "Your usual tone, if you want it matched (optional)"
+you_get:
+  - "A short note, 40 to 90 words, in your voice"
+  - "The detail it used and where it came from"
+  - "A list of what it cut and why"
+  - "A reminder to send any request separately"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Paste your notes and say the one thing you valued."
+  - "Say how you will send it."
+  - "Read the note aloud. Change any word you would not use."
+  - "Send it within a day, with no request in it."
+
+how_it_works:
+  - title: "Picks the one thing"
+    text: "A single act, word or choice that you truly valued."
+  - title: "Finds the detail"
+    text: "Something only a listener would know."
+  - title: "Says what it did"
+    text: "The effect on you or on others."
+  - title: "Tests for flattery"
+    text: "Strikes any word you cannot back with an example."
+  - title: "Separates any ask"
+    text: "Moves a request to a later message."
+  - title: "Fits the channel"
+    text: "Length, greeting and sign-off for the way you will send it."
+  - title: "Reads as the receiver"
+    text: "Checks the note makes them feel seen, not managed."
+  - title: "Checks the note"
+    text: "Runs its own checks and names any it missed."
+
+output_shape: |
+  THE NOTE
+  <40 to 90 words, in your voice>
+
+  THE ONE THING AND THE DETAIL
+  Valued: <what>   Detail: <the specific point> (from: <notes>)
+
+  WHAT IT DID
+  <effect on you or others>
+
+  CUT AND WHY
+  <words or lines removed>
+
+  ANY ASK
+  <move to a separate message, or none>
+
+  MISSING
+  <what you did not give>
+
+  CHECKS MISSED
+  <one line per check missed, or none>
+
+tweaks:
+  - what: "The detail"
+    how: "Give a phrase, a number or a moment. The more exact, the more real the note feels."
+  - what: "Your tone"
+    how: "Paste a note you wrote and liked. The skill matches the voice."
+  - what: "The channel"
+    how: "A handwritten card is shorter and warmer than an email."
+  - what: "The relationship"
+    how: "A peer, a boss and a stranger each get a different register."
+
+judge:
+  - "The note names one thing, not five."
+  - "It has a detail only a listener would know."
+  - "It makes no request."
+  - "You would be willing to say it to their face."
+  - "It reads like you."
+
+test:
+  - "Read the note to a friend and ask if it sounds like you."
+  - "Swap the person's name with another. If the note still works, it is too vague."
+  - "Run it twice. The detail should stay the same."
+  - "Send it and see if they reply with something specific."
+
+improve:
+  - "Add a few of your own notes that worked, so the voice improves."
+  - "Add a habit of writing one note a week."
+  - "Keep a log of what each person valued, to avoid repeating."
+  - "Pair it with \"Contact memory card writer\" so the detail is ready."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Writing a short, specific note from your facts is work any strong chat AI does well."}
+    - {name: "Cards and a pen", why: "A short handwritten note is often kept longer than an email."}
+  inputs:
+    - "A line the person said that stuck with you"
+    - "The date and place you met"
+    - "A past note of yours in your voice"
+
+terms:
+  - term: "Flattery"
+    meaning: "Praise that is untrue or aimed at getting something."
+  - term: "Appreciation"
+    meaning: "Praise that is true, specific and asks for nothing."

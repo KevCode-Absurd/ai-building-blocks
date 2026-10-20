@@ -1,0 +1,74 @@
+# Workflow skeleton from On Writing: A Memoir of the Craft (docs/INTAKE.md). Our words; the book stays in mind-sources/ (local only).
+id: on-writing-revise-door-open
+source:
+  title: "On Writing: A Memoir of the Craft"
+  by: "Stephen King"
+  kind: book
+  rights: ideas-only
+  year: 2000
+minds: [stephen-king, william-zinsser]
+workflow:
+  slug: revise-a-draft-with-the-door-open
+  name: "Revise a draft with the door open"
+  summary: "Paste a rested draft. Get its holes marked, its meaning found, a cut of 10%, plain wording and a reader plan."
+  when: "you have a finished first draft that has rested for a few weeks and you want a second draft that is tighter and clearer."
+  job: write-and-tell-stories
+  level: intermediate
+steps:
+  - name: Re-read it cold
+    skill: cold-reread-marker
+    job: analysis
+    from: "The 'On Writing' section: take the rested draft out, read it in one go, mark housekeeping and big holes"
+    method: ["Read the whole draft in one pass and mark each page that needs a change", "Fix spelling, names and facts that disagree", "Note every place a character does something out of character", "Mark big holes in the plot or the people", "Mark the flailing at the start that goes nowhere"]
+    inputs: [copy_draft]
+    outputs: [audit_report]
+    note: "A page-by-page list of what is wrong, large and small."
+  - name: Find what it is about
+    skill: hidden-theme-finder
+    job: strategy
+    from: "The 'On Writing' section: theme is found after the draft, then made clearer in the second draft"
+    method: ["List the images, objects, words and moments that come back", "Ask what the story seems to be about and write three answers", "Pick the one most of the repeats support", "List scenes to add or sharpen that back it up", "List scenes that pull another way and could go"]
+    inputs: [copy_draft, audit_report!]
+    outputs: [plan]
+    note: "A one-line meaning and the scenes to add, sharpen or drop for it."
+  - name: Cut ten percent
+    skill: ten-percent-cutter
+    job: copy
+    from: "The 'On Writing' section: second draft = first draft minus ten percent"
+    method: ["Count the words and set the target at ninety percent", "Cut what is needless, repeated or obvious first", "Cut stage direction, long back story and things the reader can work out", "Cut what pulls against the meaning from step two", "Count again and check the story and its flavour survived"]
+    inputs: [copy_draft, plan!]
+    outputs: [copy_draft, audit_report]
+    note: "The draft at 90% of its length, with a log of what went."
+  - name: Clean up timid wording
+    skill: plain-english-editor
+    job: copy
+    from: "The Toolbox section: adverbs, passive verbs, dressed-up vocabulary and said-tags come from fear"
+    method: ["Find adverbs and passive verbs and ask what each does", "Replace fancy words with the first plain word that fits", "Turn dressed-up dialogue tags into said", "Keep any adverb that earns its place and say why", "Read the result aloud"]
+    inputs: [copy_draft]
+    outputs: [copy_draft, feedback_notes]
+    note: "Plain words in place of timid ones."
+  - name: Check how the talk sounds
+    skill: dialogue-ear-checker
+    job: analysis
+    from: "The 'On Writing' section on dialogue: talk shows character and has to ring true to the ear"
+    method: ["Read every line of dialogue aloud and mark the ones nobody would say", "Check each speaker sounds different from the rest", "Cut speeches that exist to give the reader facts", "Check that each character swears or avoids it as they really would", "Score the dialogue and fix the worst lines"]
+    inputs: [copy_draft]
+    outputs: [copy_draft, audit_report]
+    note: "Dialogue that rings true, with a score and each fix shown."
+  - name: Plan what to ask your readers
+    skill: first-reader-question-writer
+    job: research
+    from: "The 'On Writing' section: an ideal reader and four to eight friends read the draft with the door open"
+    method: ["Name the one reader you are writing for and what you want them to feel", "Write the questions to ask every reader, such as where they got bored or lost", "Add one question for each part you doubt", "Add a request to flag facts that look wrong", "Set the rule that readers do not discuss it until you ask"]
+    inputs: [copy_draft, plan!]
+    outputs: [plan]
+    note: "A short question sheet to send with the draft."
+  - pause: "Send the draft and the question sheet to four to eight people, including your ideal reader. Collect what they say before the next step."
+  - name: Sort what readers said
+    skill: reader-feedback-sorter
+    job: analysis
+    from: "The 'On Writing' section: if everyone says it, fix it; if readers split, it is a wash and the tie goes to the writer"
+    method: ["Put each reader's notes into one list by place in the draft", "Mark what most or all readers said and treat it as a problem to fix", "Mark split opinions as a wash and leave them", "Fix facts a reader caught with the correction", "Weight your ideal reader's view most and make the rewrite list"]
+    inputs: [feedback_notes, copy_draft!]
+    outputs: [plan]
+    note: "A ranked rewrite list from many readers' notes."

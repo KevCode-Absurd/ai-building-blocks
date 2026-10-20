@@ -1,0 +1,23 @@
+slug: switch-friction-remover
+name: Switch friction remover
+summary: Paste your switch story map. Get the habits and worries ranked, a fix for each and one small change to test first.
+category: general
+type: skill
+role: make
+job: strategy
+level: advanced
+inputs:
+  - type: audit_report
+    required: true
+  - type: question
+    required: false
+outputs:
+  - type: plan
+origin: rebuilt
+version: 1.0.0
+minds:
+  - clayton-christensen
+credits:
+  - title: Competing Against Luck
+    by: Clayton M. Christensen, Taddy Hall, Karen Dillon and David S. Duncan (2016)
+    used: Easing the forces that hold buyers back (the habit of the present and the anxiety about the new), helping people get rid of what they are firing, designing for the first use, and signalling who a product is not for

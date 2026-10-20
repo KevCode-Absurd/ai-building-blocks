@@ -20,7 +20,7 @@ seats:
   - {seat: "Theory checker", asks: "What theory are we using to make that statement, and what case would it fail to explain?"}
   - {seat: "Life and purpose", asks: "If we spend our time and money this way for five years, will it build what we say matters most?"}
 pairs_with: [andy-grove, peter-drucker, michael-porter, jim-collins, jeff-bezos]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "Clayton Christensen", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Clayton_Christensen", kind: reference}
   - {n: 2, title: "Clayton M. Christensen, 1952 to 2020 (obituary)", by: "Harvard Business School", url: "https://www.hbs.edu/news/releases/Pages/clayton-christensen-obituary.aspx", kind: reference}
@@ -37,6 +37,7 @@ sources:
   - {n: 13, title: "The Disruptor", by: "Peter B. Gardner, BYU Magazine (2013)", url: "https://magazine.byu.edu/article/the-disruptor/", kind: secondary}
   - {n: 14, title: "Estimating the innovator's dilemma: Q&A with Yale economist Mitsuru Igami", by: "Yale News (2017)", url: "https://news.yale.edu/2017/06/05/estimating-innovator-s-dilemma-qa-yale-economist-mitsuru-igami", kind: secondary}
   - {n: 15, title: "Outcome-Driven Innovation", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Outcome-Driven_Innovation", kind: reference}
+  - {n: 16, title: "Competing Against Luck", by: "Clayton M. Christensen, Taddy Hall, Karen Dillon and David S. Duncan (2016)", kind: own-words}
 tests:
   - {kind: use, prompt: "Write a one-page memo for a small accounting firm explaining whether cheap do-it-yourself tax apps are a threat, using the idea of disruption."}
   - {kind: use, prompt: "Write five interview questions to find the job people hire a gym membership to do, and explain what each one is trying to uncover."}

@@ -1,0 +1,118 @@
+new_slug: ten-percent-cutter
+name: "Ten percent cutter"
+summary: "Paste your draft. Get it cut to 90% of its length, with a log of every cut and a story check."
+job: write-and-tell-stories
+thinking: medium
+thinking_why: "It follows a fixed order of passes but must judge what is safe to cut."
+
+headline: "Cut your draft by ten percent and lose nothing the story needs"
+subhead: "Paste your draft, and the theme plan if you have it. It counts the words, sets a target of 90%, cuts in a fixed order of passes, logs what went and checks that the story, the voice and the planted details are still there."
+
+explain: |
+  Most first drafts run long. The writer explains twice, describes what the reader can see, and stays too long in a scene. The result feels puffy, and a puffy piece is easy to put down. A simple rule helps: the second draft should be the first draft minus about a tenth.
+
+  This skill applies the rule with sums. It counts the words, sets the target at 90%, and cuts in passes, easiest first: needless words, then repeats, then obvious actions and stage directions, then back story the reader does not need, then scenes that pull away from the meaning. It also protects anything planted early for a later payoff. Every cut goes in a log, so you can undo any of them. If the piece will not give up a tenth, it names what is blocking it.
+
+when:
+  - "Your draft is done but feels slow."
+  - "Readers say it dragged in the middle."
+  - "You are over a word limit."
+
+you_give:
+  - "Your draft"
+  - "The reading from the hidden theme finder (optional)"
+  - "A word limit, if there is one (optional)"
+  - "Parts you will not cut (optional)"
+you_get:
+  - "The draft at 90% of its length or less"
+  - "A log of every cut by pass, with word counts"
+  - "A list of planted details it kept"
+  - "A story and voice check"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Paste the whole draft. For a long piece, give one chapter at a time and the target for each."
+  - "Add the theme plan so it knows what pulls away."
+  - "Read the log first. Restore anything you want back."
+  - "Run the story check by reading the opening and ending of the new draft."
+
+how_it_works:
+  - title: "Counts and sets the target"
+    text: "Counts the words and works out 90%."
+  - title: "Cuts needless words"
+    text: "Removes filler, repeats and weak modifiers."
+  - title: "Cuts what is obvious"
+    text: "Removes stage direction and actions the reader assumes."
+  - title: "Trims back story"
+    text: "Cuts what the reader does not need yet, keeping one telling gesture."
+  - title: "Cuts what pulls away"
+    text: "Removes scenes or lines that go against the meaning."
+  - title: "Protects the planted"
+    text: "Keeps anything set up for a later payoff."
+  - title: "Logs and checks"
+    text: "Totals the cuts and tests the story and voice."
+
+output_shape: |
+  THE SUMS
+  Words in: <n> | Target (90%): <n> | To cut: <n>
+
+  THE CUT DRAFT
+  <the draft, cut>
+
+  CUT LOG
+  Pass 1 needless words: <n> words | examples: <...>
+  Pass 2 repeats: <n> | <...>
+  Pass 3 obvious actions and stage direction: <n> | <...>
+  Pass 4 back story: <n> | <...>
+  Pass 5 pulls from the meaning: <n> | <...>
+  Total cut: <n> | Words out: <n> | Percent of original: <n>%
+
+  KEPT ON PURPOSE
+  <planted details and the later payoff each sets up>
+
+  STORY CHECK
+  Opening: <still hooks y/n> | Ending: <still lands y/n> | Voice: <kept y/n>
+
+  CHECKS MISSED
+  <one line per check missed, or none>
+
+tweaks:
+  - what: "Your target"
+    how: "The default is 90%. If your draft is already lean, aim for 95% and say so."
+  - what: "Parts that stay"
+    how: "Mark scenes that must not be cut, such as one you love for a reason."
+  - what: "The theme plan"
+    how: "Give it the plan from the hidden theme finder so it can cut what pulls away."
+  - what: "A hard limit"
+    how: "Give your word limit. It will plan the passes to reach it."
+
+judge:
+  - "The total cut matches the sum of the passes."
+  - "The new word count is at or under 90% of the old."
+  - "No fact a later scene needs was cut."
+  - "The voice still sounds like the draft."
+  - "The log lets you undo any cut."
+
+test:
+  - "Run it on 1,000 words you know well. The sums should be 900 words out, 100 cut."
+  - "Plant a detail early that pays off later, such as a key. It should survive the cut."
+  - "Read the opening and ending of the cut draft aloud. They should still land."
+
+improve:
+  - "Add words you overuse, such as just and then, so pass one finds them first."
+  - "Add a list of passages you love. It will protect them or ask."
+  - "Run the plain English editor on the result for timid wording."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Counting, cutting in passes and logging are text work for any strong chat AI. Ask it to show its counts."}
+    - {name: "A word processor", why: "Check the word count there. A chat AI's count is an estimate."}
+  inputs:
+    - "The theme plan"
+    - "A list of words you overuse"
+
+terms:
+  - term: "Pass"
+    meaning: "One run through the draft looking for one kind of cut."
+  - term: "Planted detail"
+    meaning: "Something shown early so a later event feels fair."

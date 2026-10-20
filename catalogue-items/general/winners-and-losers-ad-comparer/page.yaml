@@ -1,0 +1,125 @@
+new_slug: winners-and-losers-ad-comparer
+name: "Winners and losers ad comparer"
+summary: "Paste your ads with their replies. Get them ranked, a checklist of what differs and what your winners share."
+job: check-ads
+thinking: high
+thinking_why: "It has to separate a real pattern from a place or season effect in a small set."
+
+headline: "What your best ads have in common, found from your own results"
+subhead: Give it the results for five or more ads and, if you can, the ads themselves. It ranks them, fills in a checklist of every difference, and finds what the winners share that the losers lack. You get the pattern as a rule to test, with the counts behind it.
+
+explain: |
+  Your own results are the best guide you have to what works for your buyers. But one ad at a time, they tell you little. A winner might have a good headline, a good place or a good week.
+
+  This skill lays the ads side by side. It ranks them on a number that accounts for audience or cost, then fills in a fixed checklist for each: headline, buying reason, picture, copy length, offer, size, medium and position. It looks for a value that most winners share and few losers do, and it checks that the pattern is not just a place or a season. The result is a rule written as a test, with the counts shown, so you can try it on the next ad and see if it holds.
+
+when:
+  - You have results for five or more ads and have never looked at them side by side.
+  - You keep hearing that something always works and want to see if it does for you.
+  - You are about to brief new ads and want to copy a pattern, not a hunch.
+
+you_give:
+  - "Results for each ad: replies or sales, with audience or spend"
+  - The ads, their offers, sizes and where they ran (optional)
+  - A diagnosis of one of them (optional)
+you_get:
+  - The ads ranked on a fair number
+  - A completed checklist for each ad
+  - What the winners share, with counts for winners and losers
+  - A check that the pattern is not a place or season effect
+  - A rule to test and a lesson record
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your results, or attach the export.
+  - Add the ads or a short description of each if you have them.
+  - Run the test it writes on your next ad.
+  - Add the record to your file of lessons.
+
+how_it_works:
+  - title: Puts a fair number on each ad
+    text: Replies per cost or per thousand sent, so a large send does not win by size.
+  - title: Lays them in order
+    text: Looks for a break where the numbers drop or the ads fall into two groups.
+  - title: Fills in the checklist
+    text: Headline, buying reason, picture, copy, offer, size, medium, position. A cell with no data stays blank.
+  - title: Finds what winners share
+    text: For each column, counts a value in the top group and in the bottom group.
+  - title: Rules out place and season
+    text: Checks the pattern is not just where or when the winners ran.
+  - title: Writes the rule to test
+    text: One sentence, with the counts, a rival explanation and a way to tell them apart.
+
+output_shape: |
+  RANKED
+  <n>. <ad> | <number> | <base>
+
+  CHECKLIST
+  <ad> | headline: <...> | reason: <...> | picture: <...> | copy: <...> | offer: <...> | size: <...> | medium: <...> | position/season: <...>
+
+  WHAT WINNERS SHARE
+  <quality | winners n of m | losers n of m>
+
+  PLACE OR SEASON?
+  <is it the ad or where it ran>
+
+  RULE TO TEST
+  <one sentence> | Rival explanation: <...> | How to tell them apart: <...>
+
+  STRENGTH
+  <hint or rule, and why> | Ads that do not fit: <...>
+
+  LESSON RECORD
+  <date range | set size | rule | evidence | next test>
+
+  MISSING
+  <list>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: The fair number
+    how: Say if you prefer cost per reply, replies per thousand sent or sales per cost.
+  - what: The ads
+    how: Paste them, or a short note on each. The more cells you fill, the more it can find.
+  - what: Group sizes
+    how: Say how many count as winners. By default it splits at the biggest break.
+  - what: Fixed places
+    how: Say if every ad ran in the same place. Then step 5 is skipped.
+
+judge:
+  - Ads were ranked on a number that accounts for audience or cost.
+  - The checklist has no guessed cells.
+  - Each shared quality has counts for both groups.
+  - Place and season were checked as a rival explanation.
+  - A set under ten is called a hint.
+
+test:
+  - Give it a set where you know the pattern. It should find it with counts.
+  - Give it a set of four. It should say the set is too thin.
+  - Run its rule on the next ad and see if it holds.
+  - Check three cells against the original ads.
+
+improve:
+  - Add your own columns, such as price shown or a guarantee line.
+  - Keep the lesson records in one file and read them before you brief new ads.
+  - Re-run it each quarter with new ads added.
+  - Pair it with "Split-run test planner" to test each rule as it appears.
+
+works_best_with:
+  tools:
+    - {name: "A spreadsheet", why: "Holds the checklist as a table and counts values for each group."}
+    - {name: "Your ad platform or email tool", why: "Exports replies and spend by ad."}
+  inputs:
+    - "The ads themselves, with headline, offer, size and place"
+    - "At least ten ads, so the pattern is firmer"
+    - "The keys, so replies can be tied to each ad"
+
+terms:
+  - term: Winners and losers
+    meaning: The top and bottom groups of your ads, split at the biggest break in the numbers.
+  - term: Checklist
+    meaning: A fixed list of things that can differ between ads, filled in for each one.
+  - term: Rival explanation
+    meaning: Another reason the pattern might appear, such as the place the ads ran.

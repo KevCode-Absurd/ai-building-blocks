@@ -1,0 +1,19 @@
+slug: supplier-partner-terms-planner
+name: "Supplier partner terms planner"
+summary: "Paste what you buy and your growth plan. Get terms for your suppliers, with give-backs, shared savings and no side payments."
+category: general
+type: skill
+role: make
+job: strategy
+level: intermediate
+inputs:
+  - {type: audit_report, required: true}
+  - {type: plan, required: false}
+outputs:
+  - {type: plan, required: true}
+origin: rebuilt
+version: 1.0.0
+minds: [ray-kroc]
+credits:
+  - {title: "Grinding It Out: The Making of McDonald's (a book summary)", by: "Ray Kroc with Robert Anderson, as summarised by a third party", used: "Suppliers who lent help in a cash crisis and grew with the company, the refusal of gifts and kickbacks, passing cost breaks to operators, and working with suppliers to shape products like buns and frozen potatoes"}
+  - {title: "Grinding It Out: The Making of McDonald's (1977), quotations", by: "Ray Kroc with Robert Anderson, collected by Goodreads", url: "https://www.goodreads.com/work/quotes/487021-grinding-it-out-the-making-of-mcdonald-s", used: "The stance of wanting a good product and passing any cost breaks to operators"}

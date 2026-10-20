@@ -1,0 +1,27 @@
+slug: test-two-ads-head-to-head-and-read-which-won
+name: "Test two ads head to head and read the winner"
+summary: "Give it two ads. Get a fair split-run test, a reply offer that brings enough replies and a read of the result."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: research
+level: intermediate
+inputs:
+  - {type: ad_copy, required: true}
+  - {type: performance_sheet, required: true}
+  - {type: offer, required: false}
+  - {type: product_data, required: false}
+outputs:
+  - {type: audit_report}
+  - {type: lessons_register}
+uses: [split-run-test-planner, test-reply-offer-planner, split-run-result-reader]
+steps:
+  - {uses: split-run-test-planner, note: "One difference, same time, same audience, a key on each, a rule set before launch."}
+  - {uses: test-reply-offer-planner, note: "A reply offer that is identical in both versions and big enough to count."}
+  - {uses: split-run-result-reader, note: "A plain call on the winner and a record of what it taught."}
+origin: rebuilt
+version: 1.0.0
+minds: [john-caples, claude-hopkins]
+credits:
+  - {title: "Tested Advertising Methods, fifth edition", by: "John Caples, revised by Fred E. Hahn", used: "The order of the steps: plan a fair split-run test, set a reply offer that brings enough replies, read the result"}
+generated_from: intake/tested-ads-split-run/skeleton.yaml

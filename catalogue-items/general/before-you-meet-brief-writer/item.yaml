@@ -1,0 +1,17 @@
+slug: before-you-meet-brief-writer
+name: "Before-you-meet brief writer"
+summary: "Name who you will meet and why. Get what they care about, what to admire and one question only they can answer."
+category: general
+type: skill
+role: make
+job: research
+level: beginner
+inputs:
+  - {type: question, required: true}
+outputs:
+  - {type: persona}
+origin: rebuilt
+version: 1.0.0
+minds: [dale-carnegie, joe-girard]
+credits:
+  - {title: "How to Win Friends and Influence People (1981 revised edition), Part Two chapters 1, 5 and 6", by: "Dale Carnegie", used: "Learn what a person treasures before you meet, be interested in the people around them, ask for help in place of a sale, and find something you can admire sincerely"}

@@ -1,0 +1,111 @@
+new_slug: switch-story-mapper
+name: Switch story mapper
+summary: Paste interview notes from recent buyers. Get each buying story mapped, the four forces marked and the patterns across them.
+job: understand-customers
+thinking: high
+thinking_why: It reads long, messy notes, keeps each person's words apart from your guesses and finds patterns without forcing them. Give it your strongest model.
+headline: See why each buyer switched, what held them back and where the stories match
+subhead: Paste your interview notes. It turns each one into a short story, marks the four forces that push and hold, names what each buyer gave up and groups the stories into patterns.
+explain: |-
+  A pile of interview quotes shows you what people said, not what moved them. Four forces decide a switch. The pain of the situation and the pull of the new thing push toward it. The comfort of the old habit and the worry about the new thing hold it back.
+
+  This skill writes each interview as a story with a line number behind every step. It marks the four forces from what happened, not from what people say afterwards, names what each person gave up and checks if they used the thing again. Then it groups stories that match, counts separate people and keeps the odd ones that do not fit.
+when:
+  - You have interview notes and no clear pattern.
+  - Customers say they love it but many still do not switch.
+  - You suspect the real reasons are not the ones on your website.
+you_give:
+  - Interview notes for each person, with an ID and a date
+  - Your interview guide (optional)
+you_get:
+  - One six-line story per person, each line tied to a note
+  - A table of the four forces for each person
+  - What each buyer fired, and what tipped the choice
+  - A check on whether they used it again
+  - Clusters with counts, one-offs and surprises
+  - A list of what to ask next
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste the notes, one person at a time, with an ID and a date.
+  - Read the stories first. Fix anything that does not sound like the person.
+  - Take the forces table to "Switch friction remover".
+how_it_works:
+  - title: Cites every line
+    text: Each step of a story points to a numbered note, or says MISSING.
+  - title: Writes six-line stories
+    text: Once upon a time, every day, one day, because of that, because of that, finally.
+  - title: Marks the four forces
+    text: Push, pull, habit and anxiety, with a quote for each.
+  - title: Names what was fired
+    text: What the person dropped and what they kept.
+  - title: Checks later use
+    text: Flags people who bought but did not use it.
+  - title: Clusters by forces
+    text: Groups stories that match in circumstance and forces, not in age or size.
+  - title: Keeps surprises
+    text: Lists the cases that do not fit and what to ask about them.
+  - title: Checks itself
+    text: Runs its own checks and names any it missed.
+output_shape: |-
+  STORIES
+  <ID> | Once upon a time: ... [line] | Every day: ... [line] | One day: ... [line] | Because of that: ... | Because of that: ... | Finally: ... [line]
+
+  FORCES
+  Person | Push | Pull | Habit | Anxiety | Fired | Kept | What tipped it | Later hire
+
+  CLUSTERS
+  <n> separate people | Pattern: <one sentence> | Best quote: <text> [ID]
+
+  ONE-OFFS
+  <story> | <why it stands alone>
+
+  SURPRISES
+  <what does not fit> | May mean: <text> | Ask: <question>
+
+  NEXT
+  <gaps> | <three questions> | <cluster to learn about next>
+
+  MISSING
+  <gaps>
+
+  CHECKS MISSED
+  <one line per check missed, or none>
+tweaks:
+  - what: The notes
+    how: Paste exact words with an ID and date. Summaries hide the forces.
+  - what: How many people
+    how: Five to eight is a good first round. Patterns need at least two separate people.
+  - what: Your hunches
+    how: Say what you expect to find. It will tell you where the stories agree and where they do not.
+judge:
+  - Every story line cites a note.
+  - All four forces are present for each person, or flagged as guesses.
+  - The balance is judged from actions.
+  - Clusters rest on separate people.
+  - Surprises are kept in view.
+test:
+  - Give it notes where two people describe the same event in different words. They should land in one cluster counted as two people.
+  - Give it an interview with no clear trigger. It should flag a surprise, not invent one.
+  - Give it a buyer who never used the product. It should mark "bought, not hired".
+improve:
+  - Add each new interview and rerun to see if the clusters move.
+  - Compare the clusters with your top reasons from reviews.
+  - Save the clusters to your brand file.
+  - Pair it with "Customer buying reasons finder" for larger sets of reviews.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: Reading notes and mapping stories is text work any strong chat AI does with this skill.
+    - name: A spreadsheet or board
+      why: The forces table is easier to sort and share in a spreadsheet.
+  inputs:
+    - Interview notes from the Buying story interview guide
+    - Recorded interview transcripts
+    - Reviews that tell a story
+terms:
+  - term: Four forces
+    meaning: The pain of the situation and the pull of the new push toward a switch. The old habit and worry about the new hold it back.
+  - term: Fired
+    meaning: What a person stops using or doing to start something new.
+  - term: Later hire
+    meaning: Using the thing again after the first purchase.

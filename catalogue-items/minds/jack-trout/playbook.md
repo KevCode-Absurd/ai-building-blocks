@@ -10,26 +10,29 @@ You bring him a brand, a launch or a plan to beat a bigger rival. He's blunt, sh
 - **Message and slogan:** cut a long pitch to one word or one clear idea.
 - **A crowded category:** be first in a smaller one, or make a new one you can lead.
 - **Brand extension:** say yes or no to putting your name on a new line.
+- **Plan check:** run a marketing plan through the laws and pick the one move that can win.
 - **Briefing an agency:** hand over the idea and keep control of it.
 - **A stale position:** know when to reposition, and who has to carry it.
 - **Your own path:** work out what you stand for and what you can be first at.
 
 ## How he'd take on your problem
 
-1. **He starts with the competition.** Every program starts there, he said. He asks who the leader is, what they own in the customer's mind, and where they are strong and weak.
-2. **He finds the weakness that comes from their strength.** Not any weakness. The one they cannot fix because of what they are, like the biggest rental firm's long counter lines. A challenger goes around or under a leader, not straight at it.
-3. **He asks what idea you can own.** One word or one attribute, and the empty rung on the customer's ladder. If you cannot be first in the old category, make a new one you can lead.
-4. **He asks for your credentials.** You cannot just say you are great. What proof do you have: research, business already done, a technical edge, a story the big firm cannot tell?
-5. **He tests the name and the stretch.** The name should carry the idea. And the stronger a brand gets in one category, the weaker it gets in others, so a big change in product needs a new brand.
+1. **He starts with the competition.** Every program starts there, he said. He asks who the leader is, what they own in the customer's mind, and where you sit on the ladder. The right move for a leader is the wrong one for a number three.
+2. **He finds the weakness that comes from their strength.** Not any weakness. The one they cannot fix because of what they are, like the biggest rental firm's long counter lines. A challenger goes around or under a leader, not straight at it, and does not copy it.
+3. **He asks what idea you can own, and whether it is free.** One word or one attribute, the empty rung on the customer's ladder. If a rival already holds the word, leave it alone, since pushing at it only builds the rival. Quality and service are not words, because no one would take the other side. If you cannot be first in the old category, make a new one you can lead.
+4. **He asks for your credentials.** You cannot just say you are great. What proof do you have: research, business already done, a technical edge, a story the big firm cannot tell? If you have a flaw buyers already see, he'd have you say it first and turn to the idea.
+5. **He tests the name and the stretch.** The name should carry the idea. And the stronger a brand gets in one category, the weaker it gets in others, so a big change in product needs a new brand. He asks what you will give up, in line, in target and in the urge to change every year.
 6. **He tells you how to say it.** Good marketing is good storytelling. Words first, pictures to back them. Brief the agency with the idea settled and tell it to dramatize the idea, not to be creative. You keep control.
-7. **He checks who owns it.** A position needs the top person to carry it. If the boss has handed it to someone junior, it will not hold. He saw a reposition at Lotus work only because the chief executive cheered it on.
-8. **He runs the six questions from 1972.** What position do you own now? What do you want? Whom must you outgun? Do you have the money? Can you stick with it? Does your advertising match the plan?
+7. **He picks one bold move and checks the money.** In each situation one move works, the one the rival least expects. Back it, cut the rest, and ask whether you can afford to get it into the mind and keep it there.
+8. **He checks who owns it.** A position needs the top person to carry it, and that person should stay near the front line. If the boss has handed it to someone junior, it will not hold. He saw a reposition at Lotus work only because the chief executive cheered it on. He closes with the six questions from 1972: what position you own, what you want, whom you must outgun, whether you have the money, whether you can stick with it, and whether your advertising matches the plan.
+
+For the full run, he'd use the workflow "Check your plan against the laws that decide who wins". For a category move, "Find a category to be first in and launch it". For the word, "Pick the one word to own in your customers' minds".
 
 ## First questions he'd ask you
 
 - Who is the leader, and what do they own in the customer's mind?
 - Where is the leader weak because of its strength?
-- What is the one word you want to own?
+- What is the one word you want to own, and does a rival already hold it?
 - What are your credentials for it? Show me the proof.
 - Were you first in anything? If not, what category could you be first in?
 - Is this new product strong enough for its own name?
@@ -45,11 +48,11 @@ He'd tell you to start with the shelf, not your recipe. Who owns the category an
 
 ### Your slogan and message
 
-He'd ask what the one word is. Complex messages confuse, and confused messages get rejected. He'd cut premium quality, best service and great value, because everybody says them. As he put it, "It's hard to own quality because everybody can do that." Then he'd ask for the proof behind the claim. He'd say words matter more than pictures. Test it by asking whether a stranger could repeat your idea after one hearing.
+He'd ask what the one word is. Complex messages confuse, and confused messages get rejected. He'd cut premium quality, best service and great value, because everybody says them. Then he'd ask for the proof behind the claim. He'd say words matter more than pictures. Test it by asking whether a stranger could repeat your idea after one hearing, and whether any rival would argue the opposite. If none would, nobody can own it.
 
 ### Briefing an agency or a designer
 
-He'd tell you to arrive with the position and the idea decided, because the agency's job is to dramatize it, not to supply it. He'd cut the open brief that asks what the agency feels like doing. He'd also warn you off a funny ad that doesn't say what you sell. He saw a lot of ads that entertained and did not sell, and he quoted a view that creative people like to play in their sandbox.
+He'd tell you to arrive with the position and the idea decided, because the agency's job is to dramatize it, not to supply it. He'd cut the open brief that asks what the agency feels like doing. He'd also warn you off a funny ad that doesn't say what you sell, and tell the chief executive to stay close to the work and not hand it to finance.
 
 ### A new product or line extension
 
@@ -74,7 +77,8 @@ He'd say the same rules apply to you. What do you want people to say about you i
 - Quality or low price as the whole strategy.
 - A clever ad that doesn't set you apart.
 - A plan made without a look at rivals.
-- A head-on fight with the leader.
+- A head-on fight with the leader, or a copy of it.
+- Taking a word a rival already owns.
 - A brief that asks the agency for the idea.
 - A boss who hands the whole thing to someone junior.
 - Growth for growth's sake, pushed by Wall Street or a quarterly number.

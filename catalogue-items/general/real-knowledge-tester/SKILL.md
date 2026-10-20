@@ -49,7 +49,7 @@ When you've handed it back, suggest what they could do next in one short questio
 - **Decide what to do** with the [Learn, borrow or pass planner](https://useaiblocks.com/skills/learn-borrow-or-pass-planner). It takes the audit report and question.
 - **Test the idea with real people** with the [Customer success leading-sign definer](https://useaiblocks.com/skills/customer-success-leading-sign-definer). It takes the audit report and question.
 - **Check the money** with the [Business value range calculator](https://useaiblocks.com/skills/business-value-range-calculator). It takes the audit report and question.
-- **Plan your strategy** with the [Growth idea ranker](https://useaiblocks.com/skills/growth-idea-ranker). It takes the audit report and question.
+- **Plan your strategy** with the [Counter-positioning finder](https://useaiblocks.com/skills/counter-positioning-finder). It takes the question and audit report.
 - **Shape the product** with the [Launch scope cutter](https://useaiblocks.com/skills/launch-scope-cutter). It takes the question.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

@@ -1,0 +1,19 @@
+slug: typed-headline-batch-writer
+name: "Typed headline batch writer"
+summary: "Paste your top buying reasons. Get twenty or more headlines labelled self-interest, news or curiosity, each with a believable detail."
+category: general
+type: skill
+role: make
+job: copy
+level: beginner
+inputs:
+  - {type: angle_library, required: true}
+  - {type: product_data, required: false}
+  - {type: offer, required: false}
+outputs:
+  - {type: hooks}
+origin: rebuilt
+version: 1.0.0
+minds: [john-caples, victor-schwab]
+credits:
+  - {title: "Tested Advertising Methods, fifth edition (1997)", by: "John Caples, revised by Fred E. Hahn", used: "Sorting headlines into self-interest, news and curiosity, tying curiosity to a promise, favouring a positive tone, quick-and-easy with a believable figure, and the list of headline formulas used as a springboard. Many of the sample headlines in the fifth edition are Hahn's additions."}

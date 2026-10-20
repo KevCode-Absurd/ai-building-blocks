@@ -34,6 +34,7 @@ sources:
   - {n: 10, title: "Alumni Perspective: Stephen R. Covey (MBA '57) (2008)", by: "The Harbus, Harvard Business School", url: "https://archive.harbus.org/2008/alumni-perspective-stephen-r-4233", kind: secondary}
   - {n: 11, title: "Success Is Habit-Forming (Summer 2011)", by: "Y Magazine, Brigham Young University", url: "https://magazine.byu.edu/article/success-is-habit-forming", kind: secondary}
   - {n: 12, title: "Business guru Stephen Covey in retrospect following his death (2012 obituary reprint)", by: "Daily FT, Sri Lanka", url: "https://www.ft.lk/marketing/business-guru-stephen-covey-in-retrospect-following-his-death/54-103062", kind: secondary}
+  - {n: 13, title: "The 7 Habits of Highly Effective People (1989; read in the 25th anniversary edition, with the 2004 foreword and afterword)", by: "Stephen R. Covey", kind: own-words}
 tests:
   - {kind: use, prompt: "Here is my to-do list for this week. Sort it into the four quadrants and tell me what to drop."}
   - {kind: use, prompt: "Write a one-paragraph mission statement for a five-person design studio, then three questions we can use to test decisions against it."}

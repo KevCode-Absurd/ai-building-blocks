@@ -1,0 +1,115 @@
+new_slug: defensive-stock-list-builder
+name: "Defensive stock list builder"
+summary: "Paste the companies that passed your tests. Get a spread list of 10 to 30, size limits and a yearly review date."
+job: money-and-investing
+thinking: low
+thinking_why: "It sorts a short list, applies size caps and writes fixed review rules. A fast model does this well."
+
+headline: "Turn the companies that passed your tests into a spread list you can hold for years"
+subhead: "Paste the results of your quality and price tests. It keeps only the companies that passed everything, spreads them across ten to thirty names and different industries, caps how much any one can take, offers the plain alternative of a broad fund when too few pass, and sets a yearly review. A method of analysis, not personal financial advice."
+
+explain: |
+  Passing the tests is not a portfolio. A list of three names in one industry is a bet. A list of fifty is a chore. The old rule for a plain investor is adequate but not excessive spread: at least ten names and no more than about thirty.
+
+  This skill keeps only the companies that passed every test and does not loosen a test to fill the list. It spreads them across industries, caps any one name and any one industry, and says what to do when too few pass: hold fewer names, or hold a broad cross-section of the market through a low-cost fund. It sets a yearly review date and the only reasons to change the list, and it counts the cost of changing. It names no company or fund.
+
+when:
+  - You ran the quality and price tests and have a handful of survivors.
+  - You are not sure how many names to hold or how much to put in each.
+  - Only a few companies passed and you do not know whether to loosen a test.
+
+you_give:
+  - The results from the quality and price tests
+  - The amount you plan to put in stocks
+  - The industry of each company that passed
+  - Whether you want the broad-fund alternative
+
+you_get:
+  - A list of the companies to hold, with a size for each
+  - Industry limits and a cap for any one name
+  - A plan for when too few pass
+  - A yearly review date and the only reasons to change the list
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste the test results, the industry of each company and your stock amount.
+  - Say how you feel about holding a broad fund instead of single companies.
+  - Take the list to "Sit-still rule writer".
+
+how_it_works:
+  - title: Keeps only the passes
+    text: Takes the companies that passed every test and sets aside the rest, with the test each one failed.
+  - title: Counts the spread
+    text: Checks that there are ten to thirty names and that no industry dominates.
+  - title: Sets the sizes
+    text: Divides the stock amount, with a cap for any one name and any one industry.
+  - title: Handles a short list
+    text: Says what to do when fewer than ten pass, without loosening any test.
+  - title: Sets the review
+    text: Fixes a yearly date and the only reasons to change the list, with the cost of changing.
+
+output_shape: |
+  PASSED ALL TESTS: <n names>
+  SET ASIDE: <names with the test each failed>
+
+  SPREAD
+  Names <n> (target 10 to 30) | Industries <n> | Largest industry share <n>%
+
+  LIST AND SIZES
+  <name> | <industry> | <amount or %>
+  Cap for any one name <n>% | Cap for any one industry <n>%
+
+  IF TOO FEW PASSED
+  <hold fewer / hold a broad fund for the rest / wait> because <...>
+
+  YEARLY REVIEW
+  Date: <...> | Checks: <facts> | Only reasons to change the list: <...>
+  Cost of changing: <tax and trading cost per move>
+
+  MISSING
+  <list>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: Name cap
+    how: Pick a cap such as five or ten percent. A lower cap spreads the list more but needs more names.
+  - what: Industry cap
+    how: Pick a cap such as a quarter of the list. A cap stops three similar firms acting like one bet.
+  - what: Broad fund for the rest
+    how: Say if you want part of the stock money in a broad fund while the list grows, and it sizes both parts.
+
+judge:
+  - Every name on the list passed every test.
+  - The list has a target of 10 to 30 names, or says why not.
+  - Caps are set for names and for industries.
+  - The too-few case does not loosen a test.
+  - Nothing names a company or fund to buy.
+
+test:
+  - Give it four survivors in one industry. It should say the list is too thin and too concentrated.
+  - Ask it to add a company that failed on price. It should refuse.
+  - Give it forty survivors. It should shorten the list to thirty or fewer and say how it chose.
+  - Run it twice on the same input. The list rules should match.
+
+improve:
+  - Rerun the list each year with fresh figures and note who dropped out.
+  - Track the whole list as one group, not name by name.
+  - Pair it with "Sit-still rule writer" so changes follow your rules.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Sorting a short list and applying caps is text work any strong chat AI does well with this skill."}
+    - {name: "A spreadsheet", why: "A sheet with name, industry and size makes the caps easy to see."}
+  inputs:
+    - "The pass and fail results from the quality and price tests"
+    - "The industry of each company"
+
+terms:
+  - term: Spread
+    meaning: Holding enough different companies, in different industries, that one failure cannot hurt much.
+  - term: Broad fund
+    meaning: A low-cost fund that holds a wide cross-section of the market, so you hold the average and not a pick.
+  - term: Cap
+    meaning: A limit on how much of the list one name or one industry may take.

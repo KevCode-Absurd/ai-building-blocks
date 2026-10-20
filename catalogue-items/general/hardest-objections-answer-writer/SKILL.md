@@ -52,8 +52,8 @@ The common ground and the claim. The objections with answers and ratings. The si
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - **Say it to the room** with the [Honest persuasion editor](https://useaiblocks.com/skills/honest-persuasion-editor). It takes the draft.
-- **Sell it** with the [Sales route plan builder](https://useaiblocks.com/skills/sales-route-plan-builder). It takes the audit report.
-- **Lead the team** with the [Anger pause and repair planner](https://useaiblocks.com/skills/anger-pause-and-repair-planner). It takes the draft.
+- **Lead the team** with the [Blame-free review agenda writer](https://useaiblocks.com/skills/blame-free-review-agenda-writer). It takes the audit report.
+- **Sell it** with the [Franchise and reseller terms writer](https://useaiblocks.com/skills/partner-deal-terms-writer). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

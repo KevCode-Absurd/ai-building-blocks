@@ -1,0 +1,18 @@
+slug: order-to-request-rewriter
+name: "Order-to-request rewriter"
+summary: "Paste a message full of orders. Get each turned into a question or request with their gain and an easy first step."
+category: general
+type: skill
+role: make
+job: copy
+level: beginner
+inputs:
+  - {type: copy_draft, required: true}
+  - {type: feedback_notes, required: false}
+outputs:
+  - {type: copy_draft}
+origin: rebuilt
+version: 1.0.0
+minds: [dale-carnegie, abraham-lincoln]
+credits:
+  - {title: "How to Win Friends and Influence People (1981 revised edition), Part Four chapters 4, 7, 8 and 9", by: "Dale Carnegie", used: "Ask questions instead of giving orders, give people a good name to live up to, make the fault look easy to fix, and make the person glad to do it; the six-point guide for framing a request"}

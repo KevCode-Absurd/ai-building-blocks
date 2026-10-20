@@ -1,0 +1,84 @@
+new_slug: find-bargain-stocks-with-a-low-price-screen-and-a-group-test
+name: Find bargain stocks with a screen and a group test
+summary: Paste a table of listed companies. Get the cheap ones that pass five safety tests, their asset floor and the group rules.
+job: money-and-investing
+thinking: high
+thinking_why: It runs four skills in a row on a table of figures, and the group rules depend on the earlier results. Give it your strongest model.
+headline: Find stocks priced well under what the business is worth, and judge the method as a group
+subhead: Paste a table of listed companies. It keeps the cheapest by earnings, cuts any that fail five safety tests, finds what each survivor would fetch if it stopped, judges the gap to the price and sets group rules and a scorecard before you buy. A method of analysis, not personal financial advice.
+explain: |
+  Cheap stocks are cheap for a reason, and most reasons are good ones. The skill is in telling the few that are only neglected from the many that are in trouble. And no single bargain is certain, so the method has to be judged on a group.
+
+  This workflow follows the enterprising investor's method in The Intelligent Investor by Benjamin Graham. A first cut on a low price against recent earnings is followed by five tests: current assets at one and a half times current liabilities with debt no more than net current assets, no loss in five years, a dividend now, earnings above those of a few years back, and a price no more than 120% of tangible assets. Survivors get an asset floor, and the gap to the price is judged. Then you set the group size, the caps, the exit and a scorecard before you buy anything. The book says the extra work is worth it only if it adds a few points a year to the stock part. The scorecard tests that. It names no company to buy.
+when:
+  - You have time to study companies and want to look for stocks priced under their worth.
+  - You want a repeatable first cut instead of following tips.
+  - You want to know if the research you do beats a plain fund.
+you_give:
+  - A table of listed companies with price, recent earnings and the balance sheet figures
+  - Five years of profit and the dividend for each company
+  - The money you would put in the group
+  - Your trading costs and tax rate, if you know them
+you_get:
+  - A short list that passes five tests, with the failed test beside every cut
+  - An asset floor for each survivor, set beside the price
+  - A margin of safety verdict for each one
+  - Group size, caps, an exit rule and a scorecard fixed before you buy
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Paste the table and check the column names with it. Missing cells are marked unknown.
+  - Write down the scorecard dates before you buy anything.
+how_it_works:
+  - title: Screens the table
+    text: Makes the first cut on a low multiple of recent profit, then removes any company that fails five safety tests.
+  - title: Finds the asset floor
+    text: Marks each survivor's assets down to a sale value and compares the result with the price.
+  - title: Judges the gap
+    text: Sets price against value and floor, asks why the price is low, and says if the gap is wide enough.
+  - title: Sets the group rules
+    text: Fixes group size, caps, a gain target and time limit, and a scorecard against a plain fund.
+output_shape: |-
+  STEP 1: SCREEN
+    First cut <x> | Kept <n> | Survivors: <list> | Cuts: <company, failed test>
+
+  STEP 2: ASSET FLOOR
+    <company> | Net current assets | Sale value | Price against each
+
+  STEP 3: THE GAP
+    <company> | Verdict: <MARGIN OF SAFETY PRESENT / NO CLEAR MARGIN / PRICE ABOVE VALUE> | Why it is cheap: <neglect / setback / decline>
+
+  STEP 4: GROUP RULES
+    Group size | Caps | Gain target and time limit | If facts change | Scorecard and pass mark
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: First cut
+    how: Pick a lower multiple for a shorter list, or the lowest tenth of the table.
+  - what: Kinds of company
+    how: Name any banks, insurers or utilities. They are set aside, since the tests suit industrial companies.
+  - what: Pass mark
+    how: Set your own pass mark for the scorecard before you buy. It cannot move after.
+judge:
+  - Each step used the result of the step before.
+  - Every cut shows the first test failed, and gaps are marked unknown.
+  - The verdict is compared with the width of the value range.
+  - Exit rules and the scorecard were set before purchase.
+  - Nothing names a company to buy or sell.
+test:
+  - Give it a company with a loss two years ago. It should cut it on the profit test.
+  - Give it only five survivors. It should say the group is too thin and not pad it.
+  - Try to set the exit after seeing prices. It should refuse and explain why.
+  - Run it twice on the same table. The survivors should match.
+improve:
+  - Rerun the screen each year on the whole table and note which names stay.
+  - Score the group on the dates you fixed, not earlier.
+  - If the method fails the scorecard, go back to the plain path in "Screen stocks with a defensive investor's seven tests".
+terms:
+  - term: Margin of safety
+    meaning: The gap between what you think something is worth and what you pay. It protects you if your estimate is wrong.
+  - term: Net current assets
+    meaning: Cash, debts owed to the company and stock, less everything the company owes.
+  - term: Group result
+    meaning: The return of a whole set of purchases taken together, which is how a bargain method should be judged.

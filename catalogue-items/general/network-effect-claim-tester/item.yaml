@@ -1,0 +1,18 @@
+slug: network-effect-claim-tester
+name: "Network effect claim tester"
+summary: "Paste your claim that more users make it better. Get a test of its effect on price or cost, and a call."
+category: general
+type: skill
+role: check
+job: strategy
+level: advanced
+inputs:
+  - {type: question, required: true}
+outputs:
+  - {type: audit_report, required: true}
+origin: rebuilt
+version: 1.0.0
+minds: [hamilton-helmer]
+credits:
+  - {title: "Strategic Power: a conversation with Hamilton Helmer and Chenyi Shi", by: "Hamilton Helmer", used: "The warning that network effects show up in many markets but rarely make a material difference, and the question of how much they change price or cost"}
+  - {title: "7 Powers: The Foundations of Business Strategy (a book summary)", by: "Hamilton Helmer, as summarised by a third party", used: "The definition of network economies as value that rises with the number of users, and the point that a network with no way to earn from it gives no power"}

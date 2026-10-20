@@ -1,0 +1,19 @@
+slug: disagreement-calming-line-writer
+name: "Disagreement calming line writer"
+summary: "Paste the point you expect them to dispute. Get short lines for pushback that keep the person while you hold your view."
+category: general
+type: skill
+role: make
+job: copy
+level: intermediate
+inputs:
+  - {type: plan, required: true}
+  - {type: objection_map, required: false}
+outputs:
+  - {type: copy_draft}
+origin: rebuilt
+version: 1.0.0
+minds: [dale-carnegie, benjamin-franklin]
+credits:
+  - {title: "How to Win Friends and Influence People (1981 revised edition), Part Three chapters 1 to 3 and 6", by: "Dale Carnegie", used: "Avoid the argument, never say flatly that someone is wrong, admit your own error fast, and let the other side talk themselves out; the list for turning a disagreement into a talk"}
+  - {title: "The Autobiography of Benjamin Franklin", by: "Benjamin Franklin", url: "https://www.gutenberg.org/ebooks/148", used: "The habit of putting opinions as how things seem to you, as the book retells it"}

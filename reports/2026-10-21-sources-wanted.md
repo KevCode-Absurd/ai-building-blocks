@@ -32,6 +32,20 @@ Ranked by need: how many skills carry their name, and how often their area comes
 | 24 | Bernard Arnault | 3 | *La Passion créative* (2000; his book of interviews, in French). "The Perfect Paradox of Star Brands", HBR interview (Oct 2001). | The LVMH pages and the HBR piece returned errors. |
 | 25 | Stephen King | 3 | *On Writing* (2000). His *Paris Review* interview (2006, full text, subscribers only). | *On Writing* is his whole craft method. |
 
+## Round 2 done (Kevin's books)
+Full books: *On Writing* (King), *The Intelligent Investor* (Graham, revised edition), *The Lean Startup* (Ries), *Competing Against Luck* (Christensen), *Creativity, Inc.* (Catmull), *The 22 Immutable Laws of Marketing* (Ries and Trout), *Tested Advertising Methods* (Caples, 5th edition), *Reality in Advertising* (Reeves), *How to Win Friends and Influence People* (Carnegie), *The 7 Habits of Highly Effective People* (Covey).
+Summaries only, so still wanted in full: *Breakthrough Advertising* (Schwartz), *7 Powers* (Helmer; the summary gets the seventh power wrong), *Grinding It Out* (Kroc), *How to Write a Good Advertisement* (Schwab).
+Not found: *Breakthrough Advertising* and *Made in America*. Set aside.
+
+## The next 5 to get
+Ranked by how many skills and workflows carry the person's name against how few of their own words we hold.
+1. **Elmer Wheeler, *Tested Sentences That Sell* (1937).** On 5 skills with 2 own-words sources; his tested sales lines and the "sell the sizzle" rules.
+2. **Hamilton Helmer, *7 Powers* (2016), the full book.** Now on 11 skills and 2 workflows built from a thin summary.
+3. **Victor Schwab, *How to Write a Good Advertisement* (1962) in full, or *Mail Order Strategy* (1956).** On 21 skills with only 2 own-words sources, the biggest gap left. archive.org lends the 1962 book.
+4. **John Caples, *How to Make Your Advertising Make Money* (1983).** On 26 skills; his later book in his own words, with no reviser.
+5. **Ray Kroc, *Grinding It Out* (1977), the full book.** On 8 skills and 2 workflows built from a summary.
+For Schwartz, if *Breakthrough Advertising* stays out of reach, Brian Kurtz's *The Advertising Solution* (2016) has a long chapter on how he worked.
+
 ## Close calls, not in the 25
 - **Claude Hopkins:** he has 4 own-words sources, but they are his two full books, *Scientific Advertising* and *My Life in Advertising*, both public domain. His mind is already built on his method.
 - **Sun Tzu, Confucius and Lao Tzu:** there is no more of their own words to find.

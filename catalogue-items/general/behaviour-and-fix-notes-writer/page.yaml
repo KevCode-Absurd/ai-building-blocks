@@ -1,0 +1,130 @@
+new_slug: behaviour-and-fix-notes-writer
+name: "Behaviour and fix notes writer"
+summary: "Describe what keeps going wrong and who does it. Get one watchable behaviour, their likely reason, true strengths and a small fix."
+job: lead-people
+thinking: medium
+thinking_why: "It has to separate behaviour from character and pick true praise, but the steps are fixed."
+
+headline: "Behaviour and fix notes writer"
+subhead: "Give it what keeps going wrong and who does it. It decides if it is worth raising, names one behaviour anyone could watch, finds a fair reason for it and lists what the person does well. You get notes on what to keep, change and leave out."
+
+explain: |
+  Feedback often fails before a word is said. It is vague ("be more careful"), it is about the person ("you are careless"), or it is aimed at a habit the person has good reasons for. The person defends instead of changing.
+
+  This skill prepares the ground. It asks if the matter is worth raising at all, writes the problem as something a camera could record, and checks your own part in it. It finds a fair reason the person might act this way and lists the true strengths you can point to. Then it picks the smallest fix that would count as progress. The result is a set of notes with three lists: keep, change and leave out. You can feed it straight to a message writer.
+
+when:
+  - "Someone's work or conduct has slipped and you have not said anything yet."
+  - "You keep repeating the same complaint and nothing changes."
+  - "You must give feedback tomorrow and your notes are a list of annoyances."
+
+you_give:
+  - "What keeps going wrong, with one or two real examples"
+  - "Who it is and how you work together"
+  - "The result you would like instead"
+  - "What you honestly value in them (optional)"
+you_get:
+  - "One behaviour, written so anyone could watch it, and the result you want"
+  - "A fair reason the person may act this way, and a question to check it"
+  - "A list of true strengths, with the one closest to the problem marked"
+  - "The smallest fix, with notes to keep, change and leave out"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Describe what happened with an example, the person and the result you want."
+  - "Add what you value in them. If nothing comes to mind, say so."
+  - "Read the notes. Check that the behaviour is something you could film."
+  - "Take the notes to \"Hard feedback message writer\"."
+
+how_it_works:
+  - title: "Decides if it is worth raising"
+    text: "Asks if it is a pattern or a one-off and what silence costs."
+  - title: "Names the behaviour"
+    text: "Writes it as a camera would record it, with the result wanted."
+  - title: "Checks your part"
+    text: "Lists what you did or did not do that may have helped cause it."
+  - title: "Finds a fair reason"
+    text: "Writes why a reasonable person may act this way, marked known or guess."
+  - title: "Lists true strengths"
+    text: "Specific things they do well, with dates or examples."
+  - title: "Picks the smallest fix"
+    text: "The first step that is easy and would count as progress."
+  - title: "Sorts the notes"
+    text: "Keep, change and leave out."
+  - title: "Checks the notes"
+    text: "Runs its own checks and names any it missed."
+
+output_shape: |
+  WORTH RAISING?
+  <pattern or one-off, cost of silence, decision>
+
+  THE BEHAVIOUR AND THE RESULT
+  Behaviour: <what a camera would record>
+  Result wanted: <what you want instead>
+
+  YOUR PART
+  <what you did or did not do>
+
+  WHY THEY MAY DO IT
+  <fair reason> (KNOWN or GUESS)  | Ask: <question>
+
+  TRUE STRENGTHS
+  1. <specific strength, with an example> (closest to the problem: yes or no)
+
+  THE SMALLEST FIX
+  <the step, why it is easy, what better looks like in a week>
+
+  KEEP / CHANGE / LEAVE OUT
+  Keep: <strengths to name>
+  Change: <the one behaviour and the fix>
+  Leave out: <old faults, character remarks>
+
+  MISSING
+  <what you do not know>
+
+  CHECKS MISSED
+  <one line per check missed, or none>
+
+tweaks:
+  - what: "The example"
+    how: "Give the most recent, specific moment. A real event lets the notes name the behaviour without blame."
+  - what: "How long it has gone on"
+    how: "Say if it is new or years old. A long pattern needs a smaller first fix."
+  - what: "Your part"
+    how: "Say what you never made clear. It often explains more than their effort does."
+  - what: "Who they are to you"
+    how: "Boss, peer or someone you manage changes what the smallest fix can be."
+
+judge:
+  - "The behaviour could be filmed."
+  - "No word in it is about the person's character."
+  - "The strengths are true and have an example."
+  - "The fix is small enough to do in one sitting."
+  - "The leave-out list holds old faults you will not raise."
+
+test:
+  - "Run it on a feedback talk that went badly. See what the notes would have changed."
+  - "Show the behaviour line to a colleague and ask if they would see the same thing."
+  - "Run it twice. The behaviour and the fix should stay close."
+  - "Use the notes in a real talk and compare how the person reacts to your last one."
+
+improve:
+  - "Add your list of what you value in each person you manage."
+  - "Add your team's standards, so the result wanted matches them."
+  - "Keep the notes in a file per person and update after each talk."
+  - "Pair it with \"Hard feedback message writer\" to turn the notes into a message."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Sorting events into behaviour, reason and fix is text work any strong chat AI does well."}
+    - {name: "A notes app", why: "Keep one note per person for strengths and past talks."}
+  inputs:
+    - "Two or three dated examples of the behaviour"
+    - "The standard the work should meet"
+    - "Notes from earlier talks with this person"
+
+terms:
+  - term: "Watchable behaviour"
+    meaning: "Something a camera could record, such as \"arrived ten minutes after the meeting started\"."
+  - term: "Leave out"
+    meaning: "Things you decide not to bring up, such as old faults or remarks about character."

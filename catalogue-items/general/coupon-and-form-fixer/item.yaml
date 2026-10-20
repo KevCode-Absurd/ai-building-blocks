@@ -1,0 +1,23 @@
+slug: coupon-and-form-fixer
+name: Coupon and form fixer
+summary: Paste your coupon or form and offer. Get a version that sells the offer and asks only what you need.
+category: general
+type: skill
+role: make
+job: copy
+level: beginner
+inputs:
+  - type: offer
+    required: true
+  - type: copy_draft
+    required: true
+outputs:
+  - type: copy_draft
+origin: rebuilt
+version: 1.0.0
+minds:
+  - victor-schwab
+credits:
+  - title: How to Write a Good Advertisement (a book summary)
+    by: Victor O. Schwab
+    used: "The rules for better coupons: reward quick replies, sell the offer inside the coupon, say what they get then what they do, list benefits, offer choices, and make it easy to fill in"

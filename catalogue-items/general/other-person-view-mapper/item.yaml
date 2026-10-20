@@ -1,0 +1,17 @@
+slug: other-person-view-mapper
+name: "Other person's view mapper"
+summary: "Describe the person and the matter. Get their side only: what they want, why they act so and how they save face."
+category: general
+type: skill
+role: make
+job: research
+level: beginner
+inputs:
+  - {type: question, required: true}
+outputs:
+  - {type: persona}
+origin: rebuilt
+version: 1.0.0
+minds: [dale-carnegie]
+credits:
+  - {title: "How to Win Friends and Influence People (1981 revised edition), Part One chapters 2 and 3, Part Three chapters 8 and 9", by: "Dale Carnegie", used: "Start from what the other person wants, find the reason behind what they do, and name what sympathy you can honestly give"}

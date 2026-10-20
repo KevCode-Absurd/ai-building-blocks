@@ -1,0 +1,19 @@
+slug: daily-word-quota-planner
+name: "Daily word quota planner"
+summary: "Say your length and writing days. Get a daily word count, a finish date and a closed-door routine for one first draft."
+category: general
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - {type: question, required: true}
+  - {type: brief, required: false}
+  - {type: plan, required: false}
+outputs:
+  - {type: plan}
+origin: rebuilt
+version: 1.0.0
+minds: [stephen-king, anne-lamott, jerry-seinfeld]
+credits:
+  - {title: "On Writing: A Memoir of the Craft", by: "Stephen King", used: "A fixed daily word goal set low at first, a room with a door that shuts, the same start time each day, stopping when the count is met, one day off a week, and a first draft finished inside about a season"}

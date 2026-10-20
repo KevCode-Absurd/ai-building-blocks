@@ -1,0 +1,129 @@
+new_slug: project-review-prep-planner
+name: "Project review prep planner"
+summary: "Name a finished project. Get prep: a fresh format, a two-list form, numbers to pull and who hears the lessons."
+job: lead-people
+thinking: medium
+thinking_why: "It builds a plan from fixed parts, but it has to choose a format and numbers that fit your project."
+
+headline: "Prepare a project review so people come ready to tell the truth"
+subhead: Name a project that just ended. It picks why you are reviewing, a format that differs from last time, a form asking each person for five things to do again and five never again, the numbers worth pulling and who should hear the lessons.
+
+explain: |
+  Most reviews go flat. People are tired, nobody wants to reopen an old argument, and the group falls back on thanks and a few safe remarks. A lot of the value of a review comes before the meeting, because writing down what you really think makes you think it through.
+
+  This skill plans that part. It varies the format so people cannot game it. It sets a simple two-list form, five to do again and five never again, because people are more honest when the good sits beside the bad. It picks a few neutral numbers, such as time estimated against time spent. It also names who outside the room will hear the lessons.
+
+when:
+  - A project just ended, well or badly, and the team wants to learn from it.
+  - Your last review turned into polite thanks and nothing changed.
+  - You want the lessons to reach people who were not on the project.
+
+you_give:
+  - The project, its dates and the people by role
+  - The format of your last review (optional)
+  - Any records you keep, such as estimates against actuals or rework (optional)
+you_get:
+  - The reasons for this review and a format that differs from the last one
+  - A two-list form and an invitation to send
+  - Four to six numbers to pull, each with a definition, a source and an owner
+  - Who will hear the lessons, in what form, and the meeting rules
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Describe the project and say what format you used last time.
+  - Send the form and the invitation. Ask the person who owns each number to pull it.
+  - When the lists and numbers are back, bring them to "Review lists sorter".
+
+how_it_works:
+  - title: Sets the reasons
+    text: Chooses the two or three reasons that matter most for this review.
+  - title: Changes the format
+    text: Picks a format unlike the last one so people do not game it.
+  - title: Writes the two lists
+    text: Five things to do again and five never again, answered alone before the meeting.
+  - title: Picks the numbers
+    text: Chooses neutral figures and says what they cannot show.
+  - title: Names the audience
+    text: Says who outside the room will hear the lessons and how.
+  - title: Sets the rules
+    text: A facilitator other than the project lead and a time limit for each topic.
+  - title: Checks itself
+    text: Runs its own checks and names any it missed.
+
+output_shape: |
+  THE PROJECT
+  <what, dates, people by role> | Days since it ended: <n>
+
+  WHY THIS REVIEW
+  <two or three reasons and why>
+
+  FORMAT
+  <the format> | Last time: <format> | Why this differs
+
+  THE TWO-LIST FORM
+  Five things I would do again, and why
+  Five things I would not do again, and why
+  Return by: <date>
+
+  NUMBERS TO PULL
+  <figure> | Definition | Source | Owner
+  What the numbers cannot show: <line>
+
+  WHO HEARS THE LESSONS
+  <group> | Form: <talk, note or session>
+
+  MEETING RULES
+  Facilitator | Time per topic | Length | Who attends
+
+  INVITATION
+  <text>
+
+  MISSING
+  <what would sharpen the prep>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: The last review's format
+    how: Say what you did. The new format is chosen to differ from it.
+  - what: Records you keep
+    how: List them. The numbers are drawn from what you already have.
+  - what: Size of the team
+    how: Give the headcount. It sets the meeting length and whether to split into groups.
+  - what: How it went
+    how: Say if the project was a success or a miss. The form stays the same but the invitation tone changes.
+
+judge:
+  - The format is different from the last review, or the last format is marked missing.
+  - The form asks for five and five, in writing, before the meeting.
+  - Every number has a definition, a source and an owner.
+  - A facilitator other than the project lead is named.
+  - The lessons have an audience beyond the room.
+
+test:
+  - Give it a project that went well. The form should still ask for five things not to do again.
+  - Say the last review was a full-day meeting. It should choose another format.
+  - Leave out your records. It should propose numbers and mark the sources missing.
+  - Send the form to two people and see if the answers are specific.
+
+improve:
+  - Keep the lists from each review. After a year you will see lessons that keep repeating.
+  - Rotate the facilitator.
+  - Add the numbers your team already trusts to the standard set.
+  - Pair it with "Review lists sorter" for the step after the lists come in.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Drafting a plan, a form and an invitation is text work any strong chat AI does well with this skill."}
+    - {name: "A shared form or document", why: "People can answer the two lists alone and in writing before the meeting."}
+  inputs:
+    - "The notes or records from the project, so the numbers can come from real data"
+    - "The format of your last review"
+    - "A list of who was on the project"
+
+terms:
+  - term: Two-list form
+    meaning: A written form asking each person for five things to do again and five things not to do again.
+  - term: Gaming a format
+    meaning: Giving the answers a repeated format is known to reward, so the same lessons come up each time.

@@ -1,0 +1,25 @@
+slug: pivot-or-persevere-decider
+name: Pivot or persevere decider
+summary: Paste your progress and customer notes. Get a keep-going or change-course call, the type of change and a review date.
+category: general
+type: skill
+role: make
+job: strategy
+level: advanced
+inputs:
+  - type: audit_report
+    required: true
+  - type: plan
+    required: false
+outputs:
+  - type: audit_report
+    required: true
+origin: rebuilt
+version: 1.0.0
+minds:
+  - eric-ries
+credits:
+  - title: "The Lean Startup: how today's entrepreneurs use continuous innovation to create radically successful businesses"
+    by: Eric Ries
+    url: https://theleanstartup.com/
+    used: The pivot or persevere meeting, signs that tuning has stopped working, runway counted in pivots left, the catalogue of pivot types, and treating a pivot as a new testable guess

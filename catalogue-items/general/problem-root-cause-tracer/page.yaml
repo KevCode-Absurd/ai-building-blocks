@@ -1,0 +1,111 @@
+new_slug: problem-root-cause-tracer
+name: "Problem root cause tracer"
+summary: "Paste the problems found in your work. Get each traced to a likely cause, plus notes that may name the wrong spot."
+job: lead-people
+thinking: high
+thinking_why: "It has to reason about what sits upstream of each problem and test whether a fix would hold. Give it your strongest model."
+
+headline: "Find what is really causing the problem people pointed at"
+subhead: Paste the problem notes and, if you can, the work. It tests each spot alone, looks for causes earlier in the work, checks whether a fix would only move the problem, flags notes that may name the wrong spot and ranks the causes.
+
+explain: |
+  People are good at feeling that something is off and weaker at saying why. They point at the place where they felt it, which is rarely where it began. If you fix the place they pointed at, the problem often moves.
+
+  This skill treats each note as a symptom. It reads the spot on its own, looks upstream for missing setup, context that lives only in your head, a weak premise, a poor order, or the wrong size or tone. It asks whether fixing only the spot would hold, groups problems that share a cause, and gives you one quick check for each top cause.
+
+when:
+  - A group told you something is wrong and the obvious fix did not help.
+  - Several people say it feels off but disagree on why.
+  - You want to fix the cause once instead of patching three places.
+
+you_give:
+  - The problem notes, ideally from "Good note sharpener"
+  - The work they are about (strongly better)
+you_get:
+  - Each problem with whether the spot holds up on its own
+  - Likely causes upstream, grouped, with a hold-test answer for each
+  - A list of notes that may name the wrong symptom
+  - A first quick check for each top cause, and what result would prove it
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste the notes. Add the work as well so the causes can point at real parts.
+  - Run the first check for the top cause before you rewrite anything.
+  - Bring the result to "Revision headline planner".
+
+how_it_works:
+  - title: Reads the spot alone
+    text: Checks whether the place people pointed at holds up when read by itself.
+  - title: Looks upstream
+    text: Lists setup, hidden context, premise, order and scale or tone as possible causes.
+  - title: Runs the hold test
+    text: Asks whether fixing only the spot would solve it or move it.
+  - title: Checks the symptom
+    text: Flags notes where the group may have named the wrong spot.
+  - title: Groups by cause
+    text: Joins problems that share one cause and ranks causes by how much they explain.
+  - title: Plans a first check
+    text: Gives one quick test per top cause and what would prove it.
+  - title: Checks itself
+    text: Runs its own checks and names any it missed.
+
+output_shape: |
+  PROBLEMS
+  <n>. <problem> | Spot alone: holds / does not hold
+
+  CAUSES, RANKED
+  1. <cause> | Explains: <problems> | Hold test: <fix only the spot and ...>
+     First check: <what to do> | Proves it if: <result>
+
+  POSSIBLE WRONG SYMPTOM
+  <note> | Look instead at: <size, tone, setup, order>
+
+  MISSING
+  <facts that would settle a cause>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: Adding the work
+    how: Paste it in full. Without it the causes are marked as guesses.
+  - what: How many notes
+    how: Five to fifteen works well. For a long list, give the ones that came up most.
+  - what: What changed recently
+    how: Say what you added or cut just before the problem started. It often points at the cause.
+  - what: Your own suspicion
+    how: Say what you think is wrong. It will test your guess as one cause among others.
+
+judge:
+  - Every problem lists a cause earlier than the spot, or says why none could exist.
+  - Every top cause has a hold-test answer.
+  - At least one note was tested as a possible wrong symptom.
+  - No cause is stated as fact when the work was not given.
+  - Each top cause comes with a quick check you could do this week.
+
+test:
+  - Give it a note you know was the wrong spot. See if it marks it as a possible wrong symptom.
+  - Leave out the work. Causes should come back marked as guesses with a missing line.
+  - Give it three notes that share one cause. It should group them.
+  - Do the first check it gives. Note whether it moved the problem.
+
+improve:
+  - Keep a list of causes that turned out to be real in your work, and add them as the first things to check.
+  - Pair it with "Good note sharpener" so the notes arrive as problems, not fixes.
+  - Re-run it after each new version to see if a cause moved.
+  - Share the grouped causes with reviewers before the next session.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Tracing causes from notes is text reasoning any strong chat AI does well with this skill."}
+    - {name: "A copy of the work with line numbers", why: "Lets each cause point at a specific part."}
+  inputs:
+    - "Problem notes from the Good note sharpener, so each one names a place"
+    - "The work itself, so causes can be checked and not guessed"
+    - "A version history, so you can see what changed before the problem began"
+
+terms:
+  - term: Symptom
+    meaning: Where the problem shows, which may not be where it starts.
+  - term: Hold test
+    meaning: Asking whether fixing only the visible spot makes the problem go away, or just moves it.

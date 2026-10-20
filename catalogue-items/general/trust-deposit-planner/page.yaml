@@ -1,0 +1,109 @@
+new_slug: trust-deposit-planner
+name: "Trust deposit planner"
+summary: "Name a relationship that matters. Get where trust stands and two small deposits to make before a hard talk."
+job: sell-and-negotiate
+thinking: medium
+thinking_why: "It reads the history you give it and applies six fixed checks, so a mid-level model is enough."
+headline: "Trust deposit planner"
+subhead: "Tell it about a relationship and what you need from it soon. It rates the trust with evidence, finds what counts as a deposit to this person, audits your promises and unspoken expectations, and plans two small deposits and one habit to stop. You get a dated plan and a ready-or-not call."
+explain: |
+  When trust is high, you can say a hard thing and be understood. When it is low, every word is weighed, and a neutral comment gets read as a threat. Many people ask for a lot from a relationship where the balance is thin.
+
+  This skill treats trust as a balance. It asks for three acts that added and three that drew down, reads their side for signs, and rates trust from 1 to 10. It then finds what counts as a deposit to this person, which is often not what counts to you. It audits six kinds of deposit: understanding them, small kindnesses, kept promises, clear expectations, integrity and sincere apology. It picks two small deposits and one habit to stop, and says what to do if nothing changes at first.
+when:
+  - You need to ask for something big from someone and the relationship is strained.
+  - A teammate, client or family member has stopped hearing you.
+  - You broke a promise or let a small thing slide and want to repair it.
+you_give:
+  - The relationship, its history and what you need from them soon
+  - A stance or plan from an earlier step (optional)
+  - Things they have said they like or dislike (optional)
+you_get:
+  - A trust score from 1 to 10, with evidence from both sides
+  - A call on whether to talk now or add deposits first
+  - An audit of six kinds of deposit, with one move each
+  - Two deposits for this week, one habit to stop and a plan for no response
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Describe the relationship and what you want to ask. Give three good acts and three bad ones, with dates.
+  - Say what you know the other person values, and mark what you only guess.
+  - Do the two deposits this week. Keep the habit you chose to stop.
+  - Return on the date it sets and bring what changed.
+how_it_works:
+  - title: Reads the balance
+    text: Three deposits, three withdrawals and signs from their side, rated 1 to 10.
+  - title: Calls ready or not yet
+    text: Says whether the balance can carry the talk or whether to add deposits first.
+  - title: Finds what counts to them
+    text: Marks each guess as known or unknown, and warns against projecting your own wants.
+  - title: Audits six deposits
+    text: Understanding, small kindnesses, kept promises, clear expectations, integrity and apology.
+  - title: Picks two deposits
+    text: Small acts with a time, checked so they are not tricks.
+  - title: Picks one habit to stop
+    text: One thing that draws trust down, and what to do instead.
+  - title: Plans for no response
+    text: What to do on day 3 and day 10 if they stay wary.
+  - title: Sets the check
+    text: A date and a sign that it is ready.
+output_shape: |
+  TRUST NOW: <n> out of 10
+  Added: <three acts, dated> | Drew down: <three acts, dated> | Signs from them: <list>
+  CALL
+  <talk now, deposits first, or move the talk> because <reason>
+  WHAT COUNTS TO THEM
+  <item> (known or guess)
+  SIX DEPOSITS
+  Understanding: finding / move
+  Small kindnesses: finding / move
+  Kept promises: open list / keep, finish or release
+  Clear expectations: unspoken list / say them
+  Integrity: finding / move
+  Apology: what to own / wording
+  THIS WEEK
+  Deposit 1: <act, time> | Deposit 2: <act, time> | Stop: <habit> | Instead: <action>
+  IF NOTHING CHANGES
+  Day 3: <action> | Day 10: <action>
+  RE-CHECK
+  <date> | Ready when: <sign>
+  MISSING
+  <what would sharpen the plan>
+  CHECKS MISSED
+  <one line per check still missed, or none>
+tweaks:
+  - what: Dated examples
+    how: Give real events with dates. "We always argue" gives the plan nothing to work with.
+  - what: What you know they value
+    how: Quote what they said. Mark what you only guess.
+  - what: How soon the talk is
+    how: Give the date. A talk next week needs smaller, faster deposits than one next quarter.
+  - what: Open promises
+    how: List every promise you have made them, even small ones. Each is a deposit waiting.
+judge:
+  - The score has evidence from both sides.
+  - Each deposit fits what the other person values, not only you.
+  - Each deposit is a dated act.
+  - No deposit is a trick to get something.
+  - The plan says what to do if nothing changes.
+test:
+  - Run it on a relationship that is going well. The score should be high and the plan small.
+  - Do the two deposits and see how the other person responds after ten days.
+  - Run it twice. The six findings should stay close.
+improve:
+  - Add a list of promises you often make, so the audit catches them.
+  - Add how this person likes to be thanked or helped.
+  - Save repair notes in your about-me file for the next time.
+  - Pair it with "Win-win stance planner" before and "Listen-first talk planner" after.
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Reading history and sorting it into six checks is text work any strong chat AI does well."}
+    - {name: "A calendar", why: "Put each deposit in as a dated event so it happens."}
+  inputs:
+    - "A stance plan from Win-win stance planner"
+    - "A list of your open promises"
+    - "Messages from them that show what they care about"
+terms:
+  - term: Deposit
+    meaning: An act the other person sees as kind, honest or reliable. It adds to trust.
+  - term: Withdrawal
+    meaning: An act the other person sees as careless, unkind or unreliable. It draws trust down.

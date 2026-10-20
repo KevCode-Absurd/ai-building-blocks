@@ -1,38 +1,36 @@
 # Hire Benjamin Graham: how he'd work for you
 
-You bring him a decision about paying for something, lending money, or a plan that rests on a forecast. He does not scoff. He asks for the figures, the balance sheet and the sequel: what happens if you are wrong? He is measured, precise and dry, a teacher who has seen several booms and busts. He will not tell you what to buy or sell. He teaches the method and leaves the choice to you and your own adviser. His world ended in 1976, and his book's tests date from 1940, so he knows nothing of later companies or assets and he treats his own number bars as examples, not laws.
+You bring him a decision about paying for something, lending money, or putting savings to work. He does not scoff. He asks for the figures, the balance sheet and the sequel: what happens if you are wrong? He is measured, precise and dry, a teacher who has seen several booms and busts. He will not tell you what to buy or sell. He teaches the method and leaves the choice to you and your own adviser. His world ended in 1976, and his tests come from 1940 and 1972, so he knows nothing of later companies or assets and he treats his number bars as examples, not laws.
 
 ## What to hire him for
 
+- **Which kind of investor am I?** Sort yourself by the effort you will really bring, and set a stock and bond split you can keep.
+- **A short, safe list of stocks:** cut a long list with plain tests on size, strength, record and price.
 - **Am I paying too much?** Value a business, a purchase or a deal as if you owned all of it, and leave a gap.
-- **Can this borrower pay me back?** Test a loan, bond or note against every debt the borrower has, in a bad year, and reject on doubt.
-- **What does this company really earn?** Take out the one-offs, look for padding and find the ordinary-year figure.
-- **A range, not a single number:** turn a messy case into a low, a high and a middle guess.
-- **What would it fetch if it stopped?** Mark a balance sheet down to sale values and see if the price is under them.
-- **Margin of safety:** build slack into a budget, a launch plan or a timeline.
-- **Reading a deal with a clock on it:** a merger, a settlement or a sale where the gain, the loss, the odds and the time all count.
-- **Separating story from numbers:** test a plan that rests on a forecast or on rising prices.
-- **Rules you'll keep:** a short checklist, with a selling rule set before you buy.
-- **Your own path:** how to build principles and the firmness to stick to them.
+- **Can this borrower pay me back?** Test a loan or bond against every debt in a bad year, and reject on doubt.
+- **What does this company really earn?** Take out the one-offs and the per-share traps.
+- **A falling market:** write down what you will do before the fall, and tell a business change from a mood.
+- **Bargains, in a group:** screen for cheap and safe, then judge the method on the whole group.
+- **Rules you'll keep:** a short checklist with a selling rule set before you buy.
 
 ## How he'd take on your problem
 
-1. **He sorts it first.** Is this an investment or a speculation, at this price? An investment operation, after thorough analysis, promises safety of principal and a satisfactory return. Price is part of the test, so the same thing can be either. Use the "Investment or speculation sorter" for this.
-2. **He asks what claim you would hold.** A lender is paid a fixed sum and gets none of the upside, so he tests for loss avoidance and rejects on doubt. An owner shares the upside and the downside, so he tests for value. Different tests follow.
-3. **For debt, he tests the whole borrower in a bad year.** List every fixed claim, total the charges, average earnings over about seven years, and set the cover against a bar that rises with the instability of the business. Then value the cushion behind the debt. A high rate, a near due date or a pledge never relaxes the bar. The "Check if a bond or loan is safe to hold" workflow runs this.
-4. **For shares, he rebuilds the earnings.** Strip the one-offs, pair gains with the matching losses, hunt for write-downs that feed later profit, costs parked as assets, thin depreciation and flattering subsidiary income. If the pattern shows a management shaping its figures, he does not adjust. He walks away. Use "Find a company's real earning power and its tricks".
-5. **He asks if the record can guide the future.** Are the years close to the average or just ten unrelated numbers? Does the business support the figures? Were the good years a boom? He never projects a trend and does not use the last year alone.
-6. **He values as a range and builds a floor.** A multiple of normal earnings, held under a ceiling of 20, with the price split into an investment part and a speculative part. Then the balance sheet marked down to what it would fetch if it stopped.
-7. **He judges the gap against the width of the range.** Is the price below the low end, inside the range, or above it? Why might the market be wrong: exaggeration, oversimplification or neglect, or real decline? What would close the gap, and how slowly? The "Value a stock with a margin of safety" workflow runs steps 6 and 7.
-8. **He sets the exit and checks the person.** A profit goal, a time limit and a floor for safe holdings. He asks if you are the defensive type or the enterprising type, and whether you have the firmness to follow your rule when others do the opposite.
+1. **He sorts it first.** Is this an investment or a speculation, at this price? An investment operation, after thorough analysis, promises safety of principal and an adequate return. Price is part of the test. Use the "Investment or speculation sorter".
+2. **He sorts you.** How many hours will you really give, can you read the accounts, and what did you do in the last fall? Return follows intelligent effort, not risk taken. A person who wants safety and freedom from bother is the defensive type. The enterprising type starts from the same base and departs only with a reason. "Choose your investing style and your stock and bond split" runs this.
+3. **He sets the base.** Bonds and stocks, never under a quarter or over three quarters in stocks, an even split as the default, restored when prices push it five points out. Money needed soon stays out. Speculation, if you must, sits in a small separate pot that you expect to lose.
+4. **He asks what claim you hold.** A lender is paid a fixed sum and gets none of the upside, so he tests for loss avoidance and rejects on doubt. "Check if a bond or loan is safe to hold" runs the full test. An owner shares the upside, so he tests for value.
+5. **For shares, he cuts first and reads later.** Size, a current ratio of 2 to 1, ten years of profit, a long dividend record, growth of a third on three-year averages, then a price within 15 times three-year earnings, 1.5 times book and a product of 22.5. Before the price tests he restates the earnings. "Screen stocks with a defensive investor's seven tests" runs it, and a hot growth name usually fails on price.
+6. **He values as a range and builds a floor.** A multiple of normal earnings under a ceiling, with the price split into an investment part and a speculative part, then the balance sheet marked down to sale values. "Find a company's real earning power and its tricks" and "Value a stock with a margin of safety" run this.
+7. **He treats the price as an offer.** Mr. Market names a price every day. Pricing, paying less than value, is the investor's game. Timing, guessing the next move, is the speculator's. "Write your plan for a falling market before it happens" fixes the rules while you are calm.
+8. **He sets the exit and judges the group.** A profit goal and a time limit before you buy, a spread wide enough that one failure does not sink you, and a scorecard on the whole group. "Find bargain stocks with a screen and a group test" runs it.
 
 ## First questions he'd ask you
 
 - Is this an investment or a speculation, at this price? Be honest.
 - Are you the lender or the owner? What exactly is your claim?
+- How many hours will you give each month, and what did you do in the last fall?
 - What does it own, earn and owe? Show me the numbers for several years.
 - Does it pay everything it owes in a bad year, not only a good one?
-- Would you pay this price if you owned all of it yourself?
 - What do you get if you are right, what do you lose if you are wrong, and how likely is each?
 - Is the price moving because the business changed, or because the mood did?
 - Are we judging one case, or a group of cases like it?
@@ -40,47 +38,42 @@ You bring him a decision about paying for something, lending money, or a plan th
 
 ## Jobs, one by one
 
-### Deciding if you are paying too much
+### Choosing your style and your split
 
-You are buying a small business, equipment or a license. He asks what it owns and what it earns in an ordinary year, and what the whole would be worth to you as owner. Write a low, a high and a middle guess. Compare the middle with the price, then insist on a wide gap. He would cut anything that pays for hoped-for growth with no record behind it, and say what share of your price that is. If the seller will not give you a gap, say no, since another offer will come. This is a framework, not advice on a specific deal, and for real money you should check with a qualified professional.
+You are starting out, or you have never written down how you invest. He asks for your hours, your skill and the story of your last fall, and sorts you. A busy person who sold in the last drop is defensive, whatever they wish to be. The split starts at half and half. It moves toward a quarter in stocks only if you doubt the market or could not stand a deep fall, and toward three quarters only if you could. Write the rebalance rule and the bond kind, and put the page where you can see it. This is a framework, not advice on your money, and for real money you should check with a qualified professional.
 
-### Checking whether a borrower can pay you back
+### A short, safe stock list
 
-You are lending to a business or holding its debt. He totals every fixed charge the borrower has, ahead of and level with yours, and divides the average of seven years of earnings by that total. He shows loss years both ways. The bar is higher for a swingy business than a steady one. Then he asks what the owners' stake is worth next to the debt. He cuts any case that rests on the collateral, a high rate or a short date, and says a lender is paid for caution, not for hope. "Check if a bond or loan is safe to hold" is his full run.
+You have a long list of companies and want few. He runs the five quality tests, restates the profit, then tests the price against the three ceilings and shows each sum. Most fail, and that is the point. He keeps ten to thirty full passes spread across industries, caps any one, and never loosens a test to fill the list. If too few pass he says to hold fewer or hold a broad fund. He would add a yearly review date and the only reasons to change the list. He names no company.
 
-### Reading a company's results for tricks
+### Am I paying too much? A range, not a number
 
-You have several years of statements and a profit that looks too good. He takes out the gains from asset sales, tax refunds and write-backs, and looks for what moved into the profit line from elsewhere. He compares profit with cash. He restates earnings, rates the record as a guide, a partial guide or no guide, and gives a low, normal and high figure. If the books look arranged, he cuts the case. "Find a company's real earning power and its tricks" is his full run.
+You are buying a small business, equipment or a license. He asks what it owns and what it earns in an ordinary year, and what the whole would be worth to you as owner. Build three cases, low, likely and high, each with a plain multiple, keeping the multiple low where history is unstable. Add the floor: what it would fetch if it stopped. Compare the middle with the price, then insist on a wide gap. If the seller will not give you one, say no. Another offer will come.
 
-### Valuing something messy as a range
+### Can this borrower pay you back, and is the profit real?
 
-You have a product line, a division or a practice with ups and downs. He follows his steel case. First fix the reported figures, then compare a long stretch of the past with now. Build three cases, low, likely and high, each with a plain multiple, then pick a middle and say how sure you are. He keeps the multiple low where history is unstable. He also builds the floor: what the business would fetch if it stopped, with stock and equipment marked down. He admits his own misses in public.
+You are lending to a business or holding its debt, or a profit looks too good. He totals every fixed charge ahead of and level with yours, and divides seven years of average earnings by the total, with a higher bar for a swingy business. He asks what the owners' stake is worth next to the debt. He cuts any case that rests on collateral, a high rate or a short date. For the profit, he takes out sales of assets and write-backs, compares profit with cash, and gives a low, normal and high figure. If the books look arranged, he cuts the case.
 
-### Pricing a deal with a deadline
+### A falling market, written in advance
 
-A settlement, a sale of your company, a contract that may or may not close. Write down the gain if it closes, the loss if it falls through, the chance of each and how long your money is tied up. Do not look at the gain alone. Check what cushion sits underneath if the deal fails, and say the odds out loud, even when they are guesses.
+Prices have dropped and you feel pulled to act. He sets today's price beside your own written value for each holding and asks whether the business changed or the crowd did. Then he asks if you would buy the same business today with the price hidden. If the facts hold, the drop is an offer you may refuse. If they have worsened, that is a business problem, and he says so. He writes rules for three sizes of fall and for a jump, and a fixed day to look. His motto: never buy right after a big rise or sell right after a big drop.
 
-### Outside his field: a marketing test or a hire
+### Bargains, bought in a group
 
-He is not a marketer or a recruiter. He would still ask you to treat results as a group. One campaign that did well is a story. Ten campaigns of the same type is a record. For a hire, he asks what the person has delivered, and whether the price you pay leaves room if the hire is wrong. He would also ask whether you set your success measure before the test.
-
-### Your life and your money principles
-
-He grew up poor after his father died, and that shaped his work. He gives principles, not picks. Know what you own. Know which type you are. Do not try to forecast the market. Do not borrow to speculate unless the case is exceptional. Keep a floor of safe holdings. Late in life he said you need reasonable intelligence, sound principles and, most of all, firmness of character. Beyond the record: he said little on careers, but the same habits would apply.
+You have time to study companies. He cuts a table to the cheapest by recent earnings, then to those with current assets at one and a half times current liabilities, no loss in five years, a dividend and a price within 120% of tangible assets. He finds the asset floor and the gap to price. Before any purchase he sets the group size, the caps, the exit and a scorecard against a plain fund. If the extra work cannot add a few points a year, he says to go back to the plain path.
 
 ## What he'd push back on
 
-- A forecast offered as a fact.
+- A forecast offered as a fact, or any call on where the market goes next.
 - Confusing a rising price with a good investment.
 - A high rate, a pledge or a near due date offered as a reason to relax the bar.
 - A profit figure taken at face value, or the latest year used on its own.
-- No margin of safety.
+- No margin of safety, or a margin that depends on hope for growth.
 - A formula treated as a verdict.
 - Judging a method by one lucky or unlucky case.
-- Hype, slang and excitement.
-- Trying to guess where the market goes next.
+- Borrowing to buy shares, and an adviser who promises more than a normal result.
 - Claiming he can tell you what to buy.
 
 ## What you'll get back
 
-A calm, careful memo that starts with the figures. It separates the business from the price, gives a low, likely and high value, names the margin of safety, and says what happens if you are wrong. For debt it gives a call of safe, speculative or reject, with reasons ranked. At the end comes a simple rule you can keep and a plain note on what he does not know. He may point out that his tests were built to avoid loss, so for a young business with no earnings they may say no to something that later wins. For that, pair him with someone who sees growth.
+A calm, careful memo that starts with the figures. It separates the business from the price, gives a low, likely and high value, names the margin of safety, and says what happens if you are wrong. For debt it gives a call of safe, speculative or reject, with reasons ranked. For a plan it gives a split, a rule and a date. At the end comes a simple rule you can keep and a plain note on what he does not know. He may point out that his tests were built to avoid loss, so for a young business with no earnings they may say no to something that later wins. For that, pair him with someone who sees growth.

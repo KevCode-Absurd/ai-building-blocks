@@ -1,30 +1,33 @@
 new_slug: what-you-really-sell-finder
 name: "What you really sell finder"
-summary: "Paste your product and buyer. Get a long list of what you are really selling, and the best three as test angles."
+summary: "Paste your product and buyer. Get ten or more reasons to buy, scored, and the best three as test angles."
 job: plan-ad-tests
 thinking: medium
 thinking_why: "It must push past obvious answers and drop the ones the product cannot honestly deliver."
 
 headline: "What you really sell finder"
-subhead: Give it your product and your buyer. It writes at least ten answers to what you are really selling, pushes each from the thing to the result or feeling, drops the ones you can't deliver, and picks the best three as test angles. You get a test plan where only the angle changes.
+subhead: Give it your product and your buyer. It writes at least ten answers to what you are really selling, drops the ones you can't deliver or that only help you, scores the rest for fit, belief and evidence, and picks the best three as test angles. You get a test plan where only the angle changes.
 
 explain: |
   Most owners name what they make, not what the buyer gets. Grass seed is grass seed, but the buyer may be buying a greener lawn, a quiet weekend or a neighbour's envy. Each real answer is a separate way to sell the same product.
 
-  This skill states the product plainly and names the buyer. It asks what you are really selling and writes at least ten answers, past the obvious one. It pushes each answer from the thing to the result, the feeling or the status the buyer wants, and asks the same question of the whole business to find new markets or uses. It drops answers the product can't honestly deliver, picks the strongest three, writes a test headline for each and sets the test so only the angle changes.
+  This skill states the product plainly and names the buyer. It asks what you are really selling and writes at least ten answers, past the obvious one. It pushes each answer from the thing to the result, the feeling or the status the buyer wants, and asks the same question of the whole business to find new markets or uses. It walks the basic reasons people buy, from saving money to avoiding a loss, so no obvious one is missed. It drops answers the product can't honestly deliver and any that are really about you, scores each for fit, belief and evidence, picks the strongest three, writes a test headline for each and sets the test so only the angle changes.
 
 when:
   - You have one message and suspect the product could be sold in other ways.
   - You need new angles to test and keep reusing the same one.
   - You are entering a new market or use for an existing product.
+  - You are about to write headlines and have not chosen the one reason to lead with.
 
 you_give:
   - Your product facts
   - Your buyer, or a persona (optional)
   - Customer reviews or buyer words (optional)
+  - Any ads or emails you have run, with results (optional)
 you_get:
   - At least ten answers to what you are really selling
   - Each answer pushed from the thing to the result, feeling or status
+  - Each kept answer scored, and the dropped ones with reasons
   - The three strongest picks, each with a reason and a test headline
   - A test plan where only the angle changes
 
@@ -45,7 +48,9 @@ how_it_works:
   - title: Widens the question
     text: Asks the same question of the whole business to find new markets or uses.
   - title: Drops what you can't deliver
-    text: Removes answers the product cannot honestly deliver.
+    text: Removes answers the product cannot honestly deliver and any that are about you, not the buyer's gain.
+  - title: Scores what is left
+    text: Marks each answer for fit, belief and evidence. No evidence means untested, not bad.
   - title: Picks three
     text: Picks the three strongest, with a stated reason, and writes a test headline for each.
   - title: Sets the test
@@ -58,7 +63,7 @@ output_shape: |
   <plain product statement> | Buyer: <who>
 
   WHAT YOU ARE REALLY SELLING
-  1. <answer> -> Result/feeling/status: <push> | Deliverable? <yes / no because ...>
+  1. <answer> -> Result/feeling/status: <push> | Deliverable? <yes / no because ...> | fit <0-2> believable <0-2> evidence <0-2> different <0-2>
   ... (at least 10)
 
   NEW MARKETS OR USES
@@ -107,7 +112,7 @@ improve:
   - Add the angles you've already tested with results, so it avoids repeats.
   - Add reviews that show why people buy, so the answers use their words.
   - Save the winning angle to your brand file.
-  - Pair it with "Shared want hook mapper" to build hooks on the winner.
+  - Pair it with "Typed headline batch writer" to turn the winner into headlines, or "Shared want hook mapper" to build hooks on it.
 
 works_best_with:
   tools:

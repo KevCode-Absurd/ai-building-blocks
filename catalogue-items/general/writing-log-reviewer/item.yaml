@@ -1,0 +1,19 @@
+slug: writing-log-reviewer
+name: "Writing log reviewer"
+summary: "Paste your plan and your daily log. Get days hit, pace, finish date, a score out of 100 and one change."
+category: general
+type: skill
+role: check
+job: analysis
+level: beginner
+inputs:
+  - {type: plan, required: true}
+  - {type: performance_sheet, required: true}
+outputs:
+  - {type: audit_report}
+  - {type: plan}
+origin: rebuilt
+version: 1.0.0
+minds: [stephen-king, jerry-seinfeld]
+credits:
+  - {title: "On Writing: A Memoir of the Craft", by: "Stephen King", used: "Counting words against a daily goal, protecting the schedule, treating missed days as a signal and adjusting the goal, with a first draft finished in about a season"}

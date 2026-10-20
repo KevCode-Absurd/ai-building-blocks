@@ -1,0 +1,53 @@
+# Workflow skeleton for The 7 Habits of Highly Effective People, Habit 2 (docs/INTAKE.md). Our words; the book stays in mind-sources/ (local only).
+id: seven-habits-mission
+source:
+  title: "The 7 Habits of Highly Effective People (25th anniversary edition)"
+  by: "Stephen R. Covey"
+  kind: book
+  rights: ideas-only
+  year: 1989
+minds: [stephen-covey]
+workflow:
+  slug: write-a-personal-mission-statement-and-test-your-choices-against-it
+  name: "Write a mission statement and test it on real choices"
+  summary: "Describe what matters to you. Get a mission statement built from your roles and a test of it on real choices."
+  when: "you are busy but unsure the work fits what you care about, or a change of job, role or season asks for a clear direction."
+  job: think-and-decide
+  level: beginner
+steps:
+  - name: Find what matters from the end
+    skill: eulogy-values-finder
+    job: strategy
+    task: think-and-decide
+    from: "Habit 2, begin with the end in mind"
+    method: ["Picture a day many years from now when four people speak about you: family, a friend, a colleague and someone from your community", "Write what you would want each to say about who you were and what you did", "Pull out the values and contributions that repeat across the four", "Mark any you are not living now and rank the top five"]
+    inputs: [question]
+    outputs: [shortlist]
+    note: "Five ranked values and contributions, drawn from what you would want said about you."
+  - name: Map your roles and long-term goals
+    skill: roles-and-goals-mapper
+    job: strategy
+    task: think-and-decide
+    from: "Habit 2, identifying roles and goals"
+    method: ["List the roles you play at home, at work and in your community", "For each role write what you are about in it and the values that guide you", "Set one or two results you want in each role over a few years", "Check the balance: flag any role that has no goal and any role that eats the rest"]
+    inputs: [shortlist!, question]
+    outputs: [plan]
+    note: "Your roles, what you are about in each, and one or two long-term results per role."
+  - name: Write the mission statement
+    skill: personal-mission-statement-writer
+    job: copy
+    task: think-and-decide
+    from: "Habit 2, writing and using a personal mission statement"
+    method: ["Join the values, roles and goals into the few lines that say what you want to be and to do", "Write it in the present tense, in your own words, with principles that do not change", "Keep it short enough to recall and check it covers every role", "Draft three versions of different length and pick the one you could say aloud"]
+    inputs: [plan, shortlist!]
+    outputs: [copy_draft]
+    note: "A short statement you could say from memory, with a one-line version."
+  - name: Test it on real choices
+    skill: mission-choice-tester
+    job: analysis
+    task: think-and-decide
+    from: "Habit 2, the mission statement as a personal constitution"
+    method: ["Take five recent or coming choices, such as a yes, a no, a purchase, a project or a conflict", "Ask what the statement says about each and mark it clear, unclear or silent", "Rewrite any line the choices show to be vague or missing", "Set a review date and a small habit that keeps the statement in view"]
+    inputs: [copy_draft, question!]
+    outputs: [audit_report]
+    note: "Which choices the statement settles, which it leaves open, and the fixes."

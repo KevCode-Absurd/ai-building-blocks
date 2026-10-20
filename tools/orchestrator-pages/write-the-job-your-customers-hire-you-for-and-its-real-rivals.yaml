@@ -1,0 +1,113 @@
+new_slug: write-the-job-your-customers-hire-you-for-and-its-real-rivals
+name: "Write your customers' job and name its real rivals"
+summary: "Give it what you sell and who buys. Get places to look, the job as a situation and your real rivals."
+job: understand-customers
+thinking: high
+thinking_why: "It runs four skills and has to tell a real job from a need or a feature. Give it your strongest model."
+
+headline: "Write the job your customers hire you for, and see who you really compete with"
+subhead: Give it what you sell and who buys. It searches five places for jobs people struggle to get done and plans what to go and watch. After you have watched, it writes one job as a situation, lists every rival for that job including doing nothing, and shows where nobody does it well.
+
+explain: |
+  A customer profile says who bought. It rarely says what they were trying to get done or what else they could have chosen. Two buyers who look alike can want different things. Two who look different can want the same thing. What explains the choice is a moment: where they were, what had just gone wrong, what they tried and what they could not stand.
+
+  This workflow runs in two halves. The first half looks in five places for unmet jobs: your own life, people who buy nothing, workarounds, tasks people avoid and unusual uses. It scores each lead by the proof behind it and plans a visit. Then you go and watch, and write down what you see in people's own words. The second half writes one job for one circumstance, with its practical, social and emotional sides, and stops if there is no real struggle. It lists every rival for that job, including doing nothing and homemade fixes, and rates them all against what the job cares about. It follows the method taught in Competing Against Luck by Clayton Christensen and his co-authors.
+
+when:
+  - You can describe your buyers well but cannot say what progress they are trying to make.
+  - You compare yourself with the usual competitors and sales still surprise you.
+  - You feel growth is stuck and want to find who you are not serving.
+
+you_give:
+  - What you sell and who buys it
+  - Your question, such as where growth could come from
+  - Product facts, reviews or support emails (optional)
+  - Your notes from watching and talking to people, for the second half
+you_get:
+  - Ranked leads for unmet jobs, each written as a person in a moment
+  - A visit plan for the top three, with where to go, what to watch for and the first question
+  - One job written as a situation, with practical, social and emotional sides and the trade-offs
+  - Every rival for that job, with a short resume and what a customer must give up to choose you
+  - A grid showing where nobody does the job well
+
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Describe what you sell and who buys it. It runs the first step and stops.
+  - Go and watch the top leads. Write what you see in people's own words, with where and when.
+  - Bring the notes back and say "carry on from step 2".
+
+how_it_works:
+  - title: Searches five places
+    text: Your own life, people who buy nothing, workarounds, tasks people avoid and unusual uses. Each lead gets an evidence score and a struggle score.
+  - title: Plans the visit
+    text: For the top three leads, a place, a time, what to watch for and an opening question.
+  - title: Writes the job
+    text: One circumstance and one job in the customer's words, split into practical, social and emotional sides. It rejects needs, life themes, customer types and features, and stops when there is no struggle.
+  - title: Maps the rivals
+    text: Everything the person could reach for, including doing nothing, each with a resume and what must be dropped to choose you.
+  - title: Finds the gap
+    text: Rates every rival, you included, on what the job cares about and shows where nobody is strong.
+
+output_shape: |
+  FIRST HALF
+  Ranked leads: <person> in <circumstance> | Place: <own life, non-buyers, workaround, avoided task or unusual use> | Evidence <0-3> x Struggle <0-3> = <score>
+  Hunch list: <leads with no proof yet>
+  Watch plan: <lead> | Where | When | Watch for | First question: The last time ...
+
+  (you go and watch)
+
+  SECOND HALF
+  Job: When <situation>, I want to <progress>, so I can <result>
+  Three sides: practical <...> | social <...> | emotional <...>
+  Struggle and trade-offs: <what goes wrong, the workaround and its cost> | will give up <...> | will not give up <...>
+  Not for: <who this job does not serve>
+  Rivals: <name> | resume <how it does the job, where it fails, why picked> | must be fired <what>
+  Doing nothing: <who and why>
+  Gaps: <where nobody is strong> | fits you because <reason>
+
+  HAND-BACK SUMMARY
+  Files: <each step's file> | MISSING: <every line, in one list>
+
+tweaks:
+  - what: Your own stories
+    how: Give two or three real moments when you struggled to get something done. They often make the best first leads.
+  - what: How many circumstances
+    how: Write one job per circumstance. A buyer in a hurry and a buyer with time are two jobs, even for the same product.
+  - what: Your notes from watching
+    how: Write what people did and said, in their words, with where and when. Notes that only say "liked it" cannot become a job.
+
+judge:
+  - Every lead is a person in a moment, not a group or a need.
+  - Leads with no proof are kept apart and ranked lower.
+  - The job passes the test and is not a need, a life theme, a customer type or a feature.
+  - Rivals include doing nothing and at least one from outside your category.
+  - Nothing a customer said is invented.
+
+test:
+  - Give it notes where two buyers purchased the same thing for different reasons. It should write two jobs, not one.
+  - Give it a lead that says "people want to be healthy". It should refuse to call that a job and ask for a moment.
+  - Give it a market where a free tool already works well. The job step should say there is no real struggle and stop.
+
+improve:
+  - Write one job for each circumstance you find, and keep them together as a library.
+  - Save the job and the rival list in your brand file, so ads and pages use the customer's words.
+  - Repeat the rival step each year. Rivals from other aisles move fast.
+  - Carry the job to "Design the experience, name and measures around your customer's job".
+
+works_best_with:
+  tools:
+    - {name: "Claude", why: "Holds your leads, your notes and four steps of work in one run."}
+    - {name: "A notebook or voice memo", why: "Lets you capture what you see and hear in people's own words while you watch."}
+  inputs:
+    - "Reviews, support emails and returns notes, word for word"
+    - "Photos or stories of unusual uses of your product"
+    - "A list of rivals you already track"
+
+terms:
+  - term: Job
+    meaning: The progress a person is trying to make in one particular moment.
+  - term: Workaround
+    meaning: A fix people build themselves because nothing on offer fits.
+  - term: Resume
+    meaning: A short account of how a rival does the job, where it fails and why someone still picks it.

@@ -1,0 +1,17 @@
+slug: cold-reread-marker
+name: "Cold re-read marker"
+summary: "Paste a rested draft. Get every page that needs a change, the big holes, and a score out of 100."
+category: general
+type: skill
+role: check
+job: analysis
+level: intermediate
+inputs:
+  - {type: copy_draft, required: true}
+outputs:
+  - {type: audit_report}
+origin: rebuilt
+version: 1.0.0
+minds: [stephen-king, william-zinsser]
+credits:
+  - {title: "On Writing: A Memoir of the Craft", by: "Stephen King", used: "Re-reading a rested draft in one go, marking pages that need changes, fixing small mistakes, spotting out-of-character acts and holes big enough to drive a truck through, and noticing the flailing at the start"}

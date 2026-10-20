@@ -1,0 +1,17 @@
+slug: enterprising-bargain-screener
+name: "Enterprising bargain screener"
+summary: "Paste a table of listed companies. Get the cheap ones that pass five safety tests, with the failed test beside every cut."
+category: general
+type: skill
+role: check
+job: analysis
+level: advanced
+inputs:
+  - {type: source_text, required: true}
+outputs:
+  - {type: audit_report}
+origin: rebuilt
+version: 1.0.0
+minds: [benjamin-graham]
+credits:
+  - {title: "The Intelligent Investor (revised edition, 2003)", by: "Benjamin Graham, with commentary by Jason Zweig", used: "The winnowing method: a first cut on a low multiple of recent earnings, then five tests of financial condition, profit record, dividend, earnings direction and price against tangible assets, the warnings on second-quality issues, and the reasons a good company can be priced low"}

@@ -1,0 +1,109 @@
+new_slug: job-name-picker
+name: Job name picker
+summary: Paste your job spec. Get names that tell a stranger what to hire it for, ranked, with a not-for line.
+job: plan-strategy
+thinking: medium
+thinking_why: It generates names and scores them against fixed tests. A mid-range model does this well, but you should judge the final pick.
+headline: Name your product so people know what job to hire it for
+subhead: Paste your job spec. It writes the job in the customer's words, drafts ten names, tests each on a stranger, on stretch and on lookalikes, and gives you three ranked picks with a not-for line.
+explain: |-
+  A name that says the job saves you a lot of explaining. It comes to mind when the need shows up, and it tells people who should not buy to go elsewhere. A name built on your company, a founder or a technology tells them nothing.
+
+  This skill starts from your job spec. It writes the job in plain words, then drafts names in four routes. It tests every name three ways: what a stranger would guess, whether it suggests jobs you do not do, and whether it looks like a rival or a category label. It ranks the top three with the sums shown, and writes a hire-it-when line and a not-for line for each.
+when:
+  - You are naming a product, range or service.
+  - Your current name says who you are, not what you do.
+  - You keep adding variants and the name no longer means one thing.
+you_give:
+  - A job spec for one circumstance
+  - Your product and any names you have (optional)
+  - A plan from the Job experience mapper (optional)
+you_get:
+  - The job in eight words or fewer
+  - Ten names across four routes
+  - Scores from three tests and a maker test, with the sums
+  - Three ranked picks, each with a hire-it-when line and a not-for line
+  - A rule for keeping the name from blurring
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste the job spec and any names you already like.
+  - Show the top names to three strangers. Ask what each is for.
+  - Check trademarks and domains yourself before you commit.
+how_it_works:
+  - title: Writes the job
+    text: Eight words or fewer in the customer's words.
+  - title: Drafts ten names
+    text: "Four routes: action and object, moment or place, plain result and coined word."
+  - title: Stranger test
+    text: What would someone guess it is for, with no logo or picture?
+  - title: Stretch test
+    text: Does it suggest jobs you do not do?
+  - title: Lookalike test
+    text: Does it read like a category label or a rival?
+  - title: Maker test
+    text: Does it still work without the company name?
+  - title: Ranks and writes lines
+    text: Three picks with sums, a hire-it-when line and a not-for line.
+  - title: Checks itself
+    text: Runs its own checks and names any it missed.
+output_shape: |-
+  THE JOB
+  <eight words or fewer>
+
+  NAMES
+  1. <name> | Route: <action and object, moment, plain result or coined> | Says: <text>
+  ...
+
+  SCORES
+  Name | Stranger (0-2) | Stretch (0-2) | Lookalike (0-2) | Maker (pass or fail) | Total
+
+  TOP THREE
+  <name> | Total: <n> | Hire it when: <line> | Not for: <line>
+
+  BLUR RULE
+  <one rule for variants>
+
+  MISSING
+  Trademark and domain check | <other gaps>
+
+  CHECKS MISSED
+  <one line per check missed, or none>
+tweaks:
+  - what: Names you like
+    how: Give them. They get the same tests as the rest, so you can see how they score.
+  - what: Constraints
+    how: Say if the name must be one word or work in another language.
+  - what: The job
+    how: One job per name. If you have two, run it twice.
+judge:
+  - The job line is in the customer's words.
+  - Every name has all its scores.
+  - No top name scored 0 on the stranger test.
+  - Each pick has a not-for line.
+  - The trademark check is marked as not done.
+test:
+  - Give it a name that is just your company name. It should fail the maker test.
+  - Give it a job spec with two jobs. It should ask which job the name serves.
+  - Run it twice. The top three should overlap, even if the wording differs.
+improve:
+  - Test the top names on five strangers and update the scores.
+  - Check trademarks and domains for the top three.
+  - Use the blur rule in your next range review.
+  - Pair it with "Brand name stretch checker" if you are using an existing brand for a new product.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: Drafting names and scoring them against fixed tests is text work any strong chat AI does with this skill.
+    - name: A trademark search tool
+      why: This skill cannot check if a name is free to use, so you need to do it before you commit.
+  inputs:
+    - A job spec from the Job spec writer
+    - A list of your rivals' names
+    - Your current product and range names
+terms:
+  - term: Purpose brand
+    meaning: A name that stands for one job, so it comes to mind when that job comes up.
+  - term: Stranger test
+    meaning: Show the name alone to someone new and ask what it is for.
+  - term: Category placeholder
+    meaning: A name that tells you the type of product and nothing else, such as a common noun with "premium" in front.

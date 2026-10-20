@@ -1,0 +1,124 @@
+new_slug: campaign-keep-or-change-checker
+name: "Campaign keep-or-change checker"
+summary: "Paste your ad history and recall and pull results. Get a keep, fix or replace call, with the cost of starting over."
+job: read-ad-results
+thinking: medium
+thinking_why: "The tests are fixed, but weighing the cost of change against weak evidence takes judgment."
+
+headline: "Keep, fix or replace your ad, with the cost of starting over worked out"
+subhead: "Give it your recall and pull results and the reason someone wants a change. It separates real reasons from boredom, works out what you would lose by starting again, and gives a keep, fix or replace call with the steps to make it safe."
+
+explain: |
+  Teams get tired of an ad long before their buyers do. If most of your buyers have never noticed it, it cannot be worn out. They have not seen it enough to tire of it.
+
+  This skill asks what the evidence says. It checks how many people know the ad, whether pull is falling, whether the product still matches the claim and whether the market for the product is shrinking. It treats a team's boredom as a reason to ask, not a reason to change. It then works out the cost of a restart: the recall you have built is bought with years of money, and a new campaign has to buy it again. If a change is needed, it says what to keep and how to test the new version before it goes out.
+
+when:
+  - "Your team is bored of an ad that is still selling."
+  - "A new manager or agency wants to start again."
+  - "Pull has dropped and you do not know whether to fix or replace."
+
+you_give:
+  - "Recall and pull results, from the Ad recall and pull calculator"
+  - "The reason someone wants a change, and who is asking"
+  - "How long and at what spend the ad has run (optional)"
+  - "Sales or traffic data for the same period (optional)"
+you_get:
+  - "A verdict: keep, fix the delivery, fix the claim or replace"
+  - "The real reasons to change it, checked one by one"
+  - "The cost of starting again in lost recall, worked out"
+  - "If you change, what to keep and how to test it first"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Paste the recall and pull report and the reason for the change."
+  - "Add how long the ad has run and what you spent on it."
+  - "Take the plan to your team before anything is replaced."
+
+how_it_works:
+  - title: "Names the reason"
+    text: "Sorts the reason into boredom, a sales drop, a rival, or evidence from the survey."
+  - title: "Tests for wear"
+    text: "Checks how many people actually know the ad. If most do not, it cannot be worn out."
+  - title: "Checks the real reasons"
+    text: "Looks for zero or negative pull, a product that no longer fits the claim, or a market that is shrinking."
+  - title: "Works out the cost of change"
+    text: "Prices the recall you would lose, from the spend per point of recall."
+  - title: "Checks the versions agree"
+    text: "Asks whether the ad says the same thing in every place it runs."
+  - title: "Gives the call"
+    text: "Keep, fix the delivery, fix the claim or replace."
+  - title: "Plans a safe change"
+    text: "Says what to keep, how to test the new version and when to ask again."
+
+output_shape: |
+  THE REASON
+  <who wants the change, why, evidence or opinion>
+
+  WEAR TEST
+  Recall <x%> -> <worn out is possible | cannot be worn out>
+
+  REAL REASONS TO CHANGE
+  Pull zero or below: yes or no | Product no longer fits the claim: yes or no | Claim owned by a rival with a better product: yes or no | Market shrinking: yes or no
+
+  COST OF STARTING OVER
+  Spent <amount> over <years> for <recall points> -> <amount> per point. A drop to <x%> loses <amount>.
+
+  SAME ADVERT EVERYWHERE?
+  <channel> says <claim> | matches or not
+
+  VERDICT
+  <keep | fix the delivery | fix the claim | replace> | why
+
+  IF YOU CHANGE
+  Keep: <...>  Test: <...>  Ask again: <date>
+
+  MISSING
+  <what would sharpen the call>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: "Spend history"
+    how: "Add what you spent each year. It makes the cost of starting over a real figure."
+  - what: "Annoyance"
+    how: "Say if you have complaints or unsubscribes. The skill treats them as a separate risk from pull."
+  - what: "Product change"
+    how: "Say if the product has changed. It checks the claim against the new product."
+  - what: "A new version"
+    how: "Paste the proposed new ad. It checks whether it carries the same claim."
+
+judge:
+  - "The reason is named and sorted as opinion or evidence."
+  - "Recall is used to test whether the ad can be worn out."
+  - "Each real reason is answered yes or no from the data, or marked MISSING."
+  - "The cost of change is shown with its sum."
+  - "The verdict follows from the checks."
+
+test:
+  - "Run it on an ad you know is worn out and one you know is not."
+  - "Change the reason from boredom to a fall in pull. The verdict should change."
+  - "Show the plan to the person who wanted the change. See whether it answers them."
+  - "After a change, run the survey again and compare."
+
+improve:
+  - "Add your own list of reasons your team gives for change, to check each in turn."
+  - "Keep a record of past changes and what happened to recall."
+  - "Add annoyance data as a standing check."
+  - "Pair it with the Reach-before-repeat planner."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Weighing evidence against opinion is text work any strong chat AI does well with this skill."}
+    - {name: "A spreadsheet", why: "Lets you keep spend and recall by year."}
+  inputs:
+    - "A report from the Ad recall and pull calculator"
+    - "Spend by year for this ad"
+    - "Complaint or unsubscribe counts"
+
+terms:
+  - term: Worn out
+    meaning: "An ad that people have seen so often that recall or pull has fallen. It needs evidence, not a feeling."
+  - term: Delivery
+    meaning: "How well the ad gets its claim into people's heads, as against whether the claim itself sells."

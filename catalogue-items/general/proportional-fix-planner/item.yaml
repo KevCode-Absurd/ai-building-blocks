@@ -1,0 +1,26 @@
+slug: proportional-fix-planner
+name: Proportional fix planner
+summary: Paste a chain of whys. Get a fix at each level, sized to the pain, with an owner, date and check.
+category: general
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: audit_report
+    required: true
+  - type: plan
+    required: false
+outputs:
+  - type: plan
+    required: true
+origin: rebuilt
+version: 1.0.0
+minds:
+  - eric-ries
+  - taiichi-ohno
+credits:
+  - title: "The Lean Startup: how today's entrepreneurs use continuous innovation to create radically successful businesses"
+    by: Eric Ries
+    url: https://theleanstartup.com/
+    used: Making a proportional investment at each level of the whys, starting small, tying the effort to the pain, and sharing the review in plain words

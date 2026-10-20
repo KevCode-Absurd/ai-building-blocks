@@ -1,0 +1,54 @@
+# Workflow skeleton for How to Win Friends and Influence People, Part Two (docs/INTAKE.md). Our words; the book stays in mind-sources/ (local only).
+id: win-friends-new-relationship
+source:
+  title: "How to Win Friends and Influence People (1981 revised edition)"
+  by: "Dale Carnegie"
+  kind: book
+  rights: ideas-only
+  year: 1981
+minds: [dale-carnegie, joe-girard]
+workflow:
+  slug: make-a-strong-first-impression-and-build-the-relationship
+  name: "Make a strong first impression and build the relationship"
+  summary: "Name who you are about to meet. Get a brief, a meeting plan, a memory card and an honest thank-you note."
+  when: "you are about to meet someone who matters to you and want them to remember you well."
+  job: speak-and-persuade
+  level: beginner
+steps:
+  - name: Learn what they care about
+    skill: before-you-meet-brief-writer
+    job: research
+    task: speak-and-persuade
+    from: "Part Two chapters 1 and 5"
+    method: ["Look up what they work on, treasure and talk about", "Note the people around them who matter, such as an assistant", "Pick two honest things to admire", "Find common ground and one question only they can answer"]
+    inputs: [question]
+    outputs: [persona]
+    note: "What they care about, what you honestly admire, and the question only they can answer."
+  - name: Plan how to get them talking
+    skill: get-them-talking-conversation-planner
+    job: strategy
+    task: speak-and-persuade
+    from: "Part Two chapters 2 to 6"
+    method: ["Plan a warm start with a real smile and their name", "Write questions they will enjoy answering", "Plan when to stay quiet and how to show you heard", "Plan how to talk in terms of their interests"]
+    inputs: [persona, question!]
+    outputs: [plan]
+    note: "Their name, a warm start, questions they like to answer and where you stop and listen."
+  - pause: "Have the meeting. Write down the name as spelled, what they said they care about, and anything you promised."
+  - name: Write the memory card
+    skill: contact-memory-card-writer
+    job: ops
+    task: speak-and-persuade
+    from: "Part Two chapter 3, names, and chapter 1, birthdays"
+    method: ["Record the name exactly as spelled", "Record family, work, interests and what they asked for", "List what you promised and by when", "Set the next touch with a reason that is about them"]
+    inputs: [question, persona!]
+    outputs: [plan]
+    note: "A card for remembering them: name, facts, promises and the date of the next contact."
+  - name: Write the thank-you note
+    skill: honest-appreciation-note-writer
+    job: copy
+    task: speak-and-persuade
+    from: "Part One chapter 2 and Part Two chapter 6"
+    method: ["Pick one thing they did or said that you truly valued", "Say it with a detail only someone who was listening would know", "Cut anything you do not believe", "Keep it short and ask for nothing"]
+    inputs: [plan, persona!]
+    outputs: [copy_draft]
+    note: "A short note with one specific, honest appreciation and no ask."

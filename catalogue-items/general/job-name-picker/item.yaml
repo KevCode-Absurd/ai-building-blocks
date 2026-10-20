@@ -1,0 +1,25 @@
+slug: job-name-picker
+name: Job name picker
+summary: Paste your job spec. Get names that tell a stranger what to hire it for, ranked, with a not-for line.
+category: general
+type: skill
+role: make
+job: copy
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: plan
+    required: false
+  - type: product_data
+    required: false
+outputs:
+  - type: copy_draft
+origin: rebuilt
+version: 1.0.0
+minds:
+  - clayton-christensen
+credits:
+  - title: Competing Against Luck
+    by: Clayton M. Christensen, Taddy Hall, Karen Dillon and David S. Duncan (2016)
+    used: "Purpose brands: naming a product for the job it is hired to do so that the name comes to mind in the moment of need, the risk of adding features and variants that blur the job, and telling the wrong buyer the product is not for them"

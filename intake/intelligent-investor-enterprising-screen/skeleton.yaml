@@ -1,0 +1,54 @@
+# Workflow skeleton for The Intelligent Investor, revised edition (docs/INTAKE.md). Our words; the book stays in mind-sources/ (local only).
+# Method analysis only. Not personal financial advice. Names no security to buy or sell.
+id: intelligent-investor-enterprising-screen
+source:
+  title: "The Intelligent Investor (revised edition, with commentary by Jason Zweig)"
+  by: "Benjamin Graham"
+  kind: book
+  rights: ideas-only
+  year: 2003
+minds: [benjamin-graham]
+workflow:
+  slug: find-bargain-stocks-with-a-low-price-screen-and-a-group-test
+  name: "Find bargain stocks with a screen and a group test"
+  summary: "Paste a table of listed companies. Get the cheap ones that pass five safety tests, their asset floor and the group rules."
+  when: "you have time to study companies and want to look for stocks priced well under what the business is worth, as a group and not one big bet."
+  job: money-and-investing
+  level: advanced
+steps:
+  - name: Screen for cheap stocks that pass five safety tests
+    skill: enterprising-bargain-screener
+    job: analysis
+    task: money-and-investing
+    from: "Chapter 15, a winnowing of the stock guide, and Chapter 7, three fields for enterprising investment"
+    method: ["Take a table of companies and keep those priced at a low multiple of recent profit", "Cut any whose current assets are under one and a half times current liabilities, or whose debt is more than the net current assets", "Cut any with a loss in the last five years, no dividend, falling profit or a price well above tangible assets", "List what is left and the order to study it"]
+    inputs: [source_text]
+    outputs: [audit_report]
+    note: "A short list from a long table, with the failed test beside each cut."
+  - name: Find the asset floor for each survivor
+    skill: asset-floor-estimator
+    job: analysis
+    task: money-and-investing
+    from: "Chapter 15, stocks under net current assets, and Chapter 7, bargain issues"
+    method: ["Add up tangible assets and take off every liability", "Mark down each asset class to a sale value", "Check whether the price is under two thirds of net current assets, with no credit for the plant", "Check the cash and the debts that come due soon"]
+    inputs: [audit_report, source_text]
+    outputs: [audit_report]
+    note: "What each company would fetch if it stopped, set beside the price."
+  - name: Judge the gap for each one
+    skill: price-versus-value-gap-judge
+    job: analysis
+    task: money-and-investing
+    from: "Chapters 7 and 20, bargains as the margin of safety"
+    method: ["Set the price against the value range and the asset floor", "Ask if the gap covers how wide the range is", "Name why the price is low: neglect, a temporary setback or lasting decline", "Treat the group as the test, not one case"]
+    inputs: [audit_report]
+    outputs: [audit_report]
+    note: "A margin of safety verdict for each survivor."
+  - name: Set the group rules before you buy
+    skill: bargain-group-rules-writer
+    job: strategy
+    task: money-and-investing
+    from: "Chapters 7, 15 and 20, diversification as the partner of the margin of safety"
+    method: ["Pick enough names that one failure cannot sink the group", "Cap the share of the group any one name can take", "Set a gain target and a time limit before you buy, and the rule for when the facts change", "Score the method on the whole group at the end, with the names listed in advance"]
+    inputs: [audit_report]
+    outputs: [plan]
+    note: "A group plan with size limits, an exit rule and a scorecard to judge the method."

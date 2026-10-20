@@ -1,0 +1,115 @@
+new_slug: find-out-why-buyers-switched-and-what-held-others-back
+name: "Find why buyers switched and what held others back"
+summary: "Give it what you sell. Get a buying-story interview guide, mapped stories and a plan to ease what holds buyers back."
+job: understand-customers
+thinking: high
+thinking_why: "It reads long, messy interview notes and has to keep what people said apart from its own guesses. Give it your strongest model."
+
+headline: "Find out why people switched to you, and what is stopping the rest"
+subhead: Give it what you sell and who bought lately. It plans interviews that rebuild each buying story from the first thought to the first use. After you have had them, it maps every story, marks what pushed and what held each buyer back, and plans a small change to test first.
+
+explain: |
+  Ask a buyer why they chose you and you get a tidy reason that is often wrong. Ask what happened on the day, what was going on before it and what they stopped doing, and the real story comes out. It usually starts weeks before the purchase.
+
+  This workflow runs in two halves. The first half plans a timeline interview with five to eight recent buyers, in seven stops from the day they bought back to the first thought and on to later use. You hold the interviews and keep exact words. The second half writes each interview as a short story, marks the four forces on each buyer (the pain of the situation and the pull of the new, the comfort of the old habit and the worry about the new), names what each person gave up and checks if they used the thing again. It groups matching stories, counts separate people and ranks what holds buyers back, then plans fixes and one small test. It follows the method in Competing Against Luck by Clayton Christensen and his co-authors.
+
+when:
+  - Many people look at your product and never switch.
+  - Customers say they like it, and you still do not know what made the ones who bought finally move.
+  - Your last interviews gave you praise and feature requests.
+
+you_give:
+  - What you sell and the kind of purchase you want to understand
+  - A list of people who bought in the last few months
+  - Product facts and customer words (optional)
+  - Your interview notes, for the second half
+you_get:
+  - A guide to a timeline interview, with probes and the questions to avoid
+  - Each buyer's story in six lines, tied to the notes
+  - The four forces for each buyer and what each one fired
+  - Clusters of matching stories with counts, and the surprises that do not fit
+  - A ranked list of what holds buyers back, two fixes for each and one small test with a keep rule
+
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Describe what you sell and who bought lately. It writes the guide and stops.
+  - Hold five to eight interviews. Write the exact words with an ID and a date for each person.
+  - Bring the notes back and say "carry on from step 2".
+
+how_it_works:
+  - title: Plans the interviews
+    text: Picks recent buyers and writes a seven-stop timeline from the day they bought back to the first thought, and on to later use.
+  - title: Waits for the interviews
+    text: You ask, listen and keep each person's own words. Nothing more runs until you bring them back.
+  - title: Maps each story
+    text: Writes each interview as six lines, marks the four forces, names what was fired and checks for later use.
+  - title: Finds the patterns
+    text: Groups stories by what happened, not by age or size, and counts separate people. One-offs and surprises are kept in view.
+  - title: Plans the fix
+    text: Ranks the habits and worries, offers two fixes for each, helps with getting rid of the old way, writes a not-for line and sets up one test.
+
+output_shape: |
+  FIRST HALF
+  Aim: <what you want to understand> | Belief to hold back: <...>
+  Who: <five to eight recent buyers> | Request note
+  Timeline questions: 1 The day | 2 The first thought | 3 The event | 4 Looking around | 5 Deciding | 6 The wait and first use | 7 Since then
+  Do not ask: <list> | Record: <how to capture exact words>
+
+  (you hold the interviews)
+
+  SECOND HALF
+  Stories: <ID> | once upon a time ... finally, each line tied to a note
+  Forces: person | push | pull | habit | anxiety | fired | what tipped it | later hire
+  Clusters: <n> separate people | pattern | best quote
+  Surprises: <what does not fit> | ask next time
+  Holding forces ranked: <force> | type | bites at <point> | people x severity = score
+  Fixes: <force> | option A | option B
+  Not for: <one line>
+  Test first: change | measure | baseline | window | keep if
+
+  HAND-BACK SUMMARY
+  Files: <each step's file> | MISSING: <every line, in one list>
+
+tweaks:
+  - what: How recent the buyers are
+    how: Pick people who bought in the last three months. Memory fades fast, and old stories get tidier.
+  - what: Who you leave out
+    how: Leave out friends, staff and long-time fans. They tell stories that flatter you.
+  - what: Your notes
+    how: Write the exact words with an ID and a date. A summary hides the forces this workflow looks for.
+
+judge:
+  - Everyone interviewed bought recently.
+  - No question asks why, asks for a rating or asks about an ideal product.
+  - Every story line points to a note, or says MISSING.
+  - Clusters rest on two or more separate people.
+  - Fixes do not use pressure or hide a cost.
+
+test:
+  - Give it notes where two people describe the same event in different words. They should land in one cluster, counted as two people.
+  - Give it a buyer who never used the product. It should be marked "bought, not hired".
+  - Ask for a fix built on fake scarcity. It should be rejected.
+
+improve:
+  - Run the test it picks, record the result and add it to the next round of interviews.
+  - Interview again each year and compare the stories.
+  - Add a second group of people who looked and walked away.
+  - Carry the forces to "Design the experience, name and measures around your customer's job".
+
+works_best_with:
+  tools:
+    - {name: "Claude", why: "Holds the guide, several interviews' worth of notes and three steps of work in one run."}
+    - {name: "A voice recorder", why: "Recording, with consent, keeps the exact words the story map depends on."}
+  inputs:
+    - "A list of recent buyers with order dates"
+    - "Reviews and support emails from those buyers"
+    - "Trial, demo or basket figures for the test baseline"
+
+terms:
+  - term: Timeline interview
+    meaning: An interview that rebuilds the story of a purchase in time order, from the first thought to later use.
+  - term: Four forces
+    meaning: The pain of the situation and the pull of the new push toward a switch. The old habit and worry about the new hold it back.
+  - term: Fired
+    meaning: What a person stops using or doing so they can start something new.

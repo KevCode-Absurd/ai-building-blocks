@@ -1,0 +1,20 @@
+slug: seven-powers-scorecard-builder
+name: "Seven powers scorecard builder"
+summary: "Paste your business facts. Get seven powers scored on benefit and barrier, sorted into held, buildable or out of reach."
+category: general
+type: skill
+role: check
+job: strategy
+level: advanced
+inputs:
+  - {type: audit_report, required: true}
+  - {type: question, required: false}
+outputs:
+  - {type: audit_report, required: true}
+origin: rebuilt
+version: 1.0.0
+minds: [hamilton-helmer]
+credits:
+  - {title: "7 Powers: The Foundations of Business Strategy (a book summary)", by: "Hamilton Helmer, as summarised by a third party", used: "The seven powers, the point that a power needs a benefit and a barrier, and the example firms for each"}
+  - {title: "Strategic Power: a conversation with Hamilton Helmer and Chenyi Shi", by: "Hamilton Helmer", used: "The benefit and barrier test, the superior, significant and sustainable test, and the warning that founders claim powers they do not have"}
+  - {title: "7 Powers synopsis, from the author's book site", by: "Hamilton Helmer", url: "https://7powers.com/synopsis/", used: "The definition of power and the point that invention comes first"}

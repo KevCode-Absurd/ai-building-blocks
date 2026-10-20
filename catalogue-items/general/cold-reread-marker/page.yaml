@@ -1,0 +1,122 @@
+new_slug: cold-reread-marker
+name: "Cold re-read marker"
+summary: "Paste a rested draft. Get every page that needs a change, the big holes, and a score out of 100."
+job: write-and-tell-stories
+thinking: high
+thinking_why: "It reads a whole draft closely and must judge character and plot."
+
+headline: "Find every hole in your draft after it has rested"
+subhead: "Paste a draft that has rested for a few weeks. It reads it in one pass like a stranger, marks each page that needs a change, lists the big holes and the out-of-character acts, and gives a score out of 100 with the sum shown."
+
+explain: |
+  A writer reading a fresh draft sees what they meant, not what is on the page. After a few weeks away, the draft looks like someone else's work, and the mistakes show. That is the point of resting it.
+
+  This skill reads the way you will when the draft has rested. It reads the whole piece in one pass and marks the pages that need work. It sorts what it finds into small mistakes, such as spelling, names and facts that disagree, and large ones: a person who does something they never would, a thread that is dropped, a long start that goes nowhere. It also lists the things that come back again and again, which the next step uses to find what the story is about. The score counts problems found, so a high score means few holes, not good prose.
+
+when:
+  - "You finished a draft and put it away, and now it is time to read it."
+  - "A reader said something felt off but could not say what."
+  - "You suspect your start wanders."
+
+you_give:
+  - "Your draft, whole or a long section"
+  - "How long it has rested, if you know"
+  - "Facts the story must keep, such as ages or dates (optional)"
+  - "What you think is wrong (optional)"
+you_get:
+  - "A list of pages that need a change, with the reason"
+  - "Out-of-character acts and big holes, named"
+  - "The flailing passages at the start"
+  - "A list of things that recur, and a score out of 100 with the sum"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Paste the whole draft if it fits, with page or scene numbers if you have them. For a long book, paste one act at a time and say which."
+  - "Say how long it has rested. If under two weeks, expect a thinner read."
+  - "Do not fix anything while you read the report. Read it all, then pick."
+  - "Pass the recurring list to the theme finder."
+
+how_it_works:
+  - title: "Reads in one pass"
+    text: "Reads the whole piece without stopping to edit."
+  - title: "Marks the pages"
+    text: "Notes each page that needs a change and why."
+  - title: "Fixes small errors"
+    text: "Lists spelling, names, dates and facts that disagree."
+  - title: "Tests each act"
+    text: "Asks of each major act whether that person would do it."
+  - title: "Finds big holes"
+    text: "Lists dropped threads, forgotten people and events with no cause."
+  - title: "Finds the flailing"
+    text: "Marks passages near the start that go nowhere."
+  - title: "Scores and lists repeats"
+    text: "Counts problems into a score and lists recurring elements."
+
+output_shape: |
+  READ NOTE
+  Rested: <time> | Length: <words> | Pass: <one sitting or parts>
+
+  PAGES TO CHANGE
+  p. <n> | small / out of character / big hole / flailing | <reason in a line>
+
+  SMALL ERRORS
+  <list: spelling, names, dates, facts that disagree>
+
+  OUT-OF-CHARACTER ACTS
+  p. <n>: <person> does <act>. Why would they? <the question>
+
+  BIG HOLES
+  <the hole> | where | what is missing
+
+  FLAILING AT THE START
+  p. <n> to <n>: <what it is doing instead of the story>
+
+  THINGS THAT RECUR
+  <objects, images, words, moments, with page numbers>
+
+  SCORE: <n> / 100
+  100 - (<n> big x 8) - (<n> character x 6) - (<n> flailing x 4) - (<n> small x 1, to a cap of 20) = <n>
+
+  CHECKS MISSED
+  <one line per check missed, or none>
+
+tweaks:
+  - what: "Rest time"
+    how: "Say how long it has rested. A draft read the day after is hard to see, and the report will say so."
+  - what: "Facts to keep"
+    how: "Paste the ages, dates and names that must stay fixed so it can test them."
+  - what: "Parts"
+    how: "For a book, run one act at a time and give it the one-line summary of the rest."
+  - what: "Your suspicion"
+    how: "Say what you think is wrong. It still reads the whole thing, but starts by testing that."
+
+judge:
+  - "Every item names a page or scene."
+  - "Each out-of-character act asks why, rather than saying the writer is wrong."
+  - "The holes are about the story, not about taste."
+  - "The recurring list has page numbers."
+  - "The score sum re-adds."
+
+test:
+  - "Run it on a draft that rested six weeks and on one that rested a day. The first should find more."
+  - "Plant two mistakes, such as a changed eye colour and a person acting out of character. It should find both."
+  - "Compare its flailing section to your own feeling of where the start sags."
+
+improve:
+  - "Add the facts the story must keep to a fixed list."
+  - "Keep the holes it finds in a file. You will see the types you make most."
+  - "Use the same marks on the second draft to see which went away."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Reading a long draft and listing problems is text work any strong chat AI does well."}
+    - {name: "A pencil and a printout", why: "Read once on paper in one sitting, mark pages, then compare with the report."}
+  inputs:
+    - "A one-line summary of each act"
+    - "A list of facts the story must keep"
+
+terms:
+  - term: "Rested"
+    meaning: "Set aside, unread, for several weeks so you can see it fresh."
+  - term: "Out of character"
+    meaning: "A person does something the story has shown they would not do."

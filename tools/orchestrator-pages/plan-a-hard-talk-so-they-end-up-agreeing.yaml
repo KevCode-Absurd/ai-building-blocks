@@ -1,0 +1,80 @@
+new_slug: plan-a-hard-talk-so-they-end-up-agreeing
+name: Plan a hard talk so they end up agreeing
+summary: Describe the talk you dread. Get their side, a plan, easy yeses in order and lines for pushback.
+job: sell-and-negotiate
+thinking: high
+thinking_why: It runs several skills in a row. Give it your strongest model.
+headline: Walk into a hard talk ready to get a yes without a fight
+subhead: Tell it who you must talk to and what you want from them. It maps their side, plans a friendly talk where they speak first, builds a ladder of questions with an honest yes at each rung, and writes lines for when they push back.
+explain: |
+  Most hard talks open with your case. The other person defends their position, you defend yours, and whoever wins the point loses the person. A no said early is also hard to take back, because people stand by what they just said.
+
+  This workflow plans the talk from their side first. It works out what they want and the fair reason they act as they do. It plans an opening with no blame and room for the idea to become theirs. It builds a short ladder of questions that start where you already agree, and it writes calm lines for the moments the talk could turn. The order comes from Dale Carnegie's third part of How to Win Friends and Influence People, on winning people to your way of thinking.
+when:
+  - You must ask a boss, client or partner for something and expect resistance.
+  - You are heading into a dispute and want to keep the relationship.
+  - You keep winning arguments and losing the person.
+you_give:
+  - Who you must talk to, and how you know them
+  - What you want from them, and what you could give or change
+  - What has happened so far, with facts, dates or quotes
+  - Anything they have said that shows what they care about (optional)
+you_get:
+  - Their wants, their reasons and how they can keep their pride, each marked known or guess
+  - A conversation plan with their likely doubts, a friendly opening and questions that let them talk
+  - A ladder of four to seven questions, each with an honest yes, ending at your request
+  - Short lines for a flat no, a doubt, anger or a charge that you are wrong
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Describe the person, the matter and what you want. It works step by step and saves each result.
+  - Have the conversation. Then note what they agreed to and what they still doubt, and run it again from the plan step if you need a second talk.
+how_it_works:
+  - title: Sees it from their side
+    text: Writes what they want, the fair reason they act as they do, where they are right and how they can keep their pride, with each line marked known or guess.
+  - title: Plans the conversation
+    text: Starts from their want, opens with no blame, plans questions that let them talk first and leaves room for the idea to become theirs.
+  - title: Builds the ladder of yeses
+    text: Orders what you both hold true into four to seven short questions, each with an honest yes, so the request is the next step.
+  - title: Writes the lines for pushback
+    text: Writes short true lines to welcome a disagreement, show you heard, agree where it is true, admit your part and ask for time.
+output_shape: |-
+  STEP 1: THEIR SIDE
+    What they want | Why they act as they do | Where they are right | How they keep their pride
+
+  STEP 2: THE CONVERSATION PLAN
+    Opening | Their likely doubts with replies | Questions that let them talk | Mistakes to own
+
+  STEP 3: THE LADDER OF YESES
+    Rung 1 to rung 7, each with the yes expected | What to do on a no
+
+  STEP 4: LINES FOR PUSHBACK
+    For each moment: welcome, show you heard, agree where true, own your part, hold your view
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: How well you know them
+    how: Quote what they have said or done. Real words turn guesses into known facts and shorten the question list.
+  - what: What you can change
+    how: Tell it what you could give if they push back. The plan then offers a way for them to shape the idea.
+  - what: Your mistakes
+    how: List anything you got wrong on this matter. Each becomes a short admission you say before they raise it.
+  - what: Spoken or written
+    how: Say whether you will talk or send an email. A written reply gets a rule to wait a day before it goes.
+judge:
+  - Every want is stated from their side and marked known or guess.
+  - The ladder's first question cannot draw a no.
+  - No line says or hints that they are wrong.
+  - You could say every line out loud and mean it.
+  - Nothing in the plan would fail if they saw how it worked.
+test:
+  - Run it on a talk you had that went badly. See which rung or line would have changed the start.
+  - Read the ladder to a friend who plays the other side. Note any rung that gets a hesitant yes.
+  - Run it twice on the same case. Their wants and the starting point should stay close.
+  - After the real talk, note where they said no and bring that back.
+improve:
+  - Save each person's view, so the next talk starts from what you learned.
+  - Add the phrases that tend to set you off, so the lines for pushback replace them.
+  - Keep ladders that worked, with the request, and reuse their shape.
+  - Add facts both sides in your field already accept, so first rungs are ready.

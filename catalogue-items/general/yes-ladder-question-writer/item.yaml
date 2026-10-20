@@ -1,0 +1,18 @@
+slug: yes-ladder-question-writer
+name: "Yes-ladder question writer"
+summary: "Paste your request and plan. Get four to seven questions in order, each with an honest yes, ending at your ask."
+category: general
+type: skill
+role: make
+job: strategy
+level: intermediate
+inputs:
+  - {type: plan, required: true}
+  - {type: objection_map, required: false}
+outputs:
+  - {type: plan}
+origin: rebuilt
+version: 1.0.0
+minds: [dale-carnegie, socrates]
+credits:
+  - {title: "How to Win Friends and Influence People (1981 revised edition), Part Three chapter 5", by: "Dale Carnegie", used: "Open on agreement, collect small honest yeses before the request, and treat an early no as hard to undo; the book's account of the Socratic method"}

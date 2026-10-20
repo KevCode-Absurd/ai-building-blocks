@@ -1,0 +1,79 @@
+new_slug: pick-the-one-word-to-own-in-your-customers-minds
+name: Pick the one word to own in your customers' minds
+summary: Paste your rivals and product. Get one word to own, an honest line to set it up and what to cut.
+job: plan-strategy
+thinking: high
+thinking_why: It weighs many candidate words, then decides what to give up, so it needs your strongest model.
+headline: Pick the one word to own, set it up honestly, and cut what blurs it
+subhead: Paste your rivals and what you sell. It finds the word each rival owns, picks one free word you can prove and writes lines that admit a known flaw and turn to that word. It then lists what to cut so the word gets heard.
+explain: |
+  A brand that says four things is remembered for none. Strong brands own one simple word, and a word one rival already holds is almost impossible to take. Some words, like quality, belong to nobody because every brand claims them.
+
+  This workflow maps which words rivals own and which are open or empty. It lists candidate words of four kinds, drops any that are taken, and tests the rest on four points: simple, wanted, true and opposed. It prefers a word opposite to the leader's. It then finds a flaw buyers already believe and writes lines that admit it and turn to your word, because buyers trust an admission before a boast. Last, it marks every product, customer group and message as feeding or blurring the word, and cuts the product line, narrows the target and sets a rule against changing the position at budget time. The ideas come from "The 22 Immutable Laws of Marketing" by Al Ries and Jack Trout (1993).
+when:
+  - You say too many things and buyers can't say what you stand for.
+  - Research says buyers want something and you suspect a rival already owns it.
+  - Your range and customer list keep growing and your message keeps changing.
+you_give:
+  - Your main rivals, with their taglines or homepage lines
+  - Customer reviews that name you and your rivals (optional)
+  - Your product facts and proof (optional)
+  - Your brand facts and a list of what you sell and to whom (optional)
+you_get:
+  - The one word buyers link to each rival, and which words are taken, contested, empty or open
+  - One word to own, two backups and a four-test score for each
+  - Three admit-then-turn lines that set up the word
+  - A cut list, one target apart from the whole market, and a rule against drifting
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Ask five people for the first brand and first word that come to mind for your category, and paste their answers in.
+  - Say the winning word to five buyers and ask what they assume about you.
+how_it_works:
+  - title: Maps the words rivals own
+    text: Finds one word per rival, runs a word-association test and marks each word taken, contested or open, with the empty claims listed.
+  - title: Picks the word to own
+    text: Lists candidate words, cuts the taken and the empty, scores the rest on four tests and checks the halo.
+  - title: Writes the honest line that sets it up
+    text: Finds a flaw buyers already see and writes three lines that admit it and turn to your word.
+  - title: Decides what to give up
+    text: Marks each product, group and message against the word, cuts the line, picks one target and writes a no-change rule.
+output_shape: |-
+  STEP 1: MAP THE WORDS RIVALS ALREADY OWN
+    Rival: <name> | word: <one word> | status: <taken, contested, open>
+    Empty claims: <list>
+
+  STEP 2: PICK THE WORD TO OWN
+    Own: <word> | Backups: <two words>
+    Tests: simple, wanted, true, opposed: <scores>
+
+  STEP 3: WRITE THE HONEST LINE THAT SETS IT UP
+    Flaw: <flaw> | Lines: <three admit-then-turn lines>
+
+  STEP 4: DECIDE WHAT TO GIVE UP
+    Cut list: <item> | <cut, park, own name>
+    Target: <type of person> | No-change rule: <hold until>
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: Proof
+    how: Give real tests, numbers, firsts or customer results. A word with no proof scores low on true.
+  - what: Buyer words
+    how: Reviews beat your own view of rivals. A word buyers use is a word they hold.
+  - what: Sales by item
+    how: Give revenue by product and group, so the cut list weighs what you would lose.
+judge:
+  - Each rival has one word, and each word is taken, contested or open.
+  - The pick is one word that is not taken and not an empty claim, with proof stated.
+  - The flaw is widely seen and the turn takes one step.
+  - Every item in your range has a mark and a reason, and the target is narrower than the market.
+  - No step invented a fact to fill a gap.
+test:
+  - Ask five people for the first brand and word for your category and compare with step 1.
+  - Say each admit-then-turn line to five buyers. They should nod at the flaw and accept the turn.
+  - Check that every kept item fits under the one word without a second sentence.
+improve:
+  - Re-run the first step each year, since a word can pass from one rival to another.
+  - Save the word and the stop list in your brand file.
+  - Pin the three questions for new ideas where budget decisions are made.

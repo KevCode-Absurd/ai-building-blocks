@@ -5,7 +5,7 @@ description: Use when you want to test an idea, find out why a number moved, or 
 
 # One-change experiment planner
 
-A test only teaches you something when one thing changes. If two things change, you can't tell which one did the work. This skill turns your question into a plan that changes one thing, holds the rest still, and says in advance what each result means.
+A test only teaches you something when one thing changes. This one fits any idea or number. For two versions of ad copy, use "Split-run test planner" or "Cross-over copy test planner". If two things change, you can't tell which one did the work. This skill turns your question into a plan that changes one thing, holds the rest still, and says in advance what each result means.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
@@ -48,10 +48,10 @@ The question as asked and in plain terms with definitions. The factor list. The 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Test the idea with real people** with the [Market boundary checker](https://useaiblocks.com/skills/market-boundary-checker). It takes the plan.
+- **Test the idea with real people** with the [Smallest test picker](https://useaiblocks.com/skills/smallest-test-picker). It takes the plan.
 - **Plan your strategy** with the [Buying habit stack designer](https://useaiblocks.com/skills/buying-habit-stack-designer). It takes the plan.
+- **Check the money** with the [Bond type and maturity chooser](https://useaiblocks.com/skills/bond-type-and-maturity-chooser). It takes the plan.
 - **Decide what to do** with the [Case-against writer](https://useaiblocks.com/skills/case-against-writer). It takes the plan.
-- **Check the money** with the [Price drop rules writer](https://useaiblocks.com/skills/price-drop-rules-writer). It takes the plan.
 - **Shape the product** with the [Feature request screener](https://useaiblocks.com/skills/feature-request-screener). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

@@ -1,0 +1,54 @@
+# Workflow skeleton for Reality in Advertising, part 2 (docs/INTAKE.md). Our words; the book stays in mind-sources/ (local only).
+id: reality-ads-keep-one-campaign
+source:
+  title: "Reality in Advertising"
+  by: "Rosser Reeves"
+  kind: book
+  rights: ideas-only
+  year: 1961
+minds: [rosser-reeves]
+workflow:
+  slug: find-out-if-your-ad-works-and-decide-whether-to-change-it
+  name: "Check if your ad works, then keep or change it"
+  summary: "Give it your current ad. Get a short survey, the recall and pull sums, and a keep or change call."
+  when: "your ad has run a while, sales are muddy and your team wants something new."
+  job: read-ad-results
+  level: intermediate
+steps:
+  - name: Plan the recall and pull survey
+    skill: recall-and-pull-survey-planner
+    job: research
+    task: read-ad-results
+    from: "Chapters 2 to 4, the two rooms and the two measures"
+    method: ["Write the one question that shows who can say what the ad says", "Write the one question that shows who buys", "Set who to ask and how many in each group", "Say how to score a vague or wrong answer"]
+    inputs: [copy_draft, brief!]
+    outputs: [plan]
+    note: "The questions, the sample and the scoring rule for the two groups."
+  - pause: "Ask at least a hundred of your likely buyers. Record what each says the ad said and whether they buy your product."
+  - name: Work out recall and pull
+    skill: ad-recall-and-pull-calculator
+    job: analysis
+    task: read-ad-results
+    from: "Chapters 2, 4 and 5, penetration and usage pull"
+    method: ["Sort answers into those who can say what the ad says and those who cannot", "Work out the share who buy in each group", "Subtract to get the extra buyers the ad pulls", "Read the result: low recall, high recall with no pull, or pull below zero"]
+    inputs: [voc_reviews, plan!]
+    outputs: [audit_report]
+    note: "Recall, buyers in each group, the pull as a number, and which of the four patterns it is."
+  - name: Decide to keep or change
+    skill: campaign-keep-or-change-checker
+    job: strategy
+    task: read-ad-results
+    from: "Chapters 7 and 8, how long a campaign lasts and the cost of change"
+    method: ["Check that people have actually forgotten or tired of it, not only your team", "Work out the cost of starting again in lost recall", "Change only if pull is zero or below, or the product has gone out of date", "If you change, say what you must keep"]
+    inputs: [audit_report, performance_sheet!, brief!]
+    outputs: [plan]
+    note: "Keep, fix or replace, with the sums behind the call."
+  - name: Plan who sees it
+    skill: reach-before-repeat-planner
+    job: strategy
+    task: plan-ad-tests
+    from: "Chapter 31, buying dispersion"
+    method: ["List the places you reach people and how many different people each reaches", "Prefer more different people over the same people again", "Add repeats only after you reach most of your buyers", "Check that the ad itself passes before you spend more on it"]
+    inputs: [plan, performance_sheet!]
+    outputs: [plan]
+    note: "A spread plan that reaches new people first and repeats later."

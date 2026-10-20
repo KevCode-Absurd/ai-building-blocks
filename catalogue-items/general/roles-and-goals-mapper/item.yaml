@@ -1,0 +1,18 @@
+slug: roles-and-goals-mapper
+name: "Roles and long-term goals mapper"
+summary: "List your roles. Get what you are about in each, one or two lasting results, and the role crowding out the rest."
+category: general
+type: skill
+role: make
+job: strategy
+level: beginner
+inputs:
+  - {type: shortlist, required: false}
+  - {type: question, required: true}
+outputs:
+  - {type: plan}
+origin: rebuilt
+version: 1.0.0
+minds: [stephen-covey]
+credits:
+  - {title: "The 7 Habits of Highly Effective People (25th anniversary edition)", by: "Stephen R. Covey", used: "Habit 2: breaking a life into roles, writing what you are about in each, setting one or two long-term results per role, and checking that no role crowds out the others"}

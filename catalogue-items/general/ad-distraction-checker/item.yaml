@@ -1,0 +1,18 @@
+slug: ad-distraction-checker
+name: "Ad distraction checker"
+summary: "Paste your ad and what ten viewers said it said. Get the playback count, what stole their attention and what to cut."
+category: general
+type: skill
+role: check
+job: analysis
+level: intermediate
+inputs:
+  - {type: script, required: true}
+  - {type: copy_draft, required: false}
+outputs:
+  - {type: audit_report, required: true}
+origin: rebuilt
+version: 1.0.0
+minds: [rosser-reeves]
+credits:
+  - {title: "Reality in Advertising", by: "Rosser Reeves, 1961", used: "The playback test (what people say the ad said), the thresholds for a claim that will be heard, the second claim and the striking picture that each drain the main claim, and the point that a playback test measures delivery, not whether the claim sells"}

@@ -1,0 +1,117 @@
+new_slug: seven-powers-scorecard-builder
+name: "Seven powers scorecard builder"
+summary: "Paste your business facts. Get seven powers scored on benefit and barrier, sorted into held, buildable or out of reach."
+job: plan-strategy
+thinking: high
+thinking_why: "It holds seven separate tests against one set of facts and has to resist giving credit for features that only look like power. Give it your strongest model."
+
+headline: "Seven powers scored one by one, so you know which edge is real"
+subhead: Paste what you know about your business and, if you have it, a first power test. It scores scale, networks, counter-positioning, switching costs, brand, cornered resource and process power on one benefit and one barrier each. You get a ranked scorecard and the facts still missing.
+
+explain: |
+  Most owners name one advantage and stop. That hides two problems. The advantage may be weaker than it feels, and a stronger one may be sitting unused in the same business.
+
+  This skill sets the same two tests against each of the seven powers. The benefit test asks what the business gets that a typical rival does not, in price, cost or margin. The barrier test asks what stops a rival taking it. Each power is scored from none to proven, and each score points at a fact you gave it. A power with no fact behind it scores as a claim, not as a power. The result sorts the seven into held, buildable and out of reach.
+
+when:
+  - You believe you have a moat but can only name a list of strengths.
+  - You named one advantage and want to check the other six before you put money behind it.
+  - A backer, partner or buyer asked what protects your margin and you had no clear answer.
+
+you_give:
+  - What the business sells, to whom, and the price and cost per sale
+  - The result of a first power test, if you have one
+  - Your main rivals and what they do better or worse than you (optional)
+you_get:
+  - Seven rows, one per power, each with a benefit line, a barrier line and the fact behind them
+  - A score for each power from 0 to 3, with a reason
+  - The powers sorted into held, buildable and out of reach
+  - The facts still missing, listed so you can go and find them
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your business facts. If you ran "Business power tester" first, paste its result too.
+  - Add real numbers where you have them, such as prices, unit costs, churn and repeat rate.
+  - Read the held and buildable lists first. Then go and find each fact it marked as missing.
+  - Bring the result to "Ten-year durability checker" and "Power build-order planner".
+
+how_it_works:
+  - title: Writes the two tests for each power
+    text: For each of the seven it states the benefit that power would give you and the barrier that would protect it, in plain words.
+  - title: Finds your evidence
+    text: Searches what you gave it for one fact per test, and marks a gap as MISSING instead of filling it.
+  - title: Scores each power
+    text: 0 means none, 1 a claim with no fact, 2 a benefit shown but a weak barrier, 3 both shown with numbers.
+  - title: Checks it matters
+    text: Asks whether the gain is big enough to show up in your price, cost or margin.
+  - title: Sorts the seven
+    text: Held, buildable with a stated first step, or out of reach for your business.
+  - title: Checks itself
+    text: Runs its own checks and names any it missed.
+
+output_shape: |
+  THE BUSINESS IN THREE LINES
+  <who pays, for what, what is left after cost>
+
+  SCORECARD
+  1. Scale: benefit <> | barrier <> | fact <> | score <0-3> | reason <>
+  2. Network: ...
+  3. Counter-positioning: ...
+  4. Switching costs: ...
+  5. Brand: ...
+  6. Cornered resource: ...
+  7. Process: ...
+
+  HELD (score 2 or 3): <powers>
+  BUILDABLE: <powers, with the first step for each>
+  OUT OF REACH: <powers and why>
+
+  MISSING
+  <each fact that would change a score>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: The numbers
+    how: Margins, repeat rate and prices turn a claim into a score. Without them most rows stay at 1.
+  - what: Your rivals
+    how: Say who they are and what they would have to give up to match you. The barrier rows depend on it.
+  - what: A first power test
+    how: Paste the result of "Business power tester". The scorecard then checks that named power against the other six.
+  - what: Your stage
+    how: Say whether the market is new, growing fast or settled. It decides which powers are buildable.
+
+judge:
+  - Every row has a benefit and a barrier, and the two are different things.
+  - Every score above 1 points at a fact you gave it.
+  - No power is scored on good execution, a good team or a good product alone.
+  - Network and brand rows show an effect on price or cost.
+  - Missing facts are listed, not guessed.
+
+test:
+  - Run it on a business you know well and check each score against what you would say if you had to defend it. The weak rows should surprise you least.
+  - Give it a business with a loud claim, like a big user count, and no margin data. The network row should stay at 1.
+  - Run it twice on the same facts. The held list should stay the same.
+
+improve:
+  - Add your real margins and churn to the facts, then rerun and compare.
+  - Rerun each quarter. Powers move from buildable to held as you build them.
+  - Add the rivals' prices so the barrier rows can use them.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Weighing facts against seven fixed tests is reasoning work any strong chat AI does well."}
+    - {name: "Your accounts or margin report", why: "Real margins turn the benefit rows from opinion into numbers."}
+  inputs:
+    - "A result from Business power tester"
+    - "Price, cost and margin"
+    - "Customer repeat rate or churn"
+
+terms:
+  - term: Power
+    meaning: A position that lets a business keep better returns than its rivals for a long time.
+  - term: Benefit
+    meaning: What the business gets that a typical rival does not, such as a higher price, a lower cost or a better margin.
+  - term: Barrier
+    meaning: What stops a rival from taking the benefit away.

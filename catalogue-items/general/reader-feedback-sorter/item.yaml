@@ -1,0 +1,18 @@
+slug: reader-feedback-sorter
+name: "Reader feedback sorter"
+summary: "Paste what several readers said. Get what to fix, what to leave alone and a ranked rewrite list."
+category: general
+type: skill
+role: check
+job: analysis
+level: intermediate
+inputs:
+  - {type: feedback_notes, required: true}
+  - {type: copy_draft, required: false}
+outputs:
+  - {type: plan}
+origin: rebuilt
+version: 1.0.0
+minds: [stephen-king]
+credits:
+  - {title: "On Writing: A Memoir of the Craft", by: "Stephen King", used: "Reading several readers' notes together, fixing what most readers raise, treating split opinions as a wash that the writer decides, taking fact catches, and weighting the ideal reader most"}

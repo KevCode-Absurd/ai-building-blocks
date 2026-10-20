@@ -1,0 +1,18 @@
+slug: owned-word-mapper
+name: "Owned word mapper"
+summary: "Paste your rivals and what buyers say. Get the word each rival owns, words nobody can own and the open ones."
+category: general
+type: skill
+role: source
+job: research
+level: beginner
+inputs:
+  - {type: competitor_set, required: true}
+  - {type: voc_reviews, required: false}
+outputs:
+  - {type: audit_report}
+origin: rebuilt
+version: 1.0.0
+minds: [al-ries, jack-trout]
+credits:
+  - {title: "The 22 Immutable Laws of Marketing", by: "Al Ries and Jack Trout", used: "The laws of focus, exclusivity and attributes: one word per brand, the word-association test, words rivals already hold, claims everyone makes that nobody owns, and the opposite attribute to the leader's"}

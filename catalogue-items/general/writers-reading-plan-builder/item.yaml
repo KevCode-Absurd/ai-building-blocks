@@ -1,0 +1,18 @@
+slug: writers-reading-plan-builder
+name: "Writer's reading plan builder"
+summary: "Tell it your free minutes and goal. Get a weekly reading schedule with the sums and a book mix that teaches."
+category: general
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - {type: question, required: true}
+  - {type: plan, required: false}
+outputs:
+  - {type: plan}
+origin: rebuilt
+version: 1.0.0
+minds: [stephen-king]
+credits:
+  - {title: "On Writing: A Memoir of the Craft", by: "Stephen King", used: "Reading a lot as the other half of writing a lot, reading in small sips and long swallows, always carrying a book, using audio books while driving or exercising, cutting television, and learning from bad books as well as good ones"}

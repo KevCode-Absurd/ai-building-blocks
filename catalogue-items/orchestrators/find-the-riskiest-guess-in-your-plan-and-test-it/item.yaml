@@ -1,0 +1,24 @@
+slug: find-the-riskiest-guess-in-your-plan-and-test-it
+name: "Find the riskiest guess in your plan and test it"
+summary: "Paste your plan. Get the guesses it rests on as numbers, the smallest test for the riskiest and pass lines set first."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: research
+level: intermediate
+inputs:
+  - {type: brief, required: true}
+  - {type: question, required: true}
+outputs:
+  - {type: plan}
+uses: [leap-of-faith-assumption-finder, smallest-test-picker, mvp-experiment-planner]
+steps:
+  - {uses: leap-of-faith-assumption-finder, note: "The few guesses the plan stands on, each with a predicted number, the riskiest first."}
+  - {uses: smallest-test-picker, note: "The cheapest form of test for the top guess, and the list of things to leave out. Reads the guesses from the step before."}
+  - {uses: mvp-experiment-planner, note: "Pass lines set before the run, the run plan and a pivot or persevere rule. Reads the test from the step before."}
+origin: rebuilt
+version: 1.0.0
+minds: [eric-ries, steve-blank]
+credits:
+  - {title: "The Lean Startup", by: "Eric Ries", used: "The order of the steps: find the guesses your plan rests on, pick the smallest test that teaches, set the numbers and the next move"}
+generated_from: intake/lean-startup-riskiest-guess/skeleton.yaml

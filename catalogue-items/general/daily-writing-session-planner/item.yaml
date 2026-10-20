@@ -1,6 +1,6 @@
 slug: daily-writing-session-planner
 name: "Daily writing session planner"
-summary: "Say what you write and when you can sit down. Get a daily session with a fixed end and a rewrite pass."
+summary: "Say what you write and when you can sit down. Get a lasting habit: fixed session, draft day, rewrite day, hours log."
 category: general
 type: skill
 role: make
@@ -13,7 +13,7 @@ outputs:
   - {type: copy_draft}
 origin: rebuilt
 version: 1.0.0
-minds: [jerry-seinfeld, akira-kurosawa]
+minds: [jerry-seinfeld, akira-kurosawa, stephen-king]
 credits:
   - {title: "The Tim Ferriss Show #485: Jerry Seinfeld (transcript)", by: "Tim Ferriss and Jerry Seinfeld", url: "https://tim.blog/2020/12/09/jerry-seinfeld-transcript/", used: "One fixed place and start, a set end time, an idea file plus a small notebook, a small first draft and a next-day rewrite for sound"}
   - {title: "Notes from a legend: Akira Kurosawa's advice to young filmmakers", by: "Akira Kurosawa (as reported)", used: "Write full pieces on paper, set a small nightly page count, and read widely to feed the work"}

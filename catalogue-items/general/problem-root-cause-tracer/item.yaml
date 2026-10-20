@@ -1,0 +1,18 @@
+slug: problem-root-cause-tracer
+name: "Problem root cause tracer"
+summary: "Paste the problems found in your work. Get each traced to a likely cause, plus notes that may name the wrong spot."
+category: general
+type: skill
+role: check
+job: analysis
+level: intermediate
+inputs:
+  - {type: feedback_notes, required: true}
+  - {type: copy_draft, required: false}
+outputs:
+  - {type: audit_report}
+origin: rebuilt
+version: 1.0.0
+minds: [ed-catmull]
+credits:
+  - {title: "Creativity, Inc.", by: "Ed Catmull with Amy Wallace, Random House, 2014", used: "Problems that show up in one place often start earlier in the work, so notes should bring the true cause to the surface; a group can sense something is wrong yet name the wrong symptom, and the owner has to ask what else could be causing it"}

@@ -1,0 +1,89 @@
+new_slug: lead-offer-tuner
+name: Lead offer tuner
+summary: "Paste your diagnosis and live reply offer. Get three changes that raise replies or cut weak ones, with what each should do."
+job: read-ad-results
+thinking: medium
+thinking_why: It picks from two fixed lists using your numbers and facts, then writes the new offer.
+headline: Lead offer tuner
+subhead: Give it the diagnosis and your current reply offer. It follows the raise list or the cut list, picks the three changes your facts allow, and rewrites the offer and where it sits. You get the new offer and what each change should do to the count.
+explain: |-
+  A free booklet, a sample or a call can bring a great many replies or a few good ones, depending on how you present it. The same offer can be dressed up to draw a crowd or dressed down to draw only serious people.
+
+  This skill uses two lists. To raise replies, it makes the offer more appealing and easier to see. To cut weak replies, it makes the offer plainer, adds a small cost or a question, and tells the reader what they are in for. It picks three changes only, so you can read the result.
+when:
+  - You want more replies and your offer is buried in the ad.
+  - Your replies are plentiful but few buy.
+  - You are rewriting a free offer, such as a guide or a quote.
+you_give:
+  - The diagnosis from the Inquiry problem diagnoser, or your own call
+  - Your current reply offer and where it sits in the ad
+  - What you are willing to ask, charge or promise
+you_get:
+  - The list used and the three changes picked
+  - The rewritten offer and where to put it
+  - What each change should do to the count and the quality
+  - What to leave alone so you can read the test
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste the diagnosis and the current offer.
+  - Say what you can truly promise.
+  - Run the new offer against the old, with a code on each.
+how_it_works:
+  - title: Reads the call
+    text: Chooses the raise list or the cut list.
+  - title: Picks three changes
+    text: Only those your facts and promises allow.
+  - title: Rewrites the offer
+    text: Changes the wording, the title and where it sits.
+  - title: Predicts the effect
+    text: States what each change should do to count and quality.
+output_shape: |-
+  CALL
+  <raise the number or cut weak replies>
+
+  CHANGES PICKED
+  1. <change> | needs: <fact> | should: <effect>
+  2. ...
+  3. ...
+
+  NEW OFFER
+  <wording, title, placement>
+
+  LEFT ALONE
+  <what stays the same for the test>
+
+  MISSING
+  <what is needed>
+
+  CHECKS MISSED
+  <one line each, or none>
+tweaks:
+  - what: What you can promise
+    how: Say if no salesperson will call, if there is a fee, or if there is a guarantee. The list only uses what is true.
+  - what: Strength of change
+    how: Say if you want a small step or a big one.
+judge:
+  - Exactly three changes, all from one list.
+  - Each change has a fact behind it.
+  - The new offer is plain and complete.
+  - Nothing promised that is not true.
+test:
+  - Run the old and new offers with different codes and compare replies and sales.
+  - Check that the raise changes raised quality too.
+  - Read the new offer aloud to see if a stranger would reply.
+improve:
+  - Test one list change at a time after the first round.
+  - Keep a record of which changes moved which numbers.
+  - Pair with the Coupon and form fixer.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: The work is sorting and writing from facts you supply, which any strong chat AI does well with this skill.
+  inputs:
+    - The diagnosis from the Inquiry problem diagnoser
+    - The ad where the offer appears
+terms:
+  - term: Raise list
+    meaning: Ways to make the offer more appealing and easier to see.
+  - term: Cut list
+    meaning: Ways to make the offer plainer so only serious people reply.

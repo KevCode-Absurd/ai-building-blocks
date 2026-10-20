@@ -1,0 +1,25 @@
+slug: reach-a-deal-both-sides-will-back
+name: "Reach a deal both sides will back"
+summary: "Describe the deal or dispute. Get your stance, a plan to listen first, a third option and a written agreement."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: strategy
+level: intermediate
+inputs:
+  - {type: question, required: true}
+outputs:
+  - {type: plan}
+uses: [win-win-stance-planner, trust-deposit-planner, listen-first-talk-planner, third-option-finder, results-agreement-writer]
+steps:
+  - {uses: win-win-stance-planner, note: "Your stance, what a win is for each side and the point where you walk away."}
+  - {uses: trust-deposit-planner, note: "Where trust stands, and two deposits to make before the talk."}
+  - {uses: listen-first-talk-planner, note: "A listening plan: what to ask, how to restate, and when to speak."}
+  - {uses: third-option-finder, note: "At least three options that meet both sides' needs, and a small first step."}
+  - {uses: results-agreement-writer, note: "A written agreement both sides can back: results, limits, help, review and consequences."}
+origin: rebuilt
+version: 1.0.0
+minds: [stephen-covey]
+credits:
+  - {title: "The 7 Habits of Highly Effective People (25th anniversary edition)", by: "Stephen R. Covey", used: "The order of the steps: set your stance and your no-deal line, add to the trust first, plan to listen first, find a third option, write the agreement"}
+generated_from: intake/seven-habits-win-win/skeleton.yaml

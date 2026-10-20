@@ -58,9 +58,9 @@ The product test plan. The method steps, with NEEDS DEMO flags. The course modul
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Sell it** with the [Reason-to-join pitch writer](https://useaiblocks.com/skills/reason-to-join-pitch-writer). It takes the plan.
+- **Sell it** with the [Disagreement calming line writer](https://useaiblocks.com/skills/disagreement-calming-line-writer). It takes the plan.
+- **Say it to the room** with the [Honest appreciation note writer](https://useaiblocks.com/skills/honest-appreciation-note-writer). It takes the plan.
 - **Lead the team** with the [Informed captain decision planner](https://useaiblocks.com/skills/informed-captain-decision-planner). It takes the plan.
-- **Say it to the room** with the [Hardest objections answer writer](https://useaiblocks.com/skills/hardest-objections-answer-writer). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

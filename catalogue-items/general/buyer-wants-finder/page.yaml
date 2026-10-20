@@ -1,0 +1,102 @@
+new_slug: buyer-wants-finder
+name: Lead want picker
+summary: "Paste your product facts. Get one buyer want to lead with, its reward, the facts behind it and what not to claim."
+job: write-ad-copy
+thinking: medium
+thinking_why: It weighs several wants against your facts and picks one, but the lists and tests are fixed.
+headline: Lead want picker
+subhead: Give it your product facts and, if you have them, a note on your buyer or some customer words. It lists what a buyer could gain, be, do or save, drops what your facts cannot back, and picks the one want to lead with. You get a short brief for the headline and the body.
+explain: |-
+  A reader asks one thing: what will this do for me? Many ads answer with what the product is made of, or with what the writer likes about it. The writer's own taste is a trap. The people who write ads often share tastes with each other and not with the people who buy.
+
+  This skill looks at the product from both sides of the counter: how it is made and how it feels to use. It then sorts the buyer's possible wants into four groups, things to gain, to be, to do and to save. Each want is tested against your facts, and any want that only you believe in is flagged. The one that survives becomes the reward your headline promises.
+when:
+  - You are about to write an ad and cannot say in one line what the reader gets.
+  - Your product has many features and you do not know which one to lead with.
+  - You suspect the ad is written for people like you, not for your buyer.
+you_give:
+  - "Your product or service: what it is, what it does, price and proof you may use"
+  - Who buys it, if you know (optional)
+  - Customer words from reviews, emails or calls (optional)
+you_get:
+  - The wants that fit your product, in four groups, each tested against your facts
+  - The one want to lead with and the reward it promises, as a gain or a loss avoided
+  - A short brief your headline and body writers can use
+  - A list of claims to avoid and facts still missing
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your product facts. Add customer words if you have any, word for word.
+  - Say who you think the buyer is and what you think they want, so it can test the guess.
+  - Take the brief to the next step, the headline writer.
+how_it_works:
+  - title: Two sides of the counter
+    text: Writes one short list as the maker and one as the buyer, and notes where they differ.
+  - title: Four groups of wants
+    text: Sorts possible wants into gain, be, do and save, in the buyer's words.
+  - title: Fact test
+    text: Keeps only the wants your product can meet, with the fact that shows it.
+  - title: Own-taste test
+    text: Flags a want when the only evidence is that you like it.
+  - title: One lead want
+    text: Picks one want and names the reward as a gain or a loss avoided.
+  - title: Writes the brief
+    text: Hands over the reader, the want, the reward, the backing facts and what not to claim.
+output_shape: |-
+  THE READER
+  <who, in one line>
+
+  WANTS THAT FIT
+  Gain: <want> | fact: <fact>
+  Be: ...
+  Do: ...
+  Save: ...
+
+  DROPPED
+  <want> | why: <no fact, or taste risk>
+
+  LEAD WANT
+  <want> | reward: <gain or loss avoided> | how soon, easy or cheap: <if the facts say>
+
+  BACKUP WANT
+  <want>
+
+  DO NOT CLAIM
+  <list>
+
+  MISSING
+  <what would sharpen it>
+
+  CHECKS MISSED
+  <one line each, or none>
+tweaks:
+  - what: Buyer detail
+    how: Say who buys and when they think about the product. A narrower buyer gives a sharper want.
+  - what: Customer words
+    how: Paste real quotes. They show which wants buyers say out loud, and in what words.
+  - what: Time horizon
+    how: Say whether your buyer reacts to a moment or plans for years. The reward is worded to fit.
+judge:
+  - The lead want is one thing, not a list.
+  - Every kept want has a fact beside it.
+  - At least one want was dropped, with a reason.
+  - The reward is a gain or a loss avoided, not a feature.
+test:
+  - Show the brief to someone who buys this kind of product. Ask if the lead want is why they would buy.
+  - Run it twice. The lead want should stay close even if the wording changes.
+  - Write a headline from the brief and see if a stranger can say what they would get.
+improve:
+  - Add customer quotes after each sale batch so the wants come from buyers.
+  - Keep the dropped list. A want that fails now may fit a new product.
+  - Pair with the headline writer and the headline promise checker.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: The work is sorting and writing from facts you supply, which any strong chat AI does well with this skill.
+  inputs:
+    - Customer reviews or emails, word for word
+    - A list of your approved claims
+terms:
+  - term: Want
+    meaning: What the buyer hopes to gain, be, do or save by using the product.
+  - term: Own-taste trap
+    meaning: Writing for your own tastes and mistaking them for the buyer's.

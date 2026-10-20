@@ -1,0 +1,124 @@
+new_slug: revision-headline-planner
+name: "Revision headline planner"
+summary: "Paste the causes behind your notes. Get three to five headlines, what to blow up and keep, and a next-version plan."
+job: lead-people
+thinking: medium
+thinking_why: "It ranks and condenses a list by clear rules, but it has to judge what to blow up and what to keep."
+
+headline: "Turn a long review into a few headlines and a plan for the next version"
+subhead: Paste the causes or problems from your review. It boils them down to three to five headlines, asks what to blow up, what to go back on and what you still love, leaves each choice to you and sets the date and test for the next look.
+
+explain: |
+  A long list of notes is hard to act on. People fix the easy items, feel done, and bring back much the same work. The big problem stays.
+
+  This skill shrinks the review to a few headlines you can say from memory. It asks three questions: what to blow up, what to go back on, and what you love. It checks whether what you love now is what you set out to make. You then mark each headline Act, Test first or Decline. The skill never decides for you. It sets the next review date and writes a test for work that comes back unchanged.
+
+when:
+  - You have a pile of notes and do not know where to start.
+  - You fixed the easy notes last time and the main problem is still there.
+  - You lead a project and need a clear next step and review date.
+
+you_give:
+  - The ranked causes or problems, ideally from "Problem root cause tracer"
+  - A line on what the work is meant to be (optional)
+  - The session plan, if you have one (optional)
+you_get:
+  - Three to five headlines, each with the notes under it
+  - Answers to what to blow up, what to go back on and what you love
+  - A choice sheet for you to fill in, marking Act, Test first or Decline
+  - A first move for this week, the next review date and a stuck test
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste the causes and say what the work is meant to be.
+  - Fill in the choice sheet yourself. Decline anything that does not fit.
+  - Do the first moves, then bring the new version to the next review.
+
+how_it_works:
+  - title: Writes the headlines
+    text: Boils the list to three to five sentences, ranked by how much each explains.
+  - title: Asks the three questions
+    text: What to blow up, what to go back on and what you love, with a reason for each.
+  - title: Checks the love
+    text: Asks whether what you love now is what you loved at the start.
+  - title: Leaves the choice to you
+    text: Gives you a sheet to mark Act, Test first or Decline, with room for reasons.
+  - title: Plans the first move
+    text: One small step for this week that shows quickly if the direction is wrong.
+  - title: Sets the stuck test
+    text: Says what to ask if the next version comes back unchanged.
+  - title: Checks itself
+    text: Runs its own checks and names any it missed.
+
+output_shape: |
+  GOAL
+  <one line>
+
+  HEADLINES
+  1. <one sentence> | Notes: <numbers>
+  2. ...
+
+  THE THREE QUESTIONS
+  Blow up: <part> | Go back on: <choice> | Love: <part and why>
+
+  YOUR CHOICE SHEET
+  <headline> | Act / Test first / Decline | Reason: <yours>
+
+  FIRST MOVES THIS WEEK
+  <headline>: <one small step>
+
+  NEXT LOOK
+  <date> | Ask: what changed, what it fixed, what is still wrong
+
+  STUCK TEST
+  <what to ask if the work returns unchanged> | Options: <change approach, add help, change lead, stop>
+
+  MISSING
+  <what would sharpen the plan>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: What the work is meant to be
+    how: One or two lines. It tests your love against this.
+  - what: Scale of the work
+    how: Say if it is a page, a project or a year. The next review date will fit it.
+  - what: Number of headlines
+    how: Three for a small review, five at most for a large one.
+  - what: Who leads the work
+    how: Name them. The stuck test will say who to ask first.
+
+judge:
+  - There are three to five headlines, each one sentence.
+  - Every note sits under a headline or is set aside with a reason.
+  - The choice sheet is left for you to fill in.
+  - Every Act line has a first move you can do this week.
+  - The next review has a date and the stuck test names what to ask.
+
+test:
+  - Give it twenty notes. See if you can repeat the headlines from memory an hour later.
+  - Give it notes where you disagree with one. Mark it Decline and check the plan still holds together.
+  - Leave out the goal. It should mark the goal missing, not invent one.
+  - Take the first move and see whether it shows quickly if you are going the wrong way.
+
+improve:
+  - Keep the choice sheets from past reviews so you can see which kinds of note you tend to decline.
+  - Use the stuck test at every review, not only when you suspect trouble.
+  - Share the headlines with reviewers so they know what you took from the session.
+  - Pair it with "Peer feedback session planner" to set up the next review.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Condensing and ranking a list is text work any strong chat AI does well with this skill."}
+    - {name: "A calendar", why: "Put the next review date in it the same day."}
+  inputs:
+    - "Ranked causes from the Problem root cause tracer"
+    - "A session plan from the Peer feedback session planner, for reviewers and timing"
+    - "A line on what the work was meant to be at the start"
+
+terms:
+  - term: Headline
+    meaning: One plain sentence naming a main problem or cause, short enough to remember.
+  - term: Stuck test
+    meaning: A check for work that comes back unchanged after notes, with the options that follow.

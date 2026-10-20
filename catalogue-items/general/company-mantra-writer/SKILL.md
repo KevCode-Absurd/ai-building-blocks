@@ -47,7 +47,7 @@ The benefit sentence. The meaning. Three mantras with their grid ratings. The pi
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Plan your strategy** with the [Launch task force planner](https://useaiblocks.com/skills/launch-task-force-planner). It takes the buyer brief.
+- **Plan your strategy** with the [Job experience mapper](https://useaiblocks.com/skills/job-experience-mapper). It takes the buyer brief.
 - **Test the idea with real people** with the [Business model guess tester](https://useaiblocks.com/skills/business-model-guess-tester). It takes the buyer brief.
 - **Shape the product** with the [Weak part design-out planner](https://useaiblocks.com/skills/weak-part-design-out-planner). It takes the buyer brief.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.

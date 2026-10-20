@@ -1,0 +1,18 @@
+slug: stock-and-bond-split-planner
+name: "Stock and bond split planner"
+summary: "Paste your investor type and money facts. Get a stock and bond split with a range, a rebalancing rule and the reasons."
+category: general
+type: skill
+role: make
+job: strategy
+level: intermediate
+inputs:
+  - {type: audit_report, required: true}
+  - {type: question, required: false}
+outputs:
+  - {type: plan}
+origin: rebuilt
+version: 1.0.0
+minds: [benjamin-graham]
+credits:
+  - {title: "The Intelligent Investor (revised edition, 2003)", by: "Benjamin Graham, with commentary by Jason Zweig", used: "The quarter-to-three-quarters range for stocks, the even split as a default, the five-point rebalancing rule, the comparison of stock yield with bond yield, and the effect of inflation on fixed income"}

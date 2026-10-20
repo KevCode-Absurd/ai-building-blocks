@@ -1,0 +1,120 @@
+new_slug: what-if-situation-finder
+name: "What-if situation finder"
+summary: "Paste your story idea. Get one what-if question, the people stuck in it and the unknowns to leave open."
+job: write-and-tell-stories
+thinking: medium
+thinking_why: "It compares three versions of an idea and picks one, but the tests are fixed."
+
+headline: "Turn a loose idea into one what-if question you can start writing from"
+subhead: "Paste your idea. It finds the two things that collided to make it, writes three what-if versions, tests them, picks one and sketches the ordinary people stuck inside it. You get a short brief with no plot."
+
+explain: |
+  A lot of story ideas are topics: grief, a haunted town, a company that cheats. A topic has nobody in it and nothing to do, so the writer sits down and stalls. A situation is different. It puts one or two ordinary people under a pressure they can't walk away from, and the story is what they do about it.
+
+  This skill does that conversion. It looks for the two separate things your idea grew from, joins them in a single what-if question, and tests three versions of it. The test is plain: can you say it in one sentence, does it hold the people in place, and does it stay interesting without a twist? It keeps the best version, sketches the people in a few lines each, and lists what you don't know yet. It leaves those unknowns open on purpose, because they are what you find out while you write.
+
+when:
+  - "You have a topic or a mood but no first scene."
+  - "Your idea needs an outline before it makes sense, and that is stopping you starting."
+  - "You have three ideas and cannot tell which to write."
+
+you_give:
+  - "Your rough idea, in as many sentences as you have"
+  - "Any two things you think it grew from (optional)"
+  - "The kind of piece and its rough length (optional)"
+  - "Jobs, places or hobbies you know well (optional)"
+you_get:
+  - "Three what-if versions with a pass count for each"
+  - "The version it picked, in one sentence"
+  - "Short sketches of the people stuck in it"
+  - "A list of unknowns to leave open, and the place to start the first scene"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Paste your idea as it stands. Do not tidy it first."
+  - "If you know what two things collided, say so. If not, it will help you find them."
+  - "Read the pick. If it does not scare or move you a little, ask for a fourth version."
+  - "Take the brief to the next step. Do not write an outline."
+
+how_it_works:
+  - title: "Finds the collision"
+    text: "Names the two separate things the idea came from, or asks for five ordinary things near the topic."
+  - title: "Writes the question"
+    text: "Phrases the idea as: what if this ordinary person is caught in this pressure."
+  - title: "Tries three versions"
+    text: "Writes a smaller, an obvious and a darkest version of the question."
+  - title: "Runs three tests"
+    text: "Checks each in one sentence, whether it holds the people in place and whether it needs a twist."
+  - title: "Sketches the people"
+    text: "Gives each of up to three people a job, a want and a habit, with no plot."
+  - title: "Lists the unknowns"
+    text: "Names what you don't know yet and leaves it open for the writing to answer."
+  - title: "Checks itself"
+    text: "Names any check it missed."
+
+output_shape: |
+  THE TWO THINGS
+  <thing one> | <thing two>
+
+  THE WHAT-IF
+  What if <ordinary person> <caught in a pressure they cannot leave>?
+
+  THREE VERSIONS
+  A (smaller): <one sentence> | one sentence <y/n> | holds the people <y/n> | holds without a twist <y/n>
+  B (obvious): <same>
+  C (darkest): <same>
+
+  THE PICK
+  <version> because <reason, including what the writer feels about it>
+
+  THE PEOPLE
+  <name or job> | wants right now: <...> | habit or object: <...>
+
+  LEAVE OPEN
+  <up to five unknowns>
+
+  WHERE TO START
+  <place and moment where the situation closes on them>
+
+  CHECKS MISSED
+  <one line per check missed, or none>
+
+tweaks:
+  - what: "The two things"
+    how: "Name two real things that bumped into each other, such as something you saw and something you fear. Two give a sharper question than one."
+  - what: "People you know"
+    how: "Give jobs and places you really know. The people feel real when their work is real."
+  - what: "Length"
+    how: "Say if it is a short story or a book. A short piece can hold one person and one pressure. A book needs a situation that keeps pressing."
+  - what: "The darkest version"
+    how: "Say how dark you are willing to go. The darkest version usually carries the most pull."
+
+judge:
+  - "The pick fits in one sentence of under 30 words."
+  - "A person is named in it, not a theme."
+  - "You can see the first scene without any plot."
+  - "The unknowns are things you really don't know yet, not facts it left out."
+
+test:
+  - "Run it on an idea you already wrote. The pick should match the real centre of your story."
+  - "Give it a topic only, such as loneliness. It should ask for or find people and a pressure, not accept the topic."
+  - "Run it twice. The three versions can differ, but the picks should be close."
+
+improve:
+  - "Add the stories you love to your about-me file, so the versions lean your way."
+  - "Save your picks in one file. Over time you will see which kind of pressure you keep choosing."
+  - "Pair it with the daily word quota planner, then the unplotted first-draft writer."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Comparing three versions and sketching people is plain text work."}
+    - {name: "A notebook", why: "Keep a running list of what-if questions as they come. Most will never be used, and that is fine."}
+  inputs:
+    - "Two things you noticed this month"
+    - "Your day job or a place you know well"
+
+terms:
+  - term: "What-if"
+    meaning: "A question that puts a person in a strange pressure and asks what happens."
+  - term: "Situation"
+    meaning: "A person or two stuck in something they cannot walk away from, before any plot."

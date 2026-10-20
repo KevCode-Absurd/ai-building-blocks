@@ -1,0 +1,122 @@
+new_slug: job-spec-writer
+name: Job spec writer
+summary: Paste your watch notes and leads. Get one job written as a situation, with its practical, social and emotional sides.
+job: understand-customers
+thinking: high
+thinking_why: It has to tell a real job from a need or a feature using messy notes, and say when there is no job. Give it your strongest model.
+headline: Write the job your customer is hiring you for, in one real moment
+subhead: Paste your watch notes and leads. It picks one circumstance, writes the progress in the customer's words, splits it into practical, social and emotional sides and tells you if there is no job there.
+explain: |-
+  Most customer pictures describe the buyer: age, income, role. Those details rarely explain why someone chose one thing over another. A moment does. Where they were, what had just gone wrong, what they tried and what they could not stand.
+
+  This skill writes that moment as a job spec. It keeps the practical side, the social side and the emotional side apart, because the social and emotional ones often decide the choice. It ties each part to a note, marks gaps instead of guessing, and runs two tests: is this really a job, and is there a real struggle? If not, it stops and says so.
+when:
+  - You have notes from watching or talking to customers and a vague sense of why they buy.
+  - Your customer description is a list of ages, incomes and titles.
+  - You are about to design or sell something and cannot say what it is hired to do.
+you_give:
+  - A ranked list of leads, from the Job hunting spot finder or your own
+  - Notes and customer words from watching or talking to people
+  - Your current product (optional)
+you_get:
+  - One circumstance and a one-line job
+  - The practical, social and emotional sides, each tied to a note
+  - The struggle, the workaround and what it costs
+  - The trade-offs people will and will not make
+  - The result of the job test and a note on who this job is not for
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste the leads and your notes as they are.
+  - Say which lead you want written first.
+  - Read the one-line job to a customer if you can. Ask if it sounds like them.
+  - Carry the spec to "Job rival mapper".
+how_it_works:
+  - title: Picks one circumstance
+    text: Splits notes that cover several moments, because each moment is a separate job.
+  - title: Writes the progress
+    text: "One sentence in the customer's words: when, I want, so I can."
+  - title: Splits three sides
+    text: Practical, social and emotional, each with the note behind it, and which weighs most.
+  - title: Writes the struggle
+    text: What goes wrong, what they tried, the workaround and what it costs.
+  - title: Writes the trade-offs
+    text: What they give up and what they will not, taken from what they did.
+  - title: Runs the job test
+    text: Rejects needs, life themes, customer types and features dressed up as jobs.
+  - title: Runs the no-struggle test
+    text: Stops if there is a good enough solution already or no real struggle.
+  - title: Checks itself
+    text: Runs its own checks and names any it missed.
+output_shape: |-
+  CIRCUMSTANCE
+  <who, where, when, doing what, what came before and next>
+
+  THE JOB IN ONE LINE
+  When <situation>, I want to <progress>, so I can <result>.
+
+  THE THREE SIDES
+  Practical: <text> | Note: <ID>
+  Social: <text> | Note: <ID>
+  Emotional: <text> | Note: <ID>
+  Weighs most: <side> because <reason>
+
+  THE STRUGGLE
+  Goes wrong: <text> | Tried: <text> | Workaround: <text> | Costs: <time, money, effort, shame>
+  Blocked by: <skill, tool, worry, person or rule>
+
+  TRADE-OFFS
+  Will give up: <text> | Will not give up: <text>
+
+  GOOD LOOKS LIKE
+  <in their terms>
+
+  JOB TEST
+  <pass or fail for each test>
+
+  NOT FOR
+  <who this job does not serve>
+
+  MISSING
+  <gaps>
+
+  CHECKS MISSED
+  <one line per check missed, or none>
+tweaks:
+  - what: The circumstance
+    how: Name one. If you give it three, it will write three specs.
+  - what: Your own words
+    how: Paste notes word for word. Paraphrases lose the social and emotional clues.
+  - what: The product
+    how: Add what you sell today and the spec will say where it falls short.
+judge:
+  - The spec is about one circumstance.
+  - Every part traces to a note or is marked MISSING.
+  - The three sides are written apart.
+  - It passes the job test or says it fails.
+  - It stops when there is no struggle.
+test:
+  - Give it notes from two buyers in different moments. It should write two specs or ask you to choose.
+  - Give it a lead that is just "people want to be healthy". It should fail the test and ask for a moment.
+  - Give it a market where a good free tool exists. It should say there is no struggle and stop.
+improve:
+  - Run it for each circumstance you find and keep the specs together.
+  - Add the customer's own words from new interviews and rewrite the spec.
+  - Read the one-line job to three customers. Change it until they say it sounds like them.
+  - Pair it with "Job rival mapper" and "Job experience mapper".
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: Reading notes and writing a structured spec is text work any strong chat AI does with this skill.
+    - name: A voice recorder
+      why: Recorded talks let you paste exact words, which this skill depends on.
+  inputs:
+    - Leads from the Job hunting spot finder
+    - Notes from a day of watching customers
+    - Interview transcripts
+terms:
+  - term: Job spec
+    meaning: "A written blueprint of the job: the moment, the progress, the three sides, the struggle and the trade-offs."
+  - term: Circumstance
+    meaning: The where, when and what-came-before of one moment.
+  - term: Trade-off
+    meaning: What a person gives up, and what they will not give up, to get the job done.

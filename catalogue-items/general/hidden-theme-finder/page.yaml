@@ -1,0 +1,121 @@
+new_slug: hidden-theme-finder
+name: "Hidden theme finder"
+summary: "Paste a finished draft. Get what it seems to be about, and the scenes to add, sharpen or cut for it."
+job: write-and-tell-stories
+thinking: high
+thinking_why: "It reads for pattern and meaning across a whole draft, which takes judgment."
+
+headline: "Find out what your draft is really about, then make it clearer"
+subhead: "Paste a finished draft, and the recurring list if you have it. It counts what comes back, writes three readings of what the story is about, picks the best supported, and lists the scenes to add, sharpen or cut so the meaning stands out."
+
+explain: |
+  Most writers do not know what their story is about until they have written it. If they start with a message, the story turns into a lecture. If they never ask, the draft feels busy and does not stay with the reader. The better order is story first, then meaning.
+
+  This skill works backward from the draft. It lists the objects, images, words and moments that keep coming back, because those are where your mind has been working without you. It writes three readings of what the story is about, each as a tension and not a moral, and picks the one with the most evidence. Then it lists the few scenes to add or sharpen so that reading shows, and the scenes that pull another way. The reader should take away resonance, not a lesson.
+
+when:
+  - "Your first draft is done and you do not know what to fix first."
+  - "Readers say it was fine but not memorable."
+  - "You suspect there is a bigger idea in the draft you have not named."
+
+you_give:
+  - "Your draft"
+  - "The recurring list from the cold re-read marker (optional)"
+  - "What you think it is about, if you have a guess (optional)"
+  - "What drew you to write it (optional)"
+you_get:
+  - "A count of what recurs, by page"
+  - "Three readings of what it is about, with evidence"
+  - "The best-supported reading as a tension"
+  - "Scenes to add or sharpen, and scenes that pull another way"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Paste the finished draft. If it has rested, say how long."
+  - "Add your own guess about the meaning. It tests it against the draft."
+  - "Read the pick. If it feels wrong, ask for the next best."
+  - "Use the list in the second draft."
+
+how_it_works:
+  - title: "Counts the repeats"
+    text: "Lists what comes back, with pages."
+  - title: "Asks why it was written"
+    text: "Notes what you kept returning to."
+  - title: "Writes three readings"
+    text: "States each as a tension, not a moral."
+  - title: "Tests each reading"
+    text: "Counts the scenes that back each one."
+  - title: "Picks one"
+    text: "Chooses the best supported."
+  - title: "Plans the changes"
+    text: "Lists scenes to add or sharpen, and scenes that pull away."
+  - title: "Warns about messages"
+    text: "Flags any reading that sounds like a lesson."
+
+output_shape: |
+  WHAT RECURS
+  <element> | pages | how many times
+
+  WHY IT WAS WORTH WRITING
+  <one line from the draft or from the writer>
+
+  THREE READINGS
+  1. <this story is about X pulling against Y> | backed by: <scenes> | count <n>
+  2. <same> | count <n>
+  3. <same> | count <n>
+
+  THE PICK
+  <reading> | why it beats the others
+
+  ADD OR SHARPEN (up to five)
+  <scene or place> | what to add | how it backs the pick
+
+  CUT OR REDUCE
+  <scene> | how it pulls another way
+
+  WARNING
+  <any place that reads like a lecture>
+
+  CHECKS MISSED
+  <one line per check missed, or none>
+
+tweaks:
+  - what: "Your guess"
+    how: "State what you think it is about. If the draft does not back it, the report says so, which can save a rewrite."
+  - what: "Your recurring list"
+    how: "Paste the list from the cold re-read marker. If not, it makes its own."
+  - what: "Interests"
+    how: "Name two or three things you keep writing about. They often show up here."
+  - what: "Genre"
+    how: "Say the genre. A thriller can carry a theme more lightly than a literary novel."
+
+judge:
+  - "Each reading is a tension, not a lesson."
+  - "Each reading is backed by named scenes."
+  - "The pick has the highest count."
+  - "Added scenes are few, no more than five."
+  - "Nothing is added that would make the story preach."
+
+test:
+  - "Run it on a draft you know well. The pick should match what you suspected, or surprise you in a way you accept."
+  - "Run it on a book you love. The reading should be one a reviewer would also give."
+  - "Give it a draft with no clear theme. It should say the evidence is thin."
+
+improve:
+  - "Keep a list of readings it finds across your drafts. Your concerns will repeat."
+  - "Add a page about what you want a reader to feel at the end."
+  - "Run the ten percent cutter next, so cuts follow the reading."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Finding patterns across a draft is text work that a strong chat AI does well."}
+    - {name: "A friend who reads", why: "Ask them what the story was about in one sentence, before you show the report."}
+  inputs:
+    - "The recurring list from the cold re-read marker"
+    - "What drew you to the idea"
+
+terms:
+  - term: "Theme"
+    meaning: "What the story is about underneath the events, put as two things pulling against each other."
+  - term: "Resonance"
+    meaning: "What stays with a reader after the book is closed."

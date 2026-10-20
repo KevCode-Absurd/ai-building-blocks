@@ -1,0 +1,19 @@
+slug: candid-line-writer
+name: "Candid line writer"
+summary: "Paste the word you chose to own and a flaw buyers see. Get three short admit-then-turn lines that set up your word."
+category: general
+type: skill
+role: make
+job: copy
+level: beginner
+inputs:
+  - {type: shortlist, required: true}
+  - {type: voc_reviews, required: false}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: copy_draft}
+origin: rebuilt
+version: 1.0.0
+minds: [al-ries, jack-trout]
+credits:
+  - {title: "The 22 Immutable Laws of Marketing", by: "Al Ries and Jack Trout", used: "The law of candor: admit a negative buyers already believe, then turn at once to the positive that sets up your idea, with the conditions that make it work and the ways it fails"}

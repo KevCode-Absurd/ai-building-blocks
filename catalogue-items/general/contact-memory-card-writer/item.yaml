@@ -1,0 +1,18 @@
+slug: contact-memory-card-writer
+name: "Contact memory card writer"
+summary: "Paste your notes from a first meeting. Get a one-page card with name, facts, promises and the next contact date."
+category: general
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - {type: question, required: true}
+  - {type: persona, required: false}
+outputs:
+  - {type: plan}
+origin: rebuilt
+version: 1.0.0
+minds: [dale-carnegie, joe-girard]
+credits:
+  - {title: "How to Win Friends and Influence People (1981 revised edition), Part Two chapters 1 and 3", by: "Dale Carnegie", used: "Learn the full name, the family and the interests, remember them next time, and keep a record of dates that matter to the person"}

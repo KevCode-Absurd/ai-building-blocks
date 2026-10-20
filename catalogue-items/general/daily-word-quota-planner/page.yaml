@@ -1,0 +1,115 @@
+new_slug: daily-word-quota-planner
+name: "Daily word quota planner"
+summary: "Say your length and writing days. Get a daily word count, a finish date and a closed-door routine for one first draft."
+job: write-and-tell-stories
+thinking: low
+thinking_why: "It is mostly sums and fixed rules."
+
+headline: "Know how many words to write each day, and the date you will finish"
+subhead: "Tell it the length of your piece, the days you can write and the minutes you have. It works out a daily word count you can hit on a bad day, the finish date, and a closed-door routine with a rule for missed days."
+
+explain: |
+  Most writing plans say write every day and stop there. That fails because the finish line is vague and the daily size is a guess. A person plans for a good day, hits a bad one, and quits.
+
+  This skill does the sums first. It turns the length of your piece into a daily word count, then checks that count against the minutes you really have. It works out the finish date and compares it with a season of about three months, because a first draft that drags on much longer tends to go stale. Then it sets the routine: one room, one door, one start time, a rule for when to stop, a smaller count for bad days, and who sees nothing until the draft is done. You get a table for the first two weeks.
+
+when:
+  - "You say you will write a book and have no plan beyond hoping."
+  - "You wrote for a week and then missed three days and gave up."
+  - "You want to know if a draft by summer is realistic."
+
+you_give:
+  - "The length of the piece, in words or pages"
+  - "Which days you can write and how many minutes each day"
+  - "Your start date"
+  - "Your room, and what interrupts you (optional)"
+  - "Your idea from the what-if situation finder (optional)"
+you_get:
+  - "A daily word count with the sum that shows it"
+  - "A finish date, checked against about three months"
+  - "A closed-door routine: room, start time, stop rule, secrecy rule"
+  - "A bad-day floor and a table for the first two weeks"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Say how long the piece will be, the days you can write and how many minutes you have on a normal day."
+  - "If you only know pages, say so. It will convert them and mark the guess."
+  - "Check the daily count against your worst weekday. If you could not hit it then, lower it."
+  - "Print the table and put it where you write."
+
+how_it_works:
+  - title: "Fixes the length"
+    text: "Turns pages into words and marks any guess."
+  - title: "Counts your days"
+    text: "Lists the days a week you can write and takes one day off."
+  - title: "Sizes the count"
+    text: "Picks a daily count you could hit on your worst workday and tests it against your minutes."
+  - title: "Works out the date"
+    text: "Divides the length by the count and finds the finish date."
+  - title: "Checks the season"
+    text: "Compares the date with about three months and offers a fix if it is longer."
+  - title: "Sets the routine"
+    text: "Names the room, the closed door, the start time and the stop rule."
+  - title: "Plans bad days"
+    text: "Sets a floor count and a secrecy rule, then builds a two-week table."
+
+output_shape: |
+  THE SUMS
+  Length: <words> | Writing days a week: <n> | Daily count: <words>
+  Days needed: <length / count> = <days> | Weeks: <days / days a week> = <weeks>
+  Finish date: <date> | Against about 13 weeks: <inside / over by n weeks>
+  Time check: <count / words per hour> = <minutes> of <minutes available>
+
+  THE ROUTINE
+  Room: <...> | Door: <...> | Start time: <...> | Stop rule: <...>
+  Bad-day floor: <words> | Secrecy: <who sees nothing until done>
+
+  NEXT TWO WEEKS
+  <date> | today <words> | total so far <words>
+
+  AFTER THE LAST WORD
+  <rest period and what to do while the draft rests>
+
+  CHECKS MISSED
+  <one line per check missed, or none>
+
+tweaks:
+  - what: "Your worst weekday"
+    how: "Describe it honestly. The count is sized for that day, not your best one."
+  - what: "How fast you write"
+    how: "Tell it your words per hour if you know it. If not, it uses 500 and says so, and you check it in week one."
+  - what: "Days off"
+    how: "Say which day you rest. A fixed rest day keeps the other days from slipping."
+  - what: "Length"
+    how: "A rough length is fine. A novel might be 70,000 to 100,000 words and a short story 2,000 to 7,500, but only your piece counts."
+
+judge:
+  - "The sums add up when you do them with a calculator."
+  - "The daily count fits in the minutes you have."
+  - "The finish date uses your real start date."
+  - "The bad-day floor is smaller than the daily count but not zero."
+  - "The routine names one room and one time."
+
+test:
+  - "Check the sums by hand for one case: 60,000 words at 1,000 a day and six days a week should come to 60 writing days, 10 weeks."
+  - "Give it a plan that cannot fit, such as 1,500 words in 20 minutes. It should say so and cut the count."
+  - "Follow the first week. If you missed two days, lower the count and run it again."
+
+improve:
+  - "Add your own words-per-hour after a week of data."
+  - "Add your usual interruptions to the file you give it, so the room rules cover them."
+  - "Run the writing log reviewer after two weeks to adjust the count."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "This is arithmetic and rules. Any strong chat AI will do it."}
+    - {name: "A wall calendar", why: "Cross off each day you hit the count. The crossed days show your pace better than a note."}
+  inputs:
+    - "Your usual interruptions"
+    - "A past plan that failed, and where"
+
+terms:
+  - term: "Quota"
+    meaning: "The word count you promise to write each day, set so you can hit it on a bad day."
+  - term: "Bad-day floor"
+    meaning: "A smaller count that still counts as a day kept."

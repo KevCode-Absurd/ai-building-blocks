@@ -1,0 +1,23 @@
+slug: lead-offer-tuner
+name: Lead offer tuner
+summary: "Paste your diagnosis and live reply offer. Get three changes that raise replies or cut weak ones, with what each should do."
+category: general
+type: skill
+role: make
+job: strategy
+level: intermediate
+inputs:
+  - type: audit_report
+    required: true
+  - type: offer
+    required: true
+outputs:
+  - type: offer
+origin: rebuilt
+version: 1.0.0
+minds:
+  - victor-schwab
+credits:
+  - title: How to Write a Good Advertisement (a book summary)
+    by: Victor O. Schwab
+    used: The ten ways to raise inquiries and the ten ways to cut low-quality ones, applied to the reply offer and where it sits in the ad

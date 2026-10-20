@@ -1,0 +1,18 @@
+slug: new-idea-protection-planner
+name: "New idea protection planner"
+summary: "Paste your rough idea and its pressures. Get who sees it, what they may ask, funded time and an end date."
+category: general
+type: skill
+role: make
+job: strategy
+level: intermediate
+inputs:
+  - {type: audit_report, required: true}
+  - {type: question, required: false}
+outputs:
+  - {type: plan}
+origin: rebuilt
+version: 1.0.0
+minds: [ed-catmull]
+credits:
+  - {title: "Creativity, Inc.", by: "Ed Catmull with Amy Wallace, Random House, 2014", used: "Protecting early work from the pull of output pressure, choosing idea protectors over idea killers, not isolating the work, paying for a new program from a shared pot until it earns its place, and knowing when to move it from protection to engagement"}

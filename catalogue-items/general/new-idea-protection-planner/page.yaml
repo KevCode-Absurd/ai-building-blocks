@@ -1,0 +1,129 @@
+new_slug: new-idea-protection-planner
+name: "New idea protection planner"
+summary: "Paste your rough idea and its pressures. Get who sees it, what they may ask, funded time and an end date."
+job: lead-people
+thinking: medium
+thinking_why: "It follows a fixed plan shape, but it must judge who to let in and what to keep out."
+
+headline: "Shield a rough new idea until it is strong enough to face the business"
+subhead: Paste the early-or-broken verdict and the pressures on your idea. It picks who sees it now and who stays away, limits the questions to its stage, funds its time from a named source, answers each pressure group and sets the date protection ends.
+
+explain: |
+  A new idea is ugly at first, and the people most likely to kill it are often doing their jobs well. They have schedules, targets and standards. Established work needs no defender, because the system already leans its way.
+
+  This skill writes the defence plan for a new idea. It separates people who look for what is good from people who look for flaws. It limits the questions to what can be judged early, funds the idea from a shared source so no budget holder resents it, and does not hide the work, since hidden work drifts. It ends with a date and a test for taking the shield off.
+
+when:
+  - A promising idea looks rough and someone wants to judge it as finished.
+  - Deadlines or sales targets are pulling a new project off course.
+  - You need to protect a new program, product or format for a fixed time.
+
+you_give:
+  - The verdict from "Early or broken checker", and the pressure map if you have it
+  - The idea in a few lines (optional)
+you_get:
+  - Who sees the idea now, who does not, and the reason for each
+  - The only questions allowed at this stage, and the line to say to anyone who asks more
+  - Time and money from a named payer, with a review date
+  - A line for each pressure group
+  - The hand-off date, test and first group to meet the idea
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste the verdict and the pressures. Add a few lines on the idea.
+  - Share the plan with the protectors first, then with the pressure groups.
+  - Review it on the funding review date and again at the hand-off.
+
+how_it_works:
+  - title: Names what is protected
+    text: Writes the idea as it stands and three signs that it is ready to be seen more widely.
+  - title: Picks the protectors
+    text: Chooses people who look for what is good and keeps out those who read to find flaws.
+  - title: Keeps it visible
+    text: Sets a steady rhythm so the work is not hidden and does not drift.
+  - title: Limits the questions
+    text: Allows only what can be judged early and gives a line for the rest.
+  - title: Funds it fairly
+    text: Names the payer and avoids charging a team that sees the idea as a cost.
+  - title: Answers the pressures
+    text: Writes one line for each group pulling on the idea.
+  - title: Plans the hand-off
+    text: Sets the date, the test, the first group and how protection tapers.
+  - title: Checks itself
+    text: Runs its own checks and names any it missed.
+
+output_shape: |
+  WHAT IS PROTECTED
+  <the idea today, in two lines>
+  Ready to be seen more widely when: <three signs>
+
+  WHO SEES IT
+  Protectors: <names> | Why
+  Kept away for now: <names> | Why: <state of the idea>
+  Rhythm: <how often> | Viewer: <name>
+
+  QUESTIONS
+  Allowed now: <three>
+  Not yet: <list> | Line to say: <words and date>
+
+  TIME AND MONEY
+  <people, weeks> | Paid by: <name or fund> | Review: <date>
+
+  PRESSURE GROUPS
+  <group>: gets <what> by <when>; may not <what>
+
+  HELD LIGHTLY AND FIRMLY
+  Goals that can change: <list> | Intentions that stay: <list>
+
+  HAND-OFF
+  <date> | Test: <signs> | First group: <name> | Taper: <how funding moves>
+
+  MISSING
+  <what would sharpen the plan>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: Length of protection
+    how: Say how long you can afford. The plan scales the rhythm and review dates to fit.
+  - what: Names of the people around the idea
+    how: Add real names or roles. The picks will be more specific.
+  - what: Who pays
+    how: Tell it which budget you have. It will suggest a payer that does not resent the idea.
+  - what: The pressure map
+    how: Paste it in. Without it the pressure lines are general.
+
+judge:
+  - Each protector and each excluded group has a reason.
+  - Someone sees the work on a set rhythm.
+  - Questions not allowed come with a line to say and a date.
+  - A named person or fund pays and a review date is set.
+  - The hand-off has a date, a test and a first group.
+
+test:
+  - Give it an idea that a manager wants to cut. See if the plan keeps the manager informed instead of shutting them out.
+  - Remove the pressure map. Pressure lines should be marked general.
+  - Ask it to protect a habit that is not new. It should say the idea is not new.
+  - Read the line for forbidden questions aloud. It should sound fair to the person who asked.
+
+improve:
+  - Add the people in your business who tend to kill early ideas, so they are named as kept away for now.
+  - Keep the three signs from each plan and see which predicted readiness.
+  - Review the plan on its funding date and rewrite it if the idea changed.
+  - Pair it with "Early or broken checker" at every review.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Writing a plan with clear reasons is text work any strong chat AI does well with this skill."}
+    - {name: "A shared calendar", why: "Review and hand-off dates belong where everyone can see them."}
+  inputs:
+    - "A verdict from the Early or broken checker"
+    - "A pressure map from the Incentive checker"
+    - "A list of the people who see the work today"
+
+terms:
+  - term: Idea protector
+    meaning: Someone who looks for what is new and good in an early idea and raises flaws to improve it.
+  - term: Hand-off
+    meaning: The moment protection ends and the idea meets the rest of the business.

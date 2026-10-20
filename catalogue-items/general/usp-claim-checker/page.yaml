@@ -1,6 +1,6 @@
 new_slug: usp-claim-checker
 name: "USP claim checker"
-summary: "Paste your ad or headline and product facts. Get a pass or fail on offer, uniqueness and pull, with fixes."
+summary: "Paste an ad and your product facts. Get a pass or fail on whether its one claim is real, unique and strong."
 job: check-ads
 thinking: medium
 thinking_why: "It applies three fixed tests, but it must judge the claim against rivals and facts."

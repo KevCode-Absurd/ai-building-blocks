@@ -1,0 +1,116 @@
+new_slug: desire-section-writer
+name: "Desire section writer"
+summary: "Paste your buyer brief and product facts. Get copy that sharpens the want, using only moves your facts can back."
+job: write-ad-copy
+thinking: high
+thinking_why: "It chooses which moves fit, writes several blocks and keeps them from repeating each other. Use your strongest model."
+
+headline: "Copy that makes the want sharper, not longer"
+subhead: Give it your buyer brief and product facts. It keeps only the moves your facts can back, such as the product in action, a test the reader can picture or the problem in full, and writes one short block for each. You get the section in an order that builds the want, with the strongest block last.
+
+explain: |
+  A headline gets the reader in. Then many pages stop. They list features, repeat the headline in other words, or pile up adjectives. The reader never sees the result, so the price stays the main thing in their mind.
+
+  This skill works on one thing: the want the buyer already has. Copy cannot make a new want, but it can make an existing one clearer and more specific, from several sides. It lists thirteen ways to do that, tells you which ones your facts can support, and drops the rest. It keeps 5 to 7, writes one short block for each, checks that no block repeats another or leans on the market's worn phrases, and puts them in an order where the want grows.
+
+when:
+  - Your headline gets clicks but the page does not convert.
+  - Your copy lists features and says little about what life looks like after.
+  - Buyers say they like it but object to the price.
+
+you_give:
+  - A buyer brief, with the one want and where your buyers sit on awareness
+  - "Product facts: what it does step by step, results with numbers, time, guarantee"
+  - The headline you are using (optional)
+
+you_get:
+  - The one want and the one thing the product does for it
+  - The moves kept and dropped, each with the fact behind it
+  - The drafted section, one labelled block per move, in an order that builds the want
+  - Blocks marked for the belief step, and the missing facts
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste the brief and your product facts. Be exact about results and time.
+  - Read which moves were dropped and why. Add the missing fact if you have it.
+  - Pass the draft to "Belief ladder builder" if any block is marked for preparation.
+
+how_it_works:
+  - title: Fixes the want
+    text: Writes the one want and the one thing the product does for it, and parks what the product is made of for later.
+  - title: Checks the moves
+    text: Lists thirteen ways to sharpen a want, what fact each needs and whether you hold it.
+  - title: Keeps five to seven
+    text: Keeps only moves that earn their place, because the reader takes one dominant picture away.
+  - title: Drafts the blocks
+    text: One short block per move, each a fresh picture of the same want.
+  - title: Checks for repeats
+    text: Cuts any block that says what another said, or uses a phrase the market already knows.
+  - title: Orders and flags
+    text: Builds the order so the want grows, ends on the strongest block and marks any block that asks for more belief than earlier ones earned.
+
+output_shape: |
+  THE WANT
+  <one line> | Does: <the one thing the product does for it>
+
+  MOVES
+  Kept:    <move | fact it rests on>
+  Dropped: <move | fact missing>
+
+  THE SECTION
+  1. <move>: <block of 40 to 80 words>
+  2. <move>: <block>
+  ...
+  Last (strongest): <move>
+
+  NEEDS PREPARATION
+  <blocks that ask for more belief than the ones before>
+
+  MISSING
+  <...>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: How many blocks
+    how: Ask for fewer for a short page and more for a long sales letter. Five to seven is the usual range.
+  - what: Facts
+    how: Exact figures and real quotes allow more moves. Without them the "other people" and "expert" moves are dropped.
+  - what: Length per block
+    how: Ask for shorter blocks if the copy sits in an ad, or longer blocks for a page.
+
+judge:
+  - Every block serves the same one want.
+  - Every number, quote and person comes from your facts.
+  - No two blocks say the same thing in other words.
+  - The strongest block comes last.
+  - A reader who doubts would still accept each block from what came before, or it is flagged.
+
+test:
+  - Give it the facts for a page that already converts. See whether the moves it keeps match the moves the page uses.
+  - Run it twice. The kept moves should be nearly the same.
+  - Read the section aloud and mark any line you have heard from a rival. Those lines should have been cut.
+  - Show the section to a stranger and ask what the product does for them. They should say one thing.
+
+improve:
+  - Save the moves that work for your product, and start the next run with them.
+  - Add real customer lines and a real expert to your facts to allow more moves.
+  - Add words your market has worn out to the "Avoid" list in the skill file.
+  - Use "Belief ladder builder" next for any flagged block.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Writing and sorting short blocks against a list works well in any strong chat AI with this skill."}
+  inputs:
+    - "Results with numbers and the time they took"
+    - "A step-by-step account of first use"
+    - "Customer quotes with their source"
+
+terms:
+  - term: Move
+    meaning: One way to make a want clearer, such as showing the product in action, putting the reader in the scene or describing the problem in full.
+  - term: Block
+    meaning: A short passage of 40 to 80 words that makes one move.
+  - term: Dominant picture
+    meaning: The one image the reader takes away from the section.

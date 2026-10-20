@@ -1,0 +1,19 @@
+slug: test-reply-offer-planner
+name: "Test reply offer planner"
+summary: "Paste your test plan and product. Get one reply offer, the same in both versions, that brings enough replies to count."
+category: general
+type: skill
+role: make
+job: research
+level: intermediate
+inputs:
+  - {type: plan, required: true}
+  - {type: offer, required: false}
+  - {type: product_data, required: false}
+outputs:
+  - {type: offer}
+origin: rebuilt
+version: 1.0.0
+minds: [john-caples]
+credits:
+  - {title: "Tested Advertising Methods, fifth edition (1997)", by: "John Caples, revised by Fred E. Hahn", used: "Using a free sample or booklet as the thing replied to in a copy test, hidden versus featured offers, the ways to raise a low reply count (free, value stated, a gift, a better description, a bigger or more read placement) and screening out people who only want something free"}

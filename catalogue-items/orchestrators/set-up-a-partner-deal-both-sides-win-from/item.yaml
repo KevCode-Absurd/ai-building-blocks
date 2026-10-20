@@ -1,0 +1,25 @@
+slug: set-up-a-partner-deal-both-sides-win-from
+name: "Set up a partner deal both sides win from"
+summary: "Describe your offer. Get the partner's profit sum, fair terms in writing, an incentive check and supplier terms."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: analysis
+level: advanced
+inputs:
+  - {type: question, required: true}
+  - {type: plan, required: false}
+outputs:
+  - {type: plan}
+uses: [partner-profit-tester, partner-deal-terms-writer, incentive-checker, supplier-partner-terms-planner]
+steps:
+  - {uses: partner-profit-tester, note: "What the partner keeps after your fees, at your forecast and at a weaker one."}
+  - {uses: partner-deal-terms-writer, note: "A one-page term sheet: what each side gives, the standards, the fees and the exits."}
+  - {uses: incentive-checker, note: "Where your own pay would tempt you to squeeze the partner."}
+  - {uses: supplier-partner-terms-planner, note: "Terms that let a supplier grow with you, with cost savings passed to the partners."}
+origin: rebuilt
+version: 1.0.0
+minds: [ray-kroc]
+credits:
+  - {title: "Grinding It Out: The Making of McDonald's (a book summary)", by: "Ray Kroc with Robert Anderson", used: "The order of the steps: test that the partner makes money, write the terms, check who is paid for what, set fair terms with your suppliers"}
+generated_from: intake/grinding-it-out-partner-deal/skeleton.yaml

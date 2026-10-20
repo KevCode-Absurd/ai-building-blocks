@@ -1,0 +1,25 @@
+slug: run-a-project-review-where-people-tell-the-truth
+name: "Run a project review where people tell the truth"
+summary: "Name a finished project. Get prep, an agenda that keeps blame out, and the lessons turned into rules for next time."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ops
+level: intermediate
+inputs:
+  - {type: question, required: true}
+  - {type: feedback_notes, required: true}
+outputs:
+  - {type: lessons_register}
+uses: [project-review-prep-planner, review-lists-sorter, blame-free-review-agenda-writer, mistake-to-principle-writer]
+steps:
+  - {uses: project-review-prep-planner, note: "The form to send, the numbers to pull and the shape of the meeting, ready before anyone sits down."}
+  - {uses: review-lists-sorter, note: "Themes with who raised them, what the numbers say and what nobody can see yet."}
+  - {uses: blame-free-review-agenda-writer, note: "A timed agenda with wording rules, a slot for old hurts and questions for the next project."}
+  - {uses: mistake-to-principle-writer, note: "Each lesson written as a rule the next team can check."}
+origin: rebuilt
+version: 1.0.0
+minds: [ed-catmull]
+credits:
+  - {title: "Creativity, Inc.", by: "Ed Catmull with Amy Wallace", used: "The order of the steps: plan the prep for the review, sort the lists and numbers into themes, write an agenda that keeps blame out, turn each lesson into a rule for next time"}
+generated_from: intake/creativity-inc-truthful-review/skeleton.yaml

@@ -13,7 +13,7 @@ outputs:
   - {type: plan, required: true}
 origin: rebuilt
 version: 1.0.0
-minds: [steve-blank]
+minds: [steve-blank, eric-ries]
 credits:
   - {title: "What's A Startup? First Principles", by: "Steve Blank", url: "https://steveblank.com/2010/01/25/whats-a-startup-first-principles/", used: "Treating a startup as a search for a repeatable model, and the search versus execute split"}
   - {title: "Search versus Execute (summary note)", by: "Steve Blank", used: "Holding back sales and marketing departments until the model is found"}

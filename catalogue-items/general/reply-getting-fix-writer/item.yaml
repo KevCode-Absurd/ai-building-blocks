@@ -1,0 +1,20 @@
+slug: reply-getting-fix-writer
+name: "Reply-getting fix writer"
+summary: "Paste your ad and its diagnosis. Get a fixed version with a stronger headline, a clear offer and an easy reply."
+category: general
+type: skill
+role: make
+job: copy
+level: intermediate
+inputs:
+  - {type: audit_report, required: true}
+  - {type: lessons_register, required: false}
+  - {type: ad_copy, required: true}
+  - {type: offer, required: false}
+outputs:
+  - {type: copy_draft}
+origin: rebuilt
+version: 1.0.0
+minds: [john-caples]
+credits:
+  - {title: "Tested Advertising Methods, fifth edition (1997)", by: "John Caples, revised by Fred E. Hahn", used: "Ways to raise replies: the offer in the headline and subhead, a described and valued offer, an easy reply path (coupon, phone, no obligation), a reason to act now, specific facts and figures, and the main point in the headline. Hahn added the telephone, fax and insert advice."}

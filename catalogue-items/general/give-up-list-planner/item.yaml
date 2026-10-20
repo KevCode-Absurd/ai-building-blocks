@@ -1,0 +1,19 @@
+slug: give-up-list-planner
+name: "Give-up list planner"
+summary: "Paste your chosen word and what you sell. Get what to cut against that word, one target and a rule against drift."
+category: general
+type: skill
+role: make
+job: strategy
+level: intermediate
+inputs:
+  - {type: shortlist, required: true}
+  - {type: product_data, required: false}
+  - {type: plan, required: false}
+outputs:
+  - {type: plan}
+origin: rebuilt
+version: 1.0.0
+minds: [al-ries, jack-trout]
+credits:
+  - {title: "The 22 Immutable Laws of Marketing", by: "Al Ries and Jack Trout", used: "The law of sacrifice (give up product line, target market and constant change), the target is not the market, and the laws of focus, line extension and success that explain why teams drift from the word they own"}

@@ -1,0 +1,116 @@
+new_slug: writers-reading-plan-builder
+name: "Writer's reading plan builder"
+summary: "Tell it your free minutes and goal. Get a weekly reading schedule with the sums and a book mix that teaches."
+job: write-and-tell-stories
+thinking: low
+thinking_why: "It is mostly sums and a short list."
+
+headline: "Read more of what makes you a better writer, in the time you actually have"
+subhead: "Tell it your free minutes and how many books you want to read a year. It works out the pages per day, fits reading into the pockets of your week, and picks a mix of great, fine and bad books, each with something to learn."
+
+explain: |
+  Writers are told to read a lot, and most say they do not have time. Time is not usually the problem. The week is full of small pockets, in queues, at lunch, on a train, before sleep, that no plan has claimed. The other problem is what to read. Reading only the best books teaches you what to admire. Reading only your favourites teaches you little.
+
+  This skill does the sums first. It turns your yearly goal into pages a day and minutes a day, then lays them across your pockets of time. It adds audio books for driving or exercise and a book you always carry. Then it picks a mix: books that sweep you away, books that are fine, and books that are bad on purpose, with one thing to notice in each. Finally it names what to cut to make room.
+
+when:
+  - "You say you do not have time to read."
+  - "You want a target like 24 books a year."
+  - "You read a lot but only the same kind of book."
+
+you_give:
+  - "Your goal in books a year, or the minutes you can spare"
+  - "A typical week: where you wait, travel or have spare minutes"
+  - "Your reading speed, if you know it (optional)"
+  - "What you write and what you like to read (optional)"
+you_get:
+  - "Pages and minutes per day for your goal, with the sums"
+  - "A weekly schedule that fits the pockets of your week"
+  - "A mix of book types, each with one thing to look for"
+  - "What to cut to make room"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "List a normal week: commute, waiting, meals, exercise, evenings."
+  - "Give a goal. If you have none, it will propose one from your minutes."
+  - "Pick your first three books from the mix."
+  - "Keep a book in your bag or your phone at all times."
+
+how_it_works:
+  - title: "Counts the pockets"
+    text: "Lists the spare minutes in your week."
+  - title: "Sets the goal"
+    text: "Turns books a year into pages and minutes per day."
+  - title: "Fits the schedule"
+    text: "Puts reading into each pocket, with audio where it suits."
+  - title: "Picks the mix"
+    text: "Chooses great, fine and bad books, each for a different lesson."
+  - title: "Sets a carry rule"
+    text: "Makes sure a book is always at hand."
+  - title: "Names what to cut"
+    text: "Finds the time that screens or habits take."
+  - title: "Checks itself"
+    text: "Names any check it missed."
+
+output_shape: |
+  THE SUMS
+  Goal: <books a year> x <pages> = <pages a year> | per day: <pages> | at <pages an hour>: <minutes a day>
+  Pockets in a week: <list with minutes> | total: <minutes> | needed: <minutes> | <fits / short by n>
+
+  THE WEEK
+  <day> | <pocket> | <book or audio>
+
+  THE MIX
+  Sweeps you away: <kind> | look for: <one thing>
+  Merely fine: <kind> | look for: <one thing>
+  Bad on purpose: <kind> | look for: <one thing to avoid>
+
+  CARRY RULE
+  <where the book lives>
+
+  WHAT TO CUT
+  <time the person gave, and how many minutes it frees>
+
+  CHECKS MISSED
+  <one line per check missed, or none>
+
+tweaks:
+  - what: "Your pockets"
+    how: "List every spare gap in a week. The more honest the list, the better the schedule."
+  - what: "Your pace"
+    how: "Tell it your pages per hour. If not, it uses 40 and tells you to check in week one."
+  - what: "Audio"
+    how: "Say if you can listen while driving, walking or cooking. Audio books fill pockets that eyes cannot."
+  - what: "Your genre"
+    how: "Say what you write. The mix will include your genre and one outside it."
+
+judge:
+  - "The sums add up with a calculator."
+  - "The schedule fits in the pockets you gave."
+  - "The mix has all three kinds of book."
+  - "Each book has one thing to look for."
+  - "The cut list uses time you named, not time it assumed."
+
+test:
+  - "Give it 24 books at 300 pages and 40 pages an hour. It should say about 20 pages a day, about 30 minutes."
+  - "Give it a week with no spare minutes. It should say so and cut the goal."
+  - "Follow it for a month and compare your real pace with the sums."
+
+improve:
+  - "Add a list of books you plan to read so it can fill the mix from it."
+  - "Add your real pace after the first month."
+  - "Keep a one-line note after each book about what it taught you."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Sums and a short schedule are plain text work."}
+    - {name: "A library card", why: "Library apps lend audio books and e-books for free in many places."}
+  inputs:
+    - "A list of books you already own"
+    - "The one thing you most want to get better at in your writing"
+
+terms:
+  - term: "Pocket"
+    meaning: "A short gap in the day that can be used for reading."
+  - term: "Merely fine"
+    meaning: "A book that is competent but not remarkable, useful for seeing how an ordinary book works."

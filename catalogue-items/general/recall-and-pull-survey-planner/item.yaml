@@ -1,0 +1,18 @@
+slug: recall-and-pull-survey-planner
+name: "Recall and pull survey planner"
+summary: "Paste your ad and your buyers. Get a short survey that shows who remembers it and whether they buy more."
+category: general
+type: skill
+role: make
+job: research
+level: intermediate
+inputs:
+  - {type: copy_draft, required: true}
+  - {type: brief, required: false}
+outputs:
+  - {type: plan, required: true}
+origin: rebuilt
+version: 1.0.0
+minds: [rosser-reeves]
+credits:
+  - {title: "Reality in Advertising", by: "Rosser Reeves, 1961", used: "Splitting people into those who can say what the ad says and those who cannot, and comparing how many in each group buy, so the ad can be judged apart from price, stock and other causes of sales"}

@@ -1,0 +1,50 @@
+# Workflow skeleton for Competing Against Luck, part 1: find the job and write it down (docs/INTAKE.md). Our words; the book stays in mind-sources/ (local only).
+id: jobs-to-be-done-job-spec
+source:
+  title: "Competing Against Luck"
+  by: "Clayton M. Christensen, Taddy Hall, Karen Dillon and David S. Duncan"
+  kind: book
+  rights: ideas-only
+  year: 2016
+minds: [clayton-christensen]
+workflow:
+  slug: write-the-job-your-customers-hire-you-for-and-its-real-rivals
+  name: "Write your customers' job and name its real rivals"
+  summary: "Give it what you sell and who buys. Get places to look, the job as a situation and your real rivals."
+  when: "you can describe your buyers but not the progress they are trying to make, or you only compare yourself with the usual competitors."
+  job: understand-customers
+  level: intermediate
+steps:
+  - name: Find where the unmet jobs are
+    skill: job-hunting-spot-finder
+    job: research
+    from: "Chapter 4, Job Hunting"
+    method: ["Start with the jobs in your own life and in the lives of people close to you", "Look at who buys nothing at all in your area and what they do instead", "Look for workarounds: things people cobble together because nothing fits", "Look for jobs people do not want to do at all", "Look for unusual uses of what you already sell", "Rank the leads by how much struggle you can show, and say what to go and watch for each"]
+    inputs: [question, product_data!, voc_reviews!]
+    outputs: [shortlist]
+    note: "Turns what you already know into a ranked list of places to look, each with something to watch for."
+  - pause: "Go and watch the top leads in real life, and talk to the people in them. Keep notes in their own words, with where, when and what they were doing."
+  - name: Write the job as a situation
+    skill: job-spec-writer
+    job: research
+    from: "Chapters 2 and 6, defining the job and the job spec"
+    method: ["Write the circumstance first: who, where, when, doing what, and what happened just before", "Write the progress the person wants, in their words", "Split it into practical, social and emotional sides, and mark which side matters most", "List what has gone wrong when they tried to get there, and the workaround they use now", "Write the trade-offs they will accept and the ones they will not", "Check that it is a job and not a need, a life theme, a customer type or a product feature", "Stop if there is no real struggle"]
+    inputs: [shortlist, voc_reviews!]
+    outputs: [brief]
+    note: "Takes the leads and your notes and writes one job spec for one circumstance."
+  - name: Name the rivals and what they must beat
+    skill: job-rival-mapper
+    job: research
+    from: "Chapters 1, 2 and 5, competing with everything that does the job, and what gets fired"
+    method: ["List everything the person could hire for this job in this circumstance, including doing it by hand, another kind of product and doing nothing", "For each, write a short resume: how it does the job and where it fails", "Name what the person has to stop using or doing to hire you", "Mark the rivals that sit in another aisle, another industry or another price band", "Note where doing nothing is the biggest rival"]
+    inputs: [brief, competitor_set!, voc_reviews!]
+    outputs: [competitor_set]
+    note: "Rivals are anything hired for the same job in the same circumstance, not only products in your category."
+  - name: Find where nobody does the job well
+    skill: competitor-white-space-mapper
+    job: research
+    from: "Chapter 6, the resume and the competing solutions that must be beaten"
+    method: ["Put the rivals in rows and the things the job cares about in columns", "Rate each cell from evidence", "Mark the gaps where nobody is strong", "Pick the gap that fits what you can do"]
+    inputs: [competitor_set, voc_reviews!]
+    outputs: [audit_report]
+    note: "Uses the job's own criteria, not the category's, to show where you can win."

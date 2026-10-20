@@ -1,0 +1,126 @@
+new_slug: blame-free-review-agenda-writer
+name: "Blame-free review agenda writer"
+summary: "Paste your review themes. Get a timed agenda with no-blame wording rules, a slot for old hurts and next-time questions."
+job: lead-people
+thinking: medium
+thinking_why: "It follows a set agenda shape, but it must fit the themes, the room and the time."
+
+headline: "Run a review where people say what happened and no one is blamed"
+subhead: Paste the themes from your project review. It orders them for energy and trust, gives each a time limit and an owner who tells it in the first person, writes wording rules and facilitator lines, adds a short slot for old hurts and ends on questions for next time.
+
+explain: |
+  The question "whose fault was this?" ends honesty in a room. Once it is asked, people protect themselves and the real causes go unsaid. A good review makes it safe to say what happened, and keeps the focus on what made it possible.
+
+  This skill writes the agenda for that. It puts the contested themes up front when energy is high, limits each topic, and has the person closest to an event tell it in the first person. It gives the room wording rules, gives the facilitator three lines for when blame appears and sets aside ten minutes for old hurts. It ends with questions for the next project, each with an owner.
+
+when:
+  - You are about to run a review of a finished project and want an honest one.
+  - Past reviews turned into blame or into polite thanks.
+  - A senior person's presence changes how people speak, and you need rules for the room.
+
+you_give:
+  - The themes from "Review lists sorter"
+  - The prep plan, for the meeting length and facilitator (optional)
+  - Who will be in the room, by role (optional)
+you_get:
+  - A timed agenda that fits your meeting length
+  - A first-person owner and a time limit for each theme
+  - Wording rules and three facilitator lines
+  - A slot for old hurts with a rule for replies
+  - Three to five questions for the next project, each with an owner
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste the themes and say how long the meeting is and who attends.
+  - Give the wording rules and facilitator lines to the facilitator a day before.
+  - After the meeting, bring the notes to "Mistake-to-principle writer".
+
+how_it_works:
+  - title: Checks the room
+    text: Looks at seniority and sets speaking rules so the top voice does not set the tone.
+  - title: Orders the themes
+    text: Opens with what worked, then contested themes, then other hard ones, then old hurts.
+  - title: Fits the time
+    text: Gives each theme a limit and checks the total against the meeting length.
+  - title: Starts in the first person
+    text: Has the person closest to each event tell it in three short lines.
+  - title: Sets the wording
+    text: Rules that replace whose fault with what caused it.
+  - title: Equips the facilitator
+    text: Three short lines for when blame appears or time runs over.
+  - title: Closes forward
+    text: Questions for the next project, each with an owner and a place to record them.
+  - title: Checks itself
+    text: Runs its own checks and names any it missed.
+
+output_shape: |
+  THE ROOM
+  <roles present> | Speaking rule for the senior voice
+
+  AGENDA
+  <minutes> | <theme> | Owner: <role, first person> | Limit
+
+  WORDING RULES
+  <five rules>
+
+  FACILITATOR LINES
+  Blame appears: <line> | Rebuttal: <line> | Thanks: <line> | Time over: <line>
+
+  OLD HURTS
+  <ten minutes> | Form: when X happened, I felt Y | Reply: thank you, heard
+
+  QUESTIONS FOR THE NEXT PROJECT
+  <question> | Asked by: <role> | Recorded in: <place>
+
+  THE RECORD
+  <who writes, where kept, who reads, what stays in the room>
+
+  MISSING
+  <what would sharpen the agenda>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: Meeting length
+    how: Say it exactly. Themes that do not fit move to a written follow-up.
+  - what: Who attends
+    how: Give roles. The speaking rules for senior people depend on them.
+  - what: How much hurt there is
+    how: If the project was painful, ask for a longer slot for old hurts and a smaller number of themes.
+  - what: Facilitator
+    how: Name them. The lines are written for their style.
+
+judge:
+  - The times add up to the meeting length or extra themes have a written follow-up.
+  - Every theme has a limit and a first-person owner.
+  - The wording rules replace whose fault with what caused it.
+  - The old-hurts slot has a time cap and a rule for replies.
+  - The close has three to five questions, each with an owner and a place.
+
+test:
+  - Give it a project where one person is the obvious culprit. The agenda should never name them as a theme.
+  - Give it a thirty-minute meeting and eight themes. It should cut some to a written follow-up.
+  - Remove the facilitator. It should ask for one other than the project lead.
+  - Read the wording rules aloud. Each should work in a tense room.
+
+improve:
+  - After each review, ask the room what the agenda got wrong and adjust the rules.
+  - Keep the closing questions in a shared list and read them at the start of each new project.
+  - Rotate the facilitator.
+  - Pair it with "Mistake-to-principle writer" to turn each lesson into a rule.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Writing an agenda with clear rules is text work any strong chat AI does well with this skill."}
+    - {name: "A visible timer", why: "A timer on the wall keeps each topic to its limit without anyone having to be the bad guy."}
+  inputs:
+    - "Themes from the Review lists sorter"
+    - "The prep plan from the Project review prep planner"
+    - "A list of who attends, by role"
+
+terms:
+  - term: Wording rule
+    meaning: A rule about how to speak in the room, such as saying what caused something and not whose fault it was.
+  - term: First-person owner
+    meaning: The person closest to an event, who tells it in their own words before anyone else comments.

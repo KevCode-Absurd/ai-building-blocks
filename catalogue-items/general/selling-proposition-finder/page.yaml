@@ -1,0 +1,120 @@
+new_slug: selling-proposition-finder
+name: "Selling proposition finder"
+summary: "Paste your product facts and rivals. Get three to five one-sentence selling claims to build an ad on, ranked by pull."
+job: write-ad-copy
+thinking: high
+thinking_why: "It has to judge which differences a buyer would notice and which claims rivals leave open, with no formula that settles it."
+
+headline: "Three to five selling claims, each tested for whether a buyer would notice"
+subhead: "Give it your product facts and what rivals say. It looks three ways for a claim: a real difference, a product change worth making, and a true fact every rival has but none mentions. You get a ranked list, one sentence each."
+
+explain: |
+  Many products look the same on the shelf, so teams reach for adjectives. The ad then says nothing a buyer can use to choose you.
+
+  This skill writes each claim in one form: buy this and you get this specific benefit. It looks in three places. First, a difference your product really has. Second, a change to the product that would give you one. Third, a true fact about what you do that rivals do too but never say, so the first to say it owns it. It strikes any claim built on a difference too small for a buyer to see in use, because a claim the buyer cannot confirm only makes them notice what is missing.
+
+when:
+  - "Your product looks the same as its rivals and your ads fall back on adjectives."
+  - "You have a list of features and no way to pick the one to lead with."
+  - "You think there is nothing to claim and want to check that."
+
+you_give:
+  - "Your product facts: what it is, how it is made, how and when it is used"
+  - "What rivals say in their ads or on their pages (optional)"
+  - "A report on whether your product has a difference (optional)"
+you_get:
+  - "Three to five claims, one sentence each, with the road each came from"
+  - "A score for each on whether buyers can see it, rivals say it and strangers would care"
+  - "A product change worth making, if no claim survives"
+  - "One top claim, ready for the claim checker"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Paste your product facts. Add two or three rival ads or pages if you have them."
+  - "Read the strikes first. They show which differences it dropped and why."
+  - "Take the top claim to the USP claim checker."
+
+how_it_works:
+  - title: "Sets the frame"
+    text: "Every claim is written as: buy this and you get this specific benefit."
+  - title: "Mines the product"
+    text: "Lists what the product is, how it is made and how it is used, and asks what the buyer gets from each."
+  - title: "Strikes small differences"
+    text: "Drops any difference a buyer could not notice in normal use."
+  - title: "Looks for a product change"
+    text: "If nothing survives, names the cheapest change that would give you a real difference."
+  - title: "Finds the unsaid true fact"
+    text: "Looks for something true of your product and your rivals that nobody says."
+  - title: "Scores and ranks"
+    text: "Rates each claim on what the buyer sees, what rivals say and who it would move."
+  - title: "Keeps support in line"
+    text: "Lists the facts that hold up the top claim, so none turns into a second claim."
+
+output_shape: |
+  FRAME
+  Buy <product>, get <benefit>.
+
+  CLAIMS
+  1. <one sentence> | road: <difference, change or unsaid fact> | seen: <1-5> rivals: <1-5> pull: <1-5> | total <n>/15
+
+  STRUCK
+  <claim> | why: <too small to notice, untrue or already owned>
+
+  PRODUCT CHANGE WORTH MAKING
+  <change, or none needed>
+
+  TOP CLAIM
+  <one sentence>
+
+  FACTS THAT HOLD IT UP
+  <up to three>
+
+  MISSING
+  <what would sharpen the list>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: "Rival material"
+    how: "Paste what two or three rivals really say. Without it, the rival score stays low and marked MISSING."
+  - what: "The buyer"
+    how: "Say who buys and what they use now. It changes which differences count as noticeable."
+  - what: "Claims you already use"
+    how: "Paste them. They are tested like any other and may be struck."
+  - what: "Cost of a product change"
+    how: "Say what you can and cannot change, so the change it suggests is one you can make."
+
+judge:
+  - "Every claim fits the frame: buy this, get this specific benefit."
+  - "Each claim rests on something a buyer could notice in use."
+  - "The rival score came from rival material you gave, or is marked MISSING."
+  - "The top claim is one benefit, not three."
+  - "Nothing in the list is untrue of the product."
+
+test:
+  - "Show the top claim to five people who buy this kind of product. Ask what they would expect to get. Their answers should match your benefit."
+  - "Run it twice on the same facts. The top claim should stay close."
+  - "Give it a product with a real edge and a product with none. The second should end in a product change."
+  - "Run the top claim through the USP claim checker."
+
+improve:
+  - "Add test results or reviews to the product facts so more claims pass the notice check."
+  - "Add rival ads each time you run it."
+  - "Keep a list of struck claims so the team stops proposing them."
+  - "Pair it with the claim demonstration planner."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Sorting facts and judging claims is text work any strong chat AI does well with this skill."}
+    - {name: "The Meta Ad Library", why: "Shows what rivals actually say in live ads."}
+  inputs:
+    - "A report from the Product differentiation checker"
+    - "Rival ads or pages pasted as text"
+    - "Customer reviews, to see what buyers notice in use"
+
+terms:
+  - term: Selling proposition
+    meaning: "One promise in the form: buy this and you get this specific benefit."
+  - term: Unsaid true fact
+    meaning: "Something true of your product and of rivals that none of you has ever said in an ad."

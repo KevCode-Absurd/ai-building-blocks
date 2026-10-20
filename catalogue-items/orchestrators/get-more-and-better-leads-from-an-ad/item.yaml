@@ -1,0 +1,27 @@
+slug: get-more-and-better-leads-from-an-ad
+name: "Get more and better leads from an ad"
+summary: "Give it your ad and lead results. Get raise-or-cut fixes, a better form, and a record of what each ad pulled."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: analysis
+level: intermediate
+inputs:
+  - {type: offer, required: true}
+  - {type: performance_sheet, required: true}
+  - {type: copy_draft, required: true}
+outputs:
+  - {type: lessons_register}
+uses: [inquiry-problem-diagnoser, lead-offer-tuner, coupon-and-form-fixer, ad-results-report-writer, keyed-ad-results-log-keeper]
+steps:
+  - {uses: inquiry-problem-diagnoser, note: "A raise or cut call, with the numbers behind it."}
+  - {uses: lead-offer-tuner, note: "The reply offer, changed in the direction the numbers asked for."}
+  - {uses: coupon-and-form-fixer, note: "A reply form that matches the offer and the direction."}
+  - {uses: ad-results-report-writer, note: "What changed, in one line, with actions."}
+  - {uses: keyed-ad-results-log-keeper, note: "A log entry per ad so the next one starts from what worked."}
+origin: rebuilt
+version: 1.0.0
+minds: [victor-schwab]
+credits:
+  - {title: "How to Write a Good Advertisement (a book summary)", by: "Victor O. Schwab", used: "The order of the steps: find out whether you need more leads or better ones, tune the reply offer, fix the coupon or form, read the results, record the result for next time"}
+generated_from: intake/good-ad-more-leads/skeleton.yaml

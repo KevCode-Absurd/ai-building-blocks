@@ -1,0 +1,18 @@
+slug: unplotted-first-draft-writer
+name: "Unplotted first-draft writer"
+summary: "Paste your situation and word count. Get today's pages written in order, a facts sheet and tomorrow's first question."
+category: general
+type: skill
+role: make
+job: creative
+level: intermediate
+inputs:
+  - {type: brief, required: true}
+  - {type: plan, required: false}
+outputs:
+  - {type: copy_draft}
+origin: rebuilt
+version: 1.0.0
+minds: [stephen-king, anne-lamott]
+credits:
+  - {title: "On Writing: A Memoir of the Craft", by: "Stephen King", used: "Writing a first draft from a situation with no outline, asking what the people would really do next, keeping a facts sheet to avoid contradictions, writing fast without looking back, and ending each session at the daily count"}

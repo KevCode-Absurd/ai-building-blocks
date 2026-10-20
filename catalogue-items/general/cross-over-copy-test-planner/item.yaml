@@ -1,6 +1,6 @@
 slug: cross-over-copy-test-planner
 name: "Cross-over copy test planner"
-summary: "Paste two versions of copy and where they will run. Get a fair keyed test that swaps places, plus a winner rule."
+summary: "Paste two versions and the different places they will run. Get a plan that swaps places halfway and compares cost per sale."
 category: general
 type: skill
 role: make
@@ -14,6 +14,6 @@ outputs:
   - {type: audit_report, required: true}
 origin: rebuilt
 version: 1.0.0
-minds: [john-e-kennedy]
+minds: [john-e-kennedy, john-caples]
 credits:
   - {title: "The Book of Advertising Tests", by: "John E. Kennedy and others (a group of articles from the early 1900s)", used: "Keying each version, equal spend in matched places, dividing space cost by replies, swapping the versions in round two, and following replies through to sales"}

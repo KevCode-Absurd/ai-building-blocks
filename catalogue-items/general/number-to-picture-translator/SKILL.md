@@ -51,7 +51,7 @@ The figures kept and set aside. For each kept figure: the original, the comparis
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - **Say it to the room** with the [Hardest objections answer writer](https://useaiblocks.com/skills/hardest-objections-answer-writer). It takes the draft.
-- **Lead the team** with the [Anger pause and repair planner](https://useaiblocks.com/skills/anger-pause-and-repair-planner). It takes the draft.
+- **Lead the team** with the [Order-to-request rewriter](https://useaiblocks.com/skills/order-to-request-rewriter). It takes the draft.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

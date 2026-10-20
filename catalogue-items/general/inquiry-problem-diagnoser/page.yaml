@@ -1,0 +1,88 @@
+new_slug: inquiry-problem-diagnoser
+name: Inquiry problem diagnoser
+summary: Paste your ad results. Get a call on whether you need more leads or better ones, with the sums.
+job: read-ad-results
+thinking: medium
+thinking_why: It does fixed sums, then makes a judgement call between raising and cutting.
+headline: Inquiry problem diagnoser
+subhead: "Give it your offer and the numbers from your ads: cost, replies, qualified leads and sales. It works out the cost of a reply and of a sale, says whether you need more replies or better ones, and lists outside factors that may explain the result."
+explain: |-
+  More replies is not always better. Some ads bring a flood of curious people who never buy, and each one costs time to follow up. Others bring too few. The fix is opposite in each case, so you must know which problem you have before touching the offer.
+
+  This skill counts replies, qualified leads and sales for each ad, adds the cost of following up, and compares the real cost per sale. It then calls raise, cut or fix the ad first, and lists outside factors such as size, season and page position that may be pushing the numbers.
+when:
+  - Your ad brings replies but you do not know if they are the right ones.
+  - Your sales team complains about junk leads.
+  - Your replies fell and you do not know why.
+you_give:
+  - Your offer and what a reply gets the person
+  - "For each ad: cost, replies, qualified leads, sales"
+  - What you spend to follow up one reply
+  - Where and when each ad ran (optional)
+you_get:
+  - Cost per reply, per qualified lead and per sale for each ad
+  - "A call: raise the number, raise the quality, or fix the ad first"
+  - Outside factors that may explain the result
+  - What to change in the offer, in plain terms
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your numbers by ad or version.
+  - Say how you decide a lead is qualified.
+  - Take the call to the Lead offer tuner.
+how_it_works:
+  - title: Counts the funnel
+    text: Replies, qualified leads and sales for each ad.
+  - title: Does the sums
+    text: Cost per reply, per qualified lead and per sale, with follow-up cost included.
+  - title: Makes the call
+    text: Raise the number, raise the quality, or fix the ad itself first.
+  - title: Checks outside factors
+    text: Size, colour, timing, position, news and weather.
+output_shape: |-
+  FUNNEL BY AD
+  <key> | cost | replies | qualified | sales | cost per reply | cost per sale (with follow-up)
+
+  CALL
+  <raise the number, raise the quality, or fix the ad first> | why
+
+  OUTSIDE FACTORS
+  <factor> | likely effect
+
+  OFFER AS RUN
+  <where the offer sits, how big, what it says>
+
+  MISSING
+  <numbers needed>
+
+  CHECKS MISSED
+  <one line each, or none>
+tweaks:
+  - what: Qualified lead
+    how: Define it in a line, such as 'asked for a quote and has a budget'. The call depends on it.
+  - what: Follow-up cost
+    how: Give the cost to handle one reply. It changes which ad is cheaper.
+judge:
+  - The sums can be redone from the numbers given.
+  - The call matches the numbers.
+  - Follow-up cost is in the cost per sale.
+  - Outside factors are listed, not assumed.
+test:
+  - Redo the cost per sale by hand for one ad.
+  - Check that the call would change if the quality rate changed.
+  - Compare with what your sales team says.
+improve:
+  - Track every ad with a code so the numbers exist next time.
+  - Add your own qualifying line.
+  - Re-run after each change to the offer.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: The work is sorting and writing from facts you supply, which any strong chat AI does well with this skill.
+  inputs:
+    - Reply, lead and sales counts by coded ad
+    - Your cost to follow up one reply
+terms:
+  - term: Inquiry
+    meaning: A reply from a reader who wants more information or a sample.
+  - term: Qualified lead
+    meaning: A reply from someone who meets your own test for a likely buyer.

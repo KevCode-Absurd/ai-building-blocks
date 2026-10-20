@@ -1,0 +1,25 @@
+slug: screen-stocks-with-a-defensive-investors-seven-tests
+name: "Screen stocks with a defensive investor's seven tests"
+summary: "Paste company figures. Get each company passed or failed on seven tests, with the price sums shown, and a short list."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: analysis
+level: advanced
+inputs:
+  - {type: source_text, required: true}
+outputs:
+  - {type: plan}
+uses: [defensive-stock-quality-screener, earnings-padding-detector, defensive-price-ceiling-tester, defensive-stock-list-builder, sit-still-rule-writer]
+steps:
+  - {uses: defensive-stock-quality-screener, note: "A pass, fail or unknown on each quality test for each company, with the figure behind it."}
+  - {uses: earnings-padding-detector, note: "Restates the profit figures the price tests will use."}
+  - {uses: defensive-price-ceiling-tester, note: "A price pass or fail with the sums shown, so a high-flying name is cut for its price, not its story."}
+  - {uses: defensive-stock-list-builder, note: "A short list, how many names to hold and the date to look again."}
+  - {uses: sit-still-rule-writer, note: "The list becomes a holding plan with the only reasons to act."}
+origin: rebuilt
+version: 1.0.0
+minds: [benjamin-graham, warren-buffett]
+credits:
+  - {title: "The Intelligent Investor (revised edition, with commentary by Jason Zweig)", by: "Benjamin Graham", used: "The order of the steps: test each company for size, strength, record and growth, check the per-share earnings for traps, test the price against a ceiling, build the list and keep it spread, write the rules for sitting still"}
+generated_from: intake/intelligent-investor-defensive-screen/skeleton.yaml

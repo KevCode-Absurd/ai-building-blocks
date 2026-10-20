@@ -1,0 +1,17 @@
+slug: defensive-stock-quality-screener
+name: "Defensive stock quality screener"
+summary: "Paste a company's ten-year figures. Get it passed or failed on size, strength, profit record, dividends and growth."
+category: general
+type: skill
+role: check
+job: analysis
+level: advanced
+inputs:
+  - {type: source_text, required: true}
+outputs:
+  - {type: audit_report}
+origin: rebuilt
+version: 1.0.0
+minds: [benjamin-graham]
+credits:
+  - {title: "The Intelligent Investor (revised edition, 2003)", by: "Benjamin Graham, with commentary by Jason Zweig", used: "The quality tests for a stock a defensive investor can hold: size, financial strength, ten years of profit, a long dividend record and a minimum of growth measured with three-year averages, and the utility variant"}

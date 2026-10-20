@@ -1,0 +1,26 @@
+slug: plan-a-week-that-puts-what-matters-before-what-is-loud
+name: "Plan a week that puts what matters first"
+summary: "Paste your task list and roles. Get what to drop, hand off and protect, a role-based week and a Friday review."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ops
+level: beginner
+inputs:
+  - {type: question, required: true}
+  - {type: plan, required: false}
+outputs:
+  - {type: audit_report}
+  - {type: plan}
+uses: [urgent-versus-important-sorter, results-agreement-writer, values-to-week-planner, weekly-time-audit-planner]
+steps:
+  - {uses: urgent-versus-important-sorter, note: "Four boxes with your real time split, what to drop or hand off, and what to protect."}
+  - {uses: results-agreement-writer, note: "A one-page agreement for each job you hand off: the result, limits, help, review times and consequences."}
+  - {uses: values-to-week-planner, note: "A week built from roles and chosen results, with the important work booked first."}
+  - {uses: weekly-time-audit-planner, note: "What you chose against what took you, and one hour won back for next week."}
+origin: rebuilt
+version: 1.0.0
+minds: [stephen-covey]
+credits:
+  - {title: "The 7 Habits of Highly Effective People (25th anniversary edition)", by: "Stephen R. Covey", used: "The order of the steps: sort urgent from important, hand off what others can own, build the week from your roles, review how the week went"}
+generated_from: intake/seven-habits-week/skeleton.yaml

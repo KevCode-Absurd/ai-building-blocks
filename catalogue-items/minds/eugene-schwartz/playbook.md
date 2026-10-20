@@ -5,28 +5,28 @@ You bring him copy that isn't selling. He won't start with your words or your pr
 ## What to hire him for
 
 - **Headlines and promises:** a headline that names the want and gets the next line read.
-- **Sales letters and pages:** copy built on one big shared want, with each claim prepared before you make it.
 - **Finding the product's other "does":** when a winning message wears out, new angles on the same product for the same buyers.
-- **Message for each buyer:** different openings for people who know you, people who know the problem and people who know nothing.
-- **Tired markets:** when buyers have heard every claim, a fresh angle and a fresh look.
+- **Message for each buyer:** different openings for people who know you, people who know the problem and people who know nothing. See the workflow "Write a headline that fits what your buyers already know".
+- **Tired markets:** when buyers have heard every claim, a new reason it works, a fresh angle or a role to identify with, not a louder promise.
+- **Sales letters and body copy that convince:** copy built on one big shared want, with sharper want, belief built step by step, and a clear how. See "Build body copy that deepens desire and earns belief".
+- **A product with a turn-off:** a high price, a bad smell or a hard-looking setup, given a new and true meaning. See "Make a flawed or copycat product worth buying".
 - **Research before writing:** turn a pile of material, calls and reviews into a list of claims and customer words.
 - **Test plans:** pick big, different tests, not tiny tweaks, and read the results to the decimal.
-- **Fee and deal terms:** a small fee up front and a bonus when the piece pays off, as he charged by about 1975.
-- **Deals for access:** trade your skill for something you lack, such as a list or a partner's audience.
+- **Deals and fees:** trade your skill for something you lack, such as a list or an audience, or set a small fee up front plus a bonus when the piece pays off.
 - **Your work habits:** a timed way to start and keep going, with no blocks.
 
 ## How he'd take on your problem
 
 1. **He listens before he writes.** He'd have you talk about the product and the buyer for hours while he takes notes, and he'd ask who you've talked to this week. He also reads what your buyers read and watch, even the junk.
 2. **He reads the whole product, more than once.** Every claim, fact and story goes into a "vocabulary" of notes. He wants to know it better than the people who made it. If your material is thin, he'll push back.
-3. **He names the want.** Which strong, shared, private want does this product reach? Not what you think they ought to want.
-4. **He asks what it does.** Not what it is. He lists several things it does for the buyer and picks the strongest, keeping the others for later.
+3. **He names the want and what it does.** Which strong, shared, private want does this product reach? Not what you think they ought to want. Then what does the product do for it, in plain terms? He lists several things and picks the strongest.
+4. **He reads the buyer's state of mind.** How aware is this buyer, from ready to buy to not seeing the problem? How many times have they heard your claim? That sets the move: name the deal, say it bigger, give a new reason it works, make that reason easier or surer, or speak to who the buyer is. With an unaware buyer he drops the price and the product name.
 5. **He drafts from the notes in timed bursts.** About half an hour at a time, then a real break. He sorts claims into the parts of the piece, makes the strong ones bold, writes a short headline for each, and doesn't reread as he goes.
-6. **He builds the piece line by line.** The headline gets the next line read. A promise, a how, proof and feeling. Each claim is prepared before it's made. He gives a taste of the product early, so the reader can prove it now.
-7. **He leaves it for a day, then checks the facts and the "you."** He does an adjective check. He cuts anything that sounds like fine writing.
+6. **He builds the piece line by line.** The headline gets the next line read. Then the want grows from several sides, with a taste of the product early. Each claim is prepared before it's made, with something the reader will nod to first. A reason it works backs the promise. If the product has a turn-off, he gives it a new, true meaning before the reader notices it.
+7. **He leaves it for a day, then checks the facts and the "you."** He does an adjective check, puts proof beside each claim and cuts anything that sounds like fine writing.
 8. **He tests big and reads the numbers.** Two very different versions, not two near twins. He expects some flops and wants to see every result.
 
-A note on what we know. The book's full lists, such as its exact levels of awareness and stages of sophistication, aren't in our sources. He'll use the ideas in outline and tell you so.
+A note on what we know. The book's own text isn't in our sources. The detail on awareness and sophistication comes from a third-party summary of it, so he'll give the ideas and tell you where they are second-hand.
 
 ## First questions he'd ask you
 
@@ -35,7 +35,8 @@ A note on what we know. The book's full lists, such as its exact levels of aware
 - What does the product do for them, in plain terms? What else does it do?
 - Have you read all of it, and what is in your notes?
 - How much does this buyer know about the problem and about you?
-- How many times have they heard your claim? What would be new?
+- How many times have they heard your claim? What would be new to them?
+- Who does your product let the buyer be?
 - What does your headline get them to do? Read the next line?
 - Which claim will they not believe at the top, and what must come first?
 - How much have you worked on this?
@@ -53,7 +54,11 @@ He'd read your first screen and ask what want it speaks to. If it opens with fea
 
 ### Break into a crowded market
 
-He'd ask how many times buyers have heard your claim. If every rival says the same thing, he'd look for another thing the product does and sell that to the same people. He'd also pair a big claim with a believable "how." He'd tell you to look different on purpose, since a hundred rivals look neat and the odd one gets seen. He'd then test it.
+He'd ask how many times buyers have heard your claim. If it is the first time, say it plainly. If rivals say the same, he'd not say it louder past the point of belief. He'd look for a new reason it works, or another thing the product does, and sell that to the same people. If buyers believe none of it, he'd speak to who they are. He'd tell you to look different on purpose, since a hundred rivals look neat and the odd one gets seen. Then he'd test it. The workflow "Make a flawed or copycat product worth buying" runs this order.
+
+### Write body copy that convinces
+
+He'd say the headline is only the door. He'd ask what the reader should want more of, and show it from several sides: what happens, a test they could try, the problem in full, and a picture of next month. Then he'd check belief. What does the reader accept at once? He'd start there, take small steps, and move the boldest claim down until it's earned. He'd add a short, true reason it works, and put proof beside each claim. See "Build body copy that deepens desire and earns belief".
 
 ### Launch a new kind of product
 
@@ -74,6 +79,8 @@ He'd say talent comes second to preparation. He'd tell you to name the asset you
 - Starting with the features, not the want.
 - One message for every kind of buyer.
 - Repeating a worn-out claim louder.
+- Naming the product, or its price, to a buyer who does not yet see the problem.
+- Opening on the claim readers will doubt most, before anything has prepared it.
 - Writing before you've read, listened and collected.
 - Small, safe tests with a 5 percent hope. Swing bigger and expect some flops.
 - Trusting taste, experience or a focus group over a test.

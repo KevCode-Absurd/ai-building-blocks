@@ -1,0 +1,107 @@
+new_slug: win-win-stance-planner
+name: "Win-win stance planner"
+summary: "Describe a deal or dispute. Get your likely stance, what a win is for each side, and where you walk away."
+job: sell-and-negotiate
+thinking: high
+thinking_why: "It reads two sides from thin evidence and separates fact from guess, which takes careful judgment."
+headline: "Win-win stance planner"
+subhead: "Describe a deal or dispute. It names the stance each side is likely to take, rates your courage against your consideration, writes what a win looks like for each side and sets the point where you would rather walk away. You get a brief for the talk."
+explain: |
+  Before most talks you have already picked a stance without noticing. You might push to win, give in to keep the peace, or hold back what you want. Each has a cost later, especially if you will deal with this person again.
+
+  This skill names six stances: win-win, win-lose, lose-win, lose-lose, win, and win-win or no deal. It says which fits you and the other side, and quotes the evidence. It rates your courage and your consideration, since high courage with low consideration leads to win-lose and the reverse leads to giving in. It writes what a win is for each side, marks the other side's list as a guess, and sets your no-deal line. That line is the point where you would rather walk away, and having it lets you listen without fear.
+when:
+  - You are about to negotiate with a client, partner, boss or supplier you will deal with again.
+  - A family or business dispute keeps going in circles.
+  - You tend to give in, or to push too hard, and want a plan that does neither.
+you_give:
+  - The deal or dispute, with who, what each wants and what is at stake
+  - How often you will deal with them again (optional)
+  - What you do instead if there is no deal (optional)
+  - Anything the other side has said, in their own words (optional)
+you_get:
+  - The stance each side is likely to take, with evidence
+  - Your courage and consideration scores, each with one action
+  - A list of wins for you, and a marked guess at wins for them
+  - Your no-deal line and how to say it, plus a brief for the talk
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Describe the deal in a paragraph. Add anything they said, word for word.
+  - Say what you would do if you walked away. Be honest about whether you can.
+  - Read the stance list. Check where you swing between pushing and giving in.
+  - Take the brief to "Listen-first talk planner".
+how_it_works:
+  - title: Reads the situation
+    text: Who, what is at stake, how often you will meet again and how much trust there is.
+  - title: Names the stances
+    text: Picks one of six for each side and quotes the evidence.
+  - title: Says when each is right
+    text: Shows when win-lose or a plain win fits and what it costs later in a lasting relationship.
+  - title: Rates courage and consideration
+    text: Scores both from 1 to 5 and gives one action for each.
+  - title: Tests for scarcity
+    text: Looks for a way both could gain without splitting a fixed pie.
+  - title: Writes the wins
+    text: Your must-haves, and a marked guess for the other side.
+  - title: Sets the no-deal line
+    text: The point where you walk away, what you do instead and how to say it kindly.
+  - title: Checks the setting
+    text: Trust, agreement, rewards and fair methods around the deal.
+output_shape: |
+  SITUATION
+  Who: ... | At stake: ... | Dealing again: ... | Trust today: <high, mixed or low, and why>
+  STANCES
+  You: <stance> because <quote or fact>
+  Them: <stance> because <quote or fact>
+  COURAGE <n>/5, CONSIDERATION <n>/5
+  Say with courage: <line> | Do with consideration: <action>
+  WHAT A WIN IS
+  For you: must-have <list> | nice-to-have <list>
+  For them (a guess to confirm): <list>
+  NO-DEAL LINE
+  <line> | Instead I will: <alternative> | How to say it: <wording>
+  SETTING CHECK
+  Trust: ... | Agreement: ... | Rewards: ... | Methods: ...
+  TALK BRIEF
+  <stance, wins, no-deal line, first trust move, question to bring>
+  MISSING
+  <what would sharpen the plan>
+  CHECKS MISSED
+  <one line per check still missed, or none>
+tweaks:
+  - what: Their words
+    how: Paste what they said or wrote. A stance read from a quote is far more reliable than one guessed from a summary.
+  - what: Your alternative
+    how: Say honestly what you would do without this deal. A weak alternative means a weaker no-deal line.
+  - what: How often you will deal again
+    how: If often, the plan weighs the cost of a win-lose result later. If once, it can accept more edge.
+  - what: Your own pattern
+    how: Say if you tend to give in or push. The plan adds a fix for that swing.
+judge:
+  - Each stance is backed by a quote or a fact.
+  - Their wins are marked as guesses.
+  - Your no-deal line says what you do instead.
+  - There is one concrete action for courage and one for consideration.
+  - The brief tells you what to do first about trust.
+test:
+  - Run it on a deal you already finished. See if the stance matches what happened.
+  - Give it a case where you gave in. It should say lose-win and not call it win-win.
+  - Run it twice. The stances should stay the same even if the wording changes.
+improve:
+  - Add your own alternative options to the skill file so the no-deal line is concrete.
+  - Add the roles you often negotiate in, such as buyer or manager.
+  - Save good no-deal lines to reuse.
+  - Pair it with "Trust deposit planner", "Listen-first talk planner" and "Results agreement writer".
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Reading evidence and sorting fact from guess is text work any strong chat AI does well."}
+    - {name: "A trusted adviser", why: "For big money or legal matters, check the plan with a professional."}
+  inputs:
+    - "The other side's emails or notes, word for word"
+    - "Your own list of other options"
+    - "A note on the history between you"
+terms:
+  - term: Win-win or no deal
+    meaning: You look for a deal both back, and if you cannot find one you part kindly, with nothing owed on either side.
+  - term: No-deal line
+    meaning: The point at which you would rather have no agreement than the one on offer.

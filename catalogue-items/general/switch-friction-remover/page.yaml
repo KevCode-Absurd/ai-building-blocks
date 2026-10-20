@@ -1,0 +1,111 @@
+new_slug: switch-friction-remover
+name: Switch friction remover
+summary: Paste your switch story map. Get the habits and worries ranked, a fix for each and one small change to test first.
+job: understand-customers
+thinking: medium
+thinking_why: It ranks known blockers and picks fixes from a fixed set of moves. A mid-range model does this well.
+headline: Lower what holds buyers back, without adding another feature
+subhead: Paste your buyer story map. It ranks the habits and worries that keep people from switching, matches each to a change you can make and picks one small change to test first.
+explain: |-
+  When people do not switch, the cause is often not that the new thing is weak. The old way is comfortable, and the new one might not work for them. Adding features does little for either.
+
+  This skill starts from your mapped buyer stories. It counts the separate people who met each holding force, ranks them with simple sums, sorts the worries by type and finds where each one bites in the path from first look to later use. It then offers two fixes for each, including help with getting rid of the old way, writes a line saying who the product is not for, and sets up one small test with a measure and a keep rule.
+when:
+  - Trials, demos or baskets stall and you do not know why.
+  - Buyers say they like it and still do not switch.
+  - You keep adding features to win people who are held back by worry.
+you_give:
+  - Your switch story map, from the Switch story mapper
+  - Your question, such as why trials do not convert (optional)
+  - What you can change and your budget (optional)
+you_get:
+  - A ranked list of habits and worries with the sums
+  - Each worry sorted by type and placed in the path
+  - Two fixes for each, with cost and speed
+  - Help for getting rid of the old way
+  - A line saying who it is not for
+  - One small change to test, with its measure and keep rule
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste the switch story map. Add what you can change.
+  - Read the ranking and check it against what you saw in interviews.
+  - Run the test it picks and bring the result back.
+how_it_works:
+  - title: Lists the holding forces
+    text: Habits and worries from the stories, merged and counted by separate people.
+  - title: Ranks with sums
+    text: Severity multiplied by the number of people, with the sums shown.
+  - title: Sorts by type
+    text: Cost, learning, results, change, social and trust, each with its own kind of fix.
+  - title: Places it in the path
+    text: Shows where each worry bites so the fix sits there.
+  - title: Offers two fixes
+    text: Each with cost and speed.
+  - title: Helps with the old way
+    text: Plans what you can do about what the buyer must drop.
+  - title: Writes the not-for line
+    text: Tells the wrong buyer not to hire it.
+  - title: Plans one test
+    text: A measure, a baseline, a window and a rule for keeping the change.
+output_shape: |-
+  HOLDING FORCES (RANKED)
+  <force> | Type: <cost, learning, results, change, social or trust> | Bites at: <point in path> | People: <n> | Severity: <1 to 4> | Score: <n x severity>
+
+  FIXES
+  <force>
+    Option A: <change> | Cost: <> | Speed: <>
+    Option B: <change> | Cost: <> | Speed: <>
+
+  GETTING RID OF THE OLD WAY
+  <what was fired> | <what you can do>
+
+  NOT FOR
+  <one line for your page>
+
+  TEST FIRST
+  Change: <text> | Group: <who> | Measure: <metric> | Baseline: <figure or MISSING> | Window: <days> | Keep if: <rule>
+
+  MISSING
+  <gaps>
+
+  CHECKS MISSED
+  <one line per check missed, or none>
+tweaks:
+  - what: What you can change
+    how: Say what is off limits. It then offers fixes you can actually make.
+  - what: The map
+    how: More separate people make the ranking firmer. Under five, treat it as a guide only.
+  - what: The question
+    how: Name the stage that worries you most, such as the trial, and the fixes will lean toward it.
+judge:
+  - Each force has a count of separate people and a severity.
+  - Each anxiety has a type and a place in the path.
+  - At least one fix helps with the old way.
+  - The test has a measure and a keep rule.
+  - No fix uses pressure or hides a cost.
+test:
+  - Give it a map where five people share one worry and one person has a different one. The shared worry should rank higher.
+  - "Give it a map with no data on baseline. The test should say MISSING: baseline."
+  - Ask it for a fix using fake scarcity. It should reject it.
+improve:
+  - Run the test, record the result and add it to the next map.
+  - Redo the ranking after each batch of interviews.
+  - Add the not-for line to your listing or page and check how reviews change.
+  - Pair it with "Job experience mapper" for the full path.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: Ranking blockers and drafting fixes is text work any strong chat AI does with this skill.
+    - name: Your analytics
+      why: You need a baseline figure to judge the test.
+  inputs:
+    - The switch story map
+    - Trial, demo or basket figures
+    - Your return and cancellation reasons
+terms:
+  - term: Habit of the present
+    meaning: Staying with the old way because it is known and needs no effort.
+  - term: Anxiety about the new
+    meaning: Worry that the new thing will not work, will cost more or will be hard to learn.
+  - term: Friction
+    meaning: Anything that slows or stops a person from switching.

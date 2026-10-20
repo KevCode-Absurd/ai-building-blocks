@@ -13,7 +13,7 @@ outputs:
   - {type: angle_library}
 origin: rebuilt
 version: 1.0.0
-minds: [scott-galloway]
+minds: [scott-galloway, jack-trout, al-ries]
 credits:
   - {title: "Laddering", by: "Scott Galloway, No Mercy / No Malice, 2019", url: "https://www.profgalloway.com/laddering/", used: "Pick a strength of yours that is also a rival's weakness and make it the centre of your message"}
   - {title: "There Is Another", by: "Scott Galloway, No Mercy / No Malice, 2018", url: "https://www.profgalloway.com/there-is-another/", used: "Positioning against a rival without naming it, and checking how a reply could expose you"}

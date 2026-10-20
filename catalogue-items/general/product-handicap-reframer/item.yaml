@@ -1,0 +1,18 @@
+slug: product-handicap-reframer
+name: "Product handicap reframer"
+summary: "Paste your facts and the trait buyers dislike. Get a true new definition that turns it into a reason to buy."
+category: general
+type: skill
+role: make
+job: strategy
+level: advanced
+inputs:
+  - {type: brief, required: true}
+  - {type: product_data, required: true}
+outputs:
+  - {type: copy_draft}
+origin: rebuilt
+version: 1.0.0
+minds: [eugene-schwartz]
+credits:
+  - {title: "Breakthrough Advertising (a book summary)", by: "Eugene Schwartz (1966), as retold in a third-party chapter summary", url: "https://breakthroughadvertisingbook.com/", used: "Redefinition: removing a built-in handicap by giving the product a new meaning, by turning it into proof, simplifying, raising its importance or shifting the price comparison; and addressing a rival the buyer is loyal to"}

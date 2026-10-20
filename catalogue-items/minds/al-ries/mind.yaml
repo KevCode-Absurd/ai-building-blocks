@@ -38,6 +38,7 @@ sources:
   - {n: 14, title: "Strength In Length: The Long Slogan Advantage (20 September 2010)", by: "Al Ries, Branding Strategy Insider", url: "https://brandingstrategyinsider.com/2010/09/strength-in-length-the-long-slogan-advantage/", kind: own-words}
   - {n: 15, title: "Brand Naming: The Advantage Of Two (12 August 2010)", by: "Al Ries, Branding Strategy Insider", url: "https://brandingstrategyinsider.com/2010/08/brand-naming-the-advantage-of-two/", kind: own-words}
   - {n: 16, title: "Comcast Makes Classic Marketing Mistake (6 July 2010)", by: "Al Ries, Branding Strategy Insider", url: "https://brandingstrategyinsider.com/2010/07/comcast-makes-classic-marketing-mistake/", kind: own-words}
+  - {n: 17, title: "The 22 Immutable Laws of Marketing (1993)", by: "Al Ries and Jack Trout", kind: own-words}
 tests:
   - {kind: use, prompt: "Write a one-page positioning statement for a new budget gym opening across the road from a big, well-known chain."}
   - {kind: use, prompt: "Write a short memo to a family-owned hardware store that wants to add a cafe, a garden centre and a bike shop under its own name."}

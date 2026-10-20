@@ -1,4 +1,5 @@
 // Builds each mind's SKILL.md from mind.yaml, playbook.md (how to hire them; optional until every mind has one),
+// toolkit.md (optional, for enriched minds with real working methods: steps, formulas, checklists),
 // personality.md and knowledge.md
 // (catalogue-items/minds/README.md, docs/MINDS-PRD.md §4–5). One file is enough in any chat, because the
 // personality and the data set travel inside it. Plain code: same files in, same skill out.
@@ -17,12 +18,12 @@ const body = (md) => md.replace(/\r\n?/g, "\n").replace(/^# .*\n+/, "").trim();
 // Headings in the embedded files drop one level, so they sit under this skill's own sections.
 const nest = (md) => body(md).replace(/^(#{2,5}) /gm, "#$1 ");
 
-function skillFor(m, personality, knowledge, playbook) {
+function skillFor(m, personality, knowledge, playbook, toolkit = "") {
   const first = m.name.split(" (")[0];
   const living = m.living
     ? `${first} is alive, so views can change. This file was last checked on ${m.last_checked}. Don't speak for ${first} on new events, plans, health or private life.`
     : `This file was last checked on ${m.last_checked}.`;
-  const money = /buffett|munger|dalio|benjamin-graham|thiel|keynes|naval|housel|galloway|cuban|masayoshi-son|andreessen/.test(m.slug)
+  const money = /buffett|munger|dalio|benjamin-graham|damodaran|thiel|keynes|naval|housel|galloway|cuban|masayoshi-son|andreessen/.test(m.slug)
     ? "\n- **Frameworks, not tips.** Explain how they'd think about an investment. Never give buy or sell calls or personal financial advice; say to check with a professional."
     : "";
   return `---
@@ -64,7 +65,11 @@ ${nest(personality)}
 ## What ${first} knew and believed
 
 ${nest(knowledge)}
+${toolkit ? `
+## ${first}'s toolkit
 
+${nest(toolkit)}
+` : ""}
 ## Sources
 
 ${m.sources.map((s) => `${s.n}. ${s.title}${s.by ? `, ${s.by}` : ""}${s.url ? `. ${s.url}` : ""}`).join("\n")}
@@ -103,7 +108,11 @@ for (const r of roster.minds) {
   const pb = path.join(dir, "playbook.md");
   const playbook = fs.existsSync(pb) ? fs.readFileSync(pb, "utf8") : "";
   if (/—/.test(playbook)) problems.push(`${r.slug}: playbook.md has an em dash`);
-  const out = skillFor(m, fs.readFileSync(files[1], "utf8"), knowledge, playbook);
+  const tk = path.join(dir, "toolkit.md");
+  const toolkit = fs.existsSync(tk) ? fs.readFileSync(tk, "utf8") : "";
+  if (/—/.test(toolkit)) problems.push(`${r.slug}: toolkit.md has an em dash`);
+  for (const n of new Set([...toolkit.matchAll(/\[S(\d+)\]/g)].map((x) => Number(x[1])))) if (!listed.has(n)) problems.push(`${r.slug}: toolkit.md cites [S${n}], which isn't in sources`);
+  const out = skillFor(m, fs.readFileSync(files[1], "utf8"), knowledge, playbook, toolkit);
   const target = path.join(dir, "SKILL.md");
   const old = fs.existsSync(target) ? fs.readFileSync(target, "utf8") : "";
   if (old === out) { same++; continue; }

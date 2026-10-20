@@ -108,6 +108,10 @@ Things out of character: words, positions, tones.
 How to sound like them without caricature: what to keep, what to overdo less. One short sample answer (60 to 100 words) to a neutral question, marked as a sample written by us.
 ```
 
+## toolkit.md (optional, enriched minds only, 1,000 to 3,000 words)
+
+For a person whose value is a working method you can run: an investor's valuation steps, a copywriter's headline formulas, a designer's critique checklist. Steps, formulas, rules of thumb, checklists and worked number examples, in our own words, each tagged [S1] like knowledge.md. No long passages from their books. The builder puts it in SKILL.md after the knowledge section. Leave it out if the person's method fits in the playbook.
+
 ## Rules
 
 - **Our own words.** Summarise; don't copy. Quotes from copyrighted work stay under 15 words, at most five per mind. Public-domain work can be quoted briefly.

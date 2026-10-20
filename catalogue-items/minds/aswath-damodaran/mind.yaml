@@ -4,16 +4,17 @@ area: business
 also: [thinking]
 years: "1957–"
 living: true
-known_for: "NYU Stern finance professor, often called the \"Dean of Valuation\", who teaches valuation free online and pairs every number with a story in Narrative and Numbers."
-summary: "Value a business, a pitch or a deal the way Aswath Damodaran teaches it: tell the story, put numbers on it, check it is possible, plausible and probable, and keep price and value apart."
+known_for: "NYU Stern finance professor, often called the \"Dean of Valuation\", who teaches valuation free online, publishes his data and spreadsheets, and pairs every number with a story."
+summary: "Value a business, a pitch or a deal the way Aswath Damodaran teaches it: tell the story, put numbers on it, run the cash flow steps, check it is possible, plausible and probable, and keep price and value apart."
 use_cases:
   - "Value your own small business before you sell it, raise money or set a price"
-  - "Check a founder's pitch by turning the story into growth, margin, reinvestment and risk"
-  - "Work out what to pay for a company you might buy, and what has to be true to justify it"
-  - "Tell whether a deal price is a price or a value, and what is already priced in"
-  - "Test a big market claim against the possible, plausible and probable tests"
-  - "Value a young or loss-making business, including the chance it fails"
-  - "Spot when the market's story and the numbers behind it do not match"
+  - "Check a founder's startup pitch by turning the story into growth, margin, reinvestment, risk and a chance of failure"
+  - "Work out what to pay for a business you might buy, and what has to be true to justify the price"
+  - "Value a private company that is for sale, including a fair salary for the owner and a discount for being hard to sell"
+  - "Value a declining business, and decide whether it is worth more kept, shrunk or sold"
+  - "Set a hurdle rate (the minimum return) for a project or a new product line"
+  - "Check a market price story: work backwards from a price to the revenue and margin it needs"
+  - "Choose an investing approach that fits your temperament, your time horizon and what you believe about market mistakes"
   - "Learn to build a simple valuation from scratch and explain it in plain words"
 seats:
   - {seat: "Valuation and what the story is worth", asks: "What has to be true for this to be worth that much, and is it possible, plausible and probable?"}
@@ -23,14 +24,30 @@ pairs_with: [benjamin-graham, warren-buffett, charlie-munger, daniel-kahneman, n
 last_checked: 2026-10-21
 sources:
   - {n: 1, title: "Aswath Damodaran", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Aswath_Damodaran", kind: reference}
-  - {n: 2, title: "Damodaran Online: Home Page for Aswath Damodaran (classes, data, books, stated approach)", by: "Aswath Damodaran, NYU Stern", url: "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/home.htm", kind: own-words}
-  - {n: 3, title: "Musings on Markets (blog; posts of September to October 2026)", by: "Aswath Damodaran", url: "https://aswathdamodaran.blogspot.com/", kind: own-words}
-  - {n: 4, title: "Possible, Plausible and Probable: Big markets and Networking effects (2014)", by: "Aswath Damodaran", url: "https://aswathdamodaran.substack.com/p/possible-plausible-and-probable-big-14-07-16", kind: own-words}
-  - {n: 5, title: "Twitter IPO: Why a good trade be a bad investment (or vice versa)? (2013)", by: "Aswath Damodaran", url: "https://aswathdamodaran.substack.com/p/twitter-ipo-why-a-good-trade-be-a-13-10-10", kind: own-words}
-  - {n: 6, title: "January 2019 Data Update 9: The Pricing Game", by: "Aswath Damodaran", url: "https://aswathdamodaran.substack.com/p/january-2019-data-update-9-the-pricing-19-02-22", kind: own-words}
-  - {n: 7, title: "Tell Me a Story: Aswath Damodaran on Valuing Young Companies (2022 talk, write-up)", by: "CFA Institute Enterprising Investor", url: "https://rpc.cfainstitute.org/blogs/enterprising-investor/2022/tell-me-a-story-aswath-damodaran-on-valuing-young-companies", kind: secondary}
-  - {n: 8, title: "Narrative and Numbers: preface and chapter outline", by: "Aswath Damodaran, NYU Stern", url: "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/NNPreface.html", kind: own-words}
-  - {n: 9, title: "Two-day valuation seminar (agenda and materials, 2022 recording)", by: "Aswath Damodaran, NYU Stern", url: "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/valseminar2day.html", kind: own-words}
+  - {n: 2, title: "Valuation class intro slides, Spring 2025 (myths and truths, three approaches, options and dilution)", by: "Aswath Damodaran, NYU Stern", url: "https://pages.stern.nyu.edu/~adamodar/pdfiles/eqnotes/ValIntroSpr25.pdf", kind: own-words}
+  - {n: 3, title: "Valuation Approaches and Metrics: A Survey of the Theory and Evidence (2006)", by: "Aswath Damodaran", url: "https://pages.stern.nyu.edu/~adamodar/pdfiles/papers/valuesurvey.pdf", kind: own-words}
+  - {n: 4, title: "The Dark Side of Valuation: Firms with no Earnings, no History and no Comparables (2000, Amazon valued February 2000)", by: "Aswath Damodaran", url: "https://pages.stern.nyu.edu/~adamodar/pdfiles/papers/HighGrow.pdf", kind: own-words}
+  - {n: 5, title: "Multiples: First Principles (relative valuation chapter)", by: "Aswath Damodaran", url: "https://pages.stern.nyu.edu/~adamodar/pdfiles/papers/multiples.pdf", kind: own-words}
+  - {n: 6, title: "Valuing Young, Start-up and Growth Companies: Estimation Issues and Valuation Challenges (2009)", by: "Aswath Damodaran", url: "https://pages.stern.nyu.edu/~adamodar/pdfiles/papers/younggrowth.pdf", kind: own-words}
+  - {n: 7, title: "Valuation Inferno: Dante meets DCF (ten circles of valuation errors, 2011 slides)", by: "Aswath Damodaran", url: "https://pages.stern.nyu.edu/~adamodar/pdfiles/country/TenErrorsNYIF2011.pdf", kind: own-words}
+  - {n: 8, title: "Terminal Value: the tail that wags the dog? (slides)", by: "Aswath Damodaran", url: "https://pages.stern.nyu.edu/~adamodar/pdfiles/country/TerminalValue.pdf", kind: own-words}
+  - {n: 9, title: "Living with Noise: valuing young companies (2012 slides: 3M, Amazon, Facebook IPO)", by: "Aswath Damodaran", url: "https://pages.stern.nyu.edu/~adamodar/pdfiles/country/NoiseAIMR2012.pdf", kind: own-words}
+  - {n: 10, title: "Share count confusion: dilution, employee options and multiple share classes (July 2018, Tesla example)", by: "Aswath Damodaran", url: "https://aswathdamodaran.blogspot.com/2018/07/share-count-confusion-dilution-employee.html", kind: own-words}
+  - {n: 11, title: "Valuing Private Firms (chapter)", by: "Aswath Damodaran", url: "https://pages.stern.nyu.edu/~adamodar/pdfiles/papers/pvtfirmval.pdf", kind: own-words}
+  - {n: 12, title: "Possible, Plausible and Probable: Big markets and Networking effects (July 2014)", by: "Aswath Damodaran", url: "https://aswathdamodaran.substack.com/p/possible-plausible-and-probable-big-14-07-16", kind: own-words}
+  - {n: 13, title: "A Disruptive Cab Ride to Riches: The Uber Payoff (June 2014)", by: "Aswath Damodaran", url: "https://aswathdamodaran.substack.com/p/a-disruptive-cab-ride-to-riches-the-14-06-09", kind: own-words}
+  - {n: 14, title: "The secret to investment success: self-awareness (November 2010)", by: "Aswath Damodaran", url: "https://aswathdamodaran.blogspot.com/2010/11/secret-to-investment-success-self.html", kind: own-words}
+  - {n: 15, title: "Narrative and Numbers: preface and chapter outline", by: "Aswath Damodaran, NYU Stern", url: "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/NNPreface.html", kind: own-words}
+  - {n: 16, title: "Tesla in 2023: A Return to Reality, the Start of the End or Time to Buy? (January 2023)", by: "Aswath Damodaran", url: "https://aswathdamodaran.blogspot.com/2023/01/tesla-in-2023-return-to-reality-start.html", kind: own-words}
+  - {n: 17, title: "Musings on Markets, June 2023 posts (Nvidia: AI's winners, losers and wannabes)", by: "Aswath Damodaran", url: "https://aswathdamodaran.blogspot.com/2023/06/", kind: own-words}
+  - {n: 18, title: "Decline and Denial: Requiem for ... (September 2013)", by: "Aswath Damodaran", url: "https://aswathdamodaran.blogspot.com/2013/09/decline-and-denial-requiem-for.html", kind: own-words}
+  - {n: 19, title: "The Yahoo Chronicles (December 2015)", by: "Aswath Damodaran", url: "https://aswathdamodaran.blogspot.com/2015/12/the-yahoo-chronicles-is-this-end-game.html", kind: own-words}
+  - {n: 20, title: "Data Update 2 for 2026: Equities get tested and pass again (January 2026)", by: "Aswath Damodaran", url: "https://aswathdamodaran.blogspot.com/2026/01/data-update-2-for-2026-equities-get.html", kind: own-words}
+  - {n: 21, title: "Data Update 5 for 2026: Risk and Hurdle Rates (February 2026)", by: "Aswath Damodaran", url: "https://aswathdamodaran.blogspot.com/2026/02/data-update-5-for-2026-risk-and-hurdle.html", kind: own-words}
+  - {n: 22, title: "Trillion Dollar Market Caps: Fairy Tale Pricing or Business Marvels? (3 December 2025)", by: "Aswath Damodaran", url: "https://aswathdamodaran.blogspot.com/2025/12/trillion-dollar-market-caps-fairy-tale.html", kind: own-words}
+  - {n: 23, title: "Stock Prices, Earnings and Cashflows: The AI Effect plays through (8 October 2026)", by: "Aswath Damodaran", url: "https://aswathdamodaran.blogspot.com/2026/10/stock-prices-earnings-and-cashflows-ai.html", kind: own-words}
+  - {n: 24, title: "Synthetic ratings, interest coverage and default spreads (January 2026 data page)", by: "Aswath Damodaran, NYU Stern", url: "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/ratings.html", kind: own-words}
+  - {n: 25, title: "For the fun of it: An Open House for my Spring 2025 Classes (December 2024)", by: "Aswath Damodaran", url: "https://aswathdamodaran.blogspot.com/2024/12/for-fun-of-it-open-house-for-my-spring.html", kind: own-words}
 tests:
   - {kind: use, prompt: "Explain the difference between a price and a value to my teenage kid using a used bike."}
   - {kind: use, prompt: "Take a startup pitch that says 'we will win a billion-dollar market' and turn it into the numbers it needs, using the possible, plausible and probable tests."}
